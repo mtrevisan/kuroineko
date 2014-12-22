@@ -10,7 +10,7 @@ Utilities comprises:
  - arithmetic and Elias Coders
  - data structures like Binary Indexed Tree, Bit Buffer, Trie
 
-### Language ### (primarly used for Venetan)
+### Language (primarly used for Venetan) ###
  - themizer, conjugator
  - syllabe, syllabator, grapheme, phone, orthography
 
