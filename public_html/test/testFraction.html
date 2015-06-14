@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<link rel="shortcut icon" href="../favicon.png" />
+
+	<title>test fraction</title>
+
+	<link rel="stylesheet" href="../test/lib/qunit/qunit-1.17.1.css">
+
+	<script src="../test/lib/qunit/qunit-1.17.1.js"></script>
+
+	<script src="../app/AMDLoader.js"></script>
+
+	<script>
+		AMDLoader.config = {
+			baseUrl: '../app',
+			paths: {
+				libs: '../libs'
+			}
+		};
+
+
+		require(['tools/math/Fraction'], function(Fraction){
+			asyncTest('constructor with object', function(){
+				var f = new Fraction({
+					num: -13,
+					den: 27
+				});
+
+				equal(f.num, 13);
+				equal(f.den, 27);
+				equal(f.sgn, -1);
+
+				start();
+			});
+
+			asyncTest('constructor with array', function(){
+				var f = new Fraction(-13, 27);
+
+				equal(f.num, 13);
+				equal(f.den, 27);
+				equal(f.sgn, -1);
+
+				start();
+			});
+
+			asyncTest('constructor with number', function(){
+				var f = new Fraction(-13.27);
+
+				equal(f.num, 1327);
+				equal(f.den, 100);
+				equal(f.sgn, -1);
+
+				start();
+			});
+
+			asyncTest('constructor with big number', function(){
+				var f = Fraction.fromNumber(1234567.9991829, 1e-10);
+
+				equal(f.num, 385102500000);
+				equal(f.den, 311933);
+
+				start();
+			});
+
+			asyncTest('constructor with long number', function(){
+				var f = Fraction.fromNumber(0.9999999999);
+
+				equal(f.num, 9999999999);
+				equal(f.den, 10000000000);
+
+				start();
+			});
+
+			asyncTest('constructor with big number as string', function(){
+				var f = new Fraction('1234567.9991829');
+
+				equal(f.num, 12345679991829);
+				equal(f.den, 10000000);
+
+				start();
+			});
+
+			asyncTest('constructor with number', function(){
+				var f = Fraction.fromNumber(355 / 113);
+
+				equal(f.num, 355);
+				equal(f.den, 113);
+				equal(f.sgn, 1);
+
+				start();
+			});
+
+			asyncTest('constructor with string (negative)', function(){
+				var f = new Fraction('-13.27');
+
+				equal(f.num, 1327);
+				equal(f.den, 100);
+				equal(f.sgn, -1);
+
+				start();
+			});
+
+			asyncTest('constructor with string (positive)', function(){
+				var f = new Fraction('5.12');
+
+				equal(f.num, 128);
+				equal(f.den, 25);
+				equal(f.sgn, 1);
+
+				start();
+			});
+
+			asyncTest('constructor with string (repeating decimals)', function(){
+				var f = new Fraction('5.13(31)');
+
+				equal(f.num, 25409);
+				equal(f.den, 4950);
+				equal(f.sgn, 1);
+
+				start();
+			});
+
+			asyncTest('add', function(){
+				var f1 = new Fraction('5.13(31)');
+				var f2 = new Fraction('2.3(7)');
+
+				equal(f1.add(f2).toNumber(), new Fraction('7.51(09)').toNumber());
+
+				start();
+			});
+
+			asyncTest('mul', function(){
+				var f1 = new Fraction('5.13(31)');
+				var f2 = new Fraction('2.3(7)');
+
+				equal(f1.mul(f2).toNumber(), new Fraction(2718763, 222750).toNumber());
+
+				start();
+			});
+
+			asyncTest('to positive string', function(){
+				var f = new Fraction('5.13(31)');
+
+				equal(f.toString(), '5.13(31)');
+
+				start();
+			});
+
+			asyncTest('to negative string', function(){
+				var f = new Fraction('-5.13(31)');
+
+				equal(f.toString(), '-5.13(31)');
+
+				start();
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture"></div>
+</body>
+</html>

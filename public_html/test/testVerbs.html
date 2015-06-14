@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<link rel="shortcut icon" href="../favicon.png" />
+
+	<title>test verbs</title>
+
+	<script src="../app/AMDLoader.js"></script>
+
+	<script>
+		AMDLoader.config = {
+			baseUrl: '../app',
+			paths: {
+				libs: '../libs'
+			}
+		};
+
+		require(['tools/lang/phonology/Syllabator', 'tools/lang/phonology/Grapheme', 'tools/lang/phonology/Word', 'tools/lang/morphology/Conjugator', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Syllabator, Grapheme, Word, Conjugator, verbsDictionary, JSONH){
+			var all = [],
+				idx = 0,
+				k, v, themeVowel, a, b;
+
+			verbsDictionary = JSONH.unpack(verbsDictionary);
+			for(k in verbsDictionary){
+				v = verbsDictionary[k];
+
+				switch(v.conjugation){
+					case 1:
+						themeVowel = 'à';
+						break;
+					case 2:
+						themeVowel = 'é';
+						break;
+					case 3:
+						themeVowel = 'e';
+						break;
+					case 4:
+						themeVowel = 'ís';
+						break;
+					case 5:
+						themeVowel = 'í';
+				}
+
+				if(v.prefix === '' && v.radix === 'konf')
+					continue;
+				all[idx ++] = v.prefix + v.radix + themeVowel;
+			}
+			all.sort();
+			for(idx = 0; idx < all.length - 1; idx ++){
+				a = all[idx];
+				b = all[idx + 1];
+				if(a === b){
+					console.log('!!! form duplicate: ' + a);
+					return;
+				}
+			}
+
+
+			var start = (new Date()).getTime();
+
+			//var errorPrefix = 0;
+			var errorStressMissing = 0,
+				errorStressPositionExpectedLate = 0,
+				errorStressPositionExpectedEarly = 0,
+				errorStressType = 0,
+				coniugationType = [0, 0, 0, 0, 0],
+				stressTypeAcute = 0,
+				proparossitone = 0;
+			for(k in verbsDictionary){
+				v = verbsDictionary[k];
+
+				coniugationType[v.conjugation - 1] ++;
+				if(v.stressType == 'a')
+					stressTypeAcute ++;
+
+				switch(v.conjugation){
+					case 1:
+						themeVowel = 'à';
+						break;
+					case 2:
+						themeVowel = 'é';
+						break;
+					case 3:
+						themeVowel = 'e';
+						break;
+					case 4:
+					case 5:
+						themeVowel = 'í';
+				}
+
+				var infinitive = v.prefix + v.radix + themeVowel + 'r';
+
+				//skip highly irregular verbs
+				if(infinitive.match(/(^|[^s])avér$/))
+					continue;
+
+				if(v.conjugation != 3 && Word.getIndexOfStress(infinitive) != infinitive.length - 2){
+					console.log('!!! form error: ' + infinitive + ' cannot be of ' + v.conjugation + ' conjugation');
+
+					return;
+				}
+
+				var result = Conjugator.getStressThemeT3(infinitive);
+
+				/*if(conjugation.prefix !== v.prefix){
+					errorPrefix ++;
+
+					console.log('prefix error for ' + infinitive + ': ' + v.prefix + ' != ' + conjugation.prefix);
+				}*/
+
+				if(result.paradigmInfo.stressIndex < 0){
+					errorStressMissing ++;
+
+					console.log(infinitive + ': missing stress');
+				}
+				else{
+					var expected = v.prefix + v.radix,
+						stressIdx = v.prefix.length + v.stressIdx;
+					if(v.conjugation == 4)
+						expected += 'is';
+					if(v.stressType == 'a' && (expected[stressIdx] || themeVowel).match(/a/) || v.stressType == 'g' && (expected[stressIdx] || themeVowel).match(/[iu]/)){
+						console.log('!!! form error: ' + infinitive + ' with vowel on index ' + stressIdx + ' cannot have ' + (v.stressType == 'a'? 'an acute': 'a grave') + ' stress');
+
+						return;
+					}
+					expected = expected.substr(0, stressIdx)
+						+ Word[v.stressType == 'a'? 'addStressAcute': 'addStressGrave'](Word.suppressStress(expected[stressIdx] || themeVowel))
+						+ expected.substr(stressIdx + 1) + 'e';
+					if(Word.getIndexOfStress(expected) == null){
+						console.log('!!! form error: ' + expected + ' without vowel on index ' + stressIdx);
+
+						return;
+					}
+
+					var syllabation = Syllabator.syllabate(infinitive, 'none', true);
+					if(result.paradigmInfo.stressIndex < stressIdx){
+						errorStressPositionExpectedLate ++;
+
+						console.log(syllabation.syllabes.join('-') + ': expected late ' + expected);
+					}
+					else if(result.paradigmInfo.stressIndex > stressIdx){
+						errorStressPositionExpectedEarly ++;
+
+						console.log(syllabation.syllabes.join('-') + ': expected early ' + expected);
+					}
+					else if(result.paradigmInfo.stressType[0] != v.stressType){
+						errorStressType ++;
+
+						console.log(syllabation.syllabes.join('-') + ': expected stress ' + expected[stressIdx]);
+					}
+					else if(syllabation.syllabes.length - syllabation.getSyllabeIndex(result.paradigmInfo.stressIndex) > 2)
+						proparossitone ++;
+				}
+			}
+
+			console.log('time taken:   ' + ((new Date()).getTime() - start) + ' ms');
+
+			var size = verbsDictionary.length;
+			var padSizeLog10 = String(Math.max(errorStressMissing, errorStressPositionExpectedLate, errorStressPositionExpectedEarly, errorStressType)).length;
+			//var padSizeLog10 = String(Math.max(errorPrefix, errorStressMissing, errorStressPositionExpectedLate, errorStressPositionExpectedEarly, errorStressType)).length;
+			if(/*errorPrefix +*/ errorStressMissing + errorStressPositionExpectedLate + errorStressPositionExpectedEarly + errorStressType == 0)
+				console.log('verbal forms: ' + size);
+			else{
+				//if(errorPrefix > 0)
+				//	console.log('error on prefix:\t\t ' + leftPad((100 * errorPrefix / size).toFixed(2), 7) + '% (' + leftPad(errorPrefix, padSizeLog10) + '/' + size + ')');
+				if(errorStressMissing > 0)
+					console.log('error on stress missing:\t' + leftPad((100 * errorStressMissing / size).toFixed(2), 7) + '% (' + leftPad(errorStressMissing, padSizeLog10) + '/' + size + ')');
+				if(errorStressPositionExpectedLate > 0)
+					console.log('error on stress position late:\t' + leftPad((100 * errorStressPositionExpectedLate / size).toFixed(2), 7) + '% (' + leftPad(errorStressPositionExpectedLate, padSizeLog10) + '/' + size + ')');
+				if(errorStressPositionExpectedEarly > 0)
+					console.log('error on stress position early:\t' + leftPad((100 * errorStressPositionExpectedEarly / size).toFixed(2), 7) + '% (' + leftPad(errorStressPositionExpectedEarly, padSizeLog10) + '/' + size + ')');
+				if(errorStressType > 0)
+					console.log('error on stress type:\t\t\t' + leftPad((100 * errorStressType / size).toFixed(2), 7) + '% (' + leftPad(errorStressType, padSizeLog10) + '/' + size + ')');
+			}
+			console.log('-àr:            ' + leftPad((100 * coniugationType[0] / size).toFixed(1), 4) + '%');
+			console.log('-ér:            ' + leftPad((100 * coniugationType[1] / size).toFixed(1), 4) + '%');
+			console.log('\'-er:           ' + leftPad((100 * coniugationType[2] / size).toFixed(1), 4) + '%');
+			console.log('-ír/-ís-:       ' + leftPad((100 * coniugationType[3] / size).toFixed(1), 4) + '%');
+			console.log('-ír:            ' + leftPad((100 * coniugationType[4] / size).toFixed(1), 4) + '%');
+			console.log('acute stress:   ' + leftPad((100 * stressTypeAcute / size).toFixed(1), 4) + '%');
+			console.log('proparossitone: ' + leftPad((100 * proparossitone / size).toFixed(1), 4) + '%');
+		});
+
+		var leftPad = function(str, size, character){
+			return (Array(size).join(character || ' ') + str).slice(-size);
+		};
+
+		var testLatinVerbs = function(){
+			var rules = [
+					[/mi(ss?|t)/i, 'met'], [/tim/i, 'tem'], [/vid/i, 'ved'],
+					[/bea/ig, 'pi'],
+					[/[ĕĭ]([ao])/i, '$1'],
+					[/au/i, 'al'],
+					[/vi(sse)$/i, '$1'],
+					//future only
+					//[/b([iĭou])/ig, 'r$1'],
+					[/b([aāeĕēiĭouŭ])/ig, 'v$1'],
+					[/vis./ig, 's'],
+					[/v[uŭ]i/ig, 've'],
+					[/[aāeēiĭī]s$/i, 'is'],
+					[/ui$/i, 'éi'],
+					[/[ai](n?t)$/i, 'e$1'],
+					[/ntis$/i, 'ntes'],
+					[/[āē]tis$/i, 'es'], [/[ĭī]tis$/i, 'is'],
+					[/itus$/i, 'utus'],
+					[/([āēĭīuŭ]m)u[ms]$/i, 'ón'],
+					[/unt$/, 'an'],
+					[/u[ms]$/i, 'o'],
+					[/(m|s|[ns]?t)$/i, ''],
+					[/^h/i, ''], [/e h(av)?/i, ''],
+					[/([āēĭī])te$/i, '$1'],
+					[/[ăā]/gi, 'a'], [/[ĕē]/gi, 'e'], [/[ĭī]/gi, 'i'], [/[ŏō]/gi, 'o'], [/[ŭū]/gi, 'u'],
+					[/([^aăāeĕēiĭīoŏōuŭū])(\1)/gi, '$1']
+				];
+
+			var transform = function(word, rules){
+				var len = rules.length, tuple, i;
+				for(i = 0; i < len; i ++){
+					tuple = rules[i];
+					word = word.replace(tuple[0], tuple[1]);
+					}
+				return word;
+				};
+
+			var words = [
+				/*'indicative present:',
+				['amo', 'amāmus', 'amas', 'amātis', 'amat', 'amant'],
+				['monĕo', 'monēmus', 'mones', 'monētis', 'monet', 'monent'],
+				['mitto', 'mittĭmus', 'mittes', 'mittĭtis', 'mittet', 'mittent'],
+				['audĭo', 'audīmus', 'audis', 'audītis', 'audit', 'audĭunt'],
+				['sum', 'sumus', 'es', 'estis', 'est', 'sunt'],
+				['habĕo', 'habēmus', 'habes', 'habētis', 'habet', 'habent'],
+				'indicative imperfect:',
+				['amābam', 'amabāmus', 'amābas', 'amabātis', 'amābat', 'amābant'],
+				['monēbam', 'monebāmus', 'monēbas', 'monebātis', 'monēbat', 'monēbant'],
+				['mittēbam', 'mittebāmus', 'mittēbas', 'mittebātis', 'mittēbat', 'mittēbant'],
+				['audiēbam', 'audiebāmus', 'audiēbas', 'audiebātis', 'audiēbat', 'audiēbant'],
+				['eram', 'erāmus', 'eras', 'erātis', 'erat', 'erant'],
+				['habēbam', 'habebāmus', 'habēbas', 'habebātis', 'habēbat', 'habēbant'],
+				'indicative future:',
+				['amābo', 'amabĭmus', 'amābis', 'amabĭtis', 'amābit', 'amābunt'],
+				['monēbo', 'monebĭmus', 'monēbis', 'monebĭtis', 'monēbit', 'monēbunt'],
+				['mittam', 'mittēmus', 'mittes', 'mittētis', 'mittet', 'mittent'],
+				['audĭam', 'audiēmus', 'audĭes', 'audiētis', 'audĭet', 'audĭent'],
+				['ero', 'erimus', 'eris', 'eritis', 'erit', 'erunt'],
+				['habēbo', 'habebĭmus', 'habēbis', 'habebĭtis', 'habēbit', 'habēbunt'],
+				'subjuntive present:',
+				['amem', 'amēmus', 'ames', 'amētis', 'amet', 'ament'],
+				['menĕam', 'moneāmus', 'menĕas', 'moneātis', 'menĕat', 'menĕant'],
+				['mittam', 'mittāmus', 'mittas', 'mittātis', 'mittat', 'mittant'],
+				['audĭam', 'audiāmus', 'audĭas', 'audiātis', 'audĭat', 'audĭant'],
+				['sim', 'simus', 'sis', 'sitis', 'sit', 'sint'],
+				['habĕam', 'habeāmus', 'habĕas', 'habeātis', 'habĕat', 'habĕant'],
+				'subjuntive imperfect:',
+				['amavissem', 'amavissēmus', 'amavisses', 'amavissētis', 'amavisset', 'amavissent'],
+				['monuissem', 'monuissēmus', 'monuisses', 'monuissētis', 'monuisset', 'monuissent'],
+				['misissem', 'misissēmus', 'misisses', 'misissētis', 'misisset', 'misissent'],
+				['audivissem', 'audivissēmus', 'audivisses', 'audivissētis', 'audivisset', 'audivissent'],
+				['habuissem', 'habuissēmus', 'habuisses', 'habuissētis', 'habuisset', 'habuissent'],
+				['fuissem', 'fuissēmus', 'fuisses', 'fuissētis', 'fuisset', 'fuissent'],
+				'conditional:',
+				['amāre habŭi', 'amāre habuĭmus', 'amāre habuisti', 'amāre habuistis', 'amāre habŭit', 'amāre habuērunt'],
+				'imperative:',
+				['ama', 'amāte'],
+				['mone', 'monēte'],
+				['mitte', 'mittĭte'],
+				['audi', 'audīte'],
+				['habe', 'habēte'],
+				['es', 'este'],
+				'participle present:',
+				['amantis'],
+				['monentis'],
+				['mittentis'],
+				['audientis'],
+				['habentis'],
+				['esentis'],
+				'participle perfect:',
+				['amatus'],
+				['monitus'],
+				['missus'],
+				['auditus'],
+				['habitus'],
+				['sutus'],
+				'gerundive present:',
+				['amando'],
+				['monendo'],
+				['mittendo'],
+				['audiendo'],
+				['habendo'],
+				['esendo']/**/
+				];
+
+			//var words = ['habo', 'habimus', 'habis', 'habitis', 'habit', 'habunt'];
+			var size = words.length, len, wordLatin, wordVenetan, i, j;
+			for(i = 0; i < size; i ++){
+				if(typeof words[i] === 'string'){
+					console.log(words[i]);
+					continue;
+					}
+
+				len = words[i].length;
+				for(j = 0; j < len; j ++){
+					wordLatin = words[i][j];
+					wordVenetan = transform(wordLatin, rules);
+
+					console.log(wordLatin + ' > ' + wordVenetan);
+					}
+				console.log('\n');
+				}
+		};
+	</script>
+</head>
+
+<body>
+</body>
+</html>
