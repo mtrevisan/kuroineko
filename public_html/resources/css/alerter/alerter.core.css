@@ -1,0 +1,163 @@
+/** This cover prevents interaction with the content while a dialog is open */
+.alerter-cover {
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  filter: alpha(opacity=0);
+  opacity: 0; }
+
+.alerter-cover-hidden {
+  display: none; }
+
+/** Parent container for all dialog messages */
+.alerter-position {
+  position: fixed;
+  z-index: 99999;
+  top: 50px;
+  left: 50%;
+  width: 550px;
+  margin-left: -275px;
+  opacity: 1; }
+
+.alerter-show, .alerter-log {
+  -webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -khtml-transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
+.alerter-el-log {
+  -webkit-transition: all 300ms ease-in;
+  -khtml-transition: all 300ms ease-in;
+  -moz-transition: all 300ms ease-in;
+  -o-transition: all 300ms ease-in;
+  transition: all 300ms ease-in; }
+
+.alerter-hide {
+  -webkit-transition: all 250ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  -khtml-transition: all 250ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  -moz-transition: all 250ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  -o-transition: all 250ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transition: all 250ms cubic-bezier(0.6, -0.28, 0.735, 0.045); }
+
+.alerter-log-hide {
+  -webkit-transition: all 500ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  -khtml-transition: all 500ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  -moz-transition: all 500ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  -o-transition: all 500ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transition: all 500ms cubic-bezier(0.6, -0.28, 0.735, 0.045); }
+
+.alerter-el-log-hide {
+  -webkit-transition: all 200ms ease-in;
+  -khtml-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+  transition: all 200ms ease-in; }
+
+.alerter-hidden {
+  -webkit-transform: translate(0, -150px);
+  -khtml-transform: translate(0, -150px);
+  -moz-transform: translate(0, -150px);
+  -o-transform: translate(0, -150px);
+  transform: translate(0, -150px);
+  opacity: 0;
+  display: none; }
+
+/* overwrite display: none; */
+:root * > .alerter-hidden {
+  display: block;
+  visibility: hidden; }
+
+.alerter-logs {
+  position: fixed;
+  z-index: 5000;
+  bottom: 10px;
+  right: 10px;
+  width: 300px; }
+
+.alerter-el-logs {
+  position: absolute;
+  z-index: 4500;
+  margin-top: 2px; }
+
+.alerter-logs-hidden {
+  display: none; }
+
+.alerter-log {
+  cursor: pointer;
+  display: block;
+  margin-top: 10px;
+  position: relative;
+  right: -300px;
+  opacity: 0; }
+
+.alerter-log-show {
+  right: 0;
+  opacity: 1; }
+
+.alerter-log-hide {
+  -webkit-transform: translate(300px, 0);
+  -khtml-transform: translate(300px, 0);
+  -moz-transform: translate(300px, 0);
+  -o-transform: translate(300px, 0);
+  transform: translate(300px, 0);
+  opacity: 0; }
+
+.alerter-el-log {
+  cursor: pointer;
+  display: block;
+  overflow-y: hidden;
+  max-height: 0;
+  padding: 0 15px 0 15px !important; }
+
+.alerter-el-log-show {
+  max-height: 5em;
+  padding: 15px !important; }
+
+.alerter-el-log-hide {
+  max-height: 0;
+  padding: 0 15px 0 15px !important; }
+
+.alerter-dialog {
+  padding: 25px; }
+
+.alerter-inner {
+  text-align: center; }
+
+.alerter-text, .alerter-textarea {
+  margin-bottom: 15px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 100%; }
+
+.alerter-textarea {
+  height: 10em; }
+
+.alerter-button, .alerter-button:hover, .alerter-button:active, .alerter-button:visited {
+  background: none;
+  text-decoration: none;
+  border: none;
+  line-height: 1.5;
+  font-size: 100%;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 5px; }
+
+@media only screen and (max-width: 680px) {
+  .alerter, .alerter-logs, .alerter-el-logs {
+    left: 5%;
+    margin: 0;
+    width: 90%;
+    -webkit-box-sizing: border-box;
+    -khtml-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; } }

@@ -1,0 +1,99 @@
+section.input form table {
+  border-collapse: separate !important;
+  border-spacing: 0 6px; }
+  section.input form table th {
+    padding-bottom: 1em; }
+  section.input form table tr.loading-info td {
+    padding-top: 1em;
+    padding-bottom: 2em;
+    text-align: center;
+    font-weight: bold;
+    color: orange; }
+  section.input form table span.input-description {
+    margin-right: 0.5em; }
+
+table.lemmata th {
+  font-weight: normal;
+  text-align: center;
+  padding-left: 7px;
+  padding-right: 7px;
+  min-width: 5em;
+  border-right: 1px dotted; }
+  table.lemmata th.links {
+    min-width: 0; }
+  table.lemmata th:last-child {
+    border-right: none; }
+  table.lemmata th:first-child {
+    border-right: none; }
+  table.lemmata th:nth-child(2) {
+    border-right: 2px solid;
+    padding-left: 0; }
+table.lemmata tr {
+  border-bottom: 1px solid; }
+  table.lemmata tr:last-child {
+    border-bottom: 2px solid; }
+table.lemmata td {
+  padding: 4px 7px 4px 7px;
+  border-right: 1px dotted; }
+  table.lemmata td.links {
+    font-variant: small-caps; }
+  table.lemmata td:last-child {
+    border-right: none; }
+  table.lemmata td:first-child {
+    border-right: none; }
+  table.lemmata td:nth-child(2) {
+    border-right: 2px solid;
+    padding-left: 0; }
+  table.lemmata td ul {
+    padding-left: 1.4em;
+    text-indent: -1.4em;
+    list-style-type: none; }
+  table.lemmata td span.language {
+    font-style: italic; }
+table.lemmata div:empty {
+  display: none; }
+
+/*ul.drop-down-menu, ul.drop-down-menu ul.sub-menu{
+	padding: 0;
+	margin: 0;
+
+	li{
+		list-style-type: none;
+		display: inline-block;
+
+		span{
+			font-size: small;
+			cursor: pointer;
+			color: #000;
+			background: #AAA;
+			padding: 5px;
+			display: inline-block;
+			white-space: nowrap;
+		}
+		a{
+			@extend span;
+			text-decoration: none;
+		}
+	}
+}
+ul.drop-down-menu li{
+	position: relative;
+
+	& ul.sub-menu{
+		display: none;
+		position: absolute;
+		left: 0.2em;
+	}
+	&:hover ul.sub-menu{
+		display: block;
+
+		& a:hover{
+			background: #CCC;
+		}
+	}
+}*/
+@media only print {
+  table.lemmata th:first-child, table.lemmata td:first-child {
+    border-right: 2px solid; }
+  table.lemmata th.links, table.lemmata td.links {
+    display: none; } }

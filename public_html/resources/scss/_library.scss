@@ -1,0 +1,43 @@
+@mixin experimental($property, $value){
+	-webkit-#{$property}: $value;
+	-khtml-#{$property}: $value;
+	-moz-#{$property}: $value;
+	-o-#{$property}: $value;
+	#{$property}: $value;
+}
+
+@mixin background-image-linear-gradient($top, $color1, $color2){
+	background-image: -webkit-linear-gradient($top, $color1, $color2);
+	background-image: -moz-linear-gradient($top, $color1, $color2);
+	background-image: -o-linear-gradient($top, $color1, $color2);
+	background-image: linear-gradient($top, $color1, $color2);
+}
+@mixin font-weight-align($weight, $align){
+	font-weight: $weight;
+	text-align: $align;
+}
+@mixin padding-left-right($value){
+	padding-left: $value;
+	padding-right: $value;
+}
+
+@mixin border-with-last($border, $value, $last){
+	#{$border}: $value;
+
+	&:last-child{
+		#{$border}: $last;
+	}
+}
+
+@mixin border-radius($radius){
+	@include experimental(border-radius, $radius);
+}
+@mixin box-shadow($data){
+	@include experimental(box-shadow, $data);
+}
+@mixin column-count($value){
+	@include experimental(column-count, $value);
+}
+@mixin transition($value){
+	@include experimental(transition, $value);
+}

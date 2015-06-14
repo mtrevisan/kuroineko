@@ -1,0 +1,98 @@
+@import "library.scss";
+
+
+table.paradigm{
+	th{
+		&.conjugation-type{
+			@include font-weight-align(normal, center);
+			@include padding-left-right(7px);
+		}
+		&.person{
+			@extend .conjugation-type;
+			min-width: 5.4em;
+
+			&:nth-of-type(2n+1){
+				border-right: 1px dotted;
+			}
+		}
+		&.mood{
+			@include font-weight-align(normal, left);
+			@include padding-left-right(4px);
+
+			border-bottom: 1px dotted;
+		}
+		&.tense{
+			@extend .mood;
+
+			border-right: 2px solid;
+		}
+	}
+	tr{
+		&:last-child{
+			border-bottom: 2px solid;
+		}
+	}
+	td{
+		&:nth-last-of-type(2n){
+			border-right: 1px dotted;
+		}
+
+		&.conjugation{
+			font-size: 90%;
+			border-bottom: 1px dotted;
+		}
+
+		&.multicolumn{
+			@include padding-left-right(20%);
+			@include column-count(2);
+		}
+
+		&:empty{
+			display: none;
+		}
+	}
+}
+
+.conjugation-regular{
+	color: #000;
+}
+.conjugation-irregular{
+	color: #F00;
+	border-color: #000 !important;
+}
+.archaic{
+	color: peru;
+	font-weight: bold;
+}
+
+table.themes{
+	th.theme{
+		@include font-weight-align(normal, left);
+		@include padding-left-right(4px);
+	}
+}
+table.pronoun-weak-interrogative{
+	margin: auto;
+
+	th{
+		&.person, &.number, &.gender{
+			@include font-weight-align(normal, left);
+			@include padding-left-right(4px);
+		}
+	}
+}
+
+td.conjugation, div.theme, div.pronoun-weak-interrogative{
+	font-style: italic;
+	text-align: center;
+	@include padding-left-right(7px);
+}
+div.pronoun-weak-interrogative{
+	min-width: 4em;
+}
+
+div.history{
+	font-size: 17px;
+	line-height: 1.5em;
+	text-align: center;
+}

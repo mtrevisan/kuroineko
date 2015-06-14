@@ -1,0 +1,43 @@
+@import "library.scss";
+
+
+div.measure-input-container, div.measure-table-container{
+	display: inline-block;
+	vertical-align: top;
+}
+
+div.measure-input-container{
+	margin-right: 50px;
+}
+
+table.measure-table{
+	th.header{
+		@include font-weight-align(normal, center);
+		@include padding-left-right(4px);
+
+		@include border-with-last(border-right, 2px solid, none);
+	}
+	tr{
+		@include border-with-last(border-bottom, 1px solid, 2px solid);
+	}
+	td{
+		&.name, &.equivalent-value, &.equivalent-measure{
+			@include font-weight-align(normal, center);
+			font-style: italic;
+			@include padding-left-right(7px);
+		}
+		&.name{
+			min-width: 4em;
+		}
+		&.equivalent-value{
+			text-align: right;
+		}
+		&.equivalent-measure{
+			text-align: left;
+		}
+	}
+}
+
+div.measure-output-original, div.measure-output-conversion, div.measure-output-conversion-expanded{
+	font-size: 110%;
+}

@@ -1,0 +1,34 @@
+div.measure-input-container, div.measure-table-container {
+  display: inline-block;
+  vertical-align: top; }
+
+div.measure-input-container {
+  margin-right: 50px; }
+
+table.measure-table th.header {
+  font-weight: normal;
+  text-align: center;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-right: 2px solid; }
+  table.measure-table th.header:last-child {
+    border-right: none; }
+table.measure-table tr {
+  border-bottom: 1px solid; }
+  table.measure-table tr:last-child {
+    border-bottom: 2px solid; }
+table.measure-table td.name, table.measure-table td.equivalent-value, table.measure-table td.equivalent-measure {
+  font-weight: normal;
+  text-align: center;
+  font-style: italic;
+  padding-left: 7px;
+  padding-right: 7px; }
+table.measure-table td.name {
+  min-width: 4em; }
+table.measure-table td.equivalent-value {
+  text-align: right; }
+table.measure-table td.equivalent-measure {
+  text-align: left; }
+
+div.measure-output-original, div.measure-output-conversion, div.measure-output-conversion-expanded {
+  font-size: 110%; }

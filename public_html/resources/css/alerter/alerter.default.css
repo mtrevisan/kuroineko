@@ -1,0 +1,72 @@
+/**
+ * Default Look and Feel
+ */
+.alerter, .alerter-log, .alerter-el-log {
+  font-family: sans-serif; }
+
+.alerter {
+  background: #FFF;
+  border: 10px solid #333;
+  border: 10px solid rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+
+.alerter-text, .alerter-textarea {
+  border: 1px solid #CCC;
+  padding: 10px;
+  border-radius: 4px; }
+
+.alerter-button {
+  border-radius: 4px;
+  color: #FFF;
+  font-weight: bold;
+  padding: 6px 15px;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)); }
+  .alerter-button:hover, .alerter-button:focus {
+    outline: none;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), transparent);
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1), transparent);
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.1), transparent);
+    background-image: linear-gradient(top, rgba(0, 0, 0, 0.1), transparent); }
+  .alerter-button:focus {
+    box-shadow: 0 0 15px #2B72D5; }
+  .alerter-button:active {
+    position: relative;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
+
+.alerter-button-cancel, .alerter-button-cancel:hover, .alerter-button-cancel:focus {
+  background-color: #FE1A00;
+  border: 1px solid #D83526; }
+
+.alerter-button-ok, .alerter-button-ok:hover, .alerter-button-ok:focus {
+  background-color: #5CB811;
+  border: 1px solid #3B7808; }
+
+.alerter-button-dont-know, .alerter-button-dont-know:hover, .alerter-button-dont-know:focus {
+  background-color: #3071A9;
+  border: 1px solid #357EBD; }
+
+.alerter-log, .alerter-el-log {
+  background: #1F1F1F;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 15px;
+  border-radius: 4px;
+  color: #FFF;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5); }
+
+.alerter-log-error {
+  background: #FE1A00;
+  background: rgba(254, 26, 0, 0.9); }
+
+.alerter-log-success {
+  background: #5CB811;
+  background: rgba(92, 184, 17, 0.9); }

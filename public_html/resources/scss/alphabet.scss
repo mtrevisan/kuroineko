@@ -1,0 +1,75 @@
+@import "library.scss";
+
+
+h1{
+	font-size: 38px;
+	@include font-weight-align(bold, center);
+}
+
+div.container-inner{
+	@include border-radius(8px);
+	border-color: #C6C6C6;
+	border-style: solid;
+	border-width: 1px;
+	padding: 16px 10px 16px 10px;
+	margin: 20px;
+	display: block;
+}
+
+p.alphabet{
+	margin-left: 1em;
+}
+
+table.alphabet{
+	border-collapse: collapse;
+	border: none;
+	font-size: 13pt;
+	margin: auto;
+
+	td{
+		padding: 0 0.3em 0 0.3em !important;
+		text-align: center !important;
+	}
+	tr.phoneme th{
+		font-family: 'Mau CanIPA Venetan';
+		font-weight: normal;
+		font-size: 15pt;
+	}
+	span.unseen{
+		color: red;
+		font-weight: bold;
+	}
+	span.seen{
+		color: #376092;
+	}
+}
+
+span.phoneme{
+	font-family: 'Mau CanIPA Venetan';
+	font-weight: normal;
+	font-size: 15pt;
+}
+
+
+
+@media only screen and (max-width: 1279px){
+	tr.phoneme td{
+		font-size: 13pt;
+		padding: 0 0.25em 0 0.25em;
+	}
+}
+@media only print{
+	body, span.unseen, span.seen{
+		font-size: small;
+	}
+	table.alphabet{
+		font-size: 11pt;
+
+		tr.phoneme td{
+			font-size: 7pt;
+		}
+		span.phoneme{
+			font-size: 9pt;
+		}
+	}
+}

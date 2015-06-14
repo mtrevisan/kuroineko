@@ -1,0 +1,73 @@
+table.paradigm th.conjugation-type, table.paradigm th.person {
+  font-weight: normal;
+  text-align: center;
+  padding-left: 7px;
+  padding-right: 7px; }
+table.paradigm th.person {
+  min-width: 5.4em; }
+  table.paradigm th.person:nth-of-type(2n+1) {
+    border-right: 1px dotted; }
+table.paradigm th.mood, table.paradigm th.tense {
+  font-weight: normal;
+  text-align: left;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-bottom: 1px dotted; }
+table.paradigm th.tense {
+  border-right: 2px solid; }
+table.paradigm tr:last-child {
+  border-bottom: 2px solid; }
+table.paradigm td:nth-last-of-type(2n) {
+  border-right: 1px dotted; }
+table.paradigm td.conjugation {
+  font-size: 90%;
+  border-bottom: 1px dotted; }
+table.paradigm td.multicolumn {
+  padding-left: 20%;
+  padding-right: 20%;
+  -webkit-column-count: 2;
+  -khtml-column-count: 2;
+  -moz-column-count: 2;
+  -o-column-count: 2;
+  column-count: 2; }
+table.paradigm td:empty {
+  display: none; }
+
+.conjugation-regular {
+  color: #000; }
+
+.conjugation-irregular {
+  color: #F00;
+  border-color: #000 !important; }
+
+.archaic {
+  color: peru;
+  font-weight: bold; }
+
+table.themes th.theme {
+  font-weight: normal;
+  text-align: left;
+  padding-left: 4px;
+  padding-right: 4px; }
+
+table.pronoun-weak-interrogative {
+  margin: auto; }
+  table.pronoun-weak-interrogative th.person, table.pronoun-weak-interrogative th.number, table.pronoun-weak-interrogative th.gender {
+    font-weight: normal;
+    text-align: left;
+    padding-left: 4px;
+    padding-right: 4px; }
+
+td.conjugation, div.theme, div.pronoun-weak-interrogative {
+  font-style: italic;
+  text-align: center;
+  padding-left: 7px;
+  padding-right: 7px; }
+
+div.pronoun-weak-interrogative {
+  min-width: 4em; }
+
+div.history {
+  font-size: 17px;
+  line-height: 1.5em;
+  text-align: center; }
