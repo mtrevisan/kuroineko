@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(function(){
+define(/*['tools/data/I18N', 'i18nResource'],*/ function(/*I18N, i18nResource*/){
 
 	var types = {
 		northern: ['feltrinBelumat', 'cipileño', 'altaTrevixana', 'ŧitadin'],
@@ -43,7 +43,7 @@ define(function(){
 		return types;
 	};
 
-	Constructor.fillTypeSelector = function(selectorDOM){
+	/*Constructor.fillTypeSelector = function(selectorDOM){
 		var baseKey = 'dialect.',
 			groupKeyTail = '_group',
 			k = 'none',
@@ -59,7 +59,7 @@ define(function(){
 					options.add(new Option(I18N.translate(i18nResource, baseKey + k), k));
 				});
 			}
-	};
+	};/**/
 
 
 	Constructor.prototype = {
