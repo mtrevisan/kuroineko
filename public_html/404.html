@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<meta name="robots" content="noodp">
+	<link rel="shortcut icon" href="favicon.png" />
+
+	<style type="text/css">
+		img#bg{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			opacity: 0.5;
+			filter: alpha(opacity=50);
+		}
+	</style>
+	<!-- grammatica, lingua, veneta -->
+
+	<title>La pagina che hai richiesto non &egrave; pi&uacute; qui</title>
+
+	<script src="/app/Initializer.js"></script>
+	<script id="bootstrap-js">
+		Initializer.initializeApplication(function(){
+			require(['HTMLHelper'], function(HTMLHelper){
+				var referrer = document.referrer;
+
+				//a mis-typed URL (or out-of-date bookmark) will have no referrer
+				if(!referrer.length)
+					document.getElementById('response-mistyped-url').style.display = 'block';
+				else if(referrer.match(/^http:\/\/parnodexmentegar.orgfree.com/i))
+					document.getElementById('response-insite-referral').style.display = 'block';
+				else{
+					var query = HTMLHelper.decodeQueryString(referrer.toLowerCase()),
+						//google, bing, ask, aol, wow, webcrawler, infospace, duckduckgo, blekko, contenko, dogpile, alhea, 3ds, gigablast, qwant,
+						//excite, lycos
+						searchTerms = (query.params.q || query.params['#q']
+							//yahoo
+							|| query.params.p
+							//mywebsearch
+							|| query.params.searchfor
+							//info
+							|| query.params.qkw
+							//yandex
+							|| query.params.text
+							//iltrovatore
+							|| query.params.query
+							//arianna.libero, virgilio
+							|| query.params.qs);
+
+					//out-of-date search engine referral
+					if(searchTerms){
+						var bestMatchedLinks = [];
+						if(searchTerms.match(/coniugatore|[kc]oniugad?ore?/i))
+							bestMatchedLinks.push({label: 'Coniugatore', url: 'pages/it/conjugator.html'});
+						if(searchTerms.match(/sillabatore|si[lƚł£]abad?ore?/i))
+							bestMatchedLinks.push({label: 'Sillabatore', url: 'pages/it/syllabator.html'});
+						if(searchTerms.match(/dizionario|diss?ionario|ga[lƚł£]epin/i))
+							bestMatchedLinks.push({label: 'Dizionario', url: 'pages/it/dictionary.html'});
+						if(searchTerms.match(/alfabeto/i))
+							bestMatchedLinks.push({label: 'Alfabeto', url: 'pages/it/alphabet.html'});
+						if(searchTerms.match(/misur[ae]|me[sx]ur[ae]/i))
+							bestMatchedLinks.push({label: 'Convertitore di misure', url: 'pages/it/measureConverter.html'});
+						if(searchTerms.match(/intivad?ore?/i) || searchTerms.match(/variant[ei]/i))
+							bestMatchedLinks.push({label: 'Convertitore di misure', url: 'pages/it/dialectInquirer.html'});
+
+						//tell the visitor what site is at fault and what the search terms were
+						var link = document.getElementById('outofdate-referral-link');
+						link.href = referrer;
+						link.innerHTML = query.url;
+
+						HTMLHelper.setEncodedInnerHTML('outofdate-referral-search-terms', searchTerms);
+
+						if(bestMatchedLinks.length){
+							var lastLink = document.getElementById('outofdate-referral-link-home');
+
+							bestMatchedLinks.forEach(function(data){
+								var el = document.createElement('a');
+								el.href = data.url;
+								//FIXME
+								el.innerHTML = data.label + '<br>';
+
+								lastLink.parentElement.insertBefore(el, lastLink);
+							});
+						}
+
+						document.getElementById('response-outofdate-referral').style.display = 'block';
+					}
+					//broken (in-site) link
+					else{
+						var link = document.getElementById('broken-referral-link');
+						link.href = referrer;
+						link.innerHTML = query.url;
+
+						var bestMatchedLinks = [];
+						if(referrer.match(/conjugator(-it)?.html?/i))
+							bestMatchedLinks.push({label: 'Coniugatore', url: 'pages/it/conjugator.html'});
+						if(referrer.match(/syllabator(-it)?.html?/i))
+							bestMatchedLinks.push({label: 'Sillabatore', url: 'pages/it/syllabator.html'});
+						if(referrer.match(/dictionary(-it)?.html?/i))
+							bestMatchedLinks.push({label: 'Dizionario', url: 'pages/it/dictionary.html'});
+						if(referrer.match(/alphabet(-it)?.html?/i))
+							bestMatchedLinks.push({label: 'Alfabeto', url: 'pages/it/alphabet.html'});
+						if(referrer.match(/measureConverter(-it)?.html?/i))
+							bestMatchedLinks.push({label: 'Convertitore di misure', url: 'pages/it/measureConverter.html'});
+						if(referrer.match(/dialectInquirer(-it)?.html?/i))
+							bestMatchedLinks.push({label: 'Convertitore di misure', url: 'pages/it/dialectInquirer.html'});
+
+						if(bestMatchedLinks.length){
+							var lastLink = document.getElementById('broken-referral-link-home');
+
+							bestMatchedLinks.forEach(function(data){
+								var el = document.createElement('a');
+								el.href = data.url;
+								//FIXME
+								el.innerHTML = data.label + '<br>';
+
+								lastLink.parentElement.insertBefore(el, lastLink);
+							});
+						}
+
+						document.getElementById('response-broken-link').style.display = 'block';
+					}
+				}
+			});
+		});
+	</script>
+	<script src="/app/tools/social/GoogleAnalyticsHelper.js"></script>
+</head>
+<body>
+	<img src="/resources/images/kalhigo.jpg" alt="background image" id="bg" />
+	<h1>La pagina che hai richiesto non &egrave; pi&uacute; qui</h1>
+	<p>&hellip; ma penso di poterti aiutare</p>
+
+	<section id="response-mistyped-url" style="display:none;">
+		<p><strong>Potresti non essere stato in grado di trovare la pagina che cercavi per via di:</strong></p>
+		<ul>
+			<li>Un <strong>segnalibro/pagina preferita obsoleto</strong>.</li>
+			<li>Un motore di ricerca che ha un <strong>elenco obsoleto al sito</strong>.</li>
+			<li>Un <strong>indirizzo scritto male</strong>.</li>
+		</ul>
+		<br>
+
+		<hr />
+
+		<p>Penso che le seguenti pagine su questo sito potrebbero essere in grado di aiutarti:</p>
+		<br>
+		<a href="/index.html"><img src="/resources/images/home.png" alt="Home page" width="30" height="30" />Home page</a>
+		<!--<a href="sitemap.html"><img src="/resources/images/sitemap.gif" alt="Site map" width="100" height="30" />Site map</a>-->
+	</section>
+	<section id="response-insite-referral" style="display:none;">
+		<p>Questo errore dipende da me! Per favore accetta la mie scuse &mdash; sistemer&ograve; questo riferimento errato quanto prima.</p>
+	</section>
+	<section id="response-outofdate-referral" style="display:none;">
+		<p>Hai fatto una ricerca con <strong><a id="outofdate-referral-link" target="_blank"></a></strong> per i termini <strong><span id="outofdate-referral-search-terms"></span></strong>. Tuttavia, i suoi indici sembrano obsoleti.</p>
+
+		<hr />
+
+		<h2>Non tutto &egrave; perduto!</h2>
+		<p>Penso che le seguenti pagine su questo sito potrebbero essere in grado di aiutarti:</p>
+		<br>
+		<a id="outofdate-referral-link-home" href="/index.html"><img src="/resources/images/home.png" alt="Home page" width="30" height="30" />Home page</a>
+		<!--<a href="sitemap.html"><img src="/resources/images/sitemap.gif" alt="Site map" width="100" height="30" />Site map</a>-->
+	</section>
+	<section id="response-broken-link" style="display:none;">
+		<p>Sei stato scorrettamente indirizzato a questa pagina da <strong><a id="broken-referral-link" target="_blank"></a></strong></p>
+
+		<hr />
+
+		<p>Penso che le seguenti pagine su questo sito potrebbero essere in grado di aiutarti:</p>
+		<br>
+		<a id="broken-referral-link-home" href="/index.html"><img src="/resources/images/home.png" alt="Home page" width="30" height="30" />Home page</a>
+		<!--<a href="sitemap.html"><img src="/resources/images/sitemap.gif" alt="Site map" width="100" height="30" />Site map</a>-->
+	</section>
+</body>
+</html>
