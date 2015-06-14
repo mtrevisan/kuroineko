@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="vec">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<meta name="description" content="Sillabatore delle parole in lingua veneta secondo l'alfabeto di Mauro Trevisan">
+	<meta name="keywords" content="lingua veneta, dialetto veneto, alfabeto veneto, grammatica veneta, sillabatore veneto, divisione in sillabe, regole di accentazione">
+	<meta name="robots" content="noodp">
+	<base href="../../" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<!-- sillabatore, lingua, veneta -->
+
+	<title>silabador de la lengua v&egrave;neta</title>
+
+	<link rel="stylesheet" href="resources/css/common.css">
+	<link rel="stylesheet" href="resources/css/syllabator.css">
+	<link rel="stylesheet" href="resources/css/alerter/alerter.core.css">
+	<link rel="stylesheet" href="resources/css/alerter/alerter.default.css">
+
+	<script src="app/Initializer.js"></script>
+	<script id="bootstrap-js">
+		Initializer.initializeApplication(function(){
+			require(['main_syllabator'], function(app){ app.init(); });
+		});
+	</script>
+	<script src="app/tools/social/GoogleAnalyticsHelper.js"></script>
+	<script src="app/tools/social/SocialLoader.js"></script>
+</head>
+
+<body>
+	<nav class="language">
+		<img src="resources/images/flags/veneto.png" class="flag" width="35" alt="V&egrave;neto" title="V&egrave;neto" />
+		<a href="pages/it/syllabator.html" lang="it" hreflang="it"><img src="resources/images/flags/italia.png" class="flag" width="35" alt="Italiano" title="Italiano" /></a>
+	</nav>
+	<header>
+		<h1>Silabador de le par&ograve;le v&egrave;nete 2.0</h1>
+
+		<nav>
+			<div class="share">
+				<div id="fb-root"></div><div class="fb-like" data-href="http://www.facebook.com/ParNoDexmentegar" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+				&nbsp;&nbsp;&nbsp;
+				<div class="g-plusone" data-size="medium" data-href="http://parnodexmentegar.orgfree.com"></div>
+			</div>
+			<br>
+			Deskarga (na version strav&egrave;ca de) la <a href="http://parnodesmentegar.wordpress.com/2012/09/03/glvv-20120624">Gram&agrave;tega de lengua v&egrave;neta pa&#8217; i v&egrave;neti [20120624]</a>
+		</nav>
+	</header>
+	<nav>
+		<a href="pages/vec/conjugator.html">Koniugador de i v&egrave;rbi</a> &ndash; <a href="pages/vec/dialectInquirer.html">Intivador de le varianti</a><span class="new-feature">novo!</span> &ndash; <a href="pages/vec/dictionary.html">Galepin</a><span class="new-feature">novo!</span> &ndash; <a href="pages/vec/measureConverter.html">Konvertidor de mexure</a>
+		<br>
+		<br>
+		<a href="pages/vec/alphabet.html">N&agrave;sita de &#8216;l alfabeto v&egrave;neto</a>
+	</nav>
+	<section class="notes">
+		<h2>Introduthion</h2>
+		La silabathion de le par&ograve;le v&egrave;nete no l&#8217; &eacute; dif&iacute;thil da far, basta ke se v&agrave;e drio le r&egrave;gole de athentathion e par tuto el r&egrave;sto el se ranxar&agrave; el silabador (le vokali <i>e</i> e <i>o</i> pende se &agrave; da se&ntilde;arle!).<br>
+		Sto silabador &#8216;l &eacute; bon de trar f&ograve;ra anka la s&oacute; traskrithion fon&egrave;tega.<br>
+		&#8216;V&eacute; sol ke da skr&iacute;ver la par&ograve;la (o na inti&egrave;ra fraxe) e strukar &#8220;S&iacute;laba&#8221; o b&agrave;ter <i>inv&iacute;o</i>.
+	</section>
+	<section class="notes">
+		<article>
+			<h2>R&egrave;gole de athentathion</h2>
+			<div class="frame-inner transition-highlight">
+				&#8216;L athento gr&agrave;fego, ke par s&ograve;lito el xe ag&uacute;o e &#8216;l kaska so la pen&uacute;ltima s&iacute;laba, o l&#8217; &uacute;ltima se la &eacute; sar&agrave;a, el se&ntilde;a &#8216;l athento t&ograve;nego:
+				<p>
+				<ul>
+					<li>de le par&ograve;le thonke ke le fenise par vokal (<i>ingrop&agrave;</i>, <i>vintitr&egrave;</i>, <i>unku&ograve;</i>, <i>pi&egrave;</i>, <i>fi&agrave;</i>).</li>
+					<li>de le par&ograve;le piane ke le fenise par konsonante, e in partikolar int&eacute;i v&egrave;rbi rixot&ograve;negi (<i>m&eacute;ter</i>, <i>k&uacute;xer</i>).</li>
+					<li>de le par&ograve;le indove ke &#8216;l kaska vanti de la pen&uacute;ltima (<i>l&agrave;grema</i>, <i>m&oacute;nega</i>).</li>
+					<li>par le par&ograve;le ke le &agrave; do o pi s&iacute;labe sora de la prima vokal de on ditongo o de on jato (<i>gav&egrave;u</i>, <i>bev&uacute;o</i>).</li>
+					<li>sora de le forme de &#8216;l end. prex. de &#8216;l v. <i>aver</i> (<i>&agrave;</i>, <i>&egrave;</i>, <i>&ograve;</i>) e <i>&egrave;ser</i> (<i>s&iacute;</i>, <i>s&eacute;</i>, <i>&eacute;</i>), in forma d&eacute;bole.</li>
+				</ul>
+				<br>
+				Par le par&ograve;le apokop&agrave;e se &agrave; da konsiderar ke ge n&#8217; &eacute; na s&iacute;laba in pi in &uacute;ltima (<i>indo&#8217;</i> no &#8216;l &agrave; &#8216;l athento).
+				<br><br>
+				Se &agrave; da doparar &#8216;l athento gr&agrave;fego (ko valor destintivo) par tute le par&ograve;le indove ke ge n&#8217; &eacute; na <i>e</i> o na <i>o</i> v&egrave;rta par destrigar ko pi fathilit&agrave; la variante ke se parla, oltre ke la par&ograve;la e kome l&egrave;dherla (<i>skarp&egrave;r</i>, <i>vec&ograve;t</i>, <i>d&egrave;s</i>, <i>pe&ograve;co</i>).<br>
+				Par s&ograve;lito &#8216;te le s&iacute;labe sar&agrave;e indove ke drio de la vokal ge n&#8217; &eacute; na <i>l</i>, <i>r</i>, <i>s</i> &#8216;l &eacute; pendo, se invethe ge n&#8217; &eacute; na <i>n</i> &#8216;l &eacute; ag&uacute;o.<br>
+				&#8216;Te le s&iacute;labe v&egrave;rte invethe se &agrave; ke, par s&ograve;lito, se la s&iacute;laba ke la vi&egrave;n la skominsia par <i>l</i> &#8216;l &eacute; pendo, par <i>t</i> &#8216;l &eacute; ag&uacute;o se l&#8217; &eacute; na <i>e</i> opur pendo se na <i>o</i>. In &uacute;ltima, se la vokal la se kata da drio de la konsonante <i>j</i> par s&ograve;lito l&#8217; &eacute; v&egrave;rta.
+			</div>
+		</article>
+		<br>
+		<article>
+			<h2>Ditongo, jato, e sekuentha eterof&ograve;nega</h2>
+			<div class="frame-inner transition-highlight">
+				K&oacute; do vokali le se kata vethine tra de lore le p&ograve;l v&egrave;&ntilde;er dite ko na sola emision de fi&agrave;, sentha ke la prima la sipie pi sforthada de kelaltra, ma anthi k&oacute; se la f&agrave; xbrisar sentha fadiga &#8216;te la sekonda, kome se &ntilde;anka la ge fuse skuaxi. Se &agrave; &#8216;lora kuel ke &#8216;l se cama ditongo, ke &#8216;l &eacute; fat da:
+				<p>
+				<ul>
+					<li>do vokali d&eacute;boli (<i>i</i>, <i>u</i>), ko &#8216;l athento ke &#8216;l kaska so la sekonda (<i>fi&uacute;li</i>, <i>segu&iacute;r</i>).</li>
+					<li>na vokal f&ograve;rte (<i>a</i>, <i>e</i>, <i>o</i>) t&ograve;nega (ke la ser&iacute;a athent&agrave;a) e kelaltra d&eacute;bole (<i>i</i>, <i>u</i>) &agrave;tona (ke la ser&iacute;a sentha athento) (<i>b&agrave;i</i>, <i>r&agrave;uko</i>, <i>d&egrave;i</i>, <i>pl&egrave;ure</i>, d&eacute;i, <i>ma&ntilde;&egrave;u</i>, <i>p&ograve;i</i>, <i>k&oacute;i</i>).</li>
+				</ul>
+				<br><p>
+				Se invethe do vokali vethine le vi&egrave;n dite ko do fon&egrave;mi ben destinti se &agrave; kuel ke &#8216;l se cama jato, ke &#8216;l &eacute; fat da:
+				<p>
+				<ul>
+					<li>do vokali d&eacute;boli (<i>i</i>, <i>u</i>), ko &#8216;l athento ke &#8216;l kaska so la prima (<i>gav&uacute;i</i>, <i>fen&iacute;i</i>).</li>
+					<li>na vokal d&eacute;bole (<i>i</i>, <i>u</i>) e kelaltra f&ograve;rte (<i>a</i>, <i>e</i>, <i>o</i>), ko &#8216;l athento ke &#8216;l kaska so una (<i>vor&iacute;a</i>, <i>bux&iacute;e</i>, <i>desal&iacute;o</i>, <i>&uacute;a</i>, <i>kr&uacute;e</i>, <i>pal&uacute;o</i>, <i>per&iacute;odo</i>, <i>su&agrave;da</i>).</li>
+					<li>na vokal f&ograve;rte (<i>a</i>, <i>e</i>, <i>o</i>) &agrave;tona e kelaltra d&eacute;bole (<i>i</i>, <i>u</i>) t&ograve;nega (<i>ra&iacute;xe</i>, <i>ba&uacute;ko</i>, <i>re&iacute;na</i>, <i>le&uacute;ni</i>, <i>ro&iacute;ne</i>).</li>
+					<li>do vokali f&ograve;rti (<i>a</i>, <i>e</i>, <i>o</i>), ko &#8216;l athento ke &#8216;l kaska so una (<i>tir&agrave;a</i>, <i>ma&egrave;stro</i>, <i>pa&eacute;xe</i>, <i>se&ntilde;&agrave;e</i>, <i>k&agrave;o</i>, <i>sa&ograve;n</i>, <i>sa&oacute;r</i>, <i>id&egrave;a</i>, <i>gav&eacute;a</i>, <i>be&agrave;</i>, <i>d&egrave;e</i>, <i>sk&egrave;o</i>, <i>d&eacute;o</i>, <i>pe&ograve;co</i>, <i>le&oacute;n</i>, <i>&ograve;axi</i>, <i>k&oacute;a</i>, <i>bo&agrave;ro</i>, <i>er&ograve;e</i>, <i>s&oacute;e</i>, <i>po&egrave;tego</i>, <i>ko&eacute;xo</i>, <i>x&ograve;o</i>, <i>ko&ograve;pare</i>, <i>ko&oacute;rdene</i>).</li>
+				</ul>
+				<br><p>
+				Le sekuenthe eterof&ograve;nege invethe le &eacute; scapi fati da:
+				<ul>
+					<li>na konsonante aprosimante (<i>i/j</i> <span class="phone">/j/</span>, <i>u</i> <span class="phone">/w/</span>) e na vokal d&eacute;bole (<i>i</i>, <i>u</i>) t&ograve;nega (<i>fi&uacute;me</i>, <i>j&uacute;sto</i>, <i>ku&iacute;ndexe</i>).</li>
+					<li>na konsonante aprosimante (<i>i/j</i> <span class="phone">/j/</span>, <i>u</i> <span class="phone">/w/</span>) e na vokal f&ograve;rte (<i>a</i>, <i>e</i>, <i>o</i>) t&ograve;nega (<i>fi&agrave;po</i>, <i>taj&agrave;</i>, <i>si&egrave;xa</i>, <i>inki&eacute;sta</i>, <i>j&egrave;ri</i>, <i>si&ograve;lto</i>, <i>fi&oacute;r</i>, <i>j&oacute;ta</i>, <i>xgu&egrave;lto</i>, <i>ku&ograve;r</i>).</li>
+				</ul>
+			</div>
+		</article>
+		<br>
+		<article>
+			<h2>R&egrave;gole de silabathion</h2>
+			<div class="frame-inner transition-highlight">
+				Le forma na s&iacute;laba &uacute;nega:
+				<p>
+				<ul>
+					<li>na konsonante vanti de na vokal, o drio se l&#8217; &eacute; l&#8217; &uacute;ltima (<i>ka-xa</i>, <i>ju-tar</i>).</li>
+					<li>i ditongi ko la konsonante ke ge n&#8217; &eacute; vanti, se la ge n&#8217; &eacute; (<i>p&agrave;u-xa</i>).</li>
+					<li>la vokal ke la forma jato (<i>po-&egrave;-ta</i>, <i>pa-u-ra</i>).</li>
+					<li>d&oacute; konsonanti, ko la prima no okluxiva e no kostritiva e la sekonda vibrante o lateral, o anka intrame d&oacute;e okluxive, le f&agrave; parte de d&oacute; s&iacute;labe difarenti se vanti de la prima ge n&#8217; &eacute; na vokal (<i>er-ba</i>, <i>sal-tar</i>, <i>bas-tan-ŧa</i>, <i>lon-tan</i>, <i>sor-pre-xa</i>, <i>dex-men-te-g&agrave;</i>, <i>la s-ta-bia</i>, <i>fin-lan-dia</i>, <i>ab-de-gar</i>, <i>sub-tro-pe-gal</i>), altrimenti le f&agrave; parte de na s&iacute;laba solke (<i>pia-ŧa</i>, <i>des-tri-kar</i>, <i>stra-ko</i>, <i>gron-da</i>, <i>in-gle-xe</i>, <i>scan-ti-xo</i>, <i>sfe-xa</i>, <i>sta-bia</i>, <i>xba-ro</i>, <i>xbri-gar</i>, <i>stran-bo</i>).</li>
+				</ul>
+			</div>
+		</article>
+		<br>
+		<article>
+			<h2>Note</h2>
+			<div class="frame-inner transition-highlight">
+				<ul>
+					<li><span class="word-syllabe-ok"><b>in nero</b></span>: Par&ograve;le ke se p&ograve;l div&iacute;der in s&iacute;labe.</li>
+					<li><span class="word-syllabe-error"><b>in roso</b></span>: Par&ograve;le ke no se p&ograve;l div&iacute;der in s&iacute;labe.</li>
+					<li><b>|</b>: Separador de le s&iacute;labe k&oacute; se varda solke la par&ograve;la.</li>
+					<li><b>/</b>: Separador de le s&iacute;labe k&oacute; se varda tuta la fraxe.</li>
+					<li>Par &tstrok;&egrave;rte par&ograve;le ko <i>i/u</i> vanti vokal se p&ograve;l komunkue far fadiga intivar se &#8216;l &eacute; na vokal, ma par s&ograve;lito &#8216;l &eacute; na konsonante aprosimante.</li>
+				</ul>
+			</div>
+		</article>
+	</section>
+	<section class="input frame-inner" id="inputSection">
+		<form action="#inputSection" novalidate>
+			<input type="text" id="text" class="text-input" placeholder="inserisi el t&egrave;sto&hellip;" size="80"
+				title="t&egrave;sto"
+				required pattern="^([0-9aàbcdđeèéfgiìíjɉklƚmnñoòóprsʃtŧuùúvxʒ \r\n\.\,;:\?\!\u2026«»\u2018\u2019\u201c\u201d'\u0022‐–\-—\(\)\[\]\{\}\*\\/\\\\]|[eiou]/|[aeo]\\|[djlnstx]h)+$" data-validate="required(kanpo oblegat&ograve;rio)|regex(kanpo ko karatari n&ograve; v&agrave;lidi)" tabindex="1" />
+			<input type="submit" id="btnCalculate" class="text-input-button" value="S&iacute;laba" accesskey="S" tabindex="3" />
+		</form>
+		<br>
+		<label class="input-description" for="dialect">Dial&egrave;to</label><select id="dialect" class="dialect" tabindex="2">
+			<option value="none">&dstrok;eneral</option>
+			<optgroup label="Feltrin-belumat">
+				<option value="northern.feltrinBelumat">feltrin, belumat</option>
+				<option value="northern.cipileño">cipile&ntilde;o</option>
+				<option value="northern.altaTrevixana">alta trevixana (vitoriexe, konejanexe)</option>
+				<option value="northern.ŧitadin">&tstrok;itadin</option>
+			</optgroup>
+			<optgroup label="Liventin">
+				<option value="oriental.sandonatexe">trevixan de &tstrok;anka Piave (opiterxin, sandonatexe, fosaltin)</option>
+			</optgroup>
+			<optgroup label="Trevixan">
+				<option value="centralNorthern.trevixan">trevixan de dreta Piave</option>
+				<option value="centralNorthern.kastelan">kastelan</option>
+			</optgroup>
+			<optgroup label="Lagunar">
+				<option value="lagunar.veneŧian">vene&tstrok;ian</option>
+				<option value="lagunar.mestrin">mestrin</option>
+				<option value="lagunar.coxòto">cox&ograve;to</option>
+			</optgroup>
+			<optgroup label="Padoan-vi&tstrok;entin-polexan">
+				<option value="central.padoan">padoan</option>
+				<option value="central.viŧentin">vi&tstrok;entin</option>
+				<option value="central.valsuganòto">valsugan&ograve;to</option>
+				<option value="central.basoTrentin">baso trentin</option>
+				<option value="central.polexan">polexan</option>
+				<option value="central.roigòto">roig&ograve;to</option>
+				<option value="central.talian" disabled>talian</option>
+			</optgroup>
+			<optgroup label="Veronexe">
+				<option value="western.altaVeronexe">alta veronexe</option>
+				<option value="western.basaVeronexe">basa veronexe</option>
+				<option value="western.ŧitadin">&tstrok;itadin</option>
+			</optgroup>
+		</select>
+	</section>
+	<section class="content frame">
+		<article>
+			<h2>Silaba&tstrok;ion fonol&ograve;xega/gr&agrave;fega</h2>
+			<div class="frame-inner" id="syllabeGraphematicOutput"></div>
+		</article>
+		<article>
+			<h2>Silaba&tstrok;ion fon&egrave;tega (dr&iacute;o el <a rel="nofollow" href="http://venus.unive.it/canipa/"><sup>can</sup>IPA</a>)</h2>
+			<div class="frame-inner" id="syllabePhonematicOutput"></div>
+		</article>
+		<article>
+			<h2>Traskri&tstrok;ion fon&egrave;tega</h2>
+			<div class="frame-inner phone" id="phonesOutput"></div>
+		</article>
+		<article>
+			<h2>Traskri&tstrok;ion fonem&agrave;tega</h2>
+			<div class="frame-inner phone" id="phonemesOutput"></div>
+		</article>
+		<article>
+			<h2>N&uacute;maro de s&iacute;labe gr&agrave;fege</h2>
+			<div class="frame-inner" id="syllabeGraphematicOutputCount"></div>
+		</article>
+		<article>
+			<h2>N&uacute;maro de s&iacute;labe fonem&agrave;tege</h2>
+			<div class="frame-inner" id="syllabePhonematicOutputCount"></div>
+		</article>
+	</section>
+	<aside>
+		<h2>Alfabeto e foni</h2>
+		<div class="frame-inner transition-highlight">
+			<dl>
+				<dt>\</dt>
+					<dd>Drio de na vokal, la &iacute;ndika on a&tstrok;ento pendo (<i>&agrave;</i>, <i>&egrave;</i>, <i>&ograve;</i>)</dd>
+				<dt>/</dt>
+					<dd>Drio de na vokal, la &iacute;ndika on a&tstrok;ento ag&uacute;o (<i>&eacute;</i>, <i>&iacute;</i>, <i>&oacute;</i>, <i>&uacute;</i>)</dd>
+				<dt>a (&agrave;)</dt>
+					<dd><span class="phone">/a/</span> Vokal &tstrok;entral v&egrave;rta no rotond&agrave;a</dd>
+				<dt>b</dt>
+					<dd><span class="phone">/b/</span> Konsonante okluxiva bilabial son&ograve;ra</dd>
+				<dt>c</dt>
+					<dd><span class="phone">/c/</span> Konsonante okluxivo-kostritiva kanalix&agrave;a p&ograve;st-&agrave;lveo-palatal sorda</dd>
+				<dt>d</dt>
+					<dd><span class="phone">/d/</span> Konsonante okluxiva dental son&ograve;ra</dd>
+				<dt>&dstrok;/dh</dt>
+					<dd><span class="phone">/&dstrok;/</span> Konsonante kostritiva dental son&ograve;ra (aspir&agrave;a)</dd>
+				<dt>e (&eacute;)</dt>
+					<dd><span class="phone">/&eacute;/</span> Vokal anterior m&egrave;&dstrok;a sar&agrave;a no rotond&agrave;a</dd>
+				<dt>&egrave;</dt>
+					<dd><span class="phone">/&egrave;/</span> Vokal anterior skuaxi v&egrave;rta no rotond&agrave;a</dd>
+				<dt>f</dt>
+					<dd><span class="phone">/f/</span> Konsonante kostritiva l&agrave;varo-dental sorda</dd>
+				<dt>fh</dt>
+					<dd><span class="phone">/fh/</span> Konsonante kostritiva l&agrave;varo-dental sorda aspir&agrave;a</dd>
+				<dt>g</dt>
+					<dd><span class="phone">/g/</span> Konsonante okluxiva velar son&ograve;ra</dd>
+				<dt>i (&iacute;)</dt>
+					<dd><span class="phone">/i/</span> Vokal anterior sar&agrave;a no rotond&agrave;a</dd>
+					<dd><span class="phone">/j/</span> Konsonante aprosimante palatal son&ograve;ra</dd>
+				<dt>j</dt>
+					<dd><span class="phone">/j/</span> Konsonante aprosimante palatal son&ograve;ra</dd>
+				<dt>ɉ/jh</dt>
+					<dd><span class="phone">/ǧ/</span> Konsonante okluxivo-kostritiva kanalix&agrave;a p&ograve;st-&agrave;lveo-palatal son&ograve;ra</dd>
+				<dt>k</dt>
+					<dd><span class="phone">/k/</span> Konsonante okluxiva velar sorda</dd>
+				<dt>l</dt>
+					<dd><span class="phone">/l/</span> Konsonante lateral alveolar son&ograve;ra</dd>
+					<dd><span class="phone">/K/</span> Konsonante lateral pre-palatal son&ograve;ra</dd>
+					<dd><span class="phone">/|/</span> Konsonante uni-lateral alveolar son&ograve;ra</dd>
+				<dt>ƚ/lh</dt>
+					<dd><span class="phone">/L/</span> Konsonante semi-lateral palatal son&ograve;ra</dd>
+					<dd><span class="phone">/ƚ/</span> Konsonante semi-lateral pre-velar son&ograve;ra</dd>
+				<dt>m</dt>
+					<dd><span class="phone">/m/</span> Konsonante naxal bilabial son&ograve;ra</dd>
+				<dt>n</dt>
+					<dd><span class="phone">/n/</span> Konsonante naxal alveolar son&ograve;ra</dd>
+					<dd><span class="phone">/ŋ/</span> Konsonante semi-naxal pro-velar son&ograve;ra</dd>
+				<dt>&ntilde;/nh</dt>
+					<dd><span class="phone">/&ntilde;/</span> Konsonante naxal palatal son&ograve;ra</dd>
+				<dt>o (&oacute;)</dt>
+					<dd><span class="phone">/&oacute;/</span> Vokal posterior m&egrave;&dstrok;a sar&agrave;a rotond&agrave;a</dd>
+				<dt>&ograve;</dt>
+					<dd><span class="phone">/&ograve;/</span> Vokal posterior skuaxi v&egrave;rta rotond&agrave;a</dd>
+				<dt>p</dt>
+					<dd><span class="phone">/p/</span> Konsonante okluxiva bilabial sorda</dd>
+				<dt>r</dt>
+					<dd><span class="phone">/r/</span> Konsonante vibrante alveolar son&ograve;ra</dd>
+					<dd><span class="phone">/I/</span> Konsonante aprosimante laterali&dstrok;&agrave;a alveolar son&ograve;ra</dd>
+					<dd><span class="phone">/~/</span> Konsonante aprosimante laterali&dstrok;&agrave;a post-alveolar son&ograve;ra</dd>
+					<dd><span class="phone">/J/</span> Konsonante vibr&agrave;a alveolar son&ograve;ra</dd>
+					<dd><span class="phone">/^/</span> Konsonante vibr&agrave;tile p&ograve;st-alveolar son&ograve;ra</dd>
+				<dt>s</dt>
+					<dd><span class="phone">/s/</span> Konsonante kostritiva-kanalix&agrave;a sorda</dd>
+				<dt>ʃ/sh</dt>
+					<dd><span class="phone">/š/</span> Konsonante kostritiva kanalix&agrave;a p&ograve;st-&agrave;lveo-palatal sorda</dd>
+				<dt>t</dt>
+					<dd><span class="phone">/t/</span> Konsonante okluxiva sorda</dd>
+				<dt>&tstrok;/th</dt>
+					<dd><span class="phone">/&thorn;/</span> Konsonante kostritiva dental sorda</dd>
+				<dt>u (&uacute;)</dt>
+					<dd><span class="phone">/u/</span> Vokal posterior sar&agrave;a rotond&agrave;a</dd>
+					<dd><span class="phone">/w/</span> Konsonante aprosimante velar rotond&agrave;a son&ograve;ra</dd>
+				<dt>v</dt>
+					<dd><span class="phone">/v/</span> Konsonante kostritiva l&agrave;varo-dental son&ograve;ra</dd>
+				<dt>x</dt>
+					<dd><span class="phone">/ź/</span> Konsonante kostritiva-kanalix&agrave;a son&ograve;ra</dd>
+				<dt>ʒ/xh</dt>
+					<dd><span class="phone">/ž/</span> Konsonante kostritiva kanalix&agrave;a p&ograve;st-&agrave;lveo-palatal son&ograve;ra</dd>
+			</dl>
+		</div>
+	</aside>
+	<footer>
+		<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licen&tstrok;a Creative Commons" style="border-width: 0; width: 88px; height: 31px" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Sta &ograve;para de <a href="/cdn-cgi/mail#6904081c1b06471d1b0c1f001a0807290e04080005470a0604?subject=Gramàdega%20de%20lengua%20vèneta" data-mail="377ad742455817634552415e4f5659"><span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">[email&nbsp;protected]</span></a> l&#8217; &eacute; soto de la licen&tstrok;a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Atribu&tstrok;ion - No komercal - No &ograve;pare deriv&agrave;e 4.0 Interna&tstrok;ional (CC BY-NC-ND 4.0)</a>.
+	</footer>
+</body>
+</html>

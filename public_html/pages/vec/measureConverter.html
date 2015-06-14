@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vec">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<meta name="description" content="Convertitore delle antiche misure di lunghezza, area, volume e peso del Veneto">
+	<meta name="keywords" content="misure antiche venete">
+	<meta name="robots" content="noodp">
+	<base href="../../" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<!-- convertitore, misure, venete -->
+
+	<title>mexure antige v&egrave;nete | konvertidor de le mexure</title>
+
+	<link rel="stylesheet" href="resources/css/common.css">
+	<link rel="stylesheet" href="resources/css/measureConverter.css">
+	<link rel="stylesheet" href="resources/css/alerter/alerter.core.css">
+	<link rel="stylesheet" href="resources/css/alerter/alerter.default.css">
+
+	<script src="app/Initializer.js"></script>
+	<script id="bootstrap-js">
+		Initializer.initializeApplication(function(){
+			require(['main_measureConverter'], function(app){ app.init(); });
+		});
+	</script>
+	<script src="app/tools/social/GoogleAnalyticsHelper.js"></script>
+	<script src="app/tools/social/SocialLoader.js"></script>
+</head>
+
+<body>
+	<nav class="language">
+		<img src="resources/images/flags/veneto.png" class="flag" width="35" alt="V&egrave;neto" title="V&egrave;neto" />
+		<a href="pages/it/measureConverter.html" lang="it" hreflang="it"><img src="resources/images/flags/italia.png" class="flag" width="35" alt="Italiano" title="Italiano" /></a>
+	</nav>
+	<header>
+		<h1>Konvertidor de le mexure v&egrave;nete 2.0</h1>
+
+		<nav>
+			<div class="share">
+				<div id="fb-root"></div><div class="fb-like" data-href="http://www.facebook.com/ParNoDexmentegar" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+				&nbsp;&nbsp;&nbsp;
+				<div class="g-plusone" data-size="medium" data-href="http://parnodexmentegar.orgfree.com"></div>
+			</div>
+			<br>
+			Deskarga (na version strav&egrave;ca de) la <a href="http://parnodesmentegar.wordpress.com/2012/09/03/glvv-20120624">Gram&agrave;tega de lengua v&egrave;neta pa&#8217; i v&egrave;neti [20120624]</a>
+		</nav>
+	</header>
+	<nav>
+		<a href="pages/vec/conjugator.html">Koniugador de i v&egrave;rbi</a> &ndash; <a href="pages/vec/syllabator.html">Silabador</a> &ndash; <a href="pages/vec/dialectInquirer.html">Intivador de le varianti</a><span class="new-feature">novo!</span> &ndash; <a href="pages/vec/dictionary.html">Galepin</a><span class="new-feature">novo!</span>
+		<br>
+		<br>
+		<a href="pages/vec/alphabet.html">N&agrave;sita de &#8216;l alfabeto v&egrave;neto</a>
+	</nav>
+	<section class="input frame-inner" id="inputSection">
+		<table role="presentation">
+			<tr>
+				<td style="vertical-align: middle;">
+					<div class="measure-input-container">
+						<label class="input-description" for="district">Distreto</label><select id="district" class="district"></select>
+						<p>
+						<label class="input-description" for="type">S&ograve;rte de mexura</label><select id="type" class="measure-type">
+							<optgroup label="Longe&tstrok;a">
+								<option value="length.earth">longe&tstrok;a da t&egrave;ra</option>
+								<option value="length.industrial">longe&tstrok;a da f&agrave;brega</option>
+								<option value="length.silk">longe&tstrok;a da seda</option>
+								<option value="length.cotton">longe&tstrok;a da pano/bonbaxo</option>
+								<option value="length.wool">longe&tstrok;a da lana</option>
+								<option value="length.linen">longe&tstrok;a da tela</option>
+							</optgroup>
+							<optgroup label="&Agrave;rea">
+								<option value="area.earth">&agrave;rea</option>
+							</optgroup>
+							<optgroup label="Volume">
+								<option value="volume.dry">volume par &agrave;ridi</option>
+								<option value="volume.liquid">volume par l&iacute;kuidi</option>
+							</optgroup>
+							<optgroup label="Pexo">
+								<option value="weight.heavy">pexo gr&ograve;so</option>
+								<option value="weight.light">pexo fin</option>
+								<option value="weight.medicinal">pexo par medexine</option>
+								<option value="weight.preciouses">pexo par presioxi</option>
+							</optgroup>
+						</select>
+						<p>
+						<br>
+						<form action="#inputSection" novalidate>
+							<input type="text" id="value" class="measure-input" placeholder="inser&iacute;si la mexura&hellip;"
+								title="mexura"
+								pattern="^(\d+([.,]\d+)?)?$" data-validate="regex(mexura n&ograve; v&agrave;lida)" />
+							<select id="uom-from" class="uom-type"></select>
+							<span class="input-description">in</span>
+							<select id="uom-to" class="uom-type"></select>
+							&nbsp;&nbsp;&nbsp;<input type="submit" id="btnConvert" class="measure-input-button" value="Konv&egrave;rti" accesskey="K" />
+						</form>
+					</div>
+					<div class="measure-table-container">
+						<div class="frame-inner">
+							<table class="measure-table" id="measureTable" role="presentation">
+								<thead>
+									<tr class="bottom-border-thick">
+										<th scope="col" class="header">n&ograve;me</th>
+										<th scope="col" colspan="2" class="header">valor</th>
+									</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</section>
+	<section class="content">
+		<article class="frame" id="measureResultContainer">
+			<h2>Rexult&agrave;</h2>
+			<div class="frame-inner" id="measureOutput">
+				<div class="measure-output-conversion" id="measureOutputConversion"></div>
+				<br>o anka<br>
+				<br>
+				<div class="measure-output-conversion-expanded" id="measureOutputConversionExpanded"></div>
+			</div>
+		</article>
+	</section>
+	<footer>
+		<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licen&tstrok;a Creative Commons" style="border-width: 0; width: 88px; height: 31px" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Sta &ograve;para de <a href="/cdn-cgi/mail#6904081c1b06471d1b0c1f001a0807290e04080005470a0604?subject=Gramàdega%20de%20lengua%20vèneta" data-mail="377ad742455817634552415e4f5659"><span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">[email&nbsp;protected]</span></a> l&#8217; &eacute; soto de la licen&tstrok;a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Atribu&tstrok;ion - No komercal - No &ograve;pare deriv&agrave;e 4.0 Interna&tstrok;ional (CC BY-NC-ND 4.0)</a>.
+	</footer>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="vec">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<meta name="description" content="Ricerca di parole all'interno del dizionario veneto secondo l'alfabeto di Mauro Trevisan">
+	<meta name="keywords" content="lingua veneta, dialetto veneto, dizionario veneto">
+	<meta name="robots" content="noodp">
+	<base href="../../" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<!-- dizionario, lemmi, veneti -->
+
+	<title>galepin de la lengua v&egrave;neta | dial&egrave;to v&egrave;neto</title>
+
+	<link rel="stylesheet" href="resources/css/common.css">
+	<link rel="stylesheet" href="resources/css/dictionary.css">
+	<link rel="stylesheet" href="resources/css/alerter/alerter.core.css">
+	<link rel="stylesheet" href="resources/css/alerter/alerter.default.css">
+
+	<script src="app/Initializer.js"></script>
+	<script id="bootstrap-js">
+		Initializer.initializeApplication(function(){
+			require(['main_dictionary'], function(app){ app.init(); });
+		});
+	</script>
+	<script src="app/tools/social/GoogleAnalyticsHelper.js"></script>
+	<script src="app/tools/social/SocialLoader.js"></script>
+</head>
+
+<body>
+	<nav class="language">
+		<img src="resources/images/flags/veneto.png" class="flag" width="35" alt="V&egrave;neto" title="V&egrave;neto" />
+		<a href="pages/it/dictionary.html" lang="it" hreflang="it"><img src="resources/images/flags/italia.png" class="flag" width="35" alt="Italiano" title="Italiano" /></a>
+	</nav>
+	<header>
+		<h1>Galepin de el l&egrave;sego v&egrave;neto 1.0.<a href="#" title="sto ku&agrave; &#8216;l &eacute; el n&uacute;maro de par&ograve;le rento intel galepin"><span id="wordCount"></span></a></h1>
+
+		<nav>
+			<div class="share">
+				<div id="fb-root"></div><div class="fb-like" data-href="http://www.facebook.com/ParNoDexmentegar" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+				&nbsp;&nbsp;&nbsp;
+				<div class="g-plusone" data-size="medium" data-href="http://parnodexmentegar.orgfree.com"></div>
+			</div>
+			<br>
+			Deskarga (na version strav&egrave;ca de) la <a href="http://parnodesmentegar.wordpress.com/2012/09/03/glvv-20120624">Gram&agrave;tega de lengua v&egrave;neta pa&#8217; i v&egrave;neti [20120624]</a>
+		</nav>
+	</header>
+	<nav>
+		<a href="pages/vec/conjugator.html">Koniugador de i v&egrave;rbi</a> &ndash; <a href="pages/vec/syllabator.html">Silabador</a> &ndash; <a href="pages/vec/dialectInquirer.html">Intivador de le varianti</a><span class="new-feature">novo!</span> &ndash; <a href="pages/vec/measureConverter.html">Konvertidor de mexure</a>
+		<br>
+		<br>
+		<a href="pages/vec/alphabet.html">N&agrave;sita de &#8216;l alfabeto v&egrave;neto</a>
+	</nav>
+	<section class="notes">
+		<h2>Introduthion</h2>
+		&#8216;V&eacute; sol ke da skr&iacute;ver na par&ograve;la, o na s&oacute; parte, in v&egrave;neto, italian, o inglexe (par dir &#8220;skomen&tstrok;ia par&#8221; o &#8220;fenise par&#8221; &dstrok;ontar &#8216;#&#8217; in prin&tstrok;ipio o in kao).<br>
+		<br>
+		<span class="pay-attention">&Ograve;co a indikar i asenti pendi par no falar!</span> (<i>l&egrave;xar</i> &#8216;l &eacute; difarente da &#8220;lexàr&#8221;, kof&agrave; <i>f&oacute;ndar</i> da <i>fond&agrave;r</i>, varda el <a href="syllabator.html">silabador</a>).
+	</section>
+	<section class="input frame-inner" id="inputSection">
+		<form action="#inputSection" novalidate>
+			<table>
+				<thead>
+					<tr>
+						<th colspan="2">Par&ograve;la o parte da &tstrok;erkar</th>
+					</tr>
+				</thead>
+				<tr class="loading-info">
+					<td colspan="2">Son drio kargar el galepin, sp&egrave;ta &#8216;n &agrave;timo&hellip;</td>
+				</tr>
+				<tr>
+					<td><label class="input-description">in v&egrave;neto:</label></td>
+					<td><input type="text" id="lemmataVec" class="lemmata-input" placeholder="inser&iacute;si la par&ograve;la&hellip;" title="par&ograve;la"
+						pattern="^(#?([aàbcdđeèéfgiìíjɉklƚmnñoòóprsʃtŧuùúvxʒ]|[eiou]/|[aeo]\\|[djlnstx]h)+#?)?$" data-validate="regex(kanpo ko karatari n&ograve; v&agrave;lidi)" disabled tabindex="1" /></td>
+				</tr>
+				<tr>
+					<td><label class="input-description">in italian:</label></td>
+					<td><input type="text" id="lemmataIta" class="lemmata-input" placeholder="inser&iacute;si la par&ograve;la&hellip;" title="par&ograve;la"
+						pattern="^(#?([aàbcdeèéfgiìílmnoòóprstuùúvz]|[eiou]/|[aeo]\\|[cg]h([eèéiìí]|[ei]/|[e]\\)|qu([aàeèéiìíoòóuùú]|[eiou]/|[aeo]\\))+#?)?$" data-validate="regex(kanpo ko karatari n&ograve; v&agrave;lidi)" disabled tabindex="2" /></td>
+				</tr>
+				<tr>
+					<td><label class="input-description">in inglexe:</label></td>
+					<td><input type="text" id="lemmataEng" class="lemmata-input" placeholder="inser&iacute;si la par&ograve;la&hellip;" title="par&ograve;la"
+						pattern="^(#?([abcdefghijklmnopqrstuvwxyz])+#?)?$" data-validate="regex(kanpo ko karatari n&ograve; v&agrave;lidi)" disabled tabindex="3" /></td>
+				</tr>
+			</table>
+		</form>
+		<div class="input-info" id="inputInfo"></div>
+	</section>
+	<section class="content">
+		<article class="frame" id="lemmataContainer">
+			<h2>Rexult&agrave;</h2>
+<!-- <ul class="drop-down-menu">
+	<li><span>…</span>
+		<ul class="sub-menu">
+			<!- - Note: what should be the input can be read from the content of the surrounding element - ->
+			<li><a href="syllabator.html?text=si/laba#inputSection" target="_blank">S&iacute;laba</a></li>
+			<li><a href="conjugator.html?infinitive=silabar#inputSection" target="_blank">K&ograve;niuga</a></li>
+		</ul>
+	</li>
+</ul> -->
+			<div class="frame-inner">
+				<table class="lemmata" id="resultTable">
+					<thead>
+						<tr class="bottom-border-thick">
+							<th scope="col">l&egrave;ma</th>
+							<th scope="col" class="links"></th>
+							<th scope="col">parte de &#8216;l deskorso</th>
+							<th scope="col">tradu&tstrok;ion</th>
+							<th scope="col">variante*</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+				<br>
+				(*) drio la klasifega&tstrok;ion de <a rel="nofollow" href="www.elgalepin.org">www.elgalepin.org</a>.
+			</div>
+		</article>
+		<article class="frame" id="dictionariesContainer">
+			<h2>Galepini dopar&agrave;i</h2>
+			<div class="frame-inner transition-highlight">
+				<ul>
+					<li><i>El galepin</i>. [Online] (Data &uacute;ltima mod&iacute;fega). [Report&agrave;: &Dstrok;en&egrave;r 2014.] <a rel="nofollow" href="www.elgalepin.org">www.elgalepin.org</a>.</li>
+				</ul>
+			</div>
+		</article>
+	</section>
+	<aside>
+		<h2>Alfabeto</h2>
+		<div class="frame-inner transition-highlight">
+			<dl>
+				<dt>\</dt>
+					<dd>Drio de na vokal, la &iacute;ndika on a&tstrok;ento pendo (<i>&agrave;</i>, <i>&egrave;</i>, <i>&ograve;</i>)</dd>
+				<dt>/</dt>
+					<dd>Drio de na vokal, la &iacute;ndika on a&tstrok;ento ag&uacute;o (<i>&eacute;</i>, <i>&iacute;</i>, <i>&oacute;</i>, <i>&uacute;</i>)</dd>
+				<dt>a (&agrave;)</dt>
+					<dd>Vokal &tstrok;entral v&egrave;rta no rotond&agrave;a</dd>
+				<dt>b</dt>
+					<dd>Konsonante okluxiva bilabial son&ograve;ra</dd>
+				<dt>c</dt>
+					<dd>Konsonante okluxivo-kostritiva kanalix&agrave;a p&ograve;st-&agrave;lveo-palatal sorda</dd>
+				<dt>d</dt>
+					<dd>Konsonante okluxiva dental son&ograve;ra</dd>
+				<dt>&dstrok;/dh</dt>
+					<dd>Konsonante kostritiva dental son&ograve;ra (aspir&agrave;a)</dd>
+				<dt>e (&eacute;)</dt>
+					<dd>Vokal anterior m&egrave;&dstrok;a sar&agrave;a no rotond&agrave;a</dd>
+				<dt>&egrave;</dt>
+					<dd>Vokal anterior skuaxi v&egrave;rta no rotond&agrave;a</dd>
+				<dt>f</dt>
+					<dd>Konsonante kostritiva l&agrave;varo-dental sorda</dd>
+				<dt>fh</dt>
+					<dd>Konsonante kostritiva l&agrave;varo-dental sorda aspir&agrave;a</dd>
+				<dt>g</dt>
+					<dd>Konsonante okluxiva velar son&ograve;ra</dd>
+				<dt>i (&iacute;)</dt>
+					<dd>Vokal anterior sar&agrave;a no rotond&agrave;a</dd>
+					<dd>Konsonante aprosimante palatal son&ograve;ra</dd>
+				<dt>j</dt>
+					<dd>Konsonante aprosimante palatal son&ograve;ra</dd>
+				<dt>ɉ/jh</dt>
+					<dd>Konsonante okluxivo-kostritiva kanalix&agrave;a p&ograve;st-&agrave;lveo-palatal son&ograve;ra</dd>
+				<dt>k</dt>
+					<dd>Konsonante okluxiva velar sorda</dd>
+				<dt>l</dt>
+					<dd>Konsonante lateral alveolar son&ograve;ra</dd>
+					<dd>Konsonante lateral pre-palatal son&ograve;ra</dd>
+					<dd>Konsonante uni-lateral alveolar son&ograve;ra</dd>
+				<dt>ƚ/lh</dt>
+					<dd>Konsonante semi-lateral palatal son&ograve;ra</dd>
+					<dd>Konsonante semi-lateral pre-velar son&ograve;ra</dd>
+				<dt>m</dt>
+					<dd>Konsonante naxal bilabial son&ograve;ra</dd>
+				<dt>n</dt>
+					<dd>Konsonante naxal alveolar son&ograve;ra</dd>
+					<dd>Konsonante semi-naxal pro-velar son&ograve;ra</dd>
+				<dt>&ntilde;/nh</dt>
+					<dd>Konsonante naxal palatal son&ograve;ra</dd>
+				<dt>o (&oacute;)</dt>
+					<dd>Vokal posterior m&egrave;&dstrok;a sar&agrave;a rotond&agrave;a</dd>
+				<dt>&ograve;</dt>
+					<dd>Vokal posterior skuaxi v&egrave;rta rotond&agrave;a</dd>
+				<dt>p</dt>
+					<dd>Konsonante okluxiva bilabial sorda</dd>
+				<dt>r</dt>
+					<dd>Konsonante vibrante alveolar son&ograve;ra</dd>
+					<dd>Konsonante aprosimante laterali&dstrok;&agrave;a alveolar son&ograve;ra</dd>
+					<dd>Konsonante aprosimante laterali&dstrok;&agrave;a post-alveolar son&ograve;ra</dd>
+					<dd>Konsonante vibr&agrave;a alveolar son&ograve;ra</dd>
+					<dd>Konsonante vibr&agrave;tile p&ograve;st-alveolar son&ograve;ra</dd>
+				<dt>s</dt>
+					<dd>Konsonante kostritiva-kanalix&agrave;a sorda</dd>
+				<dt>ʃ/sh</dt>
+					<dd>Konsonante kostritiva kanalix&agrave;a p&ograve;st-&agrave;lveo-palatal sorda</dd>
+				<dt>t</dt>
+					<dd>Konsonante okluxiva sorda</dd>
+				<dt>&tstrok;/th</dt>
+					<dd>Konsonante kostritiva dental sorda</dd>
+				<dt>u (&uacute;)</dt>
+					<dd>Vokal posterior sar&agrave;a rotond&agrave;a</dd>
+					<dd>Konsonante aprosimante velar rotond&agrave;a son&ograve;ra</dd>
+				<dt>v</dt>
+					<dd>Konsonante kostritiva l&agrave;varo-dental son&ograve;ra</dd>
+				<dt>x</dt>
+					<dd>Konsonante kostritiva-kanalix&agrave;a son&ograve;ra</dd>
+				<dt>ʒ/xh</dt>
+					<dd>Konsonante kostritiva kanalix&agrave;a p&ograve;st-&agrave;lveo-palatal son&ograve;ra</dd>
+			</dl>
+		</div>
+	</aside>
+	<footer>
+		<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licen&tstrok;a Creative Commons" style="border-width: 0; width: 88px; height: 31px" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Sta &ograve;para de <a href="/cdn-cgi/mail#6904081c1b06471d1b0c1f001a0807290e04080005470a0604?subject=Gramàdega%20de%20lengua%20vèneta" data-mail="377ad742455817634552415e4f5659"><span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">[email&nbsp;protected]</span></a> l&#8217; &eacute; soto de la licen&tstrok;a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Atribu&tstrok;ion - No komercal - No &ograve;pare deriv&agrave;e 4.0 Interna&tstrok;ional (CC BY-NC-ND 4.0)</a>.
+	</footer>
+</body>
+</html>

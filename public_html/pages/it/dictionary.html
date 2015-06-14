@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<meta name="description" content="Ricerca di parole all'interno del dizionario veneto secondo l'alfabeto di Mauro Trevisan">
+	<meta name="keywords" content="lingua veneta, dialetto veneto, dizionario veneto">
+	<meta name="robots" content="noodp">
+	<base href="../../" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<!-- dizionario, lemmi, veneti -->
+
+	<title>dizionario della lingua veneta | dialetto veneto</title>
+
+	<link rel="stylesheet" href="resources/css/common.css">
+	<link rel="stylesheet" href="resources/css/dictionary.css">
+	<link rel="stylesheet" href="resources/css/alerter/alerter.core.css">
+	<link rel="stylesheet" href="resources/css/alerter/alerter.default.css">
+
+	<script src="app/Initializer.js"></script>
+	<script id="bootstrap-js">
+		Initializer.initializeApplication(function(){
+			require(['main_dictionary'], function(app){ app.init(); });
+		});
+	</script>
+	<script src="app/tools/social/GoogleAnalyticsHelper.js"></script>
+	<script src="app/tools/social/SocialLoader.js"></script>
+</head>
+
+<body>
+	<nav class="language">
+		<a href="pages/vec/dictionary.html" lang="vec" hreflang="vec"><img src="resources/images/flags/veneto.png" class="flag" width="35" alt="V&egrave;neto" title="V&egrave;neto" /></a>
+		<img src="resources/images/flags/italia.png" class="flag" width="35" alt="Italiano" title="Italiano" />
+	</nav>
+	<header>
+		<h1>Dizionario del lessico veneto 1.0.<a href="#" title="questo &egrave; il numero di parole contenute nel dizionario"><span id="wordCount"></span></a></h1>
+
+		<nav>
+			<div class="share">
+				<div id="fb-root"></div><div class="fb-like" data-href="http://www.facebook.com/ParNoDexmentegar" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+				&nbsp;&nbsp;&nbsp;
+				<div class="g-plusone" data-size="medium" data-href="http://parnodexmentegar.orgfree.com"></div>
+			</div>
+			<br>
+			Scarica (una vecchissima versione de) la <a href="http://parnodesmentegar.wordpress.com/2012/09/03/glvv-20120624">Gram&agrave;tega de lengua v&egrave;neta pa&#8217; i v&egrave;neti [20120624]</a>
+		</nav>
+	</header>
+	<nav>
+		<a href="pages/it/conjugator.html">Coniugatore dei verbi</a> &ndash; <a href="pages/it/syllabator.html">Sillabatore</a> &ndash; <a href="pages/it/dialectInquirer.html">Riconoscitore delle varianti</a><span class="new-feature">nuovo!</span> &ndash; <a href="pages/it/measureConverter.html">Convertitore delle misure</a>
+		<br>
+		<br>
+		<a href="pages/it/alphabet.html">Nascita dell&#8217;alfabeto veneto</a>
+	</nav>
+	<section class="notes">
+		<h2>Introduzione</h2>
+		Avete solo da scrivere una parola, o una sua parte, in veneto, italiano, o inglese (per dire &#8220;comincia con&#8221; o &#8220;finisce con&#8221; aggiungere &#8216;#&#8217; in principio o alla fine).<br>
+		<br>
+		<span class="pay-attention">Attenzione a indicare gli accenti grevi per non sbagliare!</span> (<i>l&egrave;xar</i> &egrave; diverso da &#8220;lexàr&#8221;, cos&iacute;come <i>f&oacute;ndar</i> da <i>fond&agrave;r</i>, guarda il <a href="pages/it/syllabator.html">sillabatore</a>).
+	</section>
+	<section class="input frame-inner" id="inputSection">
+		<form action="#inputSection" novalidate>
+			<table>
+				<thead>
+					<tr>
+						<th colspan="2">Parola o parte da cercare</th>
+					</tr>
+				</thead>
+				<tr class="loading-info">
+					<td colspan="2">Sto caricando il dizionario, aspetta un attimo&hellip;</td>
+				</tr>
+				<tr>
+					<td><label class="input-description">in veneto:</label></td>
+					<td><input type="text" id="lemmataVec" class="lemmata-input" placeholder="inser&iacute;si la par&ograve;la&hellip;" title="par&ograve;la"
+						pattern="^(#?([aàbcdđeèéfgiìíjɉklƚmnñoòóprsʃtŧuùúvxʒ]|[eiou]/|[aeo]\\|[djlnstx]h)+#?)?$" data-validate="regex(campo con caratteri non validi)" disabled tabindex="1" /></td>
+				</tr>
+				<tr>
+					<td><label class="input-description">in italiano:</label></td>
+					<td><input type="text" id="lemmataIta" class="lemmata-input" placeholder="inser&iacute;si la par&ograve;la&hellip;" title="par&ograve;la"
+						pattern="^(#?([aàbcdeèéfgiìílmnoòóprstuùúvz]|[eiou]/|[aeo]\\|[cg]h([eèéiìí]|[ei]/|[e]\\)|qu([aàeèéiìíoòóuùú]|[eiou]/|[aeo]\\))+#?)?$" data-validate="regex(campo con caratteri non validi)" disabled tabindex="2" /></td>
+				</tr>
+				<tr>
+					<td><label class="input-description">in inglese:</label></td>
+					<td><input type="text" id="lemmataEng" class="lemmata-input" placeholder="inser&iacute;si la par&ograve;la&hellip;" title="par&ograve;la"
+						pattern="^(#?([abcdefghijklmnopqrstuvwxyz])+#?)?$" data-validate="regex(campo con caratteri non validi)" disabled tabindex="3" /></td>
+				</tr>
+			</table>
+		</form>
+		<div class="input-info" id="inputInfo"></div>
+	</section>
+	<section class="content">
+		<article class="frame" id="lemmataContainer">
+			<h2>Risultato</h2>
+			<div class="frame-inner">
+				<table class="lemmata" id="resultTable">
+					<thead>
+						<tr class="bottom-border-thick">
+							<th scope="col">lemma</th>
+							<th scope="col" class="links"></th>
+							<th scope="col">parte del discorso</th>
+							<th scope="col">traduzione</th>
+							<th scope="col">variante*</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+				<br>
+				(*) secondo la classificazione di <a rel="nofollow" href="www.elgalepin.org">www.elgalepin.org</a>.
+			</div>
+		</article>
+		<article class="frame" id="dictionariesContainer">
+			<h2>Dizionari usati</h2>
+			<div class="frame-inner transition-highlight">
+				<ul>
+					<li><i>El galepin</i>. <a rel="nofollow" href="www.elgalepin.org">www.elgalepin.org</a>.</li>
+					<li><i>El galepin</i>. [Online] (Data ultima modifica). [Riportato: Gennaio 2014.] <a rel="nofollow" href="www.elgalepin.org">www.elgalepin.org</a>.</li>
+				</ul>
+			</div>
+		</article>
+	</section>
+	<aside>
+		<h2>Alfabeto</h2>
+		<div class="frame-inner transition-highlight">
+			<dl>
+				<dt>\</dt>
+					<dd>Dopo una vocale, indica un accento greve (<i>&agrave;</i>, <i>&egrave;</i>, <i>&ograve;</i>)</dd>
+				<dt>/</dt>
+					<dd>Dopo una vocale, indica un accento acuto (<i>&eacute;</i>, <i>&iacute;</i>, <i>&oacute;</i>, <i>&uacute;</i>)</dd>
+				<dt>a (&agrave;)</dt>
+					<dd>Vocale centrale aperta non arrotondata</dd>
+				<dt>b</dt>
+					<dd>Consonante occlusiva bilabiale sonora</dd>
+				<dt>c</dt>
+					<dd>Consonante occlusivo-costrittiva kanalizzata post-alveo-palatale sorda</dd>
+				<dt>d</dt>
+					<dd>Consonante occlusiva dentale sonora</dd>
+				<dt>&dstrok;/dh</dt>
+					<dd>Consonante costrittiva dentale sonora (aspirata)</dd>
+				<dt>e (&eacute;)</dt>
+					<dd>Vocale anteriore mezza chiusa non arrotondata</dd>
+				<dt>&egrave;</dt>
+					<dd>Vocale anteriore quasi aperta non arrotondata</dd>
+				<dt>f</dt>
+					<dd>Consonante costrittiva labio-dentale sorda</dd>
+				<dt>fh</dt>
+					<dd>Consonante costrittiva labio-dentale sorda aspirata</dd>
+				<dt>g</dt>
+					<dd>Consonante occlusiva velare sonora</dd>
+				<dt>i (&iacute;)</dt>
+					<dd>Vocale anteriore chiusa non arrotondata</dd>
+					<dd>Consonante approssimante palatale sonora</dd>
+				<dt>j</dt>
+					<dd>Consonante approssimante palatale sonora</dd>
+				<dt>ɉ/jh</dt>
+					<dd>Consonante occlusivo-costrittiva canalizzata post-alveo-palatale sonora</dd>
+				<dt>k</dt>
+					<dd>Consonante occlusiva velare sorda</dd>
+				<dt>l</dt>
+					<dd>Consonante laterale alveolare sonora</dd>
+					<dd>Consonante laterale pre-palatale sonora</dd>
+					<dd>Consonante uni-laterale alveolare sonora</dd>
+				<dt>ƚ/lh</dt>
+					<dd>Consonante semi-laterale palatale sonora</dd>
+					<dd>Consonante semi-laterale pre-velare sonora</dd>
+				<dt>m</dt>
+					<dd>Consonante nasale bilabiale sonora</dd>
+				<dt>n</dt>
+					<dd>Consonante nasale alveolare sonora</dd>
+					<dd>Consonante semi-nasale pro-velare sonora</dd>
+				<dt>&ntilde;/nh</dt>
+					<dd>Consonante nasale palatale sonora</dd>
+				<dt>o (&oacute;)</dt>
+					<dd>Vocale posteriore mezza chiusa arrotondata</dd>
+				<dt>&ograve;</dt>
+					<dd>Vocale posteriore quasi aperta arrotondata</dd>
+				<dt>p</dt>
+					<dd>Consonante occlusiva bilabiale sorda</dd>
+				<dt>r</dt>
+					<dd>Consonante vibrante alveolare sonora</dd>
+					<dd>Consonante approssimante lateralizzata alveolare sonora</dd>
+					<dd>Consonante approssimante lateralizzata post-alveolare sonora</dd>
+					<dd>Consonante vibrata post-alveolare sonora</dd>
+					<dd>Consonante vibratile post-alveolare sonora</dd>
+				<dt>s</dt>
+					<dd>Consonante costrittiva-canalizzata sorda</dd>
+				<dt>ʃ/sh</dt>
+					<dd>Consonante costrittiva canalizzata post-alveo-palatale sorda</dd>
+				<dt>t</dt>
+					<dd>Consonante occlusiva sorda</dd>
+				<dt>&tstrok;/th</dt>
+					<dd>Consonante costrittiva dentale sorda</dd>
+				<dt>u (&uacute;)</dt>
+					<dd>Vocale posteriore chiusa arrotondata</dd>
+					<dd>Consonante approssimante velare arrotondata sonora</dd>
+				<dt>v</dt>
+					<dd>Consonante costrittiva labio-dentale sonora</dd>
+				<dt>x</dt>
+					<dd>Consonante costrittiva-canalizzata sonora</dd>
+				<dt>ʒ/xh</dt>
+					<dd>Consonante costrittiva canalizzata post-alveo-palatale sonora</dd>
+			</dl>
+		</div>
+	</aside>
+	<footer>
+		<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licenza Creative Commons" style="border-width: 0; width: 88px; height: 31px" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Questa opera di <a href="/cdn-cgi/mail#6904081c1b06471d1b0c1f001a0807290e04080005470a0604?subject=Gramàdega%20de%20lengua%20vèneta" data-mail="377ad742455817634552415e4f5659"><span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">[email&nbsp;protected]</span></a> &egrave; sotto della licenza <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribuzione - Non commerciale - No opere derivate 4.0 Internazionale (CC BY-NC-ND 4.0)</a>.
+	</footer>
+</body>
+</html>

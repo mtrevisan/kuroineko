@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vec">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<meta name="description" content="Riconoscitore della variante o dialetto veneto secondo l'alfabeto di Mauro Trevisan">
+	<meta name="keywords" content="lingua veneta, dialetto veneto">
+	<meta name="robots" content="noodp">
+	<base href="../../" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<!-- varianti, dialetti, veneti -->
+
+	<title>riconoscitore delle varianti venete | dialetto veneto</title>
+
+	<!--<link rel="stylesheet" href="resources/css/all.min.css">-->
+	<link rel="stylesheet" href="resources/css/common.css">
+	<link rel="stylesheet" href="resources/css/dialectInquirer.css">
+	<link rel="stylesheet" href="resources/css/alerter/alerter.core.css">
+	<link rel="stylesheet" href="resources/css/alerter/alerter.default.css">
+	<!--<link rel="stylesheet" href="resources/css/alerter/alerter.bootstrap.css">-->
+
+	<script src="app/Initializer.js"></script>
+	<script id="bootstrap-js">
+		Initializer.initializeApplication(function(){
+			require(['main_dialectInquirer', 'i18n/ita'], function(app, i18nResources){ app.init(i18nResources); });
+		});
+	</script>
+	<script src="app/tools/social/GoogleAnalyticsHelper.js"></script>
+	<script src="app/tools/social/SocialLoader.js"></script>
+</head>
+
+<body>
+	<nav class="language">
+		<a href="pages/vec/dialectInquirer.html" lang="vec" hreflang="vec"><img src="resources/images/flags/veneto.png" class="flag" width="35" alt="V&egrave;neto" title="V&egrave;neto" /></a>
+		<img src="resources/images/flags/italia.png" class="flag" width="35" alt="Italiano" title="Italiano" />
+	</nav>
+	<header>
+		<h1>Riconoscitore delle varianti venete 1.0</h1>
+
+		<nav>
+			<div class="share">
+				<div id="fb-root"></div><div class="fb-like" data-href="http://www.facebook.com/ParNoDexmentegar" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+				&nbsp;&nbsp;&nbsp;
+				<div class="g-plusone" data-size="medium" data-href="http://parnodexmentegar.orgfree.com"></div>
+			</div>
+			<br>
+			Scarica (una vecchissima versione de) la <a href="http://parnodesmentegar.wordpress.com/2012/09/03/glvv-20120624">Gram&agrave;tega de lengua v&egrave;neta pa&#8217; i v&egrave;neti [20120624]</a>
+		</nav>
+	</header>
+	<nav>
+		<a href="pages/it/conjugator.html">Coniugatore dei verbi</a> &ndash; <a href="pages/it/syllabator.html">Sillabatore</a> &ndash; <a href="pages/it/dictionary.html">Dizionario</a><span class="new-feature">nuovo!</span> &ndash; <a href="pages/it/measureConverter.html">Convertitore delle misure</a>
+		<br>
+		<br>
+		<a href="pages/it/alphabet.html">Nascita dell&#8217;alfabeto veneto</a>
+	</nav>
+	<section class="notes">
+		Rispondete a un paio di domande e vedete se riesco a indovinare la vostra variante. Se non ci riesco potete scrivermi due righe in modo da rendere pi&uacute; corretto e preciso l&#8217;algoritmo che ne &egrave; alla base.<br>
+		Dovete solo che crivere un po&#8217; dei vostri dati e premere &#8220;Indovina&#8221; o premere <i>invio</i>.
+	</section>
+	<section class="input frame-inner" id="inputSection">
+		<form action="#inputSection" novalidate>
+			<label class="input-description" for="name">Nome</label><input type="text" id="name" class="text-input" placeholder="inserisci il tuo nome&hellip;" size="30"
+				title="nome" required pattern="^\s*([\u00c0-\u01ffa-zA-Z]+|[',.-]|\s+)*\s*$" data-validate="required(campo obbligatorio)|regex(nome non valido)" tabindex="1" />
+			<br>
+			 <label class="input-description" for="age">Et&agrave;</label><input type="text" id="age" class="text-input" placeholder="inserisci la tua et&agrave;&hellip;"
+				title="et&agrave;" required pattern="^([1-9]?\d|1\d{2})$" data-validate="required(campo obbligatorio)|regex(et&agrave; non valida)" tabindex="2" />
+			<br>
+			<label class="input-description" for="place">Citt&agrave;/paese</label><input type="text" id="place" class="text-input" placeholder="inserisci la tua citt&agrave;/paese&hellip;" size="30"
+				title="citt&agrave;/paese" required pattern="^\s*([\u00c0-\u01ffa-zA-Z]+|['.-]|\s+)*\s*$" data-validate="required(campo obbligatorio)|regex(citt&agrave;/paese non valido)" tabindex="3" />
+			<br>
+			<div class="text-input-button">
+				<input type="submit" id="btnInquire" class="text-input-button" value="Indovina" accesskey="I" tabindex="4" />
+			</div>
+		</form>
+	</section>
+	<section class="content frame">
+		<div id="inquirer"></div>
+	</section>
+	<aside>
+		<h2>Alfabeto</h2>
+		<div class="frame-inner transition-highlight">
+			<dl>
+				<dt>\</dt>
+					<dd>Dopo una vocale, indica un accento greve (<i>&agrave;</i>, <i>&egrave;</i>, <i>&ograve;</i>)</dd>
+				<dt>/</dt>
+					<dd>Dopo una vocale, indica un accento acuto (<i>&eacute;</i>, <i>&iacute;</i>, <i>&oacute;</i>, <i>&uacute;</i>)</dd>
+				<dt>a (&agrave;)</dt>
+					<dd>Vocale centrale aperta non arrotondata</dd>
+				<dt>b</dt>
+					<dd>Consonante occlusiva bilabiale sonora</dd>
+				<dt>c</dt>
+					<dd>Consonante occlusivo-costrittiva kanalizzata post-alveo-palatale sorda</dd>
+				<dt>d</dt>
+					<dd>Consonante occlusiva dentale sonora</dd>
+				<dt>&dstrok;/dh</dt>
+					<dd>Consonante costrittiva dentale sonora (aspirata)</dd>
+				<dt>e (&eacute;)</dt>
+					<dd>Vocale anteriore mezza chiusa non arrotondata</dd>
+				<dt>&egrave;</dt>
+					<dd>Vocale anteriore quasi aperta non arrotondata</dd>
+				<dt>f</dt>
+					<dd>Consonante costrittiva labio-dentale sorda</dd>
+				<dt>fh</dt>
+					<dd>Consonante costrittiva labio-dentale sorda aspirata</dd>
+				<dt>g</dt>
+					<dd>Consonante occlusiva velare sonora</dd>
+				<dt>i (&iacute;)</dt>
+					<dd>Vocale anteriore chiusa non arrotondata</dd>
+					<dd>Consonante approssimante palatale sonora</dd>
+				<dt>j</dt>
+					<dd>Consonante approssimante palatale sonora</dd>
+				<dt>ɉ/jh</dt>
+					<dd>Consonante occlusivo-costrittiva canalizzata post-alveo-palatale sonora</dd>
+				<dt>k</dt>
+					<dd>Consonante occlusiva velare sorda</dd>
+				<dt>l</dt>
+					<dd>Consonante laterale alveolare sonora</dd>
+					<dd>Consonante laterale pre-palatale sonora</dd>
+					<dd>Consonante uni-laterale alveolare sonora</dd>
+				<dt>ƚ/lh</dt>
+					<dd>Consonante semi-laterale palatale sonora</dd>
+					<dd>Consonante semi-laterale pre-velare sonora</dd>
+				<dt>m</dt>
+					<dd>Consonante nasale bilabiale sonora</dd>
+				<dt>n</dt>
+					<dd>Consonante nasale alveolare sonora</dd>
+					<dd>Consonante semi-nasale pro-velare sonora</dd>
+				<dt>&ntilde;/nh</dt>
+					<dd>Consonante nasale palatale sonora</dd>
+				<dt>o (&oacute;)</dt>
+					<dd>Vocale posteriore mezza chiusa arrotondata</dd>
+				<dt>&ograve;</dt>
+					<dd>Vocale posteriore quasi aperta arrotondata</dd>
+				<dt>p</dt>
+					<dd>Consonante occlusiva bilabiale sorda</dd>
+				<dt>r</dt>
+					<dd>Consonante vibrante alveolare sonora</dd>
+					<dd>Consonante approssimante lateralizzata alveolare sonora</dd>
+					<dd>Consonante approssimante lateralizzata post-alveolare sonora</dd>
+					<dd>Consonante vibrata post-alveolare sonora</dd>
+					<dd>Consonante vibratile post-alveolare sonora</dd>
+				<dt>s</dt>
+					<dd>Consonante costrittiva-canalizzata sorda</dd>
+				<dt>ʃ/sh</dt>
+					<dd>Consonante costrittiva canalizzata post-alveo-palatale sorda</dd>
+				<dt>t</dt>
+					<dd>Consonante occlusiva sorda</dd>
+				<dt>&tstrok;/th</dt>
+					<dd>Consonante costrittiva dentale sorda</dd>
+				<dt>u (&uacute;)</dt>
+					<dd>Vocale posteriore chiusa arrotondata</dd>
+					<dd>Consonante approssimante velare arrotondata sonora</dd>
+				<dt>v</dt>
+					<dd>Consonante costrittiva labio-dentale sonora</dd>
+				<dt>x</dt>
+					<dd>Consonante costrittiva-canalizzata sonora</dd>
+				<dt>ʒ/xh</dt>
+					<dd>Consonante costrittiva canalizzata post-alveo-palatale sonora</dd>
+			</dl>
+		</div>
+	</aside>
+	<footer>
+		<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licenza Creative Commons" style="border-width: 0; width: 88px; height: 31px" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Questa opera di <a href="/cdn-cgi/mail#6904081c1b06471d1b0c1f001a0807290e04080005470a0604?subject=Gramàdega%20de%20lengua%20vèneta" data-mail="377ad742455817634552415e4f5659"><span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">[email&nbsp;protected]</span></a> &egrave; sotto della licenza <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribuzione - Non commerciale - No opere derivate 4.0 Internazionale (CC BY-NC-ND 4.0)</a>.
+	</footer>
+</body>
+</html>

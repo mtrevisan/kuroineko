@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<meta name="description" content="Convertitore delle antiche misure di lunghezza, area, volume e peso del Veneto">
+	<meta name="keywords" content="misure antiche venete">
+	<meta name="robots" content="noodp">
+	<base href="../../" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<!-- convertitore, misure, venete -->
+
+	<title>misure antiche venete | convertitore di misure</title>
+
+	<link rel="stylesheet" href="resources/css/common.css">
+	<link rel="stylesheet" href="resources/css/measureConverter.css">
+	<link rel="stylesheet" href="resources/css/alerter/alerter.core.css">
+	<link rel="stylesheet" href="resources/css/alerter/alerter.default.css">
+
+	<script src="app/Initializer.js"></script>
+	<script id="bootstrap-js">
+		Initializer.initializeApplication(function(){
+			require(['main_measureConverter'], function(app){ app.init(); });
+		});
+	</script>
+	<script src="app/tools/social/GoogleAnalyticsHelper.js"></script>
+	<script src="app/tools/social/SocialLoader.js"></script>
+</head>
+
+<body>
+	<nav class="language">
+		<a href="pages/vec/measureConverter.html" lang="vec" hreflang="vec"><img src="resources/images/flags/veneto.png" class="flag" width="35" alt="V&egrave;neto" title="V&egrave;neto" /></a>
+		<img src="resources/images/flags/italia.png" class="flag" width="35" alt="Italiano" title="Italiano" />
+	</nav>
+	<header>
+		<h1>Convertitore delle misure venete 2.0</h1>
+
+		<nav>
+			<div class="share">
+				<div id="fb-root"></div><div class="fb-like" data-href="http://www.facebook.com/ParNoDexmentegar" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+				&nbsp;&nbsp;&nbsp;
+				<div class="g-plusone" data-size="medium" data-href="http://parnodexmentegar.orgfree.com"></div>
+			</div>
+			<br>
+			Scarica (una vecchissima versione de) la <a href="http://parnodesmentegar.wordpress.com/2012/09/03/glvv-20120624">Gram&agrave;tega de lengua v&egrave;neta pa&#8217; i v&egrave;neti [20120624]</a>
+		</nav>
+	</header>
+	<nav>
+		<a href="pages/it/conjugator.html">Coniugatore dei verbi</a> &ndash; <a href="pages/it/syllabator.html">Sillabatore</a> &ndash; <a href="pages/it/dialectInquirer.html">Riconoscitore delle varianti</a><span class="new-feature">nuovo!</span> &ndash; <a href="pages/it/dictionary.html">Dizionario</a><span class="new-feature">nuovo!</span>
+		<br>
+		<br>
+		<a href="pages/it/alphabet.html">Nascita dell&#8217;alfabeto veneto</a>
+	</nav>
+	<section class="input frame-inner" id="inputSection">
+		<table role="presentation">
+			<tr>
+				<td style="vertical-align: middle;">
+					<div class="measure-input-container">
+						<label class="input-description" for="district">Distreto</label><select id="district" class="district"></select>
+						<p>
+						<label class="input-description" for="type">Categoria della misura</label><select id="type" class="measure-type">
+							<optgroup label="Lunghezza">
+								<option value="length.earth">lunghezza da terra</option>
+								<option value="length.industrial">lunghezza da fabbrica</option>
+								<option value="length.silk">lunghezza da seta</option>
+								<option value="length.cotton">lunghezza da panno/cotone</option>
+								<option value="length.wool">lunghezza da lana</option>
+								<option value="length.linen">lunghezza da tela</option>
+							</optgroup>
+							<optgroup label="Area">
+								<option value="area.earth">area</option>
+							</optgroup>
+							<optgroup label="Volume">
+								<option value="volume.dry">volume per aridi</option>
+								<option value="volume.liquid">volume per liquidi</option>
+							</optgroup>
+							<optgroup label="Peso">
+								<option value="weight.heavy">peso grosso</option>
+								<option value="weight.light">peso fino</option>
+								<option value="weight.medicinal">peso per medicine</option>
+								<option value="weight.preciouses">peso per preziosi</option>
+							</optgroup>
+						</select>
+						<p>
+						<br>
+						<form action="#inputSection" novalidate>
+							<input type="text" id="value" class="measure-input" placeholder="inserisci la misura&hellip;"
+								title="mexura"
+								pattern="^(\d+([.,]\d+)?)?$" data-validate="regex(misura non valida)" />
+							<select id="uom-from" class="uom-type"></select>
+							<span class="input-description">in</span>
+							<select id="uom-to" class="uom-type"></select>
+							&nbsp;&nbsp;&nbsp;<input type="submit" id="btnConvert" class="measure-input-button" value="Converti" accesskey="C" />
+						</form>
+					</div>
+					<div class="measure-table-container">
+						<div class="frame-inner">
+							<table class="measure-table" id="measureTable" role="presentation">
+								<thead>
+									<tr class="bottom-border-thick">
+										<th scope="col" class="header">nome</th>
+										<th scope="col" colspan="2" class="header">valore</th>
+									</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</section>
+	<section class="content">
+		<article class="frame" id="measureResultContainer">
+			<h2>Risultato</h2>
+			<div class="frame-inner" id="measureOutput">
+				<div class="measure-output-conversion" id="measureOutputConversion"></div>
+				<br>o anche<br>
+				<br>
+				<div class="measure-output-conversion-expanded" id="measureOutputConversionExpanded"></div>
+			</div>
+		</article>
+	</section>
+	<footer>
+		<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licenza Creative Commons" style="border-width: 0; width: 88px; height: 31px" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Questa opera di <a href="/cdn-cgi/mail#6904081c1b06471d1b0c1f001a0807290e04080005470a0604?subject=Gramàdega%20de%20lengua%20vèneta" data-mail="377ad742455817634552415e4f5659"><span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">[email&nbsp;protected]</span></a> &egrave; sotto della licenza <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribuzione - Non commerciale - No opere derivate 4.0 Internazionale (CC BY-NC-ND 4.0)</a>.
+	</footer>
+</body>
+</html>

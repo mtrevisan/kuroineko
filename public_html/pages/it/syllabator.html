@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<meta name="description" content="Sillabatore delle parole in lingua veneta secondo l'alfabeto di Mauro Trevisan">
+	<meta name="keywords" content="lingua veneta, dialetto veneto, alfabeto veneto, grammatica veneta, sillabatore veneto, divisione in sillabe, regole di accentazione">
+	<meta name="robots" content="noodp">
+	<base href="../../" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<!-- sillabatore, lingua, veneta -->
+
+	<title>sillabatore della lingua veneta</title>
+
+	<link rel="stylesheet" href="resources/css/common.css">
+	<link rel="stylesheet" href="resources/css/syllabator.css">
+	<link rel="stylesheet" href="resources/css/alerter/alerter.core.css">
+	<link rel="stylesheet" href="resources/css/alerter/alerter.default.css">
+
+	<script src="app/Initializer.js"></script>
+	<script id="bootstrap-js">
+		Initializer.initializeApplication(function(){
+			require(['main_syllabator'], function(app){ app.init(); });
+		});
+	</script>
+	<script src="app/tools/social/GoogleAnalyticsHelper.js"></script>
+	<script src="app/tools/social/SocialLoader.js"></script>
+</head>
+
+<body>
+	<nav class="language">
+		<a href="pages/vec/syllabator.html" lang="vec" hreflang="vec"><img src="resources/images/flags/veneto.png" class="flag" width="35" alt="V&egrave;neto" title="V&egrave;neto" /></a>
+		<img src="resources/images/flags/italia.png" class="flag" width="35" alt="Italiano" title="Italiano" />
+	</nav>
+	<header>
+		<h1>Sillabatore delle parole venete 1.5</h1>
+
+		<nav>
+			<div class="share">
+				<div id="fb-root"></div><div class="fb-like" data-href="http://www.facebook.com/ParNoDexmentegar" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+				&nbsp;&nbsp;&nbsp;
+				<div class="g-plusone" data-size="medium" data-href="http://parnodexmentegar.orgfree.com"></div>
+			</div>
+			<br>
+			Scarica (una vecchissima versione de) la <a href="http://parnodesmentegar.wordpress.com/2012/09/03/glvv-20120624">Gram&agrave;tega de lengua v&egrave;neta pa&#8217; i v&egrave;neti [20120624]</a>
+		</nav>
+	</header>
+	<nav>
+		<a href="pages/it/conjugator.html">Coniugatore dei verbi</a> &ndash; <a href="pages/it/dialectInquirer.html">Riconoscitore delle varianti</a><span class="new-feature">nuovo!</span> &ndash; <a href="pages/it/dictionary.html">Dizionario</a><span class="new-feature">nuovo!</span> &ndash; <a href="pages/it/measureConverter.html">Convertitore delle misure</a>
+		<br>
+		<br>
+		<a href="pages/it/alphabet.html">Nascita dell&#8217;alfabeto veneto</a>
+	</nav>
+	<section class="notes">
+		<h2>Introduzione</h2>
+		La sillabazione delle parole venete non &egrave; difficile da fare, basta seguire le regole di accentazione e di tutto il resto si occuper&agrave; il sillabatore (le vocali <i>e</i> e <i>o</i> con accento greve devono essere segnate).<br>
+		Questo sillabatore &egrave; anche in grado di fornire la trascrizione fonetica.<br>
+		Dovete solo scrivere la parola (o una frase intera) e premere &#8220;Sillaba&#8221; o premere <i>invio</i>.
+	</section>
+	<section class="notes">
+		<article>
+			<h2>Regole di accentazione</h2>
+			<div class="frame-inner transition-highlight">
+				L&#8217;accento grafico, che di solito &egrave; acuto e cade sulla penultima sillaba, o l&#8217;ultima se la &egrave; chiusa, segna l&#8217;accento tonico:
+				<p>
+				<ul>
+					<li>delle parole tronche che terminano per vocale (<i>ingrop&agrave;</i>, <i>vintitr&egrave;</i>, <i>unku&ograve;</i>, <i>pi&egrave;</i>, <i>fi&agrave;</i>).</li>
+					<li>delle parole piane che terminano per consonante, e in particolare nei verbi rizotonici (<i>m&eacute;ter</i>, <i>k&uacute;xer</i>).</li>
+					<li>delle parole dove cade prima della penultima (<i>l&agrave;grema</i>, <i>m&oacute;nega</i>).</li>
+					<li>per le parole che hanno due o pi&uacute; sillabe sopra la prima vocale di un dittongo o di uno iato (<i>gav&egrave;u</i>, <i>bev&uacute;o</i>).</li>
+					<li>sopra le forme dell&#8217;ind. pres. del v. <i>aver</i> (<i>&agrave;</i>, <i>&egrave;</i>, <i>&ograve;</i>) e <i>&egrave;ser</i> (<i>s&iacute;</i>, <i>s&eacute;</i>, <i>&eacute;</i>), in forma debole.</li>
+				</ul>
+				<br>
+				Per le parole apocopate si deve tenere a mente che ci sarebbe una sillaba in pi&uacute; alla fine (<i>indo&#8217;</i> non ha l&#8217;accento).
+				<br><br>
+				&Egrave; da usare l&#8217;accento grafico (con valore distintivo) per tutte le parole dove c&#8217;&egrave; una <i>e</i> o una <i>o</i> aperta, anche per permettere di leggere in maniera esatta la parola tra differenti varianti, oltre che la sua corretta pronuncia (<i>skarp&egrave;r</i>, <i>vec&ograve;t</i>, <i>d&egrave;s</i>, <i>pe&ograve;co</i>).<br>
+				Di solito nelle sillabe chiuse dove dopo la vocale c&#8217;&egrave; una <i>l</i>, <i>r</i>, <i>s</i> &egrave; greve, se invece c&#8217;&egrave; una <i>n</i> &egrave; acuto.<br>
+				Nelle sillabe aperte invece si ha che, di solito, se la sillaba che segue comincia per <i>l</i> &egrave; greve, per <i>t</i> &egrave; acuto se &egrave; una <i>e</i> oppure greve se una <i>o</i>. Come ultimo, se la vocale si trova dopo la consonante <i>j</i> di solito &egrave; aperta.
+			</div>
+		</article>
+		<br>
+		<article>
+			<h2>Dittongo, iato, e sequenza eterofonica</h2>
+			<div class="frame-inner transition-highlight">
+				Quando due vocali si trovano vicine tra di loro possono venire pronunciate con una sola emissione di fiato, senza che la prima risulti pi&uacute; forzata dell&#8217;altra ma, anzi, quando la si fa scivolare senza fatica nella seconda, come se non esistesse nemmeno. Si ha allora quello che viene chiamato dittongo, che &egrave; fatto da:
+				<p>
+				<ul>
+					<li>due vocali deboli (<i>i</i>, <i>u</i>), con l&#8217;accento che cade sulla seconda (<i>fi&uacute;li</i>, <i>segu&iacute;r</i>).</li>
+					<li>una vocale forte (<i>a</i>, <i>e</i>, <i>o</i>) tonica (cio&egrave; accentata) e l&#8217;altra debole (<i>i</i>, <i>u</i>) atona (cio&egrave; senza accento) (<i>b&agrave;i</i>, <i>r&agrave;uko</i>, <i>d&egrave;i</i>, <i>pl&egrave;ure</i>, d&eacute;i, <i>ma&ntilde;&egrave;u</i>, <i>p&ograve;i</i>, <i>k&oacute;i</i>).</li>
+				</ul>
+				<br><p>
+				Se invece due vocali vicine vengono pronunciate con due fonemi ben distinti si ottiene quello che viene chiamato iato, che &egrave; fatto da:
+				<p>
+				<ul>
+					<li>due vocali deboli (<i>i</i>, <i>u</i>), con l&#8217;accento che cade sulla prima (<i>gav&uacute;i</i>, <i>fen&iacute;i</i>).</li>
+					<li>una vocale debole (<i>i</i>, <i>u</i>) e l&#8217;altra forte (<i>a</i>, <i>e</i>, <i>o</i>), con l&#8217;accento che cade una di queste (<i>vor&iacute;a</i>, <i>bux&iacute;e</i>, <i>desal&iacute;o</i>, <i>&uacute;a</i>, <i>kr&uacute;e</i>, <i>pal&uacute;o</i>, <i>per&iacute;odo</i>, <i>su&agrave;da</i>).</li>
+					<li>una vocale forte (<i>a</i>, <i>e</i>, <i>o</i>) atona e l&#8217;altra debole (<i>i</i>, <i>u</i>) tonica (<i>ra&iacute;xe</i>, <i>ba&uacute;ko</i>, <i>re&iacute;na</i>, <i>le&uacute;ni</i>, <i>ro&iacute;ne</i>).</li>
+					<li>due vocali forti (<i>a</i>, <i>e</i>, <i>o</i>), con l&#8217;accento che cade su una di queste (<i>tir&agrave;a</i>, <i>ma&egrave;stro</i>, <i>pa&eacute;xe</i>, <i>se&ntilde;&agrave;e</i>, <i>k&agrave;o</i>, <i>sa&ograve;n</i>, <i>sa&oacute;r</i>, <i>id&egrave;a</i>, <i>gav&eacute;a</i>, <i>be&agrave;</i>, <i>d&egrave;e</i>, <i>sk&egrave;o</i>, <i>d&eacute;o</i>, <i>pe&ograve;co</i>, <i>le&oacute;n</i>, <i>&ograve;axi</i>, <i>k&oacute;a</i>, <i>bo&agrave;ro</i>, <i>er&ograve;e</i>, <i>s&oacute;e</i>, <i>po&egrave;tego</i>, <i>ko&eacute;xo</i>, <i>x&ograve;o</i>, <i>ko&ograve;pare</i>, <i>ko&oacute;rdene</i>).</li>
+				</ul>
+				<br><p>
+				Le sequenze eterofonege invece sono gruppi composti da:
+				<ul>
+					<li>una consonante approssimante (<i>i/j</i> <span class="phone">/j/</span>, <i>u</i> <span class="phone">/w/</span>) e una vocale debole (<i>i</i>, <i>u</i>) tonica (<i>fi&uacute;me</i>, <i>j&uacute;sto</i>, <i>ku&iacute;ndexe</i>).</li>
+					<li>una consonante approssimante (<i>i/j</i> <span class="phone">/j/</span>, <i>u</i> <span class="phone">/w/</span>) e una vocale forte (<i>a</i>, <i>e</i>, <i>o</i>) tonica (<i>fi&agrave;po</i>, <i>taj&agrave;</i>, <i>si&egrave;xa</i>, <i>inki&eacute;sta</i>, <i>j&egrave;ri</i>, <i>si&ograve;lto</i>, <i>fi&oacute;r</i>, <i>j&oacute;ta</i>, <i>xgu&egrave;lto</i>, <i>ku&ograve;r</i>).</li>
+				</ul>
+			</div>
+		</article>
+		<br>
+		<article>
+			<h2>Regole di sillabazione</h2>
+			<div class="frame-inner transition-highlight">
+				Formano una sillaba unica:
+				<p>
+				<ul>
+					<li>una consonante davanti una vocale, o dietro se &egrave; l&#8217;ultima (<i>ka-xa</i>, <i>ju-tar</i>).</li>
+					<li>i dittonghi con la consonante che si trova davanti, se c&#8217;&egrave; (<i>p&agrave;u-xa</i>).</li>
+					<li>la vocale che forma iato (<i>po-&egrave;-ta</i>, <i>pa-u-ra</i>).</li>
+					<li>due consonanti, con la prima non occlusiva e non costrittiva e la seconda vibrante o laterale, o anche entrambe occlusive, fanno parte di due sillabe differenti se davanti la prima c&#8217;&egrave; una vocale (<i>er-ba</i>, <i>sal-tar</i>, <i>bas-tan-ŧa</i>, <i>lon-tan</i>, <i>sor-pre-xa</i>, <i>dex-men-te-g&agrave;</i>, <i>la s-ta-bia</i>, <i>fin-lan-dia</i>, <i>ab-de-gar</i>, <i>sub-tro-pe-gal</i>), altrimenti faranno parte della stessa (<i>pia-ŧa</i>, <i>des-tri-kar</i>, <i>stra-ko</i>, <i>gron-da</i>, <i>in-gle-xe</i>, <i>scan-ti-xo</i>, <i>sfe-xa</i>, <i>sta-bia</i>, <i>xba-ro</i>, <i>xbri-gar</i>, <i>stran-bo</i>).</li>
+				</ul>
+			</div>
+		</article>
+		<br>
+		<article>
+			<h2>Note</h2>
+			<div class="frame-inner transition-highlight">
+				<ul>
+					<li><span class="word-syllabe-ok"><b>in nero</b></span>: Parole che si possono dividere in sillabe.</li>
+					<li><span class="word-syllabe-error"><b>in roso</b></span>: Parole che non si possono dividere in sillabe.</li>
+					<li><b>|</b>: Separatore delle sillabe quando si considera solo la singola parola.</li>
+					<li><b>/</b>: Separatore delle sillabe quando si considera l&#8217;intera frase.</li>
+					<li>Per certe parole che hanno <i>i/u</i> davanti vocale si pu&ograve; comunque far fatica a determinare se &egrave; una vocale, ma di solito &egrave; una consonante approssimante.</li>
+				</ul>
+			</div>
+		</article>
+	</section>
+	<section class="input frame-inner" id="inputSection">
+		<form action="#inputSection" novalidate>
+			<input type="text" id="text" class="text-input" placeholder="inserisci il testo&hellip;" size="80"
+				title="testo"
+				required pattern="^([0-9aàbcdđeèéfgiìíjɉklƚmnñoòóprsʃtŧuùúvxʒ \r\n\.\,;:\?\!\u2026«»\u2018\u2019\u201c\u201d'\u0022‐–\-—\(\)\[\]\{\}\*\\/\\\\]|[eiou]/|[aeo]\\|[djlnstx]h)+$" data-validate="required(campo obbligatorio)|regex(campo con caratteri non validi)" tabindex="1" />
+			<input type="submit" id="btnCalculate" class="text-input-button" value="Sillaba" accesskey="S" tabindex="3" />
+		</form>
+		<br>
+		<label class="input-description" for="dialect">Dialetto</label><select id="dialect" class="dialect" tabindex="2">
+			<option value="none">generale</option>
+			<optgroup label="Feltrino-bellunese">
+				<option value="northern.feltrinBelumat">feltrino, bellunese</option>
+				<option value="northern.cipileño">chipile&ntilde;o</option>
+				<option value="northern.altaTrevixana">alta trevigiana (vittoriese, coneglianese)</option>
+				<option value="northern.ŧitadin">cittadino</option>
+			</optgroup>
+			<optgroup label="Liventino">
+				<option value="oriental.sandonatexe">trevigiano di sinistra Piave (opitergino, sandonatese, fossaltino)</option>
+			</optgroup>
+			<optgroup label="Trevigiano">
+				<option value="centralNorthern.trevixan">trevigiano di destra Piave</option>
+				<option value="centralNorthern.kastelan">castellano</option>
+			</optgroup>
+			<optgroup label="Lagunare">
+				<option value="lagunar.veneŧian">veneziano</option>
+				<option value="lagunar.mestrin">mestrino</option>
+				<option value="lagunar.coxòto">chioggiotto</option>
+			</optgroup>
+			<optgroup label="Padovano-vicentino-polesano">
+				<option value="central.padoan">padovano</option>
+				<option value="central.viŧentin">vicentino</option>
+				<option value="central.valsuganòto">valsuganotto</option>
+				<option value="central.basoTrentin">basso trentino</option>
+				<option value="central.polexan">polesano</option>
+				<option value="central.roigòto">rodigino</option>
+				<option value="central.talian" disabled>talian</option>
+			</optgroup>
+			<optgroup label="Veronese">
+				<option value="western.altaVeronexe">alta veronese</option>
+				<option value="western.basaVeronexe">bassa veronese</option>
+				<option value="western.ŧitadin">&tstrok;itadin</option>
+			</optgroup>
+		</select>
+	</section>
+	<section class="content frame">
+		<article>
+			<h2>Sillabazione fonologica/grafica</h2>
+			<div class="frame-inner" id="syllabeGraphematicOutput"></div>
+		</article>
+		<article>
+			<h2>Sillabazione fonetica (secondo il <a rel="nofollow" href="http://venus.unive.it/canipa/"><sup>can</sup>IPA</a>)</h2>
+			<div class="frame-inner" id="syllabePhonematicOutput"></div>
+		</article>
+		<article>
+			<h2>Trascrizione fonetica</h2>
+			<div class="frame-inner phone" id="phonesOutput"></div>
+		</article>
+		<article>
+			<h2>Trascrizione fonematica</h2>
+			<div class="frame-inner phone" id="phonemesOutput"></div>
+		</article>
+		<article>
+			<h2>Numero di sillabe grafiche</h2>
+			<div class="frame-inner" id="syllabeGraphematicOutputCount"></div>
+		</article>
+		<article>
+			<h2>Numero di sillabe fonematiche</h2>
+			<div class="frame-inner" id="syllabePhonematicOutputCount"></div>
+		</article>
+	</section>
+	<aside>
+		<h2>Alfabeto e foni</h2>
+		<div class="frame-inner transition-highlight">
+			<dl>
+				<dt>\</dt>
+					<dd>Dopo una vocale, indica un accento greve (<i>&agrave;</i>, <i>&egrave;</i>, <i>&ograve;</i>)</dd>
+				<dt>/</dt>
+					<dd>Dopo una vocale, indica un accento acuto (<i>&eacute;</i>, <i>&iacute;</i>, <i>&oacute;</i>, <i>&uacute;</i>)</dd>
+				<dt>a (&agrave;)</dt>
+					<dd><span class="phone">/a/</span> Vocale centrale aperta non arrotondata</dd>
+				<dt>b</dt>
+					<dd><span class="phone">/b/</span> Consonante occlusiva bilabiale sonora</dd>
+				<dt>c</dt>
+					<dd><span class="phone">/c/</span> Consonante occlusivo-costrittiva kanalizzata post-alveo-palatale sorda</dd>
+				<dt>d</dt>
+					<dd><span class="phone">/d/</span> Consonante occlusiva dentale sonora</dd>
+				<dt>&dstrok;/dh</dt>
+					<dd><span class="phone">/&dstrok;/</span> Consonante costrittiva dentale sonora (aspirata)</dd>
+				<dt>e (&eacute;)</dt>
+					<dd><span class="phone">/&eacute;/</span> Vocale anteriore mezza chiusa non arrotondata</dd>
+				<dt>&egrave;</dt>
+					<dd><span class="phone">/&egrave;/</span> Vocale anteriore quasi aperta non arrotondata</dd>
+				<dt>f</dt>
+					<dd><span class="phone">/f/</span> Consonante costrittiva labio-dentale sorda</dd>
+				<dt>fh</dt>
+					<dd><span class="phone">/fh/</span> Consonante costrittiva labio-dentale sorda aspirata</dd>
+				<dt>g</dt>
+					<dd><span class="phone">/g/</span> Consonante occlusiva velare sonora</dd>
+				<dt>i (&iacute;)</dt>
+					<dd><span class="phone">/i/</span> Vocale anteriore chiusa non arrotondata</dd>
+					<dd><span class="phone">/j/</span> Consonante approssimante palatale sonora</dd>
+				<dt>j</dt>
+					<dd><span class="phone">/j/</span> Consonante approssimante palatale sonora</dd>
+				<dt>ɉ/jh</dt>
+					<dd><span class="phone">/ǧ/</span> Consonante occlusivo-costrittiva canalizzata post-alveo-palatale sonora</dd>
+				<dt>k</dt>
+					<dd><span class="phone">/k/</span> Consonante occlusiva velare sorda</dd>
+				<dt>l</dt>
+					<dd><span class="phone">/l/</span> Consonante laterale alveolare sonora</dd>
+					<dd><span class="phone">/K/</span> Consonante laterale pre-palatale sonora</dd>
+					<dd><span class="phone">/|/</span> Consonante uni-laterale alveolare sonora</dd>
+				<dt>ƚ/lh</dt>
+					<dd><span class="phone">/L/</span> Consonante semi-laterale palatale sonora</dd>
+					<dd><span class="phone">/ƚ/</span> Consonante semi-laterale pre-velare sonora</dd>
+				<dt>m</dt>
+					<dd><span class="phone">/m/</span> Consonante nasale bilabiale sonora</dd>
+				<dt>n</dt>
+					<dd><span class="phone">/n/</span> Consonante nasale alveolare sonora</dd>
+					<dd><span class="phone">/ŋ/</span> Consonante semi-nasale pro-velare sonora</dd>
+				<dt>&ntilde;/nh</dt>
+					<dd><span class="phone">/&ntilde;/</span> Consonante nasale palatale sonora</dd>
+				<dt>o (&oacute;)</dt>
+					<dd><span class="phone">/&oacute;/</span> Vocale posteriore mezza chiusa arrotondata</dd>
+				<dt>&ograve;</dt>
+					<dd><span class="phone">/&ograve;/</span> Vocale posteriore quasi aperta arrotondata</dd>
+				<dt>p</dt>
+					<dd><span class="phone">/p/</span> Consonante occlusiva bilabiale sorda</dd>
+				<dt>r</dt>
+					<dd><span class="phone">/r/</span> Consonante vibrante alveolare sonora</dd>
+					<dd><span class="phone">/I/</span> Consonante approssimante lateralizzata alveolare sonora</dd>
+					<dd><span class="phone">/~/</span> Consonante approssimante lateralizzata post-alveolare sonora</dd>
+					<dd><span class="phone">/J/</span> Consonante vibrata post-alveolare sonora</dd>
+					<dd><span class="phone">/^/</span> Consonante vibratile post-alveolare sonora</dd>
+				<dt>s</dt>
+					<dd><span class="phone">/s/</span> Consonante costrittiva-canalizzata sorda</dd>
+				<dt>ʃ/sh</dt>
+					<dd><span class="phone">/š/</span> Consonante costrittiva canalizzata post-alveo-palatale sorda</dd>
+				<dt>t</dt>
+					<dd><span class="phone">/t/</span> Consonante occlusiva sorda</dd>
+				<dt>&tstrok;/th</dt>
+					<dd><span class="phone">/&thorn;/</span> Consonante costrittiva dentale sorda</dd>
+				<dt>u (&uacute;)</dt>
+					<dd><span class="phone">/u/</span> Vocale posteriore chiusa arrotondata</dd>
+					<dd><span class="phone">/w/</span> Consonante approssimante velare arrotondata sonora</dd>
+				<dt>v</dt>
+					<dd><span class="phone">/v/</span> Consonante costrittiva labio-dentale sonora</dd>
+				<dt>x</dt>
+					<dd><span class="phone">/ź/</span> Consonante costrittiva-canalizzata sonora</dd>
+				<dt>ʒ/xh</dt>
+					<dd><span class="phone">/ž/</span> Consonante costrittiva canalizzata post-alveo-palatale sonora</dd>
+			</dl>
+		</div>
+	</aside>
+	<footer>
+		<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licenza Creative Commons" style="border-width: 0; width: 88px; height: 31px" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Questa opera di <a href="/cdn-cgi/mail#6904081c1b06471d1b0c1f001a0807290e04080005470a0604?subject=Gramàdega%20de%20lengua%20vèneta" data-mail="377ad742455817634552415e4f5659"><span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">[email&nbsp;protected]</span></a> &egrave; sotto della licenza <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribuzione - Non commerciale - No opere derivate 4.0 Internazionale (CC BY-NC-ND 4.0)</a>.
+	</footer>
+</body>
+</html>

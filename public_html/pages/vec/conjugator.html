@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="vec">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<meta name="description" content="Coniugatore automatico di un qualsiasi verbo veneto secondo l'alfabeto di Mauro Trevisan">
+	<meta name="keywords" content="lingua veneta, dialetto veneto, grammatica veneta, coniugazione verbi veneti, coniugatore verbi veneti, verbi veneti">
+	<meta name="robots" content="noodp">
+	<base href="../../" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<!-- coniugatore, verbi, veneti -->
+
+	<title>koniugador de i v&egrave;rbi v&egrave;neti</title>
+
+	<link rel="stylesheet" href="resources/css/common.css">
+	<link rel="stylesheet" href="resources/css/conjugator.css">
+	<link rel="stylesheet" href="resources/css/alerter/alerter.core.css">
+	<link rel="stylesheet" href="resources/css/alerter/alerter.default.css">
+
+	<script src="app/Initializer.js"></script>
+	<script id="bootstrap-js">
+		var Application;
+		Initializer.initializeApplication(function(){
+			require(['main_conjugator', 'i18n/ita'], function(app, i18nResources){
+				Application = app;
+				app.init(i18nResources);
+			});
+		});
+	</script>
+	<script src="app/tools/social/GoogleAnalyticsHelper.js"></script>
+	<script src="app/tools/social/SocialLoader.js"></script>
+</head>
+
+<body>
+	<nav class="language">
+		<img src="resources/images/flags/veneto.png" class="flag" width="35" alt="V&egrave;neto" title="V&egrave;neto" />
+		<a href="pages/it/conjugator.html" lang="it" hreflang="it"><img src="resources/images/flags/italia.png" class="flag" width="35" alt="Italiano" title="Italiano" /></a>
+	</nav>
+	<header>
+		<h1>Koniugador de i v&egrave;rbi v&egrave;neti 4.0.<a href="#" title="sto ku&agrave; &#8216;l &eacute; el n&uacute;maro de v&egrave;rbi (almanko) ke &#8216;l intiva &#8216;l a&tstrok;ento kor&egrave;to">5571</a></h1>
+
+		<nav>
+			<div class="share">
+				<div id="fb-root"></div><div class="fb-like" data-href="http://www.facebook.com/ParNoDexmentegar" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+				&nbsp;&nbsp;&nbsp;
+				<div class="g-plusone" data-size="medium" data-href="http://parnodexmentegar.orgfree.com"></div>
+			</div>
+			<br>
+			Deskarga (na version strav&egrave;ca de) la <a href="http://parnodesmentegar.wordpress.com/2012/09/03/glvv-20120624">Gram&agrave;tega de lengua v&egrave;neta pa&#8217; i v&egrave;neti [20120624]</a>
+		</nav>
+	</header>
+	<nav>
+		<a href="pages/vec/syllabator.html">Silabador</a> &ndash; <a href="pages/vec/dialectInquirer.html">Intivador de le varianti</a><span class="new-feature">novo!</span> &ndash; <a href="pages/vec/dictionary.html">Galepin</a><span class="new-feature">novo!</span> &ndash; <a href="pages/vec/measureConverter.html">Konvertidor de mexure</a>
+		<br>
+		<br>
+		<a href="pages/vec/alphabet.html">N&agrave;sita de &#8216;l alfabeto v&egrave;neto</a>
+	</nav>
+	<section class="notes">
+		<h2>Introduzione</h2>
+		La koniugathion de i v&egrave;rbi v&egrave;neti no l&#8217; &eacute; dif&iacute;thil, f&ograve;ra ke par on fi&agrave; de v&egrave;rbi no regolari (ke i &eacute; solke 14: <i>andar/dar/star</i>, <i>&egrave;ser</i>, <i>aver</i>, <i>d&eacute;ver</i>, <i>saver</i>, <i>d&iacute;xer</i>, <i>poder</i>, <i>t&egrave;&ntilde;er/v&egrave;&ntilde;er</i>, <i>tr&agrave;er</i>, <i>toler/voler</i>).<br>
+		Sto koniugator &#8216;l &eacute; bon de trar f&ograve;ra el paradigma de <b>tuti</b> i v&egrave;rbi (ativi, pasivi, pronomenali &ndash; <i>ma&ntilde;ar</i>, <i>pensarse</i>, <i>saverla</i>) a partir da on infen&iacute;o kualsiasi grathie a on algoritmo fato a p&ograve;sta.<br>
+		&#8216;V&eacute; sol ke da skr&iacute;ver el v&egrave;rbo int&eacute; la s&oacute; forma infen&iacute;a e strukar &#8220;K&ograve;niuga&#8221; o b&agrave;ter <i>inv&iacute;o</i>.<br>
+		<br>
+		<span class="pay-attention">&Ograve;co a indikar i asenti pendi par no falar!</span> (<i>l&egrave;xar</i> &#8216;l &eacute; difarente da &#8220;lexàr&#8221;, kof&agrave; <i>f&oacute;ndar</i> da <i>fond&agrave;r</i>, varda el <a href="syllabator.html">silabador</a>).
+	</section>
+	<section class="notes">
+		<h2>Note</h2>
+		<div class="frame-inner transition-highlight">
+			<ul>
+				<li><span class="conjugation-regular"><b>in nero</b></span>: Forme regolari.</li>
+				<li><span class="conjugation-irregular"><b>in roso</b></span>: Forme no regolari.</li>
+				<li>&hellip;<sup class="archaic">A</sup>: Forme ark&agrave;ege.</li>
+				<li>Forme intra <b>()</b> el v&ograve;l dir ke le p&ograve;l v&egrave;&ntilde;er dopar&agrave;e kome anka n&ograve;.</li>
+				<li>Forme intra <b>[]</b> el v&ograve;l dir ke le &agrave; da v&egrave;&ntilde;er dopar&agrave;a par f&ograve;r&tstrok;a una.</li>
+				<li>Forme intra <b>&lt;&gt;</b> le v&ograve;l dir ke le &agrave; da sostituirse o da &dstrok;ontarse a l&#8217; &uacute;ltima l&eacute;tara de &#8216;l v&egrave;rbo.</li>
+				<li>La 2<sup>a</sup> pars. pl. la p&ograve;l &#8216;ver la vokal final (opur l&#8217; inti&egrave;ra dexinen&tstrok;a pal kond. prex.) &ndash; ma no &#8216;l a&tstrok;ento ag&uacute;o o pendo, ke &#8216;l r&egrave;sta kuelo indik&agrave;, &ndash; konpa&ntilde;o de kuela de la 2<sup>a</sup> pars. pl. (padoan-vi&tstrok;entin-polexan) o de kuela de 3<sup>a</sup> (feltrin-belumat e liventin; pal lagunar e bixiak el p&ograve;l &egrave;ser anka intel prex. de &#8216;l end. e &dstrok;ontat.).</li>
+				<li>Int&eacute; la variante liventina se p&ograve;l katar on metaplaxmo de deklina&tstrok;ion da la 1<sup>a</sup> a la 2<sup>a</sup> koniug. intel inparf&egrave;to, e intel part. pasivo.</li>
+				<li>Int&eacute; la variante feltrina-belumata se p&ograve;l katar on metaplaxmo de deklina&tstrok;ion da la 1<sup>a</sup> a la 2<sup>a</sup> koniug. par tuti i m&ograve;di e i tenpi f&ograve;ra ke int&eacute; &#8216;l infen&iacute;o, parti&tstrok;ipio, e xerundio.</li>
+				<li>El kondi&tstrok;ional prexente in <i>-r&agrave;ve</i> el se dopara solke par la 1<sup>a</sup> e la 2<sup>a</sup> pars. sing. e par la 3<sup>a</sup>, par kelaltre parsone se dopara el &dstrok;ontativo inparf&egrave;to.</li>
+				<li>I pron&ograve;mi d&eacute;boli interogativi kl&iacute;tegi no se p&ograve;l dopararli intel &dstrok;ontativo, komandativo, e int&eacute;i tenpi indefen&iacute;i.</li>
+			</ul>
+		</div>
+	</section>
+	<section class="input frame-inner" id="inputSection">
+		<form action="#inputSection" novalidate>
+			<input type="text" id="infinitive" class="verb-input" placeholder="inser&iacute;si el v&egrave;rbo&hellip;" title="infen&iacute;o de &#8216;l v&egrave;rbo"
+				required pattern="^([aàbcdđeèéfgiìíjɉklƚmnñoòóprsʃtŧuùúvxʒ]|[eiou]/|[aeo]\\|[djlnstx]h)+([aeioàèéìíòó]|[eiou]/|[aeo]\\)r(([gs]e)?(la|ne)?|l?e)?$" data-validate="required(kanpo oblegat&ograve;rio)|regex(infen&iacute;o n&ograve; v&agrave;lido)" tabindex="1" />
+			<input type="submit" id="btnCalculate" class="verb-input-button" value="K&ograve;niuga" accesskey="K" tabindex="3" />
+		</form>
+		<br>
+<!--		<select id="test" class="dialect"></select>
+		--->
+		<label class="input-description" for="dialect">Dial&egrave;to</label><select id="dialect" class="dialect" tabindex="2">
+			<option value="none">&dstrok;eneral</option>
+			<optgroup label="Feltrin-belumat">
+				<option value="northern">feltrin, belumat, cipile&ntilde;o, alta trevixana</option>
+			</optgroup>
+			<optgroup label="Liventin">
+				<option value="oriental.sandonatexe">trevixan de &tstrok;anka Piave (opiterxin, sandonatexe, fosaltin)</option>
+			</optgroup>
+			<optgroup label="Trevixan">
+				<option value="centralNorthern.trevixan">trevixan de dreta Piave</option>
+				<option value="centralNorthern.kastelan">kastelan</option>
+			</optgroup>
+			<optgroup label="Lagunar">
+				<option value="lagunar.veneŧian">vene&tstrok;ian</option>
+				<option value="lagunar.coxòto">cox&ograve;to</option>
+			</optgroup>
+			<optgroup label="Padoan-vi&tstrok;entin-polexan">
+				<option value="central.padoan">padoan</option>
+				<option value="central.viŧentin">vi&tstrok;entin</option>
+				<option value="central.polexan">polexan</option>
+				<option value="central.talian" disabled>talian</option>
+			</optgroup>
+			<optgroup label="Veronexe">
+				<option value="western.altaVeronexe">alta veronexe</option>
+				<option value="western.basaVeronexe">basa veronexe</option>
+			</optgroup>
+		</select>
+		<div class="input-error" id="inputError"></div>
+		<div class="input-alternative" id="inputAlternative"></div>
+	</section>
+	<section class="content">
+		<!-- <article class="frame">
+			<h2>Galepin de i v&egrave;rbi</h2>
+			<div class="frame-inner" id="verbsDictionary"></div>
+		</article> -->
+		<!-- <article class="frame">
+			<h2>Spell-checker suggestions</h2>
+			<div class="frame-inner" id="spellCheckerSuggestions"></div>
+		</article> -->
+		<article class="frame" id="paradigmContainer">
+			<h2>Paradigma</h2>
+			<div class="frame-inner">
+				<table class="paradigm">
+					<thead>
+						<tr>
+							<th colspan="2" class="conjugation-type right-border-thick" id="conjugation"></th>
+							<th scope="col" class="person">mi</th>
+							<th scope="col" class="person">nu(i)<br>n[o/i/&#8217; ]altri/e</th>
+							<th scope="col" class="person">ti <b>te</b></th>
+							<th scope="col" class="person">vu(i)<br>v[o/i/&#8217; ]altri/e</th>
+							<th scope="col" class="person">elo/lu <b>el</b>, ela <b>la</b><br>eli/lori <b>i</b>, ele/lore <b>le</b></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup" rowspan="3" class="mood">indikativo</th>
+							<th scope="rowgroup" class="tense">prexente</th>
+							<td class="conjugation" id="indicative.present.firstSingular">&nbsp;</td>
+							<td class="conjugation" id="indicative.present.firstPlural">&nbsp;</td>
+							<td class="conjugation" id="indicative.present.secondSingular">&nbsp;</td>
+							<td class="conjugation" id="indicative.present.secondPlural">&nbsp;</td>
+							<td class="conjugation" id="indicative.present.third">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="rowgroup" class="tense">inparf&egrave;to</th>
+							<td class="conjugation" id="indicative.imperfect.firstSingular">&nbsp;</td>
+							<td class="conjugation" id="indicative.imperfect.firstPlural">&nbsp;</td>
+							<td class="conjugation" id="indicative.imperfect.secondSingular">&nbsp;</td>
+							<td class="conjugation" id="indicative.imperfect.secondPlural">&nbsp;</td>
+							<td class="conjugation" id="indicative.imperfect.third">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="rowgroup" class="tense">futuro</th>
+							<td class="conjugation" id="indicative.future.firstSingular">&nbsp;</td>
+							<td class="conjugation" id="indicative.future.firstPlural">&nbsp;</td>
+							<td class="conjugation" id="indicative.future.secondSingular">&nbsp;</td>
+							<td class="conjugation" id="indicative.future.secondPlural">&nbsp;</td>
+							<td class="conjugation" id="indicative.future.third">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="rowgroup" rowspan="2" class="mood">&dstrok;ontativo</th>
+							<th scope="rowgroup" class="tense">prexente</th>
+							<td class="conjugation" id="subjunctive.present.firstSingular">&nbsp;</td>
+							<td class="conjugation" id="subjunctive.present.firstPlural">&nbsp;</td>
+							<td class="conjugation" id="subjunctive.present.secondSingular">&nbsp;</td>
+							<td class="conjugation" id="subjunctive.present.secondPlural">&nbsp;</td>
+							<td class="conjugation" id="subjunctive.present.third">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="rowgroup" class="tense">inparf&egrave;to</th>
+							<td class="conjugation" id="subjunctive.imperfect.firstSingular">&nbsp;</td>
+							<td class="conjugation" id="subjunctive.imperfect.firstPlural">&nbsp;</td>
+							<td class="conjugation" id="subjunctive.imperfect.secondSingular">&nbsp;</td>
+							<td class="conjugation" id="subjunctive.imperfect.secondPlural">&nbsp;</td>
+							<td class="conjugation" id="subjunctive.imperfect.third">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="rowgroup" rowspan="2" class="mood">kondi&tstrok;ional</th>
+							<th scope="rowgroup" rowspan="2" class="tense">prexente</th>
+							<td class="conjugation" id="conditional.simple.firstSingular">&nbsp;</td>
+							<td class="conjugation" id="conditional.simple.firstPlural">&nbsp;</td>
+							<td class="conjugation" id="conditional.simple.secondSingular">&nbsp;</td>
+							<td class="conjugation" id="conditional.simple.secondPlural">&nbsp;</td>
+							<td class="conjugation" id="conditional.simple.third">&nbsp;</td>
+						</tr>
+						<tr>
+							<td colspan="5" class="conjugation" id="conditional.simple.archaic"></td>
+						</tr>
+						<tr class="bottom-border-thin">
+							<th scope="rowgroup" class="mood">komandativo</th>
+							<th scope="rowgroup" class="tense">prexente</th>
+							<td colspan="2" class="conjugation">--</td>
+							<td class="conjugation" id="imperative.present.secondSingular">&nbsp;</td>
+							<td class="conjugation" id="imperative.present.secondPlural">&nbsp;</td>
+							<td class="conjugation">--</td>
+						</tr>
+						<tr>
+							<th scope="rowgroup" class="mood">infen&iacute;o</th>
+							<th scope="rowgroup" class="tense">s&eacute;nplise</th>
+							<td colspan="5" class="conjugation" id="infinitive.simple.all">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="rowgroup" rowspan="8" class="mood">parti&tstrok;ipio</th>
+							<th scope="rowgroup" class="tense">ativo</th>
+							<td colspan="5" class="conjugation" id="participle.imperfect.all">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="rowgroup" rowspan="7" class="tense">pasivo</th>
+							<td colspan="5" class="conjugation multicolumn" id="participle.perfect.regular">&nbsp;</td>
+						</tr>
+						<tr>
+							<td colspan="5" class="conjugation conjugation-irregular multicolumn" id="participle.perfect.irregular"></td>
+						</tr>
+						<tr>
+							<td colspan="5" class="conjugation conjugation-irregular multicolumn" id="participle.perfect.irregular.strong"></td>
+						</tr>
+						<tr>
+							<td colspan="5" class="conjugation multicolumn" id="participle.perfect.regular.northern_oriental1"></td>
+						</tr>
+						<tr>
+							<td colspan="5" class="conjugation multicolumn" id="participle.perfect.regular.northern_oriental2"></td>
+						</tr>
+						<tr>
+							<td colspan="5" class="conjugation conjugation-irregular multicolumn" id="participle.perfect.irregular.northern_oriental1"></td>
+						</tr>
+						<tr>
+							<td colspan="5" class="conjugation conjugation-irregular multicolumn" id="participle.perfect.irregular.northern_oriental2"></td>
+						</tr>
+						<tr>
+							<th scope="rowgroup" class="mood">xerundio</th>
+							<th scope="rowgroup" class="tense">s&eacute;nplise</th>
+							<td colspan="5" class="conjugation" id="gerund.simple.all">&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</article>
+		<!-- <article class="frame" id="themeContainer">
+			<h2>Theme</h2>
+			<div class="frame-inner">
+				<table class="themes">
+					<tr class="top-border-thick">
+						<th scope="row" class="theme right-border-thick">Theme T1</th>
+						<td><div id="themeT1" class="theme"></div></td>
+					</tr>
+					<tr>
+						<th scope="row" class="theme right-border-thick">Theme T2</th>
+						<td><div id="themeT2" class="theme"></div></td>
+					</tr>
+					<tr>
+						<th scope="row" class="theme right-border-thick">Theme T3</th>
+						<td><div id="themeT3" class="theme"></div></td>
+					</tr>
+					<tr>
+						<th scope="row" class="theme right-border-thick">Theme T4</th>
+						<td><div id="themeT4" class="theme"></div></td>
+					</tr>
+					<tr>
+						<th scope="row" class="theme right-border-thick">Theme T5</th>
+						<td><div id="themeT5" class="theme"></div></td>
+					</tr>
+					<tr>
+						<th scope="row" class="theme right-border-thick">Theme T6</th>
+						<td><div id="themeT6" class="theme"></div></td>
+					</tr>
+					<tr>
+						<th scope="row" class="theme right-border-thick">Theme T7</th>
+						<td><div id="themeT7" class="theme"></div></td>
+					</tr>
+					<tr>
+						<th scope="row" class="theme right-border-thick">Theme T8</th>
+						<td><div id="themeT8" class="theme"></div></td>
+					</tr>
+					<tr>
+						<th scope="row" class="theme right-border-thick">Theme T9</th>
+						<td><div id="themeT9" class="theme"></div></td>
+					</tr>
+					<tr>
+						<th scope="row" class="theme right-border-thick">Theme T10</th>
+						<td><div id="themeT10" class="theme"></div></td>
+					</tr>
+					<tr class="bottom-border-thick">
+						<th scope="row" class="theme right-border-thick">Theme T11</th>
+						<td><div id="themeT11" class="theme"></div></td>
+					</tr>
+				</table>
+			</div>
+		</article> -->
+		<article class="frame" id="pronounWeakInterrogativeContainer">
+			<h2>Pron&ograve;mi kl&iacute;tegi interogativi</h2>
+			<div class="frame-inner">
+				<table class="pronoun-weak-interrogative">
+					<tr class="top-border-thick">
+						<th scope="rowgroup" class="person">1<sup>a</sup> pars.</th>
+						<th scope="row" colspan="2" class="number bottom-border-light right-border-thick"></th>
+						<td class="bottom-border-light">
+							<div class="pronoun-weak-interrogative" id="weak.interrogative.first.general1"></div>
+							<div class="pronoun-weak-interrogative" id="weak.interrogative.first.general2"></div>
+						</td>
+					</tr>
+					<tr class="top-border-thick">
+						<th scope="rowgroup" rowspan="2" class="person">2<sup>a</sup> pars.</th>
+						<th scope="row" colspan="2" class="number bottom-border-light right-border-thick">sing.</th>
+						<td class="bottom-border-light">
+							<div class="pronoun-weak-interrogative" id="weak.interrogative.secondSingular"></div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="2" class="number bottom-border-light right-border-thick">pl.</th>
+						<td>
+							<div class="pronoun-weak-interrogative" id="weak.interrogative.secondPlural"></div>
+						</td>
+					</tr>
+					<tr class="top-border-thick">
+						<th scope="rowgroup" rowspan="4" class="person bottom-border-thick">3<sup>a</sup> pars.</th>
+						<th scope="rowgroup" rowspan="2" class="number bottom-border-light right-border-light">sing.</th>
+						<th scope="row" class="gender bottom-border-light right-border-thick">m.</th>
+						<td class="bottom-border-light">
+							<div class="pronoun-weak-interrogative" id="weak.interrogative.thirdSingular.masculine"></div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="gender bottom-border-light right-border-thick">f.</th>
+						<td class="bottom-border-light"><div class="pronoun-weak-interrogative" id="weak.interrogative.thirdSingular.feminine"></div></td>
+					</tr>
+					<tr>
+						<th scope="rowgroup" rowspan="2" class="number bottom-border-thick right-border-light">pl.</th>
+						<th scope="row" class="gender bottom-border-light right-border-thick">m.</th>
+						<td class="bottom-border-light">
+							<div class="pronoun-weak-interrogative" id="weak.interrogative.thirdPlural.masculine"></div>
+						</td>
+					</tr>
+					<tr class="bottom-border-thick">
+						<th scope="row" class="gender bottom-border-light right-border-thick">f.</th>
+						<td>
+							<div class="pronoun-weak-interrogative" id="weak.interrogative.thirdPlural.feminine"></div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</article>
+		<!-- <article class="frame">
+			<h2>St&ograve;rego</h2>
+			<div class="frame-inner history" id="history"></div>
+		</article> -->
+		<article class="frame" id="dictionariesContainer">
+			<h2>Galepini dopar&agrave;i (no i &eacute; tuti!)</h2>
+			<div class="frame-inner transition-highlight">
+				<ul>
+					<li><i>Saggio di un dizionario veronese-italiano</i>. Verona : s.n., 1810.</li>
+					<li><b>Patriarchi, Gasparo</b>. <i>Vocabolario veneziano e padovano co&#8217; termini e m&ograve;di corrispondenti toscani</i>. III ed. Padova : s.n., 1821.</li>
+					<li><b>Angeli, Gaetani</b>. <i>Piccolo vocabolario veronese e toscano</i>. Verona : s.n., 1821.</li>
+					<li><b>Boerio, Giuseppe</b>. <i>Dizionario del dialetto veneziano</i>. [a kura de] Daniele Manin. I ed. Venezia : Andrea Santini e fiol, 1829.</li>
+					<li><i>Dizionario tascabile del dialetto veneziano - come viene usitato anche nelle provincie di Padova e Vicenza e di Treviso, coi termini roscani corrispondenti.</i>. Padova : s.n., 1847.</li>
+					<li><b>Boerio, Giuseppe</b>. <i>Dizionario del dialetto veneziano</i>. [a kura de] Daniele Manin. III ed. Venezia : Andrea Santini e fiol, 1867.</li>
+					<li><b>Mutinelli, Fabio</b>. <i>Lessico veneto</i>. Venezia : Giambattista Andreola, 1851.</li>
+					<li><b>Paoletti, Ermolao</b>. <i>Dizionario tascabile veneziano-italiano</i>. Venezia : Francesco Andreola, 1851.</li>
+					<li><b>Contarini, Pietro</b>. <i>Dizionario tascabile delle voci e frasi particolari del dialetto veneziano</i>. [a kura de] Giovanni Cecchini. Venezia : s.n., 1852.</li>
+					<li><b>Giovanni da Schio</b>. <i>Saggio del dialetto vicentino</i>. Padova : s.n., 1855. Raccolta di voci usate a Vicenza, per servire alla storia del suo popolo e della sua civilt&agrave;. Estratto d&#8217;opera assai maggiore.</li>
+					<li><b>Bortolan, Domenico</b>. <i>Vocabolario del dialetto antico vicentino (dal secolo XIV a tutto il secolo XVI)</i>. Vicenza : s.n., 1893.</li>
+					<li><b>Brandalise, Palma; Boso, Antonietta; Tognolli, Eliana</b>. <i>Parole e diti che se perde par strada &ndash; Parlata del paese di Bieno</i>. Roncafort di Trento ; Litografica Editrice Saturnia, 1998.</li>
+					<li><b>Draghi, Antonio</b>. <i>La ze na parola &ndash; Piccolo glossario veneto dell&#8217;arte del costruire con alcune digressioni</i>. <i>Samizdat</i>. 2004, 33.</li>
+					<li><b>Tomasi, Giovanni</b>. L&#8217;elemento germanico del dialetto cenedese. <i>Circolo vittoriese di ricerche storiche</i>. Febraro 1999, 5, p. 21-26.</li>
+					<li><b>Casasola, Mauro</b>. <i>Vocabolario essenziale italiano-bisiac</i>. Gorizia ; Poligrafiche San Marco, 2007. Publik&agrave; in okaxion de &#8216;l X Congresso dell&#8217;Associazione Cultirale Bisiaca, San Pier d&#8217;Isonzo, 6-7 Otobre 2007.</li>
+					<li><b>Trevisan, Renato</b>. <i>Dizionario veneto-italiano</i>. 2008.</li>
+				</ul>
+			</div>
+		</article>
+	</section>
+	<aside class="content">
+		<h2>Alfabeto</h2>
+		<div class="frame-inner transition-highlight">
+			<dl>
+				<dt>\</dt>
+					<dd>Drio de na vokal, la &iacute;ndika on a&tstrok;ento pendo (<i>&agrave;</i>, <i>&egrave;</i>, <i>&ograve;</i>)</dd>
+				<dt>/</dt>
+					<dd>Drio de na vokal, la &iacute;ndika on a&tstrok;ento ag&uacute;o (<i>&eacute;</i>, <i>&iacute;</i>, <i>&oacute;</i>, <i>&uacute;</i>)</dd>
+				<dt>a (&agrave;)</dt>
+					<dd>Vokal &tstrok;entral v&egrave;rta no rotond&agrave;a</dd>
+				<dt>b</dt>
+					<dd>Konsonante okluxiva bilabial son&ograve;ra</dd>
+				<dt>c</dt>
+					<dd>Konsonante okluxivo-kostritiva kanalix&agrave;a p&ograve;st-&agrave;lveo-palatal sorda</dd>
+				<dt>d</dt>
+					<dd>Konsonante okluxiva dental son&ograve;ra</dd>
+				<dt>&dstrok;/dh</dt>
+					<dd>Konsonante kostritiva dental son&ograve;ra (aspir&agrave;a)</dd>
+				<dt>e (&eacute;)</dt>
+					<dd>Vokal anterior m&egrave;&dstrok;a sar&agrave;a no rotond&agrave;a</dd>
+				<dt>&egrave;</dt>
+					<dd>Vokal anterior skuaxi v&egrave;rta no rotond&agrave;a</dd>
+				<dt>f</dt>
+					<dd>Konsonante kostritiva l&agrave;varo-dental sorda</dd>
+				<dt>fh</dt>
+					<dd>Konsonante kostritiva l&agrave;varo-dental sorda aspir&agrave;a</dd>
+				<dt>g</dt>
+					<dd>Konsonante okluxiva velar son&ograve;ra</dd>
+				<dt>i (&iacute;)</dt>
+					<dd>Vokal anterior sar&agrave;a no rotond&agrave;a</dd>
+					<dd>Konsonante aprosimante palatal son&ograve;ra</dd>
+				<dt>j</dt>
+					<dd>Konsonante aprosimante palatal son&ograve;ra</dd>
+				<dt>ɉ/jh</dt>
+					<dd>Konsonante okluxivo-kostritiva kanalix&agrave;a p&ograve;st-&agrave;lveo-palatal son&ograve;ra</dd>
+				<dt>k</dt>
+					<dd>Konsonante okluxiva velar sorda</dd>
+				<dt>l</dt>
+					<dd>Konsonante lateral alveolar son&ograve;ra</dd>
+					<dd>Konsonante lateral pre-palatal son&ograve;ra</dd>
+					<dd>Konsonante uni-lateral alveolar son&ograve;ra</dd>
+				<dt>ƚ/lh</dt>
+					<dd>Konsonante semi-lateral palatal son&ograve;ra</dd>
+					<dd>Konsonante semi-lateral pre-velar son&ograve;ra</dd>
+				<dt>m</dt>
+					<dd>Konsonante naxal bilabial son&ograve;ra</dd>
+				<dt>n</dt>
+					<dd>Konsonante naxal alveolar son&ograve;ra</dd>
+					<dd>Konsonante semi-naxal pro-velar son&ograve;ra</dd>
+				<dt>&ntilde;/nh</dt>
+					<dd>Konsonante naxal palatal son&ograve;ra</dd>
+				<dt>o (&oacute;)</dt>
+					<dd>Vokal posterior m&egrave;&dstrok;a sar&agrave;a rotond&agrave;a</dd>
+				<dt>&ograve;</dt>
+					<dd>Vokal posterior skuaxi v&egrave;rta rotond&agrave;a</dd>
+				<dt>p</dt>
+					<dd>Konsonante okluxiva bilabial sorda</dd>
+				<dt>r</dt>
+					<dd>Konsonante vibrante alveolar son&ograve;ra</dd>
+					<dd>Konsonante aprosimante laterali&dstrok;&agrave;a alveolar son&ograve;ra</dd>
+					<dd>Konsonante aprosimante laterali&dstrok;&agrave;a post-alveolar son&ograve;ra</dd>
+					<dd>Konsonante vibr&agrave;a alveolar son&ograve;ra</dd>
+					<dd>Konsonante vibr&agrave;tile p&ograve;st-alveolar son&ograve;ra</dd>
+				<dt>s</dt>
+					<dd>Konsonante kostritiva-kanalix&agrave;a sorda</dd>
+				<dt>ʃ/sh</dt>
+					<dd>Konsonante kostritiva kanalix&agrave;a p&ograve;st-&agrave;lveo-palatal sorda</dd>
+				<dt>t</dt>
+					<dd>Konsonante okluxiva sorda</dd>
+				<dt>&tstrok;/th</dt>
+					<dd>Konsonante kostritiva dental sorda</dd>
+				<dt>u (&uacute;)</dt>
+					<dd>Vokal posterior sar&agrave;a rotond&agrave;a</dd>
+					<dd>Konsonante aprosimante velar rotond&agrave;a son&ograve;ra</dd>
+				<dt>v</dt>
+					<dd>Konsonante kostritiva l&agrave;varo-dental son&ograve;ra</dd>
+				<dt>x</dt>
+					<dd>Konsonante kostritiva-kanalix&agrave;a son&ograve;ra</dd>
+				<dt>ʒ/xh</dt>
+					<dd>Konsonante kostritiva kanalix&agrave;a p&ograve;st-&agrave;lveo-palatal son&ograve;ra</dd>
+			</dl>
+		</div>
+	</aside>
+	<footer>
+		<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licen&tstrok;a Creative Commons" style="border-width: 0; width: 88px; height: 31px" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Sta &ograve;para de <a href="/cdn-cgi/mail#6904081c1b06471d1b0c1f001a0807290e04080005470a0604?subject=Gramàdega%20de%20lengua%20vèneta" data-mail="377ad742455817634552415e4f5659"><span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">[email&nbsp;protected]</span></a> l&#8217; &eacute; soto de la licen&tstrok;a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Atribu&tstrok;ion - No komercal - No &ograve;pare deriv&agrave;e 4.0 Interna&tstrok;ional (CC BY-NC-ND 4.0)</a>.
+	</footer>
+</body>
+</html>
