@@ -1,6 +1,8 @@
 /**
  * @class MathHelper
  *
+ * @see https://github.com/mgechev/javascript-algorithms/tree/master/src
+ *
  * @author Mauro Trevisan
  */
 define(function(){
