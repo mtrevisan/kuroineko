@@ -5,7 +5,7 @@
  */
 define(['tools/data/ObjectHelper', 'tools/lang/phonology/Orthography'], function(ObjectHelper, Orthography){
 
-	var classNameSplitter = /\s+/;
+	//var classNameSplitter = /\s+/;
 	var QUERY_STRING_REGEXP = new RegExp('[\\?&]([^&#]+)', 'g');
 
 
@@ -176,6 +176,32 @@ define(['tools/data/ObjectHelper', 'tools/lang/phonology/Orthography'], function
 		queryDOM(domSelector)[0][event] = fn;
 	};*/
 
+	/**
+	 * Run callback with the element removed from the DOM (and thus being out-of-the-flow). Upon returning, the element will be inserted at its
+	 * original position even if callback rises an exception.
+	 * see https://developers.google.com/speed/articles/javascript-dom
+	 *
+	 * @param {!Element} element The element to be temporarily removed.
+	 * @param {function(): T} callback The function to call.
+	 * @return {T} Value returned by the callback function.
+	 * @template T
+	 *
+	 * @private
+	 */
+	var updateDomElement = function(element, callback){
+		var parentNode = element.parentNode,
+			nextSibling = element.nextSibling;
+		parentNode.removeChild(element);
+		try{
+			var result = callback.call(element);
+		}
+		finally{
+			parentNode.insertBefore(element, nextSibling);
+		}
+		return result;
+	};
+
+
 	var addAccessKeyToSubmitButtons = (function(){
 		var labelButton = function(button){
 			if(button.accessKeyLabel)
@@ -303,6 +329,8 @@ define(['tools/data/ObjectHelper', 'tools/lang/phonology/Orthography'], function
 		manageInputText: manageInputText,
 		manageOnClickOnRadioGroupSingle: manageOnClickOnRadioGroupSingle,
 		attachFunctionOnEvent: attachFunctionOnEvent,*/
+		updateDomElement: updateDomElement,
+
 		addAccessKeyToSubmitButtons: addAccessKeyToSubmitButtons,
 		onEventCorrectOrthography: onEventCorrectOrthography,
 		setEncodedInnerHTML: setEncodedInnerHTML,
