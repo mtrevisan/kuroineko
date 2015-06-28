@@ -159,6 +159,12 @@ define(function(){
 	var add = function(){
 		var frac = parse(arguments);
 		var gcd1 = gcd(this.den, frac.den);
+		//NOTE: if denominators are randomly distributed, their GCD will be 1 about 61% of the time
+		if(gcd1 == 1)
+			//result is (n0 * d1 + n1 * d0) / (d0 * d1)
+			return new Constructor(this.sgn * this.num * frac.den + frac.sgn * frac.num * this.den, this.den * frac.den);
+
+		//NOTE: this requires 65 bits of precision
 		var t = this.sgn * this.num * (frac.den / gcd1) + frac.sgn * frac.num * (this.den / gcd1);
 		var gcd2 = t % gcd1;
 		gcd2 = (!gcd2? gcd1: gcd(gcd2, gcd1));
