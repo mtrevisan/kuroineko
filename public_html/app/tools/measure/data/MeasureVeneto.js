@@ -19,7 +19,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 
 
 	var getMeasureLengthEarth = function(place){
-		if(place.match(/Àxol|Céneda|Kastelfranko|Kuèr|Meduna de Livenŧa|Mèstre|Mòta de Livenŧa|Trè Pòrti/))
+		if(place.match(/Àxol|Céneda|Kastelfranko|Kuèr|Meduna de Livenŧa|Mèstre|Mòta de Livenŧa|Trè Pòrti|Trevixo \((ŧità|kanpaña)\)/))
 			place = 'Trevixo';
 		else if(place.match(/Dòlo|Ŧitadèla/))
 			place = 'Pàdoa';
@@ -41,8 +41,6 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		if(isVenice)
 			m.addUnit('pèrtega (cea) = 4.5 piè');
 
-		if(place.match(/Trevixo \((ŧità|kanpaña)\)/))
-			place = 'Trevixo';
 		var o = {
 			//kome el piè da fàbrega de Venèŧia
 			'Belun':		0.34773485,
@@ -68,7 +66,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 	};
 
 	var getMeasureLengthIndustrial = function(place){
-		if(place.match(/Àxol|Céneda|Kastelfranko|Kuèr|Meduna de Livenŧa|Mèstre|Mòta de Livenŧa|Trè Pòrti/))
+		if(place.match(/Àxol|Céneda|Kastelfranko|Kuèr|Meduna de Livenŧa|Mèstre|Mòta de Livenŧa|Trè Pòrti|Trevixo \((ŧità|kanpaña)\)/))
 			place = 'Trevixo';
 		else if(place.match(/Dòlo|Ŧitadèla/))
 			place = 'Pàdoa';
@@ -90,7 +88,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		if(isVenice)
 			m.addUnit('pèrtega (cea) = 4.5 piè');
 
-		if(place.match(/Belun|Konejan|Roigo|Trevixo \((ŧità|kanpaña)\)/))
+		if(place.match(/Belun|Konejan|Roigo|Trevixo/))
 			place = 'Venèŧia';
 		var o = {
 			'Fèltre':	0.367053447,
@@ -105,10 +103,12 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 	};
 
 	var getMeasureLengthCotton = function(place){
-		if(place.match(/Àxol|Céneda|Fèltre|Kastelfranko|Konejan|Kuèr|Meduna de Livenŧa|Mòta de Livenŧa|Trè Pòrti/))
+		if(place.match(/Àxol|Céneda|Fèltre|Kastelfranko|Konejan|Kuèr|Meduna de Livenŧa|Mòta de Livenŧa|Trè Pòrti|Trevixo \((ŧità|kanpaña)\)/))
 			place = 'Trevixo';
-		else if(place.match(/Basan|Dòlo|Ŧitadèla/))
+		else if(place.match(/Basan|Belun|Dòlo|Ŧitadèla/))
 			place = 'Pàdoa';
+		else if(place.match(/Mèl/))
+			place = 'Piève de Kador';
 		else if(place.match(/Badía Polèxine|Lendinara/))
 			place = 'Roigo';
 		else if(place.match(/Còxa/))
@@ -121,12 +121,6 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		var a = 'braŧo ' + (place.match(/Verona/)? ' (longo)': '');
 		var m = new MeasureConverter(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
 
-		if(place.match(/Mèl/))
-			place = 'Piève de Kador';
-		else if(place.match(/Belun/))
-			place = 'Pàdoa';
-		else if(place.match(/Trevixo \((ŧità|kanpaña)\)/))
-			place = 'Trevixo';
 		var o = {
 			'Mèstre':	0.6730907,
 			'Pàdoa':		0.6809806,
@@ -143,13 +137,15 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 	};
 
 	var getMeasureLengthSilk = function(place){
-		if(place.match(/Àxol|Kastelfranko|Konejan|Kuèr|Meduna de Livenŧa|Mòta de Livenŧa|Trè Pòrti/))
+		if(place.match(/Àxol|Kastelfranko|Konejan|Kuèr|Meduna de Livenŧa|Mòta de Livenŧa|Trè Pòrti|Trevixo \((ŧità|kanpaña)\)/))
 			place = 'Trevixo';
+		else if(place.match(/Céneda|Fèltre/))
+			place = 'Mèstre';
 		else if(place.match(/Dòlo|Ŧitadèla/))
 			place = 'Pàdoa';
 		else if(place.match(/Badía Polèxine|Lendinara/))
 			place = 'Roigo';
-		else if(place.match(/Còxa/))
+		else if(place.match(/Basan|Còxa/))
 			place = 'Venèŧia';
 		else if(place.match(/Kaldièro|San Bonifaco|San Martin Bon Albèrgo|Soave/))
 			place = 'Verona';
@@ -159,14 +155,8 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		var a = 'braŧo ' + (place.match(/Verona/)? ' (kurto)': '');
 		var m = new MeasureConverter(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
 
-		if(place.match(/Trevixo \((ŧità|kanpaña)\)/))
-			place = 'Trevixo';
-		else if(place.match(/Basan/))
-			place = 'Venèŧia';
-		else if(place.match(/Belun/))
+		if(place.match(/Belun/))
 			place = 'Verona';
-		else if(place.match(/Céneda|Fèltre/))
-			place = 'Mèstre';
 		var o = {
 			'Mèl':		0.6531218,
 			'Mèstre':	0.636252,
@@ -184,14 +174,14 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 	};
 
 	var getMeasureLengthWool = function(place){
-		if(place.match(/Àxol|Céneda|Fèltre|Kastelfranko|Konejan|Kuèr|Meduna de Livenŧa|Mèl|Mèstre|Mòta de Livenŧa|Trè Pòrti/))
+		if(place.match(/Àxol|Céneda|Fèltre|Kastelfranko|Konejan|Kuèr|Meduna de Livenŧa|Mèl|Mèstre|Mòta de Livenŧa|Trè Pòrti|Trevixo \((ŧità|kanpaña)/))
 			place = 'Trevixo';
 		//Belun?
 		else if(place.match(/Dòlo|Ŧitadèla/))
 			place = 'Pàdoa';
 		else if(place.match(/Badía Polèxine|Lendinara/))
 			place = 'Roigo';
-		else if(place.match(/Còxa|Piève de Kador/))
+		else if(place.match(/Basan|Còxa|Pàdoa|Piève de Kador/))
 			place = 'Venèŧia';
 		else if(place.match(/Kaldièro|San Bonifaco|San Martin Bon Albèrgo|Soave/))
 			place = 'Verona';
@@ -201,8 +191,6 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		var a = 'braŧo ' + (place.match(/Verona/)? ' (longo)': '');
 		var m = new MeasureConverter(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
 
-		if(place.match(/Basan|Pàdoa/))
-			place = 'Venèŧia';
 		var o = {
 			//kome el só braŧo da pano
 			'Roigo':		0.6698203,
@@ -216,7 +204,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 	};
 
 	var getMeasureLengthLinen = function(place){
-		if(place.match(/Àxol|Céneda|Fèltre|Kastelfranko|Konejan|Kuèr|Meduna de Livenŧa|Mèl|Mèstre|Mòta de Livenŧa|Trè Pòrti/))
+		if(place.match(/Àxol|Céneda|Fèltre|Kastelfranko|Konejan|Kuèr|Meduna de Livenŧa|Mèl|Mèstre|Mòta de Livenŧa|Trè Pòrti|Trevixo \((ŧità|kanpaña)/))
 			place = 'Trevixo';
 		else if(place.match(/Basan|Dòlo|Ŧitadèla/))
 			place = 'Pàdoa';
@@ -246,7 +234,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 
 
 	var getMeasureAreaEarth = function(place){
-		if(place.match(/Àxol|Céneda|Kastelfranko|Kuèr|Meduna de Livenŧa|Mèstre|Mòta de Livenŧa|Trè Pòrti/))
+		if(place.match(/Àxol|Céneda|Kastelfranko|Kuèr|Meduna de Livenŧa|Mèstre|Mòta de Livenŧa|Trè Pòrti|Trevixo \((ŧità|kanpaña)/))
 			place = 'Trevixo';
 		else if(place.match(/Dòlo|Ŧitadèla/))
 			place = 'Pàdoa';
@@ -266,7 +254,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 			m.addUnit('kanpo = 4 kuarta = 225 tòla');
 		else if(place.match(/Belun/))
 			m.addUnit('kanpo = 8 kalvéa = 156.25 tòla');
-		else if(place.match(/Konejan|Piève de Kador|Trevixo \((ŧità|kanpaña)\)/))
+		else if(place.match(/Konejan|Piève de Kador|Trevixo/))
 			m.addUnit('kanpo = 1250 tòla');
 		else if(place.match(/Pàdoa|Venèŧia|Viŧenŧa/)){
 			m.addUnit('kanpo = 840 tòla');
@@ -291,7 +279,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 
 
 	var getMeasureVolumeDry = function(place){
-		if(place.match(/Kastelfranko|Kuèr|Meduna de Livenŧa|Mèstre|Trè Pòrti/))
+		if(place.match(/Kastelfranko|Kuèr|Meduna de Livenŧa|Mèstre|Trè Pòrti|Trevixo \((ŧità|kanpaña)/))
 			place = 'Trevixo';
 		else if(place.match(/Dòlo|Ŧitadèla/))
 			place = 'Pàdoa';
@@ -318,7 +306,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 			m.addUnit(a + ' = 3 kalvéa = 4 kuartaròl = 2 međeto = 2 minèla');
 		else if(place.match(/Badía Polèxine|Roigo/))
 			m.addUnit(a + ' = 3 staro = 4 kuarta = 4 kuartaròl = 3 skodèla');
-		else if(place.match(/Konejan|Mèl|Mòta de Livenŧa|Trevixo \((ŧità|kanpaña)\)/))
+		else if(place.match(/Konejan|Mèl|Mòta de Livenŧa|Trevixo/))
 			m.addUnit(a + ' = 4 kuarta = 4 kuartièr = 2 međeto = 2 minèla');
 		else if(place.match(/Venèŧia/))
 			m.addUnit('mòjo = 4 ' + a + ' = 2 međèno = 2 kuarta = 4 kuartaròl = 2 međeto = 2 minèla');
@@ -327,8 +315,6 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		else if(place.match(/Basan|Viŧenŧa/))
 			m.addUnit(a + ' = 4 staro = 4 kuarta = 4 kuartaròl = 2 međeto = 2 minèla');
 
-		if(place.match(/Trevixo \((ŧità|kanpaña)\)/))
-			place = 'Trevixo';
 		var o = {
 			'Àxol':				87.8557,
 			'Badía Polèxine':	92.2680,
@@ -436,9 +422,9 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 
 
 	var getMeasureWeightHeavy = function(place){
-		if(place.match(/Àxol|Céneda|Fèltre|Kastelfranko|Konejan|Kuèr|Meduna de Livenŧa|Mèstre|Mòta de Livenŧa|Trè Pòrti/))
+		if(place.match(/Àxol|Belun|Céneda|Fèltre|Kastelfranko|Konejan|Kuèr|Meduna de Livenŧa|Mèstre|Mòta de Livenŧa|Piève de Kador|Trè Pòrti|Trevixo \((ŧità|kanpaña)\)/))
 			place = 'Trevixo';
-		else if(place.match(/Basan|Dòlo|Ŧitadèla/))
+		else if(place.match(/Arxiñan|Axiago|Basan|Dòlo|Ŧitadèla|Viŧenŧa/))
 			place = 'Pàdoa';
 		else if(place.match(/Badía Polèxine|Lendinara/))
 			place = 'Roigo';
@@ -451,10 +437,6 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 
 		var m = new MeasureConverter('milèr = 10 kantaro = 4 miro = 25 libra = 12 onŧa = 6 saŧo = 32 karato = 24 gran', 'libra');
 
-		if(place.match(/Arxiñan|Axiago|Viŧenŧa/))
-			place = 'Pàdoa';
-		else if(place.match(/Belun|Piève de Kador|Trevixo \((ŧità|kanpaña)\)/))
-			place = 'Trevixo';
 		var o = {
 			'Mèl':		510.2271,
 			//pal dekreto del Senato de 'l 6 April 1737 el pexo fin el ga da èser 1.02 'olte kuelo de Venèŧia
@@ -473,13 +455,13 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 	};
 
 	var getMeasureWeightLight = function(place){
-		if(place.match(/Àxol|Fèltre|Kastelfranko|Konejan|Kuèr|Meduna de Livenŧa|Mèstre|Mòta de Livenŧa|Trè Pòrti/))
+		if(place.match(/Arxiñan|Axiago|Àxol|Fèltre|Kastelfranko|Konejan|Kuèr|Meduna de Livenŧa|Mèl|Mèstre|Mòta de Livenŧa|Pàdoa|Trè Pòrti|Trevixo \((ŧità|kanpaña)\)|Viŧenŧa/))
 			place = 'Trevixo';
 		else if(place.match(/Basan|Dòlo|Ŧitadèla/))
 			place = 'Pàdoa';
 		else if(place.match(/Lendinara/))
 			place = 'Roigo';
-		else if(place.match(/Còxa|Piève de Kador/))
+		else if(place.match(/Belun|Céneda|Còxa|Piève de Kador/))
 			place = 'Venèŧia';
 		else if(place.match(/Kaldièro|San Bonifaco|San Martin Bon Albèrgo|Soave/))
 			place = 'Verona';
@@ -489,10 +471,6 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		var m = new MeasureConverter('milèr = 10 kantaro = 4 miro = 25 libra = 12 onŧa = 6 saŧo = 4 skrúpolo = 6 karato = 4 gran', 'libra');
 		m.addUnit('karga = 4 kantaro');
 
-		if(place.match(/Arxiñan|Axiago|Mèl|Pàdoa|Viŧenŧa|Trevixo \((ŧità|kanpaña)\)/))
-			place = 'Trevixo';
-		else if(place.match(/Belun|Céneda/))
-			place = 'Venèŧia';
 		var o = {
 			'Badía Polèxine': 339.0974,
 			'Roigo':		301.4160,
