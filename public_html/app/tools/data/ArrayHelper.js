@@ -62,6 +62,22 @@ var spliceOne = function(arr, index){
 };
 */
 
+	/**
+	 * Copies the values of `source` to `destination`.
+	 *
+	 * @param {Array} source				The array to copy values from.
+	 * @param {Array} [destination=[]]	The array to copy values to.
+	 */
+	var copy = function(source, destination){
+		var index = -1,
+			length = source.length;
+
+		destination || (destination = Array(length));
+		while(++ index < length)
+			destination[index] = source[index];
+		return destination;
+	};
+
 	var intersection = function(a, b){
 		var n = a.length,
 			m = b.length,
@@ -96,7 +112,7 @@ var spliceOne = function(arr, index){
 			mid, current;
 
 		while(low <= high){
-			mid = (low + high) >> 1;
+			mid = (low + high) >>> 1;
 			current = this[mid];
 
 			if(current < element)
@@ -130,6 +146,7 @@ var spliceOne = function(arr, index){
 
 
 	return {
+		copy: copy,
 		intersection: intersection,
 		binaryIndexOf: binaryIndexOf,
 		shuffle: shuffle

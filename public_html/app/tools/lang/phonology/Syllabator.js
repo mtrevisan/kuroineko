@@ -248,10 +248,8 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 		//process each word separately:
 		var words = [],
 			totalSyllabeCount = 0,
-			size = textWords.words.length,
-			k, word, syll;
-		for(k = 0; k < size; k ++){
-			word = textWords.words[k];
+			word, syll;
+		for(word in textWords.words){
 			if(word.length){
 				syll = syllabate(word, dialect, phonematicSyllabation);
 
@@ -262,9 +260,9 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 
 		var idx, separators, s;
 		//process the boundary of each word:
-		size = words.length - 1;
+		var size = words.length - 1;
 		//for each word (but the last)...
-		for(k = 0; k < size; k ++){
+		for(var k = 0; k < size; k ++){
 			syll = words[k].syllabes;
 
 			//store initial word's index

@@ -59,9 +59,9 @@ define(function(){
 		}
 	);
 
-	/** Sencha Touch 2.4.0's Ext.isDefined */
+	/** Underscore.js 1.8.3's isUndefined */
 	var isDefined = function(value){
-		return (typeof value !== 'undefined');
+		return (value !== void 0);
 	};
 
 	/** Sencha Touch 2.4.0's Ext.isString */
