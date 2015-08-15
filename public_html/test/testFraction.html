@@ -141,6 +141,22 @@
 				start();
 			});
 
+			asyncTest('abs with positive number', function(){
+				var f = new Fraction(1, 7);
+
+				equal(f.abs().toNumber(), new Fraction(1, 7).toNumber());
+
+				start();
+			});
+
+			asyncTest('abs with negative number', function(){
+				var f = new Fraction(-1, 7);
+
+				equal(f.abs().toNumber(), new Fraction(1, 7).toNumber());
+
+				start();
+			});
+
 			asyncTest('to positive string', function(){
 				var f = new Fraction('5.13(31)');
 

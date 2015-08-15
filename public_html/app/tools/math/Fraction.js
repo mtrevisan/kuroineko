@@ -236,6 +236,10 @@ define(function(){
 		return (this.sgn == 1);
 	};
 
+	var abs = function(){
+		return new Constructor(this.num, this.den);
+	};
+
 	var compareTo = function(){
 		var frac = parse(arguments);
 		return this.sub(frac).sgn;
@@ -344,6 +348,7 @@ define(function(){
 		isInfinity: isInfinity,
 		isZero: isZero,
 		isPositive: isPositive,
+		abs: abs,
 		compareTo: compareTo,
 		equals: equals,
 		toNumber: toNumber,

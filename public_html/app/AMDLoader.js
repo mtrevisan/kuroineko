@@ -359,7 +359,7 @@ var AMDLoader = (function(doc){
 				if(xhr.status == 200)
 					success && success(responseType == 'text'? xhr.responseText: new Uint8Array(xhr.response));
 				else{
-					var errorText = 'Syntax or http error loading: ' + module.url + ', status: ' + xhr.statusText;
+					var errorText = 'Syntax or http error loading: ' + module.url + ', status: ' + xhr.status + ' ' + xhr.statusText;
 					failure && failure(new Error(errorText));
 
 					if(!failure)
