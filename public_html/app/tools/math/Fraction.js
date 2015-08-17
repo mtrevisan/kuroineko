@@ -11,6 +11,7 @@
  *		123.456 - a simple double
  *		123.(456) - a double with repeating decimal places
  *		123.45(6) - a double with repeating last place
+ *		123/456 - a fraction
  *
  * @see https://github.com/infusion/Fraction.js/blob/master/fraction.js
  * @see https://github.com/craigsapp/RationalNumber/tree/master/lib
@@ -20,11 +21,11 @@
 define(function(){
 
 	var Constructor = function(){
-		var fract = parse(arguments);
+		var frac = parse(arguments);
 
-		this.sgn = fract.sgn;
-		this.num = fract.num;
-		this.den = fract.den;
+		this.sgn = frac.sgn;
+		this.num = frac.num;
+		this.den = frac.den;
 	};
 
 	/** Constructor with given absolute error. */
@@ -33,8 +34,9 @@ define(function(){
 	};
 
 
+	/** @private */
 	var parse = function(param){
-		var num, den, sgn, scale;
+		var num, den, sgn;
 
 		param = (param.length == 2? param: param[0]);
 		switch(typeof param){
@@ -50,8 +52,7 @@ define(function(){
 					num = param[0];
 					den = (param[1] !== undefined? param[1]: 1);
 				}
-				sgn = (den? num * den: num);
-				sgn = (sgn > 0? 1: (sgn < 0? -1: 0));
+				sgn = Math.sign(den? num * den: num);
 				num = Math.abs(num);
 				den = Math.abs(den);
 				break;
@@ -60,24 +61,31 @@ define(function(){
 				param = '' + param;
 			case 'string':
 				var m = param.match(/^(-?)([\d]+)\.?([\d]*)(?:\(([\d]*)\))?$/);
-				sgn = (m[1] == '-'? -1: 1);
-				var integerValue = m[2],
-					decimalValue = m[3],
-					repeatedDecimalValue = m[4],
-					k0 = Math.pow(10, decimalValue.length),
-					k1 = (repeatedDecimalValue? Math.pow(10, repeatedDecimalValue.length) - 1: 1);
-				num = Number(repeatedDecimalValue? repeatedDecimalValue: 0) + k1 * (Number(integerValue) * k0 + Number(decimalValue));
-				den = k0 * k1;
-				if(!num)
-					sgn = 0;
+				if(m){
+					sgn = (m[1] == '-'? -1: 1);
+					var integerValue = m[2],
+						decimalValue = m[3],
+						repeatedDecimalValue = m[4],
+						k0 = Math.pow(10, decimalValue.length),
+						k1 = (repeatedDecimalValue? Math.pow(10, repeatedDecimalValue.length) - 1: 1);
+					num = Number(repeatedDecimalValue? repeatedDecimalValue: 0) + k1 * (Number(integerValue) * k0 + Number(decimalValue));
+					den = k0 * k1;
+					if(!num)
+						sgn = 0;
+				}
+				else{
+					m = param.match(/^(-?[\d]+)\/([\d]+)$/);
+					num = Number(m[1]);
+					den = Number(m[2]);
+					sgn = Math.sign(den? num * den: num);
+				}
 		}
 
-		scale = gcd(num, den);
-		return {
+		return reduce({
 			sgn: sgn,
-			num: num / scale,
-			den: den / scale
-		};
+			num: num,
+			den: den
+		});
 	};
 
 	/**
@@ -95,7 +103,7 @@ define(function(){
 		if(value % 1 == 0)
 			return new Constructor(value, 1);
 
-		var sgn = (value >= 0? 1: -1);
+		var sgn = Math.sign(value);
 		value *= sgn;
 		var scale = Math.pow(10, Math.floor(Math.log10(value) + 1));
 
@@ -130,10 +138,21 @@ define(function(){
 
 		best.sgn *= sgn;
 		best.num *= scale;
-		scale = gcd(best.num, best.den);
-		best.num /= scale;
-		best.den /= scale;
-		return best;
+		return reduce(best);
+	};
+
+	/** @private */
+	var reduce = function(frac){
+		var scale = _gcd(frac.num, frac.den);
+		frac.num /= scale;
+		frac.den /= scale;
+		return frac;
+	};
+
+	/** Euclidean algorithm form Greatest Common Divisor (gcd(a / b, c / d) = gcd(a, c) / lcm(b, d)) */
+	var gcd = function(){
+		var frac = parse(arguments);
+		return new Constructor(this.sgn * frac.sgn * _gcd(this.num, frac.num), _lcm(this.den, frac.den));
 	};
 
 	/**
@@ -141,14 +160,19 @@ define(function(){
 	 *
 	 * @private
 	 */
-	var gcd = function(a, b){
-		var t;
-		while(b){
-			t = b;
-			b = a % b;
-			a = t;
-		}
+	var _gcd = function(a, b){
+		while(b)
+			a = b + (b = a % b, 0);
 		return a;
+	};
+
+	/**
+	 * Euclidean algorithm form least common multiple
+	 *
+	 * @private
+	 */
+	var _lcm = function(a, b){
+		return (a && b? (Math.abs(a) / _gcd(a, b)) * Math.abs(b): 0);
 	};
 
 	/** @private */
@@ -156,9 +180,13 @@ define(function(){
 		return new Constructor(left.num + right.num, left.den + right.den);
 	};
 
+	var clone = function(frac){
+		return new Constructor(frac.sgn * frac.num, frac.den);
+	};
+
 	var add = function(){
 		var frac = parse(arguments);
-		var gcd1 = gcd(this.den, frac.den);
+		var gcd1 = _gcd(this.den, frac.den);
 		//NOTE: if denominators are randomly distributed, their GCD will be 1 about 61% of the time
 		if(gcd1 == 1)
 			//result is (n0 * d1 + n1 * d0) / (d0 * d1)
@@ -167,7 +195,7 @@ define(function(){
 		//NOTE: this requires 65 bits of precision
 		var t = this.sgn * this.num * (frac.den / gcd1) + frac.sgn * frac.num * (this.den / gcd1);
 		var gcd2 = t % gcd1;
-		gcd2 = (!gcd2? gcd1: gcd(gcd2, gcd1));
+		gcd2 = (!gcd2? gcd1: _gcd(gcd2, gcd1));
 		return new Constructor(t / gcd2, (this.den / gcd1) * (frac.den / gcd2));
 
 		//NOTE: formula without overflow management
@@ -182,8 +210,8 @@ define(function(){
 
 	var mul = function(){
 		var frac = parse(arguments);
-		var gcd1 = gcd(this.num, frac.den);
-		var gcd2 = gcd(this.den, frac.num);
+		var gcd1 = _gcd(this.num, frac.den);
+		var gcd2 = _gcd(this.den, frac.num);
 		return new Constructor(this.sgn * frac.sgn * (this.num / gcd1) * (frac.num / gcd2), (this.den / gcd2) * (frac.den / gcd1));
 
 		//NOTE: formula without overflow management
@@ -197,6 +225,8 @@ define(function(){
 	};
 
 	var pow = function(k){
+		if(k < 0)
+			return new Constructor(Math.pow(this.sgn * this.den, -k), Math.pow(this.num, -k));
 		return new Constructor(Math.pow(this.sgn * this.num, k), Math.pow(this.den, k));
 	};
 
@@ -205,7 +235,7 @@ define(function(){
 		if(frac.num * this.den == 0)
 			return new Constructor(0, 0);
 
-		return new Constructor(this.sgn * this.num * frac.den % this.den * frac.num, this.den * frac.den);
+		return new Constructor((this.sgn * this.num * frac.den) % (this.den * frac.num), this.den * frac.den);
 	};
 
 	var integerPart = function(){
@@ -234,6 +264,11 @@ define(function(){
 
 	var isPositive = function(){
 		return (this.sgn == 1);
+	};
+
+	var isDivisibleBy = function(){
+		var frac = parse(arguments);
+		return (!!(this.den * frac.num) && !((this.num * frac.den) % (this.den * frac.num)));
 	};
 
 	var abs = function(){
@@ -266,11 +301,9 @@ define(function(){
 			ret = [];
 		if(this.sgn < 0)
 			ret.push('-');
-		for(var i = 0; i < lo; i ++){
-			t *= 10;
-
+		for(var i = 0; i < lo; i ++, t *= 10){
 			if(i < p.length)
-				t += parseInt(p[i], 10);
+				t += Number(p[i]);
 			else if(i == p.length){
 				ret.push('.');
 				j = 0;
@@ -278,11 +311,14 @@ define(function(){
 			else
 				j ++;
 
-			if(a > 0 && j == b)
-				ret.push('(');
-			else if(a > 0 && j == a + b){
-				ret.push(')');
-				break;
+			//if we have a repeating part
+			if(a > 0){
+				if(j == b)
+					ret.push('(');
+				else if(j == a + b){
+					ret.push(')');
+					break;
+				}
 			}
 
 			if(t >= q){
@@ -331,10 +367,20 @@ define(function(){
 		return r;
 	};
 
+	var toLaTeX = function(){
+		if(!this.sgn)
+			return '0';
+		else if(this.den == 1)
+			return (this.sgn * this.num).toString();
+		return (this.sgn == -1? '-': '') + '\\frac{' + this.num + '}{' + this.den + '}';
+	};
+
 
 	Constructor.prototype = {
 		constructor: Constructor,
 
+		gcd: gcd,
+		clone: clone,
 		add: add,
 		sub: sub,
 		mul: mul,
@@ -348,11 +394,13 @@ define(function(){
 		isInfinity: isInfinity,
 		isZero: isZero,
 		isPositive: isPositive,
+		isDivisibleBy: isDivisibleBy,
 		abs: abs,
 		compareTo: compareTo,
 		equals: equals,
 		toNumber: toNumber,
-		toString: toString
+		toString: toString,
+		toLaTeX: toLaTeX
 	};
 
 	return Constructor;

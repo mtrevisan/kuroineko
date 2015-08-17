@@ -123,6 +123,16 @@
 				start();
 			});
 
+			asyncTest('constructor with string fraction', function(){
+				var f = new Fraction('5/13');
+
+				equal(f.num, 5);
+				equal(f.den, 13);
+				equal(f.sgn, 1);
+
+				start();
+			});
+
 			asyncTest('constructor with positive infinite', function(){
 				var f = new Fraction(10, 0);
 
@@ -139,6 +149,15 @@
 				equal(f.num, 1);
 				equal(f.den, 0);
 				equal(f.sgn, -1);
+
+				start();
+			});
+
+			asyncTest('GCD', function(){
+				var f1 = new Fraction('5/8');
+				var f2 = new Fraction('3/7');
+
+				equal(f1.gcd(f2).toString(), new Fraction('1/56').toString());
 
 				start();
 			});
@@ -177,10 +196,68 @@
 				start();
 			});
 
-			asyncTest('to positive string', function(){
+			asyncTest('pow with positive number', function(){
+				var f = new Fraction(2, 3);
+
+				equal(f.pow(2).toNumber(), new Fraction(4, 9).toNumber());
+
+				start();
+			});
+
+			asyncTest('pow with negative number', function(){
+				var f = new Fraction(-2, 3);
+
+				equal(f.pow(-2).toNumber(), new Fraction(9, 4).toNumber());
+
+				start();
+			});
+
+			asyncTest('isDivisible true', function(){
+				var f1 = new Fraction(19, 6);
+				var f2 = new Fraction(38, 12);
+
+				equal(f1.isDivisibleBy(f2), true);
+
+				start();
+			});
+
+			asyncTest('isDivisible false', function(){
+				var f1 = new Fraction(19, 6);
+				var f2 = new Fraction(5, 98);
+
+				equal(f1.isDivisibleBy(f2), false);
+
+				start();
+			});
+
+			asyncTest('to positive string 1', function(){
 				var f = new Fraction('5.13(31)');
 
 				equal(f.toString(), '5.13(31)');
+
+				start();
+			});
+
+			asyncTest('to positive string 2', function(){
+				var f = new Fraction('0.13(31)');
+
+				equal(f.toString(), '0.13(31)');
+
+				start();
+			});
+
+			asyncTest('to positive string with zeros 1', function(){
+				var f = new Fraction('5000.13(31)');
+
+				equal(f.toString(), '5000.13(31)');
+
+				start();
+			});
+
+			asyncTest('to positive string with zeros 2', function(){
+				var f = new Fraction('5.00013(31)');
+
+				equal(f.toString(), '5.00013(31)');
 
 				start();
 			});
@@ -189,6 +266,38 @@
 				var f = new Fraction('-5.13(31)');
 
 				equal(f.toString(), '-5.13(31)');
+
+				start();
+			});
+
+			asyncTest('to LaTeX zero', function(){
+				var f = new Fraction('0');
+
+				equal(f.toLaTeX(), '0');
+
+				start();
+			});
+
+			asyncTest('to LaTeX integer', function(){
+				var f = new Fraction('-10');
+
+				equal(f.toLaTeX(), '-10');
+
+				start();
+			});
+
+			asyncTest('to LaTeX positive fraction', function(){
+				var f = new Fraction('1.5');
+
+				equal(f.toLaTeX(), '\\frac{3}{2}');
+
+				start();
+			});
+
+			asyncTest('to LaTeX negative fraction', function(){
+				var f = new Fraction('-1.5');
+
+				equal(f.toLaTeX(), '-\\frac{3}{2}');
 
 				start();
 			});
