@@ -50,7 +50,7 @@ define(function(){
 					num = param[0];
 					den = (param[1] !== undefined? param[1]: 1);
 				}
-				sgn = num * den;
+				sgn = (den? num * den: num);
 				sgn = (sgn > 0? 1: (sgn < 0? -1: 0));
 				num = Math.abs(num);
 				den = Math.abs(den);

@@ -123,6 +123,26 @@
 				start();
 			});
 
+			asyncTest('constructor with positive infinite', function(){
+				var f = new Fraction(10, 0);
+
+				equal(f.num, 1);
+				equal(f.den, 0);
+				equal(f.sgn, 1);
+
+				start();
+			});
+
+			asyncTest('constructor with negative infinite', function(){
+				var f = new Fraction(-10, 0);
+
+				equal(f.num, 1);
+				equal(f.den, 0);
+				equal(f.sgn, -1);
+
+				start();
+			});
+
 			asyncTest('add', function(){
 				var f1 = new Fraction('5.13(31)');
 				var f2 = new Fraction('2.3(7)');
