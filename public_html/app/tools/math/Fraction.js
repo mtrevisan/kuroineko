@@ -1,10 +1,11 @@
 /**
  * @class Fraction
- * You can pass a fraction in different formats. Either as array, as double, as string or as an integer.
- *
+ * You can pass a fraction in different formats. Either as array, as double, as string or as an integer.<p>
+ * Any function as well as the constructor parses its input and reduce it to the smallest term.
+ * <p>
  * Array/Object form:
  *		[0 => <nominator>, 1 => <denominator>]
- *		{num => <nominator>, den => <denominator>}
+ *		{(sgn => sign), num => <nominator>, den => <denominator>}
  * Number form:
  *		Single number value
  * String form:
@@ -12,7 +13,7 @@
  *		123.(456) - a double with repeating decimal places
  *		123.45(6) - a double with repeating last place
  *		123/456 - a fraction
- *
+ *	<p>
  * @see https://github.com/infusion/Fraction.js/blob/master/fraction.js
  * @see https://github.com/craigsapp/RationalNumber/tree/master/lib
  *
@@ -28,7 +29,11 @@ define(function(){
 		this.den = frac.den;
 	};
 
-	/** Constructor with given absolute error. */
+	/**
+	 * Constructor with given absolute error.<p>
+	 * The method is really precise, but too large exact numbers, like 1234567.9991829 will result in a wrong approximation.
+	 * If you want to keep the number as it is, convert it to a string, as the string parser will not perform any further observations.
+	 */
 	Constructor.fromNumber = function(value, absoluteError){
 		return bestRationalApproximation(value, absoluteError || 1e-14);
 	};
@@ -141,7 +146,11 @@ define(function(){
 		return reduce(best);
 	};
 
-	/** @private */
+	/**
+	 * Destructively normalize the fraction to its smallest representation.
+	 *
+	 * @private
+	 */
 	var reduce = function(frac){
 		var scale = _gcd(frac.num, frac.den);
 		frac.num /= scale;
@@ -180,6 +189,7 @@ define(function(){
 		return new Constructor(left.num + right.num, left.den + right.den);
 	};
 
+	/** Creates a copy of the actual Fraction object. */
 	var clone = function(frac){
 		return new Constructor(frac.sgn * frac.num, frac.den);
 	};
@@ -224,18 +234,32 @@ define(function(){
 		return this.mul(frac);
 	};
 
+	/**
+	 * Returns the power of the actual number, raised to an integer exponent.<p>
+	 * Note: Rational exponents are planned, but would slow down the function a lot, because of a kinda slow root finding algorithm,
+	 * whether the result will become irrational. So for now, only integer exponents are implemented.
+	 *
+	 * @param {Integer} k
+	 * @returns {Fraction}
+	 */
 	var pow = function(k){
 		if(k < 0)
 			return new Constructor(Math.pow(this.sgn * this.den, -k), Math.pow(this.num, -k));
 		return new Constructor(Math.pow(this.sgn * this.num, k), Math.pow(this.den, k));
 	};
 
+	/**
+	 * Returns the modulus (rest of the division) of the actual object and the given fraction.
+	 *
+	 * @params {Fraction}
+	 * @returns {Fraction}
+	 */
 	var mod = function(){
 		var frac = parse(arguments);
 		if(frac.num * this.den == 0)
 			return new Constructor(0, 0);
 
-		return new Constructor((this.sgn * this.num * frac.den) % (this.den * frac.num), this.den * frac.den);
+		return new Constructor(this.sgn * (this.num * frac.den) % (this.den * frac.num), this.den * frac.den);
 	};
 
 	var integerPart = function(){
@@ -246,7 +270,13 @@ define(function(){
 		return new Constructor(this.sgn * (this.num % this.den), this.den);
 	};
 
-	var reciprocal = function(){
+	/**
+	 * Returns the multiplicative inverse of the actual number in order to get the reciprocal.
+	 *
+	 * @params {Fraction}
+	 * @returns {Fraction}
+	 */
+	var inverse = function(){
 		return new Constructor(this.sgn * this.den, this.num);
 	};
 
@@ -289,7 +319,17 @@ define(function(){
 		return this.sgn * this.num / this.den;
 	};
 
+	/**
+	 * Generates an exact string representation of the actual object, including repeating decimal places of any length.
+	 *
+	 * @returns {String}
+	 */
 	var toString = function(){
+		if(this.isInfinity())
+			return (this.isPositive()? '+Inf': '-Inf');
+		if(this.isNaN())
+			return 'NaN';
+
 		var a = cycleLen(this.num, this.den),
 			b = cycleStart(this.den, a),
 			p = this.num.toString().split(''),
@@ -338,7 +378,8 @@ define(function(){
 		if(d % 5 == 0)
 			return cycleLen(n, d / 5);
 
-		var maxExponent = Math.floor(Math.log10(Number.MAX_VALUE)),
+//		var maxExponent = Math.floor(Math.log10(Number.MAX_VALUE)),
+		var maxExponent = 2000,
 			t;
 		for(t = 1; t <= maxExponent; t ++)
 			//solve 10^t == 1 (mod d) for d != 0 (mod 2, 5)
@@ -350,7 +391,7 @@ define(function(){
 
 	/** @private */
 	var cycleStart = function(d, len){
-		var maxExponent = Math.floor(Math.log10(Number.MAX_VALUE)) - len,
+		var maxExponent = Math.floor(Math.log10(Number.MAX_VALUE)),// - len,
 			s;
 		for(s = 0; s < maxExponent; s ++)
 			//solve 10^s == 10^(s + t) (mod d)
@@ -367,6 +408,11 @@ define(function(){
 		return r;
 	};
 
+	/**
+	 * Generates an exact LaTeX representation of the actual object.
+	 *
+	 * @returns {String}
+	 */
 	var toLaTeX = function(){
 		if(!this.sgn)
 			return '0';
@@ -389,7 +435,7 @@ define(function(){
 		mod: mod,
 		integerPart: integerPart,
 		fractionalPart: fractionalPart,
-		reciprocal: reciprocal,
+		inverse: inverse,
 		isNaN: isNaN,
 		isInfinity: isInfinity,
 		isZero: isZero,
