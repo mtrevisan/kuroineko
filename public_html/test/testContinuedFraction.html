@@ -149,26 +149,26 @@
 				start();
 			});
 
-			asyncTest('reciprocal of less-than-one number', function(){
+			asyncTest('inverse of less-than-one number', function(){
 				var f1 = new ContinuedFraction([0, 1, 4, 3]);
 
-				deepEqual(f1.reciprocal().terms, [1, 4, 3]);
+				deepEqual(f1.inverse().terms, [1, 4, 3]);
 
 				start();
 			});
 
-			asyncTest('reciprocal of positive', function(){
+			asyncTest('inverse of positive', function(){
 				var f1 = new ContinuedFraction([2, 1, 4, 3]);
 
-				deepEqual(f1.reciprocal().terms, [0, 2, 1, 4, 3]);
+				deepEqual(f1.inverse().terms, [0, 2, 1, 4, 3]);
 
 				start();
 			});
 
-			asyncTest('reciprocal of negative', function(){
+			asyncTest('inverse of negative', function(){
 				var f1 = new ContinuedFraction([-2, 1, 4, 3]);
 
-				deepEqual(f1.reciprocal().terms, [-1, 6, 3]);
+				deepEqual(f1.inverse().terms, [-1, 6, 3]);
 
 				start();
 			});

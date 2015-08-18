@@ -141,7 +141,7 @@ define(['tools/math/Fraction'], function(Fraction){
 		return new Constructor(terms);
 	};
 
-	var reciprocal = function(){
+	var inverse = function(){
 		var terms;
 		if(!this.terms.length)
 			terms = [0];
@@ -164,7 +164,7 @@ define(['tools/math/Fraction'], function(Fraction){
 		return (this.terms && this.terms[0] == Number.NaN);
 	};
 
-	var isInfinity = function(){
+	var isInfinite = function(){
 		return !this.terms.length;
 	};
 
@@ -281,7 +281,7 @@ define(['tools/math/Fraction'], function(Fraction){
 
 			epsilon *= alpha_bar.toNumber() / (d * (1 - epsilon));
 			//calculate complete quotient
-			alpha_bar = delta.reciprocal();
+			alpha_bar = delta.inverse();
 		}
 
 		//every finite continued fraction ending with a number n > 1 has two forms: [..., n] and [..., n-1, 1], let's take the first one
@@ -392,9 +392,9 @@ define(['tools/math/Fraction'], function(Fraction){
 		op: op,
 		integerPart: integerPart,
 		fractionalPart: fractionalPart,
-		reciprocal: reciprocal,
+		inverse: inverse,
 		isNaN: isNaN,
-		isInfinity: isInfinity,
+		isInfinite: isInfinite,
 		isZero: isZero,
 		isPositive: isPositive,
 		compareTo: compareTo,
