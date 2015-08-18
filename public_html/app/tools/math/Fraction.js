@@ -1,5 +1,7 @@
 /**
  * @class Fraction
+ * It is implemented as two integers which store the numerator and denominator as well as a variable to keep track of the
+ * sign of the rational number.<p>
  * You can pass a fraction in different formats. Either as array, as double, as string or as an integer.<p>
  * Any function as well as the constructor parses its input and reduce it to the smallest term.
  * <p>
@@ -283,11 +285,21 @@ define(function(){
 		return new Constructor(this.sgn * this.den, this.num);
 	};
 
+	/**
+	 * Returns the additive inverse of the actual number.
+	 *
+	 * @params {Fraction}
+	 * @returns {Fraction}
+	 */
+	var negate = function(){
+		return new Constructor(-this.sgn * this.num, this.den);
+	};
+
 	var isNaN = function(){
 		return (!this.num && !this.den);
 	};
 
-	var isInfinity = function(){
+	var isInfinite = function(){
 		return (!!this.num && !this.den);
 	};
 
@@ -297,6 +309,10 @@ define(function(){
 
 	var isPositive = function(){
 		return (this.sgn == 1);
+	};
+
+	var isInteger = function(){
+		return (this.den == 1);
 	};
 
 	var isDivisibleBy = function(){
@@ -328,7 +344,7 @@ define(function(){
 	 * @returns {String}
 	 */
 	var toString = function(){
-		if(this.isInfinity())
+		if(this.isInfinite())
 			return (this.isPositive()? '+Inf': '-Inf');
 		if(this.isNaN())
 			return 'NaN';
@@ -435,10 +451,12 @@ define(function(){
 		integerPart: integerPart,
 		fractionalPart: fractionalPart,
 		inverse: inverse,
+		negate: negate,
 		isNaN: isNaN,
-		isInfinity: isInfinity,
+		isInfinite: isInfinite,
 		isZero: isZero,
 		isPositive: isPositive,
+		isInteger: isInteger,
 		isDivisibleBy: isDivisibleBy,
 		abs: abs,
 		compareTo: compareTo,
