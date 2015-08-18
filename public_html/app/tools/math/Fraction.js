@@ -333,7 +333,7 @@ define(function(){
 		if(this.isNaN())
 			return 'NaN';
 
-		var a = cycleLen(this.num, this.den),
+		var a = cycleLen(this.den),
 			b = cycleStart(this.den, a),
 			p = this.num.toString().split(''),
 			q = this.den,
@@ -375,15 +375,13 @@ define(function(){
 	};
 
 	/** @private */
-	var cycleLen = function(n, d){
+	var cycleLen = function(d){
 		while(d % 2 == 0)
 			d /= 2;
 		while(d % 5 == 0)
 			d /= 5;
 
-		var maxExponent = d - 1,
-			t;
-		for(t = 1; t <= maxExponent; t ++)
+		for(var t = 1; t < d; t ++)
 			//solve 10^t == 1 (mod d) for d != 0 (mod 2, 5)
 			//http://mathworld.wolfram.com/FullReptendPrime.html
 			if(modpow(10, t, d) == 1)
@@ -393,8 +391,7 @@ define(function(){
 
 	/** @private */
 	var cycleStart = function(d, len){
-		var s;
-		for(s = 0; s < MAX_EXPONENT; s ++)
+		for(var s = 0; s < MAX_EXPONENT; s ++)
 			//solve 10^s == 10^(s + t) (mod d)
 			if(modpow(10, s, d) == modpow(10, s + len, d))
 				return s;
