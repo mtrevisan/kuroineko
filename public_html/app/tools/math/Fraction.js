@@ -21,6 +21,9 @@
  */
 define(function(){
 
+	var MAX_EXPONENT = Math.floor(Math.log10(Number.MAX_VALUE));
+
+
 	var Constructor = function(){
 		var frac = parse(arguments);
 
@@ -373,13 +376,12 @@ define(function(){
 
 	/** @private */
 	var cycleLen = function(n, d){
-		if(d % 2 == 0)
-			return cycleLen(n, d / 2);
-		if(d % 5 == 0)
-			return cycleLen(n, d / 5);
+		while(d % 2 == 0)
+			d /= 2;
+		while(d % 5 == 0)
+			d /= 5;
 
-//		var maxExponent = Math.floor(Math.log10(Number.MAX_VALUE)),
-		var maxExponent = 2000,
+		var maxExponent = d - 1,
 			t;
 		for(t = 1; t <= maxExponent; t ++)
 			//solve 10^t == 1 (mod d) for d != 0 (mod 2, 5)
@@ -391,9 +393,8 @@ define(function(){
 
 	/** @private */
 	var cycleStart = function(d, len){
-		var maxExponent = Math.floor(Math.log10(Number.MAX_VALUE)),// - len,
-			s;
-		for(s = 0; s < maxExponent; s ++)
+		var s;
+		for(s = 0; s < MAX_EXPONENT; s ++)
 			//solve 10^s == 10^(s + t) (mod d)
 			if(modpow(10, s, d) == modpow(10, s + len, d))
 				return s;
@@ -401,10 +402,10 @@ define(function(){
 	};
 
 	/** @private */
-	var modpow = function(b, e, m){
-		for(var r = 1; e > 0; b = (b * b) % m, e >>= 1)
+	var modpow = function(base, e, m){
+		for(var r = 1; e > 0; base = (base * base) % m, e >>= 1)
 			if(e & 1)
-				r = (r * b) % m;
+				r = (r * base) % m;
 		return r;
 	};
 
