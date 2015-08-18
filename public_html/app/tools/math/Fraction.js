@@ -7,7 +7,7 @@
  * <p>
  * Array/Object form:
  *		[0 => <nominator>, 1 => <denominator>]
- *		{(sgn => sign), num => <nominator>, den => <denominator>}
+ *		{(sgn => <sign>), num => <nominator>, den => <denominator>}
  * Number form:
  *		Single number value
  * String form:

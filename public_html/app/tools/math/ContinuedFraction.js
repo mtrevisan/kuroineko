@@ -4,13 +4,14 @@
  *
  * Array/Object form:
  *		[0 => <nominator>, 1 => <denominator>]
- *		{num => <nominator>, den => <denominator>}
+ *		{(sgn => <sign>), num => <nominator>, den => <denominator>}
  * Number form:
  *		Single number value
  * String form:
  *		123.456 - a simple double
  *		123.(456) - a double with repeating decimal places
  *		123.45(6) - a double with repeating last place
+ *		123/456 - a fraction
  *
  * @see https://github.com/mjdominus/cf
  * @see http://www.inwap.com/pdp10/hbaker/hakmem/cf.html
