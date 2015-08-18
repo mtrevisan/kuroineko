@@ -19,11 +19,11 @@ define(function(){
 	};
 
 	/**
-    * Adds a word into the trie.
+	 * Adds a word into the trie.
 	 *
-    * @param word {String} word to add
+	 * @param word {String} word to add
 	 * @return last node
-    */
+	 */
 	var add = function(word){
 		var node = this.root,
 			size = word.length,

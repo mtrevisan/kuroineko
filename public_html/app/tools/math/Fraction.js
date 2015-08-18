@@ -336,15 +336,14 @@ define(function(){
 		var a = cycleLen(this.den),
 			b = cycleStart(this.den, a),
 			p = this.num.toString().split(''),
-			q = this.den,
 			//rough estimate
-			lo = 10 + a + b + p.length,
+			size = 10 + a + b + p.length,
 			t = 0,
 			j = -1,
 			ret = [];
 		if(this.sgn < 0)
 			ret.push('-');
-		for(var i = 0; i < lo; i ++, t *= 10){
+		for(var i = 0; i < size; i ++, t *= 10){
 			if(i < p.length)
 				t += Number(p[i]);
 			else if(i == p.length){
@@ -364,9 +363,9 @@ define(function(){
 				}
 			}
 
-			if(t >= q){
-				ret.push((t / q) | 0);
-				t %= q;
+			if(t >= this.den){
+				ret.push((t / this.den) | 0);
+				t %= this.den;
 			}
 			else
 				ret.push('0');
@@ -391,10 +390,11 @@ define(function(){
 
 	/** @private */
 	var cycleStart = function(d, len){
-		for(var s = 0; s < MAX_EXPONENT; s ++)
-			//solve 10^s == 10^(s + t) (mod d)
-			if(modularPow(10, s, d) == modularPow(10, s + len, d))
-				return s;
+		if(len > 0)
+			for(var s = 0; s < MAX_EXPONENT; s ++)
+				//solve 10^s == 10^(s + t) (mod d)
+				if(modularPow(10, s, d) == modularPow(10, s + len, d))
+					return s;
 		return 0;
 	};
 
@@ -415,7 +415,7 @@ define(function(){
 	var toLaTeX = function(){
 		if(!this.sgn)
 			return '0';
-		else if(this.den == 1)
+		if(this.den == 1)
 			return (this.sgn * this.num).toString();
 		return (this.sgn == -1? '-': '') + '\\frac{' + this.num + '}{' + this.den + '}';
 	};

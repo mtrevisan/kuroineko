@@ -58,7 +58,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 			Object.keys(data || []).forEach(function(key){
 				urlEncodedDataPairs.push(encodeURIComponent(key) + '=' + encodeURIComponent(data[key]));
 			});
-			//combine the pairs into a single string and replace all encoded spaces to  the plus character to match the behaviour of the web browser form submit
+			//combine the pairs into a single string and replace all encoded spaces to the plus character to match the behaviour of the web browser form submit
 			data = (data? urlEncodedDataPairs.join('&').replace(/%20/g, '+'): undefined);
 		}
 		else if(!ObjectHelper.isString(data))
