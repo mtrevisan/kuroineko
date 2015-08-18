@@ -49,19 +49,6 @@ define(function(){
 		pLow = 0.02425,
 		pHigh = 1 - pLow;
 
-	/** @private */
-	var evaluateRationalApproximation = function(numeratorCoeffs, denominatorCoeffs, x){
-		var i = numeratorCoeffs.length,
-			num = 0,
-			den = 0;
-		while((-- i) >= 0)
-			num = num * x + numeratorCoeffs[i];
-		i = denominatorCoeffs.length;
-		while((-- i) >= 0)
-			den = den * x + denominatorCoeffs[i];
-		return num / (1 + den * x);
-	};
-
 	/**
 	 * Calculates the quantile function, i.e., the inverse Cumulative Distribution Function, associated with the Normal distribution.
 	 */
@@ -93,6 +80,19 @@ define(function(){
 		return z;
 		//probit function
 		//return Math.sqrt(0.5) * erf^-1(2 * p - 1);
+	};
+
+	/** @private */
+	var evaluateRationalApproximation = function(numeratorCoeffs, denominatorCoeffs, x){
+		var i = numeratorCoeffs.length,
+			num = 0,
+			den = 0;
+		while((-- i) >= 0)
+			num = num * x + numeratorCoeffs[i];
+		i = denominatorCoeffs.length;
+		while((-- i) >= 0)
+			den = den * x + denominatorCoeffs[i];
+		return num / (1 + den * x);
 	};
 
 
