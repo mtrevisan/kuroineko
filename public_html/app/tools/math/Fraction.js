@@ -21,6 +21,9 @@
  */
 define(function(){
 
+	var MAX_EXPONENT = Math.floor(Math.log10(Number.MAX_VALUE));
+
+
 	var Constructor = function(){
 		var frac = parse(arguments);
 
@@ -330,7 +333,7 @@ define(function(){
 		if(this.isNaN())
 			return 'NaN';
 
-		var a = cycleLen(this.num, this.den),
+		var a = cycleLen(this.den),
 			b = cycleStart(this.den, a),
 			p = this.num.toString().split(''),
 			q = this.den,
@@ -372,39 +375,35 @@ define(function(){
 	};
 
 	/** @private */
-	var cycleLen = function(n, d){
-		if(d % 2 == 0)
-			return cycleLen(n, d / 2);
-		if(d % 5 == 0)
-			return cycleLen(n, d / 5);
+	var cycleLen = function(d){
+		while(d % 2 == 0)
+			d /= 2;
+		while(d % 5 == 0)
+			d /= 5;
 
-//		var maxExponent = Math.floor(Math.log10(Number.MAX_VALUE)),
-		var maxExponent = 2000,
-			t;
-		for(t = 1; t <= maxExponent; t ++)
+		for(var t = 1; t < d; t ++)
 			//solve 10^t == 1 (mod d) for d != 0 (mod 2, 5)
 			//http://mathworld.wolfram.com/FullReptendPrime.html
-			if(modpow(10, t, d) == 1)
+			if(modularPow(10, t, d) == 1)
 				return t;
 		return 0;
 	};
 
 	/** @private */
 	var cycleStart = function(d, len){
-		var maxExponent = Math.floor(Math.log10(Number.MAX_VALUE)),// - len,
-			s;
-		for(s = 0; s < maxExponent; s ++)
+		for(var s = 0; s < MAX_EXPONENT; s ++)
 			//solve 10^s == 10^(s + t) (mod d)
-			if(modpow(10, s, d) == modpow(10, s + len, d))
+			if(modularPow(10, s, d) == modularPow(10, s + len, d))
 				return s;
 		return 0;
 	};
 
 	/** @private */
-	var modpow = function(b, e, m){
-		for(var r = 1; e > 0; b = (b * b) % m, e >>= 1)
-			if(e & 1)
-				r = (r * b) % m;
+	var modularPow = function(base, exponent, modulus){
+		base %= modulus;
+		for(var r = 1; exponent > 0; base = (base * base) % modulus, exponent >>= 1)
+			if(exponent & 1)
+				r = (r * base) % modulus;
 		return r;
 	};
 
