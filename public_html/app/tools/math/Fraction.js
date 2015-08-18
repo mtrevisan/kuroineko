@@ -384,7 +384,7 @@ define(function(){
 		for(var t = 1; t < d; t ++)
 			//solve 10^t == 1 (mod d) for d != 0 (mod 2, 5)
 			//http://mathworld.wolfram.com/FullReptendPrime.html
-			if(modpow(10, t, d) == 1)
+			if(modularPow(10, t, d) == 1)
 				return t;
 		return 0;
 	};
@@ -393,16 +393,17 @@ define(function(){
 	var cycleStart = function(d, len){
 		for(var s = 0; s < MAX_EXPONENT; s ++)
 			//solve 10^s == 10^(s + t) (mod d)
-			if(modpow(10, s, d) == modpow(10, s + len, d))
+			if(modularPow(10, s, d) == modularPow(10, s + len, d))
 				return s;
 		return 0;
 	};
 
 	/** @private */
-	var modpow = function(base, e, m){
-		for(var r = 1; e > 0; base = (base * base) % m, e >>= 1)
-			if(e & 1)
-				r = (r * base) % m;
+	var modularPow = function(base, exponent, modulus){
+		base %= modulus;
+		for(var r = 1; exponent > 0; base = (base * base) % modulus, exponent >>= 1)
+			if(exponent & 1)
+				r = (r * base) % modulus;
 		return r;
 	};
 
