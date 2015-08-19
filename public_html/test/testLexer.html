@@ -22,14 +22,16 @@
 		};
 
 		require(['tools/data/Lexer'], function(Lexer){
-			var lexer = new Lexer();
-			lexer.addRule(/[0-9]+/, function(lexeme, token){
-				console.log(token + ': ' + lexeme);
+			test('plain lexer', function(){
+				var lexer = new Lexer();
+				lexer.addRule(/[0-9]+/gi, function(lexeme){
+					equal(lexeme, '012');
+				});
+				lexer.addRule(/[a-z]+/, function(lexeme){
+					equal(lexeme, 'ab');
+				});
+				lexer.lex('ab012');
 			});
-			lexer.addRule(/[a-z]+/, function(lexeme, token){
-				console.log(token + ': ' + lexeme);
-			});
-			lexer.lex('ab012def567');
 		});
 	</script>
 </head>

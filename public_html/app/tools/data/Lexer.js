@@ -24,12 +24,19 @@ define(function(){
 		if(!isFunction(action))
 			throw new Error('Expected action to be a function');
 
-		var flags = 'g';
-		if(pattern.multiline)
-			flags += 'm';
-		if(pattern.ignoreCase)
-			flags += 'i';
-		pattern = new RegExp(pattern.source, flags);
+		if(!pattern.global){
+			var flags = 'g';
+			if(pattern.multiline)
+				flags += 'm';
+			if(pattern.ignoreCase)
+				flags += 'i';
+			if(pattern.unicode)
+				flags += 'u';
+			if(pattern.sticky)
+				flags += 'y';
+
+			pattern = new RegExp(pattern.source, flags);
+		}
 
 		this.rules.push({
 			pattern: pattern,
