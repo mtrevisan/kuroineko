@@ -40,11 +40,11 @@ define(function(){
 	 * case having a particular value for the attribute), and the gain in information that would result from a test on the attribute
 	 * (based on the probabilities of each case with a particular value for the attribute being of a particular class)
 	 *
-	 * @see http://en.wikipedia.org/wiki/ID3_algorithm
-	 * @see http://en.wikipedia.org/wiki/C4.5_algorithm
-	 * @see http://en.wikipedia.org/wiki/Information_gain
-	 * @see http://en.wikipedia.org/wiki/Information_gain_in_decision_trees
-	 * @see http://www.jofcis.com/publishedpapers/2012_8_4_1467_1475.pdf
+	 * @see {@link http://en.wikipedia.org/wiki/ID3_algorithm}
+	 * @see {@link http://en.wikipedia.org/wiki/C4.5_algorithm}
+	 * @see {@link http://en.wikipedia.org/wiki/Information_gain}
+	 * @see {@link http://en.wikipedia.org/wiki/Information_gain_in_decision_trees}
+	 * @see {@link http://www.jofcis.com/publishedpapers/2012_8_4_1467_1475.pdf}
 	 *
 	 * @return index of attribute with maximum entropy
 	 */
@@ -102,8 +102,8 @@ define(function(){
 	 * @param fnExtractClassValue			Function used to extract the class value from an instance of the data array
 	 * @param fnExtractAttributeValue	Function used to extract the attribute value from an instance of the data array
 	 *
-	 * @see http://deepblue.lib.umich.edu/bitstream/handle/2027.42/46972/10994_2004_Article_BF00994007.pdf?sequence=1
-	 * @see http://ijj.acm.org/volumes/volume2/no4/ijjvol2no4p6.pdf
+	 * @see {@link http://deepblue.lib.umich.edu/bitstream/handle/2027.42/46972/10994_2004_Article_BF00994007.pdf?sequence=1}
+	 * @see {@link http://ijj.acm.org/volumes/volume2/no4/ijjvol2no4p6.pdf}
 	 *
 	 * @private
 	 */

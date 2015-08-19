@@ -1,9 +1,9 @@
 /**
  * @class Phone
  *
- * @see https://github.com/kremonte/phonologizer/blob/master/scripts/app.js
- * @see http://clas.mq.edu.au/speech/phonetics/phonology/features/
- * @see http://clas.mq.edu.au/speech/phonetics/phonology/phoneme/
+ * @see {@link https://github.com/kremonte/phonologizer/blob/master/scripts/app.js}
+ * @see {@link http://clas.mq.edu.au/speech/phonetics/phonology/features/}
+ * @see {@link http://clas.mq.edu.au/speech/phonetics/phonology/phoneme/}
  *
  * @author Mauro Trevisan
  */

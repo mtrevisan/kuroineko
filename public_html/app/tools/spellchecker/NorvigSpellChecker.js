@@ -1,7 +1,7 @@
 /**
  * @class NorvigSpellChecker
  *
- * @see http://norvig.com/spell-correct.html
+ * @see {@link http://norvig.com/spell-correct.html}
  *
  * @author Mauro Trevisan
  */

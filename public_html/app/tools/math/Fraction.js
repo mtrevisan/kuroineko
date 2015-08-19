@@ -22,8 +22,8 @@
  *		<li>123/456 - a fraction</li>
  * </ul>
  *
- * @see https://github.com/infusion/Fraction.js/blob/master/fraction.js
- * @see https://github.com/craigsapp/RationalNumber/tree/master/lib
+ * @see {@link https://github.com/infusion/Fraction.js/blob/master/fraction.js}
+ * @see {@link https://github.com/craigsapp/RationalNumber/tree/master/lib}
  *
  * @author Mauro Trevisan
  */
@@ -108,7 +108,7 @@ define(function(){
 	/**
 	 * Compute the best rational approximation using Stern-Brocot tree.
 	 *
-	 * @see http://introcs.cs.princeton.edu/java/92symbolic/RationalApprox.java.html
+	 * @see {@link http://introcs.cs.princeton.edu/java/92symbolic/RationalApprox.java.html}
 	 *
 	 * @param {Number} value
 	 * @param {Number} epsilon

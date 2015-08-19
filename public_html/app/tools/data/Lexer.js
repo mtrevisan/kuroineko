@@ -1,7 +1,7 @@
 /**
  * @class Lexer
  *
- * @see https://github.com/aaditmshah/lexer/blob/master/lexer.js
+ * @see {@link https://github.com/aaditmshah/lexer/blob/master/lexer.js}
  *
  * @author Mauro Trevisan
  */

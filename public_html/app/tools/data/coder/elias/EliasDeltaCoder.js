@@ -1,9 +1,9 @@
 /**
  * @class EliasDeltaCoder
  *
- * @see http://en.wikipedia.org/wiki/Elias_delta_coding
- * @see http://books.google.it/books?id=81AfzW6vux4C&pg=PA77&lpg=PA77&dq=elias+omega+delta+coding&source=bl&ots=PWSnw4KfEe&sig=lVZGLpJk_cMBJmQpNNUKQF04ONU&hl=en&sa=X&ei=rQRzVN4bwqDIA7XJgkg&redir_esc=y#v=onepage&q=elias%20omega%20delta%20coding&f=false
- * @see http://books.google.it/books?id=mnpeizY0btYC&pg=PA35&lpg=PA35&dq=elias+omega+delta+coding&source=bl&ots=zsADJhF4Hg&sig=tmfoxlYNXrGOvp8nPZeyhdN-Xqg&hl=en&sa=X&ei=rQRzVN4bwqDIA7XJgkg&redir_esc=y#v=onepage&q=elias%20omega%20delta%20coding&f=false
+ * @see {@link http://en.wikipedia.org/wiki/Elias_delta_coding}
+ * @see {@link http://books.google.it/books?id=81AfzW6vux4C&pg=PA77&lpg=PA77&dq=elias+omega+delta+coding&source=bl&ots=PWSnw4KfEe&sig=lVZGLpJk_cMBJmQpNNUKQF04ONU&hl=en&sa=X&ei=rQRzVN4bwqDIA7XJgkg&redir_esc=y#v=onepage&q=elias%20omega%20delta%20coding&f=false}
+ * @see {@link http://books.google.it/books?id=mnpeizY0btYC&pg=PA35&lpg=PA35&dq=elias+omega+delta+coding&source=bl&ots=zsADJhF4Hg&sig=tmfoxlYNXrGOvp8nPZeyhdN-Xqg&hl=en&sa=X&ei=rQRzVN4bwqDIA7XJgkg&redir_esc=y#v=onepage&q=elias%20omega%20delta%20coding&f=false}
  *
  * @author Mauro Trevisan
  */

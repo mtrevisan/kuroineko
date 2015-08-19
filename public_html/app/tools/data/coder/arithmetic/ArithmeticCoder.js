@@ -1,10 +1,10 @@
 /**
  * @class ArithmeticCoder
  *
- * @see https://nerget.com/compression/
- * @see https://software.intel.com/sites/default/files/m/b/6/3/HPL-2004-76.pdf
- * @see http://www.ittc.ku.edu/~jsv/Papers/HoV94.arithmetic_codingOfficial.pdf
- * @see http://cs1.cs.nyu.edu/~roweis/csc310-2006/extras/implementing_ppm.pdf
+ * @see {@link https://nerget.com/compression/}
+ * @see {@link https://software.intel.com/sites/default/files/m/b/6/3/HPL-2004-76.pdf}
+ * @see {@link http://www.ittc.ku.edu/~jsv/Papers/HoV94.arithmetic_codingOfficial.pdf}
+ * @see {@link http://cs1.cs.nyu.edu/~roweis/csc310-2006/extras/implementing_ppm.pdf}
  *
  * @author Mauro Trevisan
  */
