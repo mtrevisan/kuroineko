@@ -73,12 +73,12 @@ define(function(){
 	/**
 	 * Apply a function for each frequency in the tree.
 	 *
-	 * @usage
+	 * @example
 	 * Rescales by dividing all frequencies by a constant factor
 	 * <code>
 	 *		map(function(k){ return k / 3; });
 	 *	</code>
-	 * @usage
+	 * @example
 	 * Rescales by dividing all frequencies by 2, but taking a minimum of 1
 	 * <code>
 	 *		map(function(k){ return ((k + 1) >> 1); });
