@@ -6,9 +6,11 @@
 define(function(){
 
 	/**
-	 * Example:
+	 * @usage
+	 * <code>
 	 * console.log(encodeMailData('37', 'Mauro Trevixan'));
 	 * console.log(encodeMailData('69', 'mauro.trevisan@gmail.com?subject=Gramàdega%20de%20lengua%20vèneta'));
+	 * </code>
 	 */
 	var encodeMailData = function(cipher, str){
 		var r = parseInt(cipher, 16),
@@ -24,8 +26,10 @@ define(function(){
 	};
 
 	/**
-	 * Example:
+	 * @usage
+	 * <code>
 	 * <a href="/cdn-cgi/mail#6907061a190804290c11080419050c470a0604?subject=Gramàdega%20de%20lengua%20vèneta"><span data-mail="377a5642455817634552415e4f5659">[email&nbsp;protected]</span><script type="text/javascript">/* <![CDATA[ * /(function(){try{var b=document.getElementsByTagName('script'),l=b[b.length-1].previousSibling,data=l.getAttribute('data-mail');if(data)l.parentNode.replaceChild(document.createTextNode(MailHelper.decodeMailLabel(data)),l);}catch(e){}})();/* ]]> * /</script></a>
+	 * </code>
 	 *
 	 * @private
 	 */

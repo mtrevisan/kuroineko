@@ -2,7 +2,7 @@
  * @class NeedlemanWunschUkkonen
  *
  * Needleman-Wunsch-Ukkonen global alignment algorithm.
- *
+ * <p>
  * Time: O(p * m), Space: O(n * m)
  *
  * @author Mauro Trevisan

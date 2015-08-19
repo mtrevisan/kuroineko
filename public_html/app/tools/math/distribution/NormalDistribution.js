@@ -49,9 +49,7 @@ define(function(){
 		pLow = 0.02425,
 		pHigh = 1 - pLow;
 
-	/**
-	 * Calculates the quantile function, i.e., the inverse Cumulative Distribution Function, associated with the Normal distribution.
-	 */
+	/** Calculates the quantile function, i.e., the inverse Cumulative Distribution Function, associated with the Normal distribution. */
 	var inverseCDF = function(p, maxError){
 		maxError = maxError || 1e-15;
 

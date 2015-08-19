@@ -1,17 +1,24 @@
 /**
  * @class ContinuedFraction
- * You can pass a fraction in different formats. Either as array, as double, as string or as an integer.
  *
- * Array/Object form:
- *		[0 => <nominator>, 1 => <denominator>]
- *		{(sgn => <sign>), num => <nominator>, den => <denominator>}
- * Number form:
- *		Single number value
- * String form:
- *		123.456 - a simple double
- *		123.(456) - a double with repeating decimal places
- *		123.45(6) - a double with repeating last place
- *		123/456 - a fraction
+ * You can pass a fraction in different formats. Either as array, as double, as string or as an integer.
+ * <p>
+ * Array/Object form:<p>
+ * <ul>
+ *		<li>[0 => <nominator>, 1 => <denominator>]</li>
+ *		<li>{(sgn => <sign>), num => <nominator>, den => <denominator>}</li>
+ * </ul>
+ * Number form:<p>
+ * <ul>
+ *		<li>Single number value</li>
+ * </ul>
+ * String form:<p>
+ * <ul>
+ *		<li>123.456 - a simple double</li>
+ *		<li>123.(456) - a double with repeating decimal places</li>
+ *		<li>123.45(6) - a double with repeating last place</li>
+ *		<li>123/456 - a fraction</li>
+ * </ul>
  *
  * @see https://github.com/mjdominus/cf
  * @see http://www.inwap.com/pdp10/hbaker/hakmem/cf.html
@@ -247,6 +254,7 @@ define(['tools/math/Fraction'], function(Fraction){
 
 	/**
 	 * Returns the partial quotients <code>[a0; a1, a2, ...]</code> of the continued fraction form of <code>x</code>.
+	 *
 	 * @see http://maths.mq.edu.au/~alf/www-centre/alfpapers/a132.pdf
 	 * @see http://maths-people.anu.edu.au/~brent/pd/rpb166.pdf
 	 *
@@ -312,7 +320,7 @@ define(['tools/math/Fraction'], function(Fraction){
 	 * <ul>
 	 *		<li>Eric W. Weisstein. "Continued Fraction." From MathWorld--A Wolfram Web Resource. <a target="_blank" href="http://mathworld.wolfram.com/ContinuedFraction.html">http://mathworld.wolfram.com/ContinuedFraction.html</a></li>
 	 * </ul>
-	 * The recurrence relationship defined in those equations can result in very large intermediate results which can result in numerical overflow.
+	 * The recurrence relationship defined in those equations can result in very large intermediate results which can result in numerical overflow.<p>
 	 * As a means to combat these overflow conditions, the intermediate results are scaled whenever they threaten to become numerically unstable.
 	 *
 	 * @param {Number} epsilon

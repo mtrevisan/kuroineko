@@ -2,6 +2,7 @@
  * @class Alerter
  *
  * Based on alertify.js 0.3.11
+ * 
  * @see <a href="http://fabien-d.github.io/alertify.js/">The Alertify site</a>
  *
  * @author Mauro Trevisan

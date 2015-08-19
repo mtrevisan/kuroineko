@@ -20,9 +20,7 @@ define(['tools/data/mining/DecisionTreeContext', 'tools/data/ObjectHelper'], fun
 		};
 	};
 
-	/**
-	 * Running time in the worst case is O(|data| * |attributes|^2)
-	 */
+	/** Running time in the worst case is O(|data| * |attributes|^2) */
 	var buildTree = function(){
 		this.root = {};
 

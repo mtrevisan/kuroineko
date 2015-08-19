@@ -1,13 +1,13 @@
 /**
  * @class Phone
  *
+ * @see https://github.com/kremonte/phonologizer/blob/master/scripts/app.js
+ * @see http://clas.mq.edu.au/speech/phonetics/phonology/features/
+ * @see http://clas.mq.edu.au/speech/phonetics/phonology/phoneme/
+ *
  * @author Mauro Trevisan
  */
 define(['tools/data/ObjectHelper'], function(ObjectHelper){
-
-	//https://github.com/kremonte/phonologizer/blob/master/scripts/app.js
-	//http://clas.mq.edu.au/speech/phonetics/phonology/features/
-	//http://clas.mq.edu.au/speech/phonetics/phonology/phoneme/
 
 	var REGEX_UNICODE_SPLITTER = /(\[([^\]]+)\]|j²|[^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u035B\u035D-\u0360\u0362-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*(?:[\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*[\u035C\u0361][^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*)?)/g;
 	var REGEX_UNICODE_FEATURES = /^\[(\s*([\+\-0])?([a-z]+?)\s*)(,(\s*([\+\-0])?([a-z]+?)\s*))*]$/;

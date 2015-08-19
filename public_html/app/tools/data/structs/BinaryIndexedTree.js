@@ -72,10 +72,17 @@ define(function(){
 
 	/**
 	 * Apply a function for each frequency in the tree.
-	 * Example: Rescales by dividing all frequencies by a constant factor
+	 *
+	 * @usage
+	 * Rescales by dividing all frequencies by a constant factor
+	 * <code>
 	 *		map(function(k){ return k / 3; });
-	 * Example: Rescales by dividing all frequencies by 2, but taking a minimum of 1
+	 *	</code>
+	 * @usage
+	 * Rescales by dividing all frequencies by 2, but taking a minimum of 1
+	 * <code>
 	 *		map(function(k){ return ((k + 1) >> 1); });
+	 *	</code>
 	 */
 	var map = function(fn){
 		for(var i = 0 ; i < this.maxSymbol; i ++){

@@ -2,10 +2,11 @@
  * @class SmithWaterman
  *
  * Smith-Waterman local alignment algorithm.
- * See also http://www.cs.bgu.ac.il/~michaluz/seminar/Gotoh.pdf
- * http://www.akira.ruc.dk/~keld/teaching/algoritmedesign_f03/Artikler/05/Hirschberg75.pdf
- *
+ * <p>
  * Time: O(n^2 * m), Space: O(n * m)
+ *
+ * @see http://www.cs.bgu.ac.il/~michaluz/seminar/Gotoh.pdf
+ * @see http://www.akira.ruc.dk/~keld/teaching/algoritmedesign_f03/Artikler/05/Hirschberg75.pdf
  *
  * @author Mauro Trevisan
  */

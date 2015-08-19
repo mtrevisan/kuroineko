@@ -17,7 +17,7 @@ define(['tools/data/structs/BinaryIndexedTree'], function(BinaryIndexedTree){
 	//	SYMBOL_ESCAPE = 257;
 
 	/**
-	 * Maximum count before rescaling.
+	 * Maximum count before rescaling.<p>
 	 * Higher values compress better, but may cause overflow, lower values are generally faster up to the point they cause thrashing.
 	 */
 	var MAX_INDIVIDUAL_COUNT = 8 * 1024;

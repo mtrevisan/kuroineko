@@ -1,21 +1,27 @@
 /**
  * @class Fraction
- * It is implemented as two integers which store the numerator and denominator as well as a variable to keep track of the
- * sign of the rational number.<p>
+ *
+ * It is implemented as two integers which store the numerator and denominator as well as a variable to keep track of the sign of the rational number.<p>
  * You can pass a fraction in different formats. Either as array, as double, as string or as an integer.<p>
  * Any function as well as the constructor parses its input and reduce it to the smallest term.
  * <p>
- * Array/Object form:
- *		[0 => <nominator>, 1 => <denominator>]
- *		{(sgn => <sign>), num => <nominator>, den => <denominator>}
- * Number form:
- *		Single number value
- * String form:
- *		123.456 - a simple double
- *		123.(456) - a double with repeating decimal places
- *		123.45(6) - a double with repeating last place
- *		123/456 - a fraction
- *	<p>
+ * Array/Object form:<p>
+ * <ul>
+ *		<li>[0 => <nominator>, 1 => <denominator>]</li>
+ *		<li>{(sgn => <sign>), num => <nominator>, den => <denominator>}</li>
+ * </ul>
+ * Number form:<p>
+ * <ul>
+ *		<li>Single number value</li>
+ * </ul>
+ * String form:<p>
+ * <ul>
+ *		<li>123.456 - a simple double</li>
+ *		<li>123.(456) - a double with repeating decimal places</li>
+ *		<li>123.45(6) - a double with repeating last place</li>
+ *		<li>123/456 - a fraction</li>
+ * </ul>
+ *
  * @see https://github.com/infusion/Fraction.js/blob/master/fraction.js
  * @see https://github.com/craigsapp/RationalNumber/tree/master/lib
  *
@@ -36,7 +42,7 @@ define(function(){
 
 	/**
 	 * Constructor with given absolute error.<p>
-	 * The method is really precise, but too large exact numbers, like 1234567.9991829 will result in a wrong approximation.
+	 * The method is really precise, but too large exact numbers, like 1234567.9991829 will result in a wrong approximation.<p>
 	 * If you want to keep the number as it is, convert it to a string, as the string parser will not perform any further observations.
 	 */
 	Constructor.fromNumber = function(value, absoluteError){

@@ -1,7 +1,7 @@
 /**
  * @class NorvigSpellChecker
  *
- * http://norvig.com/spell-correct.html
+ * @see http://norvig.com/spell-correct.html
  *
  * @author Mauro Trevisan
  */
@@ -27,7 +27,7 @@ define(function(){
 	};
 
 	/**
-	 * Calculate language model probability P(c): "how likely is c to appear in a text?".
+	 * Calculate language model probability <code>P(c)</code>: "how likely is c to appear in a text?".
 	 *
 	 * @private
 	 */
@@ -79,7 +79,7 @@ define(function(){
 	};
 
 	/**
-	 * Calculate set of known word at edit distance 1 from the given word.
+	 * Calculate set of known word at edit distance 1 from the given word.<p>
 	 * For a word of length {@code n}, an alphabet size {@code a}, an edit distance {@code d = 1}, there will be {@code n} deletions, {@code n-1}
 	 * transpositions, {@code a * n} alterations, and {@code a * (n + 1)} insertions, for a total of {@code 2 * n + 2 * a * n + a - 1} terms
 	 * at search time.
@@ -157,7 +157,7 @@ define(function(){
 	};
 
 	/**
-	 * Calculate logarithm of model probability P(w|c): "how likely is it that the author would type w by mistake when c was intended?".
+	 * Calculate logarithm of model probability <code>P(w|c)</code>: "how likely is it that the author would type w by mistake when c was intended?".
 	 *
 	 * @private
 	 */

@@ -178,8 +178,9 @@ define(['tools/data/ObjectHelper', 'tools/lang/phonology/Orthography'], function
 
 	/**
 	 * Run callback with the element removed from the DOM (and thus being out-of-the-flow). Upon returning, the element will be inserted at its
-	 * original position even if callback rises an exception.
-	 * see https://developers.google.com/speed/articles/javascript-dom
+	 * original position even if callback rises an exception.<p>
+	 *
+	 * @see https://developers.google.com/speed/articles/javascript-dom
 	 *
 	 * @param {!Element} element The element to be temporarily removed.
 	 * @param {function(): T} callback The function to call.

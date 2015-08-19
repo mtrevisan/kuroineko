@@ -121,7 +121,7 @@ var AMDLoader = (function(doc){
 	/**
 	 * Define a module with dependencies.
 	 *
-	 * @param {String}	id	Name of the module
+	 * @param {String} id				Name of the module
 	 * @param {Array}	dependencies	Array of dependencies (optional)
 	 * @param {Function}	definition	Function returing the module object
 	 */
