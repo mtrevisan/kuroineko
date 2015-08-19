@@ -5,7 +5,7 @@
  *
  * @author Mauro Trevisan
  */
-define(function(){
+define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 	var Constructor = function(){
 		this.rules = [];
@@ -16,13 +16,13 @@ define(function(){
 	 * Add a new rule.
 	 *
 	 * @param {Regex} pattern		The regular expression designating what text matches this rule. Capture will be passed to the callback function.
-	 * @param {Function} action	A callback that is executed when this token is matched. This function should accept one argument: the lexeme matched.
+	 * @param {Function} callback	A callback that is executed when this token is matched. This function should accept one argument: the lexeme matched.
 	 */
-	var addRule = function(pattern, action){
-		if(!(pattern instanceof RegExp))
+	var addRule = function(pattern, callback){
+		if(!ObjectHelper.isRegExp(pattern))
 			throw new Error('Pattern must be an instance of RegExp or String');
-		if(!isFunction(action))
-			throw new Error('Expected action to be a function');
+		if(!ObjectHelper.isFunction(callback))
+			throw new Error('Expected callback to be a function');
 
 		if(!pattern.global){
 			var flags = 'g';
@@ -40,7 +40,7 @@ define(function(){
 
 		this.rules.push({
 			pattern: pattern,
-			action: action
+			callback: callback
 		});
 
 		return this;
@@ -53,7 +53,7 @@ define(function(){
 	 */
 	var lex = function(source){
 		if(source){
-			if(!isString(source))
+			if(!ObjectHelper.isString(source))
 				throw new Error('Attempt to lex an object that is not a string');
 
 			this.source = source;
@@ -62,7 +62,7 @@ define(function(){
 
 		var match;
 		while(match = scan.call(this)){
-			var token = match.rule.action.call(this, match.result);
+			var token = match.rule.callback.call(this, match.result);
 			if(token)
 				return token;
 		}
@@ -105,24 +105,6 @@ define(function(){
 
 		return matches[0];
 	}
-
-	/**
-	 * Sencha Touch 2.4.0's Ext.isString
-	 *
-	 * @private
-	 */
-	var isString = function(value){
-		return (typeof value === 'string');
-	};
-
-	/**
-	 * Sencha Touch 2.4.0's Ext.isFunction
-	 *
-	 * @private
-	 */
-	var isFunction = function(value){
-		return (typeof value === 'function');
-	};
 
 
 	Constructor.prototype = {

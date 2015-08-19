@@ -70,7 +70,7 @@ define(function(){
 	};
 
 	var isRegExp = function(value){
-		return (toString.call(value) === '[object RegExp]');
+		return (value instanceof RegExp);
 	};
 
 	var extractData = function(container, selector){

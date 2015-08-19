@@ -27,9 +27,9 @@ define(['tools/math/Fraction'], function(Fraction){
 	};
 
 	/**
-	 * @param {String} uom Either a string of the unit of measure like 'm', or a sentence coding uom, parentValue, and parentUOM like 'm = 12 ft', or 'm = 12 ft = 3 in'
-	 * @param {Number} parentValue Value of uom wrt parentUOM
-	 * @param {String} parentUOM String of the referenced unit of measure like 'ft'
+	 * @param {String} uom				Either a string of the unit of measure like 'm', or a sentence coding uom, parentValue, and parentUOM like 'm = 12 ft', or 'm = 12 ft = 3 in'
+	 * @param {Number} parentValue	Value of uom wrt parentUOM
+	 * @param {String} parentUOM		String of the referenced unit of measure like 'ft'
 	 */
 	var addUnit = function(uom, parentValue, parentUOM){
 		if(!parentValue && !parentUOM){
