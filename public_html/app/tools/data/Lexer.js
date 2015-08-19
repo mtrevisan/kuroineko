@@ -89,7 +89,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 				});
 		}
 
-		var match = extractMostProbable(matches);
+		var match = extractMostProbableMatch(matches);
 		if(match)
 			this.index = match.index + match.result.length;
 
@@ -97,14 +97,14 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	};
 
 	/** @private */
-	var extractMostProbable = function(matches){
+	var extractMostProbableMatch = function(matches){
 		matches.sort(function(a, b){
 			var r = a.index - b.index;
 			return (r? r: a.result.length - b.result.length);
 		});
 
 		return matches[0];
-	}
+	};
 
 
 	Constructor.prototype = {
