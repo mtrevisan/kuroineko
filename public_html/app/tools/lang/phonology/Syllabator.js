@@ -5,7 +5,9 @@
  */
 define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/lang/phonology/Word', 'tools/data/StringHelper'], function(Phone, Grapheme, Word, StringHelper){
 
+	/** @constant */
 	var SYLLABE_SEPARATOR_IN_WORD = '|',
+	/** @constant */
 		SYLLABE_SEPARATOR_CROSS_WORD = '/';
 
 

@@ -10,16 +10,31 @@
  */
 define(['tools/data/structs/BitBuffer'], function(BitBuffer){
 
-	/** Precision of coding, expressed in number of bits used for arithmetic before shifting out partial results. */
+	/**
+	 * Precision of coding, expressed in number of bits used for arithmetic before shifting out partial results.
+	 * @constant
+	 */
 	var CODE_VALUE_BITS = 28;
 
-	/** The largest possible interval value. All <code>1</code>s. */
+	/**
+	 * The largest possible interval value. All <code>1</code>s.
+	 * @constant
+	 */
 	var TOP_VALUE = (1 << CODE_VALUE_BITS) - 1;
-	/** 1/4 of the largest possible value plus one. */
+	/**
+	 * 1/4 of the largest possible value plus one.
+	 * @constant
+	 */
 	var FIRST_QUARTER = ((TOP_VALUE >> 2) + 1);
-	/** 1/2 of the largest possible value; <code>2 * FIRST_QUARTER</code>. */
+	/**
+	 * 1/2 of the largest possible value; <code>2 * FIRST_QUARTER</code>.
+	 * @constant
+	 */
 	var HALF = FIRST_QUARTER << 1;
-	/** 3/4 of the largest possible value; <code>3 * FIRST_QUARTER</code>. */
+	/**
+	 * 3/4 of the largest possible value; <code>3 * FIRST_QUARTER</code>.
+	 * @constant
+	 */
 	var THIRD_QUARTER = HALF + FIRST_QUARTER;
 
 

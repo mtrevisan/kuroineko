@@ -9,12 +9,14 @@ define(['HTMLHelper', 'tools/ui/Alerter'], function(HTMLHelper, Alerter){
 	 * Element attribute used to find validators
 	 *
 	 * @private
+	 * @constant
 	 */
 	var validateAttribute = 'data-validate';
 	/**
 	 * Element attribute used to contain regex pattern for 'regex' validator
 	 *
 	 * @private
+	 * @constant
 	 */
 	var validateRegexAttribute = 'pattern';
 

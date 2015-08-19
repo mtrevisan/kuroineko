@@ -5,7 +5,9 @@
  */
 define(['tools/data/ObjectHelper', 'tools/lang/phonology/Orthography'], function(ObjectHelper, Orthography){
 
-	//var classNameSplitter = /\s+/;
+	/* * @constant * /
+	var classNameSplitter = /\s+/;*/
+	/** @constant */
 	var QUERY_STRING_REGEXP = new RegExp('[\\?&]([^&#]+)', 'g');
 
 

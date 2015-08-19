@@ -12,6 +12,7 @@
  */
 define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
+	/** @constant */
 	var REGEX_UNICODE_SPLITTER = /(\[([^\]]+)\]|[^\u0300-\u036F](?:[\u0300-\u036F]*[\u035C\u0361][^\u0300-\u036F][\u0300-\u036F]*)?)/g;
 
 

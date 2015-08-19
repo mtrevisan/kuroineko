@@ -122,7 +122,7 @@ var AMDLoader = (function(doc){
 	 * Define a module with dependencies.
 	 *
 	 * @param {String} id				Name of the module
-	 * @param {Array}	dependencies	Array of dependencies (optional)
+	 * @param {Array}	[dependencies]	Array of dependencies
 	 * @param {Function}	definition	Function returing the module object
 	 */
 	var define = function(id, dependencies, definition){
@@ -148,7 +148,7 @@ var AMDLoader = (function(doc){
 	/**
 	 * Call a function with dependencies.
 	 *
-	 * @param {Array}	dependencies	Array of dependencies (optional)
+	 * @param {Array}	[dependencies]	Array of dependencies
 	 * @param {Function}	definition	Callback with dependencies as parameters
 	 */
 	var require = function(dependencies, definition){

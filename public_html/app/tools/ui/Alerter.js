@@ -2,7 +2,7 @@
  * @class Alerter
  *
  * Based on alertify.js 0.3.11
- * 
+ *
  * @see <a href="http://fabien-d.github.io/alertify.js/">The Alertify site</a>
  *
  * @author Mauro Trevisan
@@ -171,8 +171,8 @@ define(['HTMLHelper'], function(HTMLHelper){
 	 * If a type is passed, a class name "alerter-log-{type}" will get added.
 	 *
 	 * @param message	The message passed from the callee
-	 * @param type		[Optional] Type of log message
-	 * @param wait		[Optional] Time (in ms) to wait before auto-hiding
+	 * @param [type]	Type of log message
+	 * @param [wait]	Time (in ms) to wait before auto-hiding
 	 */
 	var log = function(message, type, wait){
 		init();
@@ -201,8 +201,8 @@ define(['HTMLHelper'], function(HTMLHelper){
 	 *
 	 * @param elementID	The ID of the DOM element
 	 * @param message		The message passed from the callee
-	 * @param type			[Optional] Type of log message
-	 * @param wait			[Optional] Time (in ms) to wait before auto-hiding
+	 * @param [type]		Type of log message
+	 * @param [wait]		Time (in ms) to wait before auto-hiding
 	 */
 	var logOnElement = function(elementID, message, type, wait){
 		transition = transition || getTransitionEvent();
@@ -267,8 +267,8 @@ define(['HTMLHelper'], function(HTMLHelper){
 	/**
 	 * Close the log messages
 	 *
-	 * @param elem	HTML Element of log message to close
-	 * @param wait	[optional] Time (in ms) to wait before automatically hiding the message, if 0 never hide
+	 * @param elem		HTML Element of log message to close
+	 * @param [wait]	Time (in ms) to wait before automatically hiding the message, if 0 never hide
 	 *
 	 * @private
 	 */

@@ -49,7 +49,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	/**
 	 * Processes the input stream, matching and tokenizing left to right in a single pass.
 	 *
-	 * @param {String} source	String to set as source and lex.
+	 * @param {String} [source]	String to set as source and lex.
 	 */
 	var lex = function(source){
 		if(source){

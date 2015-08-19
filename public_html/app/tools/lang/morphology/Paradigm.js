@@ -5,7 +5,9 @@
  */
 define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/data/ObjectHelper'], function(Word, Orthography, ObjectHelper){
 
+	/** @constant */
 	var REGULAR = 'regular',
+	/** @constant */
 		IRREGULAR = 'irregular';
 
 

@@ -29,6 +29,7 @@
  */
 define(function(){
 
+	/** @constant */
 	var MAX_EXPONENT = Math.floor(Math.log10(Number.MAX_VALUE));
 
 
