@@ -23,14 +23,14 @@
 
 		require(['tools/data/Lexer'], function(Lexer){
 			test('plain lexer', function(){
-				var lexer = new Lexer();
-				lexer.addRule(/[0-9]+/gi, function(lexeme){
-					equal(lexeme, '012');
-				});
-				lexer.addRule(/[a-z]+/, function(lexeme){
-					equal(lexeme, 'ab');
-				});
-				lexer.lex('ab012');
+				(new Lexer())
+					.addRule(/[0-9]+/, function(lexeme){
+						equal(lexeme, '012');
+					})
+					.addRule(/[a-z]+/, function(lexeme){
+						equal(lexeme, 'ab');
+					})
+					.lex('ab012');
 			});
 		});
 	</script>
