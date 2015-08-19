@@ -20,9 +20,9 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	 */
 	var addRule = function(pattern, callback){
 		if(!ObjectHelper.isRegExp(pattern))
-			throw new Error('Pattern must be an instance of RegExp or String');
+			throw new Error('Expected pattern to be a RegExp.');
 		if(!ObjectHelper.isFunction(callback))
-			throw new Error('Expected callback to be a function');
+			throw new Error('Expected callback to be a function.');
 
 		if(!pattern.global){
 			var flags = 'g';
@@ -54,7 +54,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	var lex = function(source){
 		if(source){
 			if(!ObjectHelper.isString(source))
-				throw new Error('Attempt to lex an object that is not a string');
+				throw new Error('Attempt to lex an object that is not a string.');
 
 			this.source = source;
 			this.index = 0;
