@@ -1,9 +1,15 @@
+/* global Function, toString */
+
 /**
  * @class ObjectHelper
  *
  * @author Mauro Trevisan
  */
 define(function(){
+
+	/** @constant */
+	var TYPE_OBJECT = '[object Object]';
+
 
 	Function.prototype.clone = function(){
 		var scope = this;
@@ -50,12 +56,12 @@ define(function(){
 	};
 
 	/** Sencha Touch 2.4.0's Ext.isObject */
-	var isObject = (toString.call(null) === '[object Object]'?
+	var isObject = (toString.call(null) === TYPE_OBJECT?
 		function(value){
-			return (value !== null && value !== undefined && toString.call(value) === '[object Object]');
+			return (value !== null && value !== undefined && toString.call(value) === TYPE_OBJECT);
 		}:
 		function(value){
-			return (toString.call(value) === '[object Object]');
+			return (toString.call(value) === TYPE_OBJECT);
 		}
 	);
 

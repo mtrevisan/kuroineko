@@ -100,9 +100,12 @@ var spliceOne = function(arr, index){
 	};
 
 	/**
-	 * Example.
-	 *		binaryIndexOf.call(someArray, searchElement);
-	 * http://oli.me.uk/2013/06/08/searching-javascript-arrays-with-a-binary-search/
+	 * @example
+	 * <code>
+	 *	binaryIndexOf.call(someArray, searchElement);
+	 *	</code>
+	 *
+	 * @see {@link http://oli.me.uk/2013/06/08/searching-javascript-arrays-with-a-binary-search/}
 	 *
 	 * @private
 	 */
@@ -126,9 +129,7 @@ var spliceOne = function(arr, index){
 		return ~high;
 	};
 
-	/**
-	 * Apply Fisher-Yates (aka Knuth) shuffle
-	 */
+	/** Apply Fisher-Yates (aka Knuth) shuffle */
 	var shuffle = function(array){
 		var currentIndex = array.length,
 			temporaryValue,
