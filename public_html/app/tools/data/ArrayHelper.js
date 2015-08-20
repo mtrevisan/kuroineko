@@ -1,6 +1,8 @@
 /**
  * @class ArrayHelper
  *
+ * @see {@link https://github.com/enricomarino/array/blob/master/lib/array.js}
+ *
  * @author Mauro Trevisan
  */
 define(function(){
