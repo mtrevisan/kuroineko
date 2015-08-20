@@ -27,7 +27,7 @@ define(function(){
 	};
 
 	/**
-	 * Calculate language model probability <code>P(c)</code>: "how likely is c to appear in a text?".
+	 * Calculate language model probability <code>P(c)</code>: "how likely is <code>c</code> to appear in a text?".
 	 *
 	 * @private
 	 */
@@ -157,7 +157,8 @@ define(function(){
 	};
 
 	/**
-	 * Calculate logarithm of model probability <code>P(w|c)</code>: "how likely is it that the author would type w by mistake when c was intended?".
+	 * Calculate logarithm of model probability <code>P(w|c)</code>: "how likely is it that the author would type <code>w</code> by mistake when
+	 * <code>c</code> was intended?".
 	 *
 	 * @private
 	 */

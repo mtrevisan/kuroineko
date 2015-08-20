@@ -22,9 +22,27 @@
 		};
 
 		require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
-			test('plain spell checker', function(){
+			test('plain spell checker from dictionary', function(){
 				var spellChecker = new NorvigSpellChecker('abcdefghijklmnopqrstuvwxyz');
 				spellChecker.readDictionary(['abb', 'acbd']);
+
+				var suggestions = spellChecker.suggest('abc');
+
+				deepEqual(suggestions, {
+					candidates: {
+						abb: 0.9815878113367819,
+						acbd: 0.01841218866321811
+					},
+					sortedKeys: [
+						'abb',
+						'acbd'
+					]
+				});
+			});
+
+			test('plain spell checker from corpus', function(){
+				var spellChecker = new NorvigSpellChecker('abcdefghijklmnopqrstuvwxyz');
+				spellChecker.readDictionary('abb, acbd');
 
 				var suggestions = spellChecker.suggest('abc');
 
