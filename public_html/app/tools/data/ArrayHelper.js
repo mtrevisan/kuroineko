@@ -5,6 +5,10 @@
  */
 define(function(){
 
+	var empty = function(array){
+		array.length = 0;
+	};
+
 	var push = function(array, item){
 		array[array.length] = item;
 	};
