@@ -34,10 +34,12 @@ define(['tools/data/mining/DecisionTree', 'HTMLHelper', 'tools/ui/Validator', 't
 			[1, ,0,0, ,0,0,0, ,0,0,0,0,0,1,0, ,0,0,0,0,1,0,1,0, , , , ,1,0,0, ,0, , ,0,0, i18nResources.variant.mestrin],
 			[1, ,0,0, ,0,0,0, ,0,0,0,0,0,1,0, ,0,0,0,0,1,0,1,0, , , , ,0,0,1, ,0, , ,0,0, i18nResources.variant['buran&egrave;l']],
 			[1,0,0,0, ,0,0, , , , , , ,0,1, , ,0,0,0,0,1,0,1, , , , , , ,1, , , ,1,0,0,0, i18nResources.variant.padoan],
-			//{"timestamp":"2015-04-02T19:09:34.305Z","newClass":false,"supervisorName":"luca","supervisorAge":"37","supervisorPlace":"Vigonza","ip":"87.3.95.182","city":"Bagnacavallo","zipcode":"48012","region":"Emilia-Romagna","regionCode":"05","country":"Italy","countryCode":"ITA","latitude":44.4699,"longitude":12.0825}
+			//{"timestamp":"2015-04-02T19:09:34.305Z","newClass":false,"supervisorName":"Luca","supervisorAge":"37","supervisorPlace":"Vigonza","ip":"87.3.95.182","city":"Bagnacavallo","zipcode":"48012","region":"Emilia-Romagna","regionCode":"05","country":"Italy","countryCode":"ITA","latitude":44.4699,"longitude":12.0825}
 			//[ ,1, , , , , , , , , , ,1, , , , , , , , , , , , , , , , , , , , , ,1, , , , i18nResources.variant.padoan],
 			[1,0,0,0, ,0,0, , , , , , ,0,1, , ,0,0,1,0,0,0,0, , , , , , , , , , , , ,0,0, i18nResources.variant['baso padoan']],
 			[1,0,0,0, ,0,0, , , , , , ,0,1, , ,0,0,0,0,1,0,1, , , , , , , , , , ,0,1,0,0, i18nResources.variant['vi&tstrok;entin']],
+			//{"timestamp":"2015-08-17T16:26:33.984Z","nodeClass":"Alto vixentino. Conplimenti par sto algoritmo!","newClass":true,"supervisorName":"Lodovico","supervisorAge":"41","supervisorPlace":"Valdagno","ip":"70.181.75.87","city":"San Pedro","zipcode":"90734","region":"California","regionCode":"CA","country":"United States","countryCode":"USA","latitude":33.7358,"longitude":-118.2923}
+			//[1, ,1, , , , ,1, ,0, , , , , , , , , ,1, , , , , , , , , , , , , , , , , , , i18nResources.variant['alto vi&tstrok;entin']],
 			[1,0,0,0, ,0,0, , , , , , ,0,1, , ,0,0,1,0,0,0,0, , , , , , , , , , , , ,0,0, i18nResources.variant['baso vi&tstrok;entin']],
 			[1,0,0,0, ,0,0, , , , , , ,0,1, , ,0,0,1,0,0,0,0, , , , , , , , , , , , ,0,0, i18nResources.variant.polexan],
 			[ , , , , , , , ,1, , , , , , , , ,0,0,0,0,1,1, , , , , , , , , , , , , ,0,0, i18nResources.variant.talian],
@@ -118,14 +120,16 @@ define(['tools/data/mining/DecisionTree', 'HTMLHelper', 'tools/ui/Validator', 't
 		var fnSupervisorAskBranch = function(attributeName, cutPoint, discreteAttribute){
 			return new Promise(function(resolve){
 				var btnYes = Alerter.defineOkButton(i18nResources.variant.yes, function(){
-					console.log('supervisor chooses "' + attributeName + '" w.r.t. ' + cutPoint + ' is ' + (discreteAttribute? 'EQ': 'LT'));
+					var response = (discreteAttribute? 'EQ': 'LT');
+					console.log('supervisor chooses "' + attributeName + '" w.r.t. ' + cutPoint + ' is ' + response);
 
-					resolve(discreteAttribute? 'EQ': 'LT');
+					resolve(response);
 				});
 				var btnNo = Alerter.defineCancelButton(i18nResources.variant.no, function(){
-					console.log('supervisor chooses "' + attributeName + '" w.r.t. ' + cutPoint + ' is ' + (discreteAttribute? 'NE': 'GE'));
+					var response = (discreteAttribute? 'NE': 'GE');
+					console.log('supervisor chooses "' + attributeName + '" w.r.t. ' + cutPoint + ' is ' + response);
 
-					resolve(discreteAttribute? 'NE': 'GE');
+					resolve(response);
 				});
 				var btnDontKnow = Alerter.defineButton('dont-know', i18nResources.variant.dontKnow, function(){
 					console.log('supervisor don\'t know how to chooses "' + attributeName + '" w.r.t. ' + cutPoint);
