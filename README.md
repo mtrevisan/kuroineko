@@ -9,6 +9,7 @@ Utilities comprises:
  - various string alignment algorithms like Needleman-Wunsch, Needleman-Wunsch-Ukkonen, and Smith-Watermann
  - arithmetic and Elias Coders
  - data structures like Binary Indexed Tree, Bit Buffer, Trie
+ - Lexer
 
 ### Language (primarly used for Venetan) ###
  - themizer, conjugator
