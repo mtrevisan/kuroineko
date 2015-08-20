@@ -5,6 +5,7 @@
  */
 define(function(){
 
+	/** @constant */
 	var BITS_TO_GO = 8;
 
 

@@ -1,18 +1,21 @@
 /**
  * @class Phone
  *
+ * @see {@link https://github.com/kremonte/phonologizer/blob/master/scripts/app.js}
+ * @see {@link http://clas.mq.edu.au/speech/phonetics/phonology/features/}
+ * @see {@link http://clas.mq.edu.au/speech/phonetics/phonology/phoneme/}
+ *
  * @author Mauro Trevisan
  */
 define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
-	//https://github.com/kremonte/phonologizer/blob/master/scripts/app.js
-	//http://clas.mq.edu.au/speech/phonetics/phonology/features/
-	//http://clas.mq.edu.au/speech/phonetics/phonology/phoneme/
-
+	/** @constant */
 	var REGEX_UNICODE_SPLITTER = /(\[([^\]]+)\]|j²|[^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u035B\u035D-\u0360\u0362-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*(?:[\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*[\u035C\u0361][^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*)?)/g;
+	/** @constant */
 	var REGEX_UNICODE_FEATURES = /^\[(\s*([\+\-0])?([a-z]+?)\s*)(,(\s*([\+\-0])?([a-z]+?)\s*))*]$/;
 
 
+	/** @constant */
 	var segments = {
 		'p': {syl: -1, con: 1, son: -1, cnt: -1, dr: -1, app: -1, tap: -1, trill: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: 1, rou: -1, ld: -1, cor: -1, ant: 0, dst: 0, str: 0, lat: -1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
 		'b': {syl: -1, con: 1, son: -1, cnt: -1, dr: -1, app: -1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: 1, rou: -1, ld: -1, cor: -1, ant: 0, dst: 0, str: 0, lat: -1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
@@ -146,7 +149,8 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		C: {con: 1},
 		V: {con: -1}
 	};
-	/*var aliases = {
+	/* * @constant * /
+	var aliases = {
 		syl: 'syllabic',
 		str: 'stress',
 		con: 'consonantal',
@@ -175,6 +179,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		lar: 'laryngeal',
 		suplar: 'supralaryngeal'
 	};*/
+	/** @constant */
 	var implications = [
 		[{con: 1}, {tns: 0}],
 		[{lo: 1}, {tns: 0}],
@@ -195,6 +200,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		[{dr: -1}, {cnt: -1}]
 	];
 	var useDiacritics = false;
+	/** @constant */
 	var diacritics = {
 		'\u0329': [{syl: 1}, {syl: -1}, 'syllabic'],
 		'\u0330': [{sg: -1, cg: 1}, {voi: 1, sg: -1, cg: -1}, 'creaky void'],

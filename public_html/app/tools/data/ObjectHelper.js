@@ -1,9 +1,15 @@
+/* global Function, toString */
+
 /**
  * @class ObjectHelper
  *
  * @author Mauro Trevisan
  */
 define(function(){
+
+	/** @constant */
+	var TYPE_OBJECT = '[object Object]';
+
 
 	Function.prototype.clone = function(){
 		var scope = this;
@@ -24,12 +30,12 @@ define(function(){
 
 
 	/**
-	 * Sencha Touch 2.4.0's Ext.apply
+	 * Sencha Touch 2.4.0's Ext.apply<p>
 	 * Copies all the properties of config to the specified object.
 	 *
 	 * @param {Object} object The receiver of the properties.
 	 * @param {Object} config The source of the properties.
-	 * @param {Object} [defaults] A different object that will also be applied for default values.
+	 * @param {Object} defaults A different object that will also be applied for default values.
 	 * @return {Object} returns obj
 	 */
 	var apply = function(object, config, defaults){
@@ -50,12 +56,12 @@ define(function(){
 	};
 
 	/** Sencha Touch 2.4.0's Ext.isObject */
-	var isObject = (toString.call(null) === '[object Object]'?
+	var isObject = (toString.call(null) === TYPE_OBJECT?
 		function(value){
-			return (value !== null && value !== undefined && toString.call(value) === '[object Object]');
+			return (value !== null && value !== undefined && toString.call(value) === TYPE_OBJECT);
 		}:
 		function(value){
-			return (toString.call(value) === '[object Object]');
+			return (toString.call(value) === TYPE_OBJECT);
 		}
 	);
 
@@ -70,7 +76,7 @@ define(function(){
 	};
 
 	var isRegExp = function(value){
-		return (toString.call(value) === '[object RegExp]');
+		return (value instanceof RegExp);
 	};
 
 	var extractData = function(container, selector){
@@ -131,7 +137,6 @@ define(function(){
 		if(typeA != typeB)
 			return false;
 
-		//Array
 		if(typeA === '[object Array]'){
 			if(a.length != b.length)
 				return false;
@@ -139,7 +144,6 @@ define(function(){
 			return a.every(function(k, i){ return deepEquals(k, this[i]); }, b);
 		}
 
-		//Object
 		if(typeA === '[object Object]'){
 			var keysA = Object.keys(a).sort(),
 				keysB = Object.keys(b).sort();

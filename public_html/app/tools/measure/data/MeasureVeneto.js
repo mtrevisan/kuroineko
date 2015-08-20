@@ -118,7 +118,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		else if(place.match(/Arxiñan|Axiago|Kamixan viŧentin|Lonigo|Montebèl|Rekoaro|Skio|Thiène/))
 			place = 'Viŧenŧa';
 
-		var a = 'braŧo ' + (place.match(/Verona/)? ' (longo)': '');
+		var a = 'braŧo' + (place.match(/Verona/)? ' (longo)': '');
 		var m = new MeasureConverter(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
 
 		var o = {
@@ -152,7 +152,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		else if(place.match(/Arxiñan|Axiago|Kamixan viŧentin|Lonigo|Montebèl|Rekoaro|Skio|Thiène/))
 			place = 'Viŧenŧa';
 
-		var a = 'braŧo ' + (place.match(/Verona/)? ' (kurto)': '');
+		var a = 'braŧo' + (place.match(/Verona/)? ' (kurto)': '');
 		var m = new MeasureConverter(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
 
 		if(place.match(/Belun/))
@@ -188,7 +188,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		else if(place.match(/Arxiñan|Axiago|Kamixan viŧentin|Lonigo|Montebèl|Rekoaro|Skio|Thiène/))
 			place = 'Viŧenŧa';
 
-		var a = 'braŧo ' + (place.match(/Verona/)? ' (longo)': '');
+		var a = 'braŧo' + (place.match(/Verona/)? ' (longo)': '');
 		var m = new MeasureConverter(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
 
 		var o = {
@@ -217,7 +217,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		else if(place.match(/Arxiñan|Axiago|Kamixan viŧentin|Lonigo|Montebèl|Rekoaro|Skio|Thiène/))
 			place = 'Viŧenŧa';
 
-		var a = 'braŧo ' + (place.match(/Verona/)? ' (longo)': '');
+		var a = 'braŧo' + (place.match(/Verona/)? ' (longo)': '');
 		var m = new MeasureConverter(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
 
 		var o = {

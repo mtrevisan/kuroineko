@@ -28,8 +28,10 @@ define(function(){
 	var incompleteBetaFunction = (function(){
 		/**
 		 * Computes beta using continuous fractions
-		 *
+		 * <p>
+		 * <code>
 		 * Ix(a, b) = x^a * y^b * (1 / 1 + d1 / 1 + d2 / 1+ ...) / (a * B(a, b)), where y = 1 - x
+		 * </code>
 		 *
 		 * @private
 		 */

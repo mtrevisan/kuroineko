@@ -20,7 +20,7 @@ define(function(){
 	};
 
 	/**
-	 * Underscore.js 1.8.3's compose
+	 * Underscore.js 1.8.3's compose<p>
 	 * Returns a function that is the composition of a list of functions, each consuming the return value of the function that follows.
 	 */
 	var compose = function(){

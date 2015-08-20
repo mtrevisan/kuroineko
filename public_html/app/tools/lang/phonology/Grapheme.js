@@ -5,11 +5,16 @@
  */
 define(['tools/lang/phonology/Phone'], function(Phone){
 
+	/** @constant */
 	var HYATUS_MARKER = 'ϟ',
+	/** @constant */
 		HYATUS_MARKER_REGEXP = new RegExp(HYATUS_MARKER, 'g');
 
+	/** @constant */
 	var TYPE_GRAPHEME = 'Graphemes',
+	/** @constant */
 		TYPE_PHONEME = 'Phonemes',
+	/** @constant */
 		TYPE_PHONE = 'Phones';
 
 

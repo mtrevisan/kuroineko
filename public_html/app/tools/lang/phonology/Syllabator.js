@@ -5,7 +5,9 @@
  */
 define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/lang/phonology/Word', 'tools/data/StringHelper'], function(Phone, Grapheme, Word, StringHelper){
 
+	/** @constant */
 	var SYLLABE_SEPARATOR_IN_WORD = '|',
+	/** @constant */
 		SYLLABE_SEPARATOR_CROSS_WORD = '/';
 
 
@@ -102,8 +104,8 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 		};
 
 		/**
-		 * @param {number} idx	Global index with respect to the word from which to extract the index of the owning syllabe.
-		 * @param {bool} calculateRelativeIndex	Calculate the relative index inside the owning syllabe.
+		 * @param {Number} idx	Global index with respect to the word from which to extract the index of the owning syllabe.
+		 * @param {Boolean} calculateRelativeIndex	Calculate the relative index inside the owning syllabe.
 		 */
 		var getSyllabeIndex = function(idx, calculateRelativeIndex){
 			if(idx >= 0){
@@ -122,15 +124,15 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 		};
 
 		/**
-		 * @param {number} idx	Index of syllabe to extract, if negative then it's relative to the last syllabe.
+		 * @param {Number} idx	Index of syllabe to extract, if negative then it's relative to the last syllabe.
 		 */
 		var getSyllabe = function(idx){
 			return this.syllabes[(idx + this.syllabes.length) % this.syllabes.length];
 		};
 
 		/**
-		 * @param {number} idx	Index of syllabe, if negative then it's relative to the last syllabe.
-		 * @return {number} Global index at which the syllabe starts.
+		 * @param {Number} idx	Index of syllabe, if negative then it's relative to the last syllabe.
+		 * @return {Number} Global index at which the syllabe starts.
 		 */
 		var getGlobalIndex = function(idx){
 			idx = (idx + this.syllabes.length) % this.syllabes.length;
@@ -143,7 +145,7 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 		};
 
 		/**
-		 * @param {number} idx	Index of syllabe, if negative then it's relative to the last syllabe.
+		 * @param {Number} idx	Index of syllabe, if negative then it's relative to the last syllabe.
 		 */
 		var getGlobalIndexOfStressedSyllabe = function(idx){
 			return this.getGlobalIndex(idx) + Word.getLastVowelIndex(this.getSyllabe(idx));

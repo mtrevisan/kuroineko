@@ -2,15 +2,17 @@
  * @class SmithWaterman
  *
  * Smith-Waterman local alignment algorithm.
- * See also http://www.cs.bgu.ac.il/~michaluz/seminar/Gotoh.pdf
- * http://www.akira.ruc.dk/~keld/teaching/algoritmedesign_f03/Artikler/05/Hirschberg75.pdf
- *
+ * <p>
  * Time: O(n^2 * m), Space: O(n * m)
+ *
+ * @see {@link http://www.cs.bgu.ac.il/~michaluz/seminar/Gotoh.pdf}
+ * @see {@link http://www.akira.ruc.dk/~keld/teaching/algoritmedesign_f03/Artikler/05/Hirschberg75.pdf}
  *
  * @author Mauro Trevisan
  */
 define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
+	/** @constant */
 	var REGEX_UNICODE_SPLITTER = /(\[([^\]]+)\]|[^\u0300-\u036F](?:[\u0300-\u036F]*[\u035C\u0361][^\u0300-\u036F][\u0300-\u036F]*)?)/g;
 
 

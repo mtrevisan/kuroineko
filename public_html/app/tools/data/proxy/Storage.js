@@ -37,6 +37,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 	/**
 	 * Inserts records into the LocalStorage.
+	 * 
 	 * @param {Object[]/Object} records		An array of record instances in the form {id: '...', otherData: '...', ...}.
 	 */
 	var setRecord = function(records){

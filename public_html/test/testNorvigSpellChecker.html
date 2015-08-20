@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<link rel="shortcut icon" href="../favicon.png" />
+
+	<title>test NorvigSpellChecker</title>
+
+	<link rel="stylesheet" href="../test/lib/qunit/qunit-1.18.0.css">
+
+	<script src="../test/lib/qunit/qunit-1.18.0.js"></script>
+
+	<script src="../app/AMDLoader.js"></script>
+
+	<script>
+		AMDLoader.config = {
+			baseUrl: '../app',
+			paths: {
+				libs: '../libs'
+			}
+		};
+
+		require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
+			test('plain spell checker from dictionary', function(){
+				var spellChecker = new NorvigSpellChecker('abcdefghijklmnopqrstuvwxyz');
+				spellChecker.readDictionary(['abb', 'acbd']);
+
+				var suggestions = spellChecker.suggest('abc');
+
+				deepEqual(suggestions, {
+					candidates: {
+						abb: 0.9815878113367819,
+						acbd: 0.01841218866321811
+					},
+					sortedKeys: [
+						'abb',
+						'acbd'
+					]
+				});
+			});
+
+			test('plain spell checker from corpus', function(){
+				var spellChecker = new NorvigSpellChecker('abcdefghijklmnopqrstuvwxyz');
+				spellChecker.readDictionary('abb, acbd');
+
+				var suggestions = spellChecker.suggest('abc');
+
+				deepEqual(suggestions, {
+					candidates: {
+						abb: 0.9815878113367819,
+						acbd: 0.01841218866321811
+					},
+					sortedKeys: [
+						'abb',
+						'acbd'
+					]
+				});
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture"></div>
+</body>
+</html>

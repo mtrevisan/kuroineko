@@ -21,7 +21,7 @@ define(function(){
 	/**
 	 * Adds a word into the trie.
 	 *
-	 * @param word {String} word to add
+	 * @param {String} word		Word to add
 	 * @return last node
 	 */
 	var add = function(word){

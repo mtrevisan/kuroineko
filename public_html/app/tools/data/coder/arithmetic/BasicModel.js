@@ -7,18 +7,29 @@
  */
 define(['tools/data/structs/BinaryIndexedTree'], function(BinaryIndexedTree){
 
-	/** Total number of bytes. */
+	/**
+	 * Total number of bytes.
+	 * @constant
+	 */
 	var NUM_BYTES = 256;
-	/** Cumulative total of all outcomes. */
+	/**
+	 * Cumulative total of all outcomes.
+	 * @constant
+	 */
 	var NUM_OUTCOMES = NUM_BYTES + 1;
 
+	/** @constant */
 	var SYMBOL_EOF = 256;
-	/** Used to code information about the model structure. */
-	//	SYMBOL_ESCAPE = 257;
+	/* *
+	 * Used to code information about the model structure.
+	 * @constant
+	 * /
+	var SYMBOL_ESCAPE = 257;*/
 
 	/**
-	 * Maximum count before rescaling.
+	 * Maximum count before rescaling.<p>
 	 * Higher values compress better, but may cause overflow, lower values are generally faster up to the point they cause thrashing.
+	 * @constant
 	 */
 	var MAX_INDIVIDUAL_COUNT = 8 * 1024;
 

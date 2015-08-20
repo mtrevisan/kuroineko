@@ -1,28 +1,35 @@
 /**
  * @class ContinuedFraction
+ *
  * You can pass a fraction in different formats. Either as array, as double, as string or as an integer.
+ * <p>
+ * Array/Object form:<p>
+ * <ul>
+ *		<li>[0 => <nominator>, 1 => <denominator>]</li>
+ *		<li>{(sgn => <sign>), num => <nominator>, den => <denominator>}</li>
+ * </ul>
+ * Number form:<p>
+ * <ul>
+ *		<li>Single number value</li>
+ * </ul>
+ * String form:<p>
+ * <ul>
+ *		<li>123.456 - a simple double</li>
+ *		<li>123.(456) - a double with repeating decimal places</li>
+ *		<li>123.45(6) - a double with repeating last place</li>
+ *		<li>123/456 - a fraction</li>
+ * </ul>
  *
- * Array/Object form:
- *		[0 => <nominator>, 1 => <denominator>]
- *		{(sgn => <sign>), num => <nominator>, den => <denominator>}
- * Number form:
- *		Single number value
- * String form:
- *		123.456 - a simple double
- *		123.(456) - a double with repeating decimal places
- *		123.45(6) - a double with repeating last place
- *		123/456 - a fraction
- *
- * @see https://github.com/mjdominus/cf
- * @see http://www.inwap.com/pdp10/hbaker/hakmem/cf.html
- * @see http://contfrac.sourceforge.net/
- * @see http://www.tweedledum.com/rwg/cfup.htm
- * @see http://math.stackexchange.com/questions/232422/faster-arithmetic-with-finite-continued-fractions
- * @see http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=56C41F83D4DCD5F60492FDBF955AD60F?doi=10.1.1.46.9694&rep=rep1&type=pdf
- * @see http://paul-mccarthy.us/Cfrac/CF_Arithmetic.htm
- * @see https://github.com/themadcreator/gosper/blob/master/src/org/numerics/continuedfraction/GosperTermIterator.java
- * @see http://home.strw.leidenuniv.nl/~gurkan/gosper.pdf
- * @see http://scholarship.claremont.edu/cgi/viewcontent.cgi?article=1017&context=hmc_theses
+ * @see {@link https://github.com/mjdominus/cf}
+ * @see {@link http://www.inwap.com/pdp10/hbaker/hakmem/cf.html}
+ * @see {@link http://contfrac.sourceforge.net/}
+ * @see {@link http://www.tweedledum.com/rwg/cfup.htm}
+ * @see {@link http://math.stackexchange.com/questions/232422/faster-arithmetic-with-finite-continued-fractions}
+ * @see {@link http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=56C41F83D4DCD5F60492FDBF955AD60F?doi=10.1.1.46.9694&rep=rep1&type=pdf}
+ * @see {@link http://paul-mccarthy.us/Cfrac/CF_Arithmetic.htm}
+ * @see {@link https://github.com/themadcreator/gosper/blob/master/src/org/numerics/continuedfraction/GosperTermIterator.java}
+ * @see {@link http://home.strw.leidenuniv.nl/~gurkan/gosper.pdf}
+ * @see {@link http://scholarship.claremont.edu/cgi/viewcontent.cgi?article=1017&context=hmc_theses}
  *
  * @author Mauro Trevisan
  */
@@ -201,8 +208,8 @@ define(['tools/math/Fraction'], function(Fraction){
 
 
 	//tensor (a * x * y + b * x + c * y + d) / (e * x * y + f * x + g * y + h)
-	//@see http://home.strw.leidenuniv.nl/~gurkan/gosper.pdf
-	//@see http://www.inwap.com/pdp10/hbaker/hakmem/cf.html
+	//@see {@link http://home.strw.leidenuniv.nl/~gurkan/gosper.pdf}
+	//@see {@link http://www.inwap.com/pdp10/hbaker/hakmem/cf.html}
 	var gosperIterator = function(t, x, y){
 		var terms = [];
 
@@ -247,8 +254,9 @@ define(['tools/math/Fraction'], function(Fraction){
 
 	/**
 	 * Returns the partial quotients <code>[a0; a1, a2, ...]</code> of the continued fraction form of <code>x</code>.
-	 * @see http://maths.mq.edu.au/~alf/www-centre/alfpapers/a132.pdf
-	 * @see http://maths-people.anu.edu.au/~brent/pd/rpb166.pdf
+	 *
+	 * @see {@link http://maths.mq.edu.au/~alf/www-centre/alfpapers/a132.pdf}
+	 * @see {@link http://maths-people.anu.edu.au/~brent/pd/rpb166.pdf}
 	 *
 	 * @param {Number} value
 	 * @param {Number} epsilon
@@ -312,7 +320,7 @@ define(['tools/math/Fraction'], function(Fraction){
 	 * <ul>
 	 *		<li>Eric W. Weisstein. "Continued Fraction." From MathWorld--A Wolfram Web Resource. <a target="_blank" href="http://mathworld.wolfram.com/ContinuedFraction.html">http://mathworld.wolfram.com/ContinuedFraction.html</a></li>
 	 * </ul>
-	 * The recurrence relationship defined in those equations can result in very large intermediate results which can result in numerical overflow.
+	 * The recurrence relationship defined in those equations can result in very large intermediate results which can result in numerical overflow.<p>
 	 * As a means to combat these overflow conditions, the intermediate results are scaled whenever they threaten to become numerically unstable.
 	 *
 	 * @param {Number} epsilon
