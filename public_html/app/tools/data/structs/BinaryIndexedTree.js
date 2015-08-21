@@ -28,7 +28,7 @@ define(function(){
 		idx ++;
 		var sum = 0;
 		while(idx){
-			sum += this.tree[idx] || 0;
+			sum += toInteger(this.tree[idx]);
 			//remove least significant 1
 			idx -= (idx & -idx);
 		}
@@ -50,7 +50,7 @@ define(function(){
 			idx --;
 			//at some iteration idx (y) will become z
 			while(idx != z){
-				sum -= this.tree[idx] || 0;
+				sum -= toInteger(this.tree[idx]);
 				//substruct tree frequency which is between y and "the same path"
 				idx -= (idx & -idx);
 			}
@@ -63,11 +63,23 @@ define(function(){
 		if(value){
 			idx ++;
 			while(idx <= this.maxSymbol){
-				this.tree[idx] = (this.tree[idx] || 0) + value;
+				this.tree[idx] = toInteger(this.tree[idx]) + value;
 				//add least significant 1
 				idx += (idx & -idx);
 			}
 		}
+	};
+
+	/**
+	 * Converts <code>value</code> to an integer.
+	 *
+	 * @param {*} value	The value to convert.
+	 * @returns {Number}	Returns the integer.
+	 *
+	 * @private
+	 */
+	var toInteger = function(value){
+		return (value | 0);
 	};
 
 	/**

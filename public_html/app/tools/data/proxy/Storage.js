@@ -5,6 +5,11 @@
  */
 define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
+	/** Object#toString result references. */
+	/** @constant */
+	var TYPE_JSON = '[object JSON]';
+
+
 	var Constructor = function(id){
 		this.storeID = id;
 		this.cache = {};
@@ -37,7 +42,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 	/**
 	 * Inserts records into the LocalStorage.
-	 * 
+	 *
 	 * @param {Object[]/Object} records		An array of record instances in the form {id: '...', otherData: '...', ...}.
 	 */
 	var setRecord = function(records){
@@ -147,7 +152,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	};
 
 	var isJSONNative = (function(){
-		var useNative = ('JSON' in window && window['JSON'] && JSON.toString() == '[object JSON]');
+		var useNative = ('JSON' in window && window['JSON'] && JSON.toString() == TYPE_JSON);
 
 		return function(){
 			return useNative;

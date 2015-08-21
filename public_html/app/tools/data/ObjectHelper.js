@@ -7,8 +7,11 @@
  */
 define(function(){
 
+	/** Object#toString result references. */
 	/** @constant */
-	var TYPE_OBJECT = '[object Object]';
+	var TYPE_OBJECT = '[object Object]',
+	/** @constant */
+		TYPE_ARRAY = '[object Array]';
 
 
 	Function.prototype.clone = function(){
@@ -111,7 +114,7 @@ define(function(){
 		if(typeof item === 'function')
 			cloned = item.clone();
 		//Array
-		else if(type === '[object Array]'){
+		else if(type === TYPE_ARRAY){
 			cloned = [];
 
 			var i = item.length;
@@ -119,7 +122,7 @@ define(function(){
 				cloned[i] = clone(item[i], scope || item);
 		}
 		//Object
-		else if(type === '[object Object]'){
+		else if(type === TYPE_OBJECT){
 			//make sure the returned object has the same prototype as the original
 			cloned = Object.create(item.constructor.prototype);
 
@@ -137,14 +140,14 @@ define(function(){
 		if(typeA != typeB)
 			return false;
 
-		if(typeA === '[object Array]'){
+		if(typeA === TYPE_ARRAY){
 			if(a.length != b.length)
 				return false;
 
 			return a.every(function(k, i){ return deepEquals(k, this[i]); }, b);
 		}
 
-		if(typeA === '[object Object]'){
+		if(typeA === TYPE_OBJECT){
 			var keysA = Object.keys(a).sort(),
 				keysB = Object.keys(b).sort();
 			if(keysA.length != keysB.length)

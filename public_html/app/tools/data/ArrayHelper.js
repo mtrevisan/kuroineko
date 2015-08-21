@@ -142,13 +142,25 @@ var spliceOne = function(arr, index){
 			randomIndex;
 
 		while(currentIndex){
-			randomIndex = Math.random() * currentIndex | 0;
+			randomIndex = toInteger(Math.random() * currentIndex);
 			currentIndex --;
 
 			temporaryValue = array[currentIndex];
 			array[currentIndex] = array[randomIndex];
 			array[randomIndex] = temporaryValue;
 		}
+	};
+
+	/**
+	 * Converts <code>value</code> to an integer.
+	 *
+	 * @param {*} value	The value to convert.
+	 * @returns {Number}	Returns the integer.
+	 *
+	 * @private
+	 */
+	var toInteger = function(value){
+		return (value | 0);
 	};
 
 

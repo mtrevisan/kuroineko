@@ -275,7 +275,7 @@ define(function(){
 	};
 
 	var integerPart = function(){
-		return new Constructor(this.sgn * ((this.num / this.den) | 0), 1);
+		return new Constructor(this.sgn * toInteger(this.num / this.den), 1);
 	};
 
 	var fractionalPart = function(){
@@ -387,13 +387,25 @@ define(function(){
 			}
 
 			if(t >= this.den){
-				ret.push((t / this.den) | 0);
+				ret.push(toInteger(t / this.den));
 				t %= this.den;
 			}
 			else
 				ret.push('0');
 		}
 		return ret.join('').replace(/^(-?)(?:0(?!\.))*(.+?)0*$/, '$1$2');
+	};
+
+	/**
+	 * Converts <code>value</code> to an integer.
+	 *
+	 * @param {*} value	The value to convert.
+	 * @returns {Number}	Returns the integer.
+	 *
+	 * @private
+	 */
+	var toInteger = function(value){
+		return (value | 0);
 	};
 
 	/** @private */
