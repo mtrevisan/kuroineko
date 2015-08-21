@@ -89,9 +89,6 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var resolve = function(id, value){
-		//create promise if necessary
-		getDependencyPromise(id);
-
 		resolves[id](value);
 
 		delete resolves[id];
