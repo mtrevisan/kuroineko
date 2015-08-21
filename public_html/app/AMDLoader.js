@@ -17,27 +17,6 @@ var AMDLoader = (function(doc){
 	};
 
 	/** @private */
-	var getDependencyPromise = function(id){
-		if(!promises[id])
-			promises[id] = new Promise(function(resolve){
-				resolves[id] = resolve;
-
-				var args = id.split('!');
-				if(args.length < 2){
-					//check if this id belongs to a module loaded with js! plugin
-					if(doc.currentScript && doc.currentScript.src && promises['js!' + getCurrentID(/\.js$/)])
-						return;
-
-					args.unshift('base');
-				}
-
-				plugins[args[0]](args[1], id);
-			});
-
-		return promises[id];
-	};
-
-	/** @private */
 	var plugins = {
 		base: function(url){
 			injectScript({
@@ -148,14 +127,26 @@ var AMDLoader = (function(doc){
 	/**
 	 * Call a function with dependencies.
 	 *
-	 * @param {Array}	[dependencies]	Array of dependencies
-	 * @param {Function}	definition	Callback with dependencies as parameters
+	 * @example
+	 * <code>
+	 * require(['tools/data/Lexer'], function(Lexer){ ... });
+	 * </code>
+	 *
+	 * @example
+	 * <code>
+	 * var Lexer = require('tools/data/Lexer');
+	 * </code>
+	 *
+	 * @param {Array/String} [dependencies]	Array of dependencies, or dependency to load if string
+	 * @param {Function} [definition]			Callback with dependencies as parameters
 	 */
 	var require = function(dependencies, definition){
-		if(!Array.isArray(dependencies)){
+		if(isFunction(dependencies)){
 			definition = dependencies;
 			dependencies = extractDependencies(dependencies);
 		}
+		else if(!Array.isArray(dependencies))
+			dependencies = [dependencies];
 
 		//enforce domReady when the img! plugin is required
 		if(!doc.readyState && dependencies.some(function(dep){ return (dep.indexOf('img!') == 0); }))
@@ -170,13 +161,59 @@ var AMDLoader = (function(doc){
 			//resolve urls
 			dependencies = dependencies.map(normalizeURL, this);
 
-			//need to wait for all dependencies to load
-			var promises = dependencies.map(getDependencyPromise, this);
+			if(definition){
+				//need to wait for all dependencies to load
+				var promises = dependencies.map(getDependencyPromise, this);
 
-			Promise.all(promises).then(function(result){
-				definition.apply(this, result);
-			});
+				Promise.all(promises).then(function(result){
+					definition.apply(this, result);
+				});
+			}
+			else{
+//				async(function*(){
+//					definition = yield getDependencyPromise(dependencies[0]);
+//				});
+//				async(function(){
+//					getDependencyPromise(dependencies[0]);
+//				});
+
+//				getDependencyPromise(dependencies).then(function(result){
+//					definition = result;
+//				});
+				return definition;
+			}
 		}
+	};
+
+	/* * @private * /
+	var async = function(fnGenerator){
+		var generator = fnGenerator(),
+			promise = generator.next().value;
+		if(promise)
+			promise.then(function(result){
+				generator.next(result);
+			});
+	};*/
+
+	/** @private */
+	var getDependencyPromise = function(id){
+		if(!promises[id])
+			promises[id] = new Promise(function(resolve){
+				resolves[id] = resolve;
+
+				var args = id.split('!');
+				if(args.length < 2){
+					//check if this id belongs to a module loaded with js! plugin
+					if(doc.currentScript && doc.currentScript.src && promises['js!' + getCurrentID(/\.js$/)])
+						return;
+
+					args.unshift('base');
+				}
+
+				plugins[args[0]](args[1], id);
+			});
+
+		return promises[id];
 	};
 
 	/** @private */
