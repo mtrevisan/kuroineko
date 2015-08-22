@@ -147,7 +147,7 @@ var AMDLoader = (function(doc){
 
 		//enforce domReady when the img! plugin is required
 		if(!doc.readyState && dependencies.some(function(dep){ return (dep.indexOf('img!') == 0); }))
-			return require(['domReady!'], function(){
+			require(['domReady!'], function(){
 				require(dependencies, definition);
 			});
 
@@ -169,9 +169,6 @@ var AMDLoader = (function(doc){
 			else{
 //				async(function*(){
 //					definition = yield getDependencyPromise(dependencies[0]);
-//				});
-//				async(function(){
-//					getDependencyPromise(dependencies[0]);
 //				});
 
 //				getDependencyPromise(dependencies).then(function(result){
@@ -391,7 +388,7 @@ var AMDLoader = (function(doc){
 		xhr.onreadystatechange = function(){
 			if(xhr.readyState == 4){
 				if(xhr.status == 200)
-					success && success(responseType == 'text'? xhr.responseText: new Uint8Array(xhr.response));
+					success && success(!responseType.length || responseType == 'text'? xhr.responseText: new Uint8Array(xhr.response));
 				else{
 					var errorText = 'Syntax or http error loading: ' + module.url + ', status: ' + xhr.status + ' ' + xhr.statusText;
 					failure && failure(new Error(errorText));
