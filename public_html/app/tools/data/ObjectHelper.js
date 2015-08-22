@@ -171,20 +171,21 @@ define(function(){
 	};
 
 	/** @private */
-	var saveFile = (function(){
-		 var a = document.createElement('a');
-		 document.body.appendChild(a);
-		 a.style = 'display:none';
+	var saveFile = function(data, filename, type){
+		if(!document.getElementById('__saveFile')){
+			var a = document.createElement('a');
+			a.id = '__saveFile';
+			a.style = 'display:none';
+			document.body.appendChild(a);
+		}
 
-		return function(data, filename, type){
-			var blob = new Blob([data], {type: type}),
-				url = window.URL.createObjectURL(blob);
-			a.href = url;
-			a.download = filename;
-			a.click();
-			window.URL.revokeObjectURL(url);
-		};
-	}());
+		var blob = new Blob([data], {type: type}),
+			url = window.URL.createObjectURL(blob);
+		a.href = url;
+		a.download = filename;
+		a.click();
+		window.URL.revokeObjectURL(url);
+	};
 
 
 	return {
