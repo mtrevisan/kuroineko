@@ -8,7 +8,8 @@
 var AMDLoader = (function(doc){
 
 	var promises = {},
-		resolves = {};
+		resolves = {},
+		definitions = {};
 
 
 	/** @private */
@@ -90,8 +91,9 @@ var AMDLoader = (function(doc){
 	/** @private */
 	var resolve = function(id, value){
 		resolves[id](value);
-
 		delete resolves[id];
+
+		definitions[id] = value;
 	};
 
 	/**
@@ -130,6 +132,7 @@ var AMDLoader = (function(doc){
 	 * </code>
 	 *
 	 * @example
+	 * To be used only if a module has already been loaded.
 	 * <code>
 	 * var Lexer = require('tools/data/Lexer');
 	 * </code>
@@ -167,27 +170,14 @@ var AMDLoader = (function(doc){
 				});
 			}
 			else{
-//				async(function*(){
-//					definition = yield getDependencyPromise(dependencies[0]);
-//				});
+				var dep = definitions[dependencies[0]];
+				if(dep)
+					return dep;
 
-//				getDependencyPromise(dependencies).then(function(result){
-//					definition = result;
-//				});
-				return definition;
+				throw new Error('Module name "' + dependencies[0] + '" has not been loaded yet.');
 			}
 		}
 	};
-
-	/* * @private * /
-	var async = function(fnGenerator){
-		var generator = fnGenerator(),
-			promise = generator.next().value;
-		if(promise)
-			promise.then(function(result){
-				generator.next(result);
-			});
-	};*/
 
 	/** @private */
 	var getDependencyPromise = function(id){
