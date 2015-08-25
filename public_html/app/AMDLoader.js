@@ -125,6 +125,8 @@ var AMDLoader = (function(doc){
 			});
 	};
 
+	define.amd = {};
+
 	/**
 	 * Call a function with dependencies.
 	 *
