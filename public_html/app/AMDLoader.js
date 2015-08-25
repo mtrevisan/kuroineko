@@ -174,9 +174,9 @@ var AMDLoader = (function(doc){
 				});
 			}
 			else{
-				var dep = definitions[dependencies[0]];
-				if(dep)
-					return dep;
+				var def = definitions[dependencies[0]];
+				if(def)
+					return def;
 
 				throw new Error('Module name "' + dependencies[0] + '" has not been loaded yet.');
 			}
