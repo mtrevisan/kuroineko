@@ -22,6 +22,8 @@ var AMDLoader = (function(doc){
 		base: function(url){
 			injectScript({
 				src: url,
+//				charset: 'UTF-8',
+//				type: 'text/javascript',
 				async: true
 			});
 		},
@@ -323,6 +325,8 @@ var AMDLoader = (function(doc){
 
 			Object.keys(module).forEach(function(key){
 				el[key] = module[key];
+				//alternative code:
+//				el.setAttribute(key, module[key]);
 			});
 
 			head.appendChild(el);
