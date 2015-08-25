@@ -151,10 +151,12 @@ var AMDLoader = (function(doc){
 			dependencies = [dependencies];
 
 		//enforce domReady when the img! plugin is required
-		if(!doc.readyState && dependencies.some(function(dep){ return (dep.indexOf('img!') == 0); }))
+		if(!doc.readyState && dependencies.some(function(dep){ return (dep.indexOf('img!') == 0); })){
 			require(['domReady!'], function(){
 				require(dependencies, definition);
 			});
+			return;
+		}
 
 		if(!dependencies.length)
 			//module has no dependencies, run definition now
