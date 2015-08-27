@@ -285,7 +285,7 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var injectScript = function(module, success, failure){
-		module.src += '.js';
+		module.src = module.src.replace(/(.+?)(\.js)?$/, '$1.js');
 		//actually, we don't even need to set this at all
 		//module.type = 'text/javascript';
 		module.charset = module.charset || 'UTF-8';
