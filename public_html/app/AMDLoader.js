@@ -109,7 +109,7 @@ var AMDLoader = (function(doc){
 		if(!Array.isArray(args[1]))
 			args.splice(1, 0, extractDependencies(dependencies));
 
-		id = args[0];
+		id = addJSExtension(args[0]);
 		dependencies = args[1];
 		definition = args[2];
 
@@ -185,6 +185,8 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var getDependencyPromise = function(id){
+		id = addJSExtension(id);
+
 		if(!promises[id])
 			promises[id] = new Promise(function(resolve){
 				resolves[id] = resolve;
@@ -205,8 +207,13 @@ var AMDLoader = (function(doc){
 	};
 
 	/** @private */
-	var getCurrentID = function(ext){
-		return doc.currentScript.getAttribute('src').replace(ext || /\.[^/.]+$/, '');
+	var getCurrentID = function(replacement){
+		return doc.currentScript.getAttribute('src').replace(replacement || /\.[^/.]+$/, '');
+	};
+
+	/** @private */
+	var addJSExtension = function(value){
+		return value.replace(/(.+[\/\\][^\.]+)(\.js)?$/, '$1.js');
 	};
 
 	/** @private */
@@ -285,7 +292,6 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var injectScript = function(module, success, failure){
-		module.src = module.src.replace(/(.+?)(\.js)?$/, '$1.js');
 		//actually, we don't even need to set this at all
 		//module.type = 'text/javascript';
 		module.charset = module.charset || 'UTF-8';

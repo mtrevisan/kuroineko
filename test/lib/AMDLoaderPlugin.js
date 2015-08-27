@@ -24,7 +24,7 @@
 			});
 		};
 
-		require([file.fileSrc.replace(/(.+).js$/, '$1')], onSuccess, onError);
+		require([file.fileSrc], onSuccess, onError);
 
 		return true;
 	};
