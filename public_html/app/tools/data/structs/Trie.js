@@ -62,13 +62,21 @@ define(function(){
 		};
 	};
 
+	/** Search the given string and return <code>true</code> if it lands on on a word, essentially testing if the word exists in the trie. */
 	var contains = function(word){
 		var tmp = this.findPrefix(word);
 		tmp = tmp.parent.children[tmp.index];
 		return (tmp && tmp.leaf? tmp: undefined);
 	};
 
-	/** Get the words with the given prefix */
+	/**
+	 * Search the trie and return an array of words which have same prefix.<p>
+	 * For example if we had the following words in our database:<br>
+	 * <code>a, ab, bc, cd, abc, abd</code><br>
+	 * and we search the string: <code>a</code><br>
+	 * we will get:<br>
+	 * <code>[a, ab, abc, abd]</code>
+	 */
 	var getWords = function(prefix){
 			//the node which represents the last letter of the prefix
 		var node = this.findPrefix(prefix),
@@ -93,6 +101,31 @@ define(function(){
 		return list;
 	};
 
+	/**
+	 * Search the trie and return an array of words which were encountered along the way.<p>
+	 * This will only return words with full prefix matches.<br>
+	 * For example if we had the following words in our database:<br>
+	 * <code>a, ab, bc, cd, abc</code><br>
+	 * and we searched the string: <code>abcd</code><br>
+	 * we would get only:<br>
+	 * <code>[a, ab, abc]</code>
+	 */
+	var findMatchesOnPath = function(word){
+		var node = this.root,
+			size = word.length,
+			list = [],
+			i;
+		for(i = 0; i < size; i ++){
+			if(node.leaf)
+				list.push(node.prefix);
+
+			var stem = word.charAt(i);
+			node = node.children[stem];
+		}
+
+		return list;
+	};
+
 
 	Constructor.prototype = {
 		constructor: Constructor,
@@ -103,7 +136,8 @@ define(function(){
 		remove: remove,
 		findPrefix: findPrefix,
 		contains: contains,
-		getWords: getWords
+		getWords: getWords,
+		findMatchesOnPath: findMatchesOnPath
 	};
 
 

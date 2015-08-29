@@ -202,6 +202,8 @@ var AMDLoader = (function(doc){
 
 				plugins[args[0]](args[1], id);
 			});
+//		else if(definitions[id])
+//			throw new Error('Circular dependency found while loading module name "' + id + '".');
 
 		return promises[id];
 	};
