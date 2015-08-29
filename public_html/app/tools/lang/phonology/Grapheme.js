@@ -35,7 +35,16 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 	};
 
 
-	/** NOTE: Use IPA standard. */
+	/**
+	 * Convert a word into different formats in a different dialect.<p>
+	 * NOTE: Use IPA standard.
+	 *
+	 * @param {String} word		Word to be converted.
+	 * @param {String} from		Type from.
+	 * @param {String} to		Type to.
+	 * @param {String} dialect	Dialect to convert the word to.
+	 * @param {Boolean} phonematicSyllabation	Wether to syllabate phonematically.
+	 */
 	var convert = function(word, from, to, dialect, phonematicSyllabation){
 		var funct = 'convert' + from + 'Into' + to;
 		if(!this[funct])
