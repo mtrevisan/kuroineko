@@ -221,7 +221,8 @@ var AMDLoader = (function(doc){
 	/** @private */
 	var normalizeURL = function(id){
 		var urlPlugin = id.split('!'),
-			url = urlPlugin[urlPlugin.length == 1? 0: 1];
+			len = urlPlugin.length,
+			url = urlPlugin[len == 1? 0: 1];
 
 		if(url){
 			var cfg = AMDLoader.config;
@@ -232,7 +233,7 @@ var AMDLoader = (function(doc){
 			}
 			//if a colon is in the URL, it indicates a protocol is used and it is just an URL to a file, or if it starts with a slash, contains a query arg (i.e. ?)
 			//or ends with .js, then assume the user meant to use an url and not a module id (the slash is important for protocol-less URLs as well as full paths)
-			if(urlPlugin.length == 2 || !url.match(/^\/|:|\?|\.js$/)){
+			if(len == 2 || !url.match(/^\/|:|\?|\.js$/)){
 				if(cfg.baseUrl)
 					url = cfg.baseUrl.replace(/\/?$/, '/' + url);
 
