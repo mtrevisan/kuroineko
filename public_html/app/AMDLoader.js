@@ -221,7 +221,7 @@ var AMDLoader = (function(doc){
 	/** @private */
 	var normalizeURL = function(id){
 		var urlPlugin = id.split('!'),
-			url = (urlPlugin.length == 1? urlPlugin[0]: urlPlugin[1]);
+			url = urlPlugin[urlPlugin.length == 1? 0: 1];
 
 		if(url){
 			var cfg = AMDLoader.config;
