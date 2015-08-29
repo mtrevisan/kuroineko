@@ -202,7 +202,7 @@ var AMDLoader = (function(doc){
 
 				plugins[args[0]](args[1], id);
 			});
-//		else if(definitions[id])
+//		else if(!definitions[id])
 //			throw new Error('Circular dependency found while loading module name "' + id + '".');
 
 		return promises[id];
@@ -232,7 +232,7 @@ var AMDLoader = (function(doc){
 			}
 			//if a colon is in the URL, it indicates a protocol is used and it is just an URL to a file, or if it starts with a slash, contains a query arg (i.e. ?)
 			//or ends with .js, then assume the user meant to use an url and not a module id (the slash is important for protocol-less URLs as well as full paths)
-			if(!url.match(/^\/|:|\?|\.js$/)){
+			if(urlPlugin.length == 2 || !url.match(/^\/|:|\?|\.js$/)){
 				if(cfg.baseUrl)
 					url = cfg.baseUrl.replace(/\/?$/, '/' + url);
 
