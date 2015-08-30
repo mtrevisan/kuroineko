@@ -193,7 +193,7 @@ var spliceOne = function(arr, index){
 	 * @see {@link http://oli.me.uk/2013/06/08/searching-javascript-arrays-with-a-binary-search/}
 	 *
 	 * @param {Array} array	The sorted array to inspect.
-    * @param {*} element	The value to search.
+	 * @param {*} element	The value to search.
 	 * @return {Number}	Returns the index of the matched value, else <code>-1</code>.
 	 *
 	 * @private
