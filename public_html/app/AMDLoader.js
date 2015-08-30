@@ -99,7 +99,7 @@ var AMDLoader = (function(doc){
 	/**
 	 * Define a module with dependencies.
 	 *
-	 * @param {String} id				Name of the module
+	 * @param {String} [id]				Name of the module
 	 * @param {Array}	[dependencies]	Array of dependencies
 	 * @param {Function}	definition	Function returing the module object
 	 */
@@ -140,7 +140,7 @@ var AMDLoader = (function(doc){
 	 * </code>
 	 *
 	 * @param {Array/String} [dependencies]	Array of dependencies, or dependency to load if string
-	 * @param {Function} [definition]			Callback with dependencies as parameters
+	 * @param {Function} [definition]			Callback with dependencies as array as parameters
 	 */
 	var require = function(dependencies, definition){
 		if(isFunction(dependencies)){
@@ -220,9 +220,10 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var normalizeURL = function(id){
-		var urlPlugin = id.split('!'),
-			len = urlPlugin.length,
-			url = urlPlugin[len == 1? 0: 1];
+		//turns a plugin!url to [plugin, url] with the plugin being undefined if the name did not have a plugin prefix
+		var pluginUrl = id.split('!'),
+			len = pluginUrl.length,
+			url = pluginUrl[len == 1? 0: 1];
 
 		if(url){
 			var cfg = AMDLoader.config;

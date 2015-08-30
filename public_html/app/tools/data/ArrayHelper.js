@@ -220,16 +220,11 @@ var spliceOne = function(arr, index){
 	/** Apply Fisher-Yates (aka Knuth) shuffle */
 	var shuffle = function(array){
 		var currentIndex = array.length,
-			temporaryValue,
 			randomIndex;
-
 		while(currentIndex){
-			randomIndex = toInteger(Math.random() * currentIndex);
-			currentIndex --;
+			randomIndex = toInteger(Math.random() * currentIndex --);
 
-			temporaryValue = array[currentIndex];
-			array[currentIndex] = array[randomIndex];
-			array[randomIndex] = temporaryValue;
+			array[currentIndex] = array[randomIndex] + (array[randomIndex] = array[currentIndex], 0);
 		}
 	};
 

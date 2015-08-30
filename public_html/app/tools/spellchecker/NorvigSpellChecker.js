@@ -1,4 +1,10 @@
 /**
+ * Probabilistic spellchecker.
+ * <p>
+ * The general idea is simple. Given a word, the spellchecker calculates all strings that are at 2 edit distance away. Of those many candidates,
+ * it filters the ones that are not words and then returns an array of possible corrections in order of decreasing probability, based on the edit
+ * distance and the candidate's frequency in the input corpus.<br>
+ *
  * @class NorvigSpellChecker
  *
  * @see {@link http://norvig.com/spell-correct.html}
@@ -15,6 +21,9 @@ define(function(){
 	};
 
 
+	/**
+	 * @param {Array} corpus	Corpus from which word probabilities are calculated
+	 */
 	var readDictionary = function(corpus){
 		corpus = extractWords.call(this, corpus);
 
@@ -45,17 +54,23 @@ define(function(){
 		}, this.dictionary);
 	};
 
-	var suggest = function(word){
-		var candidates = calculate0EditSet.call(this, word);
+	var isCorrect = function(word){
+		return !!this.dictionary[word];
+	};
 
-		if(!Object.keys(candidates).length){
-			var input = {};
-			input[word] = 0;
-
-			calculate1EditSet.call(this, input, candidates);
-
-			calculate2EditSet.call(this, input, candidates);
-		}
+	/**
+	 * Returns a list of suggested corrections, from highest to lowest probability.
+	 * <p>
+	 * According to Norvig, literature suggests that 80% to 95% of spelling errors are an edit distance of 1 away from the correct word.
+	 *
+	 * @param {String} word			Word to be searched for.
+	 * @param {Number} [distance]	Max edit distance.
+	 * @returns {Object}	an object contains candidates and sorted keys.
+	 */
+	var suggest = function(word, distance){
+		var input = {};
+		input[word] = 0;
+		var candidates = calculateNEditSet.call(this, input, {}, distance || 2);
 
 		return {
 			candidates: calculateRelativeProbabilitiesFromLog(candidates),
@@ -129,7 +144,7 @@ define(function(){
 						fnAddToSet(a + this.alphabet[j] + b, words[word] + getModelProbabilityLog(i, this.alphabet[j], 1), candidates);
 			}
 
-			if(!cumulateOnly && !this.dictionary[word])
+			if(!cumulateOnly && !this.isCorrect(word))
 				delete candidates[word];
 		}, this);
 
@@ -137,12 +152,17 @@ define(function(){
 	};
 
 	/**
-	 * Calculate set of known word at edit distance 2 from the given word.
+	 * Calculate set of known word at edit distance {@code n} from the given word.
 	 *
 	 * @private
 	 */
-	var calculate2EditSet = function(words, candidates){
-		return calculate1EditSet.call(this, calculate1EditSet.call(this, words, candidates, true), candidates);
+	var calculateNEditSet = function(words, candidates, n){
+		if(!n)
+			return calculate0EditSet.call(this, words, candidates);
+		if(n == 1)
+			return calculate1EditSet.call(this, words, candidates);
+
+		return calculateNEditSet.call(this, calculate1EditSet.call(this, words, candidates, true), candidates, n - 1);
 	};
 
 	/** @private */
@@ -204,6 +224,7 @@ define(function(){
 		constructor: Constructor,
 
 		readDictionary: readDictionary,
+		isCorrect: isCorrect,
 		suggest: suggest
 	};
 

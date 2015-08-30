@@ -177,18 +177,29 @@ define(function(){
 	};
 
 	/**
-	 * Euclidean algorithm form Greatest Common Divisor
+	 * Euclidean algorithm to calculate the Greatest Common Divisor (GCD)
+	 *
+	 * @param {Number} a
+	 * @param {Number} b
+	 * @return {Number}
 	 *
 	 * @private
 	 */
 	var _gcd = function(a, b){
+		if(b > a)
+			return _gcd(b, a);
+
 		while(b)
 			a = b + (b = a % b, 0);
 		return a;
 	};
 
 	/**
-	 * Euclidean algorithm form least common multiple
+	 * Euclidean algorithm to calculate the least common multiple (lcm)
+	 *
+	 * @param {Number} a
+	 * @param {Number} b
+	 * @return {Number}
 	 *
 	 * @private
 	 */
@@ -452,7 +463,7 @@ define(function(){
 			return '0';
 		if(this.den == 1)
 			return (this.sgn * this.num).toString();
-		return (this.sgn == -1? '-': '') + '\\frac{' + this.num + '}{' + this.den + '}';
+		return (this.sgn < 0? '-': '') + '\\frac{' + this.num + '}{' + this.den + '}';
 	};
 
 

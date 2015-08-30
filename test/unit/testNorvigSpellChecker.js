@@ -19,8 +19,8 @@ define(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 
 			expect(suggestions).toBeJsonEqual({
 				candidates: {
-					abb: 0.9815878113367819,
-					acbd: 0.01841218866321811
+					abb: 0.9741473302433789,
+					acbd: 0.025852669756621083
 				},
 				sortedKeys: [
 					'abb',
@@ -29,7 +29,7 @@ define(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 			});
 		});
 
-		it('plain spell checker from corpus', function(){
+		it('plain spell checker from corpus 1', function(){
 			var spellChecker = new NorvigSpellChecker('abcdefghijklmnopqrstuvwxyz');
 			spellChecker.readDictionary('abb, acbd');
 
@@ -37,14 +37,50 @@ define(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 
 			expect(suggestions).toBeJsonEqual({
 				candidates: {
-					abb: 0.9815878113367819,
-					acbd: 0.01841218866321811
+					abb: 0.9741473302433789,
+					acbd: 0.025852669756621083
 				},
 				sortedKeys: [
 					'abb',
 					'acbd'
 				]
 			});
+		});
+
+		it('plain spell checker from corpus 2', function(){
+			var spellChecker = new NorvigSpellChecker('abcdefghijklmnopqrstuvwxyz');
+			spellChecker.readDictionary('abb, acbd');
+
+			var suggestions = spellChecker.suggest('ac');
+
+			expect(suggestions).toBeJsonEqual({
+				candidates: {
+					abb: 0.6842105263157899,
+					acbd: 0.31578947368421
+				},
+				sortedKeys: [
+					'abb',
+					'acbd'
+				]
+			});
+		});
+
+		it('is correct', function(){
+			var spellChecker = new NorvigSpellChecker('abcdefghijklmnopqrstuvwxyz');
+			spellChecker.readDictionary('abb, acbd');
+
+			var correct = spellChecker.isCorrect('abb');
+
+			expect(correct).toBe(true);
+		});
+
+		it('is not correct', function(){
+			var spellChecker = new NorvigSpellChecker('abcdefghijklmnopqrstuvwxyz');
+			spellChecker.readDictionary('abb, acbd');
+
+			var correct = spellChecker.isCorrect('abc');
+
+			expect(correct).toBe(false);
 		});
 	});
 });
