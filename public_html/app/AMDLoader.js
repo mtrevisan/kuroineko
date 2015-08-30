@@ -14,7 +14,7 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var isFunction = function(fn){
-		return (typeof fn === 'function');
+		return (typeof fn == 'function');
 	};
 
 	/** @private */
@@ -105,7 +105,7 @@ var AMDLoader = (function(doc){
 	 */
 	var define = function(id, dependencies, definition){
 		var args = [id, dependencies, definition];
-		args.unshift(typeof id === 'string'? normalizeURL(args.shift()): getCurrentID());
+		args.unshift(typeof id == 'string'? normalizeURL(args.shift()): getCurrentID());
 		if(!Array.isArray(args[1]))
 			args.splice(1, 0, extractDependencies(dependencies));
 

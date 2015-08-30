@@ -6,7 +6,7 @@
 define(['tools/math/Fraction'], function(Fraction){
 
 	var Constructor = function(data, baseUOM){
-		if(typeof data === 'string')
+		if(typeof data == 'string')
 			data = [data];
 
 		if(Array.isArray(data)){

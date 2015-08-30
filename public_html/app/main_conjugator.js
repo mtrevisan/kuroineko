@@ -18,7 +18,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 
 		var onKeyUpCorrectOrthography = HTMLHelper.onEventCorrectOrthography(infinitiveDOM);
 
-		if(typeof verbsDictionary !== 'undefined' && Array.isArray(verbsDictionary) && (typeof NorvigSpellChecker !== 'undefined' && spellCheckerSuggestionsDOM || verbsDictionaryDOM)){
+		if(ObjectHelper.isDefined(verbsDictionary) && Array.isArray(verbsDictionary) && (ObjectHelper.isDefined(NorvigSpellChecker) && spellCheckerSuggestionsDOM || verbsDictionaryDOM)){
 			var extractVerbInfinitive = (function(){
 				var themeVowel = ['à', 'é', 'e', 'í', 'í'];
 
@@ -121,7 +121,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 
 
 		//load user data:
-		if(typeof StorageProxy !== 'undefined' && StorageProxy.isSupported()){
+		if(ObjectHelper.isDefined(StorageProxy) && StorageProxy.isSupported()){
 			historyStore = new StorageProxy('venetan-verb-conjugator-history');
 
 			showHistory();
@@ -182,7 +182,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 			return output;
 		};
 		var extract = function(paradigm, id){
-			var data = ObjectHelper.extractData(paradigm, id),
+			var data = ObjectHelper.path(paradigm, id),
 				output = '',
 				key;
 			if(ObjectHelper.isString(data))

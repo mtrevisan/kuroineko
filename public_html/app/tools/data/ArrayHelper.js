@@ -109,7 +109,7 @@ define(function(){
 			return -1;
 
 		var i = length;
-		if (typeof fromIndex == 'number') {
+		if(typeof fromIndex == 'number'){
 			i = toInteger(fromIndex);
 			i = (i < 0? Math.max(length + i, 0): Math.min(i, length - 1)) + 1;
 		}

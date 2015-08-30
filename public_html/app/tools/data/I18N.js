@@ -7,7 +7,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 	var translate = function(resource, key, defaultLabel){
 		if(resource){
-			var label = ObjectHelper.extractData(resource, key);
+			var label = ObjectHelper.path(resource, key);
 			if(ObjectHelper.isString(label))
 				return label;
 		}
