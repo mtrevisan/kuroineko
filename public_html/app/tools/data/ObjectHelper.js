@@ -102,7 +102,9 @@ define(function(){
 	 * Returns a partial copy of an object containing only the keys specified. If the key does not exist, the property is ignored.
 	 *
 	 * @example
+	 * <code>
 	 * ObjectHelper.pick(['a', 'e', 'f'], {a: 1, b: 2, c: 3, d: 4}); //=> {a: 1}
+	 * </code>
 	 *
 	 * @param {Array} names	An array of String property names to copy onto a new object
 	 * @param {Object} obj	The object to copy from

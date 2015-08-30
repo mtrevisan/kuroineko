@@ -46,18 +46,24 @@ define(function(){
 	 * @return {Number}	Returns the index of the matched value, else <code>-1</code>.
 	 *
 	 * @example
+	 * <code>
 	 * ArrayHelper.indexOf([1, 2, 1, 2], 2);
 	 * // => 1
+	 * </code>
 	 *
 	 * @example
-	 * // using `fromIndex`
+	 * <code>
+	 * //using `fromIndex`
 	 * ArrayHelper.indexOf([1, 2, 1, 2], 2, 2);
 	 * // => 3
+	 * </code>
 	 *
 	 * @example
-	 * // performing a binary search
+	 * <code>
+	 * //performing a binary search
 	 * ArrayHelper.indexOf([1, 1, 2, 2], 2, true);
 	 * // => 2
+	 * </code>
 	 */
 	var indexOf = function(array, element, fromIndex){
 		var length = (array? array.length: 0);
@@ -90,18 +96,24 @@ define(function(){
 	 * @return {Number}	Returns the index of the matched value, else <code>-1</code>.
 	 *
 	 * @example
+	 * <code>
 	 * ArrayHelper.indexOf([1, 2, 1, 2], 2);
 	 * // => 3
+	 * </code>
 	 *
 	 * @example
-	 * // using `fromIndex`
+	 * <code>
+	 * //using `fromIndex`
 	 * ArrayHelper.indexOf([1, 2, 1, 2], 2, 2);
 	 * // => 1
+	 * </code>
 	 *
 	 * @example
-	 * // performing a binary search
+	 * <code>
+	 * //performing a binary search
 	 * ArrayHelper.indexOf([1, 1, 2, 2], 2, true);
 	 * // => 3
+	 * </code>
 	 */
 	var lastIndexOf = function(array, element, fromIndex){
 		var length = (array? array.length: 0);
@@ -233,8 +245,10 @@ var spliceOne = function(arr, index){
 	 * Takes a predicate and a list and returns the pair of lists of elements which do and do not satisfy the predicate, respectively.
 	 *
 	 * @example
+	 * <code>
 	 * ArrayHelper.partition(function(value){ return (value.indexOf('s') >= 0); }, ['sss', 'ttt', 'foo', 'bars']);
 	 * //=> [['sss', 'bars'], ['ttt', 'foo']]
+	 * </code>
 	 *
 	 * @param {Function} predicate	A predicate to determine which array the element belongs to.
 	 * @param {Array} list				The array to partition.

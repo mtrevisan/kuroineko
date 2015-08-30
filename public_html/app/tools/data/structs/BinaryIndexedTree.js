@@ -88,12 +88,13 @@ define(function(){
 	 * @example
 	 * Rescales by dividing all frequencies by a constant factor
 	 * <code>
-	 *		map(function(k){ return k / 3; });
+	 *	map(function(k){ return k / 3; });
 	 *	</code>
+	 *	
 	 * @example
 	 * Rescales by dividing all frequencies by 2, but taking a minimum of 1
 	 * <code>
-	 *		map(function(k){ return ((k + 1) >> 1); });
+	 *	map(function(k){ return ((k + 1) >> 1); });
 	 *	</code>
 	 */
 	var map = function(fn){

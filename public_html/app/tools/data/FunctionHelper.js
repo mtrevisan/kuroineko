@@ -73,6 +73,7 @@ define(function(){
 	 * @see {@link https://github.com/ramda/ramda/blob/master/src/cond.js}
 	 *
 	 * @example
+	 * <code>
 	 * var fn = FunctionHelper.choice([
 	 *		[function(value){ return (value == 0); }, function(value){ return 'water freezes at 0°C'; }],
 	 *		[function(value){ return (value == 100); }, function(value){ return 'water boils at 100°C'; }],
@@ -81,6 +82,7 @@ define(function(){
 	 * fn(0);	//=> 'water freezes at 0°C'
 	 * fn(50);	//=> 'nothing special happens at 50°C'
 	 * fn(100);	//=> 'water boils at 100°C'
+	 * </code>
 	 *
 	 * @param {Array} pairs
 	 * @return {Function}

@@ -101,7 +101,7 @@ var AMDLoader = (function(doc){
 	 *
 	 * @param {String} [id]				Name of the module
 	 * @param {Array}	[dependencies]	Array of dependencies
-	 * @param {Function}	definition	Function returing the module object
+	 * @param {Function}	definition	Function returning the module object
 	 */
 	var define = function(id, dependencies, definition){
 		var args = [id, dependencies, definition];
@@ -171,6 +171,8 @@ var AMDLoader = (function(doc){
 
 				Promise.all(promises).then(function(result){
 					definition.apply(this, result);
+				}).catch(function(msg){
+					throw new Error('Module name "' + dependencies + '" has raised an exception: ' + msg);
 				});
 			}
 			else{
