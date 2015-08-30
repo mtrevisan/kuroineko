@@ -160,7 +160,7 @@ define(function(){
 		if(!n)
 			return calculate0EditSet.call(this, words, candidates);
 		if(n == 1)
-			return calculate1EditSet.call(this, words, candidates);
+			return calculate1EditSet.call(this, calculate0EditSet.call(this, words, candidates), candidates);
 
 		return calculateNEditSet.call(this, calculate1EditSet.call(this, words, candidates, true), candidates, n - 1);
 	};

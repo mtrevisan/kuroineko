@@ -24,11 +24,11 @@ define(function(){
 	 * Returns a function that is the composition of a list of functions, each consuming the return value of the function that follows.
 	 */
 	var compose = function(){
-		var args = arguments;
-		var start = args.length - 1;
+		var args = arguments,
+			start = args.length - 1;
 		return function(){
-			var i = start;
-			var result = args[start].apply(this, arguments);
+			var i = start,
+				result = args[start].apply(this, arguments);
 			while(i --)
 				result = args[i].call(this, result);
 			return result;
@@ -73,9 +73,9 @@ define(function(){
 	 * @see {@link https://github.com/ramda/ramda/blob/master/src/cond.js}
 	 *
 	 * @example
-	 * var fn = FunctionHelper.conditions([
-	 *		[function(vale){ return (value == 0); }, function(value){ return 'water freezes at 0°C'; }],
-	 *		[function(vale){ return (value == 100); }, function(value){ return 'water boils at 100°C'; }],
+	 * var fn = FunctionHelper.choice([
+	 *		[function(value){ return (value == 0); }, function(value){ return 'water freezes at 0°C'; }],
+	 *		[function(value){ return (value == 100); }, function(value){ return 'water boils at 100°C'; }],
 	 *		[function(){ return true; }, function(value){ return 'nothing special happens at ' + value + '°C'; }]
 	 *	]);
 	 * fn(0);	//=> 'water freezes at 0°C'
