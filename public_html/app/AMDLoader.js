@@ -172,7 +172,7 @@ var AMDLoader = (function(doc){
 				Promise.all(promises).then(function(result){
 					definition.apply(this, result);
 				}).catch(function(msg){
-					throw new Error('Module name "' + dependencies + '" has raised an exception: ' + msg);
+					throw new Error('Module loading "' + dependencies + '" has raised an exception: ' + msg);
 				});
 			}
 			else{
