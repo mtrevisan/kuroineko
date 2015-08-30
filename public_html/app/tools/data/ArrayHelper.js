@@ -168,7 +168,8 @@ var spliceOne = function(arr, index){
 	var intersection = function(a, b){
 		var n = a.length,
 			m = b.length,
-			i = 0, j = 0,
+			i = 0,
+			j = 0,
 			result = [];
 
 		while(i < n && j < m){
@@ -177,7 +178,7 @@ var spliceOne = function(arr, index){
 			else if(a[i] > b[j])
 				j ++;
 			else{
-				result.push(i);
+				result.push(a[i]);
 				i ++;
 				j ++;
 			}
@@ -229,6 +230,26 @@ var spliceOne = function(arr, index){
 	};
 
 	/**
+	 * Takes a predicate and a list and returns the pair of lists of elements which do and do not satisfy the predicate, respectively.
+	 *
+	 * @example
+	 * ArrayHelper.partition(function(value){ return (value.indexOf('s') >= 0); }, ['sss', 'ttt', 'foo', 'bars']);
+	 * //=> [['sss', 'bars'], ['ttt', 'foo']]
+	 *
+	 * @param {Function} predicate	A predicate to determine which array the element belongs to.
+	 * @param {Array} list				The array to partition.
+	 * @return {Array} A nested array, containing first an array of elements that satisfied the predicate, and second an array of elements
+	 *		that did not satisfy.
+	 */
+	var partition = function(predicate, list){
+		var result = [[], []];
+		list.map(function(obj){
+			result[predicate(obj)? 0: 1].push(obj);
+		});
+		return result;
+	};
+
+	/**
 	 * Converts <code>value</code> to an integer.
 	 *
 	 * @param {*} value	The value to convert.
@@ -245,7 +266,8 @@ var spliceOne = function(arr, index){
 		copy: copy,
 		intersection: intersection,
 		binaryIndexOf: binaryIndexOf,
-		shuffle: shuffle
+		shuffle: shuffle,
+		partition: partition
 	};
 
 });
