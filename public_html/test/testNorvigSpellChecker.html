@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<link rel="shortcut icon" href="../favicon.png" />
+
+	<title>test NorvigSpellChecker</title>
+
+	<link rel="stylesheet" href="../test/lib/qunit/qunit-1.19.0.css">
+
+	<script src="../test/lib/qunit/qunit-1.19.0.js"></script>
+
+	<script src="../app/AMDLoader.js"></script>
+
+	<script>
+		AMDLoader.config = {
+			baseUrl: '../app',
+			paths: {
+				libs: '../libs'
+			}
+		};
+
+		require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
+			test('plain spell checker from dictionary', function(){
+				var spellChecker = new NorvigSpellChecker('abcdefghijklmnopqrstuvwxyz');
+				spellChecker.readDictionary(['abb', 'acbd']);
+
+				var suggestions = spellChecker.suggest('abc');
+
+				deepEqual(suggestions, {
+					candidates: {
+						abb: 0.9741473302433789,
+						acbd: 0.025852669756621083
+					},
+					sortedKeys: [
+						'abb',
+						'acbd'
+					]
+				});
+			});
+
+			test('plain spell checker from corpus', function(){
+				var spellChecker = new NorvigSpellChecker('abcdefghijklmnopqrstuvwxyz');
+				spellChecker.readDictionary('abb, acbd');
+
+				var suggestions = spellChecker.suggest('abc');
+
+				deepEqual(suggestions, {
+					candidates: {
+						abb: 0.9741473302433789,
+						acbd: 0.025852669756621083
+					},
+					sortedKeys: [
+						'abb',
+						'acbd'
+					]
+				});
+			});
+
+			test('plain spell checker from corpus 2', function(){
+				var spellChecker = new NorvigSpellChecker('abcdefghijklmnopqrstuvwxyz');
+				spellChecker.readDictionary('abb, acbd');
+
+				var suggestions = spellChecker.suggest('ac');
+
+				deepEqual(suggestions, {
+					candidates: {
+						abb: 0.6842105263157899,
+						acbd: 0.31578947368421
+					},
+					sortedKeys: [
+						'abb',
+						'acbd'
+					]
+				});
+			});
+
+			test('is correct', function(){
+				var spellChecker = new NorvigSpellChecker('abcdefghijklmnopqrstuvwxyz');
+				spellChecker.readDictionary('abb, acbd');
+
+				var correct = spellChecker.isCorrect('abb');
+
+				equal(correct, true);
+			});
+
+			test('is not correct', function(){
+				var spellChecker = new NorvigSpellChecker('abcdefghijklmnopqrstuvwxyz');
+				spellChecker.readDictionary('abb, acbd');
+
+				var correct = spellChecker.isCorrect('abc');
+
+				equal(correct, false);
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture"></div>
+</body>
+</html>

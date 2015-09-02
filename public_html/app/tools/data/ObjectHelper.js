@@ -60,7 +60,7 @@ define(function(){
 
 
 	var type = function(value){
-		return Object.prototype.toString.call(value).slice(8, -1);
+		return Object.prototype.toString.call(value).match(/^\[object\s(.*)\]$/)[1];
 	};
 
 	var isFunction = function(value){
@@ -153,8 +153,8 @@ define(function(){
 	};
 
 	var deepEquals = function(a, b){
-		var typeA = toString.call(a),
-			typeB = toString.call(b);
+		var typeA = type(a),
+			typeB = type(b);
 
 		if(typeA != typeB)
 			return false;
