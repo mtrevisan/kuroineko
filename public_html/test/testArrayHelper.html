@@ -1,51 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="author" content="Mauro Trevisan">
-	<link rel="shortcut icon" href="../favicon.png" />
+define(['tools/data/ArrayHelper'], function(ArrayHelper){
+	test('intersection', function(){
+		var result = ArrayHelper.intersection([1, 2, 3, 4].sort(function(a, b){ return a - b; }), [7, 6, 5, 4, 3].sort(function(a, b){ return a - b; }));
 
-	<title>test binary indexed tree</title>
+		deepEqual(result, [3, 4]);
+	});
 
-	<link rel="stylesheet" href="../test/lib/qunit/qunit-1.19.0.css">
+	asyncTest('partition', function(){
+		var result = ArrayHelper.partition(function(value){ return (value.indexOf('s') >= 0); }, ['sss', 'ttt', 'foo', 'bars']);
 
-	<script src="../test/lib/qunit/qunit-1.19.0.js"></script>
+		deepEqual(result, [['sss', 'bars'], ['ttt', 'foo']]);
 
-	<script src="../app/AMDLoader.js"></script>
-
-	<script>
-		AMDLoader.config = {
-			baseUrl: '../app',
-			paths: {
-				libs: '../libs'
-			}
-		};
-
-
-		asyncTest('intersection', function(){
-			require(['tools/data/ArrayHelper'], function(ArrayHelper){
-				var result = ArrayHelper.intersection([1, 2, 3, 4].sort(function(a, b){ return a - b; }), [7, 6, 5, 4, 3].sort(function(a, b){ return a - b; }));
-
-				deepEqual(result, [3, 4]);
-
-				start();
-			});
-		});
-
-		asyncTest('partition', function(){
-			require(['tools/data/ArrayHelper'], function(ArrayHelper){
-				var result = ArrayHelper.partition(function(value){ return (value.indexOf('s') >= 0); }, ['sss', 'ttt', 'foo', 'bars']);
-
-				deepEqual(result, [['sss', 'bars'], ['ttt', 'foo']]);
-
-				start();
-			});
-		});
-	</script>
-</head>
-
-<body>
-	<div id="qunit"></div>
-	<div id="qunit-fixture"></div>
-</body>
-</html>
+		start();
+	});
+});
