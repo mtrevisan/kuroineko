@@ -13,9 +13,6 @@
 		<script src="../app/AMDLoader.js"></script>
 
 		<script>
-			QUnit.config.autoload = false;
-			QUnit.config.autostart = false;
-
 			AMDLoader.config = {
 				baseUrl: '../app',
 				paths: {
@@ -23,24 +20,33 @@
 				}
 			};
 
-			require([
-				"unit/testArithmeticCoder",
-				"unit/testArrayHelper",
-				"unit/testBinaryIndexedTree",
-				"unit/testContinuedFraction",
-				"unit/testEliasDeltaCoder",
-				"unit/testFraction",
-				"unit/testFunctionHelper",
-				"unit/testGrapheme",
-				"unit/testLexer",
-				"unit/testMeasureConverter",
-				"unit/testNorvigSpellChecker",
-				"unit/testPhone",
-				"unit/testTrie"
-			], function(){
-				QUnit.load();
-				QUnit.start();
-			});
+			window.addEventListener("load", function(){
+				QUnit.config.autoload = false;
+				QUnit.config.autostart = false;
+
+				setTimeout(function(){
+					require([
+						"unit/testArithmeticCoder",
+						"unit/testArrayHelper",
+						"unit/testBinaryIndexedTree",
+						"unit/testContinuedFraction",
+						"unit/testEliasDeltaCoder",
+						"unit/testFraction",
+						"unit/testFunctionHelper",
+						"unit/testGrapheme",
+						"unit/testLexer",
+						"unit/testMeasureConverter",
+						"unit/testNorvigSpellChecker",
+						"unit/testPhone",
+						"unit/testTrie"
+					], function(){
+						QUnit.load();
+						QUnit.start();
+					});
+				}, 10);
+
+				window.removeEventListener("load", onLoad, true);
+			}, true);
 		</script>
 	</head>
 
