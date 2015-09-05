@@ -252,6 +252,7 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 			totalSyllabeCount = 0,
 			word, syll;
 		for(word in textWords.words){
+			word = textWords.words[word];
 			if(word.length){
 				syll = syllabate(word, dialect, phonematicSyllabation);
 
