@@ -95,7 +95,7 @@ var AMDLoader = (function(doc){
 				resolves[id] = resolve;
 			});
 		resolves[id](value);
-//		delete resolves[id];
+		delete resolves[id];
 
 		definitions[id] = value;
 	};
