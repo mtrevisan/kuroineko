@@ -12,7 +12,7 @@ var Initializer = (function(){
 
 			el.onload = function(){
 				AMDLoader.config = {
-					baseUrl: '/app',
+					baseUrl: '../app',
 					paths: {
 						libs: '../libs',
 						i18n: '../resources/i18n',
@@ -38,7 +38,7 @@ var Initializer = (function(){
 						});
 					});
 				};
-				existFile('/app/all.min.js', function(){ common(['js!all.min.js', 'domReady!']); }, function(){ common(['domReady!']); });
+				existFile('all.min', function(){ common(['js!all.min', 'domReady!']); }, function(){ common(['domReady!']); });
 			};
 
 			var insertPoint = document.getElementById('bootstrap-js');

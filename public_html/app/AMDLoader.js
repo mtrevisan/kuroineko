@@ -93,9 +93,9 @@ var AMDLoader = (function(doc){
 		if(resolves[id]){
 			resolves[id](value);
 			delete resolves[id];
-		}
 
-		definitions[id] = value;
+			definitions[id] = value;
+		}
 	};
 
 	/**
@@ -186,7 +186,7 @@ var AMDLoader = (function(doc){
 	};
 
 	var existFile = function(url, success, failure){
-		requestFile('text', {url: url}, success, failure);
+		requestFile('text', {url: addJSExtension(normalizeURL(url))}, success, failure);
 	};
 
 	/** @private */
@@ -221,7 +221,7 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var addJSExtension = function(value){
-		return value.replace(/(.+[\/\\][^\.]+)(\.js)?$/, '$1.js');
+		return (value[value.length - 1] != '!'? value.replace(/(.+?)(\.js)?$/, '$1.js'): value);
 	};
 
 	/** @private */
