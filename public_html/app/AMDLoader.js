@@ -91,7 +91,9 @@ var AMDLoader = (function(doc){
 	/** @private */
 	var resolve = function(id, value){
 		if(!resolves[id])
-			getDependencyPromise(id, undefined, undefined, true);
+			promises[id] = new Promise(function(resolve){
+				resolves[id] = resolve;
+			});
 		resolves[id](value);
 //		delete resolves[id];
 
@@ -190,7 +192,7 @@ var AMDLoader = (function(doc){
 	};
 
 	/** @private */
-	var getDependencyPromise = function(id, index, array, doNotLoadFile){
+	var getDependencyPromise = function(id){
 		id = addJSExtension(id);
 
 		if(!promises[id])
@@ -206,8 +208,7 @@ var AMDLoader = (function(doc){
 					args.unshift('base');
 				}
 
-				if(!doNotLoadFile)
-					plugins[args[0]](args[1], id);
+				plugins[args[0]](args[1], id);
 			});
 //		else if(!definitions[id])
 //			throw new Error('Circular dependency found while loading module name "' + id + '".');
