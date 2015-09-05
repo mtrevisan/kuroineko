@@ -90,12 +90,12 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var resolve = function(id, value){
-		if(resolves[id]){
-			resolves[id](value);
-			delete resolves[id];
+		if(!resolves[id])
+			getDependencyPromise(id);
+		resolves[id](value);
+//		delete resolves[id];
 
-			definitions[id] = value;
-		}
+		definitions[id] = value;
 	};
 
 	/**
