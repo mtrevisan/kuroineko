@@ -1,4 +1,6 @@
 require(['tools/data/FunctionHelper'], function(FunctionHelper){
+	module('FunctionHelper');
+
 	test('memoize', function(){
 		var count = 0;
 		var factorial = FunctionHelper.memoize(function(n){

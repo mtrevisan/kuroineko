@@ -1,4 +1,6 @@
 require(['tools/lang/phonology/Grapheme'], function(Grapheme){
+	module('Grapheme');
+
 	test('grapheme to phone conversion test - eterophonic sequences', function(){
 		equal(Grapheme.convertGraphemesIntoPhones('pien'), 'pjeŋ̞̟');
 		equal(Grapheme.convertGraphemesIntoPhones('kuando'), 'kʷwaŋ̞̟d̪o');

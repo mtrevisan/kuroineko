@@ -1,4 +1,6 @@
 require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/lang/morphology/Paradigm'], function(Verb, Themizer, Paradigm){
+	module('IrregularVerbsParadigm');
+
 	test('andàr', function(){
 		var verb = new Verb('andar');
 

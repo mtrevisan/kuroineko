@@ -1,4 +1,6 @@
 require(['tools/data/structs/Trie'], function(Trie){
+	module('Trie');
+
 	test('trie', function(){
 		var t = new Trie();
 

@@ -1,7 +1,10 @@
 require(['tools/lang/phonology/Syllabator'], function(Syllabator){
+	module('Syllabator');
+
 	var syllabatePhonematicAndJoin = function(word){
 		return Syllabator.syllabate(word, undefined, true).syllabes.join('-');
 	};
+
 
 	test('phonematic - plain syllabation', function(){
 		equal(syllabatePhonematicAndJoin('kaxa'), 'kà-xa');

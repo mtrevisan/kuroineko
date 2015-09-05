@@ -1,4 +1,6 @@
 require(['tools/measure/MeasureConverter'], function(MeasureConverter){
+	module('MeasureConverter');
+
 	test('measure constructor / add unit / convert measure', function(){
 		var m = new MeasureConverter({
 			'pèrtega':	{parentValue: 6,		parentUOM: 'piè'}

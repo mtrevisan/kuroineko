@@ -1,4 +1,6 @@
 require(['tools/data/structs/BinaryIndexedTree'], function(BinaryIndexedTree){
+	module('BinaryIndexedTree');
+
 	test('array contructor', function(){
 		var freqs = [1, 1, 1, 1, 1],
 			i;

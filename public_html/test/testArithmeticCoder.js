@@ -73,6 +73,8 @@ require(['tools/data/coder/arithmetic/HighOrderModelFactory', 'tools/data/coder/
 });/**/
 
 require(['tools/data/ObjectHelper', 'tools/data/coder/arithmetic/HighOrderModelFactory', 'tools/data/coder/arithmetic/BasicModel', 'tools/data/coder/arithmetic/CoderDriver', 'tools/data/structs/BitBuffer', 'text!../app/tools/lang/data/Galepin.js'], function(ObjectHelper, HighOrderModelFactory, BasicModel, CoderDriver, BitBuffer, Galepin){
+	module('ArithmeticCoder');
+
 	test('encode Galepin', function(){
 		var model = CoderDriver.create(HighOrderModelFactory.createFrom(BasicModel, 2), {updateCount: 200});
 		var buffer = model.compress(Galepin);

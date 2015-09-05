@@ -1,4 +1,6 @@
 require(['tools/data/Lexer'], function(Lexer){
+	module('Lexer');
+
 	test('plain lexer', function(){
 		(new Lexer())
 			.addRule(/[0-9]+/, function(lexeme){

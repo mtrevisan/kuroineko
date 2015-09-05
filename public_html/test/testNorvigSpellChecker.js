@@ -1,4 +1,6 @@
 require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
+	module('NorvigSpellChecker');
+
 	test('plain spell checker from dictionary', function(){
 		var spellChecker = new NorvigSpellChecker('abcdefghijklmnopqrstuvwxyz');
 		spellChecker.readDictionary(['abb', 'acbd']);

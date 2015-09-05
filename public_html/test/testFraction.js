@@ -1,4 +1,6 @@
 require(['tools/math/Fraction'], function(Fraction){
+	module('Fraction');
+
 	test('constructor with object', function(){
 		var f = new Fraction({
 			num: -13,

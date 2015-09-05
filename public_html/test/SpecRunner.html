@@ -19,35 +19,35 @@
 				}
 			};
 
-			window.addEventListener("load", function onLoad(){
+			window.addEventListener('load', function onLoad(){
 				QUnit.config.autoload = false;
 				QUnit.config.autostart = false;
 
 				setTimeout(function(){
 					require([
-						"../test/testArithmeticCoder",
-						"../test/testArrayHelper",
-						"../test/testBinaryIndexedTree",
-						"../test/testContinuedFraction",
-						"../test/testEliasDeltaCoder",
-						"../test/testFraction",
-						"../test/testFunctionHelper",
-						"../test/testGrapheme",
-						"../test/testIrregularVerbsParadigm",
-						"../test/testLexer",
-						"../test/testMeasureConverter",
-						"../test/testNorvigSpellChecker",
-						"../test/testPastParticiples",
-						"../test/testPhone",
-						"../test/testSyllabes",
-						"../test/testTrie"
+						'../test/testArithmeticCoder',
+						'../test/testArrayHelper',
+						'../test/testBinaryIndexedTree',
+						'../test/testContinuedFraction',
+						'../test/testEliasDeltaCoder',
+						'../test/testFraction',
+						'../test/testFunctionHelper',
+						'../test/testGrapheme',
+						'../test/testIrregularVerbsParadigm',
+						'../test/testLexer',
+						'../test/testMeasureConverter',
+						'../test/testNorvigSpellChecker',
+						'../test/testPastParticiples',
+						'../test/testPhone',
+						'../test/testSyllabes',
+						'../test/testTrie'
 					], function(){
 						QUnit.load();
 						QUnit.start();
 					});
 				}, 10);
 
-				window.removeEventListener("load", onLoad, true);
+				window.removeEventListener('load', onLoad, true);
 			}, true);
 		</script>
 	</head>

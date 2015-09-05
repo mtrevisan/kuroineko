@@ -1,4 +1,6 @@
 require(['tools/math/ContinuedFraction'], function(ContinuedFraction){
+	module('ContinuedFraction');
+
 	test('constructor with positive number', function(){
 		var f = ContinuedFraction.fromNumber(13.27);
 
