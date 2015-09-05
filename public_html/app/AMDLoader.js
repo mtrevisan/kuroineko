@@ -90,8 +90,10 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var resolve = function(id, value){
-		resolves[id](value);
-		delete resolves[id];
+		if(resolves[id]){
+			resolves[id](value);
+			delete resolves[id];
+		}
 
 		definitions[id] = value;
 	};
@@ -181,6 +183,10 @@ var AMDLoader = (function(doc){
 				throw new Error('Module name "' + dependencies[0] + '" has not been loaded yet.');
 			}
 		}
+	};
+
+	var existFile = function(url, success, failure){
+		requestFile('text', {url: url}, success, failure);
 	};
 
 	/** @private */
@@ -425,10 +431,12 @@ var AMDLoader = (function(doc){
 
 	return {
 		define: define,
-		require: require
+		require: require,
+		existFile: existFile
 	};
 
 })(window.document);
 
 window.define = AMDLoader.define;
 window.require = AMDLoader.require;
+window.existFile = AMDLoader.existFile;
