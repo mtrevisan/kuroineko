@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="resources/css/conjugator.css">
 	<link rel="stylesheet" href="resources/css/alerter/alerter.core.css">
 	<link rel="stylesheet" href="resources/css/alerter/alerter.default.css">
+	<link rel="stylesheet" href="libs/intro.css">
 
 	<script src="app/Initializer.js"></script>
 	<script id="bootstrap-js">
@@ -26,15 +27,45 @@
 				app.init(i18nResources);
 			});
 		});
+
+		var startIntro = function(){
+			var intro = introJs();
+			intro.setOptions({
+				prevLabel: 'Presedente',
+				nextLabel: 'Seguente',
+				skipLabel: 'Salta',
+				doneLabel: 'Fen&iacute;o',
+				disableInteraction: true,
+				steps: [
+					{
+						element: '#infinitive',
+						intro: "Inserisi ku&agrave; &#8216;l infen&iacute;o de &#8216;l v&egrave;rbo."
+					},
+					{
+						element: '#dialect',
+						intro: "Sele&tstrok;iona, se te vol, el dial&egrave;to."
+					},
+					{
+						element: '#btnCalculate',
+						intro: 'Struka ku&aacute; par v&eacute;der el paradigma.'
+					}
+				]
+			});
+
+			intro.start();
+		};
 	</script>
 	<script src="app/tools/social/GoogleAnalyticsHelper.js"></script>
 	<script src="app/tools/social/SocialLoader.js"></script>
+	<script src="libs/intro.js"></script>
 </head>
 
 <body>
 	<nav class="language">
 		<img src="resources/images/flags/veneto.png" class="flag" width="35" alt="V&egrave;neto" title="V&egrave;neto" />
 		<a href="pages/it/conjugator.html" lang="it" hreflang="it"><img src="resources/images/flags/italia.png" class="flag" width="35" alt="Italiano" title="Italiano" /></a>
+		<br>
+		<a href="javascript:startIntro();">J&uacute;tame</a>
 	</nav>
 	<header>
 		<h1>Koniugador de i v&egrave;rbi v&egrave;neti 4.0.<a href="#" title="sto ku&agrave; &#8216;l &eacute; el n&uacute;maro de v&egrave;rbi (almanko) ke &#8216;l intiva &#8216;l a&tstrok;ento kor&egrave;to">5571</a></h1>

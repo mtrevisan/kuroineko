@@ -16,21 +16,45 @@
 	<link rel="stylesheet" href="resources/css/dictionary.css">
 	<link rel="stylesheet" href="resources/css/alerter/alerter.core.css">
 	<link rel="stylesheet" href="resources/css/alerter/alerter.default.css">
+	<link rel="stylesheet" href="libs/intro.css">
 
 	<script src="app/Initializer.js"></script>
 	<script id="bootstrap-js">
 		Initializer.initializeApplication(function(){
 			require(['main_dictionary'], function(app){ app.init(); });
 		});
+
+		var startIntro = function(){
+			var intro = introJs();
+			intro.setOptions({
+				prevLabel: 'Precedente',
+				nextLabel: 'Seguente',
+				skipLabel: 'Salta',
+				doneLabel: 'Finito',
+				showBullets: false,
+				disableInteraction: true,
+				steps: [
+					{
+						element: '#lemmataInput',
+						intro: "Inserisci qua la parola che vuoi cercare."
+					}
+				]
+			});
+
+			intro.start();
+		};
 	</script>
 	<script src="app/tools/social/GoogleAnalyticsHelper.js"></script>
 	<script src="app/tools/social/SocialLoader.js"></script>
+	<script src="libs/intro.js"></script>
 </head>
 
 <body>
 	<nav class="language">
 		<a href="pages/vec/dictionary.html" lang="vec" hreflang="vec"><img src="resources/images/flags/veneto.png" class="flag" width="35" alt="V&egrave;neto" title="V&egrave;neto" /></a>
 		<img src="resources/images/flags/italia.png" class="flag" width="35" alt="Italiano" title="Italiano" />
+		<br>
+		<a href="javascript:startIntro();">Aiuto</a>
 	</nav>
 	<header>
 		<h1>Dizionario del lessico veneto 1.0.<a href="#" title="questo &egrave; il numero di parole contenute nel dizionario"><span id="wordCount"></span></a></h1>
@@ -55,11 +79,11 @@
 		<h2>Introduzione</h2>
 		Avete solo da scrivere una parola, o una sua parte, in veneto, italiano, o inglese (per dire &#8220;comincia con&#8221; o &#8220;finisce con&#8221; aggiungere &#8216;#&#8217; in principio o alla fine).<br>
 		<br>
-		<span class="pay-attention">Attenzione a indicare gli accenti grevi per non sbagliare!</span> (<i>l&egrave;xar</i> &egrave; diverso da &#8220;lexàr&#8221;, cos&iacute;come <i>f&oacute;ndar</i> da <i>fond&agrave;r</i>, guarda il <a href="pages/it/syllabator.html">sillabatore</a>).
+		<span class="pay-attention">Attenzione a indicare gli accenti grevi per non sbagliare!</span> (<i>l&egrave;xar</i> &egrave; diverso da &#8220;lexàr&#8221;, cos&iacute; come <i>f&oacute;ndar</i> da <i>fond&agrave;r</i>, guarda il <a href="pages/it/syllabator.html">sillabatore</a>).
 	</section>
 	<section class="input frame-inner" id="inputSection">
 		<form action="#inputSection" novalidate>
-			<table>
+			<table id="lemmataInput">
 				<thead>
 					<tr>
 						<th colspan="2">Parola o parte da cercare</th>
@@ -70,17 +94,17 @@
 				</tr>
 				<tr>
 					<td><label class="input-description">in veneto:</label></td>
-					<td><input type="text" id="lemmataVec" class="lemmata-input" placeholder="inser&iacute;si la par&ograve;la&hellip;" title="par&ograve;la"
+					<td><input type="text" id="lemmataVec" class="lemmata-input" placeholder="inserisci la parola&hellip;" title="parola"
 						pattern="^(#?([aàbcdđeèéfgiìíjɉklƚmnñoòóprsʃtŧuùúvxʒ]|[eiou]/|[aeo]\\|[djlnstx]h)+#?)?$" data-validate="regex(campo con caratteri non validi)" disabled tabindex="1" /></td>
 				</tr>
 				<tr>
 					<td><label class="input-description">in italiano:</label></td>
-					<td><input type="text" id="lemmataIta" class="lemmata-input" placeholder="inser&iacute;si la par&ograve;la&hellip;" title="par&ograve;la"
+					<td><input type="text" id="lemmataIta" class="lemmata-input" placeholder="inserisci la parola&hellip;" title="parola"
 						pattern="^(#?([aàbcdeèéfgiìílmnoòóprstuùúvz]|[eiou]/|[aeo]\\|[cg]h([eèéiìí]|[ei]/|[e]\\)|qu([aàeèéiìíoòóuùú]|[eiou]/|[aeo]\\))+#?)?$" data-validate="regex(campo con caratteri non validi)" disabled tabindex="2" /></td>
 				</tr>
 				<tr>
 					<td><label class="input-description">in inglese:</label></td>
-					<td><input type="text" id="lemmataEng" class="lemmata-input" placeholder="inser&iacute;si la par&ograve;la&hellip;" title="par&ograve;la"
+					<td><input type="text" id="lemmataEng" class="lemmata-input" placeholder="inserisci la parola&hellip;" title="parola"
 						pattern="^(#?([abcdefghijklmnopqrstuvwxyz])+#?)?$" data-validate="regex(campo con caratteri non validi)" disabled tabindex="3" /></td>
 				</tr>
 			</table>

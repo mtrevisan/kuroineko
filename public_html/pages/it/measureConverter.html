@@ -16,21 +16,68 @@
 	<link rel="stylesheet" href="resources/css/measureConverter.css">
 	<link rel="stylesheet" href="resources/css/alerter/alerter.core.css">
 	<link rel="stylesheet" href="resources/css/alerter/alerter.default.css">
+	<link rel="stylesheet" href="libs/intro.css">
 
 	<script src="app/Initializer.js"></script>
 	<script id="bootstrap-js">
 		Initializer.initializeApplication(function(){
 			require(['main_measureConverter'], function(app){ app.init(); });
 		});
+
+		var startIntro = function(){
+			var intro = introJs();
+			intro.setOptions({
+				prevLabel: 'Precedente',
+				nextLabel: 'Seguente',
+				skipLabel: 'Salta',
+				doneLabel: 'Finito',
+				disableInteraction: true,
+				steps: [
+					{
+						element: '#district',
+						intro: "Seleziona il distretto."
+					},
+					{
+						element: '#type',
+						intro: "Seleziona il tipo di misura."
+					},
+					{
+						element: '#measureTable',
+						intro: 'Tabella di conversione della misura.'
+					},
+					{
+						element: '#value',
+						intro: 'Inserisi il valore della misura.'
+					},
+					{
+						element: '#uom-from',
+						intro: 'Seleziona la unit&agrave; di misura di partenza.'
+					},
+					{
+						element: '#uom-to',
+						intro: 'Seleziona la unit&agrave; di misura di destinazione.'
+					},
+					{
+						element: '#btnConvert',
+						intro: 'Premi qua per calcolare la nuova misura.'
+					}
+				]
+			});
+
+			intro.start();
+		};
 	</script>
 	<script src="app/tools/social/GoogleAnalyticsHelper.js"></script>
 	<script src="app/tools/social/SocialLoader.js"></script>
+	<script src="libs/intro.js"></script>
 </head>
 
 <body>
 	<nav class="language">
 		<a href="pages/vec/measureConverter.html" lang="vec" hreflang="vec"><img src="resources/images/flags/veneto.png" class="flag" width="35" alt="V&egrave;neto" title="V&egrave;neto" /></a>
 		<img src="resources/images/flags/italia.png" class="flag" width="35" alt="Italiano" title="Italiano" />
+		<br>
+		<a href="javascript:startIntro();">Aiuto</a>
 	</nav>
 	<header>
 		<h1>Convertitore delle misure venete 2.0</h1>
@@ -56,7 +103,7 @@
 			<tr>
 				<td style="vertical-align: middle;">
 					<div class="measure-input-container">
-						<label class="input-description" for="district">Distreto</label><select id="district" class="district"></select>
+						<label class="input-description" for="district">Distretto</label><select id="district" class="district"></select>
 						<p>
 						<label class="input-description" for="type">Categoria della misura</label><select id="type" class="measure-type">
 							<optgroup label="Lunghezza">

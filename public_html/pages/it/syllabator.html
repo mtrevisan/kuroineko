@@ -16,21 +16,52 @@
 	<link rel="stylesheet" href="resources/css/syllabator.css">
 	<link rel="stylesheet" href="resources/css/alerter/alerter.core.css">
 	<link rel="stylesheet" href="resources/css/alerter/alerter.default.css">
+	<link rel="stylesheet" href="libs/intro.css">
 
 	<script src="app/Initializer.js"></script>
 	<script id="bootstrap-js">
 		Initializer.initializeApplication(function(){
 			require(['main_syllabator'], function(app){ app.init(); });
 		});
+
+		var startIntro = function(){
+			var intro = introJs();
+			intro.setOptions({
+				prevLabel: 'Precedente',
+				nextLabel: 'Seguente',
+				skipLabel: 'Salta',
+				doneLabel: 'Finito',
+				disableInteraction: true,
+				steps: [
+					{
+						element: '#text',
+						intro: "Inserisci qua la parola o la frase che vuoi sillabare."
+					},
+					{
+						element: '#dialect',
+						intro: "Seleziona, se vuoi, il dialetto."
+					},
+					{
+						element: '#btnCalculate',
+						intro: 'Premi qua per vedere la sillabazione.'
+					}
+				]
+			});
+
+			intro.start();
+		};
 	</script>
 	<script src="app/tools/social/GoogleAnalyticsHelper.js"></script>
 	<script src="app/tools/social/SocialLoader.js"></script>
+	<script src="libs/intro.js"></script>
 </head>
 
 <body>
 	<nav class="language">
 		<a href="pages/vec/syllabator.html" lang="vec" hreflang="vec"><img src="resources/images/flags/veneto.png" class="flag" width="35" alt="V&egrave;neto" title="V&egrave;neto" /></a>
 		<img src="resources/images/flags/italia.png" class="flag" width="35" alt="Italiano" title="Italiano" />
+		<br>
+		<a href="javascript:startIntro();">Aiuto</a>
 	</nav>
 	<header>
 		<h1>Sillabatore delle parole venete 1.5</h1>
