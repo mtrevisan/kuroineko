@@ -31,7 +31,7 @@ define(function(){
 			if(Array.isArray(hex))
 				for(i = 0; i < size; i ++)
 					this.buffer.push(hex[i]);
-			else if(typeof hex === 'string')
+			else if(typeof hex == 'string')
 				for(i = 0; i < size; i += 2)
 					this.buffer.push(parseInt(hex.substr(i, 2), 16));
 		}

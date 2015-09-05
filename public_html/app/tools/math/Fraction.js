@@ -177,18 +177,29 @@ define(function(){
 	};
 
 	/**
-	 * Euclidean algorithm form Greatest Common Divisor
+	 * Euclidean algorithm to calculate the Greatest Common Divisor (GCD)
+	 *
+	 * @param {Number} a
+	 * @param {Number} b
+	 * @return {Number}
 	 *
 	 * @private
 	 */
 	var _gcd = function(a, b){
+		if(b > a)
+			return _gcd(b, a);
+
 		while(b)
 			a = b + (b = a % b, 0);
 		return a;
 	};
 
 	/**
-	 * Euclidean algorithm form least common multiple
+	 * Euclidean algorithm to calculate the least common multiple (lcm)
+	 *
+	 * @param {Number} a
+	 * @param {Number} b
+	 * @return {Number}
 	 *
 	 * @private
 	 */
@@ -275,7 +286,7 @@ define(function(){
 	};
 
 	var integerPart = function(){
-		return new Constructor(this.sgn * ((this.num / this.den) | 0), 1);
+		return new Constructor(this.sgn * toInteger(this.num / this.den), 1);
 	};
 
 	var fractionalPart = function(){
@@ -387,13 +398,25 @@ define(function(){
 			}
 
 			if(t >= this.den){
-				ret.push((t / this.den) | 0);
+				ret.push(toInteger(t / this.den));
 				t %= this.den;
 			}
 			else
 				ret.push('0');
 		}
 		return ret.join('').replace(/^(-?)(?:0(?!\.))*(.+?)0*$/, '$1$2');
+	};
+
+	/**
+	 * Converts <code>value</code> to an integer.
+	 *
+	 * @param {*} value	The value to convert.
+	 * @returns {Number}	Returns the integer.
+	 *
+	 * @private
+	 */
+	var toInteger = function(value){
+		return (value | 0);
 	};
 
 	/** @private */
@@ -440,7 +463,7 @@ define(function(){
 			return '0';
 		if(this.den == 1)
 			return (this.sgn * this.num).toString();
-		return (this.sgn == -1? '-': '') + '\\frac{' + this.num + '}{' + this.den + '}';
+		return (this.sgn < 0? '-': '') + '\\frac{' + this.num + '}{' + this.den + '}';
 	};
 
 

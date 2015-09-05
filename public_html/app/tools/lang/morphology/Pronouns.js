@@ -127,7 +127,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 	/** @private */
 	var getResultComponent = function(type){
-		return ObjectHelper.extractData(this, type);
+		return ObjectHelper.path(this, type);
 	};
 
 

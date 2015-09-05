@@ -24,11 +24,11 @@ define(function(){
 	 * Returns a function that is the composition of a list of functions, each consuming the return value of the function that follows.
 	 */
 	var compose = function(){
-		var args = arguments;
-		var start = args.length - 1;
+		var args = arguments,
+			start = args.length - 1;
 		return function(){
-			var i = start;
-			var result = args[start].apply(this, arguments);
+			var i = start,
+				result = args[start].apply(this, arguments);
 			while(i --)
 				result = args[i].call(this, result);
 			return result;
@@ -63,11 +63,48 @@ define(function(){
 		return accumulator([], savedAccumulator, n);
 	};
 
+	/**
+	 * Returns a function, {@code fn}, which encapsulates if/else-if/else logic.<p>
+	 * This function takes a list of {@code [predicate, transform]} pairs. All of the arguments to {@code fn} are applied to each of the
+	 * predicates in turn until one returns a "truthy" value, at which point {@code fn} returns the result of applying its arguments to
+	 * the corresponding transformer.<p>
+	 * Ramda 0.17.1's cond
+	 *
+	 * @see {@link https://github.com/ramda/ramda/blob/master/src/cond.js}
+	 *
+	 * @example
+	 * <code>
+	 * var fn = FunctionHelper.choice([
+	 *		[function(value){ return (value == 0); }, function(value){ return 'water freezes at 0°C'; }],
+	 *		[function(value){ return (value == 100); }, function(value){ return 'water boils at 100°C'; }],
+	 *		[function(){ return true; }, function(value){ return 'nothing special happens at ' + value + '°C'; }]
+	 *	]);
+	 * fn(0);	//=> 'water freezes at 0°C'
+	 * fn(50);	//=> 'nothing special happens at 50°C'
+	 * fn(100);	//=> 'water boils at 100°C'
+	 * </code>
+	 *
+	 * @param {Array} pairs
+	 * @return {Function}
+	 */
+	var choice = function(pairs){
+		return function(){
+			var len = pairs.length,
+				idx, tuple;
+			for(idx = 0; idx < len; idx ++){
+				tuple = pairs[idx];
+				if(tuple[0].apply(this, arguments))
+					return tuple[1].apply(this, arguments);
+			}
+		};
+	};
+
 
 	return {
 		memoize: memoize,
 		compose: compose,
-		curry: curry
+		curry: curry,
+		choice: choice
 	};
 
 });

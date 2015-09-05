@@ -8,33 +8,13 @@
 var AMDLoader = (function(doc){
 
 	var promises = {},
-		resolves = {};
+		resolves = {},
+		definitions = {};
 
 
 	/** @private */
 	var isFunction = function(fn){
-		return (typeof fn === 'function');
-	};
-
-	/** @private */
-	var getDependencyPromise = function(id){
-		if(!promises[id])
-			promises[id] = new Promise(function(resolve){
-				resolves[id] = resolve;
-
-				var args = id.split('!');
-				if(args.length < 2){
-					//check if this id belongs to a module loaded with js! plugin
-					if(doc.currentScript && doc.currentScript.src && promises['js!' + getCurrentID(/\.js$/)])
-						return;
-
-					args.unshift('base');
-				}
-
-				plugins[args[0]](args[1], id);
-			});
-
-		return promises[id];
+		return (typeof fn == 'function');
 	};
 
 	/** @private */
@@ -110,28 +90,30 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var resolve = function(id, value){
-		//create promise if necessary
-		getDependencyPromise(id);
-
+		if(!resolves[id])
+			promises[id] = new Promise(function(resolve){
+				resolves[id] = resolve;
+			});
 		resolves[id](value);
-
 		delete resolves[id];
+
+		definitions[id] = value;
 	};
 
 	/**
 	 * Define a module with dependencies.
 	 *
-	 * @param {String} id				Name of the module
+	 * @param {String} [id]				Name of the module
 	 * @param {Array}	[dependencies]	Array of dependencies
-	 * @param {Function}	definition	Function returing the module object
+	 * @param {Function}	definition	Function returning the module object
 	 */
 	var define = function(id, dependencies, definition){
 		var args = [id, dependencies, definition];
-		args.unshift(typeof id === 'string'? normalizeURL(args.shift()): getCurrentID());
+		args.unshift(typeof id == 'string'? normalizeURL(args.shift()): getCurrentID());
 		if(!Array.isArray(args[1]))
 			args.splice(1, 0, extractDependencies(dependencies));
 
-		id = args[0];
+		id = addJSExtension(args[0]);
 		dependencies = args[1];
 		definition = args[2];
 
@@ -145,23 +127,40 @@ var AMDLoader = (function(doc){
 			});
 	};
 
+	define.amd = {};
+
 	/**
 	 * Call a function with dependencies.
 	 *
-	 * @param {Array}	[dependencies]	Array of dependencies
-	 * @param {Function}	definition	Callback with dependencies as parameters
+	 * @example
+	 * <code>
+	 * require(['tools/data/Lexer'], function(Lexer){ ... });
+	 * </code>
+	 *
+	 * @example
+	 * To be used only if a module has already been loaded.
+	 * <code>
+	 * var Lexer = require('tools/data/Lexer');
+	 * </code>
+	 *
+	 * @param {Array/String} [dependencies]	Array of dependencies, or dependency to load if string
+	 * @param {Function} [definition]			Callback with dependencies as array as parameters
 	 */
 	var require = function(dependencies, definition){
-		if(!Array.isArray(dependencies)){
+		if(isFunction(dependencies)){
 			definition = dependencies;
 			dependencies = extractDependencies(dependencies);
 		}
+		else if(!Array.isArray(dependencies))
+			dependencies = [dependencies];
 
 		//enforce domReady when the img! plugin is required
-		if(!doc.readyState && dependencies.some(function(dep){ return (dep.indexOf('img!') == 0); }))
-			return require(['domReady!'], function(){
+		if(!doc.readyState && dependencies.some(function(dep){ return (dep.indexOf('img!') == 0); })){
+			require(['domReady!'], function(){
 				require(dependencies, definition);
 			});
+			return;
+		}
 
 		if(!dependencies.length)
 			//module has no dependencies, run definition now
@@ -170,24 +169,69 @@ var AMDLoader = (function(doc){
 			//resolve urls
 			dependencies = dependencies.map(normalizeURL, this);
 
-			//need to wait for all dependencies to load
-			var promises = dependencies.map(getDependencyPromise, this);
+			if(definition){
+				//need to wait for all dependencies to load
+				var promises = dependencies.map(getDependencyPromise, this);
 
-			Promise.all(promises).then(function(result){
-				definition.apply(this, result);
-			});
+				Promise.all(promises).then(function(result){
+					definition.apply(this, result);
+				});
+			}
+			else{
+				var def = definitions[dependencies[0]];
+				if(def)
+					return def;
+
+				throw new Error('Module name "' + dependencies[0] + '" has not been loaded yet.');
+			}
 		}
 	};
 
+	var existFile = function(url, success, failure){
+		requestFile('text', {url: addJSExtension(normalizeURL(url))}, success, failure);
+	};
+
 	/** @private */
-	var getCurrentID = function(ext){
-		return doc.currentScript.getAttribute('src').replace(ext || /\.[^/.]+$/, '');
+	var getDependencyPromise = function(id){
+		id = addJSExtension(id);
+
+		if(!promises[id])
+			promises[id] = new Promise(function(resolve){
+				resolves[id] = resolve;
+
+				var args = id.split('!');
+				if(args.length < 2){
+					//check if this id belongs to a module loaded with js! plugin
+					if(doc.currentScript && doc.currentScript.src && promises['js!' + getCurrentID(/\.js$/)])
+						return;
+
+					args.unshift('base');
+				}
+
+				plugins[args[0]](args[1], id);
+			});
+//		else if(!definitions[id])
+//			throw new Error('Circular dependency found while loading module name "' + id + '".');
+
+		return promises[id];
+	};
+
+	/** @private */
+	var getCurrentID = function(replacement){
+		return doc.currentScript.getAttribute('src').replace(replacement || /\.[^/.]+$/, '');
+	};
+
+	/** @private */
+	var addJSExtension = function(value){
+		return value.replace(/([^\!]+?)(\.js)?$/, '$1.js');
 	};
 
 	/** @private */
 	var normalizeURL = function(id){
-		var urlPlugin = id.split('!'),
-			url = (urlPlugin.length == 1? urlPlugin[0]: urlPlugin[1]);
+		//turns a plugin!url to [plugin, url] with the plugin being undefined if the name did not have a plugin prefix
+		var pluginUrl = id.split('!'),
+			len = pluginUrl.length,
+			url = pluginUrl[len == 1? 0: 1];
 
 		if(url){
 			var cfg = AMDLoader.config;
@@ -198,7 +242,7 @@ var AMDLoader = (function(doc){
 			}
 			//if a colon is in the URL, it indicates a protocol is used and it is just an URL to a file, or if it starts with a slash, contains a query arg (i.e. ?)
 			//or ends with .js, then assume the user meant to use an url and not a module id (the slash is important for protocol-less URLs as well as full paths)
-			if(!url.match(/^\/|:|\?|\.js$/)){
+			if(len == 2 || !url.match(/^\/|:|\?|\.js$/)){
 				if(cfg.baseUrl)
 					url = cfg.baseUrl.replace(/\/?$/, '/' + url);
 
@@ -260,7 +304,6 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var injectScript = function(module, success, failure){
-		module.src += '.js';
 		//actually, we don't even need to set this at all
 		//module.type = 'text/javascript';
 		module.charset = module.charset || 'UTF-8';
@@ -302,6 +345,8 @@ var AMDLoader = (function(doc){
 
 			Object.keys(module).forEach(function(key){
 				el[key] = module[key];
+				//alternative code:
+//				el.setAttribute(key, module[key]);
 			});
 
 			head.appendChild(el);
@@ -357,7 +402,7 @@ var AMDLoader = (function(doc){
 		xhr.onreadystatechange = function(){
 			if(xhr.readyState == 4){
 				if(xhr.status == 200)
-					success && success(responseType == 'text'? xhr.responseText: new Uint8Array(xhr.response));
+					success && success(!responseType.length || responseType == 'text'? xhr.responseText: new Uint8Array(xhr.response));
 				else{
 					var errorText = 'Syntax or http error loading: ' + module.url + ', status: ' + xhr.status + ' ' + xhr.statusText;
 					failure && failure(new Error(errorText));
@@ -388,10 +433,12 @@ var AMDLoader = (function(doc){
 
 	return {
 		define: define,
-		require: require
+		require: require,
+		existFile: existFile
 	};
 
 })(window.document);
 
 window.define = AMDLoader.define;
 window.require = AMDLoader.require;
+window.existFile = AMDLoader.existFile;

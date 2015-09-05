@@ -114,7 +114,7 @@ var decompress = +new Date();
 //var load = +new Date();
 		galepin = JSONH.unpack(galepin);
 //var unpack = +new Date();
-console.log('decompress: ' + (decompress - start));
+//console.log('decompress: ' + (decompress - start));
 //console.log('load: ' + (load - decompress));
 //console.log('unpack: ' + (unpack - load));
 

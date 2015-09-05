@@ -83,7 +83,7 @@ define(['tools/data/structs/BitBuffer'], function(BitBuffer){
 	var closeEncoding = function(){
 		this.bitsToFollow ++;
 
-		appendBitWithFollow.call(this, (this.low < HALF) | 0);
+		appendBitWithFollow.call(this, toInteger(this.low < HALF));
 
 		this.buffer.finalize();
 
@@ -97,8 +97,8 @@ define(['tools/data/structs/BitBuffer'], function(BitBuffer){
 	 */
 	var calculateRange = function(interval){
 		var range = this.high - this.low + 1;
-		this.high = this.low + ((range * interval.high / interval.total) | 0) - 1;
-		this.low += (range * interval.low / interval.total) | 0;
+		this.high = this.low + toInteger(range * interval.high / interval.total) - 1;
+		this.low += toInteger(range * interval.low / interval.total);
 	};
 
 	/**
@@ -165,7 +165,19 @@ define(['tools/data/structs/BitBuffer'], function(BitBuffer){
 	 * @return	A count that is in the range above or equal to the low count and less than the high count of the next symbol decoded.
 	 */
 	var getCurrentSymbolCount = function(totalCount){
-		return (((this.value - this.low + 1) * totalCount - 1) / (this.high - this.low + 1)) | 0;
+		return toInteger(((this.value - this.low + 1) * totalCount - 1) / (this.high - this.low + 1));
+	};
+
+	/**
+	 * Converts <code>value</code> to an integer.
+	 *
+	 * @param {*} value	The value to convert.
+	 * @returns {Number}	Returns the integer.
+	 *
+	 * @private
+	 */
+	var toInteger = function(value){
+		return (value | 0);
 	};
 
 

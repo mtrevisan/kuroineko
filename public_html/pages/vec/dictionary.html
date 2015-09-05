@@ -16,21 +16,45 @@
 	<link rel="stylesheet" href="resources/css/dictionary.css">
 	<link rel="stylesheet" href="resources/css/alerter/alerter.core.css">
 	<link rel="stylesheet" href="resources/css/alerter/alerter.default.css">
+	<link rel="stylesheet" href="libs/intro.css">
 
 	<script src="app/Initializer.js"></script>
 	<script id="bootstrap-js">
 		Initializer.initializeApplication(function(){
 			require(['main_dictionary'], function(app){ app.init(); });
 		});
+
+		var startIntro = function(){
+			var intro = introJs();
+			intro.setOptions({
+				prevLabel: 'Presedente',
+				nextLabel: 'Seguente',
+				skipLabel: 'Salta',
+				doneLabel: 'Fen&iacute;o',
+				showBullets: false,
+				disableInteraction: true,
+				steps: [
+					{
+						element: '#lemmataInput',
+						intro: "Inserisi ku&agrave; la par&ograve;la ke te vol &tstrok;erkar."
+					}
+				]
+			});
+
+			intro.start();
+		};
 	</script>
 	<script src="app/tools/social/GoogleAnalyticsHelper.js"></script>
 	<script src="app/tools/social/SocialLoader.js"></script>
+	<script src="libs/intro.js"></script>
 </head>
 
 <body>
 	<nav class="language">
 		<img src="resources/images/flags/veneto.png" class="flag" width="35" alt="V&egrave;neto" title="V&egrave;neto" />
 		<a href="pages/it/dictionary.html" lang="it" hreflang="it"><img src="resources/images/flags/italia.png" class="flag" width="35" alt="Italiano" title="Italiano" /></a>
+		<br>
+		<a href="javascript:startIntro();">J&uacute;tame</a>
 	</nav>
 	<header>
 		<h1>Galepin de el l&egrave;sego v&egrave;neto 1.0.<a href="#" title="sto ku&agrave; &#8216;l &eacute; el n&uacute;maro de par&ograve;le rento intel galepin"><span id="wordCount"></span></a></h1>
@@ -59,7 +83,7 @@
 	</section>
 	<section class="input frame-inner" id="inputSection">
 		<form action="#inputSection" novalidate>
-			<table>
+			<table id="lemmataInput">
 				<thead>
 					<tr>
 						<th colspan="2">Par&ograve;la o parte da &tstrok;erkar</th>

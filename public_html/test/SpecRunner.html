@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>QUnit Composite Test Suite</title>
+		<link rel="shortcut icon" href="../favicon.png" />
+
+		<link rel="stylesheet" href="lib/qunit/qunit-1.19.0.css">
+
+		<script src="lib/qunit/qunit-1.19.0.js"></script>
+
+		<script src="../app/AMDLoader.js"></script>
+
+		<script>
+			AMDLoader.config = {
+				baseUrl: '../app',
+				paths: {
+					libs: '../libs'
+				}
+			};
+
+			window.addEventListener('load', function onLoad(){
+				QUnit.config.autoload = false;
+				QUnit.config.autostart = false;
+
+				setTimeout(function(){
+					require([
+						'../test/testArithmeticCoder',
+						'../test/testArrayHelper',
+						'../test/testBinaryIndexedTree',
+						'../test/testContinuedFraction',
+						'../test/testEliasDeltaCoder',
+						'../test/testFraction',
+						'../test/testFunctionHelper',
+						'../test/testGrapheme',
+						'../test/testIrregularVerbsParadigm',
+						'../test/testLexer',
+						'../test/testMeasureConverter',
+						'../test/testNorvigSpellChecker',
+						'../test/testPastParticiples',
+						'../test/testPhone',
+						'../test/testSyllabes',
+						'../test/testTrie'
+					], function(){
+						QUnit.load();
+						QUnit.start();
+					});
+				}, 10);
+
+				window.removeEventListener('load', onLoad, true);
+			}, true);
+		</script>
+	</head>
+
+	<body>
+		<div id="qunit"></div>
+		<div id="qunit-fixture"></div>
+	</body>
+</html>

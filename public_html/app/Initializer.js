@@ -8,11 +8,11 @@ var Initializer = (function(){
 	var initializeApplication = function(commonRequires){
 		setTimeout(function(){
 			var el = document.createElement('script');
-			el.src = (existFile('/app/AMDLoader.min.js')? '/app/AMDLoader.min.js': '/app/AMDLoader.js');
+			el.src = '/app/AMDLoader.js';
 
 			el.onload = function(){
 				AMDLoader.config = {
-					baseUrl: '/app',
+					baseUrl: '../app',
 					paths: {
 						libs: '../libs',
 						i18n: '../resources/i18n',
@@ -29,18 +29,16 @@ var Initializer = (function(){
 				 	require(['css!css/alerter/alerter.core.css', 'css!css/alerter/alerter.default.css']);
 				});*/
 
-				var reqs = [];
-				if(existFile('/app/all.min.js'))
-					reqs.push('js!/app/all.min');
-				reqs.push('domReady!');
+				var common = function(reqs){
+					require(reqs, function(){
+						commonRequires && commonRequires();
 
-				require(reqs, function(){
-					commonRequires && commonRequires();
-
-					require(['/app/tools/social/MailHelper'], function(MailHelper){
-						MailHelper.decodeMails();
+						require(['tools/social/MailHelper'], function(MailHelper){
+							MailHelper.decodeMails();
+						});
 					});
-				});
+				};
+				existFile('all.min', function(){ common(['js!all.min', 'domReady!']); }, function(){ common(['domReady!']); });
 			};
 
 			var insertPoint = document.getElementById('bootstrap-js');
@@ -48,24 +46,9 @@ var Initializer = (function(){
 		}, 0);
 	};
 
-	var existFile = function(url){
-		try{
-			var xhr = new XMLHttpRequest();
-			xhr.open('HEAD', url, false);
-			xhr.send();
-
-			return (xhr.status == 200);
-		}
-		catch(e){
-			return false;
-		}
-	};
-
 
 	return {
-		initializeApplication: initializeApplication,
-
-		existFile: existFile
+		initializeApplication: initializeApplication
 	};
 
 })();

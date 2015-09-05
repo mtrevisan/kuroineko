@@ -7,8 +7,17 @@
  */
 define(function(){
 
+	/** Object#toString result references. */
 	/** @constant */
-	var TYPE_OBJECT = '[object Object]';
+	var TYPE_FUNCTION = 'Function',
+	/** @constant */
+		TYPE_ARRAY = 'Array',
+	/** @constant */
+		TYPE_OBJECT = 'Object',
+	/** @constant */
+		TYPE_STRING = 'String',
+	/** @constant */
+		TYPE_REGEXP = 'RegExp';
 
 
 	Function.prototype.clone = function(){
@@ -42,7 +51,7 @@ define(function(){
 		if(defaults)
 			apply(object, defaults);
 
-		if(object && config && typeof config === 'object')
+		if(object && config && type(config) == TYPE_OBJECT)
 			for(var i in config)
 				object[i] = config[i];
 
@@ -50,36 +59,32 @@ define(function(){
 	};
 
 
-	/** Sencha Touch 2.4.0's Ext.isFunction */
-	var isFunction = function(value){
-		return (typeof value === 'function');
+	var type = function(value){
+		return Object.prototype.toString.call(value).match(/^\[object\s(.*)\]$/)[1];
 	};
 
-	/** Sencha Touch 2.4.0's Ext.isObject */
-	var isObject = (toString.call(null) === TYPE_OBJECT?
-		function(value){
-			return (value !== null && value !== undefined && toString.call(value) === TYPE_OBJECT);
-		}:
-		function(value){
-			return (toString.call(value) === TYPE_OBJECT);
-		}
-	);
+	var isFunction = function(value){
+		return (type(value) == TYPE_FUNCTION);
+	};
+
+	var isObject = function(value){
+		return (type(value) == TYPE_OBJECT);
+	};
 
 	/** Underscore.js 1.8.3's isUndefined */
 	var isDefined = function(value){
 		return (value !== void 0);
 	};
 
-	/** Sencha Touch 2.4.0's Ext.isString */
 	var isString = function(value){
-		return (typeof value === 'string');
+		return (type(value) == TYPE_STRING);
 	};
 
 	var isRegExp = function(value){
-		return (value instanceof RegExp);
+		return (type(value) == TYPE_REGEXP);
 	};
 
-	var extractData = function(container, selector){
+	var path = function(container, selector){
 		var data = container,
 			parts = Array.prototype.concat(selector.split('.')),
 			k, part;
@@ -93,9 +98,29 @@ define(function(){
 		return (data != container? data: undefined);
 	};
 
+	/**
+	 * Returns a partial copy of an object containing only the keys specified. If the key does not exist, the property is ignored.
+	 *
+	 * @example
+	 * <code>
+	 * ObjectHelper.pick(['a', 'e', 'f'], {a: 1, b: 2, c: 3, d: 4}); //=> {a: 1}
+	 * </code>
+	 *
+	 * @param {Array} names	An array of String property names to copy onto a new object
+	 * @param {Object} obj	The object to copy from
+	 * @return {Object} A new object with only properties from {@code names} on it.
+	 */
+	var pick = function(names, obj){
+		var result = {};
+		for(var idx = 0; idx < names.length; idx ++)
+			if(names[idx] in obj)
+				result[names[idx]] = obj[names[idx]];
+		return result;
+	};
+
 	/** Useful for I18N management. */
 	var translate = function(resource, key, defaultLabel){
-		var label = extractData(resource, key);
+		var label = path(resource, key);
 		return (isString(label)? label: defaultLabel || (key + '.undefined'));
 	};
 
@@ -104,22 +129,19 @@ define(function(){
 		if(!item)
 			return item;
 
-		var type = toString.call(item),
+		var typ = type(item),
 			cloned;
 
-		//Function
-		if(typeof item === 'function')
+		if(typ == TYPE_FUNCTION)
 			cloned = item.clone();
-		//Array
-		else if(type === '[object Array]'){
+		else if(typ == TYPE_ARRAY){
 			cloned = [];
 
 			var i = item.length;
 			while(i --)
 				cloned[i] = clone(item[i], scope || item);
 		}
-		//Object
-		else if(type === '[object Object]'){
+		else if(typ == TYPE_OBJECT){
 			//make sure the returned object has the same prototype as the original
 			cloned = Object.create(item.constructor.prototype);
 
@@ -131,20 +153,20 @@ define(function(){
 	};
 
 	var deepEquals = function(a, b){
-		var typeA = toString.call(a),
-			typeB = toString.call(b);
+		var typeA = type(a),
+			typeB = type(b);
 
 		if(typeA != typeB)
 			return false;
 
-		if(typeA === '[object Array]'){
+		if(typeA === TYPE_ARRAY){
 			if(a.length != b.length)
 				return false;
 
 			return a.every(function(k, i){ return deepEquals(k, this[i]); }, b);
 		}
 
-		if(typeA === '[object Object]'){
+		if(typeA === TYPE_OBJECT){
 			var keysA = Object.keys(a).sort(),
 				keysB = Object.keys(b).sort();
 			if(keysA.length != keysB.length)
@@ -168,32 +190,35 @@ define(function(){
 	};
 
 	/** @private */
-	var saveFile = (function(){
-		 var a = document.createElement('a');
-		 document.body.appendChild(a);
-		 a.style = 'display:none';
+	var saveFile = function(data, filename, type){
+		if(!document.getElementById('__saveFile')){
+			var a = document.createElement('a');
+			a.id = '__saveFile';
+			a.style = 'display:none';
+			document.body.appendChild(a);
+		}
 
-		return function(data, filename, type){
-			var blob = new Blob([data], {type: type}),
-				url = window.URL.createObjectURL(blob);
-			a.href = url;
-			a.download = filename;
-			a.click();
-			window.URL.revokeObjectURL(url);
-		};
-	}());
+		var blob = new Blob([data], {type: type}),
+			url = window.URL.createObjectURL(blob);
+		a.href = url;
+		a.download = filename;
+		a.click();
+		window.URL.revokeObjectURL(url);
+	};
 
 
 	return {
 		apply: apply,
 
+		type: type,
 		isFunction: isFunction,
 		isObject: isObject,
 		isDefined: isDefined,
 		isString: isString,
 		isRegExp: isRegExp,
 
-		extractData: extractData,
+		path: path,
+		pick: pick,
 		translate: translate,
 
 		clone: clone,
