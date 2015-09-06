@@ -36,9 +36,9 @@ require(['tools/data/FunctionHelper'], function(FunctionHelper){
 
 	test('choice', function(){
 		var fn = FunctionHelper.choice([
-			[function(value){ return (value == 0); }, function(){ return 'water freezes at 0�C'; }],
-			[function(value){ return (value == 100); }, function(){ return 'water boils at 100�C'; }],
-			[function(){ return true; }, function(value){ return 'nothing special happens at ' + value + '�C'; }]
+			[function(value){ return (value == 0); }, function(){ return 'water freezes at 0°C'; }],
+			[function(value){ return (value == 100); }, function(){ return 'water boils at 100°C'; }],
+			[function(){ return true; }, function(value){ return 'nothing special happens at ' + value + '°C'; }]
 		]);
 
 		equal(fn(0), 'water freezes at 0�C');
