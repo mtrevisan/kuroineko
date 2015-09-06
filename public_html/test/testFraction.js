@@ -20,6 +20,14 @@ require(['tools/math/Fraction'], function(Fraction){
 		equal(f.sgn, -1);
 	});
 
+	test('constructor with array, reduced', function(){
+		var f = new Fraction(36, 12);
+
+		equal(f.num, 3);
+		equal(f.den, 1);
+		equal(f.sgn, 1);
+	});
+
 	test('constructor with number', function(){
 		var f = new Fraction(-13.27);
 

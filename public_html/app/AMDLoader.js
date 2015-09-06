@@ -234,7 +234,7 @@ var AMDLoader = (function(doc){
 			url = pluginUrl[len == 1? 0: 1];
 
 		if(url){
-			var cfg = AMDLoader.config;
+			var cfg = AMDLoader.config || {};
 			if(cfg.paths){
 				var path = cfg.paths[url.split('/')[0]];
 				if(path)

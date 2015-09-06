@@ -172,7 +172,7 @@ define(['tools/data/structs/BitBuffer'], function(BitBuffer){
 	 * Converts <code>value</code> to an integer.
 	 *
 	 * @param {*} value	The value to convert.
-	 * @returns {Number}	Returns the integer.
+	 * @return {Number}	Returns the integer.
 	 *
 	 * @private
 	 */

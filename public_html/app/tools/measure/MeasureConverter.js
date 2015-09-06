@@ -108,7 +108,7 @@ define(['tools/math/Fraction'], function(Fraction){
 	 * Converts a value in a given unit of measure from a unit system into the equivalent value in the base unit of measure of the other unit system
 	 * (possibly the same).
 	 *
-	 * @returns {Fraction}
+	 * @return {Fraction}
 	 */
 	var convert = function(value, fromUnitOfMeasure, toUnitOfMeasure){
 		toUnitOfMeasure = toUnitOfMeasure || this.baseUOM;

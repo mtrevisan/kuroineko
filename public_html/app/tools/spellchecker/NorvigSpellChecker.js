@@ -65,7 +65,7 @@ define(function(){
 	 *
 	 * @param {String} word			Word to be searched for.
 	 * @param {Number} [distance]	Max edit distance.
-	 * @returns {Object}	an object contains candidates and sorted keys.
+	 * @return {Object}	an object contains candidates and sorted keys.
 	 */
 	var suggest = function(word, distance){
 		var input = {};

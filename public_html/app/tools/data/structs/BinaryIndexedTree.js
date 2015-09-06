@@ -74,7 +74,7 @@ define(function(){
 	 * Converts <code>value</code> to an integer.
 	 *
 	 * @param {*} value	The value to convert.
-	 * @returns {Number}	Returns the integer.
+	 * @return {Number}	Returns the integer.
 	 *
 	 * @private
 	 */
@@ -90,7 +90,7 @@ define(function(){
 	 * <code>
 	 *	map(function(k){ return k / 3; });
 	 *	</code>
-	 *	
+	 *
 	 * @example
 	 * Rescales by dividing all frequencies by 2, but taking a minimum of 1
 	 * <code>

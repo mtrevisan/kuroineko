@@ -112,7 +112,7 @@ define(function(){
 	 *
 	 * @param {Number} value
 	 * @param {Number} epsilon
-	 * @returns {Fraction}
+	 * @return {Fraction}
 	 *
 	 * @private
 	 */
@@ -263,7 +263,7 @@ define(function(){
 	 * whether the result will become irrational. So for now, only integer exponents are implemented.
 	 *
 	 * @param {Integer} k
-	 * @returns {Fraction}
+	 * @return {Fraction}
 	 */
 	var pow = function(k){
 		if(k < 0)
@@ -274,8 +274,8 @@ define(function(){
 	/**
 	 * Returns the modulus (rest of the division) of the actual object and the given fraction.
 	 *
-	 * @params {Fraction}
-	 * @returns {Fraction}
+	 * @param {Fraction}
+	 * @return {Fraction}
 	 */
 	var mod = function(){
 		var frac = parse(arguments);
@@ -296,8 +296,8 @@ define(function(){
 	/**
 	 * Returns the multiplicative inverse of the actual number in order to get the reciprocal.
 	 *
-	 * @params {Fraction}
-	 * @returns {Fraction}
+	 * @param {Fraction}
+	 * @return {Fraction}
 	 */
 	var inverse = function(){
 		return new Constructor(this.sgn * this.den, this.num);
@@ -306,8 +306,8 @@ define(function(){
 	/**
 	 * Returns the additive inverse of the actual number.
 	 *
-	 * @params {Fraction}
-	 * @returns {Fraction}
+	 * @param {Fraction}
+	 * @return {Fraction}
 	 */
 	var negate = function(){
 		return new Constructor(-this.sgn * this.num, this.den);
@@ -359,7 +359,7 @@ define(function(){
 	/**
 	 * Generates an exact string representation of the actual object, including repeating decimal places of any length.
 	 *
-	 * @returns {String}
+	 * @return {String}
 	 */
 	var toString = function(){
 		if(this.isInfinite())
@@ -411,7 +411,7 @@ define(function(){
 	 * Converts <code>value</code> to an integer.
 	 *
 	 * @param {*} value	The value to convert.
-	 * @returns {Number}	Returns the integer.
+	 * @return {Number}	Returns the integer.
 	 *
 	 * @private
 	 */
@@ -456,7 +456,7 @@ define(function(){
 	/**
 	 * Generates an exact LaTeX representation of the actual object.
 	 *
-	 * @returns {String}
+	 * @return {String}
 	 */
 	var toLaTeX = function(){
 		if(!this.sgn)

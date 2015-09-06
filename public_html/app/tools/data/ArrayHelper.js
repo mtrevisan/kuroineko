@@ -267,7 +267,7 @@ var spliceOne = function(arr, index){
 	 * Converts <code>value</code> to an integer.
 	 *
 	 * @param {*} value	The value to convert.
-	 * @returns {Number}	Returns the integer.
+	 * @return {Number}	Returns the integer.
 	 *
 	 * @private
 	 */
