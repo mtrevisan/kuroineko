@@ -173,30 +173,67 @@ var spliceOne = function(arr, index){
 	/**
 	 * Creates an array of unique values that are included in all of the provided arrays.
 	 *
-	 * @param {Array} a	The first array of sorted numbers.
-	 * @param {Array} b	The second array of sorted numbers.
-	 * @return {Array}	Returns the new array of shared values.
+	 * @param {Array} arguments	The array(s).
+	 * @return {Array}	New array of shared values.
 	 */
-	var intersection = function(a, b){
-		var n = a.length,
-			m = b.length,
-			i = 0,
-			j = 0,
-			result = [];
+	var intersection = function(a){
+		var argsLength = arguments.length,
+			length = a.length,
+			result = [],
+			i, j;
+		for(j = 0; j < argsLength; j ++)
+			if(!Array.isArray(arguments[j]))
+				return [];
 
-		while(i < n && j < m){
-			if(a[i] < b[j])
-				i ++;
-			else if(a[i] > b[j])
-				j ++;
-			else{
-				result.push(a[i]);
-				i ++;
-				j ++;
-			}
+		for(i = 0; i < length; i ++){
+			var item = a[i];
+			if(result.indexOf(item) >= 0)
+				continue;
+
+			for(j = 1; j < argsLength; j ++)
+				if(arguments[j].indexOf(item) < 0)
+					break;
+			if(j === argsLength)
+				result.push(item);
 		}
-
 		return result;
+	};
+
+	/**
+	 * Creates an array of unique values that are included in all of the provided arrays.
+	 *
+	 * @param {Array} arguments	The array(s).
+	 * @return {Array}	Array of unique items.
+	 */
+	var unique = function(){
+		for(var j = 0, argsLength = arguments.length; j < argsLength; j ++)
+			if(!Array.isArray(arguments[j]))
+				return [];
+
+		var arr = Array.prototype.concat.apply([], Array.prototype.slice.call(arguments));
+		return arr.filter(function(el, idx, arr){
+			return (arr.indexOf(el, idx + 1) < 0);
+		});
+	};
+
+	/**
+	 * Take the difference between one array and a number of other arrays.<p>
+	 * Only the elements present in just the first array will remain.
+	 *
+	 * @param {Array} arguments	The array(s).
+	 * @return {Array}	Array of difference.
+	 */
+	var difference = function(arr){
+		if(!Array.isArray(arguments[0]))
+			return [];
+		for(var j = 1, argsLength = arguments.length; j < argsLength; j ++)
+			if(!Array.isArray(arguments[j]))
+				return arguments[0];
+
+		var rest = Array.prototype.concat.apply([], Array.prototype.slice.call(arguments, 1));
+		return arr.filter(function(value){
+			return (rest.indexOf(value) < 0);
+		});
 	};
 
 	/**
@@ -279,6 +316,8 @@ var spliceOne = function(arr, index){
 	return {
 		copy: copy,
 		intersection: intersection,
+		unique: unique,
+		difference: difference,
 		binaryIndexOf: binaryIndexOf,
 		shuffle: shuffle,
 		partition: partition
