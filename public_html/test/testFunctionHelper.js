@@ -41,8 +41,8 @@ require(['tools/data/FunctionHelper'], function(FunctionHelper){
 			[function(){ return true; }, function(value){ return 'nothing special happens at ' + value + '°C'; }]
 		]);
 
-		equal(fn(0), 'water freezes at 0�C');
-		equal(fn(50), 'nothing special happens at 50�C');
-		equal(fn(100), 'water boils at 100�C');
+		equal(fn(0), 'water freezes at 0°C');
+		equal(fn(50), 'nothing special happens at 50°C');
+		equal(fn(100), 'water boils at 100°C');
 	});
 });
