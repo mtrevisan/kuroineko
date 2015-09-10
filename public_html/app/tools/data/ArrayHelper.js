@@ -237,13 +237,15 @@ var spliceOne = function(arr, index){
 	};
 
 	/**
-	 * Performs a binary search of an array to determine the index at which the element.
+	 * Performs a binary search of an array to determine the index at which the element.<p>
+	 * Returns the index <code>idx</code> in the table such that <code>value = array[idx]</code>, where <code>array[idx] <= array[idx + 1]</code>, if positive.<br>
+	 * Returns the index <code>idx</code> in the table such that <code>array[-idx - 1] < value < array[-idx]</code>, if negative.
 	 *
 	 * @see {@link http://oli.me.uk/2013/06/08/searching-javascript-arrays-with-a-binary-search/}
 	 *
 	 * @param {Array} array	The sorted array to inspect.
 	 * @param {*} element	The value to search.
-	 * @return {Number}	Returns the index of the matched value, else <code>-1</code>.
+	 * @return {Number}	The index of the matched value, otherwise the negated of the element just after.
 	 *
 	 * @private
 	 */

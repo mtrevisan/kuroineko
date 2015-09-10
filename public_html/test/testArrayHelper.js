@@ -71,12 +71,16 @@ require(['tools/data/ArrayHelper'], function(ArrayHelper){
 		deepEqual(ArrayHelper.difference(a, b, c), []);
 	});
 
-	test('difference - should use empty array if null/undefined', function(){
-		var arr = [1, 2];
-		deepEqual(ArrayHelper.difference(null, arr), []);
-		deepEqual(ArrayHelper.difference(undefined, arr), []);
-		deepEqual(ArrayHelper.difference(arr, null), arr);
-		deepEqual(ArrayHelper.difference(arr, undefined), arr);
+	test('binaryIndexOf - should find the element', function(){
+		var arr = [1, 2, 5, 7, 12, 19, 31];
+		equal(ArrayHelper.binaryIndexOf(arr, 1), 0);
+		equal(ArrayHelper.binaryIndexOf(arr, 31), 6);
+		equal(ArrayHelper.binaryIndexOf(arr, 7), 3);
+	});
+
+	test('binaryIndexOf - should not find the element', function(){
+		var arr = [1, 2, 5, 7, 12, 19, 31];
+		equal(ArrayHelper.binaryIndexOf(arr, 8), -4);
 	});
 
 	test('partition', function(){
