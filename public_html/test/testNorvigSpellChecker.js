@@ -2,19 +2,35 @@ require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 	module('NorvigSpellChecker');
 
 	test('plain spell checker from dictionary', function(){
-		var spellChecker = new NorvigSpellChecker('abcdefghijklmnopqrstuvwxyz');
-		spellChecker.readDictionary(['abb', 'acbd']);
+		var spellChecker = new NorvigSpellChecker('aàbcdefghijklmnopqrstuvwxyz');
+		spellChecker.readDictionary(['àbb', 'acbd']);
 
-		var suggestions = spellChecker.suggest('abc');
+		var suggestions = spellChecker.suggest('abb');
 
 		deepEqual(suggestions, {
 			candidates: {
-				abb: 0.9741473302433789,
-				acbd: 0.025852669756621083
+				'àbb': 0.9808838459953249,
+				acbd: 0.019116154004675198
 			},
 			sortedKeys: [
-				'abb',
+				'àbb',
 				'acbd'
+			]
+		});
+	});
+
+	test('plain spell checker from phoneme\'s dictionary', function(){
+		var spellChecker = new NorvigSpellChecker('aàbt͡ʃdðd͡zeèéfghijd͡ʒklmnɲoòóprstθt͡suúvx');
+		spellChecker.readDictionary(['t͡ʃiao', 'ad͡ʒuto']);
+
+		var suggestions = spellChecker.suggest('avuto');
+
+		deepEqual(suggestions, {
+			candidates: {
+				'ad͡ʒuto': 1
+			},
+			sortedKeys: [
+				'ad͡ʒuto'
 			]
 		});
 	});

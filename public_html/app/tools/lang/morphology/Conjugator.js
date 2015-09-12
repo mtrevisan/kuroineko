@@ -10,7 +10,8 @@ define(['tools/lang/Dialect', 'tools/lang/phonology/Orthography', 'tools/lang/ph
 	 * @private
 	 */
 	var SPLITTER_REGEX_OPTIONAL = /(.*?)\((.+?)\)(.*)/,
-		SPLITTER_REGEX_ALTERNATIVE = /(.+)\/(.+)/;
+		SPLITTER_REGEX_ALTERNATIVE = /(.+)\/(.+)/,
+		SPLITTER_REGEX_OPTIONAL_ALTERNATIVE = /(.*?)\((.+?)\)(.*)|(.+)\/(.+)/;
 
 
 	/** @requires infinitive be trimmed. */
@@ -72,7 +73,7 @@ define(['tools/lang/Dialect', 'tools/lang/phonology/Orthography', 'tools/lang/ph
 		};
 		response.forEach(splitter);
 		response = ArrayHelper.unique(response.filter(function(item){
-			return (!item.match(SPLITTER_REGEX_OPTIONAL) && !item.match(SPLITTER_REGEX_ALTERNATIVE));
+			return !item.match(SPLITTER_REGEX_OPTIONAL_ALTERNATIVE);
 		}));
 
 		return response;

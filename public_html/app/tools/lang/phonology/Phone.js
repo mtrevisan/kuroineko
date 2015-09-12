@@ -11,7 +11,10 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 	/** @constant */
 	var REGEX_UNICODE_SPLITTER = /(\[([^\]]+)\]|j²|[^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u035B\u035D-\u0360\u0362-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*(?:[\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*[\u035C\u0361][^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*)?)/g;
-	/** @constant */
+	/**
+	 * @constant
+	 * @private
+	 */
 	var REGEX_UNICODE_FEATURES = /^\[(\s*([\+\-0])?([a-z]+?)\s*)(,(\s*([\+\-0])?([a-z]+?)\s*))*]$/;
 
 

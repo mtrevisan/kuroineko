@@ -68,11 +68,6 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 		return convertPhonesIntoPhonemes(convertGraphemesIntoPhones(word, dialect, graphematicSyllabation));
 	};
 
-	/** NOTE: Use IPA standard. */
-	var convertGraphemesIntoPhonemes = function(word, dialect, graphematicSyllabation){
-		return convertPhonesIntoPhonemes(convertGraphemesIntoPhones(word, dialect, graphematicSyllabation));
-	};
-
 	/**
 	 * NOTE: Use non-standard IPA to mark /d͡ʒ/-affine grapheme.
 	 *
@@ -227,7 +222,6 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 			.replace(/ɹ˞[̺̠]|r̺|ɾ̺|ɽ̠̟/g, 'r')
 			.replace(/l(̺̝?|̻ʲ)|ʎ˞̞|ʟ˞̟̞/g, 'l')
 			.replace(/ŋ̞̟/g, 'n')
-			.replace(/ɲ/g, 'ñ')
 			.replace(/([kg])[̟ʷ]/g, '$1')
 			.replace(/t̻͡ʃʲ/g, 't͡ʃ').replace(/d̻͡ʒʲ/g, 'd͡ʒ')
 			.replace(/t͡s̪̠/g, 't͡s').replace(/d͡z̪̠/g, 'd͡z')

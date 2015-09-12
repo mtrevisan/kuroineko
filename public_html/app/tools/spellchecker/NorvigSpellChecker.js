@@ -13,8 +13,15 @@
  */
 define(function(){
 
+	/**
+	 * @constant
+	 * @private
+	 */
+	var REGEX_UNICODE_SPLITTER = /([^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u035B\u035D-\u0360\u0362-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*(?:[\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*[\u035C\u0361][^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*)?)/g;
+
+
 	var Constructor = function(alphabetString){
-		this.alphabet = alphabetString;
+		this.alphabet = alphabetString.match(REGEX_UNICODE_SPLITTER);
 		this.filter = new RegExp('([' + alphabetString + ']+)', 'gi'),
 
 		this.dictionary = {};
@@ -32,7 +39,7 @@ define(function(){
 
 	/** @private */
 	var extractWords = function(words){
-		return (Array.isArray(words)? words: words.match(this.filter));
+		return (Array.isArray(words)? words.map(function(value){ return value.toLowerCase(); }): words.toLowerCase().match(this.filter));
 	};
 
 	/**
@@ -69,7 +76,7 @@ define(function(){
 	 */
 	var suggest = function(word, distance){
 		var input = {};
-		input[word] = 0;
+		input[word.toLowerCase()] = 0;
 		var candidates = calculateNEditSet.call(this, input, {}, distance || 2);
 
 		return {
