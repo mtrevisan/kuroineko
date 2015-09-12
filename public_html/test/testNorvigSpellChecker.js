@@ -35,6 +35,24 @@ require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 		});
 	});
 
+	test('plain spell checker from dictionary with uppercase', function(){
+		var spellChecker = new NorvigSpellChecker('aàbcdefghijklmnopqrstuvwxyz');
+		spellChecker.readDictionary(['ABB', 'ACBD']);
+
+		var suggestions = spellChecker.suggest('abb');
+
+		deepEqual(suggestions, {
+			candidates: {
+				abb: 0.9955344735270633,
+				acbd: 0.004465526472936832
+			},
+			sortedKeys: [
+				'abb',
+				'acbd'
+			]
+		});
+	});
+
 	test('plain spell checker from corpus', function(){
 		var spellChecker = new NorvigSpellChecker('abcdefghijklmnopqrstuvwxyz');
 		spellChecker.readDictionary('abb, acbd');
