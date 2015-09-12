@@ -5,7 +5,7 @@
  *
  * @author Mauro Trevisan
  */
-define(function(){
+define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 	var empty = function(array){
 		array.length = 0;
@@ -303,6 +303,34 @@ var spliceOne = function(arr, index){
 	};
 
 	/**
+	 * Returns a new list by pulling every item out of it (and all its sub-arrays) and putting them in a new array, depth-first.
+	 *
+	 * @param {Array} list The array to consider.
+	 * @return {Array} The flattened list.
+	 */
+	var flatten = function(list){
+		return (function recursiveFlatten(list){
+			var result = [];
+			var add = function(x){
+				if(Array.isArray(x) || ObjectHelper.isObject(x))
+					result = result.concat(recursiveFlatten(x));
+				else
+					result.push(x);
+			};
+
+			if(ObjectHelper.isObject(list))
+				Object.keys(list).forEach(function(x){
+					add(list[x]);
+				});
+			else
+				list.forEach(function(x){
+					add(x);
+				});
+			return result;
+		})(list);
+	};
+
+	/**
 	 * Converts <code>value</code> to an integer.
 	 *
 	 * @param {*} value	The value to convert.
@@ -322,7 +350,8 @@ var spliceOne = function(arr, index){
 		difference: difference,
 		binaryIndexOf: binaryIndexOf,
 		shuffle: shuffle,
-		partition: partition
+		partition: partition,
+		flatten: flatten
 	};
 
 });

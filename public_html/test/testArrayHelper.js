@@ -88,4 +88,22 @@ require(['tools/data/ArrayHelper'], function(ArrayHelper){
 
 		deepEqual(result, [['sss', 'bars'], ['ttt', 'foo']]);
 	});
+
+	test('flatten array', function(){
+		var result = ArrayHelper.flatten([1, 2, [3, 4], 5, [6, [7, 8, [9, [10, 11], 12]]]]);
+
+		deepEqual(result, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+	});
+
+	test('flatten object', function(){
+		var result = ArrayHelper.flatten({a: 'a', b: {c: 'c'}});
+
+		deepEqual(result, ['a', 'c']);
+	});
+
+	test('flatten array and object', function(){
+		var result = ArrayHelper.flatten({a: 'a', b: {c: 'c'}, d: [1, 2]});
+
+		deepEqual(result, ['a', 'c', 1, 2]);
+	});
 });
