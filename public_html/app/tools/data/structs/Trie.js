@@ -12,6 +12,9 @@ define(function(){
 	};
 
 
+	/**
+	 * @param {String} [encoding]	String encoding of the trie in the form {bit-size}DATA_SEPARATOR{directory-data}DATA_SEPARATOR{trie-data-DATA_SEPARATOR-separated}
+	 */
 	var reset = function(){
 		this.root = {
 			children: {}
@@ -41,8 +44,10 @@ define(function(){
 	};
 
 	var remove = function(word){
-		var result = this.findPrefix(word);
-		result.parent.children[result.index] = undefined;
+		var result = this.findPrefix(word),
+			tmp = result.parent.children[result.index];
+		if(tmp && tmp.leaf)
+			result.parent.children[result.index] = undefined;
 	};
 
 	/** Find the node that correspond to the last character in the string. */
@@ -65,8 +70,23 @@ define(function(){
 	/** Search the given string and return <code>true</code> if it lands on on a word, essentially testing if the word exists in the trie. */
 	var contains = function(word){
 		var tmp = this.findPrefix(word);
-		tmp = tmp.parent.children[tmp.index];
+		tmp = (tmp.parent && tmp.parent.children[tmp.index]);
 		return (tmp && tmp.leaf? tmp: undefined);
+	};
+
+	/** Apply a function to each node, traversing the trie in level order. */
+	var apply = function(fn){
+		var level = [this.root],
+			node;
+		while(level.length){
+			node = level.shift();
+			Object.keys(node.children).forEach(function(i){
+				level.push(node.children[i]);
+			});
+
+			if(node.leaf)
+				fn(node);
+		}
 	};
 
 	/**
@@ -85,16 +105,15 @@ define(function(){
 		node = node.parent.children[node.index];
 
 		if(node){
-			var stack = [node];
-			while(stack.length){
-				var current = stack.pop();
-
-				if(current.leaf)
-					list.push(current.prefix);
-
-				Object.keys(current.children).forEach(function(child){
-					stack.push(current.children[child]);
+			var level = [node];
+			while(level.length){
+				node = level.shift();
+				Object.keys(node.children).forEach(function(i){
+					level.push(node.children[i]);
 				});
+
+				if(node.leaf)
+					list.push(node.prefix);
 			}
 		}
 
@@ -136,6 +155,7 @@ define(function(){
 		remove: remove,
 		findPrefix: findPrefix,
 		contains: contains,
+		apply: apply,
 		getWords: getWords,
 		findMatchesOnPath: findMatchesOnPath
 	};

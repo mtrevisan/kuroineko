@@ -176,14 +176,14 @@ require(['tools/math/Fraction'], function(Fraction){
 		var f1 = new Fraction(19, 6);
 		var f2 = new Fraction(38, 12);
 
-		equal(f1.isDivisibleBy(f2), true);
+		ok(f1.isDivisibleBy(f2));
 	});
 
 	test('isDivisible false', function(){
 		var f1 = new Fraction(19, 6);
 		var f2 = new Fraction(5, 98);
 
-		equal(f1.isDivisibleBy(f2), false);
+		notOk(f1.isDivisibleBy(f2));
 	});
 
 	test('to positive string 1', function(){

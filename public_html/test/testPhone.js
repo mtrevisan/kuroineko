@@ -52,16 +52,16 @@ require(['tools/lang/phonology/Phone', 'tools/lang/GrammarLearner'], function(Ph
 	test('rule containment test', function(){
 		Phone.setUseDiacritics(true);
 
-		equal((new Phone.Rule('a', 'b', 'a_#')).contains(new Phone.Rule('a', 'c', 'a_#')), false);
-		equal((new Phone.Rule('a', 'b', 'ab_#')).contains(new Phone.Rule('a', 'b', 'a_#')), false);
+		notOk((new Phone.Rule('a', 'b', 'a_#')).contains(new Phone.Rule('a', 'c', 'a_#')));
+		notOk((new Phone.Rule('a', 'b', 'ab_#')).contains(new Phone.Rule('a', 'b', 'a_#')));
 
-		equal((new Phone.Rule('a', 'b', '[+con]_#')).contains(new Phone.Rule('a', 'b', '[+con]_#')), true);
-		equal((new Phone.Rule('a', 'b', '[+con]_#')).contains(new Phone.Rule('a', 'b', '[+con,+voi]_#')), true);
-		equal((new Phone.Rule('a', 'b', '[+con,+voi]_#')).contains(new Phone.Rule('a', 'b', '[+con]_#')), false);
+		ok((new Phone.Rule('a', 'b', '[+con]_#')).contains(new Phone.Rule('a', 'b', '[+con]_#')));
+		ok((new Phone.Rule('a', 'b', '[+con]_#')).contains(new Phone.Rule('a', 'b', '[+con,+voi]_#')));
+		notOk((new Phone.Rule('a', 'b', '[+con,+voi]_#')).contains(new Phone.Rule('a', 'b', '[+con]_#')));
 
-		equal((new Phone.Rule('a', 'b', 'a_#')).contains(new Phone.Rule('a', 'b', 'a_#')), true);
-		equal((new Phone.Rule('a', 'b', '[-con]_#')).contains(new Phone.Rule('a', 'b', 'a_#')), true);
-		equal((new Phone.Rule('a', 'b', 'a_#')).contains(new Phone.Rule('a', 'b', '[-con]_#')), false);
+		ok((new Phone.Rule('a', 'b', 'a_#')).contains(new Phone.Rule('a', 'b', 'a_#')));
+		ok((new Phone.Rule('a', 'b', '[-con]_#')).contains(new Phone.Rule('a', 'b', 'a_#')));
+		notOk((new Phone.Rule('a', 'b', 'a_#')).contains(new Phone.Rule('a', 'b', '[-con]_#')));
 
 		Phone.setUseDiacritics(false);
 	});

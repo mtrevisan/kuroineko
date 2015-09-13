@@ -9,14 +9,14 @@ define(function(){
 	var BITS_TO_GO = 8;
 
 
-	var Constructor = function(hex){
-		this.reset(hex);
+	var Constructor = function(hex, size){
+		this.reset(hex, size);
 	};
 
 	Constructor.BITS_TO_GO = BITS_TO_GO;
 
 
-	var reset = function(hex){
+	var reset = function(hex, size){
 		this.buffer = [];
 		this.current = 0;
 		this.bitsToGo = BITS_TO_GO;
@@ -26,14 +26,22 @@ define(function(){
 			if(hex instanceof Uint8Array)
 				hex = Array.prototype.slice.call(hex);
 
-			var size = hex.length,
+			var len = hex.length,
 				i;
 			if(Array.isArray(hex))
-				for(i = 0; i < size; i ++)
+				for(i = 0; i < len; i ++)
 					this.buffer.push(hex[i]);
 			else if(typeof hex == 'string')
-				for(i = 0; i < size; i += 2)
+				for(i = 0; i < len; i += 2)
 					this.buffer.push(parseInt(hex.substr(i, 2), 16));
+
+			this.bits = size;
+
+			size %= BITS_TO_GO;
+			if(size){
+				this.current = this.buffer.pop();
+				this.bitsToGo -= size;
+			}
 		}
 	};
 
@@ -60,18 +68,30 @@ define(function(){
 		this.bits ++;
 	};
 
+	/** Write some data to the bit string. The number of bits must be 32 or fewer. */
+	var append = function(data, numberOfBits){
+		for(var i = numberOfBits - 1; i >= 0; i --)
+			this.appendBit(data & (1 << i)? 1: 0);
+	};
+
 	/** Write down what remains of the buffer to be written */
 	var finalize = function(){
-		while(this.bitsToGo < BITS_TO_GO)
-			this.appendBit(0);
+		while(this.bitsToGo){
+			this.current = (this.current << 1) | 0;
+			this.bitsToGo --;
+		}
+
+		this.buffer.push(this.current);
+		this.current = 0;
+		this.bitsToGo = BITS_TO_GO;
 	};
 
 	var getIterator = function(){
 		var b = this.buffer,
-			bitsRemaining, bits, index, currentBit;
+			bitsRemaining, bits, idx, currentBit;
 
 		var hasNext = function(){
-			return (index < b.length);
+			return (idx < b.length);
 		};
 		var next = function(){
 			currentBit = (bits >> bitsRemaining) & 0x1;
@@ -81,17 +101,25 @@ define(function(){
 				bitsRemaining --;
 			return currentBit;
 		};
+		var skip = function(n){
+			while(n --)
+				next();
+		};
+		/** @private */
 		var loadNextByte = function(){
 			bitsRemaining = BITS_TO_GO - 1;
-			bits = b[++ index];
+			bits = b[++ idx];
 		};
 		var rewind = function(){
-			index = -1;
+			idx = -1;
 			loadNextByte();
 			currentBit = undefined;
 		};
 		var current = function(){
 			return currentBit;
+		};
+		var index = function(){
+			return (idx >= 0? idx * 8 + BITS_TO_GO - bitsRemaining - 1: 0);
 		};
 
 		rewind();
@@ -99,8 +127,10 @@ define(function(){
 		return {
 			hasNext: hasNext,
 			next: next,
+			skip: skip,
 			rewind: rewind,
-			current: current
+			current: current,
+			index: index
 		};
 	};
 
@@ -129,6 +159,7 @@ define(function(){
 		array: array,
 
 		appendBit: appendBit,
+		append: append,
 		finalize: finalize,
 
 		getIterator: getIterator,

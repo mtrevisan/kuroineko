@@ -9,9 +9,9 @@ require(['tools/data/structs/Trie'], function(Trie){
 		t.add('ac');
 		t.add('a');
 
-		equal(!!t.contains('a'), true);
-		equal(t.contains('ab'), undefined);
-		equal(t.contains('c'), undefined);
+		ok(t.contains('a'));
+		notOk(t.contains('ab'));
+		notOk(t.contains('c'));
 	});
 
 	test('getWords 1', function(){
@@ -50,5 +50,20 @@ require(['tools/data/structs/Trie'], function(Trie){
 		t.add('abc');
 
 		deepEqual(t.findMatchesOnPath('abcd').sort(), ['a', 'ab', 'abc'].sort());
+	});
+
+	test('apply', function(){
+		var t = new Trie();
+
+		t.add('abc');
+		t.add('abb');
+		t.add('ac');
+		t.add('a');
+
+		var count = 1;
+		t.apply(function(node){
+			ok(t.contains(node.prefix));
+			count ++;
+		});
 	});
 });

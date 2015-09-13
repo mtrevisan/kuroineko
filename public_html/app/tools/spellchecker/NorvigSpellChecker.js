@@ -10,6 +10,16 @@
  * @see {@link http://norvig.com/spell-correct.html}
  *
  * @author Mauro Trevisan
+ *
+ *
+<span class="livespell_redwiggle" oncontextmenu="return false" onmousedown="return livespell.insitu.disableclick(event, &quot;0&quot;);"
+onmouseup="return livespell.insitu.typoclick(event, &quot;myTextArea&quot;, this, &quot;S&quot;, &quot;0&quot;)">exampl</span>
+.livespell_redwiggle{
+	background-image: url(resources/images/wiggle.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	cursor: default;
+}
  */
 define(function(){
 
@@ -37,6 +47,18 @@ define(function(){
 		calculateLanguageModelProbability.call(this, corpus);
 	};
 
+	/**
+	 * Adds a word to the dictionary.
+	 *
+	 * @param {String} word	The word to add to the dictionary.
+	 */
+	var addWord = function(word){
+		corpus = extractWords.call(this, corpus);
+
+//FIXME
+		calculateLanguageModelProbability.call(this, corpus);
+	};
+
 	/** @private */
 	var extractWords = function(words){
 		return (Array.isArray(words)? words.map(function(value){ return value.toLowerCase(); }): words.toLowerCase().match(this.filter));
@@ -49,13 +71,11 @@ define(function(){
 	 */
 	var calculateLanguageModelProbability = function(words){
 		words.forEach(function(word){
-			word = word.toLowerCase();
-
 			this[word] = this[word] + 1 || 1;
 		}, this.dictionary);
 
 		//calculate logarithm of probability
-		var logSize = Math.log(words.length);
+		var logSize = Math.log(Object.keys(this.dictionary).length);
 		Object.keys(this.dictionary).forEach(function(word){
 			this[word] = Math.log(this[word]) - logSize;
 		}, this.dictionary);
@@ -70,9 +90,9 @@ define(function(){
 	 * <p>
 	 * According to Norvig, literature suggests that 80% to 95% of spelling errors are an edit distance of 1 away from the correct word.
 	 *
-	 * @param {String} word			Word to be searched for.
+	 * @param {String} word			The input for which corrections should be suggested.
 	 * @param {Number} [distance]	Max edit distance.
-	 * @return {Object}	an object contains candidates and sorted keys.
+	 * @return {Object}	An object contains candidates and sorted keys.
 	 */
 	var suggest = function(word, distance){
 		var input = {};
@@ -231,6 +251,8 @@ define(function(){
 		constructor: Constructor,
 
 		readDictionary: readDictionary,
+//		addWord: addWord,
+
 		isCorrect: isCorrect,
 		suggest: suggest
 	};

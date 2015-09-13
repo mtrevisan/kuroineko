@@ -95,7 +95,7 @@ require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 
 		var correct = spellChecker.isCorrect('abb');
 
-		equal(correct, true);
+		ok(correct);
 	});
 
 	test('is not correct', function(){
@@ -104,6 +104,6 @@ require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 
 		var correct = spellChecker.isCorrect('abc');
 
-		equal(correct, false);
+		notOk(correct);
 	});
 });
