@@ -10,16 +10,6 @@
  * @see {@link http://norvig.com/spell-correct.html}
  *
  * @author Mauro Trevisan
- *
- *
-<span class="livespell_redwiggle" oncontextmenu="return false" onmousedown="return livespell.insitu.disableclick(event, &quot;0&quot;);"
-onmouseup="return livespell.insitu.typoclick(event, &quot;myTextArea&quot;, this, &quot;S&quot;, &quot;0&quot;)">exampl</span>
-.livespell_redwiggle{
-	background-image: url(resources/images/wiggle.png);
-	background-repeat: repeat-x;
-	background-position: bottom;
-	cursor: default;
-}
  */
 define(function(){
 

@@ -257,6 +257,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 			if(!infinitive)
 				return;
 			infinitive = infinitive.replace(/^\s+|\s+$/g, '');
+			infinitive = Orthography.correctOrthography(infinitive);
 
 			GoogleAnalyticsHelper.trackEvent('Compute', 'Conjugate', '{infinitive: \'' + infinitive + '\', dialect: \'' + dialect + '\'}');
 
