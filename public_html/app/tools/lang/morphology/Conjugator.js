@@ -76,6 +76,8 @@ define(['tools/lang/Dialect', 'tools/lang/phonology/Orthography', 'tools/lang/ph
 			return !item.match(SPLITTER_REGEX_OPTIONAL_ALTERNATIVE);
 		}));
 
+		response = response.map(function(word){ return Word.unmarkDefaultStress(word); });
+
 		return response;
 	};
 

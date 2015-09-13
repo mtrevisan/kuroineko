@@ -334,7 +334,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 	/** @private */
 	var generateInfinitiveSimple = function(type, t){
 		if(t.themeT1)
-			namespace(this.paradigm, 'infinitive', 'simple', type).all = t.themeT1 + 'r';
+			namespace(this.paradigm, 'infinitive', 'simple', type).all = t.themeT1 + 'r(e)';
 	};
 
 	/** @private */
@@ -353,8 +353,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				root.general = {
 					singularMasculine: t.themeT6 + '(do)',
 					pluralMasculine: t.themeT6 + '(di)',
-					singularFeminine: t.themeT6 + 'da',
-					pluralFeminine: t.themeT6 + 'de'
+					singularFeminine: t.themeT6 + '(d)a',
+					pluralFeminine: t.themeT6 + '(d)e'
 				};
 			if(t.themeT2)
 				root.northern_oriental1 = generateEntireDeclination(t.themeT2 + 'st');
