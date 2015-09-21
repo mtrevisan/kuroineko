@@ -30,7 +30,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				imperfect: {
 					regular: {
 						firstSingular: {central: 'andàvo', general: 'andàva', northern_oriental: 'andàve'},
-						firstPlural: {general: 'andàvimo', northern: 'and(iv)(i)ón(se)', oriental: 'and(iv)én(se)'},
+						firstPlural: {general: 'andàvimo', northern1: 'and(i)ón(se)', northern2: 'andiv(i)ón(se)', oriental: 'and(iv)én(se)'},
 						secondSingular: {general: 'andàvi'},
 						secondPlural: {archaic: 'andàva', general: 'andàvi', northern: 'and(iv)ié'},
 						third: {general: 'andàva'}
@@ -66,7 +66,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				imperfect: {
 					regular: {
 						firstSingular: {general: 'andàse'},
-						firstPlural: {general: 'andàsimo', northern: 'and(is)(i)ón(e/se)', oriental: 'and(is)én(e/se)'},
+						firstPlural: {general: 'andàsimo', northern1: 'and(i)ón(e/se)', northern2: 'andis(i)ón(e/se)', oriental: 'and(is)én(e/se)'},
 						secondSingular: {general: 'andàsi'},
 						secondPlural: {general: 'andàsi', archaic: 'andàse', northern: 'and(is)ié(de/ge)'},
 						third: {general: 'andàse'}
@@ -155,7 +155,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				imperfect: {
 					regular: {
 						firstSingular: {central: 'fàvo', general: 'fàva', northern_oriental: 'fàve'},
-						firstPlural: {general: 'fàvimo', northern: 'f(iv)(i)ón(se)', oriental: 'f(iv)én(se)'},
+						firstPlural: {general: 'fàvimo', northern1: 'f(i)ón(se)', northern2: 'fiv(i)ón(se)', oriental: 'f(iv)én(se)'},
 						secondSingular: {general: 'fàvi'},
 						secondPlural: {archaic: 'fàva', general: 'fàvi', northern: 'f(iv)ié'},
 						third: {general: 'fàva'}
@@ -186,7 +186,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				imperfect: {
 					regular: {
 						firstSingular: {general: 'fàse'},
-						firstPlural: {general: 'fàsimo', northern: 'f(is)(i)ón(e/se)', oriental: 'f(is)én(e/se)'},
+						firstPlural: {general: 'fàsimo', northern1: 'f(i)ón(e/se)', northern2: 'fis(i)ón(e/se)', oriental: 'f(is)én(e/se)'},
 						secondSingular: {general: 'fàsi'},
 						secondPlural: {general: 'fàsi', archaic: 'fàse', northern: 'f(is)ié(de/ge)'},
 						third: {general: 'fàse'}
@@ -295,7 +295,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				imperfect: {
 					regular: {
-						firstPlural: {general: 'devévimo', northern: 'dev(iv)(i)ón(se)', oriental: 'dev(iv)én(se)'},
+						firstPlural: {general: 'devévimo', northern1: 'dev(i)ón(se)', northern2: 'deviv(i)ón(se)', oriental: 'dev(iv)én(se)'},
 						firstSingular: {central: 'devévo', general: 'devéva', northern_oriental: 'devéve'},
 						secondPlural: {archaic: 'devéva', general: 'devévi', northern: 'dev(iv)ié'},
 						secondSingular: {general: 'devévi'},
@@ -335,7 +335,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 			subjunctive: {
 				imperfect: {
 					regular: {
-						firstPlural: {general: 'devésimo', northern: 'dev(is)(i)ón(e/se)', oriental: 'dev(is)én(e/se)'},
+						firstPlural: {general: 'devésimo', northern1: 'dev(i)ón(e/se)', northern2: 'devis(i)ón(e/se)', oriental: 'dev(is)én(e/se)'},
 						firstSingular: {general: 'devése'},
 						secondPlural: {archaic: 'devése', general: 'devési', northern: 'dev(is)ié(de/ge)'},
 						secondSingular: {general: 'devési'},
@@ -407,7 +407,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				imperfect: {
 					regular: {
-						firstPlural: {general: 'savévimo', northern: 'sav(iv)(i)ón(se)', oriental: 'sav(iv)én(se)'},
+						firstPlural: {general: 'savévimo', northern1: 'sav(i)ón(se)', northern2: 'saviv(i)ón(se)', oriental: 'sav(iv)én(se)'},
 						firstSingular: {central: 'savévo', general: 'savéva', northern_oriental: 'savéve'},
 						secondPlural: {archaic: 'savéva', general: 'savévi', northern: 'sav(iv)ié'},
 						secondSingular: {general: 'savévi'},
@@ -449,7 +449,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 			subjunctive: {
 				imperfect: {
 					regular: {
-						firstPlural: {general: 'savésimo', northern: 'sav(is)(i)ón(e/se)', oriental: 'sav(is)én(e/se)'},
+						firstPlural: {general: 'savésimo', northern1: 'sav(i)ón(e/se)', northern2: 'savis(i)ón(e/se)', oriental: 'sav(is)én(e/se)'},
 						firstSingular: {general: 'savése'},
 						secondPlural: {archaic: 'savése', general: 'savési', northern: 'sav(is)ié(de/ge)'},
 						secondSingular: {general: 'savési'},
@@ -534,7 +534,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				imperfect: {
 					regular: {
-						firstPlural: {general: 'dixévimo', northern: 'dix(iv)(i)ón(se)', oriental: 'dix(iv)én(se)'},
+						firstPlural: {general: 'dixévimo', northern1: 'dix(i)ón(se)', northern2: 'dixiv(i)ón(se)', oriental: 'dix(iv)én(se)'},
 						firstSingular: {central: 'dixévo', general: 'dixéva', northern_oriental: 'dixéve'},
 						secondPlural: {archaic: 'dixéva', general: 'dixévi', northern: 'dix(iv)ié'},
 						secondSingular: {general: 'dixévi'},
@@ -578,7 +578,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 			subjunctive: {
 				imperfect: {
 					regular: {
-						firstPlural: {general: 'dixésimo', northern: 'dix(is)(i)ón(e/se)', oriental: 'dix(is)én(e/se)'},
+						firstPlural: {general: 'dixésimo', northern1: 'dix(i)ón(e/se)', northern2: 'dixis(i)ón(e/se)', oriental: 'dix(is)én(e/se)'},
 						firstSingular: {general: 'dixése'},
 						secondPlural: {archaic: 'dixése', general: 'dixési', northern: 'dix(is)ié(de/ge)'},
 						secondSingular: {general: 'dixési'},
@@ -660,7 +660,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				imperfect: {
 					regular: {
-						firstPlural: {general: 'podévimo', northern: 'pod(iv)(i)ón(se)', oriental: 'pod(iv)én(se)'},
+						firstPlural: {general: 'podévimo', northern1: 'pod(i)ón(se)', northern2: 'podiv(i)ón(se)', oriental: 'pod(iv)én(se)'},
 						firstSingular: {central: 'podévo', general: 'podéva', northern_oriental: 'podéve'},
 						secondPlural: {archaic: 'podéva', general: 'podévi', northern: 'pod(iv)ié'},
 						secondSingular: {general: 'podévi'},
@@ -703,7 +703,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 			subjunctive: {
 				imperfect: {
 					regular: {
-						firstPlural: {general: 'podésimo', northern: 'pod(is)(i)ón(e/se)', oriental: 'pod(is)én(e/se)'},
+						firstPlural: {general: 'podésimo', northern1: 'pod(i)ón(e/se)', northern2: 'podis(i)ón(e/se)', oriental: 'pod(is)én(e/se)'},
 						firstSingular: {general: 'podése'},
 						secondPlural: {archaic: 'podése', general: 'podési', northern: 'pod(is)ié(de/ge)'},
 						secondSingular: {general: 'podési'},
@@ -776,7 +776,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				imperfect: {
 					regular: {
-						firstPlural: {general: 'veñévimo', northern: 'veñ(iv)(i)ón(se)', oriental: 'veñ(iv)én(se)'},
+						firstPlural: {general: 'veñévimo', northern1: 'veñón(se)', northern2: 'veñiv(i)ón(se)', oriental: 'veñ(iv)én(se)'},
 						firstSingular: {central: 'veñévo', general: 'veñéva', northern_oriental: 'veñéve'},
 						secondPlural: {archaic: 'veñéva', general: 'veñévi', northern: 'veñ(iv)ié'},
 						secondSingular: {general: 'veñévi'},
@@ -819,7 +819,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 			subjunctive: {
 				imperfect: {
 					regular: {
-						firstPlural: {general: 'veñésimo', northern: 'veñ(is)(i)ón(e/se)', oriental: 'veñ(is)én(e/se)'},
+						firstPlural: {general: 'veñésimo', northern1: 'veñón(e/se)', northern2: 'veñis(i)ón(e/se)', oriental: 'veñ(is)én(e/se)'},
 						firstSingular: {general: 'veñése'},
 						secondPlural: {archaic: 'veñése', general: 'veñési', northern: 'veñ(is)ié(de/ge)'},
 						secondSingular: {general: 'veñési'},
@@ -908,7 +908,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				imperfect: {
 					regular: {
-						firstPlural: {general: 'traévimo', northern: 'tra(iv)(i)ón(se)', oriental: 'tra(iv)én(se)'},
+						firstPlural: {general: 'traévimo', northern1: 'tra(i)ón(se)', northern2: 'traiv(i)ón(se)', oriental: 'tra(iv)én(se)'},
 						firstSingular: {central: 'traévo', general: 'traéva', northern_oriental: 'traéve'},
 						secondPlural: {archaic: 'traéva', general: 'traévi', northern: 'tra(iv)ié'},
 						secondSingular: {general: 'traévi'},
@@ -957,7 +957,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 			subjunctive: {
 				imperfect: {
 					regular: {
-						firstPlural: {general: 'traésimo', northern: 'tra(is)(i)ón(e/se)', oriental: 'tra(is)én(e/se)'},
+						firstPlural: {general: 'traésimo', northern1: 'tra(i)ón(e/se)', northern2: 'trais(i)ón(e/se)', oriental: 'tra(is)én(e/se)'},
 						firstSingular: {general: 'traése'},
 						secondPlural: {archaic: 'traése', general: 'traési', northern: 'tra(is)ié(de/ge)'},
 						secondSingular: {general: 'traési'},
@@ -1047,7 +1047,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				imperfect: {
 					regular: {
-						firstPlural: {general: 'tolévimo', northern: 'tol(iv)(i)ón(se)', oriental: 'tol(iv)én(se)'},
+						firstPlural: {general: 'tolévimo', northern1: 'tol(i)ón(se)', northern2: 'toliv(i)ón(se)', oriental: 'tol(iv)én(se)'},
 						firstSingular: {central: 'tolévo', general: 'toléva', northern_oriental: 'toléve'},
 						secondPlural: {archaic: 'toléva', general: 'tolévi', northern: 'tol(iv)ié'},
 						secondSingular: {general: 'tolévi'},
@@ -1093,7 +1093,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 			subjunctive: {
 				imperfect: {
 					regular: {
-						firstPlural: {general: 'tolésimo', northern: 'tol(is)(i)ón(e/se)', oriental: 'tol(is)én(e/se)'},
+						firstPlural: {general: 'tolésimo', northern1: 'tol(i)ón(e/se)', northern2: 'tolis(i)ón(e/se)', oriental: 'tol(is)én(e/se)'},
 						firstSingular: {general: 'tolése'},
 						secondPlural: {archaic: 'tolése', general: 'tolési', northern: 'tol(is)ié(de/ge)'},
 						secondSingular: {general: 'tolési'},
@@ -1168,7 +1168,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				imperfect: {
 					irregular: {
-						firstPlural: {general: 'èrimo', northern: 'er(iv)(i)ón(se)', oriental: 'er(iv)én(se)'},
+						firstPlural: {general: 'èrimo', northern1: 'er(i)ón(se)', northern2: 'eriv(i)ón(se)', oriental: 'er(iv)én(se)'},
 						firstSingular: {central: 'èro', general: 'èra', northern_oriental: 'ère'},
 						secondPlural: {archaic: 'èra', general: 'èri', northern: 'er(iv)ié'},
 						secondSingular: {general: 'èri'},
@@ -1209,7 +1209,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 			subjunctive: {
 				imperfect: {
 					irregular: {
-						firstPlural: {general: 'fúsimo', northern: 'fus(is)(i)ón(e/se)', oriental: 'fus(is)én(e/se)'},
+						firstPlural: {general: 'fúsimo', northern1: 'fus(i)ón(e/se)', northern2: 'fusis(i)ón(e/se)', oriental: 'fus(is)én(e/se)'},
 						firstSingular: {general: 'fúse'},
 						secondPlural: {archaic: 'fúse', general: 'fúsi', northern: 'fus(is)ié(de/ge)'},
 						secondSingular: {general: 'fúsi'},
@@ -1281,7 +1281,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				imperfect: {
 					regular: {
-						firstPlural: {general: 'avévimo', northern: 'av(iv)(i)ón(se)', oriental: 'av(iv)én(se)'},
+						firstPlural: {general: 'avévimo', northern1: 'av(i)ón(se)', northern2: 'aviv(i)ón(se)', oriental: 'av(iv)én(se)'},
 						firstSingular: {central: 'avévo', general: 'avéva', northern_oriental: 'avéve'},
 						secondPlural: {archaic: 'avéva', general: 'avévi', northern: 'av(iv)ié'},
 						secondSingular: {general: 'avévi'},
@@ -1323,7 +1323,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 			subjunctive: {
 				imperfect: {
 					regular: {
-						firstPlural: {general: 'avésimo', northern: 'av(is)(i)ón(e/se)', oriental: 'av(is)én(e/se)'},
+						firstPlural: {general: 'avésimo', northern1: 'av(i)ón(e/se)', northern2: 'avis(i)ón(e/se)', oriental: 'av(is)én(e/se)'},
 						firstSingular: {general: 'avése'},
 						secondPlural: {archaic: 'avése', general: 'avési', northern: 'av(is)ié(de/ge)'},
 						secondSingular: {general: 'avési'},

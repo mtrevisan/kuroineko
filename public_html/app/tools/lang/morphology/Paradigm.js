@@ -154,9 +154,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			if(t.themeT2)
 				person.general = root.secondPlural.general + 'mo';
 			if(t.themeT11){
-				var firstPlural = t.themeT11 + '(iv)';
-				person.northern = firstPlural + (!firstPlural.match(/[cijñ]$/)? '(i)': '') + 'ón(se)';
-				person.oriental = firstPlural + 'én(se)';
+				person.northern1 = t.themeT11 + (!t.themeT11.match(/[cijñ]$/)? '(i)': '') + 'ón(se)';
+				person.northern2 = t.themeT11 + 'iv(i)ón(se)';
+				person.oriental = t.themeT11 + '(iv)én(se)';
 			}
 		}
 	};
@@ -275,9 +275,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			if(t.themeT2)
 				person.general = root.secondPlural.general + 'mo';
 			if(t.themeT11){
-				var firstPlural = t.themeT11 + '(is)';
-				person.northern = firstPlural + (!firstPlural.match(/[cijñ]$/)? '(i)': '') + 'ón(e/se)';
-				person.oriental = firstPlural + 'én(e/se)';
+				person.northern1 = t.themeT11 + (!t.themeT11.match(/[cijñ]$/)? '(i)': '') + 'ón(e/se)';
+				person.northern2 = t.themeT11 + 'is(i)ón(e/se)';
+				person.oriental = t.themeT11 + '(is)én(e/se)';
 			}
 		}
 	};

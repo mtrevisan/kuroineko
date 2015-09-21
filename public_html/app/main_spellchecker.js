@@ -1,4 +1,4 @@
-define(['HTMLHelper', 'tools/lang/phonology/Orthography', 'tools/spellchecker/NorvigSpellChecker'], function(HTMLHelper, Orthography, NorvigSpellChecker){
+define(['HTMLHelper', 'tools/spellchecker/NorvigSpellChecker', 'libs/jsonh', 'tools/lang/data/VerbsDictionary'], function(HTMLHelper, NorvigSpellChecker, JSONH, verbsDictionary){
 
 	var textDOM,
 		spellChecker;
@@ -15,12 +15,26 @@ define(['HTMLHelper', 'tools/lang/phonology/Orthography', 'tools/spellchecker/No
 		//HTMLHelper.addAccessKeyToSubmitButtons();
 
 
-		spellChecker = new NorvigSpellChecker('aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx');
+		var extractVerbInfinitive = (function(){
+			var themeVowel = ['à', 'é', 'e', 'í', 'í'];
+
+			return function(v){
+				return v.prefix + v.radix + themeVowel[v.conjugation - 1] + 'r';
+			};
+		})();
+
+		var dict = [],
+			v;
+		//fill dictionary of infinitives
+		verbsDictionary = JSONH.unpack(verbsDictionary);
+		for(v in verbsDictionary)
+			dict.push(extractVerbInfinitive(verbsDictionary[v]));
+
+		spellChecker = new NorvigSpellChecker('\'‘’aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx');
 		spellChecker.readDictionary(dict);
 	};
 
 	var correct = function(text){
-//				var bla = '<span class="wiggle" oncontextmenu="return false" onmousedown="return livespell.insitu.disableclick(event, &quot;0&quot;);" onmouseup="return livespell.insitu.typoclick(event, &quot;myTextArea&quot;, this, &quot;S&quot;, &quot;0&quot;)">exampl</span>';
 		if(!text)
 			return;
 		text = text.replace(/^\s+|\s+$/g, ' ');
@@ -29,18 +43,19 @@ define(['HTMLHelper', 'tools/lang/phonology/Orthography', 'tools/spellchecker/No
 
 
 		var m = extractWords(text);
-		m.words.map(function(word){
+		m.words = m.words.map(function(word){
 			var suggestions = spellChecker.suggest(word);
 
 			var output = [];
 			for(var k in suggestions.sortedKeys){
 				k = suggestions.sortedKeys[k];
-				if(suggestions.candidates[k] < 0.1)
+				if(suggestions.candidates[k] < 0.05)
 					break;
 
 				output.push(k);
 			}
 
+//				var bla = '<span class="wiggle" oncontextmenu="return false" onmousedown="return livespell.insitu.disableclick(event, &quot;0&quot;);" onmouseup="return livespell.insitu.typoclick(event, &quot;myTextArea&quot;, this, &quot;S&quot;, &quot;0&quot;)">exampl</span>';
 			return (output.length? '<span class="wiggle">' + word + '</span>': word);
 		});
 
@@ -59,7 +74,7 @@ define(['HTMLHelper', 'tools/lang/phonology/Orthography', 'tools/spellchecker/No
 	var extractWords = function(text){
 		return {
 			words: text.split(/[^'"‘’aàbcdđeèéfghiìíjɉklƚmnñoòóprsʃtŧuùúvxʒ]+/i),
-			separators: text.split(/['"‘aàbcdđeèéfghiìíjɉklƚmnñoòóprsʃtŧuùúvxʒ]+/i)
+			separators: text.split(/['"‘’aàbcdđeèéfghiìíjɉklƚmnñoòóprsʃtŧuùúvxʒ]+/i)
 		};
 	};
 

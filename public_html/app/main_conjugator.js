@@ -1,4 +1,4 @@
-define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/lang/morphology/Conjugator', 'tools/lang/phonology/Syllabator'/*, 'tools/data/proxy/Storage', 'tools/lang/data/VerbsDictionary', 'libs/jsonh', 'tools/spellchecker/NorvigSpellChecker'*/], function(HTMLHelper, Validator, ObjectHelper, Conjugator, Syllabator, Storage, verbsDictionary, JSONH, NorvigSpellChecker){
+define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/lang/morphology/Conjugator', 'tools/lang/phonology/Syllabator', 'tools/lang/phonology/Orthography'/*, 'tools/data/proxy/Storage', 'tools/lang/data/VerbsDictionary', 'libs/jsonh', 'tools/spellchecker/NorvigSpellChecker'*/], function(HTMLHelper, Validator, ObjectHelper, Conjugator, Syllabator, Orthography, Storage, verbsDictionary, JSONH, NorvigSpellChecker){
 
 	var infinitiveDOM, dialectDOM, verbsDictionaryDOM, spellCheckerSuggestionsDOM, btnCalculateDOM,
 		i18nResources, historyStore;
