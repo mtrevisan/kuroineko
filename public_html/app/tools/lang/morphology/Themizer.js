@@ -364,11 +364,11 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 		var infixes = [
 			/^e([fl]a|xe|xi)/,
 			/e(([flrv]|[bdrv]i|[gt]u)a|gui|du)/,
-			/[blp]ea/,
+			/[lp]ea/,
 			/lexe/,
 			/^re([dgls]a|xe|go)/,
 			/xrego/,
-			/be([gk]a|re|ko)/,
+			/be(ga|re|ko)/,
 			/ce([kst]a|le|ko)/,
 			/de(ta|[bsŧ]i|[dl]e)/,
 			/fe([st]a|tu)/,
