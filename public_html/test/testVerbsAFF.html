@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<link rel="shortcut icon" href="../favicon.png" />
+
+	<title>test</title>
+
+	<script src="../app/AMDLoader.js"></script>
+
+	<script>
+		AMDLoader.config = {
+			baseUrl: '../app',
+			paths: {
+				libs: '../libs'
+			}
+		};
+
+		var findIndex = function(predicate, scope){
+			for(var i = 0, len = this.length; i < len; i ++)
+				if(predicate.call(scope || undefined, this[i], i, this))
+					return i;
+			return -1;
+		};
+		Array.prototype.findIndex = findIndex;
+
+
+		var epurateListAndApplyFlag = function(list, flag, matcher, base){
+			var matcherLength = matcher.length,
+				replacement = Array.prototype.slice.call(arguments, 4, arguments.length),
+				i, j, rep, idx0, indices;
+			matcher = new RegExp(matcher + '$');
+
+			for(i = list.length - 1; i >= 0; i --){
+				rep = list[i].replacement;
+				if(list.hasOwnProperty(i) && rep.match(matcher)){
+					rep = rep.substr(0, rep.length - matcherLength);
+					idx0 = indexOfReplacement(list, rep + base);
+					indices = replacement.map(function(r){ return indexOfReplacement(list, rep + r); });
+					if(idx0 >= 0 && indices.every(function(el){ return (el >= 0); })){
+						list[idx0].replacement = list[idx0].replacement.replace(/(\/.+)?$/, '/' + flag);
+
+						replacement.forEach(function(last){
+							while((j = indexOfReplacement(list, rep + last)) >= 0){
+								if(j < i)
+									i --;
+
+								list.splice(j, 1);
+							}
+						});
+					}
+				}
+			}
+		};
+
+		var indexOfReplacement = function(list, rep){
+			return list.findIndex(function(el){ return (el.replacement === rep); });
+		};
+
+		var indexOf = function(list, obj){
+			return list.findIndex(function(el){ return (el.replaced == obj.replaced && el.replacement == obj.replacement); });
+		};
+
+
+		require(['tools/lang/phonology/Word', 'tools/lang/morphology/Conjugator', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Word, Conjugator, verbsDictionary, JSONH){
+//verbsDictionary = [5, "radix", "prefix", "conjugation", "stressIdx", "stressType",
+//"barlúx",		"",			3,	4,	"a"
+//"piant",			"",			1,	2,	"g"
+//];
+			verbsDictionary = JSONH.unpack(verbsDictionary);
+
+			var list = [],
+				k, v, themeVowel, infinitive, forms, idx;
+			for(k in verbsDictionary){
+				v = verbsDictionary[k];
+
+				switch(v.conjugation){
+					case 1:
+						themeVowel = 'à';
+						break;
+					case 2:
+						themeVowel = 'é';
+						break;
+					case 3:
+						themeVowel = 'e';
+						break;
+					case 4:
+					case 5:
+						themeVowel = 'í';
+				}
+
+				infinitive = Word.unmarkDefaultStress(v.prefix + v.radix + themeVowel + 'r');
+
+				forms = Conjugator.extractForms(infinitive);
+
+				for(k in forms){
+					expected = forms[k];
+
+					for(var i = 0, len = Math.min(expected.length, infinitive.length) - 1; i < len; i ++)
+						if(expected[i] !== infinitive[i])
+							break;
+
+					var data = {
+						replaced: infinitive.substr(i),
+						replacement: expected.substr(i),
+						form: infinitive.substr(v.prefix.length)
+					};
+
+					idx = indexOf(list, data);
+					if(idx < 0)
+						list.push(data);
+					else{
+						/*for(var i = 0, len1 = list[idx].form.length - 1, len2 = data.form.length - 1; len1 - i && len2 - i; i ++)
+							if(list[idx].form[len1 - i] !== data.form[len2 - i])
+								break;
+						i = len2 - i + 1;
+						if(i == len2)
+							i = len2 - 1;
+
+						list[idx].form = data.form.substr(i);*/
+						if(list[idx].form.indexOf(data.form) < 0)
+							list[idx].form += ',' + data.form;
+					}
+				}
+			}
+
+			epurateListAndApplyFlag(list, 'D', 'o', 'o', 'a', 'e', 'i');
+			epurateListAndApplyFlag(list, 'EF', 'se', '', 'e', 'se');
+			epurateListAndApplyFlag(list, 'E', 'se', '', 'se');
+			epurateListAndApplyFlag(list, 'G', '', '', 'a', 'e');
+			epurateListAndApplyFlag(list, 'F', 'e', '', 'e');
+			epurateListAndApplyFlag(list, 'H', '', '', 'simo', 'vimo');
+			epurateListAndApplyFlag(list, 'I', 'ò', 'ò', 'à', 'è');
+			epurateListAndApplyFlag(list, 'J', 'ndo', 'ndo', 'n/EF', 'nte', 'rave');
+			epurateListAndApplyFlag(list, 'K', 'de', 'de', 'ge');
+			epurateListAndApplyFlag(list, 'L', 'on/EF', 'on/EF', 'ede/K', 'sen/EF', 'siede/K', 'sié', 'sion/EF', 'son/EF', 'ven/E', 'vion/E', 'vié', 'von/E', 'é');
+			epurateListAndApplyFlag(list, 'M', 'on/E', 'on/E', 'mo', 'sen/E', 'sion/E', 'son/E', 'sié', 'é');
+			epurateListAndApplyFlag(list, 'N', 'ron/E', 'ron/E', 'remo', 'ren/E', 'resi', 'rion/M', 'ré', 'résimo', 'rí/G', 'rò/I');
+			epurateListAndApplyFlag(list, 'O', 'emo', 'emo', 'ede/K', 'endo/J', 'eron/N', 'ese', 'esi', 'esto/D', 'evo/D');
+			epurateListAndApplyFlag(list, 'P', 'í', 'í', 'é/H', 'ú/G');
+
+			list.map(function(el, idx){
+				list[idx] = 'SFX A ' + el.replaced + ' ' + el.replacement + ' ' + el.form;
+			});
+
+			console.log('SFX A Y ' + list.length);
+			list.sort().forEach(function(el){
+				console.log(el);
+			});
+		});/**/
+
+		/*require(['tools/lang/phonology/Word', 'tools/lang/morphology/Conjugator', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Word, Conjugator, verbsDictionary, JSONH){
+			verbsDictionary = JSONH.unpack(verbsDictionary);
+
+			var k, v, themeVowel, infinitive;
+			for(k in verbsDictionary){
+				v = verbsDictionary[k];
+
+				switch(v.conjugation){
+					case 1:
+						themeVowel = 'à';
+						break;
+					case 2:
+						themeVowel = 'é';
+						break;
+					case 3:
+						themeVowel = 'e';
+						break;
+					case 4:
+					case 5:
+						themeVowel = 'í';
+				}
+
+				infinitive = Word.unmarkDefaultStress(v.prefix + v.radix + themeVowel + 'r');
+
+				console.log(infinitive + '/A');
+			}
+			console.log('done ' + verbsDictionary.length);
+		});/**/
+
+		/*require(['tools/lang/phonology/Orthography', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Orthography, verbsDictionary, JSONH){
+			verbsDictionary = JSONH.unpack(verbsDictionary);
+
+			var k, v, themeVowel, infinitive;
+			for(k in verbsDictionary){
+				v = verbsDictionary[k];
+
+				switch(v.conjugation){
+					case 1:
+						themeVowel = 'à';
+						break;
+					case 2:
+						themeVowel = 'é';
+						break;
+					case 3:
+						themeVowel = 'e';
+						break;
+					case 4:
+					case 5:
+						themeVowel = 'í';
+				}
+
+				infinitive = v.prefix + v.radix + themeVowel + 'r';
+
+				if(infinitive !== Orthography.correctOrthography(infinitive))
+					console.log('error on form ' + infinitive);
+			}
+			console.log('done ' + verbsDictionary.length);
+		});/**/
+	</script>
+</head>
+
+<body>
+</body>
+</html>

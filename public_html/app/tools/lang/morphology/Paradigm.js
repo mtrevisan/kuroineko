@@ -445,6 +445,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 					{matcher: /pèrd$/, replacement: 'pèrs'},
 					{matcher: /mét$/, replacement: 'més'},
 					{matcher: /móv$/, replacement: 'mós'},
+					{matcher: /nét$/, replacement: 'nés'},
 					{matcher: /sucéd$/, replacement: 'sucès'}
 					//...
 				],

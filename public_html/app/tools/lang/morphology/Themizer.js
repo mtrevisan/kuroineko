@@ -63,7 +63,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 			//T5 = T2: à > è/(é) | (é > í) | (í no -is- > é)
 			themeT5: themeT2.replace(/à$/, 'è'),
 			//T6 = T2: é > ú
-			themeT6: themeT2.replace(/é$/, 'ú'),
+			themeT6: themeT2.replace(/u?é$/, 'ú'),
 			//T7 = T2: í > é
 			themeT7: themeT2.replace(/í$/, 'é'),
 			themeT8: themeT8,
