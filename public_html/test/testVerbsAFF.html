@@ -17,49 +17,247 @@
 			}
 		};
 
-		var findIndex = function(predicate, scope){
+		Array.prototype.findIndex = function(predicate, scope){
 			for(var i = 0, len = this.length; i < len; i ++)
 				if(predicate.call(scope || undefined, this[i], i, this))
 					return i;
 			return -1;
 		};
-		Array.prototype.findIndex = findIndex;
+		Array.prototype.unique = function(){
+			return this.filter(function(x, i){
+				return (this.indexOf(x) == i);
+			}, this);
+		};
+		Array.prototype.difference = function(a){
+			return this.filter(function(x){
+				return (a.indexOf(x) < 0);
+			});
+		};
+		var intersection = function(a){
+//			if(a == null)
+//				return [];
+//			if(arguments.length === 1)
+//				return a.unique();
+//
+//			var arr = Array.prototype.concat.apply([], Array.prototype.slice.call(arguments, 1));
+//
+//			return a.unique().filter(function(el){
+//				return arr.every(function(cur){
+//					return (cur == el);
+//				});
+//			});
 
+			var argsLength = arguments.length,
+				length = a.length,
+				result = [],
+				i, j, item;
+			for(i = 0; i < length; i ++){
+				item = a[i];
+				if(result.indexOf(item) >= 0)
+					continue;
+
+				for(j = 1; j < argsLength; j ++)
+					if(arguments[j].indexOf(item) < 0)
+						break;
+
+				if(j == argsLength)
+					result.push(item);
+			}
+			return result;
+		};
+
+
+
+		var composeInfinitive = function(v){
+			var themeVowel;
+			switch(v.conjugation){
+				case 1:
+					themeVowel = 'à';
+					break;
+				case 2:
+					themeVowel = 'é';
+					break;
+				case 3:
+					themeVowel = 'e';
+					break;
+				case 4:
+				case 5:
+					themeVowel = 'í';
+			}
+
+			return v.prefix + v.radix + themeVowel + 'r';
+		};
 
 		var epurateListAndApplyFlag = function(list, flag, matcher, base){
-			var matcherLength = matcher.length,
+			var matcherLength = matcher.replace(/\[.+\]/g, '').length,
 				replacement = Array.prototype.slice.call(arguments, 4, arguments.length),
-				i, j, rep, idx0, indices;
+				i, j, rep, repment, idx0, indices;
 			matcher = new RegExp(matcher + '$');
 
 			for(i = list.length - 1; i >= 0; i --){
-				rep = list[i].replacement;
-				if(list.hasOwnProperty(i) && rep.match(matcher)){
-					rep = rep.substr(0, rep.length - matcherLength);
-					idx0 = indexOfReplacement(list, rep + base);
-					indices = replacement.map(function(r){ return indexOfReplacement(list, rep + r); });
-					if(idx0 >= 0 && indices.every(function(el){ return (el >= 0); })){
-						list[idx0].replacement = list[idx0].replacement.replace(/(\/.+)?$/, '/' + flag);
+				repment = list[i].replacement;
+				if(list.hasOwnProperty(i) && repment.match(matcher)){
+					rep = list[i].replaced;
+					repment = repment.substr(0, repment.length - matcherLength);
+					idx0 = indexOfReplacement(list, rep, repment + base);
+					if(idx0 < 0)
+						continue;
 
-						replacement.forEach(function(last){
-							while((j = indexOfReplacement(list, rep + last)) >= 0){
-								if(j < i)
-									i --;
+					indices = replacement.map(function(last){ return indexOfReplacement(list, rep, repment + last); });
+					if(indices.some(function(el){ return (el < 0); }))
+						continue;
 
-								list.splice(j, 1);
-							}
-						});
-					}
+					//if all replacements are found
+
+					list[idx0].replacement = list[idx0].replacement.replace(/(\/.+)?$/, '/' + flag);
+
+					replacement.forEach(function(last){
+						while((j = indexOfReplacement(list, rep, repment + last)) >= 0){
+							if(j < i)
+								i --;
+
+							list.splice(j, 1);
+						}
+					});
 				}
 			}
 		};
 
-		var indexOfReplacement = function(list, rep){
-			return list.findIndex(function(el){ return (el.replacement === rep); });
+		var indexOfReplacement = function(list, replaced, replacement){
+			return list.findIndex(function(el){ return (el.replaced == replaced && el.replacement == replacement); });
 		};
 
-		var indexOf = function(list, obj){
+		/*var indexOf = function(list, obj){
 			return list.findIndex(function(el){ return (el.replaced == obj.replaced && el.replacement == obj.replacement); });
+		};*/
+
+		var extractIndexOfCommonPart = function(str1, str2){
+			var i, len;
+			for(i = 0, len = Math.min(str1.length, str2.length) - 1; i < len; i ++)
+				if(str1[i] != str2[i])
+					break;
+			return i;
+		};
+
+		var extractCommonPartFromList = function(list){
+			var form,
+				j, len;
+			list.forEach(function(obj, i){
+				if(!i)
+					form = obj;
+				else{
+					for(j = 0, len = Math.min(obj.length, form.length); j < len; j ++)
+						if(obj[obj.length - j - 1] != form[form.length - j - 1])
+							break;
+					form = (j > 0? form.substr(form.length - j): '.');
+				}
+			});
+			return form;
+		};
+
+		var augmentForm = function(el, list){
+			//collect parents that matches
+			var parents = [],
+				matcher = new RegExp(el.form + '$');
+			list.forEach(function(obj){
+				if(obj.form == el.form)
+					obj.parent.forEach(function(tmp){
+						parents.push(tmp);
+					});
+			});
+			//filter out current element's parents
+			parents = parents.unique().difference(el.parent);
+
+			var avoid = '';
+			parents.forEach(function(obj){
+				var idx = obj.length - el.form.length - 1;
+				if(idx >= 0)
+					avoid += obj[idx];
+			});
+			avoid = avoid.split('').unique().sort();
+
+			var common = '';
+			el.parent.forEach(function(obj){
+				var idx = obj.length - el.form.length - 1;
+				if(idx >= 0)
+					common += obj[idx];
+			});
+			common = common.split('').unique().sort();
+
+			el.form = (avoid.length > 0? '[^' + avoid.join('') + ']': '') + el.form;
+		};
+
+/*var list = [
+	{
+		replaced: 'andar',
+		replacement: 've',
+		form: 'andar',
+		parent: ['andar']
+	},
+	{
+		replaced: 'andar',
+		replacement: 'vè',
+		form: 'andar',
+		parent: ['andar', 'reandar']
+	},
+	{
+		replaced: 'andar',
+		replacement: 'và',
+		form: 'andar',
+		parent: ['andar', 'pandar']
+	},
+	{
+		replaced: 'andar',
+		replacement: 'vé',
+		form: 'reandar',
+		parent: ['reandar']
+	},
+	{
+		replaced: 'andar',
+		replacement: 'và',
+		form: 'andar',
+		parent: ['andar', 'reandar', 'pandar']
+	},
+	{
+		replaced: 'andar',
+		replacement: 'và',
+		form: '[^ep]andar',
+		parent: ['andar']
+	},
+	{
+		replaced: 'andenar',
+		replacement: 'àndeno',
+		form: 'andenar',
+		parent: ['grandenar', 'dexgrandenar']
+	}
+];
+console.log(augmentForm(list[0], list));
+console.log(augmentForm(list[1], list));
+console.log(augmentForm(list[2], list));
+console.log(augmentForm(list[3], list));
+console.log(augmentForm(list[4], list));
+console.log(augmentForm(list[5], list));
+console.log(augmentForm(list[6], list));*/
+
+
+		var prettyPrint = function(list){
+			var maxReplaced = list.reduce(function(previousValue, currentValue){ return Math.max(previousValue, currentValue.replaced.length); }, 0),
+				maxReplacement = list.reduce(function(previousValue, currentValue){ return Math.max(previousValue, currentValue.replacement.length); }, 0),
+				maxForm = list.reduce(function(previousValue, currentValue){ return Math.max(previousValue, currentValue.form.length); }, 0);
+			list.map(function(el, idx){
+				var text = 'SFX A ' + printPadded(el.replaced, maxReplaced) + ' ' + printPadded(el.replacement, maxReplacement) + ' ' + printPadded(el.form, maxForm)
+					+ ' # ' + el.parent;
+				list[idx] = text;
+			});
+
+			console.log('SFX A Y ' + list.length);
+			list.sort().forEach(function(el){
+				console.log(el);
+			});
+		};
+
+		var printPadded = function(value, len){
+			return value + Array(len - value.length + 1).join(' ');
 		};
 
 
@@ -67,87 +265,85 @@
 //verbsDictionary = [5, "radix", "prefix", "conjugation", "stressIdx", "stressType",
 //"barlúx",		"",			3,	4,	"a"
 //"piant",			"",			1,	2,	"g"
+//"tòs",			"",			3,	1,	"g"
 //];
 			verbsDictionary = JSONH.unpack(verbsDictionary);
 
 			var list = [],
-				k, v, themeVowel, infinitive, forms, idx;
-			for(k in verbsDictionary){
-				v = verbsDictionary[k];
-
-				switch(v.conjugation){
-					case 1:
-						themeVowel = 'à';
-						break;
-					case 2:
-						themeVowel = 'é';
-						break;
-					case 3:
-						themeVowel = 'e';
-						break;
-					case 4:
-					case 5:
-						themeVowel = 'í';
-				}
-
-				infinitive = Word.unmarkDefaultStress(v.prefix + v.radix + themeVowel + 'r');
+				forms,
+				idx, data;
+			verbsDictionary.forEach(function(infinitive){
+				infinitive = composeInfinitive(infinitive);
 
 				forms = Conjugator.extractForms(infinitive);
 
-				for(k in forms){
-					expected = forms[k];
+				infinitive = Word.unmarkDefaultStress(infinitive);
 
-					for(var i = 0, len = Math.min(expected.length, infinitive.length) - 1; i < len; i ++)
-						if(expected[i] !== infinitive[i])
-							break;
+				forms.forEach(function(form){
+					form = Word.unmarkDefaultStress(form);
 
-					var data = {
-						replaced: infinitive.substr(i),
-						replacement: expected.substr(i),
-						form: infinitive.substr(v.prefix.length)
+					idx = extractIndexOfCommonPart(form, infinitive);
+
+					data = {
+						replaced: infinitive.substr(idx),
+						replacement: form.substr(idx),
+						form: infinitive,
+						parent: [infinitive]
 					};
 
-					idx = indexOf(list, data);
+					idx = list.findIndex(function(el){ return (el.replaced == data.replaced && el.replacement == data.replacement); });
 					if(idx < 0)
 						list.push(data);
-					else{
-						/*for(var i = 0, len1 = list[idx].form.length - 1, len2 = data.form.length - 1; len1 - i && len2 - i; i ++)
-							if(list[idx].form[len1 - i] !== data.form[len2 - i])
-								break;
-						i = len2 - i + 1;
-						if(i == len2)
-							i = len2 - 1;
-
-						list[idx].form = data.form.substr(i);*/
-						if(list[idx].form.indexOf(data.form) < 0)
-							list[idx].form += ',' + data.form;
+					else if(list[idx].parent.indexOf(data.parent[0]) < 0){
+						list[idx].parent.push(data.parent[0]);
+						list[idx].form = extractCommonPartFromList(list[idx].parent);
 					}
-				}
-			}
+				});
+			});
 
 			epurateListAndApplyFlag(list, 'D', 'o', 'o', 'a', 'e', 'i');
-			epurateListAndApplyFlag(list, 'EF', 'se', '', 'e', 'se');
-			epurateListAndApplyFlag(list, 'E', 'se', '', 'se');
+			epurateListAndApplyFlag(list, 'EF', 'nse', 'n', 'ne', 'nse');
+			epurateListAndApplyFlag(list, 'E', 'nse', 'n', 'nse');
 			epurateListAndApplyFlag(list, 'G', '', '', 'a', 'e');
-			epurateListAndApplyFlag(list, 'F', 'e', '', 'e');
-			epurateListAndApplyFlag(list, 'H', '', '', 'simo', 'vimo');
+			epurateListAndApplyFlag(list, 'F', 'ne', 'n', 'ne');
+			epurateListAndApplyFlag(list, 'H', '[àéí]', '', 'simo', 'vimo');
 			epurateListAndApplyFlag(list, 'I', 'ò', 'ò', 'à', 'è');
 			epurateListAndApplyFlag(list, 'J', 'ndo', 'ndo', 'n/EF', 'nte', 'rave');
 			epurateListAndApplyFlag(list, 'K', 'de', 'de', 'ge');
 			epurateListAndApplyFlag(list, 'L', 'on/EF', 'on/EF', 'ede/K', 'sen/EF', 'siede/K', 'sié', 'sion/EF', 'son/EF', 'ven/E', 'vion/E', 'vié', 'von/E', 'é');
 			epurateListAndApplyFlag(list, 'M', 'on/E', 'on/E', 'mo', 'sen/E', 'sion/E', 'son/E', 'sié', 'é');
-			epurateListAndApplyFlag(list, 'N', 'ron/E', 'ron/E', 'remo', 'ren/E', 'resi', 'rion/M', 'ré', 'résimo', 'rí/G', 'rò/I');
-			epurateListAndApplyFlag(list, 'O', 'emo', 'emo', 'ede/K', 'endo/J', 'eron/N', 'ese', 'esi', 'esto/D', 'evo/D');
-			epurateListAndApplyFlag(list, 'P', 'í', 'í', 'é/H', 'ú/G');
+			epurateListAndApplyFlag(list, 'N', 'mo', 'mo', 'sen/EF', 'sion/EF', 'son/EF', 'sié', 'vié', 'é');
+			epurateListAndApplyFlag(list, 'O', 'ron/E', 'ron/E', 'remo', 'ren/E', 'resi', 'rion/M', 'ré', 'résimo', 'rí/G', 'rò/I');
+			epurateListAndApplyFlag(list, 'P', 'mo', 'mo', 'de/K', 'ndo/J', 'ron/O', 'se', 'si', 'sto/D', 'vo/D');
+			epurateListAndApplyFlag(list, 'Q', 'í', 'í', 'é/H', 'ú/G');/**/
 
-			list.map(function(el, idx){
-				list[idx] = 'SFX A ' + el.replaced + ' ' + el.replacement + ' ' + el.form;
+			list.forEach(function(el){
+				augmentForm(el, list);
 			});
+			/*list.forEach(function(el){
+				while(true){
+					filtered = list.filter(function(obj){ return (obj.form == el.form); });
+					if(filtered.length <= 1)
+						break;
 
-			console.log('SFX A Y ' + list.length);
-			list.sort().forEach(function(el){
-				console.log(el);
-			});
+					if(el.parent.some(function(obj){ return (obj == el.form); })){
+						avoid = '';
+						filtered.forEach(function(tmp){
+							chr = tmp.parent[tmp.parent.length - el.form.length - 1];
+							if(el.form != tmp.parent && avoid.indexOf(chr) < 0)
+								avoid += chr;
+						});
+						el.form = '[^' + avoid.split('').sort().join('') + ']' + el.form;
+						break;
+					}
+
+					el.form = el.parent[0].substr(el.parent[0].length - el.form.length - 1);
+					break;
+				}
+			});/**/
+
+
+			prettyPrint(list);
 		});/**/
 
 		/*require(['tools/lang/phonology/Word', 'tools/lang/morphology/Conjugator', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Word, Conjugator, verbsDictionary, JSONH){
@@ -207,6 +403,114 @@
 					console.log('error on form ' + infinitive);
 			}
 			console.log('done ' + verbsDictionary.length);
+		});/**/
+
+		//T2 = T1: athento PVT > VT
+		//T3 = T1: stress TV > (A)PTV | í > <ís>i
+		//T4 = T1: no stress
+		//T5 = T2: à > è/(é) | (é > í) | (í no -is- > é)
+		//T6 = T2: é > ú
+		//T7 = T2: í > é
+		//T8 = T3: TV > ∅
+		//T9 = T3: e > i
+		//T10 = T3: i > e
+		//T11 = T4: TV > ∅
+		//T12 = T8: no stress
+		/*require(['tools/lang/Dialect', 'tools/lang/phonology/Word', 'tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Dialect, Word, Verb, Themizer, verbsDictionary, JSONH){
+			verbsDictionary = JSONH.unpack(verbsDictionary);
+
+			var list = [],
+				k, v, themeVowel, infinitive, themes,
+				themeFrom, themeTo, flag, form,
+				i, j, len, data;
+			for(k in verbsDictionary){
+				v = verbsDictionary[k];
+
+				switch(v.conjugation){
+					case 1:
+						themeVowel = 'à';
+						break;
+					case 2:
+						themeVowel = 'é';
+						break;
+					case 3:
+						themeVowel = 'e';
+						break;
+					case 4:
+					case 5:
+						themeVowel = 'í';
+				}
+
+				infinitive = v.prefix + v.radix + themeVowel + 'r';
+
+				themes = (new Themizer(new Verb(infinitive), new Dialect())).generate();
+
+				themeFrom = themes.regular.themeT1;
+				themeTo = themes.regular.themeT3;
+				flag = 'C';
+				if(themeTo){
+					themeFrom = themeFrom.substr(v.prefix.length);
+					themeTo = themeTo.substr(v.prefix.length);
+					for(i = 0, len = Math.min(themeFrom.length, themeTo.length); i < len; i ++)
+						if(themeFrom[i] != themeTo[i])
+							break;
+
+					if(themeFrom.substr(i) != themeTo.substr(i)){
+						data = {
+							replaced: themeFrom.substr(i),
+							replacement: themeTo.substr(i),
+							form: themeFrom.substr(i),
+							parent: [themeFrom]
+						};
+
+						i = indexOf(list, data);
+						if(i < 0)
+							list.push(data);
+						else if(list[i].parent.indexOf(data.parent[0]) < 0){
+							list[i].parent.push(data.parent[0]);
+
+							list[i].parent.forEach(function(obj, idx){
+								if(!idx)
+									form = obj;
+								else{
+									for(j = 0, len = Math.min(obj.length, form.length); j < len; j ++)
+										if(obj[obj.length - j] != form[form.length - j])
+											break;
+									form = form.substr(form.length - j);
+								}
+							});
+
+							list[i].form = form;
+						}
+					}
+				}
+			}
+
+			/*list.forEach(function(el){
+				while(true){
+					filtered = list.filter(function(obj){ return obj.form.match(new RegExp(el.form + '$')); });
+					if(filtered.length <= 1)
+						break;
+
+					if(el.parent.some(function(obj){ return (obj == el.form); })){
+						avoid = '';
+						filtered.forEach(function(tmp){
+							chr = tmp.parent[tmp.parent.length - el.form.length - 1];
+							if(el.form != tmp.parent && avoid.indexOf(chr) < 0)
+								avoid += chr;
+						});
+						el.form = '[^' + avoid.split('').sort().join('') + ']' + el.form;
+						break;
+					}
+
+					el.form = el.parent[0].substr(el.parent[0].length - el.form.length - 1);
+				}
+			});/** /
+
+			list.forEach(function(el){
+				console.log('SFX ' + flag + ' ' + el.replaced + ' ' + el.replacement /*+ ' ' + el.form* / + ' ' + el.parent);
+			});
+			console.log('done ' + list.length);
 		});/**/
 	</script>
 </head>

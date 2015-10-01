@@ -33,13 +33,13 @@ require(['tools/data/ArrayHelper'], function(ArrayHelper){
 	test('unique - should remove duplicates', function(){
 		var result = ArrayHelper.unique(['a', 1, 2, 'c', 'b', 2, 1, 'b', 'c']);
 
-		deepEqual(result, ['a', 2, 1, 'b', 'c']);
+		deepEqual(result, ['a', 1, 2, 'c', 'b']);
 	});
 
 	test('unique - should merge multiple inputs', function(){
 		var result = ArrayHelper.unique(['a', 1, 2, 'c', 'b'], [2, 1, 'b', 'd'], ['a']);
 
-		deepEqual(result, ['c', 2, 1, 'b', 'd', 'a']);
+		deepEqual(result, ['a', 1, 2, 'c', 'b', 'd']);
 	});
 
 	test('unique - should return null/undefined array if source array is null/undefined', function(){

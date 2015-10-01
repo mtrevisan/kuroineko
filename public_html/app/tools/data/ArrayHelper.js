@@ -180,20 +180,21 @@ var spliceOne = function(arr, index){
 		var argsLength = arguments.length,
 			length = a.length,
 			result = [],
-			i, j;
+			i, j, item;
 		for(j = 0; j < argsLength; j ++)
 			if(!Array.isArray(arguments[j]))
 				return [];
 
 		for(i = 0; i < length; i ++){
-			var item = a[i];
+			item = a[i];
 			if(result.indexOf(item) >= 0)
 				continue;
 
 			for(j = 1; j < argsLength; j ++)
 				if(arguments[j].indexOf(item) < 0)
 					break;
-			if(j === argsLength)
+
+			if(j == argsLength)
 				result.push(item);
 		}
 		return result;
@@ -212,7 +213,7 @@ var spliceOne = function(arr, index){
 
 		var arr = Array.prototype.concat.apply([], Array.prototype.slice.call(arguments));
 		return arr.filter(function(el, idx, arr){
-			return (arr.indexOf(el, idx + 1) < 0);
+			return (arr.indexOf(el) == idx);
 		});
 	};
 
