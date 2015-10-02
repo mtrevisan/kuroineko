@@ -177,6 +177,19 @@ var spliceOne = function(arr, index){
 	 * @return {Array}	New array of shared values.
 	 */
 	var intersection = function(a){
+//			if(a == null)
+//				return [];
+//			if(arguments.length === 1)
+//				return a.unique();
+//
+//			var arr = Array.prototype.concat.apply([], Array.prototype.slice.call(arguments, 1));
+//
+//			return a.unique().filter(function(el){
+//				return arr.some(function(cur){
+//					return (cur == el);
+//				});
+//			});
+
 		var argsLength = arguments.length,
 			length = a.length,
 			result = [],

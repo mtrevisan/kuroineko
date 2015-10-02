@@ -42,7 +42,7 @@
 //			var arr = Array.prototype.concat.apply([], Array.prototype.slice.call(arguments, 1));
 //
 //			return a.unique().filter(function(el){
-//				return arr.every(function(cur){
+//				return arr.some(function(cur){
 //					return (cur == el);
 //				});
 //			});
@@ -65,28 +65,50 @@
 			}
 			return result;
 		};
-
-
-
-		var composeInfinitive = function(v){
-			var themeVowel;
-			switch(v.conjugation){
-				case 1:
-					themeVowel = 'à';
-					break;
-				case 2:
-					themeVowel = 'é';
-					break;
-				case 3:
-					themeVowel = 'e';
-					break;
-				case 4:
-				case 5:
-					themeVowel = 'í';
-			}
-
-			return v.prefix + v.radix + themeVowel + 'r';
+		/*var isObject = function(value){
+			return (Object.prototype.toString.call(value).match(/^\[object\s(.*)\]$/)[1] == 'Object');
 		};
+		var flatten = function(list){
+			return (function recursiveFlatten(list){
+				var result = [];
+				var add = function(x){
+					if(Array.isArray(x) || isObject(x))
+						result = result.concat(recursiveFlatten(x));
+					else
+						result.push(x);
+				};
+
+				if(isObject(list))
+					Object.keys(list).forEach(function(x){
+						add(list[x]);
+					});
+				else
+					list.forEach(function(x){
+						add(x);
+					});
+				return result;
+			})(list);
+		};*/
+		//Groups the object's values by a criterion
+		var partition = function(list, predicate){
+			var result = {};
+			list.forEach(function(value, index){
+				var key = predicate(value, index, list);
+				if(key in result)
+					result[key].push(value);
+				else
+					result[key] = [value];
+			});
+			return result;
+		};
+
+		var composeInfinitive = (function(){
+			var themeVowel = ['à', 'é', 'e', 'í', 'í'];
+
+			return function(v){
+				return v.prefix + v.radix + themeVowel[v.conjugation - 1] + 'r';
+			};
+		})();
 
 		var epurateListAndApplyFlag = function(list, flag, matcher, base){
 			var matcherLength = matcher.replace(/\[.+\]/g, '').length,
@@ -157,16 +179,12 @@
 
 		var augmentForm = function(el, list){
 			//collect parents that matches
-			var parents = [],
-				matcher = new RegExp(el.form + '$');
+			var parents = [];
 			list.forEach(function(obj){
-				if(obj.form == el.form)
-					obj.parent.forEach(function(tmp){
-						parents.push(tmp);
-					});
+				if(obj.form == el.form && obj != el)
+					parents = parents.concat(obj.parents);
 			});
-			//filter out current element's parents
-			parents = parents.unique().difference(el.parent);
+			parents = parents.unique();
 
 			var avoid = '';
 			parents.forEach(function(obj){
@@ -176,15 +194,27 @@
 			});
 			avoid = avoid.split('').unique().sort();
 
-			var common = '';
-			el.parent.forEach(function(obj){
+			var current = '';
+			el.parents.forEach(function(obj){
 				var idx = obj.length - el.form.length - 1;
 				if(idx >= 0)
-					common += obj[idx];
+					current += obj[idx];
 			});
-			common = common.split('').unique().sort();
+			current = current.split('').unique().sort();
 
-			el.form = (avoid.length > 0? '[^' + avoid.join('') + ']': '') + el.form;
+			if(intersection(avoid, current).length){
+				var part = partition(parents.concat(el.parents).unique(), function(value, i, lst){
+					return value[value.length - el.form.length - 1];
+				});
+				console.log(part);
+				//..
+
+				el.form = '*' + el.form;
+			}
+			else if(parents.indexOf(el.form) < 0)
+				el.form = (avoid.length > 0? '[^' + avoid.join('') + ']': '') + el.form;
+			else
+				el.form = (current.length > 0? '[' + current.join('') + ']': '') + el.form;
 		};
 
 /*var list = [
@@ -192,43 +222,49 @@
 		replaced: 'andar',
 		replacement: 've',
 		form: 'andar',
-		parent: ['andar']
+		parents: ['andar']
 	},
 	{
 		replaced: 'andar',
 		replacement: 'vè',
 		form: 'andar',
-		parent: ['andar', 'reandar']
+		parents: ['andar', 'reandar']
 	},
 	{
 		replaced: 'andar',
 		replacement: 'và',
 		form: 'andar',
-		parent: ['andar', 'pandar']
+		parents: ['andar', 'pandar']
 	},
 	{
 		replaced: 'andar',
 		replacement: 'vé',
 		form: 'reandar',
-		parent: ['reandar']
+		parents: ['reandar']
 	},
 	{
 		replaced: 'andar',
 		replacement: 'và',
 		form: 'andar',
-		parent: ['andar', 'reandar', 'pandar']
+		parents: ['andar', 'reandar', 'pandar']
+	},
+	{
+		replaced: 'andar',
+		replacement: 'ando',
+		form: 'andar',
+		parents: ['reandar', 'pandar']
 	},
 	{
 		replaced: 'andar',
 		replacement: 'và',
 		form: '[^ep]andar',
-		parent: ['andar']
+		parents: ['andar']
 	},
 	{
 		replaced: 'andenar',
 		replacement: 'àndeno',
 		form: 'andenar',
-		parent: ['grandenar', 'dexgrandenar']
+		parents: ['grandenar', 'dexgrandenar']
 	}
 ];
 console.log(augmentForm(list[0], list));
@@ -237,7 +273,8 @@ console.log(augmentForm(list[2], list));
 console.log(augmentForm(list[3], list));
 console.log(augmentForm(list[4], list));
 console.log(augmentForm(list[5], list));
-console.log(augmentForm(list[6], list));*/
+/*console.log(augmentForm(list[6], list));
+console.log(augmentForm(list[7], list));*/
 
 
 		var prettyPrint = function(list){
@@ -246,7 +283,7 @@ console.log(augmentForm(list[6], list));*/
 				maxForm = list.reduce(function(previousValue, currentValue){ return Math.max(previousValue, currentValue.form.length); }, 0);
 			list.map(function(el, idx){
 				var text = 'SFX A ' + printPadded(el.replaced, maxReplaced) + ' ' + printPadded(el.replacement, maxReplacement) + ' ' + printPadded(el.form, maxForm)
-					+ ' # ' + el.parent;
+					+ ' # ' + el.parents;
 				list[idx] = text;
 			});
 
@@ -280,23 +317,21 @@ console.log(augmentForm(list[6], list));*/
 				infinitive = Word.unmarkDefaultStress(infinitive);
 
 				forms.forEach(function(form){
-					form = Word.unmarkDefaultStress(form);
-
 					idx = extractIndexOfCommonPart(form, infinitive);
 
 					data = {
 						replaced: infinitive.substr(idx),
-						replacement: form.substr(idx),
+						replacement: form.substr(idx) + (form.substr(idx).match(/ndo$|^r$/)? '/B': ''),
 						form: infinitive,
-						parent: [infinitive]
+						parents: [infinitive]
 					};
 
 					idx = list.findIndex(function(el){ return (el.replaced == data.replaced && el.replacement == data.replacement); });
 					if(idx < 0)
 						list.push(data);
-					else if(list[idx].parent.indexOf(data.parent[0]) < 0){
-						list[idx].parent.push(data.parent[0]);
-						list[idx].form = extractCommonPartFromList(list[idx].parent);
+					else if(list[idx].parents.indexOf(data.parents[0]) < 0){
+						list[idx].parents.push(data.parents[0]);
+						list[idx].form = extractCommonPartFromList(list[idx].parents);
 					}
 				});
 			});
@@ -308,7 +343,7 @@ console.log(augmentForm(list[6], list));*/
 			epurateListAndApplyFlag(list, 'F', 'ne', 'n', 'ne');
 			epurateListAndApplyFlag(list, 'H', '[àéí]', '', 'simo', 'vimo');
 			epurateListAndApplyFlag(list, 'I', 'ò', 'ò', 'à', 'è');
-			epurateListAndApplyFlag(list, 'J', 'ndo', 'ndo', 'n/EF', 'nte', 'rave');
+			epurateListAndApplyFlag(list, 'J', 'ndo/B', 'ndo/B', 'n/EF', 'nte', 'rave');
 			epurateListAndApplyFlag(list, 'K', 'de', 'de', 'ge');
 			epurateListAndApplyFlag(list, 'L', 'on/EF', 'on/EF', 'ede/K', 'sen/EF', 'siede/K', 'sié', 'sion/EF', 'son/EF', 'ven/E', 'vion/E', 'vié', 'von/E', 'é');
 			epurateListAndApplyFlag(list, 'M', 'on/E', 'on/E', 'mo', 'sen/E', 'sion/E', 'son/E', 'sié', 'é');
@@ -326,18 +361,18 @@ console.log(augmentForm(list[6], list));*/
 					if(filtered.length <= 1)
 						break;
 
-					if(el.parent.some(function(obj){ return (obj == el.form); })){
+					if(el.parents.some(function(obj){ return (obj == el.form); })){
 						avoid = '';
 						filtered.forEach(function(tmp){
-							chr = tmp.parent[tmp.parent.length - el.form.length - 1];
-							if(el.form != tmp.parent && avoid.indexOf(chr) < 0)
+							chr = tmp.parents[tmp.parents.length - el.form.length - 1];
+							if(el.form != tmp.parents && avoid.indexOf(chr) < 0)
 								avoid += chr;
 						});
 						el.form = '[^' + avoid.split('').sort().join('') + ']' + el.form;
 						break;
 					}
 
-					el.form = el.parent[0].substr(el.parent[0].length - el.form.length - 1);
+					el.form = el.parents[0].substr(el.parents[0].length - el.form.length - 1);
 					break;
 				}
 			});/**/
@@ -460,16 +495,16 @@ console.log(augmentForm(list[6], list));*/
 							replaced: themeFrom.substr(i),
 							replacement: themeTo.substr(i),
 							form: themeFrom.substr(i),
-							parent: [themeFrom]
+							parents: [themeFrom]
 						};
 
 						i = indexOf(list, data);
 						if(i < 0)
 							list.push(data);
-						else if(list[i].parent.indexOf(data.parent[0]) < 0){
-							list[i].parent.push(data.parent[0]);
+						else if(list[i].parents.indexOf(data.parents[0]) < 0){
+							list[i].parents.push(data.parents[0]);
 
-							list[i].parent.forEach(function(obj, idx){
+							list[i].parents.forEach(function(obj, idx){
 								if(!idx)
 									form = obj;
 								else{
@@ -492,23 +527,23 @@ console.log(augmentForm(list[6], list));*/
 					if(filtered.length <= 1)
 						break;
 
-					if(el.parent.some(function(obj){ return (obj == el.form); })){
+					if(el.parents.some(function(obj){ return (obj == el.form); })){
 						avoid = '';
 						filtered.forEach(function(tmp){
-							chr = tmp.parent[tmp.parent.length - el.form.length - 1];
-							if(el.form != tmp.parent && avoid.indexOf(chr) < 0)
+							chr = tmp.parents[tmp.parents.length - el.form.length - 1];
+							if(el.form != tmp.parents && avoid.indexOf(chr) < 0)
 								avoid += chr;
 						});
 						el.form = '[^' + avoid.split('').sort().join('') + ']' + el.form;
 						break;
 					}
 
-					el.form = el.parent[0].substr(el.parent[0].length - el.form.length - 1);
+					el.form = el.parents[0].substr(el.parents[0].length - el.form.length - 1);
 				}
 			});/** /
 
 			list.forEach(function(el){
-				console.log('SFX ' + flag + ' ' + el.replaced + ' ' + el.replacement /*+ ' ' + el.form* / + ' ' + el.parent);
+				console.log('SFX ' + flag + ' ' + el.replaced + ' ' + el.replacement /*+ ' ' + el.form* / + ' ' + el.parents);
 			});
 			console.log('done ' + list.length);
 		});/**/

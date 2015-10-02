@@ -50,7 +50,7 @@ define(['tools/lang/Dialect', 'tools/lang/phonology/Orthography', 'tools/lang/ph
 			paradigm = conjugation.paradigmInfo.paradigm;
 		delete paradigm.applyDialectalVariations;
 
-		var response = ArrayHelper.unique(ArrayHelper.flatten(paradigm).filter(function(item){ return (item !== undefined); }));
+		var response = ArrayHelper.unique(ArrayHelper.flatten(paradigm)).filter(function(item){ return (item !== undefined); });
 
 		var addAndSplit = function(form){
 			response.push(form);

@@ -81,12 +81,14 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				}
 				else{
 					person.general = t.themeT8 + 'e';
-					person.central_centralNorthern_lagunar_western = t.themeT8 + 'o';
+					person.central_centralNorthern_lagunar_western1 = t.themeT8 + 'o';
 
-					if(this.verb.irregularity.verb && type == 'irregular')
-						person.central_centralNorthern_lagunar_western = (this.verb.irregularity.saver?
-							t.themeT8.replace(/(.)$/, '($1)o'):
-							t.themeT8 + (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'o');
+					if(this.verb.irregularity.verb && type == 'irregular'){
+						if(this.verb.irregularity.saver)
+							person.central_centralNorthern_lagunar_western2 = t.themeT8.replace(/.$/, 'ò');
+						else
+							person.central_centralNorthern_lagunar_western1 = t.themeT8 + (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'o';
+					}
 				}
 				root.secondSingular = {
 					general: t.themeT8.replace(/([^i])$/, '$1' + (!this.verb.irregularity.verb.match(/andar|darStarFar|s?aver/) || !t.themeT8.match(/à$/)? 'i': ''))
@@ -390,7 +392,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			if(this.verb.irregularity.eser)
 				person.archaic = 'siàndo';
 			else if(this.verb.irregularity.aver)
-				person.archaic = 'abiàndo';
+				person.archaic = (this.verb.infinitive.substr(0, this.verb.infinitive.length - 'aver'.length)) + 'abiàndo';
 		}
 	};
 
