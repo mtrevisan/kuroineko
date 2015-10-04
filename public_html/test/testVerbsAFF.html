@@ -243,7 +243,7 @@
 
 				//collect parents that matches
 				var parents = [],
-					matcher = new RegExp('^(.+\])?' + el.form + '$');
+					matcher = new RegExp('^(.+\])?' + el.form.replace(/\*/g, '') + '$');
 				list.forEach(function(obj){
 					if(obj != el && obj.form.match(matcher))
 						parents = parents.concat(obj.parents);
