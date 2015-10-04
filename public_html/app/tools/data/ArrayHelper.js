@@ -139,21 +139,6 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 			fn.call(scope || this, this[i], i, this);
 	};
 
-/*
-Splice :
-//if you plan on just removing one item, this one will be way faster:
-var spliceOne = function(arr, index){
-	var len = arr.length;
-	if(!len)
-		return;
-	while(index < len){
-		arr[index] = arr[index + 1];
-		index ++
-	}
-	arr.length --;
-};
-*/
-
 	/**
 	 * Copies the values of `source` to `destination`.
 	 *
@@ -308,10 +293,14 @@ var spliceOne = function(arr, index){
 	 * @return {Array} A nested array, containing first an array of elements that satisfied the predicate, and second an array of elements
 	 *		that did not satisfy.
 	 */
-	var partition = function(predicate, list){
-		var result = [[], []];
-		list.map(function(obj){
-			result[predicate(obj)? 0: 1].push(obj);
+	var partition = function(list, predicate){
+		var result = {};
+		list.forEach(function(value, index){
+			var key = predicate(value, index, list);
+			if(key in result)
+				result[key].push(value);
+			else
+				result[key] = [value];
 		});
 		return result;
 	};
