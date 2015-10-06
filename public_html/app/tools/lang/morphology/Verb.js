@@ -118,7 +118,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabator', 'tools/d
 			dixer: /díxer$/,
 			poder: /podér$/,
 			saver: /savér$/,
-			traer: /tràer$/,
+			traer: /(|as?|des?|es|kon|pro|re|so)?tràer$/,
 			enher: /[èé]ñer$/,
 			toler: /to[lƚ]ér$/,
 			voler: /vo[lƚ]ér$/

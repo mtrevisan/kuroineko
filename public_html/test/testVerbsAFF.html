@@ -121,11 +121,11 @@
 				if(list.hasOwnProperty(i) && repment.match(matcher)){
 					rep = list[i].replaced;
 					repment = repment.substr(0, repment.length - matcherLength);
-					idx0 = indexOfReplacement(list, rep, repment + base);
+					idx0 = indexOfReplacement(list, rep, new RegExp('^(.+\])?' + repment + base + '$'));
 					if(idx0 < 0)
 						continue;
 
-					indices = replacement.map(function(last){ return indexOfReplacement(list, rep, repment + last); });
+					indices = replacement.map(function(last){ return indexOfReplacement(list, rep, new RegExp('^(.+\])?' + repment + last + '$')); });
 					if(indices.some(function(el){ return (el < 0); }))
 						continue;
 
@@ -134,7 +134,7 @@
 					list[idx0].replacement = list[idx0].replacement.replace(/(\/.+)?$/, '/' + flag);
 
 					replacement.forEach(function(last){
-						while((j = indexOfReplacement(list, rep, repment + last)) >= 0){
+						while((j = indexOfReplacement(list, rep, new RegExp('^(.+\])?' + repment + last + '$'))) >= 0){
 							if(j < i)
 								i --;
 
@@ -146,7 +146,7 @@
 		};
 
 		var indexOfReplacement = function(list, replaced, replacement){
-			return list.findIndex(function(el){ return (el.replaced == replaced && el.replacement == replacement); });
+			return list.findIndex(function(el){ return (el.replaced == replaced && el.replacement.match(replacement)); });
 		};
 
 		/*var indexOf = function(list, obj){
@@ -182,78 +182,88 @@
 				if(list.hasOwnProperty(i)){
 					var el = list[i];
 
-					//collect parents that matches
-					var parents = [],
-						matcher = new RegExp('^(.+\])?' + el.form + '$');
-					list.forEach(function(obj){
-						if(obj != el && obj.form.match(matcher))
-							parents = parents.concat(obj.parents);
-					});
-					parents = parents.unique().difference(el.parents);
-
-					var avoid = '';
-					parents.forEach(function(obj){
-						var idx = obj.length - el.form.length - 1;
-						if(idx >= 0)
-							avoid += obj[idx];
-					});
-					avoid = avoid.split('').unique().sort();
-
-					var current = '';
-					el.parents.forEach(function(obj){
-						var idx = obj.length - el.form.length - 1;
-						if(idx >= 0)
-							current += obj[idx];
-					});
-					current = current.split('').unique().sort();
-
-					var inters = intersection(avoid, current);
-					if(inters.length){
-						inters = inters.join('');
-						var parts = partition(el.parents, function(value){
-							return (inters.indexOf(value[value.length - el.form.length - 1]) >= 0? inters: '_');
+					if(el.form.indexOf('[') < 0){
+						//collect parents that matches
+						var parents = [],
+							matcher = new RegExp('^(\\*|.+\\])?' + el.form.replace(/\/.+$/, '') + '$');
+						list.forEach(function(obj){
+							if(obj != el && obj.form.match(matcher))
+								parents = parents.concat(obj.parents);
 						});
-						if(parts['_']){
-							var el2 = {
-								replaced: el.replaced,
-								replacement: el.replacement,
-								form: el.form,
-								parents: parts['_']
-							};
+						parents = parents.unique().difference(el.parents);
 
-							el.form = '[' + inters + ']' + el.form;
-							el.parents = parts[inters];
+						var avoid = '';
+						parents.forEach(function(obj){
+							var idx = obj.length - el.form.length - 1;
+							avoid += (idx >= 0? obj[idx]: ' ');
+						});
+						avoid = avoid.split('').unique().sort();
 
-							list.push(el2);
-							len ++;
+						var current = '';
+						el.parents.forEach(function(obj){
+							var idx = obj.length - el.form.length - 1;
+							current += (idx >= 0? obj[idx]: ' ');
+						});
+						current = current.split('').unique().sort();
+
+						var inters = intersection(avoid, current);
+						if(inters.length){
+							/*inters = inters.join('');
+							var parts = partition(el.parents, function(value){
+								return (inters.indexOf(value[value.length - el.form.length - 1]) >= 0? inters: '_');
+							});
+							if(parts['_']){
+								var el2 = {
+									replaced: el.replaced,
+									replacement: el.replacement,
+									form: el.form,
+									parents: parts['_']
+								};
+
+								el.form = '[' + inters + ']' + el.form;
+								el.parents = parts[inters];
+
+								list.push(el2);
+								len ++;
+							}
+							else*/
+								el.form = '*' + el.form;
 						}
+						else if(parents.indexOf(el.form) < 0)
+							el.form = (avoid.length > 0? '[^' + avoid.join('') + ']': '') + el.form;
 						else
-							el.form = '*' + el.form;
+							el.form = (current.length > 0? '[' + current.join('') + ']': '') + el.form;
 					}
-					else if(parents.indexOf(el.form) < 0)
-						el.form = (avoid.length > 0? '[^' + avoid.join('') + ']': '') + el.form;
-					else
-						el.form = (current.length > 0? '[' + current.join('') + ']': '') + el.form;
 				}
 		};
 
-		var reduceForms = function(list){
+		/*var reduceForms = function(list){
 			list.forEach(function(el){
-				var form = el.form.substr(el.form.search(/[àèéíòóú]/));
+				if(el.form.indexOf(']') < 0 && el.form.indexOf('*') < 0){
+					var i = 0,
+						idx0 = el.form.search(/[àèéíòóú]/),
+						idx1 = el.form.length - el.replaced.length,
+						form, matcher, parents;
+					if(idx0 != 0 && idx1 > 0){
+						do{
+							form = el.form.substr(++ i);
 
-				//collect parents that matches
-				var parents = [],
-					matcher = new RegExp('^(.+\])?' + el.form.replace(/\*/g, '') + '$');
-				list.forEach(function(obj){
-					if(obj != el && obj.form.match(matcher))
-						parents = parents.concat(obj.parents);
-				});
-				parents = parents.unique().difference(el.parents);
+							//collect parents that matches
+							parents = [];
+							matcher = new RegExp('^(\\*|.+\\])?' + form + '$');
+							list.forEach(function(obj){
+								if(obj != el && obj.form.match(matcher))
+									parents = parents.concat(obj.parents);
+							});
+							parents = parents.unique().difference(el.parents);
+						}while((idx0 < 0 || i < idx0) && i < idx1 && parents.length);
 
-				if(!parents.length)
-					el.form = form;
+						if(!parents.length)
+							el.form = form;
+					}
+				}
 			});
-		};
+		};*/
 
 /*var list = [
 	{
@@ -301,11 +311,13 @@
 	{
 		replaced: 'andenar',
 		replacement: 'àndeno',
-		form: 'andenar',
+		form: 'grandenar',
 		parents: ['grandenar', 'dexgrandenar']
 	}
 ];
-console.log(augmentForm(list[0], list));/**/
+reduceForms(list);
+console.log(list);
+/*console.log(augmentForm(list[0], list));/**/
 
 
 		var prettyPrint = function(list){
@@ -313,8 +325,8 @@ console.log(augmentForm(list[0], list));/**/
 				maxReplacement = list.reduce(function(previousValue, currentValue){ return Math.max(previousValue, currentValue.replacement.length); }, 0),
 				maxForm = list.reduce(function(previousValue, currentValue){ return Math.max(previousValue, currentValue.form.length); }, 0);
 			list.map(function(el, idx){
-				var text = 'SFX A ' + printPadded(el.replaced, maxReplaced) + ' ' + printPadded(el.replacement, maxReplacement) + ' ' + printPadded(el.form, maxForm)
-					+ ' # ' + el.parents;
+				var text = 'SFX A ' + printPadded(el.replaced, maxReplaced) + ' ' + printPadded(el.replacement, maxReplacement)
+					+ ' ' + printPadded(el.form, maxForm) + ' # ' + el.parents;
 				list[idx] = text;
 			});
 
@@ -417,17 +429,61 @@ prettyPrint(list);/**/
 
 					data = {
 						replaced: infinitive.substr(idx),
-						replacement: form.substr(idx) + (form.substr(idx).match(/ndo$|^r$/)? '/B': ''),
+						replacement: form.substr(idx),
 						form: infinitive,
 						parents: [infinitive]
 					};
+					if(data.replacement.match(/ndo$|^r$/))
+						data.replacement += '/B';
 
+if(data.replaced.match(/^ar$/) && data.replacement == 'é'){
+	if(infinitive.match(/[dft]ar$/)){
+		data.replaced = '[dft]' + data.replaced;
+		data.replacement = '[dft]' + data.replacement;
+		data.form = '[dft]ar';
+	}
+	else{
+		data.replaced = '[^dft]' + data.replaced;
+		data.replacement = '[^dft]' + data.replacement;
+		data.form = '[^dft]ar';
+	}
+}
+if(data.replaced.match(/^ar$/) && data.replacement == 'o'){
+	if(infinitive.match(/[dc]ar$/)){
+		data.replaced = '[d]' + data.replaced;
+		data.replacement = '[d]' + data.replacement;
+		data.form = '[d]ar';
+	}
+	else if(infinitive.match(/[bđefgjɉklmnñoprstŧuvx]ar$/)){
+		data.replaced = '[bđefgjɉklmnñoprstŧuvx]' + data.replaced;
+		data.replacement = '[bđefgjɉklmnñoprstŧuvx]' + data.replacement;
+		data.form = '[bđefgjɉklmnñoprstŧuvx]ar';
+	}
+}
+/*else if(data.replaced.match(/^ar$/) && data.replacement.match(/^à?[oaie]|é$/)
+		|| data.replaced.match(/^iar$/) && data.replacement.match(/^(i|í[oaie])$/)){
+	data.replaced = infinitive.substr(infinitive.length - 3);
+//	data.replacement = infinitive[infinitive.length - 3] + data.replacement;
+	data.form = infinitive.substr(infinitive.length - 3);
+}
+else if(data.replaced.match(/^er$/) && data.replacement.match(/^(imo|[oaie]|(si)?e[ds]de|sen(s?e)?|[sv]?i?on(s?e)?|vene?|[sv]ié|s[oaie]|ud[oaie]|[íú])$/)){
+	data.replaced = infinitive.substr(infinitive.length - 3);
+//	data.replacement = infinitive[infinitive.length - 3] + data.replacement;
+	data.form = infinitive.substr(infinitive.length - 3);
+}
+else if(data.replaced.match(/^ir$/) && (data.replacement.match(/^(e[ds]de|[oaie]|í[ae]?)$/)
+		/*|| (infinitive[infinitive.length - 3] + data.replacement).match(/^sé$/)* /)){
+	data.replaced = infinitive.substr(infinitive.length - 3);
+	data.replacement = infinitive[infinitive.length - 3] + data.replacement;
+	data.form = infinitive.substr(infinitive.length - 3);
+}*/
 					idx = list.findIndex(function(el){ return (el.replaced == data.replaced && el.replacement == data.replacement); });
 					if(idx < 0)
 						list.push(data);
 					else if(list[idx].parents.indexOf(data.parents[0]) < 0){
 						list[idx].parents.push(data.parents[0]);
-						list[idx].form = extractCommonPartFromList(list[idx].parents);
+						//if(list[idx].form.indexOf('[') < 0)
+							list[idx].form = extractCommonPartFromList(list[idx].parents);
 					}
 				});
 			});
@@ -450,7 +506,7 @@ prettyPrint(list);/**/
 
 			augmentForms(list);
 
-			reduceForms(list);
+//			reduceForms(list);
 
 
 			prettyPrint(list);
