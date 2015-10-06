@@ -449,15 +449,15 @@ if(data.replaced.match(/^ar$/) && data.replacement == 'é'){
 	}
 }
 if(data.replaced.match(/^ar$/) && data.replacement == 'o'){
-	if(infinitive.match(/[dc]ar$/)){
-		data.replaced = '[d]' + data.replaced;
-		data.replacement = '[d]' + data.replacement;
-		data.form = '[d]ar';
+	if(infinitive.match(/dar$/)){
+		data.replaced = 'd' + data.replaced;
+		data.replacement = 'd' + data.replacement;
+		data.form = 'dar';
 	}
-	else if(infinitive.match(/[bđefgjɉklmnñoprstŧuvx]ar$/)){
-		data.replaced = '[bđefgjɉklmnñoprstŧuvx]' + data.replaced;
-		data.replacement = '[bđefgjɉklmnñoprstŧuvx]' + data.replacement;
-		data.form = '[bđefgjɉklmnñoprstŧuvx]ar';
+	else{
+		data.replaced = '[^d]' + data.replaced;
+		data.replacement = '[^d]' + data.replacement;
+		data.form = '[^d]ar';
 	}
 }
 /*else if(data.replaced.match(/^ar$/) && data.replacement.match(/^à?[oaie]|é$/)

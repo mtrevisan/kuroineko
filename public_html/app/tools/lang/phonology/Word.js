@@ -82,7 +82,7 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme'], function(St
 		if(idx >= 0){
 			//exclude unmark from words that can be truncated like "fenisié(de)" or "(g)à"
 			var tmp = (word[idx + 1] != '(' && !word.match(/^(re)?\(?g?\)?(à\/è|à|é|ò)$/) && !word.match(/^\(?x?\)?é$|^s[éí]$/)
-				&& !word.match(/^((r[ei])?dà|(mal|move|soto)?stà|(kon(tra)?|likue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?fà)$/)
+				&& !word.match(/^((r[ei])?d[àé]|(mal|move|soto)?stà|(kon(tra)?|likue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?fà)$/)
 				&& !word.match(/^(stra)?s[àò]$/) && !word.match(/^(|as?|des?|es|kon|pro|re|so)tr[àé]$/)? suppressStress(word): word);
 			if(word == markDefaultStress(tmp))
 				word = tmp;
