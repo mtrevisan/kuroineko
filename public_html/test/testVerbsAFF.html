@@ -203,16 +203,16 @@
 
 		var augmentForms = function(list){
 			list.forEach(function(el){
-				augmentSingleForm(el, list);
+				augmentSingleForm(el, 1, list);
 			});
 		};
 
-		var augmentSingleForm = function(el, list){
+		var augmentSingleForm = function(el, order, list){
 			if(!el.extendedParents)
 				el.extendedParents = collectParents(el, list);
 
-			var current = extractVariability(el.form, el.parents),
-				avoid = extractVariability(el.form, el.extendedParents),
+			var current = extractVariability(el.form, order, el.parents),
+				avoid = extractVariability(el.form, order, el.extendedParents),
 				inters = intersection(avoid, current);
 			if(inters.length)
 				el.form = '*' + el.form;
@@ -232,35 +232,36 @@
 			return parents.unique().difference(el.parents);
 		};
 
-		var extractVariability = function(form, list){
-			var formLength = form.replace(/^\*|\/.+$/, '').replace(/^\[.+\]/, '.').length;
-
-			var variability = '';
+		var extractVariability = function(form, order, list){
+			var formLength = form.replace(/\*|\[.+\]|\/.+$/g, '').length,
+				variability = [];
 			list.forEach(function(obj){
-				var idx = obj.length - formLength - 1;
-				variability += (idx >= 0? obj[idx]: ' ');
+				var idx = obj.length - formLength - order;
+				variability.push(idx >= 0? obj.substr(idx, order): null);
 			});
-			return variability.split('').unique().sort();
+			return variability.unique().sort();
 		};
 
 		var extractUnfeasible = function(list){
 			return partition(list, function(value){ return (value.form.indexOf('*') >= 0); });
 		};
 
-		var searchForParentSubdivision = function(el, list){
-			var parents = el.parents,
-				variability = extractVariability(el.form, el.extendedParents.concat(el.parents)),
+		var searchForParentSubdivision = function(el, order, list){
+			var parents = el.parents.slice(0),
+				variability = extractVariability(el.form, order, el.extendedParents.concat(el.parents)),
 				len = variability.length,
-				constraint = '',
+				constraint = [],
 				i, v, isStarred;
 			for(i = 0; i < len; i ++){
 				v = variability[i];
+				if(!v)
+					continue;
 
 				el.form = el.form.replace(/^(\*|\[.+\])/, '');
 
-				subdivideParentsIf('[' + constraint + v + ']', el, list);
+				subdivideParentsIf((v.lenght == 1? '[' + constraint.join('') + v + ']': '(' + constraint.concat(v).join('|') + ')'), el, list);
 
-				augmentSingleForm(el);
+				augmentSingleForm(el, order);
 
 				//undo what has be done in subdivideParentsIf
 				isStarred = (el.form.indexOf('*') >= 0);
@@ -269,14 +270,14 @@
 					el.parents = parents;
 				}
 				else
-					augmentSingleForm(list[list.length - 1]);
+					augmentSingleForm(list[list.length - 1], order);
 
 				if(!isStarred)
-					constraint += v;
+					constraint.push(v);
 			}
 
 			if(!isStarred && constraint.length && el.form.indexOf('[') < 0){
-				constraint = '[' + constraint + ']';
+				constraint = (v.lenght == 1? '[' + constraint.join('') + ']': '(' + constraint.join('|') + ')');
 
 				el.replaced = constraint + el.replaced;
 				el.replacement = constraint + el.replacement;
@@ -293,7 +294,7 @@
 				replacement: el.replacement,
 				form: el.form,
 				parents: part[false],
-				extendedParents: el.extendedParents
+				extendedParents: el.extendedParents.slice(0)
 			});
 			el.parents = part[true];
 		};
@@ -406,7 +407,13 @@
 			externalList = part[true];
 
 			externalList.forEach(function(el){
-				searchForParentSubdivision(el, externalList);
+				searchForParentSubdivision(el, 1, externalList);
+			});
+
+			transfer(list, externalList);
+
+			externalList.forEach(function(el){
+				searchForParentSubdivision(el, 2, externalList);
 			});
 
 			transfer(list, externalList);
