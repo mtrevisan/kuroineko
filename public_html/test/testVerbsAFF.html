@@ -224,7 +224,7 @@
 
 		var collectParents = function(el, list){
 			var parents = [],
-				matcher = new RegExp('^\\*?' + el.form.replace(/^\*|\/.+$/, '') + '(\/.+)?$');
+				matcher = new RegExp('^(\\*|\\[.+\\])?' + el.form.replace(/\*|\[.+\]|\/.+$/g, '') + '(\/.+)?$');
 			list.forEach(function(obj){
 				if(obj != el && obj.form.match(matcher))
 					parents = parents.concat(obj.parents);
