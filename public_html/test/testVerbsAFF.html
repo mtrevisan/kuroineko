@@ -17,6 +17,12 @@
 			}
 		};
 
+		Array.prototype.getRegExp = function(){
+			return (this[0].lenght == 1? '[' + this.join('') + ']': '(' + this.join('|') + ')');
+		};
+		Array.prototype.getNotRegExp = function(){
+			return (this[0].lenght == 1? '[^' + this.join('') + ']': '(' + this.join('|') + ')');
+		};
 		Array.prototype.findIndex = function(predicate, scope){
 			for(var i = 0, len = this.length; i < len; i ++)
 				if(predicate.call(scope || this, this[i], i, this))
@@ -68,7 +74,6 @@
 			}
 			return result;
 		};
-		//Groups the object's values by a criterion
 		var partition = function(list, predicate){
 			var result = {};
 			list.forEach(function(value, index){
@@ -90,7 +95,7 @@
 		})();
 
 		var epurateListAndApplyFlag = function(list, flag, matcher, base){
-			var matcherLength = matcher.replace(/\[.+\]/g, '').length,
+			var matcherLength = matcher.replace(/\[.+\]|\(.+\)/g, '').length,
 				replacement = Array.prototype.slice.call(arguments, 4, arguments.length),
 				i, j, rep, repment, idx0, indices, parents,
 				inters, p;
@@ -155,10 +160,6 @@
 			return list.findIndex(function(el){ return (el.replaced == replaced && el.replacement == replacement); });
 		};
 
-		/*var indexOf = function(list, obj){
-			return list.findIndex(function(el){ return (el.replaced == obj.replaced && el.replacement == obj.replacement); });
-		};*/
-
 		var extractIndexOfCommonPart = function(str1, str2){
 			var i, len;
 			for(i = 0, len = Math.min(str1.length, str2.length) - 1; i < len; i ++)
@@ -217,14 +218,14 @@
 			if(inters.length)
 				el.form = '*' + el.form;
 			else if(el.extendedParents.indexOf(el.form) >= 0)
-				el.form = (current.length > 0? '[' + current.join('') + ']': '') + el.form;
+				el.form = (current.length > 0? current.getRegExp(): '') + el.form;
 			else
-				el.form = (avoid.length > 0? '[^' + avoid.join('') + ']': '') + el.form;
+				el.form = (avoid.length > 0? avoid.getNotRegExp(): '') + el.form;
 		};
 
 		var collectParents = function(el, list){
 			var parents = [],
-				matcher = new RegExp('^(\\*|\\[.+\\])?' + el.form.replace(/\*|\[.+\]|\/.+$/g, '') + '(\/.+)?$');
+				matcher = new RegExp('^(\\*|\\[.+\\])?' + el.form.replace(/\*|\[.+\]|\(.+\)|\/.+$/g, '') + '(\/.+)?$');
 			list.forEach(function(obj){
 				if(obj != el && obj.form.match(matcher))
 					parents = parents.concat(obj.parents);
@@ -233,7 +234,7 @@
 		};
 
 		var extractVariability = function(form, order, list){
-			var formLength = form.replace(/\*|\[.+\]|\/.+$/g, '').length,
+			var formLength = form.replace(/\*|\[.+\]|\(.+\)|\/.+$/g, '').length,
 				variability = [];
 			list.forEach(function(obj){
 				var idx = obj.length - formLength - order;
@@ -247,7 +248,7 @@
 		};
 
 		var searchForParentSubdivision = function(el, order, list){
-			var parents = el.parents.slice(0),
+			var parents = el.parents,
 				variability = extractVariability(el.form, order, el.extendedParents.concat(el.parents)),
 				len = variability.length,
 				constraint = [],
@@ -257,9 +258,9 @@
 				if(!v)
 					continue;
 
-				el.form = el.form.replace(/^(\*|\[.+\])/, '');
+				el.form = el.form.replace(/^(\*|\[.+\]|\(.+\))/, '');
 
-				subdivideParentsIf((v.lenght == 1? '[' + constraint.join('') + v + ']': '(' + constraint.concat(v).join('|') + ')'), el, list);
+				subdivideParentsIf(constraint.concat(v).getRegExp(), el, list);
 
 				augmentSingleForm(el, order);
 
@@ -277,7 +278,7 @@
 			}
 
 			if(!isStarred && constraint.length && el.form.indexOf('[') < 0){
-				constraint = (v.lenght == 1? '[' + constraint.join('') + ']': '(' + constraint.join('|') + ')');
+				constraint = constraint.getRegExp();
 
 				el.replaced = constraint + el.replaced;
 				el.replacement = constraint + el.replacement;
@@ -294,7 +295,7 @@
 				replacement: el.replacement,
 				form: el.form,
 				parents: part[false],
-				extendedParents: el.extendedParents.slice(0)
+				extendedParents: el.extendedParents
 			});
 			el.parents = part[true];
 		};
@@ -310,7 +311,7 @@
 				if(el.form.indexOf('*') < 0)
 					list.splice(i, 1);
 				else
-					el.form = el.form.replace(/\*|\[.+\]/g, '');
+					el.form = el.form.replace(/\*|\[.+\]|\(.+\)/g, '');
 			}
 		};
 
@@ -419,8 +420,8 @@
 			transfer(list, externalList);
 
 			/*list.forEach(function(el){
-				el.replaced = el.replaced.replace(/^\[.+\]/, '');
-				el.replacement = el.replacement.replace(/^\[.+\]/, '');
+				el.replaced = el.replaced.replace(/^\[.+\]|\(.+\)/, '');
+				el.replacement = el.replacement.replace(/^\[.+\]|\(.+\)/, '');
 			});/**/
 
 
