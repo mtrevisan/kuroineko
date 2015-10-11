@@ -18,10 +18,14 @@
 		};
 
 		Array.prototype.getRegExp = function(){
-			return (this[0].lenght == 1? '[' + this.join('') + ']': '(' + this.join('|') + ')');
+			if(!this[0])
+				return '';
+			return (this[0].length == 1? '[' + this.join('') + ']': '(' + this.join('|') + ')');
 		};
 		Array.prototype.getNotRegExp = function(){
-			return (this[0].lenght == 1? '[^' + this.join('') + ']': '(' + this.join('|') + ')');
+			if(!this[0])
+				return '';
+			return (this[0].length == 1? '[^' + this.join('') + ']': '(' + this.join('|') + ')');
 		};
 		Array.prototype.findIndex = function(predicate, scope){
 			for(var i = 0, len = this.length; i < len; i ++)
@@ -277,7 +281,7 @@
 					constraint.push(v);
 			}
 
-			if(!isStarred && constraint.length && el.form.indexOf('[') < 0){
+			if(!isStarred && constraint.length && !el.form.match(/[\[\(]/)){
 				constraint = constraint.getRegExp();
 
 				el.replaced = constraint + el.replaced;
@@ -317,31 +321,31 @@
 
 		/*var reduceForms = function(list){
 			list.forEach(function(el){
-				if(el.form.indexOf(']') < 0 && el.form.indexOf('*') < 0){
+				var matcher;
+				if(el.replaced.match(/[àèéíòóú]/)){
+					matcher = new RegExp('^(\\[.+\\]|\\(.+\\))?' + el.replaced + '$');
+					if(!list.some(function(obj){ return (obj != el && obj.form.match(matcher)); }))
+						el.form = el.replaced;
+				}
+				else if(el.form.indexOf('[') < 0){
 					var i = 0,
 						idx0 = el.form.search(/[àèéíòóú]/),
 						idx1 = el.form.length - el.replaced.length,
-						form, matcher, parents;
-					if(idx0 != 0 && idx1 > 0){
+						found = false,
+						form;
+					if(idx1 > 0){
 						do{
 							form = el.form.substr(++ i);
+							matcher = new RegExp('^(\\[.+\\]|\\(.+\\))?' + form + '$');
+							found = list.some(function(obj){ return (obj != el && obj.form.match(matcher)); });
+						}while(!found && (idx0 < 0 || i < idx0) && i < idx1);
 
-							//collect parents that matches
-							parents = [];
-							matcher = new RegExp('^(\\*|.+\\])?' + form + '$');
-							list.forEach(function(obj){
-								if(obj != el && obj.form.match(matcher))
-									parents = parents.concat(obj.parents);
-							});
-							parents = parents.unique().difference(el.parents);
-						}while((idx0 < 0 || i < idx0) && i < idx1 && parents.length);
-
-						if(!parents.length)
-							el.form = form;
+						if(!found)
+							el.form = el.form.substr(i);
 					}
 				}
 			});
-		};*/
+		};/**/
 
 		var prettyPrint = function(list){
 			var maxReplaced = list.reduce(function(previousValue, currentValue){ return Math.max(previousValue, currentValue.replaced.length); }, 0),
@@ -417,8 +421,6 @@
 				searchForParentSubdivision(el, 2, externalList);
 			});
 
-			transfer(list, externalList);
-
 			/*list.forEach(function(el){
 				el.replaced = el.replaced.replace(/^\[.+\]|\(.+\)/, '');
 				el.replacement = el.replacement.replace(/^\[.+\]|\(.+\)/, '');
@@ -428,8 +430,8 @@
 //			reduceForms(list);
 
 
-//			prettyPrint(list);
-			prettyPrint(externalList);
+			prettyPrint(list);
+//			prettyPrint(externalList);
 		});/**/
 
 		/*require(['tools/lang/phonology/Word', 'tools/lang/morphology/Conjugator', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Word, Conjugator, verbsDictionary, JSONH){
