@@ -18,14 +18,10 @@
 		};
 
 		Array.prototype.getRegExp = function(){
-			if(!this[0])
-				return '';
 			return (this[0].length == 1? '[' + this.join('') + ']': '(' + this.join('|') + ')');
 		};
 		Array.prototype.getNotRegExp = function(){
-			if(!this[0])
-				return '';
-			return (this[0].length == 1? '[^' + this.join('') + ']': '(' + this.join('|') + ')');
+			return (this[0].length == 1? '[^' + this.join('') + ']': '(?!' + this.join('|') + ')');
 		};
 		Array.prototype.findIndex = function(predicate, scope){
 			for(var i = 0, len = this.length; i < len; i ++)
@@ -99,7 +95,7 @@
 		})();
 
 		var epurateListAndApplyFlag = function(list, flag, matcher, base){
-			var matcherLength = matcher.replace(/\[.+\]|\(.+\)/g, '').length,
+			var matcherLength = matcher.replace(/\[.+\]/g, '').length,
 				replacement = Array.prototype.slice.call(arguments, 4, arguments.length),
 				i, j, rep, repment, idx0, indices, parents,
 				inters, p;
@@ -189,21 +185,56 @@
 		};
 
 		var applyReductions = function(list){
-			epurateListAndApplyFlag(list, 'D', 'o', 'o', 'a', 'e', 'i');
-			epurateListAndApplyFlag(list, 'EF', 'nse', 'n', 'ne', 'nse');
-			epurateListAndApplyFlag(list, 'E', 'nse', 'n', 'nse');
-			epurateListAndApplyFlag(list, 'G', '', '', 'a', 'e');
-			epurateListAndApplyFlag(list, 'F', 'ne', 'n', 'ne');
-			epurateListAndApplyFlag(list, 'H', '[àéí]', '', 'simo', 'vimo');
-			epurateListAndApplyFlag(list, 'I', 'ò', 'ò', 'à', 'è');
-			epurateListAndApplyFlag(list, 'J', 'ndo/B', 'ndo/B', 'n/EF', 'nte', 'rave');
+			epurateListAndApplyFlag(list, 'E', 'e', 'e', 'i');
+			epurateListAndApplyFlag(list, 'F', 'a', 'a', 'e/E');
+			//T8: indikativo prexente, dhontativo prexente
+			epurateListAndApplyFlag(list, 'D', 'o', 'o', 'a/F');
+			epurateListAndApplyFlag(list, 'G', 'a/B', 'a/B', 'o/D');
+			//T2: indikativo inparfèto, dhontativo inparfèto
+			epurateListAndApplyFlag(list, 'H', 'vimo',
+				'vimo', 'on', 'onse', 'ion', 'ionse', 'ivon', 'ivonse', 'ivion', 'ivionse', 'en', 'ense', 'iven', 'ivense', 'va', 'vi',
+				'simo', 'one', 'onse', 'ione', 'ione', 'isone', 'isonse', 'isione', 'isionse', 'ene', 'ense', 'isene', 'isense', 'iede', 'iege', 'isiede', 'isiege', 'se', 'si');
+			//T4: indikativo futuro, kondithional prexente
+			epurateListAndApplyFlag(list, 'I', 'rò',
+				'rò', 'rà', 'rè', 'ré', 'remo', 'ron', 'ren',
+				'ría', 'ríe', 'résimo', 'ron', 'ronse', 'rion', 'rionse', 'rison', 'risonse', 'rision', 'risionse', 'ren', 'rense', 'risen', 'risense', 'resi', 'risié', 'rié',
+				'rave');
+			//T11: indikativo inparfèto, dhontativo inparfèto
+			epurateListAndApplyFlag(list, 'J', 'on',
+				'ion', 'ionse', 'ivon', 'ivonse', 'ivion', 'ivionse', 'en', 'ense', 'iven', 'ivense', 'ié', 'ivié',
+				'one', 'onse', 'ione', 'ionse', 'isone', 'isonse', 'isione', 'isionse', 'ene', 'ense', 'isene', 'isense', 'asi', 'ase', 'iede', 'iege', 'isiede', 'isiege');
+			//T12: indikativo prexente, dhontativo prexente
+			epurateListAndApplyFlag(list, 'K', 'on', 'on', 'en', 'ene', 'é', 'ede', 'ege');
+
+			epurateListAndApplyFlag(list, 'L', 'ndo', 'ndo', 'nte', 'sto');
+			epurateListAndApplyFlag(list, 'M', 'iso', 'iso', 'ise', 'isi');
+			epurateListAndApplyFlag(list, 'N', 'isa', 'isa', 'ise', 'isi');
+			epurateListAndApplyFlag(list, 'O', 'ndo', 'ndo', 'sto');
+			epurateListAndApplyFlag(list, 'P', 'ison', 'ison', 'isé');
+
+//			epurateListAndApplyFlag(list, 'H', 'e', 'e', 'se');
+//			epurateListAndApplyFlag(list, 'G', 'n', 'n', 'ne/H');
+//			epurateListAndApplyFlag(list, 'GL', 'on/G', 'on/G', 'emo', 'ion/G', 'en/G', 'iede', 'iege');
+//			epurateListAndApplyFlag(list, 'M', 'ron', 'ron', 'remo', 'rave', 'ren', 'resi', 'rà', 'rè', 'ré', 'résimo', 'ría', 'ríe', 'rò');
+//			epurateListAndApplyFlag(list, 'NH', 'ivon', 'ivon', 'ivion/H', 'iven/H', 'isié', 'ivié', 'ié');
+
+/*			epurateListAndApplyFlag(list, 'D', 'o', 'o', 'a', 'e', 'i');
+			epurateListAndApplyFlag(list, 'O', 'a/B', 'a/B', 'o/D');
+			epurateListAndApplyFlag(list, 'E', 'e', 'e', 'i');
+			epurateListAndApplyFlag(list, 'F', 'a', 'a', 'e/E');
+			epurateListAndApplyFlag(list, 'GH', 'nse', 'n', 'ne', 'nse');
+			epurateListAndApplyFlag(list, 'G', 'nse', 'n', 'nse');
+			epurateListAndApplyFlag(list, 'I', 'a', '', 'a', 'e');
+			epurateListAndApplyFlag(list, 'H', 'ne', 'n', 'ne');
+			epurateListAndApplyFlag(list, 'J', '[àéí]', '', 'simo', 'vimo');
 			epurateListAndApplyFlag(list, 'K', 'de', 'de', 'ge');
-			epurateListAndApplyFlag(list, 'L', 'on/EF', 'on/EF', 'ede/K', 'sen/EF', 'siede/K', 'sié', 'sion/EF', 'son/EF', 'ven/E', 'vion/E', 'vié', 'von/E', 'é');
-			epurateListAndApplyFlag(list, 'M', 'on/E', 'on/E', 'mo', 'sen/E', 'sion/E', 'son/E', 'sié', 'é');
-			epurateListAndApplyFlag(list, 'N', 'mo', 'mo', 'sen/EF', 'sion/EF', 'son/EF', 'sié', 'vié', 'é');
-			epurateListAndApplyFlag(list, 'O', 'ron/E', 'ron/E', 'remo', 'ren/E', 'resi', 'rion/M', 'ré', 'résimo', 'rí/G', 'rò/I');
-			epurateListAndApplyFlag(list, 'P', 'mo', 'mo', 'de/K', 'ndo/J', 'ron/O', 'se', 'si', 'sto/D', 'vo/D');
-			epurateListAndApplyFlag(list, 'Q', 'í', 'í', 'é/H', 'ú/G');
+			epurateListAndApplyFlag(list, 'L', 'on/GH', 'on/GH', 'ede/K', 'sen/GH', 'siede/K', 'sié', 'sion/GH', 'son/GH', 'ven/G', 'vion/G', 'vié', 'von/G', 'é');
+			epurateListAndApplyFlag(list, 'M', 'ion/G', 'ion/G', 'imo', 'isen/G', 'ision/G', 'ison/G', 'isié', 'ié');
+			epurateListAndApplyFlag(list, 'N', 'mo', 'mo', 'sen/GH', 'sion/GH', 'son/GH', 'sié', 'vié', 'é');
+			epurateListAndApplyFlag(list, 'P', 'ron/G', 'ron/G', 'remo', 'ren/G', 'resi', 'rion/M', 'ré', 'résimo', 'rí/I', 'rò', 'rà', 'rè', 'ré');
+			epurateListAndApplyFlag(list, 'Q', 'ndo/B', 'ndo/B', 'n/GH', 'nte', 'rave');
+			epurateListAndApplyFlag(list, 'R', 'mo', 'mo', 'de/K', 'ndo/Q', 'ron/P', 'se/E', 'si', 'sto/D', 'vo/D');
+			epurateListAndApplyFlag(list, 'S', 'í/B', 'í/B', 'í', 'é/J', 'ú/I');/**/
 		};
 
 		var augmentForms = function(list){
@@ -229,7 +260,7 @@
 
 		var collectParents = function(el, list){
 			var parents = [],
-				matcher = new RegExp('^(\\*|\\[.+\\])?' + el.form.replace(/\*|\[.+\]|\(.+\)|\/.+$/g, '') + '(\/.+)?$');
+				matcher = new RegExp('^(\\*|\\[.+\\])?' + el.form.replace(/\*|\[.+\]|\/.+$/g, '') + '(\/.+)?$');
 			list.forEach(function(obj){
 				if(obj != el && obj.form.match(matcher))
 					parents = parents.concat(obj.parents);
@@ -238,11 +269,12 @@
 		};
 
 		var extractVariability = function(form, order, list){
-			var formLength = form.replace(/\*|\[.+\]|\(.+\)|\/.+$/g, '').length,
-				variability = [];
+			var formLength = form.replace(/\*|\[.+\]|\/.+$/g, '').length,
+				variability = [],
+				idx;
 			list.forEach(function(obj){
-				var idx = obj.length - formLength - order;
-				variability.push(idx >= 0? obj.substr(idx, order): null);
+				idx = obj.length - formLength - order;
+				variability.push(idx >= 0? obj.substr(idx, order): '_');
 			});
 			return variability.unique().sort();
 		};
@@ -251,57 +283,61 @@
 			return partition(list, function(value){ return (value.form.indexOf('*') >= 0); });
 		};
 
-		var searchForParentSubdivision = function(el, order, list){
-			var parents = el.parents,
-				variability = extractVariability(el.form, order, el.extendedParents.concat(el.parents)),
-				len = variability.length,
-				constraint = [],
-				i, v, isStarred;
-			for(i = 0; i < len; i ++){
-				v = variability[i];
-				if(!v)
-					continue;
+		var searchForParentSubdivision = function(order, list){
+			list.forEach(function(el){
+				var parents = el.parents,
+					variability = extractVariability(el.form, order, el.extendedParents.concat(el.parents)),
+					len = variability.length,
+					constraint = [],
+					i, v, isStarred;
+				for(i = 0; i < len; i ++){
+					v = variability[i];
+					if(!v)
+						continue;
 
-				el.form = el.form.replace(/^(\*|\[.+\]|\(.+\))/, '');
+					el.form = el.form.replace(/\*|\[.+\]/g, '');
 
-				subdivideParentsIf(constraint.concat(v).getRegExp(), el, list);
+					subdivideParentsIf(constraint.concat(v).getRegExp(), el, list);
 
-				augmentSingleForm(el, order);
+					augmentSingleForm(el, order);
 
-				//undo what has be done in subdivideParentsIf
-				isStarred = (el.form.indexOf('*') >= 0);
-				if(i < len - 1 || isStarred){
-					list.pop();
-					el.parents = parents;
+					//undo what has be done in subdivideParentsIf
+					isStarred = (el.form.indexOf('*') >= 0);
+					if(i < len - 1 || isStarred){
+						list.pop();
+						el.parents = parents;
+					}
+					else
+						augmentSingleForm(list[list.length - 1], order);
+
+					if(!isStarred)
+						constraint.push(v);
 				}
-				else
-					augmentSingleForm(list[list.length - 1], order);
 
-				if(!isStarred)
-					constraint.push(v);
-			}
+				if(!isStarred && constraint.length && el.form.indexOf('[') < 0){
+					constraint = constraint.getRegExp();
 
-			if(!isStarred && constraint.length && !el.form.match(/[\[\(]/)){
-				constraint = constraint.getRegExp();
-
-				el.replaced = constraint + el.replaced;
-				el.replacement = constraint + el.replacement;
-				el.form = constraint + el.form;
-			}
+					el.replaced = constraint + el.replaced;
+					el.replacement = constraint + el.replacement;
+					el.form = constraint + el.form;
+				}
+			});
 		};
 
 		var subdivideParentsIf = function(constraint, el, list){
 			var matcher = new RegExp(constraint + el.form + '$'),
-				part = partition(el.extendedParents.concat(el.parents), function(value){ return !!value.match(matcher); });
+				part = partition(el.extendedParents.concat(el.parents), function(value){ return value.match(matcher); });
 
-			list.push({
-				replaced: el.replaced,
-				replacement: el.replacement,
-				form: el.form,
-				parents: part[false],
-				extendedParents: el.extendedParents
-			});
-			el.parents = part[true];
+			if(part[true] && part[false]){
+				list.push({
+					replaced: el.replaced,
+					replacement: el.replacement,
+					form: el.form,
+					parents: part[false],
+					extendedParents: el.extendedParents
+				});
+				el.parents = part[true];
+			}
 		};
 
 		var transfer = function(destination, list){
@@ -315,37 +351,89 @@
 				if(el.form.indexOf('*') < 0)
 					list.splice(i, 1);
 				else
-					el.form = el.form.replace(/\*|\[.+\]|\(.+\)/g, '');
+					el.form = el.form.replace(/\*|\[.+\]/g, '');
 			}
 		};
 
-		/*var reduceForms = function(list){
-			list.forEach(function(el){
-				var matcher;
-				if(el.replaced.match(/[àèéíòóú]/)){
-					matcher = new RegExp('^(\\[.+\\]|\\(.+\\))?' + el.replaced + '$');
-					if(!list.some(function(obj){ return (obj != el && obj.form.match(matcher)); }))
-						el.form = el.replaced;
-				}
-				else if(el.form.indexOf('[') < 0){
-					var i = 0,
-						idx0 = el.form.search(/[àèéíòóú]/),
-						idx1 = el.form.length - el.replaced.length,
-						found = false,
-						form;
-					if(idx1 > 0){
-						do{
-							form = el.form.substr(++ i);
-							matcher = new RegExp('^(\\[.+\\]|\\(.+\\))?' + form + '$');
-							found = list.some(function(obj){ return (obj != el && obj.form.match(matcher)); });
-						}while(!found && (idx0 < 0 || i < idx0) && i < idx1);
+		var reduceParents = function(list){
+			for(var i = list.length - 1; i >= 0; i --){
+				reduceParent(list[i], list);
 
-						if(!found)
-							el.form = el.form.substr(i);
+				if(!list[i].parents.length)
+					list.splice(i, 1);
+			}
+		};
+
+		var reduceParent = function(el, list){
+			var i, j, p, idx, found,
+				parent, parents, matcher;
+			for(i = el.parents.length - 1; i >= 0; i --){
+				p = el.parents[i];
+				idx = p.search(/[àèéíòóú]/);
+
+				j = 0;
+				found = false;
+				do{
+					parent = p.substr(j ++);
+					matcher = new RegExp(parent + '$');
+					found = el.extendedParents.some(function(obj){ return obj.match(matcher); });
+				}while(!found && (idx < 0 || j <= idx));
+
+				if(parent.length > 1){
+					if(found){
+						parent = p.substr(j - 2);
+						matcher = new RegExp(parent + '$');
 					}
+					parents = el.parents.filter(function(obj){ return obj.match(matcher); });
+
+					list.push({
+						replaced: el.replaced,
+						replacement: el.replacement,
+						form: parent,
+						parents: parents,
+						extendedParents: el.extendedParents
+					});
+
+					el.parents = el.parents.difference(parents);
+					i = Math.min(i, el.parents.length - 1);
 				}
+			}
+		};
+
+		var reduceForms = function(list){
+			list.forEach(function(el){
+				if(el.form.indexOf('[') < 0)
+					reduceForm(el, list);
 			});
-		};/**/
+		};
+
+		var reduceForm = function(el, list){
+			var idx0 = el.form.search(/[àèéíòóú]/),
+				idx1 = el.form.length - el.replaced.length;
+			if(el.form.indexOf('[') < 0 && (idx0 < 0 || idx0 > 0)){
+				var extracted = list.filter(function(obj){ return (obj.form == el.form); }),
+					found = false,
+					i, form, matcher;
+				list = list.filter(function(obj){ return (obj.form != el.form); });
+
+				for(i = 0; i <= idx1 && !found && (idx0 < 0 || i <= idx0); i ++){
+					form = el.form.substr(i);
+					matcher = new RegExp(form + '$');
+					found = list.some(function(obj){ return obj.form.match(matcher); });
+				}
+
+				if(form && form.length > 2){
+					if(found)
+						form = el.form.substr(Math.max(0, i - 2));
+
+					extracted.forEach(function(obj){
+						obj.form = form;
+					});
+				}
+
+				list = list.concat(extracted);
+			}
+		};
 
 		var prettyPrint = function(list){
 			var maxReplaced = list.reduce(function(previousValue, currentValue){ return Math.max(previousValue, currentValue.replaced.length); }, 0),
@@ -373,21 +461,29 @@
 
 			var list = [],
 				forms,
-				idx, data,
+				idx, repment, data,
 				part, externalList;
 			verbsDictionary.forEach(function(infinitive){
 				infinitive = composeInfinitive(infinitive);
 
-				forms = Conjugator.extractForms(infinitive);
+				forms = Conjugator.extractForms(infinitive, null, true);
+				forms = forms.map(function(form){
+					return form.replace(/^#/, '').replace(/#$/, '/B');
+				});
+				forms = forms.filter(function(x, i){
+					return (forms.indexOf(x.replace(/\/.+$/, '')) == i);
+				});
 
 				infinitive = Word.unmarkDefaultStress(infinitive);
 
 				forms.forEach(function(form){
 					idx = extractIndexOfCommonPart(form, infinitive);
 
+					repment = form.substr(idx);
+
 					data = {
 						replaced: infinitive.substr(idx),
-						replacement: form.substr(idx).replace(/(ndo|r)$/, '$1/B'),
+						replacement: repment,
 						form: infinitive,
 						parents: [infinitive]
 					};
@@ -397,8 +493,7 @@
 						list.push(data);
 					else if(list[idx].parents.indexOf(data.parents[0]) < 0){
 						list[idx].parents.push(data.parents[0]);
-						//if(list[idx].form.indexOf('[') < 0)
-							list[idx].form = extractCommonPartFromList(list[idx].parents);
+						list[idx].form = extractCommonPartFromList(list[idx].parents);
 					}
 				});
 			});
@@ -411,27 +506,15 @@
 			list = part[false];
 			externalList = part[true];
 
-			externalList.forEach(function(el){
-				searchForParentSubdivision(el, 1, externalList);
-			});
-
+			searchForParentSubdivision(1, externalList);
 			transfer(list, externalList);
 
-			externalList.forEach(function(el){
-				searchForParentSubdivision(el, 2, externalList);
-			});
+			reduceForms(list);
 
-			/*list.forEach(function(el){
-				el.replaced = el.replaced.replace(/^\[.+\]|\(.+\)/, '');
-				el.replacement = el.replacement.replace(/^\[.+\]|\(.+\)/, '');
-			});/**/
-
-
-//			reduceForms(list);
-
+			reduceParents(externalList);
+			transfer(list, externalList);
 
 			prettyPrint(list);
-//			prettyPrint(externalList);
 		});/**/
 
 		/*require(['tools/lang/phonology/Word', 'tools/lang/morphology/Conjugator', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Word, Conjugator, verbsDictionary, JSONH){

@@ -70,50 +70,51 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 
 		if(t.themeT12 || t.themeT5 || t.themeT8 || t.themeT10){
 			var root = namespace(this.paradigm, 'indicative', 'present', type),
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? '#': ''),
 				person;
 			if(t.themeT8){
 				person = root.firstSingular = {};
 				if(this.verb.irregularity.eser)
-					person.general = t.themeT8 + (!t.themeT8.match(/[cijñ]$/)? '(i)': '') + 'ón';
+					person.general = pronomenalMark + t.themeT8 + (!t.themeT8.match(/[cijñ]$/)? '(i)': '') + 'ón';
 				else if(this.verb.irregularity.aver){
-					person.general = t.themeT8.replace(/à$/, 'à/è');
-					person.central_centralNorthern_lagunar_western = t.themeT8.replace(/à$/, 'ò');
+					person.general = pronomenalMark + t.themeT8.replace(/à$/, 'à/è');
+					person.central_centralNorthern_lagunar_western = pronomenalMark + t.themeT8.replace(/à$/, 'ò');
 				}
 				else{
-					person.general = t.themeT8 + 'e';
-					person.central_centralNorthern_lagunar_western1 = t.themeT8 + 'o';
+					person.general = pronomenalMark + t.themeT8 + 'e';
+					person.central_centralNorthern_lagunar_western1 = pronomenalMark + t.themeT8 + 'o';
 
 					if(this.verb.irregularity.verb && type == 'irregular'){
 						if(this.verb.irregularity.saver)
-							person.central_centralNorthern_lagunar_western2 = t.themeT8.replace(/.$/, 'ò');
+							person.central_centralNorthern_lagunar_western2 = pronomenalMark + t.themeT8.replace(/.$/, 'ò');
 						else
-							person.central_centralNorthern_lagunar_western1 = t.themeT8 + (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'o';
+							person.central_centralNorthern_lagunar_western1 = pronomenalMark + t.themeT8 + (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'o';
 					}
 				}
 				root.secondSingular = {
-					general: t.themeT8.replace(/([^i])$/, '$1' + (!this.verb.irregularity.verb.match(/andar|darStarFar|s?aver/) || !t.themeT8.match(/à$/)? 'i': ''))
+					general: pronomenalMark + t.themeT8.replace(/([^i])$/, '$1' + (!this.verb.irregularity.verb.match(/andar|darStarFar|s?aver/) || !t.themeT8.match(/à$/)? 'i': ''))
 				};
 				var third = t.themeT8 + (!this.verb.irregularity.verb.match(/darStarFar|s?aver/)? (this.verb.irregularity.eser? 'é': 'e'): '');
 				root.third = {
-					general: third,
-					archaic: (t.themeT10 && t.themeT10 !== third? t.themeT10: undefined)
+					general: pronomenalMark + third,
+					archaic: (t.themeT10 && t.themeT10 !== third? pronomenalMark + t.themeT10: undefined)
 				};
 			}
 			else if(t.themeT10)
 				root.third = {
-					general: t.themeT10
+					general: pronomenalMark + t.themeT10
 				};
 			if(t.themeT5)
 				root.secondPlural = {
-					general: t.themeT5,
-					northern_oriental: (conj != 2 && t.themeT12? t.themeT12 + 'é': undefined),
-					central_western: (conj == 2? t.themeT5.replace(/i?é$/, 'í'): undefined)
+					general: pronomenalMark + t.themeT5,
+					northern_oriental: (conj != 2 && t.themeT12? pronomenalMark + t.themeT12 + 'é': undefined),
+					central_western: (conj == 2? pronomenalMark + t.themeT5.replace(/i?é$/, 'í'): undefined)
 				};
 			if(t.themeT12 || t.themeT5){
 				person = root.firstPlural = {};
 				if(t.themeT12){
-					person.northern = t.themeT12 + 'ón';
-					person.oriental = t.themeT12 + 'én';
+					person.northern = pronomenalMark + t.themeT12 + 'ón';
+					person.oriental = pronomenalMark + t.themeT12 + 'én';
 				}
 				if(t.themeT5){
 					person.general = root.secondPlural.general.replace(/è$/, 'é') + 'mo';
@@ -124,7 +125,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			if(t.themeT8 && this.verb.irregularity.verb.match(/dixer|traer|toler/)){
 				root = namespace(this.paradigm, 'indicative', 'present', 'irregular');
 				root.firstSingular || (root.firstSingular = {});
-				root.firstSingular.central_centralNorthern_lagunar_western = t.themeT8.replace(/[lx]?$/, 'go');
+				root.firstSingular.central_centralNorthern_lagunar_western = pronomenalMark + t.themeT8.replace(/[lx]?$/, 'go');
 			}
 		}
 	};
@@ -132,9 +133,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 	/** @private */
 	var generateIndicativeImperfect = function(type, t){
 		if(t.themeT2 || t.themeT11){
-			var root = namespace(this.paradigm, 'indicative', 'imperfect', type);
+			var root = namespace(this.paradigm, 'indicative', 'imperfect', type),
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? '#': '');
 			if(t.themeT2){
-				var tmp = t.themeT2 + (this.verb.irregularity.eser? 'r': 'v');
+				var tmp = pronomenalMark + t.themeT2 + (this.verb.irregularity.eser? 'r': 'v');
 				root.firstSingular = {
 					general: tmp + 'a',
 					northern_oriental: tmp + 'e',
@@ -143,7 +145,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				root.secondPlural = {
 					general: tmp + 'i',
 					archaic: tmp + 'a',
-					northern: (t.themeT11? t.themeT11 + '(iv)ié': undefined)
+					northern: (t.themeT11? pronomenalMark + t.themeT11 + '(iv)ié': undefined)
 				};
 				root.secondSingular = {
 					general: tmp + 'i'
@@ -156,9 +158,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			if(t.themeT2)
 				person.general = root.secondPlural.general + 'mo';
 			if(t.themeT11){
-				person.northern1 = t.themeT11 + (!t.themeT11.match(/[cijñ]$/)? '(i)': '') + 'ón(se)';
-				person.northern2 = t.themeT11 + 'iv(i)ón(se)';
-				person.oriental = t.themeT11 + '(iv)én(se)';
+				person.northern1 = pronomenalMark + t.themeT11 + (!t.themeT11.match(/[cijñ]$/)? '(i)': '') + 'ón(se)';
+				person.northern2 = pronomenalMark + t.themeT11 + 'iv(i)ón(se)';
+				person.oriental = pronomenalMark + t.themeT11 + '(iv)én(se)';
 			}
 		}
 	};
@@ -167,7 +169,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 	var generateIndicativeFuture = function(type, t){
 		if(t.themeT4){
 			var root = namespace(this.paradigm, 'indicative', 'future', type),
-				firstPlural = t.themeT4 + 'r';
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? '#': ''),
+				firstPlural = pronomenalMark + t.themeT4 + 'r';
 			root.firstSingular = {
 				general: firstPlural + 'à',
 				northern_oriental: firstPlural + 'è',
@@ -198,39 +201,40 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 		t = t.subjunctive || t;
 
 		if(t.themeT12 || t.themeT5 || t.themeT8){
-			var root = namespace(this.paradigm, 'subjunctive', 'present', type);
+			var root = namespace(this.paradigm, 'subjunctive', 'present', type),
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? '#': '');
 			if(t.themeT8){
 				root.firstSingular = {
-					general: t.themeT8 + 'a',
-					northern_oriental: t.themeT8 + 'e'
+					general: pronomenalMark + t.themeT8 + 'a',
+					northern_oriental: pronomenalMark + t.themeT8 + 'e'
 				};
 				root.secondSingular = {
-					general: t.themeT8.replace(/([^i])$/, '$1i')
+					general: pronomenalMark + t.themeT8.replace(/([^i])$/, '$1i')
 				};
 				root.third = {
-					general: t.themeT8 + 'a',
-					northern_oriental: t.themeT8 + 'e'
+					general: pronomenalMark + t.themeT8 + 'a',
+					northern_oriental: pronomenalMark + t.themeT8 + 'e'
 				};
 
 				if(type == 'irregular' && !this.verb.irregularity.verb.match(/(aver|dever|eser)/)){
-					root.firstSingular.general = t.themeT8 + (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'a';
-					root.secondSingular.general = (t.themeT8.match(/[aeiouàèéíòóú]$/)? t.themeT8 + '(g)i': t.themeT8.replace(/([^i])$/, '$1i'));
-					root.third.general = t.themeT8 + (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'a';
+					root.firstSingular.general = pronomenalMark + t.themeT8 + (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'a';
+					root.secondSingular.general = pronomenalMark + (t.themeT8.match(/[aeiouàèéíòóú]$/)? t.themeT8 + '(g)i': t.themeT8.replace(/([^i])$/, '$1i'));
+					root.third.general = pronomenalMark + t.themeT8 + (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'a';
 				}
 			}
 			if(t.themeT5)
 				root.secondPlural = {
-					general: t.themeT5,
-					centralNorthern: (conj != 2? t.themeT5.replace(/[èí]$/, 'é'): undefined),
-					central_western: (conj == 2 && t.themeT5.replace(/i?é$/, 'í') != t.themeT5? t.themeT5.replace(/i?é$/, 'í'): undefined),
-					northern_oriental1: (t.themeT12? t.themeT12 + (this.verb.special3rd? '(i)': '') + 'é(de/ge)': undefined),
-					northern_oriental2: (conj == 3 && !this.verb.special3rd? t.themeT5 + '(de/ge)': undefined)
+					general: pronomenalMark + t.themeT5,
+					centralNorthern: (conj != 2? pronomenalMark + t.themeT5.replace(/[èí]$/, 'é'): undefined),
+					central_western: (conj == 2 && t.themeT5.replace(/i?é$/, 'í') != t.themeT5? pronomenalMark + t.themeT5.replace(/i?é$/, 'í'): undefined),
+					northern_oriental1: (t.themeT12? pronomenalMark + t.themeT12 + (this.verb.special3rd? '(i)': '') + 'é(de/ge)': undefined),
+					northern_oriental2: (conj == 3 && !this.verb.special3rd? pronomenalMark + t.themeT5 + '(de/ge)': undefined)
 				};
 			if(t.themeT12 || t.themeT5){
 				var person = root.firstPlural = {};
 				if(t.themeT12){
-					person.northern = t.themeT12 + (!t.themeT12.match(/[cijñ]$/)? '(i)': '') + 'ón(e)';
-					person.oriental = t.themeT12 + 'én(e)';
+					person.northern = pronomenalMark + t.themeT12 + (!t.themeT12.match(/[cijñ]$/)? '(i)': '') + 'ón(e)';
+					person.oriental = pronomenalMark + t.themeT12 + 'én(e)';
 				}
 				if(t.themeT5){
 					person.general = root.secondPlural.general.replace(/è$/, 'é') + 'mo';
@@ -243,9 +247,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				root.firstSingular || (root.firstSingular = {});
 				root.secondSingular || (root.secondSingular = {});
 				root.third || (root.third = {});
-				root.firstSingular.central_centralNorthern_lagunar_western = t.themeT8.replace(/[lx]?$/, 'ga');
-				root.secondSingular.general = t.themeT8.replace(/[lx]?$/, 'gi');
-				root.third.general = t.themeT8.replace(/[lx]?$/, 'ga');
+				root.firstSingular.central_centralNorthern_lagunar_western = pronomenalMark + t.themeT8.replace(/[lx]?$/, 'ga');
+				root.secondSingular.general = pronomenalMark + t.themeT8.replace(/[lx]?$/, 'gi');
+				root.third.general = pronomenalMark + t.themeT8.replace(/[lx]?$/, 'ga');
 			}
 		}
 	};
@@ -255,16 +259,17 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 		t = t.subjunctive || t;
 
 		if(t.themeT2 || t.themeT11){
-			var root = namespace(this.paradigm, 'subjunctive', 'imperfect', type);
+			var root = namespace(this.paradigm, 'subjunctive', 'imperfect', type),
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? '#': '');
 			if(t.themeT2){
-				var tmp = t.themeT2 + 's';
+				var tmp = pronomenalMark + t.themeT2 + 's';
 				root.firstSingular = {
 					general: tmp + 'e'
 				};
 				root.secondPlural = {
 					general: tmp + 'i',
 					archaic: tmp + 'e',
-					northern: (t.themeT11? t.themeT11 + '(is)ié(de/ge)': undefined)
+					northern: (t.themeT11? pronomenalMark + t.themeT11 + '(is)ié(de/ge)': undefined)
 				};
 				root.secondSingular = {
 					general: tmp + 'i'
@@ -277,9 +282,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			if(t.themeT2)
 				person.general = root.secondPlural.general + 'mo';
 			if(t.themeT11){
-				person.northern1 = t.themeT11 + (!t.themeT11.match(/[cijñ]$/)? '(i)': '') + 'ón(e/se)';
-				person.northern2 = t.themeT11 + 'is(i)ón(e/se)';
-				person.oriental = t.themeT11 + '(is)én(e/se)';
+				person.northern1 = pronomenalMark + t.themeT11 + (!t.themeT11.match(/[cijñ]$/)? '(i)': '') + 'ón(e/se)';
+				person.northern2 = pronomenalMark + t.themeT11 + 'is(i)ón(e/se)';
+				person.oriental = pronomenalMark + t.themeT11 + '(is)én(e/se)';
 			}
 		}
 	};
@@ -288,15 +293,16 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 	var generateConditionalSimple = function(type, t){
 		if(t.themeT4){
 			var root = namespace(this.paradigm, 'conditional', 'simple', type),
-				tmp = t.themeT4 + 'rí',
-				firstPlural = t.themeT4 + 'r(is)';
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? '#': ''),
+				tmp = pronomenalMark + t.themeT4 + 'rí',
+				firstPlural = pronomenalMark + t.themeT4 + 'r(is)';
 			root.firstSingular = {
 				general: tmp + 'a',
 				northern_oriental: tmp + 'e'
 			};
 			root.secondPlural = {
-				general: t.themeT4 + 'rési',
-				northern: t.themeT4 + 'r(is)ié'
+				general: pronomenalMark + t.themeT4 + 'rési',
+				northern: pronomenalMark + t.themeT4 + 'r(is)ié'
 			};
 			root.firstPlural = {
 				general: root.secondPlural.general + 'mo',
@@ -310,7 +316,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				general: tmp + 'a',
 				northern_oriental: tmp + 'e'
 			};
-			root.archaic = t.themeT4 + 'ràve';
+			root.archaic = pronomenalMark + t.themeT4 + 'ràve';
 		}
 	};
 
@@ -319,24 +325,27 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 		var conj = getIrregularVerbConjugation.call(this, type);
 
 		if(t.themeT5 || t.themeT9){
-			var root = namespace(this.paradigm, 'imperative', 'present', type);
+			var root = namespace(this.paradigm, 'imperative', 'present', type),
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? '#': '');
 			if(t.themeT9)
 				root.secondSingular = {
-					general: t.themeT9
+					general: t.themeT9 + pronomenalMark
 				};
 			if(t.themeT5)
 				root.secondPlural = {
-					general: t.themeT5,
-					northern_oriental: (conj != 2? t.themeT5.replace(/[èí]$/, 'é'): undefined),
-					central_western: (conj == 2? t.themeT5.replace(/i?é$/, 'í'): undefined)
+					general: t.themeT5 + pronomenalMark,
+					northern_oriental: (conj != 2? t.themeT5.replace(/[èí]$/, 'é') + pronomenalMark: undefined),
+					central_western: (conj == 2? t.themeT5.replace(/i?é$/, 'í') + pronomenalMark: undefined)
 				};
 		}
 	};
 
 	/** @private */
 	var generateInfinitiveSimple = function(type, t){
-		if(t.themeT1)
-			namespace(this.paradigm, 'infinitive', 'simple', type).all = t.themeT1 + 'r(e)';
+		if(t.themeT1){
+			var pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? '#': '');
+			namespace(this.paradigm, 'infinitive', 'simple', type).all = t.themeT1 + 'r(e)' + pronomenalMark;
+		}
 	};
 
 	/** @private */
@@ -384,15 +393,16 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 	/** @private */
 	var generateGerundSimple = function(type, t){
 		if(t.themeT2 || t.themeT7){
-			var person = namespace(this.paradigm, 'gerund', 'simple', type, 'all');
+			var person = namespace(this.paradigm, 'gerund', 'simple', type, 'all'),
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? '#': '');
 			if(t.themeT2)
-				person.regular1 = t.themeT2 + 'ndo';
+				person.regular1 = t.themeT2 + 'ndo' + pronomenalMark;
 			if(t.themeT7)
-				person.regular2 = (this.verb.conjugation == 3? t.themeT7 + 'ndo': undefined);
+				person.regular2 = (this.verb.conjugation == 3? t.themeT7 + 'ndo' + pronomenalMark: undefined);
 			if(this.verb.irregularity.eser)
-				person.archaic = 'siàndo';
+				person.archaic = 'siàndo' + pronomenalMark;
 			else if(this.verb.irregularity.aver)
-				person.archaic = (this.verb.infinitive.substr(0, this.verb.infinitive.length - 'aver'.length)) + 'abiàndo';
+				person.archaic = (this.verb.infinitive.substr(0, this.verb.infinitive.length - 'aver'.length)) + 'abiàndo' + pronomenalMark;
 		}
 	};
 
@@ -428,7 +438,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 		var strong = [
 			//1st conjugation
 			[
-				{matcher: /fà$/, replacement: 'fàt'}
+				{matcher: /fà$/, replacement: 'fàt'},
+				{matcher: /konsà$/, replacement: 'kónso'}
 			],
 
 			//2nd conjugation
@@ -529,6 +540,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 
 		if(verb.proComplementarPronouns.length)
 			applyProComplementarPronouns.call(this, verb, pronouns);
+		else
+			visit(this, function(subParadigm, key){
+				subParadigm[key] = subParadigm[key].replace(/#/, '');
+			});
 
 		convertIntoDialect.call(this, dialect);
 	};
@@ -567,12 +582,12 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			var morpheme = (dialect.none? '(x)': 'x');
 			visit(this.indicative.present.irregular, function(subParadigm, key){
 				if(key.match(/^archaic/))
-					subParadigm[key] = subParadigm[key].replace(/^(re)?()/, '$1' + morpheme);
+					subParadigm[key] = subParadigm[key].replace(/^(re|#)?()/, '$1' + morpheme);
 			});
 			morpheme = (dialect.none? '(x/j)': (dialect.centralNorthern || dialect.oriental? 'j': '[x/j]'));
 			visit(this.indicative.imperfect.irregular, function(subParadigm, key){
 				if(!key.match(/^northern/) || key.match(/^oriental/))
-					subParadigm[key] = subParadigm[key].replace(/^(re)?()/, '$1' + morpheme);
+					subParadigm[key] = subParadigm[key].replace(/^(re|#)?()/, '$1' + morpheme);
 			});
 		}
 		else if(verb.irregularity.aver){
@@ -581,9 +596,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			visit(this, function(subParadigm, key, id){
 				if(!key.match(/^(northern|oriental)/)){
 					if(id.match(/^infinitive/) && verb.proComplementarPronouns[0] !== 'ge')
-						subParadigm[key] = subParadigm[key] + morphemeEnclitic;
+						subParadigm[key] = subParadigm[key].replace(/(#)?$/, morphemeEnclitic + '$1');
 					else if(!id.match(/^(infinitive|participle)/))
-						subParadigm[key] = subParadigm[key].replace(/^(re)?()/, '$1' + morphemeProclitic);
+						subParadigm[key] = subParadigm[key].replace(/^(re|#)?()/, '$1' + morphemeProclitic);
 				}
 			});
 		}
@@ -601,10 +616,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			if(isVerbReflexive)
 				verb.proComplementarPronouns[0] = pronouns.weak.reflexive[id.match(/[^.]+$/)[0]] || 'se';
 
-			if(id.match(/^(infinitive|gerund)/) || !verb.irregularity.verb.match(/dever|eser|s?aver/) && id.match(/^imperative/))
-				subParadigm[key] = subParadigm[key] + verb.proComplementarPronouns.join('');
-			else if(!id.match(/^(imperative|participle)/))
-				subParadigm[key] = verb.proComplementarPronouns.join(' ') + ' ' + subParadigm[key];
+			subParadigm[key] = subParadigm[key].replace(/^#/, verb.proComplementarPronouns.join(' ') + ' ').replace(/#$/, verb.proComplementarPronouns.join(''));
 		});
 	};
 

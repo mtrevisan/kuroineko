@@ -15,7 +15,7 @@ define(['tools/lang/Dialect', 'tools/lang/phonology/Orthography', 'tools/lang/ph
 
 
 	/** @requires infinitive be trimmed. */
-	var conjugate = function(infinitive, dialect){
+	var conjugate = function(infinitive, dialect, markPronomenalForms){
 		dialect = new Dialect(dialect);
 
 		infinitive = Orthography.correctOrthography(infinitive);
@@ -24,7 +24,7 @@ define(['tools/lang/Dialect', 'tools/lang/phonology/Orthography', 'tools/lang/ph
 
 		var themes = (new Themizer(verb, dialect)).generate();
 
-		var paradigm = (new Paradigm(verb, themes)).generate();
+		var paradigm = (new Paradigm(verb, themes, markPronomenalForms)).generate();
 
 		var pronouns = Pronouns.getPronouns(dialect);
 
@@ -45,8 +45,8 @@ define(['tools/lang/Dialect', 'tools/lang/phonology/Orthography', 'tools/lang/ph
 	};
 
 	/** @requires infinitive be trimmed. */
-	var extractForms = function(infinitive, dialect){
-		var conjugation = conjugate(infinitive, dialect),
+	var extractForms = function(infinitive, dialect, markPronomenalForms){
+		var conjugation = conjugate(infinitive, dialect, markPronomenalForms),
 			paradigm = conjugation.paradigmInfo.paradigm;
 		delete paradigm.applyDialectalVariations;
 
@@ -76,7 +76,7 @@ define(['tools/lang/Dialect', 'tools/lang/phonology/Orthography', 'tools/lang/ph
 			return !item.match(SPLITTER_REGEX_OPTIONAL_ALTERNATIVE);
 		}));
 
-		response = response.map(function(word){ return Word.unmarkDefaultStress(word); });
+		response = response.map(Word.unmarkDefaultStress);
 
 		return response;
 	};
