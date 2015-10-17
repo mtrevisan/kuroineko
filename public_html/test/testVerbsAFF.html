@@ -95,7 +95,7 @@
 		})();
 
 		var epurateListAndApplyFlag = function(list, flag, matcher, base){
-			var matcherLength = matcher.replace(/\[.+\]/g, '').length,
+			var matcherLength = matcher.replace(/\[.+\]/g, '.').length,
 				replacement = Array.prototype.slice.call(arguments, 4, arguments.length),
 				i, j, rep, repment, idx0, indices, parents,
 				inters, p;
@@ -106,11 +106,11 @@
 				if(list.hasOwnProperty(i) && repment.match(matcher)){
 					rep = list[i].replaced;
 					repment = repment.substr(0, repment.length - matcherLength);
-					idx0 = indexOfReplacement(list, rep, repment + base);
+					idx0 = indexOfReplacement(list, rep, new RegExp(repment + base + '$'));
 					if(idx0 < 0)
 						continue;
 
-					indices = replacement.map(function(last){ return indexOfReplacement(list, rep, repment + last); });
+					indices = replacement.map(function(last){ return indexOfReplacement(list, rep, new RegExp(repment + last + '$')); });
 					if(indices.some(function(el){ return (el < 0); }))
 						continue;
 
@@ -142,7 +142,7 @@
 
 					//all the replacements shares the same parents
 
-					list[idx0].replacement = list[idx0].replacement.replace(/(\/.+)?$/, '/' + flag);
+					list[idx0].replacement = list[idx0].replacement.replace(/(\/(.+))?$/, '/' + flag + '$2');
 
 					replacement.forEach(function(last){
 						while((j = indexOfReplacement(list, rep, repment + last)) >= 0){
@@ -157,7 +157,7 @@
 		};
 
 		var indexOfReplacement = function(list, replaced, replacement){
-			return list.findIndex(function(el){ return (el.replaced == replaced && el.replacement == replacement); });
+			return list.findIndex(function(el){ return (el.replaced == replaced && el.replacement.match(replacement)); });
 		};
 
 		var extractIndexOfCommonPart = function(str1, str2){
@@ -185,26 +185,44 @@
 		};
 
 		var applyReductions = function(list){
-			epurateListAndApplyFlag(list, 'E', 'e', 'e', 'i');
-			epurateListAndApplyFlag(list, 'F', 'a', 'a', 'e/E');
-			//T8: indikativo prexente, dhontativo prexente
-			epurateListAndApplyFlag(list, 'D', 'o', 'o', 'a/F');
-			epurateListAndApplyFlag(list, 'G', 'a/B', 'a/B', 'o/D');
-			//T2: indikativo inparfèto, dhontativo inparfèto
-			epurateListAndApplyFlag(list, 'H', 'vimo',
-				'vimo', 'on', 'onse', 'ion', 'ionse', 'ivon', 'ivonse', 'ivion', 'ivionse', 'en', 'ense', 'iven', 'ivense', 'va', 'vi',
-				'simo', 'one', 'onse', 'ione', 'ione', 'isone', 'isonse', 'isione', 'isionse', 'ene', 'ense', 'isene', 'isense', 'iede', 'iege', 'isiede', 'isiege', 'se', 'si');
-			//T4: indikativo futuro, kondithional prexente
+			epurateListAndApplyFlag(list, 'E', 'e',
+				'e', 'i');
+			epurateListAndApplyFlag(list, 'F', 'a\/B',
+				'a\/B', 'e\/E');
+			//T8: indikativo prexente, đontativo prexente
+			epurateListAndApplyFlag(list, 'D', 'o',
+				'o', 'a\/FB');
+			//T1: infenío sénplise
+			epurateListAndApplyFlag(list, 'G', 'r\/B',
+				'r\/B', 're');
+			//T2: indikativo inparfèto, đontativo inparfèto
+			epurateListAndApplyFlag(list, 'H', '[àéí]vimo',
+				'[àéí]vimo', '[aei]vo\/D',
+				'[àéí]simo', 'iede', 'iege', 'isiede', 'isiege', '[aei]se\/E');
+			//T4: indikativo futuro, kondiŧional prexente
 			epurateListAndApplyFlag(list, 'I', 'rò',
 				'rò', 'rà', 'rè', 'ré', 'remo', 'ron', 'ren',
-				'ría', 'ríe', 'résimo', 'ron', 'ronse', 'rion', 'rionse', 'rison', 'risonse', 'rision', 'risionse', 'ren', 'rense', 'risen', 'risense', 'resi', 'risié', 'rié',
+				'ría', 'ríe', 'résimo', 'ronse', 'rion', 'rionse', 'rison', 'risonse', 'rision', 'risionse', 'rense', 'risen', 'risense', 'resi', 'risié', 'rié',
 				'rave');
-			//T11: indikativo inparfèto, dhontativo inparfèto
-			epurateListAndApplyFlag(list, 'J', 'on',
-				'ion', 'ionse', 'ivon', 'ivonse', 'ivion', 'ivionse', 'en', 'ense', 'iven', 'ivense', 'ié', 'ivié',
-				'one', 'onse', 'ione', 'ionse', 'isone', 'isonse', 'isione', 'isionse', 'ene', 'ense', 'isene', 'isense', 'asi', 'ase', 'iede', 'iege', 'isiede', 'isiege');
-			//T12: indikativo prexente, dhontativo prexente
-			epurateListAndApplyFlag(list, 'K', 'on', 'on', 'en', 'ene', 'é', 'ede', 'ege');
+			//T5: indikativo prexente, đontativo prexente
+//			epurateListAndApplyFlag(list, 'J', '[aei]mo',
+//				'[aei]mo', 'è\/B', 'é\/B', 'ede', 'ege');
+			epurateListAndApplyFlag(list, 'J', '[aei]mo',
+				'[aei]mo', 'í\/B', 'é\/B', 'ede', 'ege');
+//5498
+			//T6: partiŧipio pasivo
+			epurateListAndApplyFlag(list, 'K', '[aui]do\/D',
+				'[aui]do\/D', '[àúí]', '[àúí]di', '[àúí]a', '[àúí]e');
+			//T7: partiŧipio ativo, partiŧipio pasivo, xerundio sénplise
+/*			epurateListAndApplyFlag(list, 'L', 'ndo',
+				'ndo', '', 'sto/D', 'nte');
+			//T11: indikativo inparfèto, đontativo inparfèto
+/*			epurateListAndApplyFlag(list, 'M', 'on',
+				'on', 'ion', 'ionse', 'ivon', 'ivonse', 'ivion', 'ivionse', 'en', 'ense', 'iven', 'ivense', 'ié', 'ivié',
+				'one', 'onse', 'ione', 'isone', 'isonse', 'isione', 'isionse', 'ene', 'isene', 'isense', 'iede', 'iege', 'isiede', 'isiege');
+			//T12: indikativo prexente, đontativo prexente
+			epurateListAndApplyFlag(list, 'N', 'on',
+				'on', 'en', 'ene', 'é', 'ede', 'ege');
 
 			epurateListAndApplyFlag(list, 'L', 'ndo', 'ndo', 'nte', 'sto');
 			epurateListAndApplyFlag(list, 'M', 'iso', 'iso', 'ise', 'isi');
@@ -470,8 +488,9 @@
 				forms = forms.map(function(form){
 					return form.replace(/^#/, '').replace(/#$/, '/B');
 				});
+				//forms = forms.unique();
 				forms = forms.filter(function(x, i){
-					return (forms.indexOf(x.replace(/\/.+$/, '')) == i);
+					return (forms.indexOf(x) == i && forms.every(function(el){ return !el.match(x + '\/.+$'); }));
 				});
 
 				infinitive = Word.unmarkDefaultStress(infinitive);

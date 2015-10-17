@@ -329,13 +329,13 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? '#': '');
 			if(t.themeT9)
 				root.secondSingular = {
-					general: t.themeT9 + pronomenalMark
+					general: pronomenalMark + t.themeT9
 				};
 			if(t.themeT5)
 				root.secondPlural = {
-					general: t.themeT5 + pronomenalMark,
-					northern_oriental: (conj != 2? t.themeT5.replace(/[èí]$/, 'é') + pronomenalMark: undefined),
-					central_western: (conj == 2? t.themeT5.replace(/i?é$/, 'í') + pronomenalMark: undefined)
+					general: pronomenalMark + t.themeT5,
+					northern_oriental: (conj != 2? pronomenalMark + t.themeT5.replace(/[èí]$/, 'é'): undefined),
+					central_western: (conj == 2? pronomenalMark + t.themeT5.replace(/i?é$/, 'í'): undefined)
 				};
 		}
 	};
@@ -343,8 +343,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 	/** @private */
 	var generateInfinitiveSimple = function(type, t){
 		if(t.themeT1){
-			var pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? '#': '');
-			namespace(this.paradigm, 'infinitive', 'simple', type).all = t.themeT1 + 'r(e)' + pronomenalMark;
+			var root = namespace(this.paradigm, 'infinitive', 'simple', type),
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? '#': '');
+			root.all1 = t.themeT1 + 'r' + pronomenalMark;
+			root.all2 = t.themeT1 + 're';
 		}
 	};
 
@@ -566,7 +568,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			for(k in subParadigm)
 				//if the given dialect is not found, then remove all the others except 'general', 'all', 'archaic', etc
 				//otherwise retain only it
-				if(!k.match(found? reDialect: /^general|all|archaic|first|second|third|singular|plural|regular/))
+				if(!k.match(found? reDialect: /^(general|all|archaic|first|second|third|singular|plural|regular)/))
 					delete subParadigm[k];
 		});
 	};
@@ -582,24 +584,20 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			var morpheme = (dialect.none? '(x)': 'x');
 			visit(this.indicative.present.irregular, function(subParadigm, key){
 				if(key.match(/^archaic/))
-					subParadigm[key] = subParadigm[key].replace(/^(re|#)?()/, '$1' + morpheme);
+					subParadigm[key] = subParadigm[key].replace(/^#(re)?/, '$1' + morpheme);
 			});
 			morpheme = (dialect.none? '(x/j)': (dialect.centralNorthern || dialect.oriental? 'j': '[x/j]'));
 			visit(this.indicative.imperfect.irregular, function(subParadigm, key){
 				if(!key.match(/^northern/) || key.match(/^oriental/))
-					subParadigm[key] = subParadigm[key].replace(/^(re|#)?()/, '$1' + morpheme);
+					subParadigm[key] = subParadigm[key].replace(/^#(re)?/, '$1' + morpheme);
 			});
 		}
 		else if(verb.irregularity.aver){
 			var morphemeProclitic = (dialect.none? '(g)': 'g'),
 				morphemeEnclitic = (dialect.none? '(ge)': 'ge');
-			visit(this, function(subParadigm, key, id){
-				if(!key.match(/^(northern|oriental)/)){
-					if(id.match(/^infinitive/) && verb.proComplementarPronouns[0] !== 'ge')
-						subParadigm[key] = subParadigm[key].replace(/(#)?$/, morphemeEnclitic + '$1');
-					else if(!id.match(/^(infinitive|participle)/))
-						subParadigm[key] = subParadigm[key].replace(/^(re|#)?()/, '$1' + morphemeProclitic);
-				}
+			visit(this, function(subParadigm, key){
+				if(!key.match(/^(northern|oriental)/))
+					subParadigm[key] = subParadigm[key].replace(/^#(re)?/, '$1' + morphemeProclitic).replace(/#$/, morphemeEnclitic);
 			});
 		}
 	};
