@@ -84,9 +84,9 @@ require(['tools/data/ArrayHelper'], function(ArrayHelper){
 	});
 
 	test('partition', function(){
-		var result = ArrayHelper.partition(function(value){ return (value.indexOf('s') >= 0); }, ['sss', 'ttt', 'foo', 'bars']);
+		var result = ArrayHelper.partition(['sss', 'ttt', 'foo', 'bars'], function(value){ return (value.indexOf('s') >= 0); });
 
-		deepEqual(result, [['sss', 'bars'], ['ttt', 'foo']]);
+		deepEqual(result, {'true': ['sss', 'bars'], 'false': ['ttt', 'foo']});
 	});
 
 	test('flatten array', function(){

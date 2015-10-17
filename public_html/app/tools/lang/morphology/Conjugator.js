@@ -24,11 +24,11 @@ define(['tools/lang/Dialect', 'tools/lang/phonology/Orthography', 'tools/lang/ph
 
 		var themes = (new Themizer(verb, dialect)).generate();
 
-		var paradigm = (new Paradigm(verb, themes, markPronomenalForms)).generate();
+		var paradigm = (new Paradigm(verb, themes)).generate();
 
 		var pronouns = Pronouns.getPronouns(dialect);
 
-		paradigm.applyDialectalVariations(verb, pronouns, dialect);
+		paradigm.applyDialectalVariations(verb, pronouns, dialect, markPronomenalForms);
 
 
 		return {
@@ -45,8 +45,8 @@ define(['tools/lang/Dialect', 'tools/lang/phonology/Orthography', 'tools/lang/ph
 	};
 
 	/** @requires infinitive be trimmed. */
-	var extractForms = function(infinitive, dialect, markPronomenalForms){
-		var conjugation = conjugate(infinitive, dialect, markPronomenalForms),
+	var extractForms = function(infinitive, dialect){
+		var conjugation = conjugate(infinitive, dialect, true),
 			paradigm = conjugation.paradigmInfo.paradigm;
 		delete paradigm.applyDialectalVariations;
 

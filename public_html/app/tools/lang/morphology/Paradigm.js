@@ -533,7 +533,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 	 * @param {Pronouns} pronouns
 	 * @param {Dialect} dialect
 	 */
-	var applyDialectalVariations = function(verb, pronouns, dialect){
+	var applyDialectalVariations = function(verb, pronouns, dialect, markPronomenalForms){
 		if(!dialect.none)
 			purgeUnrequestedDialects.call(this, dialect);
 
@@ -542,7 +542,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 
 		if(verb.proComplementarPronouns.length)
 			applyProComplementarPronouns.call(this, verb, pronouns);
-		else
+		else if(!markPronomenalForms)
 			visit(this, function(subParadigm, key){
 				subParadigm[key] = subParadigm[key].replace(/#/, '');
 			});
