@@ -82,7 +82,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			if(t.themeT8){
 				person = root.firstSingular = {};
 				if(this.verb.irregularity.eser)
-					person.general = pronomenalMark + t.themeT8 + (!t.themeT8.match(/[cijñ]$/)? '(i)': '') + 'ón';
+					person.general = pronomenalMark + t.themeT8 + (!t.themeT8.match(/[cijɉñ]$/)? '(i)': '') + 'ón';
 				else if(this.verb.irregularity.aver){
 					person.general = pronomenalMark + t.themeT8.replace(/à$/, 'à/è');
 					person.central_centralNorthern_lagunar_western = pronomenalMark + t.themeT8.replace(/à$/, 'ò');
@@ -165,7 +165,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			if(t.themeT2)
 				person.general = root.secondPlural.general + 'mo';
 			if(t.themeT11){
-				person.northern1 = pronomenalMark + t.themeT11 + (!t.themeT11.match(/[cijñ]$/)? '(i)': '') + 'ón(se)';
+				person.northern1 = pronomenalMark + t.themeT11 + (!t.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'ón(se)';
 				person.northern2 = pronomenalMark + t.themeT11 + 'iv(i)ón(se)';
 				person.oriental = pronomenalMark + t.themeT11 + '(iv)én(se)';
 			}
@@ -240,7 +240,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			if(t.themeT12 || t.themeT5){
 				var person = root.firstPlural = {};
 				if(t.themeT12){
-					person.northern = pronomenalMark + t.themeT12 + (!t.themeT12.match(/[cijñ]$/)? '(i)': '') + 'ón(e)';
+					person.northern = pronomenalMark + t.themeT12 + (!t.themeT12.match(/[cijɉñ]$/)? '(i)': '') + 'ón(e)';
 					person.oriental = pronomenalMark + t.themeT12 + 'én(e)';
 				}
 				if(t.themeT5){
@@ -289,7 +289,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			if(t.themeT2)
 				person.general = root.secondPlural.general + 'mo';
 			if(t.themeT11){
-				person.northern1 = pronomenalMark + t.themeT11 + (!t.themeT11.match(/[cijñ]$/)? '(i)': '') + 'ón(e/se)';
+				person.northern1 = pronomenalMark + t.themeT11 + (!t.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'ón(e/se)';
 				person.northern2 = pronomenalMark + t.themeT11 + 'is(i)ón(e/se)';
 				person.oriental = pronomenalMark + t.themeT11 + '(is)én(e/se)';
 			}
