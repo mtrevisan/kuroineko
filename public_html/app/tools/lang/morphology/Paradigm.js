@@ -552,7 +552,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			applyProComplementarPronouns.call(this, verb, pronouns);
 		else if(!markPronomenalForms)
 			visit(this, function(subParadigm, key){
-				subParadigm[key] = subParadigm[key].replace(/#/, '');
+				subParadigm[key] = subParadigm[key].replace(/[#$]/, '');
 			});
 
 		convertIntoDialect.call(this, dialect);
@@ -605,9 +605,15 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				morphemeEnclitic = (dialect.none? '(ge)': 'ge');
 			visit(this, function(subParadigm, key){
 				if(!key.match(/^(northern|oriental)/))
-					subParadigm[key] = subParadigm[key].replace(/^#(re)?/, '$1' + morphemeProclitic).replace(/#$/, morphemeEnclitic);
+					subParadigm[key] = subParadigm[key]
+						.replace(/^#(re)?/, '$1' + morphemeProclitic)
+						.replace(/#$/, morphemeEnclitic);
 			});
 		}
+
+		visit(this, function(subParadigm, key){
+			subParadigm[key] = subParadigm[key].replace(/\$$/, '');
+		});
 	};
 
 	/**
@@ -622,7 +628,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			if(isVerbReflexive)
 				verb.proComplementarPronouns[0] = pronouns.weak.reflexive[id.match(/[^.]+$/)[0]] || 'se';
 
-			subParadigm[key] = subParadigm[key].replace(/^#/, verb.proComplementarPronouns.join(' ') + ' ').replace(/#$/, verb.proComplementarPronouns.join(''));
+			subParadigm[key] = subParadigm[key]
+				.replace(/^#/, verb.proComplementarPronouns.join(' ') + ' ')
+				.replace(/#$/, verb.proComplementarPronouns.join(''))
+				.replace(/\$$/, '');
 		});
 	};
 
