@@ -491,13 +491,16 @@
 				forms = forms.filter(function(x, i){
 					return (forms.indexOf(x) == i && forms.every(function(el){ return !el.match(x + '\/.+$'); }));
 				});
-/*se pòl katar un metaplaxmo de deklinathion da la 1a a la 2a koniug. intel inparfèto (kantàa > kantéa, pensàse > pensése)
+/*se pòl katar un metaplaxmo de deklinathion da la prima a la sekonda koniug. intel inparfèto (kantàa > kantéa, pensàse > pensése)
 e intel partithipio pasivo (mañasto > mañésto).
 sto metaplaxmo se pòl ‘verlo par tuti i mòdi e i tenpi (anka a partir da la 3a koniug.) fora ke inté ‘l infenío, partithipio, e xerundio
 (mañerà, mañeríe).
 
-Se pòl katar un metaplaxmo da la 3a a la 2a koniug. intel partithipio pasivo ko la dexinentha in -st- (sentésto, dormésto)
+Se pòl katar un metaplaxmo da la tertha a la sekonda koniug. intel partithipio pasivo ko la dexinentha in -st- (sentésto, dormésto)
 e intel xerundio (finéndo).
+
+T2 = T1: aŧento PVT > VT | à > é
+T4 = T1: senŧa aŧento | à > e
 */
 				forms.forEach(function(form){
 					var m = form.match(/\/.+$/),
