@@ -193,8 +193,8 @@
 			epurateListAndApplyFlag(list, 'D', 'o',
 				'o', 'a\/F');
 			//T1: infenío sénplise
-			epurateListAndApplyFlag(list, 'H', 'r\/B',
-				'r\/B', 're');
+			epurateListAndApplyFlag(list, 'H', 'r\/BG',
+				'r\/BG', 're');
 			//T2: indikativo inparfèto, đontativo inparfèto
 			epurateListAndApplyFlag(list, 'I', '[àéí]vimo',
 				'[àéí]vimo', '[aei]vo\/D',
@@ -486,7 +486,7 @@
 
 				forms = Conjugator.extractForms(infinitive, null, true);
 				forms = forms.map(function(form){
-					return form.replace(/^#/, '').replace(/[or]#$/, '/BG').replace(/#$/, '/B').replace(/\$$/, '/G');
+					return form.replace(/^#/, '').replace(/([or])#$/, '$1/BG').replace(/#$/, '/B').replace(/\$$/, '/G');
 				});
 				forms = forms.filter(function(x, i){
 					return (forms.indexOf(x) == i && forms.every(function(el){ return !el.match(x + '\/.+$'); }));
