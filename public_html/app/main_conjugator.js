@@ -205,7 +205,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 					tds[k].innerHTML = '';
 
 			['indicative.present', 'indicative.imperfect', 'indicative.future', 'subjunctive.present', 'subjunctive.imperfect', 'imperative.present', 'conditional.simple', 'gerund.simple', 'infinitive.simple', 'participle.imperfect'].forEach(function(moodTense){
-				['firstSingular', 'firstPlural', 'secondSingular', 'secondPlural', 'third', 'archaic', 'all'].forEach(function(person){
+				['firstSingular', 'firstPlural', 'secondSingular', 'secondPlural', 'third', 'archaic', 'all', 'all1', 'all2'].forEach(function(person){
 					output = extractNonDeclinated(paradigm, moodTense, person);
 
 					HTMLHelper.setEncodedInnerHTML(moodTense + '.' + person, output.replace(/<br>$/, ''));
@@ -294,7 +294,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 
 				if(historyStore){
 					//remove actualizant clitic on 'avér' verb
-					var recordID = result.paradigmInfo.paradigm.infinitive.simple.regular.all.replace(/\(?ge\)?$/, '');
+					var recordID = result.paradigmInfo.paradigm.infinitive.simple.regular.all1.replace(/\(?ge\)?$/, '');
 					var record = historyStore.getRecord(recordID);
 					if(!record)
 						record = {id: recordID, count: 0};
