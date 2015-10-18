@@ -486,7 +486,7 @@
 
 				forms = Conjugator.extractForms(infinitive, null, true);
 				forms = forms.map(function(form){
-					return form.replace(/^#/, '').replace(/#$/, '/B').replace(/\$$/, '/G');
+					return form.replace(/^#/, '').replace(/[or]#$/, '/BG').replace(/#$/, '/B').replace(/\$$/, '/G');
 				});
 				forms = forms.filter(function(x, i){
 					return (forms.indexOf(x) == i && forms.every(function(el){ return !el.match(x + '\/.+$'); }));
