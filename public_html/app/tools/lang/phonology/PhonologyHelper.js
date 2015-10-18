@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/data/StringHelper'], function(StringHelper){
+define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme'], function(StringHelper, Grapheme){
 
 	/*var convertPhonesIntoXSampa = (function(){
 
@@ -157,6 +157,16 @@ define(['tools/data/StringHelper'], function(StringHelper){
 		return word;
 	};
 
+	var vowelLoweringCombinatorialVariation = function(word, mainDialect){
+		if(mainDialect.match(/^(central|western)/)){
+			var m = word.match(/[^aiu]er/g);
+			if(m && !Grapheme.isEterophonicSequence(m[0]))
+				word = word.replace(/er/g, 'ar');
+		}
+
+		return word;
+	};
+
 
 	return {
 		//convertPhonesIntoXSampa: convertPhonesIntoXSampa,
@@ -173,7 +183,8 @@ define(['tools/data/StringHelper'], function(StringHelper){
 		unstressedVowelBeforeVibrantFreeVariation: unstressedVowelBeforeVibrantFreeVariation,
 		stressedVowelBeforeVibrantFreeVariation: stressedVowelBeforeVibrantFreeVariation,
 		constrictiveDentalCombinatorialVariation: constrictiveDentalCombinatorialVariation,
-		occlusiveDentalCombinatorialVariation: occlusiveDentalCombinatorialVariation
+		occlusiveDentalCombinatorialVariation: occlusiveDentalCombinatorialVariation,
+		vowelLoweringCombinatorialVariation: vowelLoweringCombinatorialVariation
 	};
 
 });
