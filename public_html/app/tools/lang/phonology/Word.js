@@ -58,7 +58,7 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme'], function(St
 		if(idx < 0){
 			//skip non-alphabetic characters
 			var lastChar = word.length - 1;
-			while(!word[lastChar].match(/[aàbcdđeéèfghiíjɉklƚmnñoóòprsʃtŧuúvxʒ]/))
+			while(lastChar >= 0 && !word[lastChar].match(/[aàbcdđeéèfghiíjɉklƚmnñoóòprsʃtŧuúvxʒ]/))
 				lastChar --;
 
 			//last vowel if the word ends with consonant, penultimate otherwise, default to the second vowel of a group of two (first one on a monosyllabe)

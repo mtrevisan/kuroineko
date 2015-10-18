@@ -17,14 +17,14 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						firstPlural: {general: '#andémo', northern: '#andón', oriental: '#andén', central_western: undefined},
 						secondSingular: {general: '#àndi'},
 						secondPlural: {central_western: undefined, general: '#andè', northern_oriental: '#andé'},
-						third: {archaic: '#ànda', general: '#ànde'}
+						third: {archaic: '#ànda', general: '#ànde', northern_oriental: '#ànt'}
 					},
 					irregular: {
 						firstSingular: {central_centralNorthern_lagunar_western1: '#và(g)o', general: '#vàe'},
 						firstPlural: {central_western: undefined, general: '#vémo', northern: '#vón', oriental: '#vén'},
 						secondSingular: {general: '#và'},
 						secondPlural: {central_western: undefined, general: '#vè', northern_oriental: '#vé'},
-						third: {general: '#vàe', archaic: '#và'}
+						third: {general: '#vàe', archaic: '#và', northern_oriental: '#và'}
 					}
 				},
 				imperfect: {
@@ -53,14 +53,14 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						firstPlural: {general: '#andémo', northern: '#and(i)ón(e)', oriental: '#andén(e)', central_western: undefined},
 						secondSingular: {general: '#àndi'},
 						secondPlural: {centralNorthern: '#andé', general: '#andè', northern_oriental1: '#andé(de/ge)', northern_oriental2: undefined, central_western: undefined},
-						third: {general: '#ànda', northern_oriental: '#ànde'}
+						third: {general: '#ànda', northern_oriental1: '#ànde', northern_oriental2: '#ànt'}
 					},
 					irregular: {
 						firstSingular: {general: '#và(g)a', northern_oriental: '#vàe'},
 						firstPlural: {central_western: undefined, general: '#vémo', northern: '#v(i)ón(e)', oriental: '#vén(e)'},
 						secondSingular: {general: '#và(g)i'},
 						secondPlural: {centralNorthern: '#vé', central_western: undefined, general: '#vè', northern_oriental1: '#vé(de/ge)', northern_oriental2: undefined},
-						third: {general: '#và(g)a', northern_oriental: '#vàe'}
+						third: {general: '#và(g)a', northern_oriental1: '#vàe', northern_oriental2: undefined}
 					}
 				},
 				imperfect: {
@@ -149,7 +149,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 					irregular: {
 						firstSingular: {central_centralNorthern_lagunar_western1: '#fà(g)o', general: '#fàe'},
 						secondSingular: {general: '#fà'},
-						third: {general: '#fà', archaic: undefined}
+						third: {general: '#fà', northern_oriental: undefined, archaic: undefined}
 					}
 				},
 				imperfect: {
@@ -180,7 +180,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 					irregular: {
 						firstSingular: {general: '#fà(g)a', northern_oriental: '#fàe'},
 						secondSingular: {general: '#fà(g)i'},
-						third: {general: '#fà(g)a', northern_oriental: '#fàe'}
+						third: {general: '#fà(g)a', northern_oriental1: '#fàe', northern_oriental2: undefined}
 					}
 				},
 				imperfect: {
@@ -308,7 +308,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						firstSingular: {central_centralNorthern_lagunar_western1: 'dévo', general: 'déve'},
 						secondPlural: {central_western: 'deví', general: 'devé', northern_oriental: undefined},
 						secondSingular: {general: 'dévi'},
-						third: {archaic: undefined, general: 'déve'}
+						third: {archaic: undefined, general: 'déve', northern_oriental: 'déf'}
 					}
 				}
 			},
@@ -348,7 +348,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						firstSingular: {general: 'débia', northern_oriental: 'débie'},
 						secondPlural: {centralNorthern: undefined, central_western: undefined, general: 'debiè', northern_oriental1: 'debié(de/ge)', northern_oriental2: undefined},
 						secondSingular: {general: 'débi'},
-						third: {general: 'débia', northern_oriental: 'débie'}
+						third: {general: 'débia', northern_oriental1: 'débie', northern_oriental2: undefined}
 					}
 				}
 			}
@@ -418,7 +418,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 					irregular: {
 						firstSingular: {central_centralNorthern_lagunar_western1: '#sào', central_centralNorthern_lagunar_western2: '#sò', general: '#sàe'},
 						secondSingular: {general: '#sà'},
-						third: {archaic: undefined, general: '#sà'}
+						third: {archaic: undefined, general: '#sà', northern_oriental: undefined}
 					},
 					regular: {
 						firstPlural: {central_western: '#savímo', general: '#savémo', northern: '#savón', oriental: '#savén'},
@@ -462,7 +462,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						firstSingular: {general: '#sàpia', northern_oriental: '#sàpie'},
 						secondPlural: {centralNorthern: undefined, central_western: undefined, general: '#sapiè', northern_oriental1: '#sapié(de/ge)', northern_oriental2: undefined},
 						secondSingular: {general: '#sàpi'},
-						third: {general: '#sàpia', northern_oriental: '#sàpie'}
+						third: {general: '#sàpia', northern_oriental1: '#sàpie', northern_oriental2: undefined}
 					}
 				}
 			}
@@ -550,7 +550,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						firstSingular: {central_centralNorthern_lagunar_western1: '#díxo', general: '#díxe'},
 						secondPlural: {central_western: '#dixí', general: '#dixé', northern_oriental: undefined},
 						secondSingular: {general: '#díxi'},
-						third: {archaic: undefined, general: '#díxe'}
+						third: {archaic: undefined, general: '#díxe', northern_oriental: '#dís'}
 					}
 				}
 			},
@@ -596,7 +596,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						firstSingular: {general: '#díxa', northern_oriental: '#díxe'},
 						secondPlural: {centralNorthern: undefined, central_western: '#dixí', general: '#dixé', northern_oriental1: '#dixé(de/ge)', northern_oriental2: undefined},
 						secondSingular: {general: '#díxi'},
-						third: {general: '#díxa', northern_oriental: '#díxe'}
+						third: {general: '#díxa', northern_oriental1: '#díxe', northern_oriental2: '#dís'}
 					}
 				}
 			}
@@ -669,14 +669,14 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				present: {
 					irregular: {
-						third: {general: '#pòle'}
+						third: {general: '#pòle', northern_oriental: '#pòl'}
 					},
 					regular: {
 						firstPlural: {central_western: '#podímo', general: '#podémo', northern: '#podón', oriental: '#podén'},
 						firstSingular: {central_centralNorthern_lagunar_western1: '#pòdo', general: '#pòde'},
 						secondPlural: {central_western: '#podí', general: '#podé', northern_oriental: undefined},
 						secondSingular: {general: '#pòdi'},
-						third: {archaic: undefined, general: '#pòde'}
+						third: {archaic: undefined, general: '#pòde', northern_oriental: '#pòt'}
 					}
 				}
 			},
@@ -716,7 +716,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						firstSingular: {general: '#pòda', northern_oriental: '#pòde'},
 						secondPlural: {centralNorthern: undefined, central_western: '#podí', general: '#podé', northern_oriental1: '#podé(de/ge)', northern_oriental2: undefined},
 						secondSingular: {general: '#pòdi'},
-						third: {general: '#pòda', northern_oriental: '#pòde'}
+						third: {general: '#pòda', northern_oriental1: '#pòde', northern_oriental2: '#pòt'}
 					}
 				}
 			}
@@ -785,14 +785,14 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				present: {
 					irregular: {
-						third: {general: '#vièn'}
+						third: {general: '#vièn', northern_oriental: undefined}
 					},
 					regular: {
 						firstPlural: {central_western: '#veñímo', general: '#veñémo', northern: '#veñón', oriental: '#veñén'},
 						firstSingular: {central_centralNorthern_lagunar_western1: '#vèño', general: '#vèñe'},
 						secondPlural: {central_western: '#veñí', general: '#veñé', northern_oriental: undefined},
 						secondSingular: {general: '#vèñi'},
-						third: {archaic: undefined, general: '#vèñe'}
+						third: {archaic: undefined, general: '#vèñe', northern_oriental: '#vènc'}
 					}
 				}
 			},
@@ -832,7 +832,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						firstSingular: {general: '#vèña', northern_oriental: '#vèñe'},
 						secondPlural: {centralNorthern: undefined, central_western: '#veñí', general: '#veñé', northern_oriental1: '#veñé(de/ge)', northern_oriental2: undefined},
 						secondSingular: {general: '#vèñi'},
-						third: {general: '#vèña', northern_oriental: '#vèñe'}
+						third: {general: '#vèña', northern_oriental1: '#vèñe', northern_oriental2: '#vènc'}
 					}
 				}
 			}
@@ -920,14 +920,14 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						firstSingular: {central_centralNorthern_lagunar_western: '#tràgo'},
 						firstPlural: {central_western: undefined, general: '#trémo', northern: '#trón', oriental: '#trén'},
 						secondPlural: {central_western: undefined, general: '#trè', northern_oriental: '#tré'},
-						third: {general: '#trà'}
+						third: {general: '#trà', northern_oriental: undefined}
 					},
 					regular: {
 						firstPlural: {central_western: '#traímo', general: '#traémo', northern: '#traón', oriental: '#traén'},
 						firstSingular: {central_centralNorthern_lagunar_western1: '#trào', general: '#tràe'},
 						secondPlural: {central_western: '#traí', general: '#traé', northern_oriental: undefined},
 						secondSingular: {general: '#trài'},
-						third: {archaic: undefined, general: '#tràe'}
+						third: {archaic: undefined, general: '#tràe', northern_oriental: '#trà'}
 					}
 				}
 			},
@@ -975,7 +975,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						firstSingular: {general: '#tràa', northern_oriental: '#tràe'},
 						secondPlural: {centralNorthern: undefined, central_western: '#traí', general: '#traé', northern_oriental1: '#traé(de/ge)', northern_oriental2: undefined},
 						secondSingular: {general: '#trài'},
-						third: {general: '#tràa', northern_oriental: '#tràe'}
+						third: {general: '#tràa', northern_oriental1: '#tràe', northern_oriental2: undefined}
 					}
 				}
 			}
@@ -1063,7 +1063,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						firstSingular: {central_centralNorthern_lagunar_western1: '#tòlo', general: '#tòle'},
 						secondPlural: {central_western: '#tolí', general: '#tolé', northern_oriental: undefined},
 						secondSingular: {general: '#tòli'},
-						third: {archaic: undefined, general: '#tòle'}
+						third: {archaic: undefined, general: '#tòle', northern_oriental: '#tòl'}
 					}
 				}
 			},
@@ -1111,7 +1111,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						firstSingular: {general: '#tòla', northern_oriental: '#tòle'},
 						secondPlural: {centralNorthern: undefined, central_western: '#tolí', general: '#tolé', northern_oriental1: '#tolé(de/ge)', northern_oriental2: undefined},
 						secondSingular: {general: '#tòli'},
-						third: {general: '#tòla', northern_oriental: '#tòle'}
+						third: {general: '#tòla', northern_oriental1: '#tòle', northern_oriental2: '#tòl'}
 					}
 				}
 			}
@@ -1181,7 +1181,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						firstSingular: {general: 's(i)ón'},
 						secondPlural: {central_western: 'sí', general: 'sé', northern_oriental: undefined},
 						secondSingular: {general: 'si'},
-						third: {archaic: 'é', general: 'sé'}
+						third: {archaic: 'é', general: 'sé', northern_oriental: undefined}
 					}
 				}
 			},
@@ -1222,7 +1222,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						firstSingular: {general: 'sípia', northern_oriental: 'sípie'},
 						secondPlural: {centralNorthern: undefined, central_western: 'sipí', general: 'sipié', northern_oriental1: 'sipié(de/ge)', northern_oriental2: undefined},
 						secondSingular: {general: 'sípi'},
-						third: {general: 'sípia', northern_oriental: 'sípie'}
+						third: {general: 'sípia', northern_oriental1: 'sípie', northern_oriental2: undefined}
 					}
 				}
 			}
@@ -1292,7 +1292,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 					irregular: {
 						firstSingular: {central_centralNorthern_lagunar_western: '#ò', general: '#à/è'},
 						secondSingular: {general: '#à'},
-						third: {archaic: undefined, general: '#à'}
+						third: {archaic: undefined, general: '#à', northern_oriental: undefined}
 					},
 					regular: {
 						firstPlural: {central_western: '#avímo', general: '#avémo', northern: '#avón', oriental: '#avén'},
@@ -1336,7 +1336,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						firstSingular: {general: '#àpia', northern_oriental: '#àpie'},
 						secondPlural: {centralNorthern: undefined, central_western: undefined, general: '#apiè', northern_oriental1: '#apié(de/ge)', northern_oriental2: undefined},
 						secondSingular: {general: '#àpi'},
-						third: {general: '#àpia', northern_oriental: '#àpie'}
+						third: {general: '#àpia', northern_oriental1: '#àpie', northern_oriental2: undefined}
 					}
 				}
 			}

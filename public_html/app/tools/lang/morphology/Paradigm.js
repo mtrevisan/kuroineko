@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/data/ObjectHelper'], function(Word, Orthography, ObjectHelper){
+define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/lang/phonology/PhonologyHelper', 'tools/data/ObjectHelper'], function(Word, Orthography, PhonologyHelper, ObjectHelper){
 
 	/** @constant */
 	var REGULAR = 'regular',
@@ -104,13 +104,18 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				var third = t.themeT8 + (!this.verb.irregularity.verb.match(/darStarFar|s?aver/)? (this.verb.irregularity.eser? 'é': 'e'): '');
 				root.third = {
 					general: pronomenalMark + third,
-					archaic: (t.themeT10 && t.themeT10 !== third? pronomenalMark + t.themeT10: undefined)
+					northern_oriental: (third.match(/[ei]$/)? pronomenalMark + PhonologyHelper.finalConsonantVoicing(third.replace(/[ei]$/, ''), 'northern'): undefined),
+					archaic: (t.themeT10 && t.themeT10 !== third? pronomenalMark + t.themeT10.replace(/([ei])$/, '($1)'): undefined)
 				};
 			}
-			else if(t.themeT10)
+			else if(t.themeT10){
+				var thirdNorthernOriental = PhonologyHelper.finalConsonantVoicing(t.themeT10.replace(/[aeiou]$/, ''), 'northern');
 				root.third = {
-					general: pronomenalMark + t.themeT10
+					general: pronomenalMark + t.themeT10,
+					northern_oriental: (t.themeT10.match(/[aeiou]$/) && t.themeT10 != thirdNorthernOriental?
+						pronomenalMark + thirdNorthernOriental: undefined)
 				};
+			}
 			if(t.themeT5)
 				root.secondPlural = {
 					general: pronomenalMark + t.themeT5,
@@ -220,7 +225,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				};
 				root.third = {
 					general: pronomenalMark + t.themeT8 + 'a',
-					northern_oriental: pronomenalMark + t.themeT8 + 'e'
+					northern_oriental1: pronomenalMark + t.themeT8 + 'e',
+					northern_oriental2: (t.themeT8.match(/[^aeiouàèéíòóú]$/)? pronomenalMark + PhonologyHelper.finalConsonantVoicing(t.themeT8, 'northern'): undefined)
 				};
 
 				if(type == 'irregular' && !this.verb.irregularity.verb.match(/(aver|dever|eser)/)){
