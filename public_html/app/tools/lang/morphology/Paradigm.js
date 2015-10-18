@@ -8,7 +8,11 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 	/** @constant */
 	var REGULAR = 'regular',
 	/** @constant */
-		IRREGULAR = 'irregular';
+		IRREGULAR = 'irregular',
+	/** @constant */
+		PRONOMENAL_MARK = '#',
+	/** @constant */
+		PRONOMENAL_MARK_IMPERATIVE = '$';
 
 
 	/**
@@ -19,6 +23,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 		this.verb = verb;
 		this.themes = themes;
 	};
+
+	Constructor.PRONOMENAL_MARK = PRONOMENAL_MARK;
+	Constructor.PRONOMENAL_MARK_IMPERATIVE = PRONOMENAL_MARK_IMPERATIVE;
 
 
 	var generate = function(){
@@ -70,7 +77,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 
 		if(t.themeT12 || t.themeT5 || t.themeT8 || t.themeT10){
 			var root = namespace(this.paradigm, 'indicative', 'present', type),
-				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? '#': ''),
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? PRONOMENAL_MARK: ''),
 				person;
 			if(t.themeT8){
 				person = root.firstSingular = {};
@@ -134,9 +141,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 	var generateIndicativeImperfect = function(type, t){
 		if(t.themeT2 || t.themeT11){
 			var root = namespace(this.paradigm, 'indicative', 'imperfect', type),
-				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? '#': '');
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? PRONOMENAL_MARK: '');
 			if(t.themeT2){
-				var tmp = pronomenalMark + t.themeT2 + (this.verb.irregularity.eser? 'r': 'v');
+				var tmp = pronomenalMark + t.themeT2 + (this.verb.irregularity.eser? 'r': '(v)');
 				root.firstSingular = {
 					general: tmp + 'a',
 					northern_oriental: tmp + 'e',
@@ -169,7 +176,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 	var generateIndicativeFuture = function(type, t){
 		if(t.themeT4){
 			var root = namespace(this.paradigm, 'indicative', 'future', type),
-				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? '#': ''),
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? PRONOMENAL_MARK: ''),
 				firstPlural = pronomenalMark + t.themeT4 + 'r';
 			root.firstSingular = {
 				general: firstPlural + 'à',
@@ -202,7 +209,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 
 		if(t.themeT12 || t.themeT5 || t.themeT8){
 			var root = namespace(this.paradigm, 'subjunctive', 'present', type),
-				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? '#': '');
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? PRONOMENAL_MARK: '');
 			if(t.themeT8){
 				root.firstSingular = {
 					general: pronomenalMark + t.themeT8 + 'a',
@@ -260,7 +267,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 
 		if(t.themeT2 || t.themeT11){
 			var root = namespace(this.paradigm, 'subjunctive', 'imperfect', type),
-				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? '#': '');
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? PRONOMENAL_MARK: '');
 			if(t.themeT2){
 				var tmp = pronomenalMark + t.themeT2 + 's';
 				root.firstSingular = {
@@ -293,7 +300,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 	var generateConditionalSimple = function(type, t){
 		if(t.themeT4){
 			var root = namespace(this.paradigm, 'conditional', 'simple', type),
-				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? '#': ''),
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? PRONOMENAL_MARK: ''),
 				tmp = pronomenalMark + t.themeT4 + 'rí',
 				firstPlural = pronomenalMark + t.themeT4 + 'r(is)';
 			root.firstSingular = {
@@ -326,16 +333,16 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 
 		if(t.themeT5 || t.themeT9){
 			var root = namespace(this.paradigm, 'imperative', 'present', type),
-				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? '#': '');
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? PRONOMENAL_MARK: '');
 			if(t.themeT9)
 				root.secondSingular = {
-					general: pronomenalMark + t.themeT9
+					general: pronomenalMark + t.themeT9 + PRONOMENAL_MARK_IMPERATIVE
 				};
 			if(t.themeT5)
 				root.secondPlural = {
-					general: pronomenalMark + t.themeT5,
-					northern_oriental: (conj != 2? pronomenalMark + t.themeT5.replace(/[èí]$/, 'é'): undefined),
-					central_western: (conj == 2? pronomenalMark + t.themeT5.replace(/i?é$/, 'í'): undefined)
+					general: pronomenalMark + t.themeT5 + PRONOMENAL_MARK_IMPERATIVE,
+					northern_oriental: (conj != 2? pronomenalMark + t.themeT5.replace(/[èí]$/, 'é') + PRONOMENAL_MARK_IMPERATIVE: undefined),
+					central_western: (conj == 2? pronomenalMark + t.themeT5.replace(/i?é$/, 'í') + PRONOMENAL_MARK_IMPERATIVE: undefined)
 				};
 		}
 	};
@@ -344,7 +351,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 	var generateInfinitiveSimple = function(type, t){
 		if(t.themeT1){
 			var root = namespace(this.paradigm, 'infinitive', 'simple', type),
-				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? '#': '');
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? PRONOMENAL_MARK: '');
 			root.all1 = t.themeT1 + 'r' + pronomenalMark;
 			root.all2 = t.themeT1 + 're';
 		}
@@ -364,7 +371,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			var root = namespace(this.paradigm, 'participle', 'perfect', type);
 			if(t.themeT6)
 				root.general = {
-					singularMasculine: t.themeT6 + '(do)',
+					singularMasculine1: t.themeT6 + '(do)',
+					singularMasculine2: t.themeT6 + 'o',
 					pluralMasculine: t.themeT6 + '(di)',
 					singularFeminine: t.themeT6 + '(d)a',
 					pluralFeminine: t.themeT6 + '(d)e'
@@ -396,7 +404,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 	var generateGerundSimple = function(type, t){
 		if(t.themeT2 || t.themeT7){
 			var person = namespace(this.paradigm, 'gerund', 'simple', type, 'all'),
-				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? '#': '');
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|èser|s?aver)$/)? PRONOMENAL_MARK: '');
 			if(t.themeT2)
 				person.regular1 = t.themeT2 + 'ndo' + pronomenalMark;
 			if(t.themeT7)

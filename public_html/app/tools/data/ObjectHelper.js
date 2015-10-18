@@ -91,7 +91,7 @@ define(function(){
 		for(k in parts){
 			part = parts[k];
 			if(!data[part])
-				break;
+				return undefined;
 
 			data = data[part];
 		}

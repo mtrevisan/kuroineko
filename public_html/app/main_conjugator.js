@@ -173,7 +173,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 		var extractDeclinated = function(paradigm, moodTense, type, variant){
 			var output = '',
 				id, content;
-			['singularMasculine', 'pluralMasculine', 'singularFeminine', 'pluralFeminine'].forEach(function(person){
+			['singularMasculine', 'singularMasculine1', 'singularMasculine2', 'pluralMasculine', 'singularFeminine', 'pluralFeminine'].forEach(function(person){
 				id = moodTense + '.' + type + '.' + variant + '.' + person;
 				content = extract(paradigm, id);
 				if(content)

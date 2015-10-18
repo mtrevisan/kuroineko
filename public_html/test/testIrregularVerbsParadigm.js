@@ -29,11 +29,11 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				imperfect: {
 					regular: {
-						firstSingular: {central: '#andàvo', general: '#andàva', northern_oriental: '#andàve'},
-						firstPlural: {general: '#andàvimo', northern1: '#and(i)ón(se)', northern2: '#andiv(i)ón(se)', oriental: '#and(iv)én(se)'},
-						secondSingular: {general: '#andàvi'},
-						secondPlural: {archaic: '#andàva', general: '#andàvi', northern: '#and(iv)ié'},
-						third: {general: '#andàva'}
+						firstSingular: {central: '#andà(v)o', general: '#andà(v)a', northern_oriental: '#andà(v)e'},
+						firstPlural: {general: '#andà(v)imo', northern1: '#and(i)ón(se)', northern2: '#andiv(i)ón(se)', oriental: '#and(iv)én(se)'},
+						secondSingular: {general: '#andà(v)i'},
+						secondPlural: {archaic: '#andà(v)a', general: '#andà(v)i', northern: '#and(iv)ié'},
+						third: {general: '#andà(v)a'}
 					}
 				},
 				future: {
@@ -88,12 +88,12 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 			imperative: {
 				present: {
 					irregular: {
-						secondSingular: {general: '#và'},
-						secondPlural: {general: '#vè', northern_oriental: '#vé', central_western: undefined}
+						secondSingular: {general: '#và$'},
+						secondPlural: {general: '#vè$', northern_oriental: '#vé$', central_western: undefined}
 					},
 					regular: {
-						secondSingular: {general: '#ànda'},
-						secondPlural: {general: '#andè', northern_oriental: '#andé', central_western: undefined}
+						secondSingular: {general: '#ànda$'},
+						secondPlural: {general: '#andè$', northern_oriental: '#andé$', central_western: undefined}
 					}
 				}
 			},
@@ -108,7 +108,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				perfect: {
 					regular: {
-						general: {singularMasculine: 'andà(do)', singularFeminine: 'andà(d)a', pluralMasculine: 'andà(di)', pluralFeminine: 'andà(d)e'},
+						general: {singularMasculine1: 'andà(do)', singularMasculine2: 'andào', singularFeminine: 'andà(d)a', pluralMasculine: 'andà(di)', pluralFeminine: 'andà(d)e'},
 						northern_oriental1: {singularMasculine: 'andàsto', singularFeminine: 'andàsta', pluralMasculine: 'andàsti', pluralFeminine: 'andàste'},
 						northern_oriental2: undefined
 					},
@@ -154,11 +154,11 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				imperfect: {
 					regular: {
-						firstSingular: {central: '#fàvo', general: '#fàva', northern_oriental: '#fàve'},
-						firstPlural: {general: '#fàvimo', northern1: '#f(i)ón(se)', northern2: '#fiv(i)ón(se)', oriental: '#f(iv)én(se)'},
-						secondSingular: {general: '#fàvi'},
-						secondPlural: {archaic: '#fàva', general: '#fàvi', northern: '#f(iv)ié'},
-						third: {general: '#fàva'}
+						firstSingular: {central: '#fà(v)o', general: '#fà(v)a', northern_oriental: '#fà(v)e'},
+						firstPlural: {general: '#fà(v)imo', northern1: '#f(i)ón(se)', northern2: '#fiv(i)ón(se)', oriental: '#f(iv)én(se)'},
+						secondSingular: {general: '#fà(v)i'},
+						secondPlural: {archaic: '#fà(v)a', general: '#fà(v)i', northern: '#f(iv)ié'},
+						third: {general: '#fà(v)a'}
 					}
 				},
 				future: {
@@ -208,8 +208,8 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 			imperative: {
 				present: {
 					regular: {
-						secondSingular: {general: '#fà'},
-						secondPlural: {general: '#fè', northern_oriental: '#fé', central_western: undefined}
+						secondSingular: {general: '#fà$'},
+						secondPlural: {general: '#fè$', northern_oriental: '#fé$', central_western: undefined}
 					}
 				}
 			},
@@ -224,7 +224,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				perfect: {
 					regular: {
-						general: {singularMasculine: 'fà(do)', singularFeminine: 'fà(d)a', pluralMasculine: 'fà(di)', pluralFeminine: 'fà(d)e'},
+						general: {singularMasculine1: 'fà(do)', singularMasculine2: 'fào', singularFeminine: 'fà(d)a', pluralMasculine: 'fà(di)', pluralFeminine: 'fà(d)e'},
 						northern_oriental1: {singularMasculine: 'fàsto', singularFeminine: 'fàsta', pluralMasculine: 'fàsti', pluralFeminine: 'fàste'},
 						northern_oriental2: undefined
 					},
@@ -278,8 +278,8 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 			imperative: {
 				present: {
 					regular: {
-						secondPlural: {central_western: 'deví', general: 'devé', northern_oriental: undefined},
-						secondSingular: {general: 'dévi'}
+						secondPlural: {central_western: 'deví$', general: 'devé$', northern_oriental: undefined},
+						secondSingular: {general: 'dévi$'}
 					}
 				}
 			},
@@ -295,11 +295,11 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				imperfect: {
 					regular: {
-						firstPlural: {general: 'devévimo', northern1: 'dev(i)ón(se)', northern2: 'deviv(i)ón(se)', oriental: 'dev(iv)én(se)'},
-						firstSingular: {central: 'devévo', general: 'devéva', northern_oriental: 'devéve'},
-						secondPlural: {archaic: 'devéva', general: 'devévi', northern: 'dev(iv)ié'},
-						secondSingular: {general: 'devévi'},
-						third: {general: 'devéva'}
+						firstPlural: {general: 'devé(v)imo', northern1: 'dev(i)ón(se)', northern2: 'deviv(i)ón(se)', oriental: 'dev(iv)én(se)'},
+						firstSingular: {central: 'devé(v)o', general: 'devé(v)a', northern_oriental: 'devé(v)e'},
+						secondPlural: {archaic: 'devé(v)a', general: 'devé(v)i', northern: 'dev(iv)ié'},
+						secondSingular: {general: 'devé(v)i'},
+						third: {general: 'devé(v)a'}
 					}
 				},
 				present: {
@@ -326,7 +326,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						strong: {general: undefined}
 					},
 					regular: {
-						general: {pluralFeminine: 'devú(d)e', pluralMasculine: 'devú(di)', singularFeminine: 'devú(d)a', singularMasculine: 'devú(do)'},
+						general: {pluralFeminine: 'devú(d)e', pluralMasculine: 'devú(di)', singularFeminine: 'devú(d)a', singularMasculine1: 'devú(do)', singularMasculine2: 'devúo'},
 						northern_oriental1: {pluralFeminine: 'devéste', pluralMasculine: 'devésti', singularFeminine: 'devésta', singularMasculine: 'devésto'},
 						northern_oriental2: undefined
 					}
@@ -388,10 +388,10 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 			imperative: {
 				present: {
 					irregular: {
-						secondSingular: {general: '#sà'}
+						secondSingular: {general: '#sà$'}
 					},
 					regular: {
-						secondPlural: {central_western: '#saví', general: '#savé', northern_oriental: undefined}
+						secondPlural: {central_western: '#saví$', general: '#savé$', northern_oriental: undefined}
 					}
 				}
 			},
@@ -407,11 +407,11 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				imperfect: {
 					regular: {
-						firstPlural: {general: '#savévimo', northern1: '#sav(i)ón(se)', northern2: '#saviv(i)ón(se)', oriental: '#sav(iv)én(se)'},
-						firstSingular: {central: '#savévo', general: '#savéva', northern_oriental: '#savéve'},
-						secondPlural: {archaic: '#savéva', general: '#savévi', northern: '#sav(iv)ié'},
-						secondSingular: {general: '#savévi'},
-						third: {general: '#savéva'}
+						firstPlural: {general: '#savé(v)imo', northern1: '#sav(i)ón(se)', northern2: '#saviv(i)ón(se)', oriental: '#sav(iv)én(se)'},
+						firstSingular: {central: '#savé(v)o', general: '#savé(v)a', northern_oriental: '#savé(v)e'},
+						secondPlural: {archaic: '#savé(v)a', general: '#savé(v)i', northern: '#sav(iv)ié'},
+						secondSingular: {general: '#savé(v)i'},
+						third: {general: '#savé(v)a'}
 					}
 				},
 				present: {
@@ -440,7 +440,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						strong: {general: undefined}
 					},
 					regular: {
-						general: {pluralFeminine: 'savú(d)e', pluralMasculine: 'savú(di)', singularFeminine: 'savú(d)a', singularMasculine: 'savú(do)'},
+						general: {pluralFeminine: 'savú(d)e', pluralMasculine: 'savú(di)', singularFeminine: 'savú(d)a', singularMasculine1: 'savú(do)', singularMasculine2: 'savúo'},
 						northern_oriental1: {pluralFeminine: 'savéste', pluralMasculine: 'savésti', singularFeminine: 'savésta', singularMasculine: 'savésto'},
 						northern_oriental2: undefined
 					}
@@ -510,8 +510,8 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 			imperative: {
 				present: {
 					regular: {
-						secondPlural: {central_western: '#dixí', general: '#dixé', northern_oriental: undefined},
-						secondSingular: {general: '#díxi'}
+						secondPlural: {central_western: '#dixí$', general: '#dixé$', northern_oriental: undefined},
+						secondSingular: {general: '#díxi$'}
 					}
 				}
 			},
@@ -534,11 +534,11 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				imperfect: {
 					regular: {
-						firstPlural: {general: '#dixévimo', northern1: '#dix(i)ón(se)', northern2: '#dixiv(i)ón(se)', oriental: '#dix(iv)én(se)'},
-						firstSingular: {central: '#dixévo', general: '#dixéva', northern_oriental: '#dixéve'},
-						secondPlural: {archaic: '#dixéva', general: '#dixévi', northern: '#dix(iv)ié'},
-						secondSingular: {general: '#dixévi'},
-						third: {general: '#dixéva'}
+						firstPlural: {general: '#dixé(v)imo', northern1: '#dix(i)ón(se)', northern2: '#dixiv(i)ón(se)', oriental: '#dix(iv)én(se)'},
+						firstSingular: {central: '#dixé(v)o', general: '#dixé(v)a', northern_oriental: '#dixé(v)e'},
+						secondPlural: {archaic: '#dixé(v)a', general: '#dixé(v)i', northern: '#dix(iv)ié'},
+						secondSingular: {general: '#dixé(v)i'},
+						third: {general: '#dixé(v)a'}
 					}
 				},
 				present: {
@@ -569,7 +569,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						strong: {general: {pluralFeminine: 'díte', pluralMasculine: 'díti', singularFeminine: 'díta', singularMasculine: 'díto'}}
 					},
 					regular: {
-						general: {pluralFeminine: 'dixú(d)e', pluralMasculine: 'dixú(di)', singularFeminine: 'dixú(d)a', singularMasculine: 'dixú(do)'},
+						general: {pluralFeminine: 'dixú(d)e', pluralMasculine: 'dixú(di)', singularFeminine: 'dixú(d)a', singularMasculine1: 'dixú(do)', singularMasculine2: 'dixúo'},
 						northern_oriental1: {pluralFeminine: 'dixéste', pluralMasculine: 'dixésti', singularFeminine: 'dixésta', singularMasculine: 'dixésto'},
 						northern_oriental2: undefined
 					}
@@ -660,11 +660,11 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				imperfect: {
 					regular: {
-						firstPlural: {general: '#podévimo', northern1: '#pod(i)ón(se)', northern2: '#podiv(i)ón(se)', oriental: '#pod(iv)én(se)'},
-						firstSingular: {central: '#podévo', general: '#podéva', northern_oriental: '#podéve'},
-						secondPlural: {archaic: '#podéva', general: '#podévi', northern: '#pod(iv)ié'},
-						secondSingular: {general: '#podévi'},
-						third: {general: '#podéva'}
+						firstPlural: {general: '#podé(v)imo', northern1: '#pod(i)ón(se)', northern2: '#podiv(i)ón(se)', oriental: '#pod(iv)én(se)'},
+						firstSingular: {central: '#podé(v)o', general: '#podé(v)a', northern_oriental: '#podé(v)e'},
+						secondPlural: {archaic: '#podé(v)a', general: '#podé(v)i', northern: '#pod(iv)ié'},
+						secondSingular: {general: '#podé(v)i'},
+						third: {general: '#podé(v)a'}
 					}
 				},
 				present: {
@@ -694,7 +694,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						strong: {general: undefined}
 					},
 					regular: {
-						general: {pluralFeminine: 'podú(d)e', pluralMasculine: 'podú(di)', singularFeminine: 'podú(d)a', singularMasculine: 'podú(do)'},
+						general: {pluralFeminine: 'podú(d)e', pluralMasculine: 'podú(di)', singularFeminine: 'podú(d)a', singularMasculine1: 'podú(do)', singularMasculine2: 'podúo'},
 						northern_oriental1: {pluralFeminine: 'podéste', pluralMasculine: 'podésti', singularFeminine: 'podésta', singularMasculine: 'podésto'},
 						northern_oriental2: undefined
 					}
@@ -756,11 +756,11 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 			imperative: {
 				present: {
 					irregular: {
-						secondSingular: {general: '#vièn'}
+						secondSingular: {general: '#vièn$'}
 					},
 					regular: {
-						secondPlural: {central_western: '#veñí', general: '#veñé', northern_oriental: undefined},
-						secondSingular: {general: '#vèñi'}
+						secondPlural: {central_western: '#veñí$', general: '#veñé$', northern_oriental: undefined},
+						secondSingular: {general: '#vèñi$'}
 					}
 				}
 			},
@@ -776,11 +776,11 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				imperfect: {
 					regular: {
-						firstPlural: {general: '#veñévimo', northern1: '#veñón(se)', northern2: '#veñiv(i)ón(se)', oriental: '#veñ(iv)én(se)'},
-						firstSingular: {central: '#veñévo', general: '#veñéva', northern_oriental: '#veñéve'},
-						secondPlural: {archaic: '#veñéva', general: '#veñévi', northern: '#veñ(iv)ié'},
-						secondSingular: {general: '#veñévi'},
-						third: {general: '#veñéva'}
+						firstPlural: {general: '#veñé(v)imo', northern1: '#veñón(se)', northern2: '#veñiv(i)ón(se)', oriental: '#veñ(iv)én(se)'},
+						firstSingular: {central: '#veñé(v)o', general: '#veñé(v)a', northern_oriental: '#veñé(v)e'},
+						secondPlural: {archaic: '#veñé(v)a', general: '#veñé(v)i', northern: '#veñ(iv)ié'},
+						secondSingular: {general: '#veñé(v)i'},
+						third: {general: '#veñé(v)a'}
 					}
 				},
 				present: {
@@ -810,7 +810,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						strong: {general: undefined}
 					},
 					regular: {
-						general: {pluralFeminine: 'veñú(d)e', pluralMasculine: 'veñú(di)', singularFeminine: 'veñú(d)a', singularMasculine: 'veñú(do)'},
+						general: {pluralFeminine: 'veñú(d)e', pluralMasculine: 'veñú(di)', singularFeminine: 'veñú(d)a', singularMasculine1: 'veñú(do)', singularMasculine2: 'veñúo'},
 						northern_oriental1: {pluralFeminine: 'veñéste', pluralMasculine: 'veñésti', singularFeminine: 'veñésta', singularMasculine: 'veñésto'},
 						northern_oriental2: undefined
 					}
@@ -880,12 +880,12 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 			imperative: {
 				present: {
 					irregular: {
-						secondPlural: {central_western: undefined, general: '#trè', northern_oriental: '#tré'},
-						secondSingular: {general: '#trà'}
+						secondPlural: {central_western: undefined, general: '#trè$', northern_oriental: '#tré$'},
+						secondSingular: {general: '#trà$'}
 					},
 					regular: {
-						secondPlural: {central_western: '#traí', general: '#traé', northern_oriental: undefined},
-						secondSingular: {general: '#trài'}
+						secondPlural: {central_western: '#traí$', general: '#traé$', northern_oriental: undefined},
+						secondSingular: {general: '#trài$'}
 					}
 				}
 			},
@@ -908,11 +908,11 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				imperfect: {
 					regular: {
-						firstPlural: {general: '#traévimo', northern1: '#tra(i)ón(se)', northern2: '#traiv(i)ón(se)', oriental: '#tra(iv)én(se)'},
-						firstSingular: {central: '#traévo', general: '#traéva', northern_oriental: '#traéve'},
-						secondPlural: {archaic: '#traéva', general: '#traévi', northern: '#tra(iv)ié'},
-						secondSingular: {general: '#traévi'},
-						third: {general: '#traéva'}
+						firstPlural: {general: '#traé(v)imo', northern1: '#tra(i)ón(se)', northern2: '#traiv(i)ón(se)', oriental: '#tra(iv)én(se)'},
+						firstSingular: {central: '#traé(v)o', general: '#traé(v)a', northern_oriental: '#traé(v)e'},
+						secondPlural: {archaic: '#traé(v)a', general: '#traé(v)i', northern: '#tra(iv)ié'},
+						secondSingular: {general: '#traé(v)i'},
+						third: {general: '#traé(v)a'}
 					}
 				},
 				present: {
@@ -948,7 +948,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						}
 					},
 					regular: {
-						general: {pluralFeminine: 'traú(d)e', pluralMasculine: 'traú(di)', singularFeminine: 'traú(d)a', singularMasculine: 'traú(do)'},
+						general: {pluralFeminine: 'traú(d)e', pluralMasculine: 'traú(di)', singularFeminine: 'traú(d)a', singularMasculine1: 'traú(do)', singularMasculine2: 'traúo'},
 						northern_oriental1: {pluralFeminine: 'traéste', pluralMasculine: 'traésti', singularFeminine: 'traésta', singularMasculine: 'traésto'},
 						northern_oriental2: undefined
 					}
@@ -1023,8 +1023,8 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 			imperative: {
 				present: {
 					regular: {
-						secondPlural: {central_western: '#tolí', general: '#tolé', northern_oriental: undefined},
-						secondSingular: {general: '#tòli'}
+						secondPlural: {central_western: '#tolí$', general: '#tolé$', northern_oriental: undefined},
+						secondSingular: {general: '#tòli$'}
 					}
 				}
 			},
@@ -1047,11 +1047,11 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				imperfect: {
 					regular: {
-						firstPlural: {general: '#tolévimo', northern1: '#tol(i)ón(se)', northern2: '#toliv(i)ón(se)', oriental: '#tol(iv)én(se)'},
-						firstSingular: {central: '#tolévo', general: '#toléva', northern_oriental: '#toléve'},
-						secondPlural: {archaic: '#toléva', general: '#tolévi', northern: '#tol(iv)ié'},
-						secondSingular: {general: '#tolévi'},
-						third: {general: '#toléva'}
+						firstPlural: {general: '#tolé(v)imo', northern1: '#tol(i)ón(se)', northern2: '#toliv(i)ón(se)', oriental: '#tol(iv)én(se)'},
+						firstSingular: {central: '#tolé(v)o', general: '#tolé(v)a', northern_oriental: '#tolé(v)e'},
+						secondPlural: {archaic: '#tolé(v)a', general: '#tolé(v)i', northern: '#tol(iv)ié'},
+						secondSingular: {general: '#tolé(v)i'},
+						third: {general: '#tolé(v)a'}
 					}
 				},
 				present: {
@@ -1084,7 +1084,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						}
 					},
 					regular: {
-						general: {pluralFeminine: 'tolú(d)e', pluralMasculine: 'tolú(di)', singularFeminine: 'tolú(d)a', singularMasculine: 'tolú(do)'},
+						general: {pluralFeminine: 'tolú(d)e', pluralMasculine: 'tolú(di)', singularFeminine: 'tolú(d)a', singularMasculine1: 'tolú(do)', singularMasculine2: 'tolúo'},
 						northern_oriental1: {pluralFeminine: 'toléste', pluralMasculine: 'tolésti', singularFeminine: 'tolésta', singularMasculine: 'tolésto'},
 						northern_oriental2: undefined
 					}
@@ -1151,8 +1151,8 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 			imperative: {
 				present: {
 					irregular: {
-						secondPlural: {central_western: 'sí', general: 'sé', northern_oriental: undefined},
-						secondSingular: {general: 'sí'}
+						secondPlural: {central_western: 'sí$', general: 'sé$', northern_oriental: undefined},
+						secondSingular: {general: 'sí$'}
 					}
 				}
 			},
@@ -1196,11 +1196,11 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				perfect: {
 					irregular: {
-						general: {pluralFeminine: 'stà(d)e', pluralMasculine: 'stà(di)', singularFeminine: 'stà(d)a', singularMasculine: 'stà(do)'},
+						general: {pluralFeminine: 'stà(d)e', pluralMasculine: 'stà(di)', singularFeminine: 'stà(d)a', singularMasculine1: 'stà(do)', singularMasculine2: 'stào'},
 						northern_oriental1: {pluralFeminine: 'stàste', pluralMasculine: 'stàsti', singularFeminine: 'stàsta', singularMasculine: 'stàsto'}
 					},
 					regular: {
-						general: {pluralFeminine: 'esú(d)e', pluralMasculine: 'esú(di)', singularFeminine: 'esú(d)a', singularMasculine: 'esú(do)'},
+						general: {pluralFeminine: 'esú(d)e', pluralMasculine: 'esú(di)', singularFeminine: 'esú(d)a', singularMasculine1: 'esú(do)', singularMasculine2: 'esúo'},
 						northern_oriental1: {pluralFeminine: 'eséste', pluralMasculine: 'esésti', singularFeminine: 'esésta', singularMasculine: 'esésto'},
 						northern_oriental2: undefined
 					}
@@ -1262,10 +1262,10 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 			imperative: {
 				present: {
 					irregular: {
-						secondSingular: {general: '#à'}
+						secondSingular: {general: '#à$'}
 					},
 					regular: {
-						secondPlural: {central_western: '#aví', general: '#avé', northern_oriental: undefined}
+						secondPlural: {central_western: '#aví$', general: '#avé$', northern_oriental: undefined}
 					}
 				}
 			},
@@ -1281,11 +1281,11 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 				},
 				imperfect: {
 					regular: {
-						firstPlural: {general: '#avévimo', northern1: '#av(i)ón(se)', northern2: '#aviv(i)ón(se)', oriental: '#av(iv)én(se)'},
-						firstSingular: {central: '#avévo', general: '#avéva', northern_oriental: '#avéve'},
-						secondPlural: {archaic: '#avéva', general: '#avévi', northern: '#av(iv)ié'},
-						secondSingular: {general: '#avévi'},
-						third: {general: '#avéva'}
+						firstPlural: {general: '#avé(v)imo', northern1: '#av(i)ón(se)', northern2: '#aviv(i)ón(se)', oriental: '#av(iv)én(se)'},
+						firstSingular: {central: '#avé(v)o', general: '#avé(v)a', northern_oriental: '#avé(v)e'},
+						secondPlural: {archaic: '#avé(v)a', general: '#avé(v)i', northern: '#av(iv)ié'},
+						secondSingular: {general: '#avé(v)i'},
+						third: {general: '#avé(v)a'}
 					}
 				},
 				present: {
@@ -1314,7 +1314,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 						strong: {general: undefined}
 					},
 					regular: {
-						general: {pluralFeminine: 'avú(d)e', pluralMasculine: 'avú(di)', singularFeminine: 'avú(d)a', singularMasculine: 'avú(do)'},
+						general: {pluralFeminine: 'avú(d)e', pluralMasculine: 'avú(di)', singularFeminine: 'avú(d)a', singularMasculine1: 'avú(do)', singularMasculine2: 'avúo'},
 						northern_oriental1: {pluralFeminine: 'avéste', pluralMasculine: 'avésti', singularFeminine: 'avésta', singularMasculine: 'avésto'},
 						northern_oriental2: undefined
 					}
@@ -1344,4 +1344,5 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 
 		deepEqual(paradigm, expected, 'avér');
 	});
+
 });

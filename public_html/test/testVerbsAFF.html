@@ -193,26 +193,26 @@
 			epurateListAndApplyFlag(list, 'D', 'o',
 				'o', 'a\/F');
 			//T1: infenío sénplise
-			epurateListAndApplyFlag(list, 'G', 'r\/B',
+			epurateListAndApplyFlag(list, 'H', 'r\/B',
 				'r\/B', 're');
 			//T2: indikativo inparfèto, đontativo inparfèto
-			epurateListAndApplyFlag(list, 'H', '[àéí]vimo',
+			epurateListAndApplyFlag(list, 'I', '[àéí]vimo',
 				'[àéí]vimo', '[aei]vo\/D',
 				'[àéí]simo', 'iede', 'iege', 'isiede', 'isiege', '[aei]se\/E');
 			//T4: indikativo futuro, kondiŧional prexente
-			epurateListAndApplyFlag(list, 'I', 'rò',
+			epurateListAndApplyFlag(list, 'J', 'rò',
 				'rò', 'rà', 'rè', 'ré', 'remo', 'ron', 'ren',
 				'ría', 'ríe', 'résimo', 'ronse', 'rion', 'rionse', 'rison', 'risonse', 'rision', 'risionse', 'rense', 'risen', 'risense', 'resi', 'risié', 'rié',
 				'rave');
 			//T5: indikativo prexente, đontativo prexente
-			epurateListAndApplyFlag(list, 'J', '[aei]mo',
-				'[aei]mo', 'è', 'é', 'ede', 'ege');
 			epurateListAndApplyFlag(list, 'K', '[aei]mo',
+				'[aei]mo', 'è', 'é', 'ede', 'ege');
+			epurateListAndApplyFlag(list, 'L', '[aei]mo',
 				'[aei]mo', 'í', 'é', 'ede', 'ege');
 //3058
 			//T6: partiŧipio pasivo
-			epurateListAndApplyFlag(list, 'K', '[aui]do\/D',
-				'[aui]do\/D', '[àúí]', '[àúí]di', '[àúí]a', '[àúí]e');
+			epurateListAndApplyFlag(list, 'M', '[aui]do\/D',
+				'[aui]do\/D', '[àúí]', '[àúí]i', '[àúí]a', '[àúí]e');
 			//T7: partiŧipio ativo, partiŧipio pasivo, xerundio sénplise
 /*			epurateListAndApplyFlag(list, 'L', 'ndo',
 				'ndo', '', 'sto/D', 'nte');
@@ -486,12 +486,16 @@
 
 				forms = Conjugator.extractForms(infinitive, null, true);
 				forms = forms.map(function(form){
-					return form.replace(/^#/, '').replace(/#$/, '/B');
+					return form.replace(/^#/, '').replace(/#$/, '/B').replace(/\$$/, '/G');
 				});
-				//forms = forms.unique();
 				forms = forms.filter(function(x, i){
 					return (forms.indexOf(x) == i && forms.every(function(el){ return !el.match(x + '\/.+$'); }));
 				});
+/*				forms.forEach(function(form){
+					if(form.match(/ría$/))
+						forms.push(form.replace(/ría$/, 'ríselo/D'));
+				});*/
+				//In sto kaxo, par la 1a koniug. e inté le varianti seg., pad.-vith.-pol., e lag., se pòl ‘ver un indebolimento de la -a in -e (làseme, pàrela, férmete).
 
 				infinitive = Word.unmarkDefaultStress(infinitive);
 
