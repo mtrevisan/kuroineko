@@ -159,9 +159,9 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme'], function(St
 
 	var vowelLoweringCombinatorialVariation = function(word, mainDialect){
 		if(mainDialect.match(/^(central|western)/)){
-			var m = word.match(/[^aiu]er/g);
+			var m = word.match(/^.+[^aàiu]er(?!e?$)/g);
 			if(m && !Grapheme.isEterophonicSequence(m[0]))
-				word = word.replace(/er/g, 'ar');
+				word = word.replace(/^(.+[^aàiu])er(?!e?$)/g, '$1ar');
 		}
 
 		return word;

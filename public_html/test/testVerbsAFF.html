@@ -195,36 +195,43 @@
 			//T1: infenío sénplise
 			epurateListAndApplyFlag(list, 'H', 'r\/BG',
 				'r\/BG', 're');
-			//T2: indikativo inparfèto, đontativo inparfèto
-			epurateListAndApplyFlag(list, 'I', '[àéí]vimo',
-				'[àéí]vimo', '[aei]vo\/D',
-				'[àéí]simo', 'iede', 'iege', 'isiede', 'isiege', '[aei]se\/E');
+			//T2: indikativo inparfèto, đontativo inparfèto, partiŧipio ativo, xerundio sénplise
+			epurateListAndApplyFlag(list, 'I', 'vimo',
+				'vimo', 'imo', 'o\/D', 'vo\/D',
+				'simo', 'se\/E',
+				'sto\/D',
+				'ndo\/BG');
 			//T4: indikativo futuro, kondiŧional prexente
 			epurateListAndApplyFlag(list, 'J', 'rò',
 				'rò', 'rà', 'rè', 'ré', 'remo', 'ron', 'ren',
 				'ría', 'ríe', 'résimo', 'ronse', 'rion', 'rionse', 'rison', 'risonse', 'rision', 'risionse', 'rense', 'risen', 'risense', 'resi', 'risié', 'rié',
 				'rave');
+			epurateListAndApplyFlag(list, 'K', 'rò',
+				'rò', 'rà', 'rè', 'ré', 'rí', 'remo', 'rimo', 'ron', 'ren',
+				'ría', 'ríe', 'résimo', 'ronse', 'rion', 'rionse', 'rison', 'risonse', 'rision', 'risionse', 'rense', 'risen', 'risense', 'resi', 'risié', 'rié',
+				'rave');
 			//T5: indikativo prexente, đontativo prexente
-			epurateListAndApplyFlag(list, 'K', '[aei]mo',
-				'[aei]mo', 'è', 'é', 'ede', 'ege');
-			epurateListAndApplyFlag(list, 'L', '[aei]mo',
-				'[aei]mo', 'í', 'é', 'ede', 'ege');
-//3058
+			epurateListAndApplyFlag(list, 'L', 'mo',
+				'mo', '', 'de', 'ge');
+//			epurateListAndApplyFlag(list, 'M', '[aei]mo',
+//				'[aei]mo', '', 'è', 'í', 'ede', 'ege');
 			//T6: partiŧipio pasivo
-			epurateListAndApplyFlag(list, 'M', '[aui]do\/D',
-				'[aui]do\/D', '[àúí]', '[àúí]i', '[àúí]a', '[àúí]e');
+			epurateListAndApplyFlag(list, 'N', 'do\/D',
+				'do\/D', '', 'o\/D');
 			//T7: partiŧipio ativo, partiŧipio pasivo, xerundio sénplise
-/*			epurateListAndApplyFlag(list, 'L', 'ndo',
-				'ndo', '', 'sto/D', 'nte');
+//			epurateListAndApplyFlag(list, 'O', 'ndo\/BG',
+//				'ndo\/BG', 'nte',
+//				'sto\/D');
+//3512
 			//T11: indikativo inparfèto, đontativo inparfèto
-/*			epurateListAndApplyFlag(list, 'M', 'on',
+/*			epurateListAndApplyFlag(list, 'P', 'on',
 				'on', 'ion', 'ionse', 'ivon', 'ivonse', 'ivion', 'ivionse', 'en', 'ense', 'iven', 'ivense', 'ié', 'ivié',
-				'one', 'onse', 'ione', 'isone', 'isonse', 'isione', 'isionse', 'ene', 'isene', 'isense', 'iede', 'iege', 'isiede', 'isiege');
+				'one', 'onse', 'ione', 'isone', 'isonse', 'isione', 'isionse', 'ene', 'isene', 'isense', 'iede', 'iege', 'isiede', 'isiege');*/
 			//T12: indikativo prexente, đontativo prexente
-			epurateListAndApplyFlag(list, 'N', 'on',
-				'on', 'en', 'ene', 'é', 'ede', 'ege');
+			epurateListAndApplyFlag(list, 'Q', 'on',
+				'on', 'one', 'ion', 'ione', 'en', 'ene', 'é', 'ede', 'iede', 'ege', 'iege');
 
-			epurateListAndApplyFlag(list, 'L', 'ndo', 'ndo', 'nte', 'sto');
+/*			epurateListAndApplyFlag(list, 'L', 'ndo', 'ndo', 'nte', 'sto');
 			epurateListAndApplyFlag(list, 'M', 'iso', 'iso', 'ise', 'isi');
 			epurateListAndApplyFlag(list, 'N', 'isa', 'isa', 'ise', 'isi');
 			epurateListAndApplyFlag(list, 'O', 'ndo', 'ndo', 'sto');
@@ -474,15 +481,131 @@
 		};
 
 
-		require(['tools/lang/phonology/Word', 'tools/lang/phonology/PhonologyHelper', 'tools/lang/morphology/Conjugator', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Word, PhonologyHelper, Conjugator, verbsDictionary, JSONH){
+		require(['tools/lang/phonology/Word', 'tools/lang/phonology/PhonologyHelper', 'tools/lang/morphology/Conjugator', 'tools/lang/Dialect', 'tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Word, PhonologyHelper, Conjugator, Dialect, Verb, Themizer, verbsDictionary, JSONH){
 			verbsDictionary = JSONH.unpack(verbsDictionary);
 
 			var list = [],
-				forms,
+				verb, forms, themes,
 				idx, repment, data,
 				part, externalList;
 			verbsDictionary.forEach(function(infinitive){
 				infinitive = composeInfinitive(infinitive);
+
+				verb = new Verb(infinitive);
+				themes = (new Themizer(verb, new Dialect())).generate();
+				//themes.themeT1 + 'r' + (!verb.infinitive.match(/(déver|èser|s?aver)$/)? '/BG': '');
+				//themes.themeT1 + 're';
+
+				//if(verb.irregularity.eser){
+				//	themes.themeT2 + 'ro/D';
+				//	themes.themeT2 + 'rimo';
+				//}
+				//else{
+				//	themes.themeT2 + 'o/D';
+				//	themes.themeT2 + 'vo/D';
+				//	themes.themeT2 + 'imo';
+				//	themes.themeT2 + 'vimo';
+				//}
+				//themes.themeT2 + 'se/E';
+				//themes.themeT2 + 'simo';
+				//themes.themeT2 + 'sto/D';
+				//themes.themeT2 + 'ndo/BG';
+
+				//themes.themeT4 + 'rà';
+				//themes.themeT4 + 'rè';
+				//themes.themeT4 + 'ré';
+				//themes.themeT4 + 'rò';
+				//if(verb.conjugation == 2){
+				//	themes.themeT4 + 'í';
+				//	themes.themeT4 + 'imo';
+				//}
+				//themes.themeT4 + 'emo';
+				//themes.themeT4 + 'on';
+				//themes.themeT4 + 'en';
+				//themes.themeT4 + 'ría';
+				//themes.themeT4 + 'ríe';
+				//themes.themeT4 + 'resi';
+				//themes.themeT4 + 'r(is)ié';
+				//themes.themeT4 + 'rave';
+				//themes.themeT4 + 'r(is)(i)on(se)';
+				//themes.themeT4 + 'r(is)en(se)';
+
+				//themes.themeT5;
+				//themes.themeT5.replace(/è$/, 'e') + 'mo';
+				//themes.themeT5 + '/G'
+				//var conj = getIrregularVerbConjugation.call(this, type);
+				//if(conj == 2){
+				//	themes.themeT5.replace(/i?é$/, 'í');
+				//	themes.themeT5.replace(/i?é$/, 'i') + 'mo';
+				//	themes.themeT5.replace(/i?é$/, 'í') + '/G'
+				//	if(themes.themeT5.replace(/i?é$/, 'í') != themes.themeT5){
+				//		themes.themeT5.replace(/i?é$/, 'í');
+				//		themes.themeT5.replace(/i?é$/, 'i') + 'mo';
+				//	}
+				//}
+				//else{
+				//	themes.themeT5.replace(/[èí]$/, 'é') + '/G';
+				//}
+				//if(conj == 3 && !this.verb.special3rd)
+				//	themes.themeT5 + '(de/ge)';
+
+				//themes.themeT6;
+				//themes.themeT6 + 'do/D';
+				//themes.themeT6 + 'o';
+				//themes.themeT6 + 'a';
+				//themes.themeT6 + 'e';
+
+				//themes.themeT7 + 'nte';
+				//if(verb.conjugation == 3){
+				//	themes.themeT7 + 'sto/D';
+				//	themes.themeT7 + 'ndo/B';
+				//}
+
+				//themes.themeT8 + 'a';
+				//themes.themeT8 + 'e';
+				//themes.themeT8 + 'o';
+				//themes.themeT8 + (!themes.themeT8.match(/[cijɉñ]$/)? '(i)': '') + 'ón';
+				//themes.themeT8.replace(/à$/, 'à');
+				//themes.themeT8.replace(/à$/, 'è');
+				//themes.themeT8.replace(/à$/, 'ò');
+				//themes.themeT8.replace(/([^i])$/, '$1i');
+				//if(verb.irregularity.verb && type == 'irregular'){
+				//	if(verb.irregularity.saver)
+				//		themes.themeT8.replace(/.$/, 'ò')
+				//	else
+				//		themes.themeT8 + (themes.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'o';
+				//}
+				//themes.themeT8.replace(/([^i])$/, '$1' + (!verb.irregularity.verb.match(/andar|darStarFar|s?aver/) || !themes.themeT8.match(/à$/)? 'i': ''));
+				//third = themes.themeT8 + (!verb.irregularity.verb.match(/darStarFar|s?aver/)? (verb.irregularity.eser? 'é': 'e'): '');
+				//if(third.match(/[ei]$/)
+				//	PhonologyHelper.finalConsonantVoicing(third.replace(/[ei]$/, ''), 'northern');
+				//if(themes.themeT10 && themes.themeT10 !== third)
+				//	themes.themeT10.replace(/([ei])$/, '($1)');
+				//if(themes.themeT8 && verb.irregularity.verb.match(/dixer|traer|toler/))
+				//	themes.themeT8.replace(/[lx]?$/, 'go');
+				//if(themes.themeT8.match(/[^aeiouàèéíòóú]$/))
+				//	PhonologyHelper.finalConsonantVoicing(t.themeT8, 'northern');
+				//if(type == 'irregular' && !this.verb.irregularity.verb.match(/(aver|dever|eser)/)){
+				//	themes.themeT8 + (themes.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'a';
+				//	if(themes.themeT8.match(/[aeiouàèéíòóú]$/))
+				//		themes.themeT8 + '(g)i';
+				//	else
+				//		themes.themeT8.replace(/([^i])$/, '$1i');
+				//	themes.themeT8 + (themes.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'a';
+				//}
+				//if(themes.themeT8 && verb.irregularity.verb.match(/dixer|traer|toler/)){
+				//	themes.themeT8.replace(/[lx]?$/, 'ga');
+				//	themes.themeT8.replace(/[lx]?$/, 'gi');
+				//}
+
+				//themes.themeT9 + '/B';
+
+				//themes.themeT10 + '';
+				//third = themes.themeT8 + (!verb.irregularity.verb.match(/darStarFar|s?aver/)? (verb.irregularity.eser? 'é': 'e'): '');
+				//if(themes.themeT10 && themes.themeT10 !== third)
+				//	themes.themeT10.replace(/([ei])$/, '($1)');
+
+
 
 				forms = Conjugator.extractForms(infinitive, null, true);
 				forms = forms.map(function(form){
@@ -502,13 +625,13 @@ e intel xerundio (finéndo).
 T2 = T1: aŧento PVT > VT | à > é
 T4 = T1: senŧa aŧento | à > e
 */
-				forms.forEach(function(form){
+				/*forms.forEach(function(form){
 					var m = form.match(/\/.+$/),
 						f = form.replace(/\/.+$/, ''),
 						form2 = PhonologyHelper.vowelLoweringCombinatorialVariation(f, 'central');
 					if(form2 != f)
 						forms.push(form2 + (m? m[0]: ''));
-				});
+				});*/
 
 /*				forms.forEach(function(form){
 					if(form.match(/ría$/))
