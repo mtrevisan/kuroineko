@@ -22,9 +22,9 @@ define(['tools/lang/Dialect', 'tools/lang/phonology/Orthography', 'tools/lang/ph
 
 		var verb = new Verb(infinitive);
 
-		var themes = (new Themizer(verb, dialect)).generate();
+		var themes = (new Themizer()).generate(verb, dialect);
 
-		var paradigm = (new Paradigm(verb, themes)).generate();
+		var paradigm = (new Paradigm()).generate(verb, themes);
 
 		var pronouns = Pronouns.getPronouns(dialect);
 
@@ -84,7 +84,7 @@ define(['tools/lang/Dialect', 'tools/lang/phonology/Orthography', 'tools/lang/ph
 	var getStressThemeT3 = function(infinitive){
 		var verb = new Verb(infinitive);
 
-		var themes = (new Themizer(verb)).generateRegularThemes();
+		var themes = (new Themizer()).generateRegularThemes(verb);
 
 		var stressIndex = Word.getIndexOfStress(themes.themeT3),
 			stressType = Word.getStressType(themes.themeT3[stressIndex]);

@@ -169,19 +169,18 @@
 		};
 
 		var extractCommonPartFromList = function(list){
-			var form,
-				j, len;
+			var form;
 			list.forEach(function(obj, i){
-				if(!i)
-					form = obj;
-				else{
-					for(j = 0, len = Math.min(obj.length, form.length); j < len; j ++)
-						if(obj[obj.length - j - 1] != form[form.length - j - 1])
-							break;
-					form = (j > 0? form.substr(form.length - j): '.');
-				}
+				form = (!i? obj: extractCommonPart(obj, form));
 			});
 			return form;
+		};
+
+		var extractCommonPart = function(a, b){
+			for(var i = 0, len = Math.min(a.length, b.length); i < len; i ++)
+				if(a[a.length - i - 1] != b[b.length - i - 1])
+					break;
+			return (i > 0? a.substr(a.length - i): '');
 		};
 
 		var applyReductions = function(list){
@@ -481,7 +480,103 @@
 		};
 
 
-		require(['tools/lang/phonology/Word', 'tools/lang/phonology/PhonologyHelper', 'tools/lang/morphology/Conjugator', 'tools/lang/Dialect', 'tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Word, PhonologyHelper, Conjugator, Dialect, Verb, Themizer, verbsDictionary, JSONH){
+		require(['tools/lang/phonology/Word', 'tools/lang/phonology/PhonologyHelper', 'tools/lang/morphology/Bla', 'tools/lang/Dialect', 'tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Word, PhonologyHelper, Bla, Dialect, Verb, Themizer, verbsDictionary, JSONH){
+			verbsDictionary = JSONH.unpack(verbsDictionary);
+
+			var verbs = [];
+			verbsDictionary.forEach(function(infinitive){
+				verbs.push(new Verb(composeInfinitive(infinitive)));
+			});
+			(new Bla()).generate(verbs);
+		});/**/
+
+/*		require(['tools/lang/phonology/Word', 'tools/lang/phonology/PhonologyHelper', 'tools/lang/morphology/Bla', 'tools/lang/Dialect', 'tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Word, PhonologyHelper, Bla, Dialect, Verb, Themizer, verbsDictionary, JSONH){
+			verbsDictionary = JSONH.unpack(verbsDictionary);
+
+			var list = [],
+				paradigm = {},
+				verb, forms, themes,
+				idx, repment, data,
+				part, externalList;
+			verbsDictionary.forEach(function(infinitive){
+				infinitive = composeInfinitive(infinitive);
+
+/*				forms = Bla.extractForms(infinitive, null, true);
+				forms = forms.map(function(form){
+					return form.replace(/^#/, '').replace(/([or])#$/, '$1/BG').replace(/#$/, '/B').replace(/\$$/, '/G');
+				});
+				forms = forms.filter(function(x, i){
+					return (forms.indexOf(x) == i && forms.every(function(el){ return !el.match(x + '\/.+$'); }));
+				});
+/*se pòl katar un metaplaxmo de deklinathion da la prima a la sekonda koniug. intel inparfèto (kantàa > kantéa, pensàse > pensése)
+e intel partithipio pasivo (mañasto > mañésto).
+sto metaplaxmo se pòl ‘verlo par tuti i mòdi e i tenpi (anka a partir da la 3a koniug.) fora ke inté ‘l infenío, partithipio, e xerundio
+(mañerà, mañeríe).
+
+Se pòl katar un metaplaxmo da la tertha a la sekonda koniug. intel partithipio pasivo ko la dexinentha in -st- (sentésto, dormésto)
+e intel xerundio (finéndo).
+
+T2 = T1: aŧento PVT > VT | à > é
+T4 = T1: senŧa aŧento | à > e
+*/
+				/*forms.forEach(function(form){
+					var m = form.match(/\/.+$/),
+						f = form.replace(/\/.+$/, ''),
+						form2 = PhonologyHelper.vowelLoweringCombinatorialVariation(f, 'central');
+					if(form2 != f)
+						forms.push(form2 + (m? m[0]: ''));
+				});*/
+
+/*				forms.forEach(function(form){
+					if(form.match(/ría$/))
+						forms.push(form.replace(/ría$/, 'ríselo/D'));
+				});*/
+
+/*				infinitive = Word.unmarkDefaultStress(infinitive);
+
+				forms.forEach(function(form){
+					idx = extractIndexOfCommonPart(form, infinitive);
+
+					repment = form.substr(idx);
+
+					data = {
+						replaced: infinitive.substr(idx),
+						replacement: repment,
+						form: infinitive,
+						parents: [infinitive]
+					};
+
+					idx = list.findIndex(function(el){ return (el.replaced == data.replaced && el.replacement == data.replacement); });
+					if(idx < 0)
+						list.push(data);
+					else if(list[idx].parents.indexOf(data.parents[0]) < 0){
+						list[idx].parents.push(data.parents[0]);
+						list[idx].form = extractCommonPartFromList(list[idx].parents);
+					}
+				});/**/
+/*			});
+console.log(paradigm);
+
+/*			applyReductions(list);
+
+			augmentForms(list);
+
+			part = extractUnfeasible(list);
+			list = part[false];
+			externalList = part[true];
+
+			searchForParentSubdivision(1, externalList);
+			transfer(list, externalList);
+
+			reduceForms(list);
+
+			reduceParents(externalList);
+			transfer(list, externalList);
+
+			prettyPrint(list);/**/
+/*		});/**/
+
+/*		require(['tools/lang/phonology/Word', 'tools/lang/phonology/PhonologyHelper', 'tools/lang/morphology/Conjugator', 'tools/lang/Dialect', 'tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Word, PhonologyHelper, Conjugator, Dialect, Verb, Themizer, verbsDictionary, JSONH){
 			verbsDictionary = JSONH.unpack(verbsDictionary);
 
 			var list = [],
@@ -491,121 +586,8 @@
 			verbsDictionary.forEach(function(infinitive){
 				infinitive = composeInfinitive(infinitive);
 
-				verb = new Verb(infinitive);
-				themes = (new Themizer(verb, new Dialect())).generate();
-				//themes.themeT1 + 'r' + (!verb.infinitive.match(/(déver|èser|s?aver)$/)? '/BG': '');
-				//themes.themeT1 + 're';
-
-				//if(verb.irregularity.eser){
-				//	themes.themeT2 + 'ro/D';
-				//	themes.themeT2 + 'rimo';
-				//}
-				//else{
-				//	themes.themeT2 + 'o/D';
-				//	themes.themeT2 + 'vo/D';
-				//	themes.themeT2 + 'imo';
-				//	themes.themeT2 + 'vimo';
-				//}
-				//themes.themeT2 + 'se/E';
-				//themes.themeT2 + 'simo';
-				//themes.themeT2 + 'sto/D';
-				//themes.themeT2 + 'ndo/BG';
-
-				//themes.themeT4 + 'rà';
-				//themes.themeT4 + 'rè';
-				//themes.themeT4 + 'ré';
-				//themes.themeT4 + 'rò';
-				//if(verb.conjugation == 2){
-				//	themes.themeT4 + 'í';
-				//	themes.themeT4 + 'imo';
-				//}
-				//themes.themeT4 + 'emo';
-				//themes.themeT4 + 'on';
-				//themes.themeT4 + 'en';
-				//themes.themeT4 + 'ría';
-				//themes.themeT4 + 'ríe';
-				//themes.themeT4 + 'resi';
-				//themes.themeT4 + 'r(is)ié';
-				//themes.themeT4 + 'rave';
-				//themes.themeT4 + 'r(is)(i)on(se)';
-				//themes.themeT4 + 'r(is)en(se)';
-
-				//themes.themeT5;
-				//themes.themeT5.replace(/è$/, 'e') + 'mo';
-				//themes.themeT5 + '/G'
-				//var conj = getIrregularVerbConjugation.call(this, type);
-				//if(conj == 2){
-				//	themes.themeT5.replace(/i?é$/, 'í');
-				//	themes.themeT5.replace(/i?é$/, 'i') + 'mo';
-				//	themes.themeT5.replace(/i?é$/, 'í') + '/G'
-				//	if(themes.themeT5.replace(/i?é$/, 'í') != themes.themeT5){
-				//		themes.themeT5.replace(/i?é$/, 'í');
-				//		themes.themeT5.replace(/i?é$/, 'i') + 'mo';
-				//	}
-				//}
-				//else{
-				//	themes.themeT5.replace(/[èí]$/, 'é') + '/G';
-				//}
-				//if(conj == 3 && !this.verb.special3rd)
-				//	themes.themeT5 + '(de/ge)';
-
-				//themes.themeT6;
-				//themes.themeT6 + 'do/D';
-				//themes.themeT6 + 'o';
-				//themes.themeT6 + 'a';
-				//themes.themeT6 + 'e';
-
-				//themes.themeT7 + 'nte';
-				//if(verb.conjugation == 3){
-				//	themes.themeT7 + 'sto/D';
-				//	themes.themeT7 + 'ndo/B';
-				//}
-
-				//themes.themeT8 + 'a';
-				//themes.themeT8 + 'e';
-				//themes.themeT8 + 'o';
-				//themes.themeT8 + (!themes.themeT8.match(/[cijɉñ]$/)? '(i)': '') + 'ón';
-				//themes.themeT8.replace(/à$/, 'à');
-				//themes.themeT8.replace(/à$/, 'è');
-				//themes.themeT8.replace(/à$/, 'ò');
-				//themes.themeT8.replace(/([^i])$/, '$1i');
-				//if(verb.irregularity.verb && type == 'irregular'){
-				//	if(verb.irregularity.saver)
-				//		themes.themeT8.replace(/.$/, 'ò')
-				//	else
-				//		themes.themeT8 + (themes.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'o';
-				//}
-				//themes.themeT8.replace(/([^i])$/, '$1' + (!verb.irregularity.verb.match(/andar|darStarFar|s?aver/) || !themes.themeT8.match(/à$/)? 'i': ''));
-				//third = themes.themeT8 + (!verb.irregularity.verb.match(/darStarFar|s?aver/)? (verb.irregularity.eser? 'é': 'e'): '');
-				//if(third.match(/[ei]$/)
-				//	PhonologyHelper.finalConsonantVoicing(third.replace(/[ei]$/, ''), 'northern');
-				//if(themes.themeT10 && themes.themeT10 !== third)
-				//	themes.themeT10.replace(/([ei])$/, '($1)');
-				//if(themes.themeT8 && verb.irregularity.verb.match(/dixer|traer|toler/))
-				//	themes.themeT8.replace(/[lx]?$/, 'go');
-				//if(themes.themeT8.match(/[^aeiouàèéíòóú]$/))
-				//	PhonologyHelper.finalConsonantVoicing(t.themeT8, 'northern');
-				//if(type == 'irregular' && !this.verb.irregularity.verb.match(/(aver|dever|eser)/)){
-				//	themes.themeT8 + (themes.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'a';
-				//	if(themes.themeT8.match(/[aeiouàèéíòóú]$/))
-				//		themes.themeT8 + '(g)i';
-				//	else
-				//		themes.themeT8.replace(/([^i])$/, '$1i');
-				//	themes.themeT8 + (themes.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'a';
-				//}
-				//if(themes.themeT8 && verb.irregularity.verb.match(/dixer|traer|toler/)){
-				//	themes.themeT8.replace(/[lx]?$/, 'ga');
-				//	themes.themeT8.replace(/[lx]?$/, 'gi');
-				//}
-
-				//themes.themeT9 + '/B';
-
-				//themes.themeT10 + '';
-				//third = themes.themeT8 + (!verb.irregularity.verb.match(/darStarFar|s?aver/)? (verb.irregularity.eser? 'é': 'e'): '');
-				//if(themes.themeT10 && themes.themeT10 !== third)
-				//	themes.themeT10.replace(/([ei])$/, '($1)');
-
-
+//				verb = new Verb(infinitive);
+//				themes = (new Themizer(verb, new Dialect())).generate();
 
 				forms = Conjugator.extractForms(infinitive, null, true);
 				forms = forms.map(function(form){
@@ -638,7 +620,7 @@ T4 = T1: senŧa aŧento | à > e
 						forms.push(form.replace(/ría$/, 'ríselo/D'));
 				});*/
 
-				infinitive = Word.unmarkDefaultStress(infinitive);
+/*				infinitive = Word.unmarkDefaultStress(infinitive);
 
 				forms.forEach(function(form){
 					idx = extractIndexOfCommonPart(form, infinitive);

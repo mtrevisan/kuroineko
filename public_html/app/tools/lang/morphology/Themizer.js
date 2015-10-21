@@ -5,23 +5,22 @@
  */
 define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang/phonology/Syllabator', 'tools/data/StringHelper'], function(Word, Syllabe, Syllabator, StringHelper){
 
+	var Constructor = function(){};
+
+
 	/**
 	 * @param {Verb} verb
 	 * @param {Dialect} dialect
 	 */
-	var Constructor = function(verb, dialect){
+	var generate = function(verb, dialect){
 		this.verb = verb;
 		this.dialect = dialect;
-	};
-
-
-	var generate = function(){
 		this.themes = {
 			regular: {},
 			irregular: {}
 		};
 
-		this.themes.regular = generateRegularThemes.call(this);
+		this.themes.regular = generateRegularThemes.call(this, verb);
 
 		if(this.verb.irregular)
 			this.themes.irregular = generateIrregularThemes.call(this);
@@ -29,7 +28,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 		return this.themes;
 	};
 
-	var generateRegularThemes = function(){
+	var generateRegularThemes = function(verb){
+		this.verb = verb;
+
 		//T1
 		var themeT1 = this.verb.infinitive.replace(/.$/, '');
 
