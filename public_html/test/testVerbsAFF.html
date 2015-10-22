@@ -23,9 +23,9 @@
 		Array.prototype.getNotRegExp = function(){
 			return (this[0].length == 1? '[^' + this.join('') + ']': '(?!' + this.join('|') + ')');
 		};
-		Array.prototype.findIndex = function(predicate, scope){
+		Array.prototype.findIndex = function(predicate){
 			for(var i = 0, len = this.length; i < len; i ++)
-				if(predicate.call(scope || this, this[i], i, this))
+				if(predicate.call(this, this[i], i))
 					return i;
 			return -1;
 		};
@@ -40,7 +40,7 @@
 			});
 		};
 		Array.prototype.equals = function(a){
-			return (this.length == a.length && this.every(function(el, idx){ return (el == a[idx]); }));
+			return (this.length == a.length && this.every(function(el){ return (a.indexOf(el) >= 0); }));
 		};
 		var intersection = function(a){
 //			if(a == null)
@@ -94,8 +94,89 @@
 			};
 		})();
 
+		var applyReductions = function(list){
+			epurateListAndApplyFlag(list, 'E', 'e',
+				'e', 'i');
+			epurateListAndApplyFlag(list, 'F', 'a',
+				'a', 'e\/E');
+			//T8: indikativo prexente, đontativo prexente
+			epurateListAndApplyFlag(list, 'D', 'o',
+				'o', 'a\/F');
+			//T1: infenío sénplise
+			epurateListAndApplyFlag(list, 'H1', 'r\/BG',
+				'r\/BG', 're');
+			epurateListAndApplyFlag(list, 'H2', 'r',
+				'r', 're');
+//3749
+			//T2: indikativo inparfèto, đontativo inparfèto, partiŧipio ativo, xerundio sénplise
+			epurateListAndApplyFlag(list, 'I', 'vimo',
+				'vimo', 'imo', 'o\/D', 'vo\/D',
+				'simo', 'se\/E',
+				'sto\/D',
+				'ndo\/BG');
+			//T4: indikativo futuro, kondiŧional prexente
+			epurateListAndApplyFlag(list, 'J', 'rò',
+				'rò', 'rà', 'rè', 'ré', 'remo', 'ron', 'ren',
+				'ría', 'ríe', 'résimo', 'ronse', 'rion', 'rionse', 'rison', 'risonse', 'rision', 'risionse', 'rense', 'risen', 'risense', 'resi', 'risié', 'rié',
+				'rave');
+			epurateListAndApplyFlag(list, 'K', 'rò',
+				'rò', 'rà', 'rè', 'ré', 'rí', 'remo', 'rimo', 'ron', 'ren',
+				'ría', 'ríe', 'résimo', 'ronse', 'rion', 'rionse', 'rison', 'risonse', 'rision', 'risionse', 'rense', 'risen', 'risense', 'resi', 'risié', 'rié',
+				'rave');
+			//T5: indikativo prexente, đontativo prexente
+			epurateListAndApplyFlag(list, 'L', 'mo',
+				'mo', '', 'de', 'ge');
+//			epurateListAndApplyFlag(list, 'M', '[aei]mo',
+//				'[aei]mo', '', 'è', 'í', 'ede', 'ege');
+			//T6: partiŧipio pasivo
+			epurateListAndApplyFlag(list, 'N', 'do\/D',
+				'do\/D', '', 'o\/D');
+			//T7: partiŧipio ativo, partiŧipio pasivo, xerundio sénplise
+//			epurateListAndApplyFlag(list, 'O', 'ndo\/BG',
+//				'ndo\/BG', 'nte',
+//				'sto\/D');
+//3512
+			//T11: indikativo inparfèto, đontativo inparfèto
+/*			epurateListAndApplyFlag(list, 'P', 'on',
+				'on', 'ion', 'ionse', 'ivon', 'ivonse', 'ivion', 'ivionse', 'en', 'ense', 'iven', 'ivense', 'ié', 'ivié',
+				'one', 'onse', 'ione', 'isone', 'isonse', 'isione', 'isionse', 'ene', 'isene', 'isense', 'iede', 'iege', 'isiede', 'isiege');*/
+			//T12: indikativo prexente, đontativo prexente
+			epurateListAndApplyFlag(list, 'Q', 'on',
+				'on', 'one', 'ion', 'ione', 'en', 'ene', 'é', 'ede', 'iede', 'ege', 'iege');
+
+/*			epurateListAndApplyFlag(list, 'L', 'ndo', 'ndo', 'nte', 'sto');
+			epurateListAndApplyFlag(list, 'M', 'iso', 'iso', 'ise', 'isi');
+			epurateListAndApplyFlag(list, 'N', 'isa', 'isa', 'ise', 'isi');
+			epurateListAndApplyFlag(list, 'O', 'ndo', 'ndo', 'sto');
+			epurateListAndApplyFlag(list, 'P', 'ison', 'ison', 'isé');
+
+//			epurateListAndApplyFlag(list, 'H', 'e', 'e', 'se');
+//			epurateListAndApplyFlag(list, 'G', 'n', 'n', 'ne/H');
+//			epurateListAndApplyFlag(list, 'GL', 'on/G', 'on/G', 'emo', 'ion/G', 'en/G', 'iede', 'iege');
+//			epurateListAndApplyFlag(list, 'M', 'ron', 'ron', 'remo', 'rave', 'ren', 'resi', 'rà', 'rè', 'ré', 'résimo', 'ría', 'ríe', 'rò');
+//			epurateListAndApplyFlag(list, 'NH', 'ivon', 'ivon', 'ivion/H', 'iven/H', 'isié', 'ivié', 'ié');
+
+/*			epurateListAndApplyFlag(list, 'D', 'o', 'o', 'a', 'e', 'i');
+			epurateListAndApplyFlag(list, 'O', 'a/B', 'a/B', 'o/D');
+			epurateListAndApplyFlag(list, 'E', 'e', 'e', 'i');
+			epurateListAndApplyFlag(list, 'F', 'a', 'a', 'e/E');
+			epurateListAndApplyFlag(list, 'GH', 'nse', 'n', 'ne', 'nse');
+			epurateListAndApplyFlag(list, 'G', 'nse', 'n', 'nse');
+			epurateListAndApplyFlag(list, 'I', 'a', '', 'a', 'e');
+			epurateListAndApplyFlag(list, 'H', 'ne', 'n', 'ne');
+			epurateListAndApplyFlag(list, 'J', '[àéí]', '', 'simo', 'vimo');
+			epurateListAndApplyFlag(list, 'K', 'de', 'de', 'ge');
+			epurateListAndApplyFlag(list, 'L', 'on/GH', 'on/GH', 'ede/K', 'sen/GH', 'siede/K', 'sié', 'sion/GH', 'son/GH', 'ven/G', 'vion/G', 'vié', 'von/G', 'é');
+			epurateListAndApplyFlag(list, 'M', 'ion/G', 'ion/G', 'imo', 'isen/G', 'ision/G', 'ison/G', 'isié', 'ié');
+			epurateListAndApplyFlag(list, 'N', 'mo', 'mo', 'sen/GH', 'sion/GH', 'son/GH', 'sié', 'vié', 'é');
+			epurateListAndApplyFlag(list, 'P', 'ron/G', 'ron/G', 'remo', 'ren/G', 'resi', 'rion/M', 'ré', 'résimo', 'rí/I', 'rò', 'rà', 'rè', 'ré');
+			epurateListAndApplyFlag(list, 'Q', 'ndo/B', 'ndo/B', 'n/GH', 'nte', 'rave');
+			epurateListAndApplyFlag(list, 'R', 'mo', 'mo', 'de/K', 'ndo/Q', 'ron/P', 'se/E', 'si', 'sto/D', 'vo/D');
+			epurateListAndApplyFlag(list, 'S', 'í/B', 'í/B', 'í', 'é/J', 'ú/I');/**/
+		};
+
 		var epurateListAndApplyFlag = function(list, flag, matcher, base){
-			var matcherLength = matcher.replace(/\[.+\]/g, '.').length,
+			var matcherLength = matcher.length,
 				replacement = Array.prototype.slice.call(arguments, 4, arguments.length),
 				i, j, rep, repment, idx0, indices, parents,
 				inters, p;
@@ -181,84 +262,6 @@
 				if(a[a.length - i - 1] != b[b.length - i - 1])
 					break;
 			return (i > 0? a.substr(a.length - i): '');
-		};
-
-		var applyReductions = function(list){
-			epurateListAndApplyFlag(list, 'E', 'e',
-				'e', 'i');
-			epurateListAndApplyFlag(list, 'F', 'a',
-				'a', 'e\/E');
-			//T8: indikativo prexente, đontativo prexente
-			epurateListAndApplyFlag(list, 'D', 'o',
-				'o', 'a\/F');
-			//T1: infenío sénplise
-			epurateListAndApplyFlag(list, 'H', 'r\/BG',
-				'r\/BG', 're');
-			//T2: indikativo inparfèto, đontativo inparfèto, partiŧipio ativo, xerundio sénplise
-			epurateListAndApplyFlag(list, 'I', 'vimo',
-				'vimo', 'imo', 'o\/D', 'vo\/D',
-				'simo', 'se\/E',
-				'sto\/D',
-				'ndo\/BG');
-			//T4: indikativo futuro, kondiŧional prexente
-			epurateListAndApplyFlag(list, 'J', 'rò',
-				'rò', 'rà', 'rè', 'ré', 'remo', 'ron', 'ren',
-				'ría', 'ríe', 'résimo', 'ronse', 'rion', 'rionse', 'rison', 'risonse', 'rision', 'risionse', 'rense', 'risen', 'risense', 'resi', 'risié', 'rié',
-				'rave');
-			epurateListAndApplyFlag(list, 'K', 'rò',
-				'rò', 'rà', 'rè', 'ré', 'rí', 'remo', 'rimo', 'ron', 'ren',
-				'ría', 'ríe', 'résimo', 'ronse', 'rion', 'rionse', 'rison', 'risonse', 'rision', 'risionse', 'rense', 'risen', 'risense', 'resi', 'risié', 'rié',
-				'rave');
-			//T5: indikativo prexente, đontativo prexente
-			epurateListAndApplyFlag(list, 'L', 'mo',
-				'mo', '', 'de', 'ge');
-//			epurateListAndApplyFlag(list, 'M', '[aei]mo',
-//				'[aei]mo', '', 'è', 'í', 'ede', 'ege');
-			//T6: partiŧipio pasivo
-			epurateListAndApplyFlag(list, 'N', 'do\/D',
-				'do\/D', '', 'o\/D');
-			//T7: partiŧipio ativo, partiŧipio pasivo, xerundio sénplise
-//			epurateListAndApplyFlag(list, 'O', 'ndo\/BG',
-//				'ndo\/BG', 'nte',
-//				'sto\/D');
-//3512
-			//T11: indikativo inparfèto, đontativo inparfèto
-/*			epurateListAndApplyFlag(list, 'P', 'on',
-				'on', 'ion', 'ionse', 'ivon', 'ivonse', 'ivion', 'ivionse', 'en', 'ense', 'iven', 'ivense', 'ié', 'ivié',
-				'one', 'onse', 'ione', 'isone', 'isonse', 'isione', 'isionse', 'ene', 'isene', 'isense', 'iede', 'iege', 'isiede', 'isiege');*/
-			//T12: indikativo prexente, đontativo prexente
-			epurateListAndApplyFlag(list, 'Q', 'on',
-				'on', 'one', 'ion', 'ione', 'en', 'ene', 'é', 'ede', 'iede', 'ege', 'iege');
-
-/*			epurateListAndApplyFlag(list, 'L', 'ndo', 'ndo', 'nte', 'sto');
-			epurateListAndApplyFlag(list, 'M', 'iso', 'iso', 'ise', 'isi');
-			epurateListAndApplyFlag(list, 'N', 'isa', 'isa', 'ise', 'isi');
-			epurateListAndApplyFlag(list, 'O', 'ndo', 'ndo', 'sto');
-			epurateListAndApplyFlag(list, 'P', 'ison', 'ison', 'isé');
-
-//			epurateListAndApplyFlag(list, 'H', 'e', 'e', 'se');
-//			epurateListAndApplyFlag(list, 'G', 'n', 'n', 'ne/H');
-//			epurateListAndApplyFlag(list, 'GL', 'on/G', 'on/G', 'emo', 'ion/G', 'en/G', 'iede', 'iege');
-//			epurateListAndApplyFlag(list, 'M', 'ron', 'ron', 'remo', 'rave', 'ren', 'resi', 'rà', 'rè', 'ré', 'résimo', 'ría', 'ríe', 'rò');
-//			epurateListAndApplyFlag(list, 'NH', 'ivon', 'ivon', 'ivion/H', 'iven/H', 'isié', 'ivié', 'ié');
-
-/*			epurateListAndApplyFlag(list, 'D', 'o', 'o', 'a', 'e', 'i');
-			epurateListAndApplyFlag(list, 'O', 'a/B', 'a/B', 'o/D');
-			epurateListAndApplyFlag(list, 'E', 'e', 'e', 'i');
-			epurateListAndApplyFlag(list, 'F', 'a', 'a', 'e/E');
-			epurateListAndApplyFlag(list, 'GH', 'nse', 'n', 'ne', 'nse');
-			epurateListAndApplyFlag(list, 'G', 'nse', 'n', 'nse');
-			epurateListAndApplyFlag(list, 'I', 'a', '', 'a', 'e');
-			epurateListAndApplyFlag(list, 'H', 'ne', 'n', 'ne');
-			epurateListAndApplyFlag(list, 'J', '[àéí]', '', 'simo', 'vimo');
-			epurateListAndApplyFlag(list, 'K', 'de', 'de', 'ge');
-			epurateListAndApplyFlag(list, 'L', 'on/GH', 'on/GH', 'ede/K', 'sen/GH', 'siede/K', 'sié', 'sion/GH', 'son/GH', 'ven/G', 'vion/G', 'vié', 'von/G', 'é');
-			epurateListAndApplyFlag(list, 'M', 'ion/G', 'ion/G', 'imo', 'isen/G', 'ision/G', 'ison/G', 'isié', 'ié');
-			epurateListAndApplyFlag(list, 'N', 'mo', 'mo', 'sen/GH', 'sion/GH', 'son/GH', 'sié', 'vié', 'é');
-			epurateListAndApplyFlag(list, 'P', 'ron/G', 'ron/G', 'remo', 'ren/G', 'resi', 'rion/M', 'ré', 'résimo', 'rí/I', 'rò', 'rà', 'rè', 'ré');
-			epurateListAndApplyFlag(list, 'Q', 'ndo/B', 'ndo/B', 'n/GH', 'nte', 'rave');
-			epurateListAndApplyFlag(list, 'R', 'mo', 'mo', 'de/K', 'ndo/Q', 'ron/P', 'se/E', 'si', 'sto/D', 'vo/D');
-			epurateListAndApplyFlag(list, 'S', 'í/B', 'í/B', 'í', 'é/J', 'ú/I');/**/
 		};
 
 		var augmentForms = function(list){
@@ -480,17 +483,31 @@
 		};
 
 
-		require(['tools/lang/phonology/Word', 'tools/lang/phonology/PhonologyHelper', 'tools/lang/morphology/Bla', 'tools/lang/Dialect', 'tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Word, PhonologyHelper, Bla, Dialect, Verb, Themizer, verbsDictionary, JSONH){
+if(false)
+		require(['tools/lang/morphology/Bla', 'tools/lang/morphology/Verb', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Bla, Verb, verbsDictionary, JSONH){
+			verbsDictionary = JSONH.unpack(verbsDictionary);
+
+			var verbs = [],
+				paradigmEndings;
+			verbsDictionary.forEach(function(infinitive){
+				verbs.push(new Verb(composeInfinitive(infinitive)));
+			});
+			paradigmEndings = (new Bla()).generate(verbs);
+		});/**/
+
+if(false)
+		require(['tools/lang/morphology/Bla2', 'tools/lang/morphology/Verb', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Bla2, Verb, verbsDictionary, JSONH){
 			verbsDictionary = JSONH.unpack(verbsDictionary);
 
 			var verbs = [];
 			verbsDictionary.forEach(function(infinitive){
 				verbs.push(new Verb(composeInfinitive(infinitive)));
 			});
-			(new Bla()).generate(verbs);
+			Bla2.generate(verbs);
 		});/**/
 
-/*		require(['tools/lang/phonology/Word', 'tools/lang/phonology/PhonologyHelper', 'tools/lang/morphology/Bla', 'tools/lang/Dialect', 'tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Word, PhonologyHelper, Bla, Dialect, Verb, Themizer, verbsDictionary, JSONH){
+if(true)
+		require(['tools/lang/phonology/Word', 'tools/lang/phonology/PhonologyHelper', 'tools/lang/morphology/Conjugator', 'tools/lang/Dialect', 'tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Word, PhonologyHelper, Conjugator, Dialect, Verb, Themizer, verbsDictionary, JSONH){
 			verbsDictionary = JSONH.unpack(verbsDictionary);
 
 			var list = [],
@@ -501,7 +518,7 @@
 			verbsDictionary.forEach(function(infinitive){
 				infinitive = composeInfinitive(infinitive);
 
-/*				forms = Bla.extractForms(infinitive, null, true);
+				forms = Conjugator.extractForms(infinitive);
 				forms = forms.map(function(form){
 					return form.replace(/^#/, '').replace(/([or])#$/, '$1/BG').replace(/#$/, '/B').replace(/\$$/, '/G');
 				});
@@ -527,12 +544,12 @@ T4 = T1: senŧa aŧento | à > e
 						forms.push(form2 + (m? m[0]: ''));
 				});*/
 
-/*				forms.forEach(function(form){
+				/*forms.forEach(function(form){
 					if(form.match(/ría$/))
 						forms.push(form.replace(/ría$/, 'ríselo/D'));
 				});*/
 
-/*				infinitive = Word.unmarkDefaultStress(infinitive);
+				infinitive = Word.unmarkDefaultStress(infinitive);
 
 				forms.forEach(function(form){
 					idx = extractIndexOfCommonPart(form, infinitive);
@@ -554,12 +571,11 @@ T4 = T1: senŧa aŧento | à > e
 						list[idx].form = extractCommonPartFromList(list[idx].parents);
 					}
 				});/**/
-/*			});
-console.log(paradigm);
+			});
 
-/*			applyReductions(list);
+			applyReductions(list);
 
-			augmentForms(list);
+			/*augmentForms(list);
 
 			part = extractUnfeasible(list);
 			list = part[false];
@@ -571,10 +587,10 @@ console.log(paradigm);
 			reduceForms(list);
 
 			reduceParents(externalList);
-			transfer(list, externalList);
+			transfer(list, externalList);/**/
 
 			prettyPrint(list);/**/
-/*		});/**/
+		});/**/
 
 /*		require(['tools/lang/phonology/Word', 'tools/lang/phonology/PhonologyHelper', 'tools/lang/morphology/Conjugator', 'tools/lang/Dialect', 'tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Word, PhonologyHelper, Conjugator, Dialect, Verb, Themizer, verbsDictionary, JSONH){
 			verbsDictionary = JSONH.unpack(verbsDictionary);

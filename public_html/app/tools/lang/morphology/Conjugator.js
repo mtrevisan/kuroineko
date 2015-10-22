@@ -14,7 +14,6 @@ define(['tools/lang/Dialect', 'tools/lang/phonology/Orthography', 'tools/lang/ph
 		SPLITTER_REGEX_OPTIONAL_ALTERNATIVE = /(.*?)\((.+?)\)(.*)|(.+)\/(.+)/;
 
 
-	/** @requires infinitive be trimmed. */
 	var conjugate = function(infinitive, dialect, markPronomenalForms){
 		dialect = new Dialect(dialect);
 
@@ -22,9 +21,9 @@ define(['tools/lang/Dialect', 'tools/lang/phonology/Orthography', 'tools/lang/ph
 
 		var verb = new Verb(infinitive);
 
-		var themes = (new Themizer()).generate(verb, dialect);
+		var themes = Themizer.generate(verb, dialect);
 
-		var paradigm = (new Paradigm()).generate(verb, themes);
+		var paradigm = Paradigm.generate(verb, themes);
 
 		var pronouns = Pronouns.getPronouns(dialect);
 
@@ -44,7 +43,6 @@ define(['tools/lang/Dialect', 'tools/lang/phonology/Orthography', 'tools/lang/ph
 		};
 	};
 
-	/** @requires infinitive be trimmed. */
 	var extractForms = function(infinitive, dialect){
 		var conjugation = conjugate(infinitive, dialect, true),
 			paradigm = conjugation.paradigmInfo.paradigm;
@@ -84,7 +82,7 @@ define(['tools/lang/Dialect', 'tools/lang/phonology/Orthography', 'tools/lang/ph
 	var getStressThemeT3 = function(infinitive){
 		var verb = new Verb(infinitive);
 
-		var themes = (new Themizer()).generateRegularThemes(verb);
+		var themes = Themizer.generateRegularThemes(verb);
 
 		var stressIndex = Word.getIndexOfStress(themes.themeT3),
 			stressType = Word.getStressType(themes.themeT3[stressIndex]);

@@ -83,7 +83,8 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme'], function(St
 			//exclude unmark from words that can be truncated like "fenisié(de)" or "(g)à"
 			var tmp = (word[idx + 1] != '(' && !word.match(/^(re)?\(?g?\)?(à\/è|à|é|ò)$/) && !word.match(/^\(?x?\)?é$|^s[éí]$/)
 				&& !word.match(/^((r[ei])?d[àé]|(mal|move|soto)?st[àé]|(kon(tra)?|likue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?f[àé])$/)
-				&& !word.match(/^s[àò]$/) && !word.match(/^(|as?|des?|es|kon|pro|re|so)tr[àé]$/)? suppressStress(word): word);
+				&& !word.match(/^s[àò]$/) && !word.match(/^(|as?|des?|es|kon|pro|re|so)tr[àé]$/)?
+				word.replace(/[àéíóú]/g, function(chr){ return 'aeiou'['àéíóú'.indexOf(chr)]; }): word);
 			if(word == markDefaultStress(tmp))
 				word = tmp;
 		}

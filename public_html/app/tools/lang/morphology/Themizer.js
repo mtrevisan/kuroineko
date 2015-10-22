@@ -5,9 +5,6 @@
  */
 define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang/phonology/Syllabator', 'tools/data/StringHelper'], function(Word, Syllabe, Syllabator, StringHelper){
 
-	var Constructor = function(){};
-
-
 	/**
 	 * @param {Verb} verb
 	 * @param {Dialect} dialect
@@ -267,7 +264,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 			},
 
 			'enher': function(t, dialect){
-				var themeX9 = t.themeT3.replace(/èñe$/, (dialect.none? '(i)': (!dialect.western? 'i': '')) + t.themeT3.substr(-3, 1) + 'n');
+				var themeX9 = t.themeT3.replace(/[èé]ñe$/, (dialect.none? '(i)': (!dialect.western? 'i': '')) + t.themeT3.substr(-3, 1) + 'n');
 
 				return {
 					themeT9: themeX9,
@@ -496,15 +493,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 	})();
 
 
-	Constructor.prototype = {
-		constructor: Constructor,
-
+	return {
 		generate: generate,
 		generateRegularThemes: generateRegularThemes,
 		generateIrregularThemes: generateIrregularThemes
 	};
-
-
-	return Constructor;
 
 });
