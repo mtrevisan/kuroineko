@@ -1,7 +1,7 @@
 require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
-	module('NorvigSpellChecker');
+	QUnit.module('NorvigSpellChecker');
 
-	test('plain spell checker from dictionary', function(){
+	QUnit.test('plain spell checker from dictionary', function(){
 		var spellChecker = new NorvigSpellChecker('aàbcdefghijklmnopqrstuvwxyz');
 		spellChecker.readDictionary(['àbb', 'acbd']);
 
@@ -19,7 +19,7 @@ require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 		});
 	});
 
-	test('plain spell checker from phoneme\'s dictionary', function(){
+	QUnit.test('plain spell checker from phoneme\'s dictionary', function(){
 		var spellChecker = new NorvigSpellChecker('aàbt͡ʃdðd͡zeèéfghijd͡ʒklmnɲoòóprstθt͡suúvx');
 		spellChecker.readDictionary(['t͡ʃiao', 'ad͡ʒuto']);
 
@@ -35,7 +35,7 @@ require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 		});
 	});
 
-	test('plain spell checker from dictionary with uppercase', function(){
+	QUnit.test('plain spell checker from dictionary with uppercase', function(){
 		var spellChecker = new NorvigSpellChecker('aàbcdefghijklmnopqrstuvwxyz');
 		spellChecker.readDictionary(['ABB', 'ACBD']);
 
@@ -53,7 +53,7 @@ require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 		});
 	});
 
-	test('plain spell checker from corpus', function(){
+	QUnit.test('plain spell checker from corpus', function(){
 		var spellChecker = new NorvigSpellChecker('abcdefghijklmnopqrstuvwxyz');
 		spellChecker.readDictionary('abb, acbd');
 
@@ -71,7 +71,7 @@ require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 		});
 	});
 
-	test('plain spell checker from corpus 2', function(){
+	QUnit.test('plain spell checker from corpus 2', function(){
 		var spellChecker = new NorvigSpellChecker('abcdefghijklmnopqrstuvwxyz');
 		spellChecker.readDictionary('abb, acbd');
 
@@ -89,7 +89,7 @@ require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 		});
 	});
 
-	test('is correct', function(){
+	QUnit.test('is correct', function(){
 		var spellChecker = new NorvigSpellChecker('abcdefghijklmnopqrstuvwxyz');
 		spellChecker.readDictionary('abb, acbd');
 
@@ -98,7 +98,7 @@ require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 		ok(correct);
 	});
 
-	test('is not correct', function(){
+	QUnit.test('is not correct', function(){
 		var spellChecker = new NorvigSpellChecker('abcdefghijklmnopqrstuvwxyz');
 		spellChecker.readDictionary('abb, acbd');
 

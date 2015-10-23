@@ -1,7 +1,7 @@
 require(['tools/data/structs/Trie'], function(Trie){
-	module('Trie');
+	QUnit.module('Trie');
 
-	test('trie', function(){
+	QUnit.test('trie', function(){
 		var t = new Trie();
 
 		t.add('abc');
@@ -14,7 +14,7 @@ require(['tools/data/structs/Trie'], function(Trie){
 		notOk(t.contains('c'));
 	});
 
-	test('getWords 1', function(){
+	QUnit.test('getWords 1', function(){
 		var t = new Trie();
 
 		t.add('abc');
@@ -27,7 +27,7 @@ require(['tools/data/structs/Trie'], function(Trie){
 		deepEqual(t.getWords('c'), []);
 	});
 
-	test('getWords 2', function(){
+	QUnit.test('getWords 2', function(){
 		var t = new Trie();
 
 		t.add('a');
@@ -40,7 +40,7 @@ require(['tools/data/structs/Trie'], function(Trie){
 		deepEqual(t.getWords('a').sort(), ['a', 'ab', 'abc', 'abd'].sort());
 	});
 
-	test('findMatchesOnPath', function(){
+	QUnit.test('findMatchesOnPath', function(){
 		var t = new Trie();
 
 		t.add('a');
@@ -52,7 +52,7 @@ require(['tools/data/structs/Trie'], function(Trie){
 		deepEqual(t.findMatchesOnPath('abcd').sort(), ['a', 'ab', 'abc'].sort());
 	});
 
-	test('apply', function(){
+	QUnit.test('apply', function(){
 		var t = new Trie();
 
 		t.add('abc');

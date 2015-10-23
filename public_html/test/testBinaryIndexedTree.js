@@ -1,7 +1,7 @@
 require(['tools/data/structs/BinaryIndexedTree'], function(BinaryIndexedTree){
-	module('BinaryIndexedTree');
+	QUnit.module('BinaryIndexedTree');
 
-	test('array contructor', function(){
+	QUnit.test('array contructor', function(){
 		var freqs = [1, 1, 1, 1, 1],
 			i;
 		var bit = new BinaryIndexedTree(5, freqs);
@@ -13,7 +13,7 @@ require(['tools/data/structs/BinaryIndexedTree'], function(BinaryIndexedTree){
 		equal(bit.readTotal(), 5);
 	});
 
-	test('size contructor', function(){
+	QUnit.test('size contructor', function(){
 		var i;
 		var bit = new BinaryIndexedTree(5);
 
@@ -24,7 +24,7 @@ require(['tools/data/structs/BinaryIndexedTree'], function(BinaryIndexedTree){
 		equal(bit.readTotal(), 5);
 	});
 
-	test('update', function(){
+	QUnit.test('update', function(){
 		var bit = new BinaryIndexedTree(5);
 
 		bit.update(2, 1);
@@ -45,7 +45,7 @@ require(['tools/data/structs/BinaryIndexedTree'], function(BinaryIndexedTree){
 		equal(bit.readTotal(), 8);
 	});
 
-	test('map', function(){
+	QUnit.test('map', function(){
 		var bit = new BinaryIndexedTree(5);
 
 		bit.update(2, 1);
@@ -67,7 +67,7 @@ require(['tools/data/structs/BinaryIndexedTree'], function(BinaryIndexedTree){
 		equal(bit.readTotal(), 6);
 	});
 
-	test('find exact', function(){
+	QUnit.test('find exact', function(){
 		var bit = new BinaryIndexedTree(5);
 
 		bit.update(2, 1);
@@ -85,7 +85,7 @@ require(['tools/data/structs/BinaryIndexedTree'], function(BinaryIndexedTree){
 		equal(bit.find(9, true), -1);
 	});
 
-	test('find lower', function(){
+	QUnit.test('find lower', function(){
 		var bit = new BinaryIndexedTree(5);
 
 		bit.update(2, 1);

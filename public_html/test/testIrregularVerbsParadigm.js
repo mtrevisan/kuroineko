@@ -1,12 +1,12 @@
 require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/lang/morphology/Paradigm'], function(Verb, Themizer, Paradigm){
-	module('IrregularVerbsParadigm');
+	QUnit.module('IrregularVerbsParadigm');
 
-	test('andàr', function(){
+	QUnit.test('andàr', function(){
 		var verb = new Verb('andar');
 
-		var themes = (new Themizer(verb, 'none')).generate();
+		var themes = Themizer.generate(verb, 'none');
 
-		var paradigm = (new Paradigm(verb, themes)).generate();
+		var paradigm = Paradigm.generate(verb, themes);
 		delete paradigm.applyDialectalVariations;
 
 		var expected = {
@@ -131,12 +131,12 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 		deepEqual(paradigm, expected, 'andar');
 	});
 
-	test('fàr', function(){
+	QUnit.test('fàr', function(){
 		var verb = new Verb('far');
 
-		var themes = (new Themizer(verb, 'none')).generate();
+		var themes = Themizer.generate(verb, 'none');
 
-		var paradigm = (new Paradigm(verb, themes)).generate();
+		var paradigm = Paradigm.generate(verb, themes);
 		delete paradigm.applyDialectalVariations;
 
 		var expected = {
@@ -247,12 +247,12 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 		deepEqual(paradigm, expected, 'far');
 	});
 
-	test('déver', function(){
+	QUnit.test('déver', function(){
 		var verb = new Verb('déver');
 
-		var themes = (new Themizer(verb, 'none')).generate();
+		var themes = Themizer.generate(verb, 'none');
 
-		var paradigm = (new Paradigm(verb, themes)).generate();
+		var paradigm = Paradigm.generate(verb, themes);
 		delete paradigm.applyDialectalVariations;
 
 		var expected = {
@@ -357,12 +357,12 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 		deepEqual(paradigm, expected, 'déver');
 	});
 
-	test('savér', function(){
+	QUnit.test('savér', function(){
 		var verb = new Verb('savér');
 
-		var themes = (new Themizer(verb, 'none')).generate();
+		var themes = Themizer.generate(verb, 'none');
 
-		var paradigm = (new Paradigm(verb, themes)).generate();
+		var paradigm = Paradigm.generate(verb, themes);
 		delete paradigm.applyDialectalVariations;
 
 		var expected = {
@@ -471,12 +471,12 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 		deepEqual(paradigm, expected, 'savér');
 	});
 
-	test('díxer', function(){
+	QUnit.test('díxer', function(){
 		var verb = new Verb('díxer');
 
-		var themes = (new Themizer(verb, 'none')).generate();
+		var themes = Themizer.generate(verb, 'none');
 
-		var paradigm = (new Paradigm(verb, themes)).generate();
+		var paradigm = Paradigm.generate(verb, themes);
 		delete paradigm.applyDialectalVariations;
 
 		var expected = {
@@ -605,12 +605,12 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 		deepEqual(paradigm, expected, 'díxer');
 	});
 
-	test('podér', function(){
+	QUnit.test('podér', function(){
 		var verb = new Verb('podér');
 
-		var themes = (new Themizer(verb, 'none')).generate();
+		var themes = Themizer.generate(verb, 'none');
 
-		var paradigm = (new Paradigm(verb, themes)).generate();
+		var paradigm = Paradigm.generate(verb, themes);
 		delete paradigm.applyDialectalVariations;
 
 		var expected = {
@@ -725,12 +725,12 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 		deepEqual(paradigm, expected, 'podér');
 	});
 
-	test('vèñer', function(){
+	QUnit.test('vèñer', function(){
 		var verb = new Verb('vèñer');
 
-		var themes = (new Themizer(verb, 'none')).generate();
+		var themes = Themizer.generate(verb, 'none');
 
-		var paradigm = (new Paradigm(verb, themes)).generate();
+		var paradigm = Paradigm.generate(verb, themes);
 		delete paradigm.applyDialectalVariations;
 
 		var expected = {
@@ -841,12 +841,12 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 		deepEqual(paradigm, expected, 'vèñer');
 	});
 
-	test('tràer', function(){
+	QUnit.test('tràer', function(){
 		var verb = new Verb('tràer');
 
-		var themes = (new Themizer(verb, 'none')).generate();
+		var themes = Themizer.generate(verb, 'none');
 
-		var paradigm = (new Paradigm(verb, themes)).generate();
+		var paradigm = Paradigm.generate(verb, themes);
 		delete paradigm.applyDialectalVariations;
 
 		var expected = {
@@ -984,12 +984,12 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 		deepEqual(paradigm, expected, 'tràer');
 	});
 
-	test('tolér', function(){
+	QUnit.test('tolér', function(){
 		var verb = new Verb('tolér');
 
-		var themes = (new Themizer(verb, 'none')).generate();
+		var themes = Themizer.generate(verb, 'none');
 
-		var paradigm = (new Paradigm(verb, themes)).generate();
+		var paradigm = Paradigm.generate(verb, themes);
 		delete paradigm.applyDialectalVariations;
 
 		var expected = {
@@ -1120,12 +1120,12 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 		deepEqual(paradigm, expected, 'tolér');
 	});
 
-	test('èser', function(){
+	QUnit.test('èser', function(){
 		var verb = new Verb('èser');
 
-		var themes = (new Themizer(verb, 'none')).generate();
+		var themes = Themizer.generate(verb, 'none');
 
-		var paradigm = (new Paradigm(verb, themes)).generate();
+		var paradigm = Paradigm.generate(verb, themes);
 		delete paradigm.applyDialectalVariations;
 
 		var expected = {
@@ -1231,12 +1231,12 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 		deepEqual(paradigm, expected, 'èser');
 	});
 
-	test('avér', function(){
+	QUnit.test('avér', function(){
 		var verb = new Verb('avér');
 
-		var themes = (new Themizer(verb, 'none')).generate();
+		var themes = Themizer.generate(verb, 'none');
 
-		var paradigm = (new Paradigm(verb, themes)).generate();
+		var paradigm = Paradigm.generate(verb, themes);
 		delete paradigm.applyDialectalVariations;
 
 		var expected = {

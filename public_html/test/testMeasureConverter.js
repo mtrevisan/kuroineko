@@ -1,7 +1,7 @@
 require(['tools/measure/MeasureConverter'], function(MeasureConverter){
-	module('MeasureConverter');
+	QUnit.module('MeasureConverter');
 
-	test('measure constructor / add unit / convert measure', function(){
+	QUnit.test('measure constructor / add unit / convert measure', function(){
 		var m = new MeasureConverter({
 			'pèrtega':	{parentValue: 6,		parentUOM: 'piè'}
 		}, 'piè');
@@ -21,7 +21,7 @@ require(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		]);
 	});
 
-	test('expand', function(){
+	QUnit.test('expand', function(){
 		var m = new MeasureConverter(['pèrtega = 6 piè',
 			'paso = 5 piè',
 			'paseto = 3 piè'], 'piè');
@@ -33,7 +33,7 @@ require(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		deepEqual(m.expand(0, 'pèrtega'), []);
 	});
 
-	test('convert measure', function(){
+	QUnit.test('convert measure', function(){
 		var si = new MeasureConverter({
 			'm':	{}
 		}, 'm');

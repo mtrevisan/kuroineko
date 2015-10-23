@@ -1,5 +1,5 @@
 require(['tools/data/coder/elias/EliasDeltaCoder', 'tools/data/structs/BitBuffer', 'text!tools/lang/data/Galepin.js'], function(EliasDeltaCoder, BitBuffer, Galepin){
-	module('EliasDeltaCoder');
+	QUnit.module('EliasDeltaCoder');
 
 	var extractCounts = function(text){
 		var list = text.split(''),
@@ -18,7 +18,7 @@ require(['tools/data/coder/elias/EliasDeltaCoder', 'tools/data/structs/BitBuffer
 	};
 
 
-	test('coding/decoding', function(){
+	QUnit.test('coding/decoding', function(){
 		var base = 'This method will be called exactly once for each symbol being encoded or decoded, and the calls will be made in the order in which they';
 		var fixedCounts = extractCounts(base);
 
@@ -35,7 +35,7 @@ require(['tools/data/coder/elias/EliasDeltaCoder', 'tools/data/structs/BitBuffer
 		deepEqual(out, data);
 	});
 
-	test('coding/decoding', function(){
+	QUnit.test('coding/decoding', function(){
 		var fixedCounts = extractCounts(Galepin);
 
 		var data = [],

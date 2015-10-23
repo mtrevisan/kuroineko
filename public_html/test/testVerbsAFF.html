@@ -542,7 +542,7 @@ var start = +new Date();
 				infinitive = composeInfinitive(infinitive);
 
 				forms = Conjugator.extractForms(infinitive);
-				forms = forms.map(function(form){
+/*				forms = forms.map(function(form){
 					return form.replace(/^#/, '').replace(/([or])#$/, '$1/BG').replace(/#$/, '/B').replace(/\$$/, '/G');
 				});
 				forms = forms.filter(function(x, i){
@@ -568,7 +568,7 @@ T4 = T1: senŧa aŧento | à > e
 				infinitive = Word.unmarkDefaultStress(infinitive);
 
 				forms.forEach(function(form){
-					idx = extractIndexOfCommonPartFromStart(form, infinitive);
+					idx = extractIndexOfCommonPartFromStart(infinitive, form);
 
 					rep = infinitive.substr(idx);
 					repment = form.substr(idx);
@@ -576,9 +576,12 @@ T4 = T1: senŧa aŧento | à > e
 					idx = list.findIndex(function(el){ return (el.replaced == rep && el.replacement == repment); });
 					if(idx < 0)
 						list.push({replaced: rep, replacement: repment, parents: [infinitive], form: infinitive});
-					else if(list[idx].parents.indexOf(infinitive) < 0){
-						list[idx].parents.push(infinitive);
-						list[idx].form = extractCommonPartFromEnd(list[idx].form, infinitive);
+					else{
+						data = list[idx];
+						if(data.parents.indexOf(infinitive) < 0){
+							data.parents.push(infinitive);
+							data.form = extractCommonPartFromEnd(infinitive, data.form);
+						}
 					}
 				});
 			});
