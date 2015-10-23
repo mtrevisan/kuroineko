@@ -70,11 +70,11 @@ define(['tools/lang/Dialect', 'tools/lang/phonology/Orthography', 'tools/lang/ph
 			}
 		};
 		response.forEach(splitter);
-		response = ArrayHelper.unique(response.filter(function(item){
+		response = response.filter(function(item){
 			return !item.match(SPLITTER_REGEX_OPTIONAL_ALTERNATIVE);
-		}));
+		});
 
-		response = response.map(Word.unmarkDefaultStress);
+		response = ArrayHelper.unique(response.map(Word.unmarkDefaultStress));
 
 		return response;
 	};
