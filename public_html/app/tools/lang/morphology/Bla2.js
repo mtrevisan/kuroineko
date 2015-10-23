@@ -42,10 +42,12 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 		//convertIntoDialect.call(this, dialect);
 
-		constraintToInfinitives(themesEndings, infinitives);
-		constraintToInfinitives(paradigmEndings, infinitives);
+		paradigmEndings = compact(paradigmEndings);
 
-console.log(themesEndings);
+//		constraintToInfinitives(themesEndings, infinitives);
+		constraintToInfinitivesParadigm(paradigmEndings, infinitives);
+
+//console.log(themesEndings);
 console.log(paradigmEndings);
 	};
 
@@ -103,8 +105,6 @@ console.log(paradigmEndings);
 		generateSubjunctiveImperfect.call(this, IRREGULAR, irr);
 		generateConditionalSimple.call(this, IRREGULAR, irr);
 		generateGerundSimple.call(this, REGULAR, reg);
-
-		return this.paradigm;
 	};
 
 	/** @private */
@@ -155,7 +155,7 @@ console.log(paradigmEndings);
 						obj.parents = parentsFalse;
 
 
-						obj = {parents: parentsTrue, suffix: obj.suffix};
+						obj = {parents: parentsTrue, suffixes: obj.suffixes};
 						list.push(obj);
 						if(obj.parents.indexOf(common) < 0){
 							variability = listToRegExp(extractVariability(common.length + 1, 1, obj.parents));
@@ -188,7 +188,7 @@ console.log(paradigmEndings);
 
 				if(listNoPrefixes.length){
 					listNoPrefixes.forEach(function(el){
-						list.push({matcher: el, parents: listNoPrefixes.slice(0).splice(listNoPrefixes.indexOf(el), 1), suffix: obj.suffix});
+						list.push({matcher: el, parents: listNoPrefixes.slice(0).splice(listNoPrefixes.indexOf(el), 1), suffixes: obj.suffixes});
 					});
 
 					obj.parents = [first];
@@ -227,6 +227,153 @@ console.log(paradigmEndings);
 					console.log('error! cannot split up the initial verbs array');
 			}/**/
 		});
+	};
+
+	/** @private */
+	var constraintToInfinitivesParadigm = function(list, infinitives){
+		var diff, variab, variability, common, re, found, part, partitioningResults, parentsTrue, parentsFalse,
+			listNoPrefixes, first;
+		list.forEach(function(obj){
+			diff = difference(infinitives, obj.infinitives);
+
+			common = extractCommonPartFromList(obj.infinitives);
+			variability = '';
+			re = new RegExp(common + '$');
+			found = diff.some(function(el){ return el.match(re); });
+
+			if(found && obj.infinitives.indexOf(common) < 0){
+				variab = extractVariability(common.length, 1, obj.infinitives);
+				variability = listToRegExp(variab);
+				re = new RegExp(variability + common + '$');
+				found = diff.some(function(el){ return el.match(re); });
+			}
+
+			if(found){
+				if(obj.infinitives.length == 1){
+					obj.matcher = '^' + obj.infinitives[0];
+
+					return;
+				}
+
+				/*listNoPrefixes = uniqueNoPrefixes(obj.infinitives);
+				if(listNoPrefixes.length){
+					common = extractCommonPartFromList(listNoPrefixes);
+					variability = '';
+					re = new RegExp(common + '$');
+					found = diff.some(function(el){ return el.match(re); });
+				}
+
+				if(found && listNoPrefixes.indexOf(common) < 0){
+					variab = extractVariability(common.length, 1, listNoPrefixes);
+					variability = listToRegExp(variab);
+					re = new RegExp(variability + common + '$');
+					found = diff.some(function(el){ return el.match(re); });
+				}*/
+
+
+				if(found){
+					part = partition(obj.infinitives, function(el){ return (el.length - common.length >= 1? el[el.length - common.length - 1]: '^'); });
+					if(!part['^']){
+						variability = listToRegExp(extractVariability(common.length + 1, 1, obj.infinitives));
+						if(variability.indexOf('.') < 0){
+							partitioningResults = {'true': [], 'false': []};
+							Object.keys(part).forEach(function(k){
+								re = new RegExp(variability + k + common + '$');
+								partitioningResults[diff.some(function(el){ return el.match(re); })].push(k);
+							});
+							if(partitioningResults['true'].length && partitioningResults['false'].length){
+								parentsTrue = [];
+								parentsFalse = [];
+								partitioningResults['true'].forEach(function(k){
+									parentsTrue = parentsTrue.concat(part[k]);
+								});
+								partitioningResults['false'].forEach(function(k){
+									parentsFalse = parentsFalse.concat(part[k]);
+								});
+
+								obj.matcher = listToRegExp(partitioningResults['false']) + common;
+								obj.infinitives = parentsFalse;
+
+
+								obj = {infinitives: parentsTrue, suffixes: obj.suffixes};
+								list.push(obj);
+								if(obj.infinitives.indexOf(common) < 0){
+									variability = listToRegExp(extractVariability(common.length + 1, 1, obj.infinitives));
+									re = new RegExp(variability + listToRegExp(partitioningResults['true']) + common + '$');
+									found = diff.some(function(el){ return el.match(re); });
+								}
+							}
+							else if(!partitioningResults['true'].length){
+								obj.matcher = variability + listToRegExp(Object.keys(part)) + common;
+
+								return;
+							}
+						}
+					}
+				}
+			}
+
+			if(found){
+				common = extractCommonPartFromList(diff);
+				variability = listToNotRegExp(extractVariability(common.length, 1, diff));
+				re = new RegExp(variability + common + '$');
+				found = !obj.infinitives.every(function(el){ return el.match(re); });
+			}
+
+
+			if(found){
+				console.log('error! cannot split up the initial verbs array');
+
+				/*listNoPrefixes = uniqueNoPrefixes(obj.infinitives);
+				first = listNoPrefixes.shift();
+				obj.matcher = '^' + first;
+
+				if(listNoPrefixes.length){
+					listNoPrefixes.forEach(function(el){
+						list.push({matcher: el, infinitives: listNoPrefixes.slice(0).splice(listNoPrefixes.indexOf(el), 1), suffixes: obj.suffixes});
+					});
+
+					obj.infinitives = [first];
+				}/**/
+			}
+			else
+				obj.matcher = variability + common;
+		});
+	};
+
+	/** @private */
+	var compact = function(list){
+		var compacted = [],
+			data;
+		for(var i = list.length - 1; i >= 0; i --){
+			data = {themes: list[i].themes, infinitives: [list[i].infinitive]};
+
+			//search list for equal themes
+			for(var j = i - 1; j >= 0; j --)
+				if(equals(list[j].themes, list[i].themes)){
+					data.infinitives.push(list[j].infinitive);
+
+					//remove element from list
+					list.splice(j, 1);
+					i --;
+					j --;
+				}
+			list.splice(i, 1);
+			i --;
+
+			compacted.push(data);
+		}
+		return compacted;
+	};
+
+	/** @private */
+	var equals = function(a, b){
+		return (a.length == b.length && a.every(function(el, i){ return (el.theme == b[i].theme && equalsArray(el.suffixes, b[i].suffixes)); }));
+	};
+
+	/** @private */
+	var equalsArray = function(a, b){
+		return (a.length == b.length && a.every(function(el, i){ return (el == b[i]); }));
 	};
 
 	/** @private */
@@ -562,7 +709,6 @@ console.log(paradigmEndings);
 				insert.call(this, 6, '(do)');
 				insert.call(this, 6, 'o');
 				insert.call(this, 6, '(d)i');
-				insert.call(this, 6, '');
 				insert.call(this, 6, '(d)a');
 				insert.call(this, 6, '(d)e');
 			}
@@ -717,11 +863,18 @@ console.log(paradigmEndings);
 
 	/** @private */
 	var insert = function(theme, suffix){
-		var idx = findIndex(this.paradigm, function(el){ return (el.theme == theme && el.suffix == suffix); });
+		var infinitive = this.verb.infinitive;
+		var idx = findIndex(this.paradigm, function(el){ return (el.infinitive == infinitive); });
 		if(idx < 0)
-			this.paradigm.push({theme: theme, suffix: suffix, parents: [this.verb.infinitive]});
-		else if(this.paradigm[idx].parents.indexOf(this.verb.infinitive) < 0)
-			this.paradigm[idx].parents.push(this.verb.infinitive);
+			this.paradigm.push({infinitive: this.verb.infinitive, themes: [{theme: theme, suffixes: [suffix]}]});
+		else{
+			var t = this.paradigm[idx].themes;
+			idx = findIndex(t, function(el){ return (el.theme == theme); });
+			if(idx < 0)
+				t.push({theme: theme, suffixes: [suffix]});
+			else
+				t[idx].suffixes.push(suffix);
+		}
 	};
 
 	/** @private */

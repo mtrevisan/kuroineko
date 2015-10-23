@@ -107,15 +107,16 @@
 				'r\/BG', 're');
 			epurateListAndApplyFlag(list, 'H2', 'r',
 				'r', 're');
-//3749
+//5672
 			//T2: indikativo inparfèto, đontativo inparfèto, partiŧipio ativo, xerundio sénplise
 			epurateListAndApplyFlag(list, 'I', 'vimo',
 				'vimo', 'imo', 'o\/D', 'vo\/D',
 				'simo', 'se\/E',
 				'sto\/D',
+				'', 'do\/D',
 				'ndo\/BG');
 			//T4: indikativo futuro, kondiŧional prexente
-			epurateListAndApplyFlag(list, 'J', 'rò',
+/*			epurateListAndApplyFlag(list, 'J', 'rò',
 				'rò', 'rà', 'rè', 'ré', 'remo', 'ron', 'ren',
 				'ría', 'ríe', 'résimo', 'ronse', 'rion', 'rionse', 'rison', 'risonse', 'rision', 'risionse', 'rense', 'risen', 'risense', 'resi', 'risié', 'rié',
 				'rave');
@@ -175,10 +176,27 @@
 			epurateListAndApplyFlag(list, 'S', 'í/B', 'í/B', 'í', 'é/J', 'ú/I');/**/
 		};
 
+		/*var epurateListAndApplyFlag = function(list, flag, matcher, base){
+			var matcherLength = matcher.length,
+				replacement = Array.prototype.slice.call(arguments, 3, arguments.length),
+				i, j, rep, repment, idx0, indices, parents,
+				inters, p;
+			matcher = new RegExp(matcher + '$');
+
+			var lists;
+			lists = replacement.map(function(last){
+				matcher = new RegExp(last + '$');
+				return list.filter(function(el){ return el.replacement.match(matcher); });
+			});
+			if(lists.some(function(list){ return !list.length; }))
+				return;
+console.log('hgf');
+		};/**/
+
 		var epurateListAndApplyFlag = function(list, flag, matcher, base){
 			var matcherLength = matcher.length,
 				replacement = Array.prototype.slice.call(arguments, 4, arguments.length),
-				i, j, rep, repment, idx0, indices, parents,
+				i, j, rep, repment, indices, parents,
 				inters, p;
 			matcher = new RegExp(matcher + '$');
 
@@ -187,9 +205,7 @@
 				if(list.hasOwnProperty(i) && repment.match(matcher)){
 					rep = list[i].replaced;
 					repment = repment.substr(0, repment.length - matcherLength);
-					idx0 = indexOfReplacement(list, rep, new RegExp(repment + base + '$'));
-					if(idx0 < 0)
-						continue;
+//console.log('search for ' + (repment + base));
 
 					indices = replacement.map(function(last){ return indexOfReplacement(list, rep, new RegExp(repment + last + '$')); });
 					if(indices.some(function(el){ return (el < 0); }))
@@ -197,18 +213,20 @@
 
 					//here, all replacements are found
 
+					//collect parents
 					parents = indices.map(function(i){ return list[i].parents; });
-					parents.push(list[idx0].parents);
+					parents.push(list[i].parents);
+
+					//test if all parents are the same
 					if(!parents.every(function(p, i){ return p.equals(parents[(i + 1) % parents.length]); })){
 						//extract common parts
 						inters = intersection.apply(this, parents);
-						if(!inters.length)
-							//nothing can be done, continue
-							continue;
 
-						indices.every(function(el){
+						indices.forEach(function(el){
 							el = list[el];
 							p = el.parents.difference(inters);
+
+							//split-up
 							if(p.length){
 								list.push({
 									replaced: el.replaced,
@@ -216,22 +234,22 @@
 									form: el.form,
 									parents: p
 								});
-								el.parents = intersection(el.parents, inters);
+								el.parents = inters.slice(0);
 							}
 						});
 					}
 
-					//all the replacements shares the same parents
+					//here all the replacements shares the same parents
 
-					list[idx0].replacement = list[idx0].replacement.replace(/(\/(.+))?$/, '/' + flag + '$2');
+					//add flag
+					list[i].replacement = list[i].replacement.replace(/(\/(.+))?$/, '/' + flag + '$2');
 
-					replacement.forEach(function(last){
-						while((j = indexOfReplacement(list, rep, repment + last)) >= 0){
-							if(j < i)
-								i --;
+					//remove replaced items
+					indices.forEach(function(el){
+						list.splice(el, 1);
 
-							list.splice(j, 1);
-						}
+						if(el < i)
+							i --;
 					});
 				}
 			}
@@ -241,7 +259,7 @@
 			return list.findIndex(function(el){ return (el.replaced == replaced && el.replacement.match(replacement)); });
 		};
 
-		var extractIndexOfCommonPart = function(str1, str2){
+		var extractIndexOfCommonPartFromStart = function(str1, str2){
 			var i, len;
 			for(i = 0, len = Math.min(str1.length, str2.length) - 1; i < len; i ++)
 				if(str1[i] != str2[i])
@@ -252,12 +270,12 @@
 		var extractCommonPartFromList = function(list){
 			var form;
 			list.forEach(function(obj, i){
-				form = (!i? obj: extractCommonPart(obj, form));
+				form = (!i? obj: extractCommonPartFromEnd(obj, form));
 			});
 			return form;
 		};
 
-		var extractCommonPart = function(a, b){
+		var extractCommonPartFromEnd = function(a, b){
 			for(var i = 0, len = Math.min(a.length, b.length); i < len; i ++)
 				if(a[a.length - i - 1] != b[b.length - i - 1])
 					break;
@@ -487,23 +505,27 @@ if(false)
 		require(['tools/lang/morphology/Bla', 'tools/lang/morphology/Verb', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Bla, Verb, verbsDictionary, JSONH){
 			verbsDictionary = JSONH.unpack(verbsDictionary);
 
+var start = +new Date();
 			var verbs = [],
 				paradigmEndings;
 			verbsDictionary.forEach(function(infinitive){
 				verbs.push(new Verb(composeInfinitive(infinitive)));
 			});
 			paradigmEndings = (new Bla()).generate(verbs);
+console.log(((+new Date() - start) / 1000) + ' s');
 		});/**/
 
 if(false)
 		require(['tools/lang/morphology/Bla2', 'tools/lang/morphology/Verb', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Bla2, Verb, verbsDictionary, JSONH){
 			verbsDictionary = JSONH.unpack(verbsDictionary);
 
+var start = +new Date();
 			var verbs = [];
 			verbsDictionary.forEach(function(infinitive){
 				verbs.push(new Verb(composeInfinitive(infinitive)));
 			});
 			Bla2.generate(verbs);
+console.log(((+new Date() - start) / 1000) + ' s');
 		});/**/
 
 if(true)
@@ -513,8 +535,9 @@ if(true)
 			var list = [],
 				paradigm = {},
 				verb, forms, themes,
-				idx, repment, data,
+				idx, rep, repment, data,
 				part, externalList;
+var start = +new Date();
 			verbsDictionary.forEach(function(infinitive){
 				infinitive = composeInfinitive(infinitive);
 
@@ -536,13 +559,6 @@ e intel xerundio (finéndo).
 T2 = T1: aŧento PVT > VT | à > é
 T4 = T1: senŧa aŧento | à > e
 */
-				/*forms.forEach(function(form){
-					var m = form.match(/\/.+$/),
-						f = form.replace(/\/.+$/, ''),
-						form2 = PhonologyHelper.vowelLoweringCombinatorialVariation(f, 'central');
-					if(form2 != f)
-						forms.push(form2 + (m? m[0]: ''));
-				});*/
 
 				/*forms.forEach(function(form){
 					if(form.match(/ría$/))
@@ -552,28 +568,23 @@ T4 = T1: senŧa aŧento | à > e
 				infinitive = Word.unmarkDefaultStress(infinitive);
 
 				forms.forEach(function(form){
-					idx = extractIndexOfCommonPart(form, infinitive);
+					idx = extractIndexOfCommonPartFromStart(form, infinitive);
 
+					rep = infinitive.substr(idx);
 					repment = form.substr(idx);
 
-					data = {
-						replaced: infinitive.substr(idx),
-						replacement: repment,
-						form: infinitive,
-						parents: [infinitive]
-					};
-
-					idx = list.findIndex(function(el){ return (el.replaced == data.replaced && el.replacement == data.replacement); });
+					idx = list.findIndex(function(el){ return (el.replaced == rep && el.replacement == repment); });
 					if(idx < 0)
-						list.push(data);
-					else if(list[idx].parents.indexOf(data.parents[0]) < 0){
-						list[idx].parents.push(data.parents[0]);
-						list[idx].form = extractCommonPartFromList(list[idx].parents);
+						list.push({replaced: rep, replacement: repment, parents: [infinitive], form: infinitive});
+					else if(list[idx].parents.indexOf(infinitive) < 0){
+						list[idx].parents.push(infinitive);
+						list[idx].form = extractCommonPartFromEnd(list[idx].form, infinitive);
 					}
-				});/**/
+				});
 			});
+console.log(((+new Date() - start) / 60000) + ' min');
 
-			applyReductions(list);
+//			applyReductions(list);
 
 			/*augmentForms(list);
 

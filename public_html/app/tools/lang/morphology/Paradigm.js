@@ -160,7 +160,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			}
 			var person = root.firstPlural = {};
 			if(t.themeT2)
-				person.general = root.secondPlural.general.replace(/i$/, 'í') + 'mo';
+				person.general = root.secondPlural.general + 'mo';
 			if(t.themeT11){
 				person.northern1 = pronomenalMark + t.themeT11 + (!t.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'ón(se)';
 				person.northern2 = pronomenalMark + t.themeT11 + 'iv(i)ón(se)';
