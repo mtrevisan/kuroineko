@@ -223,7 +223,7 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var addJSExtension = function(value){
-		return value.replace(/([^\!]+?)(\.js)?$/, '$1.js');
+		return (value.match(/\.[^.\/]+$/)? value: value + '.js');
 	};
 
 	/** @private */
