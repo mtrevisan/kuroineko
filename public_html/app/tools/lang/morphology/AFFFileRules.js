@@ -1,5 +1,5 @@
 /**
- * @class Bla2
+ * @class AFFFileRules
  *
  * @author Mauro Trevisan
  */
@@ -40,7 +40,12 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	 * @constant
 	 * @private
 	 */
-		SPLITTER_REGEX_OPTIONAL_ALTERNATIVE = /(.*?)\((.+?)\)(.*)|(.+)\/(.+)/;
+		SPLITTER_REGEX_OPTIONAL_ALTERNATIVE = /(.*?)\((.+?)\)(.*)|(.+)\/(.+)/,
+	/**
+	 * @constant
+	 * @private
+	 */
+		SUFFIXES_BASE_INDEX = 4;
 
 
 
@@ -79,7 +84,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 //console.log(themesEndings);
 console.log(paradigmEndings);
 //console.log(commonThemes);
-		printThemes(commonThemes);
+//		printThemes(commonThemes);
 	};
 
 	/** @private */
@@ -286,22 +291,6 @@ console.log(paradigmEndings);
 					return;
 				}
 
-				/*listNoPrefixes = uniqueNoPrefixes(obj.infinitives);
-				if(listNoPrefixes.length){
-					common = extractCommonPartFromList(listNoPrefixes);
-					variability = '';
-					re = new RegExp(common + '$');
-					found = diff.some(function(el){ return el.match(re); });
-				}
-
-				if(found && listNoPrefixes.indexOf(common) < 0){
-					variab = extractVariability(common.length, 1, listNoPrefixes);
-					variability = listToRegExp(variab);
-					re = new RegExp(variability + common + '$');
-					found = diff.some(function(el){ return el.match(re); });
-				}*/
-
-
 				if(found){
 					part = ArrayHelper.partition(obj.infinitives, function(el){ return (el.length - common.length >= 1? el[el.length - common.length - 1]: '^'); });
 					if(!part['^']){
@@ -348,11 +337,11 @@ console.log(paradigmEndings);
 
 
 			if(found){
-				console.log('error! cannot split up the initial verbs array');
+//				console.log('error! cannot split up the initial verbs array');
 
-				/*listNoPrefixes = uniqueNoPrefixes(obj.infinitives);
+				listNoPrefixes = uniqueNoPrefixes(obj.infinitives);
 				first = listNoPrefixes.shift();
-				obj.matcher = '^' + first;
+				obj.matcher = START_OF_WORD + first;
 
 				if(listNoPrefixes.length){
 					listNoPrefixes.forEach(function(el){
@@ -360,10 +349,20 @@ console.log(paradigmEndings);
 					});
 
 					obj.infinitives = [first];
-				}/**/
+				}
 			}
 			else
 				obj.matcher = variability + common;
+		});
+	};
+
+	/** @private */
+	var uniqueNoPrefixes = function(list){
+		return list.filter(function(x){
+			for(var i = 0, len = list.length; i < len; i ++)
+				if(x.indexOf(list[i]) > 0)
+					return false;
+			return true;
 		});
 	};
 
@@ -406,7 +405,7 @@ console.log(paradigmEndings);
 
 	/** @private */
 	var printThemes = function(list){
-		var i = 4,
+		var i = SUFFIXES_BASE_INDEX,
 			base;
 		list.forEach(function(sublist){
 			sublist = expandThemes(sublist);
