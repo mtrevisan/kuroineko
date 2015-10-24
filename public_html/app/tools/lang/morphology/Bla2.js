@@ -367,11 +367,6 @@ console.log(paradigmEndings);
 
 	/** @private */
 	var equals = function(a, b){
-		return (a.length == b.length && a.every(function(el, i){ return (el.theme == b[i].theme && equalsArray(el.suffixes, b[i].suffixes)); }));
-	};
-
-	/** @private */
-	var equalsArray = function(a, b){
 		return (a.length == b.length && a.every(function(el, i){ return (el == b[i]); }));
 	};
 
@@ -865,15 +860,17 @@ console.log(paradigmEndings);
 	var insert = function(theme, suffix){
 		var infinitive = this.verb.infinitive;
 		var idx = findIndex(this.paradigm, function(el){ return (el.infinitive == infinitive); });
-		if(idx < 0)
-			this.paradigm.push({infinitive: this.verb.infinitive, themes: [{theme: theme, suffixes: [suffix]}]});
+		if(idx < 0){
+			var data = {infinitive: this.verb.infinitive, themes: []};
+			data.themes[theme] = [suffix];
+			this.paradigm.push(data);
+		}
 		else{
 			var t = this.paradigm[idx].themes;
-			idx = findIndex(t, function(el){ return (el.theme == theme); });
-			if(idx < 0)
-				t.push({theme: theme, suffixes: [suffix]});
-			else if(t[idx].suffixes.indexOf(suffix) < 0)
-				t[idx].suffixes.push(suffix);
+			if(!t[theme])
+				t[theme] = [suffix];
+			else if(t[theme].indexOf(suffix) < 0)
+				t[theme].push(suffix);
 		}
 	};
 

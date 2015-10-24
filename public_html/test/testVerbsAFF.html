@@ -95,54 +95,59 @@
 		})();
 
 		var applyReductions = function(list){
-			epurateListAndApplyFlag(list, 'E', 'e',
+			epurateListAndApplyFlag(list, 'E',
 				'e', 'i');
-			epurateListAndApplyFlag(list, 'F', 'a',
+			epurateListAndApplyFlag(list, 'F',
 				'a', 'e\/E');
 			//T8: indikativo prexente, đontativo prexente
-			epurateListAndApplyFlag(list, 'D', 'o',
+			epurateListAndApplyFlag(list, 'D',
 				'o', 'a\/F');
 			//T1: infenío sénplise
-			epurateListAndApplyFlag(list, 'H1', 'r\/BG',
+			epurateListAndApplyFlag(list, 'H',
 				'r\/BG', 're');
-			epurateListAndApplyFlag(list, 'H2', 'r',
+			epurateListAndApplyFlag(list, 'I',
 				'r', 're');
-//5672
+//7620
 			//T2: indikativo inparfèto, đontativo inparfèto, partiŧipio ativo, xerundio sénplise
-			epurateListAndApplyFlag(list, 'I', 'vimo',
-				'vimo', 'imo', 'o\/D', 'vo\/D',
-				'simo', 'se\/E',
-				'sto\/D',
-				'', 'do\/D',
-				'ndo\/BG');
+			epurateListAndApplyFlag(list, 'J',
+				'[àèéí]vimo', '[àèéí]imo', '[àèéí]o\/D', '[aei]vo\/D',
+				'[àèéí]simo', '[aei]se\/E',
+				'[aei]sto\/D',
+				'[aàeèéií]', '[aei]do\/D',
+				'[aei]ndo\/BG');
+/*			epurateListAndApplyFlag(list, 'K',
+				'[àèéí]rimo', '[àèéí]imo', '[àèéí]o\/D', '[aei]vo\/D',
+				'[àèéí]simo', '[aei]se\/E',
+				'[aei]sto\/D',
+				'[aàeèéií]', '[aei]do\/D',
+				'[aei]ndo\/BG');
 			//T4: indikativo futuro, kondiŧional prexente
-/*			epurateListAndApplyFlag(list, 'J', 'rò',
+/*			epurateListAndApplyFlag(list, 'J',
 				'rò', 'rà', 'rè', 'ré', 'remo', 'ron', 'ren',
 				'ría', 'ríe', 'résimo', 'ronse', 'rion', 'rionse', 'rison', 'risonse', 'rision', 'risionse', 'rense', 'risen', 'risense', 'resi', 'risié', 'rié',
 				'rave');
-			epurateListAndApplyFlag(list, 'K', 'rò',
+			epurateListAndApplyFlag(list, 'K',
 				'rò', 'rà', 'rè', 'ré', 'rí', 'remo', 'rimo', 'ron', 'ren',
 				'ría', 'ríe', 'résimo', 'ronse', 'rion', 'rionse', 'rison', 'risonse', 'rision', 'risionse', 'rense', 'risen', 'risense', 'resi', 'risié', 'rié',
 				'rave');
 			//T5: indikativo prexente, đontativo prexente
-			epurateListAndApplyFlag(list, 'L', 'mo',
+			epurateListAndApplyFlag(list, 'L',
 				'mo', '', 'de', 'ge');
-//			epurateListAndApplyFlag(list, 'M', '[aei]mo',
-//				'[aei]mo', '', 'è', 'í', 'ede', 'ege');
+			epurateListAndApplyFlag(list, 'M',
+				'[aei]mo', '', 'è', 'í', 'ede', 'ege');
 			//T6: partiŧipio pasivo
-			epurateListAndApplyFlag(list, 'N', 'do\/D',
+			epurateListAndApplyFlag(list, 'N',
 				'do\/D', '', 'o\/D');
 			//T7: partiŧipio ativo, partiŧipio pasivo, xerundio sénplise
-//			epurateListAndApplyFlag(list, 'O', 'ndo\/BG',
-//				'ndo\/BG', 'nte',
-//				'sto\/D');
-//3512
+			epurateListAndApplyFlag(list, 'O',
+				'ndo\/BG', 'nte',
+				'sto\/D');
 			//T11: indikativo inparfèto, đontativo inparfèto
-/*			epurateListAndApplyFlag(list, 'P', 'on',
+			epurateListAndApplyFlag(list, 'P',
 				'on', 'ion', 'ionse', 'ivon', 'ivonse', 'ivion', 'ivionse', 'en', 'ense', 'iven', 'ivense', 'ié', 'ivié',
-				'one', 'onse', 'ione', 'isone', 'isonse', 'isione', 'isionse', 'ene', 'isene', 'isense', 'iede', 'iege', 'isiede', 'isiege');*/
+				'one', 'onse', 'ione', 'isone', 'isonse', 'isione', 'isionse', 'ene', 'isene', 'isense', 'iede', 'iege', 'isiede', 'isiege');
 			//T12: indikativo prexente, đontativo prexente
-			epurateListAndApplyFlag(list, 'Q', 'on',
+			epurateListAndApplyFlag(list, 'Q',
 				'on', 'one', 'ion', 'ione', 'en', 'ene', 'é', 'ede', 'iede', 'ege', 'iege');
 
 /*			epurateListAndApplyFlag(list, 'L', 'ndo', 'ndo', 'nte', 'sto');
@@ -193,9 +198,9 @@
 console.log('hgf');
 		};/**/
 
-		var epurateListAndApplyFlag = function(list, flag, matcher, base){
-			var matcherLength = matcher.length,
-				replacement = Array.prototype.slice.call(arguments, 4, arguments.length),
+		var epurateListAndApplyFlag = function(list, flag, matcher){
+			var matcherLength = matcher.replace(/\[.+\]/, '.').length,
+				replacement = Array.prototype.slice.call(arguments, 3, arguments.length),
 				i, j, rep, repment, indices, parents,
 				inters, p;
 			matcher = new RegExp(matcher + '$');
@@ -205,7 +210,6 @@ console.log('hgf');
 				if(list.hasOwnProperty(i) && repment.match(matcher)){
 					rep = list[i].replaced;
 					repment = repment.substr(0, repment.length - matcherLength);
-//console.log('search for ' + (repment + base));
 
 					indices = replacement.map(function(last){ return indexOfReplacement(list, rep, new RegExp(repment + last + '$')); });
 					if(indices.some(function(el){ return (el < 0); }))
@@ -515,7 +519,7 @@ var start = +new Date();
 console.log(((+new Date() - start) / 1000) + ' s');
 		});/**/
 
-if(false)
+if(true)
 		require(['tools/lang/morphology/Bla2', 'tools/lang/morphology/Verb', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Bla2, Verb, verbsDictionary, JSONH){
 			verbsDictionary = JSONH.unpack(verbsDictionary);
 
@@ -525,11 +529,11 @@ var start = +new Date();
 				verbs.push(new Verb(composeInfinitive(infinitive)));
 			});
 			Bla2.generate(verbs);
-console.log(((+new Date() - start) / 1000) + ' s');
+console.log(((+new Date() - start) / 60000) + ' min');
 		});/**/
 
-if(true)
-		require(['tools/lang/phonology/Word', 'tools/lang/phonology/PhonologyHelper', 'tools/lang/morphology/Conjugator', 'tools/lang/Dialect', 'tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Word, PhonologyHelper, Conjugator, Dialect, Verb, Themizer, verbsDictionary, JSONH){
+if(false)
+		require(['tools/lang/phonology/Word', 'tools/lang/phonology/PhonologyHelper', 'tools/data/ArrayHelper', 'tools/lang/morphology/Conjugator', 'tools/lang/Dialect', 'tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Word, PhonologyHelper, ArrayHelper, Conjugator, Dialect, Verb, Themizer, verbsDictionary, JSONH){
 			verbsDictionary = JSONH.unpack(verbsDictionary);
 
 			var list = [],
@@ -542,12 +546,14 @@ var start = +new Date();
 				infinitive = composeInfinitive(infinitive);
 
 				forms = Conjugator.extractForms(infinitive);
-/*				forms = forms.map(function(form){
-					return form.replace(/^#/, '').replace(/([or])#$/, '$1/BG').replace(/#$/, '/B').replace(/\$$/, '/G');
-				});
-				forms = forms.filter(function(x, i){
-					return (forms.indexOf(x) == i && forms.every(function(el){ return !el.match(x + '\/.+$'); }));
-				});
+				forms = ArrayHelper.unique(forms
+					.filter(function(x){
+						return (x[x.length - 1] == '#' || forms.every(function(el){ return !el.match(new RegExp('^' + x + '#$')); }));
+					})
+					.map(function(form){
+						return form.replace(/^#/, '').replace(/([or])#$/, '$1/BG').replace(/#$/, '/B').replace(/\$$/, '/G');
+					})
+				);
 /*se pòl katar un metaplaxmo de deklinathion da la prima a la sekonda koniug. intel inparfèto (kantàa > kantéa, pensàse > pensése)
 e intel partithipio pasivo (mañasto > mañésto).
 sto metaplaxmo se pòl ‘verlo par tuti i mòdi e i tenpi (anka a partir da la 3a koniug.) fora ke inté ‘l infenío, partithipio, e xerundio
@@ -587,7 +593,7 @@ T4 = T1: senŧa aŧento | à > e
 			});
 console.log(((+new Date() - start) / 60000) + ' min');
 
-//			applyReductions(list);
+			applyReductions(list);
 
 			/*augmentForms(list);
 

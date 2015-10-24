@@ -371,6 +371,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				root.general = {
 					singularMasculine1: t.themeT6 + '(do)',
 					singularMasculine2: t.themeT6 + 'o',
+					singularMasculine3: t.themeT6 + 'o',
 					pluralMasculine: t.themeT6 + '(d)i',
 					singularFeminine: t.themeT6 + '(d)a',
 					pluralFeminine: t.themeT6 + '(d)e'
@@ -394,7 +395,11 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 
 		if(t.themeT8){
 			var strong = generateParticiplePerfectStrong.call(this, t.themeT8);
-			namespace(this.paradigm, 'participle', 'perfect', IRREGULAR, 'strong').general = (strong? generateEntireDeclination(strong): undefined);
+			var root = namespace(this.paradigm, 'participle', 'perfect', IRREGULAR, 'strong');
+			root.general = (strong? generateEntireDeclination(strong): undefined);
+
+			if(strong.match(/o$/))
+				root.general.singularMasculine2 = PhonologyHelper.finalConsonantVoicing(strong.replace(/o$/, ''), 'northern');
 		}
 	};
 
