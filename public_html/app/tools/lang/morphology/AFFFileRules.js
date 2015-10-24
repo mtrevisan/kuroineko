@@ -370,6 +370,12 @@ i = 133;
 
 	/** @private */
 	var extractCommonThemes = function(list){
+		list.forEach(function(el){
+			el.themes.forEach(function(theme){
+				theme.sort();
+			});
+		});
+
 		var commonThemes = [],
 			idx;
 		list.forEach(function(obj){
