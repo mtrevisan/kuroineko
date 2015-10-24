@@ -356,7 +356,6 @@ console.log(paradigmEndings);
 					//remove element from list
 					list.splice(j, 1);
 					i --;
-					j --;
 				}
 			list.splice(i, 1);
 			i --;
@@ -740,6 +739,7 @@ console.log(paradigmEndings);
 		if(t.themeT8){
 			var strong = generateParticiplePerfectStrong.call(this, t.themeT8);
 			if(strong){
+				strong = '*' + Word.unmarkDefaultStress(strong);
 				insert.call(this, 8, strong + 'o');
 				insert.call(this, 8, strong + 'i');
 				insert.call(this, 8, strong + 'a');
@@ -872,7 +872,7 @@ console.log(paradigmEndings);
 			idx = findIndex(t, function(el){ return (el.theme == theme); });
 			if(idx < 0)
 				t.push({theme: theme, suffixes: [suffix]});
-			else
+			else if(t[idx].suffixes.indexOf(suffix) < 0)
 				t[idx].suffixes.push(suffix);
 		}
 	};

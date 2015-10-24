@@ -371,7 +371,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				root.general = {
 					singularMasculine1: t.themeT6 + '(do)',
 					singularMasculine2: t.themeT6 + 'o',
-					pluralMasculine: t.themeT6 + '(di)',
+					pluralMasculine: t.themeT6 + '(d)i',
 					singularFeminine: t.themeT6 + '(d)a',
 					pluralFeminine: t.themeT6 + '(d)e'
 				};
