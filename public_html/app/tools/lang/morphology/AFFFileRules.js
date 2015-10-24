@@ -57,7 +57,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 			themesEndings = [],
 			paradigmEndings = [],
 			infinitives = [],
-			infinitive, themes, commonThemes;
+			infinitive, themes, commonThemes, i;
 		verbs.forEach(function(verb){
 			if(infinitives.indexOf(verb.infinitive) < 0){
 				infinitive = Word.unmarkDefaultStress(verb.infinitive);
@@ -83,8 +83,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 //console.log(themesEndings);
 console.log(paradigmEndings);
-//console.log(commonThemes);
-//		printThemes(commonThemes);
+console.log(commonThemes);
+		i = printThemes(commonThemes);
+		printParadigm(paradigmEndings, i);
 	};
 
 	/** @private */
@@ -422,6 +423,24 @@ console.log(paradigmEndings);
 			});
 			i ++;
 		});
+		return i;
+	};
+
+	/** @private */
+	var printParadigm = function(list, i){
+		var k;
+		list.forEach(function(el){
+			k = 0;
+			el.themes.forEach(function(){ k ++; });
+
+			console.log('SFX ' + i + ' Y ' + k);
+			el.themes.forEach(function(theme, idx){
+				console.log('SFX ' + i + ' ' + idx + ' /' + (theme + SUFFIXES_BASE_INDEX) + ' ' + el.matcher + ' # ' + el.infinitives.join(','));
+			});
+
+			i ++;
+		});
+		return i;
 	};
 
 	/** @private */
