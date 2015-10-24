@@ -103,19 +103,19 @@
 			epurateListAndApplyFlag(list, 'D',
 				'o', 'a\/F');
 			//T1: infenío sénplise
-			epurateListAndApplyFlag(list, 'H',
-				'r\/BG', 're');
 			epurateListAndApplyFlag(list, 'I',
+				'r\/BG', 're');
+			epurateListAndApplyFlag(list, 'J',
 				'r', 're');
 //7620
 			//T2: indikativo inparfèto, đontativo inparfèto, partiŧipio ativo, xerundio sénplise
-			epurateListAndApplyFlag(list, 'J',
+			epurateListAndApplyFlag(list, 'K',
 				'[àèéí]vimo', '[àèéí]imo', '[àèéí]o\/D', '[aei]vo\/D',
 				'[àèéí]simo', '[aei]se\/E',
 				'[aei]sto\/D',
 				'[aàeèéií]', '[aei]do\/D',
 				'[aei]ndo\/BG');
-/*			epurateListAndApplyFlag(list, 'K',
+/*			epurateListAndApplyFlag(list, 'L',
 				'[àèéí]rimo', '[àèéí]imo', '[àèéí]o\/D', '[aei]vo\/D',
 				'[àèéí]simo', '[aei]se\/E',
 				'[aei]sto\/D',
@@ -551,7 +551,7 @@ var start = +new Date();
 						return (x[x.length - 1] == '#' || forms.every(function(el){ return !el.match(new RegExp('^' + x + '#$')); }));
 					})
 					.map(function(form){
-						return form.replace(/^#/, '').replace(/([or])#$/, '$1/BG').replace(/#$/, '/B').replace(/\$$/, '/G');
+						return form.replace(/^#/, '').replace(/([or])#$/, '$1/BG').replace(/#$/, '/B').replace(/\$$/, '/G').replace(/@$/, '/H');
 					})
 				);
 /*se pòl katar un metaplaxmo de deklinathion da la prima a la sekonda koniug. intel inparfèto (kantàa > kantéa, pensàse > pensése)

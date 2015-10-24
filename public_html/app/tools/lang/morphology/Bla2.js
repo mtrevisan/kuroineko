@@ -10,9 +10,13 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	/** @constant */
 		IRREGULAR = 'irregular',
 	/** @constant */
+		START_OF_WORD = '^',
+	/** @constant */
 		PRONOMENAL_MARK = '#',
 	/** @constant */
-		PRONOMENAL_MARK_IMPERATIVE = '$';
+		PRONOMENAL_MARK_IMPERATIVE = '$',
+	/** @constant */
+		FINAL_CONSONANT_VOICING = '@';
 
 
 
@@ -479,7 +483,7 @@ console.log(paradigmEndings);
 				}
 				else{
 					insert.call(this, 8, 'e');
-					insert.call(this, 8, 'o');
+					insert.call(this, 8, 'o' + FINAL_CONSONANT_VOICING);
 
 					if(this.verb.irregularity.verb && type == IRREGULAR){
 						if(this.verb.irregularity.saver)
@@ -492,7 +496,7 @@ console.log(paradigmEndings);
 				var third = t.themeT8 + (!this.verb.irregularity.verb.match(/darStarFar|s?aver/)? (this.verb.irregularity.eser? 'é': 'e'): '');
 				insert.call(this, 8, third.substr(t.themeT8.length));
 				if(third.match(/[ei]$/))
-					insert.call(this, 8, '[ei]>+voicing');
+					insert.call(this, 8, '[ei]>+' + FINAL_CONSONANT_VOICING);
 				if(t.themeT10 && t.themeT10 !== third){
 					//FIXME
 					//if(this.verb.irregularity.eser)
@@ -501,10 +505,9 @@ console.log(paradigmEndings);
 				}
 			}
 			else if(t.themeT10){
-				var thirdNorthernOriental = PhonologyHelper.finalConsonantVoicing(t.themeT10.replace(/[ei]$/, ''), 'northern');
 				insert.call(this, 10, '');
-				if(t.themeT10.match(/[aeiou]$/) && t.themeT10 != thirdNorthernOriental)
-					insert.call(this, 10, '+voicing');
+				if(t.themeT10.match(/[aeiou]$/) && t.themeT10 != PhonologyHelper.finalConsonantVoicing(t.themeT10.replace(/[aeiou]$/, ''), 'northern'))
+					insert.call(this, 10, '+' + FINAL_CONSONANT_VOICING);
 			}
 			if(t.themeT5){
 				insert.call(this, 5, '');
@@ -545,16 +548,14 @@ console.log(paradigmEndings);
 				//	insert.call(this, 2, '[x/j]|' + tmp + 'i');
 				//	insert.call(this, 2, '[x/j]|' + tmp + 'a');
 				//}
-				if(t.themeT11)
-					insert.call(this, 11, '(iv)ié');
-			}
-			if(t.themeT2){
+
 				insert.call(this, 2, tmp + 'ímo');
 				//FIXME
 				//if(this.verb.irregularity.eser)
 				//	insert.call(this, 2, '[x/j]|' + tmp + 'ímo');
 			}
 			if(t.themeT11){
+				insert.call(this, 11, '(iv)ié');
 				insert.call(this, 11, (!t.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'ón(se)');
 				insert.call(this, 11, 'iv(i)ón(se)');
 				insert.call(this, 11, '(iv)én(se)');
@@ -593,7 +594,7 @@ console.log(paradigmEndings);
 				insert.call(this, 8, 'e');
 				insert.call(this, 8, '([^i])>$1i');
 				if(t.themeT8.match(/[^aeiouàèéíòóú]$/))
-					insert.call(this, 8, 'voicing');
+					insert.call(this, 8, FINAL_CONSONANT_VOICING);
 
 				if(type == IRREGULAR && !this.verb.irregularity.verb.match(/(aver|dever|eser)/)){
 					insert.call(this, 8, (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'a');
@@ -674,7 +675,7 @@ console.log(paradigmEndings);
 				insert.call(this, 9, PRONOMENAL_MARK_IMPERATIVE);
 			if(t.themeT5){
 				insert.call(this, 5, PRONOMENAL_MARK_IMPERATIVE);
-				insert.call(this, 5, (conj == 2? 'i?é>í+' + PRONOMENAL_MARK_IMPERATIVE: '[èí]>é+' + PRONOMENAL_MARK_IMPERATIVE));
+				insert.call(this, 5, (conj == 2? 'i?é>í+': '[èí]>é+') + PRONOMENAL_MARK_IMPERATIVE);
 			}
 		}
 	};
@@ -700,8 +701,8 @@ console.log(paradigmEndings);
 
 		if(t.themeT2 || t.themeT6 || t.themeT7){
 			if(t.themeT6){
-				insert.call(this, 6, '(do)');
-				insert.call(this, 6, 'o');
+				insert.call(this, 6, '');
+				insert.call(this, 6, '(d)o');
 				insert.call(this, 6, '(d)i');
 				insert.call(this, 6, '(d)a');
 				insert.call(this, 6, '(d)e');
@@ -734,11 +735,10 @@ console.log(paradigmEndings);
 		if(t.themeT8){
 			var strong = generateParticiplePerfectStrong.call(this, t.themeT8);
 			if(strong){
-				strong = '*' + Word.unmarkDefaultStress(strong);
-				insert.call(this, 8, strong + 'o');
-				insert.call(this, 8, strong + 'i');
-				insert.call(this, 8, strong + 'a');
-				insert.call(this, 8, strong + 'e');
+				insert.call(this, 8, '*' + Word.unmarkDefaultStress(strong + 'o') + FINAL_CONSONANT_VOICING);
+				insert.call(this, 8, '*' + Word.unmarkDefaultStress(strong + 'i'));
+				insert.call(this, 8, '*' + Word.unmarkDefaultStress(strong + 'a'));
+				insert.call(this, 8, '*' + Word.unmarkDefaultStress(strong + 'e'));
 			}
 		}
 	};
@@ -752,9 +752,9 @@ console.log(paradigmEndings);
 			if(t.themeT7 && this.verb.conjugation == 3)
 				insert.call(this, 7, 'ndo' + pronomenalMark);
 			if(this.verb.irregularity.eser)
-				insert.call(this, 2, '^siàndo' + pronomenalMark);
+				insert.call(this, 2, START_OF_WORD + 'siàndo' + pronomenalMark);
 			else if(this.verb.irregularity.aver)
-				insert.call(this, 2, '^' + (this.verb.infinitive.substr(0, this.verb.infinitive.length - 'aver'.length)) + 'abiàndo' + pronomenalMark);
+				insert.call(this, 2, START_OF_WORD + (this.verb.infinitive.substr(0, this.verb.infinitive.length - 'aver'.length)) + 'abiàndo' + pronomenalMark);
 		}
 	};
 
@@ -914,8 +914,10 @@ console.log(paradigmEndings);
 
 
 	return {
+		START_OF_WORD: START_OF_WORD,
 		PRONOMENAL_MARK: PRONOMENAL_MARK,
 		PRONOMENAL_MARK_IMPERATIVE: PRONOMENAL_MARK_IMPERATIVE,
+		FINAL_CONSONANT_VOICING: FINAL_CONSONANT_VOICING,
 
 		generate: generate
 	};

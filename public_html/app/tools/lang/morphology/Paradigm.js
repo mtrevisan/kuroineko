@@ -82,10 +82,11 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				else{
 					person.general = pronomenalMark + t.themeT8 + 'e';
 					person.central_centralNorthern_lagunar_western1 = pronomenalMark + t.themeT8 + 'o';
+					person.central_centralNorthern_lagunar_western2 = pronomenalMark + PhonologyHelper.finalConsonantVoicing(t.themeT8, 'northern');
 
 					if(this.verb.irregularity.verb && type == IRREGULAR){
 						if(this.verb.irregularity.saver)
-							person.central_centralNorthern_lagunar_western2 = pronomenalMark + t.themeT8.replace(/.$/, 'ò');
+							person.central_centralNorthern_lagunar_western3 = pronomenalMark + t.themeT8.replace(/.$/, 'ò');
 						else
 							person.central_centralNorthern_lagunar_western1 = pronomenalMark + t.themeT8 + (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'o';
 					}
@@ -148,8 +149,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				};
 				root.secondPlural = {
 					general: tmp + 'i',
-					archaic: tmp + 'a',
-					northern: (t.themeT11? pronomenalMark + t.themeT11 + '(iv)ié': undefined)
+					archaic: tmp + 'a'
 				};
 				root.secondSingular = {
 					general: tmp + 'i'
@@ -158,7 +158,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 					general: tmp + 'a'
 				};
 			}
-			var person = root.firstPlural = {};
+			var person = root.secondPlural = (root.secondPlural || {});
+			if(t.themeT11)
+				person.northern = pronomenalMark + t.themeT11 + '(iv)ié';
+			person = root.firstPlural = {};
 			if(t.themeT2)
 				person.general = root.secondPlural.general + 'mo';
 			if(t.themeT11){
@@ -369,9 +372,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			var root = namespace(this.paradigm, 'participle', 'perfect', type);
 			if(t.themeT6)
 				root.general = {
-					singularMasculine1: t.themeT6 + '(do)',
-					singularMasculine2: t.themeT6 + 'o',
-					singularMasculine3: t.themeT6 + 'o',
+					singularMasculine1: t.themeT6,
+					singularMasculine2: t.themeT6 + '(d)o',
 					pluralMasculine: t.themeT6 + '(d)i',
 					singularFeminine: t.themeT6 + '(d)a',
 					pluralFeminine: t.themeT6 + '(d)e'
@@ -395,11 +397,13 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 
 		if(t.themeT8){
 			var strong = generateParticiplePerfectStrong.call(this, t.themeT8);
-			var root = namespace(this.paradigm, 'participle', 'perfect', IRREGULAR, 'strong');
-			root.general = (strong? generateEntireDeclination(strong): undefined);
+			if(strong){
+				var root = namespace(this.paradigm, 'participle', 'perfect', IRREGULAR, 'strong');
+				root.general = generateEntireDeclination(strong);
 
-			if(strong.match(/o$/))
-				root.general.singularMasculine2 = PhonologyHelper.finalConsonantVoicing(strong.replace(/o$/, ''), 'northern');
+				if(strong.match(/[^aeiouàèéíòóú]$/))
+					root.general.singularMasculine2 = PhonologyHelper.finalConsonantVoicing(strong, 'northern');
+			}
 		}
 	};
 
