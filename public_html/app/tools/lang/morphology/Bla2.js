@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morphology/Themizer', 'tools/lang/phonology/Orthography', 'tools/lang/phonology/PhonologyHelper', 'tools/data/ObjectHelper'], function(Word, Dialect, Themizer, Orthography, PhonologyHelper, ObjectHelper){
+define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morphology/Themizer', 'tools/lang/phonology/Orthography', 'tools/lang/phonology/PhonologyHelper', 'tools/data/ObjectHelper', 'tools/data/ArrayHelper'], function(Word, Dialect, Themizer, Orthography, PhonologyHelper, ObjectHelper, ArrayHelper){
 
 	/** @constant */
 	var START_OF_WORD = '^',
@@ -142,7 +142,7 @@ console.log(commonThemes);
 		var diff, variab, variability, common, re, found, part, partitioningResults, parentsTrue, parentsFalse,
 			listNoPrefixes, first;
 		list.forEach(function(obj){
-			diff = difference(infinitives, obj.parents);
+			diff = ArrayHelper.difference(infinitives, obj.parents);
 
 			common = extractCommonPartFromList(obj.parents);
 			variability = '';
@@ -163,7 +163,7 @@ console.log(commonThemes);
 					return;
 				}
 
-				part = partition(obj.parents, function(el){ return (el.length - common.length >= 1? el[el.length - common.length - 1]: '^'); });
+				part = ArrayHelper.partition(obj.parents, function(el){ return (el.length - common.length >= 1? el[el.length - common.length - 1]: '^'); });
 				if(!part['^']){
 					variability = listToRegExp(extractVariability(common.length + 1, 1, obj.parents));
 					partitioningResults = {'true': [], 'false': []};
@@ -264,7 +264,7 @@ console.log(commonThemes);
 		var diff, variab, variability, common, re, found, part, partitioningResults, parentsTrue, parentsFalse,
 			listNoPrefixes, first;
 		list.forEach(function(obj){
-			diff = difference(infinitives, obj.infinitives);
+			diff = ArrayHelper.difference(infinitives, obj.infinitives);
 
 			common = extractCommonPartFromList(obj.infinitives);
 			variability = '';
@@ -302,7 +302,7 @@ console.log(commonThemes);
 
 
 				if(found){
-					part = partition(obj.infinitives, function(el){ return (el.length - common.length >= 1? el[el.length - common.length - 1]: '^'); });
+					part = ArrayHelper.partition(obj.infinitives, function(el){ return (el.length - common.length >= 1? el[el.length - common.length - 1]: '^'); });
 					if(!part['^']){
 						variability = listToRegExp(extractVariability(common.length + 1, 1, obj.infinitives));
 						if(variability.indexOf('.') < 0){
@@ -372,7 +372,7 @@ console.log(commonThemes);
 			idx;
 		list.forEach(function(obj){
 			obj.themes.forEach(function(theme, i){
-				idx = findIndex(commonThemes, function(el){ return equals(theme, el); });
+				idx = findIndex(commonThemes, function(el){ return ArrayHelper.equals(theme, el); });
 				if(idx < 0){
 					commonThemes.push(theme);
 					idx = commonThemes.length - 1;
@@ -395,8 +395,8 @@ console.log(commonThemes);
 			for(var j = i - 1; j >= 0; j --){
 				j0 = indices.indexOf(j);
 				themeContainer = list[j0];
-				if(contains(themeContainer, themeContained)){
-					list[j0] = difference(themeContainer, themeContained);
+				if(ArrayHelper.contains(themeContainer, themeContained)){
+					list[j0] = ArrayHelper.difference(themeContainer, themeContained);
 					list[j0].parents = (list[j0].parents || []).concat(i0);
 				}
 			}
@@ -503,7 +503,7 @@ console.log(commonThemes);
 
 			//search list for equal themes
 			for(var j = i - 1; j >= 0; j --)
-				if(equals(list[j].themes, data.themes)){
+				if(ArrayHelper.equals(list[j].themes, data.themes)){
 					data.infinitives.push(list[j].infinitive);
 
 					//remove element from list
@@ -519,11 +519,6 @@ console.log(commonThemes);
 	};
 
 	/** @private */
-	var equals = function(a, b){
-		return (a.length == b.length && a.every(function(el, i){ return (el == b[i]); }));
-	};
-
-	/** @private */
 	var visit = function(obj, funct, id){
 		for(var key in obj)
 			if(obj.hasOwnProperty(key)){
@@ -532,23 +527,6 @@ console.log(commonThemes);
 				else
 					funct(obj, key, id);
 			}
-	};
-
-	/** @private */
-	var difference = function(a, b){
-		return a.filter(function(x){ return (b.indexOf(x) < 0); });
-	};
-
-	/** @private */
-	var contains = function(a, b){
-		return b.every(function(el){ return (a.indexOf(el) >= 0); });
-	};
-
-	/** @private */
-	var unique = function(list){
-		return list.filter(function(x, i){
-			return (list.indexOf(x) == i);
-		});
 	};
 
 	/** @private */
@@ -584,7 +562,7 @@ console.log(commonThemes);
 			idx = obj.length - formLength - order;
 			variability.push(idx >= 0? obj.substr(idx, order): '.');
 		});
-		return unique(variability).sort();
+		return ArrayHelper.unique(variability).sort();
 	};
 
 	/** @private */
@@ -597,18 +575,6 @@ console.log(commonThemes);
 	/** @private */
 	var listToNotRegExp = function(list){
 		return (list[list.length - 1].length == 1? '[^' + list.join('') + ']': '(?!' + list.join('|') + ')');
-	};
-
-	var partition = function(list, predicate){
-		var result = {};
-		list.forEach(function(value, index){
-			var key = predicate(value, index, list);
-			if(key in result)
-				result[key].push(value);
-			else
-				result[key] = [value];
-		});
-		return result;
 	};
 
 

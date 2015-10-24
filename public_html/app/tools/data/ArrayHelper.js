@@ -155,6 +155,15 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		return destination;
 	};
 
+	var equals = function(a, b){
+		return (a.length == b.length && a.every(function(el, i){ return (el == b[i]); }));
+	};
+
+	/** Tells whether <code>b</code> is contained into <code>a</code>. */
+	var contains = function(a, b){
+		return b.every(function(el){ return (a.indexOf(el) >= 0); });
+	};
+
 	/**
 	 * Creates an array of unique values that are included in all of the provided arrays.
 	 *
@@ -326,6 +335,8 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 	return {
 		copy: copy,
+		equals: equals,
+		contains: contains,
 		intersection: intersection,
 		unique: unique,
 		difference: difference,
