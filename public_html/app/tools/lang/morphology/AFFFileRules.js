@@ -507,7 +507,7 @@ console.log(commonThemes);
 		};
 
 		themes.forEach(splitter);
-		return themes.filter(function(form){ return (!form.match(/[>+$]/) && !form.match(SPLITTER_REGEX_OPTIONAL_ALTERNATIVE)); });
+		return themes.filter(function(form){ return (form.match(/[>+$]/) || !form.match(SPLITTER_REGEX_OPTIONAL_ALTERNATIVE)); });
 	};
 
 	/** @private */
