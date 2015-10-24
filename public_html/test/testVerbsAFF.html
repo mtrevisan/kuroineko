@@ -516,7 +516,7 @@ var start = +new Date();
 				verbs.push(new Verb(composeInfinitive(infinitive)));
 			});
 			paradigmEndings = (new Bla()).generate(verbs);
-console.log(((+new Date() - start) / 1000) + ' s');
+console.log(((+new Date() - start) / 60000).toFixed(2) + ' min');
 		});/**/
 
 if(true)
@@ -529,7 +529,7 @@ var start = +new Date();
 				verbs.push(new Verb(composeInfinitive(infinitive)));
 			});
 			Bla2.generate(verbs);
-console.log(((+new Date() - start) / 60000) + ' min');
+console.log(((+new Date() - start) / 60000).toFixed(2) + ' min');
 		});/**/
 
 if(false)
@@ -551,7 +551,7 @@ var start = +new Date();
 						return (x[x.length - 1] == '#' || forms.every(function(el){ return !el.match(new RegExp('^' + x + '#$')); }));
 					})
 					.map(function(form){
-						return form.replace(/^#/, '').replace(/([or])#$/, '$1/BG').replace(/#$/, '/B').replace(/\$$/, '/G').replace(/@$/, '/H');
+						return form.replace(/^#/, '').replace(/([or])#$/, '$1/BG').replace(/#$/, '/B').replace(/!$/, '/G').replace(/@$/, '/H');
 					})
 				);
 /*se pòl katar un metaplaxmo de deklinathion da la prima a la sekonda koniug. intel inparfèto (kantàa > kantéa, pensàse > pensése)
@@ -591,7 +591,7 @@ T4 = T1: senŧa aŧento | à > e
 					}
 				});
 			});
-console.log(((+new Date() - start) / 60000) + ' min');
+console.log(((+new Date() - start) / 60000).toFixed(2) + ' min');
 
 			applyReductions(list);
 

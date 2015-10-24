@@ -14,7 +14,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	/** @constant */
 		PRONOMENAL_MARK = '#',
 	/** @constant */
-		PRONOMENAL_MARK_IMPERATIVE = '$',
+		PRONOMENAL_MARK_IMPERATIVE = '!',
 	/** @constant */
 		FINAL_CONSONANT_VOICING = '@';
 
@@ -28,7 +28,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 			themesEndings = [],
 			paradigmEndings = [],
 			infinitives = [],
-			infinitive, themes;
+			infinitive, themes, commonThemes;
 		verbs.forEach(function(verb){
 			if(infinitives.indexOf(verb.infinitive) < 0){
 				infinitive = Word.unmarkDefaultStress(verb.infinitive);
@@ -46,6 +46,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 		//convertIntoDialect.call(this, dialect);
 
+		commonThemes = extractCommonThemes(paradigmEndings);
 		paradigmEndings = compact(paradigmEndings);
 
 //		constraintToInfinitives(themesEndings, infinitives);
@@ -53,6 +54,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 //console.log(themesEndings);
 console.log(paradigmEndings);
+//console.log(commonThemes);
 	};
 
 	/** @private */
@@ -346,15 +348,32 @@ console.log(paradigmEndings);
 	};
 
 	/** @private */
+	var extractCommonThemes = function(list){
+		var commonThemes = [],
+			idx;
+		list.forEach(function(obj){
+			obj.themes.forEach(function(theme, i){
+				idx = findIndex(commonThemes, function(el){ return equals(theme, el); });
+				if(idx < 0){
+					commonThemes.push(theme);
+					idx = commonThemes.length - 1;
+				}
+				obj.themes[i] = 'theme-' + idx;
+			});
+		});
+		return commonThemes;
+	};
+
+	/** @private */
 	var compact = function(list){
 		var compacted = [],
 			data;
 		for(var i = list.length - 1; i >= 0; i --){
-			data = {themes: list[i].themes, infinitives: [list[i].infinitive]};
+			data = {infinitives: [list[i].infinitive], themes: list[i].themes};
 
 			//search list for equal themes
 			for(var j = i - 1; j >= 0; j --)
-				if(equals(list[j].themes, list[i].themes)){
+				if(equals(list[j].themes, data.themes)){
 					data.infinitives.push(list[j].infinitive);
 
 					//remove element from list
