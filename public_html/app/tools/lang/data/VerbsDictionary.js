@@ -316,7 +316,6 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bend",			"dex",		1,	1,	"a",	"1854",			"",
 "bend",			"in",			1,	1,	"a",	"1854",			"",
 "bend",			"x",			1,	1,	"a",	"",				"",
-"bened",			"",			4,	5,	"a",	"1560",			"",
 "bereg",			"x",			1,	1,	"g",	"1560",			"Urlar, parlar ko voxe forte.",
 "berl",			"in",			1,	1,	"g",	"2008",			"Storŧar, piegar.",
 "berl",			"x",			1,	1,	"g",	"1560",			"Spalankar.",
@@ -748,7 +747,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 
 "d",				"",			1,	1,	"g",	"fine XII",		"",
 "d",				"",			5,	1,	"a",	"1211",			"",
-"d",				"bene",		5,	1,	"a",	"1867",			"",
+"d",				"bene",		5,	1,	"a",	"1560",			"",
 "d",				"dex",		5,	1,	"a",	"1847",			"",
 //"d",				"dex",		1,	1,	"g",	"1867",			"Vèrđer, descavar.",
 "d",				"dix",		5,	1,	"a",	"1264",			"",

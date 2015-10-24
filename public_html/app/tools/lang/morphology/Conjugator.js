@@ -10,7 +10,15 @@ define(['tools/lang/Dialect', 'tools/lang/phonology/Orthography', 'tools/lang/ph
 	 * @private
 	 */
 	var SPLITTER_REGEX_OPTIONAL = /(.*?)\((.+?)\)(.*)/,
+	/**
+	 * @constant
+	 * @private
+	 */
 		SPLITTER_REGEX_ALTERNATIVE = /(.+)\/(.+)/,
+	/**
+	 * @constant
+	 * @private
+	 */
 		SPLITTER_REGEX_OPTIONAL_ALTERNATIVE = /(.*?)\((.+?)\)(.*)|(.+)\/(.+)/;
 
 

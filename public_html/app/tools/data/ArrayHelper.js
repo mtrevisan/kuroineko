@@ -162,40 +162,18 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	 * @return {Array}	New array of shared values.
 	 */
 	var intersection = function(a){
-//			if(a == null)
-//				return [];
-//			if(arguments.length === 1)
-//				return a.unique();
-//
-//			var arr = Array.prototype.concat.apply([], Array.prototype.slice.call(arguments, 1));
-//
-//			return a.unique().filter(function(el){
-//				return arr.some(function(cur){
-//					return (cur == el);
-//				});
-//			});
+		if(a == null)
+			return [];
+		if(arguments.length === 1)
+			return a.unique();
 
-		var argsLength = arguments.length,
-			length = a.length,
-			result = [],
-			i, j, item;
-		for(j = 0; j < argsLength; j ++)
-			if(!Array.isArray(arguments[j]))
-				return [];
+		var arr = Array.prototype.slice.call(arguments, 1);
 
-		for(i = 0; i < length; i ++){
-			item = a[i];
-			if(result.indexOf(item) >= 0)
-				continue;
-
-			for(j = 1; j < argsLength; j ++)
-				if(arguments[j].indexOf(item) < 0)
-					break;
-
-			if(j == argsLength)
-				result.push(item);
-		}
-		return result;
+		return a.unique().filter(function(el){
+			return arr.some(function(cur){
+				return (cur == el);
+			});
+		});
 	};
 
 	/**

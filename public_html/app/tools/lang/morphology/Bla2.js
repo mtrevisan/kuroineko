@@ -6,17 +6,41 @@
 define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morphology/Themizer', 'tools/lang/phonology/Orthography', 'tools/lang/phonology/PhonologyHelper', 'tools/data/ObjectHelper'], function(Word, Dialect, Themizer, Orthography, PhonologyHelper, ObjectHelper){
 
 	/** @constant */
-	var REGULAR = 'regular',
+	var START_OF_WORD = '^',
 	/** @constant */
-		IRREGULAR = 'irregular',
-	/** @constant */
-		START_OF_WORD = '^',
+		WHOLE_WORD = '*',
 	/** @constant */
 		PRONOMENAL_MARK = '#',
 	/** @constant */
 		PRONOMENAL_MARK_IMPERATIVE = '!',
 	/** @constant */
 		FINAL_CONSONANT_VOICING = '@';
+
+	/**
+	 * @constant
+	 * @private
+	 */
+	var REGULAR = 'regular',
+	/**
+	 * @constant
+	 * @private
+	 */
+		IRREGULAR = 'irregular',
+	/**
+	 * @constant
+	 * @private
+	 */
+		SPLITTER_REGEX_OPTIONAL = /(.*?)\((.+?)\)(.*)/,
+	/**
+	 * @constant
+	 * @private
+	 */
+		SPLITTER_REGEX_ALTERNATIVE = /(.+)\/(.+)/,
+	/**
+	 * @constant
+	 * @private
+	 */
+		SPLITTER_REGEX_OPTIONAL_ALTERNATIVE = /(.*?)\((.+?)\)(.*)|(.+)\/(.+)/;
 
 
 
@@ -39,22 +63,22 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 				verb.infinitive = infinitive;
 
-				generateThemesForSingleVerb(verb, themes, themesEndings);
+//				generateThemesForSingleVerb(verb, themes, themesEndings);
 				generateEndingsForSingleVerb(verb, themes, paradigmEndings);
 			}
 		});
 
-		//convertIntoDialect.call(this, dialect);
-
 		commonThemes = extractCommonThemes(paradigmEndings);
+		reduceThemes(commonThemes);
 		paradigmEndings = compact(paradigmEndings);
 
-//		constraintToInfinitives(themesEndings, infinitives);
+//		constraintToInfinitivesThemes(themesEndings, infinitives);
 		constraintToInfinitivesParadigm(paradigmEndings, infinitives);
 
 //console.log(themesEndings);
-console.log(paradigmEndings);
-//console.log(commonThemes);
+//console.log(paradigmEndings);
+console.log(commonThemes);
+		printThemes(commonThemes);
 	};
 
 	/** @private */
@@ -114,7 +138,7 @@ console.log(paradigmEndings);
 	};
 
 	/** @private */
-	var constraintToInfinitives = function(list, infinitives){
+	var constraintToInfinitivesThemes = function(list, infinitives){
 		var diff, variab, variability, common, re, found, part, partitioningResults, parentsTrue, parentsFalse,
 			listNoPrefixes, first;
 		list.forEach(function(obj){
@@ -147,17 +171,17 @@ console.log(paradigmEndings);
 						re = new RegExp(variability + k + common + '$');
 						partitioningResults[diff.some(function(el){ return el.match(re); })].push(k);
 					});
-					if(partitioningResults['true'].length && partitioningResults['false'].length){
+					if(partitioningResults[true].length && partitioningResults[false].length){
 						parentsTrue = [];
 						parentsFalse = [];
-						partitioningResults['true'].forEach(function(k){
+						partitioningResults[true].forEach(function(k){
 							parentsTrue = parentsTrue.concat(part[k]);
 						});
-						partitioningResults['false'].forEach(function(k){
+						partitioningResults[false].forEach(function(k){
 							parentsFalse = parentsFalse.concat(part[k]);
 						});
 
-						obj.matcher = listToRegExp(partitioningResults['false']) + common;
+						obj.matcher = listToRegExp(partitioningResults[false]) + common;
 						obj.parents = parentsFalse;
 
 
@@ -165,11 +189,11 @@ console.log(paradigmEndings);
 						list.push(obj);
 						if(obj.parents.indexOf(common) < 0){
 							variability = listToRegExp(extractVariability(common.length + 1, 1, obj.parents));
-							re = new RegExp(variability + listToRegExp(partitioningResults['true']) + common + '$');
+							re = new RegExp(variability + listToRegExp(partitioningResults[true]) + common + '$');
 							found = diff.some(function(el){ return el.match(re); });
 						}
 					}
-					else if(!partitioningResults['true'].length){
+					else if(!partitioningResults[true].length){
 						obj.matcher = variability + listToRegExp(Object.keys(part)) + common;
 
 						return;
@@ -287,17 +311,17 @@ console.log(paradigmEndings);
 								re = new RegExp(variability + k + common + '$');
 								partitioningResults[diff.some(function(el){ return el.match(re); })].push(k);
 							});
-							if(partitioningResults['true'].length && partitioningResults['false'].length){
+							if(partitioningResults[true].length && partitioningResults[false].length){
 								parentsTrue = [];
 								parentsFalse = [];
-								partitioningResults['true'].forEach(function(k){
+								partitioningResults[true].forEach(function(k){
 									parentsTrue = parentsTrue.concat(part[k]);
 								});
-								partitioningResults['false'].forEach(function(k){
+								partitioningResults[false].forEach(function(k){
 									parentsFalse = parentsFalse.concat(part[k]);
 								});
 
-								obj.matcher = listToRegExp(partitioningResults['false']) + common;
+								obj.matcher = listToRegExp(partitioningResults[false]) + common;
 								obj.infinitives = parentsFalse;
 
 
@@ -305,14 +329,9 @@ console.log(paradigmEndings);
 								list.push(obj);
 								if(obj.infinitives.indexOf(common) < 0){
 									variability = listToRegExp(extractVariability(common.length + 1, 1, obj.infinitives));
-									re = new RegExp(variability + listToRegExp(partitioningResults['true']) + common + '$');
+									re = new RegExp(variability + listToRegExp(partitioningResults[true]) + common + '$');
 									found = diff.some(function(el){ return el.match(re); });
 								}
-							}
-							else if(!partitioningResults['true'].length){
-								obj.matcher = variability + listToRegExp(Object.keys(part)) + common;
-
-								return;
 							}
 						}
 					}
@@ -358,10 +377,121 @@ console.log(paradigmEndings);
 					commonThemes.push(theme);
 					idx = commonThemes.length - 1;
 				}
-				obj.themes[i] = 'theme-' + idx;
+				obj.themes[i] = idx;
 			});
 		});
 		return commonThemes;
+	};
+
+	/** @private */
+	var reduceThemes = function(list){
+		var indices = list.map(function(el, i){ return {idx: i, size: el.length}; }),
+			themeContained, themeContainer, i0, j0;
+		indices.sort(function(a, b){ return b.size - a.size; });
+		indices = indices.map(function(el){ return el.idx; });
+		for(var i = indices.length - 1; i >= 0; i --){
+			i0 = indices.indexOf(i);
+			themeContained = list[i0];
+			for(var j = i - 1; j >= 0; j --){
+				j0 = indices.indexOf(j);
+				themeContainer = list[j0];
+				if(contains(themeContainer, themeContained)){
+					list[j0] = difference(themeContainer, themeContained);
+					list[j0].parents = (list[j0].parents || []).concat(i0);
+				}
+			}
+		}
+	};
+
+	/** @private */
+	var printThemes = function(list){
+		var i = 4,
+			base;
+		list.forEach(function(sublist){
+			if(!sublist.length)
+				return;
+
+			sublist = expandThemes(sublist);
+
+			simplifyThemesAndApplyFlag(sublist, 1, 'e', 'i');
+			simplifyThemesAndApplyFlag(sublist, 2, 'a', 'e\/1');
+			simplifyThemesAndApplyFlag(sublist, 3, 'o', 'a\/2');
+
+			base = sublist.shift();
+
+			console.log('SFX ' + i + ' Y ' + sublist.length);
+			sublist.forEach(function(el){
+				console.log('SFX ' + i + ' ' + (base? base.replace(/\/.+$/, ''): 0) + ' ' + el + (sublist.parents && sublist.parents.length? '/' + (sublist.parents.join(',') + 1): '') + ' # ' + base);
+			});
+			i ++;
+		});
+	};
+
+	/** @private */
+	var simplifyThemesAndApplyFlag = function(list, flag, matcher){
+		var replacement = Array.prototype.slice.call(arguments, 3, arguments.length),
+			i, base, indices;
+		matcher = new RegExp(matcher + '[^' + PRONOMENAL_MARK + '' + PRONOMENAL_MARK_IMPERATIVE + '' + FINAL_CONSONANT_VOICING + ']*$');
+
+		for(i = list.length - 1; i >= 0; i --)
+			if(list.hasOwnProperty(i) && list[i].match(matcher)){
+				base = list[i].replace(matcher, '')
+					//escape regexp reserved characters
+					.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
+
+				indices = replacement.map(function(last){
+					return findIndex(list, function(el){ return el.match(new RegExp('^' + base + last + '$')); });
+				});
+				if(indices.some(function(el){ return (el < 0); }))
+					continue;
+
+				//here, all replacements are found, substitute them
+				list[i] = list[i].replace(/(?:\/(.+))?$/, '/' + flag + '$1');
+
+				//remove replaced items
+				i = removeIndices(list, indices, i);
+			}
+	};
+
+	/** @private */
+	var removeIndices = function(list, indices, baseIndex){
+		var i, j;
+		for(i = indices.length - 1; i >= 0; i --){
+			list.splice(indices[i], 1);
+
+			for(j = i - 1; j >= 0; j --)
+				if(indices[j] > indices[i])
+					indices[j] --;
+			if(indices[i] < baseIndex)
+				baseIndex --;
+		}
+		return baseIndex;
+	};
+
+	/** @private */
+	var expandThemes = function(themes){
+		var splitter = function(form){
+			var m = form.match(SPLITTER_REGEX_OPTIONAL),
+				m2;
+			if(m && !form.match(/[>+$]/)){
+				addAndSplit(m[1] + m[3]);
+
+				m2 = m[2].match(SPLITTER_REGEX_ALTERNATIVE);
+				if(m2){
+					addAndSplit(m[1] + m2[1] + m[3]);
+					addAndSplit(m[1] + m2[2] + m[3]);
+				}
+				else
+					addAndSplit(m[1] + m[2] + m[3]);
+			}
+		};
+		var addAndSplit = function(form){
+			themes.push(form);
+			splitter(form);
+		};
+
+		themes.forEach(splitter);
+		return themes.filter(function(item){ return !item.match(SPLITTER_REGEX_OPTIONAL_ALTERNATIVE); });
 	};
 
 	/** @private */
@@ -410,6 +540,18 @@ console.log(paradigmEndings);
 	};
 
 	/** @private */
+	var contains = function(a, b){
+		return b.every(function(el){ return (a.indexOf(el) >= 0); });
+	};
+
+	/** @private */
+	var unique = function(list){
+		return list.filter(function(x, i){
+			return (list.indexOf(x) == i);
+		});
+	};
+
+	/** @private */
 	var extractIndexOfCommonPartFromStart = function(a, b){
 		for(var i = 0, len = Math.min(a.length, b.length); i < len; i ++)
 			if(a[i] != b[i])
@@ -443,23 +585,6 @@ console.log(paradigmEndings);
 			variability.push(idx >= 0? obj.substr(idx, order): '.');
 		});
 		return unique(variability).sort();
-	};
-
-	/** @private */
-	var unique = function(list){
-		return list.filter(function(x, i){
-			return (list.indexOf(x) == i);
-		});
-	};
-
-	/** @private */
-	var uniqueNoPrefixes = function(list){
-		return list.filter(function(x){
-			for(var i = 0, len = list.length; i < len; i ++)
-				if(x.indexOf(list[i]) > 0)
-					return false;
-			return true;
-		});
 	};
 
 	/** @private */
@@ -754,10 +879,10 @@ console.log(paradigmEndings);
 		if(t.themeT8){
 			var strong = generateParticiplePerfectStrong.call(this, t.themeT8);
 			if(strong){
-				insert.call(this, 8, '*' + Word.unmarkDefaultStress(strong + 'o') + FINAL_CONSONANT_VOICING);
-				insert.call(this, 8, '*' + Word.unmarkDefaultStress(strong + 'i'));
-				insert.call(this, 8, '*' + Word.unmarkDefaultStress(strong + 'a'));
-				insert.call(this, 8, '*' + Word.unmarkDefaultStress(strong + 'e'));
+				insert.call(this, 8, WHOLE_WORD + Word.unmarkDefaultStress(strong + 'o') + FINAL_CONSONANT_VOICING);
+				insert.call(this, 8, WHOLE_WORD + Word.unmarkDefaultStress(strong + 'i'));
+				insert.call(this, 8, WHOLE_WORD + Word.unmarkDefaultStress(strong + 'a'));
+				insert.call(this, 8, WHOLE_WORD + Word.unmarkDefaultStress(strong + 'e'));
 			}
 		}
 	};
@@ -920,20 +1045,10 @@ console.log(paradigmEndings);
 		}
 	};
 
-	/**
-	 * @param {Dialect} dialect
-	 *
-	 * @private
-	 */
-	var convertIntoDialect = function(dialect){
-		visit(this, function(subParadigm, key){
-			subParadigm[key] = Orthography.convertDialect(subParadigm[key], dialect.dialect, false);
-		});
-	};
-
 
 	return {
 		START_OF_WORD: START_OF_WORD,
+		WHOLE_WORD: WHOLE_WORD,
 		PRONOMENAL_MARK: PRONOMENAL_MARK,
 		PRONOMENAL_MARK_IMPERATIVE: PRONOMENAL_MARK_IMPERATIVE,
 		FINAL_CONSONANT_VOICING: FINAL_CONSONANT_VOICING,

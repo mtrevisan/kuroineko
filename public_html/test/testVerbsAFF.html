@@ -43,36 +43,18 @@
 			return (this.length == a.length && this.every(function(el){ return (a.indexOf(el) >= 0); }));
 		};
 		var intersection = function(a){
-//			if(a == null)
-//				return [];
-//			if(arguments.length === 1)
-//				return a.unique();
-//
-//			var arr = Array.prototype.concat.apply([], Array.prototype.slice.call(arguments, 1));
-//
-//			return a.unique().filter(function(el){
-//				return arr.some(function(cur){
-//					return (cur == el);
-//				});
-//			});
+			if(a == null)
+				return [];
+			if(arguments.length === 1)
+				return a.unique();
 
-			var argsLength = arguments.length,
-				length = a.length,
-				result = [],
-				i, j, item;
-			for(i = 0; i < length; i ++){
-				item = a[i];
-				if(result.indexOf(item) >= 0)
-					continue;
+			var arr = Array.prototype.slice.call(arguments, 1);
 
-				for(j = 1; j < argsLength; j ++)
-					if(arguments[j].indexOf(item) < 0)
-						break;
-
-				if(j == argsLength)
-					result.push(item);
-			}
-			return result;
+			return a.unique().filter(function(el){
+				return arr.some(function(cur){
+					return (cur == el);
+				});
+			});
 		};
 		var partition = function(list, predicate){
 			var result = {};
@@ -201,7 +183,7 @@ console.log('hgf');
 		var epurateListAndApplyFlag = function(list, flag, matcher){
 			var matcherLength = matcher.replace(/\[.+\]/, '.').length,
 				replacement = Array.prototype.slice.call(arguments, 3, arguments.length),
-				i, j, rep, repment, indices, parents,
+				i, j, k, rep, repment, indices, parents,
 				inters, p;
 			matcher = new RegExp(matcher + '$');
 
@@ -211,7 +193,7 @@ console.log('hgf');
 					rep = list[i].replaced;
 					repment = repment.substr(0, repment.length - matcherLength);
 
-					indices = replacement.map(function(last){ return indexOfReplacement(list, rep, new RegExp(repment + last + '$')); });
+					indices = replacement.map(function(last){ return indexOfReplacement(list, rep, new RegExp('^' + repment + last + '$')); });
 					if(indices.some(function(el){ return (el < 0); }))
 						continue;
 
@@ -249,12 +231,15 @@ console.log('hgf');
 					list[i].replacement = list[i].replacement.replace(/(\/(.+))?$/, '/' + flag + '$2');
 
 					//remove replaced items
-					indices.forEach(function(el){
-						list.splice(el, 1);
+					for(j = indices.length - 1; j >= 0; j --){
+						list.splice(indices[j], 1);
 
-						if(el < i)
+						for(k = j - 1; k >= 0; k --)
+							if(indices[k] < i)
+								indices[k] --;
+						if(indices[j] < i)
 							i --;
-					});
+					}
 				}
 			}
 		};
