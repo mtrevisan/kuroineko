@@ -134,6 +134,13 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		return i;
 	};
 
+	var findIndex = function(array, predicate){
+		for(var i = 0, len = array.length; i < len; i ++)
+			if(predicate.call(array, array[i], i))
+				return i;
+		return -1;
+	};
+
 	var forEach = function(array, fn, scope){
 		for(var i = 0, len = array.length; i != len; i ++)
 			fn.call(scope || this, this[i], i, this);
@@ -334,6 +341,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 
 	return {
+		findIndex: findIndex,
 		copy: copy,
 		equals: equals,
 		contains: contains,

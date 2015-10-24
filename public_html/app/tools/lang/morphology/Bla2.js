@@ -70,14 +70,15 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 		commonThemes = extractCommonThemes(paradigmEndings);
 		reduceThemes(commonThemes);
+
 		paradigmEndings = compact(paradigmEndings);
 
 //		constraintToInfinitivesThemes(themesEndings, infinitives);
 		constraintToInfinitivesParadigm(paradigmEndings, infinitives);
 
 //console.log(themesEndings);
-//console.log(paradigmEndings);
-console.log(commonThemes);
+console.log(paradigmEndings);
+//console.log(commonThemes);
 		printThemes(commonThemes);
 	};
 
@@ -89,7 +90,7 @@ console.log(commonThemes);
 			from = verb.infinitive.substr(idx);
 			to = obj[key].substr(idx);
 
-			idx = findIndex(themesEndings, function(el){ return (el.from == from && el.to == to); });
+			idx = ArrayHelper.findIndex(themesEndings, function(el){ return (el.from == from && el.to == to); });
 			if(idx < 0)
 				themesEndings.push({theme: Number(key.replace(/^themeT/, '')), from: from, to: to, parents: [verb.infinitive]});
 			else if(themesEndings[idx].parents.indexOf(verb.infinitive) < 0)
@@ -241,14 +242,14 @@ console.log(commonThemes);
 					variability = listToRegExp(variability);
 
 					matcher = new RegExp(variability + obj.matcher + '$');
-					found = (findIndex(diff, function(el){ return el.match(matcher); }) >= 0);
+					found = (ArrayHelper.findIndex(diff, function(el){ return el.match(matcher); }) >= 0);
 
 					if(found && order == 2){
 						not = true;
 						variability = listToNotRegExp(extractVariability(form.length, order - 1, obj.parents));
 
 						matcher = new RegExp(variability + form + '$');
-						found = (findIndex(diff, function(el){ return el.match(matcher); }) >= 0);
+						found = (ArrayHelper.findIndex(diff, function(el){ return el.match(matcher); }) >= 0);
 					}
 				}while(found && !diff.every(function(el){ return (el[0] == '^'); }));
 				if(!found)
@@ -372,7 +373,7 @@ console.log(commonThemes);
 			idx;
 		list.forEach(function(obj){
 			obj.themes.forEach(function(theme, i){
-				idx = findIndex(commonThemes, function(el){ return ArrayHelper.equals(theme, el); });
+				idx = ArrayHelper.findIndex(commonThemes, function(el){ return ArrayHelper.equals(theme, el); });
 				if(idx < 0){
 					commonThemes.push(theme);
 					idx = commonThemes.length - 1;
@@ -408,9 +409,6 @@ console.log(commonThemes);
 		var i = 4,
 			base;
 		list.forEach(function(sublist){
-			if(!sublist.length)
-				return;
-
 			sublist = expandThemes(sublist);
 
 			simplifyThemesAndApplyFlag(sublist, 1, 'e', 'i');
@@ -419,9 +417,9 @@ console.log(commonThemes);
 
 			base = sublist.shift();
 
-			console.log('SFX ' + i + ' Y ' + sublist.length);
+			console.log('SFX ' + i + ' Y ' + sublist.length + ' # ' + base);
 			sublist.forEach(function(el){
-				console.log('SFX ' + i + ' ' + (base? base.replace(/\/.+$/, ''): 0) + ' ' + el + (sublist.parents && sublist.parents.length? '/' + (sublist.parents.join(',') + 1): '') + ' # ' + base);
+				console.log('SFX ' + i + ' ' + (base? base.replace(/\/.+$/, ''): 0) + ' ' + el + (sublist.parents && sublist.parents.length? '/' + (sublist.parents.join(',') + 1): ''));
 			});
 			i ++;
 		});
@@ -431,7 +429,7 @@ console.log(commonThemes);
 	var simplifyThemesAndApplyFlag = function(list, flag, matcher){
 		var replacement = Array.prototype.slice.call(arguments, 3, arguments.length),
 			i, base, indices;
-		matcher = new RegExp(matcher + '[^' + PRONOMENAL_MARK + '' + PRONOMENAL_MARK_IMPERATIVE + '' + FINAL_CONSONANT_VOICING + ']*$');
+		matcher = new RegExp(matcher + '[' + PRONOMENAL_MARK + '' + PRONOMENAL_MARK_IMPERATIVE + '' + FINAL_CONSONANT_VOICING + ']*$');
 
 		for(i = list.length - 1; i >= 0; i --)
 			if(list.hasOwnProperty(i) && list[i].match(matcher)){
@@ -440,7 +438,7 @@ console.log(commonThemes);
 					.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
 
 				indices = replacement.map(function(last){
-					return findIndex(list, function(el){ return el.match(new RegExp('^' + base + last + '$')); });
+					return ArrayHelper.findIndex(list, function(el){ return el.match(new RegExp('^' + base + last + '$')); });
 				});
 				if(indices.some(function(el){ return (el < 0); }))
 					continue;
@@ -969,7 +967,7 @@ console.log(commonThemes);
 	/** @private */
 	var insert = function(theme, suffix){
 		var infinitive = this.verb.infinitive;
-		var idx = findIndex(this.paradigm, function(el){ return (el.infinitive == infinitive); });
+		var idx = ArrayHelper.findIndex(this.paradigm, function(el){ return (el.infinitive == infinitive); });
 		if(idx < 0){
 			var data = {infinitive: this.verb.infinitive, themes: []};
 			data.themes[theme] = [suffix];
@@ -982,14 +980,6 @@ console.log(commonThemes);
 			else if(t[theme].indexOf(suffix) < 0)
 				t[theme].push(suffix);
 		}
-	};
-
-	/** @private */
-	var findIndex = function(array, predicate){
-		for(var i = 0, len = array.length; i < len; i ++)
-			if(predicate.call(array, array[i], i))
-				return i;
-		return -1;
 	};
 
 
