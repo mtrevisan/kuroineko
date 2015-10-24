@@ -82,10 +82,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		constraintToInfinitivesParadigm(paradigmEndings, infinitives);
 
 //console.log(themesEndings);
-console.log(paradigmEndings);
+//console.log(paradigmEndings);
 console.log(commonThemes);
 		i = printThemes(commonThemes);
-		printParadigm(paradigmEndings, i);
+//		printParadigm(paradigmEndings, i);
 	};
 
 	/** @private */
@@ -507,7 +507,7 @@ console.log(commonThemes);
 		};
 
 		themes.forEach(splitter);
-		return themes.filter(function(item){ return !item.match(SPLITTER_REGEX_OPTIONAL_ALTERNATIVE); });
+		return themes.filter(function(form){ return (!form.match(/[>+$]/) && !form.match(SPLITTER_REGEX_OPTIONAL_ALTERNATIVE)); });
 	};
 
 	/** @private */
