@@ -25659,7 +25659,7 @@
 "savatin",["n. m. sing."],{"ita":"ciabattino","eng":"cobbler, shoemaker"},25658,["VR","PD","TF","VE"],
 "savaton",["n. m. sing."],{"ita":"acciarpatore, abborracciatore","eng":"careless"},25659,["PD","VE"],
 "saver",["n. m. sing."],{"ita":"sapere, conoscenza, sapienza","eng":"knowledge"},25660,["TS","TV","TF","VE"],
-"saver",["Vb.tr."],{"ita":"sapere, conoscere, apprendere","eng":"know"},25661,["TS","VR","BL","TV","TF","VE"],
+"saver",["vb. tr."],{"ita":"sapere, conoscere, apprendere","eng":"know"},25661,["TS","VR","BL","TV","TF","VE"],
 "saver",["v. intr."],{"ita":"odorare, aver sapore o odore","eng":"smell"},25662,["BL","TF","VE"],
 "saver",["v. intr."],{"ita":"sapere, aver gusto","eng":"taste"},25663,["VI","PD"],
 "savia",["n. f. sing."],{"ita":"salvia","eng":"sage"},25664,["BL"],

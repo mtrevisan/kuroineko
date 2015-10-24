@@ -82,10 +82,11 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		constraintToInfinitivesParadigm(paradigmEndings, infinitives);
 
 //console.log(themesEndings);
-//console.log(paradigmEndings);
+console.log(paradigmEndings);
 console.log(commonThemes);
-		i = printThemes(commonThemes);
-//		printParadigm(paradigmEndings, i);
+//		i = printThemes(commonThemes);
+i = 133;
+		printParadigm(paradigmEndings, commonThemes, i);
 	};
 
 	/** @private */
@@ -393,14 +394,15 @@ console.log(commonThemes);
 		for(var i = indices.length - 1; i >= 0; i --){
 			i0 = indices.indexOf(i);
 			themeContained = list[i0];
-			for(var j = i - 1; j >= 0; j --){
-				j0 = indices.indexOf(j);
-				themeContainer = list[j0];
-				if(ArrayHelper.contains(themeContainer, themeContained)){
-					list[j0] = ArrayHelper.difference(themeContainer, themeContained);
-					list[j0].parents = (list[j0].parents || []).concat(i0);
+			if(themeContained.length > 1)
+				for(var j = i - 1; j >= 0; j --){
+					j0 = indices.indexOf(j);
+					themeContainer = list[j0];
+					if(ArrayHelper.contains(themeContainer, themeContained)){
+						list[j0] = ArrayHelper.difference(themeContainer, themeContained);
+						list[j0].parents = (list[j0].parents || []).concat(i0);
+					}
 				}
-			}
 		}
 	};
 
@@ -427,15 +429,18 @@ console.log(commonThemes);
 	};
 
 	/** @private */
-	var printParadigm = function(list, i){
-		var k;
+	var printParadigm = function(list, commonThemes, i){
+		var k, repment;
 		list.forEach(function(el){
 			k = 0;
 			el.themes.forEach(function(){ k ++; });
 
 			console.log('SFX ' + i + ' Y ' + k);
-			el.themes.forEach(function(theme, idx){
-				console.log('SFX ' + i + ' ' + idx + ' /' + (theme + SUFFIXES_BASE_INDEX) + ' ' + el.matcher + ' # ' + el.infinitives.join(','));
+			el.themes.forEach(function(theme){
+				repment = commonThemes[theme][0];
+				if(repment.indexOf('>') < 0)
+					repment = repment.replace(/\(.+\)/g, '');
+				console.log('SFX ' + i + ' ? ' + repment + '/' + (theme + SUFFIXES_BASE_INDEX) + ' ' + el.matcher + ' # ' + el.infinitives.join(','));
 			});
 
 			i ++;
@@ -601,7 +606,7 @@ console.log(commonThemes);
 		if(t.themeT12 || t.themeT5 || t.themeT8 || t.themeT10){
 			if(t.themeT8){
 				if(this.verb.irregularity.eser)
-					insert.call(this, 8, (!t.themeT8.match(/[cijɉñ]$/)? '(i)': '') + 'ón');
+					insert.call(this, 8, (!t.themeT8.match(/[cijɉñ]$/)? '(i)': '') + 'on');
 				else if(this.verb.irregularity.aver){
 					insert.call(this, 8, 'à>à');
 					insert.call(this, 8, 'à>è');
@@ -644,13 +649,13 @@ console.log(commonThemes);
 			}
 			if(t.themeT12 || t.themeT5){
 				if(t.themeT12){
-					insert.call(this, 12, 'ón');
-					insert.call(this, 12, 'én');
+					insert.call(this, 12, 'on');
+					insert.call(this, 12, 'en');
 				}
 				if(t.themeT5){
-					insert.call(this, 5, 'è>é+mo');
+					insert.call(this, 5, 'è>e+mo');
 					if(conj == 2)
-						insert.call(this, 5, 'i?é>í+mo');
+						insert.call(this, 5, 'i?é>i+mo');
 				}
 			}
 
@@ -682,9 +687,9 @@ console.log(commonThemes);
 			}
 			if(t.themeT11){
 				insert.call(this, 11, '(iv)ié');
-				insert.call(this, 11, (!t.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'ón(se)');
-				insert.call(this, 11, 'iv(i)ón(se)');
-				insert.call(this, 11, '(iv)én(se)');
+				insert.call(this, 11, (!t.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'on(se)');
+				insert.call(this, 11, 'iv(i)on(se)');
+				insert.call(this, 11, '(iv)en(se)');
 				//FIXME
 				//if(this.verb.irregularity.eser)
 				//	insert.call(this, 11, '[x/j]|(iv)én(se)');
@@ -699,12 +704,12 @@ console.log(commonThemes);
 			insert.call(this, 4, 'rà');
 			insert.call(this, 4, 'rè');
 			insert.call(this, 4, 'ré');
-			insert.call(this, 4, 'rémo');
-			insert.call(this, 4, 'rón');
-			insert.call(this, 4, 'rén');
+			insert.call(this, 4, 'remo');
+			insert.call(this, 4, 'ron');
+			insert.call(this, 4, 'ren');
 			if(this.verb.conjugation == 2){
 				insert.call(this, 4, 'rí');
-				insert.call(this, 4, 'rímo');
+				insert.call(this, 4, 'rimo');
 			}
 		}
 	};
@@ -733,20 +738,22 @@ console.log(commonThemes);
 					insert.call(this, 5, '[èí]>é');
 				else if(t.themeT5.replace(/i?é$/, 'í') != t.themeT5)
 					insert.call(this, 5, 'i?é>í');
-				if(t.themeT12)
-					insert.call(this, 12, (this.verb.special3rd? '(i)': '') + 'é(de/ge)');
+				if(t.themeT12){
+					insert.call(this, 12, (this.verb.special3rd? '(i)': '') + 'é');
+					insert.call(this, 12, (this.verb.special3rd? '(i)': '') + 'e(de/ge)');
+				}
 				if(conj == 3 && !this.verb.special3rd)
 					insert.call(this, 5, '(de/ge)');
 			}
 			if(t.themeT12 || t.themeT5){
 				if(t.themeT12){
-					insert.call(this, 12, (!t.themeT12.match(/[cijɉñ]$/)? '(i)': '') + 'ón(e)');
-					insert.call(this, 12, 'én(e)');
+					insert.call(this, 12, (!t.themeT12.match(/[cijɉñ]$/)? '(i)': '') + 'on(e)');
+					insert.call(this, 12, 'en(e)');
 				}
 				if(t.themeT5){
-					insert.call(this, 5, 'è>é+mo');
+					insert.call(this, 5, 'è>e+mo');
 					if(conj == 2 && t.themeT5.replace(/i?é$/, 'í') != t.themeT5)
-						insert.call(this, 5, 'i?é>í+mo');
+						insert.call(this, 5, 'i?é>i+mo');
 				}
 			}
 
@@ -765,15 +772,17 @@ console.log(commonThemes);
 			if(t.themeT2){
 				insert.call(this, 2, 'se');
 				insert.call(this, 2, 'si');
-				if(t.themeT11)
-					insert.call(this, 11, '(is)ié(de/ge)');
+				if(t.themeT11){
+					insert.call(this, 11, '(is)ié');
+					insert.call(this, 11, '(is)ie(de/ge)');
+				}
 			}
 			if(t.themeT2)
 				insert.call(this, 2, 'simo');
 			if(t.themeT11){
-				insert.call(this, 11, (!t.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'ón(e/se)');
-				insert.call(this, 11, 'is(i)ón(e/se)');
-				insert.call(this, 11, '(is)én(e/se)');
+				insert.call(this, 11, (!t.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'on(e/se)');
+				insert.call(this, 11, 'is(i)on(e/se)');
+				insert.call(this, 11, '(is)en(e/se)');
 			}
 		}
 	};
@@ -783,12 +792,12 @@ console.log(commonThemes);
 		if(t.themeT4){
 			insert.call(this, 4, 'ría');
 			insert.call(this, 4, 'ríe');
-			insert.call(this, 4, 'rési');
+			insert.call(this, 4, 'resi');
 			insert.call(this, 4, 'r(is)ié');
 			insert.call(this, 4, 'résimo');
-			insert.call(this, 4, 'r(is)(i)ón(se)');
-			insert.call(this, 4, 'r(is)én(se)');
-			insert.call(this, 4, 'ràve');
+			insert.call(this, 4, 'r(is)(i)on(se)');
+			insert.call(this, 4, 'r(is)en(se)');
+			insert.call(this, 4, 'rave');
 		}
 	};
 
@@ -878,9 +887,9 @@ console.log(commonThemes);
 			if(t.themeT7 && this.verb.conjugation == 3)
 				insert.call(this, 7, 'ndo' + pronomenalMark);
 			if(this.verb.irregularity.eser)
-				insert.call(this, 2, START_OF_WORD + 'siàndo' + pronomenalMark);
+				insert.call(this, 2, START_OF_WORD + 'siando' + pronomenalMark);
 			else if(this.verb.irregularity.aver)
-				insert.call(this, 2, START_OF_WORD + (this.verb.infinitive.substr(0, this.verb.infinitive.length - 'aver'.length)) + 'abiàndo' + pronomenalMark);
+				insert.call(this, 2, START_OF_WORD + (this.verb.infinitive.substr(0, this.verb.infinitive.length - 'aver'.length)) + 'abiando' + pronomenalMark);
 		}
 	};
 
@@ -917,7 +926,7 @@ console.log(commonThemes);
 			//1st conjugation
 			[
 				{matcher: /fà$/, replacement: 'fàt'},
-				{matcher: /konsà$/, replacement: 'kónso'}
+				{matcher: /konsà$/, replacement: 'kóns'}
 			],
 
 			//2nd conjugation
@@ -925,27 +934,40 @@ console.log(commonThemes);
 				//rhizotonic
 				[
 					//TODO
-					{matcher: /trà$/, replacement: 'tràt'},
-					{matcher: /díx$/, replacement: 'dít'},
-					{matcher: /rónp$/, replacement: 'rót'},
-					{matcher: /spànd$/, replacement: 'spànt'},
-					{matcher: /skrív$/, replacement: 'skrít'},
 					//kuèrdh, vínth, provéd
+					{matcher: /díx$/, replacement: 'dít'},
+					{matcher: /dúx$/, replacement: 'dót'},
 					{matcher: /kór$/, replacement: 'kórs'},
-					{matcher: /ofénd$/, replacement: 'oféx'},
-					{matcher: /pèrd$/, replacement: 'pèrs'},
+					{matcher: /kòx$/, replacement: 'kòt'},
 					{matcher: /mét$/, replacement: 'més'},
 					{matcher: /móv$/, replacement: 'mós'},
 					{matcher: /nét$/, replacement: 'nés'},
-					{matcher: /sucéd$/, replacement: 'sucès'}
+					{matcher: /ofénd$/, replacement: 'oféx'},
+					{matcher: /ónđ$/, replacement: 'ónt'},
+					{matcher: /pénđ$/, replacement: 'pént'},
+					{matcher: /pèrd$/, replacement: 'pèrs'},
+					{matcher: /pón$/, replacement: 'pòst'},
+					{matcher: /pòrx$/, replacement: 'pòrt'},
+					{matcher: /rónp$/, replacement: 'rót'},
+					{matcher: /skrív$/, replacement: 'skrít'},
+					{matcher: /spànd$/, replacement: 'spànt'},
+					{matcher: /strénđ$/, replacement: 'strét'},
+					{matcher: /sucéd$/, replacement: 'sucès'},
+					{matcher: /ténd$/, replacement: 'téx'},
+					{matcher: /ténx$/, replacement: 'tént'},
+					{matcher: /tòrđ$/, replacement: 'tòrt'},
+					{matcher: /trà$/, replacement: 'tràt'},
+					{matcher: /vínŧ$/, replacement: 'vínt'},
+					{matcher: /vív$/, replacement: 'visú'},
+					{matcher: /vòlx$/, replacement: 'vòlt'}
 					//...
 				],
 				//rhizoatone (avér, -manér, -parér, podér, savér, -tolér/-volér, e valér)
 				[
+					{matcher: /àl$/, replacement: 'àls'},
 					{matcher: /n$/, replacement: 'x'},
 					{matcher: /r$/, replacement: 'rs'},
-					{matcher: /tòl$/, replacement: 'tòlt'},
-					{matcher: /àl$/, replacement: 'àls'}
+					{matcher: /tòl$/, replacement: 'tòlt'}
 				]
 			],
 

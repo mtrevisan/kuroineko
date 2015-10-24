@@ -399,10 +399,18 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			var strong = generateParticiplePerfectStrong.call(this, t.themeT8);
 			if(strong){
 				var root = namespace(this.paradigm, 'participle', 'perfect', IRREGULAR, 'strong');
-				root.general = generateEntireDeclination(strong);
+				if(strong[0]){
+					root.general1 = generateEntireDeclination(strong[0]);
 
-				if(strong.match(/[^aeiouàèéíòóú]$/))
-					root.general.singularMasculine2 = PhonologyHelper.finalConsonantVoicing(strong, 'northern');
+					if(strong[0].match(/[^aeiouàèéíòóú]$/))
+						root.general1.singularMasculine2 = PhonologyHelper.finalConsonantVoicing(strong[0], 'northern');
+				}
+				if(strong[1]){
+					root.general2 = generateEntireDeclination(strong[1]);
+
+					if(strong[1] && strong[1].match(/[^aeiouàèéíòóú]$/))
+						root.general1.singularMasculine2 = PhonologyHelper.finalConsonantVoicing(strong[1], 'northern');
+				}
 			}
 		}
 	};
@@ -455,8 +463,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 		var strong = [
 			//1st conjugation
 			[
-				{matcher: /fà$/, replacement: 'fàt'},
-				{matcher: /konsà$/, replacement: 'kónso'}
+				{matcher: /fà$/, replacement: ['fàt']},
+				{matcher: /konsà$/, replacement: ['kóns']}
 			],
 
 			//2nd conjugation
@@ -464,36 +472,49 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				//rhizotonic
 				[
 					//TODO
-					{matcher: /trà$/, replacement: 'tràt'},
-					{matcher: /díx$/, replacement: 'dít'},
-					{matcher: /rónp$/, replacement: 'rót'},
-					{matcher: /spànd$/, replacement: 'spànt'},
-					{matcher: /skrív$/, replacement: 'skrít'},
 					//kuèrdh, vínth, provéd
-					{matcher: /kór$/, replacement: 'kórs'},
-					{matcher: /ofénd$/, replacement: 'oféx'},
-					{matcher: /pèrd$/, replacement: 'pèrs'},
-					{matcher: /mét$/, replacement: 'més'},
-					{matcher: /móv$/, replacement: 'mós'},
-					{matcher: /nét$/, replacement: 'nés'},
-					{matcher: /sucéd$/, replacement: 'sucès'}
+					{matcher: /díx$/, replacement: ['dít']},
+					{matcher: /dúx$/, replacement: ['dót']},
+					{matcher: /kór$/, replacement: ['kórs']},
+					{matcher: /kòx$/, replacement: ['kòt']},
+					{matcher: /mét$/, replacement: ['més']},
+					{matcher: /móv$/, replacement: ['mós']},
+					{matcher: /nét$/, replacement: ['nés']},
+					{matcher: /ofénd$/, replacement: ['oféx']},
+					{matcher: /ónđ$/, replacement: ['ónt']},
+					{matcher: /pénđ$/, replacement: ['pént']},
+					{matcher: /pèrd$/, replacement: ['pèrs']},
+					{matcher: /pón$/, replacement: ['pòst']},
+					{matcher: /pòrx$/, replacement: ['pòrt']},
+					{matcher: /rónp$/, replacement: ['rót']},
+					{matcher: /skrív$/, replacement: ['skrít']},
+					{matcher: /spànd$/, replacement: ['spànt']},
+					{matcher: /strénđ$/, replacement: ['strét']},
+					{matcher: /sucéd$/, replacement: ['sucès']},
+					{matcher: /ténd$/, replacement: ['téx']},
+					{matcher: /ténx$/, replacement: ['tént']},
+					{matcher: /tòrđ$/, replacement: ['tòrt']},
+					{matcher: /trà$/, replacement: ['tràt']},
+					{matcher: /vínŧ$/, replacement: ['vínt']},
+					{matcher: /vív$/, replacement: ['visú']},
+					{matcher: /vòlx$/, replacement: ['vòlt']}
 					//...
 				],
 				//rhizoatone (avér, -manér, -parér, podér, savér, -tolér/-volér, e valér)
 				[
-					{matcher: /n$/, replacement: 'x'},
-					{matcher: /r$/, replacement: 'rs'},
-					{matcher: /tòl$/, replacement: 'tòlt'},
-					{matcher: /àl$/, replacement: 'àls'}
+					{matcher: /àl$/, replacement: ['àls']},
+					{matcher: /n$/, replacement: ['x']},
+					{matcher: /r$/, replacement: ['rs']},
+					{matcher: /tòl$/, replacement: ['tòlt']}
 				]
 			],
 
 			//3rd conjugation
 			[
-				{matcher: /mòr$/, falsePositives: /(inti|mar)mòr$/, replacement: 'mòrt'},
+				{matcher: /mòr$/, falsePositives: /(inti|mar)mòr$/, replacement: ['mòrt']},
 
-				{matcher: /([^aeiouàèéíòóú])r$/, falsePositives: /núdr$/, replacement: '$1èrt'},
-				{matcher: /r$/, replacement: 'rs'}
+				{matcher: /([^aeiouàèéíòóú])r$/, falsePositives: /núdr$/, replacement: ['$1èrt']},
+				{matcher: /r$/, replacement: ['rs']}
 			]
 		];
 
@@ -507,9 +528,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 
 			var m, match;
 			if(data.some(function(el){ m = el; match = this.match(el.matcher); return match; }, themeT8) && (!m.falsePositives || !themeT8.match(m.falsePositives))){
-				if(Word.isStressed(m.replacement) && !Word.isStressed(match[0]))
-					themeT8 = Word.suppressStress(themeT8);
-				return themeT8.replace(m.matcher, m.replacement);
+				return m.replacement.map(function(rep){
+					return (Word.isStressed(rep) && !Word.isStressed(match[0])? Word.suppressStress(themeT8): themeT8).replace(m.matcher, rep);
+				});
 			}
 			return undefined;
 		};
