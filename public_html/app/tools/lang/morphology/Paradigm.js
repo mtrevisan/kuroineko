@@ -472,7 +472,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				//rhizotonic
 				[
 					//TODO
-					//kuèrdh, vínth, provéd
+					//kuèrdh
 					{matcher: /díx$/, replacement: ['dít']},
 					{matcher: /dúx$/, replacement: ['dót']},
 					{matcher: /kór$/, replacement: ['kórs']},
@@ -495,6 +495,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 					{matcher: /ténx$/, replacement: ['tént']},
 					{matcher: /tòrđ$/, replacement: ['tòrt']},
 					{matcher: /trà$/, replacement: ['tràt']},
+					{matcher: /véd$/, replacement: ['víst']},
 					{matcher: /vínŧ$/, replacement: ['vínt']},
 					{matcher: /vív$/, replacement: ['visú']},
 					{matcher: /vòlx$/, replacement: ['vòlt']}

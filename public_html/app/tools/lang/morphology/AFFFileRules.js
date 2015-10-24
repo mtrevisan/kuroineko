@@ -963,6 +963,7 @@ i = 133;
 					{matcher: /ténx$/, replacement: 'tént'},
 					{matcher: /tòrđ$/, replacement: 'tòrt'},
 					{matcher: /trà$/, replacement: 'tràt'},
+					{matcher: /véd$/, replacement: 'víst'},
 					{matcher: /vínŧ$/, replacement: 'vínt'},
 					{matcher: /vív$/, replacement: 'visú'},
 					{matcher: /vòlx$/, replacement: 'vòlt'}
