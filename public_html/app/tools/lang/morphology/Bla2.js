@@ -161,7 +161,7 @@ console.log(paradigmEndings);
 						obj.parents = parentsFalse;
 
 
-						obj = {parents: parentsTrue, suffixes: obj.suffixes};
+						obj = {parents: parentsTrue, themes: obj.themes};
 						list.push(obj);
 						if(obj.parents.indexOf(common) < 0){
 							variability = listToRegExp(extractVariability(common.length + 1, 1, obj.parents));
@@ -194,7 +194,7 @@ console.log(paradigmEndings);
 
 				if(listNoPrefixes.length){
 					listNoPrefixes.forEach(function(el){
-						list.push({matcher: el, parents: listNoPrefixes.slice(0).splice(listNoPrefixes.indexOf(el), 1), suffixes: obj.suffixes});
+						list.push({matcher: el, parents: listNoPrefixes.slice(0).splice(listNoPrefixes.indexOf(el), 1), themes: obj.themes});
 					});
 
 					obj.parents = [first];
@@ -301,7 +301,7 @@ console.log(paradigmEndings);
 								obj.infinitives = parentsFalse;
 
 
-								obj = {infinitives: parentsTrue, suffixes: obj.suffixes};
+								obj = {infinitives: parentsTrue, themes: obj.themes};
 								list.push(obj);
 								if(obj.infinitives.indexOf(common) < 0){
 									variability = listToRegExp(extractVariability(common.length + 1, 1, obj.infinitives));
@@ -336,7 +336,7 @@ console.log(paradigmEndings);
 
 				if(listNoPrefixes.length){
 					listNoPrefixes.forEach(function(el){
-						list.push({matcher: el, infinitives: listNoPrefixes.slice(0).splice(listNoPrefixes.indexOf(el), 1), suffixes: obj.suffixes});
+						list.push({matcher: el, infinitives: listNoPrefixes.slice(0).splice(listNoPrefixes.indexOf(el), 1), themes: obj.themes});
 					});
 
 					obj.infinitives = [first];
