@@ -35,12 +35,17 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	 * @constant
 	 * @private
 	 */
-		SPLITTER_REGEX_ALTERNATIVE = /(.+)\/(.+)/,
+		SPLITTER_REGEX_ALTERNATIVE_1 = /(.+)\/(.+)/,
 	/**
 	 * @constant
 	 * @private
 	 */
-		SUFFIXES_BASE_INDEX = 8;
+		SPLITTER_REGEX_ALTERNATIVE_2 = /(.+)\[(.+)\]$/,
+	/**
+	 * @constant
+	 * @private
+	 */
+		SUFFIXES_BASE_INDEX = 11;
 
 
 
@@ -378,7 +383,20 @@ console.log(paradigmThemes);
 				obj.themes[i] = idx;
 			});
 		});
-		commonThemes.forEach(expandThemes);
+		commonThemes.forEach(function(list){
+			expandThemes(list);
+
+			simplifyThemesAndApplyFlag(list, 1, PRONOMENAL_MARK);
+			simplifyThemesAndApplyFlag(list, 2, PRONOMENAL_MARK_IMPERATIVE);
+			simplifyThemesAndApplyFlag(list, 3, FINAL_CONSONANT_VOICING);
+			simplifyThemesAndApplyFlag(list, 4, 'e', 'i');
+			simplifyThemesAndApplyFlag(list, 5, 'a', 'e\/4');
+			simplifyThemesAndApplyFlag(list, 6, 'o', 'a\/5');
+			simplifyThemesAndApplyFlag(list, 7, '', 'e');
+			simplifyThemesAndApplyFlag(list, 8, '', 'se');
+			simplifyThemesAndApplyFlag(list, 9, '\/7', 'se');
+			simplifyThemesAndApplyFlag(list, 10, '', 'de', 'ge');
+		});
 		return commonThemes;
 	};
 
@@ -406,26 +424,23 @@ console.log(paradigmThemes);
 	/** @private */
 	var printThemes = function(list){
 		var i = SUFFIXES_BASE_INDEX,
-			base;
+			base, m, rebase;
 		list.forEach(function(sublist){
-			expandThemes(sublist);
-
-			simplifyThemesAndApplyFlag(sublist, 1, 'e', 'i');
-			simplifyThemesAndApplyFlag(sublist, 2, 'a', 'e\/1');
-			simplifyThemesAndApplyFlag(sublist, 3, 'o', 'a\/2');
-			simplifyThemesAndApplyFlag(sublist, 4, '', 'se');
-			simplifyThemesAndApplyFlag(sublist, 5, 'n', 'ne');
-			simplifyThemesAndApplyFlag(sublist, 6, 'n\/4', 'ne');
-			simplifyThemesAndApplyFlag(sublist, 7, '', 'de', 'ge');
-
 			base = sublist.shift();
 
 			console.log('SFX ' + i + ' Y ' + sublist.length + ' # ' + base);
 			sublist.forEach(function(el){
+				m = el.match(/(.+)>(.+)/);
+				rebase = base.replace(/\/[^)]+$/, '');
+				if(m){
+					rebase = m[1];
+					el = m[2];
+				}
+
 				if(sublist.parents)
 					sublist.parents = sublist.parents.map(function(el){ return el + SUFFIXES_BASE_INDEX; });
 
-				console.log('SFX ' + i + ' ' + (base? base.replace(/\/[^)]+$/, ''): 0) + ' ' + el + (sublist.parents && sublist.parents.length? '/' + sublist.parents.join(','): ''));
+				console.log('SFX ' + i + ' ' + (rebase? rebase: 0) + ' ' + el + (sublist.parents && sublist.parents.length? '/' + sublist.parents.join(','): ''));
 			});
 			i ++;
 		});
@@ -480,32 +495,36 @@ console.log(paradigmThemes);
 
 	/** @private */
 	var simplifyThemesAndApplyFlag = function(list, flag, matcher){
-		var replacement = Array.prototype.slice.call(arguments, 3, arguments.length),
-			i, base, indices;
-		matcher = new RegExp(matcher + '[' + PRONOMENAL_MARK + '' + PRONOMENAL_MARK_IMPERATIVE + '' + FINAL_CONSONANT_VOICING + ']*$');
+		if(matcher == PRONOMENAL_MARK || matcher == PRONOMENAL_MARK_IMPERATIVE || matcher == FINAL_CONSONANT_VOICING){
+			//escape regexp reserved characters
+			matcher = new RegExp(matcher.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + '$');
+			for(i = list.length - 1; i >= 0; i --)
+				list[i] = list[i].replace(matcher, '/' + flag);
+		}
+		else{
+			var replacement = Array.prototype.slice.call(arguments, 3, arguments.length),
+				i, base, indices;
+			matcher = new RegExp(matcher + '[' + PRONOMENAL_MARK + '' + PRONOMENAL_MARK_IMPERATIVE + '' + FINAL_CONSONANT_VOICING + ']*$');
+			for(i = list.length - 1; i >= 0; i --)
+				if(list[i].match(matcher)){
+					base = list[i].replace(matcher, '')
+						//escape regexp reserved characters
+						.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
 
-		for(i = list.length - 1; i >= 0; i --)
-			if(list.hasOwnProperty(i) && list[i].match(matcher)){
-				base = list[i].replace(matcher, '')
-					//escape regexp reserved characters
-					.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
+					indices = replacement.map(function(last){
+						return ArrayHelper.findIndex(list, function(el){ return el.match(new RegExp('^' + base + last + '$')); });
+					});
+					if(indices.some(function(el){ return (el < 0); }))
+						continue;
 
-				indices = replacement.map(function(last){
-					return ArrayHelper.findIndex(list, function(el){ return el.match(new RegExp('^' + base + last + '$')); });
-				});
-				if(indices.some(function(el){ return (el < 0); }))
-					continue;
+					//here, all replacements are found, substitute them
 
-				//here, all replacements are found, substitute them
+					list[i] = list[i].replace(/(\/(.+))?$/, '/' + flag);
 
-				if(list[i].match(/\/.+$/))
-					list[i] = list[i].replace(/(?:\/(.+))?$/, '/' + flag + ',$1');
-				else
-					list[i] += '/' + flag;
-
-				//remove replaced items
-				i = removeIndices(list, indices, i);
-			}
+					//remove replaced items
+					i = removeIndices(list, indices, i);
+				}
+		}
 	};
 
 	/** @private */
@@ -526,26 +545,39 @@ console.log(paradigmThemes);
 	/** @private */
 	var expandThemes = function(themes){
 		var splitter = function(form){
-			var m = form.match(SPLITTER_REGEX_OPTIONAL),
-				splitted = false,
-				m2;
-			if(m && !form.match(/[>+$]/)){
-				addAndSplit(m[1] + m[3]);
-
-				m2 = m[2].match(SPLITTER_REGEX_ALTERNATIVE);
-				if(m2){
-					addAndSplit(m[1] + m2[1] + m[3]);
-					addAndSplit(m[1] + m2[2] + m[3]);
-				}
-				else
-					addAndSplit(m[1] + m[2] + m[3]);
+			var m = form.match(SPLITTER_REGEX_ALTERNATIVE_2);
+			if(m){
+				addAndSplit(form);
 
 				splitted = true;
+			}
+			else{
+				var splitted = false,
+					m2;
+				m = form.match(SPLITTER_REGEX_OPTIONAL);
+				if(m && !form.match(/[>+$]/)){
+					addAndSplit(m[1] + m[3]);
+
+					m2 = m[2].match(SPLITTER_REGEX_ALTERNATIVE_1);
+					if(m2){
+						addAndSplit(m[1] + m2[1] + m[3]);
+						addAndSplit(m[1] + m2[2] + m[3]);
+					}
+					else
+						addAndSplit(m[1] + m[2] + m[3]);
+
+					splitted = true;
+				}
 			}
 			return splitted;
 		};
 		var addAndSplit = function(form){
-			if(form.match(SPLITTER_REGEX_OPTIONAL) && !form.match(/[>+$]/))
+			var m = form.match(SPLITTER_REGEX_ALTERNATIVE_2);
+			if(m)
+				m[2].split('').forEach(function(el){
+					addAndSplit(m[1] + el);
+				});
+			else if(form.match(SPLITTER_REGEX_OPTIONAL) && !form.match(/[>+$]/))
 				splitter(form);
 			else
 				themes.push(form);
@@ -648,11 +680,8 @@ console.log(paradigmThemes);
 			if(t.themeT8){
 				if(this.verb.irregularity.eser)
 					insert.call(this, 8, (!t.themeT8.match(/[cijɉñ]$/)? '(i)': '') + 'on');
-				else if(this.verb.irregularity.aver){
-					insert.call(this, 8, 'à>à');
-					insert.call(this, 8, 'à>è');
-					insert.call(this, 8, 'à>ò');
-				}
+				else if(this.verb.irregularity.aver)
+					insert.call(this, 8, 'à>[àèò]');
 				else{
 					insert.call(this, 8, 'e');
 					insert.call(this, 8, 'o' + FINAL_CONSONANT_VOICING);
@@ -670,8 +699,9 @@ console.log(paradigmThemes);
 					insert.call(this, 8, '([^i])>$1');
 				var third = t.themeT8 + (!this.verb.irregularity.verb.match(/darStarFar|s?aver/)? (this.verb.irregularity.eser? 'é': 'e'): '');
 				insert.call(this, 8, third.substr(t.themeT8.length));
-				if(third.match(/[ei]$/))
-					insert.call(this, 8, '[ei]>+' + FINAL_CONSONANT_VOICING);
+				if(third.match(/[ei]$/)){
+					insert.call(this, 8, '[ei]>' + FINAL_CONSONANT_VOICING);
+				}
 				if(t.themeT10 && t.themeT10 !== third){
 					//FIXME
 					//if(this.verb.irregularity.eser)
@@ -682,7 +712,7 @@ console.log(paradigmThemes);
 			else if(t.themeT10){
 				insert.call(this, 10, '');
 				if(t.themeT10.match(/[aeiou]$/) && t.themeT10 != PhonologyHelper.finalConsonantVoicing(t.themeT10.replace(/[aeiou]$/, ''), 'northern'))
-					insert.call(this, 10, '+' + FINAL_CONSONANT_VOICING);
+					insert.call(this, 10, FINAL_CONSONANT_VOICING);
 			}
 			if(t.themeT5){
 				insert.call(this, 5, '');
@@ -697,9 +727,9 @@ console.log(paradigmThemes);
 					insert.call(this, 12, 'en');
 				}
 				if(t.themeT5){
-					insert.call(this, 5, 'è>e+mo');
+					insert.call(this, 5, 'è>emo');
 					if(conj == 2)
-						insert.call(this, 5, 'i?é>i+mo');
+						insert.call(this, 5, 'i?é>imo');
 				}
 			}
 
@@ -713,16 +743,10 @@ console.log(paradigmThemes);
 		if(t.themeT2 || t.themeT11){
 			if(t.themeT2){
 				var tmp = (this.verb.irregularity.eser? 'r': '(v)');
-				insert.call(this, 2, tmp + 'o');
-				insert.call(this, 2, tmp + 'i');
-				insert.call(this, 2, tmp + 'a');
-				insert.call(this, 2, tmp + 'e');
+				insert.call(this, 2, tmp + '[oaie]');
 				//FIXME
-				//if(this.verb.irregularity.eser){
-				//	insert.call(this, 2, '[x/j]|' + tmp + 'o');
-				//	insert.call(this, 2, '[x/j]|' + tmp + 'i');
-				//	insert.call(this, 2, '[x/j]|' + tmp + 'a');
-				//}
+				//if(this.verb.irregularity.eser)
+				//	insert.call(this, 2, '[x/j]|' + tmp + '[oai]');
 
 				insert.call(this, 2, tmp + 'imo');
 				//FIXME
@@ -744,10 +768,7 @@ console.log(paradigmThemes);
 	/** @private */
 	var generateIndicativeFuture = function(type, t){
 		if(t.themeT4){
-			insert.call(this, 4, 'rò');
-			insert.call(this, 4, 'rà');
-			insert.call(this, 4, 'rè');
-			insert.call(this, 4, 'ré');
+			insert.call(this, 4, 'r[òàèé]');
 			insert.call(this, 4, 'remo');
 			insert.call(this, 4, 'ron');
 			insert.call(this, 4, 'ren');
@@ -765,17 +786,14 @@ console.log(paradigmThemes);
 
 		if(t.themeT12 || t.themeT5 || t.themeT8){
 			if(t.themeT8){
-				insert.call(this, 8, 'a');
-				insert.call(this, 8, 'e');
+				insert.call(this, 8, '[ae]');
 				insert.call(this, 8, '([^i])>$1i');
 				if(t.themeT8.match(/[^aeiouàèéíòóú]$/))
 					insert.call(this, 8, FINAL_CONSONANT_VOICING);
 
 				if(type == IRREGULAR && !this.verb.irregularity.verb.match(/(aver|dever|eser)/)){
-					if(t.themeT8.match(/[aeiouàèéíòóú]$/)){
-						insert.call(this, 8, '(g)a');
-						insert.call(this, 8, '(g)i');
-					}
+					if(t.themeT8.match(/[aeiouàèéíòóú]$/))
+						insert.call(this, 8, '(g)[ai]');
 					else{
 						insert.call(this, 8, 'a');
 						insert.call(this, 8, '([^i])>$1i');
@@ -801,16 +819,14 @@ console.log(paradigmThemes);
 					insert.call(this, 12, 'en(e)');
 				}
 				if(t.themeT5){
-					insert.call(this, 5, 'è>e+mo');
+					insert.call(this, 5, 'è>emo');
 					if(conj == 2 && t.themeT5.replace(/i?é$/, 'í') != t.themeT5)
-						insert.call(this, 5, 'i?é>i+mo');
+						insert.call(this, 5, 'i?é>imo');
 				}
 			}
 
-			if(t.themeT8 && this.verb.irregularity.verb.match(/dixer|traer|toler/)){
-				insert.call(this, 8, '[lx]?>ga');
-				insert.call(this, 8, '[lx]?>gi');
-			}
+			if(t.themeT8 && this.verb.irregularity.verb.match(/dixer|traer|toler/))
+				insert.call(this, 8, '[lx]?>g[ai]');
 		}
 	};
 
@@ -820,8 +836,7 @@ console.log(paradigmThemes);
 
 		if(t.themeT2 || t.themeT11){
 			if(t.themeT2){
-				insert.call(this, 2, 'se');
-				insert.call(this, 2, 'si');
+				insert.call(this, 2, 's[ei]');
 				if(t.themeT11){
 					insert.call(this, 11, '(is)ié');
 					insert.call(this, 11, '(is)ie(de/ge)');
@@ -840,17 +855,13 @@ console.log(paradigmThemes);
 	/** @private */
 	var generateConditionalSimple = function(type, t){
 		if(t.themeT4){
-			insert.call(this, 4, 'ría');
-			insert.call(this, 4, 'ríe');
+			insert.call(this, 4, 'rí[ae]');
 			insert.call(this, 4, 'resi');
 			insert.call(this, 4, 'r(is)ié');
 			insert.call(this, 4, 'résimo');
 			insert.call(this, 4, 'r(is)(i)on(se)');
 			insert.call(this, 4, 'r(is)en(se)');
-			insert.call(this, 4, 'ríselo');
-			insert.call(this, 4, 'rísela');
-			insert.call(this, 4, 'ríseli');
-			insert.call(this, 4, 'rísele');
+			insert.call(this, 4, 'rísel[oaie]');
 			insert.call(this, 4, 'rave');
 		}
 	};
@@ -865,9 +876,10 @@ console.log(paradigmThemes);
 			if(t.themeT5){
 				insert.call(this, 5, PRONOMENAL_MARK_IMPERATIVE);
 				if(conj == 2)
-					insert.call(this, 5, 'i?é>í+' + PRONOMENAL_MARK_IMPERATIVE);
-				else
-					insert.call(this, 5, '[èí]>é+' + PRONOMENAL_MARK_IMPERATIVE);
+					insert.call(this, 5, 'i?é>í' + PRONOMENAL_MARK_IMPERATIVE);
+				else{
+					insert.call(this, 5, '[èí]>é' + PRONOMENAL_MARK_IMPERATIVE);
+				}
 			}
 		}
 	};
@@ -894,23 +906,12 @@ console.log(paradigmThemes);
 		if(t.themeT2 || t.themeT6 || t.themeT7){
 			if(t.themeT6){
 				insert.call(this, 6, '');
-				insert.call(this, 6, '(d)o');
-				insert.call(this, 6, '(d)i');
-				insert.call(this, 6, '(d)a');
-				insert.call(this, 6, '(d)e');
+				insert.call(this, 6, '(d)[oaie]');
 			}
-			if(t.themeT2){
-				insert.call(this, 2, 'sto');
-				insert.call(this, 2, 'sti');
-				insert.call(this, 2, 'sta');
-				insert.call(this, 2, 'ste');
-			}
-			if(t.themeT7 && this.verb.conjugation == 3){
-				insert.call(this, 7, 'sto');
-				insert.call(this, 7, 'sti');
-				insert.call(this, 7, 'sta');
-				insert.call(this, 7, 'ste');
-			}
+			if(t.themeT2)
+				insert.call(this, 2, 'st[oaie]');
+			if(t.themeT7 && this.verb.conjugation == 3)
+				insert.call(this, 7, 'st[oaie]');
 		}
 	};
 
