@@ -399,17 +399,11 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			var strong = generateParticiplePerfectStrong.call(this, t.themeT8);
 			if(strong){
 				var root = namespace(this.paradigm, 'participle', 'perfect', IRREGULAR, 'strong');
-				if(strong[0]){
-					root.general1 = generateEntireDeclination(strong[0]);
+				if(strong){
+					root.general = generateEntireDeclination(strong);
 
-					if(strong[0].match(/[^aeiouàèéíòóú]$/))
-						root.general1.singularMasculine2 = PhonologyHelper.finalConsonantVoicing(strong[0], 'northern');
-				}
-				if(strong[1]){
-					root.general2 = generateEntireDeclination(strong[1]);
-
-					if(strong[1] && strong[1].match(/[^aeiouàèéíòóú]$/))
-						root.general1.singularMasculine2 = PhonologyHelper.finalConsonantVoicing(strong[1], 'northern');
+					if(strong.match(/[^aeiouàèéíòóú]$/))
+						root.general.singularMasculine2 = PhonologyHelper.finalConsonantVoicing(strong, 'northern');
 				}
 			}
 		}
@@ -463,8 +457,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 		var strong = [
 			//1st conjugation
 			[
-				{matcher: /fà$/, replacement: ['fàt']},
-				{matcher: /konsà$/, replacement: ['kóns']}
+				{matcher: /fà$/, replacement: 'fàt'},
+				{matcher: /konsà$/, replacement: 'kóns'}
 			],
 
 			//2nd conjugation
@@ -473,49 +467,58 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				[
 					//TODO
 					//kuèrdh
-					{matcher: /díx$/, replacement: ['dít']},
-					{matcher: /dúx$/, replacement: ['dót']},
-					{matcher: /kór$/, replacement: ['kórs']},
-					{matcher: /kòx$/, replacement: ['kòt']},
-					{matcher: /mét$/, replacement: ['més']},
-					{matcher: /móv$/, replacement: ['mós']},
-					{matcher: /nét$/, replacement: ['nés']},
-					{matcher: /ofénd$/, replacement: ['oféx']},
-					{matcher: /ónđ$/, replacement: ['ónt']},
-					{matcher: /pénđ$/, replacement: ['pént']},
-					{matcher: /pèrd$/, replacement: ['pèrs']},
-					{matcher: /pón$/, replacement: ['pòst']},
-					{matcher: /pòrx$/, replacement: ['pòrt']},
-					{matcher: /rónp$/, replacement: ['rót']},
-					{matcher: /skrív$/, replacement: ['skrít']},
-					{matcher: /spànd$/, replacement: ['spànt']},
-					{matcher: /strénđ$/, replacement: ['strét']},
-					{matcher: /sucéd$/, replacement: ['sucès']},
-					{matcher: /ténd$/, replacement: ['téx']},
-					{matcher: /ténx$/, replacement: ['tént']},
-					{matcher: /tòrđ$/, replacement: ['tòrt']},
-					{matcher: /trà$/, replacement: ['tràt']},
-					{matcher: /véd$/, replacement: ['víst']},
-					{matcher: /vínŧ$/, replacement: ['vínt']},
-					{matcher: /vív$/, replacement: ['visú']},
-					{matcher: /vòlx$/, replacement: ['vòlt']}
+					{matcher: /díx$/, replacement: 'dít'},
+					{matcher: /dúx$/, replacement: 'dót'},
+					{matcher: /đónx$/, replacement: 'đónt'},
+					{matcher: /fríđ$/, replacement: 'frít'},
+					{matcher: /kór$/, replacement: 'kórs'},
+					{matcher: /kòt$/, replacement: 'kòs'},
+					{matcher: /kòx$/, replacement: 'kòt'},
+					{matcher: /mét$/, replacement: 'més'},
+					{matcher: /móv$/, replacement: 'mós'},
+					{matcher: /nét$/, replacement: 'nés'},
+					{matcher: /ofénd$/, replacement: 'oféx'},
+					{matcher: /ónđ$/, replacement: 'ónt'},
+					{matcher: /pànd$/, replacement: 'pànt'},
+					{matcher: /pénd$/, replacement: 'péx'},
+					{matcher: /pénđ$/, replacement: 'pént'},
+					{matcher: /pèrd$/, replacement: 'pèrs'},
+					{matcher: /prénd$/, replacement: 'préx'},
+					{matcher: /pón$/, replacement: 'pòst'},
+					{matcher: /pòrx$/, replacement: 'pòrt'},
+					{matcher: /rèx$/, replacement: 'rèt'},
+					{matcher: /ríd$/, replacement: 'ríx'},
+					{matcher: /rónp$/, replacement: 'rót'},
+					{matcher: /skrív$/, replacement: 'skrít'},
+					{matcher: /sòrx$/, replacement: 'sòrt'},
+					{matcher: /spànd$/, replacement: 'spànt'},
+					{matcher: /spàrx$/, replacement: 'spàrs'},
+					{matcher: /strénđ$/, replacement: 'strét'},
+					{matcher: /sucéd$/, replacement: 'sucès'},
+					{matcher: /ténd$/, replacement: 'téx'},
+					{matcher: /ténx$/, replacement: 'tént'},
+					{matcher: /tòrđ$/, replacement: 'tòrt'},
+					{matcher: /trà$/, replacement: 'tràt'},
+					{matcher: /véd$/, replacement: 'víst'},
+					{matcher: /vínŧ$/, replacement: 'vínt'},
+					{matcher: /vív$/, replacement: 'visú'},
+					{matcher: /vòlx$/, replacement: 'vòlt'}
 					//...
 				],
-				//rhizoatone (avér, -manér, -parér, podér, savér, -tolér/-volér, e valér)
+				//rhizoatone
 				[
-					{matcher: /àl$/, replacement: ['àls']},
-					{matcher: /n$/, replacement: ['x']},
-					{matcher: /r$/, replacement: ['rs']},
-					{matcher: /tòl$/, replacement: ['tòlt']}
+					{matcher: /vàl$/, replacement: 'vàls'},
+					{matcher: /n$/, replacement: 'x'},
+					{matcher: /r$/, replacement: 'rs'},
+					{matcher: /tòl$/, replacement: 'tòlt'}
 				]
 			],
 
 			//3rd conjugation
 			[
-				{matcher: /mòr$/, falsePositives: /(inti|mar)mòr$/, replacement: ['mòrt']},
-
-				{matcher: /([^aeiouàèéíòóú])r$/, falsePositives: /núdr$/, replacement: ['$1èrt']},
-				{matcher: /r$/, replacement: ['rs']}
+				{matcher: /mòr$/, falsePositives: /(inti|mar)mòr$/, replacement: 'mòrt'},
+				{matcher: /([^aeiouàèéíòóú])r$/, falsePositives: /núdr$/, replacement: '$1èrt'},
+				{matcher: /([aeiouàèéíòóú])r$/, replacement: '$1rs'}
 			]
 		];
 
@@ -529,9 +532,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 
 			var m, match;
 			if(data.some(function(el){ m = el; match = this.match(el.matcher); return match; }, themeT8) && (!m.falsePositives || !themeT8.match(m.falsePositives))){
-				return m.replacement.map(function(rep){
-					return (Word.isStressed(rep) && !Word.isStressed(match[0])? Word.suppressStress(themeT8): themeT8).replace(m.matcher, rep);
-				});
+				if(Word.isStressed(m.replacement) && !Word.isStressed(match[0]))
+					themeT8 = Word.suppressStress(themeT8);
+				return themeT8.replace(m.matcher, m.replacement);
 			}
 			return undefined;
 		};

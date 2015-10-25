@@ -213,7 +213,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 			});
 			['participle.perfect'].forEach(function(moodTense){
 				['regular', 'irregular', 'irregular.strong'].forEach(function(type){
-					['general', 'general1', 'general2', 'northern_oriental1', 'northern_oriental2'].forEach(function(variant){
+					['general', 'northern_oriental1', 'northern_oriental2'].forEach(function(variant){
 						output = extractDeclinated(paradigm, moodTense, type, variant);
 
 						if(output)

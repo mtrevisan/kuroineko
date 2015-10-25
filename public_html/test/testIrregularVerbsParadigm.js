@@ -229,7 +229,7 @@ QUnit.dump.maxDepth = 20;
 					},
 					irregular: {
 						strong: {
-							general1: {singularMasculine: 'fàto', singularMasculine2: 'fàt', singularFeminine: 'fàta', pluralMasculine: 'fàti', pluralFeminine: 'fàte'}
+							general: {singularMasculine: 'fàto', singularMasculine2: 'fàt', singularFeminine: 'fàta', pluralMasculine: 'fàti', pluralFeminine: 'fàte'}
 						}
 					}
 				}
@@ -559,7 +559,7 @@ QUnit.dump.maxDepth = 20;
 				},
 				perfect: {
 					irregular: {
-						strong: {general1: {pluralFeminine: 'díte', singularMasculine2: 'dít', pluralMasculine: 'díti', singularFeminine: 'díta', singularMasculine: 'díto'}}
+						strong: {general: {pluralFeminine: 'díte', singularMasculine2: 'dít', pluralMasculine: 'díti', singularFeminine: 'díta', singularMasculine: 'díto'}}
 					},
 					regular: {
 						general: {pluralFeminine: 'dixú(d)e', pluralMasculine: 'dixú(d)i', singularFeminine: 'dixú(d)a', singularMasculine1: 'dixú', singularMasculine2: 'dixú(d)o'},
@@ -931,7 +931,7 @@ QUnit.dump.maxDepth = 20;
 				perfect: {
 					irregular: {
 						strong: {
-							general1: {pluralFeminine: 'tràte', singularMasculine2: 'tràt', pluralMasculine: 'tràti', singularFeminine: 'tràta', singularMasculine: 'tràto'}
+							general: {pluralFeminine: 'tràte', singularMasculine2: 'tràt', pluralMasculine: 'tràti', singularFeminine: 'tràta', singularMasculine: 'tràto'}
 						}
 					},
 					regular: {
@@ -1067,7 +1067,7 @@ QUnit.dump.maxDepth = 20;
 				perfect: {
 					irregular: {
 						strong: {
-							general1: {pluralFeminine: 'tòlte', singularMasculine2: 'tòlt', pluralMasculine: 'tòlti', singularFeminine: 'tòlta', singularMasculine: 'tòlto'}
+							general: {pluralFeminine: 'tòlte', singularMasculine2: 'tòlt', pluralMasculine: 'tòlti', singularFeminine: 'tòlta', singularMasculine: 'tòlto'}
 						}
 					},
 					regular: {

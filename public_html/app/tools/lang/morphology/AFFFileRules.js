@@ -14,6 +14,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	/** @constant */
 		PRONOMENAL_MARK_IMPERATIVE = '!',
 	/** @constant */
+		INTERROGATIVE_MARK = '?',
+	/** @constant */
 		FINAL_CONSONANT_VOICING = '@';
 
 	/**
@@ -264,6 +266,7 @@ console.log(paradigmThemes);
 
 			simplifyThemesAndApplyFlag(list, 1, PRONOMENAL_MARK);
 			simplifyThemesAndApplyFlag(list, 2, PRONOMENAL_MARK_IMPERATIVE);
+			INTERROGATIVE_MARK
 			simplifyThemesAndApplyFlag(list, 3, FINAL_CONSONANT_VOICING);
 			simplifyThemesAndApplyFlag(list, 4, 'e', 'i');
 			simplifyThemesAndApplyFlag(list, 5, 'a', 'e\/4');
@@ -417,7 +420,7 @@ console.log(paradigmThemes);
 
 	/** @private */
 	var simplifyThemesAndApplyFlag = function(list, flag, matcher){
-		if(matcher == PRONOMENAL_MARK || matcher == PRONOMENAL_MARK_IMPERATIVE || matcher == FINAL_CONSONANT_VOICING){
+		if(matcher == PRONOMENAL_MARK || matcher == PRONOMENAL_MARK_IMPERATIVE || matcher == INTERROGATIVE_MARK || matcher == FINAL_CONSONANT_VOICING){
 			//escape regexp reserved characters
 			matcher = new RegExp(matcher.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + '$');
 			for(i = list.length - 1; i >= 0; i --)
@@ -426,7 +429,7 @@ console.log(paradigmThemes);
 		else{
 			var replacement = Array.prototype.slice.call(arguments, 3, arguments.length),
 				i, base, indices;
-			matcher = new RegExp(matcher + '[' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + FINAL_CONSONANT_VOICING + ']*$');
+			matcher = new RegExp(matcher + '[' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + INTERROGATIVE_MARK + FINAL_CONSONANT_VOICING + ']*$');
 			for(i = list.length - 1; i >= 0; i --)
 				if(list[i].match(matcher)){
 					base = list[i].replace(matcher, '')
@@ -502,7 +505,7 @@ console.log(paradigmThemes);
 			else if(form.match(SPLITTER_REGEX_OPTIONAL) && !form.match(/[>+$]/))
 				splitter(form);
 			else{
-				var matcher = '[' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + FINAL_CONSONANT_VOICING + ']+$';
+				var matcher = '[' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + INTERROGATIVE_MARK + FINAL_CONSONANT_VOICING + ']+$';
 				var f = function(el){
 					//escape regexp reserved characters
 					return el.match(new RegExp(form.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + matcher));
@@ -913,8 +916,8 @@ console.log(paradigmThemes);
 		var strong = [
 			//1st conjugation
 			[
-				{matcher: /fà$/, replacement: 'fat'},
-				{matcher: /konsà$/, replacement: 'kons'}
+				{matcher: /fà$/, replacement: 'fàt'},
+				{matcher: /konsà$/, replacement: 'kóns'}
 			],
 
 			//2nd conjugation
@@ -923,37 +926,47 @@ console.log(paradigmThemes);
 				[
 					//TODO
 					//kuèrdh
-					{matcher: /díx$/, replacement: 'dit'},
-					{matcher: /dúx$/, replacement: 'dot'},
-					{matcher: /kór$/, replacement: 'kors'},
+					{matcher: /díx$/, replacement: 'dít'},
+					{matcher: /dúx$/, replacement: 'dót'},
+					{matcher: /đónx$/, replacement: 'đónt'},
+					{matcher: /fríđ$/, replacement: 'frít'},
+					{matcher: /kór$/, replacement: 'kórs'},
+					{matcher: /kòt$/, replacement: 'kòs'},
 					{matcher: /kòx$/, replacement: 'kòt'},
-					{matcher: /mét$/, replacement: 'mes'},
-					{matcher: /móv$/, replacement: 'mos'},
-					{matcher: /nét$/, replacement: 'nes'},
-					{matcher: /ofénd$/, replacement: 'ofex'},
-					{matcher: /ónđ$/, replacement: 'ont'},
-					{matcher: /pénđ$/, replacement: 'pent'},
+					{matcher: /mét$/, replacement: 'més'},
+					{matcher: /móv$/, replacement: 'mós'},
+					{matcher: /nét$/, replacement: 'nés'},
+					{matcher: /ofénd$/, replacement: 'oféx'},
+					{matcher: /ónđ$/, replacement: 'ónt'},
+					{matcher: /pànd$/, replacement: 'pànt'},
+					{matcher: /pénd$/, replacement: 'péx'},
+					{matcher: /pénđ$/, replacement: 'pént'},
 					{matcher: /pèrd$/, replacement: 'pèrs'},
+					{matcher: /prénd$/, replacement: 'préx'},
 					{matcher: /pón$/, replacement: 'pòst'},
 					{matcher: /pòrx$/, replacement: 'pòrt'},
-					{matcher: /rónp$/, replacement: 'rot'},
-					{matcher: /skrív$/, replacement: 'skrit'},
-					{matcher: /spànd$/, replacement: 'spant'},
-					{matcher: /strénđ$/, replacement: 'stret'},
+					{matcher: /rèx$/, replacement: 'rèt'},
+					{matcher: /ríd$/, replacement: 'ríx'},
+					{matcher: /rónp$/, replacement: 'rót'},
+					{matcher: /skrív$/, replacement: 'skrít'},
+					{matcher: /sòrx$/, replacement: 'sòrt'},
+					{matcher: /spànd$/, replacement: 'spànt'},
+					{matcher: /spàrx$/, replacement: 'spàrs'},
+					{matcher: /strénđ$/, replacement: 'strét'},
 					{matcher: /sucéd$/, replacement: 'sucès'},
-					{matcher: /ténd$/, replacement: 'tex'},
-					{matcher: /ténx$/, replacement: 'tent'},
+					{matcher: /ténd$/, replacement: 'téx'},
+					{matcher: /ténx$/, replacement: 'tént'},
 					{matcher: /tòrđ$/, replacement: 'tòrt'},
-					{matcher: /trà$/, replacement: 'trat'},
-					{matcher: /véd$/, replacement: 'vist'},
-					{matcher: /vínŧ$/, replacement: 'vint'},
+					{matcher: /trà$/, replacement: 'tràt'},
+					{matcher: /véd$/, replacement: 'víst'},
+					{matcher: /vínŧ$/, replacement: 'vínt'},
 					{matcher: /vív$/, replacement: 'visú'},
 					{matcher: /vòlx$/, replacement: 'vòlt'}
 					//...
 				],
-				//rhizoatone (avér, -manér, -parér, podér, savér, -tolér/-volér, e valér)
+				//rhizoatone
 				[
-					{matcher: /àl$/, replacement: 'als'},
+					{matcher: /vàl$/, replacement: 'vàls'},
 					{matcher: /n$/, replacement: 'x'},
 					{matcher: /r$/, replacement: 'rs'},
 					{matcher: /tòl$/, replacement: 'tòlt'}
@@ -963,9 +976,8 @@ console.log(paradigmThemes);
 			//3rd conjugation
 			[
 				{matcher: /mòr$/, falsePositives: /(inti|mar)mòr$/, replacement: 'mòrt'},
-
 				{matcher: /([^aeiouàèéíòóú])r$/, falsePositives: /núdr$/, replacement: '$1èrt'},
-				{matcher: /r$/, replacement: 'rs'}
+				{matcher: /([aeiouàèéíòóú])r$/, replacement: '$1rs'}
 			]
 		];
 
