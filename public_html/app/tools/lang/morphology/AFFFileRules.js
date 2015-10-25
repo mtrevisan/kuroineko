@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morphology/Themizer', 'tools/lang/phonology/Orthography', 'tools/lang/phonology/PhonologyHelper', 'tools/data/ObjectHelper', 'tools/data/ArrayHelper'], function(Word, Dialect, Themizer, Orthography, PhonologyHelper, ObjectHelper, ArrayHelper){
+define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/lang/phonology/Orthography', 'tools/lang/phonology/PhonologyHelper', 'tools/data/ObjectHelper', 'tools/data/ArrayHelper'], function(Word, Dialect, Verb, Themizer, Orthography, PhonologyHelper, ObjectHelper, ArrayHelper){
 
 	/** @constant */
 	var START_OF_WORD = '^',
@@ -85,9 +85,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 console.log(paradigmEndings);
 console.log(commonThemes);
 console.log(paradigmThemes);
-//		i = printThemes(commonThemes);
-i = 225;
-		print(paradigmEndings, commonThemes, paradigmThemes, i);
+		i = printThemes(commonThemes);
+//i = 225;
+		print(paradigmEndings, commonThemes, paradigmThemes, dialect, i);
 //		printParadigm(paradigmEndings, commonThemes, paradigmThemes, i);
 	};
 
@@ -409,23 +409,42 @@ i = 225;
 	};
 
 	/** @private */
-	var print = function(paradigmEndings, commonThemes, paradigmThemes, i){
-		var k, repment, themes;
+	var print = function(paradigmEndings, commonThemes, paradigmThemes, dialect, i){
+		var i, j, k, logs, repment, th, themes, from, to, fromTo, matcher, infs;
 		paradigmEndings.forEach(function(el){
-			k = 0;
-			el.themes.forEach(function(){ k ++; });
-
-			console.log('SFX ' + i + ' Y ' + k);
+			logs = [];
 			el.themes.forEach(function(idx, theme){
 //				repment = commonThemes[idx][0];
 //				if(repment.indexOf('>') < 0)
 //					repment = repment.replace(/\(.+\)/g, '');
 
-				themes = paradigmThemes.filter(function(el){ return (el.theme == idx); });
+				fromTo = [];
+				th = 'themeT' + theme;
+				el.infinitives.forEach(function(inf){
+					themes = Themizer.generate(new Verb(inf), dialect);
 
-				idx += SUFFIXES_BASE_INDEX + 1;
+					j = extractIndexOfCommonPartFromStart(inf, themes['regular'][th]);
+					from = inf.substr(j);
+					to = themes['regular'][th].substr(j);
+					if(ArrayHelper.findIndex(fromTo, function(el){ return (el.from == from && el.to == to); }) < 0)
+						fromTo.push({from: from, to: to});
+				});
 
-				console.log('SFX ' + i + ' ' + ('T' + theme) + ' ' + commonThemes[theme][0] + '/' + idx + ' ' + el.matcher + ' # ' + el.infinitives.join(','));
+				fromTo.forEach(function(ft){
+					infs = el.infinitives;
+					matcher = new RegExp(ft.from + '$');
+					if(!el.matcher.match(matcher)){
+						el.matcher = ft.from;
+						infs = infs.filter(function(obj){ return obj.match(matcher); });
+					}
+
+					logs.push('SFX ' + i + ' ' + ft.from + ' ' + ft.to + commonThemes[idx][0] + '/' + (idx + SUFFIXES_BASE_INDEX) + ' ' + el.matcher + ' # ' + infs.join(','));
+				});
+			});
+
+			console.log('SFX ' + i + ' Y ' + logs.length);
+			logs.forEach(function(log){
+				console.log(log);
 			});
 
 			i ++;
