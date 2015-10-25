@@ -52,7 +52,9 @@
 
 			return a.unique().filter(function(el){
 				return arr.some(function(cur){
-					return (cur == el);
+					return (cur && cur.some(function(item){
+						return (item == el);
+					}));
 				});
 			});
 		};

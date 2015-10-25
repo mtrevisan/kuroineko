@@ -374,11 +374,6 @@ i = 133;
 	var extractCommonThemes = function(list){
 		var commonThemes = [],
 			idx;
-//		list.forEach(function(obj){
-//			obj.themes.forEach(function(el){
-//				el.sort();
-//			});
-//		});
 		list.forEach(function(obj){
 			obj.themes.forEach(function(theme, i){
 				idx = ArrayHelper.findIndex(commonThemes, function(el){ return ArrayHelper.equals(theme, el); });
@@ -406,8 +401,6 @@ i = 133;
 					j0 = indices.indexOf(j);
 					themeContainer = list[j0];
 					if(ArrayHelper.contains(themeContainer, themeContained)){
-if(!ArrayHelper.difference(themeContainer, themeContained).length)
-	console.log('das');
 						list[j0] = ArrayHelper.difference(themeContainer, themeContained);
 						list[j0].parents = (list[j0].parents || []).concat(i0);
 					}
@@ -425,8 +418,6 @@ if(!ArrayHelper.difference(themeContainer, themeContained).length)
 
 			console.log('SFX ' + i + ' Y ' + k);
 			el.themes.forEach(function(idx, theme){
-if(commonThemes[theme][0] == undefined)
-	console.log('das');
 //				repment = commonThemes[idx][0];
 //				if(repment.indexOf('>') < 0)
 //					repment = repment.replace(/\(.+\)/g, '');
@@ -435,7 +426,7 @@ if(commonThemes[theme][0] == undefined)
 
 				idx += SUFFIXES_BASE_INDEX;
 
-				console.log('SFX ' + i + ' ' + '? T' + theme + ' ' + commonThemes[theme][0] + '/' + idx + ' ' + el.matcher + ' # ' + el.infinitives.join(','));
+				console.log('SFX ' + i + ' ' + ('T' + theme) + ' ' + commonThemes[theme][0] + '/' + idx + ' ' + el.matcher + ' # ' + el.infinitives.join(','));
 			});
 
 			i ++;

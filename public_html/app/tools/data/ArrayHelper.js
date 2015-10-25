@@ -182,13 +182,15 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		if(a == null)
 			return [];
 		if(arguments.length === 1)
-			return a.unique();
+			return unique(a);
 
 		var arr = Array.prototype.slice.call(arguments, 1);
 
-		return a.unique().filter(function(el){
+		return unique(a).filter(function(el){
 			return arr.some(function(cur){
-				return (cur == el);
+				return (cur && cur.some(function(item){
+					return (item == el);
+				}));
 			});
 		});
 	};
