@@ -424,15 +424,16 @@ console.log(paradigmThemes);
 	/** @private */
 	var printThemes = function(list){
 		var i = SUFFIXES_BASE_INDEX,
-			base, logs, m, rebase, constraint;
+			parents, base, logs, m, rebase, constraint;
 		list.forEach(function(sublist){
 			base = sublist.shift();
 
 			logs = [];
 			console.log('SFX ' + i + ' Y ' + sublist.length + ' # ' + base);
 			sublist.forEach(function(el){
+				parents = [];
 				if(sublist.parents)
-					sublist.parents = sublist.parents.map(function(el){ return el + SUFFIXES_BASE_INDEX; });
+					parents = sublist.parents.map(function(el){ return el + SUFFIXES_BASE_INDEX; });
 
 				m = el.match(/(.+)>(.+)/);
 				rebase = base.replace(/\/[^)]+$/, '');
@@ -446,7 +447,7 @@ console.log(paradigmThemes);
 					else{
 						m = rebase.match(/(.+)\?(.+)/);
 						if(m){
-							logs.push('SFX ' + i + ' ' + m[2] + ' ' + el + (sublist.parents && sublist.parents.length? '/' + sublist.parents.join(','): '') + ' ' + m[2]);
+							printSuffix(logs, i, m[2], el, parents, '[^' + m[1] + ']' + m[2]);
 
 							rebase = m[1] + m[2];
 							constraint = rebase;
@@ -454,7 +455,7 @@ console.log(paradigmThemes);
 					}
 				}
 
-				logs.push('SFX ' + i + ' ' + (rebase? rebase: 0) + ' ' + el + (sublist.parents && sublist.parents.length? '/' + sublist.parents.join(','): '') + (constraint? ' ' + constraint: ''));
+				printSuffix(logs, i, rebase, el, (parents? parents.join(','): null), constraint);
 			});
 
 			console.log('SFX ' + i + ' Y ' + logs.length + ' # ' + base);
@@ -500,7 +501,7 @@ console.log(paradigmThemes);
 						infs = infs.filter(function(obj){ return obj.match(matcher); });
 					}
 
-					logs.push('SFX ' + i + ' ' + ft.from + ' ' + ft.to + commonThemes[idx][0] + '/' + (idx + SUFFIXES_BASE_INDEX) + ' ' + el.matcher + ' # ' + infs.join(','));
+					printSuffix(logs, i, ft.from, ft.to + commonThemes[idx][0], idx + SUFFIXES_BASE_INDEX, el.matcher, infs);
 				});
 			});
 
@@ -511,6 +512,14 @@ console.log(paradigmThemes);
 
 			i ++;
 		});
+	};
+
+	/** @private */
+	var printSuffix = function(logs, i, replaced, replacement, flags, constraint, parents){
+		if(Array.isArray(flags))
+			flags = flags.join(',');
+		logs.push('SFX ' + i + ' ' + (replaced? replaced: 0) + ' ' + replacement + (flags? '/' + flags: '') + (constraint? ' ' + constraint: '')
+			+ (parents? ' # ' + parents.join(','): ''));
 	};
 
 	/** @private */
