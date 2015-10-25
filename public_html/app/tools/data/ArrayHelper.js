@@ -162,8 +162,9 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		return destination;
 	};
 
+	/** NOTE: elements should be unique! */
 	var equals = function(a, b){
-		return (a.length == b.length && a.every(function(el, i){ return (el == b[i]); }));
+		return (a.length == b.length && a.every(function(el){ return (b.indexOf(el) >= 0); }));
 	};
 
 	/** Tells whether <code>b</code> is contained into <code>a</code>. */

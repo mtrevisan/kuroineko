@@ -54,7 +54,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	 */
 	var generate = function(verbs){
 		var dialect = new Dialect(),
-			themesEndings = [],
+			paradigmThemes = [],
 			paradigmEndings = [],
 			infinitives = [],
 			infinitive, themes, commonThemes, i;
@@ -68,7 +68,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 				verb.infinitive = infinitive;
 
-//				generateThemesForSingleVerb(verb, themes, themesEndings);
+				generateThemesForSingleVerb(verb, themes, paradigmThemes);
 				generateEndingsForSingleVerb(verb, themes, paradigmEndings);
 			}
 		});
@@ -78,30 +78,32 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 		paradigmEndings = compact(paradigmEndings);
 
-//		constraintToInfinitivesThemes(themesEndings, infinitives);
+//		constraintToInfinitivesThemes(paradigmThemes, infinitives);
+
 		constraintToInfinitivesParadigm(paradigmEndings, infinitives);
 
-//console.log(themesEndings);
 console.log(paradigmEndings);
 console.log(commonThemes);
+console.log(paradigmThemes);
+		print(paradigmEndings, commonThemes, paradigmThemes);
 //		i = printThemes(commonThemes);
 i = 133;
-		printParadigm(paradigmEndings, commonThemes, i);
+//		printParadigm(paradigmEndings, commonThemes, paradigmThemes, i);
 	};
 
 	/** @private */
-	var generateThemesForSingleVerb = function(verb, themes, themesEndings){
+	var generateThemesForSingleVerb = function(verb, themes, paradigmThemes){
 		var idx, from, to;
 		visit(themes, function(obj, key){
 			idx = extractIndexOfCommonPartFromStart(verb.infinitive, obj[key]);
 			from = verb.infinitive.substr(idx);
 			to = obj[key].substr(idx);
 
-			idx = ArrayHelper.findIndex(themesEndings, function(el){ return (el.from == from && el.to == to); });
+			idx = ArrayHelper.findIndex(paradigmThemes, function(el){ return (el.from == from && el.to == to); });
 			if(idx < 0)
-				themesEndings.push({theme: Number(key.replace(/^themeT/, '')), from: from, to: to, parents: [verb.infinitive]});
-			else if(themesEndings[idx].parents.indexOf(verb.infinitive) < 0)
-				themesEndings[idx].parents.push(verb.infinitive);
+				paradigmThemes.push({theme: Number(key.replace(/^themeT/, '')), from: from, to: to, parents: [verb.infinitive]});
+			else if(paradigmThemes[idx].parents.indexOf(verb.infinitive) < 0)
+				paradigmThemes[idx].parents.push(verb.infinitive);
 		});
 	};
 
@@ -220,7 +222,7 @@ i = 133;
 			if(found){
 				console.log('error! cannot split up the initial verbs array');
 
-				/*listNoPrefixes = uniqueNoPrefixes(obj.parents);
+				listNoPrefixes = uniqueNoPrefixes(obj.parents);
 				first = listNoPrefixes.shift();
 				obj.matcher = '^' + first;
 
@@ -370,14 +372,13 @@ i = 133;
 
 	/** @private */
 	var extractCommonThemes = function(list){
-		list.forEach(function(el){
-			el.themes.forEach(function(theme){
-				theme.sort();
-			});
-		});
-
 		var commonThemes = [],
 			idx;
+//		list.forEach(function(obj){
+//			obj.themes.forEach(function(el){
+//				el.sort();
+//			});
+//		});
 		list.forEach(function(obj){
 			obj.themes.forEach(function(theme, i){
 				idx = ArrayHelper.findIndex(commonThemes, function(el){ return ArrayHelper.equals(theme, el); });
@@ -405,11 +406,41 @@ i = 133;
 					j0 = indices.indexOf(j);
 					themeContainer = list[j0];
 					if(ArrayHelper.contains(themeContainer, themeContained)){
+if(!ArrayHelper.difference(themeContainer, themeContained).length)
+	console.log('das');
 						list[j0] = ArrayHelper.difference(themeContainer, themeContained);
 						list[j0].parents = (list[j0].parents || []).concat(i0);
 					}
 				}
 		}
+	};
+
+	/** @private */
+	var print = function(paradigmEndings, commonThemes, paradigmThemes){
+		var i = SUFFIXES_BASE_INDEX,
+			k, repment, themes;
+		paradigmEndings.forEach(function(el){
+			k = 0;
+			el.themes.forEach(function(){ k ++; });
+
+			console.log('SFX ' + i + ' Y ' + k);
+			el.themes.forEach(function(idx, theme){
+if(commonThemes[theme][0] == undefined)
+	console.log('das');
+//				repment = commonThemes[idx][0];
+//				if(repment.indexOf('>') < 0)
+//					repment = repment.replace(/\(.+\)/g, '');
+
+				themes = paradigmThemes.filter(function(el){ return (el.theme == idx); });
+
+				idx += SUFFIXES_BASE_INDEX;
+
+				console.log('SFX ' + i + ' ' + '? T' + theme + ' ' + commonThemes[theme][0] + '/' + idx + ' ' + el.matcher + ' # ' + el.infinitives.join(','));
+			});
+
+			i ++;
+		});
+		return i;
 	};
 
 	/** @private */
@@ -435,9 +466,9 @@ i = 133;
 	};
 
 	/** @private */
-	var printParadigm = function(list, commonThemes, i){
-		var k, repment;
-		list.forEach(function(el){
+	var printParadigm = function(paradigmEndings, commonThemes, paradigmThemes, i){
+		var k, repment, themes;
+		paradigmEndings.forEach(function(el){
 			k = 0;
 			el.themes.forEach(function(){ k ++; });
 
@@ -446,7 +477,10 @@ i = 133;
 				repment = commonThemes[theme][0];
 				if(repment.indexOf('>') < 0)
 					repment = repment.replace(/\(.+\)/g, '');
-				console.log('SFX ' + i + ' ? ' + repment + '/' + (theme + SUFFIXES_BASE_INDEX) + ' ' + el.matcher + ' # ' + el.infinitives.join(','));
+
+				themes = paradigmThemes.filter(function(el){ return (el.theme == theme); });
+
+				console.log('SFX ' + i + ' ' + repment + ' ?/' + (theme + SUFFIXES_BASE_INDEX) + ' ' + el.matcher + ' # ' + el.infinitives.join(','));
 			});
 
 			i ++;
@@ -940,7 +974,7 @@ i = 133;
 				//rhizotonic
 				[
 					//TODO
-					//kuèrdh, vínth, provéd
+					//kuèrdh
 					{matcher: /díx$/, replacement: 'dít'},
 					{matcher: /dúx$/, replacement: 'dót'},
 					{matcher: /kór$/, replacement: 'kórs'},
