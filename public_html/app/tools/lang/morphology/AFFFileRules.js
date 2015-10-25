@@ -469,6 +469,7 @@ console.log(paradigmThemes);
 
 				storeSuffix(logs, i, rebase, el, (parents? parents.join(','): null), constraint);
 			});
+			sublist.unshift(base);
 
 			printSuffixes(logs, i, base);
 
