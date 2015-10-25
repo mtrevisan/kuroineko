@@ -268,7 +268,7 @@ console.log(paradigmThemes);
 			simplifyThemesAndApplyFlag(list, 4, 'e', 'i');
 			simplifyThemesAndApplyFlag(list, 5, 'a', 'e\/4');
 			simplifyThemesAndApplyFlag(list, 6, 'o', 'a\/5');
-			simplifyThemesAndApplyFlag(list, '6,3', 'o\/3', 'a\/5');
+			simplifyThemesAndApplyFlag(list, 6, 'o\/3', 'a\/5');
 			simplifyThemesAndApplyFlag(list, 7, '', 'e', 'se');
 			simplifyThemesAndApplyFlag(list, 8, '', 'e');
 			simplifyThemesAndApplyFlag(list, 9, '', 'se');
