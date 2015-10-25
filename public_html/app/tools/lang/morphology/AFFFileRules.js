@@ -88,7 +88,6 @@ console.log(paradigmThemes);
 		i = printThemes(commonThemes);
 //i = 225;
 		print(paradigmEndings, commonThemes, paradigmThemes, dialect, i);
-//		printParadigm(paradigmEndings, commonThemes, paradigmThemes, i);
 	};
 
 	/** @private */
@@ -409,8 +408,32 @@ console.log(paradigmThemes);
 	};
 
 	/** @private */
+	var printThemes = function(list){
+		var i = SUFFIXES_BASE_INDEX,
+			base;
+		list.forEach(function(sublist){
+			sublist = expandThemes(sublist);
+
+			simplifyThemesAndApplyFlag(sublist, 1, 'e', 'i');
+			simplifyThemesAndApplyFlag(sublist, 2, 'a', 'e\/1');
+			simplifyThemesAndApplyFlag(sublist, 3, 'o', 'a\/2');
+
+			base = sublist.shift();
+
+			console.log('SFX ' + i + ' Y ' + sublist.length + ' # ' + base);
+			sublist.forEach(function(el){
+				if(sublist.parents)
+					sublist.parents = sublist.parents.map(function(el){ return el + SUFFIXES_BASE_INDEX; });
+				console.log('SFX ' + i + ' ' + (base? base.replace(/\/.+$/, ''): 0) + ' ' + el + (sublist.parents && sublist.parents.length? '/' + sublist.parents.join(','): ''));
+			});
+			i ++;
+		});
+		return i;
+	};
+
+	/** @private */
 	var print = function(paradigmEndings, commonThemes, paradigmThemes, dialect, i){
-		var i, j, k, logs, repment, th, themes, from, to, fromTo, matcher, infs;
+		var j, k, logs, repment, th, themes, from, to, fromTo, matcher, infs;
 		paradigmEndings.forEach(function(el){
 			logs = [];
 			el.themes.forEach(function(idx, theme){
@@ -423,9 +446,11 @@ console.log(paradigmThemes);
 				el.infinitives.forEach(function(inf){
 					themes = Themizer.generate(new Verb(inf), dialect);
 
-					j = extractIndexOfCommonPartFromStart(inf, themes['regular'][th]);
+//if(themes[REGULAR][th] == undefined)
+//	console.log('das');
+					j = extractIndexOfCommonPartFromStart(inf, themes[REGULAR][th] || themes[IRREGULAR][th]);
 					from = inf.substr(j);
-					to = themes['regular'][th].substr(j);
+					to = (themes[REGULAR][th] || themes[IRREGULAR][th]).substr(j);
 					if(ArrayHelper.findIndex(fromTo, function(el){ return (el.from == from && el.to == to); }) < 0)
 						fromTo.push({from: from, to: to});
 				});
@@ -449,52 +474,6 @@ console.log(paradigmThemes);
 
 			i ++;
 		});
-		return i;
-	};
-
-	/** @private */
-	var printThemes = function(list){
-		var i = SUFFIXES_BASE_INDEX,
-			base;
-		list.forEach(function(sublist){
-			sublist = expandThemes(sublist);
-
-			simplifyThemesAndApplyFlag(sublist, 1, 'e', 'i');
-			simplifyThemesAndApplyFlag(sublist, 2, 'a', 'e\/1');
-			simplifyThemesAndApplyFlag(sublist, 3, 'o', 'a\/2');
-
-			base = sublist.shift();
-
-			console.log('SFX ' + i + ' Y ' + sublist.length + ' # ' + base);
-			sublist.forEach(function(el){
-				console.log('SFX ' + i + ' ' + (base? base.replace(/\/.+$/, ''): 0) + ' ' + el + (sublist.parents && sublist.parents.length? '/' + (sublist.parents.join(',') + 1): ''));
-			});
-			i ++;
-		});
-		return i;
-	};
-
-	/** @private */
-	var printParadigm = function(paradigmEndings, commonThemes, paradigmThemes, i){
-		var k, repment, themes;
-		paradigmEndings.forEach(function(el){
-			k = 0;
-			el.themes.forEach(function(){ k ++; });
-
-			console.log('SFX ' + i + ' Y ' + k);
-			el.themes.forEach(function(theme){
-				repment = commonThemes[theme][0];
-				if(repment.indexOf('>') < 0)
-					repment = repment.replace(/\(.+\)/g, '');
-
-				themes = paradigmThemes.filter(function(el){ return (el.theme == theme); });
-
-				console.log('SFX ' + i + ' ' + repment + ' ?/' + (theme + SUFFIXES_BASE_INDEX) + ' ' + el.matcher + ' # ' + el.infinitives.join(','));
-			});
-
-			i ++;
-		});
-		return i;
 	};
 
 	/** @private */
@@ -561,7 +540,10 @@ console.log(paradigmThemes);
 		};
 
 		themes.forEach(splitter);
-		return themes.filter(function(form){ return (form.match(/[>+$]/) || !form.match(SPLITTER_REGEX_OPTIONAL_ALTERNATIVE)); });
+		var parents = themes.parents;
+		themes = themes.filter(function(form){ return (form.match(/[>+$]/) || !form.match(SPLITTER_REGEX_OPTIONAL_ALTERNATIVE)); });
+		themes.parents = parents;
+		return themes;
 	};
 
 	/** @private */
@@ -729,10 +711,10 @@ console.log(paradigmThemes);
 				//	insert.call(this, 2, '[x/j]|' + tmp + 'a');
 				//}
 
-				insert.call(this, 2, tmp + 'ímo');
+				insert.call(this, 2, tmp + 'imo');
 				//FIXME
 				//if(this.verb.irregularity.eser)
-				//	insert.call(this, 2, '[x/j]|' + tmp + 'ímo');
+				//	insert.call(this, 2, '[x/j]|' + tmp + 'imo');
 			}
 			if(t.themeT11){
 				insert.call(this, 11, '(iv)ié');
@@ -974,8 +956,8 @@ console.log(paradigmThemes);
 		var strong = [
 			//1st conjugation
 			[
-				{matcher: /fà$/, replacement: 'fàt'},
-				{matcher: /konsà$/, replacement: 'kóns'}
+				{matcher: /fà$/, replacement: 'fat'},
+				{matcher: /konsà$/, replacement: 'kons'}
 			],
 
 			//2nd conjugation
@@ -984,37 +966,37 @@ console.log(paradigmThemes);
 				[
 					//TODO
 					//kuèrdh
-					{matcher: /díx$/, replacement: 'dít'},
-					{matcher: /dúx$/, replacement: 'dót'},
-					{matcher: /kór$/, replacement: 'kórs'},
+					{matcher: /díx$/, replacement: 'dit'},
+					{matcher: /dúx$/, replacement: 'dot'},
+					{matcher: /kór$/, replacement: 'kors'},
 					{matcher: /kòx$/, replacement: 'kòt'},
-					{matcher: /mét$/, replacement: 'més'},
-					{matcher: /móv$/, replacement: 'mós'},
-					{matcher: /nét$/, replacement: 'nés'},
-					{matcher: /ofénd$/, replacement: 'oféx'},
-					{matcher: /ónđ$/, replacement: 'ónt'},
-					{matcher: /pénđ$/, replacement: 'pént'},
+					{matcher: /mét$/, replacement: 'mes'},
+					{matcher: /móv$/, replacement: 'mos'},
+					{matcher: /nét$/, replacement: 'nes'},
+					{matcher: /ofénd$/, replacement: 'ofex'},
+					{matcher: /ónđ$/, replacement: 'ont'},
+					{matcher: /pénđ$/, replacement: 'pent'},
 					{matcher: /pèrd$/, replacement: 'pèrs'},
 					{matcher: /pón$/, replacement: 'pòst'},
 					{matcher: /pòrx$/, replacement: 'pòrt'},
-					{matcher: /rónp$/, replacement: 'rót'},
-					{matcher: /skrív$/, replacement: 'skrít'},
-					{matcher: /spànd$/, replacement: 'spànt'},
-					{matcher: /strénđ$/, replacement: 'strét'},
+					{matcher: /rónp$/, replacement: 'rot'},
+					{matcher: /skrív$/, replacement: 'skrit'},
+					{matcher: /spànd$/, replacement: 'spant'},
+					{matcher: /strénđ$/, replacement: 'stret'},
 					{matcher: /sucéd$/, replacement: 'sucès'},
-					{matcher: /ténd$/, replacement: 'téx'},
-					{matcher: /ténx$/, replacement: 'tént'},
+					{matcher: /ténd$/, replacement: 'tex'},
+					{matcher: /ténx$/, replacement: 'tent'},
 					{matcher: /tòrđ$/, replacement: 'tòrt'},
-					{matcher: /trà$/, replacement: 'tràt'},
-					{matcher: /véd$/, replacement: 'víst'},
-					{matcher: /vínŧ$/, replacement: 'vínt'},
+					{matcher: /trà$/, replacement: 'trat'},
+					{matcher: /véd$/, replacement: 'vist'},
+					{matcher: /vínŧ$/, replacement: 'vint'},
 					{matcher: /vív$/, replacement: 'visú'},
 					{matcher: /vòlx$/, replacement: 'vòlt'}
 					//...
 				],
 				//rhizoatone (avér, -manér, -parér, podér, savér, -tolér/-volér, e valér)
 				[
-					{matcher: /àl$/, replacement: 'àls'},
+					{matcher: /àl$/, replacement: 'als'},
 					{matcher: /n$/, replacement: 'x'},
 					{matcher: /r$/, replacement: 'rs'},
 					{matcher: /tòl$/, replacement: 'tòlt'}
