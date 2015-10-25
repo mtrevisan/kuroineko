@@ -442,12 +442,21 @@ console.log(paradigmThemes);
 					rebase = m[1];
 					el = m[2];
 
-					if(rebase.match(/\[.+\]]/))
+					m = rebase.match(/\[(.+)\]/);
+					if(m){
+						m = m[1].split('');
+
+						rebase = m.shift();
 						constraint = rebase;
+
+						m.forEach(function(obj){
+							storeSuffix(logs, i, obj, el, parents, obj);
+						});
+					}
 					else{
 						m = rebase.match(/(.+)\?(.+)/);
 						if(m){
-							printSuffix(logs, i, m[2], el, parents, '[^' + m[1] + ']' + m[2]);
+							storeSuffix(logs, i, m[2], el, parents, '[^' + m[1] + ']' + m[2]);
 
 							rebase = m[1] + m[2];
 							constraint = rebase;
@@ -455,13 +464,10 @@ console.log(paradigmThemes);
 					}
 				}
 
-				printSuffix(logs, i, rebase, el, (parents? parents.join(','): null), constraint);
+				storeSuffix(logs, i, rebase, el, (parents? parents.join(','): null), constraint);
 			});
 
-			console.log('SFX ' + i + ' Y ' + logs.length + ' # ' + base);
-			logs.forEach(function(log){
-				console.log(log);
-			});
+			printSuffixes(logs, i, base);
 
 			i ++;
 		});
@@ -501,25 +507,29 @@ console.log(paradigmThemes);
 						infs = infs.filter(function(obj){ return obj.match(matcher); });
 					}
 
-					printSuffix(logs, i, ft.from, ft.to + commonThemes[idx][0], idx + SUFFIXES_BASE_INDEX, el.matcher, infs);
+					storeSuffix(logs, i, ft.from, ft.to + commonThemes[idx][0], idx + SUFFIXES_BASE_INDEX, el.matcher, infs);
 				});
 			});
 
-			console.log('SFX ' + i + ' Y ' + logs.length);
-			logs.forEach(function(log){
-				console.log(log);
-			});
+			printSuffixes(logs, i);
 
 			i ++;
 		});
 	};
 
 	/** @private */
-	var printSuffix = function(logs, i, replaced, replacement, flags, constraint, parents){
+	var storeSuffix = function(logs, i, replaced, replacement, flags, constraint, parents){
 		if(Array.isArray(flags))
 			flags = flags.join(',');
 		logs.push('SFX ' + i + ' ' + (replaced? replaced: 0) + ' ' + replacement + (flags? '/' + flags: '') + (constraint? ' ' + constraint: '')
 			+ (parents? ' # ' + parents.join(','): ''));
+	};
+
+	var printSuffixes = function(logs, i, base){
+		console.log('SFX ' + i + ' Y ' + logs.length + (base? ' # ' + base: ''));
+		logs.forEach(function(log){
+			console.log(log);
+		});
 	};
 
 	/** @private */
