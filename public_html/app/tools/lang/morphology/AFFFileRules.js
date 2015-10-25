@@ -424,24 +424,44 @@ console.log(paradigmThemes);
 	/** @private */
 	var printThemes = function(list){
 		var i = SUFFIXES_BASE_INDEX,
-			base, m, rebase;
+			base, logs, m, rebase, constraint;
 		list.forEach(function(sublist){
 			base = sublist.shift();
 
+			logs = [];
 			console.log('SFX ' + i + ' Y ' + sublist.length + ' # ' + base);
 			sublist.forEach(function(el){
-				m = el.match(/(.+)>(.+)/);
-				rebase = base.replace(/\/[^)]+$/, '');
-				if(m){
-					rebase = m[1];
-					el = m[2];
-				}
-
 				if(sublist.parents)
 					sublist.parents = sublist.parents.map(function(el){ return el + SUFFIXES_BASE_INDEX; });
 
-				console.log('SFX ' + i + ' ' + (rebase? rebase: 0) + ' ' + el + (sublist.parents && sublist.parents.length? '/' + sublist.parents.join(','): ''));
+				m = el.match(/(.+)>(.+)/);
+				rebase = base.replace(/\/[^)]+$/, '');
+				constraint = '';
+				if(m){
+					rebase = m[1];
+					el = m[2];
+
+					if(rebase.match(/\[.+\]]/))
+						constraint = rebase;
+					else{
+						m = rebase.match(/(.+)\?(.+)/);
+						if(m){
+							logs.push('SFX ' + i + ' ' + m[2] + ' ' + el + (sublist.parents && sublist.parents.length? '/' + sublist.parents.join(','): '') + ' ' + m[2]);
+
+							rebase = m[1] + m[2];
+							constraint = rebase;
+						}
+					}
+				}
+
+				logs.push('SFX ' + i + ' ' + (rebase? rebase: 0) + ' ' + el + (sublist.parents && sublist.parents.length? '/' + sublist.parents.join(','): '') + (constraint? ' ' + constraint: ''));
 			});
+
+			console.log('SFX ' + i + ' Y ' + logs.length + ' # ' + base);
+			logs.forEach(function(log){
+				console.log(log);
+			});
+
 			i ++;
 		});
 		return i;
