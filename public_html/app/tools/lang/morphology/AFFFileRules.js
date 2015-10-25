@@ -40,7 +40,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	 * @constant
 	 * @private
 	 */
-		SPLITTER_REGEX_ALTERNATIVE_2 = /(.+)\[(.+)\]$/,
+		SPLITTER_REGEX_ALTERNATIVE_2 = /(.+)?\[(.+)\]$/,
 	/**
 	 * @constant
 	 * @private
@@ -76,7 +76,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		commonThemes = extractCommonThemes(paradigmEndings);
 //		reduceThemes(commonThemes);
 
-		paradigmEndings = compact(paradigmEndings);
+		paradigmEndings = compactEndings(paradigmEndings);
 
 //		constraintToInfinitivesThemes(paradigmThemes, infinitives);
 
@@ -392,6 +392,7 @@ console.log(paradigmThemes);
 			simplifyThemesAndApplyFlag(list, 4, 'e', 'i');
 			simplifyThemesAndApplyFlag(list, 5, 'a', 'e\/4');
 			simplifyThemesAndApplyFlag(list, 6, 'o', 'a\/5');
+			simplifyThemesAndApplyFlag(list, 6, 'o\/3', 'a\/5');
 			simplifyThemesAndApplyFlag(list, 7, '', 'e');
 			simplifyThemesAndApplyFlag(list, 8, '', 'se');
 			simplifyThemesAndApplyFlag(list, 9, '\/7', 'se');
@@ -429,7 +430,6 @@ console.log(paradigmThemes);
 			base = sublist.shift();
 
 			logs = [];
-			console.log('SFX ' + i + ' Y ' + sublist.length + ' # ' + base);
 			sublist.forEach(function(el){
 				parents = [];
 				if(sublist.parents)
@@ -443,7 +443,7 @@ console.log(paradigmThemes);
 					el = m[2];
 
 					m = rebase.match(/\[(.+)\]/);
-					if(m){
+					if(m && m[1][0] != '^'){
 						m = m[1].split('');
 
 						rebase = m.shift();
@@ -452,6 +452,9 @@ console.log(paradigmThemes);
 						m.forEach(function(obj){
 							storeSuffix(logs, i, obj, el, parents, obj);
 						});
+					}
+					else if(m){
+						//storeSuffix(logs, i, m[1], el, parents, m[1]);
 					}
 					else{
 						m = rebase.match(/(.+)\?(.+)/);
@@ -507,7 +510,7 @@ console.log(paradigmThemes);
 						infs = infs.filter(function(obj){ return obj.match(matcher); });
 					}
 
-					storeSuffix(logs, i, ft.from, ft.to + commonThemes[idx][0], idx + SUFFIXES_BASE_INDEX, el.matcher, infs);
+					storeSuffix(logs, i, ft.from, ft.to + commonThemes[idx][0].replace(/\/.+$/, ''), idx + SUFFIXES_BASE_INDEX, el.matcher, infs);
 				});
 			});
 
@@ -521,7 +524,10 @@ console.log(paradigmThemes);
 	var storeSuffix = function(logs, i, replaced, replacement, flags, constraint, parents){
 		if(Array.isArray(flags))
 			flags = flags.join(',');
-		logs.push('SFX ' + i + ' ' + (replaced? replaced: 0) + ' ' + replacement + (flags? '/' + flags: '') + (constraint? ' ' + constraint: '')
+
+		logs.push('SFX ' + i + ' ' + (replaced? replaced: 0) + ' '
+			+ (flags? (replacement.indexOf('/') >= 0? replacement.replace(/(?:\/(.+))?$/, '/' + flags + ',$1'): replacement + '/' + flags): replacement)
+			+ (constraint? ' ' + constraint: '')
 			+ (parents? ' # ' + parents.join(','): ''));
 	};
 
@@ -543,7 +549,7 @@ console.log(paradigmThemes);
 		else{
 			var replacement = Array.prototype.slice.call(arguments, 3, arguments.length),
 				i, base, indices;
-			matcher = new RegExp(matcher + '[' + PRONOMENAL_MARK + '' + PRONOMENAL_MARK_IMPERATIVE + '' + FINAL_CONSONANT_VOICING + ']*$');
+			matcher = new RegExp(matcher + '[' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + FINAL_CONSONANT_VOICING + ']*$');
 			for(i = list.length - 1; i >= 0; i --)
 				if(list[i].match(matcher)){
 					base = list[i].replace(matcher, '')
@@ -558,7 +564,7 @@ console.log(paradigmThemes);
 
 					//here, all replacements are found, substitute them
 
-					list[i] = list[i].replace(/(\/(.+))?$/, '/' + flag);
+					list[i] = (list[i].indexOf('/') >= 0? list[i].replace(/(?:\/(.+))?$/, '/' + flag + ',$1'): list[i] + '/' + flag);
 
 					//remove replaced items
 					i = removeIndices(list, indices, i);
@@ -614,12 +620,20 @@ console.log(paradigmThemes);
 			var m = form.match(SPLITTER_REGEX_ALTERNATIVE_2);
 			if(m)
 				m[2].split('').forEach(function(el){
-					addAndSplit(m[1] + el);
+					addAndSplit((m[1]? m[1]: '') + el);
 				});
 			else if(form.match(SPLITTER_REGEX_OPTIONAL) && !form.match(/[>+$]/))
 				splitter(form);
-			else
-				themes.push(form);
+			else{
+				var matcher = '[' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + FINAL_CONSONANT_VOICING + ']+$';
+				var f = function(el){
+					//escape regexp reserved characters
+					return el.match(new RegExp(form.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + matcher));
+				};
+
+				if(themes.indexOf(form) < 0 && (form.match(new RegExp(matcher)) || ArrayHelper.findIndex(themes, f) < 0))
+					themes.push(form);
+			}
 		};
 
 		for(var i = themes.length - 1; i >= 0; i --)
@@ -628,7 +642,7 @@ console.log(paradigmThemes);
 	};
 
 	/** @private */
-	var compact = function(list){
+	var compactEndings = function(list){
 		var compacted = [],
 			data;
 		for(var i = list.length - 1; i >= 0; i --){
@@ -1115,8 +1129,16 @@ console.log(paradigmThemes);
 			var t = this.paradigm[idx].themes;
 			if(!t[theme])
 				t[theme] = [suffix];
-			else if(t[theme].indexOf(suffix) < 0)
-				t[theme].push(suffix);
+			else{
+				var matcher = '[' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + FINAL_CONSONANT_VOICING + ']+$';
+				var f = function(el){
+					//escape regexp reserved characters
+					return el.match(new RegExp(suffix.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + matcher));
+				};
+
+				if(t[theme].indexOf(suffix) < 0 && (suffix.match(new RegExp(matcher)) || ArrayHelper.findIndex(t[theme], f) < 0))
+					t[theme].push(suffix);
+			}
 		}
 	};
 
