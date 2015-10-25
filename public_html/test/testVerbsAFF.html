@@ -78,6 +78,14 @@
 			};
 		})();
 
+		var composeInfinitiveWithoutPrefix = (function(){
+			var themeVowel = ['à', 'é', 'e', 'í', 'í'];
+
+			return function(v){
+				return v.radix + themeVowel[v.conjugation - 1] + 'r';
+			};
+		})();
+
 		var applyReductions = function(list){
 			epurateListAndApplyFlag(list, 'E',
 				'e', 'i');
@@ -511,9 +519,15 @@ if(true)
 			verbsDictionary = JSONH.unpack(verbsDictionary);
 
 var start = +new Date();
-			var verbs = [];
+			var verbs = [],
+				infinitives = [];
 			verbsDictionary.forEach(function(infinitive){
-				verbs.push(new Verb(composeInfinitive(infinitive)));
+				infinitive = composeInfinitiveWithoutPrefix(infinitive);
+				if(infinitives.indexOf(infinitive) < 0){
+					infinitives.push(infinitive);
+
+					verbs.push(new Verb(infinitive));
+				}
 			});
 			AFFFileRules.generate(verbs);
 console.log(((+new Date() - start) / 60000).toFixed(2) + ' min');

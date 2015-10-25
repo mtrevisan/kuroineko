@@ -85,9 +85,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 console.log(paradigmEndings);
 console.log(commonThemes);
 console.log(paradigmThemes);
-		print(paradigmEndings, commonThemes, paradigmThemes);
 //		i = printThemes(commonThemes);
-i = 133;
+i = 225;
+		print(paradigmEndings, commonThemes, paradigmThemes, i);
 //		printParadigm(paradigmEndings, commonThemes, paradigmThemes, i);
 	};
 
@@ -409,9 +409,8 @@ i = 133;
 	};
 
 	/** @private */
-	var print = function(paradigmEndings, commonThemes, paradigmThemes){
-		var i = SUFFIXES_BASE_INDEX,
-			k, repment, themes;
+	var print = function(paradigmEndings, commonThemes, paradigmThemes, i){
+		var k, repment, themes;
 		paradigmEndings.forEach(function(el){
 			k = 0;
 			el.themes.forEach(function(){ k ++; });
@@ -424,7 +423,7 @@ i = 133;
 
 				themes = paradigmThemes.filter(function(el){ return (el.theme == idx); });
 
-				idx += SUFFIXES_BASE_INDEX;
+				idx += SUFFIXES_BASE_INDEX + 1;
 
 				console.log('SFX ' + i + ' ' + ('T' + theme) + ' ' + commonThemes[theme][0] + '/' + idx + ' ' + el.matcher + ' # ' + el.infinitives.join(','));
 			});
