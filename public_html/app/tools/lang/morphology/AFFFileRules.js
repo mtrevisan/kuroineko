@@ -32,22 +32,27 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	 * @constant
 	 * @private
 	 */
-		SPLITTER_REGEX_OPTIONAL = /(.*?)\((.+?)\)(.*)/,
+		SPLITTER_REGEX_OPTIONAL = /^(.*?)\((.+?)\)(.*)$/,
 	/**
 	 * @constant
 	 * @private
 	 */
-		SPLITTER_REGEX_ALTERNATIVE_1 = /(.+)\/(.+)/,
+		SPLITTER_REGEX_ALTERNATIVE_1 = /^(.+)\/(.+)$/,
 	/**
 	 * @constant
 	 * @private
 	 */
-		SPLITTER_REGEX_ALTERNATIVE_2 = /(.+)?\[(.+)\]$/,
+		SPLITTER_REGEX_ALTERNATIVE_2 = /^(.+)?\[(.+)\]$/,
 	/**
 	 * @constant
 	 * @private
 	 */
-		SUFFIXES_BASE_INDEX = 11;
+		SPLITTER_REGEX_RULE = /^(.+)>(.+)$/,
+	/**
+	 * @constant
+	 * @private
+	 */
+		SUFFIXES_BASE_INDEX = 13;
 
 
 
@@ -56,27 +61,22 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	 */
 	var generate = function(verbs){
 		var dialect = new Dialect(),
-			paradigmThemes = [],
 			paradigmEndings = [],
-			infinitives = [],
+			infinitives = {},
 			infinitive, themes, commonThemes, i;
 		verbs.forEach(function(verb){
-			if(infinitives.indexOf(verb.infinitive) < 0){
-				infinitive = Word.unmarkDefaultStress(verb.infinitive);
-
-				infinitives.push(infinitive);
-
+			infinitive = Word.unmarkDefaultStress(verb.infinitive);
+			if(!infinitives[infinitive]){
 				themes = Themizer.generate(verb, dialect);
 
+				infinitives[infinitive] = themes;
 				verb.infinitive = infinitive;
 
-				generateThemesForSingleVerb(verb, themes, paradigmThemes);
 				generateEndingsForSingleVerb(verb, themes, paradigmEndings);
 			}
 		});
 
 		commonThemes = extractCommonThemes(paradigmEndings);
-//		reduceThemes(commonThemes);
 
 		paradigmEndings = compactEndings(paradigmEndings);
 
@@ -84,26 +84,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 console.log(paradigmEndings);
 console.log(commonThemes);
-console.log(paradigmThemes);
 		i = printThemes(commonThemes);
-//i = 225;
-		print(paradigmEndings, commonThemes, paradigmThemes, dialect, i);
-	};
-
-	/** @private */
-	var generateThemesForSingleVerb = function(verb, themes, paradigmThemes){
-		var idx, from, to;
-		visit(themes, function(obj, key){
-			idx = extractIndexOfCommonPartFromStart(verb.infinitive, obj[key]);
-			from = verb.infinitive.substr(idx);
-			to = obj[key].substr(idx);
-
-			idx = ArrayHelper.findIndex(paradigmThemes, function(el){ return (el.from == from && el.to == to); });
-			if(idx < 0)
-				paradigmThemes.push({theme: Number(key.replace(/^themeT/, '')), from: from, to: to, parents: [verb.infinitive]});
-			else if(paradigmThemes[idx].parents.indexOf(verb.infinitive) < 0)
-				paradigmThemes[idx].parents.push(verb.infinitive);
-		});
+		print(paradigmEndings, commonThemes, infinitives, i);
 	};
 
 	/** @private */
@@ -150,6 +132,7 @@ console.log(paradigmThemes);
 	var constraintToInfinitivesParadigm = function(list, infinitives){
 		var diff, variab, variability, common, re, found, part, partitioningResults, parentsTrue, parentsFalse,
 			listNoPrefixes, first;
+		infinitives = Object.keys(infinitives);
 		list.forEach(function(obj){
 			diff = ArrayHelper.difference(infinitives, obj.infinitives);
 
@@ -199,8 +182,8 @@ console.log(paradigmThemes);
 								obj = {infinitives: parentsTrue, themes: obj.themes};
 								list.push(obj);
 								if(obj.infinitives.indexOf(common) < 0){
-									variability = listToRegExp(extractVariability(common.length + 1, 1, obj.infinitives));
-									re = new RegExp(variability + listToRegExp(partitioningResults[true]) + common + '$');
+									variability = listToRegExp(extractVariability(common.length + 1, 1, obj.infinitives)) + listToRegExp(partitioningResults[true]);
+									re = new RegExp(variability + common + '$');
 									found = diff.some(function(el){ return el.match(re); });
 								}
 							}
@@ -218,7 +201,7 @@ console.log(paradigmThemes);
 
 
 			if(found){
-//				console.log('error! cannot split up the initial verbs array');
+				console.log('!! cannot split up the initial verbs array');
 
 				listNoPrefixes = uniqueNoPrefixes(obj.infinitives);
 				first = listNoPrefixes.shift();
@@ -266,87 +249,73 @@ console.log(paradigmThemes);
 
 			simplifyThemesAndApplyFlag(list, 1, PRONOMENAL_MARK);
 			simplifyThemesAndApplyFlag(list, 2, PRONOMENAL_MARK_IMPERATIVE);
-			INTERROGATIVE_MARK
-			simplifyThemesAndApplyFlag(list, 3, FINAL_CONSONANT_VOICING);
-			simplifyThemesAndApplyFlag(list, 4, 'e', 'i');
-			simplifyThemesAndApplyFlag(list, 5, 'a', 'e\/4');
-			simplifyThemesAndApplyFlag(list, 6, 'o', 'a\/5');
-			simplifyThemesAndApplyFlag(list, 6, 'o\/3', 'a\/5');
-			simplifyThemesAndApplyFlag(list, 7, '', 'e', 'se');
-			simplifyThemesAndApplyFlag(list, 8, '', 'e');
-			simplifyThemesAndApplyFlag(list, 9, '', 'se');
-			simplifyThemesAndApplyFlag(list, 10, '', 'de', 'ge');
+			simplifyThemesAndApplyFlag(list, 3, INTERROGATIVE_MARK);
+			simplifyThemesAndApplyFlag(list, 4, FINAL_CONSONANT_VOICING);
+			simplifyThemesAndApplyFlag(list, 5, 'e', 'i');
+			simplifyThemesAndApplyFlag(list, 6, 'a', 'e\/5');
+			simplifyThemesAndApplyFlag(list, 7, 'o', 'a\/6');
+			simplifyThemesAndApplyFlag(list, 7, 'o\/4', 'a\/6');
+			simplifyThemesAndApplyFlag(list, 8, '', 'e', 'se');
+			simplifyThemesAndApplyFlag(list, 9, '', 'e');
+			simplifyThemesAndApplyFlag(list, 10, '', 'se');
+			simplifyThemesAndApplyFlag(list, 11, '', 'de', 'ge');
+			simplifyThemesAndApplyFlag(list, 12, 'e', 'a', 'o\/4', '([^i])>$1i', '[ei]>/4', '\/4');
 		});
 		return commonThemes;
 	};
 
 	/** @private */
-	var reduceThemes = function(list){
-		var indices = list.map(function(el, i){ return {idx: i, size: el.length}; }),
-			themeContained, themeContainer, i0, j0;
-		indices.sort(function(a, b){ return b.size - a.size; });
-		indices = indices.map(function(el){ return el.idx; });
-		for(var i = indices.length - 1; i >= 0; i --){
-			i0 = indices.indexOf(i);
-			themeContained = list[i0];
-			if(themeContained.length > 1)
-				for(var j = i - 1; j >= 0; j --){
-					j0 = indices.indexOf(j);
-					themeContainer = list[j0];
-					if(ArrayHelper.contains(themeContainer, themeContained)){
-						list[j0] = ArrayHelper.difference(themeContainer, themeContained);
-						list[j0].parents = (list[j0].parents || []).concat(i0);
-					}
-				}
-		}
-	};
-
-	/** @private */
 	var printThemes = function(list){
 		var i = SUFFIXES_BASE_INDEX,
-			parents, base, logs, m, rebase, constraint;
+			flags, base, logs, m, rebase, constraint;
 		list.forEach(function(sublist){
 			base = sublist.shift();
 
 			logs = [];
 			sublist.forEach(function(el){
-				parents = [];
-				if(sublist.parents)
-					parents = sublist.parents.map(function(el){ return el + SUFFIXES_BASE_INDEX; });
+				flags = (sublist.parents? sublist.parents.map(function(el){ return el + SUFFIXES_BASE_INDEX; }): []);
 
-				m = el.match(/(.+)>(.+)/);
+				m = el.match(SPLITTER_REGEX_RULE);
 				rebase = base.replace(/\/[^)]+$/, '');
-				constraint = '';
+				constraint = null;
 				if(m){
 					rebase = m[1];
 					el = m[2];
 
-					m = rebase.match(/\[(.+)\]/);
-					if(m && m[1][0] != '^'){
-						m = m[1].split('');
+					m = rebase.match(/\[(\^)?(.+)\]/);
+					if(m && m[1] != '^'){
+						m = m[2].split('');
 
 						rebase = m.shift();
 						constraint = rebase;
 
 						m.forEach(function(obj){
-							storeSuffix(logs, i, obj, el, parents, obj);
+							storeSuffix(logs, i, obj, el, flags, obj);
 						});
 					}
 					else if(m){
-						//storeSuffix(logs, i, m[1], el, parents, m[1]);
+						if(el.indexOf('$') >= 0){
+							rebase = 0;
+							el = el.replace(/\$\d/, '');
+							constraint = m[0];
+						}
+						else
+							throw '!! unsupported theme format: ' + rebase + '>' + el;
 					}
 					else{
 						m = rebase.match(/(.+)\?(.+)/);
 						if(m){
-							storeSuffix(logs, i, m[2], el, parents, '[^' + m[1] + ']' + m[2]);
+							storeSuffix(logs, i, m[2], el, flags, '[^' + m[1] + ']' + m[2]);
 
 							rebase = m[1] + m[2];
 							constraint = rebase;
 						}
+						else
+							throw '!! unsupported theme format: ' + rebase + '>' + el;
 					}
 				}
 
-				storeSuffix(logs, i, rebase, el, (parents? parents.join(','): null), constraint);
+				storeSuffix(logs, i, rebase, el, flags, constraint);
 			});
 			sublist.unshift(base);
 
@@ -358,39 +327,24 @@ console.log(paradigmThemes);
 	};
 
 	/** @private */
-	var print = function(paradigmEndings, commonThemes, paradigmThemes, dialect, i){
-		var j, k, logs, repment, th, themes, from, to, fromTo, matcher, infs;
+	var print = function(paradigmEndings, commonThemes, infinitives, i){
+		var parts, logs, th, themes, fromTo;
 		paradigmEndings.forEach(function(el){
 			logs = [];
 			el.themes.forEach(function(idx, theme){
-//				repment = commonThemes[idx][0];
-//				if(repment.indexOf('>') < 0)
-//					repment = repment.replace(/\(.+\)/g, '');
-
 				fromTo = [];
 				th = 'themeT' + theme;
 				el.infinitives.forEach(function(inf){
-					themes = Themizer.generate(new Verb(inf), dialect);
+					themes = infinitives[inf];
 
 //FIXME
-//if(themes[REGULAR][th] == undefined)
-//	console.log('das');
-					j = extractIndexOfCommonPartFromStart(inf, themes[REGULAR][th] || themes[IRREGULAR][th]);
-					from = inf.substr(j);
-					to = (themes[REGULAR][th] || themes[IRREGULAR][th]).substr(j);
-					if(ArrayHelper.findIndex(fromTo, function(el){ return (el.from == from && el.to == to); }) < 0)
-						fromTo.push({from: from, to: to});
+					parts = extractCommonPartsFromStart(inf, themes[REGULAR][th] || themes[IRREGULAR][th]);
+					if(ArrayHelper.findIndex(fromTo, function(el){ return (el.from == parts.a && el.to == parts.b); }) < 0)
+						fromTo.push({from: parts.a, to: parts.b});
 				});
 
 				fromTo.forEach(function(ft){
-					infs = el.infinitives;
-					matcher = new RegExp(ft.from + '$');
-					if(!el.matcher.match(matcher)){
-						el.matcher = ft.from;
-						infs = infs.filter(function(obj){ return obj.match(matcher); });
-					}
-
-					storeSuffix(logs, i, ft.from, ft.to + commonThemes[idx][0].replace(/\/.+$/, ''), idx + SUFFIXES_BASE_INDEX, el.matcher, infs);
+					storeSuffix(logs, i, ft.from, Word.unmarkDefaultStress(ft.to + commonThemes[idx][0]), idx + SUFFIXES_BASE_INDEX, el.matcher, el.infinitives);
 				});
 			});
 
@@ -412,8 +366,8 @@ console.log(paradigmThemes);
 	};
 
 	var printSuffixes = function(logs, i, base){
-		console.log('SFX ' + i + ' Y ' + logs.length + (base? ' # ' + base: ''));
-		logs.forEach(function(log){
+		console.log('SFX ' + i + ' Y ' + logs.length + (base != undefined? ' # ' + base: ''));
+		logs.sort().forEach(function(log){
 			console.log(log);
 		});
 	};
@@ -437,7 +391,11 @@ console.log(paradigmThemes);
 						.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
 
 					indices = replacement.map(function(last){
-						return ArrayHelper.findIndex(list, function(el){ return el.match(new RegExp('^' + base + last + '$')); });
+						return ArrayHelper.findIndex(list, function(el){
+							return el.match(new RegExp('^' + base
+								//escape regexp reserved characters
+								+ last.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + '$'));
+						});
 					});
 					if(indices.some(function(el){ return (el < 0); }))
 						continue;
@@ -546,22 +504,11 @@ console.log(paradigmThemes);
 	};
 
 	/** @private */
-	var visit = function(obj, funct, id){
-		for(var key in obj)
-			if(obj.hasOwnProperty(key)){
-				if(!ObjectHelper.isString(obj[key]))
-					visit(obj[key], funct, (id? id + '.' + key: key));
-				else
-					funct(obj, key, id);
-			}
-	};
-
-	/** @private */
-	var extractIndexOfCommonPartFromStart = function(a, b){
+	var extractCommonPartsFromStart = function(a, b){
 		for(var i = 0, len = Math.min(a.length, b.length); i < len; i ++)
 			if(a[i] != b[i])
 				break;
-		return i;
+		return {a: a.substr(i), b: b.substr(i)};
 	};
 
 	/** @private */
@@ -596,11 +543,13 @@ console.log(paradigmThemes);
 	var listToRegExp = function(list){
 		if(list.length == 1)
 			return list[0];
+		list.sort();
 		return (list[list.length - 1].length == 1? '[' + list.join('') + ']': '(' + list.join('|') + ')');
 	};
 
 	/** @private */
 	var listToNotRegExp = function(list){
+		list.sort();
 		return (list[list.length - 1].length == 1? '[^' + list.join('') + ']': '(?!' + list.join('|') + ')');
 	};
 
@@ -614,14 +563,14 @@ console.log(paradigmThemes);
 				if(this.verb.irregularity.eser)
 					insert.call(this, 8, (!t.themeT8.match(/[cijɉñ]$/)? '(i)': '') + 'on');
 				else if(this.verb.irregularity.aver)
-					insert.call(this, 8, 'à>[àèò]');
+					insert.call(this, 8, '[à]>[àèò]');
 				else{
 					insert.call(this, 8, 'e');
 					insert.call(this, 8, 'o' + FINAL_CONSONANT_VOICING);
 
 					if(this.verb.irregularity.verb && type == IRREGULAR){
 						if(this.verb.irregularity.saver)
-							insert.call(this, 8, '.>ò');
+							insert.call(this, 8, '[à]>ò');
 						else
 							insert.call(this, 8, (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'o');
 					}
@@ -660,7 +609,7 @@ console.log(paradigmThemes);
 					insert.call(this, 12, 'en');
 				}
 				if(t.themeT5){
-					insert.call(this, 5, 'è>emo');
+					insert.call(this, 5, '[è]>emo');
 					if(conj == 2)
 						insert.call(this, 5, 'i?é>imo');
 				}
@@ -752,7 +701,7 @@ console.log(paradigmThemes);
 					insert.call(this, 12, 'en(e)');
 				}
 				if(t.themeT5){
-					insert.call(this, 5, 'è>emo');
+					insert.call(this, 5, '[è]>emo');
 					if(conj == 2 && t.themeT5.replace(/i?é$/, 'í') != t.themeT5)
 						insert.call(this, 5, 'i?é>imo');
 				}
@@ -839,7 +788,9 @@ console.log(paradigmThemes);
 		if(t.themeT2 || t.themeT6 || t.themeT7){
 			if(t.themeT6){
 				insert.call(this, 6, '');
-				insert.call(this, 6, '(d)[oaie]');
+				insert.call(this, 6, '[oaie]');
+				insert.call(this, 6, '[èé]>ed[oaie]');
+				insert.call(this, 6, '[í]>id[oaie]');
 			}
 			if(t.themeT2)
 				insert.call(this, 2, 'st[oaie]');
@@ -1048,6 +999,17 @@ console.log(paradigmThemes);
 						.replace(/#$/, morphemeEnclitic);
 			});
 		}
+	};
+
+	/** @private */
+	var visit = function(obj, funct, id){
+		for(var key in obj)
+			if(obj.hasOwnProperty(key)){
+				if(!ObjectHelper.isString(obj[key]))
+					visit(obj[key], funct, (id? id + '.' + key: key));
+				else
+					funct(obj, key, id);
+			}
 	};
 
 

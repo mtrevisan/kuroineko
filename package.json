@@ -1,8 +1,11 @@
 {
-	"name": "VenetanHTML5App",
+	"name": "venetan-app",
 	"version": "1.0.0",
-	"description": "",
+	"description": "A collection of utilities for the venetan language",
 	"main": "index.html",
+	"directories": {
+		"test": "test"
+	},
 	"scripts": {
 		"test": "echo \"Error: no test specificated\" && exit 1"
 	},
@@ -12,12 +15,13 @@
 	},
 	"keywords": [
 		"venetan",
-		"grammar"
+		"grammar",
+		"utilities"
 	],
 	"author": "Mauro Trevisan <mauro.trevisan@gmail.com> (parnodexmentegar.orgfree.com)",
 	"license": "CC-BY-NC-4.0",
 	"bugs": {
 		"url": "https://github.com/mtrevisan/kuroineko/issues"
 	},
-	"homepage": "https://github.com/mtrevisan/kuroineko"
+	"homepage": "https://github.com/mtrevisan/kuroineko#readme"
 }

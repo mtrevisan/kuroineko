@@ -86,7 +86,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 
 					if(this.verb.irregularity.verb && type == IRREGULAR){
 						if(this.verb.irregularity.saver)
-							person.central_centralNorthern_lagunar_western3 = pronomenalMark + t.themeT8.replace(/.$/, 'ò');
+							person.central_centralNorthern_lagunar_western3 = pronomenalMark + t.themeT8.replace(/à$/, 'ò');
 						else
 							person.central_centralNorthern_lagunar_western1 = pronomenalMark + t.themeT8 + (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'o';
 					}
@@ -466,7 +466,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				//rhizotonic
 				[
 					//TODO
-					//kuèrdh
 					{matcher: /díx$/, replacement: 'dít'},
 					{matcher: /dúx$/, replacement: 'dót'},
 					{matcher: /đónx$/, replacement: 'đónt'},
@@ -474,6 +473,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 					{matcher: /kór$/, replacement: 'kórs'},
 					{matcher: /kòt$/, replacement: 'kòs'},
 					{matcher: /kòx$/, replacement: 'kòt'},
+					{matcher: /kuèrđ$/, replacement: 'kuèrt'},
 					{matcher: /mét$/, replacement: 'més'},
 					{matcher: /móv$/, replacement: 'mós'},
 					{matcher: /nét$/, replacement: 'nés'},
