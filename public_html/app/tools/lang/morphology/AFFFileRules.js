@@ -165,8 +165,7 @@ console.log(commonThemes);
 	/** @private */
 	var simplifyThemesAndApplyFlag = function(list, flag, matcher){
 		if(matcher == PRONOMENAL_MARK || matcher == PRONOMENAL_MARK_IMPERATIVE || matcher == INTERROGATIVE_MARK || matcher == FINAL_CONSONANT_VOICING){
-			//escape regexp reserved characters
-			matcher = new RegExp(matcher.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + '$');
+			matcher = new RegExp(escapeRegExp(matcher) + '$');
 			for(i = list.length - 1; i >= 0; i --)
 				list[i] = list[i].replace(matcher, '/' + flag);
 		}
@@ -176,15 +175,11 @@ console.log(commonThemes);
 			matcher = new RegExp(matcher + '[' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + INTERROGATIVE_MARK + FINAL_CONSONANT_VOICING + ']*$');
 			for(i = list.length - 1; i >= 0; i --)
 				if(list[i].match(matcher)){
-					base = list[i].replace(matcher, '')
-						//escape regexp reserved characters
-						.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
+					base = escapeRegExp(list[i].replace(matcher, ''));
 
 					indices = replacement.map(function(last){
 						return ArrayHelper.findIndex(list, function(el){
-							return el.match(new RegExp('^' + base
-								//escape regexp reserved characters
-								+ last.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + '$'));
+							return el.match(new RegExp('^' + base + escapeRegExp(last) + '$'));
 						});
 					});
 					if(indices.some(function(el){ return (el < 0); }))
@@ -374,6 +369,8 @@ console.log(commonThemes);
 			base = sublist.shift();
 //FIXME
 //case: ([ei])>($1)
+//case: ([^i])>$1
+//case: ([^i])>$1i
 
 			logs = [];
 			sublist.forEach(function(el){
@@ -530,12 +527,7 @@ console.log(commonThemes);
 				splitter(form);
 			else{
 				var matcher = '[' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + INTERROGATIVE_MARK + FINAL_CONSONANT_VOICING + ']+$';
-				var f = function(el){
-					//escape regexp reserved characters
-					return el.match(new RegExp(form.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + matcher));
-				};
-
-				if(themes.indexOf(form) < 0 && (form.match(new RegExp(matcher)) || ArrayHelper.findIndex(themes, f) < 0))
+				if(themes.indexOf(form) < 0 && (form.match(new RegExp(matcher)) || ArrayHelper.findIndex(themes, function(el){ return el.match(new RegExp(escapeRegExp(form) + matcher)); }) < 0))
 					themes.push(form);
 			}
 		};
@@ -570,6 +562,17 @@ console.log(commonThemes);
 		return (list[list.length - 1].length == 1? '[^' + list.join('') + ']': '(?!' + list.join('|') + ')');
 	};
 
+	/**
+	 * Escape regexp reserved characters
+	 *
+	 * @private
+	 *
+	 * @param {String} word
+	 * @returns {String}
+	 */
+	var escapeRegExp = function(word){
+		return word.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
+	};
 
 	/** @private */
 	var generateIndicativePresent = function(type, t){
@@ -988,12 +991,7 @@ console.log(commonThemes);
 				t[theme] = [suffix];
 			else{
 				var matcher = '[' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + FINAL_CONSONANT_VOICING + ']+$';
-				var f = function(el){
-					//escape regexp reserved characters
-					return el.match(new RegExp(suffix.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + matcher));
-				};
-
-				if(t[theme].indexOf(suffix) < 0 && (suffix.match(new RegExp(matcher)) || ArrayHelper.findIndex(t[theme], f) < 0))
+				if(t[theme].indexOf(suffix) < 0 && (suffix.match(new RegExp(matcher)) || ArrayHelper.findIndex(t[theme], function(el){ return el.match(new RegExp(escapeRegExp(suffix) + matcher)); }) < 0))
 					t[theme].push(suffix);
 			}
 		}
