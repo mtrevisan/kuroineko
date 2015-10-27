@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/lang/phonology/Orthography', 'tools/lang/phonology/PhonologyHelper', 'tools/data/ObjectHelper', 'tools/data/ArrayHelper'], function(Word, Dialect, Verb, Themizer, Orthography, PhonologyHelper, ObjectHelper, ArrayHelper){
+define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/lang/phonology/PhonologyHelper', 'tools/data/ObjectHelper', 'tools/data/ArrayHelper'], function(Word, Dialect, Verb, Themizer, PhonologyHelper, ObjectHelper, ArrayHelper){
 
 	/** @constant */
 	var START_OF_WORD = '^',
@@ -236,10 +236,18 @@ console.log(commonThemes);
 
 	/** @private */
 	var constraintToInfinitivesParadigm = function(list, infinitives){
-		var diff, variab, variability, common, re, found, part, partitioningResults, parentsTrue, parentsFalse,
+		var diff, variability, common, re, found, part, partitioningResults, parentsTrue, parentsFalse,
 			listNoPrefixes, first;
 		infinitives = Object.keys(infinitives);
 		list.forEach(function(obj){
+if(obj.infinitives.length > 800)
+	console.log('ds');
+			if(found && obj.infinitives.length == 1){
+				obj.matcher = START_OF_WORD + obj.infinitives[0];
+
+				return;
+			}
+
 			diff = ArrayHelper.difference(infinitives, obj.infinitives);
 
 			common = extractCommonPartFromList(obj.infinitives);
@@ -248,52 +256,42 @@ console.log(commonThemes);
 			found = diff.some(function(el){ return el.match(re); });
 
 			if(found && obj.infinitives.indexOf(common) < 0){
-				variab = extractVariability(common.length, 1, obj.infinitives);
-				variability = listToRegExp(variab);
+				variability = listToRegExp(extractVariability(common.length, 1, obj.infinitives));
 				re = new RegExp(variability + common + '$');
 				found = diff.some(function(el){ return el.match(re); });
 			}
 
 			if(found){
-				if(obj.infinitives.length == 1){
-					obj.matcher = '^' + obj.infinitives[0];
+				part = ArrayHelper.partition(obj.infinitives, function(el){ return (el.length - common.length >= 1? el[el.length - common.length - 1]: '^'); });
+if(part['^'])
+	console.log('das');
+				variability = listToRegExp(extractVariability(common.length + 1, 1, obj.infinitives));
+				partitioningResults = {'true': [], 'false': []};
+				Object.keys(part).forEach(function(k){
+					re = new RegExp((k != '^'? variability + k: k) + common + '$');
+					partitioningResults[diff.some(function(el){ return el.match(re); })].push(k);
+				});
+				if(partitioningResults[true].length && partitioningResults[false].length){
+					parentsTrue = [];
+					parentsFalse = [];
+					partitioningResults[true].forEach(function(k){
+						parentsTrue = parentsTrue.concat(part[k]);
+					});
+					partitioningResults[false].forEach(function(k){
+						parentsFalse = parentsFalse.concat(part[k]);
+					});
 
-					return;
-				}
-
-				if(found){
-					part = ArrayHelper.partition(obj.infinitives, function(el){ return (el.length - common.length >= 1? el[el.length - common.length - 1]: '^'); });
-					if(!part['^']){
-						variability = listToRegExp(extractVariability(common.length + 1, 1, obj.infinitives));
-						if(variability.indexOf('.') < 0){
-							partitioningResults = {'true': [], 'false': []};
-							Object.keys(part).forEach(function(k){
-								re = new RegExp(variability + k + common + '$');
-								partitioningResults[diff.some(function(el){ return el.match(re); })].push(k);
-							});
-							if(partitioningResults[true].length && partitioningResults[false].length){
-								parentsTrue = [];
-								parentsFalse = [];
-								partitioningResults[true].forEach(function(k){
-									parentsTrue = parentsTrue.concat(part[k]);
-								});
-								partitioningResults[false].forEach(function(k){
-									parentsFalse = parentsFalse.concat(part[k]);
-								});
-
-								obj.matcher = listToRegExp(partitioningResults[false]) + common;
-								obj.infinitives = parentsFalse;
+					obj.matcher = listToRegExp(partitioningResults[false]) + common;
+					obj.infinitives = parentsFalse;
 
 
-								obj = {infinitives: parentsTrue, themes: obj.themes};
-								list.push(obj);
-								if(obj.infinitives.indexOf(common) < 0){
-									variability = listToRegExp(extractVariability(common.length + 1, 1, obj.infinitives)) + listToRegExp(partitioningResults[true]);
-									re = new RegExp(variability + common + '$');
-									found = diff.some(function(el){ return el.match(re); });
-								}
-							}
-						}
+					obj = {infinitives: parentsTrue, themes: obj.themes};
+					list.push(obj);
+					if(obj.infinitives.indexOf(common) < 0){
+						diff = ArrayHelper.difference(infinitives, obj.infinitives);
+						variability += listToRegExp(partitioningResults[true]);
+						re = new RegExp(variability + common + '$');
+						found = diff.some(function(el){ return el.match(re); });
 					}
 				}
 			}
@@ -364,15 +362,31 @@ console.log(commonThemes);
 	/** @private */
 	var printThemes = function(list){
 		var i = SUFFIXES_BASE_INDEX,
-			flags, base, logs, m, rebase, constraint;
+			j, len,
+			flags, base, logs, m, rebase, constraint, repment;
 		list.forEach(function(sublist){
-			base = sublist.shift();
-//FIXME
-//case: ([ei])>($1)
-//case: ([^i])>$1
-//case: ([^i])>$1i
+			len = sublist.length;
+			for(j = 0; j < len; j ++){
+				base = sublist.shift();
+				if(base.indexOf('>') < 0)
+					break;
+
+				//undo previous shift
+				sublist.push(base);
+				base = sublist.shift();
+			}
 
 			logs = [];
+
+			m = base.match(/^\(?\[(.+)\]\)?>(.+)$/);
+			if(m){
+				base = '';
+				repment = m[2].replace(/\$\d/, '');
+				m[1].split('').forEach(function(obj){
+					storeSuffix(logs, i, obj, repment);
+				});
+			}
+
 			sublist.forEach(function(el){
 				flags = (sublist.parents? sublist.parents.map(function(el){ return el + SUFFIXES_BASE_INDEX; }): []);
 
@@ -429,7 +443,7 @@ console.log(commonThemes);
 
 	/** @private */
 	var print = function(paradigmEndings, commonThemes, infinitives, i){
-		var parts, logs, th, themes, fromTo, matcher;
+		var parts, logs, th, themes, fromTo, matcher, repment;
 		paradigmEndings.forEach(function(el){
 			logs = [];
 			el.themes.forEach(function(idx, theme){
@@ -437,6 +451,9 @@ console.log(commonThemes);
 				th = 'themeT' + theme;
 				el.infinitives.forEach(function(inf){
 					themes = infinitives[inf];
+//case: sorbir-sorb(ís)
+if(themes[REGULAR][th] && themes[REGULAR][th].indexOf('(') >= 0)
+	console.log('ads');
 
 //FIXME
 					parts = extractCommonPartsFromStart(inf, themes[REGULAR][th] || themes[IRREGULAR][th]);
@@ -446,8 +463,10 @@ console.log(commonThemes);
 
 				fromTo.forEach(function(ft){
 					matcher = new RegExp(ft.from + '$');
-					storeSuffix(logs, i, ft.from, Word.unmarkDefaultStress(ft.to + commonThemes[idx][0]), idx + SUFFIXES_BASE_INDEX,
-						(el.matcher.match(matcher)? el.matcher: ft.from), el.infinitives.filter(function(obj){ return obj.match(matcher); }));
+					repment = ft.to + commonThemes[idx][0];
+					if(repment.length > 1)
+						repment = Word.unmarkDefaultStress(repment);
+					storeSuffix(logs, i, ft.from, repment, idx + SUFFIXES_BASE_INDEX, (el.matcher.match(matcher)? el.matcher: ft.from), el.infinitives.filter(function(obj){ return obj.match(matcher); }));
 				});
 			});
 
@@ -478,7 +497,13 @@ console.log(commonThemes);
 			}
 		}
 
-		logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + constraint: '') + (parents? ' # ' + parents.join(','): ''));
+		var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + constraint: '') + (parents? ' # ' + parents.join(','): ''),
+			matcher = new RegExp('^' + escapeRegExp(line).replace(/\/\d+/, '/\\d+') + '$'),
+			idx = ArrayHelper.findIndex(logs, function(el){ return el.match(matcher); });
+		if(idx >= 0)
+			logs[idx] = logs[idx].replace(/\/[\d,]+/, '$&,' + line.match(/\/(\d+)/)[1]);
+		else
+			logs.push(line);
 	};
 
 	var printSuffixes = function(logs, i, base){
@@ -543,7 +568,8 @@ console.log(commonThemes);
 			idx;
 		list.forEach(function(obj){
 			idx = obj.length - formLength - order;
-			variability.push(idx >= 0? obj.substr(idx, order): '.');
+			if(idx >= 0)
+				variability.push(obj.substr(idx, order));
 		});
 		return ArrayHelper.unique(variability).sort();
 	};
@@ -607,8 +633,8 @@ console.log(commonThemes);
 				if(t.themeT10 && t.themeT10 !== third){
 					//FIXME
 					//if(this.verb.irregularity.eser)
-					//	insert.call(this, 10, '(x)|([ei])>($1)');
-					insert.call(this, 10, '([ei])>($1)');
+					//	insert.call(this, 10, '(x)|([ei])>$1');
+					insert.call(this, 10, '([ei])>$1');
 				}
 			}
 			else if(t.themeT10){
@@ -1029,12 +1055,6 @@ console.log(commonThemes);
 
 
 	return {
-		START_OF_WORD: START_OF_WORD,
-		WHOLE_WORD: WHOLE_WORD,
-		PRONOMENAL_MARK: PRONOMENAL_MARK,
-		PRONOMENAL_MARK_IMPERATIVE: PRONOMENAL_MARK_IMPERATIVE,
-		FINAL_CONSONANT_VOICING: FINAL_CONSONANT_VOICING,
-
 		generate: generate
 	};
 
