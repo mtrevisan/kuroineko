@@ -10,7 +10,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabator', 'tools/d
 			infinitive = Word.markDefaultStress(infinitive);
 
 		//get pro-complementar pronouns
-		var proComplementarPronouns = infinitive.match(/(?:([gs]e)?(l[ae]|ne)?)$/).filter(function(el){ return el; });
+		var proComplementarPronouns = infinitive.match(/([gs]e)?(l[ae]|ne)?$/).filter(function(el){ return el; });
 		if(proComplementarPronouns.length){
 			//remove pro-complementar pronouns
 			infinitive = infinitive.substr(0, infinitive.length - proComplementarPronouns[0].length);

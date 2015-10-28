@@ -52,7 +52,24 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	 * @constant
 	 * @private
 	 */
-		SUFFIXES_BASE_INDEX = 13;
+		SUFFIXES_BASE_INDEX;
+
+	var themesSimplifications = [
+		[1, PRONOMENAL_MARK],
+		[2, PRONOMENAL_MARK_IMPERATIVE],
+		[3, INTERROGATIVE_MARK],
+		[4, FINAL_CONSONANT_VOICING],
+		[5, 'e', 'i'],
+		[6, 'a', 'e\/5'],
+		[7, 'o\/4', 'a\/6'],
+		[7, 'o', 'a\/6'],
+		[8, '', 'e', 'se'],
+		[9, '', 'e'],
+		[10, '', 'se'],
+		[11, '', 'de', 'ge']
+//		[12, '[lx]?>go', '[lx]?>ga', '[lx]?>gi'],
+//		[13, 'e', 'a', 'o\/4', '([^i])>$1i', '[ei]>/4', '\/4']
+	];
 
 
 
@@ -82,9 +99,14 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 		constraintToInfinitivesParadigm(paradigmEndings, infinitives);
 
+
 console.log(paradigmEndings);
 console.log(commonThemes);
-		i = printThemes(commonThemes);
+		i = printThemesSimplifications(themesSimplifications);
+		SUFFIXES_BASE_INDEX = i;
+
+		i = printThemes(commonThemes, i);
+
 		print(paradigmEndings, commonThemes, infinitives, i);
 	};
 
@@ -143,21 +165,6 @@ console.log(commonThemes);
 			});
 		});
 
-		var themesSimplifications = [
-			[1, PRONOMENAL_MARK],
-			[2, PRONOMENAL_MARK_IMPERATIVE],
-			[3, INTERROGATIVE_MARK],
-			[4, FINAL_CONSONANT_VOICING],
-			[5, 'e', 'i'],
-			[6, 'a', 'e\/5'],
-			[7, 'o', 'a\/6'],
-			[7, 'o\/4', 'a\/6'],
-			[8, '', 'e', 'se'],
-			[9, '', 'e'],
-			[10, '', 'se'],
-			[11, '', 'de', 'ge'],
-			[12, 'e', 'a', 'o\/4', '([^i])>$1i', '[ei]>/4', '\/4']
-		];
 		commonThemes.forEach(function(list){
 			expandThemes(list);
 
@@ -179,7 +186,7 @@ console.log(commonThemes);
 		}
 		else{
 			var i, base, indices;
-			matcher = new RegExp(matcher + '[' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + INTERROGATIVE_MARK + FINAL_CONSONANT_VOICING + ']*$');
+			matcher = new RegExp(escapeRegExp(matcher) + '[' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + INTERROGATIVE_MARK + FINAL_CONSONANT_VOICING + ']*$');
 			for(i = list.length - 1; i >= 0; i --)
 				if(list[i].match(matcher)){
 					base = escapeRegExp(list[i].replace(matcher, ''));
@@ -247,8 +254,8 @@ console.log(commonThemes);
 			listNoPrefixes, first;
 		infinitives = Object.keys(infinitives);
 		list.forEach(function(obj){
-if(obj.infinitives.length > 800)
-	console.log('ds');
+//if(obj.infinitives.length > 800)
+//	console.log('ds');
 			diff = ArrayHelper.difference(infinitives, obj.infinitives);
 
 			common = extractCommonPartFromList(obj.infinitives);
@@ -264,8 +271,6 @@ if(obj.infinitives.length > 800)
 
 			if(found && obj.infinitives.length > 1){
 				part = ArrayHelper.partition(obj.infinitives, function(el){ return (el.length - common.length >= 1? el[el.length - common.length - 1]: '^'); });
-if(part['^'])
-	console.log('das');
 				variability = listToRegExp(extractVariability(common.length + 1, 1, obj.infinitives));
 				partitioningResults = {true: [], false: []};
 				Object.keys(part).forEach(function(k){
@@ -302,29 +307,42 @@ if(part['^'])
 				}
 			}
 
-			/*if(found){
-				common = extractCommonPartFromList(diff);
-				variability = listToNotRegExp(extractVariability(common.length, 1, diff));
-				re = new RegExp(variability + common + '$');
-				found = !obj.infinitives.every(function(el){ return el.match(re); });
-			}/**/
+			if(found){
+				//FIXME
+				//search for a subdivision of the obj.infinitives array?
+				//..
+			}
 
 
 			if(found){
-				console.log('!! cannot split up the initial verbs array');
+				console.log('!! cannot split up the verbs array, manually extract each of them');
 
-				listNoPrefixes = uniqueNoPrefixes(obj.infinitives);
+//				listNoPrefixes = uniqueNoPrefixes(obj.infinitives);
+/*listNoPrefixes = obj.infinitives;
 				first = listNoPrefixes.shift();
-				obj.matcher = START_OF_WORD + first;
 
-				if(listNoPrefixes.length){
+				re = new RegExp(first + '$');
+				found = diff.some(function(el){ return el.match(re); });
+				if(!found){
+					obj.matcher = START_OF_WORD + first;
+//if(!listNoPrefixes.filter(function(obj){ return obj.match(re); }).length)
+//	console.log('ds');
+					obj.infinitives = listNoPrefixes.filter(function(obj){ return obj.match(re); });
+
 					listNoPrefixes.forEach(function(el){
 						re = new RegExp(el + '$');
-						list.push({matcher: el, infinitives: listNoPrefixes.filter(function(obj){ return obj.match(re); }), themes: obj.themes});
-					});
+						found = diff.some(function(el){ return el.match(re); });
 
-					obj.infinitives = [first];
+						if(!found)
+							list.push({matcher: START_OF_WORD + el, infinitives: listNoPrefixes.filter(function(obj){ return obj.match(re); }), themes: obj.themes});
+						else
+							console.log('!! error while searching others for ' + el);
+//							throw '!! error while searching others for ' + el;
+					});
 				}
+				else
+//					throw '!! error while searching first for ' + first;
+					console.log('!! error while searching first for ' + first);/**/
 			}
 			else
 				obj.matcher = variability + common;
@@ -367,9 +385,33 @@ if(part['^'])
 	};
 
 	/** @private */
-	var printThemes = function(list){
-		var i = SUFFIXES_BASE_INDEX,
-			j, len,
+	var printThemesSimplifications = function(list){
+		var logs, previousFlag, flag, base;
+		list.forEach(function(sublist){
+			logs = [];
+			flag = sublist.shift();
+
+			//skip same-flag simplification
+			if(flag == previousFlag)
+				return;
+
+			base = sublist.shift();
+			sublist.forEach(function(el){
+				storeSuffix(logs, flag, base.replace(/\/.+$/, ''), el);
+			});
+			sublist.unshift(base);
+			sublist.unshift(flag);
+
+			printSuffixes(logs, flag, base);
+
+			previousFlag = flag;
+		});
+		return flag + 1;
+	};
+
+	/** @private */
+	var printThemes = function(list, i){
+		var j, len,
 			flags, base, logs, m, rebase, constraint, repment;
 		list.forEach(function(sublist){
 			len = sublist.length;
@@ -404,7 +446,9 @@ if(part['^'])
 					rebase = m[1];
 					el = m[2];
 
-					m = rebase.match(/\[(\^)?(.+)\]/);
+					m = rebase.match(/\[(\^)?(.+)\](\?)?/);
+					if(m && m[3])
+						storeSuffix(logs, i, '', el, flags);
 					if(m && m[1] != '^'){
 						m = m[2].split('');
 
@@ -459,8 +503,8 @@ if(part['^'])
 				el.infinitives.forEach(function(inf){
 					themes = infinitives[inf];
 //case: sorbir-sorb(ís)
-if(themes[REGULAR][th] && themes[REGULAR][th].indexOf('(') >= 0)
-	console.log('ads');
+//if(themes[REGULAR][th] && themes[REGULAR][th].indexOf('(') >= 0)
+//	console.log('ads');
 
 //FIXME
 					parts = extractCommonPartsFromStart(inf, themes[REGULAR][th] || themes[IRREGULAR][th]);
@@ -591,12 +635,6 @@ if(themes[REGULAR][th] && themes[REGULAR][th].indexOf('(') >= 0)
 		return (list[list.length - 1].length == 1? '[' + list.join('') + ']': '(' + list.join('|') + ')');
 	};
 
-	/** @private * /
-	var listToNotRegExp = function(list){
-		list.sort();
-		return (list[list.length - 1].length == 1? '[^' + list.join('') + ']': '(?!' + list.join('|') + ')');
-	};*/
-
 	/**
 	 * Escape regexp reserved characters
 	 *
@@ -618,7 +656,7 @@ if(themes[REGULAR][th] && themes[REGULAR][th].indexOf('(') >= 0)
 				if(this.verb.irregularity.eser)
 					insert.call(this, 8, (!t.themeT8.match(/[cijɉñ]$/)? '(i)': '') + 'on');
 				else if(this.verb.irregularity.aver)
-					insert.call(this, 8, '[à]>[àèò]');
+					insert.call(this, 8, '[à]>[èò]');
 				else{
 					insert.call(this, 8, 'e');
 					insert.call(this, 8, 'o' + FINAL_CONSONANT_VOICING);
