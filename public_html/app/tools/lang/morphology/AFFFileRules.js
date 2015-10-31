@@ -14,7 +14,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	/** @constant */
 		PRONOMENAL_MARK_IMPERATIVE = '!',
 	/** @constant */
-		INTERROGATIVE_MARK = '?',
+		INTERROGATIVE_MARK = '_',
 	/** @constant */
 		FINAL_CONSONANT_VOICING = '@';
 
@@ -42,7 +42,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	 * @constant
 	 * @private
 	 */
-		SPLITTER_REGEX_ALTERNATIVE_2 = /^(.+)?\[(.+)\]$/,
+		SPLITTER_REGEX_ALTERNATIVE_2 = new RegExp('^(.+)?\\[(.+)\\](' + INTERROGATIVE_MARK + '|\/[\d,]+)?$'),
 	/**
 	 * @constant
 	 * @private
@@ -66,9 +66,14 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		[8, '', 'e', 'se'],
 		[9, '', 'e'],
 		[10, '', 'se'],
-		[11, '', 'de', 'ge']
+		[11, '', 'de', 'ge']//,
 //		[12, '[lx]?>go', '[lx]?>ga', '[lx]?>gi'],
-//		[13, 'e', 'a', 'o\/4', '([^i])>$1i', '[ei]>/4', '\/4']
+//		[12, 'e', 'a', 'o\/4', '([^i])>$1i', '[ei]>\/4', '\/4'],
+	];
+	var logsSimplifications = [
+		[12, ['0', '\/15,1'], ['0', 'emo\/17'], ['ar', 'en\/24,8'], ['r', 'nte\/20'],   ['ar', 'on\/25,9'], ['ar', 'à\/19'], ['ar', 'àsimo\/16'], ['r', '\/22,2'], ['ar', 'è\/18'], ['r', 'o\/38,7,4']],
+		[13, ['0', '\/15,1'], ['0', 'emo\/17'], ['ir', 'en\/24,8'], ['ir', 'ente\/28'], ['ir', 'on\/25,9'], ['ir', 'í\/19'], ['ir', 'ísimo\/16'], ['r', '\/41,11']],
+		[14, ['0', '\/15,1'], ['0', 'emo\/17'], ['ir', 'en\/24,8'], ['ir', 'ente\/28'], ['ir', 'on\/25,9'], ['ir', 'í\/19'], ['ir', 'ísimo\/16'], ['r', '\/41,11,22'], ['ir', 'e\/21,12']]
 	];
 
 
@@ -80,7 +85,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		var dialect = new Dialect(),
 			paradigmEndings = [],
 			infinitives = {},
-			infinitive, themes, commonThemes, i;
+			infinitive, themes, commonThemes, i, expandedList;
 		verbs.forEach(function(verb){
 			infinitive = Word.unmarkDefaultStress(verb.infinitive);
 			if(!infinitives[infinitive]){
@@ -97,17 +102,20 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 		paradigmEndings = compactEndings(paradigmEndings);
 
-		constraintToInfinitivesParadigm(paradigmEndings, infinitives);
+		expandedList = constraintToInfinitivesParadigm(paradigmEndings, infinitives);
 
 
 console.log(paradigmEndings);
 console.log(commonThemes);
-		i = printThemesSimplifications(themesSimplifications);
+		printThemesSimplifications(themesSimplifications);
+		i = printLogsSimplifications(logsSimplifications);
 		SUFFIXES_BASE_INDEX = i;
 
 		i = printThemes(commonThemes, i);
 
-		print(paradigmEndings, commonThemes, infinitives, i);
+		i = print(paradigmEndings, commonThemes, infinitives, i);
+
+		print(expandedList, commonThemes, infinitives, i, true);
 	};
 
 	/** @private */
@@ -169,14 +177,14 @@ console.log(commonThemes);
 			expandThemes(list);
 
 			themesSimplifications.forEach(function(array){
-				simplifyThemesAndApplyFlag(list, array.slice(0));
+				simplifyThemes(list, array.slice(0));
 			});
 		});
 		return commonThemes;
 	};
 
 	/** @private */
-	var simplifyThemesAndApplyFlag = function(list, replacement){
+	var simplifyThemes = function(list, replacement){
 		var flag = replacement.shift(),
 			matcher = replacement.shift();
 		if(matcher == PRONOMENAL_MARK || matcher == PRONOMENAL_MARK_IMPERATIVE || matcher == INTERROGATIVE_MARK || matcher == FINAL_CONSONANT_VOICING){
@@ -241,7 +249,6 @@ console.log(commonThemes);
 					i --;
 				}
 			list.splice(i, 1);
-			i --;
 
 			compacted.push(data);
 		}
@@ -250,12 +257,12 @@ console.log(commonThemes);
 
 	/** @private */
 	var constraintToInfinitivesParadigm = function(list, infinitives){
-		var diff, variability, common, re, found, part, partitioningResults, parents,
-			listNoPrefixes, first;
+		var expandedList = [],
+			i, obj, diff, variability, common, re, found, part, partitioningResults, parents,
+			listNoPrefixes;
 		infinitives = Object.keys(infinitives);
-		list.forEach(function(obj){
-//if(obj.infinitives.length > 800)
-//	console.log('ds');
+		for(i = list.length - 1; i >= 0; i --){
+			obj = list[i];
 			diff = ArrayHelper.difference(infinitives, obj.infinitives);
 
 			common = extractCommonPartFromList(obj.infinitives);
@@ -291,7 +298,7 @@ console.log(commonThemes);
 
 
 						obj = {infinitives: parents[true], themes: obj.themes};
-						list.push(obj);
+						list.splice(i ++, 0, obj);
 						if(obj.infinitives.indexOf(common) < 0){
 							diff = ArrayHelper.difference(infinitives, obj.infinitives);
 							variability = listToRegExp(partitioningResults[true]);
@@ -307,46 +314,22 @@ console.log(commonThemes);
 				}
 			}
 
-			if(found){
-				//FIXME
-				//search for a subdivision of the obj.infinitives array?
-				//..
-			}
-
 
 			if(found){
 				console.log('!! cannot split up the verbs array, manually extract each of them');
 
-//				listNoPrefixes = uniqueNoPrefixes(obj.infinitives);
-/*listNoPrefixes = obj.infinitives;
-				first = listNoPrefixes.shift();
+				listNoPrefixes = uniqueNoPrefixes(obj.infinitives);
+				listNoPrefixes.forEach(function(el){
+					re = new RegExp(el + '$');
+					expandedList.push({matcher: START_OF_WORD + el, infinitives: listNoPrefixes.filter(function(obj){ return obj.match(re); }), themes: obj.themes});
+				});
 
-				re = new RegExp(first + '$');
-				found = diff.some(function(el){ return el.match(re); });
-				if(!found){
-					obj.matcher = START_OF_WORD + first;
-//if(!listNoPrefixes.filter(function(obj){ return obj.match(re); }).length)
-//	console.log('ds');
-					obj.infinitives = listNoPrefixes.filter(function(obj){ return obj.match(re); });
-
-					listNoPrefixes.forEach(function(el){
-						re = new RegExp(el + '$');
-						found = diff.some(function(el){ return el.match(re); });
-
-						if(!found)
-							list.push({matcher: START_OF_WORD + el, infinitives: listNoPrefixes.filter(function(obj){ return obj.match(re); }), themes: obj.themes});
-						else
-							console.log('!! error while searching others for ' + el);
-//							throw '!! error while searching others for ' + el;
-					});
-				}
-				else
-//					throw '!! error while searching first for ' + first;
-					console.log('!! error while searching first for ' + first);/**/
+				list.splice(i, 1);
 			}
 			else
 				obj.matcher = variability + common;
-		});
+		}
+		return expandedList;
 	};
 
 	/** @private */
@@ -396,8 +379,92 @@ console.log(commonThemes);
 				return;
 
 			base = sublist.shift();
+			switch(base){
+				case INTERROGATIVE_MARK:
+storeSuffix(logs, flag, '.', 'nte');
+storeSuffix(logs, flag, '.', 'nti');
+storeSuffix(logs, flag, '.', 'ne');
+storeSuffix(logs, flag, '.', 'ni');
+storeSuffix(logs, flag, '0', 'nte');
+storeSuffix(logs, flag, '0', 'nti');
+storeSuffix(logs, flag, '0', 'ne');
+storeSuffix(logs, flag, '0', 'ni');
+storeSuffix(logs, flag, '0', 'e');
+storeSuffix(logs, flag, '0', 'i');
+storeSuffix(logs, flag, '0', 'mi');
+
+storeSuffix(logs, flag, '0', 'stu');
+storeSuffix(logs, flag, '0', 'tu');
+storeSuffix(logs, flag, '0', 'to');
+
+storeSuffix(logs, flag, '0', 'u');
+storeSuffix(logs, flag, '0', 'o');
+
+storeSuffix(logs, flag, '0', 'lo');
+storeSuffix(logs, flag, '0', 'la');
+storeSuffix(logs, flag, '0', 'li');
+storeSuffix(logs, flag, '0', 'le');
+storeSuffix(logs, flag, '.', 'elo');
+storeSuffix(logs, flag, '.', 'ela');
+storeSuffix(logs, flag, '.', 'eli');
+storeSuffix(logs, flag, '.', 'ele');
+
+					printSuffixes(logs, flag, 'interrogative');
+					break;
+
+				case FINAL_CONSONANT_VOICING:
+					storeSuffix(logs, flag, 'ñ.', 'n', null, 'ñ[oei]');
+					storeSuffix(logs, flag, 'ñ', 'n');
+					storeSuffix(logs, flag, 'ñ.', 'nc', null, 'ñ[oei]');
+					storeSuffix(logs, flag, 'ñ', 'nc');
+					storeSuffix(logs, flag, 'ñ.', 'in', null, 'ñ[oei]');
+					storeSuffix(logs, flag, 'ñ', 'in');
+					storeSuffix(logs, flag, 'b.', 'p', null, 'b[oei]');
+					storeSuffix(logs, flag, 'b', 'p');
+					storeSuffix(logs, flag, 'd.', 't', null, 'd[oei]');
+					storeSuffix(logs, flag, 'd', 't');
+					storeSuffix(logs, flag, 'g.', 'k', null, 'g[oei]');
+					storeSuffix(logs, flag, 'g', 'k');
+					storeSuffix(logs, flag, 'v.', 'f', null, 'v[oei]');
+					storeSuffix(logs, flag, 'v', 'f');
+					storeSuffix(logs, flag, 'đ.', 'ŧ', null, 'đ[oei]');
+					storeSuffix(logs, flag, 'đ', 'ŧ');
+					storeSuffix(logs, flag, 'x.', 's', null, 'x[oei]');
+					storeSuffix(logs, flag, 'x', 's');
+					storeSuffix(logs, flag, 'ɉ.', 'c', null, 'ɉ[oei]');
+					storeSuffix(logs, flag, 'ɉ', 'c');
+					storeSuffix(logs, flag, 'm.', 'n', null, 'm[oei]');
+					storeSuffix(logs, flag, 'm', 'n');
+					printSuffixes(logs, flag, 'final consonant voicing');
+					break;
+
+				default:
+					sublist.forEach(function(el){
+						storeSuffix(logs, flag, base.replace(/\/.+$/, ''), el);
+					});
+					printSuffixes(logs, flag, base);
+			}
+			sublist.unshift(base);
+			sublist.unshift(flag);
+
+			previousFlag = flag;
+		});
+	};
+
+	/** @private */
+	var printLogsSimplifications = function(list){
+		var logs, previousFlag, flag, base;
+		list.forEach(function(sublist){
+			logs = [];
+			flag = sublist.shift();
+
+			//skip same-flag simplification
+			if(flag == previousFlag)
+				return;
+
+			base = sublist.shift();
 			sublist.forEach(function(el){
-				storeSuffix(logs, flag, base.replace(/\/.+$/, ''), el);
+				storeSuffix(logs, flag, el[0], el[1]);
 			});
 			sublist.unshift(base);
 			sublist.unshift(flag);
@@ -493,10 +560,12 @@ console.log(commonThemes);
 	};
 
 	/** @private */
-	var print = function(paradigmEndings, commonThemes, infinitives, i){
-		var parts, logs, th, themes, fromTo, matcher, repment;
-		paradigmEndings.forEach(function(el){
-			logs = [];
+	var print = function(list, commonThemes, infinitives, i, isExpandedList){
+		var logs = [],
+			parts, th, themes, fromTo, matcher, repment;
+		list.forEach(function(el){
+			if(!isExpandedList)
+				logs = [];
 			el.themes.forEach(function(idx, theme){
 				fromTo = [];
 				th = 'themeT' + theme;
@@ -521,10 +590,17 @@ console.log(commonThemes);
 				});
 			});
 
+			if(!isExpandedList && (logs.length > 1 || logs.length == 1 && logs[0].match(/^SFX \d+ Y 0 # .+\/.+$/))){
+				printSuffixes(logs, i);
+
+				i ++;
+			}
+		});
+
+		if(isExpandedList)
 			printSuffixes(logs, i);
 
-			i ++;
-		});
+		return i;
 	};
 
 
@@ -547,20 +623,49 @@ console.log(commonThemes);
 				replacement = replacement.substr(1);
 			}
 		}
+		replacement += (constraint? ' ' + constraint: (replaced != 0? ' ' + replaced: ''));
 
-		var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + constraint: '') + (parents? ' # ' + parents.join(','): ''),
-			matcher = new RegExp('^' + escapeRegExp(line).replace(/\/\d+/, '/\\d+') + '$'),
-			idx = ArrayHelper.findIndex(logs, function(el){ return el.match(matcher); });
-		if(idx >= 0)
-			logs[idx] = logs[idx].replace(/\/[\d,]+/, '$&,' + line.match(/\/(\d+)/)[1]);
-		else
-			logs.push(line);
+		var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (parents? ' # ' + parents.join(','): '');
+		if(logs.indexOf(line) < 0){
+			var matcher = new RegExp('^' + escapeRegExp(line).replace(/\/[\d,]+/, '/[\\d,]+') + '$'),
+				idx = ArrayHelper.findIndex(logs, function(el){ return el.match(matcher); });
+			if(idx >= 0)
+				logs[idx] = logs[idx].replace(/\/[\d,]+/, '$&,' + line.match(/\/(\d+)/)[1]);
+			else
+				logs.push(line);
+		}
 	};
 
 	var printSuffixes = function(logs, i, base){
-		console.log('SFX ' + i + ' Y ' + logs.length + (base != undefined? ' # ' + base: ''));
+		simplifyLogs(logs, logsSimplifications);
+
+		console.log('SFX ' + i + ' Y ' + logs.length + (base != undefined? ' # ' + (Array.isArray(base)? base[0] + '>' + base[1]: base/*.replace(/\/[\d,]+/, '')*/): ''));
 		logs.sort().forEach(function(log){
 			console.log(log);
+		});
+	};
+
+	/** @private */
+	var simplifyLogs = function(list, replacements){
+		var flag, indices, line;
+		replacements.forEach(function(replacement){
+			flag = replacement.shift();
+			indices = replacement.map(function(last){
+				return ArrayHelper.findIndex(list, function(el){
+					return el.match(new RegExp('^SFX \\d+ ' + last[0] + ' ' + last[1] + ' '));
+				});
+			});
+			replacement.unshift(flag);
+			if(indices.every(function(el){ return (el >= 0); })){
+				//here, all replacements are found, substitute them
+
+				line = list[0];
+
+				//remove replaced items
+				removeIndices(list, indices, 0);
+
+				list.push(line.indexOf('/') >= 0? line.replace(/(?:\/(.+))?$/, '/' + flag + ',$1'): line + '/' + flag);
+			}
 		});
 	};
 
@@ -597,7 +702,7 @@ console.log(commonThemes);
 			var m = form.match(SPLITTER_REGEX_ALTERNATIVE_2);
 			if(m)
 				m[2].split('').forEach(function(el){
-					addAndSplit((m[1]? m[1]: '') + el);
+					addAndSplit((m[1]? m[1]: '') + el + (m[3]? m[3]: ''));
 				});
 			else if(form.match(SPLITTER_REGEX_OPTIONAL) && !form.match(/[>+$]/))
 				splitter(form);
@@ -654,62 +759,62 @@ console.log(commonThemes);
 		if(t.themeT12 || t.themeT5 || t.themeT8 || t.themeT10){
 			if(t.themeT8){
 				if(this.verb.irregularity.eser)
-					insert.call(this, 8, (!t.themeT8.match(/[cijɉñ]$/)? '(i)': '') + 'on');
+					insert.call(this, 8, (!t.themeT8.match(/[cijɉñ]$/)? '(i)': '') + 'on' + INTERROGATIVE_MARK);
 				else if(this.verb.irregularity.aver)
-					insert.call(this, 8, '[à]>[èò]');
+					insert.call(this, 8, '[à]>[èò]' + INTERROGATIVE_MARK);
 				else{
-					insert.call(this, 8, 'e');
-					insert.call(this, 8, 'o' + FINAL_CONSONANT_VOICING);
+					insert.call(this, 8, 'e' + INTERROGATIVE_MARK);
+					insert.call(this, 8, 'o' + FINAL_CONSONANT_VOICING + INTERROGATIVE_MARK);
 
 					if(this.verb.irregularity.verb && type == IRREGULAR){
 						if(this.verb.irregularity.saver)
-							insert.call(this, 8, '[à]>ò');
+							insert.call(this, 8, '[à]>ò' + INTERROGATIVE_MARK);
 						else
-							insert.call(this, 8, (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'o');
+							insert.call(this, 8, (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'o' + INTERROGATIVE_MARK);
 					}
 				}
 				if(!this.verb.irregularity.verb.match(/andar|darStarFar|s?aver/) || !t.themeT8.match(/à$/))
-					insert.call(this, 8, '([^i])>$1i');
+					insert.call(this, 8, '([^i])>$1i' + INTERROGATIVE_MARK);
 				else
-					insert.call(this, 8, '([^i])>$1');
+					insert.call(this, 8, '([^i])>$1' + INTERROGATIVE_MARK);
 				var third = t.themeT8 + (!this.verb.irregularity.verb.match(/darStarFar|s?aver/)? (this.verb.irregularity.eser? 'é': 'e'): '');
-				insert.call(this, 8, third.substr(t.themeT8.length));
+				insert.call(this, 8, third.substr(t.themeT8.length) + INTERROGATIVE_MARK);
 				if(third.match(/[ei]$/)){
-					insert.call(this, 8, '[ei]>' + FINAL_CONSONANT_VOICING);
+					insert.call(this, 8, '[ei]>' + FINAL_CONSONANT_VOICING + INTERROGATIVE_MARK);
 				}
 				if(t.themeT10 && t.themeT10 !== third){
 					//FIXME
 					//if(this.verb.irregularity.eser)
-					//	insert.call(this, 10, '(x)|([ei])>$1');
-					insert.call(this, 10, '([ei])>$1');
+					//	insert.call(this, 10, '(x)|([ei])>$1' + INTERROGATIVE_MARK);
+					insert.call(this, 10, '([ei])>$1' + INTERROGATIVE_MARK);
 				}
 			}
 			else if(t.themeT10){
-				insert.call(this, 10, '');
+				insert.call(this, 10, INTERROGATIVE_MARK);
 				if(t.themeT10.match(/[aeiou]$/) && t.themeT10 != PhonologyHelper.finalConsonantVoicing(t.themeT10.replace(/[aeiou]$/, ''), 'northern'))
-					insert.call(this, 10, FINAL_CONSONANT_VOICING);
+					insert.call(this, 10, FINAL_CONSONANT_VOICING + INTERROGATIVE_MARK);
 			}
 			if(t.themeT5){
-				insert.call(this, 5, '');
+				insert.call(this, 5, INTERROGATIVE_MARK);
 				if(conj == 2)
-					insert.call(this, 12, 'é');
+					insert.call(this, 12, 'é' + INTERROGATIVE_MARK);
 				else
-					insert.call(this, 5, 'i?é>í');
+					insert.call(this, 5, 'i?é>í' + INTERROGATIVE_MARK);
 			}
 			if(t.themeT12 || t.themeT5){
 				if(t.themeT12){
-					insert.call(this, 12, 'on');
-					insert.call(this, 12, 'en');
+					insert.call(this, 12, 'on' + INTERROGATIVE_MARK);
+					insert.call(this, 12, 'en' + INTERROGATIVE_MARK);
 				}
 				if(t.themeT5){
-					insert.call(this, 5, '[è]>emo');
+					insert.call(this, 5, '[è]>emo' + INTERROGATIVE_MARK);
 					if(conj == 2)
-						insert.call(this, 5, 'i?é>imo');
+						insert.call(this, 5, 'i?é>imo' + INTERROGATIVE_MARK);
 				}
 			}
 
 			if(t.themeT8 && this.verb.irregularity.verb.match(/dixer|traer|toler/))
-				insert.call(this, 8, '[lx]?>go');
+				insert.call(this, 8, '[lx]?>go' + INTERROGATIVE_MARK);
 		}
 	};
 
@@ -718,24 +823,24 @@ console.log(commonThemes);
 		if(t.themeT2 || t.themeT11){
 			if(t.themeT2){
 				var tmp = (this.verb.irregularity.eser? 'r': '(v)');
-				insert.call(this, 2, tmp + '[oaie]');
+				insert.call(this, 2, tmp + '[oaie]' + INTERROGATIVE_MARK);
 				//FIXME
 				//if(this.verb.irregularity.eser)
-				//	insert.call(this, 2, '[x/j]|' + tmp + '[oai]');
+				//	insert.call(this, 2, '[x/j]|' + tmp + '[oai]' + INTERROGATIVE_MARK);
 
-				insert.call(this, 2, tmp + 'imo');
+				insert.call(this, 2, tmp + 'imo' + INTERROGATIVE_MARK);
 				//FIXME
 				//if(this.verb.irregularity.eser)
-				//	insert.call(this, 2, '[x/j]|' + tmp + 'imo');
+				//	insert.call(this, 2, '[x/j]|' + tmp + 'imo' + INTERROGATIVE_MARK);
 			}
 			if(t.themeT11){
-				insert.call(this, 11, '(iv)ié');
-				insert.call(this, 11, (!t.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'on(se)');
-				insert.call(this, 11, 'iv(i)on(se)');
-				insert.call(this, 11, '(iv)en(se)');
+				insert.call(this, 11, '(iv)ié' + INTERROGATIVE_MARK);
+				insert.call(this, 11, (!t.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'on(se)' + INTERROGATIVE_MARK);
+				insert.call(this, 11, 'iv(i)on(se)' + INTERROGATIVE_MARK);
+				insert.call(this, 11, '(iv)en(se)' + INTERROGATIVE_MARK);
 				//FIXME
 				//if(this.verb.irregularity.eser)
-				//	insert.call(this, 11, '[x/j]|(iv)én(se)');
+				//	insert.call(this, 11, '[x/j]|(iv)én(se)' + INTERROGATIVE_MARK);
 			}
 		}
 	};
@@ -743,13 +848,13 @@ console.log(commonThemes);
 	/** @private */
 	var generateIndicativeFuture = function(type, t){
 		if(t.themeT4){
-			insert.call(this, 4, 'r[òàèé]');
-			insert.call(this, 4, 'remo');
-			insert.call(this, 4, 'ron');
-			insert.call(this, 4, 'ren');
+			insert.call(this, 4, 'ron' + INTERROGATIVE_MARK);
+			insert.call(this, 4, 'r[òàèé]' + INTERROGATIVE_MARK);
+			insert.call(this, 4, 'remo' + INTERROGATIVE_MARK);
+			insert.call(this, 4, 'ren' + INTERROGATIVE_MARK);
 			if(this.verb.conjugation == 2){
-				insert.call(this, 4, 'rí');
-				insert.call(this, 4, 'rimo');
+				insert.call(this, 4, 'rí' + INTERROGATIVE_MARK);
+				insert.call(this, 4, 'rimo' + INTERROGATIVE_MARK);
 			}
 		}
 	};
@@ -831,13 +936,14 @@ console.log(commonThemes);
 	var generateConditionalSimple = function(type, t){
 		if(t.themeT4){
 			insert.call(this, 4, 'rí[ae]');
-			insert.call(this, 4, 'resi');
-			insert.call(this, 4, 'r(is)ié');
-			insert.call(this, 4, 'résimo');
-			insert.call(this, 4, 'r(is)(i)on(se)');
-			insert.call(this, 4, 'r(is)en(se)');
+			insert.call(this, 4, 'resi' + INTERROGATIVE_MARK);
+			insert.call(this, 4, 'r(is)ié' + INTERROGATIVE_MARK);
+			insert.call(this, 4, 'résimo' + INTERROGATIVE_MARK);
+			insert.call(this, 4, 'r(is)(i)on(se)' + INTERROGATIVE_MARK);
+			insert.call(this, 4, 'r(is)en(se)' + INTERROGATIVE_MARK);
 			insert.call(this, 4, 'rísel[oaie]');
-			insert.call(this, 4, 'rave');
+			//i únegi pronòmi interogativi enklítegi ke se dopara i xe kueli de 3a pars
+			insert.call(this, 4, 'rave' + INTERROGATIVE_MARK);
 		}
 	};
 
@@ -1063,7 +1169,7 @@ console.log(commonThemes);
 			if(!t[theme])
 				t[theme] = [suffix];
 			else{
-				var matcher = '[' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + FINAL_CONSONANT_VOICING + ']+$';
+				var matcher = '[' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + INTERROGATIVE_MARK + FINAL_CONSONANT_VOICING + ']+$';
 				if(t[theme].indexOf(suffix) < 0 && (suffix.match(new RegExp(matcher)) || ArrayHelper.findIndex(t[theme], function(el){ return el.match(new RegExp(escapeRegExp(suffix) + matcher)); }) < 0))
 					t[theme].push(suffix);
 			}
