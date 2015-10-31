@@ -13,10 +13,17 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		PRONOMENAL_MARK = '#',
 	/** @constant */
 		PRONOMENAL_MARK_IMPERATIVE = '!',
-	/** @constant */
+	/** @constant * /
 		INTERROGATIVE_MARK = '_',
 	/** @constant */
 		FINAL_CONSONANT_VOICING = '@';
+
+	var INTERROGATIVE_MARK_1 = 'n(t)e',
+		INTERROGATIVE_MARK_1_1 = 'mi',
+		INTERROGATIVE_MARK_1_2 = '[ie]',
+		INTERROGATIVE_MARK_2S = 't[uo]',
+		INTERROGATIVE_MARK_2P = '[uo]',
+		INTERROGATIVE_MARK_3 = 'l[oaie]';
 
 	/**
 	 * @constant
@@ -42,7 +49,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	 * @constant
 	 * @private
 	 */
-		SPLITTER_REGEX_ALTERNATIVE_2 = new RegExp('^(.+)?\\[(.+)\\](' + INTERROGATIVE_MARK + '|\/[\d,]+)?$'),
+		SPLITTER_REGEX_ALTERNATIVE_2 = new RegExp('^(.+)?\\[(.+)\\](\/[\d,]+)?$'),
 	/**
 	 * @constant
 	 * @private
@@ -57,7 +64,12 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	var themesSimplifications = [
 		[1, PRONOMENAL_MARK],
 		[2, PRONOMENAL_MARK_IMPERATIVE],
-		[3, INTERROGATIVE_MARK],
+/*[3, INTERROGATIVE_MARK_1],
+[3, INTERROGATIVE_MARK_1_1],
+[3, INTERROGATIVE_MARK_1_2],
+[3, INTERROGATIVE_MARK_2S],
+[3, INTERROGATIVE_MARK_2P],
+[3, INTERROGATIVE_MARK_3],*/
 		[4, FINAL_CONSONANT_VOICING],
 		[5, 'e', 'i'],
 		[6, 'a', 'e\/5'],
@@ -187,14 +199,14 @@ console.log(commonThemes);
 	var simplifyThemes = function(list, replacement){
 		var flag = replacement.shift(),
 			matcher = replacement.shift();
-		if(matcher == PRONOMENAL_MARK || matcher == PRONOMENAL_MARK_IMPERATIVE || matcher == INTERROGATIVE_MARK || matcher == FINAL_CONSONANT_VOICING){
+		if(matcher == PRONOMENAL_MARK || matcher == PRONOMENAL_MARK_IMPERATIVE || matcher == FINAL_CONSONANT_VOICING){
 			matcher = new RegExp(escapeRegExp(matcher) + '$');
 			for(i = list.length - 1; i >= 0; i --)
 				list[i] = list[i].replace(matcher, '/' + flag);
 		}
 		else{
 			var i, base, indices;
-			matcher = new RegExp(escapeRegExp(matcher) + '[' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + INTERROGATIVE_MARK + FINAL_CONSONANT_VOICING + ']*$');
+			matcher = new RegExp(escapeRegExp(matcher) + '[' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + FINAL_CONSONANT_VOICING + ']*$');
 			for(i = list.length - 1; i >= 0; i --)
 				if(list[i].match(matcher)){
 					base = escapeRegExp(list[i].replace(matcher, ''));
@@ -375,42 +387,33 @@ console.log(commonThemes);
 			flag = sublist.shift();
 
 			//skip same-flag simplification
-			if(flag == previousFlag)
+			if(flag == previousFlag){
+				sublist.unshift(flag);
 				return;
+			}
 
 			base = sublist.shift();
 			switch(base){
-				case INTERROGATIVE_MARK:
-storeSuffix(logs, flag, '.', 'nte');
-storeSuffix(logs, flag, '.', 'nti');
-storeSuffix(logs, flag, '.', 'ne');
-storeSuffix(logs, flag, '.', 'ni');
-storeSuffix(logs, flag, '0', 'nte');
-storeSuffix(logs, flag, '0', 'nti');
-storeSuffix(logs, flag, '0', 'ne');
-storeSuffix(logs, flag, '0', 'ni');
-storeSuffix(logs, flag, '0', 'e');
-storeSuffix(logs, flag, '0', 'i');
-storeSuffix(logs, flag, '0', 'mi');
+				/*case INTERROGATIVE_MARK:
+					storeSuffix(logs, flag, '.', 'nte/5');
+					storeSuffix(logs, flag, '.', 'ne/5');
+					storeSuffix(logs, flag, '0', 'nte/5');
+					storeSuffix(logs, flag, '0', 'ne/5');
+					storeSuffix(logs, flag, '0', 'e/5');
+					storeSuffix(logs, flag, '0', 'mi');
 
-storeSuffix(logs, flag, '0', 'stu');
-storeSuffix(logs, flag, '0', 'tu');
-storeSuffix(logs, flag, '0', 'to');
+					storeSuffix(logs, flag, '0', 'stu');
+					storeSuffix(logs, flag, '0', 'tu');
+					storeSuffix(logs, flag, '0', 'to');
 
-storeSuffix(logs, flag, '0', 'u');
-storeSuffix(logs, flag, '0', 'o');
+					storeSuffix(logs, flag, '0', 'u');
+					storeSuffix(logs, flag, '0', 'o');
 
-storeSuffix(logs, flag, '0', 'lo');
-storeSuffix(logs, flag, '0', 'la');
-storeSuffix(logs, flag, '0', 'li');
-storeSuffix(logs, flag, '0', 'le');
-storeSuffix(logs, flag, '.', 'elo');
-storeSuffix(logs, flag, '.', 'ela');
-storeSuffix(logs, flag, '.', 'eli');
-storeSuffix(logs, flag, '.', 'ele');
+					storeSuffix(logs, flag, '0', 'lo/7');
+					storeSuffix(logs, flag, '.', 'elo/7');
 
 					printSuffixes(logs, flag, 'interrogative');
-					break;
+					break;*/
 
 				case FINAL_CONSONANT_VOICING:
 					storeSuffix(logs, flag, 'ñ.', 'n', null, 'ñ[oei]');
@@ -435,6 +438,7 @@ storeSuffix(logs, flag, '.', 'ele');
 					storeSuffix(logs, flag, 'ɉ', 'c');
 					storeSuffix(logs, flag, 'm.', 'n', null, 'm[oei]');
 					storeSuffix(logs, flag, 'm', 'n');
+
 					printSuffixes(logs, flag, 'final consonant voicing');
 					break;
 
@@ -707,7 +711,7 @@ storeSuffix(logs, flag, '.', 'ele');
 			else if(form.match(SPLITTER_REGEX_OPTIONAL) && !form.match(/[>+$]/))
 				splitter(form);
 			else{
-				var matcher = '[' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + INTERROGATIVE_MARK + FINAL_CONSONANT_VOICING + ']+$';
+				var matcher = '[' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + FINAL_CONSONANT_VOICING + ']+$';
 				if(themes.indexOf(form) < 0 && (form.match(new RegExp(matcher)) || ArrayHelper.findIndex(themes, function(el){ return el.match(new RegExp(escapeRegExp(form) + matcher)); }) < 0))
 					themes.push(form);
 			}
@@ -758,63 +762,110 @@ storeSuffix(logs, flag, '.', 'ele');
 
 		if(t.themeT12 || t.themeT5 || t.themeT8 || t.themeT10){
 			if(t.themeT8){
-				if(this.verb.irregularity.eser)
-					insert.call(this, 8, (!t.themeT8.match(/[cijɉñ]$/)? '(i)': '') + 'on' + INTERROGATIVE_MARK);
-				else if(this.verb.irregularity.aver)
-					insert.call(this, 8, '[à]>[èò]' + INTERROGATIVE_MARK);
+				if(this.verb.irregularity.eser){
+					insert.call(this, 8, (!t.themeT8.match(/[cijɉñ]$/)? '(i)': '') + 'on');
+//					insert.call(this, 8, (!t.themeT8.match(/[cijɉñ]$/)? '(i)': '') + 'on' + INTERROGATIVE_MARK_1);
+//					insert.call(this, 8, (!t.themeT8.match(/[cijɉñ]$/)? '(i)': '') + 'on' + INTERROGATIVE_MARK_1_2);
+				}
+				else if(this.verb.irregularity.aver){
+					insert.call(this, 8, '[à]>[èò]');
+//					insert.call(this, 8, '[à]>[èò]' + INTERROGATIVE_MARK_1_1);
+//					insert.call(this, 8, '[à]>[èò]' + INTERROGATIVE_MARK_1_2);
+//					insert.call(this, 8, '[à]>[èò]' + INTERROGATIVE_MARK_1);
+				}
 				else{
-					insert.call(this, 8, 'e' + INTERROGATIVE_MARK);
-					insert.call(this, 8, 'o' + FINAL_CONSONANT_VOICING + INTERROGATIVE_MARK);
+					insert.call(this, 8, 'e');
+//					insert.call(this, 8, 'e' + INTERROGATIVE_MARK_1_1);
+//					insert.call(this, 8, 'é' + INTERROGATIVE_MARK_1_2);
+//					insert.call(this, 8, 'e' + INTERROGATIVE_MARK_1);
+					insert.call(this, 8, 'o' + FINAL_CONSONANT_VOICING);
+//					insert.call(this, 8, 'o' + INTERROGATIVE_MARK_1_1);
+//					insert.call(this, 8, 'ó' + INTERROGATIVE_MARK_1_2);
+//					insert.call(this, 8, 'o' + INTERROGATIVE_MARK_1);
 
 					if(this.verb.irregularity.verb && type == IRREGULAR){
-						if(this.verb.irregularity.saver)
-							insert.call(this, 8, '[à]>ò' + INTERROGATIVE_MARK);
-						else
-							insert.call(this, 8, (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'o' + INTERROGATIVE_MARK);
+						if(this.verb.irregularity.saver){
+							insert.call(this, 8, '[à]>ò');
+//							insert.call(this, 8, '[à]>ò' + INTERROGATIVE_MARK_1_1);
+//							insert.call(this, 8, '[à]>ò' + INTERROGATIVE_MARK_1_2);
+//							insert.call(this, 8, '[à]>ò' + INTERROGATIVE_MARK_1);
+						}
+						else{
+							insert.call(this, 8, (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'o');
+//							insert.call(this, 8, (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'o' + INTERROGATIVE_MARK_1_1);
+//							insert.call(this, 8, (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'ó' + INTERROGATIVE_MARK_1_2);
+//							insert.call(this, 8, (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'o' + INTERROGATIVE_MARK_1);
+						}
 					}
 				}
-				if(!this.verb.irregularity.verb.match(/andar|darStarFar|s?aver/) || !t.themeT8.match(/à$/))
-					insert.call(this, 8, '([^i])>$1i' + INTERROGATIVE_MARK);
-				else
-					insert.call(this, 8, '([^i])>$1' + INTERROGATIVE_MARK);
+				if(!this.verb.irregularity.verb.match(/andar|darStarFar|s?aver/) || !t.themeT8.match(/à$/)){
+					insert.call(this, 8, '([^i])>$1i');
+//					insert.call(this, 8, '([^i])>$1i' + INTERROGATIVE_MARK_2S);
+				}
+				else{
+					insert.call(this, 8, '([^i])>$1');
+//					insert.call(this, 8, '([^i])>$1' + INTERROGATIVE_MARK_2S);
+				}
 				var third = t.themeT8 + (!this.verb.irregularity.verb.match(/darStarFar|s?aver/)? (this.verb.irregularity.eser? 'é': 'e'): '');
-				insert.call(this, 8, third.substr(t.themeT8.length) + INTERROGATIVE_MARK);
+				insert.call(this, 8, third.substr(t.themeT8.length));
+//				insert.call(this, 8, third.substr(t.themeT8.length) + INTERROGATIVE_MARK_3);
 				if(third.match(/[ei]$/)){
-					insert.call(this, 8, '[ei]>' + FINAL_CONSONANT_VOICING + INTERROGATIVE_MARK);
+					insert.call(this, 8, '[ei]>' + FINAL_CONSONANT_VOICING);
+//					insert.call(this, 8, '[ei]>' + INTERROGATIVE_MARK_3);
 				}
 				if(t.themeT10 && t.themeT10 !== third){
 					//FIXME
 					//if(this.verb.irregularity.eser)
 					//	insert.call(this, 10, '(x)|([ei])>$1' + INTERROGATIVE_MARK);
-					insert.call(this, 10, '([ei])>$1' + INTERROGATIVE_MARK);
+					insert.call(this, 10, '([ei])>$1');
+//					insert.call(this, 10, '([ei])>$1' + INTERROGATIVE_MARK_3);
 				}
 			}
 			else if(t.themeT10){
-				insert.call(this, 10, INTERROGATIVE_MARK);
-				if(t.themeT10.match(/[aeiou]$/) && t.themeT10 != PhonologyHelper.finalConsonantVoicing(t.themeT10.replace(/[aeiou]$/, ''), 'northern'))
-					insert.call(this, 10, FINAL_CONSONANT_VOICING + INTERROGATIVE_MARK);
+				insert.call(this, 10, '');
+//				insert.call(this, 10, INTERROGATIVE_MARK_3);
+				if(t.themeT10.match(/[aeiou]$/) && t.themeT10 != PhonologyHelper.finalConsonantVoicing(t.themeT10.replace(/[aeiou]$/, ''), 'northern')){
+					insert.call(this, 10, FINAL_CONSONANT_VOICING);
+//					insert.call(this, 10, INTERROGATIVE_MARK_3);
+				}
 			}
 			if(t.themeT5){
-				insert.call(this, 5, INTERROGATIVE_MARK);
-				if(conj == 2)
-					insert.call(this, 12, 'é' + INTERROGATIVE_MARK);
-				else
-					insert.call(this, 5, 'i?é>í' + INTERROGATIVE_MARK);
+				insert.call(this, 5, '');
+//				insert.call(this, 5, INTERROGATIVE_MARK_2P);
+				if(conj == 2){
+					insert.call(this, 12, 'é');
+//					insert.call(this, 12, 'é' + INTERROGATIVE_MARK_2P);
+				}
+				else{
+					insert.call(this, 5, 'i?é>í');
+//					insert.call(this, 5, 'i?é>í' + INTERROGATIVE_MARK_2P);
+				}
 			}
 			if(t.themeT12 || t.themeT5){
 				if(t.themeT12){
-					insert.call(this, 12, 'on' + INTERROGATIVE_MARK);
-					insert.call(this, 12, 'en' + INTERROGATIVE_MARK);
+					insert.call(this, 12, 'on');
+//					insert.call(this, 12, 'on' + INTERROGATIVE_MARK_1_2);
+//					insert.call(this, 12, 'on' + INTERROGATIVE_MARK_1);
+					insert.call(this, 12, 'en');
+//					insert.call(this, 12, 'en' + INTERROGATIVE_MARK_1_2);
+//					insert.call(this, 12, 'en' + INTERROGATIVE_MARK_1);
 				}
 				if(t.themeT5){
-					insert.call(this, 5, '[è]>emo' + INTERROGATIVE_MARK);
-					if(conj == 2)
-						insert.call(this, 5, 'i?é>imo' + INTERROGATIVE_MARK);
+					insert.call(this, 5, '[è]>emo');
+//					insert.call(this, 5, '[è]>émo' + INTERROGATIVE_MARK_1_2);
+//					insert.call(this, 5, '[è]>emo' + INTERROGATIVE_MARK_1);
+					if(conj == 2){
+						insert.call(this, 5, 'i?é>imo');
+//						insert.call(this, 5, 'i?é>ímo' + INTERROGATIVE_MARK_1_2);
+//						insert.call(this, 5, 'i?é>imo' + INTERROGATIVE_MARK_1);
+					}
 				}
 			}
 
-			if(t.themeT8 && this.verb.irregularity.verb.match(/dixer|traer|toler/))
-				insert.call(this, 8, '[lx]?>go' + INTERROGATIVE_MARK);
+			if(t.themeT8 && this.verb.irregularity.verb.match(/dixer|traer|toler/)){
+				insert.call(this, 8, '[lx]?>go');
+//				insert.call(this, 8, '[lx]?>gó' + INTERROGATIVE_MARK_1_2);
+			}
 		}
 	};
 
@@ -823,24 +874,41 @@ storeSuffix(logs, flag, '.', 'ele');
 		if(t.themeT2 || t.themeT11){
 			if(t.themeT2){
 				var tmp = (this.verb.irregularity.eser? 'r': '(v)');
-				insert.call(this, 2, tmp + '[oaie]' + INTERROGATIVE_MARK);
+				insert.call(this, 2, tmp + '[oaie]');
+//				insert.call(this, 2, tmp + '[oe]' + INTERROGATIVE_MARK_1_1);
+//				insert.call(this, 2, tmp + '[oe]');
+//				insert.call(this, 2, tmp + 'i');
+//				insert.call(this, 2, tmp + 'i' + INTERROGATIVE_MARK_2S);
+//				insert.call(this, 2, tmp + 'í' + INTERROGATIVE_MARK_2P);
+//				insert.call(this, 2, tmp + 'a' + INTERROGATIVE_MARK_1_1);
+//				insert.call(this, 2, tmp + 'à' + INTERROGATIVE_MARK_1_2);
+//				insert.call(this, 2, tmp + 'a' + INTERROGATIVE_MARK_3);
 				//FIXME
 				//if(this.verb.irregularity.eser)
 				//	insert.call(this, 2, '[x/j]|' + tmp + '[oai]' + INTERROGATIVE_MARK);
 
-				insert.call(this, 2, tmp + 'imo' + INTERROGATIVE_MARK);
+				insert.call(this, 2, tmp + 'imo');
+//				insert.call(this, 2, tmp + 'ímo' + INTERROGATIVE_MARK_1_2);
+//				insert.call(this, 2, tmp + 'imo' + INTERROGATIVE_MARK_1);
 				//FIXME
 				//if(this.verb.irregularity.eser)
 				//	insert.call(this, 2, '[x/j]|' + tmp + 'imo' + INTERROGATIVE_MARK);
 			}
 			if(t.themeT11){
-				insert.call(this, 11, '(iv)ié' + INTERROGATIVE_MARK);
-				insert.call(this, 11, (!t.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'on(se)' + INTERROGATIVE_MARK);
-				insert.call(this, 11, 'iv(i)on(se)' + INTERROGATIVE_MARK);
-				insert.call(this, 11, '(iv)en(se)' + INTERROGATIVE_MARK);
+				insert.call(this, 11, '(iv)ié');
+//				insert.call(this, 11, '(iv)ié' + INTERROGATIVE_MARK_2P);
+				insert.call(this, 11, (!t.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'on(se)');
+//				insert.call(this, 11, (!t.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'on' + INTERROGATIVE_MARK_1_2);
+//				insert.call(this, 11, (!t.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'on' + INTERROGATIVE_MARK_1);
+				insert.call(this, 11, 'iv(i)on(se)');
+//				insert.call(this, 11, 'iv(i)on' + INTERROGATIVE_MARK_1_2);
+//				insert.call(this, 11, 'iv(i)on' + INTERROGATIVE_MARK_1);
+				insert.call(this, 11, '(iv)en(se)');
+//				insert.call(this, 11, '(iv)en' + INTERROGATIVE_MARK_1_2);
+//				insert.call(this, 11, '(iv)en' + INTERROGATIVE_MARK_1);
 				//FIXME
 				//if(this.verb.irregularity.eser)
-				//	insert.call(this, 11, '[x/j]|(iv)én(se)' + INTERROGATIVE_MARK);
+				//	insert.call(this, 11, '[x/j]|(iv)en(se)' + INTERROGATIVE_MARK);
 			}
 		}
 	};
@@ -848,13 +916,27 @@ storeSuffix(logs, flag, '.', 'ele');
 	/** @private */
 	var generateIndicativeFuture = function(type, t){
 		if(t.themeT4){
-			insert.call(this, 4, 'ron' + INTERROGATIVE_MARK);
-			insert.call(this, 4, 'r[òàèé]' + INTERROGATIVE_MARK);
-			insert.call(this, 4, 'remo' + INTERROGATIVE_MARK);
-			insert.call(this, 4, 'ren' + INTERROGATIVE_MARK);
+			insert.call(this, 4, 'ron');
+//			insert.call(this, 4, 'ron' + INTERROGATIVE_MARK_1_2);
+//			insert.call(this, 4, 'ron' + INTERROGATIVE_MARK_1);
+			insert.call(this, 4, 'r[òàèé]');
+//			insert.call(this, 4, 'r[òàè]' + INTERROGATIVE_MARK_1_1);
+//			insert.call(this, 4, 'r[òàè]' + INTERROGATIVE_MARK_1_2);
+//			insert.call(this, 4, 'r[òàè]' + INTERROGATIVE_MARK_1);
+//			insert.call(this, 4, 'ra' + INTERROGATIVE_MARK_2S);
+//			insert.call(this, 4, 'ra' + INTERROGATIVE_MARK_3);
+//			insert.call(this, 4, 'ré' + INTERROGATIVE_MARK_2P);
+			insert.call(this, 4, 'remo');
+//			insert.call(this, 4, 'rémo' + INTERROGATIVE_MARK_1_2);
+//			insert.call(this, 4, 'remo' + INTERROGATIVE_MARK_1);
+			insert.call(this, 4, 'ren');
+//			insert.call(this, 4, 'ren' + INTERROGATIVE_MARK_1_2);
 			if(this.verb.conjugation == 2){
-				insert.call(this, 4, 'rí' + INTERROGATIVE_MARK);
-				insert.call(this, 4, 'rimo' + INTERROGATIVE_MARK);
+				insert.call(this, 4, 'rí');
+//				insert.call(this, 4, 'rí' + INTERROGATIVE_MARK_2P);
+				insert.call(this, 4, 'rimo');
+//				insert.call(this, 4, 'rímo' + INTERROGATIVE_MARK_1_2);
+//				insert.call(this, 4, 'rimo' + INTERROGATIVE_MARK_1);
 			}
 		}
 	};
@@ -936,14 +1018,23 @@ storeSuffix(logs, flag, '.', 'ele');
 	var generateConditionalSimple = function(type, t){
 		if(t.themeT4){
 			insert.call(this, 4, 'rí[ae]');
-			insert.call(this, 4, 'resi' + INTERROGATIVE_MARK);
-			insert.call(this, 4, 'r(is)ié' + INTERROGATIVE_MARK);
-			insert.call(this, 4, 'résimo' + INTERROGATIVE_MARK);
-			insert.call(this, 4, 'r(is)(i)on(se)' + INTERROGATIVE_MARK);
-			insert.call(this, 4, 'r(is)en(se)' + INTERROGATIVE_MARK);
-			insert.call(this, 4, 'rísel[oaie]');
+//			insert.call(this, 4, 'rí[ae]' + INTERROGATIVE_MARK_1_1);
+			insert.call(this, 4, 'resi');
+//			insert.call(this, 4, 'rési' + INTERROGATIVE_MARK_2S);
+//			insert.call(this, 4, 'rési' + INTERROGATIVE_MARK_2P);
+			insert.call(this, 4, 'r(is)ié');
+//			insert.call(this, 4, 'r(is)ié' + INTERROGATIVE_MARK_2P);
+			insert.call(this, 4, 'résimo');
+//			insert.call(this, 4, 'resimó' + INTERROGATIVE_MARK_1);
+//			insert.call(this, 4, 'resimó' + INTERROGATIVE_MARK_1_2);
+			insert.call(this, 4, 'r(is)(i)on(se)');
+//			insert.call(this, 4, 'r(is)(i)on' + INTERROGATIVE_MARK_1_2);
+			insert.call(this, 4, 'r(is)en(se)');
+//			insert.call(this, 4, 'r(is)en' + INTERROGATIVE_MARK_1_2);
+//			insert.call(this, 4, 'ríse' + INTERROGATIVE_MARK_3);
 			//i únegi pronòmi interogativi enklítegi ke se dopara i xe kueli de 3a pars
-			insert.call(this, 4, 'rave' + INTERROGATIVE_MARK);
+			insert.call(this, 4, 'rave');
+//			insert.call(this, 4, 'ràve' + INTERROGATIVE_MARK_3);
 		}
 	};
 
@@ -1169,7 +1260,7 @@ storeSuffix(logs, flag, '.', 'ele');
 			if(!t[theme])
 				t[theme] = [suffix];
 			else{
-				var matcher = '[' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + INTERROGATIVE_MARK + FINAL_CONSONANT_VOICING + ']+$';
+				var matcher = '[' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + FINAL_CONSONANT_VOICING + ']+$';
 				if(t[theme].indexOf(suffix) < 0 && (suffix.match(new RegExp(matcher)) || ArrayHelper.findIndex(t[theme], function(el){ return el.match(new RegExp(escapeRegExp(suffix) + matcher)); }) < 0))
 					t[theme].push(suffix);
 			}
