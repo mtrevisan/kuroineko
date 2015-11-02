@@ -70,7 +70,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 			//T10 = T3: i > e
 			themeT10: themeT3.replace(/i$/, 'e'),
 			//T11 = T4: TV > ∅
-			themeT11: themeT4.replace(/.$/, ''),
+			themeT11: themeT4.replace(/i?[aei]$/, ''),
 			//T12 = T8: no stress
 			themeT12: Word.suppressStress(themeT8)
 		};

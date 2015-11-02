@@ -522,7 +522,7 @@ var start = +new Date();
 			var verbs = [],
 				infinitives = [];
 			verbsDictionary.forEach(function(infinitive){
-				infinitive = composeInfinitiveWithoutPrefix(infinitive);
+				infinitive = composeInfinitiveWithoutPrefix(infinitive).replace(/ɉ/g, 'j');
 				if(infinitives.indexOf(infinitive) < 0){
 					infinitives.push(infinitive);
 

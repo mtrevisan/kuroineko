@@ -337,7 +337,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bév",			"stra",		3,	1,	"a",	"1867",			"",
 "bever",			"",			1,	1,	"a",	"1265",			"",
 "bever",			"in",			1,	1,	"a",	"1854",			"",
-"bevaci",		"x",			1,	3,	"g",	"2008",			"Xbevaŧar.",
+"bevac",			"x",			1,	3,	"g",	"2008",			"Xbevaŧar.",
 "bevaki",		"x",			1,	3,	"g",	"1867",			"Xbevaŧar.",
 "bevaŧ",			"",			1,	3,	"g",	"1867",			"",
 "bevaŧ",			"x",			1,	3,	"g",	"1854",			"",

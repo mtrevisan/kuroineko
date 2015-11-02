@@ -98,15 +98,14 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				root.third = {
 					general: pronomenalMark + third,
 					northern_oriental: (third.match(/[ei]$/)? pronomenalMark + PhonologyHelper.finalConsonantVoicing(third.replace(/[ei]$/, ''), 'northern'): undefined),
-					archaic: (t.themeT10 && t.themeT10 !== third? pronomenalMark + t.themeT10.replace(/([ei])$/, '($1)'): undefined)
+					archaic: (t.themeT10 && t.themeT10 !== third? pronomenalMark + t.themeT10.replace(/([ae])$/, '($1)'): undefined)
 				};
 			}
 			else if(t.themeT10){
-				var thirdNorthernOriental = PhonologyHelper.finalConsonantVoicing(t.themeT10.replace(/[aeiou]$/, ''), 'northern');
+				var thirdNorthernOriental = PhonologyHelper.finalConsonantVoicing(t.themeT10.replace(/[ae]$/, ''), 'northern');
 				root.third = {
 					general: pronomenalMark + t.themeT10,
-					northern_oriental: (t.themeT10.match(/[aeiou]$/) && t.themeT10 != thirdNorthernOriental?
-						pronomenalMark + thirdNorthernOriental: undefined)
+					northern_oriental: (t.themeT10 != thirdNorthernOriental? pronomenalMark + thirdNorthernOriental: undefined)
 				};
 			}
 			if(t.themeT5)

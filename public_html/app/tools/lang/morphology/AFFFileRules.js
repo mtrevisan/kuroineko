@@ -83,9 +83,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 //		[12, 'e', 'a', 'o\/4', '([^i])>$1i', '[ei]>\/4', '\/4'],
 	];
 	var logsSimplifications = [
-		[12, {replaced: '0', replacement: '\/15,1'}, {replaced: '0', replacement: 'emo\/17'}, {replaced: 'ar', replacement: 'en\/24,8'}, {replaced: 'r', replacement: 'nte\/20'}, {replaced: 'ar', replacement: 'on\/25,9'}, {replaced: 'ar', replacement: 'à\/19'}, {replaced: 'ar', replacement: 'àsimo\/16'}, {replaced: 'r', replacement: '\/22,2'}, {replaced: 'ar', replacement: 'è\/18'}, {replaced: 'r', replacement: 'o\/38,7,4'}],
-		[13, {replaced: '0', replacement: '\/15,1'}, {replaced: '0', replacement: 'emo\/17'}, {replaced: 'ir', replacement: 'en\/24,8'}, {replaced: 'ir', replacement: 'ente\/28'}, {replaced: 'ir', replacement: 'on\/25,9'}, {replaced: 'ir', replacement: 'í\/19'}, {replaced: 'ir', replacement: 'ísimo\/16'}, {replaced: 'r', replacement: '\/41,11'}],
-		[14, {replaced: '0', replacement: '\/15,1'}, {replaced: '0', replacement: 'emo\/17'}, {replaced: 'ir', replacement: 'en\/24,8'}, {replaced: 'ir', replacement: 'ente\/28'}, {replaced: 'ir', replacement: 'on\/25,9'}, {replaced: 'ir', replacement: 'í\/19'}, {replaced: 'ir', replacement: 'ísimo\/16'}, {replaced: 'r', replacement: '\/41,11,22'}, {replaced: 'ir', replacement: 'e\/21,12'}]
+//		[12, {replaced: 0, replacement: '\/15,1'}, {replaced: 0, replacement: 'emo\/17'}, {replaced: 'ar', replacement: 'en\/24,8'}, {replaced: 'r', replacement: 'nte\/20'}, {replaced: 'ar', replacement: 'on\/25,9'}, {replaced: 'ar', replacement: 'à\/19'}, {replaced: 'ar', replacement: 'àsimo\/16'}, {replaced: 'r', replacement: '\/22,2'}, {replaced: 'ar', replacement: 'è\/18'}, {replaced: 'r', replacement: 'o\/38,7,4'}],
+//		[13, {replaced: 0, replacement: '\/15,1'}, {replaced: 0, replacement: 'emo\/17'}, {replaced: 'ir', replacement: 'en\/24,8'}, {replaced: 'ir', replacement: 'ente\/28'}, {replaced: 'ir', replacement: 'on\/25,9'}, {replaced: 'ir', replacement: 'í\/19'}, {replaced: 'ir', replacement: 'ísimo\/16'}, {replaced: 'r', replacement: '\/41,11'}],
+//		[14, {replaced: 0, replacement: '\/15,1'}, {replaced: 0, replacement: 'emo\/17'}, {replaced: 'ir', replacement: 'en\/24,8'}, {replaced: 'ir', replacement: 'ente\/28'}, {replaced: 'ir', replacement: 'on\/25,9'}, {replaced: 'ir', replacement: 'í\/19'}, {replaced: 'ir', replacement: 'ísimo\/16'}, {replaced: 'r', replacement: '\/41,11,22'}, {replaced: 'ir', replacement: 'e\/21,12'}]
 	];
 
 
@@ -97,7 +97,11 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		var dialect = new Dialect(),
 			paradigmEndings = [],
 			infinitives = {},
-			infinitive, themes, commonThemes, i, expandedList;
+			infinitive, themes,
+			commonThemes,
+			paradigmEndings,
+			expandedList,
+			i;
 		verbs.forEach(function(verb){
 			infinitive = Word.unmarkDefaultStress(verb.infinitive);
 			if(!infinitives[infinitive]){
@@ -106,7 +110,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 				infinitives[infinitive] = themes;
 				verb.infinitive = infinitive;
 
-				generateEndingsForSingleVerb(verb, themes, paradigmEndings);
+				generateRegularEndingsForSingleVerb(verb, themes, paradigmEndings);
+//				generateIrregularEndingsForSingleVerb(verb, themes, paradigmEndings);
 			}
 		});
 
@@ -119,8 +124,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 console.log(paradigmEndings);
 console.log(commonThemes);
+
 		printThemesSimplifications(themesSimplifications);
 		i = printLogsSimplifications(logsSimplifications);
+i = 12;
 		SUFFIXES_BASE_INDEX = i;
 
 		i = printThemes(commonThemes, i);
@@ -131,43 +138,62 @@ console.log(commonThemes);
 	};
 
 	/** @private */
-	var generateEndingsForSingleVerb = function(verb, themes, paradigmEndings){
+	var generateRegularEndingsForSingleVerb = function(verb, themes, paradigmEndings){
+		if(verb.irregular)
+			return;
+
 		this.verb = verb;
 		this.themes = themes;
 		this.paradigm = paradigmEndings;
 
 		var reg = this.themes[REGULAR];
-		var irr = this.themes[IRREGULAR];
 
-		[REGULAR, IRREGULAR].forEach(function(type){
-			var t = this.themes[type];
-
-			generateIndicativePresent.call(this, type, t);
-			generateInfinitiveSimple.call(this, type, t);
-			if(!this.verb.irregularity.poder)
-				generateImperativePresent.call(this, type, t);
-			generateParticipleImperfect.call(this, type, t);
-			generateParticiplePerfect.call(this, type, t);
-		}, this);
+		generateIndicativePresent.call(this, REGULAR, reg);
+		generateInfinitiveSimple.call(this, REGULAR, reg);
+		if(!this.verb.irregularity.poder)
+			generateImperativePresent.call(this, REGULAR, reg);
+		generateParticipleImperfect.call(this, REGULAR, reg);
+		generateParticiplePerfect.call(this, REGULAR, reg);
 		generateParticiplePerfect_strong.call(this);
 		if(!this.verb.irregularity.eser){
 			generateIndicativeImperfect.call(this, REGULAR, reg);
 			generateIndicativeFuture.call(this, REGULAR, reg);
 			generateSubjunctiveImperfect.call(this, REGULAR, reg);
 			generateConditionalSimple.call(this, REGULAR, reg);
-			generateGerundSimple.call(this, IRREGULAR, irr);
 		}
+		//ensure syncope does not occurs
+		if(!this.verb.irregularity.verb.match(/dever|eser|s?aver/))
+			generateSubjunctivePresent.call(this, REGULAR, reg);
+		generateGerundSimple.call(this, REGULAR, reg);
+	};
+
+	/** @private */
+	var generateIrregularEndingsForSingleVerb = function(verb, themes, paradigmEndings){
+		if(!verb.irregular)
+			return;
+
+		this.verb = verb;
+		this.themes = themes;
+		this.paradigm = paradigmEndings;
+
+		var irr = this.themes[IRREGULAR];
+
+		generateIndicativePresent.call(this, IRREGULAR, irr);
+		generateInfinitiveSimple.call(this, IRREGULAR, irr);
+		if(!this.verb.irregularity.poder)
+			generateImperativePresent.call(this, IRREGULAR, irr);
+		generateParticipleImperfect.call(this, IRREGULAR, irr);
+		generateParticiplePerfect.call(this, IRREGULAR, irr);
+		generateParticiplePerfect_strong.call(this);
+		if(!this.verb.irregularity.eser)
+			generateGerundSimple.call(this, IRREGULAR, irr);
 		//ensure syncope does not occurs
 		if(!this.verb.irregularity.verb.match(/dixer|poder|toler|voler|traer/))
 			generateIndicativeImperfect.call(this, IRREGULAR, irr);
 		generateIndicativeFuture.call(this, IRREGULAR, irr);
-		//ensure syncope does not occurs
-		if(!this.verb.irregularity.verb.match(/dever|eser|s?aver/))
-			generateSubjunctivePresent.call(this, REGULAR, reg);
 		generateSubjunctivePresent.call(this, IRREGULAR, irr);
 		generateSubjunctiveImperfect.call(this, IRREGULAR, irr);
 		generateConditionalSimple.call(this, IRREGULAR, irr);
-		generateGerundSimple.call(this, REGULAR, reg);
 	};
 
 	/** @private */
@@ -411,19 +437,19 @@ console.log(commonThemes);
 				/*case INTERROGATIVE_MARK:
 					storeSuffix(logs, flag, '.', 'nte/5');
 					storeSuffix(logs, flag, '.', 'ne/5');
-					storeSuffix(logs, flag, '0', 'nte/5');
-					storeSuffix(logs, flag, '0', 'ne/5');
-					storeSuffix(logs, flag, '0', 'e/5');
-					storeSuffix(logs, flag, '0', 'mi');
+					storeSuffix(logs, flag, 0, 'nte/5');
+					storeSuffix(logs, flag, 0, 'ne/5');
+					storeSuffix(logs, flag, 0, 'e/5');
+					storeSuffix(logs, flag, 0, 'mi');
 
-					storeSuffix(logs, flag, '0', 'stu');
-					storeSuffix(logs, flag, '0', 'tu');
-					storeSuffix(logs, flag, '0', 'to');
+					storeSuffix(logs, flag, 0, 'stu');
+					storeSuffix(logs, flag, 0, 'tu');
+					storeSuffix(logs, flag, 0, 'to');
 
-					storeSuffix(logs, flag, '0', 'u');
-					storeSuffix(logs, flag, '0', 'o');
+					storeSuffix(logs, flag, 0, 'u');
+					storeSuffix(logs, flag, 0, 'o');
 
-					storeSuffix(logs, flag, '0', 'lo/7');
+					storeSuffix(logs, flag, 0, 'lo/7');
 					storeSuffix(logs, flag, '.', 'elo/7');
 
 					printSuffixes(logs, flag, 'interrogative');
@@ -453,14 +479,14 @@ console.log(commonThemes);
 					storeSuffix(logs, flag, 'm.', 'n', null, 'm[oei]');
 					storeSuffix(logs, flag, 'm', 'n');
 
-					printSuffixes(logs, flag, {replaced: '0', replacement: 'final consonant voicing'});
+					printSuffixes(logs, flag, {replaced: 0, replacement: 'final consonant voicing'});
 					break;
 
 				default:
 					sublist.forEach(function(el){
 						storeSuffix(logs, flag, base.replace(/\/.+$/, ''), el);
 					});
-					printSuffixes(logs, flag, {replaced: '0', replacement: base});
+					printSuffixes(logs, flag, {replaced: 0, replacement: base});
 			}
 			sublist.unshift(base);
 			sublist.unshift(flag);
@@ -502,7 +528,7 @@ console.log(commonThemes);
 			len = sublist.length;
 			for(j = 0; j < len; j ++){
 				base = sublist.shift();
-				if(base.replaced == '0' && !base.replacement.match(/[>/]/))
+				if(base.replaced == 0 && !base.replacement.match(/[>/]/))
 					break;
 
 				if(j < len - 1){
@@ -527,7 +553,7 @@ console.log(commonThemes);
 				//find the correct index of each parent
 				flags = (sublist.parents? sublist.parents.map(function(obj){ return obj + SUFFIXES_BASE_INDEX; }): []);
 
-				storeSuffix(logs, i, el.replaced, el.replacement, flags, el.constraint);
+				storeSuffix(logs, i, (el.replaced != 0? el.replaced.replace(/\[.+?\]/g, '.'): base.replacement), el.replacement, flags, el.constraint);
 			});
 			sublist.unshift(base);
 
@@ -566,7 +592,7 @@ console.log(commonThemes);
 
 					expandForms(repment).forEach(function(rm){
 						rm = rm.replacement;
-						if(rm.length > 1)
+						if(rm.length > 2)
 							rm = Word.unmarkDefaultStress(rm);
 
 						storeSuffix(logs, i, ft.from, rm, idx + SUFFIXES_BASE_INDEX, (el.matcher.match(matcher)? el.matcher: ft.from), el.infinitives.filter(function(obj){ return obj.match(matcher); }));
@@ -590,7 +616,9 @@ console.log(commonThemes);
 
 	/** @private */
 	var applySuffix = function(word, suffix){
-		return (suffix.replaced == '0'? word + suffix.replacement: word.replace(new RegExp(suffix.replaced + '$'), suffix.replacement));
+if(word.indexOf('èb') >= 0)
+	console.log('das');
+		return (suffix.replaced == 0? word + suffix.replacement: word.replace(new RegExp(suffix.replaced + '$'), suffix.replacement));
 	};
 
 	/** @private */
@@ -629,9 +657,8 @@ console.log(commonThemes);
 	var printSuffixes = function(logs, i, base){
 //		simplifyLogs(logs, logsSimplifications);
 
-if(base != undefined && base.replaced != '0')
+if(base != undefined && base.replaced != 0)
 	console.log('asd');
-//		console.log('SFX ' + i + ' Y ' + logs.length + (base != undefined? ' # ' + (Array.isArray(base)? base[0] + '>' + base[1]: base/*.replace(/\/[\d,]+/, '')*/): ''));
 		console.log('SFX ' + i + ' Y ' + logs.length + (base != undefined? ' # ' + (ObjectHelper.isObject(base)? base.replacement/*.replace(/\/[\d,]+/, '')*/: base): ''));
 		logs.sort().forEach(function(log){
 			console.log(log);
@@ -672,7 +699,7 @@ if(base != undefined && base.replaced != '0')
 
 				replaced.forEach(function(rep){
 					if(rep == '')
-						rep = '0';
+						rep = 0;
 
 					replacement.forEach(function(repment){
 						if(repment.match(/\$\d+/)){
@@ -680,7 +707,7 @@ if(base != undefined && base.replaced != '0')
 							m = rep.match(/^\(\[(\^)?(.+)\]\)$/);
 							if(m && m[1]){
 								//case '([^i])'
-								add(forms, '0', repment, m[0].replace(/^\(|\)$/g, ''));
+								add(forms, 0, repment, m[0].replace(/^\(|\)$/g, ''));
 								rep = undefined;
 							}
 							else if(m){
@@ -695,13 +722,13 @@ if(base != undefined && base.replaced != '0')
 						}
 
 						if(rep)
-							add(forms, rep.replace(/^\[\^.+\]/, ''), repment, rep);
+							add(forms, rep.replace(/\[.+?\]/g, ''), repment, rep);
 					});
 				});
 			}
 			else
 				splitter(form).forEach(function(repment){
-					add(forms, '0', repment);
+					add(forms, 0, repment);
 				});
 
 			return forms;
@@ -709,28 +736,31 @@ if(base != undefined && base.replaced != '0')
 
 		var splitter = function(subform){
 			var subforms = [],
-				m = subform.match(/^(.+)?\[(.+)\](\?)?(\/[\d,]+)?$/),
+				m = subform.match(/^([^\(\)\[\]]+)?\(?\[(\^)?(.+)\]\)?(\?)?(\/[\d,]+)?$/),
 				m2;
 			if(m){
-				if(!m[4])
-					m[4] = '';
+				if(!m[5])
+					m[5] = '';
 				if(m[1] && m[1].match(/^\(.+\)$/)){
 					//cases '(g)[ai]', '(g)[ai]?'
 					m[1] = m[1].replace(/^\(|\)$/g, '');
-					m[2].split('').forEach(function(el){
-						subforms.push(el + m[4]);
-						subforms.push(m[1] + el + m[4]);
+					m[3].split('').forEach(function(el){
+						subforms.push(el + m[5]);
+						subforms.push(m[1] + el + m[5]);
 					});
 					if(m[3])
-						subforms.push(m[1] + m[4]);
+						subforms.push(m[1] + m[5]);
 				}
+				else if(m[2])
+					//case '([^i])'
+					subforms.push(subform);
 				else{
 					//cases 'g[lx]?' and 'g[ei]'
-					m[2].split('').forEach(function(el){
-						subforms.push((m[1]? m[1]: '') + el + m[4]);
+					m[3].split('').forEach(function(el){
+						subforms.push((m[1]? m[1]: '') + el + m[5]);
 					});
-					if(m[3])
-						subforms.push((m[1]? m[1]: '') + m[4]);
+					if(m[4])
+						subforms.push((m[1]? m[1]: '') + m[5]);
 				}
 			}
 			else{
@@ -888,10 +918,8 @@ if(base != undefined && base.replaced != '0')
 			else if(t.themeT10){
 				insert.call(this, 10, '');
 //				insert.call(this, 10, INTERROGATIVE_MARK_3);
-				if(t.themeT10.match(/[aeiou]$/) && t.themeT10 != PhonologyHelper.finalConsonantVoicing(t.themeT10.replace(/[aeiou]$/, ''), 'northern')){
+				if(t.themeT10 != PhonologyHelper.finalConsonantVoicing(t.themeT10.replace(/[ae]$/, ''), 'northern'))
 					insert.call(this, 10, FINAL_CONSONANT_VOICING);
-//					insert.call(this, 10, INTERROGATIVE_MARK_3);
-				}
 			}
 			if(t.themeT5){
 				insert.call(this, 5, '');
@@ -1014,8 +1042,8 @@ if(base != undefined && base.replaced != '0')
 			if(t.themeT8){
 				insert.call(this, 8, '[ae]');
 				insert.call(this, 8, '([^i])>$1i');
-				if(t.themeT8.match(/[^aeiouàèéíòóú]$/))
-					insert.call(this, 8, FINAL_CONSONANT_VOICING);
+//				if(t.themeT8.match(/[^aeiouàèéíòóú]$/))
+//					insert.call(this, 8, FINAL_CONSONANT_VOICING);
 
 				if(type == IRREGULAR && !this.verb.irregularity.verb.match(/(aver|dever|eser)/)){
 					if(t.themeT8.match(/[aeiouàèéíòóú]$/))
@@ -1163,7 +1191,8 @@ if(base != undefined && base.replaced != '0')
 			}
 		}, this);
 
-		if(t.themeT8){
+//FIXME
+/*		if(t.themeT8){
 			var strong = generateParticiplePerfectStrong.call(this, t.themeT8);
 			if(strong){
 				insert.call(this, 8, WHOLE_WORD + Word.unmarkDefaultStress(strong + 'o') + FINAL_CONSONANT_VOICING);
@@ -1171,7 +1200,7 @@ if(base != undefined && base.replaced != '0')
 				insert.call(this, 8, WHOLE_WORD + Word.unmarkDefaultStress(strong + 'a'));
 				insert.call(this, 8, WHOLE_WORD + Word.unmarkDefaultStress(strong + 'e'));
 			}
-		}
+		}*/
 	};
 
 	/** @private */
