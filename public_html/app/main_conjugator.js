@@ -55,7 +55,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 							var size = output.length;
 							if(size){
 								for(v = 0; v < size; v ++)
-									output[v] = '<a href="#inputSection" onclick="Application.acceptAlternative(\'' + output[v] + '\')">' + output[v] + ' ('
+									output[v] = '<a href="/pages/' + (i18nResources.language == 'vec'? 'vec': 'it') + '/conjugator.html#inputSection" onclick="Application.acceptAlternative(\'' + output[v] + '\')">' + output[v] + ' ('
 										+ (suggestions.candidates[output[v]] * 100).toFixed(2) + '%)</a>';
 								output = output.join('<br>');
 							}
@@ -79,7 +79,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 							var size = output.length;
 							if(size){
 								for(v = 0; v < size; v ++)
-									output[v] = '<a href="#inputSection" onclick="Application.acceptAlternative(\'' + output[v] + '\')">' + output[v] + '</a>';
+									output[v] = '<a href="/pages/' + (i18nResources.language == 'vec'? 'vec': 'it') + '/conjugator.html#inputSection" onclick="Application.acceptAlternative(\'' + output[v] + '\')">' + output[v] + '</a>';
 								output = output.join('<br>');
 							}
 						}
@@ -143,7 +143,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 		//load history:
 		var history = [];
 		sortedData.slice(0, maxHistoryData).forEach(function(record){
-			history.push('<a href="#inputSection" onclick="Application.acceptAlternative(\'' + record.id + '\')">' + record.id + '</a>');
+			history.push('<a href="/pages/' + (i18nResources.language == 'vec'? 'vec': 'it') + '/conjugator.html#inputSection" onclick="Application.acceptAlternative(\'' + record.id + '\')">' + record.id + '</a>');
 		});
 		HTMLHelper.setEncodedInnerHTML('history', history.join('<br>'));
 	};
@@ -276,7 +276,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 
 					alternativeInputMessage = '<span class="pay-attention">' + i18nResources.warning + '</span> ' + i18nResources.do_you_mean + ' ';
 					for(a = 0; a < len; a ++){
-						alternativeInputMessage += '"<a href="#inputSection" onclick="Application.acceptAlternative(\'' + alternatives[a] + '\')">' + alternatives[a] + '</a>"';
+						alternativeInputMessage += '"<a href="/pages/' + (i18nResources.language == 'vec'? 'vec': 'it') + '/conjugator.html#inputSection" onclick="Application.acceptAlternative(\'' + alternatives[a] + '\')">' + alternatives[a] + '</a>"';
 						if(a < len - 1)
 							alternativeInputMessage += ' ' + i18nResources.or + ' ';
 					}

@@ -111,7 +111,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 				verb.infinitive = infinitive;
 
 				generateRegularEndingsForSingleVerb(verb, themes, paradigmEndings);
-//				generateIrregularEndingsForSingleVerb(verb, themes, paradigmEndings);
+				generateIrregularEndingsForSingleVerb(verb, themes, paradigmEndings);
 			}
 		});
 
@@ -616,8 +616,6 @@ i = 12;
 
 	/** @private */
 	var applySuffix = function(word, suffix){
-if(word.indexOf('èb') >= 0)
-	console.log('das');
 		return (suffix.replaced == 0? word + suffix.replacement: word.replace(new RegExp(suffix.replaced + '$'), suffix.replacement));
 	};
 
@@ -904,7 +902,7 @@ if(base != undefined && base.replaced != 0)
 				insert.call(this, 8, third.substr(t.themeT8.length));
 //				insert.call(this, 8, third.substr(t.themeT8.length) + INTERROGATIVE_MARK_3);
 				if(third.match(/[ei]$/)){
-					insert.call(this, 8, '[ei]>' + FINAL_CONSONANT_VOICING);
+//					insert.call(this, 8, '[ei]>' + FINAL_CONSONANT_VOICING);
 //					insert.call(this, 8, '[ei]>' + INTERROGATIVE_MARK_3);
 				}
 				if(t.themeT10 && t.themeT10 !== third){
