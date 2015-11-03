@@ -146,25 +146,25 @@ i = 12;
 		this.themes = themes;
 		this.paradigm = paradigmEndings;
 
-		var reg = this.themes[REGULAR];
+		var reg = this.themes[REGULAR],
+			conj = getIrregularVerbConjugation.call(this, REGULAR);
 
-		generateIndicativePresent.call(this, REGULAR, reg);
-		generateInfinitiveSimple.call(this, REGULAR, reg);
+		generateIndicativePresent.call(this, REGULAR, reg, conj);
+		generateInfinitiveSimple.call(this, reg);
 		if(!this.verb.irregularity.poder)
-			generateImperativePresent.call(this, REGULAR, reg);
-		generateParticipleImperfect.call(this, REGULAR, reg);
-		generateParticiplePerfect.call(this, REGULAR, reg);
-		generateParticiplePerfect_strong.call(this);
+			generateImperativePresent.call(this, reg, conj);
+		generateParticipleImperfect.call(this, reg);
+		generateParticiplePerfect.call(this, reg);
 		if(!this.verb.irregularity.eser){
-			generateIndicativeImperfect.call(this, REGULAR, reg);
-			generateIndicativeFuture.call(this, REGULAR, reg);
-			generateSubjunctiveImperfect.call(this, REGULAR, reg);
-			generateConditionalSimple.call(this, REGULAR, reg);
+			generateIndicativeImperfect.call(this, reg);
+			generateIndicativeFuture.call(this, reg);
+			generateSubjunctiveImperfect.call(this, reg);
+			generateConditionalSimple.call(this, reg);
 		}
 		//ensure syncope does not occurs
 		if(!this.verb.irregularity.verb.match(/dever|eser|s?aver/))
-			generateSubjunctivePresent.call(this, REGULAR, reg);
-		generateGerundSimple.call(this, REGULAR, reg);
+			generateSubjunctivePresent.call(this, REGULAR, reg, conj);
+		generateGerundSimple.call(this, reg);
 	};
 
 	/** @private */
@@ -176,24 +176,25 @@ i = 12;
 		this.themes = themes;
 		this.paradigm = paradigmEndings;
 
-		var irr = this.themes[IRREGULAR];
+		var irr = this.themes[IRREGULAR],
+			conj = getIrregularVerbConjugation.call(this, IRREGULAR);
 
-		generateIndicativePresent.call(this, IRREGULAR, irr);
-		generateInfinitiveSimple.call(this, IRREGULAR, irr);
+		generateIndicativePresent.call(this, IRREGULAR, irr, conj);
+		generateInfinitiveSimple.call(this, irr);
 		if(!this.verb.irregularity.poder)
-			generateImperativePresent.call(this, IRREGULAR, irr);
-		generateParticipleImperfect.call(this, IRREGULAR, irr);
-		generateParticiplePerfect.call(this, IRREGULAR, irr);
+			generateImperativePresent.call(this, irr, conj);
+		generateParticipleImperfect.call(this, irr);
+		generateParticiplePerfect.call(this, irr);
 		generateParticiplePerfect_strong.call(this);
 		if(!this.verb.irregularity.eser)
-			generateGerundSimple.call(this, IRREGULAR, irr);
+			generateGerundSimple.call(this, irr);
 		//ensure syncope does not occurs
 		if(!this.verb.irregularity.verb.match(/dixer|poder|toler|voler|traer/))
-			generateIndicativeImperfect.call(this, IRREGULAR, irr);
-		generateIndicativeFuture.call(this, IRREGULAR, irr);
-		generateSubjunctivePresent.call(this, IRREGULAR, irr);
-		generateSubjunctiveImperfect.call(this, IRREGULAR, irr);
-		generateConditionalSimple.call(this, IRREGULAR, irr);
+			generateIndicativeImperfect.call(this, irr);
+		generateIndicativeFuture.call(this, irr);
+		generateSubjunctivePresent.call(this, IRREGULAR, irr, conj);
+		generateSubjunctiveImperfect.call(this, irr);
+		generateConditionalSimple.call(this, irr);
 	};
 
 	/** @private */
@@ -212,9 +213,9 @@ i = 12;
 		});
 
 		commonThemes = commonThemes.map(expandForms);
-		commonThemes.forEach(function(list){
+		commonThemes.forEach(function(sublist){
 			themesSimplifications.forEach(function(array){
-				simplifyThemes(list, array.slice(0));
+				simplifyThemes(sublist, array.slice(0));
 			});
 		});
 		return commonThemes;
@@ -342,7 +343,7 @@ i = 12;
 
 
 						obj = {infinitives: parents[true], themes: obj.themes};
-						list.splice(i ++, 0, obj);
+						list.splice(i, 0, obj);
 						if(obj.infinitives.indexOf(common) < 0){
 							diff = ArrayHelper.difference(infinitives, obj.infinitives);
 							variability = listToRegExp(partitioningResults[true]);
@@ -457,27 +458,16 @@ i = 12;
 
 				case FINAL_CONSONANT_VOICING:
 					storeSuffix(logs, flag, 'ñ.', 'n', null, 'ñ[oei]');
-					storeSuffix(logs, flag, 'ñ', 'n');
 					storeSuffix(logs, flag, 'ñ.', 'nc', null, 'ñ[oei]');
-					storeSuffix(logs, flag, 'ñ', 'nc');
 					storeSuffix(logs, flag, 'ñ.', 'in', null, 'ñ[oei]');
-					storeSuffix(logs, flag, 'ñ', 'in');
 					storeSuffix(logs, flag, 'b.', 'p', null, 'b[oei]');
-					storeSuffix(logs, flag, 'b', 'p');
 					storeSuffix(logs, flag, 'd.', 't', null, 'd[oei]');
-					storeSuffix(logs, flag, 'd', 't');
 					storeSuffix(logs, flag, 'g.', 'k', null, 'g[oei]');
-					storeSuffix(logs, flag, 'g', 'k');
 					storeSuffix(logs, flag, 'v.', 'f', null, 'v[oei]');
-					storeSuffix(logs, flag, 'v', 'f');
 					storeSuffix(logs, flag, 'đ.', 'ŧ', null, 'đ[oei]');
-					storeSuffix(logs, flag, 'đ', 'ŧ');
 					storeSuffix(logs, flag, 'x.', 's', null, 'x[oei]');
-					storeSuffix(logs, flag, 'x', 's');
 					storeSuffix(logs, flag, 'ɉ.', 'c', null, 'ɉ[oei]');
-					storeSuffix(logs, flag, 'ɉ', 'c');
 					storeSuffix(logs, flag, 'm.', 'n', null, 'm[oei]');
-					storeSuffix(logs, flag, 'm', 'n');
 
 					printSuffixes(logs, flag, {replaced: 0, replacement: 'final consonant voicing'});
 					break;
@@ -567,7 +557,7 @@ i = 12;
 	/** @private */
 	var print = function(list, commonThemes, infinitives, i, isExpandedList){
 		var logs = [],
-			parts, th, themes, fromTo, matcher, repment;
+			parts, k, th, themes, fromTo, matcher, repment;
 		list.forEach(function(el){
 			if(!isExpandedList)
 				logs = [];
@@ -581,13 +571,17 @@ i = 12;
 //	console.log('ads');
 
 //FIXME
+//what if fromTo.infinitive does not span all of the infinitives?
 					parts = extractCommonPartsFromStart(inf, themes[REGULAR][th] || themes[IRREGULAR][th]);
-					if(ArrayHelper.findIndex(fromTo, function(el){ return (el.from == parts.a && el.to == parts.b); }) < 0)
-						fromTo.push({from: parts.a, to: parts.b});
+					k = ArrayHelper.findIndex(fromTo, function(el){ return (el.from == parts.a && el.to == parts.b); });
+					if(k < 0)
+						fromTo.push({from: parts.a, to: parts.b, infinitive: inf});
+					else
+						fromTo[k].infinitive = extractCommonPartFromEnd(inf, fromTo[k].infinitive);
 				});
 
 				fromTo.forEach(function(ft){
-					matcher = new RegExp(ft.from + '$');
+					matcher = new RegExp(ft.infinitive + '$');
 					repment = applySuffix(ft.to, commonThemes[idx][0]);
 
 					expandForms(repment).forEach(function(rm){
@@ -642,10 +636,20 @@ i = 12;
 
 		var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (parents? ' # ' + parents.join(','): '');
 		if(logs.indexOf(line) < 0){
-			var matcher = new RegExp('^' + escapeRegExp(line).replace(/\/[\d,]+/, '/[\\d,]+') + '$'),
-				idx = ArrayHelper.findIndex(logs, function(el){ return el.match(matcher); });
-			if(idx >= 0)
-				logs[idx] = logs[idx].replace(/\/[\d,]+/, '$&,' + line.match(/\/(\d+)/)[1]);
+			var matcher = new RegExp('^' + escapeRegExp(line).replace(/\/[\d,]+/, '/([\\d,]+)') + '$'),
+				idx = ArrayHelper.findIndex(logs, function(el){ return (m = el.match(matcher)); }),
+				m, m2;
+			if(idx >= 0){
+				if(m[1]){
+					m2 = replacement.match(/\/([\d,]+)/);
+					m2 = (m2[1]? ArrayHelper.difference(m2[1].split(','), m[1].split(',')).join(','): '');
+				}
+				else
+					m2 = [];
+
+				if(m2.length)
+					logs[idx] = logs[idx].replace(/\/[\d,]+/, '$&,' + m2);
+			}
 			else
 				logs.push(line);
 		}
@@ -849,9 +853,7 @@ if(base != undefined && base.replaced != 0)
 	};
 
 	/** @private */
-	var generateIndicativePresent = function(type, t){
-		var conj = getIrregularVerbConjugation.call(this, type);
-
+	var generateIndicativePresent = function(type, t, conj){
 		if(t.themeT12 || t.themeT5 || t.themeT8 || t.themeT10){
 			if(t.themeT8){
 				if(this.verb.irregularity.eser){
@@ -899,12 +901,8 @@ if(base != undefined && base.replaced != 0)
 //					insert.call(this, 8, '([^i])>$1' + INTERROGATIVE_MARK_2S);
 				}
 				var third = t.themeT8 + (!this.verb.irregularity.verb.match(/darStarFar|s?aver/)? (this.verb.irregularity.eser? 'é': 'e'): '');
-				insert.call(this, 8, third.substr(t.themeT8.length));
+				insert.call(this, 8, third.substr(t.themeT8.length) + FINAL_CONSONANT_VOICING);
 //				insert.call(this, 8, third.substr(t.themeT8.length) + INTERROGATIVE_MARK_3);
-				if(third.match(/[ei]$/)){
-//					insert.call(this, 8, '[ei]>' + FINAL_CONSONANT_VOICING);
-//					insert.call(this, 8, '[ei]>' + INTERROGATIVE_MARK_3);
-				}
 				if(t.themeT10 && t.themeT10 !== third){
 					//FIXME
 					//if(this.verb.irregularity.eser)
@@ -960,7 +958,7 @@ if(base != undefined && base.replaced != 0)
 	};
 
 	/** @private */
-	var generateIndicativeImperfect = function(type, t){
+	var generateIndicativeImperfect = function(t){
 		if(t.themeT2 || t.themeT11){
 			if(t.themeT2){
 				var tmp = (this.verb.irregularity.eser? 'r': '(v)');
@@ -1004,7 +1002,7 @@ if(base != undefined && base.replaced != 0)
 	};
 
 	/** @private */
-	var generateIndicativeFuture = function(type, t){
+	var generateIndicativeFuture = function(t){
 		if(t.themeT4){
 			insert.call(this, 4, 'ron');
 //			insert.call(this, 4, 'ron' + INTERROGATIVE_MARK_1_2);
@@ -1032,8 +1030,7 @@ if(base != undefined && base.replaced != 0)
 	};
 
 	/** @private */
-	var generateSubjunctivePresent = function(type, t){
-		var conj = getIrregularVerbConjugation.call(this, type);
+	var generateSubjunctivePresent = function(type, t, conj){
 		t = t.subjunctive || t;
 
 		if(t.themeT12 || t.themeT5 || t.themeT8){
@@ -1083,7 +1080,7 @@ if(base != undefined && base.replaced != 0)
 	};
 
 	/** @private */
-	var generateSubjunctiveImperfect = function(type, t){
+	var generateSubjunctiveImperfect = function(t){
 		t = t.subjunctive || t;
 
 		if(t.themeT2 || t.themeT11){
@@ -1105,7 +1102,7 @@ if(base != undefined && base.replaced != 0)
 	};
 
 	/** @private */
-	var generateConditionalSimple = function(type, t){
+	var generateConditionalSimple = function(t){
 		if(t.themeT4){
 			insert.call(this, 4, 'rí[ae]');
 //			insert.call(this, 4, 'rí[ae]' + INTERROGATIVE_MARK_1_1);
@@ -1129,9 +1126,7 @@ if(base != undefined && base.replaced != 0)
 	};
 
 	/** @private */
-	var generateImperativePresent = function(type, t){
-		var conj = getIrregularVerbConjugation.call(this, type);
-
+	var generateImperativePresent = function(t, conj){
 		if(t.themeT5 || t.themeT9){
 			if(t.themeT9)
 				insert.call(this, 9, PRONOMENAL_MARK_IMPERATIVE);
@@ -1147,7 +1142,7 @@ if(base != undefined && base.replaced != 0)
 	};
 
 	/** @private */
-	var generateInfinitiveSimple = function(type, t){
+	var generateInfinitiveSimple = function(t){
 		if(t.themeT1){
 			var pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK: '');
 			insert.call(this, 1, 'r' + pronomenalMark);
@@ -1156,13 +1151,13 @@ if(base != undefined && base.replaced != 0)
 	};
 
 	/** @private */
-	var generateParticipleImperfect = function(type, t){
+	var generateParticipleImperfect = function(t){
 		if(t.themeT7)
 			insert.call(this, 7, 'nte');
 	};
 
 	/** @private */
-	var generateParticiplePerfect = function(type, t){
+	var generateParticiplePerfect = function(t){
 		t = t.participlePerfect || t;
 
 		if(t.themeT2 || t.themeT6 || t.themeT7){
@@ -1189,8 +1184,7 @@ if(base != undefined && base.replaced != 0)
 			}
 		}, this);
 
-//FIXME
-/*		if(t.themeT8){
+		if(t.themeT8){
 			var strong = generateParticiplePerfectStrong.call(this, t.themeT8);
 			if(strong){
 				insert.call(this, 8, WHOLE_WORD + Word.unmarkDefaultStress(strong + 'o') + FINAL_CONSONANT_VOICING);
@@ -1198,11 +1192,11 @@ if(base != undefined && base.replaced != 0)
 				insert.call(this, 8, WHOLE_WORD + Word.unmarkDefaultStress(strong + 'a'));
 				insert.call(this, 8, WHOLE_WORD + Word.unmarkDefaultStress(strong + 'e'));
 			}
-		}*/
+		}
 	};
 
 	/** @private */
-	var generateGerundSimple = function(type, t){
+	var generateGerundSimple = function(t){
 		if(t.themeT2 || t.themeT7){
 			var pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK: '');
 			if(t.themeT2)
