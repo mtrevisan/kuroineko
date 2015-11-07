@@ -24,9 +24,28 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		FINAL_CONSONANT_VOICING = '/44';
 
 	var reductions = [
+		//T2
 		[13, 'o', '[oaie]'],
-		[14, 'o', '(v)o\/13', '(v)imo'],
-		[15, 'se', 's[ei]'],
+		[14, 'se', 's[ei]', 'simo'],
+		[15, 'sto', 'sto\/13', 'se\/14'],
+		[16, 'o', '(v)o\/13', '(v)imo'],
+		[17, 'o', 'ro\/13', 'rimo'],
+		//T4
+		[18, 'rà', 'rà' + MARKER_FLAGS, 'r[èéò]', 'remo', 'ron', 'ren', 'rí[ae]', 'resi', 'résimo', 'r(is)ié', 'r(is)(i)on(se)', 'r(is)en(se)', 'rave'],
+		//T5
+		[19, '', MARKER_FLAGS, 'mo'],
+		[20, '', '', '(de/ge)'],
+		//T6
+		[21, 'à', 'à' + MARKER_FLAGS, '(d)o\/13'],
+		[22, 'ú', 'ú' + MARKER_FLAGS, '(d)o\/13'],
+		[23, 'í', 'í' + MARKER_FLAGS, '(d)o\/13'],
+		[24, '', MARKER_FLAGS, '(d)o\/13'],
+		//uú
+		//T11
+//		[20, 'on', '(iv)ié', 'iv(i)on(se)', '(iv)en(se)', 'on(e/se)', '(is)en(e/se)', 'is(i)on(e/se)'],
+//		[21, 'on', '(iv)ié', 'iv(i)on(se)', '(iv)en(se)', '(i)on(e/se)', '(is)en(e/se)', 'is(i)on(e/se)']
+
+/*		[15, 'se', 's[ei]'],
 		[16, 'rè', 'r[èéò]', 'ri(mo)'],
 		[17, 'ría', 'rí[ae]', 'r(is)ié', 'r(is)(i)on(se)', 'r(is)en(se)'],
 		[18, '', 'mo'],
@@ -51,7 +70,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		[37, 'on', 'on\/35', '(i)on(e)'],
 		[38, 'on', 'en(e)', '(i)é(de/ge)'],
 		[39, 'on', 'on\/38', 'on(e)'],
-		[40, 'on', 'on\/38', '(i)on(e)']
+		[40, 'on', 'on\/38', '(i)on(e)']/**/
 	];
 
 
@@ -66,10 +85,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		});
 
 //		generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10]);
-		generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7]);
+//		generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7]);
 //		generateTheme(verbs, infinitiveThemes, 4, 0, [11]);
 //		generateTheme(verbs, infinitiveThemes, 5, 2);
-//		generateTheme(verbs, infinitiveThemes, 6, 2);
+		generateTheme(verbs, infinitiveThemes, 6, 2);
 //		generateTheme(verbs, infinitiveThemes, 7, 2);
 //		generateTheme(verbs, infinitiveThemes, 8, 0, [12]);
 //		generateTheme(verbs, infinitiveThemes, 9, 0);
@@ -221,7 +240,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	var storeSuffix = function(logs, i, replaced, replacement, flags, constraint, parents){
 		if(!replaced)
 			replaced = 0;
-		replacement = addFlag(replacement, flags);
+		replacement = addFlagToMarker(replacement, flags);
 		if(!constraint && replaced != 0)
 			constraint = replaced;
 
@@ -243,11 +262,25 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			return replacement.replace(MARKER_FLAGS, '');
 
 		replacement = (replacement.indexOf('/') >= 0?
+			replacement.replace(PATTERN_FLAGS, '/' + flag + ',$1'):
+			replacement + '/' + flag);
+
+		return replacement.replace(PATTERN_FLAGS, function(value){
+			return '/' + ArrayHelper.unique(value.match(/[\d,]+/)[0].split(',')).sort().join(',');
+		});
+	};
+
+	/** @private */
+	var addFlagToMarker = function(replacement, flag){
+		if(!flag)
+			return replacement.replace(MARKER_FLAGS, '');
+
+		replacement = (replacement.indexOf('/') >= 0?
 			replacement.replace(PATTERN_FLAGS, '/' + flag + ',$1').replace(MARKER_FLAGS, ''):
 			replacement.replace(MARKER_FLAGS, '/' + flag));
 
 		return replacement.replace(PATTERN_FLAGS, function(value){
-			return ArrayHelper.unique(value.split(',')).join(',');
+			return '/' + ArrayHelper.unique(value.match(/[\d,]+/)[0].split(',')).sort().join(',');
 		});
 	};
 
@@ -292,8 +325,8 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 				if(containsAll)
 					reduction.forEach(function(red){
 						re = new RegExp(escapeRegExp(red) + '$');
-						sublist.suffixes.forEach(function(suffix, i){
-							sublist.suffixes[i] = suffix.replace(re, substitution + '/' + flag);
+						sublist.suffixes = sublist.suffixes.map(function(suffix){
+							return (suffix.match(re)? addFlag(suffix.replace(re, substitution), flag): suffix);
 						});
 					});
 
@@ -304,9 +337,9 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			//merge identical transformations with different flags
 			var parts = ArrayHelper.partition(ArrayHelper.unique(sublist.suffixes), function(el){ return el.replace(/(\/[\d,]+)?$/, ''); });
 			sublist.suffixes = Object.keys(parts).map(function(part){
-				var flags = parts[part]
-					.map(function(el){ return (el.match(/^.+\/[\d,]+$/)? el.replace(/^.+\//, ''): ''); })
-					.filter(function(el){ return el; })
+				var flags = ArrayHelper.unique(ArrayHelper.flatten(parts[part]
+					.map(function(el){ return (el.match(/^.*\/[\d,]+$/)? el.replace(/^.*\//, '').split(','): ''); })
+					.filter(function(el){ return el; })))
 					.sort()
 					.join(',');
 				return (flags? part + '/' + flags: part);
@@ -428,9 +461,9 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			var tmp = (verb.irregularity.eser? 'r': '(v)');
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT2 + tmp + 'o').replace(/o$/, '[oaie]'));
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT2 + tmp + 'imo'));
+			var tmp = (verb.irregularity.eser? 'r': 'v');
+			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT2 + tmp + 'o').replace(/vo$/, '(v)o').replace(/o$/, '[oaie]'));
+			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT2 + tmp + 'imo').replace(/vimo$/, '(v)imo'));
 		}
 	};
 
@@ -1041,13 +1074,9 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 
 
 	/** @private */
-	var getOrigin = function(themes, verb, theme, parentTheme){
+	var getOrigin = function(themes, verb, theme){
 		if(theme == 0)
 			return verb.infinitive;
-
-		var t = 'themeT' + theme;
-//		if(parentTheme && themes[parentTheme] && themes[parentTheme][t])
-//			themes = themes[parentTheme];
 
 		var suffix;
 		if(theme == 2)
@@ -1059,7 +1088,8 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			return third.replace(/\(.+\)/g, '');
 		}
 
-		return (themes[t]? themes[t] + (suffix? suffix: ''): undefined);
+		theme = 'themeT' + theme;
+		return (themes[theme]? themes[theme] + (suffix? suffix: ''): undefined);
 	};
 
 	/** @private */
