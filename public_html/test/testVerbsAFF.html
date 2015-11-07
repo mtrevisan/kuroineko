@@ -511,7 +511,7 @@ var start = +new Date();
 				verbs.push(new Verb(composeInfinitive(infinitive)));
 			});
 			paradigmEndings = (new Bla()).generate(verbs);
-console.log(((+new Date() - start) / 60000).toFixed(2) + ' min');
+console.log(((+new Date() - start) / 60000).toFixed(1) + ' min');
 		});/**/
 
 if(true)
@@ -530,7 +530,7 @@ var start = +new Date();
 				}
 			});
 			AFFFileRules.generate(verbs);
-console.log(((+new Date() - start) / 1000).toFixed(2) + ' s');
+console.log(((+new Date() - start) / 1000).toFixed(1) + ' s');
 		});/**/
 
 if(false)
@@ -592,7 +592,7 @@ T4 = T1: senŧa aŧento | à > e
 					}
 				});
 			});
-console.log(((+new Date() - start) / 60000).toFixed(2) + ' min');
+console.log(((+new Date() - start) / 60000).toFixed(1) + ' min');
 
 //			applyReductions(list);
 

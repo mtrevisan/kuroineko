@@ -398,12 +398,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			var strong = generateParticiplePerfectStrong.call(this, t.themeT8);
 			if(strong){
 				var root = namespace(this.paradigm, 'participle', 'perfect', IRREGULAR, 'strong');
-				if(strong){
-					root.general = generateEntireDeclination(strong);
+				root.general = generateEntireDeclination(strong);
 
-					if(strong.match(/[^aeiouàèéíòóú]$/))
-						root.general.singularMasculine2 = PhonologyHelper.finalConsonantVoicing(strong, 'northern');
-				}
+				if(strong.match(/[^aeiouàèéíòóú]$/))
+					root.general.singularMasculine2 = PhonologyHelper.finalConsonantVoicing(strong, 'northern');
 			}
 		}
 	};
@@ -418,7 +416,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			if(t.themeT7)
 				person.regular2 = (this.verb.conjugation == 3? t.themeT7 + 'ndo' + pronomenalMark: undefined);
 			if(this.verb.irregularity.eser)
-				person.archaic = 'siàndo' + pronomenalMark;
+				person.archaic = (this.verb.infinitive.substr(0, this.verb.infinitive.length - 'èser'.length)) + 'siàndo' + pronomenalMark;
 			else if(this.verb.irregularity.aver)
 				person.archaic = (this.verb.infinitive.substr(0, this.verb.infinitive.length - 'aver'.length)) + 'abiàndo' + pronomenalMark;
 		}

@@ -83,7 +83,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 //		[12, 'e', 'a', 'o\/4', '([^i])>$1i', '[ei]>\/4', '\/4'],
 	];
 	var logsSimplifications = [
-//		[12, {replaced: 0, replacement: '\/15,1'}, {replaced: 0, replacement: 'emo\/17'}, {replaced: 'ar', replacement: 'en\/24,8'}, {replaced: 'r', replacement: 'nte\/20'}, {replaced: 'ar', replacement: 'on\/25,9'}, {replaced: 'ar', replacement: 'à\/19'}, {replaced: 'ar', replacement: 'àsimo\/16'}, {replaced: 'r', replacement: '\/22,2'}, {replaced: 'ar', replacement: 'è\/18'}, {replaced: 'r', replacement: 'o\/38,7,4'}],
+		[12, {replaced: 0, replacement: '\/15,1'}, {replaced: 0, replacement: 'emo\/17'}, {replaced: 'ar', replacement: 'en\/24,8'}, {replaced: 'r', replacement: 'nte\/20'}, {replaced: 'ar', replacement: 'on\/25,9'}, {replaced: 'ar', replacement: 'à\/19'}, {replaced: 'ar', replacement: 'àsimo\/16'}, {replaced: 'r', replacement: '\/22,2'}, {replaced: 'ar', replacement: 'è\/18'}, {replaced: 'r', replacement: 'o\/38,7,4'}],
 //		[13, {replaced: 0, replacement: '\/15,1'}, {replaced: 0, replacement: 'emo\/17'}, {replaced: 'ir', replacement: 'en\/24,8'}, {replaced: 'ir', replacement: 'ente\/28'}, {replaced: 'ir', replacement: 'on\/25,9'}, {replaced: 'ir', replacement: 'í\/19'}, {replaced: 'ir', replacement: 'ísimo\/16'}, {replaced: 'r', replacement: '\/41,11'}],
 //		[14, {replaced: 0, replacement: '\/15,1'}, {replaced: 0, replacement: 'emo\/17'}, {replaced: 'ir', replacement: 'en\/24,8'}, {replaced: 'ir', replacement: 'ente\/28'}, {replaced: 'ir', replacement: 'on\/25,9'}, {replaced: 'ir', replacement: 'í\/19'}, {replaced: 'ir', replacement: 'ísimo\/16'}, {replaced: 'r', replacement: '\/41,11,22'}, {replaced: 'ir', replacement: 'e\/21,12'}]
 	];
@@ -127,7 +127,7 @@ console.log(commonThemes);
 
 		printThemesSimplifications(themesSimplifications);
 		i = printLogsSimplifications(logsSimplifications);
-i = 12;
+//i = 12;
 		SUFFIXES_BASE_INDEX = i;
 
 		i = printThemes(commonThemes, i);
@@ -566,13 +566,10 @@ i = 12;
 				th = 'themeT' + theme;
 				el.infinitives.forEach(function(inf){
 					themes = infinitives[inf];
-//case: sorbir-sorb(ís)
-//if(themes[REGULAR][th] && themes[REGULAR][th].indexOf('(') >= 0)
-//	console.log('ads');
 
 //FIXME
 //what if fromTo.infinitive does not span all of the infinitives?
-					parts = extractCommonPartsFromStart(inf, themes[REGULAR][th] || themes[IRREGULAR][th]);
+parts = extractCommonPartsFromStart(inf, themes[REGULAR][th] || themes[IRREGULAR][th]);
 					k = ArrayHelper.findIndex(fromTo, function(el){ return (el.from == parts.a && el.to == parts.b); });
 					if(k < 0)
 						fromTo.push({from: parts.a, to: parts.b, infinitive: inf});
