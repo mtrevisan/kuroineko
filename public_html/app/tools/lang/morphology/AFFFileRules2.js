@@ -23,44 +23,66 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	/** @constant */
 		FINAL_CONSONANT_VOICING = '/44';
 
-	var reductions = [
-		//T2
-		[13, 'o', '[oaie]'],
-		[13, 'se', 's[ei]', 'simo'],
-		[13, 'sto', 'sto\/13', 'se\/13'],
-		[14, 'avo', 'a(v)o\/13', 'à(v)imo'],
-		[14, 'evo', 'e(v)o\/13', 'é(v)imo'],
-		[14, 'ivo', 'i(v)o\/13', 'í(v)imo'],
-		[15, 'o', 'ro\/13', 'rimo'],
-		//T4
-		[16, 'rà', 'rà' + MARKER_FLAGS, 'r[èéò]', 'remo', 'ron', 'ren', 'rí[ae]', 'resi', 'résimo', 'r(is)ié', 'r(is)(i)on(se)', 'r(is)en(se)', 'rave'],
-		//T5
-		[17, '', '' + MARKER_FLAGS, 'mo'],
-		[18, '', '', '(de/ge)'],
-		//T6
-		[19, 'à', 'à' + MARKER_FLAGS, '(d)o\/13'],
-		[19, 'ú', 'ú' + MARKER_FLAGS, '(d)o\/13'],
-		[19, 'í', 'í' + MARKER_FLAGS, '(d)o\/13'],
-		[20, '', '' + MARKER_FLAGS, '(d)o\/13'],
-		//T8
-		[21, 'a', '[ae]'],
-		[21, 'e', '[oe]'],
-		[21, 'on', '(i)on'],
-		[22, 'o', '(g)o'],
-		[22, 'a', '(g)a'],
-		[22, 'a', '(g)i'],
-		//T11
-		[23, 'on', 'is(i)on(e/se)', 'iv(i)on(se)', '(i)on(e/se)', '(i)on(se)', '(is)en(e/se)', '(iv)en(se)', '(iv)ié'],
-		//[23, '[cijɉñ]on', 'on\/23', 'cijɉñon(e/se)', 'cijɉñon(se)'],
-		[23, 'con', 'on\/23', 'con(e/se)', 'con(se)'],
-		[23, 'jon', 'on\/23', 'jon(e/se)', 'jon(se)'],
-		[23, 'ñon', 'on\/23', 'ñon(e/se)', 'ñon(se)'],
-		//T12
-		[24, 'on', '(i)on(e)\/18', 'on' + MARKER_FLAGS + '\/18', 'en(e)\/18', 'nen\/18', 'né\/18'],
-		[25, 'on', '(i)on(e)\/18', 'on' + MARKER_FLAGS + '\/18', 'en(e)\/18', 'ken\/18', 'ké\/18'],
-		[25, 'on', '(i)on(e)\/18', 'on' + MARKER_FLAGS + '\/18', 'en(e)\/18', 'ten\/18', 'té\/18'],
-		[25, 'on', '(i)on(e)\/18', 'on' + MARKER_FLAGS + '\/18', 'en(e)\/18', 'sen\/18', 'sé\/18', '(i)é\/18'],
-	];
+	var reductions = {
+		2: [
+			[13, 'o', '[oaie]'],
+//			[14, 'sto', 'sto/13', '(v)o/13', 'à(v)imo', 's[ei]', 'àsimo', 'ndo/41' + MARKER_FLAGS],
+//			[14, 'sto', 'ixesto/13', 'ixe(v)o/13', 'ixé(v)imo', 'ixes[ei]', 'ixésimo', 'ixendo/41' + MARKER_FLAGS]
+//			[13, 'sto', 'sto/13', 's[ei]', 'simo', 'ndo' + MARKER_FLAGS + '/5,6,7'],
+//			[14, 'avo', 'a(v)o/13', 'à(v)imo'],
+//			[14, 'evo', 'e(v)o/13', 'é(v)imo'],
+//			[14, 'ivo', 'i(v)o/13', 'í(v)imo'],
+//			[15, 'o', 'ro/13', 'rimo'],
+//			[16, 'àvimo', 'à(v)imo', 'àsto/13,5,6,7', '(v)o/13,5,6,7', 'ndo/41,5,6,7', 'sto/13,5,6,7']
+		],
+		4: [
+			[16, 'rà', 'rà' + MARKER_FLAGS, 'r[èéò]', 'remo', 'ron', 'ren', 'rí[ae]', 'resi', 'résimo', 'r(is)ié', 'r(is)(i)on(se)', 'r(is)en(se)', 'rave'],
+		],
+		5: [
+			[17, '', '' + MARKER_FLAGS, 'mo'],
+			[18, '', '', '(de/ge)']
+		],
+		6: [
+			[19, 'à', 'à' + MARKER_FLAGS, '(d)o/13'],
+			[19, 'ú', 'ú' + MARKER_FLAGS, '(d)o/13'],
+			[19, 'í', 'í' + MARKER_FLAGS, '(d)o/13'],
+			[20, '', '' + MARKER_FLAGS, '(d)o/13']
+		],
+		8: [
+			[21, 'a', '[ae]'],
+			[21, 'e', '[oe]'],
+			[21, 'on', '(i)on'],
+			[22, 'o', '(g)o'],
+			[22, 'a', '(g)a'],
+			[22, 'a', '(g)i']
+		],
+		11: [
+			[23, 'on', 'is(i)on(e/se)', 'iv(i)on(se)', '(i)on(e/se)', '(i)on(se)', '(is)en(e/se)', '(iv)en(se)', '(iv)ié'],
+			//[23, '[cijɉñ]on', 'on/23', 'cijɉñon(e/se)', 'cijɉñon(se)'],
+			[23, 'con', 'on/23', 'con(e/se)', 'con(se)'],
+			[23, 'ion', 'on/23', 'ion(e/se)', 'ion(se)'],
+			[23, 'jon', 'on/23', 'jon(e/se)', 'jon(se)'],
+			[23, 'ɉon', 'on/23', 'ɉon(e/se)', 'ɉon(se)'],
+			[23, 'ñon', 'on/23', 'ñon(e/se)', 'ñon(se)']
+		],
+		12: [
+			[24, '>on', '>(i)on(e)/18', '>on' + MARKER_FLAGS + '/18', '>en(e)/18'],
+			//[25, 'on', 'on/24', '[bcdđklnrst]en/18', '[bcdđklnrst]é/18'],
+			[26, 'con', 'con' + MARKER_FLAGS + '/18', 'con(e)/18', 'cen(e)/18', 'cen/18', 'cé/18']
+
+//			[25, 'on', 'on/24', 'ben/18', 'bé/18'],
+//			[25, 'on', 'on/24', 'cen/18', 'cé/18'],
+//			[25, 'on', 'on/24', 'den/18', 'dé/18'],
+//			[25, 'on', 'on/24', 'đen/18', 'đé/18'],
+//			[25, 'on', 'on/24', 'ken/18', 'ké/18'],
+//			[25, 'on', 'on/24', 'len/18', 'lé/18'],
+//			[25, 'on', 'on/24', 'nen/18', 'né/18'],
+//			[25, 'on', 'on/24', 'ren/18', 'ré/18'],
+//			[25, 'on', 'on/24', 'sen/18', 'sé/18'],
+//			[25, 'on', 'on/24', 'ten/18', 'té/18'],
+//			[26, 'on', '(is)on/24', '(is)en/18', '(is)é/18', '(is)(i)é/18'],
+		]
+	};
 
 
 	/**
@@ -74,7 +96,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		});
 
 //		generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10]);
-//		generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7]);
+		generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7]);
 //		generateTheme(verbs, infinitiveThemes, 4, 0, [11]);
 //		generateTheme(verbs, infinitiveThemes, 5, 2);
 //		generateTheme(verbs, infinitiveThemes, 6, 2);
@@ -83,7 +105,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 //		generateTheme(verbs, infinitiveThemes, 9, 0);
 //		generateTheme(verbs, infinitiveThemes, 10, 0);
 //		generateTheme(verbs, infinitiveThemes, 11, 4);
-		generateTheme(verbs, infinitiveThemes, 12, 8);
+//		generateTheme(verbs, infinitiveThemes, 12, 8);
 	};
 
 	var generateTheme = function(verbs, infinitiveThemes, theme, originTheme, flags){
@@ -193,9 +215,11 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 			}
 		});
 
-		reduceEndings(paradigm);
+		paradigm = compactEqualSuffixes(paradigm);
 
-		paradigm = compactEndings(paradigm);
+		reductions[theme] = collectCommonSuffixes(paradigm, 13);
+
+		reduceSuffixes(paradigm, theme);
 
 		constraintToInfinitives(paradigm, origins);
 
@@ -299,26 +323,28 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	};
 
 	/** @private */
-	var reduceEndings = function(list){
+	var collectCommonSuffixes = function(list, i){
+		var sls = [];
 		list.forEach(function(sublist){
-			do{
-				var i, j, m, partA, partB, chr;
-				for(i = reductions.length - 1; i >= 0; i --)
-					for(j = reductions[i].length - 1; j >= 2; j --)
-						if(reductions[i][j].match(/^[^\(\[]/))
-							sublist.suffixes.forEach(function(suffix, k){
-								m = suffix.match(/^(.+)>(.+)$/);
-								partA = m[1];
-								partB = m[2];
-								while(reductions[i][j].match(new RegExp('^.+' + escapeRegExp(partB) + '$'))){
-									chr = sublist.origin[sublist.origin.length - partA.length - 1];
-									partA = chr + partA;
-									partB = chr + partB;
-								}
-								sublist.suffixes[k] = partA + '>' + partB;
-							});
+			var sl = sublist.suffixes.map(function(el){ return el.replace(/^.+>/, ''); }).sort().join(',');
+			if(sls.indexOf(sl) < 0)
+				sls.push(sl);
+		});
+		return sls.map(function(sl){
+			sl = sl.split(',');
+			return [i ++, extractSimpleForm(sl[0])].concat(sl);
+		});
+	};
 
-			}while(reduceList(sublist));
+	/** @private */
+	var extractSimpleForm = function(form){
+		return form.replace(/\(.+\)/g, '').replace(/\[.+\]/g, function(value){ return value.split('')[1]; });
+	};
+
+	/** @private */
+	var reduceSuffixes = function(list, theme){
+		list.forEach(function(sublist){
+			reduceList(sublist, theme);
 
 			//merge identical transformations with different flags
 			var parts = ArrayHelper.partition(ArrayHelper.unique(sublist.suffixes), function(el){ return el.replace(/(\/[\d,]+)?$/, ''); });
@@ -334,11 +360,10 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	};
 
 	/** @private */
-	var reduceList = function(sublist){
-		var reduced = false,
-			flag, substitution,
+	var reduceList = function(sublist, theme){
+		var flag, substitution,
 			reductionRE;
-		reductions.forEach(function(reduction){
+		reductions[theme].forEach(function(reduction){
 			flag = reduction.shift();
 			substitution = reduction.shift();
 
@@ -349,21 +374,38 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 					sublist.suffixes = sublist.suffixes.map(function(suffix){
 						return (suffix.match(re)? addFlag(suffix.replace(re, substitution), flag): suffix);
 					});
-					reduced = true;
 				});
 
 			reduction.unshift(substitution);
 			reduction.unshift(flag);
 		});
-		return reduced;
 	};
 
+	/** @private */
+	var unmarkDefaultStress = function(word){
+		var idx = Word.getIndexOfStress(word);
+		if(idx >= 0){
+			//exclude unmark from words that can be truncated like "fenisié(de)" or "(g)à"
+			var tmp = (!word.match(/^(re)?\(?g?\)?(à\/è|à|é|ò)$/) && !word.match(/^\(?x?\)?é$|^s[éí]$/)
+					&& !word.match(/^((r[ei])?d[àé]|(kon(tra)?|likue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?f[àé]|(mal|move|soto)?st[àé])$/)
+					&& !word.match(/^(và[oaie]?|vé)$/)
+					&& !word.match(/^s[àò]$/)
+					&& !word.match(/^(|as?|des?|es|kon|pro|re|so)tr[àé]$/)?
+				word.replace(/[àéíóú]/g, function(chr){ return 'aeiou'['àéíóú'.indexOf(chr)]; }): word);
+			if(word == Word.markDefaultStress(tmp))
+				word = tmp;
+		}
+
+		return word;
+	};
+
+	/** @private */
 	var escapeRegExp = function(word){
 		return word.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
 	};
 
 	/** @private */
-	var compactEndings = function(list){
+	var compactEqualSuffixes = function(list){
 		var compacted = [],
 			data;
 		for(var i = list.length - 1; i >= 0; i --){
@@ -446,7 +488,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	/** @private */
 	var generateThemeT1InfinitiveSimple = function(paradigm, verb, themes, type, origins, theme){
 		themes = themes[type];
-		var origin = Word.unmarkDefaultStress(getOrigin(themes, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT1 && !origin)
 			throw 'error on origin for theme T1 ' + themes.themeT1 + ' infinitive simple';
@@ -456,15 +498,15 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 
 			var pronomenalMark = (!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK: '');
 
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT1 + 'r') + pronomenalMark + MARKER_FLAGS);
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT1 + 're'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT1 + 'r') + pronomenalMark + MARKER_FLAGS);
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT1 + 're'));
 		}
 	};
 
 	/** @private */
 	var generateThemeT2IndicativeImperfect = function(paradigm, verb, themes, type, origins, theme){
 		themes = themes[type];
-		var origin = Word.unmarkDefaultStress(getOrigin(themes, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT2 && !origin)
 			throw 'error on origin for theme T2 ' + themes.themeT2 + ' indicative imperfect';
@@ -473,8 +515,8 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 				origins.push(origin);
 
 			var tmp = (verb.irregularity.eser? 'r': 'v');
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT2 + tmp + 'o').replace(/vo$/, '(v)o').replace(/o$/, '[oaie]'));
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT2 + tmp + 'imo').replace(/vimo$/, '(v)imo'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + tmp + 'o').replace(/vo$/, '(v)o').replace(/o$/, '[oaie]'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + tmp + 'imo').replace(/vimo$/, '(v)imo'));
 		}
 	};
 
@@ -482,7 +524,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	var generateThemeT2SubjunctiveImperfect = function(paradigm, verb, themes, type, origins, theme){
 		themes = themes[type];
 		themes = themes.subjunctive || themes;
-		var origin = Word.unmarkDefaultStress(getOrigin(themes, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT2 && !origin)
 			throw 'error on origin for theme T2 ' + themes.themeT2 + ' subjunctive imperfect';
@@ -490,8 +532,8 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT2 + 'se').replace(/e$/, '[ei]'));
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT2 + 'simo'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'se').replace(/e$/, '[ei]'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'simo'));
 		}
 	};
 
@@ -499,7 +541,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	var generateThemeT2ParticiplePerfect = function(paradigm, verb, themes, type, origins, theme){
 		themes = themes[type];
 		themes = themes.participlePerfect || themes;
-		var origin = Word.unmarkDefaultStress(getOrigin(themes, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT2 && !origin)
 			throw 'error on origin for theme T2 ' + themes.themeT2 + ' participle perfect';
@@ -507,14 +549,14 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT2 + 'sto').replace(/o$/, '[oaie]'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'sto').replace(/o$/, '[oaie]'));
 		}
 	};
 
 	/** @private */
 	var generateThemeT2GerundSimple = function(paradigm, verb, themes, type, origins, theme){
 		themes = themes[type];
-		var origin = Word.unmarkDefaultStress(getOrigin(themes, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT2 && !origin)
 			throw 'error on origin for theme T2 ' + themes.themeT2 + ' gerund simple';
@@ -524,18 +566,18 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 
 			var pronomenalMark = (!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK: '');
 
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT2 + 'ndo') + pronomenalMark + MARKER_FLAGS);
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'ndo') + pronomenalMark + MARKER_FLAGS);
 			if(verb.irregularity.eser)
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(verb.infinitive.substr(0, verb.infinitive.length - 'èser'.length) + 'siàndo') + pronomenalMark);
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(verb.infinitive.substr(0, verb.infinitive.length - 'èser'.length) + 'siàndo') + pronomenalMark);
 			else if(verb.irregularity.aver)
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(verb.infinitive.substr(0, verb.infinitive.length - 'aver'.length) + 'abiàndo') + pronomenalMark);
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(verb.infinitive.substr(0, verb.infinitive.length - 'aver'.length) + 'abiàndo') + pronomenalMark);
 		}
 	};
 
 	/** @private */
 	var generateThemeT4IndicativeFuture = function(paradigm, verb, themes, type, origins, theme){
 		themes = themes[type];
-		var origin = Word.unmarkDefaultStress(getOrigin(themes, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT4 && !origin)
 			throw 'error on origin for theme T4 ' + themes.themeT4 + ' indicative future';
@@ -543,14 +585,14 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT4 + 'rà') + MARKER_FLAGS);
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT4 + 'rè').replace(/è$/, '[èéò]'));
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT4 + 'rémo'));
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT4 + 'rón'));
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT4 + 'rén'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rà') + MARKER_FLAGS);
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rè').replace(/è$/, '[èéò]'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rémo'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rón'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rén'));
 			if(verb.conjugation == 2){
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT4 + 'rí'));
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT4 + 'rímo'));
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rí'));
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rímo'));
 			}
 		}
 	};
@@ -558,7 +600,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	/** @private */
 	var generateThemeT4ConditionalSimple = function(paradigm, verb, themes, type, origins, theme){
 		themes = themes[type];
-		var origin = Word.unmarkDefaultStress(getOrigin(themes, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT4 && !origin)
 			throw 'error on origin for theme T4 ' + themes.themeT4 + ' conditional simple';
@@ -566,24 +608,24 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT4 + 'ría').replace(/a$/, '[ae]'));
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT4 + 'rési'));
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT4 + 'résimo'));
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT4 + 'rié').replace(/ié$/, '(is)ié'));
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT4 + 'rón').replace(/on$/, '(is)(i)on(se)'));
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT4 + 'rén').replace(/en$/, '(is)en(se)'));
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT4 + 'ràve'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ría').replace(/a$/, '[ae]'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rési'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'résimo'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rié').replace(/ié$/, '(is)ié'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rón').replace(/on$/, '(is)(i)on(se)'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rén').replace(/en$/, '(is)en(se)'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ràve'));
 		}
 	};
 
 	/** @private */
 	var generateThemeT5IndicativePresent = function(paradigm, verb, themes, type, origins, theme){
 		var t = themes[type];
-		var origin = Word.unmarkDefaultStress(getOrigin(t, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(t, verb, theme));
 
 		if(t.themeT5 && !origin){
 			t = themes[REGULAR];
-			origin = Word.unmarkDefaultStress(getOrigin(t, verb, theme));
+			origin = unmarkDefaultStress(getOrigin(t, verb, theme));
 
 			if(!origin)
 				throw 'error on origin for theme T5 ' + t.themeT5 + ' indicative present';
@@ -596,11 +638,11 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 
 			var conj = getIrregularVerbConjugation(type, verb);
 
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT5) + MARKER_FLAGS);
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT5.replace(/è$/, 'é') + 'mo'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5) + MARKER_FLAGS);
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/è$/, 'é') + 'mo'));
 			if(conj == 2){
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT5.replace(/i?é$/, 'í')));
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT5.replace(/i?é$/, 'í') + 'mo'));
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/i?é$/, 'í')));
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/i?é$/, 'í') + 'mo'));
 			}
 		}
 	};
@@ -609,12 +651,12 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	var generateThemeT5SubjunctivePresent = function(paradigm, verb, themes, type, origins, theme){
 		var t = themes[type];
 		t = t.subjunctive || t;
-		var origin = Word.unmarkDefaultStress(getOrigin(t, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(t, verb, theme));
 
 		if(t.themeT5 && !origin){
 			t = themes[REGULAR];
 			t = t.subjunctive || t;
-			origin = Word.unmarkDefaultStress(getOrigin(t, verb, theme));
+			origin = unmarkDefaultStress(getOrigin(t, verb, theme));
 
 			if(!origin)
 				throw 'error on origin for theme T5 ' + t.themeT5 + ' subjunctive present';
@@ -627,18 +669,18 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 
 			var conj = getIrregularVerbConjugation(type, verb);
 
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT5));
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT5.replace(/è$/, 'é') + 'mo'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/è$/, 'é') + 'mo'));
 			if(conj == 2 && themes.themeT5.replace(/i?é$/, 'í') != themes.themeT5){
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT5.replace(/i?é$/, 'í')));
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT5.replace(/i?é$/, 'í') + 'mo'));
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/i?é$/, 'í')));
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/i?é$/, 'í') + 'mo'));
 			}
 			if(conj != 2){
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT5.replace(/[èí]$/, 'é')));
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/[èí]$/, 'é')));
 
 				if(conj == 3 && !verb.special3rd){
-					insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT5));
-					insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT5 + '(de/ge)'));
+					insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5));
+					insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5 + '(de/ge)'));
 				}
 			}
 		}
@@ -647,11 +689,11 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	/** @private */
 	var generateThemeT5ImperativePresent = function(paradigm, verb, themes, type, origins, theme){
 		var t = themes[type];
-		var origin = Word.unmarkDefaultStress(getOrigin(t, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(t, verb, theme));
 
 		if(t.themeT5 && !origin){
 			t = themes[REGULAR];
-			origin = Word.unmarkDefaultStress(getOrigin(t, verb, theme));
+			origin = unmarkDefaultStress(getOrigin(t, verb, theme));
 
 			if(!origin)
 				throw 'error on origin for theme T5 ' + t.themeT5 + ' imperative present';
@@ -664,11 +706,11 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 
 			var conj = getIrregularVerbConjugation(type, verb);
 
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT5) + PRONOMENAL_MARK_IMPERATIVE);
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5) + PRONOMENAL_MARK_IMPERATIVE);
 			if(conj == 2)
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT5.replace(/i?é$/, 'í')) + PRONOMENAL_MARK_IMPERATIVE);
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/i?é$/, 'í')) + PRONOMENAL_MARK_IMPERATIVE);
 			else
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT5.replace(/[èí]$/, 'é')) + PRONOMENAL_MARK_IMPERATIVE);
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/[èí]$/, 'é')) + PRONOMENAL_MARK_IMPERATIVE);
 
 		}
 	};
@@ -677,12 +719,12 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	var generateThemeT6ParticiplePerfect = function(paradigm, verb, themes, type, origins, theme){
 		var t = themes[type];
 		t = t.participlePerfect || t;
-		var origin = Word.unmarkDefaultStress(getOrigin(t, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(t, verb, theme));
 
 		if(t.themeT6 && !origin){
 			t = themes[REGULAR];
 			t = t.participlePerfect || t;
-			origin = Word.unmarkDefaultStress(getOrigin(t, verb, theme));
+			origin = unmarkDefaultStress(getOrigin(t, verb, theme));
 
 			if(!origin)
 				throw 'error on origin for theme T6 ' + t.themeT6 + ' participle perfect';
@@ -693,15 +735,15 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT6) + MARKER_FLAGS);
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT6 + 'do').replace(/do$/, '(d)[oaie]'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT6) + MARKER_FLAGS);
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT6 + 'do').replace(/do$/, '(d)[oaie]'));
 		}
 	};
 
 	/** @private */
 	var generateThemeT7ParticipleImperfect = function(paradigm, verb, themes, type, origins, theme){
 		themes = themes[type];
-		var origin = Word.unmarkDefaultStress(getOrigin(themes, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT7 && !origin)
 			throw 'error on origin for theme T7 ' + themes.themeT7 + ' participle imperfect';
@@ -709,7 +751,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT7 + 'nte') + MARKER_FLAGS);
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT7 + 'nte') + MARKER_FLAGS);
 		}
 	};
 
@@ -717,7 +759,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	var generateThemeT7ParticiplePerfect = function(paradigm, verb, themes, type, origins, theme){
 		themes = themes[type];
 		themes = themes.participlePerfect || themes;
-		var origin = Word.unmarkDefaultStress(getOrigin(themes, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT7 && !origin)
 			throw 'error on origin for theme T7 ' + themes.themeT7 + ' participle perfect';
@@ -726,14 +768,14 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 				origins.push(origin);
 
 			if(verb.conjugation == 3)
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT7 + 'sto').replace(/o$/, '[oaie]'));
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT7 + 'sto').replace(/o$/, '[oaie]'));
 		}
 	};
 
 	/** @private */
 	var generateThemeT7GerundSimple = function(paradigm, verb, themes, type, origins, theme){
 		themes = themes[type];
-		var origin = Word.unmarkDefaultStress(getOrigin(themes, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT7 && !origin)
 			throw 'error on origin for theme T7 ' + themes.themeT7 + ' gerund simple';
@@ -743,7 +785,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 
 			if(verb.conjugation == 3){
 				var pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK: '');
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT7 + 'ndo') + pronomenalMark);
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT7 + 'ndo') + pronomenalMark);
 			}
 		}
 	};
@@ -751,7 +793,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	/** @private */
 	var generateThemeT8IndicativePresent = function(paradigm, verb, themes, type, origins, theme){
 		themes = themes[type];
-		var origin = Word.unmarkDefaultStress(getOrigin(themes, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT8 && !origin)
 			throw 'error on origin for theme T8 ' + themes.themeT8 + ' indicative present';
@@ -761,27 +803,27 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 
 			expandForm(themes.themeT8).forEach(function(t){
 				if(verb.irregularity.eser)
-					insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t + 'ón').replace(/([^cijɉñ])on$/, '$1(i)on'));
+					insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(t + 'ón').replace(/([^cijɉñ])on$/, '$1(i)on'));
 				else if(verb.irregularity.aver)
-					insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t).replace(/à$/, '[àèò]'));
+					insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(t).replace(/à$/, '[àèò]'));
 				else{
-					insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t + 'o').replace(/o$/, '[oe]'));
-//					insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(PhonologyHelper.finalConsonantVoicing(t, 'northern')));
+					insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(t + 'o').replace(/o$/, '[oe]'));
+//					insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(PhonologyHelper.finalConsonantVoicing(t, 'northern')));
 
 					if(verb.irregularity.verb && type == IRREGULAR){
 						if(verb.irregularity.saver)
-							insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t.replace(/à$/, 'ò')));
+							insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(t.replace(/à$/, 'ò')));
 						else
-							insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t + 'o').replace(/([aeiouàèéíòóú])o$/, '$1(g)o'));
+							insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(t + 'o').replace(/([aeiouàèéíòóú])o$/, '$1(g)o'));
 					}
 				}
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t.replace(/([^i])$/, '$1' + (!verb.irregularity.verb.match(/andar|darStarFar|s?aver/) || !t.match(/à$/)? 'i': ''))));
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(t.replace(/([^i])$/, '$1' + (!verb.irregularity.verb.match(/andar|darStarFar|s?aver/) || !t.match(/à$/)? 'i': ''))));
 				var third = t + (!verb.irregularity.verb.match(/darStarFar|s?aver/)? (verb.irregularity.eser? 'é': 'e'): '');
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(third) + MARKER_FLAGS);
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(third) + MARKER_FLAGS);
 //				if(third.match(/[ei]$/))
-//					insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(PhonologyHelper.finalConsonantVoicing(third.replace(/[ei]$/, ''), 'northern')));
+//					insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(PhonologyHelper.finalConsonantVoicing(third.replace(/[ei]$/, ''), 'northern')));
 				if(verb.irregularity.verb.match(/dixer|traer|toler/))
-					insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t.replace(/[lx]?$/, 'go')));
+					insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(t.replace(/[lx]?$/, 'go')));
 			});
 		}
 	};
@@ -790,7 +832,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	var generateThemeT8SubjunctivePresent = function(paradigm, verb, themes, type, origins, theme){
 		themes = themes[type];
 		themes = themes.subjunctive || themes;
-		var origin = Word.unmarkDefaultStress(getOrigin(themes, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT8 && !origin)
 			throw 'error on origin for theme T8 ' + themes.themeT8 + ' subjunctive present';
@@ -799,21 +841,21 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 				origins.push(origin);
 
 			expandForm(themes.themeT8).forEach(function(t){
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t + 'a').replace(/a$/, '[ae]'));
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t.replace(/([^i])$/, '$1i')));
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(t + 'a').replace(/a$/, '[ae]'));
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(t.replace(/([^i])$/, '$1i')));
 //				if(t.match(/[^aeiouàèéíòóú]$/))
-//					insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(PhonologyHelper.finalConsonantVoicing(t, 'northern')));
+//					insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(PhonologyHelper.finalConsonantVoicing(t, 'northern')));
 
 				if(type == IRREGULAR && !verb.irregularity.verb.match(/(aver|dever|eser)/)){
-					insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t + 'a').replace(/([aeiouàèéíòóú])a$/, '$1(g)a'));
+					insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(t + 'a').replace(/([aeiouàèéíòóú])a$/, '$1(g)a'));
 					if(t.match(/[aeiouàèéíòóú]$/))
-						insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t + 'i').replace(/i$/, '(g)i'));
+						insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(t + 'i').replace(/i$/, '(g)i'));
 					else
-						insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t.replace(/([^i])$/, '$1i')));
+						insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(t.replace(/([^i])$/, '$1i')));
 				}
 
 				if(verb.irregularity.verb.match(/dixer|traer|toler/))
-					insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t + 'a').replace(/[lx]?a$/, 'g[ai]'));
+					insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(t + 'a').replace(/[lx]?a$/, 'g[ai]'));
 			});
 		}
 	};
@@ -828,7 +870,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			}
 		});
 		themes = t;
-		var origin = Word.unmarkDefaultStress(getOrigin(themes, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT8 && !origin)
 			throw 'error on origin for theme T8 ' + themes.themeT8 + ' participle perfect strong';
@@ -838,10 +880,10 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 
 			var strong = generateParticiplePerfectStrong(verb, themes.themeT8);
 			if(strong){
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(strong + 'o').replace(/o$/, '[oaie]'));
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(strong + 'o').replace(/o$/, '[oaie]'));
 
 //				if(strong.match(/[^aeiouàèéíòóú]$/))
-//					insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(PhonologyHelper.finalConsonantVoicing(strong, 'northern')));
+//					insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(PhonologyHelper.finalConsonantVoicing(strong, 'northern')));
 			}
 		}
 	};
@@ -966,7 +1008,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	/** @private */
 	var generateThemeT9ImperativePresent = function(paradigm, verb, themes, type, origins, theme){
 		themes = themes[type];
-		var origin = Word.unmarkDefaultStress(getOrigin(themes, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT9 && !origin)
 			throw 'error on origin for theme T9 ' + themes.themeT9 + ' imperative present';
@@ -975,7 +1017,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 				origins.push(origin);
 
 			expandForm(themes.themeT9).forEach(function(t){
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t) + PRONOMENAL_MARK_IMPERATIVE + MARKER_FLAGS);
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(t) + PRONOMENAL_MARK_IMPERATIVE + MARKER_FLAGS);
 			});
 		}
 	};
@@ -983,7 +1025,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	/** @private */
 	var generateThemeT10IndicativePresent = function(paradigm, verb, themes, type, origins, theme){
 		themes = themes[type];
-		var origin = Word.unmarkDefaultStress(getOrigin(themes, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT10 && !origin)
 			throw 'error on origin for theme T10 ' + themes.themeT10 + ' indicative present';
@@ -994,13 +1036,13 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			expandForm(themes.themeT10).forEach(function(t){
 				var third = themes.themeT8 + (!verb.irregularity.verb.match(/darStarFar|s?aver/)? (verb.irregularity.eser? 'é': 'e'): '');
 				if(themes.themeT8 && t != third)
-//					insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t).replace(/([ae])$/, '($1)') + MARKER_FLAGS);
-					insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t) + MARKER_FLAGS);
+//					insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(t).replace(/([ae])$/, '($1)') + MARKER_FLAGS);
+					insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(t) + MARKER_FLAGS);
 				if(!themes.themeT8){
-					insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t) + MARKER_FLAGS);
+					insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(t) + MARKER_FLAGS);
 //					var thirdNorthernOriental = PhonologyHelper.finalConsonantVoicing(t.replace(/[ae]$/, ''), 'northern');
 //					if(t != thirdNorthernOriental)
-//						insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(thirdNorthernOriental));
+//						insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(thirdNorthernOriental));
 				}
 			});
 		}
@@ -1009,7 +1051,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	/** @private */
 	var generateThemeT11IndicativeImperfect = function(paradigm, verb, themes, type, origins, theme){
 		themes = themes[type];
-		var origin = Word.unmarkDefaultStress(getOrigin(themes, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT11 && !origin)
 			throw 'error on origin for theme T11 ' + themes.themeT11 + ' indicative imperfect';
@@ -1017,10 +1059,10 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT11 + 'ié').replace(/ié$/, '(iv)ié'));
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT11 + 'ón').replace(/on$/, (!themes.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'on(se)'));
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT11 + 'ivón').replace(/on$/, '(i)on(se)'));
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT11 + 'én').replace(/en$/, '(iv)en(se)'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT11 + 'ié').replace(/ié$/, '(iv)ié'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT11 + 'ón').replace(/on$/, (!themes.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'on(se)'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT11 + 'ivón').replace(/on$/, '(i)on(se)'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT11 + 'én').replace(/en$/, '(iv)en(se)'));
 		}
 	};
 
@@ -1028,7 +1070,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	var generateThemeT11SubjunctiveImperfect = function(paradigm, verb, themes, type, origins, theme){
 		themes = themes[type];
 		themes = themes.subjunctive || themes;
-		var origin = Word.unmarkDefaultStress(getOrigin(themes, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT11 && !origin)
 			throw 'error on origin for theme T11 ' + themes.themeT11 + ' sybjunctive imperfect';
@@ -1036,16 +1078,16 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT11 + 'ón').replace(/on$/, (!themes.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'on(e/se)'));
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT11 + 'isón').replace(/on$/, '(i)on(e/se)'));
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT11 + 'én').replace(/en$/, '(is)en(e/se)'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT11 + 'ón').replace(/on$/, (!themes.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'on(e/se)'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT11 + 'isón').replace(/on$/, '(i)on(e/se)'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT11 + 'én').replace(/en$/, '(is)en(e/se)'));
 		}
 	};
 
 	/** @private */
 	var generateThemeT12IndicativePresent = function(paradigm, verb, themes, type, origins, theme){
 		themes = themes[type];
-		var origin = Word.unmarkDefaultStress(getOrigin(themes, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT12 && !origin)
 			throw 'error on origin for theme T12 ' + themes.themeT12 + ' indicative present';
@@ -1055,10 +1097,10 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 
 			var conj = getIrregularVerbConjugation(type, verb);
 
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT12 + 'ón') + MARKER_FLAGS);
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT12 + 'én'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT12 + 'ón') + MARKER_FLAGS);
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT12 + 'én'));
 			if(themes.themeT5 && conj != 2)
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT12 + 'é'));
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT12 + 'é'));
 		}
 	};
 
@@ -1066,7 +1108,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	var generateThemeT12SubjunctivePresent = function(paradigm, verb, themes, type, origins, theme){
 		themes = themes[type];
 		themes = themes.subjunctive || themes;
-		var origin = Word.unmarkDefaultStress(getOrigin(themes, verb, theme));
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT12 && !origin)
 			throw 'error on origin for theme T12 ' + themes.themeT12 + ' subjunctive present';
@@ -1074,11 +1116,11 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT12 + 'ón').replace(/on$/, (!themes.themeT12.match(/[cijɉñ]$/)? '(i)': '') + 'on(e)'));
-			insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT12 + 'én').replace(/en$/, 'en(e)'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT12 + 'ón').replace(/on$/, (!themes.themeT12.match(/[cijɉñ]$/)? '(i)': '') + 'on(e)'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT12 + 'én').replace(/en$/, 'en(e)'));
 			if(themes.themeT5){
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT12 + 'é').replace(/é$/, (verb.special3rd? '(i)': '') + 'é'));
-				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(themes.themeT12 + 'é').replace(/é$/, (verb.special3rd? '(i)': '') + 'é(de/ge)'));
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT12 + 'é').replace(/é$/, (verb.special3rd? '(i)': '') + 'é'));
+				insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT12 + 'é').replace(/é$/, (verb.special3rd? '(i)': '') + 'é(de/ge)'));
 			}
 		}
 	};
