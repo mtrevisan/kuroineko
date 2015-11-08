@@ -50,30 +50,16 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		[22, 'a', '(g)a'],
 		[22, 'a', '(g)i'],
 		//T11
-//		[20, 'on', '(iv)ié', 'iv(i)on(se)', '(iv)en(se)', 'on(e/se)', '(is)en(e/se)', 'is(i)on(e/se)'],
-//		[21, 'on', '(iv)ié', 'iv(i)on(se)', '(iv)en(se)', '(i)on(e/se)', '(is)en(e/se)', 'is(i)on(e/se)']
-
-/*		[15, 'se', 's[ei]'],
-		[16, 'rè', 'r[èéò]', 'ri(mo)'],
-		[17, 'ría', 'rí[ae]', 'r(is)ié', 'r(is)(i)on(se)', 'r(is)en(se)'],
-		[18, '', 'mo'],
-		[19, '', '(de/ge)'],
-		[20, 'o', '(d)o\/13'],
-		[21, 'on', '(i)on'],
-		[22, 'à', '[àèò]'],
-		[28, 'ga', 'g[ai]'],
-		[29, 'on', '(iv)ié', 'iv(i)on(se)', '(iv)en(se)'],
-		[30, 'on', 'on\/29', 'on(se)'],
-		[31, 'on', 'on\/29', '(i)on(se)'],
-		[32, 'on', 'is(i)on(e/se)', '(is)en(e/se)'],
-		[33, 'on', 'on\/32', 'on(e/se)'],
-		[34, 'on', 'on\/32', '(i)on(e/se)'],
-		[35, 'on', 'en(e)', 'é(de/ge)'],
-		[36, 'on', 'on\/35', 'on(e)'],
-		[37, 'on', 'on\/35', '(i)on(e)'],
-		[38, 'on', 'en(e)', '(i)é(de/ge)'],
-		[39, 'on', 'on\/38', 'on(e)'],
-		[40, 'on', 'on\/38', '(i)on(e)']/**/
+		[23, 'on', 'is(i)on(e/se)', 'iv(i)on(se)', '(i)on(e/se)', '(i)on(se)', '(is)en(e/se)', '(iv)en(se)', '(iv)ié'],
+		//[23, '[cijɉñ]on', 'on\/23', 'cijɉñon(e/se)', 'cijɉñon(se)'],
+		[23, 'con', 'on\/23', 'con(e/se)', 'con(se)'],
+		[23, 'jon', 'on\/23', 'jon(e/se)', 'jon(se)'],
+		[23, 'ñon', 'on\/23', 'ñon(e/se)', 'ñon(se)'],
+		//T12
+		[24, 'on', '(i)on(e)\/18', 'on' + MARKER_FLAGS + '\/18', 'en(e)\/18', 'nen\/18', 'né\/18'],
+		[25, 'on', '(i)on(e)\/18', 'on' + MARKER_FLAGS + '\/18', 'en(e)\/18', 'ken\/18', 'ké\/18'],
+		[25, 'on', '(i)on(e)\/18', 'on' + MARKER_FLAGS + '\/18', 'en(e)\/18', 'ten\/18', 'té\/18'],
+		[25, 'on', '(i)on(e)\/18', 'on' + MARKER_FLAGS + '\/18', 'en(e)\/18', 'sen\/18', 'sé\/18', '(i)é\/18'],
 	];
 
 
@@ -94,10 +80,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 //		generateTheme(verbs, infinitiveThemes, 6, 2);
 //		generateTheme(verbs, infinitiveThemes, 7, 2);
 //		generateTheme(verbs, infinitiveThemes, 8, 0, [12]);
-		generateTheme(verbs, infinitiveThemes, 9, 0);
+//		generateTheme(verbs, infinitiveThemes, 9, 0);
 //		generateTheme(verbs, infinitiveThemes, 10, 0);
 //		generateTheme(verbs, infinitiveThemes, 11, 4);
-//		generateTheme(verbs, infinitiveThemes, 12, 8);
+		generateTheme(verbs, infinitiveThemes, 12, 8);
 	};
 
 	var generateTheme = function(verbs, infinitiveThemes, theme, originTheme, flags){
