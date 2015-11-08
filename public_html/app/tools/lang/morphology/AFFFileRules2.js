@@ -27,20 +27,21 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		//T2
 		[13, 'o', '[oaie]'],
 		[14, 'se', 's[ei]', 'simo'],
-		[15, 'sto', 'sto\/13', 'se\/14'],
-		[16, 'o', '(v)o\/13', '(v)imo'],
-		[17, 'o', 'ro\/13', 'rimo'],
+		[17, 'sto', 'sto\/13', 'se\/14'],
+		[18, 'avo', 'a(v)o\/13', 'à(v)imo'],
+		[19, 'evo', 'e(v)o\/13', 'é(v)imo'],
+		[20, 'ivo', 'i(v)o\/13', 'í(v)imo'],
+		[21, 'o', 'ro\/13', 'rimo'],
 		//T4
-		[18, 'rà', 'rà' + MARKER_FLAGS, 'r[èéò]', 'remo', 'ron', 'ren', 'rí[ae]', 'resi', 'résimo', 'r(is)ié', 'r(is)(i)on(se)', 'r(is)en(se)', 'rave'],
+		[22, 'rà', 'rà' + MARKER_FLAGS, 'r[èéò]', 'remo', 'ron', 'ren', 'rí[ae]', 'resi', 'résimo', 'r(is)ié', 'r(is)(i)on(se)', 'r(is)en(se)', 'rave'],
 		//T5
-		[19, '', MARKER_FLAGS, 'mo'],
-		[20, '', '', '(de/ge)'],
+		[23, '', '' + MARKER_FLAGS, 'mo'],
+		[24, '', '', '(de/ge)'],
 		//T6
-		[21, 'à', 'à' + MARKER_FLAGS, '(d)o\/13'],
-		[22, 'ú', 'ú' + MARKER_FLAGS, '(d)o\/13'],
-		[23, 'í', 'í' + MARKER_FLAGS, '(d)o\/13'],
-		[24, '', MARKER_FLAGS, '(d)o\/13'],
-		//uú
+		[25, 'à', 'à' + MARKER_FLAGS, '(d)o\/13'],
+		[26, 'ú', 'ú' + MARKER_FLAGS, '(d)o\/13'],
+		[27, 'í', 'í' + MARKER_FLAGS, '(d)o\/13'],
+		[28, '', '' + MARKER_FLAGS, '(d)o\/13'],
 		//T11
 //		[20, 'on', '(iv)ié', 'iv(i)on(se)', '(iv)en(se)', 'on(e/se)', '(is)en(e/se)', 'is(i)on(e/se)'],
 //		[21, 'on', '(iv)ié', 'iv(i)on(se)', '(iv)en(se)', '(i)on(e/se)', '(is)en(e/se)', 'is(i)on(e/se)']
@@ -88,8 +89,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 //		generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7]);
 //		generateTheme(verbs, infinitiveThemes, 4, 0, [11]);
 //		generateTheme(verbs, infinitiveThemes, 5, 2);
-		generateTheme(verbs, infinitiveThemes, 6, 2);
-//		generateTheme(verbs, infinitiveThemes, 7, 2);
+//		generateTheme(verbs, infinitiveThemes, 6, 2);
+		generateTheme(verbs, infinitiveThemes, 7, 2);
 //		generateTheme(verbs, infinitiveThemes, 8, 0, [12]);
 //		generateTheme(verbs, infinitiveThemes, 9, 0);
 //		generateTheme(verbs, infinitiveThemes, 10, 0);
@@ -312,27 +313,24 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	/** @private */
 	var reduceEndings = function(list){
 		list.forEach(function(sublist){
-			reductions.forEach(function(reduction){
-				var flag = reduction.shift(),
-					substitution = reduction.shift(),
-					re;
+			do{
+				var i, j, m, partA, partB, chr;
+				for(i = reductions.length - 1; i >= 0; i --)
+					for(j = reductions[i].length - 1; j >= 2; j --)
+						if(reductions[i][j].match(/^[^\(\[]/))
+							sublist.suffixes.forEach(function(suffix, k){
+								m = suffix.match(/^(.+)>(.+)$/);
+								partA = m[1];
+								partB = m[2];
+								while(reductions[i][j].match(new RegExp('^.+' + escapeRegExp(partB) + '$'))){
+									chr = sublist.origin[sublist.origin.length - partA.length - 1];
+									partA = chr + partA;
+									partB = chr + partB;
+								}
+								sublist.suffixes[k] = partA + '>' + partB;
+							});
 
-				//reduce suffixes
-				var containsAll = reduction.map(function(red){
-					re = new RegExp(escapeRegExp(red) + '$');
-					return sublist.suffixes.some(function(suffix){ return suffix.match(re); });
-				}).every(function(el){ return el; });
-				if(containsAll)
-					reduction.forEach(function(red){
-						re = new RegExp(escapeRegExp(red) + '$');
-						sublist.suffixes = sublist.suffixes.map(function(suffix){
-							return (suffix.match(re)? addFlag(suffix.replace(re, substitution), flag): suffix);
-						});
-					});
-
-				reduction.unshift(substitution);
-				reduction.unshift(flag);
-			});
+			}while(reduceList(sublist));
 
 			//merge identical transformations with different flags
 			var parts = ArrayHelper.partition(ArrayHelper.unique(sublist.suffixes), function(el){ return el.replace(/(\/[\d,]+)?$/, ''); });
@@ -345,6 +343,31 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 				return (flags? part + '/' + flags: part);
 			});
 		});
+	};
+
+	/** @private */
+	var reduceList = function(sublist){
+		var reduced = false,
+			flag, substitution,
+			reductionRE;
+		reductions.forEach(function(reduction){
+			flag = reduction.shift();
+			substitution = reduction.shift();
+
+			//reduce suffixes
+			reductionRE = reduction.map(function(red){ return new RegExp(escapeRegExp(red) + '$'); });
+			if(reductionRE.every(function(re){ return sublist.suffixes.some(function(suffix){ return suffix.match(re); }); }))
+				reductionRE.forEach(function(re){
+					sublist.suffixes = sublist.suffixes.map(function(suffix){
+						return (suffix.match(re)? addFlag(suffix.replace(re, substitution), flag): suffix);
+					});
+					reduced = true;
+				});
+
+			reduction.unshift(substitution);
+			reduction.unshift(flag);
+		});
+		return reduced;
 	};
 
 	var escapeRegExp = function(word){
@@ -1099,35 +1122,13 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 
 	/** @private */
 	var insert = function(paradigm, infinitive, origin, suffix){
-		//FIXME
-		//cope with reductions...
 		var idx = ArrayHelper.findIndex(paradigm, function(el){ return (el.infinitive == infinitive); }),
 			parts = extractCommonPartsFromStart(origin, suffix, true),
 			data = parts.a + '>' + parts.b;
 		if(idx < 0)
 			paradigm.push({infinitive: infinitive, origin: origin, suffixes: [data]});
-		else if(paradigm[idx].suffixes.indexOf(data) < 0){
-			var exit = false,
-				i, j, re, chr;
-			for(i = reductions.length - 1; !exit && i >= 0; i --)
-				for(j = reductions[i].length - 1; !exit && j >= 2; j --)
-					if(reductions[i][j].match(/^[^\(\[]/)){
-						re = new RegExp(escapeRegExp(reductions[i][j]) + '$');
-						if(suffix.match(re) && !parts.b.match(re)){
-							//expand common part to include the reduction
-							do{
-								chr = suffix[suffix.length - parts.b.length - 1];
-								parts.a = chr + parts.a;
-								parts.b = chr + parts.b;
-								data = parts.a + '>' + parts.b;
-							}while(!parts.b.match(re));
-
-							exit = true;
-						}
-					}
-
+		else if(paradigm[idx].suffixes.indexOf(data) < 0)
 			paradigm[idx].suffixes.push(data);
-		}
 	};
 
 	var expandForm = (function(){
