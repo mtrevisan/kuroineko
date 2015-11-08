@@ -26,22 +26,29 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	var reductions = [
 		//T2
 		[13, 'o', '[oaie]'],
-		[14, 'se', 's[ei]', 'simo'],
-		[17, 'sto', 'sto\/13', 'se\/14'],
-		[18, 'avo', 'a(v)o\/13', 'à(v)imo'],
-		[19, 'evo', 'e(v)o\/13', 'é(v)imo'],
-		[20, 'ivo', 'i(v)o\/13', 'í(v)imo'],
-		[21, 'o', 'ro\/13', 'rimo'],
+		[13, 'se', 's[ei]', 'simo'],
+		[13, 'sto', 'sto\/13', 'se\/13'],
+		[14, 'avo', 'a(v)o\/13', 'à(v)imo'],
+		[14, 'evo', 'e(v)o\/13', 'é(v)imo'],
+		[14, 'ivo', 'i(v)o\/13', 'í(v)imo'],
+		[15, 'o', 'ro\/13', 'rimo'],
 		//T4
-		[22, 'rà', 'rà' + MARKER_FLAGS, 'r[èéò]', 'remo', 'ron', 'ren', 'rí[ae]', 'resi', 'résimo', 'r(is)ié', 'r(is)(i)on(se)', 'r(is)en(se)', 'rave'],
+		[16, 'rà', 'rà' + MARKER_FLAGS, 'r[èéò]', 'remo', 'ron', 'ren', 'rí[ae]', 'resi', 'résimo', 'r(is)ié', 'r(is)(i)on(se)', 'r(is)en(se)', 'rave'],
 		//T5
-		[23, '', '' + MARKER_FLAGS, 'mo'],
-		[24, '', '', '(de/ge)'],
+		[17, '', '' + MARKER_FLAGS, 'mo'],
+		[18, '', '', '(de/ge)'],
 		//T6
-		[25, 'à', 'à' + MARKER_FLAGS, '(d)o\/13'],
-		[26, 'ú', 'ú' + MARKER_FLAGS, '(d)o\/13'],
-		[27, 'í', 'í' + MARKER_FLAGS, '(d)o\/13'],
-		[28, '', '' + MARKER_FLAGS, '(d)o\/13'],
+		[19, 'à', 'à' + MARKER_FLAGS, '(d)o\/13'],
+		[19, 'ú', 'ú' + MARKER_FLAGS, '(d)o\/13'],
+		[19, 'í', 'í' + MARKER_FLAGS, '(d)o\/13'],
+		[20, '', '' + MARKER_FLAGS, '(d)o\/13'],
+		//T8
+		[21, 'a', '[ae]'],
+		[21, 'e', '[oe]'],
+		[21, 'on', '(i)on'],
+		[22, 'o', '(g)o'],
+		[22, 'a', '(g)a'],
+		[22, 'a', '(g)i'],
 		//T11
 //		[20, 'on', '(iv)ié', 'iv(i)on(se)', '(iv)en(se)', 'on(e/se)', '(is)en(e/se)', 'is(i)on(e/se)'],
 //		[21, 'on', '(iv)ié', 'iv(i)on(se)', '(iv)en(se)', '(i)on(e/se)', '(is)en(e/se)', 'is(i)on(e/se)']
@@ -54,11 +61,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		[20, 'o', '(d)o\/13'],
 		[21, 'on', '(i)on'],
 		[22, 'à', '[àèò]'],
-		[23, 'e', '[oe]'],
-		[24, 'a', '[ae]'],
-		[25, 'o', '(g)o'],
-		[26, 'a', '(g)a'],
-		[27, 'a', '(g)i'],
 		[28, 'ga', 'g[ai]'],
 		[29, 'on', '(iv)ié', 'iv(i)on(se)', '(iv)en(se)'],
 		[30, 'on', 'on\/29', 'on(se)'],
@@ -90,9 +92,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 //		generateTheme(verbs, infinitiveThemes, 4, 0, [11]);
 //		generateTheme(verbs, infinitiveThemes, 5, 2);
 //		generateTheme(verbs, infinitiveThemes, 6, 2);
-		generateTheme(verbs, infinitiveThemes, 7, 2);
+//		generateTheme(verbs, infinitiveThemes, 7, 2);
 //		generateTheme(verbs, infinitiveThemes, 8, 0, [12]);
-//		generateTheme(verbs, infinitiveThemes, 9, 0);
+		generateTheme(verbs, infinitiveThemes, 9, 0);
 //		generateTheme(verbs, infinitiveThemes, 10, 0);
 //		generateTheme(verbs, infinitiveThemes, 11, 4);
 //		generateTheme(verbs, infinitiveThemes, 12, 8);
@@ -773,7 +775,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 
 			expandForm(themes.themeT8).forEach(function(t){
 				if(verb.irregularity.eser)
-					insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t + 'ón').replace(/[^cijɉñ]on$/, '(i)on'));
+					insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t + 'ón').replace(/([^cijɉñ])on$/, '$1(i)on'));
 				else if(verb.irregularity.aver)
 					insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t).replace(/à$/, '[àèò]'));
 				else{
@@ -784,7 +786,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 						if(verb.irregularity.saver)
 							insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t.replace(/à$/, 'ò')));
 						else
-							insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t + 'o').replace(/[aeiouàèéíòóú]o$/, '(g)o'));
+							insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t + 'o').replace(/([aeiouàèéíòóú])o$/, '$1(g)o'));
 					}
 				}
 				insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t.replace(/([^i])$/, '$1' + (!verb.irregularity.verb.match(/andar|darStarFar|s?aver/) || !t.match(/à$/)? 'i': ''))));
@@ -817,7 +819,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 //					insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(PhonologyHelper.finalConsonantVoicing(t, 'northern')));
 
 				if(type == IRREGULAR && !verb.irregularity.verb.match(/(aver|dever|eser)/)){
-					insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t + 'a').replace(/[aeiouàèéíòóú]a$/, '(g)a'));
+					insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t + 'a').replace(/([aeiouàèéíòóú])a$/, '$1(g)a'));
 					if(t.match(/[aeiouàèéíòóú]$/))
 						insert(paradigm, verb.infinitive, origin, Word.unmarkDefaultStress(t + 'i').replace(/i$/, '(g)i'));
 					else
