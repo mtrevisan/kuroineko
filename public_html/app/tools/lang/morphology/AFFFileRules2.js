@@ -23,66 +23,30 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	/** @constant */
 		FINAL_CONSONANT_VOICING = '/44';
 
-	var reductions = {
+/*	var reductions = {
+//		[13, 'o', '[oaie]'],
+		1: [
+			[14, 'r', 'r' + MARKER_FLAGS, 're'],
+			[15, 'r', 'r' + PRONOMENAL_MARK + MARKER_FLAGS, 're', 'ar' + PRONOMENAL_MARK + MARKER_FLAGS, 'are'],
+			[16, 'r', 'r' + PRONOMENAL_MARK + MARKER_FLAGS, 're', 'òr' + PRONOMENAL_MARK + MARKER_FLAGS, 'òre'],
+			[17, 'r', 'r' + PRONOMENAL_MARK + MARKER_FLAGS, 're', 'ir' + PRONOMENAL_MARK + MARKER_FLAGS, 'ire']/** /
+		],
 		2: [
-			[13, 'o', '[oaie]'],
-//			[14, 'sto', 'sto/13', '(v)o/13', 'à(v)imo', 's[ei]', 'àsimo', 'ndo/41' + MARKER_FLAGS],
-//			[14, 'sto', 'ixesto/13', 'ixe(v)o/13', 'ixé(v)imo', 'ixes[ei]', 'ixésimo', 'ixendo/41' + MARKER_FLAGS]
-//			[13, 'sto', 'sto/13', 's[ei]', 'simo', 'ndo' + MARKER_FLAGS + '/5,6,7'],
-//			[14, 'avo', 'a(v)o/13', 'à(v)imo'],
-//			[14, 'evo', 'e(v)o/13', 'é(v)imo'],
-//			[14, 'ivo', 'i(v)o/13', 'í(v)imo'],
-//			[15, 'o', 'ro/13', 'rimo'],
-//			[16, 'àvimo', 'à(v)imo', 'àsto/13,5,6,7', '(v)o/13,5,6,7', 'ndo/41,5,6,7', 'sto/13,5,6,7']
+/*			[18, 'sto', 'st[oaie]', '(v)[oaie]', 'à(v)imo', 's[ei]', 'àsimo', 'ndo' + PRONOMENAL_MARK + MARKER_FLAGS],
+			[19, 'sto', 'st[oaie]', '(v)[oaie]', 'é(v)imo', 's[ei]', 'ésimo', 'ndo' + PRONOMENAL_MARK + MARKER_FLAGS],
+			[20, 'sto', 'st[oaie]', '(v)[oaie]', 'í(v)imo', 's[ei]', 'ísimo', 'ndo' + PRONOMENAL_MARK + MARKER_FLAGS],
+			[21, 'olvesto', 'olvest[oaie]', 'olve(v)[oaie]', 'olvé(v)imo', 'olves[ei]', 'olvésimo', 'olvendo' + PRONOMENAL_MARK + MARKER_FLAGS]/** /
 		],
-		4: [
-			[16, 'rà', 'rà' + MARKER_FLAGS, 'r[èéò]', 'remo', 'ron', 'ren', 'rí[ae]', 'resi', 'résimo', 'r(is)ié', 'r(is)(i)on(se)', 'r(is)en(se)', 'rave'],
-		],
-		5: [
-			[17, '', '' + MARKER_FLAGS, 'mo'],
-			[18, '', '', '(de/ge)']
-		],
-		6: [
-			[19, 'à', 'à' + MARKER_FLAGS, '(d)o/13'],
-			[19, 'ú', 'ú' + MARKER_FLAGS, '(d)o/13'],
-			[19, 'í', 'í' + MARKER_FLAGS, '(d)o/13'],
-			[20, '', '' + MARKER_FLAGS, '(d)o/13']
-		],
-		8: [
-			[21, 'a', '[ae]'],
-			[21, 'e', '[oe]'],
-			[21, 'on', '(i)on'],
-			[22, 'o', '(g)o'],
-			[22, 'a', '(g)a'],
-			[22, 'a', '(g)i']
-		],
-		11: [
-			[23, 'on', 'is(i)on(e/se)', 'iv(i)on(se)', '(i)on(e/se)', '(i)on(se)', '(is)en(e/se)', '(iv)en(se)', '(iv)ié'],
-			//[23, '[cijɉñ]on', 'on/23', 'cijɉñon(e/se)', 'cijɉñon(se)'],
-			[23, 'con', 'on/23', 'con(e/se)', 'con(se)'],
-			[23, 'ion', 'on/23', 'ion(e/se)', 'ion(se)'],
-			[23, 'jon', 'on/23', 'jon(e/se)', 'jon(se)'],
-			[23, 'ɉon', 'on/23', 'ɉon(e/se)', 'ɉon(se)'],
-			[23, 'ñon', 'on/23', 'ñon(e/se)', 'ñon(se)']
-		],
-		12: [
-			[24, '>on', '>(i)on(e)/18', '>on' + MARKER_FLAGS + '/18', '>en(e)/18'],
-			//[25, 'on', 'on/24', '[bcdđklnrst]en/18', '[bcdđklnrst]é/18'],
-			[26, 'con', 'con' + MARKER_FLAGS + '/18', 'con(e)/18', 'cen(e)/18', 'cen/18', 'cé/18']
-
-//			[25, 'on', 'on/24', 'ben/18', 'bé/18'],
-//			[25, 'on', 'on/24', 'cen/18', 'cé/18'],
-//			[25, 'on', 'on/24', 'den/18', 'dé/18'],
-//			[25, 'on', 'on/24', 'đen/18', 'đé/18'],
-//			[25, 'on', 'on/24', 'ken/18', 'ké/18'],
-//			[25, 'on', 'on/24', 'len/18', 'lé/18'],
-//			[25, 'on', 'on/24', 'nen/18', 'né/18'],
-//			[25, 'on', 'on/24', 'ren/18', 'ré/18'],
-//			[25, 'on', 'on/24', 'sen/18', 'sé/18'],
-//			[25, 'on', 'on/24', 'ten/18', 'té/18'],
-//			[26, 'on', '(is)on/24', '(is)en/18', '(is)é/18', '(is)(i)é/18'],
-		]
-	};
+		4: [],
+		5: [],
+		6: [],
+		7: [],
+		8: [],
+		9: [],
+		10: [],
+		11: [],
+		12: []
+	};/**/
 
 
 	/**
@@ -96,8 +60,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		});
 
 //		generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10]);
-		generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7]);
-//		generateTheme(verbs, infinitiveThemes, 4, 0, [11]);
+//		generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7]);
+		generateTheme(verbs, infinitiveThemes, 4, 0, [11]);
 //		generateTheme(verbs, infinitiveThemes, 5, 2);
 //		generateTheme(verbs, infinitiveThemes, 6, 2);
 //		generateTheme(verbs, infinitiveThemes, 7, 2);
@@ -111,6 +75,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	var generateTheme = function(verbs, infinitiveThemes, theme, originTheme, flags){
 		var paradigm = [],
 			origins = [],
+			reductions = {},
 			themes;
 		verbs.forEach(function(verb){
 			themes = infinitiveThemes[verb.infinitive];
@@ -217,9 +182,11 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 		paradigm = compactEqualSuffixes(paradigm);
 
-		reductions[theme] = collectCommonSuffixes(paradigm, 13);
+		var i = 13;
+		reductions[theme] = collectCommonSuffixes(paradigm, i);
+		i += reductions[theme].length;
 
-		reduceSuffixes(paradigm, theme);
+		reduceSuffixes(paradigm, reductions[theme]);
 
 		constraintToInfinitives(paradigm, origins);
 
@@ -279,7 +246,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			replacement + '/' + flag);
 
 		return replacement.replace(PATTERN_FLAGS, function(value){
-			return '/' + ArrayHelper.unique(value.match(/[\d,]+/)[0].split(',')).sort().join(',');
+			return '/' + ArrayHelper.unique(value.match(/[\d,]+/)[0].split(',')).sort(function(a, b){ return Number(a) - Number(b); }).join(',');
 		});
 	};
 
@@ -289,11 +256,11 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			return replacement.replace(MARKER_FLAGS, '');
 
 		replacement = (replacement.indexOf('/') >= 0?
-			replacement.replace(PATTERN_FLAGS, '/' + flag + ',$1').replace(MARKER_FLAGS, ''):
+			replacement.replace(PATTERN_FLAGS, '/$1,' + flag).replace(MARKER_FLAGS, ''):
 			replacement.replace(MARKER_FLAGS, '/' + flag));
 
 		return replacement.replace(PATTERN_FLAGS, function(value){
-			return '/' + ArrayHelper.unique(value.match(/[\d,]+/)[0].split(',')).sort().join(',');
+			return '/' + ArrayHelper.unique(value.match(/[\d,]+/)[0].split(',')).sort(function(a, b){ return Number(a) - Number(b); }).join(',');
 		});
 	};
 
@@ -323,89 +290,21 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	};
 
 	/** @private */
-	var collectCommonSuffixes = function(list, i){
-		var sls = [];
+	var compactEqualSuffixes = function(list){
+		//merge identical transformations with different flags
+		var parts, flags;
 		list.forEach(function(sublist){
-			var sl = sublist.suffixes.map(function(el){ return el.replace(/^.+>/, ''); }).sort().join(',');
-			if(sls.indexOf(sl) < 0)
-				sls.push(sl);
-		});
-		return sls.map(function(sl){
-			sl = sl.split(',');
-			return [i ++, extractSimpleForm(sl[0])].concat(sl);
-		});
-	};
-
-	/** @private */
-	var extractSimpleForm = function(form){
-		return form.replace(/\(.+\)/g, '').replace(/\[.+\]/g, function(value){ return value.split('')[1]; });
-	};
-
-	/** @private */
-	var reduceSuffixes = function(list, theme){
-		list.forEach(function(sublist){
-			reduceList(sublist, theme);
-
-			//merge identical transformations with different flags
-			var parts = ArrayHelper.partition(ArrayHelper.unique(sublist.suffixes), function(el){ return el.replace(/(\/[\d,]+)?$/, ''); });
+			parts = ArrayHelper.partition(ArrayHelper.unique(sublist.suffixes), function(el){ return el.replace(/(\/[\d,]+)?$/, ''); });
 			sublist.suffixes = Object.keys(parts).map(function(part){
-				var flags = ArrayHelper.unique(ArrayHelper.flatten(parts[part]
+				flags = ArrayHelper.unique(ArrayHelper.flatten(parts[part]
 					.map(function(el){ return (el.match(/^.*\/[\d,]+$/)? el.replace(/^.*\//, '').split(','): ''); })
 					.filter(function(el){ return el; })))
-					.sort()
+					.sort(function(a, b){ return Number(a) - Number(b); })
 					.join(',');
 				return (flags? part + '/' + flags: part);
 			});
 		});
-	};
 
-	/** @private */
-	var reduceList = function(sublist, theme){
-		var flag, substitution,
-			reductionRE;
-		reductions[theme].forEach(function(reduction){
-			flag = reduction.shift();
-			substitution = reduction.shift();
-
-			//reduce suffixes
-			reductionRE = reduction.map(function(red){ return new RegExp(escapeRegExp(red) + '$'); });
-			if(reductionRE.every(function(re){ return sublist.suffixes.some(function(suffix){ return suffix.match(re); }); }))
-				reductionRE.forEach(function(re){
-					sublist.suffixes = sublist.suffixes.map(function(suffix){
-						return (suffix.match(re)? addFlag(suffix.replace(re, substitution), flag): suffix);
-					});
-				});
-
-			reduction.unshift(substitution);
-			reduction.unshift(flag);
-		});
-	};
-
-	/** @private */
-	var unmarkDefaultStress = function(word){
-		var idx = Word.getIndexOfStress(word);
-		if(idx >= 0){
-			//exclude unmark from words that can be truncated like "fenisié(de)" or "(g)à"
-			var tmp = (!word.match(/^(re)?\(?g?\)?(à\/è|à|é|ò)$/) && !word.match(/^\(?x?\)?é$|^s[éí]$/)
-					&& !word.match(/^((r[ei])?d[àé]|(kon(tra)?|likue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?f[àé]|(mal|move|soto)?st[àé])$/)
-					&& !word.match(/^(và[oaie]?|vé)$/)
-					&& !word.match(/^s[àò]$/)
-					&& !word.match(/^(|as?|des?|es|kon|pro|re|so)tr[àé]$/)?
-				word.replace(/[àéíóú]/g, function(chr){ return 'aeiou'['àéíóú'.indexOf(chr)]; }): word);
-			if(word == Word.markDefaultStress(tmp))
-				word = tmp;
-		}
-
-		return word;
-	};
-
-	/** @private */
-	var escapeRegExp = function(word){
-		return word.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
-	};
-
-	/** @private */
-	var compactEqualSuffixes = function(list){
 		var compacted = [],
 			data;
 		for(var i = list.length - 1; i >= 0; i --){
@@ -425,6 +324,80 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			compacted.push(data);
 		}
 		return compacted;
+	};
+
+	/** @private */
+	var collectCommonSuffixes = function(list, i){
+		var sls = [];
+		list.forEach(function(sublist){
+			var parts = ArrayHelper.partition(sublist.suffixes, function(el){ return el.replace(/>.+$/, ''); });
+			Object.keys(parts).forEach(function(part){
+				if(!sls.some(function(sl){ return ArrayHelper.equals(sl, parts[part]); }))
+					sls.push(parts[part]);
+			});
+		});
+		return sls.map(function(sl){
+			return [i ++, extractSimpleForm(sl[0])].concat(sl);
+		});
+	};
+
+	/** @private */
+	var extractSimpleForm = function(form){
+		return form.replace(new RegExp('\\(.+?\\)|\\/[\\d,]+|' + MARKER_FLAGS, 'g'), '').replace(/\[.+\]/g, function(value){ return value.split('')[1]; });
+	};
+
+	/** @private */
+	var reduceSuffixes = function(list, reductions){
+		var flag, substitution,
+			reductionRE;
+		list.forEach(function(sublist){
+			reductions.forEach(function(reduction){
+				flag = reduction.shift();
+				substitution = reduction.shift();
+
+				//reduce suffixes
+				reductionRE = reduction.map(function(red){ return new RegExp('^' + escapeRegExp(red) + '$'); });
+				if(sublist.suffixes.map(function(suffix){ return reductionRE.some(function(re){ return suffix.match(re); }); }).every(function(el){ return el; })){
+//				if(reductionRE.map(function(re){ return sublist.suffixes.some(function(suffix){ return suffix.match(re); }); }).every(function(el){ return el; })){
+					reductionRE.forEach(function(re){
+						sublist.suffixes = sublist.suffixes.map(function(suffix){
+							return (suffix.match(re)? addFlag(suffix.replace(re, substitution), flag): suffix);
+						});
+					});
+
+					sublist.suffixes = ArrayHelper.unique(sublist.suffixes);
+				}
+
+				reduction.unshift(substitution);
+				reduction.unshift(flag);
+			});
+		});
+	};
+
+	/** @private */
+	var unmarkDefaultStress = function(word){
+		if(!word)
+			return undefined;
+
+		var idx = Word.getIndexOfStress(word);
+		if(idx >= 0){
+			//exclude unmark from words that can be truncated like "fenisié(de)" or "(g)à"
+			var tmp = (!word.match(/^(re)?\(?g?\)?(à\/è|à|é|ò)$/) && !word.match(/^\(?x?\)?é$|^s[éí]$/)
+					&& !word.match(/^((r[ei])?d[àé]|(kon(tra)?|likue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?f[àé]|(mal|move|soto)?st[àé])$/)
+					&& !word.match(/^(và[oaie]?|vé)$/)
+					&& !word.match(/^s[àò]$/)
+					&& !word.match(/^(|as?|des?|es|kon|pro|re|so)tr[àé]$/)?
+				word.replace(/[àéíóú]/g, function(chr){ return 'aeiou'['àéíóú'.indexOf(chr)]; }): word);
+			if(word == Word.markDefaultStress(tmp))
+				word = tmp;
+		}
+
+		return word;
+	};
+
+	/** @private */
+	var escapeRegExp = function(word){
+		return word.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
 	};
 
 	/** @private */
@@ -515,7 +488,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 				origins.push(origin);
 
 			var tmp = (verb.irregularity.eser? 'r': 'v');
-			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + tmp + 'o').replace(/vo$/, '(v)o').replace(/o$/, '[oaie]'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + tmp + 'o').replace(/vo$/, '(v)[oaie]'));
 			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + tmp + 'imo').replace(/vimo$/, '(v)imo'));
 		}
 	};
