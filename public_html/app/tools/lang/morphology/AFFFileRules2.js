@@ -60,8 +60,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		});
 
 //		generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10]);
-//		generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7]);
-		generateTheme(verbs, infinitiveThemes, 4, 0, [11]);
+		generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7]);
+//		generateTheme(verbs, infinitiveThemes, 4, 0, [11]);
 //		generateTheme(verbs, infinitiveThemes, 5, 2);
 //		generateTheme(verbs, infinitiveThemes, 6, 2);
 //		generateTheme(verbs, infinitiveThemes, 7, 2);
@@ -186,7 +186,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		reductions[theme] = collectCommonSuffixes(paradigm, i);
 		i += reductions[theme].length;
 
-		reduceSuffixes(paradigm, reductions[theme]);
+//		reduceSuffixes(paradigm, reductions[theme]);
 
 		constraintToInfinitives(paradigm, origins);
 
@@ -327,18 +327,38 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	};
 
 	/** @private */
-	var collectCommonSuffixes = function(list, i){
-		var sls = [];
-		list.forEach(function(sublist){
-			var parts = ArrayHelper.partition(sublist.suffixes, function(el){ return el.replace(/>.+$/, ''); });
-			Object.keys(parts).forEach(function(part){
-				if(!sls.some(function(sl){ return ArrayHelper.equals(sl, parts[part]); }))
-					sls.push(parts[part]);
+	var collectCommonSuffixes = function(list, k){
+		//reorder list by number of suffixes
+		list = list.sort(function(a, b){ return (a.suffixes.length - b.suffixes.length); });
+
+		var sls = [],
+			i, j, idx, parts, len;
+		for(i = list.length - 1; i >= 0; i --){
+			parts = ArrayHelper.partition(list[i].suffixes, function(el){ return el.substr(0, el.indexOf('>')); });
+			Object.keys(parts).forEach(function(idx){
+				parts[idx] = parts[idx].filter(function(el){ return el.match(/[\(\[]/); });
+
+				if(!parts[idx].length)
+					delete parts[idx];
 			});
-		});
-		return sls.map(function(sl){
-			return [i ++, extractSimpleForm(sl[0])].concat(sl);
-		});
+			for(j = i; j >= 0; j --)
+				Object.keys(parts).forEach(function(part){
+					idx = ArrayHelper.findIndex(sls, function(sl){ return ArrayHelper.equals(sl, parts[part]); });
+					if(idx < 0){
+						part = parts[part];
+						idx = sls.length;
+						sls.push(part);
+					}
+					else
+						part = sls[idx];
+
+					len = list[i].suffixes.length;
+					list[i].suffixes = ArrayHelper.difference(list[i].suffixes, part);
+					if(list[i].suffixes.length != len)
+						list[i].suffixes.push(extractSimpleForm(part[0]) + '/' + (k + idx));
+				});
+		}
+		return sls;
 	};
 
 	/** @private */
