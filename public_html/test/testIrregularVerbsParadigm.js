@@ -17,18 +17,18 @@ QUnit.dump.maxDepth = 20;
 			indicative: {
 				present: {
 					regular: {
-						firstSingular: {central_centralNorthern_lagunar_western1: '#àndo', central_centralNorthern_lagunar_western2: '#ànt', general: '#ànde'},
+						firstSingular: {central_centralNorthern_lagunar_western1: '#àndo'/*, central_centralNorthern_lagunar_western2: '#ànt'*/, general: '#ànde'},
 						firstPlural: {general: '#andémo', northern: '#andón', oriental: '#andén', central_western: undefined},
 						secondSingular: {general: '#àndi'},
 						secondPlural: {central_western: undefined, general: '#andè', northern_oriental: '#andé'},
-						third: {archaic: '#ànda', general: '#ànde', northern_oriental: '#ànt'}
+						third: {archaic: '#ànda', general: '#ànde'/*, northern_oriental: '#ànt'*/}
 					},
 					irregular: {
-						firstSingular: {central_centralNorthern_lagunar_western1: '#và(g)o', central_centralNorthern_lagunar_western2: '#và', general: '#vàe'},
+						firstSingular: {central_centralNorthern_lagunar_western1: '#và(g)o'/*, central_centralNorthern_lagunar_western2: '#và'*/, general: '#vàe'},
 						firstPlural: {central_western: undefined, general: '#vémo', northern: '#vón', oriental: '#vén'},
 						secondSingular: {general: '#và'},
 						secondPlural: {central_western: undefined, general: '#vè', northern_oriental: '#vé'},
-						third: {general: '#vàe', archaic: '#và', northern_oriental: '#và'}
+						third: {general: '#vàe', archaic: '#và'/*, northern_oriental: '#và'*/}
 					}
 				},
 				imperfect: {
@@ -57,14 +57,14 @@ QUnit.dump.maxDepth = 20;
 						firstPlural: {general: '#andémo', northern: '#and(i)ón(e)', oriental: '#andén(e)', central_western: undefined},
 						secondSingular: {general: '#àndi'},
 						secondPlural: {centralNorthern: '#andé', general: '#andè', northern_oriental1: '#andé(de/ge)', northern_oriental2: undefined, central_western: undefined},
-						third: {general: '#ànda', northern_oriental1: '#ànde', northern_oriental2: '#ànt'}
+						third: {general: '#ànda', northern_oriental1: '#ànde'/*, northern_oriental2: '#ànt'*/}
 					},
 					irregular: {
 						firstSingular: {general: '#và(g)a', northern_oriental: '#vàe'},
 						firstPlural: {central_western: undefined, general: '#vémo', northern: '#v(i)ón(e)', oriental: '#vén(e)'},
 						secondSingular: {general: '#và(g)i'},
 						secondPlural: {centralNorthern: '#vé', central_western: undefined, general: '#vè', northern_oriental1: '#vé(de/ge)', northern_oriental2: undefined},
-						third: {general: '#và(g)a', northern_oriental1: '#vàe', northern_oriental2: undefined}
+						third: {general: '#và(g)a', northern_oriental1: '#vàe'/*, northern_oriental2: undefined*/}
 					}
 				},
 				imperfect: {
@@ -146,9 +146,9 @@ QUnit.dump.maxDepth = 20;
 						secondPlural: {central_western: undefined, general: '#fè', northern_oriental: '#fé'}
 					},
 					irregular: {
-						firstSingular: {central_centralNorthern_lagunar_western1: '#fà(g)o', central_centralNorthern_lagunar_western2: '#fà', general: '#fàe'},
+						firstSingular: {central_centralNorthern_lagunar_western1: '#fà(g)o'/*, central_centralNorthern_lagunar_western2: '#fà'*/, general: '#fàe'},
 						secondSingular: {general: '#fà'},
-						third: {general: '#fà', northern_oriental: undefined, archaic: undefined}
+						third: {general: '#fà'/*, northern_oriental: undefined*/, archaic: undefined}
 					}
 				},
 				imperfect: {
@@ -179,7 +179,7 @@ QUnit.dump.maxDepth = 20;
 					irregular: {
 						firstSingular: {general: '#fà(g)a', northern_oriental: '#fàe'},
 						secondSingular: {general: '#fà(g)i'},
-						third: {general: '#fà(g)a', northern_oriental1: '#fàe', northern_oriental2: undefined}
+						third: {general: '#fà(g)a', northern_oriental1: '#fàe'/*, northern_oriental2: undefined*/}
 					}
 				},
 				imperfect: {
@@ -229,7 +229,7 @@ QUnit.dump.maxDepth = 20;
 					},
 					irregular: {
 						strong: {
-							general: {singularMasculine: 'fàto', singularMasculine2: 'fàt', singularFeminine: 'fàta', pluralMasculine: 'fàti', pluralFeminine: 'fàte'}
+							general: {singularMasculine: 'fàto'/*, singularMasculine2: 'fàt'*/, singularFeminine: 'fàta', pluralMasculine: 'fàti', pluralFeminine: 'fàte'}
 						}
 					}
 				}
@@ -304,10 +304,10 @@ QUnit.dump.maxDepth = 20;
 				present: {
 					regular: {
 						firstPlural: {central_western: 'devímo', general: 'devémo', northern: 'devón', oriental: 'devén'},
-						firstSingular: {central_centralNorthern_lagunar_western1: 'dévo', central_centralNorthern_lagunar_western2: 'déf', general: 'déve'},
+						firstSingular: {central_centralNorthern_lagunar_western1: 'dévo'/*, central_centralNorthern_lagunar_western2: 'déf'*/, general: 'déve'},
 						secondPlural: {central_western: 'deví', general: 'devé', northern_oriental: undefined},
 						secondSingular: {general: 'dévi'},
-						third: {archaic: undefined, general: 'déve', northern_oriental: 'déf'}
+						third: {archaic: undefined, general: 'déve'/*, northern_oriental: 'déf'*/}
 					}
 				}
 			},
@@ -344,7 +344,7 @@ QUnit.dump.maxDepth = 20;
 						firstSingular: {general: 'débia', northern_oriental: 'débie'},
 						secondPlural: {centralNorthern: undefined, central_western: undefined, general: 'debiè', northern_oriental1: 'debié(de/ge)', northern_oriental2: undefined},
 						secondSingular: {general: 'débi'},
-						third: {general: 'débia', northern_oriental1: 'débie', northern_oriental2: undefined}
+						third: {general: 'débia', northern_oriental1: 'débie'/*, northern_oriental2: undefined*/}
 					}
 				}
 			}
@@ -412,9 +412,9 @@ QUnit.dump.maxDepth = 20;
 				},
 				present: {
 					irregular: {
-						firstSingular: {central_centralNorthern_lagunar_western1: '#sào', central_centralNorthern_lagunar_western2: '#sà', central_centralNorthern_lagunar_western3: '#sò', general: '#sàe'},
+						firstSingular: {central_centralNorthern_lagunar_western1: '#sào'/*, central_centralNorthern_lagunar_western2: '#sà'*/, central_centralNorthern_lagunar_western3: '#sò', general: '#sàe'},
 						secondSingular: {general: '#sà'},
-						third: {archaic: undefined, general: '#sà', northern_oriental: undefined}
+						third: {archaic: undefined, general: '#sà'/*, northern_oriental: undefined*/}
 					},
 					regular: {
 						firstPlural: {central_western: '#savímo', general: '#savémo', northern: '#savón', oriental: '#savén'},
@@ -455,7 +455,7 @@ QUnit.dump.maxDepth = 20;
 						firstSingular: {general: '#sàpia', northern_oriental: '#sàpie'},
 						secondPlural: {centralNorthern: undefined, central_western: undefined, general: '#sapiè', northern_oriental1: '#sapié(de/ge)', northern_oriental2: undefined},
 						secondSingular: {general: '#sàpi'},
-						third: {general: '#sàpia', northern_oriental1: '#sàpie', northern_oriental2: undefined}
+						third: {general: '#sàpia', northern_oriental1: '#sàpie'/*, northern_oriental2: undefined*/}
 					}
 				}
 			}
@@ -540,10 +540,10 @@ QUnit.dump.maxDepth = 20;
 					},
 					regular: {
 						firstPlural: {central_western: '#dixímo', general: '#dixémo', northern: '#dixón', oriental: '#dixén'},
-						firstSingular: {central_centralNorthern_lagunar_western1: '#díxo', central_centralNorthern_lagunar_western2: '#dís', general: '#díxe'},
+						firstSingular: {central_centralNorthern_lagunar_western1: '#díxo'/*, central_centralNorthern_lagunar_western2: '#dís'*/, general: '#díxe'},
 						secondPlural: {central_western: '#dixí', general: '#dixé', northern_oriental: undefined},
 						secondSingular: {general: '#díxi'},
-						third: {archaic: undefined, general: '#díxe', northern_oriental: '#dís'}
+						third: {archaic: undefined, general: '#díxe'/*, northern_oriental: '#dís'*/}
 					}
 				}
 			},
@@ -559,7 +559,7 @@ QUnit.dump.maxDepth = 20;
 				},
 				perfect: {
 					irregular: {
-						strong: {general: {pluralFeminine: 'díte', singularMasculine2: 'dít', pluralMasculine: 'díti', singularFeminine: 'díta', singularMasculine: 'díto'}}
+						strong: {general: {pluralFeminine: 'díte'/*, singularMasculine2: 'dít'*/, pluralMasculine: 'díti', singularFeminine: 'díta', singularMasculine: 'díto'}}
 					},
 					regular: {
 						general: {pluralFeminine: 'dixú(d)e', pluralMasculine: 'dixú(d)i', singularFeminine: 'dixú(d)a', singularMasculine1: 'dixú', singularMasculine2: 'dixú(d)o'},
@@ -589,7 +589,7 @@ QUnit.dump.maxDepth = 20;
 						firstSingular: {general: '#díxa', northern_oriental: '#díxe'},
 						secondPlural: {centralNorthern: undefined, central_western: '#dixí', general: '#dixé', northern_oriental1: '#dixé(de/ge)', northern_oriental2: undefined},
 						secondSingular: {general: '#díxi'},
-						third: {general: '#díxa', northern_oriental1: '#díxe', northern_oriental2: '#dís'}
+						third: {general: '#díxa', northern_oriental1: '#díxe'/*, northern_oriental2: '#dís'*/}
 					}
 				}
 			}
@@ -662,14 +662,14 @@ QUnit.dump.maxDepth = 20;
 				},
 				present: {
 					irregular: {
-						third: {general: '#pòle', northern_oriental: '#pòl'}
+						third: {general: '#pòle'/*, northern_oriental: '#pòl'*/}
 					},
 					regular: {
 						firstPlural: {central_western: '#podímo', general: '#podémo', northern: '#podón', oriental: '#podén'},
-						firstSingular: {central_centralNorthern_lagunar_western1: '#pòdo', central_centralNorthern_lagunar_western2: '#pòt', general: '#pòde'},
+						firstSingular: {central_centralNorthern_lagunar_western1: '#pòdo'/*, central_centralNorthern_lagunar_western2: '#pòt'*/, general: '#pòde'},
 						secondPlural: {central_western: '#podí', general: '#podé', northern_oriental: undefined},
 						secondSingular: {general: '#pòdi'},
-						third: {archaic: undefined, general: '#pòde', northern_oriental: '#pòt'}
+						third: {archaic: undefined, general: '#pòde'/*, northern_oriental: '#pòt'*/}
 					}
 				}
 			},
@@ -706,7 +706,7 @@ QUnit.dump.maxDepth = 20;
 						firstSingular: {general: '#pòda', northern_oriental: '#pòde'},
 						secondPlural: {centralNorthern: undefined, central_western: '#podí', general: '#podé', northern_oriental1: '#podé(de/ge)', northern_oriental2: undefined},
 						secondSingular: {general: '#pòdi'},
-						third: {general: '#pòda', northern_oriental1: '#pòde', northern_oriental2: '#pòt'}
+						third: {general: '#pòda', northern_oriental1: '#pòde'/*, northern_oriental2: '#pòt'*/}
 					}
 				}
 			}
@@ -775,14 +775,14 @@ QUnit.dump.maxDepth = 20;
 				},
 				present: {
 					irregular: {
-						third: {general: '#vièn', northern_oriental: undefined}
+						third: {general: '#vièn'/*, northern_oriental: undefined*/}
 					},
 					regular: {
 						firstPlural: {central_western: '#veñímo', general: '#veñémo', northern: '#veñón', oriental: '#veñén'},
-						firstSingular: {central_centralNorthern_lagunar_western1: '#vèño', central_centralNorthern_lagunar_western2: '#vènc', general: '#vèñe'},
+						firstSingular: {central_centralNorthern_lagunar_western1: '#vèño'/*, central_centralNorthern_lagunar_western2: '#vènc'*/, general: '#vèñe'},
 						secondPlural: {central_western: '#veñí', general: '#veñé', northern_oriental: undefined},
 						secondSingular: {general: '#vèñi'},
-						third: {archaic: undefined, general: '#vèñe', northern_oriental: '#vènc'}
+						third: {archaic: undefined, general: '#vèñe'/*, northern_oriental: '#vènc'*/}
 					}
 				}
 			},
@@ -819,7 +819,7 @@ QUnit.dump.maxDepth = 20;
 						firstSingular: {general: '#vèña', northern_oriental: '#vèñe'},
 						secondPlural: {centralNorthern: undefined, central_western: '#veñí', general: '#veñé', northern_oriental1: '#veñé(de/ge)', northern_oriental2: undefined},
 						secondSingular: {general: '#vèñi'},
-						third: {general: '#vèña', northern_oriental1: '#vèñe', northern_oriental2: '#vènc'}
+						third: {general: '#vèña', northern_oriental1: '#vèñe'/*, northern_oriental2: '#vènc'*/}
 					}
 				}
 			}
@@ -907,14 +907,14 @@ QUnit.dump.maxDepth = 20;
 						firstSingular: {central_centralNorthern_lagunar_western: '#tràgo'},
 						firstPlural: {central_western: undefined, general: '#trémo', northern: '#trón', oriental: '#trén'},
 						secondPlural: {central_western: undefined, general: '#trè', northern_oriental: '#tré'},
-						third: {general: '#trà', northern_oriental: undefined}
+						third: {general: '#trà'/*, northern_oriental: undefined*/}
 					},
 					regular: {
 						firstPlural: {central_western: '#traímo', general: '#traémo', northern: '#traón', oriental: '#traén'},
-						firstSingular: {central_centralNorthern_lagunar_western1: '#trào', central_centralNorthern_lagunar_western2: '#trà', general: '#tràe'},
+						firstSingular: {central_centralNorthern_lagunar_western1: '#trào'/*, central_centralNorthern_lagunar_western2: '#trà'*/, general: '#tràe'},
 						secondPlural: {central_western: '#traí', general: '#traé', northern_oriental: undefined},
 						secondSingular: {general: '#trài'},
-						third: {archaic: undefined, general: '#tràe', northern_oriental: '#trà'}
+						third: {archaic: undefined, general: '#tràe'/*, northern_oriental: '#trà'*/}
 					}
 				}
 			},
@@ -931,7 +931,7 @@ QUnit.dump.maxDepth = 20;
 				perfect: {
 					irregular: {
 						strong: {
-							general: {pluralFeminine: 'tràte', singularMasculine2: 'tràt', pluralMasculine: 'tràti', singularFeminine: 'tràta', singularMasculine: 'tràto'}
+							general: {pluralFeminine: 'tràte'/*, singularMasculine2: 'tràt'*/, pluralMasculine: 'tràti', singularFeminine: 'tràta', singularMasculine: 'tràto'}
 						}
 					},
 					regular: {
@@ -962,7 +962,7 @@ QUnit.dump.maxDepth = 20;
 						firstSingular: {general: '#tràa', northern_oriental: '#tràe'},
 						secondPlural: {centralNorthern: undefined, central_western: '#traí', general: '#traé', northern_oriental1: '#traé(de/ge)', northern_oriental2: undefined},
 						secondSingular: {general: '#trài'},
-						third: {general: '#tràa', northern_oriental1: '#tràe', northern_oriental2: undefined}
+						third: {general: '#tràa', northern_oriental1: '#tràe'/*, northern_oriental2: undefined*/}
 					}
 				}
 			}
@@ -1047,10 +1047,10 @@ QUnit.dump.maxDepth = 20;
 					},
 					regular: {
 						firstPlural: {central_western: '#tolímo', general: '#tolémo', northern: '#tolón', oriental: '#tolén'},
-						firstSingular: {central_centralNorthern_lagunar_western1: '#tòlo', central_centralNorthern_lagunar_western2: '#tòl', general: '#tòle'},
+						firstSingular: {central_centralNorthern_lagunar_western1: '#tòlo'/*, central_centralNorthern_lagunar_western2: '#tòl'*/, general: '#tòle'},
 						secondPlural: {central_western: '#tolí', general: '#tolé', northern_oriental: undefined},
 						secondSingular: {general: '#tòli'},
-						third: {archaic: undefined, general: '#tòle', northern_oriental: '#tòl'}
+						third: {archaic: undefined, general: '#tòle'/*, northern_oriental: '#tòl'*/}
 					}
 				}
 			},
@@ -1067,7 +1067,7 @@ QUnit.dump.maxDepth = 20;
 				perfect: {
 					irregular: {
 						strong: {
-							general: {pluralFeminine: 'tòlte', singularMasculine2: 'tòlt', pluralMasculine: 'tòlti', singularFeminine: 'tòlta', singularMasculine: 'tòlto'}
+							general: {pluralFeminine: 'tòlte'/*, singularMasculine2: 'tòlt'*/, pluralMasculine: 'tòlti', singularFeminine: 'tòlta', singularMasculine: 'tòlto'}
 						}
 					},
 					regular: {
@@ -1098,7 +1098,7 @@ QUnit.dump.maxDepth = 20;
 						firstSingular: {general: '#tòla', northern_oriental: '#tòle'},
 						secondPlural: {centralNorthern: undefined, central_western: '#tolí', general: '#tolé', northern_oriental1: '#tolé(de/ge)', northern_oriental2: undefined},
 						secondSingular: {general: '#tòli'},
-						third: {general: '#tòla', northern_oriental1: '#tòle', northern_oriental2: '#tòl'}
+						third: {general: '#tòla', northern_oriental1: '#tòle'/*, northern_oriental2: '#tòl'*/}
 					}
 				}
 			}
@@ -1168,7 +1168,7 @@ QUnit.dump.maxDepth = 20;
 						firstSingular: {general: 's(i)ón'},
 						secondPlural: {central_western: 'sí', general: 'sé', northern_oriental: undefined},
 						secondSingular: {general: 'si'},
-						third: {archaic: 'é', general: 'sé', northern_oriental: undefined}
+						third: {archaic: 'é', general: 'sé'/*, northern_oriental: undefined*/}
 					}
 				}
 			},
@@ -1209,7 +1209,7 @@ QUnit.dump.maxDepth = 20;
 						firstSingular: {general: 'sípia', northern_oriental: 'sípie'},
 						secondPlural: {centralNorthern: undefined, central_western: 'sipí', general: 'sipié', northern_oriental1: 'sipié(de/ge)', northern_oriental2: undefined},
 						secondSingular: {general: 'sípi'},
-						third: {general: 'sípia', northern_oriental1: 'sípie', northern_oriental2: undefined}
+						third: {general: 'sípia', northern_oriental1: 'sípie'/*, northern_oriental2: undefined*/}
 					}
 				}
 			}
@@ -1279,7 +1279,7 @@ QUnit.dump.maxDepth = 20;
 					irregular: {
 						firstSingular: {central_centralNorthern_lagunar_western: '#ò', general: '#à/è'},
 						secondSingular: {general: '#à'},
-						third: {archaic: undefined, general: '#à', northern_oriental: undefined}
+						third: {archaic: undefined, general: '#à'/*, northern_oriental: undefined*/}
 					},
 					regular: {
 						firstPlural: {central_western: '#avímo', general: '#avémo', northern: '#avón', oriental: '#avén'},
@@ -1320,7 +1320,7 @@ QUnit.dump.maxDepth = 20;
 						firstSingular: {general: '#àpia', northern_oriental: '#àpie'},
 						secondPlural: {centralNorthern: undefined, central_western: undefined, general: '#apiè', northern_oriental1: '#apié(de/ge)', northern_oriental2: undefined},
 						secondSingular: {general: '#àpi'},
-						third: {general: '#àpia', northern_oriental1: '#àpie', northern_oriental2: undefined}
+						third: {general: '#àpia', northern_oriental1: '#àpie'/*, northern_oriental2: undefined*/}
 					}
 				}
 			}

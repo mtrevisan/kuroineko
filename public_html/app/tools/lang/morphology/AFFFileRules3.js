@@ -332,7 +332,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		//merge identical transformations with different flags
 		var parts, flags;
 		list.forEach(function(sublist){
-			parts = ArrayHelper.partition(ArrayHelper.unique(sublist.suffixes), function(el){ return el.replace(PATTERN_FLAGS, ''); });
+			parts = ArrayHelper.partition(ArrayHelper.unique(sublist.suffixes), function(el){ return el.replace(/(\/[\d,]+)?$/, ''); });
 			sublist.suffixes = Object.keys(parts).map(function(part){
 				flags = ArrayHelper.unique(ArrayHelper.flatten(parts[part]
 					.map(function(el){ return (el.match(/^.*\/[\d,]+$/)? el.replace(/^.*\//, '').split(','): ''); })
@@ -362,6 +362,46 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			compacted.push(data);
 		}
 		return compacted;
+	};
+
+	/** @private */
+	var collectCommonSuffixes = function(list, k){
+		//reorder list by number of suffixes
+		list = list.sort(function(a, b){ return (a.suffixes.length - b.suffixes.length); });
+
+		var sls = [],
+			i, j, idx, parts, len;
+		for(i = list.length - 1; i >= 0; i --){
+			parts = ArrayHelper.partition(list[i].suffixes, function(el){ return el.substr(0, el.indexOf('>')); });
+			Object.keys(parts).forEach(function(idx){
+				parts[idx] = parts[idx].filter(function(el){ return el.match(/[\(\[]/); });
+
+				if(!parts[idx].length)
+					delete parts[idx];
+			});
+			for(j = i; j >= 0; j --)
+				Object.keys(parts).forEach(function(part){
+					idx = ArrayHelper.findIndex(sls, function(sl){ return ArrayHelper.equals(sl, parts[part]); });
+					if(idx < 0){
+						part = parts[part];
+						idx = sls.length;
+						sls.push(part);
+					}
+					else
+						part = sls[idx];
+
+					len = list[i].suffixes.length;
+					list[i].suffixes = ArrayHelper.difference(list[i].suffixes, part);
+					if(list[i].suffixes.length != len)
+						list[i].suffixes.push(extractSimpleForm(part[0]) + '/' + (k + idx));
+				});
+		}
+		return sls;
+	};
+
+	/** @private */
+	var extractSimpleForm = function(form){
+		return form.replace(new RegExp('\\(.+?\\)|\\/[\\d,]+|' + MARKER_FLAGS, 'g'), '').replace(/\[.+\]/g, function(value){ return value.split('')[1]; });
 	};
 
 	/** @private */
@@ -482,7 +522,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT1 && !origin)
-			throw 'error on origin for theme T1 "' + themes.themeT1 + '" ("' + verb.infinitive + '") infinitive simple';
+			throw 'error on origin for theme T1 "' + themes.themeT1 + '" infinitive simple';
 		if(themes.themeT1 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -500,7 +540,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT2 && !origin)
-			throw 'error on origin for theme T2 "' + themes.themeT2 + '" ("' + verb.infinitive + '") indicative imperfect';
+			throw 'error on origin for theme T2 "' + themes.themeT2 + '" indicative imperfect';
 		if(themes.themeT2 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -518,7 +558,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT2 && !origin)
-			throw 'error on origin for theme T2 "' + themes.themeT2 + '" ("' + verb.infinitive + '") subjunctive imperfect';
+			throw 'error on origin for theme T2 "' + themes.themeT2 + '" subjunctive imperfect';
 		if(themes.themeT2 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -535,7 +575,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT2 && !origin)
-			throw 'error on origin for theme T2 "' + themes.themeT2 + '" ("' + verb.infinitive + '") participle perfect';
+			throw 'error on origin for theme T2 "' + themes.themeT2 + '" participle perfect';
 		if(themes.themeT2 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -550,7 +590,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT2 && !origin)
-			throw 'error on origin for theme T2 "' + themes.themeT2 + '" ("' + verb.infinitive + '") gerund simple';
+			throw 'error on origin for theme T2 "' + themes.themeT2 + '" gerund simple';
 		if(themes.themeT2 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -571,7 +611,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT4 && !origin)
-			throw 'error on origin for theme T4 "' + themes.themeT4 + '" ("' + verb.infinitive + '") indicative future';
+			throw 'error on origin for theme T4 "' + themes.themeT4 + '" indicative future';
 		if(themes.themeT4 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -594,7 +634,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT4 && !origin)
-			throw 'error on origin for theme T4 "' + themes.themeT4 + '" ("' + verb.infinitive + '") conditional simple';
+			throw 'error on origin for theme T4 "' + themes.themeT4 + '" conditional simple';
 		if(themes.themeT4 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -619,7 +659,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			origin = unmarkDefaultStress(getOrigin(t, verb, theme));
 
 			if(!origin)
-				throw 'error on origin for theme T5 "' + t.themeT5 + '" ("' + verb.infinitive + '") indicative present';
+				throw 'error on origin for theme T5 "' + t.themeT5 + '" indicative present';
 		}
 		themes = t;
 
@@ -650,7 +690,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			origin = unmarkDefaultStress(getOrigin(t, verb, theme));
 
 			if(!origin)
-				throw 'error on origin for theme T5 "' + t.themeT5 + '" ("' + verb.infinitive + '") subjunctive present';
+				throw 'error on origin for theme T5 "' + t.themeT5 + '" subjunctive present';
 		}
 		themes = t;
 
@@ -687,7 +727,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			origin = unmarkDefaultStress(getOrigin(t, verb, theme));
 
 			if(!origin)
-				throw 'error on origin for theme T5 "' + t.themeT5 + '" ("' + verb.infinitive + '") imperative present';
+				throw 'error on origin for theme T5 "' + t.themeT5 + '" imperative present';
 		}
 		themes = t;
 
@@ -718,7 +758,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			origin = unmarkDefaultStress(getOrigin(t, verb, theme));
 
 			if(!origin)
-				throw 'error on origin for theme T6 "' + t.themeT6 + '" ("' + verb.infinitive + '") participle perfect';
+				throw 'error on origin for theme T6 "' + t.themeT6 + '" participle perfect';
 		}
 		themes = t;
 
@@ -737,7 +777,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT7 && !origin)
-			throw 'error on origin for theme T7 "' + themes.themeT7 + '" ("' + verb.infinitive + '") participle imperfect';
+			throw 'error on origin for theme T7 "' + themes.themeT7 + '" participle imperfect';
 		if(themes.themeT7 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -753,7 +793,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT7 && !origin)
-			throw 'error on origin for theme T7 "' + themes.themeT7 + '" ("' + verb.infinitive + '") participle perfect';
+			throw 'error on origin for theme T7 "' + themes.themeT7 + '" participle perfect';
 		if(themes.themeT7 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -769,7 +809,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT7 && !origin)
-			throw 'error on origin for theme T7 "' + themes.themeT7 + '" ("' + verb.infinitive + '") gerund simple';
+			throw 'error on origin for theme T7 "' + themes.themeT7 + '" gerund simple';
 		if(themes.themeT7 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -787,7 +827,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT8 && !origin)
-			throw 'error on origin for theme T8 "' + themes.themeT8 + '" ("' + verb.infinitive + '") indicative present';
+			throw 'error on origin for theme T8 "' + themes.themeT8 + '" indicative present';
 		if(themes.themeT8 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -826,7 +866,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT8 && !origin)
-			throw 'error on origin for theme T8 "' + themes.themeT8 + '" ("' + verb.infinitive + '") subjunctive present';
+			throw 'error on origin for theme T8 "' + themes.themeT8 + '" subjunctive present';
 		if(themes.themeT8 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -864,7 +904,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT8 && !origin)
-			throw 'error on origin for theme T8 "' + themes.themeT8 + '" ("' + verb.infinitive + '") participle perfect strong';
+			throw 'error on origin for theme T8 "' + themes.themeT8 + '" participle perfect strong';
 		if(themes.themeT8 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1002,7 +1042,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT9 && !origin)
-			throw 'error on origin for theme T9 "' + themes.themeT9 + '" ("' + verb.infinitive + '") imperative present';
+			throw 'error on origin for theme T9 "' + themes.themeT9 + '" imperative present';
 		if(themes.themeT9 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1019,7 +1059,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT10 && !origin)
-			throw 'error on origin for theme T10 "' + themes.themeT10 + '" ("' + verb.infinitive + '") indicative present';
+			throw 'error on origin for theme T10 "' + themes.themeT10 + '" indicative present';
 		if(themes.themeT10 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1045,7 +1085,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT11 && !origin)
-			throw 'error on origin for theme T11 "' + themes.themeT11 + '" ("' + verb.infinitive + '") indicative imperfect';
+			throw 'error on origin for theme T11 "' + themes.themeT11 + '" indicative imperfect';
 		if(themes.themeT11 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1064,7 +1104,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
 
 		if(themes.themeT11 && !origin)
-			throw 'error on origin for theme T11 "' + themes.themeT11 + '" ("' + verb.infinitive + '") subjunctive imperfect';
+			throw 'error on origin for theme T11 "' + themes.themeT11 + '" subjunctive imperfect';
 		if(themes.themeT11 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1077,11 +1117,21 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 
 	/** @private */
 	var generateThemeT12IndicativePresent = function(paradigm, verb, themes, type, origins, theme){
-		themes = themes[type];
-		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
+		var t = themes[type];
+		var origin = getOrigin(t, verb, theme);
+		if(!origin){
+			t = themes[IRREGULAR];
+			origin = getOrigin(t, verb, theme);
+
+if(!origin)
+	console.log('');
+		}
+		origin = unmarkDefaultStress(origin);
+		//var origin = unmarkDefaultStress(getOrigin(t, verb, theme));
+		themes = t;
 
 		if(themes.themeT12 && !origin)
-			throw 'error on origin for theme T12 "' + themes.themeT12 + '" ("' + verb.infinitive + '") indicative present';
+			throw 'error on origin for theme T12 "' + themes.themeT12 + '" indicative present';
 		if(themes.themeT12 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1097,12 +1147,29 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 
 	/** @private */
 	var generateThemeT12SubjunctivePresent = function(paradigm, verb, themes, type, origins, theme){
-		themes = themes[type];
-		themes = themes.subjunctive || themes;
-		var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
+		var t = themes[type];
+		t = t.subjunctive || t;
+		var origin = getOrigin(t, verb, theme);
+		if(!origin){
+			t = themes[IRREGULAR];
+			origin = getOrigin(t, verb, theme);
+
+			if(!origin){
+				t = t.subjunctive || t;
+				origin = getOrigin(t, verb, theme);
+
+if(!origin)
+	console.log('');
+			}
+		}
+		origin = unmarkDefaultStress(origin);
+		//themes = themes[type];
+		//themes = themes.subjunctive || themes;
+		//var origin = unmarkDefaultStress(getOrigin(themes, verb, theme));
+		themes = t;
 
 		if(themes.themeT12 && !origin)
-			throw 'error on origin for theme T12 "' + themes.themeT12 + '" ("' + verb.infinitive + '") subjunctive present';
+			throw 'error on origin for theme T12 "' + themes.themeT12 + '" subjunctive present';
 		if(themes.themeT12 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1149,16 +1216,18 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		var i = ArrayHelper.findIndex(paradigm, function(el){ return (el.infinitive == infinitive); }),
 			parts = extractCommonPartsFromStart(origin, suffix, true),
 			data = parts.a + '>' + parts.b,
-			re, j, flags;
+			subre, sre, re, j, flags;
 		if(i < 0)
 			paradigm.push({infinitive: infinitive, origin: origin, suffixes: [data]});
 		else{
-			re = new RegExp('^' + data.replace(PATTERN_FLAGS, '') + PATTERN_FLAGS.toString().replace(/^\/|\/$/, ''));
+			subre = '(\\/[\\d,]+|' + escapeRegExp(MARKER_FLAGS) + ')*$';
+			sre = new RegExp(subre);
+			re = new RegExp('^' + data.replace(sre, '') + subre);
 			j = ArrayHelper.findIndex(paradigm[i].suffixes, function(suffix){ return suffix.match(re); });
 			if(j < 0)
 				paradigm[i].suffixes.push(data);
 			else{
-				flags = paradigm[i].suffixes[j].match(PATTERN_FLAGS);
+				flags = paradigm[i].suffixes[j].match(sre);
 				flags = (flags[1]? flags[1].replace(/\//, ''): '');
 				paradigm[i].suffixes[j] = addFlag(data, flags);
 			}
