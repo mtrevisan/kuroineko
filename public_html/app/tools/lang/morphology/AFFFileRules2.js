@@ -649,13 +649,15 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ría').replace(/a$/, '[ae]'));
-			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rési'));
-			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'résimo'));
-			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rié').replace(/ié$/, '(is)ié'));
-			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rón').replace(/on$/, '(is)(i)on(se)'));
-			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rén').replace(/en$/, '(is)en(se)'));
-			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ràve'));
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ría') + INTERROGATIVE_MARK_2S);
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ría').replace(/a$/, '[ae]') + INTERROGATIVE_MARK_1S);
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ría').replace(/a$/, '[ae]') + INTERROGATIVE_MARK_3);
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rési') + INTERROGATIVE_MARK_2P);
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'résimo') + INTERROGATIVE_MARK_1P);
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rié').replace(/ié$/, '(is)ié') + INTERROGATIVE_MARK_2P);
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rón').replace(/on$/, '(is)(i)on(se)') + INTERROGATIVE_MARK_1P);
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rén').replace(/en$/, '(is)en(se)') + INTERROGATIVE_MARK_1P);
+			insert(paradigm, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rà(v)e'));
 		}
 	};
 

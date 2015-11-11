@@ -85,7 +85,7 @@ QUnit.dump.maxDepth = 20;
 						secondSingular: {general: '#andaría'},
 						secondPlural: {general: '#andarési', northern: '#andar(is)ié'},
 						third: {general: '#andaría', northern_oriental: '#andaríe'},
-						archaic: '#andaràve'
+						archaic: '#andarà(v)e'
 					}
 				}
 			},
@@ -200,7 +200,7 @@ QUnit.dump.maxDepth = 20;
 						secondSingular: {general: '#faría'},
 						secondPlural: {general: '#farési', northern: '#far(is)ié'},
 						third: {general: '#faría', northern_oriental: '#faríe'},
-						archaic: '#faràve'
+						archaic: '#farà(v)e'
 					}
 				}
 			},
@@ -258,7 +258,7 @@ QUnit.dump.maxDepth = 20;
 			conditional: {
 				simple: {
 					regular: {
-						archaic: 'deveràve',
+						archaic: 'deverà(v)e',
 						firstPlural: {general: 'deverésimo', northern: 'dever(is)(i)ón(se)', oriental: 'dever(is)én(se)'},
 						firstSingular: {general: 'devería', northern_oriental: 'deveríe'},
 						secondPlural: {general: 'deverési', northern: 'dever(is)ié'},
@@ -365,7 +365,7 @@ QUnit.dump.maxDepth = 20;
 			conditional: {
 				simple: {
 					regular: {
-						archaic: '#saveràve',
+						archaic: '#saverà(v)e',
 						firstPlural: {general: '#saverésimo', northern: '#saver(is)(i)ón(se)', oriental: '#saver(is)én(se)'},
 						firstSingular: {general: '#savería', northern_oriental: '#saveríe'},
 						secondPlural: {general: '#saverési', northern: '#saver(is)ié'},
@@ -476,7 +476,7 @@ QUnit.dump.maxDepth = 20;
 			conditional: {
 				simple: {
 					irregular: {
-						archaic: '#diràve',
+						archaic: '#dirà(v)e',
 						firstPlural: {general: '#dirésimo', northern: '#dir(is)(i)ón(se)', oriental: '#dir(is)én(se)'},
 						firstSingular: {general: '#diría', northern_oriental: '#diríe'},
 						secondPlural: {general: '#dirési', northern: '#dir(is)ié'},
@@ -484,7 +484,7 @@ QUnit.dump.maxDepth = 20;
 						third: {general: '#diría', northern_oriental: '#diríe'}
 					},
 					regular: {
-						archaic: '#dixeràve',
+						archaic: '#dixerà(v)e',
 						firstPlural: {general: '#dixerésimo', northern: '#dixer(is)(i)ón(se)', oriental: '#dixer(is)én(se)'},
 						firstSingular: {general: '#dixería', northern_oriental: '#dixeríe'},
 						secondPlural: {general: '#dixerési', northern: '#dixer(is)ié'},
@@ -610,7 +610,7 @@ QUnit.dump.maxDepth = 20;
 			conditional: {
 				simple: {
 					irregular: {
-						archaic: '#poràve',
+						archaic: '#porà(v)e',
 						firstPlural: {general: '#porésimo', northern: '#por(is)(i)ón(se)', oriental: '#por(is)én(se)'},
 						firstSingular: {general: '#poría', northern_oriental: '#poríe'},
 						secondPlural: {general: '#porési', northern: '#por(is)ié'},
@@ -618,7 +618,7 @@ QUnit.dump.maxDepth = 20;
 						third: {general: '#poría', northern_oriental: '#poríe'}
 					},
 					regular: {
-						archaic: '#poderàve',
+						archaic: '#poderà(v)e',
 						firstPlural: {general: '#poderésimo', northern: '#poder(is)(i)ón(se)', oriental: '#poder(is)én(se)'},
 						firstSingular: {general: '#podería', northern_oriental: '#poderíe'},
 						secondPlural: {general: '#poderési', northern: '#poder(is)ié'},
@@ -727,7 +727,7 @@ QUnit.dump.maxDepth = 20;
 			conditional: {
 				simple: {
 					regular: {
-						archaic: '#veñeràve',
+						archaic: '#veñerà(v)e',
 						firstPlural: {general: '#veñerésimo', northern: '#veñer(is)(i)ón(se)', oriental: '#veñer(is)én(se)'},
 						firstSingular: {general: '#veñería', northern_oriental: '#veñeríe'},
 						secondPlural: {general: '#veñerési', northern: '#veñer(is)ié'},
@@ -840,7 +840,7 @@ QUnit.dump.maxDepth = 20;
 			conditional: {
 				simple: {
 					irregular: {
-						archaic: '#traràve',
+						archaic: '#trarà(v)e',
 						firstPlural: {general: '#trarésimo', northern: '#trar(is)(i)ón(se)', oriental: '#trar(is)én(se)'},
 						firstSingular: {general: '#traría', northern_oriental: '#traríe'},
 						secondPlural: {general: '#trarési', northern: '#trar(is)ié'},
@@ -848,7 +848,7 @@ QUnit.dump.maxDepth = 20;
 						third: {general: '#traría', northern_oriental: '#traríe'}
 					},
 					regular: {
-						archaic: '#traeràve',
+						archaic: '#traerà(v)e',
 						firstPlural: {general: '#traerésimo', northern: '#traer(is)(i)ón(se)', oriental: '#traer(is)én(se)'},
 						firstSingular: {general: '#traería', northern_oriental: '#traeríe'},
 						secondPlural: {general: '#traerési', northern: '#traer(is)ié'},
@@ -983,7 +983,7 @@ QUnit.dump.maxDepth = 20;
 			conditional: {
 				simple: {
 					irregular: {
-						archaic: '#toràve',
+						archaic: '#torà(v)e',
 						firstPlural: {general: '#torésimo', northern: '#tor(is)(i)ón(se)', oriental: '#tor(is)én(se)'},
 						firstSingular: {general: '#toría', northern_oriental: '#toríe'},
 						secondPlural: {general: '#torési', northern: '#tor(is)ié'},
@@ -991,7 +991,7 @@ QUnit.dump.maxDepth = 20;
 						third: {general: '#toría', northern_oriental: '#toríe'}
 					},
 					regular: {
-						archaic: '#toleràve',
+						archaic: '#tolerà(v)e',
 						firstPlural: {general: '#tolerésimo', northern: '#toler(is)(i)ón(se)', oriental: '#toler(is)én(se)'},
 						firstSingular: {general: '#tolería', northern_oriental: '#toleríe'},
 						secondPlural: {general: '#tolerési', northern: '#toler(is)ié'},
@@ -1119,7 +1119,7 @@ QUnit.dump.maxDepth = 20;
 			conditional: {
 				simple: {
 					irregular: {
-						archaic: 'seràve',
+						archaic: 'serà(v)e',
 						firstPlural: {general: 'serésimo', northern: 'ser(is)(i)ón(se)', oriental: 'ser(is)én(se)'},
 						firstSingular: {general: 'sería', northern_oriental: 'seríe'},
 						secondPlural: {general: 'serési', northern: 'ser(is)ié'},
@@ -1230,7 +1230,7 @@ QUnit.dump.maxDepth = 20;
 			conditional: {
 				simple: {
 					regular: {
-						archaic: '#averàve',
+						archaic: '#averà(v)e',
 						firstPlural: {general: '#averésimo', northern: '#aver(is)(i)ón(se)', oriental: '#aver(is)én(se)'},
 						firstSingular: {general: '#avería', northern_oriental: '#averíe'},
 						secondPlural: {general: '#averési', northern: '#aver(is)ié'},

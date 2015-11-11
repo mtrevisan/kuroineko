@@ -324,7 +324,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				general: tmp + 'a',
 				northern_oriental: tmp + 'e'
 			};
-			root.archaic = pronomenalMark + t.themeT4 + 'ràve';
+			root.archaic = pronomenalMark + t.themeT4 + 'rà(v)e';
 		}
 	};
 
