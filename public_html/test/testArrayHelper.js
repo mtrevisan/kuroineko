@@ -71,6 +71,14 @@ require(['tools/data/ArrayHelper'], function(ArrayHelper){
 		deepEqual(ArrayHelper.difference(a, b, c), []);
 	});
 
+	QUnit.test('cartesianProductOf', function(){
+		var a = [1, 2],
+			b = [3, 4],
+			c = ['a', 'b'];
+
+		deepEqual(ArrayHelper.cartesianProductOf(a, b, c), [[1, 3, 'a'], [1, 3, 'b'], [1, 4, 'a'], [1, 4, 'b'], [2, 3, 'a'], [2, 3, 'b'], [2, 4, 'a'], [2, 4, 'b']]);
+	});
+
 	QUnit.test('binaryIndexOf - should find the element', function(){
 		var arr = [1, 2, 5, 7, 12, 19, 31];
 		equal(ArrayHelper.binaryIndexOf(arr, 1), 0);

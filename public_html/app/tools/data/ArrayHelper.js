@@ -232,6 +232,18 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		});
 	};
 
+	var cartesianProductOf = function(){
+		return Array.prototype.reduce.call(arguments, function(a, b){
+			var ret = [];
+			a.forEach(function(a){
+				b.forEach(function(b){
+					ret.push(a.concat([b]));
+				});
+			});
+			return ret;
+		}, [[]]);
+	};
+
 	/**
 	 * Performs a binary search of an array to determine the index at which the element.<p>
 	 * Returns the index <code>idx</code> in the table such that <code>value = array[idx]</code>, where <code>array[idx] <= array[idx + 1]</code>, if positive.<br>
@@ -351,6 +363,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		intersection: intersection,
 		unique: unique,
 		difference: difference,
+		cartesianProductOf: cartesianProductOf,
 		binaryIndexOf: binaryIndexOf,
 		shuffle: shuffle,
 		partition: partition,
