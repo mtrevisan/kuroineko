@@ -68,8 +68,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		});
 
 		var k = 14;
-//		k = generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10], k);
-		k = generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7], k);
+		k = generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10], k);
+//		k = generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7], k);
 //		k = generateTheme(verbs, infinitiveThemes, 4, 0, [11], k);
 //		k = generateTheme(verbs, infinitiveThemes, 5, 2, [], k);
 //		k = generateTheme(verbs, infinitiveThemes, 6, 2, [], k);
@@ -232,6 +232,11 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 			flag, substitution, logs, line, m;
 		Object.keys(list).forEach(function(key){
 			list[key].forEach(function(reduction){
+				if(key != '0')
+					reductions[0].forEach(function(red){
+						reduceSuffix(reduction, red);
+					});
+
 				flag = reduction.shift();
 				substitution = extractSimpleForm(reduction[0]);
 
@@ -242,7 +247,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 					if(m)
 						expandForm(m[2].replace(re, '')).forEach(function(form){
 							if(m[1] != form){
-								line = 'SFX ' + flag + ' ' + m[1] + ' ' + form + (m[3]? ' ' + m[3]: '');
+								line = 'SFX ' + flag + ' ' + m[1] + ' ' + form + ' ' + (m[3]? m[3]: m[1]);
 								if(logs.indexOf(line) < 0)
 									logs.push(line);
 							}
@@ -350,18 +355,28 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	 * @private
 	 */
 	var mergeIdenticalTransformations = function(sublist){
-		var parts = ArrayHelper.partition(ArrayHelper.unique(sublist.suffixes), function(el){ return el.replace(PATTERN_FLAGS, ''); }),
+		var flag = sublist.shift();
+		if(Number(flag) !== flag){
+			sublist.unshift(flag);
+			flag = null;
+		}
+
+		var parts = ArrayHelper.partition(ArrayHelper.unique(sublist), function(el){ return el.replace(PATTERN_FLAGS, ''); }),
 			flags;
-		sublist.suffixes = Object.keys(parts).map(function(part){
+		sublist = Object.keys(parts).map(function(part){
 			flags = parts[part].map(function(el){ return extractFlags(el); }).reduce(uniteFlags, {forms: [], markers: []});
 			return part + printFlags(flags);
 		});
+
+		if(flag)
+			sublist.unshift(flag);
+		return sublist;
 	};
 
 	/** @private */
 	var compactEqualSuffixes = function(list){
 		list.forEach(function(sublist){
-			mergeIdenticalTransformations(sublist);
+			sublist.suffixes = mergeIdenticalTransformations(sublist.suffixes);
 		});
 
 		var compacted = [],
@@ -411,8 +426,10 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 
 			tryReduceSuffixes(list, reductions, theme);
 		}
-		else
-			list = tmp;
+		else{
+			list.length = 0;
+			list.push.apply(list, tmp);
+		}
 
 		return reds.index;
 	};
@@ -421,13 +438,13 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	var tryReduceSuffixes = function(list, reductions, theme){
 		list.forEach(function(sublist){
 			reductions[0].forEach(function(reduction){
-				reduceSuffix(sublist, reduction);
+				reduceSuffix(sublist.suffixes, reduction);
 			});
 
 			sublist.suffixes = reduceFlags(sublist.suffixes);
 
 			reductions[theme].forEach(function(reduction){
-				reduceSuffix(sublist, reduction);
+				reduceSuffix(sublist.suffixes, reduction);
 			});
 		});
 	};
@@ -435,27 +452,30 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	/** @private */
 	var reduceSuffix = function(sublist, reduction){
 		var flag = reduction.shift(),
-			reductionRE = reduction.map(function(red){ return new RegExp((red.indexOf('>')? '^': '') + escapeRegExp(red) + '$'); }),
+			reductionRE = reduction.map(function(red){ return new RegExp((red.indexOf('>') >= 0? '^': '') + escapeRegExp(red) + '$'); }),
 			substitution, temporaryList;
 
 		//reduce suffixes
-		if(reductionRE.map(function(re){ return sublist.suffixes.some(function(suffix){ return suffix.match(re); }); }).every(function(el){ return el; })){
+		if(reductionRE.map(function(re){ return sublist.some(function(suffix){ return String(suffix).match(re); }); }).every(function(el){ return el; })){
 			substitution = extractSimpleForm(reduction[0]);
 
+			temporaryList = (sublist.used? sublist: sublist.slice(0));
 			reductionRE.forEach(function(re){
-				sublist.suffixes = sublist.suffixes.map(function(suffix){
-					return (suffix.match(re)?
+				temporaryList = temporaryList.map(function(suffix){
+					return (String(suffix).match(re)?
 						addFlag(unmarkDefaultStress(suffix.replace(re, substitution)), flag):
 						suffix);
 				});
 			});
 
-			temporaryList = ArrayHelper.unique(sublist.suffixes);
-			if(ArrayHelper.difference(sublist.suffixes, temporaryList).length >= 0)
-				reduction.used = true;
-			sublist.suffixes = temporaryList;
+			temporaryList = mergeIdenticalTransformations(ArrayHelper.unique(temporaryList));
+			if(sublist != temporaryList){
+				if(ArrayHelper.difference(sublist, temporaryList).length)
+					reduction.used = true;
 
-			mergeIdenticalTransformations(sublist);
+				sublist.length = 0;
+				sublist.push.apply(sublist, temporaryList);
+			}
 		}
 
 		reduction.unshift(flag);
