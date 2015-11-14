@@ -242,7 +242,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 					if(m)
 						expandForm(m[2].replace(re, '')).forEach(function(form){
 							if(m[1] != form){
-								line = 'SFX ' + flag + ' ' + m[1] + ' ' + form + ' ' + (m[3]? m[3]: '');
+								line = 'SFX ' + flag + ' ' + m[1] + ' ' + form + (m[3]? ' ' + m[3]: '');
 								if(logs.indexOf(line) < 0)
 									logs.push(line);
 							}
