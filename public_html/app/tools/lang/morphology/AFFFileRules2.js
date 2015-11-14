@@ -68,8 +68,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		});
 
 		var k = 14;
-		k = generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10], k);
-//		k = generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7], k);
+//		k = generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10], k);
+		k = generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7], k);
 //		k = generateTheme(verbs, infinitiveThemes, 4, 0, [11], k);
 //		k = generateTheme(verbs, infinitiveThemes, 5, 2, [], k);
 //		k = generateTheme(verbs, infinitiveThemes, 6, 2, [], k);
@@ -395,6 +395,30 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		var reds = getReductions(list, k);
 		reductions[theme] = reds.reductions;
 
+		var tmp = [];
+		list.forEach(function(sublist){
+			tmp.push({matcher: sublist.matcher, origins: sublist.origins.slice(0), suffixes: sublist.suffixes.slice(0)});
+		});
+		tryReduceSuffixes(tmp, reductions, theme);
+
+		var len = reductions[theme].length;
+		reductions[theme] = reductions[theme].filter(function(reduction){ return reduction.used; });
+		if(reductions[theme].length < len){
+			reductions[theme].map(function(el){
+				el.shift();
+				return el.unshift(k ++);
+			});
+
+			tryReduceSuffixes(list, reductions, theme);
+		}
+		else
+			list = tmp;
+
+		return reds.index;
+	};
+
+	/** @private */
+	var tryReduceSuffixes = function(list, reductions, theme){
 		list.forEach(function(sublist){
 			reductions[0].forEach(function(reduction){
 				reduceSuffix(sublist, reduction);
@@ -406,15 +430,13 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 				reduceSuffix(sublist, reduction);
 			});
 		});
-
-		return reds.index;
 	};
 
 	/** @private */
 	var reduceSuffix = function(sublist, reduction){
 		var flag = reduction.shift(),
 			reductionRE = reduction.map(function(red){ return new RegExp((red.indexOf('>')? '^': '') + escapeRegExp(red) + '$'); }),
-			substitution;
+			substitution, temporaryList;
 
 		//reduce suffixes
 		if(reductionRE.map(function(re){ return sublist.suffixes.some(function(suffix){ return suffix.match(re); }); }).every(function(el){ return el; })){
@@ -428,7 +450,10 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 				});
 			});
 
-			sublist.suffixes = ArrayHelper.unique(sublist.suffixes);
+			temporaryList = ArrayHelper.unique(sublist.suffixes);
+			if(ArrayHelper.difference(sublist.suffixes, temporaryList).length >= 0)
+				reduction.used = true;
+			sublist.suffixes = temporaryList;
 
 			mergeIdenticalTransformations(sublist);
 		}
