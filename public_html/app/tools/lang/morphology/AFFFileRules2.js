@@ -38,6 +38,13 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	var reductions = {
 		0: [
 			[13, '[oaie]'],
+		],
+		1: [
+			[14, 'r>r/30000@', 'r>re'],
+			[15, 'r>re', 'r>r@'],
+			[16, 'àer>ar/30000@', 'àer>are'],
+			[17, 'oler>òr/30000@', 'oler>òre'],
+			[18, 'íxer>ir/30000@', 'íxer>ire']
 		]
 	};
 
@@ -80,7 +87,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 //		k = generateTheme(verbs, infinitiveThemes, 11, 4, [], k);
 //		k = generateTheme(verbs, infinitiveThemes, 12, 8, [], k);
 
-		printReductions(reductions);
+//		printReductions(reductions);
 
 //		printReductions(interrogatives);
 
@@ -407,8 +414,10 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 
 	/** @private */
 	var reduceSuffixes = function(list, reductions, theme, k){
-		var reds = getReductions(list, k);
-		reductions[theme] = reds.reductions;
+		if(!reductions[theme]){
+			var reds = getReductions(list, k);
+			reductions[theme] = reds.reductions;
+		}
 
 		var tmp = [];
 		list.forEach(function(sublist){
@@ -423,6 +432,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 				el.shift();
 				return el.unshift(k ++);
 			});
+			reds.index = k;
 
 			tryReduceSuffixes(list, reductions, theme);
 		}
@@ -431,7 +441,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			list.push.apply(list, tmp);
 		}
 
-		return reds.index;
+		return (reds? reds.index: reductions[theme].length);
 	};
 
 	/** @private */
