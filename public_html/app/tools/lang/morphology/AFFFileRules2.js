@@ -514,16 +514,12 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			list.push.apply(list, tmp);
 		}
 
-		return (reds? reds.index: reductions[theme].length);
+		return (reds? reds.index: reductions[theme][reductions[theme].length - 1][0] + 1);
 	};
 
 	/** @private */
 	var tryReduceSuffixes = function(list, reductions, theme){
 		list.forEach(function(sublist){
-			/*reductions[0].forEach(function(reduction){
-				reduceSuffix(sublist.suffixes, reduction);
-			});/**/
-
 			sublist.suffixes = reduceFlags(sublist.suffixes);
 
 			reductions[theme].forEach(function(reduction){
@@ -617,9 +613,9 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			var re = /(.+?)>/,
 				res = (a[0].match(re)[1].length - b[0].match(re)[1].length);
 			return (res? res: a.length - b.length);
-		}).map(function(el){
+		}).map(function(el, idx){
 			var s = el[0].replace(/>.+$/, '').length;
-			if(s != size){
+			if(s != size || idx > 0 && filtered[idx - 1][1].replace(/>.+$/, '') == el[0].replace(/>.+$/, '')){
 				size = s;
 				el.unshift(++ index);
 			}
@@ -628,7 +624,7 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 
 			return el;
 		});
-		return {index: index, reductions: filtered};
+		return {index: index + 1, reductions: filtered};
 	};
 
 	/** @private */
