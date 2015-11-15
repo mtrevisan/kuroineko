@@ -14,22 +14,22 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	/** @constant */
 		MARKER_FINAL_CONSONANT_VOICING = '_',
 	/** @constant */
-		PATTERN_FLAGS = new RegExp('(?:\\/([\\d,]+))?([' + MARKER_FLAGS.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + '])?$');
+		PATTERN_FLAGS = new RegExp('(?:\\/([\\d,]+))?([' + MARKER_FLAGS.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + '])?(\\|.+)?$');
 
 	/** @constant */
-	var PRONOMENAL_MARK = '/40',
+	var PRONOMENAL_MARK = '/50',
 	/** @constant */
-		PRONOMENAL_MARK_IMPERATIVE = '/41',
+		PRONOMENAL_MARK_IMPERATIVE = '/51',
 	/** @constant */
-		INTERROGATIVE_MARK_1S = '/43',
+		INTERROGATIVE_MARK_1S = '/53',
 	/** @constant */
-		INTERROGATIVE_MARK_1P = '/44',
+		INTERROGATIVE_MARK_1P = '/54',
 	/** @constant */
-		INTERROGATIVE_MARK_2S = '/45',
+		INTERROGATIVE_MARK_2S = '/55',
 	/** @constant */
-		INTERROGATIVE_MARK_2P = '/46',
+		INTERROGATIVE_MARK_2P = '/56',
 	/** @constant */
-		INTERROGATIVE_MARK_3 = '/47';
+		INTERROGATIVE_MARK_3 = '/57';
 
 	var composeFlag = function(){
 		return '/' + Array.prototype.slice.call(arguments).map(function(flag){ return flag.substr(1); }).join(',');
@@ -40,35 +40,27 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 			[13, '[oaie]'],
 		]/*,
 		1: [
-			[14, 'r>r/40@', 'r>re'],
+			[14, 'r>r/50@', 'r>re'],
 			[15, 'r>re', 'r>r@'],
-			[16, 'àer>ar/40@', 'àer>are'],
-			[17, 'oler>òr/40@', 'oler>òre'],
-			[18, 'íxer>ir/40@', 'íxer>ire']
-		],
-/*		2: [
-			[19, 'r>[oae]/43', 'r>i/45', 'r>[ai]/46', 'r>a/47'],
-			[20, 'ir>ívimo/44', 'ir>íimo/44', 'ir>ísimo'],
-			[21, 'er>évimo/44', 'er>é[oae]/43', 'er>éi/45', 'er>é[ai]/46', 'er>éa/47', 'er>éimo/44', 'er>ésimo'],
-			[22, 'ar>àvimo/44', 'ar>à[oae]/43', 'ar>ài/45', 'ar>à[ai]/46', 'ar>àa/47', 'ar>àimo/44', 'ar>àsimo'],
-			[23, 'èser>esev[oae]/43', 'èser>esevi/45', 'èser>esev[ai]/46', 'èser>eseva/47', 'èser>esévimo/44', 'èser>esé[oae]/43',
-				'èser>eséi/45', 'èser>esé[ai]/46', 'èser>eséa/47', 'èser>eséimo/44', 'èser>eses[ei]', 'èser>esésimo', 'èser>esendo/40@']
+			[16, 'àer>ar/50@', 'àer>are'],
+			[17, 'oler>òr/50@', 'oler>òre'],
+			[18, 'íxer>ir/50@', 'íxer>ire']
 		]*/
 	};
 
 	var interrogatives = {
-		48: ['0>(t)[ei]|n', '0>n(t)[ei]|[^n]'],
-		49: ['0>(m)i', '0>e/48'],
-		50: ['0>[ei]', '0>e/48'],
-		51: ['0>(s)tu', '0>to'],
-		52: ['0>[uo]'],
-		53: ['.>elo/13|[ai]', '0>lo/13|[^ai]'],
+		58: ['0>(t)[ei]|n', '0>n(t)[ei]|[^n]'],
+		59: ['0>(m)i', '0>e/48'],
+		60: ['0>[ei]', '0>e/48'],
+		61: ['0>(s)tu', '0>to'],
+		62: ['0>[uo]'],
+		63: ['.>elo/13|[ai]', '0>lo/13|[^ai]'],
 		//kond. 3a: themeT4 + 'rí[ae]'+ INTERROGATIVE_MARK_3 > rise
-		54: ['rà>riselo/13|rà']
+		64: ['rà>riselo/13|rà']
 	};
 
 	var consonantVoicings = {
-		55: ['ñ>nc|ñ', 'ñ>in|ñ', 'ñ>n|ñ', 'b>p|b', 'd>t|d', 'g>k|g', 'v>f|v', 'đ>ŧ|đ', 'x>s|x', 'ʒ>ʃ|ʒ', 'ɉ>c|ɉ', 'm>n|m']
+		65: ['ñ>nc|ñ', 'ñ>in|ñ', 'ñ>n|ñ', 'b>p|b', 'd>t|d', 'g>k|g', 'v>f|v', 'đ>ŧ|đ', 'x>s|x', 'ʒ>ʃ|ʒ', 'ɉ>c|ɉ', 'm>n|m']
 	};
 
 
@@ -85,15 +77,15 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		var k = 14;
 		k = generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10], k);
 		k = generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7], k);
-		k = generateTheme(verbs, infinitiveThemes, 4, 0, [11], k);
-		k = generateTheme(verbs, infinitiveThemes, 5, 2, [], k);
-		k = generateTheme(verbs, infinitiveThemes, 6, 2, [], k);
-		k = generateTheme(verbs, infinitiveThemes, 7, 2, [], k);
-		k = generateTheme(verbs, infinitiveThemes, 8, 0, [12], k);
-		k = generateTheme(verbs, infinitiveThemes, 9, 0, [], k);
-		k = generateTheme(verbs, infinitiveThemes, 10, 0, [], k);
-		k = generateTheme(verbs, infinitiveThemes, 11, 4, [], k);
-		k = generateTheme(verbs, infinitiveThemes, 12, 8, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 4, 0, [11], k);
+//		k = generateTheme(verbs, infinitiveThemes, 5, 2, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 6, 2, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 7, 2, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 8, 0, [12], k);
+//		k = generateTheme(verbs, infinitiveThemes, 9, 0, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 10, 0, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 11, 4, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 12, 8, [], k);
 
 		printReductions(reductions);
 
@@ -245,48 +237,108 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 	/** @private */
 	var contractReductions = function(list, theme){
-		var parts = ArrayHelper.partition(list[theme], function(el){ return el[0]; }),
-			newList = [];
-		Object.keys(parts).forEach(function(key){
-			newList.push(ArrayHelper.unique(ArrayHelper.flatten(parts[key])));
+		var parts = {},
+			j = 100,
+			i = 0;
+		list[theme].forEach(function(value){
+			var key = value[0];
+			if(key in parts){
+				if(parts[key][0][1].replace(/>.+$/, '') == value[1].replace(/>.+$/, ''))
+					parts['_' + (j ++)] = [value];
+				else
+					parts[key].push(value);
+			}
+			else{
+				parts[key] = [value];
+				i = Math.max(i, key);
+			}
 		});
-		list[theme] = newList;
+		list[theme] = Object.keys(parts).map(function(key){
+			parts[key] = ArrayHelper.unique(ArrayHelper.flatten(parts[key]));
+			if(key.indexOf('_') >= 0){
+				parts[key].shift();
+				parts[key].unshift(++ i);
+			}
+			return parts[key];
+		});
 	};
 
 	/** @private */
 	var printReductions = function(list){
 		var re = new RegExp(escapeRegExp(MARKER_FLAGS)),
-			flag, substitution, logs, line, m;
+			flag, substitution,
+			subst, form, constraint,
+			logs, line, i, m, red;
+		//expand suffixes
 		Object.keys(list).forEach(function(key){
 			list[key].forEach(function(reduction){
-				if(key != '0')
-					reductions[0].forEach(function(red){
-						reduceSuffix(reduction, red);
+				if(key == '0')
+					return;
+
+				reductions[0].forEach(function(red){
+					reduceSuffix(reduction, red);
+				});
+
+				flag = reduction.shift();
+				substitution = extractSimpleForm(reduction[0]);
+
+				for(i = reduction.length - 1; i >= 0; i --){
+					m = reduction[i].match(/^(.+?)>(.+?)(?:\|(.+))?$/);
+					if(m){
+						subst = m[1];
+						form = m[2];
+						constraint = m[3];
+					}
+					else{
+						subst = substitution;
+						form = reduction[i];
+						constraint = undefined;
+					}
+
+					expandForm(form.replace(re, '')).forEach(function(form){
+						if(subst != form)
+							reduction.push(subst + '>' + form + '|' + (constraint || subst));
 					});
 
+					reduction.splice(i, 1);
+				}
+
+				if(reduction.length > 1){
+					red = reduceFlags(reduction);
+					reduction.length = 0;
+					reduction.push.apply(reduction, red);
+				}
+
+				reduction.unshift(flag);
+			});
+		});
+
+		Object.keys(list).forEach(function(key){
+			list[key].forEach(function(reduction){
 				flag = reduction.shift();
 				substitution = extractSimpleForm(reduction[0]);
 
 				logs = [];
 				reduction.forEach(function(el){
 					m = el.match(/^(.+?)>(.+?)(?:\|(.+))?$/);
+					if(m){
+						subst = m[1];
+						form = m[2];
+						constraint = m[3];
+					}
+					else{
+						subst = substitution;
+						form = el;
+						constraint = undefined;
+					}
 
-					if(m)
-						expandForm(m[2].replace(re, '')).forEach(function(form){
-							if(m[1] != form){
-								line = 'SFX ' + flag + ' ' + m[1] + ' ' + form + ' ' + (m[3]? m[3]: m[1]);
-								if(logs.indexOf(line) < 0)
-									logs.push(line);
-							}
-						});
-					else
-						expandForm(el.replace(re, '')).forEach(function(form){
-							if(substitution != form){
-								line = 'SFX ' + flag + ' ' + substitution + ' ' + form + ' ' + substitution;
-								if(logs.indexOf(line) < 0)
-									logs.push(line);
-							}
-						});
+					expandForm(form.replace(re, '')).forEach(function(form){
+						if(subst != form){
+							line = 'SFX ' + flag + ' ' + subst + ' ' + form + ' ' + (constraint || subst);
+							if(logs.indexOf(line) < 0)
+								logs.push(line);
+						}
+					});
 				});
 
 				reduction.unshift(flag);
@@ -449,18 +501,9 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		var len = reductions[theme].length;
 		reductions[theme] = reductions[theme].filter(function(reduction){ return reduction.used; });
 		if(reductions[theme].length < len){
-			var size;
-			k --;
 			reductions[theme].map(function(el){
 				el.shift();
-
-				var s = el[0].replace(/>.+$/, '').length;
-				if(s != size){
-					size = s;
-					k ++;
-				}
-
-				return el.unshift(k);
+				return el.unshift(k ++);
 			});
 			reds.index = k;
 
@@ -578,10 +621,12 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			var s = el[0].replace(/>.+$/, '').length;
 			if(s != size){
 				size = s;
-				index ++;
+				el.unshift(++ index);
 			}
+			else
+				el.unshift(index);
 
-			return el.unshift(index);
+			return el;
 		});
 		return {index: index, reductions: filtered};
 	};
