@@ -45,7 +45,16 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 			[16, 'àer>ar/30000@', 'àer>are'],
 			[17, 'oler>òr/30000@', 'oler>òre'],
 			[18, 'íxer>ir/30000@', 'íxer>ire']
-		]
+		],
+/*		2: [
+			[19, 'r>[oae]/30003', 'r>i/30005', 'r>[ai]/30006', 'r>a/30007'],
+			[20, 'ir>ívimo/30004', 'ir>íimo/30004', 'ir>ísimo'],
+			[21, 'er>évimo/30004', 'er>é[oae]/30003', 'er>éi/30005', 'er>é[ai]/30006', 'er>éa/30007', 'er>éimo/30004', 'er>ésimo'],
+			[22, 'ar>àvimo/30004', 'ar>à[oae]/30003', 'ar>ài/30005', 'ar>à[ai]/30006', 'ar>àa/30007', 'ar>àimo/30004', 'ar>àsimo'],
+			[23, 'èser>esev[oae]/30003', 'èser>esevi/30005', 'èser>esev[ai]/30006', 'èser>eseva/30007', 'èser>esévimo/30004',
+				'èser>esé[oae]/30003', 'èser>eséi/30005', 'èser>esé[ai]/30006', 'èser>eséa/30007', 'èser>eséimo/30004', 'èser>eses[ei]',
+				'èser>esésimo', 'èser>esendo/30000@']
+		]*/
 	};
 
 	var interrogatives = {
@@ -76,18 +85,18 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 		var k = 14;
 		k = generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10], k);
-//		k = generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7], k);
-//		k = generateTheme(verbs, infinitiveThemes, 4, 0, [11], k);
-//		k = generateTheme(verbs, infinitiveThemes, 5, 2, [], k);
-//		k = generateTheme(verbs, infinitiveThemes, 6, 2, [], k);
-//		k = generateTheme(verbs, infinitiveThemes, 7, 2, [], k);
-//		k = generateTheme(verbs, infinitiveThemes, 8, 0, [12], k);
-//		k = generateTheme(verbs, infinitiveThemes, 9, 0, [], k);
-//		k = generateTheme(verbs, infinitiveThemes, 10, 0, [], k);
-//		k = generateTheme(verbs, infinitiveThemes, 11, 4, [], k);
-//		k = generateTheme(verbs, infinitiveThemes, 12, 8, [], k);
+		k = generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7], k);
+		k = generateTheme(verbs, infinitiveThemes, 4, 0, [11], k);
+		k = generateTheme(verbs, infinitiveThemes, 5, 2, [], k);
+		k = generateTheme(verbs, infinitiveThemes, 6, 2, [], k);
+		k = generateTheme(verbs, infinitiveThemes, 7, 2, [], k);
+		k = generateTheme(verbs, infinitiveThemes, 8, 0, [12], k);
+		k = generateTheme(verbs, infinitiveThemes, 9, 0, [], k);
+		k = generateTheme(verbs, infinitiveThemes, 10, 0, [], k);
+		k = generateTheme(verbs, infinitiveThemes, 11, 4, [], k);
+		k = generateTheme(verbs, infinitiveThemes, 12, 8, [], k);
 
-//		printReductions(reductions);
+		printReductions(reductions);
 
 //		printReductions(interrogatives);
 
@@ -447,9 +456,9 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 	/** @private */
 	var tryReduceSuffixes = function(list, reductions, theme){
 		list.forEach(function(sublist){
-			reductions[0].forEach(function(reduction){
+			/*reductions[0].forEach(function(reduction){
 				reduceSuffix(sublist.suffixes, reduction);
-			});
+			});/**/
 
 			sublist.suffixes = reduceFlags(sublist.suffixes);
 
@@ -520,14 +529,15 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			else
 				reversed[line] = [key];
 		});
+		var k = 0;
 		Object.keys(reversed).forEach(function(list1){
 			Object.keys(reversed).forEach(function(list2){
-				if(reversed[list1][0].replace(/>.+$/, '') == reversed[list2][0].replace(/>.+$/, '')){
+				if(list1 != list2 && reversed[list1][0].replace(/>.+$/, '') == reversed[list2][0].replace(/>.+$/, '')){
 					var list = ArrayHelper.intersection(list1.split(','), list2.split(','));
-					if(list.length > 1){
+					if(list.length){
 						var value = ArrayHelper.unique(reversed[list1].concat(reversed[list2]));
 						if(!Object.keys(reversed).some(function(el){ return ArrayHelper.equals(reversed[el], value); }))
-							reversed[list.join(',')] = value;
+							reversed[k ++] = value;
 					}
 				}
 			});
