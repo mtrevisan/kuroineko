@@ -49,18 +49,22 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	};
 
 	var interrogatives = {
-		58: ['0>(t)[ei]|n', '0>n(t)[ei]|[^n]'],
-		59: ['0>(m)i', '0>e/48'],
-		60: ['0>[ei]', '0>e/48'],
-		61: ['0>(s)tu', '0>to'],
-		62: ['0>[uo]'],
-		63: ['.>elo/13|[ai]', '0>lo/13|[^ai]'],
-		//kond. 3a: themeT4 + 'rí[ae]'+ INTERROGATIVE_MARK_3 > rise
-		64: ['rà>riselo/13|rà']
+		1: [
+			[58, '0>(t)[ei]|n', '0>n(t)[ei]|[^n]'],
+			[59, '0>(m)i', '0>e/48'],
+			[60, '0>[ei]', '0>e/48'],
+			[61, '0>(s)tu', '0>to'],
+			[62, '0>[uo]'],
+			[63, '.>elo/13|[ai]', '0>lo/13|[^ai]'],
+			//kond. 3a: themeT4 + 'rí[ae]'+ INTERROGATIVE_MARK_3 > rise
+			[64, 'rà>riselo/13|rà']
+		]
 	};
 
 	var consonantVoicings = {
-		65: ['ñ>nc|ñ', 'ñ>in|ñ', 'ñ>n|ñ', 'b>p|b', 'd>t|d', 'g>k|g', 'v>f|v', 'đ>ŧ|đ', 'x>s|x', 'ʒ>ʃ|ʒ', 'ɉ>c|ɉ', 'm>n|m']
+		1: [
+			[65, 'ñ>nc|ñ', 'ñ>in|ñ', 'ñ>n|ñ', 'b>p|b', 'd>t|d', 'g>k|g', 'v>f|v', 'đ>ŧ|đ', 'x>s|x', 'ʒ>ʃ|ʒ', 'ɉ>c|ɉ', 'm>n|m']
+		]
 	};
 
 
@@ -76,7 +80,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 		var k = 14;
 		k = generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10], k);
-		k = generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7], k);
+//		k = generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7], k);
 //		k = generateTheme(verbs, infinitiveThemes, 4, 0, [11], k);
 //		k = generateTheme(verbs, infinitiveThemes, 5, 2, [], k);
 //		k = generateTheme(verbs, infinitiveThemes, 6, 2, [], k);
@@ -87,7 +91,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 //		k = generateTheme(verbs, infinitiveThemes, 11, 4, [], k);
 //		k = generateTheme(verbs, infinitiveThemes, 12, 8, [], k);
 
-		printReductions(reductions);
+//		printReductions(reductions);
 
 //		printReductions(interrogatives);
 
