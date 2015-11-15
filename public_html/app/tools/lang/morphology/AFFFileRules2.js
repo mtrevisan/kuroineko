@@ -17,19 +17,19 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		PATTERN_FLAGS = new RegExp('(?:\\/([\\d,]+))?([' + MARKER_FLAGS.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + '])?$');
 
 	/** @constant */
-	var PRONOMENAL_MARK = '/30000',
+	var PRONOMENAL_MARK = '/40',
 	/** @constant */
-		PRONOMENAL_MARK_IMPERATIVE = '/30001',
+		PRONOMENAL_MARK_IMPERATIVE = '/41',
 	/** @constant */
-		INTERROGATIVE_MARK_1S = '/30003',
+		INTERROGATIVE_MARK_1S = '/43',
 	/** @constant */
-		INTERROGATIVE_MARK_1P = '/30004',
+		INTERROGATIVE_MARK_1P = '/44',
 	/** @constant */
-		INTERROGATIVE_MARK_2S = '/30005',
+		INTERROGATIVE_MARK_2S = '/45',
 	/** @constant */
-		INTERROGATIVE_MARK_2P = '/30006',
+		INTERROGATIVE_MARK_2P = '/46',
 	/** @constant */
-		INTERROGATIVE_MARK_3 = '/30007';
+		INTERROGATIVE_MARK_3 = '/47';
 
 	var composeFlag = function(){
 		return '/' + Array.prototype.slice.call(arguments).map(function(flag){ return flag.substr(1); }).join(',');
@@ -38,22 +38,21 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	var reductions = {
 		0: [
 			[13, '[oaie]'],
-		],
+		]/*,
 		1: [
-			[14, 'r>r/30000@', 'r>re'],
+			[14, 'r>r/40@', 'r>re'],
 			[15, 'r>re', 'r>r@'],
-			[16, 'àer>ar/30000@', 'àer>are'],
-			[17, 'oler>òr/30000@', 'oler>òre'],
-			[18, 'íxer>ir/30000@', 'íxer>ire']
+			[16, 'àer>ar/40@', 'àer>are'],
+			[17, 'oler>òr/40@', 'oler>òre'],
+			[18, 'íxer>ir/40@', 'íxer>ire']
 		],
 /*		2: [
-			[19, 'r>[oae]/30003', 'r>i/30005', 'r>[ai]/30006', 'r>a/30007'],
-			[20, 'ir>ívimo/30004', 'ir>íimo/30004', 'ir>ísimo'],
-			[21, 'er>évimo/30004', 'er>é[oae]/30003', 'er>éi/30005', 'er>é[ai]/30006', 'er>éa/30007', 'er>éimo/30004', 'er>ésimo'],
-			[22, 'ar>àvimo/30004', 'ar>à[oae]/30003', 'ar>ài/30005', 'ar>à[ai]/30006', 'ar>àa/30007', 'ar>àimo/30004', 'ar>àsimo'],
-			[23, 'èser>esev[oae]/30003', 'èser>esevi/30005', 'èser>esev[ai]/30006', 'èser>eseva/30007', 'èser>esévimo/30004',
-				'èser>esé[oae]/30003', 'èser>eséi/30005', 'èser>esé[ai]/30006', 'èser>eséa/30007', 'èser>eséimo/30004', 'èser>eses[ei]',
-				'èser>esésimo', 'èser>esendo/30000@']
+			[19, 'r>[oae]/43', 'r>i/45', 'r>[ai]/46', 'r>a/47'],
+			[20, 'ir>ívimo/44', 'ir>íimo/44', 'ir>ísimo'],
+			[21, 'er>évimo/44', 'er>é[oae]/43', 'er>éi/45', 'er>é[ai]/46', 'er>éa/47', 'er>éimo/44', 'er>ésimo'],
+			[22, 'ar>àvimo/44', 'ar>à[oae]/43', 'ar>ài/45', 'ar>à[ai]/46', 'ar>àa/47', 'ar>àimo/44', 'ar>àsimo'],
+			[23, 'èser>esev[oae]/43', 'èser>esevi/45', 'èser>esev[ai]/46', 'èser>eseva/47', 'èser>esévimo/44', 'èser>esé[oae]/43',
+				'èser>eséi/45', 'èser>esé[ai]/46', 'èser>eséa/47', 'èser>eséimo/44', 'èser>eses[ei]', 'èser>esésimo', 'èser>esendo/40@']
 		]*/
 	};
 
@@ -216,6 +215,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 		k = reduceSuffixes(paradigm, reductions, theme, k);
 
+		contractReductions(reductions, theme);
+
 		printParadigm(paradigm, flags, theme);
 
 		return k;
@@ -240,6 +241,16 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		}
 
 		return i;
+	};
+
+	/** @private */
+	var contractReductions = function(list, theme){
+		var parts = ArrayHelper.partition(list[theme], function(el){ return el[0]; }),
+			newList = [];
+		Object.keys(parts).forEach(function(key){
+			newList.push(ArrayHelper.unique(ArrayHelper.flatten(parts[key])));
+		});
+		list[theme] = newList;
 	};
 
 	/** @private */
@@ -423,8 +434,9 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 
 	/** @private */
 	var reduceSuffixes = function(list, reductions, theme, k){
+		var reds = {};
 		if(!reductions[theme]){
-			var reds = getReductions(list, k);
+			reds = getReductions(list, k);
 			reductions[theme] = reds.reductions;
 		}
 
@@ -437,9 +449,18 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 		var len = reductions[theme].length;
 		reductions[theme] = reductions[theme].filter(function(reduction){ return reduction.used; });
 		if(reductions[theme].length < len){
+			var size;
+			k --;
 			reductions[theme].map(function(el){
 				el.shift();
-				return el.unshift(k ++);
+
+				var s = el[0].replace(/>.+$/, '').length;
+				if(s != size){
+					size = s;
+					k ++;
+				}
+
+				return el.unshift(k);
 			});
 			reds.index = k;
 
@@ -547,12 +568,20 @@ logs.push('SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + c
 			if(list.length > 1 || list.some(function(el){ return el.match(/[\(\[]/); }))
 				filtered.push(list);
 		});
+		var size;
+		index --;
 		filtered.sort(function(a, b){
 			var re = /(.+?)>/,
 				res = (a[0].match(re)[1].length - b[0].match(re)[1].length);
 			return (res? res: a.length - b.length);
 		}).map(function(el){
-			return el.unshift(index ++);
+			var s = el[0].replace(/>.+$/, '').length;
+			if(s != size){
+				size = s;
+				index ++;
+			}
+
+			return el.unshift(index);
 		});
 		return {index: index, reductions: filtered};
 	};
