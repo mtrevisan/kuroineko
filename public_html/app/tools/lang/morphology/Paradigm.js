@@ -430,6 +430,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			[
 				{matcher: /fà$/, replacement: 'fàt'},
 				{matcher: /kóns$/, replacement: 'kóns'},
+				{matcher: /súg$/, replacement: 'sút'},
 				{matcher: /tr$/, replacement: 'tràt'}
 			],
 
