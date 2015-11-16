@@ -3,91 +3,66 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/lang/phonology/PhonologyHelper', 'tools/data/ObjectHelper', 'tools/data/ArrayHelper'], function(Word, Dialect, Verb, Themizer, PhonologyHelper, ObjectHelper, ArrayHelper){
+define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morphology/Themizer', 'tools/lang/phonology/Syllabator', 'tools/data/ArrayHelper'], function(Word, Dialect, Themizer, Syllabator, ArrayHelper){
 
 	/** @constant */
-	var START_OF_WORD = '^',
-	/** @constant */
-		WHOLE_WORD = '*',
-	/** @constant */
-		PRONOMENAL_MARK = '#',
-	/** @constant */
-		PRONOMENAL_MARK_IMPERATIVE = '!',
-	/** @constant * /
-		INTERROGATIVE_MARK = '_',
-	/** @constant */
-		FINAL_CONSONANT_VOICING = '@';
-
-	var INTERROGATIVE_MARK_1 = 'n(t)e',
-		INTERROGATIVE_MARK_1_1 = 'mi',
-		INTERROGATIVE_MARK_1_2 = '[ie]',
-		INTERROGATIVE_MARK_2S = 't[uo]',
-		INTERROGATIVE_MARK_2P = '[uo]',
-		INTERROGATIVE_MARK_3 = 'l[oaie]';
-
-	/**
-	 * @constant
-	 * @private
-	 */
 	var REGULAR = 'regular',
-	/**
-	 * @constant
-	 * @private
-	 */
+	/** @constant */
 		IRREGULAR = 'irregular',
-	/**
-	 * @constant
-	 * @private
-	 */
-		SPLITTER_REGEX_OPTIONAL = /^(.*?)\((.+?)\)(.*)$/,
-	/**
-	 * @constant
-	 * @private
-	 */
-		SPLITTER_REGEX_ALTERNATIVE_1 = /^(.+)\/(.+)$/,
-	/**
-	 * @constant
-	 * @private
-	 */
-		SPLITTER_REGEX_ALTERNATIVE_2 = /^(.+)?\[(.+)\](\/[\d,]+)?$/,
-	/**
-	 * @constant
-	 * @private
-	 */
-		SPLITTER_REGEX_RULE = /^(.+)>(.+)$/,
-	/**
-	 * @constant
-	 * @private
-	 */
-		SUFFIXES_BASE_INDEX;
+	/** @constant */
+		MARKER_FLAGS = '@',
+	/** @constant */
+		MARKER_FINAL_CONSONANT_VOICING = '_',
+	/** @constant */
+		PATTERN_FLAGS = new RegExp('(?:\\/([\\d,]+))?([' + MARKER_FLAGS.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + '])?(\\|.+)?$');
 
-	var themesSimplifications = [
-		[1, PRONOMENAL_MARK],
-		[2, PRONOMENAL_MARK_IMPERATIVE],
-/*[3, INTERROGATIVE_MARK_1],
-[3, INTERROGATIVE_MARK_1_1],
-[3, INTERROGATIVE_MARK_1_2],
-[3, INTERROGATIVE_MARK_2S],
-[3, INTERROGATIVE_MARK_2P],
-[3, INTERROGATIVE_MARK_3],*/
-		[4, FINAL_CONSONANT_VOICING],
-		[5, 'e', 'i'],
-		[6, 'a', 'e\/5'],
-//		[7, 'o\/4', 'a\/6'],
-		[7, 'o', 'a\/6'],
-		[8, '', 'e', 'se'],
-		[9, '', 'e'],
-		[10, '', 'se'],
-		[11, '', 'de', 'ge']//,
-//		[12, '[lx]?>go', '[lx]?>ga', '[lx]?>gi'],
-//		[12, 'e', 'a', 'o\/4', '([^i])>$1i', '[ei]>\/4', '\/4'],
-	];
-	var logsSimplifications = [
-		[12, {replaced: 0, replacement: '\/15,1'}, {replaced: 0, replacement: 'emo\/17'}, {replaced: 'ar', replacement: 'en\/24,8'}, {replaced: 'r', replacement: 'nte\/20'}, {replaced: 'ar', replacement: 'on\/25,9'}, {replaced: 'ar', replacement: 'à\/19'}, {replaced: 'ar', replacement: 'àsimo\/16'}, {replaced: 'r', replacement: '\/22,2'}, {replaced: 'ar', replacement: 'è\/18'}, {replaced: 'r', replacement: 'o\/38,7,4'}],
-//		[13, {replaced: 0, replacement: '\/15,1'}, {replaced: 0, replacement: 'emo\/17'}, {replaced: 'ir', replacement: 'en\/24,8'}, {replaced: 'ir', replacement: 'ente\/28'}, {replaced: 'ir', replacement: 'on\/25,9'}, {replaced: 'ir', replacement: 'í\/19'}, {replaced: 'ir', replacement: 'ísimo\/16'}, {replaced: 'r', replacement: '\/41,11'}],
-//		[14, {replaced: 0, replacement: '\/15,1'}, {replaced: 0, replacement: 'emo\/17'}, {replaced: 'ir', replacement: 'en\/24,8'}, {replaced: 'ir', replacement: 'ente\/28'}, {replaced: 'ir', replacement: 'on\/25,9'}, {replaced: 'ir', replacement: 'í\/19'}, {replaced: 'ir', replacement: 'ísimo\/16'}, {replaced: 'r', replacement: '\/41,11,22'}, {replaced: 'ir', replacement: 'e\/21,12'}]
-	];
+	/** @constant */
+	var PRONOMENAL_MARK = '/200',
+	/** @constant */
+		PRONOMENAL_MARK_IMPERATIVE = '/202',
+	/** @constant */
+		INTERROGATIVE_MARK_1S = '/204',
+	/** @constant */
+		INTERROGATIVE_MARK_1P = '/205',
+	/** @constant */
+		INTERROGATIVE_MARK_2S = '/206',
+	/** @constant */
+		INTERROGATIVE_MARK_2P = '/207',
+	/** @constant */
+		INTERROGATIVE_MARK_3 = '/208';
 
+	var reductions = {
+		0: [
+			[13, '[oaie]'],
+		]
+	};
+
+	var interrogatives = {
+		1: [
+			[203, '0>(t)[ei]|n', '0>n(t)[ei]|[^n]'],
+			[204, '0>(m)i', '0>e/48'],
+			[205, '0>[ei]', '0>e/48'],
+			[206, '0>(s)tu', '0>to'],
+			[207, '0>[uo]'],
+			[208, '.>elo/13|[ai]', '0>lo/13|[^ai]'],
+			//kond. 3a: themeT4 + 'rí[ae]'+ INTERROGATIVE_MARK_3 > rise
+			[209, 'rà>riselo/13|rà']
+		]
+	};
+
+	var pronomenals = {
+		1: [
+			[210, 'lo/13', 'me/211', 'te/211', 've/211', 'se/211', 'ge/211', 'ne'],
+			[211, 'ne', 'lo/13'],
+			[212, '0>-me', '0>-ne', '0>-te', '0>-ve', '0>-lo/13', '0>-ge', 'a>e-me|a', 'a>e-ne|a', 'a>e-te|a', 'a>e-ve|a', 'a>e-lo/13|a', 'a>e-ge|a']
+		]
+	};
+
+	var consonantVoicings = {
+		1: [
+			[213, 'ñ.>nc|ñ[oi]', 'ñ.>in|ñ[oi]', 'ñ.>n|ñ[oi]', 'b.>p|b[oi]', 'd.>t|d[oi]', 'g.>k|g[oi]', 'v.>f|v[oi]', 'đ.>ŧ|đ[oi]', 'x.>s|x[oi]', 'ʒ.>ʃ|ʒ[oi]', 'ɉ.>c|ɉ[oi]', 'm.>n|m[oi]']
+		]
+	};
 
 
 	/**
@@ -95,291 +70,351 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	 */
 	var generate = function(verbs){
 		var dialect = new Dialect(),
-			paradigmEndings = [],
-			infinitives = {},
-			infinitive, themes,
-			commonThemes,
-			paradigmEndings,
-			expandedList,
-			i;
+			infinitiveThemes = {};
 		verbs.forEach(function(verb){
-			infinitive = Word.unmarkDefaultStress(verb.infinitive);
-			if(!infinitives[infinitive]){
-				themes = Themizer.generate(verb, dialect);
+			infinitiveThemes[verb.infinitive] = Themizer.generate(verb, dialect);
+		});
 
-				infinitives[infinitive] = themes;
-				verb.infinitive = infinitive;
+		var k = 13;
+//		k = generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10], k);
+//		k = generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7], k);
+//		k = generateTheme(verbs, infinitiveThemes, 4, 0, [11], k);
+//		k = generateTheme(verbs, infinitiveThemes, 5, 2, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 6, 2, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 7, 2, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 8, 0, [12], k);
+		k = generateTheme(verbs, infinitiveThemes, 9, 0, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 10, 0, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 11, 4, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 12, 8, [], k);
 
-				generateRegularEndingsForSingleVerb(verb, themes, paradigmEndings);
-				generateIrregularEndingsForSingleVerb(verb, themes, paradigmEndings);
+//		printReductions(reductions, 'reductions');
+
+//		printReductions(interrogatives, 'interrogatives');
+
+//		printReductions(pronomenals, 'pronomenals');
+
+//		printReductions(consonantVoicings, 'final consonant voicing');
+	};
+
+	var generateTheme = function(verbs, infinitiveThemes, theme, originTheme, flags, k){
+		var paradigm = [],
+			origins = [],
+			themes;
+		verbs.forEach(function(verb){
+			themes = infinitiveThemes[verb.infinitive];
+
+			switch(theme){
+				case 1:
+					generateThemeT1InfinitiveSimple(paradigm, verb, themes, theme, REGULAR, origins, originTheme);
+					generateThemeT1InfinitiveSimple(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					break;
+
+				case 2:
+					generateThemeT2ParticiplePerfect(paradigm, verb, themes, theme, REGULAR, origins, originTheme);
+					generateThemeT2ParticiplePerfect(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					if(!verb.irregularity.eser){
+						generateThemeT2IndicativeImperfect(paradigm, verb, themes, theme, REGULAR, origins, originTheme);
+						generateThemeT2SubjunctiveImperfect(paradigm, verb, themes, theme, REGULAR, origins, originTheme);
+						generateThemeT2GerundSimple(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					}
+					//ensure syncope does not occurs
+					if(!verb.irregularity.verb.match(/dixer|poder|toler|voler|traer/))
+						generateThemeT2IndicativeImperfect(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					generateThemeT2SubjunctiveImperfect(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					generateThemeT2GerundSimple(paradigm, verb, themes, theme, REGULAR, origins, originTheme);
+					break;
+
+				case 4:
+					if(!verb.irregularity.eser){
+						generateThemeT4IndicativeFuture(paradigm, verb, themes, theme, REGULAR, origins, originTheme);
+						generateThemeT4ConditionalSimple(paradigm, verb, themes, theme, REGULAR, origins, originTheme);
+					}
+					generateThemeT4IndicativeFuture(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					generateThemeT4ConditionalSimple(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					break;
+
+				case 5:
+					generateThemeT5IndicativePresent(paradigm, verb, themes, theme, REGULAR, origins, originTheme);
+					generateThemeT5IndicativePresent(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					//ensure syncope does not occurs
+					if(!verb.irregularity.verb.match(/dever|eser|s?aver/))
+						generateThemeT5SubjunctivePresent(paradigm, verb, themes, theme, REGULAR, origins, originTheme);
+					generateThemeT5SubjunctivePresent(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					if(!verb.irregularity.poder){
+						generateThemeT5ImperativePresent(paradigm, verb, themes, theme, REGULAR, origins, originTheme);
+						generateThemeT5ImperativePresent(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					}
+					break;
+
+				case 6:
+					generateThemeT6ParticiplePerfect(paradigm, verb, themes, theme, REGULAR, origins, originTheme);
+					generateThemeT6ParticiplePerfect(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					break;
+
+				case 7:
+					generateThemeT7ParticipleImperfect(paradigm, verb, themes, theme, REGULAR, origins, originTheme);
+					generateThemeT7ParticipleImperfect(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					generateThemeT7ParticiplePerfect(paradigm, verb, themes, theme, REGULAR, origins, originTheme);
+					generateThemeT7ParticiplePerfect(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					if(!verb.irregularity.eser)
+						generateThemeT7GerundSimple(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					break;
+
+				case 8:
+					generateThemeT8IndicativePresent(paradigm, verb, themes, theme, REGULAR, origins, originTheme);
+					generateThemeT8IndicativePresent(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					if(!verb.irregularity.verb.match(/dever|eser|s?aver/))
+						generateThemeT8SubjunctivePresent(paradigm, verb, themes, theme, REGULAR, origins, originTheme);
+					generateThemeT8SubjunctivePresent(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					generateThemeT8ParticiplePerfect_strong(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					break;
+
+				case 9:
+					if(!verb.irregularity.poder){
+						generateThemeT9ImperativePresent(paradigm, verb, themes, theme, REGULAR, origins, originTheme);
+						generateThemeT9ImperativePresent(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					}
+					break;
+
+				case 10:
+						generateThemeT10IndicativePresent(paradigm, verb, themes, theme, REGULAR, origins, originTheme);
+						generateThemeT10IndicativePresent(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					break;
+
+				case 11:
+					if(!verb.irregularity.eser){
+						generateThemeT11IndicativeImperfect(paradigm, verb, themes, theme, REGULAR, origins, originTheme);
+						generateThemeT11SubjunctiveImperfect(paradigm, verb, themes, theme, REGULAR, origins, originTheme);
+					}
+					//ensure syncope does not occurs
+					if(!verb.irregularity.verb.match(/dixer|poder|toler|voler|traer/))
+						generateThemeT11IndicativeImperfect(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					generateThemeT11SubjunctiveImperfect(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					break;
+
+				case 12:
+					generateThemeT12IndicativePresent(paradigm, verb, themes, theme, REGULAR, origins, originTheme);
+					generateThemeT12IndicativePresent(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					//ensure syncope does not occurs
+					if(!verb.irregularity.verb.match(/dever|eser|s?aver/))
+						generateThemeT12SubjunctivePresent(paradigm, verb, themes, theme, REGULAR, origins, originTheme);
+					generateThemeT12SubjunctivePresent(paradigm, verb, themes, theme, IRREGULAR, origins, originTheme);
+					break;
 			}
 		});
 
-		commonThemes = extractCommonThemes(paradigmEndings);
+		paradigm = compactEqualSuffixes(paradigm);
 
-		paradigmEndings = compactEndings(paradigmEndings);
+		constraintToInfinitives(paradigm, origins);
 
-		expandedList = constraintToInfinitivesParadigm(paradigmEndings, infinitives);
+		k = reduceSuffixes(paradigm, reductions, theme, k);
 
+		contractReductions(reductions, theme);
 
-console.log(paradigmEndings);
-console.log(commonThemes);
+		printParadigm(paradigm, flags, theme);
 
-		printThemesSimplifications(themesSimplifications);
-		i = printLogsSimplifications(logsSimplifications);
-//i = 12;
-		SUFFIXES_BASE_INDEX = i;
-
-		i = printThemes(commonThemes, i);
-
-		i = print(paradigmEndings, commonThemes, infinitives, i);
-
-		print(expandedList, commonThemes, infinitives, i, true);
+		return k;
 	};
 
-	/** @private */
-	var generateRegularEndingsForSingleVerb = function(verb, themes, paradigmEndings){
-		if(verb.irregular)
-			return;
-
-		this.verb = verb;
-		this.themes = themes;
-		this.paradigm = paradigmEndings;
-
-		var reg = this.themes[REGULAR],
-			conj = getIrregularVerbConjugation.call(this, REGULAR);
-
-		generateIndicativePresent.call(this, REGULAR, reg, conj);
-		generateInfinitiveSimple.call(this, reg);
-		if(!this.verb.irregularity.poder)
-			generateImperativePresent.call(this, reg, conj);
-		generateParticipleImperfect.call(this, reg);
-		generateParticiplePerfect.call(this, reg);
-		if(!this.verb.irregularity.eser){
-			generateIndicativeImperfect.call(this, reg);
-			generateIndicativeFuture.call(this, reg);
-			generateSubjunctiveImperfect.call(this, reg);
-			generateConditionalSimple.call(this, reg);
-		}
-		//ensure syncope does not occurs
-		if(!this.verb.irregularity.verb.match(/dever|eser|s?aver/))
-			generateSubjunctivePresent.call(this, REGULAR, reg, conj);
-		generateGerundSimple.call(this, reg);
-	};
 
 	/** @private */
-	var generateIrregularEndingsForSingleVerb = function(verb, themes, paradigmEndings){
-		if(!verb.irregular)
-			return;
-
-		this.verb = verb;
-		this.themes = themes;
-		this.paradigm = paradigmEndings;
-
-		var irr = this.themes[IRREGULAR],
-			conj = getIrregularVerbConjugation.call(this, IRREGULAR);
-
-		generateIndicativePresent.call(this, IRREGULAR, irr, conj);
-		generateInfinitiveSimple.call(this, irr);
-		if(!this.verb.irregularity.poder)
-			generateImperativePresent.call(this, irr, conj);
-		generateParticipleImperfect.call(this, irr);
-		generateParticiplePerfect.call(this, irr);
-		generateParticiplePerfect_strong.call(this);
-		if(!this.verb.irregularity.eser)
-			generateGerundSimple.call(this, irr);
-		//ensure syncope does not occurs
-		if(!this.verb.irregularity.verb.match(/dixer|poder|toler|voler|traer/))
-			generateIndicativeImperfect.call(this, irr);
-		generateIndicativeFuture.call(this, irr);
-		generateSubjunctivePresent.call(this, IRREGULAR, irr, conj);
-		generateSubjunctiveImperfect.call(this, irr);
-		generateConditionalSimple.call(this, irr);
-	};
-
-	/** @private */
-	var extractCommonThemes = function(list){
-		var commonThemes = [],
-			idx;
-		list.forEach(function(obj){
-			obj.themes.forEach(function(theme, i){
-				idx = ArrayHelper.findIndex(commonThemes, function(el){ return ArrayHelper.equals(theme, el); });
-				if(idx < 0){
-					commonThemes.push(theme);
-					idx = commonThemes.length - 1;
-				}
-				obj.themes[i] = idx;
+	var printParadigm = function(list, flags, theme){
+		var logs = [],
+			m;
+		list.forEach(function(el){
+			el.suffixes.forEach(function(suffix){
+				m = suffix.match(/^(.*)>(.*)$/);
+				storeSuffix(logs, theme, m[1], m[2], flags, el.matcher, el.origins);
 			});
 		});
 
-		commonThemes = commonThemes.map(expandForms);
-		commonThemes.forEach(function(sublist){
-			themesSimplifications.forEach(function(array){
-				simplifyThemes(sublist, array.slice(0));
-			});
+		if(logs.length)
+			printSuffixes(logs, theme, 'theme T' + theme);
+	};
+
+	/** @private */
+	var contractReductions = function(list, theme){
+		var parts = {},
+			j = 1,
+			i = 0;
+		list[theme].forEach(function(value){
+			var key = value[0];
+			if(key in parts){
+				if(parts[key][0][1].replace(/>.+$/, '') == value[1].replace(/>.+$/, ''))
+					parts['_' + (j ++)] = [value];
+				else
+					parts[key].push(value);
+			}
+			else{
+				parts[key] = [value];
+				i = Math.max(i, key);
+			}
 		});
-		return commonThemes;
-	};
-
-	/** @private */
-	var simplifyThemes = function(list, replacement){
-		var flag = replacement.shift(),
-			matcher = replacement.shift();
-		if(matcher == PRONOMENAL_MARK || matcher == PRONOMENAL_MARK_IMPERATIVE || matcher == FINAL_CONSONANT_VOICING){
-			matcher = new RegExp(escapeRegExp(matcher) + '$');
-			list.forEach(function(el){
-				el.replacement = el.replacement.replace(matcher, '/' + flag);
-			});
-		}
-		else{
-			var i, el, base, indices, matcher2;
-			matcher = new RegExp(matcher + '([' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + FINAL_CONSONANT_VOICING + ']+|\/[\\d,]+)?$');
-			for(i = list.length - 1; i >= 0; i --){
-				el = list[i];
-				if(el.replacement.match(matcher)){
-					base = el.replacement.replace(matcher, '');
-
-					indices = replacement.map(function(last){
-						matcher2 = new RegExp('^' + escapeRegExp(base + last) + '$');
-						return ArrayHelper.findIndex(list, function(el){ return el.replacement.match(matcher2); });
-					});
-					if(indices.some(function(el){ return (el < 0); }))
-						continue;
-
-					//here, all replacements are found, substitute them
-
-					el.replacement = addFlag(el.replacement, flag);
-
-					//remove replaced items
-					i = removeIndices(list, indices, i);
-				}
+		list[theme] = Object.keys(parts).map(function(key){
+			parts[key] = ArrayHelper.unique(ArrayHelper.flatten(parts[key]));
+			if(key.indexOf('_') >= 0){
+				parts[key].shift();
+				parts[key].unshift(++ i);
 			}
-		}
+			return parts[key];
+		});
 	};
 
 	/** @private */
-	var addFlag = function(replacement, flag){
-		return (replacement.indexOf('/') >= 0? replacement.replace(/(?:\/(.+))?$/, '/' + flag + ',$1'): replacement + '/' + flag);
-	};
+	var printReductions = function(list, comment){
+		var re = new RegExp(escapeRegExp(MARKER_FLAGS)),
+			flag, substitution,
+			subst, form, constraint,
+			logs, line, i, m, red;
+		//expand suffixes
+		Object.keys(list).forEach(function(key){
+			list[key].forEach(function(reduction){
+				if(key == '0')
+					return;
 
-	/** @private */
-	var removeIndices = function(list, indices, baseIndex){
-		var i, j;
-		for(i = indices.length - 1; i >= 0; i --){
-			list.splice(indices[i], 1);
-
-			for(j = i - 1; j >= 0; j --)
-				if(indices[j] > indices[i])
-					indices[j] --;
-			if(indices[i] < baseIndex)
-				baseIndex --;
-		}
-		return baseIndex;
-	};
-
-	/** @private */
-	var compactEndings = function(list){
-		var compacted = [],
-			data;
-		for(var i = list.length - 1; i >= 0; i --){
-			data = {infinitives: [list[i].infinitive], themes: list[i].themes};
-
-			//search list for equal themes
-			for(var j = i - 1; j >= 0; j --)
-				if(ArrayHelper.equals(list[j].themes, data.themes)){
-					data.infinitives.push(list[j].infinitive);
-
-					//remove element from list
-					list.splice(j, 1);
-					i --;
-				}
-			list.splice(i, 1);
-
-			compacted.push(data);
-		}
-		return compacted;
-	};
-
-	/** @private */
-	var constraintToInfinitivesParadigm = function(list, infinitives){
-		var expandedList = [],
-			i, obj, diff, variability, common, re, found, part, partitioningResults, parents,
-			listNoPrefixes;
-		infinitives = Object.keys(infinitives);
-		for(i = list.length - 1; i >= 0; i --){
-			obj = list[i];
-			diff = ArrayHelper.difference(infinitives, obj.infinitives);
-
-			common = extractCommonPartFromList(obj.infinitives);
-			variability = '';
-			re = new RegExp(common + '$');
-			found = diff.some(function(el){ return el.match(re); });
-
-			if(found && obj.infinitives.indexOf(common) < 0){
-				variability = listToRegExp(extractVariability(common.length, 1, obj.infinitives));
-				re = new RegExp(variability + common + '$');
-				found = diff.some(function(el){ return el.match(re); });
-			}
-
-			if(found && obj.infinitives.length > 1){
-				part = ArrayHelper.partition(obj.infinitives, function(el){ return (el.length - common.length >= 1? el[el.length - common.length - 1]: '^'); });
-				variability = listToRegExp(extractVariability(common.length + 1, 1, obj.infinitives));
-				partitioningResults = {true: [], false: []};
-				Object.keys(part).forEach(function(k){
-					re = new RegExp((k != '^'? variability + k: k) + common + '$');
-					partitioningResults[diff.some(function(el){ return el.match(re); })].push(k);
+				reductions[0].forEach(function(red){
+					reduceSuffix(reduction, red);
 				});
-				if(partitioningResults[false].length){
-					if(partitioningResults[true].length){
-						parents = {true: [], false: []};
-						[true, false].forEach(function(side){
-							partitioningResults[side].forEach(function(chr){
-								parents[side] = parents[side].concat(part[chr]);
-							});
-						});
 
-						obj.matcher = listToRegExp(partitioningResults[false]) + common;
-						obj.infinitives = parents[false];
+				flag = reduction.shift();
+				substitution = extractSimpleForm(reduction[0]);
 
-
-						obj = {infinitives: parents[true], themes: obj.themes};
-						list.splice(i, 0, obj);
-						if(obj.infinitives.indexOf(common) < 0){
-							diff = ArrayHelper.difference(infinitives, obj.infinitives);
-							variability = listToRegExp(partitioningResults[true]);
-							re = new RegExp(variability + common + '$');
-							found = diff.some(function(el){ return el.match(re); });
-						}
+				for(i = reduction.length - 1; i >= 0; i --){
+					m = reduction[i].match(/^(.+?)>(.+?)(?:\|(.+))?$/);
+					if(m){
+						subst = m[1];
+						form = m[2];
+						constraint = m[3];
 					}
 					else{
-						variability = listToRegExp(partitioningResults[false]);
-
-						found = false;
+						subst = substitution;
+						form = reduction[i];
+						constraint = undefined;
 					}
+
+					expandForm(form.replace(re, '')).forEach(function(form){
+						if(subst != form)
+							reduction.push(subst + '>' + form + '|' + (constraint || subst));
+					});
+
+					reduction.splice(i, 1);
 				}
-			}
 
+				if(reduction.length > 1){
+					red = reduceFlags(reduction);
+					reduction.length = 0;
+					reduction.push.apply(reduction, red);
+				}
 
-			if(found){
-				console.log('!! cannot split up the verbs array, manually extract each of them');
+				reduction.unshift(flag);
+			});
+		});
 
-				listNoPrefixes = uniqueNoPrefixes(obj.infinitives);
-				listNoPrefixes.forEach(function(el){
-					re = new RegExp(el + '$');
-					expandedList.push({matcher: START_OF_WORD + el, infinitives: listNoPrefixes.filter(function(obj){ return obj.match(re); }), themes: obj.themes});
+		Object.keys(list).forEach(function(key){
+			list[key].forEach(function(reduction){
+				if(key == '0')
+					return;
+
+				flag = reduction.shift();
+				substitution = extractSimpleForm(reduction[0]);
+
+				logs = [];
+				reduction.forEach(function(el){
+					m = el.match(/^(.+?)>(.+?)(?:\|(.+))?$/);
+					if(m){
+						subst = m[1];
+						form = m[2];
+						constraint = m[3];
+					}
+					else{
+						subst = substitution;
+						form = el;
+						constraint = undefined;
+					}
+
+					expandForm(form.replace(re, '')).forEach(function(form){
+						if(subst != form){
+							line = 'SFX ' + flag + ' ' + subst + ' ' + form + ' ' + (constraint || subst);
+							if(logs.indexOf(line) < 0)
+								logs.push(line);
+						}
+					});
 				});
 
-				list.splice(i, 1);
-			}
-			else
-				obj.matcher = variability + common;
-		}
-		return expandedList;
+				reduction.unshift(flag);
+
+				if(logs.length)
+					printSuffixes(logs, flag, comment);
+			});
+		});
 	};
 
 	/** @private */
-	var extractCommonPartsFromStart = function(a, b, allButLast){
-		for(var i = 0, len = Math.min(a.length, b.length) - (allButLast? 1: 0); i < len; i ++)
+	var storeSuffix = function(logs, i, replaced, replacement, flags, constraint, parents){
+		if(!replaced)
+			replaced = 0;
+		replacement = addFlag(replacement, flags).replace(MARKER_FLAGS, '');
+		if(!constraint && replaced != 0)
+			constraint = replaced;
+
+		//FIXME
+//		var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + constraint: '') + (parents? ' # ' + parents.sort().join(','): '');
+var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + constraint: '');
+		if(logs.indexOf(line) < 0)
+			logs.push(line);
+	};
+
+	/** @private */
+	var printSuffixes = function(logs, i, comment){
+		console.log('SFX ' + i + ' Y ' + logs.length + (comment != undefined? ' # ' + comment: ''));
+		logs.sort().forEach(function(log){
+			console.log(log);
+		});
+	};
+
+	/** @private */
+	var composeFlag = function(){
+		return '/' + Array.prototype.slice.call(arguments).map(function(flag){ return flag.substr(1); }).join(',');
+	};
+
+	/** @private */
+	var addFlag = function(replacement, flags){
+		if(!flags)
+			return replacement;
+
+		var mFlag = extractFlags(Array.isArray(flags)? '/' + flags.join(','): '/' + flags),
+			mRep = extractFlags(replacement);
+
+		flags = uniteFlags(mRep, mFlag);
+
+		return replacement.replace(PATTERN_FLAGS, '') + printFlags(flags);
+	};
+
+	/** @private */
+	var extractFlags = function(flags){
+		var m = flags.match(PATTERN_FLAGS);
+		m[1] = (m[1]? m[1].split(','): []);
+		m[2] = (m[2]? m[2].split(''): []);
+		return {forms: m[1], markers: m[2]};
+	};
+
+	/** @private */
+	var uniteFlags = function(flags1, flags2){
+		return {
+			forms: ArrayHelper.unique(flags2.forms.concat(flags1.forms)).sort(function(a, b){ return Number(a) - Number(b); }),
+			markers: ArrayHelper.unique(flags2.markers.concat(flags1.markers)).sort()
+		}
+	};
+
+	/** @private */
+	var printFlags = function(flags){
+		return (flags.forms.length? '/' + flags.forms.join(','): '') + flags.markers.join('');
+	};
+
+	/** @private */
+	var extractCommonPartsFromStart = function(a, b){
+		for(var i = 0, len = Math.min(a.replace(PATTERN_FLAGS, '').length, b.replace(PATTERN_FLAGS, '').length) - 1; i < len; i ++)
 			if(a[i] != b[i])
 				break;
 		return {a: a.substr(i), b: b.substr(i)};
@@ -403,428 +438,273 @@ console.log(commonThemes);
 	};
 
 	/** @private */
-	var uniqueNoPrefixes = function(list){
-		return list.filter(function(x){
-			for(var i = 0, len = list.length; i < len; i ++)
-				if(x.indexOf(list[i]) > 0)
-					return false;
-			return true;
-		});
-	};
-
-	/** @private */
-	var printThemesSimplifications = function(list){
-		var logs, previousFlag, flag, base;
+	var compactEqualSuffixes = function(list){
 		list.forEach(function(sublist){
-			logs = [];
-			flag = sublist.shift();
-
-			//skip same-flag simplification
-			if(flag == previousFlag){
-				sublist.unshift(flag);
-				return;
-			}
-
-			base = sublist.shift();
-			switch(base){
-				case PRONOMENAL_MARK:
-					storeSuffix(logs, flag, '.', 'bla');
-					break;
-
-				case PRONOMENAL_MARK_IMPERATIVE:
-					storeSuffix(logs, flag, '.', 'bla');
-					break;
-
-				/*case INTERROGATIVE_MARK:
-					storeSuffix(logs, flag, '.', 'nte/5');
-					storeSuffix(logs, flag, '.', 'ne/5');
-					storeSuffix(logs, flag, 0, 'nte/5');
-					storeSuffix(logs, flag, 0, 'ne/5');
-					storeSuffix(logs, flag, 0, 'e/5');
-					storeSuffix(logs, flag, 0, 'mi');
-
-					storeSuffix(logs, flag, 0, 'stu');
-					storeSuffix(logs, flag, 0, 'tu');
-					storeSuffix(logs, flag, 0, 'to');
-
-					storeSuffix(logs, flag, 0, 'u');
-					storeSuffix(logs, flag, 0, 'o');
-
-					storeSuffix(logs, flag, 0, 'lo/7');
-					storeSuffix(logs, flag, '.', 'elo/7');
-
-					printSuffixes(logs, flag, 'interrogative');
-					break;*/
-
-				case FINAL_CONSONANT_VOICING:
-					storeSuffix(logs, flag, 'ñ.', 'n', null, 'ñ[oei]');
-					storeSuffix(logs, flag, 'ñ.', 'nc', null, 'ñ[oei]');
-					storeSuffix(logs, flag, 'ñ.', 'in', null, 'ñ[oei]');
-					storeSuffix(logs, flag, 'b.', 'p', null, 'b[oei]');
-					storeSuffix(logs, flag, 'd.', 't', null, 'd[oei]');
-					storeSuffix(logs, flag, 'g.', 'k', null, 'g[oei]');
-					storeSuffix(logs, flag, 'v.', 'f', null, 'v[oei]');
-					storeSuffix(logs, flag, 'đ.', 'ŧ', null, 'đ[oei]');
-					storeSuffix(logs, flag, 'x.', 's', null, 'x[oei]');
-					storeSuffix(logs, flag, 'ɉ.', 'c', null, 'ɉ[oei]');
-					storeSuffix(logs, flag, 'm.', 'n', null, 'm[oei]');
-
-					printSuffixes(logs, flag, {replaced: 0, replacement: 'final consonant voicing'});
-					break;
-
-				default:
-					sublist.forEach(function(el){
-						storeSuffix(logs, flag, base.replace(/\/.+$/, ''), el);
-					});
-					printSuffixes(logs, flag, {replaced: 0, replacement: base});
-			}
-			sublist.unshift(base);
-			sublist.unshift(flag);
-
-			previousFlag = flag;
+			sublist.suffixes = mergeIdenticalTransformations(sublist.suffixes);
 		});
-	};
 
-	/** @private */
-	var printLogsSimplifications = function(list){
-		var logs, previousFlag, flag, base;
-		list.forEach(function(sublist){
-			logs = [];
-			flag = sublist.shift();
+		var compacted = [],
+			data;
+		for(var i = list.length - 1; i >= 0; i --){
+			data = {theme: list[i].theme, origins: [list[i].origin], suffixes: list[i].suffixes};
 
-			//skip same-flag simplification
-			if(flag == previousFlag)
-				return;
+			//search list for equal suffixes
+			for(var j = i - 1; j >= 0; j --)
+				if(ArrayHelper.equals(list[j].suffixes, data.suffixes)){
+					data.origins.push(list[j].origin);
 
-			base = sublist.shift();
-			sublist.forEach(function(el){
-				storeSuffix(logs, flag, el.replaced, el.replacement);
-			});
-			sublist.unshift(base);
-			sublist.unshift(flag);
-
-			printSuffixes(logs, flag, base);
-
-			previousFlag = flag;
-		});
-		return flag + 1;
-	};
-
-	/** @private */
-	var printThemes = function(list, i){
-		var j, len,
-			base, logs, m, repment, flags;
-		list.forEach(function(sublist){
-			len = sublist.length;
-			for(j = 0; j < len; j ++){
-				base = sublist.shift();
-				if(base.replaced == 0 && !base.replacement.match(/[>/]/))
-					break;
-
-				if(j < len - 1){
-					//undo previous shift
-					sublist.push(base);
-					base = sublist.shift();
+					//remove element from list
+					list.splice(j, 1);
+					i --;
 				}
-			}
+			list.splice(i, 1);
 
-			logs = [];
+			compacted.push(data);
+		}
+		return compacted;
+	};
 
-			m = base.replacement.match(/^\(?\[(.+)\]\)?>(.+)$/);
-			if(m){
-				base.replacement = '';
-				repment = m[2].replace(/\$\d/, '');
-				m[1].split('').forEach(function(obj){
-					storeSuffix(logs, i, obj, repment);
-				});
-			}
+	/** @private */
+	var extractSimpleForm = function(form){
+		return form.replace(PATTERN_FLAGS, '').replace(/\(.+?\)/g, '').replace(/\[.+\]/g, function(value){ return value.replace(/^\[|\]$/g, '').split(value.indexOf('/') >= 0? '/': '')[0]; });
+	};
 
-			sublist.forEach(function(el){
-				//find the correct index of each parent
-				flags = (sublist.parents? sublist.parents.map(function(obj){ return obj + SUFFIXES_BASE_INDEX; }): []);
+	/** @private */
+	var reduceSuffixes = function(list, reductions, theme, k){
+		var reds = {};
+		if(!reductions[theme]){
+			reds = getReductions(list, k);
+			reductions[theme] = reds.reductions;
+		}
 
-				storeSuffix(logs, i, (el.replaced != 0? el.replaced.replace(/\[.+?\]/g, '.'): base.replacement), el.replacement, flags, el.constraint);
-			});
-			sublist.unshift(base);
-
-			printSuffixes(logs, i, base);
-
-			i ++;
+		var tmp = [];
+		list.forEach(function(sublist){
+			tmp.push({matcher: sublist.matcher, theme: sublist.theme, origins: sublist.origins.slice(0), suffixes: sublist.suffixes.slice(0)});
 		});
-		return i;
+		tryReduceSuffixes(tmp, reductions, theme);
+
+		var len = reductions[theme].length;
+		reductions[theme] = reductions[theme].filter(function(reduction){ return reduction.used; });
+		if(reductions[theme].length < len)
+			tryReduceSuffixes(list, reductions, theme);
+		else{
+			list.length = 0;
+			list.push.apply(list, tmp);
+		}
+
+		return (reds? reds.index: reductions[theme][reductions[theme].length - 1][0] + 1);
 	};
 
 	/** @private */
-	var print = function(list, commonThemes, infinitives, i, isExpandedList){
-		var logs = [],
-			parts, k, th, themes, fromTo, matcher, repment;
-		list.forEach(function(el){
-			if(!isExpandedList)
-				logs = [];
-			el.themes.forEach(function(idx, theme){
-				fromTo = [];
-				th = 'themeT' + theme;
-				el.infinitives.forEach(function(inf){
-					themes = infinitives[inf];
+	var tryReduceSuffixes = function(list, reductions, theme){
+		list.forEach(function(sublist){
+			sublist.suffixes = reduceFlags(sublist.suffixes);
 
-//FIXME
-//what if fromTo.infinitive does not span all of the infinitives?
-parts = extractCommonPartsFromStart(inf, themes[REGULAR][th] || themes[IRREGULAR][th]);
-					k = ArrayHelper.findIndex(fromTo, function(el){ return (el.from == parts.a && el.to == parts.b); });
-					if(k < 0)
-						fromTo.push({from: parts.a, to: parts.b, infinitive: inf});
-					else
-						fromTo[k].infinitive = extractCommonPartFromEnd(inf, fromTo[k].infinitive);
-				});
+			reductions[theme].forEach(function(reduction){
+				reduceSuffix(sublist.suffixes, reduction);
+			});
+		});
+	};
 
-				fromTo.forEach(function(ft){
-					matcher = new RegExp(ft.infinitive + '$');
-					repment = applySuffix(ft.to, commonThemes[idx][0]);
+	/** @private */
+	var reduceSuffix = function(sublist, reduction){
+		var flag = reduction.shift(),
+			reductionRE = reduction.map(function(red){ return new RegExp((red.indexOf('>') >= 0? '^': '') + escapeRegExp(red) + '$'); }),
+			substitution, temporaryList;
 
-					expandForms(repment).forEach(function(rm){
-						rm = rm.replacement;
-						if(rm.length > 2)
-							rm = Word.unmarkDefaultStress(rm);
+		//reduce suffixes
+		if(reductionRE.map(function(re){ return sublist.some(function(suffix){ return String(suffix).match(re); }); }).every(function(el){ return el; })){
+			substitution = extractSimpleForm(reduction[0]);
 
-						storeSuffix(logs, i, ft.from, rm, idx + SUFFIXES_BASE_INDEX, (el.matcher.match(matcher)? el.matcher: ft.from), el.infinitives.filter(function(obj){ return obj.match(matcher); }));
-					});
+			temporaryList = (sublist.used? sublist: sublist.slice(0));
+			reductionRE.forEach(function(re){
+				temporaryList = temporaryList.map(function(suffix){
+					return (String(suffix).match(re)?
+						addFlag(unmarkDefaultStress(suffix.replace(re, substitution)), flag):
+						suffix);
 				});
 			});
 
-			if(!isExpandedList && (logs.length > 1 || logs.length == 1 && logs[0].match(/^SFX \d+ Y 0 # .+\/.+$/))){
-				printSuffixes(logs, i);
+			temporaryList = mergeIdenticalTransformations(ArrayHelper.unique(temporaryList));
+			if(sublist != temporaryList){
+				if(ArrayHelper.difference(sublist, temporaryList).length)
+					reduction.used = true;
 
-				i ++;
-			}
-		});
-
-		if(isExpandedList)
-			printSuffixes(logs, i);
-
-		return i;
-	};
-
-
-	/** @private */
-	var applySuffix = function(word, suffix){
-		return (suffix.replaced == 0? word + suffix.replacement: word.replace(new RegExp(suffix.replaced + '$'), suffix.replacement));
-	};
-
-	/** @private */
-	var storeSuffix = function(logs, i, replaced, replacement, flags, constraint, parents){
-		if(Array.isArray(flags))
-			flags = flags.join(',');
-		if(!replaced)
-			replaced = 0;
-		if(flags)
-			replacement = (replacement.indexOf('/') >= 0? replacement.replace(/(?:\/(.+))?$/, '/' + flags + ',$1'): replacement + '/' + flags);
-
-		if(replaced != 0){
-			var parts = extractCommonPartsFromStart(replaced, replacement, true);
-			replaced = parts.a;
-			replacement = parts.b;
-
-			if(replaced == 'r' && replacement[0] == 'r'){
-				replaced = 0;
-				replacement = replacement.substr(1);
+				sublist.length = 0;
+				sublist.push.apply(sublist, temporaryList);
 			}
 		}
-		replacement += (constraint? ' ' + constraint: (replaced != 0? ' ' + replaced: ''));
 
-		var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (parents? ' # ' + parents.join(','): '');
-		if(logs.indexOf(line) < 0){
-			var matcher = new RegExp('^' + escapeRegExp(line).replace(/\/[\d,]+/, '/([\\d,]+)') + '$'),
-				idx = ArrayHelper.findIndex(logs, function(el){ return (m = el.match(matcher)); }),
-				m, m2;
-			if(idx >= 0){
-				if(m[1]){
-					m2 = replacement.match(/\/([\d,]+)/);
-					m2 = (m2[1]? ArrayHelper.difference(m2[1].split(','), m[1].split(',')).join(','): '');
-				}
-				else
-					m2 = [];
+		reduction.unshift(flag);
+	};
 
-				if(m2.length)
-					logs[idx] = logs[idx].replace(/\/[\d,]+/, '$&,' + m2);
-			}
-			else
-				logs.push(line);
+	/**
+	 * Merge identical transformations with different flags
+	 *
+	 * @private
+	 */
+	var mergeIdenticalTransformations = function(sublist){
+		var flag = sublist.shift();
+		if(Number(flag) !== flag){
+			sublist.unshift(flag);
+			flag = null;
 		}
+
+		var parts = ArrayHelper.partition(ArrayHelper.unique(sublist), function(el){ return el.replace(PATTERN_FLAGS, ''); }),
+			flags;
+		sublist = Object.keys(parts).map(function(part){
+			flags = parts[part].map(function(el){ return extractFlags(el); }).reduce(uniteFlags, {forms: [], markers: []});
+			return part + printFlags(flags);
+		});
+
+		if(flag)
+			sublist.unshift(flag);
+		return sublist;
 	};
 
 	/** @private */
-	var printSuffixes = function(logs, i, base){
-//		simplifyLogs(logs, logsSimplifications);
-
-if(base != undefined && base.replaced != 0)
-	console.log('asd');
-		console.log('SFX ' + i + ' Y ' + logs.length + (base != undefined? ' # ' + (ObjectHelper.isObject(base)? base.replacement/*.replace(/\/[\d,]+/, '')*/: base): ''));
-		logs.sort().forEach(function(log){
-			console.log(log);
+	var reduceFlags = function(list){
+		var parts = ArrayHelper.partition(list, function(el){ return el.replace(PATTERN_FLAGS, ''); }),
+			flags;
+		return Object.keys(parts).map(function(part){
+			flags = parts[part].map(function(el){ return extractFlags(el); }).reduce(uniteFlags, {forms: [], markers: []});
+			return part + printFlags(flags);
 		});
 	};
 
 	/** @private */
-	var simplifyLogs = function(list, replacements){
-		var flag, indices, line;
-		replacements.forEach(function(replacement){
-			flag = replacement.shift();
-			indices = replacement.map(function(last){
-				return ArrayHelper.findIndex(list, function(el){
-					return el.match(new RegExp('^SFX \\d+ ' + last[0] + ' ' + last[1] + ' '));
-				});
+	var getReductions = function(list, index){
+		var transformations = [];
+		list.forEach(function(sublist){
+			sublist.suffixes.forEach(function(suffix){
+				transformations.push(suffix + '|' + sublist.matcher);
 			});
-			replacement.unshift(flag);
-			if(indices.every(function(el){ return (el >= 0); })){
-				//here, all replacements are found, substitute them
-
-				line = list[0];
-
-				//remove replaced items
-				removeIndices(list, indices, 0);
-
-				list.push(line.indexOf('/') >= 0? line.replace(/(?:\/(.+))?$/, '/' + flag + ',$1'): line + '/' + flag);
-			}
 		});
-	};
-
-	var expandForms = (function(){
-		var expander = function(form, forms){
-			var m = form.match(/^(.+)>(.+)$/),
-				replaced, replacement;
-			if(m){
-				replaced = splitter(m[1]);
-				replacement = splitter(m[2]);
-
-				replaced.forEach(function(rep){
-					if(rep == '')
-						rep = 0;
-
-					replacement.forEach(function(repment){
-						if(repment.match(/\$\d+/)){
-							repment = repment.replace(/\$\d+/, '');
-							m = rep.match(/^\(\[(\^)?(.+)\]\)$/);
-							if(m && m[1]){
-								//case '([^i])'
-								add(forms, 0, repment, m[0].replace(/^\(|\)$/g, ''));
-								rep = undefined;
-							}
-							else if(m){
-								//case '([ei])'
-								m[2].split('').forEach(function(r){
-									add(forms, r, r + repment, r);
-								});
-								rep = undefined;
-							}
-							else
-								rep = rep.replace(/^\(|\)$/g, '');
-						}
-
-						if(rep)
-							add(forms, rep.replace(/\[.+?\]/g, ''), repment, rep);
-					});
-				});
+		var parts = ArrayHelper.partition(transformations, function(el){ return el.replace(/\|.+$/, ''); }),
+			reversed = {},
+			filtered = [],
+			line;
+		Object.keys(parts).forEach(function(key){
+			line = parts[key].map(function(el){ return el.replace(/^.+\|/, ''); }).sort().join(',');
+			if(reversed[line])
+				reversed[line].push(key);
+			else
+				reversed[line] = [key];
+		});
+		var k = 0;
+		Object.keys(reversed).forEach(function(list1){
+			Object.keys(reversed).forEach(function(list2){
+				if(list1 != list2 && reversed[list1][0].replace(/>.+$/, '') == reversed[list2][0].replace(/>.+$/, '')){
+					var list = ArrayHelper.intersection(list1.split(','), list2.split(','));
+					if(list.length){
+						var value = ArrayHelper.unique(reversed[list1].concat(reversed[list2]));
+						if(!Object.keys(reversed).some(function(el){ return ArrayHelper.equals(reversed[el], value); }))
+							reversed[k ++] = value;
+					}
+				}
+			});
+		});
+		Object.keys(reversed).forEach(function(list){
+			list = reversed[list];
+			if(list.length > 1 || list.some(function(el){ return el.match(/[\(\[]/); }))
+				filtered.push(list);
+		});
+		var size;
+		index --;
+		filtered.sort(function(a, b){
+			var re = /(.+?)>/,
+				res = (a[0].match(re)[1].length - b[0].match(re)[1].length);
+			return (res? res: a.length - b.length);
+		}).map(function(el, idx){
+			var s = el[0].replace(/>.+$/, '').length;
+			if(s != size || idx > 0 && filtered[idx - 1][1].replace(/>.+$/, '') == el[0].replace(/>.+$/, '')){
+				size = s;
+				el.unshift(++ index);
 			}
 			else
-				splitter(form).forEach(function(repment){
-					add(forms, 0, repment);
+				el.unshift(index);
+
+			return el;
+		});
+		return {index: index + 1, reductions: filtered};
+	};
+
+	/** @private */
+	var unmarkDefaultStress = function(word){
+		if(!word)
+			return undefined;
+
+		var idx = Word.getIndexOfStress(word),
+			syll, tmp;
+		if(idx >= 0){
+			syll = Syllabator.syllabate(word);
+			//exclude unmark from words that can be truncated like "fenisié(de)" or "(g)à"
+			tmp = ((syll.syllabes.length > 1 || syll.syllabes[0].match(/[^aeiouàèéíòóú]$/))
+					&& !word.match(/^(re)?\(?g?\)?(à\/è|à|é|ò)[oaie]?$/)
+					&& !word.match(/^\(?x?\)?é$|^s[éí][oaie]?$/)
+					&& !word.match(/^((r[ei])?d[àé]|(kon(tra)?|likue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?f[àé]|(mal|move|soto)?st[àé])[oaie]?$/)
+					&& !word.match(/^(và[oaie]?|vé)[oaie]?$/)
+					&& !word.match(/^s[àò][oaie]?$/)
+					&& !word.match(/^(|as?|des?|es|kon|pro|re|so)tr[àé][oaie]?$/)?
+				word.replace(/[àéíóú]/g, function(chr){ return 'aeiou'['àéíóú'.indexOf(chr)]; }): word);
+			if(word == Word.markDefaultStress(tmp))
+				word = tmp;
+		}
+
+		return word;
+	};
+
+	/** @private */
+	var escapeRegExp = function(word){
+		return word.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
+	};
+
+	/** @private */
+	var constraintToInfinitives = function(list, origins){
+		for(var i = list.length - 1; i >= 0; i --)
+			partition(list[i], origins, list);
+	};
+
+	/** @private */
+	var partition = function(obj, origins, list){
+		var stack = [obj],
+			common, part, diff,
+			partitioningResults, re, parents;
+		while(stack.length){
+			obj = stack.shift();
+			common = extractCommonPartFromList(obj.origins);
+			part = ArrayHelper.partition(obj.origins, function(el){ return (el.length - common.length >= 1? el[el.length - common.length - 1]: '^'); });
+			diff = ArrayHelper.difference(origins, obj.origins),
+
+			partitioningResults = {true: [], false: []};
+			Object.keys(part).forEach(function(k){
+				re = new RegExp(k + common + '$');
+				partitioningResults[diff.some(function(el){ return el.match(re); })].push(k);
+			});
+
+			if(partitioningResults[false].length){
+				parents = {true: [], false: []};
+				[true, false].forEach(function(side){
+					partitioningResults[side].forEach(function(chr){
+						parents[side] = parents[side].concat(part[chr]);
+					});
 				});
 
-			return forms;
-		};
-
-		var splitter = function(subform){
-			var subforms = [],
-				m = subform.match(/^([^\(\)\[\]]+)?\(?\[(\^)?(.+)\]\)?(\?)?(\/[\d,]+)?$/),
-				m2;
-			if(m){
-				if(!m[5])
-					m[5] = '';
-				if(m[1] && m[1].match(/^\(.+\)$/)){
-					//cases '(g)[ai]', '(g)[ai]?'
-					m[1] = m[1].replace(/^\(|\)$/g, '');
-					m[3].split('').forEach(function(el){
-						subforms.push(el + m[5]);
-						subforms.push(m[1] + el + m[5]);
-					});
-					if(m[3])
-						subforms.push(m[1] + m[5]);
-				}
-				else if(m[2])
-					//case '([^i])'
-					subforms.push(subform);
-				else{
-					//cases 'g[lx]?' and 'g[ei]'
-					m[3].split('').forEach(function(el){
-						subforms.push((m[1]? m[1]: '') + el + m[5]);
-					});
-					if(m[4])
-						subforms.push((m[1]? m[1]: '') + m[5]);
-				}
+				obj.matcher = (partitioningResults[false].indexOf('^') < 0? listToRegExp(partitioningResults[false]): '') + common;
+				obj.origins = parents[false];
 			}
 			else{
-				m = subform.match(/^(.*?)\(([^\[\]]+?)\)(.*)$/);
-				if(m){
-					subforms = subforms.concat(splitter(m[1] + m[3]));
-
-					m2 = m[2].match(/^(.+)\/(.+)$/);
-					if(m2){
-						//case 'ie(de/ge)'
-						subforms = subforms.concat(splitter(m[1] + m2[1] + m[3]));
-						subforms = subforms.concat(splitter(m[1] + m2[2] + m[3]));
-					}
-					else
-						//case '(i)on(se)'
-						subforms = subforms.concat(splitter(m[1] + m[2] + m[3]));
-				}
-				else{
-					m = subform.match(/^(.*)\((.+)\/([\d,]+)\)(.*)$/);
-					if(m){
-						//case 'e(de/ge)'
-						subforms.push(m[1] + m[2] + m[4]);
-						subforms.push(m[1] + m[3] + m[4]);
-					}
-					else{
-						m = subform.match(/^(.+)\?(.+)$/);
-						if(m){
-							//case 'i?é'
-							if(m[1])
-								subforms.push('[^' + m[1] + ']' + m[2]);
-							subforms.push(m[1] + m[2]);
-						}
-						else
-							//case 'ron'
-							subforms.push(subform);
-					}
-				}
+				obj.origins = part[partitioningResults[true].shift()];
+				stack.push(obj);
 			}
-			return subforms;
-		};
 
-		var add = function(forms, replaced, replacement, constraint){
-			if(ArrayHelper.findIndex(forms, function(el){ return (el.replaced == replaced && el.replacement == replacement && el.constraint == constraint); }) < 0)
-				forms.push({replaced: replaced, replacement: replacement, constraint: constraint});
-		};
-
-		return function(forms){
-			var list = [];
-			[].concat(forms).forEach(function(el){
-				expander(el, list);
-			});
-			return list;
-		};
-	})();
-
-	/** @private */
-	var extractVariability = function(formLength, order, list){
-		var variability = [],
-			idx;
-		list.forEach(function(obj){
-			idx = obj.length - formLength - order;
-			if(idx >= 0)
-				variability.push(obj.substr(idx, order));
-		});
-		return ArrayHelper.unique(variability).sort();
+			if(partitioningResults[true].length)
+				partitioningResults[true].forEach(function(k){
+					obj = {theme: obj.theme, origins: part[k], suffixes: obj.suffixes};
+					list.push(obj);
+					stack.push(obj);
+				});
+		}
 	};
 
 	/** @private */
@@ -833,464 +713,521 @@ if(base != undefined && base.replaced != 0)
 			return '';
 		if(list.length == 1)
 			return list[0];
-		list.sort();
-		return (list[list.length - 1].length == 1? '[' + list.join('') + ']': '(' + list.join('|') + ')');
+		return '[' + list.sort().join('') + ']';
 	};
 
-	/**
-	 * Escape regexp reserved characters
-	 *
-	 * @private
-	 *
-	 * @param {String} word
-	 * @returns {String}
-	 */
-	var escapeRegExp = function(word){
-		return word.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
-	};
+	var expandForm = (function(){
+		var add = function(list, value){
+			if(list.indexOf(value) < 0)
+				list.push(value);
+		};
 
-	/** @private */
-	var generateIndicativePresent = function(type, t, conj){
-		if(t.themeT12 || t.themeT5 || t.themeT8 || t.themeT10){
-			if(t.themeT8){
-				if(this.verb.irregularity.eser){
-					insert.call(this, 8, (!t.themeT8.match(/[cijɉñ]$/)? '(i)': '') + 'on');
-//					insert.call(this, 8, (!t.themeT8.match(/[cijɉñ]$/)? '(i)': '') + 'on' + INTERROGATIVE_MARK_1);
-//					insert.call(this, 8, (!t.themeT8.match(/[cijɉñ]$/)? '(i)': '') + 'on' + INTERROGATIVE_MARK_1_2);
-				}
-				else if(this.verb.irregularity.aver){
-					insert.call(this, 8, '[à]>[èò]');
-//					insert.call(this, 8, '[à]>[èò]' + INTERROGATIVE_MARK_1_1);
-//					insert.call(this, 8, '[à]>[èò]' + INTERROGATIVE_MARK_1_2);
-//					insert.call(this, 8, '[à]>[èò]' + INTERROGATIVE_MARK_1);
-				}
-				else{
-					insert.call(this, 8, 'e');
-//					insert.call(this, 8, 'e' + INTERROGATIVE_MARK_1_1);
-//					insert.call(this, 8, 'é' + INTERROGATIVE_MARK_1_2);
-//					insert.call(this, 8, 'e' + INTERROGATIVE_MARK_1);
-					insert.call(this, 8, 'o' + FINAL_CONSONANT_VOICING);
-//					insert.call(this, 8, 'o' + INTERROGATIVE_MARK_1_1);
-//					insert.call(this, 8, 'ó' + INTERROGATIVE_MARK_1_2);
-//					insert.call(this, 8, 'o' + INTERROGATIVE_MARK_1);
 
-					if(this.verb.irregularity.verb && type == IRREGULAR){
-						if(this.verb.irregularity.saver){
-							insert.call(this, 8, '[à]>ò');
-//							insert.call(this, 8, '[à]>ò' + INTERROGATIVE_MARK_1_1);
-//							insert.call(this, 8, '[à]>ò' + INTERROGATIVE_MARK_1_2);
-//							insert.call(this, 8, '[à]>ò' + INTERROGATIVE_MARK_1);
-						}
-						else{
-							insert.call(this, 8, (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'o');
-//							insert.call(this, 8, (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'o' + INTERROGATIVE_MARK_1_1);
-//							insert.call(this, 8, (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'ó' + INTERROGATIVE_MARK_1_2);
-//							insert.call(this, 8, (t.themeT8.match(/[aeiouàèéíòóú]$/)? '(g)': '') + 'o' + INTERROGATIVE_MARK_1);
-						}
+		return function recurse(forms, list){
+			var m;
+			list = list || [];
+			[].concat(forms).forEach(function(form){
+				m = form.match(/^(.*)([\(\[])(.+)[\)\]](.*)$/);
+				if(m){
+					m[1] = m[1] || '';
+					m[4] = m[4] || '';
+
+					if(m[2] == '('){
+						recurse(m[1] + m[4], list);
+						if(m[3].indexOf('/') >= 0)
+							m[3].split('/').forEach(function(el){
+								recurse(m[1] + el + m[4], list);
+							});
+						else
+							recurse(m[1] + m[3] + m[4], list);
 					}
+					else
+						m[3].split(m[3].indexOf('/') >= 0? '/': '').forEach(function(el){
+							recurse(m[1] + el + m[4], list);
+						});
 				}
-				if(!this.verb.irregularity.verb.match(/andar|darStarFar|s?aver/) || !t.themeT8.match(/à$/)){
-					insert.call(this, 8, '([^i])>$1i');
-//					insert.call(this, 8, '([^i])>$1i' + INTERROGATIVE_MARK_2S);
-				}
-				else{
-					insert.call(this, 8, '([^i])>$1');
-//					insert.call(this, 8, '([^i])>$1' + INTERROGATIVE_MARK_2S);
-				}
-				var third = t.themeT8 + (!this.verb.irregularity.verb.match(/darStarFar|s?aver/)? (this.verb.irregularity.eser? 'é': 'e'): '');
-				insert.call(this, 8, third.substr(t.themeT8.length) + FINAL_CONSONANT_VOICING);
-//				insert.call(this, 8, third.substr(t.themeT8.length) + INTERROGATIVE_MARK_3);
-				if(t.themeT10 && t.themeT10 !== third){
-					//FIXME
-					//if(this.verb.irregularity.eser)
-					//	insert.call(this, 10, '(x)|([ei])>$1' + INTERROGATIVE_MARK);
-					insert.call(this, 10, '([ei])>($1)');
-//					insert.call(this, 10, '([ei])>($1)' + INTERROGATIVE_MARK_3);
-				}
-			}
-			else if(t.themeT10){
-				insert.call(this, 10, '');
-//				insert.call(this, 10, INTERROGATIVE_MARK_3);
-				if(t.themeT10 != PhonologyHelper.finalConsonantVoicing(t.themeT10.replace(/[ae]$/, ''), 'northern'))
-					insert.call(this, 10, FINAL_CONSONANT_VOICING);
-			}
-			if(t.themeT5){
-				insert.call(this, 5, '');
-//				insert.call(this, 5, INTERROGATIVE_MARK_2P);
-				if(conj == 2){
-					insert.call(this, 12, 'é');
-//					insert.call(this, 12, 'é' + INTERROGATIVE_MARK_2P);
-				}
-				else{
-					insert.call(this, 5, 'i?é>í');
-//					insert.call(this, 5, 'i?é>í' + INTERROGATIVE_MARK_2P);
-				}
-			}
-			if(t.themeT12 || t.themeT5){
-				if(t.themeT12){
-					insert.call(this, 12, 'on');
-//					insert.call(this, 12, 'on' + INTERROGATIVE_MARK_1_2);
-//					insert.call(this, 12, 'on' + INTERROGATIVE_MARK_1);
-					insert.call(this, 12, 'en');
-//					insert.call(this, 12, 'en' + INTERROGATIVE_MARK_1_2);
-//					insert.call(this, 12, 'en' + INTERROGATIVE_MARK_1);
-				}
-				if(t.themeT5){
-					insert.call(this, 5, '[è]>emo');
-//					insert.call(this, 5, '[è]>émo' + INTERROGATIVE_MARK_1_2);
-//					insert.call(this, 5, '[è]>emo' + INTERROGATIVE_MARK_1);
-					if(conj == 2){
-						insert.call(this, 5, 'i?é>imo');
-//						insert.call(this, 5, 'i?é>ímo' + INTERROGATIVE_MARK_1_2);
-//						insert.call(this, 5, 'i?é>imo' + INTERROGATIVE_MARK_1);
-					}
-				}
-			}
+				else
+					add(list, form);
+			});
+			return list;
+		};
+	})();
 
-			if(t.themeT8 && this.verb.irregularity.verb.match(/dixer|traer|toler/)){
-				insert.call(this, 8, '[lx]?>go');
-//				insert.call(this, 8, '[lx]?>gó' + INTERROGATIVE_MARK_1_2);
+
+	/** @private */
+	var generateThemeT1InfinitiveSimple = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		themes = themes[type];
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
+
+		if(themes.themeT1 && !origin)
+			throw 'error on origin for theme T1 "' + themes.themeT1 + '" ("' + verb.infinitive + '") infinitive simple';
+		if(themes.themeT1 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			var pronomenalMark = (!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK: '');
+
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT1 + 'r') + pronomenalMark + MARKER_FLAGS);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT1 + 're'));
+		}
+	};
+
+	/** @private */
+	var generateThemeT2IndicativeImperfect = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		themes = themes[type];
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
+
+		if(themes.themeT2 && !origin)
+			throw 'error on origin for theme T2 "' + themes.themeT2 + '" ("' + verb.infinitive + '") indicative imperfect';
+		if(themes.themeT2 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			var tmp = (verb.irregularity.eser? 'r': 'v');
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + tmp + 'o').replace(/o$/, '[oae]') + INTERROGATIVE_MARK_1S);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + tmp + 'i') + INTERROGATIVE_MARK_2S);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + tmp + 'a').replace(/a$/, '[ai]') + INTERROGATIVE_MARK_2P);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + tmp + 'a') + INTERROGATIVE_MARK_3);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + tmp + 'imo') + INTERROGATIVE_MARK_1P);
+			if(!verb.irregularity.eser){
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'o').replace(/o$/, '[oae]') + INTERROGATIVE_MARK_1S);
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'i') + INTERROGATIVE_MARK_2S);
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'a').replace(/a$/, '[ai]') + INTERROGATIVE_MARK_2P);
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'a') + INTERROGATIVE_MARK_3);
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'imo') + INTERROGATIVE_MARK_1P);
 			}
 		}
 	};
 
 	/** @private */
-	var generateIndicativeImperfect = function(t){
-		if(t.themeT2 || t.themeT11){
-			if(t.themeT2){
-				var tmp = (this.verb.irregularity.eser? 'r': '(v)');
-				insert.call(this, 2, tmp + '[oaie]');
-//				insert.call(this, 2, tmp + '[oe]' + INTERROGATIVE_MARK_1_1);
-//				insert.call(this, 2, tmp + '[oe]');
-//				insert.call(this, 2, tmp + 'i');
-//				insert.call(this, 2, tmp + 'i' + INTERROGATIVE_MARK_2S);
-//				insert.call(this, 2, tmp + 'í' + INTERROGATIVE_MARK_2P);
-//				insert.call(this, 2, tmp + 'a' + INTERROGATIVE_MARK_1_1);
-//				insert.call(this, 2, tmp + 'à' + INTERROGATIVE_MARK_1_2);
-//				insert.call(this, 2, tmp + 'a' + INTERROGATIVE_MARK_3);
-				//FIXME
-				//if(this.verb.irregularity.eser)
-				//	insert.call(this, 2, '[x/j]|' + tmp + '[oai]' + INTERROGATIVE_MARK);
+	var generateThemeT2SubjunctiveImperfect = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		themes = themes[type];
+		themes = themes.subjunctive || themes;
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
 
-				insert.call(this, 2, tmp + 'imo');
-//				insert.call(this, 2, tmp + 'ímo' + INTERROGATIVE_MARK_1_2);
-//				insert.call(this, 2, tmp + 'imo' + INTERROGATIVE_MARK_1);
-				//FIXME
-				//if(this.verb.irregularity.eser)
-				//	insert.call(this, 2, '[x/j]|' + tmp + 'imo' + INTERROGATIVE_MARK);
-			}
-			if(t.themeT11){
-				insert.call(this, 11, '(iv)ié');
-//				insert.call(this, 11, '(iv)ié' + INTERROGATIVE_MARK_2P);
-				insert.call(this, 11, (!t.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'on(se)');
-//				insert.call(this, 11, (!t.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'on' + INTERROGATIVE_MARK_1_2);
-//				insert.call(this, 11, (!t.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'on' + INTERROGATIVE_MARK_1);
-				insert.call(this, 11, 'iv(i)on(se)');
-//				insert.call(this, 11, 'iv(i)on' + INTERROGATIVE_MARK_1_2);
-//				insert.call(this, 11, 'iv(i)on' + INTERROGATIVE_MARK_1);
-				insert.call(this, 11, '(iv)en(se)');
-//				insert.call(this, 11, '(iv)en' + INTERROGATIVE_MARK_1_2);
-//				insert.call(this, 11, '(iv)en' + INTERROGATIVE_MARK_1);
-				//FIXME
-				//if(this.verb.irregularity.eser)
-				//	insert.call(this, 11, '[x/j]|(iv)en(se)' + INTERROGATIVE_MARK);
+		if(themes.themeT2 && !origin)
+			throw 'error on origin for theme T2 "' + themes.themeT2 + '" ("' + verb.infinitive + '") subjunctive imperfect';
+		if(themes.themeT2 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'se').replace(/e$/, '[ei]'));
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'simo'));
+		}
+	};
+
+	/** @private */
+	var generateThemeT2ParticiplePerfect = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		themes = themes[type];
+		themes = themes.participlePerfect || themes;
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
+
+		if(themes.themeT2 && !origin)
+			throw 'error on origin for theme T2 "' + themes.themeT2 + '" ("' + verb.infinitive + '") participle perfect';
+		if(themes.themeT2 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'sto').replace(/o$/, '[oaie]'));
+		}
+	};
+
+	/** @private */
+	var generateThemeT2GerundSimple = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		themes = themes[type];
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
+
+		if(themes.themeT2 && !origin)
+			throw 'error on origin for theme T2 "' + themes.themeT2 + '" ("' + verb.infinitive + '") gerund simple';
+		if(themes.themeT2 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			var pronomenalMark = (!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK: '');
+
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'ndo') + pronomenalMark + MARKER_FLAGS);
+			if(verb.irregularity.eser)
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(verb.infinitive.substr(0, verb.infinitive.length - 'èser'.length) + 'siàndo') + pronomenalMark);
+			else if(verb.irregularity.aver)
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(verb.infinitive.substr(0, verb.infinitive.length - 'aver'.length) + 'abiàndo') + pronomenalMark);
+		}
+	};
+
+	/** @private */
+	var generateThemeT4IndicativeFuture = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		themes = themes[type];
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
+
+		if(themes.themeT4 && !origin)
+			throw 'error on origin for theme T4 "' + themes.themeT4 + '" ("' + verb.infinitive + '") indicative future';
+		if(themes.themeT4 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rà') + INTERROGATIVE_MARK_1S + MARKER_FLAGS);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rè').replace(/è$/, '[èò]') + INTERROGATIVE_MARK_1S);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rà') + INTERROGATIVE_MARK_2S);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rà') + INTERROGATIVE_MARK_3);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ré') + INTERROGATIVE_MARK_2P);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rémo') + INTERROGATIVE_MARK_1P);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rón') + INTERROGATIVE_MARK_1P);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rén') + INTERROGATIVE_MARK_1P);
+			if(verb.conjugation == 2){
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rí') + INTERROGATIVE_MARK_2P);
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rímo') + INTERROGATIVE_MARK_1P);
 			}
 		}
 	};
 
 	/** @private */
-	var generateIndicativeFuture = function(t){
-		if(t.themeT4){
-			insert.call(this, 4, 'ron');
-//			insert.call(this, 4, 'ron' + INTERROGATIVE_MARK_1_2);
-//			insert.call(this, 4, 'ron' + INTERROGATIVE_MARK_1);
-			insert.call(this, 4, 'r[òàèé]');
-//			insert.call(this, 4, 'r[òàè]' + INTERROGATIVE_MARK_1_1);
-//			insert.call(this, 4, 'r[òàè]' + INTERROGATIVE_MARK_1_2);
-//			insert.call(this, 4, 'r[òàè]' + INTERROGATIVE_MARK_1);
-//			insert.call(this, 4, 'ra' + INTERROGATIVE_MARK_2S);
-//			insert.call(this, 4, 'ra' + INTERROGATIVE_MARK_3);
-//			insert.call(this, 4, 'ré' + INTERROGATIVE_MARK_2P);
-			insert.call(this, 4, 'remo');
-//			insert.call(this, 4, 'rémo' + INTERROGATIVE_MARK_1_2);
-//			insert.call(this, 4, 'remo' + INTERROGATIVE_MARK_1);
-			insert.call(this, 4, 'ren');
-//			insert.call(this, 4, 'ren' + INTERROGATIVE_MARK_1_2);
-			if(this.verb.conjugation == 2){
-				insert.call(this, 4, 'rí');
-//				insert.call(this, 4, 'rí' + INTERROGATIVE_MARK_2P);
-				insert.call(this, 4, 'rimo');
-//				insert.call(this, 4, 'rímo' + INTERROGATIVE_MARK_1_2);
-//				insert.call(this, 4, 'rimo' + INTERROGATIVE_MARK_1);
+	var generateThemeT4ConditionalSimple = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		themes = themes[type];
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
+
+		if(themes.themeT4 && !origin)
+			throw 'error on origin for theme T4 "' + themes.themeT4 + '" ("' + verb.infinitive + '") conditional simple';
+		if(themes.themeT4 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ría') + INTERROGATIVE_MARK_2S);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ría').replace(/a$/, '[ae]') + INTERROGATIVE_MARK_1S);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ría').replace(/a$/, '[ae]') + INTERROGATIVE_MARK_3);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rési') + INTERROGATIVE_MARK_2P);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'résimo') + INTERROGATIVE_MARK_1P);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rié').replace(/ié$/, '(is)ié') + INTERROGATIVE_MARK_2P);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rón').replace(/on$/, '(is)(i)on(se)') + INTERROGATIVE_MARK_1P);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rén').replace(/en$/, '(is)en(se)') + INTERROGATIVE_MARK_1P);
+			//NOTE: i únegi pronòmi interogativi enklítegi ke se dopara i xe kueli de 3a pars
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rà(v)e') + INTERROGATIVE_MARK_3);
+		}
+	};
+
+	/** @private */
+	var generateThemeT5IndicativePresent = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		var t = themes[type];
+		var origin = unmarkDefaultStress(getOrigin(t, verb, originTheme));
+
+		if(t.themeT5 && !origin){
+			t = themes[REGULAR];
+			origin = unmarkDefaultStress(getOrigin(t, verb, originTheme));
+
+			if(!origin)
+				throw 'error on origin for theme T5 "' + t.themeT5 + '" ("' + verb.infinitive + '") indicative present';
+		}
+		themes = t;
+
+		if(themes.themeT5 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			var conj = getIrregularVerbConjugation(type, verb);
+
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5) + INTERROGATIVE_MARK_2P + MARKER_FLAGS);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/è$/, 'é') + 'mo') + INTERROGATIVE_MARK_1P);
+			if(conj == 2){
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/i?é$/, 'í')) + INTERROGATIVE_MARK_2P);
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/i?é$/, 'í') + 'mo') + INTERROGATIVE_MARK_1P);
 			}
 		}
 	};
 
 	/** @private */
-	var generateSubjunctivePresent = function(type, t, conj){
+	var generateThemeT5SubjunctivePresent = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		var t = themes[type];
 		t = t.subjunctive || t;
+		var origin = unmarkDefaultStress(getOrigin(t, verb, originTheme));
 
-		if(t.themeT12 || t.themeT5 || t.themeT8){
-			if(t.themeT8){
-				insert.call(this, 8, '[ae]');
-				insert.call(this, 8, '([^i])>$1i');
-//				if(t.themeT8.match(/[^aeiouàèéíòóú]$/))
-//					insert.call(this, 8, FINAL_CONSONANT_VOICING);
+		if(t.themeT5 && !origin){
+			t = themes[REGULAR];
+			t = t.subjunctive || t;
+			origin = unmarkDefaultStress(getOrigin(t, verb, originTheme));
 
-				if(type == IRREGULAR && !this.verb.irregularity.verb.match(/(aver|dever|eser)/)){
-					if(t.themeT8.match(/[aeiouàèéíòóú]$/))
-						insert.call(this, 8, '(g)[ai]');
-					else{
-						insert.call(this, 8, 'a');
-						insert.call(this, 8, '([^i])>$1i');
-					}
-				}
-			}
-			if(t.themeT5){
-				insert.call(this, 5, '');
-				if(conj != 2)
-					insert.call(this, 5, '[èí]>é');
-				else if(t.themeT5.replace(/i?é$/, 'í') != t.themeT5)
-					insert.call(this, 5, 'i?é>í');
-				if(t.themeT12){
-					insert.call(this, 12, (this.verb.special3rd? '(i)': '') + 'é');
-					insert.call(this, 12, (this.verb.special3rd? '(i)': '') + 'e(de/ge)');
-				}
-				if(conj == 3 && !this.verb.special3rd)
-					insert.call(this, 5, '(de/ge)');
-			}
-			if(t.themeT12 || t.themeT5){
-				if(t.themeT12){
-					insert.call(this, 12, (!t.themeT12.match(/[cijɉñ]$/)? '(i)': '') + 'on(e)');
-					insert.call(this, 12, 'en(e)');
-				}
-				if(t.themeT5){
-					insert.call(this, 5, '[è]>emo');
-					if(conj == 2 && t.themeT5.replace(/i?é$/, 'í') != t.themeT5)
-						insert.call(this, 5, 'i?é>imo');
-				}
-			}
-
-			if(t.themeT8 && this.verb.irregularity.verb.match(/dixer|traer|toler/))
-				insert.call(this, 8, '[lx]?>g[ai]');
+			if(!origin)
+				throw 'error on origin for theme T5 "' + t.themeT5 + '" ("' + verb.infinitive + '") subjunctive present';
 		}
-	};
+		themes = t;
 
-	/** @private */
-	var generateSubjunctiveImperfect = function(t){
-		t = t.subjunctive || t;
+		if(themes.themeT5 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
 
-		if(t.themeT2 || t.themeT11){
-			if(t.themeT2){
-				insert.call(this, 2, 's[ei]');
-				if(t.themeT11){
-					insert.call(this, 11, '(is)ié');
-					insert.call(this, 11, '(is)ie(de/ge)');
-				}
+			var conj = getIrregularVerbConjugation(type, verb);
+
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5));
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/è$/, 'é') + 'mo'));
+			if(conj == 2 && themes.themeT5.replace(/i?é$/, 'í') != themes.themeT5){
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/i?é$/, 'í')));
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/i?é$/, 'í') + 'mo'));
 			}
-			if(t.themeT2)
-				insert.call(this, 2, 'simo');
-			if(t.themeT11){
-				insert.call(this, 11, (!t.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'on(e/se)');
-				insert.call(this, 11, 'is(i)on(e/se)');
-				insert.call(this, 11, '(is)en(e/se)');
-			}
-		}
-	};
+			if(conj != 2){
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/[èí]$/, 'é')));
 
-	/** @private */
-	var generateConditionalSimple = function(t){
-		if(t.themeT4){
-			insert.call(this, 4, 'rí[ae]');
-//			insert.call(this, 4, 'rí[ae]' + INTERROGATIVE_MARK_1_1);
-			insert.call(this, 4, 'resi');
-//			insert.call(this, 4, 'rési' + INTERROGATIVE_MARK_2S);
-//			insert.call(this, 4, 'rési' + INTERROGATIVE_MARK_2P);
-			insert.call(this, 4, 'r(is)ié');
-//			insert.call(this, 4, 'r(is)ié' + INTERROGATIVE_MARK_2P);
-			insert.call(this, 4, 'résimo');
-//			insert.call(this, 4, 'resimó' + INTERROGATIVE_MARK_1);
-//			insert.call(this, 4, 'resimó' + INTERROGATIVE_MARK_1_2);
-			insert.call(this, 4, 'r(is)(i)on(se)');
-//			insert.call(this, 4, 'r(is)(i)on' + INTERROGATIVE_MARK_1_2);
-			insert.call(this, 4, 'r(is)en(se)');
-//			insert.call(this, 4, 'r(is)en' + INTERROGATIVE_MARK_1_2);
-//			insert.call(this, 4, 'ríse' + INTERROGATIVE_MARK_3);
-			//i únegi pronòmi interogativi enklítegi ke se dopara i xe kueli de 3a pars
-			insert.call(this, 4, 'rave');
-//			insert.call(this, 4, 'ràve' + INTERROGATIVE_MARK_3);
-		}
-	};
-
-	/** @private */
-	var generateImperativePresent = function(t, conj){
-		if(t.themeT5 || t.themeT9){
-			if(t.themeT9)
-				insert.call(this, 9, PRONOMENAL_MARK_IMPERATIVE);
-			if(t.themeT5){
-				insert.call(this, 5, PRONOMENAL_MARK_IMPERATIVE);
-				if(conj == 2)
-					insert.call(this, 5, 'i?é>í' + PRONOMENAL_MARK_IMPERATIVE);
-				else{
-					insert.call(this, 5, '[èí]>é' + PRONOMENAL_MARK_IMPERATIVE);
+				if(conj == 3 && !verb.special3rd){
+					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5));
+					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/í$/, 'i') + '[de/ge]'));
 				}
 			}
 		}
 	};
 
 	/** @private */
-	var generateInfinitiveSimple = function(t){
-		if(t.themeT1){
-			var pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK: '');
-			insert.call(this, 1, 'r' + pronomenalMark);
-			insert.call(this, 1, 're');
+	var generateThemeT5ImperativePresent = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		var t = themes[type];
+		var origin = unmarkDefaultStress(getOrigin(t, verb, originTheme));
+
+		if(t.themeT5 && !origin){
+			t = themes[REGULAR];
+			origin = unmarkDefaultStress(getOrigin(t, verb, originTheme));
+
+			if(!origin)
+				throw 'error on origin for theme T5 "' + t.themeT5 + '" ("' + verb.infinitive + '") imperative present';
+		}
+		themes = t;
+
+		if(themes.themeT5 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			var conj = getIrregularVerbConjugation(type, verb);
+
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5) + PRONOMENAL_MARK_IMPERATIVE);
+			if(conj == 2)
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/i?é$/, 'í')) + PRONOMENAL_MARK_IMPERATIVE);
+			else
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/[èí]$/, 'é')) + PRONOMENAL_MARK_IMPERATIVE);
+
 		}
 	};
 
 	/** @private */
-	var generateParticipleImperfect = function(t){
-		if(t.themeT7)
-			insert.call(this, 7, 'nte');
-	};
-
-	/** @private */
-	var generateParticiplePerfect = function(t){
+	var generateThemeT6ParticiplePerfect = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		var t = themes[type];
 		t = t.participlePerfect || t;
+		var origin = unmarkDefaultStress(getOrigin(t, verb, originTheme));
 
-		if(t.themeT2 || t.themeT6 || t.themeT7){
-			if(t.themeT6){
-				insert.call(this, 6, '');
-				insert.call(this, 6, '[oaie]');
-				insert.call(this, 6, '[èé]>ed[oaie]');
-				insert.call(this, 6, '[í]>id[oaie]');
-			}
-			if(t.themeT2)
-				insert.call(this, 2, 'st[oaie]');
-			if(t.themeT7 && this.verb.conjugation == 3)
-				insert.call(this, 7, 'st[oaie]');
+		if(t.themeT6 && !origin){
+			t = themes[REGULAR];
+			t = t.participlePerfect || t;
+			origin = unmarkDefaultStress(getOrigin(t, verb, originTheme));
+
+			if(!origin)
+				throw 'error on origin for theme T6 "' + t.themeT6 + '" ("' + verb.infinitive + '") participle perfect';
+		}
+		themes = t;
+
+		if(themes.themeT6 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT6) + MARKER_FLAGS);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT6 + 'do').replace(/do$/, '(d)[oaie]'));
 		}
 	};
 
 	/** @private */
-	var generateParticiplePerfect_strong = function(){
+	var generateThemeT7ParticipleImperfect = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		themes = themes[type];
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
+
+		if(themes.themeT7 && !origin)
+			throw 'error on origin for theme T7 "' + themes.themeT7 + '" ("' + verb.infinitive + '") participle imperfect';
+		if(themes.themeT7 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT7 + 'nte') + MARKER_FLAGS);
+		}
+	};
+
+	/** @private */
+	var generateThemeT7ParticiplePerfect = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		themes = themes[type];
+		themes = themes.participlePerfect || themes;
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
+
+		if(themes.themeT7 && !origin)
+			throw 'error on origin for theme T7 "' + themes.themeT7 + '" ("' + verb.infinitive + '") participle perfect';
+		if(themes.themeT7 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			if(verb.conjugation == 3)
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT7 + 'sto').replace(/o$/, '[oaie]'));
+		}
+	};
+
+	/** @private */
+	var generateThemeT7GerundSimple = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		themes = themes[type];
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
+
+		if(themes.themeT7 && !origin)
+			throw 'error on origin for theme T7 "' + themes.themeT7 + '" ("' + verb.infinitive + '") gerund simple';
+		if(themes.themeT7 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			if(verb.conjugation == 3){
+				var pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK: '');
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT7 + 'ndo') + pronomenalMark);
+			}
+		}
+	};
+
+	/** @private */
+	var generateThemeT8IndicativePresent = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		themes = themes[type];
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
+
+		if(themes.themeT8 && !origin)
+			throw 'error on origin for theme T8 "' + themes.themeT8 + '" ("' + verb.infinitive + '") indicative present';
+		if(themes.themeT8 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			expandForm(themes.themeT8).forEach(function(t){
+				if(verb.irregularity.eser)
+					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t + 'ón').replace(/([^cijɉñ])on$/, '$1(i)on') + INTERROGATIVE_MARK_1P);
+				else if(verb.irregularity.aver)
+					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t).replace(/à$/, '[àèò]') + INTERROGATIVE_MARK_1S);
+				else{
+					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t + 'o').replace(/o$/, '[oe]') + INTERROGATIVE_MARK_1S);
+//					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(PhonologyHelper.finalConsonantVoicing(t, 'northern')) + INTERROGATIVE_MARK_1S);
+
+					if(verb.irregularity.verb && type == IRREGULAR){
+						if(verb.irregularity.saver)
+							insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t.replace(/à$/, 'ò')) + INTERROGATIVE_MARK_1S);
+						else
+							insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t + 'o').replace(/([aeiouàèéíòóú])o$/, '$1(g)o') + INTERROGATIVE_MARK_1S);
+					}
+				}
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t.replace(/([^i])$/, '$1' + (!verb.irregularity.verb.match(/andar|darStarFar|s?aver/) || !t.match(/à$/)? 'i': ''))) + INTERROGATIVE_MARK_2S);
+				var third = t + (!verb.irregularity.verb.match(/darStarFar|s?aver/)? (verb.irregularity.eser? 'é': 'e'): '');
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(third) + INTERROGATIVE_MARK_3 + MARKER_FLAGS);
+//				if(third.match(/[ei]$/))
+//					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(PhonologyHelper.finalConsonantVoicing(third.replace(/[ei]$/, ''), 'northern')) + INTERROGATIVE_MARK_3);
+				if(verb.irregularity.verb.match(/dixer|traer|toler/))
+					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t.replace(/[lx]?$/, 'go')) + INTERROGATIVE_MARK_1S);
+			});
+		}
+	};
+
+	/** @private */
+	var generateThemeT8SubjunctivePresent = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		themes = themes[type];
+		themes = themes.subjunctive || themes;
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
+
+		if(themes.themeT8 && !origin)
+			throw 'error on origin for theme T8 "' + themes.themeT8 + '" ("' + verb.infinitive + '") subjunctive present';
+		if(themes.themeT8 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			expandForm(themes.themeT8).forEach(function(t){
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t + 'a').replace(/a$/, '[ae]'));
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t.replace(/([^i])$/, '$1i')));
+//				if(t.match(/[^aeiouàèéíòóú]$/))
+//					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(PhonologyHelper.finalConsonantVoicing(t, 'northern')));
+
+				if(type == IRREGULAR && !verb.irregularity.verb.match(/(aver|dever|eser)/)){
+					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t + 'a').replace(/([aeiouàèéíòóú])a$/, '$1(g)a'));
+					if(t.match(/[aeiouàèéíòóú]$/))
+						insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t + 'i').replace(/i$/, '(g)i'));
+					else
+						insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t.replace(/([^i])$/, '$1i')));
+				}
+
+				if(verb.irregularity.verb.match(/dixer|traer|toler/))
+					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t + 'a').replace(/[lx]?a$/, 'g[ai]'));
+			});
+		}
+	};
+
+	/** @private */
+	var generateThemeT8ParticiplePerfect_strong = function(paradigm, verb, themes, theme, type, origins, originTheme){
 		var t;
 		[REGULAR, IRREGULAR].forEach(function(k){
 			if(!t || !t.themeT8){
-				t = this.themes[k];
+				t = themes[k];
 				t = t.participlePerfect || t;
 			}
-		}, this);
+		});
+		themes = t;
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
 
-		if(t.themeT8){
-			var strong = generateParticiplePerfectStrong.call(this, t.themeT8);
+		if(themes.themeT8 && !origin)
+			throw 'error on origin for theme T8 "' + themes.themeT8 + '" ("' + verb.infinitive + '") participle perfect strong';
+		if(themes.themeT8 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			var strong = generateParticiplePerfectStrong(verb, themes.themeT8);
 			if(strong){
-				insert.call(this, 8, WHOLE_WORD + Word.unmarkDefaultStress(strong + 'o') + FINAL_CONSONANT_VOICING);
-				insert.call(this, 8, WHOLE_WORD + Word.unmarkDefaultStress(strong + 'i'));
-				insert.call(this, 8, WHOLE_WORD + Word.unmarkDefaultStress(strong + 'a'));
-				insert.call(this, 8, WHOLE_WORD + Word.unmarkDefaultStress(strong + 'e'));
-			}
-		}
-	};
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(strong + 'o').replace(/o$/, '[oaie]'));
 
-	/** @private */
-	var generateGerundSimple = function(t){
-		if(t.themeT2 || t.themeT7){
-			var pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK: '');
-			if(t.themeT2)
-				insert.call(this, 2, 'ndo' + pronomenalMark);
-			if(t.themeT7 && this.verb.conjugation == 3)
-				insert.call(this, 7, 'ndo' + pronomenalMark);
-			if(this.verb.irregularity.eser)
-				insert.call(this, 2, START_OF_WORD + 'siando' + pronomenalMark);
-			else if(this.verb.irregularity.aver)
-				insert.call(this, 2, START_OF_WORD + (this.verb.infinitive.substr(0, this.verb.infinitive.length - 'aver'.length)) + 'abiando' + pronomenalMark);
+//				if(strong.match(/[^aeiouàèéíòóú]$/))
+//					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(PhonologyHelper.finalConsonantVoicing(strong, 'northern')));
+			}
 		}
 	};
 
 	/** @private */
 	var generateParticiplePerfectStrong = (function(){
-
-		/*var strongT = [
-			//{matcher: /([aeiouàèéíòóú])rn?$/, replacement: '($1rt/rS1t)'},
-			{matcher: /([aeiouàèéíòóú])rn?$/, replacement: '$1rt'},
-			{matcher: /([^aeiouàèéíòóú])r$/, replacement: '$1èrt'},
-			{matcher: /li?$/, replacement: 'lt'},
-			{matcher: /([aeiouàèéíòóú])$/, replacement: '$1t'},
-			{matcher: /rí?x$/, replacement: 'rèt'},
-			{matcher: /úx$/, replacement: 'ót'},
-			{matcher: /ónd?$/, replacement: 'óst'},
-			{matcher: /m|n[ds]$/, replacement: 'nt'},
-			{matcher: /n[xđp]|[bđgstŧvx]$/, replacement: 't'}
-		];
-
-		var strongS = [
-			{matcher: /sucéd$/, replacement: 'sucès'},
-
-			{matcher: /ónd$/, replacement: 'úx'},
-			{matcher: /([aeiouàèéíòóú])n?d$/, replacement: '$1x'},
-			{matcher: /([^aeiouàèéíòóú]n?)d|[stvx]$/, replacement: '$1s'},
-			{matcher: /pèl$/, replacement: 'púls'},
-			{matcher: /ím$/, replacement: 'ès'},
-			{matcher: /st$/, replacement: 'íx'},
-			{matcher: /rd?$/, replacement: 'rs'},
-			{matcher: /l$/, replacement: 'ls'}
-		];*/
-
 		var strong = [
 			//1st conjugation
 			[
 				{matcher: /fà$/, replacement: 'fàt'},
-				{matcher: /konsà$/, replacement: 'kóns'}
+				{matcher: /kóns$/, replacement: 'kóns'},
+				{matcher: /tr$/, replacement: 'tràt'}
 			],
 
 			//2nd conjugation
 			[
 				//rhizotonic
 				[
-					//TODO
-					//kuèrdh
-					{matcher: /díx$/, replacement: 'dít'},
-					{matcher: /dúx$/, replacement: 'dót'},
-					{matcher: /đónx$/, replacement: 'đónt'},
-					{matcher: /fríđ$/, replacement: 'frít'},
-					{matcher: /kór$/, replacement: 'kórs'},
-					{matcher: /kòt$/, replacement: 'kòs'},
-					{matcher: /kòx$/, replacement: 'kòt'},
-					{matcher: /mét$/, replacement: 'més'},
-					{matcher: /móv$/, replacement: 'mós'},
-					{matcher: /nét$/, replacement: 'nés'},
-					{matcher: /ofénd$/, replacement: 'oféx'},
-					{matcher: /ónđ$/, replacement: 'ónt'},
-					{matcher: /pànd$/, replacement: 'pànt'},
-					{matcher: /pénd$/, replacement: 'péx'},
-					{matcher: /pénđ$/, replacement: 'pént'},
-					{matcher: /pèrd$/, replacement: 'pèrs'},
-					{matcher: /prénd$/, replacement: 'préx'},
-					{matcher: /pón$/, replacement: 'pòst'},
-					{matcher: /pòrx$/, replacement: 'pòrt'},
-					{matcher: /rèx$/, replacement: 'rèt'},
-					{matcher: /ríd$/, replacement: 'ríx'},
-					{matcher: /rónp$/, replacement: 'rót'},
-					{matcher: /skrív$/, replacement: 'skrít'},
-					{matcher: /sòrx$/, replacement: 'sòrt'},
-					{matcher: /spànd$/, replacement: 'spànt'},
+					{matcher: /([aeiouàèéíòóúnl])x$/, falsePositives: /piàx$/, replacement: '$1t'},
+					{matcher: /piàx$/, replacement: 'piàs'},
+					{matcher: /rx$/, falsePositives: /spàrx$/, replacement: 'rt'},
 					{matcher: /spàrx$/, replacement: 'spàrs'},
+					{matcher: /rd$/, replacement: 'rs'},
+					{matcher: /nd$/, falsePositives: /([àó]nd)$/, replacement: 'x'},
+					{matcher: /pànd$/, replacement: 'pànt'},
+					{matcher: /kónd$/, replacement: 'kónt'},
+					{matcher: /fónd$/, replacement: 'fúx'},
+					{matcher: /pónd$/, replacement: 'póst'},
+					{matcher: /([aeiouàèéíòóúnl])d$/, falsePositives: /[cŧv]éd$/, replacement: '$1x'},
+					{matcher: /([cŧ])éd$/, replacement: '$1ès'},
+					{matcher: /véd$/, replacement: 'vést'},
+					{matcher: /([rn])đ$/, falsePositives: /strénđ$/, replacement: '$1t'},
 					{matcher: /strénđ$/, replacement: 'strét'},
-					{matcher: /sucéd$/, replacement: 'sucès'},
-					{matcher: /ténd$/, replacement: 'téx'},
-					{matcher: /ténx$/, replacement: 'tént'},
-					{matcher: /tòrđ$/, replacement: 'tòrt'},
-					{matcher: /trà$/, replacement: 'tràt'},
-					{matcher: /véd$/, replacement: 'víst'},
-					{matcher: /vínŧ$/, replacement: 'vínt'},
-					{matcher: /vív$/, replacement: 'visú'},
-					{matcher: /vòlx$/, replacement: 'vòlt'}
-					//...
+					{matcher: /lèđ$/, replacement: 'lèt'},
+					{matcher: /fríđ$/, replacement: 'frít'},
+					{matcher: /t$/, replacement: 's'},
+					{matcher: /lv$/, replacement: 'lt'},
+					{matcher: /móv$/, replacement: 'mós'},
+					{matcher: /skrív$/, replacement: 'skrít'},
+					{matcher: /úm$/, replacement: 'únt'},
+					{matcher: /prím$/, replacement: 'près'},
+					{matcher: /espèl$/, replacement: 'espúls'},
+					{matcher: /kòj$/, replacement: 'kòlt'},
+					{matcher: /kór$/, replacement: 'kórs'},
+					{matcher: /íɉ$/, replacement: 'àt'},
+					{matcher: /nàs$/, replacement: 'nàt'},
+					{matcher: /pón$/, replacement: 'pòst'},
+					{matcher: /romàñ$/, replacement: 'romàx'},
+					{matcher: /rónp$/, replacement: 'rót'},
+					{matcher: /stíngu$/, replacement: 'stínt'},
+					{matcher: /nŧ$/, replacement: 'nt'}
 				],
 				//rhizoatone
 				[
+					{matcher: /sól$/, replacement: 'sólit'},
 					{matcher: /vàl$/, replacement: 'vàls'},
+					//(per|re)maner
 					{matcher: /n$/, replacement: 'x'},
+					//{matcher: /n$/, replacement: 'st'},
 					{matcher: /r$/, replacement: 'rs'},
 					{matcher: /tòl$/, replacement: 'tòlt'}
 				]
@@ -1300,20 +1237,20 @@ if(base != undefined && base.replaced != 0)
 			[
 				{matcher: /mòr$/, falsePositives: /(inti|mar)mòr$/, replacement: 'mòrt'},
 				{matcher: /([^aeiouàèéíòóú])r$/, falsePositives: /núdr$/, replacement: '$1èrt'},
-				{matcher: /([aeiouàèéíòóú])r$/, replacement: '$1rs'}
+				{matcher: /fér$/, replacement: 'fèrt'},
+				{matcher: /sepel$/, replacement: 'sepólt'},
+				{matcher: /([aeiouàèéíòóú])r$/, falsePositives: /(fér|sepel)$/, replacement: '$1rs'}
 			]
 		];
 
-		return function(themeT8){
-			var data = strong[this.verb.conjugation - 1];
-			if(this.verb.conjugation == 2)
-				data = data[this.verb.rhizotonic? 0: 1];
-			//FIXME
-			//choose between T- and S-past-participle for 2nd conjugation verbs?
-			//...
+		return function(verb, themeT8){
+			var data = strong[verb.conjugation - 1];
+			if(verb.conjugation == 2)
+				data = data[verb.rhizotonic? 0: 1];
 
 			var m, match;
-			if(data.some(function(el){ m = el; match = this.match(el.matcher); return match; }, themeT8) && (!m.falsePositives || !themeT8.match(m.falsePositives))){
+			if(data.some(function(el){ m = el; match = themeT8.match(el.matcher); return match; })
+					&& (!m.falsePositives || !themeT8.match(m.falsePositives))){
 				if(Word.isStressed(m.replacement) && !Word.isStressed(match[0]))
 					themeT8 = Word.suppressStress(themeT8);
 				return themeT8.replace(m.matcher, m.replacement);
@@ -1324,59 +1261,177 @@ if(base != undefined && base.replaced != 0)
 	})();
 
 	/** @private */
-	var getIrregularVerbConjugation = function(type){
-		return (type == IRREGULAR && this.verb.irregularity.traer? 1: this.verb.conjugation);
-	};
+	var generateThemeT9ImperativePresent = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		themes = themes[type];
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
 
-	/** @private */
-	var insert = function(theme, suffix){
-		var infinitive = this.verb.infinitive;
-		var idx = ArrayHelper.findIndex(this.paradigm, function(el){ return (el.infinitive == infinitive); });
-		if(idx < 0){
-			var data = {infinitive: this.verb.infinitive, themes: []};
-			data.themes[theme] = [suffix];
-			this.paradigm.push(data);
-		}
-		else{
-			var t = this.paradigm[idx].themes;
-			if(!t[theme])
-				t[theme] = [suffix];
-			else{
-				var matcher = '[' + PRONOMENAL_MARK + PRONOMENAL_MARK_IMPERATIVE + FINAL_CONSONANT_VOICING + ']+$';
-				if(t[theme].indexOf(suffix) < 0 && (suffix.match(new RegExp(matcher)) || ArrayHelper.findIndex(t[theme], function(el){ return el.match(new RegExp(escapeRegExp(suffix) + matcher)); }) < 0))
-					t[theme].push(suffix);
-			}
-		}
-	};
+		if(themes.themeT9 && !origin)
+			throw 'error on origin for theme T9 "' + themes.themeT9 + '" ("' + verb.infinitive + '") imperative present';
+		if(themes.themeT9 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
 
-
-	/**
-	 * @param {Verb} verb
-	 *
-	 * @private
-	 */
-	var applyStrongTheme = function(verb){
-		if(verb.irregularity.aver){
-			var morphemeProclitic = '(g)',
-				morphemeEnclitic = '(ge)';
-			visit(this, function(subParadigm, key){
-				if(!key.match(/^(northern|oriental)/))
-					subParadigm[key] = subParadigm[key]
-						.replace(/^#(re)?/, '$1' + morphemeProclitic)
-						.replace(/#$/, morphemeEnclitic);
+			expandForm(themes.themeT9).forEach(function(t){
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t) + composeFlag(PRONOMENAL_MARK, PRONOMENAL_MARK_IMPERATIVE) + MARKER_FLAGS);
 			});
 		}
 	};
 
 	/** @private */
-	var visit = function(obj, funct, id){
-		for(var key in obj)
-			if(obj.hasOwnProperty(key)){
-				if(!ObjectHelper.isString(obj[key]))
-					visit(obj[key], funct, (id? id + '.' + key: key));
-				else
-					funct(obj, key, id);
+	var generateThemeT10IndicativePresent = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		themes = themes[type];
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
+
+		if(themes.themeT10 && !origin)
+			throw 'error on origin for theme T10 "' + themes.themeT10 + '" ("' + verb.infinitive + '") indicative present';
+		if(themes.themeT10 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			expandForm(themes.themeT10).forEach(function(t){
+				var third = themes.themeT8 + (!verb.irregularity.verb.match(/darStarFar|s?aver/)? (verb.irregularity.eser? 'é': 'e'): '');
+				if(themes.themeT8 && t != third)
+//					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t).replace(/([ae])$/, '($1)') + INTERROGATIVE_MARK_3 + MARKER_FLAGS);
+					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t) + INTERROGATIVE_MARK_3 + MARKER_FLAGS);
+				if(!themes.themeT8){
+					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t) + INTERROGATIVE_MARK_3 + MARKER_FLAGS);
+//					var thirdNorthernOriental = PhonologyHelper.finalConsonantVoicing(t.replace(/[ae]$/, ''), 'northern');
+//					if(t != thirdNorthernOriental)
+//						insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(thirdNorthernOriental) + INTERROGATIVE_MARK_3);
+				}
+			});
+		}
+	};
+
+	/** @private */
+	var generateThemeT11IndicativeImperfect = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		themes = themes[type];
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
+
+		if(themes.themeT11 && !origin)
+			throw 'error on origin for theme T11 "' + themes.themeT11 + '" ("' + verb.infinitive + '") indicative imperfect';
+		if(themes.themeT11 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT11 + 'ié').replace(/ié$/, '(iv)ié') + INTERROGATIVE_MARK_2P);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT11 + 'ón').replace(/on$/, (!themes.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'on(se)') + INTERROGATIVE_MARK_1P + MARKER_FLAGS);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT11 + 'ivón').replace(/on$/, '(i)on(se)') + INTERROGATIVE_MARK_1P);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT11 + 'én').replace(/en$/, '(iv)en(se)') + INTERROGATIVE_MARK_1P);
+		}
+	};
+
+	/** @private */
+	var generateThemeT11SubjunctiveImperfect = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		themes = themes[type];
+		themes = themes.subjunctive || themes;
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
+
+		if(themes.themeT11 && !origin)
+			throw 'error on origin for theme T11 "' + themes.themeT11 + '" ("' + verb.infinitive + '") subjunctive imperfect';
+		if(themes.themeT11 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT11 + 'ón').replace(/on$/, (!themes.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'on(e/se)') + INTERROGATIVE_MARK_1P);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT11 + 'isón').replace(/on$/, '(i)on(e/se)') + INTERROGATIVE_MARK_1P);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT11 + 'én').replace(/en$/, '(is)en(e/se)') + INTERROGATIVE_MARK_1P);
+		}
+	};
+
+	/** @private */
+	var generateThemeT12IndicativePresent = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		var origin = unmarkDefaultStress(getOrigin(themes[type], verb, originTheme));
+		if(!origin)
+			origin = unmarkDefaultStress(getOrigin(themes[type == IRREGULAR? REGULAR: IRREGULAR], verb, originTheme));
+		themes = themes[type];
+
+		if(themes.themeT12 && !origin)
+			throw 'error on origin for theme T12 "' + themes.themeT12 + '" ("' + verb.infinitive + '") indicative present';
+		if(themes.themeT12 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			var conj = getIrregularVerbConjugation(type, verb);
+
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT12 + 'ón') + INTERROGATIVE_MARK_1P + MARKER_FLAGS);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT12 + 'én') + INTERROGATIVE_MARK_1P);
+			if(themes.themeT5 && conj != 2)
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT12 + 'é') + INTERROGATIVE_MARK_2P);
+		}
+	};
+
+	/** @private */
+	var generateThemeT12SubjunctivePresent = function(paradigm, verb, themes, theme, type, origins, originTheme){
+		var t = themes[type];
+		t = t.subjunctive || t;
+		var origin = unmarkDefaultStress(getOrigin(t, verb, originTheme));
+		if(!origin)
+			origin = unmarkDefaultStress(getOrigin(themes[type == IRREGULAR? REGULAR: IRREGULAR].subjunctive || themes[type == IRREGULAR? REGULAR: IRREGULAR], verb, originTheme));
+		themes = t;
+
+		if(themes.themeT12 && !origin)
+			throw 'error on origin for theme T12 "' + themes.themeT12 + '" ("' + verb.infinitive + '") subjunctive present';
+		if(themes.themeT12 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT12 + 'ón').replace(/on$/, (!themes.themeT12.match(/[cijɉñ]$/)? '(i)': '') + 'on(e)'));
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT12 + 'én').replace(/en$/, 'en(e)'));
+			if(themes.themeT5){
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT12 + 'é').replace(/é$/, (verb.special3rd? '(i)': '') + 'é'));
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT12 + 'é').replace(/é$/, (verb.special3rd? '(i)': '') + 'e[de/ge]'));
 			}
+		}
+	};
+
+
+	/** @private */
+	var getOrigin = function(themes, verb, theme){
+		if(theme == 0)
+			return verb.infinitive;
+
+		var suffix;
+		if(theme == 2)
+			suffix = 'ndo';
+		else if(theme == 4)
+			suffix = 'rà';
+		else if(theme == 8){
+			if(!themes.themeT8)
+				return null;
+
+			var third = themes.themeT8 + (!verb.irregularity.verb.match(/darStarFar|s?aver/)? (verb.irregularity.eser? 'é': 'e'): '');
+			return third.replace(/\(.+\)/g, '');
+		}
+
+		theme = 'themeT' + theme;
+		return (themes[theme]? themes[theme] + (suffix? suffix: ''): undefined);
+	};
+
+	/** @private */
+	var getIrregularVerbConjugation = function(type, verb){
+		return (type == IRREGULAR && verb.irregularity.traer? 1: verb.conjugation);
+	};
+
+	/** @private */
+	var insert = function(paradigm, theme, infinitive, origin, suffix){
+		var i = ArrayHelper.findIndex(paradigm, function(el){ return (el.infinitive == infinitive); }),
+			parts = extractCommonPartsFromStart(origin, suffix, true),
+			data = parts.a + '>' + parts.b,
+			re, j, flags;
+		if(i < 0)
+			paradigm.push({theme: theme, infinitive: infinitive, origin: origin, suffixes: [data]});
+		else{
+			re = new RegExp('^' + data.replace(PATTERN_FLAGS, '') + PATTERN_FLAGS.toString().replace(/^\/|\/$/, ''));
+			j = ArrayHelper.findIndex(paradigm[i].suffixes, function(suffix){ return suffix.match(re); });
+			if(j < 0)
+				paradigm[i].suffixes.push(data);
+			else{
+				flags = paradigm[i].suffixes[j].match(PATTERN_FLAGS);
+				flags = (flags[1]? flags[1].replace(/\//, ''): '');
+				paradigm[i].suffixes[j] = addFlag(data, flags);
+			}
+		}
 	};
 
 

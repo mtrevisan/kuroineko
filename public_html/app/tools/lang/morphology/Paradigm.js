@@ -425,88 +425,59 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 
 	/** @private */
 	var generateParticiplePerfectStrong = (function(){
-
-		/*var strongT = [
-			//{matcher: /([aeiouàèéíòóú])rn?$/, replacement: '($1rt/rS1t)'},
-			{matcher: /([aeiouàèéíòóú])rn?$/, replacement: '$1rt'},
-			{matcher: /([^aeiouàèéíòóú])r$/, replacement: '$1èrt'},
-			{matcher: /li?$/, replacement: 'lt'},
-			{matcher: /([aeiouàèéíòóú])$/, replacement: '$1t'},
-			{matcher: /rí?x$/, replacement: 'rèt'},
-			{matcher: /úx$/, replacement: 'ót'},
-			{matcher: /ónd?$/, replacement: 'óst'},
-			{matcher: /m|n[ds]$/, replacement: 'nt'},
-			{matcher: /n[xđp]|[bđgstŧvx]$/, replacement: 't'}
-		];
-
-		var strongS = [
-			{matcher: /sucéd$/, replacement: 'sucès'},
-
-			{matcher: /ónd$/, replacement: 'úx'},
-			{matcher: /([aeiouàèéíòóú])n?d$/, replacement: '$1x'},
-			{matcher: /([^aeiouàèéíòóú]n?)d|[stvx]$/, replacement: '$1s'},
-			{matcher: /pèl$/, replacement: 'púls'},
-			{matcher: /ím$/, replacement: 'ès'},
-			{matcher: /st$/, replacement: 'íx'},
-			{matcher: /rd?$/, replacement: 'rs'},
-			{matcher: /l$/, replacement: 'ls'}
-		];*/
-
 		var strong = [
 			//1st conjugation
 			[
 				{matcher: /fà$/, replacement: 'fàt'},
-				{matcher: /konsà$/, replacement: 'kóns'}
+				{matcher: /kóns$/, replacement: 'kóns'},
+				{matcher: /tr$/, replacement: 'tràt'}
 			],
 
 			//2nd conjugation
 			[
 				//rhizotonic
 				[
-					//TODO
-					{matcher: /díx$/, replacement: 'dít'},
-					{matcher: /dúx$/, replacement: 'dót'},
-					{matcher: /đónx$/, replacement: 'đónt'},
-					{matcher: /fríđ$/, replacement: 'frít'},
-					{matcher: /kór$/, replacement: 'kórs'},
-					{matcher: /kòt$/, replacement: 'kòs'},
-					{matcher: /kòx$/, replacement: 'kòt'},
-					{matcher: /kuèrđ$/, replacement: 'kuèrt'},
-					{matcher: /mét$/, replacement: 'més'},
-					{matcher: /móv$/, replacement: 'mós'},
-					{matcher: /nét$/, replacement: 'nés'},
-					{matcher: /ofénd$/, replacement: 'oféx'},
-					{matcher: /ónđ$/, replacement: 'ónt'},
-					{matcher: /pànd$/, replacement: 'pànt'},
-					{matcher: /pénd$/, replacement: 'péx'},
-					{matcher: /pénđ$/, replacement: 'pént'},
-					{matcher: /pèrd$/, replacement: 'pèrs'},
-					{matcher: /prénd$/, replacement: 'préx'},
-					{matcher: /pón$/, replacement: 'pòst'},
-					{matcher: /pòrx$/, replacement: 'pòrt'},
-					{matcher: /rèx$/, replacement: 'rèt'},
-					{matcher: /ríd$/, replacement: 'ríx'},
-					{matcher: /rónp$/, replacement: 'rót'},
-					{matcher: /skrív$/, replacement: 'skrít'},
-					{matcher: /sòrx$/, replacement: 'sòrt'},
-					{matcher: /spànd$/, replacement: 'spànt'},
+					{matcher: /([aeiouàèéíòóúnl])x$/, falsePositives: /piàx$/, replacement: '$1t'},
+					{matcher: /piàx$/, replacement: 'piàs'},
+					{matcher: /rx$/, falsePositives: /spàrx$/, replacement: 'rt'},
 					{matcher: /spàrx$/, replacement: 'spàrs'},
+					{matcher: /rd$/, replacement: 'rs'},
+					{matcher: /nd$/, falsePositives: /([àó]nd)$/, replacement: 'x'},
+					{matcher: /pànd$/, replacement: 'pànt'},
+					{matcher: /kónd$/, replacement: 'kónt'},
+					{matcher: /fónd$/, replacement: 'fúx'},
+					{matcher: /pónd$/, replacement: 'póst'},
+					{matcher: /([aeiouàèéíòóúnl])d$/, falsePositives: /[cŧv]éd$/, replacement: '$1x'},
+					{matcher: /([cŧ])éd$/, replacement: '$1ès'},
+					{matcher: /véd$/, replacement: 'vést'},
+					{matcher: /([rn])đ$/, falsePositives: /strénđ$/, replacement: '$1t'},
 					{matcher: /strénđ$/, replacement: 'strét'},
-					{matcher: /sucéd$/, replacement: 'sucès'},
-					{matcher: /ténd$/, replacement: 'téx'},
-					{matcher: /ténx$/, replacement: 'tént'},
-					{matcher: /tòrđ$/, replacement: 'tòrt'},
-					{matcher: /trà$/, replacement: 'tràt'},
-					{matcher: /véd$/, replacement: 'víst'},
-					{matcher: /vínŧ$/, replacement: 'vínt'},
-					{matcher: /vív$/, replacement: 'visú'},
-					{matcher: /vòlx$/, replacement: 'vòlt'}
-					//...
+					{matcher: /lèđ$/, replacement: 'lèt'},
+					{matcher: /fríđ$/, replacement: 'frít'},
+					{matcher: /t$/, replacement: 's'},
+					{matcher: /lv$/, replacement: 'lt'},
+					{matcher: /móv$/, replacement: 'mós'},
+					{matcher: /skrív$/, replacement: 'skrít'},
+					{matcher: /úm$/, replacement: 'únt'},
+					{matcher: /prím$/, replacement: 'près'},
+					{matcher: /espèl$/, replacement: 'espúls'},
+					{matcher: /kòj$/, replacement: 'kòlt'},
+					{matcher: /kór$/, replacement: 'kórs'},
+					{matcher: /íɉ$/, replacement: 'àt'},
+					{matcher: /nàs$/, replacement: 'nàt'},
+					{matcher: /pón$/, replacement: 'pòst'},
+					{matcher: /romàñ$/, replacement: 'romàx'},
+					{matcher: /rónp$/, replacement: 'rót'},
+					{matcher: /stíngu$/, replacement: 'stínt'},
+					{matcher: /nŧ$/, replacement: 'nt'}
 				],
 				//rhizoatone
 				[
+					{matcher: /sól$/, replacement: 'sólit'},
 					{matcher: /vàl$/, replacement: 'vàls'},
+					//(per|re)maner
 					{matcher: /n$/, replacement: 'x'},
+					//{matcher: /n$/, replacement: 'st'},
 					{matcher: /r$/, replacement: 'rs'},
 					{matcher: /tòl$/, replacement: 'tòlt'}
 				]
@@ -516,7 +487,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			[
 				{matcher: /mòr$/, falsePositives: /(inti|mar)mòr$/, replacement: 'mòrt'},
 				{matcher: /([^aeiouàèéíòóú])r$/, falsePositives: /núdr$/, replacement: '$1èrt'},
-				{matcher: /([aeiouàèéíòóú])r$/, replacement: '$1rs'}
+				{matcher: /fér$/, replacement: 'fèrt'},
+				{matcher: /sepel$/, replacement: 'sepólt'},
+				{matcher: /([aeiouàèéíòóú])r$/, falsePositives: /(fér|sepel)$/, replacement: '$1rs'}
 			]
 		];
 
@@ -524,9 +497,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			var data = strong[this.verb.conjugation - 1];
 			if(this.verb.conjugation == 2)
 				data = data[this.verb.rhizotonic? 0: 1];
-			//FIXME
-			//choose between T- and S-past-participle for 2nd conjugation verbs?
-			//...
 
 			var m, match;
 			if(data.some(function(el){ m = el; match = this.match(el.matcher); return match; }, themeT8) && (!m.falsePositives || !themeT8.match(m.falsePositives))){
