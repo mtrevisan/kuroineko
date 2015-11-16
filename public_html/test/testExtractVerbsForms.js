@@ -7,7 +7,6 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 		var expected = [
 			'#pòrte',
 			'#pòrto',
-			'#pòrt',
 			'#pòrti',
 			'#pòrta',
 			'#portè',
@@ -37,7 +36,6 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 			'#portaríe',
 			'#portaresi',
 			'#portarésimo',
-			'#portarave',
 			'portando#',
 			'#portàa',
 			'#portava',
@@ -99,7 +97,9 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 			'#portarisionse',
 			'#portarense',
 			'#portarisen',
-			'#portarisense'
+			'#portarisense',
+			'#portaràe',
+			'#portarave'
 		];
 
 		deepEqual(forms, expected);
@@ -111,7 +111,6 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 		var expected = [
 			'#vale',
 			'#valo',
-			'#val',
 			'#vali',
 			'#valé',
 			'#valí',
@@ -140,7 +139,6 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 			'valsi',
 			'valsa',
 			'valse',
-			'vals',
 			'#valese',
 			'#valesi',
 			'#valésimo',
@@ -149,7 +147,6 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 			'#valeríe',
 			'#valeresi',
 			'#valerésimo',
-			'#valerave',
 			'valendo#',
 			'#valéa',
 			'#valeva',
@@ -211,7 +208,9 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 			'#valerisionse',
 			'#valerense',
 			'#valerisen',
-			'#valerisense'
+			'#valerisense',
+			'#valeràe',
+			'#valerave'
 		];
 
 		deepEqual(forms, expected);
@@ -223,7 +222,6 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 		var expected = [
 			'#beve',
 			'#bevo',
-			'#bef',
 			'#bevi',
 			'#bevé',
 			'#beví',
@@ -256,7 +254,6 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 			'#beveríe',
 			'#beveresi',
 			'#beverésimo',
-			'#beverave',
 			'bevendo#',
 			'#bevéa',
 			'#beveva',
@@ -318,7 +315,9 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 			'#beverisionse',
 			'#beverense',
 			'#beverisen',
-			'#beverisense'
+			'#beverisense',
+			'#beveràe',
+			'#beverave'
 		];
 
 		deepEqual(forms, expected);
@@ -330,7 +329,6 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 		var expected = [
 			'#dòrme',
 			'#dòrmo',
-			'#dòrn',
 			'#dòrmi',
 			'#dormí',
 			'#dormé',
@@ -364,7 +362,6 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 			'#dormiríe',
 			'#dormiresi',
 			'#dormirésimo',
-			'#dormirave',
 			'dormindo#',
 			'dormendo#',
 			'#dormía',
@@ -429,7 +426,9 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 			'#dormirisionse',
 			'#dormirense',
 			'#dormirisen',
-			'#dormirisense'
+			'#dormirisense',
+			'#dormiràe',
+			'#dormirave'
 		];
 
 		deepEqual(forms, expected);
@@ -441,7 +440,6 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 		var expected = [
 			'#fenise',
 			'#feniso',
-			'#fenis',
 			'#fenisi',
 			'#fení',
 			'#fenisé',
@@ -474,7 +472,6 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 			'#feniríe',
 			'#feniresi',
 			'#fenirésimo',
-			'#fenirave',
 			'fenindo#',
 			'fenendo#',
 			'#fenía',
@@ -537,7 +534,9 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 			'#fenirisionse',
 			'#fenirense',
 			'#fenirisen',
-			'#fenirisense'
+			'#fenirisense',
+			'#feniràe',
+			'#fenirave'
 		];
 
 		deepEqual(forms, expected);
@@ -549,7 +548,6 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 		var expected = [
 			'#ande',
 			'#ando',
-			'#ant',
 			'#andi',
 			'#anda',
 			'#andè',
@@ -586,7 +584,6 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 			'#andaríe',
 			'#andaresi',
 			'#andarésimo',
-			'#andarave',
 			'andando#',
 			'#vao',
 			'#vago',
@@ -660,7 +657,9 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 			'#andarisionse',
 			'#andarense',
 			'#andarisen',
-			'#andarisense'
+			'#andarisense',
+			'#andaràe',
+			'#andarave'
 		];
 
 		deepEqual(forms, expected);

@@ -1187,6 +1187,7 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + 
 			[
 				//rhizotonic
 				[
+					{matcher: /trà$/, replacement: 'tràt'},
 					{matcher: /([aeiouàèéíòóúnl])x$/, falsePositives: /piàx$/, replacement: '$1t'},
 					{matcher: /piàx$/, replacement: 'piàs'},
 					{matcher: /rx$/, falsePositives: /spàrx$/, replacement: 'rt'},
