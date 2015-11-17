@@ -58,14 +58,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		]
 	};
 
-	//spuntigar - punzecchiare
 	//ta[sx]ar lenhe = accatastare legna da ardere
-	//inprumar = mettere per la prima volta
 	//fardima = autunno, ansuda = primavera: zoldani e agordin
-	//zavàtol = fringuello
-	//témol = temolo
-	//cortìgol
-	//(bekiñòl, bigòl/bígol, bórtol)
+	//kortìgol
+	//(zavàtol = fringuello, témol = temolo, bekiñòl, bigòl/bígol, bórtol)
 	//3a pars. + part. pasivo, ma nò kond. prex.
 	var consonantVoicings = {
 		1: [
