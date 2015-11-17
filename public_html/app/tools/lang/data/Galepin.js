@@ -36504,7 +36504,7 @@
 "ŧavata",["n. f. sing."],{"ita":"ciabatta","eng":"slipper"},36503,["TN","TS","TV","BL"],
 "ŧavatar",["v. intr."],{"ita":"strusciare, camminare trascinando i piedi","eng":"walk (dragging feet)"},36504,["TS","TV"],
 "ŧavatin",["n. m. sing."],{"ita":"ciabattino","eng":"cobbler, shoemaker"},36505,["TS","TV"],
-"ŧavàtol",["n. m. sing."],{"ita":"fringuello, pincione","eng":"finch"},36506,["TV"],
+"ŧavàtol",["n. m. sing."],{"ita":"fringuello, pincione","eng":"finch"},36506,["TV","BL"],
 "ŧavertida",["n. f. sing."],{"ita":"girata","eng":"turn"},36507,["TS"],
 "ŧeka",["n. f. sing."],{"ita":"ghiozzo","eng":"gudgeon"},36508,["TV"],
 "ŧekarèla",["n. f. sing."],{"ita":"grillotalpa","eng":"mole cricket"},36509,["TV"],

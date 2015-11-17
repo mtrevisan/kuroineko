@@ -14,7 +14,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	/** @constant */
 		MARKER_FINAL_CONSONANT_VOICING = '_',
 	/** @constant */
-		PATTERN_FLAGS = new RegExp('(?:\\/([\\d,]+))?([' + MARKER_FLAGS.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + '])?(\\|.+)?$');
+		PATTERN_FLAGS = new RegExp('(?:\\/([\\d,]+))?([' + (MARKER_FLAGS + MARKER_FINAL_CONSONANT_VOICING).replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + '])?(\\|.+)?$');
 
 	/** @constant */
 	var PRONOMENAL_MARK = '/200',
@@ -58,9 +58,28 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		]
 	};
 
+	//spuntigar - punzecchiare
+	//ta[sx]ar lenhe = accatastare legna da ardere
+	//inprumar = mettere per la prima volta
+	//fardima = autunno, ansuda = primavera: zoldani e agordin
+	//zavàtol = fringuello
+	//témol = temolo
+	//cortìgol
+	//(bekiñòl, bigòl/bígol, bórtol)
+	//3a pars. + part. pasivo, ma nò kond. prex.
 	var consonantVoicings = {
 		1: [
-			[213, 'ñ.>nc|ñ[oi]', 'ñ.>in|ñ[oi]', 'ñ.>n|ñ[oi]', 'b.>p|b[oi]', 'd.>t|d[oi]', 'g.>k|g[oi]', 'v.>f|v[oi]', 'đ.>ŧ|đ[oi]', 'x.>s|x[oi]', 'ʒ.>ʃ|ʒ[oi]', 'ɉ.>c|ɉ[oi]', 'm.>n|m[oi]']
+			[213,
+				'ñ.>nc|ñ[oei]', 'ñ.>in|ñ[oei]', 'ñ.>n|ñ[oei]', 'ñ.>ñ|ñ[oei]',
+				'b.>p|b[oei]', 'p.>p|p[oei]',
+				'd.>t|d[oei]', 't.>t|t[oei]',
+				'g.>k|g[oei]', 'k.>k|k[oei]',
+				'v.>f|v[oei]', 'f.>f|f[oei]',
+				'đ.>ŧ|đ[oei]', 'ŧ.>ŧ|ŧ[oei]',
+				'x.>s|x[oei]', 's.>s|s[oei]',
+				'ʒ.>ʃ|ʒ[oei]', 'ʃ.>ʃ|ʃ[oei]',
+				'ɉ.>c|ɉ[oei]', 'c.>c|c[oei]',
+				'm.>n|m[oei]', 'n.>n|n[oei]']
 		]
 	};
 
@@ -82,8 +101,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 //		k = generateTheme(verbs, infinitiveThemes, 5, 2, [], k);
 //		k = generateTheme(verbs, infinitiveThemes, 6, 2, [], k);
 //		k = generateTheme(verbs, infinitiveThemes, 7, 2, [], k);
-//		k = generateTheme(verbs, infinitiveThemes, 8, 0, [12], k);
-		k = generateTheme(verbs, infinitiveThemes, 9, 0, [], k);
+		k = generateTheme(verbs, infinitiveThemes, 8, 0, [12], k);
+//		k = generateTheme(verbs, infinitiveThemes, 9, 0, [], k);
 //		k = generateTheme(verbs, infinitiveThemes, 10, 0, [], k);
 //		k = generateTheme(verbs, infinitiveThemes, 11, 4, [], k);
 //		k = generateTheme(verbs, infinitiveThemes, 12, 8, [], k);
@@ -263,7 +282,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 	/** @private */
 	var printReductions = function(list, comment){
-		var re = new RegExp(escapeRegExp(MARKER_FLAGS)),
+		var re = new RegExp(escapeRegExp('[' + MARKER_FLAGS + MARKER_FINAL_CONSONANT_VOICING + ']')),
 			flag, substitution,
 			subst, form, constraint,
 			logs, line, i, m, red;
@@ -811,7 +830,8 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + 
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'se').replace(/e$/, '[ei]'));
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'se') + MARKER_FINAL_CONSONANT_VOICING);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'si'));
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'simo'));
 		}
 	};
@@ -828,7 +848,7 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + 
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'sto').replace(/o$/, '[oaie]'));
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'sto').replace(/o$/, '[oaie]') + MARKER_FINAL_CONSONANT_VOICING);
 		}
 	};
 
@@ -1021,7 +1041,7 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + 
 				origins.push(origin);
 
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT6) + MARKER_FLAGS);
-			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT6 + 'do').replace(/do$/, '(d)[oaie]'));
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT6 + 'do').replace(/do$/, '(d)[oaie]') + MARKER_FINAL_CONSONANT_VOICING);
 		}
 	};
 
@@ -1053,7 +1073,7 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + 
 				origins.push(origin);
 
 			if(verb.conjugation == 3)
-				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT7 + 'sto').replace(/o$/, '[oaie]'));
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT7 + 'sto').replace(/o$/, '[oaie]') + MARKER_FINAL_CONSONANT_VOICING);
 		}
 	};
 
@@ -1093,7 +1113,6 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + 
 					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t).replace(/à$/, '[àèò]') + INTERROGATIVE_MARK_1S);
 				else{
 					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t + 'o').replace(/o$/, '[oe]') + INTERROGATIVE_MARK_1S);
-//					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(PhonologyHelper.finalConsonantVoicing(t, 'northern')) + INTERROGATIVE_MARK_1S);
 
 					if(verb.irregularity.verb && type == IRREGULAR){
 						if(verb.irregularity.saver)
@@ -1105,8 +1124,8 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + 
 				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t.replace(/([^i])$/, '$1' + (!verb.irregularity.verb.match(/andar|darStarFar|s?aver/) || !t.match(/à$/)? 'i': ''))) + INTERROGATIVE_MARK_2S);
 				var third = t + (!verb.irregularity.verb.match(/darStarFar|s?aver/)? (verb.irregularity.eser? 'é': 'e'): '');
 				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(third) + INTERROGATIVE_MARK_3 + MARKER_FLAGS);
-//				if(third.match(/[ei]$/))
-//					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(PhonologyHelper.finalConsonantVoicing(third.replace(/[ei]$/, ''), 'northern')) + INTERROGATIVE_MARK_3);
+				if(third.match(/[^aeiouàèéíòóú]e$/))
+					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(third) + MARKER_FINAL_CONSONANT_VOICING);
 				if(verb.irregularity.verb.match(/dixer|traer|toler/))
 					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t.replace(/[lx]?$/, 'go')) + INTERROGATIVE_MARK_1S);
 			});
@@ -1128,8 +1147,8 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + 
 			expandForm(themes.themeT8).forEach(function(t){
 				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t + 'a').replace(/a$/, '[ae]'));
 				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t.replace(/([^i])$/, '$1i')));
-//				if(t.match(/[^aeiouàèéíòóú]$/))
-//					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(PhonologyHelper.finalConsonantVoicing(t, 'northern')));
+				if(t.match(/[^aeiouàèéíòóú]$/))
+					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t + 'e') + MARKER_FINAL_CONSONANT_VOICING);
 
 				if(type == IRREGULAR && !verb.irregularity.verb.match(/(aver|dever|eser)/)){
 					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t + 'a').replace(/([aeiouàèéíòóú])a$/, '$1(g)a'));
@@ -1165,10 +1184,8 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + 
 
 			var strong = generateParticiplePerfectStrong(verb, themes.themeT8);
 			if(strong){
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(strong + 'o') + MARKER_FINAL_CONSONANT_VOICING);
 				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(strong + 'o').replace(/o$/, '[oaie]'));
-
-//				if(strong.match(/[^aeiouàèéíòóú]$/))
-//					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(PhonologyHelper.finalConsonantVoicing(strong, 'northern')));
 			}
 		}
 	};
@@ -1291,15 +1308,18 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + 
 				origins.push(origin);
 
 			expandForm(themes.themeT10).forEach(function(t){
-				var third = themes.themeT8 + (!verb.irregularity.verb.match(/darStarFar|s?aver/)? (verb.irregularity.eser? 'é': 'e'): '');
-				if(themes.themeT8 && t != third)
-//					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t).replace(/([ae])$/, '($1)') + INTERROGATIVE_MARK_3 + MARKER_FLAGS);
-					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t) + INTERROGATIVE_MARK_3 + MARKER_FLAGS);
 				if(!themes.themeT8){
 					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t) + INTERROGATIVE_MARK_3 + MARKER_FLAGS);
-//					var thirdNorthernOriental = PhonologyHelper.finalConsonantVoicing(t.replace(/[ae]$/, ''), 'northern');
-//					if(t != thirdNorthernOriental)
-//						insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(thirdNorthernOriental) + INTERROGATIVE_MARK_3);
+					if(t.match(/[^aeiouàèéíòóú]e$/))
+						insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t) + MARKER_FINAL_CONSONANT_VOICING);
+				}
+				else{
+					var third = themes.themeT8 + (!verb.irregularity.verb.match(/darStarFar|s?aver/)? (verb.irregularity.eser? 'é': 'e'): '');
+					if(t != third){
+						insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t) + INTERROGATIVE_MARK_3 + MARKER_FLAGS);
+						if(t.match(/[^aeiouàèéíòóú]e$/))
+							insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t) + MARKER_FINAL_CONSONANT_VOICING);
+					}
 				}
 			});
 		}
