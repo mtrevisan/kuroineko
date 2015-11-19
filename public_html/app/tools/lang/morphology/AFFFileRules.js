@@ -95,25 +95,25 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		});
 
 		var k = 13;
-//		k = generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10], k);
-//		k = generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7], k);
+		k = generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10], k);
+		k = generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7], k);
 		k = generateTheme(verbs, infinitiveThemes, 4, 0, [11], k);
-//		k = generateTheme(verbs, infinitiveThemes, 5, 2, [], k);
-//		k = generateTheme(verbs, infinitiveThemes, 6, 2, [], k);
-//		k = generateTheme(verbs, infinitiveThemes, 7, 2, [], k);
-//		k = generateTheme(verbs, infinitiveThemes, 8, 0, [12], k);
-//		k = generateTheme(verbs, infinitiveThemes, 9, 0, [], k);
-//		k = generateTheme(verbs, infinitiveThemes, 10, 0, [], k);
-//		k = generateTheme(verbs, infinitiveThemes, 11, 4, [], k);
-//		k = generateTheme(verbs, infinitiveThemes, 12, 8, [], k);
+		k = generateTheme(verbs, infinitiveThemes, 5, 2, [], k);
+		k = generateTheme(verbs, infinitiveThemes, 6, 2, [], k);
+		k = generateTheme(verbs, infinitiveThemes, 7, 2, [], k);
+		k = generateTheme(verbs, infinitiveThemes, 8, 0, [12], k);
+		k = generateTheme(verbs, infinitiveThemes, 9, 0, [], k);
+		k = generateTheme(verbs, infinitiveThemes, 10, 0, [], k);
+		k = generateTheme(verbs, infinitiveThemes, 11, 4, [], k);
+		k = generateTheme(verbs, infinitiveThemes, 12, 8, [], k);
 
-//		printReductions(reductions, 'reductions');
+		printReductions(reductions, 'reduŧioni');
 
-		printReductions(interrogatives, 'interrogatives');
+		printReductions(interrogatives, 'interogativi');
 
-//		printReductions(pronomenals, 'pronomenals');
+		printReductions(pronomenals, 'prokonplementari');
 
-//		printReductions(consonantVoicings, 'final consonant voicing');
+		printReductions(consonantVoicings, 'sonoriđaŧion konsonanti finali');
 	};
 
 	var generateTheme = function(verbs, infinitiveThemes, theme, originTheme, flags, k){
@@ -249,7 +249,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		});
 
 		if(logs.length)
-			printSuffixes(logs, theme, 'theme T' + theme);
+			printSuffixes(logs, theme, 'vèrbi: tèma T' + theme);
 	};
 
 	/** @private */
@@ -633,8 +633,8 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + 
 		index --;
 		filtered.sort(function(a, b){
 			var re = /(.+?)>/,
-				res = (a[0].match(re)[1].length - b[0].match(re)[1].length);
-			return (res? res: a.length - b.length);
+				res = (b[0].match(re)[1].length - a[0].match(re)[1].length);
+			return (res? res: b.length - a.length);
 		}).map(function(el, idx){
 			var s = el[0].replace(/>.+$/, '').length;
 			if(s != size || idx > 0 && filtered[idx - 1][1].replace(/>.+$/, '') == el[0].replace(/>.+$/, '')){
