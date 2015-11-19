@@ -1704,6 +1704,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "guilŧ",			"x",			1,	2,	"a",	"1852",			"Guiŧar de i pesi.",
 "guindol",		"x",			1,	2,	"a",	"1854",			"Altalenar.",
 "guinŧ",			"x",			1,	2,	"a",	"1821",			"",
+"guñ",			"x",			1,	1,	"g",	"",				"Burlar, skernir.",
 "gur",			"a",			1,	1,	"a",	"1867",			"Augurar.",
 "gur",			"in",			1,	1,	"a",	"1867",			"Augurar.",
 "gurxit",		"in",			1,	1,	"a",	"1821",			"",
