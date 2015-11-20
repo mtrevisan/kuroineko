@@ -21,27 +21,40 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	/** @constant */
 	var PRONOMENAL_MARK = 200,
 	/** @constant */
-		PRONOMENAL_IMPERATIVE_MARK = 201,
+		PRONOMENAL_MARK_RESERVED_0 = 201,
 	/** @constant */
-		FINAL_CONSONANT_VOICING_MARK = 202,
+		PRONOMENAL_MARK_RESERVED_1 = 202,
 	/** @constant */
-		INTERROGATIVE_MARK_RESERVED_0 = 203,
+		PRONOMENAL_IMPERATIVE_MARK = 203,
 	/** @constant */
-		INTERROGATIVE_MARK_1S = 204,
+		FINAL_CONSONANT_VOICING_MARK = 204,
 	/** @constant */
-		INTERROGATIVE_MARK_1P = 205,
+		INTERROGATIVE_MARK_RESERVED_0 = 205,
 	/** @constant */
-		INTERROGATIVE_MARK_2S = 206,
+		INTERROGATIVE_MARK_1S = 206,
 	/** @constant */
-		INTERROGATIVE_MARK_2P = 207,
+		INTERROGATIVE_MARK_1P = 207,
 	/** @constant */
-		INTERROGATIVE_MARK_3 = 208,
+		INTERROGATIVE_MARK_2S = 208,
 	/** @constant */
-		INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE = 209;
+		INTERROGATIVE_MARK_2P = 209,
+	/** @constant */
+		INTERROGATIVE_MARK_3 = 210,
+	/** @constant */
+		INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE = 211;
 
 	var reductions = {
 		0: [
+			//vèrbi e ajetivi de prima klase
 			[13, '[oaie]'],
+			[13, 'o>a/14|o'],
+			[13, '0>a/14|[^aieo]'],
+			//ajetivi de sekonda klase
+			[14, '[aie]'],
+			[14, 'a>e/15|a'],
+			//ajetivi de terŧa klase
+			[15, '[ei]'],
+			[15, 'e>i|e']
 		]
 	};
 
@@ -60,16 +73,16 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 	var pronomenals = {
 		1: [
-			[INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE + 1, 'lo/13', 'me/' + (INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE + 2), 'te/' + (INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE + 2), 've/' + (INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE + 2), 'se/' + (INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE + 2), 'ge/' + (INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE + 2), 'ne'],
-			[INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE + 2, 'ne', 'lo/13'],
-			[INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE + 3, '0>-me', '0>-ne', '0>-te', '0>-ve', '0>-lo/13', '0>-ge', 'a>e-me|a', 'a>e-ne|a', 'a>e-te|a', 'a>e-ve|a', 'a>e-lo/13|a', 'a>e-ge|a']
+			[PRONOMENAL_MARK, 'lo/13', 'me/' + PRONOMENAL_MARK_RESERVED_0, 'te/' + PRONOMENAL_MARK_RESERVED_0, 've/' + PRONOMENAL_MARK_RESERVED_0, 'se/' + PRONOMENAL_MARK_RESERVED_0, 'ge/' + PRONOMENAL_MARK_RESERVED_0, 'ne'],
+			[PRONOMENAL_MARK_RESERVED_0, 'ne', 'lo/13'],
+			[PRONOMENAL_MARK_RESERVED_1, '0>-me', '0>-ne', '0>-te', '0>-ve', '0>-lo/13', '0>-ge', 'a>e-me|a', 'a>e-ne|a', 'a>e-te|a', 'a>e-ve|a', 'a>e-lo/13|a', 'a>e-ge|a']
 		]
 	};
 
 	//(zavàtol = fringuello, témol = temolo, bekiñòl, bigòl/bígol, bórtol, tasar/taxar)
 	var consonantVoicings = {
 		1: [
-			[INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE + 4,
+			[FINAL_CONSONANT_VOICING_MARK,
 				'ñ.>nc|ñ[oei]', 'ñ.>in|ñ[oei]', 'ñ.>n|ñ[oei]', 'ñ.>ñ|ñ[oei]',
 				'b.>p|b[oei]', 'p.>p|p[oei]',
 				'd.>t|d[oei]', 't.>t|t[oei]',
@@ -80,6 +93,12 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 				'ʒ.>ʃ|ʒ[oei]', 'ʃ.>ʃ|ʃ[oei]',
 				'ɉ.>c|ɉ[oei]', 'c.>c|c[oei]',
 				'm.>n|m[oei]', 'n.>n|n[oei]']
+		]
+	};
+
+	var substantives = {
+		1: [
+			[INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE + 1, '0>i|[^aieo]', '.>i|[aeo]', 'n>i|[^i]n', 'l>i|[^i]l', 'a>e|a']
 		]
 	};
 
@@ -94,26 +113,28 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 			infinitiveThemes[verb.infinitive] = Themizer.generate(verb, dialect);
 		});
 
-		var k = 13;
-		k = generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10], k);
-		k = generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7], k);
-		k = generateTheme(verbs, infinitiveThemes, 4, 0, [11], k);
-		k = generateTheme(verbs, infinitiveThemes, 5, 2, [], k);
-		k = generateTheme(verbs, infinitiveThemes, 6, 2, [], k);
-		k = generateTheme(verbs, infinitiveThemes, 7, 2, [], k);
+		var k = 16;
+//		k = generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10], k);
+//		k = generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7], k);
+//		k = generateTheme(verbs, infinitiveThemes, 4, 0, [11], k);
+//		k = generateTheme(verbs, infinitiveThemes, 5, 2, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 6, 2, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 7, 2, [], k);
 		k = generateTheme(verbs, infinitiveThemes, 8, 0, [12], k);
-		k = generateTheme(verbs, infinitiveThemes, 9, 0, [], k);
-		k = generateTheme(verbs, infinitiveThemes, 10, 0, [], k);
-		k = generateTheme(verbs, infinitiveThemes, 11, 4, [], k);
-		k = generateTheme(verbs, infinitiveThemes, 12, 8, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 9, 0, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 10, 0, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 11, 4, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 12, 8, [], k);
 
 		printReductions(reductions, 'reduŧioni');
-
-		printReductions(interrogatives, 'interogativi');
 
 		printReductions(pronomenals, 'prokonplementari');
 
 		printReductions(consonantVoicings, 'sonoriđaŧion konsonanti finali');
+
+		printReductions(interrogatives, 'interogativi');
+
+		printReductions(substantives, 'sostantivi plurali');
 	};
 
 	var generateTheme = function(verbs, infinitiveThemes, theme, originTheme, flags, k){
@@ -332,8 +353,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 		Object.keys(list).forEach(function(key){
 			list[key].forEach(function(reduction){
-				if(key == '0')
-					return;
+//				if(key == '0')
+//					return;
 
 				flag = reduction.shift();
 				substitution = extractSimpleForm(reduction[0]);
@@ -503,7 +524,9 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + 
 		tryReduceSuffixes(tmp, reductions, theme);
 
 		var len = reductions[theme].length;
-		reductions[theme] = reductions[theme].filter(function(reduction){ return reduction.used; });
+		reductions[theme] = reductions[theme].filter(function(reduction){
+			return (reduction.some(function(red){ return String(red).match(/[\(\[]/); }) || reduction.used > 1);
+		});
 		if(reductions[theme].length < len)
 			tryReduceSuffixes(list, reductions, theme);
 		else{
@@ -546,8 +569,10 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + 
 
 			temporaryList = mergeIdenticalTransformations(ArrayHelper.unique(temporaryList));
 			if(sublist != temporaryList){
-				if(ArrayHelper.difference(sublist, temporaryList).length)
-					reduction.used = true;
+				if(ArrayHelper.difference(sublist, temporaryList).length){
+					reduction.used = reduction.used || 0;
+					reduction.used ++;
+				}
 
 				sublist.length = 0;
 				sublist.push.apply(sublist, temporaryList);
