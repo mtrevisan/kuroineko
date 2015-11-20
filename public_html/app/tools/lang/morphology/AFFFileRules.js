@@ -23,25 +23,23 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	/** @constant */
 		PRONOMENAL_MARK_RESERVED_0 = 201,
 	/** @constant */
-		PRONOMENAL_MARK_RESERVED_1 = 202,
+		PRONOMENAL_IMPERATIVE_MARK = 202,
 	/** @constant */
-		PRONOMENAL_IMPERATIVE_MARK = 203,
+		FINAL_CONSONANT_VOICING_MARK = 203,
 	/** @constant */
-		FINAL_CONSONANT_VOICING_MARK = 204,
+		INTERROGATIVE_MARK_RESERVED_0 = 204,
 	/** @constant */
-		INTERROGATIVE_MARK_RESERVED_0 = 205,
+		INTERROGATIVE_MARK_1S = 205,
 	/** @constant */
-		INTERROGATIVE_MARK_1S = 206,
+		INTERROGATIVE_MARK_1P = 206,
 	/** @constant */
-		INTERROGATIVE_MARK_1P = 207,
+		INTERROGATIVE_MARK_2S = 207,
 	/** @constant */
-		INTERROGATIVE_MARK_2S = 208,
+		INTERROGATIVE_MARK_2P = 208,
 	/** @constant */
-		INTERROGATIVE_MARK_2P = 209,
+		INTERROGATIVE_MARK_3 = 209,
 	/** @constant */
-		INTERROGATIVE_MARK_3 = 210,
-	/** @constant */
-		INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE = 211;
+		INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE = 210;
 
 	var reductions = {
 		0: [
@@ -75,7 +73,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		1: [
 			[PRONOMENAL_MARK, 'lo/13', 'me/' + PRONOMENAL_MARK_RESERVED_0, 'te/' + PRONOMENAL_MARK_RESERVED_0, 've/' + PRONOMENAL_MARK_RESERVED_0, 'se/' + PRONOMENAL_MARK_RESERVED_0, 'ge/' + PRONOMENAL_MARK_RESERVED_0, 'ne'],
 			[PRONOMENAL_MARK_RESERVED_0, 'ne', 'lo/13'],
-			[PRONOMENAL_MARK_RESERVED_1, '0>-me', '0>-ne', '0>-te', '0>-ve', '0>-lo/13', '0>-ge', 'a>e-me|a', 'a>e-ne|a', 'a>e-te|a', 'a>e-ve|a', 'a>e-lo/13|a', 'a>e-ge|a']
+			[PRONOMENAL_IMPERATIVE_MARK, '0>-me', '0>-ne', '0>-te', '0>-ve', '0>-lo/13', '0>-ge', 'a>e-me|a', 'a>e-ne|a', 'a>e-te|a', 'a>e-ve|a', 'a>e-lo/13|a', 'a>e-ge|a']
 		]
 	};
 
@@ -810,9 +808,9 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + 
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			var pronomenalMark = (!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? '/' + PRONOMENAL_MARK: '');
+			var pronomenalMark = (!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK + ',': '');
 
-			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT1 + 'r') + pronomenalMark + MARKER_FLAGS);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT1 + 'r') + '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK + MARKER_FLAGS);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT1 + 're'));
 		}
 	};
@@ -889,13 +887,13 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + 
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			var pronomenalMark = (!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? '/' + PRONOMENAL_MARK: '');
+			var pronomenalMark = (!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK + ',': '');
 
-			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'ndo') + pronomenalMark + MARKER_FLAGS);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'ndo') + '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK + MARKER_FLAGS);
 			if(verb.irregularity.eser)
-				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(verb.infinitive.substr(0, verb.infinitive.length - 'èser'.length) + 'siàndo') + pronomenalMark);
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(verb.infinitive.substr(0, verb.infinitive.length - 'èser'.length) + 'siàndo') + '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK);
 			else if(verb.irregularity.aver)
-				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(verb.infinitive.substr(0, verb.infinitive.length - 'aver'.length) + 'abiàndo') + pronomenalMark);
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(verb.infinitive.substr(0, verb.infinitive.length - 'aver'.length) + 'abiàndo') + '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK);
 		}
 	};
 
@@ -1116,8 +1114,8 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + 
 				origins.push(origin);
 
 			if(verb.conjugation == 3){
-				var pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? '/' + PRONOMENAL_MARK: '');
-				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT7 + 'ndo') + pronomenalMark);
+				var pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK + ',': '');
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT7 + 'ndo') + '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK);
 			}
 		}
 	};
