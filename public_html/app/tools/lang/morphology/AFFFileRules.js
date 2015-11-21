@@ -39,7 +39,13 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	/** @constant */
 		INTERROGATIVE_MARK_3 = 209,
 	/** @constant */
-		INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE = 210;
+		INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE = 210,
+	/** @constant */
+		SUBSTANTIVES = 211,
+	/** @constant */
+		PLANTS_AND_CRAFTS = 212,
+	/** @constant */
+		PLANTS_AND_CRAFTS_RESERVED_0 = 213;
 
 	var reductions = {
 		0: [
@@ -96,7 +102,20 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 	var substantives = {
 		1: [
-			[INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE + 1, '0>i|[^aieo]', '.>i|[aeo]', 'n>i|[^i]n', 'l>i|[^i]l', 'a>e|a']
+			[SUBSTANTIVES, '0>i|[^aieo]', '.>i|[aeo]', 'n>i|[^i]n', 'l>i|[^i]l', 'a>e|a']
+		]
+	};
+
+	var plantsAndCrafts = {
+		1: [
+			[PLANTS_AND_CRAFTS,
+				'èr>ar/' + PLANTS_AND_CRAFTS_RESERVED_0 + '|èr',
+				'ol>iol/' + PLANTS_AND_CRAFTS_RESERVED_0 + '|rol',
+				'ol>iòl/' + PLANTS_AND_CRAFTS_RESERVED_0 + '|rol',
+				'ol>òl/' + PLANTS_AND_CRAFTS_RESERVED_0 + '|rol',
+				'tor>dor/' + PLANTS_AND_CRAFTS_RESERVED_0 + '|[aeiou]tor',
+				'dor>tor/' + PLANTS_AND_CRAFTS_RESERVED_0 + '|[aeiou]dor'],
+			[PLANTS_AND_CRAFTS_RESERVED_0, '0>o/13']
 		]
 	};
 
@@ -133,6 +152,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		printReductions(interrogatives, 'interogativi');
 
 		printReductions(substantives, 'sostantivi plurali');
+
+		//dict: -er/PLANTS_AND_CRAFTS, -rol/PLANTS_AND_CRAFTS, -dor/PLANTS_AND_CRAFTS, -tor/PLANTS_AND_CRAFTS
+		printReductions(plantsAndCrafts, 'piante e mistièri');
 	};
 
 	var generateTheme = function(verbs, infinitiveThemes, theme, originTheme, flags, k){
