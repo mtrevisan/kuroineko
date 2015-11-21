@@ -1231,26 +1231,27 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + 
 				//rhizotonic
 				[
 					{matcher: /trà$/, replacement: 'tràt'},
-					{matcher: /([aeiouàèéíòóúnl])x$/, falsePositives: /piàx$/, replacement: '$1t'},
 					{matcher: /piàx$/, replacement: 'piàs'},
-					{matcher: /rx$/, falsePositives: /spàrx$/, replacement: 'rt'},
+					{matcher: /dúx$/, replacement: 'dót'},
+					{matcher: /([aeiouàèéíòóúnl])x$/, replacement: '$1t'},
 					{matcher: /spàrx$/, replacement: 'spàrs'},
+					{matcher: /rx$/, replacement: 'rt'},
 					{matcher: /rd$/, replacement: 'rs'},
-					{matcher: /nd$/, falsePositives: /([àó]nd)$/, replacement: 'x'},
 					{matcher: /pànd$/, replacement: 'pànt'},
 					{matcher: /kónd$/, replacement: 'kónt'},
 					{matcher: /fónd$/, replacement: 'fúx'},
 					{matcher: /pónd$/, replacement: 'póst'},
-					{matcher: /([aeiouàèéíòóúnl])d$/, falsePositives: /[cŧv]éd$/, replacement: '$1x'},
+					{matcher: /nd$/, replacement: 'x'},
+					{matcher: /véd$/, replacement: 'víst'},
 					{matcher: /([cŧ])éd$/, replacement: '$1ès'},
-					{matcher: /véd$/, replacement: 'vést'},
-					{matcher: /([rn])đ$/, falsePositives: /strénđ$/, replacement: '$1t'},
+					{matcher: /([aeiouàèéíòóúnl])d$/, replacement: '$1x'},
 					{matcher: /strénđ$/, replacement: 'strét'},
+					{matcher: /([rn])đ$/, replacement: '$1t'},
 					{matcher: /lèđ$/, replacement: 'lèt'},
 					{matcher: /fríđ$/, replacement: 'frít'},
 					{matcher: /t$/, replacement: 's'},
 					{matcher: /lv$/, replacement: 'lt'},
-					{matcher: /móv$/, replacement: 'mós'},
+					{matcher: /m([òó])v$/, replacement: 'm$1s'},
 					{matcher: /skrív$/, replacement: 'skrít'},
 					{matcher: /úm$/, replacement: 'únt'},
 					{matcher: /prím$/, replacement: 'près'},
@@ -1281,9 +1282,9 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + 
 			[
 				{matcher: /mòr$/, falsePositives: /(inti|mar)mòr$/, replacement: 'mòrt'},
 				{matcher: /([^aeiouàèéíòóú])r$/, falsePositives: /(mòr|núdr)$/, replacement: '$1èrt'},
-				{matcher: /fér$/, replacement: 'fèrt'},
 				{matcher: /sepel$/, replacement: 'sepólt'},
-				{matcher: /([aeiouàèéíòóú])r$/, falsePositives: /fér$/, replacement: '$1rs'}
+				{matcher: /fér$/, replacement: 'fèrt'},
+				{matcher: /([aeiouàèéíòóú])r$/, replacement: '$1rs'}
 			]
 		];
 
