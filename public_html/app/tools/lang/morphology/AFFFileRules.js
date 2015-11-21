@@ -1254,7 +1254,7 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + 
 				[
 					{matcher: /trà$/, replacement: 'tràt'},
 					{matcher: /piàx$/, replacement: 'piàs'},
-					{matcher: /spàrx$/, replacement: 'spàrs'},
+					{matcher: /(spà|mè)rx$/, replacement: '$1rs'},
 					{matcher: /fíx$/, replacement: 'fís'},
 					{matcher: /dúx$/, replacement: 'dót'},
 					{matcher: /dilíx$/, replacement: 'dilèt'},
