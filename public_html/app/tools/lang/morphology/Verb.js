@@ -124,6 +124,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabator', 'tools/d
 			traer: /(|as?|des?|es|kon|pro|re|so)?tràer$/,
 			enher: /[èé]ñer$/,
 			toler: /to[lƚ]ér$/,
+			viver: /víver$/,
 			voler: /vo[lƚ]ér$/
 		};
 

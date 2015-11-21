@@ -78,7 +78,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 
 	var generateIrregularThemes = (function(){
 		var irregular = {
-			'andar': function(t){
+			andar: function(t){
 				var themeX5 = t.themeT5.replace(/andè$/, 'vè'),
 					themeX8 = t.themeT3.replace(/ànda$/, 'và'),
 					themeX12 = t.themeT12.replace(/and$/, 'v');
@@ -98,7 +98,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 				};
 			},
 
-			'darStarFar': function(t){
+			darStarFar: function(t){
 				var themeX8 = t.themeT3;
 
 				//erase phonologically unacceptable themes
@@ -115,7 +115,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 				};
 			},
 
-			'eser': function(t){
+			eser: function(t){
 				var themeX5 = t.themeT5.replace(/esé$/, 'sé'),
 					themeX5subj = t.themeT5.replace(/esé$/, 'sipié'),
 					themeX6 = t.themeT6.replace(/esú$/, 'stà'),
@@ -160,7 +160,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 				};
 			},
 
-			'averSaver': function(t){
+			averSaver: function(t){
 				var themeX8 = t.themeT3.replace(/ve$/, ''),
 					themeX8subj = t.themeT8.replace(/v$/, 'pi');
 
@@ -182,7 +182,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 				};
 			},
 
-			'traer': function(t){
+			traer: function(t){
 				var themeX9 = t.themeT3.replace(/e$/, '');
 
 				return {
@@ -201,7 +201,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 				};
 			},
 
-			'dever': function(t){
+			dever: function(t){
 				return {
 					subjunctive: {
 						themeT5: t.themeT5.replace(/vé$/, 'biè'),
@@ -211,7 +211,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 				};
 			},
 
-			'dixer': function(t){
+			dixer: function(t){
 				return {
 					themeT1: t.themeT1.replace(/xe$/, ''),
 					//NOTE: prepare for syncope of 'xe' before vibrant (indicative future and conditional simple only)
@@ -223,7 +223,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 				};
 			},
 
-			'poder': function(t){
+			poder: function(t){
 				return {
 					//NOTE: prepare for syncope of 'de' before vibrant (indicative future and conditional simple only)
 					themeT4: t.themeT4.replace(/de$/, ''),
@@ -235,7 +235,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 				};
 			},
 
-			'toler': function(t){
+			toler: function(t){
 				return {
 					themeT1: t.themeT1.replace(/tolé$/, 'tò'),
 					themeT4: t.themeT4.replace(/le$/, ''),
@@ -246,7 +246,17 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 				};
 			},
 
-			'voler': function(t){
+			viver: function(t){
+				var themeX6 = t.themeT6.replace(/vú$/, 'sú');
+
+				return {
+					participlePerfect: {
+						themeT6: themeX6
+					}
+				};
+			},
+
+			voler: function(t){
 				var themeX6 = t.themeT6.replace(/lú$/, 'sú');
 
 				return {
@@ -263,7 +273,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 				};
 			},
 
-			'enher': function(t, dialect){
+			enher: function(t, dialect){
 				var themeX9 = t.themeT3.replace(/[èé]ñe$/, (dialect.none? '(i)': (!dialect.western? 'i': '')) + t.themeT3.substr(-3, 1) + 'n');
 
 				return {

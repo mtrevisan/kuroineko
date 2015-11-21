@@ -488,10 +488,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			//3rd conjugation
 			[
 				{matcher: /mòr$/, falsePositives: /(inti|mar)mòr$/, replacement: 'mòrt'},
-				{matcher: /([^aeiouàèéíòóú])r$/, falsePositives: /núdr$/, replacement: '$1èrt'},
+				{matcher: /([^aeiouàèéíòóú])r$/, falsePositives: /(mòr|núdr)$/, replacement: '$1èrt'},
 				{matcher: /fér$/, replacement: 'fèrt'},
 				{matcher: /sepel$/, replacement: 'sepólt'},
-				{matcher: /([aeiouàèéíòóú])r$/, falsePositives: /(fér|sepel)$/, replacement: '$1rs'}
+				{matcher: /([aeiouàèéíòóú])r$/, falsePositives: /fér$/, replacement: '$1rs'}
 			]
 		];
 
@@ -501,7 +501,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				data = data[this.verb.rhizotonic? 0: 1];
 
 			var m, match;
-			if(data.some(function(el){ m = el; match = this.match(el.matcher); return match; }, themeT8) && (!m.falsePositives || !themeT8.match(m.falsePositives))){
+			themeT8 = themeT8.replace(/\(.+\)/, '');
+			if(data.some(function(el){ m = el; match = themeT8.match(el.matcher); return match; })
+					&& (!m.falsePositives || !themeT8.match(m.falsePositives))){
 				if(Word.isStressed(m.replacement) && !Word.isStressed(match[0]))
 					themeT8 = Word.suppressStress(themeT8);
 				return themeT8.replace(m.matcher, m.replacement);

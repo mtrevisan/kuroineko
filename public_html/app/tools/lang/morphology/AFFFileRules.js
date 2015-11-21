@@ -1280,10 +1280,10 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + 
 			//3rd conjugation
 			[
 				{matcher: /mòr$/, falsePositives: /(inti|mar)mòr$/, replacement: 'mòrt'},
-				{matcher: /([^aeiouàèéíòóú])r$/, falsePositives: /núdr$/, replacement: '$1èrt'},
+				{matcher: /([^aeiouàèéíòóú])r$/, falsePositives: /(mòr|núdr)$/, replacement: '$1èrt'},
 				{matcher: /fér$/, replacement: 'fèrt'},
 				{matcher: /sepel$/, replacement: 'sepólt'},
-				{matcher: /([aeiouàèéíòóú])r$/, falsePositives: /(fér|sepel)$/, replacement: '$1rs'}
+				{matcher: /([aeiouàèéíòóú])r$/, falsePositives: /fér$/, replacement: '$1rs'}
 			]
 		];
 
@@ -1293,6 +1293,7 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + 
 				data = data[verb.rhizotonic? 0: 1];
 
 			var m, match;
+			themeT8 = themeT8.replace(/\(.+\)/, '');
 			if(data.some(function(el){ m = el; match = themeT8.match(el.matcher); return match; })
 					&& (!m.falsePositives || !themeT8.match(m.falsePositives))){
 				if(Word.isStressed(m.replacement) && !Word.isStressed(match[0]))
