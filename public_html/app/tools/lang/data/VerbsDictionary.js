@@ -1653,7 +1653,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "griŧ",			"x",			1,	2,	"a",	"1867",			"",
 "griŧol",		"in",			4,	6,	"a",	"1854",			"Ranikiar, ragrupar, agomitolar.",
 "griŧol",		"x",			1,	2,	"a",	"1852",			"Skriŧar.",
-"gríx",			"x",			3,	2,	"a",	"1852",			"Stroginar na roba dura par krear on sòn akuto.",
+"gríx",			"x",			3,	2,	"a",	"1852",			"Strofinar na roba dura par krear on sòn akuto.",
 "grixol",		"",			4,	6,	"a",	"1854",			"Rabrividir.",
 "grixol",		"in",			4,	6,	"a",	"2007",			"(bixiak)",
 "grixol",		"x",			4,	6,	"a",	"1821",			"Rabrividir.",
