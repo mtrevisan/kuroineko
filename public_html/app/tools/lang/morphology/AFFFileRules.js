@@ -131,30 +131,30 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		});
 
 		var k = 16;
-		k = generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10], k);
+//		k = generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10], k);
 		k = generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7], k);
-		k = generateTheme(verbs, infinitiveThemes, 4, 0, [11], k);
-		k = generateTheme(verbs, infinitiveThemes, 5, 2, [], k);
-		k = generateTheme(verbs, infinitiveThemes, 6, 2, [], k);
-		k = generateTheme(verbs, infinitiveThemes, 7, 2, [], k);
-		k = generateTheme(verbs, infinitiveThemes, 8, 0, [12], k);
-		k = generateTheme(verbs, infinitiveThemes, 9, 0, [], k);
-		k = generateTheme(verbs, infinitiveThemes, 10, 0, [], k);
-		k = generateTheme(verbs, infinitiveThemes, 11, 4, [], k);
-		k = generateTheme(verbs, infinitiveThemes, 12, 8, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 4, 0, [11], k);
+//		k = generateTheme(verbs, infinitiveThemes, 5, 2, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 6, 2, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 7, 2, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 8, 0, [12], k);
+//		k = generateTheme(verbs, infinitiveThemes, 9, 0, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 10, 0, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 11, 4, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 12, 8, [], k);
 
 		printReductions(reductions, 'reduŧioni');
 
-		printReductions(pronomenals, 'prokonplementari');
+//		printReductions(pronomenals, 'prokonplementari');
 
-		printReductions(consonantVoicings, 'sonoriđaŧion konsonanti finali');
+//		printReductions(consonantVoicings, 'sonoriđaŧion konsonanti finali');
 
-		printReductions(interrogatives, 'interogativi');
+//		printReductions(interrogatives, 'interogativi');
 
-		printReductions(substantives, 'sostantivi plurali');
+//		printReductions(substantives, 'sostantivi plurali');
 
 		//dict: -er/PLANTS_AND_CRAFTS, -rol/PLANTS_AND_CRAFTS, -dor/PLANTS_AND_CRAFTS, -tor/PLANTS_AND_CRAFTS
-		printReductions(plantsAndCrafts, 'piante e mistièri');
+//		printReductions(plantsAndCrafts, 'piante e mistièri');
 	};
 
 	var generateTheme = function(verbs, infinitiveThemes, theme, originTheme, flags, k){
@@ -373,17 +373,14 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 		Object.keys(list).forEach(function(key){
 			list[key].forEach(function(reduction){
-//				if(key == '0')
-//					return;
-
 				flag = reduction.shift();
-				substitution = extractSimpleForm(reduction[0]);
+				substitution = extractSimpleForm(reduction[0]).replace(/^.+>/, '');
 
 				logs = [];
 				reduction.forEach(function(el){
 					m = el.match(/^(.+?)>(.+?)(?:\|(.+))?$/);
 					if(m){
-						subst = m[1];
+						subst = (key == '0'? m[1]: substitution);
 						form = m[2];
 						constraint = m[3] || subst;
 					}
@@ -399,6 +396,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 							if(logs.indexOf(line) < 0)
 								logs.push(line);
 						}
+//						else
+//							throw 'subst == form, ' + subst + ' == ' + form;
 					});
 				});
 
@@ -527,7 +526,9 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 &&
 
 	/** @private */
 	var extractSimpleForm = function(form){
-		return form.replace(PATTERN_FLAGS, '').replace(/\(.+?\)/g, '').replace(/\[.+\]/g, function(value){ return value.replace(/^\[|\]$/g, '').split(value.indexOf('/') >= 0? '/': '')[0]; });
+		return form.replace(PATTERN_FLAGS, '')
+			.replace(/\(.+?\)/g, '')
+			.replace(/\[.+\]/g, function(value){ return value.replace(/^\[|\]$/g, '').split(value.indexOf('/') >= 0? '/': '')[0]; });
 	};
 
 	/** @private */
