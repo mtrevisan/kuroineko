@@ -345,17 +345,17 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 					if(m){
 						subst = m[1];
 						form = m[2];
-						constraint = m[3];
+						constraint = m[3] || subst;
 					}
 					else{
 						subst = substitution;
 						form = reduction[i];
-						constraint = undefined;
+						constraint = subst;
 					}
 
 					expandForm(form.replace(re, '')).forEach(function(form){
 						if(subst != form)
-							reduction.push(subst + '>' + form + '|' + (constraint || subst));
+							reduction.push(subst + '>' + form + '|' + (constraint != 0? ' ' + constraint: ''));
 					});
 
 					reduction.splice(i, 1);
