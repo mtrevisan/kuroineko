@@ -77,7 +77,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 	var pronomenals = {
 		1: [
-			[PRONOMENAL_MARK, 'lo/13', 'me/' + PRONOMENAL_MARK_RESERVED_0, 'te/' + PRONOMENAL_MARK_RESERVED_0, 've/' + PRONOMENAL_MARK_RESERVED_0, 'se/' + PRONOMENAL_MARK_RESERVED_0, 'ge/' + PRONOMENAL_MARK_RESERVED_0, 'ne'],
+			[PRONOMENAL_MARK, '-lo/13', '-me/' + PRONOMENAL_MARK_RESERVED_0, '-te/' + PRONOMENAL_MARK_RESERVED_0, '-ve/' + PRONOMENAL_MARK_RESERVED_0, '-se/' + PRONOMENAL_MARK_RESERVED_0, '-ge/' + PRONOMENAL_MARK_RESERVED_0, '-ne'],
 			[PRONOMENAL_MARK_RESERVED_0, 'ne', 'lo/13'],
 			[PRONOMENAL_IMPERATIVE_MARK, '0>-me', '0>-ne', '0>-te', '0>-ve', '0>-lo/13', '0>-ge', 'a>e-me|a', 'a>e-ne|a', 'a>e-te|a', 'a>e-ve|a', 'a>e-lo/13|a', 'a>e-ge|a']
 		]
@@ -136,8 +136,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 //		k = generateTheme(verbs, infinitiveThemes, 4, 0, [11], k);
 //		k = generateTheme(verbs, infinitiveThemes, 5, 2, [], k);
 //		k = generateTheme(verbs, infinitiveThemes, 6, 2, [], k);
-//		k = generateTheme(verbs, infinitiveThemes, 7, 2, [], k);
-		k = generateTheme(verbs, infinitiveThemes, 8, 0, [12], k);
+		k = generateTheme(verbs, infinitiveThemes, 7, 2, [], k);
+//		k = generateTheme(verbs, infinitiveThemes, 8, 0, [12], k);
 //		k = generateTheme(verbs, infinitiveThemes, 9, 0, [], k);
 //		k = generateTheme(verbs, infinitiveThemes, 10, 0, [], k);
 //		k = generateTheme(verbs, infinitiveThemes, 11, 4, [], k);
