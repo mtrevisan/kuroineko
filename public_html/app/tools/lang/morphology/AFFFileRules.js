@@ -355,7 +355,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 					expandForm(form.replace(re, '')).forEach(function(form){
 						if(subst != form)
-							reduction.push(subst + '>' + form + '|' + (constraint != 0? ' ' + constraint: ''));
+							reduction.push(subst + '>' + form + '|' + constraint);
 					});
 
 					reduction.splice(i, 1);
