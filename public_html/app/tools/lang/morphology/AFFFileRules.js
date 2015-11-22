@@ -77,8 +77,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 	var pronomenals = {
 		1: [
-			[PRONOMENAL_MARK, '-lo/13', '-me/' + PRONOMENAL_MARK_RESERVED_0, '-te/' + PRONOMENAL_MARK_RESERVED_0, '-ve/' + PRONOMENAL_MARK_RESERVED_0, '-se/' + PRONOMENAL_MARK_RESERVED_0, '-ge/' + PRONOMENAL_MARK_RESERVED_0, '-ne'],
-			[PRONOMENAL_MARK_RESERVED_0, 'ne', 'lo/13'],
+			[PRONOMENAL_MARK, '0>-lo/13', '0>-me/' + PRONOMENAL_MARK_RESERVED_0, '0>-te/' + PRONOMENAL_MARK_RESERVED_0, '0>-ve/' + PRONOMENAL_MARK_RESERVED_0, '0>-se/' + PRONOMENAL_MARK_RESERVED_0, '0>-ge/' + PRONOMENAL_MARK_RESERVED_0, '0>-ne'],
+			[PRONOMENAL_MARK_RESERVED_0, '0>ne', '0>lo/13'],
 			[PRONOMENAL_IMPERATIVE_MARK, '0>-me', '0>-ne', '0>-te', '0>-ve', '0>-lo/13', '0>-ge', 'a>e-me|a', 'a>e-ne|a', 'a>e-te|a', 'a>e-ve|a', 'a>e-lo/13|a', 'a>e-ge|a']
 		]
 	};
@@ -385,17 +385,17 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 					if(m){
 						subst = m[1];
 						form = m[2];
-						constraint = m[3];
+						constraint = m[3] || subst;
 					}
 					else{
 						subst = substitution;
 						form = el;
-						constraint = undefined;
+						constraint = subst;
 					}
 
 					expandForm(form.replace(re, '')).forEach(function(form){
 						if(subst != form){
-							line = 'SFX ' + flag + ' ' + subst + ' ' + form + ' ' + (constraint || subst);
+							line = 'SFX ' + flag + ' ' + subst + ' ' + form + (constraint != 0? ' ' + constraint: '');
 							if(logs.indexOf(line) < 0)
 								logs.push(line);
 						}
@@ -419,8 +419,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 			constraint = replaced;
 
 		//FIXME
-//		var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + constraint: '') + (parents? ' # ' + parents.sort().join(','): '');
-var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint? ' ' + constraint: '');
+//		var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 && constraint != ''? ' ' + constraint: '') + (parents? ' # ' + parents.sort().join(','): '');
+var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 && constraint != ''? ' ' + constraint: '');
 		if(logs.indexOf(line) < 0)
 			logs.push(line);
 	};
