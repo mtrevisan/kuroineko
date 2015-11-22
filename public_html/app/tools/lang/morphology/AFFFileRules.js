@@ -143,18 +143,18 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		k = generateTheme(verbs, infinitiveThemes, 11, 4, [], k);
 		k = generateTheme(verbs, infinitiveThemes, 12, 8, [], k);
 
-//		printReductions(reductions, 'reduŧioni');
+		printReductions(reductions, 'reduŧioni');
 
-//		printReductions(pronomenals, 'prokonplementari');
+		printReductions(pronomenals, 'prokonplementari');
 
-//		printReductions(consonantVoicings, 'sonoriđaŧion konsonanti finali');
+		printReductions(consonantVoicings, 'sonoriđaŧion konsonanti finali');
 
-//		printReductions(interrogatives, 'interogativi');
+		printReductions(interrogatives, 'interogativi');
 
-//		printReductions(substantives, 'sostantivi plurali');
+		printReductions(substantives, 'sostantivi plurali');
 
 		//dict: -er/PLANTS_AND_CRAFTS, -rol/PLANTS_AND_CRAFTS, -dor/PLANTS_AND_CRAFTS, -tor/PLANTS_AND_CRAFTS
-//		printReductions(plantsAndCrafts, 'piante e mistièri');
+		printReductions(plantsAndCrafts, 'piante e mistièri');
 	};
 
 	var generateTheme = function(verbs, infinitiveThemes, theme, originTheme, flags, k){
@@ -414,7 +414,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	var storeSuffix = function(logs, i, replaced, replacement, flags, constraint, parents){
 		if(!replaced)
 			replaced = 0;
-		replacement = addFlag(replacement, flags).replace(MARKER_FLAGS, '');
+		if(replacement.match(MARKER_FLAGS))
+			replacement = addFlag(replacement.replace(MARKER_FLAGS, ''), flags);
 		if(!constraint && replaced != 0)
 			constraint = replaced;
 
