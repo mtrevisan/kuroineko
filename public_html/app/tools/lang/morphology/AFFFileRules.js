@@ -324,8 +324,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	/** @private */
 	var printReductions = function(list, comment){
 		var re = new RegExp(escapeRegExp(MARKER_FLAGS)),
-			flag, substitution,
-			subst, form, constraint,
+			subst, flag, substitution,
+			form, constraint,
 			logs, line, i, m, red;
 		//expand suffixes
 		Object.keys(list).forEach(function(key){
@@ -338,24 +338,22 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 				});
 
 				flag = reduction.shift();
-				substitution = extractSimpleForm(reduction[0]);
+				substitution = extractSimpleForm(reduction[0]).replace(/^.+>/, '');
 
 				for(i = reduction.length - 1; i >= 0; i --){
 					m = reduction[i].match(/^(.+?)>(.+?)(?:\|(.+))?$/);
 					if(m){
-						subst = m[1];
 						form = m[2];
-						constraint = m[3] || subst;
+						constraint = m[3] || substitution;
 					}
 					else{
-						subst = substitution;
 						form = reduction[i];
-						constraint = subst;
+						constraint = substitution;
 					}
 
 					expandForm(form.replace(re, '')).forEach(function(form){
-						if(subst != form)
-							reduction.push(subst + '>' + form + '|' + constraint);
+						if(substitution != form)
+							reduction.push(substitution + '>' + form + '|' + constraint);
 					});
 
 					reduction.splice(i, 1);
@@ -374,13 +372,13 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		Object.keys(list).forEach(function(key){
 			list[key].forEach(function(reduction){
 				flag = reduction.shift();
-				substitution = extractSimpleForm(reduction[0]).replace(/^.+>/, '');
+				substitution = extractSimpleForm(reduction[0]);
 
 				logs = [];
 				reduction.forEach(function(el){
 					m = el.match(/^(.+?)>(.+?)(?:\|(.+))?$/);
 					if(m){
-						subst = (key == '0'? m[1]: substitution);
+						subst = m[1];
 						form = m[2];
 						constraint = m[3] || subst;
 					}
