@@ -16,70 +16,74 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	/** @constant */
 		PATTERN_FLAGS = new RegExp('(?:\\/([\\d,]+))?([' + MARKER_FLAGS.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + '])?(\\|.+)?$'),
 	/** @constant */
-		PATTERN_ALL = new RegExp('(?:(.+)>)?(.+?)?(?:\\/([\\d,]+))?([' + MARKER_FLAGS.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + '])?(?:\\|(.+))?$');
+		PATTERN_ALL = new RegExp('(?:(.+)>)?(.+?)?(?:\\/([\\d,]+))?([' + MARKER_FLAGS.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + '])?(?:\\|(.+))?$'),
+	/** @constant */
+		PATTERN_LEAVE_REPLACEMENT = /^.+>|\|.+$/,
+	/** @constant */
+		FLAG_SEPARATOR = ',';
 
 	/** @constant */
-	var PRONOMENAL_MARK = 200,
+//	var PRONOMENAL_MARK = 150,
+	var PRONOMENAL_MARK = 16,
 	/** @constant */
-		PRONOMENAL_MARK_RESERVED_0 = 201,
+		PRONOMENAL_MARK_RESERVED_0 = PRONOMENAL_MARK + 1,
 	/** @constant */
-		PRONOMENAL_IMPERATIVE_MARK = 202,
+		PRONOMENAL_IMPERATIVE_MARK = PRONOMENAL_MARK + 2,
 	/** @constant */
-		FINAL_CONSONANT_VOICING_MARK = 203,
+		FINAL_CONSONANT_VOICING_MARK = PRONOMENAL_MARK + 3,
 	/** @constant */
-		INTERROGATIVE_MARK_RESERVED_0 = 204,
+		INTERROGATIVE_MARK_RESERVED_0 = PRONOMENAL_MARK + 4,
 	/** @constant */
-		INTERROGATIVE_MARK_1S = 205,
+		INTERROGATIVE_MARK_1S = PRONOMENAL_MARK + 5,
 	/** @constant */
-		INTERROGATIVE_MARK_1P = 206,
+		INTERROGATIVE_MARK_1P = PRONOMENAL_MARK + 6,
 	/** @constant */
-		INTERROGATIVE_MARK_2S = 207,
+		INTERROGATIVE_MARK_2S = PRONOMENAL_MARK + 7,
 	/** @constant */
-		INTERROGATIVE_MARK_2P = 208,
+		INTERROGATIVE_MARK_2P = PRONOMENAL_MARK + 8,
 	/** @constant */
-		INTERROGATIVE_MARK_3 = 209,
+		INTERROGATIVE_MARK_3 = PRONOMENAL_MARK + 9,
 	/** @constant */
-		INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE = 210,
+		INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE = PRONOMENAL_MARK + 10,
 	/** @constant */
-		SUBSTANTIVES = 211,
+		SUBSTANTIVES = PRONOMENAL_MARK + 11,
 	/** @constant */
-		PLANTS_AND_CRAFTS = 212,
+		PLANTS_AND_CRAFTS = PRONOMENAL_MARK + 12,
 	/** @constant */
-		PLANTS_AND_CRAFTS_RESERVED_0 = 213;
+		PLANTS_AND_CRAFTS_RESERVED_0 = PRONOMENAL_MARK + 13;
+
+	var deriveAllFormsFromInfinitive = true;
+	var printFlagsAsNumber = true;
 
 	var reductions = {
 		0: [
 			//vèrbi e ajetivi de prima klase
-			[13, '[oaie]'],
-			[13, 'o>a/14|o'],
-			[13, '0>a/14|[^aieo]'],
+			[13, '[oaie]', 'o>a/14|o', '0>a/14|[^aieo]'],
 			//ajetivi de sekonda klase
-			[14, '[aie]'],
-			[14, 'a>e/15|a'],
+			[14, '[aie]', 'a>e/15|a'],
 			//ajetivi de terŧa klase
-			[15, '[ei]'],
-			[15, 'e>i|e']
+			[15, '[ei]', 'e>i|e']
 		]
 	};
 
 	var interrogatives = {
 		1: [
 			[INTERROGATIVE_MARK_RESERVED_0, '0>-(t)[ei]|n', '0>-n(t)[ei]|[^n]'],
-			[INTERROGATIVE_MARK_1S, '0>-(m)i', '0>-e/48'],
-			[INTERROGATIVE_MARK_1P, '0>-[ei]', '0>-e/48'],
+			[INTERROGATIVE_MARK_1S, '0>-(m)i', '0>-[ei]'],
+			[INTERROGATIVE_MARK_1P, '0>-[ei]', '0>-[ei]'],
 			[INTERROGATIVE_MARK_2S, '0>-(s)tu', '0>-to'],
 			[INTERROGATIVE_MARK_2P, '0>-[uo]'],
-			[INTERROGATIVE_MARK_3, '.>e-lo/13|[ai]', '0>-lo/13|[^ai]'],
+			[INTERROGATIVE_MARK_3, '.>e-l[oaie]|[ai]', '0>-l[oaie]|[^ai]'],
 			//kond. 3a: themeT4 + 'rí[ae]/' + INTERROGATIVE_MARK_3 > rise
-			[INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE, 'rave>rise-lo/13|rave']
+			[INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE, 'ave>ise-l[oaie]|rave']
 		]
 	};
 
 	var pronomenals = {
 		1: [
-			[PRONOMENAL_MARK, '0>-lo/13', '0>-me/' + PRONOMENAL_MARK_RESERVED_0, '0>-te/' + PRONOMENAL_MARK_RESERVED_0, '0>-ve/' + PRONOMENAL_MARK_RESERVED_0, '0>-se/' + PRONOMENAL_MARK_RESERVED_0, '0>-ge/' + PRONOMENAL_MARK_RESERVED_0, '0>-ne'],
-			[PRONOMENAL_MARK_RESERVED_0, '0>ne', '0>lo/13'],
-			[PRONOMENAL_IMPERATIVE_MARK, '0>-me', '0>-ne', '0>-te', '0>-ve', '0>-lo/13', '0>-ge', 'a>e-me|a', 'a>e-ne|a', 'a>e-te|a', 'a>e-ve|a', 'a>e-lo/13|a', 'a>e-ge|a']
+			[PRONOMENAL_MARK, '0>-l[oaie]', '0>-me/' + PRONOMENAL_MARK_RESERVED_0, '0>-te/' + PRONOMENAL_MARK_RESERVED_0, '0>-ve/' + PRONOMENAL_MARK_RESERVED_0, '0>-se/' + PRONOMENAL_MARK_RESERVED_0, '0>-ge/' + PRONOMENAL_MARK_RESERVED_0, '0>-ne'],
+			[PRONOMENAL_MARK_RESERVED_0, '0>ne', '0>l[oaie]'],
+			[PRONOMENAL_IMPERATIVE_MARK, '0>-me|[^a]', '0>-ne|[^a]', '0>-te|[^a]', '0>-ve|[^a]', '0>-l[oaie]|[^a]', '0>-ge|[^a]', 'a>e-me|a', 'a>e-ne|a', 'a>e-te|a', 'a>e-ve|a', 'a>e-l[oaie]|a', 'a>e-ge|a']
 		]
 	};
 
@@ -106,6 +110,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		]
 	};
 
+	//dict: pomèr/PLANTS_AND_CRAFTS
 	var plantsAndCrafts = {
 		1: [
 			[PLANTS_AND_CRAFTS,
@@ -115,7 +120,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 				'ol>òl/' + PLANTS_AND_CRAFTS_RESERVED_0 + '|rol',
 				'tor>dor/' + PLANTS_AND_CRAFTS_RESERVED_0 + '|[aeiou]tor',
 				'dor>tor/' + PLANTS_AND_CRAFTS_RESERVED_0 + '|[aeiou]dor'],
-			[PLANTS_AND_CRAFTS_RESERVED_0, '0>o/13']
+			[PLANTS_AND_CRAFTS_RESERVED_0, '0>o|ar', '0>i|ar', '0>[oaie]|[oò][lr]']
 		]
 	};
 
@@ -130,26 +135,43 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 			infinitiveThemes[verb.infinitive] = Themizer.generate(verb, dialect);
 		});
 
-		var k = 16;
-//		k = generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10], k);
-		k = generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7], k);
-//		k = generateTheme(verbs, infinitiveThemes, 4, 0, [11], k);
-//		k = generateTheme(verbs, infinitiveThemes, 5, 2, [], k);
-//		k = generateTheme(verbs, infinitiveThemes, 6, 2, [], k);
-//		k = generateTheme(verbs, infinitiveThemes, 7, 2, [], k);
-//		k = generateTheme(verbs, infinitiveThemes, 8, 0, [12], k);
-//		k = generateTheme(verbs, infinitiveThemes, 9, 0, [], k);
-//		k = generateTheme(verbs, infinitiveThemes, 10, 0, [], k);
-//		k = generateTheme(verbs, infinitiveThemes, 11, 4, [], k);
-//		k = generateTheme(verbs, infinitiveThemes, 12, 8, [], k);
+		if(!deriveAllFormsFromInfinitive){
+			//dict: -r/1
+			var k = 16;
+			k = generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10], k);
+			k = generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7], k);
+			k = generateTheme(verbs, infinitiveThemes, 4, 0, [11], k);
+			k = generateTheme(verbs, infinitiveThemes, 5, 2, [], k);
+			k = generateTheme(verbs, infinitiveThemes, 6, 2, [], k);
+			k = generateTheme(verbs, infinitiveThemes, 7, 2, [], k);
+			k = generateTheme(verbs, infinitiveThemes, 8, 0, [12], k);
+			k = generateTheme(verbs, infinitiveThemes, 9, 0, [], k);
+			k = generateTheme(verbs, infinitiveThemes, 10, 0, [], k);
+			k = generateTheme(verbs, infinitiveThemes, 11, 4, [], k);
+			k = generateTheme(verbs, infinitiveThemes, 12, 8, [], k);
+		}
+		else{
+			//dict: -r/1,2,4,5,6,7,8,9,10,11,12
+			generateTheme(verbs, infinitiveThemes, 1, 0);
+			generateTheme(verbs, infinitiveThemes, 2, 0);
+			generateTheme(verbs, infinitiveThemes, 4, 0);
+			generateTheme(verbs, infinitiveThemes, 5, 0);
+			generateTheme(verbs, infinitiveThemes, 6, 0);
+			generateTheme(verbs, infinitiveThemes, 7, 0);
+			generateTheme(verbs, infinitiveThemes, 8, 0);
+			generateTheme(verbs, infinitiveThemes, 9, 0);
+			generateTheme(verbs, infinitiveThemes, 10, 0);
+			generateTheme(verbs, infinitiveThemes, 11, 0);
+			generateTheme(verbs, infinitiveThemes, 12, 0);
+		}
 
 		printReductions(reductions, 'reduŧioni');
 
-//		printReductions(pronomenals, 'prokonplementari');
+		printReductions(pronomenals, 'prokonplementari');
 
-//		printReductions(consonantVoicings, 'sonoriđaŧion konsonanti finali');
+		printReductions(consonantVoicings, 'sonoriđaŧion konsonanti finali');
 
-//		printReductions(interrogatives, 'interogativi');
+		printReductions(interrogatives, 'interogativi');
 
 //		printReductions(substantives, 'sostantivi plurali');
 
@@ -268,9 +290,18 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 		constraintToInfinitives(paradigm, origins);
 
-		k = reduceSuffixes(paradigm, reductions, theme, k);
-
-		contractReductions(reductions, theme);
+		if(!deriveAllFormsFromInfinitive){
+			reductions[theme] = reductions[theme] || [];
+			k = reduceSuffixes(paradigm, reductions[theme], k);
+		}
+		else{
+			//expand forms
+			paradigm.forEach(function(sublist){
+				sublist.suffixes = mergeIdenticalTransformations(ArrayHelper.flatten(sublist.suffixes.map(function(suffix){
+					return expandForm(suffix);
+				})));
+			});
+		}
 
 		printParadigm(paradigm, flags, theme);
 
@@ -294,84 +325,64 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	};
 
 	/** @private */
-	var contractReductions = function(list, theme){
-		var parts = {},
-			j = 1,
-			i = 0;
-		list[theme].forEach(function(value){
-			var key = value[0];
-			if(key in parts){
-				if(parts[key][0][1].replace(/>.+$/, '') == value[1].replace(/>.+$/, ''))
-					parts['_' + (j ++)] = [value];
-				else
-					parts[key].push(value);
-			}
-			else{
-				parts[key] = [value];
-				i = Math.max(i, key);
-			}
-		});
-		list[theme] = Object.keys(parts).map(function(key){
-			parts[key] = ArrayHelper.unique(ArrayHelper.flatten(parts[key]));
-			if(key.indexOf('_') >= 0){
-				parts[key].shift();
-				parts[key].unshift(++ i);
-			}
-			return parts[key];
-		});
-	};
-
-	/** @private */
 	var printReductions = function(list, comment){
 		var re = new RegExp(escapeRegExp(MARKER_FLAGS)),
 			subst, flag, substitution,
 			form, constraint,
-			logs, line, i, m, red;
+			firstReduction, logs, line, i, m, red;
 		//expand suffixes
 		Object.keys(list).forEach(function(key){
-			list[key].forEach(function(reduction){
-				if(key == '0')
-					return;
-
-				reductions[0].forEach(function(red){
-					reduceSuffix(reduction, red);
-				});
-
-				flag = reduction.shift();
-				substitution = extractSimpleForm(reduction[0]).replace(/^.+>/, '');
-
-				for(i = reduction.length - 1; i >= 0; i --){
-					m = reduction[i].match(/^(.+?)>(.+?)(?:\|(.+))?$/);
-					if(m){
-						form = m[2];
-						constraint = m[3] || substitution;
-					}
-					else{
-						form = reduction[i];
-						constraint = substitution;
-					}
-
-					expandForm(form.replace(re, '')).forEach(function(form){
-						if(substitution != form)
-							reduction.push(substitution + '>' + form + '|' + constraint);
+			if(key != '0')
+				list[key].forEach(function(reduction){
+					reductions[0].forEach(function(red){
+						reduceSuffix(reduction, red);
 					});
 
-					reduction.splice(i, 1);
-				}
+					flag = reduction.shift();
 
-				if(reduction.length > 1){
-					red = reduceFlags(reduction);
-					reduction.length = 0;
-					reduction.push.apply(reduction, red);
-				}
+					for(i = reduction.length - 1; i >= 0; i --){
+						form = reduction[i];
+						substitution = extractSimpleForm(form.replace(PATTERN_LEAVE_REPLACEMENT, ''));
+						constraint = substitution;
 
-				reduction.unshift(flag);
-			});
+						m = form.match(/^(.+?)>(.+?)(?:\|(.+))?$/);
+						if(m){
+							substitution = m[1];
+							form = m[2];
+							constraint = m[3] || substitution;
+						}
+
+						expandForm(form.replace(re, '')).forEach(function(form){
+							if(substitution != form)
+								reduction.push(substitution + '>' + form + '|' + constraint);
+						});
+
+						reduction.splice(i, 1);
+					}
+
+					if(reduction.length > 1){
+						red = reduceFlags(reduction);
+						setElements(reduction, red);
+					}
+
+					reduction.unshift(flag);
+				});
+		});
+		Object.keys(list).forEach(function(key){
+			if(key != '0')
+				list[key] = list[key].map(function(sublist){
+					return mergeIdenticalTransformations(sublist);
+				});
 		});
 
 		Object.keys(list).forEach(function(key){
 			list[key].forEach(function(reduction){
 				flag = reduction.shift();
+
+				//remove first reduction
+				if(key == '0')
+					firstReduction = reduction.shift();
+
 				substitution = extractSimpleForm(reduction[0]);
 
 				logs = [];
@@ -390,14 +401,16 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 					expandForm(form.replace(re, '')).forEach(function(form){
 						if(subst != form){
-							line = 'SFX ' + flag + ' ' + subst + ' ' + form + (constraint != 0? ' ' + constraint: '');
+							line = getSuffixLine(flag, subst, form, constraint);
 							if(logs.indexOf(line) < 0)
 								logs.push(line);
 						}
-//						else
-//							throw 'subst == form, ' + subst + ' == ' + form;
 					});
 				});
+
+				//restore first reduction
+				if(key == '0')
+					reduction.unshift(firstReduction);
 
 				reduction.unshift(flag);
 
@@ -411,21 +424,37 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	var storeSuffix = function(logs, i, replaced, replacement, flags, constraint, parents){
 		if(!replaced)
 			replaced = 0;
-		if(replacement.match(MARKER_FLAGS))
+		if(replacement.indexOf(MARKER_FLAGS) >= 0)
 			replacement = addFlag(replacement.replace(MARKER_FLAGS, ''), flags);
 		if(!constraint && replaced != 0)
 			constraint = replaced;
 
-		//FIXME
-//		var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 && constraint != ''? ' ' + constraint: '') + (parents? ' # ' + parents.sort().join(','): '');
-var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 && constraint != ''? ' ' + constraint: '');
+		var line = getSuffixLine(i, replaced, replacement, constraint, parents);
 		if(logs.indexOf(line) < 0)
 			logs.push(line);
 	};
 
 	/** @private */
-	var printSuffixes = function(logs, i, comment){
-		console.log('SFX ' + i + ' Y ' + logs.length + (comment != undefined? ' # ' + comment: ''));
+	var getSuffixLine = function(flag, replaced, replacement, constraint, parents){
+		if(!printFlagsAsNumber){
+			flag = String.fromCharCode(flag + 32);
+
+			var m = replacement.match(/^(.+\/)(.+)$/);
+			if(m)
+				replacement = m[1] + m[2].split(FLAG_SEPARATOR).map(function(rep){ return String.fromCharCode(Number(rep) + 32); }).join('');
+		}
+
+		//FIXME
+//		return 'SFX ' + flag + ' ' + replaced + ' ' + replacement + (constraint != 0 && constraint != ''? ' ' + constraint: '') + (parents? ' # ' + parents.sort().join(FLAG_SEPARATOR): '');
+		return 'SFX ' + flag + ' ' + replaced + ' ' + replacement + (constraint != 0 && constraint != ''? ' ' + constraint: '');
+	};
+
+	/** @private */
+	var printSuffixes = function(logs, flag, comment){
+		if(!printFlagsAsNumber)
+			flag = String.fromCharCode(flag + 32);
+
+		console.log('SFX ' + flag + ' Y ' + logs.length + (comment != undefined? ' # ' + comment: ''));
 		logs.sort().forEach(function(log){
 			console.log(log);
 		});
@@ -433,7 +462,7 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 &&
 
 	/** @private */
 	var composeFlag = function(){
-		return '/' + Array.prototype.slice.call(arguments).map(function(flag){ return flag.substr(1); }).join(',');
+		return '/' + Array.prototype.slice.call(arguments).map(function(flag){ return flag.substr(1); }).join(FLAG_SEPARATOR);
 	};
 
 	/** @private */
@@ -441,7 +470,7 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 &&
 		if(!flags)
 			return replacement;
 
-		var mFlag = extractFlags(Array.isArray(flags)? '/' + flags.join(','): '/' + flags),
+		var mFlag = extractFlags(Array.isArray(flags)? '/' + flags.join(FLAG_SEPARATOR): '/' + flags),
 			mRep = extractFlags(replacement);
 
 		flags = uniteFlags(mRep, mFlag);
@@ -452,7 +481,7 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 &&
 	/** @private */
 	var extractFlags = function(flags){
 		var m = flags.match(PATTERN_FLAGS);
-		m[1] = (m[1]? m[1].split(','): []);
+		m[1] = (m[1]? m[1].split(FLAG_SEPARATOR): []);
 		m[2] = (m[2]? m[2].split(''): []);
 		return {forms: m[1], markers: m[2]};
 	};
@@ -467,7 +496,7 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 &&
 
 	/** @private */
 	var printFlags = function(flags){
-		return (flags.forms.length? '/' + flags.forms.join(','): '') + flags.markers.join('');
+		return (flags.forms.length? '/' + flags.forms.join(FLAG_SEPARATOR): '') + flags.markers.join('');
 	};
 
 	/** @private */
@@ -530,39 +559,58 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 &&
 	};
 
 	/** @private */
-	var reduceSuffixes = function(list, reductions, theme, k){
-		var reds = {};
-		if(!reductions[theme]){
-			reds = getReductions(list, k);
-			reductions[theme] = reds.reductions;
-		}
+	var reduceSuffixes = function(list, reductions, k){
+		if(!reductions.length)
+			setElements(reductions, getReductions(list, k));
 
 		var tmp = [];
 		list.forEach(function(sublist){
 			tmp.push({matcher: sublist.matcher, theme: sublist.theme, origins: sublist.origins.slice(0), suffixes: sublist.suffixes.slice(0)});
 		});
-		tryReduceSuffixes(tmp, reductions, theme);
+		tryReduceSuffixes(tmp, reductions);
 
-		var len = reductions[theme].length;
-		reductions[theme] = reductions[theme].filter(function(reduction){
-			return (reduction.some(function(red){ return String(red).match(/[\(\[]/); }) || reduction.used > 1);
-		});
-		if(reductions[theme].length < len)
-			tryReduceSuffixes(list, reductions, theme);
-		else{
-			list.length = 0;
-			list.push.apply(list, tmp);
+		var len = reductions.length,
+			substitution, parts;
+		setElements(reductions, reductions.filter(function(reduction){
+			return (reduction.used > 1 || reduction.used == 1 && (reduction.length > 1 || reduction.some(function(red){ return String(red).match(/[\(\[]/); })));
+		}));
+
+		if(reductions.length < len){
+			renumberReductions(reductions, k);
+
+			tryReduceSuffixes(list, reductions);
+
+			setElements(reductions, reductions.map(function(value){
+				substitution = extractSimpleForm(value[1].replace(PATTERN_LEAVE_REPLACEMENT, ''));
+				return value.map(function(el){
+					if(Number.isFinite(el))
+						return el;
+
+					parts = extractCommonPartsFromStart(substitution, el.replace(/^.+>/, ''));
+					return parts.a + '>' + parts.b + '|' + substitution;
+				});
+			}));
 		}
+		else
+			setElements(list, tmp);
 
-		return (reds? reds.index: reductions[theme][reductions[theme].length - 1][0] + 1);
+		contractReductions(reductions);
+
+		return reductions[reductions.length - 1][0] + 1;
 	};
 
 	/** @private */
-	var tryReduceSuffixes = function(list, reductions, theme){
+	var setElements = function(list, newList){
+		list.length = 0;
+		list.push.apply(list, newList);
+	};
+
+	/** @private */
+	var tryReduceSuffixes = function(list, reductions){
 		list.forEach(function(sublist){
 			sublist.suffixes = reduceFlags(sublist.suffixes);
 
-			reductions[theme].forEach(function(reduction){
+			reductions.forEach(function(reduction){
 				reduceSuffix(sublist.suffixes, reduction);
 			});
 		});
@@ -571,8 +619,8 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 &&
 	/** @private */
 	var reduceSuffix = function(sublist, reduction){
 		var flag = reduction.shift(),
-			reductionRE = reduction.map(function(red){ return new RegExp((red.indexOf('>') >= 0? '^': '') + escapeRegExp(red) + '$'); }),
-			substitution, temporaryList;
+			reductionRE = reduction.map(function(red){ return new RegExp((red.indexOf('>') >= 0? '^': '') + escapeRegExp(red.replace(/\|.+$/, '')) + '[\\/\\d,' + escapeRegExp(MARKER_FLAGS) + ']*$'); }),
+			substitution, temporaryList, m;
 
 		//reduce suffixes
 		if(reductionRE.map(function(re){ return sublist.some(function(suffix){ return String(suffix).match(re); }); }).every(function(el){ return el; })){
@@ -581,9 +629,8 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 &&
 			temporaryList = (sublist.used? sublist: sublist.slice(0));
 			reductionRE.forEach(function(re){
 				temporaryList = temporaryList.map(function(suffix){
-					return (String(suffix).match(re)?
-						addFlag(unmarkDefaultStress(suffix.replace(re, substitution)), flag):
-						suffix);
+					m = String(suffix).match(re);
+					return (m? addFlag(unmarkDefaultStress(suffix.replace(re, substitution)) + (m[1]? m[1]: ''), flag): suffix);
 				});
 			});
 
@@ -594,8 +641,7 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 &&
 					reduction.used ++;
 				}
 
-				sublist.length = 0;
-				sublist.push.apply(sublist, temporaryList);
+				setElements(sublist, temporaryList);
 			}
 		}
 
@@ -609,21 +655,46 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 &&
 	 */
 	var mergeIdenticalTransformations = function(sublist){
 		var flag = sublist.shift();
-		if(Number(flag) !== flag){
+		if(!Number.isFinite(flag)){
 			sublist.unshift(flag);
 			flag = null;
 		}
 
 		var parts = ArrayHelper.partition(ArrayHelper.unique(sublist), function(el){ return el.replace(PATTERN_FLAGS, ''); }),
-			flags;
+			flags, constraint;
 		sublist = Object.keys(parts).map(function(part){
 			flags = parts[part].map(function(el){ return extractFlags(el); }).reduce(uniteFlags, {forms: [], markers: []});
-			return part + printFlags(flags);
+			constraint = extractCommonPartFromList(parts[part].map(function(el){ return (el.indexOf('|') >= 0? el.replace(/^.+\|/, ''): ''); }));
+			return part + printFlags(flags) + (constraint? '|' + constraint: '');
 		});
 
 		if(flag)
 			sublist.unshift(flag);
 		return sublist;
+	};
+
+	/** @private */
+	var renumberReductions = function(list, k){
+		var subst, substPrev;
+		list.forEach(function(value, idx){
+			value[0] = k;
+
+			subst = extractSimpleForm(value[1].replace(PATTERN_LEAVE_REPLACEMENT, ''));
+			if(!substPrev || subst == substPrev || subst.length != substPrev.length){
+				if(substPrev)
+					value[0] = ++ k;
+
+				substPrev = subst;
+			}
+		});
+	};
+
+	/** @private */
+	var contractReductions = function(list){
+		var parts = ArrayHelper.partition(list, function(sublist){ return sublist[0]; });
+		setElements(list, Object.keys(parts).map(function(key){
+			return ArrayHelper.unique(ArrayHelper.flatten(parts[key]));
+		}));
 	};
 
 	/** @private */
@@ -650,7 +721,7 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 &&
 			filtered = [],
 			line;
 		Object.keys(parts).forEach(function(key){
-			line = parts[key].map(function(el){ return el.replace(/^.+\|/, ''); }).sort().join(',');
+			line = parts[key].map(function(el){ return el.replace(/^.+\|/, ''); }).sort().join(FLAG_SEPARATOR);
 			if(reversed[line])
 				reversed[line].push(key);
 			else
@@ -660,7 +731,7 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 &&
 		Object.keys(reversed).forEach(function(list1){
 			Object.keys(reversed).forEach(function(list2){
 				if(list1 != list2 && reversed[list1][0].replace(/>.+$/, '') == reversed[list2][0].replace(/>.+$/, '')){
-					var list = ArrayHelper.intersection(list1.split(','), list2.split(','));
+					var list = ArrayHelper.intersection(list1.split(FLAG_SEPARATOR), list2.split(FLAG_SEPARATOR));
 					if(list.length){
 						var value = ArrayHelper.unique(reversed[list1].concat(reversed[list2]));
 						if(!Object.keys(reversed).some(function(el){ return ArrayHelper.equals(reversed[el], value); }))
@@ -674,24 +745,16 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 &&
 			if(list.length > 1 || list.some(function(el){ return el.match(/[\(\[]/); }))
 				filtered.push(list);
 		});
-		var size;
-		index --;
-		filtered.sort(function(a, b){
-			var re = /(.+?)>/,
-				res = (b[0].match(re)[1].length - a[0].match(re)[1].length);
-			return (res? res: b.length - a.length);
-		}).map(function(el, idx){
-			var s = el[0].replace(/>.+$/, '').length;
-			if(s != size || idx > 0 && filtered[idx - 1][1].replace(/>.+$/, '') == el[0].replace(/>.+$/, '')){
-				size = s;
-				el.unshift(++ index);
-			}
-			else
-				el.unshift(index);
-
-			return el;
-		});
-		return {index: index + 1, reductions: filtered};
+		return filtered
+			.sort(function(a, b){
+				var re = /(.+?)>/,
+					res = (b[0].match(re)[1].length - a[0].match(re)[1].length);
+				return (res? res: b.length - a.length);
+			})
+			.map(function(el){
+				el.unshift(index ++);
+				return el;
+			});
 	};
 
 	/** @private */
@@ -830,7 +893,7 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 &&
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			var pronomenalMark = (!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK + ',': '');
+			var pronomenalMark = (!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK + FLAG_SEPARATOR: '');
 
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT1 + 'r') + '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK + MARKER_FLAGS);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT1 + 're'));
@@ -909,7 +972,7 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 &&
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			var pronomenalMark = (!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK + ',': '');
+			var pronomenalMark = (!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK + FLAG_SEPARATOR: '');
 
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'ndo') + '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK + MARKER_FLAGS);
 			if(verb.irregularity.eser)
@@ -966,7 +1029,7 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 &&
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rén').replace(/en$/, '(is)en(se)') + '/' + INTERROGATIVE_MARK_1P);
 			//NOTE: i únegi pronòmi interogativi enklítegi ke se dopara i xe kueli de 3a pars
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ràe') + '/' + INTERROGATIVE_MARK_3);
-			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ràve') + '/' + INTERROGATIVE_MARK_3 + ',' + INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ràve') + '/' + INTERROGATIVE_MARK_3 + FLAG_SEPARATOR + INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE);
 		}
 	};
 
@@ -1136,7 +1199,7 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 &&
 				origins.push(origin);
 
 			if(verb.conjugation == 3){
-				var pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK + ',': '');
+				var pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK + FLAG_SEPARATOR: '');
 				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT7 + 'ndo') + '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK);
 			}
 		}
@@ -1339,7 +1402,7 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 &&
 				origins.push(origin);
 
 			expandForm(themes.themeT9).forEach(function(t){
-				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t) + '/' + [PRONOMENAL_MARK, PRONOMENAL_IMPERATIVE_MARK].join(',') + MARKER_FLAGS);
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t) + '/' + [PRONOMENAL_MARK, PRONOMENAL_IMPERATIVE_MARK].join(FLAG_SEPARATOR) + MARKER_FLAGS);
 			});
 		}
 	};
@@ -1486,7 +1549,7 @@ var line = 'SFX ' + i + ' ' + replaced + ' ' + replacement + (constraint != 0 &&
 	/** @private */
 	var insert = function(paradigm, theme, infinitive, origin, suffix){
 		var i = ArrayHelper.findIndex(paradigm, function(el){ return (el.infinitive == infinitive); }),
-			parts = extractCommonPartsFromStart(origin, suffix, true),
+			parts = extractCommonPartsFromStart(origin, suffix),
 			data = parts.a + '>' + parts.b,
 			re, j, flags;
 		if(i < 0)
