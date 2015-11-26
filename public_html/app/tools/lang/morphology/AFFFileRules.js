@@ -20,62 +20,82 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	/** @constant */
 		PATTERN_LEAVE_REPLACEMENT = /^.+>|\|.+$/,
 	/** @constant */
-		FLAG_SEPARATOR = ',';
-
+		FLAG_SEPARATOR = ',',
 	/** @constant */
-//	var PRONOMENAL_MARK = 150,
-	var PRONOMENAL_MARK = 16,
-	/** @constant */
-		PRONOMENAL_MARK_RESERVED_0 = PRONOMENAL_MARK + 1,
-	/** @constant */
-		PRONOMENAL_IMPERATIVE_MARK = PRONOMENAL_MARK + 2,
-	/** @constant */
-		FINAL_CONSONANT_VOICING_MARK = PRONOMENAL_MARK + 3,
-	/** @constant */
-		INTERROGATIVE_MARK_RESERVED_0 = PRONOMENAL_MARK + 4,
-	/** @constant */
-		INTERROGATIVE_MARK_1S = PRONOMENAL_MARK + 5,
-	/** @constant */
-		INTERROGATIVE_MARK_1P = PRONOMENAL_MARK + 6,
-	/** @constant */
-		INTERROGATIVE_MARK_2S = PRONOMENAL_MARK + 7,
-	/** @constant */
-		INTERROGATIVE_MARK_2P = PRONOMENAL_MARK + 8,
-	/** @constant */
-		INTERROGATIVE_MARK_3 = PRONOMENAL_MARK + 9,
-	/** @constant */
-		INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE = PRONOMENAL_MARK + 10,
-	/** @constant */
-		SUBSTANTIVES = PRONOMENAL_MARK + 11,
-	/** @constant */
-		PLANTS_AND_CRAFTS = PRONOMENAL_MARK + 12,
-	/** @constant */
-		PLANTS_AND_CRAFTS_RESERVED_0 = PRONOMENAL_MARK + 13;
+		FLAG_START = 'A';
 
 	var deriveAllFormsFromInfinitive = true;
-	var printFlagsAsNumber = true;
+	var printFlagsAsNumber = false;
+
+	/** @constant */
+//	var REDUCTION_RESERVED_0 = 150,
+	var REDUCTION_RESERVED_0 = 2,
+	/** @constant */
+		REDUCTION_RESERVED_1 = REDUCTION_RESERVED_0 + 1,
+	/** @constant */
+		REDUCTION_RESERVED_2 = REDUCTION_RESERVED_0 + 2,
+	/** @constant */
+		PRONOMENAL_MARK = REDUCTION_RESERVED_0 + 3,
+	/** @constant */
+		PRONOMENAL_MARK_RESERVED_0 = REDUCTION_RESERVED_0 + 4,
+	/** @constant */
+		PRONOMENAL_IMPERATIVE_MARK = REDUCTION_RESERVED_0 + 5,
+	/** @constant */
+		FINAL_CONSONANT_VOICING_MARK = REDUCTION_RESERVED_0 + 6,
+	/** @constant */
+		INTERROGATIVE_MARK_1S = REDUCTION_RESERVED_0 + 7,
+	/** @constant */
+		INTERROGATIVE_MARK_1S_2 = REDUCTION_RESERVED_0 + 8,
+	/** @constant */
+		INTERROGATIVE_MARK_1P = REDUCTION_RESERVED_0 + 9,
+	/** @constant */
+		INTERROGATIVE_MARK_1P_2 = REDUCTION_RESERVED_0 + 10,
+	/** @constant */
+		INTERROGATIVE_MARK_2S = REDUCTION_RESERVED_0 + 11,
+	/** @constant */
+		INTERROGATIVE_MARK_2S_2 = REDUCTION_RESERVED_0 + 12,
+	/** @constant */
+		INTERROGATIVE_MARK_2P = REDUCTION_RESERVED_0 + 13,
+	/** @constant */
+		INTERROGATIVE_MARK_2P_2 = REDUCTION_RESERVED_0 + 14,
+	/** @constant */
+		INTERROGATIVE_MARK_3 = REDUCTION_RESERVED_0 + 15,
+	/** @constant */
+		INTERROGATIVE_MARK_3_2 = REDUCTION_RESERVED_0 + 16,
+	/** @constant */
+		INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE = REDUCTION_RESERVED_0 + 17,
+	/** @constant */
+		SUBSTANTIVES = REDUCTION_RESERVED_0 + 18,
+	/** @constant */
+		PLANTS_AND_CRAFTS = REDUCTION_RESERVED_0 + 19,
+	/** @constant */
+		PLANTS_AND_CRAFTS_RESERVED_0 = REDUCTION_RESERVED_0 + 20;
 
 	var reductions = {
 		0: [
 			//vèrbi e ajetivi de prima klase
-			[13, '[oaie]', 'o>a/14|o', '0>a/14|[^aieo]'],
+			[REDUCTION_RESERVED_0, '[oaie]', 'o>a/' + REDUCTION_RESERVED_1 + '|o', '0>a/' + REDUCTION_RESERVED_1 + '|[^aieo]'],
 			//ajetivi de sekonda klase
-			[14, '[aie]', 'a>e/15|a'],
+			[REDUCTION_RESERVED_1, '[aie]', 'a>e/' + REDUCTION_RESERVED_2 + '|a'],
 			//ajetivi de terŧa klase
-			[15, '[ei]', 'e>i|e']
+			[REDUCTION_RESERVED_2, '[ei]', 'e>i|e']
 		]
 	};
 
 	var interrogatives = {
 		1: [
-			[INTERROGATIVE_MARK_RESERVED_0, '0>-(t)[ei]|n', '0>-n(t)[ei]|[^n]'],
-			[INTERROGATIVE_MARK_1S, '0>-(m)i', '0>-[ei]'],
-			[INTERROGATIVE_MARK_1P, '0>-[ei]', '0>-[ei]'],
-			[INTERROGATIVE_MARK_2S, '0>-(s)tu', '0>-to'],
+			[INTERROGATIVE_MARK_1S, '0>-mi', '0>-[ei]', '0>-(t)[ei]|n', '0>-n(t)[ei]|[^n]'],
+			[INTERROGATIVE_MARK_1S_2, 'i>mi', 'i>e', 'i>(t)[ei]|ni', 'i>n(t)[ei]|[^n]i'],
+			[INTERROGATIVE_MARK_1P, '0>-[ei]', '0>-(t)[ei]|n', '0>-n(t)[ei]|[^n]'],
+			[INTERROGATIVE_MARK_1P_2, 'i>e', 'i>(t)[ei]|ni', 'i>n(t)[ei]|[^n]i'],
+			[INTERROGATIVE_MARK_2S, '0>-t[uo]', '0>-stu'],
+			[INTERROGATIVE_MARK_2S_2, 'u>o', 'tu>-stu'],
 			[INTERROGATIVE_MARK_2P, '0>-[uo]'],
+			[INTERROGATIVE_MARK_2P_2, 'u>o'],
 			[INTERROGATIVE_MARK_3, '.>e-l[oaie]|[ai]', '0>-l[oaie]|[^ai]'],
-			//kond. 3a: themeT4 + 'rí[ae]/' + INTERROGATIVE_MARK_3 > rise
-			[INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE, 'ave>ise-l[oaie]|rave']
+			[INTERROGATIVE_MARK_3_2, 'o>[aie]'],
+			//kond. 3a: themeT4 + 'rí[ae]/' + INTERROGATIVE_MARK_3 > 'rise-l[oaie]'
+			[INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE, 'ave>ise-l[oaie]|rave', 'ave>ísel[oaie]|rave']
 		]
 	};
 
@@ -130,7 +150,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	 */
 	var generate = function(verbs){
 		var dialect = new Dialect(),
-			infinitiveThemes = {};
+			infinitiveThemes = {},
+			paradigm;
 		verbs.forEach(function(verb){
 			infinitiveThemes[verb.infinitive] = Themizer.generate(verb, dialect);
 		});
@@ -151,18 +172,50 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 			k = generateTheme(verbs, infinitiveThemes, 12, 8, [], k);
 		}
 		else{
-			//dict: -r/1,2,4,5,6,7,8,9,10,11,12
-			generateTheme(verbs, infinitiveThemes, 1, 0);
-			generateTheme(verbs, infinitiveThemes, 2, 0);
-			generateTheme(verbs, infinitiveThemes, 4, 0);
-			generateTheme(verbs, infinitiveThemes, 5, 0);
-			generateTheme(verbs, infinitiveThemes, 6, 0);
-			generateTheme(verbs, infinitiveThemes, 7, 0);
-			generateTheme(verbs, infinitiveThemes, 8, 0);
-			generateTheme(verbs, infinitiveThemes, 9, 0);
-			generateTheme(verbs, infinitiveThemes, 10, 0);
-			generateTheme(verbs, infinitiveThemes, 11, 0);
-			generateTheme(verbs, infinitiveThemes, 12, 0);
+			//dict: -r/A
+			paradigm = [];
+			Array.prototype.push.apply(paradigm, generateTheme(verbs, infinitiveThemes, 1, 0));
+			Array.prototype.push.apply(paradigm, generateTheme(verbs, infinitiveThemes, 2, 0));
+			Array.prototype.push.apply(paradigm, generateTheme(verbs, infinitiveThemes, 4, 0));
+			Array.prototype.push.apply(paradigm, generateTheme(verbs, infinitiveThemes, 5, 0));
+			Array.prototype.push.apply(paradigm, generateTheme(verbs, infinitiveThemes, 6, 0));
+			Array.prototype.push.apply(paradigm, generateTheme(verbs, infinitiveThemes, 7, 0));
+			Array.prototype.push.apply(paradigm, generateTheme(verbs, infinitiveThemes, 8, 0));
+			Array.prototype.push.apply(paradigm, generateTheme(verbs, infinitiveThemes, 9, 0));
+			Array.prototype.push.apply(paradigm, generateTheme(verbs, infinitiveThemes, 10, 0));
+			Array.prototype.push.apply(paradigm, generateTheme(verbs, infinitiveThemes, 11, 0));
+			Array.prototype.push.apply(paradigm, generateTheme(verbs, infinitiveThemes, 12, 0));
+
+			//expand forms
+			paradigm.forEach(function(sublist){
+				sublist.suffixes = mergeIdenticalTransformations(ArrayHelper.flatten(sublist.suffixes.map(function(suffix){
+					return expandForm(suffix);
+				})));
+			});
+
+			var re = /\/[\d,]+@?/,
+				i, j, n, m, par, form, par_n;
+			for(i = paradigm.length - 1; i >= 0; i --){
+				par = paradigm[i];
+				for(j = par.suffixes.length - 1; j >= 0; j --){
+					form = par.suffixes[j].replace(re, '');
+
+					for(n = i - 1; n >= 0; n --){
+						par_n = paradigm[n];
+						if(ArrayHelper.equals(par.origins, par_n.origins))
+							for(m = par_n.suffixes.length - 1; m >= 0; m --){
+								if(par.suffixes[j] == par_n.suffixes[m])
+									par_n.suffixes.splice(m, 1);
+								else if(form == par_n.suffixes[m].replace(re, '')){
+									par.suffixes[j] = par.suffixes[j].replace(PATTERN_FLAGS, '') + printFlags(uniteFlags(extractFlags(par.suffixes[j]), extractFlags(par_n.suffixes[m])));
+									par_n.suffixes.splice(m, 1);
+								}
+							}
+					}
+				}
+			}
+
+			printParadigm(paradigm, undefined, 1);
 		}
 
 		printReductions(reductions, 'reduŧioni');
@@ -286,26 +339,19 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 			}
 		});
 
-		paradigm = compactEqualSuffixes(paradigm);
+		compactEqualSuffixes(paradigm);
 
 		constraintToInfinitives(paradigm, origins);
 
 		if(!deriveAllFormsFromInfinitive){
 			reductions[theme] = reductions[theme] || [];
 			k = reduceSuffixes(paradigm, reductions[theme], k);
-		}
-		else{
-			//expand forms
-			paradigm.forEach(function(sublist){
-				sublist.suffixes = mergeIdenticalTransformations(ArrayHelper.flatten(sublist.suffixes.map(function(suffix){
-					return expandForm(suffix);
-				})));
-			});
-		}
 
-		printParadigm(paradigm, flags, theme);
+			printParadigm(paradigm, flags, theme);
 
-		return k;
+			return k;
+		}
+		return paradigm;
 	};
 
 
@@ -316,12 +362,16 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		list.forEach(function(el){
 			el.suffixes.forEach(function(suffix){
 				m = suffix.match(/^(.*)>(.*)$/);
-				storeSuffix(logs, theme, m[1], m[2], flags, el.matcher, el.origins);
+				storeSuffix(logs, (printFlagsAsNumber? theme: 1), m[1], m[2], flags, el.matcher, el.origins);
 			});
 		});
 
-		if(logs.length)
-			printSuffixes(logs, theme, 'vèrbi: tèma T' + theme);
+		if(logs.length){
+			if(printFlagsAsNumber)
+				printSuffixes(logs, theme, 'vèrbi: tèma T' + theme);
+			else
+				printSuffixes(logs, 1, 'vèrbi');
+		}
 	};
 
 	/** @private */
@@ -437,11 +487,12 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	/** @private */
 	var getSuffixLine = function(flag, replaced, replacement, constraint, parents){
 		if(!printFlagsAsNumber){
-			flag = String.fromCharCode(flag + 32);
+			var startChar = FLAG_START.charCodeAt(0) - 1;
+			flag = String.fromCharCode(flag + startChar);
 
 			var m = replacement.match(/^(.+\/)(.+)$/);
 			if(m)
-				replacement = m[1] + m[2].split(FLAG_SEPARATOR).map(function(rep){ return String.fromCharCode(Number(rep) + 32); }).join('');
+				replacement = m[1] + m[2].split(FLAG_SEPARATOR).map(function(rep){ return String.fromCharCode(Number(rep) + startChar); }).join('');
 		}
 
 		//FIXME
@@ -452,7 +503,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 	/** @private */
 	var printSuffixes = function(logs, flag, comment){
 		if(!printFlagsAsNumber)
-			flag = String.fromCharCode(flag + 32);
+			flag = String.fromCharCode(flag + FLAG_START.charCodeAt(0) - 1);
 
 		console.log('SFX ' + flag + ' Y ' + logs.length + (comment != undefined? ' # ' + comment: ''));
 		logs.sort().forEach(function(log){
@@ -544,11 +595,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 					list.splice(j, 1);
 					i --;
 				}
-			list.splice(i, 1);
 
 			compacted.push(data);
 		}
-		return compacted;
+		setElements(list, compacted);
 	};
 
 	/** @private */
@@ -913,16 +963,26 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 			var tmp = (verb.irregularity.eser? 'r': 'v');
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + tmp + 'o').replace(/o$/, '[oae]') + '/' + INTERROGATIVE_MARK_1S);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + tmp + 'oi').replace(/oi$/, '[oae]i') + '/' + INTERROGATIVE_MARK_1S_2);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + tmp + 'i') + '/' + INTERROGATIVE_MARK_2S);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + tmp + 'itu') + '/' + INTERROGATIVE_MARK_2S_2);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + tmp + 'a').replace(/a$/, '[ai]') + '/' + INTERROGATIVE_MARK_2P);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + tmp + 'au') + '/' + INTERROGATIVE_MARK_2P_2);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + tmp + 'a') + '/' + INTERROGATIVE_MARK_3);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + tmp + 'elo') + '/' + INTERROGATIVE_MARK_3_2);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + tmp + 'imo') + '/' + INTERROGATIVE_MARK_1P);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + tmp + 'imoi') + '/' + INTERROGATIVE_MARK_1P_2);
 			if(!verb.irregularity.eser){
 				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'o').replace(/o$/, '[oae]') + '/' + INTERROGATIVE_MARK_1S);
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'oi').replace(/oi$/, '[oae]i') + '/' + INTERROGATIVE_MARK_1S_2);
 				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'i') + '/' + INTERROGATIVE_MARK_2S);
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'itu') + '/' + INTERROGATIVE_MARK_2S_2);
 				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'a').replace(/a$/, '[ai]') + '/' + INTERROGATIVE_MARK_2P);
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'au') + '/' + INTERROGATIVE_MARK_2P_2);
 				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'a') + '/' + INTERROGATIVE_MARK_3);
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'elo') + '/' + INTERROGATIVE_MARK_3_2);
 				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'imo') + '/' + INTERROGATIVE_MARK_1P);
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT2 + 'imoi') + '/' + INTERROGATIVE_MARK_1P_2);
 			}
 		}
 	};
@@ -994,16 +1054,24 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 				origins.push(origin);
 
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rà') + '/' + INTERROGATIVE_MARK_1S + MARKER_FLAGS);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rài') + '/' + INTERROGATIVE_MARK_1S_2);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rè').replace(/è$/, '[èò]') + '/' + INTERROGATIVE_MARK_1S);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rèi').replace(/èi$/, '[èò]i') + '/' + INTERROGATIVE_MARK_1S_2);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rà') + '/' + INTERROGATIVE_MARK_2S);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ràtu') + '/' + INTERROGATIVE_MARK_2S_2);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rà') + '/' + INTERROGATIVE_MARK_3);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ràlo') + '/' + INTERROGATIVE_MARK_3_2);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ré') + '/' + INTERROGATIVE_MARK_2P);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'réu') + '/' + INTERROGATIVE_MARK_2P_2);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rémo') + '/' + INTERROGATIVE_MARK_1P);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rémoi') + '/' + INTERROGATIVE_MARK_1P_2);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rón') + '/' + INTERROGATIVE_MARK_1P);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rén') + '/' + INTERROGATIVE_MARK_1P);
 			if(verb.conjugation == 2){
 				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rí') + '/' + INTERROGATIVE_MARK_2P);
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ríu') + '/' + INTERROGATIVE_MARK_2P_2);
 				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rímo') + '/' + INTERROGATIVE_MARK_1P);
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rímoi') + '/' + INTERROGATIVE_MARK_1P_2);
 			}
 		}
 	};
@@ -1020,11 +1088,17 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 				origins.push(origin);
 
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ría') + '/' + INTERROGATIVE_MARK_2S);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ríatu') + '/' + INTERROGATIVE_MARK_2S_2);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ría').replace(/a$/, '[ae]') + '/' + INTERROGATIVE_MARK_1S);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ríai').replace(/ai$/, '[ae]i') + '/' + INTERROGATIVE_MARK_1S_2);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ría').replace(/a$/, '[ae]') + '/' + INTERROGATIVE_MARK_3);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'ríelo') + '/' + INTERROGATIVE_MARK_3_2);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rési') + '/' + INTERROGATIVE_MARK_2P);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'résiu') + '/' + INTERROGATIVE_MARK_2P_2);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'résimo') + '/' + INTERROGATIVE_MARK_1P);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'résimoi') + '/' + INTERROGATIVE_MARK_1P_2);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rié').replace(/ié$/, '(is)ié') + '/' + INTERROGATIVE_MARK_2P);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'riéu').replace(/iéu$/, '(is)iéu') + '/' + INTERROGATIVE_MARK_2P_2);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rón').replace(/on$/, '(is)(i)on(se)') + '/' + INTERROGATIVE_MARK_1P);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT4 + 'rén').replace(/en$/, '(is)en(se)') + '/' + INTERROGATIVE_MARK_1P);
 			//NOTE: i únegi pronòmi interogativi enklítegi ke se dopara i xe kueli de 3a pars
@@ -1054,10 +1128,14 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 			var conj = getIrregularVerbConjugation(type, verb);
 
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5) + '/' + INTERROGATIVE_MARK_2P + MARKER_FLAGS);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5 + 'u') + '/' + INTERROGATIVE_MARK_2P_2);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/è$/, 'é') + 'mo') + '/' + INTERROGATIVE_MARK_1P);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/è$/, 'é') + 'moi') + '/' + INTERROGATIVE_MARK_1P_2);
 			if(conj == 2){
 				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/i?é$/, 'í')) + '/' + INTERROGATIVE_MARK_2P);
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/i?é$/, 'í') + 'u') + '/' + INTERROGATIVE_MARK_2P_2);
 				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/i?é$/, 'í') + 'mo') + '/' + INTERROGATIVE_MARK_1P);
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT5.replace(/i?é$/, 'í') + 'moi') + '/' + INTERROGATIVE_MARK_1P_2);
 			}
 		}
 	};
@@ -1219,25 +1297,36 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 			expandForm(themes.themeT8).forEach(function(t){
 				if(verb.irregularity.eser)
 					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t + 'ón').replace(/([^cijɉñ])on$/, '$1(i)on') + '/' + INTERROGATIVE_MARK_1P);
-				else if(verb.irregularity.aver)
+				else if(verb.irregularity.aver){
 					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t).replace(/à$/, '[àèò]') + '/' + INTERROGATIVE_MARK_1S);
+					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t + 'i').replace(/ài$/, '[àèò]i') + '/' + INTERROGATIVE_MARK_1S_2);
+				}
 				else{
 					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t + 'o').replace(/o$/, '[oe]') + '/' + INTERROGATIVE_MARK_1S);
+					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t + 'oi').replace(/oi$/, '[oe]') + '/' + INTERROGATIVE_MARK_1S_2);
 
 					if(verb.irregularity.verb && type == IRREGULAR){
-						if(verb.irregularity.saver)
+						if(verb.irregularity.saver){
 							insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t.replace(/à$/, 'ò')) + '/' + INTERROGATIVE_MARK_1S);
-						else
+							insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t.replace(/à$/, 'ò') + 'i') + '/' + INTERROGATIVE_MARK_1S_2);
+						}
+						else{
 							insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t + 'o').replace(/([aeiouàèéíòóú])o$/, '$1(g)o') + '/' + INTERROGATIVE_MARK_1S);
+							insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t + 'oi').replace(/([aeiouàèéíòóú])oi$/, '$1(g)oi') + '/' + INTERROGATIVE_MARK_1S_2);
+						}
 					}
 				}
 				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t.replace(/([^i])$/, '$1' + (!verb.irregularity.verb.match(/andar|darStarFar|s?aver/) || !t.match(/à$/)? 'i': ''))) + '/' + INTERROGATIVE_MARK_2S);
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t.replace(/([^i])$/, '$1' + (!verb.irregularity.verb.match(/andar|darStarFar|s?aver/) || !t.match(/à$/)? 'i': '')) + 'tu') + '/' + INTERROGATIVE_MARK_2S_2);
 				var third = t + (!verb.irregularity.verb.match(/darStarFar|s?aver/)? (verb.irregularity.eser? 'é': 'e'): '');
 				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(third) + '/' + INTERROGATIVE_MARK_3 + MARKER_FLAGS);
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(third.replace(/[ai]$/, 'e') + 'lo') + '/' + INTERROGATIVE_MARK_3_2);
 				if(third.match(/[^aeiouàèéíòóú]e$/))
 					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(third) + '/' + FINAL_CONSONANT_VOICING_MARK);
-				if(verb.irregularity.verb.match(/dixer|traer|toler/))
+				if(verb.irregularity.verb.match(/dixer|traer|toler/)){
 					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t.replace(/[lx]?$/, 'go')) + '/' + INTERROGATIVE_MARK_1S);
+					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t.replace(/[lx]?$/, 'go') + 'i') + '/' + INTERROGATIVE_MARK_1S_2);
+				}
 			});
 		}
 	};
@@ -1421,6 +1510,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 			expandForm(themes.themeT10).forEach(function(t){
 				if(!themes.themeT8){
 					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t) + '/' + INTERROGATIVE_MARK_3 + MARKER_FLAGS);
+					insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t.replace(/[ai]$/, 'e') + 'lo') + '/' + INTERROGATIVE_MARK_3_2);
 					if(t.match(/[^aeiouàèéíòóú]e$/))
 						insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t) + '/' + FINAL_CONSONANT_VOICING_MARK);
 				}
@@ -1428,6 +1518,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 					var third = themes.themeT8 + (!verb.irregularity.verb.match(/darStarFar|s?aver/)? (verb.irregularity.eser? 'é': 'e'): '');
 					if(t != third){
 						insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t) + '/' + INTERROGATIVE_MARK_3 + MARKER_FLAGS);
+						insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t.replace(/[ai]$/, 'e') + 'lo') + '/' + INTERROGATIVE_MARK_3_2);
 						if(t.match(/[^aeiouàèéíòóú]e$/))
 							insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(t) + '/' + FINAL_CONSONANT_VOICING_MARK);
 					}
@@ -1448,6 +1539,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 				origins.push(origin);
 
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT11 + 'ié').replace(/ié$/, '(iv)ié') + '/' + INTERROGATIVE_MARK_2P);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT11 + 'iéu').replace(/iéu$/, '(iv)iéu') + '/' + INTERROGATIVE_MARK_2P_2);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT11 + 'ón').replace(/on$/, (!themes.themeT11.match(/[cijɉñ]$/)? '(i)': '') + 'on(se)') + '/' + INTERROGATIVE_MARK_1P + MARKER_FLAGS);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT11 + 'ivón').replace(/on$/, '(i)on(se)') + '/' + INTERROGATIVE_MARK_1P);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT11 + 'én').replace(/en$/, '(iv)en(se)') + '/' + INTERROGATIVE_MARK_1P);
@@ -1489,8 +1581,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT12 + 'ón') + '/' + INTERROGATIVE_MARK_1P + MARKER_FLAGS);
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT12 + 'én') + '/' + INTERROGATIVE_MARK_1P);
-			if(themes.themeT5 && conj != 2)
+			if(themes.themeT5 && conj != 2){
 				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT12 + 'é') + '/' + INTERROGATIVE_MARK_2P);
+				insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT12 + 'éu') + '/' + INTERROGATIVE_MARK_2P_2);
+			}
 		}
 	};
 
