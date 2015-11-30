@@ -5,11 +5,12 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/lang/detection/NGrams'], function(NGrams){
+define(['tools/lang/recognition/NGrams', 'tools/lang/recognition/Markov', 'tools/data/ArrayHelper'], function(NGrams, Markov, ArrayHelper){
 
 	var models = {
-		'it': 'ttononettcheossnnacceonnrosappentcapssoppuuccpuccetllaandlupellupoorteragliallperevaarecosquandopororatraacccorciaprirtachiconanodelscontiancuanranssenelinomenprorescomatapresenvolbentropenavaestnteunancimantorlloosìccidalstaqueoleccoioroccincncocereglissdisntrenertiontcchrtosalatoensaveoltierroptantresolornlioeresarttiiatangitouttcastutltrletlleoreottmaleceeccorimegaltoscasaebbbbeaprbosolaercparattantndipiùssainaciòvevriorseoprpoittadarhaiforbittieerifecicimbiolcrririvdolerominfiooloterttestontastr’erngiomicinposngoravuarrlavinoliertendderetrlcepotpiearrartrdaammorsalac’eomegiacacgoliglisemisio”“peai”sicssiassl’ac’èquibinambtròsuaietracaniivornocathiabamntooveiaruelsulusslevittinfenaedegransòineboclorvedvanfilvecardguandalmeing“ehalm“viehiebonsaienpiautavenibigiofosbolalstarlsimmaiccratiamtenubisubnfionerontaldovrogaddlitna”ostascono“chltalinstiritfarilòunocolleitavserchérenppelutaraerr',
-		'vec': 'pararoentlovònagavntenònavéabaovorosskobarosotabtirensriodrikomvéaintandèraomejèrndooratòkntobenrtaòrtsenpòrnsastoantrtefiàutitrakonbongrantikarmenmañdarpenolsrendoleƚaoltañabutndaarkmèjèjonkoamastavèrntrlse“nòndibostarosk“katelrkéltairoporaseasaaràsetkueavatanstàkuaevaetakoletonsiortonaank“soso’korasirokmamsarderranvé”jo”toxres‘olrxeuan‘nditookèlètkaxtenontètotutaxarlabatarlbèƚpromasoxeareueƚkèlinkpalpreòkoenpéderasendokoodeirakreèrxvédkatxatoxafioiorespñardixateso”strditestríate”èƚaórentaesetrexarvoxrervedrsearsfarèƚemaitèƚimamardosistatèoƚama”piortonarinaravsototonkaoseèrtstidopdresitnpravevèñèñevarsavartexeaexaròreaikonpovaneanñersteansrivadaspoivamodposostkoƚetikórondsonoripaearagarteƚeñeoƚoeríperlarutapasindvo”itudovovena”òsakamamiminƚadaƚamaƚsiàmanesoopiropkeloƚiseƚñensiòàsidèspòsatuvisradpa’oreforoxèarintítíoòñiòdomòdixefatsikvoƚametòrtakakàtàavejoƚetoƚdevpodpokrevskuvas“kideteod'
+		'it': '_21a11b2c24d9e15f3g3h1i9l9m11n4p17q7r2s8t7u6v7è3‘5c11a51c55e49h51i32o63q1u5ì3ò1’8’5a6e5o2u1è4e17 259_33b9c13d5g12h3i7l37m3n60p2r68s18t46v18z2r20 14a65b3c6d6e59i39l6m3n7o60r9s9t28u3v1z1à4ì2ò8a19 246_44b3c15d10e1f2g2i11l57m13n68p38r47s18t27u3v23z4 23a85b40c110d73e69f32g22h9i41l90m42n68o9p83q17r40s104t37u27v28z2è4‘3u17 1a24b4c27d1e12f2g2i7l6m1n36o6p20r4s7t12n18 53a51c21d27e41f4g13i10n32o81q1s9t40u3v2z3ò4’1v8a34e28i17o12r1u1v4ò2o16 194_52c10d1f1g7h1i10l40m12n66p11r67s55t10v5l20 52a78b1c5d1e46i30l41m4o17s4t14u24v1z3à4ì2í1ò5’4t10a54e30i38o87r34t65u11é1ì1ò5b7a8b8e25i17o15r1u6m7a34b6e28i15m4o8p4i21 119_18a35b4c14d5e16g6i1l33m6n52o32r7s14t15u3v9à1ò11ù7d10 3a28d3e30i35o30r4u4ò2’2h6 1a6e36i15o4é3s15a36c19e57f1i26o40p8s49t25u13v1é3ì9ò6’2p8a16e36i15o54p30r34u26ì2ù1 7g10a2e3g3i15l18n3o9r9u6ò2ò2 43_5é2 5_2q1u26è2 10_1f7a4e8f4i13o10r6u4z7a4e1i4o3z4ò2’1ì2 16_3à2 8_1‘2 4_4í1i1',
+		'vec-tv': '__20a1b2d7e27g4i8j1k22l3m15n10p10s14t21u1v3x2à1ò1ƚ15_j1è1jè1r11èr4a12s1t3x4ra9 30_1d2l1m1n5r1s4v3a 24a2b8d27e14f2g16i11j6k24l2m10n5o1p22r6s32t15u4v5x3è1ñ1ƚ11‘4 n4a2e4o10ò11na4 14_11k1r3 ‘5l17n6o5v1ƚ1‘o1l5ol4 3p2s7t7lt3a6e1r1ta10 14_10b15g1j1k2m1n5r6s1a_1_43_i2 4n4in9 4a3d2k4m1p1s1t12v1nt7a3e16i8o10r6í2’2t’1 2’ 6d2t1u3v1ò1ƚ3 u1n22un1 23n 10d2e1f8i1l5m5p3s5t4ƚ1 s12a4e25i5k9o9p2t15u1è2ò1ó11ú4sè2 1r2rt5a10e8i1o3à2to6 30_8n1r1x5ƚ2o 19a6b4d17e17f4i4k19l1m1n1p11r15s10t6u4v2x1ƚ13‘7 p6a28e8i11o9r6ò10pa7e3l4r24s2v1ñ1’2ae1x3ex1e3xe4 28_4n1r2e_1_25_n3a2o2ò6 t8a11e10i5o7r2u3ò6ó4ox4a4e4i2è2xa3 6r3t4at8a2e4i2o1u2à1è3ú1tè1ƚ3èƚ4a3e3i1o1ƚa4 65_6d2n1 d9a7e42i11o11r15à1í2ò1’1de9 37_1f1n2r5s2t2v2ñ1e 21a8b12d20e4f4g31i8k25l5m11n9p23r2s21t14u7v11x7ò1ƚ26‘14 k7a9e53o16r3u12ò1ó3ka7 1m2n1r7s1t4x4an7b1d12i1k5p1s3t9np3a1o3r3añ2a7é1ña4 1_1r4v1_ƚ2a11e4pi4 9_2a1o3i 19a2b2d5e4f3g5i3j1k10l1m1o1p4s2t2u1v3x12‘4 b7a4e10o15r2u7à1è4bè1ƚ4ke3 55_1l2se8 28_1g1n9r1s2t5ƚ2po6 7d2e1k2r5s3oe1s1es5e3g1o2p4t4 m7a25e2i2o1è7é11ò2ma11 11_4g1i3m5n2r3s4t1ñ7ƚ2ai1 3 v8a1e9i5o3à2è7é4ò1vé3_5a12d4éd1e4er8 8_3a1i1l1t2x2í2r_1_5_s6e2i1k3o5t2ó1só2 11o1ó 6m2n7s2t1v3ƚ2am3a6e2i2 ƚ4a48e6o2u1 j2e1è10 e4 20l19n2ƚ1eƚ5a7e1i2o1u1_e4 15_2l9ƚ1nò2 1n16òn1a17 a4 12l3n5s1nk2a3o6ko9 13_5l5m12n8r5s1v1ƚ3or6a10e2i3n1t5è1i_1_17st7a6e3i3o9r4à5í1bo3k2n8s6on8 3_5a5d3e1o1p1t4dò1n1no4 11n1r1x1sa5 8_5n1r5v3av4a5e3è1é16ve8 4c1d3j2n2r2s1ƚ1en7 3_8d4g1p4s13t22nd4a7e1i6o11do5 11l7p3s3v2os5a1e3k6o15t3da5 12_1n1r7v1ar16 28_2a2d1e4g2i2k6l4m1o22s3t3à5í1ò3rg1e2ge2 24_1 g4a31e20o2r6ga5 14n1r2t1v16éa1 15ku7a5e5f1r1s1x1è1ux1í1xí1o1ío1 3ab1a15ba4g1r15s1t4re10 5_1a3b1c1n7r3s5t2v2et5a5e1i3o5à1ƚu2_1d1ud1o1 r4a1e6i3o19ro9 25_1f1k5m1n1p2s15ƚ1so7 8_12l2n3r2t3’5 f7a5i12o3r1u1à1ò1fo3g1n1r2og1o1go2 3ƚ1_d6a2e1i1o1è1’1ua2 1n4tà2 7a2àa2 4_1be3 1l1n10n_1_13_t6a10e1i2o1u1ò6tu3 3r1t4ut3a2i8é1ti5 12_6r13v1ƚ1 i3 12d1n21ak2à2ò1kà2 2a1à 12a1c1d8i3k6m4p2s2t2u2v3‘1 c1a1ca1m1rl2a4i1la3 8_1r2o_1_43ƚo3 5r1x1op3a1i2o2va5 7_1n3r3s2pr3e4i1o4_u1n1dí1 2í 2k1s1si13 3_1a1e1g2k2l1m1o1p1t3à2ò2ik1o3om2e11o2me6 7_1n7s1t2ƚ1fa3r3s2t2fi3e1o4à8ià1 10ls2e6i1_l2a2o1di8 6_1f1m1r1s1t4x4ix3e2o1é1_k7a7e5i3o3r1u1ó2el1 37l 13b10d2e2g6j4k1l15m8p2r6s7t1x1mé1 12é 7b6g1i1m3n4s1ƚ1_v3a1e1à1và1 3r 12a2d4f2i2k10l1m5p4s5t2v3ñ1tó1 4_p4a7e1o1ò1rk1é6ké2 5_1tí2i1o2mi3_1a1n2ia3 2_1r1as6a5e5i5o1à1è1pò3j1r9s2òr4 2a1t10x1ag3a1e1o1tò2k10r2òk2_6o4bu1t7ir5 3a4e1o5à1sú2 3_1ú_1_1rd1a1te8 23_8l6n4r1s1v1ƚ2a’1 2tr4a8e3i1u1ad2a3e1‘n2 2d4rn1o1 ñ1e2ñe4 1n2r3v1ns5a9i5o1t1à1rs2a1e3sk3a1o15u2al4 6_1e1t1óo1_1ov4e2i2o15è1vi6 1_1a1e1s2v1iv3a3o1é1kó2 2r3dr2e3i12ri8 4_1k1m1n1o12s1v3io4 12_3r4x1rò3 1_1l1ò_1_1 l4a5o16à5è4lo1v17vo4 9_7x3ƚ2‘l1 17 x4a2e20o1ó1‘v1u1vu1o1uo1 1id1è1dè2a1s2èa1 1 o2 1x1fu1s1us2e1i1aj1a1ja2 2l1le2_1ñ1eñ1e2ng1a1‘ƚ1o1it4a1e1o4u2_b2e1o1pe3n7r2t1rí2a3k1ík1o1oƚ5a3e2i2o2à1là2 4_1sp4e1o3u1ò1kr1e4ea1n3_g3a1e2r1gr1a8ie3 1n1t1u 2d2v1o’1 5kò2r1s1òs3a2o1t1ot1o3vè2r6ñ3_m5a8e3o2à1é1aƚ1a2_à1b1àb1i1bi1t1is2i1t3im1a3ò 4b1d2k1p1eg1u1gu1r1ur3o1t1í1eb1a1tú1o1úo1 1mo3d3r1ƚ1ƚi3 4_1n1ed2a2i1ax1a4iò1 2u_1_1fà1s1às1i2il1_1l_1_4ès3e1o1t2br2a1i1rm1e1èñ1e3li1_1su1p1up1i1xè2i1ƚ1èi1_1_x2b1e1è 1i1rà2 4_2mè2j6x1èj1o6jo2 1_5d’1 2 ò2c1ñ1òñ1i2ñi1 2mò1d2òd1o2ue2s1ƚ4nv1o1ƚà1 1èx1o1xo2 2_1ú 3f1n1u1ƚe4 11_3n1v1_a1 1ór1e3ej2a1e1je2_1r1_ò1ñ1ne3 2o2t1ev3a5e1o1od3e4à2è1 è1s1ok3o4à1è4à_1_3fò1r1sà1 2fr1o1bà1t1àt1e1k_1_6ki2 2è1eo1d2dà2 1a2lè1t4èt2i1o4ig2à1ò1gà1 1rx2a2e5kè1l4èl2 2_2lp1o2ec1e2ce2 1t1íi1 1uf1i1ef1a1of1o1ía1 3ip1i1nm1a1vò1s1gò1 1xb1a1uè1r1òj1a1pu1l1ul1x1lx1a1é_1_6ru1k1uk1o1nb1e1òc1i1ci1 1xé1a1òl1e1té1a1ñé1a1mà1s1rè1s1if1a1sò1r1xi2 1_1iè1t1xó1v1óv1a1ni1 1sg1r1iƚ1i1',
+		'vec-blfe': '__21a11b2c24d9e15f3g3h1i9l9m11n4p17q7r2s8t7u6v7è3‘5_c5a8e2h8o4’2c’2e4è4’e1r5er11 13a18c6e7i5l2o5r3s3t5à1ra10 29_4c4d2g2i2n11r3t3v5a 21a9b13c31d21e14f6g3h3i7l11m12n28o1p29q4r3s25t8u8v9è1 u3c1n25s1un8 19a9c1g1o3q1s1’1na5 31_16m1s2t1 v4a3e11i8o6vo2 2l10ol10 1a6c5e8i5l1o5s1t7ò1lt4a3o2r7ò2ta8 26_8i1l3n7r3t3v3 b6a5e17i1o12r1u4ba5 1l1m4s1t1am5a1b4e1m4o3mb2a1i5bi8a1c2d1l2m1n4t5u1in12 8a6c8e4f4g4i2n1o11s1v1ò2 t6a5e9i3o5r8u7an10 1a1c11d22g7i4n2o12t6z2nt7a5e9i11o4r8ì1ò2to3 69_9r9o 21a20b5c25d22e22f4g4h1i8l11m1n3o1p14q1r24s15t4u5v3‘1 c7a34e5h31i2o30u2’6ca12 2_1c4d2l1m1n1p26r1s7t4u1ar14 1a3d4e16i1l3m1o2r4s2t4v1à3ò2ri15 9_1a1b1c2d1e1l1m3n2o6r2s1t3v5 e7 53_2b3d1g1n2r7e 22a18b4c27d14e18f9g3i15l29m7n18o4p16q9r6s32t13u7v5z2è1‘2 d7a17e19i22o8r2u3’2do6 16_1l5p3r2v3lc2e4i1ce6 11_4l1r8s1t24ch3e36i12é3he1 36 s12a14c5e27f1i15o10p3t12u12v1é3’1so6 17_11l7n2p1t2lo4 9_2n2r4 a13 17b2c1d3f2l23m1n14p5r4s2t2v9ve10 4_1c4d4g1l1n3r3s1v6ed2 1e4de8 4b3i1l12n2r5t1v2rl2a5e1la7 65_6n1p1r2s1t2a_1_44_t3e2i2u3tu4 1a2b1t7ut3a3o2t7tt5a6e5i7o46r1ti11 20_3a1c1e5g2l1n1r2t1v1i 20a14b2c10d7e9f5g3h5i5l4m8n9o1p6r5s16t2u2v4è2se10 33_5c1g1i1l1m1n10r3t1 n4a2e21o44u1ne6 21_6l11p1s1t1 i4 2e2l18n19nn4a28e2o1u1mo4 3d1l1r3or13a14b3d2e6i6m2n7o1r2s4t18z1ì1av6a10e7i1r1u1v3va8 22_2d1i1n4r2s1t1no6 26_7c1l2n44r1o_1_52_e4 10h3n1r1sp5a2e3i1o1u1pe8c2l1n10r17s1t2v2z1ec3c6e6i1ci7 3a13l1n5o2v2ò6ia8 13_3c3l1m3n1r4t7al14 11a4b1d1e2i2l17m3s3t6u2v1z3ò1lm1e4me7 6_1g6n11r1t2z1en11 3a4d5e8g1i2n2o1s7t26z1te6 14_3n3r5t3v2 l7a35e26o2u20à2ì2’3on8 22c1e3n27o3t8u1v1n 15a7b3c8f1g4l3m7o1p7q1r1s6t2u1v1sa10 10_2l8m1n1p2r7t1v2z2ap5e3i1p27r6ì1ev3a16o1v1da8 7_1l9n2r5s1t1v2vv2e2i2ro11 9_4f1g3i1l2m2n3p7s27v1 p5a12e21i12o22r16pi5a3e4r1t1ù6iù1 7ù 7b1c1d1l1m1n1r1co8 3_6l3m10n12r13s14t2os6a3c6e2s32t3ì9le7 27_4g1i3n1t6v4e_1_33_u2n5s1 r5a5e4i4o25u2re11 28_7b3c1g2l2m1n3p1s10v1eg5a1g1l8r1u1ga2l1r1lò1 5ò 15a11b1c2d4e1f3g1i5l2n5p1s3t2u1v1pp4e3i1o1u25pu3c24g1r1uc3c25i1ì1cc5a2e28h8i9o8et2r4t42di7 20a1e1g1n3o1s8el5 13a1i2l20í1ll5a23e6i1o9u2lu3n1p20t3ss6a6e11i4o25u1ò2po8 19_4c1i6r14s5t4v1oi5 6a1b1c1ò1ic7a1c3e1h1i5u2ò1hé1 3é 4e1l1n1p2st7a8e2i3o5r5u1ò1be7 7i2l3n10r1s1v1ei2 6_1 m4a18e16i5o3 q1u17qu3a14e8i4ue5 4l4r1s2t1hi5 7a4e1o2u1ma10 10_1d1i1l6m2n9t1v1z2 g5e1i6l5r8u2gi9 1_1a4o3r1u1à1ò2ù1io5 14_8l1n1r8rn3a1o4ò2su5a4b3l4n1o1ua4 7n11r5s1ad6 2a2d3e1o1r1dr3e1i2ò1is4e4o1p1s8_v4a1e1i4o1vi8 1c3d3e2g1n5s1v1ie5 1m1n3r7t4ni4 4_3g1m2_q1u7ui4 3_1o2r1’è1 4è 7a1d1f1l1p2t1u3 f6a3e6i7o7r6u3fe4c5l1r1t1bo4c4l3s6t2ot4e2r1t6é1ig3i1l4n1gl1i18li9 8_2a3b1c1n3o7t3ò2_p3e5o7r5rt3a12i8o8_è1 3mm2a3i1at5a10e1i2o8t6eb2b6o3es6a1c2e2p2s1t10fa2c1r3pr4e10i12o11ì1ep2a1p1pa8c1e1i1l1n3r6s1u2im3a3b1i2ac3c13e1q1tr4a13e7o10ò4op3o3p2r6ld1o1mi5 3_2n5o1s4om4a1e4i5p2nd6a4e1i6o14r1ò1si5 19b1c4g1i1ii1 1au2r2t1r 8a3b2g2i1l2m2s1v1rc5a2e1h1i1o1mp4e1o1r1ì1bb3a1e6i1nu3l1n1s1ul3 3i1l2rr3a2e2i5iv4a2i1o4ò2sc5a2i3o11u1ì2rd3a4i1ò1ub2e1i3it4a2i2o7t4i_1_18_a4 3l2n2p4fr3a3e2u1ru2g1s2ug2a1l1 o4c3g3h1r2og4g1n2o3ò1gn2i2o1ng5e1i5o5u1ò1go4 1i2l4r2_f3a1e1i1rò2 7_1l’1a4’a6b1c1d1l1s1v1as7a6c3e1i1o1p2s4cu4c1f2o1r1ur3a2e1o1_l5a4e1o1à2’1ab2b2i1_n2e3o1l 12b7c2d1f1g2l23m1n1p2s5t5v2ez1z2zz2o3’1z’1o1’o1r2ae1s1iu3d1l1n1ns4a3e1o1ò4_i3l6n2o1nc5a1e1h2i9o8il7 24e2i1l1m1t1ò3up2a1o19fo4c1g1r5s3iò2 10_1_b1u2bu3i2o2s2uo4i1l1n2r2_d4e1i4o3u1_r1i2ov2a1e4ai3 6_4o1sì2 8_1ì 11b1c1d2e1f2l2m1p2q1s1v2gr4a4e1i1o3em2b1p2 è2 3_1nf2i3o1rz1e1ze1r1rà2 3_1à_1_1d’2o1u1là1 4à 5b1c2e2n1p2lì1 2oc3a1c8o1_h1a1ha2 1i5sò2 4_2sé2 1_2é_1_2_‘2 4_1‘ 4c1m1o1q1rb1i3id3a1e3i1ib2a1i3_s6a1c1e2i2o1’1ge2n1r2du2e3n1 ‘1_3‘_1_4_g2i1u2gu3a4e1i1fi4a2l4n2o5lí1i1íi1n1_m4a8e1i1o1u 1n1lz2a1ò2zò1 2ag2g1o1gg2e1i2nz1a3za3 2n1r1rs4a1e6i1o1lb1e1ò_1_5az2i2z2zo2 2l1us3a1c2s4cì2 2_1nv2e1i1è_1_1rm2e2i1rì2 1_1d 2a2e1dò1 2’u1n1uf1f2ff3e1i2o1ir6a1e1l1o2t1ò1vò1 2rv1e1oh1 1h 1m1zi3a1o1t2 h2a5o4ho1 4nò1 4tò1 5eh1i3af1f2s’2a1e1dd2e1o2ià1 1fu3c1m1o2lv1a1sf1o1br1i1vu1t1pì1 2ì_1_3sv1e1cò1 1tì1 1n’1a1ls2e1i3vr1e1ud1i1od1o1 z1i2nq1u1cq1u1of1u1um1o1gò2 1_1té1 1'
 	};
 /*	var models = {
 		'af': 'ie  didieen ingan  envan vang te n dverer e v ge bede  vende in tele dererset oor \'n\'n at eersteordaarsie waes e saan onis in e ordee basirinonde wel  isande eeide dom ke  omeri woe gr dalewat void it rd  aalik wet d ope tngsse enduit st leenster ree aiesworg vstan s na prn o meal of  vierdleee k deiteerkik e re pn ve ie neeneliwer of datelnieikes etaage virheiir regedes vur proeleionwete l moe mdaasios d he toentardnge ooeurlleienn bekelinraa niontbesrdivoons n adeldignas sa grniskom uimenop insonaeres o son gig moe kors gesnalvole hgebruiangigeoetar wysligas n w asmetgs deut vaalerwditkenssekel huewedinn t seestikan pntwt ieni kan edoealiemegronte honsigeniergewn hor  maindne ek aatn \' skide tadatskagersoon ks i afteend eelhulneewoorikd vn mre artebrlankkeronaamtrestrkanreeleit ograhetevotandenist dobrutoeolgrskuikrwyminlgeg eg onstr vgtewaawe ansesiesevoeepagel hivinnses ws tteieitpre',
@@ -244,7 +245,15 @@ define(['tools/lang/detection/NGrams'], function(NGrams){
   }
 }*/
 
+	var MODEL_MARKOV = 'markov',
+		//n-grams
+//		MAX_SCORE_DIFFERENCE = -500;
+		//markov
+		MAX_SCORE_DIFFERENCE = -70;
+
 	var PATTERN_TRIGRAMS = /([\s\S]{1,3})/g;
+	var PATTERN_MARKOV_DATA = /([^\d]+?\d+)/g;
+	var UNKNOWN_LANGUAGE = 'unknown';
 
 	//unicode char greedy regex block range matchers
 	var unicodeBlockTests = {
@@ -377,15 +386,14 @@ define(['tools/lang/detection/NGrams'], function(NGrams){
 		'Specials': /[\uFFF0-\uFFFF]/g
 	};
 
-	var UNKNOWN = 'unknown';
-
-	var BASIC_LATIN = ['en', 'ceb', 'ha', 'so', 'tlh', 'id', 'haw', 'la', 'sw', 'eu', 'nr', 'nso', 'zu', 'xh', 'ss', 'st', 'tn', 'ts'];
-	var EXTENDED_LATIN = ['cs', 'af', 'pl', 'hr', 'ro', 'sk', 'sl', 'tr', 'hu', 'az', 'et', 'sq', 'ca', 'es', 'fr', 'de', 'nl', 'it', 'vec', 'da', 'is', 'no', 'sv', 'fi', 'lv', 'pt', 've', 'lt', 'tl', 'cy', 'vi'];
-	var ALL_LATIN = BASIC_LATIN.concat(EXTENDED_LATIN);
-	var CYRILLIC = ['ru', 'uk', 'kk', 'uz', 'mn', 'sr', 'mk', 'bg', 'ky'];
-	var ARABIC = ['ar', 'fa', 'ps', 'ur'];
-	var DEVANAGARI = ['hi', 'ne'];
-	var PT = ['pt-BR', 'pt-PT'];
+	var BASIC_LATIN = ['en', 'ceb', 'ha', 'so', 'tlh', 'id', 'haw', 'la', 'sw', 'eu', 'nr', 'nso', 'zu', 'xh', 'ss', 'st', 'tn', 'ts'],
+		EXTENDED_LATIN = ['cs', 'af', 'pl', 'hr', 'ro', 'sk', 'sl', 'tr', 'hu', 'az', 'et', 'sq', 'ca', 'es', 'fr', 'de', 'nl', 'it',
+			'vec-tv', 'vec-li','vec-blfe', 'vec-ve', 'vec-pdro', 'vec-vr', 'da', 'is', 'no', 'sv', 'fi', 'lv', 'pt', 've', 'lt', 'tl', 'cy', 'vi'],
+		ALL_LATIN = BASIC_LATIN.concat(EXTENDED_LATIN),
+		CYRILLIC = ['ru', 'uk', 'kk', 'uz', 'mn', 'sr', 'mk', 'bg', 'ky'],
+		ARABIC = ['ar', 'fa', 'ps', 'ur'],
+		DEVANAGARI = ['hi', 'ne'],
+		PT = ['pt-BR', 'pt-PT'];
 
 	var SINGLETONS = [
 		['Armenian', 'hy'],
@@ -442,14 +450,22 @@ define(['tools/lang/detection/NGrams'], function(NGrams){
 					code = SINGLETONS[i][1];
 					break;
 				}
+//a (U+0041 U+0061) à (U+00C0 U+00E0) b (U+0042 U+0062) c (U+0043 U+0063) d (U+0044 U+0064) đ (U+00D0 U+00F0) e (U+0045 U+0065) è (U+00C8 U+00D8)
+//é (U+00C9 U+00E9) f (U+0046 U+0066) g (U+0047 U+0067) h (U+0048 U+0068) i (U+0049 U+0069) j (U+004A U+006A) ɉ (U+0248 U+0249) k (U+004B U+006B)
+//l (U+004C U+006C) ƚ (U+190A U+230D) m (U+004D U+006D) n (U+004E U+006E) ñ (U+00D1 U+00F1) o (U+004F U+006F) ò (U+00D2 U+00F2) ó (U+00D3 U+00F3)
+//p (U+0050 U+0070) r (U+0052 U+0072) s (U+0053 U+0073) t (U+0054 U+0074) ŧ (U+1606 U+1607) u (U+0055 U+0075) ú (U+00DA U+00FA) v (U+0056 U+0076)
+//x (U+0058 U+0078)
 		//extended Latin
 		if(!code && scripts['Latin-1 Supplement'] + scripts['Latin Extended-A'] + scripts['IPA Extensions'] >= 0.4)
-			code = check.call(this, text, EXTENDED_LATIN, function(lang){ return (lang == 'pt'? check.call(this, text, PT): lang); });
+			code = check.call(this, text, EXTENDED_LATIN);
 		if(!code && scripts['Basic Latin'] >= 0.15)
 			code = check.call(this, text, ALL_LATIN);
 
-		if(code)
-			callback.call(this, code);
+		if(code){
+			lang = extractMostProbableLanguage(code);
+
+			callback.call(this, code, lang);
+		}
 	};
 
 	/** @private */
@@ -468,27 +484,71 @@ define(['tools/lang/detection/NGrams'], function(NGrams){
 
 	/** @private */
 	var check = function(sample, langs){
+//		return checkNGram.call(this, sample, langs);
+		return checkMarkov.call(this, sample, langs);
+	};
+
+	/** @private */
+	var checkNGram = function(sample, langs){
 		sample = NGrams.tokenize(sample);
+		langs = ArrayHelper.intersection(langs, Object.keys(models));
 
 		var wordLanguages = [],
-			wordScores, model, i, knownModel;
+			wordScores, model, i, knownModel, scores,
+			recognized;
 		sample.forEach(function(word){
 			wordScores = [];
 			model = createModelFromContent(word);
-			for(i = langs.length - 1; i >= 0; i --){
-				knownModel = createKnownModel.call(this, langs[i]);
-				if(knownModel)
-					wordScores.push([langs[i], model.distance(knownModel)]);
-			}
+			if(model.isReady())
+				for(i = langs.length - 1; i >= 0; i --){
+					knownModel = createKnownModel.call(this, langs[i]);
+					if(knownModel && knownModel.isReady())
+						wordScores.push([langs[i], model.distance(knownModel)]);
+				}
 
-			//we want the lowest score (less distance equals to greater chance of match)
-			wordLanguages.push([word, (wordScores.length? wordScores.sort(function(a, b){ return a[1] - b[1]; })[0][0]: langs)]);
+			//we want the highest score (less distance equals to greater chance of match)
+			if(wordScores.length){
+				wordScores = extractBestScores(wordScores);
+				wordScores = (wordScores.nextBestScore == undefined || wordScores.nextBestScore - wordScores.bestScore >= MAX_SCORE_DIFFERENCE? wordScores.scores: {});
+			}
+			recognized = !!Object.keys(wordScores).length;
+			if(recognized && langs == EXTENDED_LATIN && wordScores['pt']){
+				return check.call(this, sample, PT);
+			}
+			wordLanguages.push([word, (recognized? wordScores: UNKNOWN_LANGUAGE), (!recognized? langs: undefined)]);
 		}, this);
 		return wordLanguages;
 	};
 
 	/** @private */
-	var createKnownModel = function(key){
+	var checkMarkov = function(sample, langs){
+		sample = Markov.tokenize(sample);
+		langs = ArrayHelper.intersection(langs, Object.keys(models));
+
+		var wordLanguages = [],
+			wordScores, i, knownModel, scores,
+			recognized;
+		sample.forEach(function(sentence){
+			wordScores = [];
+			for(i = langs.length - 1; i >= 0; i --){
+				knownModel = createKnownModel.call(this, langs[i], MODEL_MARKOV);
+				if(knownModel)
+					wordScores.push([langs[i], knownModel.logProbability([sentence])]);
+			}
+
+			//we want the highest probability
+			if(wordScores.length){
+				wordScores = extractBestScores(wordScores);
+				wordScores = (wordScores.nextBestScore == undefined || wordScores.nextBestScore - wordScores.bestScore >= MAX_SCORE_DIFFERENCE? wordScores.scores: {});
+			}
+			recognized = !!Object.keys(wordScores).length;
+			wordLanguages.push([sentence.join(''), (recognized? wordScores: UNKNOWN_LANGUAGE), (!recognized? langs: undefined)]);
+		}, this);
+		return wordLanguages;
+	};
+
+	/** @private */
+	var createKnownModel = function(key, model){
 		//check if known model has been pre-computed in cache
 		if(this.knownModelCache[key])
 			return this.knownModelCache[key];
@@ -498,10 +558,10 @@ define(['tools/lang/detection/NGrams'], function(NGrams){
 			return undefined;
 
 		//extract known trigram model data
-		data = data.match(PATTERN_TRIGRAMS);
+		data = data.match(model == MODEL_MARKOV? PATTERN_MARKOV_DATA: PATTERN_TRIGRAMS);
 
 		//contruct known trigram object based on provided raw data
-		var m = createModelFromData(data);
+		var m = createModelFromData(data, model);
 
 		//store in known model pre-computed cache
 		this.knownModelCache[key] = m;
@@ -515,8 +575,45 @@ define(['tools/lang/detection/NGrams'], function(NGrams){
 	};
 
 	/** @private */
-	var createModelFromData = function(data){
-		return NGrams.fromData(3, 3, data);
+	var createModelFromData = function(data, model){
+		return (model == MODEL_MARKOV? Markov.fromData(2, '', data): NGrams.fromData(3, 3, data));
+	};
+
+	/** @private */
+	var extractBestScores = function(wordScores){
+		wordScores.sort(function(a, b){ return a[1] - b[1]; });
+		var scores = {},
+			bestScore, nextBestScore, i, el;
+		for(i = wordScores.length - 1; i >= 0; i --){
+			el = wordScores[i];
+			if(bestScore == undefined || el[1] == bestScore){
+				bestScore = el[1];
+				scores[el[0]] = el[1];
+			}
+			else{
+				nextBestScore = el[1];
+				break;
+			}
+		}
+		return {scores: scores, bestScore: bestScore, nextBestScore: nextBestScore};
+	};
+
+	/** @private */
+	var extractMostProbableLanguage = function(code){
+		var recon = [];
+		code.forEach(function(word){
+			if(word[1]){
+				Object.keys(word[1]).forEach(function(lang){
+					var idx = ArrayHelper.findIndex(recon, function(el){ return (el[0] == lang);});
+					if(idx >= 0)
+						recon[idx][1] ++;
+					else
+						recon.push([lang, 1]);
+				});
+			}
+		});
+		recon.sort(function(a, b){ return b[1] - a[1]; });
+		return recon.filter(function(el){ return el[1] == recon[0][1]; }).map(function(el){ return el[0]; });
 	};
 
 

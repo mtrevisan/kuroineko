@@ -11,13 +11,30 @@
  */
 define(function(){
 
+	var PUNCTUATION = /[\u0021-\u0026\u0028-\u002C\u002E\u002F\u003A-\u0040\u005B-\u0060\u007B-\u007E\u3031-\u3035\u309B\u309C\u30A0\u30FC\uFF70\u2000-\u206F-=]+/g,
+		SENTENCE_DELIMITER = /([,;:.¿?¡!"“”«»‹›])/g;
+
+	var UNSEEN_NGRAM_DISTANCE = 2000;
+	var UNSEEN_NGRAM_LOG_PROBABILITY = -7;
+
+
 	var Constructor = function(min, max){
 		this.min = min || 1;
 		this.max = max || min || 4;
 
-		this.count = undefined;
-		this.stats = undefined;
-		this.ranks = undefined;
+		reset.call(this);
+	};
+
+	Constructor.unigram = function(){
+		return new Constructor(1);
+	};
+
+	Constructor.bigram = function(){
+		return new Constructor(2);
+	};
+
+	Constructor.trigram = function(){
+		return new Constructor(3);
 	};
 
 	Constructor.fromContent = function(min, max, content){
@@ -32,6 +49,16 @@ define(function(){
 		return m;
 	};
 
+
+	var reset = function(){
+		this.count = undefined;
+		this.stats = undefined;
+		this.ranks = undefined;
+	};
+
+	var isReady = function(){
+		return (this.stats && Object.keys(this.stats).length);
+	};
 
 	/** Build n-grams from a sentences, an array of words, or a single word */
 	var feed = function(words){
@@ -50,7 +77,7 @@ define(function(){
 			}, this.stats);
 		}, this);
 
-		computeLog.call(this);
+		computeLog(this.stats, this.count);
 	};
 
 	/** Build n-grams from a given model */
@@ -63,14 +90,14 @@ define(function(){
 			this[ngram] = (this[ngram]? this[ngram] + 1: 1);
 		}, this.stats);
 
-		computeLog.call(this);
+		computeLog(this.stats, this.count);
 	};
 
 	/** @private */
-	var computeLog = function(){
-		Object.keys(this.stats).forEach(function(key){
-			this.stats[key] = Math.log(this.stats[key] / this.count);
-		}, this);
+	var computeLog = function(stats, count){
+		Object.keys(stats).forEach(function(key){
+			stats[key] = Math.log(stats[key] / count);
+		});
 	};
 
 	Constructor.tokenize = function(sentence){
@@ -80,7 +107,7 @@ define(function(){
 	/** @private */
 	var cleanup = function(sentence){
 		return sentence
-			.replace(/[\u0021-\u0026\u0028-\u002C\u002E-\u0040]+/g, ' ')
+			.replace(PUNCTUATION, ' ')
 			.replace(/\s+/, ' ')
 			.trim()
 			.toLowerCase();
@@ -136,20 +163,30 @@ define(function(){
 
 	/** Distance between two n-grams */
 	var distance = function(other){
+/*		var p = 0;
+		Object.keys(this.stats).forEach(function(key){
+			p += (this[key]? this[key]: UNSEEN_NGRAM_LOG_PROBABILITY);
+		}, other.stats);
+		return p;/**/
+
 		var distance = 0;
 		Object.keys(this.stats).forEach(function(key){
-			distance += (other.stats[key]? other.stats[key]: 0);
+			distance += (other.stats[key]? Math.abs(this[key] - other.stats[key]): UNSEEN_NGRAM_DISTANCE);
 		}, this.stats);
-		return distance / this.count;
+		return -distance / this.count;
 	};
 
 
 	Constructor.prototype = {
 		constructor: Constructor,
 
+		reset: reset,
+		isReady: isReady,
+
 		feed: feed,
 		feedData: feedData,
 		sort: sort,
+
 		distance: distance
 	};
 
