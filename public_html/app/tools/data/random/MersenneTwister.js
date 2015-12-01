@@ -28,6 +28,7 @@
  */
 define(function(){
 
+		//2^32
 	var MAX_INT = 4294967296.,
 		//period parameter
 		N = 624,
@@ -127,31 +128,29 @@ define(function(){
 		this.mt[0] = 0x80000000;
 	};
 
-	/** Generates a random number on [0, 0xFFFFFFFF]-interval */
+	/** Generates a random unsigned number on [0, 0xFFFFFFFF] interval */
 	var int32 = function(){
-		var y;
-		var mag01 = new Array(0x00, MATRIX_A);
 		//mag01[x] = x * MATRIX_A  for x=0,1
+		var mag01 = new Array(0x00, MATRIX_A),
+			i = (this.initialized? N: N + 1),
+			y, kk;
 
 		//generate n words at one time
-		var i = (this.initialized? N: N + 1);
 		if(i >= N){
-			var kk;
-
-			//if init_genrand() has not been called, a default initial seed is used
+			//if seed() has not been called, a default initial seed is used
 			if(!this.initialized)
 				this.seed(5489);
 
 			for(kk = 0; kk < N - M; kk ++){
 				y = (this.mt[kk] & UPPER_MASK) | (this.mt[kk + 1] & LOWER_MASK);
-				this.mt[kk] = this.mt[kk + M] ^ (y >>> 1) ^ mag01[y & 0x1];
+				this.mt[kk] = this.mt[kk + M] ^ (y >>> 1) ^ mag01[y & 0x01];
 			}
 			for( ; kk < N - 1; kk ++){
 				y = (this.mt[kk] & UPPER_MASK) | (this.mt[kk + 1] & LOWER_MASK);
-				this.mt[kk] = this.mt[kk + (M - N)] ^ (y >>> 1) ^ mag01[y & 0x1];
+				this.mt[kk] = this.mt[kk + (M - N)] ^ (y >>> 1) ^ mag01[y & 0x01];
 			}
 			y = (this.mt[N - 1] & UPPER_MASK) | (this.mt[0] & LOWER_MASK);
-			this.mt[N - 1] = this.mt[M - 1] ^ (y >>> 1) ^ mag01[y & 0x1];
+			this.mt[N - 1] = this.mt[M - 1] ^ (y >>> 1) ^ mag01[y & 0x01];
 
 			i = 0;
 		}
@@ -163,38 +162,35 @@ define(function(){
 		y ^= (y << 7) & 0x9D2C5680;
 		y ^= (y << 15) & 0xEFC60000;
 		y ^= (y >>> 18);
-
 		return y >>> 0;
 	};
 
-	/** Generates a random number on [0,0x7fffffff]-interval */
+	/** Generates a random unsigned number on [0,0x7FFFFFFF] interval */
 	var int31 = function(){
 		return (this.int32() >>> 1);
 	};
 
-	/** Generates a random number on [0,1]-real-interval */
+	/** Generates a random real on [0,1] interval */
 	var real1 = function(){
 		//divided by 2^32-1
-		return this.int32() * (1. / 4294967295.);
+		return this.int32() * (1. / (MAX_INT - 1));
 	};
 
-	/** Generates a random number on [0,1)-real-interval */
+	/** Generates a random real on [0,1[ interval */
 	var random = function(){
-		//divided by 2^32
 		return this.int32() * (1. / MAX_INT);
 	};
 
-	/** Generates a random number on (0,1)-real-interval */
+	/** Generates a random real on ]0,1[ interval */
 	var real3 = function(){
-		//divided by 2^32
 		return (this.int32() + 0.5) * (1. / MAX_INT);
 	};
 
-	/** Generates a random number on [0,1) with 53-bit resolution*/
+	/** Generates a random real on [0,1[ interval with 53-bit resolution*/
 	var res53 = function(){
 		var a = this.int32() >>> 5,
-			b = this.genrand_int32() >>> 6;
-		return(a * 67108864.0 + b) * (1. / 9007199254740992.);
+			b = this.int32() >>> 6;
+		return(a * 67108864. + b) * (1. / 9007199254740992.);
 	};
 
 	/* These real versions are due to Isaku Wada, 2002/01/09 added */
