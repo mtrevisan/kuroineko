@@ -11,8 +11,10 @@
  */
 define(function(){
 
-	var PUNCTUATION = /[\u0021-\u0026\u0028-\u002C\u002E\u002F\u003A-\u0040\u005B-\u0060\u007B-\u007E\u3031-\u3035\u309B\u309C\u30A0\u30FC\uFF70\u2000-\u206F-=]+/g,
-		SENTENCE_DELIMITER = /([,;:.¿?¡!"“”«»‹›])/g;
+	/** @constant */
+	var MIDDLE_PUNCTUATION = /[\u0021-\u0026\u0028-\u002C\u002E\u002F\u003A-\u0040\u005B-\u0060\u007B-\u007E\u3031-\u3035\u309B\u309C\u30A0\u30FC\uFF70\u2000-\u2017\u2020-\u206F‒–—―=]+/g,
+	/** @constant */
+		SENTENCE_DELIMITER = /([,;:.…¿?¡!"“”«»‹›\[\]\(\)\{\}])/g;
 
 	var UNSEEN_NGRAM_DISTANCE = 2000;
 	var UNSEEN_NGRAM_LOG_PROBABILITY = -7;
@@ -107,7 +109,7 @@ define(function(){
 	/** @private */
 	var cleanup = function(sentence){
 		return sentence
-			.replace(PUNCTUATION, ' ')
+			.replace(MIDDLE_PUNCTUATION, ' ')
 			.replace(/\s+/, ' ')
 			.trim()
 			.toLowerCase();
