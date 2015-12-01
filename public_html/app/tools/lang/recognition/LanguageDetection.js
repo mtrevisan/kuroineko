@@ -426,6 +426,8 @@ define(['tools/lang/recognition/NGrams', 'tools/lang/recognition/Markov', 'tools
 
 	/** Apply Gergely Pethő & Eszter Mózes (2014) */
 	function identify(text, callback){
+		//return run types that used for 40% or more of the string always return basic latin if found more than 15%
+		//and extended additional latin if over 10% (for Vietnamese)
 		var scripts = findRuns(text),
 			code;
 
@@ -476,7 +478,6 @@ define(['tools/lang/recognition/NGrams', 'tools/lang/recognition/Markov', 'tools
 			//count the number of characters in each character block
 			charCount = text.match(unicodeBlockTests[lang]);
 
-			//return run types that used for 40% or more of the string always return basic latin if found more than 15% and extended additional latin if over 10% (for Vietnamese)
 			relevantRuns[lang] = (charCount? charCount.length: 0) / text.length;
 		});
 		return relevantRuns;
