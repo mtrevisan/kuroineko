@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<link rel="shortcut icon" href="../favicon.png" />
+
+	<title>test</title>
+
+	<script src="../app/AMDLoader.js"></script>
+
+	<script>
+		AMDLoader.config = {
+			baseUrl: '../app',
+			paths: {
+				libs: '../libs'
+			}
+		};
+
+
+		require(['js!tools/lang/Typo.js', 'text!tools/lang/morphology/dictionaries/en_US.aff', 'text!tools/lang/morphology/dictionaries/en_US.dic'], function(aff, dic){
+			var dictionary = new Typo(aff, dic);
+
+			var suggestions = dictionary.suggest('mispeling');
+
+			console.log(suggestions);
+		});
+
+	</script>
+</head>
+
+<body>
+</body>
+</html>
