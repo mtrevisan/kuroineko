@@ -18,7 +18,7 @@
 		};
 
 
-		require(['js!tools/lang/Typo.js', 'text!tools/lang/morphology/dictionaries/en_US.aff', 'text!tools/lang/morphology/dictionaries/en_US.dic'], function(aff, dic){
+		require(['tools/lang/Typo', 'text!tools/lang/morphology/dictionaries/en_US.aff', 'text!tools/lang/morphology/dictionaries/en_US.dic'], function(Typo, aff, dic){
 			var dictionary = new Typo(aff, dic);
 
 			var suggestions = dictionary.suggest('mispeling');
