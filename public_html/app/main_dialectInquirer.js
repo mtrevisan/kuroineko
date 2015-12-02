@@ -89,7 +89,10 @@ define(['tools/data/mining/DecisionTree', 'HTMLHelper', 'tools/ui/Validator', 't
 				});
 			};
 
-			CommHelper.getClientPositionData().then(common, common);
+			try{ CommHelper.getClientPositionData().then(common, common); }
+			catch(e){
+				common({});
+			}
 		};
 
 		var fnSupervisorConfirmClass = function(nodeClass){
