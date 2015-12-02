@@ -305,7 +305,7 @@ define(function(){
 			return flags;
 		}
 		else if(this.flags.FLAG === 'num')
-			return textCode.split(',');
+			return textCodes.split(',');
 	};
 
 	/**
