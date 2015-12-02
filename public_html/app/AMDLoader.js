@@ -174,6 +174,9 @@ var AMDLoader = (function(doc){
 				var promises = dependencies.map(getDependencyPromise, this);
 
 				Promise.all(promises).then(function(result){
+					//remove results from js! plugins
+					result = result.filter(function(res, idx){ return (dependencies[idx].indexOf('js!') < 0); });
+
 					definition.apply(this, result);
 				});
 			}
@@ -399,6 +402,8 @@ var AMDLoader = (function(doc){
 		var xhr = new XMLHttpRequest();
 		xhr.open('GET', module.url, true);
 		xhr.responseType = responseType;
+		if(xhr.overrideMimeType)
+			xhr.overrideMimeType('text/plain; charset=' + (module.charset || 'UTF-8'));
 		xhr.onreadystatechange = function(){
 			if(xhr.readyState == 4){
 				if(xhr.status == 200)
