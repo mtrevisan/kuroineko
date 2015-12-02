@@ -68,24 +68,68 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 	var getClientPositionData = function(){
 		return new Promise(function(resolve, reject){
-			get('http://www.telize.com/geoip')
+			get('http://geoip.nekudo.com/api')
 				.then(function(response){
 					response = JSON.parse(response);
 
 					var position = {
 						ip: response.ip,
 						city: response.city,
-						zipcode: response.postal_code,
-						region: response.region,
-						regionCode: response.region_code,
-						country: response.country,
-						countryCode: response.country_code3,
+						country: response.country.name,
+						latitude: response.location.latitude,
+						longitude: response.location.longitude
+					};
+
+					resolve(position);
+				}, reject);
+			/*get('http://freegeoip.net/json/')
+				.then(function(response){
+					response = JSON.parse(response);
+
+					var position = {
+						ip: response.ip,
+						city: response.city,
+						zipcode: response.zip_code,
+						region: response.region_name,
+						country: response.country_name,
 						latitude: response.latitude,
 						longitude: response.longitude
 					};
 
 					resolve(position);
 				}, reject);
+			get('http://ip-api.com/json')
+				.then(function(response){
+					response = JSON.parse(response);
+
+					var position = {
+						ip: response.query,
+						city: response.city,
+						zipcode: response.zip,
+						region: response.regionName,
+						country: response.country,
+						latitude: response.lat,
+						longitude: response.lon
+					};
+
+					resolve(position);
+				}, reject);
+			get('http://ipinfo.io/json')
+				.then(function(response){
+					response = JSON.parse(response);
+
+					var position = {
+						ip: response.ip,
+						city: response.city,
+						zipcode: response.postal,
+						region: response.region,
+						countryCode: response.country,
+						latitude: response.loc.split(',')[0],
+						longitude: response.loc.split(',')[1]
+					};
+
+					resolve(position);
+				}, reject);/**/
 		});
 	};
 

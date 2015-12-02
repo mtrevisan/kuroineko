@@ -31,7 +31,7 @@ define(['tools/data/random/Random'], function(Random){
 		if(separator != undefined)
 			SEPARATOR = separator;
 
-		reset.call(this);
+		this.reset();
 	};
 
 	Constructor.fromContent = function(order, separator, content){
@@ -228,16 +228,14 @@ define(['tools/data/random/Random'], function(Random){
 		};
 
 		return function(from){
-			if(from && !this.memory[from])
-				return undefined;
+			if(from)
+				return (this.memory[from]? getBranchTotal(this.memory, from): undefined);
 
-			return (from != undefined?
-				getBranchTotal(this.memory, from):
-				this.memory.reduce(function(sum, key){ return sum + getBranchTotal(this, key); }.bind(this.memory), 0));
+			return this.memory.reduce(function(sum, key){ return sum + getBranchTotal(this, key); }.bind(this.memory), 0);
 		};
 	})();
 
-
+ 
 	Constructor.prototype = {
 		constructor: Constructor,
 

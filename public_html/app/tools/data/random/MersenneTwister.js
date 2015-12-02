@@ -19,6 +19,7 @@
  *	</code>
  *	and that will always produce the same random sequence.
  *
+ * @see {@link http://en.wikipedia.org/wiki/Mersenne_twister}
  *	@see {@link https://github.com/boo1ean/mersenne-twister/blob/master/src/mersenne-twister.js}
  *	@see {@link https://github.com/pigulla/mersennetwister/blob/master/src/MersenneTwister.js}
  *
@@ -28,17 +29,57 @@
  */
 define(function(){
 
-		//2^32
-	var MAX_INT = 4294967296.,
-		//period parameter
+	//coefficients for MT19937
+	var W = 32,
+		//degree of recurrence
 		N = 624,
-		//period parameter
+		//middle word, an offset used in the recurrence relation defining the series x, 1 ≤ m < n
 		M = 397,
-		//most significant w-r bits
-		UPPER_MASK = 0x80000000,
-		//least significant r bits
+		//R = 31,
+		//constant vector a, oefficients of the rational normal form twist matrix
+		MATRIX_A = 0x9908B0DF,
+		SHIFT_U = 11,
+		MASK_D = 0xFFFFFFFF,
+		SHIFT_S = 7,
+		MASK_B = 0x9D2C5680,
+		SHIFT_T = 15,
+		MASK_C = 0xEFC60000,
+		SHIFT_L = 18,
+		//least significant r bits ((1 << r) - 1, where r is the separation point of one word, 0 ≤ r ≤ w - 1)
 		LOWER_MASK = 0x7FFFFFFF,
-		MATRIX_A = 0x9908B0DF;
+		//most significant w-r bits (lowest w bits of (not lower_mask), where w is the word size in number of bits)
+		UPPER_MASK = 0x80000000,
+		F = 1812433253;
+
+	/** @private */
+	var is64bitOS = function(){
+		return !!navigator.userAgent.match(/x86[_-]64|x64_64|Win64|x64;|amd64|AMD64|WOW64/);
+	};
+	//coefficients for MT19937-64
+	/*if(is64bitOS()){
+		W = 64;
+		//degree of recurrence
+		N = 312;
+		//middle word, an offset used in the recurrence relation defining the series x, 1 ≤ m < n
+		M = 156;
+		//R = 31;
+		//constant vector a, oefficients of the rational normal form twist matrix
+		MATRIX_A = 0xB5026F5AA96619E9;
+		SHIFT_U = 29;
+		MASK_D = 0x5555555555555555;
+		SHIFT_S = 17;
+		MASK_B = 0x71D67FFFEDA60000;
+		SHIFT_T = 37;
+		MASK_C = 0xFFF7EEE000000000;
+		SHIFT_L = 43;
+		//least significant r bits ((1 << r) - 1, where r is the separation point of one word, 0 ≤ r ≤ w - 1)
+		LOWER_MASK = 0x7FFFFFFFFFFFFFFF;
+		//most significant w-r bits (lowest w bits of (not lower_mask), where w is the word size in number of bits)
+		UPPER_MASK = 0x8000000000000000;
+		F = 6364136223846793005;
+	}/**/
+
+	var MAX_INT = Math.pow(2, W);
 
 
 	/**
@@ -52,7 +93,8 @@ define(function(){
 
 		//the array for the state vector
 		this.mt = new Array(N);
-		this.initialized = false;
+		//index == N + 1 means MT is not initialized
+		this.index = N + 1;
 
 		this.seed(seed);
 	};
@@ -68,15 +110,16 @@ define(function(){
 	var seed = function(seed){
 		this.mt[0] = seed >>> 0;
 		for(var i = 1; i < N; i ++){
-			seed = this.mt[i - 1] ^ (this.mt[i - 1] >>> 30);
-			this.mt[i] = (((((seed & 0xFFFF0000) >>> 16) * 1812433253) << 16) + (seed & 0x0000FFFF) * 1812433253) + i;
+			//MT[i] = lowest w bits of (f * (MT[i-1] xor (MT[i-1] >> (w - 2))) + i)
+			seed = this.mt[i - 1] ^ (this.mt[i - 1] >>> (W - 2));
+			this.mt[i] = (((((seed & 0xFFFF0000) >>> 16) * F) << 16) + (seed & 0x0000FFFF) * F) + i;
 			//See Knuth TAOCP Vol2. 3rd Ed. P.106 for multiplier
-			//In the previous versions, MSBs of the seed affect only MSBs of the array mt[]
+			//In the previous versions, MSBs of the seed affect only MSBs of the array MT[]
 			//2002/01/09 modified by Makoto Matsumoto
-			//for WORDSIZE > 32 machines
+			//for W > 32 machines
 			this.mt[i] >>>= 0;
 		}
-		this.initialized = true;
+		this.index = N;
 	};
 
 	/**
@@ -91,14 +134,14 @@ define(function(){
 
 		var i = 1,
 			j = 0,
-			k = (N > key.length? N: key.length),
+			k = (key.length < N? N: key.length),
 			s;
 		for( ; k; k --){
 			s = this.mt[i - 1] ^ (this.mt[i - 1] >>> 30)
 
 			//non linear
 			this.mt[i] = (this.mt[i] ^ (((((s & 0xFFFF0000) >>> 16) * 1664525) << 16) + ((s & 0x0000FFFF) * 1664525))) + key[j] + j;
-			//for WORDSIZE > 32 machines
+			//for W > 32 machines
 			this.mt[i] >>>= 0;
 			i ++;
 			j ++;
@@ -115,7 +158,7 @@ define(function(){
 
 			//non linear
 			this.mt[i] = (this.mt[i] ^ (((((s & 0xFFFF0000) >>> 16) * 1566083941) << 16) + (s & 0x0000FFFF) * 1566083941)) - i;
-			//for WORDSIZE > 32 machines
+			//for W > 32 machines
 			this.mt[i] >>>= 0;
 			i ++;
 			if(i >= N){
@@ -130,39 +173,46 @@ define(function(){
 
 	/** Generates a random unsigned number on [0, 0xFFFFFFFF] interval */
 	var int32 = function(){
-		//mag01[x] = x * MATRIX_A  for x=0,1
-		var mag01 = new Array(0x00, MATRIX_A),
-			i = (this.initialized? N: N + 1),
-			y, kk;
+		var y;
 
 		//generate n words at one time
-		if(i >= N){
+		if(this.index >= N){
 			//if seed() has not been called, a default initial seed is used
-			if(!this.initialized)
+			if(this.index > N)
 				this.seed(5489);
 
-			for(kk = 0; kk < N - M; kk ++){
-				y = (this.mt[kk] & UPPER_MASK) | (this.mt[kk + 1] & LOWER_MASK);
-				this.mt[kk] = this.mt[kk + M] ^ (y >>> 1) ^ mag01[y & 0x01];
-			}
-			for( ; kk < N - 1; kk ++){
-				y = (this.mt[kk] & UPPER_MASK) | (this.mt[kk + 1] & LOWER_MASK);
-				this.mt[kk] = this.mt[kk + (M - N)] ^ (y >>> 1) ^ mag01[y & 0x01];
-			}
-			y = (this.mt[N - 1] & UPPER_MASK) | (this.mt[0] & LOWER_MASK);
-			this.mt[N - 1] = this.mt[M - 1] ^ (y >>> 1) ^ mag01[y & 0x01];
-
-			i = 0;
+			twist.call(this);
 		}
 
-		y = this.mt[i ++];
+		y = this.mt[this.index ++];
 
 		//tempering
-		y ^= (y >>> 11);
-		y ^= (y << 7) & 0x9D2C5680;
-		y ^= (y << 15) & 0xEFC60000;
-		y ^= (y >>> 18);
+		y ^= (y >>> SHIFT_U) & MASK_D;
+		y ^= (y << SHIFT_S) & MASK_B;
+		y ^= (y << SHIFT_T) & MASK_C;
+		y ^= (y >>> SHIFT_L);
 		return y >>> 0;
+	};
+
+	/**
+	 * Generate the next n values from the series x[i]
+	 *
+	 * @private
+	 */
+	var twist = function(){
+		var y, kk;
+		for(kk = 0; kk < N - M; kk ++){
+			y = (this.mt[kk] & UPPER_MASK) | (this.mt[kk + 1] & LOWER_MASK);
+			this.mt[kk] = this.mt[kk + M] ^ (y >>> 1) ^ ((y & 0x01) * MATRIX_A);
+		}
+		for( ; kk < N - 1; kk ++){
+			y = (this.mt[kk] & UPPER_MASK) | (this.mt[kk + 1] & LOWER_MASK);
+			this.mt[kk] = this.mt[kk + (M - N)] ^ (y >>> 1) ^ ((y & 0x01) * MATRIX_A);
+		}
+		y = (this.mt[N - 1] & UPPER_MASK) | (this.mt[0] & LOWER_MASK);
+		this.mt[N - 1] = this.mt[M - 1] ^ (y >>> 1) ^ ((y & 0x01) * MATRIX_A);
+
+		this.index = 0;
 	};
 
 	/** Generates a random unsigned number on [0,0x7FFFFFFF] interval */

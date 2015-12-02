@@ -6,7 +6,11 @@
  *
  * @author Mauro Trevisan
  */
-define(function(){
+define(['tools/data/random/MersenneTwister'], function(MersenneTwister){
+
+	/** @constant */
+	var m = new MersenneTwister();
+
 
 	/**
 	 * @param list		Array of objects with key 'char' and value 'count', ex [a: 12, b: 1, ..]
@@ -51,8 +55,8 @@ define(function(){
 			list.$nud = nud;
 		}
 
-		var idx = Math.floor(Math.random() * nud.length);
-		return nud[idx][Math.random() * total < nud[idx][2]? 0: 1];
+		var idx = Math.floor(m.random() * nud.length);
+		return nud[idx][m.random() * total < nud[idx][2]? 0: 1];
 	};
 
  

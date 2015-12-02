@@ -24,7 +24,7 @@ define(function(){
 		this.min = min || 1;
 		this.max = max || min || 4;
 
-		reset.call(this);
+		this.reset();
 	};
 
 	Constructor.unigram = function(){
