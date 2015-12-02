@@ -1,80 +1,83 @@
 /**
  * Spellchecker using Hunspell-style dictionaries.
  *
- * @see {@link https://github.com/cfinke/Typo.js}
+ * @class Hunspell
  *
- * @param {String} affData	The data from the dictionary's .aff file
- * @param {String} dicData	The data from the dictionary's .dic file
- * @param {Object} flags	Flag settings
- * @returns {Typo} A Typo object.
+ * @see {@link https://github.com/cfinke/Typo.js}
  */
-var Typo = function(affData, dicData, flags){
+define(function(){
 
-	this.rules = {};
-	this.dictionaryTable = {};
-	this.compoundRules = [];
-	this.replacementTable = [];
-	this.flags = flags || {};
-	this.rules = this.parseAFF(affData);
+	/**
+	 * @param {String} affData	The data from the dictionary's .aff file
+	 * @param {String} dicData	The data from the dictionary's .dic file
+	 * @param {Object} flags	Flag settings
+	 * @returns {Typo} A Typo object.
+	 */
+	var Constructor = function(affData, dicData, flags){
+		this.rules = {};
+		this.dictionaryTable = {};
+		this.compoundRules = [];
+		this.replacementTable = [];
+		this.flags = flags || {};
+		this.rules = parseAFF.call(this, affData);
 
-	//save the rule codes that are used in compound rules
-	this.compoundRuleCodes = {};
+		//save the rule codes that are used in compound rules
+		this.compoundRuleCodes = {};
 
-	var ilen = this.compoundRules.length,
-		i, j,
-		jlen, rule;
-	for(i = 0; i < ilen; i ++){
-		rule = this.compoundRules[i];
-		jlen = rule.length;
-		for(j = 0; j < jlen; j ++)
-			this.compoundRuleCodes[rule[j]] = [];
-	}
-
-	//if we add this ONLYINCOMPOUND flag to this.compoundRuleCodes, then _parseDIC will do the work of saving the list of words
-	//that are compound-only
-	if('ONLYINCOMPOUND' in this.flags)
-		this.compoundRuleCodes[this.flags.ONLYINCOMPOUND] = [];
-
-	this.dictionaryTable = this.parseDIC(dicData);
-
-	//get rid of any codes from the compound rule codes that are never used (or that were special regex characters)
-	//not especially necessary...
-	for(i in this.compoundRuleCodes)
-		if(!this.compoundRuleCodes[i].length)
-			delete this.compoundRuleCodes[i];
-
-	//build the full regular expressions for each compound rule
-	//(I have a feeling (but no confirmation yet) that this method of testing for compound words is probably slow)
-	var ruleText, expressionText, chr;
-	ilen = this.compoundRules.length;
-	for(i = 0; i < ilen; i ++){
-		ruleText = this.compoundRules[i];
-
-		expressionText = '';
-
-		jlen = ruleText.length;
-		for(j = 0; j < jlen; j ++){
-			chr = ruleText[j];
-			expressionText += (chr in this.compoundRuleCodes? '(' + this.compoundRuleCodes[chr].join('|') + ')': chr);
+		var ilen = this.compoundRules.length,
+			i, j,
+			jlen, rule;
+		for(i = 0; i < ilen; i ++){
+			rule = this.compoundRules[i];
+			jlen = rule.length;
+			for(j = 0; j < jlen; j ++)
+				this.compoundRuleCodes[rule[j]] = [];
 		}
 
-		this.compoundRules[i] = new RegExp(expressionText, 'i');
-	}
+		//if we add this ONLYINCOMPOUND flag to this.compoundRuleCodes, then _parseDIC will do the work of saving the list of words
+		//that are compound-only
+		if('ONLYINCOMPOUND' in this.flags)
+			this.compoundRuleCodes[this.flags.ONLYINCOMPOUND] = [];
 
-	return this;
-};
+		this.dictionaryTable = parseDIC.call(this, dicData);
 
-Typo.prototype = {
+		//get rid of any codes from the compound rule codes that are never used (or that were special regex characters)
+		//not especially necessary...
+		for(i in this.compoundRuleCodes)
+			if(!this.compoundRuleCodes[i].length)
+				delete this.compoundRuleCodes[i];
+
+		//build the full regular expressions for each compound rule
+		//(I have a feeling (but no confirmation yet) that this method of testing for compound words is probably slow)
+		var ruleText, expressionText, chr;
+		ilen = this.compoundRules.length;
+		for(i = 0; i < ilen; i ++){
+			ruleText = this.compoundRules[i];
+
+			expressionText = '';
+
+			jlen = ruleText.length;
+			for(j = 0; j < jlen; j ++){
+				chr = ruleText[j];
+				expressionText += (chr in this.compoundRuleCodes? '(' + this.compoundRuleCodes[chr].join('|') + ')': chr);
+			}
+
+			this.compoundRules[i] = new RegExp(expressionText, 'i');
+		}
+
+		return this;
+	};
+
 	/**
 	 * Loads a Typo instance from a hash of all of the Typo properties.
 	 *
 	 * @param {object} obj	A hash of Typo properties, probably gotten from a JSON.parse(JSON.stringify(typo_instance))
 	 */
-	load: function(obj){
+	var load = function(obj){
 		for(var i in obj)
 			this[i] = obj[i];
 		return this;
-	},
+	};
 
 	/**
 	 * Parse the rules out from a .aff file.
@@ -82,11 +85,11 @@ Typo.prototype = {
 	 * @param {String} data	The contents of the affix file
 	 * @returns {object}		The rules from the file
 	 */
-	parseAFF: function(data){
+	var parseAFF = function(data){
 		var rules = {};
 
 		//remove comment lines
-		data = this.removeAffixComments(data);
+		data = removeAffixComments.call(this, data);
 
 		var lines = data.split('\n');
 
@@ -116,7 +119,7 @@ Typo.prototype = {
 					if(charactersToAdd === '0')
 						charactersToAdd = '';
 
-					var continuationClasses = this.parseRuleCodes(additionParts[1]);
+					var continuationClasses = parseRuleCodes.call(this, additionParts[1]);
 					var regexToMatch = lineParts[4];
 
 					var entry = {};
@@ -165,7 +168,7 @@ Typo.prototype = {
 		}
 
 		return rules;
-	},
+	};
 
 	/**
 	 * Removes comment lines and then cleans up blank lines and trailing whitespace.
@@ -173,7 +176,7 @@ Typo.prototype = {
 	 * @param {String} data The data from an affix file.
 	 * @return {String} The cleaned-up data.
 	 */
-	removeAffixComments: function(data){
+	var removeAffixComments = function(data){
 		// Remove comments
 		data = data.replace(/#.*$/mg, '');
 
@@ -187,7 +190,7 @@ Typo.prototype = {
 		data = data.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
 
 		return data;
-	},
+	};
 
 	/**
 	 * Parses the words out from the .dic file.
@@ -196,8 +199,8 @@ Typo.prototype = {
 	 * @returns object The lookup table containing all of the words and
 	 *                 word forms from the dictionary.
 	 */
-	parseDIC: function(data){
-		data = this.removeDicComments(data);
+	var parseDIC = function(data){
+		data = removeDicComments.call(this, data);
 
 		var lines = data.split('\n');
 		var dictionaryTable = {};
@@ -220,7 +223,7 @@ Typo.prototype = {
 
 			//now for each affix rule, generate that form of the word
 			if(parts.length > 1){
-				var ruleCodesArray = this.parseRuleCodes(parts[1]);
+				var ruleCodesArray = parseRuleCodes.call(this, parts[1]);
 
 				//save the ruleCodes for compound word situations
 				if(!('NEEDAFFIX' in this.flags) || ruleCodesArray.indexOf(this.flags.NEEDAFFIX) < 0)
@@ -231,7 +234,7 @@ Typo.prototype = {
 					var rule = this.rules[code];
 
 					if(rule){
-						var newWords = this.applyRule(word, rule);
+						var newWords = applyRule.call(this, word, rule);
 						for(var ii = 0, iilen = newWords.length; ii < iilen; ii ++){
 							var newWord = newWords[ii];
 							addWord(newWord, []);
@@ -241,7 +244,7 @@ Typo.prototype = {
 									var combineCode = ruleCodesArray[k];
 									var combineRule = this.rules[combineCode];
 									if(combineRule && combineRule.combineable && (rule.type != combineRule.type)){
-										var otherNewWords = this.applyRule(newWord, combineRule);
+										var otherNewWords = applyRule.call(this, newWord, combineRule);
 										for(var iii = 0, iiilen = otherNewWords.length; iii < iiilen; iii ++)
 											addWord(otherNewWords[iii], []);
 									}
@@ -259,7 +262,7 @@ Typo.prototype = {
 		}
 
 		return dictionaryTable;
-	},
+	};
 
 	/**
 	 * Removes comment lines and then cleans up blank lines and trailing whitespace.
@@ -267,7 +270,7 @@ Typo.prototype = {
 	 * @param {String} data The data from a .dic file.
 	 * @return {String} The cleaned-up data.
 	 */
-	removeDicComments: function(data){
+	var removeDicComments = function(data){
 		// I can't find any official documentation on it, but at least the de_DE
 		// dictionary uses tab-indented lines as comments.
 
@@ -286,9 +289,9 @@ Typo.prototype = {
 		data = data.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
 
 		return data;
-	},
+	};
 
-	parseRuleCodes: function(textCodes){
+	var parseRuleCodes = function(textCodes){
 		if(!textCodes)
 			return [];
 		else if(!('FLAG' in this.flags))
@@ -303,7 +306,7 @@ Typo.prototype = {
 		}
 		else if(this.flags.FLAG === 'num')
 			return textCode.split(',');
-	},
+	};
 
 	/**
 	 * Applies an affix rule to a word.
@@ -312,7 +315,7 @@ Typo.prototype = {
 	 * @param {Object} rule The affix rule.
 	 * @returns {String[]} The new words generated by the rule.
 	 */
-	applyRule: function(word, rule){
+	var applyRule = function(word, rule){
 		var entries = rule.entries;
 		var newWords = [];
 
@@ -337,7 +340,7 @@ Typo.prototype = {
 						var continuationRule = this.rules[entry.continuationClasses[j]];
 
 						if(continuationRule)
-							newWords = newWords.concat(this.applyRule(newWord, continuationRule));
+							newWords = newWords.concat(applyRule.call(this, newWord, continuationRule));
 						/*
 						 else {
 							 // This shouldn't happen, but it does, at least in the de_DE dictionary.
@@ -350,7 +353,7 @@ Typo.prototype = {
 		}
 
 		return newWords;
-	},
+	};
 
 	/**
 	 * Checks whether a word or a capitalization variant exists in the current dictionary.
@@ -362,10 +365,10 @@ Typo.prototype = {
 	 * @param {String} aWord The word to check.
 	 * @returns {Boolean}
 	 */
-	check: function(aWord){
+	var check = function(aWord){
 		// Remove leading and trailing whitespace
 		var trimmedWord = aWord.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
-		if(this.checkExact(trimmedWord))
+		if(checkExact.call(this, trimmedWord))
 			return true;
 
 		// The exact word is not in the dictionary.
@@ -374,28 +377,28 @@ Typo.prototype = {
 			// Check for a capitalized form of the word.
 			var capitalizedWord = trimmedWord[0] + trimmedWord.substring(1).toLowerCase();
 
-			if(this.hasFlag(capitalizedWord, 'KEEPCASE'))
+			if(hasFlag.call(this, capitalizedWord, 'KEEPCASE'))
 				// Capitalization variants are not allowed for this word.
 				return false;
 
-			if(this.checkExact(capitalizedWord))
+			if(checkExact.call(this, capitalizedWord))
 				return true;
 		}
 
 		var lowercaseWord = trimmedWord.toLowerCase();
 
 		if(lowercaseWord !== trimmedWord){
-			if(this.hasFlag(lowercaseWord, 'KEEPCASE'))
+			if(hasFlag.call(this, lowercaseWord, 'KEEPCASE'))
 				// Capitalization variants are not allowed for this word.
 				return false;
 
 			// Check for a lowercase form
-			if(this.checkExact(lowercaseWord))
+			if(checkExact.call(this, lowercaseWord))
 				return true;
 		}
 
 		return false;
-	},
+	};
 
 	/**
 	 * Checks whether a word exists in the current dictionary.
@@ -403,7 +406,7 @@ Typo.prototype = {
 	 * @param {String} word The word to check.
 	 * @returns {Boolean}
 	 */
-	checkExact: function(word){
+	var checkExact = function(word){
 		var ruleCodes = this.dictionaryTable[word];
 
 		if(typeof ruleCodes === 'undefined'){
@@ -416,11 +419,11 @@ Typo.prototype = {
 		}
 		else{
 			for(var i = 0, ilen = ruleCodes.length; i < ilen; i ++)
-				if(!this.hasFlag(word, 'ONLYINCOMPOUND', ruleCodes[i]))
+				if(!hasFlag.call(this, word, 'ONLYINCOMPOUND', ruleCodes[i]))
 					return true;
 			return false;
 		}
-	},
+	};
 
 	/**
 	 * Looks up whether a given word is flagged with a given flag.
@@ -429,7 +432,7 @@ Typo.prototype = {
 	 * @param {String} flag The flag in question.
 	 * @return {Boolean}
 	 */
-	hasFlag: function(word, flag){
+	var hasFlag = function(word, flag){
 		if(flag in this.flags){
 			if(typeof wordFlags === 'undefined')
 				var wordFlags = Array.prototype.concat.apply([], this.dictionaryTable[word]);
@@ -439,7 +442,7 @@ Typo.prototype = {
 		}
 
 		return false;
-	},
+	};
 
 	/**
 	 * Returns a list of suggestions for a misspelled word.
@@ -451,9 +454,9 @@ Typo.prototype = {
 	 * @param {Number} [limit=5] The maximum number of suggestions to return.
 	 * @returns {String[]} The array of suggestions.
 	 */
-	alphabet: '',
+	var alphabet = '';
 
-	suggest: function(word, limit){
+	var suggest = function(word, limit){
 		if(!limit)
 			limit = 5;
 
@@ -597,13 +600,23 @@ Typo.prototype = {
 			var rv = [];
 
 			for(var i = 0, _len = Math.min(limit, sorted_corrections.length); i < _len; i++)
-				if(!self.hasFlag(sorted_corrections[i][0], 'NOSUGGEST'))
+				if(!hasFlag.call(self, sorted_corrections[i][0], 'NOSUGGEST'))
 					rv.push(sorted_corrections[i][0]);
 
 			return rv;
 		}
 
 		return correct(word);
-	}
+	};
 
-};
+
+	Constructor.prototype = {
+		constructor: Constructor,
+
+		check: check,
+		suggest: suggest
+	};
+
+	return Constructor;
+
+});
