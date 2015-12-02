@@ -7,6 +7,9 @@
  */
 define(function(){
 
+	var EOL = '\r\n';
+
+
 	/**
 	 * @param {String} affData	The data from the dictionary's .aff file
 	 * @param {String} dicData	The data from the dictionary's .dic file
@@ -91,7 +94,7 @@ define(function(){
 		//remove comment lines
 		data = removeAffixComments.call(this, data);
 
-		var lines = data.split('\n');
+		var lines = data.split(EOL);
 
 		for(var i = 0, len = lines.length; i < len; i++){
 			var line = lines[i];
@@ -151,10 +154,17 @@ define(function(){
 				i += numEntries;
 			}
 			else if(ruleType === 'REP'){
-				var lineParts = line.split(/\s+/);
+				var numEntries = parseInt(definitionParts[1], 10);
 
-				if(lineParts.length === 3)
-					this.replacementTable.push([lineParts[1], lineParts[2]]);
+				for(var j = i + 1, _jlen = i + 1 + numEntries; j < _jlen; j++){
+					var line = lines[j];
+
+					var lineParts = line.split(/\s+/);
+					if(lineParts.length === 3)
+						this.replacementTable.push([lineParts[1], lineParts[2]]);
+				}
+
+				i += numEntries;
 			}
 			else{
 				//ONLYINCOMPOUND
@@ -184,7 +194,7 @@ define(function(){
 		data = data.replace(/^\s\s*/m, '').replace(/\s\s*$/m, '');
 
 		// Remove blank lines.
-		data = data.replace(/\n{2,}/g, '\n');
+		data = data.replace(/\r\n{2,}/g, EOL);
 
 		// Trim the entire string
 		data = data.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
@@ -202,7 +212,7 @@ define(function(){
 	var parseDIC = function(data){
 		data = removeDicComments.call(this, data);
 
-		var lines = data.split('\n');
+		var lines = data.split(EOL);
 		var dictionaryTable = {};
 
 		function addWord(word, rules){
@@ -283,7 +293,7 @@ define(function(){
 		data = data.replace(/^\s\s*/m, '').replace(/\s\s*$/m, '');
 
 		// Remove blank lines.
-		data = data.replace(/\n{2,}/g, '\n');
+		data = data.replace(/\r\n{2,}/g, EOL);
 
 		// Trim the entire string
 		data = data.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
