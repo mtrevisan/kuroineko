@@ -81,13 +81,13 @@ define(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 			if(ruleType == 'PFX' || ruleType == 'SFX')
 				i += parseSuffix.call(this, ruleType, definitionParts, lines, i);
 			else if(ruleType == 'COMPOUNDRULE')
-				i += parseCompoundRule(definitionParts, lines, i);
+				i += parseCompoundRule.call(this, definitionParts, lines, i);
 			else if(ruleType == 'REP')
-				i += parseRep(definitionParts, lines, i);
+				i += parseRep.call(this, definitionParts, lines, i);
 			else if(ruleType == 'ICONV')
-				i += parseIConv(definitionParts, lines, i);
+				i += parseIConv.call(this, definitionParts, lines, i);
 			else if(ruleType == 'MAP')
-				i += parseMap(definitionParts, lines, i);
+				i += parseMap.call(this, definitionParts, lines, i);
 			else if(ruleType == 'NAME' || ruleType == 'VERSION')
 				this.flags[ruleType] = definitionParts.join(' ');
 			else{
