@@ -1229,7 +1229,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 				origins.push(origin);
 
 			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT6) + MARKER_FLAGS);
-			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT6 + 'do').replace(/do$/, '(d)[oaie]') + '/' + FINAL_CONSONANT_VOICING_MARK);
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT6 + 'o').replace(/o$/, '[oaie]'));
+			insert(paradigm, theme, verb.infinitive, origin, unmarkDefaultStress(themes.themeT6 + 'do').replace(/do$/, 'd[oaie]') + '/' + FINAL_CONSONANT_VOICING_MARK);
 		}
 	};
 
