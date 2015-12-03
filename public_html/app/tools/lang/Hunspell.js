@@ -69,10 +69,7 @@ define(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 		var lines = data.split(/\r?\n/),
 			len = lines.length,
 			i,
-			definitionParts, ruleType,
-			ruleCode, combineable, numEntries, entries,
-			j, sublen,
-			lineParts, charactersToRemove, additionParts, charactersToAdd, continuationClasses, regexToMatch, entry;
+			definitionParts, ruleType;
 		for(i = 0; i < len; i ++){
 			if(!lines[i])
 				continue;
@@ -81,100 +78,16 @@ define(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 
 			ruleType = definitionParts.shift();
 
-			if(ruleType == 'PFX' || ruleType == 'SFX'){
-				ruleCode = definitionParts[0];
-				combineable = (definitionParts[1] == 'Y');
-				numEntries = parseInt(definitionParts[2], 10);
-
-				entries = [];
-				sublen = i + 1 + numEntries;
-				for(j = i + 1; j < sublen; j ++){
-					lineParts = lines[j].split(SEPARATOR);
-					charactersToRemove = lineParts[2];
-
-					additionParts = lineParts[3].split('/');
-
-					charactersToAdd = additionParts[0];
-					if(charactersToAdd == '0')
-						charactersToAdd = '';
-
-					continuationClasses = parseRuleCodes.call(this, additionParts[1]);
-					regexToMatch = lineParts[4];
-
-					entry = {
-						add: charactersToAdd
-					};
-					if(continuationClasses.length)
-						entry.continuationClasses = continuationClasses;
-					if(regexToMatch && regexToMatch != '.')
-						entry.match = new RegExp(ruleType == 'SFX'? regexToMatch + '$': '^' + regexToMatch);
-					if(charactersToRemove != '0')
-						entry.remove = new RegExp(ruleType == 'SFX'? charactersToRemove + '$': '^' + charactersToRemove);
-					entries.push(entry);
-				}
-
-				this.rules[ruleCode] = {type: ruleType, combineable: combineable, entries: entries};
-
-				i += numEntries;
-			}
-			else if(ruleType == 'COMPOUNDRULE'){
-				numEntries = parseInt(definitionParts[0], 10);
-
-				sublen = i + 1 + numEntries;
-				for(j = i + 1; j < sublen; j ++){
-					lineParts = lines[j].split(SEPARATOR);
-					this.compoundRules.push(lineParts[1]);
-				}
-
-				//save the rule codes that are used in compound rules
-				this.compoundRules.forEach(function(rule){
-					rule.split('').forEach(function(r){
-						this[r] = [];
-					}, this);
-				}, this.compoundRuleCodes);
-
-				//if there is the ONLYINCOMPOUND flag then parseDIC will do the work of saving the list of words that are compound-only
-				if('ONLYINCOMPOUND' in this.flags)
-					this.compoundRuleCodes[this.flags.ONLYINCOMPOUND] = [];
-
-				i += numEntries;
-			}
-			else if(ruleType == 'REP'){
-				numEntries = parseInt(definitionParts[0], 10);
-
-				sublen = i + 1 + numEntries;
-				for(j = i + 1; j < sublen; j ++){
-					lineParts = lines[j].split(SEPARATOR);
-					if(lineParts.length == 3)
-						this.replacementTable.push([lineParts[1], lineParts[2]]);
-				}
-
-				i += numEntries;
-			}
-			else if(ruleType == 'ICONV'){
-				numEntries = parseInt(definitionParts[0], 10);
-
-				sublen = i + 1 + numEntries;
-				for(j = i + 1; j < sublen; j ++){
-					lineParts = lines[j].split(SEPARATOR);
-					if(lineParts.length == 3)
-						this.iconvTable.push([lineParts[1], lineParts[2]]);
-				}
-
-				i += numEntries;
-			}
-			else if(ruleType == 'MAP'){
-				numEntries = parseInt(definitionParts[0], 10);
-
-				sublen = i + 1 + numEntries;
-				for(j = i + 1; j < sublen; j ++){
-					lineParts = lines[j].split(SEPARATOR);
-					if(lineParts.length == 2)
-						this.mapTable.push(lineParts[1]);
-				}
-
-				i += numEntries;
-			}
+			if(ruleType == 'PFX' || ruleType == 'SFX')
+				i += parseSuffix.call(this, ruleType, definitionParts, lines, i);
+			else if(ruleType == 'COMPOUNDRULE')
+				i += parseCompoundRule(definitionParts, lines, i);
+			else if(ruleType == 'REP')
+				i += parseRep(definitionParts, lines, i);
+			else if(ruleType == 'ICONV')
+				i += parseIConv(definitionParts, lines, i);
+			else if(ruleType == 'MAP')
+				i += parseMap(definitionParts, lines, i);
 			else if(ruleType == 'NAME' || ruleType == 'VERSION')
 				this.flags[ruleType] = definitionParts.join(' ');
 			else{
@@ -192,6 +105,115 @@ define(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 				this.flags[ruleType] = definitionParts[0];
 			}
 		}
+	};
+
+	/** @private */
+	var parseSuffix = function(ruleType, definitionParts, lines, i){
+		var ruleCode = definitionParts[0],
+			combineable = (definitionParts[1] == 'Y'),
+			numEntries = parseInt(definitionParts[2], 10);
+
+		var entries = [],
+			sublen = i + 1 + numEntries,
+			j, lineParts, charactersToRemove, additionParts, charactersToAdd, continuationClasses, regexToMatch, entry;
+		for(j = i + 1; j < sublen; j ++){
+			lineParts = lines[j].split(SEPARATOR);
+			charactersToRemove = lineParts[2];
+
+			additionParts = lineParts[3].split('/');
+
+			charactersToAdd = additionParts[0];
+			if(charactersToAdd == '0')
+				charactersToAdd = '';
+
+			continuationClasses = parseRuleCodes.call(this, additionParts[1]);
+			regexToMatch = lineParts[4];
+
+			entry = {
+				add: charactersToAdd
+			};
+			if(continuationClasses.length)
+				entry.continuationClasses = continuationClasses;
+			if(regexToMatch && regexToMatch != '.')
+				entry.match = new RegExp(ruleType == 'SFX'? regexToMatch + '$': '^' + regexToMatch);
+			if(charactersToRemove != '0')
+				entry.remove = new RegExp(ruleType == 'SFX'? charactersToRemove + '$': '^' + charactersToRemove);
+			entries.push(entry);
+		}
+
+		this.rules[ruleCode] = {type: ruleType, combineable: combineable, entries: entries};
+
+		return numEntries;
+	};
+
+	/** @private */
+	var parseCompoundRule = function(definitionParts, lines, i){
+		var numEntries = parseInt(definitionParts[0], 10);
+
+		var sublen = i + 1 + numEntries,
+			j, lineParts;
+		for(j = i + 1; j < sublen; j ++){
+			lineParts = lines[j].split(SEPARATOR);
+			this.compoundRules.push(lineParts[1]);
+		}
+
+		//save the rule codes that are used in compound rules
+		this.compoundRules.forEach(function(rule){
+			rule.split('').forEach(function(r){
+				this[r] = [];
+			}, this);
+		}, this.compoundRuleCodes);
+
+		//if there is the ONLYINCOMPOUND flag then parseDIC will do the work of saving the list of words that are compound-only
+		if('ONLYINCOMPOUND' in this.flags)
+			this.compoundRuleCodes[this.flags.ONLYINCOMPOUND] = [];
+
+		return numEntries;
+	};
+
+	/** @private */
+	var parseRep = function(definitionParts, lines, i){
+		var numEntries = parseInt(definitionParts[0], 10);
+
+		var sublen = i + 1 + numEntries,
+			j, lineParts;
+		for(j = i + 1; j < sublen; j ++){
+			lineParts = lines[j].split(SEPARATOR);
+			if(lineParts.length == 3)
+				this.replacementTable.push([new RegExp(lineParts[1], 'g'), lineParts[2]]);
+		}
+
+		return numEntries;
+	};
+
+	/** @private */
+	var parseIConv = function(definitionParts, lines, i){
+		var numEntries = parseInt(definitionParts[0], 10);
+
+		var sublen = i + 1 + numEntries,
+			j, lineParts;
+		for(j = i + 1; j < sublen; j ++){
+			lineParts = lines[j].split(SEPARATOR);
+			if(lineParts.length == 3)
+				this.iconvTable.push([lineParts[1], lineParts[2]]);
+		}
+
+		return numEntries;
+	};
+
+	/** @private */
+	var parseMap = function(definitionParts, lines, i){
+		var numEntries = parseInt(definitionParts[0], 10);
+
+		var sublen = i + 1 + numEntries,
+			j, lineParts;
+		for(j = i + 1; j < sublen; j ++){
+			lineParts = lines[j].split(SEPARATOR);
+			if(lineParts.length == 2)
+				this.mapTable.push(lineParts[1]);
+		}
+
+		return numEntries;
 	};
 
 	/**
@@ -448,18 +470,17 @@ define(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 			return [word];
 
 		//check the replacement table
-		var len = this.replacementTable.length,
-			i, entry, correctedWord;
-		for(i = 0; i < len; i ++){
-			entry = this.replacementTable[i];
+		var correctedWord;
+		var found = this.replacementTable.some(function(entry){
 			if(word.indexOf(entry[0]) >= 0){
 				correctedWord = word.replace(entry[0], entry[1]);
 				if(this.check(correctedWord))
-					return [correctedWord];
+					return true;
 			}
-		}
+			return false;
+		}, this);
 
-		return this.spellchecker.suggest(word);
+		return (found? [correctedWord]: this.spellchecker.suggest(word));
 	};
 
 
