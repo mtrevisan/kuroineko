@@ -331,8 +331,7 @@ define(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 	 * @private
 	 */
 	var applyRule = function(word, rule){
-		var entries = rule.entries,
-			newWords = [],
+		var newWords = [],
 			newWord;
 		rule.entries.forEach(function(entry){
 			if(!entry.match || word.match(entry.match)){
@@ -423,7 +422,7 @@ define(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 	var hasFlag = function(word, flag, wordFlags){
 		if(flag in this.flags){
 			if(typeof wordFlags == 'undefined')
-				var wordFlags = [].concat(this.dictionaryTable[word]);
+				wordFlags = [].concat(this.dictionaryTable[word]);
 
 			if(wordFlags && wordFlags.indexOf(this.flags[flag]) >= 0)
 				return true;
