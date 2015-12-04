@@ -38,6 +38,7 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme'], function(St
 		return undefined;
 	};
 
+	//NOTE: duplicated in Grapheme
 	var suppressStress = function(word){
 		return word.replace(/[àèéíòóú]/g, function(chr){
 			return 'aeeioou'['àèéíòóú'.indexOf(chr)];
@@ -85,7 +86,9 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme'], function(St
 			tmp;
 		if(idx >= 0){
 			//exclude unmark from words that can be truncated like "fenisié(de)" or "(g)à"
-			tmp = (word[idx + 1] != '('
+			tmp = ((word[idx - 1] != ')' || word[idx + 1] != '(')
+					&& !Grapheme.isDiphtong(word.substr(idx, 2))
+					&& !Grapheme.isHyatus(word.substr(idx, 2))
 					&& !word.match(/^(re)?\(?g?\)?(à\/è|à|é|ò)[oaie]?$/)
 					&& !word.match(/^\(?x?\)?é$|^s[éí][oaie]?$/)
 					&& !word.match(/^((r[ei])?d[àé]|(kon(tra)?|likue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?f[àé]|(mal|move|soto)?st[àé])[oaie]?$/)
@@ -93,7 +96,7 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme'], function(St
 					&& !word.match(/^s[àò][oaie]?$/)
 					&& !word.match(/^(|as?|des?|es|kon|pro|re|so)tr[àé][oaie]?$/)?
 				word.replace(/[àéíóú]/g, function(chr){ return 'aeiou'['àéíóú'.indexOf(chr)]; }): word);
-			if(word == markDefaultStress(tmp))
+			if(tmp != word && markDefaultStress(tmp) == word)
 				word = tmp;
 		}
 

@@ -65,8 +65,9 @@ define(function(){
 		}, this.dictionary);
 
 		//calculate logarithm of probability
-		var logSize = Math.log(Object.keys(this.dictionary).length);
-		Object.keys(this.dictionary).forEach(function(word){
+		var keys = Object.keys(this.dictionary),
+			logSize = Math.log(keys.length);
+		keys.forEach(function(word){
 			this[word] = Math.log(this[word]) - logSize;
 		}, this.dictionary);
 	};
@@ -89,10 +90,18 @@ define(function(){
 		input[word.toLowerCase()] = 0;
 		var candidates = calculateNEditSet.call(this, input, {}, distance || 2);
 
-		return {
-			candidates: calculateRelativeProbabilitiesFromLog(candidates),
+		//calculateRelativeProbabilitiesFromLog(candidates);
+
+		var keys = Object.keys(candidates),
+			results = [];
+		keys.forEach(function(key){ results.push([key, this[key]]); }, candidates);
+		results.sort(function(a, b){ return b[1] - a[1]; });
+
+		return results;
+		/*return {
+			candidates: candidates,
 			sortedKeys: sortKeysByMoreProbable(candidates)
-		};
+		};*/
 	};
 
 	/**

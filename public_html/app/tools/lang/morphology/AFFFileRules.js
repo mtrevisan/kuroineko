@@ -1,9 +1,11 @@
 /**
  * @class AFFFileRules
  *
+ * @see {@link http://pwet.fr/man/linux/fichiers_speciaux/hunspell}
+ *
  * @author Mauro Trevisan
  */
-define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morphology/Themizer', 'tools/lang/phonology/Syllabator', 'tools/data/ArrayHelper'], function(Word, Dialect, Themizer, Syllabator, ArrayHelper){
+define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lang/Dialect', 'tools/lang/morphology/Themizer', 'tools/lang/phonology/Syllabator', 'tools/data/ArrayHelper'], function(Word, Grapheme, Dialect, Themizer, Syllabator, ArrayHelper){
 
 	/** @constant */
 	var REGULAR = 'regular',
@@ -229,7 +231,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		printReductions(substantives, 'sostantivi plurali');
 
 		//dict: -er/PLANTS_AND_CRAFTS, -rol/PLANTS_AND_CRAFTS, -dor/PLANTS_AND_CRAFTS, -tor/PLANTS_AND_CRAFTS
-		printReductions(plantsAndCrafts, 'piante e mistièri');
+//		printReductions(plantsAndCrafts, 'piante e mistièri');
 	};
 
 	var generateTheme = function(verbs, infinitiveThemes, theme, originTheme, flags, k){
@@ -817,7 +819,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 		if(idx >= 0){
 			syll = Syllabator.syllabate(word);
 			//exclude unmark from words that can be truncated like "fenisié(de)" or "(g)à"
-			tmp = ((syll.syllabes.length > 1 || syll.syllabes[0].match(/[^aeiouàèéíòóú]$/))
+			tmp = ((syll.syllabes.length > 1 || word.match(/[^aeiouàèéíòóú]$/))
+					&& !Grapheme.isDiphtong(word.substr(idx, 2))
+					&& !Grapheme.isHyatus(word.substr(idx, 2))
 					&& !word.match(/^(re)?\(?g?\)?(à\/è|à|é|ò)[oaie]?$/)
 					&& !word.match(/^\(?x?\)?é$|^s[éí][oaie]?$/)
 					&& !word.match(/^((r[ei])?d[àé]|(kon(tra)?|likue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?f[àé]|(mal|move|soto)?st[àé])[oaie]?$/)
@@ -825,7 +829,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/Dialect', 'tools/lang/morpholog
 					&& !word.match(/^s[àò][oaie]?$/)
 					&& !word.match(/^(|as?|des?|es|kon|pro|re|so)tr[àé][oaie]?$/)?
 				word.replace(/[àéíóú]/g, function(chr){ return 'aeiou'['àéíóú'.indexOf(chr)]; }): word);
-			if(word == Word.markDefaultStress(tmp))
+			if(Word.markDefaultStress(tmp) == word)
 				word = tmp;
 		}
 

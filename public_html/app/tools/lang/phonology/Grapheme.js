@@ -31,7 +31,7 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 	};
 
 	var isEterophonicSequence = function(group){
-		return group.match(/[^aeiouàèéíòóú][iju][àèéíòóú]/);
+		return group.match(/(^|[^aeiouàèéíòóú])[iju][àèéíòóú]/);
 	};
 
 

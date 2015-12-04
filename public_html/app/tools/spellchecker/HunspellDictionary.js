@@ -1,11 +1,11 @@
 /**
- * Spellchecker using Hunspell-style dictionaries.
+ * Hunspell-style dictionaries.
  *
- * @class Hunspell
+ * @class HunspellDictionary
  *
  * @see {@link https://github.com/cfinke/Typo.js}
  */
-define(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
+define(function(){
 
 	var EOL = '\r\n',
 		SEPARATOR = /\s+/;
@@ -15,36 +15,14 @@ define(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 	 * @param {String} affData	The data from the dictionary's .aff file
 	 * @param {String} dicData	The data from the dictionary's .dic file
 	 * @param {Object} flags	Flag settings
-	 * @returns {Typo} A Hunspell object
+	 * @returns {Typo} A HunspellDictionary object
 	 */
 	var Constructor = function(affData, dicData, flags){
 		this.flags = flags || {};
 
 		parseAFF.call(this, affData);
 
-		this.spellchecker = new NorvigSpellChecker(this.flags.TRY);
-
 		parseDIC.call(this, dicData);
-
-		this.spellchecker.readDictionary(Object.keys(this.dictionaryTable));
-
-		//get rid of any codes from the compound rule codes that are never used (or that were special regex characters)
-		//not especially necessary...
-		Object.keys(this.compoundRuleCodes).forEach(function(code){
-			if(!code.length)
-				delete this[code];
-		}, this.compoundRuleCodes);
-
-		//build the full regular expressions for each compound rule
-		//(I have a feeling (but no confirmation yet) that this method of testing for compound words is probably slow)
-		this.compoundRules.forEach(function(ruleText, idx){
-			var expressionText = '';
-			ruleText.split('').forEach(function(chr){
-				expressionText += (chr in this? '(' + this[chr].join('|') + ')': chr);
-			}, this.compoundRuleCodes);
-
-			this.compoundRules[idx] = new RegExp(expressionText, 'i');
-		}, this);
 	};
 
 	/**
@@ -83,7 +61,7 @@ define(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 			else if(ruleType == 'COMPOUNDRULE')
 				i += parseCompoundRule.call(this, definitionParts, lines, i);
 			else if(ruleType == 'REP')
-				i += parseRep.call(this, definitionParts, lines, i);
+				i += parseReplacementTable.call(this, definitionParts, lines, i);
 			else if(ruleType == 'ICONV')
 				i += parseIConv.call(this, definitionParts, lines, i);
 			else if(ruleType == 'MAP')
@@ -168,11 +146,29 @@ define(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 		if('ONLYINCOMPOUND' in this.flags)
 			this.compoundRuleCodes[this.flags.ONLYINCOMPOUND] = [];
 
+		//get rid of any codes from the compound rule codes that are never used (or that were special regex characters)
+		//not especially necessary...
+		Object.keys(this.compoundRuleCodes).forEach(function(code){
+			if(!code.length)
+				delete this[code];
+		}, this.compoundRuleCodes);
+
+		//build the full regular expressions for each compound rule
+		//(I have a feeling (but no confirmation yet) that this method of testing for compound words is probably slow)
+		this.compoundRules.forEach(function(ruleText, idx){
+			var expressionText = '';
+			ruleText.split('').forEach(function(chr){
+				expressionText += (chr in this? '(' + this[chr].join('|') + ')': chr);
+			}, this.compoundRuleCodes);
+
+			this.compoundRules[idx] = new RegExp(expressionText, 'i');
+		}, this);
+
 		return numEntries;
 	};
 
 	/** @private */
-	var parseRep = function(definitionParts, lines, i){
+	var parseReplacementTable = function(definitionParts, lines, i){
 		var numEntries = parseInt(definitionParts[0], 10);
 
 		var sublen = i + 1 + numEntries,
@@ -180,7 +176,7 @@ define(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 		for(j = i + 1; j < sublen; j ++){
 			lineParts = lines[j].split(SEPARATOR);
 			if(lineParts.length == 3)
-				this.replacementTable.push([new RegExp(lineParts[1], 'g'), lineParts[2]]);
+				this.replacementTable.push([lineParts[1], lineParts[2]]);
 		}
 
 		return numEntries;
@@ -327,7 +323,7 @@ define(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 		//NOTE: some dictionaries will list the same word multiple times with different rule sets
 		if(!(word in this.dictionaryTable) || typeof this.dictionaryTable[word] != 'object')
 			this.dictionaryTable[word] = [];
-		this.dictionaryTable[word].push(rules);
+		Array.prototype.push.apply(this.dictionaryTable[word], rules);
 	};
 
 	/** @private */
@@ -335,7 +331,7 @@ define(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 		if(!textCodes)
 			return [];
 
-		if(!('FLAG' in this.flags))
+		if(!('FLAG' in this.flags) || this.flags.FLAG == 'UTF-8')
 			return textCodes.split('');
 		if(this.flags.FLAG == 'long')
 			return textCodes.match(/.{2}/g);
@@ -373,123 +369,9 @@ define(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 		return newWords;
 	};
 
-	/**
-	 * Checks whether a word or a capitalization variant exists in the current dictionary.
-	 * The word is trimmed and several variations of capitalizations are checked.
-	 * If you want to check a word without any changes made to it, call <code>checkExact()</code>.
-	 *
-	 * @param {String} word	The word to check.
-	 * @returns {Boolean}
-	 */
-	var check = function(word){
-		//remove leading and trailing whitespace
-		var trimmedWord = word.trim();
-		if(this.checkExact(trimmedWord))
-			return true;
-
-		//the exact word is not in the dictionary
-		if(trimmedWord.toUpperCase() == trimmedWord){
-			//the word was supplied in all uppercase
-			//check for a capitalized form of the word
-			var capitalizedWord = trimmedWord[0] + trimmedWord.substring(1).toLowerCase();
-
-			if(hasFlag.call(this, capitalizedWord, 'KEEPCASE'))
-				//capitalization variants are not allowed for this word
-				return false;
-
-			if(this.checkExact(capitalizedWord))
-				return true;
-		}
-
-		var lowercaseWord = trimmedWord.toLowerCase();
-		if(lowercaseWord != trimmedWord){
-			if(hasFlag.call(this, lowercaseWord, 'KEEPCASE'))
-				//capitalization variants are not allowed for this word
-				return false;
-
-			//check for a lowercase form
-			if(this.checkExact(lowercaseWord))
-				return true;
-		}
-
-		return false;
-	};
-
-	/**
-	 * Checks whether a word exists in the current dictionary.
-	 *
-	 * @param {String} word	The word to check.
-	 * @returns {Boolean}
-	 */
-	var checkExact = function(word){
-		var ruleCodes = this.dictionaryTable[word];
-		if(typeof ruleCodes == 'undefined'){
-			//check if this might be a compound word
-			if('COMPOUNDMIN' in this.flags && word.length >= this.flags.COMPOUNDMIN)
-				return this.compoundRules.some(function(rule){ return word.match(rule); });
-			return false;
-		}
-		return ruleCodes.some(function(code){ return !hasFlag.call(this, word, 'ONLYINCOMPOUND', code); }, this);
-	};
-
-	/**
-	 * Looks up whether a given word is flagged with a given flag.
-	 *
-	 * @param {String} word	The word in question.
-	 * @param {String} flag	The flag in question.
-	 * @return {Boolean}
-	 *
-	 * @private
-	 */
-	var hasFlag = function(word, flag, wordFlags){
-		if(flag in this.flags){
-			if(typeof wordFlags == 'undefined')
-				wordFlags = [].concat(this.dictionaryTable[word]);
-
-			if(wordFlags && wordFlags.indexOf(this.flags[flag]) >= 0)
-				return true;
-		}
-		return false;
-	};
-
-	/**
-	 * Returns a list of suggestions for a misspelled word.
-	 *
-	 * @see {@link http://www.norvig.com/spell-correct.html} for the basis of this suggestor.
-	 * This suggestor is primitive, but it works.
-	 *
-	 * @param {String} word			The misspelling.
-	 * @param {Number} [limit=5]	The maximum number of suggestions to return.
-	 * @returns {Object}				The object of suggestions in the form {sortedKeys: [], candidates: {}}.
-	 */
-	var suggest = function(word, limit){
-		if(!limit)
-			limit = 5;
-
-		if(this.check(word))
-			return [word];
-
-		//check the replacement table
-		var correctedWord;
-		var found = this.replacementTable.some(function(entry){
-			if(word.indexOf(entry[0]) >= 0){
-				correctedWord = word.replace(entry[0], entry[1]);
-				if(this.check(correctedWord))
-					return true;
-			}
-			return false;
-		}, this);
-
-		return (found? [correctedWord]: this.spellchecker.suggest(word));
-	};
-
 
 	Constructor.prototype = {
-		constructor: Constructor,
-
-		check: check,
-		checkExact: checkExact,
-		suggest: suggest
+		constructor: Constructor
 	};
 
 	return Constructor;
