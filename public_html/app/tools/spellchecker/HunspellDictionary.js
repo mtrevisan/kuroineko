@@ -126,9 +126,8 @@ define(function(){
 
 	/** @private */
 	var parseCompoundRule = function(definitionParts, lines, i){
-		var numEntries = parseInt(definitionParts[0], 10);
-
-		var sublen = i + 1 + numEntries,
+		var numEntries = parseInt(definitionParts[0], 10),
+			sublen = i + 1 + numEntries,
 			j, lineParts;
 		for(j = i + 1; j < sublen; j ++){
 			lineParts = lines[j].split(SEPARATOR);
@@ -169,9 +168,8 @@ define(function(){
 
 	/** @private */
 	var parseReplacementTable = function(definitionParts, lines, i){
-		var numEntries = parseInt(definitionParts[0], 10);
-
-		var sublen = i + 1 + numEntries,
+		var numEntries = parseInt(definitionParts[0], 10),
+			sublen = i + 1 + numEntries,
 			j, lineParts;
 		for(j = i + 1; j < sublen; j ++){
 			lineParts = lines[j].split(SEPARATOR);
@@ -184,9 +182,8 @@ define(function(){
 
 	/** @private */
 	var parseIConv = function(definitionParts, lines, i){
-		var numEntries = parseInt(definitionParts[0], 10);
-
-		var sublen = i + 1 + numEntries,
+		var numEntries = parseInt(definitionParts[0], 10),
+			sublen = i + 1 + numEntries,
 			j, lineParts;
 		for(j = i + 1; j < sublen; j ++){
 			lineParts = lines[j].split(SEPARATOR);
@@ -199,9 +196,8 @@ define(function(){
 
 	/** @private */
 	var parseMap = function(definitionParts, lines, i){
-		var numEntries = parseInt(definitionParts[0], 10);
-
-		var sublen = i + 1 + numEntries,
+		var numEntries = parseInt(definitionParts[0], 10),
+			sublen = i + 1 + numEntries,
 			j, lineParts;
 		for(j = i + 1; j < sublen; j ++){
 			lineParts = lines[j].split(SEPARATOR);
