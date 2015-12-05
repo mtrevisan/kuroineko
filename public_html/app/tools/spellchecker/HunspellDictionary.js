@@ -21,8 +21,10 @@ define(function(){
 		this.flags = flags || {};
 
 		parseAFF.call(this, affData);
+		affData = null;
 
 		parseDIC.call(this, dicData);
+		dicData = null;
 	};
 
 	/**
@@ -93,22 +95,18 @@ define(function(){
 
 		var entries = [],
 			sublen = i + 1 + numEntries,
-			j, lineParts, charactersToRemove, additionParts, charactersToAdd, continuationClasses, regexToMatch, entry;
+			j, lineParts, charactersToRemove, additionParts, regexToMatch,
+			continuationClasses, entry;
 		for(j = i + 1; j < sublen; j ++){
 			lineParts = lines[j].split(SEPARATOR);
 			charactersToRemove = lineParts[2];
-
 			additionParts = lineParts[3].split('/');
-
-			charactersToAdd = additionParts[0];
-			if(charactersToAdd == '0')
-				charactersToAdd = '';
-
-			continuationClasses = parseRuleCodes.call(this, additionParts[1]);
 			regexToMatch = lineParts[4];
 
+			continuationClasses = parseRuleCodes.call(this, additionParts[1]);
+
 			entry = {
-				add: charactersToAdd
+				add: (additionParts[0] == '0'? '': additionParts[0])
 			};
 			if(continuationClasses.length)
 				entry.continuationClasses = continuationClasses;
@@ -127,9 +125,9 @@ define(function(){
 	/** @private */
 	var parseCompoundRule = function(definitionParts, lines, i){
 		var numEntries = parseInt(definitionParts[0], 10),
-			sublen = i + 1 + numEntries,
+			len = i + 1 + numEntries,
 			j, lineParts;
-		for(j = i + 1; j < sublen; j ++){
+		for(j = i + 1; j < len; j ++){
 			lineParts = lines[j].split(SEPARATOR);
 			this.compoundRules.push(lineParts[1]);
 		}
@@ -149,7 +147,7 @@ define(function(){
 		//not especially necessary...
 		Object.keys(this.compoundRuleCodes).forEach(function(code){
 			if(!code.length)
-				delete this[code];
+				this[code] = null;
 		}, this.compoundRuleCodes);
 
 		//build the full regular expressions for each compound rule
@@ -158,10 +156,10 @@ define(function(){
 			var expressionText = '';
 			ruleText.split('').forEach(function(chr){
 				expressionText += (chr in this? '(' + this[chr].join('|') + ')': chr);
-			}, this.compoundRuleCodes);
+			}, this);
 
-			this.compoundRules[idx] = new RegExp(expressionText, 'i');
-		}, this);
+			this[idx] = new RegExp(expressionText, 'i');
+		}, this.compoundRules);
 
 		return numEntries;
 	};
@@ -169,42 +167,39 @@ define(function(){
 	/** @private */
 	var parseReplacementTable = function(definitionParts, lines, i){
 		var numEntries = parseInt(definitionParts[0], 10),
-			sublen = i + 1 + numEntries,
+			len = i + 1 + numEntries,
 			j, lineParts;
-		for(j = i + 1; j < sublen; j ++){
+		for(j = i + 1; j < len; j ++){
 			lineParts = lines[j].split(SEPARATOR);
 			if(lineParts.length == 3)
 				this.replacementTable.push([lineParts[1], lineParts[2]]);
 		}
-
 		return numEntries;
 	};
 
 	/** @private */
 	var parseIConv = function(definitionParts, lines, i){
 		var numEntries = parseInt(definitionParts[0], 10),
-			sublen = i + 1 + numEntries,
+			len = i + 1 + numEntries,
 			j, lineParts;
-		for(j = i + 1; j < sublen; j ++){
+		for(j = i + 1; j < len; j ++){
 			lineParts = lines[j].split(SEPARATOR);
 			if(lineParts.length == 3)
 				this.iconvTable.push([lineParts[1], lineParts[2]]);
 		}
-
 		return numEntries;
 	};
 
 	/** @private */
 	var parseMap = function(definitionParts, lines, i){
 		var numEntries = parseInt(definitionParts[0], 10),
-			sublen = i + 1 + numEntries,
+			len = i + 1 + numEntries,
 			j, lineParts;
-		for(j = i + 1; j < sublen; j ++){
+		for(j = i + 1; j < len; j ++){
 			lineParts = lines[j].split(SEPARATOR);
 			if(lineParts.length == 2)
 				this.mapTable.push(lineParts[1]);
 		}
-
 		return numEntries;
 	};
 
@@ -225,7 +220,7 @@ define(function(){
 			//remove blank lines
 			.replace(/(\r?\n){2,}/g, EOL)
 			//trim the entire string
-			.replace(/^[^\S\r\n]+|[^\S\r\n]+$/, '');
+			.replace(/^[^\S\r\n]+|[^\S\r\n]+$|\r?\n$/, '');
 	};
 
 	/**
@@ -242,17 +237,14 @@ define(function(){
 		data = removeDictionaryComments.call(this, data);
 
 		var lines = data.split(/\r?\n/);
-
 		//the first line is the number of words in the dictionary
-		var len = parseInt(lines.shift(), 10),
-			i, parts, word,
-			ruleCodesArray,
-			sublen,
-			rule,
-			k,
-			combineRule;
-		for(i = 0; i < len; i ++){
-			parts = lines[i].split('/');
+		if(parseInt(lines.shift(), 10) != lines.length)
+			throw 'Number of rows in the dictionary does not match the count number';
+
+		var word, ruleCodesArray,
+			rule, k, combineRule;
+		lines.forEach(function(parts){
+			parts = parts.split('/');
 
 			word = parts[0];
 
@@ -264,16 +256,14 @@ define(function(){
 				if(!('NEEDAFFIX' in this.flags) || ruleCodesArray.indexOf(this.flags.NEEDAFFIX) < 0)
 					addWordToDictionary.call(this, word, ruleCodesArray);
 
-				sublen = ruleCodesArray.length;
 				ruleCodesArray.forEach(function(code, j){
 					rule = this.rules[code];
-
-					if(rule){
+					if(rule)
 						applyRule.call(this, word, rule).forEach(function(newWord){
 							addWordToDictionary.call(this, newWord, []);
 
 							if(rule.combineable)
-								for(k = j + 1; k < sublen; k ++){
+								for(k = j + 1; k < ruleCodesArray.length; k ++){
 									combineRule = this.rules[ruleCodesArray[k]];
 									if(combineRule && combineRule.combineable && rule.type != combineRule.type)
 										applyRule.call(this, newWord, combineRule).forEach(function(word){
@@ -281,15 +271,14 @@ define(function(){
 										}, this);
 								}
 						}, this);
-					}
 
-					if(code in this.compoundRuleCodes)
+					if(this.compoundRuleCodes[code])
 						this.compoundRuleCodes[code].push(word);
 				}, this);
 			}
 			else
 				addWordToDictionary.call(this, word.trim(), []);
-		}
+		}, this);
 	};
 
 	/**
@@ -311,7 +300,7 @@ define(function(){
 			//remove blank lines
 			.replace(/(\r?\n){2,}/g, EOL)
 			//trim the entire string
-			.replace(/^[^\S\r\n]+|[^\S\r\n]+$/, '');
+			.replace(/^[^\S\r\n]+|[^\S\r\n]+$|\r?\n$/, '');
 	};
 
 	/** @private */
@@ -349,9 +338,7 @@ define(function(){
 			newWord;
 		rule.entries.forEach(function(entry){
 			if(!entry.match || word.match(entry.match)){
-				newWord = word;
-				if(entry.remove)
-					newWord = newWord.replace(entry.remove, '');
+				newWord = (entry.remove? word.replace(entry.remove, ''): word);
 				newWord = (rule.type == 'SFX'? newWord + entry.add: entry.add + newWord);
 
 				newWords.push(newWord);
