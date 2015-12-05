@@ -68,7 +68,7 @@ define(['tools/spellchecker/HunspellDictionary', 'tools/data/MathHelper', 'tools
 	 */
 	var checkExact = function(word){
 		var ruleCodes = this.dictionary.dictionaryTable[word];
-		if(typeof ruleCodes == 'undefined'){
+		if(typeof ruleCodes == 'undefined' || !ruleCodes){
 			//check if this might be a compound word
 			if('COMPOUNDMIN' in this.dictionary.flags && word.length >= this.dictionary.flags.COMPOUNDMIN)
 				return this.dictionary.compoundRules.some(function(rule){ return word.match(rule); });
@@ -89,7 +89,7 @@ define(['tools/spellchecker/HunspellDictionary', 'tools/data/MathHelper', 'tools
 	var hasFlag = function(word, flag, wordFlags){
 		if(flag in this.dictionary.flags){
 			if(typeof wordFlags == 'undefined')
-				wordFlags = [].concat(this.dictionary.dictionaryTable[word]);
+				wordFlags = (this.dictionary.dictionaryTable[word]? [].concat(this.dictionary.dictionaryTable[word]): null);
 
 			if(wordFlags && wordFlags.indexOf(this.dictionary.flags[flag]) >= 0)
 				return true;

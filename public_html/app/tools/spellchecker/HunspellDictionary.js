@@ -254,20 +254,21 @@ define(function(){
 
 				//save the ruleCodes for compound word situations
 				if(!('NEEDAFFIX' in this.flags) || ruleCodesArray.indexOf(this.flags.NEEDAFFIX) < 0)
-					addWordToDictionary.call(this, word, ruleCodesArray);
+					//addWordToDictionary.call(this, word, ruleCodesArray);
+					addWordToDictionary.call(this, word)
 
 				ruleCodesArray.forEach(function(code, j){
 					rule = this.rules[code];
 					if(rule)
 						applyRule.call(this, word, rule).forEach(function(newWord){
-							addWordToDictionary.call(this, newWord, []);
+							addWordToDictionary.call(this, newWord);
 
 							if(rule.combineable)
 								for(k = j + 1; k < ruleCodesArray.length; k ++){
 									combineRule = this.rules[ruleCodesArray[k]];
 									if(combineRule && combineRule.combineable && rule.type != combineRule.type)
 										applyRule.call(this, newWord, combineRule).forEach(function(word){
-											addWordToDictionary.call(this, word, []);
+											addWordToDictionary.call(this, word);
 										}, this);
 								}
 						}, this);
@@ -277,7 +278,7 @@ define(function(){
 				}, this);
 			}
 			else
-				addWordToDictionary.call(this, word.trim(), []);
+				addWordToDictionary.call(this, word.trim());
 		}, this);
 
 		data = null;
@@ -309,8 +310,12 @@ define(function(){
 	var addWordToDictionary = function(word, rules){
 		//NOTE: some dictionaries will list the same word multiple times with different rule sets
 		if(!(word in this.dictionaryTable) || typeof this.dictionaryTable[word] != 'object')
-			this.dictionaryTable[word] = [];
-		Array.prototype.push.apply(this.dictionaryTable[word], rules);
+			this.dictionaryTable[word] = null;
+		if(rules && rules.length){
+			if(!this.dictionaryTable[word])
+				this.dictionaryTable[word] = [];
+			Array.prototype.push.apply(this.dictionaryTable[word], rules);
+		}
 	};
 
 	/** @private */
