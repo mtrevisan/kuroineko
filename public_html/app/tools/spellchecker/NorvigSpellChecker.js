@@ -22,7 +22,7 @@ define(function(){
 
 	var Constructor = function(alphabetString){
 		this.alphabet = alphabetString.match(REGEX_UNICODE_SPLITTER);
-		this.filter = new RegExp('([' + alphabetString + ']+)', 'gi'),
+		this.filter = new RegExp('([' + alphabetString + ']+)', 'g'),
 
 		this.dictionary = {};
 	};
@@ -92,9 +92,10 @@ define(function(){
 
 		//calculateRelativeProbabilitiesFromLog(candidates);
 
-		var keys = Object.keys(candidates),
-			results = [];
-		keys.forEach(function(key){ results.push([key, this[key]]); }, candidates);
+		var results = [];
+		Object.keys(candidates).forEach(function(key){
+			results.push([key, this[key]]);
+		}, candidates);
 		results.sort(function(a, b){ return b[1] - a[1]; });
 
 		return results;
@@ -115,7 +116,6 @@ define(function(){
 		//add to set if the given word is known
 		if(this.dictionary[word])
 			candidates[word] = this.dictionary[word];
-
 		return candidates;
 	};
 

@@ -28,6 +28,8 @@
 
 		require(['tools/spellchecker/Hunspell', 'text!tools/spellchecker/dictionaries/vec.aff', 'text!tools/spellchecker/dictionaries/vec.dic'], function(Hunspell, aff, dic){
 			var dictionary = new Hunspell(aff, dic);
+			aff = null;
+			dic = null;
 
 			var suggestions = dictionary.suggest('skoltema');
 
