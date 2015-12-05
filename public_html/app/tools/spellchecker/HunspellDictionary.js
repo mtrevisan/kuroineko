@@ -21,10 +21,8 @@ define(function(){
 		this.flags = flags || {};
 
 		parseAFF.call(this, affData);
-		affData = null;
 
 		parseDIC.call(this, dicData);
-		dicData = null;
 	};
 
 	/**
@@ -85,6 +83,8 @@ define(function(){
 				this.flags[ruleType] = definitionParts[0];
 			}
 		}
+
+		data = null;
 	};
 
 	/** @private */
@@ -279,6 +279,8 @@ define(function(){
 			else
 				addWordToDictionary.call(this, word.trim(), []);
 		}, this);
+
+		data = null;
 	};
 
 	/**
