@@ -34,7 +34,7 @@ LANG vec
 #LANG it_IT
 
 SET UTF-8
-TRY eèéaàoòóiínrlƚtskdpvmuúgxfŧbjɉñđchEÈÉAÀOÒÓIÍNRLȽTSKDPVMUÚGXFŦBJɈÑĐCH'‘’
+TRY eèéaàoòóiínrlƚtskdpvmuúgxfŧbjɉñđchEÈÉAÀOÒÓIÍNRLȽTSKDPVMUÚGXFŦBJɈÑĐCH
 
 WORDCHARS -'‘’\/
 
@@ -72,6 +72,8 @@ REP ì  í
 
 # replace double-characters with single ones
 ICONV 5
+#ICONV ‘ '
+#ICONV ’ '
 ICONV dh đ
 ICONV jh ɉ
 ICONV lh ƚ

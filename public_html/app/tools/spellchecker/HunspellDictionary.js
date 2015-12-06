@@ -37,7 +37,7 @@ define(function(){
 		this.compoundRules = [];
 		this.compoundRuleCodes = {};
 		this.replacementTable = [];
-		this.iconvTable = [];
+		this.inputConversionTable = [];
 		this.mapTable = [];
 		this.rules = {};
 
@@ -63,7 +63,7 @@ define(function(){
 			else if(ruleType == 'REP')
 				i += parseReplacementTable.call(this, definitionParts, lines, i);
 			else if(ruleType == 'ICONV')
-				i += parseIConv.call(this, definitionParts, lines, i);
+				i += parseInputConversion.call(this, definitionParts, lines, i);
 			else if(ruleType == 'MAP')
 				i += parseMap.call(this, definitionParts, lines, i);
 			else if(ruleType == 'NAME' || ruleType == 'VERSION')
@@ -178,14 +178,14 @@ define(function(){
 	};
 
 	/** @private */
-	var parseIConv = function(definitionParts, lines, i){
+	var parseInputConversion = function(definitionParts, lines, i){
 		var numEntries = parseInt(definitionParts[0], 10),
 			len = i + 1 + numEntries,
 			j, lineParts;
 		for(j = i + 1; j < len; j ++){
 			lineParts = lines[j].split(SEPARATOR);
 			if(lineParts.length == 3)
-				this.iconvTable.push([lineParts[1], lineParts[2]]);
+				this.inputConversionTable.push([new RegExp(lineParts[1], 'g'), lineParts[2]]);
 		}
 		return numEntries;
 	};
@@ -247,6 +247,10 @@ define(function(){
 			parts = parts.split('/');
 
 			word = parts[0];
+
+			this.inputConversionTable.forEach(function(conv){
+				word = word.replace(conv[0], conv[1]);
+			});
 
 			//now for each affix rule, generate that form of the word
 			if(parts.length > 1){
