@@ -309,7 +309,7 @@ define(function(){
 	/** @private */
 	var addWordToDictionary = function(word, rules){
 		//NOTE: some dictionaries will list the same word multiple times with different rule sets
-		if(!(word in this.dictionaryTable) || typeof this.dictionaryTable[word] != 'object')
+		if(!(word in this.dictionaryTable))
 			this.dictionaryTable[word] = null;
 		if(rules && rules.length){
 			if(!this.dictionaryTable[word])
