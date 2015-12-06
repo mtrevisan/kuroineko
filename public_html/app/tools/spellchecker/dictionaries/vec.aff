@@ -52,7 +52,7 @@ MAP oòóOÒÓ
 MAP uúùUÙÚ
 
 # frequently switched character groups
-REP 108
+REP 146
 # REP ^đ[aàeèéiíoòóuú] d.
 # REP đ[aàeèéiíoòóuú] d.
 # REP dh[aàeèéiíoòóuú] d.
@@ -79,11 +79,25 @@ REP ^lò  ƚò
 REP ^ló  ƚó
 REP ^lu  ƚu
 REP ^lú  ƚú
+REP ^lia  ja
+REP ^lià  jà
+REP ^lie  je
+REP ^liè  jè
+REP ^lié  jé
+REP ^lii  ji
+REP ^lií  jí
+REP ^lio  jo
+REP ^liò  jò
+REP ^lió  jó
+REP ^liu  ju
+REP ^liú  jú
 REP lh   ƚ
 REP ƚ    l
 REP nh   ñ
 REP th   ŧ
+REP ^th  f
 REP ŧ    s
+REP ^ŧ   f
 REP ù    ú
 REP ì    í
 REP mb   nb
@@ -172,6 +186,30 @@ REP ixar$ iđar
 # REP [aàeèéiíoòóuú]d[aàeèéiíoòóuú] ..
 # REP [aàeèéiíoòóuú][aàeèéiíoòóuú] .v.
 # REP [aàeèéiíoòóuú][aàeèéiíoòóuú] .d.
+REP ^va ‘a
+REP ^và ‘à
+REP ^ve ‘e
+REP ^vè ‘è
+REP ^vé ‘é
+REP ^vi ‘i
+REP ^ví ‘í
+REP ^vo ‘o
+REP ^vò ‘ò
+REP ^vó ‘ó
+REP ^vu ‘u
+REP ^vú ‘ú
+REP ^ga ‘a
+REP ^gà ‘à
+REP ^ge ‘e
+REP ^gè ‘è
+REP ^gé ‘é
+REP ^gi ‘i
+REP ^gí ‘í
+REP ^go ‘o
+REP ^gò ‘ò
+REP ^gó ‘ó
+REP ^gu ‘u
+REP ^gú ‘ú
 
 # replace double-characters with single ones
 ICONV 5
