@@ -90,12 +90,12 @@ define(['tools/data/ArrayHelper'], function(ArrayHelper){
 		input[word.toLowerCase()] = 0;
 		var candidates = calculateNEditSet.call(this, input, {}, distance || 2);
 
-		//calculateRelativeProbabilitiesFromLog(candidates);
-
 		var results = ArrayHelper.partition(Object.keys(candidates), function(key){ return candidates[key]; });
 		return Object.keys(results)
 			.map(function(key){ return {lnProbability: Number(key), values: results[key]}; })
 			.sort(function(a, b){ return b.lnProbability - a.lnProbability; });
+
+		//calculateRelativeProbabilitiesFromLog(candidates);
 	};
 
 	/**
@@ -222,15 +222,14 @@ define(['tools/data/ArrayHelper'], function(ArrayHelper){
 
 	/** @private */
 	var calculateRelativeProbabilitiesFromLog = function(candidates){
-		var k,
-			sum = 0;
-		for(k in candidates){
-			candidates[k] = Math.exp(candidates[k]);
-			sum += candidates[k];
-		}
-		for(k in candidates)
-			candidates[k] = candidates[k] / sum;
-		return candidates;
+		var sum = 0;
+		candidates.forEach(function(candidate){
+			candidate[0] = Math.exp(candidate[0]);
+			sum += candidate[0];
+		});
+		candidates.forEach(function(candidate){
+			candidate[0] /= sum;
+		});
 	};
 
 	/** @private */
