@@ -52,7 +52,7 @@ MAP oòóOÒÓ
 MAP uúùUÙÚ
 
 # frequently switched character groups
-REP 146
+REP 148
 # REP ^đ[aàeèéiíoòóuú] d.
 # REP đ[aàeèéiíoòóuú] d.
 # REP dh[aàeèéiíoòóuú] d.
@@ -96,8 +96,10 @@ REP ƚ    l
 REP nh   ñ
 REP th   ŧ
 REP ^th  f
+REP th$  f
 REP ŧ    s
 REP ^ŧ   f
+REP ŧ$   f
 REP ù    ú
 REP ì    í
 REP mb   nb
@@ -210,6 +212,8 @@ REP ^gò ‘ò
 REP ^gó ‘ó
 REP ^gu ‘u
 REP ^gú ‘ú
+# seramento de /é/ protònego in /i/ vanti palatal
+# palatidhathion de /tj, dj/ vanti vokal in /c, ɉ/
 
 # replace double-characters with single ones
 ICONV 5
