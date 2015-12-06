@@ -30,7 +30,7 @@ define(['HTMLHelper', 'tools/spellchecker/NorvigSpellChecker', 'libs/jsonh', 'to
 		for(v in verbsDictionary)
 			dict.push(extractVerbInfinitive(verbsDictionary[v]));
 
-		spellChecker = new NorvigSpellChecker('\'‘’aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx');
+		spellChecker = new NorvigSpellChecker('aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx\'‘’');
 		spellChecker.readDictionary(dict);
 	};
 
