@@ -11,7 +11,7 @@
  *
  * @author Mauro Trevisan
  */
-define(function(){
+define(['tools/data/ArrayHelper'], function(ArrayHelper){
 
 	/**
 	 * @constant
@@ -83,7 +83,7 @@ define(function(){
 	 *
 	 * @param {String} word			The input for which corrections should be suggested.
 	 * @param {Number} [distance]	Max edit distance.
-	 * @return {Object}	An object contains candidates and sorted keys.
+	 * @return {Array}	A sorted array containing objects of ln(probability) and suggestions.
 	 */
 	var suggest = function(word, distance){
 		var input = {};
@@ -92,17 +92,10 @@ define(function(){
 
 		//calculateRelativeProbabilitiesFromLog(candidates);
 
-		var results = [];
-		Object.keys(candidates).forEach(function(key){
-			results.push([key, this[key]]);
-		}, candidates);
-		results.sort(function(a, b){ return b[1] - a[1]; });
-
-		return results;
-		/*return {
-			candidates: candidates,
-			sortedKeys: sortKeysByMoreProbable(candidates)
-		};*/
+		var results = ArrayHelper.partition(Object.keys(candidates), function(key){ return candidates[key]; });
+		return Object.keys(results)
+			.map(function(key){ return {lnProbability: Number(key), values: results[key]}; })
+			.sort(function(a, b){ return b.lnProbability - a.lnProbability; });
 	};
 
 	/**
