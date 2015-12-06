@@ -283,8 +283,13 @@ define(['tools/data/ObjectHelper', 'tools/lang/phonology/Orthography'], function
 
 	var setEncodedInnerHTML = function(id, text){
 		var el = document.getElementById(id);
-		if(el)
-			el.innerHTML = encodeHTML(text.replace(/\n/g, '<br>') || '');
+		if(el){
+			text = encodeHTML(text.replace(/\n/g, '<br>') || '');
+			if(el.value)
+				el.value = text;
+			else
+				el.innerHTML = text;
+		}
 	};
 
 	/** @private */

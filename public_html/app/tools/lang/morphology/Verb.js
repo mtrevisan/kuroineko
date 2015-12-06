@@ -6,8 +6,11 @@
 define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabator', 'tools/data/StringHelper'], function(Word, Syllabator, StringHelper){
 
 	var Constructor = function(infinitive){
+		if(!Word.isStressed(infinitive))
+			infinitive = Word.markDefaultStress(infinitive);
+
 		//get pro-complementar pronouns
-		var proComplementarPronouns = infinitive.match(/(?:([gs]e)?(la|ne)?|(le))$/).filter(function(el){ return el; });
+		var proComplementarPronouns = infinitive.match(/([gs]e)?(l[ae]|ne)?$/).filter(function(el){ return el; });
 		if(proComplementarPronouns.length){
 			//remove pro-complementar pronouns
 			infinitive = infinitive.substr(0, infinitive.length - proComplementarPronouns[0].length);
@@ -114,13 +117,14 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabator', 'tools/d
 			darStarFar: /^((r[ei])?dàr|(mal|move|soto)?stàr|(kon(tra)?|likue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?fàr)$/,
 			aver: /(^|re)avér$/,
 			dever: /déver$/,
-			eser: /(^|re)èser$/,
+			eser: /(^|r[ei])èser$/,
 			dixer: /díxer$/,
 			poder: /podér$/,
 			saver: /savér$/,
-			traer: /tràer$/,
+			traer: /(|as?|des?|es|kon|pro|re|so)?tràer$/,
 			enher: /[èé]ñer$/,
 			toler: /to[lƚ]ér$/,
+			viver: /víver$/,
 			voler: /vo[lƚ]ér$/
 		};
 

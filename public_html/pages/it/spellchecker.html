@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<meta name="description" content="Correttore ortografico delle parole in lingua veneta secondo l'alfabeto di Mauro Trevisan">
+	<meta name="keywords" content="lingua veneta, dialetto veneto, alfabeto veneto, grammatica veneta, sillabatore veneto, divisione in sillabe, regole di accentazione">
+	<meta name="robots" content="noodp">
+	<base href="../../" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<!-- correttore ortografico, lingua, veneta -->
+
+	<title>correttore ortografico della lingua veneta</title>
+
+	<link rel="stylesheet" href="resources/css/common.css">
+	<link rel="stylesheet" href="resources/css/syllabator.css">
+	<link rel="stylesheet" href="resources/css/alerter/alerter.core.css">
+	<link rel="stylesheet" href="resources/css/alerter/alerter.default.css">
+	<link rel="stylesheet" href="libs/intro.css">
+	<style>
+		.wiggle{
+			background-image: url(resources/images/wiggle.png);
+			background-repeat: repeat-x;
+			background-position: bottom;
+			cursor: default;
+		}
+	</style>
+
+	<script src="app/Initializer.js"></script>
+	<script id="bootstrap-js">
+		Initializer.initializeApplication(function(){
+			require(['main_spellchecker'], function(app){ app.init(); });
+		});
+
+		var startIntro = function(){
+			var intro = introJs();
+			intro.setOptions({
+				prevLabel: 'Precedente',
+				nextLabel: 'Seguente',
+				skipLabel: 'Salta',
+				doneLabel: 'Finito',
+				showBullets: false,
+				disableInteraction: true,
+				steps: [
+					{
+						element: '#text',
+						intro: "Inserisci qua la parola o la frase che vuoi correggere."
+					}
+				]
+			});
+
+			intro.start();
+		};
+	</script>
+	<script src="app/tools/social/GoogleAnalyticsHelper.js"></script>
+	<script src="app/tools/social/SocialLoader.js"></script>
+	<script src="libs/intro.js"></script>
+</head>
+
+<body>
+	<nav class="language">
+		<a href="pages/vec/syllabator.html" lang="vec" hreflang="vec"><img src="resources/images/flags/veneto.png" class="flag" width="35" alt="V&egrave;neto" title="V&egrave;neto" /></a>
+		<img src="resources/images/flags/italia.png" class="flag" width="35" alt="Italiano" title="Italiano" />
+		<br>
+		<a href="javascript:startIntro();">Aiuto</a>
+	</nav>
+	<header>
+		<h1>Correttore ortografico delle parole venete</h1>
+
+		<nav>
+			<div class="share">
+				<div id="fb-root"></div><div class="fb-like" data-href="http://www.facebook.com/ParNoDexmentegar" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+				&nbsp;&nbsp;&nbsp;
+				<div class="g-plusone" data-size="medium" data-href="http://parnodexmentegar.orgfree.com"></div>
+			</div>
+			<br>
+			Scarica (una vecchissima versione de) la <a href="http://parnodesmentegar.wordpress.com/2012/09/03/glvv-20120624">Gram&agrave;tega de lengua v&egrave;neta pa&#8217; i v&egrave;neti [20120624]</a>
+		</nav>
+	</header>
+	<nav>
+		<a href="pages/it/conjugator.html">Coniugatore dei verbi</a> &ndash; <a href="pages/it/dialectInquirer.html">Riconoscitore delle varianti</a><span class="new-feature">nuovo!</span> &ndash; <a href="pages/it/dictionary.html">Dizionario</a><span class="new-feature">nuovo!</span> &ndash; <a href="pages/it/measureConverter.html">Convertitore delle misure</a> &ndash; <a href="pages/it/spellchecker.html">Correttore ortografico</a><span class="new-feature">nuovo!</span>
+		<br>
+		<br>
+		<a href="pages/it/alphabet.html">Nascita dell&#8217;alfabeto veneto</a>
+	</nav>
+	<section class="input frame-inner" id="inputSection">
+		<form action="#inputSection" novalidate>
+			<textarea id="text" class="text-input" rows="10" cols="100" placeholder="inserisci il testo&hellip;" title="testo" spellcheck="false" required tabindex="1"></textarea>
+		</form>
+	</section>
+	<aside>
+		<h2>Alfabeto e foni</h2>
+		<div class="frame-inner transition-highlight">
+			<dl>
+				<dt>\</dt>
+					<dd>Dopo una vocale, indica un accento greve (<i>&agrave;</i>, <i>&egrave;</i>, <i>&ograve;</i>)</dd>
+				<dt>/</dt>
+					<dd>Dopo una vocale, indica un accento acuto (<i>&eacute;</i>, <i>&iacute;</i>, <i>&oacute;</i>, <i>&uacute;</i>)</dd>
+				<dt>a (&agrave;)</dt>
+					<dd><span class="phone">/a/</span> Vocale centrale aperta non arrotondata</dd>
+				<dt>b</dt>
+					<dd><span class="phone">/b/</span> Consonante occlusiva bilabiale sonora</dd>
+				<dt>c</dt>
+					<dd><span class="phone">/c/</span> Consonante occlusivo-costrittiva kanalizzata post-alveo-palatale sorda</dd>
+				<dt>d</dt>
+					<dd><span class="phone">/d/</span> Consonante occlusiva dentale sonora</dd>
+				<dt>&dstrok;/dh</dt>
+					<dd><span class="phone">/&dstrok;/</span> Consonante costrittiva dentale sonora (aspirata)</dd>
+				<dt>e (&eacute;)</dt>
+					<dd><span class="phone">/&eacute;/</span> Vocale anteriore mezza chiusa non arrotondata</dd>
+				<dt>&egrave;</dt>
+					<dd><span class="phone">/&egrave;/</span> Vocale anteriore quasi aperta non arrotondata</dd>
+				<dt>f</dt>
+					<dd><span class="phone">/f/</span> Consonante costrittiva labio-dentale sorda</dd>
+				<dt>fh</dt>
+					<dd><span class="phone">/fh/</span> Consonante costrittiva labio-dentale sorda aspirata</dd>
+				<dt>g</dt>
+					<dd><span class="phone">/g/</span> Consonante occlusiva velare sonora</dd>
+				<dt>i (&iacute;)</dt>
+					<dd><span class="phone">/i/</span> Vocale anteriore chiusa non arrotondata</dd>
+					<dd><span class="phone">/j/</span> Consonante approssimante palatale sonora</dd>
+				<dt>j</dt>
+					<dd><span class="phone">/j/</span> Consonante approssimante palatale sonora</dd>
+				<dt>ɉ/jh</dt>
+					<dd><span class="phone">/ǧ/</span> Consonante occlusivo-costrittiva canalizzata post-alveo-palatale sonora</dd>
+				<dt>k</dt>
+					<dd><span class="phone">/k/</span> Consonante occlusiva velare sorda</dd>
+				<dt>l</dt>
+					<dd><span class="phone">/l/</span> Consonante laterale alveolare sonora</dd>
+					<dd><span class="phone">/K/</span> Consonante laterale pre-palatale sonora</dd>
+					<dd><span class="phone">/|/</span> Consonante uni-laterale alveolare sonora</dd>
+				<dt>ƚ/lh</dt>
+					<dd><span class="phone">/L/</span> Consonante semi-laterale palatale sonora</dd>
+					<dd><span class="phone">/ƚ/</span> Consonante semi-laterale pre-velare sonora</dd>
+				<dt>m</dt>
+					<dd><span class="phone">/m/</span> Consonante nasale bilabiale sonora</dd>
+				<dt>n</dt>
+					<dd><span class="phone">/n/</span> Consonante nasale alveolare sonora</dd>
+					<dd><span class="phone">/ŋ/</span> Consonante semi-nasale pro-velare sonora</dd>
+				<dt>&ntilde;/nh</dt>
+					<dd><span class="phone">/&ntilde;/</span> Consonante nasale palatale sonora</dd>
+				<dt>o (&oacute;)</dt>
+					<dd><span class="phone">/&oacute;/</span> Vocale posteriore mezza chiusa arrotondata</dd>
+				<dt>&ograve;</dt>
+					<dd><span class="phone">/&ograve;/</span> Vocale posteriore quasi aperta arrotondata</dd>
+				<dt>p</dt>
+					<dd><span class="phone">/p/</span> Consonante occlusiva bilabiale sorda</dd>
+				<dt>r</dt>
+					<dd><span class="phone">/r/</span> Consonante vibrante alveolare sonora</dd>
+					<dd><span class="phone">/I/</span> Consonante approssimante lateralizzata alveolare sonora</dd>
+					<dd><span class="phone">/~/</span> Consonante approssimante lateralizzata post-alveolare sonora</dd>
+					<dd><span class="phone">/J/</span> Consonante vibrata post-alveolare sonora</dd>
+					<dd><span class="phone">/^/</span> Consonante vibratile post-alveolare sonora</dd>
+				<dt>s</dt>
+					<dd><span class="phone">/s/</span> Consonante costrittiva-canalizzata sorda</dd>
+				<dt>ʃ/sh</dt>
+					<dd><span class="phone">/š/</span> Consonante costrittiva canalizzata post-alveo-palatale sorda</dd>
+				<dt>t</dt>
+					<dd><span class="phone">/t/</span> Consonante occlusiva sorda</dd>
+				<dt>&tstrok;/th</dt>
+					<dd><span class="phone">/&thorn;/</span> Consonante costrittiva dentale sorda</dd>
+				<dt>u (&uacute;)</dt>
+					<dd><span class="phone">/u/</span> Vocale posteriore chiusa arrotondata</dd>
+					<dd><span class="phone">/w/</span> Consonante approssimante velare arrotondata sonora</dd>
+				<dt>v</dt>
+					<dd><span class="phone">/v/</span> Consonante costrittiva labio-dentale sonora</dd>
+				<dt>x</dt>
+					<dd><span class="phone">/ź/</span> Consonante costrittiva-canalizzata sonora</dd>
+				<dt>ʒ/xh</dt>
+					<dd><span class="phone">/ž/</span> Consonante costrittiva canalizzata post-alveo-palatale sonora</dd>
+			</dl>
+		</div>
+	</aside>
+	<footer>
+		<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licenza Creative Commons" style="border-width: 0; width: 88px; height: 31px" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Questa opera di <a href="/cdn-cgi/mail#6904081c1b06471d1b0c1f001a0807290e04080005470a0604?subject=Gramàdega%20de%20lengua%20vèneta" data-mail="377ad742455817634552415e4f5659"><span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">[email&nbsp;protected]</span></a> &egrave; sotto della licenza <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribuzione - Non commerciale - No opere derivate 4.0 Internazionale (CC BY-NC-ND 4.0)</a>.
+	</footer>
+</body>
+</html>

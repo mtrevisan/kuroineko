@@ -5,7 +5,7 @@
  *
  * @author Mauro Trevisan
  */
-define(function(){
+define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 	var empty = function(array){
 		array.length = 0;
@@ -134,25 +134,17 @@ define(function(){
 		return i;
 	};
 
+	var findIndex = function(array, predicate){
+		for(var i = 0, len = array.length; i < len; i ++)
+			if(predicate.call(array, array[i], i))
+				return i;
+		return -1;
+	};
+
 	var forEach = function(array, fn, scope){
 		for(var i = 0, len = array.length; i != len; i ++)
 			fn.call(scope || this, this[i], i, this);
 	};
-
-/*
-Splice :
-//if you plan on just removing one item, this one will be way faster:
-var spliceOne = function(arr, index){
-	var len = arr.length;
-	if(!len)
-		return;
-	while(index < len){
-		arr[index] = arr[index + 1];
-		index ++
-	}
-	arr.length --;
-};
-*/
 
 	/**
 	 * Copies the values of `source` to `destination`.
@@ -170,43 +162,98 @@ var spliceOne = function(arr, index){
 		return destination;
 	};
 
-	/**
-	 * Creates an array of unique values that are included in all of the provided arrays.
-	 *
-	 * @param {Array} a	The first array of sorted numbers.
-	 * @param {Array} b	The second array of sorted numbers.
-	 * @return {Array}	Returns the new array of shared values.
-	 */
-	var intersection = function(a, b){
-		var n = a.length,
-			m = b.length,
-			i = 0,
-			j = 0,
-			result = [];
+	/** NOTE: elements should be unique! */
+	var equals = function(a, b){
+		return (a.length == b.length && a.every(function(el){ return (b.indexOf(el) >= 0); }));
+	};
 
-		while(i < n && j < m){
-			if(a[i] < b[j])
-				i ++;
-			else if(a[i] > b[j])
-				j ++;
-			else{
-				result.push(a[i]);
-				i ++;
-				j ++;
-			}
-		}
-
-		return result;
+	/** Tells whether <code>b</code> is contained into <code>a</code>. */
+	var contains = function(a, b){
+		return b.every(function(el){ return (a.indexOf(el) >= 0); });
 	};
 
 	/**
-	 * Performs a binary search of an array to determine the index at which the element.
+	 * Creates an array of unique values that are included in all of the provided arrays.
+	 *
+	 * @param {Array} arguments	The array(s).
+	 * @return {Array}	New array of shared values.
+	 */
+	var intersection = function(a){
+		if(a == null)
+			return [];
+		if(arguments.length === 1)
+			return unique(a);
+
+		var arr = Array.prototype.slice.call(arguments, 1);
+
+		return unique(a).filter(function(el){
+			return arr.some(function(cur){
+				return (cur && cur.some(function(item){
+					return (item == el);
+				}));
+			});
+		});
+	};
+
+	/**
+	 * Creates an array of unique values that are included in all of the provided arrays.
+	 *
+	 * @param {Array} arguments	The array(s).
+	 * @return {Array}	Array of unique items.
+	 */
+	var unique = function(){
+		for(var j = 0, argsLength = arguments.length; j < argsLength; j ++)
+			if(!Array.isArray(arguments[j]))
+				return [];
+
+		var arr = Array.prototype.concat.apply([], Array.prototype.slice.call(arguments));
+		return arr.filter(function(el, idx, arr){
+			return (arr.indexOf(el) == idx);
+		});
+	};
+
+	/**
+	 * Take the difference between one array and a number of other arrays.<p>
+	 * Only the elements present in just the first array will remain.
+	 *
+	 * @param {Array} arguments	The array(s).
+	 * @return {Array}	Array of difference.
+	 */
+	var difference = function(arr){
+		if(!Array.isArray(arguments[0]))
+			return [];
+		for(var j = 1, argsLength = arguments.length; j < argsLength; j ++)
+			if(!Array.isArray(arguments[j]))
+				return arguments[0];
+
+		var rest = Array.prototype.concat.apply([], Array.prototype.slice.call(arguments, 1));
+		return arr.filter(function(value){
+			return (rest.indexOf(value) < 0);
+		});
+	};
+
+	var cartesianProductOf = function(){
+		return Array.prototype.reduce.call(arguments, function(a, b){
+			var ret = [];
+			a.forEach(function(a){
+				b.forEach(function(b){
+					ret.push(a.concat([b]));
+				});
+			});
+			return ret;
+		}, [[]]);
+	};
+
+	/**
+	 * Performs a binary search of an array to determine the index at which the element.<p>
+	 * Returns the index <code>idx</code> in the table such that <code>value = array[idx]</code>, where <code>array[idx] <= array[idx + 1]</code>, if positive.<br>
+	 * Returns the index <code>idx</code> in the table such that <code>array[-idx - 1] < value < array[-idx]</code>, if negative.
 	 *
 	 * @see {@link http://oli.me.uk/2013/06/08/searching-javascript-arrays-with-a-binary-search/}
 	 *
 	 * @param {Array} array	The sorted array to inspect.
 	 * @param {*} element	The value to search.
-	 * @return {Number}	Returns the index of the matched value, else <code>-1</code>.
+	 * @return {Number}	The index of the matched value, otherwise the negated of the element just after.
 	 *
 	 * @private
 	 */
@@ -255,19 +302,51 @@ var spliceOne = function(arr, index){
 	 * @return {Array} A nested array, containing first an array of elements that satisfied the predicate, and second an array of elements
 	 *		that did not satisfy.
 	 */
-	var partition = function(predicate, list){
-		var result = [[], []];
-		list.map(function(obj){
-			result[predicate(obj)? 0: 1].push(obj);
+	var partition = function(list, predicate){
+		var result = {};
+		list.forEach(function(value, index){
+			var key = predicate(value, index, list);
+			if(key in result)
+				result[key].push(value);
+			else
+				result[key] = [value];
 		});
 		return result;
+	};
+
+	/**
+	 * Returns a new list by pulling every item out of it (and all its sub-arrays) and putting them in a new array, depth-first.
+	 *
+	 * @param {Array} list The array to consider.
+	 * @return {Array} The flattened list.
+	 */
+	var flatten = function(list){
+		return (function recursiveFlatten(list){
+			var result = [];
+			var add = function(x){
+				if(Array.isArray(x) || ObjectHelper.isObject(x))
+					result = result.concat(recursiveFlatten(x));
+				else
+					result.push(x);
+			};
+
+			if(ObjectHelper.isObject(list))
+				Object.keys(list).forEach(function(x){
+					add(list[x]);
+				});
+			else
+				list.forEach(function(x){
+					add(x);
+				});
+			return result;
+		})(list);
 	};
 
 	/**
 	 * Converts <code>value</code> to an integer.
 	 *
 	 * @param {*} value	The value to convert.
-	 * @returns {Number}	Returns the integer.
+	 * @return {Number}	Returns the integer.
 	 *
 	 * @private
 	 */
@@ -277,11 +356,18 @@ var spliceOne = function(arr, index){
 
 
 	return {
+		findIndex: findIndex,
 		copy: copy,
+		equals: equals,
+		contains: contains,
 		intersection: intersection,
+		unique: unique,
+		difference: difference,
+		cartesianProductOf: cartesianProductOf,
 		binaryIndexOf: binaryIndexOf,
 		shuffle: shuffle,
-		partition: partition
+		partition: partition,
+		flatten: flatten
 	};
 
 });

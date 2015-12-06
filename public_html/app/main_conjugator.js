@@ -1,4 +1,4 @@
-define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/lang/morphology/Conjugator', 'tools/lang/phonology/Syllabator'/*, 'tools/data/proxy/Storage', 'tools/lang/data/VerbsDictionary', 'libs/jsonh', 'tools/spellchecker/NorvigSpellChecker'*/], function(HTMLHelper, Validator, ObjectHelper, Conjugator, Syllabator, Storage, verbsDictionary, JSONH, NorvigSpellChecker){
+define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/lang/morphology/Conjugator', 'tools/lang/phonology/Syllabator', 'tools/lang/phonology/Orthography'/*, 'tools/data/proxy/Storage', 'tools/lang/data/VerbsDictionary', 'libs/jsonh', 'tools/spellchecker/NorvigSpellChecker'*/], function(HTMLHelper, Validator, ObjectHelper, Conjugator, Syllabator, Orthography, Storage, verbsDictionary, JSONH, NorvigSpellChecker){
 
 	var infinitiveDOM, dialectDOM, verbsDictionaryDOM, spellCheckerSuggestionsDOM, btnCalculateDOM,
 		i18nResources, historyStore;
@@ -55,7 +55,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 							var size = output.length;
 							if(size){
 								for(v = 0; v < size; v ++)
-									output[v] = '<a href="#inputSection" onclick="Application.acceptAlternative(\'' + output[v] + '\')">' + output[v] + ' ('
+									output[v] = '<a href="/pages/' + (i18nResources.language == 'vec'? 'vec': 'it') + '/conjugator.html#inputSection" onclick="Application.acceptAlternative(\'' + output[v] + '\')">' + output[v] + ' ('
 										+ (suggestions.candidates[output[v]] * 100).toFixed(2) + '%)</a>';
 								output = output.join('<br>');
 							}
@@ -79,7 +79,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 							var size = output.length;
 							if(size){
 								for(v = 0; v < size; v ++)
-									output[v] = '<a href="#inputSection" onclick="Application.acceptAlternative(\'' + output[v] + '\')">' + output[v] + '</a>';
+									output[v] = '<a href="/pages/' + (i18nResources.language == 'vec'? 'vec': 'it') + '/conjugator.html#inputSection" onclick="Application.acceptAlternative(\'' + output[v] + '\')">' + output[v] + '</a>';
 								output = output.join('<br>');
 							}
 						}
@@ -143,7 +143,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 		//load history:
 		var history = [];
 		sortedData.slice(0, maxHistoryData).forEach(function(record){
-			history.push('<a href="#inputSection" onclick="Application.acceptAlternative(\'' + record.id + '\')">' + record.id + '</a>');
+			history.push('<a href="/pages/' + (i18nResources.language == 'vec'? 'vec': 'it') + '/conjugator.html#inputSection" onclick="Application.acceptAlternative(\'' + record.id + '\')">' + record.id + '</a>');
 		});
 		HTMLHelper.setEncodedInnerHTML('history', history.join('<br>'));
 	};
@@ -173,7 +173,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 		var extractDeclinated = function(paradigm, moodTense, type, variant){
 			var output = '',
 				id, content;
-			['singularMasculine', 'pluralMasculine', 'singularFeminine', 'pluralFeminine'].forEach(function(person){
+			['singularMasculine', 'singularMasculine1', 'singularMasculine2', 'pluralMasculine', 'singularFeminine', 'pluralFeminine'].forEach(function(person){
 				id = moodTense + '.' + type + '.' + variant + '.' + person;
 				content = extract(paradigm, id);
 				if(content)
@@ -205,7 +205,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 					tds[k].innerHTML = '';
 
 			['indicative.present', 'indicative.imperfect', 'indicative.future', 'subjunctive.present', 'subjunctive.imperfect', 'imperative.present', 'conditional.simple', 'gerund.simple', 'infinitive.simple', 'participle.imperfect'].forEach(function(moodTense){
-				['firstSingular', 'firstPlural', 'secondSingular', 'secondPlural', 'third', 'archaic', 'all'].forEach(function(person){
+				['firstSingular', 'firstPlural', 'secondSingular', 'secondPlural', 'third', 'archaic', 'all', 'all1', 'all2'].forEach(function(person){
 					output = extractNonDeclinated(paradigm, moodTense, person);
 
 					HTMLHelper.setEncodedInnerHTML(moodTense + '.' + person, output.replace(/<br>$/, ''));
@@ -217,7 +217,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 						output = extractDeclinated(paradigm, moodTense, type, variant);
 
 						if(output)
-							HTMLHelper.setEncodedInnerHTML(moodTense + '.' + type + (variant !== 'general'? '.' + variant: ''), output);
+							HTMLHelper.setEncodedInnerHTML(moodTense + '.' + type + (!variant.match(/^general/)? '.' + variant: ''), output);
 					});
 				});
 			});
@@ -257,6 +257,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 			if(!infinitive)
 				return;
 			infinitive = infinitive.replace(/^\s+|\s+$/g, '');
+			infinitive = Orthography.correctOrthography(infinitive);
 
 			GoogleAnalyticsHelper.trackEvent('Compute', 'Conjugate', '{infinitive: \'' + infinitive + '\', dialect: \'' + dialect + '\'}');
 
@@ -275,7 +276,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 
 					alternativeInputMessage = '<span class="pay-attention">' + i18nResources.warning + '</span> ' + i18nResources.do_you_mean + ' ';
 					for(a = 0; a < len; a ++){
-						alternativeInputMessage += '"<a href="#inputSection" onclick="Application.acceptAlternative(\'' + alternatives[a] + '\')">' + alternatives[a] + '</a>"';
+						alternativeInputMessage += '"<a href="/pages/' + (i18nResources.language == 'vec'? 'vec': 'it') + '/conjugator.html#inputSection" onclick="Application.acceptAlternative(\'' + alternatives[a] + '\')">' + alternatives[a] + '</a>"';
 						if(a < len - 1)
 							alternativeInputMessage += ' ' + i18nResources.or + ' ';
 					}
@@ -293,7 +294,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 
 				if(historyStore){
 					//remove actualizant clitic on 'avér' verb
-					var recordID = result.paradigmInfo.paradigm.infinitive.simple.regular.all.replace(/\(?ge\)?$/, '');
+					var recordID = result.paradigmInfo.paradigm.infinitive.simple.regular.all1.replace(/\(?ge\)?$/, '');
 					var record = historyStore.getRecord(recordID);
 					if(!record)
 						record = {id: recordID, count: 0};

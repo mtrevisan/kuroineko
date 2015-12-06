@@ -260,7 +260,7 @@ define(['tools/math/Fraction'], function(Fraction){
 	 *
 	 * @param {Number} value
 	 * @param {Number} epsilon
-	 * @returns {ContinuedFraction}
+	 * @return {ContinuedFraction}
 	 *
 	 * @private
 	 */
@@ -307,7 +307,7 @@ define(['tools/math/Fraction'], function(Fraction){
 
 	/**
 	 * @param {Number} epsilon
-	 * @returns {Number}
+	 * @return {Number}
 	 */
 	var toNumber = function(epsilon){
 		return this.toFraction(epsilon).toNumber();
@@ -324,7 +324,7 @@ define(['tools/math/Fraction'], function(Fraction){
 	 * As a means to combat these overflow conditions, the intermediate results are scaled whenever they threaten to become numerically unstable.
 	 *
 	 * @param {Number} epsilon
-	 * @returns {Fraction}
+	 * @return {Fraction}
 	 */
 	var toFraction = function(epsilon){
 		epsilon = epsilon || 1e-14;

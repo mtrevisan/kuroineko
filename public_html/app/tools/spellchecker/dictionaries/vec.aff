@@ -1,0 +1,1141 @@
+# Diŧionario vèneto
+#
+# Copyright (C) 2015 Màuro Trevixan
+#
+# home: http://parnodexmentegar.orgfree.com
+#
+# Version 1.0.0 (15/10/2015) (DD/MM/YYYY)
+# Note: this file is unmodified in the current package, hence no
+# copyright notes have been added to it.
+#
+# This file is distributed under GPL license.
+#
+# This file is part of the "diŧionario vèneto".
+#
+# The "diŧionario vèneto" is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as published
+# by the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+#
+# The "diŧionario vèneto" is distributed in the hope that it will be
+# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public
+# License along with the "diŧionario vèneto", if not,
+# see <http://www.gnu.org/licenses/>.
+
+
+NAME Diŧionario vèneto
+VERSION 1.0.0 (15/10/2015)
+HOME http://parnodexmentegar.orgfree.com
+LANG vec
+#LANG it_IT
+
+SET UTF-8
+TRY eèéaàoòóiínrlƚtskdpvmuúgxfŧbjɉñđchEÈÉAÀOÒÓIÍNRLȽTSKDPVMUÚGXFŦBJɈÑĐCH'‘’
+
+WORDCHARS -'‘’\/
+
+#FLAG num
+
+# KEEPCASE 1000  # km/Z, GHz/Z, ...
+
+
+# frequently switched characters
+MAP 5
+MAP aàAÀ
+MAP eèéEÈÉ
+MAP iíìIÌÍ
+MAP oòóOÒÓ
+MAP uúùUÙÚ
+
+# frequently switched character groups
+# FIXME
+# REP .l. [aàeèéiíoòóuú]ƚ[aàeèéiíoòóuú]
+# REP l.  ^ƚ[aàeèéiíoòóuú]
+REP 13
+REP dh đ
+REP đ  x
+REP j  ɉ
+REP jh ɉ
+REP ɉ  j
+REP l  ƚ
+REP lh ƚ
+REP ƚ  l
+REP nh ñ
+REP th ŧ
+REP ŧ  s
+REP ù  ú
+REP ì  í
+
+# replace double-characters with single ones
+ICONV 5
+ICONV dh đ
+ICONV jh ɉ
+ICONV lh ƚ
+ICONV nh ñ
+ICONV th ŧ
+
+
+SFX A Y 124 # vèrbi
+SFX A ar a/EGQ skoltar
+SFX A ar e/HIQ skoltar
+SFX A ar ede skoltar
+SFX A ar ege skoltar
+SFX A ar emo/K skoltar
+SFX A ar en/K skoltar
+SFX A ar ene skoltar
+SFX A ar ense skoltar
+SFX A ar i/M skoltar
+SFX A ar ion/K skoltar
+SFX A ar ione skoltar
+SFX A ar ionse skoltar
+SFX A ar isen/K skoltar
+SFX A ar isene skoltar
+SFX A ar isense skoltar
+SFX A ar ision/K skoltar
+SFX A ar isione skoltar
+SFX A ar isionse skoltar
+SFX A ar ison/K skoltar
+SFX A ar isone skoltar
+SFX A ar isonse skoltar
+SFX A ar iven/K skoltar
+SFX A ar ivense skoltar
+SFX A ar ivion/K skoltar
+SFX A ar ivionse skoltar
+SFX A ar ivié/O skoltar
+SFX A ar iviéu/P skoltar
+SFX A ar ivon/K skoltar
+SFX A ar ivonse skoltar
+SFX A ar ié/O skoltar
+SFX A ar iéu/P skoltar
+SFX A ar o/I skoltar
+SFX A ar on/K skoltar
+SFX A ar one skoltar
+SFX A ar onse skoltar
+SFX A ar à skoltar
+SFX A ar àa/IOQ skoltar
+SFX A ar àami/J skoltar
+SFX A ar àau/P skoltar
+SFX A ar àe/I skoltar
+SFX A ar àelo/R skoltar
+SFX A ar àemi/J skoltar
+SFX A ar ài/MO skoltar
+SFX A ar àimo/K skoltar
+SFX A ar àimoni/L skoltar
+SFX A ar àitu/N skoltar
+SFX A ar ào/I skoltar
+SFX A ar àomi/J skoltar
+SFX A ar àsimo skoltar
+SFX A ar àvami/J skoltar
+SFX A ar àvelo/R skoltar
+SFX A ar àvemi/J skoltar
+SFX A ar àvimo/K skoltar
+SFX A ar àvimoni/L skoltar
+SFX A ar àvitu/N skoltar
+SFX A ar àvomi/J skoltar
+SFX A ar è/GO skoltar
+SFX A ar èu/P skoltar
+SFX A ar é/GO skoltar
+SFX A ar émoni/L skoltar
+SFX A ar éu/P skoltar
+SFX A oltar óltelo/R skoltar
+SFX A oltar óltemi/J skoltar
+SFX A oltar óltitu/N skoltar
+SFX A oltar óltomi/J skoltar
+SFX A r da/H skoltar
+SFX A r de/H skoltar
+SFX A r di/H skoltar
+SFX A r do/H skoltar
+SFX A r ndo/EG skoltar
+SFX A r nte skoltar
+SFX A r r/EG skoltar
+SFX A r ralo/R skoltar
+SFX A r rami/J skoltar
+SFX A r ratu/N skoltar
+SFX A r rave/QS skoltar
+SFX A r re skoltar
+SFX A r remo/K skoltar
+SFX A r ren/K skoltar
+SFX A r rense skoltar
+SFX A r resi/O skoltar
+SFX A r resiu/P skoltar
+SFX A r rion/K skoltar
+SFX A r rionse skoltar
+SFX A r risen/K skoltar
+SFX A r risense skoltar
+SFX A r rision/K skoltar
+SFX A r risionse skoltar
+SFX A r risié/O skoltar
+SFX A r risiéu/P skoltar
+SFX A r rison/K skoltar
+SFX A r risonse skoltar
+SFX A r rié/O skoltar
+SFX A r riéu/P skoltar
+SFX A r ron/K skoltar
+SFX A r ronse skoltar
+SFX A r rà/IMQ skoltar
+SFX A r ràe/Q skoltar
+SFX A r rè/I skoltar
+SFX A r rèmi/J skoltar
+SFX A r ré/O skoltar
+SFX A r rémoni/L skoltar
+SFX A r résimo/K skoltar
+SFX A r résimoni/L skoltar
+SFX A r réu/P skoltar
+SFX A r ría/IMQ skoltar
+SFX A r ríami/J skoltar
+SFX A r ríatu/N skoltar
+SFX A r ríe/IQ skoltar
+SFX A r ríelo/R skoltar
+SFX A r ríemi/J skoltar
+SFX A r rò/I skoltar
+SFX A r ròmi/J skoltar
+SFX A r se/H skoltar
+SFX A r si skoltar
+SFX A r sta/H skoltar
+SFX A r ste/H skoltar
+SFX A r sti/H skoltar
+SFX A r sto/H skoltar
+SFX A r va/IOQ skoltar
+SFX A r vau/P skoltar
+SFX A r ve/I skoltar
+SFX A r vi/MO skoltar
+SFX A r vo/I skoltar
+SFX B Y 2 # reduŧioni
+SFX B 0 a/C [^aieo]
+SFX B o a/C o
+SFX C Y 1 # reduŧioni
+SFX C a e/D a
+SFX D Y 1 # reduŧioni
+SFX D e i e
+SFX E Y 10 # prokonplementari
+SFX E 0 -ge/F
+SFX E 0 -la
+SFX E 0 -le
+SFX E 0 -li
+SFX E 0 -lo
+SFX E 0 -me/F
+SFX E 0 -ne
+SFX E 0 -se/F
+SFX E 0 -te/F
+SFX E 0 -ve/F
+SFX F Y 5 # prokonplementari
+SFX F 0 la
+SFX F 0 le
+SFX F 0 li
+SFX F 0 lo
+SFX F 0 ne
+SFX G Y 18 # prokonplementari
+SFX G 0 -ge [^a]
+SFX G 0 -la [^a]
+SFX G 0 -le [^a]
+SFX G 0 -li [^a]
+SFX G 0 -lo [^a]
+SFX G 0 -me [^a]
+SFX G 0 -ne [^a]
+SFX G 0 -te [^a]
+SFX G 0 -ve [^a]
+SFX G a e-ge a
+SFX G a e-la a
+SFX G a e-le a
+SFX G a e-li a
+SFX G a e-lo a
+SFX G a e-me a
+SFX G a e-ne a
+SFX G a e-te a
+SFX G a e-ve a
+SFX H Y 22 # sonoriđaŧion konsonanti finali
+SFX H b. p b[oei]
+SFX H c. c c[oei]
+SFX H d. t d[oei]
+SFX H f. f f[oei]
+SFX H g. k g[oei]
+SFX H k. k k[oei]
+SFX H m. n m[oei]
+SFX H n. n n[oei]
+SFX H p. p p[oei]
+SFX H s. s s[oei]
+SFX H t. t t[oei]
+SFX H v. f v[oei]
+SFX H x. s x[oei]
+SFX H ñ. in ñ[oei]
+SFX H ñ. n ñ[oei]
+SFX H ñ. nc ñ[oei]
+SFX H ñ. ñ ñ[oei]
+SFX H đ. ŧ đ[oei]
+SFX H ŧ. ŧ ŧ[oei]
+SFX H ɉ. c ɉ[oei]
+SFX H ʃ. ʃ ʃ[oei]
+SFX H ʒ. ʃ ʒ[oei]
+SFX I Y 9 # interogativi
+SFX I 0 -e
+SFX I 0 -i
+SFX I 0 -mi
+SFX I 0 -ne [^n]
+SFX I 0 -ni [^n]
+SFX I 0 -nte [^n]
+SFX I 0 -nti [^n]
+SFX I 0 -te n
+SFX I 0 -ti n
+SFX J Y 8 # interogativi
+SFX J mi e i
+SFX J mi i i
+SFX J mi ne [^n]i
+SFX J mi ni [^n]i
+SFX J mi nte [^n]i
+SFX J mi nti [^n]i
+SFX J mi te ni
+SFX J mi ti ni
+SFX K Y 8 # interogativi
+SFX K 0 -e
+SFX K 0 -i
+SFX K 0 -ne [^n]
+SFX K 0 -ni [^n]
+SFX K 0 -nte [^n]
+SFX K 0 -nti [^n]
+SFX K 0 -te n
+SFX K 0 -ti n
+SFX L Y 7 # interogativi
+SFX L ni e ni
+SFX L ni i ni
+SFX L ni ne [^n]i
+SFX L ni nte [^n]i
+SFX L ni nti [^n]i
+SFX L ni te ni
+SFX L ni ti ni
+SFX M Y 3 # interogativi
+SFX M 0 -stu
+SFX M 0 -to
+SFX M 0 -tu
+SFX N Y 2 # interogativi
+SFX N tu stu tu
+SFX N u o u
+SFX O Y 2 # interogativi
+SFX O 0 -o
+SFX O 0 -u
+SFX P Y 1 # interogativi
+SFX P u o u
+SFX Q Y 8 # interogativi
+SFX Q . e-la [ai]
+SFX Q . e-le [ai]
+SFX Q . e-li [ai]
+SFX Q . e-lo [ai]
+SFX Q 0 -la [^ai]
+SFX Q 0 -le [^ai]
+SFX Q 0 -li [^ai]
+SFX Q 0 -lo [^ai]
+SFX R Y 3 # interogativi
+SFX R o a o
+SFX R o e o
+SFX R o i o
+SFX S Y 8 # interogativi
+SFX S ave ise-la rave
+SFX S ave ise-le rave
+SFX S ave ise-li rave
+SFX S ave ise-lo rave
+SFX S ave ísela rave
+SFX S ave ísele rave
+SFX S ave íseli rave
+SFX S ave íselo rave
+SFX T Y 5 # sostantivi plurali
+SFX T . i [aeo]
+SFX T 0 i [^aieo]
+SFX T a e a
+SFX T l i [^i]l
+SFX T n i [^i]n
+SFX U Y 6 # piante e mistièri
+SFX U dor tor/V [aeiou]dor
+SFX U ol iol/V rol
+SFX U ol iòl/V rol
+SFX U ol òl/V rol
+SFX U tor dor/V [aeiou]tor
+SFX U èr ar/V èr
+SFX V Y 4 # piante e mistièri
+SFX V 0 a [oò][lr]
+SFX V 0 e [oò][lr]
+SFX V 0 i
+SFX V 0 o
+
+# FIXME
+# se pòl katar un metaplaxmo de deklinaŧion da la 1a a la 2a koniug. intel inparfèto (kantàa > kantéa, pensàse > pensése), e intel partiŧipio pasivo (mañasto > mañésto)
+# sto metaplaxmo se pòl ‘verlo par tuti i mòdi e i tenpi (anka a partir da la 3a koniug.) fora ke inté ‘l infenío, partiŧipio, e xerundio (mañerà, mañeríe).
+# un metaplaxmo da la 3a a la 2a koniug. intel partiŧipio pasivo ko la dexinenŧa in -st- (sentésto, dormésto), e intel xerundio (finéndo).
+# se pòl ‘ver un xbasamento de la vokal (àtona) drio konsonante no prosimante e vanti vibrante (béver > bévar, tàxer > tàxar, èser > èsar, bevarà, sarésimo).
+
+# vèrbi e ajetivi de prima klase
+#SFX D Y 2
+#SFX D o   a/F       o
+#SFX D 0   a/F       [^aieo]
+
+# ajetivi de sekonda klase
+#SFX E Y 1
+#SFX E e   i         e
+
+# ajetivi de terŧa klase
+#SFX F Y 1
+#SFX F a   e/E       a
+
+# sostantivi alterài
+# dict: -òto/D
+# dict: -ato/D
+# dict: -on/D
+# dict: -eto/D
+# dict: -òlo/D
+# dict: -èlo/D
+# dict: -elo/D
+# dict: -ino/D
+# dict: -uŧo/D
+# dict: -sino/D
+# dict: -esino/D
+# dict: -ŧino/D
+# dict: -eŧino/D
+# dict: -ŧuŧo/D
+# dict: -eŧuŧo/D
+# dict: -đino/D
+# dict: -eđino/D
+# dict: -đuŧo/D
+# dict: -eđuŧo/D
+# dict: -lino/D
+# dict: -olino/D
+# dict: -luŧo/D
+# dict: -oluŧo/D
+# dict: -rino/D
+# dict: -erino/D
+# dict: -ruŧo/D
+# dict: -eruŧo/D
+# dict: -ato/D
+# dict: -aŧo/D
+# dict: -uko/D
+
+#SFX N Y 12
+#SFX N a ina [^icg]a
+#SFX N a ine [^icg]aì
+#SFX N a hina [cg]a
+#SFX N a hine [cg]a
+#SFX N a hetta [cg]a
+#SFX N a hette [cg]a
+#SFX N a etta [^cg]a
+#SFX N a ette [^cg]a
+#SFX N a na ia
+#SFX N a ne ia
+#SFX N a ona a
+#SFX N a one a
+
+# nòmi de piante e mistièri
+# dict: -er/V
+# dict: -rol/UV
+# dict: -dor/V
+# dict: -tor/V
+#SFX U Y 1
+#SFX U 0   o/D       .
+
+#SFX V Y 6
+#SFX V èr  ar/U      èr
+#SFX V ol  iol/U     rol
+#SFX V ol  òl/U      rol
+#SFX V ol  iòl/U     rol
+#SFX V tor dor/H     [aeiou]tor
+#SFX V dor tor/H     [aeiou]dor
+
+# artíkoli
+# dict: ‘l
+# dict: el
+# dict: al
+# dict: l’
+# dict: la/T
+# dict: i
+# dict: ‘n
+# dict: on
+# dict: an-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# dict: n’
+# dict: na
+# dict: del/T
+# dict: dela/T
+
+# ajetivi
+# dict: molto/D
+# dict: poko/D
+# dict: bon/D
+# dict: kativo/D
+# dict: grando/D
+# dict: cèo/D
+# dict: cèn/D
+# dict: picenin/D
+# dict: pícol/D
+# dict: alto/D
+# dict: baso/D
+# dict: primo/D
+# dict: dopo
+# dict: kuà
+# dict: là
+# dict: mèjo
+# dict: pèđo
+# dict: mejor/D
+# dict: peđor/D
+# dict: mađor/D
+# dict: menor/D
+# dict: superior/D
+# dict: inferior/D
+# dict: anterior/D
+# dict: posterior/D
+# dict: ŧiterior/D
+# dict: ulterior/D
+# dict: ben
+# dict: mal
+# dict: tanto/D# dict: tanton/T
+# dict: asè
+# dict: asàe
+# dict: vero/D
+# dict: fòrte/T
+# dict: mai
+# dict: no
+# dict: pi
+# dict: manko
+# dict: plúrimo/D
+# dict: òtimo/D
+# dict: pèsimo/D
+# dict: màsimo/D
+# dict: mínimo/D
+# dict: suprèmo/D
+# dict: ínfimo/D
+# dict: pòstumo/D
+# dict: ŧítimo/D
+# dict: último/D
+
+# pronòmi líberi sojèto, indirèto, e reflesivo
+# dict: noaltre/E
+# dict: nialtre/E
+# dict: altre/E
+# dict: nu
+# dict: nui
+# dict: voaltre/E
+# dict: vialtre/E
+# dict: v’
+# dict: vu
+# dict: vui
+# dict: elo/D
+# dict: lu
+# dict: lore/E
+# dict: sè
+
+# pronòmi klítegi konplemento e reflesivi, e inparsonal e pasivante 'se'
+# dict: me/E
+# dict: ne
+# dict: se/E
+# dict: te/E
+# dict: ve
+# dict: lo/D
+# dict: ge
+
+# pronòmi klítegi partitivo 'ne/en' e logativo 'ge'
+# dict: en
+
+# pronòmi klítegi sojèto
+
+# pronòme relativo 'ke'
+# dict: ke/E
+
+# pronòmi klítegi interogativi
+# FIXME
+#SFX X Y 14
+#SFX X n   nte/E    n
+#SFX X 0   nte/E    [^n]
+#SFX X 0   te/E     .
+#SFX X 0   e/E      .
+#SFX X n   ne/E     n
+#SFX X 0   ne/E     [^n]
+#SFX X 0   stu      .
+#SFX X 0   tu       .
+#SFX X 0   to       .
+#SFX X 0   u        .
+#SFX X 0   o        .
+#SFX X a   elo/D    [ai]
+#SFX X 0   elo/D    [^aài]
+#SFX X 0   lo/D     .
+
+# pronòme e ajetivo posesivo
+# dict: mé
+# dict: méo/D
+# dict: nòstro/D
+# dict: tó
+# dict: tóo/D
+# dict: vòstro/D
+# dict: só
+# dict: sóo/D
+
+# pronòme e ajetivo demostrativo
+# dict: sto/D
+# dict: kuelo/D
+
+# pronòme e ajetivo identifegativo
+# dict: isteso/D
+# dict: insteso/D
+# dict: medèximo/D
+# dict: medèmo/D
+# dict: tal
+
+# pronòme e ajetivo interogativo e esklamativo
+# dict: kuanto/D
+# dict: kualo/D
+# dict: dove
+# dict: indove
+# dict: onde
+# dict: kome
+# dict: kuando
+# dict: kuande
+# dict: parké
+# dict: parkòsa
+# dict: ci
+# dict: kòsa
+# dict: ‘sa
+
+# kuantifegador
+# dict: uno
+# dict: una
+# dict: oñiuno/D
+# dict: anbi
+# dict: intrami
+# dict: kualke
+# dict: kualkòsa
+# dict: kalkuno/D
+# dict: kalkeduno/D
+# dict: kualsiasi
+# dict: nisuno/D
+# dict: ñisun/D
+# dict: nesuno/D
+# dict: ñesun/D
+# dict: molto/D
+# dict: poko/D
+# dict: arkuanto/D
+# dict: rakuanto/D
+# dict: altretanto/D
+# dict: tuto/D
+# dict: altro/D
+# dict: st’
+# dict: kuelaltro/D
+# dict: ŧèrto/D
+# dict: bastanŧa
+# dict: òñi
+# dict: òñe
+# dict: ñente
+# dict: ñinte
+# dict: masa
+
+# avèrbi
+# dict: -on(i)
+# dict: -mente
+# dict: -mentre
+
+# prepoxiŧioni
+# dict: a/D
+# dict: da/T
+# dict: in
+# dict: inte
+# dict: ko
+# dict: so
+# dict: par
+# dict: tra
+# dict: intra
+# dict: fra
+# dict: infra
+# dict: dal
+# dict: tel
+# dict: intel
+# dict: kol
+# dict: sol
+# dict: pal
+# dict: ai
+# dict: dai
+# dict: téi
+# dict: intéi
+# dict: koi
+# dict: soi
+# dict: pai
+# dict: t’
+# dict: int’
+# dict: s’
+
+# numerali - kardenali
+# dict: xèro
+# dict: un
+# dict: do
+# dict: du
+# dict: trè
+# dict: tri
+# dict: kuatro
+# dict: ŧinkue
+# dict: síe
+# dict: sète
+# dict: òto
+# dict: nove
+# dict: dièxe
+# dict: dexe
+# dict: úndexe
+# dict: dódexe
+# dict: trédexe
+# dict: kuatòrdexe
+# dict: kuíndexe
+# dict: sédexe
+# dict: dexsète
+# dict: dexesète
+# dict: dexdòto
+# dict: dexedòto
+# dict: dexnove
+# dict: dexenove
+# dict: vinti/a
+# dict: trénta/a
+# dict: kuaranta/a
+# dict: ŧinkuanta/a
+# dict: sesanta/a
+# dict: setanta/a
+# dict: otanta/a
+# dict: novanta/a
+# dict: ŧento/abc
+# dict: doxento/ac
+# dict: trexento/ac
+# dict: mile/acdef
+# 2       do
+# 22      vinti-do
+# 222     do-xento-vinti-do
+# 2222    do-mile-do-xento-vinti-do
+# 22222   vinti-do-mile-do-xento-vinti-do
+# 222222  do-xento-vinti-do-mile-do-xento-vinti-do
+# 2222222 do-milioni-do-xento-vinti-do-mile-do-xento-vinti-do
+SFX a Y 11
+SFX a 0 -un
+SFX a 0 -do
+SFX a 0 -du
+SFX a 0 -trè
+SFX a 0 -tri
+SFX a 0 -kuatro
+SFX a 0 -ŧinkue
+SFX a 0 -síe
+SFX a 0 -sète
+SFX a 0 -òto
+SFX a 0 -nove
+
+PFX b Y 8
+PFX b 0 do-
+PFX b 0 trè-
+PFX b 0 kuatro-
+PFX b 0 ŧinkue-
+PFX b 0 síe-
+PFX b 0 sète-
+PFX b 0 òto-
+PFX b 0 nove-
+
+SFX c Y 14
+SFX c 0 -dièxe
+SFX c 0 -dexe
+SFX c 0 -úndexe
+SFX c 0 -dódexe
+SFX c 0 -trédexe
+SFX c 0 -kuatòrdexe
+SFX c 0 -kuíndexe
+SFX c 0 -sédexe
+SFX c 0 -dexsète
+SFX c 0 -dexesète
+SFX c 0 -dexdòto
+SFX c 0 -dexedòto
+SFX c 0 -dexnove
+SFX c 0 -dexenove
+
+SFX d Y 8
+SFX d 0 -vinti/a
+SFX d 0 -trénta/a
+SFX d 0 -kuaranta/a
+SFX d 0 -ŧinkuanta/a
+SFX d 0 -sesanta/a
+SFX d 0 -setanta/a
+SFX d 0 -otanta/a
+SFX d 0 -novanta/a
+
+PFX e Y 1
+PFX e 0 ŧento/abcd
+
+SFX f Y 3
+SFX f . èŧimo/D [^n]
+SFX f . èximo/D [^n]
+SFX f 0 èximo/D n
+
+
+# FIXME
+# melion/T
+# meliardo/T
+
+# numerali - ordenali
+# dict: primo/D
+# dict: primèro/D
+# dict: primièro/D
+# dict: sekondo/D
+# dict: tèrŧo/D
+# dict: kuarto/D
+# dict: kuinto/D
+# dict: sèsto/D
+# dict: sètimo/D
+# dict: otavo/D
+# dict: nòno/D
+# dict: dèŧimo/D
+
+# dict: último/D
+# dict: penúltimo/D
+# dict: terŧ’
+# dict: kuart’
+# dict: kuint’
+# dict: sèst’
+
+# numerali - koletivi
+# FIXME
+
+# numerali - moltiplegativi
+# dict: únego/D
+# dict: úñolo/D
+# dict: síngolo/D
+# dict: sénplise
+# dict: sinpio/D
+# dict: sinplio/D
+# dict: senpio/D
+# dict: dopio/D
+# dict: triplo/D
+# dict: kuàdruplo/D
+# dict: kuíntuplo/D
+# dict: sèstuplo/D
+# dict: sètuplo/D
+# dict: òtuplo/D
+# dict: nònuplo/D
+# dict: dèkuplo/D
+# dict: ŧéntuplo/D
+# dict: milèkuplo/D
+
+# numerali - fraŧionari
+# dict: mèđo
+
+# numeraŧion latina
+# dict: i/£
+# dict: v/£
+# dict: x/£$
+# dict: xx/£$
+# dict: xxx/£$
+# dict: l/£$
+# dict: c/£$
+# dict: d/£$
+# dict: m/£$
+SFX £ Y 10
+SFX £ 0 i    [ivxlcdm]
+SFX £ 0 ii   [ivxlcdm]
+SFX £ 0 iii  [vxlcdm]
+SFX £ 0 iv   [xlcdm]
+SFX £ 0 v    [ixlcdm]
+SFX £ 0 vi   [xlcdm]
+SFX £ 0 vii  [xlcdm]
+SFX £ 0 viii [xlcdm]
+SFX £ 0 ix   [xlcdm]
+SFX £ 0 x    i
+
+PFX $ Y 62
+PFX $ 0 x      [lc]
+PFX $ 0 l      x
+PFX $ 0 c      [xlcdm]
+PFX $ 0 cx     [lc]
+PFX $ 0 cl     x
+PFX $ 0 cc     [xlc]
+PFX $ 0 ccx    [lc]
+PFX $ 0 ccl    x
+PFX $ 0 ccc    [xl]
+PFX $ 0 cccx   [lc]
+PFX $ 0 cccl   x
+PFX $ 0 cd     [xl]
+PFX $ 0 cdx    [lc]
+PFX $ 0 cdl    x
+PFX $ 0 d      [xlc]
+PFX $ 0 dx     [lc]
+PFX $ 0 dl     x
+PFX $ 0 dc     [xlc]
+PFX $ 0 dcx    [lc]
+PFX $ 0 dcl    x
+PFX $ 0 dcc    [xlc]
+PFX $ 0 dccx   [lc]
+PFX $ 0 dccl   x
+PFX $ 0 dccc   [xl]
+PFX $ 0 dcccx  [lc]
+PFX $ 0 dcccl  x
+PFX $ 0 cm     [xl]
+PFX $ 0 cmx    [lc]
+PFX $ 0 cml    x
+PFX $ 0 m      [xlcdm]
+PFX $ 0 mx     [lc]
+PFX $ 0 ml     x
+PFX $ 0 mc     [xlcmd]
+PFX $ 0 mcx    [lc]
+PFX $ 0 mcl    x
+PFX $ 0 mcc    [xlc]
+PFX $ 0 mccx   [lc]
+PFX $ 0 mccl   x
+PFX $ 0 mccc   [xl]
+PFX $ 0 mcccx  [lc]
+PFX $ 0 mcccl  x
+PFX $ 0 mcd    [xl]
+PFX $ 0 mcdx   [lc]
+PFX $ 0 mcdl   x
+PFX $ 0 md     [xlc]
+PFX $ 0 mdx    [lc]
+PFX $ 0 mdl    x
+PFX $ 0 mdc    [xlc]
+PFX $ 0 mdcx   [lc]
+PFX $ 0 mdcl   x
+PFX $ 0 mdcc   [xlc]
+PFX $ 0 mdccx  [lc]
+PFX $ 0 mdccl  x
+PFX $ 0 mdccc  [xl]
+PFX $ 0 mdcccx [lc]
+PFX $ 0 mdcccl x
+PFX $ 0 mcm    [xl]
+PFX $ 0 mcmx   [lc]
+PFX $ 0 mcml   x
+PFX $ 0 mm     [xlc]
+PFX $ 0 mmx    [lc]
+PFX $ 0 mml    x
+
+# đorni de la setemana
+# dict: Luni
+# dict: Marti
+# dict: Mèrkore
+# dict: Mèrkol
+# dict: Điòba
+# dict: Đòbia
+# dict: Đoba
+# dict: Đobia
+# dict: Vénare
+# dict: Véndre
+# dict: Véndri
+# dict: Véner
+# dict: Vénere
+# dict: Sabo
+# dict: Doménega
+
+# mexi
+# dict: Đenaro
+# dict: Đanèr
+# dict: Đenèr
+# dict: Febraro
+# dict: Fevraro
+# dict: Fevrèr
+# dict: Marŧo
+# dict: Aprile
+# dict: Avril
+# dict: Mađo
+# dict: Majo
+# dict: Đuño
+# dict: Junio
+# dict: Lujo
+# dict: Lulio
+# dict: Agosto
+# dict: Seténbre
+# dict: Seténbare
+# dict: Otóbre
+# dict: Otóbare
+# dict: Novénbre
+# dict: Novénbare
+# dict: Dexénbre
+# dict: Dexénbare
+
+# staxon (ant. saxon)
+# dict: Primavéra
+# dict: Primavérta
+# dict: Vèrta
+# dict: Insuta
+# dict: Ansuda
+# dict: Istà
+# dict: Autuno
+# dict: Otuno
+# dict: Fardima
+# dict: Invèrno
+
+# đonture koordenanti
+# dict: né
+# dict: néke
+# dict: ní
+# dict: ñanka
+# dict: anka
+# dict: oltre
+# dict: pitòsto
+# dict: altrimenti
+# dict: ma
+# dict: anŧi
+# dict: inveŧe
+# dict: defati
+# dict: parké
+# dict: parò
+# dict: anpò
+# dict: siben
+# dict: donka
+# dict: adonka
+# dict: alora
+# dict: insoma
+# dict: kusí
+# dict: kusíta
+# dict: kuindi
+# dict: sia
+# dict: kome
+# dict: fà
+# dict: kofà
+# dict: tanto/D
+
+# đonture subordenanti
+# dict: de
+# dict: parkome
+# dict: sikome
+# dict: sí
+# dict: almanko
+# dict: finké
+# dict: mentre
+# dict: pena
+# dict: intanto
+# dict: kó
+# dict: vanti
+# dict: drio
+# dict: man
+# dict: kondiŧion
+# dict: pato
+# dict: basta
+# dict: kaxo
+# dict: kaxomài
+# dict: nò
+# dict: kuaxi
+# dict: skuaxi
+# dict: fora
+# dict: via
+# dict: senŧa
+# dict: pitòsto
+
+# esklamaŧion
+# dict: ah
+# dict: aah
+# dict: eh
+# dict: ehh
+# dict: ih
+# dict: oh
+# dict: ohh
+# dict: uh
+# dict: ahi
+# dict: ehi
+# dict: ufa
+# dict: òhu
+# dict: òhi
+# dict: ohi
+# dict: ohe
+# dict: ohé
+# dict: ohu
+# dict: bah
+# dict: cò
+# dict: mah
+# dict: ehm
+# dict: uhm
+# dict: mh
+# dict: ssh
+# dict: ha
+# dict: ho
+# dict: òco
+# dict: èko
+# dict: brao
+# dict: bravo
+# dict: fòrŧa
+# dict: korajo
+# dict: ben
+# dict: benon
+# dict: basta
+# dict: viva
+# dict: a
+# dict: pò
+# dict: mò
+# dict: vara
+# dict: ‘ara
+# dict: tarà
+# dict: mostro
+# dict: bèlo
+# dict: mixèria
+# dict: òro
+# dict: viva
+# dict: brr
+# dict: malani
+# dict: guài
+# dict: fiol
+# dict: fiòl
+# dict: kan
+# dict: magari
+# dict: rivaderse
+# dict: cao
+# dict: sani
+# dict: sanité
+# dict: salve
+# dict: pòro/D
+# dict: mona
+# dict: din
+# dict: don
+# dict: tik
+# dict: tak
+# dict: patapúnfete
+# dict: pàfete
+# dict: cik
+# dict: cak
+# dict: ñao
+# dict: kikirikí
+
+
+# TODO
+# pàx. 101
+
+
+# PFX h Y 4
+# PFX h 0 l’ [aàeèéiíoòóuú]
+# PFX h 0 ‘l [aàeèéiíoòóuú]
+# PFX h 0 n’ [aàeèéiíoòóuú]
+# PFX h 0 ‘n [aàeèéiíoòóuú]
+
+#SFX Y N 12
+#SFX Y o emente [lu]ento
+#SFX Y o amente [^t]o
+#SFX Y o amente [^n]to
+#SFX Y o amente [^e]nto
+#SFX Y o amente [^lu]ento
+#SFX Y 0 mente  [^rln]e
+#SFX Y e mente  [aeiou]re
+#SFX Y 0 mente  [^aeiou]re
+#SFX Y e mente  [^l]le
+#SFX Y 0 mente  lle
+#SFX Y e amente one
+#SFX Y 0 mente  [^o]ne-

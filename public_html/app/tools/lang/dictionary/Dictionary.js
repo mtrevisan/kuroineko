@@ -63,7 +63,7 @@ for(k in galepin){
 		}
 
 		if(results.length)
-			results = results.sort(function(a, b){ return Word.sorterFn(a.lemmata, b.lemmata); });
+			results.sort(function(a, b){ return Word.sorterFn(a.lemmata, b.lemmata); });
 
 		return results;
 	};

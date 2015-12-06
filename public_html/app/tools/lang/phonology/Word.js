@@ -38,6 +38,7 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme'], function(St
 		return undefined;
 	};
 
+	//NOTE: duplicated in Grapheme
 	var suppressStress = function(word){
 		return word.replace(/[àèéíòóú]/g, function(chr){
 			return 'aeeioou'['àèéíòóú'.indexOf(chr)];
@@ -58,7 +59,7 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme'], function(St
 		if(idx < 0){
 			//skip non-alphabetic characters
 			var lastChar = word.length - 1;
-			while(!word[lastChar].match(/[aàbcdđeéèfghiíjɉklƚmnñoóòprsʃtŧuúvxʒ]/))
+			while(lastChar >= 0 && !word[lastChar].match(/[aàbcdđeéèfghiíjɉklƚmnñoóòprsʃtŧuúvxʒ]/))
 				lastChar --;
 
 			//last vowel if the word ends with consonant, penultimate otherwise, default to the second vowel of a group of two (first one on a monosyllabe)
@@ -78,11 +79,24 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme'], function(St
 	};
 
 	var unmarkDefaultStress = function(word){
-		var idx = getIndexOfStress(word);
+		if(!word)
+			return undefined;
+
+		var idx = getIndexOfStress(word),
+			tmp;
 		if(idx >= 0){
-			//exclude unmark from words that can be truncated like "fenisié(de)"
-			var tmp = (word[idx + 1] != '('? suppressStress(word): word);
-			if(word == markDefaultStress(tmp))
+			//exclude unmark from words that can be truncated like "fenisié(de)" or "(g)à"
+			tmp = ((word[idx - 1] != ')' || word[idx + 1] != '(')
+					&& !Grapheme.isDiphtong(word.substr(idx, 2))
+					&& !Grapheme.isHyatus(word.substr(idx, 2))
+					&& !word.match(/^(re)?\(?g?\)?(à\/è|à|é|ò)[oaie]?$/)
+					&& !word.match(/^\(?x?\)?é$|^s[éí][oaie]?$/)
+					&& !word.match(/^((r[ei])?d[àé]|(kon(tra)?|likue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?f[àé]|(mal|move|soto)?st[àé])[oaie]?$/)
+					&& !word.match(/^(và[oaie]?|vé)[oaie]?$/)
+					&& !word.match(/^s[àò][oaie]?$/)
+					&& !word.match(/^(|as?|des?|es|kon|pro|re|so)tr[àé][oaie]?$/)?
+				word.replace(/[àéíóú]/g, function(chr){ return 'aeiou'['àéíóú'.indexOf(chr)]; }): word);
+			if(tmp != word && markDefaultStress(tmp) == word)
 				word = tmp;
 		}
 

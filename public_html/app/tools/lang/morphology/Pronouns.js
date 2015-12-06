@@ -100,7 +100,8 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 				interrogative: {
 					first: {
 						general1: '-<n>(t)i/e',
-						general2: '-i/e'
+						general2: '-(m)i/e'
+						//cipileño: -mi
 					},
 					secondSingular: (dialect.none? '-(s)tu/-to': (dialect.lagunar? (dialect.dialect == 'lagunar.coxòto'? '-stu': '-tu'):
 						(dialect.central || dialect.western? '-to': '-tu'))),

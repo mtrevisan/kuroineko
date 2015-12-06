@@ -81,7 +81,7 @@
 		</nav>
 	</header>
 	<nav>
-		<a href="pages/it/syllabator.html">Sillabatore</a> &ndash; <a href="pages/it/dialectInquirer.html">Riconoscitore delle varianti</a><span class="new-feature">nuovo!</span> &ndash; <a href="pages/it/dictionary.html">Dizionario</a><span class="new-feature">nuovo!</span> &ndash; <a href="pages/it/measureConverter.html">Convertitore delle misure</a>
+		<a href="pages/it/syllabator.html">Sillabatore</a> &ndash; <a href="pages/it/dialectInquirer.html">Riconoscitore delle varianti</a><span class="new-feature">nuovo!</span> &ndash; <a href="pages/it/dictionary.html">Dizionario</a><span class="new-feature">nuovo!</span> &ndash; <a href="pages/it/measureConverter.html">Convertitore delle misure</a> &ndash; <a href="pages/it/spellchecker.html">Correttore ortografico</a><span class="new-feature">nuovo!</span>
 		<br>
 		<br>
 		<a href="pages/it/alphabet.html">Nascita dell&#8217;alfabeto veneto</a>
@@ -92,7 +92,7 @@
 		Questo coniugatore &egrave; in grado di ricavare il paradigma di <b>tutti</b> i verbi (attivi, passivi, pronominali &ndash; <i>ma&ntilde;ar</i>, <i>pensarse</i>, <i>saverla</i>) a partire da un infinito qualsiasi grazie a un algoritmo fatto apposta.<br>
 		Avete solo da scrivere il verbo nella sua forna infinita e premere &#8220;Coniuga&#8221; o premere <i>invio</i>.<br>
 		<br>
-		<span class="pay-attention">Attenzione a indicare gli accenti grevi per non sbagliare!</span> (<i>l&egrave;xar</i> &egrave; diverso da &#8220;lexàr&#8221;, cos&iacute; come <i>f&oacute;ndar</i> da <i>fond&agrave;r</i>, guarda il <a href="pages/vec/syllabator.html">sillabatore</a>).
+		<span class="pay-attention">Attenzione a indicare gli accenti grevi per non sbagliare!</span> (<i>l&egrave;xar</i> &egrave; diverso da &#8220;lexàr&#8221;, cos&iacute; come <i>f&oacute;ndar</i> da <i>fond&agrave;r</i>, guarda il <a href="pages/it/syllabator.html">sillabatore</a>).
 	</section>
 	<section class="notes">
 		<h2>Note</h2>
@@ -113,7 +113,7 @@
 		</div>
 	</section>
 	<section class="input frame-inner" id="inputSection">
-		<form action="#inputSection" novalidate>
+		<form action="/pages/it/conjugator.html#inputSection" novalidate>
 			<input type="text" id="infinitive" class="verb-input" placeholder="inserisci il verbo&hellip;" title="infinito del verbo"
 				required pattern="^([aàbcdđeèéfgiìíjɉklƚmnñoòóprsʃtŧuùúvxʒ]|[eiou]/|[aeo]\\|[djlnstx]h)+([aeioàèéìíòó]|[eiou]/|[aeo]\\)r(([gs]e)?(la|ne)?|l?e)?$" data-validate="required(campo obbligatorio)|regex(infinito non valido)" tabindex="1" />
 			<input type="submit" id="btnCalculate" class="verb-input-button" value="Coniuga" accesskey="C" tabindex="3" />
@@ -236,9 +236,12 @@
 							<td class="conjugation">--</td>
 						</tr>
 						<tr>
-							<th scope="rowgroup" class="mood">infinito</th>
-							<th scope="rowgroup" class="tense">semplice</th>
-							<td colspan="5" class="conjugation" id="infinitive.simple.all">&nbsp;</td>
+							<th scope="rowgroup" rowspan="2" class="mood">infinito</th>
+							<th scope="rowgroup" rowspan="2" class="tense">semplice</th>
+							<td colspan="5" class="conjugation" id="infinitive.simple.all1">&nbsp;</td>
+						</tr>
+						<tr>
+							<td colspan="5" class="conjugation" id="infinitive.simple.all2">&nbsp;</td>
 						</tr>
 						<tr>
 							<th scope="rowgroup" rowspan="8" class="mood">participio</th>

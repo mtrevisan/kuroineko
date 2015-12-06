@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/data/StringHelper'], function(StringHelper){
+define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme'], function(StringHelper, Grapheme){
 
 	/*var convertPhonesIntoXSampa = (function(){
 
@@ -74,14 +74,14 @@ define(['tools/data/StringHelper'], function(StringHelper){
 		return word.replace(matcher, '$1');
 	};
 
-	var syncopatePluralAfterNasalLateral = function(word, mainDialect, dialect){
+	var syncopatePluralAfterNasalLateral = function(word, mainDialect){
 		if(mainDialect == 'northern' || mainDialect == 'oriental')
 			word = word.replace(/([eèéoó])[nl]i$/, '$1i');
 
 		return word;
 	};
 
-	var finalConsonantVoicing = function(word, mainDialect, dialect){
+	var finalConsonantVoicing = function(word, mainDialect){
 		if(mainDialect == 'northern')
 			word = word.replace(/[bdgvđxʒɉmñ]$/, function(match){
 				return (match == 'ñ'? 'nc': 'ptkfŧsʃcn'['bdgvđxʒɉm'.indexOf(match)]);
@@ -95,7 +95,7 @@ define(['tools/data/StringHelper'], function(StringHelper){
 	};
 
 
-	var approximantPalatalFreeVariation = function(word, mainDialect, dialect){
+	var approximantPalatalFreeVariation = function(word, mainDialect){
 		if(mainDialect == 'lagunar')
 			word = word.replace(/j/g, 'ɉ');
 		else if(mainDialect == 'oriental')
@@ -149,10 +149,20 @@ define(['tools/data/StringHelper'], function(StringHelper){
 		return word;
 	};
 
-	var occlusiveDentalCombinatorialVariation = function(word, mainDialect, dialect){
+	var occlusiveDentalCombinatorialVariation = function(word, mainDialect){
 		if(mainDialect == 'northern')
 			word = word.replace(/k([aà])/g, 'c$1').replace(/g([aà])/g, 'ɉ$1')
 				.replace(/ti([aeioàèéíòóuú])/g, 'c$1').replace(/di([aeioàèéíòóuú])/g, 'ɉ$1');
+
+		return word;
+	};
+
+	var vowelLoweringCombinatorialVariation = function(word, mainDialect){
+		if(mainDialect.match(/^(central|western)/)){
+			var m = word.match(/^.+[^aàiu]er(?!e?$)/g);
+			if(m && !Grapheme.isEterophonicSequence(m[0]))
+				word = word.replace(/^(.+[^aàiu])er(?!e?$)/g, '$1ar');
+		}
 
 		return word;
 	};
@@ -173,7 +183,8 @@ define(['tools/data/StringHelper'], function(StringHelper){
 		unstressedVowelBeforeVibrantFreeVariation: unstressedVowelBeforeVibrantFreeVariation,
 		stressedVowelBeforeVibrantFreeVariation: stressedVowelBeforeVibrantFreeVariation,
 		constrictiveDentalCombinatorialVariation: constrictiveDentalCombinatorialVariation,
-		occlusiveDentalCombinatorialVariation: occlusiveDentalCombinatorialVariation
+		occlusiveDentalCombinatorialVariation: occlusiveDentalCombinatorialVariation,
+		vowelLoweringCombinatorialVariation: vowelLoweringCombinatorialVariation
 	};
 
 });

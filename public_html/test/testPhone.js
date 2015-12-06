@@ -1,7 +1,7 @@
 require(['tools/lang/phonology/Phone', 'tools/lang/GrammarLearner'], function(Phone, GrammarLearner){
-	module('Phone');
+	QUnit.module('Phone');
 
-	test('phone conversion test', function(){
+	QUnit.test('phone conversion test', function(){
 		deepEqual(Phone.convertStringIntoFeatures('a'), [
 			{syl: 1, con: -1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0, dst: 0, str: 0, lat: -1, dor: 1, hi: -1, lo: 1, ft: -1, bk: -1, tns: 0}
 		]);
@@ -13,12 +13,12 @@ require(['tools/lang/phonology/Phone', 'tools/lang/GrammarLearner'], function(Ph
 		deepEqual(Phone.convertFeaturesIntoRegExString(['a', {con: 1, son: 1, hi: 0}]), 'a[mʙɱnrɾlɺɳɻɽɭ]');
 	});
 
-	test('convert features into regex', function(){
+	QUnit.test('convert features into regex', function(){
 		equal(Phone.convertFeaturesIntoRegExString(Phone.convertStringIntoFeatures('abcɢ͡ʁd̪͡z̪')), 'abc(?:ɢ͡ʁ)(?:d̪͡z̪)');
 		equal(Phone.convertFeaturesIntoRegExString(Phone.convertStringIntoFeatures('[+con]')), '(?:[pbmɸβʙɱfvntdθðszʃʒrɾɬɮlɫɺɳʈɖʂʐɕʑɻɽɭɲcɟçʝʎŋkɡxɣʟɴqɢχʁʀħʕʔɧC]|k̟͡x̟|ɡ̟͡ɣ̟|d͡ʑ|t͡ɕ|d͡ʒ|d͡z|d͡ɮ|d̠͡ɮ̠|t͡ʃ|t͡ɬ̲|t͡s|t͡ɬ|t̪͡s̪|t̪͡ɬ̪|d̪͡z̪|d̪͡ɮ̪|ʈ͡ʂ|ɖ͡ʐ|p͡f|b͡v|p͡ɸ|b͡β|t̪͡θ|d̪͡ð|c͡ç|ɟ͡ʝ|k͡x|k̠͡x̠|ɡ͡ɣ|ɡ̠͡ɣ̠|q͡χ|ɢ͡ʁ|k͡p|ɡ͡b|p͡t|b͡d)');
 	});
 
-	test('compare features', function(){
+	QUnit.test('compare features', function(){
 		deepEqual(Phone.compareFeatures('#', '#'), {diff: [], same: {'0': '#'}});
 		deepEqual(Phone.compareFeatures('a', 'b'), {diff: ['0'], same: {}});
 		deepEqual(Phone.compareFeatures({con: 1}, {con: 1}), {diff: [], same: {con: 1}});
@@ -36,7 +36,7 @@ require(['tools/lang/phonology/Phone', 'tools/lang/GrammarLearner'], function(Ph
 		deepEqual(Phone.compareFeatures({con: 1, voi: 0}, 'b', true), {diff: ['con', 'voi', '0'], same: {}});
 	});
 
-	test('rule application test', function(){
+	QUnit.test('rule application test', function(){
 		Phone.setUseDiacritics(true);
 
 		equal((new Phone.Rule('t', '∅', '_#')).applyTo('rat'), 'ra');
@@ -49,24 +49,24 @@ require(['tools/lang/phonology/Phone', 'tools/lang/GrammarLearner'], function(Ph
 		Phone.setUseDiacritics(false);
 	});
 
-	test('rule containment test', function(){
+	QUnit.test('rule containment test', function(){
 		Phone.setUseDiacritics(true);
 
-		equal((new Phone.Rule('a', 'b', 'a_#')).contains(new Phone.Rule('a', 'c', 'a_#')), false);
-		equal((new Phone.Rule('a', 'b', 'ab_#')).contains(new Phone.Rule('a', 'b', 'a_#')), false);
+		notOk((new Phone.Rule('a', 'b', 'a_#')).contains(new Phone.Rule('a', 'c', 'a_#')));
+		notOk((new Phone.Rule('a', 'b', 'ab_#')).contains(new Phone.Rule('a', 'b', 'a_#')));
 
-		equal((new Phone.Rule('a', 'b', '[+con]_#')).contains(new Phone.Rule('a', 'b', '[+con]_#')), true);
-		equal((new Phone.Rule('a', 'b', '[+con]_#')).contains(new Phone.Rule('a', 'b', '[+con,+voi]_#')), true);
-		equal((new Phone.Rule('a', 'b', '[+con,+voi]_#')).contains(new Phone.Rule('a', 'b', '[+con]_#')), false);
+		ok((new Phone.Rule('a', 'b', '[+con]_#')).contains(new Phone.Rule('a', 'b', '[+con]_#')));
+		ok((new Phone.Rule('a', 'b', '[+con]_#')).contains(new Phone.Rule('a', 'b', '[+con,+voi]_#')));
+		notOk((new Phone.Rule('a', 'b', '[+con,+voi]_#')).contains(new Phone.Rule('a', 'b', '[+con]_#')));
 
-		equal((new Phone.Rule('a', 'b', 'a_#')).contains(new Phone.Rule('a', 'b', 'a_#')), true);
-		equal((new Phone.Rule('a', 'b', '[-con]_#')).contains(new Phone.Rule('a', 'b', 'a_#')), true);
-		equal((new Phone.Rule('a', 'b', 'a_#')).contains(new Phone.Rule('a', 'b', '[-con]_#')), false);
+		ok((new Phone.Rule('a', 'b', 'a_#')).contains(new Phone.Rule('a', 'b', 'a_#')));
+		ok((new Phone.Rule('a', 'b', '[-con]_#')).contains(new Phone.Rule('a', 'b', 'a_#')));
+		notOk((new Phone.Rule('a', 'b', 'a_#')).contains(new Phone.Rule('a', 'b', '[-con]_#')));
 
 		Phone.setUseDiacritics(false);
 	});
 
-	test('rule inferring test (GrammarLearner)', function(){
+	QUnit.test('rule inferring test (GrammarLearner)', function(){
 		var rules = GrammarLearner.prototype.getRulesFromPair('sal', 'sar');
 		equal(rules.length, 1);
 		equal(rules[0].toString(), 'l → r / #sa_#');

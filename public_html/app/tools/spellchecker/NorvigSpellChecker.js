@@ -11,11 +11,18 @@
  *
  * @author Mauro Trevisan
  */
-define(function(){
+define(['tools/data/ArrayHelper'], function(ArrayHelper){
+
+	/**
+	 * @constant
+	 * @private
+	 */
+	var REGEX_UNICODE_SPLITTER = /([^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u035B\u035D-\u0360\u0362-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*(?:[\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*[\u035C\u0361][^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*)?)/g;
+
 
 	var Constructor = function(alphabetString){
-		this.alphabet = alphabetString;
-		this.filter = new RegExp('([' + alphabetString + ']+)', 'gi'),
+		this.alphabet = alphabetString.match(REGEX_UNICODE_SPLITTER);
+		this.filter = new RegExp('([' + alphabetString + ']+)', 'g'),
 
 		this.dictionary = {};
 	};
@@ -30,9 +37,21 @@ define(function(){
 		calculateLanguageModelProbability.call(this, corpus);
 	};
 
+	/**
+	 * Adds a word to the dictionary.
+	 *
+	 * @param {String} word	The word to add to the dictionary.
+	 */
+	var addWord = function(word){
+		corpus = extractWords.call(this, corpus);
+
+//FIXME
+		calculateLanguageModelProbability.call(this, corpus);
+	};
+
 	/** @private */
 	var extractWords = function(words){
-		return (Array.isArray(words)? words: words.match(this.filter));
+		return (Array.isArray(words)? words.map(function(value){ return value.toLowerCase(); }): words.toLowerCase().match(this.filter));
 	};
 
 	/**
@@ -42,14 +61,13 @@ define(function(){
 	 */
 	var calculateLanguageModelProbability = function(words){
 		words.forEach(function(word){
-			word = word.toLowerCase();
-
 			this[word] = this[word] + 1 || 1;
 		}, this.dictionary);
 
 		//calculate logarithm of probability
-		var logSize = Math.log(words.length);
-		Object.keys(this.dictionary).forEach(function(word){
+		var keys = Object.keys(this.dictionary),
+			logSize = Math.log(keys.length);
+		keys.forEach(function(word){
 			this[word] = Math.log(this[word]) - logSize;
 		}, this.dictionary);
 	};
@@ -63,19 +81,21 @@ define(function(){
 	 * <p>
 	 * According to Norvig, literature suggests that 80% to 95% of spelling errors are an edit distance of 1 away from the correct word.
 	 *
-	 * @param {String} word			Word to be searched for.
+	 * @param {String} word			The input for which corrections should be suggested.
 	 * @param {Number} [distance]	Max edit distance.
-	 * @returns {Object}	an object contains candidates and sorted keys.
+	 * @return {Array}	A sorted array containing objects of ln(probability) and suggestions.
 	 */
 	var suggest = function(word, distance){
 		var input = {};
-		input[word] = 0;
+		input[word.toLowerCase()] = 0;
 		var candidates = calculateNEditSet.call(this, input, {}, distance || 2);
 
-		return {
-			candidates: calculateRelativeProbabilitiesFromLog(candidates),
-			sortedKeys: sortKeysByMoreProbable(candidates)
-		};
+		var results = ArrayHelper.partition(Object.keys(candidates), function(key){ return candidates[key]; });
+		return Object.keys(results)
+			.map(function(key){ return {lnProbability: Number(key), values: results[key]}; })
+			.sort(function(a, b){ return b.lnProbability - a.lnProbability; });
+
+		//calculateRelativeProbabilitiesFromLog(candidates);
 	};
 
 	/**
@@ -89,7 +109,6 @@ define(function(){
 		//add to set if the given word is known
 		if(this.dictionary[word])
 			candidates[word] = this.dictionary[word];
-
 		return candidates;
 	};
 
@@ -203,15 +222,14 @@ define(function(){
 
 	/** @private */
 	var calculateRelativeProbabilitiesFromLog = function(candidates){
-		var k,
-			sum = 0;
-		for(k in candidates){
-			candidates[k] = Math.exp(candidates[k]);
-			sum += candidates[k];
-		}
-		for(k in candidates)
-			candidates[k] = candidates[k] / sum;
-		return candidates;
+		var sum = 0;
+		candidates.forEach(function(candidate){
+			candidate[0] = Math.exp(candidate[0]);
+			sum += candidate[0];
+		});
+		candidates.forEach(function(candidate){
+			candidate[0] /= sum;
+		});
 	};
 
 	/** @private */
@@ -224,6 +242,8 @@ define(function(){
 		constructor: Constructor,
 
 		readDictionary: readDictionary,
+//		addWord: addWord,
+
 		isCorrect: isCorrect,
 		suggest: suggest
 	};

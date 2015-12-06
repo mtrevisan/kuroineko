@@ -80,11 +80,11 @@ for(var i = 0; i < size; i ++){
 			if(Validator.validateInput(lemmataVecDOM))
 				onKeyUpSearchDictionary();
 		};
-		lemmataItaDOM.onkeyup = function(evt){
+		lemmataItaDOM.onkeyup = function(){
 			if(Validator.validateInput(lemmataItaDOM))
 				onKeyUpSearchDictionary();
 		};
-		lemmataEngDOM.onkeyup = function(evt){
+		lemmataEngDOM.onkeyup = function(){
 			if(Validator.validateInput(lemmataEngDOM))
 				onKeyUpSearchDictionary();
 		};

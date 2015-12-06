@@ -1,6 +1,8 @@
 /**
  * @class Validator
  *
+ * @see {@link https://github.com/yairEO/validator/blob/master/validator.js}
+ *
  * @author Mauro Trevisan
  */
 define(['HTMLHelper', 'tools/ui/Alerter'], function(HTMLHelper, Alerter){

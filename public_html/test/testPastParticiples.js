@@ -1,5 +1,5 @@
 require(['tools/data/StringHelper', 'tools/lang/phonology/Word'], function(StringHelper, Word){
-	module('PastParticiple');
+	QUnit.module('PastParticiple');
 
 	var strong2tonicT = [
 		{matcher: /trà$/, replacement: 'tràt'},

@@ -1,12 +1,12 @@
 require(['tools/lang/phonology/Syllabator'], function(Syllabator){
-	module('Syllabator');
+	QUnit.module('Syllabator');
 
 	var syllabatePhonematicAndJoin = function(word){
 		return Syllabator.syllabate(word, undefined, true).syllabes.join('-');
 	};
 
 
-	test('phonematic - plain syllabation', function(){
+	QUnit.test('phonematic - plain syllabation', function(){
 		equal(syllabatePhonematicAndJoin('kaxa'), 'kà-xa');
 		equal(syllabatePhonematicAndJoin('jutar'), 'ju-tàr');
 		equal(syllabatePhonematicAndJoin('pàuxa'), 'pàu-xa');
@@ -22,7 +22,7 @@ require(['tools/lang/phonology/Syllabator'], function(Syllabator){
 		equal(syllabatePhonematicAndJoin('aŧión'), 'a-ŧión');
 	});
 
-	test('phonematic - double consonant syllabation', function(){
+	QUnit.test('phonematic - double consonant syllabation', function(){
 		equal(syllabatePhonematicAndJoin('èrba'), 'èr-ba');
 		equal(syllabatePhonematicAndJoin('saltar'), 'sal-tàr');
 		equal(syllabatePhonematicAndJoin('lontan'), 'lon-tàn');
@@ -35,12 +35,12 @@ require(['tools/lang/phonology/Syllabator'], function(Syllabator){
 		equal(syllabatePhonematicAndJoin('serpénte'), 'ser-pén-te');
 	});
 
-	test('phonematic - double consonant with s initial syllabation', function(){
+	QUnit.test('phonematic - double consonant with s initial syllabation', function(){
 		equal(syllabatePhonematicAndJoin('kospiràr'), 'kos-pi-ràr');
 		equal(syllabatePhonematicAndJoin('kósto'), 'kós-to');
 	});
 
-	test('phonematic/graphematic - double consonant with muta cum liquida syllabation', function(){
+	QUnit.test('phonematic/graphematic - double consonant with muta cum liquida syllabation', function(){
 		//b, k, d, f, g, p, t, v + l oppure r
 		equal(syllabatePhonematicAndJoin('kablàr'), 'ka-blàr');
 		equal(syllabatePhonematicAndJoin('cíklo'), 'cí-klo');
@@ -61,7 +61,7 @@ require(['tools/lang/phonology/Syllabator'], function(Syllabator){
 		equal(syllabatePhonematicAndJoin('nevróxi'), 'ne-vró-xi');
 	});
 
-	test('phonematic/graphematic - triple consonant syllabation', function(){
+	QUnit.test('phonematic/graphematic - triple consonant syllabation', function(){
 		equal(syllabatePhonematicAndJoin('sorprexa'), 'sor-pré-xa');
 		equal(syllabatePhonematicAndJoin('subtropegal'), 'sub-tro-pe-gàl');
 		equal(syllabatePhonematicAndJoin('inglexe'), 'in-glé-xe');
@@ -71,12 +71,12 @@ require(['tools/lang/phonology/Syllabator'], function(Syllabator){
 		equal(syllabatePhonematicAndJoin('rinbrotàr'), 'rin-bro-tàr');
 	});
 
-	test('phonematic - triple consonant with s initial syllabation', function(){
+	QUnit.test('phonematic - triple consonant with s initial syllabation', function(){
 		equal(syllabatePhonematicAndJoin('kostrénxer'), 'kos-trén-xer');
 		equal(syllabatePhonematicAndJoin('despresàr'), 'des-pre-sàr');
 	});
 
-	test('phonematic - s-impure inside word syllabation', function(){
+	QUnit.test('phonematic - s-impure inside word syllabation', function(){
 		equal(syllabatePhonematicAndJoin('bastanŧa'), 'bas-tàn-ŧa');
 		equal(syllabatePhonematicAndJoin('destrikar'), 'des-tri-kàr');
 		equal(syllabatePhonematicAndJoin('peskar'), 'pes-kàr');
@@ -85,7 +85,7 @@ require(['tools/lang/phonology/Syllabator'], function(Syllabator){
 		equal(syllabatePhonematicAndJoin('ciklíxmo'), 'ci-klíx-mo');
 	});
 
-	test('phonematic - s-impure initial syllabation', function(){
+	QUnit.test('phonematic - s-impure initial syllabation', function(){
 		equal(syllabatePhonematicAndJoin('strako'), 's-trà-ko');
 		equal(syllabatePhonematicAndJoin('scantixo'), 's-can-tí-xo');
 		equal(syllabatePhonematicAndJoin('sfexa'), 's-fé-xa');
@@ -98,7 +98,7 @@ require(['tools/lang/phonology/Syllabator'], function(Syllabator){
 		equal(syllabatePhonematicAndJoin('xbèrla'), 'x-bèr-la');
 	});
 
-	test('phonematic - greek syllabation', function(){
+	QUnit.test('phonematic - greek syllabation', function(){
 		equal(syllabatePhonematicAndJoin('psíko'), 'p-sí-ko');
 		equal(syllabatePhonematicAndJoin('pnèumo'), 'p-nèu-mo');
 		equal(syllabatePhonematicAndJoin('tmèxi'), 't-mè-xi');
@@ -117,7 +117,7 @@ require(['tools/lang/phonology/Syllabator'], function(Syllabator){
 		return Syllabator.syllabate(word, undefined, false).syllabes.join('-');
 	};
 
-	test('graphematic - plain syllabation', function(){
+	QUnit.test('graphematic - plain syllabation', function(){
 		equal(syllabateGraphematicAndJoin('kaxa'), 'kà-xa');
 		equal(syllabateGraphematicAndJoin('jutar'), 'ju-tàr');
 		equal(syllabateGraphematicAndJoin('pàuxa'), 'pàu-xa');
@@ -133,7 +133,7 @@ require(['tools/lang/phonology/Syllabator'], function(Syllabator){
 		equal(syllabateGraphematicAndJoin('aŧión'), 'a-ŧión');
 	});
 
-	test('graphematic - double consonant syllabation', function(){
+	QUnit.test('graphematic - double consonant syllabation', function(){
 		equal(syllabateGraphematicAndJoin('èrba'), 'èr-ba');
 		equal(syllabateGraphematicAndJoin('saltar'), 'sal-tàr');
 		equal(syllabateGraphematicAndJoin('lontan'), 'lon-tàn');
@@ -146,17 +146,17 @@ require(['tools/lang/phonology/Syllabator'], function(Syllabator){
 		equal(syllabateGraphematicAndJoin('serpénte'), 'ser-pén-te');
 	});
 
-	test('graphematic - double consonant with s initial syllabation', function(){
+	QUnit.test('graphematic - double consonant with s initial syllabation', function(){
 		equal(syllabateGraphematicAndJoin('kospiràr'), 'ko-spi-ràr');
 		equal(syllabateGraphematicAndJoin('kósto'), 'kó-sto');
 	});
 
-	test('graphematic - triple consonant with s initial syllabation', function(){
+	QUnit.test('graphematic - triple consonant with s initial syllabation', function(){
 		equal(syllabateGraphematicAndJoin('kostrénxer'), 'ko-strén-xer');
 		equal(syllabateGraphematicAndJoin('despresàr'), 'de-spre-sàr');
 	});
 
-	test('graphematic - s-impure inside word syllabation', function(){
+	QUnit.test('graphematic - s-impure inside word syllabation', function(){
 		equal(syllabateGraphematicAndJoin('bastanŧa'), 'ba-stàn-ŧa');
 		equal(syllabateGraphematicAndJoin('destrikar'), 'de-stri-kàr');
 		equal(syllabateGraphematicAndJoin('peskar'), 'pe-skàr');
@@ -165,7 +165,7 @@ require(['tools/lang/phonology/Syllabator'], function(Syllabator){
 		equal(syllabateGraphematicAndJoin('ciklíxmo'), 'ci-klí-xmo');
 	});
 
-	test('graphematic - s-impure initial syllabation', function(){
+	QUnit.test('graphematic - s-impure initial syllabation', function(){
 		equal(syllabateGraphematicAndJoin('strako'), 'strà-ko');
 		equal(syllabateGraphematicAndJoin('scantixo'), 'scan-tí-xo');
 		equal(syllabateGraphematicAndJoin('sfexa'), 'sfé-xa');
@@ -178,7 +178,7 @@ require(['tools/lang/phonology/Syllabator'], function(Syllabator){
 		equal(syllabateGraphematicAndJoin('xbèrla'), 'xbèr-la');
 	});
 
-	test('graphematic - greek syllabation', function(){
+	QUnit.test('graphematic - greek syllabation', function(){
 		equal(syllabateGraphematicAndJoin('psíko'), 'p-sí-ko');
 		equal(syllabateGraphematicAndJoin('pnèumo'), 'p-nèu-mo');
 		equal(syllabateGraphematicAndJoin('tmèxi'), 't-mè-xi');

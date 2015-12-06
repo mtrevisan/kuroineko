@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<link rel="shortcut icon" href="../favicon.png" />
+
+	<title>test</title>
+
+	<script src="../app/AMDLoader.js"></script>
+
+	<script>
+		AMDLoader.config = {
+			baseUrl: '../app',
+			paths: {
+				libs: '../libs'
+			}
+		};
+
+
+/*		require(['tools/lang/Hunspell', 'text!tools/lang/morphology/dictionaries/en_US.aff', 'text!tools/lang/morphology/dictionaries/en_US.dic'], function(Hunspell, aff, dic){
+			var dictionary = new Hunspell(aff, dic);
+
+			var suggestions = dictionary.suggest('mispeling');
+
+			console.log(suggestions);
+		});/**/
+
+		require(['tools/spellchecker/Hunspell', 'text!tools/spellchecker/dictionaries/vec.aff', 'text!tools/spellchecker/dictionaries/vec.dic'], function(Hunspell, aff, dic){
+			var dictionary = new Hunspell(aff, dic);
+			aff = null;
+			dic = null;
+
+			var suggestions = dictionary.suggest('skoltema');
+
+			console.log(suggestions);
+		});/**/
+	</script>
+</head>
+
+<body>
+</body>
+</html>

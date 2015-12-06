@@ -16,7 +16,7 @@
 
 
 /*require(['tools/data/coder/arithmetic/HighOrderModelFactory', 'tools/data/coder/arithmetic/BasicModel', 'tools/data/coder/arithmetic/CoderDriver'], function(HighOrderModelFactory, BasicModel, CoderDriver){
-	test('coding/decoding', function(){
+	QUnit.test('coding/decoding', function(){
 		/*var base = 'This method will be called exactly once for each symbol being encoded or decoded, and the calls will be made in the order in which they';
 		var fixedCounts = extractCounts(base);*/
 
@@ -39,7 +39,7 @@ msg = 'define("tools/data/ObjectHelper",[],function(){Function.prototype.clone=f
 };/**/
 
 /*require(['tools/data/coder/arithmetic/HighOrderModelFactory', 'tools/data/coder/arithmetic/BasicModel', 'tools/data/coder/arithmetic/CoderDriver', 'tools/data/structs/BitBuffer'], function(HighOrderModelFactory, BasicModel, CoderDriver, BitBuffer){
-	test('coding/decoding, basic model of order 0', function(){
+	QUnit.test('coding/decoding, basic model of order 0', function(){
 		var msg = 'This method will be called exactly once for each symbol being encoded or decoded, and the calls will be made in the order in which they';
 		var model = CoderDriver.create(HighOrderModelFactory.createFrom(BasicModel, 0));
 		//var model = CoderDriver.create(BasicModel);
@@ -56,7 +56,7 @@ msg = 'define("tools/data/ObjectHelper",[],function(){Function.prototype.clone=f
 });
 
 require(['tools/data/coder/arithmetic/HighOrderModelFactory', 'tools/data/coder/arithmetic/BasicModel', 'tools/data/coder/arithmetic/CoderDriver', 'tools/data/structs/BitBuffer'], function(HighOrderModelFactory, BasicModel, CoderDriver, BitBuffer){
-	test('coding/decoding, basic model of order 1', function(){
+	QUnit.test('coding/decoding, basic model of order 1', function(){
 		var msg = 'This method will be called exactly once for each symbol being encoded or decoded, and the calls will be made in the order in which they';
 		var model = CoderDriver.create(HighOrderModelFactory.createFrom(BasicModel, 1));
 		//var model = CoderDriver.create(BasicModel);
@@ -73,9 +73,9 @@ require(['tools/data/coder/arithmetic/HighOrderModelFactory', 'tools/data/coder/
 });/**/
 
 require(['tools/data/ObjectHelper', 'tools/data/coder/arithmetic/HighOrderModelFactory', 'tools/data/coder/arithmetic/BasicModel', 'tools/data/coder/arithmetic/CoderDriver', 'tools/data/structs/BitBuffer', 'text!../app/tools/lang/data/Galepin.js'], function(ObjectHelper, HighOrderModelFactory, BasicModel, CoderDriver, BitBuffer, Galepin){
-	module('ArithmeticCoder');
+	QUnit.module('ArithmeticCoder');
 
-	test('encode Galepin', function(){
+	QUnit.test('encode Galepin', function(){
 		var model = CoderDriver.create(HighOrderModelFactory.createFrom(BasicModel, 2), {updateCount: 200});
 		var buffer = model.compress(Galepin);
 
@@ -91,7 +91,7 @@ require(['tools/data/ObjectHelper', 'tools/data/coder/arithmetic/HighOrderModelF
 });/**/
 
 /*require(['tools/data/ObjectHelper', 'tools/data/coder/arithmetic/HighOrderModelFactory', 'tools/data/coder/arithmetic/BasicModel', 'tools/data/coder/arithmetic/CoderDriver', 'tools/data/coder/elias/EliasDeltaCoder', 'text!../app/tools/lang/data/Galepin.js'], function(ObjectHelper, HighOrderModelFactory, BasicModel, CoderDriver, EliasDeltaCoder, Galepin){
-	test('encode Galepin', function(){
+	QUnit.test('encode Galepin', function(){
 		var fixedCounts = extractCounts(Galepin);
 
 		var alphabet = [],

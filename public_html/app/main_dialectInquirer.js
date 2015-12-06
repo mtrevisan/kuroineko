@@ -68,20 +68,22 @@ define(['tools/data/mining/DecisionTree', 'HTMLHelper', 'tools/ui/Validator', 't
 		Alerter.setContainer(document.getElementById('inquirer'));
 
 		var recordSupervisedInstance = function(nodeClass, newClass){
+			var payload = {
+				timestamp: (new Date()).toISOString(),
+				instance: dt.getSupervisedInstance(),
+				nodeClass: nodeClass,
+				newClass: newClass,
+				supervisorName: name,
+				supervisorAge: age,
+				supervisorPlace: place
+			};
 			var common = function(client){
-				var payload = {
-					timestamp: (new Date()).toISOString(),
-					instance: dt.getSupervisedInstance(),
-					nodeClass: nodeClass,
-					newClass: newClass,
-					supervisorName: name,
-					supervisorAge: age,
-					supervisorPlace: place
-				};
 				//copy over client informationa
 				Object.keys(client).forEach(function(k){
 					payload[k] = client[k];
 				});
+
+				GoogleAnalyticsHelper.trackEvent('Compute', 'InquireDialect response with location', payload);
 
 				CommHelper.post('app/tools/lang/data/fileAppender.php', {
 					filename: 'dialectInquirer.txt',
@@ -89,7 +91,12 @@ define(['tools/data/mining/DecisionTree', 'HTMLHelper', 'tools/ui/Validator', 't
 				});
 			};
 
-			CommHelper.getClientPositionData().then(common, common);
+			GoogleAnalyticsHelper.trackEvent('Compute', 'InquireDialect response', payload);
+
+			try{ CommHelper.getClientPositionData().then(common, common); }
+			catch(e){
+				common({});
+			}
 		};
 
 		var fnSupervisorConfirmClass = function(nodeClass){
