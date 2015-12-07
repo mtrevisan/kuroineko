@@ -4,9 +4,7 @@
 #
 # home: http://parnodexmentegar.orgfree.com
 #
-# Version 1.0.0 (15/10/2015) (DD/MM/YYYY)
-# Note: this file is unmodified in the current package, hence no
-# copyright notes have been added to it.
+# Version 1.0.0 (07/12/2015) (DD/MM/YYYY)
 #
 # This file is distributed under GPL license.
 #
@@ -28,10 +26,9 @@
 
 
 NAME Diŧionario vèneto
-VERSION 1.0.0 (15/10/2015)
+VERSION 1.0.0 (07/12/2015)
 HOME http://parnodexmentegar.orgfree.com
 LANG vec
-#LANG it_IT
 
 SET UTF-8
 TRY eèéaàoòóiínrlƚtskdpvmuúgxfŧbjɉñđchEÈÉAÀOÒÓIÍNRLȽTSKDPVMUÚGXFŦBJɈÑĐCH
@@ -52,8 +49,7 @@ MAP oòóOÒÓ
 MAP uúùUÙÚ
 
 # frequently switched character groups
-REP 148
-# REP ^đ[aàeèéiíoòóuú] d.
+REP 153
 # REP đ[aàeèéiíoòóuú] d.
 # REP dh[aàeèéiíoòóuú] d.
 REP đ    d
@@ -182,8 +178,13 @@ REP sn   xn
 REP sr   xr
 REP sj   xj
 REP ixar$ iđar
-# REP [aeiou](n)s(i)[aeiou]$ .(n)ŧ(i).
-# REP sion([aeiou])$ ŧion(.)
+# REP [aeiou](n)s(i)[aeio]$ .(n)ŧ(i).
+# REP sion([aeio])$ ŧion(.)
+REP sion$ ŧion
+REP siona$ ŧiona
+REP sione$ ŧione
+REP sioni$ ŧioni
+REP siono$ ŧiono
 # REP [aàeèéiíoòóuú]v[aàeèéiíoòóuú] ..
 # REP [aàeèéiíoòóuú]d[aàeèéiíoòóuú] ..
 # REP [aàeèéiíoòóuú][aàeèéiíoòóuú] .v.
@@ -212,8 +213,8 @@ REP ^gò ‘ò
 REP ^gó ‘ó
 REP ^gu ‘u
 REP ^gú ‘ú
-# seramento de /é/ protònego in /i/ vanti palatal
-# palatidhathion de /tj, dj/ vanti vokal in /c, ɉ/
+# t[ji][aàeèéiíoòóuú] > c.
+# d[ji][aàeèéiíoòóuú] > ɉ.
 
 # replace double-characters with single ones
 ICONV 5
