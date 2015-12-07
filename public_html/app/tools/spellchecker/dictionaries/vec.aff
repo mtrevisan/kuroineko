@@ -49,12 +49,12 @@ MAP oòóOÒÓ
 MAP uúùUÙÚ
 
 # frequently switched character groups
-REP 153
+REP 44
 # REP đ[aàeèéiíoòóuú] d.
 # REP dh[aàeèéiíoòóuú] d.
 REP đ    d
-REP đ    x
 REP dh   d
+REP đ    x
 REP dh   đ
 REP fh   f
 REP j    ɉ
@@ -63,103 +63,19 @@ REP ɉ    j
 # REP [aàeèéiíoòóuú]l[aàeèéiíoòóuú] .ƚ.
 # REP ^l[aàeèéiíoòóuú] ƚ.
 REP l    ƚ
-REP ^la  ƚa
-REP ^là  ƚà
-REP ^le  ƚe
-REP ^lè  ƚè
-REP ^lé  ƚé
-REP ^li  ƚi
-REP ^lí  ƚí
-REP ^lo  ƚo
-REP ^lò  ƚò
-REP ^ló  ƚó
-REP ^lu  ƚu
-REP ^lú  ƚú
-REP ^lia  ja
-REP ^lià  jà
-REP ^lie  je
-REP ^liè  jè
-REP ^lié  jé
-REP ^lii  ji
-REP ^lií  jí
-REP ^lio  jo
-REP ^liò  jò
-REP ^lió  jó
-REP ^liu  ju
-REP ^liú  jú
+# REP li[aàeèéiíoòóuú] j.
+REP li   j
 REP lh   ƚ
 REP ƚ    l
 REP nh   ñ
 REP th   ŧ
 REP ^th  f
-REP th$  f
-REP ŧ    s
 REP ^ŧ   f
+REP th$  f
 REP ŧ$   f
+REP ŧ    s
 REP ù    ú
 REP ì    í
-REP mb   nb
-REP mp   np
-REP cia  ca
-REP cià  cà
-REP cie  ce
-REP ciè  cè
-REP cié  cé
-REP cii  ci
-REP cií  cí
-REP cio  co
-REP ciò  cò
-REP ció  có
-REP ciu  cu
-REP ciú  cú
-REP ɉia  ɉa
-REP ɉià  ɉà
-REP ɉie  ɉe
-REP ɉiè  ɉè
-REP ɉié  ɉé
-REP ɉii  ɉi
-REP ɉií  ɉí
-REP ɉio  ɉo
-REP ɉiò  ɉò
-REP ɉió  ɉó
-REP ɉiu  ɉu
-REP ɉiú  ɉú
-REP jhia ɉa
-REP jhià ɉà
-REP jhie ɉe
-REP jhiè ɉè
-REP jhié ɉé
-REP jhii ɉi
-REP jhií ɉí
-REP jhio ɉo
-REP jhiò ɉò
-REP jhió ɉó
-REP jhiu ɉu
-REP jhiú ɉú
-REP ñia  ña
-REP ñià  ñà
-REP ñie  ñe
-REP ñiè  ñè
-REP ñié  ñé
-REP ñii  ñi
-REP ñií  ñí
-REP ñio  ño
-REP ñiò  ñò
-REP ñió  ñó
-REP ñiu  ñu
-REP ñiú  ñú
-REP nhia ña
-REP nhià ñà
-REP nhie ñe
-REP nhiè ñè
-REP nhié ñé
-REP nhii ñi
-REP nhií ñí
-REP nhio ño
-REP nhiò ñò
-REP nhió ñó
-REP nhiu ñu
-REP nhiú ñú
 REP xc   sc
 REP xf   sf
 REP xk   sk
@@ -180,39 +96,17 @@ REP sj   xj
 REP ixar$ iđar
 # REP [aeiou](n)s(i)[aeio]$ .(n)ŧ(i).
 # REP sion([aeio])$ ŧion(.)
-REP sion$ ŧion
+REP sion$  ŧion
 REP siona$ ŧiona
 REP sione$ ŧione
 REP sioni$ ŧioni
 REP siono$ ŧiono
+# REP ^v[aàeèéiíoòóuú] ‘.
+# REP ^g[aàeèéiíoòóuú] ‘.
 # REP [aàeèéiíoòóuú]v[aàeèéiíoòóuú] ..
 # REP [aàeèéiíoòóuú]d[aàeèéiíoòóuú] ..
 # REP [aàeèéiíoòóuú][aàeèéiíoòóuú] .v.
 # REP [aàeèéiíoòóuú][aàeèéiíoòóuú] .d.
-REP ^va ‘a
-REP ^và ‘à
-REP ^ve ‘e
-REP ^vè ‘è
-REP ^vé ‘é
-REP ^vi ‘i
-REP ^ví ‘í
-REP ^vo ‘o
-REP ^vò ‘ò
-REP ^vó ‘ó
-REP ^vu ‘u
-REP ^vú ‘ú
-REP ^ga ‘a
-REP ^gà ‘à
-REP ^ge ‘e
-REP ^gè ‘è
-REP ^gé ‘é
-REP ^gi ‘i
-REP ^gí ‘í
-REP ^go ‘o
-REP ^gò ‘ò
-REP ^gó ‘ó
-REP ^gu ‘u
-REP ^gú ‘ú
 # t[ji][aàeèéiíoòóuú] > c.
 # d[ji][aàeèéiíoòóuú] > ɉ.
 
