@@ -49,7 +49,7 @@ MAP oòóOÒÓ
 MAP uúùUÙÚ
 
 # frequently switched character groups
-REP 44
+REP 40
 # REP đ[aàeèéiíoòóuú] d.
 # REP dh[aàeèéiíoòóuú] d.
 REP dh   d
@@ -93,14 +93,10 @@ REP sñ   xñ
 REP sn   xn
 REP sr   xr
 REP sj   xj
-REP ixar$ iđar
+REP ixar iđar
 # REP [aeiou](n)s(i)[aeio]$ .(n)ŧ(i).
 # REP sion([aeio])$ ŧion(.)
-REP sion$  ŧion
-REP siona$ ŧiona
-REP sione$ ŧione
-REP sioni$ ŧioni
-REP siono$ ŧiono
+REP sion ŧion
 # REP ^v[aàeèéiíoòóuú] ‘.
 # REP ^g[aàeèéiíoòóuú] ‘.
 # REP [aàeèéiíoòóuú]v[aàeèéiíoòóuú] ..
@@ -22583,18 +22579,9 @@ SFX V 0 o
 # un metaplaxmo da la 3a a la 2a koniug. intel partiŧipio pasivo ko la dexinenŧa in -st- (sentésto, dormésto), e intel xerundio (finéndo).
 # se pòl ‘ver un xbasamento de la vokal (àtona) drio konsonante no prosimante e vanti vibrante (béver > bévar, tàxer > tàxar, èser > èsar, bevarà, sarésimo).
 
-# vèrbi e ajetivi de prima klase
-#SFX D Y 2
-#SFX D o   a/F       o
-#SFX D 0   a/F       [^aieo]
-
-# ajetivi de sekonda klase
-#SFX E Y 1
-#SFX E e   i         e
-
-# ajetivi de terŧa klase
-#SFX F Y 1
-#SFX F a   e/E       a
+#D: [oaie]
+#E: [ei]
+#T: [ei]?
 
 # sostantivi alterài
 # dict: -òto/D
@@ -22628,35 +22615,19 @@ SFX V 0 o
 # dict: -aŧo/D
 # dict: -uko/D
 
-#SFX N Y 12
-#SFX N a ina [^icg]a
-#SFX N a ine [^icg]aì
-#SFX N a hina [cg]a
-#SFX N a hine [cg]a
-#SFX N a hetta [cg]a
-#SFX N a hette [cg]a
-#SFX N a etta [^cg]a
-#SFX N a ette [^cg]a
-#SFX N a na ia
-#SFX N a ne ia
-#SFX N a ona a
-#SFX N a one a
-
-# nòmi de piante e mistièri
-# dict: -er/V
-# dict: -rol/UV
-# dict: -dor/V
-# dict: -tor/V
-#SFX U Y 1
-#SFX U 0   o/D       .
-
-#SFX V Y 6
-#SFX V èr  ar/U      èr
-#SFX V ol  iol/U     rol
-#SFX V ol  òl/U      rol
-#SFX V ol  iòl/U     rol
-#SFX V tor dor/H     [aeiou]tor
-#SFX V dor tor/H     [aeiou]dor
+#SFX Y 12
+#SFX a ina [^icg]a
+#SFX a ine [^icg]aì
+#SFX a hina [cg]a
+#SFX a hine [cg]a
+#SFX a hetta [cg]a
+#SFX a hette [cg]a
+#SFX a etta [^cg]a
+#SFX a ette [^cg]a
+#SFX a na ia
+#SFX a ne ia
+#SFX a ona a
+#SFX a one a
 
 # artíkoli
 # dict: ‘l
@@ -22667,38 +22638,7 @@ SFX V 0 o
 # dict: i
 # dict: ‘n
 # dict: on
-# dict: an-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# dict: an
 # dict: n’
 # dict: na
 # dict: del/T
@@ -22734,7 +22674,8 @@ SFX V 0 o
 # dict: ulterior/D
 # dict: ben
 # dict: mal
-# dict: tanto/D# dict: tanton/T
+# dict: tanto/D
+# dict: tanton/T
 # dict: asè
 # dict: asàe
 # dict: vero/D
@@ -22786,24 +22727,6 @@ SFX V 0 o
 
 # pronòme relativo 'ke'
 # dict: ke/E
-
-# pronòmi klítegi interogativi
-# FIXME
-#SFX X Y 14
-#SFX X n   nte/E    n
-#SFX X 0   nte/E    [^n]
-#SFX X 0   te/E     .
-#SFX X 0   e/E      .
-#SFX X n   ne/E     n
-#SFX X 0   ne/E     [^n]
-#SFX X 0   stu      .
-#SFX X 0   tu       .
-#SFX X 0   to       .
-#SFX X 0   u        .
-#SFX X 0   o        .
-#SFX X a   elo/D    [ai]
-#SFX X 0   elo/D    [^aài]
-#SFX X 0   lo/D     .
 
 # pronòme e ajetivo posesivo
 # dict: mé
@@ -22945,70 +22868,78 @@ SFX V 0 o
 # dict: ŧento/abc
 # dict: doxento/ac
 # dict: trexento/ac
-# dict: mile/acdef
-# 2       do
-# 22      vinti-do
-# 222     do-xento-vinti-do
-# 2222    do-mile-do-xento-vinti-do
-# 22222   vinti-do-mile-do-xento-vinti-do
-# 222222  do-xento-vinti-do-mile-do-xento-vinti-do
-# 2222222 do-milioni-do-xento-vinti-do-mile-do-xento-vinti-do
-SFX a Y 11
-SFX a 0 -un
-SFX a 0 -do
-SFX a 0 -du
-SFX a 0 -trè
-SFX a 0 -tri
-SFX a 0 -kuatro
-SFX a 0 -ŧinkue
-SFX a 0 -síe
-SFX a 0 -sète
-SFX a 0 -òto
-SFX a 0 -nove
-
-PFX b Y 8
-PFX b 0 do-
-PFX b 0 trè-
-PFX b 0 kuatro-
-PFX b 0 ŧinkue-
-PFX b 0 síe-
-PFX b 0 sète-
-PFX b 0 òto-
-PFX b 0 nove-
-
-SFX c Y 14
-SFX c 0 -dièxe
-SFX c 0 -dexe
-SFX c 0 -úndexe
-SFX c 0 -dódexe
-SFX c 0 -trédexe
-SFX c 0 -kuatòrdexe
-SFX c 0 -kuíndexe
-SFX c 0 -sédexe
-SFX c 0 -dexsète
-SFX c 0 -dexesète
-SFX c 0 -dexdòto
-SFX c 0 -dexedòto
-SFX c 0 -dexnove
-SFX c 0 -dexenove
-
-SFX d Y 8
-SFX d 0 -vinti/a
-SFX d 0 -trénta/a
-SFX d 0 -kuaranta/a
-SFX d 0 -ŧinkuanta/a
-SFX d 0 -sesanta/a
-SFX d 0 -setanta/a
-SFX d 0 -otanta/a
-SFX d 0 -novanta/a
-
-PFX e Y 1
-PFX e 0 ŧento/abcd
-
-SFX f Y 3
-SFX f . èŧimo/D [^n]
-SFX f . èximo/D [^n]
-SFX f 0 èximo/D n
+# dict: mile/abcdef
+# dict: xento/abcd
+# dict: melioni/abcd
+# dict: meliardi/abcd
+# 2            do
+# 22           vinti-do
+# 222          do-xento-vinti-do
+# 2222         do-mile-do-xento-vinti-do
+# 22222        vinti-do-mile-do-xento-vinti-do
+# 222222       do-xento-vinti-do-mile-do-xento-vinti-do
+# 2222222      do-melioni-do-xento-vinti-do-mile-do-xento-vinti-do
+# 22222222     vinti-do-melioni-do-xento-vinti-do-mile-do-xento-vinti-do
+# 222222222    do-xento-vinti-do-melioni-do-xento-vinti-do-mile-do-xento-vinti-do
+# 2222222222   do-meliardi-do-xento-vinti-do-melioni-do-xento-vinti-do-mile-do-xento-vinti-do
+# 22222222222  vinti-do-meliardi-do-xento-vinti-do-melioni-do-xento-vinti-do-mile-do-xento-vinti-do
+# 222222222222 do-xento-vinti-do-meliardi-do-xento-vinti-do-melioni-do-xento-vinti-do-mile-do-xento-vinti-do
+#SFX a Y 11
+#SFX a 0 -un
+#SFX a 0 -do
+#SFX a 0 -du
+#SFX a 0 -trè
+#SFX a 0 -tri
+#SFX a 0 -kuatro
+#SFX a 0 -ŧinkue
+#SFX a 0 -síe
+#SFX a 0 -sète
+#SFX a 0 -òto
+#SFX a 0 -nove
+#
+#PFX b Y 8
+#PFX b 0 do-
+#PFX b 0 trè-
+#PFX b 0 kuatro-
+#PFX b 0 ŧinkue-
+#PFX b 0 síe-
+#PFX b 0 sète-
+#PFX b 0 òto-
+#PFX b 0 nove-
+#
+#SFX c Y 14
+#SFX c 0 -dièxe
+#SFX c 0 -dexe
+#SFX c 0 -úndexe
+#SFX c 0 -dódexe
+#SFX c 0 -trédexe
+#SFX c 0 -kuatòrdexe
+#SFX c 0 -kuíndexe
+#SFX c 0 -sédexe
+#SFX c 0 -dexsète
+#SFX c 0 -dexesète
+#SFX c 0 -dexdòto
+#SFX c 0 -dexedòto
+#SFX c 0 -dexnove
+#SFX c 0 -dexenove
+#
+#SFX d Y 8
+#SFX d 0 -vinti/a
+#SFX d 0 -trénta/a
+#SFX d 0 -kuaranta/a
+#SFX d 0 -ŧinkuanta/a
+#SFX d 0 -sesanta/a
+#SFX d 0 -setanta/a
+#SFX d 0 -otanta/a
+#SFX d 0 -novanta/a
+#
+#PFX e Y 1
+#PFX e 0 -ŧento/abcd
+#
+#SFX f Y 3
+#SFX f . èŧimo/D [^n]
+#SFX f . èximo/D [^n]
+#SFX f 0 èximo/D n
 
 
 # FIXME
