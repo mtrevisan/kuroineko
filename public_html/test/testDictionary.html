@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<link rel="shortcut icon" href="../favicon.png" />
+
+	<title>test Dictionary</title>
+
+	<script src="../app/AMDLoader.js"></script>
+
+	<script>
+		AMDLoader.config = {
+			baseUrl: '../app',
+			paths: {
+				libs: '../libs'
+			}
+		};
+
+
+		require(['tools/lang/recognition/NGrams', 'tools/data/ArrayHelper', 'text!tools/spellchecker/text.txt'], function(NGrams, ArrayHelper, text){
+			var words = ArrayHelper.unique(NGrams.tokenize(text).sort());
+			words = words.filter(function(word){ return !word.match(/^-|-$|^\d+$/); });
+
+			console.log(JSON.stringify(words));
+		});
+
+	</script>
+</head>
+
+<body>
+</body>
+</html>
