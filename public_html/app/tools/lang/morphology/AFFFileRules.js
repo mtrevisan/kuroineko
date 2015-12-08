@@ -145,7 +145,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				'ol>òl/' + PLANTS_AND_CRAFTS_RESERVED_0 + '|rol',
 				'tor>dor/' + PLANTS_AND_CRAFTS_RESERVED_0 + '|[aeiou]tor',
 				'dor>tor/' + PLANTS_AND_CRAFTS_RESERVED_0 + '|[aeiou]dor'],
-			[PLANTS_AND_CRAFTS_RESERVED_0, '0>[oi]|èr', '0>[oi]|ar', '0>[oaie]|[oò][lr]']
+			[PLANTS_AND_CRAFTS_RESERVED_0, '0>[oi]|èr', '0>[oaie]|ar', '0>[oaie]|[oò][lr]']
 		]
 	};
 
