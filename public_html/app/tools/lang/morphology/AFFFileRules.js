@@ -67,13 +67,15 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	/** @constant */
 		INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE = REDUCTION_RESERVED_0 + 17,
 	/** @constant */
-		SUBSTANTIVES = REDUCTION_RESERVED_0 + 18,
+		SUBSTANTIVES_0 = REDUCTION_RESERVED_0 + 18,
 	/** @constant */
-		PLANTS_AND_CRAFTS = REDUCTION_RESERVED_0 + 19,
+		SUBSTANTIVES_1 = REDUCTION_RESERVED_0 + 19,
 	/** @constant */
-		PLANTS_AND_CRAFTS_RESERVED_0 = REDUCTION_RESERVED_0 + 20;
+		PLANTS_AND_CRAFTS = REDUCTION_RESERVED_0 + 20,
+	/** @constant */
+		PLANTS_AND_CRAFTS_RESERVED_0 = REDUCTION_RESERVED_0 + 21;
 
-	var abjectives = {
+	var adjectives = {
 		0: [
 			//ajetivi de prima klase
 			[REDUCTION_RESERVED_0, '[oaie]', 'o>a/' + REDUCTION_RESERVED_1 + '|o', '0>a/' + REDUCTION_RESERVED_1 + '|[^aieo]'],
@@ -128,7 +130,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	var substantives = {
 		1: [
-			[SUBSTANTIVES, '0>i|[^aieo]', '.>i|[aeo]', 'n>i|[^i]n', 'l>i|[^i]l', 'a>e|a']
+			[SUBSTANTIVES_0, '0>i|[^aieo]', '.>i|[aeo]', 'n>i|[^i]n', 'l>i|[^i]l', 'a>e|a'],
+			[SUBSTANTIVES_1, 'o>i']
 		]
 	};
 
@@ -220,7 +223,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			printParadigm(paradigm, undefined, 1);
 		}
 
-		printReductions(abjectives, 'ajetivi');
+		printReductions(adjectives, 'ajetivi');
 
 		printReductions(pronomenals, 'prokonplementari');
 
@@ -346,8 +349,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		constraintToInfinitives(paradigm, origins);
 
 		if(!deriveAllFormsFromInfinitive){
-			abjectives[theme] = abjectives[theme] || [];
-			k = reduceSuffixes(paradigm, abjectives[theme], k);
+			adjectives[theme] = adjectives[theme] || [];
+			k = reduceSuffixes(paradigm, adjectives[theme], k);
 
 			printParadigm(paradigm, flags, theme);
 
@@ -386,7 +389,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		Object.keys(list).forEach(function(key){
 			if(key != '0')
 				list[key].forEach(function(reduction){
-					//abjectives[0].forEach(function(red){
+					//adjectives[0].forEach(function(red){
 					//	reduceSuffix(reduction, red);
 					//});
 
