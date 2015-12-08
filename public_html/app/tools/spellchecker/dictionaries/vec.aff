@@ -49,9 +49,22 @@ MAP oòóOÒÓ
 MAP uúùUÙÚ
 
 # frequently switched character groups
-REP 40
 # REP đ[aàeèéiíoòóuú] d.
 # REP dh[aàeèéiíoòóuú] d.
+# REP [aàeèéiíoòóuú]l[aàeèéiíoòóuú] .ƚ.
+# REP ^l[aàeèéiíoòóuú] ƚ.
+# REP li[aàeèéiíoòóuú] j.
+# REP [aeiou](n)s(i)[aeio]$ .(n)ŧ(i).
+# REP sion([aeio])$ ŧion(.)
+# REP ^v[aàeèéiíoòóuú] ‘.
+# REP ^g[aàeèéiíoòóuú] ‘.
+# REP [aàeèéiíoòóuú]v[aàeèéiíoòóuú] ..
+# REP [aàeèéiíoòóuú]d[aàeèéiíoòóuú] ..
+# REP [aàeèéiíoòóuú][aàeèéiíoòóuú] .v.
+# REP [aàeèéiíoòóuú][aàeèéiíoòóuú] .d.
+# REP t[ji][aàeèéiíoòóuú] c.
+# REP d[ji][aàeèéiíoòóuú] ɉ.
+REP 40
 REP dh   d
 REP đ    d
 REP dh   đ
@@ -62,10 +75,7 @@ REP jh   ɉ
 REP ɉ    j
 REP lh   ƚ
 REP ƚ    l
-# REP [aàeèéiíoòóuú]l[aàeèéiíoòóuú] .ƚ.
-# REP ^l[aàeèéiíoòóuú] ƚ.
 REP l    ƚ
-# REP li[aàeèéiíoòóuú] j.
 REP li   j
 REP nh   ñ
 REP th   ŧ
@@ -94,27 +104,17 @@ REP sn   xn
 REP sr   xr
 REP sj   xj
 REP ixar iđar
-# REP [aeiou](n)s(i)[aeio]$ .(n)ŧ(i).
-# REP sion([aeio])$ ŧion(.)
 REP sion ŧion
-# REP ^v[aàeèéiíoòóuú] ‘.
-# REP ^g[aàeèéiíoòóuú] ‘.
-# REP [aàeèéiíoòóuú]v[aàeèéiíoòóuú] ..
-# REP [aàeèéiíoòóuú]d[aàeèéiíoòóuú] ..
-# REP [aàeèéiíoòóuú][aàeèéiíoòóuú] .v.
-# REP [aàeèéiíoòóuú][aàeèéiíoòóuú] .d.
-# t[ji][aàeèéiíoòóuú] > c.
-# d[ji][aàeèéiíoòóuú] > ɉ.
 
 # replace double-characters with single ones
 ICONV 5
-#ICONV ‘ '
-#ICONV ’ '
 ICONV dh đ
 ICONV jh ɉ
 ICONV lh ƚ
 ICONV nh ñ
 ICONV th ŧ
+#ICONV ‘ '
+#ICONV ’ '
 
 
 SFX A Y 22300 # vèrbi
@@ -3520,15 +3520,15 @@ SFX A avegar àvegi/M navegar
 SFX A avegar àvegitu/N navegar
 SFX A avegar àvego/I navegar
 SFX A avegar àvegomi/J navegar
-SFX A aver à/EG ^aver
-SFX A aver à/IMQ ^aver
+SFX A aver à/EG aver
+SFX A aver à/IMQ aver
 SFX A aver à/MQ saver
 SFX A aver àe/I saver
 SFX A aver àemi/J saver
 SFX A aver ào/I saver
 SFX A aver àomi/J saver
-SFX A aver è/I ^aver
-SFX A aver ò/I ^aver
+SFX A aver è/I aver
+SFX A aver ò/I aver
 SFX A aver ò/I saver
 SFX A aver òmi/J saver
 SFX A averar àvera/EGQ inpaverar
@@ -4700,21 +4700,21 @@ SFX A er emi/J ŧèrner
 SFX A er en/K [ao]er
 SFX A er en/K [ao]ler
 SFX A er en/K [er]maner
-SFX A er en/K ^aver
+SFX A er en/K aver
 SFX A er en/K koñer
 SFX A er en/K parer
 SFX A er en/K poder
 SFX A er ene [ao]er
 SFX A er ene [ao]ler
 SFX A er ene [er]maner
-SFX A er ene ^aver
+SFX A er ene aver
 SFX A er ene koñer
 SFX A er ene parer
 SFX A er ene poder
 SFX A er ense [ao]er
 SFX A er ense [ao]ler
 SFX A er ense [er]maner
-SFX A er ense ^aver
+SFX A er ense aver
 SFX A er ense koñer
 SFX A er ense parer
 SFX A er ense poder
@@ -4765,88 +4765,88 @@ SFX A er i/M ŧèrner
 SFX A er imo/K [ao]er
 SFX A er imo/K [ao]ler
 SFX A er imo/K [er]maner
-SFX A er imo/K ^aver
+SFX A er imo/K aver
 SFX A er imo/K koñer
 SFX A er imo/K parer
 SFX A er imo/K poder
 SFX A er ion/K [ao]er
 SFX A er ion/K [ao]ler
 SFX A er ion/K [er]maner
-SFX A er ion/K ^aver
+SFX A er ion/K aver
 SFX A er ion/K parer
 SFX A er ion/K poder
 SFX A er ione [ao]er
 SFX A er ione [ao]ler
 SFX A er ione [er]maner
-SFX A er ione ^aver
+SFX A er ione aver
 SFX A er ione parer
 SFX A er ione poder
 SFX A er ionse [ao]er
 SFX A er ionse [ao]ler
 SFX A er ionse [er]maner
-SFX A er ionse ^aver
+SFX A er ionse aver
 SFX A er ionse parer
 SFX A er ionse poder
 SFX A er isen/K [ao]er
 SFX A er isen/K [ao]ler
 SFX A er isen/K [er]maner
-SFX A er isen/K ^aver
+SFX A er isen/K aver
 SFX A er isen/K koñer
 SFX A er isen/K parer
 SFX A er isen/K poder
 SFX A er isene [ao]er
 SFX A er isene [ao]ler
 SFX A er isene [er]maner
-SFX A er isene ^aver
+SFX A er isene aver
 SFX A er isene koñer
 SFX A er isene parer
 SFX A er isene poder
 SFX A er isense [ao]er
 SFX A er isense [ao]ler
 SFX A er isense [er]maner
-SFX A er isense ^aver
+SFX A er isense aver
 SFX A er isense koñer
 SFX A er isense parer
 SFX A er isense poder
 SFX A er ision/K [ao]er
 SFX A er ision/K [ao]ler
 SFX A er ision/K [er]maner
-SFX A er ision/K ^aver
+SFX A er ision/K aver
 SFX A er ision/K koñer
 SFX A er ision/K parer
 SFX A er ision/K poder
 SFX A er isione [ao]er
 SFX A er isione [ao]ler
 SFX A er isione [er]maner
-SFX A er isione ^aver
+SFX A er isione aver
 SFX A er isione koñer
 SFX A er isione parer
 SFX A er isione poder
 SFX A er isionse [ao]er
 SFX A er isionse [ao]ler
 SFX A er isionse [er]maner
-SFX A er isionse ^aver
+SFX A er isionse aver
 SFX A er isionse koñer
 SFX A er isionse parer
 SFX A er isionse poder
 SFX A er ison/K [ao]er
 SFX A er ison/K [ao]ler
 SFX A er ison/K [er]maner
-SFX A er ison/K ^aver
+SFX A er ison/K aver
 SFX A er ison/K koñer
 SFX A er ison/K parer
 SFX A er ison/K poder
 SFX A er isone [ao]er
 SFX A er isone [ao]ler
 SFX A er isone [er]maner
-SFX A er isone ^aver
+SFX A er isone aver
 SFX A er isone koñer
 SFX A er isone parer
 SFX A er isone poder
 SFX A er isonse [ao]er
 SFX A er isonse [ao]ler
 SFX A er isonse [er]maner
-SFX A er isonse ^aver
+SFX A er isonse aver
 SFX A er isonse koñer
 SFX A er isonse parer
 SFX A er isonse poder
@@ -4937,70 +4937,70 @@ SFX A er itu/N ŧèrner
 SFX A er iven/K [ao]er
 SFX A er iven/K [ao]ler
 SFX A er iven/K [er]maner
-SFX A er iven/K ^aver
+SFX A er iven/K aver
 SFX A er iven/K koñer
 SFX A er iven/K parer
 SFX A er iven/K poder
 SFX A er ivense [ao]er
 SFX A er ivense [ao]ler
 SFX A er ivense [er]maner
-SFX A er ivense ^aver
+SFX A er ivense aver
 SFX A er ivense koñer
 SFX A er ivense parer
 SFX A er ivense poder
 SFX A er ivion/K [ao]er
 SFX A er ivion/K [ao]ler
 SFX A er ivion/K [er]maner
-SFX A er ivion/K ^aver
+SFX A er ivion/K aver
 SFX A er ivion/K koñer
 SFX A er ivion/K parer
 SFX A er ivion/K poder
 SFX A er ivionse [ao]er
 SFX A er ivionse [ao]ler
 SFX A er ivionse [er]maner
-SFX A er ivionse ^aver
+SFX A er ivionse aver
 SFX A er ivionse koñer
 SFX A er ivionse parer
 SFX A er ivionse poder
 SFX A er ivié/O [ao]er
 SFX A er ivié/O [ao]ler
 SFX A er ivié/O [er]maner
-SFX A er ivié/O ^aver
+SFX A er ivié/O aver
 SFX A er ivié/O koñer
 SFX A er ivié/O parer
 SFX A er ivié/O poder
 SFX A er iviéu/P [ao]er
 SFX A er iviéu/P [ao]ler
 SFX A er iviéu/P [er]maner
-SFX A er iviéu/P ^aver
+SFX A er iviéu/P aver
 SFX A er iviéu/P koñer
 SFX A er iviéu/P parer
 SFX A er iviéu/P poder
 SFX A er ivon/K [ao]er
 SFX A er ivon/K [ao]ler
 SFX A er ivon/K [er]maner
-SFX A er ivon/K ^aver
+SFX A er ivon/K aver
 SFX A er ivon/K koñer
 SFX A er ivon/K parer
 SFX A er ivon/K poder
 SFX A er ivonse [ao]er
 SFX A er ivonse [ao]ler
 SFX A er ivonse [er]maner
-SFX A er ivonse ^aver
+SFX A er ivonse aver
 SFX A er ivonse koñer
 SFX A er ivonse parer
 SFX A er ivonse poder
 SFX A er ié/O [ao]er
 SFX A er ié/O [ao]ler
 SFX A er ié/O [er]maner
-SFX A er ié/O ^aver
+SFX A er ié/O aver
 SFX A er ié/O koñer
 SFX A er ié/O parer
 SFX A er ié/O poder
 SFX A er iéu/P [ao]er
 SFX A er iéu/P [ao]ler
 SFX A er iéu/P [er]maner
-SFX A er iéu/P ^aver
+SFX A er iéu/P aver
 SFX A er iéu/P koñer
 SFX A er iéu/P parer
 SFX A er iéu/P poder
@@ -5123,21 +5123,21 @@ SFX A er omi/J ŧèrner
 SFX A er on/K [ao]er
 SFX A er on/K [ao]ler
 SFX A er on/K [er]maner
-SFX A er on/K ^aver
+SFX A er on/K aver
 SFX A er on/K koñer
 SFX A er on/K parer
 SFX A er on/K poder
 SFX A er one [ao]er
 SFX A er one [ao]ler
 SFX A er one [er]maner
-SFX A er one ^aver
+SFX A er one aver
 SFX A er one koñer
 SFX A er one parer
 SFX A er one poder
 SFX A er onse [ao]er
 SFX A er onse [ao]ler
 SFX A er onse [er]maner
-SFX A er onse ^aver
+SFX A er onse aver
 SFX A er onse koñer
 SFX A er onse parer
 SFX A er onse poder
@@ -5153,7 +5153,7 @@ SFX A er uda/H [ao]er
 SFX A er uda/H [dst]oler
 SFX A er uda/H [er]maner
 SFX A er uda/H aler
-SFX A er uda/H ^aver
+SFX A er uda/H aver
 SFX A er uda/H koñer
 SFX A er uda/H parer
 SFX A er uda/H poder
@@ -5162,7 +5162,7 @@ SFX A er ude/H [ao]er
 SFX A er ude/H [dst]oler
 SFX A er ude/H [er]maner
 SFX A er ude/H aler
-SFX A er ude/H ^aver
+SFX A er ude/H aver
 SFX A er ude/H koñer
 SFX A er ude/H parer
 SFX A er ude/H poder
@@ -5171,7 +5171,7 @@ SFX A er udi/H [ao]er
 SFX A er udi/H [dst]oler
 SFX A er udi/H [er]maner
 SFX A er udi/H aler
-SFX A er udi/H ^aver
+SFX A er udi/H aver
 SFX A er udi/H koñer
 SFX A er udi/H parer
 SFX A er udi/H poder
@@ -5180,7 +5180,7 @@ SFX A er udo/H [ao]er
 SFX A er udo/H [dst]oler
 SFX A er udo/H [er]maner
 SFX A er udo/H aler
-SFX A er udo/H ^aver
+SFX A er udo/H aver
 SFX A er udo/H koñer
 SFX A er udo/H parer
 SFX A er udo/H poder
@@ -5188,14 +5188,14 @@ SFX A er udo/H voler
 SFX A er é/GO [ao]er
 SFX A er é/GO [ao]ler
 SFX A er é/GO [er]maner
-SFX A er é/GO ^aver
+SFX A er é/GO aver
 SFX A er é/GO koñer
 SFX A er é/GO parer
 SFX A er é/O poder
 SFX A er éa/IOQ [ao]er
 SFX A er éa/IOQ [ao]ler
 SFX A er éa/IOQ [er]maner
-SFX A er éa/IOQ ^aver
+SFX A er éa/IOQ aver
 SFX A er éa/IOQ koñer
 SFX A er éa/IOQ parer
 SFX A er éa/IOQ poder
@@ -5203,7 +5203,7 @@ SFX A er éa/IOQ saver
 SFX A er éami/J [ao]er
 SFX A er éami/J [ao]ler
 SFX A er éami/J [er]maner
-SFX A er éami/J ^aver
+SFX A er éami/J aver
 SFX A er éami/J koñer
 SFX A er éami/J parer
 SFX A er éami/J poder
@@ -5211,7 +5211,7 @@ SFX A er éami/J saver
 SFX A er éau/P [ao]er
 SFX A er éau/P [ao]ler
 SFX A er éau/P [er]maner
-SFX A er éau/P ^aver
+SFX A er éau/P aver
 SFX A er éau/P koñer
 SFX A er éau/P parer
 SFX A er éau/P poder
@@ -5219,7 +5219,7 @@ SFX A er éau/P saver
 SFX A er ée/I [ao]er
 SFX A er ée/I [ao]ler
 SFX A er ée/I [er]maner
-SFX A er ée/I ^aver
+SFX A er ée/I aver
 SFX A er ée/I koñer
 SFX A er ée/I parer
 SFX A er ée/I poder
@@ -5227,7 +5227,7 @@ SFX A er ée/I saver
 SFX A er éelo/R [ao]er
 SFX A er éelo/R [ao]ler
 SFX A er éelo/R [er]maner
-SFX A er éelo/R ^aver
+SFX A er éelo/R aver
 SFX A er éelo/R koñer
 SFX A er éelo/R parer
 SFX A er éelo/R poder
@@ -5235,7 +5235,7 @@ SFX A er éelo/R saver
 SFX A er éemi/J [ao]er
 SFX A er éemi/J [ao]ler
 SFX A er éemi/J [er]maner
-SFX A er éemi/J ^aver
+SFX A er éemi/J aver
 SFX A er éemi/J koñer
 SFX A er éemi/J parer
 SFX A er éemi/J poder
@@ -5243,7 +5243,7 @@ SFX A er éemi/J saver
 SFX A er éi/MO [ao]er
 SFX A er éi/MO [ao]ler
 SFX A er éi/MO [er]maner
-SFX A er éi/MO ^aver
+SFX A er éi/MO aver
 SFX A er éi/MO koñer
 SFX A er éi/MO parer
 SFX A er éi/MO poder
@@ -5251,7 +5251,7 @@ SFX A er éi/MO saver
 SFX A er éimo/K [ao]er
 SFX A er éimo/K [ao]ler
 SFX A er éimo/K [er]maner
-SFX A er éimo/K ^aver
+SFX A er éimo/K aver
 SFX A er éimo/K koñer
 SFX A er éimo/K parer
 SFX A er éimo/K poder
@@ -5259,7 +5259,7 @@ SFX A er éimo/K saver
 SFX A er éimoni/L [ao]er
 SFX A er éimoni/L [ao]ler
 SFX A er éimoni/L [er]maner
-SFX A er éimoni/L ^aver
+SFX A er éimoni/L aver
 SFX A er éimoni/L koñer
 SFX A er éimoni/L parer
 SFX A er éimoni/L poder
@@ -5267,7 +5267,7 @@ SFX A er éimoni/L saver
 SFX A er éitu/N [ao]er
 SFX A er éitu/N [ao]ler
 SFX A er éitu/N [er]maner
-SFX A er éitu/N ^aver
+SFX A er éitu/N aver
 SFX A er éitu/N koñer
 SFX A er éitu/N parer
 SFX A er éitu/N poder
@@ -5275,14 +5275,14 @@ SFX A er éitu/N saver
 SFX A er émoni/L [ao]er
 SFX A er émoni/L [ao]ler
 SFX A er émoni/L [er]maner
-SFX A er émoni/L ^aver
+SFX A er émoni/L aver
 SFX A er émoni/L koñer
 SFX A er émoni/L parer
 SFX A er émoni/L poder
 SFX A er éo/I [ao]er
 SFX A er éo/I [ao]ler
 SFX A er éo/I [er]maner
-SFX A er éo/I ^aver
+SFX A er éo/I aver
 SFX A er éo/I koñer
 SFX A er éo/I parer
 SFX A er éo/I poder
@@ -5290,7 +5290,7 @@ SFX A er éo/I saver
 SFX A er éomi/J [ao]er
 SFX A er éomi/J [ao]ler
 SFX A er éomi/J [er]maner
-SFX A er éomi/J ^aver
+SFX A er éomi/J aver
 SFX A er éomi/J koñer
 SFX A er éomi/J parer
 SFX A er éomi/J poder
@@ -5298,7 +5298,7 @@ SFX A er éomi/J saver
 SFX A er ésimo [ao]er
 SFX A er ésimo [ao]ler
 SFX A er ésimo [er]maner
-SFX A er ésimo ^aver
+SFX A er ésimo aver
 SFX A er ésimo koñer
 SFX A er ésimo parer
 SFX A er ésimo poder
@@ -5306,14 +5306,14 @@ SFX A er ésimo saver
 SFX A er éu/P [ao]er
 SFX A er éu/P [ao]ler
 SFX A er éu/P [er]maner
-SFX A er éu/P ^aver
+SFX A er éu/P aver
 SFX A er éu/P koñer
 SFX A er éu/P parer
 SFX A er éu/P poder
 SFX A er évami/J [ao]er
 SFX A er évami/J [ao]ler
 SFX A er évami/J [er]maner
-SFX A er évami/J ^aver
+SFX A er évami/J aver
 SFX A er évami/J koñer
 SFX A er évami/J parer
 SFX A er évami/J poder
@@ -5321,7 +5321,7 @@ SFX A er évami/J saver
 SFX A er évelo/R [ao]er
 SFX A er évelo/R [ao]ler
 SFX A er évelo/R [er]maner
-SFX A er évelo/R ^aver
+SFX A er évelo/R aver
 SFX A er évelo/R koñer
 SFX A er évelo/R parer
 SFX A er évelo/R poder
@@ -5329,7 +5329,7 @@ SFX A er évelo/R saver
 SFX A er évemi/J [ao]er
 SFX A er évemi/J [ao]ler
 SFX A er évemi/J [er]maner
-SFX A er évemi/J ^aver
+SFX A er évemi/J aver
 SFX A er évemi/J koñer
 SFX A er évemi/J parer
 SFX A er évemi/J poder
@@ -5337,7 +5337,7 @@ SFX A er évemi/J saver
 SFX A er évimo/K [ao]er
 SFX A er évimo/K [ao]ler
 SFX A er évimo/K [er]maner
-SFX A er évimo/K ^aver
+SFX A er évimo/K aver
 SFX A er évimo/K koñer
 SFX A er évimo/K parer
 SFX A er évimo/K poder
@@ -5345,7 +5345,7 @@ SFX A er évimo/K saver
 SFX A er évimoni/L [ao]er
 SFX A er évimoni/L [ao]ler
 SFX A er évimoni/L [er]maner
-SFX A er évimoni/L ^aver
+SFX A er évimoni/L aver
 SFX A er évimoni/L koñer
 SFX A er évimoni/L parer
 SFX A er évimoni/L poder
@@ -5353,7 +5353,7 @@ SFX A er évimoni/L saver
 SFX A er évitu/N [ao]er
 SFX A er évitu/N [ao]ler
 SFX A er évitu/N [er]maner
-SFX A er évitu/N ^aver
+SFX A er évitu/N aver
 SFX A er évitu/N koñer
 SFX A er évitu/N parer
 SFX A er évitu/N poder
@@ -5361,7 +5361,7 @@ SFX A er évitu/N saver
 SFX A er évomi/J [ao]er
 SFX A er évomi/J [ao]ler
 SFX A er évomi/J [er]maner
-SFX A er évomi/J ^aver
+SFX A er évomi/J aver
 SFX A er évomi/J koñer
 SFX A er évomi/J parer
 SFX A er évomi/J poder
@@ -5369,21 +5369,21 @@ SFX A er évomi/J saver
 SFX A er í/GO [ao]er
 SFX A er í/GO [ao]ler
 SFX A er í/GO [er]maner
-SFX A er í/GO ^aver
+SFX A er í/GO aver
 SFX A er í/GO koñer
 SFX A er í/GO parer
 SFX A er í/O poder
 SFX A er ímoni/L [ao]er
 SFX A er ímoni/L [ao]ler
 SFX A er ímoni/L [er]maner
-SFX A er ímoni/L ^aver
+SFX A er ímoni/L aver
 SFX A er ímoni/L koñer
 SFX A er ímoni/L parer
 SFX A er ímoni/L poder
 SFX A er íu/P [ao]er
 SFX A er íu/P [ao]ler
 SFX A er íu/P [er]maner
-SFX A er íu/P ^aver
+SFX A er íu/P aver
 SFX A er íu/P koñer
 SFX A er íu/P parer
 SFX A er íu/P poder
@@ -5391,7 +5391,7 @@ SFX A er ú [ao]er
 SFX A er ú [dst]oler
 SFX A er ú [er]maner
 SFX A er ú aler
-SFX A er ú ^aver
+SFX A er ú aver
 SFX A er ú koñer
 SFX A er ú parer
 SFX A er ú poder
@@ -5400,7 +5400,7 @@ SFX A er úa [ao]er
 SFX A er úa [dst]oler
 SFX A er úa [er]maner
 SFX A er úa aler
-SFX A er úa ^aver
+SFX A er úa aver
 SFX A er úa koñer
 SFX A er úa parer
 SFX A er úa poder
@@ -5409,7 +5409,7 @@ SFX A er úe [ao]er
 SFX A er úe [dst]oler
 SFX A er úe [er]maner
 SFX A er úe aler
-SFX A er úe ^aver
+SFX A er úe aver
 SFX A er úe koñer
 SFX A er úe parer
 SFX A er úe poder
@@ -5418,7 +5418,7 @@ SFX A er úi [ao]er
 SFX A er úi [dst]oler
 SFX A er úi [er]maner
 SFX A er úi aler
-SFX A er úi ^aver
+SFX A er úi aver
 SFX A er úi koñer
 SFX A er úi parer
 SFX A er úi poder
@@ -5427,7 +5427,7 @@ SFX A er úo [ao]er
 SFX A er úo [dst]oler
 SFX A er úo [er]maner
 SFX A er úo aler
-SFX A er úo ^aver
+SFX A er úo aver
 SFX A er úo koñer
 SFX A er úo parer
 SFX A er úo poder
@@ -10204,7 +10204,7 @@ SFX A r mo/K [jl]estir
 SFX A r mo/K [ps]entir
 SFX A r mo/K [tv]eñir
 SFX A r mo/K arguir
-SFX A r mo/K ^aver
+SFX A r mo/K aver
 SFX A r mo/K censir
 SFX A r mo/K desavir
 SFX A r mo/K dormir
@@ -10225,7 +10225,7 @@ SFX A r mo/K xmentir
 SFX A r n/K [ao]er
 SFX A r n/K [ao]ler
 SFX A r n/K [er]maner
-SFX A r n/K ^aver
+SFX A r n/K aver
 SFX A r n/K koñer
 SFX A r n/K parer
 SFX A r n/K poder
@@ -10234,7 +10234,7 @@ SFX A r ndo/EG [ao]er
 SFX A r ndo/EG [ao]ler
 SFX A r ndo/EG [bcdefgijklmnoprstuvxñđŧ]ar
 SFX A r ndo/EG [er]maner
-SFX A r ndo/EG ^aver
+SFX A r ndo/EG aver
 SFX A r ndo/EG koñer
 SFX A r ndo/EG parer
 SFX A r ndo/EG poder
@@ -10249,7 +10249,7 @@ SFX A r nte [ao]er
 SFX A r nte [ao]ler
 SFX A r nte [er]maner
 SFX A r nte ar
-SFX A r nte ^aver
+SFX A r nte aver
 SFX A r nte koñer
 SFX A r nte parer
 SFX A r nte poder
@@ -10274,7 +10274,7 @@ SFX A r ralo/R [ds]oler
 SFX A r ralo/R [er]maner
 SFX A r ralo/R [tv]oler
 SFX A r ralo/R aler
-SFX A r ralo/R ^aver
+SFX A r ralo/R aver
 SFX A r ralo/R koñer
 SFX A r ralo/R parer
 SFX A r ralo/R poder
@@ -10284,7 +10284,7 @@ SFX A r rami/J [ds]oler
 SFX A r rami/J [er]maner
 SFX A r rami/J [tv]oler
 SFX A r rami/J aler
-SFX A r rami/J ^aver
+SFX A r rami/J aver
 SFX A r rami/J koñer
 SFX A r rami/J parer
 SFX A r rami/J poder
@@ -10294,7 +10294,7 @@ SFX A r ratu/N [ds]oler
 SFX A r ratu/N [er]maner
 SFX A r ratu/N [tv]oler
 SFX A r ratu/N aler
-SFX A r ratu/N ^aver
+SFX A r ratu/N aver
 SFX A r ratu/N koñer
 SFX A r ratu/N parer
 SFX A r ratu/N poder
@@ -10304,7 +10304,7 @@ SFX A r rave/QS [ds]oler
 SFX A r rave/QS [er]maner
 SFX A r rave/QS [tv]oler
 SFX A r rave/QS aler
-SFX A r rave/QS ^aver
+SFX A r rave/QS aver
 SFX A r rave/QS koñer
 SFX A r rave/QS parer
 SFX A r rave/QS poder
@@ -10329,7 +10329,7 @@ SFX A r remo/K [ds]oler
 SFX A r remo/K [er]maner
 SFX A r remo/K [tv]oler
 SFX A r remo/K aler
-SFX A r remo/K ^aver
+SFX A r remo/K aver
 SFX A r remo/K koñer
 SFX A r remo/K parer
 SFX A r remo/K poder
@@ -10339,7 +10339,7 @@ SFX A r ren/K [ds]oler
 SFX A r ren/K [er]maner
 SFX A r ren/K [tv]oler
 SFX A r ren/K aler
-SFX A r ren/K ^aver
+SFX A r ren/K aver
 SFX A r ren/K koñer
 SFX A r ren/K parer
 SFX A r ren/K poder
@@ -10349,7 +10349,7 @@ SFX A r rense [ds]oler
 SFX A r rense [er]maner
 SFX A r rense [tv]oler
 SFX A r rense aler
-SFX A r rense ^aver
+SFX A r rense aver
 SFX A r rense koñer
 SFX A r rense parer
 SFX A r rense poder
@@ -10359,7 +10359,7 @@ SFX A r resi/O [ds]oler
 SFX A r resi/O [er]maner
 SFX A r resi/O [tv]oler
 SFX A r resi/O aler
-SFX A r resi/O ^aver
+SFX A r resi/O aver
 SFX A r resi/O koñer
 SFX A r resi/O parer
 SFX A r resi/O poder
@@ -10369,7 +10369,7 @@ SFX A r resiu/P [ds]oler
 SFX A r resiu/P [er]maner
 SFX A r resiu/P [tv]oler
 SFX A r resiu/P aler
-SFX A r resiu/P ^aver
+SFX A r resiu/P aver
 SFX A r resiu/P koñer
 SFX A r resiu/P parer
 SFX A r resiu/P poder
@@ -10378,7 +10378,7 @@ SFX A r rimo/K [ds]oler
 SFX A r rimo/K [er]maner
 SFX A r rimo/K [tv]oler
 SFX A r rimo/K aler
-SFX A r rimo/K ^aver
+SFX A r rimo/K aver
 SFX A r rimo/K koñer
 SFX A r rimo/K parer
 SFX A r rimo/K poder
@@ -10388,7 +10388,7 @@ SFX A r rion/K [ds]oler
 SFX A r rion/K [er]maner
 SFX A r rion/K [tv]oler
 SFX A r rion/K aler
-SFX A r rion/K ^aver
+SFX A r rion/K aver
 SFX A r rion/K koñer
 SFX A r rion/K parer
 SFX A r rion/K poder
@@ -10398,7 +10398,7 @@ SFX A r rionse [ds]oler
 SFX A r rionse [er]maner
 SFX A r rionse [tv]oler
 SFX A r rionse aler
-SFX A r rionse ^aver
+SFX A r rionse aver
 SFX A r rionse koñer
 SFX A r rionse parer
 SFX A r rionse poder
@@ -10408,7 +10408,7 @@ SFX A r risen/K [ds]oler
 SFX A r risen/K [er]maner
 SFX A r risen/K [tv]oler
 SFX A r risen/K aler
-SFX A r risen/K ^aver
+SFX A r risen/K aver
 SFX A r risen/K koñer
 SFX A r risen/K parer
 SFX A r risen/K poder
@@ -10418,7 +10418,7 @@ SFX A r risense [ds]oler
 SFX A r risense [er]maner
 SFX A r risense [tv]oler
 SFX A r risense aler
-SFX A r risense ^aver
+SFX A r risense aver
 SFX A r risense koñer
 SFX A r risense parer
 SFX A r risense poder
@@ -10428,7 +10428,7 @@ SFX A r rision/K [ds]oler
 SFX A r rision/K [er]maner
 SFX A r rision/K [tv]oler
 SFX A r rision/K aler
-SFX A r rision/K ^aver
+SFX A r rision/K aver
 SFX A r rision/K koñer
 SFX A r rision/K parer
 SFX A r rision/K poder
@@ -10438,7 +10438,7 @@ SFX A r risionse [ds]oler
 SFX A r risionse [er]maner
 SFX A r risionse [tv]oler
 SFX A r risionse aler
-SFX A r risionse ^aver
+SFX A r risionse aver
 SFX A r risionse koñer
 SFX A r risionse parer
 SFX A r risionse poder
@@ -10448,7 +10448,7 @@ SFX A r risié/O [ds]oler
 SFX A r risié/O [er]maner
 SFX A r risié/O [tv]oler
 SFX A r risié/O aler
-SFX A r risié/O ^aver
+SFX A r risié/O aver
 SFX A r risié/O koñer
 SFX A r risié/O parer
 SFX A r risié/O poder
@@ -10458,7 +10458,7 @@ SFX A r risiéu/P [ds]oler
 SFX A r risiéu/P [er]maner
 SFX A r risiéu/P [tv]oler
 SFX A r risiéu/P aler
-SFX A r risiéu/P ^aver
+SFX A r risiéu/P aver
 SFX A r risiéu/P koñer
 SFX A r risiéu/P parer
 SFX A r risiéu/P poder
@@ -10468,7 +10468,7 @@ SFX A r rison/K [ds]oler
 SFX A r rison/K [er]maner
 SFX A r rison/K [tv]oler
 SFX A r rison/K aler
-SFX A r rison/K ^aver
+SFX A r rison/K aver
 SFX A r rison/K koñer
 SFX A r rison/K parer
 SFX A r rison/K poder
@@ -10478,7 +10478,7 @@ SFX A r risonse [ds]oler
 SFX A r risonse [er]maner
 SFX A r risonse [tv]oler
 SFX A r risonse aler
-SFX A r risonse ^aver
+SFX A r risonse aver
 SFX A r risonse koñer
 SFX A r risonse parer
 SFX A r risonse poder
@@ -10488,7 +10488,7 @@ SFX A r rié/O [ds]oler
 SFX A r rié/O [er]maner
 SFX A r rié/O [tv]oler
 SFX A r rié/O aler
-SFX A r rié/O ^aver
+SFX A r rié/O aver
 SFX A r rié/O koñer
 SFX A r rié/O parer
 SFX A r rié/O poder
@@ -10498,7 +10498,7 @@ SFX A r riéu/P [ds]oler
 SFX A r riéu/P [er]maner
 SFX A r riéu/P [tv]oler
 SFX A r riéu/P aler
-SFX A r riéu/P ^aver
+SFX A r riéu/P aver
 SFX A r riéu/P koñer
 SFX A r riéu/P parer
 SFX A r riéu/P poder
@@ -10508,7 +10508,7 @@ SFX A r ron/K [ds]oler
 SFX A r ron/K [er]maner
 SFX A r ron/K [tv]oler
 SFX A r ron/K aler
-SFX A r ron/K ^aver
+SFX A r ron/K aver
 SFX A r ron/K koñer
 SFX A r ron/K parer
 SFX A r ron/K poder
@@ -10518,7 +10518,7 @@ SFX A r ronse [ds]oler
 SFX A r ronse [er]maner
 SFX A r ronse [tv]oler
 SFX A r ronse aler
-SFX A r ronse ^aver
+SFX A r ronse aver
 SFX A r ronse koñer
 SFX A r ronse parer
 SFX A r ronse poder
@@ -10528,7 +10528,7 @@ SFX A r rà/IMQ [ds]oler
 SFX A r rà/IMQ [er]maner
 SFX A r rà/IMQ [tv]oler
 SFX A r rà/IMQ aler
-SFX A r rà/IMQ ^aver
+SFX A r rà/IMQ aver
 SFX A r rà/IMQ koñer
 SFX A r rà/IMQ parer
 SFX A r rà/IMQ poder
@@ -10538,7 +10538,7 @@ SFX A r ràe/Q [ds]oler
 SFX A r ràe/Q [er]maner
 SFX A r ràe/Q [tv]oler
 SFX A r ràe/Q aler
-SFX A r ràe/Q ^aver
+SFX A r ràe/Q aver
 SFX A r ràe/Q koñer
 SFX A r ràe/Q parer
 SFX A r ràe/Q poder
@@ -10548,7 +10548,7 @@ SFX A r rè/I [ds]oler
 SFX A r rè/I [er]maner
 SFX A r rè/I [tv]oler
 SFX A r rè/I aler
-SFX A r rè/I ^aver
+SFX A r rè/I aver
 SFX A r rè/I koñer
 SFX A r rè/I parer
 SFX A r rè/I poder
@@ -10558,7 +10558,7 @@ SFX A r rèmi/J [ds]oler
 SFX A r rèmi/J [er]maner
 SFX A r rèmi/J [tv]oler
 SFX A r rèmi/J aler
-SFX A r rèmi/J ^aver
+SFX A r rèmi/J aver
 SFX A r rèmi/J koñer
 SFX A r rèmi/J parer
 SFX A r rèmi/J poder
@@ -10568,7 +10568,7 @@ SFX A r ré/O [ds]oler
 SFX A r ré/O [er]maner
 SFX A r ré/O [tv]oler
 SFX A r ré/O aler
-SFX A r ré/O ^aver
+SFX A r ré/O aver
 SFX A r ré/O koñer
 SFX A r ré/O parer
 SFX A r ré/O poder
@@ -10578,7 +10578,7 @@ SFX A r rémoni/L [ds]oler
 SFX A r rémoni/L [er]maner
 SFX A r rémoni/L [tv]oler
 SFX A r rémoni/L aler
-SFX A r rémoni/L ^aver
+SFX A r rémoni/L aver
 SFX A r rémoni/L koñer
 SFX A r rémoni/L parer
 SFX A r rémoni/L poder
@@ -10588,7 +10588,7 @@ SFX A r résimo/K [ds]oler
 SFX A r résimo/K [er]maner
 SFX A r résimo/K [tv]oler
 SFX A r résimo/K aler
-SFX A r résimo/K ^aver
+SFX A r résimo/K aver
 SFX A r résimo/K koñer
 SFX A r résimo/K parer
 SFX A r résimo/K poder
@@ -10598,7 +10598,7 @@ SFX A r résimoni/L [ds]oler
 SFX A r résimoni/L [er]maner
 SFX A r résimoni/L [tv]oler
 SFX A r résimoni/L aler
-SFX A r résimoni/L ^aver
+SFX A r résimoni/L aver
 SFX A r résimoni/L koñer
 SFX A r résimoni/L parer
 SFX A r résimoni/L poder
@@ -10608,7 +10608,7 @@ SFX A r réu/P [ds]oler
 SFX A r réu/P [er]maner
 SFX A r réu/P [tv]oler
 SFX A r réu/P aler
-SFX A r réu/P ^aver
+SFX A r réu/P aver
 SFX A r réu/P koñer
 SFX A r réu/P parer
 SFX A r réu/P poder
@@ -10617,7 +10617,7 @@ SFX A r rí/O [ds]oler
 SFX A r rí/O [er]maner
 SFX A r rí/O [tv]oler
 SFX A r rí/O aler
-SFX A r rí/O ^aver
+SFX A r rí/O aver
 SFX A r rí/O koñer
 SFX A r rí/O parer
 SFX A r rí/O poder
@@ -10627,7 +10627,7 @@ SFX A r ría/IMQ [ds]oler
 SFX A r ría/IMQ [er]maner
 SFX A r ría/IMQ [tv]oler
 SFX A r ría/IMQ aler
-SFX A r ría/IMQ ^aver
+SFX A r ría/IMQ aver
 SFX A r ría/IMQ koñer
 SFX A r ría/IMQ parer
 SFX A r ría/IMQ poder
@@ -10637,7 +10637,7 @@ SFX A r ríami/J [ds]oler
 SFX A r ríami/J [er]maner
 SFX A r ríami/J [tv]oler
 SFX A r ríami/J aler
-SFX A r ríami/J ^aver
+SFX A r ríami/J aver
 SFX A r ríami/J koñer
 SFX A r ríami/J parer
 SFX A r ríami/J poder
@@ -10647,7 +10647,7 @@ SFX A r ríatu/N [ds]oler
 SFX A r ríatu/N [er]maner
 SFX A r ríatu/N [tv]oler
 SFX A r ríatu/N aler
-SFX A r ríatu/N ^aver
+SFX A r ríatu/N aver
 SFX A r ríatu/N koñer
 SFX A r ríatu/N parer
 SFX A r ríatu/N poder
@@ -10657,7 +10657,7 @@ SFX A r ríe/IQ [ds]oler
 SFX A r ríe/IQ [er]maner
 SFX A r ríe/IQ [tv]oler
 SFX A r ríe/IQ aler
-SFX A r ríe/IQ ^aver
+SFX A r ríe/IQ aver
 SFX A r ríe/IQ koñer
 SFX A r ríe/IQ parer
 SFX A r ríe/IQ poder
@@ -10667,7 +10667,7 @@ SFX A r ríelo/R [ds]oler
 SFX A r ríelo/R [er]maner
 SFX A r ríelo/R [tv]oler
 SFX A r ríelo/R aler
-SFX A r ríelo/R ^aver
+SFX A r ríelo/R aver
 SFX A r ríelo/R koñer
 SFX A r ríelo/R parer
 SFX A r ríelo/R poder
@@ -10677,7 +10677,7 @@ SFX A r ríemi/J [ds]oler
 SFX A r ríemi/J [er]maner
 SFX A r ríemi/J [tv]oler
 SFX A r ríemi/J aler
-SFX A r ríemi/J ^aver
+SFX A r ríemi/J aver
 SFX A r ríemi/J koñer
 SFX A r ríemi/J parer
 SFX A r ríemi/J poder
@@ -10686,7 +10686,7 @@ SFX A r rímoni/L [ds]oler
 SFX A r rímoni/L [er]maner
 SFX A r rímoni/L [tv]oler
 SFX A r rímoni/L aler
-SFX A r rímoni/L ^aver
+SFX A r rímoni/L aver
 SFX A r rímoni/L koñer
 SFX A r rímoni/L parer
 SFX A r rímoni/L poder
@@ -10695,7 +10695,7 @@ SFX A r ríu/P [ds]oler
 SFX A r ríu/P [er]maner
 SFX A r ríu/P [tv]oler
 SFX A r ríu/P aler
-SFX A r ríu/P ^aver
+SFX A r ríu/P aver
 SFX A r ríu/P koñer
 SFX A r ríu/P parer
 SFX A r ríu/P poder
@@ -10705,7 +10705,7 @@ SFX A r rò/I [ds]oler
 SFX A r rò/I [er]maner
 SFX A r rò/I [tv]oler
 SFX A r rò/I aler
-SFX A r rò/I ^aver
+SFX A r rò/I aver
 SFX A r rò/I koñer
 SFX A r rò/I parer
 SFX A r rò/I poder
@@ -10715,7 +10715,7 @@ SFX A r ròmi/J [ds]oler
 SFX A r ròmi/J [er]maner
 SFX A r ròmi/J [tv]oler
 SFX A r ròmi/J aler
-SFX A r ròmi/J ^aver
+SFX A r ròmi/J aver
 SFX A r ròmi/J koñer
 SFX A r ròmi/J parer
 SFX A r ròmi/J poder
@@ -10754,7 +10754,7 @@ SFX A r se/H [ao]er
 SFX A r se/H [ao]ler
 SFX A r se/H [bcdefgijklmnoprstuvxñđŧ]ar
 SFX A r se/H [er]maner
-SFX A r se/H ^aver
+SFX A r se/H aver
 SFX A r se/H koñer
 SFX A r se/H parer
 SFX A r se/H poder
@@ -10898,7 +10898,7 @@ SFX A r si [ao]er
 SFX A r si [ao]ler
 SFX A r si [bcdefgijklmnoprstuvxñđŧ]ar
 SFX A r si [er]maner
-SFX A r si ^aver
+SFX A r si aver
 SFX A r si koñer
 SFX A r si parer
 SFX A r si poder
@@ -11162,7 +11162,7 @@ SFX A r sta/H [ao]er
 SFX A r sta/H [ao]ler
 SFX A r sta/H [bcdefgijklmnoprstuvxñđŧ]ar
 SFX A r sta/H [er]maner
-SFX A r sta/H ^aver
+SFX A r sta/H aver
 SFX A r sta/H koñer
 SFX A r sta/H parer
 SFX A r sta/H poder
@@ -11172,7 +11172,7 @@ SFX A r ste/H [ao]er
 SFX A r ste/H [ao]ler
 SFX A r ste/H [bcdefgijklmnoprstuvxñđŧ]ar
 SFX A r ste/H [er]maner
-SFX A r ste/H ^aver
+SFX A r ste/H aver
 SFX A r ste/H koñer
 SFX A r ste/H parer
 SFX A r ste/H poder
@@ -11182,7 +11182,7 @@ SFX A r sti/H [ao]er
 SFX A r sti/H [ao]ler
 SFX A r sti/H [bcdefgijklmnoprstuvxñđŧ]ar
 SFX A r sti/H [er]maner
-SFX A r sti/H ^aver
+SFX A r sti/H aver
 SFX A r sti/H koñer
 SFX A r sti/H parer
 SFX A r sti/H poder
@@ -11192,7 +11192,7 @@ SFX A r sto/H [ao]er
 SFX A r sto/H [ao]ler
 SFX A r sto/H [bcdefgijklmnoprstuvxñđŧ]ar
 SFX A r sto/H [er]maner
-SFX A r sto/H ^aver
+SFX A r sto/H aver
 SFX A r sto/H koñer
 SFX A r sto/H parer
 SFX A r sto/H poder
@@ -11356,7 +11356,7 @@ SFX A r va/IOQ [ao]er
 SFX A r va/IOQ [ao]ler
 SFX A r va/IOQ [bcdefgijklmnoprstuvxñđŧ]ar
 SFX A r va/IOQ [er]maner
-SFX A r va/IOQ ^aver
+SFX A r va/IOQ aver
 SFX A r va/IOQ koñer
 SFX A r va/IOQ parer
 SFX A r va/IOQ poder
@@ -11366,7 +11366,7 @@ SFX A r vau/P [ao]er
 SFX A r vau/P [ao]ler
 SFX A r vau/P [bcdefgijklmnoprstuvxñđŧ]ar
 SFX A r vau/P [er]maner
-SFX A r vau/P ^aver
+SFX A r vau/P aver
 SFX A r vau/P koñer
 SFX A r vau/P parer
 SFX A r vau/P poder
@@ -11376,7 +11376,7 @@ SFX A r ve/I [ao]er
 SFX A r ve/I [ao]ler
 SFX A r ve/I [bcdefgijklmnoprstuvxñđŧ]ar
 SFX A r ve/I [er]maner
-SFX A r ve/I ^aver
+SFX A r ve/I aver
 SFX A r ve/I koñer
 SFX A r ve/I parer
 SFX A r ve/I poder
@@ -11386,7 +11386,7 @@ SFX A r vi/MO [ao]er
 SFX A r vi/MO [ao]ler
 SFX A r vi/MO [bcdefgijklmnoprstuvxñđŧ]ar
 SFX A r vi/MO [er]maner
-SFX A r vi/MO ^aver
+SFX A r vi/MO aver
 SFX A r vi/MO koñer
 SFX A r vi/MO parer
 SFX A r vi/MO poder
@@ -11400,7 +11400,7 @@ SFX A r vo/I [ao]er
 SFX A r vo/I [ao]ler
 SFX A r vo/I [bcdefgijklmnoprstuvxñđŧ]ar
 SFX A r vo/I [er]maner
-SFX A r vo/I ^aver
+SFX A r vo/I aver
 SFX A r vo/I koñer
 SFX A r vo/I parer
 SFX A r vo/I poder
@@ -12166,25 +12166,25 @@ SFX A uŧolar úŧoli/M [bk]uŧolar
 SFX A uŧolar úŧolitu/N [bk]uŧolar
 SFX A uŧolar úŧolo/I [bk]uŧolar
 SFX A uŧolar úŧolomi/J [bk]uŧolar
-SFX A ver biando/EG ^aver
-SFX A ver lo/R ^aver
+SFX A ver biando/EG aver
+SFX A ver lo/R aver
 SFX A ver lo/R saver
-SFX A ver mi/J ^aver
-SFX A ver pi ^aver
+SFX A ver mi/J aver
+SFX A ver pi aver
 SFX A ver pi saver
-SFX A ver pia ^aver
+SFX A ver pia aver
 SFX A ver pia saver
-SFX A ver pie ^aver
+SFX A ver pie aver
 SFX A ver pie saver
-SFX A ver piede ^aver
-SFX A ver piege ^aver
-SFX A ver piemo ^aver
-SFX A ver pien ^aver
-SFX A ver piene ^aver
-SFX A ver pion ^aver
-SFX A ver pione ^aver
-SFX A ver piè ^aver
-SFX A ver pié ^aver
+SFX A ver piede aver
+SFX A ver piege aver
+SFX A ver piemo aver
+SFX A ver pien aver
+SFX A ver piene aver
+SFX A ver pion aver
+SFX A ver pione aver
+SFX A ver piè aver
+SFX A ver pié aver
 SFX A ver sa mòver
 SFX A ver se mòver
 SFX A ver si mòver
@@ -12193,7 +12193,7 @@ SFX A ver ta [sx]òlver
 SFX A ver te [sx]òlver
 SFX A ver ti [sx]òlver
 SFX A ver to/H [sx]òlver
-SFX A ver tu/N ^aver
+SFX A ver tu/N aver
 SFX A ver tu/N saver
 SFX A xer gomi/J díxer
 SFX A xer ta [kps]òrxer
@@ -22418,12 +22418,12 @@ SFX A đer ti lèđer
 SFX A đer ti rđer
 SFX A đer to/H lèđer
 SFX A đer to/H rđer
-SFX B Y 2 # reduŧioni
+SFX B Y 2 # ajetivi
 SFX B 0 a/C [^aieo]
 SFX B o a/C o
-SFX C Y 1 # reduŧioni
+SFX C Y 1 # ajetivi
 SFX C a e/D a
-SFX D Y 1 # reduŧioni
+SFX D Y 1 # ajetivi
 SFX D e i e
 SFX E Y 10 # prokonplementari
 SFX E 0 -ge/F
@@ -22560,18 +22560,20 @@ SFX T 0 i [^aieo]
 SFX T a e a
 SFX T l i [^i]l
 SFX T n i [^i]n
-SFX U Y 6 # piante e mistièri
-SFX U dor tor/V [aeiou]dor
-SFX U ol iol/V rol
-SFX U ol iòl/V rol
-SFX U ol òl/V rol
-SFX U tor dor/V [aeiou]tor
-SFX U èr ar/V èr
-SFX V Y 4 # piante e mistièri
-SFX V 0 a [oò][lr]
-SFX V 0 e [oò][lr]
-SFX V 0 i
-SFX V 0 o
+SFX U Y 1 # sostantivi plurali
+SFX U o i o
+SFX V Y 6 # piante e mistièri
+SFX V dor tor/W [aeiou]dor
+SFX V ol iol/W rol
+SFX V ol iòl/W rol
+SFX V ol òl/W rol
+SFX V tor dor/W [aeiou]tor
+SFX V èr ar/W èr
+SFX W Y 4 # piante e mistièri
+SFX W 0 a
+SFX W 0 e
+SFX W 0 i
+SFX W 0 o
 
 # FIXME
 # se pòl katar un metaplaxmo de deklinaŧion da la 1a a la 2a koniug. intel inparfèto (kantàa > kantéa, pensàse > pensése), e intel partiŧipio pasivo (mañasto > mañésto)
@@ -22579,41 +22581,37 @@ SFX V 0 o
 # un metaplaxmo da la 3a a la 2a koniug. intel partiŧipio pasivo ko la dexinenŧa in -st- (sentésto, dormésto), e intel xerundio (finéndo).
 # se pòl ‘ver un xbasamento de la vokal (àtona) drio konsonante no prosimante e vanti vibrante (béver > bévar, tàxer > tàxar, èser > èsar, bevarà, sarésimo).
 
-#D: [oaie]
-#E: [ei]
-#T: [ei]?
-
 # sostantivi alterài
-# dict: -òto/D
-# dict: -ato/D
-# dict: -on/D
-# dict: -eto/D
-# dict: -òlo/D
-# dict: -èlo/D
-# dict: -elo/D
-# dict: -ino/D
-# dict: -uŧo/D
-# dict: -sino/D
-# dict: -esino/D
-# dict: -ŧino/D
-# dict: -eŧino/D
-# dict: -ŧuŧo/D
-# dict: -eŧuŧo/D
-# dict: -đino/D
-# dict: -eđino/D
-# dict: -đuŧo/D
-# dict: -eđuŧo/D
-# dict: -lino/D
-# dict: -olino/D
-# dict: -luŧo/D
-# dict: -oluŧo/D
-# dict: -rino/D
-# dict: -erino/D
-# dict: -ruŧo/D
-# dict: -eruŧo/D
-# dict: -ato/D
-# dict: -aŧo/D
-# dict: -uko/D
+# dict: -òto/B
+# dict: -ato/B
+# dict: -on/B
+# dict: -eto/B
+# dict: -òlo/B
+# dict: -èlo/B
+# dict: -elo/B
+# dict: -ino/B
+# dict: -uŧo/B
+# dict: -sino/B
+# dict: -esino/B
+# dict: -ŧino/B
+# dict: -eŧino/B
+# dict: -ŧuŧo/B
+# dict: -eŧuŧo/B
+# dict: -đino/B
+# dict: -eđino/B
+# dict: -đuŧo/B
+# dict: -eđuŧo/B
+# dict: -lino/B
+# dict: -olino/B
+# dict: -luŧo/B
+# dict: -oluŧo/B
+# dict: -rino/B
+# dict: -erino/B
+# dict: -ruŧo/B
+# dict: -eruŧo/B
+# dict: -ato/B
+# dict: -aŧo/B
+# dict: -uko/B
 
 #SFX Y 12
 #SFX a ina [^icg]a
