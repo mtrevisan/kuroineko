@@ -73,9 +73,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	/** @constant */
 		PLANTS_AND_CRAFTS_RESERVED_0 = REDUCTION_RESERVED_0 + 20;
 
-	var reductions = {
+	var abjectives = {
 		0: [
-			//vèrbi e ajetivi de prima klase
+			//ajetivi de prima klase
 			[REDUCTION_RESERVED_0, '[oaie]', 'o>a/' + REDUCTION_RESERVED_1 + '|o', '0>a/' + REDUCTION_RESERVED_1 + '|[^aieo]'],
 			//ajetivi de sekonda klase
 			[REDUCTION_RESERVED_1, '[aie]', 'a>e/' + REDUCTION_RESERVED_2 + '|a'],
@@ -220,7 +220,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			printParadigm(paradigm, undefined, 1);
 		}
 
-		printReductions(reductions, 'reduŧioni');
+		printReductions(abjectives, 'ajetivi');
 
 		printReductions(pronomenals, 'prokonplementari');
 
@@ -346,8 +346,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		constraintToInfinitives(paradigm, origins);
 
 		if(!deriveAllFormsFromInfinitive){
-			reductions[theme] = reductions[theme] || [];
-			k = reduceSuffixes(paradigm, reductions[theme], k);
+			abjectives[theme] = abjectives[theme] || [];
+			k = reduceSuffixes(paradigm, abjectives[theme], k);
 
 			printParadigm(paradigm, flags, theme);
 
@@ -386,9 +386,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		Object.keys(list).forEach(function(key){
 			if(key != '0')
 				list[key].forEach(function(reduction){
-					reductions[0].forEach(function(red){
-						reduceSuffix(reduction, red);
-					});
+					//abjectives[0].forEach(function(red){
+					//	reduceSuffix(reduction, red);
+					//});
 
 					flag = reduction.shift();
 
