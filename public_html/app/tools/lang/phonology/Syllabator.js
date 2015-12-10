@@ -80,7 +80,8 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 		};
 
 		var cleanPhone = function(word){
-			return Grapheme.removeJLikePhone(word.replace(/['‘’]/g, ''));
+			//return Grapheme.removeJLikePhone(word.replace(/['‘’]/g, ''));
+			return word.replace(/['‘’]/g, '');
 		};
 
 		var storeSyllabe = function(syllabe, syllabes){
