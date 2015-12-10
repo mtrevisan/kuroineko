@@ -7,7 +7,7 @@
  */
 define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lang/Dialect', 'tools/lang/morphology/Themizer', 'tools/lang/phonology/Syllabator', 'tools/data/ArrayHelper'], function(Word, Grapheme, Dialect, Themizer, Syllabator, ArrayHelper){
 
-	var runAllForms = false;
+	var runAllForms = true;
 
 
 	/** @constant */
@@ -994,6 +994,32 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'imo', null, null, '/' + INTERROGATIVE_MARK_1P);
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'imoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
 			}
+
+			if(runAllForms && themes.themeT2.match(/à$/)){
+				var themeT2 = themes.themeT2.replace(/à$/, 'é');
+				insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'o', /o$/, '[oae]', '/' + INTERROGATIVE_MARK_1S);
+				insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'omi', /omi$/, '[oae]mi', '/' + INTERROGATIVE_MARK_1S_2);
+				insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'i', null, null, '/' + INTERROGATIVE_MARK_2S);
+				insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'itu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
+				insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'a', /a$/, '[ai]', '/' + INTERROGATIVE_MARK_2P);
+				insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'au', null, null, '/' + INTERROGATIVE_MARK_2P_2);
+				insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'a', null, null, '/' + INTERROGATIVE_MARK_3);
+				insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'elo', null, null, '/' + INTERROGATIVE_MARK_3_2);
+				insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'imo', null, null, '/' + INTERROGATIVE_MARK_1P);
+				insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'imoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
+				if(!verb.irregularity.eser){
+					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'o', /o$/, '[oae]', '/' + INTERROGATIVE_MARK_1S);
+					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'omi', /omi$/, '[oae]mi', '/' + INTERROGATIVE_MARK_1S_2);
+					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'i', null, null, '/' + INTERROGATIVE_MARK_2S);
+					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'itu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
+					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'a', /a$/, '[ai]', '/' + INTERROGATIVE_MARK_2P);
+					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'au', null, null, '/' + INTERROGATIVE_MARK_2P_2);
+					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'a', null, null, '/' + INTERROGATIVE_MARK_3);
+					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'elo', null, null, '/' + INTERROGATIVE_MARK_3_2);
+					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'imo', null, null, '/' + INTERROGATIVE_MARK_1P);
+					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'imoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
+				}
+			}
 		}
 	};
 
@@ -1012,6 +1038,13 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'se', null, null, '/' + FINAL_CONSONANT_VOICING_MARK);
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'si');
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'simo');
+
+			if(runAllForms && themes.themeT2.match(/à$/)){
+				var themeT2 = themes.themeT2.replace(/à$/, 'é');
+				insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'se', null, null, '/' + FINAL_CONSONANT_VOICING_MARK);
+				insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'si');
+				insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'simo');
+			}
 		}
 	};
 
@@ -1028,11 +1061,15 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				origins.push(origin);
 
 			//FIXME
-			//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug. par tuti i mòdi e i tenpi fora ke inté ‘l infenío,
-			//partithipio ativo, e xerundio
-			//Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug. intel partithipio pasivo ko la dexinentha in -st-,
-			//e intel xerundio
+			//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug. par tuti i mòdi e i tenpi fora ke inté ‘l infenío, partithipio ativo,
+			//e xerundio
+			//Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug. intel partithipio pasivo ko la dexinentha in -st-, e intel xerundio
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'sto', /o$/, '[oaie]', '/' + FINAL_CONSONANT_VOICING_MARK);
+
+			if(runAllForms && themes.themeT2.match(/à$/)){
+				var themeT2 = themes.themeT2.replace(/à$/, 'é');
+				insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'sto', /o$/, '[oaie]', '/' + FINAL_CONSONANT_VOICING_MARK);
+			}
 		}
 	};
 
@@ -1054,6 +1091,11 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				insert(paradigm, theme, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'èser'.length) + 'siàndo', null, null, '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK);
 			else if(verb.irregularity.aver)
 				insert(paradigm, theme, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'aver'.length) + 'abiàndo', null, null, '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK);
+
+			if(runAllForms && themes.themeT2.match(/à$/)){
+				var themeT2 = themes.themeT2.replace(/à$/, 'é');
+				insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK + MARKER_FLAGS);
+			}
 		}
 	};
 
@@ -1088,6 +1130,30 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'rímo', null, null, '/' + INTERROGATIVE_MARK_1P);
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'rímoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
 			}
+
+			if(runAllForms && themes.themeT4.match(/a$/)){
+				var themeT4 = themes.themeT4.replace(/a$/, 'e');
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rà', null, null, '/' + INTERROGATIVE_MARK_1S + MARKER_FLAGS);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ràmi', null, null, '/' + INTERROGATIVE_MARK_1S_2);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rè', /è$/, '[èò]', '/' + INTERROGATIVE_MARK_1S);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rèmi', /èmi$/, '[èò]mi', '/' + INTERROGATIVE_MARK_1S_2);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rà', null, null, '/' + INTERROGATIVE_MARK_2S);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ràtu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rà', null, null, '/' + INTERROGATIVE_MARK_3);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ràlo', null, null, '/' + INTERROGATIVE_MARK_3_2);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ré', null, null, '/' + INTERROGATIVE_MARK_2P);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'réu', null, null, '/' + INTERROGATIVE_MARK_2P_2);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rémo', null, null, '/' + INTERROGATIVE_MARK_1P);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rémoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rón', null, null, '/' + INTERROGATIVE_MARK_1P);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rén', null, null, '/' + INTERROGATIVE_MARK_1P);
+				if(verb.conjugation == 2){
+					insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rí', null, null, '/' + INTERROGATIVE_MARK_2P);
+					insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ríu', null, null, '/' + INTERROGATIVE_MARK_2P_2);
+					insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rímo', null, null, '/' + INTERROGATIVE_MARK_1P);
+					insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rímoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
+				}
+			}
 		}
 	};
 
@@ -1121,6 +1187,29 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			//NOTE: i únegi pronòmi interogativi enklítegi ke se dopara i xe kueli de 3a pars
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'ràe', null, null, '/' + INTERROGATIVE_MARK_3);
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'ràve', null, null, '/' + INTERROGATIVE_MARK_3 + FLAG_SEPARATOR + INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE);
+
+			if(runAllForms && themes.themeT4.match(/a$/)){
+				var themeT4 = themes.themeT4.replace(/a$/, 'e');
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ría', null, null, '/' + INTERROGATIVE_MARK_2S);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ríatu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ría', /a$/, '[ae]', '/' + INTERROGATIVE_MARK_1S);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ríami', /ami$/, '[ae]mi', '/' + INTERROGATIVE_MARK_1S_2);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ría', /a$/, '[ae]', '/' + INTERROGATIVE_MARK_3);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ríelo', null, null, '/' + INTERROGATIVE_MARK_3_2);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rési', null, null, '/' + INTERROGATIVE_MARK_2P);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'résiu', null, null, '/' + INTERROGATIVE_MARK_2P_2);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'résimo', null, null, '/' + INTERROGATIVE_MARK_1P);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'résimoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rié', /ié$/, '(is)ié', '/' + INTERROGATIVE_MARK_2P);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'riéu', /iéu$/, '(is)iéu', '/' + INTERROGATIVE_MARK_2P_2);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rón', /on$/, '(is)(i)on', '/' + INTERROGATIVE_MARK_1P);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rén', /en$/, '(is)en', '/' + INTERROGATIVE_MARK_1P);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rón', /on$/, '(is)(i)onse');
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rén', /en$/, '(is)ense');
+				//NOTE: i únegi pronòmi interogativi enklítegi ke se dopara i xe kueli de 3a pars
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ràe', null, null, '/' + INTERROGATIVE_MARK_3);
+				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ràve', null, null, '/' + INTERROGATIVE_MARK_3 + FLAG_SEPARATOR + INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE);
+			}
 		}
 	};
 
