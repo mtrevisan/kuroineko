@@ -32,7 +32,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 	/**
 	 * @param {String} uom				Either a string of the unit of measure like 'm', or a sentence coding uom, parentValue, and parentUOM like 'm = 12 ft', or 'm = 12 ft = 3 in'
 	 * @param {Number} parentValue	Value of uom wrt parentUOM
-	 * @param {String} parentUOM		String of the referenced unit of measure like 'ft'
+	 * @param {String} parentUOM		Referenced unit of measure like 'ft'
 	 */
 	var addUnit = function(uom, parentValue, parentUOM){
 		if(!parentValue && !parentUOM){
@@ -44,7 +44,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 				i, m;
 			uom = data[0];
 			for(i = 1; i < size; i ++){
-				m = data[i].match(/(.+?) (.+)/);
+				m = data[i].match(/([^ ]+) (.+)/);
 				parentValue = Number(m[1]);
 				parentUOM = m[2];
 
@@ -77,8 +77,8 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 	};
 
 	/**
-	 * @param {String} oldUOM	String of the old unit of measure like 'm'
-	 * @param {String} newUOM	String of the new unit of measure like 'km'
+	 * @param {String} oldUOM	Old unit of measure like 'm'
+	 * @param {String} newUOM	New unit of measure like 'km'
 	 */
 	var renameUnit = function(oldUOM, newUOM){
 		if(!ObjectHelper.isString(oldUOM))
@@ -113,14 +113,14 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 	/**
 	 * @param {String} uom				Either a string of the unit of measure like 'm', or a sentence coding uom, parentValue, and parentUOM like 'm = 12 ft', or 'm = 12 ft = 3 in'
 	 * @param {Number} parentValue	Value of uom wrt parentUOM
-	 * @param {String} parentUOM		String of the referenced unit of measure like 'ft'
+	 * @param {String} parentUOM		Referenced unit of measure like 'ft'
 	 */
 	var updateUnit = function(uom, parentValue, parentUOM){
 		if(!parentValue && !parentUOM){
 			if(!ObjectHelper.isString(uom))
 				throw 'The value passed should be a string.';
 
-			var m = uom.match(/(.+?) (.+)/);
+			var m = uom.match(/([^ ]+) (.+)/);
 
 			uom = m[0];
 			parentValue = Number(m[1]);
@@ -168,6 +168,9 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 	 * Converts a value in a given unit of measure from a unit system into the equivalent value in the base unit of measure of the other
 	 * unit system (possibly the same).
 	 *
+	 * @param {Number/Fraction} value		Either a value to be converted or a string in the form '<value> <uom-from>( in <uom-to>)?'
+	 * @param {String} fromUnitOfMeasure	From unit of measure like 'm'
+	 * @param {String} toUnitOfMeasure		To unit of measure like 'ft'
 	 * @return {Fraction}
 	 */
 	var convert = function(value, fromUnitOfMeasure, toUnitOfMeasure){
@@ -175,12 +178,13 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 			if(!ObjectHelper.isString(value))
 				throw 'The value passed should be a string.';
 
-			var m = value.match(/(.+?) (.+) in (.+)/);
-			value = m[1];
+			var m = value.match(/([^ ]+) (.+) in (.+)/);
+			value = Number(m[1]);
 			fromUnitOfMeasure = m[2];
 			toUnitOfMeasure = m[3];
 		}
-
+		if(!(value instanceof Fraction) && !ObjectHelper.isFloat(value))
+			throw 'The value passed should be a float or a fraaction.';
 		if(!ObjectHelper.isString(fromUnitOfMeasure))
 			throw 'The from unit of measure passed should be a string.';
 
@@ -246,8 +250,18 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 		return factor;
 	};
 
-
+	/**
+	 *
+	 * @param {Number} value				Value to be expanded
+	 * @param {String} unitOfMeasure		Unit of measure of the passed value
+	 * @returns {Array}						Array of tuples value and uom
+	 */
 	var expand = function(value, unitOfMeasure){
+		if(!ObjectHelper.isFloat(value))
+			throw 'The value passed should be a float.';
+		if(!ObjectHelper.isString(unitOfMeasure))
+			throw 'The unit of measure passed should be a string.';
+
 		var uom = calculateGreatestUOM.call(this),
 			baseValue = 0,
 			result = [],
