@@ -15,8 +15,13 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 				this.addUnit(d);
 			}, this);
 		}
-		else
+		else{
 			this.data = data || {};
+
+			Object.keys(this.data).forEach(function(uom){
+				this[uom].parentValue = new Fraction(this[uom].parentValue);
+			}, this.data);
+		}
 
 		this.baseUOM = baseUOM;
 	};
@@ -30,9 +35,9 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 	};
 
 	/**
-	 * @param {String} uom				Either a string of the unit of measure like 'm', or a sentence coding uom, parentValue, and parentUOM like 'm = 12 ft', or 'm = 12 ft = 3 in'
-	 * @param {Number} parentValue	Value of uom wrt parentUOM
-	 * @param {String} parentUOM		Referenced unit of measure like 'ft'
+	 * @param {String} uom							Either a string of the unit of measure like 'm', or a sentence coding uom, parentValue, and parentUOM like 'm = 12 ft', or 'm = 12 ft = 3 in'
+	 * @param {Number/Fraction} parentValue	Value wrt parentUOM
+	 * @param {String} parentUOM					Referenced unit of measure like 'ft'
 	 */
 	var addUnit = function(uom, parentValue, parentUOM){
 		if(!parentValue && !parentUOM){
@@ -45,7 +50,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 			uom = data[0];
 			for(i = 1; i < size; i ++){
 				m = data[i].match(/([^ ]+) (.+)/);
-				parentValue = Number(m[1]);
+				parentValue = new Fraction(m[1]);
 				parentUOM = m[2];
 
 				this.addUnit(uom, parentValue, parentUOM);
@@ -56,12 +61,13 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 				this.data[uom] = this.data[uom] || {};
 		}
 		else{
-			if(!ObjectHelper.isFloat(parentValue))
-				throw 'The parent value passed should be a float.';
+			if(!(parentValue instanceof Fraction) && !ObjectHelper.isFloat(parentValue))
+				throw 'The parent value passed should be a float or a fraction.';
 			if(!ObjectHelper.isString(parentUOM))
 				throw 'The parent unit of measure passed should be a string.';
-			if(parentValue <= 0)
-				throw 'Incompatible parent value: cannot be non-positive.';
+			parentValue = new Fraction(parentValue);
+			if(parentValue.isNegative())
+				throw 'Incompatible parent value: cannot be negative.';
 			if(parentValue && !parentUOM)
 				throw 'Incompatible parent measure: should be present if parent value is given.';
 			if(uom == parentUOM)
@@ -111,9 +117,9 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 	};
 
 	/**
-	 * @param {String} uom				Either a string of the unit of measure like 'm', or a sentence coding uom, parentValue, and parentUOM like 'm = 12 ft', or 'm = 12 ft = 3 in'
-	 * @param {Number} parentValue	Value of uom wrt parentUOM
-	 * @param {String} parentUOM		Referenced unit of measure like 'ft'
+	 * @param {String} uom							Either a string of the unit of measure like 'm', or a sentence coding uom, parentValue, and parentUOM like 'm = 12 ft', or 'm = 12 ft = 3 in'
+	 * @param {Number/Fraction} parentValue	Value wrt parentUOM
+	 * @param {String} parentUOM					Referenced unit of measure like 'ft'
 	 */
 	var updateUnit = function(uom, parentValue, parentUOM){
 		if(!parentValue && !parentUOM){
@@ -123,11 +129,14 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 			var m = uom.match(/([^ ]+) (.+)/);
 
 			uom = m[0];
-			parentValue = Number(m[1]);
+			parentValue = new Fraction(m[1]);
 			parentUOM = m[2];
 		}
-		if(!ObjectHelper.isFloat(parentValue))
-			throw 'The parent value passed should be a float.';
+		if(!(parentValue instanceof Fraction) && !ObjectHelper.isFloat(parentValue))
+			throw 'The parent value passed should be a float or a fraction.';
+		parentValue = new Fraction(parentValue);
+		if(parentValue.isNegative())
+			throw 'Incompatible parent value: cannot be negative.';
 		if(!ObjectHelper.isString(parentUOM))
 			throw 'The parent unit of measure passed should be a string.';
 
@@ -145,15 +154,18 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 	 *
 	 * @param {MeasureConverter} from	Measure from which the converter converts
 	 * @param {MeasureConverter} to		Measure to which the converter converts
-	 * @param {Number} factor				Factor of conversion between from and to measures
+	 * @param {Number/Fraction} factor	Factor of conversion between from and to measures
 	 */
 	var addConverter = function(from, to, factor){
 		if(!(from instanceof Constructor))
 			throw 'The from value passed should be a measure.';
 		if(!(to instanceof Constructor))
 			throw 'The to value passed should be a measure.';
-		if(!ObjectHelper.isFloat(factor))
-			throw 'The parent value passed should be a float.';
+		if(!(factor instanceof Fraction) && !ObjectHelper.isFloat(factor))
+			throw 'The factor passed should be a float or a fraction.';
+		factor = new Fraction(factor);
+		if(!factor.isPositive())
+			throw 'Incompatible factor: cannot be non-positive.';
 
 		this.converters = this.converters || [];
 
@@ -179,12 +191,15 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 				throw 'The value passed should be a string.';
 
 			var m = value.match(/([^ ]+) (.+) in (.+)/);
-			value = Number(m[1]);
+			value = new Fraction(m[1]);
 			fromUnitOfMeasure = m[2];
 			toUnitOfMeasure = m[3];
 		}
 		if(!(value instanceof Fraction) && !ObjectHelper.isFloat(value))
-			throw 'The value passed should be a float or a fraaction.';
+			throw 'The value passed should be a float or a fraction.';
+		value = new Fraction(value);
+		if(value.isNegative())
+			throw 'Incompatible value: cannot be negative.';
 		if(!ObjectHelper.isString(fromUnitOfMeasure))
 			throw 'The from unit of measure passed should be a string.';
 
@@ -196,7 +211,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 		if(from && to){
 			var fromFactor = calculateFactor.call(this, fromUnitOfMeasure),
 				toFactor = calculateFactor.call(this, toUnitOfMeasure);
-			value = (new Fraction(value)).mul(fromFactor).div(toFactor);
+			value = value.mul(fromFactor).div(toFactor);
 		}
 		else{
 			//across different unit systems:
@@ -206,8 +221,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 					//direct (from -> to)
 					if(c.to.hasUnit(toUnitOfMeasure)){
 						value = c.from.convert(value, fromUnitOfMeasure);
-						value = value.mul(c.factor);
-						value = c.to.convert(value, c.to.getBaseUOM(), toUnitOfMeasure);
+						value = c.to.convert(value.mul(c.factor), c.to.getBaseUOM(), toUnitOfMeasure);
 						return true;
 					}
 					//direct (from -> from)
@@ -221,8 +235,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 					//inverse (to -> from)
 					if(c.from.hasUnit(toUnitOfMeasure)){
 						value = c.to.convert(value, fromUnitOfMeasure);
-						value = value.div(c.factor);
-						value = c.from.convert(value, c.from.getBaseUOM(), toUnitOfMeasure);
+						value = c.from.convert(value.div(c.factor), c.from.getBaseUOM(), toUnitOfMeasure);
 						return true;
 					}
 					//direct (to -> to)
@@ -243,22 +256,28 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 
 	/** @private */
 	var calculateFactor = function(uom){
-		for(var factor = 1, d; uom; uom = d.parentUOM){
+		var factor = new Fraction(1),
+			d;
+		do{
 			d = this.data[uom];
-			factor *= d.parentValue || 1;
-		}
+			factor = factor.mul(d.parentValue || new Fraction(1));
+			uom = d.parentUOM;
+		}while(uom);
 		return factor;
 	};
 
 	/**
 	 *
-	 * @param {Number} value				Value to be expanded
+	 * @param {Number/Fraction} value	Value to be expanded
 	 * @param {String} unitOfMeasure		Unit of measure of the passed value
 	 * @returns {Array}						Array of tuples value and uom
 	 */
 	var expand = function(value, unitOfMeasure){
-		if(!ObjectHelper.isFloat(value))
-			throw 'The value passed should be a float.';
+		if(!(value instanceof Fraction) && !ObjectHelper.isFloat(value))
+			throw 'The value passed should be a float or a fraction.';
+		value = new Fraction(value);
+		if(value.isNegative())
+			throw 'Incompatible value: cannot be negative.';
 		if(!ObjectHelper.isString(unitOfMeasure))
 			throw 'The unit of measure passed should be a string.';
 
@@ -275,7 +294,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 
 			if(integerPart > 0 || !d.parentUOM && currentValue > 0)
 				result.push({
-					value: (factor > 1? integerPart: currentValue),
+					value: new Fraction(factor > 1? integerPart: currentValue),
 					uom: uom
 				});
 
@@ -293,7 +312,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 		Object.keys(this.data).forEach(function(uom){
 			factor = calculateFactor.call(this, uom);
 
-			if(factor > maxFactor){
+			if(factor.compareTo(maxFactor) > 0){
 				maxFactor = factor;
 				greatestUOM = uom;
 			}

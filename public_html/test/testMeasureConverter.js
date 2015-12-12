@@ -1,9 +1,9 @@
-require(['tools/measure/MeasureConverter'], function(MeasureConverter){
+require(['tools/measure/MeasureConverter', 'tools/math/Fraction'], function(MeasureConverter, Fraction){
 	QUnit.module('Measure');
 
 	QUnit.test('measure constructor / add unit / convert measure', function(){
 		var m = new MeasureConverter({
-			'pèrtega':	{parentValue: 6,		parentUOM: 'piè'}
+				'pèrtega':	{parentValue: 6,		parentUOM: 'piè'}
 		}, 'piè');
 		m.addUnit('paso', 5, 'piè');
 		m.addUnit('paseto = 3 piè');
@@ -14,10 +14,10 @@ require(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		equal(m.convert(8, 'pèrtega', 'paso').toNumber(), 8 * 6 / 5);
 
 		deepEqual(m.getData(), [
-			{uom: 'pèrtega',	parentValue: 6,	parentUOM: 'piè',	factor: 6},
-			{uom: 'paso',		parentValue: 5,	parentUOM: 'piè',	factor: 5},
-			{uom: 'paseto',	parentValue: 3,	parentUOM: 'piè',	factor: 3},
-			{uom: 'piè',		parentValue: undefined,	parentUOM: undefined,	factor: 1}
+			{uom: 'pèrtega',	parentValue: new Fraction(6),	parentUOM: 'piè',	factor: new Fraction(6)},
+			{uom: 'paso',		parentValue: new Fraction(5),	parentUOM: 'piè',	factor: new Fraction(5)},
+			{uom: 'paseto',	parentValue: new Fraction(3),	parentUOM: 'piè',	factor: new Fraction(3)},
+			{uom: 'piè',		parentValue: undefined,	parentUOM: undefined,	factor: new Fraction(1)}
 		]);
 	});
 
@@ -27,10 +27,10 @@ require(['tools/measure/MeasureConverter'], function(MeasureConverter){
 			'paso = 5 piè',
 			'paseto = 3 piè'], 'piè');
 
-		deepEqual(m.expand(8, 'pèrtega'), [{value: 8, uom: 'pèrtega'}]);
-		deepEqual(m.expand(2, 'piè'), [{value: 2, uom: 'piè'}]);
-		deepEqual(m.expand(2.3, 'piè'), [{value: 2.3, uom: 'piè'}]);
-		deepEqual(m.expand(8, 'piè'), [{value: 1, uom: 'pèrtega'}, {value: 2, uom: 'piè'}]);
+		deepEqual(m.expand(8, 'pèrtega'), [{value: new Fraction(8), uom: 'pèrtega'}]);
+		deepEqual(m.expand(2, 'piè'), [{value: new Fraction(2), uom: 'piè'}]);
+		deepEqual(m.expand(2.3, 'piè'), [{value: new Fraction(2.3), uom: 'piè'}]);
+		deepEqual(m.expand(8, 'piè'), [{value: new Fraction(1), uom: 'pèrtega'}, {value: new Fraction(2), uom: 'piè'}]);
 		deepEqual(m.expand(0, 'pèrtega'), []);
 	});
 
@@ -52,6 +52,12 @@ require(['tools/measure/MeasureConverter'], function(MeasureConverter){
 
 		equal(m.convert(1.5, 'pèrtega', 'm').toNumber(), 1.5 * (6 / 23));
 		equal(m.convert(1.5, 'm', 'piè').toNumber(), 1.5 * 23);
+	});
+
+	QUnit.test('convert measure with fraction input', function(){
+		var m = new MeasureConverter(['pèrtega = 5/6 piè'], 'piè');
+
+		equal(m.convert('2 pèrtega in piè').toNumber(), 2 * (5 / 6));
 	});
 
 	QUnit.test('convert measure with string input', function(){

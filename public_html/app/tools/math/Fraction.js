@@ -219,8 +219,8 @@ define(function(){
 	};
 
 	/** Creates a copy of the actual Fraction object. */
-	var clone = function(frac){
-		return new Constructor(frac.sgn * frac.num, frac.den);
+	var clone = function(){
+		return new Constructor(this.sgn * this.num, this.den);
 	};
 
 	var add = function(){
@@ -243,8 +243,7 @@ define(function(){
 
 	var sub = function(){
 		var frac = parse(arguments);
-		frac.sgn *= -1;
-		return this.add(frac);
+		return this.add(new Constructor(-frac.sgn * frac.num, frac.den));
 	};
 
 	var mul = function(){
@@ -259,8 +258,7 @@ define(function(){
 
 	var div = function(){
 		var frac = parse(arguments);
-		frac.num = frac.den + (frac.den = frac.num) - frac.num;
-		return this.mul(frac);
+		return this.mul(new Constructor(frac.sgn * frac.den, frac.num));
 	};
 
 	/**
@@ -335,6 +333,10 @@ define(function(){
 		return (this.sgn == 1);
 	};
 
+	var isNegative = function(){
+		return (this.sgn == -1);
+	};
+
 	var isInteger = function(){
 		return (this.den == 1);
 	};
@@ -350,7 +352,7 @@ define(function(){
 
 	var compareTo = function(){
 		var frac = parse(arguments);
-		return this.sub(frac).sgn;
+		return this.clone().sub(frac).sgn;
 	};
 
 	var equals = function(){
@@ -506,6 +508,7 @@ define(function(){
 		isInfinite: isInfinite,
 		isZero: isZero,
 		isPositive: isPositive,
+		isNegative: isNegative,
 		isInteger: isInteger,
 		isDivisibleBy: isDivisibleBy,
 		abs: abs,
