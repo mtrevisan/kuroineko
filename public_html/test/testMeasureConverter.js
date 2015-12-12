@@ -1,8 +1,8 @@
-require(['tools/measure/Measure'], function(Measure){
+require(['tools/measure/MeasureConverter'], function(MeasureConverter){
 	QUnit.module('Measure');
 
 	QUnit.test('measure constructor / add unit / convert measure', function(){
-		var m = new Measure({
+		var m = new MeasureConverter({
 			'pèrtega':	{parentValue: 6,		parentUOM: 'piè'}
 		}, 'piè');
 		m.addUnit('paso', 5, 'piè');
@@ -22,7 +22,7 @@ require(['tools/measure/Measure'], function(Measure){
 	});
 
 	QUnit.test('expand', function(){
-		var m = new Measure([
+		var m = new MeasureConverter([
 			'pèrtega = 6 piè',
 			'paso = 5 piè',
 			'paseto = 3 piè'], 'piè');
@@ -35,7 +35,7 @@ require(['tools/measure/Measure'], function(Measure){
 	});
 
 	QUnit.test('update unit', function(){
-		var m = new Measure('pèrtega = 6 piè', 'piè');
+		var m = new MeasureConverter('pèrtega = 6 piè', 'piè');
 
 		equal(m.convert(1, 'pèrtega', 'piè').toNumber(), 6);
 
@@ -45,9 +45,9 @@ require(['tools/measure/Measure'], function(Measure){
 	});
 
 	QUnit.test('convert measure', function(){
-		var si = new Measure({}, 'm');
+		var si = new MeasureConverter({}, 'm');
 		si.addUnit('m');
-		var m = new Measure(['pèrtega = 6 piè'], 'piè');
+		var m = new MeasureConverter(['pèrtega = 6 piè'], 'piè');
 		m.addConverter(m, si, 1/23);
 
 		equal(m.convert(1.5, 'pèrtega', 'm').toNumber(), 1.5 * (6 / 23));
@@ -55,9 +55,9 @@ require(['tools/measure/Measure'], function(Measure){
 	});
 
 	QUnit.test('convert measure with string input', function(){
-		var si = new Measure({}, 'm');
+		var si = new MeasureConverter({}, 'm');
 		si.addUnit('m');
-		var m = new Measure(['pèrtega = 6 piè'], 'piè');
+		var m = new MeasureConverter(['pèrtega = 6 piè'], 'piè');
 		m.addConverter(m, si, 1/23);
 
 		equal(m.convert('1.5 pèrtega in m').toNumber(), 1.5 * (6 / 23));
@@ -65,9 +65,9 @@ require(['tools/measure/Measure'], function(Measure){
 	});
 
 	QUnit.test('convert measure with wrong inputs', function(){
-		var si = new Measure({}, 'm');
+		var si = new MeasureConverter({}, 'm');
 		si.addUnit('m');
-		var m = new Measure(['pèrtega = 6 piè'], 'piè');
+		var m = new MeasureConverter(['pèrtega = 6 piè'], 'piè');
 
 		throws(function(){
 			m.addConverter('bla', si, 1/23);
