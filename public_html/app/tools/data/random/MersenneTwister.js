@@ -92,7 +92,8 @@ define(function(){
 			seed = +(new Date());
 
 		//the array for the state vector
-		this.mt = new Array(N);
+		//this.mt = new Array(N);
+		this.mt = [];
 		//index == N + 1 means MT is not initialized
 		this.index = N + 1;
 
