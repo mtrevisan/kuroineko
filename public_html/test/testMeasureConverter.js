@@ -34,12 +34,36 @@ require(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		deepEqual(m.expand(0, 'pèrtega'), []);
 	});
 
+	QUnit.test('update unit', function(){
+		var m = new MeasureConverter('pèrtega = 6 piè', 'piè');
+
+		equal(m.convert(1, 'pèrtega', 'piè').toNumber(), 6);
+
+		m.updateUnit('pèrtega', 5, 'piè');
+
+		equal(m.convert(1, 'pèrtega', 'piè').toNumber(), 5);
+	});
+
 	QUnit.test('convert measure', function(){
-		var si = new MeasureConverter({m: {}}, 'm');
+		var si = new MeasureConverter({}, 'm');
+		si.addUnit('m');
 		var m = new MeasureConverter(['pèrtega = 6 piè'], 'piè');
 		m.addConverter(m, si, 1/23);
 
 		equal(m.convert(1.5, 'pèrtega', 'm').toNumber(), 1.5 * (6 / 23));
 		equal(m.convert(1.5, 'm', 'piè').toNumber(), 1.5 * 23);
+	});
+
+	QUnit.test('convert measure with wrong inputs', function(){
+		var si = new MeasureConverter({}, 'm');
+		si.addUnit('m');
+		var m = new MeasureConverter(['pèrtega = 6 piè'], 'piè');
+
+		throws(function(){
+			m.addConverter('bla', si, 1/23);
+		},
+		function(err){
+			return (err.toString() == 'The from value passed should be a measure.');
+		});
 	});
 });

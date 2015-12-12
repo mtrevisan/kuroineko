@@ -23,6 +23,9 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 
 
 	var hasUnit = function(uom){
+		if(!ObjectHelper.isString(uom))
+			throw 'The value passed should be a string.';
+
 		return !!this.data[uom];
 	};
 
@@ -33,6 +36,9 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 	 */
 	var addUnit = function(uom, parentValue, parentUOM){
 		if(!parentValue && !parentUOM){
+			if(!ObjectHelper.isString(uom))
+				throw 'The value passed should be a string.';
+
 			var data = uom.split(' = '),
 				size = data.length,
 				i, m;
@@ -46,8 +52,14 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 
 				uom = parentUOM;
 			}
+			if(size == 1)
+				this.data[uom] = this.data[uom] || {};
 		}
 		else{
+			if(!ObjectHelper.isFloat(parentValue))
+				throw 'The parent value passed should be a float.';
+			if(!ObjectHelper.isString(parentUOM))
+				throw 'The parent unit of measure passed should be a string.';
 			if(parentValue <= 0)
 				throw 'Incompatible parent value: cannot be non-positive.';
 			if(parentValue && !parentUOM)
@@ -64,7 +76,16 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 		}
 	};
 
+	/**
+	 * @param {String} oldUOM	String of the old unit of measure like 'm'
+	 * @param {String} newUOM	String of the new unit of measure like 'km'
+	 */
 	var renameUnit = function(oldUOM, newUOM){
+		if(!ObjectHelper.isString(oldUOM))
+			throw 'The old unit of measure passed should be a string.';
+		if(!ObjectHelper.isString(newUOM))
+			throw 'The new unit of measure passed should be a string.';
+
 		var d = this.data[oldUOM];
 		if(!d)
 			throw 'Cannot change unit of measure "' + oldUOM + '" into "' + newUOM + '": unit not found.';
@@ -77,6 +98,11 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 
 	/** @private */
 	var updateParentUOMs = function(oldParentUOM, newParentUOM){
+		if(!ObjectHelper.isString(oldParentUOM))
+			throw 'The old parent unit of measure passed should be a string.';
+		if(!ObjectHelper.isString(newParentUOM))
+			throw 'The new parent unit of measure passed should be a string.';
+
 		Object.keys(this.data).forEach(function(uom){
 			var d = this[uom];
 			if(d.parentUOM == oldParentUOM)
@@ -84,7 +110,27 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 		}, this.data);
 	};
 
+	/**
+	 * @param {String} uom				Either a string of the unit of measure like 'm', or a sentence coding uom, parentValue, and parentUOM like 'm = 12 ft', or 'm = 12 ft = 3 in'
+	 * @param {Number} parentValue	Value of uom wrt parentUOM
+	 * @param {String} parentUOM		String of the referenced unit of measure like 'ft'
+	 */
 	var updateUnit = function(uom, parentValue, parentUOM){
+		if(!parentValue && !parentUOM){
+			if(!ObjectHelper.isString(uom))
+				throw 'The value passed should be a string.';
+
+			var m = uom.match(/(.+?) (.+)/);
+
+			uom = m[0];
+			parentValue = Number(m[1]);
+			parentUOM = m[2];
+		}
+		if(!ObjectHelper.isFloat(parentValue))
+			throw 'The parent value passed should be a float.';
+		if(!ObjectHelper.isString(parentUOM))
+			throw 'The parent unit of measure passed should be a string.';
+
 		var d = this.data[uom];
 		if(!d)
 			throw 'Cannot change parent value: unit "' + uom + '" not found.';
@@ -94,7 +140,21 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 		this.addUnit(uom, parentValue || d.parentValue, parentUOM || d.parentUOM);
 	};
 
+	/**
+	 * Add a converter to/from this measure.
+	 *
+	 * @param {MeasureConverter} from	Measure from which the converter converts
+	 * @param {MeasureConverter} to		Measure to which the converter converts
+	 * @param {Number} factor				Factor of conversion between from and to measures
+	 */
 	var addConverter = function(from, to, factor){
+		if(!(from instanceof Constructor))
+			throw 'The from value passed should be a measure.';
+		if(!(to instanceof Constructor))
+			throw 'The to value passed should be a measure.';
+		if(!ObjectHelper.isFloat(factor))
+			throw 'The parent value passed should be a float.';
+
 		this.converters = this.converters || [];
 
 		this.converters.push({
@@ -105,12 +165,25 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 	};
 
 	/**
-	 * Converts a value in a given unit of measure from a unit system into the equivalent value in the base unit of measure of the other unit system
-	 * (possibly the same).
+	 * Converts a value in a given unit of measure from a unit system into the equivalent value in the base unit of measure of the other
+	 * unit system (possibly the same).
 	 *
 	 * @return {Fraction}
 	 */
 	var convert = function(value, fromUnitOfMeasure, toUnitOfMeasure){
+		if(!fromUnitOfMeasure && !toUnitOfMeasure){
+			if(!ObjectHelper.isString(value))
+				throw 'The value passed should be a string.';
+
+			var m = value.match(/(.+?) (.+) in (.+)/);
+			value = m[1];
+			fromUnitOfMeasure = m[2];
+			toUnitOfMeasure = m[3];
+		}
+
+		if(!ObjectHelper.isString(fromUnitOfMeasure))
+			throw 'The from unit of measure passed should be a string.';
+
 		toUnitOfMeasure = toUnitOfMeasure || this.baseUOM;
 
 		//within the same unit system:
