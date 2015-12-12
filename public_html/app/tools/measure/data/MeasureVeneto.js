@@ -440,14 +440,15 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		var o = {
 			'Mèl':		510.2271,
 			//pal dekreto del Senato de 'l 6 April 1737 el pexo fin el ga da èser 1.02 'olte kuelo de Venèŧia
-			'Pàdoa':		486.5387,
+			'Pàdoa':		301.22966 * (768. / 485.) * 1.02,
 			'Roigo':		477.2942,
 			//pal dekreto del Senato de 'l 6 April 1737 el pexo fin el ga da èser 1 e 1/12 'olte kuelo de Venèŧia
-			'Trevixo':	516.7486,
+			'Trevixo':	301.22966 * (768. / 485.) * (13. / 12.),
 			//doparàa kome pexo par presioxi, sora de tuto par òro, arđento, e xème preŧioxe
-			'Venèŧia':	476.99872,
+			//(pal Sovrano Decreto de 'l 1575 se ga ke 768 libre gròse le fà 485 libre fine)
+			'Venèŧia':	301.22966 * (768. / 485.),
 			//na volta e mèđa la só libra fina
-			'Verona':	499.7636
+			'Verona':	333.1757 * 1.5
 		};
 		m.addConverter(m, siMeasureContainer.weight, o[place]);
 
@@ -475,8 +476,8 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 			'Badía Polèxine': 339.0974,
 			'Roigo':		301.4160,
 			//pal dekreto del Senato de 'l 6 April 1737 el pexo fin el ga da èser 1.125 'olte kuelo de Venèŧia
-			'Trevixo':	338.8834,
-			//doparàa kome pexo par medexine, indove ke 12 libre fine le xe konpañe de 19 libre gròse
+			'Trevixo':	301.22966 * 1.125,
+			//doparàa kome pexo par medexine
 			'Venèŧia':	301.22966,
 			'Verona':	333.1757
 		};
@@ -490,7 +491,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		m.addUnit('karga = 4 kantaro');
 
 		//se dopara la libra fina de Venèŧia
-		m.addConverter(m, siMeasureContainer.weight, 301.2297);
+		m.addConverter(m, siMeasureContainer.weight, 301.22966);
 
 		return m;
 	};
