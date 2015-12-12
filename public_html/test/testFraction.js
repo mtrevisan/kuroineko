@@ -120,11 +120,25 @@ require(['tools/math/Fraction'], function(Fraction){
 		equal(f1.gcd(f2).toString(), new Fraction('1/56').toString());
 	});
 
+	QUnit.test('lcm', function(){
+		var f1 = new Fraction('5/8');
+		var f2 = new Fraction('1/2');
+
+		equal(f1.lcm(f2).toString(), new Fraction('5/2').toString());
+	});
+
 	QUnit.test('add', function(){
 		var f1 = new Fraction('5.13(31)');
 		var f2 = new Fraction('2.3(7)');
 
 		equal(f1.add(f2).toNumber(), new Fraction('7.51(09)').toNumber());
+	});
+
+	QUnit.test('sub', function(){
+		var f1 = new Fraction('5.13(31)');
+		var f2 = new Fraction('2.3(7)');
+
+		equal(f1.sub(f2).toNumber(), new Fraction('2.75(53)').toNumber());
 	});
 
 	QUnit.test('mul', function(){
@@ -220,6 +234,12 @@ require(['tools/math/Fraction'], function(Fraction){
 		var f = new Fraction('1.2');
 
 		equal(f.toString(), '1.2');
+	});
+
+	QUnit.test('toString with repetitions', function(){
+		var f = new Fraction('1/7');
+
+		equal(f.toString(), '0.(142857)');
 	});
 
 	QUnit.test('toString +Infinity', function(){
