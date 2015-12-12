@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/measure/Measure'], function(Measure){
+define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 
 	var getMeasurePlaces = function(){
 		return {
@@ -35,7 +35,7 @@ define(['tools/measure/Measure'], function(Measure){
 		var isVenice = !!place.match(/Venèŧia/),
 			a = (place.match(/Belun|Roigo|Verona/)? 'paso': 'pèrtega' + (isVenice? ' (granda)': '')),
 			b = (place.match(/Basan|Konejan|Pàdoa|Roigo|Venèŧia|Verona|Viŧenŧa/)? 6: 5);
-		var m = new Measure(['milèr = 1000 ' + a + ' = ' + b + ' piè = 12 onŧa = 12 línea = 12 ponto',
+		var m = new MeasureConverter(['milèr = 1000 ' + a + ' = ' + b + ' piè = 12 onŧa = 12 línea = 12 ponto',
 			'paseto = 3 piè',
 			'braŧo = 2 piè'], 'piè');
 		if(isVenice)
@@ -82,7 +82,7 @@ define(['tools/measure/Measure'], function(Measure){
 		var isVenice = !!place.match(/Venèŧia/),
 			a = (place.match(/Belun|Roigo|Verona/)? 'paso': 'pèrtega' + (isVenice? ' (granda)': '')),
 			b = (place.match(/Basan|Konejan|Pàdoa|Roigo|Venèŧia|Verona|Viŧenŧa/)? 6: 5);
-		var m = new Measure(['milèr = 1000 ' + a + ' = ' + b + ' piè = 12 onŧa = 12 línea = 12 ponto',
+		var m = new MeasureConverter(['milèr = 1000 ' + a + ' = ' + b + ' piè = 12 onŧa = 12 línea = 12 ponto',
 			'paseto = 3 piè',
 			'braŧo = 2 piè'], 'piè');
 		if(isVenice)
@@ -119,7 +119,7 @@ define(['tools/measure/Measure'], function(Measure){
 			place = 'Viŧenŧa';
 
 		var a = 'braŧo' + (place.match(/Verona/)? ' (longo)': '');
-		var m = new Measure(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
+		var m = new MeasureConverter(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
 
 		var o = {
 			'Mèstre':	0.6730907,
@@ -153,7 +153,7 @@ define(['tools/measure/Measure'], function(Measure){
 			place = 'Viŧenŧa';
 
 		var a = 'braŧo' + (place.match(/Verona/)? ' (kurto)': '');
-		var m = new Measure(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
+		var m = new MeasureConverter(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
 
 		if(place.match(/Belun/))
 			place = 'Verona';
@@ -189,7 +189,7 @@ define(['tools/measure/Measure'], function(Measure){
 			place = 'Viŧenŧa';
 
 		var a = 'braŧo' + (place.match(/Verona/)? ' (longo)': '');
-		var m = new Measure(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
+		var m = new MeasureConverter(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
 
 		var o = {
 			//kome el só braŧo da pano
@@ -218,7 +218,7 @@ define(['tools/measure/Measure'], function(Measure){
 			place = 'Viŧenŧa';
 
 		var a = 'braŧo' + (place.match(/Verona/)? ' (longo)': '');
-		var m = new Measure(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
+		var m = new MeasureConverter(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
 
 		var o = {
 			'Piève de Kador':	0.7653610,
@@ -249,7 +249,7 @@ define(['tools/measure/Measure'], function(Measure){
 
 		var isVenice = !!place.match(/Venèŧia/),
 			a = (place.match(/Belun|Roigo|Verona/)? 'paso': 'pèrtega' + (isVenice? ' (granda)': ''));
-		var m = new Measure(['tòla = 1 ' + a + '\u00B2'], 'tòla');
+		var m = new MeasureConverter(['tòla = 1 ' + a + '\u00B2'], 'tòla');
 		if(place.match(/Basan/))
 			m.addUnit('kanpo = 4 kuarta = 225 tòla');
 		else if(place.match(/Belun/))
@@ -291,7 +291,7 @@ define(['tools/measure/Measure'], function(Measure){
 			place = 'Viŧenŧa';
 
 		var a = (place.match(/Venèŧia/)? 'stèr': 'sako');
-		var m = new Measure([], a);
+		var m = new MeasureConverter([], a);
 		if(place.match(/Àxol/))
 			m.addUnit(a + ' = 4 kuarta = 3 vigano = 4 minèla');
 		else if(place.match(/Belun|Céneda|Vitòrio/))
@@ -351,7 +351,7 @@ define(['tools/measure/Measure'], function(Measure){
 			place = 'Viŧenŧa';
 
 		var a = (place.match(/Mèl|Mòta de Livenŧa|Trevixo \(ŧità\)/)? 'konđo': 'mastèl');
-		var m = new Measure([], a);
+		var m = new MeasureConverter([], a);
 		if(place.match(/Àxol/))
 			m.addUnit('bote = 10 ' + a + ' = 6 seco = 6 bokal = 2 bòŧe = 2 píkolo = 2 gòto');
 		else if(place.match(/Badía Polèxine/))
@@ -435,7 +435,7 @@ define(['tools/measure/Measure'], function(Measure){
 		else if(place.match(/Kamixan viŧentin|Lonigo|Montebèl|Rekoaro|Skio|Thiène/))
 			place = 'Viŧenŧa';
 
-		var m = new Measure('milèr = 10 kantaro = 4 miro = 25 libra = 12 onŧa = 6 saŧo = 32 karato = 24 gran', 'libra');
+		var m = new MeasureConverter('milèr = 10 kantaro = 4 miro = 25 libra = 12 onŧa = 6 saŧo = 32 karato = 24 gran', 'libra');
 
 		var o = {
 			'Mèl':		510.2271,
@@ -469,7 +469,7 @@ define(['tools/measure/Measure'], function(Measure){
 		else if(place.match(/Kamixan viŧentin|Lonigo|Montebèl|Rekoaro|Skio|Thiène/))
 			place = 'Viŧenŧa';
 
-		var m = new Measure('milèr = 10 kantaro = 4 miro = 25 libra = 12 onŧa = 6 saŧo = 4 skrúpolo = 6 karato = 4 gran', 'libra');
+		var m = new MeasureConverter('milèr = 10 kantaro = 4 miro = 25 libra = 12 onŧa = 6 saŧo = 4 skrúpolo = 6 karato = 4 gran', 'libra');
 		m.addUnit('karga = 4 kantaro');
 
 		var o = {
@@ -487,7 +487,7 @@ define(['tools/measure/Measure'], function(Measure){
 	};
 
 	var getMeasureWeightMedicinal = function(){
-		var m = new Measure('milèr = 10 kantaro = 4 miro = 25 libra = 12 onŧa = 6 saŧo = 4 skrúpolo = 6 karato = 4 gran', 'libra');
+		var m = new MeasureConverter('milèr = 10 kantaro = 4 miro = 25 libra = 12 onŧa = 6 saŧo = 4 skrúpolo = 6 karato = 4 gran', 'libra');
 		m.addUnit('karga = 4 kantaro');
 
 		//se dopara la libra fina de Venèŧia
@@ -497,7 +497,7 @@ define(['tools/measure/Measure'], function(Measure){
 	};
 
 	var getMeasureWeightPreciouses = function(){
-		var m = new Measure('milèr = 10 kantaro = 4 miro = 25 libra = 2 marko = 6 onŧa = 6 saŧo = 4 skrúpolo = 6 karato = 4 gran', 'libra');
+		var m = new MeasureConverter('milèr = 10 kantaro = 4 miro = 25 libra = 2 marko = 6 onŧa = 6 saŧo = 4 skrúpolo = 6 karato = 4 gran', 'libra');
 		m.addUnit('karga = 4 kantaro');
 
 		//se dopara la libra gròsa de Venèŧia
@@ -513,7 +513,7 @@ define(['tools/measure/Measure'], function(Measure){
 			factors =	[24,	21,	18,	15,	12,	9,		6,		3,		2,		1,		-1,	-2,	-3,	-6,	-9,	-12,	-15,	-18,	-21,	-24];
 
 		return function(baseUOM, indexes){
-			var m = new Measure({}, baseUOM),
+			var m = new MeasureConverter({}, baseUOM),
 				i;
 			m.addUnit(baseUOM);
 			for(i in indexes){
