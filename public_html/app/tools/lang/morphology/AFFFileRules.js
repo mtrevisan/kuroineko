@@ -42,46 +42,48 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	/** @constant */
 		PRONOMENAL_MARK = REDUCTION_RESERVED_0 + 3,
 	/** @constant */
-		PRONOMENAL_MARK_RESERVED_0 = REDUCTION_RESERVED_0 + 4,
+		//PRONOMENAL_MARK_RESERVED_0 = REDUCTION_RESERVED_0 + 4,
 	/** @constant */
-		PRONOMENAL_IMPERATIVE_MARK = REDUCTION_RESERVED_0 + 5,
+		PRONOMENAL_IMPERATIVE_MARK = REDUCTION_RESERVED_0 + 4,
 	/** @constant */
-		FINAL_CONSONANT_VOICING_MARK = REDUCTION_RESERVED_0 + 6,
+		FINAL_CONSONANT_VOICING_MARK = REDUCTION_RESERVED_0 + 5,
 	/** @constant */
-		INTERROGATIVE_MARK_1S = REDUCTION_RESERVED_0 + 7,
+		INTERROGATIVE_MARK_1S = REDUCTION_RESERVED_0 + 6,
 	/** @constant */
-		INTERROGATIVE_MARK_1S_2 = REDUCTION_RESERVED_0 + 8,
+		INTERROGATIVE_MARK_1S_2 = REDUCTION_RESERVED_0 + 7,
 	/** @constant */
-		INTERROGATIVE_MARK_1P = REDUCTION_RESERVED_0 + 9,
+		INTERROGATIVE_MARK_1P = REDUCTION_RESERVED_0 + 8,
 	/** @constant */
-		INTERROGATIVE_MARK_1P_2 = REDUCTION_RESERVED_0 + 10,
+		INTERROGATIVE_MARK_1P_2 = REDUCTION_RESERVED_0 + 9,
 	/** @constant */
-		INTERROGATIVE_MARK_2S = REDUCTION_RESERVED_0 + 11,
+		INTERROGATIVE_MARK_2S = REDUCTION_RESERVED_0 + 10,
 	/** @constant */
-		INTERROGATIVE_MARK_2S_2 = REDUCTION_RESERVED_0 + 12,
+		INTERROGATIVE_MARK_2S_2 = REDUCTION_RESERVED_0 + 11,
 	/** @constant */
-		INTERROGATIVE_MARK_2P = REDUCTION_RESERVED_0 + 13,
+		INTERROGATIVE_MARK_2P = REDUCTION_RESERVED_0 + 12,
 	/** @constant */
-		INTERROGATIVE_MARK_2P_2 = REDUCTION_RESERVED_0 + 14,
+		INTERROGATIVE_MARK_2P_2 = REDUCTION_RESERVED_0 + 13,
 	/** @constant */
-		INTERROGATIVE_MARK_3 = REDUCTION_RESERVED_0 + 15,
+		INTERROGATIVE_MARK_3 = REDUCTION_RESERVED_0 + 14,
 	/** @constant */
-		INTERROGATIVE_MARK_3_2 = REDUCTION_RESERVED_0 + 16,
+		INTERROGATIVE_MARK_3_2 = REDUCTION_RESERVED_0 + 15,
 	/** @constant */
-		INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE = REDUCTION_RESERVED_0 + 17,
+		INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE = REDUCTION_RESERVED_0 + 16,
 	/** @constant */
-		SUBSTANTIVES = REDUCTION_RESERVED_0 + 18,
+		SUBSTANTIVES = REDUCTION_RESERVED_0 + 17,
 	/** @constant */
-		PLANTS_AND_CRAFTS = REDUCTION_RESERVED_0 + 19,
+		PLANTS_AND_CRAFTS = REDUCTION_RESERVED_0 + 18,
 	/** @constant */
-		PLANTS_AND_CRAFTS_RESERVED_0 = REDUCTION_RESERVED_0 + 20;
+		PLANTS_AND_CRAFTS_RESERVED_0 = REDUCTION_RESERVED_0 + 19;
 
 	var adjectives = {
 		0: [
 			//ajetivi de prima klase
-			[REDUCTION_RESERVED_0, '[oaie]', 'o>a/' + REDUCTION_RESERVED_1 + '|o', '0>a/' + REDUCTION_RESERVED_1 + '|[^aieo]'],
+			//[REDUCTION_RESERVED_0, '[oaie]', 'o>a/' + REDUCTION_RESERVED_1 + '|o', '0>a/' + REDUCTION_RESERVED_1 + '|[^aieo]'],
+			[REDUCTION_RESERVED_0, '[oaie]', 'o>a|o', 'o>e|o', 'o>i|[^i]o', 'io>i|io', '0>o|[^aieo]', '0>a|[^aieo]', '0>e|[^aieo]', '0>i|[^aieo]'],
 			//ajetivi de sekonda klase
-			[REDUCTION_RESERVED_1, '[aie]', 'a>e/' + REDUCTION_RESERVED_2 + '|a'],
+			//[REDUCTION_RESERVED_1, '[aie]', 'a>e/' + REDUCTION_RESERVED_2 + '|a'],
+			[REDUCTION_RESERVED_1, '[aie]', 'a>e|a', 'a>i|a'],
 			//ajetivi de terŧa klase
 			[REDUCTION_RESERVED_2, '[ei]', 'e>i|e']
 		]
@@ -104,10 +106,12 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		]
 	};
 
+//FIXME without the initial '-'
 	var pronomenals = {
 		1: [
-			[PRONOMENAL_MARK, '0>-l[oaie]', '0>-me/' + PRONOMENAL_MARK_RESERVED_0, '0>-te/' + PRONOMENAL_MARK_RESERVED_0, '0>-ve/' + PRONOMENAL_MARK_RESERVED_0, '0>-se/' + PRONOMENAL_MARK_RESERVED_0, '0>-ge/' + PRONOMENAL_MARK_RESERVED_0, '0>-ne'],
-			[PRONOMENAL_MARK_RESERVED_0, '0>ne', '0>l[oaie]'],
+			//[PRONOMENAL_MARK, '0>-l[oaie]', '0>-me/' + PRONOMENAL_MARK_RESERVED_0, '0>-te/' + PRONOMENAL_MARK_RESERVED_0, '0>-ve/' + PRONOMENAL_MARK_RESERVED_0, '0>-se/' + PRONOMENAL_MARK_RESERVED_0, '0>-ge/' + PRONOMENAL_MARK_RESERVED_0, '0>-ne'],
+			//[PRONOMENAL_MARK_RESERVED_0, '0>ne', '0>l[oaie]'],
+			[PRONOMENAL_MARK, '0>-l[oaie]', '0>-me', '0>-mene', '0>-mel[oaie]', '0>-te', '0>-tene', '0>-tel[oaie]', '0>-ve', '0>-vene', '0>-vel[oaie]', '0>-se', '0>-sene', '0>-sel[oaie]', '0>-ge', '0>-gene', '0>-gel[oaie]', '0>-ne'],
 			[PRONOMENAL_IMPERATIVE_MARK, '0>-me|[^a]', '0>-ne|[^a]', '0>-te|[^a]', '0>-ve|[^a]', '0>-l[oaie]|[^a]', '0>-ge|[^a]', 'a>e-me|a', 'a>e-ne|a', 'a>e-te|a', 'a>e-ve|a', 'a>e-l[oaie]|a', 'a>e-ge|a']
 		]
 	};
@@ -131,7 +135,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	var substantives = {
 		1: [
-			[SUBSTANTIVES, '0>i|[^aieo]', 'n>i|[^i]n', 'l>i|[^i]l', 'o>i|o', 'a>e|a']
+			[SUBSTANTIVES, '0>o|[^aieo]', '0>i|[^aieo]', 'n>i|[^i]n', 'l>i|[^i]l', 'o>i|[^i]o', 'io>i|io', 'a>e|a']
 		]
 	};
 
