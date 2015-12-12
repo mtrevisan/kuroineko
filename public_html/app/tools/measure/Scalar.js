@@ -1,6 +1,9 @@
 /**
  * @class Scalar
  *
+ * @see {@link https://github.com/achadee/measureJS/blob/master/measure.js}
+ * @see {@link https://github.com/jfelsinger/measurement/blob/master/src/scalar.js}
+ *
  * @author Mauro Trevisan
  */
 define(['tools/math/Fraction'], function(Fraction){
