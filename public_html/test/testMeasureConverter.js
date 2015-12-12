@@ -82,4 +82,31 @@ require(['tools/measure/MeasureConverter', 'tools/math/Fraction'], function(Meas
 			return (err.toString() == 'The from value passed should be a measure.');
 		});
 	});
+
+	QUnit.test('calculate GCUOM - found', function(){
+		var m = new MeasureConverter([
+			'pèrtega = 6 piè',
+			'paso = 5 piè',
+			'paseto = 3 piè'], 'piè');
+
+		equal(m.calculateGreatestCommonUOM('pèrtega', 'pèrtega'), 'pèrtega');
+	});
+
+	QUnit.test('calculate GCUOM - one of the given uom', function(){
+		var m = new MeasureConverter([
+			'pèrtega = 6 piè',
+			'paso = 5 piè',
+			'paseto = 3 piè'], 'piè');
+
+		equal(m.calculateGreatestCommonUOM('pèrtega', 'piè'), 'piè');
+	});
+
+	QUnit.test('calculate GCUOM - uncommensurable', function(){
+		var m = new MeasureConverter([
+			'pèrtega = 6 piè',
+			'paso = 5 piè',
+			'paseto = 3 piè'], 'piè');
+
+		equal(m.calculateGreatestCommonUOM('pèrtega', 'paso'), 'piè');
+	});
 });

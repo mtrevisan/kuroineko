@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper, Fraction){
+define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelper'], function(ObjectHelper, Fraction, ArrayHelper){
 
 	var Constructor = function(data, baseUOM){
 		if(ObjectHelper.isString(data))
@@ -320,6 +320,32 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 		return greatestUOM;
 	};
 
+	/**
+	 * Calculates the greatest common divisor between two unit of measures.
+	 *
+	 * @param {String} uom1	The first unit of measure
+	 * @param {String} uom2	The second unit of measure
+	 * @returns {String}		The greatest unit of measure the two units have in common
+	 */
+	var calculateGreatestCommonUOM = function(uom1, uom2){
+		var factor1 = calculateFactor.call(this, uom1),
+			factor2 = calculateFactor.call(this, uom2);
+
+		//uom1 is equivalent to uom2, return one of them
+		if(!factor1.compareTo(factor2))
+			return uom1;
+
+		//extract the path to the lowest unit of measure
+		var path1 = [uom1],
+			path2 = [uom2];
+		while(uom1 = this.data[uom1].parentUOM)
+			path1.push(uom1);
+		while(uom2 = this.data[uom2].parentUOM)
+			path2.push(uom2);
+		//return the greatest unit of measure they have in common
+		return ArrayHelper.intersection(path1, path2)[0];
+	};
+
 
 	var getData = function(){
 		var clonedData = [],
@@ -362,6 +388,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 
 		convert: convert,
 		expand: expand,
+		calculateGreatestCommonUOM: calculateGreatestCommonUOM,
 
 		getData: getData,
 		getBaseUOM: getBaseUOM,
