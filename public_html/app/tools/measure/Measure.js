@@ -1,5 +1,5 @@
 /**
- * @class MeasureConverter
+ * @class Measure
  *
  * @author Mauro Trevisan
  */
@@ -143,9 +143,9 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper
 	/**
 	 * Add a converter to/from this measure.
 	 *
-	 * @param {MeasureConverter} from	Measure from which the converter converts
-	 * @param {MeasureConverter} to		Measure to which the converter converts
-	 * @param {Number} factor				Factor of conversion between from and to measures
+	 * @param {Measure} from	Measure from which the converter converts
+	 * @param {Measure} to		Measure to which the converter converts
+	 * @param {Number} factor	Factor of conversion between from and to measures
 	 */
 	var addConverter = function(from, to, factor){
 		if(!(from instanceof Constructor))
