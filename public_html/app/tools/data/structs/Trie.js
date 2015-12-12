@@ -1,7 +1,7 @@
 /**
  * @class Trie
  *
- * see https://github.com/nyxtom/text-tree/blob/master/lib/trie.js
+ * @see {@link https://github.com/nyxtom/text-tree/blob/master/lib/trie.js}
  *
  * @author Mauro Trevisan
  */
