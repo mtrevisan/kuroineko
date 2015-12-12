@@ -48,10 +48,10 @@ define(['tools/math/Fraction'], function(Fraction){
 	};
 
 	/**
-	 * @param {Number/Fraction} value		The value of the scalar to be added
-	 * @param {String} uom						The unit of measure of the scalar
+	 * @param {Number/Fraction} value	The value of the scalar to be added
+	 * @param {String} uom					The unit of measure of the scalar
 	 */
-	var add = function(value, uom){
+	var add = function(){
 		var args = Array.prototype.slice.call(arguments);
 		args.push(this.measure);
 		var scal = parse(args);
@@ -66,10 +66,10 @@ define(['tools/math/Fraction'], function(Fraction){
 	};
 
 	/**
-	 * @param {Number/Fraction} value		The value of the scalar to be subtracted
-	 * @param {String} uom						The unit of measure of the scalar
+	 * @param {Number/Fraction} value	The value of the scalar to be subtracted
+	 * @param {String} uom					The unit of measure of the scalar
 	 */
-	var sub = function(value, uom){
+	var sub = function(){
 		var args = Array.prototype.slice.call(arguments);
 		args.push(this.measure);
 		var scal = parse(args);
