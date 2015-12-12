@@ -3,10 +3,10 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/math/Fraction'], function(Fraction){
+define(['tools/data/ObjectHelper', 'tools/math/Fraction'], function(ObjectHelper, Fraction){
 
 	var Constructor = function(data, baseUOM){
-		if(typeof data == 'string')
+		if(ObjectHelper.isString(data))
 			data = [data];
 
 		if(Array.isArray(data)){

@@ -22,7 +22,8 @@ require(['tools/measure/MeasureConverter'], function(MeasureConverter){
 	});
 
 	QUnit.test('expand', function(){
-		var m = new MeasureConverter(['pèrtega = 6 piè',
+		var m = new MeasureConverter([
+			'pèrtega = 6 piè',
 			'paso = 5 piè',
 			'paseto = 3 piè'], 'piè');
 
@@ -34,9 +35,7 @@ require(['tools/measure/MeasureConverter'], function(MeasureConverter){
 	});
 
 	QUnit.test('convert measure', function(){
-		var si = new MeasureConverter({
-			'm':	{}
-		}, 'm');
+		var si = new MeasureConverter({m: {}}, 'm');
 		var m = new MeasureConverter(['pèrtega = 6 piè'], 'piè');
 		m.addConverter(m, si, 1/23);
 

@@ -7,16 +7,20 @@ require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 
 		var suggestions = spellChecker.suggest('abb');
 
-		deepEqual(suggestions, {
-			candidates: {
-				'àbb': 0.9808838459953249,
-				acbd: 0.019116154004675198
+		deepEqual(suggestions, [
+			{
+				lnProbability: -4.1345870582808955,
+				values: [
+					'àbb'
+				]
 			},
-			sortedKeys: [
-				'àbb',
-				'acbd'
-			]
-		});
+			{
+				lnProbability: -8.072507370154792,
+				values: [
+					'acbd'
+				]
+			}
+		]);
 	});
 
 	QUnit.test('plain spell checker from phoneme\'s dictionary', function(){
@@ -25,14 +29,14 @@ require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 
 		var suggestions = spellChecker.suggest('avuto');
 
-		deepEqual(suggestions, {
-			candidates: {
-				'ad͡ʒuto': 1
-			},
-			sortedKeys: [
-				'ad͡ʒuto'
-			]
-		});
+		deepEqual(suggestions, [
+			{
+				lnProbability: -4.102391866339485,
+				values: [
+					'ad͡ʒuto'
+				]
+			}
+		]);
 	});
 
 	QUnit.test('plain spell checker from dictionary with uppercase', function(){
@@ -41,16 +45,20 @@ require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 
 		var suggestions = spellChecker.suggest('abb');
 
-		deepEqual(suggestions, {
-			candidates: {
-				abb: 0.9955344735270633,
-				acbd: 0.004465526472936832
+		deepEqual(suggestions, [
+			{
+				lnProbability: -2.6656147363405216,
+				values: [
+					'abb'
+				]
 			},
-			sortedKeys: [
-				'abb',
-				'acbd'
-			]
-		});
+			{
+				lnProbability: -8.072507370154792,
+				values: [
+					'acbd'
+				]
+			}
+		]);
 	});
 
 	QUnit.test('plain spell checker from corpus', function(){
@@ -59,16 +67,20 @@ require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 
 		var suggestions = spellChecker.suggest('abc');
 
-		deepEqual(suggestions, {
-			candidates: {
-				abb: 0.9741473302433789,
-				acbd: 0.025852669756621083
+		deepEqual(suggestions, [
+			{
+				lnProbability: -4.1319225308155945,
+				values: [
+					'abb'
+				]
 			},
-			sortedKeys: [
-				'abb',
-				'acbd'
-			]
-		});
+			{
+				lnProbability: -7.761071211694906,
+				values: [
+					'acbd'
+				]
+			}
+		]);
 	});
 
 	QUnit.test('plain spell checker from corpus 2', function(){
@@ -77,16 +89,21 @@ require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 
 		var suggestions = spellChecker.suggest('ac');
 
-		deepEqual(suggestions, {
-			candidates: {
-				abb: 0.6842105263157899,
-				acbd: 0.31578947368421
-			},
-			sortedKeys: [
-				'abb',
-				'acbd'
-			]
-		});
+		deepEqual(suggestions,
+			[
+				{
+					lnProbability: -8.072507370154792,
+					values: [
+						'abb'
+					]
+				},
+				{
+					lnProbability: -8.845697258388276,
+					values: [
+						'acbd'
+					]
+				}
+			]);
 	});
 
 	QUnit.test('is correct', function(){

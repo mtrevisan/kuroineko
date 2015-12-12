@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(function(){
+define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 	/** @constant */
 	var BITS_TO_GO = 8;
@@ -31,7 +31,7 @@ define(function(){
 			if(Array.isArray(hex))
 				for(i = 0; i < len; i ++)
 					this.buffer.push(hex[i]);
-			else if(typeof hex == 'string')
+			else if(ObjectHelper.isString(hex))
 				for(i = 0; i < len; i += 2)
 					this.buffer.push(parseInt(hex.substr(i, 2), 16));
 
