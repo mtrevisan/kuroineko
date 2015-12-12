@@ -54,6 +54,16 @@ require(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		equal(m.convert(1.5, 'm', 'piè').toNumber(), 1.5 * 23);
 	});
 
+	QUnit.test('convert measure with string input', function(){
+		var si = new MeasureConverter({}, 'm');
+		si.addUnit('m');
+		var m = new MeasureConverter(['pèrtega = 6 piè'], 'piè');
+		m.addConverter(m, si, 1/23);
+
+		equal(m.convert('1.5 pèrtega in m').toNumber(), 1.5 * (6 / 23));
+		equal(m.convert('1.5 m in piè').toNumber(), 1.5 * 23);
+	});
+
 	QUnit.test('convert measure with wrong inputs', function(){
 		var si = new MeasureConverter({}, 'm');
 		si.addUnit('m');
