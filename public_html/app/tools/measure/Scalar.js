@@ -19,8 +19,12 @@ define(['tools/math/Fraction'], function(Fraction){
 		var value, uom, measure;
 
 		param = (param.length == 3? param: param[0]);
-		if(param.constructor == Constructor)
+		if(param.constructor == Constructor){
+			if(!param.measure.hasUnit(param.uom))
+				throw 'Measure has not the given unit of measure.';
+
 			return param;
+		}
 
 		if('value' in param && 'uom' in param && 'measure' in param){
 			value = new Fraction(param.value);
@@ -32,6 +36,9 @@ define(['tools/math/Fraction'], function(Fraction){
 			uom = param[1];
 			measure = param[2];
 		}
+
+		if(!measure.hasUnit(uom))
+			throw 'Measure has not the given unit of measure.';
 
 		return {
 			value: value,
@@ -49,9 +56,12 @@ define(['tools/math/Fraction'], function(Fraction){
 		args.push(this.measure);
 		var scal = parse(args);
 
+		if(!this.measure.hasUnit(scal.uom))
+			throw 'Measure has not the given unit of measure.';
+
 		var commonUOM = this.measure.calculateGreatestCommonUOM(this.uom, scal.uom),
 			val = this.measure.convert(this.value, this.uom, commonUOM)
-				.add(this.measure.convert(scal.value, scal.uom, commonUOM));
+				.add(scal.measure.convert(scal.value, scal.uom, commonUOM));
 		return new Constructor(val, commonUOM, this.measure);
 	};
 
@@ -63,7 +73,7 @@ define(['tools/math/Fraction'], function(Fraction){
 		var args = Array.prototype.slice.call(arguments);
 		args.push(this.measure);
 		var scal = parse(args);
-		return this.add(new Constructor(scal.value.negate(), scal.uom, this.measure));
+		return this.add(scal.value.negate(), scal.uom);
 	};
 
 
