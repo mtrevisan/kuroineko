@@ -1,6 +1,14 @@
 /**
  * @class Scalar
  *
+ * You can pass a scalar in different formats. Either as array, object, or plain arguments.<p>
+ * <p>
+ * Array/Object form:<p>
+ * <ul>
+ *		<li>[0 => <value>, 1 => <uom>, 2 => <measure>]</li>
+ *		<li>{(value => <value>), uom => <uom>, measure => <measure>}</li>
+ * </ul>
+ *
  * @see {@link https://github.com/achadee/measureJS/blob/master/measure.js}
  * @see {@link https://github.com/jfelsinger/measurement/blob/master/src/scalar.js}
  *
@@ -8,6 +16,11 @@
  */
 define(['tools/math/Fraction'], function(Fraction){
 
+	/**
+	 * @param {Number/Fraction} value		The value of the scalar to be added
+	 * @param {String} uom						The unit of measure of the scalar
+	 * @param {MeasureConverter} measure	The measure converter that defines the group of conversion
+	 */
 	var Constructor = function(){
 		var scal = parse(arguments);
 

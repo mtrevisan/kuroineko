@@ -2,7 +2,7 @@
  * @class Fraction
  *
  * It is implemented as two integers which store the numerator and denominator as well as a variable to keep track of the sign of the rational number.<p>
- * You can pass a fraction in different formats. Either as array, as double, as string or as an integer.<p>
+ * You can pass a fraction in different formats. Either as array, as object, as double, as integer, or as string.<p>
  * Any function as well as the constructor parses its input and reduce it to the smallest term.
  * <p>
  * Array/Object form:<p>
@@ -55,7 +55,7 @@ define(function(){
 	var parse = function(param){
 		var num, den, sgn;
 
-		param = (param.length == 2? param: param[0]);
+		param = (param.length >= 2? param: param[0]);
 		switch(typeof param){
 			case 'object':
 				if(param.constructor == Constructor)
