@@ -60,4 +60,17 @@ require(['tools/measure/Scalar', 'tools/measure/MeasureConverter'], function(Sca
 			return (err.toString() == 'Measure has not the given unit of measure.');
 		});
 	});
+
+	QUnit.test('conversion to', function(){
+		var m = new MeasureConverter([
+			'pèrtega = 6 piè',
+			'paso = 5 piè',
+			'paseto = 3 piè'], 'piè');
+		var s1 = new Scalar(5, 'pèrtega', m);
+
+		var s2 = s1.to('paso');
+
+		equal(s2.value.toNumber(), 6);
+		equal(s2.uom, 'paso');
+	});
 });

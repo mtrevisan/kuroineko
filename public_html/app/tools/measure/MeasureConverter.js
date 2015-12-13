@@ -208,8 +208,6 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 		if(!(value instanceof Fraction) && !ObjectHelper.isFloat(value))
 			throw 'The value passed should be a float or a fraction.';
 		value = new Fraction(value);
-		if(value.isNegative())
-			throw 'Incompatible value: cannot be negative.';
 		if(!ObjectHelper.isString(fromUnitOfMeasure))
 			throw 'The from unit of measure passed should be a string.';
 

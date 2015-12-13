@@ -92,12 +92,18 @@ define(['tools/math/Fraction'], function(Fraction){
 		return this.add(scal.value.negate(), scal.uom);
 	};
 
+	var to = function(uom){
+		return new Constructor(this.measure.convert(this.value, this.uom, uom), uom, this.measure);
+	};
+
 
 	Constructor.prototype = {
 		constructor: Constructor,
 
 		add: add,
-		sub: sub
+		sub: sub,
+
+		to: to
 	};
 
 	return Constructor;
