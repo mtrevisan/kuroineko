@@ -1,4 +1,5 @@
 define(['HTMLHelper',
+		'tools/data/FunctionHelper',
 		'tools/ui/Validator',
 		'tools/lang/dictionary/Dictionary',
 		'tools/data/coder/arithmetic/HighOrderModelFactory',
@@ -7,7 +8,7 @@ define(['HTMLHelper',
 		'tools/data/structs/BitBuffer',
 		'uint8!tools/lang/data/Galepin.ac',
 		'libs/jsonh'],
-		function(HTMLHelper, Validator, Dictionary, HighOrderModelFactory, BasicModel, CoderDriver, BitBuffer, galepin, JSONH){
+		function(HTMLHelper, FunctionHelper, Validator, Dictionary, HighOrderModelFactory, BasicModel, CoderDriver, BitBuffer, galepin, JSONH){
 
 	var lemmataVecDOM, lemmataItaDOM, lemmataEngDOM, lemmataTableDOM;
 
@@ -22,7 +23,7 @@ define(['HTMLHelper',
 
 
 		var onKeyUpCorrectOrthography = HTMLHelper.onEventCorrectOrthography(lemmataVecDOM);
-		var onKeyUpSearchDictionary = HTMLHelper.createBufferedFunction(function(){
+		var onKeyUpSearchDictionary = FunctionHelper.createBuffered(function(){
 			if(lemmataVecDOM.value.length > 1 || lemmataItaDOM.value.length > 1 || lemmataEngDOM.value.length > 1)
 				doSearch();
 		}, 300);

@@ -1,4 +1,4 @@
-define(['HTMLHelper', 'tools/spellchecker/NorvigSpellChecker', 'libs/jsonh', 'tools/lang/data/VerbsDictionary'], function(HTMLHelper, NorvigSpellChecker, JSONH, verbsDictionary){
+define(['HTMLHelper', 'tools/data/FunctionHelper', 'tools/lang/phonology/Orthography', 'tools/spellchecker/NorvigSpellChecker', 'libs/jsonh', 'tools/lang/data/VerbsDictionary'], function(HTMLHelper, FunctionHelper, Orthography, NorvigSpellChecker, JSONH, verbsDictionary){
 
 	var textDOM,
 		spellChecker;
@@ -7,9 +7,9 @@ define(['HTMLHelper', 'tools/spellchecker/NorvigSpellChecker', 'libs/jsonh', 'to
 		textDOM = document.getElementById('text');
 
 
-		textDOM.onkeyup = function(){
+		textDOM.onkeyup = FunctionHelper.createBuffered(function(){
 			correct(textDOM.value);
-		};
+		}, 500);
 
 
 		//HTMLHelper.addAccessKeyToSubmitButtons();
@@ -37,7 +37,9 @@ define(['HTMLHelper', 'tools/spellchecker/NorvigSpellChecker', 'libs/jsonh', 'to
 	var correct = function(text){
 		if(!text)
 			return;
-		text = text.replace(/^\s+|\s+$/g, ' ');
+		text = Orthography.correctOrthography(text
+			.replace(/^\s+|\s+$/g, ' ')
+			.replace(/<span.*>(.+?)<\/span>/g, '$1'));
 
 //		GoogleAnalyticsHelper.trackEvent('Compute', 'Correct', '{text: \'' + text + '\'}');
 
@@ -46,26 +48,21 @@ define(['HTMLHelper', 'tools/spellchecker/NorvigSpellChecker', 'libs/jsonh', 'to
 		m.words = m.words.map(function(word){
 			var suggestions = spellChecker.suggest(word);
 
-			var output = [];
-			for(var k in suggestions.sortedKeys){
-				k = suggestions.sortedKeys[k];
-				if(suggestions.candidates[k] < 0.05)
-					break;
-
-				output.push(k);
-			}
+//			var output = [];
+//			for(var k in suggestions.sortedKeys){
+//				k = suggestions.sortedKeys[k];
+//				if(suggestions.candidates[k] < 0.05)
+//					break;
+//
+//				output.push(k);
+//			}
 
 //				var bla = '<span class="wiggle" oncontextmenu="return false" onmousedown="return livespell.insitu.disableclick(event, &quot;0&quot;);" onmouseup="return livespell.insitu.typoclick(event, &quot;myTextArea&quot;, this, &quot;S&quot;, &quot;0&quot;)">exampl</span>';
-			return (output.length? '<span class="wiggle">' + word + '</span>': word);
+			return (suggestions.length? '<span class="wiggle">' + word + '</span>': word);
+//return word;
 		});
 
-		var output = m.separators[0];
-		for(var k in m.words){
-			k = Number(k);
-			output += m.words[k];
-			if(m.separators[k + 1])
-				output += m.separators[k + 1];
-		}
+		var output = mergeWords(m);
 
 		HTMLHelper.setEncodedInnerHTML('text', output);
 	};
@@ -76,6 +73,16 @@ define(['HTMLHelper', 'tools/spellchecker/NorvigSpellChecker', 'libs/jsonh', 'to
 			words: text.split(/[^'"‘’aàbcdđeèéfghiìíjɉklƚmnñoòóprsʃtŧuùúvxʒ]+/i),
 			separators: text.split(/['"‘’aàbcdđeèéfghiìíjɉklƚmnñoòóprsʃtŧuùúvxʒ]+/i)
 		};
+	};
+
+	/** @private */
+	var mergeWords = function(list){
+		var output = [list.separators.length? list.separators[0]: ''];
+		list.words.forEach(function(word, idx){
+			output.push(word);
+			output.push(this[idx + 1]);
+		}, list.separators);
+		return output.join('');
 	};
 
 
