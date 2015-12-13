@@ -49,7 +49,10 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 				i, m;
 			uom = data[0];
 			for(i = 1; i < size; i ++){
-				m = data[i].match(/([^ ]+) (.+)/);
+				m = data[i].match(/^([^ ]+) ([^ ]+)$/);
+				if(!m)
+					throw 'The string passed is not in the expected format "<uom> = <parent-value> <parent-uom> = ...".';
+
 				parentValue = new Fraction(m[1]);
 				parentUOM = m[2];
 
@@ -66,8 +69,8 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 			if(!ObjectHelper.isString(parentUOM))
 				throw 'The parent unit of measure passed should be a string.';
 			parentValue = new Fraction(parentValue);
-			if(parentValue.isNegative())
-				throw 'Incompatible parent value: cannot be negative.';
+			if(parentValue.isZero())
+				throw 'Incompatible parent value: cannot be zero.';
 			if(parentValue && !parentUOM)
 				throw 'Incompatible parent measure: should be present if parent value is given.';
 			if(uom == parentUOM)
@@ -108,6 +111,8 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 			throw 'The old parent unit of measure passed should be a string.';
 		if(!ObjectHelper.isString(newParentUOM))
 			throw 'The new parent unit of measure passed should be a string.';
+		if(!this.data[oldParentUOM])
+			throw 'Cannot change unit of measure: parent unit "' + oldParentUOM + '" not found.';
 
 		Object.keys(this.data).forEach(function(uom){
 			var d = this[uom];
@@ -126,17 +131,19 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 			if(!ObjectHelper.isString(uom))
 				throw 'The value passed should be a string.';
 
-			var m = uom.match(/([^ ]+) (.+)/);
+			var m = uom.match(/^([^ ]+) = ([^ ]+) ([^ ]+)$/);
+			if(!m)
+				throw 'The string passed is not in the expected format "<uom> = <parent-value> <parent-uom>".';
 
-			uom = m[0];
-			parentValue = new Fraction(m[1]);
-			parentUOM = m[2];
+			uom = m[1];
+			parentValue = new Fraction(m[2]);
+			parentUOM = m[3];
 		}
 		if(!(parentValue instanceof Fraction) && !ObjectHelper.isFloat(parentValue))
 			throw 'The parent value passed should be a float or a fraction.';
 		parentValue = new Fraction(parentValue);
-		if(parentValue.isNegative())
-			throw 'Incompatible parent value: cannot be negative.';
+		if(parentValue.isZero())
+			throw 'Incompatible parent value: cannot be zero.';
 		if(!ObjectHelper.isString(parentUOM))
 			throw 'The parent unit of measure passed should be a string.';
 
@@ -164,8 +171,8 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 		if(!(factor instanceof Fraction) && !ObjectHelper.isFloat(factor))
 			throw 'The factor passed should be a float or a fraction.';
 		factor = new Fraction(factor);
-		if(!factor.isPositive())
-			throw 'Incompatible factor: cannot be non-positive.';
+		if(factor.isZero())
+			throw 'Incompatible factor: cannot be zero.';
 
 		this.converters = this.converters || [];
 
@@ -190,7 +197,10 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 			if(!ObjectHelper.isString(value))
 				throw 'The value passed should be a string.';
 
-			var m = value.match(/([^ ]+) (.+) in (.+)/);
+			var m = value.match(/^([^ ]+) ([^ ]+) in ([^ ]+)$/);
+			if(!m)
+				throw 'The string passed is not in the expected format "<value> <uom> in <uom>".';
+
 			value = new Fraction(m[1]);
 			fromUnitOfMeasure = m[2];
 			toUnitOfMeasure = m[3];
@@ -273,11 +283,20 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 	 * @returns {Array}						Array of tuples value and uom
 	 */
 	var expand = function(value, unitOfMeasure){
+		if(!unitOfMeasure){
+			if(!ObjectHelper.isString(value))
+				throw 'The value passed should be a string.';
+
+			var m = value.match(/^([^ ]+) ([^ ]+)$/);
+			if(!m)
+				throw 'The string passed is not in the expected format "<value> <uom>".';
+
+			value = new Fraction(m[1]);
+			unitOfMeasure = m[2];
+		}
 		if(!(value instanceof Fraction) && !ObjectHelper.isFloat(value))
 			throw 'The value passed should be a float or a fraction.';
 		value = new Fraction(value);
-		if(value.isNegative())
-			throw 'Incompatible value: cannot be negative.';
 		if(!ObjectHelper.isString(unitOfMeasure))
 			throw 'The unit of measure passed should be a string.';
 
