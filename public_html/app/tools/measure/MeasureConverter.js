@@ -21,6 +21,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 			Object.keys(this.data).forEach(function(uom){
 				this[uom].parentValue = new Fraction(this[uom].parentValue);
 			}, this.data);
+			this.addUnit(baseUOM);
 		}
 
 		this.baseUOM = baseUOM;

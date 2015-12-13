@@ -13,7 +13,6 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		return function(baseUOM, indexes){
 			var m = new MeasureConverter({}, baseUOM),
 				i;
-			m.addUnit(baseUOM);
 			for(i in indexes){
 				i = indexes[i];
 				m.addUnit(prefixes[i] + baseUOM, Math.pow(10, factors[i]), baseUOM);
