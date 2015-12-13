@@ -1,4 +1,4 @@
-define(['HTMLHelper', 'tools/data/FunctionHelper', 'tools/lang/phonology/Orthography', 'tools/spellchecker/NorvigSpellChecker', 'libs/jsonh', 'tools/lang/data/VerbsDictionary'], function(HTMLHelper, FunctionHelper, Orthography, NorvigSpellChecker, JSONH, verbsDictionary){
+define(['HTMLHelper', 'tools/data/FunctionHelper', 'tools/lang/phonology/Orthography', 'tools/spellchecker/Hunspell', 'text!tools/spellchecker/dictionaries/vec.aff', 'text!tools/spellchecker/dictionaries/vec.dic'], function(HTMLHelper, FunctionHelper, Orthography, Hunspell, aff, dic){
 
 	var textDOM,
 		spellChecker;
@@ -15,23 +15,9 @@ define(['HTMLHelper', 'tools/data/FunctionHelper', 'tools/lang/phonology/Orthogr
 		//HTMLHelper.addAccessKeyToSubmitButtons();
 
 
-		var extractVerbInfinitive = (function(){
-			var themeVowel = ['à', 'é', 'e', 'í', 'í'];
-
-			return function(v){
-				return v.prefix + v.radix + themeVowel[v.conjugation - 1] + 'r';
-			};
-		})();
-
-		var dict = [],
-			v;
-		//fill dictionary of infinitives
-		verbsDictionary = JSONH.unpack(verbsDictionary);
-		for(v in verbsDictionary)
-			dict.push(extractVerbInfinitive(verbsDictionary[v]));
-
-		spellChecker = new NorvigSpellChecker('aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx\'‘’');
-		spellChecker.readDictionary(dict);
+		spellChecker = new Hunspell(aff, dic);
+		aff = null;
+		dic = null;
 	};
 
 	var correct = function(text){
