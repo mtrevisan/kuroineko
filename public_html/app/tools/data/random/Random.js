@@ -59,9 +59,17 @@ define(['tools/data/random/MersenneTwister'], function(MersenneTwister){
 		return nud[idx][m.random() * total < nud[idx][2]? 0: 1];
 	};
 
- 
+	/**
+	 * @param list		Array of objects containing the non-uniform distribution array $nud to be cleared
+	 */
+	var resetRandomValueWithGivenDistribution = function(list){
+		list.$nud = null;
+	};
+
+
 	return {
-		getRandomValueWithGivenDistribution: getRandomValueWithGivenDistribution
+		getRandomValueWithGivenDistribution: getRandomValueWithGivenDistribution,
+		resetRandomValueWithGivenDistribution: resetRandomValueWithGivenDistribution
 	};
 
 });

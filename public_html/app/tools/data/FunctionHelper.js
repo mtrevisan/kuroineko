@@ -99,12 +99,79 @@ define(function(){
 		};
 	};
 
+	/**
+	 * Creates a delegate function, optionally with a bound scope which, when called, buffers the execution of the passed function for the
+	 * configured number of milliseconds. If called again within that period, the impending invocation will be canceled, and the timeout
+	 * period will begin again.
+	 *
+	 * @see Ext JS 4.0.7's Ext.Function.createBuffered
+	 *
+	 * @param {Function} fn		The function to invoke on a buffered timer.
+	 * @param {Number} buffer	The number of milliseconds by which to buffer the invocation of the function.
+	 * @param {Object} [scope]	The scope (<code>this</code> reference) in which the passed function is executed.
+	 *									If omitted, defaults to the scope specified by the caller.
+	 * @param {Array} [args]	Override arguments for the call. Defaults to the arguments passed by the caller.
+	 * @returns {Function}		A function which invokes the passed function after buffering for the specified time.
+	 */
+	var createBuffered = function(fn, buffer, scope, args){
+		var timerID;
+
+		return function(){
+			if(timerID){
+				clearTimeout(timerID);
+				timerID = null;
+			}
+
+			var me = this;
+			timerID = setTimeout(function(){
+				fn.apply(scope || me, args || arguments);
+			}, buffer);
+		};
+	};
+
+	/**
+    * Creates a throttled version of the passed function which, when called repeatedly and rapidly, invokes the passed function only
+	 * after a certain interval has elapsed since the previous invocation.
+    * <p>
+    * This is useful for wrapping functions which may be called repeatedly, such as a handler of a mouse move event when the processing
+	 * is expensive.
+	 *
+	 * @see Ext JS 4.0.7's Ext.Function.createThrottled
+    *
+    * @param {Function} fn			The function to execute at a regular time interval.
+    * @param {Number} interval	The interval **in milliseconds** on which the passed function is executed.
+    * @param {Object} [scope]		The scope (<code>this</code> reference) in which the passed function is executed.
+	 *										If omitted, defaults to the scope specified by the caller.
+    * @returns {Function}			A function which invokes the passed function at the specified interval.
+    */
+	var createThrottled = function(fn, interval, scope){
+		var execute = function(){
+				fn.apply(scope || this, lastArgs);
+				lastCallTime = (new Date()).getTime();
+			},
+			lastCallTime, elapsed, lastArgs, timer;
+
+		return function(){
+			elapsed = (new Date()).getTime() - lastCallTime;
+			lastArgs = arguments;
+
+			clearTimeout(timer);
+			if(!lastCallTime || elapsed >= interval)
+				execute();
+			else
+				timer = setTimeout(execute, interval - elapsed);
+		};
+	};
+
 
 	return {
 		memoize: memoize,
 		compose: compose,
 		curry: curry,
-		choice: choice
+		choice: choice,
+
+		createBuffered: createBuffered,
+		createThrottled: createThrottled
 	};
 
 });

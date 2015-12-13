@@ -119,7 +119,7 @@ define(['tools/data/random/Random'], function(Random){
 		if(!memory[prev])
 			memory[prev] = {};
 		memory[prev][next] = (memory[prev][next]? memory[prev][next] + 1: count || 1);
-		delete memory[prev].nud;
+		Random.resetRandomValueWithGivenDistribution(memory[prev]);
 	};
 
 	Constructor.tokenize = function(sentence){
@@ -235,7 +235,7 @@ define(['tools/data/random/Random'], function(Random){
 		};
 	})();
 
- 
+
 	Constructor.prototype = {
 		constructor: Constructor,
 

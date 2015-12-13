@@ -3,7 +3,7 @@
  *
  * Based on alertify.js 0.3.11
  *
- * @see <a href="http://fabien-d.github.io/alertify.js/">The Alertify site</a>
+ * @see {@link http://fabien-d.github.io/alertify.js}
  *
  * @author Mauro Trevisan
  */

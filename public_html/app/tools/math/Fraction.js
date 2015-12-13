@@ -2,7 +2,7 @@
  * @class Fraction
  *
  * It is implemented as two integers which store the numerator and denominator as well as a variable to keep track of the sign of the rational number.<p>
- * You can pass a fraction in different formats. Either as array, as double, as string or as an integer.<p>
+ * You can pass a fraction in different formats. Either as array, as object, as double, as integer, or as string.<p>
  * Any function as well as the constructor parses its input and reduce it to the smallest term.
  * <p>
  * Array/Object form:<p>
@@ -55,7 +55,7 @@ define(function(){
 	var parse = function(param){
 		var num, den, sgn;
 
-		param = (param.length == 2? param: param[0]);
+		param = (param.length >= 2? param: param[0]);
 		switch(typeof param){
 			case 'object':
 				if(param.constructor == Constructor)
@@ -170,10 +170,16 @@ define(function(){
 		return frac;
 	};
 
-	/** Euclidean algorithm form Greatest Common Divisor (gcd(a / b, c / d) = gcd(a, c) / lcm(b, d)) */
+	/** Calculates the Greatest Common Divisor (gcd(a / b, c / d) = gcd(a, c) / lcm(b, d)) */
 	var gcd = function(){
 		var frac = parse(arguments);
 		return new Constructor(this.sgn * frac.sgn * _gcd(this.num, frac.num), _lcm(this.den, frac.den));
+	};
+
+	/** Calculates the least common multiple (lcm(a / b, c / d) = lcm(a, c) / gcd(b, d)) */
+	var lcm = function(){
+		var frac = parse(arguments);
+		return new Constructor(this.sgn * frac.sgn * _lcm(this.num, frac.num), _gcd(this.den, frac.den));
 	};
 
 	/**
@@ -213,8 +219,8 @@ define(function(){
 	};
 
 	/** Creates a copy of the actual Fraction object. */
-	var clone = function(frac){
-		return new Constructor(frac.sgn * frac.num, frac.den);
+	var clone = function(){
+		return new Constructor(this.sgn * this.num, this.den);
 	};
 
 	var add = function(){
@@ -237,8 +243,7 @@ define(function(){
 
 	var sub = function(){
 		var frac = parse(arguments);
-		frac.sgn *= -1;
-		return this.add(frac);
+		return this.add(new Constructor(-frac.sgn * frac.num, frac.den));
 	};
 
 	var mul = function(){
@@ -253,8 +258,7 @@ define(function(){
 
 	var div = function(){
 		var frac = parse(arguments);
-		frac.num = frac.den + (frac.den = frac.num) - frac.num;
-		return this.mul(frac);
+		return this.mul(new Constructor(frac.sgn * frac.den, frac.num));
 	};
 
 	/**
@@ -329,13 +333,17 @@ define(function(){
 		return (this.sgn == 1);
 	};
 
+	var isNegative = function(){
+		return (this.sgn == -1);
+	};
+
 	var isInteger = function(){
 		return (this.den == 1);
 	};
 
 	var isDivisibleBy = function(){
 		var frac = parse(arguments);
-		return (!!(this.den * frac.num) && !((this.num * frac.den) % (this.den * frac.num)));
+		return !(!(this.den * frac.num) || (this.num * frac.den) % (this.den * frac.num));
 	};
 
 	var abs = function(){
@@ -344,7 +352,7 @@ define(function(){
 
 	var compareTo = function(){
 		var frac = parse(arguments);
-		return this.sub(frac).sgn;
+		return this.clone().sub(frac).sgn;
 	};
 
 	var equals = function(){
@@ -426,21 +434,34 @@ define(function(){
 		while(d % 5 == 0)
 			d /= 5;
 
-		for(var t = 1; t < d; t ++)
+		if(d > 1){
+			var rem = 10 % d,
+				t;
 			//solve 10^t == 1 (mod d) for d != 0 (mod 2, 5)
 			//http://mathworld.wolfram.com/FullReptendPrime.html
-			if(modularPow(10, t, d) == 1)
-				return t;
+			//for the cap on t we could make use of Fermat's little theorem: 10^(d-1) = 1 (mod d), where d is a prime number
+			for(t = 1; rem > 1 && t < d; t ++)
+				rem = (rem * 10) % d;
+			return t;
+		}
 		return 0;
 	};
 
 	/** @private */
 	var cycleStart = function(d, len){
-		if(len > 0)
-			for(var s = 0; s < MAX_EXPONENT; s ++)
+		if(len > 0){
+			var rem1 = 1,
+				rem2 = modularPow(10, len, d),
+				s;
+			for(s = 0; s < MAX_EXPONENT; s ++){
 				//solve 10^s == 10^(s + t) (mod d)
-				if(modularPow(10, s, d) == modularPow(10, s + len, d))
+				if(rem1 == rem2)
 					return s;
+
+				rem1 = (rem1 * 10) % d;
+				rem2 = (rem2 * 10) % d;
+			}
+		}
 		return 0;
 	};
 
@@ -471,6 +492,7 @@ define(function(){
 		constructor: Constructor,
 
 		gcd: gcd,
+		lcm: lcm,
 		clone: clone,
 		add: add,
 		sub: sub,
@@ -486,6 +508,7 @@ define(function(){
 		isInfinite: isInfinite,
 		isZero: isZero,
 		isPositive: isPositive,
+		isNegative: isNegative,
 		isInteger: isInteger,
 		isDivisibleBy: isDivisibleBy,
 		abs: abs,

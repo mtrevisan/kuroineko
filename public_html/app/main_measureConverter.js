@@ -166,7 +166,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/measure/data/MeasureVeneto'],
 
 		measureOutputDOM.hidden = (m == null);
 		if(m){
-			GoogleAnalyticsHelper.trackEvent('Compute', 'ConvertMeasure', '{value: ' + value + ', currentUOM: ' + fromUOM + ', targetUOM: ' + toUOM + ', district: \'' + district + '\'}');
+			GoogleAnalyticsHelper.trackEvent('Compute', 'ConvertMeasure', '{value: ' + value.toString() + ', currentUOM: ' + fromUOM + ', targetUOM: ' + toUOM + ', district: \'' + district + '\'}');
 
 			var result = m.convert(value, fromUOM, toUOM).toNumber(),
 				expanded = m.expand(result, toUOM),
@@ -174,7 +174,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/measure/data/MeasureVeneto'],
 				size = expanded.length,
 				k, uom;
 			for(k = 0; k < size; k ++){
-				value = expanded[k].value;
+				value = expanded[k].value.toNumber();
 				if(k == size - 1)
 					value = Number(value.toFixed(1));
 				uom = expanded[k].uom;

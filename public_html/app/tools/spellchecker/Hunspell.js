@@ -128,15 +128,15 @@ define(['tools/spellchecker/HunspellDictionary', 'tools/data/MathHelper', 'tools
 		return results;
 	};
 
-	/** @private */
-	var checkReplacementTable = function(word){
+	/** @private * /
+	var checkMapTable = function(word){
 		var indexes = [],
 			found = [],
 			re, m;
-		this.dictionary.replacementTable.forEach(function(entry){
-			re = new RegExp(entry[0], 'g');
+		this.dictionary.mapTable.forEach(function(entry){
+			re = new RegExp('[' + entry + ']', 'g');
 			while(m = re.exec(word))
-				indexes.push([m.index, entry]);
+				indexes.push({len: m.index, entry: entry});
 		});
 		if(indexes.length){
 			var combo = MathHelper.combineAll(indexes.length),
@@ -145,7 +145,36 @@ define(['tools/spellchecker/HunspellDictionary', 'tools/data/MathHelper', 'tools
 				correctedWord = word;
 				singleton.forEach(function(substitution){
 					substitution = indexes[substitution];
-					correctedWord = correctedWord.replace(new RegExp('^(.{' + substitution[0] + '})' + substitution[1][0]), '$1' + substitution[1][1]);
+					correctedWord = correctedWord.replace(new RegExp('^(.{' + substitution.len + '})' + substitution.entry[0]),
+						'$1' + substitution.entry[1]);
+				});
+				if(this.check(correctedWord))
+					found.push(correctedWord);
+			}, this);
+		}
+
+		return found;
+	};/**/
+
+	/** @private */
+	var checkReplacementTable = function(word){
+		var indexes = [],
+			found = [],
+			re, m;
+		this.dictionary.replacementTable.forEach(function(entry){
+			re = new RegExp(entry[0], 'g');
+			while(m = re.exec(word))
+				indexes.push({len: m.index, entry: entry});
+		});
+		if(indexes.length){
+			var combo = MathHelper.combineAll(indexes.length),
+				correctedWord;
+			combo.forEach(function(singleton){
+				correctedWord = word;
+				singleton.forEach(function(substitution){
+					substitution = indexes[substitution];
+					correctedWord = correctedWord.replace(new RegExp('^(.{' + substitution.len + '})' + substitution.entry[0]),
+						'$1' + substitution.entry[1]);
 				});
 				if(this.check(correctedWord))
 					found.push(correctedWord);

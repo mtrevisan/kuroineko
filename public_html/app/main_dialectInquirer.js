@@ -46,6 +46,7 @@ define(['tools/data/mining/DecisionTree', 'HTMLHelper', 'tools/ui/Validator', 't
 			[1,1,0,0, ,0,1, , , , , , ,0,1, , , , , , , , , , , , , , , ,0, , , ,1, ,1,1, i18nResources.variant.veronexe],
 			[ , , , , , , , , , , , , ,0, , , ,0,0,0,0,1,0, , , , , , , ,0, , , , , , , , i18nResources.variant['alto veronexe']],
 			[ , , , , , , , , , , , , ,0, , , ,0,0,0,1,0,0, , , , , , , ,0, , , , , , , , i18nResources.variant['baso veronexe']]
+			//{"timestamp":"2015-12-09T15:10:01.086Z","instance":[null,null,null,0,null,1],"nodeClass":"liventino","newClass":false,"supervisorName":"fortunato","supervisorAge":"59","supervisorPlace":"concordia sagittaria","ip":"193.43.176.11","city":"Trieste","country":"Italy","latitude":45.6433,"longitude":13.7903}
 		];
 
 		btnInquireDOM.onclick = doInquire;

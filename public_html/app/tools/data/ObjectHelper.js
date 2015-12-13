@@ -84,6 +84,10 @@ define(function(){
 		return (type(value) == TYPE_REGEXP);
 	};
 
+	var isFloat = function(value){
+		return (Number(value) == value);
+	};
+
 	var path = function(container, selector){
 		var data = container,
 			parts = Array.prototype.concat(selector.split('.')),
@@ -216,6 +220,7 @@ define(function(){
 		isDefined: isDefined,
 		isString: isString,
 		isRegExp: isRegExp,
+		isFloat: isFloat,
 
 		path: path,
 		pick: pick,

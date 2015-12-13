@@ -120,6 +120,11 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme'], function(St
 			word = word.replace(/([^aeiouàèéíòóuú])er/g, '$1ar');
 		//else if(mainDialect != 'none')
 		//	word = word.replace(/([^aeiouàèéíòóuú])ar/g, '$1er');
+		//FIXME
+		/*var syll = Syllabator.syllabate(stressedSuffix, null, true);
+		stressedSuffixLoweredVowel = stressedSuffix.replace(/([^aàeèéíoòóú])er/g, function(group, pre, idx){
+			return (syll.phones[syll.getSyllabeIndex(idx)].match(/[^jw]e/)? pre + 'ar': group);
+		});/**/
 
 		return word;
 	};

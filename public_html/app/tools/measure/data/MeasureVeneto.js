@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/measure/MeasureConverter'], function(MeasureConverter){
+define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI'], function(MeasureConverter, MeasureSI){
 
 	var getMeasurePlaces = function(){
 		return {
@@ -60,7 +60,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 			//dopo de 'l 1696 censuario 0.340333 m
 			'Verona':	0.342914758
 		};
-		m.addConverter(m, siMeasureContainer.length, o[place]);
+		m.addConverter(m, MeasureSI.length, o[place]);
 
 		return m;
 	};
@@ -97,7 +97,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 			'Venèŧia':	0.34773485,
 			'Verona':	0.34291476
 		};
-		m.addConverter(m, siMeasureContainer.length, o[place]);
+		m.addConverter(m, MeasureSI.length, o[place]);
 
 		return m;
 	};
@@ -131,7 +131,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 			'Verona':	0.6489908,
 			'Viŧenŧa':	0.6903053
 		};
-		m.addConverter(m, siMeasureContainer.length, o[place]);
+		m.addConverter(m, MeasureSI.length, o[place]);
 
 		return m;
 	};
@@ -168,7 +168,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 			'Verona':	0.6424493,
 			'Venèŧia':	0.6387213
 		};
-		m.addConverter(m, siMeasureContainer.length, o[place]);
+		m.addConverter(m, MeasureSI.length, o[place]);
 
 		return m;
 	};
@@ -198,7 +198,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 			'Verona':	0.6489908,
 			'Venèŧia':	0.6833956
 		};
-		m.addConverter(m, siMeasureContainer.length, o[place]);
+		m.addConverter(m, MeasureSI.length, o[place]);
 
 		return m;
 	};
@@ -227,7 +227,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 			//braŧo longo
 			'Verona':	0.6489908
 		};
-		m.addConverter(m, siMeasureContainer.length, o[place]);
+		m.addConverter(m, MeasureSI.length, o[place]);
 
 		return m;
 	};
@@ -271,8 +271,8 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		else if(place.match(/Verona/))
 			m.addUnit('kanpo = 24 vaneŧa = 30 tòla');
 
-		m.addConverter(m, siMeasureContainer.area,
-			Math.pow(getMeasureLengthEarth(place).convert(1, a, siMeasureContainer.length.getBaseUOM()), 2));
+		m.addConverter(m, MeasureSI.area,
+			Math.pow(getMeasureLengthEarth(place).convert(1, a, MeasureSI.length.getBaseUOM()), 2));
 
 		return m;
 	};
@@ -335,7 +335,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 			'Vitòrio':			97.7,
 			'Viŧenŧa':			108.1727
 		};
-		m.addConverter(m, siMeasureContainer.volume, o[place]);
+		m.addConverter(m, MeasureSI.volume, o[place]);
 
 		return m;
 	};
@@ -415,7 +415,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 			'Vitòrio':			85.8,
 			'Viŧenŧa':			113.8900
 		};
-		m.addConverter(m, siMeasureContainer.volume, o[place]);
+		m.addConverter(m, MeasureSI.volume, o[place]);
 
 		return m;
 	};
@@ -440,16 +440,17 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		var o = {
 			'Mèl':		510.2271,
 			//pal dekreto del Senato de 'l 6 April 1737 el pexo fin el ga da èser 1.02 'olte kuelo de Venèŧia
-			'Pàdoa':		486.5387,
+			'Pàdoa':		301.22966 * (768. / 485.) * 1.02,
 			'Roigo':		477.2942,
 			//pal dekreto del Senato de 'l 6 April 1737 el pexo fin el ga da èser 1 e 1/12 'olte kuelo de Venèŧia
-			'Trevixo':	516.7486,
+			'Trevixo':	301.22966 * (768. / 485.) * (13. / 12.),
 			//doparàa kome pexo par presioxi, sora de tuto par òro, arđento, e xème preŧioxe
-			'Venèŧia':	476.99872,
+			//(pal Sovrano Decreto de 'l 1575 se ga ke 768 libre gròse le fà 485 libre fine)
+			'Venèŧia':	301.22966 * (768. / 485.),
 			//na volta e mèđa la só libra fina
-			'Verona':	499.7636
+			'Verona':	333.1757 * 1.5
 		};
-		m.addConverter(m, siMeasureContainer.weight, o[place]);
+		m.addConverter(m, MeasureSI.weight, o[place]);
 
 		return m;
 	};
@@ -475,12 +476,12 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 			'Badía Polèxine': 339.0974,
 			'Roigo':		301.4160,
 			//pal dekreto del Senato de 'l 6 April 1737 el pexo fin el ga da èser 1.125 'olte kuelo de Venèŧia
-			'Trevixo':	338.8834,
-			//doparàa kome pexo par medexine, indove ke 12 libre fine le xe konpañe de 19 libre gròse
+			'Trevixo':	301.22966 * 1.125,
+			//doparàa kome pexo par medexine
 			'Venèŧia':	301.22966,
 			'Verona':	333.1757
 		};
-		m.addConverter(m, siMeasureContainer.weight, o[place]);
+		m.addConverter(m, MeasureSI.weight, o[place]);
 
 		return m;
 	};
@@ -490,7 +491,7 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		m.addUnit('karga = 4 kantaro');
 
 		//se dopara la libra fina de Venèŧia
-		m.addConverter(m, siMeasureContainer.weight, 301.2297);
+		m.addConverter(m, MeasureSI.weight, 301.22966);
 
 		return m;
 	};
@@ -500,35 +501,9 @@ define(['tools/measure/MeasureConverter'], function(MeasureConverter){
 		m.addUnit('karga = 4 kantaro');
 
 		//se dopara la libra gròsa de Venèŧia
-		m.addConverter(m, siMeasureContainer.weight, 476.99872);
+		m.addConverter(m, MeasureSI.weight, 476.99872);
 
 		return m;
-	};
-
-
-	/** @private */
-	var createSIMeasure = (function(){
-		var prefixes =	['Y',	'Z',	'E',	'P',	'T',	'G',	'M',	'k',	'h',	'da',	'd',	'c',	'm',	'μ',	'n',	'p',	'f',	'a',	'z',	'y'],
-			factors =	[24,	21,	18,	15,	12,	9,		6,		3,		2,		1,		-1,	-2,	-3,	-6,	-9,	-12,	-15,	-18,	-21,	-24];
-
-		return function(baseUOM, indexes){
-			var m = new MeasureConverter({}, baseUOM),
-				i;
-			m.addUnit(baseUOM);
-			for(i in indexes){
-				i = indexes[i];
-				m.addUnit(prefixes[i] + baseUOM, Math.pow(10, factors[i]), baseUOM);
-			}
-			return m;
-		};
-	})();
-
-	/** @private */
-	var siMeasureContainer = {
-		length: createSIMeasure('m', [7, 11, 12]),
-		area: createSIMeasure('m\u00B2', [7]),
-		volume: createSIMeasure('l', [8, 10, 11, 12]),
-		weight: createSIMeasure('g', [7, 8, 12])
 	};
 
 

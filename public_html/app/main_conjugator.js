@@ -1,4 +1,4 @@
-define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/lang/morphology/Conjugator', 'tools/lang/phonology/Syllabator', 'tools/lang/phonology/Orthography'/*, 'tools/data/proxy/Storage', 'tools/lang/data/VerbsDictionary', 'libs/jsonh', 'tools/spellchecker/NorvigSpellChecker'*/], function(HTMLHelper, Validator, ObjectHelper, Conjugator, Syllabator, Orthography, Storage, verbsDictionary, JSONH, NorvigSpellChecker){
+define(['HTMLHelper', 'tools/data/FunctionHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/lang/morphology/Conjugator', 'tools/lang/phonology/Syllabator', 'tools/lang/phonology/Orthography'/*, 'tools/data/proxy/Storage', 'tools/lang/data/VerbsDictionary', 'libs/jsonh', 'tools/spellchecker/NorvigSpellChecker'*/], function(HTMLHelper, FunctionHelper, Validator, ObjectHelper, Conjugator, Syllabator, Orthography, Storage, verbsDictionary, JSONH, NorvigSpellChecker){
 
 	var infinitiveDOM, dialectDOM, verbsDictionaryDOM, spellCheckerSuggestionsDOM, btnCalculateDOM,
 		i18nResources, historyStore;
@@ -39,7 +39,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 				var spellChecker = new NorvigSpellChecker('aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx');
 				spellChecker.readDictionary(dict);
 
-				var onKeyUpSpellChecker = HTMLHelper.createBufferedFunction(function(){
+				var onKeyUpSpellChecker = FunctionHelper.createBuffered(function(){
 						var output = [];
 						if(infinitiveDOM.value.length > 2){
 							var suggestions = spellChecker.suggest(infinitiveDOM.value);
@@ -65,7 +65,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/data/ObjectHelper', 'tools/la
 			}
 
 			if(verbsDictionaryDOM)
-				var onKeyUpFilterVerbsDictionary = HTMLHelper.createBufferedFunction(function(){
+				var onKeyUpFilterVerbsDictionary = FunctionHelper.createBuffered(function(){
 						var output = '';
 						if(infinitiveDOM.value.length > 2){
 							//filter verbs:

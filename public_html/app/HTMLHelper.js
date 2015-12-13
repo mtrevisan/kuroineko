@@ -281,10 +281,11 @@ define(['tools/data/ObjectHelper', 'tools/lang/phonology/Orthography'], function
 		}
 	};
 
-	var setEncodedInnerHTML = function(id, text){
+	var setEncodedInnerHTML = function(id, text, doNotEncode){
 		var el = document.getElementById(id);
 		if(el){
-			text = encodeHTML(text.replace(/\n/g, '<br>') || '');
+			if(!doNotEncode)
+				text = encodeHTML(text.replace(/\n/g, '<br>') || '');
 			if(el.value)
 				el.value = text;
 			else
@@ -303,23 +304,6 @@ define(['tools/data/ObjectHelper', 'tools/lang/phonology/Orthography'], function
 		for(i = 0; i < size; i ++)
 			word.push(str[i] < ' ' || str[i] > '~'? '&#' + str.charCodeAt(i) + ';': str[i]);
 		return word.join('');
-	};
-
-	/** Sencha Touch 2.4.0's Ext.Function.createBuffered */
-	var createBufferedFunction = function(fn, buffer, scope, args){
-		var timerID;
-
-		return function(){
-			var callArgs = args || Array.prototype.slice.call(arguments, 0),
-				me = scope || this;
-
-			if(timerID)
-				clearTimeout(timerID);
-
-			timerID = setTimeout(function(){
-				fn.apply(me, callArgs);
-			}, buffer);
-		};
 	};
 
 
@@ -341,8 +325,7 @@ define(['tools/data/ObjectHelper', 'tools/lang/phonology/Orthography'], function
 
 		addAccessKeyToSubmitButtons: addAccessKeyToSubmitButtons,
 		onEventCorrectOrthography: onEventCorrectOrthography,
-		setEncodedInnerHTML: setEncodedInnerHTML,
-		createBufferedFunction: createBufferedFunction
+		setEncodedInnerHTML: setEncodedInnerHTML
 	};
 
 });
