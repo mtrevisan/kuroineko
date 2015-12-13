@@ -18,8 +18,8 @@
 		};
 
 
-		require(['tools/lang/recognition/NGrams', 'tools/data/ArrayHelper', 'text!tools/spellchecker/text.txt'], function(NGrams, ArrayHelper, text){
-			var words = ArrayHelper.unique(NGrams.tokenize(text).sort());
+		require(['tools/lang/recognition/NGrams', 'tools/data/ArrayHelper', 'text!tools/spellchecker/corpus.txt'], function(NGrams, ArrayHelper, corpus){
+			var words = ArrayHelper.unique(NGrams.tokenize(corpus).sort());
 			words = words.filter(function(word){ return !word.match(/^-|-$|^\d+$/); });
 
 			console.log(JSON.stringify(words));

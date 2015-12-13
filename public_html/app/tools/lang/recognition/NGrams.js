@@ -110,6 +110,7 @@ define(function(){
 	var cleanup = function(sentence){
 		return sentence
 			.replace(MIDDLE_PUNCTUATION, ' ')
+			.replace(SENTENCE_DELIMITER, ' ')
 			.replace(/\s+/, ' ')
 			.trim()
 			.toLowerCase();

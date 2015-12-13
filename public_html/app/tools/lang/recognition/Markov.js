@@ -135,6 +135,7 @@ define(['tools/data/random/Random'], function(Random){
 				return sent
 					.replace(INITIAL_PUNCTUATION, '')
 					.replace(MIDDLE_PUNCTUATION, ' ')
+					.replace(SENTENCE_DELIMITER, ' ')
 					.replace(/\s+/, ' ')
 					.trim()
 					.toLowerCase();
