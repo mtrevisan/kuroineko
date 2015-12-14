@@ -1,4 +1,4 @@
-# kuroineko
+# kuroineko library
 =========
 This is a bunch of utilities I put together. Unfortunately I miss some, if not all, references to the original projects. I beg pardon, and whenever I found out the original ones I'll update my references.
 
