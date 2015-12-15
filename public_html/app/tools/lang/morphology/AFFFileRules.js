@@ -106,7 +106,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		]
 	};
 
-//FIXME without the initial '-'
 	var pronomenals = {
 		1: [
 			//[PRONOMENAL_MARK, '0>-l[oaie]', '0>-me/' + PRONOMENAL_MARK_RESERVED_0, '0>-te/' + PRONOMENAL_MARK_RESERVED_0, '0>-ve/' + PRONOMENAL_MARK_RESERVED_0, '0>-se/' + PRONOMENAL_MARK_RESERVED_0, '0>-ge/' + PRONOMENAL_MARK_RESERVED_0, '0>-ne'],
@@ -975,55 +974,41 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			var tmp = (verb.irregularity.eser? 'r': 'v');
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + tmp + 'o', /o$/, '[oae]', '/' + INTERROGATIVE_MARK_1S);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + tmp + 'omi', /omi$/, '[oae]mi', '/' + INTERROGATIVE_MARK_1S_2);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + tmp + 'i', null, null, '/' + INTERROGATIVE_MARK_2S);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + tmp + 'itu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + tmp + 'a', /a$/, '[ai]', '/' + INTERROGATIVE_MARK_2P);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + tmp + 'au', null, null, '/' + INTERROGATIVE_MARK_2P_2);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + tmp + 'a', null, null, '/' + INTERROGATIVE_MARK_3);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + tmp + 'elo', null, null, '/' + INTERROGATIVE_MARK_3_2);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + tmp + 'imo', null, null, '/' + INTERROGATIVE_MARK_1P);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + tmp + 'imoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
-			if(!verb.irregularity.eser){
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'o', /o$/, '[oae]', '/' + INTERROGATIVE_MARK_1S);
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'omi', /omi$/, '[oae]mi', '/' + INTERROGATIVE_MARK_1S_2);
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'i', null, null, '/' + INTERROGATIVE_MARK_2S);
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'itu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'a', /a$/, '[ai]', '/' + INTERROGATIVE_MARK_2P);
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'au', null, null, '/' + INTERROGATIVE_MARK_2P_2);
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'a', null, null, '/' + INTERROGATIVE_MARK_3);
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'elo', null, null, '/' + INTERROGATIVE_MARK_3_2);
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'imo', null, null, '/' + INTERROGATIVE_MARK_1P);
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'imoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
-			}
+			generateT2IndicativeImperfect(paradigm, verb, themes.themeT2, theme);
 
-			if(runAllForms && themes.themeT2.match(/à$/)){
-				var themeT2 = themes.themeT2.replace(/à$/, 'é');
-				insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'o', /o$/, '[oae]', '/' + INTERROGATIVE_MARK_1S);
-				insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'omi', /omi$/, '[oae]mi', '/' + INTERROGATIVE_MARK_1S_2);
-				insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'i', null, null, '/' + INTERROGATIVE_MARK_2S);
-				insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'itu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
-				insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'a', /a$/, '[ai]', '/' + INTERROGATIVE_MARK_2P);
-				insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'au', null, null, '/' + INTERROGATIVE_MARK_2P_2);
-				insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'a', null, null, '/' + INTERROGATIVE_MARK_3);
-				insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'elo', null, null, '/' + INTERROGATIVE_MARK_3_2);
-				insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'imo', null, null, '/' + INTERROGATIVE_MARK_1P);
-				insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'imoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
-				if(!verb.irregularity.eser){
-					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'o', /o$/, '[oae]', '/' + INTERROGATIVE_MARK_1S);
-					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'omi', /omi$/, '[oae]mi', '/' + INTERROGATIVE_MARK_1S_2);
-					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'i', null, null, '/' + INTERROGATIVE_MARK_2S);
-					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'itu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
-					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'a', /a$/, '[ai]', '/' + INTERROGATIVE_MARK_2P);
-					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'au', null, null, '/' + INTERROGATIVE_MARK_2P_2);
-					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'a', null, null, '/' + INTERROGATIVE_MARK_3);
-					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'elo', null, null, '/' + INTERROGATIVE_MARK_3_2);
-					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'imo', null, null, '/' + INTERROGATIVE_MARK_1P);
-					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'imoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
-				}
+			if(runAllForms){
+				if(themes.themeT2.match(/à$/))
+					generateT2IndicativeImperfect(paradigm, verb, themes.themeT2.replace(/à$/, 'é'), theme);
+				if(themes.themeT2.match(/í$/))
+					generateT2IndicativeImperfect(paradigm, verb, themes.themeT2.replace(/í$/, 'é'), theme);
 			}
+		}
+	};
+
+	/** @private */
+	var generateT2IndicativeImperfect = function(paradigm, verb, themeT2, theme){
+		var tmp = (verb.irregularity.eser? 'r': 'v');
+		insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'o', /o$/, '[oae]', '/' + INTERROGATIVE_MARK_1S);
+		insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'omi', /omi$/, '[oae]mi', '/' + INTERROGATIVE_MARK_1S_2);
+		insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'i', null, null, '/' + INTERROGATIVE_MARK_2S);
+		insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'itu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
+		insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'a', /a$/, '[ai]', '/' + INTERROGATIVE_MARK_2P);
+		insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'au', null, null, '/' + INTERROGATIVE_MARK_2P_2);
+		insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'a', null, null, '/' + INTERROGATIVE_MARK_3);
+		insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'elo', null, null, '/' + INTERROGATIVE_MARK_3_2);
+		insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'imo', null, null, '/' + INTERROGATIVE_MARK_1P);
+		insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'imoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
+		if(!verb.irregularity.eser){
+			insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'o', /o$/, '[oae]', '/' + INTERROGATIVE_MARK_1S);
+			insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'omi', /omi$/, '[oae]mi', '/' + INTERROGATIVE_MARK_1S_2);
+			insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'i', null, null, '/' + INTERROGATIVE_MARK_2S);
+			insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'itu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
+			insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'a', /a$/, '[ai]', '/' + INTERROGATIVE_MARK_2P);
+			insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'au', null, null, '/' + INTERROGATIVE_MARK_2P_2);
+			insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'a', null, null, '/' + INTERROGATIVE_MARK_3);
+			insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'elo', null, null, '/' + INTERROGATIVE_MARK_3_2);
+			insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'imo', null, null, '/' + INTERROGATIVE_MARK_1P);
+			insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'imoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
 		}
 	};
 
@@ -1039,17 +1024,22 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'se', null, null, '/' + FINAL_CONSONANT_VOICING_MARK);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'si');
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'simo');
+			generateT2SubjunctiveImperfect(paradigm, verb, themes.themeT2, theme);
 
-			if(runAllForms && themes.themeT2.match(/à$/)){
-				var themeT2 = themes.themeT2.replace(/à$/, 'é');
-				insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'se', null, null, '/' + FINAL_CONSONANT_VOICING_MARK);
-				insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'si');
-				insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'simo');
+			if(runAllForms){
+				if(themes.themeT2.match(/à$/))
+					generateT2SubjunctiveImperfect(paradigm, verb, themes.themeT2.replace(/à$/, 'é'), theme);
+				if(themes.themeT2.match(/í$/))
+					generateT2SubjunctiveImperfect(paradigm, verb, themes.themeT2.replace(/í$/, 'é'), theme);
 			}
 		}
+	};
+
+	/** @private */
+	var generateT2SubjunctiveImperfect = function(paradigm, verb, themeT2, theme){
+		insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'se', null, null, '/' + FINAL_CONSONANT_VOICING_MARK);
+		insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'si');
+		insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'simo');
 	};
 
 	/** @private */
@@ -1064,15 +1054,19 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			//FIXME
-			//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug. par tuti i mòdi e i tenpi fora ke inté ‘l infenío, partithipio ativo,
-			//e xerundio
-			//Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug. intel partithipio pasivo ko la dexinentha in -st-, e intel xerundio
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'sto', /o$/, '[oaie]', '/' + FINAL_CONSONANT_VOICING_MARK);
 
-			if(runAllForms && themes.themeT2.match(/à$/)){
-				var themeT2 = themes.themeT2.replace(/à$/, 'é');
-				insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'sto', /o$/, '[oaie]', '/' + FINAL_CONSONANT_VOICING_MARK);
+			//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
+			if(runAllForms){
+				var themeT2;
+				if(themes.themeT2.match(/à$/)){
+					themeT2 = themes.themeT2.replace(/à$/, 'é');
+					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'sto', /o$/, '[oaie]', '/' + FINAL_CONSONANT_VOICING_MARK);
+				}
+				if(themes.themeT2.match(/í$/)){
+					themeT2 = themes.themeT2.replace(/í$/, 'é');
+					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'sto', /o$/, '[oaie]', '/' + FINAL_CONSONANT_VOICING_MARK);
+				}
 			}
 		}
 	};
@@ -1096,9 +1090,17 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			else if(verb.irregularity.aver)
 				insert(paradigm, theme, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'aver'.length) + 'abiàndo', null, null, '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK);
 
-			if(runAllForms && themes.themeT2.match(/à$/)){
-				var themeT2 = themes.themeT2.replace(/à$/, 'é');
-				insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK + MARKER_FLAGS);
+			//Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug.
+			if(runAllForms){
+				var themeT2;
+				if(themes.themeT2.match(/à$/)){
+					themeT2 = themes.themeT2.replace(/à$/, 'é');
+					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK + MARKER_FLAGS);
+				}
+				if(themes.themeT2.match(/í$/)){
+					themeT2 = themes.themeT2.replace(/í$/, 'é');
+					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK + MARKER_FLAGS);
+				}
 			}
 		}
 	};
@@ -1114,50 +1116,39 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'rà', null, null, '/' + INTERROGATIVE_MARK_1S + MARKER_FLAGS);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'ràmi', null, null, '/' + INTERROGATIVE_MARK_1S_2);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'rè', /è$/, '[èò]', '/' + INTERROGATIVE_MARK_1S);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'rèmi', /èmi$/, '[èò]mi', '/' + INTERROGATIVE_MARK_1S_2);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'rà', null, null, '/' + INTERROGATIVE_MARK_2S);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'ràtu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'rà', null, null, '/' + INTERROGATIVE_MARK_3);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'ràlo', null, null, '/' + INTERROGATIVE_MARK_3_2);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'ré', null, null, '/' + INTERROGATIVE_MARK_2P);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'réu', null, null, '/' + INTERROGATIVE_MARK_2P_2);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'rémo', null, null, '/' + INTERROGATIVE_MARK_1P);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'rémoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'rón', null, null, '/' + INTERROGATIVE_MARK_1P);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'rén', null, null, '/' + INTERROGATIVE_MARK_1P);
-			if(verb.conjugation == 2){
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'rí', null, null, '/' + INTERROGATIVE_MARK_2P);
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'ríu', null, null, '/' + INTERROGATIVE_MARK_2P_2);
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'rímo', null, null, '/' + INTERROGATIVE_MARK_1P);
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'rímoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
-			}
+			generateT4IndicativeFuture(paradigm, verb, themes.themeT4, theme);
 
-			if(runAllForms && themes.themeT4.match(/a$/)){
-				var themeT4 = themes.themeT4.replace(/a$/, 'e');
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rà', null, null, '/' + INTERROGATIVE_MARK_1S + MARKER_FLAGS);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ràmi', null, null, '/' + INTERROGATIVE_MARK_1S_2);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rè', /è$/, '[èò]', '/' + INTERROGATIVE_MARK_1S);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rèmi', /èmi$/, '[èò]mi', '/' + INTERROGATIVE_MARK_1S_2);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rà', null, null, '/' + INTERROGATIVE_MARK_2S);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ràtu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rà', null, null, '/' + INTERROGATIVE_MARK_3);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ràlo', null, null, '/' + INTERROGATIVE_MARK_3_2);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ré', null, null, '/' + INTERROGATIVE_MARK_2P);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'réu', null, null, '/' + INTERROGATIVE_MARK_2P_2);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rémo', null, null, '/' + INTERROGATIVE_MARK_1P);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rémoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rón', null, null, '/' + INTERROGATIVE_MARK_1P);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rén', null, null, '/' + INTERROGATIVE_MARK_1P);
-				if(verb.conjugation == 2){
-					insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rí', null, null, '/' + INTERROGATIVE_MARK_2P);
-					insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ríu', null, null, '/' + INTERROGATIVE_MARK_2P_2);
-					insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rímo', null, null, '/' + INTERROGATIVE_MARK_1P);
-					insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rímoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
-				}
+			//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
+			if(runAllForms){
+				if(themes.themeT4.match(/a$/))
+					generateT4IndicativeFuture(paradigm, verb, themes.themeT4.replace(/a$/, 'e'), theme);
+				if(themes.themeT4.match(/i$/))
+					generateT4IndicativeFuture(paradigm, verb, themes.themeT4.replace(/i$/, 'e'), theme);
 			}
+		}
+	};
+
+	/** @private */
+	var generateT4IndicativeFuture = function(paradigm, verb, themeT4, theme){
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rà', null, null, '/' + INTERROGATIVE_MARK_1S + MARKER_FLAGS);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ràmi', null, null, '/' + INTERROGATIVE_MARK_1S_2);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rè', /è$/, '[èò]', '/' + INTERROGATIVE_MARK_1S);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rèmi', /èmi$/, '[èò]mi', '/' + INTERROGATIVE_MARK_1S_2);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rà', null, null, '/' + INTERROGATIVE_MARK_2S);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ràtu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rà', null, null, '/' + INTERROGATIVE_MARK_3);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ràlo', null, null, '/' + INTERROGATIVE_MARK_3_2);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ré', null, null, '/' + INTERROGATIVE_MARK_2P);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'réu', null, null, '/' + INTERROGATIVE_MARK_2P_2);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rémo', null, null, '/' + INTERROGATIVE_MARK_1P);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rémoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rón', null, null, '/' + INTERROGATIVE_MARK_1P);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rén', null, null, '/' + INTERROGATIVE_MARK_1P);
+		if(verb.conjugation == 2){
+			insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rí', null, null, '/' + INTERROGATIVE_MARK_2P);
+			insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ríu', null, null, '/' + INTERROGATIVE_MARK_2P_2);
+			insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rímo', null, null, '/' + INTERROGATIVE_MARK_1P);
+			insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rímoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
 		}
 	};
 
@@ -1172,49 +1163,39 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'ría', null, null, '/' + INTERROGATIVE_MARK_2S);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'ríatu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'ría', /a$/, '[ae]', '/' + INTERROGATIVE_MARK_1S);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'ríami', /ami$/, '[ae]mi', '/' + INTERROGATIVE_MARK_1S_2);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'ría', /a$/, '[ae]', '/' + INTERROGATIVE_MARK_3);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'ríelo', null, null, '/' + INTERROGATIVE_MARK_3_2);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'rési', null, null, '/' + INTERROGATIVE_MARK_2P);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'résiu', null, null, '/' + INTERROGATIVE_MARK_2P_2);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'résimo', null, null, '/' + INTERROGATIVE_MARK_1P);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'résimoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'rié', /ié$/, '(is)ié', '/' + INTERROGATIVE_MARK_2P);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'riéu', /iéu$/, '(is)iéu', '/' + INTERROGATIVE_MARK_2P_2);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'rón', /on$/, '(is)(i)on', '/' + INTERROGATIVE_MARK_1P);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'rén', /en$/, '(is)en', '/' + INTERROGATIVE_MARK_1P);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'rón', /on$/, '(is)(i)onse');
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'rén', /en$/, '(is)ense');
-			//NOTE: i únegi pronòmi interogativi enklítegi ke se dopara i xe kueli de 3a pars
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'ràe', null, null, '/' + INTERROGATIVE_MARK_3);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT4 + 'ràve', null, null, '/' + INTERROGATIVE_MARK_3 + FLAG_SEPARATOR + INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE);
+			generateT4ConditionalSimple(paradigm, verb, themes.themeT4, theme);
 
-			if(runAllForms && themes.themeT4.match(/a$/)){
-				var themeT4 = themes.themeT4.replace(/a$/, 'e');
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ría', null, null, '/' + INTERROGATIVE_MARK_2S);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ríatu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ría', /a$/, '[ae]', '/' + INTERROGATIVE_MARK_1S);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ríami', /ami$/, '[ae]mi', '/' + INTERROGATIVE_MARK_1S_2);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ría', /a$/, '[ae]', '/' + INTERROGATIVE_MARK_3);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ríelo', null, null, '/' + INTERROGATIVE_MARK_3_2);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rési', null, null, '/' + INTERROGATIVE_MARK_2P);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'résiu', null, null, '/' + INTERROGATIVE_MARK_2P_2);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'résimo', null, null, '/' + INTERROGATIVE_MARK_1P);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'résimoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rié', /ié$/, '(is)ié', '/' + INTERROGATIVE_MARK_2P);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'riéu', /iéu$/, '(is)iéu', '/' + INTERROGATIVE_MARK_2P_2);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rón', /on$/, '(is)(i)on', '/' + INTERROGATIVE_MARK_1P);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rén', /en$/, '(is)en', '/' + INTERROGATIVE_MARK_1P);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rón', /on$/, '(is)(i)onse');
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rén', /en$/, '(is)ense');
-				//NOTE: i únegi pronòmi interogativi enklítegi ke se dopara i xe kueli de 3a pars
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ràe', null, null, '/' + INTERROGATIVE_MARK_3);
-				insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ràve', null, null, '/' + INTERROGATIVE_MARK_3 + FLAG_SEPARATOR + INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE);
+			//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
+			if(runAllForms){
+				if(themes.themeT4.match(/a$/))
+					generateT4ConditionalSimple(paradigm, verb, themes.themeT4.replace(/a$/, 'e'), theme);
+				if(themes.themeT4.match(/i$/))
+					generateT4ConditionalSimple(paradigm, verb, themes.themeT4.replace(/i$/, 'e'), theme);
 			}
 		}
+	};
+
+	/** @private */
+	var generateT4ConditionalSimple = function(paradigm, verb, themeT4, theme){
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ría', null, null, '/' + INTERROGATIVE_MARK_2S);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ríatu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ría', /a$/, '[ae]', '/' + INTERROGATIVE_MARK_1S);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ríami', /ami$/, '[ae]mi', '/' + INTERROGATIVE_MARK_1S_2);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ría', /a$/, '[ae]', '/' + INTERROGATIVE_MARK_3);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ríelo', null, null, '/' + INTERROGATIVE_MARK_3_2);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rési', null, null, '/' + INTERROGATIVE_MARK_2P);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'résiu', null, null, '/' + INTERROGATIVE_MARK_2P_2);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'résimo', null, null, '/' + INTERROGATIVE_MARK_1P);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'résimoni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rié', /ié$/, '(is)ié', '/' + INTERROGATIVE_MARK_2P);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'riéu', /iéu$/, '(is)iéu', '/' + INTERROGATIVE_MARK_2P_2);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rón', /on$/, '(is)(i)on', '/' + INTERROGATIVE_MARK_1P);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rén', /en$/, '(is)en', '/' + INTERROGATIVE_MARK_1P);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rón', /on$/, '(is)(i)onse');
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rén', /en$/, '(is)ense');
+		//NOTE: i únegi pronòmi interogativi enklítegi ke se dopara i xe kueli de 3a pars
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ràe', null, null, '/' + INTERROGATIVE_MARK_3);
+		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ràve', null, null, '/' + INTERROGATIVE_MARK_3 + FLAG_SEPARATOR + INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE);
 	};
 
 	/** @private */
@@ -1649,6 +1630,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
+			//FIXME
+			//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT11 + 'ié', /ié$/, '(iv)ié', '/' + INTERROGATIVE_MARK_2P);
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT11 + 'iéu', /iéu$/, '(iv)iéu', '/' + INTERROGATIVE_MARK_2P_2);
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT11 + 'ón', /on$/, (!themes.themeT11.match(/[cijɉñ]$/)? '(i)on': 'on'), '/' + INTERROGATIVE_MARK_1P + MARKER_FLAGS);
@@ -1672,6 +1655,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
+			//FIXME
+			//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT11 + 'ón', /on$/, (!themes.themeT11.match(/[cijɉñ]$/)? '(i)on': 'on'), '/' + INTERROGATIVE_MARK_1P);
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT11 + 'isón', /on$/, '(i)on', '/' + INTERROGATIVE_MARK_1P);
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT11 + 'én', /en$/, '(is)en', '/' + INTERROGATIVE_MARK_1P);
@@ -1696,6 +1681,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 			var conj = getIrregularVerbConjugation(type, verb);
 
+			//FIXME
+			//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT12 + 'ón', null, null, '/' + INTERROGATIVE_MARK_1P + MARKER_FLAGS);
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT12 + 'én', null, null, '/' + INTERROGATIVE_MARK_1P);
 			if(themes.themeT5 && conj != 2){
@@ -1720,6 +1707,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
+			//FIXME
+			//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT12 + 'ón', /on$/, (!themes.themeT12.match(/[cijɉñ]$/)? '(i)on(e)': 'on(e)'));
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT12 + 'én', /en$/, 'en(e)');
 			if(themes.themeT5){
