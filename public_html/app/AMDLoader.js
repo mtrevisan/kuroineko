@@ -95,7 +95,7 @@ var AMDLoader = (function(doc){
 				resolves[id] = resolve;
 			});
 		resolves[id](value);
-		delete resolves[id];
+		resolves[id] = null;
 
 		definitions[id] = value;
 	};
@@ -174,7 +174,7 @@ var AMDLoader = (function(doc){
 				var promises = dependencies.map(getDependencyPromise, this);
 
 				Promise.all(promises).then(function(result){
-					//remove results from js! plugins
+					//remove js! plugins from result
 					result = result.filter(function(res, idx){ return (dependencies[idx].indexOf('js!') < 0); });
 
 					definition.apply(this, result);
@@ -226,7 +226,7 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var addJSExtension = function(value){
-		return (value.match(/\.[^.\/]+$/)? value: value + '.js');
+		return (!value.match(/\.min$/) && value.match(/\.[^.\/]+$/)? value: value + '.js');
 	};
 
 	/** @private */

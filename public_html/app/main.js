@@ -7,7 +7,7 @@ define([
 	'HTMLHelper', 'tools/social/MailHelper',
 
 	//main_conjugator
-	'tools/data/ObjectHelper', 'tools/lang/morphology/Conjugator',
+	'tools/data/FunctionHelper', 'tools/data/ObjectHelper', 'tools/lang/morphology/Conjugator',
 	//main_syllabator
 	'tools/lang/phonology/Orthography', 'tools/lang/phonology/Syllabator', 'tools/lang/phonology/Grapheme',
 	//main_measureConverter
