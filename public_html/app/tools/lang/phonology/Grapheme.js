@@ -82,7 +82,8 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 	var phonizeEterophonicSequence = function(word){
 		return word
 			.replace(/(^|[^aeiouàèéíòóú])i([aeiouàèéíòóú])/g, '$1j$2')
-			.replace(/((^|[^t])[kgrst])u([aeiouàèéíòóú])/g, '$1w$3');
+			.replace(/((^|[^s])t)u([aeiouàèéíòóú])/g, '$1w$3')
+			.replace(/((^|[^t])[kgrs])u([aeiouàèéíòóú])/g, '$1w$3');
 	};
 
 	var markPhonologicSyllabeSeparation = function(word, phonematicSyllabation){
