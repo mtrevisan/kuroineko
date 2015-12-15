@@ -974,19 +974,19 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			generateT2IndicativeImperfect(paradigm, verb, themes.themeT2, theme);
+			generateT2IndicativeImperfect(paradigm, verb, themes.themeT2, theme, origin);
 
 			if(runAllForms){
 				if(themes.themeT2.match(/à$/))
-					generateT2IndicativeImperfect(paradigm, verb, themes.themeT2.replace(/à$/, 'é'), theme);
+					generateT2IndicativeImperfect(paradigm, verb, themes.themeT2.replace(/à$/, 'é'), theme, origin);
 				if(themes.themeT2.match(/í$/))
-					generateT2IndicativeImperfect(paradigm, verb, themes.themeT2.replace(/í$/, 'é'), theme);
+					generateT2IndicativeImperfect(paradigm, verb, themes.themeT2.replace(/í$/, 'é'), theme, origin);
 			}
 		}
 	};
 
 	/** @private */
-	var generateT2IndicativeImperfect = function(paradigm, verb, themeT2, theme){
+	var generateT2IndicativeImperfect = function(paradigm, verb, themeT2, theme, origin){
 		var tmp = (verb.irregularity.eser? 'r': 'v');
 		insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'o', /o$/, '[oae]', '/' + INTERROGATIVE_MARK_1S);
 		insert(paradigm, theme, verb.infinitive, origin, themeT2 + tmp + 'omi', /omi$/, '[oae]mi', '/' + INTERROGATIVE_MARK_1S_2);
@@ -1024,19 +1024,19 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			generateT2SubjunctiveImperfect(paradigm, verb, themes.themeT2, theme);
+			generateT2SubjunctiveImperfect(paradigm, verb, themes.themeT2, theme, origin);
 
 			if(runAllForms){
 				if(themes.themeT2.match(/à$/))
-					generateT2SubjunctiveImperfect(paradigm, verb, themes.themeT2.replace(/à$/, 'é'), theme);
+					generateT2SubjunctiveImperfect(paradigm, verb, themes.themeT2.replace(/à$/, 'é'), theme, origin);
 				if(themes.themeT2.match(/í$/))
-					generateT2SubjunctiveImperfect(paradigm, verb, themes.themeT2.replace(/í$/, 'é'), theme);
+					generateT2SubjunctiveImperfect(paradigm, verb, themes.themeT2.replace(/í$/, 'é'), theme, origin);
 			}
 		}
 	};
 
 	/** @private */
-	var generateT2SubjunctiveImperfect = function(paradigm, verb, themeT2, theme){
+	var generateT2SubjunctiveImperfect = function(paradigm, verb, themeT2, theme, origin){
 		insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'se', null, null, '/' + FINAL_CONSONANT_VOICING_MARK);
 		insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'si');
 		insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'simo');
@@ -1116,20 +1116,20 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			generateT4IndicativeFuture(paradigm, verb, themes.themeT4, theme);
+			generateT4IndicativeFuture(paradigm, verb, themes.themeT4, theme, origin);
 
 			//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
 			if(runAllForms){
 				if(themes.themeT4.match(/a$/))
-					generateT4IndicativeFuture(paradigm, verb, themes.themeT4.replace(/a$/, 'e'), theme);
+					generateT4IndicativeFuture(paradigm, verb, themes.themeT4.replace(/a$/, 'e'), theme, origin);
 				if(themes.themeT4.match(/i$/))
-					generateT4IndicativeFuture(paradigm, verb, themes.themeT4.replace(/i$/, 'e'), theme);
+					generateT4IndicativeFuture(paradigm, verb, themes.themeT4.replace(/i$/, 'e'), theme, origin);
 			}
 		}
 	};
 
 	/** @private */
-	var generateT4IndicativeFuture = function(paradigm, verb, themeT4, theme){
+	var generateT4IndicativeFuture = function(paradigm, verb, themeT4, theme, origin){
 		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rà', null, null, '/' + INTERROGATIVE_MARK_1S + MARKER_FLAGS);
 		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ràmi', null, null, '/' + INTERROGATIVE_MARK_1S_2);
 		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'rè', /è$/, '[èò]', '/' + INTERROGATIVE_MARK_1S);
@@ -1163,20 +1163,20 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			generateT4ConditionalSimple(paradigm, verb, themes.themeT4, theme);
+			generateT4ConditionalSimple(paradigm, verb, themes.themeT4, theme, origin);
 
 			//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
 			if(runAllForms){
 				if(themes.themeT4.match(/a$/))
-					generateT4ConditionalSimple(paradigm, verb, themes.themeT4.replace(/a$/, 'e'), theme);
+					generateT4ConditionalSimple(paradigm, verb, themes.themeT4.replace(/a$/, 'e'), theme, origin);
 				if(themes.themeT4.match(/i$/))
-					generateT4ConditionalSimple(paradigm, verb, themes.themeT4.replace(/i$/, 'e'), theme);
+					generateT4ConditionalSimple(paradigm, verb, themes.themeT4.replace(/i$/, 'e'), theme, origin);
 			}
 		}
 	};
 
 	/** @private */
-	var generateT4ConditionalSimple = function(paradigm, verb, themeT4, theme){
+	var generateT4ConditionalSimple = function(paradigm, verb, themeT4, theme, origin){
 		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ría', null, null, '/' + INTERROGATIVE_MARK_2S);
 		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ríatu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
 		insert(paradigm, theme, verb.infinitive, origin, themeT4 + 'ría', /a$/, '[ae]', '/' + INTERROGATIVE_MARK_1S);
