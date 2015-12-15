@@ -20,7 +20,7 @@ Utilities comprises:
  - grapheme, orthography, phone, phonology helper, syllabator, syllabe, word
  - language recognition using Markov chains and n-grams
 
-### Measure (primarly used for Venetan) ###
+### Measure ###
  - measure converter
 
 ### Math ###
