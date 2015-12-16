@@ -1,5 +1,3 @@
-/* global Function, toString */
-
 /**
  * @class ObjectHelper
  *
