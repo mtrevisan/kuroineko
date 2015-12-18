@@ -14,8 +14,10 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance'], function(Clustere
 				['añel',  'añel',    'añel',   'añel',     'añèl',    'ketin',   'añèl',   'ñèl',        'ñèl',    'ñèl',    'ñèl',     'ñèl',       'añèo',    'añèlo',      'añèl',     'añelo',      'añèo',   'añèo',   'añèl',   'añèlo',   'añelo',   'ñèl',      'añèo',              'añèo',    'añè',    'añèo',   'añèl',   'pjegorin',        'añèlo',         'pegorin'],
 				['ai',    'ai',      'ai',     'ai',       'ai',      'ai',      'ajo',    'ai',         'ai',     'ajo',    'ai',      'ajo',       'aɉo',     'ajo',        'ai',       'ajo',        'ajo',    'ajo',    'ai',     'ajo',     'ajo',     'ajo',      'ajo',               'ajo',     'ajo',    'ajo',    'ajo',    'aju',             'ajo',           'ajo'],
 				['agoʃt', 'agoʃto',  'agostu', 'agosto',   'agosto',  'agosto',  'agosto', 'agost',      'agosto', 'agosto', 'agosto',  'agosto',    'agosto',  'agosto',     'agosto',   'agosto',     'agosto', 'agosto', 'agosto', 'agosto',  'agosto',  'gosto',    'agosto',            'agosto',  'agosto', 'agosto', 'agosto', 'agosto',          'agosto',        'agosto'],
-				['',     '',       '',      '',        '',       '',       '',      '',          '',     '',     '',       '',         '',      '',          '',        '',         '',    '',     '',     '',      '',      '',        '',                '',      '',      '',    '',     '',              '',            ''],
-				['',     '',       '',      '',        '',       '',       '',      '',          '',     '',     '',       '',         '',      '',          '',        '',         '',    '',     '',     '',      '',      '',        '',                '',      '',      '',    '',     '',              '',            ''],
+				['ala',   'uʒòra',   'alè',    'ala',      'ala',     'ala',     'ala',    'ala',        'ala',    'ala',    'ala',     'aƚa',       'aƚa',     'ala',        'ala',      'ala',        'ala',    'aƚa',    'ala',    'ala',     'ala',     'aƚa',      'aƚa',               'ala',     'ala',    'aƚa',    'ala',    'ala',             'ala',           'aƚa'],
+				['àut',   'òuto',    'àutu',   'àuto',     'àuto',    'àuto',    'àlto',   'àut',        'àlt',    'àlt',    'àlt',     'àlŧ',       'àlto',    'àlto',       'àlt',      'àlto',       'àlto',   'àlto',   'àlt',    'àlto',    'àlto',    'àlt',      'àlto',              'àlto',    'àlto',   'àlto',   'àlto',   'àlt',             'àlto',          'àlto'],
+				['àuter', 'òutro',   'àuter',  'àutro',    'àutro',   'àutro',   'àltro',  'àltro',      'àltro',  'àltro',  'àltro',   'àltro',     'àltro',   'àltro',      'àlter',    'àltro',      'àltro',  'àltro',  'àltro',  'àltro',   'àltro',   'àltro',    'àltro',             'àltro',   'àltro',  'àltro',  'àltro',  'àltro',           'àntro',         'àntro'],
+//				['',     '',       '',      '',        '',       '',       '',      '',          '',     '',     '',       '',         '',      '',          '',        '',         '',    '',     '',     '',      '',      '',        '',                '',      '',      '',    '',     '',              '',            ''],
 			],
 			size = variants.length,
 			matrix = [],
@@ -39,6 +41,6 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance'], function(Clustere
 		//cluster variants
 		var clusteredVariants = Clusterer.cluster(matrix, variants);
 
-		equal(clusteredVariants, '((variante 1|variante 2)|variante 3)');
+		equal(clusteredVariants, '((((((((((Campo San Martino|Romano)|Meolo)|Venezia)|Istrana)|((Montebello|Vicenza)|(Tonezza|Villa Estense)))|Teolo)|Cavarzare)|Fratta Polesine)|(((((Cerea|Verona)|Crespadoro)|Raldon)|((San Stino|Tarzo)|Lovadina))|(((Belluno|Casan)|Cencenighe)|(Albisano|Vas))))|(((((Auronzo|Costalta)|Padola)|Rèba)|Pozzale)|Cortina))');
 	});
 });
