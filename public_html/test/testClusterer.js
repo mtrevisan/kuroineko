@@ -4,17 +4,23 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance'], function(Clustere
 
 	QUnit.test('test', function(){
 		//construct the data
-		var variants = ['Rèba', 'Cortina', 'Plòdn', 'Padola', 'Costalta', 'Auronzo', 'Pozzale', 'Verona', 'Cencenighe', 'Casan', 'Tarzo', 'Belluno', 'San Stino', 'Venezia'],
+		var variants = [
+				'Rèba',   'Cortina', 'Padola', 'Costalta', 'Auronzo', 'Pozzale', 'Verona', 'Cencenighe', 'Casan',  'Tarzo',  'Belluno', 'San Stino', 'Venezia', 'Crespadoro', 'Albisano', 'Montebello', 'Teolo',  'Romano', 'Vas',    'Tonezza', 'Vicenza', 'Lovadina', 'Campo San Martino', 'Istrana', 'Raldon', 'Meolo',  'Cerea',  'Fratta Polesine', 'Villa Estense', 'Cavarzare'],
 			words = [
-			//y is g with a gamma above
-			//A is alpha with d above
-				['la',   'r',   's',     'l',   'l',   'l',   'al',  'l',    'l',    'l',    'l',    'l',    'l',    'l'],
-				['yèga', 'aga', 'vòser', 'ayA', 'aga', 'aga', 'èga', 'akwa', 'akwa', 'akwa', 'akwa', 'akwa', 'akwa', 'akwa']
+				['la'	,   'r',       'l',      'l',        'l',       'al',      'l',      'l',          'l',      'l',      'l',       'l',         'l',       'l',          'l',        'l',          'è',      'l',      'l',      'l',       'l',       'l',        'l',                 'l',       'l',      'l',      'l',      'l',               'l',             'è'],
+				['yèga',  'aga',     'aga',    'aga',      'aga',     'èga',     'akwa',   'akwa',       'akwa',   'akwa',   'akwa',    'akwa',      'akwa',    'akwa',       'akwa',     'akwa',       'akwa',   'akwa',   'akwa',   'akwa',    'akwa',    'akwa',     'akwa',              'akwa',    'akwa',   'akwa',   'akwa',   'akwa',            'akwa',          'akwa'],
+				['e',     'e',       'è',      'e',        'è',       'e',       'e',      'e',          'e',      'e',      'e',       'e',         'xe',      'e',          'e',        'xe',         'xe',     'xe',     'e',      'xe',      'xe',      'e',        'xe',                'xe',      'e',      'xe',     'e',      'xe',              'xe',            'xe'],
+				['cauda', 'còuda',   'cauda',  'cauda',    'cauda',   'cauđa',   'kalda',  'kalda',      'kalda',  'kalda',  'kalda',   'kalda',     'kalda',   'kalda',      'kalda',    'kalda',      'kalda',  'kalda',  'kalda',  'kalda',   'kalda',   'kalda',    'kalda',             'kalda',   'kalda',  'kalda',  'kalda',  'kalda',           'kalda',         'kalda'],
+				['añel',  'añel',    'añel',   'añel',     'añèl',    'ketin',   'añèl',   'ñèl',        'ñèl',    'ñèl',    'ñèl',     'ñèl',       'añèo',    'añèlo',      'añèl',     'añelo',      'añèo',   'añèo',   'añèl',   'añèlo',   'añelo',   'ñèl',      'añèo',              'añèo',    'añè',    'añèo',   'añèl',   'pjegorin',        'añèlo',         'pegorin'],
+				['ai',    'ai',      'ai',     'ai',       'ai',      'ai',      'ajo',    'ai',         'ai',     'ajo',    'ai',      'ajo',       'aɉo',     'ajo',        'ai',       'ajo',        'ajo',    'ajo',    'ai',     'ajo',     'ajo',     'ajo',      'ajo',               'ajo',     'ajo',    'ajo',    'ajo',    'aju',             'ajo',           'ajo'],
+				['agoʃt', 'agoʃto',  'agostu', 'agosto',   'agosto',  'agosto',  'agosto', 'agost',      'agosto', 'agosto', 'agosto',  'agosto',    'agosto',  'agosto',     'agosto',   'agosto',     'agosto', 'agosto', 'agosto', 'agosto',  'agosto',  'gosto',    'agosto',            'agosto',  'agosto', 'agosto', 'agosto', 'agosto',          'agosto',        'agosto'],
+				['',     '',       '',      '',        '',       '',       '',      '',          '',     '',     '',       '',         '',      '',          '',        '',         '',    '',     '',     '',      '',      '',        '',                '',      '',      '',    '',     '',              '',            ''],
+				['',     '',       '',      '',        '',       '',       '',      '',          '',     '',     '',       '',         '',      '',          '',        '',         '',    '',     '',     '',      '',      '',        '',                '',      '',      '',    '',     '',              '',            ''],
 			],
 			size = variants.length,
 			matrix = [],
 			costs = {insertion: 1, deletion: 1, modification: 0.5},
-			i, j, distance;
+			i, j;
 		for(i = 0; i < size; i ++){
 			matrix[i] = [];
 			matrix[i][i] = 0;
