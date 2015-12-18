@@ -2,110 +2,25 @@
  * @class StringDistance
  *
  * @see {@link http://www.cs.helsinki.fi/u/ukkonen/InfCont85.PDF}
+ * @see {@link https://github.com/jobrapido/ng-fast-levenshtein/blob/master/src/fastLevenshteinService.js}
+ * @see {@link https://github.com/mjylha/Levenshtein-js/blob/master/levenshtein.js}
+ * @see {@link https://github.com/julen/levenshtein.js/blob/master/levenshtein.js}
  *
  * @author Mauro Trevisan
  */
 define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
-	/**
+	/* *
 	 * Compute the Levenshtein distance between two strings.<p>
 	 * Time: <code>O(p * min(n, m))</code>, where <code>p</code> is the edit distance, Space: <code>O(min(n, m))</code>
 	 *
 	 * @param {String} a			First string.
 	 * @param {String} b			Second string.
 	 * @param {Number} test		Number to test the distance to (in this case the return type is a boolean).
-	 * @param {Object} options	Cost configuration object like <code>{insertion: 1, deletion: 1, modification: 0.5, match: 0, isMatchingFn: function(){...}}</code>
+	 * @param {Object} options	Cost configuration object like <code>{insertion: 1, deletion: 1, modification: 0.5, match: 0}</code>
 	 * @return {Number/Boolean}
-	 */
+	 * /
 	var levenshteinDistance2 = function(a, b, test, options){
-		//base cases
-		if(a == b)
-			return 0;
-		if(!a.length)
-			return b.length;
-		if(!b.length)
-			return a.length;
-
-		var n = a.length - 1,
-			m = b.length - 1,
-			diff = Math.abs(m - n),
-			//array used to store the rows of the diagonal band, undefined/NaN is considered as +inf
-			r_size, r = [],
-			p, k, k_prime, k_inf = 0,
-			//first value of r which is <= threshold
-			//p_inf = 1,
-			//last value of r which is <= threshold
-			//p_sup = diff + 2 * Math.floor((threshold / delta - diff) / 2) + 1,
-			i, j;
-
-		options = options || {};
-		var costs = applyIfNotNumeric(options.costs || {}, {insertion: 1, deletion: 1, modification: 0.5, match: 0}),
-			isMatchingFn = options.isMatchingFn || isMatchingFnDefault;
-
-		var costFn = function(from, to){
-			if(to === undefined)
-				return Number.POSITIVE_INFINITY;
-			return (!from? costs.insertion:
-				(!to? costs.deletion:
-				(isMatchingFn(from, to)? 0: costs.modification)));
-		};
-
-		test = Number(test);
-
-		var delta = Math.min(costs.insertion, costs.deletion),
-			threshold = (isNaN(test)? (diff + 1) * delta: test);
-		r[-1] = Number.POSITIVE_INFINITY;
-
-		while(true){
-			p = threshold / delta - diff;
-			if(p >= 0){
-				p = Math.floor(p / 2);
-				//index of starting diagonal
-				k = Math.min(m - n, 0) - p;
-				k_prime = k;
-				//number of diagonals
-				r_size = diff + 2 * p;
-				//initialize non-visited cells with +infinity
-				while(k_inf <= r_size + 1)
-					r[k_inf ++] = Number.POSITIVE_INFINITY;
-
-				for(i = 0; i <= n; i ++, k ++)
-					/*for(j = Math.max(0, p_inf - 1); j <= p_sup; j ++){
-						r[j] = (i == 0 && j + k == 0? 0:
-							Math.min(r[j] + costFn(a[i - 1], b[j + k - 1]), r[j + 1] + costFn(a[i - 1], null), r[j - 1] + costFn(null, b[j + k - 1])));
-						if(j > p_sup && r[j] <= threshold)
-							p_sup = j;
-					}*/
-					for(j = 0; j <= r_size; j ++)
-						r[j] = (i == 0 && j + k == 0? 0:
-							Math.min(
-								r[j] + costFn(a[i - 1], b[j + k - 1]),
-								r[j + 1] + costFn(a[i - 1], null),
-								r[j - 1] + costFn(null, b[j + k - 1])
-							));
-				if(r[r_size + k_prime] <= threshold)
-					break;
-			}
-
-			if(!isNaN(test))
-				break;
-
-			threshold *= 2;
-		}
-		return (isNaN(test)? r[r_size + k_prime]: (r[r_size + k_prime] <= test));
-	};
-
-	/**
-	 * Compute the Levenshtein distance between two strings.<p>
-	 * Time: <code>O(p * min(n, m))</code>, where <code>p</code> is the edit distance, Space: <code>O(min(n, m))</code>
-	 *
-	 * @param {String} a			First string.
-	 * @param {String} b			Second string.
-	 * @param {Number} test		Number to test the distance to (in this case the return type is a boolean).
-	 * @param {Object} options	Cost configuration object like <code>{insertion: 1, deletion: 1, modification: 0.5, match: 0, isMatchingFn: function(){...}}</code>
-	 * @return {Number/Boolean}
-	 */
-	var levenshteinDistance = function(a, b, test, options){
 		var n = a.length,
 			m = b.length;
 		if(m < n)
@@ -122,15 +37,14 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		test = Number(test);
 
 		options = options || {};
-		var costs = applyIfNotNumeric(options.costs || {}, {insertion: 1, deletion: 2, modification: 0.5, match: 0}),
-			isMatchingFn = options.isMatchingFn || isMatchingFnDefault;
+		var costs = applyIfNotNumeric(options.costs || {}, {insertion: 1, deletion: 2, modification: 0.5, match: 0});
 
 		var costFn = function(from, to){
 			if(!from && !to)
 				return Number.POSITIVE_INFINITY;
 			return (!from? costs.insertion:
 				(!to? costs.deletion:
-				(isMatchingFn(from, to)? costs.match: costs.modification)));
+				(from == to? costs.match: costs.modification)));
 		};
 
 		var diff = m - n,
@@ -158,9 +72,8 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 			}
 
 			threshold *= 2;
-		}/**/
-		return (isNaN(test)? r[r_size + k_prime]: (r[r_size + k_prime] <= test));/**/
-return 0;
+		}
+		return (isNaN(test)? r[r_size + k_prime]: (r[r_size + k_prime] <= test));
 	};
 
 	/**
@@ -170,10 +83,10 @@ return 0;
 	 * @param {String} a			First string.
 	 * @param {String} b			Second string.
 	 * @param {Number} test		Number to test the distance to (in this case the return type is a boolean).
-	 * @param {Object} options	Cost configuration object like <code>{insertion: 1, deletion: 1, modification: 0.5, match: 0, isMatchingFn: function(){...}}</code>
+	 * @param {Object} options	Cost configuration object like <code>{insertion: 1, deletion: 1, modification: 0.5, match: 0}</code>
 	 * @return {Number/Boolean}
-	 */
-	var levenshteinDistance2 = function(a, b, test, options){
+	 * /
+	var levenshteinDistance3 = function(a, b, test, options){
 		var n = a.length,
 			m = b.length;
 		if(n < m)
@@ -190,15 +103,14 @@ return 0;
 		test = Number(test);
 
 		options = options || {};
-		var costs = applyIfNotNumeric(options.costs || {}, {insertion: 1, deletion: 2, modification: 0.5, match: 0}),
-			isMatchingFn = options.isMatchingFn || isMatchingFnDefault;
+		var costs = applyIfNotNumeric(options.costs || {}, {insertion: 1, deletion: 2, modification: 0.5, match: 0});
 
 		var costFn = function(from, to){
 			if(!from && !to)
 				return Number.POSITIVE_INFINITY;
 			return (!from? costs.insertion:
 				(!to? costs.deletion:
-				(isMatchingFn(from, to)? costs.match: costs.modification)));
+				(from == to? costs.match: costs.modification)));
 		};
 
 		//two rows
@@ -206,14 +118,14 @@ return 0;
 			v1 = [],
 			i, j;
 		//initialize v0 (the previous row of distances)
-		//this row is A[0][i]: edit distance for an empty s
-		//the distance is just the number of characters to delete from t
+		//this row is A[0][i]: edit distance for an empty <code>a</code>
+		//the distance is just the number of characters to delete from <code>b</code>
 		for(i = 0; i <= m; i ++)
 			v0[i] = costs.insertion * i;
 		//calculate v1 (current row distance) from the previous row v0
 		for(i = 0; i < n; i ++){
 			//first element of v1 is A[i+1][0]
-			//edit distance is delete (i+1) chars from s to match empty t
+			//edit distance is delete (i+1) chars from <code>a</code> to match empty <code>b</code>
 			v1[0] = costs.deletion * (i + 1);
 
 			//use formula to fill in the rest of the row
@@ -229,11 +141,76 @@ return 0;
 		}
 
 		return v1[m];
+	};*/
+
+	/**
+	 * Compute the Levenshtein distance between two strings.<p>
+	 * Time: <code>O(p * min(n, m))</code>, where <code>p</code> is the edit distance, Space: <code>O(min(n, m))</code>
+	 *
+	 * @param {String} a			First string.
+	 * @param {String} b			Second string.
+	 * @param {Object} costs	Cost configuration object like <code>{insertion: 1, deletion: 1, modification: 0.5}</code>
+	 * @return {Number}
+	 */
+	var levenshteinDistance = function(a, b, costs){
+		var n = a.length,
+			m = b.length;
+
+		//base cases
+		if(a == b)
+			return 0;
+		if(!n)
+			return m;
+		if(!m)
+			return n;
+
+		costs = enforceDefaultCosts(costs);
+		if(!costs.insertion)
+			throw 'Cost of insertion cannot be zero';
+		if(!costs.deletion)
+			throw 'Cost of deletion cannot be zero';
+		if(!costs.modification)
+			throw 'Cost of modification cannot be zero';
+		//if(costs.modification > costs.insertion + costs.deletion)
+		//	throw 'Cost of modification should be less than that of insertion plus deletion';
+
+		var prevRow = new Array(m + 1),
+			curCol, nextCol,
+			i, j;
+
+		//initialise previous row
+		//this row is A[0][i]: edit distance for an empty <code>a</code>
+		//the distance is just the number of characters to delete from <code>b</code>
+		for(i = 0; i <= m; i ++)
+			prevRow[i] = costs.deletion * i;
+
+		//calculate current row distance from previous row
+		for(i = 0; i < n; i ++){
+			nextCol = i + costs.deletion;
+
+			for(j = 0; j < m; j ++){
+				curCol = nextCol;
+
+				nextCol = Math.min(
+					prevRow[j] + (a[i] == b[j]? 0: costs.modification),
+					nextCol + costs.insertion,
+					prevRow[j + 1] + costs.deletion
+				);
+
+				//copy current col value into previous (in preparation for next iteration)
+				prevRow[j] = curCol;
+			}
+
+			//copy last col value into previous (in preparation for next iteration)
+			prevRow[j] = nextCol;
+		}
+
+		return nextCol;
 	};
 
 	/** @private */
-	var isMatchingFnDefault = function(a, b){
-		return (a === b);
+	var enforceDefaultCosts = function(costs){
+		return applyIfNotNumeric(costs || {}, {insertion: 1, deletion: 1, modification: 0.5});
 	};
 
 	/** @private */
@@ -241,16 +218,37 @@ return 0;
 		var property, destination;
 		for(property in config){
 			destination = object[property];
-			if(isNaN(parseFloat(destination)) /*|| !isFinite(destination)*/)
+			if(isNaN(Number(destination)))
 				object[property] = config[property];
 		}
 		return object;
 	};
 
-	/** Sørensen-Dice coefficient (bigram overlap * 2 / bigrams in a + bigrams in b) */
-	var diceCoefficient = function(stringA, stringB){
-		var lengthA = stringA.length - 1,
-			lengthB = stringB.length - 1;
+	var alignmentLength = function(a, b){
+		var insertions = levenshteinDistance(a, b, {insertion: 100, deletion: 10000, modification: 1});
+		insertions = Math.floor(insertions / 100) % 100;
+		return a.length + insertions;
+	};
+
+	/**
+	 * @param {String} a			First string.
+	 * @param {String} b			Second string.
+	 * @param {Object} costs	Cost configuration object like <code>{insertion: 1, deletion: 1, modification: 0.5}</code>
+	 * @return A percentual indicating the distance between the two inputs.
+	 */
+	var getStructuralDistance = function(a, b, costs){
+		costs = enforceDefaultCosts(costs);
+		return levenshteinDistance(a, b, costs) / (alignmentLength(a, b) * Math.max(costs.insertion, costs.deletion, costs.modification));
+	};
+
+	/**
+	 * Sørensen-Dice coefficient (bigram overlap * 2 / bigrams in a + bigrams in b)
+	 *
+	 * NOTE: untested!
+	 */
+	var diceCoefficient = function(a, b){
+		var lengthA = a.length - 1,
+			lengthB = b.length - 1;
 		if(lengthA < 1 || lengthB < 1)
 			return 0;
 
@@ -259,9 +257,9 @@ return 0;
 			bigramA,
 			i, j;
 		for(j = 0; j < lengthB; j ++)
-			bigramsB.push(stringB.substr(j, 2));
+			bigramsB.push(b.substr(j, 2));
 		for(i = 0; i < lengthA; i ++){
-			bigramA = stringA.substr(i, 2);
+			bigramA = a.substr(i, 2);
 
 			for(j = 0; j < lengthB; j ++)
 				if(bigramA == bigramsB[j]){
@@ -275,7 +273,9 @@ return 0;
 
 
 	return {
-		levenshteinDistance: levenshteinDistance
+		levenshteinDistance: levenshteinDistance,
+		alignmentLength: alignmentLength,
+		getStructuralDistance: getStructuralDistance
 	};
 
 });
