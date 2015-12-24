@@ -168,10 +168,12 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 				modification: 0.5,
 				matchingFn: function(from, to, costs){
 					return (from == to? 0: costs.modification);
-					/*var fromFeatures = Phone.convertStringIntoFeatures(from),
+					/*if(from == to)
+						return 0;
+					var fromFeatures = Phone.convertStringIntoFeatures(from),
 						toFeatures = Phone.convertStringIntoFeatures(to),
 						differences = Phone.compareFeatures(fromFeatures[0], toFeatures[0], true).diff;
-					return differences.length / 26;*/
+					return costs.modification + differences.length / 26;/**/
 				}
 			},
 			//costs = {insertion: 1, deletion: 1, modification: 0.5},
