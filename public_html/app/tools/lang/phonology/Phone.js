@@ -245,7 +245,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 			output = [];
 
 			//match brackets (which contain features like [+foo, -bar]) or anything else
-			var list = str.match(REGEX_UNICODE_SPLITTER);
+			var list = str.toLowerCase().match(REGEX_UNICODE_SPLITTER);
 			list.forEach(function(m){
 				if(m.match(REGEX_UNICODE_FEATURES)){
 					var features = {};
@@ -266,7 +266,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		else if(Array.isArray(str))
 			output = str;
 		else
-			output = [str];
+			output = [str.toLowerCase()];
 
 		return output;
 	};
@@ -348,7 +348,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 			else{
 				tmp = [];
 				Object.keys(f).forEach(function(element){
-					tmp.push((f[element] === 1 ? '+' : (f[element] == -1? '-': '0')) + element);
+					tmp.push((f[element] == 1 ? '+' : (f[element] == -1? '-': '0')) + element);
 				});
 				output.push('[' + tmp.join(',') + ']');
 			}
@@ -381,7 +381,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 				matches.push(segment);
 				ratings.push(0);
 			}
-			else if(comp.diff.length === 1 && useDiacritics)
+			else if(comp.diff.length == 1 && useDiacritics)
 				Object.keys(diacritics).forEach(function(diac){
 					comp = compareFeatures(features, combineFeatures(segments[segment], diacritics[diac][0]), !multipleElements);
 					if(!comp.diff.length){
@@ -504,6 +504,8 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 		useDiacritics: useDiacritics,
 		setUseDiacritics: function(use){ useDiacritics = use; },
+
+		numberOfSegments: function(){ return Object.keys(segments.a).length; },
 
 		convertStringIntoFeatures: convertStringIntoFeatures,
 		convertFeaturesIntoString: convertFeaturesIntoString,

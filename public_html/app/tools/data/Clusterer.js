@@ -55,7 +55,7 @@ console.log(variants[0]);
 			v2 = indicesVariants[1];
 		if(v2 > v1)
 			v2 --;
-		variants.push('(' + [variants.splice(v1, 1), variants.splice(v2, 1)].sort().join('|') + ':' + indicesVariants[2] + ')');
+		variants.push('(' + [variants.splice(v1, 1), variants.splice(v2, 1)].sort().join('|') + ':' + indicesVariants[2].toFixed(4) + ')');
 	};
 
 	/**

@@ -157,7 +157,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 			m = b.length;
 
 		//base cases
-		if(a == b)
+		if(a == b || Array.isArray(a) && a.join('') == b.join(''))
 			return 0;
 		if(!n)
 			return m;
