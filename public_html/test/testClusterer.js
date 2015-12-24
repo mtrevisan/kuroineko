@@ -1,5 +1,5 @@
 //www2.hu-berlin.de/vivaldi/index.php?id=mV001&lang=it
-require(['tools/data/Clusterer', 'tools/data/StringDistance'], function(Clusterer, StringDistance){
+require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonology/Phone'], function(Clusterer, StringDistance, Phone){
 	QUnit.module('Clusterer');
 
 	QUnit.test('test', function(){
@@ -162,7 +162,19 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance'], function(Clustere
 			],
 			size = variants.length,
 			matrix = [],
-			costs = {insertion: 1, deletion: 1, modification: 0.5},
+			costs = {
+				insertion: 1,
+				deletion: 1,
+				modification: 0.5,
+				matchingFn: function(from, to, costs){
+					return (from == to? 0: costs.modification);
+					/*var fromFeatures = Phone.convertStringIntoFeatures(from),
+						toFeatures = Phone.convertStringIntoFeatures(to),
+						differences = Phone.compareFeatures(fromFeatures[0], toFeatures[0], true).diff;
+					return differences.length / 26;*/
+				}
+			},
+			//costs = {insertion: 1, deletion: 1, modification: 0.5},
 			i, j;
 		for(i = 0; i < size; i ++){
 			matrix[i] = [];

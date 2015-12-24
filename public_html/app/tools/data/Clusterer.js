@@ -29,18 +29,17 @@ console.log(variants[0]);
 	 */
 	var findMinimum = function(matrix){
 		var rows = matrix.length,
-			min = Number.MAX_VALUE,
-			result = [],
+			result = [-1, -1, Number.MAX_VALUE],
 			i, j,
 			value;
 		for(i = 0; i < rows; i ++)
 			for(j = i + 1; j < rows; j ++){
 				value = matrix[i][j];
-				if(value < min){
+				if(value < result[2]){
 					//reckon the two variants, v1 and v2
-					min = value;
 					result[0] = i;
 					result[1] = j;
+					result[2] = value;
 				}
 			}
 		return result;
@@ -56,7 +55,7 @@ console.log(variants[0]);
 			v2 = indicesVariants[1];
 		if(v2 > v1)
 			v2 --;
-		variants.push('(' + [variants.splice(v1, 1), variants.splice(v2, 1)].sort().join('|') + ')');
+		variants.push('(' + [variants.splice(v1, 1), variants.splice(v2, 1)].sort().join('|') + ':' + indicesVariants[2] + ')');
 	};
 
 	/**
