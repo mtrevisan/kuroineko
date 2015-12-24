@@ -1,4 +1,4 @@
-require(['tools/data/StringDistance'], function(StringDistance){
+require(['tools/data/StringDistance', 'tools/lang/phonology/Phone'], function(StringDistance, Phone){
 	QUnit.module('StringDistance');
 
 	var defaultCosts = {insertion: 1, deletion: 2, modification: 0.5};
@@ -32,5 +32,20 @@ require(['tools/data/StringDistance'], function(StringDistance){
 		equal(StringDistance.levenshteinDistance('saveler', 'apelere', defaultCosts), 3.5);
 		equal(StringDistance.alignmentLength('saveler', 'apelere'), 7);
 		equal(StringDistance.getStructuralDistance('saveler', 'apelere', defaultCosts), 3.5 / 7 / 2);
+	});
+
+	QUnit.test('levenshtein - custom matchingFn', function(){
+		var costs = {
+			insertion: 1,
+			deletion: 2,
+			modification: 0.5,
+			matchingFn: function(from, to){
+				var fromFeatures = Phone.convertStringIntoFeatures(from),
+					toFeatures = Phone.convertStringIntoFeatures(to),
+					differences = Phone.compareFeatures(fromFeatures[0], toFeatures[0], true).diff;
+				return differences.length / 26;
+			}
+		};
+		equal(StringDistance.levenshteinDistance('saveler', 'apelere', costs), 3.1538461538461537);
 	});
 });

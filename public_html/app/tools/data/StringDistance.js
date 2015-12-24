@@ -149,7 +149,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	 *
 	 * @param {String} a			First string.
 	 * @param {String} b			Second string.
-	 * @param {Object} costs	Cost configuration object like <code>{insertion: 1, deletion: 1, modification: 0.5, isMatchingFn: function(from, to){ return (from == to); }}</code>
+	 * @param {Object} costs	Cost configuration object like <code>{insertion: 1, deletion: 1, modification: 0.5, matchingFn: function(from, to){ return (from == to); }}</code>
 	 * @return {Number}
 	 */
 	var levenshteinDistance = function(a, b, costs){
@@ -174,7 +174,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		//if(costs.modification > costs.insertion + costs.deletion)
 		//	throw 'Cost of modification should be less than that of insertion plus deletion';
 
-		var isMatchingFn = costs.isMatchingFn || isMatchingFnDefault,
+		var matchingFn = costs.matchingFn || matchingFnDefault,
 			prevRow = new Array(m + 1),
 			curCol, nextCol,
 			i, j;
@@ -193,7 +193,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 				curCol = nextCol;
 
 				nextCol = Math.min(
-					prevRow[j] + (isMatchingFn(a[i], b[j])? 0: costs.modification),
+					prevRow[j] + matchingFn(a[i], b[j], costs),
 					nextCol + costs.insertion,
 					prevRow[j + 1] + costs.deletion
 				);
@@ -210,8 +210,8 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	};
 
 	/** @private */
-	var isMatchingFnDefault = function(from, to){
-		return (from == to);
+	var matchingFnDefault = function(from, to, costs){
+		return (from == to? 0: costs.modification);
 	};
 
 	/** @private */
