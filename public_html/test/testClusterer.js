@@ -152,7 +152,10 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 				['zenɛ',       'zenaro',      'd͡ʒenaju',  'd͡ʒenaro',  'd͡ʒenaro',  'jenaro',    'zenar',      'd͡ʒenajo',   'd͡ʒenajo',   'd͡ʒenajo',   'ðenɛr',      'd͡ʒenaro',   'd͡ʒenajo',   'd͡ʒenaro',   'd͡ʒenar',    'd͡ʒenaro',   'zenajo',     'jenaro',     'd͡ʒenaro',   'zenaro',     'd͡ʒenaro',    'd͡zenaro',   'zenaro',            'zenaro',    'zenar',      'zenaro',    'd͡ʒenar',    'zenaro',          'zenaro',        'jenaro',    'zenaro'],
 				['zenogle',    'zenɔjo',      'dunɔjo',    'donojo',    'denojo',    'ðenojo',    'zenɔt͡ʃo',   'danɔt͡ʃo',   'denɔt͡ʃo',   'zenɔt͡ʃo',   'denɔt͡ʃo',   'zenɔt͡ʃo',   'zenɔt͡ʃo',   'zenɔt͡ʃo',   'zenɔt͡ʃo',   'genɔt͡ʃ',    'zanɔt͡ʃo',   'zenɔt͡ʃo',   'denɔt͡ʃo',   'denɔt͡ʃo',   'zanɔt͡ʃo',    'zenɔt͡ʃo',   'zenɔt͡ʃo',          'zenɔt͡ʃo',  'zenɔt͡ʃo',   'zenɔt͡ʃo',  'zenɔt͡ʃo',   'zenɔt͡ʃo',        'denɔt͡ʃo',      'zenɔt͡ʃo',  'zenɔt͡ʃo'],
 				['zwɔk',       'zɔgo',        'dwegu',     'døgo',      'dwogo',     'ðwogo',     'zugo',       'dugo',       'dogo',       'dɔgo',       'dugo',       'zɔgo',       'zɔgo',       'zugo',       'zugo',       'zugo',       'zugo',       'zugo',       'dugo',       'dugo',       'zugo',        'zɔgo',       'd͡ʒogo',            'djɔgo',     'zugo',       'zjɔgo',     'zugo',       'zɔgu',            'dwɔgo',         'zɔgu',      'zɔgo'],
-//				['',     '',       '',      '',        '',       '',       '',      '',          '',     '',     '',       '',         '',      '',          '',        '',         '',    '',     '',     '',      '',      '',        '',                '',      '',      '',    '',     '',              '',            '',       ''],
+				['xuɲ',        'xuɲo',        'duɲ',       'duɲe',      'd͡ʒuɲo',    'ðuɲo',      'd͡ʒuɲo',     'duɲ',        'd͡ʒuɲo',     'd͡ʒuɲo',     'duɲe',       'd͡ʒuɲo',     'd͡ʒuɲo',     'd͡ʒuɲo',     'd͡ʒuɲo',     'd͡ʒuɲo',     'd͡ʒuɲo',     'juɲo',       'd͡ʒuɲo',     'd͡ʒuɲo',     'd͡ʒuɲo',      'd͡ʒuɲo',     'd͡ʒuɲo',            'd͡ʒuɲo',    'd͡ʒuɲo',     'd͡ʒuɲo',    'd͡ʒuɲo',     'xuɲu',            'd͡ʒuɲo',        'd͡ʒuɲo',    'xuɲo'],
+				['gran',       'gran',        'gran',      'grøn',      'gran',      'gran',      'grande',     'grant',      'granth',     'grant',      'grant',      'grando',     'grando',     'grande',     'grande',     'grande',     'grande',     'grando',     'grant',      'grande',     'grando',      'grando',     'grando',            'grando',    'grando',     'grando',    'grande',     'grandu',          'grando',        'rande',     'grando'],
+				['grɔs',       'grɔs',        'grɔsu',     'grɔso',     'pèt͡so',    'grɔs',      'grɔso',      'grɔs',       'grɔs',       'grɔs',       'grɔs',       'grɔs',       'grɔso',      'grɔso',      'grɔs',       'grɔso',      'grɔso',      'grɔso',      'grɔs',       'grɔso',      'grɔso',       'grɔs',       'grɔso',             'grɔso',     'grɔso',      'grɔso',     'grɔso',      'grɔsu',           'grɔso',         'rɔsu',      'grɔso'],
+				['njɛr',       'aɲere',       'ind͡ʒeri',  'iɲøre',     'ɲere',      'iɲere',     'jɛri',       'end͡zeri',   'jeri',       'jɛr',        'jeri',       'jɛri',       'd͡ʒɛri',     'jɛri',       'd͡ʒɛri',     'jɛri',       'jɛri',       'jeri',       'jeri',       'jere',       'jɛri',        'jɛri',       'jeri',              'jɛri',      'jeri',       'jɛri',      'jeri',       'd͡ʒɛri',          'jɛri',          'jɛri',      'jɛri'],
 //				['',     '',       '',      '',        '',       '',       '',      '',          '',     '',     '',       '',         '',      '',          '',        '',         '',    '',     '',     '',      '',      '',        '',                '',      '',      '',    '',     '',              '',            '',       ''],
 //				['',     '',       '',      '',        '',       '',       '',      '',          '',     '',     '',       '',         '',      '',          '',        '',         '',    '',     '',     '',      '',      '',        '',                '',      '',      '',    '',     '',              '',            '',       ''],
 //				['',     '',       '',      '',        '',       '',       '',      '',          '',     '',     '',       '',         '',      '',          '',        '',         '',    '',     '',     '',      '',      '',        '',                '',      '',      '',    '',     '',              '',            '',       ''],
@@ -201,7 +204,7 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 		//calculate minimum distance variant
 		var average = [],
 			min = Number.MAX_VALUE,
-			sum, idx;
+			sum, idx1, idx2;
 		for(i = 0; i < size; i ++){
 			sum = 0;
 			for(j = 0; j < i; j ++)
@@ -213,10 +216,17 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 		average.forEach(function(avg, i){
 			if(avg < min){
 				min = avg;
-				idx = i;
+				idx1 = i;
 			}
 		});
-		console.log('minimum distance variant is ' + variants[idx]);
+		min = Number.MAX_VALUE;
+		average.forEach(function(avg, i){
+			if(i != idx1 && avg < min){
+				min = avg;
+				idx2 = i;
+			}
+		});
+		console.log('minimum distance variant is ' + variants[idx1] + ' with ' + average[idx1] + ', next is ' + variants[idx2] + ' with ' + average[idx2]);
 
 		//cluster variants
 		var clusteredVariants = Clusterer.cluster(matrix, variants);
