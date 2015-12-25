@@ -149,7 +149,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	 *
 	 * @param {String} a			First string.
 	 * @param {String} b			Second string.
-	 * @param {Object} costs	Cost configuration object like <code>{insertion: 1, deletion: 1, modification: 0.5, matchingFn: function(from, to){ return (from == to); }}</code>
+	 * @param {Object} costs	Cost configuration object like <code>{insertion: 1, deletion: 1, modification: 0.5, exchange: 0.5, matchingFn: function(from, to, costs){ return (from == to? 0: costs.modification); }}</code>
 	 * @return {Number}
 	 */
 	var levenshteinDistance = function(a, b, costs){
