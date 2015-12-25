@@ -201,7 +201,7 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 			for(j = i + 1; j < size; j ++)
 				matrix[i][j] /= words.length;
 
-		//calculate minimum distance variant
+		//calculate variant with minimum distance
 		var average = [],
 			min = Number.MAX_VALUE,
 			sum, idx1, idx2;
@@ -226,7 +226,7 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 				idx2 = i;
 			}
 		});
-		console.log('minimum distance variant is ' + variants[idx1] + ' with ' + average[idx1] + ', next is ' + variants[idx2] + ' with ' + average[idx2]);
+		console.log('minimum distance variant is ' + variants[idx1] + ' with ' + (average[idx1] / size).toFixed(4) + ', next is ' + variants[idx2] + ' with ' + (average[idx2] / size).toFixed(4));
 
 		//cluster variants
 		var clusteredVariants = Clusterer.cluster(matrix, variants);
