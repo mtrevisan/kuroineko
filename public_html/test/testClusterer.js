@@ -181,6 +181,7 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 			matrix[i][i] = 0;
 		}
 
+		//extract IPA characters
 		words = words.map(function(word){
 			return word.map(function(w){
 				return w.match(Phone.REGEX_UNICODE_SPLITTER);
@@ -196,6 +197,26 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 		for(i = 0; i < size; i ++)
 			for(j = i + 1; j < size; j ++)
 				matrix[i][j] /= words.length;
+
+		//calculate minimum distance variant
+		var average = [],
+			min = Number.MAX_VALUE,
+			sum, idx;
+		for(i = 0; i < size; i ++){
+			sum = 0;
+			for(j = 0; j < i; j ++)
+				sum += matrix[j][i];
+			for(j = i + 1; j < size; j ++)
+				sum += matrix[i][j];
+			average.push(sum);
+		}
+		average.forEach(function(avg, i){
+			if(avg < min){
+				min = avg;
+				idx = i;
+			}
+		});
+		console.log('minimum distance variant is ' + variants[idx]);
 
 		//cluster variants
 		var clusteredVariants = Clusterer.cluster(matrix, variants);
