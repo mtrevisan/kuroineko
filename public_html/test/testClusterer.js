@@ -170,9 +170,8 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 					if(from == to)
 						return 0;
 					var fromFeatures = Phone.convertStringIntoFeatures(from),
-						toFeatures = Phone.convertStringIntoFeatures(to),
-						differences = Phone.compareFeatures(fromFeatures[0], toFeatures[0], true).diff;
-					return 0.5 + differences.length / Phone.numberOfSegments();
+						toFeatures = Phone.convertStringIntoFeatures(to);
+					return 0.5 + Phone.similarity(fromFeatures[0], toFeatures[0]);
 				}
 			},
 			//costs = {insertion: 1, deletion: 1, modification: 0.5},

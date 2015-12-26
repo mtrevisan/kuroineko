@@ -427,6 +427,14 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	};
 
 	/**
+	 * @param {Object/String} bundleA	Feature bundle 1
+	 * @param {Object/String} bundleB	Feature bundle 2
+	 */
+	var similarity = function(bundleA, bundleB){
+		return compareFeatures(bundleA, bundleB, true).diff.length / Object.keys(segments.a).length;
+	};
+
+	/**
 	 * NOTE: this is equivalent to say "bundleA contains bundleB"
 	 *
 	 * @param {Object/String} bundleA	Originator feature bundle
@@ -505,12 +513,11 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		useDiacritics: useDiacritics,
 		setUseDiacritics: function(use){ useDiacritics = use; },
 
-		numberOfSegments: function(){ return Object.keys(segments.a).length; },
-
 		convertStringIntoFeatures: convertStringIntoFeatures,
 		convertFeaturesIntoString: convertFeaturesIntoString,
 		convertFeaturesIntoRegExString: convertFeaturesIntoRegExString,
 		compareFeatures: compareFeatures,
+		similarity: similarity,
 		hasEquivalentFeatures: hasEquivalentFeatures,
 		intersectFeatures: intersectFeatures,
 
