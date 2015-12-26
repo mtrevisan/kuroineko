@@ -200,38 +200,19 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 
 		//calculate variant with minimum distance
 		var average = [],
-			min = Number.MAX_VALUE,
-			sum, idx1, idx2;
+			sum;
 		for(i = 0; i < size; i ++){
 			sum = 0;
 			for(j = 0; j < i; j ++)
 				sum += matrix[j][i];
 			for(j = i + 1; j < size; j ++)
 				sum += matrix[i][j];
-			average.push(sum);
+			average.push({variant: variants[i], distance: sum / size});
 		}
-		average.forEach(function(avg, i){
-			if(avg < min){
-				min = avg;
-				idx1 = i;
-			}
-		});
-		min = Number.MAX_VALUE;
-		average.forEach(function(avg, i){
-			if(i != idx1 && avg < min){
-				min = avg;
-				idx2 = i;
-			}
-		});
-		console.log('minimum distance variant is ' + variants[idx1] + ' with ' + (average[idx1] / size).toFixed(4) + ', next is ' + variants[idx2] + ' with ' + (average[idx2] / size).toFixed(4));
-/*var idx3;
-average.forEach(function(avg, i){
-	if(avg > min){
-		min = avg;
-		idx3 = i;
-	}
-});
-console.log('maximum distance variant is ' + variants[idx3] + ' with ' + (average[idx3] / size).toFixed(4));*/
+		average.sort(function(a, b){ return a.distance - b.distance; });
+		console.log(average);
+		console.log('minimum distance variant is ' + average[0].variant + ' with ' + average[0].distance.toFixed(4) + ', next is ' + average[1].variant + ' with ' + average[1].distance.toFixed(4));
+		console.log('maximum distance variant is ' + average[average.length - 1].variant + ' with ' + average[average.length - 1].distance.toFixed(4));
 
 		//cluster variants
 		var clusteredVariants = Clusterer.cluster(matrix, variants);
