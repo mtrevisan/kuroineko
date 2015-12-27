@@ -9,15 +9,17 @@ define(function(){
 		if(matrix.length != matrix[0].length)
 			throw 'Matrix is not square';
 
-		var minimum;
+		var tree = [],
+			minimum;
 		//continue until the matrix collapses into one element
 		while(matrix.length > 1){
 			minimum = findMinimum(matrix);
 
-			collapseVariants(variants, minimum);
+			collapseVariants(variants, minimum, tree);
 
 			collapseDistances(matrix, minimum);
 		}
+//console.log(tree);
 console.log(variants[0]);
 		return variants[0];
 	};
@@ -50,12 +52,16 @@ console.log(variants[0]);
 	 *
 	 * @private
 	 */
-	var collapseVariants = function(variants, indicesVariants){
+	var collapseVariants = function(variants, indicesVariants, tree){
 		var v1 = indicesVariants[0],
-			v2 = indicesVariants[1];
+			v2 = indicesVariants[1],
+			dist = indicesVariants[2];
 		if(v2 > v1)
 			v2 --;
-		variants.push('(' + [variants.splice(v1, 1), variants.splice(v2, 1)].sort().join('|') + ':' + indicesVariants[2].toFixed(4) + ')');
+		v1 = variants.splice(v1, 1)[0];
+		v2 = variants.splice(v2, 1)[0];
+//tree.push({variant1: v1, variant2: v2, distance: dist});
+		variants.push('(' + [v1, v2].sort().join('|') + ':' + dist.toFixed(4) + ')');
 	};
 
 	/**
