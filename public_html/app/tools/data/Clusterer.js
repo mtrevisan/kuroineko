@@ -12,6 +12,7 @@ define(function(){
 		var tree = [],
 			minimum;
 		//continue until the matrix collapses into one element
+		variants = variants.splice(0);
 		while(matrix.length > 1){
 			minimum = findMinimum(matrix);
 
@@ -31,17 +32,17 @@ console.log(variants[0]);
 	 */
 	var findMinimum = function(matrix){
 		var rows = matrix.length,
-			result = [-1, -1, Number.MAX_VALUE],
+			result = {dist: Number.MAX_VALUE},
 			i, j,
 			value;
 		for(i = 0; i < rows; i ++)
 			for(j = i + 1; j < rows; j ++){
 				value = matrix[i][j];
-				if(value < result[2]){
-					//reckon the two variants, v1 and v2
-					result[0] = i;
-					result[1] = j;
-					result[2] = value;
+				if(value < result.dist){
+					//reckon the two variants
+					result.v1 = i;
+					result.v2 = j;
+					result.dist = value;
 				}
 			}
 		return result;
@@ -53,9 +54,9 @@ console.log(variants[0]);
 	 * @private
 	 */
 	var collapseVariants = function(variants, indicesVariants, tree){
-		var v1 = indicesVariants[0],
-			v2 = indicesVariants[1],
-			dist = indicesVariants[2];
+		var v1 = indicesVariants.v1,
+			v2 = indicesVariants.v2,
+			dist = indicesVariants.dist;
 		if(v2 > v1)
 			v2 --;
 		v1 = variants.splice(v1, 1)[0];
@@ -72,8 +73,8 @@ console.log(variants[0]);
 	 */
 	var collapseDistances = function(matrix, indicesVariants){
 		var rows = matrix.length,
-			v1 = indicesVariants[0],
-			v2 = indicesVariants[1],
+			v1 = indicesVariants.v1,
+			v2 = indicesVariants.v2,
 			i, j;
 		for(i = 0; i < rows; i ++)
 			if(i != v1 && i != v2)
@@ -81,6 +82,11 @@ console.log(variants[0]);
 		matrix[rows] = [];
 		matrix[rows][rows] = 0;
 
+		removeVariants(matrix, v1, v2);
+	};
+
+	/** @private */
+	var removeVariants = function(matrix, v1, v2){
 		if(v2 > v1)
 			v2 --;
 		//remove the rows of the two variants
