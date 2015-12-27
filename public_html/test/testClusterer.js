@@ -178,7 +178,8 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 			i, j;
 		for(i = 0; i < size; i ++){
 			matrix[i] = [];
-			matrix[i][i] = 0;
+			for(j = i; j < size; j ++)
+				matrix[i][j] = 0;
 		}
 
 		//extract IPA characters
@@ -192,13 +193,13 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 		words.forEach(function(word){
 			for(i = 0; i < size; i ++)
 				for(j = i + 1; j < size; j ++)
-					matrix[i][j] = (matrix[i][j] || 0) + StringDistance.getStructuralDistance(word[i], word[j], costs);
+					matrix[i][j] += StringDistance.getStructuralDistance(word[i], word[j], costs);
 		});
 		for(i = 0; i < size; i ++)
 			for(j = i + 1; j < size; j ++)
 				matrix[i][j] /= words.length;
 
-		//calculate variant with minimum distance
+		//calculate total distance for each variant
 		var average = [],
 			sum;
 		for(i = 0; i < size; i ++){
