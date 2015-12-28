@@ -459,6 +459,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		this.environment = convertStringIntoFeatures(environment || '');
 		this.name = name;
 
+
 		this.hasSameStructuralChange = function(rule){
 			return (ObjectHelper.deepEquals(this.target, rule.target) && ObjectHelper.deepEquals(this.transform, rule.transform));
 		};

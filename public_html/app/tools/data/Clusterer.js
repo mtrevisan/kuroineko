@@ -3,14 +3,14 @@
  *
  * @author Mauro Trevisan
  */
-define(function(){
+define(/*['tools/data/structs/Tree'],*/ function(Tree){
 
 	var cluster = function(matrix, variants){
 		if(matrix.length != matrix[0].length)
 			throw 'Matrix is not square';
 
-		var tree = [],
-			minimum;
+//		var tree = new Tree();
+		var minimum;
 		//continue until the matrix collapses into one element
 		variants = variants.splice(0);
 		while(matrix.length > 1){
@@ -54,16 +54,6 @@ console.log(variants[0]);
 	 * @private
 	 */
 	var collapseVariants = function(variants, indicesVariants, tree){
-		/*
-		 value
-		  /\
-		v1  value
-		     /\
-			 v2 v3
-		Node()
-		NodeInternal(value, node)
-		NodeLeaf(variant)
-		*/
 		var v1 = indicesVariants.v1,
 			v2 = indicesVariants.v2,
 			dist = indicesVariants.dist;
@@ -71,8 +61,13 @@ console.log(variants[0]);
 			v2 --;
 		v1 = variants.splice(v1, 1)[0];
 		v2 = variants.splice(v2, 1)[0];
-//tree.push({variant1: v1, variant2: v2, distance: dist});
 		variants.push('(' + [v1, v2].sort().join('|') + ':' + dist.toFixed(4) + ')');
+
+//FIXME
+//v1 = v1.replace(/:[.\d]+/g, '');
+//v2 = v2.replace(/:[.\d]+/g, '');
+//tree.add((v1.indexOf('(') >= 0? v1: (v2.indexOf('(') >= 0? v2: undefined)),
+//	'(' + [v1, v2].sort().join('|') + ')', {variant1: v1, variant2: v2, distance: dist});
 	};
 
 	/**
