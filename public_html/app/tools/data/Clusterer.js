@@ -3,14 +3,14 @@
  *
  * @author Mauro Trevisan
  */
-define(/*['tools/data/structs/Tree'],*/ function(Tree){
+define(['tools/data/structs/Tree'], function(Tree){
 
 	var cluster = function(matrix, variants){
 		if(matrix.length != matrix[0].length)
 			throw 'Matrix is not square';
 
-//		var tree = new Tree();
-		var minimum;
+		var tree = new Tree(),
+			minimum;
 		//continue until the matrix collapses into one element
 		variants = variants.splice(0);
 		while(matrix.length > 1){
@@ -20,9 +20,11 @@ define(/*['tools/data/structs/Tree'],*/ function(Tree){
 
 			collapseDistances(matrix, minimum);
 		}
-//console.log(tree);
-console.log(variants[0]);
-		return variants[0];
+		variants = variants[0];
+
+console.log(tree);
+console.log(variants);
+		return variants;
 	};
 
 	/**
@@ -63,11 +65,13 @@ console.log(variants[0]);
 		v2 = variants.splice(v2, 1)[0];
 		variants.push('(' + [v1, v2].sort().join('|') + ':' + dist.toFixed(4) + ')');
 
-//FIXME
-//v1 = v1.replace(/:[.\d]+/g, '');
-//v2 = v2.replace(/:[.\d]+/g, '');
-//tree.add((v1.indexOf('(') >= 0? v1: (v2.indexOf('(') >= 0? v2: undefined)),
-//	'(' + [v1, v2].sort().join('|') + ')', {variant1: v1, variant2: v2, distance: dist});
+		v1 = v1.replace(/:[.\d]+/g, '');
+		v2 = v2.replace(/:[.\d]+/g, '');
+		if(v1.indexOf('|') < 0)
+			tree.addChild(undefined, v1);
+		if(v2.indexOf('|') < 0)
+			tree.addChild(undefined, v2);
+		tree.insertParent(v1, v2, '(' + [v1, v2].sort().join('|') + ')', {variant1: v1, variant2: v2, distance: dist});
 	};
 
 	/**
