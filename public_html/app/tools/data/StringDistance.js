@@ -10,6 +10,10 @@
  */
 define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
+	/** @constant */
+	var REGEX_UNICODE_SPLITTER = /(\[([^\]]+)\]|j²|[^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u035B\u035D-\u0360\u0362-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*(?:[\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*[\u035C\u0361][^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*)?)/g;
+
+
 	/* *
 	 * Compute the Levenshtein distance between two strings.<p>
 	 * Time: <code>O(p * min(n, m))</code>, where <code>p</code> is the edit distance, Space: <code>O(min(n, m))</code>
@@ -147,12 +151,15 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	 * Compute the Levenshtein distance between two strings.<p>
 	 * Time: <code>O(p * min(n, m))</code>, where <code>p</code> is the edit distance, Space: <code>O(min(n, m))</code>
 	 *
-	 * @param {String} a			First string.
-	 * @param {String} b			Second string.
+	 * @param {String/Array} a	First string.
+	 * @param {String/Array} b	Second string.
 	 * @param {Object} costs	Cost configuration object like <code>{insertion: 1, deletion: 1, modification: 0.5, exchange: 0.5, matchingFn: function(from, to, costs){ return (from == to? 0: costs.modification); }}</code>
 	 * @return {Number}
 	 */
 	var levenshteinDistance = function(a, b, costs){
+		a = (Array.isArray(a)? a: a.match(REGEX_UNICODE_SPLITTER));
+		b = (Array.isArray(b)? b: b.match(REGEX_UNICODE_SPLITTER));
+
 		var n = a.length,
 			m = b.length;
 
@@ -279,6 +286,8 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 
 	return {
+		REGEX_UNICODE_SPLITTER: REGEX_UNICODE_SPLITTER,
+
 		levenshteinDistance: levenshteinDistance,
 		alignmentLength: alignmentLength,
 		getStructuralDistance: getStructuralDistance

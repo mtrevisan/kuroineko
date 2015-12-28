@@ -165,7 +165,7 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 			costs = {
 				insertion: 1,
 				deletion: 1,
-				exchange: 0.5,
+				//exchange: 0.5,
 				matchingFn: function(from, to){
 					if(from == to)
 						return 0;
@@ -185,7 +185,7 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 		//extract IPA characters
 		words = words.map(function(word){
 			return word.map(function(w){
-				return w.match(Phone.REGEX_UNICODE_SPLITTER);
+				return w.match(StringDistance.REGEX_UNICODE_SPLITTER);
 			});
 		});
 

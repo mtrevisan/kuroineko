@@ -81,8 +81,8 @@ define(function(){
 		while(level.length){
 			node = level.shift();
 			Object.keys(node.children).forEach(function(i){
-				level.push(node.children[i]);
-			});
+				level.push(this[i]);
+			}, node.children);
 
 			if(node.leaf)
 				fn(node);

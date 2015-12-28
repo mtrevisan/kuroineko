@@ -54,6 +54,16 @@ console.log(variants[0]);
 	 * @private
 	 */
 	var collapseVariants = function(variants, indicesVariants, tree){
+		/*
+		 value
+		  /\
+		v1  value
+		     /\
+			 v2 v3
+		Node()
+		NodeInternal(value, node)
+		NodeLeaf(variant)
+		*/
 		var v1 = indicesVariants.v1,
 			v2 = indicesVariants.v2,
 			dist = indicesVariants.dist;
