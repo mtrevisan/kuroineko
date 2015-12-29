@@ -26,8 +26,10 @@ define(function(){
 	 */
 	var addChild = function(nodeId, nodeData, id){
 		var node = this.findByID(id);
-		if(node)
+		if(node){
+			node.children = node.children || [];
 			node.children.push(createNode(nodeId, nodeData, node));
+		}
 		return !!node;
 	};
 
