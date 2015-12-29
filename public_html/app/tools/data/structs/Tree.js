@@ -25,14 +25,9 @@ define(function(){
 	 * @return <code>true</code> if the new node is inserted
 	 */
 	var addChild = function(nodeId, nodeData, id){
-		var node = this.findByID(id),
-			data;
-		if(node){
-			data = {id: nodeId, parent: node};
-			if(nodeData)
-				data.data = nodeData;
-			node.children.push(data);
-		}
+		var node = this.findByID(id);
+		if(node)
+			node.children.push(createNode(nodeId, nodeData, node));
 		return !!node;
 	};
 
@@ -49,28 +44,40 @@ define(function(){
 			nodes = ids.map(this.findByID, this),
 			parent = (nodes[0]? nodes[0].parent: undefined),
 			found = nodes.every(function(node){ return (!!node && node.parent === parent); }),
-			count, children,
-			i, n, data;
+			count, children, i;
 		if(found){
 			count = 0;
 			children = parent.children;
-			for(i = (children? children.length: 0) - 1; i >= 0; i --){
-				n = children[i];
-				if(ids.indexOf(n.id) >= 0){
-					count ++;
-
+			for(i = (children? children.length: 0) - 1; i >= 0; i --)
+				if(ids.indexOf(children[i].id) >= 0){
 					children.splice(i, 1);
 
-					if(count == ids.length)
+					if(++ count == ids.length)
 						break;
 				}
-			}
-			data = {id: nodeId, children: nodes, parent: parent};
-			if(nodeData)
-				data.data = nodeData;
-			children.push(data);
+			children.push(createNode(nodeId, nodeData, parent, nodes));
 		}
 		return found;
+	};
+
+	/**
+	 * Create a new node.
+	 *
+	 * @param {String} id			ID of the new node
+	 * @param {[Object]} data		Data to add to the new node
+	 * @param {Node} parent			Parent node
+	 * @param {[Node[]]} children	Children of the new node
+	 * @returns {Node}
+	 *
+	 * @private
+	 */
+	var createNode = function(id, data, parent, children){
+		var obj = {id: id, parent: parent};
+		if(children)
+			obj.children = children;
+		if(data)
+			obj.data = data;
+		return obj;
 	};
 
 	/**
