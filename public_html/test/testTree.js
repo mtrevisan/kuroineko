@@ -21,6 +21,21 @@ require(['tools/data/structs/Tree'], function(Tree){
 		ok(t.findByID('abb'));
 	});
 
+	QUnit.test('tree - find non existent 1', function(){
+		var t = new Tree();
+
+		t.addChild('abc', {data: 'abc'});
+		t.addChild('abb', undefined, 'abc');
+
+		notOk(t.findByID('ab'));
+	});
+
+	QUnit.test('tree - find non existent 2', function(){
+		var t = new Tree();
+
+		notOk(t.findByID('ab'));
+	});
+
 	QUnit.test('tree - remove', function(){
 		var t = new Tree();
 

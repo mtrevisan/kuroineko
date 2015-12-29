@@ -11,9 +11,7 @@ define(function(){
 
 
 	var reset = function(){
-		this.root = {
-			children: []
-		};
+		this.root = {};
 	};
 
 	/**
@@ -88,7 +86,7 @@ define(function(){
 	 * @param {String} id	ID of the node, or node, to delete
 	 * @return <code>true</code> if the new node is deleted
 	 */
-	var remove = function(id){
+	var remove = function(id, bypassNode){
 		var node = this.findByID(id),
 			children, i;
 		if(node){
@@ -102,17 +100,14 @@ define(function(){
 				}
 
 			//transfer all of this node's children into parent's children, bypassing the deleted node
-			if(node.children)
+			if(bypassNode == true && node.children){
+				node.children = node.children || [];
 				node.children.forEach(function(child){
 					this.push(child);
 				}, children);
+			}
 		}
 		return !!node;
-	};
-
-	/** Find a node with a given ID. */
-	var findByID = function(id){
-		return this.find(function(node){ return (node.id === id); });
 	};
 
 	/** Apply a function to each node, traversing the tree in level order, until the function responds <code>true</code>. */
@@ -132,12 +127,28 @@ define(function(){
 		return undefined;
 	};
 
+	/** Find a node with a given ID. */
+	var findByID = function(id){
+		return this.find(function(node){
+			return (node.id === id);
+		});
+	};
+
 	/** Apply a function to each node, traversing the tree in level order. */
-	var apply = function(fn, scope){
+	var applyOnNodes = function(fn, scope){
 		this.find(function(node){
 			fn.call(this, node);
 			return false;
-		}, scope);
+		}, scope || this);
+	};
+
+	/** Apply a function to each leaf, traversing the tree in level order. */
+	var applyOnLeaves = function(fn, scope){
+		this.find(function(node){
+			if(!node.children || !node.children.length)
+				fn.call(this, node);
+			return false;
+		}, scope || this);
 	};
 
 
@@ -151,7 +162,8 @@ define(function(){
 		remove: remove,
 		find: find,
 		findByID: findByID,
-		apply: apply
+		applyOnNodes: applyOnNodes,
+		applyOnLeaves: applyOnLeaves
 	};
 
 
