@@ -68,10 +68,10 @@ console.log(variants);
 		v1 = v1.replace(/:[.\d]+/g, '');
 		v2 = v2.replace(/:[.\d]+/g, '');
 		if(v1.indexOf('|') < 0)
-			tree.addChild(undefined, v1);
+			tree.addChild(v1);
 		if(v2.indexOf('|') < 0)
-			tree.addChild(undefined, v2);
-		tree.insertParent(v1, v2, '(' + [v1, v2].sort().join('|') + ')', {variant1: v1, variant2: v2, distance: dist});
+			tree.addChild(v2);
+		tree.insertParent('(' + [v1, v2].sort().join('|') + ')', {distance: dist}, v1, v2);
 	};
 
 	/**

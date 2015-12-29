@@ -19,39 +19,44 @@ define(function(){
 	/**
 	 * Adds a node into the tree.
 	 *
-	 * @param {String} id		ID of the node this node is attached to
-	 * @param {String} nodeId	ID of the new node
-	 * @param {Object} data		Data to add to the new node
+	 * @param {String} nodeId		ID of the new node
+	 * @param {[Object]} nodeData	Data to add to the new node
+	 * @param {[String]} id			ID of the node this node is attached to
 	 * @return <code>true</code> if the new node is inserted
 	 */
-	var addChild = function(id, nodeId, data){
-		var node = this.findByID(id);
-		if(node)
-			node.children.push({id: nodeId, data: data, children: [], parent: node});
+	var addChild = function(nodeId, nodeData, id){
+		var node = this.findByID(id),
+			data;
+		if(node){
+			data = {id: nodeId, parent: node};
+			if(nodeData)
+				data.data = nodeData;
+			node.children.push(data);
+		}
 		return !!node;
 	};
 
 	/**
 	 * Inserts a node into the tree as the parent of two nodes.
 	 *
-	 * @param {String} id1		ID of the first node this node is attached to
-	 * @param {String} id2		ID of the second node this node is attached to
-	 * @param {String} nodeId	ID of the new node
-	 * @param {Object} data		Data to add to the new node
+	 * @param {String} nodeId		ID of the new node
+	 * @param {[Object]} nodeData	Data to add to the new node
+	 * @param {[String..]} ids		Array of children IDs this node is attached to
 	 * @return <code>true</code> if the new node is inserted
 	 */
-	var insertParent = function(id1, id2, nodeId, data){
-		var node1 = this.findByID(id1),
-			node2 = this.findByID(id2),
-			found = (node1 && node2 && node1.parent === node2.parent),
+	var insertParent = function(nodeId, nodeData){
+		var ids = Array.prototype.slice.call(arguments, 2),
+			nodes = ids.map(this.findByID, this),
+			parent = (nodes[0]? nodes[0].parent: undefined),
+			found = nodes.every(function(node){ return (!!node && node.parent === parent); }),
 			count, children,
-			i, n;
+			i, n, data;
 		if(found){
 			count = 0;
-			children = node1.parent.children;
-			for(i = children.length - 1; i >= 0; i --){
+			children = parent.children;
+			for(i = (children? children.length: 0) - 1; i >= 0; i --){
 				n = children[i];
-				if(n.id == id1 || n.id == id2){
+				if(ids.indexOf(n.id) >= 0){
 					count ++;
 
 					children.splice(i, 1);
@@ -60,7 +65,10 @@ define(function(){
 						break;
 				}
 			}
-			children.push({id: nodeId, data: data, children: [node1, node2], parent: node1.parent});
+			data = {id: nodeId, children: nodes, parent: parent};
+			if(nodeData)
+				data.data = nodeData;
+			children.push(data);
 		}
 		return found;
 	};
@@ -78,16 +86,17 @@ define(function(){
 			children = node.parent.children;
 
 			//remove deleted node from parent's children
-			for(i = children.length - 1; i >= 0; i --)
+			for(i = (children? children.length: 0) - 1; i >= 0; i --)
 				if(children[i].id === id){
 					children.splice(i, 1);
 					break;
 				}
 
 			//transfer all of this node's children into parent's children, bypassing the deleted node
-			node.children.forEach(function(child){
-				this.push(child);
-			}, children);
+			if(node.children)
+				node.children.forEach(function(child){
+					this.push(child);
+				}, children);
 		}
 		return !!node;
 	};
@@ -103,9 +112,10 @@ define(function(){
 			node;
 		while(level.length){
 			node = level.shift();
-			node.children.forEach(function(child){
-				this.push(child);
-			}, level);
+			if(node.children)
+				node.children.forEach(function(child){
+					this.push(child);
+				}, level);
 
 			if(fn.call(scope || this, node) === true)
 				return node;
