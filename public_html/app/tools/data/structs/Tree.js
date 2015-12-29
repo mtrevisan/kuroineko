@@ -126,7 +126,7 @@ define(function(){
 	/** Apply a function to each node, traversing the tree in level order. */
 	var apply = function(fn, scope){
 		this.find(function(node){
-			fn.call(scope || this, node);
+			fn.call(this, node);
 			return false;
 		}, scope);
 	};
