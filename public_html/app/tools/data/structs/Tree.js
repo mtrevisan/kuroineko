@@ -61,7 +61,7 @@ define(function(){
 
 					children.splice(i, 1);
 
-					if(count == 2)
+					if(count == ids.length)
 						break;
 				}
 			}
