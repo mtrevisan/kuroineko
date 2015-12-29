@@ -216,8 +216,9 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 		console.log('maximum distance variant is ' + average[average.length - 1].variant + ' with ' + average[average.length - 1].distance.toFixed(4));
 
 		//cluster variants
-		var clusteredVariants = Clusterer.cluster(matrix, variants);
+		var response = Clusterer.cluster(matrix, variants);
 
-		equal(clusteredVariants, '(((((((((((Istrana|Meolo:0.0555)|Campo San Martino:0.0687)|Treviso:0.0920)|Romano:0.0966)|Venezia:0.1112)|(((((Montebello|Vicenza:0.0372)|Crespadoro:0.0514)|Tonezza:0.0684)|Villa Estense:0.0897)|(Cavarzare|Teolo:0.1093):0.1222):0.1285)|Fratta Polesine:0.1310)|(((((Casan|Vas:0.0749)|Belluno:0.0861)|Tarzo:0.1050)|(Lovadina|San Stino:0.0847):0.1450)|(((Cerea|Verona:0.0706)|Raldon:0.0808)|Albisano:0.1356):0.1821):0.1890)|Cencenighe:0.2449)|(((Auronzo|Pozzale:0.1631)|Cortina:0.2057)|(Costalta|Padola:0.1654):0.2524):0.2995)|Rèba:0.3175)');
+console.log(response);
+		equal(response.printedTree, '(((((((((((((Montebello|Vicenza:0.0343)|Crespadoro:0.0504)|Tonezza:0.0668)|Villa Estense:0.0896)|Teolo:0.1072)|(Cavarzare|Fratta Polesine:0.1129):0.1242)|(((((Istrana|Meolo:0.0562)|Campo San Martino:0.0697)|Treviso:0.0933)|Venezia:0.0975)|Romano:0.1095):0.1308)|(((Cerea|Verona:0.0716)|Raldon:0.0819)|Albisano:0.1374):0.1821)|((((Casan|Vas:0.0759)|Belluno:0.0872)|Tarzo:0.1065)|(Lovadina|San Stino:0.0825):0.1453):0.1834)|Cencenighe:0.2261)|(((Auronzo|Pozzale:0.1610)|Cortina:0.2021)|(Costalta|Padola:0.1642):0.2513):0.2966)|Rèba:0.3156)|Italia:0.3997)');
 	});
 });

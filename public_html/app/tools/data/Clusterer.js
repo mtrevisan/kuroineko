@@ -22,9 +22,7 @@ define(['tools/data/structs/Tree'], function(Tree){
 		}
 		variants = variants[0];
 
-console.log(tree);
-console.log(variants);
-		return variants;
+		return {tree: tree, printedTree: variants};
 	};
 
 	/**
