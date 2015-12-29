@@ -8,6 +8,8 @@ define(['tools/data/structs/Tree'], function(Tree){
 	var cluster = function(matrix, variants){
 		if(matrix.length != matrix[0].length)
 			throw 'Matrix is not square';
+		if(matrix.length != variants.length)
+			throw 'Matrix dimension does not match the number of variants';
 
 		var tree = new Tree(),
 			minimum;
@@ -20,9 +22,8 @@ define(['tools/data/structs/Tree'], function(Tree){
 
 			collapseDistances(matrix, minimum);
 		}
-		variants = variants[0];
 
-		return {tree: tree, printedTree: variants};
+		return {tree: tree, printedTree: variants[0]};
 	};
 
 	/**
