@@ -22,8 +22,9 @@ define(['tools/data/structs/Tree'], function(Tree){
 
 			collapseDistances(matrix, minimum);
 		}
+console.log(variants[0]);
 
-		return {tree: tree, printedTree: variants[0]};
+		return tree;
 	};
 
 	/**
