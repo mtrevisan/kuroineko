@@ -48,39 +48,41 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	/** @constant */
 		PRONOMENAL_MARK_2 = REDUCTION_RESERVED_0 + 5,
 	/** @constant */
-		//PRONOMENAL_MARK_RESERVED_1 = REDUCTION_RESERVED_0 + 6,
+		PRONOMENAL_MARK_3 = REDUCTION_RESERVED_0 + 6,
 	/** @constant */
-		PRONOMENAL_IMPERATIVE_MARK_2 = REDUCTION_RESERVED_0 + 6,
+		//PRONOMENAL_MARK_RESERVED_1 = REDUCTION_RESERVED_0 + 7,
 	/** @constant */
-		FINAL_CONSONANT_VOICING_MARK = REDUCTION_RESERVED_0 + 7,
+		PRONOMENAL_IMPERATIVE_MARK_2 = REDUCTION_RESERVED_0 + 7,
 	/** @constant */
-		INTERROGATIVE_MARK_1S = REDUCTION_RESERVED_0 + 8,
+		FINAL_CONSONANT_VOICING_MARK = REDUCTION_RESERVED_0 + 8,
 	/** @constant */
-		INTERROGATIVE_MARK_1S_2 = REDUCTION_RESERVED_0 + 9,
+		INTERROGATIVE_MARK_1S = REDUCTION_RESERVED_0 + 9,
 	/** @constant */
-		INTERROGATIVE_MARK_1P = REDUCTION_RESERVED_0 + 10,
+		INTERROGATIVE_MARK_1S_2 = REDUCTION_RESERVED_0 + 10,
 	/** @constant */
-		INTERROGATIVE_MARK_1P_2 = REDUCTION_RESERVED_0 + 11,
+		INTERROGATIVE_MARK_1P = REDUCTION_RESERVED_0 + 11,
 	/** @constant */
-		INTERROGATIVE_MARK_2S = REDUCTION_RESERVED_0 + 12,
+		INTERROGATIVE_MARK_1P_2 = REDUCTION_RESERVED_0 + 12,
 	/** @constant */
-		INTERROGATIVE_MARK_2S_2 = REDUCTION_RESERVED_0 + 13,
+		INTERROGATIVE_MARK_2S = REDUCTION_RESERVED_0 + 13,
 	/** @constant */
-		INTERROGATIVE_MARK_2P = REDUCTION_RESERVED_0 + 14,
+		INTERROGATIVE_MARK_2S_2 = REDUCTION_RESERVED_0 + 14,
 	/** @constant */
-		INTERROGATIVE_MARK_2P_2 = REDUCTION_RESERVED_0 + 15,
+		INTERROGATIVE_MARK_2P = REDUCTION_RESERVED_0 + 15,
 	/** @constant */
-		INTERROGATIVE_MARK_3 = REDUCTION_RESERVED_0 + 16,
+		INTERROGATIVE_MARK_2P_2 = REDUCTION_RESERVED_0 + 16,
 	/** @constant */
-		INTERROGATIVE_MARK_3_2 = REDUCTION_RESERVED_0 + 17,
+		INTERROGATIVE_MARK_3 = REDUCTION_RESERVED_0 + 17,
 	/** @constant */
-		INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE = REDUCTION_RESERVED_0 + 18,
+		INTERROGATIVE_MARK_3_2 = REDUCTION_RESERVED_0 + 18,
 	/** @constant */
-		SUBSTANTIVES = REDUCTION_RESERVED_0 + 19,
+		INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE = REDUCTION_RESERVED_0 + 19,
 	/** @constant */
-		PLANTS_AND_CRAFTS = REDUCTION_RESERVED_0 + 20,
+		SUBSTANTIVES = REDUCTION_RESERVED_0 + 20,
 	/** @constant */
-		PLANTS_AND_CRAFTS_RESERVED_0 = REDUCTION_RESERVED_0 + 21;
+		PLANTS_AND_CRAFTS = REDUCTION_RESERVED_0 + 21,
+	/** @constant */
+		PLANTS_AND_CRAFTS_RESERVED_0 = REDUCTION_RESERVED_0 + 22;
 
 	var adjectives = {
 		0: [
@@ -122,7 +124,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		2: [
 			//[PRONOMENAL_MARK_2, '0>l[oaie]', '0>me/' + PRONOMENAL_MARK_RESERVED_1, '0>te/' + PRONOMENAL_MARK_RESERVED_1, '0>ve/' + PRONOMENAL_MARK_RESERVED_1, '0>se/' + PRONOMENAL_MARK_RESERVED_1, '0>ge/' + PRONOMENAL_MARK_RESERVED_1, '0>ne'],
 			//[PRONOMENAL_MARK_RESERVED_1, '0>ne', '0>l[oaie]'],
-			[PRONOMENAL_MARK_2, '0>l[oaie]', '0>me(ne)', '0>mel[oaie]', '0>te(ne)', '0>tel[oaie]', '0>ve(ne)', '0>vel[oaie]', '0>se(ne)', '0>sel[oaie]', '0>ge(ne)', '0>gel[oaie]', '0>ne'],
+			[PRONOMENAL_MARK_2, '0>l[oaie]', '0>me', '0>te', '0>ve', '0>se', '0>ge', '0>ne'],
+			[PRONOMENAL_MARK_3, '0>mene', '0>mel[oaie]', '0>tene', '0>tel[oaie]', '0>vene', '0>vel[oaie]', '0>sene', '0>sel[oaie]', '0>gene', '0>gel[oaie]'],
 			[PRONOMENAL_IMPERATIVE_MARK_2, '0>me|[^a]', '0>ne|[^a]', '0>te|[^a]', '0>ve|[^a]', '0>l[oaie]|[^a]', '0>ge|[^a]', 'a>eme|a', 'a>ene|a', 'a>ete|a', 'a>eve|a', 'a>el[oaie]|a', 'a>ege|a']
 		]
 	};
@@ -970,9 +973,13 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			var pronomenalMark = (!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK + FLAG_SEPARATOR: '');
-
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'r', null, null, '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK + MARKER_FLAGS);
+			if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'r', null, null, '/' + PRONOMENAL_MARK + FLAG_SEPARATOR + MARKER_FLAGS);
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'rme', /me$/, '', '/' + PRONOMENAL_MARK_2);
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'rmelo', /melo$/, '', '/' + PRONOMENAL_MARK_3);
+			}
+			else
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'r', null, null, '/' + MARKER_FLAGS);
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 're');
 		}
 	};
@@ -1096,24 +1103,46 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			var pronomenalMark = (!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK + FLAG_SEPARATOR: '');
-
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'ndo', null, null, '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK + MARKER_FLAGS);
-			if(verb.irregularity.eser)
-				insert(paradigm, theme, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'èser'.length) + 'siàndo', null, null, '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK);
-			else if(verb.irregularity.aver)
-				insert(paradigm, theme, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'aver'.length) + 'abiàndo', null, null, '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK);
+			if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'ndo', null, null, '/' + PRONOMENAL_MARK + FLAG_SEPARATOR + MARKER_FLAGS);
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'ndome', /me$/, '', '/' + PRONOMENAL_MARK_2);
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'ndomelo', /melo$/, '', '/' + PRONOMENAL_MARK_3);
+			}
+			else
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'ndo', null, null, '/' + MARKER_FLAGS);
+			if(verb.irregularity.eser){
+				insert(paradigm, theme, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'èser'.length) + 'siàndo');
+//				insert(paradigm, theme, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'èser'.length) + 'siàndome', /me$/, '', '/' + PRONOMENAL_MARK_2);
+//				insert(paradigm, theme, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'èser'.length) + 'siàndomelo', /melo$/, '', '/' + PRONOMENAL_MARK_3);
+			}
+			else if(verb.irregularity.aver){
+				insert(paradigm, theme, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'aver'.length) + 'abiàndo');
+//				insert(paradigm, theme, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'aver'.length) + 'abiàndome', /me$/, '', '/' + PRONOMENAL_MARK_2);
+//				insert(paradigm, theme, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'aver'.length) + 'abiàndomelo', /melo$/, '', '/' + PRONOMENAL_MARK_3);
+			}
 
 			//Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug.
 			if(runAllForms){
 				var themeT2;
 				if(themes.themeT2.match(/à$/)){
 					themeT2 = themes.themeT2.replace(/à$/, 'é');
-					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK + MARKER_FLAGS);
+					if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
+						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + PRONOMENAL_MARK + FLAG_SEPARATOR + MARKER_FLAGS);
+						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndome', /me$/, '', '/' + PRONOMENAL_MARK_2);
+						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndomelo', /melo$/, '', '/' + PRONOMENAL_MARK_3);
+					}
+					else
+						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + MARKER_FLAGS);
 				}
 				if(themes.themeT2.match(/í$/)){
 					themeT2 = themes.themeT2.replace(/í$/, 'é');
-					insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK + MARKER_FLAGS);
+					if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
+						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + PRONOMENAL_MARK + FLAG_SEPARATOR + MARKER_FLAGS);
+						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndome', /me$/, '', '/' + PRONOMENAL_MARK_2);
+						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndomelo', /melo$/, '', '/' + PRONOMENAL_MARK_3);
+					}
+					else
+						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + MARKER_FLAGS);
 				}
 			}
 		}
@@ -1305,11 +1334,15 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			var conj = getIrregularVerbConjugation(type, verb);
 
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT5, null, null, '/' + PRONOMENAL_IMPERATIVE_MARK);
-			if(conj == 2)
+			insert(paradigm, theme, verb.infinitive, origin, (themes.themeT5 + 'me'), /me$/, '', '/' + PRONOMENAL_IMPERATIVE_MARK_2);
+			if(conj == 2){
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT5.replace(/i?é$/, 'í'), null, null, '/' + PRONOMENAL_IMPERATIVE_MARK);
-			else
+				insert(paradigm, theme, verb.infinitive, origin, (themes.themeT5.replace(/i?é$/, 'í') + 'me'), /me$/, '', '/' + PRONOMENAL_IMPERATIVE_MARK_2);
+			}
+			else{
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT5.replace(/[èí]$/, 'é'), null, null, '/' + PRONOMENAL_IMPERATIVE_MARK);
-
+				insert(paradigm, theme, verb.infinitive, origin, (themes.themeT5.replace(/i?é$/, 'í') + 'me'), /me$/, '', '/' + PRONOMENAL_IMPERATIVE_MARK_2);
+			}
 		}
 	};
 
@@ -1383,8 +1416,13 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				origins.push(origin);
 
 			if(verb.conjugation == 3){
-				var pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK + FLAG_SEPARATOR: '');
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT7 + 'ndo', null, null, '/' + pronomenalMark + PRONOMENAL_IMPERATIVE_MARK);
+				if(!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
+					insert(paradigm, theme, verb.infinitive, origin, themes.themeT7 + 'ndo', null, null, '/' + PRONOMENAL_MARK);
+					insert(paradigm, theme, verb.infinitive, origin, themes.themeT7 + 'ndome', /me$/, '', '/' + PRONOMENAL_MARK_2);
+					insert(paradigm, theme, verb.infinitive, origin, themes.themeT7 + 'ndomelo', /melo$/, '', '/' + PRONOMENAL_MARK_3);
+				}
+				else
+					insert(paradigm, theme, verb.infinitive, origin, themes.themeT7 + 'ndo');
 			}
 		}
 	};
@@ -1597,7 +1635,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				origins.push(origin);
 
 			expandForm(themes.themeT9).forEach(function(t){
-				insert(paradigm, theme, verb.infinitive, origin, t, null, null, '/' + [PRONOMENAL_MARK, PRONOMENAL_IMPERATIVE_MARK].join(FLAG_SEPARATOR) + MARKER_FLAGS);
+				insert(paradigm, theme, verb.infinitive, origin, t, null, null, '/' + PRONOMENAL_IMPERATIVE_MARK + MARKER_FLAGS);
+				insert(paradigm, theme, verb.infinitive, origin, t + 'me', /me$/, '', '/' + PRONOMENAL_IMPERATIVE_MARK_2);
 			});
 		}
 	};
