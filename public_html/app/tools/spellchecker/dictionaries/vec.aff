@@ -49,7 +49,7 @@ MAP oòóOÒÓ
 MAP uúùUÙÚ
 
 # frequently switched character groups
-REP 40
+REP 43
 REP dh   d
 REP đ    d
 REP dh   đ
@@ -88,8 +88,11 @@ REP sñ   xñ
 REP sn   xn
 REP sr   xr
 REP sj   xj
-REP ixar iđar
-REP sion ŧion
+REP ixar$ iđar
+REP sion$ ŧion
+REP ixare$ iđare
+REP sione$ ŧione
+REP sioni$ ŧioni
 # REP đ[aàeèéiíoòóuú] d.
 # REP dh[aàeèéiíoòóuú] d.
 # REP [aàeèéiíoòóuú]l[aàeèéiíoòóuú] .ƚ.
@@ -107,12 +110,14 @@ REP sion ŧion
 # REP d[ji][aàeèéiíoòóuú] ɉ.
 
 # replace double-characters with single ones
-ICONV 5
+ICONV 7
 ICONV dh đ
 ICONV jh ɉ
 ICONV lh ƚ
 ICONV nh ñ
 ICONV th ŧ
+ICONV – -
+ICONV ― -
 #ICONV ‘ '
 #ICONV ’ '
 
