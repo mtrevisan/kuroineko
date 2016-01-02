@@ -388,6 +388,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 					return result.replace(/\/.+ (.+)$/, printFlags2(flags) + ' $1');
 				}, log): log);
 			}
+			else
+				lgs.push(lg);
 		});
 		setElements(logs, ArrayHelper.unique(lgs));
 
