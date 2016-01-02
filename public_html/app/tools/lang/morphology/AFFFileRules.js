@@ -1659,6 +1659,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 			//FIXME
 			//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
+			insert(paradigm, theme, verb.infinitive, origin, themes.themeT11 + 'ié', /ié$/, '(is)ié(de/ge)', '/' + INTERROGATIVE_MARK_2P);
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT11 + 'ón', /on$/, (!themes.themeT11.match(/[cijɉñ]$/)? '(i)on': 'on'), '/' + INTERROGATIVE_MARK_1P);
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT11 + 'isón', /on$/, '(i)on', '/' + INTERROGATIVE_MARK_1P);
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT11 + 'én', /en$/, '(is)en', '/' + INTERROGATIVE_MARK_1P);
