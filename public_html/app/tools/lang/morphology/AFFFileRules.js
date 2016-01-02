@@ -46,35 +46,41 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	/** @constant */
 		PRONOMENAL_IMPERATIVE_MARK = REDUCTION_RESERVED_0 + 4,
 	/** @constant */
-		FINAL_CONSONANT_VOICING_MARK = REDUCTION_RESERVED_0 + 5,
+		PRONOMENAL_MARK_2 = REDUCTION_RESERVED_0 + 5,
 	/** @constant */
-		INTERROGATIVE_MARK_1S = REDUCTION_RESERVED_0 + 6,
+		//PRONOMENAL_MARK_RESERVED_1 = REDUCTION_RESERVED_0 + 6,
 	/** @constant */
-		INTERROGATIVE_MARK_1S_2 = REDUCTION_RESERVED_0 + 7,
+		PRONOMENAL_IMPERATIVE_MARK_2 = REDUCTION_RESERVED_0 + 6,
 	/** @constant */
-		INTERROGATIVE_MARK_1P = REDUCTION_RESERVED_0 + 8,
+		FINAL_CONSONANT_VOICING_MARK = REDUCTION_RESERVED_0 + 7,
 	/** @constant */
-		INTERROGATIVE_MARK_1P_2 = REDUCTION_RESERVED_0 + 9,
+		INTERROGATIVE_MARK_1S = REDUCTION_RESERVED_0 + 8,
 	/** @constant */
-		INTERROGATIVE_MARK_2S = REDUCTION_RESERVED_0 + 10,
+		INTERROGATIVE_MARK_1S_2 = REDUCTION_RESERVED_0 + 9,
 	/** @constant */
-		INTERROGATIVE_MARK_2S_2 = REDUCTION_RESERVED_0 + 11,
+		INTERROGATIVE_MARK_1P = REDUCTION_RESERVED_0 + 10,
 	/** @constant */
-		INTERROGATIVE_MARK_2P = REDUCTION_RESERVED_0 + 12,
+		INTERROGATIVE_MARK_1P_2 = REDUCTION_RESERVED_0 + 11,
 	/** @constant */
-		INTERROGATIVE_MARK_2P_2 = REDUCTION_RESERVED_0 + 13,
+		INTERROGATIVE_MARK_2S = REDUCTION_RESERVED_0 + 12,
 	/** @constant */
-		INTERROGATIVE_MARK_3 = REDUCTION_RESERVED_0 + 14,
+		INTERROGATIVE_MARK_2S_2 = REDUCTION_RESERVED_0 + 13,
 	/** @constant */
-		INTERROGATIVE_MARK_3_2 = REDUCTION_RESERVED_0 + 15,
+		INTERROGATIVE_MARK_2P = REDUCTION_RESERVED_0 + 14,
 	/** @constant */
-		INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE = REDUCTION_RESERVED_0 + 16,
+		INTERROGATIVE_MARK_2P_2 = REDUCTION_RESERVED_0 + 15,
 	/** @constant */
-		SUBSTANTIVES = REDUCTION_RESERVED_0 + 17,
+		INTERROGATIVE_MARK_3 = REDUCTION_RESERVED_0 + 16,
 	/** @constant */
-		PLANTS_AND_CRAFTS = REDUCTION_RESERVED_0 + 18,
+		INTERROGATIVE_MARK_3_2 = REDUCTION_RESERVED_0 + 17,
 	/** @constant */
-		PLANTS_AND_CRAFTS_RESERVED_0 = REDUCTION_RESERVED_0 + 19;
+		INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE = REDUCTION_RESERVED_0 + 18,
+	/** @constant */
+		SUBSTANTIVES = REDUCTION_RESERVED_0 + 19,
+	/** @constant */
+		PLANTS_AND_CRAFTS = REDUCTION_RESERVED_0 + 20,
+	/** @constant */
+		PLANTS_AND_CRAFTS_RESERVED_0 = REDUCTION_RESERVED_0 + 21;
 
 	var adjectives = {
 		0: [
@@ -110,8 +116,14 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		1: [
 			//[PRONOMENAL_MARK, '0>-l[oaie]', '0>-me/' + PRONOMENAL_MARK_RESERVED_0, '0>-te/' + PRONOMENAL_MARK_RESERVED_0, '0>-ve/' + PRONOMENAL_MARK_RESERVED_0, '0>-se/' + PRONOMENAL_MARK_RESERVED_0, '0>-ge/' + PRONOMENAL_MARK_RESERVED_0, '0>-ne'],
 			//[PRONOMENAL_MARK_RESERVED_0, '0>ne', '0>l[oaie]'],
-			[PRONOMENAL_MARK, '0>-l[oaie]', '0>-me', '0>-mene', '0>-mel[oaie]', '0>-te', '0>-tene', '0>-tel[oaie]', '0>-ve', '0>-vene', '0>-vel[oaie]', '0>-se', '0>-sene', '0>-sel[oaie]', '0>-ge', '0>-gene', '0>-gel[oaie]', '0>-ne'],
+			[PRONOMENAL_MARK, '0>-l[oaie]', '0>-me(ne)', '0>-mel[oaie]', '0>-te(ne)', '0>-tel[oaie]', '0>-ve(ne)', '0>-vel[oaie]', '0>-se(ne)', '0>-sel[oaie]', '0>-ge(ne)', '0>-gel[oaie]', '0>-ne'],
 			[PRONOMENAL_IMPERATIVE_MARK, '0>-me|[^a]', '0>-ne|[^a]', '0>-te|[^a]', '0>-ve|[^a]', '0>-l[oaie]|[^a]', '0>-ge|[^a]', 'a>e-me|a', 'a>e-ne|a', 'a>e-te|a', 'a>e-ve|a', 'a>e-l[oaie]|a', 'a>e-ge|a']
+		],
+		2: [
+			//[PRONOMENAL_MARK_2, '0>l[oaie]', '0>me/' + PRONOMENAL_MARK_RESERVED_1, '0>te/' + PRONOMENAL_MARK_RESERVED_1, '0>ve/' + PRONOMENAL_MARK_RESERVED_1, '0>se/' + PRONOMENAL_MARK_RESERVED_1, '0>ge/' + PRONOMENAL_MARK_RESERVED_1, '0>ne'],
+			//[PRONOMENAL_MARK_RESERVED_1, '0>ne', '0>l[oaie]'],
+			[PRONOMENAL_MARK_2, '0>l[oaie]', '0>me(ne)', '0>mel[oaie]', '0>te(ne)', '0>tel[oaie]', '0>ve(ne)', '0>vel[oaie]', '0>se(ne)', '0>sel[oaie]', '0>ge(ne)', '0>gel[oaie]', '0>ne'],
+			[PRONOMENAL_IMPERATIVE_MARK_2, '0>me|[^a]', '0>ne|[^a]', '0>te|[^a]', '0>ve|[^a]', '0>l[oaie]|[^a]', '0>ge|[^a]', 'a>eme|a', 'a>ene|a', 'a>ete|a', 'a>eve|a', 'a>el[oaie]|a', 'a>ege|a']
 		]
 	};
 
