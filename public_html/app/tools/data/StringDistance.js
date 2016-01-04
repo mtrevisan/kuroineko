@@ -14,172 +14,36 @@ define(function(){
 	var REGEX_UNICODE_SPLITTER = /(\[([^\]]+)\]|j²|[^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u035B\u035D-\u0360\u0362-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*(?:[\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*[\u035C\u0361][^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*)?)/g;
 
 
-	/* *
-	 * Compute the Levenshtein distance between two strings.<p>
-	 * Time: <code>O(p * min(n, m))</code>, where <code>p</code> is the edit distance, Space: <code>O(min(n, m))</code>
-	 *
-	 * @param {String} a			First string.
-	 * @param {String} b			Second string.
-	 * @param {Number} test		Number to test the distance to (in this case the return type is a boolean).
-	 * @param {Object} options	Cost configuration object like <code>{insertion: 1, deletion: 1, modification: 0.5, match: 0}</code>
-	 * @return {Number/Boolean}
-	 * /
-	var levenshteinDistance2 = function(a, b, test, options){
-		var n = a.length,
-			m = b.length;
-		if(m < n)
-			return levenshteinDistance(b, a, test, options);
-
-		//base cases
-		if(a == b)
-			return 0;
-		if(!a.length)
-			return b.length;
-		if(!b.length)
-			return a.length;
-
-		test = Number(test);
-
-		options = options || {};
-		var costs = applyIfNotNumeric(options.costs || {}, {insertion: 1, deletion: 2, modification: 0.5, match: 0});
-
-		var costFn = function(from, to){
-			if(!from && !to)
-				return Number.POSITIVE_INFINITY;
-			return (!from? costs.insertion:
-				(!to? costs.deletion:
-				(from == to? costs.match: costs.modification)));
-		};
-
-		var diff = m - n,
-			delta = Math.min(costs.insertion, costs.deletion),
-			threshold = (isNaN(test)? (diff + 1) * delta: test),
-			r = [],
-			p, r_size, k, k_prime, i, j;
-		while(true){
-			if(threshold >= diff * delta){
-				p = Math.floor((threshold / delta - diff) * 0.5);
-				k = k_prime = -p - diff;
-				r_size = diff + 2 * p;
-				for(i = 0; i <= m; i ++, k ++)
-					for(j = 0; j <= r_size; j ++)
-						r[j] = (!i && i == j + k? 0:
-							Math.min(
-								(ObjectHelper.isDefined(r[j])? r[j]: Number.POSITIVE_INFINITY) + costFn(a[i], b[j + k]),
-								(ObjectHelper.isDefined(r[j + 1])? r[j + 1]: Number.POSITIVE_INFINITY) + costFn(a[i], null),
-								(ObjectHelper.isDefined(r[j - 1])? r[j - 1]: Number.POSITIVE_INFINITY) + costFn(null, b[j + k])
-							)
-						);
-
-				if(!isNaN(test) || r[r_size + k_prime] <= threshold)
-					break;
-			}
-
-			threshold *= 2;
-		}
-		return (isNaN(test)? r[r_size + k_prime]: (r[r_size + k_prime] <= test));
-	};
-
 	/**
 	 * Compute the Levenshtein distance between two strings.<p>
-	 * Time: <code>O(p * min(n, m))</code>, where <code>p</code> is the edit distance, Space: <code>O(min(n, m))</code>
-	 *
-	 * @param {String} a			First string.
-	 * @param {String} b			Second string.
-	 * @param {Number} test		Number to test the distance to (in this case the return type is a boolean).
-	 * @param {Object} options	Cost configuration object like <code>{insertion: 1, deletion: 1, modification: 0.5, match: 0}</code>
-	 * @return {Number/Boolean}
-	 * /
-	var levenshteinDistance3 = function(a, b, test, options){
-		var n = a.length,
-			m = b.length;
-		if(n < m)
-			return levenshteinDistance(b, a, test, options);
-
-		//base cases
-		if(a == b)
-			return 0;
-		if(!n)
-			return m;
-		if(!m)
-			return n;
-
-		test = Number(test);
-
-		options = options || {};
-		var costs = applyIfNotNumeric(options.costs || {}, {insertion: 1, deletion: 2, modification: 0.5, match: 0});
-
-		var costFn = function(from, to){
-			if(!from && !to)
-				return Number.POSITIVE_INFINITY;
-			return (!from? costs.insertion:
-				(!to? costs.deletion:
-				(from == to? costs.match: costs.modification)));
-		};
-
-		//two rows
-		var v0 = [],
-			v1 = [],
-			i, j;
-		//initialize v0 (the previous row of distances)
-		//this row is A[0][i]: edit distance for an empty <code>a</code>
-		//the distance is just the number of characters to delete from <code>b</code>
-		for(i = 0; i <= m; i ++)
-			v0[i] = costs.insertion * i;
-		//calculate v1 (current row distance) from the previous row v0
-		for(i = 0; i < n; i ++){
-			//first element of v1 is A[i+1][0]
-			//edit distance is delete (i+1) chars from <code>a</code> to match empty <code>b</code>
-			v1[0] = costs.deletion * (i + 1);
-
-			//use formula to fill in the rest of the row
-			for(j = 0; j < m; j ++)
-				v1[j + 1] = Math.min(
-					v0[j] + costFn(a[i], b[j]),
-					v1[j] + costFn(a[i], null),
-					v0[j + 1] + costFn(null, b[j])
-					);
-
-			//copy v1 (current row) to v0 (previous row) for next iteration
-			v0 = v1.slice(0);
-		}
-
-		return v1[m];
-	};*/
-
-	/**
-	 * Compute the Levenshtein distance between two strings.<p>
-	 * Time: <code>O(p * min(n, m))</code>, where <code>p</code> is the edit distance, Space: <code>O(min(n, m))</code>
 	 *
 	 * @param {String/Array} a	First string.
 	 * @param {String/Array} b	Second string.
-	 * @param {Object} costs	Cost configuration object like <code>{insertion: 1, deletion: 1, modification: 0.5, exchange: 0.5, matchingFn: function(from, to, costs){ return (from == to? 0: costs.modification); }}</code>
+	 * @param {Object} [costs]	Cost configuration object like <code>{insertion: 1, deletion: 1, substitution: 0.5, matchingFn: function(from, to, costs){ return (from == to? 0: costs.substitution); }}</code>
 	 * @return {Number}
 	 */
 	var levenshteinDistance = function(a, b, costs){
 		a = (Array.isArray(a)? a: a.match(REGEX_UNICODE_SPLITTER));
 		b = (Array.isArray(b)? b: b.match(REGEX_UNICODE_SPLITTER));
-
-		var n = a.length,
-			m = b.length;
-
-		//base cases
-		if(a == b || Array.isArray(a) && a.join('') == b.join(''))
-			return 0;
-		if(!n)
-			return m;
-		if(!m)
-			return n;
-
 		costs = enforceDefaultCosts(costs);
 		if(!costs.insertion)
 			throw 'Cost of insertion cannot be zero';
 		if(!costs.deletion)
 			throw 'Cost of deletion cannot be zero';
-		if(!costs.modification)
-			throw 'Cost of modification cannot be zero';
-		//if(costs.modification > costs.insertion + costs.deletion)
-		//	throw 'Cost of modification should be less than that of insertion plus deletion';
+		if(!costs.substitution)
+			throw 'Cost of substitution cannot be zero';
+		//if(costs.substitution > costs.insertion + costs.deletion)
+		//	throw 'Cost of substitution should be less than that of insertion plus deletion';
+
+		//base cases
+		var n = a.length,
+			m = b.length;
+		if(a == b || Array.isArray(a) && a.join('') == b.join(''))
+			return 0;
+		if(!n)
+			return m * costs.insertion;
+		if(!m)
+			return n * costs.deletion;
 
 		var matchingFn = costs.matchingFn || matchingFnDefault,
 			prevRow = new Array(m + 1),
@@ -216,14 +80,65 @@ define(function(){
 		return nextCol;
 	};
 
+
+	/**
+	 * Compute the Damerau-Levenshtein distance between two strings.<p>
+	 *
+	 * @param {String/Array} a	First string.
+	 * @param {String/Array} b	Second string.
+	 * @param {Object} [costs]	Cost configuration object like <code>{insertion: 1, deletion: 1, substitution: 0.5, transposition: 0.7, matchingFn: function(from, to, costs){ return (from == to? 0: costs.substitution); }}</code>
+	 * @return {Number}
+	 */
+	var damerauLevenshteinDistance = function(a, b, costs){
+		a = (Array.isArray(a)? a: a.match(REGEX_UNICODE_SPLITTER));
+		b = (Array.isArray(b)? b: b.match(REGEX_UNICODE_SPLITTER));
+		costs = enforceDefaultCosts(costs);
+		if(!costs.insertion)
+			throw 'Cost of insertion cannot be zero';
+		if(!costs.deletion)
+			throw 'Cost of deletion cannot be zero';
+		if(!costs.substitution)
+			throw 'Cost of substitution cannot be zero';
+
+		//base cases
+		var n = a.length,
+			m = b.length;
+		if(a == b || Array.isArray(a) && a.join('') == b.join(''))
+			return 0;
+		if(!n)
+			return m * costs.insertion;
+		if(!m)
+			return n * costs.deletion;
+
+		var matchingFn = costs.matchingFn || matchingFnDefault,
+			distance = [],
+			i, j;
+		for(i = 0; i <= n; i ++)
+			distance[i] = [costs.deletion * i];
+		for(j = 0; j <= m; j ++)
+			distance[0][j] = costs.insertion * j;
+
+		for(i = 1; i <= n; i ++)
+			for(j = 1; j <= m; j ++){
+				distance[i][j] = Math.min(
+					distance[i - 1][j - 1] + matchingFn(a[i - 1], b[j - 1], costs),
+					distance[i][j - 1] + costs.insertion,
+					distance[i - 1][j] + costs.deletion);
+				if(i > 1 && j > 1 && a[i - 1] == b[j - 2] && a[i - 2] == b[j - 1])
+					distance[i][j] = Math.min(distance[i][j], distance[i - 2][j - 2] + costs.transposition);
+			}
+		return distance[n][m];
+	};
+
+
 	/** @private */
 	var matchingFnDefault = function(from, to, costs){
-		return (from == to? 0: costs.modification);
+		return (from == to? 0: costs.substitution);
 	};
 
 	/** @private */
 	var enforceDefaultCosts = function(costs){
-		return applyIfNotNumeric(costs || {}, {insertion: 1, deletion: 1, modification: 0.5});
+		return applyIfNotNumeric(costs || {}, {insertion: 1, deletion: 1, substitution: 0.5, transposition: 0.7});
 	};
 
 	/** @private */
@@ -237,21 +152,21 @@ define(function(){
 		return object;
 	};
 
-	var alignmentLength = function(a, b){
-		var insertions = levenshteinDistance(a, b, {insertion: 100, deletion: 10000, modification: 1});
-		insertions = Math.floor(insertions / 100) % 100;
+	var alignmentLength = function(a, b, distanceFn){
+		var insertions = (distanceFn || levenshteinDistance)(a, b, {insertion: 10000, deletion: 1000000, substitution: 100, transposition: 1});
+		insertions = Math.floor(insertions / 10000) % 100;
 		return a.length + insertions;
 	};
 
 	/**
 	 * @param {String} a			First string.
 	 * @param {String} b			Second string.
-	 * @param {Object} costs	Cost configuration object like <code>{insertion: 1, deletion: 1, modification: 0.5}</code>
+	 * @param {Object} costs	Cost configuration object like <code>{insertion: 1, deletion: 1, substitution: 0.5}</code>
 	 * @return A percentual indicating the distance between the two inputs.
 	 */
-	var getStructuralDistance = function(a, b, costs){
+	var getStructuralDistance = function(a, b, costs, distanceFn){
 		costs = enforceDefaultCosts(costs);
-		return levenshteinDistance(a, b, costs) / (alignmentLength(a, b) * Math.max(costs.insertion, costs.deletion, costs.modification));
+		return (distanceFn || levenshteinDistance)(a, b, costs) / (alignmentLength(a, b) * Math.max(costs.insertion, costs.deletion, costs.substitution));
 	};
 
 	/**
@@ -289,6 +204,8 @@ define(function(){
 		REGEX_UNICODE_SPLITTER: REGEX_UNICODE_SPLITTER,
 
 		levenshteinDistance: levenshteinDistance,
+		damerauLevenshteinDistance: damerauLevenshteinDistance,
+
 		alignmentLength: alignmentLength,
 		getStructuralDistance: getStructuralDistance
 	};

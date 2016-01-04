@@ -313,7 +313,7 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 					return 0.5 + Phone.similarity(fromFeatures[0], toFeatures[0]);
 				}
 			},
-			//costs = {insertion: 1, deletion: 1, modification: 0.5},
+			//costs = {insertion: 1, deletion: 1, substitution: 0.5},
 			i, j;
 		for(i = 0; i < size; i ++){
 			matrix[i] = [];
