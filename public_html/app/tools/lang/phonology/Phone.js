@@ -429,9 +429,12 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	/**
 	 * @param {Object/String} bundleA	Feature bundle 1
 	 * @param {Object/String} bundleB	Feature bundle 2
+	 * @param {Object} [factors]			Factor to multiply the similarity for given features in the format <code>{voi: 0.5}</code>
 	 */
-	var similarity = function(bundleA, bundleB){
-		return compareFeatures(bundleA, bundleB, true).diff.length / Object.keys(segments.a).length;
+	var similarity = function(bundleA, bundleB, factors){
+		var diff = compareFeatures(bundleA, bundleB, true).diff,
+			factor = (diff.length == 1? factors[diff[0]] || 1: 1);
+		return factor * diff.length / Object.keys(segments.a).length;
 	};
 
 	/**

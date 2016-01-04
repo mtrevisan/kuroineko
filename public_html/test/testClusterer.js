@@ -290,7 +290,10 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 				['olp',        'volpe',       'volpi',     'olpe',      'olpe',       'olpe',       'volpe',      'volp',       'volp',       'volph',      'volp',       'volpe',      'volpe',      'volpe',      'volp',       'volpe',      'volpe',      'volpe',      'volp',       'volpe',      'volpe',       'volp',       'volpe',             'volpe',      'volpe',      'volpe',      'volpe',      'volpe',           'volpe',         'volpe',      'volpe',      'volpe'],
 				['vwot',       'voito',       'uitu',      'øito',      'voito',      'gwoito',     'udo',        'voit',       'voðo',       'vodo',       'voðo',       'vɔdo',       'vodo',       'vɔjo',       'udo',        'vɔjo',       'vɔdo',       'vodo',       'voðo',       'vodo',       'vɔjo',        'vɔdo',       'vodo',              'vɔdo',       'udo',        'vɔdo',       'udo',        'vɔdo',            'vɔdo',          'vɔdo',       'vɔdo',       'vwɔto'],
 				['pɔs',        'poi',         'poi',       'pøi',       'poi',        'pwos',       'pɔso',       'pɔs',        'pɔs',        'pɔse',       'pɔse',       'pɔse',       'pɔso',       'pɔso',       'pɔdo',       'pɔso',       'pɔso',       'pɔso',       'pɔse',       'pɔso',       'pɔso',        'pɔse',       'pɔso',              'pɔso',       'pɔso',       'pɔse',       'pɔso',       'pɔso',            'pɔso',          'pɔso',       'pɔso',       'pɔsso'],
-//				['',     '',       '',      '',        '',       '',       '',      '',          '',     '',     '',       '',         '',      '',          '',        '',         '',    '',     '',     '',      '',      '',        '',                '',      '',      '',    '',     '',              '',            '',       '',      ''],
+				['ades',       'adɛs',        'aðɛsu',     'ades',      'aðɛs',       'adɛs',       'adɛso',      'aðɛs',       'aðɛs',       'adɛs',       'aðɛs',       'adɛs',       'dɛso',       'adɛso',      'adɛs',       'dɛso',       'adɛso',      'dɛso',       'aðɛs',       'dɛso',       'dɛso',        'adɛs',       'dɛso',              'dɛso',       'adɛso',      'adɛso',      'adɛso',      'adɛso',           'dɛso',          'adɛso',      'dɛso',       'adɛsso'],
+				['amiko',      'amigo',       'amigo',     'amigo',     'amigo',      'amigo',      'amigo',      'amigo',      'amigo',      'amigo',      'amigo',      'amigo',      'amigo',      'amigo',      'amiko',      'amiko',      'amiko',      'amigo',      'amigo',      'amigo',      'amiko',       'amigo',      'amigo',             'amigo',      'amiko',      'amigo',      'amiko',      'amigo',           'amigo',         'amigo',      'amigo',      'amiko'],
+				['ʃtadjera',   'barant͡sa',   'balanθe',   'stadera',   'balanθa',    'balanθa',    'balansa',    'balansa',    'balanθa',    'balant͡sa',  'balanθa',    'balansa',    'bilansa',    'balansa',    'balansa',    'balansa',    'baƚansa',    'baƚansa',    'balanθa',    'balansa',    'balansa',     'baƚansa',    'baƚansa',           'baƚansa',    'balansa',    'baƚansa',    'balant͡sa',  'baƚansa',         'baƚansa',       'baƚansa',    'baƚansa',    'bilant͡ʃa'],
+				['gljeʒa',     'ʒeʒa',        'jezja',     'd͡ʒedja',   'zezja',      'jezja',      't͡ʃeza',     't͡ʃeza',     't͡ʃeza',     't͡ʃeza',     't͡ʃeza',     't͡ʃɛza',     't͡ʃeza',     't͡ʃeza',     't͡ʃeza',     't͡ʃeza',     't͡ʃeza',     't͡ʃeza',     't͡ʃeza',     't͡ʃeza',     't͡ʃeza',      't͡ʃeza',     't͡ʃeza',            't͡ʃeza',     't͡ʃeza',     't͡ʃeza',     't͡ʃeza',     't͡ʃɛza',          't͡ʃɛza',        't͡ʃeza',     't͡ʃeza',     'kjɛza'],
 //				['',     '',       '',      '',        '',       '',       '',      '',          '',     '',     '',       '',         '',      '',          '',        '',         '',    '',     '',     '',      '',      '',        '',                '',      '',      '',    '',     '',              '',            '',       '',      ''],
 //				['',     '',       '',      '',        '',       '',       '',      '',          '',     '',     '',       '',         '',      '',          '',        '',         '',    '',     '',     '',      '',      '',        '',                '',      '',      '',    '',     '',              '',            '',       '',      ''],
 //				['',     '',       '',      '',        '',       '',       '',      '',          '',     '',     '',       '',         '',      '',          '',        '',         '',    '',     '',     '',      '',      '',        '',                '',      '',      '',    '',     '',              '',            '',       '',      ''],
@@ -304,13 +307,13 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 			costs = {
 				insertion: 1,
 				deletion: 1,
-				//exchange: 0.5,
+				transposition: 0.5,
 				matchingFn: function(from, to){
 					if(from == to)
 						return 0;
 					var fromFeatures = Phone.convertStringIntoFeatures(from),
 						toFeatures = Phone.convertStringIntoFeatures(to);
-					return 0.5 + Phone.similarity(fromFeatures[0], toFeatures[0]);
+					return 0.5 + Phone.similarity(fromFeatures[0], toFeatures[0], {voi: 0.5});
 				}
 			},
 			//costs = {insertion: 1, deletion: 1, substitution: 0.5},
@@ -332,7 +335,7 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 		words.forEach(function(word){
 			for(i = 0; i < size; i ++)
 				for(j = i + 1; j < size; j ++)
-					matrix[i][j] += StringDistance.getStructuralDistance(word[i], word[j], costs);
+					matrix[i][j] += StringDistance.getStructuralDistance(word[i], word[j], costs, StringDistance.damerauLevenshteinDistance);
 		});
 		for(i = 0; i < size; i ++)
 			for(j = i + 1; j < size; j ++)
