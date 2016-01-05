@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Dendrogram</title>
+<style>
+	.node circle {
+		fill: #fff;
+		stroke: steelblue;
+		stroke-width: 1.5px;
+	}
+	.node {
+		font: 10px sans-serif;
+	}
+	.link {
+		fill: none;
+		stroke: #ccc;
+		stroke-width: 1.5px;
+	}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.12/d3.min.js"></script>
+<script src="../libs/dendrogram.js"></script>
+<script>
+	//wait until the browser has created a body element for us
+	document.addEventListener('DOMContentLoaded', function(){
+		var width = 1400,
+			height = 650;
+		var cluster = d3.layout.cluster()
+			.size([height, width-200]);
+		var diagonal = d3.svg.diagonal()
+			.projection(function(d){ return [x(d.y), d.x]; });
+		var svg = d3.select('body').append('svg')
+			.attr('width', width)
+			.attr('height', height)
+			.append('g')
+			.attr('transform', 'translate(100,0)');
+		var xs = [],
+			ys = [];
+		var getXYfromJSONTree = function(node){
+			xs.push(node.x);
+			ys.push(node.y);
+			if(typeof node.children != 'undefined')
+				for(var j in node.children)
+					getXYfromJSONTree(node.children[j]);
+		};
+		var ymax = Number.MIN_VALUE,
+			ymin = Number.MAX_VALUE;
+		var x, xinv;
+		d3.json('dendrogram.json', function(error, json){
+			getXYfromJSONTree(json);
+			var nodes = cluster.nodes(json);
+			var links = cluster.links(nodes);
+			nodes.forEach(function(d, i){
+				if(typeof xs[i] != 'undefined')
+					d.x = xs[i];
+				if(typeof ys[i] != 'undefined')
+					d.y = ys[i];
+			});
+			nodes.forEach(function(d){
+				if(d.y > ymax)
+					ymax = d.y;
+				if(d.y < ymin)
+					ymin = d.y;
+			});
+			x = d3.scale.linear().domain([ymin, ymax]).range([0, width - 200]);
+			xinv = d3.scale.linear().domain([ymax, ymin]).range([0, width - 200]);
+			var link = svg.selectAll('.link')
+				.data(links)
+				.enter().append('path')
+				.attr('class', 'link')
+				.attr('d', diagonal);
+			var node = svg.selectAll('.node')
+				.data(nodes)
+				.enter().append('g')
+				.attr('class', 'node')
+				.attr('transform', function(d){
+					return 'translate(' + x(d.y) + ',' + d.x + ')';
+				});
+			node.append('circle')
+				.attr('r', 4.5);
+			node.append('text')
+				.attr('dx', function(d){
+					return (d.children? -8: 8);
+				})
+				.attr('dy', 3)
+				.style('text-anchor', function(d){
+					return (d.children? 'end': 'start');
+				})
+				.text(function(d){
+					return d.name;
+				});
+			var g = d3.select('svg').append('g')
+				.attr('transform', 'translate(100,40)');
+			g.append('line')
+				.attr('x1', x(ymin))
+				.attr('y1', 0)
+				.attr('x2', x(ymax))
+				.attr('y2', 0);
+			g.selectAll('.ticks')
+				.data(x.ticks(5))
+				.enter().append('line')
+				.attr('class', 'ticks')
+				.attr('x1', function(d){
+					return xinv(d);
+				})
+				.attr('y1', -5)
+				.attr('x2', function(d){
+					return xinv(d);
+				})
+				.attr('y2', 5);
+			g.selectAll('.label')
+				.data(x.ticks(5))
+				.enter().append('text')
+				.attr('class', 'label')
+				.text(String)
+				.attr('x', function(d){
+					return xinv(d);
+				})
+				.attr('y', -5)
+				.attr('text-anchor', 'middle');
+		});
+
+/*		var labels = [
+			'Rèba',
+			'Anpeŧ',
+			'Pađule',
+			'Kustauta',
+			'Uronŧo',
+			'Poŧale',
+			'Verona',
+			'Ŧenŧenige',
+			'Kaxan',
+			'Arfanta',
+			'Belun',
+			'Sa Stin',
+			'Venèsia',
+			'Krespadòro',
+			'Bixa',
+			'Montebèlo',
+			'Teoƚo',
+			'Roman',
+			'Vas',
+			'Toneđa',
+			'Vicensa',
+			'Lovadina',
+			'Kanpo San Martin',
+			'Istrana',
+			'Raldon',
+			'Meolo',
+			'Cerèa',
+			'Frata',
+			'Vila',
+			'Kavarxare',
+			'Trevixo',
+			'Italia'
+		];
+
+		//yeah, I'm breaking my personal coding style guide here, but this thing is the devil!
+		var data = [
+			{
+				y: 0,
+				children: [
+					{
+						y: 30,
+						children: [
+							{
+								y: 100,
+								children: [
+									{label: labels.indexOf('Istrana')},
+									{label: labels.indexOf('Meolo')}
+								],
+								distance: 0.0396
+							},
+							{label: labels.indexOf('Trevixo')}
+						],
+						distance: 0.0614
+					},
+					{label: labels.indexOf('Roman')}
+				],
+				distance: 0.0721
+			}
+		];
+
+		//intialize dendrogram
+		var viz = dendrogram().width(800).height(600).labels(labels);
+
+		//generate dendrogram
+		d3.select('body')
+			.datum(data)
+			.call(viz);/**/
+	});
+</script>

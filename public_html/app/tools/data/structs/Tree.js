@@ -135,7 +135,7 @@ define(function(){
 	};
 
 	/** Apply a function to each node, traversing the tree in level order. */
-	var applyOnNodes = function(fn, scope){
+	var forEach = function(fn, scope){
 		this.find(function(node){
 			fn.call(this, node);
 			return false;
@@ -143,7 +143,7 @@ define(function(){
 	};
 
 	/** Apply a function to each leaf, traversing the tree in level order. */
-	var applyOnLeaves = function(fn, scope){
+	var forEachLeaf = function(fn, scope){
 		this.find(function(node){
 			if(!node.children || !node.children.length)
 				fn.call(this, node);
@@ -162,8 +162,8 @@ define(function(){
 		remove: remove,
 		find: find,
 		findByID: findByID,
-		applyOnNodes: applyOnNodes,
-		applyOnLeaves: applyOnLeaves
+		forEach: forEach,
+		forEachLeaf: forEachLeaf
 	};
 
 

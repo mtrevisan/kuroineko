@@ -1,11 +1,11 @@
 //www2.hu-berlin.de/vivaldi/index.php?id=mV001&lang=it
-require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonology/Phone'], function(Clusterer, StringDistance, Phone){
+require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonology/Phone', 'tools/data/ObjectHelper'], function(Clusterer, StringDistance, Phone, ObjectHelper){
 	QUnit.module('Clusterer');
 
 	QUnit.test('test', function(){
 		//construct the data
 		var variants = [
-				'Rèba',        'Anpeŧ',       'Pađule',    'Kustauta',  'Uronŧo',     'Poŧale',     'Verona',     'Ŧenŧenige',  'Kaxan',      'Arfanta',    'Belun',      'Sa Stin',    'Venèsja',    'Krespadòro', 'Bixa',       'Montebèlo',  'Teoƚo',      'Roman',      'Vas',        'Toneđa',     'Vicensa',     'Lovadina',   'Kanpo San Martin',  'Istrana',    'Raldon',     'Meolo',      'Cerèa',      'Frata',           'Vila',          'Kavarxare',  'Trevixo',    'Italia'],
+				'Rèba',        'Anpeŧ',       'Pađule',    'Kustauta',  'Uronŧo',     'Poŧale',     'Verona',     'Ŧenŧenige',  'Kaxan',      'Arfanta',    'Belun',      'Sa Stin',    'Venèsia',    'Krespadòro', 'Bixa',       'Montebèlo',  'Teoƚo',      'Roman',      'Vas',        'Toneđa',     'Vicensa',     'Lovadina',   'Kanpo San Martin',  'Istrana',    'Raldon',     'Meolo',      'Cerèa',      'Frata',           'Vila',          'Kavarxare',  'Trevixo',    'Italia'],
 			words = [
 				['la'	,        'el',          'al',        'al',        'il',         'al',         'el',         'el',         'al',         'al',         'al',         'el',         'el',         'el',         'el',         'el',         'el',         'el',         'al',         'el',         'el',          'el',         'el',                'el',         'el',         'el',         'el',         'el',              'el',            'e',          'el',         'lui'],
 				['la',         'ra',          'la',        'la',        'la',         'la',         'la',         'la',         'la',         'la',         'la',         'a',          'ea',         'la',         'la',         'la',         'ea',         'a',          'la',         'la',         'la',          'a',          'a',                 'a',          'a',          'a',          'la',         'la',              'la',            'ea',         'ƚa',         'la'],
@@ -376,7 +376,33 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 		//cluster variants
 		var tree = Clusterer.cluster(matrix, variants);
 
+		ObjectHelper.saveJSONFile(createDendrogramData(tree.root), 'dendrogram.json');
 console.log(tree);
 //		equal(tree, '(((((((((((((Montebello|Vicenza:0.0343)|Crespadoro:0.0504)|Tonezza:0.0668)|Villa Estense:0.0896)|Teolo:0.1072)|(Cavarzare|Fratta Polesine:0.1129):0.1242)|(((((Istrana|Meolo:0.0562)|Campo San Martino:0.0697)|Treviso:0.0933)|Venezia:0.0975)|Romano:0.1095):0.1308)|(((Cerea|Verona:0.0716)|Raldon:0.0819)|Albisano:0.1374):0.1821)|((((Casan|Vas:0.0759)|Belluno:0.0872)|Tarzo:0.1065)|(Lovadina|San Stino:0.0825):0.1453):0.1834)|Cencenighe:0.2261)|(((Auronzo|Pozzale:0.1610)|Cortina:0.2021)|(Costalta|Padola:0.1642):0.2513):0.2966)|Rèba:0.3156)|Italia:0.3997)');
 	});
+
+	var createDendrogramData = function(node, out, base){
+		var d = {
+				y: (base || 0)
+			},
+			dist;
+		if(node.children){
+			dist = d.y;
+			d.y += (node.data? node.data.distance: 0);
+			d.children = [];
+			node.children.forEach(function(child){
+				createDendrogramData(child, d.children, dist);
+			});
+		}
+		else if(node.id.indexOf('|') < 0)
+			d.name = node.id;
+		if(out)
+			out.push(d);
+		else{
+			out = d;
+			out.y = 1;
+		}
+		return out;
+	};
+
 });
