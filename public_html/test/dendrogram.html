@@ -21,10 +21,10 @@
 <script>
 	//wait until the browser has created a body element for us
 	document.addEventListener('DOMContentLoaded', function(){
-		var width = 1400,
+		var width = 1350,
 			height = 650;
 		var cluster = d3.layout.cluster()
-			.size([height, width-200]);
+			.size([height, width - 200]);
 		var diagonal = d3.svg.diagonal()
 			.projection(function(d){ return [x(d.y), d.x]; });
 		var svg = d3.select('body').append('svg')
@@ -78,11 +78,13 @@
 				.attr('r', 4.5);
 			node.append('text')
 				.attr('dx', function(d){
-					return (d.children? -8: 8);
+//					return (d.children? -8: 8);
+					return -10;
 				})
 				.attr('dy', 3)
 				.style('text-anchor', function(d){
-					return (d.children? 'end': 'start');
+//					return (d.children? 'end': 'start');
+					return 'end';
 				})
 				.text(function(d){
 					return d.name;
@@ -114,7 +116,8 @@
 				.attr('x', function(d){
 					return xinv(d);
 				})
-				.attr('y', -5)
+//				.attr('y', -5)
+				.attr('y', -25)
 				.attr('text-anchor', 'middle');
 		});
 
