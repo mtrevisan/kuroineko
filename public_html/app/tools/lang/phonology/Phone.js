@@ -247,7 +247,9 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 			//match brackets (which contain features like [+foo, -bar]) or anything else
 			var list = str.toLowerCase().match(REGEX_UNICODE_SPLITTER);
 			list.forEach(function(m){
-				if(m.match(REGEX_UNICODE_FEATURES)){
+				if(m == ' ')
+					output.push({});
+				else if(m.match(REGEX_UNICODE_FEATURES)){
 					var features = {};
 					m.slice(1, -1).split(',').forEach(function(f){
 						var matches = f.match(/^\s*([\+\-0])?([a-z]+?)\s*$/);
