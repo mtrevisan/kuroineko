@@ -4,12 +4,12 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 
 	var createDendrogramData = function(node, out, base){
 		var d = {
-				y: (base || 0)
+				y: (base || 1)
 			},
 			dist;
 		if(node.children){
 			dist = d.y;
-			d.y += (node.data? node.data.distance: 0);
+			d.y -= (node.data? node.data.distance: 0);
 			d.children = [];
 			node.children.forEach(function(child){
 				createDendrogramData(child, d.children, dist);
@@ -21,7 +21,7 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 			out.push(d);
 		else{
 			out = d;
-			out.y = 1;
+			out.y = 0;
 		}
 		return out;
 	};
