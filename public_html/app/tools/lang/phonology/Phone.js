@@ -10,7 +10,13 @@
 define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 	/** @constant */
-	var REGEX_UNICODE_SPLITTER = /(\[([^\]]+)\]|j²|[^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u035B\u035D-\u0360\u0362-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*(?:[\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*[\u035C\u0361][^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*)?)/g;
+	var REGEX_UNICODE_SPLITTER = /(\[([^\]]+)\]|j²|[^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u035B\u035D-\u0360\u0362-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*(?:[\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*[\u035C\u0361][^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*)?)/g,
+	/** @constant */
+		REGEX_UNICODE_COMPOUND_WITH_DIACRITICS = /^([^\u02B0\u02B2\u02B7\u02BC\u02C8\u02D0\u02DE\u02E0\u02E4\u0303\u031D-\u0320\u0324\u0325\u0329\u032A\u0330\u0334\u033A\u033B]+)([\u02B0\u02B2\u02B7\u02BC\u02C8\u02D0\u02DE\u02E0\u02E4\u0303\u031D-\u0320\u0324\u0325\u0329\u032A\u0330\u0334\u033A\u033B]*)$/,
+	/** @constant */
+		REGEX_UNICODE_DIACRITICS = /[\u02B0\u02B2\u02B7\u02BC\u02C8\u02D0\u02DE\u02E0\u02E4\u0303\u031D-\u0320\u0324\u0325\u0329\u032A\u0330\u0334\u033A\u033B]/g;
+
+//	var REGEX_UNICODE_SPLITTER = /(\[([^\]]+)\]|j²|[^\u025A\u1DA3\u207F][\u035D-\u0360\u0362-\u036F\u025A\u1DA3\u207F]*(?:[\u025A\u1DA3\u207F]*[\u035C\u0361][^\u025A\u1DA3\u207F][\u025A\u1DA3\u207F]*)?)/g;
 	/**
 	 * @constant
 	 * @private
@@ -45,6 +51,13 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		'ɬ': {syl: -1, con: 1, son: -1, cnt: 1, dr: 1, app: -1, tap: -1, trill: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
 		'ɮ': {syl: -1, con: 1, son: -1, cnt: 1, dr: 1, app: -1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
 		'l': {syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
+
+//'l̺': {syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
+//'l̻ʲ': {syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
+//'l̺̝': {syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
+//'ʎ̞˞': {syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
+//'ʟ̟̞˞': {syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
+
 		'ɫ': {syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: 1, hi: -1, lo: -1, ft: -1, bk: 1, tns: 0},
 		'ɺ': {syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: 1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
 		'ɳ': {syl: -1, con: 1, son: 1, cnt: -1, dr: 0, app: -1, tap: -1, trill: -1, nas: 1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: -1, dst: -1, str: -1, lat: -1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
@@ -154,31 +167,48 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	};
 	/* * @constant * /
 	var aliases = {
+		//major class features:
 		syl: 'syllabic',
-		str: 'stress',
 		con: 'consonantal',
-		son: 'sonorant',
-		cnt: 'continuant',
-		dr: 'delayed release',
 		app: 'approximant',
-		nas: 'nasal',
+		son: 'sonorant',
+
+		//laryngeal features:
 		voi: 'voice',
 		sg: 'spread glottis',
 		cg: 'constricted glottis',
-		lab: 'labial',
-		rou: 'round',
-		ld: 'labiodental',
-		cor: 'coronal',
-		ant: 'anterior',
-		dst: 'distributed',
+
+		//manner features:
+		cnt: 'continuant',
+		nas: 'nasal',
 		strid: 'strident',
 		lat: 'lateral',
-		dor: 'dorsal',
+		dr: 'delayed release',
+
+		//place features:
+		//labial
+		rou: 'round',
+		//coronal
+		ant: 'anterior',
+		dst: 'distributed',
+		//dorsal
 		hi: 'high',
 		lo: 'low',
-		ft: 'front',
 		bk: 'back',
 		tns: 'tense',
+		//pharyngeal
+		//atr: 'advanced tongue root',
+		//rtr: 'retracted tongue root',
+		//glottal
+
+		//vowel space:
+
+		str: 'stress',
+		lab: 'labial',
+		ld: 'labiodental',
+		cor: 'coronal',
+		dor: 'dorsal',
+		ft: 'front',
 		lar: 'laryngeal',
 		suplar: 'supralaryngeal'
 	};*/
@@ -205,32 +235,38 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	var useDiacritics = false;
 	/** @constant */
 	var diacritics = {
-		'\u0329': [{syl: 1}, {syl: -1}, 'syllabic'],
-		'\u0330': [{sg: -1, cg: 1}, {voi: 1, sg: -1, cg: -1}, 'creaky void'],
-		'\u0325': [{voi: -1}, {son: 1, voi: 1}, 'voiless'],
-		'\u0324': [{sg: 1, cg: -1}, {voi: 1, sg: -1, cg: -1}, 'breathy void'],
-		'\u0320': [{ant: -1, dst: 1}, {con: 1, cor: 1, ant: 1, dst: -1}, 'postalveolar'],
-		'\u032A': [{ant: 1, dst: 1}, {con: 1, cor: 1, ant: 1, dst: -1}, 'dental'],
-		//TODO
-		'\u033A': [{}, {}, 'apical'],
-		//TODO
-		'\u033B': [{}, {}, 'laminal'],
-		'\u031F': [{ft: 1, bk: -1}, {con: 1, cor: -1, dor: 1, hi: 1, lo: -1}, 'fronted velar'],
-		'\u0334': [{ft: -1, bk: 1}, {con: 1, dor: 1, hi: 1, lo: -1}, 'backed velar'],
+		'\u02B0': [{sg: 1, cg: -1}, {con: 1, voi: -1, sg: -1, cg: -1}, 'aspirated'],
+		'\u02B2': [{dor: 1, hi: 1, lo: -1, ft: 1, bk: -1}, {con: 1}, 'palatalized'],
+		'\u02B7': [{lab: 1, rou: 1}, {con: 1, rou: -1}, 'labialized'],
+		'\u02BC': [{sg: -1, cg: 1}, {con: 1, son: -1, tap: -1, trill: -1, nas: -1, voi: -1, sg: -1, cg: -1}, 'ejective'],
+		'\u02C8': [{str: 1}, {str: -1}, 'stressed'],
+		'\u02D0': [{long: 1}, {long: -1}, 'long'],
+		//also known as retroflexed
+		'\u02DE': [{cor: 1, ant: 1, dst: 1, strid: -1}, {syl: 1, con: -1, son: 1, tap: -1, trill: -1, cor: -1, dor: 1}, 'rhotic'],
+		'\u02E0': [{dor: 1, hi: 1, lo: -1, ft: -1, bk: 1}, {con: 1, dor: -1}, 'velarized'],
+		'\u02E4': [{dor: 1, hi: -1, lo: 1, ft: -1, bk: 1}, {con: 1, dor: -1}, 'pharyngealized'],
+		'\u0303': [{nas: 1}, {son: 1, nas: -1}, 'nasalized'],
 		//TODO
 		'\u031D': [{hi: 1}, {}, 'raised'],
 		//TODO
 		'\u031E': [{lo: 1}, {}, 'lowered'],
-		'\u02C8': [{str: 1}, {str: -1}, 'stressed'],
-		'\u02D0': [{long: 1}, {long: -1}, 'long'],
-		'\u02B0': [{sg: 1, cg: -1}, {con: 1, voi: -1, sg: -1, cg: -1}, 'aspirated'],
-		'\u02B2': [{dor: 1, hi: 1, lo: -1, ft: 1, bk: -1}, {con: 1}, 'palatalized'],
-		'\u02B7': [{lab: 1, rou: 1}, {con: 1, rou: -1}, 'labialized'],
-		'\u02E0': [{dor: 1, hi: 1, lo: -1, ft: -1, bk: 1}, {con: 1, dor: -1}, 'velarized'],
-		'\u02E4': [{dor: 1, hi: -1, lo: 1, ft: -1, bk: 1}, {con: 1, dor: -1}, 'pharyngealized'],
-		'\u0303': [{nas: 1}, {son: 1, nas: -1}, 'nasalized'],
-		'\u02DE': [{cor: 1, ant: 1, dst: 1, strid: -1}, {syl: 1, con: -1, son: 1, tap: -1, trill: -1, cor: -1, dor: 1}, 'rhotic'],
-		'\u02BC': [{sg: -1, cg: 1}, {con: 1, son: -1, tap: -1, trill: -1, nas: -1, voi: -1, sg: -1, cg: -1}, 'ejective']
+		//also known as advanced
+		'\u031F': [{ft: 1, bk: -1}, {con: 1, cor: -1, dor: 1, hi: 1, lo: -1}, 'fronted velar'],
+		//also known as backed
+		'\u0320': [{ant: -1, dst: 1}, {con: 1, cor: 1, ant: 1, dst: -1}, 'postalveolar'],
+		'\u0324': [{sg: 1, cg: -1}, {voi: 1, sg: -1, cg: -1}, 'breathy void'],
+		'\u0325': [{voi: -1}, {son: 1, voi: 1}, 'voiless'],
+		'\u0329': [{syl: 1}, {syl: -1}, 'syllabic'],
+		'\u032A': [{ant: 1, dst: 1}, {con: 1, cor: 1, ant: 1, dst: -1}, 'dental'],
+		'\u0330': [{sg: -1, cg: 1}, {voi: 1, sg: -1, cg: -1}, 'creaky void'],
+		'\u0334': [{ft: -1, bk: 1}, {con: 1, dor: 1, hi: 1, lo: -1}, 'backed velar'],
+		//TODO
+		//produced by obstructing the air passage with the tip of the tongue
+		'\u033A': [{ant: 1}, {con: 1}, 'apical'],
+		//TODO
+		//produced by obstructing the air passage with the blade of the tongue, which is the flat top front surface just behind
+		//the tip of the tongue on the top
+		'\u033B': [{ant: -1}, {con: 1}, 'laminal']
 	};
 
 
@@ -245,7 +281,8 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 			output = [];
 
 			//match brackets (which contain features like [+foo, -bar]) or anything else
-			var list = str.toLowerCase().match(REGEX_UNICODE_SPLITTER);
+			var list = str.toLowerCase().match(REGEX_UNICODE_SPLITTER),
+				m2, segment, diacritic;
 			list.forEach(function(m){
 				if(m == ' ')
 					output.push({});
@@ -257,12 +294,24 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 					});
 					output.push(features);
 				}
-				else if(segments[m])
-					output.push(ObjectHelper.clone(segments[m]));
-				else if(diacritics[m])
-					output[output.length - 1] = combineFeatures(output[output.length - 1], diacritics[m][0]);
-				else
-					output.push(m);
+				else{
+					m2 = m.match(REGEX_UNICODE_COMPOUND_WITH_DIACRITICS);
+					if(m2 && segments[m2[1]]){
+						segment = ObjectHelper.clone(segments[m2[1]]);
+						m2 = m2[2].match(REGEX_UNICODE_DIACRITICS);
+						if(m2)
+							m2.forEach(function(m3){
+								diacritic = diacritics[m3];
+								if(diacritic && Object.keys(diacritic[1]).every(function(feature){ return (segment[feature] == this[feature]); }, diacritic[1]))
+									segment = combineFeatures(segment, diacritic[0]);
+							});
+						output.push(segment);
+					}
+					else if(segments[m])
+						output.push(ObjectHelper.clone(segments[m]));
+					else
+						output.push(m);
+				}
 			});
 		}
 		else if(Array.isArray(str))
@@ -436,6 +485,36 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	var similarity = function(bundleA, bundleB, factors){
 		var diff = compareFeatures(bundleA, bundleB, true).diff,
 			factor = (diff.length == 1? factors[diff[0]] || 1: 1);
+		return factor * diff.length / Object.keys(segments.a).length;
+	};
+
+	/**
+	 * @param {Object/String} bundleA	Feature bundle 1
+	 * @param {Object/String} bundleB	Feature bundle 2
+	 * @param {Object} [similarityFactor]	Factor to multiply the similarity for given features
+	 */
+	var similarity2 = function(bundleA, bundleB, similarityFactor){
+		var diff = compareFeatures(bundleA, bundleB, true).diff,
+			factor = 1;
+		if(similarityFactor){
+			//two sounds differing only in voicing: [pb], [td], [kɡ], [ɸβ], [θð], [sz], [ʃʒ], [xɣ], etc...
+			if(diff.length == 1 && (bundleA.syl == 1 || diff.indexOf('voi') >= 0))
+				factor = similarityFactor;
+			//two sounds differing in manner of articulation only as plosive vs fricative: [pɸ], [kx], [bβ], [ɡɣ], etc...
+			//the sibilant or grooved fricatives [s,z,ʃ,ʒ] are excluded from this category as they are quite different auditorily from
+			//the other ("central") fricatives
+			else if(diff.length == 2 && diff.indexOf('cnt') >= 0 && diff.indexOf('dr') >= 0 && bundleA.cnt && bundleA.cnt == bundleA.dr)
+				factor = similarityFactor;
+			//any pairs of consonants close in place of articulation and differing in no other contrastive feature: [sʃ], [zʒ], [nɲŋ], [lɭ],
+			//[lʎ], [mɱ], etc...
+			//TODO
+			//any other pairs of consonants which are close in articulation and differ by one other feature but are nevertheless frequently
+			//members of the same phoneme: [lɹ], [cɡ], [tθ], [dð], etc...
+			//in languages where voicing is non-contrastive, two phones differing in voicing and only slightly in place of articulation might be considered similar eg. [cɡ] etc.)
+			//further, for the purposes of this type of analysis, the place of articulation of the apicodental fricatives [θ,ð] is considered to be close enough to that of the alveolar stops [t,d] to be considered phonetically similar.
+			//TODO
+			//FIXME
+		}
 		return factor * diff.length / Object.keys(segments.a).length;
 	};
 

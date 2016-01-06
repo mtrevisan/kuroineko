@@ -5,6 +5,9 @@ require(['tools/lang/phonology/Phone', 'tools/lang/GrammarLearner'], function(Ph
 		deepEqual(Phone.convertStringIntoFeatures('a'), [
 			{syl: 1, con: -1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0, dst: 0, str: 0, lat: -1, dor: 1, hi: -1, lo: 1, ft: -1, bk: -1, tns: 0}
 		]);
+		deepEqual(Phone.convertStringIntoFeatures('lˠ'), [
+			{syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: 1, hi: 1, lo: -1, ft: -1, bk: 1, tns: 0}
+		]);
 		deepEqual(Phone.convertStringIntoFeatures('ɢ͡ʁd̪͡z̪'), [
 			{ant: 0, app: -1, bk: 1, cg: -1, cnt: -1, con: 1, cor: -1, dor: 1, dr: 1, dst: 0, ft: -1, hi: -1, lab: -1, lat: -1, ld: -1, lo: -1, nas: -1, rou: -1, sg: -1, son: -1, str: 0, syl: -1, tap: -1, tns: 0, trill: -1, voi: 1},
 			{ant: 1, app: -1, bk: 0, cg: -1, cnt: -1, con: 1, cor: 1, dor: -1, dr: 1, dst: 1, ft: 0, hi: 0, lab: -1, lat: -1, ld: -1, lo: 0, nas: -1, rou: -1, sg: -1, son: -1, str: 1, syl: -1, tap: -1, tns: 0, trill: -1, voi: 1}
@@ -43,7 +46,7 @@ require(['tools/lang/phonology/Phone', 'tools/lang/GrammarLearner'], function(Ph
 		equal((new Phone.Rule('t', 'ʔ', 'a_#', 't glottalization')).applyTo('goat'), 'goaʔ');
 		equal((new Phone.Rule('k', 't͡ʃi', '#mu_#')).applyTo('muk'), 'mut͡ʃi');
 		equal((new Phone.Rule('[-cnt]', '[-voi]', '_#', 'final obstruent devoicing')).applyTo('cab'), 'cap');
-		equal((new Phone.Rule('l', '[+dor,+hi,-lo,-ft,+bk]', '_#', 'L-velarization')).applyTo('cal'), 'caɫ̝');
+		equal((new Phone.Rule('l', '[+dor,+hi,-lo,-ft,+bk]', '_#', 'L-velarization')).applyTo('cal'), 'caɫˠ');
 		equal((new Phone.Rule('[+syl,-hi,-lo]', '[+hi]', '_', 'mid vowel raising')).applyTo('cell'), 'cill');
 
 		Phone.setUseDiacritics(false);
