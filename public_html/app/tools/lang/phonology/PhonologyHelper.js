@@ -9,18 +9,29 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme'], function(St
 
 		var data = {
 			'\'': '"',
+			'k[eɛij]': 'k_+', 'g[eɛij]': 'g_+',
 			'ɛ': 'E', 'ɔ': 'O',
 			'ι': 'j',
 			'ρ': 'r\\_a`', 'ř': 'r\\_-`',
 			'r': 'r_a',
 			'ɾ': '4_a',
 			'ʅ': 'r_-_+`',
+//lateral approximant coronal (non retroflex) apical
+//			'l': {syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
+//lateral approximant coronal (non retroflex) laminal palatalized
+//			'l': {syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
 			'l': 'l_a', 'ļ': 'l_m\'',
+//lateral approximant coronal (non retroflex) apical raised
+//			'l': {syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: -1, hi: 1, lo: 0, ft: 0, bk: 0, tns: 0},
 			'λ': 'l_a_r',
+//lateral approximant palatal lowered retroflexed
+//			'ʎ': {syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: -1, dst: 1, str: -1, lat: 1, dor: 1, hi: 1, lo: 1, ft: 1, bk: -1, tns: 0},
+//lateral approximant velar advanced, lowered, retroflexed
+//			'ʟ': {syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0, dst: 0, str: 0, lat: 1, dor: 1, hi: 1, lo: 1, ft: 0, bk: 0, tns: 1},
 			'Λ': 'L_o`', 'Ƚ': 'L\\_+_o`',
 			'ɱ': 'F', 'n': 'n_a',
 			'ŋ': 'N_+_o',
-			't': 't_d', 'd': 'd_d', 'k[eɛij]': 'k_+', 'g[eɛij]': 'g_+', 'kw': 'k_w', 'gw': 'g_w',
+			't': 't_d', 'd': 'd_d', 'kw': 'k_w', 'gw': 'g_w',
 			'ʦ': 't-\\s_d_-', 'ʣ': 'd-\\z_d_-', 'ʧ': 't_m-\\S\'', 'ʤ': 'd_m-\\Z\'',
 			'φ': 'f_h',
 			'θ': 'T', 'ð': 'D',
