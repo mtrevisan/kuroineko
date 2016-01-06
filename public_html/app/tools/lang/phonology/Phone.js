@@ -232,7 +232,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		[{son: 1}, {dr: 0}],
 		[{dr: -1}, {cnt: -1}]
 	];
-	var useDiacritics = false;
+	var useDiacritics = true;
 	/** @constant */
 	var diacritics = {
 		'\u02B0': [{sg: 1, cg: -1}, {con: 1, voi: -1, sg: -1, cg: -1}, 'aspirated'],
@@ -255,7 +255,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		//also known as backed
 		'\u0320': [{ant: -1, dst: 1}, {con: 1, cor: 1, ant: 1, dst: -1}, 'postalveolar'],
 		'\u0324': [{sg: 1, cg: -1}, {voi: 1, sg: -1, cg: -1}, 'breathy void'],
-		'\u0325': [{voi: -1}, {son: 1, voi: 1}, 'voiless'],
+		'\u0325': [{voi: -1}, {son: 1, voi: 1}, 'voiceless'],
 		'\u0329': [{syl: 1}, {syl: -1}, 'syllabic'],
 		'\u032A': [{ant: 1, dst: 1}, {con: 1, cor: 1, ant: 1, dst: -1}, 'dental'],
 		'\u0330': [{sg: -1, cg: 1}, {voi: 1, sg: -1, cg: -1}, 'creaky void'],
@@ -424,35 +424,25 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	 * @private
 	 */
 	var convertFeaturesIntoSegment = function(features, multipleElements){
-		var matches = [], ratings = [];
-
+		var matches = [];
 		Object.keys(segments).forEach(function(segment){
-			var comp = compareFeatures(features, segments[segment], !multipleElements);
-			if(!comp.diff.length){
+			if(!compareFeatures(features, segments[segment], !multipleElements).diff.length)
 				matches.push(segment);
-				ratings.push(0);
-			}
-			else if(comp.diff.length == 1 && useDiacritics)
-				Object.keys(diacritics).forEach(function(diac){
-					comp = compareFeatures(features, combineFeatures(segments[segment], diacritics[diac][0]), !multipleElements);
-					if(!comp.diff.length){
-						matches.push(segment + diac);
-						ratings.push(1);
-					}
-				});
 		});
-
-		if(multipleElements)
-			return matches;
-		else{
-			var size = ratings.length,
-				lowest = 0,
-				i;
-			for(i = 1; i < size; i ++)
-				if(ratings[i] < ratings[lowest])
-					lowest = i;
-			return matches[lowest];
-		}
+		if(!matches.length && useDiacritics)
+			Object.keys(segments).forEach(function(segment){
+				if(compareFeatures(features, segments[segment], !multipleElements).diff.length == 1)
+					Object.keys(diacritics).forEach(function(diac){
+						if(!compareFeatures(features, combineFeatures(segments[segment], diacritics[diac][0]), !multipleElements).diff.length)
+							matches.push(segment + diac);
+					});
+			});
+		//FIXME consider multiple diacritic combined together
+//		if(!matches.length && useDiacritics){
+			//..
+//		}
+		//FIXME arbitrarily choose the first element
+		return (!multipleElements? matches[0]: matches);
 	};
 
 	var compareFeatures = function(bundleA, bundleB, twoWayMatch){
