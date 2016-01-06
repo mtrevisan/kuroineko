@@ -496,22 +496,21 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	var similarity2 = function(bundleA, bundleB, similarityFactor){
 		var diff = compareFeatures(bundleA, bundleB, true).diff,
 			factor = 1;
-		if(similarityFactor){
+		if(ObjectHelper.isDefined(similarityFactor)){
 			//two sounds differing only in voicing: [pb], [td], [kɡ], [ɸβ], [θð], [sz], [ʃʒ], [xɣ], etc...
-			if(diff.length == 1 && (bundleA.syl == 1 || diff.indexOf('voi') >= 0))
+			if(diff.length == 1 && (bundleA.syl == 1 || diff.indexOf('voi') >= 0 || bundleA.ant == 1 && diff.indexOf('ant') >= 0))
 				factor = similarityFactor;
 			//two sounds differing in manner of articulation only as plosive vs fricative: [pɸ], [kx], [bβ], [ɡɣ], etc...
 			//the sibilant or grooved fricatives [s,z,ʃ,ʒ] are excluded from this category as they are quite different auditorily from
 			//the other ("central") fricatives
-			else if(diff.length == 2 && diff.indexOf('cnt') >= 0 && diff.indexOf('dr') >= 0 && bundleA.cnt && bundleA.cnt == bundleA.dr)
-				factor = similarityFactor;
+//			else if(diff.length == 2 && diff.indexOf('cnt') >= 0 && diff.indexOf('dr') >= 0 && bundleA.cnt && bundleA.cnt == bundleA.dr)
+//				factor = similarityFactor;
 			//any pairs of consonants close in place of articulation and differing in no other contrastive feature: [sʃ], [zʒ], [nɲŋ], [lɭ],
 			//[lʎ], [mɱ], etc...
 			//TODO
 			//any other pairs of consonants which are close in articulation and differ by one other feature but are nevertheless frequently
 			//members of the same phoneme: [lɹ], [cɡ], [tθ], [dð], etc...
-			//in languages where voicing is non-contrastive, two phones differing in voicing and only slightly in place of articulation might be considered similar eg. [cɡ] etc.)
-			//further, for the purposes of this type of analysis, the place of articulation of the apicodental fricatives [θ,ð] is considered to be close enough to that of the alveolar stops [t,d] to be considered phonetically similar.
+			//in languages where voicing is non-contrastive, the place of articulation of the apicodental fricatives [θ,ð] is considered to be close enough to that of the alveolar stops [t,d] to be considered phonetically similar.
 			//TODO
 			//FIXME
 		}
