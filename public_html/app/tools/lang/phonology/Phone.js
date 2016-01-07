@@ -50,13 +50,6 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		'ɬ': {syl: -1, con: 1, son: -1, cnt: 1, dr: 1, app: -1, tap: -1, trill: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
 		'ɮ': {syl: -1, con: 1, son: -1, cnt: 1, dr: 1, app: -1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
 		'l': {syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
-
-//'l̺': {syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
-//'l̻ʲ': {syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
-//'l̺̝': {syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
-//'ʎ̞˞': {syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
-//'ʟ̟̞˞': {syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
-
 		'ɫ': {syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: 1, hi: -1, lo: -1, ft: -1, bk: 1, tns: 0},
 		'ɺ': {syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: 1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
 		'ɳ': {syl: -1, con: 1, son: 1, cnt: -1, dr: 0, app: -1, tap: -1, trill: -1, nas: 1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: -1, dst: -1, str: -1, lat: -1, dor: -1, hi: 0, lo: 0, ft: 0, bk: 0, tns: 0},
