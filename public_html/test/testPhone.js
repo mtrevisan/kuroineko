@@ -40,7 +40,8 @@ require(['tools/lang/phonology/Phone', 'tools/lang/GrammarLearner'], function(Ph
 	});
 
 	QUnit.test('similarity', function(){
-		equal(Phone.similarity('a', 'b'), 0.038461538461538464);
+		equal(Phone.similarity(Phone.convertStringIntoFeatures('a')[0], Phone.convertStringIntoFeatures('b')[0]), 0.46153846153846156);
+		equal(Phone.similarity(Phone.convertStringIntoFeatures('t')[0], Phone.convertStringIntoFeatures('d')[0]), 0.038461538461538464);
 	});
 
 
