@@ -39,6 +39,11 @@ require(['tools/lang/phonology/Phone', 'tools/lang/GrammarLearner'], function(Ph
 		deepEqual(Phone.compareFeatures({con: 1, voi: 0}, 'b', true), {diff: ['con', 'voi', '0'], same: {}});
 	});
 
+	QUnit.test('similarity', function(){
+		equal(Phone.similarity('a', 'b'), 0.038461538461538464);
+	});
+
+
 	QUnit.test('rule application test', function(){
 		Phone.setUseDiacritics(true);
 

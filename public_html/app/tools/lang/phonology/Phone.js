@@ -466,7 +466,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	 */
 	var similarity = function(bundleA, bundleB, factors){
 		var diff = compareFeatures(bundleA, bundleB, true).diff,
-			factor = (diff.length == 1? factors[diff[0]] || 1: 1);
+			factor = (factors && diff.length == 1? factors[diff[0]] || 1: 1);
 		return factor * diff.length / Object.keys(segments.a).length;
 	};
 
