@@ -16,7 +16,6 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	/** @constant */
 		REGEX_UNICODE_DIACRITICS = /[\u02B0\u02B2\u02B7\u02BC\u02C8\u02D0\u02DE\u02E0\u02E4\u0303\u031D-\u0320\u0324\u0325\u0329\u032A\u0330\u0334\u033A\u033B]/g;
 
-//	var REGEX_UNICODE_SPLITTER = /(\[([^\]]+)\]|j²|[^\u025A\u1DA3\u207F][\u035D-\u0360\u0362-\u036F\u025A\u1DA3\u207F]*(?:[\u025A\u1DA3\u207F]*[\u035C\u0361][^\u025A\u1DA3\u207F][\u025A\u1DA3\u207F]*)?)/g;
 	/**
 	 * @constant
 	 * @private
