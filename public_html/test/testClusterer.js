@@ -28,7 +28,7 @@ require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonol
 
 	QUnit.test('test', function(){
 		//construct the data
-		var variants = ['Anpeŧ', 'Pàđule', 'Uronŧo', 'Poŧale', 'Verona', 'Ŧenŧenige', 'Kaxan', 'Arfanta (Tarŧo)', 'Belun', 'Sa Stin', 'Venèsia', 'Krespadòro', 'Bixa', 'Montebèlo', 'Teoƚo', 'Roman', 'Vas', 'Toneđa', 'Vicensa', 'Lovadina', 'Kanpo San Martin', 'Istrana', 'Raldon', 'Méolo', 'Cerèa', 'Frata', 'Vila', 'Kavarxare', 'Trevixo', 'Italia'],
+		var variants = ['Anpeŧ', 'Pàđule', 'Uronŧo', 'Poŧale', 'Verona', 'Ŧenŧenige', 'Kaxan', 'Arfanta (Tarŧo)', 'Belun', 'Sa Stin', 'Venèsia', 'Krespaòro', 'Bixa', 'Montebèlo', 'Teoƚo', 'Roman', 'Vas', 'Toneđa', 'Vicensa', 'Lovadina', 'Kanpo San Martin', 'Istrana', 'Raldon', 'Méolo', 'Cerèa', 'Frata', 'Vila', 'Kavarxare', 'Trevixo', 'Italia'],
 			words = [
 				['el',          'al',        'il',         'al',         'el',           'el',         'al',         'al',         'al',         'el',         'el',           'el',           'el',         'el',           'el',           'el',           'al',         'el',           'el',          'el',         'el',                'el',           'el',          'el',         'el',          'el',              'el',            'e',            'el',          'lui'],
 				['ra',          'la',        'la',         'la',         'la',           'la',         'la',         'la',         'la',         'a',          'l̺a',           'la',           'la',         'la',           'l̺a',           'a',            'la',         'la',           'la',          'a',          'a',                 'a',            'a',           'a',          'la',          'la',              'la',            'l̺a',           'l̺a',          'la'],
