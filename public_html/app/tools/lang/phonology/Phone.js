@@ -4,6 +4,7 @@
  * @see {@link https://github.com/kremonte/phonologizer/blob/master/scripts/app.js}
  * @see {@link http://clas.mq.edu.au/speech/phonetics/phonology/features/}
  * @see {@link http://clas.mq.edu.au/speech/phonetics/phonology/phoneme/}
+ * @see {@link http://www.linguistics.ucla.edu/people/hayes/120a/Pheatures/}
  *
  * @author Mauro Trevisan
  */

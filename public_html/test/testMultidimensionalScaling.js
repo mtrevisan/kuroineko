@@ -39,24 +39,44 @@ require(function(){
 				[null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0, 0.2680313844376348],
 				[null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0]
 			],
-			size = variants.length,
+			n = variants.length,
 			i, j;
 
 		var distance = function(coordinateVector, i, j){
-			return Math.sqrt(Math.pow(coordinateVector[i].x - coordinateVector[j].x, 2), Math.pow(coordinateVector[i].y - coordinateVector[j].y, 2));
+			return Math.sqrt(coordinateVector[i].reduce(function(previous, current, idx){ return previous + Math.pow(current - coordinateVector[j][idx], 2); }, 0));
 		};
 		var stress = function(distanceMatrix, coordinateVector){
 			var num = 0,
-				den = 0;
-			for(i = 0; i < size; i ++)
-				for(j = i; j < size; j ++)
+				den = 0,
+				i, j;
+			for(i = 0; i < n; i ++)
+				for(j = i; j < n; j ++)
 					den += Math.pow(distanceMatrix[i][j], 2);
-			for(i = 0; i < size; i ++)
-				for(j = i; j < size; j ++)
+			for(i = 0; i < n; i ++)
+				for(j = i; j < n; j ++)
 					num += Math.pow(distanceMatrix[i][j] - distance(coordinateVector, i, j), 2);
 			return num / den;
 		};
 
+		//matrix of squared proximities: P2 = matrix^2
+		var P2 = [];
+		for(i = 0; i < n; i ++){
+			P2[i] = [];
+			for(j = i; j < n; j ++)
+				P2[i][j] = Math.pow(matrix[i][j], 2);
+		}
+		//J = I - 1 * 1' / n
+		var J = [],
+			n_inv = 1 / n;
+		for(i = 0; i < n; i ++){
+			J[i] = [];
+			for(j = i; j < n; j ++)
+				J[i][j] = (i == j? 1: 0) - n_inv;
+		}
+		//apply the double centering: B = -0.5 * J * P2 * J
+		//extract the m largest positive eigenvalues lambda_1..lambda_m of B and the corresponding eigenvectors e_1..e_m
+		//a m-dimensional spatial configuration of the n objects is derived from the coordinate matrix X = E_m * Λ_m^0.5,
+		//where E_m is the matrix of m eigenvectors and Λ_m is the diagonal matrix of m eigenvalues of B, respectively
 
 console.log('tree');
 	});
