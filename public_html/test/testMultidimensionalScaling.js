@@ -4,6 +4,24 @@
 require(function(){
 	QUnit.module('MultidimensionalScaling');
 
+	var multiplyMatrix = function(a, b, n){
+		var c = [],
+			i, j, k,
+			sum;
+		for(i = 0; i < n; i ++){
+			c[i] = [];
+//			for(j = i; j < n; j ++){
+			for(j = 0; j < n; j ++){
+				sum = 0;
+				for(k = 0; k < n; k ++)
+//					sum += a[Math.min(i, k)][Math.max(k, i)] * b[Math.min(k, j)][Math.max(j, k)];
+					sum += a[i][k] * b[k][j];
+				c[i][j] = sum;
+			}
+		}
+		return c;
+	};
+
 	QUnit.test('test', function(){
 		var dimensions = 2,
 			variants = ['Anpeŧ', 'Pàđule', 'Uronŧo', 'Poŧale', 'Verona', 'Ŧenŧenige', 'Kaxan', 'Arfanta (Tarŧo)', 'Belun', 'Sa Stin', 'Venèsia', 'Krespaòro', 'Bixa', 'Montebèlo', 'Teoƚo', 'Roman', 'Vas', 'Toneđa', 'Vicensa', 'Lovadina', 'Kanpo San Martin', 'Istrana', 'Raldon', 'Méolo', 'Cerèa', 'Frata', 'Vila', 'Kavàrxare', 'Trevixo', 'Italia'],
@@ -58,11 +76,19 @@ require(function(){
 			return num / den;
 		};
 
+matrix = [
+	[0, 93, 82, 133],
+	[93, 0, 52, 60],
+	[82, 52, 0, 111],
+	[133, 60, 111, 0]
+];
+n = 4;
 		//matrix of squared proximities: P2 = matrix^2
 		var P2 = [];
 		for(i = 0; i < n; i ++){
 			P2[i] = [];
-			for(j = i; j < n; j ++)
+//			for(j = i; j < n; j ++)
+			for(j = 0; j < n; j ++)
 				P2[i][j] = Math.pow(matrix[i][j], 2);
 		}
 		//J = I - 1 * 1' / n
@@ -70,15 +96,21 @@ require(function(){
 			n_inv = 1 / n;
 		for(i = 0; i < n; i ++){
 			J[i] = [];
-			for(j = i; j < n; j ++)
+//			for(j = i; j < n; j ++)
+			for(j = 0; j < n; j ++)
 				J[i][j] = (i == j? 1: 0) - n_inv;
 		}
 		//apply the double centering: B = -0.5 * J * P2 * J
+		var B = multiplyMatrix(multiplyMatrix(J, P2, n), J, n);
+		for(i = 0; i < n; i ++)
+//			for(j = i; j < n; j ++)
+			for(j = 0; j < n; j ++)
+				B[i][j] *= -0.5;
 		//extract the m largest positive eigenvalues lambda_1..lambda_m of B and the corresponding eigenvectors e_1..e_m
 		//a m-dimensional spatial configuration of the n objects is derived from the coordinate matrix X = E_m * Λ_m^0.5,
 		//where E_m is the matrix of m eigenvectors and Λ_m is the diagonal matrix of m eigenvalues of B, respectively
 
-console.log('tree');
+console.log(JSON.stringify(B));
 	});
 
 });
