@@ -27,6 +27,17 @@ require(['../test/lib/EVDecomposition'], function(EVDecomposition){
 		return d;
 	};
 
+	var multiplyDiagonal = function(a, b, n, m){
+		var c = [],
+			i, j;
+		for(i = 0; i < n; i ++){
+			c[i] = [];
+			for(j = 0; j < m; j ++)
+				c[i][j] = a[i][j] * b[j];
+		}
+		return c;
+	};
+
 
 	QUnit.test('test', function(){
 		var dimensions = 2,
@@ -114,21 +125,25 @@ n = 4;
 		sorter.sort(function(a, b){
 			return (eigen.eigenvalues_real[b] - eigen.eigenvalues_real[a]);
 		});
-		var eigenvalues = [],
-			eigenvectors = [];
+		var lambda = [],
+			E = [];
+		for(i = 0; i < n; i ++)
+			E[i] = [];
 		for(i = 0; i < dimensions; i ++){
-			eigenvalues.push(eigen.eigenvalues_real[sorter[i]]);
-			eigenvectors[i] = [];
+			lambda.push(eigen.eigenvalues_real[sorter[i]]);
 			for(j = 0; j < n; j ++)
-				eigenvectors[i][j] = eigen.eigenvectors[j][sorter[i]];
+				E[j][i] = eigen.eigenvectors[j][sorter[i]];
 		}
 		//a m-dimensional spatial configuration of the n objects is derived from the coordinate matrix X = E_m * Λ_m^0.5,
+		lambda = lambda.map(function(el){ return Math.sqrt(el); });
+		var X = multiplyDiagonal(E, lambda, n, dimensions);
 		//where E_m is the matrix of m eigenvectors and Λ_m is the diagonal matrix of m eigenvalues of B, respectively
 
 //console.log(JSON.stringify(B));
 //console.log(JSON.stringify(eigen));
-//console.log(JSON.stringify(eigenvalues));
-console.log(JSON.stringify(eigenvectors));
+//console.log(JSON.stringify(lambda));
+//console.log(JSON.stringify(E));
+console.log(JSON.stringify(X));
 	});
 
 });
