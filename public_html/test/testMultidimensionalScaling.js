@@ -4,22 +4,66 @@
 require(function(){
 	QUnit.module('MultidimensionalScaling');
 
-	var multiplyMatrix = function(a, b, n){
+	var multiplyMatrix2 = function(J, P2, n){
 		var c = [],
 			i, j, k,
 			sum;
 		for(i = 0; i < n; i ++){
 			c[i] = [];
-//			for(j = i; j < n; j ++){
 			for(j = 0; j < n; j ++){
 				sum = 0;
 				for(k = 0; k < n; k ++)
-//					sum += a[Math.min(i, k)][Math.max(k, i)] * b[Math.min(k, j)][Math.max(j, k)];
-					sum += a[i][k] * b[k][j];
+					sum += J[Math.min(i, k)][Math.max(k, i)] * P2[Math.min(k, j)][Math.max(j, k)];
 				c[i][j] = sum;
 			}
 		}
-		return c;
+		var d = [];
+		for(i = 0; i < n; i ++){
+			d[i] = [];
+			for(j = i; j < n; j ++){
+				sum = 0;
+				for(k = 0; k < n; k ++)
+					sum += c[i][k] * J[Math.min(k, j)][Math.max(j, k)];
+				d[i][j] = -0.5 * sum;
+			}
+		}
+		return d;
+	};
+
+	var eigen = function(matrix, evecs, evals){
+		var d = evals.length;
+		var k = matrix.length;
+		var r = 0;
+		for(var m = 0; m < d; m ++)
+			evals[m] = Data.normalize(evecs[m]);
+		var iterations = 0;
+		while(r < 0.99999){
+			var tempOld = new double[d][k];
+			for(var m = 0; m < d; m ++)
+				for(var i = 0; i < k; i ++){
+					tempOld[m][i] = evecs[m][i];
+					evecs[m][i] = 0;
+				}
+
+			for(var m = 0; m < d; m ++)
+				for(var i = 0; i < k; i ++)
+					for(var j = 0; j < k; j ++)
+						evecs[m][j] += matrix[i][j] * tempOld[m][i];
+			for(var m = 0; m < d; m ++)
+				for(var p = 0; p < m; p ++){
+					var fac = Data.prod(evecs[p], evecs[m]) / Data.prod(evecs[p], evecs[p]);
+					for(var i = 0; i < k; i++)
+						evecs[m][i] -= fac * evecs[p][i];
+				}
+
+			for(var m = 0; m < d; m ++)
+				evals[m] = Data.normalize(evecs[m]);
+			r = 1;
+			for(var m = 0; m < d; m ++)
+				r = Math.min(Math.abs(Data.prod(evecs[m], tempOld[m])), r);
+
+			iterations++;
+		}
 	};
 
 	QUnit.test('test', function(){
@@ -78,17 +122,16 @@ require(function(){
 
 matrix = [
 	[0, 93, 82, 133],
-	[93, 0, 52, 60],
-	[82, 52, 0, 111],
-	[133, 60, 111, 0]
+	[null, 0, 52, 60],
+	[null, null, 0, 111],
+	[null, null, null, 0]
 ];
 n = 4;
 		//matrix of squared proximities: P2 = matrix^2
 		var P2 = [];
 		for(i = 0; i < n; i ++){
 			P2[i] = [];
-//			for(j = i; j < n; j ++)
-			for(j = 0; j < n; j ++)
+			for(j = i; j < n; j ++)
 				P2[i][j] = Math.pow(matrix[i][j], 2);
 		}
 		//J = I - 1 * 1' / n
@@ -96,16 +139,11 @@ n = 4;
 			n_inv = 1 / n;
 		for(i = 0; i < n; i ++){
 			J[i] = [];
-//			for(j = i; j < n; j ++)
-			for(j = 0; j < n; j ++)
+			for(j = i; j < n; j ++)
 				J[i][j] = (i == j? 1: 0) - n_inv;
 		}
 		//apply the double centering: B = -0.5 * J * P2 * J
-		var B = multiplyMatrix(multiplyMatrix(J, P2, n), J, n);
-		for(i = 0; i < n; i ++)
-//			for(j = i; j < n; j ++)
-			for(j = 0; j < n; j ++)
-				B[i][j] *= -0.5;
+		var B = multiplyMatrix2(J, P2, n);
 		//extract the m largest positive eigenvalues lambda_1..lambda_m of B and the corresponding eigenvectors e_1..e_m
 		//a m-dimensional spatial configuration of the n objects is derived from the coordinate matrix X = E_m * Λ_m^0.5,
 		//where E_m is the matrix of m eigenvectors and Λ_m is the diagonal matrix of m eigenvalues of B, respectively
