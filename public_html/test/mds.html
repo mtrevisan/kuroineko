@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+	body {
+		font: 10px sans-serif;
+	}
+
+	.axis path,
+	.axis line {
+		fill: none;
+		stroke: #000;
+		shape-rendering: crispEdges;
+	}
+
+	.dot {
+		stroke: #000;
+	}
+</style>
+<body>
+	<script src="lib/d3.min.js"></script>
+	<script>
+		var margin = {top: 20, right: 20, bottom: 30, left: 40},
+			width = 960 - margin.left - margin.right,
+			height = 500 - margin.top - margin.bottom;
+
+		var x = d3.scale.linear()
+			.range([0, width]);
+		var y = d3.scale.linear()
+			.range([height, 0]);
+
+		var color = d3.scale.category10();
+
+		var xAxis = d3.svg.axis()
+			.scale(x)
+			.orient("bottom");
+		var yAxis = d3.svg.axis()
+			.scale(y)
+			.orient("left");
+
+		var svg = d3.select("body").append("svg")
+			.attr("width", width + margin.left + margin.right)
+			.attr("height", height + margin.top + margin.bottom)
+			.append("g")
+			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+		var data = [
+			{v: 'Anpeŧ',            x: -0.14937319369149024,   y: -0.07898108856914832},
+			{v: 'Pàđule',           x: -0.20824173419707834,   y: -0.09487764430067701},
+			{v: 'Uronŧo',           x: -0.13433700863586978,   y: -0.06945057987239141},
+			{v: 'Poŧale',           x: -0.18299476347908483,   y: -0.04478016640734154},
+			{v: 'Verona',           x: 0.031620370472929614,   y: 0.007444941673790707},
+			{v: 'Ŧenŧenige',        x: -0.125323092336346,     y: 0.08675049590206341},
+			{v: 'Kaxan',            x: -0.04364661347878041,   y: 0.08750031990566524},
+			{v: 'Arfanta (Tarŧo)',  x: -0.012471187904160996,  y: 0.0867140151318396},
+			{v: 'Belun',            x: -0.058131760405925534,  y: 0.10212703933387346},
+			{v: 'Sa Stin',          x: 0.01625037640170913,    y: 0.0392324947079618},
+			{v: 'Venèsia',          x: 0.05485055498482919,    y: -0.017477914784641106},
+			{v: 'Krespaòro',        x: 0.04603465698969724,    y: -0.02027687907635021},
+			{v: 'Bixa',             x: -0.0070772953154474285, y: 0.0733662448495441},
+			{v: 'Montebèlo',        x: 0.051258398158698634,   y: -0.020521621560288777},
+			{v: 'Teoƚo',            x: 0.07278811621612673,    y: -0.023360922879693675},
+			{v: 'Roman',            x: 0.0473026846511121,     y: 0.008845747641081913},
+			{v: 'Vas',              x: -0.040222773263683474,  y: 0.09035315650564539},
+			{v: 'Toneđa',           x: 0.04938893836410397,    y: -0.020674437820670258},
+			{v: 'Vicensa',          x: 0.051674152586404766,   y: -0.022741737298373265},
+			{v: 'Lovadina',         x: 0.019913338939700313,   y: 0.05303398857964541},
+			{v: 'Kanpo San Martin', x: 0.06508429598954941,    y: -0.019456818867329067},
+			{v: 'Istrana',          x: 0.051953227954392764,   y: -0.005242507743873675},
+			{v: 'Raldon',           x: 0.02444949807488317,    y: 0.004942119094186435},
+			{v: 'Méolo',            x: 0.038512144214566266,   y: -0.0003818104185804718},
+			{v: 'Cerèa',            x: 0.021650303620088577,   y: -0.0013411940609131504},
+			{v: 'Frata',            x: 0.060019390324820746,   y: -0.018192439230210144},
+			{v: 'Vila',             x: 0.0631825037588862,     y: -0.02376604918050005},
+			{v: 'Kavàrxare',        x: 0.06872789081654906,    y: -0.03032983249196655},
+			{v: 'Trevixo',          x: 0.029623999746220975,   y: 0.0008097068800543824},
+			{v: 'Italia',           x: 0.09753458044259837,    y: -0.129266625642403}
+		];
+
+		x.domain(d3.extent(data, function(d){
+			return d.x;
+		})).nice();
+		y.domain(d3.extent(data, function(d){
+			return d.y;
+		})).nice();
+
+		svg.append("g")
+			.attr("class", "x axis")
+			.attr("transform", "translate(0," + height + ")")
+			.call(xAxis)
+			.append("text")
+			.attr("class", "label")
+			.attr("x", width)
+			.attr("y", -6)
+			.style("text-anchor", "end")
+			.text("x");
+
+		svg.append("g")
+			.attr("class", "y axis")
+			.call(yAxis)
+			.append("text")
+			.attr("class", "label")
+			.attr("transform", "rotate(-90)")
+			.attr("y", 6)
+			.attr("dy", ".71em")
+			.style("text-anchor", "end")
+			.text("y")
+
+		svg.selectAll(".dot")
+			.data(data)
+			.enter().append("circle")
+			.attr("class", "dot")
+			.attr("r", 3.5)
+			.attr("cx", function(d){
+				return x(d.x);
+			})
+			.attr("cy", function(d){
+				return y(d.y);
+			})
+			.style("fill", function(d){
+				return color(d.v);
+			});
+	</script>
+</body>
