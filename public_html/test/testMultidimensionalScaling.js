@@ -108,11 +108,27 @@ n = 4;
 		var B = doubleCenter(J, P2, n);
 		//extract the m = dimensions largest positive eigenvalues lambda_1..lambda_m of B and the corresponding eigenvectors e_1..e_m
 		var eigen = EVDecomposition.decompose(B);
+		var sorter = [];
+		for(i = 0; i < n; i ++)
+			sorter.push(i);
+		sorter.sort(function(a, b){
+			return (eigen.eigenvalues_real[b] - eigen.eigenvalues_real[a]);
+		});
+		var eigenvalues = [],
+			eigenvectors = [];
+		for(i = 0; i < dimensions; i ++){
+			eigenvalues.push(eigen.eigenvalues_real[sorter[i]]);
+			eigenvectors[i] = [];
+			for(j = 0; j < n; j ++)
+				eigenvectors[i][j] = eigen.eigenvectors[j][sorter[i]];
+		}
 		//a m-dimensional spatial configuration of the n objects is derived from the coordinate matrix X = E_m * Λ_m^0.5,
 		//where E_m is the matrix of m eigenvectors and Λ_m is the diagonal matrix of m eigenvalues of B, respectively
 
 //console.log(JSON.stringify(B));
-console.log(JSON.stringify(eigen));
+//console.log(JSON.stringify(eigen));
+//console.log(JSON.stringify(eigenvalues));
+console.log(JSON.stringify(eigenvectors));
 	});
 
 });
