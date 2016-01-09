@@ -46,8 +46,8 @@ define(function(){
 			//row and column dimension (square matrix)
 		var n = matrix.length,
 			eigenvectors = [],
-			d = [],
-			eigenvalues = [],
+			eigenvalues_real = [],
+			eigenvalues_imaginary = [],
 			eps = Math.pow(2, -40),
 			i, j;
 		for(i = 0; i < n; i ++)
@@ -59,17 +59,18 @@ define(function(){
 			}
 
 		//process a symmetric matrix
-		tridiagonalize(n, d, eigenvalues, eigenvectors);
-		diagonalize(n, d, eigenvalues, eigenvectors);
+		tridiagonalize(n, eigenvalues_real, eigenvalues_imaginary, eigenvectors);
+		diagonalize(n, eigenvalues_real, eigenvalues_imaginary, eigenvectors);
 
-		//reduce small values in d and e to 0
-		d = d.map(function(el){ return (Math.abs(el) < eps? 0: el); });
-		eigenvalues = eigenvalues.map(function(el){ return (Math.abs(el) < eps? 0: el); });
+		//reduce small values in d to 0
+		eigenvalues_real = eigenvalues_real.map(function(el){ return (Math.abs(el) < eps? 0: el); });
+		eigenvalues_imaginary = eigenvalues_imaginary.map(function(el){ return (Math.abs(el) < eps? 0: el); });
 
 		//create an object to return the results
 		return {
 			eigenvectors: eigenvectors,
-			eigenvalues: d
+			eigenvalues_real: eigenvalues_real,
+			eigenvalues_imaginary: eigenvalues_imaginary
 		};
 	};
 

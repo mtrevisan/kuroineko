@@ -107,12 +107,12 @@ n = 4;
 		//apply the double centering: B = -0.5 * J * P2 * J
 		var B = doubleCenter(J, P2, n);
 		//extract the m = dimensions largest positive eigenvalues lambda_1..lambda_m of B and the corresponding eigenvectors e_1..e_m
-		var bla = EVDecomposition.decompose(B);
+		var eigen = EVDecomposition.decompose(B);
 		//a m-dimensional spatial configuration of the n objects is derived from the coordinate matrix X = E_m * Λ_m^0.5,
 		//where E_m is the matrix of m eigenvectors and Λ_m is the diagonal matrix of m eigenvalues of B, respectively
 
 //console.log(JSON.stringify(B));
-console.log(JSON.stringify(bla));
+console.log(JSON.stringify(eigen));
 	});
 
 });
