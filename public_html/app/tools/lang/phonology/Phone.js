@@ -250,11 +250,11 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		'\u031F': [{ft: 1, bk: -1}, {con: 1, cor: -1, dor: 1, hi: 1, lo: -1}, 'fronted velar'],
 		//also known as backed
 		'\u0320': [{ant: -1, dst: 1}, {con: 1, cor: 1, ant: 1, dst: -1}, 'postalveolar'],
-		'\u0324': [{sg: 1, cg: -1}, {voi: 1, sg: -1, cg: -1}, 'breathy void'],
+		'\u0324': [{sg: 1, cg: -1}, {voi: 1, sg: -1, cg: -1}, 'breathy voiced'],
 		'\u0325': [{voi: -1}, {son: 1, voi: 1}, 'voiceless'],
 		'\u0329': [{syl: 1}, {syl: -1}, 'syllabic'],
 		'\u032A': [{ant: 1, dst: 1}, {con: 1, cor: 1, ant: 1, dst: -1}, 'dental'],
-		'\u0330': [{sg: -1, cg: 1}, {voi: 1, sg: -1, cg: -1}, 'creaky void'],
+		'\u0330': [{sg: -1, cg: 1}, {voi: 1, sg: -1, cg: -1}, 'creaky voiced'],
 		'\u0334': [{ft: -1, bk: 1}, {con: 1, dor: 1, hi: 1, lo: -1}, 'backed velar'],
 		//TODO
 		//produced by obstructing the air passage with the tip of the tongue
