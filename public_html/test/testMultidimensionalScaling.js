@@ -77,22 +77,6 @@ require(['../test/lib/EVDecomposition'], function(EVDecomposition){
 			n = variants.length,
 			i, j;
 
-		var distance = function(coordinateVector, i, j){
-			return Math.sqrt(coordinateVector[i].reduce(function(previous, current, idx){ return previous + Math.pow(current - coordinateVector[j][idx], 2); }, 0));
-		};
-		var stress = function(distanceMatrix, coordinateVector){
-			var num = 0,
-				den = 0,
-				i, j;
-			for(i = 0; i < n; i ++)
-				for(j = i; j < n; j ++)
-					den += Math.pow(distanceMatrix[i][j], 2);
-			for(i = 0; i < n; i ++)
-				for(j = i; j < n; j ++)
-					num += Math.pow(distanceMatrix[i][j] - distance(coordinateVector, i, j), 2);
-			return num / den;
-		};
-
 matrix = [
 	[0, 93, 82, 133],
 	[null, 0, 52, 60],
@@ -135,9 +119,9 @@ n = 4;
 				E[j][i] = eigen.eigenvectors[j][sorter[i]];
 		}
 		//a m-dimensional spatial configuration of the n objects is derived from the coordinate matrix X = E_m * Λ_m^0.5,
+		//where E_m is the matrix of m eigenvectors and Λ_m is the diagonal matrix of m eigenvalues of B
 		lambda = lambda.map(function(el){ return Math.sqrt(el); });
 		var X = multiplyDiagonal(E, lambda, n, dimensions);
-		//where E_m is the matrix of m eigenvectors and Λ_m is the diagonal matrix of m eigenvalues of B, respectively
 
 //console.log(JSON.stringify(B));
 //console.log(JSON.stringify(eigen));
