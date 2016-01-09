@@ -4,27 +4,24 @@
 require(function(){
 	QUnit.module('MultidimensionalScaling');
 
-	var multiplyMatrix2 = function(J, P2, n){
+	var multiplyMatrixJP2J_2 = function(J, P2, n){
 		var c = [],
+			d = [],
 			i, j, k,
-			sum;
-		for(i = 0; i < n; i ++){
-			c[i] = [];
-			for(j = 0; j < n; j ++){
-				sum = 0;
-				for(k = 0; k < n; k ++)
-					sum += J[Math.min(i, k)][Math.max(k, i)] * P2[Math.min(k, j)][Math.max(j, k)];
-				c[i][j] = sum;
-			}
-		}
-		var d = [];
+			sum0, sum1;
 		for(i = 0; i < n; i ++){
 			d[i] = [];
-			for(j = i; j < n; j ++){
-				sum = 0;
+			for(j = 0; j < n; j ++){
+				sum0 = 0;
 				for(k = 0; k < n; k ++)
-					sum += c[i][k] * J[Math.min(k, j)][Math.max(j, k)];
-				d[i][j] = -0.5 * sum;
+					sum0 += J[Math.min(i, k)][Math.max(k, i)] * P2[Math.min(k, j)][Math.max(j, k)];
+				c[j] = sum0;
+			}
+			for(j = i; j < n; j ++){
+				sum1 = 0;
+				for(k = 0; k < n; k ++)
+					sum1 += c[k] * J[Math.min(k, j)][Math.max(j, k)];
+				d[i][j] = -0.5 * sum1;
 			}
 		}
 		return d;
@@ -143,7 +140,7 @@ n = 4;
 				J[i][j] = (i == j? 1: 0) - n_inv;
 		}
 		//apply the double centering: B = -0.5 * J * P2 * J
-		var B = multiplyMatrix2(J, P2, n);
+		var B = multiplyMatrixJP2J_2(J, P2, n);
 		//extract the m largest positive eigenvalues lambda_1..lambda_m of B and the corresponding eigenvectors e_1..e_m
 		//a m-dimensional spatial configuration of the n objects is derived from the coordinate matrix X = E_m * Λ_m^0.5,
 		//where E_m is the matrix of m eigenvectors and Λ_m is the diagonal matrix of m eigenvalues of B, respectively
