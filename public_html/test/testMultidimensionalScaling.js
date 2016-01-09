@@ -77,13 +77,6 @@ require(['../test/lib/EVDecomposition'], function(EVDecomposition){
 			n = variants.length,
 			i, j;
 
-matrix = [
-	[0, 93, 82, 133],
-	[null, 0, 52, 60],
-	[null, null, 0, 111],
-	[null, null, null, 0]
-];
-n = 4;
 		//matrix of squared proximities: P2 = matrix^2
 		var P2 = [];
 		for(i = 0; i < n; i ++){
