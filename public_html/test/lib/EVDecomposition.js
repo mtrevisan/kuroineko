@@ -48,7 +48,6 @@ define(function(){
 			eigenvectors = [],
 			eigenvalues_real = [],
 			eigenvalues_imaginary = [],
-			eps = Math.pow(2, -40),
 			i, j;
 		for(i = 0; i < n; i ++)
 			eigenvectors[i] = [];
@@ -62,7 +61,8 @@ define(function(){
 		tridiagonalize(n, eigenvalues_real, eigenvalues_imaginary, eigenvectors);
 		diagonalize(n, eigenvalues_real, eigenvalues_imaginary, eigenvectors);
 
-		//reduce small values in d to 0
+		//reduce small values to 0
+		var eps = Math.pow(2, -40);
 		eigenvalues_real = eigenvalues_real.map(function(el){ return (Math.abs(el) < eps? 0: el); });
 		eigenvalues_imaginary = eigenvalues_imaginary.map(function(el){ return (Math.abs(el) < eps? 0: el); });
 
@@ -81,10 +81,10 @@ define(function(){
 	 *
 	 * @private
 	 */
-	var tridiagonalize = function(n, d, eigenvalues, eigenvectors){
+	var tridiagonalize = function(n, eigenvalues_real, eigenvalues_imaginary, eigenvectors){
 		var i, j, k;
 		for(j = 0; j < n; j ++)
-			d[j] = eigenvectors[n - 1][j];
+			eigenvalues_real[j] = eigenvectors[n - 1][j];
 
 		//Householder reduction to tridiagonal form
 		var scale, h, hh,
@@ -94,11 +94,11 @@ define(function(){
 			scale = 0;
 			h = 0;
 			for(k = 0; k < i; k ++)
-				scale += Math.abs(d[k]);
+				scale += Math.abs(eigenvalues_real[k]);
 			if(!scale){
-				eigenvalues[i] = d[i - 1];
+				eigenvalues_imaginary[i] = eigenvalues_real[i - 1];
 				for(j = 0; j < i; j ++){
-					d[j] = eigenvectors[i - 1][j];
+					eigenvalues_real[j] = eigenvectors[i - 1][j];
 					eigenvectors[i][j] = 0;
 					eigenvectors[j][i] = 0;
 				}
@@ -106,74 +106,74 @@ define(function(){
 			else{
 				//generate Householder vector
 				for(k = 0; k < i; k ++){
-					d[k] /= scale;
-					h += d[k] * d[k];
+					eigenvalues_real[k] /= scale;
+					h += eigenvalues_real[k] * eigenvalues_real[k];
 				}
-				f = d[i - 1];
+				f = eigenvalues_real[i - 1];
 				g = Math.sqrt(h);
 				if(f > 0)
 					g = -g;
-				eigenvalues[i] = scale * g;
+				eigenvalues_imaginary[i] = scale * g;
 				h = h - f * g;
-				d[i - 1] = f - g;
+				eigenvalues_real[i - 1] = f - g;
 				for(j = 0; j < i; j ++)
-					eigenvalues[j] = 0;
+					eigenvalues_imaginary[j] = 0;
 				//apply similarity transformation to remaining columns
 				for(j = 0; j < i; j ++){
-					f = d[j];
+					f = eigenvalues_real[j];
 					eigenvectors[j][i] = f;
-					g = eigenvalues[j] + eigenvectors[j][j] * f;
+					g = eigenvalues_imaginary[j] + eigenvectors[j][j] * f;
 					for(k = j + 1; k <= i - 1; k ++){
-						g += eigenvectors[k][j] * d[k];
-						eigenvalues[k] += eigenvectors[k][j] * f;
+						g += eigenvectors[k][j] * eigenvalues_real[k];
+						eigenvalues_imaginary[k] += eigenvectors[k][j] * f;
 					}
-					eigenvalues[j] = g;
+					eigenvalues_imaginary[j] = g;
 				}
 				f = 0;
 				for(j = 0; j < i; j ++){
-					eigenvalues[j] /= h;
-					f += eigenvalues[j] * d[j];
+					eigenvalues_imaginary[j] /= h;
+					f += eigenvalues_imaginary[j] * eigenvalues_real[j];
 				}
 				hh = f / (h + h);
 				for(j = 0; j < i; j ++)
-					eigenvalues[j] -= hh * d[j];
+					eigenvalues_imaginary[j] -= hh * eigenvalues_real[j];
 				for(j = 0; j < i; j ++){
-					f = d[j];
-					g = eigenvalues[j];
+					f = eigenvalues_real[j];
+					g = eigenvalues_imaginary[j];
 					for(k = j; k <= i - 1; k ++)
-						eigenvectors[k][j] -= (f * eigenvalues[k] + g * d[k]);
-					d[j] = eigenvectors[i - 1][j];
+						eigenvectors[k][j] -= (f * eigenvalues_imaginary[k] + g * eigenvalues_real[k]);
+					eigenvalues_real[j] = eigenvectors[i - 1][j];
 					eigenvectors[i][j] = 0;
 				}
 			}
-			d[i] = h;
+			eigenvalues_real[i] = h;
 		}
 		//accumulate transformations
 		var g;
 		for(i = 0; i < n - 1; i ++){
 			eigenvectors[n - 1][i] = eigenvectors[i][i];
 			eigenvectors[i][i] = 1;
-			h = d[i + 1];
+			h = eigenvalues_real[i + 1];
 			if(h){
 				for(k = 0; k <= i; k ++)
-					d[k] = eigenvectors[k][i + 1] / h;
+					eigenvalues_real[k] = eigenvectors[k][i + 1] / h;
 				for(j = 0; j <= i; j ++){
 					g = 0;
 					for(k = 0; k <= i; k ++)
 						g += eigenvectors[k][i + 1] * eigenvectors[k][j];
 					for(k = 0; k <= i; k ++)
-						eigenvectors[k][j] -= g * d[k];
+						eigenvectors[k][j] -= g * eigenvalues_real[k];
 				}
 			}
 			for(k = 0; k <= i; k ++)
 				eigenvectors[k][i + 1] = 0;
 		}
 		for(j = 0; j < n; j ++){
-			d[j] = eigenvectors[n - 1][j];
+			eigenvalues_real[j] = eigenvectors[n - 1][j];
 			eigenvectors[n - 1][j] = 0;
 		}
 		eigenvectors[n - 1][n - 1] = 1;
-		eigenvalues[0] = 0;
+		eigenvalues_imaginary[0] = 0;
 	};
 
 	/**
@@ -183,22 +183,22 @@ define(function(){
 	 *
 	 * @private
 	 */
-	var diagonalize = function(n, d, eigenvalues, eigenvectorsV){
+	var diagonalize = function(n, eigenvalues_real, eigenvalues_imaginary, eigenvectorsV){
 		var eps = 0.5 * Math.pow(2, -40),
 			i, f, tst1, l, m;
 
 		for(i = 1; i < n; i ++)
-			eigenvalues[i - 1] = eigenvalues[i];
-		eigenvalues[n - 1] = 0;
+			eigenvalues_imaginary[i - 1] = eigenvalues_imaginary[i];
+		eigenvalues_imaginary[n - 1] = 0;
 
 		f = 0;
 		tst1 = 0;
 		for(l = 0; l < n; l ++){
 			//find small subdiagonal element
-			tst1 = Math.max(tst1, Math.abs(d[l]) + Math.abs(eigenvalues[l]));
+			tst1 = Math.max(tst1, Math.abs(eigenvalues_real[l]) + Math.abs(eigenvalues_imaginary[l]));
 			m = l;
 			while(m < n){
-				if(Math.abs(eigenvalues[m]) <= eps * tst1)
+				if(Math.abs(eigenvalues_imaginary[m]) <= eps * tst1)
 					break;
 				m ++;
 			}
@@ -210,39 +210,39 @@ define(function(){
 					//(could check iteration count here)
 					iter ++;
 					//compute implicit shift
-					var g = d[l];
-					var p = (d[l + 1] - g) / (2 * eigenvalues[l]);
+					var g = eigenvalues_real[l];
+					var p = (eigenvalues_real[l + 1] - g) / (2 * eigenvalues_imaginary[l]);
 					var r = hypot(p, 1);
 					if(p < 0)
 						r = -r;
-					d[l] = eigenvalues[l] / (p + r);
-					d[l + 1] = eigenvalues[l] * (p + r);
-					var dl1 = d[l + 1];
-					var h = g - d[l];
+					eigenvalues_real[l] = eigenvalues_imaginary[l] / (p + r);
+					eigenvalues_real[l + 1] = eigenvalues_imaginary[l] * (p + r);
+					var dl1 = eigenvalues_real[l + 1];
+					var h = g - eigenvalues_real[l];
 					for(i = l + 2; i < n; i++)
-						d[i] -= h;
+						eigenvalues_real[i] -= h;
 					f = f + h;
 
 					// Implicit QL transformation.
-					p = d[m];
+					p = eigenvalues_real[m];
 					var c = 1;
 					var c2 = c;
 					var c3 = c;
-					var el1 = eigenvalues[l + 1];
+					var el1 = eigenvalues_imaginary[l + 1];
 					var s = 0;
 					var s2 = 0;
 					for(i = m - 1; i >= l; i--){
 						c3 = c2;
 						c2 = c;
 						s2 = s;
-						g = c * eigenvalues[i];
+						g = c * eigenvalues_imaginary[i];
 						h = c * p;
-						r = hypot(p, eigenvalues[i]);
-						eigenvalues[i + 1] = s * r;
-						s = eigenvalues[i] / r;
+						r = hypot(p, eigenvalues_imaginary[i]);
+						eigenvalues_imaginary[i + 1] = s * r;
+						s = eigenvalues_imaginary[i] / r;
 						c = p / r;
-						p = c * d[i] - s * g;
-						d[i + 1] = h + s * (c * g + s * d[i]);
+						p = c * eigenvalues_real[i] - s * g;
+						eigenvalues_real[i + 1] = h + s * (c * g + s * eigenvalues_real[i]);
 
 						//accumulate transformation
 						for(var k = 0; k < n; k++){
@@ -251,28 +251,28 @@ define(function(){
 							eigenvectorsV[k][i] = c * eigenvectorsV[k][i] - s * h;
 						}
 					}
-					p = -s * s2 * c3 * el1 * eigenvalues[l] / dl1;
-					eigenvalues[l] = s * p;
-					d[l] = c * p;
+					p = -s * s2 * c3 * el1 * eigenvalues_imaginary[l] / dl1;
+					eigenvalues_imaginary[l] = s * p;
+					eigenvalues_real[l] = c * p;
 				//check for convergence
-				}while(Math.abs(eigenvalues[l]) > eps * tst1);
+				}while(Math.abs(eigenvalues_imaginary[l]) > eps * tst1);
 			}
-			d[l] = d[l] + f;
-			eigenvalues[l] = 0;
+			eigenvalues_real[l] = eigenvalues_real[l] + f;
+			eigenvalues_imaginary[l] = 0;
 		}
 
 		//sort eigenvalues and corresponding vectors
 		for(i = 0; i < n - 1; i++){
 			var k = i;
-			var p = d[i];
+			var p = eigenvalues_real[i];
 			for(var j = i + 1; j < n; j++)
-				if(d[j] < p){
+				if(eigenvalues_real[j] < p){
 					k = j;
-					p = d[j];
+					p = eigenvalues_real[j];
 				}
 			if(k != i){
-				d[k] = d[i];
-				d[i] = p;
+				eigenvalues_real[k] = eigenvalues_real[i];
+				eigenvalues_real[i] = p;
 				for(var j = 0; j < n; j++){
 					p = eigenvectorsV[j][i];
 					eigenvectorsV[j][i] = eigenvectorsV[j][k];
