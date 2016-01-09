@@ -1,10 +1,10 @@
 //http://www.bristol.ac.uk/media-library/sites/cmm/migrated/documents/chapter3.pdf
 //https://homepage.uni-tuebingen.de/florian.wickelmaier/pubs/Wickelmaier2003SQRU.pdf
 //https://github.com/asarnow/mdscale/blob/master/src/main/java/mdscale/Data.java
-require(function(){
+require(['../test/lib/EVDecomposition'], function(EVDecomposition){
 	QUnit.module('MultidimensionalScaling');
 
-	var multiplyMatrixJP2J_2 = function(J, P2, n){
+	var doubleCenter = function(J, P2, n){
 		var c = [],
 			d = [],
 			i, j, k,
@@ -27,41 +27,6 @@ require(function(){
 		return d;
 	};
 
-	var eigen = function(matrix, evecs, evals){
-		var d = evals.length;
-		var k = matrix.length;
-		var r = 0;
-		for(var m = 0; m < d; m ++)
-			evals[m] = Data.normalize(evecs[m]);
-		var iterations = 0;
-		while(r < 0.99999){
-			var tempOld = new double[d][k];
-			for(var m = 0; m < d; m ++)
-				for(var i = 0; i < k; i ++){
-					tempOld[m][i] = evecs[m][i];
-					evecs[m][i] = 0;
-				}
-
-			for(var m = 0; m < d; m ++)
-				for(var i = 0; i < k; i ++)
-					for(var j = 0; j < k; j ++)
-						evecs[m][j] += matrix[i][j] * tempOld[m][i];
-			for(var m = 0; m < d; m ++)
-				for(var p = 0; p < m; p ++){
-					var fac = Data.prod(evecs[p], evecs[m]) / Data.prod(evecs[p], evecs[p]);
-					for(var i = 0; i < k; i++)
-						evecs[m][i] -= fac * evecs[p][i];
-				}
-
-			for(var m = 0; m < d; m ++)
-				evals[m] = Data.normalize(evecs[m]);
-			r = 1;
-			for(var m = 0; m < d; m ++)
-				r = Math.min(Math.abs(Data.prod(evecs[m], tempOld[m])), r);
-
-			iterations++;
-		}
-	};
 
 	QUnit.test('test', function(){
 		var dimensions = 2,
@@ -140,12 +105,14 @@ n = 4;
 				J[i][j] = (i == j? 1: 0) - n_inv;
 		}
 		//apply the double centering: B = -0.5 * J * P2 * J
-		var B = multiplyMatrixJP2J_2(J, P2, n);
-		//extract the m largest positive eigenvalues lambda_1..lambda_m of B and the corresponding eigenvectors e_1..e_m
+		var B = doubleCenter(J, P2, n);
+		//extract the m = dimensions largest positive eigenvalues lambda_1..lambda_m of B and the corresponding eigenvectors e_1..e_m
+		var bla = EVDecomposition.decompose(B);
 		//a m-dimensional spatial configuration of the n objects is derived from the coordinate matrix X = E_m * Λ_m^0.5,
 		//where E_m is the matrix of m eigenvectors and Λ_m is the diagonal matrix of m eigenvalues of B, respectively
 
-console.log(JSON.stringify(B));
+//console.log(JSON.stringify(B));
+console.log(JSON.stringify(bla));
 	});
 
 });
