@@ -107,16 +107,6 @@ define(function(){
 	};
 
 
-	/** Find sqrt(a^2 + b^2) reliably */
-	var hypot = function(a, b){
-		a = Math.abs(a);
-		b = Math.abs(b);
-		var x = Math.max(a, b),
-			r = Math.min(a, b) / x;
-		return x * Math.sqrt(1 + r * r) || null;
-	};
-
-
 	return {
 		bitCount: bitCount,
 		nextPowerOf2: nextPowerOf2,
@@ -126,9 +116,7 @@ define(function(){
 		combine: combine,
 		combineUpTo: combineUpTo,
 		combineAll: combineAll,
-		permute: permute,
-
-		hypot: hypot
+		permute: permute
 	};
 
 });

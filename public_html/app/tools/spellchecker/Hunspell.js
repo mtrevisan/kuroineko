@@ -5,7 +5,7 @@
  *
  * @see {@link https://github.com/cfinke/Typo.js}
  */
-define(['tools/spellchecker/HunspellDictionary', 'tools/math/MathHelper', 'tools/spellchecker/NorvigSpellChecker'], function(Hunspelldictionary, MathHelper, NorvigSpellChecker){
+define(['tools/spellchecker/HunspellDictionary', 'tools/data/MathHelper', 'tools/spellchecker/NorvigSpellChecker'], function(Hunspelldictionary, MathHelper, NorvigSpellChecker){
 
 	/**
 	 * @param {String} affData	The data from the dictionary's .aff file
