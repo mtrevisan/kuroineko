@@ -34,6 +34,9 @@
 			.append("svg")
 			.attr("width", width + margin.right)
 			.attr("height", height)
+			.call(d3.behavior.zoom().on("zoom", function(){
+				svg.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")
+			}))
 			.append("g")
 			.attr("transform", "translate(-150,-20)");
 
