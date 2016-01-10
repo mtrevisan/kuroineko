@@ -2,6 +2,7 @@
  * @class EVDecomposition
  *
  * @see {@link www.cs.bham.ac.uk/~pxc/js/}
+ * @see {@link http://people.math.gatech.edu/~klounici6/2605/Lectures%20notes%20Carlen/chap3.pdf}
  *
  * @author Mauro Trevisan
  */
@@ -185,7 +186,8 @@ define(function(){
 	 */
 	var diagonalize = function(n, eigenvalues_real, eigenvalues_imaginary, eigenvectorsV){
 		var eps = 0.5 * Math.pow(2, -40),
-			i, f, tst1, l, m;
+			i, j, k,
+			f, tst1, l, m;
 
 		for(i = 1; i < n; i ++)
 			eigenvalues_imaginary[i - 1] = eigenvalues_imaginary[i];
@@ -210,27 +212,27 @@ define(function(){
 					//(could check iteration count here)
 					iter ++;
 					//compute implicit shift
-					var g = eigenvalues_real[l];
-					var p = (eigenvalues_real[l + 1] - g) / (2 * eigenvalues_imaginary[l]);
-					var r = hypot(p, 1);
+					var g = eigenvalues_real[l],
+						p = (eigenvalues_real[l + 1] - g) / (2 * eigenvalues_imaginary[l]),
+						r = hypot(p, 1);
 					if(p < 0)
 						r = -r;
 					eigenvalues_real[l] = eigenvalues_imaginary[l] / (p + r);
 					eigenvalues_real[l + 1] = eigenvalues_imaginary[l] * (p + r);
-					var dl1 = eigenvalues_real[l + 1];
-					var h = g - eigenvalues_real[l];
+					var dl1 = eigenvalues_real[l + 1],
+						h = g - eigenvalues_real[l];
 					for(i = l + 2; i < n; i++)
 						eigenvalues_real[i] -= h;
 					f = f + h;
 
 					// Implicit QL transformation.
 					p = eigenvalues_real[m];
-					var c = 1;
-					var c2 = c;
-					var c3 = c;
-					var el1 = eigenvalues_imaginary[l + 1];
-					var s = 0;
-					var s2 = 0;
+					var c = 1,
+						c2 = c,
+						c3 = c,
+						el1 = eigenvalues_imaginary[l + 1],
+						s = 0,
+						s2 = 0;
 					for(i = m - 1; i >= l; i--){
 						c3 = c2;
 						c2 = c;
@@ -245,7 +247,7 @@ define(function(){
 						eigenvalues_real[i + 1] = h + s * (c * g + s * eigenvalues_real[i]);
 
 						//accumulate transformation
-						for(var k = 0; k < n; k++){
+						for(k = 0; k < n; k ++){
 							h = eigenvectorsV[k][i + 1];
 							eigenvectorsV[k][i + 1] = s * eigenvectorsV[k][i] + c * h;
 							eigenvectorsV[k][i] = c * eigenvectorsV[k][i] - s * h;
@@ -262,10 +264,10 @@ define(function(){
 		}
 
 		//sort eigenvalues and corresponding vectors
-		for(i = 0; i < n - 1; i++){
-			var k = i;
+		for(i = 0; i < n - 1; i ++){
+			k = i;
 			var p = eigenvalues_real[i];
-			for(var j = i + 1; j < n; j++)
+			for(j = i + 1; j < n; j ++)
 				if(eigenvalues_real[j] < p){
 					k = j;
 					p = eigenvalues_real[j];
@@ -273,7 +275,7 @@ define(function(){
 			if(k != i){
 				eigenvalues_real[k] = eigenvalues_real[i];
 				eigenvalues_real[i] = p;
-				for(var j = 0; j < n; j++){
+				for(j = 0; j < n; j ++){
 					p = eigenvectorsV[j][i];
 					eigenvectorsV[j][i] = eigenvectorsV[j][k];
 					eigenvectorsV[j][k] = p;
