@@ -52,22 +52,24 @@ define(function(){
 
 
 	/** @private */
-	var parse = function(param){
+	var parse = function(){
 		var num, den, sgn;
 
-		param = (param.length >= 2? param: param[0]);
-		switch(typeof param){
+		var args = Array.prototype.slice.call(arguments[0]);
+		if(args.length == 1)
+			args = args[0];
+		switch(typeof args){
 			case 'object':
-				if(param.constructor == Constructor)
-					return param;
+				if(args.constructor == Constructor)
+					return args;
 
-				if('num' in param && 'den' in param){
-					num = (param.sgn || 1) * param.num;
-					den = param.den;
+				if('num' in args && 'den' in args){
+					num = (args.sgn || 1) * args.num;
+					den = args.den;
 				}
-				else if(param[0] !== undefined){
-					num = param[0];
-					den = (param[1] !== undefined? param[1]: 1);
+				else if(args[0] !== undefined){
+					num = args[0];
+					den = (args[1] !== undefined? args[1]: 1);
 				}
 				sgn = Math.sign(den? num * den: num);
 				num = Math.abs(num);
@@ -75,9 +77,9 @@ define(function(){
 				break;
 
 			case 'number':
-				param = '' + param;
+				args = '' + args;
 			case 'string':
-				var m = param.match(/^(-?)([\d]+)\.?([\d]*)(?:\(([\d]*)\))?$/);
+				var m = args.match(/^(-?)([\d]+)\.?([\d]*)(?:\(([\d]*)\))?$/);
 				if(m){
 					sgn = (m[1] == '-'? -1: 1);
 					var integerValue = m[2],
@@ -91,7 +93,7 @@ define(function(){
 						sgn = 0;
 				}
 				else{
-					m = param.match(/^(-?[\d]+)\/([\d]+)$/);
+					m = args.match(/^(-?[\d]+)\/([\d]+)$/);
 					num = Number(m[1]);
 					den = Number(m[2]);
 					sgn = Math.sign(den? num * den: num);

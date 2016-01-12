@@ -23,15 +23,17 @@ define(function(){
 	 * @return {Number}
 	 */
 	var levenshteinDistance = function(a, b, costs){
-		a = (Array.isArray(a)? a: a.match(REGEX_UNICODE_SPLITTER));
-		b = (Array.isArray(b)? b: b.match(REGEX_UNICODE_SPLITTER));
+		if(!Array.isArray(a))
+			a = a.match(REGEX_UNICODE_SPLITTER);
+		if(!Array.isArray(b))
+			b = b.match(REGEX_UNICODE_SPLITTER);
 		costs = enforceDefaultCosts(costs);
 		if(!costs.insertion)
-			throw 'Cost of insertion cannot be zero';
+			throw 'Cost of insertion cannot be zero or undefined';
 		if(!costs.deletion)
-			throw 'Cost of deletion cannot be zero';
+			throw 'Cost of deletion cannot be zero or undefined';
 		if(!costs.substitution)
-			throw 'Cost of substitution cannot be zero';
+			throw 'Cost of substitution cannot be zero or undefined';
 		//if(costs.substitution > costs.insertion + costs.deletion)
 		//	throw 'Cost of substitution should be less than that of insertion plus deletion';
 
@@ -46,15 +48,15 @@ define(function(){
 			return n * costs.deletion;
 
 		var matchingFn = costs.matchingFn || matchingFnDefault,
-			prevRow = new Array(m + 1),
+			prevRow = [],
 			curCol, nextCol,
 			i, j;
 
 		//initialise previous row
 		//this row is A[0][i]: edit distance for an empty <code>a</code>
 		//the distance is just the number of characters to delete from <code>b</code>
-		for(i = 0; i <= m; i ++)
-			prevRow[i] = costs.deletion * i;
+		for(j = 0; j <= m; j ++)
+			prevRow[j] = costs.deletion * j;
 
 		//calculate current row distance from previous row
 		for(i = 0; i < n; i ++){
@@ -82,28 +84,40 @@ define(function(){
 
 
 	/**
-	 * Compute the Damerau-Levenshtein distance between two strings.<p>
+	 * Compute the Damerau-Levenshtein distance between two strings, i.e. the number of insertion, deletion, sustitution, and transposition edits
+	 * required to transform one string to the other.<p>
+	 * This value will be >= 0, where 0 indicates identical strings.<br>
+	 * Comparisons are case sensitive, so for example, "Fred" and "fred" will have a distance of 1.<br>
+	 * Note that this is the simpler and faster optimal string alignment (aka restricted edit) distance
+	 * that difers slightly from the classic Damerau-Levenshtein algorithm by imposing the restriction
+	 * that no substring is edited more than once.
+	 *
+	 * @see {@link http://blog.softwx.net/2015/01/optimizing-damerau-levenshtein_15.html}
 	 *
 	 * @param {String/Array} a	First string.
 	 * @param {String/Array} b	Second string.
 	 * @param {Object} [costs]	Cost configuration object like <code>{insertion: 1, deletion: 1, substitution: 0.5, transposition: 0.7, matchingFn: function(from, to, costs){ return (from == to? 0: costs.substitution); }}</code>
-	 * @return {Number}
+	 * @return {Number}	Edit distance, a non-negative number representing the number of edits required to transform one string to the other
 	 */
 	var damerauLevenshteinDistance = function(a, b, costs){
-		a = (Array.isArray(a)? a: a.match(REGEX_UNICODE_SPLITTER));
-		b = (Array.isArray(b)? b: b.match(REGEX_UNICODE_SPLITTER));
+		if(!Array.isArray(a))
+			a = a.match(REGEX_UNICODE_SPLITTER);
+		if(!Array.isArray(b))
+			b = b.match(REGEX_UNICODE_SPLITTER);
 		costs = enforceDefaultCosts(costs);
 		if(!costs.insertion)
-			throw 'Cost of insertion cannot be zero';
+			throw 'Cost of insertion cannot be zero or undefined';
 		if(!costs.deletion)
-			throw 'Cost of deletion cannot be zero';
+			throw 'Cost of deletion cannot be zero or undefined';
 		if(!costs.substitution)
-			throw 'Cost of substitution cannot be zero';
+			throw 'Cost of substitution cannot be zero or undefined';
+		if(!costs.transposition)
+			throw 'Cost of transposition cannot be zero or undefined';
 
 		//base cases
 		var n = a.length,
 			m = b.length;
-		if(a == b || Array.isArray(a) && a.join('') == b.join(''))
+		if(a.join('') == b.join(''))
 			return 0;
 		if(!n)
 			return m * costs.insertion;
@@ -112,7 +126,8 @@ define(function(){
 
 		var matchingFn = costs.matchingFn || matchingFnDefault,
 			distance = [],
-			i, j;
+			i, j,
+			min, t;
 		for(i = 0; i <= n; i ++)
 			distance[i] = [costs.deletion * i];
 		for(j = 0; j <= m; j ++)
@@ -120,12 +135,14 @@ define(function(){
 
 		for(i = 1; i <= n; i ++)
 			for(j = 1; j <= m; j ++){
-				distance[i][j] = Math.min(
-					distance[i - 1][j - 1] + matchingFn(a[i - 1], b[j - 1], costs),
-					distance[i][j - 1] + costs.insertion,
-					distance[i - 1][j] + costs.deletion);
-				if(i > 1 && j > 1 && a[i - 1] == b[j - 2] && a[i - 2] == b[j - 1])
-					distance[i][j] = Math.min(distance[i][j], distance[i - 2][j - 2] + costs.transposition);
+				min = distance[i - 1][j - 1] + matchingFn(a[i - 1], b[j - 1], costs);
+				if((t = distance[i][j - 1] + costs.insertion) < min)
+					min = t;
+				if((t = distance[i - 1][j] + costs.deletion) < min)
+					min = t;
+				if(i > 1 && j > 1 && a[i - 1] == b[j - 2] && a[i - 2] == b[j - 1] && (t = distance[i - 2][j - 2] + costs.transposition) < min)
+					min = t;
+				distance[i][j] = min;
 			}
 		return distance[n][m];
 	};
@@ -167,36 +184,6 @@ define(function(){
 	var getStructuralDistance = function(a, b, costs, distanceFn){
 		costs = enforceDefaultCosts(costs);
 		return (distanceFn || levenshteinDistance)(a, b, costs) / (alignmentLength(a, b) * Math.max(costs.insertion, costs.deletion, costs.substitution));
-	};
-
-	/**
-	 * Sørensen-Dice coefficient (bigram overlap * 2 / bigrams in a + bigrams in b)
-	 *
-	 * NOTE: untested!
-	 */
-	var diceCoefficient = function(a, b){
-		var lengthA = a.length - 1,
-			lengthB = b.length - 1;
-		if(lengthA < 1 || lengthB < 1)
-			return 0;
-
-		var bigramsB = [],
-			intersection = 0,
-			bigramA,
-			i, j;
-		for(j = 0; j < lengthB; j ++)
-			bigramsB.push(b.substr(j, 2));
-		for(i = 0; i < lengthA; i ++){
-			bigramA = a.substr(i, 2);
-
-			for(j = 0; j < lengthB; j ++)
-				if(bigramA == bigramsB[j]){
-					intersection ++;
-					bigramsB[j] = null;
-					break;
-				}
-		}
-		return (2 * intersection) / (lengthA + lengthB);
 	};
 
 

@@ -14,6 +14,19 @@ require(['tools/measure/Scalar', 'tools/measure/MeasureConverter'], function(Sca
 		equal(s3.uom, 'piè');
 	});
 
+	QUnit.test('scalar add string', function(){
+		var m = new MeasureConverter([
+			'pèrtega = 6 piè',
+			'paso = 5 piè',
+			'paseto = 3 piè'], 'piè');
+		var s1 = new Scalar(5, 'pèrtega', m);
+
+		var s3 = s1.add('2.1 piè');
+
+		equal(s3.value.toNumber(), 32.1);
+		equal(s3.uom, 'piè');
+	});
+
 	QUnit.test('scalar add scalar', function(){
 		var m = new MeasureConverter([
 			'pèrtega = 6 piè',
