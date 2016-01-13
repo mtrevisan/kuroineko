@@ -84,7 +84,7 @@ define(function(){
 
 
 	/**
-	 * Compute the Damerau-Levenshtein distance between two strings, i.e. the number of insertion, deletion, sustitution, and transposition edits
+	 * Compute the Damerau-Levenshtein edit distance between two strings, i.e. the number of insertion, deletion, sustitution, and transposition edits
 	 * required to transform one string to the other.<p>
 	 * This value will be >= 0, where 0 indicates identical strings.<br>
 	 * Comparisons are case sensitive, so for example, "Fred" and "fred" will have a distance of 1.<br>
@@ -93,6 +93,7 @@ define(function(){
 	 * that no substring is edited more than once.
 	 *
 	 * @see {@link http://blog.softwx.net/2015/01/optimizing-damerau-levenshtein_15.html}
+	 * @see {@link http://www.navision-blog.de/blog/2008/11/01/damerau-levenshtein-distance-in-fsharp-part-ii/}
 	 *
 	 * @param {String/Array} a	First string.
 	 * @param {String/Array} b	Second string.
@@ -125,6 +126,88 @@ define(function(){
 			return n * costs.deletion;
 
 		var matchingFn = costs.matchingFn || matchingFnDefault,
+			v0 = [],
+			v1 = [],
+			v2 = [],
+			i, j,
+			min, t;
+		for(j = 0; j <= m; j ++){
+			v0[j] = costs.insertion * j;
+			v1[j] = 0;
+		}
+
+		for(i = 1; i <= n; i ++){
+			v2 = v1;
+			v1 = v0.slice(0);
+			v0[0] = costs.deletion * i;
+
+			for(j = 1; j <= m; j ++){
+				min = v1[j - 1] + matchingFn(a[i - 1], b[j - 1], costs);
+				if((t = v0[j - 1] + costs.insertion) < min)
+					min = t;
+				if((t = v1[j] + costs.deletion) < min)
+					min = t;
+				if(i > 1 && j > 1 && a[i - 1] == b[j - 2] && a[i - 2] == b[j - 1] && (t = v2[j - 2] + costs.transposition) < min)
+					min = t;
+				v0[j] = min;
+			}
+		}
+		return v0[m];
+	};
+
+	/**
+	 * Compute the Damerau-Levenshtein edit distance between two strings, i.e. the number of insertion, deletion, sustitution, and transposition edits
+	 * required to transform one string to the other.<p>
+	 * This value will be >= 0, where 0 indicates identical strings.<br>
+	 * Comparisons are case sensitive, so for example, "Fred" and "fred" will have a distance of 1.<br>
+	 * Note that this is the simpler and faster optimal string alignment (aka restricted edit) distance
+	 * that difers slightly from the classic Damerau-Levenshtein algorithm by imposing the restriction
+	 * that no substring is edited more than once.
+	 *
+	 * @param {String/Array} a	First string.
+	 * @param {String/Array} b	Second string.
+	 * @param {Object} [costs]	Cost configuration object like <code>{insertion: 1, deletion: 1, substitution: 0.5, transposition: 0.7, matchingFn: function(from, to, costs){ return (from == to? 0: costs.substitution); }}</code>
+	 * @return {Object}	The number of insertions, deletions, substitutions, transpositions, and the edit distance, a non-negative number representing the number of edits required to transform one string to the other
+	 */
+	var damerauLevenshteinEdit = function(a, b, costs){
+		if(!Array.isArray(a))
+			a = a.match(REGEX_UNICODE_SPLITTER);
+		if(!Array.isArray(b))
+			b = b.match(REGEX_UNICODE_SPLITTER);
+		costs = enforceDefaultCosts(costs);
+		if(!costs.insertion)
+			throw 'Cost of insertion cannot be zero or undefined';
+		if(!costs.deletion)
+			throw 'Cost of deletion cannot be zero or undefined';
+		if(!costs.substitution)
+			throw 'Cost of substitution cannot be zero or undefined';
+		if(!costs.transposition)
+			throw 'Cost of transposition cannot be zero or undefined';
+
+		//base cases
+		var n = a.length,
+			m = b.length,
+			result = {
+				insertions: 0,
+				deletions: 0,
+				substitutions: 0,
+				transpositions: 0,
+				distance: 0
+			};
+		if(a.join('') == b.join(''))
+			return result;
+		if(!n){
+			result.insertions = m;
+			result.distance = m * costs.insertion;
+			return result;
+		}
+		if(!m){
+			result.deletions = n;
+			result.distance = n * costs.deletion;
+			return result;
+		}
+
+		var matchingFn = costs.matchingFn || matchingFnDefault,
 			distance = [],
 			i, j,
 			min, t;
@@ -144,7 +227,8 @@ define(function(){
 					min = t;
 				distance[i][j] = min;
 			}
-		return distance[n][m];
+
+		return traceback(a, b, distance, matchingFn, costs);
 	};
 
 
@@ -169,10 +253,43 @@ define(function(){
 		return object;
 	};
 
-	var alignmentLength = function(a, b, distanceFn){
-		var insertions = (distanceFn || levenshteinDistance)(a, b, {insertion: 10000, deletion: 1000000, substitution: 100, transposition: 1});
-		insertions = Math.floor(insertions / 10000) % 100;
-		return a.length + insertions;
+	/** @private */
+	var traceback = function(a, b, t, matchingFn, costs){
+		var i = a.length,
+			j = b.length,
+			ops = {
+				insertions: 0,
+				deletions: 0,
+				substitutions: 0,
+				transpositions: 0,
+				distance: t[i][j]
+			},
+			tmp, match;
+
+		//backward reconstruct path
+		while(i > 0 || j > 0){
+			tmp = t[i][j];
+			if(i > 0 && j > 0 && tmp == t[i - 1][j - 1] + (match = matchingFn(a[i - 1], b[j - 1], costs))){
+				if(match)
+					ops.substitutions ++;
+				i --;
+				j --;
+			}
+			else if(i > 1 && j > 1 && a[i - 1] == b[j - 2] && a[i - 2] == b[j - 1] && tmp == t[i - 2][j - 2] + costs.transposition){
+				ops.transpositions ++;
+				i -= 2;
+				j -= 2;
+			}
+			else if(i > 0 && tmp == t[i - 1][j] + costs.deletion){
+				ops.deletions ++;
+				i --;
+			}
+			else if(j > 0 && tmp == t[i][j - 1] + costs.insertion){
+				ops.insertions ++;
+				j --;
+			}
+		}
+		return ops;
 	};
 
 	/**
@@ -181,9 +298,9 @@ define(function(){
 	 * @param {Object} costs	Cost configuration object like <code>{insertion: 1, deletion: 1, substitution: 0.5}</code>
 	 * @return A percentual indicating the distance between the two inputs.
 	 */
-	var getStructuralDistance = function(a, b, costs, distanceFn){
-		costs = enforceDefaultCosts(costs);
-		return (distanceFn || levenshteinDistance)(a, b, costs) / (alignmentLength(a, b) * Math.max(costs.insertion, costs.deletion, costs.substitution));
+	var getStructuralDistance = function(a, b, costs){
+		var result = damerauLevenshteinEdit(a, b, costs);
+		return result.distance / ((a.length + result.insertions) * Math.max(costs.insertion, costs.deletion, costs.substitution, costs.transposition));
 	};
 
 
@@ -191,9 +308,10 @@ define(function(){
 		REGEX_UNICODE_SPLITTER: REGEX_UNICODE_SPLITTER,
 
 		levenshteinDistance: levenshteinDistance,
-		damerauLevenshteinDistance: damerauLevenshteinDistance,
 
-		alignmentLength: alignmentLength,
+		damerauLevenshteinDistance: damerauLevenshteinDistance,
+		damerauLevenshteinEdit: damerauLevenshteinEdit,
+
 		getStructuralDistance: getStructuralDistance
 	};
 

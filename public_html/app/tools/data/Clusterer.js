@@ -11,6 +11,9 @@ define(['tools/data/structs/Tree'], function(Tree){
 		if(matrix.length != variants.length)
 			throw 'Matrix dimension does not match the number of variants';
 
+		//make a copy of the matrix
+		matrix = matrix.map(function(arr){ return arr.slice(); });
+
 		var tree = new Tree(),
 			minimum;
 		//continue until the matrix collapses into one element
