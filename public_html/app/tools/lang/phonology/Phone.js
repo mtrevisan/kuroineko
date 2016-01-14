@@ -26,7 +26,26 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 	/** @constant */
 	var segments = {
-		//retroflex
+		//consonants:
+		//lamino-dental
+		'θ':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: 1,  str: -1, lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'ð':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: 1,  str: -1, lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		//apico-alveolar
+		't':   {syl: -1, con: 1,  son: -1, cnt: -1, dr: -1, app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'd':   {syl: -1, con: 1,  son: -1, cnt: -1, dr: -1, app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		't͡s': {syl: -1, con: 1,  son: -1, cnt: -1, dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: 1,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'd͡z': {syl: -1, con: 1,  son: -1, cnt: -1, dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: 1,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		's':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: 1,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'z':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: 1,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'n':   {syl: -1, con: 1,  son: 1,  cnt: -1, dr: 0,  app: -1, tap: -1, tri: -1, nas: 1,  voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'ɾ':   {syl: -1, con: 1,  son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: 1,  tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'l':   {syl: -1, con: 1,  son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: 1,  dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		//palato alveolar
+		't͡ʃ': {syl: -1, con: 1,  son: -1, cnt: -1, dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: 1,  str: 1,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'd͡ʒ': {syl: -1, con: 1,  son: -1, cnt: -1, dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: 1,  str: 1,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'ʃ':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: 1,  str: 1,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'ʒ':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: 1,  str: 1,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		//apico-palatal = retroflex
 		'ʈ':   {syl: -1, con: 1,  son: -1, cnt: -1, dr: -1, app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: -1, str: -1, lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
 		'ɖ':   {syl: -1, con: 1,  son: -1, cnt: -1, dr: -1, app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: -1, str: -1, lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
 		'ʂ':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: -1, str: 1,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
@@ -35,6 +54,12 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		'ɭ':   {syl: -1, con: 1,  son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: -1, str: -1, lat: 1,  dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
 		'ɽ':   {syl: -1, con: 1,  son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: 1,  tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: -1, str: -1, lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
 		'ɻ':   {syl: -1, con: 1,  son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: -1, str: -1, lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		//labial
+		'p':   {syl: -1, con: 1,  son: -1, cnt: -1, dr: -1, app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: 1,  rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'b':   {syl: -1, con: 1,  son: -1, cnt: -1, dr: -1, app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'f':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: 1,  rou: -1, ld: 1,  cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'v':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: -1, ld: 1,  cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'm':   {syl: -1, con: 1,  son: 1,  cnt: -1, dr: 0,  app: -1, tap: -1, tri: -1, nas: 1,  voi: 1,  sg: -1, cg: -1, lab: 1,  rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
 		//fronted velar
 		'j':   {syl: -1, con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: 1},
 		//velar
@@ -60,54 +85,43 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		'ʔ':   {syl: -1, con: 1,  son: -1, cnt: -1, dr: -1, app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: 1,  lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
 		'h':   {syl: -1, con: -1, son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: 1,  cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
 		'ɦ':   {syl: -1, con: -1, son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: 1,  cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-
-		'p':   {syl: -1, con: 1,  son: -1, cnt: -1, dr: -1, app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: 1,  rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'b':   {syl: -1, con: 1,  son: -1, cnt: -1, dr: -1, app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'm':   {syl: -1, con: 1,  son: 1,  cnt: -1, dr: 0,  app: -1, tap: -1, tri: -1, nas: 1,  voi: 1,  sg: -1, cg: -1, lab: 1,  rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'ɸ':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: 1,  rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'β':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'ʙ':   {syl: -1, con: 1,  son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: 1,  nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'ɱ':   {syl: -1, con: 1,  son: 1,  cnt: -1, dr: 0,  app: -1, tap: -1, tri: -1, nas: 1,  voi: 1,  sg: -1, cg: -1, lab: 1,  rou: -1, ld: 1,  cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'f':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: 1,  rou: -1, ld: 1,  cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'v':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: -1, ld: 1,  cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'ʋ':   {syl: -1, con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: -1, ld: 1,  cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'n':   {syl: -1, con: 1,  son: 1,  cnt: -1, dr: 0,  app: -1, tap: -1, tri: -1, nas: 1,  voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		't':   {syl: -1, con: 1,  son: -1, cnt: -1, dr: -1, app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'd':   {syl: -1, con: 1,  son: -1, cnt: -1, dr: -1, app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'θ':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: 1,  str: -1, lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'ð':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: 1,  str: -1, lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		's':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: 1,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'z':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: 1,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'ʃ':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: 1,  str: 1,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'ʒ':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: 1,  str: 1,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'ɹ':   {syl: -1, con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: 1,  str: -1, lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'r':   {syl: -1, con: 1,  son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: 1,  nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'ɾ':   {syl: -1, con: 1,  son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: 1,  tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'ɬ':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: 1,  dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'ɮ':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: 1,  dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'l':   {syl: -1, con: 1,  son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: 1,  dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'ɫ':   {syl: -1, con: 1,  son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: 1,  dor: 1,  hi: -1, lo: -1, ft: -1, bk: 1,  tns: 0},
-		'ɺ':   {syl: -1, con: 1,  son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: 1,  tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: 1,  dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'ɕ':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: 1,  str: 1,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: 0},
-		'ʑ':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: 1,  str: 1,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: 0},
-		'ɲ':   {syl: -1, con: 1,  son: 1,  cnt: -1, dr: 0,  app: -1, tap: -1, tri: -1, nas: 1,  voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: 1,  str: -1, lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: 0},
+		//labial-back velar
+		'w':   {syl: -1, con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: -1, bk: 1,  tns: 1},
+		'ʍ':   {syl: -1, con: -1, son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: 1,  cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: -1, bk: 1,  tns: 1},
+		//labial-velar
+		'k͡p': {syl: -1, con: 1,  son: -1, cnt: -1, dr: -1, app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: 1,  rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 0,  bk: 0,  tns: 0},
+		'ɡ͡b': {syl: -1, con: 1,  son: -1, cnt: -1, dr: -1, app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 0,  bk: 0,  tns: 0},
+		//labial-front velar
+		'ɥ':   {syl: -1, con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: 1},
+		//alveopalatal
 		'c':   {syl: -1, con: 1,  son: -1, cnt: -1, dr: -1, app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: 1,  str: -1, lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: 0},
 		'ɟ':   {syl: -1, con: 1,  son: -1, cnt: -1, dr: -1, app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: 1,  str: -1, lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: 0},
 		'ç':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: 1,  str: -1, lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: 0},
 		'ʝ':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: 1,  str: -1, lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: 0},
+		'ɲ':   {syl: -1, con: 1,  son: 1,  cnt: -1, dr: 0,  app: -1, tap: -1, tri: -1, nas: 1,  voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: 1,  str: -1, lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: 0},
 		'ʎ':   {syl: -1, con: 1,  son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: 1,  str: -1, lat: 1,  dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: 0},
+
+		'ɸ':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: 1,  rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'β':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'ʙ':   {syl: -1, con: 1,  son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: 1,  nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'ɱ':   {syl: -1, con: 1,  son: 1,  cnt: -1, dr: 0,  app: -1, tap: -1, tri: -1, nas: 1,  voi: 1,  sg: -1, cg: -1, lab: 1,  rou: -1, ld: 1,  cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'ʋ':   {syl: -1, con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: -1, ld: 1,  cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'ɹ':   {syl: -1, con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: 1,  str: -1, lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'r':   {syl: -1, con: 1,  son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: 1,  nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'ɬ':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: 1,  dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'ɮ':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: 1,  dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'ɫ':   {syl: -1, con: 1,  son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: 1,  dor: 1,  hi: -1, lo: -1, ft: -1, bk: 1,  tns: 0},
+		'ɺ':   {syl: -1, con: 1,  son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: 1,  tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: 1,  dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
+		'ɕ':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: 1,  str: 1,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: 0},
+		'ʑ':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: 1,  str: 1,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: 0},
 		'ɰ':   {syl: -1, con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 0,  bk: 0,  tns: 1},
 		'k̟͡x̟': {syl: -1, con: 1,  son: -1, cnt: -1, dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: 0},
 		'ɡ̟͡ɣ̟': {syl: -1, con: 1,  son: -1, cnt: -1, dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: 0},
 		'd͡ʑ': {syl: -1, con: 1,  son: -1, cnt: -1, dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: 1,  str: 1,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: 0},
 		't͡ɕ': {syl: -1, con: 1,  son: -1, cnt: -1, dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: 1,  str: 1,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: 0},
-		'd͡ʒ': {syl: -1, con: 1,  son: -1, cnt: -1, dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: 1,  str: 1,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		'd͡z': {syl: -1, con: 1,  son: -1, cnt: -1, dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: 1,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
 		'd͡ɮ': {syl: -1, con: 1,  son: -1, cnt: -1, dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: 1,  dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
 		'd̠͡ɮ̠': {syl: -1, con: 1,  son: -1, cnt: -1, dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: 1,  str: -1, lat: 1,  dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		't͡ʃ': {syl: -1, con: 1,  son: -1, cnt: -1, dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: 1,  str: 1,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
 		't͡ɬ̲': {syl: -1, con: 1,  son: -1, cnt: -1, dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: 1,  str: -1, lat: 1,  dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
-		't͡s': {syl: -1, con: 1,  son: -1, cnt: -1, dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: 1,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
 		't͡ɬ': {syl: -1, con: 1,  son: -1, cnt: -1, dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: -1, lat: 1,  dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
 		't̪͡s̪': {syl: -1, con: 1,  son: -1, cnt: -1, dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: 1,  str: 1,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
 		't̪͡ɬ̪': {syl: -1, con: 1,  son: -1, cnt: -1, dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: 1,  dst: 1,  str: -1, lat: 1,  dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
@@ -129,45 +143,50 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		'q͡χ': {syl: -1, con: 1,  son: -1, cnt: -1, dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: -1, ft: -1, bk: 1,  tns: 0},
 		'ɢ͡ʁ': {syl: -1, con: 1,  son: -1, cnt: -1, dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: -1, ft: -1, bk: 1,  tns: 0},
 		'ɧ':   {syl: -1, con: 1,  son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1,  ant: -1, dst: 1,  str: 1,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 0,  bk: 0,  tns: 0},
-		'k͡p': {syl: -1, con: 1,  son: -1, cnt: -1, dr: -1, app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: 1,  rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 0,  bk: 0,  tns: 0},
-		'ɡ͡b': {syl: -1, con: 1,  son: -1, cnt: -1, dr: -1, app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 0,  bk: 0,  tns: 0},
 		'p͡t': {syl: -1, con: 1,  son: -1, cnt: -1, dr: -1, app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1, lab: 1,  rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: 1,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
 		'b͡d': {syl: -1, con: 1,  son: -1, cnt: -1, dr: -1, app: -1, tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: -1, ld: -1, cor: 1,  ant: 1,  dst: -1, str: 1,  lat: -1, dor: -1, hi: 0,  lo: 0,  ft: 0,  bk: 0,  tns: 0},
 		'ɰ̠':   {syl: -1, con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: -1, bk: 1,  tns: 1},
-		'w':   {syl: -1, con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: -1, bk: 1,  tns: 1},
-		'ɥ':   {syl: -1, con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: 1},
-		'ʍ':   {syl: -1, con: -1, son: -1, cnt: 1,  dr: 1,  app: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: 1,  cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: -1, bk: 1,  tns: 1},
+
+		//vowels:
+		//high tense
 		'i':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: 1},
 		'y':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: 1},
 		'ɨ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: -1, bk: -1, tns: 1},
 		'ʉ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: -1, bk: -1, tns: 1},
 		'ɯ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: -1, bk: 1,  tns: 1},
 		'u':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: -1, bk: 1,  tns: 1},
+		//high lax
 		'ɪ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: -1},
 		'ʏ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: 1,  bk: -1, tns: -1},
 		'ʊ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: 1,  lo: -1, ft: -1, bk: 1,  tns: -1},
+		//mid tense
 		'e':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: -1, ft: 1,  bk: -1, tns: 1},
 		'ø':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: -1, ft: 1,  bk: -1, tns: 1},
 		'ɘ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: -1, ft: -1, bk: -1, tns: 1},
 		'ɵ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: -1, ft: -1, bk: -1, tns: 1},
 		'ɤ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: -1, ft: -1, bk: 1,  tns: 1},
 		'o':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: -1, ft: -1, bk: 1,  tns: 1},
-		'ə':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: -1, ft: -1, bk: -1, tns: -1},
+		//mid lax
 		'ɛ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: -1, ft: 1,  bk: -1, tns: -1},
 		'œ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: -1, ft: 1,  bk: -1, tns: -1},
+		'ə':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: -1, ft: -1, bk: -1, tns: -1},
 		'ɞ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: -1, ft: -1, bk: -1, tns: -1},
 		'ʌ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: -1, ft: -1, bk: 1,  tns: -1},
 		'ɔ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: -1, ft: -1, bk: 1,  tns: -1},
+		//low
 		'ӕ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: 1,  ft: 1,  bk: -1, tns: 0},
-		'a':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: 1,  ft: -1, bk: -1, tns: 0},
 		'ɶ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: 1,  ft: 1,  bk: -1, tns: 0},
+		'a':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: 1,  ft: -1, bk: -1, tns: 0},
 		'ɑ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: 1,  ft: -1, bk: 1,  tns: 0},
 		'ɒ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: 1,  ft: -1, bk: 1,  tns: 0},
+
 		C: {con: 1},
 		V: {con: -1}
 	};
 	/* * @constant * /
 	var aliases = {
+		syl: 'syllabic',
+
 		//manner features:
 		con: 'consonantal',
 		son: 'sonorant',
@@ -198,13 +217,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		lo: 'low',
 		ft: 'front',
 		bk: 'back',
-		tns: 'tense',
-
-
-
-
-		syl: 'syllabic',
-		lar: 'laryngeal'
+		tns: 'tense'
 	};*/
 	/** @constant */
 	var implications = [
@@ -229,38 +242,50 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	var useDiacritics = true;
 	/** @constant */
 	var diacritics = {
-		'\u02B0': [{sg: 1, cg: -1}, {con: 1, voi: -1, sg: -1, cg: -1}, 'aspirated'],
-		'\u02B2': [{dor: 1, hi: 1, lo: -1, ft: 1, bk: -1}, {con: 1}, 'palatalized'],
-		'\u02B7': [{lab: 1, rou: 1}, {con: 1, rou: -1}, 'labialized'],
-		'\u02BC': [{sg: -1, cg: 1}, {con: 1, son: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1}, 'ejective'],
-		'\u02C8': [{str: 1}, {str: -1}, 'stressed'],
-		'\u02D0': [{long: 1}, {long: -1}, 'long'],
-		//also known as retroflexed
-		'\u02DE': [{cor: 1, ant: 1, dst: 1, strid: -1}, {syl: 1, con: -1, son: 1, tap: -1, tri: -1, cor: -1, dor: 1}, 'rhotic'],
-		'\u02E0': [{dor: 1, hi: 1, lo: -1, ft: -1, bk: 1}, {con: 1, dor: -1}, 'velarized'],
-		'\u02E4': [{dor: 1, hi: -1, lo: 1, ft: -1, bk: 1}, {con: 1, dor: -1}, 'pharyngealized'],
-		'\u0303': [{nas: 1}, {son: 1, nas: -1}, 'nasalized'],
+		//u02B0
+		'ʰ': [{sg: 1, cg: -1}, {con: 1, voi: -1, sg: -1, cg: -1}, 'aspirated'],
+		//u02B2
+		'ʲ': [{dor: 1, hi: 1, lo: -1, ft: 1, bk: -1}, {con: 1}, 'palatalized'],
+		//02B7
+		'ʷ': [{lab: 1, rou: 1}, {con: 1, rou: -1}, 'labialized'],
+		//(applied to obstruent sounds)
+		//u02BC
+		'ʼ': [{sg: -1, cg: 1}, {con: 1, son: -1, tap: -1, tri: -1, nas: -1, voi: -1, sg: -1, cg: -1}, 'ejective'],
+		//(applied before a syllabe)
+		//u02C8
+		'ˈ': [{str: 1}, {str: -1}, 'stressed'],
+		//u02D0
+		'ː': [{long: 1}, {long: -1}, 'long'],
+		//also known as retroflexed (applied to vowel sounds)
+		//u02DE
+		'˞': [{cor: 1, ant: 1, dst: 1, strid: -1}, {syl: 1, con: -1, son: 1, tap: -1, tri: -1, cor: -1, dor: 1}, 'rhotic'],
+		//u02E0
+		'ˠ': [{dor: 1, hi: 1, lo: -1, ft: -1, bk: 1}, {con: 1, dor: -1}, 'velarized'],
+		//u02E4
+		'ˤ': [{dor: 1, hi: -1, lo: 1, ft: -1, bk: 1}, {con: 1, dor: -1}, 'pharyngealized'],
+		//(applied to sonorant sounds)
+		//u0303
+		'̃': [{nas: 1}, {son: 1, nas: -1}, 'nasalized'],
 		//TODO
 		'\u031D': [{hi: 1}, {}, 'raised'],
 		//TODO
 		'\u031E': [{lo: 1}, {}, 'lowered'],
-		//also known as advanced
+		//also known as advanced (applied to velar sounds)
 		'\u031F': [{ft: 1, bk: -1}, {con: 1, cor: -1, dor: 1, hi: 1, lo: -1}, 'fronted velar'],
-		//also known as backed
-		'\u0320': [{ant: -1, dst: 1}, {con: 1, cor: 1, ant: 1, dst: -1}, 'postalveolar'],
+		//also known as backed (applied to alveolar sounds)
+		'\u0320': [{ant: -1, dst: 1}, {con: 1, cor: 1, ant: 1, dst: -1}, 'postalveolar/palato-alveolar'],
+		//(applied to voiced sounds)
 		'\u0324': [{sg: 1, cg: -1}, {voi: 1, sg: -1, cg: -1}, 'breathy voiced'],
-		'\u0325': [{voi: -1}, {son: 1, voi: 1}, 'voiceless'],
-		'\u0329': [{syl: 1}, {syl: -1}, 'syllabic'],
+		'\u0325': [{voi: -1}, {/*son: 1,*/ voi: 1}, 'voiceless'],
+		'\u0329': [{syl: 1}, {syl: -1, con: 1}, 'syllabic'],
+		//(applied to alveolar sounds)
 		'\u032A': [{ant: 1, dst: 1}, {con: 1, cor: 1, ant: 1, dst: -1}, 'dental'],
+		//(applied to voiced sounds)
 		'\u0330': [{sg: -1, cg: 1}, {voi: 1, sg: -1, cg: -1}, 'creaky voiced'],
+		//(applied to velar sounds)
 		'\u0334': [{ft: -1, bk: 1}, {con: 1, dor: 1, hi: 1, lo: -1}, 'backed velar'],
-		//TODO
-		//produced by obstructing the air passage with the tip of the tongue
-		'\u033A': [{ant: 1, ft: 1}, {con: 1}, 'apical'],
-		//TODO
-		//produced by obstructing the air passage with the blade of the tongue, which is the flat top front surface just behind
-		//the tip of the tongue on the top
-		'\u033B': [{ant: -1, ft: -1}, {con: 1}, 'laminal']
+		'\u033A': [{dst: -1}, {con: 1}, 'apical'],
+		'\u033B': [{dst: 1}, {con: 1}, 'laminal']
 	};
 
 
