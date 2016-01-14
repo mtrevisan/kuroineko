@@ -408,7 +408,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 						if(hasComposites){
 							if(hasWhole)
 								result += '|';
-							result += tmp.composite. join('|') + ')';
+							result += tmp.composite.sort().join('|') + ')';
 						}
 					}
 
@@ -420,7 +420,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 				Object.keys(f).forEach(function(element){
 					tmp.push((f[element] == 1 ? '+' : (f[element] == -1? '-': '0')) + element);
 				});
-				output.push('[' + tmp.join(',') + ']');
+				output.push('[' + tmp.sort().join(',') + ']');
 			}
 		});
 

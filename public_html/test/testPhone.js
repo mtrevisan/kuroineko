@@ -3,22 +3,22 @@ require(['tools/lang/phonology/Phone', 'tools/lang/GrammarLearner'], function(Ph
 
 	QUnit.test('phone conversion test', function(){
 		deepEqual(Phone.convertStringIntoFeatures('a'), [
-			{syl: 1, con: -1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0, dst: 0, str: 0, lat: -1, dor: 1, hi: -1, lo: 1, ft: -1, bk: -1, tns: 0}
+			{syl: 1, con: -1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, tri: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0, dst: 0, str: 0, lat: -1, dor: 1, hi: -1, lo: 1, ft: -1, bk: -1, tns: 0}
 		]);
 		deepEqual(Phone.convertStringIntoFeatures('lˠ'), [
-			{syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, trill: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: 1, hi: 1, lo: -1, ft: -1, bk: 1, tns: 0}
+			{syl: -1, con: 1, son: 1, cnt: 1, dr: 0, app: 1, tap: -1, tri: -1, nas: -1, voi: 1, sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: 1, ant: 1, dst: -1, str: -1, lat: 1, dor: 1, hi: 1, lo: -1, ft: -1, bk: 1, tns: 0}
 		]);
 		deepEqual(Phone.convertStringIntoFeatures('ɢ͡ʁd̪͡z̪'), [
-			{ant: 0, app: -1, bk: 1, cg: -1, cnt: -1, con: 1, cor: -1, dor: 1, dr: 1, dst: 0, ft: -1, hi: -1, lab: -1, lat: -1, ld: -1, lo: -1, nas: -1, rou: -1, sg: -1, son: -1, str: 0, syl: -1, tap: -1, tns: 0, trill: -1, voi: 1},
-			{ant: 1, app: -1, bk: 0, cg: -1, cnt: -1, con: 1, cor: 1, dor: -1, dr: 1, dst: 1, ft: 0, hi: 0, lab: -1, lat: -1, ld: -1, lo: 0, nas: -1, rou: -1, sg: -1, son: -1, str: 1, syl: -1, tap: -1, tns: 0, trill: -1, voi: 1}
+			{ant: 0, app: -1, bk: 1, cg: -1, cnt: -1, con: 1, cor: -1, dor: 1, dr: 1, dst: 0, ft: -1, hi: -1, lab: -1, lat: -1, ld: -1, lo: -1, nas: -1, rou: -1, sg: -1, son: -1, str: 0, syl: -1, tap: -1, tns: 0, tri: -1, voi: 1},
+			{ant: 1, app: -1, bk: 0, cg: -1, cnt: -1, con: 1, cor: 1, dor: -1, dr: 1, dst: 1, ft: 0, hi: 0, lab: -1, lat: -1, ld: -1, lo: 0, nas: -1, rou: -1, sg: -1, son: -1, str: 1, syl: -1, tap: -1, tns: 0, tri: -1, voi: 1}
 		]);
 		equal(Phone.convertFeaturesIntoString(Phone.convertStringIntoFeatures('ɢ͡ʁd̪͡z̪')), 'ɢ͡ʁd̪͡z̪');
-		deepEqual(Phone.convertFeaturesIntoRegExString(['a', {con: 1, son: 1, hi: 0}]), 'a[mʙɱnrɾlɺɳɻɽɭ]');
+		deepEqual(Phone.convertFeaturesIntoRegExString(['a', {con: 1, son: 1, hi: 0}]), 'a[nɾlɳɭɽɻmʙɱrɺ]');
 	});
 
 	QUnit.test('convert features into regex', function(){
 		equal(Phone.convertFeaturesIntoRegExString(Phone.convertStringIntoFeatures('abcɢ͡ʁd̪͡z̪')), 'abc(?:ɢ͡ʁ)(?:d̪͡z̪)');
-		equal(Phone.convertFeaturesIntoRegExString(Phone.convertStringIntoFeatures('[+con]')), '(?:[pbmɸβʙɱfvntdθðszʃʒrɾɬɮlɫɺɳʈɖʂʐɕʑɻɽɭɲcɟçʝʎŋkɡxɣʟɴqɢχʁʀħʕʔɧC]|k̟͡x̟|ɡ̟͡ɣ̟|d͡ʑ|t͡ɕ|d͡ʒ|d͡z|d͡ɮ|d̠͡ɮ̠|t͡ʃ|t͡ɬ̲|t͡s|t͡ɬ|t̪͡s̪|t̪͡ɬ̪|d̪͡z̪|d̪͡ɮ̪|ʈ͡ʂ|ɖ͡ʐ|p͡f|b͡v|p͡ɸ|b͡β|t̪͡θ|d̪͡ð|c͡ç|ɟ͡ʝ|k͡x|k̠͡x̠|ɡ͡ɣ|ɡ̠͡ɣ̠|q͡χ|ɢ͡ʁ|k͡p|ɡ͡b|p͡t|b͡d)');
+		equal(Phone.convertFeaturesIntoRegExString(Phone.convertStringIntoFeatures('[+con]')), '(?:[θðtdsznɾlʃʒʈɖʂʐɳɭɽɻpbfvmkɡŋxɣʟqɢχʁɴʀħʕʔcɟçʝɲʎɸβʙɱrɬɮɫɺɕʑɧC]|b͡d|b͡v|b͡β|c͡ç|d̠͡ɮ̠|d̪͡z̪|d̪͡ð|d̪͡ɮ̪|d͡z|d͡ɮ|d͡ʑ|d͡ʒ|k̟͡x̟|k̠͡x̠|k͡p|k͡x|p͡f|p͡t|p͡ɸ|q͡χ|t̪͡s̪|t̪͡ɬ̪|t̪͡θ|t͡s|t͡ɕ|t͡ɬ|t͡ɬ̲|t͡ʃ|ɖ͡ʐ|ɟ͡ʝ|ɡ̟͡ɣ̟|ɡ̠͡ɣ̠|ɡ͡b|ɡ͡ɣ|ɢ͡ʁ|ʈ͡ʂ)');
 	});
 
 	QUnit.test('compare features', function(){
@@ -43,7 +43,7 @@ require(['tools/lang/phonology/Phone', 'tools/lang/GrammarLearner'], function(Ph
 		equal(Phone.similarity(Phone.convertStringIntoFeatures('a')[0], Phone.convertStringIntoFeatures('b')[0]), 0.46153846153846156);
 		equal(Phone.similarity(Phone.convertStringIntoFeatures('t')[0], Phone.convertStringIntoFeatures('d')[0]), 0.038461538461538464);
 		equal(Phone.similarity(Phone.convertStringIntoFeatures('t')[0], Phone.convertStringIntoFeatures('d')[0], 0.5), 0.5 * 0.038461538461538464);
-		equal(Phone.similarity(Phone.convertStringIntoFeatures('l')[0], Phone.convertStringIntoFeatures('l̺')[0], 0.5), 0.038461538461538464);
+		equal(Phone.similarity(Phone.convertStringIntoFeatures('l')[0], Phone.convertStringIntoFeatures('l̺')[0], 0.5), 0);
 	});
 
 

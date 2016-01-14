@@ -118,8 +118,8 @@ console.log(variants[0]);
 	 * @private
 	 */
 	var mergeValues = function(variants, matrix, i, v1, v2){
-		var n1 = (variants.splice(v1, 1)[0].match(/\|/g) || []).length + 1,
-			n2 = (variants.splice(v2, 1)[0].match(/\|/g) || []).length + 1;
+		var n1 = (variants[v1].match(/\|/g) || []).length + 1,
+			n2 = (variants[v2 > v1? v2 - 1: v2].match(/\|/g) || []).length + 1;
 		return (getValue(matrix, i, v1) * n1 + getValue(matrix, i, v2) * n2) / (n1 + n2);
 	};
 
