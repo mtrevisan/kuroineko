@@ -1,5 +1,5 @@
 /**
- * @class Clusterer
+ * @class HierarchicalClusterer
  *
  * @author Mauro Trevisan
  */
@@ -23,7 +23,7 @@ define(['tools/data/structs/Tree'], function(Tree){
 
 			collapseVariants(variants, minimum, tree);
 
-			collapseDistances(matrix, minimum);
+			collapseDistances(variants, matrix, minimum);
 		}
 console.log(variants[0]);
 
@@ -83,14 +83,14 @@ console.log(variants[0]);
 	 *
 	 * @private
 	 */
-	var collapseDistances = function(matrix, indicesVariants){
+	var collapseDistances = function(variants, matrix, indicesVariants){
 		var rows = matrix.length,
 			v1 = indicesVariants.v1,
 			v2 = indicesVariants.v2,
 			i, j;
 		for(i = 0; i < rows; i ++)
 			if(i != v1 && i != v2)
-				matrix[i][rows] = mergeValues(matrix, i, v1, v2);
+				matrix[i][rows] = mergeValues(variants, matrix, i, v1, v2);
 		matrix[rows] = [];
 		matrix[rows][rows] = 0;
 
@@ -112,9 +112,15 @@ console.log(variants[0]);
 		});
 	};
 
-	/** @private */
-	var mergeValues = function(matrix, i, v1, v2){
-		return (getValue(matrix, i, v1) + getValue(matrix, i, v2)) / 2;
+	/**
+	 * Calculates the centroid
+	 *
+	 * @private
+	 */
+	var mergeValues = function(variants, matrix, i, v1, v2){
+		var n1 = (variants.splice(v1, 1)[0].match(/\|/g) || []).length + 1,
+			n2 = (variants.splice(v2, 1)[0].match(/\|/g) || []).length + 1;
+		return (getValue(matrix, i, v1) * n1 + getValue(matrix, i, v2) * n2) / (n1 + n2);
 	};
 
 	/** @private */

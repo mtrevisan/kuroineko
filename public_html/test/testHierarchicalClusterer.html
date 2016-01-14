@@ -5,7 +5,7 @@
 	<meta name="author" content="Mauro Trevisan">
 	<link rel="shortcut icon" href="../favicon.png" />
 
-	<title>test Multidimensional Scaling</title>
+	<title>test Hierarchical Clusterer</title>
 
 	<script src="../app/AMDLoader.js"></script>
 
@@ -19,7 +19,7 @@
 
 
 		//http://www2.hu-berlin.de/vivaldi/index.php?id=mV001&lang=it
-		require(['tools/data/Clusterer', 'tools/data/StringDistance', 'tools/lang/phonology/Phone', 'tools/data/ObjectHelper'], function(Clusterer, StringDistance, Phone, ObjectHelper){
+		require(['tools/data/HierarchicalClusterer', 'tools/data/StringDistance', 'tools/lang/phonology/Phone', 'tools/data/ObjectHelper'], function(HierarchicalClusterer, StringDistance, Phone, ObjectHelper){
 			var createDendrogramData = function(node, out, base){
 				var d = {
 						y: (base || 1)
@@ -396,7 +396,7 @@
 			words.forEach(function(word){
 				for(i = 0; i < size; i ++)
 					for(j = i + 1; j < size; j ++)
-						matrix[i][j] += StringDistance.getStructuralDistance(word[i], word[j], costs);
+						matrix[i][j] += StringDistance.damerauLevenshteinStructuralDistance(word[i], word[j], costs);
 			});
 			for(i = 0; i < size; i ++)
 				for(j = i + 1; j < size; j ++)
@@ -421,7 +421,7 @@
 			console.log('maximum distance variant is ' + average[average.length - 1].variant + ' with ' + average[average.length - 1].distance.toFixed(4));
 
 			//cluster variants
-			var tree = Clusterer.cluster(matrix, variants);
+			var tree = HierarchicalClusterer.cluster(matrix, variants);
 
 //			ObjectHelper.saveJSONFile(createDendrogramData(tree.root), 'dendrogram.json');
 console.log(JSON.stringify(matrix));

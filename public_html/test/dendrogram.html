@@ -80,7 +80,7 @@
 				.attr('class', 'node')
 				.attr('transform', function(d){ return 'translate(' + x(d.y) + ',' + d.x + ')'; });
 			node.append('circle')
-				.attr('r', 4.5);
+				.attr('r', function(d){ return (d.children? 1.5: 4); });
 			node.append('text')
 				.attr('dx', function(d){ return (d.children? -8: 8); })
 				.attr('dy', 3)
@@ -110,75 +110,6 @@
 				.attr('x', function(d){ return xinv(d); })
 				.attr('y', -25)
 				.attr('text-anchor', 'middle');
-		});/**/
-
-/*		var labels = [
-			'Rèba',
-			'Anpeŧ',
-			'Pađule',
-			'Kustauta',
-			'Uronŧo',
-			'Poŧale',
-			'Verona',
-			'Ŧenŧenige',
-			'Kaxan',
-			'Arfanta',
-			'Belun',
-			'Sa Stin',
-			'Venèsia',
-			'Krespadòro',
-			'Bixa',
-			'Montebèlo',
-			'Teoƚo',
-			'Roman',
-			'Vas',
-			'Toneđa',
-			'Vicensa',
-			'Lovadina',
-			'Kanpo San Martin',
-			'Istrana',
-			'Raldon',
-			'Meolo',
-			'Cerèa',
-			'Frata',
-			'Vila',
-			'Kavarxare',
-			'Trevixo',
-			'Italia'
-		];
-
-		//yeah, I'm breaking my personal coding style guide here, but this thing is the devil!
-		var data = [
-			{
-				y: 0,
-				children: [
-					{
-						y: 30,
-						children: [
-							{
-								y: 100,
-								children: [
-									{label: labels.indexOf('Istrana')},
-									{label: labels.indexOf('Meolo')}
-								],
-								distance: 0.0396
-							},
-							{label: labels.indexOf('Trevixo')}
-						],
-						distance: 0.0614
-					},
-					{label: labels.indexOf('Roman')}
-				],
-				distance: 0.0721
-			}
-		];
-
-		//intialize dendrogram
-		var viz = dendrogram().width(800).height(600).labels(labels);
-
-		//generate dendrogram
-		d3.select('body')
-			.datum(data)
-			.call(viz);/**/
+		});
 	});
 </script>
