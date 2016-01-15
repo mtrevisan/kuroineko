@@ -7,29 +7,30 @@ Utilities comprises:
 
 ### Data ###
  - various string alignment algorithms like Needleman-Wunsch, Needleman-Wunsch-Ukkonen, and Smith-Watermann
+ - Hierarchical and OPTICS clustering
  - arithmetic and Elias Coders
  - decision tree
  - HTML storage
  - Mersenne Twister, get a random variable with a given distribution
- - data structures like Binary Indexed Tree, Bit Buffer, Trie
+ - data structures like Binary Indexed Tree, Bit Buffer, Priority Queue, Tree, Trie
+ - String distance algorithms (Levenshtein and Damerau-Levenshtein)
  - Lexer
- - various helpers (array, communication, function, math, object, and string)
+ - various helpers (array, communication, function, object, and string)
+ - math helper containing various functions like bitCount, nextPowerOf2, getMostSignificantBit, getLeastSignificantBit, combine, and permute
 
 ### Language (primarly used for Venetan) ###
  - conjugator, paradigm, pronoun, themizer, verb
  - grapheme, orthography, phone, phonology helper, syllabator, syllabe, word
  - language recognition using Markov chains and n-grams
 
-### Measure ###
- - measure converter
-
 ### Math ###
  - Normal and Student-T distributions
  - Continued fractions and fraction
- - various functions like bitCount, nextPowerOf2, getMostSignificantBit, getLeastSignificantBit, combine, and permute
 
 ### Measure ###
- - Measure converter and scalar
+ - measure converter
+ - scalar
+ - measure datas for venetan and SI
 
 ### Spell checker ###
  - Norvig spell checker
