@@ -19,7 +19,7 @@
 
 
 		//http://www2.hu-berlin.de/vivaldi/index.php?id=mV001&lang=it
-		require(['tools/data/HierarchicalClusterer', 'tools/data/StringDistance', 'tools/lang/phonology/Phone', 'tools/data/ObjectHelper'], function(HierarchicalClusterer, StringDistance, Phone, ObjectHelper){
+		require(['tools/data/clustering/HierarchicalClusterer', 'tools/data/StringDistance', 'tools/lang/phonology/Phone', 'tools/data/ObjectHelper'], function(HierarchicalClusterer, StringDistance, Phone, ObjectHelper){
 			var createDendrogramData = function(node, out, base){
 				var d = {
 						y: (base || 1)
