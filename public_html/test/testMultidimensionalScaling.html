@@ -18,10 +18,39 @@
 		};
 
 
+		var linearRegression = function(y, x){
+			var n = y.length,
+				sum_x = 0,
+				sum_y = 0,
+				sum_xy = 0,
+				sum_xx = 0,
+				sum_yy = 0,
+				i;
+			for(i = 0; i < n; i ++){
+				sum_x += x[i];
+				sum_y += y[i];
+				sum_xy += x[i] * y[i];
+				sum_xx += x[i] * x[i];
+				sum_yy += y[i] * y[i];
+			}
+
+			var slope = (n * sum_xy - sum_x * sum_y) / (n * sum_xx - sum_x * sum_x);
+			return {
+				slope: slope,
+				intercept: (sum_y - slope * sum_x) / n,
+				r2: Math.pow((n * sum_xy - sum_x * sum_y) / Math.sqrt((n * sum_xx - sum_x * sum_x) * (n * sum_yy - sum_y * sum_y)), 2)
+			};
+		};
+
+		var euclideanDistance = function(a, b){
+			return Math.sqrt(a.reduce(function(sum, current, i){ return sum + Math.pow(current - b[i], 2); }, 0));
+		};
+
+
 		//http://www.bristol.ac.uk/media-library/sites/cmm/migrated/documents/chapter3.pdf
 		//https://homepage.uni-tuebingen.de/florian.wickelmaier/pubs/Wickelmaier2003SQRU.pdf
 		//https://github.com/asarnow/mdscale/blob/master/src/main/java/mdscale/Data.java
-		require(['../test/lib/EVDecomposition'], function(EVDecomposition){
+		require(['../app/tools/data/ArrayHelper', '../test/lib/EVDecomposition'], function(ArrayHelper, EVDecomposition){
 			var doubleCenter = function(J, P2, n){
 				var c = [],
 					d = [],
@@ -54,6 +83,10 @@
 						c[i][j] = a[i][j] * b[j];
 				}
 				return c;
+			};
+
+			var reduceMatrix = function(matrix){
+				return ArrayHelper.flatten(matrix).filter(function(el){ return (el != null); });
 			};
 
 
@@ -102,11 +135,23 @@
 			lambda = lambda.map(function(el){ return Math.sqrt(el); });
 			var X = multiplyDiagonal(E, lambda, n, dimensions);
 
+
+			//verify scaling
+			var r = [];
+			for(i = 0; i < n; i ++){
+				r[i] = [];
+				r[i][i] = 0;
+				for(j = i + 1; j < n; j ++)
+					r[i][j] = euclideanDistance(X[i], X[j]);
+			}
+			var reg = linearRegression(reduceMatrix(matrix), reduceMatrix(r));
+
 //console.log(JSON.stringify(B));
 //console.log(JSON.stringify(eigen));
 //console.log(JSON.stringify(lambda));
 //console.log(JSON.stringify(E));
 console.log(JSON.stringify(X));
+console.log(reg.r2);
 		});
 
 	</script>
