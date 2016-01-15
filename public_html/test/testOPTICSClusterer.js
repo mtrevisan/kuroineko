@@ -18,7 +18,7 @@ require(['tools/data/OPTICSClusterer'], function(OPTICSClusterer){
 		var result = OPTICSClusterer.cluster(data, 0.9, 2);
 
 		equal(result.length, data.length);
-		
+
 		var clusterIds = [],
 			i,
 			clusterSum;
