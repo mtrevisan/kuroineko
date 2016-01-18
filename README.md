@@ -18,12 +18,12 @@ Utilities comprises:
 Various string alignment algorithms. All of which has the same signature as explained below
 
     var nw = new NeedlemanWunsch('abc', 'acb', function(a, b){ return (a === b? 0: 1); }, function(){ return 1; }, function(){ return 1; });
-	 var editOperations = nw.align();
+    var editOperations = nw.align();
 
 or with defaults cost functions
 
     var nw = new NeedlemanWunsch('abc', 'acb');
-	 var editOperations = nw.align();
+    var editOperations = nw.align();
 
 editOperations.operations is a string with that encodes the edit operations needed to transform the first string into the second.
 By edit operations is intended that a space is a match, a '*' is a change, a '+' is an insertion, and a '-' is a deletion.
@@ -72,12 +72,12 @@ Various coders algorithms like arithmetic, and Elias.
 #### Arithmetic coder ####
 Encoding process:
     var msg = 'This method will be called exactly once for each symbol being encoded or decoded';
-	 //create model of order 0
+    //create model of order 0
     var model = CoderDriver.create(HighOrderModelFactory.createFrom(BasicModel, 0));
-	 //model of order 0 can also be created as follows
+    //model of order 0 can also be created as follows
     //var model = CoderDriver.create(BasicModel);
-	 //the count for each seen character can be setted
-	 //var model = CoderDriver.create(HighOrderModelFactory.createFrom(BasicModel, 2), {updateCount: 200});
+    //the count for each seen character can be setted
+    //var model = CoderDriver.create(HighOrderModelFactory.createFrom(BasicModel, 2), {updateCount: 200});
     var buffer = model.compress(msg);
 
 Decoding process:
@@ -102,8 +102,8 @@ Encoding process:
     	data.push(fixedCounts[i]);
     }
     var buffer = EliasDeltaCoder.encode(data);
-	 //or, if buffer is given
-	 //EliasDeltaCoder.encode(data, buffer);
+    //or, if buffer is given
+    //EliasDeltaCoder.encode(data, buffer);
 
 Decoding process:
     var out = EliasDeltaCoder.decode(buffer.getIterator());
