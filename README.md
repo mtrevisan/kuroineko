@@ -3,24 +3,24 @@
 =========
 This is a bunch of utilities I put together. Unfortunately I miss some, if not all, references to the original projects. I beg pardon, and whenever I found out the original ones I'll update my references.
 
-- [kuroineko library](#)
-  - [Data](#data)
-  - [String Alignment](#string-alignment)
-    - [Needleman-Wunsch](#needleman-wunsch)
-    - [Needleman-Wunsch-Ukkonen](#needleman-wunsch-ukkonen)
-    - [Smith-Watermann](#smith-watermann)
-  - [String Distance](#string-distance)
-    - [Levenshtein](#levenshtein)
-    - [Damerau-Levenshtein](#damerau-levenshtein)
-  - [Coders](#coders)
-    - [Arithmetic coder](#arithmetic-coder)
-    - [Elias delta coder](#elias-delta-coder)
-  - [Language (primarly used for Venetan)](#language)
-  - [Math](#math)
-  - [Measure](#measure)
-  - [Spell checker](#spell-checker)
-  - [UI](#ui)
-  - [General](#general)
+### Table of contents ###
+- [Data](#data)
+- [String Alignment](#string-alignment)
+  - [Needleman-Wunsch](#needleman-wunsch)
+  - [Needleman-Wunsch-Ukkonen](#needleman-wunsch-ukkonen)
+  - [Smith-Watermann](#smith-watermann)
+- [String Distance](#string-distance)
+  - [Levenshtein](#levenshtein)
+  - [Damerau-Levenshtein](#damerau-levenshtein)
+- [Coders](#coders)
+  - [Arithmetic coder](#arithmetic-coder)
+  - [Elias delta coder](#elias-delta-coder)
+- [Language (primarly used for Venetan)](#language)
+- [Math](#math)
+- [Measure](#measure)
+- [Spell checker](#spell-checker)
+- [UI](#ui)
+- [General](#general)
 
 
 ### Data <a id="data"></a>###
