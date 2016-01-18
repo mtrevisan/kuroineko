@@ -81,13 +81,12 @@ Encoding process:
     //var model = CoderDriver.create(BasicModel);
     //the count for each seen character can be setted
     //var model = CoderDriver.create(HighOrderModelFactory.createFrom(BasicModel, 2), {updateCount: 200});
-    var buffer = model.compress(msg);
+    var buffer = model.encode(msg);
 
 Decoding process:
 
-    var data = new Uint8Array(buffer.array());
-    var itr = (new BitBuffer(data)).getIterator();
-    var out = model.decompress(itr);
+    var itr = buffer.getIterator();
+    var out = model.decode(itr);
 
 
 #### Elias delta coder ####
@@ -110,7 +109,9 @@ Encoding process:
     //EliasDeltaCoder.encode(data, buffer);
 
 Decoding process:
-    var out = EliasDeltaCoder.decode(buffer.getIterator());
+
+    var itr = buffer.getIterator();
+    var out = EliasDeltaCoder.decode(itr);
 
 
 ### Language (primarly used for Venetan) ###
