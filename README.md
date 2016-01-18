@@ -41,6 +41,7 @@ Smith-Waterman local alignment algorithm.
 Various string distance algorithms like Levenshtein, and Damerau-Levenshtein.
 
 #### Levenshtein ####
+
     var defaultCosts = {insertion: 1, deletion: 2, substitution: 0.5, transposition: 1};
     
     var edit = StringDistance.levenshteinEdit('abc', 'acb');
@@ -54,6 +55,7 @@ Various string distance algorithms like Levenshtein, and Damerau-Levenshtein.
 Where edit is an object in the form {insertions: 0, deletions: 0, substitutions: 0, distance: 0} which encodes the number of insertions, deletions, and substitutions, along with the distance; and percent is the quantity of change between the two strings expressed as a percentual.
 
 #### Damerau-Levenshtein ####
+
     var defaultCosts = {insertion: 1, deletion: 2, substitution: 0.5, transposition: 1};
     
     var edit = StringDistance.damerauLevenshteinEdit('abc', 'acb');
@@ -71,6 +73,7 @@ Various coders algorithms like arithmetic, and Elias.
 
 #### Arithmetic coder ####
 Encoding process:
+
     var msg = 'This method will be called exactly once for each symbol being encoded or decoded';
     //create model of order 0
     var model = CoderDriver.create(HighOrderModelFactory.createFrom(BasicModel, 0));
@@ -81,6 +84,7 @@ Encoding process:
     var buffer = model.compress(msg);
 
 Decoding process:
+
     var data = new Uint8Array(buffer.array());
     var itr = (new BitBuffer(data)).getIterator();
     var out = model.decompress(itr);
