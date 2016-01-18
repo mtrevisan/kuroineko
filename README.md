@@ -43,7 +43,7 @@ or with defaults cost functions
     var editOperations = nw.align();
 
 editOperations.operations is a string with that encodes the edit operations needed to transform the first string into the second.
-By edit operations is intended that a space is a match, a '*' is a change, a '+' is an insertion, and a '-' is a deletion.
+By edit operations is intended that a space is a match, a `*` is a change, a `+` is an insertion, and a `-` is a deletion.
 
 #### Needleman-Wunsch <a id="needleman-wunsch"></a>####
 Needleman-Wunsch global alignment algorithm.
@@ -70,7 +70,7 @@ Various string distance algorithms like Levenshtein, and Damerau-Levenshtein.
     var distance = StringDistance.levenshteinDistance('abc', 'acb', defaultCosts);
     var percent = StringDistance.levenshteinStructuralDistance('abc', 'acb', defaultCosts);
 
-Where edit is an object in the form {insertions: 0, deletions: 0, substitutions: 0, distance: 0} which encodes the number of insertions, deletions, and substitutions, along with the distance; and percent is the quantity of change between the two strings expressed as a percentual.
+Where `edit` is an object in the form `{insertions: 0, deletions: 0, substitutions: 0, distance: 0}` which encodes the number of insertions, deletions, and substitutions, along with the distance; and `percent` is the quantity of change between the two strings expressed as a percentual.
 
 #### Damerau-Levenshtein <a id="damerau-levenshtein"></a>####
 
@@ -84,7 +84,7 @@ Where edit is an object in the form {insertions: 0, deletions: 0, substitutions:
     var distance = StringDistance.damerauLevenshteinDistance('abc', 'acb', defaultCosts);
     var percent = StringDistance.damerauLevenshteinStructuralDistance('abc', 'acb', defaultCosts);
 
-Where edit is an object in the form {insertions: 0, deletions: 0, substitutions: 0, transpositions: 0, distance: 0} which encodes the number of insertions, deletions, substitutions, and transpositions, along with the distance; and percent is the quantity of change between the two strings expressed as a percentual.
+Where `edit` is an object in the form `{insertions: 0, deletions: 0, substitutions: 0, transpositions: 0, distance: 0}` which encodes the number of insertions, deletions, substitutions, and transpositions, along with the distance; and `percent` is the quantity of change between the two strings expressed as a percentual.
 
 
 ### Coders <a id="coders"></a>###
