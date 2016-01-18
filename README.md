@@ -3,11 +3,29 @@
 =========
 This is a bunch of utilities I put together. Unfortunately I miss some, if not all, references to the original projects. I beg pardon, and whenever I found out the original ones I'll update my references.
 
-Utilities comprises:
- - a minimal AMD loader compatible with requireJS
+- [kuroineko library](#)
+- [](#)
+		- [Data](#)
+		- [String Alignment](#)
+			- [Needleman-Wunsch](#)
+			- [Needleman-Wunsch-Ukkonen](#)
+			- [Smith-Watermann](#)
+		- [String Distance](#)
+			- [Levenshtein](#)
+			- [Damerau-Levenshtein](#)
+		- [Coders](#)
+			- [Arithmetic coder](#)
+			- [Elias delta coder](#)
+		- [Language (primarly used for Venetan)](#)
+		- [Measure](#)
+		- [Math](#)
+		- [Measure](#)
+		- [Spell checker](#)
+		- [UI](#)
+		- [General](#)
+
 
 ### Data ###
- - decision tree
  - HTML storage
  - Mersenne Twister, get a random variable with a given distribution
  - data structures like Binary Indexed Tree, Bit Buffer, Trie
@@ -113,6 +131,96 @@ Decoding process:
     var itr = buffer.getIterator();
     var out = EliasDeltaCoder.decode(itr);
 
+### Data Mining ###
+
+    var attributes = [];
+    for(var i = 0; i < 38; i ++)
+    	attributes.push({name: i18nResources.variant.attributes[i], discrete: true});
+    data = [
+    	[1,1,1,0,1,1,0,1,1, , , , , , , , ,0,0,1,0,0,0,0, , , , ,1,0, ,0, ,1, , ,0,0, 'liventin'],
+    	[1,1,1,1,1,1,0,1,1,1,1,1, ,1,1,1,1,1,1,0,0,0,0,0, , , , , ,0,0,0, ,1, , ,0,0, 'feltrin-belumat']
+    ];
+	 
+    var fnSupervisorConfirmClass = function(nodeClass){
+    	return new Promise(function(resolve){
+    		var btnYes = Alerter.defineOkButton(i18nResources.variant.yes, function(){
+    			console.log('supervisor chooses class ' + nodeClass + ' is correct');
+    
+    			recordSupervisedInstance(nodeClass, false);
+    
+    			resolve(true);
+    		});
+    		var btnNo = Alerter.defineCancelButton(i18nResources.variant.no, function(){
+    			console.log('supervisor chooses class ' + nodeClass + ' is not correct');
+    
+    			resolve(false);
+    		});
+    
+    		Alerter.show({
+    			type: 'confirm',
+    			message: i18nResources.variant.tryBefore + '<br><br>&ldquo;' + nodeClass + '&rdquo;<br><br>' + i18nResources.variant.tryAfter,
+    			buttons: [btnYes, btnNo],
+    			okButton: btnYes,
+    			cancelButton: btnNo
+    		});
+    	});
+    };
+    
+    var fnSupervisorAskBranch = function(attributeName, cutPoint, discreteAttribute){
+    	return new Promise(function(resolve){
+    		var btnYes = Alerter.defineOkButton(i18nResources.variant.yes, function(){
+    			var response = (discreteAttribute? 'EQ': 'LT');
+    			console.log('supervisor chooses "' + attributeName + '" w.r.t. ' + cutPoint + ' is ' + response);
+    
+    			resolve(response);
+    		});
+    		var btnNo = Alerter.defineCancelButton(i18nResources.variant.no, function(){
+    			var response = (discreteAttribute? 'NE': 'GE');
+    			console.log('supervisor chooses "' + attributeName + '" w.r.t. ' + cutPoint + ' is ' + response);
+    
+    			resolve(response);
+    		});
+    		var btnDontKnow = Alerter.defineButton('dont-know', i18nResources.variant.dontKnow, function(){
+    			console.log('supervisor don\'t know how to chooses "' + attributeName + '" w.r.t. ' + cutPoint);
+    
+    			resolve(undefined);
+    		});
+    
+    		Alerter.show({
+    			type: 'confirm',
+    			message: i18nResources.variant.sentence + '<br><br>&ldquo;' + attributeName + '&rdquo;<br><br>' + i18nResources.variant.is + ' <b>'
+    				+ (discreteAttribute? i18nResources.variant[cutPoint == 1? 'truthy': 'falsy']: i18nResources.variant.lessThan + ' ' + cutPoint) + '</b>?',
+    			buttons: [btnYes, btnNo, btnDontKnow],
+    			okButton: btnYes,
+    			cancelButton: btnDontKnow
+    		});
+    	});
+    };
+    
+    var fnSupervisorAskNewAttributeAndClass = function(){
+    	return new Promise(function(resolve){
+    		var btnOk = Alerter.defineOkButton(i18nResources.variant.ok, function(response){
+    			console.log('supervisor chooses new class, is ' + response);
+    
+    			recordSupervisedInstance(response, true);
+    
+    			resolve(response);
+    		});
+    
+    		Alerter.show({
+    			type: 'prompt',
+    			message: i18nResources.variant.unable,
+    			inputType: 'textarea',
+    			buttons: [btnOk],
+    			okButton: btnOk
+    		});
+    	});
+    };
+	 
+    var dt = new DecisionTree(attributes, data);
+    dt.attachSupervisor(fnSupervisorConfirmClass, fnSupervisorAskBranch, fnSupervisorAskNewAttributeAndClass);
+    dt.buildTree();
+
 
 ### Language (primarly used for Venetan) ###
  - conjugator, paradigm, pronoun, themizer, verb
@@ -145,4 +253,4 @@ Decoding process:
 
 
 ### General ###
- - AMD loader
+ - a minimal AMD loader compatible with requireJS
