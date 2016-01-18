@@ -30,6 +30,7 @@ This is a bunch of utilities I put together. Unfortunately I miss some, if not a
  - Lexer
  - various helpers (array, communication, function, math, object, and string)
 
+
 ### String Alignment <a id="string-alignment"></a>###
 Various string alignment algorithms. All of which has the same signature as explained below
 
@@ -52,6 +53,7 @@ Needleman-Wunsch-Ukkonen global alignment algorithm.
 
 #### Smith-Watermann <a id="smith-watermann"></a>####
 Smith-Waterman local alignment algorithm.
+
 
 ### String Distance <a id="string-distance"></a>###
 Various string distance algorithms like Levenshtein, and Damerau-Levenshtein.
@@ -83,6 +85,7 @@ Where edit is an object in the form {insertions: 0, deletions: 0, substitutions:
     var percent = StringDistance.damerauLevenshteinStructuralDistance('abc', 'acb', defaultCosts);
 
 Where edit is an object in the form {insertions: 0, deletions: 0, substitutions: 0, transpositions: 0, distance: 0} which encodes the number of insertions, deletions, substitutions, and transpositions, along with the distance; and percent is the quantity of change between the two strings expressed as a percentual.
+
 
 ### Coders <a id="coders"></a>###
 Various coders algorithms like arithmetic, and Elias.
