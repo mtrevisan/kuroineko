@@ -1,7 +1,7 @@
 # kuroineko library
 [![bitHound Overall Score](https://www.bithound.io/github/mtrevisan/library/badges/score.svg)](https://www.bithound.io/github/mtrevisan/library)
 =========
-This is a bunch of utilities I put together. Unfortunately I miss some, if not all, references to the original projects. I beg pardon, and whenever I found out the original ones I'll update my references.
+This is a bunch of utilities I put together. Unfortunately I miss some references to the original projects. I beg pardon, and whenever I found out the original ones I'll update my references.
 
 ### Table of contents ###
 - [Data](#data)
@@ -233,7 +233,8 @@ Decoding process:
 
 ### Math <a id="math"></a>###
  - Normal and Student-T distributions
- - Continued fractions and fraction
+ - Continued fractions
+ - Fraction
 
 
 ### Measure <a id="measure"></a>###
