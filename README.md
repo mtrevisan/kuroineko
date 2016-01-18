@@ -92,13 +92,13 @@ Decoding process:
 
 #### Elias delta coder ####
 Encoding process:
+
     var fixedCounts = {
-		'T': 5,
-		'h': 1,
-		'i': 2,
-		's': 1
-	 };
-    
+    	'T': 5,
+    	'h': 1,
+    	'i': 2,
+    	's': 1
+    };
     var data = [],
     	i;
     for(i in fixedCounts){
