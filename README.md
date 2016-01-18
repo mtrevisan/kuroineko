@@ -4,34 +4,33 @@
 This is a bunch of utilities I put together. Unfortunately I miss some, if not all, references to the original projects. I beg pardon, and whenever I found out the original ones I'll update my references.
 
 - [kuroineko library](#)
-  - [Data](#)
-  - [String Alignment](#)
-    - [Needleman-Wunsch](#)
-    - [Needleman-Wunsch-Ukkonen](#)
-    - [Smith-Watermann](#)
-  - [String Distance](#)
-    - [Levenshtein](#)
-    - [Damerau-Levenshtein](#)
-  - [Coders](#)
-    - [Arithmetic coder](#)
-    - [Elias delta coder](#)
-  - [Language (primarly used for Venetan)](#)
-  - [Measure](#)
-  - [Math](#)
-  - [Measure](#)
-  - [Spell checker](#)
-  - [UI](#)
-  - [General](#)
+  - [Data](#data)
+  - [String Alignment](#string-alignment)
+    - [Needleman-Wunsch](#needleman-wunsch)
+    - [Needleman-Wunsch-Ukkonen](#needleman-wunsch-ukkonen)
+    - [Smith-Watermann](#smith-watermann)
+  - [String Distance](#string-distance)
+    - [Levenshtein](#levenshtein)
+    - [Damerau-Levenshtein](#damerau-levenshtein)
+  - [Coders](#coders)
+    - [Arithmetic coder](#arithmetic-coder)
+    - [Elias delta coder](#elias-delta-coder)
+  - [Language (primarly used for Venetan)](#language)
+  - [Math](#math)
+  - [Measure](#measure)
+  - [Spell checker](#spell-checker)
+  - [UI](#ui)
+  - [General](#general)
 
 
-### Data ###
+### Data <a id="data"></a>###
  - HTML storage
  - Mersenne Twister, get a random variable with a given distribution
  - data structures like Binary Indexed Tree, Bit Buffer, Trie
  - Lexer
  - various helpers (array, communication, function, math, object, and string)
 
-### String Alignment ###
+### String Alignment <a id="string-alignment"></a>###
 Various string alignment algorithms. All of which has the same signature as explained below
 
     var nw = new NeedlemanWunsch('abc', 'acb', function(a, b){ return (a === b? 0: 1); }, function(){ return 1; }, function(){ return 1; });
@@ -45,19 +44,19 @@ or with defaults cost functions
 editOperations.operations is a string with that encodes the edit operations needed to transform the first string into the second.
 By edit operations is intended that a space is a match, a '*' is a change, a '+' is an insertion, and a '-' is a deletion.
 
-#### Needleman-Wunsch ####
+#### Needleman-Wunsch <a id="needleman-wunsch"></a>####
 Needleman-Wunsch global alignment algorithm.
 
-#### Needleman-Wunsch-Ukkonen ####
+#### Needleman-Wunsch-Ukkonen <a id="needleman-wunsch-ukkonen"></a>####
 Needleman-Wunsch-Ukkonen global alignment algorithm.
 
-#### Smith-Watermann ####
+#### Smith-Watermann <a id="smith-watermann"></a>####
 Smith-Waterman local alignment algorithm.
 
-### String Distance ###
+### String Distance <a id="string-distance"></a>###
 Various string distance algorithms like Levenshtein, and Damerau-Levenshtein.
 
-#### Levenshtein ####
+#### Levenshtein <a id="levenshtein"></a>####
 
     var defaultCosts = {insertion: 1, deletion: 2, substitution: 0.5, transposition: 1};
     
@@ -71,7 +70,7 @@ Various string distance algorithms like Levenshtein, and Damerau-Levenshtein.
 
 Where edit is an object in the form {insertions: 0, deletions: 0, substitutions: 0, distance: 0} which encodes the number of insertions, deletions, and substitutions, along with the distance; and percent is the quantity of change between the two strings expressed as a percentual.
 
-#### Damerau-Levenshtein ####
+#### Damerau-Levenshtein <a id="damerau-levenshtein"></a>####
 
     var defaultCosts = {insertion: 1, deletion: 2, substitution: 0.5, transposition: 1};
     
@@ -85,10 +84,10 @@ Where edit is an object in the form {insertions: 0, deletions: 0, substitutions:
 
 Where edit is an object in the form {insertions: 0, deletions: 0, substitutions: 0, transpositions: 0, distance: 0} which encodes the number of insertions, deletions, substitutions, and transpositions, along with the distance; and percent is the quantity of change between the two strings expressed as a percentual.
 
-### Coders ###
+### Coders <a id="coders"></a>###
 Various coders algorithms like arithmetic, and Elias.
 
-#### Arithmetic coder ####
+#### Arithmetic coder <a id="arithmetic-coder"></a>####
 Encoding process:
 
     var msg = 'This method will be called exactly once for each symbol being encoded or decoded';
@@ -106,7 +105,7 @@ Decoding process:
     var out = model.decode(itr);
 
 
-#### Elias delta coder ####
+#### Elias delta coder <a id="elias-delta-coder"></a>####
 Encoding process:
 
     var fixedCounts = {
@@ -130,7 +129,7 @@ Decoding process:
     var itr = buffer.getIterator();
     var out = EliasDeltaCoder.decode(itr);
 
-### Data Mining ###
+### Data Mining <a id="data-mining"></a>###
 
     var attributes = [];
     for(var i = 0; i < 38; i ++)
@@ -221,35 +220,31 @@ Decoding process:
     dt.buildTree();
 
 
-### Language (primarly used for Venetan) ###
+### Language (primarly used for Venetan) <a id="language"></a>###
  - conjugator, paradigm, pronoun, themizer, verb
  - grapheme, orthography, phone, phonology helper, syllabator, syllabe, word
  - language recognition using Markov chains and n-grams
 
 
-### Measure ###
- - measure converter
-
-
-### Math ###
+### Math <a id="math"></a>###
  - Normal and Student-T distributions
  - Continued fractions and fraction
  - various functions like bitCount, nextPowerOf2, getMostSignificantBit, getLeastSignificantBit, combine, and permute
 
 
-### Measure ###
+### Measure <a id="measure"></a>###
  - Measure converter and scalar
 
 
-### Spell checker ###
+### Spell checker <a id="spell-checker"></a>###
  - Norvig spell checker
  - Hunspell dictionary reader
 
 
-### UI ###
+### UI <a id="ui"></a>###
  - alerter
  - validator
 
 
-### General ###
+### General <a id="general"></a>###
  - a minimal AMD loader compatible with requireJS
