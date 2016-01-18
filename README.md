@@ -24,11 +24,13 @@ This is a bunch of utilities I put together. Unfortunately I miss some, if not a
 
 
 ### Data <a id="data"></a>###
+ - Hierarchical and OPTICS clustering
  - HTML storage
  - Mersenne Twister, get a random variable with a given distribution
- - data structures like Binary Indexed Tree, Bit Buffer, Trie
+ - data structures like Binary Indexed Tree, Bit Buffer, Priority Queue, Tree, Trie
  - Lexer
  - various helpers (array, communication, function, math, object, and string)
+ - math helper containing various functions like bitCount, nextPowerOf2, getMostSignificantBit, getLeastSignificantBit, combine, and permute
 
 
 ### String Alignment <a id="string-alignment"></a>###
@@ -232,11 +234,12 @@ Decoding process:
 ### Math <a id="math"></a>###
  - Normal and Student-T distributions
  - Continued fractions and fraction
- - various functions like bitCount, nextPowerOf2, getMostSignificantBit, getLeastSignificantBit, combine, and permute
 
 
 ### Measure <a id="measure"></a>###
- - Measure converter and scalar
+ - measure converter
+ - scalar
+ - measure datas for venetan and SI
 
 
 ### Spell checker <a id="spell-checker"></a>###
