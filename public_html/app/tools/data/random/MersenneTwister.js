@@ -138,7 +138,7 @@ define(function(){
 			k = (key.length < N? N: key.length),
 			s;
 		for( ; k; k --){
-			s = this.mt[i - 1] ^ (this.mt[i - 1] >>> 30)
+			s = this.mt[i - 1] ^ (this.mt[i - 1] >>> 30);
 
 			//non linear
 			this.mt[i] = (this.mt[i] ^ (((((s & 0xFFFF0000) >>> 16) * 1664525) << 16) + ((s & 0x0000FFFF) * 1664525))) + key[j] + j;
