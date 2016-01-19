@@ -57,6 +57,7 @@ define(['tools/math/Fraction'], function(Fraction){
 
 					if(param.constructor == Constructor)
 						return param;
+					/* falls through */
 
 				case 'number':
 				case 'string':
