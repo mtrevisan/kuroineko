@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(function(){
+define(['tools/math/MathHelper'], function(MathHelper){
 
 	var Constructor = function(symbolCount, initialCounts){
 		this.reset(symbolCount, initialCounts);
@@ -115,7 +115,7 @@ define(function(){
 	var find = function(freq, exactFind){
 		var idx = 0,
 			//round down to the nearest power of 2
-			bitMask = getMostSignificantBit(this.maxSymbol);
+			bitMask = MathHelper.getMostSignificantBit(this.maxSymbol);
 		while(bitMask && idx < this.maxSymbol){
 			//we make midpoint of interval
 			var tmp = idx + bitMask;
@@ -130,27 +130,6 @@ define(function(){
 			bitMask >>= 1;
 		}
 		return (exactFind && freq? -1: idx);
-	};
-
-	/**
-	 * @requires input be a positive integer
-	 * @private
-	 */
-	var getMostSignificantBit = function(n){
-		var tmp = n;
-		while(tmp){
-			n = tmp;
-			tmp = tmp ^ (getLeastSignificantBit(tmp));
-		}
-		return n;
-	};
-
-	/**
-	 * @requires input be a positive integer
-	 * @private
-	 */
-	var getLeastSignificantBit = function(n){
-		return n & (~(n - 1));
 	};
 
 

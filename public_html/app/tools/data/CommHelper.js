@@ -14,12 +14,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 			if(urlEncodedData)
 				req.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
 
-			req.onload = function(){
-				if(req.status == 200)
-					resolve(req.response);
-				else
-					reject(Error(req.statusText));
-			};
+			req.onload = onLoad(req, resolve, reject);
 			req.onerror = function(){
 				reject(Error("Network error"));
 			};
@@ -37,18 +32,23 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 			if(urlEncodedData)
 				req.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
 
-			req.onload = function(){
-				if(req.status == 200)
-					resolve(req.response);
-				else
-					reject(Error(req.statusText));
-			};
+			req.onload = onLoad(req, resolve, reject);
 			req.onerror = function(){
 				reject(Error("Network error"));
 			};
 
 			req.send(urlEncodedData);
 		});
+	};
+
+	/** @private */
+	var onLoad = function(req, resolve, reject){
+		return function(){
+			if(req.status == 200)
+				resolve(req.response);
+			else
+				reject(Error(req.statusText));
+		};
 	};
 
 	/** @private */

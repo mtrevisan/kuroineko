@@ -52,11 +52,11 @@ define(['tools/math/Fraction'], function(Fraction){
 		if(param)
 			switch(typeof param){
 				case 'object':
-					if(Array.isArray(param))
-						return {terms: param};
-
 					if(param.constructor == Constructor)
 						return param;
+
+					if(Array.isArray(param))
+						return {terms: param};
 					/* falls through */
 
 				case 'number':
