@@ -135,7 +135,7 @@ define(['tools/math/Fraction'], function(Fraction){
 				this, cf);
 
 			return new Constructor(terms);
-		}
+		};
 	})();
 
 	var integerPart = function(){
@@ -177,7 +177,7 @@ define(['tools/math/Fraction'], function(Fraction){
 	};
 
 	var isZero = function(){
-		return (this.terms[0] == 0);
+		return !this.terms[0];
 	};
 
 	var isPositive = function(){
