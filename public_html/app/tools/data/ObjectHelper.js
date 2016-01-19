@@ -193,8 +193,9 @@ define(function(){
 
 	/** @private */
 	var saveFile = function(data, filename, type){
-		if(!document.getElementById('__saveFile')){
-			var a = document.createElement('a');
+		var a = document.getElementById('__saveFile');
+		if(!a){
+			a = document.createElement('a');
 			a.id = '__saveFile';
 			a.style = 'display:none';
 			document.body.appendChild(a);
