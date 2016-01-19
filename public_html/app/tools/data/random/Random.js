@@ -16,7 +16,8 @@ define(['tools/data/random/MersenneTwister'], function(MersenneTwister){
 	 * @param list		Array of objects with key 'char' and value 'count', ex [a: 12, b: 1, ..]
 	 */
 	var getRandomValueWithGivenDistribution = function(list){
-		var nud = list.$nud;
+		var nud = list.$nud,
+			total;
 		if(!nud){
 			var keys = Object.keys(list);
 			//handle the special case of just one symbol
@@ -28,8 +29,8 @@ define(['tools/data/random/MersenneTwister'], function(MersenneTwister){
 			nud = [];
 			var i = -- n,
 				p = {},
-				total = keys.reduce(function(sum, key){ return sum + list[key]; }, 0),
 				key, a, b;
+			total = keys.reduce(function(sum, key){ return sum + list[key]; }, 0);
 			for(key in list)
 				p[key] = list[key] * n;
 			while(i > 1){
