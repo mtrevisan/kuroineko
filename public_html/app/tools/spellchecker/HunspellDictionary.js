@@ -259,7 +259,7 @@ define(function(){
 				//save the ruleCodes for compound word situations
 				if(!('NEEDAFFIX' in this.flags) || ruleCodesArray.indexOf(this.flags.NEEDAFFIX) < 0)
 					//addWordToDictionary.call(this, word, ruleCodesArray);
-					addWordToDictionary.call(this, word)
+					addWordToDictionary.call(this, word);
 
 				ruleCodesArray.forEach(function(code, j){
 					rule = this.rules[code];
