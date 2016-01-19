@@ -201,7 +201,7 @@ define(['tools/math/Fraction'], function(Fraction){
 
 			d = this.terms[k] - cf.terms[k];
 			if(d)
-				return ((k % 2 == 0? 1: -1) * d > 0? 1: -1);
+				return ((k % 2? -1: 1) * d > 0? 1: -1);
 
 			k ++;
 		}

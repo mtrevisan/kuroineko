@@ -518,7 +518,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			replaced = 0;
 		if(replacement.indexOf(MARKER_FLAGS) >= 0)
 			replacement = addFlag(replacement.replace(MARKER_FLAGS, ''), flags);
-		if(!constraint && replaced != 0)
+		if(!constraint && replaced)
 			constraint = replaced;
 
 		var line = getSuffixLine(i, replaced, replacement, constraint, parents);

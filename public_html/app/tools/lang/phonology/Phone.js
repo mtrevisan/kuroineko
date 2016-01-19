@@ -4,6 +4,7 @@
  * @see {@link https://github.com/kremonte/phonologizer/blob/master/scripts/app.js}
  * @see {@link http://clas.mq.edu.au/speech/phonetics/phonology/features/}
  * @see {@link http://clas.mq.edu.au/speech/phonetics/phonology/phoneme/}
+ * @see {@link http://clas.mq.edu.au/speech/phonetics/phonetics/consonants/manner.html}
  * @see {@link http://www.linguistics.ucla.edu/people/hayes/120a/Pheatures/}
  *
  * @author Mauro Trevisan
@@ -192,6 +193,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		son: 'sonorant',
 		//stop: -cnt
 		cnt: 'continuant',
+		//something that is both plosive and fricative
 		dr: 'delayed release',
 		app: 'approximant',
 		tap: 'tap',
@@ -219,6 +221,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		bk: 'back',
 		tns: 'tense'
 	};*/
+	var mannerFeatures = {con: true, son: true, cnt: true, dr: true, app: true, tap: true, tri: true, nas: true};
 	/** @constant */
 	var implications = [
 		[{con: 1}, {tns: 0}],
@@ -489,15 +492,6 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	/**
 	 * @param {Object/String} bundleA	Feature bundle 1
 	 * @param {Object/String} bundleB	Feature bundle 2
-	 */
-	var similarity2 = function(bundleA, bundleB){
-		var diff = compareFeatures(bundleA, bundleB, true).diff;
-		return diff.length / Object.keys(segments.a).length;
-	};
-
-	/**
-	 * @param {Object/String} bundleA	Feature bundle 1
-	 * @param {Object/String} bundleB	Feature bundle 2
 	 * @param {Object} [similarityFactor]	Factor to multiply the similarity for given features
 	 */
 	var similarity = function(bundleA, bundleB, similarityFactor){
@@ -525,6 +519,17 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		return factor * (diff.length / Object.keys(segments.a).length);
 	};
 
+	var isStop = function(bundle){
+		return (bundle.cnt == -1);
+	};
+
+	//for obstruents, +plosive correspond to -continuant (nasal stops are -plosive and -continuant)
+	//plosives, fricatives, and affricates are +obstruent
+	//+obs => -son
+	//plosive: bp dt gk, fricative: vf θð zs ʃʒ h
+	//http://www.madore.org/~david/misc/linguistic/ipa/
+	//https://en.wikipedia.org/wiki/Stop_consonant
+	//https://en.wikipedia.org/wiki/Fricative_consonant
 	var isPlosive = function(bundle){
 		return (bundle.dr == -1);
 //		return chr.match(/[pbtdʈɖcɟkɡqɢʡʔ]/);

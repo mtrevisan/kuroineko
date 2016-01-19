@@ -6,7 +6,7 @@
 define(['tools/data/coder/arithmetic/ArithmeticCoder', 'tools/data/structs/BitBuffer'], function(ArithmeticCoder, BitBuffer){
 
 	var create = function(Model, config){
-		var compress = function(data, encodingBuffer){
+		var encode = function(data, encodingBuffer){
 			var model = new Model(ArithmeticCoder, config),
 				i;
 
@@ -32,7 +32,7 @@ define(['tools/data/coder/arithmetic/ArithmeticCoder', 'tools/data/structs/BitBu
 			return ArithmeticCoder.closeEncoding();
 		};
 
-		var decompress = function(decodingBufferIterator){
+		var decode = function(decodingBufferIterator){
 			var model = new Model(ArithmeticCoder, config),
 				eof = false;
 			ArithmeticCoder.setEOF = function(){
@@ -67,8 +67,8 @@ define(['tools/data/coder/arithmetic/ArithmeticCoder', 'tools/data/structs/BitBu
 
 
 		return {
-			compress: compress,
-			decompress: decompress
+			encode: encode,
+			decode: decode
 		};
 	};
 

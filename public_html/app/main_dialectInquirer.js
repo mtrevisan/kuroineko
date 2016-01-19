@@ -159,7 +159,7 @@ define(['tools/data/mining/DecisionTree', 'HTMLHelper', 'tools/ui/Validator', 't
 		var fnSupervisorAskNewAttributeAndClass = function(){
 			return new Promise(function(resolve){
 				var btnOk = Alerter.defineOkButton(i18nResources.variant.ok, function(response){
-					console.log('supervisor chooses new class is ' + response);
+					console.log('supervisor chooses new class, is ' + response);
 
 					recordSupervisedInstance(response, true);
 
