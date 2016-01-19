@@ -48,7 +48,7 @@ define(function(){
 		if(this.valueToNode)
 			this.valueToNode.clear();
 		else
-			this.valueToNode = new Map;
+			this.valueToNode = new Map();
 	};
 
 	/**
