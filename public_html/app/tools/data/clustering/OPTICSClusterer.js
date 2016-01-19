@@ -113,7 +113,7 @@ define(['tools/data/ObjectHelper', 'tools/data/structs/PriorityQueue'], function
 				//'neighbor' is not in 'seeds'
 				if(!ObjectHelper.isDefined(neighbor.reachability)){
 					neighbor.reachability = newReachDist;
-					neighbor.node = this.orderSeeds.add(newReachDist, neighbor)
+					neighbor.node = this.orderSeeds.add(newReachDist, neighbor);
 				}
 				//'neighbor' is in 'seeds', check for improvement
 				else if(newReachDist < neighbor.reachability){
@@ -133,7 +133,7 @@ define(['tools/data/ObjectHelper', 'tools/data/structs/PriorityQueue'], function
 				data: point.vector,
 				clusterId: point.clusterId
 			};
-		})
+		});
 	};
 
 	/** @private */
