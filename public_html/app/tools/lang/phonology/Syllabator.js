@@ -64,7 +64,6 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 				score[phone] = Number(value);
 			});
 		});
-		delete scoreData;
 
 
 		var computeSillabicities = function(word){
