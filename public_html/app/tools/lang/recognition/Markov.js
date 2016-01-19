@@ -63,7 +63,7 @@ define(['tools/data/random/Random'], function(Random){
 		parts.forEach(function(sent){
 			prev = initialState(this.order);
 			sent.forEach(function(next){
-				updateMap(this.memory, prev, next)
+				updateMap(this.memory, prev, next);
 
 				prev.shift();
 				prev.push(next);
@@ -95,7 +95,7 @@ define(['tools/data/random/Random'], function(Random){
 	var feedData = function(data){
 		var size = data.length,
 			i = 0,
-			j, d, prev, next, len, count, j;
+			j, d, prev, next, len, count;
 		while(i < size){
 			d = data[i];
 			prev = [d.substr(0, this.order)];
@@ -106,7 +106,7 @@ define(['tools/data/random/Random'], function(Random){
 				next = d.substr(0, 1);
 				count = Number(d.substr(1));
 
-				updateMap(this.memory, prev, next, count)
+				updateMap(this.memory, prev, next, count);
 			}
 			i += len + 1;
 		}
@@ -123,8 +123,7 @@ define(['tools/data/random/Random'], function(Random){
 	};
 
 	Constructor.tokenize = function(sentence){
-		return cleanup(sentence)
-			.map(function(sent){ return sent.split(SEPARATOR) });
+		return cleanup(sentence).map(function(sent){ return sent.split(SEPARATOR) });
 	};
 
 	/** @private */
