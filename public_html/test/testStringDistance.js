@@ -2,6 +2,18 @@ require(['tools/data/StringDistance', 'tools/lang/phonology/Phone'], function(St
 	QUnit.module('StringDistance');
 
 	var defaultCosts = {insertion: 1, deletion: 2, substitution: 0.5, transposition: 1};
+	var otherCosts = {
+		insertion: 1,
+		deletion: 2,
+		substitution: 0.5,
+		transposition: 0.7,
+		matchingFn: function(from, to){
+			var fromFeatures = Phone.convertStringIntoFeatures(from),
+				toFeatures = Phone.convertStringIntoFeatures(to),
+				differences = Phone.compareFeatures(fromFeatures[0], toFeatures[0], true).diff;
+			return differences.length / 26;
+		}
+	};
 
 
 	QUnit.test('levenshtein - same', function(){
@@ -30,18 +42,7 @@ require(['tools/data/StringDistance', 'tools/lang/phonology/Phone'], function(St
 	});
 
 	QUnit.test('levenshtein - custom matchingFn', function(){
-		var costs = {
-			insertion: 1,
-			deletion: 2,
-			modification: 0.5,
-			matchingFn: function(from, to){
-				var fromFeatures = Phone.convertStringIntoFeatures(from),
-					toFeatures = Phone.convertStringIntoFeatures(to),
-					differences = Phone.compareFeatures(fromFeatures[0], toFeatures[0], true).diff;
-				return differences.length / 26;
-			}
-		};
-		equal(StringDistance.levenshteinDistance('saveler', 'apelere', costs), 3.1538461538461537);
+		equal(StringDistance.levenshteinDistance('saveler', 'apelere', otherCosts), 3.1538461538461537);
 	});
 
 
@@ -67,8 +68,8 @@ require(['tools/data/StringDistance', 'tools/lang/phonology/Phone'], function(St
 	});
 
 	QUnit.test('damerau-levenshtein - transposition', function(){
-		equal(StringDistance.damerauLevenshteinDistance('a', 'a', defaultCosts), 0);
-		equal(StringDistance.damerauLevenshteinStructuralDistance('a', 'a', defaultCosts), 0 / 1 / 2);
+		equal(StringDistance.damerauLevenshteinDistance('ab', 'ba', defaultCosts), 1);
+		equal(StringDistance.damerauLevenshteinStructuralDistance('ab', 'ba', defaultCosts), 1 / 1 / 2);
 	});
 
 	QUnit.test('damerau-levenshtein - saver/sapere', function(){
@@ -104,18 +105,6 @@ require(['tools/data/StringDistance', 'tools/lang/phonology/Phone'], function(St
 	});
 
 	QUnit.test('damerau-levenshtein - custom matchingFn', function(){
-		var costs = {
-			insertion: 1,
-			deletion: 2,
-			substitution: 0.5,
-			transposition: 0.7,
-			matchingFn: function(from, to){
-				var fromFeatures = Phone.convertStringIntoFeatures(from),
-					toFeatures = Phone.convertStringIntoFeatures(to),
-					differences = Phone.compareFeatures(fromFeatures[0], toFeatures[0], true).diff;
-				return differences.length / 26;
-			}
-		};
-		equal(StringDistance.damerauLevenshteinDistance('saveler', 'apelere', costs), 2.976923076923077);
+		equal(StringDistance.damerauLevenshteinDistance('saveler', 'apelere', otherCosts), 2.976923076923077);
 	});
 });
