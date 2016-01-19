@@ -471,7 +471,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		var result = {same: {}, diff: []},
 			feature;
 		for(feature in bundleA){
-			if(!bundleB[feature] && bundleA[feature] != 0 || bundleA[feature] != bundleB[feature])
+			if(!bundleB[feature] && bundleA[feature] || bundleA[feature] != bundleB[feature])
 				result.diff.push(feature);
 			else
 				result.same[feature] = bundleA[feature];
@@ -480,7 +480,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		if(twoWayMatch)
 			for(feature in bundleB)
 				if(result.diff.indexOf(feature) == -1
-						&& (!bundleA[feature] && bundleB[feature] != 0 || bundleB[feature] != bundleA[feature]))
+						&& (!bundleA[feature] && bundleB[feature] || bundleB[feature] != bundleA[feature]))
 					result.diff.push(feature);
 
 		return result;
