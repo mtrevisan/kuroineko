@@ -123,7 +123,7 @@ define(['tools/data/random/Random'], function(Random){
 	};
 
 	Constructor.tokenize = function(sentence){
-		return cleanup(sentence).map(function(sent){ return sent.split(SEPARATOR) });
+		return cleanup(sentence).map(function(sent){ return sent.split(SEPARATOR); });
 	};
 
 	/** @private */
