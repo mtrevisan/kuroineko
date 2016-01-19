@@ -67,8 +67,8 @@ require(['tools/data/StringDistance', 'tools/lang/phonology/Phone'], function(St
 	});
 
 	QUnit.test('damerau-levenshtein - transposition', function(){
-		equal(StringDistance.damerauLevenshteinDistance('a', 'a', defaultCosts), 0);
-		equal(StringDistance.damerauLevenshteinStructuralDistance('a', 'a', defaultCosts), 0 / 1 / 2);
+		equal(StringDistance.damerauLevenshteinDistance('ab', 'ba', defaultCosts), 1);
+		equal(StringDistance.damerauLevenshteinStructuralDistance('ab', 'ba', defaultCosts), 1 / 1 / 2);
 	});
 
 	QUnit.test('damerau-levenshtein - saver/sapere', function(){
