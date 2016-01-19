@@ -592,7 +592,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		return {
 			forms: ArrayHelper.unique(flags2.forms.concat(flags1.forms)).sort(function(a, b){ return Number(a) - Number(b); }),
 			markers: ArrayHelper.unique(flags2.markers.concat(flags1.markers)).sort()
-		}
+		};
 	};
 
 	/** @private */
@@ -882,7 +882,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			obj = stack.shift();
 			common = extractCommonPartFromList(obj.origins);
 			part = ArrayHelper.partition(obj.origins, function(el){ return (el.length - common.length >= 1? el[el.length - common.length - 1]: '^'); });
-			diff = ArrayHelper.difference(origins, obj.origins),
+			diff = ArrayHelper.difference(origins, obj.origins);
 
 			partitioningResults = {true: [], false: []};
 			Object.keys(part).forEach(function(k){
