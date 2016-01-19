@@ -193,10 +193,11 @@ define(['tools/data/ObjectHelper', 'tools/lang/phonology/Orthography'], function
 	 */
 	var updateDomElement = function(element, callback){
 		var parentNode = element.parentNode,
-			nextSibling = element.nextSibling;
+			nextSibling = element.nextSibling,
+			result;
 		parentNode.removeChild(element);
 		try{
-			var result = callback.call(element);
+			result = callback.call(element);
 		}
 		finally{
 			parentNode.insertBefore(element, nextSibling);
