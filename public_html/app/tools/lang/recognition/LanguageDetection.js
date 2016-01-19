@@ -198,7 +198,7 @@ define(['tools/lang/recognition/NGrams', 'tools/lang/recognition/Markov', 'tools
 
 
 	/** Apply Gergely Pethő & Eszter Mózes (2014) */
-	function identify(text, callback){
+	var identify = function(text, callback){
 		//return run types that used for 40% or more of the string always return basic latin if found more than 15%
 		//and extended additional latin if over 10% (for Vietnamese)
 		var scripts = findRuns(text),
