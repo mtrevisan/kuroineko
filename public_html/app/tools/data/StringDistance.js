@@ -352,7 +352,7 @@ define(function(){
 		}
 		object.maxCost = function(){
 			return Math.max(this.insertion, this.deletion, this.substitution, this.transposition);
-		}
+		};
 		return object;
 	};
 
