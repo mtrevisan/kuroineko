@@ -112,7 +112,7 @@ define(['tools/data/ObjectHelper', 'tools/data/structs/PriorityQueue'], function
 
 				//'neighbor' is not in 'seeds'
 				if(!ObjectHelper.isDefined(neighbor.reachability)){
-					neighbor.reachability = newReachDist
+					neighbor.reachability = newReachDist;
 					neighbor.node = this.orderSeeds.add(newReachDist, neighbor)
 				}
 				//'neighbor' is in 'seeds', check for improvement
