@@ -78,7 +78,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 				throw 'Incompatible current parent measure: cannot be the same.';
 
 			var d = (this.data[uom] = this.data[uom] || {});
-			d.parentValue = parentValue,
+			d.parentValue = parentValue;
 			d.parentUOM = parentUOM;
 
 			if(!this.data[parentUOM])
