@@ -130,7 +130,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 		while(i --)
 			if(array[i] == element)
-				break
+				break;
 		return i;
 	};
 
