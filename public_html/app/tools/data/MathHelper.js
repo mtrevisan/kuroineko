@@ -79,12 +79,12 @@ define(function(){
 		var size = list.length,
 			index = [],
 			result = [];
-		for(var i = 0; i < size; i ++)
+		var i = 1,
+			j, swap;
+		for(i = 0; i < size; i ++)
 			index.push(0);
 		result.push(list.join(''));
 
-		var i = 1,
-			j, swap;
 		while(i < size){
 			if(index[i] < i){
 				j = (i % 2? index[i]: 0);
