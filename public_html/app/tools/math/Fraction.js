@@ -78,6 +78,7 @@ define(function(){
 
 			case 'number':
 				args = '' + args;
+				/* falls through */
 			case 'string':
 				var m = args.match(/^(-?)([\d]+)\.?([\d]*)(?:\(([\d]*)\))?$/);
 				if(m){
