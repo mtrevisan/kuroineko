@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(function(){
+define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHelper, StringHelper){
 
 	/** @constant */
 	var REGEX_UNICODE_SPLITTER = /(\[([^\]]+)\]|j²|[^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u035B\u035D-\u0360\u0362-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*(?:[\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*[\u035C\u0361][^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*)?)/g;
@@ -48,8 +48,7 @@ define(function(){
 		if(!m)
 			return n * costs.deletion;
 
-		var matchingFn = costs.matchingFn || matchingFnDefault,
-			prevRow = [],
+		var prevRow = [],
 			curCol, nextCol,
 			i, j;
 
@@ -67,7 +66,7 @@ define(function(){
 				curCol = nextCol;
 
 				nextCol = Math.min(
-					prevRow[j] + matchingFn(a[i], b[j], costs),
+					prevRow[j] + costs.matchingFn(a[i], b[j], costs),
 					nextCol + costs.insertion,
 					prevRow[j + 1] + costs.deletion
 				);
@@ -96,8 +95,8 @@ define(function(){
 	 * @return {Object}	The number of insertions, deletions, substitutions, and the edit distance, a non-negative number representing the number of edits required to transform one string to the other
 	 */
 	var levenshteinEdit = function(a, b, costs){
-		var computeFn = function(a, b, costs, matchingFn, distance, i, j){
-			var min = distance[i - 1][j - 1] + matchingFn(a[i - 1], b[j - 1], costs),
+		var computeFn = function(a, b, costs, distance, i, j){
+			var min = distance[i - 1][j - 1] + costs.matchingFn(a[i - 1], b[j - 1], costs),
 				t;
 			if((t = distance[i][j - 1] + costs.insertion) < min)
 				min = t;
@@ -161,8 +160,7 @@ define(function(){
 		if(!m)
 			return n * costs.deletion;
 
-		var matchingFn = costs.matchingFn || matchingFnDefault,
-			v0 = [],
+		var v0 = [],
 			v1 = [],
 			v2 = [],
 			i, j,
@@ -179,7 +177,7 @@ define(function(){
 			v0[0] = costs.deletion * i;
 
 			for(j = 1; j <= m; j ++){
-				min = v1[j - 1] + matchingFn(a[i - 1], b[j - 1], costs);
+				min = v1[j - 1] + costs.matchingFn(a[i - 1], b[j - 1], costs);
 				if((t = v0[j - 1] + costs.insertion) < min)
 					min = t;
 				if((t = v1[j] + costs.deletion) < min)
@@ -206,8 +204,8 @@ define(function(){
 	 * @return {Object}	The number of insertions, deletions, substitutions, transpositions, and the edit distance, a non-negative number representing the number of edits required to transform one string to the other
 	 */
 	var damerauLevenshteinEdit = function(a, b, costs){
-		var computeFn = function(a, b, costs, matchingFn, distance, i, j){
-			var min = distance[i - 1][j - 1] + matchingFn(a[i - 1], b[j - 1], costs),
+		var computeFn = function(a, b, costs, distance, i, j){
+			var min = distance[i - 1][j - 1] + costs.matchingFn(a[i - 1], b[j - 1], costs),
 				t;
 			if((t = distance[i][j - 1] + costs.insertion) < min)
 				min = t;
@@ -256,23 +254,27 @@ define(function(){
 				deletions: 0,
 				substitutions: 0,
 				transpositions: 0,
+				operations: [],
 				distance: 0
 			};
-		if(a.join('') == b.join(''))
+		if(a.join('') == b.join('')){
+			result.operations = StringHelper.stringRepeat(' ', n).split('');
 			return result;
+		}
 		if(!n){
 			result.insertions = m;
+			result.operations = StringHelper.stringRepeat('+', m).split('');
 			result.distance = m * costs.insertion;
 			return result;
 		}
 		if(!m){
 			result.deletions = n;
+			result.operations = StringHelper.stringRepeat('-', n).split('');
 			result.distance = n * costs.deletion;
 			return result;
 		}
 
-		var matchingFn = costs.matchingFn || matchingFnDefault,
-			distance = [],
+		var distance = [],
 			i, j;
 
 		for(i = 0; i <= n; i ++)
@@ -282,13 +284,13 @@ define(function(){
 
 		for(i = 1; i <= n; i ++)
 			for(j = 1; j <= m; j ++)
-				computeFn(a, b, costs, matchingFn, distance, i, j);
+				computeFn(a, b, costs, distance, i, j);
 
-		return traceback(a, b, costs, matchingFn, distance);
+		return traceback(a, b, costs, distance);
 	};
 
 	/** @private */
-	var traceback = function(a, b, costs, matchingFn, distance){
+	var traceback = function(a, b, costs, distance){
 		var i = a.length,
 			j = b.length,
 			ops = {
@@ -296,30 +298,35 @@ define(function(){
 				deletions: 0,
 				substitutions: 0,
 				transpositions: 0,
+				operations: [],
 				distance: distance[i][j]
 			},
-			tmp, match;
+			tmp, mismatch;
 
 		//backward reconstruct path
 		while(i > 0 || j > 0){
 			tmp = distance[i][j];
-			if(i > 0 && j > 0 && tmp == distance[i - 1][j - 1] + (match = matchingFn(a[i - 1], b[j - 1], costs))){
-				if(match)
+			if(i > 0 && j > 0 && tmp == distance[i - 1][j - 1] + (mismatch = costs.matchingFn(a[i - 1], b[j - 1], costs))){
+				if(mismatch)
 					ops.substitutions ++;
+				ops.operations.unshift(mismatch? '*': ' ');
 				i --;
 				j --;
 			}
 			else if(i > 1 && j > 1 && a[i - 1] == b[j - 2] && a[i - 2] == b[j - 1] && tmp == distance[i - 2][j - 2] + costs.transposition){
 				ops.transpositions ++;
+				ops.operations.unshift('/');
 				i -= 2;
 				j -= 2;
 			}
 			else if(i > 0 && tmp == distance[i - 1][j] + costs.deletion){
 				ops.deletions ++;
+				ops.operations.unshift('-');
 				i --;
 			}
 			else if(j > 0 && tmp == distance[i][j - 1] + costs.insertion){
 				ops.insertions ++;
+				ops.operations.unshift('+');
 				j --;
 			}
 		}
@@ -333,27 +340,18 @@ define(function(){
 
 
 	/** @private */
-	var matchingFnDefault = function(from, to, costs){
-		return (from == to? 0: costs.substitution);
-	};
-
-	/** @private */
 	var enforceDefaultCosts = function(costs){
-		return applyIfNotNumeric(costs || {}, {insertion: 1, deletion: 1, substitution: 0.5, transposition: 0.7});
-	};
-
-	/** @private */
-	var applyIfNotNumeric = function(object, config){
-		var property, destination;
-		for(property in config){
-			destination = object[property];
-			if(isNaN(Number(destination)))
-				object[property] = config[property];
-		}
-		object.maxCost = function(){
+		costs = ObjectHelper.applyIf(costs || {}, {insertion: 1, deletion: 1, substitution: 0.5, transposition: 0.7});
+		costs.maxCost = function(){
 			return Math.max(this.insertion, this.deletion, this.substitution, this.transposition);
 		};
-		return object;
+		costs.matchingFn = costs.matchingFn || matchingFnDefault;
+		return costs;
+	};
+
+	/** @private */
+	var matchingFnDefault = function(from, to, costs){
+		return (ObjectHelper.deepEquals(from, to)? 0: costs.substitution);
 	};
 
 

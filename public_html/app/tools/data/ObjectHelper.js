@@ -40,10 +40,10 @@ define(function(){
 	 * Sencha Touch 2.4.0's Ext.apply<p>
 	 * Copies all the properties of config to the specified object.
 	 *
-	 * @param {Object} object The receiver of the properties.
-	 * @param {Object} config The source of the properties.
-	 * @param {Object} defaults A different object that will also be applied for default values.
-	 * @return {Object} returns obj
+	 * @param {Object} object		The receiver of the properties.
+	 * @param {Object} config		The source of the properties.
+	 * @param {Object} defaults	A different object that will also be applied for default values.
+	 * @return {Object}				Returns the object
 	 */
 	var apply = function(object, config, defaults){
 		if(defaults)
@@ -54,6 +54,48 @@ define(function(){
 				object[i] = config[i];
 
 		return object;
+	};
+
+	/**
+	 * Sencha Touch 2.4.2's Ext.applyIf<p>
+	 * Copies all the properties of config to the specified object if they don't already exist.
+	 *
+	 * @param {Object} object		The receiver of the properties.
+	 * @param {Object} config		The source of the properties.
+	 * @param {Object} defaults	A different object that will also be applied for default values.
+	 * @return {Object}				Returns the object
+	 */
+	var applyIf = function(object, config, defaults){
+		if(defaults)
+			apply(object, defaults);
+
+		if(object && config && type(config) == TYPE_OBJECT)
+			for(var i in config)
+				if(object[i] === undefined)
+					object[i] = config[i];
+
+		return object;
+	};
+
+	/**
+	 * Add properties to an object
+	 * Usually used to create a public reference to a private variable.
+	 */
+	var extend = function(root, props){
+		for(var key in props)
+			if(props.hasOwnProperty(key))
+				root[key] = props[key];
+		return root;
+	};
+
+	/**
+	 * Copy an object property then delete the original
+	 * Usually used to copy the publicized private variable back to a private variable and delete the public reference.
+	 */
+	var privatize = function(root, prop){
+		var data = root[prop];
+		delete root[prop];
+		return data;
 	};
 
 
@@ -212,6 +254,9 @@ define(function(){
 
 	return {
 		apply: apply,
+		applyIf: applyIf,
+		extend: extend,
+		privatize: privatize,
 
 		type: type,
 		isFunction: isFunction,

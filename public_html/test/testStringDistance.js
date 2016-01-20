@@ -79,28 +79,28 @@ require(['tools/data/StringDistance', 'tools/lang/phonology/Phone'], function(St
 
 	QUnit.test('damerau-levenshtein - arzento', function(){
 		equal(StringDistance.damerauLevenshteinStructuralDistance('ardento', 'ardent', defaultCosts), 0.14285714285714285);
-		deepEqual(StringDistance.damerauLevenshteinEdit('ardento', 'ardent', defaultCosts), {deletions: 1, insertions: 0, substitutions: 0, transpositions: 0, distance: 2});
+		deepEqual(StringDistance.damerauLevenshteinEdit('ardento', 'ardent', defaultCosts), {deletions: 1, insertions: 0, substitutions: 0, transpositions: 0, distance: 2, operations: [' ', ' ', ' ', ' ', ' ', ' ', '-']});
 
 		equal(StringDistance.damerauLevenshteinStructuralDistance('ardent', 'ardento', defaultCosts), 0.07142857142857142);
-		deepEqual(StringDistance.damerauLevenshteinEdit('ardent', 'ardento', defaultCosts), {deletions: 0, insertions: 1, substitutions: 0, transpositions: 0, distance: 1});
+		deepEqual(StringDistance.damerauLevenshteinEdit('ardent', 'ardento', defaultCosts), {deletions: 0, insertions: 1, substitutions: 0, transpositions: 0, distance: 1, operations: [' ', ' ', ' ', ' ', ' ', ' ', '+']});
 
 		equal(StringDistance.damerauLevenshteinStructuralDistance('ardent', 'radent', {insertion: 1, deletion: 2, substitution: 0.5, transposition: 0.4}), 0.03333333333333333);
-		deepEqual(StringDistance.damerauLevenshteinEdit('ardent', 'radent', {insertion: 1, deletion: 2, substitution: 0.5, transposition: 0.4}), {deletions: 0, insertions: 0, substitutions: 0, transpositions: 1, distance: 0.4});
+		deepEqual(StringDistance.damerauLevenshteinEdit('ardent', 'radent', {insertion: 1, deletion: 2, substitution: 0.5, transposition: 0.4}), {deletions: 0, insertions: 0, substitutions: 0, transpositions: 1, distance: 0.4, operations: ['/', ' ', ' ', ' ', ' ']});
 
 		equal(StringDistance.damerauLevenshteinStructuralDistance('ard͡zento', 'arðentu', defaultCosts), 0.05555555555555555);
-		deepEqual(StringDistance.damerauLevenshteinEdit('ard͡zento', 'arðentu', defaultCosts), {deletions: 0, insertions: 0, substitutions: 2, transpositions: 0, distance: 1});
+		deepEqual(StringDistance.damerauLevenshteinEdit('ard͡zento', 'arðentu', defaultCosts), {deletions: 0, insertions: 0, substitutions: 2, transpositions: 0, distance: 1, operations: [' ', ' ', '*', ' ', ' ', ' ', '*']});
 
 		equal(StringDistance.damerauLevenshteinStructuralDistance('ardento', 'arðentu', defaultCosts), 0.07142857142857142);
-		deepEqual(StringDistance.damerauLevenshteinEdit('ardento', 'arðentu', defaultCosts), {deletions: 0, insertions: 0, substitutions: 2, transpositions: 0, distance: 1});
+		deepEqual(StringDistance.damerauLevenshteinEdit('ardento', 'arðentu', defaultCosts), {deletions: 0, insertions: 0, substitutions: 2, transpositions: 0, distance: 1, operations: [' ', ' ', '*', ' ', ' ', ' ', '*']});
 
 		equal(StringDistance.damerauLevenshteinStructuralDistance('ardento', 'arjento', defaultCosts), 0.03571428571428571);
-		deepEqual(StringDistance.damerauLevenshteinEdit('ardento', 'arjento', defaultCosts), {deletions: 0, insertions: 0, substitutions: 1, transpositions: 0, distance: 0.5});
+		deepEqual(StringDistance.damerauLevenshteinEdit('ardento', 'arjento', defaultCosts), {deletions: 0, insertions: 0, substitutions: 1, transpositions: 0, distance: 0.5, operations: [' ', ' ', '*', ' ', ' ', ' ', ' ']});
 
 		equal(StringDistance.damerauLevenshteinStructuralDistance('ard͡zento', 'ard͡ʒento', defaultCosts), 0.027777777777777776);
-		deepEqual(StringDistance.damerauLevenshteinEdit('ard͡zento', 'ard͡ʒento', defaultCosts), {deletions: 0, insertions: 0, substitutions: 1, transpositions: 0, distance: 0.5});
+		deepEqual(StringDistance.damerauLevenshteinEdit('ard͡zento', 'ard͡ʒento', defaultCosts), {deletions: 0, insertions: 0, substitutions: 1, transpositions: 0, distance: 0.5, operations: [' ', ' ', '*', ' ', ' ', ' ', ' ']});
 
 		equal(StringDistance.damerauLevenshteinStructuralDistance('ardento', 'ardento', defaultCosts), 0);
-		deepEqual(StringDistance.damerauLevenshteinEdit('ardento', 'ardento', defaultCosts), {deletions: 0, insertions: 0, substitutions: 0, transpositions: 0, distance: 0});
+		deepEqual(StringDistance.damerauLevenshteinEdit('ardento', 'ardento', defaultCosts), {deletions: 0, insertions: 0, substitutions: 0, transpositions: 0, distance: 0, operations: [' ', ' ', ' ', ' ', ' ', ' ', ' ']});
 
 	});
 
