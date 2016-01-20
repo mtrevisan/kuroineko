@@ -60,7 +60,15 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 		word = markPhonologicSyllabeSeparation(word, phonematicSyllabation);
 		word = phonizeCombinatorialVariants(word, dialect);
 		word = phonizeSingleGraphemes(word, dialect);
-		return word;
+		return suppressStress(word);
+	};
+
+	/** @private */
+	//NOTE: duplicated in Word
+	var suppressStress = function(word){
+		return word.replace(/[àèéíòóú]/g, function(chr){
+			return 'aeeioou'['àèéíòóú'.indexOf(chr)];
+		});
 	};
 
 	/** NOTE: Use IPA standard. */
@@ -183,14 +191,7 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 			return list['ŧđñxcɉèò'.indexOf(chr)];
 		});
 
-		return suppressStress(word);
-	};
-
-	/** @private */
-	var suppressStress = function(word){
-		return word.replace(/[àèéíòóú]/g, function(chr){
-			return 'aeeioou'['àèéíòóú'.indexOf(chr)];
-		});
+		return word;
 	};
 
 
@@ -230,7 +231,6 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 			.replace(/s̠/g, 's')
 			.replace(/z̠/g, 'x')
 			.replace(/n̺/g, 'n');
-
 	};
 
 
