@@ -284,19 +284,22 @@ define(['HTMLHelper'], function(HTMLHelper){
 			}
 		};
 
-		bind(el, 'click', function(){
-			waitOnLogForTransitionEnd(function(){
-				el.className += (containerID? ' alerter-el-log-hide': ' alerter-log-hide');
-			}, fn, containerID);
-		}, true);
+		bind(el, 'click', closeLogMessage, true);
 
 		//set timeout to auto close the log message
 		if(wait && wait > 0)
-			setTimeout(function(){
-				waitOnLogForTransitionEnd(function(){
-					el.className += (containerID? ' alerter-el-log-hide': ' alerter-log-hide');
-				}, fn, containerID);
-			}, wait);
+			setTimeout(closeLogMessage, wait);
+	};
+
+	/**
+	 * @private
+	 */
+	var closeLogMessage = function(){
+		return function(){
+			waitOnLogForTransitionEnd(function(){
+				el.className += (containerID? ' alerter-el-log-hide': ' alerter-log-hide');
+			}, fn, containerID);
+		};
 	};
 
 	/** @private */
