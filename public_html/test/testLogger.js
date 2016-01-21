@@ -17,13 +17,6 @@ require(['tools/logging/Logger'], function(Logger){
 		equal(logger1, logger2);
 	});
 
-	QUnit.test('constructor - should geminate', function(){
-		var logger1 = new Logger('bla');
-		var logger2 = logger1.geminate();
-
-		notEqual(logger1, logger2);
-	});
-
 	QUnit.test('constructor - should call intercept', function(){
 		QUnit.expect(4);
 
@@ -56,5 +49,12 @@ require(['tools/logging/Logger'], function(Logger){
 		equal(logger1.logs.base1[0], '[DEBUG] message');
 		equal(logger2.logs.base1.length, 1);
 		equal(logger2.logs.base1[0], '[DEBUG] message');
+	});
+
+	QUnit.test('constructor - should geminate', function(){
+		var logger1 = new Logger('bla');
+		var logger2 = logger1.geminate();
+
+		notEqual(logger1, logger2);
 	});
 });
