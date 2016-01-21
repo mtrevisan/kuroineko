@@ -98,6 +98,8 @@ var AMDLoader = (function(doc){
 		resolves[id] = null;
 
 		definitions[id] = value;
+
+		//console.log('resolved module ' + id.replace(/.+\//, '') + ', remains [' + Object.keys(promises).filter(function(k){ return !!resolves[k]; }).map(function(k){ return k.replace(/.+\//, ''); }).join(', ') + ']');
 	};
 
 	/**
@@ -116,6 +118,8 @@ var AMDLoader = (function(doc){
 		id = addJSExtension(args[0]);
 		dependencies = args[1];
 		definition = args[2];
+
+		//console.log('define module ' + id.replace(/.+\//, '') + (dependencies.length? ' with dependencies [' + dependencies.map(function(dep){ return dep.replace(/.+\//, ''); }).join(', ') + ']': '') + ', remains [' + Object.keys(promises).filter(function(k){ return !!resolves[k]; }).map(function(k){ return k.replace(/.+\//, ''); }).join(', ') + ']');
 
 		if(!dependencies.length)
 			//module has no dependencies, bind id to definition
@@ -162,6 +166,8 @@ var AMDLoader = (function(doc){
 			return;
 		}
 
+		//console.log('require module' + (dependencies.length? ' with dependencies [' + dependencies.map(function(dep){ return dep.replace(/.+\//, ''); }).join(', ') + ']': '') + ', remains [' + Object.keys(promises).filter(function(k){ return !!resolves[k]; }).map(function(k){ return k.replace(/.+\//, ''); }).join(', ') + ']');
+
 		if(!dependencies.length)
 			//module has no dependencies, run definition now
 			definition.apply(this);
@@ -171,11 +177,11 @@ var AMDLoader = (function(doc){
 
 			if(definition){
 				//need to wait for all dependencies to load
-				var promises = dependencies.map(getDependencyPromise, this);
+				var proms = dependencies.map(getDependencyPromise, this);
 
-				Promise.all(promises).then(function(result){
+				Promise.all(proms).then(function(result){
 					//remove js! plugins from result
-					result = result.filter(function(res, idx){ return (dependencies[idx].indexOf('js!') < 0); });
+					result = result.filter(function(res, idx){ return !!dependencies[idx].indexOf('js!'); });
 
 					definition.apply(this, result);
 				});

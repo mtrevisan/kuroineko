@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme'], function(StringHelper, Grapheme){
+define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme', 'tools/lang/phonology/Orthography'], function(StringHelper, Grapheme, Orthography){
 
 	var getLastVowelIndex = function(word, idx){
 		return (idx !== undefined? word.substr(0, idx): word).search(/[aeiouàèéíòóú][^aeiouàèéíòóú]*$/);
@@ -113,6 +113,9 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme'], function(St
 		};
 
 		return function(str1, str2){
+			str1 = Orthography.correctOrthography(str1);
+			str2 = Orthography.correctOrthography(str2);
+
 			var size = Math.max(str1.length, str2.length),
 				tmp = 0,
 				i;

@@ -99,15 +99,23 @@ require(['tools/lang/phonology/Syllabator'], function(Syllabator){
 	});
 
 	QUnit.test('phonematic - greek syllabation', function(){
-		equal(syllabatePhonematicAndJoin('psíko'), 'p-sí-ko');
+		equal(syllabatePhonematicAndJoin('submontano'), 'sub-mon-tà-no');
+		equal(syllabatePhonematicAndJoin('abnegasion'), 'ab-ne-ga-sión');
+		equal(syllabatePhonematicAndJoin('àbside'), 'àb-si-de');
+		equal(syllabatePhonematicAndJoin('drakma'), 'dràk-ma');
+		equal(syllabatePhonematicAndJoin('tèknika'), 'tèk-ni-ka');
+		equal(syllabatePhonematicAndJoin('iks'), 'ík-s');
+		equal(syllabatePhonematicAndJoin('etnía'), 'et-nía');
 		equal(syllabatePhonematicAndJoin('pnèumo'), 'p-nèu-mo');
-		equal(syllabatePhonematicAndJoin('tmèxi'), 't-mè-xi');
-		equal(syllabatePhonematicAndJoin('biopsía'), 'biop-sía');
-		equal(syllabatePhonematicAndJoin('kàpsula'), 'kàp-su-la');
 		equal(syllabatePhonematicAndJoin('apnèa'), 'ap-nèa');
 		equal(syllabatePhonematicAndJoin('ipnóxi'), 'ip-nó-xi');
+		equal(syllabatePhonematicAndJoin('psíko'), 'p-sí-ko');
+		equal(syllabatePhonematicAndJoin('biopsía'), 'biop-sía');
+		equal(syllabatePhonematicAndJoin('kàpsula'), 'kàp-su-la');
+		equal(syllabatePhonematicAndJoin('tmèxi'), 't-mè-xi');
 		equal(syllabatePhonematicAndJoin('rítmo'), 'rít-mo');
 		equal(syllabatePhonematicAndJoin('aritmètega'), 'a-rit-mè-te-ga');
+
 		equal(syllabatePhonematicAndJoin('tungstèno'), 'tung-stè-no');
 	});
 
@@ -179,15 +187,23 @@ require(['tools/lang/phonology/Syllabator'], function(Syllabator){
 	});
 
 	QUnit.test('graphematic - greek syllabation', function(){
-		equal(syllabateGraphematicAndJoin('psíko'), 'p-sí-ko');
+		equal(syllabateGraphematicAndJoin('submontano'), 'sub-mon-tà-no');
+		equal(syllabateGraphematicAndJoin('abnegasion'), 'ab-ne-ga-sión');
+		equal(syllabateGraphematicAndJoin('àbside'), 'àb-si-de');
+		equal(syllabateGraphematicAndJoin('drakma'), 'dràk-ma');
+		equal(syllabateGraphematicAndJoin('tèknika'), 'tèk-ni-ka');
+		equal(syllabateGraphematicAndJoin('iks'), 'ík-s');
+		equal(syllabateGraphematicAndJoin('etnía'), 'et-ní-a');
 		equal(syllabateGraphematicAndJoin('pnèumo'), 'p-nèu-mo');
-		equal(syllabateGraphematicAndJoin('tmèxi'), 't-mè-xi');
-		equal(syllabateGraphematicAndJoin('biopsía'), 'biop-sí-a');
-		equal(syllabateGraphematicAndJoin('kàpsula'), 'kàp-su-la');
 		equal(syllabateGraphematicAndJoin('apnèa'), 'ap-nè-a');
 		equal(syllabateGraphematicAndJoin('ipnóxi'), 'ip-nó-xi');
+		equal(syllabateGraphematicAndJoin('psíko'), 'p-sí-ko');
+		equal(syllabateGraphematicAndJoin('biopsía'), 'biop-sí-a');
+		equal(syllabateGraphematicAndJoin('kàpsula'), 'kàp-su-la');
+		equal(syllabateGraphematicAndJoin('tmèxi'), 't-mè-xi');
 		equal(syllabateGraphematicAndJoin('rítmo'), 'rít-mo');
 		equal(syllabateGraphematicAndJoin('aritmètega'), 'a-rit-mè-te-ga');
+
 		equal(syllabateGraphematicAndJoin('tungstèno'), 'tung-stè-no');
 	});
 });

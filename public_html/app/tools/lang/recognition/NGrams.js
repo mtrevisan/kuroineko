@@ -75,7 +75,7 @@ define(function(){
 			var ngrams = ngram(word, this.min, this.max);
 			this.count += ngrams.length;
 			ngrams.forEach(function(n){
-				this[n] = (this[n]? this[n] + 1: 1);
+				this[n] = this[n] + 1 || 1;
 			}, this.stats);
 		}, this);
 
@@ -89,7 +89,7 @@ define(function(){
 		this.ranks = undefined;
 
 		data.forEach(function(ngram){
-			this[ngram] = (this[ngram]? this[ngram] + 1: 1);
+			this[ngram] = this[ngram] + 1 || 1;
 		}, this.stats);
 
 		computeLog(this.stats, this.count);

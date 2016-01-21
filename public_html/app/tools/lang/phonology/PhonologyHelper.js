@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme'], function(StringHelper, Grapheme){
+define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/lang/phonology/Grapheme', 'tools/lang/phonology/Word'], function(ObjectHelper, StringHelper, Grapheme, Word){
 
 	/*var convertPhonesIntoXSampa = (function(){
 
@@ -188,6 +188,86 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme'], function(St
 	};
 
 
+	var convertDialect = function(word, dialect, truncate){
+		var mainDialect = dialect.replace(/(\..+)$/, '');
+
+		word = Word.markDefaultStress(word);
+
+		if(!ObjectHelper.isDefined(truncate) || truncate === true){
+			word = truncateAfterConsonant(word, mainDialect, dialect);
+			word = finalConsonantVoicing(word, mainDialect, dialect);
+			word = syncopatePluralAfterNasalLateral(word, mainDialect, dialect);
+		}
+
+		//NOTE: does not consider de-methaphonization
+		if(mainDialect == 'central')
+			word = applyMetaphonesys(true, word);
+
+		word = approximantPalatalFreeVariation(word, mainDialect, dialect);
+		word = lateralFreeVariation(word, mainDialect, dialect);
+		word = unstressedVowelBeforeVibrantFreeVariation(word, mainDialect, dialect);
+		word = stressedVowelBeforeVibrantFreeVariation(word, mainDialect, dialect);
+		word = constrictiveDentalCombinatorialVariation(word, mainDialect, dialect);
+		word = occlusiveDentalCombinatorialVariation(word, mainDialect, dialect);
+
+		return Word.unmarkDefaultStress(word);
+	};
+
+	/**
+	 * @require stress to be explicitated.
+	 *
+	 * @private
+	 */
+	var applyMetaphonesys = function(directTransformation, word, applyVocalHarmony){
+//FIXME
+//patch for participle past words
+if(word.indexOf('(') >= 0)
+	return word;
+
+		var syllabation = Syllabator.syllabate(word);
+		if(syllabation.hasSyllabationErrors)
+			return word;
+
+		word = Word.markDefaultStress(word);
+		var idx = Word.getIndexOfStress(word);
+
+		//if stress is acute and is [éó]
+		if(word[idx].match(directTransformation? /[éó]/: /[íú]/)){
+			//if the following syllabe ends in i, or there is a hyatus
+			var k = syllabation.getSyllabeIndex(idx) + 1,
+				lastSyllabeIdx = syllabation.syllabes.length - 1;
+			if(syllabation.syllabes[k - 1].match(directTransformation? /[éó]i[^aeiou]*$/: /[íú]i[^aeiou]*$/) || k <= lastSyllabeIdx && syllabation.syllabes[k].match(/i$/)){
+				//count following enclitics
+				var encliticCount = lastSyllabeIdx - k;
+				while(++ k <= lastSyllabeIdx)
+					if(syllabation.syllabes[k].match(/(s?tu)|u$/))
+						encliticCount --;
+
+				//if it's followed, at most, only by enclitics
+				if(encliticCount <= 0){
+					//apply metaphonesys
+					var fnMetaphon = (directTransformation? metaphonetizeStressedVowel: demetaphonetizeStressedVowel);
+					word = StringHelper.setCharacterAt(word, idx, fnMetaphon);
+
+					if(applyVocalHarmony === true){
+						k = syllabation.getSyllabeIndex(idx) - 1;
+						if(k >= 0){
+							//find vowel on previous syllabe
+							idx = Word.getLastVowelIndex(syllabation.syllabes[k]);
+
+							//harmonize vowel
+							word = StringHelper.setCharacterAt(word, idx, function(chr){
+								return Word.suppressStress(fnMetaphon(Word.addStressAcute(chr)));
+							});
+						}
+					}
+				}
+			}
+		}
+		return word;
+	};
+
+
 	return {
 		//convertPhonesIntoXSampa: convertPhonesIntoXSampa,
 
@@ -204,7 +284,9 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme'], function(St
 		stressedVowelBeforeVibrantFreeVariation: stressedVowelBeforeVibrantFreeVariation,
 		constrictiveDentalCombinatorialVariation: constrictiveDentalCombinatorialVariation,
 		occlusiveDentalCombinatorialVariation: occlusiveDentalCombinatorialVariation,
-		vowelLoweringCombinatorialVariation: vowelLoweringCombinatorialVariation
+		vowelLoweringCombinatorialVariation: vowelLoweringCombinatorialVariation,
+
+		convertDialect: convertDialect
 	};
 
 });

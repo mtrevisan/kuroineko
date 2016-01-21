@@ -23,7 +23,7 @@ require(['tools/data/clustering/OPTICSClusterer', 'tools/data/ArrayHelper'], fun
 			i,
 			clusterSum;
 		for(i = 0; i < result.length; i ++)
-			clusterIds[result[i].clusterId] = (clusterIds[result[i].clusterId] !== undefined? clusterIds[result[i].clusterId] + 1: 1);
+			clusterIds[result[i].clusterId] = clusterIds[result[i].clusterId] + 1 || 1;
 		clusterSum = (clusterIds.noise || 0);
 		for(i = 0; i < clusterIds.length; i ++)
 			clusterSum += clusterIds[i];

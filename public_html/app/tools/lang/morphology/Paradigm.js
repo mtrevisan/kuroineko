@@ -646,7 +646,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 	 */
 	var convertIntoDialect = function(dialect){
 		visit(this, function(subParadigm, key){
-			subParadigm[key] = Orthography.convertDialect(subParadigm[key], dialect.dialect, false);
+			subParadigm[key] = PhonologyHelper.convertDialect(subParadigm[key], dialect.dialect, false);
 		});
 	};
 

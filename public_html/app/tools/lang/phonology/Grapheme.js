@@ -98,9 +98,8 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 		var replacement = '$1' + HYATUS_MARKER + '$2';
 
 		word = word
-			//greek digrams (psikoloxía, tàknika, aritmètega, etnoloxía, subkònsio, abnegathion, àbside, tmèxi, pnèumo)
-			//FIXME ([bkpt][mns])
-			.replace(/([pt])([mn])/g, replacement)
+			//greek digrams (abnegathion, àbside, drakma, tèknika, iks, pnèumo, psikoloxía, aritmètega, etnía)
+			.replace(/([bkpt])([mns])/g, replacement)
 			.replace(/([mnrjw])([lr])/g, replacement)
 			//.replace(/([mnlrjw])([mnlrjw])/g, replacement)
 			.replace(/([b])([dnt])/g, replacement);
