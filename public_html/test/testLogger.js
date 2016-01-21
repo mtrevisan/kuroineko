@@ -57,4 +57,13 @@ require(['tools/logging/Logger'], function(Logger){
 
 		notEqual(logger1, logger2);
 	});
+
+	QUnit.test('constructor - should log', function(){
+		var logger = new Logger('bla 2');
+
+		logger.debug('base2', 'message');
+
+		equal(logger.logs.base2.length, 1);
+		equal(logger.logs.base2[0], '[DEBUG] message');
+	});
 });
