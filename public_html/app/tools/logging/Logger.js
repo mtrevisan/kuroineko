@@ -27,7 +27,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	/** @constant */
 		LEVEL_ERROR = 'error',
 	/** @constant */
-		LEVELS = [LEVEL_OFF, LEVEL_DEBUG, LEVEL_INFO, LEVEL_WARN, LEVEL_ERROR],
+		LEVELS = [LEVEL_DEBUG, LEVEL_INFO, LEVEL_WARN, LEVEL_ERROR],
 	/** @constant */
 		CONFIG = {
 			rootLogger: LEVEL_DEBUG,
@@ -89,7 +89,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 	/** Emits a log event */
 	var log = function(level, id, message, data){
-		if(LEVELS.indexOf(level) < 0)
+		if(LEVELS.indexOf(level) < 0 && level != LEVEL_OFF)
 			return;
 
 		var log = {
