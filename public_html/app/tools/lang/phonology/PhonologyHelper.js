@@ -131,15 +131,15 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme'], function(St
 	};
 
 	var unstressedVowelBeforeVibrantFreeVariation = function(word, mainDialect, dialect){
-		if(dialect.match(/^central\.(padoan|polexan|roigòto|talian)/) || mainDialect == 'western')
-			word = word.replace(/([^aeiouàèéíòóuú])er/g, '$1ar');
+		if(dialect.match(/^central\.(padoan|polexan|roigòto|talian)/) || mainDialect == 'western'){
+			//word = word.replace(/([^aeiouàèéíòóuú])er/g, '$1ar');
+			var syll = Syllabator.syllabate(word, null, true);
+			word = word.replace(/([^aàeèéíoòóú])er/g, function(group, pre, idx){
+				return (syll.phones[syll.getSyllabeIndex(idx)].match(/[^jw]e/)? pre + 'ar': group);
+			});
+		}
 		//else if(mainDialect != 'none')
-		//	word = word.replace(/([^aeiouàèéíòóuú])ar/g, '$1er');
-		//FIXME
-		/*var syll = Syllabator.syllabate(stressedSuffix, null, true);
-		stressedSuffixLoweredVowel = stressedSuffix.replace(/([^aàeèéíoòóú])er/g, function(group, pre, idx){
-			return (syll.phones[syll.getSyllabeIndex(idx)].match(/[^jw]e/)? pre + 'ar': group);
-		});/**/
+		//	word = word.replace(/([^aàeèéíoòóú])ar/g, '$1er');
 
 		return word;
 	};
