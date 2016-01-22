@@ -1,4 +1,7 @@
 /**
+ * Tarjan's Strongly Connected Components algorithm
+ * Simple module for detecting cycles in directed graphs.
+ *
  * @class Tarjan
  *
  * @see {@link https://gist.github.com/chadhutchins/1440602}
@@ -14,7 +17,8 @@ define(function(){
 		this.name = name;
 		this.connections = connections;
 
-		resetVertex(this);
+		this.index = -1;
+		this.lowLink = -1;
 	};
 
 	var graph, index, stack;
@@ -27,15 +31,6 @@ define(function(){
 
 	var reset = function(){
 		graph = [];
-		graph.forEach(function(vertex){
-			resetVertex(vertex);
-		});
-	};
-
-	/** @private */
-	var resetVertex = function(vertex){
-		vertex.index = -1;
-		vertex.lowLink = -1;
 	};
 
 	/**
@@ -48,7 +43,8 @@ define(function(){
 			v;
 		if(idx >= 0){
 			v = graph[idx];
-			v.connections = connections;
+			if(connections.length)
+				v.connections = connections;
 		}
 		else{
 			v = new Vertex(name, connections);
@@ -74,6 +70,7 @@ define(function(){
 
 	/**
 	 * @param {String} name		Name of the vertex
+	 * @return {Boolean} Whether the vertex with the given name is found
 	 */
 	var containsVertex = function(name){
 		return (getVertexIndex(name) >= 0);
@@ -81,6 +78,7 @@ define(function(){
 
 	/**
 	 * @param {String} name		Name of the vertex
+	 * @return {Number} The index of the vertex, or -1 if not found
 	 *
 	 * @private
 	 */
@@ -171,7 +169,6 @@ define(function(){
 
 		getStronglyConnectedComponents: getStronglyConnectedComponents
 	};
-
 
 	return Constructor;
 
