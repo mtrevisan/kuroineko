@@ -21,8 +21,6 @@ define(function(){
 		this.lowLink = -1;
 	};
 
-	var graph, index, stack;
-
 
 	var Constructor = function(){
 		this.reset();
@@ -30,7 +28,7 @@ define(function(){
 
 
 	var reset = function(){
-		graph = [];
+		this.graph = [];
 	};
 
 	/**
@@ -39,33 +37,33 @@ define(function(){
 	 */
 	var addVertex = function(name, connections){
 		connections = connections || [];
-		var idx = getVertexIndex(name),
+		var idx = getVertexIndex(this.graph, name),
 			v;
 		if(idx >= 0){
-			v = graph[idx];
+			v = this.graph[idx];
 			if(connections.length)
 				v.connections = connections;
 		}
 		else{
 			v = new Vertex(name, connections);
-			graph.push(v);
+			this.graph.push(v);
 		}
 
 		if(v.connections.length)
 			v.connections = v.connections.map(function(connection){
 				if(Object.prototype.toString.call(connection) == '[object String]'){
-					var idx = getVertexIndex(connection),
+					var idx = getVertexIndex(this, connection),
 						ver;
 					if(idx >= 0)
-						ver = graph[idx];
+						ver = this[idx];
 					else{
 						ver = new Vertex(connection, []);
-						graph.push(ver);
+						this.push(ver);
 					}
 					return ver;
 				}
 				return connection;
-			});
+			}, this.graph);
 	};
 
 	/**
@@ -73,7 +71,7 @@ define(function(){
 	 * @return {Boolean} Whether the vertex with the given name is found
 	 */
 	var containsVertex = function(name){
-		return (getVertexIndex(name) >= 0);
+		return (getVertexIndex(this.graph, name) >= 0);
 	};
 
 	/**
@@ -82,7 +80,7 @@ define(function(){
 	 *
 	 * @private
 	 */
-	var getVertexIndex = function(name){
+	var getVertexIndex = function(graph, name){
 		var i;
 		for(i = graph.length - 1; i >= 0; i --)
 			if(graph[i].name == name)
@@ -91,11 +89,15 @@ define(function(){
 	};
 
 	var getStronglyConnectedComponents = function(){
-		index = 0;
-		stack = [];
+		this.index = 0;
+		this.stack = [];
+		this.graph.forEach(function(vertex){
+			vertex.index = -1;
+			vertex.lowLink = -1;
+		});
 
 		var components = [];
-		graph.forEach(function(vertex){
+		this.graph.forEach(function(vertex){
 			if(vertex.index < 0)
 				strongConnect.call(this, vertex, components);
 		}, this);
@@ -110,10 +112,10 @@ define(function(){
 	/** @private */
 	var strongConnect = function(vertex, components){
 		//set the depth index for v to the smallest unused index
-		vertex.index = index;
-		vertex.lowLink = index;
-		index ++;
-		stack.push(vertex);
+		vertex.index = this.index;
+		vertex.lowLink = this.index;
+		this.index ++;
+		this.stack.push(vertex);
 
 		//consider successors of v, aka, consider each vertex in vertex.connections
 		vertex.connections.forEach(function(v){
@@ -125,7 +127,7 @@ define(function(){
 				strongConnect.call(this, v, components);
 				vertex.lowLink = Math.min(vertex.lowLink, v.lowLink);
 			}
-			else if(contains(stack, v))
+			else if(contains(this.stack, v))
 				//successor v is in stack S and hence in the current SCC
 				vertex.lowLink = Math.min(vertex.lowLink, v.index);
 		}, this);
@@ -135,9 +137,9 @@ define(function(){
 			//start a new strongly connected component
 			var vertices = [],
 				w = null;
-			if(stack.length){
+			if(this.stack.length){
 				do{
-					w = stack.pop();
+					w = this.stack.pop();
 					//add w to current strongly connected component
 					vertices.push(w);
 				}while(!isEquals(vertex, w));
