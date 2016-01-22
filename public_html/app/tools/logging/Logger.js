@@ -7,7 +7,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/data/ObjectHelper'], function(ObjectHelper){
+define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHelper, StringHelper){
 
 	/** Stores all created loggers */
 	var LOGGERS = {},
@@ -17,47 +17,65 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		};
 
 	/** @constant */
-	var LEVEL_OFF = 'none',
+	var LEVEL_OFF = 'NONE',
 	/** @constant */
-		LEVEL_DEBUG = 'debug',
+		LEVEL_DEBUG = 'DEBUG',
 	/** @constant */
-		LEVEL_INFO = 'info',
+		LEVEL_INFO = 'INFO',
 	/** @constant */
-		LEVEL_WARN = 'warn',
+		LEVEL_WARN = 'WARN',
 	/** @constant */
-		LEVEL_ERROR = 'error',
+		LEVEL_ERROR = 'ERROR',
 	/** @constant */
 		LEVELS = [LEVEL_DEBUG, LEVEL_INFO, LEVEL_WARN, LEVEL_ERROR],
 	/** @constant */
-		CONFIG = {
+		CONFIG_DEFAULT = {
 			rootLogger: LEVEL_DEBUG,
+			//the maximum number of records to keep (if the number of log gets bigger than 10% over this value, then it is sliced down to 90% of this value)
+			maxRecordSize: undefined,
 			showTime: true,
 			out: 'console'
-		};
+		},
+	/** @constant */
+		PADDING = LEVELS.reduce(function(max, level){ return Math.max(max, level.length); }, 0);
+
+	var config, interceptors, piped;
+
 
 	/**
 	 * Gets a logger. If the logger does not exist it is created.
 	 *
-	 * @param name			The unique name of the logger
-	 * @param [config]	The configuration object in the form <code>{rootLogger: 'DEBUG', showTime: true, out: function(message){}}</code>
+	 * @param name		The unique name of the logger
+	 * @param [conf]	The configuration object in the form <code>{rootLogger: 'DEBUG', showTime: true, out: function(message){}}</code>
 	 */
-	var Constructor = function(name, config){
+	var Constructor = function(name, conf){
 		if(!name)
 			throw 'A Logger must have a name';
 
-		if(config)
-			for(var k in config)
-				CONFIG[k] = config[k];
+		config = {};
+		for(var k in CONFIG_DEFAULT)
+			config[k] = CONFIG_DEFAULT[k];
+		if(conf)
+			for(k in conf)
+				config[k] = conf[k];
 
 		if(LOGGERS[name])
 			return LOGGERS[name];
 
 		this.name = name;
-		this.interceptors = [];
-		this.piped = [];
+		interceptors = [];
+		piped = [];
 
 		LOGGERS[name] = this;
 		LOGS[name] = [];
+
+
+		//add helpful log methods
+		LEVELS.forEach(function(level){
+			this.__proto__[level.toLowerCase()] = function(id, message, data){
+				this.log(id, level, message, data);
+			};
+		}, this);
 	};
 
 	Constructor.LEVEL_OFF = LEVEL_OFF;
@@ -68,82 +86,91 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 	/** Intercepts log events, calling <code>fn</coe> before listeners of the instance */
 	var intercept = function(fn){
-		this.interceptors.push(fn);
+		interceptors.push(fn);
 	};
 
 	/** Pipes all logger events to another logger */
 	var pipe = function(emitter){
-		this.piped.push(emitter);
+		piped.push(emitter);
 	};
 
 	/**
 	 * Creates a new logger that pipes events to the parent logger
 	 *
-	 * @param [config]	The configuration object in the form <code>{rootLogger: 'DEBUG', showTime: true, out: function(message){}}</code>
+	 * @param [conf]	The configuration object in the form <code>{rootLogger: 'DEBUG', showTime: true, out: function(message){}}</code>
 	 */
-	var geminate = function(config){
-		var logger = new Constructor(this.name + '|gemination', config);
+	var geminate = function(conf){
+		var logger = new Constructor(this.name + '|gemination', conf || this.config);
 		logger.pipe(this);
 		return logger;
 	};
 
-	/** Emits a log event */
-	var log = function(level, id, message, data){
-		if(LEVELS.indexOf(level) < 0 && level != LEVEL_OFF)
+	/**
+	 * Emits a log event
+	 *
+	 * @param {String} id		Identifier of the particular log to use
+	 * @param {String} level	Level at which to log the message
+	 * @param {String} message	Message to log
+	 * @param {Object} [data]	Optional data to associate to the log
+	 */
+	var log = function(id, level, message, data){
+		if(LEVELS.indexOf(level) < 0 || level == LEVEL_OFF)
 			return;
 
-		var log = {
-			level: level,
-			message: message,
-			data: data
-		};
+		var now = new Date();
+		message = (config.showTime? now.toISOString().replace(/[TZ]/g, ' ') + ' ': '')
+			+ '[' + level + '] ' + StringHelper.stringRepeat(' ', PADDING - level.length)
+			+ message
+			+ (data? ', ' + JSON.stringify(data): '');
+		var storedMessage = {timestamp: now, level: level, message: message, data: data};
 
 		//run interceptors before
-		this.interceptors.forEach(function(interceptor){
-			interceptor.call(this, id, log);
+		interceptors.forEach(function(interceptor){
+			interceptor.call(this, id, storedMessage);
 		});
 
-		message = (CONFIG.showTime? getTime() + ' ': '')
-			+ '[' + level.toUpperCase() + '] '
-			+ message
-			+ (data? ' ' + JSON.stringify(data): '');
-
 		//save the message
-		LOGS.all.push(message);
-		(LOGS[id] = LOGS[id] || []).push(message);
+		LOGS.all.push(storedMessage);
+		if(id != 'all')
+			(LOGS[id] = LOGS[id] || []).push(storedMessage);
 
 		//see if this should be logged
 		if(shouldLog(level)){
 			//print message
-			if(ObjectHelper.isFunction(CONFIG.out))
-				CONFIG.out(message);
+			if(ObjectHelper.isFunction(config.out))
+				config.out(message);
 			else
-				console.log(message);
+				console[level.toLowerCase()](message);
 		}
 
 		//pipe
-		this.piped.forEach(function(emitter){
+		piped.forEach(function(emitter){
 			emitter.log.call(emitter, arguments);
 		});
-	};
 
-	/**
-	 * Gets a date string to use for log messages.
-	 *
-	 * @private
-	 */
-	var getTime = function(){
-		return (new Date()).toISOString();
+		if(LOGS.length > config.maxRecordSize * 1.1)
+			LOGS = LOGS.slice(-Math.floor(config.maxRecordSize * 0.9));
 	};
 
 	/** @private */
 	var shouldLog = function(level){
-		//no logging
-		if(CONFIG.rootLogger == LEVEL_OFF)
-			return false;
+		return (config.rootLogger != LEVEL_OFF && LEVELS.indexOf(level) >= LEVELS.indexOf(config.rootLogger));
+	};
 
-		//specific rule for this logger
-		return (LEVELS.indexOf(level) >= LEVELS.indexOf(CONFIG.rootLogger));
+	/**
+	 * @param {String} [id]		Identifier of the particular log to use
+	 * @param {String} [level]	The level of the log messages to extract
+	 * @param {Date} [from]		The starting date of the log messages to extract
+	 * @param {Date} [to]		The ending date of the log messages to extract
+	 */
+	var extractLogs = function(id, level, from, to){
+		var logs = LOGS[id || 'all'];
+		return (level || from || to? logs.filter(function(el){
+			return (level && el.level == level
+				|| from && to && +from <= +el.timestamp && +el.timestamp <= +to
+				|| from && !to && +el.timestamp >= +from
+				|| !from && to && +el.timestamp <= +to);
+		}): logs);
 	};
 
 
@@ -156,15 +183,8 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 		log: log,
 
-		logs: LOGS
+		extractLogs: extractLogs
 	};
-
-	//add helpful log methods
-	Object.keys(LEVELS).forEach(function(level){
-		Constructor.prototype[level] = function(id, message, data){
-			this.log(level, id, message, data);
-		};
-	});
 
 	return Constructor;
 

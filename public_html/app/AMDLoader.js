@@ -9,7 +9,9 @@ var AMDLoader = (function(doc){
 
 	var promises = {},
 		resolves = {},
-		definitions = {};
+		definitions = {},
+		Tarjan,
+		tree = {};
 
 
 	/** @private */
@@ -120,6 +122,7 @@ var AMDLoader = (function(doc){
 		definition = args[2];
 
 		//console.log('define module ' + id.replace(/.+\//, '') + (dependencies.length? ' with dependencies [' + dependencies.map(function(dep){ return dep.replace(/.+\//, ''); }).join(', ') + ']': '') + ', remains [' + Object.keys(promises).filter(function(k){ return !!resolves[k]; }).map(function(k){ return k.replace(/.+\//, ''); }).join(', ') + ']');
+		checkForCircularDependency(id, dependencies);
 
 		if(!dependencies.length)
 			//module has no dependencies, bind id to definition
@@ -173,11 +176,11 @@ var AMDLoader = (function(doc){
 			definition.apply(this);
 		else{
 			//resolve urls
-			dependencies = dependencies.map(normalizeURL, this);
+			dependencies = dependencies.map(normalizeURL);
 
 			if(definition){
 				//need to wait for all dependencies to load
-				var proms = dependencies.map(getDependencyPromise, this);
+				var proms = dependencies.map(getDependencyPromise);
 
 				Promise.all(proms).then(function(result){
 					//remove js! plugins from result
@@ -201,6 +204,30 @@ var AMDLoader = (function(doc){
 	};
 
 	/** @private */
+	var checkForCircularDependency = function(id, dependencies){
+		if(Tarjan){
+			tree[id] = dependencies.map(normalizeURL);
+
+			var tar = new Tarjan();
+			Object.keys(tree).forEach(function(node){
+				var deps = tree[node];
+
+				this.addVertex(node, deps);
+
+				deps.forEach(function(d){
+					if(!this.containsVertex(d))
+						this.addVertex(d);
+				}, this);
+			}, tar);
+			var scc = tar.getStronglyConnectedComponents();
+			if(scc.length){
+				scc = scc.map(function(component){ return component.join(' > '); });
+				throw 'Circular dependency found: ' + JSON.stringify(scc);
+			}
+		}
+	};
+
+	/** @private */
 	var getDependencyPromise = function(id){
 		id = addJSExtension(id);
 
@@ -219,8 +246,6 @@ var AMDLoader = (function(doc){
 
 				plugins[args[0]](args[1], id);
 			});
-//		else if(!definitions[id])
-//			throw new Error('Circular dependency found while loading module name "' + id + '".');
 
 		return promises[id];
 	};
@@ -243,7 +268,7 @@ var AMDLoader = (function(doc){
 			url = pluginUrl[len == 1? 0: 1];
 
 		if(url){
-			var cfg = AMDLoader.config || {};
+			var cfg = (AMDLoader || {}).config || {};
 			if(cfg.paths){
 				var path = cfg.paths[url.split('/')[0]];
 				if(path)
@@ -348,8 +373,8 @@ var AMDLoader = (function(doc){
 				var errorText = 'Syntax or http error loading: ' + (module.src || module.href);
 				failure && failure(new Error(errorText));
 
-				if(!failure)
-					throw errorText;
+				//if(!failure)
+				//	throw errorText;
 			};
 
 			Object.keys(module).forEach(function(key){
@@ -439,6 +464,10 @@ var AMDLoader = (function(doc){
 				src: bootScript
 			});
 		}
+
+		require(['../app/tools/data/structs/Tarjan'], function(t){
+			Tarjan = t;
+		});
 	})();
 
 

@@ -18,37 +18,44 @@ require(['tools/logging/Logger'], function(Logger){
 	});
 
 	QUnit.test('constructor - should call intercept', function(){
-		QUnit.expect(4);
+		QUnit.expect(5);
 
 		var logger = new Logger('bla 3', {
-			rootLogger: Logger.LEVEL_DEBUG,
-			showTime: false
+			showTime: false,
+			out: function(){}
 		});
 		logger.intercept(function(id, log){
 			equal(id, 'base');
-			deepEqual(log, {level: Logger.LEVEL_DEBUG, message: 'message', data: undefined});
+			equal(log.level, Logger.LEVEL_DEBUG);
+			equal(log.message, '[DEBUG] message');
 		});
 
-		logger.log(Logger.LEVEL_DEBUG, 'base', 'message');
+		logger.log('base', Logger.LEVEL_DEBUG, 'message');
 
-		equal(logger.logs.all.length, 1);
-		equal(logger.logs.all[0], '[DEBUG] message');
+		var logs = logger.extractLogs();
+		equal(logs.length, 1);
+		equal(logs[0].message, '[DEBUG] message');
 	});
 
 	QUnit.test('constructor - should pipe', function(){
 		var logger1 = new Logger('bla 1', {
-			rootLogger: Logger.LEVEL_DEBUG,
-			showTime: false
+			showTime: false,
+			out: function(){}
 		});
-		var logger2 = new Logger('bla 2');
+		var logger2 = new Logger('bla 2', {
+			showTime: false,
+			out: function(){}
+		});
 		logger1.pipe(logger2);
 
-		logger1.log(Logger.LEVEL_DEBUG, 'base1', 'message');
+		logger1.log('base1', Logger.LEVEL_DEBUG, 'message');
 
-		equal(logger1.logs.base1.length, 1);
-		equal(logger1.logs.base1[0], '[DEBUG] message');
-		equal(logger2.logs.base1.length, 1);
-		equal(logger2.logs.base1[0], '[DEBUG] message');
+		var logs1 = logger1.extractLogs('base1');
+		var logs2 = logger2.extractLogs('base1');
+		equal(logs1.length, 1);
+		equal(logs1[0].message, '[DEBUG] message');
+		equal(logs2.length, 1);
+		equal(logs2[0].message, '[DEBUG] message');
 	});
 
 	QUnit.test('constructor - should geminate', function(){
@@ -59,11 +66,28 @@ require(['tools/logging/Logger'], function(Logger){
 	});
 
 	QUnit.test('constructor - should log', function(){
-		var logger = new Logger('bla 2');
+		var logger = new Logger('bla 2', {
+			showTime: false,
+			out: function(){}
+		});
 
-		logger.debug('base2', 'message');
+		logger.log('base2', Logger.LEVEL_INFO, 'message');
 
-		equal(logger.logs.base2.length, 1);
-		equal(logger.logs.base2[0], '[DEBUG] message');
+		var logs = logger.extractLogs('base2');
+		equal(logs.length, 1);
+		equal(logs[0].message, '[INFO]  message');
+	});
+
+	QUnit.test('constructor - should log error', function(){
+		var logger = new Logger('bla 3', {
+			showTime: false,
+			out: function(){}
+		});
+
+		logger.error('base3', 'message');
+
+		var logs = logger.extractLogs('base3');
+		equal(logs.length, 1);
+		equal(logs[0].message, '[ERROR] message');
 	});
 });
