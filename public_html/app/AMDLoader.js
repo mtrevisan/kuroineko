@@ -206,18 +206,11 @@ var AMDLoader = (function(doc){
 	/** @private */
 	var checkForCircularDependency = function(id, dependencies){
 		if(Tarjan){
-			tree[id] = dependencies.map(normalizeURL);
+			tree[id] = dependencies.map(normalizeURL).map(addJSExtension);
 
 			var tar = new Tarjan();
 			Object.keys(tree).forEach(function(node){
-				var deps = tree[node];
-
-				this.addVertex(node, deps);
-
-				deps.forEach(function(d){
-					if(!this.containsVertex(d))
-						this.addVertex(d);
-				}, this);
+				this.addVertex(node, tree[node]);
 			}, tar);
 			var scc = tar.getStronglyConnectedComponents();
 			if(scc.length){

@@ -58,14 +58,18 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		if(v.connections.length)
 			v.connections = v.connections.map(function(connection){
 				if(ObjectHelper.isString(connection)){
-					var idx = getVertexIndex(connection);
+					var idx = getVertexIndex(connection),
+						ver;
 					if(idx >= 0)
-						return this[idx];
+						ver = graph[idx];
+					else{
+						ver = new Vertex(connection, []);
+						graph.push(ver);
+					}
+					return ver;
 				}
-				v = new Vertex(connection, []);
-				graph.push(v);
-				return v;
-			}, graph);
+				return connection;
+			});
 	};
 
 	/**
