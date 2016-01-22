@@ -10,8 +10,7 @@ var AMDLoader = (function(doc){
 	var promises = {},
 		resolves = {},
 		definitions = {},
-		Tarjan,
-		tree = {};
+		tarjan, tree;
 
 
 	/** @private */
@@ -210,14 +209,13 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var checkForCircularDependency = function(id, dependencies){
-		if(Tarjan){
+		if(tarjan){
 			tree[id] = dependencies.map(normalizeURL).map(addJSExtension);
 
-			var tar = new Tarjan();
 			Object.keys(tree).forEach(function(node){
 				this.addVertex(node, tree[node]);
-			}, tar);
-			var scc = tar.getStronglyConnectedComponents();
+			}, tarjan);
+			var scc = tarjan.getStronglyConnectedComponents();
 			if(scc.length){
 				scc = scc.map(function(component){ return component.join(' > '); });
 				throw 'Circular dependency found: ' + JSON.stringify(scc);
@@ -463,8 +461,9 @@ var AMDLoader = (function(doc){
 			});
 		}
 
-		require(['../app/tools/data/structs/Tarjan'], function(t){
-			Tarjan = t;
+		require(['../app/tools/data/structs/Tarjan'], function(Tarjan){
+			tarjan = new Tarjan();
+			tree = {};
 		});
 	})();
 
