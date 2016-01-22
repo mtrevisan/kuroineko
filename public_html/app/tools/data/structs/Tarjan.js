@@ -7,7 +7,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/data/ObjectHelper'], function(ObjectHelper){
+define(function(){
 
 	/** @private */
 	var Vertex = function(name, connections){
@@ -57,7 +57,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 		if(v.connections.length)
 			v.connections = v.connections.map(function(connection){
-				if(ObjectHelper.isString(connection)){
+				if(Object.prototype.toString.call(connection) == '[object String]'){
 					var idx = getVertexIndex(connection),
 						ver;
 					if(idx >= 0)
