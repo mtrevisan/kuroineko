@@ -27,7 +27,7 @@ This is a bunch of utilities I put together. Unfortunately I miss some reference
  - Hierarchical and OPTICS clustering
  - HTML storage
  - Mersenne Twister, get a random variable with a given distribution
- - data structures like Binary Indexed Tree, Bit Buffer, Priority Queue, Tree, Trie
+ - data structures like Binary Indexed Tree, Bit Buffer, Priority Queue, Tarjan, Tree, Trie
  - Lexer
  - various helpers (array, communication, function, math, object, and string)
  - math helper containing various functions like bitCount, nextPowerOf2, getMostSignificantBit, getLeastSignificantBit, combine, and permute
@@ -63,11 +63,11 @@ Various string distance algorithms like Levenshtein, and Damerau-Levenshtein.
 #### Levenshtein <a id="levenshtein"></a>####
 
     var defaultCosts = {insertion: 1, deletion: 2, substitution: 0.5, transposition: 1};
-    
+
     var edit = StringDistance.levenshteinEdit('abc', 'acb');
     var distance = StringDistance.levenshteinDistance('abc', 'acb');
     var percent = StringDistance.levenshteinStructuralDistance('abc', 'acb');
-	 
+
     var edit = StringDistance.levenshteinEdit('abc', 'acb', defaultCosts);
     var distance = StringDistance.levenshteinDistance('abc', 'acb', defaultCosts);
     var percent = StringDistance.levenshteinStructuralDistance('abc', 'acb', defaultCosts);
@@ -77,11 +77,11 @@ Where `edit` is an object in the form `{insertions: 0, deletions: 0, substitutio
 #### Damerau-Levenshtein <a id="damerau-levenshtein"></a>####
 
     var defaultCosts = {insertion: 1, deletion: 2, substitution: 0.5, transposition: 1};
-    
+
     var edit = StringDistance.damerauLevenshteinEdit('abc', 'acb');
     var distance = StringDistance.damerauLevenshteinDistance('abc', 'acb');
     var percent = StringDistance.damerauLevenshteinStructuralDistance('abc', 'acb');
-	 
+
     var edit = StringDistance.damerauLevenshteinEdit('abc', 'acb', defaultCosts);
     var distance = StringDistance.damerauLevenshteinDistance('abc', 'acb', defaultCosts);
     var percent = StringDistance.damerauLevenshteinStructuralDistance('abc', 'acb', defaultCosts);
@@ -143,22 +143,22 @@ Decoding process:
     	[1,1,1,0,1,1,0,1,1, , , , , , , , ,0,0,1,0,0,0,0, , , , ,1,0, ,0, ,1, , ,0,0, 'liventin'],
     	[1,1,1,1,1,1,0,1,1,1,1,1, ,1,1,1,1,1,1,0,0,0,0,0, , , , , ,0,0,0, ,1, , ,0,0, 'feltrin-belumat']
     ];
-	 
+
     var fnSupervisorConfirmClass = function(nodeClass){
     	return new Promise(function(resolve){
     		var btnYes = Alerter.defineOkButton(i18nResources.variant.yes, function(){
     			console.log('supervisor chooses class ' + nodeClass + ' is correct');
-    
+
     			recordSupervisedInstance(nodeClass, false);
-    
+
     			resolve(true);
     		});
     		var btnNo = Alerter.defineCancelButton(i18nResources.variant.no, function(){
     			console.log('supervisor chooses class ' + nodeClass + ' is not correct');
-    
+
     			resolve(false);
     		});
-    
+
     		Alerter.show({
     			type: 'confirm',
     			message: i18nResources.variant.tryBefore + '<br><br>&ldquo;' + nodeClass + '&rdquo;<br><br>' + i18nResources.variant.tryAfter,
@@ -168,27 +168,27 @@ Decoding process:
     		});
     	});
     };
-    
+
     var fnSupervisorAskBranch = function(attributeName, cutPoint, discreteAttribute){
     	return new Promise(function(resolve){
     		var btnYes = Alerter.defineOkButton(i18nResources.variant.yes, function(){
     			var response = (discreteAttribute? 'EQ': 'LT');
     			console.log('supervisor chooses "' + attributeName + '" w.r.t. ' + cutPoint + ' is ' + response);
-    
+
     			resolve(response);
     		});
     		var btnNo = Alerter.defineCancelButton(i18nResources.variant.no, function(){
     			var response = (discreteAttribute? 'NE': 'GE');
     			console.log('supervisor chooses "' + attributeName + '" w.r.t. ' + cutPoint + ' is ' + response);
-    
+
     			resolve(response);
     		});
     		var btnDontKnow = Alerter.defineButton('dont-know', i18nResources.variant.dontKnow, function(){
     			console.log('supervisor don\'t know how to chooses "' + attributeName + '" w.r.t. ' + cutPoint);
-    
+
     			resolve(undefined);
     		});
-    
+
     		Alerter.show({
     			type: 'confirm',
     			message: i18nResources.variant.sentence + '<br><br>&ldquo;' + attributeName + '&rdquo;<br><br>' + i18nResources.variant.is + ' <b>'
@@ -199,17 +199,17 @@ Decoding process:
     		});
     	});
     };
-    
+
     var fnSupervisorAskNewAttributeAndClass = function(){
     	return new Promise(function(resolve){
     		var btnOk = Alerter.defineOkButton(i18nResources.variant.ok, function(response){
     			console.log('supervisor chooses new class, is ' + response);
-    
+
     			recordSupervisedInstance(response, true);
-    
+
     			resolve(response);
     		});
-    
+
     		Alerter.show({
     			type: 'prompt',
     			message: i18nResources.variant.unable,
@@ -219,7 +219,7 @@ Decoding process:
     		});
     	});
     };
-	 
+
     var dt = new DecisionTree(attributes, data);
     dt.attachSupervisor(fnSupervisorConfirmClass, fnSupervisorAskBranch, fnSupervisorAskNewAttributeAndClass);
     dt.buildTree();
