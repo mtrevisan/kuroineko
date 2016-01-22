@@ -21,11 +21,11 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var plugins = {
-		base: function(url){
+		base: function(url, id, failure){
 			injectScript({
 				src: url,
 				async: true
-			});
+			}, undefined, failure);
 		},
 
 		domReady: function(url, id){
@@ -43,16 +43,16 @@ var AMDLoader = (function(doc){
 			}, 0);
 		},
 
-		js: function(url, id){
+		js: function(url, id, failure){
 			injectScript({
 				src: url,
 				async: true
 			}, function(){
 				resolve(id);
-			});
+			}, failure);
 		},
 
-		css: function(url, id){
+		css: function(url, id, failure){
 			injectElement('link', {
 				href: url + '.css',
 				type: 'text/css',
@@ -62,31 +62,31 @@ var AMDLoader = (function(doc){
 				setTimeout(function(){
 					resolve(id);
 				}, 50);
-			});
+			}, failure);
 		},
 
-		text: function(url, id){
+		text: function(url, id, failure){
 			requestFile('text', {
 				url: url
 			}, function(text){
 				resolve(id, text);
-			});
+			}, failure);
 		},
 
-		uint8: function(url, id){
+		uint8: function(url, id, failure){
 			requestFile('arraybuffer', {
 				url: url
 			}, function(array){
 				resolve(id, array);
-			});
+			}, failure);
 		},
 
-		img: function(url, id){
+		img: function(url, id, failure){
 			injectImage({
 				src: url
 			}, function(el){
 				resolve(id, el);
-			});
+			}, failure);
 		}
 	};
 
@@ -179,9 +179,9 @@ var AMDLoader = (function(doc){
 			dependencies = dependencies.map(normalizeURL);
 
 			if(definition){
-				//need to wait for all dependencies to load
-				var proms = dependencies.map(getDependencyPromise);
+				var proms = dependencies.map(function(dep){ return getDependencyPromise(dep, failureFn); });
 
+				//need to wait for all dependencies to load
 				Promise.all(proms).then(function(result){
 					//remove js! plugins from result
 					result = result.filter(function(res, idx){ return !!dependencies[idx].indexOf('js!'); });
@@ -197,6 +197,11 @@ var AMDLoader = (function(doc){
 				throw new Error('Module name "' + dependencies[0] + '" has not been loaded yet.');
 			}
 		}
+	};
+
+	/** @private */
+	var failureFn = function(err){
+		console.warn(err);
 	};
 
 	var existFile = function(url, success, failure){
@@ -221,7 +226,7 @@ var AMDLoader = (function(doc){
 	};
 
 	/** @private */
-	var getDependencyPromise = function(id){
+	var getDependencyPromise = function(id, failure){
 		id = addJSExtension(id);
 
 		if(!promises[id])
@@ -237,7 +242,7 @@ var AMDLoader = (function(doc){
 					args.unshift('base');
 				}
 
-				plugins[args[0]](args[1], id);
+				plugins[args[0]](args[1], id, failure);
 			});
 
 		return promises[id];
@@ -410,8 +415,8 @@ var AMDLoader = (function(doc){
 			var errorText = 'Syntax or http error loading: ' + module.src;
 			failure && failure(new Error(errorText));
 
-			if(!failure)
-				throw errorText;
+			//if(!failure)
+			//	throw errorText;
 		};
 
 		//NOTE: this requires domReady!
