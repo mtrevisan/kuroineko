@@ -307,21 +307,21 @@ bla
 #### Trie <a id="trie"></a>####
 
     var t = new Trie();
-	 t.add('abc');
-	 t.add('abb');
-	 t.add('ac');
-	 t.add('d');
-	 t.remove('d');
-	 
-	 t.contains('abc');
-	 
-	 t.getWords('a');
-	 
-	 t.findPrefix('ab');
-	 
-	 t.findMatchesOnPath('abcd');
-	 
-	 var count = 1;
+    t.add('abc');
+    t.add('abb');
+    t.add('ac');
+    t.add('d');
+    t.remove('d');
+    
+    t.contains('abc');
+    
+    t.getWords('a');
+    
+    t.findPrefix('ab');
+    
+    t.findMatchesOnPath('abcd');
+    
+    var count = 1;
     t.apply(function(node){
     	count ++;
     });
