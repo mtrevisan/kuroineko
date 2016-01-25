@@ -21,7 +21,14 @@ This is a bunch of utilities I put together. Unfortunately I miss some reference
   - [Random algorithms](#random-algorithms)
     - [Mersenne-Twister](#mersenne-twister)
     - [Random](#random)
-- [Language (primarly used for Venetan)](#language)
+  - [Structs](#structs)
+    - [Binary Indexed Tree](#binary-indexed-tree)
+    - [Bit Buffer](#bit-buffer)
+    - [Priority Queue](#priority-queue)
+    - [Tarjan's Strongly Connected Components](#tarjan-strongly-connected-components)
+    - [Tree](#tree)
+    - [Trie](#trie)
+- [Language (primarily used for Venetan)](#language)
 - [Math](#math)
 - [Measure](#measure)
 - [Spell checker](#spell-checker)
@@ -31,7 +38,6 @@ This is a bunch of utilities I put together. Unfortunately I miss some reference
 
 ## Data <a id="data"></a>##
  - HTML storage
- - data structures like Binary Indexed Tree, Bit Buffer, Priority Queue, Tree, Trie
  - Lexer
  - various helpers (array, communication, function, math, object, and string)
  - math helper containing various functions like bitCount, nextPowerOf2, getMostSignificantBit, getLeastSignificantBit, combine, and permute
@@ -280,7 +286,29 @@ A Non-Uniform Random Generator using Mersenne-Twister.
     Random.getRandomValueWithGivenDistribution({a: 12, b: 1, c: 10});
 
 
-## Language (primarly used for Venetan) <a id="language"></a>##
+### Structs <a id="structs"></a>###
+bla
+
+#### Binary Indexed Tree <a id="binary-indexed-tree"></a>####
+bla
+
+#### Bit Buffer <a id="bit-buffer"></a>####
+bla
+
+#### Priority Queue <a id="priority-queue"></a>####
+bla
+
+#### Tarjan's Strongly Connected Components <a id="tarjan-strongly-connected-components"></a>####
+bla
+
+#### Tree <a id="tree"></a>####
+bla
+
+#### Trie <a id="trie"></a>####
+bla
+
+
+## Language (primarily used for Venetan) <a id="language"></a>##
  - conjugator, paradigm, pronoun, themizer, verb
  - grapheme, orthography, phone, phonology helper, syllabator, syllabe, word
  - language recognition using Markov chains and n-grams
