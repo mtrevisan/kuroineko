@@ -3,24 +3,24 @@
 =========
 This is a bunch of utilities I put together. Unfortunately I miss some references to the original projects. I beg pardon, and whenever I found out the original ones I'll update my references.
 
-### Table of contents ###
+## Table of contents ##
 - [Data](#data)
-- [String Alignment](#string-alignment)
-  - [Needleman-Wunsch](#needleman-wunsch)
-  - [Needleman-Wunsch-Ukkonen](#needleman-wunsch-ukkonen)
-  - [Smith-Watermann](#smith-watermann)
-- [String Distance](#string-distance)
-  - [Levenshtein](#levenshtein)
-  - [Damerau-Levenshtein](#damerau-levenshtein)
-- [Clustering](#clustering)
-  - [Hierarchical](#hierarchical-clustering)
-  - [OPTICS](#optics-clustering)
-- [Coders](#coders)
-  - [Arithmetic coder](#arithmetic-coder)
-  - [Elias delta coder](#elias-delta-coder)
-- [Random algorithms](#random-algorithms)
-  - [Mersenne-Twister](#mersenne-twister)
-  - [Random](#random)
+  - [String Alignment](#string-alignment)
+    - [Needleman-Wunsch](#needleman-wunsch)
+    - [Needleman-Wunsch-Ukkonen](#needleman-wunsch-ukkonen)
+    - [Smith-Watermann](#smith-watermann)
+  - [String Distance](#string-distance)
+    - [Levenshtein](#levenshtein)
+    - [Damerau-Levenshtein](#damerau-levenshtein)
+  - [Clustering](#clustering)
+    - [Hierarchical](#hierarchical-clustering)
+    - [OPTICS](#optics-clustering)
+  - [Coders](#coders)
+    - [Arithmetic coder](#arithmetic-coder)
+    - [Elias delta coder](#elias-delta-coder)
+  - [Random algorithms](#random-algorithms)
+    - [Mersenne-Twister](#mersenne-twister)
+    - [Random](#random)
 - [Language (primarly used for Venetan)](#language)
 - [Math](#math)
 - [Measure](#measure)
@@ -29,7 +29,7 @@ This is a bunch of utilities I put together. Unfortunately I miss some reference
 - [General](#general)
 
 
-### Data <a id="data"></a>###
+## Data <a id="data"></a>##
  - HTML storage
  - data structures like Binary Indexed Tree, Bit Buffer, Priority Queue, Tree, Trie
  - Lexer
@@ -280,33 +280,33 @@ A Non-Uniform Random Generator using Mersenne-Twister.
     Random.getRandomValueWithGivenDistribution({a: 12, b: 1, c: 10});
 
 
-### Language (primarly used for Venetan) <a id="language"></a>###
+## Language (primarly used for Venetan) <a id="language"></a>##
  - conjugator, paradigm, pronoun, themizer, verb
  - grapheme, orthography, phone, phonology helper, syllabator, syllabe, word
  - language recognition using Markov chains and n-grams
 
 
-### Math <a id="math"></a>###
+## Math <a id="math"></a>##
  - Normal and Student-T distributions
  - Continued fractions
  - Fraction
 
 
-### Measure <a id="measure"></a>###
+## Measure <a id="measure"></a>##
  - measure converter
  - scalar
  - measure datas for venetan and SI
 
 
-### Spell checker <a id="spell-checker"></a>###
+## Spell checker <a id="spell-checker"></a>##
  - Norvig spell checker
  - Hunspell dictionary reader
 
 
-### UI <a id="ui"></a>###
+## UI <a id="ui"></a>##
  - alerter
  - validator
 
 
-### General <a id="general"></a>###
+## General <a id="general"></a>##
  - a minimal AMD loader compatible with requireJS
