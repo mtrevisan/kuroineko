@@ -16,9 +16,6 @@ define(function(){
 	var Vertex = function(name, connections){
 		this.name = name;
 		this.connections = connections;
-
-		this.index = -1;
-		this.lowLink = -1;
 	};
 
 
@@ -101,11 +98,11 @@ define(function(){
 			if(vertex.index < 0)
 				strongConnect.call(this, vertex, components);
 		}, this);
-		components = components.filter(function(component){ return (component.length > 1); });
-
-		components.forEach(function(component, i){
-			components[i] = component.map(function(vertex){ return vertex.name; }).reverse();
-		});
+		components = components
+			.filter(function(component){ return (component.length > 1); })
+			.map(function(component){
+				return component.map(function(vertex){ return vertex.name; }).reverse();
+			});
 		return components;
 	};
 
