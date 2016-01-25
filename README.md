@@ -55,7 +55,7 @@ or with defaults cost functions
     var editOperations = nw.align();
 
 editOperations.operations is a string with that encodes the edit operations needed to transform the first string into the second.
-By edit operations is intended that a space is a match, a `*` is a change, a `+` is an insertion, and a `-` is a deletion.
+By edit operations, transforming the first string into the second, is intended that a space is a match, a `*` is a change, a `+` is an insertion, and a `-` is a deletion.
 
 #### Needleman-Wunsch <a id="needleman-wunsch"></a>####
 Needleman-Wunsch global alignment algorithm.
