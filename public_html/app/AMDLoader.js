@@ -213,10 +213,8 @@ var AMDLoader = (function(doc){
 			tree.addVertex(id, dependencies.map(normalizeURL).map(addJSExtension));
 
 			var scc = tree.getStronglyConnectedComponents();
-			if(scc.length){
-				scc = scc.map(function(component){ return component.join(' > '); });
-				throw 'Circular dependency found: ' + JSON.stringify(scc);
-			}
+			if(scc.length)
+				throw 'Circular dependency found: ' + JSON.stringify(scc.map(function(component){ return component.join(' > '); }));
 		}
 	};
 
