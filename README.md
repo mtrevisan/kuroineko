@@ -27,7 +27,7 @@ This is a bunch of utilities I put together. Unfortunately I miss some reference
  - Hierarchical and OPTICS clustering
  - HTML storage
  - Mersenne Twister, get a random variable with a given distribution
- - data structures like Binary Indexed Tree, Bit Buffer, Priority Queue, Tarjan, Tree, Trie
+ - data structures like Binary Indexed Tree, Bit Buffer, Priority Queue, Tarjan (for Strongly Connected Components), Tree, Trie
  - Lexer
  - various helpers (array, communication, function, math, object, and string)
  - math helper containing various functions like bitCount, nextPowerOf2, getMostSignificantBit, getLeastSignificantBit, combine, and permute
