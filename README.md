@@ -95,12 +95,14 @@ Where `edit` is an object in the form `{insertions: 0, deletions: 0, substitutio
 Various algorithms for data clustering.
 
 #### Hierarchical clustering <a id="hierarchical-clustering"></a>####
+
     var distanceMatrix = [[0, 1, 2], [undefined, 0, 3], [undefined, undefined, 4]];
-	 var header = ['a', 'b', 'c'];
+    var header = ['a', 'b', 'c'];
     var tree = HierarchicalClusterer.cluster(distanceMatrix, header);
 
 #### OPTICS clustering <a id="optics-clustering"></a>####
 Ordering Points To Identify the Clustering Structure (OPTICS).
+
     var pointsMatrix = [[0, 0], [0, 0.5], [0, -0.8], [1, 0], [-1, 0.5]];
     var result = OPTICSClusterer.cluster(pointsMatrix, 0.9, 2);
 
