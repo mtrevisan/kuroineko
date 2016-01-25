@@ -179,10 +179,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		'ɶ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: 1,  ft: 1,  bk: -1, tns: 0},
 		'a':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: 1,  ft: -1, bk: -1, tns: 0},
 		'ɑ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: -1, rou: -1, ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: 1,  ft: -1, bk: 1,  tns: 0},
-		'ɒ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: 1,  ft: -1, bk: 1,  tns: 0},
-
-		C: {con: 1},
-		V: {con: -1}
+		'ɒ':   {syl: 1,  con: -1, son: 1,  cnt: 1,  dr: 0,  app: 1,  tap: -1, tri: -1, nas: -1, voi: 1,  sg: -1, cg: -1, lab: 1,  rou: 1,  ld: -1, cor: -1, ant: 0,  dst: 0,  str: 0,  lat: -1, dor: 1,  hi: -1, lo: 1,  ft: -1, bk: 1,  tns: 0}
 	};
 	/* * @constant * /
 	var aliases = {
@@ -407,7 +404,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 						if(hasComposites)
 							result += '(?:';
 						if(hasWhole)
-							result += (hasWhole > 1? '[' + tmp.segment.join('') + ']': tmp.segment[0]);
+							result += (hasWhole > 1? '[' + tmp.segment.sort().join('') + ']': tmp.segment[0]);
 						if(hasComposites){
 							if(hasWhole)
 								result += '|';
@@ -447,17 +444,19 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	 */
 	var convertFeaturesIntoSegment = function(features, multipleElements){
 		var matches = [];
-		Object.keys(segments).forEach(function(segment){
-			if(!compareFeatures(features, segments[segment], !multipleElements).diff.length)
-				matches.push(segment);
+		Object.keys(segments).forEach(function(phoneme){
+			if(hasEquivalentFeatures(features, segments[phoneme], !multipleElements))
+				matches.push(phoneme);
 		});
 		if(!matches.length && useDiacritics)
-			Object.keys(segments).forEach(function(segment){
-				if(compareFeatures(features, segments[segment], !multipleElements).diff.length == 1)
-					Object.keys(diacritics).forEach(function(diac){
-						if(!compareFeatures(features, combineFeatures(segments[segment], diacritics[diac][0]), !multipleElements).diff.length)
-							matches.push(segment + diac);
-					});
+			Object.keys(segments).forEach(function(phoneme){
+				Object.keys(diacritics).forEach(function(k){
+					if(hasEquivalentFeatures(diacritics[k][1], segments[phoneme])){
+						var diacritized = combineFeatures(segments[phoneme], diacritics[k][0]);
+						if(hasEquivalentFeatures(features, diacritized, !multipleElements))
+							matches.push(phoneme + k);
+					}
+				});
 			});
 		//FIXME consider multiple diacritic combined together
 //		if(!matches.length && useDiacritics){
@@ -545,8 +544,8 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	 * @param {Object/String} bundleA	Originator feature bundle
 	 * @param {Object/String} bundleB	Destinator feature bundle
 	 */
-	var hasEquivalentFeatures = function(bundleA, bundleB){
-		return !compareFeatures(bundleA, bundleB).diff.length;
+	var hasEquivalentFeatures = function(bundleA, bundleB, twoWayMatch){
+		return !compareFeatures(bundleA, bundleB, twoWayMatch).diff.length;
 	};
 
 	/**

@@ -13,12 +13,12 @@ require(['tools/lang/phonology/Phone', 'tools/lang/GrammarLearner'], function(Ph
 			{ant: 1, app: -1, bk: 0, cg: -1, cnt: -1, con: 1, cor: 1, dor: -1, dr: 1, dst: 1, ft: 0, hi: 0, lab: -1, lat: -1, ld: -1, lo: 0, nas: -1, rou: -1, sg: -1, son: -1, str: 1, syl: -1, tap: -1, tns: 0, tri: -1, voi: 1}
 		]);
 		equal(Phone.convertFeaturesIntoString(Phone.convertStringIntoFeatures('ɢ͡ʁd̪͡z̪')), 'ɢ͡ʁd̪͡z̪');
-		deepEqual(Phone.convertFeaturesIntoRegExString(['a', {con: 1, son: 1, hi: 0}]), 'a[nɾlɳɭɽɻmʙɱrɺ]');
+		deepEqual(Phone.convertFeaturesIntoRegExString(['a', {con: 1, son: 1, hi: 0}]), 'a[lmnrɭɱɳɺɻɽɾʙ]');
 	});
 
 	QUnit.test('convert features into regex', function(){
 		equal(Phone.convertFeaturesIntoRegExString(Phone.convertStringIntoFeatures('abcɢ͡ʁd̪͡z̪')), 'abc(?:ɢ͡ʁ)(?:d̪͡z̪)');
-		equal(Phone.convertFeaturesIntoRegExString(Phone.convertStringIntoFeatures('[+con]')), '(?:[θðtdsznɾlʃʒʈɖʂʐɳɭɽɻpbfvmkɡŋxɣʟqɢχʁɴʀħʕʔcɟçʝɲʎɸβʙɱrɬɮɫɺɕʑɧC]|b͡d|b͡v|b͡β|c͡ç|d̠͡ɮ̠|d̪͡z̪|d̪͡ð|d̪͡ɮ̪|d͡z|d͡ɮ|d͡ʑ|d͡ʒ|k̟͡x̟|k̠͡x̠|k͡p|k͡x|p͡f|p͡t|p͡ɸ|q͡χ|t̪͡s̪|t̪͡ɬ̪|t̪͡θ|t͡s|t͡ɕ|t͡ɬ|t͡ɬ̲|t͡ʃ|ɖ͡ʐ|ɟ͡ʝ|ɡ̟͡ɣ̟|ɡ̠͡ɣ̠|ɡ͡b|ɡ͡ɣ|ɢ͡ʁ|ʈ͡ʂ)');
+		equal(Phone.convertFeaturesIntoRegExString(Phone.convertStringIntoFeatures('[+con]')), '(?:[bcdfklmnpqrstvxzçðħŋɕɖɟɡɢɣɧɫɬɭɮɱɲɳɴɸɺɻɽɾʀʁʂʃʈʎʐʑʒʔʕʙʝʟβθχ]|b͡d|b͡v|b͡β|c͡ç|d̠͡ɮ̠|d̪͡z̪|d̪͡ð|d̪͡ɮ̪|d͡z|d͡ɮ|d͡ʑ|d͡ʒ|k̟͡x̟|k̠͡x̠|k͡p|k͡x|p͡f|p͡t|p͡ɸ|q͡χ|t̪͡s̪|t̪͡ɬ̪|t̪͡θ|t͡s|t͡ɕ|t͡ɬ|t͡ɬ̲|t͡ʃ|ɖ͡ʐ|ɟ͡ʝ|ɡ̟͡ɣ̟|ɡ̠͡ɣ̠|ɡ͡b|ɡ͡ɣ|ɢ͡ʁ|ʈ͡ʂ)');
 	});
 
 	QUnit.test('compare features', function(){
@@ -54,7 +54,7 @@ require(['tools/lang/phonology/Phone', 'tools/lang/GrammarLearner'], function(Ph
 		equal((new Phone.Rule('t', 'ʔ', 'a_#', 't glottalization')).applyTo('goat'), 'goaʔ');
 		equal((new Phone.Rule('k', 't͡ʃi', '#mu_#')).applyTo('muk'), 'mut͡ʃi');
 		equal((new Phone.Rule('[-cnt]', '[-voi]', '_#', 'final obstruent devoicing')).applyTo('cab'), 'cap');
-		equal((new Phone.Rule('l', '[+dor,+hi,-lo,-ft,+bk]', '_#', 'L-velarization')).applyTo('cal'), 'caɫˠ');
+		equal((new Phone.Rule('l', '[+dor,+hi,-lo,-ft,+bk]', '_#', 'L-velarization')).applyTo('cal'), 'calˠ');
 		equal((new Phone.Rule('[+syl,-hi,-lo]', '[+hi]', '_', 'mid vowel raising')).applyTo('cell'), 'cill');
 
 		Phone.setUseDiacritics(false);

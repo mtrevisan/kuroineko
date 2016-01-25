@@ -13,11 +13,10 @@ define(['tools/data/ObjectHelper', 'tools/data/alignment/BaseAlignment'], functi
 
 
 	/**
-	 * @requires	Cost for a match to be zero
 	 * @requires	Insertion and deletion costs to be small positive integers
 	 *
-	 * @param {String/Array} x	First string.
-	 * @param {String/Array} y	Second string.
+	 * @param {String/Array} x		First string.
+	 * @param {String/Array} y		Second string.
 	 * @param {Object} [config]	Cost configuration object like <code>{insertion: 1, deletion: 1, substitution: 0.5, matchingFn: function(from, to, costs){ return (from == to? 0: costs.substitution); }}</code>
 	 */
 	var Constructor = function(x, y, config){

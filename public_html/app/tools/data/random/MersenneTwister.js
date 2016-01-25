@@ -105,8 +105,6 @@ define(function(){
 	 * Initializes the state vector by using one unsigned 32-bit integer "seed", which may be zero.
 	 *
 	 * @param {Number} seed		The seed value
-	 *
-	 * @private
 	 */
 	var seed = function(seed){
 		this.mt[0] = seed >>> 0;
@@ -172,29 +170,6 @@ define(function(){
 		this.mt[0] = 0x80000000;
 	};
 
-	/** Generates a random unsigned number on [0, 0xFFFFFFFF] interval */
-	var int32 = function(){
-		var y;
-
-		//generate n words at one time
-		if(this.index >= N){
-			//if seed() has not been called, a default initial seed is used
-			if(this.index > N)
-				this.seed(5489);
-
-			twist.call(this);
-		}
-
-		y = this.mt[this.index ++];
-
-		//tempering
-		y ^= (y >>> SHIFT_U) & MASK_D;
-		y ^= (y << SHIFT_S) & MASK_B;
-		y ^= (y << SHIFT_T) & MASK_C;
-		y ^= (y >>> SHIFT_L);
-		return y >>> 0;
-	};
-
 	/**
 	 * Generate the next n values from the series x[i]
 	 *
@@ -221,6 +196,29 @@ define(function(){
 		return (this.int32() >>> 1);
 	};
 
+	/** Generates a random unsigned number on [0, 0xFFFFFFFF] interval */
+	var int32 = function(){
+		var y;
+
+		//generate n words at one time
+		if(this.index >= N){
+			//if seed() has not been called, a default initial seed is used
+			if(this.index > N)
+				this.seed(5489);
+
+			twist.call(this);
+		}
+
+		y = this.mt[this.index ++];
+
+		//tempering
+		y ^= (y >>> SHIFT_U) & MASK_D;
+		y ^= (y << SHIFT_S) & MASK_B;
+		y ^= (y << SHIFT_T) & MASK_C;
+		y ^= (y >>> SHIFT_L);
+		return y >>> 0;
+	};
+
 	/** Generates a random real on [0,1] interval */
 	var real1 = function(){
 		//divided by 2^32-1
@@ -232,16 +230,16 @@ define(function(){
 		return this.int32() * (1. / MAX_INT);
 	};
 
-	/** Generates a random real on ]0,1[ interval */
-	var real3 = function(){
-		return (this.int32() + 0.5) * (1. / MAX_INT);
-	};
-
 	/** Generates a random real on [0,1[ interval with 53-bit resolution*/
 	var res53 = function(){
 		var a = this.int32() >>> 5,
 			b = this.int32() >>> 6;
 		return(a * 67108864. + b) * (1. / 9007199254740992.);
+	};
+
+	/** Generates a random real on ]0,1[ interval */
+	var real3 = function(){
+		return (this.int32() + 0.5) * (1. / MAX_INT);
 	};
 
 	/* These real versions are due to Isaku Wada, 2002/01/09 added */
@@ -252,12 +250,12 @@ define(function(){
 
 		seed: seed,
 		seedWithArray: seedWithArray,
-		int32: int32,
 		int31: int31,
+		int32: int32,
 		real1: real1,
 		random: random,
-		real3: real3,
-		res53: res53
+		res53: res53,
+		real3: real3
 	};
 
 
