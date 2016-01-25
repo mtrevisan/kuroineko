@@ -31,7 +31,6 @@ This is a bunch of utilities I put together. Unfortunately I miss some reference
 
 ### Data <a id="data"></a>###
  - HTML storage
- - Mersenne Twister, get a random variable with a given distribution
  - data structures like Binary Indexed Tree, Bit Buffer, Priority Queue, Tree, Trie
  - Lexer
  - various helpers (array, communication, function, math, object, and string)
