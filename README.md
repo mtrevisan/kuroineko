@@ -296,10 +296,33 @@ bla
 bla
 
 #### Priority Queue <a id="priority-queue"></a>####
-bla
+Implementation of the Fibonacci heap data structure.
+
+    var pq1 = new PriorityQueue();
+    pq1.add(0, 'first');
+    var pq2 = new PriorityQueue();
+    pq2.add(-1, 'second');
+    
+    pq1.union(pq2);
+    
+    pq1.isEmpty();
+    pq1.size();
+    pq1.get().getPriority();
+    pq1.get().getValue();
+    pq1.extract();
+    pq1.decreaseKey(0, 'first');
+    pq1.deleteNode('first');
 
 #### Tarjan's Strongly Connected Components <a id="tarjan-strongly-connected-components"></a>####
-bla
+This is just for checking if a directed graph contains a cycle using Tarjan's algorithm.
+
+    var t = new Tarjan();
+    t.addVertex('a', ['b', 'c']);
+    t.addVertex('b', ['d']);
+    t.addVertex('c');
+    t.addVertex('d', ['a']);
+    
+    var scc = t.getStronglyConnectedComponents();
 
 #### Tree <a id="tree"></a>####
 bla
