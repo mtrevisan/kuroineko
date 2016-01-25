@@ -287,7 +287,7 @@ A Non-Uniform Random Generator using Mersenne-Twister.
 
 
 ### Structs <a id="structs"></a>###
-bla
+Various data structures.
 
 #### Binary Indexed Tree <a id="binary-indexed-tree"></a>####
 bla
@@ -305,7 +305,26 @@ bla
 bla
 
 #### Trie <a id="trie"></a>####
-bla
+
+    var t = new Trie();
+	 t.add('abc');
+	 t.add('abb');
+	 t.add('ac');
+	 t.add('d');
+	 t.remove('d');
+	 
+	 t.contains('abc');
+	 
+	 t.getWords('a');
+	 
+	 t.findPrefix('ab');
+	 
+	 t.findMatchesOnPath('abcd');
+	 
+	 var count = 1;
+    t.apply(function(node){
+    	count ++;
+    });
 
 
 ## Language (primarily used for Venetan) <a id="language"></a>##
