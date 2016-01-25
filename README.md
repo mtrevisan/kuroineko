@@ -252,7 +252,6 @@ Decoding process:
 
 
 ### Random algorithms <a id="random-algorithms"></a>###
-bla
 
 #### Mersenne-Twister <a id="mersenne-twister"></a>####
 Mersenne Twister pseudorandom number generator.
