@@ -110,41 +110,6 @@ Ordering Points To Identify the Clustering Structure (OPTICS).
     var result = OPTICSClusterer.cluster(pointsMatrix, 0.9, 2);
 
 
-### Random algorithms <a id="random-algorithms"></a>###
-bla
-
-#### Mersenne-Twister <a id="mersenne-twister"></a>####
-Mersenne Twister pseudorandom number generator.
-Not cryptographically secure.
-
-    //if no seed is defined, seed randomly
-	 var seed = 123;
-    var mt = new MersenneTwister(seed);
-	 //random 32-bit integer
-	 mt.int32();
-	 //random 31-bit integer
-    mt.int31();
-    
-	 //random float in the interval [0;1[ with 32-bit resolution
-    mt.random();
-	 //random float in the interval [0;1[ with 53-bit resolution
-    mt.res53();
-	 //random float in the interval [0;1]
-    mt.real1();
-	 //random float in the interval ]0;1[
-    mt.real3();
-    
-	 //(re)seed the generator with an unsigned 32-bit integer
-    mt.seed(seed);
-	 //(re)seed using a state vector of unsigned 32-bit integers
-    mt.seedArray(key);
-
-#### Random <a id="random"></a>####
-A Non-Uniform Random Generator using Mersenne-Twister.
-
-    Random.getRandomValueWithGivenDistribution({a: 12, b: 1, c: 10});
-
-
 ### Coders <a id="coders"></a>###
 Various coders algorithms like arithmetic, and Elias.
 
@@ -279,6 +244,41 @@ Decoding process:
     var dt = new DecisionTree(attributes, data);
     dt.attachSupervisor(fnSupervisorConfirmClass, fnSupervisorAskBranch, fnSupervisorAskNewAttributeAndClass);
     dt.buildTree();
+
+
+### Random algorithms <a id="random-algorithms"></a>###
+bla
+
+#### Mersenne-Twister <a id="mersenne-twister"></a>####
+Mersenne Twister pseudorandom number generator.
+Not cryptographically secure.
+
+    //if no seed is defined, seed randomly
+	 var seed = 123;
+    var mt = new MersenneTwister(seed);
+	 //random 32-bit integer
+	 mt.int32();
+	 //random 31-bit integer
+    mt.int31();
+    
+	 //random float in the interval [0;1[ with 32-bit resolution
+    mt.random();
+	 //random float in the interval [0;1[ with 53-bit resolution
+    mt.res53();
+	 //random float in the interval [0;1]
+    mt.real1();
+	 //random float in the interval ]0;1[
+    mt.real3();
+    
+	 //(re)seed the generator with an unsigned 32-bit integer
+    mt.seed(seed);
+	 //(re)seed using a state vector of unsigned 32-bit integers
+    mt.seedArray(key);
+
+#### Random <a id="random"></a>####
+A Non-Uniform Random Generator using Mersenne-Twister.
+
+    Random.getRandomValueWithGivenDistribution({a: 12, b: 1, c: 10});
 
 
 ### Language (primarly used for Venetan) <a id="language"></a>###
