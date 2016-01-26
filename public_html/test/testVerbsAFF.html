@@ -34,13 +34,13 @@
 
 			var verbs = [],
 				infinitives = [],
-				maxIndex = 1;
+				maxIndex = 0;
 			verbsDictionary.forEach(function(infinitive, idx){
 				infinitive = composeInfinitive(infinitive).replace(/ɉ/g, 'j');
 				if(infinitives.indexOf(infinitive) < 0){
 					infinitives.push(infinitive);
 
-if(['skoltàr'].indexOf(infinitive) >= 0)
+if(['skoltàr'].indexOf(infinitive) >= 0 || idx <= maxIndex)
 //if(idx <= maxIndex)
 					verbs.push(new Verb(infinitive));
 				}
