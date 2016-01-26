@@ -87929,119 +87929,175 @@ SFX F a e-me a
 SFX F a e-ne a
 SFX F a e-te a
 SFX F a e-ve a
-SFX G Y 22 # sonoriđaŧion konsonanti finali
-SFX G b. p b[oei]
-SFX G c. c c[oei]
-SFX G d. t d[oei]
-SFX G f. f f[oei]
-SFX G g. k g[oei]
-SFX G k. k k[oei]
-SFX G m. n m[oei]
-SFX G n. n n[oei]
-SFX G p. p p[oei]
-SFX G s. s s[oei]
-SFX G t. t t[oei]
-SFX G v. f v[oei]
-SFX G x. s x[oei]
-SFX G ñ. in ñ[oei]
-SFX G ñ. n ñ[oei]
-SFX G ñ. nc ñ[oei]
-SFX G ñ. ñ ñ[oei]
-SFX G đ. ŧ đ[oei]
-SFX G ŧ. ŧ ŧ[oei]
-SFX G ɉ. c ɉ[oei]
-SFX G ʃ. ʃ ʃ[oei]
-SFX G ʒ. ʃ ʒ[oei]
-SFX H Y 9 # interogativi
-SFX H 0 -e
-SFX H 0 -i
-SFX H 0 -mi
-SFX H 0 -ne [^n]
-SFX H 0 -ni [^n]
-SFX H 0 -nte [^n]
-SFX H 0 -nti [^n]
-SFX H 0 -te n
-SFX H 0 -ti n
-SFX I Y 8 # interogativi
-SFX I mi e i
-SFX I mi i i
-SFX I mi ne [^n]i
-SFX I mi ni [^n]i
-SFX I mi nte [^n]i
-SFX I mi nti [^n]i
-SFX I mi te ni
-SFX I mi ti ni
-SFX J Y 8 # interogativi
-SFX J 0 -e
-SFX J 0 -i
-SFX J 0 -ne [^n]
-SFX J 0 -ni [^n]
-SFX J 0 -nte [^n]
-SFX J 0 -nti [^n]
-SFX J 0 -te n
-SFX J 0 -ti n
-SFX K Y 7 # interogativi
-SFX K ni e ni
-SFX K ni i ni
-SFX K ni ne [^n]i
-SFX K ni nte [^n]i
-SFX K ni nti [^n]i
-SFX K ni te ni
-SFX K ni ti ni
-SFX L Y 3 # interogativi
-SFX L 0 -stu
-SFX L 0 -to
-SFX L 0 -tu
-SFX M Y 2 # interogativi
-SFX M tu stu tu
-SFX M u o u
-SFX N Y 2 # interogativi
-SFX N 0 -o
-SFX N 0 -u
-SFX O Y 1 # interogativi
-SFX O u o u
-SFX P Y 8 # interogativi
-SFX P . e-la [ai]
-SFX P . e-le [ai]
-SFX P . e-li [ai]
-SFX P . e-lo [ai]
-SFX P 0 -la [^ai]
-SFX P 0 -le [^ai]
-SFX P 0 -li [^ai]
-SFX P 0 -lo [^ai]
-SFX Q Y 3 # interogativi
-SFX Q o a o
-SFX Q o e o
-SFX Q o i o
-SFX R Y 8 # interogativi
-SFX R ave ise-la rave
-SFX R ave ise-le rave
-SFX R ave ise-li rave
-SFX R ave ise-lo rave
-SFX R ave ísela rave
-SFX R ave ísele rave
-SFX R ave íseli rave
-SFX R ave íselo rave
-SFX S Y 6 # sostantivi plurali
-SFX S 0 o [^aieo]
-SFX S 0 i [^aieo]
-SFX S a e a
-SFX S l i [^i]l
-SFX S n i [^i]n
-SFX S o i [^i]o
-SFX S io i io
-SFX T Y 6 # piante e mistièri
-SFX T dor tor/U [aeiou]dor
-SFX T ol iol/U rol
-SFX T ol iòl/U rol
-SFX T ol òl/U rol
-SFX T tor dor/U [aeiou]tor
-SFX T èr ar/U èr
-SFX U Y 4 # piante e mistièri
-SFX U 0 a
-SFX U 0 e
-SFX U 0 i
-SFX U 0 o
+SFX G Y 10 # prokonplementari
+SFX G 0 ge
+SFX G 0 la
+SFX G 0 le
+SFX G 0 li
+SFX G 0 lo
+SFX G 0 me
+SFX G 0 ne
+SFX G 0 se
+SFX G 0 te
+SFX G 0 ve
+SFX H Y 25 # prokonplementari
+SFX H 0 gela
+SFX H 0 gele
+SFX H 0 geli
+SFX H 0 gelo
+SFX H 0 gene
+SFX H 0 mela
+SFX H 0 mele
+SFX H 0 meli
+SFX H 0 melo
+SFX H 0 mene
+SFX H 0 sela
+SFX H 0 sele
+SFX H 0 seli
+SFX H 0 selo
+SFX H 0 sene
+SFX H 0 tela
+SFX H 0 tele
+SFX H 0 teli
+SFX H 0 telo
+SFX H 0 tene
+SFX H 0 vela
+SFX H 0 vele
+SFX H 0 veli
+SFX H 0 velo
+SFX H 0 vene
+SFX I Y 18 # prokonplementari
+SFX I 0 ge [^a]
+SFX I 0 la [^a]
+SFX I 0 le [^a]
+SFX I 0 li [^a]
+SFX I 0 lo [^a]
+SFX I 0 me [^a]
+SFX I 0 ne [^a]
+SFX I 0 te [^a]
+SFX I 0 ve [^a]
+SFX I a ege a
+SFX I a ela a
+SFX I a ele a
+SFX I a eli a
+SFX I a elo a
+SFX I a eme a
+SFX I a ene a
+SFX I a ete a
+SFX I a eve a
+SFX J Y 22 # sonoriđaŧion konsonanti finali
+SFX J b. p b[oei]
+SFX J c. c c[oei]
+SFX J d. t d[oei]
+SFX J f. f f[oei]
+SFX J g. k g[oei]
+SFX J k. k k[oei]
+SFX J m. n m[oei]
+SFX J n. n n[oei]
+SFX J p. p p[oei]
+SFX J s. s s[oei]
+SFX J t. t t[oei]
+SFX J v. f v[oei]
+SFX J x. s x[oei]
+SFX J ñ. in ñ[oei]
+SFX J ñ. n ñ[oei]
+SFX J ñ. nc ñ[oei]
+SFX J ñ. ñ ñ[oei]
+SFX J đ. ŧ đ[oei]
+SFX J ŧ. ŧ ŧ[oei]
+SFX J ɉ. c ɉ[oei]
+SFX J ʃ. ʃ ʃ[oei]
+SFX J ʒ. ʃ ʒ[oei]
+SFX K Y 9 # interogativi
+SFX K 0 -e
+SFX K 0 -i
+SFX K 0 -mi
+SFX K 0 -ne [^n]
+SFX K 0 -ni [^n]
+SFX K 0 -nte [^n]
+SFX K 0 -nti [^n]
+SFX K 0 -te n
+SFX K 0 -ti n
+SFX L Y 8 # interogativi
+SFX L mi e i
+SFX L mi i i
+SFX L mi ne [^n]i
+SFX L mi ni [^n]i
+SFX L mi nte [^n]i
+SFX L mi nti [^n]i
+SFX L mi te ni
+SFX L mi ti ni
+SFX M Y 8 # interogativi
+SFX M 0 -e
+SFX M 0 -i
+SFX M 0 -ne [^n]
+SFX M 0 -ni [^n]
+SFX M 0 -nte [^n]
+SFX M 0 -nti [^n]
+SFX M 0 -te n
+SFX M 0 -ti n
+SFX N Y 7 # interogativi
+SFX N ni e ni
+SFX N ni i ni
+SFX N ni ne [^n]i
+SFX N ni nte [^n]i
+SFX N ni nti [^n]i
+SFX N ni te ni
+SFX N ni ti ni
+SFX O Y 3 # interogativi
+SFX O 0 -stu
+SFX O 0 -to
+SFX O 0 -tu
+SFX P Y 2 # interogativi
+SFX P tu stu tu
+SFX P u o u
+SFX Q Y 2 # interogativi
+SFX Q 0 -o
+SFX Q 0 -u
+SFX R Y 1 # interogativi
+SFX R u o u
+SFX S Y 8 # interogativi
+SFX S . e-la [ai]
+SFX S . e-le [ai]
+SFX S . e-li [ai]
+SFX S . e-lo [ai]
+SFX S 0 -la [^ai]
+SFX S 0 -le [^ai]
+SFX S 0 -li [^ai]
+SFX S 0 -lo [^ai]
+SFX T Y 3 # interogativi
+SFX T o a o
+SFX T o e o
+SFX T o i o
+SFX U Y 8 # interogativi
+SFX U ave ise-la rave
+SFX U ave ise-le rave
+SFX U ave ise-li rave
+SFX U ave ise-lo rave
+SFX U ave ísela rave
+SFX U ave ísele rave
+SFX U ave íseli rave
+SFX U ave íselo rave
+SFX V Y 7 # sostantivi plurali
+SFX V 0 i [^aieo]
+SFX V 0 o [^aieo]
+SFX V a e a
+SFX V io i io
+SFX V l i [^i]l
+SFX V n i [^i]n
+SFX V o i [^i]o
+SFX W Y 6 # piante e mistièri
+SFX W dor tor/X [aeiou]dor
+SFX W ol iol/X rol
+SFX W ol iòl/X rol
+SFX W ol òl/X rol
+SFX W tor dor/X [aeiou]tor
+SFX W èr ar/X èr
+SFX X Y 4 # piante e mistièri
+SFX X 0 a
+SFX X 0 e
+SFX X 0 i
+SFX X 0 o
 
 # FIXME
 # Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug. par tuti i mòdi e i tenpi fora ke inté ‘l infenío, partithipio ativo, e xerundio
@@ -88371,40 +88427,33 @@ SFX U 0 o
 # dict: dèŧimo/B
 # dict: último/B
 # dict: penúltimo/B
-# dict: terŧ’ /a
-# dict: kuart’ /a
-# dict: kuint’ /a
-# dict: sèst’ /a
+# dict: terŧ’_/a
+# dict: kuart’_/a
+# dict: kuint’_/a
+# dict: sèst’_/a
 
 SFX a Y 1
 SFX a 0 último/B
 
 # numerali - koletivi
 # dict: pèr
-SFX b Y 8
-SFX b èxe  exena  dièxe
-SFX b e    ena    dexe
-SFX b .    ena    [ai]
-SFX b énta entena trénta
-SFX b o    enèr   ŧento
-SFX b e    èr     mile
-SFX b 0    èr     melion
-SFX b o    èr     meliardo
-
-SFX c Y 13
-SFX c èxe    exena    dièxe
-SFX c úndexe úndexena úndexe
-SFX c ódexe  odexena  dódexe
-SFX c édexe  edexena  trédexe
-SFX c òrdexe ordexena kuatòrdexe
-SFX c índexe indexena kuíndexe
-SFX c édexe  edexena  sédexe
-SFX c ète    etena    sète
-SFX c òto    otena    dòto
-SFX c i      ena      vinti
-SFX c énta   entena   trénta
-SFX c a      ena      anta
-SFX c e      ena      [^tx]e
+SFX b Y 16
+SFX b èxe    exena    dièxe
+SFX b úndexe undexena úndexe
+SFX b ódexe  odexena  dódexe
+SFX b édexe  edexena  trédexe
+SFX b òrdexe ordexena kuatòrdexe
+SFX b índexe indexena kuíndexe
+SFX b édexe  edexena  sédexe
+SFX b ète    etena    sète
+SFX b òto    otena    dòto
+SFX b i      ena      vinti
+SFX b énta   entena   trénta
+SFX b a      ena      anta
+SFX b o      enèr     [ŧx]ento
+SFX b e      èr       mile
+SFX b 0      èr       melion
+SFX b o      èr       meliardo
 
 # numerali - moltiplegativi
 # dict: únego/B

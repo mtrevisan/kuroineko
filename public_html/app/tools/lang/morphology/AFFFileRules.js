@@ -25,6 +25,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	/** @constant */
 		PATTERN_LEAVE_REPLACEMENT = /^.+>|\|.+$/,
 	/** @constant */
+		PATTERN_CONSTRAINT = /^.+\|/,
+	/** @constant */
 		FLAG_SEPARATOR = ',',
 	/** @constant */
 		FLAG_START = 'A';
@@ -88,21 +90,21 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		0: [
 			//ajetivi de prima klase
 			//[REDUCTION_RESERVED_0, '[oaie]', 'o>a/' + REDUCTION_RESERVED_1 + '|o', '0>a/' + REDUCTION_RESERVED_1 + '|[^aieo]'],
-			[REDUCTION_RESERVED_0, '[oaie]', 'o>a|o', 'o>e|o', 'o>i|[^i]o', 'io>i|io', '0>o|[^aieo]', '0>a|[^aieo]', '0>e|[^aieo]', '0>i|[^aieo]'],
+			[REDUCTION_RESERVED_0, '[oaie]', 'o>[ae]', 'o>i|[^i]o', 'io>i|io', '0>[oaie]|[^aieo]'],
 			//ajetivi de sekonda klase
 			//[REDUCTION_RESERVED_1, '[aie]', 'a>e/' + REDUCTION_RESERVED_2 + '|a'],
-			[REDUCTION_RESERVED_1, '[aie]', 'a>e|a', 'a>i|a'],
+			[REDUCTION_RESERVED_1, '[aie]', 'a>[ei]'],
 			//ajetivi de terŧa klase
-			[REDUCTION_RESERVED_2, '[ei]', 'e>i|e']
+			[REDUCTION_RESERVED_2, '[ei]', 'e>i']
 		]
 	};
 
 	var interrogatives = {
 		1: [
 			[INTERROGATIVE_MARK_1S, '0>-mi', '0>-[ei]', '0>-(t)[ei]|n', '0>-n(t)[ei]|[^n]'],
-			[INTERROGATIVE_MARK_1S_2, 'mi>i', 'mi>e', 'mi>(t)[ei]|ni', 'mi>n(t)[ei]|[^n]i'],
+			[INTERROGATIVE_MARK_1S_2, 'mi>i', 'mi>e', 'mi>(t)[ei]|nmi', 'mi>n(t)[ei]|[^n]mi'],
 			[INTERROGATIVE_MARK_1P, '0>-[ei]', '0>-(t)[ei]|n', '0>-n(t)[ei]|[^n]'],
-			[INTERROGATIVE_MARK_1P_2, 'ni>i', 'ni>e', 'ni>(t)[ei]|ni', 'ni>n(t)[ei]|[^n]i'],
+			[INTERROGATIVE_MARK_1P_2, 'ni>i', 'ni>e', 'i>(t)[ei]|ni'],
 			[INTERROGATIVE_MARK_2S, '0>-t[uo]', '0>-stu'],
 			[INTERROGATIVE_MARK_2S_2, 'u>o', 'tu>stu'],
 			[INTERROGATIVE_MARK_2P, '0>-[uo]'],
@@ -130,7 +132,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		]
 	};
 
-//(zavàtol = fringuello, témol = temolo, bekiñòl, bigòl/bígol, bórtol, tasar/taxar)
 	var consonantVoicings = {
 		1: [
 			[FINAL_CONSONANT_VOICING_MARK,
@@ -539,7 +540,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 		//FIXME
 //		return 'SFX ' + flag + ' ' + replaced + ' ' + replacement + (constraint != 0 && constraint != ''? ' ' + (parents && parents.length == 1? '^': '') + constraint: '') + (parents? ' # ' + parents.sort().join(FLAG_SEPARATOR): '');
-		return 'SFX ' + flag + ' ' + replaced + ' ' + replacement + (constraint != 0 && constraint != ''? ' ' + (parents && parents.length == 1? '^': '') + constraint: '');
+		return 'SFX ' + flag + ' ' + replaced + ' ' + replacement + (constraint != 0 && constraint != ''? ' ' /*+ (parents && parents.length == 1? '^': '')*/ + constraint: '');
 	};
 
 	/** @private */
@@ -563,7 +564,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		if(!flags)
 			return replacement;
 
-		var mFlag = extractFlags(Array.isArray(flags)? '/' + flags.join(FLAG_SEPARATOR): '/' + flags),
+		var mFlag = extractFlags('/' + (Array.isArray(flags)? flags.join(FLAG_SEPARATOR): flags)),
 			mRep = extractFlags(replacement);
 
 		flags = uniteFlags(mRep, mFlag);
@@ -576,7 +577,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var m = flags.match(PATTERN_FLAGS);
 		m[1] = (m[1]? m[1].split(FLAG_SEPARATOR): []);
 		m[2] = (m[2]? m[2].split(''): []);
-		return {forms: m[1], markers: m[2]};
+		return {forms: m[1], markers: m[2], constraint: (m[3] || '').replace(/\|/, '')};
 	};
 
 	/** @private */
@@ -590,8 +591,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	/** @private */
 	var uniteFlags = function(flags1, flags2){
 		return {
-			forms: ArrayHelper.unique(flags2.forms.concat(flags1.forms)).sort(function(a, b){ return Number(a) - Number(b); }),
-			markers: ArrayHelper.unique(flags2.markers.concat(flags1.markers)).sort()
+			forms: (flags1.constraint == flags2.constraint? ArrayHelper.unique(flags2.forms.concat(flags1.forms)).sort(function(a, b){ return Number(a) - Number(b); }): []),
+			markers: (flags1.constraint == flags2.constraint? ArrayHelper.unique(flags2.markers.concat(flags1.markers)).sort(): []),
+			constraint: (flags1.constraint == flags2.constraint? flags1.constraint: '_')
 		};
 	};
 
@@ -766,12 +768,39 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		}
 
 		var parts = ArrayHelper.partition(ArrayHelper.unique(sublist), function(el){ return el.replace(PATTERN_FLAGS, ''); }),
-			flags, constraint;
-		sublist = Object.keys(parts).map(function(part){
-			flags = parts[part].map(function(el){ return extractFlags(el); }).reduce(uniteFlags, {forms: [], markers: []});
-			constraint = extractCommonPartFromList(parts[part].map(function(el){ return (el.indexOf('|') >= 0? el.replace(/^.+\|/, ''): ''); }));
+			flags,
+			constraints, constraintParts;
+		/*sublist = Object.keys(parts).map(function(part){
+			flags = parts[part]
+				.map(extractFlags)
+				.reduce(uniteFlags, {forms: [], markers: [], constraint: ''});
+			constraint = extractCommonPartFromList(parts[part].map(function(el){ return (el.indexOf('|') >= 0? el.replace(PATTERN_CONSTRAINT, ''): ''); }));
 			return part + printFlags(flags) + (constraint? '|' + constraint: '');
+		});*/
+		Object.keys(parts).forEach(function(p){
+			constraints = parts[p].map(function(el){ return el.replace(/^.+?[\/\|]|^[^\/\|]+$/, ''); });
+			if(constraints.length > 1){
+				constraintParts = ArrayHelper.partition(constraints, function(el){ return el.replace(/^.+\||^[^\|]+$/, '') || p.replace(/>.+$/, ''); });
+				parts[p] = Object.keys(constraintParts).map(function(cp){
+					flags = constraintParts[cp]
+						.map(function(el){ return extractFlags('|' + el); })
+						.reduce(uniteFlags, {forms: [], markers: [], constraint: ''});
+					return (flags.constraint != '_'?
+						p + printFlags(flags) + (flags.constraint? '|' + flags.constraint: ''):
+						parts[p]);
+				});
+
+				/*flags = parts[p]
+					.map(extractFlags)
+					.reduce(uniteFlags, {forms: [], markers: [], constraint: ''});
+				if(flags.constraint == '_'){
+					//FIXME
+				}
+				else if(flags.constraint)
+					parts[p] = [p + printFlags(flags) + '|' + flags.constraint];*/
+			}
 		});
+		sublist = ArrayHelper.flatten(parts);
 
 		if(flag)
 			sublist.unshift(flag);
@@ -807,7 +836,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var parts = ArrayHelper.partition(list, function(el){ return el.replace(PATTERN_FLAGS_WO_CONSTRAINT, ''); }),
 			flags;
 		return Object.keys(parts).map(function(part){
-			flags = parts[part].map(function(el){ return extractFlags(el); }).reduce(uniteFlags, {forms: [], markers: []});
+			flags = parts[part]
+				.map(extractFlags)
+				.reduce(uniteFlags, {forms: [], markers: [], constraint: ''});
 			var m = part.match(PATTERN_ALL);
 			return (m[1]? m[1] + '>': '') + m[2] + printFlags(flags) + (m[5]? '|' + m[5]: '');
 		});
@@ -826,7 +857,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			filtered = [],
 			line;
 		Object.keys(parts).forEach(function(key){
-			line = parts[key].map(function(el){ return el.replace(/^.+\|/, ''); }).sort().join(FLAG_SEPARATOR);
+			line = parts[key].map(function(el){ return el.replace(PATTERN_CONSTRAINT, ''); }).sort().join(FLAG_SEPARATOR);
 			if(reversed[line])
 				reversed[line].push(key);
 			else
@@ -974,7 +1005,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				origins.push(origin);
 
 			if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'r', null, null, '/' + PRONOMENAL_MARK + FLAG_SEPARATOR + MARKER_FLAGS);
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'r', null, null, '/' + PRONOMENAL_MARK + MARKER_FLAGS);
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'rme', /me$/, '', '/' + PRONOMENAL_MARK_2);
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'rmelo', /melo$/, '', '/' + PRONOMENAL_MARK_3);
 			}
@@ -1104,7 +1135,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				origins.push(origin);
 
 			if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'ndo', null, null, '/' + PRONOMENAL_MARK + FLAG_SEPARATOR + MARKER_FLAGS);
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'ndo', null, null, '/' + PRONOMENAL_MARK + MARKER_FLAGS);
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'ndome', /me$/, '', '/' + PRONOMENAL_MARK_2);
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'ndomelo', /melo$/, '', '/' + PRONOMENAL_MARK_3);
 			}
@@ -1127,7 +1158,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				if(themes.themeT2.match(/à$/)){
 					themeT2 = themes.themeT2.replace(/à$/, 'é');
 					if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
-						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + PRONOMENAL_MARK + FLAG_SEPARATOR + MARKER_FLAGS);
+						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + PRONOMENAL_MARK + MARKER_FLAGS);
 						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndome', /me$/, '', '/' + PRONOMENAL_MARK_2);
 						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndomelo', /melo$/, '', '/' + PRONOMENAL_MARK_3);
 					}
@@ -1137,7 +1168,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				if(themes.themeT2.match(/í$/)){
 					themeT2 = themes.themeT2.replace(/í$/, 'é');
 					if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
-						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + PRONOMENAL_MARK + FLAG_SEPARATOR + MARKER_FLAGS);
+						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + PRONOMENAL_MARK + MARKER_FLAGS);
 						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndome', /me$/, '', '/' + PRONOMENAL_MARK_2);
 						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndomelo', /melo$/, '', '/' + PRONOMENAL_MARK_3);
 					}
