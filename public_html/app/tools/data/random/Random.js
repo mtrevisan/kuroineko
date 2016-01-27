@@ -13,7 +13,7 @@ define(['tools/data/random/MersenneTwister'], function(MersenneTwister){
 
 
 	/**
-	 * @param list		Array of objects with key 'char' and value 'count', ex [a: 12, b: 1, ..]
+	 * @param list		Array of objects with key 'char' and value 'count', ex {a: 12, b: 1, ..}
 	 */
 	var getRandomValueWithGivenDistribution = function(list){
 		var nud = list.$nud,

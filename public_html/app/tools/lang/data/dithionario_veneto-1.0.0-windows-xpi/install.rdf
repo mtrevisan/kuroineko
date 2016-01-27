@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+	<Description about="urn:mozilla:install-manifest">
+		<!-- https://developer.mozilla.org/en-US/Add-ons/Install_Manifests -->
+		<em:id>vec@dictionaries.addons.mozilla.org</em:id>
+		<em:version>1.0.0</em:version>
+		<em:type>64</em:type>
+		<em:unpack>true</em:unpack>
+		<em:name>Diŧionario vèneto</em:name>
+		<em:description>Diŧionario vèneto (2015-12-08)</em:description>
+		<em:localized>
+			<Description>
+				<em:locale>vec</em:locale>
+				<em:name>Diŧionario vèneto</em:name>
+				<em:description>Diŧionario vèneto (2015-12-08).</em:description>
+			</Description>
+		</em:localized>
+		<em:creator>Màuro Trevixan</em:creator>
+		<em:homepageURL>http://parnodexmentegar.orgfree.com</em:homepageURL>
+
+		<!-- https://addons.mozilla.org/en-US/firefox/pages/appversions/ -->
+		<!-- Firefox -->
+		<em:targetApplication>
+			<Description>
+				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+				<em:minVersion>18.0a1</em:minVersion>
+				<em:maxVersion>46.0</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+		<!-- Thunderbird -->
+		<em:targetApplication>
+			<Description>
+				<em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+				<em:minVersion>18.0a1</em:minVersion>
+				<em:maxVersion>46.0</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+		<!-- Firefox for Android -->
+		<em:targetApplication>
+			<Description>
+				<em:id>{aa3c5121-dab2-40e2-81ca-7ea25febc110}</em:id>
+				<em:minVersion>46.0</em:minVersion>
+				<em:maxVersion>46.0</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+		<!-- Mobile -->
+		<em:targetApplication>
+			<Description>
+				<em:id>{a23983c0-fd0e-11dc-95ff-0800200c9a66}</em:id>
+				<em:minVersion>40.0</em:minVersion>
+				<em:maxVersion>40.0</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+		<!-- SeaMonkey -->
+		<em:targetApplication>
+			<Description>
+				<em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
+				<em:minVersion>2.15a1</em:minVersion>
+				<em:maxVersion>2.42</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+	</Description>
+</RDF>
