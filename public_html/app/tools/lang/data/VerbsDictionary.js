@@ -2706,7 +2706,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "mariđ",			"",			1,	3,	"a",	"1847",			"Far deventar amaro.",
 "marin",			"",			1,	3,	"a",	"1867",			"",
 "marix",			"",			1,	3,	"a",	"1821",			"Amarixar.",
-"marɉi",			"",			1,	1,	"g",	"1867",			"Konsolidar.",
+"marɉ",			"",			1,	1,	"g",	"1867",			"Konsolidar.",
 "marmor",		"in",			4,	6,	"a",	"1854",			"Instupidir, konfónder.",
 "maron",			"x",			1,	3,	"a",	"2008",			"Skovrir on ingano.",
 "martel",		"",			1,	4,	"g",	"1867",			"",
