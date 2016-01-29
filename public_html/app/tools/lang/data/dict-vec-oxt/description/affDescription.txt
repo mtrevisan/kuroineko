@@ -3,11 +3,11 @@ This file is a summary of the switches used in the vec affix file.
 
 The vec.aff affix file was created from scratch by Mauro Trevisan.
 
-2016/01/27
+2016/01/29
 ---------------------------------------------------------------------
 
 A (public): verbs infinitives
-B (public): all declinations, adjectives of 1st class (o>[ae], o>i|[^i]o, io>i|io, 0>[oaie]|[^aieo])
+B (public): all declinations, adjectives of 1st class (o>[ae], o>i|[^i]o, io>i, 0>[oaie]|[^aieo])
 C (public): declination, adjectives of 2nd class (a>[ie])
 D (public): declination, adjectives of 3rd class (e>i, 0>[ei]|[^aieo])
 E: procomplementar verbs (0>-l[oaie], 0>-[gmstv]e(ne), 0>-[gmstv]el[oaie], 0>-ne)
@@ -28,12 +28,13 @@ S: interrogatives (.>e-l[oaie]|[ai], 0>-l[oaie]|[^ai])
 T: interrogatives (o>[aie])
 U: interrogatives (ave>ise-l[oaie]|rave, ave>ísel[oaie]|rave)
 V (public): plural masculine substantives (0>[oi]|[^aieo], 0>i|i[ln], .>i|[^i][ln], o>i|[^i]o, io>i, .>i|[ae])
-W (public): plural feminine substantives (a>e, e>i, 0>i|[^aieo])
-X (public): plants and crafts (èr>ar/X, ol>iol/X|rol, ol>iòl/X|rol, ol>òl/X|rol, tor>dor/X|[aeiou]tor, dor>tor/X|[aeiou]dor)
+W (public): plural feminine substantives (a>e, e>i, 0>[ei]|[^aieo])
+X (public): plants and crafts (èr>ar/Y, ol>iol/Y|rol, ol>iòl/Y|rol, ol>òl/Y|rol, tor>dor/Y|[aeiou]tor, dor>tor/Y|[aeiou]dor)
 Y (public): plants and crafts (0>[oi]|èr, 0>[oaie]|ar, 0>[oaie]|[oò][lr])
-a (public): numerals (collectives) (èxe>exena|dièxe, úndexe>undexena, ódexe>odexena|dódexe, édexe>edexena|trédexe, òrdexe>ordexena|kuatòrdexe, índexe>indexena|kuíndexe, édexe>edexena|sédexe, ète>etena|sète, òto>otena|dòto, e>ena|nove, i>ena|vinti, énta>entena|trénta, a>ena|anta, o>enèr|[ŧx]ento, e>èr|mile, 0>èr|melion, o>èr|meliardo)
+Z (public): ignore upper/lower case (used for latin numerals)
 £ (public): latin numerals
 $ (public): latin numerals from X upwards
+% (public): numerals (collectives) (èxe>exena|dièxe, úndexe>undexena, ódexe>odexena|dódexe, édexe>edexena|trédexe, òrdexe>ordexena|kuatòrdexe, índexe>indexena|kuíndexe, édexe>edexena|sédexe, ète>etena|sète, òto>otena|dòto, e>ena|nove, i>ena|vinti, énta>entena|trénta, a>ena|anta, o>enèr|[ŧx]ento, e>èr|mile, 0>èr|melion, o>èr|meliardo)
 
 ...
 

@@ -153,7 +153,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	var substantives = {
 		1: [
 			[SUBSTANTIVES_MASCULINE, '0>[oi]|[^aieoln]', '0>i|i[ln]', '.>i|[^i][ln]', 'o>i|[^i]o', 'io>i', '.>i|[ae]'],
-			[SUBSTANTIVES_FEMININE, 'a>e', 'e>i', '0>i|[^aieo]']
+			[SUBSTANTIVES_FEMININE, 'a>e', 'e>i', '0>[ei]|[^aieo]']
 		]
 	};
 
@@ -1331,17 +1331,18 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			var conj = getIrregularVerbConjugation(type, verb);
 
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT5);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT5.replace(/è$/, 'é'), null, null, 'mo');
+			insert(paradigm, theme, verb.infinitive, origin, themes.themeT5.replace(/è$/, 'é') + 'mo');
 			if(conj == 2 && themes.themeT5.replace(/i?é$/, 'í') != themes.themeT5){
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT5.replace(/i?é$/, 'í'));
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT5.replace(/i?é$/, 'í'), null, null, 'mo');
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT5.replace(/i?é$/, 'í') + 'mo');
 			}
 			if(conj != 2){
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT5.replace(/[èí]$/, 'é'));
 
 				if(conj == 3 && !verb.special3rd){
 					insert(paradigm, theme, verb.infinitive, origin, themes.themeT5);
-					insert(paradigm, theme, verb.infinitive, origin, themes.themeT5.replace(/í$/, 'i'), null, null, '[de/ge]');
+					insert(paradigm, theme, verb.infinitive, origin, themes.themeT5.replace(/í$/, 'i') + 'de');
+					insert(paradigm, theme, verb.infinitive, origin, themes.themeT5.replace(/í$/, 'i') + 'ge');
 				}
 			}
 		}
@@ -1368,14 +1369,14 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			var conj = getIrregularVerbConjugation(type, verb);
 
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT5, null, null, '/' + PRONOMENAL_IMPERATIVE_MARK);
-			insert(paradigm, theme, verb.infinitive, origin, (themes.themeT5 + 'me'), /me$/, '', '/' + PRONOMENAL_IMPERATIVE_MARK_2);
+			insert(paradigm, theme, verb.infinitive, origin, themes.themeT5 + 'me', /me$/, '', '/' + PRONOMENAL_IMPERATIVE_MARK_2);
 			if(conj == 2){
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT5.replace(/i?é$/, 'í'), null, null, '/' + PRONOMENAL_IMPERATIVE_MARK);
-				insert(paradigm, theme, verb.infinitive, origin, (themes.themeT5.replace(/i?é$/, 'í') + 'me'), /me$/, '', '/' + PRONOMENAL_IMPERATIVE_MARK_2);
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT5.replace(/i?é$/, 'í') + 'me', /me$/, '', '/' + PRONOMENAL_IMPERATIVE_MARK_2);
 			}
 			else{
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT5.replace(/[èí]$/, 'é'), null, null, '/' + PRONOMENAL_IMPERATIVE_MARK);
-				insert(paradigm, theme, verb.infinitive, origin, (themes.themeT5.replace(/i?é$/, 'í') + 'me'), /me$/, '', '/' + PRONOMENAL_IMPERATIVE_MARK_2);
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT5.replace(/i?é$/, 'í') + 'me', /me$/, '', '/' + PRONOMENAL_IMPERATIVE_MARK_2);
 			}
 		}
 	};
