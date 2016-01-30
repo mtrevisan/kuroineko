@@ -24,7 +24,7 @@
 
 
 NAME Diŧionario vèneto
-VERSION 1.0.0 (29/01/2016)
+VERSION 1.0.0 (30/01/2016)
 HOME http://parnodexmentegar.orgfree.com/
 LANG vec
 
@@ -34,23 +34,22 @@ SET UTF-8
 TRY eèéaàoòóiínrlƚtskdpvmuúgxfŧbjɉñđchEÈÉAÀOÒÓIÍNRLȽTSKDPVMUÚGXFŦBJɈÑĐCH
 KEY esdr|redft|trfg|uhji|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà|àòèù|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìè
 
-WORDCHARS -'‘’
+WORDCHARS -‒–—―'‘’
 
-IGNORE '
+#IGNORE '
 
-#FLAG UTF-8
+FLAG UTF-8
 # use double chars as flags
 #FLAG long
 
-
-# avoid wrong spelling of letterwords in full uppercase/lowercase
-KEEPCASE Z  # km/Z, GHz/Z, ...
-
+# affix rules can strip full words, not only one less characters
+FULLSTRIP
 
 # define break points for breaking words and checking word parts separately
-BREAK 2
+BREAK 3
 BREAK &
 BREAK /
+BREAK _
 
 # suggest the right forms for words which incorrectly choose the wrong letter from a related set more than once in a word
 MAP 5
@@ -61,8 +60,10 @@ MAP oóò
 MAP uúù
 
 # replace input characters
-ICONV 8
+ICONV 10
+ICONV ‒  -
 ICONV –  -
+ICONV —  -
 ICONV ―  -
 ICONV ƚ  l
 ICONV dh đ
@@ -72,12 +73,13 @@ ICONV nh ñ
 ICONV th ŧ
 
 # frequently switched character groups
-REP 14
+REP 17
 REP ^' ‘
 REP ^’ ‘
 REP '$ ’
 REP ‘$ ’
 REP ci c # ci[aàeèéiíoòóuú]>c.
+REP ɉi ɉ # ɉi[aàeèéiíoòóuú]>ɉ.
 REP d  đ # đ[aàeèéiíoòóuú]>d.
 REP x  đ
 REP j  ɉ
@@ -87,12 +89,17 @@ REP li j # li[aàeèéiíoòóuú]>j.
 REP s  ŧ # sion([aeio])$>ŧion(.), [aeiou](n)s(i)[aeio]$>.(n)ŧ(i).
 REP ti c # ti[aàeèéiíoòóuú]>c.
 REP di ɉ # di[aàeèéiíoòóuú]>ɉ.
-# REP ^v[aàeèéiíoòóuú]>‘.
-# REP ^g[aàeèéiíoòóuú]>‘.
+REP ^v ‘ # ^v[aàeèéiíoòóuú]>‘.
+REP ^g ‘ # ^g[aàeèéiíoòóuú]>‘.
 # REP [aàeèéiíoòóuú]v[aàeèéiíoòóuú]>..
 # REP [aàeèéiíoòóuú]d[aàeèéiíoòóuú]>..
 # REP [aàeèéiíoòóuú][aàeèéiíoòóuú]>.v.
 # REP [aàeèéiíoòóuú][aàeèéiíoòóuú]>.d.
+# REP ’[eèéaàoòóiínrlƚtskdpvmuúgxfŧbjɉñđch]>’_
+
+
+# avoid wrong spelling of letterwords in full uppercase/lowercase
+KEEPCASE Z  # km, GHz, DVD, ...
 
 
 SFX A Y 122694 # vèrbi
