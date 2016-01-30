@@ -31,12 +31,10 @@ LANG vec
 # define char set
 SET UTF-8
 
-TRY eèéaàoòóiínrlƚtskdpvmuúgxfŧbjɉñđchEÈÉAÀOÒÓIÍNRLȽTSKDPVMUÚGXFŦBJɈÑĐCH
-KEY esdr|redft|trfg|uhji|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà|àòèù|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìè
+TRY -'‘’eèéaàoòóiínrlƚtskdpvmuúgxfŧbjɉñđchEÈÉAÀOÒÓIÍNRLȽTSKDPVMUÚGXFŦBJɈÑĐCH
+KEY esdr|redft|trfg|uhji|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà-|àòèù-|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìè'
 
 WORDCHARS -‒–—―'‘’
-
-#IGNORE '
 
 FLAG UTF-8
 # use double chars as flags
@@ -102,7 +100,7 @@ REP ^g ‘ # ^g[aàeèéiíoòóuú]>‘.
 KEEPCASE Z  # km, GHz, DVD, ...
 
 
-SFX A Y 122694 # vèrbi
+SFX A N 122694 # vèrbi
 SFX A abalar àbala/SFI kabalar
 SFX A abalar àbale kabalar
 SFX A abalar àbale/JKS kabalar
@@ -122797,7 +122795,7 @@ SFX A đer to lèđer
 SFX A đer to rđer
 SFX A đer to/J lèđer
 SFX A đer to/J rđer
-SFX B Y 8 # ajetivi
+SFX B N 8 # ajetivi
 SFX B 0 a [^aieo]
 SFX B 0 e [^aieo]
 SFX B 0 i [^aieo]
@@ -122806,14 +122804,14 @@ SFX B io i io
 SFX B o a o
 SFX B o e o
 SFX B o i [^i]o
-SFX C Y 2 # ajetivi
+SFX C N 2 # ajetivi
 SFX C a e a
 SFX C a i a
-SFX D Y 3 # ajetivi
+SFX D N 3 # ajetivi
 SFX D 0 e [^aieo]
 SFX D 0 i [^aieo]
 SFX D e i e
-SFX E Y 35 # prokonplementari
+SFX E N 35 # prokonplementari
 SFX E 0 -ge
 SFX E 0 -gela
 SFX E 0 -gele
@@ -122849,7 +122847,7 @@ SFX E 0 -vele
 SFX E 0 -veli
 SFX E 0 -velo
 SFX E 0 -vene
-SFX F Y 18 # prokonplementari
+SFX F N 18 # prokonplementari
 SFX F 0 -ge [^a]
 SFX F 0 -la [^a]
 SFX F 0 -le [^a]
@@ -122868,7 +122866,7 @@ SFX F a e-me a
 SFX F a e-ne a
 SFX F a e-te a
 SFX F a e-ve a
-SFX G Y 10 # prokonplementari
+SFX G N 10 # prokonplementari
 SFX G 0 ge
 SFX G 0 la
 SFX G 0 le
@@ -122879,7 +122877,7 @@ SFX G 0 ne
 SFX G 0 se
 SFX G 0 te
 SFX G 0 ve
-SFX H Y 25 # prokonplementari
+SFX H N 25 # prokonplementari
 SFX H 0 gela
 SFX H 0 gele
 SFX H 0 geli
@@ -122905,7 +122903,7 @@ SFX H 0 vele
 SFX H 0 veli
 SFX H 0 velo
 SFX H 0 vene
-SFX I Y 18 # prokonplementari
+SFX I N 18 # prokonplementari
 SFX I 0 ge [^a]
 SFX I 0 la [^a]
 SFX I 0 le [^a]
@@ -122924,7 +122922,7 @@ SFX I a eme a
 SFX I a ene a
 SFX I a ete a
 SFX I a eve a
-SFX J Y 22 # sonoriđaŧion konsonanti finali
+SFX J N 22 # sonoriđaŧion konsonanti finali
 SFX J b. p b[oei]
 SFX J c. c c[oei]
 SFX J d. t d[oei]
@@ -122947,7 +122945,7 @@ SFX J ŧ. ŧ ŧ[oei]
 SFX J ɉ. c ɉ[oei]
 SFX J ʃ. ʃ ʃ[oei]
 SFX J ʒ. ʃ ʒ[oei]
-SFX K Y 11 # interogativi
+SFX K N 11 # interogativi
 SFX K 0 -e
 SFX K 0 -e n
 SFX K 0 -i
@@ -122959,7 +122957,7 @@ SFX K 0 -nte [^n]
 SFX K 0 -nti [^n]
 SFX K 0 -te n
 SFX K 0 -ti n
-SFX L Y 10 # interogativi
+SFX L N 10 # interogativi
 SFX L mi e mi
 SFX L mi e nmi
 SFX L mi i mi
@@ -122970,7 +122968,7 @@ SFX L mi nte [^n]mi
 SFX L mi nti [^n]mi
 SFX L mi te nmi
 SFX L mi ti nmi
-SFX M Y 10 # interogativi
+SFX M N 10 # interogativi
 SFX M 0 -e
 SFX M 0 -e n
 SFX M 0 -i
@@ -122981,25 +122979,25 @@ SFX M 0 -nte [^n]
 SFX M 0 -nti [^n]
 SFX M 0 -te n
 SFX M 0 -ti n
-SFX N Y 5 # interogativi
+SFX N N 5 # interogativi
 SFX N i e ni
 SFX N i te ni
 SFX N i ti ni
 SFX N ni e ni
 SFX N ni i ni
-SFX O Y 3 # interogativi
+SFX O N 3 # interogativi
 SFX O 0 -stu
 SFX O 0 -to
 SFX O 0 -tu
-SFX P Y 2 # interogativi
+SFX P N 2 # interogativi
 SFX P tu stu tu
 SFX P u o u
-SFX Q Y 2 # interogativi
+SFX Q N 2 # interogativi
 SFX Q 0 -o
 SFX Q 0 -u
-SFX R Y 1 # interogativi
+SFX R N 1 # interogativi
 SFX R u o u
-SFX S Y 8 # interogativi
+SFX S N 8 # interogativi
 SFX S . e-la [ai]
 SFX S . e-le [ai]
 SFX S . e-li [ai]
@@ -123008,11 +123006,11 @@ SFX S 0 -la [^ai]
 SFX S 0 -le [^ai]
 SFX S 0 -li [^ai]
 SFX S 0 -lo [^ai]
-SFX T Y 3 # interogativi
+SFX T N 3 # interogativi
 SFX T o a o
 SFX T o e o
 SFX T o i o
-SFX U Y 8 # interogativi
+SFX U N 8 # interogativi
 SFX U ave ise-la rave
 SFX U ave ise-le rave
 SFX U ave ise-li rave
@@ -123021,7 +123019,7 @@ SFX U ave ísela rave
 SFX U ave ísele rave
 SFX U ave íseli rave
 SFX U ave íselo rave
-SFX V Y 7 # sostantivi plurali
+SFX V N 7 # sostantivi plurali
 SFX V . i [^i][ln]
 SFX V . i [ae]
 SFX V 0 i [^aieoln]
@@ -123029,19 +123027,19 @@ SFX V 0 i i[ln]
 SFX V 0 o [^aieoln]
 SFX V io i io
 SFX V o i [^i]o
-SFX W Y 4 # sostantivi plurali
+SFX W N 4 # sostantivi plurali
 SFX W 0 e [^aieo]
 SFX W 0 i [^aieo]
 SFX W a e a
 SFX W e i e
-SFX X Y 6 # piante e mistièri
+SFX X N 6 # piante e mistièri
 SFX X dor tor [aeiou]dor
 SFX X ol iol rol
 SFX X ol iòl rol
 SFX X ol òl rol
 SFX X tor dor [aeiou]tor
 SFX X èr ar èr
-SFX Y Y 10 # piante e mistièri
+SFX Y N 10 # piante e mistièri
 SFX Y 0 a [oò][lr]
 SFX Y 0 a ar
 SFX Y 0 e [oò][lr]
@@ -123390,7 +123388,7 @@ SFX Y 0 o èr
 
 # numerali - koletivi
 # dict: pèr
-SFX % Y 17
+SFX % N 17
 SFX % èxe    exena    dièxe
 SFX % úndexe undexena úndexe
 SFX % ódexe  odexena  dódexe
@@ -123442,7 +123440,7 @@ SFX % o      èr       meliardo
 # dict: C/£$
 # dict: D/£$
 # dict: M/£$
-SFX £ Y 10
+SFX £ N 10
 SFX £ 0 I    [IVXLCDM]
 SFX £ 0 II   [IVXLCDM]
 SFX £ 0 III  [VXLCDM]
@@ -123454,7 +123452,7 @@ SFX £ 0 VIII [XLCDM]
 SFX £ 0 IX   [XLCDM]
 SFX £ 0 X    I
 
-PFX $ Y 62
+PFX $ N 62
 PFX $ 0 X      [LC]
 PFX $ 0 L      X
 PFX $ 0 C      [XLCDM]

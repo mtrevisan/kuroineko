@@ -554,6 +554,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 		console.log('SFX ' + flag + ' Y ' + logs.length + (comment != undefined? ' # ' + comment: ''));
 		logs.sort().forEach(function(log){
+if(log.replace(/ [^ ]+$/, '').match(/mv/))
+	console.log('');
 			console.log(log);
 		});
 	};
