@@ -47,14 +47,14 @@ This is a bunch of utilities I put together. Unfortunately I miss some reference
 ### String Alignment <a id="string-alignment"></a>###
 Various string alignment algorithms. All of which has the same signature as explained below
 
-```
+```javascript
 var nw = new NeedlemanWunsch('abc', 'acb', function(a, b){ return (a === b? 0: 1); }, function(){ return 1; }, function(){ return 1; });
 var editOperations = nw.align();
 ```
 
 or with defaults cost functions
 
-```
+```javascript
 var nw = new NeedlemanWunsch('abc', 'acb');
 var editOperations = nw.align();
 ```
@@ -77,7 +77,7 @@ Various string distance algorithms like Levenshtein, and Damerau-Levenshtein.
 
 #### Levenshtein <a id="levenshtein"></a>####
 
-```
+```javascript
 var defaultCosts = {insertion: 1, deletion: 2, substitution: 0.5, transposition: 1};
 
 var edit = StringDistance.levenshteinEdit('abc', 'acb');
@@ -93,7 +93,7 @@ Where `edit` is an object in the form `{insertions: 0, deletions: 0, substitutio
 
 #### Damerau-Levenshtein <a id="damerau-levenshtein"></a>####
 
-```
+```javascript
 var defaultCosts = {insertion: 1, deletion: 2, substitution: 0.5, transposition: 1};
 
 var edit = StringDistance.damerauLevenshteinEdit('abc', 'acb');
@@ -113,7 +113,7 @@ Various algorithms for data clustering.
 
 #### Hierarchical clustering <a id="hierarchical-clustering"></a>####
 
-```
+```javascript
 var distanceMatrix = [[0, 1, 2], [undefined, 0, 3], [undefined, undefined, 4]];
 var header = ['a', 'b', 'c'];
 var tree = HierarchicalClusterer.cluster(distanceMatrix, header);
@@ -122,7 +122,7 @@ var tree = HierarchicalClusterer.cluster(distanceMatrix, header);
 #### OPTICS clustering <a id="optics-clustering"></a>####
 Ordering Points To Identify the Clustering Structure (OPTICS).
 
-```
+```javascript
 var pointsMatrix = [[0, 0], [0, 0.5], [0, -0.8], [1, 0], [-1, 0.5]];
 var result = OPTICSClusterer.cluster(pointsMatrix, 0.9, 2);
 ```
@@ -134,7 +134,7 @@ Various coders algorithms like arithmetic, and Elias.
 #### Arithmetic coder <a id="arithmetic-coder"></a>####
 Encoding process:
 
-```
+```javascript
 var msg = 'This method will be called exactly once for each symbol being encoded or decoded';
 //create model of order 0
 var model = CoderDriver.create(HighOrderModelFactory.createFrom(BasicModel, 0));
@@ -147,7 +147,7 @@ var buffer = model.encode(msg);
 
 Decoding process:
 
-```
+```javascript
 var itr = buffer.getIterator();
 var out = model.decode(itr);
 ```
@@ -156,7 +156,7 @@ var out = model.decode(itr);
 #### Elias delta coder <a id="elias-delta-coder"></a>####
 Encoding process:
 
-```
+```javascript
 var fixedCounts = {
 	'T': 5,
 	'h': 1,
@@ -176,14 +176,14 @@ var buffer = EliasDeltaCoder.encode(data);
 
 Decoding process:
 
-```
+```javascript
 var itr = buffer.getIterator();
 var out = EliasDeltaCoder.decode(itr);
 ```
 
 ### Data Mining <a id="data-mining"></a>###
 
-```
+```javascript
 var attributes = [];
 for(var i = 0; i < 38; i ++)
 	attributes.push({name: i18nResources.variant.attributes[i], discrete: true});
@@ -280,7 +280,7 @@ dt.buildTree();
 Mersenne Twister pseudorandom number generator.
 Not cryptographically secure.
 
-```
+```javascript
 //if no seed is defined, seed randomly
 var seed = 123;
 var mt = new MersenneTwister(seed);
@@ -307,7 +307,7 @@ mt.seedArray(key);
 #### Random <a id="random"></a>####
 A Non-Uniform Random Generator using Mersenne-Twister.
 
-```
+```javascript
 Random.getRandomValueWithGivenDistribution({a: 12, b: 1, c: 10});
 ```
 
@@ -324,7 +324,7 @@ bla
 #### Priority Queue <a id="priority-queue"></a>####
 Implementation of the Fibonacci heap data structure.
 
-```
+```javascript
 var pq1 = new PriorityQueue();
 pq1.add(0, 'first');
 var pq2 = new PriorityQueue();
@@ -344,7 +344,7 @@ pq1.deleteNode('first');
 #### Tarjan's Strongly Connected Components <a id="tarjan-strongly-connected-components"></a>####
 This is just for checking if a directed graph contains a cycle using Tarjan's algorithm.
 
-```
+```javascript
 var t = new Tarjan();
 t.addVertex('a', ['b', 'c']);
 t.addVertex('b', ['d']);
@@ -359,7 +359,7 @@ bla
 
 #### Trie <a id="trie"></a>####
 
-```
+```javascript
 var t = new Trie();
 t.add('abc');
 t.add('abb');
