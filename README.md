@@ -1,6 +1,5 @@
 # kuroineko library
-[![bitHound Overall Score](https://www.bithound.io/github/mtrevisan/library/badges/score.svg)](https://www.bithound.io/github/mtrevisan/library)
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://www.bithound.io/github/mtrevisan/library)
+[![bitHound Overall Score](https://www.bithound.io/github/mtrevisan/library/badges/score.svg)](https://www.bithound.io/github/mtrevisan/library)[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://www.bithound.io/github/mtrevisan/library)
 =========
 This is a bunch of utilities I put together. Unfortunately I miss some references to the original projects. I beg pardon, and whenever I found out the original ones I'll update my references.
 
