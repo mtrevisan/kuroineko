@@ -171,8 +171,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		]
 	};
 
-	var strangeProblem = [];
-
 
 	/**
 	 * @param {List} List of verbs generated using Verb
@@ -259,9 +257,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 		//dict: -er/PLANTS_AND_CRAFTS, -rol/PLANTS_AND_CRAFTS, -dor/PLANTS_AND_CRAFTS, -tor/PLANTS_AND_CRAFTS
 		printReductions(plantsAndCrafts, 'piante e mistièri');
-
-
-		printStrangeProblem(strangeProblem);
 	};
 
 	var generateTheme = function(verbs, infinitiveThemes, theme, originTheme, flags, k){
@@ -418,17 +413,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		setElements(logs, ArrayHelper.unique(lgs));
 
 
-		//extract logs with 'problems'
-		logs.forEach(function(log, idx){
-			m = log.match(/^[^ ]+? [^ ]+? ([^ ]+?) ([^ ]+?) ([^ ]+)$/);
-			if(m && m[1] == m[3]){
-				strangeProblem.push(m[2]);
-				logs[idx] = '';
-			}
-		});
-		logs = logs.filter(function(log){ return log.length; });
-
-
 		if(logs.length){
 			if(printFlagsAsNumber)
 				printSuffixes(logs, theme, 'vèrbi: tèma T' + theme);
@@ -531,16 +515,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 					printSuffixes(logs, flag, comment);
 			});
 		});
-	};
-
-	/** @private */
-	var printStrangeProblem = function(list){
-		if(list.length){
-			console.log('# strange problem (to be inserted into dict file!)');
-			list.forEach(function(log){
-				console.log(log);
-			});
-		}
 	};
 
 	/** @private */

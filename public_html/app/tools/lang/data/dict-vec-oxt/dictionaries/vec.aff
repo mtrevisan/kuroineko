@@ -1,7 +1,7 @@
 # Diŧionario vèneto
 #
+# Hunspell affix file
 # Copyright (C) 2016 Màuro Trevixan
-#
 # Version 1.0.0 (28/01/2016) (DD/MM/YYYY)
 #
 # This file is distributed under GPL license.
@@ -28,29 +28,37 @@ VERSION 1.0.0 (29/01/2016)
 HOME http://parnodexmentegar.orgfree.com/
 LANG vec
 
+# define char set
 SET UTF-8
-TRY eèéaàoòóiínrlƚtskdpvmuúgxfŧbjɉñđchEÈÉAÀOÒÓIÍNRLȽTSKDPVMUÚGXFŦBJɈÑĐCH
 
-WORDCHARS '‘’\/
+TRY eèéaàoòóiínrlƚtskdpvmuúgxfŧbjɉñđchEÈÉAÀOÒÓIÍNRLȽTSKDPVMUÚGXFŦBJɈÑĐCH
+KEY esdr|redft|trfg|uhji|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà|àòèù|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìè
+
+WORDCHARS -'‘’
 
 IGNORE '
 
 #FLAG UTF-8
+# use double chars as flags
 #FLAG long
 
 
+# avoid wrong spelling of letterwords in full uppercase/lowercase
 KEEPCASE Z  # km/Z, GHz/Z, ...
 
-# forbid uppercase characters at compound word bounds
-#CHECKCOMPOUNDCASE
 
-
-BREAK 5
+# define break points for breaking words and checking word parts separately
+BREAK 2
 BREAK &
 BREAK /
-BREAK '
-BREAK ‘
-BREAK ’
+
+# suggest the right forms for words which incorrectly choose the wrong letter from a related set more than once in a word
+MAP 5
+MAP eéè
+MAP aáà
+MAP iíì
+MAP oóò
+MAP uúù
 
 # replace input characters
 ICONV 8
@@ -64,11 +72,12 @@ ICONV nh ñ
 ICONV th ŧ
 
 # frequently switched character groups
-REP 13
+REP 14
 REP ^' ‘
 REP ^’ ‘
 REP '$ ’
 REP ‘$ ’
+REP ci c # ci[aàeèéiíoòóuú]>c.
 REP d  đ # đ[aàeèéiíoòóuú]>d.
 REP x  đ
 REP j  ɉ
