@@ -134,7 +134,11 @@ define(['tools/data/ArrayHelper'], function(ArrayHelper){
 				b = word.slice(i);
 				c = b.slice(1);
 
-				if(b != ''){
+				if(b == '')
+					//inserts (remaining set for b == ''): b[0]|alphabet[j]b[0]
+					for(j = 0; j < size_j; j ++)
+						fnAddToSet(a + this.alphabet[j] + b, words[word] + getModelProbabilityLog(i, this.alphabet[j], 1), candidates);
+				else{
 					//deletes: b[0]|_
 					fnAddToSet(a + c, words[word] + getModelProbabilityLog(i), candidates);
 
@@ -157,10 +161,6 @@ define(['tools/data/ArrayHelper'], function(ArrayHelper){
 						fnAddToSet(a + this.alphabet[j] + b, words[word] + getModelProbabilityLog(i, this.alphabet[j], 1), candidates);
 					}
 				}
-				else
-					//inserts (remaining set for b == ''): b[0]|alphabet[j]b[0]
-					for(j = 0; j < size_j; j ++)
-						fnAddToSet(a + this.alphabet[j] + b, words[word] + getModelProbabilityLog(i, this.alphabet[j], 1), candidates);
 			}
 
 			if(!cumulateOnly && !this.isCorrect(word))

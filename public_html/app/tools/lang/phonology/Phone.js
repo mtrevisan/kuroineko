@@ -382,7 +382,14 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 			if(ObjectHelper.isString(f))
 				output.push(f);
-			else if(!ignoreSegments){
+			else if(ignoreSegments){
+				tmp = [];
+				Object.keys(f).forEach(function(element){
+					tmp.push((f[element] == 1 ? '+' : (f[element] == -1? '-': '0')) + element);
+				});
+				output.push('[' + tmp.sort().join(',') + ']');
+			}
+			else{
 				var segment = convertFeaturesIntoSegment(f, multipleElements);
 				if(segment){
 					tmp = {
@@ -414,13 +421,6 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 					output.push(result);
 				}
-			}
-			else{
-				tmp = [];
-				Object.keys(f).forEach(function(element){
-					tmp.push((f[element] == 1 ? '+' : (f[element] == -1? '-': '0')) + element);
-				});
-				output.push('[' + tmp.sort().join(',') + ']');
 			}
 		});
 

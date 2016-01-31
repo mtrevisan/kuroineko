@@ -170,10 +170,7 @@ var AMDLoader = (function(doc){
 
 		//console.log('require module' + (dependencies.length? ' with dependencies [' + dependencies.map(function(dep){ return dep.replace(/.+\//, ''); }).join(', ') + ']': '') + ', remains [' + Object.keys(promises).filter(function(k){ return !!resolves[k]; }).map(function(k){ return k.replace(/.+\//, ''); }).join(', ') + ']');
 
-		if(!dependencies.length)
-			//module has no dependencies, run definition now
-			definition.apply(this);
-		else{
+		if(dependencies.length){
 			//resolve urls
 			dependencies = dependencies.map(normalizeURL);
 
@@ -196,6 +193,9 @@ var AMDLoader = (function(doc){
 				throw new Error('Module name "' + dependencies[0] + '" has not been loaded yet.');
 			}
 		}
+		else
+			//module has no dependencies, run definition now
+			definition.apply(this);
 	};
 
 	/** @private */
