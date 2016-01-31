@@ -51,7 +51,7 @@ define(function(){
 		UPPER_MASK = 0x80000000,
 		F = 1812433253;
 
-	/** @private */
+	/** @private * /
 	var is64bitOS = function(){
 		return !!navigator.userAgent.match(/x86[_-]64|x64_64|Win64|x64;|amd64|AMD64|WOW64/);
 	};
