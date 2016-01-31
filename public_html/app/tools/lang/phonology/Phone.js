@@ -16,7 +16,9 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	/** @constant */
 		REGEX_UNICODE_COMPOUND_WITH_DIACRITICS = /^([^\u02B0\u02B2\u02B7\u02BC\u02C8\u02D0\u02DE\u02E0\u02E4\u0303\u031D-\u0320\u0324\u0325\u0329\u032A\u0330\u0334\u033A\u033B]+)([\u02B0\u02B2\u02B7\u02BC\u02C8\u02D0\u02DE\u02E0\u02E4\u0303\u031D-\u0320\u0324\u0325\u0329\u032A\u0330\u0334\u033A\u033B]*)$/,
 	/** @constant */
-		REGEX_UNICODE_DIACRITICS = /[\u02B0\u02B2\u02B7\u02BC\u02C8\u02D0\u02DE\u02E0\u02E4\u0303\u031D-\u0320\u0324\u0325\u0329\u032A\u0330\u0334\u033A\u033B]/g;
+		REGEX_UNICODE_DIACRITICS = /[\u02B0\u02B2\u02B7\u02BC\u02C8\u02D0\u02DE\u02E0\u02E4\u0303\u031D-\u0320\u0324\u0325\u0329\u032A\u0330\u0334\u033A\u033B]/g,
+	/** @constant */
+		MAX_DIACRITICS_IN_COMPOUND = 2;
 
 	/**
 	 * @constant
@@ -448,21 +450,34 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 			if(hasEquivalentFeatures(features, segments[phoneme], !multipleElements))
 				matches.push(phoneme);
 		});
-		if(!matches.length && useDiacritics)
-			Object.keys(segments).forEach(function(phoneme){
-				Object.keys(diacritics).forEach(function(k){
-					if(hasEquivalentFeatures(diacritics[k][1], segments[phoneme])){
-						var diacritized = combineFeatures(segments[phoneme], diacritics[k][0]);
+
+		if(useDiacritics){
+			var fn = function(base, phoneme, k){
+				var equivalences = [];
+				Object.keys(diacritics).forEach(function(d){
+					if(hasEquivalentFeatures(diacritics[d][1], base)){
+						var diacritized = combineFeatures(base, diacritics[d][0]);
 						if(hasEquivalentFeatures(features, diacritized, !multipleElements))
-							matches.push(phoneme + k);
+							matches.push(phoneme + d);
+						else if(k && !matches.length)
+							equivalences.push({base: diacritized, phoneme: phoneme + d});
 					}
 				});
-			});
-		//FIXME consider multiple diacritic combined together
-//		if(!matches.length && useDiacritics){
-			//..
-//		}
-		//FIXME arbitrarily choose the first element
+
+				if(k && !matches.length)
+					equivalences.forEach(function(e){
+						fn(e.base, e.phoneme, k - 1);
+					});
+			};
+
+			if(!matches.length)
+				//consider at most a double diacritic added to phoneme
+				Object.keys(segments).forEach(function(phoneme){
+					fn(segments[phoneme], phoneme, MAX_DIACRITICS_IN_COMPOUND - 1);
+				});
+		}
+
+		//NOTE: arbitrarily choose the first element!
 		return (multipleElements? matches: matches[0]);
 	};
 
