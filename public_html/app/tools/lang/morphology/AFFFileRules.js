@@ -400,8 +400,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				lgs.push(filtered.length > 1? filtered.reduce(function(result, filter){
 					var res = extractFlags2(result),
 						fil = extractFlags2(filter),
-						flags = uniteFlags(res, fil);
-					return result.replace(/\/.+ (.+)$/, printFlags2(flags) + ' $1');
+						flgs = uniteFlags(res, fil);
+					return result.replace(/\/.+ (.+)$/, printFlags2(flgs) + ' $1');
 				}, log): log);
 			}
 			else
