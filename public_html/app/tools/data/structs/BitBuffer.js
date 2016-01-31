@@ -9,14 +9,14 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	var BITS_TO_GO = 8;
 
 
-	var Constructor = function(hex, size){
-		this.reset(hex, size);
+	var Constructor = function(hex, length){
+		this.reset(hex, length);
 	};
 
 	Constructor.BITS_TO_GO = BITS_TO_GO;
 
 
-	var reset = function(hex, size){
+	var reset = function(hex, length){
 		this.buffer = [];
 		this.current = 0;
 		this.bitsToGo = BITS_TO_GO;
@@ -35,12 +35,12 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 				for(i = 0; i < len; i += 2)
 					this.buffer.push(parseInt(hex.substr(i, 2), 16));
 
-			this.bits = size;
+			this.bits = length;
 
-			size %= BITS_TO_GO;
-			if(size){
+			length %= BITS_TO_GO;
+			if(length){
 				this.current = this.buffer.pop();
-				this.bitsToGo -= size;
+				this.bitsToGo -= length;
 			}
 		}
 	};
@@ -137,9 +137,9 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	/** Returns a hexadecimal string representation of the BitBuffer with bits in logical order. */
 	var toHexString = function(){
 		var str = [],
-			size = this.buffer.length,
+			length = this.buffer.length,
 			i;
-		for(i = 0; i < size; i ++)
+		for(i = 0; i < length; i ++)
 			str.push(leftPad(this.buffer[i]));
 		return str.join('');
 	};

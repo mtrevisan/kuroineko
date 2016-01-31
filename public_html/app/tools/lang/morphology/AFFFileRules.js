@@ -1874,7 +1874,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			paradigm.push({theme: theme, infinitive: infinitive, origin: origin, suffixes: [data]});
 		else{
 			re = new RegExp('^' + data.replace(PATTERN_FLAGS, '') + PATTERN_FLAGS.toString().replace(/^\/|\/$/, ''));
-			j = ArrayHelper.findIndex(paradigm[i].suffixes, function(suffix){ return suffix.match(re); });
+			j = ArrayHelper.findIndex(paradigm[i].suffixes, function(suff){ return suff.match(re); });
 			if(j < 0)
 				paradigm[i].suffixes.push(data);
 			else{
