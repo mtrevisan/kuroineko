@@ -366,7 +366,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		compactEqualSuffixes(paradigm);
 
 		constraintToInfinitives(paradigm, origins);
-		compactEqualSuffixes(paradigm);
 
 		if(!deriveAllFormsFromInfinitive){
 			adjectives[theme] = adjectives[theme] || [];
