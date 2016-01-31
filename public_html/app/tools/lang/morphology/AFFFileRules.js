@@ -918,9 +918,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			partitioningResults = {true: [], false: []};
 			Object.keys(part).forEach(function(k){
 				re = new RegExp(k + common + '$');
-				//NOTE: this k == '^', the latter if(k != '^'), and the double call of compactEqualSuffixes above,
-				//are used to permit the aggregation of abitar with dexabitar
-				partitioningResults[k == '^' || diff.some(function(el){ return el.match(re); })].push(k);
+				partitioningResults[diff.some(function(el){ return el.match(re); })].push(k);
 			});
 
 			if(partitioningResults[false].length){
@@ -935,11 +933,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				obj.origins = parents[false];
 			}
 			else{
-				var k = partitioningResults[true].shift();
-				if(k != '^'){
-					obj.origins = part[k];
-					stack.push(obj);
-				}
+				obj.origins = part[partitioningResults[true].shift()];
+				stack.push(obj);
 			}
 
 			if(partitioningResults[true].length)
