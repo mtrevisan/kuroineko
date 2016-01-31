@@ -110,7 +110,7 @@ define(function(){
 		this.mt[0] = s >>> 0;
 		for(var i = 1; i < N; i ++){
 			//MT[i] = lowest w bits of (f * (MT[i-1] xor (MT[i-1] >> (w - 2))) + i)
-			seed = this.mt[i - 1] ^ (this.mt[i - 1] >>> (W - 2));
+			s = this.mt[i - 1] ^ (this.mt[i - 1] >>> (W - 2));
 			this.mt[i] = (((((s & 0xFFFF0000) >>> 16) * F) << 16) + (s & 0x0000FFFF) * F) + i;
 			//See Knuth TAOCP Vol2. 3rd Ed. P.106 for multiplier
 			//In the previous versions, MSBs of the seed affect only MSBs of the array MT[]
