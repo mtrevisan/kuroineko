@@ -128,9 +128,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		2: [
 			//[PRONOMENAL_MARK_2, '0>l[oaie]', '0>me/' + PRONOMENAL_MARK_RESERVED_1, '0>te/' + PRONOMENAL_MARK_RESERVED_1, '0>ve/' + PRONOMENAL_MARK_RESERVED_1, '0>se/' + PRONOMENAL_MARK_RESERVED_1, '0>ge/' + PRONOMENAL_MARK_RESERVED_1, '0>ne'],
 			//[PRONOMENAL_MARK_RESERVED_1, '0>ne', '0>l[oaie]'],
-			[PRONOMENAL_MARK_2, '0>l[oaie]', '0>me', '0>te', '0>ve', '0>se', '0>ge', '0>ne'],
-			[PRONOMENAL_MARK_3, '0>mene', '0>mel[oaie]', '0>tene', '0>tel[oaie]', '0>vene', '0>vel[oaie]', '0>sene', '0>sel[oaie]', '0>gene', '0>gel[oaie]'],
-			[PRONOMENAL_IMPERATIVE_MARK_2, '0>me|[^a]', '0>ne|[^a]', '0>te|[^a]', '0>ve|[^a]', '0>l[oaie]|[^a]', '0>ge|[^a]', 'a>eme', 'a>ene', 'a>ete', 'a>eve', 'a>el[oaie]', 'a>ege']
+			[PRONOMENAL_MARK_2, 'me>l[oaie]', 'me>te', 'me>ve', 'me>se', 'me>ge', 'me>ne'],
+			[PRONOMENAL_MARK_3, 'mene>mel[oaie]', 'mene>tene', 'mene>tel[oaie]', 'mene>vene', 'mene>vel[oaie]', 'mene>sene', 'mene>sel[oaie]', 'mene>gene', 'mene>gel[oaie]'],
+			[PRONOMENAL_IMPERATIVE_MARK_2, 'me>ne|[^a]', 'me>te|[^a]', 'me>ve|[^a]', 'me>l[oaie]|[^a]', 'me>ge|[^a]', 'ame>ene', 'ame>ete', 'ame>eve', 'ame>el[oaie]', 'ame>ege']
 		]
 	};
 
@@ -1012,8 +1012,8 @@ if(log.replace(/ [^ ]+$/, '').match(/mv/))
 
 			if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'r', null, null, '/' + PRONOMENAL_MARK + MARKER_FLAGS);
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'rme', /me$/, '', '/' + PRONOMENAL_MARK_2);
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'rmelo', /melo$/, '', '/' + PRONOMENAL_MARK_3);
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'rme', null, null, '/' + PRONOMENAL_MARK_2);
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'rmene', null, null, '/' + PRONOMENAL_MARK_3);
 			}
 			else
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'r', null, null, '/' + MARKER_FLAGS);
@@ -1142,20 +1142,20 @@ if(log.replace(/ [^ ]+$/, '').match(/mv/))
 
 			if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'ndo', null, null, '/' + PRONOMENAL_MARK + MARKER_FLAGS);
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'ndome', /me$/, '', '/' + PRONOMENAL_MARK_2);
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'ndomelo', /melo$/, '', '/' + PRONOMENAL_MARK_3);
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'ndome', null, null, '/' + PRONOMENAL_MARK_2);
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'ndomene', null, null, '/' + PRONOMENAL_MARK_3);
 			}
 			else
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'ndo', null, null, '/' + MARKER_FLAGS);
 			if(verb.irregularity.eser){
 				insert(paradigm, theme, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'èser'.length) + 'siàndo');
-//				insert(paradigm, theme, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'èser'.length) + 'siàndome', /me$/, '', '/' + PRONOMENAL_MARK_2);
-//				insert(paradigm, theme, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'èser'.length) + 'siàndomelo', /melo$/, '', '/' + PRONOMENAL_MARK_3);
+//				insert(paradigm, theme, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'èser'.length) + 'siàndome', null, null, '/' + PRONOMENAL_MARK_2);
+//				insert(paradigm, theme, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'èser'.length) + 'siàndomene', null, null, '/' + PRONOMENAL_MARK_3);
 			}
 			else if(verb.irregularity.aver){
 				insert(paradigm, theme, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'aver'.length) + 'abiàndo');
-//				insert(paradigm, theme, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'aver'.length) + 'abiàndome', /me$/, '', '/' + PRONOMENAL_MARK_2);
-//				insert(paradigm, theme, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'aver'.length) + 'abiàndomelo', /melo$/, '', '/' + PRONOMENAL_MARK_3);
+//				insert(paradigm, theme, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'aver'.length) + 'abiàndome', null, null, '/' + PRONOMENAL_MARK_2);
+//				insert(paradigm, theme, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'aver'.length) + 'abiàndomene', null, null, '/' + PRONOMENAL_MARK_3);
 			}
 
 			//Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug.
@@ -1165,8 +1165,8 @@ if(log.replace(/ [^ ]+$/, '').match(/mv/))
 					themeT2 = themes.themeT2.replace(/à$/, 'é');
 					if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
 						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + PRONOMENAL_MARK + MARKER_FLAGS);
-						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndome', /me$/, '', '/' + PRONOMENAL_MARK_2);
-						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndomelo', /melo$/, '', '/' + PRONOMENAL_MARK_3);
+						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndome', null, null, '/' + PRONOMENAL_MARK_2);
+						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndomene', null, null, '/' + PRONOMENAL_MARK_3);
 					}
 					else
 						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + MARKER_FLAGS);
@@ -1175,8 +1175,8 @@ if(log.replace(/ [^ ]+$/, '').match(/mv/))
 					themeT2 = themes.themeT2.replace(/í$/, 'é');
 					if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
 						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + PRONOMENAL_MARK + MARKER_FLAGS);
-						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndome', /me$/, '', '/' + PRONOMENAL_MARK_2);
-						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndomelo', /melo$/, '', '/' + PRONOMENAL_MARK_3);
+						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndome', null, null, '/' + PRONOMENAL_MARK_2);
+						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndomene', null, null, '/' + PRONOMENAL_MARK_3);
 					}
 					else
 						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + MARKER_FLAGS);
@@ -1372,14 +1372,14 @@ if(log.replace(/ [^ ]+$/, '').match(/mv/))
 			var conj = getIrregularVerbConjugation(type, verb);
 
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT5, null, null, '/' + PRONOMENAL_IMPERATIVE_MARK);
-			insert(paradigm, theme, verb.infinitive, origin, themes.themeT5 + 'me', /me$/, '', '/' + PRONOMENAL_IMPERATIVE_MARK_2);
+			insert(paradigm, theme, verb.infinitive, origin, themes.themeT5 + 'me', /ame$/, 'eme', '/' + PRONOMENAL_IMPERATIVE_MARK_2);
 			if(conj == 2){
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT5.replace(/i?é$/, 'í'), null, null, '/' + PRONOMENAL_IMPERATIVE_MARK);
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT5.replace(/i?é$/, 'í') + 'me', /me$/, '', '/' + PRONOMENAL_IMPERATIVE_MARK_2);
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT5.replace(/i?é$/, 'í') + 'me', /ame$/, 'eme', '/' + PRONOMENAL_IMPERATIVE_MARK_2);
 			}
 			else{
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT5.replace(/[èí]$/, 'é'), null, null, '/' + PRONOMENAL_IMPERATIVE_MARK);
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT5.replace(/i?é$/, 'í') + 'me', /me$/, '', '/' + PRONOMENAL_IMPERATIVE_MARK_2);
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT5.replace(/i?é$/, 'í') + 'me', /ame$/, 'eme', '/' + PRONOMENAL_IMPERATIVE_MARK_2);
 			}
 		}
 	};
@@ -1456,8 +1456,8 @@ if(log.replace(/ [^ ]+$/, '').match(/mv/))
 			if(verb.conjugation == 3){
 				if(!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
 					insert(paradigm, theme, verb.infinitive, origin, themes.themeT7 + 'ndo', null, null, '/' + PRONOMENAL_MARK);
-					insert(paradigm, theme, verb.infinitive, origin, themes.themeT7 + 'ndome', /me$/, '', '/' + PRONOMENAL_MARK_2);
-					insert(paradigm, theme, verb.infinitive, origin, themes.themeT7 + 'ndomelo', /melo$/, '', '/' + PRONOMENAL_MARK_3);
+					insert(paradigm, theme, verb.infinitive, origin, themes.themeT7 + 'ndome', null, null, '/' + PRONOMENAL_MARK_2);
+					insert(paradigm, theme, verb.infinitive, origin, themes.themeT7 + 'ndomene', null, null, '/' + PRONOMENAL_MARK_3);
 				}
 				else
 					insert(paradigm, theme, verb.infinitive, origin, themes.themeT7 + 'ndo');
@@ -1674,7 +1674,7 @@ if(log.replace(/ [^ ]+$/, '').match(/mv/))
 
 			expandForm(themes.themeT9).forEach(function(t){
 				insert(paradigm, theme, verb.infinitive, origin, t, null, null, '/' + PRONOMENAL_IMPERATIVE_MARK + MARKER_FLAGS);
-				insert(paradigm, theme, verb.infinitive, origin, t + 'me', /me$/, '', '/' + PRONOMENAL_IMPERATIVE_MARK_2);
+				insert(paradigm, theme, verb.infinitive, origin, t + 'me', /ame$/, 'eme', '/' + PRONOMENAL_IMPERATIVE_MARK_2);
 			});
 		}
 	};
