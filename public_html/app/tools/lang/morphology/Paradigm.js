@@ -654,10 +654,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 	var visit = function(obj, funct, id){
 		for(var key in obj)
 			if(obj.hasOwnProperty(key)){
-				if(!ObjectHelper.isString(obj[key]))
-					visit(obj[key], funct, (id? id + '.' + key: key));
-				else
+				if(ObjectHelper.isString(obj[key]))
 					funct(obj, key, id);
+				else
+					visit(obj[key], funct, (id? id + '.' + key: key));
 			}
 	};
 

@@ -1686,13 +1686,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				origins.push(origin);
 
 			expandForm(themes.themeT10).forEach(function(t){
-				if(!themes.themeT8){
-					insert(paradigm, theme, verb.infinitive, origin, t, null, null, '/' + INTERROGATIVE_MARK_3 + MARKER_FLAGS);
-					insert(paradigm, theme, verb.infinitive, origin, t.replace(/[ai]$/, 'e') + 'lo', null, null, '/' + INTERROGATIVE_MARK_3_2);
-					if(t.match(/[^aeiouàèéíòóú]e$/))
-						insert(paradigm, theme, verb.infinitive, origin, t, null, null, '/' + FINAL_CONSONANT_VOICING_MARK);
-				}
-				else{
+				if(themes.themeT8){
 					var third = themes.themeT8 + (!verb.irregularity.verb.match(/darStarFar|s?aver/)? (verb.irregularity.eser? 'é': 'e'): '');
 					if(t != third){
 						insert(paradigm, theme, verb.infinitive, origin, t, null, null, '/' + INTERROGATIVE_MARK_3 + MARKER_FLAGS);
@@ -1700,6 +1694,12 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 						if(t.match(/[^aeiouàèéíòóú]e$/))
 							insert(paradigm, theme, verb.infinitive, origin, t, null, null, '/' + FINAL_CONSONANT_VOICING_MARK);
 					}
+				}
+				else{
+					insert(paradigm, theme, verb.infinitive, origin, t, null, null, '/' + INTERROGATIVE_MARK_3 + MARKER_FLAGS);
+					insert(paradigm, theme, verb.infinitive, origin, t.replace(/[ai]$/, 'e') + 'lo', null, null, '/' + INTERROGATIVE_MARK_3_2);
+					if(t.match(/[^aeiouàèéíòóú]e$/))
+						insert(paradigm, theme, verb.infinitive, origin, t, null, null, '/' + FINAL_CONSONANT_VOICING_MARK);
 				}
 			});
 		}
