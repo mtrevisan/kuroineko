@@ -92,7 +92,9 @@ require(['tools/data/ArrayHelper'], function(ArrayHelper){
 	});
 
 	QUnit.test('partition', function(assert){
-		var result = ArrayHelper.partition(['sss', 'ttt', 'foo', 'bars'], function(value){ return (value.indexOf('s') >= 0); });
+		var result = ArrayHelper.partition(['sss', 'ttt', 'foo', 'bars'], function(value){
+			return (value.indexOf('s') >= 0);
+		});
 
 		assert.deepEqual(result, {'true': ['sss', 'bars'], 'false': ['ttt', 'foo']});
 	});
