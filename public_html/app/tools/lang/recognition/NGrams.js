@@ -17,7 +17,7 @@ define(function(){
 		SENTENCE_DELIMITER = /([,;:.…¿?¡!"“”«»‹›\[\]\(\)\{\}])/g;
 
 	var UNSEEN_NGRAM_DISTANCE = 2000;
-	var UNSEEN_NGRAM_LOG_PROBABILITY = -7;
+//	var UNSEEN_NGRAM_LOG_PROBABILITY = -7;
 
 
 	var Constructor = function(min, max){

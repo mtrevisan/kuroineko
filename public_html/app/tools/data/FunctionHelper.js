@@ -42,15 +42,15 @@ define(function(){
 		var n = func.length - args.length,
 			savedAccumulator = Array.prototype.slice.apply(args);
 
-		var accumulator = function(moreArgs, sa, n){
+		var accumulator = function(moreArgs, sa, nn){
 			var savedAccumulatorPrev = sa.slice(0),
-				nPrev = n;
-			for(var i = 0, size = moreArgs.length; i < size; i ++, n --)
+				nPrev = nn;
+			for(var i = 0, size = moreArgs.length; i < size; i ++, nn --)
 				sa.push(moreArgs[i]);
-			if(n)
+			if(nn)
 				return function(){
 					//arguments are params, so closure bussiness is avoided
-					return accumulator(arguments, sa.slice(0), n);
+					return accumulator(arguments, sa.slice(0), nn);
 				};
 			var result = func.apply(scope || this, sa);
 			//reset vars, so curried function can be applied to new params

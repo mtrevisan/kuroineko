@@ -361,7 +361,8 @@ var AMDLoader = (function(doc){
 				//injectElement(tagName, module, success, failure);
 
 				//some browsers send an event, others send a string, but none of them send anything useful, so just say we failed
-				var errorText = 'Syntax or http error loading: ' + (module.src || module.href);
+				var errorText = 'Syntax or http error loading: ' + (module.src || module.href + ', the script ' + e.target.src
+					+ ' is not accessible.');
 				failure && failure(new Error(errorText));
 
 				//if(!failure)

@@ -19,15 +19,15 @@ define(function(){
 
 
 	Function.prototype.clone = function(){
-		var self = this.clonedFrom || this;
+		var scope = this.clonedFrom || this;
 		var tmp = function(){
-			return self.apply(this, arguments);
+			return scope.apply(this, arguments);
 		};
 		for(var key in this)
 			if(this.hasOwnProperty(key))
 				tmp[key] = this[key];
 
-		tmp.clonedFrom = self;
+		tmp.clonedFrom = scope;
 
 		return tmp;
 	};
@@ -231,7 +231,7 @@ define(function(){
 	};
 
 	/** @private */
-	var saveFile = function(data, filename, type){
+	var saveFile = function(data, filename, typ){
 		var a = document.getElementById('__saveFile');
 		if(!a){
 			a = document.createElement('a');
@@ -240,7 +240,7 @@ define(function(){
 			document.body.appendChild(a);
 		}
 
-		var blob = new Blob([data], {type: type}),
+		var blob = new Blob([data], {type: typ}),
 			url = window.URL.createObjectURL(blob);
 		a.href = url;
 		a.download = filename;

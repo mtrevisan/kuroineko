@@ -268,7 +268,7 @@ define(['tools/lang/recognition/NGrams', 'tools/lang/recognition/Markov', 'tools
 		return checkMarkov.call(this, sample, langs);
 	};
 
-	/** @private */
+	/** @private * /
 	var checkNGram = function(sample, langs){
 		sample = NGrams.tokenize(sample);
 
@@ -295,7 +295,7 @@ define(['tools/lang/recognition/NGrams', 'tools/lang/recognition/Markov', 'tools
 				wordLanguages.push([sentence.join(''), UNKNOWN_LANGUAGE, langs]);
 		}, this);
 		return wordLanguages;
-	};
+	};*/
 
 	/** @private */
 	var checkMarkov = function(sample, langs){
