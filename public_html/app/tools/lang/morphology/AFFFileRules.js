@@ -621,7 +621,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	var extractCommonPartFromList = function(list){
 		var form;
 		list.forEach(function(el, i){
-			form = (!i? el: extractCommonPartFromEnd(el, form));
+			form = (i? extractCommonPartFromEnd(el, form): el);
 		});
 		return form;
 	};
@@ -787,9 +787,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 					flags = constraintParts[cp]
 						.map(function(el){ return extractFlags('|' + el); })
 						.reduce(uniteFlags, {forms: [], markers: [], constraint: ''});
-					return (flags.constraint != '_'?
-						p + printFlags(flags) + (flags.constraint? '|' + flags.constraint: ''):
-						parts[p]);
+					return (flags.constraint == '_'?
+						parts[p]:
+						p + printFlags(flags) + (flags.constraint? '|' + flags.constraint: ''));
 				});
 
 				/*flags = parts[p]
@@ -1009,13 +1009,13 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
+			if(verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/))
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'r', null, null, '/' + MARKER_FLAGS);
+			else{
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'r', null, null, '/' + PRONOMENAL_MARK + MARKER_FLAGS);
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'rme', null, null, '/' + PRONOMENAL_MARK_2);
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'rmene', null, null, '/' + PRONOMENAL_MARK_2);
 			}
-			else
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'r', null, null, '/' + MARKER_FLAGS);
 			insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 're');
 		}
 	};
