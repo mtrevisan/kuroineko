@@ -352,7 +352,7 @@ var AMDLoader = (function(doc){
 					success && success();
 				}
 			};
-			el.onerror = function(e){
+			el.onerror = function(){
 				head.removeChild(el);
 
 				//FIXME
@@ -361,8 +361,7 @@ var AMDLoader = (function(doc){
 				//injectElement(tagName, module, success, failure);
 
 				//some browsers send an event, others send a string, but none of them send anything useful, so just say we failed
-				var errorText = 'Syntax or http error loading: ' + (module.src || module.href + ', the script ' + e.target.src
-					+ ' is not accessible.');
+				var errorText = 'Syntax or http error loading: ' + (module.src || module.href);
 				failure && failure(new Error(errorText));
 
 				//if(!failure)
@@ -402,7 +401,7 @@ var AMDLoader = (function(doc){
 				success && success(el);
 			}
 		};
-		el.onerror = function(e){
+		el.onerror = function(){
 			doc.body.removeChild(el);
 
 			//some browsers send an event, others send a string, but none of them send anything useful, so just say we failed

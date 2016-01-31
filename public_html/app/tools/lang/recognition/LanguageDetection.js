@@ -346,10 +346,10 @@ define(['tools/lang/recognition/NGrams', 'tools/lang/recognition/Markov', 'tools
 		return m;
 	};
 
-	/** @private */
+	/** @private * /
 	var createModelFromContent = function(content){
 		return NGrams.fromContent(3, 3, content);
-	};
+	};*/
 
 	/** @private */
 	var createModelFromData = function(data, model){

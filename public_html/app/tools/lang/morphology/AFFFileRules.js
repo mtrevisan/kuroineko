@@ -366,7 +366,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		compactEqualSuffixes(paradigm);
 
 		constraintToInfinitives(paradigm, origins);
-compactEqualSuffixes(paradigm);
+		compactEqualSuffixes(paradigm);
 
 		if(!deriveAllFormsFromInfinitive){
 			adjectives[theme] = adjectives[theme] || [];
@@ -918,7 +918,8 @@ compactEqualSuffixes(paradigm);
 			partitioningResults = {true: [], false: []};
 			Object.keys(part).forEach(function(k){
 				re = new RegExp(k + common + '$');
-				//NOTE: this k == '^' and the latter if(k != '^') are used to permit the aggregation of abitar with dexabitar
+				//NOTE: this k == '^', the latter if(k != '^'), and the double call of compactEqualSuffixes above,
+				//are used to permit the aggregation of abitar with dexabitar
 				partitioningResults[k == '^' || diff.some(function(el){ return el.match(re); })].push(k);
 			});
 
@@ -942,8 +943,8 @@ compactEqualSuffixes(paradigm);
 			}
 
 			if(partitioningResults[true].length)
-				partitioningResults[true].forEach(function(k){
-					obj = {theme: obj.theme, origins: part[k], suffixes: obj.suffixes};
+				partitioningResults[true].forEach(function(kk){
+					obj = {theme: obj.theme, origins: part[kk], suffixes: obj.suffixes};
 					list.push(obj);
 					stack.push(obj);
 				});
