@@ -6,11 +6,11 @@
 define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme', 'tools/lang/phonology/Orthography'], function(StringHelper, Grapheme, Orthography){
 
 	var getLastVowelIndex = function(word, idx){
-		return (idx !== undefined? word.substr(0, idx): word).search(/[aeiouàèéíòóú][^aeiouàèéíòóú]*$/);
+		return (idx === undefined? word: word.substr(0, idx)).search(/[aeiouàèéíòóú][^aeiouàèéíòóú]*$/);
 	};
 
 	var getLastUnstressedVowelIndex = function(word, idx){
-		return (idx !== undefined? word.substr(0, idx): word).search(/[aeiou][^aeiou]*$/);
+		return (idx === undefined? word: word.substr(0, idx)).search(/[aeiou][^aeiou]*$/);
 	};
 
 
