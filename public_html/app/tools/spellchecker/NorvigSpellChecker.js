@@ -219,7 +219,7 @@ define(['tools/data/ArrayHelper'], function(ArrayHelper){
 		return Math.log(0.015);
 	};
 
-	/** @private */
+	/** @private * /
 	var calculateRelativeProbabilitiesFromLog = function(candidates){
 		var sum = 0;
 		candidates.forEach(function(candidate){
@@ -229,12 +229,12 @@ define(['tools/data/ArrayHelper'], function(ArrayHelper){
 		candidates.forEach(function(candidate){
 			candidate[0] /= sum;
 		});
-	};
+	};*/
 
-	/** @private */
+	/** @private * /
 	var sortKeysByMoreProbable = function(candidates){
 		return Object.keys(candidates).sort(function(a, b){ return candidates[b] - candidates[a]; });
-	};
+	};*/
 
 
 	Constructor.prototype = {

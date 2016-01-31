@@ -917,7 +917,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			partitioningResults = {true: [], false: []};
 			Object.keys(part).forEach(function(k){
 				re = new RegExp(k + common + '$');
-				partitioningResults[diff.some(function(el){ return el.match(re); })].push(k);
+				partitioningResults[k == '^' || diff.some(function(el){ return el.match(re); })].push(k);
 			});
 
 			if(partitioningResults[false].length){

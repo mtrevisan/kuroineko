@@ -72,7 +72,7 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 
 		//add helpful log methods
 		LEVELS.forEach(function(level){
-			this.__proto__[level.toLowerCase()] = function(id, message, data){
+			Object.getPrototypeOf(this)[level.toLowerCase()] = function(id, message, data){
 				this.log(id, level, message, data);
 			};
 		}, this);

@@ -440,13 +440,13 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI'], funct
 		var o = {
 			'Mèl':		510.2271,
 			//pal dekreto del Senato de 'l 6 April 1737 el pexo fin el ga da èser 1.02 'olte kuelo de Venèŧia
-			'Pàdoa':		301.22966 * (768. / 485.) * 1.02,
+			'Pàdoa':		301.22966 * (768 / 485) * 1.02,
 			'Roigo':		477.2942,
 			//pal dekreto del Senato de 'l 6 April 1737 el pexo fin el ga da èser 1 e 1/12 'olte kuelo de Venèŧia
-			'Trevixo':	301.22966 * (768. / 485.) * (13. / 12.),
+			'Trevixo':	301.22966 * (768 / 485) * (13 / 12),
 			//doparàa kome pexo par presioxi, sora de tuto par òro, arđento, e xème preŧioxe
 			//(pal Sovrano Decreto de 'l 1575 se ga ke 768 libre gròse le fà 485 libre fine)
-			'Venèŧia':	301.22966 * (768. / 485.),
+			'Venèŧia':	301.22966 * (768 / 485),
 			//na volta e mèđa la só libra fina
 			'Verona':	333.1757 * 1.5
 		};

@@ -166,8 +166,8 @@ define(['tools/lang/recognition/NGrams', 'tools/lang/recognition/Markov', 'tools
 		DEVANAGARI = ['hin', 'mar', 'mai', 'bho', 'nep', 'mag'],
 		ARABIC = ['arb', 'urd', 'skr', 'uig', 'pes'],
 		ETHIOPIC = ['amh', 'tir'],
-		HEBREW = ['heb', 'ydd'],
-		PT = ['bzs', 'por'];
+		HEBREW = ['heb', 'ydd']/*,
+		PT = ['bzs', 'por']*/;
 
 	var SINGLETONS = [
 		['Armenian', 'hye'],

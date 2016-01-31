@@ -92,8 +92,8 @@ var AMDLoader = (function(doc){
 	/** @private */
 	var resolve = function(id, value){
 		if(!resolves[id])
-			promises[id] = new Promise(function(resolve){
-				resolves[id] = resolve;
+			promises[id] = new Promise(function(res){
+				resolves[id] = res;
 			});
 		resolves[id](value);
 		resolves[id] = null;

@@ -19,10 +19,7 @@ define(function(){
 
 
 	Function.prototype.clone = function(){
-		var self = this;
-		if(this.clonedFrom)
-			self = this.clonedFrom;
-
+		var self = this.clonedFrom || this;
 		var tmp = function(){
 			return self.apply(this, arguments);
 		};

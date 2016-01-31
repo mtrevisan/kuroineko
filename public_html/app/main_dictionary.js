@@ -152,16 +152,16 @@ for(var i = 0; i < size; i ++){
 		};
 
 		var translationToString = function(translation){
-			var str = '';
+			var str1 = '';
 			if(translation.ita || translation.eng){
-				str += '<ul class="language">';
+				str1 += '<ul class="language">';
 				if(translation.ita)
-					str += '<li><span class="language">it.</span>: ' + translation.ita + '</li>';
+					str1 += '<li><span class="language">it.</span>: ' + translation.ita + '</li>';
 				if(translation.eng)
-					str += '<li><span class="language">en.</span>: ' + translation.eng + '</li>';
-				str += '</ul>';
+					str1 += '<li><span class="language">en.</span>: ' + translation.eng + '</li>';
+				str1 += '</ul>';
 			}
-			return str;
+			return str1;
 		};
 
 		var dialectAsString = {
@@ -185,11 +185,11 @@ for(var i = 0; i < size; i ++){
 		var dialectToString = function(dialect){
 			dialect.sort(dialectSorterFn);
 
-			var str = [],
+			var str2 = [],
 				k;
 			for(k in dialect)
-				str.push(dialectAsString[dialect[k]]);
-			return str.join(', ');
+				str2.push(dialectAsString[dialect[k]]);
+			return str2.join(', ');
 		};
 
 		var loadData = function(lemmatas){

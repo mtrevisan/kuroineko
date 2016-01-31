@@ -518,9 +518,9 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		return factor * (diff.length / Object.keys(segments.a).length);
 	};
 
-	var isStop = function(bundle){
+	/*var isStop = function(bundle){
 		return (bundle.cnt == -1);
-	};
+	};*/
 
 	//for obstruents, +plosive correspond to -continuant (nasal stops are -plosive and -continuant)
 	//plosives, fricatives, and affricates are +obstruent
@@ -529,14 +529,14 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	//http://www.madore.org/~david/misc/linguistic/ipa/
 	//https://en.wikipedia.org/wiki/Stop_consonant
 	//https://en.wikipedia.org/wiki/Fricative_consonant
-	var isPlosive = function(bundle){
+	/*var isPlosive = function(bundle){
 		return (bundle.dr == -1);
 //		return chr.match(/[pbtdʈɖcɟkɡqɢʡʔ]/);
-	};
+	};*/
 
-	var isFricative = function(chr){
+	/*var isFricative = function(chr){
 		return chr.match(/[ɸβfvθðçʝxɣχʁħʕhɦ]/);
-	};
+	};*/
 
 	/**
 	 * NOTE: this is equivalent to say "bundleA contains bundleB"

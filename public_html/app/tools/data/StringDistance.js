@@ -204,14 +204,14 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 	 * @return {Object}	The number of insertions, deletions, substitutions, transpositions, and the edit distance, a non-negative number representing the number of edits required to transform one string to the other
 	 */
 	var damerauLevenshteinEdit = function(a, b, costs){
-		var computeFn = function(a, b, costs, distance, i, j){
-			var min = distance[i - 1][j - 1] + costs.matchingFn(a[i - 1], b[j - 1], costs),
+		var computeFn = function(x, y, c, distance, i, j){
+			var min = distance[i - 1][j - 1] + c.matchingFn(x[i - 1], y[j - 1], c),
 				t;
-			if((t = distance[i][j - 1] + costs.insertion) < min)
+			if((t = distance[i][j - 1] + c.insertion) < min)
 				min = t;
-			if((t = distance[i - 1][j] + costs.deletion) < min)
+			if((t = distance[i - 1][j] + c.deletion) < min)
 				min = t;
-			if(i > 1 && j > 1 && a[i - 1] == b[j - 2] && a[i - 2] == b[j - 1] && (t = distance[i - 2][j - 2] + costs.transposition) < min)
+			if(i > 1 && j > 1 && x[i - 1] == y[j - 2] && x[i - 2] == y[j - 1] && (t = distance[i - 2][j - 2] + c.transposition) < min)
 				min = t;
 			distance[i][j] = min;
 		};

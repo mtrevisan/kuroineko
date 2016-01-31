@@ -222,24 +222,24 @@ define(function(){
 	/** Generates a random real on [0,1] interval */
 	var real1 = function(){
 		//divided by 2^32-1
-		return this.int32() * (1. / (MAX_INT - 1));
+		return this.int32() * (1 / (MAX_INT - 1));
 	};
 
 	/** Generates a random real on [0,1[ interval */
 	var random = function(){
-		return this.int32() * (1. / MAX_INT);
+		return this.int32() * (1 / MAX_INT);
 	};
 
 	/** Generates a random real on [0,1[ interval with 53-bit resolution*/
 	var res53 = function(){
 		var a = this.int32() >>> 5,
 			b = this.int32() >>> 6;
-		return (a * 67108864. + b) * (1. / 9007199254740992.);
+		return (a * 67108864 + b) * (1 / 9007199254740992);
 	};
 
 	/** Generates a random real on ]0,1[ interval */
 	var real3 = function(){
-		return (this.int32() + 0.5) * (1. / MAX_INT);
+		return (this.int32() + 0.5) * (1 / MAX_INT);
 	};
 
 	/* These real versions are due to Isaku Wada, 2002/01/09 added */

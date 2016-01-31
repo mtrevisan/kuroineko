@@ -1,4 +1,4 @@
-require(['tools/data/clustering/OPTICSClusterer', 'tools/data/ArrayHelper'], function(OPTICSClusterer, ArrayHelper){
+require(['tools/data/clustering/OPTICSClusterer'/*, 'tools/data/ArrayHelper'*/], function(OPTICSClusterer/*, ArrayHelper*/){
 	QUnit.module('OPTICSClusterer');
 
 	var data = [
