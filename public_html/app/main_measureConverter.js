@@ -48,7 +48,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/measure/data/MeasureVeneto'],
 
 					cell = row.insertCell(2);
 					cell.className = 'equivalent-measure';
-					cell.innerHTML = (parentValue != 1? declinateUOMToPlural(parentUOM): parentUOM);
+					cell.innerHTML = (parentValue == 1? parentUOM: declinateUOMToPlural(parentUOM));
 				}
 			});
 
