@@ -220,11 +220,11 @@ define(function(){
 			}
 
 			this.minimumNode = undefined;
-			A.forEach(function(x){
-				if(x){
+			A.forEach(function(xx){
+				if(xx){
 					//this.rootList.push(x);
-					if(!this.minimumNode || x.priority < this.minimumNode.priority)
-						this.minimumNode = x;
+					if(!this.minimumNode || xx.priority < this.minimumNode.priority)
+						this.minimumNode = xx;
 				}
 			}, this);
 		}

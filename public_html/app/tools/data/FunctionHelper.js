@@ -122,9 +122,9 @@ define(function(){
 				timerID = null;
 			}
 
-			var me = this;
+			var self = this;
 			timerID = setTimeout(function(){
-				fn.apply(scope || me, args || arguments);
+				fn.apply(scope || self, args || arguments);
 			}, buffer);
 		};
 	};

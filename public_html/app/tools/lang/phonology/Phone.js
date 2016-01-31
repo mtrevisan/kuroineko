@@ -463,7 +463,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 			//..
 //		}
 		//FIXME arbitrarily choose the first element
-		return (!multipleElements? matches[0]: matches);
+		return (multipleElements? matches: matches[0]);
 	};
 
 	var compareFeatures = function(bundleA, bundleB, twoWayMatch){

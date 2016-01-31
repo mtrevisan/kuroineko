@@ -22,7 +22,7 @@ define(['tools/data/ArrayHelper'], function(ArrayHelper){
 
 	var Constructor = function(alphabetString){
 		this.alphabet = alphabetString.match(REGEX_UNICODE_SPLITTER);
-		this.filter = new RegExp('([' + alphabetString + ']+)', 'g'),
+		this.filter = new RegExp('([' + alphabetString + ']+)', 'g');
 
 		this.dictionary = {};
 	};

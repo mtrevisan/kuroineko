@@ -141,8 +141,7 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 				.replace(/l(?=[cjɉʃ]|j²|$)/g, 'l̻ʲ').replace(/l(?=[bdđfghklƚmnñprstŧvxʒ])/g, 'l̺̝').replace(/l(?=[aeiouàèéíòóú])/g, 'l̺')
 				//semi-velar pre-velar
 				.replace(/^r|r(?=[aeiouàèéíòóú])/g, 'ɹ˞̠');
-		else if(dialect == 'lagunar.coxòto'){ }
-		else
+		else if(dialect != 'lagunar.coxòto')
 			word = word
 				//lateral pre-palatal + unilateral alveolar
 				.replace(/l(?=[cjɉʃ]|$)/g, 'l̻ʲ').replace(/l(?=[bdđfghklƚmnñprstŧvxʒ])/g, 'l̺̝').replace(/l(?=[aeiouàèéíòóú])/g, 'l̺');

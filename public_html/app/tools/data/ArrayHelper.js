@@ -7,7 +7,7 @@
  */
 define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
-	var empty = function(array){
+	/*var empty = function(array){
 		array.length = 0;
 	};
 
@@ -31,7 +31,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 			i --;
 		}
 		array[0] = element;
-	};
+	};*/
 
 	/**
 	 * Gets the index at which the first occurrence of {@code element} is found in {@code array}.<p>
@@ -64,7 +64,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	 * ArrayHelper.indexOf([1, 1, 2, 2], 2, true);
 	 * // => 2
 	 * </code>
-	 */
+	 * /
 	var indexOf = function(array, element, fromIndex){
 		var length = (array? array.length: 0);
 		if(!length)
@@ -81,7 +81,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 			if(array[i] == element)
 				return i;
 		return -1;
-	};
+	};*/
 
 	/**
 	 * Gets the index at which the last occurrence of {@code element} is found in {@code array}.<p>
@@ -114,7 +114,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	 * ArrayHelper.indexOf([1, 1, 2, 2], 2, true);
 	 * // => 3
 	 * </code>
-	 */
+	 * /
 	var lastIndexOf = function(array, element, fromIndex){
 		var length = (array? array.length: 0);
 		if(!length)
@@ -132,7 +132,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 			if(array[i] == element)
 				break;
 		return i;
-	};
+	};*/
 
 	var findIndex = function(array, predicate){
 		for(var i = 0, len = array.length; i < len; i ++)
@@ -141,10 +141,10 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		return -1;
 	};
 
-	var forEach = function(array, fn, scope){
+	/*var forEach = function(array, fn, scope){
 		for(var i = 0, len = array.length; i != len; i ++)
 			fn.call(scope || this, this[i], i, this);
-	};
+	};*/
 
 	/**
 	 * Copies the values of `source` to `destination`.
