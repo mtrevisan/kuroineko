@@ -1449,13 +1449,13 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				origins.push(origin);
 
 			if(verb.conjugation == 3){
-				if(!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
+				if(this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/))
+					insert(paradigm, theme, verb.infinitive, origin, themes.themeT7 + 'ndo');
+				else{
 					insert(paradigm, theme, verb.infinitive, origin, themes.themeT7 + 'ndo', null, null, '/' + PRONOMENAL_MARK);
 					insert(paradigm, theme, verb.infinitive, origin, themes.themeT7 + 'ndome', null, null, '/' + PRONOMENAL_MARK_2);
 					insert(paradigm, theme, verb.infinitive, origin, themes.themeT7 + 'ndomene', null, null, '/' + PRONOMENAL_MARK_2);
 				}
-				else
-					insert(paradigm, theme, verb.infinitive, origin, themes.themeT7 + 'ndo');
 			}
 		}
 	};
