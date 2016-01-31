@@ -113,8 +113,8 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme', 'tools/lang/
 		};
 
 		return function(str1, str2){
-			str1 = Orthography.rewriteDigrams(str1).correctOrthography(str1);
-			str2 = Orthography.rewriteDigrams(str2).correctOrthography(str2);
+			str1 = Orthography.correctOrthography(Orthography.rewriteDigrams(str1));
+			str2 = Orthography.correctOrthography(Orthography.rewriteDigrams(str2));
 
 			var size = Math.max(str1.length, str2.length),
 				tmp = 0,
