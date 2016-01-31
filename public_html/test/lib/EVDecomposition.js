@@ -150,7 +150,6 @@ define(function(){
 			eigenvalues_real[i] = h;
 		}
 		//accumulate transformations
-		var g;
 		for(i = 0; i < n - 1; i ++){
 			eigenvectors[n - 1][i] = eigenvectors[i][i];
 			eigenvectors[i][i] = 1;
@@ -187,7 +186,7 @@ define(function(){
 	var diagonalize = function(n, eigenvalues_real, eigenvalues_imaginary, eigenvectorsV){
 		var eps = 0.5 * Math.pow(2, -40),
 			i, j, k,
-			f, tst1, l, m;
+			f, tst1, l, m, p;
 
 		for(i = 1; i < n; i ++)
 			eigenvalues_imaginary[i - 1] = eigenvalues_imaginary[i];
@@ -266,7 +265,7 @@ define(function(){
 		//sort eigenvalues and corresponding vectors
 		for(i = 0; i < n - 1; i ++){
 			k = i;
-			var p = eigenvalues_real[i];
+			p = eigenvalues_real[i];
 			for(j = i + 1; j < n; j ++)
 				if(eigenvalues_real[j] < p){
 					k = j;

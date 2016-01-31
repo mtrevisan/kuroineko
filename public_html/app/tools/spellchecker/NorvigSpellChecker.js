@@ -43,10 +43,10 @@ define(['tools/data/ArrayHelper'], function(ArrayHelper){
 	 * @param {String} word	The word to add to the dictionary.
 	 */
 	var addWord = function(word){
-		corpus = extractWords.call(this, corpus);
+		word = extractWords.call(this, word);
 
 //FIXME
-		calculateLanguageModelProbability.call(this, corpus);
+		calculateLanguageModelProbability.call(this, word);
 	};
 
 	/** @private */

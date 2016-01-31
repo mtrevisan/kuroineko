@@ -16,7 +16,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 			req.onload = onLoad(req, resolve, reject);
 			req.onerror = function(){
-				reject(Error("Network error"));
+				reject(new Error('Network error'));
 			};
 
 			req.send(urlEncodedData);
@@ -34,7 +34,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 			req.onload = onLoad(req, resolve, reject);
 			req.onerror = function(){
-				reject(Error("Network error"));
+				reject(new Error('Network error'));
 			};
 
 			req.send(urlEncodedData);

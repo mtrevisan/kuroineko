@@ -50,43 +50,41 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	/** @constant */
 		PRONOMENAL_MARK_2 = REDUCTION_RESERVED_0 + 5,
 	/** @constant */
-		PRONOMENAL_MARK_3 = REDUCTION_RESERVED_0 + 6,
+		//PRONOMENAL_MARK_RESERVED_1 = REDUCTION_RESERVED_0 + 6,
 	/** @constant */
-		//PRONOMENAL_MARK_RESERVED_1 = REDUCTION_RESERVED_0 + 7,
+		PRONOMENAL_IMPERATIVE_MARK_2 = REDUCTION_RESERVED_0 + 6,
 	/** @constant */
-		PRONOMENAL_IMPERATIVE_MARK_2 = REDUCTION_RESERVED_0 + 7,
+		FINAL_CONSONANT_VOICING_MARK = REDUCTION_RESERVED_0 + 7,
 	/** @constant */
-		FINAL_CONSONANT_VOICING_MARK = REDUCTION_RESERVED_0 + 8,
+		INTERROGATIVE_MARK_1S = REDUCTION_RESERVED_0 + 8,
 	/** @constant */
-		INTERROGATIVE_MARK_1S = REDUCTION_RESERVED_0 + 9,
+		INTERROGATIVE_MARK_1S_2 = REDUCTION_RESERVED_0 + 9,
 	/** @constant */
-		INTERROGATIVE_MARK_1S_2 = REDUCTION_RESERVED_0 + 10,
+		INTERROGATIVE_MARK_1P = REDUCTION_RESERVED_0 + 10,
 	/** @constant */
-		INTERROGATIVE_MARK_1P = REDUCTION_RESERVED_0 + 11,
+		INTERROGATIVE_MARK_1P_2 = REDUCTION_RESERVED_0 + 11,
 	/** @constant */
-		INTERROGATIVE_MARK_1P_2 = REDUCTION_RESERVED_0 + 12,
+		INTERROGATIVE_MARK_2S = REDUCTION_RESERVED_0 + 12,
 	/** @constant */
-		INTERROGATIVE_MARK_2S = REDUCTION_RESERVED_0 + 13,
+		INTERROGATIVE_MARK_2S_2 = REDUCTION_RESERVED_0 + 13,
 	/** @constant */
-		INTERROGATIVE_MARK_2S_2 = REDUCTION_RESERVED_0 + 14,
+		INTERROGATIVE_MARK_2P = REDUCTION_RESERVED_0 + 14,
 	/** @constant */
-		INTERROGATIVE_MARK_2P = REDUCTION_RESERVED_0 + 15,
+		INTERROGATIVE_MARK_2P_2 = REDUCTION_RESERVED_0 + 15,
 	/** @constant */
-		INTERROGATIVE_MARK_2P_2 = REDUCTION_RESERVED_0 + 16,
+		INTERROGATIVE_MARK_3 = REDUCTION_RESERVED_0 + 16,
 	/** @constant */
-		INTERROGATIVE_MARK_3 = REDUCTION_RESERVED_0 + 17,
+		INTERROGATIVE_MARK_3_2 = REDUCTION_RESERVED_0 + 17,
 	/** @constant */
-		INTERROGATIVE_MARK_3_2 = REDUCTION_RESERVED_0 + 18,
+		INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE = REDUCTION_RESERVED_0 + 18,
 	/** @constant */
-		INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE = REDUCTION_RESERVED_0 + 19,
+		SUBSTANTIVES_MASCULINE = REDUCTION_RESERVED_0 + 19,
 	/** @constant */
-		SUBSTANTIVES_MASCULINE = REDUCTION_RESERVED_0 + 20,
+		SUBSTANTIVES_FEMININE = REDUCTION_RESERVED_0 + 20,
 	/** @constant */
-		SUBSTANTIVES_FEMININE = REDUCTION_RESERVED_0 + 21,
+		PLANTS_AND_CRAFTS = REDUCTION_RESERVED_0 + 21,
 	/** @constant */
-		PLANTS_AND_CRAFTS = REDUCTION_RESERVED_0 + 22,
-	/** @constant */
-		PLANTS_AND_CRAFTS_RESERVED_0 = REDUCTION_RESERVED_0 + 23;
+		PLANTS_AND_CRAFTS_RESERVED_0 = REDUCTION_RESERVED_0 + 22;
 
 	var adjectives = {
 		0: [
@@ -128,8 +126,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		2: [
 			//[PRONOMENAL_MARK_2, '0>l[oaie]', '0>me/' + PRONOMENAL_MARK_RESERVED_1, '0>te/' + PRONOMENAL_MARK_RESERVED_1, '0>ve/' + PRONOMENAL_MARK_RESERVED_1, '0>se/' + PRONOMENAL_MARK_RESERVED_1, '0>ge/' + PRONOMENAL_MARK_RESERVED_1, '0>ne'],
 			//[PRONOMENAL_MARK_RESERVED_1, '0>ne', '0>l[oaie]'],
-			[PRONOMENAL_MARK_2, 'me>l[oaie]', 'me>te', 'me>ve', 'me>se', 'me>ge', 'me>ne'],
-			[PRONOMENAL_MARK_3, 'mene>mel[oaie]', 'mene>tene', 'mene>tel[oaie]', 'mene>vene', 'mene>vel[oaie]', 'mene>sene', 'mene>sel[oaie]', 'mene>gene', 'mene>gel[oaie]'],
+			[PRONOMENAL_MARK_2, 'me>l[oaie]', 'me>te', 'me>ve', 'me>se', 'me>ge', 'me>ne', 'mene>mel[oaie]', 'mene>tene', 'mene>tel[oaie]', 'mene>vene', 'mene>vel[oaie]', 'mene>sene', 'mene>sel[oaie]', 'mene>gene', 'mene>gel[oaie]'],
 			[PRONOMENAL_IMPERATIVE_MARK_2, 'me>ne|[^a]', 'me>te|[^a]', 'me>ve|[^a]', 'me>l[oaie]|[^a]', 'me>ge|[^a]', 'ame>ene', 'ame>ete', 'ame>eve', 'ame>el[oaie]', 'ame>ege']
 		]
 	};
@@ -1013,7 +1010,7 @@ if(log.replace(/ [^ ]+$/, '').match(/mv/))
 			if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'r', null, null, '/' + PRONOMENAL_MARK + MARKER_FLAGS);
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'rme', null, null, '/' + PRONOMENAL_MARK_2);
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'rmene', null, null, '/' + PRONOMENAL_MARK_3);
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'rmene', null, null, '/' + PRONOMENAL_MARK_2);
 			}
 			else
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT1 + 'r', null, null, '/' + MARKER_FLAGS);
@@ -1143,7 +1140,7 @@ if(log.replace(/ [^ ]+$/, '').match(/mv/))
 			if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'ndo', null, null, '/' + PRONOMENAL_MARK + MARKER_FLAGS);
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'ndome', null, null, '/' + PRONOMENAL_MARK_2);
-				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'ndomene', null, null, '/' + PRONOMENAL_MARK_3);
+				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'ndomene', null, null, '/' + PRONOMENAL_MARK_2);
 			}
 			else
 				insert(paradigm, theme, verb.infinitive, origin, themes.themeT2 + 'ndo', null, null, '/' + MARKER_FLAGS);
@@ -1166,7 +1163,7 @@ if(log.replace(/ [^ ]+$/, '').match(/mv/))
 					if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
 						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + PRONOMENAL_MARK + MARKER_FLAGS);
 						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndome', null, null, '/' + PRONOMENAL_MARK_2);
-						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndomene', null, null, '/' + PRONOMENAL_MARK_3);
+						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndomene', null, null, '/' + PRONOMENAL_MARK_2);
 					}
 					else
 						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + MARKER_FLAGS);
@@ -1176,7 +1173,7 @@ if(log.replace(/ [^ ]+$/, '').match(/mv/))
 					if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
 						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + PRONOMENAL_MARK + MARKER_FLAGS);
 						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndome', null, null, '/' + PRONOMENAL_MARK_2);
-						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndomene', null, null, '/' + PRONOMENAL_MARK_3);
+						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndomene', null, null, '/' + PRONOMENAL_MARK_2);
 					}
 					else
 						insert(paradigm, theme, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + MARKER_FLAGS);
@@ -1457,7 +1454,7 @@ if(log.replace(/ [^ ]+$/, '').match(/mv/))
 				if(!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
 					insert(paradigm, theme, verb.infinitive, origin, themes.themeT7 + 'ndo', null, null, '/' + PRONOMENAL_MARK);
 					insert(paradigm, theme, verb.infinitive, origin, themes.themeT7 + 'ndome', null, null, '/' + PRONOMENAL_MARK_2);
-					insert(paradigm, theme, verb.infinitive, origin, themes.themeT7 + 'ndomene', null, null, '/' + PRONOMENAL_MARK_3);
+					insert(paradigm, theme, verb.infinitive, origin, themes.themeT7 + 'ndomene', null, null, '/' + PRONOMENAL_MARK_2);
 				}
 				else
 					insert(paradigm, theme, verb.infinitive, origin, themes.themeT7 + 'ndo');
@@ -1840,10 +1837,11 @@ if(log.replace(/ [^ ]+$/, '').match(/mv/))
 
 	/** @private */
 	var insert = function(paradigm, theme, infinitive, origin, stressedSuffix, replaceMatch, replacement, addedSuffix){
+		var suffix;
 		if(runAllForms){
 			//se pòl ‘ver un xbasamento de la vokal (àtona) drio konsonante no prosimante e vanti vibrante
 			var syll = Syllabator.syllabate(stressedSuffix, null, true);
-			stressedSuffixLoweredVowel = stressedSuffix.replace(/([^aàeèéíoòóú])er/g, function(group, pre, idx){
+			var stressedSuffixLoweredVowel = stressedSuffix.replace(/([^aàeèéíoòóú])er/g, function(group, pre, idx){
 				return (syll.phones[syll.getSyllabeIndex(idx)].match(/[^jw]e/)? pre + 'ar': group);
 			});
 			if(stressedSuffixLoweredVowel != stressedSuffix){
