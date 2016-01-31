@@ -1,13 +1,13 @@
 require(['tools/data/Lexer'], function(Lexer){
 	QUnit.module('Lexer');
 
-	QUnit.test('plain lexer', function(){
+	QUnit.test('plain lexer', function(assert){
 		(new Lexer())
 			.addRule(/[0-9]+/, function(lexeme){
-				equal(lexeme, '012');
+				assert.equal(lexeme, '012');
 			})
 			.addRule(/[a-z]+/, function(lexeme){
-				equal(lexeme, 'ab');
+				assert.equal(lexeme, 'ab');
 			})
 			.lex('ab012');
 	});

@@ -5,7 +5,7 @@ require(['tools/lang/morphology/Verb', 'tools/lang/morphology/Themizer', 'tools/
 QUnit.dump.maxDepth = 20;
 
 
-	QUnit.test('andàr', function(){
+	QUnit.test('andàr', function(assert){
 		var verb = new Verb('andar');
 
 		var themes = Themizer.generate(verb, 'none');
@@ -127,10 +127,10 @@ QUnit.dump.maxDepth = 20;
 			}
 		};
 
-		deepEqual(paradigm, expected, 'andar');
+		assert.deepEqual(paradigm, expected, 'andar');
 	});
 
-	QUnit.test('fàr', function(){
+	QUnit.test('fàr', function(assert){
 		var verb = new Verb('far');
 
 		var themes = Themizer.generate(verb, 'none');
@@ -243,10 +243,10 @@ QUnit.dump.maxDepth = 20;
 			}
 		};
 
-		deepEqual(paradigm, expected, 'far');
+		assert.deepEqual(paradigm, expected, 'far');
 	});
 
-	QUnit.test('déver', function(){
+	QUnit.test('déver', function(assert){
 		var verb = new Verb('déver');
 
 		var themes = Themizer.generate(verb, 'none');
@@ -350,10 +350,10 @@ QUnit.dump.maxDepth = 20;
 			}
 		};
 
-		deepEqual(paradigm, expected, 'déver');
+		assert.deepEqual(paradigm, expected, 'déver');
 	});
 
-	QUnit.test('savér', function(){
+	QUnit.test('savér', function(assert){
 		var verb = new Verb('savér');
 
 		var themes = Themizer.generate(verb, 'none');
@@ -461,10 +461,10 @@ QUnit.dump.maxDepth = 20;
 			}
 		};
 
-		deepEqual(paradigm, expected, 'savér');
+		assert.deepEqual(paradigm, expected, 'savér');
 	});
 
-	QUnit.test('díxer', function(){
+	QUnit.test('díxer', function(assert){
 		var verb = new Verb('díxer');
 
 		var themes = Themizer.generate(verb, 'none');
@@ -595,10 +595,10 @@ QUnit.dump.maxDepth = 20;
 			}
 		};
 
-		deepEqual(paradigm, expected, 'díxer');
+		assert.deepEqual(paradigm, expected, 'díxer');
 	});
 
-	QUnit.test('podér', function(){
+	QUnit.test('podér', function(assert){
 		var verb = new Verb('podér');
 
 		var themes = Themizer.generate(verb, 'none');
@@ -712,10 +712,10 @@ QUnit.dump.maxDepth = 20;
 			}
 		};
 
-		deepEqual(paradigm, expected, 'podér');
+		assert.deepEqual(paradigm, expected, 'podér');
 	});
 
-	QUnit.test('vèñer', function(){
+	QUnit.test('vèñer', function(assert){
 		var verb = new Verb('vèñer');
 
 		var themes = Themizer.generate(verb, 'none');
@@ -825,10 +825,10 @@ QUnit.dump.maxDepth = 20;
 			}
 		};
 
-		deepEqual(paradigm, expected, 'vèñer');
+		assert.deepEqual(paradigm, expected, 'vèñer');
 	});
 
-	QUnit.test('tràer', function(){
+	QUnit.test('tràer', function(assert){
 		var verb = new Verb('tràer');
 
 		var themes = Themizer.generate(verb, 'none');
@@ -968,10 +968,10 @@ QUnit.dump.maxDepth = 20;
 			}
 		};
 
-		deepEqual(paradigm, expected, 'tràer');
+		assert.deepEqual(paradigm, expected, 'tràer');
 	});
 
-	QUnit.test('tolér', function(){
+	QUnit.test('tolér', function(assert){
 		var verb = new Verb('tolér');
 
 		var themes = Themizer.generate(verb, 'none');
@@ -1104,10 +1104,10 @@ QUnit.dump.maxDepth = 20;
 			}
 		};
 
-		deepEqual(paradigm, expected, 'tolér');
+		assert.deepEqual(paradigm, expected, 'tolér');
 	});
 
-	QUnit.test('èser', function(){
+	QUnit.test('èser', function(assert){
 		var verb = new Verb('èser');
 
 		var themes = Themizer.generate(verb, 'none');
@@ -1215,10 +1215,10 @@ QUnit.dump.maxDepth = 20;
 			}
 		};
 
-		deepEqual(paradigm, expected, 'èser');
+		assert.deepEqual(paradigm, expected, 'èser');
 	});
 
-	QUnit.test('avér', function(){
+	QUnit.test('avér', function(assert){
 		var verb = new Verb('avér');
 
 		var themes = Themizer.generate(verb, 'none');
@@ -1326,7 +1326,7 @@ QUnit.dump.maxDepth = 20;
 			}
 		};
 
-		deepEqual(paradigm, expected, 'avér');
+		assert.deepEqual(paradigm, expected, 'avér');
 	});
 
 });

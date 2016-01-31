@@ -1,52 +1,52 @@
 require(['tools/data/structs/PriorityQueue'], function(PriorityQueue){
 	QUnit.module('PriorityQueue');
 
-	QUnit.test('is empty', function(){
+	QUnit.test('is empty', function(assert){
 		var pq = new PriorityQueue();
 
 		ok(pq.isEmpty());
-		equal(pq.get(), undefined);
-		equal(pq.extract(), undefined);
+		assert.equal(pq.get(), undefined);
+		assert.equal(pq.extract(), undefined);
 
 		pq.add(0, 'value');
 
-		notOk(pq.isEmpty());
+		assert.notOk(pq.isEmpty());
 	});
 
-	QUnit.test('inserting a node', function(){
+	QUnit.test('inserting a node', function(assert){
 		var pq = new PriorityQueue();
 
 		pq.add(0, 'value');
 
-		equal(pq.size(), 1);
-		equal(pq.get().getPriority(), 0);
-		equal(pq.get().getValue(), 'value');
+		assert.equal(pq.size(), 1);
+		assert.equal(pq.get().getPriority(), 0);
+		assert.equal(pq.get().getValue(), 'value');
 	});
 
-	QUnit.test('change minimum node', function(){
+	QUnit.test('change minimum node', function(assert){
 		var pq = new PriorityQueue();
 
 		pq.add(1, 'first value');
 		pq.add(0, 'second value');
 
-		equal(pq.size(), 2);
-		equal(pq.get().getPriority(), 0);
-		equal(pq.get().getValue(), 'second value');
+		assert.equal(pq.size(), 2);
+		assert.equal(pq.get().getPriority(), 0);
+		assert.equal(pq.get().getValue(), 'second value');
 	});
 
-	QUnit.test('union 1', function(){
+	QUnit.test('union 1', function(assert){
 		var pq = new PriorityQueue();
 		pq.add(0, 'first');
 		pq.add(-1, 'second');
 
 		pq.union(new PriorityQueue());
 
-		equal(pq.size(), 2);
-		equal(pq.get().getPriority(), -1);
-		equal(pq.get().getValue(), 'second');
+		assert.equal(pq.size(), 2);
+		assert.equal(pq.get().getPriority(), -1);
+		assert.equal(pq.get().getValue(), 'second');
 	});
 
-	QUnit.test('union 2', function(){
+	QUnit.test('union 2', function(assert){
 		var pq1 = new PriorityQueue();
 		pq1.add(0, 'first');
 		var pq2 = new PriorityQueue();
@@ -54,12 +54,12 @@ require(['tools/data/structs/PriorityQueue'], function(PriorityQueue){
 
 		pq1.union(pq2);
 
-		equal(pq1.size(), 2);
-		equal(pq1.get().getPriority(), -1);
-		equal(pq1.get().getValue(), 'second');
+		assert.equal(pq1.size(), 2);
+		assert.equal(pq1.get().getPriority(), -1);
+		assert.equal(pq1.get().getValue(), 'second');
 	});
 
-	QUnit.test('extract minimum node', function(){
+	QUnit.test('extract minimum node', function(assert){
 		var pq = new PriorityQueue();
 
 		pq.add(4, '4');
@@ -67,26 +67,26 @@ require(['tools/data/structs/PriorityQueue'], function(PriorityQueue){
 		pq.add(2, '2');
 		pq.add(1, '1');
 
-		equal(pq.size(), 4);
+		assert.equal(pq.size(), 4);
 		var node = pq.extract();
-		equal(pq.size(), 3);
-		equal(node.getPriority(), 1);
-		equal(node.getValue(), '1');
+		assert.equal(pq.size(), 3);
+		assert.equal(node.getPriority(), 1);
+		assert.equal(node.getValue(), '1');
 		node = pq.extract();
-		equal(pq.size(), 2);
-		equal(node.getPriority(), 2);
-		equal(node.getValue(), '2');
+		assert.equal(pq.size(), 2);
+		assert.equal(node.getPriority(), 2);
+		assert.equal(node.getValue(), '2');
 		node = pq.extract();
-		equal(pq.size(), 1);
-		equal(node.getPriority(), 3);
-		equal(node.getValue(), '3');
+		assert.equal(pq.size(), 1);
+		assert.equal(node.getPriority(), 3);
+		assert.equal(node.getValue(), '3');
 		node = pq.extract();
-		equal(pq.size(), 0);
-		equal(node.getPriority(), 4);
-		equal(node.getValue(), '4');
+		assert.equal(pq.size(), 0);
+		assert.equal(node.getPriority(), 4);
+		assert.equal(node.getValue(), '4');
 	});
 
-	QUnit.test('decrease a key', function(){
+	QUnit.test('decrease a key', function(assert){
 		var pq = new PriorityQueue();
 
 		pq.add(1, '1');
@@ -96,12 +96,12 @@ require(['tools/data/structs/PriorityQueue'], function(PriorityQueue){
 
 		pq.decreaseKey(0, '4');
 
-		equal(pq.size(), 4);
-		equal(pq.get().getPriority(), 0);
-		equal(pq.get().getValue(), '4');
+		assert.equal(pq.size(), 4);
+		assert.equal(pq.get().getPriority(), 0);
+		assert.equal(pq.get().getValue(), '4');
 	});
 
-	QUnit.test('delete a node', function(){
+	QUnit.test('delete a node', function(assert){
 		var pq = new PriorityQueue();
 
 		pq.add(1, '1');
@@ -110,12 +110,12 @@ require(['tools/data/structs/PriorityQueue'], function(PriorityQueue){
 		pq.add(4, '4');
 
 		pq.deleteNode('1');
-		equal(pq.size(), 3);
+		assert.equal(pq.size(), 3);
 		pq.deleteNode('3');
-		equal(pq.size(), 2);
+		assert.equal(pq.size(), 2);
 		pq.deleteNode('2');
-		equal(pq.size(), 1);
+		assert.equal(pq.size(), 1);
 		pq.deleteNode('4');
-		equal(pq.size(), 0);
+		assert.equal(pq.size(), 0);
 	});
 });

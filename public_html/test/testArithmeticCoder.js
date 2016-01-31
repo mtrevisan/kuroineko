@@ -16,7 +16,7 @@
 
 
 /*require(['tools/data/coder/arithmetic/HighOrderModelFactory', 'tools/data/coder/arithmetic/BasicModel', 'tools/data/coder/arithmetic/CoderDriver'], function(HighOrderModelFactory, BasicModel, CoderDriver){
-	QUnit.test('coding/decoding', function(){
+	QUnit.test('coding/decoding', function(assert){
 		/*var base = 'This method will be called exactly once for each symbol being encoded or decoded, and the calls will be made in the order in which they';
 		var fixedCounts = extractCounts(base);*/
 
@@ -39,43 +39,43 @@ msg = 'define("tools/data/ObjectHelper",[],function(){Function.prototype.clone=f
 };/**/
 
 /*require(['tools/data/coder/arithmetic/HighOrderModelFactory', 'tools/data/coder/arithmetic/BasicModel', 'tools/data/coder/arithmetic/CoderDriver', 'tools/data/structs/BitBuffer'], function(HighOrderModelFactory, BasicModel, CoderDriver, BitBuffer){
-	QUnit.test('coding/decoding, basic model of order 0', function(){
+	QUnit.test('coding/decoding, basic model of order 0', function(assert){
 		var msg = 'This method will be called exactly once for each symbol being encoded or decoded, and the calls will be made in the order in which they';
 		var model = CoderDriver.create(HighOrderModelFactory.createFrom(BasicModel, 0));
 		//var model = CoderDriver.create(BasicModel);
 		var buffer = model.encode(msg);
 
 		//console.log(Math.floor(buffer.size() / 8 / 1024) + ' kB /' + Math.floor(msg.length / 1024) + ' kB > ' + (100 * buffer.size() / msg.length / 8));
-		equal(buffer.toHexString(), '5414847326ade7d166af9534d8d8da581919ebd5ff2234b183542ea18f81a47ddc1577d243713237a1fffb7957ca9574cbfb856c2fc42c265fedfd15660e2e7f0ce8cacc1adb109306f5189e60afa5f62d899858dcb40bb1d8a4a0afc10db39af75a7e80f25fac430cbc7c');
+		assert.equal(buffer.toHexString(), '5414847326ade7d166af9534d8d8da581919ebd5ff2234b183542ea18f81a47ddc1577d243713237a1fffb7957ca9574cbfb856c2fc42c265fedfd15660e2e7f0ce8cacc1adb109306f5189e60afa5f62d899858dcb40bb1d8a4a0afc10db39af75a7e80f25fac430cbc7c');
 
 		var data = new Uint8Array(buffer.array());
 		var itr = (new BitBuffer(data)).getIterator();
 		var out = model.decode(itr);
-		equal(out.join(''), msg);
+		assert.equal(out.join(''), msg);
 	});
 });
 
 require(['tools/data/coder/arithmetic/HighOrderModelFactory', 'tools/data/coder/arithmetic/BasicModel', 'tools/data/coder/arithmetic/CoderDriver', 'tools/data/structs/BitBuffer'], function(HighOrderModelFactory, BasicModel, CoderDriver, BitBuffer){
-	QUnit.test('coding/decoding, basic model of order 1', function(){
+	QUnit.test('coding/decoding, basic model of order 1', function(assert){
 		var msg = 'This method will be called exactly once for each symbol being encoded or decoded, and the calls will be made in the order in which they';
 		var model = CoderDriver.create(HighOrderModelFactory.createFrom(BasicModel, 1));
 		//var model = CoderDriver.create(BasicModel);
 		var buffer = model.encode(msg);
 
 		//console.log(Math.floor(buffer.size() / 8 / 1024) + ' kB /' + Math.floor(msg.length / 1024) + ' kB > ' + (100 * buffer.size() / msg.length / 8));
-		equal(buffer.toHexString(), '5413ed0f8bc637a5901b8141910f8d9b8824701d7ab79fa1f8943cad75a85bb38cd74e59332c642ab011d4a7472765e9899bdd4df668a18017ab24a50af81308bd9656b49851ef4c281d6788c9dd01c46bbfccb8143a38f42e7764f3c087e0b046210d922a255f8dff90265de2b38b461b9554a2d16d1ffffb273671360960');
+		assert.equal(buffer.toHexString(), '5413ed0f8bc637a5901b8141910f8d9b8824701d7ab79fa1f8943cad75a85bb38cd74e59332c642ab011d4a7472765e9899bdd4df668a18017ab24a50af81308bd9656b49851ef4c281d6788c9dd01c46bbfccb8143a38f42e7764f3c087e0b046210d922a255f8dff90265de2b38b461b9554a2d16d1ffffb273671360960');
 
 		var data = new Uint8Array(buffer.array());
 		var itr = (new BitBuffer(data)).getIterator();
 		var out = model.decode(itr);
-		equal(out.join(''), msg);
+		assert.equal(out.join(''), msg);
 	});
 });/**/
 
 require(['tools/data/ObjectHelper', 'tools/data/coder/arithmetic/HighOrderModelFactory', 'tools/data/coder/arithmetic/BasicModel', 'tools/data/coder/arithmetic/CoderDriver', 'tools/data/structs/BitBuffer', 'text!../app/tools/lang/data/Galepin.js'], function(ObjectHelper, HighOrderModelFactory, BasicModel, CoderDriver, BitBuffer, Galepin){
 	QUnit.module('ArithmeticCoder');
 
-	QUnit.test('encode Galepin', function(){
+	QUnit.test('encode Galepin', function(assert){
 		var model = CoderDriver.create(HighOrderModelFactory.createFrom(BasicModel, 2), {updateCount: 200});
 		var buffer = model.encode(Galepin);
 
@@ -84,12 +84,12 @@ require(['tools/data/ObjectHelper', 'tools/data/coder/arithmetic/HighOrderModelF
 		//ObjectHelper.saveBinaryFile(buffer.array(), 'Galepin.ac');
 
 		var out = model.decode(buffer.getIterator());
-		equal(out.join(''), Galepin);
+		assert.equal(out.join(''), Galepin);
 	});
 });/**/
 
 /*require(['tools/data/ObjectHelper', 'tools/data/coder/arithmetic/HighOrderModelFactory', 'tools/data/coder/arithmetic/BasicModel', 'tools/data/coder/arithmetic/CoderDriver', 'tools/data/coder/elias/EliasDeltaCoder', 'text!../app/tools/lang/data/Galepin.js'], function(ObjectHelper, HighOrderModelFactory, BasicModel, CoderDriver, EliasDeltaCoder, Galepin){
-	QUnit.test('encode Galepin', function(){
+	QUnit.test('encode Galepin', function(assert){
 		var fixedCounts = extractCounts(Galepin);
 
 		var alphabet = [],
@@ -109,6 +109,6 @@ require(['tools/data/ObjectHelper', 'tools/data/coder/arithmetic/HighOrderModelF
 		var data = new Uint8Array(buffer.array());
 
 		var out = model.decode(data, fixedCounts);
-		equal(out.join(''), Galepin);
+		assert.equal(out.join(''), Galepin);
 	});
 });/**/

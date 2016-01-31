@@ -1,15 +1,15 @@
 require(['tools/data/structs/Tarjan'], function(Tarjan){
 	QUnit.module('Tarjan');
 
-	QUnit.test('contains vertex', function(){
+	QUnit.test('contains vertex', function(assert){
 		var t = new Tarjan();
 		t.addVertex('a');
 
-		ok(t.containsVertex('a'));
-		notOk(t.containsVertex('b'));
+		assert.ok(t.containsVertex('a'));
+		assert.notOk(t.containsVertex('b'));
 	});
 
-	QUnit.test('unconnected graph', function(){
+	QUnit.test('unconnected graph', function(assert){
 		var t = new Tarjan();
 		t.addVertex('a', ['b', 'c']);
 		t.addVertex('b', ['d']);
@@ -18,10 +18,10 @@ require(['tools/data/structs/Tarjan'], function(Tarjan){
 
 		var scc = t.getStronglyConnectedComponents();
 
-		equal(scc.length, 0);
+		assert.equal(scc.length, 0);
 	});
 
-	QUnit.test('connected graph', function(){
+	QUnit.test('connected graph', function(assert){
 		var t = new Tarjan();
 		t.addVertex('a', ['b', 'c']);
 		t.addVertex('b', ['d']);
@@ -30,7 +30,7 @@ require(['tools/data/structs/Tarjan'], function(Tarjan){
 
 		var scc = t.getStronglyConnectedComponents();
 
-		equal(scc.length, 1);
-		equal(scc[0].join(' > '), 'a > b > d');
+		assert.equal(scc.length, 1);
+		assert.equal(scc[0].join(' > '), 'a > b > d');
 	});
 });

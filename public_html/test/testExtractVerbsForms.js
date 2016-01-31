@@ -1,7 +1,7 @@
 require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 	QUnit.module('ExtractVerbsForms');
 
-	QUnit.test('portàr', function(){
+	QUnit.test('portàr', function(assert){
 		var forms = Conjugator.extractForms('portàr');
 
 		var expected = [
@@ -102,10 +102,10 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 			'#portarave'
 		];
 
-		deepEqual(forms, expected);
+		assert.deepEqual(forms, expected);
 	});
 
-	QUnit.test('valér', function(){
+	QUnit.test('valér', function(assert){
 		var forms = Conjugator.extractForms('valér');
 
 		var expected = [
@@ -213,10 +213,10 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 			'#valerave'
 		];
 
-		deepEqual(forms, expected);
+		assert.deepEqual(forms, expected);
 	});
 
-	QUnit.test('béver', function(){
+	QUnit.test('béver', function(assert){
 		var forms = Conjugator.extractForms('béver');
 
 		var expected = [
@@ -320,10 +320,10 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 			'#beverave'
 		];
 
-		deepEqual(forms, expected);
+		assert.deepEqual(forms, expected);
 	});
 
-	QUnit.test('dormír', function(){
+	QUnit.test('dormír', function(assert){
 		var forms = Conjugator.extractForms('dormír');
 
 		var expected = [
@@ -431,10 +431,10 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 			'#dormirave'
 		];
 
-		deepEqual(forms, expected);
+		assert.deepEqual(forms, expected);
 	});
 
-	QUnit.test('fenír', function(){
+	QUnit.test('fenír', function(assert){
 		var forms = Conjugator.extractForms('fenír');
 
 		var expected = [
@@ -539,10 +539,10 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 			'#fenirave'
 		];
 
-		deepEqual(forms, expected);
+		assert.deepEqual(forms, expected);
 	});
 
-	QUnit.test('andàr', function(){
+	QUnit.test('andàr', function(assert){
 		var forms = Conjugator.extractForms('andàr');
 
 		var expected = [
@@ -662,7 +662,7 @@ require(['tools/lang/morphology/Conjugator'], function(Conjugator){
 			'#andarave'
 		];
 
-		deepEqual(forms, expected);
+		assert.deepEqual(forms, expected);
 	});
 
 });

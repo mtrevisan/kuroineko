@@ -1,7 +1,7 @@
 require(['tools/data/structs/Trie'], function(Trie){
 	QUnit.module('Trie');
 
-	QUnit.test('trie', function(){
+	QUnit.test('trie', function(assert){
 		var t = new Trie();
 
 		t.add('abc');
@@ -9,12 +9,12 @@ require(['tools/data/structs/Trie'], function(Trie){
 		t.add('ac');
 		t.add('a');
 
-		ok(t.contains('a'));
-		notOk(t.contains('ab'));
-		notOk(t.contains('c'));
+		assert.ok(t.contains('a'));
+		assert.notOk(t.contains('ab'));
+		assert.notOk(t.contains('c'));
 	});
 
-	QUnit.test('getWords 1', function(){
+	QUnit.test('getWords 1', function(assert){
 		var t = new Trie();
 
 		t.add('abc');
@@ -22,12 +22,12 @@ require(['tools/data/structs/Trie'], function(Trie){
 		t.add('ac');
 		t.add('a');
 
-		deepEqual(t.getWords('a').sort(), ['a', 'abb', 'abc', 'ac'].sort());
-		deepEqual(t.getWords('ab').sort(), ['abb', 'abc'].sort());
-		deepEqual(t.getWords('c'), []);
+		assert.deepEqual(t.getWords('a').sort(), ['a', 'abb', 'abc', 'ac'].sort());
+		assert.deepEqual(t.getWords('ab').sort(), ['abb', 'abc'].sort());
+		assert.deepEqual(t.getWords('c'), []);
 	});
 
-	QUnit.test('getWords 2', function(){
+	QUnit.test('getWords 2', function(assert){
 		var t = new Trie();
 
 		t.add('a');
@@ -37,10 +37,10 @@ require(['tools/data/structs/Trie'], function(Trie){
 		t.add('abc');
 		t.add('abd');
 
-		deepEqual(t.getWords('a').sort(), ['a', 'ab', 'abc', 'abd'].sort());
+		assert.deepEqual(t.getWords('a').sort(), ['a', 'ab', 'abc', 'abd'].sort());
 	});
 
-	QUnit.test('findMatchesOnPath', function(){
+	QUnit.test('findMatchesOnPath', function(assert){
 		var t = new Trie();
 
 		t.add('a');
@@ -49,10 +49,10 @@ require(['tools/data/structs/Trie'], function(Trie){
 		t.add('cd');
 		t.add('abc');
 
-		deepEqual(t.findMatchesOnPath('abcd').sort(), ['a', 'ab', 'abc'].sort());
+		assert.deepEqual(t.findMatchesOnPath('abcd').sort(), ['a', 'ab', 'abc'].sort());
 	});
 
-	QUnit.test('apply', function(){
+	QUnit.test('apply', function(assert){
 		var t = new Trie();
 
 		t.add('abc');
@@ -62,7 +62,7 @@ require(['tools/data/structs/Trie'], function(Trie){
 
 		var count = 1;
 		t.apply(function(node){
-			ok(t.contains(node.prefix));
+			assert.ok(t.contains(node.prefix));
 			count ++;
 		});
 	});
