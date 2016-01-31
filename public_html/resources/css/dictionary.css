@@ -3,13 +3,13 @@ section.input form table {
   border-spacing: 0 6px; }
   section.input form table th {
     padding-bottom: 1em; }
-  section.input form table tr.loading-info td {
+  section.input form table .loading-info td {
     padding-top: 1em;
     padding-bottom: 2em;
     text-align: center;
     font-weight: bold;
     color: #A56900; }
-  section.input form table span.input-description {
+  section.input form table .input-description {
     margin-right: 0.5em; }
 
 table.lemmata th {
@@ -48,7 +48,7 @@ table.lemmata td {
     padding-left: 1.4em;
     text-indent: -1.4em;
     list-style-type: none; }
-  table.lemmata td span.language {
+  table.lemmata td .language {
     font-style: italic; }
 table.lemmata div:empty {
   display: none; }

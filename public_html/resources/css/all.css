@@ -3,7 +3,7 @@ h1 {
   font-weight: bold;
   text-align: center; }
 
-div.container-inner {
+.container-inner {
   -webkit-border-radius: 8px;
   -khtml-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -88,7 +88,7 @@ footer {
   margin-top: 2em;
   clear: both; }
 
-section.notes {
+.notes {
   margin: 1em 1em 2em 1em; }
 
 section.input {
@@ -112,7 +112,7 @@ section.input {
     color: #AAA;
     margin-top: 20px; }
 
-section.content-only, section.content {
+.content-only, section.content {
   margin: 0 0 2em 0; }
 
 section.content {
@@ -139,7 +139,7 @@ section.frame, article.frame {
   margin: 1em;
   vertical-align: top; }
 
-span.new-feature {
+.new-feature {
   font-variant: small-caps;
   font-weight: bold;
   color: #E00;
@@ -199,7 +199,6 @@ input {
     -webkit-appearance: push-button;
     -webkit-box-align: center;
     -webkit-rtl-ordering: logical;
-    -webkit-user-select: none;
     background-color: #F8F8F8;
     border-color: #C6C6C6;
     -webkit-border-radius: 2px;
@@ -246,7 +245,7 @@ label.input-description {
 select.dialect, select.district, select.measure-type, select.uom-type {
   font: 17px arial, sans-serif; }
 
-span.pay-attention {
+.pay-attention {
   font-weight: bold;
   color: #E00; }
 
@@ -255,7 +254,7 @@ table {
   border-collapse: collapse; }
   table td {
     padding: 0; }
-  table tr.top-border-thick {
+  table .top-border-thick {
     border-top: 2px solid; }
 
 .right-border-light {
@@ -277,10 +276,10 @@ table {
   padding: 2px 8px 2px 2px;
   border-right: 2px solid; }
 
-div.center {
+.center {
   text-align: center; }
 
-div.share {
+.share {
   text-align: right; }
 
 @media only print {
@@ -362,7 +361,7 @@ table.paradigm td:empty {
   color: peru;
   font-weight: bold; }
 
-table.themes th.theme {
+.themes th.theme {
   font-weight: normal;
   text-align: left;
   padding-left: 4px;
@@ -385,17 +384,17 @@ td.conjugation, div.theme, div.pronoun-weak-interrogative {
 div.pronoun-weak-interrogative {
   min-width: 4em; }
 
-div.history {
+.history {
   font-size: 17px;
   line-height: 1.5em;
   text-align: center; }
 
-span.word-syllabe-ok {
+.word-syllabe-ok {
   color: #000; }
 
 span.word-syllabe-error {
   color: #E00; }
-  span.word-syllabe-error span.syllabe-error {
+  span.word-syllabe-error .syllabe-error {
     font-weight: bold; }
 
 div.phone, span.phone {
@@ -405,14 +404,14 @@ div.phone, span.phone {
 dd span.phone {
   font-weight: bold; }
 
-span.phone {
+.phone {
   font-family: 'Mau CanIPA Venetan';
   font-size: 15pt; }
 
-section.input input.text-input {
+section.input .text-input {
   margin-top: 2px;
   margin-bottom: 18px; }
-section.input div.text-input-button {
+section.input .text-input-button {
   margin-top: 12px;
   text-align: center; }
 
@@ -421,13 +420,13 @@ section.input form table {
   border-spacing: 0 6px; }
   section.input form table th {
     padding-bottom: 1em; }
-  section.input form table tr.loading-info td {
+  section.input form table .loading-info td {
     padding-top: 1em;
     padding-bottom: 2em;
     text-align: center;
     font-weight: bold;
     color: #A56900; }
-  section.input form table span.input-description {
+  section.input form table .input-description {
     margin-right: 0.5em; }
 
 table.lemmata th {
@@ -466,7 +465,7 @@ table.lemmata td {
     padding-left: 1.4em;
     text-indent: -1.4em;
     list-style-type: none; }
-  table.lemmata td span.language {
+  table.lemmata td .language {
     font-style: italic; }
 table.lemmata div:empty {
   display: none; }
@@ -515,7 +514,7 @@ ul.drop-down-menu li{
     border-right: 2px solid; }
   table.lemmata th.links, table.lemmata td.links {
     display: none; } }
-div.measure-input-container, div.measure-table-container {
+div.measure-input-container, .measure-table-container {
   display: inline-block;
   vertical-align: top; }
 
@@ -547,5 +546,5 @@ table.measure-table td.equivalent-value {
 table.measure-table td.equivalent-measure {
   text-align: left; }
 
-div.measure-output-original, div.measure-output-conversion, div.measure-output-conversion-expanded {
+.measure-output-original, div.measure-output-conversion, div.measure-output-conversion-expanded {
   font-size: 110%; }

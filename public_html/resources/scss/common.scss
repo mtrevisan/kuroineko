@@ -40,7 +40,7 @@ footer{
 	margin-top: 2em;
 	clear: both;
 }
-section.notes{
+.notes{
 	margin: 1em 1em 2em 1em;
 }
 section.input{
@@ -72,11 +72,11 @@ section.input{
 		}
 	}
 }
-section.content-only{
+.content-only{
 	margin: 0 0 2em 0;
 }
 section.content{
-	@extend section.content-only;
+	@extend .content-only;
 	float: left;
 	max-width: 55%;
 }
@@ -97,7 +97,7 @@ section.frame, article.frame{
 	vertical-align: top;
 }
 
-span.new-feature{
+.new-feature{
 	font-variant: small-caps;
 	font-weight: bold;
 	color: #E00;
@@ -138,7 +138,7 @@ input{
 		margin-right: 1em;
 	}
 	&.verb-input, &.text-input, &.lemmata-input, &.measure-input{
-		@extend input.word-input;
+		@extend .word-input;
 
 		&:required:focus{
 			border: 1px solid #4D90FF;
@@ -162,7 +162,6 @@ input{
 		-webkit-appearance: push-button;
 		-webkit-box-align: center;
 		-webkit-rtl-ordering: logical;
-		-webkit-user-select: none;
 		background-color: #F8F8F8;
 		border-color: #C6C6C6;
 		@include border-radius(2px);
@@ -182,7 +181,7 @@ input{
 		color: #666;
 	}
 	&.verb-input-button, &.text-input-button, &.measure-input-button{
-		@extend input.word-input-button;
+		@extend .word-input-button;
 
 		&:hover{
 			background-color: #F8F8F8;
@@ -205,7 +204,7 @@ select{
 	}
 }
 
-span.pay-attention{
+.pay-attention{
 	font-weight: bold;
 	color: #E00;
 }
@@ -217,7 +216,7 @@ table{
 	td{
 		padding: 0;
 	}
-	tr.top-border-thick{
+	.top-border-thick{
 		border-top: 2px solid;
 	}
 }
@@ -241,10 +240,10 @@ table{
 	border-right: 2px solid;
 }
 
-div.center{
+.center{
 	text-align: center;
 }
-div.share{
+.share{
 	text-align: right;
 }
 

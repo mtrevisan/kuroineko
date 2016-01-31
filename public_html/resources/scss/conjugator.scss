@@ -65,7 +65,7 @@ table.paradigm{
 	font-weight: bold;
 }
 
-table.themes{
+.themes{
 	th.theme{
 		@include font-weight-align(normal, left);
 		@include padding-left-right(4px);
@@ -91,7 +91,7 @@ div.pronoun-weak-interrogative{
 	min-width: 4em;
 }
 
-div.history{
+.history{
 	font-size: 17px;
 	line-height: 1.5em;
 	text-align: center;

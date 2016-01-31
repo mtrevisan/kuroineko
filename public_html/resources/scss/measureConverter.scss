@@ -1,7 +1,7 @@
 @import "library.scss";
 
 
-div.measure-input-container, div.measure-table-container{
+div.measure-input-container, .measure-table-container{
 	display: inline-block;
 	vertical-align: top;
 }
@@ -38,6 +38,6 @@ table.measure-table{
 	}
 }
 
-div.measure-output-original, div.measure-output-conversion, div.measure-output-conversion-expanded{
+.measure-output-original, div.measure-output-conversion, div.measure-output-conversion-expanded{
 	font-size: 110%;
 }
