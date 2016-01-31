@@ -269,8 +269,8 @@ define(function(){
 								for(k = j + 1; k < ruleCodesArray.length; k ++){
 									combineRule = this.rules[ruleCodesArray[k]];
 									if(combineRule && combineRule.combineable && rule.type != combineRule.type)
-										applyRule.call(this, newWord, combineRule).forEach(function(word){
-											addWordToDictionary.call(this, word);
+										applyRule.call(this, newWord, combineRule).forEach(function(w){
+											addWordToDictionary.call(this, w);
 										}, this);
 								}
 						}, this);
