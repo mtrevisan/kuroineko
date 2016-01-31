@@ -101,10 +101,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	var interrogatives = {
 		1: [
-			[INTERROGATIVE_MARK_1S, '0>-mi', '0>-[ei]', '0>-(t)[ei]|n', '0>-n(t)[ei]|[^n]'],
-			[INTERROGATIVE_MARK_1S_2, 'mi>i', 'mi>e', 'mi>(t)[ei]|nmi', 'mi>n(t)[ei]|[^n]mi'],
-			[INTERROGATIVE_MARK_1P, '0>-[ei]', '0>-(t)[ei]|n', '0>-n(t)[ei]|[^n]'],
-			[INTERROGATIVE_MARK_1P_2, 'ni>i', 'ni>e', 'i>(t)[ei]|ni'],
+			[INTERROGATIVE_MARK_1S, '0>-mi', '0>-[ei]', '0>-t[ei]|n', '0>-n(t)[ei]|[^n]'],
+			[INTERROGATIVE_MARK_1S_2, 'mi>[ei]', 'mi>t[ei]|nmi', 'mi>n(t)[ei]|[^n]mi'],
+			[INTERROGATIVE_MARK_1P, '0>-[ei]', '0>-t[ei]|n', '0>-n(t)[ei]|[^n]'],
+			[INTERROGATIVE_MARK_1P_2, 'ni>[ei]', 'i>(t)[ei]|ni'],
 			[INTERROGATIVE_MARK_2S, '0>-t[uo]', '0>-stu'],
 			[INTERROGATIVE_MARK_2S_2, 'u>o', 'tu>stu'],
 			[INTERROGATIVE_MARK_2P, '0>-[uo]'],
