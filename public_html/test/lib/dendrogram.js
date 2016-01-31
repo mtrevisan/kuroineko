@@ -1,5 +1,5 @@
 (function (exports) {
-    "use strict";
+    'use strict';
 
     /*jshint curly:false */
     /*global d3 */
@@ -19,7 +19,7 @@
 
      // Taken from http://bl.ocks.org/2429963.
         elbow = function (d, i) {
-            return "M" + d.source.y + "," + d.source.x + "V" + d.target.x + "H" + d.target.y;
+            return 'M' + d.source.y + ',' + d.source.x + 'V' + d.target.x + 'H' + d.target.y;
         };
 
         dendrogram = function (selection) {
@@ -40,63 +40,63 @@
 
              // Generate canvas.
                 svg = d3.select(this)
-                        .selectAll("svg")
+                        .selectAll('svg')
                         .data([data]);
 
              // Generate chart template.
                 svg.enter()
-                   .append("svg")
-                   .append("g")
-                   .attr("id", "dendrogram")
-                   .attr("transform", "translate(40, 0)");
+                   .append('svg')
+                   .append('g')
+                   .attr('id', 'dendrogram')
+                   .attr('transform', 'translate(40, 0)');
 
              // Update dimensions.
-                svg.attr("width", width)
-                   .attr("height", height);
+                svg.attr('width', width)
+                   .attr('height', height);
 
-                dendrogram = d3.select("g#dendrogram");
+                dendrogram = d3.select('g#dendrogram');
 
              // Generate edges.
-                edges = dendrogram.selectAll("path.link")
+                edges = dendrogram.selectAll('path.link')
                                   .data(links);
 
                 edges.enter()
-                     .append("path")
-                     .attr("class", "link");
+                     .append('path')
+                     .attr('class', 'link');
 
-                edges.attr("d", elbow);
+                edges.attr('d', elbow);
 
                 edges.exit()
                      .remove();
 
              // Until I figure out a way how to join correctly over changing elements,
              // I will just remove what is there first.
-                dendrogram.selectAll("g.node")
+                dendrogram.selectAll('g.node')
                           .remove();
 
              // Generate vertices.
-                vertices = dendrogram.selectAll("g.node")
+                vertices = dendrogram.selectAll('g.node')
                                      .data(nodes);
 
                 enterVertex = vertices.enter()
-                                      .append("g")
-                                      .attr("class", "node");
-                enterVertex.append("circle")
-                           .attr("r", 4.5);
-                enterVertex.append("text")
-                        .attr("dx", function (d) {
+                                      .append('g')
+                                      .attr('class', 'node');
+                enterVertex.append('circle')
+                           .attr('r', 4.5);
+                enterVertex.append('text')
+                        .attr('dx', function (d) {
                             return d.children ? -8 : 8;
                          })
-                        .attr("dy", 3)
-                        .attr("text-anchor", function (d) {
-                            return d.children ? "end" : "start";
+                        .attr('dy', 3)
+                        .attr('text-anchor', function (d) {
+                            return d.children ? 'end' : 'start';
                          })
                         .text(function (d) {
                             return labels[d.label];
                          });
 
-                vertices.attr("transform", function (d) {
-                    return "translate(" + d.y + "," + d.x + ")";
+                vertices.attr('transform', function (d) {
+                    return 'translate(' + d.y + ',' + d.x + ')';
                 });
 
             });

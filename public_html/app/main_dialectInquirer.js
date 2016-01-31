@@ -94,7 +94,9 @@ define(['tools/data/mining/DecisionTree', 'HTMLHelper', 'tools/ui/Validator', 't
 
 			GoogleAnalyticsHelper.trackEvent('Compute', 'InquireDialect response', payload);
 
-			try{ CommHelper.getClientPositionData().then(common, common); }
+			try{
+				CommHelper.getClientPositionData().then(common, common);
+			}
 			catch(e){
 				common({});
 			}

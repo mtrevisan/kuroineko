@@ -129,7 +129,7 @@ define(['HTMLHelper', 'tools/data/FunctionHelper', 'tools/ui/Validator', 'tools/
 	};
 
 	var showHistory = function(){
-		var sortedData = historyStore.sort(function(a, b){return b.count - a.count;});
+		var sortedData = historyStore.sort(function(a, b){ return b.count - a.count; });
 
 		//clean history if needed:
 		var maxHistoryData = 15,
