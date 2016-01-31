@@ -223,8 +223,8 @@ var AMDLoader = (function(doc){
 		id = addJSExtension(id);
 
 		if(!promises[id])
-			promises[id] = new Promise(function(resolve){
-				resolves[id] = resolve;
+			promises[id] = new Promise(function(res){
+				resolves[id] = res;
 
 				var args = id.split('!');
 				if(args.length < 2){
