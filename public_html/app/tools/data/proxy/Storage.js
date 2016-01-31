@@ -53,22 +53,21 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 			k, record, recordID;
 		for(k in records){
 			record = records[k];
-			if(!record || !record.id)
-				continue;
+			if(record && record.id){
+				recordID = record.id;
+				if(ids.indexOf(recordID) == -1){
+					//add ID into the stored ID list
+					ids.push(recordID);
+					setStoredIDs.call(this, ids);
+				}
 
-			recordID = record.id;
-			if(ids.indexOf(recordID) == -1){
-				//add ID into the stored ID list
-				ids.push(recordID);
-				setStoredIDs.call(this, ids);
+				//NOTE: iPad bug requires the item to be removed before setting it
+				remove.call(this, recordID);
+				save.call(this, recordID, JSON.stringify(record));
+
+				//keep the cache up to date
+				this.cache[recordID] = record;
 			}
-
-			//NOTE: iPad bug requires the item to be removed before setting it
-			remove.call(this, recordID);
-			save.call(this, recordID, JSON.stringify(record));
-
-			//keep the cache up to date
-			this.cache[recordID] = record;
 		}
 	};
 

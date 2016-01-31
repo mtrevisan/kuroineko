@@ -105,15 +105,15 @@ for(var i = 0; i < size; i ++){
 		}
 	};
 
-	var deflateDictionary = function(galepin){
+	var deflateDictionary = function(gal){
 		var model = CoderDriver.create(HighOrderModelFactory.createFrom(BasicModel, 2), {updateCount: 200});
-var start = +new Date();
-		var itr = (new BitBuffer(galepin)).getIterator();
-		galepin = model.decode(itr).join('');
-var decompress = +new Date();
-		galepin = (new Function('return ' + galepin))();
+//var start = +new Date();
+		var itr = (new BitBuffer(gal)).getIterator();
+		gal = model.decode(itr).join('');
+//var decompress = +new Date();
+		gal = (new Function('return ' + gal))();
 //var load = +new Date();
-		galepin = JSONH.unpack(galepin);
+		gal = JSONH.unpack(gal);
 //var unpack = +new Date();
 //console.log('decompress: ' + (decompress - start));
 //console.log('load: ' + (load - decompress));
@@ -125,7 +125,7 @@ var decompress = +new Date();
 		document.getElementById('lemmataIta').disabled = false;
 		document.getElementById('lemmataEng').disabled = false;
 
-		return galepin;
+		return gal;
 	};
 
 	var doSearch = function(){

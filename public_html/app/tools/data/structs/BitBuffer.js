@@ -95,10 +95,10 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		};
 		var next = function(){
 			currentBit = (bits >> bitsRemaining) & 0x1;
-			if(!bitsRemaining)
-				loadNextByte();
-			else
+			if(bitsRemaining)
 				bitsRemaining --;
+			else
+				loadNextByte();
 			return currentBit;
 		};
 		var skip = function(n){

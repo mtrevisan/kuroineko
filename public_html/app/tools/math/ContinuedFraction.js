@@ -152,9 +152,7 @@ define(['tools/math/Fraction'], function(Fraction){
 
 	var inverse = function(){
 		var terms;
-		if(!this.terms.length)
-			terms = [0];
-		else{
+		if(this.terms.length){
 			terms = this.terms.slice();
 			if(!terms[0])
 				terms.shift();
@@ -165,6 +163,8 @@ define(['tools/math/Fraction'], function(Fraction){
 					e: 0, f: 1, g: 0, h: 0},
 					this);
 		}
+		else
+			terms = [0];
 
 		return new Constructor(terms);
 	};

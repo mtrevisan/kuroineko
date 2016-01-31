@@ -87,7 +87,7 @@ console.log(variants[0]);
 		var rows = matrix.length,
 			v1 = indicesVariants.v1,
 			v2 = indicesVariants.v2,
-			i, j;
+			i;
 		for(i = 0; i < rows; i ++)
 			if(i != v1 && i != v2)
 				matrix[i][rows] = mergeValues(variants, matrix, i, v1, v2);

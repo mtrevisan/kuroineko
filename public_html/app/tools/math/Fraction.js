@@ -237,7 +237,7 @@ define(function(){
 		//NOTE: this requires 65 bits of precision
 		var t = this.sgn * this.num * (frac.den / gcd1) + frac.sgn * frac.num * (this.den / gcd1);
 		var gcd2 = t % gcd1;
-		gcd2 = (!gcd2? gcd1: _gcd(gcd2, gcd1));
+		gcd2 = (gcd2? _gcd(gcd2, gcd1): gcd1);
 		return new Constructor(t / gcd2, (this.den / gcd1) * (frac.den / gcd2));
 
 		//NOTE: formula without overflow management

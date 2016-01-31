@@ -139,8 +139,8 @@ define(['tools/data/ObjectHelper', 'tools/data/structs/PriorityQueue'], function
 	/** @private */
 	var applyDBSCANClustering = function(){
 		var clusterId = CLUSTER_ID_NOISE,
-			nextId = function(clusterId){
-				return (clusterId === CLUSTER_ID_NOISE? 0: clusterId + 1);
+			nextId = function(id){
+				return (id === CLUSTER_ID_NOISE? 0: id + 1);
 			};
 		this.orderedList.forEach(function(point){
 			if(point.reachability <= this.epsilon)

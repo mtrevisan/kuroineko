@@ -117,7 +117,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/lang/phonology/Orthography', 
 	};
 
 	var encodeIntoMauCANIpa = function(str){
-		var list = str.match(Phone.REGEX_UNICODE_SPLITTER);
+//		var list = str.match(Phone.REGEX_UNICODE_SPLITTER);
 
 		return str
 			.replace(/ɹ˞̺/g, 'I').replace(/ɹ˞̠/g, '~')

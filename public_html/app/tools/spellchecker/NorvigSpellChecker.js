@@ -212,12 +212,11 @@ define(['tools/data/ArrayHelper'], function(ArrayHelper){
 			//replace of word[idx] with replacement
 			return Math.log(0.013);
 
-		if(!replacement)
-			//transpose of word[idx] with word[idx + distance]
-			return Math.log(0.015);
-		else
+		if(replacement)
 			//insert replacement before word[idx]
 			return Math.log(0.012);
+		//transpose of word[idx] with word[idx + distance]
+		return Math.log(0.015);
 	};
 
 	/** @private */

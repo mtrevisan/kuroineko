@@ -180,22 +180,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			infinitiveThemes[verb.infinitive] = Themizer.generate(verb, dialect);
 		});
 
-		if(!deriveAllFormsFromInfinitive){
-			//dict: -r/1
-			var k = 16;
-			k = generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10], k);
-			k = generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7], k);
-			k = generateTheme(verbs, infinitiveThemes, 4, 0, [11], k);
-			k = generateTheme(verbs, infinitiveThemes, 5, 2, [], k);
-			k = generateTheme(verbs, infinitiveThemes, 6, 2, [], k);
-			k = generateTheme(verbs, infinitiveThemes, 7, 2, [], k);
-			k = generateTheme(verbs, infinitiveThemes, 8, 0, [12], k);
-			k = generateTheme(verbs, infinitiveThemes, 9, 0, [], k);
-			k = generateTheme(verbs, infinitiveThemes, 10, 0, [], k);
-			k = generateTheme(verbs, infinitiveThemes, 11, 4, [], k);
-			k = generateTheme(verbs, infinitiveThemes, 12, 8, [], k);
-		}
-		else{
+		if(deriveAllFormsFromInfinitive){
 			//dict: -r/A
 			paradigm = [];
 			Array.prototype.push.apply(paradigm, generateTheme(verbs, infinitiveThemes, 1, 0));
@@ -240,6 +225,21 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			}
 
 			printParadigm(paradigm, undefined, 1);
+		}
+		else{
+			//dict: -r/1
+			var k = 16;
+			k = generateTheme(verbs, infinitiveThemes, 1, 0, [2, 4, 8, 9, 10], k);
+			k = generateTheme(verbs, infinitiveThemes, 2, 0, [5, 6, 7], k);
+			k = generateTheme(verbs, infinitiveThemes, 4, 0, [11], k);
+			k = generateTheme(verbs, infinitiveThemes, 5, 2, [], k);
+			k = generateTheme(verbs, infinitiveThemes, 6, 2, [], k);
+			k = generateTheme(verbs, infinitiveThemes, 7, 2, [], k);
+			k = generateTheme(verbs, infinitiveThemes, 8, 0, [12], k);
+			k = generateTheme(verbs, infinitiveThemes, 9, 0, [], k);
+			k = generateTheme(verbs, infinitiveThemes, 10, 0, [], k);
+			k = generateTheme(verbs, infinitiveThemes, 11, 4, [], k);
+			k = generateTheme(verbs, infinitiveThemes, 12, 8, [], k);
 		}
 
 		printReductions(adjectives, 'ajetivi');
@@ -493,9 +493,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 						constraint = subst;
 					}
 
-					expandForm(form.replace(re, '')).forEach(function(form){
-						if(subst != form){
-							line = getSuffixLine(flag, subst, form, constraint);
+					expandForm(form.replace(re, '')).forEach(function(f){
+						if(subst != f){
+							line = getSuffixLine(flag, subst, f, constraint);
 							if(logs.indexOf(line) < 0)
 								logs.push(line);
 						}
@@ -555,10 +555,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		});
 	};
 
-	/** @private */
+	/** @private * /
 	var composeFlag = function(){
 		return '/' + Array.prototype.slice.call(arguments).map(function(flag){ return flag.substr(1); }).join(FLAG_SEPARATOR);
-	};
+	};*/
 
 	/** @private */
 	var addFlag = function(replacement, flags){
@@ -811,7 +811,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	/** @private */
 	var renumberReductions = function(list, k){
 		var subst, substPrev;
-		list.forEach(function(value, idx){
+		list.forEach(function(value){
 			value[0] = k;
 
 			subst = extractSimpleForm(value[1].replace(PATTERN_LEAVE_REPLACEMENT, ''));
@@ -867,20 +867,18 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var k = 0;
 		Object.keys(reversed).forEach(function(list1){
 			Object.keys(reversed).forEach(function(list2){
-				if(list1 != list2 && reversed[list1][0].replace(/>.+$/, '') == reversed[list2][0].replace(/>.+$/, '')){
-					var list = ArrayHelper.intersection(list1.split(FLAG_SEPARATOR), list2.split(FLAG_SEPARATOR));
-					if(list.length){
-						var value = ArrayHelper.unique(reversed[list1].concat(reversed[list2]));
-						if(!Object.keys(reversed).some(function(el){ return ArrayHelper.equals(reversed[el], value); }))
-							reversed[k ++] = value;
-					}
+				if(list1 != list2 && reversed[list1][0].replace(/>.+$/, '') == reversed[list2][0].replace(/>.+$/, '')
+						&& ArrayHelper.intersection(list1.split(FLAG_SEPARATOR), list2.split(FLAG_SEPARATOR)).length){
+					var value = ArrayHelper.unique(reversed[list1].concat(reversed[list2]));
+					if(!Object.keys(reversed).some(function(el){ return ArrayHelper.equals(reversed[el], value); }))
+						reversed[k ++] = value;
 				}
 			});
 		});
-		Object.keys(reversed).forEach(function(list){
-			list = reversed[list];
-			if(list.length > 1 || list.some(function(el){ return el.match(/[\(\[]/); }))
-				filtered.push(list);
+		Object.keys(reversed).forEach(function(lst){
+			lst = reversed[lst];
+			if(lst.length > 1 || lst.some(function(el){ return el.match(/[\(\[]/); }))
+				filtered.push(lst);
 		});
 		return filtered
 			.sort(function(a, b){

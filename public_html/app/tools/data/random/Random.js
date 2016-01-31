@@ -30,7 +30,7 @@ define(['tools/data/random/MersenneTwister'], function(MersenneTwister){
 			var i = -- n,
 				p = {},
 				key, a, b;
-			total = keys.reduce(function(sum, key){ return sum + list[key]; }, 0);
+			total = keys.reduce(function(sum, k){ return sum + list[k]; }, 0);
 			for(key in list)
 				p[key] = list[key] * n;
 			while(i > 1){

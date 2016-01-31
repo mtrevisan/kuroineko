@@ -104,14 +104,14 @@ define(function(){
 	/**
 	 * Initializes the state vector by using one unsigned 32-bit integer "seed", which may be zero.
 	 *
-	 * @param {Number} seed		The seed value
+	 * @param {Number} s		The seed value
 	 */
-	var seed = function(seed){
-		this.mt[0] = seed >>> 0;
+	var seed = function(s){
+		this.mt[0] = s >>> 0;
 		for(var i = 1; i < N; i ++){
 			//MT[i] = lowest w bits of (f * (MT[i-1] xor (MT[i-1] >> (w - 2))) + i)
 			seed = this.mt[i - 1] ^ (this.mt[i - 1] >>> (W - 2));
-			this.mt[i] = (((((seed & 0xFFFF0000) >>> 16) * F) << 16) + (seed & 0x0000FFFF) * F) + i;
+			this.mt[i] = (((((s & 0xFFFF0000) >>> 16) * F) << 16) + (s & 0x0000FFFF) * F) + i;
 			//See Knuth TAOCP Vol2. 3rd Ed. P.106 for multiplier
 			//In the previous versions, MSBs of the seed affect only MSBs of the array MT[]
 			//2002/01/09 modified by Makoto Matsumoto
@@ -234,7 +234,7 @@ define(function(){
 	var res53 = function(){
 		var a = this.int32() >>> 5,
 			b = this.int32() >>> 6;
-		return(a * 67108864. + b) * (1. / 9007199254740992.);
+		return (a * 67108864. + b) * (1. / 9007199254740992.);
 	};
 
 	/** Generates a random real on ]0,1[ interval */

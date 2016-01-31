@@ -49,10 +49,10 @@ define(function(){
 		if(v.connections.length)
 			v.connections = v.connections.map(function(connection){
 				if(Object.prototype.toString.call(connection) == '[object String]'){
-					var idx = getVertexIndex(this, connection),
+					var i = getVertexIndex(this, connection),
 						ver;
-					if(idx >= 0)
-						ver = this[idx];
+					if(i >= 0)
+						ver = this[i];
 					else{
 						ver = new Vertex(connection, []);
 						this.push(ver);

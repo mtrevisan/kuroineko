@@ -251,7 +251,7 @@ define(['tools/lang/recognition/NGrams', 'tools/lang/recognition/Markov', 'tools
 	var findRuns = function(text){
 		var relevantRuns = {},
 			charCount;
-		Object.keys(unicodeBlockTests).forEach(function(lang, key){
+		Object.keys(unicodeBlockTests).forEach(function(lang){
 			//count the number of characters in each character block
 			charCount = text.match(unicodeBlockTests[lang]);
 
@@ -381,7 +381,7 @@ define(['tools/lang/recognition/NGrams', 'tools/lang/recognition/Markov', 'tools
 		code.forEach(function(word){
 			if(word[1] != UNKNOWN_LANGUAGE){
 				Object.keys(word[1]).forEach(function(lang){
-					var idx = ArrayHelper.findIndex(recon, function(el){ return (el[0] == lang);});
+					var idx = ArrayHelper.findIndex(recon, function(el){ return (el[0] == lang); });
 					if(idx >= 0)
 						recon[idx][1] ++;
 					else

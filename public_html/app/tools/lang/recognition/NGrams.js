@@ -172,11 +172,11 @@ define(function(){
 		}, other.stats);
 		return p;/**/
 
-		var distance = 0;
+		var dist = 0;
 		Object.keys(this.stats).forEach(function(key){
-			distance += (other.stats[key]? Math.abs(this[key] - other.stats[key]): UNSEEN_NGRAM_DISTANCE);
+			dist += (other.stats[key]? Math.abs(this[key] - other.stats[key]): UNSEEN_NGRAM_DISTANCE);
 		}, this.stats);
-		return -distance / this.count;
+		return -dist / this.count;
 	};
 
 

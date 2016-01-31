@@ -207,8 +207,8 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 				return [];
 
 		var arr = Array.prototype.concat.apply([], Array.prototype.slice.call(arguments));
-		return arr.filter(function(el, idx, arr){
-			return (arr.indexOf(el) == idx);
+		return arr.filter(function(el, idx, a){
+			return (a.indexOf(el) == idx);
 		});
 	};
 
@@ -233,10 +233,10 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	};
 
 	var cartesianProductOf = function(){
-		return Array.prototype.reduce.call(arguments, function(a, b){
+		return Array.prototype.reduce.call(arguments, function(x, y){
 			var ret = [];
-			a.forEach(function(a){
-				b.forEach(function(b){
+			x.forEach(function(a){
+				y.forEach(function(b){
 					ret.push(a.concat([b]));
 				});
 			});
@@ -321,7 +321,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	 * @return {Array} The flattened list.
 	 */
 	var flatten = function(list){
-		return (function recursiveFlatten(list){
+		return (function recursiveFlatten(lst){
 			var result = [];
 			var add = function(x){
 				if(Array.isArray(x) || ObjectHelper.isObject(x))
@@ -330,12 +330,12 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 					result.push(x);
 			};
 
-			if(ObjectHelper.isObject(list))
-				Object.keys(list).forEach(function(x){
-					add(list[x]);
+			if(ObjectHelper.isObject(lst))
+				Object.keys(lst).forEach(function(x){
+					add(lst[x]);
 				});
 			else
-				list.forEach(function(x){
+				lst.forEach(function(x){
 					add(x);
 				});
 			return result;

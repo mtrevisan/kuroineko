@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/data/coder/arithmetic/ArithmeticCoder', 'tools/data/structs/BitBuffer'], function(ArithmeticCoder, BitBuffer){
+define(['tools/data/coder/arithmetic/ArithmeticCoder'], function(ArithmeticCoder){
 
 	var create = function(Model, config){
 		var encode = function(data, encodingBuffer){

@@ -64,9 +64,9 @@ define(['tools/data/ObjectHelper', 'tools/data/alignment/BaseAlignment'], functi
 			}
 
 		var traces = [];
-		extractMaxScoreIndices(maxScore).forEach(function(maxScore){
+		extractMaxScoreIndices(maxScore).forEach(function(score){
 			//extract edit operations
-			traces.push(traceback.call(this, maxScore[0], maxScore[1]));
+			traces.push(traceback.call(this, score[0], score[1]));
 		}, this);
 
 		return traces;

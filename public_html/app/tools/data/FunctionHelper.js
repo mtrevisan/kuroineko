@@ -42,23 +42,21 @@ define(function(){
 		var n = func.length - args.length,
 			savedAccumulator = Array.prototype.slice.apply(args);
 
-		var accumulator = function(moreArgs, savedAccumulator, n){
-			var savedAccumulatorPrev = savedAccumulator.slice(0),
+		var accumulator = function(moreArgs, sa, n){
+			var savedAccumulatorPrev = sa.slice(0),
 				nPrev = n;
 			for(var i = 0, size = moreArgs.length; i < size; i ++, n --)
-				savedAccumulator.push(moreArgs[i]);
-			if(!n){
-				var result = func.apply(scope || this, savedAccumulator);
-				//reset vars, so curried function can be applied to new params
-				savedAccumulator = savedAccumulatorPrev;
-				n = nPrev;
-				return result;
-			}
-			else
+				sa.push(moreArgs[i]);
+			if(n)
 				return function(){
 					//arguments are params, so closure bussiness is avoided
-					return accumulator(arguments, savedAccumulator.slice(0), n);
+					return accumulator(arguments, sa.slice(0), n);
 				};
+			var result = func.apply(scope || this, sa);
+			//reset vars, so curried function can be applied to new params
+			savedAccumulator = savedAccumulatorPrev;
+			n = nPrev;
+			return result;
 		};
 		return accumulator([], savedAccumulator, n);
 	};

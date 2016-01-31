@@ -17,8 +17,9 @@ define(function(){
 	 * @requires input be an integer
 	 */
 	var nextPowerOf2 = function(n){
+		//check if n is itself power of 2
 		if(getLeastSignificantBit(n) == n)
-			return n; //check if n is itself power of 2
+			return n;
 
 		return getMostSignificantBit(n) << 1;
 	};
@@ -30,7 +31,7 @@ define(function(){
 		var tmp = n;
 		while(tmp){
 			n = tmp;
-			tmp = tmp ^ (getLeastSignificantBit(tmp));
+			tmp ^= getLeastSignificantBit(tmp);
 		}
 		return n;
 	};

@@ -49,7 +49,7 @@ define(['tools/data/mining/DecisionTreeContext', 'tools/data/ObjectHelper'], fun
 
 	/** @private */
 	var buildNode = function(node, context, stack){
-		var scope = this;
+		var self = this;
 
 		//store the set of data instances along with the node
 		node.data = ObjectHelper.clone(context.getData());
@@ -60,20 +60,20 @@ define(['tools/data/mining/DecisionTreeContext', 'tools/data/ObjectHelper'], fun
 			node['class'] = sameClass;
 
 			//ask supervisor for correctness
-			if(scope.supervisor)
-				confirmClass(scope, node);
+			if(self.supervisor)
+				confirmClass(self, node);
 		}
 		else{
 			var info = context.selectAttributeWithHighestGain();
 
-			if(scope.supervisor){
+			if(self.supervisor){
 				//ask supervisor which branch should be followed
 				if(info.attribute)
-					askBranch(scope, node, context, stack, info);
+					askBranch(self, node, context, stack, info);
 				//no branches to follow
 				else
 					//ask supervisor for this newly discovered class
-					askNewAttributeAndClass(scope);
+					askNewAttributeAndClass(self);
 			}
 			else if(info.attribute){
 				splitDataInstances(context, info);

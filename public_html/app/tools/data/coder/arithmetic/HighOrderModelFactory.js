@@ -9,9 +9,9 @@ define(function(){
 		var OrderN = function(coder, config){
 			var lastSymbol = [],
 				contexts = new Model(coder, config),
-				i;
-			for(i = 0; i < order; i ++){
-				lastSymbol[i] = 0;
+				j;
+			for(j = 0; j < order; j ++){
+				lastSymbol[j] = 0;
 				contexts = [contexts];
 			}
 

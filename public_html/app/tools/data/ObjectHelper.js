@@ -19,18 +19,18 @@ define(function(){
 
 
 	Function.prototype.clone = function(){
-		var scope = this;
+		var self = this;
 		if(this.clonedFrom)
-			scope = this.clonedFrom;
+			self = this.clonedFrom;
 
 		var tmp = function(){
-			return scope.apply(this, arguments);
+			return self.apply(this, arguments);
 		};
 		for(var key in this)
 			if(this.hasOwnProperty(key))
 				tmp[key] = this[key];
 
-		tmp.clonedFrom = scope;
+		tmp.clonedFrom = self;
 
 		return tmp;
 	};
