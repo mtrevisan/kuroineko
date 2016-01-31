@@ -145,13 +145,13 @@ define(function(){
 			this.rootList.splice(this.rootList.indexOf(minNode), 1);
 			this.valueToNode.delete(minNode.value);
 
-			if(!this.rootList.length)
-				this.minimumNode = undefined;
-			else{
+			if(this.rootList.length){
 				//merge the children of the minimum node with the root list
 				this.minimumNode = this.rootList[0];
 				consolidate.call(this);
 			}
+			else
+				this.minimumNode = undefined;
 		}
 		return minNode;
 	};
@@ -160,7 +160,7 @@ define(function(){
 		this.decreaseKey(-Infinity, value);
 		this.extract();
 	};
-	
+
 	var decreaseKey = function(priority, value){
 		var x = this.valueToNode.get(value);
 		if(!x)

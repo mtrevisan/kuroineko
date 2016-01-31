@@ -48,41 +48,39 @@ define(function(){
 			len = lines.length,
 			i,
 			definitionParts, ruleType;
-		for(i = 0; i < len; i ++){
-			if(!lines[i])
-				continue;
+		for(i = 0; i < len; i ++)
+			if(lines[i]){
+				definitionParts = lines[i].split(SEPARATOR);
 
-			definitionParts = lines[i].split(SEPARATOR);
+				ruleType = definitionParts.shift();
 
-			ruleType = definitionParts.shift();
+				if(ruleType == 'PFX' || ruleType == 'SFX')
+					i += parseSuffix.call(this, ruleType, definitionParts, lines, i);
+				else if(ruleType == 'COMPOUNDRULE')
+					i += parseCompoundRule.call(this, definitionParts, lines, i);
+				else if(ruleType == 'REP')
+					i += parseReplacementTable.call(this, definitionParts, lines, i);
+				else if(ruleType == 'ICONV')
+					i += parseInputConversion.call(this, definitionParts, lines, i);
+				else if(ruleType == 'MAP')
+					i += parseMap.call(this, definitionParts, lines, i);
+				else if(ruleType == 'NAME' || ruleType == 'VERSION')
+					this.flags[ruleType] = definitionParts.join(' ');
+				else{
+					//HOME
+					//LANG
+					//SET
+					//TRY
+					//WORDCHARS
+					//ONLYINCOMPOUND
+					//COMPOUNDMIN
+					//FLAG
+					//KEEPCASE
+					//NEEDAFFIX
 
-			if(ruleType == 'PFX' || ruleType == 'SFX')
-				i += parseSuffix.call(this, ruleType, definitionParts, lines, i);
-			else if(ruleType == 'COMPOUNDRULE')
-				i += parseCompoundRule.call(this, definitionParts, lines, i);
-			else if(ruleType == 'REP')
-				i += parseReplacementTable.call(this, definitionParts, lines, i);
-			else if(ruleType == 'ICONV')
-				i += parseInputConversion.call(this, definitionParts, lines, i);
-			else if(ruleType == 'MAP')
-				i += parseMap.call(this, definitionParts, lines, i);
-			else if(ruleType == 'NAME' || ruleType == 'VERSION')
-				this.flags[ruleType] = definitionParts.join(' ');
-			else{
-				//HOME
-				//LANG
-				//SET
-				//TRY
-				//WORDCHARS
-				//ONLYINCOMPOUND
-				//COMPOUNDMIN
-				//FLAG
-				//KEEPCASE
-				//NEEDAFFIX
-
-				this.flags[ruleType] = definitionParts[0];
+					this.flags[ruleType] = definitionParts[0];
+				}
 			}
-		}
 
 		data = null;
 	};

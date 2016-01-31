@@ -123,14 +123,14 @@ var AMDLoader = (function(doc){
 		//console.log('define module ' + id.replace(/.+\//, '') + (dependencies.length? ' with dependencies [' + dependencies.map(function(dep){ return dep.replace(/.+\//, ''); }).join(', ') + ']': '') + ', remains [' + Object.keys(promises).filter(function(k){ return !!resolves[k]; }).map(function(k){ return k.replace(/.+\//, ''); }).join(', ') + ']');
 		checkForCircularDependency(id, dependencies);
 
-		if(!dependencies.length)
-			//module has no dependencies, bind id to definition
-			resolve(id, (isFunction(definition)? definition.apply(this): definition));
-		else
+		if(dependencies.length)
 			//module has dependencies, defer loading until all dependencies have been loaded
 			require(dependencies, function(){
 				resolve(id, definition.apply(this, arguments));
 			});
+		else
+			//module has no dependencies, bind id to definition
+			resolve(id, (isFunction(definition)? definition.apply(this): definition));
 	};
 
 	define.amd = {};

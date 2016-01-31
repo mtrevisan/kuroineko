@@ -41,13 +41,13 @@ define(['tools/data/ArrayHelper'], function(ArrayHelper){
 	 * Adds a word to the dictionary.
 	 *
 	 * @param {String} word	The word to add to the dictionary.
-	 */
+	 * /
 	var addWord = function(word){
 		word = extractWords.call(this, word);
 
 //FIXME
 		calculateLanguageModelProbability.call(this, word);
-	};
+	};*/
 
 	/** @private */
 	var extractWords = function(words){

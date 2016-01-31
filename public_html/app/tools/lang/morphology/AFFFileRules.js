@@ -446,9 +446,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 							constraint = m[3] || substitution;
 						}
 
-						expandForm(form.replace(re, '')).forEach(function(form){
-							if(substitution != form)
-								reduction.push(substitution + '>' + form + '|' + constraint);
+						expandForm(form.replace(re, '')).forEach(function(f){
+							if(substitution != f)
+								reduction.push(substitution + '>' + f + '|' + constraint);
 						});
 
 						reduction.splice(i, 1);
