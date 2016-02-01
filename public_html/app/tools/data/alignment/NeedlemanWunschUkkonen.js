@@ -20,7 +20,7 @@ define(['tools/data/alignment/BaseAlignment'], function(BaseAlignment){
 		BaseAlignment.call(this, x, y, config);
 
 		this.diff = Math.abs(this.m - this.n);
-		this.delta = Math.max(1, Math.min(this.fnInsertGapCost(), this.fnDeleteGapCost()));
+		this.delta = Math.max(1, Math.min(this.costs.insertion, this.costs.deletion));
 	};
 
 
