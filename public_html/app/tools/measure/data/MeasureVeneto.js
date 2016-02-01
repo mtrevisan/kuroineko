@@ -258,26 +258,9 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI'], funct
 		var isVenice = !!place.match(/Venèŧia/),
 			a = (place.match(/Belun|Roigo|Verona/)? 'paso': 'pèrtega' + (isVenice? ' (granda)': ''));
 		var m = new MeasureConverter(['tòla = 1 ' + a + '\u00B2'], 'tòla');
-		if(place.match(/Basan/))
-			m.addUnit('kanpo = 4 kuarta = 225 tòla');
-		else if(place.match(/Belun/))
-			m.addUnit('kanpo = 8 kalvéa = 156.25 tòla');
-		else if(place.match(/Konejan|Piève de Kador|Trevixo/))
-			m.addUnit('kanpo = 1250 tòla');
-		else if(place.match(/Pàdoa|Venèŧia|Viŧenŧa/)){
-			m.addUnit('kanpo = 840 tòla');
-
-			if(isVenice)
-				m.addUnit('milèr = 1000 gèbo = 1 pèrtega (cea)\u00B2');
-		}
-		else if(place.match(/Fèltre/))
-			m.addUnit('kanpo = 5 stèr = 250 tòla');
-		else if(place.match(/Mèl/))
-			m.addUnit('kanpo = 7 stèr = 250 tòla');
-		else if(place.match(/Roigo/))
-			m.addUnit('kanpo = 24 vaneŧa = 35 tòla');
-		else if(place.match(/Verona/))
-			m.addUnit('kanpo = 24 vaneŧa = 30 tòla');
+		getUnitsAreaEarth(place).forEach(function(unit){
+			m.addUnit(unit);
+		});
 
 		m.addConverter(m, MeasureSI.area,
 			Math.pow(getMeasureLengthEarth(place).convert(1, a, MeasureSI.length.getBaseUOM()), 2));
@@ -302,34 +285,45 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI'], funct
 		return place;
 	};
 
+	/** @private */
+	var getUnitsAreaEarth = (function(){
+		var units = {
+			'Basan': ['kanpo = 4 kuarta = 225 tòla'],
+
+			'Belun': ['kanpo = 8 kalvéa = 156.25 tòla'],
+
+			'Konejan': ['kanpo = 1250 tòla'],
+			'Piève de Kador': ['kanpo = 1250 tòla'],
+			'Trevixo': ['kanpo = 1250 tòla'],
+
+			'Pàdoa': ['kanpo = 840 tòla'],
+			'Viŧenŧa': ['kanpo = 840 tòla'],
+
+			'Venèŧia': ['kanpo = 840 tòla', 'milèr = 1000 gèbo = 1 pèrtega (cea)\u00B2'],
+
+			'Fèltre': ['kanpo = 5 stèr = 250 tòla'],
+
+			'Mèl': ['kanpo = 7 stèr = 250 tòla'],
+
+			'Roigo': ['kanpo = 24 vaneŧa = 35 tòla'],
+
+			'Verona': ['kanpo = 24 vaneŧa = 30 tòla']
+		};
+
+		return function(place){
+			return units[place] || [];
+		};
+	}());
+
 
 	var getMeasureVolumeDry = function(place){
 		place = reducePlaceVolumeDry(place);
 
 		var a = (place.match(/Venèŧia/)? 'stèr': 'sako');
 		var m = new MeasureConverter([], a);
-		if(place.match(/Àxol/))
-			m.addUnit(a + ' = 4 kuarta = 3 vigano = 4 minèla');
-		else if(place.match(/Belun|Céneda|Vitòrio/))
-			m.addUnit(a + ' = 8 kalvéa = 4 kuartaròl = 2 međeto = 2 minèla');
-		else if(place.match(/Fèltre/))
-			m.addUnit(a + ' = 4 stèr = 4 kuarta = 2 međeto = 2 minèla');
-		else if(place.match(/Lendinara/))
-			m.addUnit(a + ' = 3 staro = 4 kuarta = 2 međeto = 2 minèla');
-		else if(place.match(/Pàdoa/))
-			m.addUnit('mòjo = 3 ' + a + ' = 4 staro = 4 kuarta = 4 kopo = 3 skodèla');
-		else if(place.match(/Piève de Kador/))
-			m.addUnit(a + ' = 3 kalvéa = 4 kuartaròl = 2 međeto = 2 minèla');
-		else if(place.match(/Badía Polèxine|Roigo/))
-			m.addUnit(a + ' = 3 staro = 4 kuarta = 4 kuartaròl = 3 skodèla');
-		else if(place.match(/Konejan|Mèl|Mòta de Livenŧa|Trevixo/))
-			m.addUnit(a + ' = 4 kuarta = 4 kuartièr = 2 međeto = 2 minèla');
-		else if(place.match(/Venèŧia/))
-			m.addUnit('mòjo = 4 ' + a + ' = 2 međèno = 2 kuarta = 4 kuartaròl = 2 međeto = 2 minèla');
-		else if(place.match(/Verona/))
-			m.addUnit(a + ' = 3 minale = 4 kuarta = 4 kuartaròl = 2 međeto = 2 minèla');
-		else if(place.match(/Basan|Viŧenŧa/))
-			m.addUnit(a + ' = 4 staro = 4 kuarta = 4 kuartaròl = 2 međeto = 2 minèla');
+		getUnitsVolumeDry(a, place).forEach(function(unit){
+			m.addUnit(unit);
+		});
 
 		var o = {
 			'Àxol':				87.8557,
@@ -371,49 +365,50 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI'], funct
 		return place;
 	};
 
+	/** @private */
+	var getUnitsVolumeDry = function(a, place){
+		var units = {
+			'Àxol': [a + ' = 4 kuarta = 3 vigano = 4 minèla'],
+
+			'Belun': [a + ' = 8 kalvéa = 4 kuartaròl = 2 međeto = 2 minèla'],
+			'Céneda': [a + ' = 8 kalvéa = 4 kuartaròl = 2 međeto = 2 minèla'],
+			'Vitòrio': [a + ' = 8 kalvéa = 4 kuartaròl = 2 međeto = 2 minèla'],
+
+			'Fèltre': [a + ' = 4 stèr = 4 kuarta = 2 međeto = 2 minèla'],
+
+			'Lendinara': [a + ' = 3 staro = 4 kuarta = 2 međeto = 2 minèla'],
+
+			'Pàdoa': ['mòjo = 3 ' + a + ' = 4 staro = 4 kuarta = 4 kopo = 3 skodèla'],
+
+			'Piève de Kador': [a + ' = 3 kalvéa = 4 kuartaròl = 2 međeto = 2 minèla'],
+
+			'Badía Polèxine': [a + ' = 3 staro = 4 kuarta = 4 kuartaròl = 3 skodèla'],
+			'Roigo': [a + ' = 3 staro = 4 kuarta = 4 kuartaròl = 3 skodèla'],
+
+			'Konejan': [a + ' = 4 kuarta = 4 kuartièr = 2 međeto = 2 minèla'],
+			'Mèl': [a + ' = 4 kuarta = 4 kuartièr = 2 međeto = 2 minèla'],
+			'Mòta de Livenŧa': [a + ' = 4 kuarta = 4 kuartièr = 2 međeto = 2 minèla'],
+			'Trevixo': [a + ' = 4 kuarta = 4 kuartièr = 2 međeto = 2 minèla'],
+
+			'Venèŧia': ['mòjo = 4 ' + a + ' = 2 međèno = 2 kuarta = 4 kuartaròl = 2 međeto = 2 minèla'],
+
+			'Verona': [a + ' = 3 minale = 4 kuarta = 4 kuartaròl = 2 međeto = 2 minèla'],
+
+			'Basan': [a + ' = 4 staro = 4 kuarta = 4 kuartaròl = 2 međeto = 2 minèla'],
+			'Viŧenŧa': [a + ' = 4 staro = 4 kuarta = 4 kuartaròl = 2 međeto = 2 minèla']
+		};
+
+		return units[place] || [];
+	};
+
 	var getMeasureVolumeLiquid = function(place){
 		place = reducePlaceVolumeLiquid(place);
 
 		var a = (place.match(/Mèl|Mòta de Livenŧa|Trevixo \(ŧità\)/)? 'konđo': 'mastèl');
 		var m = new MeasureConverter([], a);
-		if(place.match(/Àxol/))
-			m.addUnit('bote = 10 ' + a + ' = 6 seco = 6 bokal = 2 bòŧe = 2 píkolo = 2 gòto');
-		else if(place.match(/Badía Polèxine/))
-			m.addUnit(a + ' = 54 bokal = 2 bòŧe = 2 píkolo = 2 gòto');
-		else if(place.match(/Basan/))
-			m.addUnit('bote = 10 ' + a + ' = 8 seco = 4 bokal = 2 bòŧe = 2 píkolo = 2 gòto');
-		else if(place.match(/Belun|Piève de Kador/))
-			m.addUnit(a + ' = 5 seco = 8 bokal = 2 bòŧe = 2 píkolo = 2 gòto');
-		else if(place.match(/Céneda/))
-			m.addUnit(a + ' = 6 seco = 2 bokal = 6 ingistara = 2 bokal = 2 bòŧe = 2 píkolo = 2 gòto');
-		else if(place.match(/Còxa/))
-			m.addUnit(a + ' = 8 seco = 6 bokal = 2 bòŧe = 2 píkolo = 2 gòto');
-		else if(place.match(/Fèltre/))
-			m.addUnit(a + ' = 60 bokal = 2 bòŧe = 2 píkolo = 2 gòto');
-		else if(place.match(/Konejan/))
-			m.addUnit(a + ' = 2 masteleto = 3 seco = 6 bokal = 2 bòŧe = 2 píkolo = 2 gòto');
-		else if(place.match(/Lendinara/))
-			m.addUnit(a + ' = 54 bokal = 2 bòŧe = 2 píkolo = 2 gòto');
-		else if(place.match(/Mèl|Mèstre/))
-			m.addUnit(a + ' = 46 bokal = 2 bòŧe = 2 píkolo = 2 gòto');
-		else if(place.match(/Mòta de Livenŧa/))
-			m.addUnit(a + ' = 72 bokal = 2 bòŧe = 2 píkolo = 2 gòto');
-		else if(place.match(/Pàdoa/))
-			m.addUnit(a + ' = 8 seco = 9 bòŧe = 2 píkolo = 2 gòto');
-		else if(place.match(/Roigo/))
-			m.addUnit(a + ' = 1.5 masteleto = 4 seco = 9 bokal = 2 bòŧe = 2 píkolo = 2 gòto');
-		else if(place.match(/Trevixo \((ŧità|kanpaña)\)/))
-			m.addUnit('bote = 10 ' + a + ' = 6 seca = ' + (place.match(/Trevixo (kanpaña)/)? 6: 8) + ' bokal = 2 bòŧe = 2 píkolo = 2 gòto');
-		else if(place.match(/Venèŧia/)){
-			m.addUnit('burco = 60 bote = 1.25 ànfota = 4 bigonxo = 2 ' + a + ' = 7 seco = 2 bokal = 4 kuartuŧo = 2 píkolo = 2 gòto');
-			m.addUnit('baril = 6 seco');
-		}
-		else if(place.match(/Verona/))
-			m.addUnit('bote = 8 ' + a + ' = 1.5 brento = 2 seca = 2 bokal = 6 ingistara = 4 gòto');
-//		else if(place.match(/Vitòrio/))
-//			m.addUnit(a + ' = 1.5 brenta = 2 seca = 2 bokal = 6 ingistara = 4 gòto');
-		else if(place.match(/Viŧenŧa/))
-			m.addUnit('bote = 8 ' + a + ' = 6 seca = 2 seco = 5 bokal');
+		getUnitsVolumeLiquid(a, place).forEach(function(unit){
+			m.addUnit(unit);
+		});
 
 		if(place.match(/Trevixo \((ŧità|kanpaña)\)/))
 			place = 'Trevixo';
@@ -455,6 +450,52 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI'], funct
 		else if(place.match(/Arxiñan|Axiago|Kamixan viŧentin|Lonigo|Montebèl|Rekoaro|Skio|Thiène/))
 			place = 'Viŧenŧa';
 		return place;
+	};
+
+	/** @private */
+	var getUnitsVolumeLiquid = function(a, place){
+		var units = {
+			'Àxol': ['bote = 10 ' + a + ' = 6 seco = 6 bokal = 2 bòŧe = 2 píkolo = 2 gòto'],
+
+			'Badía Polèxine': [a + ' = 54 bokal = 2 bòŧe = 2 píkolo = 2 gòto'],
+
+			'Basan': ['bote = 10 ' + a + ' = 8 seco = 4 bokal = 2 bòŧe = 2 píkolo = 2 gòto'],
+
+			'Belun': [a + ' = 5 seco = 8 bokal = 2 bòŧe = 2 píkolo = 2 gòto'],
+			'Piève de Kador': [a + ' = 5 seco = 8 bokal = 2 bòŧe = 2 píkolo = 2 gòto'],
+
+			'Céneda': [a + ' = 6 seco = 2 bokal = 6 ingistara = 2 bokal = 2 bòŧe = 2 píkolo = 2 gòto'],
+
+			'Còxa': [a + ' = 8 seco = 6 bokal = 2 bòŧe = 2 píkolo = 2 gòto'],
+
+			'Fèltre': [a + ' = 60 bokal = 2 bòŧe = 2 píkolo = 2 gòto'],
+
+			'Konejan': [a + ' = 2 masteleto = 3 seco = 6 bokal = 2 bòŧe = 2 píkolo = 2 gòto'],
+
+			'Lendinara': [a + ' = 54 bokal = 2 bòŧe = 2 píkolo = 2 gòto'],
+
+			'Mèl': [a + ' = 46 bokal = 2 bòŧe = 2 píkolo = 2 gòto'],
+			'Mèstre': [a + ' = 46 bokal = 2 bòŧe = 2 píkolo = 2 gòto'],
+
+			'Mòta de Livenŧa': [a + ' = 72 bokal = 2 bòŧe = 2 píkolo = 2 gòto'],
+
+			'Pàdoa': [a + ' = 8 seco = 9 bòŧe = 2 píkolo = 2 gòto'],
+
+			'Roigo': [a + ' = 1.5 masteleto = 4 seco = 9 bokal = 2 bòŧe = 2 píkolo = 2 gòto'],
+
+			'Trevixo (ŧità)': ['bote = 10 ' + a + ' = 6 seca = 8 bokal = 2 bòŧe = 2 píkolo = 2 gòto'],
+			'Trevixo (kanpaña)': ['bote = 10 ' + a + ' = 6 seca = 6 bokal = 2 bòŧe = 2 píkolo = 2 gòto'],
+
+			'Venèŧia': ['burco = 60 bote = 1.25 ànfota = 4 bigonxo = 2 ' + a + ' = 7 seco = 2 bokal = 4 kuartuŧo = 2 píkolo = 2 gòto', 'baril = 6 seco'],
+
+			'Verona': ['bote = 8 ' + a + ' = 1.5 brento = 2 seca = 2 bokal = 6 ingistara = 4 gòto'],
+
+			//'Vitòrio': [a + ' = 1.5 brenta = 2 seca = 2 bokal = 6 ingistara = 4 gòto'],
+
+			'Viŧenŧa': ['bote = 8 ' + a + ' = 6 seca = 2 seco = 5 bokal']
+		};
+
+		return units[place] || [];
 	};
 
 
