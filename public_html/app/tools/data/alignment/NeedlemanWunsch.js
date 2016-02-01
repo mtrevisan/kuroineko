@@ -7,10 +7,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/data/ObjectHelper', 'tools/data/alignment/BaseAlignment'], function(ObjectHelper, BaseAlignment){
-
-	var a, b, n, m, h, costs, traceback;
-
+define(['tools/data/alignment/BaseAlignment'], function(BaseAlignment){
 
 	/**
 	 * @requires	Insertion and deletion costs to be small positive integers
@@ -21,30 +18,21 @@ define(['tools/data/ObjectHelper', 'tools/data/alignment/BaseAlignment'], functi
 	 */
 	var Constructor = function(x, y, config){
 		BaseAlignment.call(this, x, y, config);
-
-		a = ObjectHelper.privatize(this, 'a');
-		b = ObjectHelper.privatize(this, 'b');
-		n = ObjectHelper.privatize(this, 'n');
-		m = ObjectHelper.privatize(this, 'm');
-		h = ObjectHelper.privatize(this, 'h');
-		costs = ObjectHelper.privatize(this, 'costs');
-		traceback = ObjectHelper.privatize(this, 'traceback');
 	};
 
 
 	var align = function(){
-		var i, j;
-
 		//calculate scores:
-		for(j = 1; j <= m; j ++)
-			for(i = 1; i <= n; i ++)
-				h[i][j] = Math.min(
-					h[i - 1][j - 1] + costs.matchingFn(a[i - 1], b[j - 1], costs),
-					h[i][j - 1] + costs.insertion,
-					h[i - 1][j] + costs.deletion);
+		var i, j;
+		for(j = 1; j <= this.m; j ++)
+			for(i = 1; i <= this.n; i ++)
+				this.h[i][j] = Math.min(
+					this.h[i - 1][j - 1] + this.costs.matchingFn(this.a[i - 1], this.b[j - 1], this.costs),
+					this.h[i][j - 1] + this.costs.insertion,
+					this.h[i - 1][j] + this.costs.deletion);
 
 		//extract edit operations
-		return traceback(a, b, h, n, m, costs);
+		return this.traceback(this.a, this.b, this.h, this.n, this.m, this.costs);
 	};
 
 
