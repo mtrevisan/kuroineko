@@ -12,6 +12,7 @@ define(['HTMLHelper',
 
 	var lemmataVecDOM, lemmataItaDOM, lemmataEngDOM, lemmataTableDOM;
 
+
 	var init = function(){
 		lemmataVecDOM = document.getElementById('lemmataVec');
 		lemmataItaDOM = document.getElementById('lemmataIta');
