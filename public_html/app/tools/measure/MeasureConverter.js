@@ -41,29 +41,8 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 	 * @param {String} parentUOM					Referenced unit of measure like 'ft'
 	 */
 	var addUnit = function(uom, parentValue, parentUOM){
-		if(!parentValue && !parentUOM){
-			if(!ObjectHelper.isString(uom))
-				throw 'The value passed should be a string.';
-
-			var data = uom.split(' = '),
-				size = data.length,
-				i, m;
-			uom = data[0];
-			for(i = 1; i < size; i ++){
-				m = data[i].match(/^([^ ]+) ([^ ]+)$/);
-				if(!m)
-					throw 'The string passed is not in the expected format "<uom> = <parent-value> <parent-uom> = ...".';
-
-				parentValue = new Fraction(m[1]);
-				parentUOM = m[2];
-
-				this.addUnit(uom, parentValue, parentUOM);
-
-				uom = parentUOM;
-			}
-			if(size == 1)
-				this.data[uom] = this.data[uom] || {};
-		}
+		if(!parentValue && !parentUOM)
+			addUnitAsString.call(this, uom);
 		else{
 			if(!(parentValue instanceof Fraction) && !ObjectHelper.isFloat(parentValue))
 				throw 'The parent value passed should be a float or a fraction.';
@@ -84,6 +63,35 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 			if(!this.data[parentUOM])
 				this.data[parentUOM] = {};
 		}
+	};
+
+	/**
+	 * @param {String} uom	A sentence coding uom, parentValue, and parentUOM like 'm = 12 ft', or 'm = 12 ft = 3 in'
+	 *
+	 * @private
+	 */
+	var addUnitAsString = function(uom){
+		if(!ObjectHelper.isString(uom))
+			throw 'The value passed should be a string.';
+
+		var data = uom.split(' = '),
+			size = data.length,
+			i, m;
+		uom = data[0];
+		for(i = 1; i < size; i ++){
+			m = data[i].match(/^([^ ]+) ([^ ]+)$/);
+			if(!m)
+				throw 'The string passed is not in the expected format "<uom> = <parent-value> <parent-uom> = ...".';
+
+			var parentValue = new Fraction(m[1]),
+				parentUOM = m[2];
+
+			this.addUnit(uom, parentValue, parentUOM);
+
+			uom = parentUOM;
+		}
+		if(size == 1)
+			this.data[uom] = this.data[uom] || {};
 	};
 
 	/**
