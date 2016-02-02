@@ -10,8 +10,8 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 
 
 	/**
-	 * Compute the Levenshtein edit distance between two strings (this value will be >= 0, where 0 indicates identical strings), i.e. the number of insertion, deletion, and substitution edits
-	 * required to transform one string to the other.
+	 * Compute the Levenshtein edit distance between two strings (this value will be >= 0, where 0 indicates identical strings),
+	 * i.e. the number of insertion, deletion, and substitution edits required to transform one string to the other.
 	 * Comparisons are case sensitive, so for example, "Fred" and "fred" will have a distance of <code>costs.substitution</code>.<br>
 	 * Note that this is the simpler and faster optimal string alignment (aka restricted edit) distance
 	 * that differs slightly by imposing the restriction that no substring is edited more than once.
@@ -83,8 +83,9 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 	};
 
 	/**
-	 * Compute the Levenshtein edit distance between two strings (this value will be >= 0, where 0 indicates identical strings), i.e. the number of insertion, deletion, and substitution edits
-	 * required to transform one string to the other, among with the number of insertions, deletions, and substitutions.
+	 * Compute the Levenshtein edit distance between two strings (this value will be >= 0, where 0 indicates identical strings),
+	 * i.e. the number of insertion, deletion, and substitution edits required to transform one string to the other,
+	 * among with the number of insertions, deletions, and substitutions.
 	 * Comparisons are case sensitive, so for example, "Fred" and "fred" will have a distance of <code>costs.substitution</code>.<br>
 	 * Note that this is the simpler and faster optimal string alignment (aka restricted edit) distance
 	 * that differs slightly by imposing the restriction that no substring is edited more than once.
@@ -120,8 +121,8 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 
 
 	/**
-	 * Compute the Damerau-Levenshtein edit distance between two strings (this value will be >= 0, where 0 indicates identical strings), i.e. the number of insertion, deletion, substitution, and transposition edits
-	 * required to transform one string to the other.
+	 * Compute the Damerau-Levenshtein edit distance between two strings (this value will be >= 0, where 0 indicates identical strings),
+	 * i.e. the number of insertion, deletion, substitution, and transposition edits required to transform one string to the other.
 	 * Comparisons are case sensitive, so for example, "Fred" and "fred" will have a distance of <code>costs.substitution</code>.<br>
 	 * Note that this is the simpler and faster optimal string alignment (aka restricted edit) distance
 	 * that differs slightly from the classic Damerau-Levenshtein algorithm by imposing the restriction
@@ -191,8 +192,9 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 	};
 
 	/**
-	 * Compute the Damerau-Levenshtein edit distance between two strings (this value will be >= 0, where 0 indicates identical strings), i.e. the number of insertion, deletion, substitution, and transposition edits
-	 * required to transform one string to the other, among with the number of insertions, deletions, substitutions, and transpositions.
+	 * Compute the Damerau-Levenshtein edit distance between two strings (this value will be >= 0, where 0 indicates identical strings),
+	 * i.e. the number of insertion, deletion, substitution, and transposition edits required to transform one string to the other,
+	 * among with the number of insertions, deletions, substitutions, and transpositions.
 	 * Comparisons are case sensitive, so for example, "Fred" and "fred" will have a distance of <code>costs.substitution</code>.<br>
 	 * Note that this is the simpler and faster optimal string alignment (aka restricted edit) distance
 	 * that differs slightly from the classic Damerau-Levenshtein algorithm by imposing the restriction
@@ -204,6 +206,9 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 	 * @return {Object}	The number of insertions, deletions, substitutions, transpositions, and the edit distance, a non-negative number representing the number of edits required to transform one string to the other
 	 */
 	var damerauLevenshteinEdit = function(a, b, costs){
+		if(!costs.transposition)
+			throw 'Cost of transposition cannot be zero or undefined';
+
 		var computeFn = function(x, y, c, distance, i, j){
 			var min = distance[i - 1][j - 1] + c.matchingFn(x[i - 1], y[j - 1], c),
 				t;
@@ -243,8 +248,6 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 			throw 'Cost of deletion cannot be zero or undefined';
 		if(!costs.substitution)
 			throw 'Cost of substitution cannot be zero or undefined';
-		if(!costs.transposition)
-			throw 'Cost of transposition cannot be zero or undefined';
 
 		//base cases
 		var n = a.length,
