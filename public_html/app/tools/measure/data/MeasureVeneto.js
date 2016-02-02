@@ -18,19 +18,8 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 	};
 
 
-	var getMeasureLengthEarth = function(place){
-		place = reducePlaceLengthEarthIndustrial(place);
-
-		var isVenice = !!place.match(/Venèŧia/),
-			a = (place.match(/Belun|Roigo|Verona/)? 'paso': 'pèrtega' + (isVenice? ' (granda)': '')),
-			b = (place.match(/Basan|Konejan|Pàdoa|Roigo|Venèŧia|Verona|Viŧenŧa/)? 6: 5);
-		var m = new MeasureConverter(['milèr = 1000 ' + a + ' = ' + b + ' piè = 12 onŧa = 12 línea = 12 ponto',
-			'paseto = 3 piè',
-			'braŧo = 2 piè'], 'piè');
-		if(isVenice)
-			m.addUnit('pèrtega (cea) = 4.5 piè');
-
-		var o = {
+	var getMeasureLengthEarth = (function(){
+		var conversions = {
 			//kome el piè da fàbrega de Venèŧia
 			'Belun':		0.34773485,
 			//kome el só piè da fàbrega
@@ -49,36 +38,53 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 			//dopo de 'l 1696 censuario 0.340333 m
 			'Verona':	0.342914758
 		};
-		m.addConverter(m, MeasureSI.length, o[place]);
 
-		return m;
-	};
+		return function(place){
+			place = reducePlaceLengthEarthIndustrial(place);
 
-	var getMeasureLengthIndustrial = function(place){
-		place = reducePlaceLengthEarthIndustrial(place);
+			var isVenice = !!place.match(/Venèŧia/),
+				a = (place.match(/Belun|Roigo|Verona/)? 'paso': 'pèrtega' + (isVenice? ' (granda)': '')),
+				b = (place.match(/Basan|Konejan|Pàdoa|Roigo|Venèŧia|Verona|Viŧenŧa/)? 6: 5),
+				m = new MeasureConverter(['milèr = 1000 ' + a + ' = ' + b + ' piè = 12 onŧa = 12 línea = 12 ponto',
+					'paseto = 3 piè',
+					'braŧo = 2 piè'], 'piè');
+			if(isVenice)
+				m.addUnit('pèrtega (cea) = 4.5 piè');
 
-		var isVenice = !!place.match(/Venèŧia/),
-			a = (place.match(/Belun|Roigo|Verona/)? 'paso': 'pèrtega' + (isVenice? ' (granda)': '')),
-			b = (place.match(/Basan|Konejan|Pàdoa|Roigo|Venèŧia|Verona|Viŧenŧa/)? 6: 5);
-		var m = new MeasureConverter(['milèr = 1000 ' + a + ' = ' + b + ' piè = 12 onŧa = 12 línea = 12 ponto',
-			'paseto = 3 piè',
-			'braŧo = 2 piè'], 'piè');
-		if(isVenice)
-			m.addUnit('pèrtega (cea) = 4.5 piè');
+			m.addConverter(m, MeasureSI.length, conversions[place]);
 
-		if(place.match(/Belun|Konejan|Roigo|Trevixo/))
-			place = 'Venèŧia';
-		var o = {
+			return m;
+		};
+	})();
+
+	var getMeasureLengthIndustrial = (function(){
+		var conversions = {
 			'Fèltre':	0.367053447,
 			'Mèl':		0.352554932,
 			'Pàdoa':		0.35739415,
 			'Venèŧia':	0.34773485,
 			'Verona':	0.34291476
 		};
-		m.addConverter(m, MeasureSI.length, o[place]);
 
-		return m;
-	};
+		return function(place){
+			place = reducePlaceLengthEarthIndustrial(place);
+
+			var isVenice = !!place.match(/Venèŧia/),
+				a = (place.match(/Belun|Roigo|Verona/)? 'paso': 'pèrtega' + (isVenice? ' (granda)': '')),
+				b = (place.match(/Basan|Konejan|Pàdoa|Roigo|Venèŧia|Verona|Viŧenŧa/)? 6: 5),
+				m = new MeasureConverter(['milèr = 1000 ' + a + ' = ' + b + ' piè = 12 onŧa = 12 línea = 12 ponto',
+					'paseto = 3 piè',
+					'braŧo = 2 piè'], 'piè');
+			if(isVenice)
+				m.addUnit('pèrtega (cea) = 4.5 piè');
+
+			if(place.match(/Belun|Konejan|Roigo|Trevixo/))
+				place = 'Venèŧia';
+			m.addConverter(m, MeasureSI.length, conversions[place]);
+
+			return m;
+		};
+	})();
 
 	/** @private */
 	var reducePlaceLengthEarthIndustrial = (function(){
@@ -92,13 +98,8 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 		return FunctionHelper.curry(reducePlace, [places]);
 	})();
 
-	var getMeasureLengthCotton = function(place){
-		place = reducePlaceLengthCotton(place);
-
-		var a = 'braŧo' + (place.match(/Verona/)? ' (longo)': '');
-		var m = new MeasureConverter(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
-
-		var o = {
+	var getMeasureLengthCotton = (function(){
+		var conversions = {
 			'Mèstre':	0.6730907,
 			'Pàdoa':		0.6809806,
 			'Piève de Kador':	0.6954697,
@@ -108,10 +109,18 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 			'Verona':	0.6489908,
 			'Viŧenŧa':	0.6903053
 		};
-		m.addConverter(m, MeasureSI.length, o[place]);
 
-		return m;
-	};
+		return function(place){
+			place = reducePlaceLengthCotton(place);
+
+			var a = 'braŧo' + (place.match(/Verona/)? ' (longo)': ''),
+				m = new MeasureConverter(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
+
+			m.addConverter(m, MeasureSI.length, conversions[place]);
+
+			return m;
+		};
+	})();
 
 	/** @private */
 	var reducePlaceLengthCotton = (function(){
@@ -126,15 +135,8 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 		return FunctionHelper.curry(reducePlace, [places]);
 	})();
 
-	var getMeasureLengthSilk = function(place){
-		place = reducePlaceLengthSilk(place);
-
-		var a = 'braŧo' + (place.match(/Verona/)? ' (kurto)': '');
-		var m = new MeasureConverter(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
-
-		if(place.match(/Belun/))
-			place = 'Verona';
-		var o = {
+	var getMeasureLengthSilk = (function(){
+		var conversions = {
 			'Mèl':		0.6531218,
 			'Mèstre':	0.636252,
 			'Pàdoa':		0.6375138,
@@ -145,10 +147,20 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 			'Verona':	0.6424493,
 			'Venèŧia':	0.6387213
 		};
-		m.addConverter(m, MeasureSI.length, o[place]);
 
-		return m;
-	};
+		return function(place){
+			place = reducePlaceLengthSilk(place);
+
+			var a = 'braŧo' + (place.match(/Verona/)? ' (kurto)': ''),
+				m = new MeasureConverter(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
+
+			if(place.match(/Belun/))
+				place = 'Verona';
+			m.addConverter(m, MeasureSI.length, conversions[place]);
+
+			return m;
+		};
+	})();
 
 	/** @private */
 	var reducePlaceLengthSilk = (function(){
@@ -163,23 +175,26 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 		return FunctionHelper.curry(reducePlace, [places]);
 	})();
 
-	var getMeasureLengthWool = function(place){
-		place = reducePlaceLengthWool(place);
-
-		var a = 'braŧo' + (place.match(/Verona/)? ' (longo)': '');
-		var m = new MeasureConverter(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
-
-		var o = {
+	var getMeasureLengthWool = (function(){
+		var conversions = {
 			//kome el só braŧo da pano
 			'Roigo':		0.6698203,
 			//braŧo longo
 			'Verona':	0.6489908,
 			'Venèŧia':	0.6833956
 		};
-		m.addConverter(m, MeasureSI.length, o[place]);
 
-		return m;
-	};
+		return function(place){
+			place = reducePlaceLengthWool(place);
+
+			var a = 'braŧo' + (place.match(/Verona/)? ' (longo)': ''),
+				m = new MeasureConverter(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
+
+			m.addConverter(m, MeasureSI.length, conversions[place]);
+
+			return m;
+		};
+	})();
 
 	/** @private */
 	var reducePlaceLengthWool = (function(){
@@ -194,23 +209,26 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 		return FunctionHelper.curry(reducePlace, [places]);
 	})();
 
-	var getMeasureLengthLinen = function(place){
-		place = reducePlaceLengthLinen(place);
-
-		var a = 'braŧo' + (place.match(/Verona/)? ' (longo)': '');
-		var m = new MeasureConverter(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
-
-		var o = {
+	var getMeasureLengthLinen = (function(){
+		var conversions = {
 			'Piève de Kador':	0.7653610,
 			//kome el só braŧo da pano
 			'Roigo':		0.6698203,
 			//braŧo longo
 			'Verona':	0.6489908
 		};
-		m.addConverter(m, MeasureSI.length, o[place]);
 
-		return m;
-	};
+		return function(place){
+			place = reducePlaceLengthLinen(place);
+
+			var a = 'braŧo' + (place.match(/Verona/)? ' (longo)': ''),
+				m = new MeasureConverter(a + ' = 12 onŧa = 12 línea = 12 ponto', a);
+
+			m.addConverter(m, MeasureSI.length, conversions[place]);
+
+			return m;
+		};
+	})();
 
 	/** @private */
 	var reducePlaceLengthLinen = (function(){
@@ -247,9 +265,8 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 	var getMeasureAreaEarth = function(place){
 		place = reducePlaceAreaEarth(place);
 
-		var isVenice = !!place.match(/Venèŧia/),
-			a = (place.match(/Belun|Roigo|Verona/)? 'paso': 'pèrtega' + (isVenice? ' (granda)': ''));
-		var m = new MeasureConverter(['tòla = 1 ' + a + '\u00B2'], 'tòla');
+		var a = (place.match(/Belun|Roigo|Verona/)? 'paso': 'pèrtega' + (place.match(/Venèŧia/)? ' (granda)': '')),
+			m = new MeasureConverter(['tòla = 1 ' + a + '\u00B2'], 'tòla');
 		getUnitsAreaEarth(place).forEach(function(unit){
 			m.addUnit(unit);
 		});
@@ -305,16 +322,8 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 	}());
 
 
-	var getMeasureVolumeDry = function(place){
-		place = reducePlaceVolumeDry(place);
-
-		var a = (place.match(/Venèŧia/)? 'stèr': 'sako');
-		var m = new MeasureConverter([], a);
-		getUnitsVolumeDry(a, place).forEach(function(unit){
-			m.addUnit(unit);
-		});
-
-		var o = {
+	var getMeasureVolumeDry = (function(){
+		var conversions = {
 			'Àxol':				87.8557,
 			'Badía Polèxine':	92.2680,
 			'Basan':				111.5427,
@@ -334,10 +343,21 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 			'Vitòrio':			97.7,
 			'Viŧenŧa':			108.1727
 		};
-		m.addConverter(m, MeasureSI.volume, o[place]);
 
-		return m;
-	};
+		return function(place){
+			place = reducePlaceVolumeDry(place);
+
+			var a = (place.match(/Venèŧia/)? 'stèr': 'sako'),
+				m = new MeasureConverter([], a);
+			getUnitsVolumeDry(a, place).forEach(function(unit){
+				m.addUnit(unit);
+			});
+
+			m.addConverter(m, MeasureSI.volume, conversions[place]);
+
+			return m;
+		};
+	})();
 
 	/** @private */
 	var reducePlaceVolumeDry = (function(){
@@ -386,18 +406,8 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 		return units[place] || [];
 	};
 
-	var getMeasureVolumeLiquid = function(place){
-		place = reducePlaceVolumeLiquid(place);
-
-		var a = (place.match(/Mèl|Mòta de Livenŧa|Trevixo \(ŧità\)/)? 'konđo': 'mastèl');
-		var m = new MeasureConverter([], a);
-		getUnitsVolumeLiquid(a, place).forEach(function(unit){
-			m.addUnit(unit);
-		});
-
-		if(place.match(/Trevixo \((ŧità|kanpaña)\)/))
-			place = 'Trevixo';
-		var o = {
+	var getMeasureVolumeLiquid = (function(){
+		var conversions = {
 			'Àxol':				73.3752,
 			'Badía Polèxine':	108.3374,
 			'Basan':				72.4159,
@@ -419,10 +429,23 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 			'Vitòrio':			85.8,
 			'Viŧenŧa':			113.8900
 		};
-		m.addConverter(m, MeasureSI.volume, o[place]);
 
-		return m;
-	};
+		return function(place){
+			place = reducePlaceVolumeLiquid(place);
+
+			var a = (place.match(/Mèl|Mòta de Livenŧa|Trevixo \(ŧità\)/)? 'konđo': 'mastèl'),
+				m = new MeasureConverter([], a);
+			getUnitsVolumeLiquid(a, place).forEach(function(unit){
+				m.addUnit(unit);
+			});
+
+			if(place.match(/Trevixo \((ŧità|kanpaña)\)/))
+				place = 'Trevixo';
+			m.addConverter(m, MeasureSI.volume, conversions[place]);
+
+			return m;
+		};
+	})();
 
 	/** @private */
 	var getUnitsVolumeLiquid = function(a, place){
@@ -488,12 +511,8 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 	};
 
 
-	var getMeasureWeightHeavy = function(place){
-		place = reducePlaceWeightHeavy(place);
-
-		var m = new MeasureConverter('milèr = 10 kantaro = 4 miro = 25 libra = 12 onŧa = 6 saŧo = 32 karato = 24 gran', 'libra');
-
-		var o = {
+	var getMeasureWeightHeavy = (function(){
+		var conversions = {
 			'Mèl':		510.2271,
 			//pal dekreto del Senato de 'l 6 April 1737 el pexo fin el ga da èser 1.02 'olte kuelo de Venèŧia
 			'Pàdoa':		301.22966 * (768 / 485) * 1.02,
@@ -506,10 +525,17 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 			//na volta e mèđa la só libra fina
 			'Verona':	333.1757 * 1.5
 		};
-		m.addConverter(m, MeasureSI.weight, o[place]);
 
-		return m;
-	};
+		return function(place){
+			place = reducePlaceWeightHeavy(place);
+
+			var m = new MeasureConverter('milèr = 10 kantaro = 4 miro = 25 libra = 12 onŧa = 6 saŧo = 32 karato = 24 gran', 'libra');
+
+			m.addConverter(m, MeasureSI.weight, conversions[place]);
+
+			return m;
+		};
+	})();
 
 	/** @private */
 	var reducePlaceWeightHeavy = (function(){
@@ -525,13 +551,8 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 		return FunctionHelper.curry(reducePlace, [places]);
 	})();
 
-	var getMeasureWeightLight = function(place){
-		place = reducePlaceWeightLight(place);
-
-		var m = new MeasureConverter('milèr = 10 kantaro = 4 miro = 25 libra = 12 onŧa = 6 saŧo = 4 skrúpolo = 6 karato = 4 gran', 'libra');
-		m.addUnit('karga = 4 kantaro');
-
-		var o = {
+	var getMeasureWeightLight = (function(){
+		var conversions = {
 			'Badía Polèxine': 339.0974,
 			'Roigo':		301.4160,
 			//pal dekreto del Senato de 'l 6 April 1737 el pexo fin el ga da èser 1.125 'olte kuelo de Venèŧia
@@ -540,10 +561,18 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 			'Venèŧia':	301.22966,
 			'Verona':	333.1757
 		};
-		m.addConverter(m, MeasureSI.weight, o[place]);
 
-		return m;
-	};
+		return function(place){
+			place = reducePlaceWeightLight(place);
+
+			var m = new MeasureConverter('milèr = 10 kantaro = 4 miro = 25 libra = 12 onŧa = 6 saŧo = 4 skrúpolo = 6 karato = 4 gran', 'libra');
+			m.addUnit('karga = 4 kantaro');
+
+			m.addConverter(m, MeasureSI.weight, conversions[place]);
+
+			return m;
+		};
+	})();
 
 	/** @private */
 	var reducePlaceWeightLight = (function(){
