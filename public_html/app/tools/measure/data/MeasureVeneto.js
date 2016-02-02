@@ -481,7 +481,7 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 	})();
 
 	/** @private */
-	var addCommonPlaceVolume = function(place){
+	var addCommonPlaceVolume = function(places){
 		places['Pàdoa'] = /^(Dòlo|Ŧitadèla)$/;
 		places['Verona'] = /^(Kaldièro|San Bonifaco|San Martin Bon Albèrgo|Soave)$/;
 		places['Viŧenŧa'] = /^(Arxiñan|Axiago|Kamixan viŧentin|Lonigo|Montebèl|Rekoaro|Skio|Thiène)$/;
