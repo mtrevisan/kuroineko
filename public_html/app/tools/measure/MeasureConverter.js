@@ -37,8 +37,8 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 
 	/**
 	 * @param {String} uom							Either a string of the unit of measure like 'm', or a sentence coding uom, parentValue, and parentUOM like 'm = 12 ft', or 'm = 12 ft = 3 in'
-	 * @param {Number/Fraction} parentValue	Value wrt parentUOM
-	 * @param {String} parentUOM					Referenced unit of measure like 'ft'
+	 * @param {Number/Fraction} [parentValue]	Value wrt parentUOM
+	 * @param {String} [parentUOM]				Referenced unit of measure like 'ft'
 	 */
 	var addUnit = function(uom, parentValue, parentUOM){
 		if(!parentValue && !parentUOM)
@@ -46,7 +46,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 		else{
 			if(!(parentValue instanceof Fraction) && !ObjectHelper.isFloat(parentValue))
 				throw 'The parent value passed should be a float or a fraction.';
-			if(!ObjectHelper.isString(parentUOM))
+			if(parentUOM && !ObjectHelper.isString(parentUOM))
 				throw 'The parent unit of measure passed should be a string.';
 			parentValue = new Fraction(parentValue);
 			if(parentValue.isZero())
