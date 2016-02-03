@@ -60,8 +60,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 			d.parentValue = parentValue;
 			d.parentUOM = parentUOM;
 
-			if(!this.data[parentUOM])
-				this.data[parentUOM] = {};
+			this.data[parentUOM] = this.data[parentUOM] || {};
 		}
 	};
 
