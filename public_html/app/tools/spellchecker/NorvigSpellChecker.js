@@ -104,7 +104,7 @@ define(['tools/data/ArrayHelper'], function(ArrayHelper){
 	 * @private
 	 */
 	var calculate0EditSet = function(word, candidates){
-		candidates = candidates || {};
+		candidates || (candidates = {});
 
 		//add to set if the given word is known
 		if(this.dictionary[word])
@@ -121,7 +121,7 @@ define(['tools/data/ArrayHelper'], function(ArrayHelper){
 	 * @private
 	 */
 	var calculate1EditSet = function(words, candidates, cumulateOnly){
-		candidates = candidates || {};
+		candidates || (candidates = {});
 
 		var fnAddToSet = (cumulateOnly === true? addToSet: addToSetIfKnown).bind(this);
 		Object.keys(words).forEach(function(word){

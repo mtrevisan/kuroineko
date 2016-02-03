@@ -158,7 +158,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 					general: tmp + 'a'
 				};
 			}
-			var person = root.secondPlural = (root.secondPlural || {});
+			var person = (root.secondPlural || (root.secondPlural = {}));
 			if(t.themeT11)
 				person.northern = pronomenalMark + t.themeT11 + '(iv)ié';
 			person = root.firstPlural = {};
@@ -529,7 +529,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			i, key;
 		for(i = 1; i < size; i ++){
 			key = arguments[i];
-			root = root[key] = root[key] || {};
+			root = (root[key] || (root[key] = {}));
 		}
 		return root;
 	};

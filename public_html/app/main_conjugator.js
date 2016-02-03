@@ -195,7 +195,7 @@ define(['HTMLHelper', 'tools/data/FunctionHelper', 'tools/ui/Validator', 'tools/
 		};
 
 		var loadParadigmData = function(paradigm){
-			paradigm = paradigm || {};
+			paradigm || (paradigm = {});
 
 			//extract all TDs with class 'conjugation'
 			var tds = HTMLHelper.queryDOM('td.conjugation', 'paradigmContainer'),
@@ -242,7 +242,7 @@ define(['HTMLHelper', 'tools/data/FunctionHelper', 'tools/ui/Validator', 'tools/
 						divs[k].innerHTML = '';
 			}
 
-			pronounWeakInterrogative = pronounWeakInterrogative || {};
+			pronounWeakInterrogative || (pronounWeakInterrogative = {});
 			for(var key in pronounWeakInterrogative)
 				if(pronounWeakInterrogative.hasOwnProperty(key)){
 					if(ObjectHelper.isString(pronounWeakInterrogative[key]))

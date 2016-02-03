@@ -56,11 +56,11 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 			if(uom == parentUOM)
 				throw 'Incompatible current parent measure: cannot be the same.';
 
-			var d = (this.data[uom] = this.data[uom] || {});
+			var d = (this.data[uom] || (this.data[uom] = {}));
 			d.parentValue = parentValue;
 			d.parentUOM = parentUOM;
 
-			this.data[parentUOM] = this.data[parentUOM] || {};
+			this.data[parentUOM] || (this.data[parentUOM] = {});
 		}
 	};
 
@@ -90,7 +90,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 			uom = parentUOM;
 		}
 		if(size == 1)
-			this.data[uom] = this.data[uom] || {};
+			this.data[uom] || (this.data[uom] = {});
 	};
 
 	/**

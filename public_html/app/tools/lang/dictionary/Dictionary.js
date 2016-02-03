@@ -18,7 +18,7 @@ define(['tools/lang/phonology/Orthography', 'tools/lang/phonology/Word'], functi
 
 	/** @private */
 	var searchDictionary = function(galepin, wordVec, wordIta, wordEng, options){
-		options = options || {};
+		options || (options = {});
 
 		if(wordVec){
 			//generate stressed variants
