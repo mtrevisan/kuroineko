@@ -407,14 +407,15 @@
 			//calculate total distance for each variant
 			var average = [],
 				sum;
-			for(i = 0; i < size; i ++){
-				sum = 0;
-				for(j = 0; j < i; j ++)
-					sum += matrix[j][i];
-				for(j = i + 1; j < size; j ++)
-					sum += matrix[i][j];
-				average.push({variant: variants[i], distance: sum / size});
-			}
+			for(i = 0; i < size; i ++)
+				if(['Pàđule', 'Anpeŧ', 'Uronŧo', 'Poŧale', 'Italia'].indexOf(variants[i]) < 0){
+					sum = 0;
+					for(j = 0; j < i; j ++)
+						sum += matrix[j][i];
+					for(j = i + 1; j < size; j ++)
+						sum += matrix[i][j];
+					average.push({variant: variants[i], distance: sum / (size - 1)});
+				}
 			average.sort(function(a, b){ return a.distance - b.distance; });
 			console.log('time taken: ' + ((+new Date() - start) / 1000) + ' s');
 			console.log('number of words: ' + words.length);
