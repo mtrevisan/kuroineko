@@ -56,11 +56,11 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 			if(uom == parentUOM)
 				throw 'Incompatible current parent measure: cannot be the same.';
 
-			var d = (this.data[uom] || (this.data[uom] = {}));
+			var d = (this.data[uom] = this.data[uom] || {});
 			d.parentValue = parentValue;
 			d.parentUOM = parentUOM;
 
-			this.data[parentUOM] || (this.data[parentUOM] = {});
+			this.data[parentUOM] = this.data[parentUOM] || {};
 		}
 	};
 
@@ -90,7 +90,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 			uom = parentUOM;
 		}
 		if(size == 1)
-			this.data[uom] || (this.data[uom] = {});
+			this.data[uom] = this.data[uom] || {};
 	};
 
 	/**
@@ -149,11 +149,15 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 		}
 		if(!(parentValue instanceof Fraction) && !ObjectHelper.isFloat(parentValue))
 			throw 'The parent value passed should be a float or a fraction.';
+		if(parentUOM && !ObjectHelper.isString(parentUOM))
+			throw 'The parent unit of measure passed should be a string.';
 		parentValue = new Fraction(parentValue);
 		if(parentValue.isZero())
 			throw 'Incompatible parent value: cannot be zero.';
-		if(!ObjectHelper.isString(parentUOM))
-			throw 'The parent unit of measure passed should be a string.';
+		if(parentValue && !parentUOM)
+			throw 'Incompatible parent measure: should be present if parent value is given.';
+		if(uom == parentUOM)
+			throw 'Incompatible current parent measure: cannot be the same.';
 
 		var d = this.data[uom];
 		if(!d)
