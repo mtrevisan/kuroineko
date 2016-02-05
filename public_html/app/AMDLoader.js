@@ -253,29 +253,22 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var normalizeURL = function(id){
-		//turns a plugin!url to [plugin, url] with the plugin being undefined if the name did not have a plugin prefix
-		var pluginUrl = id.split('!'),
-			len = pluginUrl.length,
-			url = pluginUrl[len == 1? 0: 1];
+		//turns a plugin!url to url
+		var url = id.replace(/^.+!/, ''),
+			cfg, path;
 
 		if(url){
-			var cfg = (AMDLoader || {}).config || {};
+			cfg = (AMDLoader || {}).config || {};
 			if(cfg.paths){
-				var path = cfg.paths[url.split('/')[0]];
+				path = cfg.paths[url.split('/')[0]];
 				if(path)
 					url = url.replace(/^.+?(?=\/)/, path);
 			}
 			//if a colon is in the URL, it indicates a protocol is used and it is just an URL to a file, or if it starts with a slash, contains a query arg (i.e. ?)
 			//or ends with .js, then assume the user meant to use an url and not a module id (the slash is important for protocol-less URLs as well as full paths)
-			if(len == 2 || !url.match(/^\/|:|\?|\.js$/)){
-				if(cfg.baseUrl)
-					url = cfg.baseUrl.replace(/\/?$/, '/' + url);
-
-				url = compactURL(url);
-
-				if(cfg.urlArgs)
-					url += (url.indexOf('?') < 0? '?': '&') + cfg.urlArgs;
-			}
+			if(id.indexOf('!') > 0 || !url.match(/^\/|:|\?|\.js$/))
+				url = compactURL((cfg.baseUrl || '').replace(/\/?$/, '/' + url).replace(/^\//, ''))
+					+ ((url.indexOf('?') < 0? '?': '&') + (cfg.urlArgs || '')).replace(/[?&]$/, '');
 
 			id = id.replace(/(.+?!)?.+/, '$1' + url);
 		}
