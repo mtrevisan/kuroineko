@@ -96,7 +96,7 @@ require(['tools/logging/Logger'], function(Logger){
 		logger.setLevel(Logger.LEVEL_WARN);
 		logger.log('base3', Logger.LEVEL_INFO, 'message2');
 
-		var logs = logger.extractLogs('base3');
+		logs = logger.extractLogs('base3');
 		assert.equal(logs.length, 2);
 		assert.equal(logs[0].message, '[INFO]  message');
 		assert.equal(logs[1].message, '[INFO]  message2');
