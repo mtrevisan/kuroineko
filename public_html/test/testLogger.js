@@ -10,14 +10,14 @@ require(['tools/logging/Logger'], function(Logger){
 		});
 	});
 
-	QUnit.test('constructor - should returns the same instance', function(assert){
+	QUnit.test('should returns the same instance', function(assert){
 		var logger1 = new Logger('bla');
 		var logger2 = new Logger('bla');
 
 		assert.equal(logger1, logger2);
 	});
 
-	QUnit.test('constructor - should call intercept', function(assert){
+	QUnit.test('should call intercept', function(assert){
 		QUnit.expect(5);
 
 		var logger = new Logger('bla 3', {
@@ -37,7 +37,7 @@ require(['tools/logging/Logger'], function(Logger){
 		assert.equal(logs[0].message, '[DEBUG] message');
 	});
 
-	QUnit.test('constructor - should pipe', function(assert){
+	QUnit.test('should pipe', function(assert){
 		var logger1 = new Logger('bla 1', {
 			showTime: false,
 			out: function(){}
@@ -58,14 +58,14 @@ require(['tools/logging/Logger'], function(Logger){
 		assert.equal(logs2[0].message, '[DEBUG] message');
 	});
 
-	QUnit.test('constructor - should geminate', function(assert){
+	QUnit.test('should geminate', function(assert){
 		var logger1 = new Logger('bla');
 		var logger2 = logger1.geminate();
 
 		assert.notEqual(logger1, logger2);
 	});
 
-	QUnit.test('constructor - should log', function(assert){
+	QUnit.test('should log', function(assert){
 		var logger = new Logger('bla 2', {
 			showTime: false,
 			out: function(){}
@@ -78,15 +78,39 @@ require(['tools/logging/Logger'], function(Logger){
 		assert.equal(logs[0].message, '[INFO]  message');
 	});
 
-	QUnit.test('constructor - should log error', function(assert){
+	QUnit.test('should log with setted level', function(assert){
 		var logger = new Logger('bla 3', {
+			showTime: false,
+			out: function(message){
+				assert.equal(message, '[INFO]  message');
+			}
+		});
+
+		logger.log('base3', Logger.LEVEL_INFO, 'message');
+
+		var logs = logger.extractLogs('base3');
+		assert.equal(logs.length, 1);
+		assert.equal(logs[0].message, '[INFO]  message');
+
+
+		logger.setLevel(Logger.LEVEL_WARN);
+		logger.log('base3', Logger.LEVEL_INFO, 'message2');
+
+		var logs = logger.extractLogs('base3');
+		assert.equal(logs.length, 2);
+		assert.equal(logs[0].message, '[INFO]  message');
+		assert.equal(logs[1].message, '[INFO]  message2');
+	});
+
+	QUnit.test('should log error', function(assert){
+		var logger = new Logger('bla 4', {
 			showTime: false,
 			out: function(){}
 		});
 
-		logger.error('base3', 'message');
+		logger.error('base4', 'message');
 
-		var logs = logger.extractLogs('base3');
+		var logs = logger.extractLogs('base4');
 		assert.equal(logs.length, 1);
 		assert.equal(logs[0].message, '[ERROR] message');
 	});

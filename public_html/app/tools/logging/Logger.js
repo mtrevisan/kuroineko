@@ -19,6 +19,8 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 	/** @constant */
 	var LEVEL_OFF = 'NONE',
 	/** @constant */
+		LEVEL_TRACE = 'TRACE',
+	/** @constant */
 		LEVEL_DEBUG = 'DEBUG',
 	/** @constant */
 		LEVEL_INFO = 'INFO',
@@ -27,10 +29,10 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 	/** @constant */
 		LEVEL_ERROR = 'ERROR',
 	/** @constant */
-		LEVELS = [LEVEL_DEBUG, LEVEL_INFO, LEVEL_WARN, LEVEL_ERROR],
+		LEVELS = [LEVEL_TRACE, LEVEL_DEBUG, LEVEL_INFO, LEVEL_WARN, LEVEL_ERROR],
 	/** @constant */
 		CONFIG_DEFAULT = {
-			rootLogger: LEVEL_DEBUG,
+			rootLogger: LEVEL_TRACE,
 			//the maximum number of records to keep (if the number of log gets bigger than 10% over this value, then it is sliced down to 90% of this value)
 			maxRecordSize: undefined,
 			showTime: true,
@@ -38,8 +40,6 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 		},
 	/** @constant */
 		PADDING = LEVELS.reduce(function(max, level){ return Math.max(max, level.length); }, 0);
-
-	var config, interceptors, piped;
 
 
 	/**
@@ -52,19 +52,19 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 		if(!name)
 			throw 'A Logger must have a name';
 
-		config = {};
+		this.config = {};
 		for(var k in CONFIG_DEFAULT)
-			config[k] = CONFIG_DEFAULT[k];
+			this.config[k] = CONFIG_DEFAULT[k];
 		if(conf)
 			for(k in conf)
-				config[k] = conf[k];
+				this.config[k] = conf[k];
 
 		if(LOGGERS[name])
 			return LOGGERS[name];
 
 		this.name = name;
-		interceptors = [];
-		piped = [];
+		this.interceptors = [];
+		this.piped = [];
 
 		LOGGERS[name] = this;
 		LOGS[name] = [];
@@ -79,19 +79,32 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 	};
 
 	Constructor.LEVEL_OFF = LEVEL_OFF;
+	Constructor.LEVEL_TRACE = LEVEL_TRACE;
 	Constructor.LEVEL_DEBUG = LEVEL_DEBUG;
 	Constructor.LEVEL_INFO = LEVEL_INFO;
 	Constructor.LEVEL_WARN = LEVEL_WARN;
 	Constructor.LEVEL_ERROR = LEVEL_ERROR;
 
+
+	/**
+	 * @param {String} level	One of LEVEL_OFF, LEVEL_TRACE, LEVEL_DEBUG, LEVEL_INFO, LEVEL_WARN, or LEVEL_ERROR
+	 */
+	var setLevel = function(level){
+		level = level.toUpperCase();
+		if(LEVEL_OFF != level && LEVELS.indexOf(level) < 0)
+			throw 'setLevel called with invalid level: ' + level;
+
+		this.config.rootLogger = level;
+	};
+
 	/** Intercepts log events, calling <code>fn</coe> before listeners of the instance */
 	var intercept = function(fn){
-		interceptors.push(fn);
+		this.interceptors.push(fn);
 	};
 
 	/** Pipes all logger events to another logger */
 	var pipe = function(emitter){
-		piped.push(emitter);
+		this.piped.push(emitter);
 	};
 
 	/**
@@ -118,14 +131,14 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 			return;
 
 		var now = new Date();
-		message = (config.showTime? now.toISOString().replace(/[TZ]/g, ' ') + ' ': '')
+		message = (this.config.showTime? now.toISOString().replace(/[TZ]/g, ' ') + ' ': '')
 			+ '[' + level + '] ' + StringHelper.stringRepeat(' ', PADDING - level.length)
 			+ message
 			+ (data? ', ' + JSON.stringify(data): '');
 		var storedMessage = {timestamp: now, level: level, message: message, data: data};
 
 		//run interceptors before
-		interceptors.forEach(function(interceptor){
+		this.interceptors.forEach(function(interceptor){
 			interceptor.call(this, id, storedMessage);
 		});
 
@@ -135,26 +148,26 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 			(LOGS[id] = LOGS[id] || []).push(storedMessage);
 
 		//see if this should be logged
-		if(shouldLog(level)){
+		if(shouldLog.call(this, level)){
 			//print message
-			if(ObjectHelper.isFunction(config.out))
-				config.out(message);
+			if(ObjectHelper.isFunction(this.config.out))
+				this.config.out(message);
 			else
 				console[level.toLowerCase()](message);
 		}
 
 		//pipe
-		piped.forEach(function(emitter){
+		this.piped.forEach(function(emitter){
 			emitter.log.call(emitter, arguments);
 		});
 
-		if(LOGS.length > config.maxRecordSize * 1.1)
-			LOGS = LOGS.slice(-Math.floor(config.maxRecordSize * 0.9));
+		if(LOGS.length > this.config.maxRecordSize * 1.1)
+			LOGS = LOGS.slice(-Math.floor(this.config.maxRecordSize * 0.9));
 	};
 
 	/** @private */
 	var shouldLog = function(level){
-		return (config.rootLogger != LEVEL_OFF && LEVELS.indexOf(level) >= LEVELS.indexOf(config.rootLogger));
+		return (this.config.rootLogger != LEVEL_OFF && LEVELS.indexOf(level) >= LEVELS.indexOf(this.config.rootLogger));
 	};
 
 	/**
@@ -176,6 +189,8 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 
 	Constructor.prototype = {
 		constructor: Constructor,
+
+		setLevel: setLevel,
 
 		intercept: intercept,
 		pipe: pipe,
