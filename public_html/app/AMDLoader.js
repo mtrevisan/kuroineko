@@ -266,9 +266,9 @@ var AMDLoader = (function(doc){
 			}
 			//if a colon is in the URL, it indicates a protocol is used and it is just an URL to a file, or if it starts with a slash, contains a query arg (i.e. ?)
 			//or ends with .js, then assume the user meant to use an url and not a module id (the slash is important for protocol-less URLs as well as full paths)
-			if(id.indexOf('!') > 0 || !url.match(/^\/|:|\?|\.js$/))
-				url = compactURL((cfg.baseUrl || '').replace(/\/?$/, '/' + url).replace(/^\//, ''))
-					+ ((url.indexOf('?') < 0? '?': '&') + (cfg.urlArgs || '')).replace(/[?&]$/, '');
+			if(id.indexOf('!') > 0 || !url.match(/^\/|[:?]|\.js$/))
+				url = (compactURL((cfg.baseUrl || '').replace(/\/?$/, '/' + url))
+					+ (url.indexOf('?') < 0? '?': '&') + (cfg.urlArgs || '')).replace(/^\/|[?&]$/g, '');
 
 			id = id.replace(/(.+?!)?.+/, '$1' + url);
 		}
@@ -449,7 +449,7 @@ var AMDLoader = (function(doc){
 			});
 		}
 
-		require(['../app/tools/data/structs/Tarjan'], function(Tarjan){
+		require(['../../app/tools/data/structs/Tarjan'], function(Tarjan){
 			tree = new Tarjan();
 		});
 	})();
