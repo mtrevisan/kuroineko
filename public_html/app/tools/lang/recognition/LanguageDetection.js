@@ -210,7 +210,7 @@ define(['tools/lang/recognition/NGrams', 'tools/lang/recognition/Markov', 'tools
 				{array: ['Hebrew'], check: HEBREW},
 				{array: ['Ethiopic', 'Ethiopic Supplement', 'Ethiopic Extended'], check: ETHIOPIC}
 			],
-			sum = function(scripts, langs){ return langs.reduce(function(sum, current){ return sum + scripts[current]; }, 0)); };
+			sum = function(scripts, langs){ return langs.reduce(function(sum, current){ return sum + scripts[current]; }, 0); };
 
 		return function(text, callback){
 			//return run types that used for 40% or more of the string always return basic latin if found more than 15%
