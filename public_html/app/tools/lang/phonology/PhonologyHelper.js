@@ -75,25 +75,30 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/lang/phonol
 	 * Truncate final unstressed vowel <i>e/o</i> after <i>n</i>, <i>r</i>, <i>l</i> and in general after all voiced consonants and <i>f</i>, <i>k</i>, <i>p</i>, <i>s</i>, <i>t</i>, <i>ŧ</i>,
 	 * but only if it's not a plural marker (therefore plurals in <i>-e</i> derived from singular feminine words ending in <i>-a</i> are excluded).
 	 */
-	var truncateAfterConsonant = function(word, mainDialect, dialect){
-		var centralOrWestern = (mainDialect == 'central' || mainDialect == 'western'),
-			matcher;
+	var truncateAfterConsonant = (function(){
+		var funct1 = function(dialect){
+				return (dialect == 'centralNorthern.kastelan' || dialect == 'lagunar.coxòto'? /(n)[eo]$/: /([nrl])[eo]$/);
+			},
+			re2 = /(n)[eo]$/,
+			matchers = {
+				centralNorthern: funct1,
+				lagunar: funct1,
+				central: re2,
+				western: re2,
+				oriental: /([nrlkstŧ])[eo]$/,
+				northern: function(dialect){ return (dialect == 'northern.ladin'? /([^aeiouàèéíòóú])[eo]$/: /([nrlmñptkcfŧsdgđx])[eo]$/); }
+			};
 
-		if(mainDialect == 'centralNorthern' || mainDialect == 'lagunar' || centralOrWestern)
-			matcher = (dialect == 'centralNorthern.kastelan' || dialect == 'lagunar.coxòto' || centralOrWestern? /(n)[eo]$/: /([nrl])[eo]$/);
-		else if(mainDialect == 'oriental')
-			matcher = /([nrlkstŧ])[eo]$/;
-		else if(mainDialect == 'northern')
-			matcher = (dialect == 'northern.ladin'? /([^aeiouàèéíòóú])[eo]$/: /([nrlmñptkcfŧsdgđx])[eo]$/);
-
-		return word.replace(matcher, '$1');
-	};
+		return function(word, mainDialect, dialect){
+			var matcher = matchers[mainDialect];
+			if(ObjectHelper.isFunction(matcher))
+				matcher = matcher(dialect);
+			return (mainDialect.match(matcher)? word.replace(matcher, '$1'): word);
+		};
+	})();
 
 	var syncopatePluralAfterNasalLateral = function(word, mainDialect){
-		if(mainDialect == 'northern' || mainDialect == 'oriental')
-			word = word.replace(/([eèéoó])[nl]i$/, '$1i');
-
-		return word;
+		return (mainDialect.match(/^(northern|oriental)$/)? word.replace(/([eèéoó])[nl]i$/, '$1i'): word);
 	};
 
 	var finalConsonantVoicing = function(word, mainDialect){
