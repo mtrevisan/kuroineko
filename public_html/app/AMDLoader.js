@@ -1,7 +1,44 @@
 /**
  * @class AMDLoader
  *
- * NOTE: Circular dependencies will silently fail.
+ * NOTE: Circular dependencies will be reported.
+ *
+ * @example
+ * <code>
+ * <script id="bootstrap-js">initializeApplication();</script>
+ *
+ * var initializeApplication = function(commonRequires){
+ *		setTimeout(function(){
+ *			var el = document.createElement('script');
+ *			el.src = '/app/AMDLoader.js';
+ *
+ *			el.onload = function(){
+ *				AMDLoader.config = {
+ *					baseUrl: '../app',
+ *					urlArgs: 'ts=123',
+ *					paths: {
+ *						libs: '../libs',
+ *						i18n: '../resources/i18n',
+ *						css: '../resources/css'
+ *					}
+ *				};
+ *			};
+ *
+ *			var insertPoint = document.getElementById('bootstrap-js');
+ *			insertPoint.parentNode.insertBefore(el, insertPoint);
+ *		}, 0);
+ *	};
+ *
+ * AMDLoader.config = {
+ * 	baseUrl: '../app',
+ * 	urlArgs: 'ts=123',
+ * 	paths: {
+ *			libs: '../libs',
+ *			i18n: '../resources/i18n',
+ *			css: '../resources/css'
+ *		}
+ *	};
+ *	</code>
  *
  * @author Mauro Trevisan
  */
@@ -253,42 +290,40 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var normalizeURL = function(id){
-		//turns a plugin!url to url
-		var url = id.replace(/^.+!/, ''),
+		//turns a plugin!url to [id, url]
+		id = id.match(/(.+!)?(.*)/);
+		var url = id[2],
 			cfg, path;
+		id = id[1] || '';
 
 		if(url){
 			cfg = (AMDLoader || {}).config || {};
-			if(cfg.paths){
-				path = cfg.paths[url.split('/')[0]];
-				if(path)
-					url = url.replace(/^.+?(?=\/)/, path);
-			}
+			path = (cfg.paths || {})[url.split('/')[0]];
+			if(path)
+				url = url.replace(/^.+?(?=\/)/, path);
 			//if a colon is in the URL, it indicates a protocol is used and it is just an URL to a file, or if it starts with a slash, contains a query arg (i.e. ?)
 			//or ends with .js, then assume the user meant to use an url and not a module id (the slash is important for protocol-less URLs as well as full paths)
-			if(id.indexOf('!') > 0 || !url.match(/^\/|[:?]|\.js$/))
-				url = (compactURL((cfg.baseUrl || '').replace(/\/?$/, '/' + url))
-					+ (url.indexOf('?') < 0? '?': '&') + (cfg.urlArgs || '')).replace(/^\/|[?&]$/g, '');
-
-			id = id.replace(/(.+?!)?.+/, '$1' + url);
+			if(id.length || !url.match(/^\/|[:?]|\.js$/)){
+				url = compactURL((cfg.baseUrl || '') + '/' + url)
+					+ (url.indexOf('?') < 0? '?': '&') + (cfg.urlArgs || '');
+				url = url.replace(/^\/|[?&]$/g, '');
+			}
 		}
 
-		return id;
+		return id + url;
 	};
 
 	/** @private */
 	var compactURL = function(path){
 		var result = [],
-			segment, lastSegment;
-		path = path.split(/\/+/);
-		while(path.length){
-			segment = path.shift();
+			lastSegment;
+		path.split(/\/+/).forEach(function(segment){
 			if(segment == '..' && result.length && lastSegment != segment)
 				result.pop();
 			else if(segment != '.')
 				result.push(lastSegment = segment);
 			//else ignore '.'
-		}
+		});
 		return result.join('/');
 	};
 
