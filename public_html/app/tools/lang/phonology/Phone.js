@@ -395,30 +395,25 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 				var segment = convertFeaturesIntoSegment(f, multipleElements);
 				if(segment){
 					tmp = {
-						segment: [],
+						segment: [segment],
 						composite: []
 					};
-					if(Array.isArray(segment))
+					if(Array.isArray(segment)){
+						tmp.segment = [];
 						segment.forEach(function(seg){
 							tmp[seg.length == 1? 'segment': 'composite'].push(seg);
 						});
-					else
-						tmp.segment = segment;
+					}
 
 					var hasWhole = tmp.segment.length,
 						hasComposites = tmp.composite.length,
 						result = tmp.segment;
 					if(multipleElements){
-						result = '';
-						if(hasComposites)
-							result += '(?:';
+						result = (hasComposites? '(?:': '');
 						if(hasWhole)
 							result += (hasWhole > 1? '[' + tmp.segment.sort().join('') + ']': tmp.segment[0]);
-						if(hasComposites){
-							if(hasWhole)
-								result += '|';
-							result += tmp.composite.sort().join('|') + ')';
-						}
+						if(hasComposites)
+							result += (hasWhole? '|': '') + tmp.composite.sort().join('|') + ')';
 					}
 
 					output.push(result);
