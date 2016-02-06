@@ -240,10 +240,11 @@ if(word.indexOf('(') >= 0)
 		if(word[idx].match(directTransformation? /[éó]/: /[íú]/)){
 			//if the following syllabe ends in i, or there is a hyatus
 			var k = syllabation.getSyllabeIndex(idx) + 1,
-				lastSyllabeIdx = syllabation.syllabes.length - 1;
+				lastSyllabeIdx = syllabation.syllabes.length - 1,
+				encliticCount, fnMetaphon;
 			if(syllabation.syllabes[k - 1].match(directTransformation? /[éó]i[^aeiou]*$/: /[íú]i[^aeiou]*$/) || k <= lastSyllabeIdx && syllabation.syllabes[k].match(/i$/)){
 				//count following enclitics
-				var encliticCount = lastSyllabeIdx - k;
+				encliticCount = lastSyllabeIdx - k;
 				while(++ k <= lastSyllabeIdx)
 					if(syllabation.syllabes[k].match(/(s?tu)|u$/))
 						encliticCount --;
@@ -251,7 +252,7 @@ if(word.indexOf('(') >= 0)
 				//if it's followed, at most, only by enclitics
 				if(encliticCount <= 0){
 					//apply metaphonesys
-					var fnMetaphon = (directTransformation? metaphonetizeStressedVowel: demetaphonetizeStressedVowel);
+					fnMetaphon = (directTransformation? metaphonetizeStressedVowel: demetaphonetizeStressedVowel);
 					word = StringHelper.setCharacterAt(word, idx, fnMetaphon);
 
 					if(applyVocalHarmony === true){

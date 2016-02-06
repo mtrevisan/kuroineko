@@ -198,54 +198,56 @@ define(['tools/lang/recognition/NGrams', 'tools/lang/recognition/Markov', 'tools
 
 
 	/** Apply Gergely Pethő & Eszter Mózes (2014) */
-	var identify = function(text, callback){
-		//return run types that used for 40% or more of the string always return basic latin if found more than 15%
-		//and extended additional latin if over 10% (for Vietnamese)
-		var scripts = findRuns(text),
-			code, lang;
+	var identify = (function(){
+		var sums = [
+				{array: ['Hangul Syllables', 'Hangul Jamo', 'Hangul Compatibility Jamo'], code: 'kor'},
+				{array: ['Greek and Coptic'], code: 'ell'},
+				{array: ['Hiragana', 'Katakana', 'Katakana Phonetic Extensions'], code: 'jpn'},
+				{array: ['CJK Unified Ideographs', 'Bopomofo', 'Bopomofo Extended', 'KangXi Radicals'], code: 'zho'},
+				{array: ['Cyrillic'], check: CYRILLIC},
+				{array: ['Devanagari'], check: DEVANAGARI},
+				{array: ['Arabic', 'Arabic Presentation Forms-A', 'Arabic Presentation Forms-B'], check: ARABIC},
+				{array: ['Hebrew'], check: HEBREW},
+				{array: ['Ethiopic', 'Ethiopic Supplement', 'Ethiopic Extended'], check: ETHIOPIC}
+			],
+			sum = function(scripts, langs){ return langs.reduce(function(sum, current){ return sum + scripts[current]; }, 0)); };
 
-		if(scripts['Hangul Syllables'] + scripts['Hangul Jamo'] + scripts['Hangul Compatibility Jamo'] >= THRESHOLD)
-			code = 'kor';
-		else if(scripts['Greek and Coptic'] >= THRESHOLD)
-			code = 'ell';
-		else if(scripts['Hiragana'] + scripts['Katakana'] + scripts['Katakana Phonetic Extensions'] >= THRESHOLD)
-			code = 'jpn';
-		else if(scripts['CJK Unified Ideographs'] + scripts['Bopomofo'] + scripts['Bopomofo Extended'] + scripts['KangXi Radicals'] >= THRESHOLD)
-			code = 'zho';
-		else if(scripts['Cyrillic'] >= THRESHOLD)
-			code = check.call(this, text, CYRILLIC);
-		else if(scripts['Devanagari'] >= THRESHOLD)
-			code = check.call(this, text, DEVANAGARI);
-		else if(scripts['Arabic'] + scripts['Arabic Presentation Forms-A'] + scripts['Arabic Presentation Forms-B'] >= THRESHOLD)
-			code = check.call(this, text, ARABIC);
-		else if(scripts['Hebrew'] >= THRESHOLD)
-			code = check.call(this, text, HEBREW);
-		else if(scripts['Ethiopic'] + scripts['Ethiopic Supplement'] + scripts['Ethiopic Extended'] >= THRESHOLD)
-			code = check.call(this, text, ETHIOPIC);
-		else
-			//try languages with unique scripts
-			for(var i = SINGLETONS.length - 1; i >= 0; i --)
-				if(scripts[SINGLETONS[i][0]] >= THRESHOLD){
-					code = SINGLETONS[i][1];
-					break;
-				}
+		return function(text, callback){
+			//return run types that used for 40% or more of the string always return basic latin if found more than 15%
+			//and extended additional latin if over 10% (for Vietnamese)
+			var scripts = findRuns(text),
+				code, lang;
+
+			sums.some(function(s){
+				if(sum(scripts, s.array) >= THRESHOLD)
+					code = s.code || check.call(this, text, s.check);
+				return !!code;
+			});
+			if(!code)
+				//try languages with unique scripts
+				for(var i = SINGLETONS.length - 1; i >= 0; i --)
+					if(scripts[SINGLETONS[i][0]] >= THRESHOLD){
+						code = SINGLETONS[i][1];
+						break;
+					}
 //Venetan: 'Basic Latin' (a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, x),
 //'Latin-1 Supplement' (à, đ, è, é, ñ, ò, ó, ú), 'Latin Extended-A' (ŧ), 'Latin Extended-B' (ɉ, ƚ)
-		//extended Latin
-		if(!code && scripts['Latin-1 Supplement'] + scripts['Latin Extended-A'] + scripts['IPA Extensions'] >= THRESHOLD)
-			code = check.call(this, text, EXTENDED_LATIN);
-		if(!code && scripts['Basic Latin'] >= 0.15)
-			code = check.call(this, text, LATIN);
+			//extended Latin
+			if(!code && scripts['Latin-1 Supplement'] + scripts['Latin Extended-A'] + scripts['IPA Extensions'] >= THRESHOLD)
+				code = check.call(this, text, EXTENDED_LATIN);
+			if(!code && scripts['Basic Latin'] >= 0.15)
+				code = check.call(this, text, LATIN);
 
-		if(code){
-			lang = extractMostProbableLanguage(code);
+			if(code){
+				lang = extractMostProbableLanguage(code);
 
-			if(ArrayHelper.equals(Object.keys(code[0][1]), ArrayHelper.intersection(VENETAN, Object.keys(models))))
-				lang = ['vec'];
+				if(ArrayHelper.equals(Object.keys(code[0][1]), ArrayHelper.intersection(VENETAN, Object.keys(models))))
+					lang = ['vec'];
 
-			callback.call(this, code, lang);
-		}
-	};
+				callback.call(this, code, lang);
+			}
+		};
+	})();
 
 	/** @private */
 	var findRuns = function(text){
