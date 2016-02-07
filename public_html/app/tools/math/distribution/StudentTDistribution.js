@@ -110,8 +110,10 @@ define(function(){
 			return Math.tan((p - 0.5) * Math.PI);
 		if(n == 2)
 			return (2 * p - 1) / Math.sqrt(2 * p * (1 - p));
-		//if(n == 4)
-		//	return (p - 0.5 >= 0? 1: -1) * 2 * Math.sqrt(Math.cos(Math.acos(Math.sqrt(4 * p * (1 - p))) / 3) / Math.sqrt(4 * p * (1 - p)) - 1);
+//		if(n == 4){
+//			var alpha = Math.sqrt(4 * p * (1 - p));
+//			return 2 * (p - 0.5 >= 0? 1: -1) * Math.sqrt(Math.cos(Math.acos(alpha) / 3) / alpha - 1);
+//		}
 
 		var s, pp, z, u, v, p2;
 
