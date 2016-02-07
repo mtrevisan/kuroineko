@@ -394,9 +394,9 @@ define(function(){
 	 */
 	var toString = function(){
 		if(this.isInfinite())
-			return (this.isPositive()? '+Inf': '-Inf');
+			return (this.isPositive()? Number.POSITIVE_INFINITY: Number.NEGATIVE_INFINITY).toString();
 		if(this.isNaN())
-			return 'NaN';
+			return Number.NaN.toString();
 
 		var a = cycleLen(this.den),
 			b = cycleStart(this.den, a),
@@ -405,10 +405,9 @@ define(function(){
 			size = 10 + a + b + p.length,
 			t = 0,
 			j = -1,
-			ret = [];
-		if(this.sgn < 0)
-			ret.push('-');
-		for(var i = 0; i < size; i ++, t *= 10){
+			ret = [this.sgn < 0? '-': ''],
+			i;
+		for(i = 0; i < size; i ++, t *= 10){
 			if(i < p.length)
 				t += Number(p[i]);
 			else if(i == p.length){
