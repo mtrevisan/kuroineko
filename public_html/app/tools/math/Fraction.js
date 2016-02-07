@@ -100,7 +100,7 @@ define(function(){
 
 	/** @private */
 	var parseString = function(str){
-		var m = str.match(/^(-?)([\d]+)\.?([\d]*)(?:\(([\d]*)\))?$/),
+		var m = str.match(/^([+-]?)([\d]+)\.?([\d]*)(?:\(([\d]*)\))?$/),
 			sgn, num, den;
 		if(m){
 			sgn = (m[1] == '-'? -1: 1);
@@ -115,7 +115,7 @@ define(function(){
 				sgn = 0;
 		}
 		else{
-			m = str.match(/^(-)?([\d]+)\/([\d]+)$/);
+			m = str.match(/^([+-]?)([\d]+)\/([\d]+)$/);
 			num = Number(m[2]);
 			den = Number(m[3]);
 			sgn = (m[1]? -1: 1) * Math.sign(den? num * den: num);
@@ -457,6 +457,7 @@ define(function(){
 		while(d % 5 == 0)
 			d /= 5;
 
+		//catch cyclic numbers
 		if(d > 1){
 			var rem = 10 % d,
 				t;
