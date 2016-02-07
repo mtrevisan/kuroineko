@@ -337,29 +337,32 @@ define(['tools/math/Fraction'], function(Fraction){
 			q0 = 0, q1 = 1,
 			c = new Fraction(p1, q1),
 			n = 0,
-			relativeError = Number.MAX_VALUE;
+			relativeError = Number.MAX_VALUE,
+			a,
+			p2, q2, infinite,
+			inverseScaleFactor, lastInverseScaleFactor, scale, tmp,
+			i, r;
 		while(relativeError > epsilon){
 			n ++;
-			var a = this.terms[n];
+			a = this.terms[n];
 			if(!a)
 				break;
 
-			var p2 = a * p1 + p0;
-			var q2 = a * q1 + q0;
+			p2 = a * p1 + p0;
+			q2 = a * q1 + q0;
 
 			//need to scale: try successive powers of the larger of a up to 5th power; throw ConvergenceException if one or both of p2, q2 still overflow
-			var infinite = false;
+			infinite = false;
 			if(!isFinite(p2) || !isFinite(q2)){
-				var inverseScaleFactor = 1,
-					lastInverseScaleFactor = 1,
-					maxPower = 5,
-					scale = Math.max(a, 1),
-					tmp;
-				if(scale <= 0)
-					throw 'Continued fraction convergents diverged to +/- infinity for value ' + this.terms;
+				scale = Math.max(a, 1);
+//				if(scale <= 0)
+//					throw 'Continued fraction convergents diverged to +/- infinity for value ' + this.terms;
 
 				infinite = true;
-				for(var i = 0; infinite && i < maxPower; i ++){
+				inverseScaleFactor = 1;
+				lastInverseScaleFactor = 1;
+				//for i = 0 to maxPower
+				for(i = 0; infinite && i < 5; i ++){
 					lastInverseScaleFactor = inverseScaleFactor;
 					inverseScaleFactor /= scale;
 					if(a > 1){
@@ -372,14 +375,14 @@ define(['tools/math/Fraction'], function(Fraction){
 						p2 = tmp * p1 + p0 * lastInverseScaleFactor;
 						q2 = tmp * q1 + q0 * lastInverseScaleFactor;
 					}
-					infinite = (!isFinite(p2) || !isFinite(q2));
+					infinite = !(isFinite(p2) && isFinite(q2));
 				}
 			}
 			if(infinite)
 				//scaling failed
 				throw 'Continued fraction convergents diverged to +/- infinity for value ' + this.terms;
 
-			var r = p2 / q2;
+			r = p2 / q2;
 			if(isNaN(r))
 				throw 'Continued fraction diverged to NaN for value ' + this.terms;
 			relativeError = Math.abs(r / c.toNumber() - 1);
