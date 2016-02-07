@@ -381,14 +381,16 @@ define(['tools/math/Fraction'], function(Fraction){
 			if(infinite)
 				//scaling failed
 				throw 'Continued fraction convergents diverged to +/- infinity for value ' + this.terms;
+			if(!p2 && !q2)
+				throw 'Continued fraction diverged to NaN for value ' + this.terms;
 
 			r = p2 / q2;
-			if(isNaN(r))
-				throw 'Continued fraction diverged to NaN for value ' + this.terms;
 			relativeError = Math.abs(r / c.toNumber() - 1);
 
 			//prepare for next iteration
-			c = new Fraction(p2, q2);
+			c.sgn = Math.sign(p2);
+			c.num = Math.abs(p2);
+			c.den = q2;
 			p0 = p1;
 			p1 = p2;
 			q0 = q1;
