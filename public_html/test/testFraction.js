@@ -245,19 +245,19 @@ require(['tools/math/Fraction'], function(Fraction){
 	QUnit.test('toString +Infinity', function(assert){
 		var f = new Fraction('1/0');
 
-		assert.equal(f.toString(), '+Inf');
+		assert.equal(f.toString(), Number.POSITIVE_INFINITY.toString());
 	});
 
 	QUnit.test('toString -Infinity', function(assert){
 		var f = new Fraction('-1/0');
 
-		assert.equal(f.toString(), '-Inf');
+		assert.equal(f.toString(), Number.NEGATIVE_INFINITY.toString());
 	});
 
 	QUnit.test('toString NaN', function(assert){
 		var f = new Fraction('0/0');
 
-		assert.equal(f.toString(), 'NaN');
+		assert.equal(f.toString(), Number.NaN.toString());
 	});
 
 	QUnit.test('to LaTeX integer', function(assert){
