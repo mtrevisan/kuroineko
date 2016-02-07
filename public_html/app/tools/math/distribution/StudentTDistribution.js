@@ -97,7 +97,7 @@ define(function(){
 	var inverseCDF = function(p, n, maxError){
 		maxError = maxError || 1e-15;
 
-		if(p < 0 || p > 1)
+		if(p < 0 || p > 1 || n < 1)
 			return Number.NaN;
 		if(p == 0)
 			return Number.NEGATIVE_INFINITY;
@@ -106,8 +106,6 @@ define(function(){
 		if(p == 1)
 			return Number.POSITIVE_INFINITY;
 
-		if(n < 1)
-			return Number.NaN;
 		if(n == 1)
 			return Math.tan((p - 0.5) * Math.PI);
 		if(n == 2)
@@ -146,10 +144,7 @@ define(function(){
 			z -= u;
 			u = Math.abs(u);
 		}while(u > maxError && -- v);
-		if(u > 0)
-			z = z.toFixed(-Math.ceil(Math.log(u) * Math.LOG10E));
-
-		return s * z;
+		return s * (u > 0? z.toFixed(-Math.ceil(Math.log(u) * Math.LOG10E)): z);
 	};
 
 
