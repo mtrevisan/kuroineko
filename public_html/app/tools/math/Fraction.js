@@ -64,6 +64,7 @@ define(function(){
 			case 'number':
 				args = '' + args;
 				/* falls through */
+
 			case 'string':
 				return parseString(args);
 
@@ -114,10 +115,10 @@ define(function(){
 				sgn = 0;
 		}
 		else{
-			m = str.match(/^(-?[\d]+)\/([\d]+)$/);
-			num = Number(m[1]);
-			den = Number(m[2]);
-			sgn = Math.sign(den? num * den: num);
+			m = str.match(/^(-)?([\d]+)\/([\d]+)$/);
+			num = Number(m[2]);
+			den = Number(m[3]);
+			sgn = (m[1]? -1: 1) * Math.sign(den? num * den: num);
 		}
 
 		return reduce({

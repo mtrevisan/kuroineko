@@ -57,9 +57,12 @@ define(['tools/math/Fraction'], function(Fraction){
 
 					if(Array.isArray(param))
 						return {terms: param};
+
 					/* falls through */
 
 				case 'number':
+					/* falls through */
+
 				case 'string':
 					return Constructor.fromNumber(new Fraction(param));
 			}
