@@ -1,4 +1,4 @@
-require(['tools/math/ContinuedFraction'], function(ContinuedFraction){
+require(['tools/math/ContinuedFraction', 'tools/math/Fraction'], function(ContinuedFraction, Fraction){
 	QUnit.module('ContinuedFraction');
 
 	QUnit.test('constructor with positive number', function(assert){
@@ -9,6 +9,12 @@ require(['tools/math/ContinuedFraction'], function(ContinuedFraction){
 
 	QUnit.test('constructor with negative number', function(assert){
 		var f = ContinuedFraction.fromNumber(-13.27);
+
+		assert.deepEqual(f.terms, [-14, 1, 2, 1, 2, 2, 1, 2]);
+	});
+
+	QUnit.test('constructor with fraction', function(assert){
+		var f = new ContinuedFraction(new Fraction(-13.27));
 
 		assert.deepEqual(f.terms, [-14, 1, 2, 1, 2, 2, 1, 2]);
 	});
@@ -88,27 +94,27 @@ require(['tools/math/ContinuedFraction'], function(ContinuedFraction){
 	});
 
 	QUnit.test('integer part', function(assert){
-		var f1 = new ContinuedFraction([2, 1, 4, 3]);
+		var f = new ContinuedFraction([2, 1, 4, 3]);
 
-		assert.deepEqual(f1.integerPart().terms, [2]);
+		assert.deepEqual(f.integerPart().terms, [2]);
 	});
 
 	QUnit.test('fractional part', function(assert){
-		var f1 = new ContinuedFraction([2, 1, 4, 3]);
+		var f = new ContinuedFraction([2, 1, 4, 3]);
 
-		assert.deepEqual(f1.fractionalPart().terms, [0, 1, 4, 3]);
+		assert.deepEqual(f.fractionalPart().terms, [0, 1, 4, 3]);
 	});
 
 	QUnit.test('inverse of less-than-one number', function(assert){
-		var f1 = new ContinuedFraction([0, 1, 4, 3]);
+		var f = new ContinuedFraction([0, 1, 4, 3]);
 
-		assert.deepEqual(f1.inverse().terms, [1, 4, 3]);
+		assert.deepEqual(f.inverse().terms, [1, 4, 3]);
 	});
 
 	QUnit.test('inverse of positive', function(assert){
-		var f1 = new ContinuedFraction([2, 1, 4, 3]);
+		var f = new ContinuedFraction([2, 1, 4, 3]);
 
-		assert.deepEqual(f1.inverse().terms, [0, 2, 1, 4, 3]);
+		assert.deepEqual(f.inverse().terms, [0, 2, 1, 4, 3]);
 	});
 
 	QUnit.test('inverse of negative', function(assert){
@@ -132,8 +138,20 @@ require(['tools/math/ContinuedFraction'], function(ContinuedFraction){
 	});
 
 	QUnit.test('compareTo eq', function(assert){
-		var f1 = new ContinuedFraction([2, 1, 4, 3]);
+		var f = new ContinuedFraction([2, 1, 4, 3]);
 
-		assert.equal(f1.compareTo(f1), 0);
+		assert.equal(f.compareTo(f), 0);
+	});
+
+	QUnit.test('to positive fraction', function(assert){
+		var f = new ContinuedFraction([2, 1, 4, 3]);
+
+		assert.equal(f.toNumber(), 2.8125);
+	});
+
+	QUnit.test('to negative fraction', function(assert){
+		var f = new ContinuedFraction([-2, 1, 4, 3]);
+
+		assert.equal(f.toNumber(), -1.1875);
 	});
 });

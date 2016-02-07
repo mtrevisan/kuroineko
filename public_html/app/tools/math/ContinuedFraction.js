@@ -54,6 +54,8 @@ define(['tools/math/Fraction'], function(Fraction){
 				case 'object':
 					if(param.constructor == Constructor)
 						return param;
+					if(param.constructor == Fraction)
+						return Constructor.fromNumber(param);
 
 					if(Array.isArray(param))
 						return {terms: param};
@@ -351,7 +353,8 @@ define(['tools/math/Fraction'], function(Fraction){
 			p2 = a * p1 + p0;
 			q2 = a * q1 + q0;
 
-			//need to scale: try successive powers of the larger of a up to 5th power; throw ConvergenceException if one or both of p2, q2 still overflow
+			//need to scale: try successive powers of the larger of <code>a</code> up to 5th power
+			//throw exception if one or both of p2, q2 still overflow
 			infinite = false;
 			if(!isFinite(p2) || !isFinite(q2)){
 				scale = Math.max(a, 1);
