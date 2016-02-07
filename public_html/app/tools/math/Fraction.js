@@ -53,52 +53,71 @@ define(function(){
 
 	/** @private */
 	var parse = function(){
-		var num, den, sgn;
-
 		var args = Array.prototype.slice.call(arguments[0]);
 		if(args.length == 1)
 			args = args[0];
+
 		switch(typeof args){
 			case 'object':
-				if(args.constructor == Constructor)
-					return args;
-
-				if('num' in args && 'den' in args){
-					num = (args.sgn || 1) * args.num;
-					den = args.den;
-				}
-				else if(args[0] !== undefined){
-					num = args[0];
-					den = (args[1] !== undefined? args[1]: 1);
-				}
-				sgn = Math.sign(den? num * den: num);
-				num = Math.abs(num);
-				den = Math.abs(den);
-				break;
+				return parseObject(args);
 
 			case 'number':
 				args = '' + args;
 				/* falls through */
 			case 'string':
-				var m = args.match(/^(-?)([\d]+)\.?([\d]*)(?:\(([\d]*)\))?$/);
-				if(m){
-					sgn = (m[1] == '-'? -1: 1);
-					var integerValue = m[2],
-						decimalValue = m[3],
-						repeatedDecimalValue = m[4],
-						k0 = Math.pow(10, decimalValue.length),
-						k1 = (repeatedDecimalValue? Math.pow(10, repeatedDecimalValue.length) - 1: 1);
-					num = Number(repeatedDecimalValue? repeatedDecimalValue: 0) + k1 * (Number(integerValue) * k0 + Number(decimalValue));
-					den = k0 * k1;
-					if(!num)
-						sgn = 0;
-				}
-				else{
-					m = args.match(/^(-?[\d]+)\/([\d]+)$/);
-					num = Number(m[1]);
-					den = Number(m[2]);
-					sgn = Math.sign(den? num * den: num);
-				}
+				return parseString(args);
+
+			default:
+				return null;
+		}
+	};
+
+	/** @private */
+	var parseObject = function(obj){
+		if(obj.constructor == Constructor)
+			return obj;
+
+		var sgn, num, den;
+		if('num' in obj && 'den' in obj){
+			num = (obj.sgn || 1) * obj.num;
+			den = obj.den;
+		}
+		else if(obj[0] !== undefined){
+			num = obj[0];
+			den = (obj[1] !== undefined? obj[1]: 1);
+		}
+		sgn = Math.sign(den? num * den: num);
+		num = Math.abs(num);
+		den = Math.abs(den);
+
+		return reduce({
+			sgn: sgn,
+			num: num,
+			den: den
+		});
+	};
+
+	/** @private */
+	var parseString = function(str){
+		var m = str.match(/^(-?)([\d]+)\.?([\d]*)(?:\(([\d]*)\))?$/),
+			sgn, num, den;
+		if(m){
+			sgn = (m[1] == '-'? -1: 1);
+			var integerValue = m[2],
+				decimalValue = m[3],
+				repeatedDecimalValue = m[4],
+				k0 = Math.pow(10, decimalValue.length),
+				k1 = (repeatedDecimalValue? Math.pow(10, repeatedDecimalValue.length) - 1: 1);
+			num = Number(repeatedDecimalValue? repeatedDecimalValue: 0) + k1 * (Number(integerValue) * k0 + Number(decimalValue));
+			den = k0 * k1;
+			if(!num)
+				sgn = 0;
+		}
+		else{
+			m = str.match(/^(-?[\d]+)\/([\d]+)$/);
+			num = Number(m[1]);
+			den = Number(m[2]);
+			sgn = Math.sign(den? num * den: num);
 		}
 
 		return reduce({
