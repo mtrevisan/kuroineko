@@ -171,7 +171,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 		if(!m)
 			throw 'The string passed is not in the expected format "<uom> = <parent-value> <parent-uom>".';
 
-		updateUnit(m[1], new Fraction(m[2]), m[3]);
+		updateUnit(m[1], m[2], m[3]);
 	};
 
 	/**
@@ -294,27 +294,18 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 
 	/**
 	 *
-	 * @param {Number/Fraction} value	Value to be expanded
-	 * @param {String} unitOfMeasure		Unit of measure of the passed value
-	 * @returns {Array}						Array of tuples value and uom
+	 * @param {Number/Fraction/String} value	Value to be expanded, either a float, a fraction, or a string in the format "<value> <uom>"
+	 * @param {String} unitOfMeasure				Unit of measure of the passed value
+	 * @returns {Array}	Array of tuples value and uom
 	 */
 	var expand = function(value, unitOfMeasure){
-		if(!unitOfMeasure){
-			if(!ObjectHelper.isString(value))
-				throw 'The value passed should be a string.';
-
-			var m = value.match(/^([^ ]+) ([^ ]+)$/);
-			if(!m)
-				throw 'The string passed is not in the expected format "<value> <uom>".';
-
-			value = new Fraction(m[1]);
-			unitOfMeasure = m[2];
-		}
+		if(!unitOfMeasure)
+			return expandFromString(value);
 		if(!(value instanceof Fraction) && !ObjectHelper.isFloat(value))
 			throw 'The value passed should be a float or a fraction.';
-		value = new Fraction(value);
 		if(!ObjectHelper.isString(unitOfMeasure))
 			throw 'The unit of measure passed should be a string.';
+		value = new Fraction(value);
 
 		var uom = calculateGreatestUOM.call(this),
 			baseValue = 0,
@@ -338,6 +329,23 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 		}
 
 		return result;
+	};
+
+	/**
+	 * @param {String} value	Value to be expanded, a string in the format "<value> <uom>"
+	 * @returns {Array}	Array of tuples value and uom
+	 *
+	 * @private
+	 */
+	var expandFromString = function(value){
+		if(!ObjectHelper.isString(value))
+			throw 'The value passed should be a string.';
+
+		var m = value.match(/^([^ ]+) ([^ ]+)$/);
+		if(!m)
+			throw 'The string passed is not in the expected format "<value> <uom>".';
+
+		return expand(m[1], m[2]);
 	};
 
 	/** @private */
