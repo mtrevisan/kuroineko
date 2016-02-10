@@ -18,15 +18,7 @@
 		};
 
 
-/*		require(['tools/lang/Hunspell', 'text!tools/lang/morphology/dictionaries/en_US.aff', 'text!tools/lang/morphology/dictionaries/en_US.dic'], function(Hunspell, aff, dic){
-			var dictionary = new Hunspell(aff, dic);
-
-			var suggestions = dictionary.suggest('mispeling');
-
-			console.log(suggestions);
-		});/**/
-
-		require(['tools/spellchecker/Hunspell', 'text!tools/spellchecker/dictionaries/vec.aff', 'text!tools/spellchecker/dictionaries/vec.dic'], function(Hunspell, aff, dic){
+		require(['tools/spellchecker/Hunspell', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.aff', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.dic'], function(Hunspell, aff, dic){
 			var dictionary = new Hunspell(aff, dic);
 			aff = null;
 			dic = null;
