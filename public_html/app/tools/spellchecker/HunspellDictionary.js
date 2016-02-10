@@ -33,57 +33,59 @@ define(function(){
 	 *
 	 * @private
 	 */
-	var parseAFF = function(data){
-		this.compoundRules = [];
-		this.compoundRuleCodes = {};
-		this.replacementTable = [];
-		this.inputConversionTable = [];
-		this.mapTable = [];
-		this.rules = {};
+	var parseAFF = (function(){
+		var copyOver = function(ruleType, definitionParts){ this.flags[ruleType] = definitionParts[0]; return 0; },
+			copyOverJoined = function(ruleType, definitionParts){ this.flags[ruleType] = definitionParts.join(' '); return 0; };
+		var ruleFunction = {
+			PFX: function(ruleType, definitionParts, lines, i){ return parseSuffix.call(this, ruleType, definitionParts, lines, i); },
+			SFX: function(ruleType, definitionParts, lines, i){ return parseSuffix.call(this, ruleType, definitionParts, lines, i); },
+			COMPOUNDRULE: function(ruleType, definitionParts, lines, i){ return parseCompoundRule.call(this, definitionParts, lines, i); },
+			REP: function(ruleType, definitionParts, lines, i){ return parseReplacementTable.call(this, definitionParts, lines, i); },
+			ICONV: function(ruleType, definitionParts, lines, i){ return parseInputConversion.call(this, definitionParts, lines, i); },
+			MAP: function(ruleType, definitionParts, lines, i){ return parseMap.call(this, definitionParts, lines, i); },
+			NAME: copyOverJoined,
+			VERSION: copyOverJoined,
 
-		//remove comment lines
-		data = removeAffixComments.call(this, data);
+			HOME: copyOver,
+			LANG: copyOver,
+			SET: copyOver,
+			TRY: copyOver,
+			WORDCHARS: copyOver,
+			ONLYINCOMPOUND: copyOver,
+			COMPOUNDMIN: copyOver,
+			FLAG: copyOver,
+			KEEPCASE: copyOver,
+			NEEDAFFIX: copyOver
+		};
 
-		var lines = data.split(/\r?\n/),
-			len = lines.length,
-			i,
-			definitionParts, ruleType;
-		for(i = 0; i < len; i ++)
-			if(lines[i]){
-				definitionParts = lines[i].split(SEPARATOR);
+		return function(data){
+			this.compoundRules = [];
+			this.compoundRuleCodes = {};
+			this.replacementTable = [];
+			this.inputConversionTable = [];
+			this.mapTable = [];
+			this.rules = {};
 
-				ruleType = definitionParts.shift();
+			//remove comment lines
+			data = removeAffixComments.call(this, data);
 
-				if(ruleType == 'PFX' || ruleType == 'SFX')
-					i += parseSuffix.call(this, ruleType, definitionParts, lines, i);
-				else if(ruleType == 'COMPOUNDRULE')
-					i += parseCompoundRule.call(this, definitionParts, lines, i);
-				else if(ruleType == 'REP')
-					i += parseReplacementTable.call(this, definitionParts, lines, i);
-				else if(ruleType == 'ICONV')
-					i += parseInputConversion.call(this, definitionParts, lines, i);
-				else if(ruleType == 'MAP')
-					i += parseMap.call(this, definitionParts, lines, i);
-				else if(ruleType == 'NAME' || ruleType == 'VERSION')
-					this.flags[ruleType] = definitionParts.join(' ');
-				else{
-					//HOME
-					//LANG
-					//SET
-					//TRY
-					//WORDCHARS
-					//ONLYINCOMPOUND
-					//COMPOUNDMIN
-					//FLAG
-					//KEEPCASE
-					//NEEDAFFIX
+			var lines = data.split(/\r?\n/),
+				len = lines.length,
+				i,
+				definitionParts, ruleType, fun;
+			for(i = 0; i < len; i ++)
+				if(!lines[i].match(/^\//)){
+					definitionParts = lines[i].split(SEPARATOR);
 
-					this.flags[ruleType] = definitionParts[0];
+					ruleType = definitionParts.shift();
+					fun = ruleFunction[ruleType];
+					if(fun)
+						i += fun.call(this, ruleType, definitionParts, lines, i);
 				}
-			}
 
-		data = null;
-	};
+			data = null;
+		};
+	})();
 
 	/** @private */
 	var parseSuffix = function(ruleType, definitionParts, lines, i){
