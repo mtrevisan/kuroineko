@@ -125828,7 +125828,7 @@ SFX A đer to lèđer
 SFX A đer to rđer
 SFX A đer to/I lèđer
 SFX A đer to/I rđer
-SFX B Y 8 # ajetivi
+SFX B Y 8 # tute le deklinaŧion, ajetivi de prima klase
 SFX B 0 a [^aieo]
 SFX B 0 e [^aieo]
 SFX B 0 i [^aieo]
@@ -125837,14 +125837,14 @@ SFX B io i io
 SFX B o a o
 SFX B o e o
 SFX B o i [^i]o
-SFX C Y 2 # ajetivi
+SFX C Y 2 # ajetivi de sekonda klase
 SFX C a e a
 SFX C a i a
-SFX D Y 3 # ajetivi
+SFX D Y 3 # ajetivi de tèrŧa klase
 SFX D 0 e [^aieo]
 SFX D 0 i [^aieo]
 SFX D e i e
-SFX E Y 35 # prokonplementari
+SFX E Y 35 # vèrbi prokonplementari
 SFX E 0 -ge
 SFX E 0 -gela
 SFX E 0 -gele
@@ -125880,7 +125880,7 @@ SFX E 0 -vele
 SFX E 0 -veli
 SFX E 0 -velo
 SFX E 0 -vene
-SFX F Y 18 # prokonplementari
+SFX F Y 18 # vèrbi prokonplementari
 SFX F 0 -ge [^a]
 SFX F 0 -la [^a]
 SFX F 0 -le [^a]
@@ -125899,7 +125899,7 @@ SFX F a e-me a
 SFX F a e-ne a
 SFX F a e-te a
 SFX F a e-ve a
-SFX G Y 33 # prokonplementari
+SFX G Y 33 # vèrbi prokonplementari
 SFX G me ge me
 SFX G me la me
 SFX G me le me
@@ -125933,23 +125933,24 @@ SFX G mene vele mene
 SFX G mene veli mene
 SFX G mene velo mene
 SFX G mene vene mene
-SFX H Y 16 # prokonplementari
+SFX H Y 17 # prokonplementari
 SFX H ame ege ame
 SFX H ame ela ame
 SFX H ame ele ame
 SFX H ame eli ame
 SFX H ame elo ame
+SFX H ame eme ame
 SFX H ame ene ame
 SFX H ame ete ame
 SFX H ame eve ame
-SFX H me ge [^a]
-SFX H me la [^a]
-SFX H me le [^a]
-SFX H me li [^a]
-SFX H me lo [^a]
-SFX H me ne [^a]
-SFX H me te [^a]
-SFX H me ve [^a]
+SFX H me ge [^a]me
+SFX H me la [^a]me
+SFX H me le [^a]me
+SFX H me li [^a]me
+SFX H me lo [^a]me
+SFX H me ne [^a]me
+SFX H me te [^a]me
+SFX H me ve [^a]me
 SFX I Y 22 # sonoriđaŧion konsonanti finali
 SFX I b. p b[oei]
 SFX I c. c c[oei]
@@ -125974,9 +125975,9 @@ SFX I ɉ. c ɉ[oei]
 SFX I ʃ. ʃ ʃ[oei]
 SFX I ʒ. ʃ ʒ[oei]
 SFX J Y 9 # interogativi
-SFX J 0 -mi
 SFX J 0 -e n
 SFX J 0 -i n
+SFX J 0 -mi
 SFX J 0 -ne [^n]
 SFX J 0 -ni [^n]
 SFX J 0 -nte [^n]

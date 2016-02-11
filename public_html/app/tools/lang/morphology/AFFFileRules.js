@@ -120,14 +120,14 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		1: [
 			//[PRONOMENAL_MARK, '0>-l[oaie]', '0>-me/' + PRONOMENAL_MARK_RESERVED_0, '0>-te/' + PRONOMENAL_MARK_RESERVED_0, '0>-ve/' + PRONOMENAL_MARK_RESERVED_0, '0>-se/' + PRONOMENAL_MARK_RESERVED_0, '0>-ge/' + PRONOMENAL_MARK_RESERVED_0, '0>-ne'],
 			//[PRONOMENAL_MARK_RESERVED_0, '0>ne', '0>l[oaie]'],
-			[PRONOMENAL_MARK, '0>-l[oaie]', '0>-me(ne)', '0>-mel[oaie]', '0>-te(ne)', '0>-tel[oaie]', '0>-ve(ne)', '0>-vel[oaie]', '0>-se(ne)', '0>-sel[oaie]', '0>-ge(ne)', '0>-gel[oaie]', '0>-ne'],
-			[PRONOMENAL_IMPERATIVE_MARK, '0>-me|[^a]', '0>-ne|[^a]', '0>-te|[^a]', '0>-ve|[^a]', '0>-l[oaie]|[^a]', '0>-ge|[^a]', 'a>e-me', 'a>e-ne', 'a>e-te', 'a>e-ve', 'a>e-l[oaie]', 'a>e-ge']
+			[PRONOMENAL_MARK, '0>-l[oaie]', '0>-[gmstv]e(ne)', '0>-[gmstv]el[oaie]', '0>-ne'],
+			[PRONOMENAL_IMPERATIVE_MARK, '0>-[gmntv]e|[^a]', '0>-l[oaie]|[^a]', 'a>e-[gmntv]e', 'a>e-l[oaie]']
 		],
 		2: [
 			//[PRONOMENAL_MARK_2, '0>l[oaie]', '0>me/' + PRONOMENAL_MARK_RESERVED_1, '0>te/' + PRONOMENAL_MARK_RESERVED_1, '0>ve/' + PRONOMENAL_MARK_RESERVED_1, '0>se/' + PRONOMENAL_MARK_RESERVED_1, '0>ge/' + PRONOMENAL_MARK_RESERVED_1, '0>ne'],
 			//[PRONOMENAL_MARK_RESERVED_1, '0>ne', '0>l[oaie]'],
-			[PRONOMENAL_MARK_2, 'me>l[oaie]', 'me>te', 'me>ve', 'me>se', 'me>ge', 'me>ne', 'mene>mel[oaie]', 'mene>tene', 'mene>tel[oaie]', 'mene>vene', 'mene>vel[oaie]', 'mene>sene', 'mene>sel[oaie]', 'mene>gene', 'mene>gel[oaie]'],
-			[PRONOMENAL_IMPERATIVE_MARK_2, 'me>ne|[^a]', 'me>te|[^a]', 'me>ve|[^a]', 'me>l[oaie]|[^a]', 'me>ge|[^a]', 'ame>ene', 'ame>ete', 'ame>eve', 'ame>el[oaie]', 'ame>ege']
+			[PRONOMENAL_MARK_2, 'me>l[oaie]', 'me>[gnstv]e', 'mene>mel[oaie]', 'mene>[gstv]ene', 'mene>[gstv]el[oaie]'],
+			[PRONOMENAL_IMPERATIVE_MARK_2, 'me>[gntv]e|[^a]me', 'ame>e[gmntv]e', 'me>l[oaie]|[^a]me', 'ame>el[oaie]']
 		]
 	};
 
