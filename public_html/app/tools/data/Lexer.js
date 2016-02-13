@@ -19,10 +19,8 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	 * @param {Function} callback	A callback that is executed when this token is matched. This function should accept one argument: the lexeme matched.
 	 */
 	var addRule = function(pattern, callback){
-		if(!ObjectHelper.isRegExp(pattern))
-			throw new Error('Expected pattern to be a RegExp.');
-		if(!ObjectHelper.isFunction(callback))
-			throw new Error('Expected callback to be a function.');
+		ObjectHelper.assert(ObjectHelper.isRegExp(pattern), 'Expected pattern to be a RegExp');
+		ObjectHelper.assert(ObjectHelper.isFunction(callback), 'Expected callback to be a function');
 
 		if(!pattern.global){
 			var flags = 'g';
@@ -53,8 +51,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	 */
 	var lex = function(source){
 		if(source){
-			if(!ObjectHelper.isString(source))
-				throw new Error('Attempt to lex an object that is not a string.');
+			ObjectHelper.assert(ObjectHelper.isString(source), 'Attempt to lex an object that is not a string');
 
 			this.source = source;
 			this.index = 0;

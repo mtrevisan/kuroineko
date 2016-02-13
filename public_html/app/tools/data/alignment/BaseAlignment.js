@@ -23,12 +23,9 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		x = (Array.isArray(a)? a: a.match(REGEX_UNICODE_SPLITTER));
 		y = (Array.isArray(b)? b: b.match(REGEX_UNICODE_SPLITTER));
 		costs = enforceDefaultCosts(costs);
-		if(costs.insertion < 0)
-			throw new Error('Cost of insertion cannot be negative');
-		if(costs.deletion < 0)
-			throw new Error('Cost of deletion cannot be negative');
-		if(costs.substitution < 0)
-			throw new Error('Cost of substitution cannot be negative');
+		ObjectHelper.assert(costs.insertion, 'Cost of insertion cannot be zero or undefined');
+		ObjectHelper.assert(costs.deletion, 'Cost of deletion cannot be zero or undefined');
+		ObjectHelper.assert(costs.substitution, 'Cost of substitution cannot be zero or undefined');
 
 
 		this.a = x;

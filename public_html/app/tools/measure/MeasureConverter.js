@@ -29,8 +29,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 
 
 	var hasUnit = function(uom){
-		if(!ObjectHelper.isString(uom))
-			throw new Error('The value passed should be a string');
+		ObjectHelper.assert(ObjectHelper.isString(uom), 'Expected unit-of-measure to be a string');
 
 		return !!this.data[uom];
 	};
@@ -59,8 +58,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 	 * @private
 	 */
 	var addUnitAsString = function(uom){
-		if(!ObjectHelper.isString(uom))
-			throw new Error('The value passed should be a string');
+		ObjectHelper.assert(ObjectHelper.isString(uom), 'Expected unit-of-measure to be a string');
 
 		var data = uom.split(' = '),
 			size = data.length,
@@ -68,8 +66,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 		uom = data[0];
 		for(i = 1; i < size; i ++){
 			m = data[i].match(/^([^ ]+) ([^ ]+)$/);
-			if(!m)
-				throw new Error('The string passed is not in the expected format "<uom> = <parent-value> <parent-uom> = ..."');
+			ObjectHelper.assert(m, 'The string passed is not in the expected format "<uom> = <parent-value> <parent-uom> = ..."');
 
 			var parentValue = new Fraction(m[1]),
 				parentUOM = m[2];
@@ -87,14 +84,11 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 	 * @param {String} newUOM	New unit of measure like 'km'
 	 */
 	var renameUnit = function(oldUOM, newUOM){
-		if(!ObjectHelper.isString(oldUOM))
-			throw new Error('The old unit of measure passed should be a string');
-		if(!ObjectHelper.isString(newUOM))
-			throw new Error('The new unit of measure passed should be a string');
+		ObjectHelper.assert(ObjectHelper.isString(oldUOM), 'The old unit of measure passed should be a string');
+		ObjectHelper.assert(ObjectHelper.isString(newUOM), 'The new unit of measure passed should be a string');
 
 		var d = this.data[oldUOM];
-		if(!d)
-			throw new Error('Cannot change unit of measure "' + oldUOM + '" into "' + newUOM + '": unit not found');
+		ObjectHelper.assert(d, 'Cannot change unit of measure "' + oldUOM + '" into "' + newUOM + '": unit not found');
 
 		this.data[newUOM] = d;
 		delete this.data[oldUOM];
@@ -104,12 +98,9 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 
 	/** @private */
 	var updateParentUOMs = function(oldParentUOM, newParentUOM){
-		if(!ObjectHelper.isString(oldParentUOM))
-			throw new Error('The old parent unit of measure passed should be a string');
-		if(!ObjectHelper.isString(newParentUOM))
-			throw new Error('The new parent unit of measure passed should be a string');
-		if(!this.data[oldParentUOM])
-			throw new Error('Cannot change unit of measure: parent unit "' + oldParentUOM + '" not found');
+		ObjectHelper.assert(ObjectHelper.isString(oldParentUOM), 'The old parent unit of measure passed should be a string');
+		ObjectHelper.assert(ObjectHelper.isString(newParentUOM), 'The new parent unit of measure passed should be a string');
+		ObjectHelper.assert(this.data[oldParentUOM], 'Cannot change unit of measure: parent unit "' + oldParentUOM + '" not found');
 
 		Object.keys(this.data).forEach(function(uom){
 			var d = this[uom];
@@ -130,27 +121,20 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 		parentValue = checkInputs(uom, parentValue, parentUOM);
 
 		var d = this.data[uom];
-		if(!d)
-			throw new Error('Cannot change parent value: unit "' + uom + '" not found');
-		if(parentUOM && !this.data[parentUOM])
-			throw new Error('Cannot change parent value: parent unit "' + parentUOM + '" not found');
+		ObjectHelper.assert(d, 'Cannot change parent value: unit "' + uom + '" not found');
+		ObjectHelper.assert(!parentUOM || this.data[parentUOM], 'Cannot change parent value: parent unit "' + parentUOM + '" not found');
 
 		this.addUnit(uom, parentValue, parentUOM);
 	};
 
 	/** @private */
 	var checkInputs = function(uom, parentValue, parentUOM){
-		if(!ObjectHelper.isString(uom))
-			throw new Error('The unit of measure passed should be a string');
-		if(parentValue && !parentUOM)
-			throw new Error('Incompatible parent measure: should be present if parent value is given');
-		if(parentUOM && !ObjectHelper.isString(parentUOM))
-			throw new Error('The parent unit of measure passed should be a string');
-		if(uom == parentUOM)
-			throw new Error('Incompatible current parent measure: cannot be the same');
+		ObjectHelper.assert(ObjectHelper.isString(uom), 'The unit of measure passed should be a string');
+		ObjectHelper.assert(!parentValue || parentUOM, 'Incompatible parent measure: should be present if parent value is given');
+		ObjectHelper.assert(!parentUOM || ObjectHelper.isString(parentUOM), 'The parent unit of measure passed should be a string');
+		ObjectHelper.assert(uom != parentUOM, 'Incompatible current parent measure: cannot be the same');
 		parentValue = new Fraction(parentValue);
-		if(!parentValue.isPositive())
-			throw new Error('Incompatible parent value: cannot be zero or negative');
+		ObjectHelper.assert(parentValue.isPositive(), 'Incompatible parent value: cannot be zero or negative');
 		return parentValue;
 	};
 
@@ -160,11 +144,9 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 	 * @private
 	 */
 	var updateUnitFromString = function(unit){
-		if(!ObjectHelper.isString(unit))
-			throw new Error('The value passed should be a string');
+		ObjectHelper.assert(ObjectHelper.isString(unit), 'The value passed should be a string');
 		var m = unit.match(/^([^ ]+) = ([^ ]+) ([^ ]+)$/);
-		if(!m)
-			throw new Error('The string passed is not in the expected format "<uom> = <parent-value> <parent-uom>"');
+		ObjectHelper.assert(m, 'The string passed is not in the expected format "<uom> = <parent-value> <parent-uom>"');
 
 		updateUnit(m[1], m[2], m[3]);
 	};
@@ -177,15 +159,11 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 	 * @param {Number/Fraction} factor	Factor of conversion between from and to measures
 	 */
 	var addConverter = function(from, to, factor){
-		if(!(from instanceof Constructor))
-			throw new Error('The from value passed should be a measure');
-		if(!(to instanceof Constructor))
-			throw new Error('The to value passed should be a measure');
-		if(!(factor instanceof Fraction) && !ObjectHelper.isFloat(factor))
-			throw new Error('The factor passed should be a float or a fraction');
+		ObjectHelper.assert(from instanceof Constructor, 'The from value passed should be a measure');
+		ObjectHelper.assert(to instanceof Constructor, 'The to value passed should be a measure');
+		ObjectHelper.assert(factor instanceof Fraction || ObjectHelper.isFloat(factor), 'The factor passed should be a float or a fraction');
 		factor = new Fraction(factor);
-		if(factor.isZero())
-			throw new Error('Incompatible factor: cannot be zero');
+		ObjectHelper.assert(!factor.isZero(), 'Incompatible factor: cannot be zero');
 
 		this.converters = this.converters || [];
 
@@ -207,22 +185,18 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 	 */
 	var convert = function(value, fromUnitOfMeasure, toUnitOfMeasure){
 		if(!fromUnitOfMeasure && !toUnitOfMeasure){
-			if(!ObjectHelper.isString(value))
-				throw new Error('The value passed should be a string');
+			ObjectHelper.assert(ObjectHelper.isString(value), 'The value passed should be a string');
 
 			var m = value.match(/^([^ ]+) ([^ ]+) in ([^ ]+)$/);
-			if(!m)
-				throw new Error('The string passed is not in the expected format "<value> <uom> in <uom>"');
+			ObjectHelper.assert(m, 'The string passed is not in the expected format "<value> <uom> in <uom>"');
 
 			value = new Fraction(m[1]);
 			fromUnitOfMeasure = m[2];
 			toUnitOfMeasure = m[3];
 		}
-		if(!(value instanceof Fraction) && !ObjectHelper.isFloat(value))
-			throw new Error('The value passed should be a float or a fraction');
+		ObjectHelper.assert(value instanceof Fraction || ObjectHelper.isFloat(value), 'The value passed should be a float or a fraction');
 		value = new Fraction(value);
-		if(!ObjectHelper.isString(fromUnitOfMeasure))
-			throw new Error('The from unit of measure passed should be a string');
+		ObjectHelper.assert(ObjectHelper.isString(fromUnitOfMeasure), 'The from unit of measure passed should be a string');
 
 		toUnitOfMeasure = toUnitOfMeasure || this.baseUOM;
 
@@ -268,8 +242,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 				return false;
 			});
 
-			if(!found)
-				throw new Error('Unknown units: cannot convert from "' + fromUnitOfMeasure + '" to "' + toUnitOfMeasure + '"');
+			ObjectHelper.assert(found, 'Unknown units: cannot convert from "' + fromUnitOfMeasure + '" to "' + toUnitOfMeasure + '"');
 		}
 
 		return value;
@@ -296,10 +269,8 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 	var expand = function(value, unitOfMeasure){
 		if(!unitOfMeasure)
 			return expandFromString(value);
-		if(!(value instanceof Fraction) && !ObjectHelper.isFloat(value))
-			throw new Error('The value passed should be a float or a fraction');
-		if(!ObjectHelper.isString(unitOfMeasure))
-			throw new Error('The unit of measure passed should be a string');
+		ObjectHelper.assert(value instanceof Fraction || ObjectHelper.isFloat(value), 'The value passed should be a float or a fraction');
+		ObjectHelper.assert(ObjectHelper.isString(unitOfMeasure), 'The unit of measure passed should be a string');
 		value = new Fraction(value);
 
 		var uom = calculateGreatestUOM.call(this),
@@ -333,12 +304,10 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 	 * @private
 	 */
 	var expandFromString = function(value){
-		if(!ObjectHelper.isString(value))
-			throw new Error('The value passed should be a string');
+		ObjectHelper.assert(ObjectHelper.isString(value), 'The value passed should be a string');
 
 		var m = value.match(/^([^ ]+) ([^ ]+)$/);
-		if(!m)
-			throw new Error('The string passed is not in the expected format "<value> <uom>"');
+		ObjectHelper.assert(m, 'The string passed is not in the expected format "<value> <uom>"');
 
 		return expand(m[1], m[2]);
 	};

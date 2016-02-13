@@ -33,6 +33,12 @@ define(function(){
 	};
 
 
+	var assert = function(condition, message){
+		if(!condition)
+			throw new Error(message || 'Assertion Error');
+	};
+
+
 	/**
 	 * Sencha Touch 2.4.0's Ext.apply<p>
 	 * Copies all the properties of config to the specified object.
@@ -250,6 +256,8 @@ define(function(){
 
 
 	return {
+		assert: assert,
+
 		apply: apply,
 		applyIf: applyIf,
 		extend: extend,

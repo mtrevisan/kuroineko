@@ -49,8 +49,7 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 	 * @param [conf]	The configuration object in the form <code>{rootLogger: 'DEBUG', showTime: true, out: function(message){}}</code>
 	 */
 	var Constructor = function(name, conf){
-		if(!name)
-			throw new Error('A Logger must have a name');
+		ObjectHelper.assert(name, 'Expected a name');
 
 		this.config = {};
 		for(var k in CONFIG_DEFAULT)
@@ -91,8 +90,7 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 	 */
 	var setLevel = function(level){
 		level = level.toUpperCase();
-		if(LEVEL_OFF != level && LEVELS.indexOf(level) < 0)
-			throw new Error('setLevel called with invalid level: ' + level);
+		ObjectHelper.assert(LEVEL_OFF == level || LEVELS.indexOf(level) >= 0, 'setLevel called with invalid level: ' + level);
 
 		this.config.rootLogger = level;
 	};
