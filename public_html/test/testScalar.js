@@ -52,7 +52,7 @@ require(['tools/measure/Scalar', 'tools/measure/MeasureConverter'], function(Sca
 			s1.add(2, 'km');
 		},
 		function(err){
-			return (err.toString() == 'Measure has not the given unit of measure.');
+			return (err.toString() == 'Error: Measure has not the given unit of measure');
 		});
 	});
 
@@ -70,7 +70,7 @@ require(['tools/measure/Scalar', 'tools/measure/MeasureConverter'], function(Sca
 			s1.add(s2);
 		},
 		function(err){
-			return (err.toString() == 'Measure has not the given unit of measure.');
+			return (err.toString() == 'Error: Measure has not the given unit of measure');
 		});
 	});
 

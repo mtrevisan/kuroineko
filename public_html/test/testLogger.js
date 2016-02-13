@@ -6,7 +6,7 @@ require(['tools/logging/Logger'], function(Logger){
 			new Logger();
 		},
 		function(err){
-			return (err.toString() == 'A Logger must have a name');
+			return (err.toString() == 'Error: A Logger must have a name');
 		});
 	});
 
