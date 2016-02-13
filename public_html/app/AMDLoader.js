@@ -251,7 +251,7 @@ var AMDLoader = (function(doc){
 
 			var scc = tree.getStronglyConnectedComponents();
 			if(scc.length)
-				throw 'Circular dependency found: ' + JSON.stringify(scc.map(function(component){ return component.join(' > '); }));
+				throw new Error('Circular dependency found: ' + JSON.stringify(scc.map(function(component){ return component.join(' > '); })));
 		}
 	};
 

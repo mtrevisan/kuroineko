@@ -24,11 +24,11 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		y = (Array.isArray(b)? b: b.match(REGEX_UNICODE_SPLITTER));
 		costs = enforceDefaultCosts(costs);
 		if(costs.insertion < 0)
-			throw 'Cost of insertion cannot be negative';
+			throw new Error('Cost of insertion cannot be negative');
 		if(costs.deletion < 0)
-			throw 'Cost of deletion cannot be negative';
+			throw new Error('Cost of deletion cannot be negative');
 		if(costs.substitution < 0)
-			throw 'Cost of substitution cannot be negative';
+			throw new Error('Cost of substitution cannot be negative');
 
 
 		this.a = x;

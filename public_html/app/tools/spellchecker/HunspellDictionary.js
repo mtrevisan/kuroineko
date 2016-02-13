@@ -239,7 +239,7 @@ define(function(){
 		var lines = data.split(/\r?\n/);
 		//the first line is the number of words in the dictionary
 		if(parseInt(lines.shift(), 10) != lines.length)
-			throw 'Number of rows in the dictionary does not match the count number';
+			throw new Error('Number of rows in the dictionary does not match the count number');
 
 		var word, ruleCodesArray,
 			rule, k, combineRule;

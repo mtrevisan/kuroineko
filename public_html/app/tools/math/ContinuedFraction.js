@@ -359,7 +359,7 @@ define(['tools/math/Fraction'], function(Fraction){
 			if(!isFinite(p2) || !isFinite(q2)){
 				scale = Math.max(a, 1);
 //				if(scale <= 0)
-//					throw 'Continued fraction convergents diverged to +/- infinity for value ' + this.terms;
+//					throw new Error('Continued fraction convergents diverged to +/- infinity for value ' + this.terms);
 
 				infinite = true;
 				inverseScaleFactor = 1;
@@ -383,9 +383,9 @@ define(['tools/math/Fraction'], function(Fraction){
 			}
 			if(infinite)
 				//scaling failed
-				throw 'Continued fraction convergents diverged to +/- infinity for value ' + this.terms;
+				throw new Error('Continued fraction convergents diverged to +/- infinity for value ' + this.terms);
 			if(!p2 && !q2)
-				throw 'Continued fraction diverged to NaN for value ' + this.terms;
+				throw new Error('Continued fraction diverged to NaN for value ' + this.terms);
 
 			r = p2 / q2;
 			relativeError = Math.abs(r / c.toNumber() - 1);

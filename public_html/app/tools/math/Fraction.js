@@ -69,7 +69,7 @@ define(function(){
 				return parseString(args);
 
 			default:
-				throw 'Cannot parse input data ' + args;
+				throw new Error('Cannot parse input data ' + args);
 		}
 	};
 
@@ -88,7 +88,7 @@ define(function(){
 			den = (obj[1] !== undefined? obj[1]: 1);
 		}
 		else
-			throw 'Cannot parse input data ' + obj;
+			throw new Error('Cannot parse input data ' + obj);
 
 		sgn = Math.sign(den? num * den: num);
 		num = Math.abs(num);
@@ -120,7 +120,7 @@ define(function(){
 		else{
 			m = str.match(/^([+-]?)([\d]+)\/([\d]+)$/);
 			if(!m)
-				throw 'Cannot parse input data \'' + str + '\'';
+				throw new Error('Cannot parse input data \'' + str + '\'');
 
 			num = Number(m[2]);
 			den = Number(m[3]);

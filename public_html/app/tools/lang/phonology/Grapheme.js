@@ -48,7 +48,7 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 	var convert = function(word, from, to, dialect, phonematicSyllabation){
 		var funct = 'convert' + from + 'Into' + to;
 		if(!this[funct])
-			throw 'function ' + funct + ' does not exists!';
+			throw new Error('function ' + funct + ' does not exists!');
 
 		return this[funct](word, dialect, phonematicSyllabation);
 	};

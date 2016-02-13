@@ -40,7 +40,7 @@ define(['tools/math/Fraction'], function(Fraction){
 		var args = Array.prototype.slice.call(arguments[0]),
 			isString = (args.length == 1 && typeof(args[0]) == 'string');
 		if(args.length == 1 && !(args[0].constructor == Constructor || isString))
-			throw 'Wrong number of arguments for the function add.';
+			throw new Error('Wrong number of arguments for the function add');
 
 		if(args.length == 1){
 			if(!isString)
@@ -64,7 +64,7 @@ define(['tools/math/Fraction'], function(Fraction){
 			}
 
 			if(!measure || !measure.hasUnit(uom))
-				throw 'Measure has not the given unit of measure.';
+				throw new Error('Measure has not the given unit of measure');
 
 			return {
 				value: value,
@@ -80,11 +80,11 @@ define(['tools/math/Fraction'], function(Fraction){
 	 */
 	var add = function(){
 		if(!this.measure)
-			throw 'Measure conversion is not specified, cannot proceed.';
+			throw new Error('Measure conversion is not specified, cannot proceed');
 
 		var scal = parse.call(this, arguments);
 		if(!this.measure.hasUnit(scal.uom))
-			throw 'Measure has not the given unit of measure.';
+			throw new Error('Measure has not the given unit of measure');
 
 		var commonUOM = this.measure.calculateGreatestCommonUOM(this.uom, scal.uom),
 			val = this.measure.convert(this.value, this.uom, commonUOM)
@@ -103,7 +103,7 @@ define(['tools/math/Fraction'], function(Fraction){
 
 	var to = function(uom){
 		if(!this.measure)
-			throw 'Measure conversion is not specified, cannot proceed.';
+			throw new Error('Measure conversion is not specified, cannot proceed');
 
 		return new Constructor(this.measure.convert(this.value, this.uom, uom), uom, this.measure);
 	};

@@ -117,7 +117,7 @@ define(function(){
 		//consider successors of v, aka, consider each vertex in vertex.connections
 		vertex.connections.forEach(function(v){
 			if(!(v instanceof Vertex))
-				throw 'Graph not finalized';
+				throw new Error('Graph not finalized');
 
 			if(v.index < 0){
 				//successor v has not yet been visited; recurse on it

@@ -32,11 +32,11 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 			b = b.match(REGEX_UNICODE_SPLITTER);
 		costs = enforceDefaultCosts(costs);
 		if(!costs.insertion)
-			throw 'Cost of insertion cannot be zero or undefined';
+			throw new Error('Cost of insertion cannot be zero or undefined');
 		if(!costs.deletion)
-			throw 'Cost of deletion cannot be zero or undefined';
+			throw new Error('Cost of deletion cannot be zero or undefined');
 		if(!costs.substitution)
-			throw 'Cost of substitution cannot be zero or undefined';
+			throw new Error('Cost of substitution cannot be zero or undefined');
 
 		//base cases
 		var n = a.length,
@@ -143,13 +143,13 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 			b = b.match(REGEX_UNICODE_SPLITTER);
 		costs = enforceDefaultCosts(costs);
 		if(!costs.insertion)
-			throw 'Cost of insertion cannot be zero or undefined';
+			throw new Error('Cost of insertion cannot be zero or undefined');
 		if(!costs.deletion)
-			throw 'Cost of deletion cannot be zero or undefined';
+			throw new Error('Cost of deletion cannot be zero or undefined');
 		if(!costs.substitution)
-			throw 'Cost of substitution cannot be zero or undefined';
+			throw new Error('Cost of substitution cannot be zero or undefined');
 		if(!costs.transposition)
-			throw 'Cost of transposition cannot be zero or undefined';
+			throw new Error('Cost of transposition cannot be zero or undefined');
 
 		//base cases
 		var n = a.length,
@@ -207,7 +207,7 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 	 */
 	var damerauLevenshteinEdit = function(a, b, costs){
 		if(!costs.transposition)
-			throw 'Cost of transposition cannot be zero or undefined';
+			throw new Error('Cost of transposition cannot be zero or undefined');
 
 		var computeFn = function(x, y, c, distance, i, j){
 			var min = distance[i - 1][j - 1] + c.matchingFn(x[i - 1], y[j - 1], c),
@@ -243,11 +243,11 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 			b = b.match(REGEX_UNICODE_SPLITTER);
 		costs = enforceDefaultCosts(costs);
 		if(!costs.insertion)
-			throw 'Cost of insertion cannot be zero or undefined';
+			throw new Error('Cost of insertion cannot be zero or undefined');
 		if(!costs.deletion)
-			throw 'Cost of deletion cannot be zero or undefined';
+			throw new Error('Cost of deletion cannot be zero or undefined');
 		if(!costs.substitution)
-			throw 'Cost of substitution cannot be zero or undefined';
+			throw new Error('Cost of substitution cannot be zero or undefined');
 
 		//base cases
 		var n = a.length,

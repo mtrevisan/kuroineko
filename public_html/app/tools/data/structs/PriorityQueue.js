@@ -103,7 +103,7 @@ define(function(){
 	 */
 	var union = function(other){
 		if(other.constructor != Constructor)
-			throw 'The input is not a PriorityQueue';
+			throw new Error('The input is not a PriorityQueue');
 
 		this.rootList = this.rootList.concat(other.rootList);
 		other.valueToNode.forEach(function(node, value){
@@ -164,9 +164,9 @@ define(function(){
 	var decreaseKey = function(priority, value){
 		var x = this.valueToNode.get(value);
 		if(!x)
-			throw 'non existing node with value ' + value;
+			throw new Error('Non existing node with value ' + value);
 		if(priority > x.priority)
-			throw 'new key is greater than current key';
+			throw new Error('New key is greater than current key');
 
 		x.priority = priority;
 		var y = x.parent;
@@ -239,7 +239,7 @@ define(function(){
 		//remove x from the children list of y
 		var index = y.children.indexOf(x);
 		if(index === -1)
-			throw 'node with value ' + x.value + ' is not child of node with value ' + y.value;
+			throw new Error('Node with value ' + x.value + ' is not child of node with value ' + y.value);
 
 		y.children.splice(index, 1);
 		//add x to the root list

@@ -91,7 +91,7 @@ define(['HTMLHelper', 'tools/ui/Alerter'], function(HTMLHelper, Alerter){
 				partialRule = cumulativeRule;
 		});
 		if(cumulativeRule.length){
-			throw 'Invalid validate attribute: ' + cumulativeRule;
+			throw new Error('Invalid validate attribute: ' + cumulativeRule);
 		}
 
 		return rules;

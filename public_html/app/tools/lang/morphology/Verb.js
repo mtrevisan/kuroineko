@@ -64,20 +64,20 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabator', 'tools/d
 	/** @private */
 	var checkForErrors = function(infinitive, syllabation){
 		if(!infinitive.match(/^([aàbcdđeèéfgiíjɉklƚmnñoòóprsʃtŧuúvxʒ]|[djlnstx]h)+$/))
-			throw 'NOT_ALFABETIC';
+			throw new Error('NOT_ALFABETIC');
 
 		//NOTE: [^aeio]*e would be erroneous because it wouldn't consider the eterophonic sequence /ier$/.
 		if(!infinitive.match(/([àèéí]|[àèéíòóú][^aeo]*e)r$/))
-			throw 'NOT_A_VERB_INFINITIVE';
+			throw new Error('NOT_A_VERB_INFINITIVE');
 
 		var m = infinitive.match(/[àèéíòóú]/g);
 		if(!m)
-			throw 'NOT_STRESSABLE';
+			throw new Error('NOT_STRESSABLE');
 		if(m.length > 1)
-			throw 'TOO_MUCH_STRESSES';
+			throw new Error('TOO_MUCH_STRESSES');
 
 		if(syllabation.hasSyllabationErrors)
-			throw 'NOT_SYLLABABLE';
+			throw new Error('NOT_SYLLABABLE');
 	};
 
 	/** @private */

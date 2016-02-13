@@ -997,7 +997,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
 
 		if(themes.themeT1 && !origin)
-			throw 'error on origin for theme T1 "' + themes.themeT1 + '" ("' + verb.infinitive + '") infinitive simple';
+			throw new Error('error on origin for theme T1 "' + themes.themeT1 + '" ("' + verb.infinitive + '") infinitive simple');
 		if(themes.themeT1 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1019,7 +1019,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
 
 		if(themes.themeT2 && !origin)
-			throw 'error on origin for theme T2 "' + themes.themeT2 + '" ("' + verb.infinitive + '") indicative imperfect';
+			throw new Error('Error on origin for theme T2 "' + themes.themeT2 + '" ("' + verb.infinitive + '") indicative imperfect');
 		if(themes.themeT2 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1069,7 +1069,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
 
 		if(themes.themeT2 && !origin)
-			throw 'error on origin for theme T2 "' + themes.themeT2 + '" ("' + verb.infinitive + '") subjunctive imperfect';
+			throw new Error('Error on origin for theme T2 "' + themes.themeT2 + '" ("' + verb.infinitive + '") subjunctive imperfect');
 		if(themes.themeT2 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1099,7 +1099,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
 
 		if(themes.themeT2 && !origin)
-			throw 'error on origin for theme T2 "' + themes.themeT2 + '" ("' + verb.infinitive + '") participle perfect';
+			throw new Error('Error on origin for theme T2 "' + themes.themeT2 + '" ("' + verb.infinitive + '") participle perfect');
 		if(themes.themeT2 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1127,7 +1127,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
 
 		if(themes.themeT2 && !origin)
-			throw 'error on origin for theme T2 "' + themes.themeT2 + '" ("' + verb.infinitive + '") gerund simple';
+			throw new Error('Error on origin for theme T2 "' + themes.themeT2 + '" ("' + verb.infinitive + '") gerund simple');
 		if(themes.themeT2 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1183,7 +1183,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
 
 		if(themes.themeT4 && !origin)
-			throw 'error on origin for theme T4 "' + themes.themeT4 + '" ("' + verb.infinitive + '") indicative future';
+			throw new Error('Error on origin for theme T4 "' + themes.themeT4 + '" ("' + verb.infinitive + '") indicative future');
 		if(themes.themeT4 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1232,7 +1232,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
 
 		if(themes.themeT4 && !origin)
-			throw 'error on origin for theme T4 "' + themes.themeT4 + '" ("' + verb.infinitive + '") conditional simple';
+			throw new Error('Error on origin for theme T4 "' + themes.themeT4 + '" ("' + verb.infinitive + '") conditional simple');
 		if(themes.themeT4 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1284,7 +1284,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			origin = unmarkDefaultStress(getOrigin(t, verb, originTheme));
 
 			if(!origin)
-				throw 'error on origin for theme T5 "' + t.themeT5 + '" ("' + verb.infinitive + '") indicative present';
+				throw new Error('Error on origin for theme T5 "' + t.themeT5 + '" ("' + verb.infinitive + '") indicative present');
 		}
 		themes = t;
 
@@ -1319,7 +1319,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			origin = unmarkDefaultStress(getOrigin(t, verb, originTheme));
 
 			if(!origin)
-				throw 'error on origin for theme T5 "' + t.themeT5 + '" ("' + verb.infinitive + '") subjunctive present';
+				throw new Error('Error on origin for theme T5 "' + t.themeT5 + '" ("' + verb.infinitive + '") subjunctive present');
 		}
 		themes = t;
 
@@ -1357,7 +1357,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			origin = unmarkDefaultStress(getOrigin(t, verb, originTheme));
 
 			if(!origin)
-				throw 'error on origin for theme T5 "' + t.themeT5 + '" ("' + verb.infinitive + '") imperative present';
+				throw new Error('Error on origin for theme T5 "' + t.themeT5 + '" ("' + verb.infinitive + '") imperative present');
 		}
 		themes = t;
 
@@ -1392,7 +1392,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			origin = unmarkDefaultStress(getOrigin(t, verb, originTheme));
 
 			if(!origin)
-				throw 'error on origin for theme T6 "' + t.themeT6 + '" ("' + verb.infinitive + '") participle perfect';
+				throw new Error('Error on origin for theme T6 "' + t.themeT6 + '" ("' + verb.infinitive + '") participle perfect');
 		}
 		themes = t;
 
@@ -1412,7 +1412,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
 
 		if(themes.themeT7 && !origin)
-			throw 'error on origin for theme T7 "' + themes.themeT7 + '" ("' + verb.infinitive + '") participle imperfect';
+			throw new Error('Error on origin for theme T7 "' + themes.themeT7 + '" ("' + verb.infinitive + '") participle imperfect');
 		if(themes.themeT7 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1428,7 +1428,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
 
 		if(themes.themeT7 && !origin)
-			throw 'error on origin for theme T7 "' + themes.themeT7 + '" ("' + verb.infinitive + '") participle perfect';
+			throw new Error('Error on origin for theme T7 "' + themes.themeT7 + '" ("' + verb.infinitive + '") participle perfect');
 		if(themes.themeT7 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1444,7 +1444,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
 
 		if(themes.themeT7 && !origin)
-			throw 'error on origin for theme T7 "' + themes.themeT7 + '" ("' + verb.infinitive + '") gerund simple';
+			throw new Error('Error on origin for theme T7 "' + themes.themeT7 + '" ("' + verb.infinitive + '") gerund simple');
 		if(themes.themeT7 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1467,7 +1467,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
 
 		if(themes.themeT8 && !origin)
-			throw 'error on origin for theme T8 "' + themes.themeT8 + '" ("' + verb.infinitive + '") indicative present';
+			throw new Error('Error on origin for theme T8 "' + themes.themeT8 + '" ("' + verb.infinitive + '") indicative present');
 		if(themes.themeT8 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1518,7 +1518,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
 
 		if(themes.themeT8 && !origin)
-			throw 'error on origin for theme T8 "' + themes.themeT8 + '" ("' + verb.infinitive + '") subjunctive present';
+			throw new Error('Error on origin for theme T8 "' + themes.themeT8 + '" ("' + verb.infinitive + '") subjunctive present');
 		if(themes.themeT8 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1556,7 +1556,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
 
 		if(themes.themeT8 && !origin)
-			throw 'error on origin for theme T8 "' + themes.themeT8 + '" ("' + verb.infinitive + '") participle perfect strong';
+			throw new Error('Error on origin for theme T8 "' + themes.themeT8 + '" ("' + verb.infinitive + '") participle perfect strong');
 		if(themes.themeT8 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1665,7 +1665,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
 
 		if(themes.themeT9 && !origin)
-			throw 'error on origin for theme T9 "' + themes.themeT9 + '" ("' + verb.infinitive + '") imperative present';
+			throw new Error('Error on origin for theme T9 "' + themes.themeT9 + '" ("' + verb.infinitive + '") imperative present');
 		if(themes.themeT9 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1683,7 +1683,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
 
 		if(themes.themeT10 && !origin)
-			throw 'error on origin for theme T10 "' + themes.themeT10 + '" ("' + verb.infinitive + '") indicative present';
+			throw new Error('Error on origin for theme T10 "' + themes.themeT10 + '" ("' + verb.infinitive + '") indicative present');
 		if(themes.themeT10 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1714,7 +1714,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
 
 		if(themes.themeT11 && !origin)
-			throw 'error on origin for theme T11 "' + themes.themeT11 + '" ("' + verb.infinitive + '") indicative imperfect';
+			throw new Error('Error on origin for theme T11 "' + themes.themeT11 + '" ("' + verb.infinitive + '") indicative imperfect');
 		if(themes.themeT11 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1742,7 +1742,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
 
 		if(themes.themeT11 && !origin)
-			throw 'error on origin for theme T11 "' + themes.themeT11 + '" ("' + verb.infinitive + '") subjunctive imperfect';
+			throw new Error('Error on origin for theme T11 "' + themes.themeT11 + '" ("' + verb.infinitive + '") subjunctive imperfect');
 		if(themes.themeT11 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1770,7 +1770,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		themes = themes[type];
 
 		if(themes.themeT12 && !origin)
-			throw 'error on origin for theme T12 "' + themes.themeT12 + '" ("' + verb.infinitive + '") indicative present';
+			throw new Error('Error on origin for theme T12 "' + themes.themeT12 + '" ("' + verb.infinitive + '") indicative present');
 		if(themes.themeT12 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
@@ -1800,7 +1800,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		themes = t;
 
 		if(themes.themeT12 && !origin)
-			throw 'error on origin for theme T12 "' + themes.themeT12 + '" ("' + verb.infinitive + '") subjunctive present';
+			throw new Error('Error on origin for theme T12 "' + themes.themeT12 + '" ("' + verb.infinitive + '") subjunctive present');
 		if(themes.themeT12 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);

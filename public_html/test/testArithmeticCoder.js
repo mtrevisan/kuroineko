@@ -30,7 +30,7 @@ msg = 'define("tools/data/ObjectHelper",[],function(){Function.prototype.clone=f
 		var compressed = new Date;
 		var out = model.decode(buffer);
 		if(out.join('') !== msg)
-			throw 'Encoding-Decoding problem!';
+			throw new Error('Encoding-Decoding problem!');
 		var end = new Date;
 		console.log("Input is " + msg.length + " B");
 		console.log("Compression ratio: " + (100 * (buffer.size() >> 3) / msg.length).toFixed(2) + '% (' + (buffer.size() >> 3) + ' B)');

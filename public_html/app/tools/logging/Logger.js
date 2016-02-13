@@ -50,7 +50,7 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 	 */
 	var Constructor = function(name, conf){
 		if(!name)
-			throw 'A Logger must have a name';
+			throw new Error('A Logger must have a name');
 
 		this.config = {};
 		for(var k in CONFIG_DEFAULT)
@@ -92,7 +92,7 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 	var setLevel = function(level){
 		level = level.toUpperCase();
 		if(LEVEL_OFF != level && LEVELS.indexOf(level) < 0)
-			throw 'setLevel called with invalid level: ' + level;
+			throw new Error('setLevel called with invalid level: ' + level);
 
 		this.config.rootLogger = level;
 	};

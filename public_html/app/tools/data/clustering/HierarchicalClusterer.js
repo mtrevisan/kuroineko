@@ -7,9 +7,9 @@ define(['tools/data/structs/Tree'], function(Tree){
 
 	var cluster = function(matrix, variants){
 		if(matrix.length != matrix[0].length)
-			throw 'Matrix is not square';
+			throw new Error('Matrix is not square');
 		if(matrix.length != variants.length)
-			throw 'Matrix dimension does not match the number of variants';
+			throw new Error('Matrix dimension does not match the number of variants');
 
 		//make a copy of the matrix
 		matrix = matrix.map(function(arr){ return arr.slice(); });

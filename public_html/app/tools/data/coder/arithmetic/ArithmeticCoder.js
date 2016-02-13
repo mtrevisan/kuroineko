@@ -150,7 +150,7 @@ define(['tools/data/structs/BitBuffer'], function(BitBuffer){
 			this.high = (this.high << 1) + 1;
 
 			if(this.value << 1 >= TOP_VALUE)
-				throw 'Decoding error';
+				throw new Error('Decoding error');
 
 			this.value = (this.value << 1) + this.bufferIterator.next();
 		}
