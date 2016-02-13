@@ -71,11 +71,18 @@ ICONV nh ñ
 ICONV th ŧ
 
 # frequently switched character groups
-REP 17
+REP 24
 REP ^' ‘
 REP ^’ ‘
 REP '$ ’
 REP ‘$ ’
+REP a à
+REP e è
+REP e é
+REP i í
+REP o ò
+REP o ó
+REP u ú
 REP ci c # ci[aàeèéiíoòóuú]>c.
 REP ɉi ɉ # ɉi[aàeèéiíoòóuú]>ɉ.
 REP d  đ # đ[aàeèéiíoòóuú]>d.
