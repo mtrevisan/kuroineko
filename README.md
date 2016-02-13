@@ -38,6 +38,7 @@ This is a bunch of utilities I put together. Unfortunately I miss some reference
 
 ## Data <a id="data"></a>##
  - HTML storage
+ - Assert
  - Lexer
  - various helpers (array, communication, function, math, object, and string)
  - math helper containing various functions like bitCount, nextPowerOf2, getMostSignificantBit, getLeastSignificantBit, combine, and permute
