@@ -53,8 +53,8 @@ define(function(){
 
 	/**
 	 * @param {Boolean} condition					The condition to be verified
-	 * @param {String} message						The message to print if the condition is false
-	 * @param {Function} stackStartFunction	The function this assert refers to
+	 * @param {String} [message]					The message to print if the condition is false
+	 * @param {Function} [stackStartFunction]	The function this assert refers to
 	 * @throws {AssertionError} The error if condition is false
 	 */
 	var assert = function(condition, message, stackStartFunction){
@@ -63,8 +63,8 @@ define(function(){
 	};
 
 	/**
-	 * @param {String} message						The message to print if the condition is false
-	 * @param {Function} stackStartFunction	The function this assert refers to
+	 * @param {String} [message]					The message to print if the condition is false
+	 * @param {Function} [stackStartFunction]	The function this assert refers to
 	 * @throws {AssertionError} The error if condition is false
 	 */
 	var throwError = function(message, stackStartFunction){
