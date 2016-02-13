@@ -41,7 +41,7 @@ require(['tools/measure/Scalar', 'tools/measure/MeasureConverter'], function(Sca
 		assert.equal(s3.uom, 'piè');
 	});
 
-	QUnit.test('scalar add a value-uom paird that doen\'t match the measure', function(assert){
+	QUnit.test('scalar add a value-uom pair that doen\'t match the measure', function(assert){
 		var m1 = new MeasureConverter([
 			'pèrtega = 6 piè',
 			'paso = 5 piè',
@@ -52,7 +52,7 @@ require(['tools/measure/Scalar', 'tools/measure/MeasureConverter'], function(Sca
 			s1.add(2, 'km');
 		},
 		function(err){
-			return (err.toString() == 'Error: Measure has not the given unit of measure');
+			return (err.toString() == 'AssertionError: Measure has not the given unit of measure');
 		});
 	});
 
@@ -70,7 +70,7 @@ require(['tools/measure/Scalar', 'tools/measure/MeasureConverter'], function(Sca
 			s1.add(s2);
 		},
 		function(err){
-			return (err.toString() == 'Error: Measure has not the given unit of measure');
+			return (err.toString() == 'AssertionError: Measure has not the given unit of measure');
 		});
 	});
 

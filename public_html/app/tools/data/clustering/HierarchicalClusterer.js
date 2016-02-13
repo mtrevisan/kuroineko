@@ -3,13 +3,11 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/data/structs/Tree'], function(Tree){
+define(['tools/data/structs/Tree', 'tools/data/Assert'], function(Tree, Assert){
 
 	var cluster = function(matrix, variants){
-		if(matrix.length != matrix[0].length)
-			throw new Error('Matrix is not square');
-		if(matrix.length != variants.length)
-			throw new Error('Matrix dimension does not match the number of variants');
+		Assert.assert(matrix.length == matrix[0].length, 'Matrix is not square');
+		Assert.assert(matrix.length == variants.length, 'Matrix dimension does not match the number of variants');
 
 		//make a copy of the matrix
 		matrix = matrix.map(function(arr){ return arr.slice(); });

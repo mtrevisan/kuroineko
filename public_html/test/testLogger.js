@@ -6,7 +6,7 @@ require(['tools/logging/Logger'], function(Logger){
 			new Logger();
 		},
 		function(err){
-			return (err.toString() == 'Error: Expected a name');
+			return (err.toString() == 'AssertionError: Expected a name');
 		});
 	});
 

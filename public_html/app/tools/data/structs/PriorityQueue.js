@@ -8,7 +8,7 @@
  *
  * @author Mauro Trevisan
  */
-define(function(){
+define(['tools/data/Assert'], function(Assert){
 
 	var Node = function(priority, value){
 		this.priority = priority;
@@ -102,8 +102,7 @@ define(function(){
 	 * @param {PriorityQueue} other	The other priority queue to be merged
 	 */
 	var union = function(other){
-		if(other.constructor != Constructor)
-			throw new Error('The input is not a PriorityQueue');
+		Assert.assert(other.constructor == Constructor, 'The input is not a PriorityQueue');
 
 		this.rootList = this.rootList.concat(other.rootList);
 		other.valueToNode.forEach(function(node, value){
@@ -163,10 +162,8 @@ define(function(){
 
 	var decreaseKey = function(priority, value){
 		var x = this.valueToNode.get(value);
-		if(!x)
-			throw new Error('Non existing node with value ' + value);
-		if(priority > x.priority)
-			throw new Error('New key is greater than current key');
+		Assert.assert(x, 'Non existing node with value ' + value);
+		Assert.assert(priority <= x.priority, 'New key is greater than current key');
 
 		x.priority = priority;
 		var y = x.parent;
@@ -238,8 +235,7 @@ define(function(){
 	var cut = function(x, y){
 		//remove x from the children list of y
 		var index = y.children.indexOf(x);
-		if(index === -1)
-			throw new Error('Node with value ' + x.value + ' is not child of node with value ' + y.value);
+		Assert.assert(index >= 0, 'Node with value ' + x.value + ' is not child of node with value ' + y.value);
 
 		y.children.splice(index, 1);
 		//add x to the root list

@@ -27,7 +27,7 @@
  *
  * @author Mauro Trevisan
  */
-define(function(){
+define(['tools/data/Assert'], function(Assert){
 
 	/** @constant */
 	var MAX_EXPONENT = Math.floor(Math.log10(Number.MAX_VALUE));
@@ -69,7 +69,7 @@ define(function(){
 				return parseString(args);
 
 			default:
-				throw new Error('Cannot parse input data ' + args);
+				Assert.throwError('Cannot parse input data ' + args);
 		}
 	};
 
@@ -88,7 +88,7 @@ define(function(){
 			den = (obj[1] !== undefined? obj[1]: 1);
 		}
 		else
-			throw new Error('Cannot parse input data ' + obj);
+			Assert.throwError('Cannot parse input data ' + obj);
 
 		sgn = Math.sign(den? num * den: num);
 		num = Math.abs(num);
@@ -119,8 +119,7 @@ define(function(){
 		}
 		else{
 			m = str.match(/^([+-]?)([\d]+)\/([\d]+)$/);
-			if(!m)
-				throw new Error('Cannot parse input data \'' + str + '\'');
+			Assert.assert(m, 'Cannot parse input data \'' + str + '\'');
 
 			num = Number(m[2]);
 			den = Number(m[3]);

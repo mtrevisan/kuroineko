@@ -19,7 +19,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/math/Fraction'], function(Fraction){
+define(['tools/math/Fraction', 'tools/data/Assert'], function(Fraction, Assert){
 
 	/**
 	 * @param {Number/Fraction} value		The value of the scalar to be added
@@ -39,8 +39,7 @@ define(['tools/math/Fraction'], function(Fraction){
 	var parse = function(){
 		var args = Array.prototype.slice.call(arguments[0]),
 			isString = (args.length == 1 && typeof(args[0]) == 'string');
-		if(args.length == 1 && !(args[0].constructor == Constructor || isString))
-			throw new Error('Wrong number of arguments for the function add');
+		Assert.assert(args.length != 1 || args[0].constructor == Constructor || isString, 'Wrong number of arguments for the function add');
 
 		if(args.length == 1){
 			if(!isString)
@@ -63,8 +62,7 @@ define(['tools/math/Fraction'], function(Fraction){
 				measure = args[2] || this.measure;
 			}
 
-			if(!measure || !measure.hasUnit(uom))
-				throw new Error('Measure has not the given unit of measure');
+			Assert.assert(measure && measure.hasUnit(uom), 'Measure has not the given unit of measure');
 
 			return {
 				value: value,
@@ -79,12 +77,10 @@ define(['tools/math/Fraction'], function(Fraction){
 	 * @param {String} [uom]						The unit of measure of the scalar
 	 */
 	var add = function(){
-		if(!this.measure)
-			throw new Error('Measure conversion is not specified, cannot proceed');
+		Assert.assert(this.measure, 'Measure conversion is not specified, cannot proceed');
 
 		var scal = parse.call(this, arguments);
-		if(!this.measure.hasUnit(scal.uom))
-			throw new Error('Measure has not the given unit of measure');
+		Assert.assert(this.measure.hasUnit(scal.uom), 'Measure has not the given unit of measure');
 
 		var commonUOM = this.measure.calculateGreatestCommonUOM(this.uom, scal.uom),
 			val = this.measure.convert(this.value, this.uom, commonUOM)
@@ -102,8 +98,7 @@ define(['tools/math/Fraction'], function(Fraction){
 	};
 
 	var to = function(uom){
-		if(!this.measure)
-			throw new Error('Measure conversion is not specified, cannot proceed');
+		Assert.assert(this.measure, 'Measure conversion is not specified, cannot proceed');
 
 		return new Constructor(this.measure.convert(this.value, this.uom, uom), uom, this.measure);
 	};

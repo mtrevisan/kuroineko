@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabator', 'tools/data/StringHelper'], function(Word, Syllabator, StringHelper){
+define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabator', 'tools/data/StringHelper', 'tools/data/Assert'], function(Word, Syllabator, StringHelper, Assert){
 
 	var Constructor = function(infinitive){
 		if(!Word.isStressed(infinitive))
@@ -63,21 +63,16 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabator', 'tools/d
 
 	/** @private */
 	var checkForErrors = function(infinitive, syllabation){
-		if(!infinitive.match(/^([aàbcdđeèéfgiíjɉklƚmnñoòóprsʃtŧuúvxʒ]|[djlnstx]h)+$/))
-			throw new Error('NOT_ALFABETIC');
+		Assert.assert(infinitive.match(/^([aàbcdđeèéfgiíjɉklƚmnñoòóprsʃtŧuúvxʒ]|[djlnstx]h)+$/), 'NOT_ALFABETIC');
 
 		//NOTE: [^aeio]*e would be erroneous because it wouldn't consider the eterophonic sequence /ier$/.
-		if(!infinitive.match(/([àèéí]|[àèéíòóú][^aeo]*e)r$/))
-			throw new Error('NOT_A_VERB_INFINITIVE');
+		Assert.assert(infinitive.match(/([àèéí]|[àèéíòóú][^aeo]*e)r$/), 'NOT_A_VERB_INFINITIVE');
 
 		var m = infinitive.match(/[àèéíòóú]/g);
-		if(!m)
-			throw new Error('NOT_STRESSABLE');
-		if(m.length > 1)
-			throw new Error('TOO_MUCH_STRESSES');
+		Assert.assert(m, 'NOT_STRESSABLE');
+		Assert.assert(m.length <= 1, 'TOO_MUCH_STRESSES');
 
-		if(syllabation.hasSyllabationErrors)
-			throw new Error('NOT_SYLLABABLE');
+		Assert.assert(!syllabation.hasSyllabationErrors, 'NOT_SYLLABABLE');
 	};
 
 	/** @private */

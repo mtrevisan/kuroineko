@@ -59,14 +59,24 @@ define(function(){
 	 */
 	var assert = function(condition, message, stackStartFunction){
 		if(!condition)
-			throw new AssertionError(message, stackStartFunction);
+			throwError(message, stackStartFunction);
+	};
+
+	/**
+	 * @param {String} message						The message to print if the condition is false
+	 * @param {Function} stackStartFunction	The function this assert refers to
+	 * @throws {AssertionError} The error if condition is false
+	 */
+	var throwError = function(message, stackStartFunction){
+		throw new AssertionError(message, stackStartFunction);
 	};
 
 
 	return {
 		createErrorType: createErrorType,
 
-		assert: assert
+		assert: assert,
+		throwError: throwError
 	};
 
 });

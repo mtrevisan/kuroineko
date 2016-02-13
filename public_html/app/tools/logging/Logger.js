@@ -7,7 +7,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHelper, StringHelper){
+define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/data/Assert'], function(ObjectHelper, StringHelper, Assert){
 
 	/** Stores all created loggers */
 	var LOGGERS = {},
@@ -49,7 +49,7 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 	 * @param [conf]	The configuration object in the form <code>{rootLogger: 'DEBUG', showTime: true, out: function(message){}}</code>
 	 */
 	var Constructor = function(name, conf){
-		ObjectHelper.assert(name, 'Expected a name');
+		Assert.assert(name, 'Expected a name');
 
 		this.config = {};
 		for(var k in CONFIG_DEFAULT)
@@ -90,7 +90,7 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHe
 	 */
 	var setLevel = function(level){
 		level = level.toUpperCase();
-		ObjectHelper.assert(LEVEL_OFF == level || LEVELS.indexOf(level) >= 0, 'setLevel called with invalid level: ' + level);
+		Assert.assert(LEVEL_OFF == level || LEVELS.indexOf(level) >= 0, 'setLevel called with invalid level: ' + level);
 
 		this.config.rootLogger = level;
 	};

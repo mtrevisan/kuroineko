@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/data/ObjectHelper'], function(ObjectHelper){
+define(['tools/data/ObjectHelper', 'tools/data/Assert'], function(ObjectHelper, Assert){
 
 	/** @constant */
 	var REGEX_UNICODE_SPLITTER = /(\[([^\]]+)\]|[^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u035B\u035D-\u0360\u0362-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*(?:[\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*[\u035C\u0361][^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*)?)/g;
@@ -23,9 +23,9 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		x = (Array.isArray(a)? a: a.match(REGEX_UNICODE_SPLITTER));
 		y = (Array.isArray(b)? b: b.match(REGEX_UNICODE_SPLITTER));
 		costs = enforceDefaultCosts(costs);
-		ObjectHelper.assert(costs.insertion, 'Cost of insertion cannot be zero or undefined');
-		ObjectHelper.assert(costs.deletion, 'Cost of deletion cannot be zero or undefined');
-		ObjectHelper.assert(costs.substitution, 'Cost of substitution cannot be zero or undefined');
+		Assert.assert(costs.insertion, 'Cost of insertion cannot be zero or undefined');
+		Assert.assert(costs.deletion, 'Cost of deletion cannot be zero or undefined');
+		Assert.assert(costs.substitution, 'Cost of substitution cannot be zero or undefined');
 
 
 		this.a = x;

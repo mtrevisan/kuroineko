@@ -79,7 +79,7 @@ require(['tools/measure/MeasureConverter', 'tools/math/Fraction'], function(Meas
 			m.addConverter('bla', si, 1/23);
 		},
 		function(err){
-			return (err.toString() == 'Error: The from value passed should be a measure');
+			return (err.toString() == 'AssertionError: The from value passed should be a measure');
 		});
 	});
 

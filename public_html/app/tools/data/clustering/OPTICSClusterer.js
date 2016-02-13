@@ -5,7 +5,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/data/ObjectHelper', 'tools/data/structs/PriorityQueue'], function(ObjectHelper, PriorityQueue){
+define(['tools/data/ObjectHelper', 'tools/data/structs/PriorityQueue', 'tools/data/Assert'], function(ObjectHelper, PriorityQueue, Assert){
 
 	var Point = function(vector){
 		this.unprocessed = true;
@@ -26,9 +26,9 @@ define(['tools/data/ObjectHelper', 'tools/data/structs/PriorityQueue'], function
 	 * @param {Function} [distanceFn]	Distance function
 	 */
 	var cluster = function(data, epsilon, minimumPoints, distanceFn){
-		ObjectHelper.assert(epsilon > 0, 'Expected epsilon to be a positive number');
-		ObjectHelper.assert(minimumPoints >= 1, 'Expected minimumPoints to be a positive number greater than or equal to 1');
-		ObjectHelper.assert(!distanceFn || ObjectHelper.isFunction(distanceFn), 'Expected distanceFn to be a function that accepts two object with the property \'vector\' defined');
+		Assert.assert(epsilon > 0, 'Expected epsilon to be a positive number');
+		Assert.assert(minimumPoints >= 1, 'Expected minimumPoints to be a positive number greater than or equal to 1');
+		Assert.assert(!distanceFn || ObjectHelper.isFunction(distanceFn), 'Expected distanceFn to be a function that accepts two object with the property \'vector\' defined');
 
 		this.points = [];
 		this.orderedList = [];

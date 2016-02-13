@@ -33,7 +33,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/math/Fraction'], function(Fraction){
+define(['tools/math/Fraction', 'tools/data/Assert'], function(Fraction, Assert){
 
 	var Constructor = function(){
 		var cf = parse(arguments);
@@ -358,8 +358,7 @@ define(['tools/math/Fraction'], function(Fraction){
 			infinite = false;
 			if(!isFinite(p2) || !isFinite(q2)){
 				scale = Math.max(a, 1);
-//				if(scale <= 0)
-//					throw new Error('Continued fraction convergents diverged to +/- infinity for value ' + this.terms);
+//				Assert.assert(scale > 0, 'Continued fraction convergents diverged to +/- infinity for value ' + this.terms);
 
 				infinite = true;
 				inverseScaleFactor = 1;
@@ -381,11 +380,9 @@ define(['tools/math/Fraction'], function(Fraction){
 					infinite = !(isFinite(p2) && isFinite(q2));
 				}
 			}
-			if(infinite)
-				//scaling failed
-				throw new Error('Continued fraction convergents diverged to +/- infinity for value ' + this.terms);
-			if(!p2 && !q2)
-				throw new Error('Continued fraction diverged to NaN for value ' + this.terms);
+			//in case the scaling failed
+			Assert.assert(!infinite, 'Continued fraction convergents diverged to +/- infinity for value ' + this.terms);
+			Assert.assert(p2 || q2, 'Continued fraction diverged to NaN for value ' + this.terms);
 
 			r = p2 / q2;
 			relativeError = Math.abs(r / c.toNumber() - 1);
