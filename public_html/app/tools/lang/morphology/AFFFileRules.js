@@ -33,6 +33,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	var deriveAllFormsFromInfinitive = true;
 	var printFlagsAsNumber = false;
+	var applyConstraintToInfinitives = false;
 
 	/** @constant */
 //	var REDUCTION_RESERVED_0 = 150,
@@ -896,8 +897,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	/** @private */
 	var constraintToInfinitives = function(list, origins){
-		for(var i = list.length - 1; i >= 0; i --)
-			partition(list[i], origins, list);
+		if(applyConstraintToInfinitives)
+			for(var i = list.length - 1; i >= 0; i --)
+				partition(list[i], origins, list);
 	};
 
 	/** @private */
