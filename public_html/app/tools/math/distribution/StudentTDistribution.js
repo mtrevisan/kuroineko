@@ -6,15 +6,6 @@
 define(function(){
 
 	/**
-	 * Calculates the Cumulative Density Function of a Student t-distribution
-	 *
-	 * @param n		degrees of freedom
-	 */
-	var cdf = function(z, n){
-		return 0.5 * (1 + (z >= 0? 1: -1) * (1 - incompleteBetaFunction(n * 0.5, 0.5, n / (n + z * z))));
-	};
-
-	/**
 	 * Calculates the Probability Density Function of a Student t-distribution
 	 *
 	 * @param n		degrees of freedom
@@ -22,6 +13,15 @@ define(function(){
 	var pdf = function(z, n){
 		var gammaFactor = Math.exp(lnGamma((n + 1) * 0.5) - lnGamma(n * 0.5));
 		return gammaFactor / (Math.sqrt(n * Math.PI) * Math.pow(1 + (z * z) / n, (n + 1) * 0.5));
+	};
+
+	/**
+	 * Calculates the Cumulative Density Function of a Student t-distribution
+	 *
+	 * @param n		degrees of freedom
+	 */
+	var cdf = function(z, n){
+		return 0.5 * (1 + (z >= 0? 1: -1) * (1 - incompleteBetaFunction(n * 0.5, 0.5, n / (n + z * z))));
 	};
 
 	/** @private */
