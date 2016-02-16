@@ -91,7 +91,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		0: [
 			//ajetivi de prima klase
 			//[REDUCTION_RESERVED_0, '[oaie]', 'o>a/' + REDUCTION_RESERVED_1 + '|o', '0>a/' + REDUCTION_RESERVED_1 + '|[^aieo]'],
-			[REDUCTION_RESERVED_0, '[oaie]', 'o>[ae]', 'o>i|[^i]o', 'io>i', '0>[oaie]|[^aieo]'],
+			[REDUCTION_RESERVED_0, '[oaie]', 'o>[ae]', 'o>i|[^i]o', '.o>i|[ij]o', '0>[oaie]|[^aieo]'],
 			//ajetivi de sekonda klase
 			//[REDUCTION_RESERVED_1, '[aie]', 'a>e/' + REDUCTION_RESERVED_2 + '|a'],
 			[REDUCTION_RESERVED_1, '[aie]', 'a>[ei]'],
@@ -150,7 +150,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	var substantives = {
 		1: [
-			[SUBSTANTIVES_MASCULINE, '0>[oi]|[^aieoln]', '0>i|i[ln]', '.>i|[^i][ln]', 'o>i|[^i]o', 'io>i', '.>i|[ae]'],
+			[SUBSTANTIVES_MASCULINE, '0>[oi]|[^aieoln]', '0>i|i[ln]', '.>i|[^i][ln]', 'o>i|[^i]o', '.o>i|[ij]o', '.>i|[ae]'],
 			[SUBSTANTIVES_FEMININE, 'a>e', 'e>i', '0>[ei]|[^aieo]']
 		]
 	};
