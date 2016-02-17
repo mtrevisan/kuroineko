@@ -20,24 +20,22 @@ define(['tools/data/Assert'], function(Assert){
 		this.decorators.push({name: name, fn: funct});
 	};
 
-	var decorate2 = function(decorator){
-		var F = function(){},
-			overrides = this.decorators[decorator],
-			i,
-			newobj;
+/*decorators.cdn = {
+	getPrice: function(){
+		return 'CDN$ ' + this._super.getPrice().toFixed(2);
+	}
+};*/
+	var decorate2 = function(name, funct){
+		var fn = function(){};
+		//create prototype chain
+		fn.prototype = this;
+		var decorated = new fn();
+		decorated._super = fn.prototype;
 
-		// Create prototype chain
-		F.prototype = this;
-		newobj = new F();
-		newobj._super = F.prototype;
+		//mixin properties/methods of the decorator overrides the ones from the prototype
+		decorated[name] = funct;
 
-		//Mixin properties/methods of our decorator
-		//Overriding the ones from our prototype
-		for(i in overrides)
-			if(overrides.hasOwnProperty(i))
-				newobj[i] = overrides[i];
-
-		return newobj;
+		return decorated;
 	};
 
 	/**
