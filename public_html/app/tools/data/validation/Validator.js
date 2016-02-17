@@ -20,24 +20,6 @@ define(['tools/data/Assert'], function(Assert){
 		this.decorators.push({name: name, fn: funct});
 	};
 
-/*decorators.cdn = {
-	getPrice: function(){
-		return 'CDN$ ' + this._super.getPrice().toFixed(2);
-	}
-};*/
-	var decorate2 = function(name, funct){
-		var fn = function(){};
-		//create prototype chain
-		fn.prototype = this;
-		var decorated = new fn();
-		decorated._super = fn.prototype;
-
-		//mixin properties/methods of the decorator overrides the ones from the prototype
-		decorated[name] = funct;
-
-		return decorated;
-	};
-
 	/**
 	 * @param {Object} data		Data to be validated
 	 */
