@@ -238,7 +238,6 @@ define(['tools/data/mining/DecisionTreeContext', 'tools/data/ObjectHelper'], fun
 		getSupervisedInstance: getSupervisedInstance
 	};
 
-
 	return Constructor;
 
 });

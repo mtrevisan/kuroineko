@@ -247,7 +247,6 @@ define(['tools/data/ArrayHelper'], function(ArrayHelper){
 		suggest: suggest
 	};
 
-
 	return Constructor;
 
 });

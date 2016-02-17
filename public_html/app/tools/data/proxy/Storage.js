@@ -179,7 +179,6 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		getCount: getCount
 	};
 
-
 	return Constructor;
 
 });

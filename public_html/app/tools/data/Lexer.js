@@ -111,7 +111,6 @@ define(['tools/data/ObjectHelper', 'tools/data/Assert'], function(ObjectHelper, 
 		lex: lex
 	};
 
-
 	return Constructor;
 
 });

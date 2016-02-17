@@ -59,7 +59,6 @@ define(['tools/data/alignment/BaseAlignment'], function(BaseAlignment){
 		align: align
 	};
 
-
 	return Constructor;
 
 });

@@ -258,7 +258,6 @@ define(function(){
 		real3: real3
 	};
 
-
 	return Constructor;
 
 });

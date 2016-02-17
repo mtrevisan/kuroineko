@@ -369,7 +369,6 @@ define(function(){
 		selectAttributeWithHighestGain: selectAttributeWithHighestGain
 	};
 
-
 	return Constructor;
 
 });

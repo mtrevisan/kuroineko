@@ -155,7 +155,6 @@ define(['tools/data/ObjectHelper', 'tools/data/alignment/BaseAlignment'], functi
 		align: align
 	};
 
-
 	return Constructor;
 
 });

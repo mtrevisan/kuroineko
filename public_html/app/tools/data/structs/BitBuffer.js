@@ -167,7 +167,6 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		toHexString: toHexString
 	};
 
-
 	return Constructor;
 
 });

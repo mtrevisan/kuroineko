@@ -13,11 +13,10 @@ define(['tools/data/Assert'], function(Assert){
 	};
 
 	/**
-	 * @param {Function} funct	Function that accepts an array of errors to be thrown, the value to be validated, and the arguments
-	 * @param {Object} [args]	Object of arguments for the function
+	 * @param {Function} funct	Function that accepts an array of errors to be thrown and the value to be validated
 	 */
-	var decorate = function(funct, args){
-		this.decorators.push({fn: funct, args: args});
+	var decorate = function(funct){
+		this.decorators.push(funct);
 	};
 
 	/**
@@ -25,7 +24,7 @@ define(['tools/data/Assert'], function(Assert){
 	 */
 	var validate = function(data){
 		this.decorators.forEach(function(decorator){
-			decorator.fn(this.errors, data, decorator.args);
+			decorator(this.errors, data);
 		}, this);
 
 		if(this.errors.length)
@@ -39,7 +38,6 @@ define(['tools/data/Assert'], function(Assert){
 		decorate: decorate,
 		validate: validate
 	};
-
 
 	return Constructor;
 

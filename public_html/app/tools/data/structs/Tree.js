@@ -166,7 +166,6 @@ define(function(){
 		forEachLeaf: forEachLeaf
 	};
 
-
 	return Constructor;
 
 });

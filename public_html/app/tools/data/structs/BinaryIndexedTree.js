@@ -146,7 +146,6 @@ define(['tools/math/MathHelper'], function(MathHelper){
 		find: find
 	};
 
-
 	return Constructor;
 
 });

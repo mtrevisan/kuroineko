@@ -160,7 +160,6 @@ define(function(){
 		findMatchesOnPath: findMatchesOnPath
 	};
 
-
 	return Constructor;
 
 });

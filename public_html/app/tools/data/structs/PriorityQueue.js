@@ -276,7 +276,6 @@ define(['tools/data/Assert'], function(Assert){
 		decreaseKey: decreaseKey
 	};
 
-
 	return Constructor;
 
 });

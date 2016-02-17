@@ -113,7 +113,6 @@ define(['tools/data/structs/BinaryIndexedTree'], function(BinaryIndexedTree){
 		decode: decode
 	};
 
-
 	return Constructor;
 
 });
