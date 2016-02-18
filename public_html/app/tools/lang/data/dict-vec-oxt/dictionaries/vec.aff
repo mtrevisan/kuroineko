@@ -49841,18 +49841,27 @@ SFX T ave ísele rave
 SFX T ave íseli rave
 SFX T ave íselo rave
 
-SFX U Y 7 # sostantivi plurali maskili
-SFX U . i [^i][ln]
+SFX U Y 11 # sostantivi plurali maskili
+SFX U a. ài a[ln]
+SFX U e. éi e[ln]
+SFX U o. ói o[ln]
+SFX U u. úi u[ln]
 SFX U . i [ae]
 SFX U 0 i [^aieoln]
 SFX U 0 i i[ln]
 SFX U 0 o [^aieoln]
 SFX U .o i [ij]o
-SFX U o i [^i]o
+SFX U o i [^ij]o
+SFX U 0 i à
 
-SFX V Y 4 # sostantivi plurali femenili
-SFX V 0 e [^aieo]
-SFX V 0 i [^aieo]
+SFX V Y 9 # sostantivi plurali femenili
+SFX V 0 e [^aieoln]
+SFX V 0 i [^aieoln]
+SFX V 0 i i[ln]
+SFX V a. ài a[ln]
+SFX V e. éi e[ln]
+SFX V o. ói o[ln]
+SFX V u. úi u[ln]
 SFX V a e a
 SFX V e i e
 

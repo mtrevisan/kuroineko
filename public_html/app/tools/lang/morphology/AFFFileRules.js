@@ -90,13 +90,13 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	var adjectives = {
 		0: [
 			//ajetivi de prima klase
-			//[REDUCTION_RESERVED_0, '[oaie]', 'o>a/' + REDUCTION_RESERVED_1 + '|o', '0>a/' + REDUCTION_RESERVED_1 + '|[^aieo]'],
-			[REDUCTION_RESERVED_0, '[oaie]', 'o>[ae]', 'o>i|[^i]o', '.o>i|[ij]o', '0>[oaie]|[^aieo]'],
+			//[REDUCTION_RESERVED_0, '[oaie]', 'o>a/' + REDUCTION_RESERVED_1 + '|o', '0>a/' + REDUCTION_RESERVED_1 + '|[^oaie]'],
+			[REDUCTION_RESERVED_0, '[oaie]', 'o>[ae]', 'o>i|[^i]o', '.o>i|[ij]o', '0>[oaie]|[^oaie]'],
 			//ajetivi de sekonda klase
 			//[REDUCTION_RESERVED_1, '[aie]', 'a>e/' + REDUCTION_RESERVED_2 + '|a'],
 			[REDUCTION_RESERVED_1, '[aie]', 'a>[ei]'],
 			//ajetivi de terŧa klase
-			[REDUCTION_RESERVED_2, '[ei]', 'e>i', '0>[ei]|[^aieo]']
+			[REDUCTION_RESERVED_2, '[ei]', 'e>i', '0>[ei]|[^oaie]']
 		]
 	};
 
@@ -135,23 +135,23 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	var consonantVoicings = {
 		1: [
 			[FINAL_CONSONANT_VOICING_MARK,
-				'ñ.>nc|ñ[oei]', 'ñ.>in|ñ[oei]', 'ñ.>n|ñ[oei]', 'ñ.>ñ|ñ[oei]',
-				'b.>p|b[oei]', 'p.>p|p[oei]',
-				'd.>t|d[oei]', 't.>t|t[oei]',
-				'g.>k|g[oei]', 'k.>k|k[oei]',
-				'v.>f|v[oei]', 'f.>f|f[oei]',
-				'đ.>ŧ|đ[oei]', 'ŧ.>ŧ|ŧ[oei]',
-				'x.>s|x[oei]', 's.>s|s[oei]',
-				'ʒ.>ʃ|ʒ[oei]', 'ʃ.>ʃ|ʃ[oei]',
-				'ɉ.>c|ɉ[oei]', 'c.>c|c[oei]',
-				'm.>n|m[oei]', 'n.>n|n[oei]']
+				'ñ.>nc|ñ[oaei]', 'ñ.>in|ñ[oaei]', 'ñ.>n|ñ[oaei]', 'ñ.>ñ|ñ[oaei]',
+				'b.>p|b[oaei]', 'p.>p|p[oaei]',
+				'd.>t|d[oaei]', 't.>t|t[oaei]',
+				'g.>k|g[oaei]', 'k.>k|k[oaei]',
+				'v.>f|v[oaei]', 'f.>f|f[oaei]',
+				'đ.>ŧ|đ[oaei]', 'ŧ.>ŧ|ŧ[oaei]',
+				'x.>s|x[oaei]', 's.>s|s[oaei]',
+				'ʒ.>ʃ|ʒ[oaei]', 'ʃ.>ʃ|ʃ[oaei]',
+				'ɉ.>c|ɉ[oaei]', 'c.>c|c[oaei]',
+				'm.>n|m[oaei]', 'n.>n|n[oaei]']
 		]
 	};
 
 	var substantives = {
 		1: [
-			[SUBSTANTIVES_MASCULINE, '0>[oi]|[^aieoln]', '0>i|i[ln]', '.>i|[^i][ln]', 'o>i|[^i]o', '.o>i|[ij]o', '.>i|[ae]'],
-			[SUBSTANTIVES_FEMININE, 'a>e', 'e>i', '0>[ei]|[^aieo]']
+			[SUBSTANTIVES_MASCULINE, '0>[oi]|[^oaieln]', '0>i|i[ln]', 'a.>ài|a[ln]', 'e.>éi|e[ln]', 'o.>ói|o[ln]', 'u.>úi|u[ln]', 'o>i|[^ij]o', '.o>i|[ij]o', '.>i|[ae]', '0>i|à'],
+			[SUBSTANTIVES_FEMININE, '0>[ei]|[^oaieln]', '0>i|i[ln]', 'a.>ài|a[ln]', 'e.>éi|e[ln]', 'o.>ói|o[ln]', 'u.>úi|u[ln]', 'a>e', 'e>i']
 		]
 	};
 
