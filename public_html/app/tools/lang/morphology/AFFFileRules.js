@@ -150,7 +150,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	var substantives = {
 		1: [
-			[SUBSTANTIVES_MASCULINE, '0>[oi]|[^oaieln]', '0>i|i[ln]', 'a.>ài|a[ln]', 'e.>éi|e[ln]', 'o.>ói|o[ln]', 'u.>úi|u[ln]', 'o>i|[^ij]o', '.o>i|[ij]o', '.>i|[ae]', '0>i|à'],
+			[SUBSTANTIVES_MASCULINE, '0>[oi]|[^oaieln]', '0>i|i[ln]', 'a.>ài|a[ln]', 'e.>éi|e[ln]', 'o.>ói|o[ln]', 'u.>úi|u[ln]', 'o>i|[^ij]o', '.o>i|[ij]o', '.>i|[ae]', '0>i|[àèé]'],
 			[SUBSTANTIVES_FEMININE, '0>[ei]|[^oaieln]', '0>i|i[ln]', 'a.>ài|a[ln]', 'e.>éi|e[ln]', 'o.>ói|o[ln]', 'u.>úi|u[ln]', 'a>e', 'e>i']
 		]
 	};
