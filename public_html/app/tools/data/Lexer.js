@@ -5,7 +5,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/data/ObjectHelper', 'tools/data/Assert'], function(ObjectHelper, Assert){
+define(function(){
 
 	var Constructor = function(){
 		this.rules = [];
@@ -19,9 +19,6 @@ define(['tools/data/ObjectHelper', 'tools/data/Assert'], function(ObjectHelper, 
 	 * @param {Function} callback	A callback that is executed when this token is matched. This function should accept one argument: the lexeme matched.
 	 */
 	var addRule = function(pattern, callback){
-		Assert.assert(ObjectHelper.isRegExp(pattern), 'Expected pattern to be a RegExp');
-		Assert.assert(ObjectHelper.isFunction(callback), 'Expected callback to be a function');
-
 		if(!pattern.global){
 			var flags = 'g';
 			if(pattern.multiline)
@@ -51,8 +48,6 @@ define(['tools/data/ObjectHelper', 'tools/data/Assert'], function(ObjectHelper, 
 	 */
 	var lex = function(source){
 		if(source){
-			Assert.assert(ObjectHelper.isString(source), 'Attempt to lex an object that is not a string');
-
 			this.source = source;
 			this.index = 0;
 		}

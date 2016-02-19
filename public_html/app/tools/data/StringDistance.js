@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/data/Assert'], function(ObjectHelper, StringHelper, Assert){
+define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHelper, StringHelper){
 
 	/** @constant */
 	var REGEX_UNICODE_SPLITTER = /(\[([^\]]+)\]|j²|[^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u035B\u035D-\u0360\u0362-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*(?:[\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*[\u035C\u0361][^\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F][\u0300-\u036F\u025A\u02B0-\u02FE\u1DA3\u207F]*)?)/g;
@@ -22,7 +22,8 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/data/Assert
 	 *
 	 * @param {String/Array} a	First string.
 	 * @param {String/Array} b	Second string.
-	 * @param {Object} [costs]	Cost configuration object like <code>{insertion: 1, deletion: 1, substitution: 0.5, matchingFn: function(from, to, costs){ return (from == to? 0: costs.substitution); }}</code>
+	 * @param {Object} [costs]	Cost configuration object like <code>{insertion: 1, deletion: 1, substitution: 0.5, matchingFn: function(from, to, costs){ return (from == to? 0: costs.substitution); }}</code>.
+	 *									All of the costs must be positive
 	 * @return {Number}	Edit distance, a non-negative number representing the number of edits required to transform one string to the other
 	 */
 	var levenshteinDistance = function(a, b, costs){
@@ -31,9 +32,6 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/data/Assert
 		if(!Array.isArray(b))
 			b = b.match(REGEX_UNICODE_SPLITTER);
 		costs = enforceDefaultCosts(costs);
-		Assert.assert(costs.insertion, 'Cost of insertion cannot be zero or undefined');
-		Assert.assert(costs.deletion, 'Cost of deletion cannot be zero or undefined');
-		Assert.assert(costs.substitution, 'Cost of substitution cannot be zero or undefined');
 
 		//base cases
 		var n = a.length,
@@ -130,7 +128,8 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/data/Assert
 	 *
 	 * @param {String/Array} a	First string.
 	 * @param {String/Array} b	Second string.
-	 * @param {Object} [costs]	Cost configuration object like <code>{insertion: 1, deletion: 1, substitution: 0.5, transposition: 0.7, matchingFn: function(from, to, costs){ return (from == to? 0: costs.substitution); }}</code>
+	 * @param {Object} [costs]	Cost configuration object like <code>{insertion: 1, deletion: 1, substitution: 0.5, transposition: 0.7, matchingFn: function(from, to, costs){ return (from == to? 0: costs.substitution); }}</code>.
+	 *									All of the costs must be positive
 	 * @return {Number}	Edit distance, a non-negative number representing the number of edits required to transform one string to the other
 	 */
 	var damerauLevenshteinDistance = function(a, b, costs){
@@ -139,10 +138,6 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/data/Assert
 		if(!Array.isArray(b))
 			b = b.match(REGEX_UNICODE_SPLITTER);
 		costs = enforceDefaultCosts(costs);
-		Assert.assert(costs.insertion, 'Cost of insertion cannot be zero or undefined');
-		Assert.assert(costs.deletion, 'Cost of deletion cannot be zero or undefined');
-		Assert.assert(costs.substitution, 'Cost of substitution cannot be zero or undefined');
-		Assert.assert(costs.transposition, 'Cost of transposition cannot be zero or undefined');
 
 		//base cases
 		var n = a.length,
@@ -195,12 +190,11 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/data/Assert
 	 *
 	 * @param {String/Array} a	First string.
 	 * @param {String/Array} b	Second string.
-	 * @param {Object} [costs]	Cost configuration object like <code>{insertion: 1, deletion: 1, substitution: 0.5, transposition: 0.7, matchingFn: function(from, to, costs){ return (from == to? 0: costs.substitution); }}</code>
+	 * @param {Object} [costs]	Cost configuration object like <code>{insertion: 1, deletion: 1, substitution: 0.5, transposition: 0.7, matchingFn: function(from, to, costs){ return (from == to? 0: costs.substitution); }}</code>.
+	 *									All of the costs must be positive
 	 * @return {Object}	The number of insertions, deletions, substitutions, transpositions, and the edit distance, a non-negative number representing the number of edits required to transform one string to the other
 	 */
 	var damerauLevenshteinEdit = function(a, b, costs){
-		Assert.assert(costs.transposition, 'Cost of transposition cannot be zero or undefined');
-
 		var computeFn = function(x, y, c, distance, i, j){
 			var min = distance[i - 1][j - 1] + c.matchingFn(x[i - 1], y[j - 1], c),
 				t;
@@ -234,9 +228,6 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/data/Assert
 		if(!Array.isArray(b))
 			b = b.match(REGEX_UNICODE_SPLITTER);
 		costs = enforceDefaultCosts(costs);
-		Assert.assert(costs.insertion, 'Cost of insertion cannot be zero or undefined');
-		Assert.assert(costs.deletion, 'Cost of deletion cannot be zero or undefined');
-		Assert.assert(costs.substitution, 'Cost of substitution cannot be zero or undefined');
 
 		//base cases
 		var n = a.length,
