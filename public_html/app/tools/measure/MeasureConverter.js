@@ -38,14 +38,16 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 
 	/**
 	 * @param {String} uom							Either a string of the unit of measure like 'm', or a sentence coding uom, parentValue, and parentUOM like 'm = 12 ft', or 'm = 12 ft = 3 in'
-	 * @param {Number/Fraction} [parentValue]	Value wrt parentUOM
+	 * @param {Number/Fraction} [parentValue]	Positive value wrt parentUOM
 	 * @param {String} [parentUOM]				Referenced unit of measure like 'ft'
 	 */
 	var addUnit = function(uom, parentValue, parentUOM){
 		if(!parentValue && !parentUOM)
 			return addUnitAsString.call(this, uom);
 
-		parentValue = checkInputs(uom, parentValue, parentUOM);
+		checkInputs(uom, parentValue, parentUOM);
+
+		parentValue = new Fraction(parentValue);
 
 		var d = (this.data[uom] = this.data[uom] || {});
 		d.parentValue = parentValue;
@@ -103,14 +105,16 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 
 	/**
 	 * @param {String} uom							Either a string of the unit of measure like 'm', or a sentence coding uom, parentValue, and parentUOM like 'm = 12 ft', or 'm = 12 ft = 3 in'
-	 * @param {Number/Fraction} [parentValue]	Value wrt parentUOM
+	 * @param {Number/Fraction} [parentValue]	Positive value wrt parentUOM
 	 * @param {String} [parentUOM]				Referenced unit of measure like 'ft'
 	 */
 	var updateUnit = function(uom, parentValue, parentUOM){
 		if(!parentValue && !parentUOM)
 			return updateUnitFromString(uom);
 
-		parentValue = checkInputs(uom, parentValue, parentUOM);
+		checkInputs(uom, parentValue, parentUOM);
+
+		parentValue = new Fraction(parentValue);
 
 		var d = this.data[uom];
 		Assert.assert(d, 'Cannot change parent value: unit "' + uom + '" not found');
@@ -123,9 +127,6 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 	var checkInputs = function(uom, parentValue, parentUOM){
 		Assert.assert(!parentValue || parentUOM, 'Incompatible parent measure: should be present if parent value is given');
 		Assert.assert(uom != parentUOM, 'Incompatible current parent measure: cannot be the same');
-		parentValue = new Fraction(parentValue);
-		Assert.assert(parentValue.isPositive(), 'Incompatible parent value: cannot be zero or negative');
-		return parentValue;
 	};
 
 	/**
@@ -143,11 +144,10 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 	 *
 	 * @param {MeasureConverter} from			Measure from which the converter converts
 	 * @param {MeasureConverter} to				Measure to which the converter converts
-	 * @param {Number/Fraction/String} factor	Factor of conversion between from and to measures
+	 * @param {Number/Fraction/String} factor	Factor of conversion between from and to measures, it must be positive
 	 */
 	var addConverter = function(from, to, factor){
 		factor = new Fraction(factor);
-		Assert.assert(factor.isPositive(), 'Incompatible factor: cannot be zero or negative');
 
 		this.converters = this.converters || [];
 

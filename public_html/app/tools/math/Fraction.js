@@ -67,9 +67,6 @@ define(['tools/data/Assert'], function(Assert){
 
 			case 'string':
 				return parseString(args);
-
-			default:
-				Assert.throwError('Cannot parse input data ' + args);
 		}
 	};
 
@@ -87,8 +84,6 @@ define(['tools/data/Assert'], function(Assert){
 			num = obj[0];
 			den = (obj[1] !== undefined? obj[1]: 1);
 		}
-		else
-			Assert.throwError('Cannot parse input data ' + obj);
 
 		sgn = Math.sign(den? num * den: num);
 		num = Math.abs(num);

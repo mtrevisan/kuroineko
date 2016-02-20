@@ -1,6 +1,12 @@
 require(['tools/math/Fraction'], function(Fraction){
 	QUnit.module('Fraction');
 
+	QUnit.test('void constructor', function(assert){
+		var f = new Fraction();
+
+		assert.ok(f.isNaN());
+	});
+
 	QUnit.test('constructor with object', function(assert){
 		var f = new Fraction({
 			num: -13,
