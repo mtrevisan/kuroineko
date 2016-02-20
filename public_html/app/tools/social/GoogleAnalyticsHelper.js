@@ -1,6 +1,8 @@
 /**
  * @class GoogleAnalyticsHelper
  *
+ * @see {@link https://developers.google.com/web/updates/2015/08/using-requestidlecallback}
+ *
  * @author Mauro Trevisan
  */
 var GoogleAnalyticsHelper = (function(){
@@ -47,7 +49,8 @@ var GoogleAnalyticsHelper = (function(){
 
 
 		if('requestIdleCallback' in window)
-			requestIdleCallback(processPendingAnalyticsEvents);
+			//wait at most two seconds before processing events
+			requestIdleCallback(processPendingAnalyticsEvents, {timeout: 2000});
 		else
 			processPendingAnalyticsEvents();
 	};
@@ -63,7 +66,7 @@ var GoogleAnalyticsHelper = (function(){
 			deadline = {timeRemaining: Number.MAX_VALUE};
 
 		//go for as long as there is time remaining and work to do
-		while(deadline.timeRemaining > 0 && eventsToSend.length)
+		while((deadline.timeRemaining || deadline.didTimeout) && eventsToSend.length)
 			ga('send', eventsToSend.pop());
 
 		//check if there are more events still to send

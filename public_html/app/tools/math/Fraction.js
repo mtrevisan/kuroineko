@@ -119,7 +119,6 @@ define(['tools/data/Assert'], function(Assert){
 		}
 		else{
 			m = str.match(/^([+-]?)([\d]+)\/([\d]+)$/);
-			Assert.assert(m, 'Cannot parse input data \'' + str + '\'');
 
 			num = Number(m[2]);
 			den = Number(m[3]);

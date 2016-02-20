@@ -1,15 +1,6 @@
 require(['tools/logging/Logger'], function(Logger){
 	QUnit.module('Logger');
 
-	QUnit.test('constructor without name', function(assert){
-		assert.throws(function(){
-			new Logger();
-		},
-		function(err){
-			return (err.toString() == 'AssertionError: Expected a name');
-		});
-	});
-
 	QUnit.test('should returns the same instance', function(assert){
 		var logger1 = new Logger('bla');
 		var logger2 = new Logger('bla');

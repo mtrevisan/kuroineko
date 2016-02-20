@@ -28,9 +28,11 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 	};
 
 
+	/**
+	 * @param {String} uom	A string of the unit of measure like 'm'
+	 * @returns {Boolean}	If the given unit is contained in this converter
+	 */
 	var hasUnit = function(uom){
-		Assert.assert(ObjectHelper.isString(uom), 'Expected unit-of-measure to be a string');
-
 		return !!this.data[uom];
 	};
 
@@ -58,15 +60,12 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 	 * @private
 	 */
 	var addUnitAsString = function(uom){
-		Assert.assert(ObjectHelper.isString(uom), 'Expected unit-of-measure to be a string');
-
 		var data = uom.split(' = '),
 			size = data.length,
 			i, m;
 		uom = data[0];
 		for(i = 1; i < size; i ++){
 			m = data[i].match(/^([^ ]+) ([^ ]+)$/);
-			Assert.assert(m, 'The string passed is not in the expected format "<uom> = <parent-value> <parent-uom> = ..."');
 
 			var parentValue = new Fraction(m[1]),
 				parentUOM = m[2];
@@ -84,9 +83,6 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 	 * @param {String} newUOM	New unit of measure like 'km'
 	 */
 	var renameUnit = function(oldUOM, newUOM){
-		Assert.assert(ObjectHelper.isString(oldUOM), 'The old unit of measure passed should be a string');
-		Assert.assert(ObjectHelper.isString(newUOM), 'The new unit of measure passed should be a string');
-
 		var d = this.data[oldUOM];
 		Assert.assert(d, 'Cannot change unit of measure "' + oldUOM + '" into "' + newUOM + '": unit not found');
 
@@ -98,10 +94,6 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 
 	/** @private */
 	var updateParentUOMs = function(oldParentUOM, newParentUOM){
-		Assert.assert(ObjectHelper.isString(oldParentUOM), 'The old parent unit of measure passed should be a string');
-		Assert.assert(ObjectHelper.isString(newParentUOM), 'The new parent unit of measure passed should be a string');
-		Assert.assert(this.data[oldParentUOM], 'Cannot change unit of measure: parent unit "' + oldParentUOM + '" not found');
-
 		Object.keys(this.data).forEach(function(uom){
 			var d = this[uom];
 			if(d.parentUOM == oldParentUOM)
@@ -129,9 +121,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 
 	/** @private */
 	var checkInputs = function(uom, parentValue, parentUOM){
-		Assert.assert(ObjectHelper.isString(uom), 'The unit of measure passed should be a string');
 		Assert.assert(!parentValue || parentUOM, 'Incompatible parent measure: should be present if parent value is given');
-		Assert.assert(!parentUOM || ObjectHelper.isString(parentUOM), 'The parent unit of measure passed should be a string');
 		Assert.assert(uom != parentUOM, 'Incompatible current parent measure: cannot be the same');
 		parentValue = new Fraction(parentValue);
 		Assert.assert(parentValue.isPositive(), 'Incompatible parent value: cannot be zero or negative');
@@ -144,26 +134,20 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 	 * @private
 	 */
 	var updateUnitFromString = function(unit){
-		Assert.assert(ObjectHelper.isString(unit), 'The value passed should be a string');
 		var m = unit.match(/^([^ ]+) = ([^ ]+) ([^ ]+)$/);
-		Assert.assert(m, 'The string passed is not in the expected format "<uom> = <parent-value> <parent-uom>"');
-
 		updateUnit(m[1], m[2], m[3]);
 	};
 
 	/**
 	 * Add a converter to/from this measure.
 	 *
-	 * @param {MeasureConverter} from	Measure from which the converter converts
-	 * @param {MeasureConverter} to		Measure to which the converter converts
-	 * @param {Number/Fraction} factor	Factor of conversion between from and to measures
+	 * @param {MeasureConverter} from			Measure from which the converter converts
+	 * @param {MeasureConverter} to				Measure to which the converter converts
+	 * @param {Number/Fraction/String} factor	Factor of conversion between from and to measures
 	 */
 	var addConverter = function(from, to, factor){
-		Assert.assert(from instanceof Constructor, 'The from value passed should be a measure');
-		Assert.assert(to instanceof Constructor, 'The to value passed should be a measure');
-		Assert.assert(factor instanceof Fraction || ObjectHelper.isFloat(factor), 'The factor passed should be a float or a fraction');
 		factor = new Fraction(factor);
-		Assert.assert(!factor.isZero(), 'Incompatible factor: cannot be zero');
+		Assert.assert(factor.isPositive(), 'Incompatible factor: cannot be zero or negative');
 
 		this.converters = this.converters || [];
 
@@ -178,25 +162,20 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 	 * Converts a value in a given unit of measure from a unit system into the equivalent value in the base unit of measure of the other
 	 * unit system (possibly the same).
 	 *
-	 * @param {Number/Fraction} value		Either a value to be converted or a string in the form '<value> <uom-from>( in <uom-to>)?'
-	 * @param {String} fromUnitOfMeasure	From unit of measure like 'm'
-	 * @param {String} toUnitOfMeasure		To unit of measure like 'ft'
+	 * @param {Number/Fraction/String} value	Either a value to be converted or a string in the form '<value> <uom-from> in <uom-to>'
+	 * @param {String} [fromUnitOfMeasure]		From unit of measure like 'm'
+	 * @param {String} [toUnitOfMeasure]		To unit of measure like 'ft'
 	 * @return {Fraction}
 	 */
 	var convert = function(value, fromUnitOfMeasure, toUnitOfMeasure){
 		if(!fromUnitOfMeasure && !toUnitOfMeasure){
-			Assert.assert(ObjectHelper.isString(value), 'The value passed should be a string');
-
 			var m = value.match(/^([^ ]+) ([^ ]+) in ([^ ]+)$/);
-			Assert.assert(m, 'The string passed is not in the expected format "<value> <uom> in <uom>"');
 
 			value = new Fraction(m[1]);
 			fromUnitOfMeasure = m[2];
 			toUnitOfMeasure = m[3];
 		}
-		Assert.assert(value instanceof Fraction || ObjectHelper.isFloat(value), 'The value passed should be a float or a fraction');
 		value = new Fraction(value);
-		Assert.assert(ObjectHelper.isString(fromUnitOfMeasure), 'The from unit of measure passed should be a string');
 
 		toUnitOfMeasure = toUnitOfMeasure || this.baseUOM;
 
@@ -261,7 +240,6 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 	};
 
 	/**
-	 *
 	 * @param {Number/Fraction/String} value	Value to be expanded, either a float, a fraction, or a string in the format "<value> <uom>"
 	 * @param {String} unitOfMeasure				Unit of measure of the passed value
 	 * @returns {Array}	Array of tuples value and uom
@@ -269,8 +247,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 	var expand = function(value, unitOfMeasure){
 		if(!unitOfMeasure)
 			return expandFromString(value);
-		Assert.assert(value instanceof Fraction || ObjectHelper.isFloat(value), 'The value passed should be a float or a fraction');
-		Assert.assert(ObjectHelper.isString(unitOfMeasure), 'The unit of measure passed should be a string');
+
 		value = new Fraction(value);
 
 		var uom = calculateGreatestUOM.call(this),
@@ -304,11 +281,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 	 * @private
 	 */
 	var expandFromString = function(value){
-		Assert.assert(ObjectHelper.isString(value), 'The value passed should be a string');
-
 		var m = value.match(/^([^ ]+) ([^ ]+)$/);
-		Assert.assert(m, 'The string passed is not in the expected format "<value> <uom>"');
-
 		return expand(m[1], m[2]);
 	};
 

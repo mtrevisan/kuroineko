@@ -102,8 +102,6 @@ define(['tools/data/Assert'], function(Assert){
 	 * @param {PriorityQueue} other	The other priority queue to be merged
 	 */
 	var union = function(other){
-		Assert.assert(other.constructor == Constructor, 'The input is not a PriorityQueue');
-
 		this.rootList = this.rootList.concat(other.rootList);
 		other.valueToNode.forEach(function(node, value){
 			this.set(value, node);
@@ -163,7 +161,7 @@ define(['tools/data/Assert'], function(Assert){
 	var decreaseKey = function(priority, value){
 		var x = this.valueToNode.get(value);
 		Assert.assert(x, 'Non existing node with value ' + value);
-		Assert.assert(priority <= x.priority, 'New key is greater than current key');
+		Assert.assert(priority <= x.priority, 'The new key is greater than the current key');
 
 		x.priority = priority;
 		var y = x.parent;
@@ -235,7 +233,7 @@ define(['tools/data/Assert'], function(Assert){
 	var cut = function(x, y){
 		//remove x from the children list of y
 		var index = y.children.indexOf(x);
-		Assert.assert(index >= 0, 'Node with value ' + x.value + ' is not child of node with value ' + y.value);
+		Assert.assert(index >= 0, 'The node with value ' + x.value + ' is not a child of the node with value ' + y.value);
 
 		y.children.splice(index, 1);
 		//add x to the root list

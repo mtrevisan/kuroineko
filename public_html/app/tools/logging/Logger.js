@@ -7,7 +7,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/data/Assert'], function(ObjectHelper, StringHelper, Assert){
+define(['tools/data/ObjectHelper', 'tools/data/StringHelper'], function(ObjectHelper, StringHelper){
 
 	/** Stores all created loggers */
 	var LOGGERS = {},
@@ -45,12 +45,10 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/data/Assert
 	/**
 	 * Gets a logger. If the logger does not exist it is created.
 	 *
-	 * @param name		The unique name of the logger
-	 * @param [conf]	The configuration object in the form <code>{rootLogger: 'DEBUG', showTime: true, out: function(message){}}</code>
+	 * @param {String} name		The unique name of the logger
+	 * @param {Object} [conf]	The configuration object in the form <code>{rootLogger: 'DEBUG', showTime: true, out: function(message){}}</code>
 	 */
 	var Constructor = function(name, conf){
-		Assert.assert(name, 'Expected a name');
-
 		this.config = {};
 		for(var k in CONFIG_DEFAULT)
 			this.config[k] = CONFIG_DEFAULT[k];
@@ -86,13 +84,10 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/data/Assert
 
 
 	/**
-	 * @param {String} level	One of LEVEL_OFF, LEVEL_TRACE, LEVEL_DEBUG, LEVEL_INFO, LEVEL_WARN, or LEVEL_ERROR
+	 * @param {String} level	One of [Logger.LEVEL_OFF, Logger.LEVEL_TRACE, Logger.LEVEL_DEBUG, Logger.LEVEL_INFO, Logger.LEVEL_WARN, Logger.LEVEL_ERROR]
 	 */
 	var setLevel = function(level){
-		level = level.toUpperCase();
-		Assert.assert(LEVEL_OFF == level || LEVELS.indexOf(level) >= 0, 'setLevel called with invalid level: ' + level);
-
-		this.config.rootLogger = level;
+		this.config.rootLogger = level.toUpperCase();
 	};
 
 	/** Intercepts log events, calling <code>fn</coe> before listeners of the instance */

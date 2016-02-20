@@ -70,19 +70,6 @@ require(['tools/measure/MeasureConverter', 'tools/math/Fraction'], function(Meas
 		assert.equal(m.convert('1.5 m in piè').toNumber(), 1.5 * 23);
 	});
 
-	QUnit.test('convert measure with wrong inputs', function(assert){
-		var si = new MeasureConverter({}, 'm');
-		si.addUnit('m');
-		var m = new MeasureConverter(['pèrtega = 6 piè'], 'piè');
-
-		assert.throws(function(){
-			m.addConverter('bla', si, 1/23);
-		},
-		function(err){
-			return (err.toString() == 'AssertionError: The from value passed should be a measure');
-		});
-	});
-
 	QUnit.test('calculate GCUOM - found', function(assert){
 		var m = new MeasureConverter([
 			'pèrtega = 6 piè',

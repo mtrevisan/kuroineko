@@ -5,7 +5,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/data/ObjectHelper', 'tools/data/structs/PriorityQueue', 'tools/data/Assert'], function(ObjectHelper, PriorityQueue, Assert){
+define(['tools/data/ObjectHelper', 'tools/data/structs/PriorityQueue'], function(ObjectHelper, PriorityQueue){
 
 	var Point = function(vector){
 		this.unprocessed = true;
@@ -21,15 +21,11 @@ define(['tools/data/ObjectHelper', 'tools/data/structs/PriorityQueue', 'tools/da
 
 	/**
 	 * @param {Array} data					Array of data points coordinates (expressed as array)
-	 * @param {Number} [epsilon]			Maximum distance for a point to belongs to a cluster
-	 * @param {Number} [minimumPoints]	Minimum number of points to form a cluster
-	 * @param {Function} [distanceFn]	Distance function
+	 * @param {Number} [epsilon]			Maximum distance for a point to belongs to a cluster, it must be positive
+	 * @param {Number} [minimumPoints]	Minimum number of points to form a cluster, it must be greater than or equal to 1
+	 * @param {Function} [distanceFn]	Distance function accepting two point objects with the property 'vector' of components defined
 	 */
 	var cluster = function(data, epsilon, minimumPoints, distanceFn){
-		Assert.assert(epsilon > 0, 'Expected epsilon to be a positive number');
-		Assert.assert(minimumPoints >= 1, 'Expected minimumPoints to be a positive number greater than or equal to 1');
-		Assert.assert(!distanceFn || ObjectHelper.isFunction(distanceFn), 'Expected distanceFn to be a function that accepts two object with the property \'vector\' defined');
-
 		this.points = [];
 		this.orderedList = [];
 		this.epsilon = epsilon || 0.001;

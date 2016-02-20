@@ -40,17 +40,13 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 	 * NOTE: Use IPA standard.
 	 *
 	 * @param {String} word		Word to be converted.
-	 * @param {String} from		Type from.
-	 * @param {String} to		Type to.
+	 * @param {String} from		Type from, one of [Phone.TYPE_GRAPHEME, Phone.TYPE_PHONEME, Phone.TYPE_PHONE].
+	 * @param {String} to		Type to, one of [Phone.TYPE_GRAPHEME, Phone.TYPE_PHONEME, Phone.TYPE_PHONE].
 	 * @param {String} dialect	Dialect to convert the word to.
 	 * @param {Boolean} phonematicSyllabation	Wether to syllabate phonematically.
 	 */
 	var convert = function(word, from, to, dialect, phonematicSyllabation){
-		var funct = 'convert' + from + 'Into' + to;
-		if(!this[funct])
-			throw new Error('function ' + funct + ' does not exists!');
-
-		return this[funct](word, dialect, phonematicSyllabation);
+		return this['convert' + from + 'Into' + to](word, dialect, phonematicSyllabation);
 	};
 
 	/** NOTE: Use IPA standard. */
