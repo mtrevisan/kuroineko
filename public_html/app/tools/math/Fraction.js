@@ -27,7 +27,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/data/Assert'], function(Assert){
+define(function(){
 
 	/** @constant */
 	var MAX_EXPONENT = Math.floor(Math.log10(Number.MAX_VALUE));

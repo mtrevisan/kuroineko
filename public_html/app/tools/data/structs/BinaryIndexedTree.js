@@ -1,6 +1,8 @@
 /**
  * @class BinaryIndexedTree
  *
+ * @see {@link https://en.wikipedia.org/wiki/Fenwick_tree}
+ *
  * @author Mauro Trevisan
  */
 define(['tools/math/MathHelper'], function(MathHelper){

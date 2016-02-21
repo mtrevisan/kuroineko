@@ -4,7 +4,7 @@ require(['tools/data/Decorator'], function(Decorator){
 	QUnit.test('decorate', function(assert){
 		var done = assert.async(3);
 
-		var fn = function(){
+		var obj = new function(){
 			return {
 				test: function(input){
 					assert.equal(input, 5);
@@ -18,7 +18,6 @@ require(['tools/data/Decorator'], function(Decorator){
 				}
 			};
 		};
-		var obj = new fn();
 
 		obj = Decorator.decorate(obj, 'test', function(input){
 			this._super.test(input);
