@@ -22,9 +22,9 @@
 define(['tools/math/Fraction', 'tools/data/Assert'], function(Fraction, Assert){
 
 	/**
-	 * @param {Number/Fraction} value		The value of the scalar to be added
-	 * @param {String} uom						The unit of measure of the scalar
-	 * @param {MeasureConverter} [measure]	The measure converter that defines the group of conversion
+	 * @param {Number/Fraction/String} value	The value of the scalar to be added
+	 * @param {String} [uom]						The unit of measure of the scalar
+	 * @param {MeasureConverter} [measure]		The measure converter that defines the group of conversion
 	 */
 	var Constructor = function(){
 		var scal = parse.call(this, arguments);
