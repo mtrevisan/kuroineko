@@ -134,6 +134,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	var consonantVoicings = {
 		1: [
+			//part. pasà, ind. prex., 2a e 3a pars. sing.
 			[FINAL_CONSONANT_VOICING_MARK,
 				'ñ.>nc|ñ[oaei]', 'ñ.>in|ñ[oaei]', 'ñ.>n|ñ[oaei]', 'ñ.>ñ|ñ[oaei]',
 				'b.>p|b[oaei]', 'p.>p|p[oaei]',
@@ -166,7 +167,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				'ol>òl/' + PLANTS_AND_CRAFTS_RESERVED_0 + '|rol',
 				'tor>dor/' + PLANTS_AND_CRAFTS_RESERVED_0 + '|[aeiou]tor',
 				'dor>tor/' + PLANTS_AND_CRAFTS_RESERVED_0 + '|[aeiou]dor'],
-			[PLANTS_AND_CRAFTS_RESERVED_0, '0>[oi]|èr', '0>[oi]|ar', '0>[oaie]|[oò][lr]']
+			[PLANTS_AND_CRAFTS_RESERVED_0, '0>[aoi]|èr', '0>[aoi]|ar', '0>[oaie]|[oò][lr]']
 		]
 	};
 
