@@ -83,9 +83,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	/** @constant */
 		SUBSTANTIVES_FEMININE = REDUCTION_RESERVED_0 + 20,
 	/** @constant */
-		PLANTS_AND_CRAFTS = REDUCTION_RESERVED_0 + 21,
-	/** @constant */
-		PLANTS_AND_CRAFTS_RESERVED_0 = REDUCTION_RESERVED_0 + 22;
+		PLANTS_AND_CRAFTS = REDUCTION_RESERVED_0 + 21;
 
 	var adjectives = {
 		0: [
@@ -159,15 +157,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	//dict: pomèr/PLANTS_AND_CRAFTS, barkarol/PLANTS_AND_CRAFTS, sartor/PLANTS_AND_CRAFTS, kolador/PLANTS_AND_CRAFTS
 	var plantsAndCrafts = {
 		1: [
-			[PLANTS_AND_CRAFTS,
-				'èr>èr/' + PLANTS_AND_CRAFTS_RESERVED_0,
-				'èr>ar/' + PLANTS_AND_CRAFTS_RESERVED_0,
-				'ol>iol/' + PLANTS_AND_CRAFTS_RESERVED_0 + '|rol',
-				'ol>iòl/' + PLANTS_AND_CRAFTS_RESERVED_0 + '|rol',
-				'ol>òl/' + PLANTS_AND_CRAFTS_RESERVED_0 + '|rol',
-				'tor>dor/' + PLANTS_AND_CRAFTS_RESERVED_0 + '|[aeiou]tor',
-				'dor>tor/' + PLANTS_AND_CRAFTS_RESERVED_0 + '|[aeiou]dor'],
-			[PLANTS_AND_CRAFTS_RESERVED_0, '0>[oiae]|èr', '0>[oiae]|ar', '0>[oiae]|[oò][lr]']
+			[PLANTS_AND_CRAFTS, 'èr>èr', 'èr>ar', 'ol>iol|rol', 'ol>iòl|rol', 'ol>òl|rol', 'tor>dor|[aeiou]tor', 'dor>tor|[aeiou]dor']
 		]
 	};
 
