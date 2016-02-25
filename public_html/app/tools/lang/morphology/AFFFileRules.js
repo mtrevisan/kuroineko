@@ -154,7 +154,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		]
 	};
 
-	//dict: pomèr/PLANTS_AND_CRAFTS, barkarol/PLANTS_AND_CRAFTS, sartor/PLANTS_AND_CRAFTS, kolador/PLANTS_AND_CRAFTS
+	//dict: pomèr/REDUCTION_RESERVED_0, barkarol/REDUCTION_RESERVED_0, sartor/REDUCTION_RESERVED_0, kolador/REDUCTION_RESERVED_0
 	var plantsAndCrafts = {
 		1: [
 			[PLANTS_AND_CRAFTS, 'èr>ar/' + REDUCTION_RESERVED_0, 'ol>iol/' + REDUCTION_RESERVED_0 + '|rol', 'ol>(i)òl/' + REDUCTION_RESERVED_0 + '|rol', 'tor>dor/' + REDUCTION_RESERVED_0 + '|[aeiou]tor', 'dor>tor/' + REDUCTION_RESERVED_0 + '|[aeiou]dor']
@@ -1383,7 +1383,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 			insert(paradigm, 6, verb.infinitive, origin, themes.themeT6, null, null, MARKER_FLAGS);
 			insert(paradigm, 6, verb.infinitive, origin, themes.themeT6 + 'o', /o$/, '[oaie]');
-			insert(paradigm, 6, verb.infinitive, origin, themes.themeT6 + 'do', /do$/, 'd[oaie]', '/' + FINAL_CONSONANT_VOICING_MARK);
+			insert(paradigm, 6, verb.infinitive, origin, themes.themeT6 + 'do', /do$/, 'd[oaie]');
 		}
 	};
 

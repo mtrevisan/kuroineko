@@ -2763,8 +2763,8 @@
 "bigòña (de mèđa b.)",["lok. av."],{"ita":"poveramente, da poco","eng":"poorly"},2762,["TS"],
 "bigòl",["n. m. sing."],{"ita":"bicollo"},2763,["BL","TV"],
 "bígol",["n. m. sing."],{"ita":"spaghetto nero di segale"},2764,["BL","TV"],
-"bigolara",["n. f. sing."],{"ita":"part. del maiale molto grassa vicina alla vescica","eng":"very fat part of pig"},2765,["PD"],
-"bigolaro",["n. m. sing."],{"ita":"torchio, attr. per fare i bigoli","eng":"press, pasta maker"},2766,["VI","PD"],
+"bigolara",["n. f. sing."],{"ita":"parte del maiale molto grassa vicina alla vescica","eng":"very fat part of pig"},2765,["PD"],
+"bigolaro",["n. m. sing."],{"ita":"torchio, attrezzo per fare i bigoli","eng":"press, pasta maker"},2766,["VI","PD"],
 "bigolèr",["n. m. sing."],{"ita":"pastaio","eng":"pasta maker"},2767,["TS"],
 
 "bigolo",["n. m. sing."],{"ita":"bicollo"},2769,["VI","VE"],
