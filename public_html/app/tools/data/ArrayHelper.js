@@ -283,8 +283,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 			randomIndex;
 		while(currentIndex){
 			randomIndex = toInteger(Math.random() * currentIndex --);
-
-			array[currentIndex] = array[randomIndex] + (array[randomIndex] = array[currentIndex], 0);
+			array[currentIndex] = [array[randomIndex], array[randomIndex] = array[currentIndex]][0];
 		}
 	};
 
