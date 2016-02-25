@@ -33,7 +33,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	var deriveAllFormsFromInfinitive = true;
 	var printFlagsAsNumber = false;
-	var applyConstraintToInfinitives = false;
+	var applyConstraintToInfinitives = true;
 
 	/** @constant */
 //	var REDUCTION_RESERVED_0 = 150,
@@ -134,16 +134,27 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		1: [
 			//part. pasà, ind. prex., 2a e 3a pars. sing.
 			[FINAL_CONSONANT_VOICING_MARK,
-				'ñ.>nc|ñ[oaei]', 'ñ.>in|ñ[oaei]', 'ñ.>n|ñ[oaei]', 'ñ.>ñ|ñ[oaei]',
-				'b.>p|b[oaei]', 'p.>p|p[oaei]',
-				'd.>t|d[oaei]', 't.>t|t[oaei]',
-				'g.>k|g[oaei]', 'k.>k|k[oaei]',
-				'v.>f|v[oaei]', 'f.>f|f[oaei]',
-				'đ.>ŧ|đ[oaei]', 'ŧ.>ŧ|ŧ[oaei]',
-				'x.>s|x[oaei]', 's.>s|s[oaei]',
-				'ʒ.>ʃ|ʒ[oaei]', 'ʃ.>ʃ|ʃ[oaei]',
-				'ɉ.>c|ɉ[oaei]', 'c.>c|c[oaei]',
-				'm.>n|m[oaei]', 'n.>n|n[oaei]']
+				'ño>nc', 'ña>nc', 'ñe>nc',
+				'ño>in', 'ña>in', 'ñe>in',
+				'ño>n', 'ña>n', 'ñe>n',
+				'ño>ñ', 'ña>ñ', 'ñe>ñ',
+				'bo>p', 'ba>p', 'be>p',
+				'po>p', 'pa>p', 'pe>p',
+				'do>t', 'da>t', 'de>t',
+				'to>t', 'ta>t', 'te>t',
+				'go>k', 'ga>k', 'ge>k',
+				'ko>k', 'ka>k', 'ke>k',
+				'vo>f', 'va>f', 've>f',
+				'fo>f', 'fa>f', 'fe>f',
+				'đo>ŧ', 'đa>ŧ', 'đe>ŧ',
+				'ŧo>ŧ', 'ŧa>ŧ', 'ŧe>ŧ',
+				'xo>s', 'xa>s', 'xe>s',
+				'so>s', 'sa>s', 'se>s',
+				'ɉo>c', 'ɉa>c', 'ɉe>c',
+				'co>c', 'ca>c', 'ce>c',
+				'mo>n', 'ma>n', 'me>n',
+				'no>n', 'na>n', 'ne>n'
+				]
 		]
 	};
 
