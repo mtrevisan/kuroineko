@@ -81,7 +81,7 @@ define(function(){
 			index = [],
 			result = [];
 		var i = 1,
-			j, swap;
+			j;
 		for(i = 0; i < size; i ++)
 			index.push(0);
 		result.push(list.join(''));
@@ -90,9 +90,7 @@ define(function(){
 			if(index[i] < i){
 				j = (i % 2? index[i]: 0);
 
-				swap = list[i];
-				list[i] = list[j];
-				list[j] = swap;
+				list[j] = [list[i], list[i] = list[j]][0];
 
 				result.push(list.join(''));
 
