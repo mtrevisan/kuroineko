@@ -89,7 +89,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		0: [
 			//ajetivi de prima klase
 			//[REDUCTION_RESERVED_0, '[oaie]', 'o>a/' + REDUCTION_RESERVED_1 + '|o', '0>a/' + REDUCTION_RESERVED_1 + '|[^oaie]'],
-			[REDUCTION_RESERVED_0, '[oaie]', 'o>[ae]', 'o>i|[^i]o', '.o>i|[ij]o', '0>[oaie]|[^oaie]'],
+			[REDUCTION_RESERVED_0, '[oaie]', 'o>[ae]', 'o>i|[^ij]o', 'io>i', 'jo>i', '0>[oaie]|[^oaie]'],
 			//ajetivi de sekonda klase
 			//[REDUCTION_RESERVED_1, '[aie]', 'a>e/' + REDUCTION_RESERVED_2 + '|a'],
 			[REDUCTION_RESERVED_1, '[aie]', 'a>[ei]'],
@@ -108,7 +108,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			[INTERROGATIVE_MARK_2S_2, 'u>o', 'tu>stu'],
 			[INTERROGATIVE_MARK_2P, '0>-[uo]'],
 			[INTERROGATIVE_MARK_2P_2, 'u>o'],
-			[INTERROGATIVE_MARK_3, '.>e-l[oaie]|[ai]', '0>-l[oaie]|[^ai]'],
+			[INTERROGATIVE_MARK_3, 'a>e-l[oaie]', 'i>e-l[oaie]', '0>-l[oaie]|[^ai]'],
 			[INTERROGATIVE_MARK_3_2, 'o>[aie]'],
 			//kond. 3a: themeT4 + 'rí[ae]/' + INTERROGATIVE_MARK_3 > 'rise-l[oaie]'
 			[INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE, 'ave>ise-l[oaie]|rave', 'ave>ísel[oaie]|rave']
@@ -149,15 +149,15 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	var substantives = {
 		1: [
-			[SUBSTANTIVES_MASCULINE, '0>[oi]|[^oaieln]', '0>i|i[ln]', 'a.>ài|a[ln]', 'e.>éi|e[ln]', 'o.>ói|o[ln]', 'u.>úi|u[ln]', 'o>i|[^ij]o', '.o>i|[ij]o', '.>i|[ae]', '0>i|[àèé]'],
-			[SUBSTANTIVES_FEMININE, '0>[ei]|[^oaieln]', '0>i|i[ln]', 'a.>ài|a[ln]', 'e.>éi|e[ln]', 'o.>ói|o[ln]', 'u.>úi|u[ln]', 'a>e', 'e>i']
+			[SUBSTANTIVES_MASCULINE, '0>[oi]|[^oaie]', 'ol>ói', 'on>ói', 'al>ài', 'an>ài', 'el>éi', 'en>éi', '0>i|i[ln]', 'ul>úi', 'un>úi', 'o>i|[^ij]o', 'io>i', 'jo>i', 'a>i', 'e>i', '0>i|[àèé]'],
+			[SUBSTANTIVES_FEMININE, '0>[ei]|[^oaieln]', '0>i|i[ln]', 'al>ài', 'an>ài', 'el>éi', 'en>éi', 'ol>ói', 'on>ói', 'ul>úi', 'un>úi', 'a>e', 'e>i']
 		]
 	};
 
 	//dict: pomèr/PLANTS_AND_CRAFTS, barkarol/PLANTS_AND_CRAFTS, sartor/PLANTS_AND_CRAFTS, kolador/PLANTS_AND_CRAFTS
 	var plantsAndCrafts = {
 		1: [
-			[PLANTS_AND_CRAFTS, 'èr>èr', 'èr>ar', 'ol>iol|rol', 'ol>iòl|rol', 'ol>òl|rol', 'tor>dor|[aeiou]tor', 'dor>tor|[aeiou]dor']
+			[PLANTS_AND_CRAFTS, 'èr>ar/' + REDUCTION_RESERVED_0, 'ol>iol/' + REDUCTION_RESERVED_0 + '|rol', 'ol>(i)òl/' + REDUCTION_RESERVED_0 + '|rol', 'tor>dor/' + REDUCTION_RESERVED_0 + '|[aeiou]tor', 'dor>tor/' + REDUCTION_RESERVED_0 + '|[aeiou]dor']
 		]
 	};
 

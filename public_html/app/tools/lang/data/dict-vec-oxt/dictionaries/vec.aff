@@ -49606,15 +49606,16 @@ SFX A đer ti đer
 SFX A đer to đer
 SFX A đer to/I đer
 
-SFX B Y 8 # tute le deklinaŧion, ajetivi de prima klase
+SFX B Y 9 # tute le deklinaŧion, ajetivi de prima klase
 SFX B 0 a [^aieo]
 SFX B 0 e [^aieo]
 SFX B 0 i [^aieo]
 SFX B 0 o [^aieo]
-SFX B .o i [ij]o
+SFX B io i io
+SFX B jo i jo
 SFX B o a o
 SFX B o e o
-SFX B o i [^i]o
+SFX B o i [^ij]o
 
 SFX C Y 2 # ajetivi de sekonda klase
 SFX C a e a
@@ -49816,15 +49817,19 @@ SFX P 0 -u
 SFX Q Y 1 # interogativi
 SFX Q u o u
 
-SFX R Y 8 # interogativi
-SFX R . e-la [ai]
-SFX R . e-le [ai]
-SFX R . e-li [ai]
-SFX R . e-lo [ai]
+SFX R Y 12 # interogativi
 SFX R 0 -la [^ai]
 SFX R 0 -le [^ai]
 SFX R 0 -li [^ai]
 SFX R 0 -lo [^ai]
+SFX R a e-la a
+SFX R a e-le a
+SFX R a e-li a
+SFX R a e-lo a
+SFX R i e-la i
+SFX R i e-le i
+SFX R i e-li i
+SFX R i e-lo i
 
 SFX S Y 3 # interogativi
 SFX S o a o
@@ -49841,38 +49846,47 @@ SFX T ave ísele rave
 SFX T ave íseli rave
 SFX T ave íselo rave
 
-SFX U Y 11 # sostantivi plurali maskili
-SFX U a. ài a[ln]
-SFX U e. éi e[ln]
-SFX U o. ói o[ln]
-SFX U u. úi u[ln]
-SFX U . i [ae]
-SFX U 0 i [^aieoln]
-SFX U 0 i i[ln]
-SFX U 0 o [^aieoln]
-SFX U .o i [ij]o
-SFX U o i [^ij]o
+SFX U Y 17 # sostantivi plurali maskili
+SFX U 0 i [^oaie]
 SFX U 0 i [àèé]
+SFX U 0 i i[ln]
+SFX U 0 o [^oaie]
+SFX U a i a
+SFX U al ài al
+SFX U an ài an
+SFX U e i e
+SFX U el éi el
+SFX U en éi en
+SFX U io i io
+SFX U jo i jo
+SFX U o i [^ij]o
+SFX U ol ói ol
+SFX U on ói on
+SFX U ul úi ul
+SFX U un úi un
 
-SFX V Y 9 # sostantivi plurali femenili
-SFX V 0 e [^aieoln]
-SFX V 0 i [^aieoln]
+SFX V Y 13 # sostantivi plurali femenili
+SFX V 0 e [^oaieln]
+SFX V 0 i [^oaieln]
 SFX V 0 i i[ln]
-SFX V a. ài a[ln]
-SFX V e. éi e[ln]
-SFX V o. ói o[ln]
-SFX V u. úi u[ln]
 SFX V a e a
+SFX V al ài al
+SFX V an ài an
 SFX V e i e
+SFX V el éi el
+SFX V en éi en
+SFX V ol ói ol
+SFX V on ói on
+SFX V ul úi ul
+SFX V un úi un
 
-SFX W Y 7 # piante e mistièri
-SFX W dor tor [aeiou]dor
-SFX W ol iol rol
-SFX W ol iòl rol
-SFX W ol òl rol
-SFX W tor dor [aeiou]tor
-SFX W r r èr
-SFX W èr ar èr
+SFX W Y 6 # piante e mistièri
+SFX W èr ar/B èr
+SFX W dor tor/B [aeiou]dor
+SFX W tor dor/B [aeiou]tor
+SFX W ol òl/B rol
+SFX W ol iòl/B rol
+SFX W ol iol/B rol
 
 
 # FIXME
@@ -50225,7 +50239,7 @@ SFX % e      ena      n[oò]ve
 SFX % i      ena      vinti
 SFX % énta   entena   trénta
 SFX % a      ena      anta
-SFX % o      enèr     [ŧx]ento
+SFX % o      enèr/BW [ŧx]ento
 SFX % e      èr       mile
 SFX % 0      èr       melion
 SFX % o      èr       meliardo
