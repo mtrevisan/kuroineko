@@ -187,6 +187,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		var arr = Array.prototype.slice.call(arguments, 1);
 
 		return unique(a).filter(function(el){
+			//some?
 			return arr.every(function(cur){
 				return (cur && cur.indexOf(el) >= 0);
 			});

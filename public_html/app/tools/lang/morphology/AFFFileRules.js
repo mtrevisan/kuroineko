@@ -165,7 +165,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		]
 	};
 
-	//dict: pomèr/REDUCTION_RESERVED_0, barkarol/REDUCTION_RESERVED_0, sartor/REDUCTION_RESERVED_0, kolador/REDUCTION_RESERVED_0
+	//dict: pomèr/PLANTS_AND_CRAFTS, barkarol/PLANTS_AND_CRAFTS, sartor/PLANTS_AND_CRAFTS, kolador/PLANTS_AND_CRAFTS
 	var plantsAndCrafts = {
 		1: [
 			[PLANTS_AND_CRAFTS, 'èr>ar/' + REDUCTION_RESERVED_0, 'ol>iol/' + REDUCTION_RESERVED_0 + '|rol', 'ol>(i)òl/' + REDUCTION_RESERVED_0 + '|rol', 'tor>dor/' + REDUCTION_RESERVED_0 + '|[aeiou]tor', 'dor>tor/' + REDUCTION_RESERVED_0 + '|[aeiou]dor']
@@ -200,10 +200,19 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			Array.prototype.push.apply(paradigm, generateTheme(verbs, infinitiveThemes, 12, 0));
 
 			//expand forms
+			var suffixes = [];
 			paradigm.forEach(function(sublist){
-				sublist.suffixes = mergeIdenticalTransformations(ArrayHelper.flatten(sublist.suffixes.map(function(suffix){
-					return expandForm(suffix);
-				})));
+				suffixes = suffixes.concat(sublist.suffixes.map(expandForm));
+			});
+			suffixes = mergeIdenticalTransformations(ArrayHelper.flatten(suffixes));
+
+			paradigm[0].suffixes = suffixes;
+			paradigm = [paradigm[0]];
+
+
+
+			/*paradigm.forEach(function(sublist){
+				sublist.suffixes = mergeIdenticalTransformations(ArrayHelper.flatten(sublist.suffixes.map(expandForm)));
 			});
 
 			var re = /\/[\d,]+@?/,
@@ -226,7 +235,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 							}
 					}
 				}
-			}
+			}*/
 
 			printParadigm(paradigm, undefined, 1);
 		}
@@ -769,17 +778,30 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		}
 
 		var parts = ArrayHelper.partition(ArrayHelper.unique(sublist), function(el){ return el.replace(PATTERN_FLAGS, ''); }),
+			constraints, markerFlagFound;
+		sublist = Object.keys(parts).map(function(p){
+			constraints = parts[p].map(function(el){ return /[\d,]*@?$/.exec(el)[0]; });
+			markerFlagFound = constraints.some(function(el){ return (el.indexOf(MARKER_FLAGS) >= 0); });
+			constraints = ArrayHelper.flatten(constraints.map(function(el){ return el.replace(MARKER_FLAGS, '').split(','); }))
+				.filter(function(el){ return el; })
+				.map(function(el){ return Number(el); })
+				.sort(function(a, b){ return a - b; })
+				.join(',')
+				+ (markerFlagFound? MARKER_FLAGS: '');
+			return p + (constraints? '/' + constraints: '');
+		});
+		/*var parts = ArrayHelper.partition(ArrayHelper.unique(sublist), function(el){ return el.replace(PATTERN_FLAGS, ''); }),
 			flags,
-			constraints, constraintParts;
+			constraints, markerFlagFound, constraintParts;
 		/*sublist = Object.keys(parts).map(function(part){
 			flags = parts[part]
 				.map(extractFlags)
 				.reduce(uniteFlags, {forms: [], markers: [], constraint: ''});
 			constraint = extractCommonPartFromList(parts[part].map(function(el){ return (el.indexOf('|') >= 0? el.replace(PATTERN_CONSTRAINT, ''): ''); }));
 			return part + printFlags(flags) + (constraint? '|' + constraint: '');
-		});*/
+		});* /
 		Object.keys(parts).forEach(function(p){
-			constraints = parts[p].map(function(el){ return el.replace(/^.+?[\/\|]|^[^\/\|]+$/, ''); });
+			constraints = parts[p].map(function(el){ return el.replace(/^[^\/\|]+[\/\|]?/, ''); });
 			if(constraints.length > 1){
 				constraintParts = ArrayHelper.partition(constraints, function(el){ return el.replace(/^.+\||^[^\|]+$/, '') || p.replace(/>.+$/, ''); });
 				parts[p] = Object.keys(constraintParts).map(function(cp){
@@ -798,10 +820,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 					//FIXME
 				}
 				else if(flags.constraint)
-					parts[p] = [p + printFlags(flags) + '|' + flags.constraint];*/
+					parts[p] = [p + printFlags(flags) + '|' + flags.constraint];* /
 			}
 		});
-		sublist = ArrayHelper.flatten(parts);
+		sublist = ArrayHelper.flatten(parts);*/
 
 		if(flag)
 			sublist.unshift(flag);
@@ -964,7 +986,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 		return function recurse(forms, list){
 			var m;
-			list = list || [];
+			if(!Array.isArray(list))
+				list = [];
 			[].concat(forms).forEach(function(form){
 				m = form.match(/^(.*)([\(\[])(.+)[\)\]](.*)$/);
 				if(m){
