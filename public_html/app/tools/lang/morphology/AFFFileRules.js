@@ -33,7 +33,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	var deriveAllFormsFromInfinitive = true;
 	var printFlagsAsNumber = false;
-	var applyConstraintToInfinitives = true;
+	var applyConstraintToInfinitives = false;
 
 	/** @constant */
 //	var REDUCTION_RESERVED_0 = 150,
@@ -208,34 +208,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 			paradigm[0].suffixes = suffixes;
 			paradigm = [paradigm[0]];
-
-
-
-			/*paradigm.forEach(function(sublist){
-				sublist.suffixes = mergeIdenticalTransformations(ArrayHelper.flatten(sublist.suffixes.map(expandForm)));
-			});
-
-			var re = /\/[\d,]+@?/,
-				i, j, n, m, par, form, par_n;
-			for(i = paradigm.length - 1; i >= 0; i --){
-				par = paradigm[i];
-				for(j = par.suffixes.length - 1; j >= 0; j --){
-					form = par.suffixes[j].replace(re, '');
-
-					for(n = i - 1; n >= 0; n --){
-						par_n = paradigm[n];
-						if(ArrayHelper.equals(par.origins, par_n.origins))
-							for(m = par_n.suffixes.length - 1; m >= 0; m --){
-								if(par.suffixes[j] == par_n.suffixes[m])
-									par_n.suffixes.splice(m, 1);
-								else if(form == par_n.suffixes[m].replace(re, '')){
-									par.suffixes[j] = par.suffixes[j].replace(PATTERN_FLAGS, '') + printFlags(uniteFlags(extractFlags(par.suffixes[j]), extractFlags(par_n.suffixes[m])));
-									par_n.suffixes.splice(m, 1);
-								}
-							}
-					}
-				}
-			}*/
 
 			printParadigm(paradigm, undefined, 1);
 		}
@@ -437,10 +409,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		Object.keys(list).forEach(function(key){
 			if(key != '0')
 				list[key].forEach(function(reduction){
-					//adjectives[0].forEach(function(red){
-					//	reduceSuffix(reduction, red);
-					//});
-
 					flag = reduction.shift();
 
 					for(i = reduction.length - 1; i >= 0; i --){
@@ -790,40 +758,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				+ (markerFlagFound? MARKER_FLAGS: '');
 			return p + (constraints? '/' + constraints: '');
 		});
-		/*var parts = ArrayHelper.partition(ArrayHelper.unique(sublist), function(el){ return el.replace(PATTERN_FLAGS, ''); }),
-			flags,
-			constraints, markerFlagFound, constraintParts;
-		/*sublist = Object.keys(parts).map(function(part){
-			flags = parts[part]
-				.map(extractFlags)
-				.reduce(uniteFlags, {forms: [], markers: [], constraint: ''});
-			constraint = extractCommonPartFromList(parts[part].map(function(el){ return (el.indexOf('|') >= 0? el.replace(PATTERN_CONSTRAINT, ''): ''); }));
-			return part + printFlags(flags) + (constraint? '|' + constraint: '');
-		});* /
-		Object.keys(parts).forEach(function(p){
-			constraints = parts[p].map(function(el){ return el.replace(/^[^\/\|]+[\/\|]?/, ''); });
-			if(constraints.length > 1){
-				constraintParts = ArrayHelper.partition(constraints, function(el){ return el.replace(/^.+\||^[^\|]+$/, '') || p.replace(/>.+$/, ''); });
-				parts[p] = Object.keys(constraintParts).map(function(cp){
-					flags = constraintParts[cp]
-						.map(function(el){ return extractFlags('|' + el); })
-						.reduce(uniteFlags, {forms: [], markers: [], constraint: ''});
-					return (flags.constraint == '_'?
-						parts[p]:
-						p + printFlags(flags) + (flags.constraint? '|' + flags.constraint: ''));
-				});
-
-				/*flags = parts[p]
-					.map(extractFlags)
-					.reduce(uniteFlags, {forms: [], markers: [], constraint: ''});
-				if(flags.constraint == '_'){
-					//FIXME
-				}
-				else if(flags.constraint)
-					parts[p] = [p + printFlags(flags) + '|' + flags.constraint];* /
-			}
-		});
-		sublist = ArrayHelper.flatten(parts);*/
 
 		if(flag)
 			sublist.unshift(flag);
