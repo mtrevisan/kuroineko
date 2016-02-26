@@ -256,7 +256,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 		printReductions(substantives, 'sostantivi plurali');
 
-		//dict: -er/PLANTS_AND_CRAFTS, -rol/PLANTS_AND_CRAFTS, -dor/PLANTS_AND_CRAFTS, -tor/PLANTS_AND_CRAFTS
 		printReductions(plantsAndCrafts, 'piante e mistièri');
 	};
 
