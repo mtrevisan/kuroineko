@@ -1,11 +1,12 @@
 /**
  * @class StorageProxy
  *
+ * @see {@link https://github.com/jonschlinkert/data-store/blob/master/index.js}
+ *
  * @author Mauro Trevisan
  */
 define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
-	/** Object#toString result references. */
 	/** @constant */
 	var TYPE_JSON = '[object JSON]';
 

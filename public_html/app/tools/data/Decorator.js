@@ -10,7 +10,7 @@ define(function(){
 	/**
 	 * @param {Object} obj			Object to be decorated
 	 * @param {String} name			Function name to override, or an array of objects [{name: name, fn: funct}, {...}]
-	 * @param {Function} [funct]	Function that overrides the parent one, e.g. has the same sign (can call this._super[name](...) to access
+	 * @param {Function} [funct]	Function that overrides the parent one, e.g. has the same sign (can call this.__super__[name](...) to access
 	 *										the parent method)
 	 */
 	var decorate = function(obj, name, funct){
@@ -21,7 +21,8 @@ define(function(){
 		//create prototype chain
 		F.prototype = obj;
 		var decorated = new F();
-		decorated._super = F.prototype;
+
+		decorated.__super__ = F.prototype;
 
 		//mixin properties/methods of the decorator overrides the ones from the prototype
 		name.forEach(function(decorator){

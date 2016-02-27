@@ -295,7 +295,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	 * //=> [['sss', 'bars'], ['ttt', 'foo']]
 	 * </code>
 	 *
-	 * @param {Function} predicate	A predicate to determine which array the element belongs to.
+	 * @param {Function} predicate	A predicate to determine which array the element belongs to, it accepts the value, the index, and the global list.
 	 * @param {Array} list				The array to partition.
 	 * @return {Array} A nested array, containing first an array of elements that satisfied the predicate, and second an array of elements
 	 *		that did not satisfy.

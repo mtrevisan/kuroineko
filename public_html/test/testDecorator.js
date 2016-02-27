@@ -20,7 +20,7 @@ require(['tools/data/Decorator'], function(Decorator){
 		};
 
 		obj = Decorator.decorate(obj, 'test', function(input){
-			this._super.test(input);
+			this.__super__.test(input);
 
 			assert.equal(input + 2, 7);
 
