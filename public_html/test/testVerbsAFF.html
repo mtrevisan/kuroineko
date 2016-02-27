@@ -22,7 +22,15 @@
 			var themeVowel = ['à', 'é', 'e', 'í', 'í'];
 
 			return function(v){
-				return v.prefix + v.radix + themeVowel[v.conjugation - 1] + 'r';
+				return (v.prefix + v.radix).replace(/ɉ/g, 'j') + themeVowel[v.conjugation - 1] + 'r';
+			};
+		})();
+
+		var composeInfinitiveWithoutPrefix = (function(){
+			var themeVowel = ['à', 'é', 'e', 'í', 'í'];
+
+			return function(v){
+				return v.radix.replace(/ɉ/g, 'j') + themeVowel[v.conjugation - 1] + 'r';
 			};
 		})();
 
@@ -33,22 +41,34 @@
 			var start = +new Date();
 
 			var verbs = [],
+				inf;
+			verbsDictionary.forEach(function(infinitive){
+				inf = composeInfinitiveWithoutPrefix(infinitive);
+				if(['fàr', 'fegàr', 'folàr', 'fraxàr', 'fugàr', 'itàr', 'menàr', 'mentír', 'negàr', 'pegàr', 'plegàr', 'plikàr', 'putàr', 'rogàr', 'speràr', 'stàr', 'ŧipàr', 'vokàr'].indexOf(inf) >= 0)
+					inf = composeInfinitive(infinitive);
+
+//if(['domàr', 'domandàr', 'domenàr', 'domestegàr'].indexOf(infinitive) >= 0)
+				if(verbs.indexOf(inf) < 0)
+					verbs.push(new Verb(inf));
+			});
+
+			/*var verbs = [],
 				infinitives = [],
 				maxIndex = 0;
 			verbsDictionary.forEach(function(infinitive, idx){
 //if(idx < 1000)
 //	return;
-				infinitive = composeInfinitive(infinitive).replace(/ɉ/g, 'j');
+				infinitive = composeInfinitive(infinitive);
 				if(infinitives.indexOf(infinitive) < 0){
 					infinitives.push(infinitive);
 
-//if(['skoltàr', 'abdikàr'].indexOf(infinitive) >= 0)
+if(['skoltàr', 'abdikàr'].indexOf(infinitive) >= 0)
 //if(['domàr', 'indomàr', 'domandàr', 'redomandàr', 'domenàr', 'predomenàr', 'domestegàr'].indexOf(infinitive) >= 0 || idx <= maxIndex)
 //if(['skoltàr', 'abdikàr'].indexOf(infinitive) >= 0 || idx <= maxIndex)
 //if(idx <= maxIndex)
 					verbs.push(new Verb(infinitive));
 				}
-			});
+			});*/
 			AFFFileRules.generate(verbs);
 
 			console.log(((+new Date() - start) / 1000).toFixed(2) + ' s');
