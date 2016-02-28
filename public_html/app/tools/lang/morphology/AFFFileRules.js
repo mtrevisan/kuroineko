@@ -422,7 +422,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 						expandForm(form.replace(re, '')).forEach(function(f){
 							if(substitution != f)
-								reduction.push(substitution + '>' + f + '|' + constraint);
+								reduction.push(substitution + '>' + f + (constraint != '0'? '|' + constraint: ''));
 						});
 
 						reduction.splice(i, 1);
@@ -436,12 +436,12 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 					reduction.unshift(flag);
 				});
 		});
-		Object.keys(list).forEach(function(key){
+		/*Object.keys(list).forEach(function(key){
 			if(key != '0')
 				list[key] = list[key].map(function(sublist){
 					return mergeIdenticalTransformations(sublist);
 				});
-		});
+		});*/
 
 		Object.keys(list).forEach(function(key){
 			list[key].forEach(function(reduction){
@@ -515,7 +515,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 		//FIXME
 //		return 'SFX ' + flag + ' ' + replaced + ' ' + replacement + (constraint != 0 && constraint != ''? ' ' + (parents && parents.length == 1? '^': '') + constraint: '') + (parents? ' # ' + parents.sort().join(FLAG_SEPARATOR): '');
-		return 'SFX ' + flag + ' ' + replaced + ' ' + replacement + (constraint? ' ' /*+ (parents && parents.length == 1? '^': '')*/ + constraint: '');
+		return 'SFX ' + flag + ' ' + replaced + ' ' + replacement + (constraint && constraint != 0? ' ' /*+ (parents && parents.length == 1? '^': '')*/ + constraint: '');
 	};
 
 	/** @private */
