@@ -735,11 +735,12 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		sublist = Object.keys(parts).map(function(p){
 			constraints = parts[p].map(function(el){ return /[\d,]*@?$/.exec(el)[0]; });
 			markerFlagFound = constraints.some(function(el){ return (el.indexOf(MARKER_FLAGS) >= 0); });
-			constraints = ArrayHelper.flatten(constraints.map(function(el){ return el.replace(MARKER_FLAGS, '').split(','); }))
-				.filter(function(el){ return el; })
-				.map(function(el){ return Number(el); })
-				.sort(function(a, b){ return a - b; })
-				.join(',')
+			constraints = ArrayHelper.unique(
+				ArrayHelper.flatten(constraints.map(function(el){ return el.replace(MARKER_FLAGS, '').split(','); }))
+					.filter(function(el){ return el; })
+					.map(function(el){ return Number(el); })
+					.sort(function(a, b){ return a - b; })
+				).join(',')
 				+ (markerFlagFound? MARKER_FLAGS: '');
 			return (constraints? p + '/' + constraints: p);
 		});
@@ -1795,23 +1796,26 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	/** @private */
 	var insertIntoParadigm = function(paradigm, theme, infinitive, origin, suffix){
-		var i = paradigm.findIndex(function(el){ return (el.infinitive == this); }, infinitive),
-			parts = extractCommonPartsFromStart(origin, suffix),
-			data = parts.a + '>' + parts.b,
-			re, j, flags;
-		if(i < 0)
-			paradigm.push({theme: theme, infinitive: infinitive, origin: origin, suffixes: [data]});
-		else{
-			re = new RegExp('^' + data.replace(PATTERN_FLAGS, '') + PATTERN_FLAGS.toString().replace(/^\/|\/$/, ''));
-			j = paradigm[i].suffixes.findIndex(function(suff){ return suff.match(this); }, re);
-			if(j < 0)
-				paradigm[i].suffixes.push(data);
-			else{
-				flags = paradigm[i].suffixes[j].match(PATTERN_FLAGS);
-				flags = (flags[1]? flags[1].replace(/\//, ''): '');
-				paradigm[i].suffixes[j] = addFlag(data, flags);
-			}
-		}
+		var parts = extractCommonPartsFromStart(origin, suffix),
+			data = parts.a + '>' + parts.b;
+		paradigm.push({theme: theme, infinitive: infinitive, origin: origin, suffixes: [data]});
+//		var i = paradigm.findIndex(function(el){ return (el.infinitive == this); }, infinitive),
+//			parts = extractCommonPartsFromStart(origin, suffix),
+//			data = parts.a + '>' + parts.b,
+//			re, j, flags;
+//		if(i < 0)
+//			paradigm.push({theme: theme, infinitive: infinitive, origin: origin, suffixes: [data]});
+//		else{
+//			re = new RegExp('^' + data.replace(PATTERN_FLAGS, '') + PATTERN_FLAGS.toString().replace(/^\/|\/$/, ''));
+//			j = paradigm[i].suffixes.findIndex(function(suff){ return suff.match(this); }, re);
+//			if(j < 0)
+//				paradigm[i].suffixes.push(data);
+//			else{
+//				flags = paradigm[i].suffixes[j].match(PATTERN_FLAGS);
+//				flags = (flags[1]? flags[1].replace(/\//, ''): '');
+//				paradigm[i].suffixes[j] = addFlag(data, flags);
+//			}
+//		}
 	};
 
 	/** @private */
