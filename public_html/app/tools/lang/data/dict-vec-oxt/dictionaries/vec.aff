@@ -41344,6 +41344,24 @@ SFX W ol òl/B rol
 SFX W ol iòl/B rol
 SFX W ol iol/B rol
 
+SFX X Y 12
+SFX X 0 mente/Y  [^aeiou]
+SFX X o emente/Y [lu]ento
+SFX X o amente/Y [^t]o
+SFX X o amente/Y [^n]to
+SFX X o amente/Y [^e]nto
+SFX X o amente/Y [^lu]ento
+SFX X 0 mente/Y  [^rln]e
+SFX X e mente/Y  [aeiou]re
+SFX X 0 mente/Y  [^aeiou]re
+SFX X e mente/Y  le
+SFX X e amente/Y one
+SFX X 0 mente/Y  [^o]ne
+
+SFX Y Y 2
+SFX Y nte n mente
+SFX Y e re  mente
+
 
 # FIXME
 # Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug. par tuti i mòdi e i tenpi fora ke inté ‘l infenío, partithipio ativo, e xerundio
@@ -41502,17 +41520,3 @@ PFX $ 0 MML    X
 
 
 
-
-#SFX Y N 12
-#SFX Y o emente [lu]ento
-#SFX Y o amente [^t]o
-#SFX Y o amente [^n]to
-#SFX Y o amente [^e]nto
-#SFX Y o amente [^lu]ento
-#SFX Y 0 mente  [^rln]e
-#SFX Y e mente  [aeiou]re
-#SFX Y 0 mente  [^aeiou]re
-#SFX Y e mente  [^l]le
-#SFX Y 0 mente  lle
-#SFX Y e amente one
-#SFX Y 0 mente  [^o]ne-
