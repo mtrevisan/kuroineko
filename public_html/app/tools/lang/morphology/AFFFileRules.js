@@ -388,9 +388,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var logs = [],
 			m;
 		list.forEach(function(suffix){
-			m = suffix.match(/^(.+)>(.+)$/);
+			m = suffix.match(this);
 			storeSuffix(logs, 1, m[1], m[2]);
-		});
+		}, /^(.+)>(.+)$/);
 
 		if(logs.length)
 			printSuffixes(logs, 1, 'vèrbi');
@@ -1795,7 +1795,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	/** @private */
 	var insertIntoParadigm = function(paradigm, theme, infinitive, origin, suffix){
-		var i = ArrayHelper.findIndex(paradigm, function(el){ return (el.infinitive == infinitive); }),
+		var i = ArrayHelper.findIndex(paradigm, function(el){ return (el.infinitive == this); }, infinitive),
 			parts = extractCommonPartsFromStart(origin, suffix),
 			data = parts.a + '>' + parts.b,
 			re, j, flags;
@@ -1803,7 +1803,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			paradigm.push({theme: theme, infinitive: infinitive, origin: origin, suffixes: [data]});
 		else{
 			re = new RegExp('^' + data.replace(PATTERN_FLAGS, '') + PATTERN_FLAGS.toString().replace(/^\/|\/$/, ''));
-			j = ArrayHelper.findIndex(paradigm[i].suffixes, function(suff){ return suff.match(re); });
+			j = ArrayHelper.findIndex(paradigm[i].suffixes, function(suff){ return suff.match(this); }, re);
 			if(j < 0)
 				paradigm[i].suffixes.push(data);
 			else{

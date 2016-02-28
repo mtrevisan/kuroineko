@@ -134,11 +134,9 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		return i;
 	};*/
 
-	var findIndex = function(array, predicate){
-		for(var i = 0, len = array.length; i < len; i ++)
-			if(predicate.call(array, array[i], i))
-				return i;
-		return -1;
+	var findIndex = function(array, predicate, scope){
+		var idx;
+		return (array.some(function(el, i){ idx = i; return predicate.call(scope || array, el, i); })? idx: -1);
 	};
 
 	/*var forEach = function(array, fn, scope){
@@ -201,10 +199,6 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	 * @return {Array}	Array of unique items.
 	 */
 	var unique = function(){
-		for(var j = 0, argsLength = arguments.length; j < argsLength; j ++)
-			if(!Array.isArray(arguments[j]))
-				return [];
-
 		var arr = Array.prototype.concat.apply([], Array.prototype.slice.call(arguments));
 		return arr.filter(function(el, idx, a){
 			return (a.indexOf(el) == idx);

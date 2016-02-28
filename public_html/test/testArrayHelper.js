@@ -1,6 +1,18 @@
 require(['tools/data/ArrayHelper'], function(ArrayHelper){
 	QUnit.module('ArrayHelper');
 
+	QUnit.test('findIndex - found', function(assert){
+		var result = ArrayHelper.findIndex([1, 2, 3, 4], function(el){ return (el == 2); });
+
+		assert.equal(result, 1);
+	});
+
+	QUnit.test('findIndex - not found', function(assert){
+		var result = ArrayHelper.findIndex([1, 2, 3, 4], function(el){ return (el == 7); });
+
+		assert.equal(result, -1);
+	});
+
 	QUnit.test('intersection', function(assert){
 		var result = ArrayHelper.intersection([1, 2, 3, 4], [7, 6, 5, 4, 3]);
 
@@ -40,11 +52,6 @@ require(['tools/data/ArrayHelper'], function(ArrayHelper){
 		var result = ArrayHelper.unique(['a', 1, 2, 'c', 'b'], [2, 1, 'b', 'd'], ['a']);
 
 		assert.deepEqual(result, ['a', 1, 2, 'c', 'b', 'd']);
-	});
-
-	QUnit.test('unique - should return null/undefined array if source array is null/undefined', function(assert){
-		assert.deepEqual(ArrayHelper.unique(null), []);
-		assert.deepEqual(ArrayHelper.unique(undefined), []);
 	});
 
 	QUnit.test('difference - should keep only items that are present on 1st array but not present on other arrays', function(assert){
