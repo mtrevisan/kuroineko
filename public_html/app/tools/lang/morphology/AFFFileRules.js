@@ -1795,7 +1795,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	/** @private */
 	var insertIntoParadigm = function(paradigm, theme, infinitive, origin, suffix){
-		var i = ArrayHelper.findIndex(paradigm, function(el){ return (el.infinitive == this); }, infinitive),
+		var i = paradigm.findIndex(function(el){ return (el.infinitive == this); }, infinitive),
 			parts = extractCommonPartsFromStart(origin, suffix),
 			data = parts.a + '>' + parts.b,
 			re, j, flags;
@@ -1803,7 +1803,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			paradigm.push({theme: theme, infinitive: infinitive, origin: origin, suffixes: [data]});
 		else{
 			re = new RegExp('^' + data.replace(PATTERN_FLAGS, '') + PATTERN_FLAGS.toString().replace(/^\/|\/$/, ''));
-			j = ArrayHelper.findIndex(paradigm[i].suffixes, function(suff){ return suff.match(this); }, re);
+			j = paradigm[i].suffixes.findIndex(function(suff){ return suff.match(this); }, re);
 			if(j < 0)
 				paradigm[i].suffixes.push(data);
 			else{

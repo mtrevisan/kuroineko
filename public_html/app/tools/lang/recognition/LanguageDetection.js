@@ -383,7 +383,7 @@ define(['tools/lang/recognition/NGrams', 'tools/lang/recognition/Markov', 'tools
 		code.forEach(function(word){
 			if(word[1] != UNKNOWN_LANGUAGE){
 				Object.keys(word[1]).forEach(function(lang){
-					var idx = ArrayHelper.findIndex(recon, function(el){ return (el[0] == lang); });
+					var idx = recon.findIndex(function(el){ return (el[0] == this); }, lang);
 					if(idx >= 0)
 						recon[idx][1] ++;
 					else

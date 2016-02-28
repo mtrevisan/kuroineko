@@ -1,18 +1,6 @@
 require(['tools/data/ArrayHelper'], function(ArrayHelper){
 	QUnit.module('ArrayHelper');
 
-	QUnit.test('findIndex - found', function(assert){
-		var result = ArrayHelper.findIndex([1, 2, 3, 4], function(el){ return (el == 2); });
-
-		assert.equal(result, 1);
-	});
-
-	QUnit.test('findIndex - not found', function(assert){
-		var result = ArrayHelper.findIndex([1, 2, 3, 4], function(el){ return (el == 7); });
-
-		assert.equal(result, -1);
-	});
-
 	QUnit.test('intersection', function(assert){
 		var result = ArrayHelper.intersection([1, 2, 3, 4], [7, 6, 5, 4, 3]);
 
