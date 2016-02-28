@@ -86,7 +86,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		0: [
 			//ajetivi de prima klase
 			//[REDUCTION_RESERVED_0, '[oaie]', 'o>a/' + REDUCTION_RESERVED_1 + '|o', '0>a/' + REDUCTION_RESERVED_1 + '|[^oaie]'],
-			[REDUCTION_RESERVED_0, '[oaie]', 'o>[ae]', 'o>i|[^ij]o', 'io>i', 'jo>i', '0>[oaie]|[^oaie]'],
+			[REDUCTION_RESERVED_0, '[oaie]', 'o>[ae]', 'o>i|[^ij]o', 'io>i', 'jo>i', '0>o/' + INTERROGATIVE_MARK_3_2 + '|[^oaie]'],
 			//ajetivi de sekonda klase
 			//[REDUCTION_RESERVED_1, '[aie]', 'a>e/' + REDUCTION_RESERVED_2 + '|a'],
 			[REDUCTION_RESERVED_1, '[aie]', 'a>[ei]'],
@@ -105,10 +105,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			[INTERROGATIVE_MARK_2S_2, 'u>o', 'tu>stu'],
 			[INTERROGATIVE_MARK_2P, '0>-[uo]'],
 			[INTERROGATIVE_MARK_2P_2, 'u>o'],
-			[INTERROGATIVE_MARK_3, 'a>e-l[oaie]', 'i>e-l[oaie]', '0>-l[oaie]|[^ai]'],
+			[INTERROGATIVE_MARK_3, 'a>e-lo/' + INTERROGATIVE_MARK_3_2, 'i>e-lo/' + INTERROGATIVE_MARK_3_2, '0>-lo/' + INTERROGATIVE_MARK_3_2 + '|[^ai]'],
 			[INTERROGATIVE_MARK_3_2, 'o>[aie]'],
-			//kond. 3a: themeT4 + 'rí[ae]/' + INTERROGATIVE_MARK_3 > 'rise-l[oaie]'
-			[INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE, 'ave>ise-l[oaie]|rave', 'ave>ísel[oaie]|rave']
+			//kond. 3a: themeT4 + 'rí[ae]/' + INTERROGATIVE_MARK_3 > 'rise-lo/' + INTERROGATIVE_MARK_3_2
+			[INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE, 'ave>ise-lo/' + INTERROGATIVE_MARK_3_2 + '|rave', 'ave>íselo/' + INTERROGATIVE_MARK_3_2 + '|rave']
 		]
 	};
 
@@ -116,14 +116,14 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		1: [
 			//[PRONOMENAL_MARK, '0>-l[oaie]', '0>-me/' + PRONOMENAL_MARK_RESERVED_0, '0>-te/' + PRONOMENAL_MARK_RESERVED_0, '0>-ve/' + PRONOMENAL_MARK_RESERVED_0, '0>-se/' + PRONOMENAL_MARK_RESERVED_0, '0>-ge/' + PRONOMENAL_MARK_RESERVED_0, '0>-ne'],
 			//[PRONOMENAL_MARK_RESERVED_0, '0>ne', '0>l[oaie]'],
-			[PRONOMENAL_MARK, '0>-l[oaie]', '0>-[gmstv]e(ne)', '0>-[gmstv]el[oaie]', '0>-ne'],
-			[PRONOMENAL_IMPERATIVE_MARK, '0>-[gmntv]e|[^a]', '0>-l[oaie]|[^a]', 'a>e-[gmntv]e', 'a>e-l[oaie]']
+			[PRONOMENAL_MARK, '0>-lo/' + INTERROGATIVE_MARK_3_2, '0>-[gmstv]e(ne)', '0>-[gmstv]elo/' + INTERROGATIVE_MARK_3_2, '0>-ne'],
+			[PRONOMENAL_IMPERATIVE_MARK, '0>-[gmntv]e|[^a]', '0>-lo/' + INTERROGATIVE_MARK_3_2 + '|[^a]', 'a>e-[gmntv]e', 'a>e-lo/' + INTERROGATIVE_MARK_3_2]
 		],
 		2: [
 			//[PRONOMENAL_MARK_2, '0>l[oaie]', '0>me/' + PRONOMENAL_MARK_RESERVED_1, '0>te/' + PRONOMENAL_MARK_RESERVED_1, '0>ve/' + PRONOMENAL_MARK_RESERVED_1, '0>se/' + PRONOMENAL_MARK_RESERVED_1, '0>ge/' + PRONOMENAL_MARK_RESERVED_1, '0>ne'],
 			//[PRONOMENAL_MARK_RESERVED_1, '0>ne', '0>l[oaie]'],
-			[PRONOMENAL_MARK_2, 'me>l[oaie]', 'me>[gnstv]e', 'mene>mel[oaie]', 'mene>[gstv]ene', 'mene>[gstv]el[oaie]'],
-			[PRONOMENAL_IMPERATIVE_MARK_2, 'me>[gntv]e|[^a]me', 'ame>e[gmntv]e', 'me>l[oaie]|[^a]me', 'ame>el[oaie]']
+			[PRONOMENAL_MARK_2, 'me>lo/' + INTERROGATIVE_MARK_3_2, 'me>[gnstv]e', 'mene>melo/' + INTERROGATIVE_MARK_3_2, 'mene>[gstv]ene', 'mene>[gstv]elo/' + INTERROGATIVE_MARK_3_2],
+			[PRONOMENAL_IMPERATIVE_MARK_2, 'me>[gntv]e|[^a]me', 'ame>e[gmntv]e', 'me>lo/' + INTERROGATIVE_MARK_3_2 + '|[^a]me', 'ame>elo/' + INTERROGATIVE_MARK_3_2]
 		]
 	};
 
