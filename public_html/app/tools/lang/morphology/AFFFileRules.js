@@ -17,11 +17,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	/** @constant */
 		MARKER_FLAGS = '@',
 	/** @constant */
-		PATTERN_FLAGS_WO_CONSTRAINT = new RegExp('(?:\\/([\\d,]+))?([' + MARKER_FLAGS.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + '])?'),
-	/** @constant */
 		PATTERN_FLAGS = new RegExp('(?:\\/([\\d,]+))?([' + MARKER_FLAGS.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + '])?(\\|.+)?$'),
-	/** @constant */
-		PATTERN_ALL = new RegExp('(?:(.+)>)?(.+?)?(?:\\/([\\d,]+))?([' + MARKER_FLAGS.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&') + '])?(?:\\|(.+))?$'),
 	/** @constant */
 		PATTERN_LEAVE_REPLACEMENT = /^.+>|\|.+$/,
 	/** @constant */
