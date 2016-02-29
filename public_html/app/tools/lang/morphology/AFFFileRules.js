@@ -587,19 +587,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	};
 
 	/** @private */
-	var reduceFlags = function(list){
-		var parts = ArrayHelper.partition(list, function(el){ return el.replace(PATTERN_FLAGS_WO_CONSTRAINT, ''); }),
-			flags;
-		return Object.keys(parts).map(function(part){
-			flags = parts[part]
-				.map(extractFlags)
-				.reduce(uniteFlags, {forms: [], markers: [], constraint: ''});
-			var m = part.match(PATTERN_ALL);
-			return (m[1]? m[1] + '>': '') + m[2] + printFlags(flags) + (m[5]? '|' + m[5]: '');
-		});
-	};
-
-	/** @private */
 	var escapeRegExp = function(word){
 		return word.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
 	};
