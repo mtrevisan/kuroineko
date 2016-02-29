@@ -41033,84 +41033,84 @@ SFX A đer ti đer
 SFX A đer to/I đer
 
 SFX B Y 6 # tute le deklinaŧion, ajetivi de prima klase
-SFX B 0 o/S [^aieo]
-SFX B io i io
-SFX B jo i jo
 SFX B o a o
 SFX B o e o
 SFX B o i [^ij]o
+SFX B io i io
+SFX B jo i jo
+SFX B 0 o/S [^aieo]
 
 SFX C Y 2 # ajetivi de sekonda klase
 SFX C a e a
 SFX C a i a
 
 SFX D Y 3 # ajetivi de tèrŧa klase
+SFX D e i e
 SFX D 0 e [^aieo]
 SFX D 0 i [^aieo]
-SFX D e i e
 
 SFX E Y 17 # vèrbi prokonplementari
 SFX E 0 -ge
-SFX E 0 -gelo/S
 SFX E 0 -gene
+SFX E 0 -gelo/S
 SFX E 0 -lo/S
 SFX E 0 -me
-SFX E 0 -melo/S
 SFX E 0 -mene
+SFX E 0 -melo/S
 SFX E 0 -ne
 SFX E 0 -se
-SFX E 0 -selo/S
 SFX E 0 -sene
+SFX E 0 -selo/S
 SFX E 0 -te
-SFX E 0 -telo/S
 SFX E 0 -tene
+SFX E 0 -telo/S
 SFX E 0 -ve
-SFX E 0 -velo/S
 SFX E 0 -vene
+SFX E 0 -velo/S
 
 SFX F Y 12 # vèrbi prokonplementari
-SFX F 0 -ge [^a]
-SFX F 0 -lo/S [^a]
-SFX F 0 -me [^a]
-SFX F 0 -ne [^a]
-SFX F 0 -te [^a]
-SFX F 0 -ve [^a]
-SFX F a e-ge a
-SFX F a e-lo/S a
 SFX F a e-me a
 SFX F a e-ne a
 SFX F a e-te a
 SFX F a e-ve a
+SFX F a e-ge a
+SFX F a e-lo/S a
+SFX F 0 -me [^a]
+SFX F 0 -ne [^a]
+SFX F 0 -te [^a]
+SFX F 0 -ve [^a]
+SFX F 0 -ge [^a]
+SFX F 0 -lo/S [^a]
 
 SFX G Y 15 # vèrbi prokonplementari
-SFX G me ge me
-SFX G me lo/S me
 SFX G me ne me
 SFX G me se me
 SFX G me te me
 SFX G me ve me
-SFX G mene gelo/S mene
-SFX G mene gene mene
+SFX G me ge me
+SFX G me lo/S me
 SFX G mene melo/S mene
-SFX G mene selo/S mene
 SFX G mene sene mene
-SFX G mene telo/S mene
+SFX G mene selo/S mene
 SFX G mene tene mene
-SFX G mene velo/S mene
+SFX G mene telo/S mene
 SFX G mene vene mene
+SFX G mene velo/S mene
+SFX G mene gene mene
+SFX G mene gelo/S mene
 
 SFX H Y 11 # vèrbi prokonplementari
-SFX H ame ege ame
-SFX H ame elo/S ame
 SFX H ame eme ame
 SFX H ame ene ame
 SFX H ame ete ame
 SFX H ame eve ame
-SFX H me ge [^a]me
-SFX H me lo/S [^a]me
+SFX H ame ege ame
+SFX H ame elo/S ame
 SFX H me ne [^a]me
 SFX H me te [^a]me
 SFX H me ve [^a]me
+SFX H me ge [^a]me
+SFX H me lo/S [^a]me
 
 SFX I Y 60 # sonoriđaŧion konsonanti finali
 SFX I bo p bo
@@ -41180,31 +41180,31 @@ SFX J 0 -mi
 SFX K Y 8 # interogativi
 SFX K mi e nmi
 SFX K mi i nmi
+SFX K mi te nmi
+SFX K mi ti nmi
 SFX K mi ne [^n]mi
 SFX K mi ni [^n]mi
 SFX K mi nte [^n]mi
 SFX K mi nti [^n]mi
-SFX K mi te nmi
-SFX K mi ti nmi
 
 SFX L Y 8 # interogativi
 SFX L 0 -e n
 SFX L 0 -i n
+SFX L 0 -te n
+SFX L 0 -ti n
 SFX L 0 -ne [^n]
 SFX L 0 -ni [^n]
 SFX L 0 -nte [^n]
 SFX L 0 -nti [^n]
-SFX L 0 -te n
-SFX L 0 -ti n
 
 SFX M Y 7 # interogativi
 SFX M i e ni
+SFX M i te ni
+SFX M i ti ni
 SFX M i ne [^n]i
 SFX M i ni [^n]i
 SFX M i nte [^n]i
 SFX M i nti [^n]i
-SFX M i te ni
-SFX M i ti ni
 
 SFX N Y 3 # interogativi
 SFX N 0 -stu
@@ -41212,8 +41212,8 @@ SFX N 0 -to
 SFX N 0 -tu
 
 SFX O Y 2 # interogativi
-SFX O tu stu tu
 SFX O u o u
+SFX O tu stu tu
 
 SFX P Y 2 # interogativi
 SFX P 0 -o
@@ -41223,9 +41223,9 @@ SFX Q Y 1 # interogativi
 SFX Q u o u
 
 SFX R Y 3 # interogativi
-SFX R 0 -lo/S [^ai]
 SFX R a e-lo/S a
 SFX R i e-lo/S i
+SFX R 0 -lo/S [^ai]
 
 SFX S Y 3 # interogativi
 SFX S o a o
@@ -41270,21 +41270,19 @@ SFX V on ói on
 SFX V ul úi ul
 SFX V un úi un
 
-SFX W Y 6 # piante e mistièri
+SFX W Y 4 # piante e mistièri
 SFX W èr ar/B èr
-SFX W dor tor/B [aeiou]dor
-SFX W tor dor/B [aeiou]tor
 SFX W ol òl/B rol
 SFX W ol iòl/B rol
 SFX W ol iol/B rol
 
 SFX X Y 12 # avèrbi
 SFX X 0 mente/Y  [^aeiou]
-SFX X o emente/Y [lu]ento
 SFX X o amente/Y [^t]o
 SFX X o amente/Y [^n]to
 SFX X o amente/Y [^e]nto
 SFX X o amente/Y [^lu]ento
+SFX X o emente/Y [lu]ento
 SFX X 0 mente/Y  [^rln]e
 SFX X e mente/Y  [aeiou]re
 SFX X 0 mente/Y  [^aeiou]re
@@ -41293,8 +41291,8 @@ SFX X e amente/Y one
 SFX X 0 mente/Y  [^o]ne
 
 SFX Y Y 2 # avèrbi
-SFX Y nte n mente
-SFX Y e re  mente
+SFX Y nte n  mente
+SFX Y e re/Y mente
 
 
 # FIXME
