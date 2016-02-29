@@ -346,7 +346,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var re = new RegExp(escapeRegExp(MARKER_FLAGS)),
 			subst, flag, substitution,
 			form, constraint,
-			firstReduction, logs, line, i, m, red;
+			firstReduction, logs, line, i, m;
 		//expand suffixes
 		Object.keys(list).forEach(function(key){
 			if(key != '0')
