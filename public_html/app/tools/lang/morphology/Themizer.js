@@ -413,7 +413,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 			/estra/,
 			/^[flnrst]esta/,
 			/[un]estra/,
-			/[dm]este/,
+			/deste/,
 			/uestu/,
 			/vesti/,
 
