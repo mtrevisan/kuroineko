@@ -198,41 +198,40 @@ var AMDLoader = (function(doc){
 			dependencies = [dependencies];
 
 		//enforce domReady when the img! plugin is required
-		if(!doc.readyState && dependencies.some(function(dep){ return !dep.indexOf('img!'); })){
+		if(!doc.readyState && dependencies.some(function(dep){ return !dep.indexOf('img!'); }))
 			require(['domReady!'], function(){
 				require(dependencies, definition);
 			});
-			return;
-		}
+		else{
+			//console.log('require module' + (dependencies.length? ' with dependencies [' + dependencies.map(function(dep){ return dep.replace(/.+\//, ''); }).join(', ') + ']': '') + ', remains [' + Object.keys(promises).filter(function(k){ return !!resolves[k]; }).map(function(k){ return k.replace(/.+\//, ''); }).join(', ') + ']');
 
-		//console.log('require module' + (dependencies.length? ' with dependencies [' + dependencies.map(function(dep){ return dep.replace(/.+\//, ''); }).join(', ') + ']': '') + ', remains [' + Object.keys(promises).filter(function(k){ return !!resolves[k]; }).map(function(k){ return k.replace(/.+\//, ''); }).join(', ') + ']');
+			if(dependencies.length){
+				//resolve urls
+				dependencies = dependencies.map(normalizeURL);
 
-		if(dependencies.length){
-			//resolve urls
-			dependencies = dependencies.map(normalizeURL);
+				if(definition){
+					var proms = dependencies.map(function(dep){ return getDependencyPromise(dep, failureFn); });
 
-			if(definition){
-				var proms = dependencies.map(function(dep){ return getDependencyPromise(dep, failureFn); });
+					//need to wait for all dependencies to load
+					Promise.all(proms).then(function(result){
+						//remove js! plugins from result
+						result = result.filter(function(res, idx){ return !!dependencies[idx].indexOf('js!'); });
 
-				//need to wait for all dependencies to load
-				Promise.all(proms).then(function(result){
-					//remove js! plugins from result
-					result = result.filter(function(res, idx){ return !!dependencies[idx].indexOf('js!'); });
+						definition.apply(this, result);
+					});
+				}
+				else{
+					var def = definitions[dependencies[0]];
+					if(def)
+						return def;
 
-					definition.apply(this, result);
-				});
+					throw new Error('Module name "' + dependencies[0] + '" has not been loaded yet.');
+				}
 			}
-			else{
-				var def = definitions[dependencies[0]];
-				if(def)
-					return def;
-
-				throw new Error('Module name "' + dependencies[0] + '" has not been loaded yet.');
-			}
+			else
+				//module has no dependencies, run definition now
+				definition.apply(this);
 		}
-		else
-			//module has no dependencies, run definition now
-			definition.apply(this);
 	};
 
 	/** @private */
