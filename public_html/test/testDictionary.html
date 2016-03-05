@@ -29,7 +29,7 @@
 
 			var line, edit,
 				i, j;
-			for(i = dictionary.length - 1; i >= 0; i --){
+			/*for(i = dictionary.length - 1; i >= 0; i --){
 				line = dictionary[i];
 				for(j = i - 1; j >= 0; j --){
 					edit = StringDistance.damerauLevenshteinEdit(line, dictionary[j]);
@@ -45,7 +45,11 @@
 					}
 				if(line.indexOf('|') >= 0)
 					console.log(line);
-			}
+			}/**/
+			dictionary.forEach(function(word){
+				if(word.match(/[éó][^aeiou]+[aeiou]?$/))
+					console.log(word);
+			});
 			console.log('time taken:   ' + ((new Date()).getTime() - start) + ' ms');
 		});
 	</script>

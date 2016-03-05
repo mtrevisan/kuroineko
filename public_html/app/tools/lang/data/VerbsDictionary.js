@@ -76,6 +76,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "arđer",			"in",			1,	0,	"g",	"1821",			"Defénder ko arđeri.",
 "arđen",			"",			1,	0,	"g",	"", 				"",
 "arđin",			"",			1,	0,	"g",	"", 				"",
+"arđiñ",			"",			1,	0,	"g",	"1980", 			"",
 "aren",			"",			1,	2,	"a",	"1867",			"",
 "argoment",		"",			1,	5,	"a",	"1568",			"",
 "argu",			"",			4,	4,	"a",	"1348",			"",
