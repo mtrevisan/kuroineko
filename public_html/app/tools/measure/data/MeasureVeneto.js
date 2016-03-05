@@ -87,6 +87,25 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 	})();
 
 	/** @private */
+	var addCommonPlaceLength = function(places){
+		places['Roigo'] = /^(Badía Polèxine|Lendinara)$/;
+		places['Verona'] = /^(Kaldièro|San Bonifaco|San Martin Bon Albèrgo|Soave)$/;
+		places['Viŧenŧa'] = /^(Arxiñan|Axiago|Kamixan viŧentin|Lonigo|Montebèl|Rekoaro|Skio|Thiène)$/;
+	};
+
+	/** @private */
+	var reducePlace = function(places, place){
+		Object.keys(places).some(function(p){
+			if(place.match(places[p])){
+				place = p;
+				return true;
+			}
+			return false;
+		});
+		return place;
+	};
+
+	/** @private */
 	var reducePlaceLengthEarthIndustrial = (function(){
 		var places = {
 			'Trevixo': /^(Àxol|Céneda|Kastelfranko|Kuèr|Meduna de Livenŧa|Mèstre|Mòta de Livenŧa|Trè Pòrti|Trevixo \((ŧità|kanpaña)\))$/,
@@ -242,25 +261,6 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 		return FunctionHelper.curry(reducePlace, [places]);
 	})();
 
-	/** @private */
-	var addCommonPlaceLength = function(places){
-		places['Roigo'] = /^(Badía Polèxine|Lendinara)$/;
-		places['Verona'] = /^(Kaldièro|San Bonifaco|San Martin Bon Albèrgo|Soave)$/;
-		places['Viŧenŧa'] = /^(Arxiñan|Axiago|Kamixan viŧentin|Lonigo|Montebèl|Rekoaro|Skio|Thiène)$/;
-	};
-
-	/** @private */
-	var reducePlace = function(places, place){
-		Object.keys(places).some(function(p){
-			if(place.match(places[p])){
-				place = p;
-				return true;
-			}
-			return false;
-		});
-		return place;
-	};
-
 
 	var getMeasureAreaEarth = function(place){
 		place = reducePlaceAreaEarth(place);
@@ -358,6 +358,13 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 			return m;
 		};
 	})();
+
+	/** @private */
+	var addCommonPlaceVolume = function(places){
+		places['Pàdoa'] = /^(Dòlo|Ŧitadèla)$/;
+		places['Verona'] = /^(Kaldièro|San Bonifaco|San Martin Bon Albèrgo|Soave)$/;
+		places['Viŧenŧa'] = /^(Arxiñan|Axiago|Kamixan viŧentin|Lonigo|Montebèl|Rekoaro|Skio|Thiène)$/;
+	};
 
 	/** @private */
 	var reducePlaceVolumeDry = (function(){
@@ -502,13 +509,6 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 
 		return FunctionHelper.curry(reducePlace, [places]);
 	})();
-
-	/** @private */
-	var addCommonPlaceVolume = function(places){
-		places['Pàdoa'] = /^(Dòlo|Ŧitadèla)$/;
-		places['Verona'] = /^(Kaldièro|San Bonifaco|San Martin Bon Albèrgo|Soave)$/;
-		places['Viŧenŧa'] = /^(Arxiñan|Axiago|Kamixan viŧentin|Lonigo|Montebèl|Rekoaro|Skio|Thiène)$/;
-	};
 
 
 	var getMeasureWeightHeavy = (function(){
