@@ -265,6 +265,7 @@ var AMDLoader = (function(doc){
 				var args = id.split('!');
 				if(args.length < 2){
 					//check if this id belongs to a module loaded with js! plugin
+					//(this is to avoid potential loops)
 					if(doc.currentScript && doc.currentScript.src && promises['js!' + getCurrentID(/\.js$/)])
 						return;
 
