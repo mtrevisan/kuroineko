@@ -18,13 +18,36 @@
 		};
 
 
-		require(['tools/lang/recognition/NGrams', 'tools/data/ArrayHelper', 'text!tools/spellchecker/corpus.txt'], function(NGrams, ArrayHelper, corpus){
-			var words = ArrayHelper.unique(NGrams.tokenize(corpus).sort());
-			words = words.filter(function(word){ return !word.match(/^-|-$|^\d+$/); });
+		require(['tools/data/StringDistance', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.dic'], function(StringDistance, dictionary){
+			var start = (new Date()).getTime();
 
-			console.log(JSON.stringify(words));
+			dictionary = dictionary.split('\r\n')
+				.filter(function(line){ return (line[0] != '/'); })
+				.map(function(line){ return line.replace(/[\t\/].+$/, ''); })
+				.filter(function(word){ return (word.length > 1); });
+			dictionary.shift();
+
+			var line, edit,
+				i, j;
+			for(i = dictionary.length - 1; i >= 0; i --){
+				line = dictionary[i];
+				for(j = i - 1; j >= 0; j --){
+					edit = StringDistance.damerauLevenshteinEdit(line, dictionary[j]);
+					if(edit.distance == 1 && edit.insertions == 1
+							|| edit.distance == 1 && edit.deletions == 1
+							|| edit.distance == 0.5 && edit.substitutions == 0.5
+							|| edit.distance == 0.7 && edit.transpositions == 0.7){
+						line += ' | ' + dictionary[j];
+
+						dictionary.splice(j, 1);
+						i --;
+						}
+					}
+				if(line.indexOf('|') >= 0)
+					console.log(line);
+			}
+			console.log('time taken:   ' + ((new Date()).getTime() - start) + ' ms');
 		});
-
 	</script>
 </head>
 

@@ -2626,6 +2626,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "liber",			"de",			1,	1,	"a",	"1276",			"",
 "libr",			"ekui",		1,	1,	"a",	"1867",			"",
 "libr",			"skui",		1,	1,	"a",	"1852",			"",
+"líd",			"e",			1,	1,	"a",	"1980",			"",
 "liđ",			"para",		1,	1,	"a",	"1867",			"",
 "liev",			"re",			1,	2,	"g",	"1867",			"Rexultar.",
 "lièđ",			"x",			3,	2,	"g",	"1560",			"Lèđer.",
