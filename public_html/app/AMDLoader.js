@@ -57,11 +57,11 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var plugins = {
-		base: function(url, id, failure){
+		base: function(url){
 			injectScript({
 				src: url,
 				async: true
-			}, undefined, failure);
+			});
 		},
 
 		domReady: function(url, id){
@@ -79,16 +79,16 @@ var AMDLoader = (function(doc){
 			}, 0);
 		},
 
-		js: function(url, id, failure){
+		js: function(url, id){
 			injectScript({
 				src: url,
 				async: true
 			}, function(){
 				resolve(id);
-			}, failure);
+			});
 		},
 
-		css: function(url, id, failure){
+		css: function(url, id){
 			injectElement('link', {
 				href: url + '.css',
 				type: 'text/css',
@@ -98,32 +98,37 @@ var AMDLoader = (function(doc){
 				setTimeout(function(){
 					resolve(id);
 				}, 50);
-			}, failure);
+			});
 		},
 
-		text: function(url, id, failure){
+		text: function(url, id){
 			requestFile('text', {
 				url: url
 			}, function(text){
 				resolve(id, text);
-			}, failure);
+			}, failureFn);
 		},
 
-		uint8: function(url, id, failure){
+		uint8: function(url, id){
 			requestFile('arraybuffer', {
 				url: url
 			}, function(array){
 				resolve(id, array);
-			}, failure);
+			}, failureFn);
 		},
 
-		img: function(url, id, failure){
+		img: function(url, id){
 			injectImage({
 				src: url
 			}, function(el){
 				resolve(id, el);
-			}, failure);
+			});
 		}
+	};
+
+	/** @private */
+	var failureFn = function(err){
+		console.warn(err);
 	};
 
 	/** @private */
@@ -210,7 +215,7 @@ var AMDLoader = (function(doc){
 				dependencies = dependencies.map(normalizeURL);
 
 				if(definition){
-					var proms = dependencies.map(function(dep){ return getDependencyPromise(dep, failureFn); });
+					var proms = dependencies.map(getDependencyPromise);
 
 					//need to wait for all dependencies to load
 					Promise.all(proms).then(function(result){
@@ -234,11 +239,6 @@ var AMDLoader = (function(doc){
 		}
 	};
 
-	/** @private */
-	var failureFn = function(err){
-		console.warn(err);
-	};
-
 	var existFile = function(url, success, failure){
 		requestFile('text', {url: addJSExtension(normalizeURL(url))}, success, failure);
 	};
@@ -255,7 +255,7 @@ var AMDLoader = (function(doc){
 	};
 
 	/** @private */
-	var getDependencyPromise = function(id, failure){
+	var getDependencyPromise = function(id){
 		id = addJSExtension(id);
 
 		if(!promises[id])
@@ -272,7 +272,7 @@ var AMDLoader = (function(doc){
 					args.unshift('base');
 				}
 
-				plugins[args[0]](args[1], id, failure);
+				plugins[args[0]](args[1], id);
 			});
 
 		return promises[id];
@@ -356,19 +356,19 @@ var AMDLoader = (function(doc){
 	};
 
 	/** @private */
-	var injectScript = function(module, success, failure){
+	var injectScript = function(module, success){
 		//actually, we don't even need to set this at all
 		//module.type = 'text/javascript';
 		module.charset = module.charset || 'UTF-8';
 
-		injectElement('script', module, success, failure);
+		injectElement('script', module, success);
 	};
 
 	/** @private */
 	var injectElement = (function(){
 		var head = (doc.head || doc.getElementsByTagName('head')[0]);
 
-		return function(tagName, module, success, failure){
+		return function(tagName, module, success){
 			var el = doc.createElement(tagName);
 
 			el.onload = function(e){
@@ -390,9 +390,9 @@ var AMDLoader = (function(doc){
 
 				//some browsers send an event, others send a string, but none of them send anything useful, so just say we failed
 				var errorText = 'Syntax or http error loading: ' + (module.src || module.href);
-				failure && failure(new Error(errorText));
+				failureFn(new Error(errorText));
 
-				//if(!failure)
+				//if(!failureFn)
 				//	throw errorText;
 			};
 
@@ -407,7 +407,7 @@ var AMDLoader = (function(doc){
 	})();
 
 	/** @private */
-	var injectImage = function(module, success, failure){
+	var injectImage = function(module, success){
 		var el = doc.createElement('img');
 		//should not be visible during load
 		el.style.display = 'none';
@@ -434,9 +434,9 @@ var AMDLoader = (function(doc){
 
 			//some browsers send an event, others send a string, but none of them send anything useful, so just say we failed
 			var errorText = 'Syntax or http error loading: ' + module.src;
-			failure && failure(new Error(errorText));
+			failureFn(new Error(errorText));
 
-			//if(!failure)
+			//if(!failureFn)
 			//	throw errorText;
 		};
 
