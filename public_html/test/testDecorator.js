@@ -17,7 +17,7 @@ require(['tools/data/Decorator'], function(Decorator){
 					done();
 				}
 			};
-		});
+		})();
 
 		obj = Decorator.decorate(obj, 'test', function(input){
 			this.__super__.test(input);
