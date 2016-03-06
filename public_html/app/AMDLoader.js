@@ -299,11 +299,10 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var normalizeURL = function(id){
-		//turns a plugin!url to [id, url]
-		id = id.match(/(.+!)?(.*)/);
-		var url = id[2],
+		var parts = splitPrefix(id),
+			url = parts[1],
 			cfg, path;
-		id = id[1] || '';
+		id = parts[0];
 
 		if(url){
 			cfg = (AMDLoader || {}).config || {};
@@ -322,6 +321,12 @@ var AMDLoader = (function(doc){
 		}
 
 		return id + url;
+	};
+
+	/** Turns a plugin!resource to [plugin, resource] with the plugin being undefined if the name did not have a plugin prefix */
+	var splitPrefix = function(name){
+		name = name.match(/(.+!)?(.*)/);
+		return [name[1] || '', name[2]];
 	};
 
 	/** @private */
