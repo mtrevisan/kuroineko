@@ -30,7 +30,7 @@ var Initializer = (function(){
 				});*/
 
 				var common = function(reqs){
-					require(reqs, function(){
+					require(reqs || [], function(){
 						commonRequires && commonRequires();
 
 						require(['tools/social/MailHelper'], function(MailHelper){
@@ -38,7 +38,7 @@ var Initializer = (function(){
 						});
 					});
 				};
-				existFile('all.min', function(){ common(['js!all.min']); }, function(){ common([]); });
+				existFile('all.min', function(){ common(['js!all.min']); }, function(){ common(); });
 			};
 
 			var insertPoint = document.getElementById('bootstrap-js');
