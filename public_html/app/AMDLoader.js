@@ -307,9 +307,11 @@ var AMDLoader = (function(doc){
 
 		if(url){
 			cfg = (AMDLoader || {}).config || {};
+
 			path = (cfg.paths || {})[url.split('/')[0]];
 			if(path)
-				url = url.replace(/^.*(?=\/)/, path);
+				url = url.replace(/^.*?(?=\/)/, path);
+
 			//if a colon is in the URL, it indicates a protocol is used and it is just an URL to a file, or if it starts with a slash, contains a query arg (i.e. ?)
 			//or ends with .js, then assume the user meant to use an url and not a module id (the slash is important for protocol-less URLs as well as full paths)
 			if(id.length || !url.match(/^\/|[:?]|\.js$/)){
