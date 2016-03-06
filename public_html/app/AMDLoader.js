@@ -393,7 +393,7 @@ var AMDLoader = (function(doc){
 				failureFn(new Error(errorText));
 
 				//if(!failureFn)
-				//	throw errorText;
+				//	throw new Error(errorText);
 			};
 
 			Object.keys(module).forEach(function(key){
@@ -437,7 +437,7 @@ var AMDLoader = (function(doc){
 			failureFn(new Error(errorText));
 
 			//if(!failureFn)
-			//	throw errorText;
+			//	throw new Error(errorText);
 		};
 
 		//NOTE: this requires domReady!
@@ -463,7 +463,7 @@ var AMDLoader = (function(doc){
 					failure && failure(new Error(errorText));
 
 					if(!failure)
-						throw errorText;
+						throw new Error(errorText);
 				}
 			}
 		};
@@ -493,6 +493,7 @@ var AMDLoader = (function(doc){
 	return {
 		define: define,
 		require: require,
+
 		existFile: existFile
 	};
 
