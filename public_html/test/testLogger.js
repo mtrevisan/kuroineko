@@ -2,8 +2,8 @@ require(['tools/logging/Logger'], function(Logger){
 	QUnit.module('Logger');
 
 	QUnit.test('should returns the same instance', function(assert){
-		var logger1 = new Logger('bla');
-		var logger2 = new Logger('bla');
+		var logger1 = new Logger('bla 1');
+		var logger2 = new Logger('bla 1');
 
 		assert.equal(logger1, logger2);
 	});
@@ -11,7 +11,7 @@ require(['tools/logging/Logger'], function(Logger){
 	QUnit.test('should call intercept', function(assert){
 		QUnit.expect(5);
 
-		var logger = new Logger('bla 3', {
+		var logger = new Logger('bla 2', {
 			showTime: false,
 			out: function(){}
 		});
@@ -29,11 +29,11 @@ require(['tools/logging/Logger'], function(Logger){
 	});
 
 	QUnit.test('should pipe', function(assert){
-		var logger1 = new Logger('bla 1', {
+		var logger1 = new Logger('bla 3', {
 			showTime: false,
 			out: function(){}
 		});
-		var logger2 = new Logger('bla 2', {
+		var logger2 = new Logger('bla 4', {
 			showTime: false,
 			out: function(){}
 		});
@@ -50,14 +50,14 @@ require(['tools/logging/Logger'], function(Logger){
 	});
 
 	QUnit.test('should geminate', function(assert){
-		var logger1 = new Logger('bla');
+		var logger1 = new Logger('bla 5');
 		var logger2 = logger1.geminate();
 
 		assert.notEqual(logger1, logger2);
 	});
 
 	QUnit.test('should log', function(assert){
-		var logger = new Logger('bla 2', {
+		var logger = new Logger('bla 6', {
 			showTime: false,
 			out: function(){}
 		});
@@ -70,7 +70,7 @@ require(['tools/logging/Logger'], function(Logger){
 	});
 
 	QUnit.test('should log with setted level', function(assert){
-		var logger = new Logger('bla 3', {
+		var logger = new Logger('bla 7', {
 			showTime: false,
 			out: function(message){
 				assert.equal(message, '[INFO]  message');
@@ -94,7 +94,7 @@ require(['tools/logging/Logger'], function(Logger){
 	});
 
 	QUnit.test('should log error', function(assert){
-		var logger = new Logger('bla 4', {
+		var logger = new Logger('bla 8', {
 			showTime: false,
 			out: function(){}
 		});
