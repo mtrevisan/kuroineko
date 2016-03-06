@@ -38,7 +38,7 @@ var Initializer = (function(){
 						});
 					});
 				};
-				existFile('all.min', function(){ common(['js!all.min', 'domReady!']); }, function(){ common(['domReady!']); });
+				existFile('all.min', function(){ common(['js!all.min']); }, function(){ common([]); });
 			};
 
 			var insertPoint = document.getElementById('bootstrap-js');

@@ -47,6 +47,7 @@ var AMDLoader = (function(doc){
 	var promises = {},
 		resolves = {},
 		definitions = {},
+		loader = new Map(),
 		tree;
 
 
@@ -65,15 +66,21 @@ var AMDLoader = (function(doc){
 		},
 
 		domReady: function(url, id){
+			var common = function(){
+				resolve(id);
+
+				loadDependencies();
+			};
+
 			setTimeout(function(){
 				if(doc.readyState)
-					resolve(id);
+					common();
 				else{
 					var oldOnload = window.onload;
 					window.onload = function(){
 						oldOnload && oldOnload();
 
-						resolve(id);
+						common();
 					};
 				}
 			}, 0);
@@ -142,6 +149,9 @@ var AMDLoader = (function(doc){
 
 		definitions[id] = value;
 
+		//check to see if current file is to be called for loading, if so, remove it since it is already loaded in the current file
+		loader.delete(id);
+
 		//console.log('resolved module ' + id.replace(/.+\//, '') + ', remains [' + Object.keys(promises).filter(function(k){ return !!resolves[k]; }).map(function(k){ return k.replace(/.+\//, ''); }).join(', ') + ']');
 	};
 
@@ -201,42 +211,37 @@ var AMDLoader = (function(doc){
 		}
 		else if(!Array.isArray(dependencies))
 			dependencies = [dependencies];
+		//enforce domReady
+		dependencies.unshift('domReady!');
 
-		//enforce domReady when the img! plugin is required
-		if(!doc.readyState && dependencies.some(function(dep){ return !dep.indexOf('img!'); }))
-			require(['domReady!'], function(){
-				require(dependencies, definition);
-			});
-		else{
-			//console.log('require module' + (dependencies.length? ' with dependencies [' + dependencies.map(function(dep){ return dep.replace(/.+\//, ''); }).join(', ') + ']': '') + ', remains [' + Object.keys(promises).filter(function(k){ return !!resolves[k]; }).map(function(k){ return k.replace(/.+\//, ''); }).join(', ') + ']');
+		//console.log('require module' + (dependencies.length? ' with dependencies [' + dependencies.map(function(dep){ return dep.replace(/.+\//, ''); }).join(', ') + ']': '') + ', remains [' + Object.keys(promises).filter(function(k){ return !!resolves[k]; }).map(function(k){ return k.replace(/.+\//, ''); }).join(', ') + ']');
 
-			if(dependencies.length){
-				//resolve urls
-				dependencies = dependencies.map(normalizeURL);
+//		if(dependencies.length){
+			//resolve urls
+			dependencies = dependencies.map(normalizeURL);
 
-				if(definition){
-					var proms = dependencies.map(getDependencyPromise);
+			if(definition){
+				var proms = dependencies.map(getDependencyPromise);
 
-					//need to wait for all dependencies to load
-					Promise.all(proms).then(function(result){
-						//remove js! plugins from result
-						result = result.filter(function(res, idx){ return !!dependencies[idx].indexOf('js!'); });
+				//need to wait for all dependencies to load
+				Promise.all(proms).then(function(result){
+					//remove js! plugins from result
+					result = result.filter(function(res, idx){ return (res && !!this[idx].indexOf('js!')); }, dependencies);
 
-						definition.apply(this, result);
-					});
-				}
-				else{
-					var def = definitions[dependencies[0]];
-					if(def)
-						return def;
-
-					throw new Error('Module name "' + dependencies[0] + '" has not been loaded yet.');
-				}
+					definition.apply(this, result);
+				});
 			}
-			else
-				//module has no dependencies, run definition now
-				definition.apply(this);
-		}
+			else{
+				var def = definitions[dependencies[0]];
+				if(def)
+					return def;
+
+				throw new Error('Module name "' + dependencies[0] + '" has not been loaded yet.');
+			}
+//		}
+//		else
+			//module has no dependencies, run definition now
+//			definition.apply(this);
 	};
 
 	var existFile = function(url, success, failure){
@@ -272,7 +277,11 @@ var AMDLoader = (function(doc){
 					args.unshift('base');
 				}
 
-				plugins[args[0]](args[1], id);
+				//defer loading javascript dependencies at the loading of the current js file
+				if(args[0] == 'base')
+					loader.set(id, args[1]);
+				else
+					plugins[args[0]](args[1], id);
 			});
 
 		return promises[id];
@@ -377,6 +386,8 @@ var AMDLoader = (function(doc){
 					//release event listeners
 					el.onload = el.onerror = undefined;
 
+					loadDependencies();
+
 					success && success();
 				}
 			};
@@ -463,6 +474,15 @@ var AMDLoader = (function(doc){
 		};
 
 		xhr.send(null);
+	};
+
+	/** @private */
+	var loadDependencies = function(){
+		setTimeout(function(){
+			//when all the current file is loaded, load all the (remaining) dependencies
+			loader.forEach(plugins.base);
+			loader.clear();
+		}, 0);
 	};
 
 
