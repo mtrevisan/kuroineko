@@ -307,7 +307,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			},
 		];
 
-		return function(verbs, infinitiveThemes, theme, originTheme, flags, k){
+		return function(verbs, infinitiveThemes, theme, originTheme){
 			var paradigm = [],
 				origins = [],
 				fun = themeFuncts[theme],
