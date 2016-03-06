@@ -391,9 +391,6 @@ var AMDLoader = (function(doc){
 				//some browsers send an event, others send a string, but none of them send anything useful, so just say we failed
 				var errorText = 'Syntax or http error loading: ' + (module.src || module.href);
 				failureFn(new Error(errorText));
-
-				//if(!failureFn)
-				//	throw new Error(errorText);
 			};
 
 			Object.keys(module).forEach(function(key){
@@ -435,9 +432,6 @@ var AMDLoader = (function(doc){
 			//some browsers send an event, others send a string, but none of them send anything useful, so just say we failed
 			var errorText = 'Syntax or http error loading: ' + module.src;
 			failureFn(new Error(errorText));
-
-			//if(!failureFn)
-			//	throw new Error(errorText);
 		};
 
 		//NOTE: this requires domReady!
@@ -459,11 +453,11 @@ var AMDLoader = (function(doc){
 				if(xhr.status == 200)
 					success && success(!responseType.length || responseType == 'text'? xhr.responseText: new Uint8Array(xhr.response));
 				else{
-					var errorText = 'Syntax or http error loading: ' + module.url + ', status: ' + xhr.status + ' ' + xhr.statusText;
-					failure && failure(new Error(errorText));
-
-					if(!failure)
-						throw new Error(errorText);
+					var err = new Error('Syntax or http error loading: ' + module.url + ', status: ' + xhr.status + ' ' + xhr.statusText);
+					if(failure)
+						failure(err);
+					else
+						throw err;
 				}
 			}
 		};
