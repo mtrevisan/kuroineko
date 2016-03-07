@@ -60,7 +60,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ankor",			"",			1,	0,	"g",	"1867",			"",
 "ans",			"",			1,	0,	"g",	"1852",			"Respirar ko afano.",
 "ansim",			"",			1,	0,	"g",	"XVII",			"Respirar ko afano.",
-"ansin",			"",			1,	3,	"a",	"1821",			"Kolpir ko on ansin.",
+"anŧin",			"",			1,	3,	"a",	"1821",			"Kolpir ko on anŧin.",
 "apalt",			"",			1,	2,	"g",	"1821",			"",
 "apalt",			"sub",		1,	2,	"g",	"1980",			"",
 "apokop",		"",			1,	2,	"g",	"1980",			"",

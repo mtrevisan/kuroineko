@@ -140,10 +140,9 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var resolve = function(id, value){
-		if(!resolves[id])
-			promises[id] = new Promise(function(res){
-				resolves[id] = res;
-			});
+		promises[id] = promises[id] || new Promise(function(res){
+			resolves[id] = res;
+		});
 		resolves[id](value);
 		resolves[id] = null;
 
@@ -263,26 +262,25 @@ var AMDLoader = (function(doc){
 	var getDependencyPromise = function(id){
 		id = addJSExtension(id);
 
-		if(!promises[id])
-			promises[id] = new Promise(function(res){
-				resolves[id] = res;
+		promises[id] = promises[id] || new Promise(function(res){
+			resolves[id] = res;
 
-				var args = id.split('!');
-				if(args.length < 2){
-					//check if this id belongs to a module loaded with js! plugin
-					//(this is to avoid potential loops)
-					if(doc.currentScript && doc.currentScript.src && promises['js!' + getCurrentID(/\.js$/)])
-						return;
+			var args = id.split('!');
+			if(args.length < 2){
+				//check if this id belongs to a module loaded with js! plugin
+				//(this is to avoid potential loops)
+				if(doc.currentScript && doc.currentScript.src && promises['js!' + getCurrentID(/\.js$/)])
+					return;
 
-					args.unshift('base');
-				}
+				args.unshift('base');
+			}
 
-				//defer loading javascript dependencies at the loading of the current js file
-				if(args[0] == 'base')
-					loader.set(id, args[1]);
-				else
-					plugins[args[0]](args[1], id);
-			});
+			//defer loading javascript dependencies at the loading of the current js file
+			if(args[0] == 'base')
+				loader.set(id, args[1]);
+			else
+				plugins[args[0]](args[1], id);
+		});
 
 		return promises[id];
 	};
@@ -294,7 +292,7 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var addJSExtension = function(value){
-		return (!value.match(/\.min$/) && value.match(/\.[^.\/]+$/)? value: value + '.js');
+		return (/*!value.match(/\.min$/) &&*/ value.match(/\.[^./]+$/)? value: value + '.js');
 	};
 
 	/** @private */
@@ -313,11 +311,9 @@ var AMDLoader = (function(doc){
 
 			//if a colon is in the URL, it indicates a protocol is used and it is just an URL to a file, or if it starts with a slash, contains a query arg (i.e. ?)
 			//or ends with .js, then assume the user meant to use an url and not a module id (the slash is important for protocol-less URLs as well as full paths)
-			if(id.length || !url.match(/^\/|[:?]|\.js$/)){
+			if(id.length || !url.match(/^\/|[:?]|\.js$/))
 				url = compactURL((cfg.baseUrl || '') + '/' + url)
-					+ (url.indexOf('?') < 0? '?': '&') + (cfg.urlArgs || '');
-				url = url.replace(/^\/|[?&]$/g, '');
-			}
+					+ ((url.indexOf('?') < 0? '?': '&') + (cfg.urlArgs || '')).replace(/^\/|[?&]$/g, '');
 		}
 
 		return id + url;
@@ -331,15 +327,14 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var compactURL = function(path){
-		var result = [],
-			lastSegment;
-		path.split(/\/+/).forEach(function(segment){
-			if(segment == '..' && result.length && lastSegment != segment)
-				result.pop();
-			else if(segment != '.')
-				result.push(lastSegment = segment);
-			//else ignore '.'
-		});
+		var result = [];
+		path.replace(/(^|\/)\.\//g, '/').split(/\/+/)
+			.forEach(function(segment){
+				if(segment == '..' && result.length)
+					result.pop();
+				else
+					result.push(segment);
+			});
 		return result.join('/');
 	};
 
@@ -352,23 +347,14 @@ var AMDLoader = (function(doc){
 	 * @private
 	 */
 	var extractDependencies = function(fn){
-		if(isFunction(fn)){
-			fn = fn.toString();
-
-			//remove any /* */ comments in the function body (because they can occur in the parameters)
-			fn = fn.replace(/\/\*[^(?:\*\/)]+\*\//g, '');
-			//extract the dependencies
-			fn = fn.match(/function ?\(([^\)]*)\)/)[1];
-			//split and trim them, return an array
-			if(fn){
-				var base = getCurrentID().replace(/(?!\/)[^/]+$/, '');
-				return fn.split(',').map(function(dependency){
-					return base + dependency.trim();
-				});
-			}
-		}
-
-		return [];
+		//	- remove any /* */ comments in the function body (because they can occur in the parameters)
+		//	- extract the dependencies
+		//	- split and trim them, return an array
+		return  (fn? fn.toString().replace(/\/\*.*?\*\//g, '').match(/^function ?\((.*?)\)$/)[1].split(',')
+			.filter(Boolean)
+			.map(function(dependency){
+				return this + dependency.trim();
+			}, getCurrentID().replace(/(?!\/)[^/]+$/, '')): []);
 	};
 
 	/** @private */
@@ -386,12 +372,16 @@ var AMDLoader = (function(doc){
 
 		return function(tagName, module, success){
 			var el = doc.createElement(tagName);
+			Object.keys(module).forEach(function(key){
+				el[key] = module[key];
+				//alternative code:
+//				el.setAttribute(key, module[key]);
+			});
 
 			el.onload = function(e){
 				//detect when it's done loading
 				if(e.type == 'load'){
-					//release event listeners
-					el.onload = el.onerror = undefined;
+					releaseEventListeners(el);
 
 					loadDependencies();
 
@@ -407,15 +397,8 @@ var AMDLoader = (function(doc){
 				//injectElement(tagName, module, success, failure);
 
 				//some browsers send an event, others send a string, but none of them send anything useful, so just say we failed
-				var errorText = 'Syntax or http error loading: ' + (module.src || module.href);
-				failureFn(new Error(errorText));
+				failureFn(new Error('Syntax or http error loading: ' + (module.src || module.href)));
 			};
-
-			Object.keys(module).forEach(function(key){
-				el[key] = module[key];
-				//alternative code:
-//				el.setAttribute(key, module[key]);
-			});
 
 			head.appendChild(el);
 		};
@@ -430,8 +413,7 @@ var AMDLoader = (function(doc){
 		el.onload = function(e){
 			//detect when it's done loading
 			if(e.type == 'load'){
-				//release event listeners
-				el.onload = el.onerror = undefined;
+				releaseEventListeners(el);
 
 				//must show before calculating dimensions
 				el.style.display = '';
@@ -448,8 +430,7 @@ var AMDLoader = (function(doc){
 			doc.body.removeChild(el);
 
 			//some browsers send an event, others send a string, but none of them send anything useful, so just say we failed
-			var errorText = 'Syntax or http error loading: ' + module.src;
-			failureFn(new Error(errorText));
+			failureFn(new Error('Syntax or http error loading: ' + module.src));
 		};
 
 		//NOTE: this requires domReady!
@@ -460,12 +441,16 @@ var AMDLoader = (function(doc){
 	};
 
 	/** @private */
+	var releaseEventListeners = function(el){
+		el.onload = el.onerror = undefined;
+	};
+
+	/** @private */
 	var requestFile = function(responseType, module, success, failure){
 		var xhr = new XMLHttpRequest();
 		xhr.open('GET', module.url, true);
 		xhr.responseType = responseType;
-		if(xhr.overrideMimeType)
-			xhr.overrideMimeType('text/plain; charset=' + (module.charset || 'UTF-8'));
+		xhr.overrideMimeType && xhr.overrideMimeType('text/plain; charset=' + (module.charset || 'UTF-8'));
 		xhr.onreadystatechange = function(){
 			if(xhr.readyState == 4){
 				if(xhr.status == 200)
@@ -495,17 +480,16 @@ var AMDLoader = (function(doc){
 
 	/** @private*/
 	(function(){
-		var bootScriptAttr = 'data-load',
+		var deps = ['../../app/tools/data/structs/Tarjan'],
+			bootScriptAttr = 'data-load',
 			bootScript = doc.currentScript.getAttribute(bootScriptAttr);
 		if(bootScript){
-			doc.currentScript.removeAttribute(bootScriptAttr);
+			deps.push(bootScript);
 
-			injectScript({
-				src: bootScript
-			});
+			doc.currentScript.removeAttribute(bootScriptAttr);
 		}
 
-		require(['../../app/tools/data/structs/Tarjan'], function(Tarjan){
+		deps.length && require(deps, function(Tarjan){
 			tree = new Tarjan();
 		});
 	})();
