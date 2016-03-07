@@ -480,18 +480,20 @@ var AMDLoader = (function(doc){
 
 	/** @private*/
 	(function(){
-		var deps = ['../../app/tools/data/structs/Tarjan'],
-			bootScriptAttr = 'data-load',
+		var tarjanFile = '/app/tools/data/structs/Tarjan';
+		existFile(tarjanFile, function(){
+			require(tarjanFile, function(Tarjan){
+				tree = new Tarjan();
+			});
+		});
+
+		var bootScriptAttr = 'data-load',
 			bootScript = doc.currentScript.getAttribute(bootScriptAttr);
 		if(bootScript){
-			deps.push(bootScript);
-
 			doc.currentScript.removeAttribute(bootScriptAttr);
-		}
 
-		deps.length && require(deps, function(Tarjan){
-			tree = new Tarjan();
-		});
+			require(bootScript);
+		}
 	})();
 
 
