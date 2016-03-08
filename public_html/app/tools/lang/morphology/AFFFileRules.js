@@ -82,7 +82,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		0: [
 			//ajetivi de prima klase
 			//[REDUCTION_RESERVED_0, '[oaie]', 'o>a/' + REDUCTION_RESERVED_1 + '|o', '0>a/' + REDUCTION_RESERVED_1 + '|[^oaie]'],
-			[REDUCTION_RESERVED_0, '[oaie]', 'o>[ae]', 'o>i|[^ij]o', 'io>i', 'jo>i', '0>o/' + INTERROGATIVE_MARK_3_2 + '|[^oaie]'],
+			[REDUCTION_RESERVED_0, '[oaie]', 'o>[ae]', 'o>i|[^ij]o', 'io>i', 'jo>i', '0>[oaie]|[^oaie]'],
 			//ajetivi de sekonda klase
 			//[REDUCTION_RESERVED_1, '[aie]', 'a>e/' + REDUCTION_RESERVED_2 + '|a'],
 			[REDUCTION_RESERVED_1, '[aie]', 'a>[ei]'],
@@ -161,7 +161,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	//dict: pomèr/PLANTS_AND_CRAFTS, barkarol/PLANTS_AND_CRAFTS, sartor/PLANTS_AND_CRAFTS, kolador/PLANTS_AND_CRAFTS
 	var plantsAndCrafts = {
 		1: [
-			[PLANTS_AND_CRAFTS, 'èr>ar/' + REDUCTION_RESERVED_0, 'ol>iol/' + REDUCTION_RESERVED_0 + '|rol', 'ol>(i)òl/' + REDUCTION_RESERVED_0 + '|rol']
+			[PLANTS_AND_CRAFTS, 'èr>ar', 'èr>ar[oaie]', 'ol>iol|rol', 'ol>iol[oaie]|rol', 'ol>(i)òl|rol', 'ol>(i)òl[oaie]|rol']
 		]
 	};
 

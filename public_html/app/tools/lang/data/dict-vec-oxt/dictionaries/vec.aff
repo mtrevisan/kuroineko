@@ -1,8 +1,8 @@
 # Diŧionario vèneto
 #
-# Hunspell affix file
+# Venetam hunspell affix file
 # Copyright (C) 2016 Màuro Trevixan
-# Version 1.0.0 (28/01/2016) (DD/MM/YYYY)
+# Version 1.0.0 (08/03/2016) (DD/MM/YYYY)
 #
 # This file is distributed under GPL license.
 #
@@ -24,7 +24,7 @@
 
 
 NAME Diŧionario vèneto
-VERSION 1.0.0 (30/01/2016)
+VERSION 1.0.0 (08/03/2016)
 HOME http://parnodexmentegar.orgfree.com/
 LANG vec
 
@@ -71,7 +71,7 @@ ICONV nh ñ
 ICONV th ŧ
 
 # frequently switched character groups
-REP 24
+REP 27
 REP ^' ‘
 REP ^’ ‘
 REP '$ ’
@@ -89,18 +89,21 @@ REP d  đ # đ[aàeèéiíoòóuú]>d.
 REP x  đ
 REP j  ɉ
 REP ɉ  j
+REP l  ƚ
 REP ƚ  l
 REP li j # li[aàeèéiíoòóuú]>j.
 REP s  ŧ # sion([aeio])$>ŧion(.), [aeiou](n)s(i)[aeio]$>.(n)ŧ(i).
 REP ti c # ti[aàeèéiíoòóuú]>c.
 REP di ɉ # di[aàeèéiíoòóuú]>ɉ.
 REP ^v ‘ # ^v[aàeèéiíoòóuú]>‘.
+REP ^‘ v
 REP ^g ‘ # ^g[aàeèéiíoòóuú]>‘.
+REP ^‘ g
 # REP [aàeèéiíoòóuú]v[aàeèéiíoòóuú]>..
 # REP [aàeèéiíoòóuú]d[aàeèéiíoòóuú]>..
 # REP [aàeèéiíoòóuú][aàeèéiíoòóuú]>.v.
 # REP [aàeèéiíoòóuú][aàeèéiíoòóuú]>.d.
-# REP ’[eèéaàoòóiínrlƚtskdpvmuúgxfŧbjɉñđch]>’_
+# REP ’[eèéaàoòóiínrlƚtskdpvmuúgxfŧbjɉñđch]>’_.
 
 
 # avoid wrong spelling of letterwords in full uppercase/lowercase
@@ -41032,13 +41035,16 @@ SFX A đer te đer
 SFX A đer ti đer
 SFX A đer to/I đer
 
-SFX B Y 6 # tute le deklinaŧion, ajetivi de prima klase
+SFX B Y 9 # tute le deklinaŧion, ajetivi de prima klase
 SFX B o a o
 SFX B o e o
 SFX B o i [^ij]o
 SFX B io i io
 SFX B jo i jo
-SFX B 0 o/S [^aieo]
+SFX B 0 o [^aieo]
+SFX B 0 a [^aieo]
+SFX B 0 i [^aieo]
+SFX B 0 e [^aieo]
 
 SFX C Y 2 # ajetivi de sekonda klase
 SFX C a e a
@@ -41270,11 +41276,27 @@ SFX V on ói on
 SFX V ul úi ul
 SFX V un úi un
 
-SFX W Y 4 # piante e mistièri
-SFX W èr ar/B èr
-SFX W ol òl/B rol
-SFX W ol iòl/B rol
-SFX W ol iol/B rol
+SFX W Y 20 # piante e mistièri
+SFX W èr ar èr
+SFX W èr aro èr
+SFX W èr ara èr
+SFX W èr ari èr
+SFX W èr are èr
+SFX W ol òl rol
+SFX W ol òlo rol
+SFX W ol òla rol
+SFX W ol òli rol
+SFX W ol òle rol
+SFX W ol iòl rol
+SFX W ol iòlo rol
+SFX W ol iòla rol
+SFX W ol iòli rol
+SFX W ol iòle rol
+SFX W ol iol rol
+SFX W ol iolo rol
+SFX W ol iola rol
+SFX W ol ioli rol
+SFX W ol iole rol
 
 SFX X Y 12 # avèrbi
 SFX X 0 mente/IY  [^aeiou]
@@ -41292,7 +41314,7 @@ SFX X 0 mente/IY  [^o]ne
 
 SFX Y Y 2 # avèrbi
 SFX Y nte n  mente
-SFX Y e re/Y mente
+SFX Y e re mente
 
 
 # FIXME
@@ -41332,28 +41354,28 @@ SFX Y e re/Y mente
 #SFX & . uko/B
 
 SFX % N 30 # numerali - koletivi
-SFX % èxe    exena/V    èxe
-SFX % èxe    exèna/V    èxe
-SFX % èxe    eŧena/V    èxe
-SFX % ièxe   exena/V    èxe
-SFX % ièxe   exèna/V    èxe
-SFX % ièxe   eŧena/V    èxe
-SFX % úndexe undexena/V úndexe
-SFX % úndexe undexèna/V úndexe
-SFX % ódexe  odexena/V  ódexe
-SFX % ódexe  odexèna/V  ódexe
-SFX % òrdexe ordexena/V òrdexe
-SFX % òrdexe ordexèna/V òrdexe
-SFX % índexe indexena/V índexe
-SFX % índexe indexèna/V índexe
-SFX % édexe  edexena/V  édexe
-SFX % édexe  edexèna/V  édexe
 SFX % ète    etena/V    ète
 SFX % ète    etèna/V    ète
 SFX % òto    otena/V    òto
 SFX % òto    otèna/V    òto
 SFX % e      ena/V      ove
 SFX % e      èna/V      ove
+SFX % èxe    exena/V    èxe
+SFX % èxe    exèna/V    èxe
+SFX % èxe    eŧena/V    èxe
+SFX % ièxe   exena/V    ièxe
+SFX % ièxe   exèna/V    ièxe
+SFX % ièxe   eŧena/V    ièxe
+SFX % úndexe undexena/V úndexe
+SFX % úndexe undexèna/V úndexe
+SFX % ódexe  odexena/V  ódexe
+SFX % ódexe  odexèna/V  ódexe
+SFX % édexe  edexena/V  édexe
+SFX % édexe  edexèna/V  édexe
+SFX % òrdexe ordexena/V òrdexe
+SFX % òrdexe ordexèna/V òrdexe
+SFX % índexe indexena/V índexe
+SFX % índexe indexèna/V índexe
 SFX % i      ena/V      nti
 SFX % i      èna/V      nti
 SFX % a      ena/V      nta
@@ -41362,6 +41384,7 @@ SFX % o      enèr/BW    nto
 SFX % e      èr/BW      mile
 SFX % 0      èr/BW      lion
 SFX % o      èr/BW      liardo
+
 
 SFX £ N 10 # numeraŧion latina
 SFX £ 0 I    [IVXLCDM]
@@ -41438,3 +41461,13 @@ PFX $ 0 MCML   X
 PFX $ 0 MM     [XLC]
 PFX $ 0 MMX    [LC]
 PFX $ 0 MML    X
+
+
+
+#FX d Y 1
+#PFX d 0 stra .
+
+#PFX e Y 1
+#PFX e 0 pre .
+
+#DICT vec IT-34 vec
