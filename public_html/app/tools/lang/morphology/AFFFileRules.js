@@ -87,7 +87,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			//ajetivi de prima klase
 			[REDUCTION_RESERVED_0, '[oaie]', 'o>[ae]', 'o>i|[^ij]o', 'io>i', 'jo>i', '0>[oaie]|[^oaie]'],
 			//ajetivi de sekonda klase
-			[REDUCTION_RESERVED_1, '[aie]', 'a>[ei]'],
+			[REDUCTION_RESERVED_1, '[aie]', '0>[aie]|[^oaie]', 'a>[ei]'],
 			//ajetivi de terŧa klase
 			[REDUCTION_RESERVED_2, '[ei]', 'e>i', '0>[ei]|[^oaie]']
 		]
