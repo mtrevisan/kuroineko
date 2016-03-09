@@ -71,8 +71,9 @@ ICONV nh ñ
 ICONV th ŧ
 
 # frequently switched character groups
-REP 27
+REP 28
 REP ^' ‘
+REP ^' ’
 REP ^’ ‘
 REP '$ ’
 REP ‘$ ’
@@ -41055,68 +41056,116 @@ SFX D e i e
 SFX D 0 e [^aieo]
 SFX D 0 i [^aieo]
 
-SFX E Y 17 # vèrbi prokonplementari
+SFX E Y 35 # vèrbi prokonplementari
 SFX E 0 -ge
 SFX E 0 -gene
-SFX E 0 -gelo/S
-SFX E 0 -lo/S
+SFX E 0 -gelo
+SFX E 0 -gela
+SFX E 0 -geli
+SFX E 0 -gele
+SFX E 0 -lo
+SFX E 0 -la
+SFX E 0 -li
+SFX E 0 -le
 SFX E 0 -me
 SFX E 0 -mene
-SFX E 0 -melo/S
+SFX E 0 -melo
+SFX E 0 -mela
+SFX E 0 -meli
+SFX E 0 -mele
 SFX E 0 -ne
 SFX E 0 -se
 SFX E 0 -sene
-SFX E 0 -selo/S
+SFX E 0 -selo
+SFX E 0 -sela
+SFX E 0 -seli
+SFX E 0 -sele
 SFX E 0 -te
 SFX E 0 -tene
-SFX E 0 -telo/S
+SFX E 0 -telo
+SFX E 0 -tela
+SFX E 0 -teli
+SFX E 0 -tele
 SFX E 0 -ve
 SFX E 0 -vene
-SFX E 0 -velo/S
+SFX E 0 -velo
+SFX E 0 -vela
+SFX E 0 -veli
+SFX E 0 -vele
 
-SFX F Y 12 # vèrbi prokonplementari
+SFX F Y 18 # vèrbi prokonplementari
 SFX F a e-me a
 SFX F a e-ne a
 SFX F a e-te a
 SFX F a e-ve a
 SFX F a e-ge a
-SFX F a e-lo/S a
+SFX F a e-lo a
+SFX F a e-la a
+SFX F a e-li a
+SFX F a e-le a
 SFX F 0 -me [^a]
 SFX F 0 -ne [^a]
 SFX F 0 -te [^a]
 SFX F 0 -ve [^a]
 SFX F 0 -ge [^a]
-SFX F 0 -lo/S [^a]
+SFX F 0 -lo [^a]
+SFX F 0 -la [^a]
+SFX F 0 -li [^a]
+SFX F 0 -le [^a]
 
-SFX G Y 15 # vèrbi prokonplementari
+SFX G Y 33 # vèrbi prokonplementari
 SFX G me ne me
 SFX G me se me
 SFX G me te me
 SFX G me ve me
 SFX G me ge me
-SFX G me lo/S me
-SFX G mene melo/S mene
+SFX G me lo me
+SFX G me la me
+SFX G me li me
+SFX G me le me
+SFX G mene melo mene
+SFX G mene mela mene
+SFX G mene meli mene
+SFX G mene mele mene
 SFX G mene sene mene
-SFX G mene selo/S mene
+SFX G mene selo mene
+SFX G mene sela mene
+SFX G mene seli mene
+SFX G mene sele mene
 SFX G mene tene mene
-SFX G mene telo/S mene
+SFX G mene telo mene
+SFX G mene tela mene
+SFX G mene teli mene
+SFX G mene tele mene
 SFX G mene vene mene
-SFX G mene velo/S mene
+SFX G mene velo mene
+SFX G mene vela mene
+SFX G mene veli mene
+SFX G mene vele mene
 SFX G mene gene mene
-SFX G mene gelo/S mene
+SFX G mene gelo mene
+SFX G mene gela mene
+SFX G mene geli mene
+SFX G mene gele mene
 
-SFX H Y 11 # vèrbi prokonplementari
+SFX H Y 17 # vèrbi prokonplementari
 SFX H ame eme ame
 SFX H ame ene ame
 SFX H ame ete ame
 SFX H ame eve ame
 SFX H ame ege ame
-SFX H ame elo/S ame
+SFX H ame elo ame
+SFX H ame ela ame
+SFX H ame eli ame
+SFX H ame ele ame
 SFX H me ne [^a]me
 SFX H me te [^a]me
 SFX H me ve [^a]me
 SFX H me ge [^a]me
-SFX H me lo/S [^a]me
+SFX H me lo [^a]me
+SFX H me la [^a]me
+SFX H me li [^a]me
+SFX H me le [^a]me
 
 SFX I Y 60 # sonoriđaŧion konsonanti finali
 SFX I bo p bo
@@ -41160,16 +41209,16 @@ SFX I xe s xe
 SFX I xi s xi
 SFX I ño in ño
 SFX I ñe in ñe
-SFX I ñi in ñi
+SFX I ña in ña
 SFX I ño n ño
 SFX I ñe n ñe
-SFX I ñi n ñi
+SFX I ña n ña
 SFX I ño nc ño
 SFX I ñe nc ñe
-SFX I ñi nc ñi
+SFX I ña nc ña
 SFX I ño ñ ño
 SFX I ñe ñ ñe
-SFX I ñi ñ ñi
+SFX I ña ñ ña
 SFX I đo ŧ đo
 SFX I đe ŧ đe
 SFX I đi ŧ đi
@@ -41228,19 +41277,34 @@ SFX P 0 -u
 SFX Q Y 1 # interogativi
 SFX Q u o u
 
-SFX R Y 3 # interogativi
-SFX R a e-lo/S a
-SFX R i e-lo/S i
-SFX R 0 -lo/S [^ai]
+SFX R Y 12 # interogativi
+SFX R a e-lo a
+SFX R a e-la a
+SFX R a e-li a
+SFX R a e-le a
+SFX R i e-lo i
+SFX R i e-la i
+SFX R i e-li i
+SFX R i e-le i
+SFX R 0 -lo [^ai]
+SFX R 0 -la [^ai]
+SFX R 0 -li [^ai]
+SFX R 0 -le [^ai]
 
 SFX S Y 3 # interogativi
 SFX S o a o
 SFX S o e o
 SFX S o i o
 
-SFX T Y 2 # interogativi
-SFX T ave ise-lo/S rave
-SFX T ave íselo/S rave
+SFX T Y 8 # interogativi
+SFX T ave ise-lo rave
+SFX T ave ise-la rave
+SFX T ave ise-li rave
+SFX T ave ise-le rave
+SFX T ave íselo rave
+SFX T ave ísela rave
+SFX T ave íseli rave
+SFX T ave ísele rave
 
 SFX U Y 17 # sostantivi plurali maskili
 SFX U 0 i [^oaie]
