@@ -11,6 +11,19 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		array.length = 0;
 	};*/
 
+	/** Returns an array filled with 'n' copies of 'value' */
+	var repeat = function(value, n){
+		var result = '';
+		while(n > 0){
+			if(n & 1)
+				result += value + ',';
+
+			n >>= 1;
+			value += value + ',';
+		}
+		return result.split(',').map(Number);
+	};
+
 	/**
 	 * Copies the values of `source` to `destination`.
 	 *
@@ -215,6 +228,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 
 	return {
+		repeat: repeat,
 		copy: copy,
 		equals: equals,
 		contains: contains,

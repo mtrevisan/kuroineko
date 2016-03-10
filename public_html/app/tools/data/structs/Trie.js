@@ -45,9 +45,9 @@ define(function(){
 
 	var remove = function(word){
 		var result = this.findPrefix(word),
-			tmp = result.parent.children[result.index];
+			tmp = result.parent.children[result.nextChar];
 		if(tmp && tmp.leaf)
-			result.parent.children[result.index] = undefined;
+			result.parent.children[result.nextChar] = undefined;
 	};
 
 	/** Find the node that correspond to the last character in the string. */
@@ -63,14 +63,15 @@ define(function(){
 
 		return {
 			parent: parent,
-			index: word.charAt(i - 1)
+			index: i - 1,
+			nextChar: word.charAt(i - 1)
 		};
 	};
 
-	/** Search the given string and return <code>true</code> if it lands on on a word, essentially testing if the word exists in the trie. */
+	/** Search the given string and return an object (the same of findPrefix) if it lands on on a word, essentially testing if the word exists in the trie. */
 	var contains = function(word){
 		var tmp = this.findPrefix(word);
-		tmp = (tmp.parent && tmp.parent.children[tmp.index]);
+		tmp = (tmp.parent && tmp.parent.children[tmp.nextChar]);
 		return (tmp && tmp.leaf? tmp: undefined);
 	};
 
@@ -102,7 +103,7 @@ define(function(){
 		var node = this.findPrefix(prefix),
 			//list of words which are lower in the hierarchy with respect to this node
 			list = [];
-		node = node.parent.children[node.index];
+		node = node.parent.children[node.nextChar];
 
 		if(node){
 			var level = [node];
