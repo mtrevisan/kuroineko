@@ -4,7 +4,7 @@
  * @see {@link https://github.com/mnater/Hyphenator/blob/master/Hyphenator.js}
  *
  * @author Mauro Trevisan
- 
+
 Hyphenator.languages['it'] = {
 	leftmin: 2,
 	rightmin: 2,
@@ -26,9 +26,6 @@ define(['tools/data/ArrayHelper', 'tools/data/structs/Trie'], function(ArrayHelp
 
 	var cache = {},
 		trie, trieData,
-		indexedTrie = [],
-		//arrays of 0
-		valueStoreKeys = [],
 		softHyphen = String.fromCharCode(173);
 
 	var enableCache = true;
@@ -79,7 +76,7 @@ define(['tools/data/ArrayHelper', 'tools/data/structs/Trie'], function(ArrayHelp
 			if(String.prototype.normalize)
 				ww = ww.normalize();
 			if(ww.match(/[^-'‘’aàbcdđeéèfghiíjɉklƚmnñoóòprsʃtŧuúvxʒ]/))
-				break;
+				return word;
 
 			var size = ww.length,
 				hyp = [],
