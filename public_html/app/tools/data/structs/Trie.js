@@ -5,7 +5,7 @@
  *
  * @author Mauro Trevisan
  */
-define(function(){
+define(['tools/lang/phonology/Phone'], function(Phone){
 
 	var Constructor = function(){
 		this.reset();
@@ -28,51 +28,68 @@ define(function(){
 	 * @return last node
 	 */
 	var add = function(word){
-		var node = this.root,
-			size = word.length,
-			i;
-		for(i = 0; i < size; i ++){
-			var stem = word.charAt(i);
+		var node = this.root;
+		word = word.match(Phone.REGEX_UNICODE_SPLITTER);
+		word.forEach(function(stem, idx){
 			node = (node.children[stem] = node.children[stem] || {
-				prefix: word.substr(0, i + 1),
+				prefix: word.slice(0, idx + 1).join(''),
 				children: {}
 			});
-		}
+		});
 		node.leaf = true;
 
 		return node;
 	};
 
 	var remove = function(word){
-		var result = this.findPrefix(word),
-			tmp = result.parent.children[result.nextChar];
-		if(tmp && tmp.leaf)
-			result.parent.children[result.nextChar] = undefined;
+		var results = this.findPrefix(word);
+		if(results.length == 1)
+			removeSingle(results[0]);
+	};
+
+	var removeAll = function(word){
+		this.findPrefix(word).forEach(removeSingle);
+	};
+
+	/** @private */
+	var removeSingle = function(pref){
+		if(pref.node && pref.node.leaf){
+			word = word.match(Phone.REGEX_UNICODE_SPLITTER);
+			pref.parent.children[word[word.length - 1]] = undefined;
+		}
 	};
 
 	/** Find the node that correspond to the last character in the string. */
 	var findPrefix = function(word){
-		var parent = null,
-			node = this.root,
-			size = word.length,
-			i;
-		for(i = 0; i < size && node; i ++){
+		var node = this.root,
+			results = [],
+			parent, tmp;
+		word.match(Phone.REGEX_UNICODE_SPLITTER).some(function(stem, idx){
 			parent = node;
-			node = node.children[word.charAt(i)];
-		}
+			tmp = node.children[stem];
+			if(tmp){
+				node = tmp;
 
-		return {
-			parent: parent,
-			index: i - 1,
-			nextChar: word.charAt(i - 1)
-		};
+				if(node.leaf)
+					results.push({
+						node: node,
+						index: idx,
+						parent: (node? parent: undefined)
+					});
+			}
+			return !tmp;
+		});
+		return results;
 	};
 
-	/** Search the given string and return an object (the same of findPrefix) if it lands on on a word, essentially testing if the word exists in the trie. */
+	/** Search the given string and return an object (the same of findPrefix) if it lands on a word, essentially testing if the word exists in the trie. */
 	var contains = function(word){
-		var tmp = this.findPrefix(word);
-		tmp = (tmp.parent && tmp.parent.children[tmp.nextChar]);
-		return (tmp && tmp.leaf? tmp: undefined);
+		var node = this.root;
+		word.match(Phone.REGEX_UNICODE_SPLITTER).some(function(stem){
+			node = node.children[stem];
+			return !node;
+		});
+		return (node && node.leaf);
 	};
 
 	/** Apply a function to each node, traversing the trie in level order. */
@@ -99,25 +116,22 @@ define(function(){
 	 * <code>[a, ab, abc, abd]</code>
 	 */
 	var getWords = function(prefix){
+		//list of words which are lower in the hierarchy with respect to this node
+		var list = [],
+			node, level;
+		this.findPrefix(prefix).forEach(function(pref){
 			//the node which represents the last letter of the prefix
-		var node = this.findPrefix(prefix),
-			//list of words which are lower in the hierarchy with respect to this node
-			list = [];
-		node = node.parent.children[node.nextChar];
-
-		if(node){
-			var level = [node];
+			level = [pref.node];
 			while(level.length){
 				node = level.shift();
 				Object.keys(node.children).forEach(function(i){
 					level.push(node.children[i]);
 				});
 
-				if(node.leaf)
+				if(node.leaf && !node.prefix.indexOf(this))
 					list.push(node.prefix);
 			}
-		}
-
+		}, prefix);
 		return list;
 	};
 
@@ -132,17 +146,17 @@ define(function(){
 	 */
 	var findMatchesOnPath = function(word){
 		var node = this.root,
-			size = word.length,
-			list = [],
-			i;
-		for(i = 0; i < size; i ++){
+			list = [];
+		word = word.match(Phone.REGEX_UNICODE_SPLITTER);
+		word.some(function(stem){
+			node = node.children[stem];
+			if(!node)
+				return true;
+
 			if(node.leaf)
 				list.push(node.prefix);
-
-			var stem = word.charAt(i);
-			node = node.children[stem];
-		}
-
+			return false;
+		});
 		return list;
 	};
 
@@ -154,6 +168,7 @@ define(function(){
 
 		add: add,
 		remove: remove,
+		removeAll: removeAll,
 		findPrefix: findPrefix,
 		contains: contains,
 		apply: apply,

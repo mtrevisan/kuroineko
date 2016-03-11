@@ -102,8 +102,10 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 
 		if(phonematicSyllabation)
 			word = word
-				//s-impure followed by a consonant (word initial or after a vowel)
-				.replace(/(^|[aeiouàèéíòóú])([sxʃʒ])(?=[^jwaeiouàèéíòóú])/, '$1$2' + HYATUS_MARKER);
+				//s-impure (word initial or after a vowel) followed by a consonant
+				//.replace(/(^|[aeiouàèéíòóú])([sxʃʒ])(?=[^jwaeiouàèéíòóú])/, '$1$2' + HYATUS_MARKER);
+				//s-impure (after a vowel) followed by a consonant
+				.replace(/([aeiouàèéíòóú])([sxʃʒ])(?=[^jwaeiouàèéíòóú])/, '$1$2' + HYATUS_MARKER);
 		else
 			word = word
 				//hyatus
