@@ -67,11 +67,7 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 
 
 		var computeSillabicities = function(word){
-			var sillabicities = [];
-			word.forEach(function(chr){
-				sillabicities.push(score[chr]);
-			}, this);
-			return sillabicities;
+			return word.map(function(chr){ return score[chr]; });
 		};
 
 		var storePhone = function(syllabe, phones){

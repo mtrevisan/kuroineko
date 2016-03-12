@@ -94,7 +94,7 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 		var replacement = '$1' + HYATUS_MARKER + '$2';
 
 		word = word
-			//greek digrams (abnegathion, àbside, drakma, tèknika, iks, pnèumo, psikoloxía, aritmètega, etnía)
+			//greek digrams (abnegathion, àbside, drakma, tèknika, iks, tungstèno, pnèumo, psikoloxía, aritmètega, etnía)
 			.replace(/([bkpt])([mns])/g, replacement)
 			.replace(/([mnrjw])([lr])/g, replacement)
 			//.replace(/([mnlrjw])([mnlrjw])/g, replacement)
@@ -103,9 +103,7 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 		if(phonematicSyllabation)
 			word = word
 				//s-impure (word initial or after a vowel) followed by a consonant
-				//.replace(/(^|[aeiouàèéíòóú])([sxʃʒ])(?=[^jwaeiouàèéíòóú])/, '$1$2' + HYATUS_MARKER);
-				//s-impure (after a vowel) followed by a consonant
-				.replace(/([aeiouàèéíòóú])([sxʃʒ])(?=[^jwaeiouàèéíòóú])/, '$1$2' + HYATUS_MARKER);
+				.replace(/(^|[aeiouàèéíòóú])([sxʃʒ])(?=[^jwaeiouàèéíòóú])/, '$1$2' + HYATUS_MARKER);
 		else
 			word = word
 				//hyatus
