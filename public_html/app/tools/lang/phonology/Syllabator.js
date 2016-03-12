@@ -62,9 +62,8 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 			score = {};
 
 		Object.keys(scoreData).forEach(function(value){
-			value = Number(value);
 			scoreData[value].forEach(function(phone){
-				score[phone] = value;
+				score[phone] = Number(value);
 			});
 		});
 
