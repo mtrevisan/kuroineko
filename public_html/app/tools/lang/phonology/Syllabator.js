@@ -169,13 +169,10 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 
 			var lastSillabicity = -1,
 				syllabeStart = 0,
-				len = word.length + 1,
 				nucleus, nucleusSillabicity,
 				syllabes = [], phones = [], nuclei = [], notSyllabeIndexes = [],
-				i, sillabicity, syllabe;
-			for(i = 0; i <= len; i ++){
-				sillabicity = sillabicities[i];
-
+				syllabe;
+			sillabicities.forEach(function(sillabicity, i){
 				//sillabicity starts to decrease, mark nucleus:
 				if(!nucleus && sillabicity < lastSillabicity){
 					nucleus = word[i - 1];
@@ -201,7 +198,7 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 
 				//remember last sillabicity value
 				lastSillabicity = sillabicity;
-			}
+			});
 
 			var result = {
 				stressIndex: stressIndex,
@@ -246,20 +243,19 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 		//process each word separately:
 		var words = [],
 			totalSyllabeCount = 0,
-			word, syll;
-		for(word in textWords.words){
-			word = textWords.words[word];
+			syll;
+		textWords.words.forEach(function(word){
 			if(word.length){
 				syll = syllabate(word, dialect, phonematicSyllabation);
 
 				words.push(syll);
 				totalSyllabeCount += syll.syllabes.length;
 			}
-		}
+		});
 
-		var idx, separators, s;
 		//process the boundary of each word:
-		var size = words.length - 1;
+		var size = words.length - 1,
+			idx, word, separators, s;
 		//for each word (but the last)...
 		for(var k = 0; k < size; k ++){
 			syll = words[k].syllabes;
