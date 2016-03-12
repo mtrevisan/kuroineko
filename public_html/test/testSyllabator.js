@@ -206,4 +206,56 @@ require(['tools/lang/phonology/Syllabator'], function(Syllabator){
 
 		assert.equal(syllabateGraphematicAndJoin('tungstèno'), 'tung-stè-no');
 	});
+
+
+	QUnit.test('graphematic - syllabate text', function(assert){
+		var result = Syllabator.syllabateText('submontano e abnegaŧion, kuando ke se salta', undefined, false);
+
+		assert.equal(result.totalSyllabeCount, 15);
+		assert.deepEqual(result.wordSeparators, ['', ' ', ' ', ', ', ' ', ' ', ' ', '']);
+		assert.equal(result.words.length, 7);
+		var word = result.words[0];
+		assert.notOk(word.hasSyllabationErrors);
+		assert.deepEqual(word.notSyllabeIndexes, []);
+		assert.deepEqual(word.nuclei, ['u', 'o', 'a', 'o']);
+		assert.equal(word.stressIndex, 7);
+		assert.deepEqual(word.syllabes, ['sub', 'mon', 'tà', 'no /']);
+		word = result.words[1];
+		assert.notOk(word.hasSyllabationErrors);
+		assert.deepEqual(word.notSyllabeIndexes, []);
+		assert.deepEqual(word.nuclei, ['e']);
+		assert.equal(word.stressIndex, 0);
+		assert.deepEqual(word.syllabes, ['é /']);
+		word = result.words[2];
+		assert.notOk(word.hasSyllabationErrors);
+		assert.deepEqual(word.notSyllabeIndexes, []);
+		assert.deepEqual(word.nuclei, ['a', 'e', 'a', 'o']);
+		assert.equal(word.stressIndex, 8);
+		assert.deepEqual(word.syllabes, ['ab', 'ne', 'ga', 'ŧión /']);
+		word = result.words[3];
+		assert.notOk(word.hasSyllabationErrors);
+		assert.deepEqual(word.notSyllabeIndexes, []);
+		assert.deepEqual(word.nuclei, ['a', 'o']);
+		assert.equal(word.stressIndex, 2);
+		assert.deepEqual(word.syllabes, ['kuàn', 'do /']);
+		word = result.words[4];
+		assert.notOk(word.hasSyllabationErrors);
+		assert.deepEqual(word.notSyllabeIndexes, []);
+		assert.deepEqual(word.nuclei, ['e']);
+		assert.equal(word.stressIndex, 1);
+		assert.deepEqual(word.syllabes, ['ké /']);
+		word = result.words[5];
+		assert.notOk(word.hasSyllabationErrors);
+		assert.deepEqual(word.notSyllabeIndexes, []);
+		assert.deepEqual(word.nuclei, ['e']);
+		assert.equal(word.stressIndex, 1);
+		assert.deepEqual(word.syllabes, ['sé /']);
+		word = result.words[6];
+		assert.notOk(word.hasSyllabationErrors);
+		assert.deepEqual(word.notSyllabeIndexes, []);
+		assert.deepEqual(word.nuclei, ['a', 'a']);
+		assert.equal(word.stressIndex, 1);
+		assert.deepEqual(word.syllabes, ['sàl', 'ta']);
+		console.log(word);
+	});
 });
