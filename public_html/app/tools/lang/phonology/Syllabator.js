@@ -123,7 +123,7 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 		 * @param {Number} idx	Index of syllabe to extract, if negative then it's relative to the last syllabe.
 		 */
 		var getSyllabe = function(idx){
-			return this.syllabes[(idx + this.syllabes.length) % this.syllabes.length];
+			return this.syllabes[restoreIndex.call(this, idx)];
 		};
 
 		/**
@@ -131,13 +131,16 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 		 * @return {Number} Global index at which the syllabe starts.
 		 */
 		var getGlobalIndex = function(idx){
-			idx = (idx + this.syllabes.length) % this.syllabes.length;
-
 			var len = 0,
 				i;
-			for(i = 0; i < idx; i ++)
+			for(i = restoreIndex.call(this, idx) - 1; i >= 0; i --)
 				len += this.syllabes[i].length;
 			return len;
+		};
+
+		/** @private */
+		var restoreIndex = function(idx){
+			return (idx + this.syllabes.length) % this.syllabes.length;
 		};
 
 		/**
