@@ -8,7 +8,9 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 	/** @constant */
 	var SYLLABE_SEPARATOR_IN_WORD = '|',
 	/** @constant */
-		SYLLABE_SEPARATOR_CROSS_WORD = '/';
+		SYLLABE_SEPARATOR_CROSS_WORD = '/',
+	/** @constant */
+		VOCALIC_GROUP_INDEX = 20;
 
 
 	/**
@@ -48,7 +50,7 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 				//	3) ’ can be 'a' (after 'l'), or 'e' (after 'n')
 				//	4) apostrophes before or after a vowel should be ignored
 				//gruppo vocalico:
-				20: ['\'', '‘', '’'],
+				VOCALIC_GROUP_INDEX: ['\'', '‘', '’'],
 				21: ['i'],
 				22: ['u'],
 				23: ['e'],
@@ -60,8 +62,9 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 			score = {};
 
 		Object.keys(scoreData).forEach(function(value){
+			value = Number(value);
 			scoreData[value].forEach(function(phone){
-				score[phone] = Number(value);
+				score[phone] = value;
 			});
 		});
 
@@ -167,7 +170,7 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 			var sillabicities = computeSillabicities(word);
 			//insert guards
 			sillabicities.push(-1);
-			sillabicities.push(28);
+			sillabicities.push(Object.keys(scoreData).length);
 
 
 			var lastSillabicity = -1,
@@ -186,7 +189,7 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 					syllabe = extractSyllabe(word, syllabeStart, i - 1);
 
 					//check syllabe feasibility
-					if(!phonematicSyllabation && nucleusSillabicity < 20)
+					if(!phonematicSyllabation && nucleusSillabicity < VOCALIC_GROUP_INDEX)
 						notSyllabeIndexes.push(syllabes.length);
 
 					if(phonematicSyllabation)
