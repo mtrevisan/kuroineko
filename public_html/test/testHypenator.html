@@ -59,14 +59,14 @@
 
 			var readPatterns = function(patterns){
 				trie = new Trie();
-				trieData = {};
+				trieData = new Map();
 
-				var cleanPattern;
+				var cleanPattern, node;
 				Object.keys(patterns).forEach(function(length){
 					chunkString(patterns[length], length).forEach(function(pattern){
 						cleanPattern = pattern.replace(/\d/g, '');
-						trie.add(cleanPattern);
-						trieData[cleanPattern] = pattern;
+						node = trie.add(cleanPattern);
+						trieData.set(node, pattern);
 					});
 				}, patterns);
 			};
@@ -107,7 +107,7 @@
 						tmp = ww.substring(i);
 						trie.findPrefix(tmp).forEach(function(pref){
 							j = -1;
-							trieData[pref.node.prefix].split('').forEach(function(d){
+							trieData.get(pref.node).split('').forEach(function(d){
 								d = parseInt(d);
 								if(isNaN(d))
 									j ++;
@@ -140,39 +140,50 @@
 			readPatterns({
 				//aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx
 				2: '1b1c1d1đ1f1g1j1ɉ1k1l1ƚ1m1n1ñ1p1r1t1ŧ1v1x',
-				3: '1s21x2'
+				3: ''
+					//+ '1s21x2'
+					+ 'b2lb2r'
 					+ '2bc2bd2bđ2bf2bg2bj2bɉ2bk2bl2bm2bn2bñ2bp2br2bs2bt2bŧ2bv2bx'
 					+ '2b.2c.2d.2đ.2f.2g.2j.2ɉ.2k.2l.2ƚ.2m.2n.2ñ.2p.2r.4s.2t.2ŧ.2v.2x.'
-					+ 'b2lb2r'
 					+ 'c2lc2r'
-					+ 'd2r'
-					+ '2db2dc2dđ2df2dg2dj2dɉ2dk2dl2dm2dn2dñ2dp2dr2ds2dt2dŧ2dv2dx'
-					+ 'g2kg2r'
+					+ '2cb2cd2cđ2cf2cg2cj2cɉ2ck2cl2cm2cn2cñ2cp2cr2cs2ct2cŧ2cv2cx.c2'
+					+ 'd2ld2r'
+					+ '2db2dc2dđ2df2dg2dj2dɉ2dk2dl2dm2dn2dñ2dp2dr2ds2dt2dŧ2dv2dx.d2'
+					+ '2fb2fc2fd2fđ2fg2fj2fɉ2fk2fl2fm2fn2fñ2fp2fr2fs2ft2fŧ2fv2fx'
+					+ 'f2lf2r'
+					+ 'g2lg2r'
+					+ '2gb2gc2gd2gđ2gf2gj2gɉ2gk2gl2gm2gn2gñ2gp2gr2gs2gt2gŧ2gv2gx'
+					+ 'j2lj2r'
+					+ 'ɉ2lɉ2r'
+					+ '2kb2kc2kd2kđ2kf2kg2kj2kɉ2kl2km2kn2kñ2kp2kr2ks2kt2kŧ2kv2kx.k2'
 					+ 'k2lk2r'
 					+ '2lb2lc2ld2lđ2lg2lj2lɉ2lk2lm2ln2lñ2lp2lr2ls2lt2lŧ2lv2lx'
 					+ '2mb2mc2md2mđ2mf2mg2mj2mɉ2mk2ml2mn2mñ2mp2mr2ms2mt2mŧ2mv2mx'
 					+ '2nb2nc2nd2nđ2nf2ng2nj2nɉ2nk2nl2nm2nñ2np2nr2ns2nt2nŧ2nv2nx'
-					+ 'p2lp2rp2x'
+					+ 'p2lp2r'
+//					+ 'p2x'
+					+ '2pb2pc2pd2pđ2pf2pg2pj2pɉ2pk2pl2pm2pn2pñ2pr2ps2pt2pŧ2pv2px'
 					+ '2rb2rc2rd2rđ2rf2rg2rj2rɉ2rk2rl2rm2rn2rñ2rp2rs2rt2rŧ2rv2rx'
-					+ 't2đt2lt2rt2st2ŧt2x'
+					+ 't2lt2r'
+//					+ 't2đt2st2ŧt2x'
 					+ '2tb2tc2td2tđ2tf2tg2tj2tɉ2tk2tl2tm2tn2tñ2tp2tr2ts2tŧ2tv2tx'
-					+ '2xb2xd2xđ2xg2xj2xɉ2xl2xm2xn2xñ2xr2xs2xŧ2xv'
+					+ 'v2lv2r'
+					+ '2xb2xd2xđ2xg2xj2xɉ2xl2xm2xn2xñ2xr2xs2xŧ2xv.x2'
 					//greek digrams
-					+ 'b1mb1nb1s'
+					/*+ 'b1mb1nb1s'
 					+ 'k1mk1nk1s'
-					//+ 'p1m2pn2ps'
 					+ 't1nt1s'
 					+ 'm1lm1r'
 					+ 'n1ln1r'
-					+ 'r1l',
+					+ 'r1l'*/,
 //			.replace(/([jw])([lr])/g, replacement)
 //			.replace(/([b])([dnt])/g, replacement);
-				4: '1p2n.p2s'
+/*				4: '.p2s'
 					+ '.t3m',
 				5: '2l3f2'
 					+ 'n2g1s',
 				6: '3p2sik',
-				7: '.kà4p3s'
+				7: '.kà4p3s'*/
 
 //				2: 'a1à1ò1è1o1ó1e1é1u1ú1i1í1',
 //				3: 'ò2aò2àè2òè2aè2ào2ío2úo2eo2éo2èo2oo2óo2òo2ao2àe2íe2úe2ee2ée2oe2óe2èe2òe2ae2àé2oé2aé2àu2eu2éu2ou2óu2úu2èu2òu2au2àú2eú2oú2aú2iú2ui2ui2úi2ei2éi2oi2ói2úi2èi2òi2ai2àí2ií2uí2eí2oí2aa2ía2úa2ea2éa2oa2óa2èa2òa2aa2àà2aó2aà2eè2eé2eò2eó2eà2oè2oò2oó2o'
@@ -188,6 +199,7 @@
 //					+ 'i2s.i2x.i2f.i2ŧ.i2v.i2đ.i2c.i2ɉ.i2j.i2p.i2b.i2k.i2g.i2t.i2d.i2m.i2n.i2l.i2r.i2i.i2í.i2u.i2ú.i2e.i2é.i2o.i2ò.i2è.i2ò.i2a.i2à.'
 			});
 			var words = ['kaxa', 'jutar', 'pàuxa', 'piaŧa', 'auguri', 'àuguri', 'poèta', 'paura', 'grant', 'inbrijar', 'autoirònego', 'aŧion', 'èrba', 'saltar', 'lontan', 'finlandia', 'abdegar', 'gronda', 'umlaut', 'injasar', 'àlbaro', 'serpente', 'kospirar', 'kosto', 'kostrénxer', 'despresar', 'bastanŧa', 'destrikar', 'peskar', 'maèstra', 'dexmentegà', 'ciklixmo', 'strako', 'scantixo', 'sfexa', 'stabia', 'stranbo', 'skòpo', 'stabia', 'xbaro', 'xbrigar', 'xbèrla', 'submontano', 'abnegasion', 'àbside', 'drakma', 'tèknika', 'iks', 'etnía', 'pnèumo', 'apnèa', 'ipnoxi', 'psiko', 'biopsía', 'kàpsula', 'tmèxi', 'ritmo', 'aritmètega', 'tungstèno', 'poexía'];
+//words = ['apnèa', 'ipnoxi'];
 			words.forEach(function(word){
 				var hypenatedWord = hypenate(word);
 				var syllabatedWord = syllabatePhonematicAndJoin(word);
