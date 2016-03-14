@@ -41,7 +41,7 @@
 		};
 
 		 */
-		require(['tools/data/ArrayHelper', 'tools/data/structs/Trie', 'tools/lang/phonology/Syllabator'], function(ArrayHelper, Trie, Syllabator){
+		require(['tools/data/structs/Trie', 'tools/lang/phonology/Syllabator', 'tools/lang/phonology/Word'], function(Trie, Syllabator, Word){
 
 			var cache = {},
 				trie, trieData,
@@ -77,6 +77,8 @@
 			};
 
 			var hypenate = function(word){
+				word = Word.markDefaultStress(word);
+
 				var hypenatedWord = '';
 				if(word.indexOf(softHyphen) >= 0)
 					//word already contains &shy; then leave as it is
@@ -186,6 +188,10 @@
 					+ 't2lt2r'
 					+ 'v2lv2r'
 					+ 'í1aí1eí1ií1oí1uú1aú1eú1iú1oú1u'
+				//i1
+				//[aeiou]i2[aeiouàèéíòóú]
+				//[àèéíòóú]i2[aeiou]
+				//i2[^aeiouàèéíòóú] = i2[bcdđfgjɉklƚmnñprstŧvx]
 					+ 'i1ai1ei1oi1ài1èi1éi1òi1óu1au1eu1ou1àu1èu1éu1òu1ó'
 					+ 'a1aa1ea1oa1àa1èa1éa1ía1òa1óa1úe1ae1ee1oe1àe1èe1ée1íe1òe1óe1úo1ao1eo1oo1ào1èo1éo1ío1òo1óo1ú'
 					+ 'à1aè1aé1aò1aó1aà1eè1eé1eò1eó1eà1oè1oé1oò1oó1o',
@@ -616,21 +622,20 @@
 				//pre
 				'prealarme', 'preexame',
 				//diphtongs
-				'viòla', 'indian', 'piòlo', 'lengua', 'kuesto', 'xàino', 'piaxe', 'pien', 'dietro', 'ocai', 'matèria', 'pinguin', 'euròpa', 'piuma', 'foiba'
+				'viòla', 'indian', 'piòlo', 'lengua', 'kuesto', 'xàino', 'piaxe', 'pien', 'dietro', 'ocai', 'matèria', 'pinguin', 'euròpa', 'piuma', 'foiba',
+				//others
+				'abnegathion', 'àbside', 'drakma', 'tèknika', 'iks', 'tungstèno', 'pnèumo', 'psikoloxía', 'aritmètega', 'etnía', 'strako', 'baston'
 			];
 words = ['kaxa', 'jutar', 'pàuxa', 'piaŧa', 'auguri', 'àuguri', 'grant', 'inbrijar', 'autoirònego', 'aŧion', 'saltar',
 	'lontan', 'finlandia', 'gronda', 'injasar', 'serpente', 'kospirar', 'kosto', 'kostrénxer', 'despresar', 'bastanŧa', 'destrikar', 'peskar',
 	'maèstra', 'dexmentegà', 'ciklixmo', 'strako', 'scantixo', 'sfexa', 'stabia', 'stranbo', 'skòpo', 'xbaro', 'xbrigar', 'xbèrla', 'submontano',
 	'abnegasion', 'àbside', 'tèknika', 'iks', 'etnía', 'ipnoxi', 'biopsía', 'ritmo', 'aritmètega', 'tungstèno', 'poexía', 'gas', 'alfa'];
 words = ['maèstro', 'poèta', 'paexe', 'mie', 'buxía', 'siar', 'paura', 'diurno', 'suino'];
-words = ['abnegathion', 'àbside', 'drakma', 'tèknika', 'iks', 'tungstèno', 'pnèumo', 'psikoloxía', 'aritmètega', 'etnía',
-	'strako', 'baston'];/**/
-words = ['baston'];/**/
 			words.forEach(function(word){
 				var hypenatedWord = hypenate(word);
 				var syllabatedWord = syllabatePhonematicAndJoin(word);
 
-				console.log(hypenatedWord + ' / ' + syllabatedWord);
+				console.log('= ' + hypenatedWord + ' / ' + syllabatedWord);
 			});
 		});
 	</script>
