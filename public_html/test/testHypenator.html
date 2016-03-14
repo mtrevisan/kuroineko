@@ -106,6 +106,8 @@
 					for(i = 0; i < size; i ++){
 						tmp = ww.substring(i);
 						trie.findPrefix(tmp).forEach(function(pref){
+							console.log('prefix ' + pref.node.prefix + ', node ' + trieData.get(pref.node));
+
 							j = -1;
 							trieData.get(pref.node).split('').forEach(function(d){
 								d = parseInt(d);
@@ -138,68 +140,492 @@
 
 
 			readPatterns({
-				//aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx
-				2: '1b1c1d1đ1f1g1j1ɉ1k1l1ƚ1m1n1ñ1p1r1t1ŧ1v1x',
-				3: ''
-					//+ '1s21x2'
+				/*2: '1b1c1d1f1g1h1j1k1l1m1n1p1q1r1t1v1w1x1z',
+				3: '2’2e2w2bb2bc2bd2bf2bm2bn2bp2bs2bt2bvb2lb2r2b.2b’2cb2cc2cd2cf2ck2cm2cn2cq2cs2ct2czc2hc2lc2r2c.2c’.c22db2dd2dg2dl2dm2dn2dpd2r2ds2dt2dv2dw2d.2d’.d22fb2fg2ff2fnf2lf2r2fs2ft2f.2f’2gb2gd2gf2ggg2hg2l2gmg2n2gpg2r2gs2gt2gv2gw2gz2g.2g’2hb2hd2hhh2l2hm2hn2hr2hv2h.2h’2j.2j’2kg2kfk2h2kkk2l2kmk2r2ks2kt2k.2k’2lb2lc2ld2lgl2h2lk2ll2lm2ln2lp2lq2lr2ls2lt2lv2lw2lz2l.2mb2mc2mf2ml2mm2mn2mp2mq2mr2ms2mt2mv2mw2m.2m’2nb2nc2nd2nf2ng2nk2nl2nm2nn2np2nq2nr2ns2nt2nv2nz2n.2n’2pdp2hp2l2pn2ppp2r2ps2pt2pz2p.2p’2qq2q.2q’2rb2rc2rd2rfr2h2rg2rk2rl2rm2rn2rp2rq2rr2rs2rt2rv2rx2rw2rz2r.2r’1s22sz4s.2tb2tc2td2tf2tgt2ht2l2tm2tn2tpt2rt2s2tt2tv2twt2z2t.2vcv2lv2r2vv2v.w2h2w.2w’2xb2xc2xf2xh2xm2xp2xt2xw2x.2x’y1i2zb2zd2zl2zn2zp2zt2zs2zv2zz2z.',
+				4: '.p2sa1iaa1iea1ioa1iua1uoa1ya2at.e1iuo1iao1ieo1ioo1iu2chh2chbch2r2chn2l’.2l’’2shm2sh.2sh’2s3s2stb2stc2std2stf2stg2stm2stn2stp2sts2stt2stv4s’.4s’’2tzktz2s2t’.2t’’2v’.2v’’wa2r2w1yy1ou2z’.2z’’.z2',
+				5: '.bio1.pre12gh2t2l3f2n2g3n3p2nes4s3mt2t3s',
+				6: '.a3p2n.anti1.free3.opto1.para1hi3p2n2nheit3p2sicr2t2s32s3p2n3t2sch',
+				7: '.ca4p3s.e2x1eu.narko1.su2b3r.wa2g3n.wel2t1n2s3fer',
+				8: '.contro1.fran2k3.li3p2sa.orto3p2.poli3p2.sha2re3.su2b3lu',
+				9: '.anti3m2n.circu2m1.re1i2scr.tran2s3c.tran2s3d.tran2s3l.tran2s3n.tran2s3p.tran2s3r.tran2s3t',
+				10: '.di2s3cine'/**/
+
+				2: '1b1c1d1đ1f1g1j1ɉ1k1l1ƚ1m1n1ñ1p1r1s1t1ŧ1v1x',
+				3: '.c2.d2.đ2.k2.s2.ŧ2.x2'
+					+ '2b.2bc2bd2bđ2bf2bg2bj2cɉ2bk2bl2bm2bn2bñ2bp2br2bs2bt2bŧ2bv2bx'
+					+ '2c.2cb2cd2cđ2cf2cg2cj2cɉ2ck2cl2cm2cn2cñ2cp2cr2cs2ct2cŧ2cv2cx'
+					+ '2d.2db2dc2dđ2df2dg2dj2dɉ2dk2dl2dm2dn2dñ2dp2dr2ds2dt2dŧ2dv2dx'
+					+ '2đ.2đb2đc2đd2đf2đg2đj2đɉ2đk2đl2đm2đn2đñ2đp2đr2đs2đt2đŧ2đv2đx'
+					+ '2f.2fb2fc2fd2fđ2fg2fj2fɉ2fk2fl2fm2fn2fñ2fp2fr2fs2ft2fŧ2fv2fx'
+					+ '2g.2gb2gc2gd2gđ2gf2gj2gɉ2gk2gl2gm2gn2gñ2gp2gr2gs2gt2gŧ2gv2gx'
+					+ '2j.2jb2jc2jd2jđ2jf2jg2jɉ2jk2jl2jm2jn2jñ2jp2jr2js2jt2jŧ2jv2jx'
+					+ '2ɉ.2ɉb2ɉc2ɉd2ɉđ2ɉf2ɉg2ɉj2ɉk2ɉl2ɉm2ɉn2ɉñ2ɉp2ɉr2ɉs2ɉt2ɉŧ2ɉv2ɉx'
+					+ '2k.2kb2kc2kd2kđ2kf2kg2kj2kɉ2kl2km2kn2kñ2kp2kr2ks2kt2kŧ2kv2kx'
+					+ '2l.2lb2lc2ld2lđ2lf2lg2lj2lɉ2lk2lm2ln2lñ2lp2lr2ls2lt2lŧ2lv2lx'
+					+ '2m.2mb2mc2md2mđ2mf2mg2mj2mɉ2mk2ml2mn2mñ2mp2mr2ms2mt2mŧ2mv2mx'
+					+ '2n.2nb2nc2nd2nđ2nf2ng2nj2nɉ2nk2nl2nm2nñ2np2nr2ns2nt2nŧ2nv2nx'
+					+ '2ñ.2ñb2ñc2ñd2ñđ2ñf2ñg2ñj2ñɉ2ñk2ñl2ñm2ñn2ñp2ñr2ñs2ñt2ñŧ2ñv2ñx'
+					+ '2p.2pb2pc2pd2pđ2pf2pg2pj2pɉ2pk2pl2pm2pn2pñ2pr2ps2pt2pŧ2pv2px'
+					+ '2r.2rb2rc2rd2rđ2rf2rg2rj2rɉ2rk2rl2rm2rn2rñ2rp2rs2rt2rŧ2rv2rx'
+//					+ '4s.2sc2sf2sk2sp2st2sŧ2sx'
+					+ '4s.s2t'
+					+ '2t.2tb2tc2td2tđ2tf2tg2tj2tɉ2tk2tl2tm2tn2tñ2tp2tr2ts2tŧ2tv2tx'
+					+ '2ŧ.2ŧb2ŧc2ŧd2ŧđ2ŧf2ŧg2ŧj2ŧɉ2ŧk2ŧl2ŧm2ŧn2ŧñ2ŧp2ŧr2ŧs2ŧt2ŧv2ŧx'
+					+ '2v.2vb2vc2vd2vđ2vf2vg2vj2vɉ2vk2vl2vm2vn2vñ2vp2vr2vs2vt2vŧ2vx'
+//					+ '4x.2xb2xd2xđ2xg2xj2xɉ2xl2xm2xn2xñ2xr2xs2xv'
 					+ 'b2lb2r'
-					+ '2bc2bd2bđ2bf2bg2bj2bɉ2bk2bl2bm2bn2bñ2bp2br2bs2bt2bŧ2bv2bx'
-					+ '2b.2c.2d.2đ.2f.2g.2j.2ɉ.2k.2l.2ƚ.2m.2n.2ñ.2p.2r.4s.2t.2ŧ.2v.2x.'
 					+ 'c2lc2r'
-					+ '2cb2cd2cđ2cf2cg2cj2cɉ2ck2cl2cm2cn2cñ2cp2cr2cs2ct2cŧ2cv2cx.c2'
 					+ 'd2ld2r'
-					+ '2db2dc2dđ2df2dg2dj2dɉ2dk2dl2dm2dn2dñ2dp2dr2ds2dt2dŧ2dv2dx.d2'
-					+ '2fb2fc2fd2fđ2fg2fj2fɉ2fk2fl2fm2fn2fñ2fp2fr2fs2ft2fŧ2fv2fx'
 					+ 'f2lf2r'
 					+ 'g2lg2r'
-					+ '2gb2gc2gd2gđ2gf2gj2gɉ2gk2gl2gm2gn2gñ2gp2gr2gs2gt2gŧ2gv2gx'
 					+ 'j2lj2r'
 					+ 'ɉ2lɉ2r'
-					+ '2kb2kc2kd2kđ2kf2kg2kj2kɉ2kl2km2kn2kñ2kp2kr2ks2kt2kŧ2kv2kx.k2'
 					+ 'k2lk2r'
-					+ '2lb2lc2ld2lđ2lg2lj2lɉ2lk2lm2ln2lñ2lp2lr2ls2lt2lŧ2lv2lx'
-					+ '2mb2mc2md2mđ2mf2mg2mj2mɉ2mk2ml2mn2mñ2mp2mr2ms2mt2mŧ2mv2mx'
-					+ '2nb2nc2nd2nđ2nf2ng2nj2nɉ2nk2nl2nm2nñ2np2nr2ns2nt2nŧ2nv2nx'
+					+ 'm2n'
 					+ 'p2lp2r'
-//					+ 'p2x'
-					+ '2pb2pc2pd2pđ2pf2pg2pj2pɉ2pk2pl2pm2pn2pñ2pr2ps2pt2pŧ2pv2px'
-					+ '2rb2rc2rd2rđ2rf2rg2rj2rɉ2rk2rl2rm2rn2rñ2rp2rs2rt2rŧ2rv2rx'
 					+ 't2lt2r'
-//					+ 't2đt2st2ŧt2x'
-					+ '2tb2tc2td2tđ2tf2tg2tj2tɉ2tk2tl2tm2tn2tñ2tp2tr2ts2tŧ2tv2tx'
 					+ 'v2lv2r'
-					+ '2xb2xd2xđ2xg2xj2xɉ2xl2xm2xn2xñ2xr2xs2xŧ2xv.x2'
-					//greek digrams
-					/*+ 'b1mb1nb1s'
-					+ 'k1mk1nk1s'
-					+ 't1nt1s'
-					+ 'm1lm1r'
-					+ 'n1ln1r'
-					+ 'r1l'*/,
-//			.replace(/([jw])([lr])/g, replacement)
-//			.replace(/([b])([dnt])/g, replacement);
-/*				4: '.p2s'
-					+ '.t3m',
-				5: '2l3f2'
-					+ 'n2g1s',
-				6: '3p2sik',
-				7: '.kà4p3s'*/
+					+ 'í1aí1eí1ií1oí1uú1aú1eú1iú1oú1u'
+					+ 'i1ai1ei1oi1ài1èi1éi1òi1óu1au1eu1ou1àu1èu1éu1òu1ó'
+					+ 'a1aa1ea1oa1àa1èa1éa1ía1òa1óa1úe1ae1ee1oe1àe1èe1ée1íe1òe1óe1úo1ao1eo1oo1ào1èo1éo1ío1òo1óo1ú'
+					+ 'à1aè1aé1aò1aó1aà1eè1eé1eò1eó1eà1oè1oé1oò1oó1o',
+				4: '.f2t.p2n.p2s.t2m',
+				5: '.bio1.pre12l3f2',
+				6: 'sub3s2.para1.opto1.anti1',
+				7: '.su2b3lkontro1ekstra1',
+				8: '.re1iskr.poli3p2s',
+				9: '.ŧirku2m1.orto3p2n',
+				10: '.ŧirkum3n2.ŧirkum3s2'/**/
 
-//				2: 'a1à1ò1è1o1ó1e1é1u1ú1i1í1',
-//				3: 'ò2aò2àè2òè2aè2ào2ío2úo2eo2éo2èo2oo2óo2òo2ao2àe2íe2úe2ee2ée2oe2óe2èe2òe2ae2àé2oé2aé2àu2eu2éu2ou2óu2úu2èu2òu2au2àú2eú2oú2aú2iú2ui2ui2úi2ei2éi2oi2ói2úi2èi2òi2ai2àí2ií2uí2eí2oí2aa2ía2úa2ea2éa2oa2óa2èa2òa2aa2àà2aó2aà2eè2eé2eò2eó2eà2oè2oò2oó2o'
-//					+ 'b1mk1mp1mt1mb1nk1np1nt1nb1sk1sp1st1s'
-//					+ 'm1ln1lr1lj1lw1lm1rn1rr1rj1rw1r'
-//					+ 'b1db1nb1t',
-//				4: 'a2s.a2x.a2f.a2ŧ.a2v.a2đ.a2c.a2ɉ.a2j.a2p.a2b.a2k.a2g.a2t.a2d.a2m.a2n.a2l.a2r.a2i.a2í.a2u.a2ú.a2e.a2é.a2o.a2ò.a2è.a2ò.a2a.a2à.'
-//					+ 'ò2s.ò2x.ò2f.ò2ŧ.ò2v.ò2đ.ò2c.ò2ɉ.ò2j.ò2p.ò2b.ò2k.ò2g.ò2t.ò2d.ò2m.ò2n.ò2l.ò2r.ò2i.ò2u.ò2e.ò2o.ò2a.'
-//					+ 'è2s.è2x.è2f.è2ŧ.è2v.è2đ.è2c.è2ɉ.è2j.è2p.è2b.è2k.è2g.è2t.è2d.è2m.è2n.è2l.è2r.è2i.è2u.è2e.è2o.è2a.'
-//					+ 'o2s.o2x.o2f.o2ŧ.o2v.o2đ.o2c.o2ɉ.o2j.o2p.o2b.o2k.o2g.o2t.o2d.o2m.o2n.o2l.o2r.o2i.o2í.o2u.o2ú.o2e.o2é.o2o.o2ò.o2è.o2ò.o2a.o2à.'
-//					+ 'e2s.e2x.e2f.e2ŧ.e2v.e2đ.e2c.e2ɉ.e2j.e2p.e2b.e2k.e2g.e2t.e2d.e2m.e2n.e2l.e2r.e2i.e2í.e2u.e2ú.e2e.e2é.e2o.e2ò.e2è.e2ò.e2a.e2à.'
-//					+ 'u2s.u2x.u2f.u2ŧ.u2v.u2đ.u2c.u2ɉ.u2j.u2p.u2b.u2k.u2g.u2t.u2d.u2m.u2n.u2l.u2r.u2i.u2í.u2u.u2ú.u2e.u2é.u2o.u2ò.u2è.u2ò.u2a.u2à.'
-//					+ 'i2s.i2x.i2f.i2ŧ.i2v.i2đ.i2c.i2ɉ.i2j.i2p.i2b.i2k.i2g.i2t.i2d.i2m.i2n.i2l.i2r.i2i.i2í.i2u.i2ú.i2e.i2é.i2o.i2ò.i2è.i2ò.i2a.i2à.'
+				//aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx
+				//greek digrams
+				/*+ 'b1db1mb1nb1sb1t'
+				+ 'k1mk1nk1s'
+				+ 't1nt1s'
+				+ 'm1lm1r'
+				+ 'n1ln1r'
+				+ 'r1l',
+//			.replace(/([jw])([lr])/g, replacement)
+			/[sx]1(?=[^jwaeiouàèéíòóú])/
+			/[aeiouàèéíòóú][sx]1(?=[^jwaeiouàèéíòóú])/ */
 			});
-			var words = ['kaxa', 'jutar', 'pàuxa', 'piaŧa', 'auguri', 'àuguri', 'poèta', 'paura', 'grant', 'inbrijar', 'autoirònego', 'aŧion', 'èrba', 'saltar', 'lontan', 'finlandia', 'abdegar', 'gronda', 'umlaut', 'injasar', 'àlbaro', 'serpente', 'kospirar', 'kosto', 'kostrénxer', 'despresar', 'bastanŧa', 'destrikar', 'peskar', 'maèstra', 'dexmentegà', 'ciklixmo', 'strako', 'scantixo', 'sfexa', 'stabia', 'stranbo', 'skòpo', 'stabia', 'xbaro', 'xbrigar', 'xbèrla', 'submontano', 'abnegasion', 'àbside', 'drakma', 'tèknika', 'iks', 'etnía', 'pnèumo', 'apnèa', 'ipnoxi', 'psiko', 'biopsía', 'kàpsula', 'tmèxi', 'ritmo', 'aritmètega', 'tungstèno', 'poexía'];
-//words = ['apnèa', 'ipnoxi'];
+			var words = [
+				//bc
+				'subcelular',
+				//bd
+				'abdegar',
+				//bđ
+				//bf
+				'subfornidura',
+				//bg
+				//bj
+				//bɉ
+				//bk
+				'subkortegal',
+				//bl
+				'ablativo', 'blandir',
+				//bm
+				'submontan',
+				//bn
+				'subnormal',
+				//bñ
+				//bp
+				'subpolar',
+				//br
+				'abraŧar', 'braŧo',
+				//bs([fo]|[kt]r)
+				'obsoleto', 'subsfèrego', 'subskríver', 'substrato',
+				//bt[or]
+				'subtotal', 'subtropegal',
+				//bŧ
+				//bv
+				'subvéder',
+				//bx
+
+				//db
+				//dc
+				//dđ
+				//df
+				//dg
+				//dj
+				//dɉ
+				//dk
+				//dl
+				//dm
+				'kadmio',
+				//dn
+				'ekidna',
+				//dñ
+				//dp
+				//dr
+				'dreŧar', 'adria',
+				//ds
+				'feldspato',
+				//dt
+				//dŧ
+				//dv
+				'advokaŧion',
+				//dx
+
+				//fb
+				//fc
+				//fd
+				//fđ
+				//fg
+				'afgan',
+				//fj
+				//fɉ
+				//fk
+				//fl
+				'fluido', 'reflèso',
+				//fm
+				//fn
+				'afnio',
+				//fñ
+				//fp
+				//fr
+				'fruto', 'xafran',
+				//fs
+				//ft
+				'afta', 'ftàlego',
+				//fŧ
+				//fv
+				//fx
+
+				//gb
+				//gc
+				//gd
+				'amígdala',
+				//gđ
+				//gf
+				'stagflaŧion',
+				//gj
+				//gɉ
+				//gk
+				//gl
+				'glòria', 'kúgluf',
+				//gm
+				'dògma',
+				//gn
+				//gñ
+				//gp
+				//gr
+				'grado', 'negro',
+				//ngs(tr?)?
+				'tungsteno', 'angstrom',
+				//gt
+				//gŧ
+				//gv
+				//gx
+
+				//kb
+				'ekbòlego',
+				//kc
+				//kd
+				'ekdèmego',
+				//kđ
+				//kf
+				//kg
+				//kj
+				//kɉ
+				//kl
+				'biŧikleta', 'klàsego',
+				//km
+				'drakma',
+				//kn
+				'akne',
+				//kñ
+				//kp
+				//kr
+				'krea', 'sakro',
+				//ks
+				'fuksia',
+				//kt
+				'ektòpego',
+				//kŧ
+				//kv
+				//kx
+
+				//lb
+				'àlbaro',
+				//lc
+				'alcon',
+				//ld
+				'aldir',
+				//lđ
+				'vòlđer',
+				//lf
+				'talfiada', 'fenolftaleina',
+				//lg
+				'alguaro',
+				//lj
+				'induljentar',
+				//lɉ
+				'nervalɉía',
+				//lk
+				'palko',
+				//lm
+				'kalmo',
+				//ln
+				'malnutrío',
+				//lñ
+				//lp
+				'alpi',
+				//lr
+				'malriesío',
+				//ls
+				'malsan',
+				//lt
+				'alto',
+				//lŧ
+				'xmalŧar',
+				//lv
+				'malva',
+				//lx
+				'bolxèr',
+
+				//mb
+				//mc
+				//md
+				//mđ
+				//mf
+				//mg
+				//mj
+				//mɉ
+				//mk
+				//ml
+				'umlaut',
+				//mn
+				'amnexía', 'mnèxi', 'ŧirkumnavegar', 'ŧirkumnavegador', 'ŧirkumnavigaŧion',
+				//mñ
+				//mp
+				'ŧirkumpadano', 'ŧirkumpolar',
+				//mr
+				//ms
+				'ŧirkumstelar',
+				//mt
+				'fèmto',
+				//mŧ
+				//mv
+				'ŧirkumvexuvian',
+				//mx
+
+				//nb
+				'kanbio',
+				//nc
+				'mincon',
+				//nd
+				'mondo',
+				//nđ
+				'mónđar',
+				//nf
+				'onfegar',
+				//ng
+				'óngaro',
+				//nj
+				//nɉ
+				'konɉedar',
+				//nk
+				'bianko',
+				//nl
+				'inluamar',
+				//nm
+				'inmanegar',
+				//nñ
+				//np
+				'inpakar', 'inprontar', 'lanpar',
+				//nr
+				'manrovèrso',
+				//ns
+				'riensir', 'stransir',
+				//nt
+				'santan',
+				//nŧ
+				'sapienŧa',
+				//nv
+				'skonveñir',
+				//nx
+				'skonxurar',
+
+				//pb
+				//pc
+				//pd
+				//pđ
+				//pf
+				//pg
+				//pj
+				//pɉ
+				//pk
+				//pl
+				'plaka', 'reoplano',
+				//pm
+				//pn
+				'apnèa', 'pnèumo', 'polipnèa', 'ortopnèa', 'ortopnòika',
+				//pñ
+				//pr
+				'prova', 'inprontar',
+				//ps
+				'psiko', 'asèpsi', 'polipsònio', 'kàpsula',
+				//pt
+				'adèpto',
+				//pŧ
+				//pv
+				//px
+
+				//rb
+				'èrba',
+				//rc
+				'percepisio',
+				//rd
+				'pèrdar',
+				//rđ
+				'skovèrđer',
+				//rf
+				'serfojaro',
+				//rg
+				'serurgo',
+				//rj
+				'xmarjasada',
+				//rɉ
+				'sperɉurar',
+				//rk
+				'sporkar',
+				//rl
+				'stangerlon',
+				//rm
+				'sterminar',
+				//rn
+				'stornar',
+				//rñ
+				'gorñal',
+				//rp
+				'skarpa',
+				//rs
+				'bituarse',
+				//rt
+				'abortir',
+				//rŧ
+				'arŧon',
+				//rv
+				'servir',
+				//rx
+				'garxar',
+
+				//sc
+				'scòna',
+				//sf
+				'sfogo',
+				//sk
+				'skala', 'tanaska', 'reiskríver',
+				//sp
+				'spèco', 'vèspa',
+				//st
+				'vestir', 'astro', 'stómego', 'strafanto',
+				//sŧ
+				//sx
+
+				//tb
+				//tc
+				//td
+				//tđ
+				//tf
+				//tg
+				//tj
+				//tɉ
+				//tk
+				'sotkòŧ',
+				//tl
+				//tm
+				'tmèxi', 'algoritmo',
+				//tn
+				'ètniko',
+				//tñ
+				//tp
+				//tr
+				'trapano', 'arto', 'artrite',
+				//ts
+				//tŧ
+				//tv
+				//tx
+
+				//vb
+				//vc
+				//vd
+				//vđ
+				//vf
+				//vg
+				//vj
+				//vɉ
+				//vk
+				//vl
+				//vm
+				//vn
+				//vñ
+				//vp
+				//vr
+				'manòvra',
+				//vs
+				//vt
+				//vŧ
+				//vx
+
+				//xb
+				'xbaketar', 'cixbar',
+				//xc
+				//xd
+				'kaxdrafo',
+				//xđ
+				//xf
+				//xg
+				'xgajo',
+				//xj
+				//xɉ
+				'xɉansar',
+				//xk
+				//xl
+				'xlaka', 'buxlar',
+				//xm
+				'egoixmo',
+				//xn
+				'maxnada', 'xnegar',
+				//xñ
+				'xñakar', 'orexñaŧa',
+				//xp
+				//xr
+				'xraɉonar',
+				//xs
+				//xt
+				//xŧ
+				//xv
+				'xvodar',
+
+				//kontro
+				'kontroexenpio', 'kontroindikar',
+				//ekstra
+				'ekstra', 'ekstrasolar', 'ekstraeuropèo', 'ekstrauterin', 'ekstraospedalièr',
+				//para
+				'parabankario', 'paraetimolòxego', 'paraòci', 'paraurti',
+				//òpto
+				'optoeletrònego', 'optografía',
+				//anti
+				'antilèrxego', 'antiatòmego',
+				//pne
+				'dispnèa', 'dispnòiko',
+				//bio
+				'biolòxego', 'bioastronàuta', 'bioelètrego', 'bioenerxía',
+				//pre
+				'prealarme', 'preexame',
+				//diphtongs
+				'viòla', 'indian', 'piòlo', 'lengua', 'kuesto', 'xàino', 'piaxe', 'pien', 'dietro', 'ocai', 'matèria', 'pinguin', 'euròpa', 'piuma', 'foiba'
+			];
+words = ['kaxa', 'jutar', 'pàuxa', 'piaŧa', 'auguri', 'àuguri', 'grant', 'inbrijar', 'autoirònego', 'aŧion', 'saltar',
+	'lontan', 'finlandia', 'gronda', 'injasar', 'serpente', 'kospirar', 'kosto', 'kostrénxer', 'despresar', 'bastanŧa', 'destrikar', 'peskar',
+	'maèstra', 'dexmentegà', 'ciklixmo', 'strako', 'scantixo', 'sfexa', 'stabia', 'stranbo', 'skòpo', 'xbaro', 'xbrigar', 'xbèrla', 'submontano',
+	'abnegasion', 'àbside', 'tèknika', 'iks', 'etnía', 'ipnoxi', 'biopsía', 'ritmo', 'aritmètega', 'tungstèno', 'poexía', 'gas', 'alfa'];
+words = ['maèstro', 'poèta', 'paexe', 'mie', 'buxía', 'siar', 'paura', 'diurno', 'suino'];
+words = ['abnegathion', 'àbside', 'drakma', 'tèknika', 'iks', 'tungstèno', 'pnèumo', 'psikoloxía', 'aritmètega', 'etnía',
+	'strako', 'baston'];/**/
+words = ['baston'];/**/
 			words.forEach(function(word){
 				var hypenatedWord = hypenate(word);
 				var syllabatedWord = syllabatePhonematicAndJoin(word);

@@ -34,8 +34,8 @@ define(function(){
 		//correct fh occurrences into f not before vowel
 			.replace(/fh(?=[^aeiouàèéíòóú])/g, 'f')
 		//correct x occurrences into s prior to c, f, k, p, t
-		//correct s occurrences into x prior to m, n, ñ, b, d, g, ɉ, s, v, r, l
-			.replace(/x(?=[cfkpt])/g, 's').replace(/s(?=([mnñbdgɉsvrl]|jh))/g, 'x')
+		//correct s occurrences into x prior to m, n, ñ, b, d, g, j, ɉ, s, v, r, l
+			.replace(/x(?=[cfkpt])/g, 's').replace(/s(?=([mnñbdgjɉsvrl]|jh))/g, 'x')
 
 		//correct morphologic error
 			.replace(/([cjñ])i([aeiou])/, '$1$2')
