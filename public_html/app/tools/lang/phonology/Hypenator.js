@@ -6,7 +6,7 @@
 define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, Word){
 
 		/** @constant */
-	var INVALID_WORD_REGEX = /[^-'‘’aàbcdđeéèfghiíjɉklƚmnñoóòprsʃtŧuúvxʒ.]/,
+	var INVALID_WORD_REGEX = /[^-'‘’aàbcdđeéèfghiíjɉklƚmnñoóòprsʃtŧuúvxʒ]/,
 		/** @constant */
 		WORD_BOUNDARY = '.',
 		/** @constant */
