@@ -81,14 +81,14 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 						else if(!hyp[i + j] || d > hyp[i + j])
 							hyp[i + j] = d;
 					});
-				});
+				}, this);
 			}
 
 			//create hyphenated word
 			var maxLength = word.length - this.config.rightmin;
 			hypenatedWord = word.split('').map(function(chr, idx){
-				return (idx >= this.config.leftmin && idx <= maxLength && this[idx] % 2? this.softHyphen: '') + chr;
-			}, hyp).join('');
+				return (idx >= this.config.leftmin && idx <= maxLength && hyp[idx] % 2? this.softHyphen: '') + chr;
+			}, this).join('');
 
 			//put the word in the cache
 			this.cache[word] = hypenatedWord;
