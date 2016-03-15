@@ -113,17 +113,18 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 
 	/** @private */
 	var removeDefaultStress = function(hypenatedWord){
-		hypenatedWord = hypenatedWord.split(this.config.hyphen);
-		var size = hypenatedWord.length,
-			lastSyllabe = hypenatedWord[size - 1],
-			priorToLastSyllabe;
-		if(lastSyllabe.match(/[^aeiouàèéíòóú]$/))
-			hypenatedWord[size - 1] = Word.unmarkDefaultStress(lastSyllabe);
-		else if(lastSyllabe.match(/[^àèéíòóú]$/)){
-			priorToLastSyllabe = hypenatedWord[size - 2];
-			hypenatedWord[size - 2] = Word.unmarkDefaultStress(priorToLastSyllabe + lastSyllabe).substring(0, priorToLastSyllabe.length);
+		if(hypenatedWord.indexOf(this.config.hyphen) >= 0){
+			hypenatedWord = hypenatedWord.split(this.config.hyphen);
+			var size = hypenatedWord.length,
+				priorToLastSyllabe = hypenatedWord[size - 2],
+				unstressedFinal = Word.unmarkDefaultStress(priorToLastSyllabe + hypenatedWord[size - 1]);
+			hypenatedWord[size - 2] = unstressedFinal.substring(0, priorToLastSyllabe.length);
+			hypenatedWord[size - 1] = unstressedFinal.substring(priorToLastSyllabe.length);
+			hypenatedWord = hypenatedWord.join(this.config.hyphen);
 		}
-		return hypenatedWord.join(this.config.hyphen);
+		else
+			hypenatedWord = Word.unmarkDefaultStress(hypenatedWord);
+		return hypenatedWord;
 	};
 
 
