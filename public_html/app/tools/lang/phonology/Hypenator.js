@@ -13,7 +13,9 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 			leftmin: 0,
 			/** minimal length of characters after the last hyphenation */
 			rightmin: 0,
+			/** list of exception in the form word-hypenated */
 			exceptions: {},
+			/** hypen to use as hypenator */
 			hyphen: '\u00AD'
 		};
 
@@ -32,8 +34,6 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	};
 
 	var hypenate = function(word){
-		word = Word.markDefaultStress(word);
-
 		var hypenatedWord;
 		if(word.indexOf(this.config.hyphen) >= 0)
 			//the word already contains &shy; then leave as it is
@@ -50,38 +50,38 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 				.map(hypenate)
 				.join('-');
 		else{
-			var ww = '.' + word.toLowerCase() + '.';
-			if(String.prototype.normalize)
-				ww = ww.normalize();
-			if(ww.match(VALID_WORD_REGEX))
+			if(word.match(VALID_WORD_REGEX))
 				return word;
 
-			var size = ww.length,
+			var w = '.' + Word.markDefaultStress(word) + '.';
+			if(String.prototype.normalize)
+				w = w.normalize();
+
+			var size = w.length,
 				hyp = [],
 				i, j,
 				tmp;
 			for(i = 0; i < size; i ++){
-				tmp = ww.substring(i);
+				tmp = w.substring(i);
 				this.trie.findPrefix(tmp).forEach(function(pref){
 					//console.log('prefix ' + pref.node.prefix + ', node ' + this.trieData.get(pref.node));
 
 					j = -1;
-					this.trieData.get(pref.node).split('').forEach(function(d){
+					this.get(pref.node).split('').forEach(function(d){
 						d = parseInt(d);
 						if(isNaN(d))
 							j ++;
 						else if(!hyp[i + j] || d > hyp[i + j])
 							hyp[i + j] = d;
 					});
-				}, this);
+				}, this.trieData);
 			}
 
 			//create hyphenated word
 			var maxLength = word.length - this.config.rightmin;
-			hypenatedWord = word.split('').map(function(chr, idx){
+			hypenatedWord = Word.unmarkDefaultStress(word).split('').map(function(chr, idx){
 				return (idx >= this.config.leftmin && idx <= maxLength && hyp[idx] % 2? this.config.hyphen: '') + chr;
 			}, this).join('');
-			hypenatedWord = removeDefaultStress.call(this, hypenatedWord);
 
 			//put the word in the cache
 			this.cache[word] = hypenatedWord;
@@ -107,22 +107,6 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	/** @private */
 	var chunkString = function(str, length){
 		return str.match(new RegExp('.{' + length + '}', 'g'));
-	};
-
-	/** @private */
-	var removeDefaultStress = function(hypenatedWord){
-		if(hypenatedWord.indexOf(this.config.hyphen) >= 0){
-			hypenatedWord = hypenatedWord.split(this.config.hyphen);
-			var size = hypenatedWord.length,
-				priorToLastSyllabe = hypenatedWord[size - 2],
-				unstressedFinal = Word.unmarkDefaultStress(priorToLastSyllabe + hypenatedWord[size - 1]);
-			hypenatedWord[size - 2] = unstressedFinal.substring(0, priorToLastSyllabe.length);
-			hypenatedWord[size - 1] = unstressedFinal.substring(priorToLastSyllabe.length);
-			hypenatedWord = hypenatedWord.join(this.config.hyphen);
-		}
-		else
-			hypenatedWord = Word.unmarkDefaultStress(hypenatedWord);
-		return hypenatedWord;
 	};
 
 
