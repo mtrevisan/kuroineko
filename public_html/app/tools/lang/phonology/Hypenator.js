@@ -14,9 +14,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 			/** minimal length of characters after the last hyphenation */
 			rightmin: 0,
 			exceptions: {},
-//			hyphen: String.fromCharCode(173)
-//			hyphen: '\u00AD'
-			hyphen: '-'
+			hyphen: '\u00AD'
 		};
 
 

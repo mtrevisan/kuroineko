@@ -57,7 +57,7 @@ require(['tools/lang/phonology/Hypenator'], function(Hypenator){
 			7: 'kontro1èkstra1ekstra1ŧirkum3',
 			9: '.poli1p2n.poli1p2s.orto3p2n.di2s3p2n.de2s3p2n'
 		};
-		var hyp = new Hypenator(patterns, {leftmin: 1});
+		var hyp = new Hypenator(patterns, {leftmin: 1, hyphen: '-'});
 		var words = [
 			//bc
 			'subcelular',
