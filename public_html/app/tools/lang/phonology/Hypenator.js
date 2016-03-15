@@ -3,17 +3,18 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/data/structs/Trie', 'tools/lang/phonology/Syllabator', 'tools/lang/phonology/Word'], function(Trie, Syllabator, Word){
+define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, Word){
 
-
-	/** @constant */
-	var CONFIG_DEFAULT = {
-		/** minimal length of characters before the first hyphenation */
-		leftmin: 0,
-		/** minimal length of characters after the last hyphenation */
-		rightmin: 0,
-		exceptions: {}
-	};
+		/** @constant */
+	var VALID_WORD_REGEX = /[^-'‘’aàbcdđeéèfghiíjɉklƚmnñoóòprsʃtŧuúvxʒ.]/,
+		/** @constant */
+		CONFIG_DEFAULT = {
+			/** minimal length of characters before the first hyphenation */
+			leftmin: 0,
+			/** minimal length of characters after the last hyphenation */
+			rightmin: 0,
+			exceptions: {}
+		};
 
 
 	/**
@@ -41,9 +42,9 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Syllabator', 'tools/lan
 	var hypenate = function(word){
 		word = Word.markDefaultStress(word);
 
-		var hypenatedWord = '';
+		var hypenatedWord;
 		if(word.indexOf(this.softHyphen) >= 0)
-			//word already contains &shy; then leave as it is
+			//the word already contains &shy; then leave as it is
 			hypenatedWord = word;
 		else if(this.cache[word])
 			//the word is in the cache
@@ -60,7 +61,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Syllabator', 'tools/lan
 			var ww = '.' + word.toLowerCase() + '.';
 			if(String.prototype.normalize)
 				ww = ww.normalize();
-			if(ww.match(/[^-'‘’aàbcdđeéèfghiíjɉklƚmnñoóòprsʃtŧuúvxʒ.]/))
+			if(ww.match(VALID_WORD_REGEX))
 				return word;
 
 			var size = ww.length,
