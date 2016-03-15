@@ -53,9 +53,9 @@ require(['tools/lang/phonology/Hypenator'], function(Hypenator){
 				,
 			4: '.f2t.p2n.p2s.t2msub3',
 			5: '.bio1.pre12l3f2t',
-			6: '.para1.poli1.opto1.anti1.orto3.poli3.re1is.di2s3.de2s3.di2x3.auto1',
+			6: '.anti1.auto1.di2s3.de2s3.di2x3.opto1.orto3.para1.poli3.re1is',
 			7: 'kontro1èkstra1ekstra1ŧirkum3',
-			9: '.poli1p2n.poli1p2s.orto3p2n.di2s3p2n.de2s3p2n'
+			8: '.poli1p2.orto3p2.di2s3p2.de2s3p2'
 		};
 		var hyp = new Hypenator(patterns, {leftmin: 1, hyphen: '-'});
 		var words = [
