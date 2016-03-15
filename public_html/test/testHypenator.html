@@ -143,8 +143,20 @@
 
 			readPatterns({
 				/*2: '1b1c1d1f1g1h1j1k1l1m1n1p1q1r1t1v1w1x1z',
-				3: '2’2e2w2bb2bc2bd2bf2bm2bn2bp2bs2bt2bvb2lb2r2b.2b’2cb2cc2cd2cf2ck2cm2cn2cq2cs2ct2czc2hc2lc2r2c.2c’.c22db2dd2dg2dl2dm2dn2dpd2r2ds2dt2dv2dw2d.2d’.d22fb2fg2ff2fnf2lf2r2fs2ft2f.2f’2gb2gd2gf2ggg2hg2l2gmg2n2gpg2r2gs2gt2gv2gw2gz2g.2g’2hb2hd2hhh2l2hm2hn2hr2hv2h.2h’2j.2j’2kg2kfk2h2kkk2l2kmk2r2ks2kt2k.2k’2lb2lc2ld2lgl2h2lk2ll2lm2ln2lp2lq2lr2ls2lt2lv2lw2lz2l.2mb2mc2mf2ml2mm2mn2mp2mq2mr2ms2mt2mv2mw2m.2m’2nb2nc2nd2nf2ng2nk2nl2nm2nn2np2nq2nr2ns2nt2nv2nz2n.2n’2pdp2hp2l2pn2ppp2r2ps2pt2pz2p.2p’2qq2q.2q’2rb2rc2rd2rfr2h2rg2rk2rl2rm2rn2rp2rq2rr2rs2rt2rv2rx2rw2rz2r.2r’1s22sz4s.2tb2tc2td2tf2tgt2ht2l2tm2tn2tpt2rt2s2tt2tv2twt2z2t.2vcv2lv2r2vv2v.w2h2w.2w’2xb2xc2xf2xh2xm2xp2xt2xw2x.2x’y1i2zb2zd2zl2zn2zp2zt2zs2zv2zz2z.',
-				4: '.p2sa1iaa1iea1ioa1iua1uoa1ya2at.e1iuo1iao1ieo1ioo1iu2chh2chbch2r2chn2l’.2l’’2shm2sh.2sh’2s3s2stb2stc2std2stf2stg2stm2stn2stp2sts2stt2stv4s’.4s’’2tzktz2s2t’.2t’’2v’.2v’’wa2r2w1yy1ou2z’.2z’’.z2',
+				3: '2’2e2w2bb2bc2bd2bf2bm2bn2bp2bs2bt2bvb2lb2r2b.2b’2cb2cc2cd2cf2ck'
+					+ '2cm2cn2cq2cs2ct2czc2hc2lc2r2c.2c’.c22db2dd2dg2dl2dm2dn2dpd2r2ds'
+					+ '2dt2dv2dw2d.2d’.d22fb2fg2ff2fnf2lf2r2fs2ft2f.2f’2gb2gd2gf2ggg2h'
+					+ 'g2l2gmg2n2gpg2r2gs2gt2gv2gw2gz2g.2g’2hb2hd2hhh2l2hm2hn2hr2hv2h.'
+					+ '2h’2j.2j’2kg2kfk2h2kkk2l2kmk2r2ks2kt2k.2k’2lb2lc2ld2lgl2h2lk2ll'
+					+ '2lm2ln2lp2lq2lr2ls2lt2lv2lw2lz2l.2mb2mc2mf2ml2mm2mn2mp2mq2mr2ms'
+					+ '2mt2mv2mw2m.2m’2nb2nc2nd2nf2ng2nk2nl2nm2nn2np2nq2nr2ns2nt2nv2nz'
+					+ '2n.2n’2pdp2hp2l2pn2ppp2r2ps2pt2pz2p.2p’2qq2q.2q’2rb2rc2rd2rfr2h'
+					+ '2rg2rk2rl2rm2rn2rp2rq2rr2rs2rt2rv2rx2rw2rz2r.2r’1s22sz4s.2tb2tc'
+					+ '2td2tf2tgt2ht2l2tm2tn2tpt2rt2s2tt2tv2twt2z2t.2vcv2lv2r2vv2v.w2h'
+					+ '2w.2w’2xb2xc2xf2xh2xm2xp2xt2xw2x.2x’y1i2zb2zd2zl2zn2zp2zt2zs2zv2zz2z.',
+				4: '.p2sa1iaa1iea1ioa1iua1uoa1ya2at.e1iuo1iao1ieo1ioo1iu2chh2chbch2r2chn'
+					+ '2l’.2l’’2shm2sh.2sh’2s3s2stb2stc2std2stf2stg2stm2stn2stp2sts2stt2s'
+					+ 'tv4s’.4s’’2tzktz2s2t’.2t’’2v’.2v’’wa2r2w1yy1ou2z’.2z’’.z2',
 				5: '.bio1.pre12gh2t2l3f2n2g3n3p2nes4s3mt2t3s',
 				6: '.a3p2n.anti1.free3.opto1.para1hi3p2n2nheit3p2sicr2t2s32s3p2n3t2sch',
 				7: '.ca4p3s.e2x1eu.narko1.su2b3r.wa2g3n.wel2t1n2s3fer',
@@ -152,8 +164,9 @@
 				9: '.anti3m2n.circu2m1.re1i2scr.tran2s3c.tran2s3d.tran2s3l.tran2s3n.tran2s3p.tran2s3r.tran2s3t',
 				10: '.di2s3cine'/**/
 
+				//aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx
 				2: '1b1c1d1đ1f1g1j1ɉ1k1l1ƚ1m1n1ñ1p1r1s1t1ŧ1v1x',
-				3: '.c2.d2.đ2.k2.s2.ŧ2.x2'
+				3: '.c2.d2.đ2.k2.m2.s2.ŧ2.x2'
 					+ '2b.2bc2bd2bđ2bf2bg2bj2cɉ2bk2bl2bm2bn2bñ2bp2br2bs2bt2bŧ2bv2bx'
 					+ '2c.2cb2cd2cđ2cf2cg2cj2cɉ2ck2cl2cm2cn2cñ2cp2cr2cs2ct2cŧ2cv2cx'
 					+ '2d.2db2dc2dđ2df2dg2dj2dɉ2dk2dl2dm2dn2dñ2dp2dr2ds2dt2dŧ2dv2dx'
@@ -169,12 +182,13 @@
 					+ '2ñ.2ñb2ñc2ñd2ñđ2ñf2ñg2ñj2ñɉ2ñk2ñl2ñm2ñn2ñp2ñr2ñs2ñt2ñŧ2ñv2ñx'
 					+ '2p.2pb2pc2pd2pđ2pf2pg2pj2pɉ2pk2pl2pm2pn2pñ2pr2ps2pt2pŧ2pv2px'
 					+ '2r.2rb2rc2rd2rđ2rf2rg2rj2rɉ2rk2rl2rm2rn2rñ2rp2rs2rt2rŧ2rv2rx'
-//					+ '4s.2sc2sf2sk2sp2st2sŧ2sx'
-					+ '4s.s2t'
+					+ '2s.' //+ '2sc2sf2sk2sp2st2sŧ2sx'
+					+ 's2cs2fs2ks2ps2t'
 					+ '2t.2tb2tc2td2tđ2tf2tg2tj2tɉ2tk2tl2tm2tn2tñ2tp2tr2ts2tŧ2tv2tx'
 					+ '2ŧ.2ŧb2ŧc2ŧd2ŧđ2ŧf2ŧg2ŧj2ŧɉ2ŧk2ŧl2ŧm2ŧn2ŧñ2ŧp2ŧr2ŧs2ŧt2ŧv2ŧx'
 					+ '2v.2vb2vc2vd2vđ2vf2vg2vj2vɉ2vk2vl2vm2vn2vñ2vp2vr2vs2vt2vŧ2vx'
-//					+ '4x.2xb2xd2xđ2xg2xj2xɉ2xl2xm2xn2xñ2xr2xs2xv'
+					+ '2x.' //+ '2xb2xd2xđ2xg2xj2xɉ2xl2xm2xn2xñ2xr2xs2xv'
+					+ 'x2mx2nx2ñx2bx2dx2gx2jx2ɉx2sx2vx2rx2l'
 					+ 'b2lb2r'
 					+ 'c2lc2r'
 					+ 'd2ld2r'
@@ -183,37 +197,25 @@
 					+ 'j2lj2r'
 					+ 'ɉ2lɉ2r'
 					+ 'k2lk2r'
-					+ 'm2n'
 					+ 'p2lp2r'
 					+ 't2lt2r'
 					+ 'v2lv2r'
-					+ 'í1aí1eí1ií1oí1uú1aú1eú1iú1oú1u'
-				//i1
-				//[aeiou]i2[aeiouàèéíòóú]
-				//[àèéíòóú]i2[aeiou]
-				//i2[^aeiouàèéíòóú] = i2[bcdđfgjɉklƚmnñprstŧvx]
-					+ 'i1ai1ei1oi1ài1èi1éi1òi1óu1au1eu1ou1àu1èu1éu1òu1ó'
-					+ 'a1aa1ea1oa1àa1èa1éa1ía1òa1óa1úe1ae1ee1oe1àe1èe1ée1íe1òe1óe1úo1ao1eo1oo1ào1èo1éo1ío1òo1óo1ú'
-					+ 'à1aè1aé1aò1aó1aà1eè1eé1eò1eó1eà1oè1oé1oò1oó1o',
-				4: '.f2t.p2n.p2s.t2m',
+					//hyatus
+					+ 'a1ae1ao1aà1aè1aé1aò1aó1a'
+					+ 'a1ee1eo1eà1eè1eé1eò1eó1e'
+					+ 'a1oe1oo1oà1oè1oé1oò1oó1o'
+					//hyatus
+					+ 'í1aí1eí1ií1oí1u'
+					+ 'ú1aú1eú1iú1oú1u'
+					//hyatus
+					+ 'a1àa1èa1éa1ía1òa1óa1ú'
+					+ 'e1àe1èe1ée1íe1òe1óe1ú'
+					+ 'o1ào1èo1éo1ío1òo1óo1ú'
+					,
+				4: '.f2t.p2s.t2msub3',
 				5: '.bio1.pre12l3f2',
-				6: 'sub3s2.para1.opto1.anti1',
-				7: '.su2b3lkontro1ekstra1',
-				8: '.re1iskr.poli3p2s',
-				9: '.ŧirku2m1.orto3p2n',
-				10: '.ŧirkum3n2.ŧirkum3s2'/**/
-
-				//aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx
-				//greek digrams
-				/*+ 'b1db1mb1nb1sb1t'
-				+ 'k1mk1nk1s'
-				+ 't1nt1s'
-				+ 'm1lm1r'
-				+ 'n1ln1r'
-				+ 'r1l',
-//			.replace(/([jw])([lr])/g, replacement)
-			/[sx]1(?=[^jwaeiouàèéíòóú])/
-			/[aeiouàèéíòóú][sx]1(?=[^jwaeiouàèéíòóú])/ */
+				6: '.para1.opto1.anti1.orto3.poli3.re1is',
+				7: 'kontro1ekstra1ŧirkum3'
 			});
 			var words = [
 				//bc
@@ -466,7 +468,7 @@
 				'plaka', 'reoplano',
 				//pm
 				//pn
-				'apnèa', 'pnèumo', 'polipnèa', 'ortopnèa', 'ortopnòika',
+				'apnèa', 'pnèumo', 'pneumografía', 'polipnèa', 'ortopnèa', 'ortopnòika',
 				//pñ
 				//pr
 				'prova', 'inprontar',
@@ -509,7 +511,7 @@
 				//rs
 				'bituarse',
 				//rt
-				'abortir',
+				'abortir', 'ortoèpiko',
 				//rŧ
 				'arŧon',
 				//rv
@@ -518,7 +520,7 @@
 				'garxar',
 
 				//sc
-				'scòna',
+				'scòna', 'masco',
 				//sf
 				'sfogo',
 				//sk
@@ -624,18 +626,21 @@
 				//diphtongs
 				'viòla', 'indian', 'piòlo', 'lengua', 'kuesto', 'xàino', 'piaxe', 'pien', 'dietro', 'ocai', 'matèria', 'pinguin', 'euròpa', 'piuma', 'foiba',
 				//others
-				'abnegathion', 'àbside', 'drakma', 'tèknika', 'iks', 'tungstèno', 'pnèumo', 'psikoloxía', 'aritmètega', 'etnía', 'strako', 'baston'
+				'abnegaŧion', 'àbside', 'drakma', 'tèknika', 'tungstèno', 'pnèumo', 'psikoloxía', 'aritmètega', 'etnía', 'strako', 'baston', 'maèstro',
+				'poèta', 'paexe', 'mie', 'buxía', 'siar', 'paura', 'diurno', 'suino',
+				'kaxa', 'jutar', 'pàuxa', 'piaŧa', 'auguri', 'àuguri', 'grant', 'inbrijar', 'autoirònego', 'aŧion', 'saltar', 'lontan', 'finlandia',
+				'gronda', 'injasar', 'serpente', 'kospirar', 'kosto', 'kostrénxer', 'despresar', 'bastanŧa', 'destrikar', 'peskar', 'maèstra', 'dexmentegà',
+				'ciklixmo', 'strako', 'scantixo', 'sfexa', 'stabia', 'stranbo', 'skòpo', 'xbaro', 'xbrigar', 'xbèrla', 'submontano', 'transubstanŧiar',
+				'abnegasion', 'àbside', 'tèknika', 'iks', 'etnía', 'ipnoxi', 'biopsía', 'ritmo', 'aritmètega', 'tungstèno', 'poexía', 'gas', 'alfa'
 			];
-words = ['kaxa', 'jutar', 'pàuxa', 'piaŧa', 'auguri', 'àuguri', 'grant', 'inbrijar', 'autoirònego', 'aŧion', 'saltar',
-	'lontan', 'finlandia', 'gronda', 'injasar', 'serpente', 'kospirar', 'kosto', 'kostrénxer', 'despresar', 'bastanŧa', 'destrikar', 'peskar',
-	'maèstra', 'dexmentegà', 'ciklixmo', 'strako', 'scantixo', 'sfexa', 'stabia', 'stranbo', 'skòpo', 'xbaro', 'xbrigar', 'xbèrla', 'submontano',
-	'abnegasion', 'àbside', 'tèknika', 'iks', 'etnía', 'ipnoxi', 'biopsía', 'ritmo', 'aritmètega', 'tungstèno', 'poexía', 'gas', 'alfa'];
-words = ['maèstro', 'poèta', 'paexe', 'mie', 'buxía', 'siar', 'paura', 'diurno', 'suino'];
 			words.forEach(function(word){
 				var hypenatedWord = hypenate(word);
 				var syllabatedWord = syllabatePhonematicAndJoin(word);
 
-				console.log('= ' + hypenatedWord + ' / ' + syllabatedWord);
+				if(hypenatedWord != syllabatedWord)
+					console.log(word + ' * ' + hypenatedWord + ' / ' + syllabatedWord);
+				else
+					console.log(word + ' = ' + hypenatedWord + ' / ' + syllabatedWord);
 			});
 		});
 	</script>

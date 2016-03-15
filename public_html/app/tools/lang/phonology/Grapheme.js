@@ -23,10 +23,13 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 	};
 
 	var isDiphtong = function(group){
+		//[aeoàèéòó][aeo]
+		//[íú][aeiou]
 		return group.match(/([iu][íú]|[àèéòó][iu])/);
 	};
 
 	var isHyatus = function(group){
+//		return group.match(/([aeoàèéòó][aeo]|[íú][aeiou]|[aeiou][àèéíòóú])/);
 		return group.match(/([íú][aeiou]|[iu][aeoàèéòó]|[aeo][aeoàèéíòóú]|[àèéòó][aeo])/);
 	};
 
@@ -85,7 +88,7 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 	/** @private */
 	var phonizeEterophonicSequence = function(word){
 		return word
-			.replace(/(^|[^aeiouàèéíòóú])i([aeiouàèéíòóú])/g, '$1j$2')
+			.replace(/([^aeiouàèéíòóú])i([aeiouàèéíòóú])/g, '$1j$2')
 			.replace(/((^|[^s])t)u([aeiouàèéíòóú])/g, '$1w$3')
 			.replace(/((^|[^t])[kgrs])u([aeiouàèéíòóú])/g, '$1w$3');
 	};
@@ -107,6 +110,9 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 		else
 			word = word
 				//hyatus
+//				.replace(/([aeoàèéòó])([aeo])/g, replacement)
+//				.replace(/([íú])([aeiou])/g, replacement)
+//				.replace(/([aeo])([àèéíòóú])/g, replacement);
 				.replace(/([íú])([aeiou])/g, replacement)
 				.replace(/([iu])([aeoàèéòó])/g, replacement)
 				.replace(/([aeo])([aeiouàèéíòóú])/g, replacement)
