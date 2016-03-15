@@ -465,7 +465,7 @@ require(['tools/lang/phonology/Hypenator'], function(Hypenator){
 			//pre
 			'prealarme', 'preexame',
 			//diphtongs
-			'viòla', 'indian', 'piòlo', 'lengua', 'kuesto', 'xàino', 'piaxe', 'pien', 'dietro', 'ocai', 'matèria', 'pinguin', 'euròpa', 'piuma',
+			'viòla', 'indian', 'piòlo', 'lengua', 'kuesto', 'xàino', 'piaxe', 'pien', 'dietro', 'ocài', 'matèria', 'pinguin', 'euròpa', 'piuma',
 			'foiba',
 			//others
 			'abnegaŧion', 'àbside', 'drakma', 'tèknika', 'tungstèno', 'pnèumo', 'psikoloxía', 'aritmètega', 'etnía', 'strako', 'baston', 'maèstro',
@@ -481,7 +481,7 @@ require(['tools/lang/phonology/Hypenator'], function(Hypenator){
 			'a-bra-ŧar', 'bra-ŧo', 'ob-so-le-to', 'sub-sfè-re-go', 'sub-skrí-ver', 'sub-stra-to', 'sub-to-tal', 'sub-tro-pe-gal', 'sub-vé-der',
 			'kad-mio', 'e-kid-na', 'dre-ŧar', 'a-dria', 'feld-spa-to', 'ad-vo-ka-ŧion', 'af-gan', 'flú-i-do', 're-flè-so', 'af-nio', 'fru-to',
 			'xa-fran', 'af-ta', 'ftà-le-go', 'a-míg-da-la', 'stag-fla-ŧion', 'glò-ria', 'kú-gluf', 'dòg-ma', 'gra-do', 'ne-gro', 'tung-ste-no',
-			'ang-strom', 'ek-bò-le-go', 'ek-dè-me-go', 'bi-ŧi-kle-ta', 'klà-se-go', 'drak-ma', 'ak-ne', 'kre-a', 'sa-kro', 'fuk-sia', 'ek-tò-pe-go',
+			'ang-strom', 'ek-bò-le-go', 'ek-dè-me-go', 'bi-ŧi-kle-ta', 'klà-se-go', 'drak-ma', 'ak-ne', 'kré-a', 'sa-kro', 'fuk-sia', 'ek-tò-pe-go',
 			'àl-ba-ro', 'al-con', 'al-dir', 'vòl-đer', 'tal-fia-da', 'fe-nol-fta-le-i-na', 'al-gua-ro', 'in-dul-jen-tar', 'ner-val-ɉí-a', 'pal-ko',
 			'kal-mo', 'mal-nu-trí-o', 'al-pi', 'mal-rie-sí-o', 'mal-san', 'al-to', 'xmal-ŧar', 'mal-va', 'bol-xèr', 'um-la-ut', 'am-ne-xí-a',
 			'mnè-xi', 'ŧir-kum-na-ve-gar', 'ŧir-kum-po-lar', 'ŧir-kum-ste-lar', 'fèm-to', 'ŧir-kum-ve-xu-vian', 'kan-bio', 'min-con', 'mon-do',
@@ -497,10 +497,10 @@ require(['tools/lang/phonology/Hypenator'], function(Hypenator){
 			'ek-stra-u-te-rin', 'ek-stra-o-spe-da-lièr', 'pa-ra-ban-ka-rio', 'pa-ra-e-ti-mo-lò-xe-go', 'pa-ra-ò-ci', 'pa-ra-ur-ti',
 			'op-to-e-le-trò-ne-go', 'op-to-gra-fí-a', 'an-ti-lèr-xe-go', 'an-ti-a-tò-me-go', 'dis-pnè-a', 'dis-pnòi-ko', 'bio-lò-xe-go',
 			'bio-a-stro-nàu-ta', 'bio-e-lè-tre-go', 'bio-e-ner-xí-a', 'pre-a-lar-me', 'pre-e-xa-me',
-			'viò-la', 'in-dian', 'piò-lo', 'len-gua', 'kue-sto', 'xài-no', 'pia-xe', 'pien', 'die-tro', 'ó-cai', 'ma-tè-ria', 'pin-guin',
+			'viò-la', 'in-dian', 'piò-lo', 'len-gua', 'kue-sto', 'xài-no', 'pia-xe', 'pien', 'die-tro', 'o-cài', 'ma-tè-ria', 'pin-guin',
 			'eu-rò-pa', 'piu-ma', 'fo-i-ba',
 			'ab-ne-ga-ŧion', 'àb-si-de', 'drak-ma', 'tèk-ni-ka', 'tung-stè-no', 'pnèu-mo', 'psi-ko-lo-xí-a', 'a-rit-mè-te-ga', 'et-ní-a', 'stra-ko',
-			'ba-ston', 'ma-è-stro', 'po-è-ta', 'pa-e-xe', 'mi-e', 'bu-xí-a', 'siar', 'pa-u-ra', 'diur-no', 'sui-no',
+			'ba-ston', 'ma-è-stro', 'po-è-ta', 'pa-e-xe', 'mí-e', 'bu-xí-a', 'siar', 'pa-u-ra', 'diur-no', 'sui-no',
 			'ka-xa', 'ju-tar', 'pàu-xa', 'pia-ŧa', 'au-gu-ri', 'àu-gu-ri', 'grant', 'in-bri-jar', 'au-to-i-rò-ne-go', 'a-ŧion', 'sal-tar', 'lon-tan',
 			'fin-lan-dia', 'gron-da', 'in-ja-sar', 'ser-pen-te', 'ko-spi-rar', 'ko-sto', 'ko-strén-xer', 'des-pre-sar', 'ba-stan-ŧa', 'des-tri-kar',
 			'pe-skar', 'ma-è-stra', 'de-xmen-te-gà', 'ci-kli-xmo', 'stra-ko', 'scan-ti-xo', 'sfe-xa', 'sta-bia', 'stran-bo', 'skò-po', 'xba-ro',
