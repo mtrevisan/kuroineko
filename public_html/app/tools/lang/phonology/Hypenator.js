@@ -6,7 +6,7 @@
 define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, Word){
 
 		/** @constant */
-	var VALID_WORD_REGEX = /[^-'‘’aàbcdđeéèfghiíjɉklƚmnñoóòprsʃtŧuúvxʒ.]/,
+	var INVALID_WORD_REGEX = /[^-'‘’aàbcdđeéèfghiíjɉklƚmnñoóòprsʃtŧuúvxʒ.]/,
 		/** @constant */
 		CONFIG_DEFAULT = {
 			/** minimal length of characters before the first hyphenation */
@@ -34,57 +34,51 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	};
 
 	var hypenate = function(word){
-		var hypenatedWord;
-		if(word.indexOf(this.config.hyphen) >= 0)
-			//the word already contains &shy; then leave as it is
-			hypenatedWord = word;
-		else if(this.cache[word])
-			//the word is in the cache
-			hypenatedWord = this.cache[word];
-		else if(this.config.exceptions[word])
-			//the word is in the exceptions list
-			hypenatedWord = this.config.exceptions[word].replace(/-/g, this.config.hyphen);
-		else if(word.indexOf('-') >= 0)
-			//if word contains '-' then hyphenate the parts separated with '-'
-			hypenatedWord = word.split('-')
-				.map(hypenate)
-				.join('-');
-		else{
-			if(word.match(VALID_WORD_REGEX))
-				return word;
+		var hypenatedWord = this.config.exceptions[word];
+		//the word is not in the exceptions list
+		if(!hypenatedWord){
+			if(word.match(INVALID_WORD_REGEX) || word.indexOf(this.config.hyphen) >= 0)
+				//if the word already contains &shy; then leave as it is
+				hypenatedWord = word;
+			else if(this.cache[word])
+				//if the word is in the cache then return it
+				hypenatedWord = this.cache[word];
+			else if(word.indexOf('-') >= 0)
+				//if word contains '-' then hyphenate the parts separated with '-'
+				hypenatedWord = word.split('-')
+					.map(hypenate)
+					.join('-');
+			else{
+				var w = '.' + Word.markDefaultStress(word) + '.';
+				if(String.prototype.normalize)
+					w = w.normalize();
 
-			var w = '.' + Word.markDefaultStress(word) + '.';
-			if(String.prototype.normalize)
-				w = w.normalize();
+				var size = w.length,
+					hyp = [],
+					i, j;
+				for(i = 0; i < size; i ++)
+					this.trie.findPrefix(w.substring(i)).forEach(function(pref){
+						//console.log('prefix ' + pref.node.prefix + ', node ' + this.trieData.get(pref.node));
 
-			var size = w.length,
-				hyp = [],
-				i, j,
-				tmp;
-			for(i = 0; i < size; i ++){
-				tmp = w.substring(i);
-				this.trie.findPrefix(tmp).forEach(function(pref){
-					//console.log('prefix ' + pref.node.prefix + ', node ' + this.trieData.get(pref.node));
+						j = -1;
+						this.get(pref.node).split('').forEach(function(d){
+							d = parseInt(d);
+							if(isNaN(d))
+								j ++;
+							else if(!hyp[i + j] || d > hyp[i + j])
+								hyp[i + j] = d;
+						});
+					}, this.trieData);
 
-					j = -1;
-					this.get(pref.node).split('').forEach(function(d){
-						d = parseInt(d);
-						if(isNaN(d))
-							j ++;
-						else if(!hyp[i + j] || d > hyp[i + j])
-							hyp[i + j] = d;
-					});
-				}, this.trieData);
+				//create hyphenated word
+				var maxLength = word.length - this.config.rightmin;
+				hypenatedWord = word.split('').map(function(chr, idx){
+					return (idx >= this.config.leftmin && idx <= maxLength && hyp[idx] % 2? this.config.hyphen: '') + chr;
+				}, this).join('');
+
+				//put the word in the cache
+				this.cache[word] = hypenatedWord;
 			}
-
-			//create hyphenated word
-			var maxLength = word.length - this.config.rightmin;
-			hypenatedWord = Word.unmarkDefaultStress(word).split('').map(function(chr, idx){
-				return (idx >= this.config.leftmin && idx <= maxLength && hyp[idx] % 2? this.config.hyphen: '') + chr;
-			}, this).join('');
-
-			//put the word in the cache
-			this.cache[word] = hypenatedWord;
 		}
 
 		return hypenatedWord;
