@@ -15,7 +15,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 			leftmin: 0,
 			/** minimal length of characters after the last hyphenation */
 			rightmin: 0,
-			/** list of exception in the form word-hypenated */
+			/** list of exceptions in the form key-value, where the key is the word and the value the hypenated one */
 			exceptions: {},
 			/** hypen to use as hypenator */
 			hyphen: '\u00AD'

@@ -159,7 +159,7 @@ require(['tools/lang/phonology/Hypenator'], function(Hypenator){
 			//gñ
 			//gp
 			//gr
-			'grado', 'negro',
+			'grado', 'negro', 'xgrénxer',
 			//ngs(tr?)?
 			'tungsteno', 'angstrom',
 			//gt
@@ -180,9 +180,9 @@ require(['tools/lang/phonology/Hypenator'], function(Hypenator){
 			//kl
 			'biŧikleta', 'klàsego',
 			//km
-			'drakma',
+			'drakma', 'kmèr',
 			//kn
-			'akne',
+			'akne', 'knòso',
 			//kñ
 			//kp
 			//kr
@@ -272,6 +272,7 @@ require(['tools/lang/phonology/Hypenator'], function(Hypenator){
 			//ng
 			'óngaro',
 			//nj
+			'injarar',
 			//nɉ
 			'konɉedar',
 			//nk
@@ -282,11 +283,11 @@ require(['tools/lang/phonology/Hypenator'], function(Hypenator){
 			'inmanegar',
 			//nñ
 			//np
-			'inpakar', 'inprontar', 'lanpar',
+			'inpakar', 'inprontar',
 			//nr
 			'manrovèrso',
 			//ns
-			'riensir', 'stransir',
+			'riensir',
 			//nt
 			'santan',
 			//nŧ
@@ -309,7 +310,7 @@ require(['tools/lang/phonology/Hypenator'], function(Hypenator){
 			'plaka', 'reoplano',
 			//pm
 			//pn
-			'apnèa', 'pnèumo', 'pneumografía', 'polipnèa', 'ortopnèa', 'ortopnòika',
+			'apnèa', 'pnèumo', 'pneumografía', 'polipnèa', 'ortopnèa',
 			//pñ
 			//pr
 			'prova', 'inprontar',
@@ -480,23 +481,23 @@ require(['tools/lang/phonology/Hypenator'], function(Hypenator){
 			'sub-ce-lu-lar', 'ab-de-gar', 'sub-for-ni-du-ra', 'sub-kor-te-gal', 'a-bla-ti-vo', 'blan-dir', 'sub-mon-tan', 'sub-nor-mal', 'sub-po-lar',
 			'a-bra-ŧar', 'bra-ŧo', 'ob-so-le-to', 'sub-sfè-re-go', 'sub-skrí-ver', 'sub-stra-to', 'sub-to-tal', 'sub-tro-pe-gal', 'sub-vé-der',
 			'kad-mio', 'e-kid-na', 'dre-ŧar', 'a-dria', 'feld-spa-to', 'ad-vo-ka-ŧion', 'af-gan', 'flú-i-do', 're-flè-so', 'af-nio', 'fru-to',
-			'xa-fran', 'af-ta', 'ftà-le-go', 'a-míg-da-la', 'stag-fla-ŧion', 'glò-ria', 'kú-gluf', 'dòg-ma', 'gra-do', 'ne-gro', 'tung-ste-no',
-			'ang-strom', 'ek-bò-le-go', 'ek-dè-me-go', 'bi-ŧi-kle-ta', 'klà-se-go', 'drak-ma', 'ak-ne', 'kre-a', 'sa-kro', 'fuk-sia', 'ek-tò-pe-go',
-			'àl-ba-ro', 'al-con', 'al-dir', 'vòl-đer', 'tal-fia-da', 'fe-nol-fta-le-i-na', 'al-gua-ro', 'in-dul-jen-tar', 'ner-val-ɉí-a', 'pal-ko',
-			'kal-mo', 'mal-nu-trí-o', 'al-pi', 'mal-rie-sí-o', 'mal-san', 'al-to', 'xmal-ŧar', 'mal-va', 'bol-xèr', 'um-la-ut', 'am-ne-xí-a',
-			'mnè-xi', 'ŧir-kum-na-ve-gar', 'ŧir-kum-po-lar', 'ŧir-kum-ste-lar', 'fèm-to', 'ŧir-kum-ve-xu-vian', 'kan-bio', 'min-con', 'mon-do',
-			'món-đar', 'on-fe-gar', 'ón-ga-ro', 'kon-ɉe-dar', 'bian-ko', 'in-lua-mar', 'in-ma-ne-gar', 'in-pa-kar', 'in-pron-tar', 'lan-par',
-			'man-ro-vèr-so', 'rien-sir', 'stran-sir', 'san-tan', 'sa-pien-ŧa', 'skon-ve-ñir', 'skon-xu-rar', 'pla-ka', 're-o-pla-no', 'ap-nè-a',
-			'pnèu-mo', 'pneu-mo-gra-fí-a', 'po-li-pnè-a', 'or-to-pnè-a', 'or-to-pnòi-ka', 'pro-va', 'in-pron-tar', 'psi-ko', 'a-sèp-si',
-			'po-li-psò-nio', 'kàp-su-la', 'a-dèp-to', 'èr-ba', 'per-ce-pi-sio', 'pèr-dar', 'sko-vèr-đer', 'ser-fo-ja-ro', 'se-rur-go', 'xmar-ja-sa-da',
-			'sper-ɉu-rar', 'spor-kar', 'stan-ger-lon', 'ster-mi-nar', 'stor-nar', 'gor-ñal', 'skar-pa', 'bi-tuar-se', 'a-bor-tir', 'or-to-è-pi-ko',
-			'ar-ŧon', 'ser-vir', 'gar-xar', 'scò-na', 'ma-sco', 'sfo-go', 'ska-la', 'ta-na-ska', 're-i-skrí-ver', 'spè-co', 'vè-spa', 've-stir',
-			'a-stro', 'stó-me-go', 'stra-fan-to', 'sot-kòŧ', 'tmè-xi', 'al-go-rit-mo', 'èt-ni-ko', 'trà-pa-no', 'ar-to', 'ar-tri-te', 'ma-nò-vra',
-			'xba-ke-tar', 'ci-xbar', 'ka-xdra-fo', 'xga-jo', 'xɉan-sar', 'xla-ka', 'bu-xlar', 'e-go-i-xmo', 'ma-xna-da', 'xne-gar', 'xña-kar',
-			'o-re-xña-ŧa', 'xra-ɉo-nar', 'xvo-dar', 'kon-tro-e-xen-pio', 'kon-tro-in-di-kar', 'èk-stra', 'ek-stra-so-lar', 'ek-stra-eu-ro-pè-o',
-			'ek-stra-u-te-rin', 'ek-stra-o-spe-da-lièr', 'pa-ra-ban-ka-rio', 'pa-ra-e-ti-mo-lò-xe-go', 'pa-ra-ò-ci', 'pa-ra-ur-ti',
-			'op-to-e-le-trò-ne-go', 'op-to-gra-fí-a', 'an-ti-lèr-xe-go', 'an-ti-a-tò-me-go', 'dis-pnè-a', 'dis-pnòi-ko', 'bio-lò-xe-go',
-			'bio-a-stro-nàu-ta', 'bio-e-lè-tre-go', 'bio-e-ner-xí-a', 'pre-a-lar-me', 'pre-e-xa-me',
+			'xa-fran', 'af-ta', 'ftà-le-go', 'a-míg-da-la', 'stag-fla-ŧion', 'glò-ria', 'kú-gluf', 'dòg-ma', 'gra-do', 'ne-gro', 'xgrén-xer',
+			'tung-ste-no', 'ang-strom', 'ek-bò-le-go', 'ek-dè-me-go', 'bi-ŧi-kle-ta', 'klà-se-go', 'drak-ma', 'kmèr', 'ak-ne', 'knò-so', 'kre-a',
+			'sa-kro', 'fuk-sia', 'ek-tò-pe-go', 'àl-ba-ro', 'al-con', 'al-dir', 'vòl-đer', 'tal-fia-da', 'fe-nol-fta-le-i-na', 'al-gua-ro',
+			'in-dul-jen-tar', 'ner-val-ɉí-a', 'pal-ko', 'kal-mo', 'mal-nu-trí-o', 'al-pi', 'mal-rie-sí-o', 'mal-san', 'al-to', 'xmal-ŧar', 'mal-va',
+			'bol-xèr', 'um-la-ut', 'am-ne-xí-a', 'mnè-xi', 'ŧir-kum-na-ve-gar', 'ŧir-kum-po-lar', 'ŧir-kum-ste-lar', 'fèm-to', 'ŧir-kum-ve-xu-vian',
+			'kan-bio', 'min-con', 'mon-do', 'món-đar', 'on-fe-gar', 'ón-ga-ro', 'in-ja-rar', 'kon-ɉe-dar', 'bian-ko', 'in-lua-mar', 'in-ma-ne-gar',
+			'in-pa-kar', 'in-pron-tar', 'man-ro-vèr-so', 'rien-sir', 'san-tan', 'sa-pien-ŧa', 'skon-ve-ñir', 'skon-xu-rar', 'pla-ka', 're-o-pla-no',
+			'ap-nè-a', 'pnèu-mo', 'pneu-mo-gra-fí-a', 'po-li-pnè-a', 'or-to-pnè-a', 'pro-va', 'in-pron-tar', 'psi-ko', 'a-sèp-si', 'po-li-psò-nio',
+			'kàp-su-la', 'a-dèp-to', 'èr-ba', 'per-ce-pi-sio', 'pèr-dar', 'sko-vèr-đer', 'ser-fo-ja-ro', 'se-rur-go', 'xmar-ja-sa-da', 'sper-ɉu-rar',
+			'spor-kar', 'stan-ger-lon', 'ster-mi-nar', 'stor-nar', 'gor-ñal', 'skar-pa', 'bi-tuar-se', 'a-bor-tir', 'or-to-è-pi-ko', 'ar-ŧon',
+			'ser-vir', 'gar-xar', 'scò-na', 'ma-sco', 'sfo-go', 'ska-la', 'ta-na-ska', 're-i-skrí-ver', 'spè-co', 'vè-spa', 've-stir', 'a-stro',
+			'stó-me-go', 'stra-fan-to', 'sot-kòŧ', 'tmè-xi', 'al-go-rit-mo', 'èt-ni-ko', 'trà-pa-no', 'ar-to', 'ar-tri-te', 'ma-nò-vra', 'xba-ke-tar',
+			'ci-xbar', 'ka-xdra-fo', 'xga-jo', 'xɉan-sar', 'xla-ka', 'bu-xlar', 'e-go-i-xmo', 'ma-xna-da', 'xne-gar', 'xña-kar', 'o-re-xña-ŧa',
+			'xra-ɉo-nar', 'xvo-dar', 'kon-tro-e-xen-pio', 'kon-tro-in-di-kar', 'èk-stra', 'ek-stra-so-lar', 'ek-stra-eu-ro-pè-o', 'ek-stra-u-te-rin',
+			'ek-stra-o-spe-da-lièr', 'pa-ra-ban-ka-rio', 'pa-ra-e-ti-mo-lò-xe-go', 'pa-ra-ò-ci', 'pa-ra-ur-ti', 'op-to-e-le-trò-ne-go',
+			'op-to-gra-fí-a', 'an-ti-lèr-xe-go', 'an-ti-a-tò-me-go', 'dis-pnè-a', 'dis-pnòi-ko', 'bio-lò-xe-go', 'bio-a-stro-nàu-ta',
+			'bio-e-lè-tre-go', 'bio-e-ner-xí-a', 'pre-a-lar-me', 'pre-e-xa-me',
 			'viò-la', 'in-dian', 'piò-lo', 'len-gua', 'kue-sto', 'xài-no', 'pia-xe', 'pien', 'die-tro', 'o-cài', 'ma-tè-ria', 'pin-guin',
 			'eu-rò-pa', 'piu-ma', 'fo-i-ba',
 			'ab-ne-ga-ŧion', 'àb-si-de', 'drak-ma', 'tèk-ni-ka', 'tung-stè-no', 'pnèu-mo', 'psi-ko-lo-xí-a', 'a-rit-mè-te-ga', 'et-ní-a', 'stra-ko',
