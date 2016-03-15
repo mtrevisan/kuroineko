@@ -71,7 +71,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 			for(i = 0; i < size; i ++){
 				tmp = ww.substring(i);
 				this.trie.findPrefix(tmp).forEach(function(pref){
-					console.log('prefix ' + pref.node.prefix + ', node ' + this.trieData.get(pref.node));
+					//console.log('prefix ' + pref.node.prefix + ', node ' + this.trieData.get(pref.node));
 
 					j = -1;
 					this.trieData.get(pref.node).split('').forEach(function(d){
