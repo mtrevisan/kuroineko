@@ -20,12 +20,6 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 		};
 
 
-	/**
-	 * Gets a logger. If the logger does not exist it is created.
-	 *
-	 * @param {String} name		The unique name of the logger
-	 * @param {Object} [conf]	The configuration object in the form <code>{rootLogger: 'DEBUG', showTime: true, out: function(message){}}</code>
-	 */
 	var Constructor = function(patterns, options){
 		readPatterns.call(this, patterns);
 
