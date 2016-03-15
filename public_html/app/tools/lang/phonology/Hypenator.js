@@ -13,7 +13,10 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 			leftmin: 0,
 			/** minimal length of characters after the last hyphenation */
 			rightmin: 0,
-			exceptions: {}
+			exceptions: {},
+//			hyphen: String.fromCharCode(173)
+//			hyphen: '\u00AD'
+			hyphen: '-'
 		};
 
 
@@ -34,16 +37,13 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 				this.config[k] = options[k];
 
 		this.cache = {};
-//		this.softHyphen = String.fromCharCode(173);
-//		this.softHyphen = '\u00AD';
-		this.softHyphen = '-';
 	};
 
 	var hypenate = function(word){
 		word = Word.markDefaultStress(word);
 
 		var hypenatedWord;
-		if(word.indexOf(this.softHyphen) >= 0)
+		if(word.indexOf(this.config.hyphen) >= 0)
 			//the word already contains &shy; then leave as it is
 			hypenatedWord = word;
 		else if(this.cache[word])
@@ -51,7 +51,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 			hypenatedWord = this.cache[word];
 		else if(this.config.exceptions[word])
 			//the word is in the exceptions list
-			hypenatedWord = this.config.exceptions[word].replace(/-/g, this.softHyphen);
+			hypenatedWord = this.config.exceptions[word].replace(/-/g, this.config.hyphen);
 		else if(word.indexOf('-') >= 0)
 			//if word contains '-' then hyphenate the parts separated with '-'
 			hypenatedWord = word.split('-')
@@ -87,7 +87,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 			//create hyphenated word
 			var maxLength = word.length - this.config.rightmin;
 			hypenatedWord = word.split('').map(function(chr, idx){
-				return (idx >= this.config.leftmin && idx <= maxLength && hyp[idx] % 2? this.softHyphen: '') + chr;
+				return (idx >= this.config.leftmin && idx <= maxLength && hyp[idx] % 2? this.config.hyphen: '') + chr;
 			}, this).join('');
 
 			//put the word in the cache
