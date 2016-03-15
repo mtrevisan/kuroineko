@@ -21,12 +21,12 @@ require(['tools/lang/phonology/Hypenator'], function(Hypenator){
 				+ '2ñ.2ñb2ñc2ñd2ñđ2ñf2ñg2ñj2ñɉ2ñk2ñl2ñm2ñn2ñp2ñr2ñs2ñt2ñŧ2ñv2ñx'
 				+ '2p.2pb2pc2pd2pđ2pf2pg2pj2pɉ2pk2pl2pm2pn2pñ2pr2ps2pt2pŧ2pv2px'
 				+ '2r.2rb2rc2rd2rđ2rf2rg2rj2rɉ2rk2rl2rm2rn2rñ2rp2rs2rt2rŧ2rv2rx'
-				+ '2s.' //+ '2sc2sf2sk2sp2st2sŧ2sx'
-				+ 's2cs2fs2ks2ps2t'
+				+ '2s.' + '2sc2sf2sk2sp2st2sŧ2sx'
+				//+ 's2cs2fs2ks2ps2t'
 				+ '2t.2tb2tc2td2tđ2tf2tg2tj2tɉ2tk2tl2tm2tn2tñ2tp2tr2ts2tŧ2tv2tx'
 				+ '2ŧ.2ŧb2ŧc2ŧd2ŧđ2ŧf2ŧg2ŧj2ŧɉ2ŧk2ŧl2ŧm2ŧn2ŧñ2ŧp2ŧr2ŧs2ŧt2ŧv2ŧx'
 				+ '2v.2vb2vc2vd2vđ2vf2vg2vj2vɉ2vk2vl2vm2vn2vñ2vp2vr2vs2vt2vŧ2vx'
-				+ '2x.' //+ '2xb2xd2xđ2xg2xj2xɉ2xl2xm2xn2xñ2xr2xs2xv'
+				+ '2x.' + '2xb2xd2xđ2xg2xj2xɉ2xl2xm2xn2xñ2xr2xs2xv'
 				+ 'x2mx2nx2ñx2bx2dx2gx2jx2ɉx2sx2vx2rx2l'
 				+ 'b2lb2r'
 				+ 'c2lc2r'
@@ -475,7 +475,8 @@ require(['tools/lang/phonology/Hypenator'], function(Hypenator){
 			'gronda', 'injasar', 'serpente', 'kospirar', 'kosto', 'kostrénxer', 'despresar', 'bastanŧa', 'destrikar', 'peskar', 'maèstra',
 			'dexmentegà', 'ciklixmo', 'strako', 'scantixo', 'sfexa', 'stabia', 'stranbo', 'skòpo', 'xbaro', 'xbrigar', 'xbèrla', 'submontano',
 			'transubstanŧiar', 'abnegasion', 'àbside', 'tèknika', 'iks', 'etnía', 'ipnoxi', 'biopsía', 'ritmo', 'aritmètega', 'tungstèno', 'poexía',
-			'gas', 'alfa'
+			'gas', 'alfa', 'skríver',
+			'pasta', 'parte', 'mario', 'àkuila', 'apro', 'duplise', 'bastar', 'stòria'
 		];
 		var expected = [
 			'sub-ce-lu-lar', 'ab-de-gar', 'sub-for-ni-du-ra', 'sub-kor-te-gal', 'a-bla-ti-vo', 'blan-dir', 'sub-mon-tan', 'sub-nor-mal', 'sub-po-lar',
@@ -506,7 +507,8 @@ require(['tools/lang/phonology/Hypenator'], function(Hypenator){
 			'fin-lan-dia', 'gron-da', 'in-ja-sar', 'ser-pen-te', 'ko-spi-rar', 'ko-sto', 'ko-strén-xer', 'des-pre-sar', 'ba-stan-ŧa', 'des-tri-kar',
 			'pe-skar', 'ma-è-stra', 'de-xmen-te-gà', 'ci-kli-xmo', 'stra-ko', 'scan-ti-xo', 'sfe-xa', 'sta-bia', 'stran-bo', 'skò-po', 'xba-ro',
 			'xbri-gar', 'xbèr-la', 'sub-mon-ta-no', 'tran-sub-stan-ŧiar', 'ab-ne-ga-sion', 'àb-si-de', 'tèk-ni-ka', 'iks', 'et-ní-a', 'ip-no-xi',
-			'biop-sí-a', 'rit-mo', 'a-rit-mè-te-ga', 'tung-stè-no', 'po-e-xí-a', 'gas', 'al-fa'
+			'biop-sí-a', 'rit-mo', 'a-rit-mè-te-ga', 'tung-stè-no', 'po-e-xí-a', 'gas', 'al-fa', 'skrí-ver',
+			'pas-ta', 'par-te', 'ma-rio', 'à-kui-la', 'a-pro', 'du-pli-se', 'bas-tar', 'stò-ria'
 		];
 
 		words.forEach(function(word, idx){

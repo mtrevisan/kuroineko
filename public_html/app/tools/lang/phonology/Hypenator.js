@@ -60,7 +60,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 					i, j;
 				for(i = 0; i < size; i ++)
 					this.trie.findPrefix(w.substring(i)).forEach(function(pref){
-						//console.log('prefix ' + pref.node.prefix + ', node ' + this.trieData.get(pref.node));
+						//console.log(word + ': prefix ' + pref.node.prefix + ', node ' + this.get(pref.node));
 
 						j = -1;
 						this.get(pref.node).split('').forEach(function(d){
