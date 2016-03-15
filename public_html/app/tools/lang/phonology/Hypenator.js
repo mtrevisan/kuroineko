@@ -8,6 +8,8 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 		/** @constant */
 	var INVALID_WORD_REGEX = /[^-'‘’aàbcdđeéèfghiíjɉklƚmnñoóòprsʃtŧuúvxʒ.]/,
 		/** @constant */
+		WORD_BOUNDARY = '.',
+		/** @constant */
 		CONFIG_DEFAULT = {
 			/** minimal length of characters before the first hyphenation */
 			leftmin: 0,
@@ -49,7 +51,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 					.map(hypenate)
 					.join('-');
 			else{
-				var w = '.' + Word.markDefaultStress(word) + '.';
+				var w = WORD_BOUNDARY + Word.markDefaultStress(word) + WORD_BOUNDARY;
 				if(String.prototype.normalize)
 					w = w.normalize();
 
