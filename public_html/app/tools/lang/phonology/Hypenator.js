@@ -102,11 +102,10 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 		this.trie = new Trie();
 		this.trieData = new Map();
 
-		var cleanPattern, node;
+		var node;
 		Object.keys(patterns).forEach(function(length){
 			chunkString(patterns[length], length).forEach(function(pattern){
-				cleanPattern = pattern.replace(/\d/g, '');
-				node = this.trie.add(cleanPattern);
+				node = this.trie.add(pattern.replace(/\d/g, ''));
 				this.trieData.set(node, pattern);
 			}, this);
 		}, this);
