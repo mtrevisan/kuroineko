@@ -391,7 +391,7 @@ require(['tools/lang/phonology/Hypenator'], function(Hypenator){
 			//tñ
 			//tp
 			//tr
-			'trapano', 'arto', 'artrite',
+			'tràpano', 'arto', 'artrite',
 			//ts
 			//tŧ
 			//tv
@@ -477,35 +477,35 @@ require(['tools/lang/phonology/Hypenator'], function(Hypenator){
 			'gas', 'alfa'
 		];
 		var expected = [
-			'sub-ce-lu-làr', 'ab-de-gàr', 'sub-for-ni-dú-ra', 'sub-kor-te-gàl', 'a-bla-tí-vo', 'blan-dír', 'sub-mon-tàn', 'sub-nor-màl', 'sub-po-làr',
-			'a-bra-ŧàr', 'brà-ŧo', 'ob-so-lé-to', 'sub-sfè-re-go', 'sub-skrí-ver', 'sub-strà-to', 'sub-to-tàl', 'sub-tro-pe-gàl', 'sub-vé-der',
-			'kàd-mio', 'e-kíd-na', 'dre-ŧàr', 'à-dria', 'feld-spà-to', 'ad-vo-ka-ŧión', 'af-gàn', 'flú-i-do', 're-flè-so', 'àf-nio', 'frú-to',
-			'xa-fràn', 'àf-ta', 'ftà-le-go', 'a-míg-da-la', 'stag-fla-ŧión', 'glò-ria', 'kú-gluf', 'dòg-ma', 'grà-do', 'né-gro', 'tung-sté-no',
-			'ang-stróm', 'ek-bò-le-go', 'ek-dè-me-go', 'bi-ŧi-klé-ta', 'klà-se-go', 'dràk-ma', 'àk-ne', 'kré-a', 'sà-kro', 'fúk-sia', 'ek-tò-pe-go',
-			'àl-ba-ro', 'al-cón', 'al-dír', 'vòl-đer', 'tal-fià-da', 'fe-nol-fta-le-í-na', 'al-guà-ro', 'in-dul-jen-tàr', 'ner-val-ɉí-a', 'pàl-ko',
-			'kàl-mo', 'mal-nu-trí-o', 'àl-pi', 'mal-rie-sí-o', 'mal-sàn', 'àl-to', 'xmal-ŧàr', 'màl-va', 'bol-xèr', 'um-la-út', 'am-ne-xí-a',
-			'mnè-xi', 'ŧir-kum-na-ve-gàr', 'ŧir-kum-po-làr', 'ŧir-kum-ste-làr', 'fèm-to', 'ŧir-kum-ve-xu-viàn', 'kàn-bio', 'min-cón', 'món-do',
-			'món-đar', 'on-fe-gàr', 'ón-ga-ro', 'kon-ɉe-dàr', 'biàn-ko', 'in-lua-màr', 'in-ma-ne-gàr', 'in-pa-kàr', 'in-pron-tàr', 'lan-pàr',
-			'man-ro-vèr-so', 'rien-sír', 'stran-sír', 'san-tàn', 'sa-pién-ŧa', 'skon-ve-ñír', 'skon-xu-ràr', 'plà-ka', 're-o-plà-no', 'ap-nè-a',
-			'pnèu-mo', 'pneu-mo-gra-fí-a', 'po-li-pnè-a', 'or-to-pnè-a', 'or-to-pnòi-ka', 'pró-va', 'in-pron-tàr', 'psí-ko', 'a-sèp-si',
-			'po-li-psò-nio', 'kàp-su-la', 'a-dèp-to', 'èr-ba', 'per-ce-pí-sio', 'pèr-dar', 'sko-vèr-đer', 'ser-fo-jà-ro', 'se-rúr-go', 'xmar-ja-sà-da',
-			'sper-ɉu-ràr', 'spor-kàr', 'stan-ger-lón', 'ster-mi-nàr', 'stor-nàr', 'gor-ñàl', 'skàr-pa', 'bi-tuàr-se', 'a-bor-tír', 'or-to-è-pi-ko',
-			'ar-ŧón', 'ser-vír', 'gar-xàr', 'scò-na', 'mà-sco', 'sfó-go', 'skà-la', 'ta-nà-ska', 're-i-skrí-ver', 'spè-co', 'vè-spa', 've-stír',
-			'à-stro', 'stó-me-go', 'stra-fàn-to', 'sot-kòŧ', 'tmè-xi', 'al-go-rít-mo', 'èt-ni-ko', 'tra-pà-no', 'àr-to', 'ar-trí-te', 'ma-nò-vra',
-			'xba-ke-tàr', 'ci-xbàr', 'ka-xdrà-fo', 'xgà-jo', 'xɉan-sàr', 'xlà-ka', 'bu-xlàr', 'e-go-í-xmo', 'ma-xnà-da', 'xne-gàr', 'xña-kàr',
-			'o-re-xñà-ŧa', 'xra-ɉo-nàr', 'xvo-dàr', 'kon-tro-e-xén-pio', 'kon-tro-in-di-kàr', 'èk-stra', 'ek-stra-so-làr', 'ek-stra-eu-ro-pè-o',
-			'ek-stra-u-te-rín', 'ek-stra-o-spe-da-lièr', 'pa-ra-ban-kà-rio', 'pa-ra-e-ti-mo-lò-xe-go', 'pa-ra-ò-ci', 'pa-ra-úr-ti',
+			'sub-ce-lu-lar', 'ab-de-gar', 'sub-for-ni-du-ra', 'sub-kor-te-gal', 'a-bla-ti-vo', 'blan-dir', 'sub-mon-tan', 'sub-nor-mal', 'sub-po-lar',
+			'a-bra-ŧar', 'bra-ŧo', 'ob-so-le-to', 'sub-sfè-re-go', 'sub-skrí-ver', 'sub-stra-to', 'sub-to-tal', 'sub-tro-pe-gal', 'sub-vé-der',
+			'kad-mio', 'e-kid-na', 'dre-ŧar', 'a-dria', 'feld-spa-to', 'ad-vo-ka-ŧion', 'af-gan', 'flú-i-do', 're-flè-so', 'af-nio', 'fru-to',
+			'xa-fran', 'af-ta', 'ftà-le-go', 'a-míg-da-la', 'stag-fla-ŧion', 'glò-ria', 'kú-gluf', 'dòg-ma', 'gra-do', 'ne-gro', 'tung-ste-no',
+			'ang-strom', 'ek-bò-le-go', 'ek-dè-me-go', 'bi-ŧi-kle-ta', 'klà-se-go', 'drak-ma', 'ak-ne', 'kre-a', 'sa-kro', 'fuk-sia', 'ek-tò-pe-go',
+			'àl-ba-ro', 'al-con', 'al-dir', 'vòl-đer', 'tal-fia-da', 'fe-nol-fta-le-i-na', 'al-gua-ro', 'in-dul-jen-tar', 'ner-val-ɉí-a', 'pal-ko',
+			'kal-mo', 'mal-nu-trí-o', 'al-pi', 'mal-rie-sí-o', 'mal-san', 'al-to', 'xmal-ŧar', 'mal-va', 'bol-xèr', 'um-la-ut', 'am-ne-xí-a',
+			'mnè-xi', 'ŧir-kum-na-ve-gar', 'ŧir-kum-po-lar', 'ŧir-kum-ste-lar', 'fèm-to', 'ŧir-kum-ve-xu-vian', 'kan-bio', 'min-con', 'mon-do',
+			'món-đar', 'on-fe-gar', 'ón-ga-ro', 'kon-ɉe-dar', 'bian-ko', 'in-lua-mar', 'in-ma-ne-gar', 'in-pa-kar', 'in-pron-tar', 'lan-par',
+			'man-ro-vèr-so', 'rien-sir', 'stran-sir', 'san-tan', 'sa-pien-ŧa', 'skon-ve-ñir', 'skon-xu-rar', 'pla-ka', 're-o-pla-no', 'ap-nè-a',
+			'pnèu-mo', 'pneu-mo-gra-fí-a', 'po-li-pnè-a', 'or-to-pnè-a', 'or-to-pnòi-ka', 'pro-va', 'in-pron-tar', 'psi-ko', 'a-sèp-si',
+			'po-li-psò-nio', 'kàp-su-la', 'a-dèp-to', 'èr-ba', 'per-ce-pi-sio', 'pèr-dar', 'sko-vèr-đer', 'ser-fo-ja-ro', 'se-rur-go', 'xmar-ja-sa-da',
+			'sper-ɉu-rar', 'spor-kar', 'stan-ger-lon', 'ster-mi-nar', 'stor-nar', 'gor-ñal', 'skar-pa', 'bi-tuar-se', 'a-bor-tir', 'or-to-è-pi-ko',
+			'ar-ŧon', 'ser-vir', 'gar-xar', 'scò-na', 'ma-sco', 'sfo-go', 'ska-la', 'ta-na-ska', 're-i-skrí-ver', 'spè-co', 'vè-spa', 've-stir',
+			'a-stro', 'stó-me-go', 'stra-fan-to', 'sot-kòŧ', 'tmè-xi', 'al-go-rit-mo', 'èt-ni-ko', 'trà-pa-no', 'ar-to', 'ar-tri-te', 'ma-nò-vra',
+			'xba-ke-tar', 'ci-xbar', 'ka-xdra-fo', 'xga-jo', 'xɉan-sar', 'xla-ka', 'bu-xlar', 'e-go-i-xmo', 'ma-xna-da', 'xne-gar', 'xña-kar',
+			'o-re-xña-ŧa', 'xra-ɉo-nar', 'xvo-dar', 'kon-tro-e-xen-pio', 'kon-tro-in-di-kar', 'èk-stra', 'ek-stra-so-lar', 'ek-stra-eu-ro-pè-o',
+			'ek-stra-u-te-rin', 'ek-stra-o-spe-da-lièr', 'pa-ra-ban-ka-rio', 'pa-ra-e-ti-mo-lò-xe-go', 'pa-ra-ò-ci', 'pa-ra-ur-ti',
 			'op-to-e-le-trò-ne-go', 'op-to-gra-fí-a', 'an-ti-lèr-xe-go', 'an-ti-a-tò-me-go', 'dis-pnè-a', 'dis-pnòi-ko', 'bio-lò-xe-go',
-			'bio-a-stro-nàu-ta', 'bio-e-lè-tre-go', 'bio-e-ner-xí-a', 'pre-a-làr-me', 'pre-e-xà-me',
-			'viò-la', 'in-diàn', 'piò-lo', 'lén-gua', 'kué-sto', 'xài-no', 'pià-xe', 'pién', 'dié-tro', 'ó-cai', 'ma-tè-ria', 'pin-guín',
-			'eu-rò-pa', 'piú-ma', 'fo-í-ba',
-			'ab-ne-ga-ŧión', 'àb-si-de', 'dràk-ma', 'tèk-ni-ka', 'tung-stè-no', 'pnèu-mo', 'psi-ko-lo-xí-a', 'a-rit-mè-te-ga', 'et-ní-a', 'strà-ko',
-			'ba-stón', 'ma-è-stro', 'po-è-ta', 'pa-é-xe', 'mí-e', 'bu-xí-a', 'siàr', 'pa-ú-ra', 'diúr-no', 'suí-no',
-			'kà-xa', 'ju-tàr', 'pàu-xa', 'pià-ŧa', 'au-gú-ri', 'àu-gu-ri', 'grànt', 'in-bri-jàr', 'au-to-i-rò-ne-go', 'a-ŧión', 'sal-tàr', 'lon-tàn',
-			'fin-làn-dia', 'grón-da', 'in-ja-sàr', 'ser-pén-te', 'ko-spi-ràr', 'kó-sto', 'ko-strén-xer', 'des-pre-sàr', 'ba-stàn-ŧa', 'des-tri-kàr',
-			'pe-skàr', 'ma-è-stra', 'de-xmen-te-gà', 'ci-klí-xmo', 'strà-ko', 'scan-tí-xo', 'sfé-xa', 'stà-bia', 'stràn-bo', 'skò-po', 'xbà-ro',
-			'xbri-gàr', 'xbèr-la', 'sub-mon-tà-no', 'tran-sub-stan-ŧiàr', 'ab-ne-ga-sión', 'àb-si-de', 'tèk-ni-ka', 'íks', 'et-ní-a', 'ip-nó-xi',
-			'biop-sí-a', 'rít-mo', 'a-rit-mè-te-ga', 'tung-stè-no', 'po-e-xí-a', 'gàs', 'àl-fa'
+			'bio-a-stro-nàu-ta', 'bio-e-lè-tre-go', 'bio-e-ner-xí-a', 'pre-a-lar-me', 'pre-e-xa-me',
+			'viò-la', 'in-dian', 'piò-lo', 'len-gua', 'kue-sto', 'xài-no', 'pia-xe', 'pien', 'die-tro', 'ó-cai', 'ma-tè-ria', 'pin-guin',
+			'eu-rò-pa', 'piu-ma', 'fo-i-ba',
+			'ab-ne-ga-ŧion', 'àb-si-de', 'drak-ma', 'tèk-ni-ka', 'tung-stè-no', 'pnèu-mo', 'psi-ko-lo-xí-a', 'a-rit-mè-te-ga', 'et-ní-a', 'stra-ko',
+			'ba-ston', 'ma-è-stro', 'po-è-ta', 'pa-e-xe', 'mi-e', 'bu-xí-a', 'siar', 'pa-u-ra', 'diur-no', 'sui-no',
+			'ka-xa', 'ju-tar', 'pàu-xa', 'pia-ŧa', 'au-gu-ri', 'àu-gu-ri', 'grant', 'in-bri-jar', 'au-to-i-rò-ne-go', 'a-ŧion', 'sal-tar', 'lon-tan',
+			'fin-lan-dia', 'gron-da', 'in-ja-sar', 'ser-pen-te', 'ko-spi-rar', 'ko-sto', 'ko-strén-xer', 'des-pre-sar', 'ba-stan-ŧa', 'des-tri-kar',
+			'pe-skar', 'ma-è-stra', 'de-xmen-te-gà', 'ci-kli-xmo', 'stra-ko', 'scan-ti-xo', 'sfe-xa', 'sta-bia', 'stran-bo', 'skò-po', 'xba-ro',
+			'xbri-gar', 'xbèr-la', 'sub-mon-ta-no', 'tran-sub-stan-ŧiar', 'ab-ne-ga-sion', 'àb-si-de', 'tèk-ni-ka', 'iks', 'et-ní-a', 'ip-no-xi',
+			'biop-sí-a', 'rit-mo', 'a-rit-mè-te-ga', 'tung-stè-no', 'po-e-xí-a', 'gas', 'al-fa'
 		];
 
 		words.forEach(function(word, idx){

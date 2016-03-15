@@ -83,6 +83,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 			hypenatedWord = word.split('').map(function(chr, idx){
 				return (idx >= this.config.leftmin && idx <= maxLength && hyp[idx] % 2? this.config.hyphen: '') + chr;
 			}, this).join('');
+			hypenatedWord = removeDefaultStress.call(this, hypenatedWord);
 
 			//put the word in the cache
 			this.cache[word] = hypenatedWord;
@@ -108,6 +109,17 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	/** @private */
 	var chunkString = function(str, length){
 		return str.match(new RegExp('.{' + length + '}', 'g'));
+	};
+
+	/** @private */
+	var removeDefaultStress = function(hypenatedWord){
+		hypenatedWord = hypenatedWord.split(this.config.hyphen);
+		var size = hypenatedWord.length;
+		if(hypenatedWord[size - 1].match(/[^aeiouàèéíòóú]$/))
+			hypenatedWord[size - 1] = Word.unmarkDefaultStress(hypenatedWord[size - 1]);
+		else if(hypenatedWord[size - 1].match(/[^àèéíòóú]$/))
+			hypenatedWord[size - 2] = Word.unmarkDefaultStress(hypenatedWord[size - 2] + hypenatedWord[size - 1]).substring(0, hypenatedWord[size - 2].length);
+		return hypenatedWord.join(this.config.hyphen);
 	};
 
 
