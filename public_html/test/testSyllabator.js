@@ -130,14 +130,14 @@ require(['tools/lang/phonology/Syllabator'], function(Syllabator){
 		assert.equal(syllabateGraphematicAndJoin('jutar'), 'ju-tàr');
 		assert.equal(syllabateGraphematicAndJoin('pàuxa'), 'pàu-xa');
 		assert.equal(syllabateGraphematicAndJoin('piaŧa'), 'pià-ŧa');
-		assert.equal(syllabateGraphematicAndJoin('auguri'), 'a-u-gú-ri');
+		assert.equal(syllabateGraphematicAndJoin('auguri'), 'au-gú-ri');
 		assert.equal(syllabateGraphematicAndJoin('àuguri'), 'àu-gu-ri');
 		assert.equal(syllabateGraphematicAndJoin('poèta'), 'po-è-ta');
 		assert.equal(syllabateGraphematicAndJoin('paura'), 'pa-ú-ra');
 		assert.equal(syllabateGraphematicAndJoin('grant'), 'grànt');
 
 		assert.equal(syllabateGraphematicAndJoin('inbrijar'), 'in-bri-jàr');
-		assert.equal(syllabateGraphematicAndJoin('autoirònego'), 'a-u-to-i-rò-ne-go');
+		assert.equal(syllabateGraphematicAndJoin('autoirònego'), 'au-toi-rò-ne-go');
 		assert.equal(syllabateGraphematicAndJoin('aŧión'), 'a-ŧión');
 	});
 

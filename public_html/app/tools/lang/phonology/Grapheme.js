@@ -29,8 +29,8 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 	};
 
 	var isHyatus = function(group){
-//		return group.match(/([aeoàèéòó][aeo]|[íú][aeiou]|[aeiou][àèéíòóú])/);
-		return group.match(/([íú][aeiou]|[iu][aeoàèéòó]|[aeo][aeoàèéíòóú]|[àèéòó][aeo])/);
+		return group.match(/([aeoàèéòó][aeo]|[íú][aeiou]|[aeiou][àèéíòóú])/);
+//		return group.match(/([íú][aeiou]|[iu][aeoàèéòó]|[aeo][aeoàèéíòóú]|[àèéòó][aeo])/);
 	};
 
 	var isEterophonicSequence = function(group){
@@ -110,13 +110,13 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 		else
 			word = word
 				//hyatus
-//				.replace(/([aeoàèéòó])([aeo])/g, replacement)
-//				.replace(/([íú])([aeiou])/g, replacement)
-//				.replace(/([aeo])([àèéíòóú])/g, replacement);
+				.replace(/([aeoàèéòó])([aeo])/g, replacement)
 				.replace(/([íú])([aeiou])/g, replacement)
-				.replace(/([iu])([aeoàèéòó])/g, replacement)
-				.replace(/([aeo])([aeiouàèéíòóú])/g, replacement)
-				.replace(/([àèéòó])([aeo])/g, replacement);
+				.replace(/([aeo])([àèéíòóú])/g, replacement);
+//				.replace(/([íú])([aeiou])/g, replacement)
+//				.replace(/([iu])([aeoàèéòó])/g, replacement)
+//				.replace(/([aeo])([aeiouàèéíòóú])/g, replacement)
+//				.replace(/([àèéòó])([aeo])/g, replacement);
 
 		return word;
 	};
