@@ -37,8 +37,8 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 		var hypenatedWord = this.config.exceptions[word];
 		//the word is not in the exceptions list
 		if(!hypenatedWord){
-			if(word.match(INVALID_WORD_REGEX) || word.indexOf(this.config.hyphen) >= 0)
-				//if the word already contains &shy; then leave as it is
+			if(word.match(INVALID_WORD_REGEX) || word.indexOf(this.config.hyphen) >= 0 || word.indexOf('&shy;') >= 0)
+				//if the word contains invalid characters, or already contains the hypen character then leave as it is
 				hypenatedWord = word;
 			else if(this.cache[word])
 				//if the word is in the cache then return it
@@ -53,7 +53,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 				if(String.prototype.normalize)
 					w = w.normalize();
 
-				var size = w.length,
+				var size = w.length - 1,
 					hyp = [],
 					i, j;
 				for(i = 0; i < size; i ++)
@@ -73,8 +73,8 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 				//create hyphenated word
 				var maxLength = word.length - this.config.rightmin;
 				hypenatedWord = word.split('').map(function(chr, idx){
-					return (idx >= this.config.leftmin && idx <= maxLength && hyp[idx] % 2? this.config.hyphen: '') + chr;
-				}, this).join('');
+					return (idx >= this.leftmin && idx <= maxLength && hyp[idx] % 2? this.hyphen: '') + chr;
+				}, this.config).join('');
 
 				//put the word in the cache
 				this.cache[word] = hypenatedWord;
