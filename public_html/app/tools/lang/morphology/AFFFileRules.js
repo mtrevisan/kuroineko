@@ -1625,8 +1625,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		if(idx >= 0){
 			syll = Syllabator.syllabate(word);
 			//exclude unmark from words that can be truncated like "fenisié(de)" or "(g)à"
-			tmp = ((syll.syllabes.length > 1 || word.match(/[^aeiouàèéíòóú]$/))
-					&& !Grapheme.isDiphtong(word.substr(idx, 2))
+			tmp = (/*(syll.syllabes.length > 1 || word.match(/[^aeiouàèéíòóú]$/))
+					&&*/ !Grapheme.isDiphtong(word.substr(idx, 2))
 					&& !Grapheme.isHyatus(word.substr(idx, 2))
 					&& !word.match(/^(re)?\(?g?\)?(à\/è|à|é|ò)[oaie]?$/)
 					&& !word.match(/^\(?x?\)?é$|^s[éí][oaie]?$/)
@@ -1635,7 +1635,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 					&& !word.match(/^s[àò][oaie]?$/)
 					&& !word.match(/^(|as?|des?|es|kon|pro|re|so)tr[àé][oaie]?$/)?
 				word.replace(/[àéíóú]/g, function(chr){ return 'aeiou'['àéíóú'.indexOf(chr)]; }): word);
-			if(Word.markDefaultStress(tmp) == word)
+			if(tmp != word && Word.markDefaultStress(tmp) == word)
 				word = tmp;
 		}
 
