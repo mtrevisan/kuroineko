@@ -1010,16 +1010,21 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 			var conj = getIrregularVerbConjugation(type, verb);
 
-			insert(paradigm, 5, verb.infinitive, origin, themes.themeT5, null, null, '/' + INTERROGATIVE_MARK_2P + MARKER_FLAGS);
-			insert(paradigm, 5, verb.infinitive, origin, themes.themeT5 + 'u', null, null, '/' + INTERROGATIVE_MARK_2P_2);
-			insert(paradigm, 5, verb.infinitive, origin, themes.themeT5.replace(/è$/, 'é') + 'mo', null, null, '/' + INTERROGATIVE_MARK_1P);
-			insert(paradigm, 5, verb.infinitive, origin, themes.themeT5.replace(/è$/, 'é') + 'moi', null, null, '/' + INTERROGATIVE_MARK_1P_2);
-			if(conj == 2){
-				insert(paradigm, 5, verb.infinitive, origin, themes.themeT5.replace(/i?é$/, 'í'), null, null, '/' + INTERROGATIVE_MARK_2P);
-				insert(paradigm, 5, verb.infinitive, origin, themes.themeT5.replace(/i?é$/, 'í') + 'u', null, null, '/' + INTERROGATIVE_MARK_2P_2);
-				insert(paradigm, 5, verb.infinitive, origin, themes.themeT5.replace(/i?é$/, 'í') + 'mo', null, null, '/' + INTERROGATIVE_MARK_1P);
-				insert(paradigm, 5, verb.infinitive, origin, themes.themeT5.replace(/i?é$/, 'í') + 'moi', null, null, '/' + INTERROGATIVE_MARK_1P_2);
-			}
+			if(verb.irregularity.aver)
+				themes.themeT5 = themes.themeT5.replace(/^av/, '[a/av/‘]');
+
+			expandForm(themes.themeT5).forEach(function(t){
+				insert(paradigm, 5, verb.infinitive, origin, t, null, null, '/' + INTERROGATIVE_MARK_2P + MARKER_FLAGS);
+				insert(paradigm, 5, verb.infinitive, origin, t + 'u', null, null, '/' + INTERROGATIVE_MARK_2P_2);
+				insert(paradigm, 5, verb.infinitive, origin, t.replace(/è$/, 'é') + 'mo', null, null, '/' + INTERROGATIVE_MARK_1P);
+				insert(paradigm, 5, verb.infinitive, origin, t.replace(/è$/, 'é') + 'moi', null, null, '/' + INTERROGATIVE_MARK_1P_2);
+				if(conj == 2){
+					insert(paradigm, 5, verb.infinitive, origin, t.replace(/i?é$/, 'í'), null, null, '/' + INTERROGATIVE_MARK_2P);
+					insert(paradigm, 5, verb.infinitive, origin, t.replace(/i?é$/, 'í') + 'u', null, null, '/' + INTERROGATIVE_MARK_2P_2);
+					insert(paradigm, 5, verb.infinitive, origin, t.replace(/i?é$/, 'í') + 'mo', null, null, '/' + INTERROGATIVE_MARK_1P);
+					insert(paradigm, 5, verb.infinitive, origin, t.replace(/i?é$/, 'í') + 'moi', null, null, '/' + INTERROGATIVE_MARK_1P_2);
+				}
+			});
 		}
 	};
 
@@ -1500,10 +1505,11 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 			var conj = getIrregularVerbConjugation(type, verb);
 
-			//FIXME
-			//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
 			if(verb.irregularity.aver)
 				themes.themeT12 = themes.themeT12.replace(/^a/, '[a‘]');
+
+			//FIXME
+			//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
 			expandForm(themes.themeT12).forEach(function(t){
 				insert(paradigm, 12, verb.infinitive, origin, t + 'ón', null, null, '/' + INTERROGATIVE_MARK_1P + MARKER_FLAGS);
 				insert(paradigm, 12, verb.infinitive, origin, t + 'óni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
