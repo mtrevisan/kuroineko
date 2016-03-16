@@ -748,7 +748,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			tmp = 'r';
 		}
 		else if(verb.irregularity.aver)
-			themeT2 = themeT2.replace(/^av/, '[a/av/‘]');
+			themeT2 = themeT2.replace(/^av/, '[a/av/‘/ga/gav]');
 
 		expandForm(themeT2).forEach(function(t){
 			insert(paradigm, 2, verb.infinitive, origin, t + tmp + 'o', /o$/, '[oae]', '/' + INTERROGATIVE_MARK_1S + ',' + INTERROGATIVE_MARK_1P);
@@ -1011,7 +1011,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			var conj = getIrregularVerbConjugation(type, verb);
 
 			if(verb.irregularity.aver)
-				themes.themeT5 = themes.themeT5.replace(/^av/, '[a/av/‘]');
+				themes.themeT5 = themes.themeT5.replace(/^av/, '[a/av/‘/ga/gav]');
 
 			expandForm(themes.themeT5).forEach(function(t){
 				insert(paradigm, 5, verb.infinitive, origin, t, null, null, '/' + INTERROGATIVE_MARK_2P + MARKER_FLAGS);
@@ -1422,6 +1422,11 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 						insert(paradigm, 10, verb.infinitive, origin, t.replace(/[ai]$/, 'e') + 'lo', null, null, '/' + INTERROGATIVE_MARK_3_2);
 						if(t.match(/[^aeiouàèéíòóú]e$/))
 							insert(paradigm, 10, verb.infinitive, origin, t, null, null, '/' + FINAL_CONSONANT_VOICING_MARK);
+					}
+					else if(verb.irregularity.aver){
+						t = 'ga';
+						insert(paradigm, 10, verb.infinitive, origin, t, null, null, '/' + INTERROGATIVE_MARK_3 + MARKER_FLAGS);
+						insert(paradigm, 10, verb.infinitive, origin, t.replace(/[ai]$/, 'e') + 'lo', null, null, '/' + INTERROGATIVE_MARK_3_2);
 					}
 				}
 				else{
