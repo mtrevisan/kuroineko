@@ -742,29 +742,38 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	/** @private */
 	var generateT2IndicativeImperfect = function(paradigm, verb, themeT2, origin){
-		var tmp = (verb.irregularity.eser? 'r': 'v');
-		insert(paradigm, 2, verb.infinitive, origin, themeT2 + tmp + 'o', /o$/, '[oae]', '/' + INTERROGATIVE_MARK_1S + ',' + INTERROGATIVE_MARK_1P);
-		insert(paradigm, 2, verb.infinitive, origin, themeT2 + tmp + 'omi', /omi$/, '[oae]mi', '/' + INTERROGATIVE_MARK_1S_2);
-		insert(paradigm, 2, verb.infinitive, origin, themeT2 + tmp + 'i', null, null, '/' + INTERROGATIVE_MARK_2S);
-		insert(paradigm, 2, verb.infinitive, origin, themeT2 + tmp + 'itu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
-		insert(paradigm, 2, verb.infinitive, origin, themeT2 + tmp + 'a', /a$/, '[ai]', '/' + INTERROGATIVE_MARK_2P);
-		insert(paradigm, 2, verb.infinitive, origin, themeT2 + tmp + 'au', null, null, '/' + INTERROGATIVE_MARK_2P_2);
-		insert(paradigm, 2, verb.infinitive, origin, themeT2 + tmp + 'a', null, null, '/' + INTERROGATIVE_MARK_3);
-		insert(paradigm, 2, verb.infinitive, origin, themeT2 + tmp + 'elo', null, null, '/' + INTERROGATIVE_MARK_3_2);
-		insert(paradigm, 2, verb.infinitive, origin, themeT2 + tmp + 'imo', null, null, '/' + INTERROGATIVE_MARK_1P);
-		insert(paradigm, 2, verb.infinitive, origin, themeT2 + tmp + 'imoi', null, null, '/' + INTERROGATIVE_MARK_1P_2);
-		if(!verb.irregularity.eser){
-			insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'o', /o$/, '[oae]', '/' + INTERROGATIVE_MARK_1S + ',' + INTERROGATIVE_MARK_1P);
-			insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'omi', /omi$/, '[oae]mi', '/' + INTERROGATIVE_MARK_1S_2);
-			insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'i', null, null, '/' + INTERROGATIVE_MARK_2S);
-			insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'itu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
-			insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'a', /a$/, '[ai]', '/' + INTERROGATIVE_MARK_2P);
-			insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'au', null, null, '/' + INTERROGATIVE_MARK_2P_2);
-			insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'a', null, null, '/' + INTERROGATIVE_MARK_3);
-			insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'elo', null, null, '/' + INTERROGATIVE_MARK_3_2);
-			insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'imo', null, null, '/' + INTERROGATIVE_MARK_1P);
-			insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'imoi', null, null, '/' + INTERROGATIVE_MARK_1P_2);
+		var tmp = '(v)';
+		if(verb.irregularity.eser){
+			themeT2 = '(j/x)' + themeT2;
+			tmp = 'r';
 		}
+		else if(verb.irregularity.aver)
+			themeT2 = themeT2.replace(/^av/, '[a/av/‘]');
+
+		expandForm(themeT2).forEach(function(t){
+			insert(paradigm, 2, verb.infinitive, origin, t + tmp + 'o', /o$/, '[oae]', '/' + INTERROGATIVE_MARK_1S + ',' + INTERROGATIVE_MARK_1P);
+			insert(paradigm, 2, verb.infinitive, origin, t + tmp + 'omi', /omi$/, '[oae]mi', '/' + INTERROGATIVE_MARK_1S_2);
+			insert(paradigm, 2, verb.infinitive, origin, t + tmp + 'i', null, null, '/' + INTERROGATIVE_MARK_2S);
+			insert(paradigm, 2, verb.infinitive, origin, t + tmp + 'itu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
+			insert(paradigm, 2, verb.infinitive, origin, t + tmp + 'a', /a$/, '[ai]', '/' + INTERROGATIVE_MARK_2P);
+			insert(paradigm, 2, verb.infinitive, origin, t + tmp + 'au', null, null, '/' + INTERROGATIVE_MARK_2P_2);
+			insert(paradigm, 2, verb.infinitive, origin, t + tmp + 'a', null, null, '/' + INTERROGATIVE_MARK_3);
+			insert(paradigm, 2, verb.infinitive, origin, t + tmp + 'elo', null, null, '/' + INTERROGATIVE_MARK_3_2);
+			insert(paradigm, 2, verb.infinitive, origin, t + tmp + 'imo', null, null, '/' + INTERROGATIVE_MARK_1P);
+			insert(paradigm, 2, verb.infinitive, origin, t + tmp + 'imoi', null, null, '/' + INTERROGATIVE_MARK_1P_2);
+			if(!verb.irregularity.eser){
+				insert(paradigm, 2, verb.infinitive, origin, t + 'o', /o$/, '[oae]', '/' + INTERROGATIVE_MARK_1S + ',' + INTERROGATIVE_MARK_1P);
+				insert(paradigm, 2, verb.infinitive, origin, t + 'omi', /omi$/, '[oae]mi', '/' + INTERROGATIVE_MARK_1S_2);
+				insert(paradigm, 2, verb.infinitive, origin, t + 'i', null, null, '/' + INTERROGATIVE_MARK_2S);
+				insert(paradigm, 2, verb.infinitive, origin, t + 'itu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
+				insert(paradigm, 2, verb.infinitive, origin, t + 'a', /a$/, '[ai]', '/' + INTERROGATIVE_MARK_2P);
+				insert(paradigm, 2, verb.infinitive, origin, t + 'au', null, null, '/' + INTERROGATIVE_MARK_2P_2);
+				insert(paradigm, 2, verb.infinitive, origin, t + 'a', null, null, '/' + INTERROGATIVE_MARK_3);
+				insert(paradigm, 2, verb.infinitive, origin, t + 'elo', null, null, '/' + INTERROGATIVE_MARK_3_2);
+				insert(paradigm, 2, verb.infinitive, origin, t + 'imo', null, null, '/' + INTERROGATIVE_MARK_1P);
+				insert(paradigm, 2, verb.infinitive, origin, t + 'imoi', null, null, '/' + INTERROGATIVE_MARK_1P_2);
+			}
+		});
 	};
 
 	/** @private */
@@ -777,6 +786,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		if(themes.themeT2 && origin){
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
+
+			if(verb.irregularity.eser)
+				themes.themeT2 = themes.themeT2.replace(/^fú/, '[fú/furé]');
 
 			generateT2SubjunctiveImperfect(paradigm, verb, themes.themeT2, origin);
 
@@ -809,7 +821,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 			insert(paradigm, 2, verb.infinitive, origin, themes.themeT2 + 'sto', /o$/, '[oaie]', '/' + FINAL_CONSONANT_VOICING_MARK);
 
-			//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
+			//se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
 			if(runAllForms){
 				var themeT2;
 				if(themes.themeT2.match(/à$/)){
@@ -852,7 +864,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 //				insert(paradigm, 2, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'aver'.length) + 'abiàndomene', null, null, '/' + PRONOMENAL_MARK_3);
 			}
 
-			//Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug.
+			//se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug.
 			if(runAllForms){
 				var themeT2;
 				if(themes.themeT2.match(/à$/)){
@@ -891,7 +903,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 			generateT4IndicativeFuture(paradigm, verb, themes.themeT4, origin);
 
-			//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
+			//se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
 			if(runAllForms){
 				if(themes.themeT4.match(/a$/))
 					generateT4IndicativeFuture(paradigm, verb, themes.themeT4.replace(/a$/, 'e'), origin);
@@ -937,15 +949,20 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			generateT4ConditionalSimple(paradigm, verb, themes.themeT4, origin);
+			if(verb.irregularity.aver)
+				themes.themeT4 = themes.themeT4.replace(/^a/, '[a‘]');
 
-			//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
-			if(runAllForms){
-				if(themes.themeT4.match(/a$/))
-					generateT4ConditionalSimple(paradigm, verb, themes.themeT4.replace(/a$/, 'e'), origin);
-				if(themes.themeT4.match(/i$/))
-					generateT4ConditionalSimple(paradigm, verb, themes.themeT4.replace(/i$/, 'e'), origin);
-			}
+			expandForm(themes.themeT4).forEach(function(t){
+				generateT4ConditionalSimple(paradigm, verb, themes.themeT4, origin);
+
+				//se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
+				if(runAllForms){
+					if(themes.themeT4.match(/a$/))
+						generateT4ConditionalSimple(paradigm, verb, themes.themeT4.replace(/a$/, 'e'), origin);
+					if(themes.themeT4.match(/i$/))
+						generateT4ConditionalSimple(paradigm, verb, themes.themeT4.replace(/i$/, 'e'), origin);
+				}
+			});
 		}
 	};
 
@@ -1027,21 +1044,28 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 			var conj = getIrregularVerbConjugation(type, verb);
 
-			insert(paradigm, 5, verb.infinitive, origin, themes.themeT5);
-			insert(paradigm, 5, verb.infinitive, origin, themes.themeT5.replace(/è$/, 'é') + 'mo');
-			if(conj == 2 && themes.themeT5.replace(/i?é$/, 'í') != themes.themeT5){
-				insert(paradigm, 5, verb.infinitive, origin, themes.themeT5.replace(/i?é$/, 'í'));
-				insert(paradigm, 5, verb.infinitive, origin, themes.themeT5.replace(/i?é$/, 'í') + 'mo');
-			}
-			if(conj != 2){
-				insert(paradigm, 5, verb.infinitive, origin, themes.themeT5.replace(/[èí]$/, 'é'));
+			if(verb.irregularity.eser)
+				themes.themeT5 = themes.themeT5.replace(/^sipié$/, '[sipié/sèpe]');
+			else if(verb.irregularity.aver)
+				themes.themeT5 = themes.themeT5.replace(/^ap/, '[ap/ab/ep]');
 
-				if(conj == 3 && !verb.special3rd){
-					insert(paradigm, 5, verb.infinitive, origin, themes.themeT5);
-					insert(paradigm, 5, verb.infinitive, origin, themes.themeT5.replace(/í$/, 'i') + 'de');
-					insert(paradigm, 5, verb.infinitive, origin, themes.themeT5.replace(/í$/, 'i') + 'ge');
+			expandForm(themes.themeT5).forEach(function(t){
+				insert(paradigm, 5, verb.infinitive, origin, t);
+				insert(paradigm, 5, verb.infinitive, origin, t.replace(/è$/, 'é') + 'mo');
+				if(conj == 2 && t.replace(/i?é$/, 'í') != t){
+					insert(paradigm, 5, verb.infinitive, origin, t.replace(/i?é$/, 'í'));
+					insert(paradigm, 5, verb.infinitive, origin, t.replace(/i?é$/, 'í') + 'mo');
 				}
-			}
+				if(conj != 2){
+					insert(paradigm, 5, verb.infinitive, origin, t.replace(/[èí]$/, 'é'));
+
+					if(conj == 3 && !verb.special3rd){
+						insert(paradigm, 5, verb.infinitive, origin, t);
+						insert(paradigm, 5, verb.infinitive, origin, t.replace(/í$/, 'i') + 'de');
+						insert(paradigm, 5, verb.infinitive, origin, t.replace(/í$/, 'i') + 'ge');
+					}
+				}
+			});
 		}
 	};
 
@@ -1215,6 +1239,11 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
+			if(verb.irregularity.eser)
+				themes.themeT8 = themes.themeT8.replace(/^sípi$/, '[sípi/sèp]');
+			else if(verb.irregularity.aver)
+				themes.themeT8 = themes.themeT8.replace(/^àp/, '[àp/àb/èp]');
+
 			expandForm(themes.themeT8).forEach(function(t){
 				insert(paradigm, 8, verb.infinitive, origin, t + 'a', /a$/, '[ae]');
 				insert(paradigm, 8, verb.infinitive, origin, t.replace(/([^i])$/, '$1i'));
@@ -1381,6 +1410,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				if(themes.themeT8){
 					var third = themes.themeT8 + (!verb.irregularity.verb.match(/darStarFar|s?aver/)? (verb.irregularity.eser? 'é': 'e'): '');
 					if(t != third){
+						if(verb.irregularity.eser)
+							t = '[x]' + t;
+
 						insert(paradigm, 10, verb.infinitive, origin, t, null, null, '/' + INTERROGATIVE_MARK_3 + MARKER_FLAGS);
 						insert(paradigm, 10, verb.infinitive, origin, t.replace(/[ai]$/, 'e') + 'lo', null, null, '/' + INTERROGATIVE_MARK_3_2);
 						if(t.match(/[^aeiouàèéíòóú]e$/))
@@ -1434,18 +1466,23 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			//FIXME
-			//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
-			insert(paradigm, 11, verb.infinitive, origin, themes.themeT11 + 'ié', /ié$/, '(is)ié(de/ge)', '/' + INTERROGATIVE_MARK_2P);
-			insert(paradigm, 11, verb.infinitive, origin, themes.themeT11 + 'ón', /on$/, (!themes.themeT11.match(/[cijɉñ]$/)? '(i)on': 'on'), '/' + INTERROGATIVE_MARK_1P);
-			insert(paradigm, 11, verb.infinitive, origin, themes.themeT11 + 'óni', /oni$/, (!themes.themeT11.match(/[cijɉñ]$/)? '(i)oni': 'oni'), '/' + INTERROGATIVE_MARK_1P_2);
-			insert(paradigm, 11, verb.infinitive, origin, themes.themeT11 + 'isón', /on$/, '(i)on', '/' + INTERROGATIVE_MARK_1P);
-			insert(paradigm, 11, verb.infinitive, origin, themes.themeT11 + 'isóni', /oni$/, '(i)oni', '/' + INTERROGATIVE_MARK_1P_2);
-			insert(paradigm, 11, verb.infinitive, origin, themes.themeT11 + 'én', /en$/, '(is)en', '/' + INTERROGATIVE_MARK_1P);
-			insert(paradigm, 11, verb.infinitive, origin, themes.themeT11 + 'éni', /eni$/, '(is)eni', '/' + INTERROGATIVE_MARK_1P_2);
-			insert(paradigm, 11, verb.infinitive, origin, themes.themeT11 + 'ón', /on$/, (!themes.themeT11.match(/[cijɉñ]$/)? '(i)on[e/se]': 'on[e/se]'));
-			insert(paradigm, 11, verb.infinitive, origin, themes.themeT11 + 'isón', /on$/, '(i)on[e/se]');
-			insert(paradigm, 11, verb.infinitive, origin, themes.themeT11 + 'én', /en$/, '(is)en[e/se]');
+			if(verb.irregularity.eser)
+				themes.themeT11 = themes.themeT11.replace(/^fu/, '[fu/fure]');
+
+			expandForm(themes.themeT11).forEach(function(t){
+				//FIXME
+				//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
+				insert(paradigm, 11, verb.infinitive, origin, t + 'ié', /ié$/, '(is)ié(de/ge)', '/' + INTERROGATIVE_MARK_2P);
+				insert(paradigm, 11, verb.infinitive, origin, t + 'ón', /on$/, (!t.match(/[cijɉñ]$/)? '(i)on': 'on'), '/' + INTERROGATIVE_MARK_1P);
+				insert(paradigm, 11, verb.infinitive, origin, t + 'óni', /oni$/, (!t.match(/[cijɉñ]$/)? '(i)oni': 'oni'), '/' + INTERROGATIVE_MARK_1P_2);
+				insert(paradigm, 11, verb.infinitive, origin, t + 'isón', /on$/, '(i)on', '/' + INTERROGATIVE_MARK_1P);
+				insert(paradigm, 11, verb.infinitive, origin, t + 'isóni', /oni$/, '(i)oni', '/' + INTERROGATIVE_MARK_1P_2);
+				insert(paradigm, 11, verb.infinitive, origin, t + 'én', /en$/, '(is)en', '/' + INTERROGATIVE_MARK_1P);
+				insert(paradigm, 11, verb.infinitive, origin, t + 'éni', /eni$/, '(is)eni', '/' + INTERROGATIVE_MARK_1P_2);
+				insert(paradigm, 11, verb.infinitive, origin, t + 'ón', /on$/, (!t.match(/[cijɉñ]$/)? '(i)on[e/se]': 'on[e/se]'));
+				insert(paradigm, 11, verb.infinitive, origin, t + 'isón', /on$/, '(i)on[e/se]');
+				insert(paradigm, 11, verb.infinitive, origin, t + 'én', /en$/, '(is)en[e/se]');
+			});
 		}
 	};
 
@@ -1465,14 +1502,18 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 			//FIXME
 			//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
-			insert(paradigm, 12, verb.infinitive, origin, themes.themeT12 + 'ón', null, null, '/' + INTERROGATIVE_MARK_1P + MARKER_FLAGS);
-			insert(paradigm, 12, verb.infinitive, origin, themes.themeT12 + 'óni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
-			insert(paradigm, 12, verb.infinitive, origin, themes.themeT12 + 'én', null, null, '/' + INTERROGATIVE_MARK_1P);
-			insert(paradigm, 12, verb.infinitive, origin, themes.themeT12 + 'éni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
-			if(themes.themeT5 && conj != 2){
-				insert(paradigm, 12, verb.infinitive, origin, themes.themeT12 + 'é', null, null, '/' + INTERROGATIVE_MARK_2P);
-				insert(paradigm, 12, verb.infinitive, origin, themes.themeT12 + 'éu', null, null, '/' + INTERROGATIVE_MARK_2P_2);
-			}
+			if(verb.irregularity.aver)
+				themes.themeT12 = themes.themeT12.replace(/^a/, '[a‘]');
+			expandForm(themes.themeT12).forEach(function(t){
+				insert(paradigm, 12, verb.infinitive, origin, t + 'ón', null, null, '/' + INTERROGATIVE_MARK_1P + MARKER_FLAGS);
+				insert(paradigm, 12, verb.infinitive, origin, t + 'óni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
+				insert(paradigm, 12, verb.infinitive, origin, t + 'én', null, null, '/' + INTERROGATIVE_MARK_1P);
+				insert(paradigm, 12, verb.infinitive, origin, t + 'éni', null, null, '/' + INTERROGATIVE_MARK_1P_2);
+				if(themes.themeT5 && conj != 2){
+					insert(paradigm, 12, verb.infinitive, origin, t + 'é', null, null, '/' + INTERROGATIVE_MARK_2P);
+					insert(paradigm, 12, verb.infinitive, origin, t + 'éu', null, null, '/' + INTERROGATIVE_MARK_2P_2);
+				}
+			});
 		}
 	};
 
@@ -1490,14 +1531,21 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			//FIXME
-			//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
-			insert(paradigm, 12, verb.infinitive, origin, themes.themeT12 + 'ón', /on$/, (!themes.themeT12.match(/[cijɉñ]$/)? '(i)on(e)': 'on(e)'));
-			insert(paradigm, 12, verb.infinitive, origin, themes.themeT12 + 'én', /en$/, 'en(e)');
-			if(themes.themeT5){
-				insert(paradigm, 12, verb.infinitive, origin, themes.themeT12 + 'é', /é$/, (verb.special3rd? '(i)é': 'é'));
-				insert(paradigm, 12, verb.infinitive, origin, themes.themeT12 + 'é', /é$/, (verb.special3rd? '(i)e[de/ge]': 'e[de/ge]'));
-			}
+			if(verb.irregularity.eser)
+				themes.themeT12 = themes.themeT12.replace(/^sipi$/, '[sipi/sèp]');
+			else if(verb.irregularity.aver)
+				themes.themeT12 = themes.themeT12.replace(/^ap/, '[ap/ab/ep]');
+
+			expandForm(themes.themeT12).forEach(function(t){
+				//FIXME
+				//Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug.
+				insert(paradigm, 12, verb.infinitive, origin, t + 'ón', /on$/, (!t.match(/[cijɉñ]$/)? '(i)on(e)': 'on(e)'));
+				insert(paradigm, 12, verb.infinitive, origin, t + 'én', /en$/, 'en(e)');
+				if(themes.themeT5){
+					insert(paradigm, 12, verb.infinitive, origin, t + 'é', /é$/, (verb.special3rd? '(i)é': 'é'));
+					insert(paradigm, 12, verb.infinitive, origin, t + 'é', /é$/, (verb.special3rd? '(i)e[de/ge]': 'e[de/ge]'));
+				}
+			});
 		}
 	};
 
@@ -1532,8 +1580,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	/** @private */
 	var insert = function(paradigm, theme, infinitive, origin, stressedSuffix, replaceMatch, replacement, addedSuffix){
 		var suffix;
+		//se pòl ‘ver un xbasamento de la vokal (àtona) drio konsonante no prosimante e vanti vibrante
 		if(runAllForms){
-			//se pòl ‘ver un xbasamento de la vokal (àtona) drio konsonante no prosimante e vanti vibrante
 			var syll = Syllabator.syllabate(stressedSuffix, null, true);
 			var stressedSuffixLoweredVowel = stressedSuffix.replace(/([^aàeèéíoòóú])er/g, function(group, pre, idx){
 				return (syll.phones[syll.getSyllabeIndex(idx)].match(/[^jw]e/)? pre + 'ar': group);
