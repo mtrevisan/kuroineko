@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, Word){
+define(['tools/data/structs/Trie', 'tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme'], function(Trie, Word, Grapheme){
 
 		/** @constant */
 	var INVALID_WORD_REGEX = /[^-'‘’aàbcdđeéèfghiíjɉklƚmnñoóòprsʃtŧuúvxʒ]/,
@@ -33,6 +33,25 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 				this.config[k] = options[k];
 
 		this.cache = {};
+	};
+
+	/** @private */
+	var readPatterns = function(patterns){
+		this.trie = new Trie();
+		this.trieData = new Map();
+
+		var node;
+		Object.keys(patterns).forEach(function(length){
+			chunkString(patterns[length], length).forEach(function(pattern){
+				node = this.trie.add(pattern.replace(/\d/g, ''));
+				this.trieData.set(node, pattern);
+			}, this);
+		}, this);
+	};
+
+	/** @private */
+	var chunkString = function(str, length){
+		return str.match(new RegExp('.{' + length + '}', 'g'));
 	};
 
 	var hypenate = function(word){
@@ -86,30 +105,34 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 		return hypenatedWord;
 	};
 
-	/** @private */
-	var readPatterns = function(patterns){
-		this.trie = new Trie();
-		this.trieData = new Map();
+	var hypenatePhones = function(word, dialect, phonematicSyllabation){
+		var phones = Grapheme.preConvertGraphemesIntoPhones(Word.markDefaultStress(word), dialect, phonematicSyllabation)
+			.match(Grapheme.REGEX_UNICODE_SPLITTER);
+		var k = 0;
+		var hyphenatedPhones = this.hypenate(word).split(this.config.hyphen)
+			.map(function(syllabe){ return syllabe.length; })
+			.map(function(length){ return this.slice(k, k += length).join(''); }, phones);
 
-		var node;
-		Object.keys(patterns).forEach(function(length){
-			chunkString(patterns[length], length).forEach(function(pattern){
-				node = this.trie.add(pattern.replace(/\d/g, ''));
-				this.trieData.set(node, pattern);
-			}, this);
-		}, this);
-	};
+		hyphenatedPhones.getSyllabeAtIndex = function(idx){
+			var size = this.length,
+				i;
+			for(i = 0; i < size; i ++){
+				idx -= this[i].length;
+				if(idx < 0)
+					return this[i];
+			}
+			return undefined;
+		};
 
-	/** @private */
-	var chunkString = function(str, length){
-		return str.match(new RegExp('.{' + length + '}', 'g'));
+		return hyphenatedPhones;
 	};
 
 
 	Constructor.prototype = {
 		constructor: Constructor,
 
-		hypenate: hypenate
+		hypenate: hypenate,
+		hypenatePhones: hypenatePhones
 	};
 
 	return Constructor;

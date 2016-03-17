@@ -43,8 +43,8 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 	 * NOTE: Use IPA standard.
 	 *
 	 * @param {String} word		Word to be converted.
-	 * @param {String} from		Type from, one of [Phone.TYPE_GRAPHEME, Phone.TYPE_PHONEME, Phone.TYPE_PHONE].
-	 * @param {String} to		Type to, one of [Phone.TYPE_GRAPHEME, Phone.TYPE_PHONEME, Phone.TYPE_PHONE].
+	 * @param {String} from		Type from, one of [Grapheme.TYPE_GRAPHEME, Grapheme.TYPE_PHONEME, Grapheme.TYPE_PHONE].
+	 * @param {String} to		Type to, one of [Grapheme.TYPE_GRAPHEME, Grapheme.TYPE_PHONEME, Grapheme.TYPE_PHONE].
 	 * @param {String} dialect	Dialect to convert the word to.
 	 * @param {Boolean} phonematicSyllabation	Wether to syllabate phonematically.
 	 */
@@ -53,9 +53,15 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 	};
 
 	/** NOTE: Use IPA standard. */
-	var convertGraphemesIntoPhones = function(word, dialect, phonematicSyllabation){
+	var preConvertGraphemesIntoPhones = function(word){
 		word = phonizeJAffineGrapheme(word);
 		word = phonizeEterophonicSequence(word);
+		return word;
+	};
+
+	/** NOTE: Use IPA standard. */
+	var convertGraphemesIntoPhones = function(word, dialect, phonematicSyllabation){
+		word = preConvertGraphemesIntoPhones(word);
 		word = markPhonologicSyllabeSeparation(word, phonematicSyllabation);
 		word = phonizeCombinatorialVariants(word, dialect);
 		word = phonizeSingleGraphemes(word, dialect);
@@ -253,6 +259,8 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 		TYPE_PHONE: TYPE_PHONE,
 		HYATUS_MARKER: HYATUS_MARKER,
 
+		REGEX_UNICODE_SPLITTER: Phone.REGEX_UNICODE_SPLITTER,
+
 		isVowel: isVowel,
 		isDiphtong: isDiphtong,
 		isHyatus: isHyatus,
@@ -261,6 +269,7 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 
 		convert: convert,
 
+		preConvertGraphemesIntoPhones: preConvertGraphemesIntoPhones,
 		convertGraphemesIntoPhones: convertGraphemesIntoPhones,
 		convertGraphemesIntoPhonemes: convertGraphemesIntoPhonemes,
 

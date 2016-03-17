@@ -37439,7 +37439,7 @@
 "skalfodro",["n. m. sing."],{"ita":"gaglioffo, farabutto","eng":"rascal, scoundrel"},37438,["TN"],
 "skankenà",["aj."],{"ita":"sgangherato, sconquassato","eng":"ramshackled, rickety"},37439,["TN"],
 "skapuŧar",["v. intr."],{"ita":"inciampare","eng":"trip, stumble"},37440,["TN"],
-"skekeđar",["Vb.intr."],{"ita":"crepitare del fuoco","eng":"crackle, crack"},37441,["TN"],
+"skekeđar",["v. intr."],{"ita":"crepitare del fuoco","eng":"crackle, crack"},37441,["TN"],
 "skekeđar",["v. intr."],{"ita":"balbettare","eng":"stutter, stammer"},37442,["TN"],
 "skinkon",["n. m. sing."],{"ita":"spilungone","eng":"lanky, beanpole"},37443,["TN"],
 "skirat",["n. m. sing."],{"ita":"scoiattolo","eng":"squirrel (eurasian red s.)"},37444,["TN"],
