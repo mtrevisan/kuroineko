@@ -1675,13 +1675,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	var insert = function(paradigm, theme, infinitive, origin, stressedSuffix, replaceMatch, replacement, addedSuffix){
 		var suffix;
 		//se pòl ‘ver un xbasamento de la vokal (àtona) drio konsonante no prosimante e vanti vibrante
-		if(runAllForms){
-			var stressedSuffixLoweredVowel = unstressedVowelBeforeVibrantFreeVariation(stressedSuffix);
-			if(stressedSuffixLoweredVowel != stressedSuffix){
-				suffix = composeSuffix(stressedSuffixLoweredVowel, replaceMatch, replacement, addedSuffix);
+		if(runAllForms && stressedSuffix.match(/[^aàeèéíoòóú]er/)){
+			suffix = composeSuffix(unstressedVowelBeforeVibrantFreeVariation(stressedSuffix), replaceMatch, replacement, addedSuffix);
 
-				insertIntoParadigm(paradigm, theme, infinitive, origin, suffix);
-			}
+			insertIntoParadigm(paradigm, theme, infinitive, origin, suffix);
 		}
 
 		suffix = composeSuffix(stressedSuffix, replaceMatch, replacement, addedSuffix);
