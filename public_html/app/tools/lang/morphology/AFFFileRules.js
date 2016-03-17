@@ -1676,10 +1676,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var suffix;
 		//se pòl ‘ver un xbasamento de la vokal (àtona) drio konsonante no prosimante e vanti vibrante
 		if(runAllForms){
-			var hyp = hypenator.hypenatePhones(stressedSuffix);
-			var stressedSuffixLoweredVowel = stressedSuffix.replace(/([^aàeèéíoòóú])er/g, function(group, pre, idx){
-				return (hyp.getSyllabeAtIndex(idx).match(/[^jw]e/)? pre + 'ar': group);
-			});
+			var stressedSuffixLoweredVowel = unstressedVowelBeforeVibrantFreeVariation(stressedSuffix);
 			if(stressedSuffixLoweredVowel != stressedSuffix){
 				suffix = composeSuffix(stressedSuffixLoweredVowel, replaceMatch, replacement, addedSuffix);
 
@@ -1690,6 +1687,14 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		suffix = composeSuffix(stressedSuffix, replaceMatch, replacement, addedSuffix);
 
 		insertIntoParadigm(paradigm, theme, infinitive, origin, suffix);
+	};
+
+	/** @private */
+	var unstressedVowelBeforeVibrantFreeVariation = function(word){
+		var hyp = hypenator.hypenatePhones(word);
+		return word.replace(/([^aàeèéíoòóú])er/g, function(group, pre, idx){
+			return (hyp.getSyllabeAtIndex(idx).match(/[^jw]e/)? pre + 'ar': group);
+		});
 	};
 
 	/** @private */
