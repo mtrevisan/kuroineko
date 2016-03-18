@@ -22,6 +22,10 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 		return (chr && chr.match(/[aeiouàèéíòóú]/));
 	};
 
+	var endsInVowel = function(word){
+		return word.match(/[aeiouàèéíòóú][^aàbcdđeéèfghiíjɉklƚmnñoóòprsʃtŧuúvxʒ]*$/);
+	};
+
 	var isDiphtong = function(group){
 		//[aeoàèéòó][aeo]
 		//[íú][aeiou]
@@ -52,7 +56,11 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 		return this['convert' + from + 'Into' + to](word, dialect, phonematicSyllabation);
 	};
 
-	/** NOTE: Use IPA standard. */
+	/**
+	 * Handle /j/ and /w/ phonemes.
+	 *
+	 * NOTE: Use IPA standard.
+	 */
 	var preConvertGraphemesIntoPhones = function(word){
 		word = phonizeJAffineGrapheme(word);
 		word = phonizeEterophonicSequence(word);
@@ -88,7 +96,7 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 	 */
 	var phonizeJAffineGrapheme = function(word){
 		//this step is mandatory before eterophonic sequence VjV
-		return word.replace(/j/g, 'j²');
+		return word.replace(/j/g, 'ʝ');
 	};
 
 	/** @private */
@@ -132,7 +140,7 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 	};
 
 	var removeJLikePhone = function(word){
-		return word.replace(/j²/g, 'j');
+		return word.replace(/ʝ/g, 'j');
 	};
 
 	/** @private */
@@ -140,13 +148,13 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 		if(!dialect || dialect == 'lagunar.veneŧian')
 			word = word
 				//lateral pre-palatal + unilateral alveolar
-				.replace(/l(?=[cjɉʃ]|j²|$)/g, 'l̻ʲ').replace(/l(?=[bdđfghklƚmnñprstŧvxʒ])/g, 'l̺̝').replace(/l(?=[aeiouàèéíòóú])/g, 'l̺')
+				.replace(/l(?=[cʝjɉʃ]|$)/g, 'l̻ʲ').replace(/l(?=[bdđfghklƚmnñprstŧvxʒ])/g, 'l̺̝').replace(/l(?=[aeiouàèéíòóú])/g, 'l̺')
 				//semi-velar pre-velar
 				.replace(/^r|r(?=[aeiouàèéíòóú])/g, 'ɽ̠̟');
 		else if(dialect == 'lagunar.mestrin')
 			word = word
 				//lateral pre-palatal + unilateral alveolar
-				.replace(/l(?=[cjɉʃ]|j²|$)/g, 'l̻ʲ').replace(/l(?=[bdđfghklƚmnñprstŧvxʒ])/g, 'l̺̝').replace(/l(?=[aeiouàèéíòóú])/g, 'l̺')
+				.replace(/l(?=[cʝjɉʃ]|$)/g, 'l̻ʲ').replace(/l(?=[bdđfghklƚmnñprstŧvxʒ])/g, 'l̺̝').replace(/l(?=[aeiouàèéíòóú])/g, 'l̺')
 				//semi-velar pre-velar
 				.replace(/^r|r(?=[aeiouàèéíòóú])/g, 'ɹ˞̠');
 		else if(dialect != 'lagunar.coxòto')
@@ -216,8 +224,8 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 			.replace(/s̠/g, 's')
 			.replace(/z̠/g, 'x')
 			.replace(/n̺/g, 'n')
-			.replace(/j(?!²)/g, 'i')
-			.replace(/j²/g, 'j')
+			.replace(/j/g, 'i')
+			.replace(/ʝ/g, 'j')
 			.replace(/w/g, 'u')
 			.replace(/ɛ/g, 'è')
 			.replace(/ɔ/g, 'ò');
@@ -259,9 +267,8 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 		TYPE_PHONE: TYPE_PHONE,
 		HYATUS_MARKER: HYATUS_MARKER,
 
-		REGEX_UNICODE_SPLITTER: Phone.REGEX_UNICODE_SPLITTER,
-
 		isVowel: isVowel,
+		endsInVowel: endsInVowel,
 		isDiphtong: isDiphtong,
 		isHyatus: isHyatus,
 		isEterophonicSequence: isEterophonicSequence,

@@ -5,7 +5,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lang/Dialect', 'tools/lang/morphology/Themizer', 'tools/lang/phonology/Hypenator', 'tools/data/ArrayHelper', 'tools/data/Assert'], function(Word, Grapheme, Dialect, Themizer, Hypenator, ArrayHelper, Assert){
+define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lang/Dialect', 'tools/lang/morphology/Themizer', 'tools/lang/phonology/Hyphenator', 'tools/data/ArrayHelper', 'tools/data/Assert'], function(Word, Grapheme, Dialect, Themizer, Hyphenator, ArrayHelper, Assert){
 
 	var runAllForms = true;
 
@@ -26,7 +26,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		FLAG_START = 'A';
 
 	var printFlagsAsNumber = false;
-	var applyConstraintToInfinitives = true;
 	var logOnConsole = true;
 
 	/** @constant */
@@ -83,7 +82,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	/** @constant */
 		ADVERB_1 = REDUCTION_RESERVED_0 + 23;
 
-	var hypenator = new Hypenator({
+	var hyphenator = new Hyphenator({
 			2: '1b1c1d1đ1f1g1j1ɉ1k1l1ƚ1m1n1ñ1p1r1s1t1ŧ1v1x',
 			3: '.c2.d2.đ2.k2.m2.s2.ŧ2.x2'
 				+ '2b.2bc2bd2bđ2bf2bg2bj2cɉ2bk2bl2bm2bn2bñ2bp2br2bs2bt2bŧ2bv2bx'
@@ -395,8 +394,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 			compactEqualSuffixes(paradigm);
 
-			if(applyConstraintToInfinitives)
-				constraintToInfinitives(paradigm, origins);
+			constraintToInfinitives(paradigm, origins);
 
 			return paradigm;
 		};
@@ -775,7 +773,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 			if(verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)){
 				insert(paradigm, 1, verb.infinitive, origin, themes.themeT1 + 'r', null, null, '/' + MARKER_FLAGS);
-				if(verb.irregularity.aver)
+				if(verb.irregularity.eser || verb.irregularity.aver)
 					insert(paradigm, 1, verb.infinitive, origin, themes.themeT1 + 'rge');
 			}
 			else{
@@ -927,15 +925,22 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			else
 				insert(paradigm, 2, verb.infinitive, origin, themes.themeT2 + 'ndo', null, null, '/' + MARKER_FLAGS);
 			if(verb.irregularity.eser){
-				insert(paradigm, 2, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'èser'.length) + 'siàndo');
-//				insert(paradigm, 2, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'èser'.length) + 'siàndome', null, null, '/' + PRONOMENAL_MARK_2);
-//				insert(paradigm, 2, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'èser'.length) + 'siàndomene', null, null, '/' + PRONOMENAL_MARK_3);
+				insert(paradigm, 2, verb.infinitive, origin, 'siàndo');
+				expandForm('[e‘]séndo').forEach(function(t){
+					insert(paradigm, 2, verb.infinitive, origin, t);
+				});
+//				insert(paradigm, 2, verb.infinitive, origin, 'siàndome', null, null, '/' + PRONOMENAL_MARK_2);
+//				insert(paradigm, 2, verb.infinitive, origin, 'siàndomene', null, null, '/' + PRONOMENAL_MARK_3);
 			}
 			else if(verb.irregularity.aver){
-				insert(paradigm, 2, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'aver'.length) + 'abiàndo');
-				insert(paradigm, 2, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'aver'.length) + 'abiàndoge');
-//				insert(paradigm, 2, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'aver'.length) + 'abiàndome', null, null, '/' + PRONOMENAL_MARK_2);
-//				insert(paradigm, 2, verb.infinitive, origin, verb.infinitive.substr(0, verb.infinitive.length - 'aver'.length) + 'abiàndomene', null, null, '/' + PRONOMENAL_MARK_3);
+				expandForm('[a‘]biàndo(ge)').forEach(function(t){
+					insert(paradigm, 2, verb.infinitive, origin, t);
+				});
+				expandForm('[a‘]véndo(ge)').forEach(function(t){
+					insert(paradigm, 2, verb.infinitive, origin, t);
+				});
+//				insert(paradigm, 2, verb.infinitive, origin, 'abiàndome', null, null, '/' + PRONOMENAL_MARK_2);
+//				insert(paradigm, 2, verb.infinitive, origin, 'abiàndomene', null, null, '/' + PRONOMENAL_MARK_3);
 			}
 
 			//se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug.
@@ -1688,10 +1693,30 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	/** @private */
 	var unstressedVowelBeforeVibrantFreeVariation = function(word){
-		var hyp = hypenator.hypenatePhones(word);
+		var hyp = hyphenatePhones(word);
 		return word.replace(/([^aàeèéíoòóú])er/g, function(group, pre, idx){
 			return (hyp.getSyllabeAtIndex(idx).match(/[^jw]e/)? pre + 'ar': group);
 		});
+	};
+
+	/** @private */
+	var hyphenatePhones = function(word){
+		var phones = Grapheme.preConvertGraphemesIntoPhones(Word.markDefaultStress(word)).split(''),
+			k = 0,
+			hyphenatedPhones = hyphenator.hyphenate(word).split(hyphenator.config.hyphen)
+				.map(function(syllabe){ return syllabe.length; })
+				.map(function(length){ return this.slice(k, k += length).join(''); }, phones);
+
+		hyphenatedPhones.getSyllabeAtIndex = function(idx){
+			var syll;
+			this.some(function(syllabe){
+				idx -= syllabe.length;
+				return (idx < 0? (syll = syllabe, true): false);
+			});
+			return syll;
+		};
+
+		return hyphenatedPhones;
 	};
 
 	/** @private */
@@ -1722,7 +1747,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		var idx = Word.getIndexOfStress(word),
 			syll, tmp;
 		if(idx >= 0){
-			syll = hypenator.hypenate(word);
+			syll = hyphenator.hyphenate(word);
 			//exclude unmark from one-syllabe words ending in vowel
 			tmp = ((syll.split('-').length > 1 || word.match(/[^aeiouàèéíòóú]$/))
 					&& !Grapheme.isDiphtong(word.substr(idx, 2))

@@ -1,7 +1,7 @@
-require(['tools/lang/phonology/Hypenator'], function(Hypenator){
-	QUnit.module('Hypenator');
+require(['tools/lang/phonology/Hyphenator'], function(Hyphenator){
+	QUnit.module('Hyphenator');
 
-	QUnit.test('Hypenator', function(assert){
+	QUnit.test('Hyphenator', function(assert){
 		var patterns = {
 			//aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx
 			//le xe tautosilàbege, par exenpio: /Cj, Cw, Cr, Cl/
@@ -58,7 +58,7 @@ require(['tools/lang/phonology/Hypenator'], function(Hypenator){
 			7: 'kontro1èkstra1ekstra1ŧirkum3.ipe2r1.polip2.ortop2.dis3p2.des3p2',
 			8: 'ŧirkums2'
 		};
-		var hyp = new Hypenator(patterns, {leftmin: 1, hyphen: '-'});
+		var hyp = new Hyphenator(patterns, {leftmin: 1, hyphen: '-'});
 		var words = [
 			//bc
 			'subcelular',
@@ -471,13 +471,18 @@ require(['tools/lang/phonology/Hypenator'], function(Hypenator){
 			'foiba',
 			//others
 			'abnegaŧion', 'àbside', 'drakma', 'tèknika', 'pnèumo', 'psikoloxía', 'aritmètega', 'etnía', 'strako', 'baston', 'maèstro', 'poèta',
-			'paexe', 'mie', 'buxía', 'siar', 'paura', 'diurno', 'suino', 'kaxa', 'jutar', 'pàuxa', 'piaŧa', 'auguri', 'àuguri', 'grant', 'inbrijar',
+			'paexe', 'buxía', 'siar', 'paura', 'diurno', 'suino', 'kaxa', 'jutar', 'pàuxa', 'piaŧa', 'auguri', 'àuguri', 'grant', 'inbrijar',
 			'autoirònego', 'aŧion', 'saltar', 'lontan', 'finlandia', 'gronda', 'injasar', 'serpente', 'kospirar', 'kosto', 'kostrénxer', 'despresar',
 			'bastanŧa', 'destrikar', 'peskar', 'dexmentegà', 'ciklixmo', 'strako', 'scantixo', 'sfexa', 'stabia', 'stranbo', 'skòpo',
 			'xbaro', 'xbrigar', 'xbèrla', 'submontano', 'transubstanŧiar', 'abnegasion', 'àbside', 'tèknika', 'iks', 'etnía', 'ipnoxi', 'biopsía',
 			'ritmo', 'aritmètega', 'poexía', 'gas', 'alfa', 'skríver',
 			'pasta', 'parte', 'mario', 'àkuila', 'apro', 'duplise', 'bastar', 'stòria',
-			'kontroakuxa', 'kontroexenpio', 'kontroindikar', 'ŧirkondar', 'iperativo'
+			'kontroakuxa', 'kontroexenpio', 'kontroindikar', 'ŧirkondar', 'iperativo',
+			//jati
+			'auspika', 'autora', 'frauda', 'lauda', 'laurea', 'naufraga', 'nauxea', 'paupera', 'instaura', 'restaura',
+			'piola', 'siola', 'ŧiola', 'viola', 'perioda',
+			'gua', 'ingua', 'frua', 'grua', 'sua', 'strasua',
+			'arfia', 'efia', 'ifia', 'nia', 'dexnia', 'kria', 'pria', 'stria', 'sia', 'devia', 'invia', 'xvia'
 		];
 		var expected = [
 			'sub-ce-lu-lar', 'ab-de-gar', 'sub-for-ni-du-ra', 'sub-kor-te-gal', 'a-bla-ti-vo', 'blan-dir', 'sub-mon-tan', 'sub-nor-mal',
@@ -503,18 +508,22 @@ require(['tools/lang/phonology/Hypenator'], function(Hypenator){
 			'viò-la', 'in-dian', 'piò-lo', 'len-gua', 'kues-to', 'xài-no', 'pia-xe', 'pien', 'die-tro', 'o-cài', 'ma-tè-ria', 'pin-guin',
 			'eu-rò-pa', 'piu-ma', 'fo-i-ba',
 			'ab-ne-ga-ŧion', 'àb-si-de', 'drak-ma', 'tèk-ni-ka', 'pnèu-mo', 'psi-ko-lo-xí-a', 'a-rit-mè-te-ga', 'et-ní-a', 'stra-ko', 'bas-ton',
-			'ma-ès-tro', 'po-è-ta', 'pa-e-xe', 'mi-e', 'bu-xí-a', 'siar', 'pa-u-ra', 'diur-no', 'sui-no', 'ka-xa', 'ju-tar', 'pàu-xa', 'pia-ŧa',
+			'ma-ès-tro', 'po-è-ta', 'pa-e-xe', 'bu-xí-a', 'siar', 'pa-u-ra', 'diur-no', 'sui-no', 'ka-xa', 'ju-tar', 'pàu-xa', 'pia-ŧa',
 			'au-gu-ri', 'àu-gu-ri', 'grant', 'in-bri-jar', 'au-to-i-rò-ne-go', 'a-ŧion', 'sal-tar', 'lon-tan', 'fin-lan-dia', 'gron-da', 'in-ja-sar',
 			'ser-pen-te', 'kos-pi-rar', 'kos-to', 'kos-trén-xer', 'des-pre-sar', 'bas-tan-ŧa', 'des-tri-kar', 'pes-kar', 'dex-men-te-gà',
 			'ci-klix-mo', 'stra-ko', 'scan-ti-xo', 'sfe-xa', 'sta-bia', 'stran-bo', 'skò-po', 'xba-ro', 'xbri-gar', 'xbèr-la', 'sub-mon-ta-no',
 			'tran-sub-stan-ŧiar', 'ab-ne-ga-sion', 'àb-si-de', 'tèk-ni-ka', 'iks', 'et-ní-a', 'ip-no-xi', 'biop-sí-a', 'rit-mo', 'a-rit-mè-te-ga',
 			'po-e-xí-a', 'gas', 'al-fa', 'skrí-ver',
 			'pas-ta', 'par-te', 'ma-rio', 'à-kui-la', 'a-pro', 'du-pli-se', 'bas-tar', 'stò-ria',
-			'kon-tro-a-ku-xa', 'kon-tro-e-xen-pio', 'kon-tro-in-di-kar', 'ŧir-kon-dar', 'i-per-a-ti-vo'
+			'kon-tro-a-ku-xa', 'kon-tro-e-xen-pio', 'kon-tro-in-di-kar', 'ŧir-kon-dar', 'i-per-a-ti-vo',
+			'aus-pi-ka', 'au-to-ra', 'frau-da', 'lau-da', 'lau-re-a', 'nau-fra-ga', 'nau-xe-a', 'pau-pe-ra', 'ins-tau-ra', 'res-tau-ra',
+			'pio-la', 'sio-la', 'ŧio-la', 'vio-la', 'pe-rio-da',
+			'gua', 'in-gua', 'frua', 'grua', 'sua', 'stra-sua',
+			'ar-fia', 'e-fia', 'i-fia', 'nia', 'dex-nia', 'kria', 'pria', 'stria', 'sia', 'de-via', 'in-via', 'xvia'
 		];
 
 		words.forEach(function(word, idx){
-			assert.equal(hyp.hypenate(word), expected[idx]);
+			assert.equal(hyp.hyphenate(word), expected[idx]);
 		});
 	});
 });

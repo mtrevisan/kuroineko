@@ -10,7 +10,8 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme', 'tools/lang/
 	};
 
 	var getLastUnstressedVowelIndex = function(word, idx){
-		return (idx === undefined? word: word.substr(0, idx)).search(/[aeiou][^aeiou]*$/);
+//		return (idx === undefined? word: word.substr(0, idx)).search(/[aeiou][^aeiou]*$/);
+		return (idx === undefined? word: word.substr(0, idx)).search(/[aeiou][^aeiou]*[^aàbcdđeéèfghiíjɉklƚmnñoóòprsʃtŧuúvxʒ]*$/);
 	};
 
 
@@ -57,19 +58,16 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme', 'tools/lang/
 	var markDefaultStress = function(word){
 		var idx = getIndexOfStress(word);
 		if(idx < 0){
-			//skip non-alphabetic characters
-			var lastChar = word.length - 1;
-			while(lastChar >= 0 && !word[lastChar].match(/[aàbcdđeéèfghiíjɉklƚmnñoóòprsʃtŧuúvxʒ]/))
-				lastChar --;
+			var phones = Grapheme.preConvertGraphemesIntoPhones(word),
+				lastChar = getLastUnstressedVowelIndex(phones);
 
 			//last vowel if the word ends with consonant, penultimate otherwise, default to the second vowel of a group of two (first one on a monosyllabe)
-			if(Grapheme.isVowel(word[lastChar])){
-				idx = getLastUnstressedVowelIndex(word, lastChar - 1);
-				if(idx < 0)
-					idx = getLastUnstressedVowelIndex(word, lastChar);
-			}
+			if(Grapheme.endsInVowel(phones))
+				idx = getLastUnstressedVowelIndex(phones, lastChar);
+			if(idx >= 0 && phones.substring(0, idx + 1).match(/(fr|[ln]|st)au$/))
+				idx --;
 			if(idx < 0)
-				idx = getLastUnstressedVowelIndex(word);
+				idx = lastChar;
 
 			if(idx >= 0)
 				word = StringHelper.setCharacterAt(word, idx, addStressAcute);

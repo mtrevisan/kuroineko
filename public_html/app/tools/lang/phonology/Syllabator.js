@@ -29,7 +29,7 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 				5: ['t͡ʃ', 't̻͡ʃʲ'],
 				//gruppo consonantico:
 				//note the shift of /j/ as if it were /d͡ʒ/
-				6: ['d͡ʒ', 'd̻͡ʒʲ', 'j²'],
+				6: ['d͡ʒ', 'd̻͡ʒʲ', 'ʝ'],
 				7: ['p'],
 				8: ['b'],
 				9: ['k̟', 'k', 'kʷ'],

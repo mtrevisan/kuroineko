@@ -136,7 +136,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/lang/phonology/Orthography', 
 			.replace(/θ/g, 'þ').replace(/ð/g, 'đ')
 			.replace(/s̠/g, 'ś').replace(/z̠/g, 'ź')
 			.replace(/ʃʲ/g, 'š').replace(/ʒʲ/g, 'ž')
-			.replace(/j²/g, 'j')
+			.replace(/ʝ/g, 'j')
 			.replace(/e/g, 'é')
 			.replace(/ɛ/g, 'è')
 			.replace(/o/g, 'ó')
