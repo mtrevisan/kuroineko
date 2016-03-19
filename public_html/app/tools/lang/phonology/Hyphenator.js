@@ -10,11 +10,11 @@
 define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, Word){
 
 		/** @constant */
-	var INVALID_WORD_REGEX = /[^-'‘’aàbcdđeéèfghiíjɉklƚmnñoóòprsʃtŧuúvxʒ]/,
-		/** @constant */
-		WORD_BOUNDARY = '.',
+	var WORD_BOUNDARY = '.',
 		/** @constant */
 		CONFIG_DEFAULT = {
+			/** regex stating the valid characters contained in a word in order to be a valid candidate for hyphenation */
+			validWordRegex: undefined,
 			/** minimal length of characters before the first hyphenation */
 			leftmin: 0,
 			/** minimal length of characters after the last hyphenation */
@@ -62,7 +62,8 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 		var hyphenatedWord = this.config.exceptions[word];
 		//the word is not in the exceptions list
 		if(!hyphenatedWord){
-			if(word.match(INVALID_WORD_REGEX) || word.indexOf(this.config.hyphen) >= 0 || word.indexOf('&shy;') >= 0)
+			if(this.config.validWordRegex && !word.match(this.config.validWordRegex)
+					|| word.indexOf(this.config.hyphen) >= 0 || word.indexOf('&shy;') >= 0)
 				//if the word contains invalid characters, or already contains the hyphen character: leave as it is
 				hyphenatedWord = word;
 			else if(this.cache[word])

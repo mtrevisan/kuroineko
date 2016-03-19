@@ -58,7 +58,7 @@ require(['tools/lang/phonology/Hyphenator'], function(Hyphenator){
 			7: 'kontro1èkstra1ekstra1ŧirkum3.ipe2r1.polip2.ortop2.dis3p2.des3p2',
 			8: 'ŧirkums2'
 		};
-		var hyp = new Hyphenator(patterns, {leftmin: 1, hyphen: '-'});
+		var hyp = new Hyphenator(patterns, {validWordRegex: /[-'‘’aàbcdđeéèfghiíjɉklƚmnñoóòprsʃtŧuúvxʒ]+/, leftmin: 1, hyphen: '-'});
 		var words = [
 			//bc
 			'subcelular',
