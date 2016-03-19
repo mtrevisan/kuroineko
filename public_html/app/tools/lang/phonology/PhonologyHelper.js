@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/lang/phonology/Grapheme', 'tools/lang/phonology/Word'], function(ObjectHelper, StringHelper, Grapheme, Word){
+define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/lang/phonology/Grapheme', 'tools/lang/phonology/Word', 'tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatterns/vec'], function(ObjectHelper, StringHelper, Grapheme, Word, Hyphenator, pattern_vec){
 
 	/*var convertPhonesIntoXSampa = (function(){
 
@@ -138,15 +138,37 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/lang/phonol
 	var unstressedVowelBeforeVibrantFreeVariation = function(word, mainDialect, dialect){
 		if(dialect.match(/^central\.(padoan|polexan|roigòto|talian)/) || mainDialect == 'western'){
 			//word = word.replace(/([^aeiouàèéíòóuú])er/g, '$1ar');
-			var syll = Syllabator.syllabate(word, null, true);
+			var hyp = hyphenatePhones(word);
 			word = word.replace(/([^aàeèéíoòóú])er/g, function(group, pre, idx){
-				return (syll.phones[syll.getSyllabeIndex(idx)].match(/[^jw]e/)? pre + 'ar': group);
+				return (hyp.getSyllabeAtIndex(idx).match(/[^jw]e/)? pre + 'ar': group);
 			});
 		}
 		//else if(mainDialect != 'none')
 		//	word = word.replace(/([^aàeèéíoòóú])ar/g, '$1er');
 
 		return word;
+	};
+
+	var hyphenator = new Hyphenator('-', pattern_vec);
+
+	/** @private */
+	var hyphenatePhones = function(word){
+		var phones = Grapheme.preConvertGraphemesIntoPhones(Word.markDefaultStress(word)).split(''),
+			k = 0,
+			hyphenatedPhones = hyphenator.hyphenate(word).split(hyphenator.config.hyphen)
+				.map(function(syllabe){ return syllabe.length; })
+				.map(function(length){ return this.slice(k, k += length).join(''); }, phones);
+
+		hyphenatedPhones.getSyllabeAtIndex = function(idx){
+			var syll;
+			this.some(function(syllabe){
+				idx -= syllabe.length;
+				return (idx < 0? (syll = syllabe, true): false);
+			});
+			return syll;
+		};
+
+		return hyphenatedPhones;
 	};
 
 	var stressedVowelBeforeVibrantFreeVariation = function(word, mainDialect, dialect){
