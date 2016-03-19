@@ -26,15 +26,17 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 		};
 
 
-	var Constructor = function(patterns, options){
-		readPatterns.call(this, patterns);
+	var Constructor = function(hyphen, pattern){
+		readPatterns.call(this, pattern.patterns);
 
 		this.config = {};
 		for(var k in CONFIG_DEFAULT)
 			this.config[k] = CONFIG_DEFAULT[k];
-		if(options)
-			for(k in options)
-				this.config[k] = options[k];
+		if(pattern)
+			for(k in pattern)
+				this.config[k] = pattern[k];
+		if(hyphen)
+			this.config.hyphen = hyphen;
 
 		this.cache = {};
 	};

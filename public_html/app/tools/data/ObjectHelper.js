@@ -11,8 +11,6 @@ define(function(){
 	/** @constant */
 		TYPE_ARRAY = 'Array',
 	/** @constant */
-		TYPE_OBJECT = 'Object',
-	/** @constant */
 		TYPE_STRING = 'String',
 	/** @constant */
 		TYPE_REGEXP = 'RegExp';
@@ -46,7 +44,7 @@ define(function(){
 		if(defaults)
 			apply(object, defaults);
 
-		if(object && config && type(config) == TYPE_OBJECT)
+		if(object && config && isObject(config))
 			for(var i in config)
 				object[i] = config[i];
 
@@ -66,7 +64,7 @@ define(function(){
 		if(defaults)
 			apply(object, defaults);
 
-		if(object && config && type(config) == TYPE_OBJECT)
+		if(object && config && isObject(config))
 			for(var i in config)
 				if(object[i] === undefined)
 					object[i] = config[i];
@@ -105,7 +103,7 @@ define(function(){
 	};
 
 	var isObject = function(value){
-		return (type(value) == TYPE_OBJECT);
+		return (value === Object(value));
 	};
 
 	/** Underscore.js 1.8.3's isUndefined */
@@ -182,7 +180,7 @@ define(function(){
 			while(i --)
 				cloned[i] = clone(item[i], scope || item);
 		}
-		else if(typ == TYPE_OBJECT){
+		else if(isObject(typ)){
 			//make sure the returned object has the same prototype as the original
 			cloned = Object.create(item.constructor.prototype);
 
@@ -207,7 +205,7 @@ define(function(){
 			return a.every(function(k, i){ return deepEquals(k, this[i]); }, b);
 		}
 
-		if(typeA === TYPE_OBJECT){
+		if(isObject(typeA)){
 			var keysA = Object.keys(a).sort(),
 				keysB = Object.keys(b).sort();
 			if(keysA.length != keysB.length)
