@@ -3992,7 +3992,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "recol",			"",			1,	1,	"a",	"2008",			"Rasimolar.",
 "recot",			"",			1,	3,	"g",	"1821",			"Rasimolar.",
 //"red",			"",			1,	1,	"a",	"1821",			"Intreŧar, far sú a rede.",
-"red",			"dex",		1,	1,	"a",	"1821",			"Dereditar.",
+"red",			"dex",		1,	1,	"g",	"1821",			"Dereditar.",
 "redit",			"",			1,	1,	"g",	"1821",			"Ereditar.",
 "rekam",			"",			1,	3,	"g",	"1867",			"",
 "reklut",		"",			1,	1,	"g",	"1867",			"",

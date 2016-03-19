@@ -2,7 +2,7 @@ require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatt
 	QUnit.module('Hyphenator');
 
 	QUnit.test('Hyphenator', function(assert){
-		var hyp = new Hyphenator('-', pattern_vec);
+		var hyphenator = new Hyphenator('-', pattern_vec);
 		var words = [
 			//bc
 			'subcelular',
@@ -426,7 +426,8 @@ require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatt
 			'auspika', 'autora', 'frauda', 'lauda', 'laurea', 'naufraga', 'nauxea', 'paupera', 'instaura', 'restaura',
 			'piola', 'siola', 'ŧiola', 'viola', 'perioda',
 			'gua', 'ingua', 'frua', 'grua', 'sua', 'strasua',
-			'arfia', 'efia', 'ifia', 'nia', 'dexnia', 'kria', 'pria', 'stria', 'sia', 'devia', 'invia', 'xvia'
+			'arfia', 'efia', 'ifia', 'nia', 'dexnia', 'kria', 'pria', 'stria', 'sia', 'devia', 'invia', 'xvia',
+			'dixèrta', 'dexeredar'
 		];
 		var expected = [
 			'sub-ce-lu-lar', 'ab-de-gar', 'sub-for-ni-du-ra', 'sub-kor-te-gal', 'a-bla-ti-vo', 'blan-dir', 'sub-mon-tan', 'sub-nor-mal',
@@ -463,11 +464,12 @@ require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatt
 			'aus-pi-ka', 'au-to-ra', 'frau-da', 'lau-da', 'lau-re-a', 'nau-fra-ga', 'nau-xe-a', 'pau-pe-ra', 'ins-tau-ra', 'res-tau-ra',
 			'pio-la', 'sio-la', 'ŧio-la', 'vio-la', 'pe-rio-da',
 			'gua', 'in-gua', 'frua', 'grua', 'sua', 'stra-sua',
-			'ar-fia', 'e-fia', 'i-fia', 'nia', 'dex-nia', 'kria', 'pria', 'stria', 'sia', 'de-via', 'in-via', 'xvia'
+			'ar-fia', 'e-fia', 'i-fia', 'nia', 'dex-nia', 'kria', 'pria', 'stria', 'sia', 'de-via', 'in-via', 'xvia',
+			'dix-èr-ta', 'dex-e-re-dar'
 		];
 
 		words.forEach(function(word, idx){
-			assert.equal(hyp.hyphenate(word), expected[idx]);
+			assert.equal(hyphenator.hyphenate(word), expected[idx]);
 		});
 	});
 });

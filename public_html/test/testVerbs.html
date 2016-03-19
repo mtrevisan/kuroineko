@@ -17,10 +17,12 @@
 			}
 		};
 
-		require(['tools/lang/phonology/Syllabator', 'tools/lang/phonology/Grapheme', 'tools/lang/phonology/Word', 'tools/lang/morphology/Conjugator', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Syllabator, Grapheme, Word, Conjugator, verbsDictionary, JSONH){
+		require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatterns/vec', 'tools/lang/phonology/Grapheme', 'tools/lang/phonology/Word', 'tools/lang/morphology/Conjugator', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(Hyphenator, pattern_vec, Grapheme, Word, Conjugator, verbsDictionary, JSONH){
 			var all = [],
 				idx = 0,
 				k, v, themeVowel, a, b;
+
+			var hyphenator = new Hyphenator('-', pattern_vec);
 
 			verbsDictionary = JSONH.unpack(verbsDictionary);
 			for(k in verbsDictionary){
@@ -134,23 +136,23 @@
 						return;
 					}
 
-					var syllabation = Syllabator.syllabate(infinitive, 'none', true);
+					var syllabation = hyphenator.hyphenate(infinitive);
 					if(result.paradigmInfo.stressIndex < stressIdx){
 						errorStressPositionExpectedLate ++;
 
-						console.log(syllabation.syllabes.join('-') + ': expected late ' + expected);
+						console.log(syllabation + ': expected late ' + expected);
 					}
 					else if(result.paradigmInfo.stressIndex > stressIdx){
 						errorStressPositionExpectedEarly ++;
 
-						console.log(syllabation.syllabes.join('-') + ': expected early ' + expected);
+						console.log(syllabation + ': expected early ' + expected);
 					}
 					else if(result.paradigmInfo.stressType[0] != v.stressType){
 						errorStressType ++;
 
-						console.log(syllabation.syllabes.join('-') + ': expected stress ' + expected[stressIdx]);
+						console.log(syllabation + ': expected stress ' + expected[stressIdx]);
 					}
-					else if(syllabation.syllabes.length - syllabation.getSyllabeIndex(result.paradigmInfo.stressIndex) > 2)
+					else if(syllabation.split('-').length - Hyphenator.getSyllabeIndex.call(syllabation.split('-'), result.paradigmInfo.stressIndex) > 2)
 						proparossitone ++;
 				}
 			}

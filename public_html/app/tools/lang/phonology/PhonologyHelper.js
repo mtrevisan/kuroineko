@@ -140,7 +140,7 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/lang/phonol
 			//word = word.replace(/([^aeiouàèéíòóuú])er/g, '$1ar');
 			var hyp = hyphenatePhones(word);
 			word = word.replace(/([^aàeèéíoòóú])er/g, function(group, pre, idx){
-				return (hyp.getSyllabeAtIndex(idx).match(/[^jw]e/)? pre + 'ar': group);
+				return (Hyphenator.getSyllabe.call(hyp, idx).match(/[^jw]e/)? pre + 'ar': group);
 			});
 		}
 		//else if(mainDialect != 'none')
@@ -154,21 +154,10 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/lang/phonol
 	/** @private */
 	var hyphenatePhones = function(word){
 		var phones = Grapheme.preConvertGraphemesIntoPhones(Word.markDefaultStress(word)).split(''),
-			k = 0,
-			hyphenatedPhones = hyphenator.hyphenate(word).split(hyphenator.config.hyphen)
-				.map(function(syllabe){ return syllabe.length; })
-				.map(function(length){ return this.slice(k, k += length).join(''); }, phones);
-
-		hyphenatedPhones.getSyllabeAtIndex = function(idx){
-			var syll;
-			this.some(function(syllabe){
-				idx -= syllabe.length;
-				return (idx < 0? (syll = syllabe, true): false);
-			});
-			return syll;
-		};
-
-		return hyphenatedPhones;
+			k = 0;
+		return hyphenator.hyphenate(word).split(hyphenator.config.hyphen)
+			.map(function(syllabe){ return syllabe.length; })
+			.map(function(length){ return this.slice(k, k += length).join(''); }, phones);
 	};
 
 	var stressedVowelBeforeVibrantFreeVariation = function(word, mainDialect, dialect){

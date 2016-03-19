@@ -123,6 +123,58 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 		}, this).join('');
 	};
 
+	/**
+	 * @param {Number} idx	Global index with respect to the word from which to extract the index of the corresponding syllabe.
+	 */
+	Constructor.getSyllabeIndex = function(idx){
+		var i = -1;
+		this.some(function(syllabe, j){
+			idx -= syllabe.length;
+			return (idx < 0? (i = j, true): false);
+		});
+		return i;
+	};
+
+	/**
+	 * @param {Number} idx	Global index with respect to the word from which to extract the index of the corresponding syllabe.
+	 */
+	Constructor.getSyllabe = function(idx){
+		return this[Constructor.getSyllabeIndex.call(this, idx)];
+	};
+
+	/**
+	 * @param {Number} idx	Index of syllabe to extract, if negative then it's relative to the last syllabe.
+	 */
+	Constructor.get = function(idx){
+		return this[restoreIndex.call(this, idx)];
+	};
+
+	/** @private */
+	var restoreIndex = function(idx){
+		return (idx + this.length) % this.length;
+	};
+
+	/**
+	 * @param {Number} idx	Index of syllabe, if negative then it's relative to the last syllabe.
+	 */
+	Constructor.getGlobalIndexOfStressedSyllabe = function(idx){
+		return getGlobalIndex.call(this, idx) + Word.getLastVowelIndex(Constructor.get.call(this, idx));
+	};
+
+	/**
+	 * @param {Number} idx	Index of syllabe, if negative then it's relative to the last syllabe.
+	 * @return {Number} Global index at which the syllabe starts.
+	 *
+	 * @private
+	 */
+	var getGlobalIndex = function(idx){
+		var len = 0,
+			i;
+		for(i = restoreIndex.call(this, idx) - 1; i >= 0; i --)
+			len += this[i].length;
+		return len;
+	};
+
 
 	Constructor.prototype = {
 		constructor: Constructor,

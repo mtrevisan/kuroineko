@@ -3,7 +3,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang/phonology/Syllabator', 'tools/data/StringHelper'], function(Word, Syllabe, Syllabator, StringHelper){
+define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/data/StringHelper', 'tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatterns/vec'], function(Word, Syllabe, StringHelper, Hyphenator, pattern_vec){
 
 	/**
 	 * @param {Verb} verb
@@ -44,8 +44,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 		else if(this.verb.special3rd)
 			themeT3 += 'si';
 		else{
-			var syllabationT4 = syllabateThemeT4(themeT4);
-			var idx = getIndexOfStressThemeT3.call(this, themeT1, syllabationT4);
+			var syllabationT4 = syllabateThemeT4(themeT4),
+				idx = getIndexOfStressThemeT3.call(this, themeT1, syllabationT4);
 			if(idx >= 0)
 				themeT3 = StringHelper.setCharacterAt(themeT4, idx, Word[themeT4[idx].match(/[eo]/) && hasGraveStress(themeT4, syllabationT4, idx)? 'addStressGrave': 'addStressAcute']);
 		}
@@ -309,6 +309,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 
 			{matcher: /((ar|[ei]n)f|^(dex)?n|([kp]|st)r|^s|(de|in|x)v)ia$/, replacement: '$1ía'}
 		];
+		var hyphenator = new Hyphenator('-', pattern_vec);
 
 		return function(themeT4){
 			//infer stress position
@@ -316,7 +317,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 			if(trueHyatuses.some(function(el){ m = el; return this.match(el.matcher); }, themeT4))
 				themeT4 = themeT4.replace(m.matcher, m.replacement);
 
-			return Syllabator.syllabate(themeT4);
+			var hyphenatedWord = hyphenator.hyphenate(themeT4).split(hyphenator.config.hyphen);
+			return hyphenatedWord;
 		};
 	})();
 
@@ -349,15 +351,17 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 			if(themeVowel != 'e'){
 				var sylIdx = -1;
 				//note: about 83.8% of the verbs have the stress on the penultimate syllabe
-				if(syllabationT4.syllabes.length > 1 && !this.verb.irregularity.darStarFar)
+				if(syllabationT4.length > 1 && !this.verb.irregularity.darStarFar)
 					sylIdx --;
 				//note: only for verbs of the first conjugation which have an open penultimate syllabe
-				if(syllabationT4.syllabes.length > 2 && themeVowel == 'à' && Syllabe.isSyllabeOpen(syllabationT4.getSyllabe(-2))
+				if(syllabationT4.length > 2 && themeVowel == 'à' && Syllabe.isSyllabeOpen(Hyphenator.get.call(syllabationT4, -2))
 						&& StringHelper.isMatching(themeT1.replace(/.$/, ''), suffixes))
 					sylIdx --;
+				if(syllabationT4.length == 1 && themeT1.match(/^[rt]uà$/))
+					return 1;
 
-				return syllabationT4.getGlobalIndexOfStressedSyllabe(sylIdx)
-					- (syllabationT4.getSyllabe(sylIdx).match(/(^|[^aeiouàèéíòóú])àu/)? 1: 0);
+				return Hyphenator.getGlobalIndexOfStressedSyllabe.call(syllabationT4, sylIdx)
+					- (Hyphenator.get.call(syllabationT4, sylIdx).match(/(^|[^aeiouàèéíòóú])àu/)? 1: 0);
 			}
 			return idx;
 		};
@@ -394,7 +398,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 			/veca/,
 			/xe(ta|[mr]e)/,
 
-			/er(sa|pe)/,
+			/er([st]a|pe)/,
 			/ber[gl]a/,
 			/fervo/,
 			/[jɉ]erma/,
@@ -408,10 +412,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 			/ŧerta/,
 			/uer[cn]a/,
 			/ver([gns]a|[ks]ia|xe)/,
-			/xer([mt]a|[sŧ]i)/,
+			/xer(ma|[sŧ]i)/,
 
 			/estra/,
-			/^[flnrst]esta/,
+			/^[flnrst]?esta/,
 			/[un]estra/,
 			/deste/,
 			/uestu/,
@@ -496,8 +500,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/lang
 		var falsePositives = [/^(inca|des|[pr]o|sco)?peta/, /[aun]xeta/, /^[pv]ela/, /^(re)?poxa/];
 
 		return function(themeT4, syllabationT4, idx){
-			idx = syllabationT4.getSyllabeIndex(idx);
-			return (StringHelper.isMatching(Word.suppressStress(syllabationT4.syllabes[idx] + syllabationT4.syllabes[idx + 1]), infixes)
+			idx = Hyphenator.getSyllabeIndex.call(syllabationT4, idx);
+			return (StringHelper.isMatching(Word.suppressStress(syllabationT4[idx] + syllabationT4[idx + 1]), infixes)
 				&& !StringHelper.isMatching(themeT4, falsePositives));
 		};
 	})();
