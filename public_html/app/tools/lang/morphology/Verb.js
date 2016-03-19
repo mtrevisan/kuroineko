@@ -110,7 +110,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabator', 'tools/d
 		var data = {
 			andar: /^(r[ei])?andàr$/,
 			darStarFar: /^((r[ei])?dàr|(mal|move|soto)?stàr|(kon(tra)?|likue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?fàr)$/,
-			aver: /(^|re)avér$/,
+			aver: /(^g?a|reg?a|‘)vér$/,
 			dever: /déver$/,
 			eser: /(^|r[ei])èser$/,
 			dixer: /díxer$/,
