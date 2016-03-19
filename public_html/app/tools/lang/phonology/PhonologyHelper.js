@@ -227,8 +227,8 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/lang/phonol
 		}
 
 		//NOTE: does not consider de-methaphonization
-		if(mainDialect == 'central')
-			word = applyMetaphonesys(true, word);
+//		if(mainDialect == 'central')
+//			word = applyMetaphonesys(true, word);
 
 		word = approximantPalatalFreeVariation(word, mainDialect, dialect);
 		word = lateralFreeVariation(word, mainDialect, dialect);
