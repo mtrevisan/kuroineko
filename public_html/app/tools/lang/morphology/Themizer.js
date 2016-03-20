@@ -317,8 +317,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/data
 			if(trueHyatuses.some(function(el){ m = el; return this.match(el.matcher); }, themeT4))
 				themeT4 = themeT4.replace(m.matcher, m.replacement);
 
-			var hyphenatedWord = hyphenator.hyphenate(themeT4).split(hyphenator.config.hyphen);
-			return hyphenatedWord;
+			return hyphenator.hyphenate(themeT4);
 		};
 	})();
 
