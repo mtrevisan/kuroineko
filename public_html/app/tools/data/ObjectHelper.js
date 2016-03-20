@@ -180,7 +180,7 @@ define(function(){
 			while(i --)
 				cloned[i] = clone(item[i], scope || item);
 		}
-		else if(isObject(typ)){
+		else if(isObject(item)){
 			//make sure the returned object has the same prototype as the original
 			cloned = Object.create(item.constructor.prototype);
 
@@ -205,7 +205,7 @@ define(function(){
 			return a.every(function(k, i){ return deepEquals(k, this[i]); }, b);
 		}
 
-		if(isObject(typeA)){
+		if(isObject(a)){
 			var keysA = Object.keys(a).sort(),
 				keysB = Object.keys(b).sort();
 			if(keysA.length != keysB.length)

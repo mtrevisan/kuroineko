@@ -256,6 +256,5 @@ require(['tools/lang/phonology/Syllabator'], function(Syllabator){
 		assert.deepEqual(word.nuclei, ['a', 'a']);
 		assert.equal(word.stressIndex, 1);
 		assert.deepEqual(word.syllabes, ['sàl', 'ta']);
-		console.log(word);
 	});
 });

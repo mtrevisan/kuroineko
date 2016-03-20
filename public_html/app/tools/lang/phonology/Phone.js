@@ -450,12 +450,15 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 			var fn = function(base, phoneme, k){
 				var equivalences = [];
 				Object.keys(diacritics).forEach(function(d){
-					if(hasEquivalentFeatures(diacritics[d][1], base)){
+if(phoneme+d =='lˠ')
+	console.log('');
+					if(phoneme[phoneme.length - 1] != d && hasEquivalentFeatures(diacritics[d][1], base)){
 						var diacritized = combineFeatures(base, diacritics[d][0]);
 						if(hasEquivalentFeatures(features, diacritized, !multipleElements))
 							matches.push(phoneme + d);
-						else if(k && !matches.length)
+						else if(k && !matches.length){
 							equivalences.push({base: diacritized, phoneme: phoneme + d});
+						}
 					}
 				});
 
@@ -466,7 +469,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 			};
 
 			if(!matches.length)
-				//consider at most a double diacritic added to phoneme
+				//consider at most MAX_DIACRITICS_IN_COMPOUND diacritics added to phoneme
 				Object.keys(segments).forEach(function(phoneme){
 					fn(segments[phoneme], phoneme, MAX_DIACRITICS_IN_COMPOUND - 1);
 				});
