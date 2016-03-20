@@ -3,7 +3,9 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabator', 'tools/data/StringHelper', 'tools/data/Assert'], function(Word, Syllabator, StringHelper, Assert){
+define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/data/Assert', 'tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatterns/vec'], function(Word, StringHelper, Assert, Hyphenator, pattern_vec){
+
+	var hyphenator = new Hyphenator('-', pattern_vec);
 
 	var Constructor = function(infinitive){
 		if(!Word.isStressed(infinitive))
@@ -31,7 +33,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabator', 'tools/d
 
 
 		var themeVowel = infinitive[infinitive.length - 2],
-			syllabation = Syllabator.syllabate(infinitive);
+			syllabation = hyphenator.hyphenate(infinitive);
+		syllabation = hyphenator.attachFunctions(syllabation);
 
 		checkForErrors(infinitive, syllabation);
 
@@ -72,7 +75,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabator', 'tools/d
 		Assert.assert(m, 'NOT_STRESSABLE');
 		Assert.assert(m.length <= 1, 'TOO_MUCH_STRESSES');
 
-		Assert.assert(!syllabation.hasSyllabationErrors, 'NOT_SYLLABABLE');
+//		Assert.assert(!syllabation.hasSyllabationErrors, 'NOT_SYLLABABLE');
 	};
 
 	/** @private */
@@ -94,7 +97,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabator', 'tools/d
 			var m, alternatives;
 			if(data.some(function(el){ m = el; return this.match(el.matcher); }, infinitive))
 				alternatives = [infinitive.replace(m.matcher, m.replacement) + proComplementarPronouns.join('')];
-			else if(noStress && themeVowel == 'é' && syllabation.syllabes.length > 1 && !isOssitone(infinitive)){
+			else if(noStress && themeVowel == 'é' && syllabation.length > 1 && !isOssitone(infinitive)){
 				var infinitiveNoStress = Word.suppressStress(infinitive),
 					idxOfStress = syllabation.getGlobalIndexOfStressedSyllabe(-2);
 				alternatives = [StringHelper.setCharacterAt(infinitiveNoStress, idxOfStress, Word.addStressAcute)];
