@@ -86,6 +86,8 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 			}
 		}
 
+		attachFunctions(hyphenatedWord);
+
 		return hyphenatedWord;
 	};
 
@@ -124,9 +126,22 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	};
 
 	/**
-	 * @param {Number} idx	Global index with respect to the word from which to extract the index of the corresponding syllabe.
+	 * @private
 	 */
-	Constructor.getSyllabeIndex = function(idx){
+	var attachFunctions = function(array){
+		array.getSyllabeIndex = getSyllabeIndex;
+		array.getSyllabe = getSyllabe;
+		array.getAt = getAt;
+		array.getGlobalIndexOfStressedSyllabe = getGlobalIndexOfStressedSyllabe;
+	};
+
+	/**
+	 * @param {Number} idx	Index with respect to the word from which to extract the index of the corresponding syllabe.
+	 * @return {Number} the (relative) index of the syllabe at the given (global) index
+	 *
+	 * @private
+	 */
+	var getSyllabeIndex = function(idx){
 		var i = -1;
 		this.some(function(syllabe, j){
 			idx -= syllabe.length;
@@ -136,29 +151,37 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	};
 
 	/**
-	 * @param {Number} idx	Global index with respect to the word from which to extract the index of the corresponding syllabe.
+	 * @param {Number} idx	Index with respect to the word from which to extract the index of the corresponding syllabe.
+	 * @return {String} the syllabe at the given (global) index
+	 *
+	 * @private
 	 */
-	Constructor.getSyllabe = function(idx){
+	var getSyllabe = function(idx){
 		return this[Constructor.getSyllabeIndex.call(this, idx)];
 	};
 
 	/**
 	 * @param {Number} idx	Index of syllabe to extract, if negative then it's relative to the last syllabe.
+	 * @return {String} the syllabe at the given (relative) index
+	 *
+	 * @private
 	 */
-	Constructor.get = function(idx){
-		return this[restoreIndex.call(this, idx)];
+	var getAt = function(idx){
+		return this[restoreRelativeIndex.call(this, idx)];
 	};
 
 	/** @private */
-	var restoreIndex = function(idx){
+	var restoreRelativeIndex = function(idx){
 		return (idx + this.length) % this.length;
 	};
 
 	/**
 	 * @param {Number} idx	Index of syllabe, if negative then it's relative to the last syllabe.
+	 *
+	 * @private
 	 */
-	Constructor.getGlobalIndexOfStressedSyllabe = function(idx){
-		return getGlobalIndex.call(this, idx) + Word.getLastVowelIndex(Constructor.get.call(this, idx));
+	var getGlobalIndexOfStressedSyllabe = function(idx){
+		return getGlobalIndex.call(this, idx) + Word.getLastVowelIndex(Constructor.getAt.call(this, idx));
 	};
 
 	/**
@@ -170,7 +193,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	var getGlobalIndex = function(idx){
 		var len = 0,
 			i;
-		for(i = restoreIndex.call(this, idx) - 1; i >= 0; i --)
+		for(i = restoreRelativeIndex.call(this, idx) - 1; i >= 0; i --)
 			len += this[i].length;
 		return len;
 	};

@@ -354,14 +354,14 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/data
 				if(syllabationT4.length > 1 && !this.verb.irregularity.darStarFar)
 					sylIdx --;
 				//note: only for verbs of the first conjugation which have an open penultimate syllabe
-				if(syllabationT4.length > 2 && themeVowel == 'à' && Syllabe.isSyllabeOpen(Hyphenator.get.call(syllabationT4, -2))
+				if(syllabationT4.length > 2 && themeVowel == 'à' && Syllabe.isSyllabeOpen(syllabationT4.getAt(-2))
 						&& StringHelper.isMatching(themeT1.replace(/.$/, ''), suffixes))
 					sylIdx --;
 				if(syllabationT4.length == 1 && themeT1.match(/^[rt]uà$/))
 					return 1;
 
-				return Hyphenator.getGlobalIndexOfStressedSyllabe.call(syllabationT4, sylIdx)
-					- (Hyphenator.get.call(syllabationT4, sylIdx).match(/(^|[^aeiouàèéíòóú])àu/)? 1: 0);
+				return syllabationT4.getGlobalIndexOfStressedSyllabe(sylIdx)
+					- (syllabationT4.getAt(sylIdx).match(/(^|[^aeiouàèéíòóú])àu/)? 1: 0);
 			}
 			return idx;
 		};
@@ -500,7 +500,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/data
 		var falsePositives = [/^(inca|des|[pr]o|sco)?peta/, /[aun]xeta/, /^[pv]ela/, /^(re)?poxa/];
 
 		return function(themeT4, syllabationT4, idx){
-			idx = Hyphenator.getSyllabeIndex.call(syllabationT4, idx);
+			idx = syllabationT4.getSyllabeIndex(idx);
 			return (StringHelper.isMatching(Word.suppressStress(syllabationT4[idx] + syllabationT4[idx + 1]), infixes)
 				&& !StringHelper.isMatching(themeT4, falsePositives));
 		};

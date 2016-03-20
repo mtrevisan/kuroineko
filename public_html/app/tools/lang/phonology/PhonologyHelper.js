@@ -140,7 +140,7 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/lang/phonol
 			//word = word.replace(/([^aeiouàèéíòóuú])er/g, '$1ar');
 			var hyp = hyphenatePhones(word);
 			word = word.replace(/([^aàeèéíoòóú])er/g, function(group, pre, idx){
-				return (Hyphenator.getSyllabe.call(hyp, idx).match(/[^jw]e/)? pre + 'ar': group);
+				return (hyp.getSyllabe(idx).match(/[^jw]e/)? pre + 'ar': group);
 			});
 		}
 		//else if(mainDialect != 'none')

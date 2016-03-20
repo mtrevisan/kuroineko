@@ -1643,7 +1643,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	var unstressedVowelBeforeVibrantFreeVariation = function(word){
 		var hyp = hyphenatePhones(word);
 		return word.replace(/([^aàeèéíoòóú])er/g, function(group, pre, idx){
-			return (Hyphenator.getSyllabe.call(hyp, idx).match(/[^jw]e/)? pre + 'ar': group);
+			return (hyp.getSyllabe(idx).match(/[^jw]e/)? pre + 'ar': group);
 		});
 	};
 
