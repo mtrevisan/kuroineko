@@ -144,7 +144,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	};
 
 	/**
-	 * @param {Number} idx	Index with respect to the word from which to extract the index of the corresponding syllabe.
+	 * @param {Number} idx	Index with respect to the word from which to extract the index of the corresponding syllabe
 	 * @return {Number} the (relative) index of the syllabe at the given (global) index
 	 *
 	 * @private
@@ -159,7 +159,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	};
 
 	/**
-	 * @param {Number} idx	Index with respect to the word from which to extract the index of the corresponding syllabe.
+	 * @param {Number} idx	Index with respect to the word from which to extract the index of the corresponding syllabe
 	 * @return {String} the syllabe at the given (global) index
 	 *
 	 * @private
@@ -169,7 +169,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	};
 
 	/**
-	 * @param {Number} idx	Index of syllabe to extract, if negative then it's relative to the last syllabe.
+	 * @param {Number} idx	Index of syllabe to extract, if negative then it's relative to the last syllabe
 	 * @return {String} the syllabe at the given (relative) index
 	 *
 	 * @private
@@ -178,13 +178,8 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 		return this[restoreRelativeIndex.call(this, idx)];
 	};
 
-	/** @private */
-	var restoreRelativeIndex = function(idx){
-		return (idx + this.length) % this.length;
-	};
-
 	/**
-	 * @param {Number} idx	Index of syllabe, if negative then it's relative to the last syllabe.
+	 * @param {Number} idx	Index of syllabe, if negative then it's relative to the last syllabe
 	 *
 	 * @private
 	 */
@@ -193,17 +188,23 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	};
 
 	/**
-	 * @param {Number} idx	Index of syllabe, if negative then it's relative to the last syllabe.
-	 * @return {Number} Global index at which the syllabe starts.
+	 * @param {Number} idx	Index of syllabe, if negative then it's relative to the last syllabe
+	 * @return {Number} global index at which the syllabe starts
 	 *
 	 * @private
 	 */
 	var getGlobalIndex = function(idx){
-		var len = 0,
-			i;
-		for(i = restoreRelativeIndex.call(this, idx) - 1; i >= 0; i --)
-			len += this[i].length;
+		var len = 0;
+		idx = restoreRelativeIndex.call(this, idx);
+		this.some(function(syllabe, i){
+			return (i < idx? (len += syllabe.length, false): true);
+		});
 		return len;
+	};
+
+	/** @private */
+	var restoreRelativeIndex = function(idx){
+		return (idx + this.length) % this.length;
 	};
 
 
