@@ -86,8 +86,6 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 			}
 		}
 
-		attachFunctions(hyphenatedWord);
-
 		return hyphenatedWord;
 	};
 
@@ -125,14 +123,16 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 		}, this).join('');
 	};
 
-	/**
-	 * @private
-	 */
-	var attachFunctions = function(array){
-		array.getSyllabeIndex = getSyllabeIndex;
-		array.getSyllabe = getSyllabe;
-		array.getAt = getAt;
-		array.getGlobalIndexOfStressedSyllabe = getGlobalIndexOfStressedSyllabe;
+	var attachFunctions = function(hyphenatedWord){
+		if(!Array.isArray(hyphenatedWord))
+			hyphenatedWord = hyphenatedWord.split(this.config.hyphen);
+
+		hyphenatedWord.getSyllabeIndex = getSyllabeIndex;
+		hyphenatedWord.getSyllabe = getSyllabe;
+		hyphenatedWord.getAt = getAt;
+		hyphenatedWord.getGlobalIndexOfStressedSyllabe = getGlobalIndexOfStressedSyllabe;
+
+		return hyphenatedWord;
 	};
 
 	/**
@@ -157,7 +157,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	 * @private
 	 */
 	var getSyllabe = function(idx){
-		return this[Constructor.getSyllabeIndex.call(this, idx)];
+		return this[getSyllabeIndex.call(this, idx)];
 	};
 
 	/**
@@ -181,7 +181,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	 * @private
 	 */
 	var getGlobalIndexOfStressedSyllabe = function(idx){
-		return getGlobalIndex.call(this, idx) + Word.getLastVowelIndex(Constructor.getAt.call(this, idx));
+		return getGlobalIndex.call(this, idx) + Word.getLastVowelIndex(getAt.call(this, idx));
 	};
 
 	/**
@@ -202,7 +202,9 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	Constructor.prototype = {
 		constructor: Constructor,
 
-		hyphenate: hyphenate
+		hyphenate: hyphenate,
+
+		attachFunctions: attachFunctions
 	};
 
 	return Constructor;
