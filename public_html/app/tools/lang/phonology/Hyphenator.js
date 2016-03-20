@@ -127,12 +127,20 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 		if(!Array.isArray(hyphenatedWord))
 			hyphenatedWord = hyphenatedWord.split(this.config.hyphen);
 
+		hyphenatedWord.hasSyllabationErrors = hasSyllabationErrors;
 		hyphenatedWord.getSyllabeIndex = getSyllabeIndex;
 		hyphenatedWord.getSyllabe = getSyllabe;
 		hyphenatedWord.getAt = getAt;
 		hyphenatedWord.getGlobalIndexOfStressedSyllabe = getGlobalIndexOfStressedSyllabe;
 
 		return hyphenatedWord;
+	};
+
+	/** @private */
+	var hasSyllabationErrors = function(){
+		return this.some(function(syllabe){
+			return !!Word.getLastVowelIndex(syllabe);
+		});
 	};
 
 	/**

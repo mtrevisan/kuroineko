@@ -20,11 +20,11 @@ define({
 			+ '2ñ.2ñb2ñc2ñd2ñđ2ñf2ñg2ñj2ñɉ2ñk2ñl2ñm2ñn2ñp2ñr2ñs2ñt2ñŧ2ñv2ñx'
 			+ '2p.2pb2pc2pd2pđ2pf2pg2pj2pɉ2pk2pl2pm2pn2pñ2pr2ps2pt2pŧ2pv2px'
 			+ '2r.2rb2rc2rd2rđ2rf2rg2rj2rɉ2rk2rl2rm2rn2rñ2rp2rs2rt2rŧ2rv2rx'
-			+ '2s.2sc2sf2sk2sp2st2sŧ2sx'
+			+ '2s.s2cs2fs2ks2ps2ts2ŧs2x'
 			+ '2t.2tb2tc2td2tđ2tf2tg2tj2tɉ2tk2tl2tm2tn2tñ2tp2tr2ts2tŧ2tv2tx'
 			+ '2ŧ.2ŧb2ŧc2ŧd2ŧđ2ŧf2ŧg2ŧj2ŧɉ2ŧk2ŧl2ŧm2ŧn2ŧñ2ŧp2ŧr2ŧs2ŧt2ŧv2ŧx'
 			+ '2v.2vb2vc2vd2vđ2vf2vg2vj2vɉ2vk2vl2vm2vn2vñ2vp2vr2vs2vt2vŧ2vx'
-			+ '2x.2xb2xd2xđ2xg2xj2xɉ2xl2xm2xn2xñ2xr2xs2xv'
+			+ '2x.x2bx2dx2đx2gx2jx2ɉx2lx2mx2nx2ñx2rx2sx2v'
 			+ 'b2lb2r'
 			+ 'c2lc2r'
 			+ 'd2ld2r'
@@ -35,7 +35,18 @@ define({
 			+ 'k2lk2r'
 			+ 'p2lp2r'
 			+ 't2lt2r'
-			+ 'v2lv2r',
+			+ 'v2lv2r'
+			//hyatus
+			+ 'a1ae1ao1aà1aè1aé1aò1aó1a'
+			+ 'a1ee1eo1eà1eè1eé1eò1eó1e'
+			+ 'a1oe1oo1oà1oè1oé1oò1oó1o'
+			//hyatus
+			+ 'í1aí1eí1ií1oí1u'
+			+ 'ú1aú1eú1iú1oú1u'
+			//hyatus
+			+ 'a1àa1èa1éa1ía1òa1óa1ú'
+			+ 'e1àe1èe1ée1íe1òe1óe1ú'
+			+ 'o1ào1èo1éo1ío1òo1óo1ú',
 		4: '.f2t.p2n.p2s.t2msub3',
 		5: '.bio1.pre1l3f2t',
 		6: '.di2s3.de2s3.di2x3.de2x3.anti1.auto1.opto1.orto3.para1.poli3.re1is.subs2nsubs2',

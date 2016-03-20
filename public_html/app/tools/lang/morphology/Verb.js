@@ -75,7 +75,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/data/Asse
 		Assert.assert(m, 'NOT_STRESSABLE');
 		Assert.assert(m.length <= 1, 'TOO_MUCH_STRESSES');
 
-//		Assert.assert(!syllabation.hasSyllabationErrors, 'NOT_SYLLABABLE');
+		Assert.assert(!syllabation.hasSyllabationErrors(), 'NOT_SYLLABABLE');
 	};
 
 	/** @private */
