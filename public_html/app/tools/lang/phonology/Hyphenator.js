@@ -20,7 +20,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 			/** minimal length of characters after the last hyphenation */
 			rightmin: 0,
 			/** list of exceptions in the form key-value, where the key is the word and the value the hyphenated one */
-			exceptions: {},
+			exceptions: undefined,
 			/** hyphen to use as hyphenator */
 			hyphen: '\u00AD'
 		};
@@ -61,7 +61,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	};
 
 	var hyphenate = function(word){
-		var hyphenatedWord = this.config.exceptions[word];
+		var hyphenatedWord = this.config.exceptions && this.config.exceptions[word];
 		//the word is not in the exceptions list
 		if(!hyphenatedWord){
 			if(this.config.validWordRegex && !word.match(this.config.validWordRegex)
