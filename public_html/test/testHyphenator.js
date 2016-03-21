@@ -479,7 +479,7 @@ require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatt
 		];
 
 		words.forEach(function(word, idx){
-			assert.equal(hyphenator.hyphenate(word).join('-'), expected[idx]);
+			assert.equal(hyphenator.hyphenate(word).syllabes.join('-'), expected[idx]);
 		});
 	});
 });
