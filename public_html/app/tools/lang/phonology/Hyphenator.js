@@ -133,7 +133,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 
 	/** @private */
 	var hasSyllabationErrors = function(){
-		return this.some(function(syllabe){
+		return this.syllabes.some(function(syllabe){
 			return (Word.getLastVowelIndex(syllabe) < 0);
 		});
 	};
@@ -146,7 +146,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	 */
 	var getSyllabeIndex = function(idx){
 		var i = -1;
-		this.some(function(syllabe, j){
+		this.syllabes.some(function(syllabe, j){
 			idx -= syllabe.length;
 			return (idx < 0? (i = j, true): false);
 		});
@@ -160,7 +160,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	 * @private
 	 */
 	var getSyllabe = function(idx){
-		return this[getSyllabeIndex.call(this, idx)];
+		return this.syllabes[getSyllabeIndex.call(this, idx)];
 	};
 
 	/**
@@ -170,7 +170,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	 * @private
 	 */
 	var getAt = function(idx){
-		return this[restoreRelativeIndex.call(this, idx)];
+		return this.syllabes[restoreRelativeIndex.call(this, idx)];
 	};
 
 	/**
@@ -191,7 +191,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	var getGlobalIndex = function(idx){
 		var len = 0;
 		idx = restoreRelativeIndex.call(this, idx);
-		this.some(function(syllabe, i){
+		this.syllabes.some(function(syllabe, i){
 			return (i < idx? (len += syllabe.length, false): true);
 		});
 		return len;
@@ -199,7 +199,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 
 	/** @private */
 	var restoreRelativeIndex = function(idx){
-		return (idx + this.length) % this.length;
+		return (idx + this.syllabes.length) % this.syllabes.length;
 	};
 
 
