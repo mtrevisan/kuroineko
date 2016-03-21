@@ -86,11 +86,15 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 			}
 		}
 
-		if(!Array.isArray(hyphenatedWord))
-			hyphenatedWord = hyphenatedWord.split(this.config.hyphen);
-		attachFunctions.call(this, hyphenatedWord);
+		return {
+			syllabes: hyphenatedWord,
 
-		return hyphenatedWord;
+			hasSyllabationErrors: hasSyllabationErrors,
+			getSyllabeIndex: getSyllabeIndex,
+			getSyllabe: getSyllabe,
+			getAt: getAt,
+			getGlobalIndexOfStressedSyllabe: getGlobalIndexOfStressedSyllabe
+		};
 	};
 
 	/** @private */
@@ -124,17 +128,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 		var maxLength = word.length - this.rightmin;
 		return word.split('').map(function(chr, idx){
 			return (idx >= this.leftmin && idx <= maxLength && pattern[idx] % 2? this.hyphen: '') + chr;
-		}, this).join('');
-	};
-
-	var attachFunctions = function(hyphenatedWord){
-		hyphenatedWord.hasSyllabationErrors = hasSyllabationErrors;
-		hyphenatedWord.getSyllabeIndex = getSyllabeIndex;
-		hyphenatedWord.getSyllabe = getSyllabe;
-		hyphenatedWord.getAt = getAt;
-		hyphenatedWord.getGlobalIndexOfStressedSyllabe = getGlobalIndexOfStressedSyllabe;
-
-		return hyphenatedWord;
+		}, this).join('').split(this.hyphen);
 	};
 
 	/** @private */
@@ -212,9 +206,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	Constructor.prototype = {
 		constructor: Constructor,
 
-		hyphenate: hyphenate,
-
-		attachFunctions: attachFunctions
+		hyphenate: hyphenate
 	};
 
 	return Constructor;

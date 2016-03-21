@@ -1653,10 +1653,12 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	/** @private */
 	var hyphenatePhones = function(word){
 		var phones = Grapheme.preConvertGraphemesIntoPhones(Word.markDefaultStress(word)).split(''),
-			k = 0;
-		return hyphenator.attachFunctions(hyphenator.hyphenate(word)
+			k = 0,
+			hyphenatedWord = hyphenator.hyphenate(word);
+		hyphenatedWord.syllabes = hyphenatedWord.syllabes
 			.map(function(syllabe){ return syllabe.length; })
-			.map(function(length){ return this.slice(k, k += length).join(''); }, phones));
+			.map(function(length){ return this.slice(k, k += length).join(''); }, phones);
+		return hyphenatedWord;
 	};
 
 	/** @private */

@@ -317,8 +317,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/data
 			if(trueHyatuses.some(function(el){ m = el; return this.match(el.matcher); }, themeT4))
 				themeT4 = themeT4.replace(m.matcher, m.replacement);
 
-			var hyphenatedWord = hyphenator.hyphenate(themeT4);
-			return hyphenator.attachFunctions(hyphenatedWord);
+			return hyphenator.hyphenate(themeT4);
 		};
 	})();
 
@@ -351,13 +350,13 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/data
 			if(themeVowel != 'e'){
 				var sylIdx = -1;
 				//note: about 83.8% of the verbs have the stress on the penultimate syllabe
-				if(syllabationT4.length > 1 && !this.verb.irregularity.darStarFar)
+				if(syllabationT4.syllabes.length > 1 && !this.verb.irregularity.darStarFar)
 					sylIdx --;
 				//note: only for verbs of the first conjugation which have an open penultimate syllabe
-				if(syllabationT4.length > 2 && themeVowel == 'à' && Syllabe.isSyllabeOpen(syllabationT4.getAt(-2))
+				if(syllabationT4.syllabes.length > 2 && themeVowel == 'à' && Syllabe.isSyllabeOpen(syllabationT4.getAt(-2))
 						&& StringHelper.isMatching(themeT1.replace(/.$/, ''), suffixes))
 					sylIdx --;
-				if(syllabationT4.length == 1 && themeT1.match(/^[rt]uà$/))
+				if(syllabationT4.syllabes.length == 1 && themeT1.match(/^[rt]uà$/))
 					return 1;
 
 				return syllabationT4.getGlobalIndexOfStressedSyllabe(sylIdx)
@@ -501,7 +500,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/data
 
 		return function(themeT4, syllabationT4, idx){
 			idx = syllabationT4.getSyllabeIndex(idx);
-			return (StringHelper.isMatching(Word.suppressStress(syllabationT4[idx] + syllabationT4[idx + 1]), infixes)
+			return (StringHelper.isMatching(Word.suppressStress(syllabationT4.syllabes[idx] + syllabationT4.syllabes[idx + 1]), infixes)
 				&& !StringHelper.isMatching(themeT4, falsePositives));
 		};
 	})();

@@ -154,10 +154,12 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/lang/phonol
 	/** @private */
 	var hyphenatePhones = function(word){
 		var phones = Grapheme.preConvertGraphemesIntoPhones(Word.markDefaultStress(word)).split(''),
-			k = 0;
-		return hyphenator.hyphenate(word).split(hyphenator.config.hyphen)
+			k = 0,
+			hyphenatedWord = hyphenator.hyphenate(word);
+		hyphenatedWord.syllabes = hyphenatedWord.syllabes
 			.map(function(syllabe){ return syllabe.length; })
 			.map(function(length){ return this.slice(k, k += length).join(''); }, phones);
+		return hyphenatedWord;
 	};
 
 	var stressedVowelBeforeVibrantFreeVariation = function(word, mainDialect, dialect){
