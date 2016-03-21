@@ -27,6 +27,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	var printFlagsAsNumber = false;
 	var logOnConsole = true;
+	var logNonVerbs = false;
 
 	/** @constant */
 //	var REDUCTION_RESERVED_0 = 150,
@@ -221,19 +222,21 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		if(logOnConsole){
 			printParadigm(suffixes);
 
-			printReductions(adjectives, 'ajetivi');
+			if(logNonVerbs){
+				printReductions(adjectives, 'ajetivi');
 
-			printReductions(pronomenals, 'prokonplementari');
+				printReductions(pronomenals, 'prokonplementari');
 
-			printReductions(consonantVoicings, 'sonoriđaŧion konsonanti finali');
+				printReductions(consonantVoicings, 'sonoriđaŧion konsonanti finali');
 
-			printReductions(interrogatives, 'interogativi');
+				printReductions(interrogatives, 'interogativi');
 
-			printReductions(substantives, 'sostantivi plurali');
+				printReductions(substantives, 'sostantivi plurali');
 
-			printReductions(plantsAndCrafts, 'piante e mistièri');
+				printReductions(plantsAndCrafts, 'piante e mistièri');
 
-			printReductions(adverbs, 'avèrbi');
+				printReductions(adverbs, 'avèrbi');
+			}
 		}
 	};
 
@@ -1651,9 +1654,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	var hyphenatePhones = function(word){
 		var phones = Grapheme.preConvertGraphemesIntoPhones(Word.markDefaultStress(word)).split(''),
 			k = 0;
-		return hyphenator.hyphenate(word).split(hyphenator.config.hyphen)
+		return hyphenator.attachFunctions(hyphenator.hyphenate(word)
 			.map(function(syllabe){ return syllabe.length; })
-			.map(function(length){ return this.slice(k, k += length).join(''); }, phones);
+			.map(function(length){ return this.slice(k, k += length).join(''); }, phones));
 	};
 
 	/** @private */
@@ -1682,11 +1685,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			return undefined;
 
 		var idx = Word.getIndexOfStress(word),
-			syll, tmp;
+			tmp;
 		if(idx >= 0){
-			syll = hyphenator.hyphenate(word);
 			//exclude unmark from one-syllabe words ending in vowel
-			tmp = ((syll.split('-').length > 1 || word.match(/[^aeiouàèéíòóú]$/))
+			tmp = ((hyphenator.hyphenate(word).length > 1 || word.match(/[^aeiouàèéíòóú]$/))
 					&& !Grapheme.isDiphtong(word.substr(idx, 2))
 					&& !Grapheme.isHyatus(word.substr(idx, 2))
 					&& !word.match(/^(re)?\(?g?\)?(à\/è|à|é|ò)[oaie]?$/)

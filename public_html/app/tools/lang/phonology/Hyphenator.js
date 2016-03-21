@@ -86,6 +86,10 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 			}
 		}
 
+		if(!Array.isArray(hyphenatedWord))
+			hyphenatedWord = hyphenatedWord.split(this.config.hyphen);
+		attachFunctions.call(this, hyphenatedWord);
+
 		return hyphenatedWord;
 	};
 
@@ -100,7 +104,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 			i, j;
 		for(i = 0; i < size; i ++)
 			this.trie.findPrefix(w.substring(i)).forEach(function(pref){
-				//console.log(word + ': prefix ' + pref.node.prefix + ', node ' + this.get(pref.node));
+				//console.log(w.replace(/^\.|\.$/g, '') + ': prefix ' + pref.node.prefix + ', node ' + this.get(pref.node));
 
 				j = -1;
 				this.get(pref.node).split('').forEach(function(d){
@@ -124,9 +128,6 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	};
 
 	var attachFunctions = function(hyphenatedWord){
-		if(!Array.isArray(hyphenatedWord))
-			hyphenatedWord = hyphenatedWord.split(this.config.hyphen);
-
 		hyphenatedWord.hasSyllabationErrors = hasSyllabationErrors;
 		hyphenatedWord.getSyllabeIndex = getSyllabeIndex;
 		hyphenatedWord.getSyllabe = getSyllabe;

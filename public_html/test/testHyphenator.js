@@ -427,7 +427,12 @@ require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatt
 			'piola', 'siola', 'ŧiola', 'viola', 'perioda',
 			'gua', 'ingua', 'frua', 'grua', 'sua', 'strasua',
 			'arfia', 'efia', 'ifia', 'nia', 'dexnia', 'kria', 'pria', 'stria', 'sia', 'devia', 'invia', 'xvia',
-			'dixèrta', 'dexeredar'
+			'dixèrta', 'dexeredar',
+			'subentro',
+			'subé', 'subí', 'subíimo', 'subísimo', 'subívimo', 'suben', 'subendo', 'subene', 'subense', 'subente', 'subesto', 'subié', 'subia', 'subido',
+			'subon', 'subone', 'subonse',
+			'sublimà', 'sublimo',
+			'subion', 'subisen', 'subisié', 'subiven', 'subiè'
 		];
 		var expected = [
 			'sub-ce-lu-lar', 'ab-de-gar', 'sub-for-ni-du-ra', 'sub-kor-te-gal', 'a-bla-ti-vo', 'blan-dir', 'sub-mon-tan', 'sub-nor-mal',
@@ -465,11 +470,16 @@ require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatt
 			'pio-la', 'sio-la', 'ŧio-la', 'vio-la', 'pe-rio-da',
 			'gua', 'in-gua', 'frua', 'grua', 'sua', 'stra-sua',
 			'ar-fia', 'e-fia', 'i-fia', 'nia', 'dex-nia', 'kria', 'pria', 'stria', 'sia', 'de-via', 'in-via', 'xvia',
-			'dix-èr-ta', 'dex-e-re-dar'
+			'dix-èr-ta', 'dex-e-re-dar',
+			'sub-en-tro',
+			'su-bé', 'su-bí', 'su-bíi-mo', 'su-bí-si-mo', 'su-bí-vi-mo', 'su-ben', 'su-ben-do', 'su-be-ne', 'su-ben-se', 'su-ben-te', 'su-bes-to',
+			'su-bié', 'su-bia', 'su-bi-do', 'su-bon', 'su-bo-ne', 'su-bon-se',
+			'su-bli-mà', 'su-bli-mo',
+			'su-bion', 'su-bi-sen', 'su-bi-sié', 'su-bi-ven', 'su-biè'
 		];
 
 		words.forEach(function(word, idx){
-			assert.equal(hyphenator.hyphenate(word), expected[idx]);
+			assert.equal(hyphenator.hyphenate(word).join('-'), expected[idx]);
 		});
 	});
 });
