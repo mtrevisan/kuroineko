@@ -12,6 +12,8 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 		/** @constant */
 	var WORD_BOUNDARY = '.',
 		/** @constant */
+		WORD_HYPHEN = '\u00AD',
+		/** @constant */
 		CONFIG_DEFAULT = {
 			/** regex stating the valid characters contained in a word in order to be a valid candidate for hyphenation */
 			validWordRegex: undefined,
@@ -20,13 +22,11 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 			/** minimal length of characters after the last hyphenation */
 			rightmin: 0,
 			/** list of exceptions in the form key-value, where the key is the word and the value the hyphenated one */
-			exceptions: undefined,
-			/** hyphen to use as hyphenator */
-			hyphen: '\u00AD'
+			exceptions: undefined
 		};
 
 
-	var Constructor = function(hyphen, pattern){
+	var Constructor = function(pattern){
 		readPatterns.call(this, pattern.patterns);
 
 		this.config = {};
@@ -35,11 +35,12 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 		if(pattern)
 			for(k in pattern)
 				this.config[k] = pattern[k];
-		if(hyphen)
-			this.config.hyphen = hyphen;
 
 		this.cache = {};
 	};
+
+	Constructor.WORD_HYPHEN = WORD_HYPHEN;
+
 
 	/** @private */
 	var readPatterns = function(patterns){
@@ -64,8 +65,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 		var hyphenatedWord = this.config.exceptions && this.config.exceptions[word];
 		//the word is not in the exceptions list
 		if(!hyphenatedWord){
-			if(this.config.validWordRegex && !word.match(this.config.validWordRegex)
-					|| word.indexOf(this.config.hyphen) >= 0 || word.indexOf('&shy;') >= 0)
+			if(this.config.validWordRegex && !word.match(this.config.validWordRegex) || word.indexOf('&shy;') >= 0)
 				//if the word contains invalid characters, or already contains the hyphen character: leave as it is
 				hyphenatedWord = word;
 			else if(this.cache[word])
@@ -127,8 +127,8 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	var createHyphenatedWord = function(word, pattern){
 		var maxLength = word.length - this.rightmin;
 		return word.split('').map(function(chr, idx){
-			return (idx >= this.leftmin && idx <= maxLength && pattern[idx] % 2? this.hyphen: '') + chr;
-		}, this).join('').split(this.hyphen);
+			return (idx >= this.leftmin && idx <= maxLength && pattern[idx] % 2? '-': '') + chr;
+		}, this).join('').split('-');
 	};
 
 	/** @private */
