@@ -126,9 +126,12 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	/** @private */
 	var createHyphenatedWord = function(word, pattern){
 		var maxLength = word.length - this.rightmin;
-		return word.split('').map(function(chr, idx){
-			return (idx >= this.leftmin && idx <= maxLength && pattern[idx] % 2? '-': '') + chr;
-		}, this).join('').split('-');
+		return word.split('')
+			.map(function(chr, idx){
+				return (idx >= this.leftmin && idx <= maxLength && pattern[idx] % 2? '-': '') + chr;
+			}, this)
+			.join('')
+			.split('-');
 	};
 
 	/** @private */

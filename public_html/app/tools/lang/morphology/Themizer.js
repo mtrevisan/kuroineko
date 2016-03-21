@@ -309,7 +309,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/data
 
 			{matcher: /((ar|[ei]n)f|^(dex)?n|([kp]|st)r|^s|(de|in|x)v)ia$/, replacement: '$1ía'}
 		];
-		var hyphenator = new Hyphenator('-', pattern_vec);
+		var hyphenator = new Hyphenator(pattern_vec);
 
 		return function(themeT4){
 			//infer stress position

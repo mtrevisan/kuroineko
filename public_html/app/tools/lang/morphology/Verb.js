@@ -5,7 +5,7 @@
  */
 define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/data/Assert', 'tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatterns/vec'], function(Word, StringHelper, Assert, Hyphenator, pattern_vec){
 
-	var hyphenator = new Hyphenator('-', pattern_vec);
+	var hyphenator = new Hyphenator(pattern_vec);
 
 	var Constructor = function(infinitive){
 		if(!Word.isStressed(infinitive))

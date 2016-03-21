@@ -83,7 +83,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	/** @constant */
 		ADVERB_1 = REDUCTION_RESERVED_0 + 23;
 
-	var hyphenator = new Hyphenator('-', pattern_vec);
+	var hyphenator = new Hyphenator(pattern_vec);
 
 	var adjectives = {
 		0: [

@@ -149,7 +149,7 @@ define(['tools/data/ObjectHelper', 'tools/data/StringHelper', 'tools/lang/phonol
 		return word;
 	};
 
-	var hyphenator = new Hyphenator('-', pattern_vec);
+	var hyphenator = new Hyphenator(pattern_vec);
 
 	/** @private */
 	var hyphenatePhones = function(word){

@@ -2,7 +2,7 @@ require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatt
 	QUnit.module('Hyphenator');
 
 	QUnit.test('Hyphenator', function(assert){
-		var hyphenator = new Hyphenator('-', pattern_vec);
+		var hyphenator = new Hyphenator(pattern_vec);
 		var words = [
 			//bc
 			'subcelular',
