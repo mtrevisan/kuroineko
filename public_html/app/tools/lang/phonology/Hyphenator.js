@@ -14,6 +14,8 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 		/** @constant */
 		WORD_HYPHEN = '\u00AD',
 		/** @constant */
+		WORD_INTERNAL_HYPHEN = '-',
+		/** @constant */
 		CONFIG_DEFAULT = {
 			/** regex stating the valid characters contained in a word in order to be a valid candidate for hyphenation */
 			validWordRegex: undefined,
@@ -71,11 +73,11 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 			else if(this.cache[word])
 				//if the word is in the cache then return it
 				hyphenatedWord = this.cache[word];
-			else if(word.indexOf('-') >= 0)
-				//if word contains '-' then hyphenate the parts separated with '-'
-				hyphenatedWord = word.split('-')
+			else if(word.indexOf(WORD_INTERNAL_HYPHEN) >= 0)
+				//if word contains '-' then hyphenate the single parts
+				hyphenatedWord = word.split(WORD_INTERNAL_HYPHEN)
 					.map(hyphenate)
-					.join('-');
+					.join(WORD_INTERNAL_HYPHEN);
 			else{
 				var pattern = getHyphenationPattern.call(this, word);
 
@@ -128,10 +130,10 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 		var maxLength = word.length - this.rightmin;
 		return word.split('')
 			.map(function(chr, idx){
-				return (idx >= this.leftmin && idx <= maxLength && pattern[idx] % 2? '-': '') + chr;
+				return (idx >= this.leftmin && idx <= maxLength && pattern[idx] % 2? WORD_INTERNAL_HYPHEN: '') + chr;
 			}, this)
 			.join('')
-			.split('-');
+			.split(WORD_INTERNAL_HYPHEN);
 	};
 
 	/** @private */
