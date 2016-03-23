@@ -450,8 +450,6 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 			var fn = function(base, phoneme, k){
 				var equivalences = [];
 				Object.keys(diacritics).forEach(function(d){
-if(phoneme+d =='lˠ')
-	console.log('');
 					if(phoneme[phoneme.length - 1] != d && hasEquivalentFeatures(diacritics[d][1], base)){
 						var diacritized = combineFeatures(base, diacritics[d][0]);
 						if(hasEquivalentFeatures(features, diacritized, !multipleElements))
