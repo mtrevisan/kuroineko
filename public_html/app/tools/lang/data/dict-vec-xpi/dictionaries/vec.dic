@@ -1,4 +1,4 @@
-10388
+10466
 e	po:noun
 è	po:noun
 é	po:noun
@@ -96,9 +96,7 @@ inamorar/A
 analiđar/A
 andar/A
 ‘ndar/A
-'ndar/A
 ‘nar/A
-'nar/A
 reandar/A
 traxandar/A
 andonar/A
@@ -172,8 +170,9 @@ exautorar/A
 autoriđar/A
 aver/A
 ‘ver/A
-'ver/A
+gaver/A
 reaver/A
+regaver/A
 axardar/A
 axear/A
 inaxear/A
@@ -5504,7 +5503,6 @@ vokaliđar/A
 volar/A
 voler/A
 ‘oler/A
-'oler/A
 malvoler/A
 revoler/A
 xvolar/A
@@ -5514,7 +5512,6 @@ involđar/A
 volponar/A
 voltar/A
 ‘oltar/A
-'oltar/A
 dexvoltar/A
 involtar/A
 revoltar/A
@@ -5840,6 +5837,8 @@ apokopar/A
 elíder/A
 anŧinar/A
 arđiñar/A
+frekuentar/A
+identifegar/A
 / nòmi
 Ànđela/Z	po:proper_noun
 Ànđelo/ZI	po:proper_noun
@@ -5925,21 +5924,17 @@ Tòfol/Z	po:proper_noun
 Tòjo/Z	po:proper_noun
 Tòni/Z	po:proper_noun
 / artíkoli
-el	po:article al:al al:‘l al:'l
-al	po:article st:el
-lo/U	po:article
-la/V	po:article al:l’ al:l'
-‘l	po:article st:el
-'l	po:article st:el
-l’	po:article st:la
-l'	po:article st:la
-on	po:article al:an al:‘n al:'n
-an/U	po:article st:on
-na/V	po:article al:n’ al:n'
-‘n	po:article st:on
-'n	po:article st:on
-n’	po:article st:na
-n'	po:article st:na
+el	po:article al:al al:‘l is:masculine
+al	po:article st:el is:feminine
+lo/U	po:article is:masculine
+la/V	po:article al:l’ is:feminine
+‘l	po:article st:el is:masculine
+l’	po:article st:la is:feminine
+on	po:article al:an al:‘n is:masculine
+an/U	po:article st:on is:masculine
+na/V	po:article al:n’ is:feminine
+‘n	po:article st:on is:masculine
+n’	po:article st:na is:feminine
 del/B	po:article
 dei	po:article
 / ajetivi
@@ -6014,7 +6009,6 @@ nui	po:pronoun
 voaltre/D	po:pronoun
 vialtre/D	po:pronoun
 v’	po:pronoun
-v'	po:pronoun
 vu	po:pronoun
 vui	po:pronoun
 elo/B	po:pronoun
@@ -6029,9 +6023,8 @@ te/D	po:pronoun
 tu	po:pronoun
 ve	po:pronoun
 / pronòmi klítegi partitivo 'ne/en' e logativo 'ge'
-ge	po:pronoun al:g’ al:g'
+ge	po:pronoun al:g’
 g’	po:pronoun st:ge
-g'	po:pronoun st:ge
 en	po:pronoun
 / pronòme relativo 'ke'
 ke/D	po:pronoun
@@ -6061,9 +6054,8 @@ tal	po:pronoun po:adjective_identificative
 kuanto/BI	po:pronoun po:adjective_interrogative
 kual/B	po:pronoun po:adjective_interrogative
 dove	po:pronoun po:adjective_interrogative
-indove	po:pronoun po:adjective_interrogative al:indo’ al:indo'
+indove	po:pronoun po:adjective_interrogative al:indo’
 indo’	po:pronoun po:adjective_interrogative st:indove
-indo'	po:pronoun po:adjective_interrogative st:indove
 kome	po:pronoun po:adjective_interrogative
 kuando	po:pronoun po:adjective_interrogative
 koando	po:pronoun po:adjective_interrogative
@@ -6071,9 +6063,8 @@ kuande	po:pronoun po:adjective_interrogative
 parké	po:pronoun po:adjective_interrogative
 parkòsa	po:pronoun po:adjective_interrogative
 ci	po:pronoun po:adjective_interrogative
-kòsa/I	po:pronoun po:adjective_interrogative al:‘sa al:'sa
+kòsa/I	po:pronoun po:adjective_interrogative al:‘sa
 ‘sa	po:pronoun po:adjective_interrogative st:kòsa
-'sa	po:pronoun po:adjective_interrogative st:kòsa
 / kuantifegador
 uno	po:quantifier
 una	po:quantifier
@@ -6099,7 +6090,6 @@ altretanto/B	po:quantifier
 tuto/BI	po:quantifier
 altro/BX	po:quantifier
 st’	po:quantifier
-st'	po:quantifier
 kuelaltro/B	po:quantifier
 ŧèrto/B	po:quantifier
 bastanŧa	po:quantifier
@@ -6113,7 +6103,7 @@ a	po:preposition
 da/V	po:preposition
 in	po:preposition
 ko	po:preposition
-so	po:preposition al:s’ al:s'
+so	po:preposition al:s’
 sora	po:preposition po:adverb
 sóreme	po:preposition po:adverb
 sórene	po:preposition po:adverb
@@ -6127,9 +6117,8 @@ drento	po:preposition
 fora	po:preposition
 vèrso/U	po:preposition
 inver	po:preposition
-par/U	po:preposition al:pa’ al:pa'
+par/U	po:preposition al:pa’
 pa’	po:preposition st:par
-pa'	po:preposition st:par
 tra	po:preposition
 intra	po:preposition
 fra	po:preposition
@@ -6142,29 +6131,20 @@ pal	po:preposition
 ai	po:preposition
 dai	po:preposition
 ‘te	po:preposition st:inté
-'te	po:preposition st:inté
 ‘tei	po:preposition st:intéi
-'tei	po:preposition st:intéi
 ‘tel	po:preposition st:intel
-'tel	po:preposition st:intel
-inté	po:preposition al:‘te al:'te al:‘nté al:'nté al:t’ al:t'
+inté	po:preposition al:‘te al:‘nté al:t’
 ‘nté	po:preposition st:inté
-'nté	po:preposition st:inté
-intéi	po:preposition al:‘tei al:'tei al:‘ntéi al:'ntéi
+intéi	po:preposition al:‘tei al:‘ntéi
 ‘ntéi	po:preposition st:intéi
-'ntéi	po:preposition st:intéi
-intel	po:preposition al:‘tel al:'tel al:‘ntel al:'ntel
+intel	po:preposition al:‘tel al:‘ntel
 ‘ntel	po:preposition st:intel
-'ntel	po:preposition st:intel
 koi	po:preposition
 soi	po:preposition
 pai	po:preposition
 t’	po:preposition st:inté
-t'	po:preposition st:inté
 int’	po:preposition st:inté
-int'	po:preposition st:inté
 s’	po:preposition st:so
-s'	po:preposition st:so
 indrío	po:preposition po:adverb
 despò	po:preposition
 dapò	po:preposition
@@ -6203,12 +6183,12 @@ kuatro	po:numeral_cardenal
 ŧinkue	po:numeral_cardenal
 sie	po:numeral_cardenal
 síe	po:numeral_cardenal
-sète	po:numeral_cardenal
-òto	po:numeral_cardenal
+sète/%	po:numeral_cardenal
+òto/%	po:numeral_cardenal
 nove/%	po:numeral_cardenal
 nòve	po:numeral_cardenal
 dièxe/%	po:numeral_cardenal
-diexe/%	po:numeral_cardenal
+diexe	po:numeral_cardenal
 dexe	po:numeral_cardenal
 úndexe/%	po:numeral_cardenal
 dódexe/%	po:numeral_cardenal
@@ -6273,13 +6253,9 @@ otavo/B	po:numeral_ordenal
 nòno/B	po:numeral_ordenal po:noun
 dèŧimo/B	po:numeral_ordenal
 tèrŧ’	po:numeral_ordenal
-tèrŧ'	po:numeral_ordenal
 kuart’	po:numeral_ordenal
-kuart'	po:numeral_ordenal
 kuint’	po:numeral_ordenal
-kuint'	po:numeral_ordenal
 sèst’	po:numeral_ordenal
-sèst'	po:numeral_ordenal
 / numerali - moltiplegativi
 únego/B	po:numeral_multiplicative
 úñolo/BI	po:numeral_multiplicative
@@ -6342,6 +6318,7 @@ Fevraro/Z	po:noun
 Fevrèr/Z	po:noun
 Marŧo/ZI	po:noun
 Aprile/ZI	po:noun
+Avrile/Z	po:noun
 Avril/Z	po:noun
 Mađo/Z	po:noun
 Majo/Z	po:noun
@@ -6481,22 +6458,20 @@ brào/U	po:adjective po:noun po:interjection
 bravo/B	po:adjective po:noun po:interjection
 fòrŧa/V	po:noun po:interjection
 korajo/U	po:noun po:interjection
-pò
-mò
-vara/V	po:noun al:‘ara al:'ara
+pò	po:adverb
+mò	po:adverb
+vara/V	po:noun al:‘ara
 ‘ara/V	po:noun st:vara
-'ara/V	po:noun st:vara
-tarà
+tarà	po:verb
 mostro/U	po:noun po:interjection
 bèl/B	po:adjective po:interjection
 mixèria/V	po:noun po:interjection
 òro/U	po:noun po:interjection
 viva	po:interjection
-viú
-brr
+viú	po:interjection
+brr	po:interjection
 malano/U	po:noun po:interjection
-guàio/U	po:noun po:interjection
-guai	po:interjection
+guajo/U	po:noun po:interjection
 fiol/U	po:noun al:fiuli
 fiòl/U	po:noun
 kan/V	po:noun po:interjection
@@ -6510,16 +6485,16 @@ sanité	po:interjection
 salve	po:interjection
 pòro/B	po:adjective po:interjection
 mona/V	po:noun po:adjective
-din
-don
-tik
-tak
-patapúnfete
-pàfete
-cik
-cak
-ñao
-kikirikí
+din	po:interjection
+don	po:interjection
+tik	po:interjection
+tak	po:interjection
+patapúnfete	po:interjection
+pàfete	po:interjection
+cik	po:interjection
+cak	po:interjection
+ñao	po:interjection
+kikirikí	po:interjection
 / avèrbi
 pasa	po:adverb
 / paexi/ŧità
@@ -6715,6 +6690,7 @@ padan/B	po:adjective
 padoan/B	po:adjective
 pagòto/BI	po:adjective
 pavan/B	po:adjective
+piaxentin/B	po:adjective
 polexan/B	po:adjective
 roigòto/B	po:adjective
 roman/B	po:adjective
@@ -6841,7 +6817,7 @@ Plèjadi/Z	po:noun
 đerman/U	po:noun
 đilio/U	po:noun
 đo	po:adverb
-đogador/V	po:noun
+đogador/CW	po:noun
 đonŧion/D	po:noun
 đonta/V	po:noun
 đontamento/B	po:noun
@@ -6923,7 +6899,8 @@ Plèjadi/Z	po:noun
 ŧuka/V	po:noun
 ŧuketo/BI	po:noun
 ŧuko/BI	po:noun
-ŧukon/V	po:noun
+ŧukona	po:noun
+ŧukon/C	po:noun
 ŧurla/V	po:noun
 ŧurlo/B	po:adjective
 ɉàsena/V	po:noun
@@ -6947,12 +6924,6 @@ Plèjadi/Z	po:noun
 ‘olto/B	po:noun
 ‘onfio/B	po:noun po:adjective
 ‘os/V	po:noun
-'lora	po:adverb
-'olentièra/U	po:adverb
-'olintièra/U	po:adverb
-'olto/B	po:noun
-'onfio/B	po:noun po:adjective
-'os/V	po:noun
 Babàu/Z	po:noun
 Batimarŧo/Z	po:noun
 Bruxamarŧo/Z	po:noun
@@ -7056,7 +7027,7 @@ arente	po:noun po:adjective po:adverb
 arentege	po:noun po:adjective po:adverb
 argomental/D	po:adjective
 argomento/U	po:noun
-ari
+ari	po:noun
 aria/V	po:noun
 arketo/UI	po:noun po:adjective
 armònego/B	po:adjective
@@ -7102,6 +7073,7 @@ avanpòsto/U	po:noun
 avanposto/U	po:noun
 avedin/U	po:noun
 averbial/D	po:adjective
+axenàa/V	po:noun
 axenada/V	po:noun
 axente/U	po:noun po:adjective
 bàkaro/U	po:noun
@@ -7127,14 +7099,14 @@ baɉiɉo/U	po:noun
 baba/D	po:adjective
 badía/V	po:noun
 bagolina/V	po:noun
-bai	po:noun
+bao/U	po:noun
 bajijo/U	po:noun
 bakò	po:noun
-bak
+bak	po:noun
 bakan/U	po:noun
 bakareto/U	po:noun
 baketo/BI	po:noun
-bala/V	po:noun
+bal/B	po:noun
 balanŧa/V	po:noun
 balarin/U	po:noun
 balbo/UI	po:adjective
@@ -7168,6 +7140,7 @@ barka/V	po:noun
 barkaro/U	po:noun
 barkarol/BW	po:noun
 barlume/VI	po:noun
+baronàa/V	po:noun
 baronada/V	po:noun
 bartorèla/V	po:noun
 barufon/V	po:noun
@@ -7179,7 +7152,7 @@ bataja/V	po:noun
 bataría/V	po:noun
 batikarne	po:noun
 batuda/V	po:noun
-bau
+bau	po:noun
 bauko/U	po:noun po:adjective
 baukon/B	po:noun po:adjective
 bavarol/UW	po:noun
@@ -7200,6 +7173,7 @@ berolon/V	po:noun
 bexòño/UI	po:noun
 bexiga/V	po:noun
 biŧikleta/V	po:noun
+biàa/V	po:noun
 biada/V	po:noun
 bianariŧo/UI	po:noun
 biavèr/UW	po:noun
@@ -7226,7 +7200,7 @@ bivalente/D	po:noun po:adjective
 bixú	po:noun
 bixantin/B	po:adjective
 bixato/U	po:noun
-bixef/VI
+bixef/VI	po:adverb
 bixlísego/B	po:adjective
 bixnente/VI	po:adjective
 bixonto/B	po:adjective
@@ -7281,6 +7255,7 @@ braŧo/BI	po:noun
 braga/V	po:noun
 bragesa/V	po:noun
 brano/U	po:noun
+brataora/V	po:noun
 bratadora/V	po:noun
 bravura/V	po:noun
 brega/V	po:noun
@@ -7341,7 +7316,7 @@ ceto/BI	po:adjective
 cexa/V	po:noun
 cicinin/U	po:adjective po:pronoun po:adverb
 cico/U	po:noun
-ciko
+ciko	po:adverb
 cin/U	po:noun
 conpo/U	po:adjective
 copin/U	po:noun
@@ -7356,10 +7331,9 @@ dínamo	po:noun
 dòna/V	po:noun
 dòso	po:adverb
 dòxe/V	po:noun
-d’
-d'
-dabon
-dadrío
+d’	po:preposition
+dabon	po:adverb
+dadrío	po:preposition po:adverb
 danbra/V	po:noun
 dapartuto/I	po:adverb
 darente/V	po:adjective po:noun po:adverb
@@ -7372,7 +7346,7 @@ deítego/B	po:adjective
 deóntego/B	po:adjective
 deŧènio/U	po:noun
 deŧimal/V	po:adjective
-debon
+debon	po:adverb
 dedín/U	po:noun
 dedo/U	po:noun
 deduŧion/V	po:noun
@@ -7454,7 +7428,7 @@ divertente/D	po:adverb
 divinità	po:noun
 divixíbile/D	po:adjective
 divixion/D	po:noun
-dixnèra/V
+dixnèra/V	po:noun
 dokumento/U	po:noun
 dolŧo/BIX	po:adjective
 dolor/V	po:noun
@@ -7501,6 +7475,7 @@ enklítego/B	po:adjective
 enklixi	po:noun
 ente/V	po:noun
 entità	po:noun
+entràa/V	po:noun
 entrada/V	po:noun
 epèntexi	po:noun
 eròe/U	po:noun
@@ -7554,6 +7529,7 @@ fònego/U	po:noun
 fòrvese/VI	po:noun
 fòto	po:noun
 fórmola/V	po:noun
+faŧàa/V	po:noun
 faŧada/V	po:noun
 faŧendone/VI	po:noun
 faŧilità	po:noun
@@ -7600,6 +7576,7 @@ fenòco/U	po:noun
 fenòmeno/U	po:noun
 feraŧa/V	po:noun
 feral/V	po:noun
+feriàa/V	po:noun
 feriada/V	po:noun
 festuko/UI	po:noun
 fià	po:noun
@@ -7659,9 +7636,9 @@ fontana/V	po:noun
 forèsto/B	po:adjective
 forŧèl/B	po:noun
 forŧaura/V	po:noun
-foraman
-forame
-foravía
+foraman	po:adjective po:adverb
+forame	po:noun
+foravía	po:adjective po:adverb
 forfesígola/V	po:noun
 formaŧion/D	po:noun
 forma/V	po:noun
@@ -7670,122 +7647,122 @@ formento/UI	po:noun
 formenton	po:noun
 formigèr/UI	po:noun
 formiga/V	po:noun
-formigolamento/UI
+formigolamento/UI	po:noun
 fornèla/V	po:noun
 fornèr/BW	po:noun
 fornase/VI	po:noun
-fornidor/BW
-forno/U
-forse/V
+fornidor/CW	po:noun
+forno/U	po:noun
+forse/V	po:adverb
 fortaja/V	po:noun
-fortemente
-fortifegador/D
-fortunà
-fortuna/V
-fotío
-fotografía/V
+fortemente	po:adverb
+fortifegador/CW	po:noun
+fortunà	po:adjective
+fortuna/V	po:noun
+fotío	po:noun
+fotografía/V	po:noun
 frànbola/V	po:noun
-frève/V
+frève/V	po:noun
 frégola/V	po:noun
-frítola/V
-fraèl/U
-fraŧion/D
-fraŧionario/B
-fradèl/B
+frítola/V	po:noun
+fraèl/U	po:noun
+fraŧion/D	po:noun
+fraŧionario/B	po:adjective
+fradèl/B	po:noun
 fragolèr/BW	po:noun
-frako/BI
+frako/BI	po:adjective po:pronoun po:adverb
 franđa/V	po:noun
-franŧexixmo/U
+franŧexixmo/U	po:noun
 franko/B	po:adjective
 fraskèr/U	po:noun
-fraxal/V
-fraxe/V
-freŧa/V
-fredo/BI
+fraxal/V	po:adjective
+fraxe/V	po:noun
+freŧa/V	po:noun
+fredo/BI	po:adjective po:noun
 frega/V	po:noun
-frekuenŧa/V
-frekuenta/V
-frekuentativo/B
-frekuente/D
+frekuenŧa/V	po:noun
+frekuentativo/B	po:adjective
+frekuente/D	po:adjective
 freskin/U	po:noun
-fresko
-freve
-friŧion/D
-frikativo/B
-frontal/D
-fronte/V
-frutarol/BW
-fruto/B
+fresko	po:adjective po:noun
+freve	po:noun
+friŧion/D	po:noun
+frikativo/B	po:adjective
+frontal/D	po:adjective po:noun
+fronte/V	po:noun
+frutarol/BW	po:noun
+fruto/B	po:noun
 fugaŧa/V	po:noun
-fuliska/V
-fuliva/V
+fuliska/V	po:noun
+fuliva/V	po:noun
 fumèra/V	po:noun
 fumeron/V	po:noun
 fuminante/U	po:noun
 fuminanto	po:noun
-fumo/UI
-fursi
+fumo/UI	po:noun
+fursi	po:adverb
 fustaño/U	po:noun
-futuro/B
+futuro/B	po:adjective po:noun
 fuxil/V	po:noun
-fuxion/V
-gèbo/U
+fuxion/V	po:noun
+gèbo/U	po:noun
 gò	po:noun
 gòja/V	po:noun
-gòlf
+gòlf	po:noun
 gòto/U	po:noun
-góndola/V
+góndola/V	po:noun
 gaban/B	po:noun
 gabiòto/UI	po:noun
 gabia/V	po:noun
 gaja/V	po:noun
 galòfa/V	po:noun
-gal/U
+gal/U	po:noun
 galantòmo/UI	po:adjective
-galepin/U
+galepin/U	po:noun
 galinèr/BW	po:noun
-galina/V
+galina/V	po:noun
 gamèla/V	po:noun
 ganasa/V	po:noun
 ganbaròla/V	po:noun
-ganbo/B
+ganbo/B	po:noun
 garòfol/U	po:noun
-garaɉe/U
-gara/V
+garaɉe/U	po:noun
+gara/V	po:noun
 gardèla/V	po:noun
 garduso/UI	po:noun
 gargato/UI	po:noun
 garnel/U	po:noun
-gas
+gas	po:noun
 gaterígole/V	po:noun
-gatoñào
+gatoñào	po:adverb
 gato/BI	po:noun
 gaxía/V	po:noun
 gaxo/U	po:noun
-genga/V
+genga/V	po:noun
 giña/V	po:noun
-glòria/V
-gladiator/BW
-gliserina/V
-glukòxio/U
+glòria/V	po:noun
+gladiator/BW	po:noun
+gliserina/V	po:noun
+glukòxio/U	po:noun
 goldon/V	po:noun
-gonfio/B
-gorila
+gonfio/B	po:adjective po:noun
+gorila	po:noun
 gorna/V	po:noun
-gràfego/B
-gràndene
+gràfego/B	po:adjective po:noun
+gràndene	po:noun
 gròpola/V	po:noun
-gròso/B
-graŧie
-grado/U
-grafèma/U
-grafo/U
-gramàdega/V
-gramadegal/D
-grameña/V
+gròso/B	po:adverb po:noun
+graŧie	po:noun po:interjection
+grao/U	po:noun
+grado/U	po:noun
+grafèma/U	po:noun
+grafo/U	po:noun
+gramàdega/V	po:noun
+gramadegal/D	po:adjective
+grameña/V	po:noun
 gramo/U	po:noun po:adjective
 granèl/U	po:noun
-grandeŧa/V
+grandeŧa/V	po:noun
 graso/B	po:noun po:adjective
 graspo/UI	po:noun
 grataròla/V	po:noun
@@ -7794,215 +7771,212 @@ grava/V	po:noun
 grevo/U	po:adjective
 gri	po:noun
 grileto/UI	po:noun
-gronda/V
+gronda/V	po:noun
 gropo/UI	po:noun
 gropoloxo/U	po:adjective
-gru
+gru	po:noun
 grumo/UI	po:noun
-guèra/V
-gua/U
-gualivo/UI
-guantièra/V
-gusto/U
+guèra/V	po:noun
+gua/U	po:noun
+gualivo/UI	po:adjective po:noun
+guantièra/V	po:noun
+gusto/U	po:noun
 guxèla/V	po:noun
-idèa/V
-identífega
-identifegaŧion/D
-identifegativo/B
-identità
-ilegal/D
-imaxinario/U
-imedià
-inŧèrto/B
-inŧerteŧa/V
-inŧial/V
-inŧidental/V
-inŧitamento/U
+idèa/V	po:noun
+identifegaŧion/D	po:noun
+identifegativo/B	po:adjective po:noun
+identità	po:noun
+ilegal/D	po:adjective
+imaxinario/U	po:adjective po:noun
+imedià	po:adjective
+inŧèrto/B	po:adjective po:noun
+inŧerteŧa/V	po:noun
+inŧial/V	po:adjective po:noun
+inŧidental/V	po:adjective
+inŧitamento/U	po:noun
 inɉòto/UI	po:noun
-inadeguateŧa/V
-inakuxativo/B
-inalŧamento/U
-inamente
-inativo/B
-inbriago/B
-incixo/U
+inadeguateŧa/V	po:noun
+inakuxativo/B	po:adjective po:noun
+inalŧamento/U	po:noun
+inativo/B	po:adjective
+inbriago/B	po:adjective
+incixo/U	po:noun
 indòrmia/V	po:noun
-indebolimento/U
-independente/U
-indetermenativo/U
-indikaŧion/D
-indikativo/B
-indirèto/B
-individual/V
-indovinèl/U
-indretura/V
-inergativo/B
-inetitúdine/V
-infin
-infina
-infiso/U
-influenŧa/V
-informaŧion/D
-informativo/B
-informigolamento/UI
-ingistara/V
+indebolimento/U	po:noun
+independente/U	po:adjective
+indetermenativo/U	po:adjective
+indikaŧion/D	po:noun
+indikativo/B	po:adjective po:noun
+indirèto/B	po:adjective
+individual/V	po:adjective
+indovinèl/U	po:noun
+indretura/V	po:noun
+inergativo/B	po:adjective
+inetitúdine/V	po:noun
+infin	po:adverb
+infina	po:adverb
+infiso/U	po:adjective po:noun
+influenŧa/V	po:noun
+informaŧion/D	po:noun
+informativo/B	po:adjective
+informigolamento/UI	po:noun
+ingistara/V	po:noun
 inguria/V	po:noun
-iniŧial/V
+iniŧial/V	po:adjective po:noun
 inima/V	po:noun
-inkó
-inkói
-inkiesta/V
-inkonpatibile/D
-inkontrarietà
-inkontrario/B
-inkorajamento/U
-inkredíbile/D
-inkuó
-inlegal/V
+inkó	po:adverb
+inkói	po:adverb
+inkiesta/V	po:noun
+inkonpatibile/D	po:adjective
+inkontrarietà	po:noun
+inkontrario/B	po:adjective
+inkorajamento/U	po:noun
+inkredíbile/D	po:adjective
+inkuó	po:adverb
+inlegal/V	po:adjective
 inoŧente/D	po:adjective
-inpè
-inpèro/U
-inpaŧienŧa/D
-inparfèto/B
-inparfetivo/B
-inparsonal/D
-inparsonifegaŧion/D
+inpè	po:noun
+inpèro/U	po:noun
+inpaŧienŧa/D	po:noun
+inparfèto/B	po:adjective
+inparfetivo/B	po:adjective
+inparsonal/D	po:adjective
+inparsonifegaŧion/D	po:noun
 inpiria/V	po:noun
 inpolina/V	po:noun
-inportanŧa/D
-inportante/D
-inposíbil/D
-inpoxiŧion/D
-inpròpio/B
+inportanŧa/D	po:noun
+inportante/D	po:adjective
+inposíbil/D	po:adjective
+inpoxiŧion/D	po:noun
+inpròpio/B	po:adjective
 inpresta/V	po:noun
-inprestio/U
-inprexa/V
-inpuro/B
-inrabiatura/V
-inreal/V
-inrealtà
-inregolar/D
-inregolarità
+inprestio/U	po:noun
+inprexa/V	po:noun
+inpuro/B	po:adjective
+inrabiatura/V	po:noun
+inreal/V	po:adjective
+inrealtà	po:noun
+inregolar/D	po:adjective
+inregolarità	po:noun
 inseña/V	po:noun
-inseparàbile/D
-inserimento/V
-insieme
-insin
-insina
-instantàneo/B
-instante/U
-insulto/U
-intèrno/B
-intòrto/BI
-intarnaŧional/D
-intenŧion/D
-intensivo/B
-intento/BI
-interesante/D
-interior/D
-interkonesion/D
-intermuskolar/V
-internaŧional/D
-interogaŧion/D
-interogativo/B
-interpretaŧion/D
-intertònego/B
-intervokàlego/B
+inseparàbile/D	po:adjective
+inserimento/V	po:noun
+insieme	po:adverb po:noun
+insin	po:preposition po:adverb
+insina	po:preposition po:adverb
+instantàneo/B	po:adjective
+instante/U	po:noun
+insulto/U	po:noun
+intèrno/B	po:adjective po:noun
+intòrto/BI	po:adjective
+internaŧional/D	po:adjective
+intenŧion/D	po:noun
+intensivo/B	po:adjective
+intento/BI	po:adjective po:noun
+interesante/D	po:adjective
+interior/D	po:adjective
+interkonesion/D	po:noun
+intermuskolar/V	po:adjective
+interogaŧion/D	po:noun
+interogativo/B	po:adjective po:noun
+interpretaŧion/D	po:noun
+intertònego/B	po:adjective
+intervokàlego/B	po:adjective
 intièro/B	po:adjective
 intimèla/V	po:noun
-intonaŧion/D
-intramèđo/U
-intrami
-intramuskolar/V
-intranxitivo/B
-intrigon/V
-introduŧion/D
-introdutor/V
-invariàbile/D
-invariabilità
-invaxion/V
-inventario/U
-inversion/D
-ipòtexi
-iper
-iperativo/B
-ipertròfego/B
-ipokalòrego/B
-ipotètego/B
-irònego/B
-ironía/V
-istruŧion/D
-iterativo/B
+intonaŧion/D	po:noun
+intramèđo/U	po:adjective
+intrami	po:pronoun
+intramuskolar/V	po:adjective
+intranxitivo/B	po:adjective po:noun
+intrigon/V	po:noun
+introduŧion/D	po:noun
+introdutor/V	po:noun
+invariàbile/D	po:adjective
+invariabilità	po:noun
+invaxion/V	po:noun
+inventario/U	po:noun
+inversion/D	po:noun
+ipòtexi	po:noun
+iper	po:prefix
+iperativo/B	po:adjective po:noun
+ipertròfego/B	po:adjective
+iperkalòrego/B	po:adjective
+ipokalòrego/B	po:adjective
+ipotètego/B	po:adjective
+irònego/B	po:adjective
+ironía/V	po:noun
+istruŧion/D	po:noun
+iterativo/B	po:adjective
 ixèrta/V	po:noun
 ixèrtola/V	po:noun
-jèri
+jèri	po:adverb
 jaŧèra/V	po:noun
 jaŧo/BI	po:noun
 jaketa/V	po:noun
 jara/V	po:noun
-jarin/U
-jato/U
+jarin/U	po:noun
+jato/U	po:noun
 jeja/V	po:noun
-jeloxo/U
-jemo/U
+jeloxo/U	po:adjective
+jemo/U	po:noun
 jerto/UI	po:adjective
 joŧo/BI	po:noun
+jornàa/V	po:noun
 jornada/V	po:noun
 judiŧio/U	po:noun
 juska/V	po:noun
-justiŧia/V
-justo/B
+justiŧia/V	po:noun
+justo/B	po:adjective
 kàlivo/U	po:adjective
-kàmara/V
-kàmera/V
-kàneva/V
+kàmara/V	po:noun
+kàmera/V	po:noun
+kàneva/V	po:noun
 kànevo/U	po:noun
-kànkaro/B
-kào/U
-kàora/V
-kàpita
-kàrega/V
+kànkaro/B	po:noun po:interjection
+kào/U	po:noun
+kàora/V	po:noun
+kàrega/V	po:noun
 kàrpen/U	po:noun
-kàuxa/V
-kàvara/V
+kàuxa/V	po:noun
+kàvara/V	po:noun
 kègola/V	po:noun
-ké
+ké	po:conjunction
 kíkera/V	po:noun
-kímego/U
-kòbra
-kòdexe/U
+kímego/U	po:adjective po:noun
+kòbra	po:noun
+kòdexe/U	po:noun
 kògo/U	po:noun
 kògoma/V	po:noun
 kòka/V	po:noun
 kòl/U	po:noun
-kòlf
-kòmodo/B
-kòpula/V
-kòrŧ
-kòr/U
-kòrda/V
-kòri
-kòrno/B
+kòlf	po:noun
+kòmodo/B	po:adjective
+kòpula/V	po:noun
+kòrŧ	po:noun
+kòr/U	po:noun
+kòrda/V	po:noun
+kòrno/B	po:noun
 kòrnol/U	po:noun
-kòrpo/U
-kòrvo/UI
-kòsta/V
-kòtola/V
-kólsera/V
-kónpito/U
-kaín/U
+kòrpo/U	po:noun
+kòrvo/UI	po:noun
+kòsta/V	po:noun
+kòtola/V	po:noun
+kólsera/V	po:noun
+kónpito/U	po:noun
+kaín/U	po:noun
 kañaría/V	po:noun
 kañara/V	po:noun
 kañon/V	po:noun
-kađòto/UI
+kađòto/UI	po:noun
 kaŧa/V	po:noun
 kaŧavide/V	po:noun
 kaŧola/V	po:noun
-kadena/V
+kadena/V	po:noun
 kadin/U	po:noun
-kaena/V
-kafè
-kafeina/V
+kaena/V	po:noun
+kafè	po:noun
+kafeina/V	po:noun
 kaiɉa/V	po:noun
 kaico/UI	po:adjective
 kakèr/BW	po:noun
@@ -8011,886 +7985,885 @@ kalŧe/I	po:noun
 kalŧeto/UI	po:noun
 kalŧina	po:noun
 kalɉera/V	po:noun
-kal/V
+kal/V	po:noun
 kalamar/U	po:noun
 kaldana/V	po:noun
-kaldo/BXI
-kalendario/U
-kalendra/V
+kaldo/BXI	po:adjective po:noun
+kalendario/U	po:noun
+kalendra/V	po:noun
 kalièr/B	po:noun
-kaligo/U
+kaligo/U	po:noun
 kalkaño/UI	po:noun
 kalkera/V	po:noun
-kalkolador/V
-kalor/V
-kaloroxo/B
-kalvéa/V
+kalkolador/CW	po:adjective po:noun
+kalor/V	po:noun
+kaloroxo/B	po:adjective
+kalvéa/V	po:noun
 kamòrŧo/UI	po:noun
-kamerièra/V
-kamixa/V
+kamerièra/V	po:noun
+kamixa/V	po:noun
 kanàgola/V	po:noun po:adjective
-kanèlo/B
-kanŧon/V
+kanèlo/B	po:noun
+kanŧon/V	po:noun
 kanaja/V	po:noun
-kanal/V
+kanal/V	po:noun
 kanapia/V	po:noun
-kanbiamento/U
-kanbio/U
-kandelièr/V
+kanbiamento/U	po:noun
+kanbio/U	po:noun
+kandelièr/V	po:noun
 kanevaŧa/V	po:noun
-kanil/V
+kanil/V	po:noun
 kanocal/V	po:noun
-kanon/V
-kanpaña/V
-kanpanèl/U
-kanpanil/V
+kanon/V	po:noun
+kanpaña/V	po:noun
+kanpanèl/U	po:noun
+kanpanil/V	po:noun
 kanpanon/V	po:noun
-kanpejo/U
-kanpion/V
-kanpo/UI
+kanpejo/U	po:noun
+kanpion/V	po:noun
+kanpo/UI	po:noun
 kantúi	st:kantoni is:plural
-kantaro/U
+kantaro/U	po:noun
 kanton/V	al:kantúi
-kao/U
+kao/U	po:noun
 kaoreto/UI	po:noun
-kapèl/U
-kapítolo/U
-kapelèr/BW
-kapiklase
-kapisaldi
-kapistaŧion
-kapitèl/U
-kapitòle
-kapital/V
-kapo/U
-kapoklase
-kapolaoro/U
+kapèl/U	po:noun
+kapítolo/U	po:noun
+kapelèr/BW	po:noun
+kapiklase	po:noun
+kapisaldi	po:noun
+kapistaŧion	po:noun
+kapitèl/U	po:noun
+kapitòle	po:noun
+kapital/V	po:noun
+kapo/U	po:noun
+kapoklase	po:noun
+kapolaoro/U	po:noun
 kaponera/V	po:noun
-kaposaldo
-kapostaŧion
-kapotòla
-kapovèrso/U
+kaposaldo	po:noun
+kapostaŧion	po:noun
+kapotòla	po:noun
+kapovèrso/U	po:noun
 kapuŧo/UI	po:noun
-karàtere/V
-karèga/V
+karàtere/V	po:noun
+karèga/V	po:noun
 karòl/U	po:noun
 karanpana/V	po:noun
-karaterístego/B
-karateriđa
-karateristega/V
-karato/U
-karbonèr/BW
-karbon/V
+karaterístego/B	po:adjective
+karateristega/V	po:noun
+karato/U	po:noun
+karbonèr/BW	po:noun
+karbon/V	po:noun
 kardenŧa/V	po:noun
-kardenal/D
-kareŧa/V
-karegèr/BW
-karegeta/V
+kardenal/D	po:noun
+kareŧa/V	po:noun
+karegèr/BW	po:noun
+karegeta/V	po:noun
 karegon/V	po:noun
-karga/V
+karga/V	po:noun
+kargaora/V	po:noun
 kargadora/V	po:noun
-karibú
-karità
+karibú	po:noun
+karità	po:noun
 karkaño/UI	po:noun
-karne/V
-karno
-karo/B
+karne/V	po:noun
+karo/B	po:adjective
 karpía/V	po:noun
-karta/V
+karta/V	po:noun
 karugo/U	po:noun
 kasèla/V	po:noun
-kasafòrte
-kasefòrti
-kaseto/B
+kasafòrte	po:noun
+kasefòrti	po:noun
+kaseto/B	po:noun
 kasia/V	po:noun
 kastañèr/UW	po:noun
 kastaldo/U	po:noun
 kastron/V	po:noun
-katàlogo/U
-katafòrego/B
-katakonba/V
-katalèsi
-kategoría/V
-katività
-kauxal/V
-kauxativo/B
-kavín/U
+katàlogo/U	po:noun
+katafòrego/B	po:adjective
+katakonba/V	po:noun
+katalèsi	po:noun
+kategoría/V	po:noun
+katività	po:noun
+kauxal/V	po:adjective po:noun
+kauxativo/B	po:adjective
+kavín/U		po:noun
 kavaòco/U	po:noun
 kavaŧon/V	po:noun
 kavakamixa/V	po:noun
-kavalòto/U
-kaval/B
-kavaleto/UI
-kavalexièr/U
-kavalièr/V
-kavaron/V
-kavastròpol/U
-kavasuro/U
+kavalòto/U	po:noun
+kaval/B	po:noun
+kavaleto/UI	po:noun
+kavalexièr/U	po:noun
+kavalièr/V	po:noun
+kavaron/V	po:noun
+kavastròpol/U	po:noun
+kavasuro/U	po:noun
 kaveŧa/V	po:noun
 kavedal/V	po:noun
 kavedon/V	po:noun
-kavel/U
+kavel/U	po:noun
+kavelàa/V	po:adjective
 kavelada/V	po:adjective
 kavenaŧo/UI	po:noun
-kavra/V
-kavron/V
+kavra/V	po:noun
+kavron/V	po:noun
 kaxèr/UW	po:noun
-kaxòto/U
-kaxaro/B
+kaxòto/U	po:noun
+kaxaro/B	po:noun
 keko/U	po:proper_noun
-kel
-kelaltro/B
+kel	po:adjective po:pronoun
+kelaltro/B	po:adjective po:pronoun
 kera/V	po:noun
-kièto/B
-kilòmetro/U
+kièto/B	po:adjective
+kilòmetro/U	po:noun
 kipa/V	po:noun
-kiuo/U
-kivalà
-kive
-kivo/U
-kivolo/U
-klítego/B
-klase/D
-klasifegaŧion/D
+kiuo/U	po:noun
+kivalà	po:interjection
+kive	po:adverb
+kivo/U	po:noun
+kivolo/U	po:noun
+klítego/B	po:adjective po:noun
+klase/D	po:noun
+klasifegaŧion/D	po:noun
 klinto/U	po:noun
-koñòme/V
-koa/V
+koñòme/V	po:noun
+koa/V	po:noun
 kodaroso/UI	po:noun
 kodoño/VI	po:noun
 kodolà	po:noun
 kojon/V	po:noun po:adjective
 kokúmero/U	po:noun
 kokon/V	po:noun
-kolòna/V
-kolònia/V
-koletivo/B
+kolòna/V	po:noun
+kolònia/V	po:noun
+koletivo/B	po:adjective po:noun
 kolmo/B	po:noun po:adjective
 kolonbèra/V	po:noun
 kolonía/V	po:noun
-kolor/V
-kolpévole/D
-kolpo/B
-komòdo
-komandativo/B
-komando/B
+kolor/V	po:noun
+kolpévole/D	po:adjective po:noun
+kolpo/B	po:noun
+komòdo	po:noun
+komandativo/B	po:adjective
+komando/B	po:noun
 komarò	po:noun
 komariŧo/UI	po:noun
-komento/U
-komerŧal/D
-komun/D
-komunegaŧion/D
-komunegativo/B
+komento/U	po:noun
+komerŧal/D	po:adjective
+komun/D	po:adjective po:noun
+komunegaŧion/D	po:noun
+komunegativo/B	po:adjective
 konòja/V	po:noun
-konđo/U
-konŧakarèga/V
-kon
+konđo/U	po:noun
+konŧakarèga/V	po:noun
+kon	po:preposition
 konajo/U	po:noun
-konbinàbile/D
-koncesion/D
-konfin/V
-konfronto/U
-konfuxion/V
-koniugaŧion/D
+konbinàbile/D	po:adjective
+koncesion/D	po:noun
+konfin/V	po:noun
+konfronto/U	po:noun
+konfuxion/V	po:noun
+koniugaŧion/D	po:noun
 konkòl/U	po:noun
-konkluxion/D
-konkluxivo/B
-konkordanŧa/D
-konkrèto/B
-konmixeraŧion/D
-konpàña/V
-konpòsto/U
-konpaño/BI
+konkluxion/D	po:noun
+konkluxivo/B	po:adjective
+konkordanŧa/D	po:noun
+konkrèto/B	po:adjective
+konmixeraŧion/D	po:noun
+konpòsto/U	po:adjective po:noun
+konpaño/BI	po:adjective po:noun
 konpanàsego/U	po:noun
-konparaŧion/D
-konparativo/B
-konpasion/V
-konpendio/U
-konpitin/U
-konplèso/B
-konplèto/B
-konplementador/VW
-konplementaor/VW
-konplemento/U
-konportamento/U
-konposto/B
-konpoxiŧion/D
-konprexo/B
-konseguenŧa/V
-konsejo/U
-konsekutivo/B
-konservaŧion/D
-konsistenŧa/V
-konsonàntego/U
-konsonante/D
-kontèsto/U
-kontadin/U
+konparaŧion/D	po:noun
+konparativo/B	po:adjective
+konpasion/V	po:noun
+konpendio/U	po:noun
+konpitin/U	po:noun
+konplèso/B	po:adjective po:noun
+konplèto/B	po:adjective po:noun
+konplementador/CW	po:adjective
+konplemento/U	po:noun
+konportamento/U	po:noun
+konposto/B	po:adjective po:noun
+konpoxiŧion/D	po:noun
+konprexo/B	po:adjective
+konseguenŧa/V	po:noun
+konsejo/U	po:noun
+konsekutivo/B	po:adjective
+konservaŧion/D	po:noun
+konsistenŧa/V	po:noun
+konsonàntego/U	po:adjective
+konsonante/D	po:noun
+kontèsto/U	po:adjective po:noun
+kontain/U	po:adjective po:noun
+kontadin/U	po:adjective po:noun
 kontapèto/UI	po:adjective
-kontato/U
-kontenporaneità
-kontento/B
-kontinente/V
-kontinuativo/B
-kontraŧion/D
-kontra
-kontrario/U
-kontrastivo/B
-kontro
-kontrofegura/V
+kontato/U	po:noun
+kontenporaneità	po:noun
+kontento/B	po:noun
+kontinente/V	po:noun
+kontinuativo/B	po:adjective
+kontraŧion/D	po:noun
+kontra	po:adverb po:preposition po:noun
+kontrario/U	po:adjective
+kontrastivo/B	po:adjective
+kontro	po:adverb po:preposition po:noun
+kontrofegura/V	po:noun
 kontrovòja/V	po:adverb
-konvenŧion/D
-konvenŧional/D
-konvenienŧa/V
-koordenaŧion/D
-koordenativo/B
-kopo/UI
-kopulativo/B
-korèto/B
+konvenŧion/D	po:noun
+konvenŧional/D	po:adjective
+konvenienŧa/V	po:noun
+koordenaŧion/D	po:noun
+koordenativo/B	po:adjective
+kopo/UI	po:noun
+kopulativo/B	po:adjective
+korèto/B	po:adjective
 kor/V	po:noun
-korajoxo/B
+korajoxo/B	po:adjective
 kordèla/V	po:noun
-kordon/U
-koreŧion/D
-korelativo/B
-korente/V
-korería/V
-koresponde/U
-korespondenŧa/V
-korespondente/U
-koridor/V
-koriman/U
+kordon/U	po:noun
+koreŧion/D	po:noun
+korelativo/B	po:adjective
+korente/V	po:adjective po:noun
+korespondenŧa/V	po:noun
+korespondente/U	po:adjective po:noun
+koridor/CW	po:adjective po:noun
+koriman/U	po:noun
 korleta/V	po:noun
 korlo/U	po:noun
 kornaŧa/V	po:noun
 kornolèr/BW	po:noun
-korona/V
-koronal/D
-kortèl/U
-kortígol/U
-kortío/U
-kortívo/UI
+korona/V	po:noun
+koronal/D	po:adjective po:noun
+kortèl/U	po:noun
+kortígol/U	po:noun
+kortío/U	po:noun
+kortívo/UI	po:noun
 kortívol/U	po:noun
-korte/V
-kortexía/V
-kortil/U
+korte/V	po:noun
+kortexía/V	po:noun
+kortil/U	po:noun
 kortivo/U	po:noun
-korto/B
-kosideto/B
-kostelaŧion/D
-kostituente/D
-kosto/U
-kostriŧion/D
-kostritivo-okluxivo/B
-kostritivo/B
-kostruŧion/D
+korto/B	po:adjective
+kosideto/B	po:adjective
+kostelaŧion/D	po:noun
+kostituente/D	po:adjective po:noun
+kosto/U	po:noun
+kostriŧion/D	po:noun
+kostritivo-okluxivo/B	po:adjective
+kostritivo/B	po:adjective
+kostruŧion/D	po:noun
 krèpo/BI	po:noun
-krítego/B
+krítego/B	po:adjective po:noun
 kròŧola/V	po:noun
 kròda/V	po:noun
-króstolo/U
+króstolo/U	po:noun
 krapa/V	po:noun
 kravatin/U	po:noun
 krea/V	po:noun
-kreanŧa/V
+kreanŧa/V	po:noun
 kreda/V	po:noun
 kren	po:noun
-krepakòr/V
-krepakor/V
-kresimento/U
-kresitivo/B
+krepakòr/V	po:noun
+krepakor/V	po:noun
+kresimento/U	po:noun
+kresitivo/B	po:adjective po:noun
 krika/V	po:noun
-kristianèximo/U
-kristian/B
-kritèrio/U
+kristianèximo/U	po:noun
+kristian/B	po:adjective po:noun
+kritèrio/U	po:noun
 krivèl/U	po:noun
-krixi
+krixi	po:noun
 kroco/UI	po:noun
 kroxèra/V	po:noun
-kroxe/VI
+kroxe/VI	po:noun
 krudo/BI	po:adjective po:noun
 kruko/UI	po:noun
 kru/B	po:adjective
 kuèrco/U	po:noun
 kuèrkol/U	po:noun
 kuño/U	po:noun
-kuòr/U
+kuòr/U	po:noun
 kuađó	po:adverb
-kuadèrno/U
-kuadratin/U
-kuadreto/U
-kuadro/B
+kuadèrno/U	po:noun
+kuadratin/U	po:noun
+kuadreto/U	po:noun
+kuadro/B	po:adjective po:noun
 kuaja/V	po:noun
-kualífega/V
-kualifegativo/B
-kualità
-kualkun/B
-kualsiasi
-kuantifegaŧion/D
-kuantifegador/V
-kuantità
-kuartèla/V
+kualífega/V	po:noun
+kualifegativo/B	po:adjective
+kualità	po:noun
+kualkun/B	po:pronoun
+kualsiasi	po:adjective
+kuantifegaŧion/D	po:noun
+kuantifegador/CW	po:adjective po:noun
+kuantità	po:noun
+kuartèla/V	po:noun
+kuartain/U	po:noun
 kuartadin/U	po:noun
-kuartaròl/UW
-kuartièr
-kuartièri
-kuartin/U
-kuartuŧo/U
-kubia/V
-kubo/U
-kucarin/U
+kuartaròl/UW	po:noun
+kuartièr/V	po:noun
+kuartin/U	po:noun
+kuartuŧo/U	po:noun
+kubia/V	po:noun
+kubo/U	po:adjective po:noun
+kucarin/U	po:noun
 kucaro/U	po:noun
 kucolon/D	po:adverb
-kuerto/B
+kuerto/B	po:noun
 kuertor/U	po:noun
-kuesto/B
-kuintal/V
-kuisti
-kuistion/V
+kuesto/B	po:adjective po:pronoun
+kuintal/V	po:noun
+kuisti	po:pronoun
+kuistion/V	po:noun
 kukú	po:noun
-kul/U
+kul/U	po:noun
 kulata/V	po:noun
-kultura/V
-kultural/V
+kultura/V	po:noun
+kultural/V	po:adjective
 kuna/V	po:noun
 kunicèra/V	po:noun
 kunico/U	po:noun
-kupo/B
+kupo/B	po:adjective
 kuran/V	po:noun
 kurareca/V	po:noun
-kurti
-kurto/BI
-kustòde/U
+kurti	po:adjective
+kurto/BI	po:adjective
+kustòde/U	po:noun
 kuxidura/V	po:noun
-kuxina/V
+kuxina/V	po:noun
 làgrema/V	po:noun
 làrexe/VI	po:noun
-làtea/V
-làvaro-dental/V
-làvaro/U
+làteo/B	po:adjective
+làvaro-dental/V	po:adjective
+làvaro/U	po:adjective po:noun
 làver/U	po:noun
-lèsego/U
+lèsego/U	po:noun
 lèto/UI	po:noun
-létara/V
-létera/V
+létara/V	po:noun
+létera/V	po:noun
 lévar/U	po:noun
-lí
-líbaro/B
-líbero/B
-líkuido/U
-límite/D
-línea/V
-lòvo/UI
-lòxego/B
+lí	po:adverb
+líbaro/B	po:adjective
+líbero/B	po:adjective
+líkuido/U	po:adjective po:noun
+límite/D	po:noun
+línea/V	po:noun
+lòvo/UI	po:noun
+lòxego/B	po:adjective
 lađó	po:adverb
 laŧo/UI	po:noun
-labial/V
+labial/V	po:adjective
 lago/UI	po:noun
-laguna/V
-lama/V
-lana/V
+laguna/V	po:noun
+lama/V	po:noun
+lana/V	po:noun
 lanbiko/UI	po:noun
-lanpo/U
-laoreto/UI
-laoro/U
+lanpo/U	po:noun
+laoreto/UI	po:noun
+laoro/U	po:noun
 larexin/U	po:noun
-largo/BI
+largo/BI	po:adjective po:noun
 larin/U	po:noun
 lasta/V	po:noun
 laston/V	po:noun
 lastra/V	po:noun
-late/I
-latería/V
+late/I	po:noun
+latería/V	po:noun
 lateral/V	po:noun
-latin/B
-lavador/BW
-lavadura/V
-lavajo/U
+latin/B	po:adjective po:noun
+lavador/CW	po:noun
+lavaura/V	po:noun
+lavadura/V	po:noun
+lavajo/U	po:noun
 lavandèra/V	po:noun
-lavapiato/U
-lavorador/BW
-lavro/U
+lavapiato/U	po:noun
+lavorador/CW	po:noun
+lavro/U	po:noun
 leñèr/BW	po:noun
+leñàa/V	po:noun
 leñada/V	po:noun
 leño/BI	po:noun
 leđièr/U	po:adjective
 leđier/U	po:adjective
-leŧion/V
+leŧion/V	po:noun
 leda/V	po:noun
 ledamèr/U	po:noun po:adjective
 ledan	po:noun
 lekapiè	po:adjective
 lenŧiòl/U	po:noun
-lendegaro/U
-lengoa/V
-lenguístego/B
-lengua/V
-lenguajo/U
-leniŧion/D
+lendegaro/U	po:noun
+lengoa/V	po:noun
+lenguístego/B	po:adjective
+lengua/V	po:noun
+lenguajo/U	po:noun
+leniŧion/D	po:noun
 leon/V	al:leuni
-lesèma/U
-lesegal/V
-leterario/U
-letura/V
+lesèma/U	po:noun
+lesegal/V	po:adjective
+leterario/U	po:adjective
+letura/V	po:noun
 leuni	st:leoni is:plural
-levà
-levào/U
-levado/U
-lexe/V
-lexixladura/V
-lexixlaura/V
+levà	po:adjective po:noun
+levào/U	po:adjective po:noun
+levado/U	po:adjective po:noun
+lexe/V	po:noun
+lexixlaura/V	po:noun
+lexixladura/V	po:noun
 lièvaro/U	po:noun
 lièvro/U	po:noun
 liéoro/U	po:noun
 liđier/U	po:adjective
-liberaŧion/D
-liberamente
-librèr/BW
-librería/V
-libro/B
-licenŧa/V
+liberaŧion/D	po:noun
+liberamente	po:adverb
+librèr/BW	po:noun
+librería/V	po:noun
+libro/B	po:noun
+licenŧa/V	po:noun
 lidial/V	po:noun
-ligame/V
-ligamento/U
+ligame/V	po:noun
+ligamento/U	po:noun
 likòtero/U	po:noun
-limitaŧion/D
-limitativo/B
+limitaŧion/D	po:noun
+limitativo/B	po:adjective
 linɉà	po:noun
-lineeta/V
-lion/U
+lineeta/V	po:noun
+lion/U	po:noun
 lisia/V	po:noun
 lisivèra/V	po:noun
 liso/UI	po:adjective
-lista/V
+lista/V	po:noun
 liston/V	po:noun
-livèl/U
-live
+livèl/U	po:noun
+live	po:adverb
 loŧo/UI	po:noun po:adjective
-logativo-direŧional/V
-logativo/B
+logativo-direŧional/V	po:adjective
+logativo/B	po:adjective
 logo/UI	po:noun
-lokuŧion/D
-lokutivo/B
-lonđitudenal/D
-lonŧ
-longeŧa/V
+lokuŧion/D	po:noun
+lokutivo/B	po:adjective
+lonđitudenal/D	po:adjective
+lonŧ	po:adverb
+longeŧa/V	po:noun
 longo/BI	po:adjective
-lontan/B
-lonxi
+lontan/B	po:adjective po:adverb
+lonxi	po:adverb
 lopa/V	po:noun
 lora/V	po:noun
-lovo/U
+lovo/U	po:noun
 lugànega/V	po:noun
 lugerin/U	po:noun
 luja/V	po:noun
-luna/V
+luna/V	po:noun
 lunario/U	po:noun
 lunato/UI	po:noun
-lundi
+lundi	po:adjective
 lustrin/U	po:noun
 lustro/U	po:adjective po:adverb
-luxe/V
-màkina/V
+luxe/V	po:noun
+màkina/V	po:noun
 màndola/V	po:noun
 mànego/B	po:noun
 màntega/V	po:noun
-màxena/V
-màxiko/B
-mèdio/B
+màxena/V	po:noun
+màxiko/B	po:adjective
+mèdio/B	po:adjective po:noun
 mèdola/V	po:noun
-mètrego/B
-mètro/U
+mètrego/B	po:adjective
+mètro/U	po:noun
 méskol/U	po:noun
-mòbile/U
-mòdo/U
+mòbile/U	po:noun
+mòdo/U	po:noun
 mònega/V	po:noun
-mòta/V
+mòta/V	po:noun
 mòto	po:noun
-mónega/V
-múltiplo/B
-múskolo/U
-maèstro/B
-mañadexméntega
+mónega/V	po:noun
+múltiplo/B	po:adjective po:noun
+múskolo/U	po:noun
+maèstro/B	po:noun
+mañadexméntega	po:noun
 mañaría/V	po:noun
-mađoranŧa/V
+mađoranŧa/V	po:noun
 maŧòto/UI	po:noun
 maŧaròl/U	po:noun
-maŧeto/U
-maŧo/U
+maŧeto/U	po:noun
+maŧo/U	po:noun
 maŧuja/V	po:noun
 maŧuko/UI	po:adjective
 maca/V	po:noun
 madòna/V	po:noun
 madaja/V	po:noun
 madur/U	po:adjective
-maestà
-mago/U
+maestà	po:noun
+mago/U	po:noun
 magon/V	po:noun
-magro/B
+magro/B	po:adjective
 maja/V	po:noun
 majon/V	po:noun
-maka/V
-makinista/C
+maka/V	po:adverb po:noun
+makinista/C	po:noun
 malà	po:adjective
-malamen
-malani
+malamente/IY	po:adverb
 malatà	po:adjective
-malatía/V
+malatía/V	po:noun
 malegraŧia/V	po:noun
 malmostoxo/B	po:adjective
 malolentiera	po:adverb
-malora/V
-malsan/U
+malora/V	po:noun
+malsan/U	po:adjective
 maluto/UI	po:noun
-malvivente/V
-malvolentièra/U
-mama/V
+malvivente/V	po:noun
+malvolentièra/U	po:adverb
+mama/V	po:noun
 manèra/V	po:noun
-manía/V
+manía/V	po:noun
 manarin/U	po:noun
 manda/V	po:noun
 mandorlato/U	po:noun
 manegòto/UI	po:noun
-maneta/V
-manièra/V
+maneta/V	po:noun
+manièra/V	po:noun
 manoèla/V	po:noun
 manoal/V	po:noun
-manoskrito/U
+manoskrito/U	po:adjective po:noun
 manrevèso/UI	po:noun
 manuŧo/UI	po:noun
-mapa/V
+mapa/V	po:noun
 maràntega/V	po:noun
 marèla/V	po:noun
-marío/U
+marío/U	po:noun
 maròto/UI	po:noun
 marŧumèra/V	po:noun
 mar/V	po:noun
-marangon/B
+marangon/B	po:noun
 marasca/V	po:noun
-maraveja/V
-marcò
-marendèra/V
-marenda/V
+maraveja/V	po:noun
+marcò	po:noun
+marendèra/V	po:noun
+marenda/V	po:noun
 mareveja/V	po:noun
-mariona/V
-marioneta/V
+mariona/V	po:noun
+marioneta/V	po:noun
 markà/U	po:noun po:adjective
-marka/V
-marko/U
+marka/V	po:noun
+marko/U	po:noun
 martorèl/U	po:noun
 masèla/V	po:noun
 masco/B	po:noun
-maskil/V
+maskil/V	po:adjective
 mastèl/B	po:noun
-masteleto/U
+masteleto/U	po:noun
 matèria/V	po:noun
 matana/V	po:noun
 mateŧo/UI	po:adjective
-matemàtego/B
-material/V
-matina/V
-matita/V
+matemàtego/B	po:adjective po:noun
+material/V	po:adjective po:noun
+matina/V	po:noun
+matita/V	po:noun
 mato/BI	po:noun po:adjective
 maturlon/V	po:adjective
 matuxèl/U	po:adjective
-maxía/V
-maxenakafé
+maxía/V	po:noun
+maxenakafé	po:noun
 maxnin/U	po:noun
 međèna/V	po:noun
-međèno/U
+međèno/U	po:adjective po:noun
 međanòt/VI	po:noun
 međan/U	po:adjective
-međeto/U
+međeto/U	po:adjective po:noun
 međođorno/U	po:noun
 međodí	po:noun
-mea
+mea	po:adverb po:noun
 medòl/U	po:noun
 medaja/V	po:noun
 medexina/V	po:noun
-mejo/U
-mekanixmo/U
-mel/V
-melodía/V
-memòria/V
-menadéo/U
+mejo/U	po:adverb po:adjective
+mekanixmo/U	po:noun
+melodía/V	po:noun
+memòria/V	po:noun
+menadéo/U	po:adverb
+menaora/V	po:noun
 menadora/V	po:noun
 menarosto/U	po:noun po:adjective
-menda/V
-menoranŧa/V
-mental/V
-menuto/U
-meridional/D
-merkò
-merkanŧía/V
-merkante/U
-mesajo/U
-mescèr/V
+menda/V	po:noun
+menoranŧa/V	po:noun
+mental/V	po:adjective
+menuto/U	po:adjective po:noun
+meridional/D	po:adjective
+merkò	po:noun
+merkanŧía/V	po:noun
+merkante/U	po:noun
+mesajo/U	po:noun
+mescèr/V	po:noun
 mesier/U	po:noun
-mester/V
-mestièr/V
-metà
-metàfora/V
-metafòrego/B
-metafonexi
-metal/U
-metalenguaxo/U
-metaplaxmo/U
-metró
-metropolitana/V
-mexe/V
-mexuraŧion/V
-mexura/V
-mexurador/BW
-mièl/V
-mia
+mester/V	po:noun
+mestièr/V	po:noun
+metà	po:noun
+metàfora/V	po:noun
+metafòrego/B	po:adjective
+metafonexi	po:noun
+metal/U	po:noun
+metalenguaxo/U	po:noun
+metaplaxmo/U	po:noun
+metró	po:noun
+metropolitana/V	po:noun
+mexe/V	po:noun
+mexuraŧion/V	po:noun
+mexura/V	po:noun
+mexuraor/CW	po:noun
+mexurador/CW	po:noun
+mièl/V	po:noun
+mia	po:adverb po:noun
 mico/B	po:noun
-miga
-minèla/V
-minal/U
-minimal/V
+miga	po:adverb po:noun
+minèla/V	po:noun
+minal/U	po:noun
+minimal/V	po:adjective po:noun
 miodí	po:noun
-miro/U
-miser/V
+miro/U	po:noun
+miser/V	po:noun
 miserion/V	po:adjective
 misiòto/UI	po:noun
 misiamento/UI	po:noun
-mistièr/U
-modèl/B
-modal/V
-modifegador/V
-mojèr/V
-molèkola/V
-molekolar/V
+mistièr/U	po:noun
+modèl/B	po:noun
+modal/V	po:adjective
+modifegador/CW	po:adjective po:noun
+mojèr/V	po:noun
+molèkola/V	po:noun
+molekolar/V	po:adjective
 moleta/V	po:noun
 molinèr/BW	po:noun
-molin/U
-moltiplegativo/B
-momento/U	al:muminti
-mominti	st:momenti is:plural
-monèa/V
-monèr/BW
+molin/U	po:noun
+moltiplegativo/B	po:adjective
+momento/U	al:muminti	po:noun
+mominti	st:momenti is:plural	po:noun
+monèa/V	po:noun
+monèr/BW	po:noun
+monàa/V	po:noun
 monada/V	po:noun
-mondo/U
-moneda/V
+mondo/U	po:noun
+moneda/V	po:noun
 monexèl/U	po:adjective
 monexin/U	po:adjective
-monosílaba/V
-monovalente/D
-montèl/U
-montañèr/BW
-montaña/V
-monte/UI
+monosílaba/V	po:adjective po:noun
+monovalente/D	po:adjective
+montèl/U	po:noun
+montañèr/BW	po:noun
+montaña/V	po:noun
+monte/UI	po:noun
 morèr/BW	po:noun
-mora/V
-moral/V
+moro/B	po:noun
+moral/V	po:adjective po:noun
 morbin/U	po:noun
-morfèma/U
-morfolòxego/B
-morfoloxía/V
+morfèma/U	po:noun
+morfolòxego/B	po:adjective
+morfoloxía/V	po:noun
 moroxo/UI	al:moruxi al:muruxi po:noun
-moruxi	st:moroxi is:plural
-moska/V
+moruxi	st:moroxi is:plural	po:noun
+moska/V	po:noun
 moskaròla/V	po:noun
 moskardin/U	po:adjective
 moskato/UI	po:noun
 mostaco/U	po:noun
-mostra/V
-motivo/U
-motoŧikleta/V
-movimento/U
+mostra/V	po:noun
+motivo/U	po:noun
+motoŧikleta/V	po:noun
+movimento/U	po:noun
 moxina/V	po:noun
 muco/U	po:noun
-mujèr/V
+mujèr/V	po:noun
 mul/U	po:noun
-multa/V
-muminti	st:momenti is:plural
-munèr/BW
-munti
-murèr/BW
+multa/V	po:noun
+muminti	st:momenti is:plural	po:noun
+munèr/BW	po:noun
+munti	po:noun
+murèr/BW	po:noun
 mur/U	po:noun
-murador/BW	po:noun
+murador/CW	po:noun
 mural/V	po:noun
 muriga/V	po:noun
-muro/B
+muro/B	po:noun
 muruxi	st:moroxi is:plural
-muscèr/U
+muscèr/U	po:noun
 musco/U	po:noun
 muso/B	po:noun
-muto/B
-muxèo/U
+muto/B	po:adjective
+muxèo/U	po:noun
 muxarola/V	po:noun
-muxegal/V
+muxegal/V	po:adjective
 muxelon/V	po:adjective
 muxiña/V	po:noun
-muxon/V
-nàlexi
-nèŧo/B
-nènia/V
-nèutro/B
+muxon/V	po:noun
+nàlexi	po:noun
+nèŧo/B	po:noun
+nènia/V	po:noun
+nèutro/B	po:adjective
 néola/V	po:noun
-nòŧe
-nòme/U
-nòra/V
-nòrma/V
-nòta/VI
+nòŧe	po:noun
+nòme/U	po:noun
+nòra/V	po:noun
+nòrma/V	po:noun
+nòta/VI	po:noun
 nòtol/U	po:noun
-nòvo/U
+nòvo/U	po:adjective
 nónŧol/U	po:noun
-núkleo/U
-númaro/U
-número/U
-núvol	po:adjective
-naŧion/D
-naŧional/D
-naŧionalità
-nadural/V
-nano/B
+núkleo/U	po:noun
+númaro/U	po:noun
+número/U	po:noun
+núvol/B	po:adjective
+naŧion/D	po:noun
+naŧional/D	po:adjective
+naŧionalità	po:noun
+nadural/V	po:adjective
+nano/B	po:adjective po:noun
 napa/V	po:noun
-napia/V
-naranŧèr/BW
+napia/V	po:noun
+naranŧèr/BW	po:noun
 naranŧa/V	po:noun
 nata/V	po:noun
-nave/V
-naxal/V
-ne
-negaŧion/D
-negativo/B
+nave/V	po:noun
+naxal/V	po:adjective po:noun
+ne	po:adverb po:pronoun
+negaŧion/D	po:noun
+negativo/B	po:adjective
 neodeto/B	po:noun
 neodo/B	po:noun
-neve/I
-niòra/V
+neve/I	po:noun
+niòra/V	po:noun
 niŧiòl/U	po:noun
 niŧiol/U	po:noun
-nia
+nia	po:adverb po:conjunction
 nida/V	po:noun
 ninŧiòl/U	po:noun
 ninŧiol/U	po:noun
-ninin/U
+ninin/U	po:adjective
 nino/U	po:noun
+noŧàa/V	po:noun
 noŧada/V	po:noun
 nogèr/BW	po:noun
-nomà
-nomài
-nomè
-nomenaja/V
-nomenal/D
-nomenativo/B
+nomà	po:adverb
+nomài	po:adverb
+nomè	po:adverb
+nomenaja/V	po:noun
+nomenal/D	po:adjective
+nomenativo/B	po:adjective po:noun
 nora/V	po:noun
-normal/V
-nostalxía/V
-novente
-novità
-novo/U	al:nuvi
+normal/V	po:adjective
+nostalxía/V	po:noun
+novente	po:adjective
+novità	po:noun
+novo/U	al:nuvi	po:noun
 noxèla/V	po:noun
 noxe/VI	po:noun
 noxelèr/BW	po:noun
-numeràbile/D
-numeraŧion/D
-numerabilità
-numeral/V
-nuvi	st:novi is:plural
-obietivo/B
-obligatòrio/B
+numeràbile/D	po:adjective po:noun
+numeraŧion/D	po:noun
+numerabilità	po:noun
+numeral/V	po:adjective
+nuvi	st:novi is:plural	po:noun
+obietivo/B	po:adjective po:noun
+obligatòrio/B	po:adjective
 ocèl/U	po:noun
 ocal/V	po:noun
-ojèto/U
-ojetivo/B
-okada/V
-okluxivo-kostritiva/V
-okluxivo-kostritivo/B
-okluxivo/B
-oltretonba
+ojèto/U	po:noun
+ojetivo/B	po:adjective
+okluxivo-kostritiva/V	po:adjective
+okluxivo-kostritivo/B	po:adjective
+okluxivo/B	po:adjective
+oltretonba	po:noun
 onŧa/V	po:noun
-onŧia/V
+onŧia/V	po:noun
 onɉa/V	po:noun
 onbría/V	po:noun
 onbra/V	po:noun
 onbreleta/V	po:noun
-onda/V
-onde
-onkó
-onomatopèa/V
-onor/V
-operador/V
-opinion/V
-opoxiŧion/D
-opur
-oríxene/V
-oríxine/V
-orđo/U
-ora/V
-oramài
+onda/V	po:noun
+onde	po:adverb
+onkó	po:adverb
+onomatopèa/V	po:noun
+onor/V	po:noun
+operador/CW	po:noun
+opinion/V	po:noun
+opoxiŧion/D	po:noun
+opur	po:conjunction
+oríxene/V	po:noun
+oríxine/V	po:noun
+orđo/U	po:noun
+ora/V	po:adverb po:noun
+oramài	po:adverb
 orbexígol/U	po:noun po:adjective
-ordenal/V
-oriđenal/D
-oriđontal/D
-oriental/V
-oriente
-orixenal/V
-orixenario/B
-orixinal/V
-ormài
-orso/B
-ortexèl/U
-orto/U
-ortografía/V
+ordenal/V	po:adjective
+oriđenal/D	po:adjective po:noun
+oriđontal/D	po:adjective po:noun
+oriental/V	po:adjective
+oriente	po:noun
+orixenal/V	po:adjective po:noun
+orixenario/B	po:adjective
+orixinal/V	po:adjective po:noun
+ormài	po:adverb
+orso/B	po:noun
+ortexèl/U	po:noun
+orto/U	po:noun
+ortografía/V	po:noun
 osakòl/U	po:noun
-osexin/U
-osidril/V
+osexin/U	po:noun
+osidril/V	po:noun
 osokòl/U	po:noun
-ostàkolo/U
-ostaría/V
-ostilità
-ostinaŧion/D
-osto/U
-otimista/C
+ostàkolo/U	po:noun
+ostaría/V	po:noun
+ostilità	po:noun
+ostinaŧion/D	po:noun
+osto/U	po:noun
+otimista/C	po:noun
 ovo/U	po:noun al:uvi
 oxèl/U	po:noun
 oxmarin/U	po:noun
-pàuxa/V
-pàxena/V
+pàuxa/V	po:noun
+pàxena/V	po:noun
 pèŧa/V	po:noun
-pèco/UI
-pèka/V
+pèco/UI	po:noun
+pèka/V	po:noun
 pèl/V	po:noun
 pèpol/U	po:noun po:adjective
 pèrgol/U	po:noun
 pèrsego/U	po:noun
 pèrtega/V	po:noun
-pèste/V
+pèste/V	po:noun
 pètene/VI	po:noun
-pèxo/U
-pé
-pede/V
+pèxo/U	po:noun
+pé	po:noun
+pede/V	po:noun
 pégola/V	po:noun
 pékol/U	po:noun
 pétola/V	po:noun
-pévare
+pévare	po:noun
 péver	po:noun
-píŧego/U
+píŧego/U	po:noun
 pígol/U	po:noun
 píndol/U	po:adjective
 pítima/V	po:adjective
 píxol/U	po:noun
 pòco/U	po:noun
-pòko/U
+pòko/U	po:adjective po:pronoun po:adverb
 pòlexe/VI	po:noun
-pòlo/U
-pòpolo/U
+pòlo/U	po:noun
+pòpolo/U	po:noun
 pòre/D	po:adjective
 pòrko/U	po:noun
-pòrta/V
+pòrta/V	po:noun
 pòrtego/U	po:noun
 pòtol/U	po:noun
-pòvaro/U
+pòvaro/U	po:adjective
 pómol/U	po:noun
 pañòka/V	po:noun
-paúra/V
-paŧienŧa/V
+paŧienŧa/V	po:noun
 pacèka/V	po:noun
 pacèrega/V	po:noun
 pacugo/U	po:noun
-pacugon/V	po:adjective
+pacugon/C	po:adjective
 pacuko/UI	po:noun po:adjective
-paexe/U
+paexe/U	po:noun
 pagano/B	po:noun po:adjective
 pagoña/V	po:noun
 pajaŧo/U	po:noun
@@ -8899,542 +8872,543 @@ pajeta/V	po:noun
 pajon/V	po:noun
 pajusko/UI	po:noun
 paka/V	po:noun
-palà
+palà	po:noun
 palòta/V	po:noun
 palú/U	po:noun
-palúo/U
-palaŧo/U
+palúo/U	po:noun
+palaŧo/U	po:noun
 pala/V	po:noun
 palankin/U	po:noun
-palatal/V
-palatiđaŧion/D
-palestra/V
+palatal/V	po:adjective
+palatiđaŧion/D	po:noun
+palestra/V	po:noun
 palmar/V	po:adverb
 palta/V	po:noun
 paltan/U	po:noun
-paludo/U
+paludo/U	po:noun
 paluko/UI	po:noun
 panèra/V	po:noun
 panòca/V	po:noun
 panòja/V	po:noun
 panŧa/V	po:noun
 pan/U	po:noun
+panàa/V	po:noun
 panada/V	po:noun
 pandòlo/U	po:adjective
 panedela/V	po:noun
 paneto/UI	po:noun
-panevin
+panevin	po:noun
 panexèl/U	po:noun
 panigaŧo/UI	po/noun
-panigas/U
-panin/U
-pantalon/V	po:adjective
-papà
+panigas/U	po:noun
+panin/U	po:noun
+pantalon/C	po:adjective
+papà	po:noun
 papina/V	po:noun
 papusa/V	po:noun
-paràgrafo/U
+paràgrafo/U	po:noun
 parànkola/V	po:noun
-paréntexi
-paríodo/U
+paréntexi	po:noun
+paríodo/U	po:noun
 paròl/B	po:noun
-parúi
+parúi	po:noun st:paron is:plural
 parabris/U	po:noun
-paradigma/U
-parafango/U
-paragon/V
-paragrafèma/U
-paragrafemàtego/U
-parasintètego/B
+paradigma/U	po:noun
+parafango/U	po:noun
+paragon/V	po:noun
+paragrafèma/U	po:noun
+paragrafemàtego/U	po:noun
+parasintètego/B	po:adjective
 pare/U	po:noun
-parenŧa/V
+parenŧa/V	po:noun
 parentà	po:noun
-parentèla/V
-parentò
-parento/B
-parfèto/B
-parfetivo/B
+parentèla/V	po:noun
+parentò	po:noun
+parento/B	po:noun
+parfèto/B	po:adjective po:noun
+parfetivo/B	po:adjective
 parfin	po:adverb
-parfina
-parfino
-parformativo/B
-parlada/V
-parmeso/U
-parmisivo/B
-paron/V	po:noun
+parfina	po:adverb po:preposition
+parfino	po:adverb po:preposition
+parformativo/B	po:adjective
+parmeso/U	po:noun
+parmisivo/B	po:adjective
+paron/C	po:noun al:parúi
 parsémolo/UI	po:noun
-parsona/V
-parsonal/D
-parteŧipaŧion/D
-parte/V
-partenŧa/V
-partexèla/V
-partiŧipio/U
-partikolar/D
-partikolarità
-partitivo/B
-pasada/V
-pasajo/U
-paseto/U
-pasiente/U
+parsona/V	po:noun
+parsonal/D	po:adjective po:noun
+parteŧipaŧion/D	po:noun
+parte/V	po:noun
+partenŧa/V	po:noun
+partexèla/V	po:noun
+partiŧipio/U	po:noun
+partikolar/D	po:adjective
+partikolarità	po:noun
+partitivo/B	po:adjective
+pasajo/U	po:noun
+paseto/U	po:noun
+paŧiente/U	po:adjective po:noun
 pasin/U	po:noun
-pasion/D
-pasivante/D
-pasivo/B
-paso/U
-pastasuta
-pastesute
+pasion/D	po:noun
+pasivante/D	po:adjective
+pasivo/B	po:adjective
+paso/U	po:noun
+pastasuta	po:noun
+pastesute	po:noun
 pastin/U	po:noun
-pasto/U
+pasto/U	po:noun
 pastròco/UI	po:noun
 patòko/BI	po:adverb
 patúgolo/UI	po:noun
 pata	po:noun
 pataka/V	po:noun
-paternità
-paura/V
-pauxativo/B
+paternità	po:noun
+paura/V	po:noun
+pauxativo/B	po:adjective
 paveja/V	po:noun
-paxe/V
+paxe/V	po:noun
 peòco/U	po:noun
-peđorativo/B
+peđorativo/B	po:adjective
 peŧo/UI	po:noun
+peàa/V	po:noun
 peada/V	po:noun
-pearvò
+pearvò	po:noun
 pedòco/U	po:noun
-pedemontan/U
-pediatría/V
+pedemontan/U	po:adjective
+pediatría/V	po:noun
 pekà	po:noun
 peka/V	po:noun
-pel/U
+pel/U	po:noun
 pelegata/V	po:noun
 pelexina/V	po:noun
 peluko/UI	po:noun
-penèl/U
+penèl/U	po:noun
 penaco/U	po:noun
-pendente/D
-pendo/B
-pensièr/U
+pendente/D	po:adjective po:noun
+pendo/B	po:adjective
+pensièr/U	po:noun
 perèr/BW	po:noun
-perífraxi
-perímetro/U
-período/U
+perífraxi	po:noun
+perímetro/U	po:noun
+período/U	po:noun
 perúxola/V	po:noun
-perceŧion/D
+perceŧion/D	po:noun
 perlin/U	po:noun
-permanenŧa/V
-permanente/D
+permanenŧa/V	po:noun
+permanente/D	po:adjective po:noun
 pernixe/VI	po:noun
 pero/UI	po:noun
 persegèr/BW	po:noun
-persona/V
-pertinente/D
+persona/V	po:noun
+pertinente/D	po:adjective
 pesúkola/V	po:noun
 pese/UI	po:noun
-pesekan
-pesekani
-pesespada
-pesispada
+pesekan	po:noun
+pesekani	po:noun
+pesespada	po:noun
+pesispada	po:noun
 peveron/V	po:noun
-pexo/B
+pexo/B	po:noun
 piàdena/V	po:noun
 piàtola/V	po:noun po:adjective
 piè/U	po:noun
-piègora/V
+piègora/V	po:noun
 pièra/V	po:noun
 pié/U	po:noun
 piòl/U	po:noun
-piòva/V
-pióa/V
-piaŧa/V
-piaŧer/V
+piòva/V	po:noun
+pióa/V	po:noun
+piaŧa/V	po:noun
+piaŧer/V	po:noun
 pian/B	po:noun po:adverb
-pianeta/U
-pianeto
-pianin
-pianino
-pianta/V
+pianeta/U	po:noun
+pianeto	po:adverb
+pianin	po:adverb
+pianino	po:adverb
+pianta/V	po:noun
 piantal/V	po:noun
-piato/B
-piaxévole/D
-piaxentin/B
+piato/B	po:adjective po:noun
+piaxévole/D	po:adjective
 pie	po:noun
 pien/B	po:adjective
-pietà
-pikandolon/V	po:noun po:adverb
+pietà	po:noun
+pikandolon/C	po:noun po:adverb
 pikapano/U	po:noun
-pikeparfèto/B
+pikeparfèto/B	po:noun
 piko/UI	po:noun
 pikolon/V	po:adjective
 pila/V	po:noun
-pinŧa/V
+pinŧa/V	po:noun
 pin/U	po:noun
 piolet/U	po:noun
-piova/V
-piovoxo/B
-pira/V
+piova/V	po:noun
+piovoxo/B	po:adjective po:noun
+pira/V	po:noun
 pirolòt/U	po:noun
 piron/V	po:noun
 pisàndol/U	po:noun
-pisikiatría/V
+pisikiatría/V	po:noun
 pistolin/U	po:noun
-pitèr/BW
+pitèr/BW	po:noun
 pito/BI	po:noun
-plèure/V
-plao
-plural/V
-pluralità
-plurivalente/D
-poèma/U
-poèta/U
-poètego/U
+plèure/V	po:noun
+plao	po:noun
+plural/V	po:adjective po:noun
+pluralità	po:noun
+plurivalente/D	po:adjective
+poèma/U	po:noun
+poèta/U	po:noun
+poètego/U	po:adjective
 poŧo/UI	po:noun
 poareto/UI	po:adjective
-poestè
-poexía/V
+poestè	po:noun
+poexía/V	po:noun
 pojana/V	po:noun
 pojato/UI	po:noun
-polar/V
+polar/V	po:adjective
 polegana/V	po:noun
 polenta/V	po:noun
 polin/U	po:noun
-polisílaba/V
-polisíndeto/U
+polisílaba/V	po:adjective po:noun
+polisíndeto/U	po:noun
 polito	po:adverb
-polivalente/D
+polivalente/D	po:adjective
 pomèla/V	po:noun
 pomèr/BW	po:noun
-pomikòti
+pomikòti	po:noun
 pomo/UI	po:noun
-pomokòto
-ponèr/BW
+pomokòto	po:noun
+ponèr/BW	po:noun
 pontaròl/UW	po:noun po:adjective
-ponteđatura/V
+ponteđaura/V	po:noun
+ponteđadura/V	po:noun
+ponteđatura/V	po:noun
 ponte/UI	po:noun
-pontin/U
-ponto/BI
-ponton/D
-pontual/D
-pontura/V
-popà
+pontin/U	po:noun
+ponto/BI	po:noun
+ponton/D	po:noun
+pontual/D	po:adjective
+pontura/V	po:noun
+popà	po:noun
 porŧèl/U	po:noun
 poregramaŧòto/UI	po:noun
 poregramo/U	po:noun
 portèla/V	po:noun
-porton/U
-posíbil/D
-posesivo/B
-posibilità
-posibilmente
-pospoxiŧion/V
-postònego/U
-post-àlveo-palatal/V
-post-alveolar/V
-posta/V
-postal/V
-posteriorità
-postin/B
+porton/U	po:noun
+posíbil/D	po:adjective
+posesivo/B	po:adjective
+posibilità	po:noun
+posibilmente	po:adverb
+pospoxiŧion/V	po:noun
+postònego/U	po:adjective
+post-àlveo-palatal/V	po:adjective
+post-alveolar/V	po:adjective
+posta/V	po:noun
+postal/V	po:adjective
+posteriorità	po:noun
+postin/B	po:noun
 potaco/U	po:noun
-poxaŧendre
-poxaŧendri
-poxiŧion/D
-poxitivo/B
+poxaŧendre	po:noun
+poxaŧendri	po:noun
+poxiŧion/D	po:noun
+poxitivo/B	po:adjective
 prà/U	po:noun
-pràtego/B
-prè
+pràtego/B	po:adjective
+prè	po:noun
 prèsa	po:adverb
-prèxide/U
-pròpio/B
-pròstexi
-pròtexi
-pratiŧità
-preŧioxo/B
-pre-palatal/V
-pre-velar/V
-precedenŧa/V
-precixaŧion/D
-precixo/BX
-predegativo/B
-predileŧion/V
-prefarenŧa/V
-prefiso/U
-premesa/V
-premura/V
-prenŧipio/U
-prendèra/V
-prepoxiŧion/D
-prepoxiŧional/D
-presioxo/B
-presto
-prevedíbil/D
-prexenŧa/V
-prexentativo/B
-prexidente/U
+prèxide/U	po:noun
+pròpio/B	po:adjective po:adverb
+pròstexi	po:noun
+pròtexi	po:noun
+pratiŧità	po:noun
+preŧioxo/B	po:adjective
+pre-palatal/V	po:adjective
+pre-velar/V	po:adjective
+precedenŧa/V	po:noun
+precixaŧion/D	po:noun
+precixo/BX	po:adjective
+predegativo/B	po:adjective
+predileŧion/V	po:noun
+prefarenŧa/V	po:noun
+prefiso/U	po:noun
+premesa/V	po:noun
+premura/V	po:noun
+prenŧipio/U	po:noun
+prendèra/V	po:noun
+prepoxiŧion/D	po:noun
+prepoxiŧional/D	po:adjective
+presto	po:adjective po:adverb
+prevedíbil/D	po:adjective
+prexenŧa/V	po:noun
+prexentativo/B	po:adjective
+prexidente/U	po:noun
 prexon/V	po:noun
-prexupoxiŧion/V
+prexupoxiŧion/V	po:noun
 pria/V	po:noun
-primarol/BW
-primieramente
-primitivo/B
-prinŧipal/V
-prinŧipio/U
-priorità
-privaŧion/V
-pro
-pro-velar/V
-probàbile/V
-probabilità
-problèma/U
-procèso/U
-prodoto/U
-produŧion/D
-produtivo/B
-profesor/V
-progresivo/B
-proibiŧion/D
-proibitivo/B
-prokònsole/U
-proklítego/B
-proklixi
-prokonplementar/D
-promoxo/B
-pronòme/U
-pronòstego/U
-pronomenal/D
-pronto/B
-pronunŧia/V
-propòxito/U
-propietà
-proposta/V
-propoxiŧion/D
-prosimaŧion/D
-prosimia/V
-prosperità
-prospetivo/B
-protònego/B
-protòtepo/U
-protaxi
-protrativo/B
-provèrbio/U
-provokaŧion/D
-proxodía/V
+primarol/BW	po:noun
+primieramente	po:adverb
+primitivo/B	po:adjective po:noun
+prinŧipal/V	po:adjective po:noun
+prinŧipio/U	po:noun
+priorità	po:noun
+privaŧion/V	po:noun
+pro	po:preposition
+pro-velar/V	po:noun
+probàbile/V	po:adjective
+probabilità	po:noun
+problèma/U	po:noun
+procèso/U	po:noun
+prodoto/U	po:noun
+produŧion/D	po:noun
+produtivo/B	po:adjective
+profesor/V	po:noun
+progresivo/B	po:adjective
+proibiŧion/D	po:noun
+proibitivo/B	po:adjective
+prokònsole/U	po:noun
+proklítego/B	po:adjective
+proklixi	po:noun
+prokonplementar/D	po:adjective
+promoxo/B	po:adjective
+pronòme/U	po:noun
+pronòstego/U	po:noun
+pronomenal/D	po:adjective
+pronto/B	po:adjective
+pronunŧia/V	po:noun
+propòxito/U	po:noun
+propietà	po:noun
+proposta/V	po:noun
+propoxiŧion/D	po:noun
+prosimaŧion/D	po:noun
+prosimia/V	po:noun
+prosperità	po:noun
+prospetivo/B	po:adjective
+protònego/B	po:adjective
+protòtepo/U	po:noun
+pròtaxi	po:noun
+protrativo/B	po:adjective
+provèrbio/U	po:noun
+provokaŧion/D	po:noun
+proxodía/V	po:noun
 puñaton/V	po:noun
 puño/UI	po:noun
 puina/V	po:noun
 pulŧe/VI	po:noun
 pulito	po:adverb
 punèr/UW	po:noun
-puniŧion/V
-pupà
+puniŧion/V	po:noun
+pupà	po:noun
 pupòto/UI	po:noun
 pupinòt/U	po:noun po:adjective
-purosangue
+purosangue	po:adjective po:noun
 pusterno/U	po:noun
-putèl/B
+putèl/B	po:noun
 ràkol/B	po:noun
 rànxego/U	po:adjective
-ràpido/B
-ràuko/B
-rèŧita/V
-rè
-règola/V
-rèo/B
-rèxe/U
-rèxina/V
-ròbo/B
+ràpido/B	po:adjective
+ràuko/B	po:adjective
+rèŧita/V	po:noun
+rè	po:noun
+règola/V	po:noun
+rèo/B	po:adjective po:noun
+rèxe/U	po:noun
+rèxina/V	po:noun
+ròbo/B	po:noun
 ròda/V	po:noun
-ròlo/U
-ròxa/V
-róa/V
+ròlo/U	po:noun
+ròxa/V	po:noun
+róa/V	po:noun
 rúđen/V	po:noun
 rúspego/B	po:adjective
-rústego/B
+rústego/B	po:adjective po:noun
 raño/UI	po:noun
-rađon/V
-rabalta/V
-rabalton/V
-rabia/V
+rađon/V	po:noun
+rabalta/V	po:noun
+rabalton/V	po:noun
+rabia/V	po:noun
+raicèla/V	po:noun
 radicèla/V	po:noun
-radico/U	po:noun
-radio/U
-radiotraxmetitor/V
-radixa/VI	po:noun
-raf
-raforŧamento/U
-raforŧativo/B
 raico/U	po:noun
+radico/U	po:noun
+radio/U	po:noun
+radiotraxmetitor/V	po:noun
 raixa/VI	po:noun
-rakòlto/U
+radixa/VI	po:noun
+raf	po:interjection
+raforŧamento/U	po:noun
+raforŧativo/B	po:adjective
+rakòlto/U	po:noun
 ramaxon/V	po:noun
-rame
-ramengon/V
+rame	po:noun
+ramengon/C	po:adjective
 ramo/BI	po:noun
 ranpin/U	po:noun
-rapòrto/U
-rapido/B
-raprexentante/D
-raro/BX
-rasparòla/V
+rapòrto/U	po:noun
+raprexentante/D	po:noun
+raro/BX	po:adjective
+rasparòla/V	po:adjective
 rauko/B	po:noun po:adjective
 ravo/U	po:noun
 raxegin/U	po:noun
-raxon/V	po:noun
-ređente/V
-reŧíprogo/B
-reale/D
-realiđàbile/V
-realixaŧion/D
-realtà
+ređente/V	po:adjective po:noun
+reŧíprogo/B	po:adjective
+reale/D	po:adjective
+realiđàbile/V	po:adjective
+realixaŧion/D	po:noun
+realtà	po:noun
 rebatin/U	po:noun
 reca/V	po:noun
 recin/U	po:noun
-recon/V	po:noun
+recon/C	po:noun
 redoxega/V	po:noun
-reduŧion/D
-referenŧial/V
-referente/D
-referimento/B
-reflesivo/B
-regal/D
+reduŧion/D	po:noun
+referenŧial/V	po:adjective
+referente/D	po:adjective po:noun
+referimento/B	po:noun
+reflesivo/B	po:adjective
+regal/D	po:noun
+regale/V	po:adjective
 regolar/VX	po:adjective
-reina/V
-rejon/V
-rekiesta/V
+reina/V	po:noun
+rejon/V	po:noun
+rekiesta/V	po:noun
 relòjo/U	po:noun
-relaŧion/D
-relativo/B
-remengo/B
-renasimento/U
+relaŧion/D	po:noun
+relativo/B	po:adjective
+remengo/B	po:adjective
+renasimento/U	po:noun
 renga/V	po:noun
-rengraŧiamento/B
-renpianto/U
+rengraŧiamento/B	po:noun
+renpianto/U	po:noun
 reoxo/UI	po:adjective
-repúblega/V
-repetiŧion/D
-repetitivo/B
+repúblega/V	po:noun
+repetiŧion/D	po:noun
+repetitivo/B	po:adjective
 repeton/V	po:noun
-reprístino/U
-reroraro/U
-respèto/U
-responsàbile/D
+reprístino/U	po:noun
+reroraro/U	po:noun
+respèto/U	po:noun
+responsàbile/D	po:adjective po:noun
 restèl/U	po:noun
-restritivo/B
-retòrego/B
-retangolar/V
-retardo/U
-retrobotega/V
+restritivo/B	po:adjective
+retòrego/B	po:adjective po:noun
+retangolar/V	po:adjective
+retardo/U	po:noun
+retrobotega/V	po:noun
 revèrso/UI	po:noun po:adjective
 revès/UI	po:noun po:adjective
-revendígolo/B
-reverenŧa/V
-reversíbile/D
-reversion/V
+revendígolo/B	po:noun
+reverenŧa/V	po:noun
+reversíbile/D	po:adjective
+reversion/V	po:noun
 revexèa/V	po:noun
 rexentin/U	po:noun
-reximento/U
-rexina/V
+reximento/U	po:noun
+rexina/V	po:noun
 rexon/V	po:noun
-rexultativo/B
+rexultativo/B	po:adjective
 riŧo/UI	po:noun po:adjective
-rif
-riga/V
-rikeŧa/V
-rima/V
-ritmo/U
-rito/U
-riva/V	po:noun
-rival/V
-rixoàtono/B
-rixo/U
-rixotònego/B
+rif	po:interjection
+riga/V	po:noun
+rikeŧa/V	po:noun
+rima/V	po:noun
+ritmo/U	po:noun
+rito/U	po:noun
+rivo/B	po:noun
+rival/V	po:noun
+rixoàtono/B	po:adjective
+rixo/U	po:noun
+rixotònego/B	po:adjective
 roa/V	po:noun
-robapan
+robapan	po:noun
 rodèla/V	po:noun
 rodèra/V	po:noun
-rodolon/V
+rodolon/V	po:adverb
 rokèl/U	po:noun
 romài	po:adverb
-romàntego/B
-romanxo/B
+romàntego/B	po:adjective
+romanxo/B	po:noun
 romito/UI	po:noun
 ronko/B	po:noun po:adjective
-ronpitòle
+ronpitòle	po:noun
 rore/U	po:noun
 rostidora/V	po:noun
-rosto/U
-rovèrso/B
+rosto/U	po:noun
+rovèrso/B	po:adjective po:noun
 roxèr/BW	po:noun
 roxegòto/UI	po:noun
 roxegonko/UI	po:noun
 roxegunko/UI	po:noun
-rugolon/V
+rugolon/V	po:adverb
 rui	po:noun
-rumor/V
+rumor/V	po:noun
 rusak/U	po:noun
-sàlgaro/U
+sàlgaro/U	po:noun
 sàntol/B	po:noun
 sàrkol/U	po:noun
-sèkolo/U
+sèkolo/U	po:noun
 sèneno/U	po:noun
-sèrie
-sèrio/B
+sèrie	po:noun
+sèrio/B	po:adjective
 sèrpe/VI	po:noun
-sèso/U
+sèso/U	po:noun
 sèsola/V	po:noun
-sé
-sée
-sílaba/V
-símil/V
-sínbolo/U
-síndako/U
-síndiko/U
-sínkope/V
+sé	po:pronoun
+sée	po:noun
+sílaba/V	po:noun
+símil/V	po:adjective
+sínbolo/U	po:noun
+síndako/U	po:noun
+síndiko/U	po:noun
+sínkope/V	po:noun
 sísola/V	po:noun
-sòño/U
-sòlito/B
-sòno/U
+sòño/U	po:noun
+sòlito/B	po:adjective po:noun
+sòno/U	po:noun
 sòrte/VI	po:noun
-sòxia
-sú
-súbito
-súito
+sòxia	po:noun
+sú	po:preposition po:adverb
+súbito	po:adverb
+súito	po:adverb
 saòn/V	po:noun
-saŧio/U
-saŧo/U
-sabia/V
-sabion/V
+saŧio/U	po:noun
+saŧo/U	po:noun
+sabia/V	po:noun
+sabion/V	po:noun
 sajòko/UI	po:adjective
 sajuto/UI	po:noun
 sako/BI	po:noun
 sakoleto/UI	po:noun
-sal
-salado/U
-salador/BW	po:noun
-salata/V
+sal	po:noun
+salado/U	po:adjective po:noun
+salador/CW	po:noun
+salata/V	po:noun
+salatàa/V	po:noun
 salatada/V	po:noun
-saldo/U
+saldo/U	po:adjective po:noun
 salgèr/BW	po:noun
 saltamartin/U	po:noun
 saltapajusko/UI	po:noun
 salvàrego/UI	po:adjective
 samòko/BI	po:adjective
 sanɉuto/UI	po:noun
-san
-sangue
+san/B	po:adjective
+sangue	po:noun
 sansèr/BW	po:noun
-saon/V
+saon/V	po:noun
 saoneta/V	po:noun
 saor/V	po:noun
-sapon/V
-sarèxa/V
+sapon/V	po:noun
+sarèxa/V	po:noun
 sarangon/V	po:noun
 sardèla/V	po:noun
-sarexèr/BW
-sartor/B
+sarexèr/BW	po:noun
+sartor/B	po:noun
 saso/UI	po:noun
 savòja/V	po:noun
 savajòto/UI	po:adjective
-saxon/V
-scào
+saxon/V	po:noun
+scào	po:adjective po:noun
 scèto/UI	po:adjective
 scòko/UI	po:noun
 scòna/V	po:noun
@@ -9444,112 +9418,117 @@ scòxo/UI	po:noun
 scafa/V	po:noun
 scanta	po:adverb
 scantiŧo/UI	po:noun
-scantineta/V
-scantiva/V
+scantineta/V	po:noun
+scantiva/V	po:noun
 scantixo/U	po:noun
-scao/B
+scao/B	po:noun
 scapa/V	po:noun
+scapàa/V	po:noun
 scapada/V	po:noun
 scapo/UI	po:noun
-scenxa/V
+scenxa/V	po:noun
+scotàa/V	po:noun
 scotada/V	po:noun
 scupo/UI	po:noun
 scuxo/UI	po:noun
-señal/V
-señalador/V
-seño/UI	po:noun
+señal/V	po:noun
+señalador/CW	po:noun
+seño/UI	po:noun al:siñi
 secèr/U	po:noun
 seco/B	po:noun
-secon/V	po:adjective
-seda/V
+secon/C	po:adjective
+seda/V	po:noun
+segaiŧo/UI	po:noun
 segadiŧo/UI	po:noun
 seguro/BI	po:adverb
 sejuto/UI	po:noun
 sekabale	po:noun
-seko/BI
-sekuenŧa/V
-seleŧion/V
+seko/BI	po:adjective po:noun
+sekuenŧa/V	po:noun
+seleŧion/V	po:noun
 selvàrego/BI	po:adjective
-semàntego/B
-semantegamente
+semàntego/B	po:adjective
+semantegamente	po:adverb
 semenŧa/V	po:noun
-semi-aŧentàa/V
-semi-aŧentada/V
-semi-lateral/V
-semi-naxal/V
-semo/B
+semi-aŧentàa/V	po:adjective
+semi-aŧentada/V	po:adjective
+semi-lateral/V	po:adjective
+semi-naxal/V	po:adjective
+semo/B	po:noun
 senò	po:adverb
-senŧ’
-senŧ'
-senŧiente/D
+senŧ’	po:preposition
+senŧiente/D	po:adjective
 senɉuto/UI	po:noun
-senato/U
-senplise/D
+senato/U	po:noun
+senplise/D	po:adjective po:noun
 senpre	po:adverb
-senpreverdo/U
+senpreverdo/U	po:adjective
 senpro	po:adverb
 sensèr/BW	po:noun
-sensaŧion/D
-senso/U
-sentàtego/B
-sentategamente
-sentimento/U
+sensaŧion/D	po:noun
+senso/U	po:noun
+sentàtego/B	po:adjective
+sentategamente	po:adverb
+sentimento/U	po:noun
 sentina/V	po:noun
-separaŧion/D
-sepolina/V
-sera/V
+separaŧion/D	po:noun
+sepa/V	po:noun
+sepolina/V	po:noun
+sera/V	po:noun
+seraura/V	po:noun
 seradura/V	po:noun
 serajo/U	po:noun
-serietà
-serviŧio/U
-servil/V
-setemana/V
-seturko/U
-sfèra/V
+serietà	po:noun
+serviŧio/U	po:noun
+servil/V	po:adjective
+setemana/V	po:noun
+seturko/U	po:noun
+sfèra/V	po:noun
 sfexa/V	po:noun
+sfexaura/V	po:noun
 sfexadura/V	po:noun
 sfojo/U	po:noun
-sfròxo
-sfregolon/V	po:noun
-sfrixo
-sfumadura/V
-sfumaura/V
-sièxa/V
-siñi
-siñoría/V
-siñor/V
+sfròxo	po:adjective
+sfregolon/C	po:noun
+sfrixo	po:adjective
+sfumaura/V	po:noun
+sfumadura/V	po:noun
+sièxa/V	po:noun
+siñi	po:noun st:seño is:plural
+siñoría/V	po:noun
+siñor/V	po:noun
 siòlo/U	po:noun
-siarpa/V
+siarpa/V	po:noun
 sidio/U	po:noun
-sienŧa/V
-sigla/V
-siké
-silàbego/B
-silabiŧità
-silabiko/V
+sienŧa/V	po:noun
+sigla/V	po:noun
+siké	po:conjunction
+silàbego/B	po:adjective
+silabiŧità	po:noun
+silabiko/V	po:adjective
 simia/V	po:noun
-similitudene/V
-sinò
+similitudene/V	po:noun
+sinò	po:adverb
 sinŧièr/U	po:adjective
 sina/V	po:noun
-sinfonía/V
-singolar/V
-sinpatía/V
-sintàtego/B
-sintagmàtego/B
-sintagma/U
-sintasi
+sinfonía/V	po:noun
+singolar/V	po:adjective po:noun
+sinpatía/V	po:noun
+sintàtego/B	po:adjective
+sintagmàtego/B	po:adjective
+sintagma/U	po:noun
+sintasi	po:noun
 sior/B	po:noun po:adjective
-sioraŧo/B
+sioraŧo/B	po:noun
 siròpo/UI	po:noun
 siraka/V	po:noun
-sistèma/U
-sistemàtego/B
-situaŧion/D
-skèma/U
+sistèma/U	po:noun
+sistemàtego/B	po:adjective
+situaŧion/D	po:noun
+skèma/U	po:noun
 skèo/U	po:noun
-skòla/V
-skòpo/U
+skòla/V	po:noun
+skòpo/U	po:noun
 skòpola/V	po:noun
 skañèl/U	po:noun
 skaño/UI	po:noun
@@ -9558,31 +9537,34 @@ skaja/V	po:noun
 skajaròla/V	po:noun
 skalŧamito/BI	po:noun
 skalŧo/UI	po:noun
-skala/V
+skala/V	po:noun
 skaldanèla/V	po:noun po:adjective
-skaldin/U
-skanŧelaŧion/D
+skaldin/U	po:noun
+skanŧelaŧion/D	po:noun
+skanàa/V	po:noun
 skanada/V	po:noun
 skanafòso/UI	po:noun
-skanbio/U
+skanbio/U	po:noun
 skandola/V	po:noun
 skanfurlòto/UI	po:noun
 skapelòto/UI	po:noun
 skaròña/V	po:noun
 skarabòco/UI	po:noun
+skarno/B	po:adjective
 skarobòla/V	po:noun
 skarpèr/BW	po:noun
 skarpaŧon/V	po:noun
-skarpa/V
+skarpa/V	po:noun
+skarpàa/V	po:noun
 skarpada/V	po:noun
 skarpanŧa/V	po:noun
 skarpeto/BI	po:noun
 skarpin/U	po:noun
-skarpon/U
+skarpon/U	po:noun
 skarsèla/V	po:noun
 skartòŧo/UI	po:noun
 skato/UI	po:noun
-skaturo/U
+skaturo/U	po:noun
 skaveŧo/UI	po:adjective
 skena/V	po:noun
 skiŧ	po:noun
@@ -9590,29 +9572,29 @@ skito/BI	po:noun
 skivanèla/V	po:noun
 skoaŧèra/V	po:noun
 skoaŧa/V	po:noun
-skoakamin/U
+skoakamin/U	po:noun
 skoato/UI	po:noun
-skodèla/V
+skodèla/V	po:noun
 skoinŧa/V	po:noun
-skolàstego/B
-skola/V
+skolàstego/B	po:noun
+skola/V	po:noun
 skolo/U	po:noun
-skomenŧia
-skonfuxion/V
-skonposto/B
-skontento/B
+skonfuxion/V	po:noun
+skonposto/B	po:adjective
+skontento/B	po:noun
 skonto/UI	po:adjective
 skopeton/V	po:noun
 skorŧo/BI	po:noun
 skoto/UI	po:noun
 skròko/UI	po:noun
-skrúpolo/U
+skrúpolo/U	po:noun
 skraña/V	po:noun po:adjective
 skrañoxo/B	po:adjective
 skrakaganasa/V	po:noun
-skritura/V
-skrovoloxo/B
-skruvuluxi
+skritura/V	po:noun
+skrovoloxo/B	po:adjective po:noun al:skruvuluxi
+skruvuluxi	po:adjective po:noun st:skrovoloxo is:plural
+skucaràa/V	po:noun
 skucarada/V	po:noun
 skudèla/V	po:noun
 skufiòto/UI	po:noun
@@ -9620,245 +9602,240 @@ skuinŧa/V	po:noun
 skulièr/U	po:noun
 skur/U	po:adjective
 skuria/V	po:noun
-skurtadura/V
+skurtaura/V	po:noun
+skurtadura/V	po:noun
 skurton/V	po:noun
-soŧal/V
-so’
-so'
-socale/U
-socetà
-sojèto/U
-sojetività
-sojetivo/B
+soŧal/V	po:adjective
+so’	po:preposition po:adverb
+socetà	po:noun
+sojèto/U	po:noun
+sojetività	po:noun
+sojetivo/B	po:adjective
 solŧaròl/UW	po:noun
-solamen
 solana/V	po:noun
 soldà/U	po:noun
-solitúdene/D
+solitúdene/D	po:noun
 solivo/U	po:adjective
-solo/B
-solstiŧio/U
+solo/BX	po:adjective po:adverb
+solstiŧio/U	po:noun
 solva/V	po:noun
-solverèra/V
+solverèra/V	po:noun
 somejanŧa/V	po:noun
 somejante/V	po:adjective
-sonàntego/U
-sonòro/B
-son/U
-sonador/BW
+sonàntego/U	po:adjective
+sonòro/B	po:adjective
+son/U	po:noun
+sonador/CW	po:noun
 sonda/V	po:noun
 soneto/UI	po:noun
-sonoriđaŧion/D
-sonorità
+sonoriđaŧion/D	po:noun
+sonorità	po:noun
 sopa/V	po:noun
 sopièra/V	po:noun
-soportàbile/D
-sopresion/V
-sorèla/V
+soportàbile/D	po:adjective
+sopresion/V	po:noun
+sorèla/V	po:noun
 sorđe/VI	po:noun
 soradòso/I	po:preposition po:adverb
-sorafin/U
+sorafin/U	po:adjective
 soralògo/U	po:noun po:adverb
 soramànego/U	po:noun
 sorapensièr/U	po:adverb
 soravía	po:adverb
-sordo/B
-sordomuto/U
+sordo/B	po:adjective
+sordomuto/U	po:adjective po:noun
 sorgo/I	po:noun
-sorixo/U
-sorpaso/U
-sorprexa/V
-sorxente/V
-sospension/V
-sostanŧa/V
-sostituŧion/V
-sostitutivo/B
-sotegon
-sotobosko/U
-sotointexo/B
-sotomúltiplo/B
-sotosora
-sotovèste/V
-sotrativo/B
-soturko/U
+sorixo/U	po:noun
+sorpaso/U	po:noun
+sorprexa/V	po:noun
+sorxente/V	po:noun
+sospension/V	po:noun
+sostanŧa/V	po:noun
+sostituŧion/V	po:noun
+sostitutivo/B	po:adjective
+sotegon	po:adverb
+sotobosko/U	po:noun
+sotointexo/B	po:adjective po:noun
+sotomúltiplo/B	po:noun
+sotosora	po:adjective po:adverb
+sotovèste/V	po:noun
+sotrativo/B	po:adjective
+soturko/U	po:noun
 soviŧion/V	po:noun
-sovran/U
+sovran/U	po:adjective po:noun
 spàraxo/U	po:noun
-spèŧia/V
+spèŧia/V	po:noun
 spèco/U	po:noun
-spíŧego/U
+spíŧego/U	po:noun
 spaña/V	po:noun
-spaŧeton/V	po:noun
-spaŧio/U
-spageto/U
-spago/U
+spaŧeton/C	po:noun
+spaŧio/U	po:noun
+spageto/U	po:noun
+spago/U	po:noun
 sparañin	po:noun po:adjective
-sparso/U
-spasio/U
-speŧífego/B
-speŧegon/V
+sparso/U	po:adjective
+speŧífego/B	po:adjective
+speŧegon/V	po:noun
 speŧièr/BW	po:noun
-speŧia/V
-speŧifegaŧion/D
-specèra/V
+speŧifegaŧion/D	po:noun
+specèra/V	po:noun
 spegaŧo/UI	po:noun
-spendaŧon/V	po:noun po:adjective
+spendaŧon/C	po:noun po:adjective
 spenton/V	po:noun
 spera/V	po:noun
-speranŧa/V
-speriente/V
-sperimental/V
+speranŧa/V	po:noun
+speriente/V	po:adjective po:noun
+sperimental/V	po:adjective
 speso/BI	po:adverb po:adjective
-spetàkol/U
-spexa/V
+spetàkol/U	po:noun
+spexa/V	po:noun
 spiŧigòto/UI	po:noun
 spiŧigon/V	po:noun
 spiŧo/BI	po:noun po:adjective
-spiegaŧion/D
+spiegaŧion/D	po:noun
 spigaŧo/UI	po:noun
 spinèl/U	po:noun
+spiovàa/V	po:noun
 spiovada/V	po:noun
+spironàa/V	po:noun
 spironada/V	po:noun
 spoleta/V	po:noun
 spongarola/V	po:noun
 sporkaría/V	po:noun
 spoxa/V	po:noun
 spriŧo/UI	po:noun
-springador/BW	po:noun
+springador/CW	po:noun
 springaorto/UI	po:noun
 spuŧolente/V	po:adjective
 spuo/U	po:noun
-stà
-stàtego/B
+stàtego/B	po:adjective
 stèla/V	po:noun
-stèr/U
-sté
-stí
-stòfa/V
-stòrego/B
-stòria/V
-stòrto/B
+stèr/U	po:noun
+stòfa/V	po:noun
+stòrego/B	po:adjective po:noun
+stòria/V	po:noun
+stòrto/B	po:adjective po:noun
 stómego/U	po:noun
-stúa/V
+stúa/V	po:noun
 staño/UI	po:noun po:adjective
-staŧion/V
-stabia/V
-stadio/U
+staŧion/V	po:noun
+stabia/V	po:noun
+stadio/U	po:noun
 stajon/V	po:noun
-stanŧa/V
-stanŧon/V
+stanŧa/V	po:noun
+stanŧon/V	po:noun
 stanga/V	po:noun po:adjective
-stangerlon/V	po:adjective
+stangerlon/C	po:adjective
 starlòco/UI	po:adjective
 starnèra/V	po:noun
-staro/U
-stativo/B
-stato/U
-statua/V
-stavolta
-staxon/V
+staro/U	po:noun
+stativo/B	po:adjective po:noun
+stato/U	po:noun
+statua/V	po:noun
+stavolta	po:adverb
+staxon/V	po:noun
 stekadente/VI	po:noun
 steko/UI	po:noun
 stela/V	po:noun
-steleta/V
+steleta/V	po:noun
 sterpa/V	po:adjective
-steso/B
-stiòpo/U
-stiŧon/V
+steso/B	po:adjective
+stiòpo/U	po:noun
+stiŧon/V	po:noun
 stia/V	po:noun
-stil/V
-stima/V
-stimativo/B
+stil/V	po:noun
+stima/V	po:noun
+stimativo/B	po:adjective
 stonfo/BI	po:adjective
-storegamente
+storegamente	po:adverb
 stornèl/U	po:noun po:adjective
-stornelon/V
+stornelon/C	po:adjective
 stornería/V	po:noun
 strèpito/U	po:noun
-stròfa/V
+stròfa/V	po:noun
 stròlego/B	po:noun
 stròpol/U	po:noun
 straŧo/BI	po:noun
 straŧon/B	po:adjective
-stra
+stra	po:adjective po:adverb po:preposition
 strabeko/BI	po:noun po:adjective
-strada/V
-stradal/V
+strada/V	po:noun
+stradal/V	po:adjective po:noun
 stradone/VI	po:noun
 strakaganasa/V	po:noun
 strakapiaŧa/V	po:noun
 strako/B	po:adjective
-stramaŧèr/BW
+stramaŧèr/BW	po:noun
 stramaŧo/UI	po:noun
 straman	po:adverb
 stramuxon/V	po:noun
 stranbería/V	po:noun
-stranbo/B
+stranbo/B	po:adjective
 strangolon	po:adverb
-straordenario/B
+straordenario/B	po:adjective
 straseñe/V	po:noun
 stravèrso/I	po:adverb
 stravento/I	po:adverb
 stremaŧo/UI	po:noun
 stremida/V	po:noun
 stria/V	po:noun
-striga/V
-strigon/V
+striga/V	po:noun
+strigon/V	po:noun
 strika/V	po:noun
-strolegaŧion/V
-strolegativo/B
-stromental/V
-stromento/U
+strolegaŧion/V	po:noun
+strolegativo/B	po:adjective
+stromental/V	po:adjective
+stromento/U	po:noun
 stropabuxo/UI	po:noun
 stropakul/U	po:noun
-strumento/U
-strutura/V
-studente/U
+strumento/U	po:noun
+strutura/V	po:noun
+studente/U	po:noun
 studio/U	po:noun
-stufo/B
-suđo
-su
+stufo/B	po:adjective
+suđo	po:preposition
+su	po:preposition po:adverb
 subiòto/UI	po:noun po:adjective
-subordenaŧion/V
-subordenativo/B
-subtropegal/V
-sucesion/V
-sucesor/V
-sufiso/U
+subordenaŧion/V	po:noun
+subordenativo/B	po:adjective
+subtropegal/V	po:adjective
+sucesion/V	po:noun
+sucesor/V	po:noun
+sufiso/U	po:noun
 sugaman/U	po:noun
-sunto/U
-super
-superlativo/B
-supernova/V
-sureal/V
+sunto/U	po:noun
+super	po:adjective po:noun
+superlativo/B	po:adjective
+supernova/V	po:noun
+sureal/V	po:adjective
 suro/U	po:noun
 susta/V	po:noun
-susto/B
-sustoxo/B
+susto/B	po:adjective po:noun
+sustoxo/B	po:adjective
 suto/BI	po:adjective
 suxinèr/BW	po:noun
-tè
-tèlego/B
-tèma/U
-tèniko/B
-tèra/V
+tè	po:noun
+tèlego/B	po:adjective
+tèma/U	po:noun
+tèniko/B	po:adjective po:noun
+tèra/V	po:noun
 tèrmene/VI	po:noun
-tèsera/V
-tèsto/B
-ténero/U
-típego/B
-títolo/U
+tèsera/V	po:noun
+tèsto/B	po:noun
+ténero/U	po:adjective
+típego/B	po:adjective
+títolo/U	po:noun
 tòco/UI	po:noun
-tòga/V
+tòga/V	po:noun
 tòko/UI	po:noun
 tòla/V	po:noun
-tòmo/U
-tòn/U
+tòmo/U	po:noun
+tòn/U	po:noun
 tònego/B	po:noun
-tòno/U
+tòno/U	po:noun
 tórgol/U	po:adjective
 taŧa/V	po:noun
-tabèla/V
+tabèla/V	po:noun
 tabaro/U	po:noun
 tabià	po:noun
 tafanario/U	po:noun
@@ -9879,48 +9856,49 @@ talvà	po:noun
 tamài	po:noun
 tanaka/V	po:adjective
 tananài	po:adjective
-tanké
-tardi
+tanké	po:pronoun
+tardi	po:adverb
 tariòl/U	po:noun
 tariŧia/V	po:noun
 tasa/V	po:noun
 taston	po:adverb
 tastoni	po:adverb
 tato/B	po:noun
-tautosilàbego/B
+tautosilàbego/B	po:adjective
 tavan/B	po:noun
-teòrego/U
-teatro/U
+teòrego/U	po:adjective po:noun
+teatro/U	po:noun
 teca/V	po:noun
+tecàa/V	po:noun
 tecada/V	po:noun
-tedaré
+tedaré	po:interjection
 tega/V	po:noun
 tegolina/V	po:noun
-telèfono/U
+telèfono/U	po:noun
 telèr/U	po:noun
-tela/V
+tela/V	po:noun
 telarina/V	po:noun
-telefonin/U
-temàtego/B
-tenda/V
+telefonin/U	po:noun
+temàtego/B	po:adjective
+tenda/V	po:noun
 tendro/B	po:adjective
 tenpèsta/V	po:noun
 tenpo/UI	po:noun
-tenporal/V
-tento/B
-teoría/V
-teoregamente
+tenporal/V	po:adjective po:noun
+tento/B	po:adjective
+teoría/V	po:noun
+teoregamente	po:adverb
+terŧain/U	po:noun
 terŧadin/U	po:noun
 teremòto/UI	po:noun
-termenativo/B
-testimòne/D
+termenativo/B	po:adjective
+testimòne/D	po:noun
 teta/V	po:noun
 tieda/V	po:noun
-tilde/V
-timor/V
-tinbro/U
-tintor/V
-tintora
+tilde/V	po:noun
+timor/V	po:noun
+tinbro/U	po:noun
+tintor/C	po:noun
 tiraka/V	po:noun
 tirasaso/UI	po:noun
 tiro/U	po:noun
@@ -9928,205 +9906,203 @@ tiron/V	po:noun
 toketo/UI	po:noun
 ton/U	po:noun
 tonbolon/V	po:noun
-tondo/B
+tondo/B	po:adjective po:noun
 tonfa/V	po:noun
-tontolon/V	po:adjective
-topogràfego/U
-tornidor/BW	po:noun
+tontolon/C	po:adjective
+topogràfego/U	po:adjective
+tornidor/CW	po:noun
 torno	po:adverb
-torta/V
+torta/V	po:noun
 tos	po:noun
 tose	po:noun
-total/V
-totalità
+total/V	po:adjective po:noun
+totalità	po:noun
 tovajòl/U	po:noun
 tovaja/V	po:noun
 toxato/BI	po:noun
-toxo/B
-trèn/U
+toxo/B	po:noun
+trèn/U	po:noun
 tròđo/U	po:noun al:tròi
 tròi	po:noun st:tròđo is:plural
-traduŧion/D
+traduŧion/D	po:noun
 trafegon/B	po:noun po:adjective
 trakañòto/BI	po:noun po:adjective
 tranco/U	po:noun
-tranxitòrio/B
-tranxitivo/B
+tranxitòrio/B	po:adjective
+tranxitivo/B	po:adjective
 trapèl/U	po:noun po:adjective
-trasferimento/U
-trasformaŧion/D
-trasformativo/B
-traskriŧion/D
-trasparente/D
-trataŧion/D
-tratin/U
-trato/B
-trator/V
+trasferimento/U	po:noun
+trasformaŧion/D	po:noun
+trasformativo/B	po:adjective
+traskriŧion/D	po:noun
+trasparente/D	po:adjective po:noun
+trataŧion/D	po:noun
+tratin/U	po:noun
+trato/B	po:adjective po:noun
+trator/V	po:noun
 travèrsa/V	po:noun
 travèrso/I	po:adverb
 traverson/V	po:noun
 tremaròla/V	po:noun
 trepié/U	po:noun
-tria
+tria	po:noun
 trikò	po:noun
-trisílaba/V
+trisílaba/V	po:adjective po:noun
 tristo/BI	po:adjective
-trivalente/D
+trivalente/D	po:adjective
 trivelin/U	po:noun
-trixlísego/B
+trixlísego/B	po:adjective
 trulo/B	po:adjective
 turulú	po:adjective
 ua/V	po:noun
 udor/V	po:noun
-ultimo/BX
-ultrateren/U
-uni-lateral/V
-unidà
-union/V
-unitario/U
-universal/V
-unkò
-unkuò
-urban/U
-usta
+ultimo/BX	po:adjective po:noun
+ultrateren/U	po:adjective
+unilateral/V	po:adjective
+unidà	po:noun
+union/V	po:noun
+unitario/U	po:adjective po:noun
+universal/V	po:adjective po:noun
+unkò	po:adverb
+unkuò	po:adverb
+urban/U	po:adjective
+usta	po:noun
 uvi	po:noun st:ovi is:plural
 uxura/V	po:noun
-vàfer/U
-vàlŧer
+vàfer/U	po:noun
+vàlŧer	po:noun
 vèco/B	po:adjective
-vèrbo/U
-vèrto/B
-vérgola/V
-véskovo/U
-vírus
-vítima/V
+vèrbo/U	po:noun
+vèrto/B	po:adjective
+vérgola/V	po:noun
+véskovo/U	po:noun
+vírus	po:noun
+vítima/V	po:noun
 vòdo/B	po:adjective
-vòlta/V
-vòlto/U
-vòvo/U
-vagon/V
-vaja/U
+vòlto/B	po:noun
+vòvo/U	po:noun
+vagon/V	po:noun
+vaja/U	po:noun
 vaka/V	po:noun
-vakanŧa/V
+vakanŧa/V	po:noun
 val/V	po:noun
 valegòta/V	po:noun
-valenŧa/V
-valia/U
-valif
+valenŧa/V	po:noun
+valia/U	po:noun
+valif	po:adjective
 valixa/V	po:noun
-valor/V
-valutaŧion/V
+valor/V	po:noun
+valutaŧion/V	po:noun
 van/U	po:noun
-vaneŧa/V
-vangeto/U
-vanpa/V
-vantería/V
+vaneŧa/V	po:noun
+vangeto/U	po:noun
+vanpa/V	po:noun
+vantería/V	po:noun
 vantièra/V	po:noun
 vanuja/V	po:noun
-vapor/V
+vapor/V	po:noun
 varòla/V	po:noun
 varòto/U	po:noun
-variàbile/D
+variàbile/D	po:adjective po:noun
 variŧo/U	po:noun
-variaŧion/D
-variante/D
-varietà
-vario/B
+variaŧion/D	po:noun
+variante/D	po:noun
+varietà	po:noun
+vario/B	po:adjective
 vasèl/U	po:noun
-vaxelame
-vaxo/U
-veŧejativo/U
+vaxelame	po:noun
+vaxo/U	po:noun
+veŧejativo/U	po:adjective po:noun
 veŧin/B	po:adverb
-veŧinamento/U
-veŧinanŧa/V
+veŧinamento/U	po:noun
+veŧinanŧa/V	po:noun
 vedèl/U	po:noun
 veja/V	po:noun
 velar/V	po:noun
 veludo/U	po:noun
-vento/U
-verđa/V
-verbal/V
-verdon/V
-vergoleta/V
-verità
+vento/U	po:noun
+verđa/V	po:noun
+verbal/V	po:adjective po:noun
+verdon/V	po:adjective po:noun
+vergoleta/V	po:noun
+verità	po:noun
 versor/V	po:noun
-vertú
-vertebrà/U
-vertegal/D
+vertú	po:noun
+vertebrà/U	po:noun
+vertegal/D	po:adjective po:noun
 vesa/V	po:noun
 vesiga/V	po:noun
 vespèr/BW	po:noun
 vexin/B	po:adverb
 viđília/V	po:noun
 viađo/U	po:noun
-viajo/U
-viaxo/U
-vibràtile/V
-vibraŧion/D
-vibrante/D
-vida/V
+viajo/U	po:noun
+viaxo/U	po:noun
+vibràtile/V	po:adjective
+vibraŧion/D	po:noun
+vibrante/D	po:adjective
+vida/V	po:noun
 vidixon/V	po:noun
 vierina/V	po:noun
-vigan/U
-vigor/V
-vin/U
+vigan/U	po:noun
+vigor/V	po:noun
+vin/U	po:noun
 visco/B	po:noun
-vispo/U
-vitòria/V
-vivo/BI
-voja/V
-vokàlego/U
-vokaŧion/D
-vokabolario/U
-vokal/V
-vokaliđaŧion/D
-vokativo/U
-volentièra/U
-volgar/V
-volgarità
-volitivo/B
-volontà
-volontario/B
+vispo/U	po:adjective
+vitòria/V	po:noun
+vivo/BI	po:adjective po:noun
+voja/V	po:noun
+vokàlego/U	po:adjective
+vokaŧion/D	po:noun
+vokabolario/U	po:noun
+vokal/V	po:noun
+vokaliđaŧion/D	po:noun
+vokativo/U	po:adjective po:noun
+volentièra/U	po:adverb
+volgar/V	po:adjective
+volgarità	po:noun
+volitivo/B	po:adjective
+volontà	po:noun
+volontario/B	po:adjective po:noun
 volpato/BI	po:noun
 volpe/VI	po:noun
-volpon/V
-volta/C
-volto/U
-volume/U
-votaŧion/V
-voto/U
-voxe/VI
+volpon/C	po:adjective po:noun
+volto/B	po:noun
+volume/U	po:noun
+votaŧion/V	po:noun
+voto/U	po:noun
+voxe/VI	po:noun
 xñapa/V	po:noun
 xñariko/UI	po:noun
 xñeko/BI	po:adjective
-xòna/V
+xòna/V	po:noun
 xɉonfo/BI	po:adjective
 xɉonfun/U	po:noun
 xbèsola/V	po:noun
 xbètega/V	po:noun
 xbòba/V	po:noun
-xbajafon/V
+xbajafon/C	po:noun
 xbarbatèl/U	po:adjective
-xbareta/V
-xbaro/U
-xbasamento/U
+xbareta/V	po:noun
+xbaro/U	po:noun
+xbasamento/U	po:noun
 xbatudin/U	po:noun
-xbeacon/V	po:noun
-xberegon/V	po:noun
+xbeacon/C	po:noun
+xberegon/C	po:noun
 xberloton/V	po:noun
 xbiègo/UI	po:adjective po:adverb
-xbianŧo
-xbiego
+xbianŧo	po:noun
+xbiego	po:adjective
 xbolda/V	po:noun
 xbrindolon/V	po:noun
 xbufo/UI	po:noun
 xbuxo/B	po:noun
 xdraio/U	po:noun
-xeloxía/V
-xeloxo/V
-xeogràfego/U
-xeomètrego/B
-xerundio/U
+xeloxía/V	po:noun
+xeloxo/V	po:adjective
+xeogràfego/U	po:adjective
+xeomètrego/B	po:adjective
+xerundio/U	po:noun
 xgarba/V	po:noun
 xgerlo/B	po:adjective
 xgibieŧo/U	po:noun
@@ -10138,43 +10114,43 @@ xgríxol/U	po:noun
 xgranfo/UI	po:noun
 xgrea/V	po:noun
 xgrifo/UI	po:noun
-xgropin/U
-xguèlto/U
-xgualivamento/U
+xgropin/U	po:noun
+xguèlto/U	po:adjective
+xgualivamento/U	po:noun
 xgubia/V	po:noun
-xguinŧo/B
-xilè
-xiro/U
-xirotondo/U
+xguinŧo/B	po:noun
+xilè	po:noun
+xiro/U	po:noun
+xirotondo/U	po:noun
 xlèpa/V	po:noun
-xlísego/B
+xlísego/B	po:adjective po:noun
 xlanbròŧo/UI	po:noun
 xlapaŧon/V	po:noun
 xlavaŧa/V	po:noun
 xlavaŧo/U	po:noun
-xlavaŧon/V	po:noun
+xlavaŧon/C	po:noun
 xleguaŧo/UI	po:noun
 xlekaño/UI	po:noun
-xlimegoxo/U
+xlimegoxo/U	po:adjective
 xloŧo/UI	po:adjective
 xlondra/V	po:adjective
-xlontanamento/U
+xlontanamento/U	po:noun
 xludro/B	po:adjective
-xmara/V
+xmara/V	po:noun
 xmardèl/U	po:noun
 xmardelon/V	po:adjective
 xmir/U	po:noun
-xmisiòto/U
+xmisiòto/U	po:noun
 xnara/V	po:noun
-xokondo/B
-xustapòsto/B
-xustaposto/B
-xustapoxiŧion/V
-xusto/B
+xokondo/B	po:adjective
+xustapòsto/B	po:adjective
+xustaposto/B	po:adjective
+xustapoxiŧion/V	po:noun
+xusto/B	po:adjective
 xvanŧaròto/UI	po:noun
 xvanŧeròto/UI	po:noun
 xvejarin/B	po:noun po:adjective
-xvilupo/U
+xvilupo/U	po:noun
 aba/V	po:noun
 àbako/U	po:noun
 roxbif	po:noun
@@ -10205,13 +10181,14 @@ guaŧo/U	po:noun
 guaŧeto/U	po:noun
 airon/V	po:noun
 kaxalin/B	po:adjective
-kaŧador/BW	po:noun
+kaŧador/CW	po:noun
 fenestron/V	po:noun
 naxo/U	po:noun
 maledeto/B	po:adjective
 alamaro/U	po:noun
 menudo/U	po:noun
 xbaravaja/V	po:adjective
+soldào/B	po:noun
 soldado/B	po:noun
 sordina/V	po:noun
 albareta/V	po:noun
@@ -10250,7 +10227,7 @@ skaveŧon/B	po:noun
 sagra/V	po:noun
 ŧoeta/V	po:noun
 cito	po:adjective
-panŧon/V	po:noun
+panŧon/C	po:noun
 kovèrto/B	po:adjective po:noun
 marinèr/BW	po:noun
 graèla/V	po:noun
@@ -10276,7 +10253,7 @@ menuo/U	po:adjective po:noun
 rio/U	po:noun
 duro/B	po:adjective
 vòja/V	po:noun
-brenton/V
+brenton/V	po:noun
 negòŧio/U	po:noun
 ruèla/V	po:noun
 kaveŧo/U	po:noun
@@ -10297,7 +10274,7 @@ animeta/V	po:noun
 antian/U	po:noun
 antianèl/U	po:noun
 antegaja/V	po:noun
-orbolon/V	po:adjective
+orbolon/C	po:adjective
 raxo/B	po:adjective
 arativo/B	po:adjective
 àrko/U	po:noun
@@ -10318,7 +10295,8 @@ ríxego/B	po:noun
 risco/B	po:noun
 arlevo/B	po:noun
 armakòlo/U	po:noun
-armador/BW	po:noun
+armador/CW	po:noun
+armaura/V	po:noun
 armadura/V	po:noun
 arma/U	po:noun
 armaron/V	po:noun
@@ -10345,6 +10323,7 @@ arđarèlo/U	po:noun
 arđarin/U	po:noun
 arđareto/U	po:noun
 arđariva/V	po:noun
+arđenaura/V	po:noun
 arđenadura/V	po:noun
 arđentería/V	po:noun
 arđentièr/BW	po:noun
@@ -10371,6 +10350,7 @@ pitòko/B	po:noun
 strenđente/D	po:adjective po:noun
 spada/V	po:noun
 avanŧaura/V	po:noun
+avanŧadura/V	po:noun
 avanŧo/U	po:noun
 karestía/V	po:noun
 vista/V	po:noun
@@ -10386,3 +10366,102 @@ rana/V	po:noun
 muxo/U	po:noun
 statuto/U	po:noun
 pràtika/V	po:noun
+orko/B	po:noun
+pretenŧion/V	po:noun
+onto/B	po:adjective po:noun
+fufa/V	po:noun
+spuŧa/V	po:noun
+ufe	po:adverb
+avokaura/V	po:noun
+avokadura/V	po:noun
+avòlio/U	po:noun
+aŧal	po:noun
+aŧalin/B	po:noun
+ađardo/U	po:noun
+àđemo/U	po:adjective
+baban/B	po:adjective po:noun
+baka/V	po:noun
+bakalà	po:noun
+bokon/V	po:noun
+bacin/U	po:noun
+bacinèla/V	po:noun
+bakuko/B	po:adjective
+badalòko/B	po:noun
+bafo/U	po:noun
+baga/V	po:noun
+bagatin/U
+bajan/U	po:adjective po:noun
+bañarol/BW
+baño/U	po:noun
+bañeto/U	po:noun
+bàgolo/B	po:noun
+bagoloxo/B	po:adjective
+bagoto/B
+bail/V	po:noun
+bajoleta/V	po:noun
+kurame/U	po:noun
+balòta/V	po:noun
+termòmetro/U	po:noun
+balanŧeta/V	po:noun
+balanŧon/C	po:noun
+fraska/V	po:noun
+balbeŧo/U	po:noun
+balkon/V	po:noun
+balkonàa/V	po:noun
+balkonada/V	po:noun
+baldanŧa/V	po:noun
+baldon/V	po:noun
+balèko/B	po:adjective
+balena/V	po:noun
+dain/U
+balivèrna/V	po:noun
+balokàa/V	po:noun
+balokada/V	po:noun
+balòko/B	po:noun
+stòpa/V	po:noun
+straŧa/V	po:noun
+bonba/V	po:noun
+mèrlo/B	po:noun
+balonèr/BW	po:noun
+balonŧin/U	po:noun
+balordeto/B	po:adjective
+balordo/B	po:adjective
+balotaŧion/V	po:noun
+balotin/U	po:noun
+balŧa/V	po:noun
+balŧana/V	po:noun
+banbin/B	po:noun
+banporía/V
+kòro/U	po:noun
+bankàa/V
+bankada/V
+banketo/B	po:noun
+ŧavatin/B	po:noun
+nodèr/BW	po:noun
+banda/V	po:noun
+bandeta/V	po:noun
+drito/B	po:adjective po:noun
+bandèr/BW	po:noun
+bandierola/V	po:noun
+lucèrna/V	po:noun
+bandierona/V	po:noun
+baoral/V
+barabao/U
+barakon/V	po:noun
+barador/CW	po:noun
+barafuxa/V	po:noun
+barafuxola/V	po:noun
+baraonda/V	po:noun
+baratin/U
+barbakan/V	po:noun
+barbastrejo/U	po:noun
+barbaŧa/V	po:noun
+barbađane/U	po:noun
+barbeta/V	po:noun
+barbieròto/B	po:noun
+barbin/U	po:noun
+barbon/V	po:noun
+barbuŧal/V	po:noun
+barbuŧo/U	po:noun
+
+
