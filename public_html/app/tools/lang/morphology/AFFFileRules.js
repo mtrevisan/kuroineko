@@ -161,7 +161,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	//dict: pomèr/PLANTS_AND_CRAFTS, barkarol/PLANTS_AND_CRAFTS, sartor/PLANTS_AND_CRAFTS, kolador/PLANTS_AND_CRAFTS
 	var plantsAndCrafts = {
 		1: [
-			[PLANTS_AND_CRAFTS, 'èr>ar(o/a/i/e)', 'ol>iol(o/a/i/e)|rol', 'ol>(i)òl(o/a/i/e)|rol', 'dor>or(o/a/i/e)|[aeiou]dor']
+			[PLANTS_AND_CRAFTS, 'èr>ar(o/a/i/e)', 'ol>iol(o/a/i/e)|rol', 'ol>(i)òl(o/a/i/e)|rol', 'ol>ioƚ[oaie]|rol', 'ol>(i)òƚ[oaie]|rol', 'dor>or(o/a/i/e)|[aeiou]dor']
 		]
 	};
 
