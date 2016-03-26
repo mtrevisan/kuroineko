@@ -4327,6 +4327,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "serk",			"",			1,	1,	"a",	"",				"",
 "serv",			"",			5,	1,	"g",	"1590",			"",
 "serv",			"a",			5,	1,	"g",	"",				"",
+"serv",			"ben",		5,	1,	"g",	"1821",			"",
 "serv",			"o",			1,	1,	"g",	"1371",			"",
 "serv",			"kon",		1,	1,	"g",	"1821",			"",
 "serv",			"re",			1,	1,	"g",	"1503",			"",
