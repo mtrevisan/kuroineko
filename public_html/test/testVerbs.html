@@ -140,19 +140,19 @@
 					if(result.paradigmInfo.stressIndex < stressIdx){
 						errorStressPositionExpectedLate ++;
 
-						console.log(syllabation + ': expected late ' + expected);
+						console.log(syllabation.syllabes.join('-') + ': expected late ' + expected);
 					}
 					else if(result.paradigmInfo.stressIndex > stressIdx){
 						errorStressPositionExpectedEarly ++;
 
-						console.log(syllabation + ': expected early ' + expected);
+						console.log(syllabation.syllabes.join('-') + ': expected early ' + expected);
 					}
 					else if(result.paradigmInfo.stressType[0] != v.stressType){
 						errorStressType ++;
 
-						console.log(syllabation + ': expected stress ' + expected[stressIdx]);
+						console.log(syllabation.syllabes.join('-') + ': expected stress ' + expected[stressIdx]);
 					}
-					else if(syllabation.split('-').length - Hyphenator.getSyllabeIndex.call(syllabation.split('-'), result.paradigmInfo.stressIndex) > 2)
+					else if(syllabation.syllabes.length - syllabation.getSyllabeIndex(result.paradigmInfo.stressIndex) > 2)
 						proparossitone ++;
 				}
 			}
