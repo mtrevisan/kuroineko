@@ -11,7 +11,7 @@ This extension is compatible with:
 Spell checking
 ==============
 vec
-Version: 2016-01-29
+Version: 2016-03-25
 Author:  Mauro Trevisan <mauro.trevisan@gmail.com>
 License: GNU GPL Version 2 or GPL Version 3 or OASIS 0.1
 
