@@ -6,8 +6,8 @@
 		<name lang="en">Spelling dictionary and hyphenator for the venetan language</name>
 		<name lang="vec">Diŧionario ortogràfego e silabador par la lengua vèneta</name>
 		<name lang="it">Dizionario ortografico e sillabatore per la lingua veneta</name>
-		<!-- <name lang="es">Diccionario ortográfico para la lengua veneciana</name>
-		<name lang="gl">Dicionario ortográfico para a lingua venetian</name>-->
+		<!-- <name lang="es">Diccionario ortográfico para la lengua véneta</name>
+		<name lang="gl">Dicionario ortográfico para a lingua véneta</name>-->
 	</display-name>
 	<!-- Dictionaries should work with all platforms -->
 	<platform value="all" />
@@ -19,8 +19,8 @@
 		<default xlink:href="images/veneto.png" />
 	</icon>
 	<publisher>
-		<name xlink:href="http://parnodexmentegar.orgfree.com/" lang="vec">Mauro Trevisan</name>
-		<name xlink:href="http://parnodexmentegar.orgfree.com/" lang="it">Mauro Trevisan</name>
+		<name xlink:href="http://parnodexmentegar.orgfree.com/" lang="en">Mauro Trevisan</name>
+		<name xlink:href="http://parnodexmentegar.orgfree.com/" lang="vec">Màuro Trevixan</name>
 	</publisher>
 	<extension-description>
 		<src xlink:href="description/desc_en.txt" lang="en" />
@@ -30,6 +30,7 @@
 	<registration>
 		<simple-license accept-by="admin" default-license-id="en" suppress-if-required="true">
 			<license-text xlink:href="licenses/license-en.txt" lang="en" license-id="en" />
+			<license-text xlink:href="licenses/license-vec.txt" lang="vec" license-id="vec" />
 		</simple-license>
 	</registration>
 </description>
