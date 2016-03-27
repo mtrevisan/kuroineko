@@ -432,7 +432,8 @@ require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatt
 			'subé', 'subí', 'subíimo', 'subísimo', 'subívimo', 'suben', 'subendo', 'subene', 'subense', 'subente', 'subesto', 'subié', 'subia', 'subido',
 			'subon', 'subone', 'subonse',
 			'sublimà', 'sublimo',
-			'subion', 'subisen', 'subisié', 'subiven', 'subiè'
+			'subion', 'subisen', 'subisié', 'subiven', 'subiè',
+			'posdatar'
 		];
 		var expected = [
 			'sub-ce-lu-lar', 'ab-de-gar', 'sub-for-ni-du-ra', 'sub-kor-te-gal', 'a-bla-ti-vo', 'blan-dir', 'sub-mon-tan', 'sub-nor-mal',
@@ -475,7 +476,8 @@ require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatt
 			'su-bé', 'su-bí', 'su-bíi-mo', 'su-bí-si-mo', 'su-bí-vi-mo', 'su-ben', 'su-ben-do', 'su-be-ne', 'su-ben-se', 'su-ben-te', 'su-bes-to',
 			'su-bié', 'su-bia', 'su-bi-do', 'su-bon', 'su-bo-ne', 'su-bon-se',
 			'su-bli-mà', 'su-bli-mo',
-			'su-bion', 'su-bi-sen', 'su-bi-sié', 'su-bi-ven', 'su-biè'
+			'su-bion', 'su-bi-sen', 'su-bi-sié', 'su-bi-ven', 'su-biè',
+			'pos-da-tar'
 		];
 
 		words.forEach(function(word, idx){
@@ -914,7 +916,8 @@ require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatt
 			'subé', 'subí', 'subíimo', 'subísimo', 'subívimo', 'suben', 'subendo', 'subene', 'subense', 'subente', 'subesto', 'subié', 'subia', 'subido',
 			'subon', 'subone', 'subonse',
 			'sublimà', 'sublimo',
-			'subion', 'subisen', 'subisié', 'subiven', 'subiè'
+			'subion', 'subisen', 'subisié', 'subiven', 'subiè',
+			'posdatar'
 		];
 		var expected = [
 			'sub-ce-lu-lar', 'ab-de-gar', 'sub-for-ni-du-ra', 'sub-kor-te-gal', 'a-bla-ti-vo', 'blan-dir', 'sub-mon-tan', 'sub-nor-mal',
@@ -953,11 +956,12 @@ require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatt
 			'gua', 'in-gua', 'frua', 'grua', 'sua', 'stra-sua',
 			'ar-fia', 'e-fia', 'i-fia', 'nia', 'de-xnia', 'kria', 'pria', 'stria', 'sia', 'de-via', 'in-via', 'xvia',
 			'dix-èr-ta', 'dex-e-re-dar',
-			'sub-en-tro',
+			'su-ben-tro',
 			'su-bé', 'su-bí', 'su-bí-i-mo', 'su-bí-si-mo', 'su-bí-vi-mo', 'su-ben', 'su-ben-do', 'su-be-ne', 'su-ben-se', 'su-ben-te', 'su-be-sto',
 			'su-bié', 'su-bia', 'su-bi-do', 'su-bon', 'su-bo-ne', 'su-bon-se',
 			'su-bli-mà', 'su-bli-mo',
-			'su-bion', 'su-bi-sen', 'su-bi-sié', 'su-bi-ven', 'su-biè'
+			'su-bion', 'su-bi-sen', 'su-bi-sié', 'su-bi-ven', 'su-biè',
+			'po-sda-tar'
 		];
 
 		words.forEach(function(word, idx){

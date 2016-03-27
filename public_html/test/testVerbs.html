@@ -104,7 +104,12 @@
 					return;
 				}
 
-				var result = Conjugator.getStressThemeT3(infinitive);
+				try{
+					var result = Conjugator.getStressThemeT3(infinitive);
+				}
+				catch(e){
+					console.log(infinitive + ': ', e);
+				}
 
 				/*if(conjugation.prefix !== v.prefix){
 					errorPrefix ++;
