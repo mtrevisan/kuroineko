@@ -433,7 +433,7 @@ require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatt
 			'subon', 'subone', 'subonse',
 			'sublimà', 'sublimo',
 			'subion', 'subisen', 'subisié', 'subiven', 'subiè',
-			'posdatar'
+			'posdatar', 'dexine'
 		];
 		var expected = [
 			'sub-ce-lu-lar', 'ab-de-gar', 'sub-for-ni-du-ra', 'sub-kor-te-gal', 'a-bla-ti-vo', 'blan-dir', 'sub-mon-tan', 'sub-nor-mal',
@@ -477,7 +477,7 @@ require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatt
 			'su-bié', 'su-bia', 'su-bi-do', 'su-bon', 'su-bo-ne', 'su-bon-se',
 			'su-bli-mà', 'su-bli-mo',
 			'su-bion', 'su-bi-sen', 'su-bi-sié', 'su-bi-ven', 'su-biè',
-			'pos-da-tar'
+			'pos-da-tar', 'de-xi-ne'
 		];
 
 		words.forEach(function(word, idx){
@@ -917,7 +917,7 @@ require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatt
 			'subon', 'subone', 'subonse',
 			'sublimà', 'sublimo',
 			'subion', 'subisen', 'subisié', 'subiven', 'subiè',
-			'posdatar'
+			'posdatar', 'dexine'
 		];
 		var expected = [
 			'sub-ce-lu-lar', 'ab-de-gar', 'sub-for-ni-du-ra', 'sub-kor-te-gal', 'a-bla-ti-vo', 'blan-dir', 'sub-mon-tan', 'sub-nor-mal',
@@ -961,7 +961,7 @@ require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatt
 			'su-bié', 'su-bia', 'su-bi-do', 'su-bon', 'su-bo-ne', 'su-bon-se',
 			'su-bli-mà', 'su-bli-mo',
 			'su-bion', 'su-bi-sen', 'su-bi-sié', 'su-bi-ven', 'su-biè',
-			'po-sda-tar'
+			'po-sda-tar', 'de-xi-ne'
 		];
 
 		words.forEach(function(word, idx){

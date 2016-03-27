@@ -40,9 +40,11 @@ define({
 		5: '.bio1.pre1l3f2t',
 		6: '.di2s3.de2s3.di2x3.de2x3.anti1.auto1.opto1.orto3.para1.poli3.re1is'
 			+ 'sub3s2',
-		7: 'kontro1èkstra1ekstra1ŧirkum3.ipe2r1.polip2.ortop2.dis3p2.des3p2',
-		8: 'ŧirkums2'
-			+ '.po4sdat',
+		7: 'kontro1èkstra1ekstra1sirkum3ŧirkum3.ipe2r1.polip2.ortop2.dis3p2.des3p2',
+		8: 'sirkums2ŧirkums2'
+			+ '.po4sdat'
+			+ '.de3x4in.de3x4ín',
+		9: '.de3x4ide.de3x4íde',
 		10: '.su2b3entr.su2b3éntr'
 	}
 });
