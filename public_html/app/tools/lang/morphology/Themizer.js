@@ -353,7 +353,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/data
 				t;
 			//all but second conjugation parossitone (which does not need to backtrack stress)
 			if(themeVowel != 'e'){
-				t = themeT1.replace(/ŧ/g, 's').replace(/đ/g, 'x').replace(/ɉ/g, 'j');
+				t = themeT1.replace(/ƚ/g, 'l').replace(/ŧ/g, 's').replace(/đ/g, 'x').replace(/ɉ/g, 'j');
 				if(stressIndices[t] != undefined)
 					idx = stressIndices[t];
 				else{
