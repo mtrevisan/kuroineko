@@ -5733,7 +5733,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "xgorl",			"",			1,	2,	"a",	"1854",			"",
 "xgur",			"",			1,	2,	"a",	"2008",			"Vínŧer al đogo (spenar), privar.",
 "xider",			"de",			1,	1,	"a",	"1463",			"",
-"xiñ",			"ar",			1,	1,	"a",	"1821",			"Far o refar le 'capruggini'.",
+"xiñ",			"ar",			1,	-2,	"g",	"1821",			"Far o refar le 'capruggini'.",
 "xir",			"",			1,	1,	"a",	"1560",			"",
 "xir",			"ra",			1,	1,	"a",	"1854",			"",
 "xirandol",		"",			1,	3,	"g",	"1854",			"",
