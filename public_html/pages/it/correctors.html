@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<meta name="description" content="alfabeto della lingua veneta di Mauro Trevisan">
+	<meta name="keywords" content="lingua veneta, dialetto veneto, alfabeto veneto">
+	<meta name="robots" content="noodp">
+	<base href="../../" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<!-- alfabeto, lingua, veneta, correttore ortografico -->
+
+	<title>correttore ortografico della lingua veneta | dialetto veneto</title>
+
+	<link rel="stylesheet" href="resources/css/common.css">
+	<link rel="stylesheet" href="resources/css/alphabet.css">
+
+	<script src="app/Initializer.js"></script>
+	<script id="bootstrap-js">
+		Initializer.initializeApplication();
+	</script>
+	<script src="app/tools/social/GoogleAnalyticsHelper.js"></script>
+	<script src="app/tools/social/SocialLoader.js"></script>
+</head>
+
+<body>
+	<nav class="language">
+		<a href="pages/vec/correctors.html" lang="vec" hreflang="vec"><img src="resources/images/flags/veneto.png" class="flag" width="35" alt="V&egrave;neto" title="V&egrave;neto" /></a>
+		<img src="resources/images/flags/italia.png" class="flag" width="35" alt="Italiano" title="Italiano" />
+	</nav>
+	<header>
+		<h1>Correttori ortografici della lingua veneta</h1>
+
+		<nav>
+			<div class="share">
+				<div id="fb-root"></div><div class="fb-like" data-href="http://www.facebook.com/ParNoDexmentegar" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+				&nbsp;&nbsp;&nbsp;
+				<div class="g-plusone" data-size="medium" data-href="http://parnodexmentegar.orgfree.com"></div>
+			</div>
+			<br>
+			Scarica (una vecchissima versione de) la <a href="http://parnodesmentegar.wordpress.com/2012/09/03/glvv-20120624">Gram&agrave;tega de lengua v&egrave;neta pa&#8217; i v&egrave;neti [20120624]</a>
+		</nav>
+	</header>
+	<nav>
+		<a href="pages/it/conjugator.html">Coniugatore dei verbi</a> &ndash; <a href="pages/it/syllabator.html">Sillabatore</a> &ndash; <a href="pages/it/dialectInquirer.html">Riconoscitore delle varianti</a> &ndash; <a href="pages/it/dictionary.html">Dizionario</a> &ndash; <a href="pages/it/measureConverter.html">Convertitore delle misure</a><!--  &ndash; <a href="pages/it/spellchecker.html">Correttore ortografico</a><span class="new-feature">nuovo!</span> -->
+		<br>
+		<br>
+		<a href="pages/it/alphabet.html">Nascita dell&#8217;alfabeto veneto</a>
+	</nav>
+	<section class="content-only">
+		<!-- <h2>Tabele de rap&ograve;rto fon&egrave;ma/graf&egrave;ma</h2> -->
+		<div class="frame-inner">
+			<p>Sono usciti i correttori ortografici per il veneto secondo la mia scrittura!!</p>
+			<p>Potete trovarli qua per i prodotti Mozilla (Firefox, Thunderbird, ...): <a href="https://addons.mozilla.org/en-US/firefox/addon/dithionario-de-lengua-v%C3%A8neta">collegamento</a></p>
+			<p>E qua per LibreOffice (ancora da approvare): <a href="http://extensions.libreoffice.org/extension-center/spelling-dictionary-and-hyphenator-for-the-venetan-language">collegamento</a></p>
+			<br>
+			<p>Sappiatemi dire!</p>
+			<p>Saluti</p>
+		</div>
+	</section>
+	<footer>
+		<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licenza Creative Commons" style="border-width: 0; width: 88px; height: 31px" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Questa opera di <a href="/cdn-cgi/mail#6904081c1b06471d1b0c1f001a0807290e04080005470a0604?subject=Gramàdega%20de%20lengua%20vèneta" data-mail="377ad742455817634552415e4f5659"><span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">[email&nbsp;protected]</span></a> &egrave; sotto della licenza <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribuzione - Non commerciale - No opere derivate 4.0 Internazionale (CC BY-NC-ND 4.0)</a>.
+	</footer>
+
+	<script>
+		//extract all TRs with class 'phoneme'
+		var nodes = document.querySelectorAll('tr.phoneme'),
+			k;
+		for(k = 1; k < nodes.length; k ++)
+			nodes[k].innerHTML = nodes[0].innerHTML;
+	</script>
+</body>
+</html>
