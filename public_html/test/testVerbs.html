@@ -102,7 +102,7 @@
 					themeT3 += 'si';
 				else{
 					var syllabationT4 = syllabateThemeT4(themeT4),
-						idx = getIndexOfStressThemeT3(verb, themeT1, syllabationT4, prefixLength, stressIdx);
+						idx = getIndexOfStressThemeT3(verb, themeT1, syllabationT4, stressIdx);
 					if(idx >= 0)
 						themeT3 = StringHelper.setCharacterAt(themeT4, idx, Word[themeT4[idx].match(/[eo]/) && hasGraveStress(themeT4, syllabationT4, idx)? 'addStressGrave': 'addStressAcute']);
 				}
@@ -156,7 +156,7 @@
 					/^(inkat[ao]rigolà|[sŧ]irkumnavegà)$/
 				];
 
-				return function(verb, themeT1, syllabationT4, prefixLength, stressIdx){
+				return function(verb, themeT1, syllabationT4, stressIdx){
 					var themeVowel = themeT1[themeT1.length - 1],
 						idx = -1;
 					//all but second conjugation parossitone (which does not need to backtrack stress)

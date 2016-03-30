@@ -35,7 +35,7 @@ define(function(){
 			.replace(/fh(?=[^aeiouàèéíòóú])/g, 'f')
 		//correct x occurrences into s prior to c, f, k, p, t
 		//correct s occurrences into x prior to m, n, ñ, b, d, g, j, ɉ, s, v, r, l
-			.replace(/x(?=[cfkpt])/g, 's').replace(/s(?=([mnñbdgjɉsvrl]|jh))/g, 'x')
+			.replace(/x(?=[cfkpt])/g, 's').replace(/s(?=[mnñbdgjɉsvrl])/g, 'x')
 
 		//correct morphologic error
 			.replace(/([cjñ])i([aeiou])/, '$1$2')

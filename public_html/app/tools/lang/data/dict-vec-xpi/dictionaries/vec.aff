@@ -1,4 +1,4 @@
-# Diŧionario vèneto
+# Diŧionario de lengua vèneta
 #
 # Venetam hunspell affix file
 # Copyright (C) 2016 Màuro Trevixan
@@ -6,16 +6,16 @@
 #
 # This file is distributed under GPL license.
 #
-# This file is part of the "diŧionario vèneto".
+# This file is part of the "diŧionario de lengua vèneta".
 #
-# The "diŧionario vèneto" is free software; you can redistribute it and/or
-# modify it under the terms of the GNU General Public License as published
-# by the Free Software Foundation; either version 3 of the License, or
-# (at your option) any later version.
+# The "diŧionario de lengua vèneta" is free software; you can redistribute
+# it and/or modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; either version 3 of the
+# License, or (at your option) any later version.
 #
-# The "diŧionario vèneto" is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# The "diŧionario de lengua vèneta" is distributed in the hope that it
+# will be useful, but WITHOUT ANY WARRANTY; without even the implied
+# warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public
@@ -23,8 +23,8 @@
 # see <http://www.gnu.org/licenses/>.
 
 
-NAME Diŧionario vèneto
-VERSION 1.0.0 (08/03/2016)
+NAME Diŧionario de lengua vèneta
+VERSION 1.0.0 (2016/03/25)
 HOME http://parnodexmentegar.orgfree.com/
 LANG vec
 
@@ -59,7 +59,7 @@ MAP oóò
 MAP uúù
 
 # replace input characters
-ICONV 10
+ICONV 27
 ICONV ‒  -
 ICONV –  -
 ICONV —  -
@@ -70,6 +70,23 @@ ICONV jh ɉ
 ICONV lh l
 ICONV nh ñ
 ICONV th ŧ
+ICONV xc sc
+ICONV xf sf
+ICONV xk sk
+ICONV xp sp
+ICONV xt st
+ICONV sm xm
+ICONV sn xn
+ICONV sñ xñ
+ICONV sb xb
+ICONV sd xd
+ICONV sg xg
+ICONV sj xj
+ICONV sɉ xɉ
+ICONV ss xs
+ICONV sv xv
+ICONV sr xr
+ICONV sl xl
 
 # frequently switched character groups
 REP 27

@@ -401,6 +401,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bir",			"dex",		1,	1,	"a",	"1821",			"Xgrankir, xvejar.",
 "bir",			"in",			4,	3,	"a",	"1821",			"Rabrividir, pèrder par poko tenpo 'l uxo de kalke menbro pal fredo.",
 "birbant",		"",			1,	4,	"g",	"1821",			"Birbonexar.",
+"birikin",		"",			1,	5,	"a",	"1980",			"",
 "biron",			"in",			1,	3,	"a",	"1821",			"Ingangerar.",
 "bis",			"",			1,	1,	"a",	"1821",			"Afondar, subisar.",
 "bis",			"so",			1,	1,	"a",	"1867",			"",
