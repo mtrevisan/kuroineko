@@ -25,7 +25,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	var printFlagsAsNumber = false;
 	var logOnConsole = true;
-	var logNonVerbs = true;
+	var logNonVerbs = false;
 
 	/** @constant */
 //	var REDUCTION_RESERVED_0 = 150,
@@ -254,7 +254,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 					generateThemeT2GerundSimple(paradigm, verb, themes, IRREGULAR, origins, originTheme);
 				}
 				//ensure syncope does not occurs
-				if(!verb.irregularity.verb.match(/(dixer|poder|toler|voler|traer)$/))
+				if(!verb.irregularity.verb.match(/^(dixer|poder|[tv]oler|traer)$/))
 					generateThemeT2IndicativeImperfect(paradigm, verb, themes, IRREGULAR, origins, originTheme);
 				generateThemeT2SubjunctiveImperfect(paradigm, verb, themes, IRREGULAR, origins, originTheme);
 				generateThemeT2GerundSimple(paradigm, verb, themes, REGULAR, origins, originTheme);
@@ -272,7 +272,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				generateThemeT5IndicativePresent(paradigm, verb, themes, REGULAR, origins, originTheme);
 				generateThemeT5IndicativePresent(paradigm, verb, themes, IRREGULAR, origins, originTheme);
 				//ensure syncope does not occurs
-				if(!verb.irregularity.verb.match(/(dever|eser|s?aver|‘ver)$/))
+				if(!verb.irregularity.verb.match(/^(dever|eser|s?aver)$/))
 					generateThemeT5SubjunctivePresent(paradigm, verb, themes, REGULAR, origins, originTheme);
 				generateThemeT5SubjunctivePresent(paradigm, verb, themes, IRREGULAR, origins, originTheme);
 				if(!verb.irregularity.poder){
@@ -295,7 +295,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			function(paradigm, verb, themes, origins, originTheme){
 				generateThemeT8IndicativePresent(paradigm, verb, themes, REGULAR, origins, originTheme);
 				generateThemeT8IndicativePresent(paradigm, verb, themes, IRREGULAR, origins, originTheme);
-				if(!verb.irregularity.verb.match(/(dever|eser|s?aver|‘ver)$/))
+				if(!verb.irregularity.verb.match(/^(dever|eser|s?aver)$/))
 					generateThemeT8SubjunctivePresent(paradigm, verb, themes, REGULAR, origins, originTheme);
 				generateThemeT8SubjunctivePresent(paradigm, verb, themes, IRREGULAR, origins, originTheme);
 				generateThemeT8ParticiplePerfect_strong(paradigm, verb, themes, IRREGULAR, origins, originTheme);
@@ -316,7 +316,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 					generateThemeT11SubjunctiveImperfect(paradigm, verb, themes, REGULAR, origins, originTheme);
 				}
 				//ensure syncope does not occurs
-				if(!verb.irregularity.verb.match(/(dixer|poder|toler|voler|traer)$/))
+				if(!verb.irregularity.verb.match(/^(dixer|poder|[tv]oler|traer)$/))
 					generateThemeT11IndicativeImperfect(paradigm, verb, themes, IRREGULAR, origins, originTheme);
 				generateThemeT11SubjunctiveImperfect(paradigm, verb, themes, IRREGULAR, origins, originTheme);
 			},
@@ -324,7 +324,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				generateThemeT12IndicativePresent(paradigm, verb, themes, REGULAR, origins, originTheme);
 				generateThemeT12IndicativePresent(paradigm, verb, themes, IRREGULAR, origins, originTheme);
 				//ensure syncope does not occurs
-				if(!verb.irregularity.verb.match(/(dever|eser|s?aver|‘ver)$/))
+				if(!verb.irregularity.verb.match(/^(dever|eser|s?aver)$/))
 					generateThemeT12SubjunctivePresent(paradigm, verb, themes, REGULAR, origins, originTheme);
 				generateThemeT12SubjunctivePresent(paradigm, verb, themes, IRREGULAR, origins, originTheme);
 			},
@@ -354,10 +354,11 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	var printParadigm = function(list){
 		var logs = [],
 			m;
-		list.forEach(function(suffix){
-			m = suffix.match(this);
-			storeSuffix(logs, 1, m[1], m[2]);
-		}, /^(.+)>(.+)$/);
+		if(list.length && list[0] != undefined)
+			list.forEach(function(suffix){
+				m = suffix.match(this);
+				storeSuffix(logs, 1, m[1], m[2]);
+			}, /^(.+)>(.+)$/);
 
 		if(logs.length)
 			printSuffixes(logs, 1, 'vèrbi');
@@ -547,16 +548,18 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			sublist.suffixes = mergeIdenticalTransformations(sublist.suffixes);
 		});
 
-		var theme = list[0].theme,
-			compacted = ArrayHelper.partition(list, function(el){ return el.suffixes.join(';'); });
-		compacted = Object.keys(compacted).map(function(key){
-			return {
-				theme: theme,
-				origins: compacted[key].map(function(el){ return el.origin; }),
-				suffixes: key.split(';')
-			};
-		});
-		setElements(list, compacted);
+		if(list.length){
+			var theme = list[0].theme,
+				compacted = ArrayHelper.partition(list, function(el){ return el.suffixes.join(';'); });
+			compacted = Object.keys(compacted).map(function(key){
+				return {
+					theme: theme,
+					origins: compacted[key].map(function(el){ return el.origin; }),
+					suffixes: key.split(';')
+				};
+			});
+			setElements(list, compacted);
+		}
 	};
 
 	/** @private */
@@ -584,18 +587,20 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			flag = null;
 		}
 
-		var parts = ArrayHelper.partition(unique(sublist), function(el){ return el.replace(/\/[\d,]*@?$/, ''); }),
-			constraints, markerFlagFound;
-		sublist = Object.keys(parts).map(function(p){
-			constraints = parts[p].map(function(el){ return /[\d,]*@?$/.exec(el)[0]; });
-			markerFlagFound = constraints.some(function(el){ return (el.indexOf(MARKER_FLAGS) >= 0); });
-			constraints = ArrayHelper.flatten(constraints.map(function(el){ return el.replace(MARKER_FLAGS, '').split(','); }))
-				.filter(function(el){ return el; })
-				.map(function(el){ return Number(el); })
-				.sort(function(a, b){ return a - b; });
-			constraints = unique(constraints).join(',') + (markerFlagFound? MARKER_FLAGS: '');
-			return (constraints? p + '/' + constraints: p);
-		});
+		if(sublist.length && sublist[0] != undefined){
+			var parts = ArrayHelper.partition(unique(sublist), function(el){ return el.replace(/\/[\d,]*@?$/, ''); }),
+				constraints, markerFlagFound;
+			sublist = Object.keys(parts).map(function(p){
+				constraints = parts[p].map(function(el){ return /[\d,]*@?$/.exec(el)[0]; });
+				markerFlagFound = constraints.some(function(el){ return (el.indexOf(MARKER_FLAGS) >= 0); });
+				constraints = ArrayHelper.flatten(constraints.map(function(el){ return el.replace(MARKER_FLAGS, '').split(','); }))
+					.filter(function(el){ return el; })
+					.map(function(el){ return Number(el); })
+					.sort(function(a, b){ return a - b; });
+				constraints = unique(constraints).join(',') + (markerFlagFound? MARKER_FLAGS: '');
+				return (constraints? p + '/' + constraints: p);
+			});
+		}
 
 		if(flag)
 			sublist.unshift(flag);
@@ -720,7 +725,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			if(verb.infinitive.match(/(déver|(^|[^t])èser|s?aver|‘ver)$/)){
+			if(verb.infinitive.match(/(déver|(^|[^t])èser|s?av?ér|^[‘']vér)$/)){
 				insert(paradigm, 1, verb.infinitive, origin, themes.themeT1 + 'r', null, null, '/' + MARKER_FLAGS);
 				if(verb.irregularity.eser || verb.irregularity.aver)
 					insert(paradigm, 1, verb.infinitive, origin, themes.themeT1 + 'rge');
@@ -757,9 +762,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	/** @private */
 	var generateT2IndicativeImperfect = function(paradigm, verb, themeT2, origin){
-		var tmp = '(v)';
+		var tmp = 'v';
 		if(verb.irregularity.eser){
-			themeT2 = '(j/x)' + themeT2;
+			themeT2 = '(j/ɉ/x)' + themeT2;
 			tmp = 'r';
 		}
 		else if(verb.irregularity.aver)
@@ -776,7 +781,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			insert(paradigm, 2, verb.infinitive, origin, t + tmp + 'elo', null, null, '/' + INTERROGATIVE_MARK_3_2);
 			insert(paradigm, 2, verb.infinitive, origin, t + tmp + 'imo', null, null, '/' + INTERROGATIVE_MARK_1P);
 			insert(paradigm, 2, verb.infinitive, origin, t + tmp + 'imoi', null, null, '/' + INTERROGATIVE_MARK_1P_2);
-			if(!verb.irregularity.eser){
+			if(tmp == 'v' || !verb.irregularity.eser){
 				insert(paradigm, 2, verb.infinitive, origin, t + 'o', /o$/, '[oae]', '/' + INTERROGATIVE_MARK_1S + ',' + INTERROGATIVE_MARK_1P);
 				insert(paradigm, 2, verb.infinitive, origin, t + 'omi', /omi$/, '[oae]mi', '/' + INTERROGATIVE_MARK_1S_2);
 				insert(paradigm, 2, verb.infinitive, origin, t + 'i', null, null, '/' + INTERROGATIVE_MARK_2S);
@@ -866,7 +871,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(origins.indexOf(origin) < 0)
 				origins.push(origin);
 
-			if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver|‘ver)$/)){
+			if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?av?ér|^[‘']vér)$/)){
 				insert(paradigm, 2, verb.infinitive, origin, themes.themeT2 + 'ndo', null, null, '/' + PRONOMENAL_MARK + MARKER_FLAGS);
 				insert(paradigm, 2, verb.infinitive, origin, themes.themeT2 + 'ndome', null, null, '/' + PRONOMENAL_MARK_2);
 				insert(paradigm, 2, verb.infinitive, origin, themes.themeT2 + 'ndomene', null, null, '/' + PRONOMENAL_MARK_2);
@@ -897,7 +902,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				var themeT2;
 				if(themes.themeT2.match(/à$/)){
 					themeT2 = themes.themeT2.replace(/à$/, 'é');
-					if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver|‘ver)$/)){
+					if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?av?ér|^[‘']vér)$/)){
 						insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + PRONOMENAL_MARK + MARKER_FLAGS);
 						insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'ndome', null, null, '/' + PRONOMENAL_MARK_2);
 						insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'ndomene', null, null, '/' + PRONOMENAL_MARK_2);
@@ -907,7 +912,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				}
 				if(themes.themeT2.match(/í$/)){
 					themeT2 = themes.themeT2.replace(/í$/, 'é');
-					if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?aver|‘ver)$/)){
+					if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?av?ér|^[‘']vér)$/)){
 						insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + PRONOMENAL_MARK + MARKER_FLAGS);
 						insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'ndome', null, null, '/' + PRONOMENAL_MARK_2);
 						insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'ndomene', null, null, '/' + PRONOMENAL_MARK_2);
@@ -1207,7 +1212,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				origins.push(origin);
 
 			if(verb.conjugation == 3){
-				if(this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver|‘ver)$/))
+				if(this.verb.infinitive.match(/(déver|(^|[^t])èser|s?av?ér|^[‘']vér)$/))
 					insert(paradigm, 7, verb.infinitive, origin, themes.themeT7 + 'ndo');
 				else{
 					insert(paradigm, 7, verb.infinitive, origin, themes.themeT7 + 'ndo', null, null, '/' + PRONOMENAL_MARK);
@@ -1253,16 +1258,16 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 						}
 					}
 				}
-				insert(paradigm, 8, verb.infinitive, origin, t.replace(/([^i])$/, '$1' + (!verb.irregularity.verb.match(/(andar|darStarFar|s?aver|‘ver)$/) || !t.match(/à$/)? 'i': '')), null, null, '/' + INTERROGATIVE_MARK_2S);
-				insert(paradigm, 8, verb.infinitive, origin, t.replace(/([^i])$/, '$1' + (!verb.irregularity.verb.match(/(andar|darStarFar|s?aver|‘ver)$/) || !t.match(/à$/)? 'i': '')) + 'tu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
-				var third = t + (!verb.irregularity.verb.match(/(darStarFar|s?aver|‘ver)$/)? (verb.irregularity.eser? 'é': 'e'): '');
+				insert(paradigm, 8, verb.infinitive, origin, t.replace(/([^i])$/, '$1' + (!verb.irregularity.verb.match(/^(andar|darStarFar|s?aver)$/) || !t.match(/à$/)? 'i': '')), null, null, '/' + INTERROGATIVE_MARK_2S);
+				insert(paradigm, 8, verb.infinitive, origin, t.replace(/([^i])$/, '$1' + (!verb.irregularity.verb.match(/^(andar|darStarFar|s?aver)$/) || !t.match(/à$/)? 'i': '')) + 'tu', null, null, '/' + INTERROGATIVE_MARK_2S_2);
+				var third = t + (!verb.irregularity.verb.match(/^(darStarFar|s?aver)$/)? (verb.irregularity.eser? 'é': 'e'): '');
 				insert(paradigm, 8, verb.infinitive, origin, third, null, null, '/' + INTERROGATIVE_MARK_3 + MARKER_FLAGS);
 				insert(paradigm, 8, verb.infinitive, origin, third.replace(/[ai]$/, 'e') + 'lo', null, null, '/' + INTERROGATIVE_MARK_3_2);
 				if(third.match(/[^aeiouàèéíòóú]e$/))
 					insert(paradigm, 8, verb.infinitive, origin, third, null, null, '/' + FINAL_CONSONANT_VOICING_MARK);
-				if(verb.irregularity.verb.match(/(dixer|traer|toler)$/)){
-					insert(paradigm, 8, verb.infinitive, origin, t.replace(/[lx]?$/, 'go'), null, null, '/' + INTERROGATIVE_MARK_1S + ',' + INTERROGATIVE_MARK_1P);
-					insert(paradigm, 8, verb.infinitive, origin, t.replace(/[lx]?$/, 'go') + 'mi', null, null, '/' + INTERROGATIVE_MARK_1S_2);
+				if(verb.irregularity.verb.match(/^(dixer|traer|toler)$/)){
+					insert(paradigm, 8, verb.infinitive, origin, t.replace(/[lƚx]?$/, 'go'), null, null, '/' + INTERROGATIVE_MARK_1S + ',' + INTERROGATIVE_MARK_1P);
+					insert(paradigm, 8, verb.infinitive, origin, t.replace(/[lƚx]?$/, 'go') + 'mi', null, null, '/' + INTERROGATIVE_MARK_1S_2);
 				}
 			});
 		}
@@ -1289,7 +1294,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				if(t.match(/[^aeiouàèéíòóú]$/))
 					insert(paradigm, 8, verb.infinitive, origin, t + 'e', null, null, '/' + FINAL_CONSONANT_VOICING_MARK);
 
-				if(type == IRREGULAR && !verb.irregularity.verb.match(/([a‘]ver|dever|eser)$/)){
+				if(type == IRREGULAR && !verb.irregularity.verb.match(/(^aver|dever|eser)$/)){
 					insert(paradigm, 8, verb.infinitive, origin, t + 'a', /([aeiouàèéíòóú])a$/, '$1(g)a');
 					if(t.match(/[aeiouàèéíòóú]$/))
 						insert(paradigm, 8, verb.infinitive, origin, t + 'i', /i$/, '(g)i');
@@ -1297,8 +1302,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 						insert(paradigm, 8, verb.infinitive, origin, t.replace(/([^i])$/, '$1i'));
 				}
 
-				if(verb.irregularity.verb.match(/(dixer|traer|toler)$/))
-					insert(paradigm, 8, verb.infinitive, origin, t + 'a', /[lx]?a$/, 'g[ai]');
+				if(verb.irregularity.verb.match(/^(dixer|traer|toler)$/))
+					insert(paradigm, 8, verb.infinitive, origin, t + 'a', /[lƚx]?a$/, 'g[ai]');
 			});
 		}
 	};
@@ -1347,16 +1352,16 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 					{matcher: /(pià|fí)x$/, replacement: '$1s'},
 					{matcher: /(spà|[mtv]è)rx$/, replacement: '$1rs'},
 					{matcher: /dúx$/, replacement: 'dót'},
-					{matcher: /l[èí][đx]$/, replacement: 'lèt'},
-					{matcher: /strén[đx]$/, replacement: 'strét'},
-					{matcher: /([rn]|frí)[đx]$/, replacement: '$1t'},
+					{matcher: /([lƚ])[èí][dđx]$/, replacement: '$1èt'},
+					{matcher: /strén[dđx]$/, replacement: 'strét'},
+					{matcher: /rd$/, replacement: 'rs'},
+					{matcher: /([rn]|frí)[dđx]$/, replacement: '$1t'},
 					{matcher: /ríx$/, replacement: 'rèt'},
 					{matcher: /([aeiouàèéíòóúl])x$/, falsePositives: /nòx$/, replacement: '$1t'},
-					{matcher: /rd$/, replacement: 'rs'},
 					{matcher: /(pà|kó)nd$/, replacement: '$1nt'},
 					{matcher: /pónd$/, replacement: 'póst'},
 					{matcher: /fónd$/, replacement: 'fúx'},
-					{matcher: /nd$/, replacement: 'x'},
+					{matcher: /([^fv])énd$/, replacement: '$1éx'},
 					{matcher: /véd$/, replacement: 'víst'},
 					{matcher: /([csŧ])éd$/, replacement: '$1ès'},
 					{matcher: /([aeiouàèéíòóúnl])d$/, replacement: '$1x'},
@@ -1367,10 +1372,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 					{matcher: /prím$/, replacement: 'près'},
 					{matcher: /xím$/, replacement: 'xént'},
 					{matcher: /úm$/, replacement: 'únt'},
-					{matcher: /espèl$/, replacement: 'espúls'},
+					{matcher: /espè[lƚ]$/, replacement: 'espúls'},
 					{matcher: /kòj$/, replacement: 'kòlt'},
 					{matcher: /kór$/, replacement: 'kórs'},
-					{matcher: /íɉ$/, replacement: 'àt'},
+					{matcher: /í[jɉ]$/, replacement: 'àt'},
 					{matcher: /nàs$/, replacement: 'nàt'},
 					{matcher: /n[sŧ]$/, replacement: 'nt'},
 					{matcher: /pón$/, replacement: 'pòst'},
@@ -1380,13 +1385,13 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				],
 				//rhizoatone
 				[
-					{matcher: /sól$/, replacement: 'sólit'},
-					{matcher: /vàl$/, replacement: 'vàls'},
+					{matcher: /só([lƚ])$/, replacement: 'só$1it'},
+					{matcher: /và[lƚ]$/, replacement: 'vàls'},
 					//(per|re)maner
 					{matcher: /n$/, replacement: 'x'},
 					//{matcher: /n$/, replacement: 'st'},
 					{matcher: /r$/, replacement: 'rs'},
-					{matcher: /tòl$/, replacement: 'tòlt'}
+					{matcher: /tò[lƚ]$/, replacement: 'tòlt'}
 				]
 			],
 
@@ -1394,7 +1399,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			[
 				{matcher: /mòr$/, falsePositives: /(inti|mar)mòr$/, replacement: 'mòrt'},
 				{matcher: /([^aeiouàèéíòóú])r$/, falsePositives: /(mòr|núdr)$/, replacement: '$1èrt'},
-				{matcher: /sepel$/, replacement: 'sepólt'},
+				{matcher: /sepe[lƚ]$/, replacement: 'sepólt'},
 				{matcher: /fér$/, replacement: 'fèrt'},
 				{matcher: /([aeiouàèéíòóú])r$/, replacement: '$1rs'}
 			]
@@ -1447,7 +1452,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 			expandForm(themes.themeT10).forEach(function(t){
 				if(themes.themeT8){
-					var third = themes.themeT8 + (!verb.irregularity.verb.match(/(darStarFar|s?aver|‘ver)$/)? (verb.irregularity.eser? 'é': 'e'): '');
+					var third = themes.themeT8 + (!verb.irregularity.verb.match(/^(darStarFar|s?aver)$/)? (verb.irregularity.eser? 'é': 'e'): '');
 					if(t != third){
 						if(verb.irregularity.eser)
 							t = '[x]' + t;
@@ -1512,7 +1517,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 			var themeT11 = themes.themeT11;
 			if(verb.irregularity.eser)
-				themeT11 = themeT11.replace(/^fu/, '[fu/fure]');
+				themeT11 = themeT11.replace(/^fu/, 'fu(re)');
 			else if(verb.irregularity.aver)
 				themeT11 = themeT11.replace(/^av/, 'a(v)').replace(/^gav/, 'g(av)');
 
@@ -1612,7 +1617,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(!themes.themeT8)
 				return null;
 
-			var third = themes.themeT8 + (!verb.irregularity.verb.match(/(darStarFar|s?aver|‘ver)$/)? (verb.irregularity.eser? 'é': 'e'): '');
+			var third = themes.themeT8 + (!verb.irregularity.verb.match(/^(darStarFar|s?aver)$/)? (verb.irregularity.eser? 'é': 'e'): '');
 			return third.replace(/\(.+\)/g, '');
 		}
 
@@ -1688,12 +1693,12 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			tmp;
 		if(idx >= 0){
 			//exclude unmark from one-syllabe words ending in vowel
-			tmp = ((hyphenator.hyphenate(word).length > 1 || word.match(/[^aeiouàèéíòóú]$/))
+			tmp = ((hyphenator.hyphenate(word).syllabes.length > 1 || word.match(/[^aeiouàèéíòóú]$/))
 					&& !Grapheme.isDiphtong(word.substr(idx, 2))
 					&& !Grapheme.isHyatus(word.substr(idx, 2))
 					&& !word.match(/^(re)?\(?g?\)?(à\/è|à|é|ò)[oaie]?$/)
 					&& !word.match(/^\(?x?\)?é$|^s[éí][oaie]?$/)
-					&& !word.match(/^((r[ei])?d[àé]|(kon(tra)?|likue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?f[àé]|(mal|move|soto)?st[àé])[oaie]?$/)
+					&& !word.match(/^((r[ei])?d[àé]|(kon(tra)?|[lƚ]ikue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?f[àé]|(mal|move|soto)?st[àé])[oaie]?$/)
 					&& !word.match(/^(và[oaie]?|vé)[oaie]?$/)
 					&& !word.match(/^s[àò][oaie]?$/)
 					&& !word.match(/^(|as?|des?|es|kon|pro|re|so)tr[àé][oaie]?$/)?

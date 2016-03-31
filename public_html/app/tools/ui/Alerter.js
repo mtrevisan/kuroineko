@@ -255,7 +255,7 @@ define(['HTMLHelper'], function(HTMLHelper){
 
 		if(container){
 			var fn = function(container){
-				container.parentNode.removeChild(container);
+				container.parentNode && container.parentNode.removeChild(container);
 			};
 
 			waitOnLogForTransitionEnd(function(){

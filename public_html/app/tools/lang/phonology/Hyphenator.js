@@ -139,7 +139,7 @@ define(['tools/data/structs/Trie', 'tools/lang/phonology/Word'], function(Trie, 
 	/** @private */
 	var hasSyllabationErrors = function(){
 		return this.syllabes.some(function(syllabe){
-			return (Word.getLastVowelIndex(syllabe) < 0);
+			return (!syllabe.match(/['‘’]/) && Word.getLastVowelIndex(syllabe) < 0);
 		});
 	};
 

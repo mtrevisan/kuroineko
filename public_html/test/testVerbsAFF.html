@@ -26,11 +26,41 @@
 			};
 		})();
 
-		var composeInfinitiveWithoutPrefix = (function(){
-			var themeVowel = ['à', 'é', 'e', 'í', 'í'];
+		var expandForm = (function(){
+			var add = function(list, value){
+				if(list.indexOf(value) < 0)
+					list.push(value);
+			};
 
-			return function(v){
-				return v.radix.replace(/ɉ/g, 'j') + themeVowel[v.conjugation - 1] + 'r';
+
+			return function recurse(forms, list){
+				var m;
+				if(!Array.isArray(list))
+					list = [];
+				[].concat(forms).forEach(function(form){
+					m = form.match(/^(.*)([\(\[])(.+)[\)\]](.*)$/);
+					if(m){
+						m[1] = m[1] || '';
+						m[4] = m[4] || '';
+
+						if(m[2] == '('){
+							recurse(m[1] + m[4], list);
+							if(m[3].indexOf('/') >= 0)
+								m[3].split('/').forEach(function(el){
+									recurse(m[1] + el + m[4], list);
+								});
+							else
+								recurse(m[1] + m[3] + m[4], list);
+						}
+						else
+							m[3].split(m[3].indexOf('/') >= 0? '/': '').forEach(function(el){
+								recurse(m[1] + el + m[4], list);
+							});
+					}
+					else
+						add(list, form);
+				});
+				return list;
 			};
 		})();
 
@@ -43,15 +73,20 @@
 			var verbs = [],
 				inf;
 			verbsDictionary.forEach(function(infinitive){
-				inf = composeInfinitiveWithoutPrefix(infinitive);
-				if(['fàr', 'fegàr', 'folàr', 'fraxàr', 'fugàr', 'itàr', 'menàr', 'mentír', 'negàr', 'pegàr', 'plegàr', 'plikàr', 'putàr', 'rogàr', 'speràr', 'stàr', 'ŧipàr', 'vokàr'].indexOf(inf) >= 0)
-					inf = composeInfinitive(infinitive);
+				inf = composeInfinitive(infinitive);
 
 //if(['domàr', 'domandàr', 'domenàr', 'domestegàr'].indexOf(inf) >= 0)
 //if(['skoltàr'].indexOf(inf) >= 0)
-if(['èser', 'avér'].indexOf(inf) >= 0)
-				if(verbs.indexOf(inf) < 0)
-					verbs.push(new Verb(inf));
+//if(['èser', 'avér'].indexOf(inf) >= 0)
+				inf = inf.replace(/(^|[aeiouàèéíòóú])l([aeiouàèéíòóú])/, '$1[lƚ]$2')
+					.replace(/(^|[aeiouàèéíòóú])đ([aeiouàèéíòóú])/, '$1[đx]$2')
+					.replace(/([lnr])đ([aeiouàèéíòóú])/, '$1[dđx]$2')
+					.replace(/(^|[aeiouàèéíòóú])ŧ([aeiouàèéíòóú])/, '$1[sŧ]$2')
+					.replace(/j/, '[jɉ]');
+				expandForm(inf).forEach(function(t){
+					if(verbs.indexOf(t) < 0)
+						verbs.push(new Verb(t));
+				});
 			});
 
 			/*var verbs = [],

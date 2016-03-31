@@ -12,7 +12,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/data/Asse
 			infinitive = Word.markDefaultStress(infinitive);
 
 		//get pro-complementar pronouns
-		var proComplementarPronouns = infinitive.match(/([gs]e)?(l[ae]|ne)?$/).filter(function(el){ return el; });
+		var proComplementarPronouns = infinitive.match(/([gs]e)?([lƚ][ae]|ne)?$/).filter(function(el){ return el; });
 		if(proComplementarPronouns.length){
 			//remove pro-complementar pronouns
 			infinitive = infinitive.substr(0, infinitive.length - proComplementarPronouns[0].length);
@@ -26,10 +26,6 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/data/Asse
 		var noStress = (Word.getIndexOfStress(infinitive) < 0);
 		if(noStress)
 			infinitive = StringHelper.setCharacterAt(infinitive, infinitive.length - 2, Word.addStressAcute);
-
-		//convert '-ar into '-er
-		if(infinitive.match(/([àèéíòóú][^aeiou]*a)r$/))
-			infinitive = infinitive.replace(/ar$/, 'er');
 
 
 		var themeVowel = infinitive[infinitive.length - 2],
@@ -65,7 +61,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/data/Asse
 
 	/** @private */
 	var checkForErrors = function(infinitive, syllabation){
-		Assert.assert(infinitive.match(/^([aàbcdđeèéfgiíjɉklƚmnñoòóprsʃtŧuúvxʒ]|[djlnstx]h)+$/), 'NOT_ALFABETIC');
+		Assert.assert(infinitive.match(/^(['‘’aàbcdđeèéfgiíjɉklƚmnñoòóprsʃtŧuúvxʒ]|[djlnstx]h)+$/), 'NOT_ALFABETIC');
 
 		//NOTE: [^aeio]*e would be erroneous because it wouldn't consider the eterophonic sequence /ier$/.
 		Assert.assert(infinitive.match(/([àèéí]|[àèéíòóú][^aeo]*e)r$/), 'NOT_A_VERB_INFINITIVE');
@@ -88,8 +84,8 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/data/Asse
 			{matcher: /^(.*)([èé]ne|e[nñ]é)r$/, replacement: '$1èñer'},
 			{matcher: /^(.*p)ór$/, replacement: '$1onér'},
 			{matcher: /^(.*t)ór$/, replacement: '$1olér'},
-			{matcher: /^(kon(tra)?|likue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?fàr$/, replacement: '$1fàŧer'},
-			{matcher: /^(po)dér$/, replacement: '$1sér'}
+			{matcher: /^(kon(tra)?|[lƚ]ikue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?fàr$/, replacement: '$1fàŧer'},
+			{matcher: /^(po)d?ér$/, replacement: '$1sér'}
 		];
 
 		return function(infinitive, proComplementarPronouns, noStress, themeVowel, syllabation){
@@ -110,14 +106,14 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/data/Asse
 	/** @private */
 	var getIrregularity = (function(){
 		var data = {
-			andar: /^(r[ei])?andàr$/,
-			darStarFar: /^((r[ei])?dàr|(mal|move|soto)?stàr|(kon(tra)?|likue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?fàr)$/,
-			aver: /(^g?a|reg?a|‘)vér$/,
+			andar: /^((r[ei])?and|[‘']nd?)àr$/,
+			darStarFar: /^((r[ei])?dàr|(mal|move|soto)?stàr|(kon(tra)?|[lƚ]ikue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?fàr)$/,
+			aver: /^(g?av?|reg?av?|[‘']v)ér$/,
 			dever: /déver$/,
-			eser: /(^|r[ei])èser$/,
+			eser: /^(r[ei])?èser$/,
 			dixer: /díxer$/,
-			poder: /podér$/,
-			saver: /savér$/,
+			poder: /pod?ér$/,
+			saver: /sav?ér$/,
 			traer: /(|as?|des?|es|kon|pro|re|so)?tràer$/,
 			enher: /[èé]ñer$/,
 			toler: /to[lƚ]ér$/,
@@ -140,7 +136,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/data/Asse
 
 	/** @private */
 	var isOssitone = (function(){
-		var ossitones = [/(^|re)avér$/, /manér$/, /parér$/, /podér$/, /savér$/, /[tv]olér$/, /valér$/];
+		var ossitones = [/^(g?av?|reg?av?|[‘']v)ér$/, /manér$/, /parér$/, /pod?ér$/, /sav?ér$/, /[tv]o[lƚ]ér$/, /va[lƚ]ér$/];
 
 		return function(infinitive){
 			return StringHelper.isMatching(infinitive, ossitones);

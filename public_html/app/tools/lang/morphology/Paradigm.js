@@ -69,7 +69,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 
 		if(t.themeT12 || t.themeT5 || t.themeT8 || t.themeT10){
 			var root = namespace(this.paradigm, 'indicative', 'present', type),
-				pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK: ''),
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?av?er|^[‘']ver)$/)? PRONOMENAL_MARK: ''),
 				person;
 			if(t.themeT8){
 				person = root.firstSingular = {};
@@ -130,7 +130,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			if(t.themeT8 && this.verb.irregularity.verb.match(/dixer|traer|toler/)){
 				root = namespace(this.paradigm, 'indicative', 'present', IRREGULAR);
 				root.firstSingular || (root.firstSingular = {});
-				root.firstSingular.central_centralNorthern_lagunar_western = pronomenalMark + t.themeT8.replace(/[lx]?$/, 'go');
+				root.firstSingular.central_centralNorthern_lagunar_western = pronomenalMark + t.themeT8.replace(/[lƚx]?$/, 'go');
 			}
 		}
 	};
@@ -139,7 +139,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 	var generateIndicativeImperfect = function(type, t){
 		if(t.themeT2 || t.themeT11){
 			var root = namespace(this.paradigm, 'indicative', 'imperfect', type),
-				pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK: '');
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?av?er|^[‘']ver)$/)? PRONOMENAL_MARK: '');
 			if(t.themeT2){
 				var tmp = pronomenalMark + t.themeT2 + (this.verb.irregularity.eser? 'r': '(v)');
 				root.firstSingular = {
@@ -176,7 +176,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 	var generateIndicativeFuture = function(type, t){
 		if(t.themeT4){
 			var root = namespace(this.paradigm, 'indicative', 'future', type),
-				pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK: ''),
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?av?er|^[‘']ver)$/)? PRONOMENAL_MARK: ''),
 				firstPlural = pronomenalMark + t.themeT4 + 'r';
 			root.firstSingular = {
 				general: firstPlural + 'à',
@@ -209,7 +209,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 
 		if(t.themeT12 || t.themeT5 || t.themeT8){
 			var root = namespace(this.paradigm, 'subjunctive', 'present', type),
-				pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK: '');
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?av?er|^[‘']ver)$/)? PRONOMENAL_MARK: '');
 			if(t.themeT8){
 				root.firstSingular = {
 					general: pronomenalMark + t.themeT8 + 'a',
@@ -255,9 +255,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				root.firstSingular || (root.firstSingular = {});
 				root.secondSingular || (root.secondSingular = {});
 				root.third || (root.third = {});
-				root.firstSingular.central_centralNorthern_lagunar_western = pronomenalMark + t.themeT8.replace(/[lx]?$/, 'ga');
-				root.secondSingular.general = pronomenalMark + t.themeT8.replace(/[lx]?$/, 'gi');
-				root.third.general = pronomenalMark + t.themeT8.replace(/[lx]?$/, 'ga');
+				root.firstSingular.central_centralNorthern_lagunar_western = pronomenalMark + t.themeT8.replace(/[lƚx]?$/, 'ga');
+				root.secondSingular.general = pronomenalMark + t.themeT8.replace(/[lƚx]?$/, 'gi');
+				root.third.general = pronomenalMark + t.themeT8.replace(/[lƚx]?$/, 'ga');
 			}
 		}
 	};
@@ -268,7 +268,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 
 		if(t.themeT2 || t.themeT11){
 			var root = namespace(this.paradigm, 'subjunctive', 'imperfect', type),
-				pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK: '');
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?av?er|^[‘']ver)$/)? PRONOMENAL_MARK: '');
 			if(t.themeT2){
 				var tmp = pronomenalMark + t.themeT2 + 's';
 				root.firstSingular = {
@@ -301,7 +301,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 	var generateConditionalSimple = function(type, t){
 		if(t.themeT4){
 			var root = namespace(this.paradigm, 'conditional', 'simple', type),
-				pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK: ''),
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?av?er|^[‘']ver)$/)? PRONOMENAL_MARK: ''),
 				tmp = pronomenalMark + t.themeT4 + 'rí',
 				firstPlural = pronomenalMark + t.themeT4 + 'r(is)';
 			root.firstSingular = {
@@ -334,7 +334,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 
 		if(t.themeT5 || t.themeT9){
 			var root = namespace(this.paradigm, 'imperative', 'present', type),
-				pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK: '');
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?av?er|^[‘']ver)$/)? PRONOMENAL_MARK: '');
 			if(t.themeT9)
 				root.secondSingular = {
 					general: pronomenalMark + t.themeT9 + PRONOMENAL_MARK_IMPERATIVE
@@ -352,7 +352,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 	var generateInfinitiveSimple = function(type, t){
 		if(t.themeT1){
 			var root = namespace(this.paradigm, 'infinitive', 'simple', type),
-				pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK: '');
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?av?er|^[‘']ver)$/)? PRONOMENAL_MARK: '');
 			root.all1 = t.themeT1 + 'r' + pronomenalMark;
 			root.all2 = t.themeT1 + 're';
 		}
@@ -411,7 +411,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 	var generateGerundSimple = function(type, t){
 		if(t.themeT2 || t.themeT7){
 			var person = namespace(this.paradigm, 'gerund', 'simple', type, 'all'),
-				pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?aver)$/)? PRONOMENAL_MARK: '');
+				pronomenalMark = (!this.verb.infinitive.match(/(déver|(^|[^t])èser|s?av?er|^[‘']ver)$/)? PRONOMENAL_MARK: '');
 			if(t.themeT2)
 				person.regular1 = t.themeT2 + 'ndo' + pronomenalMark;
 			if(t.themeT7)
@@ -442,16 +442,16 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 					{matcher: /(pià|fí)x$/, replacement: '$1s'},
 					{matcher: /(spà|[mtv]è)rx$/, replacement: '$1rs'},
 					{matcher: /dúx$/, replacement: 'dót'},
-					{matcher: /l[èí][đx]$/, replacement: 'lèt'},
-					{matcher: /strén[đx]$/, replacement: 'strét'},
-					{matcher: /([rn]|frí)[đx]$/, replacement: '$1t'},
+					{matcher: /([lƚ])[èí][dđx]$/, replacement: '$1èt'},
+					{matcher: /strén[dđx]$/, replacement: 'strét'},
+					{matcher: /rd$/, replacement: 'rs'},
+					{matcher: /([rn]|frí)[dđx]$/, replacement: '$1t'},
 					{matcher: /ríx$/, replacement: 'rèt'},
 					{matcher: /([aeiouàèéíòóúl])x$/, falsePositives: /nòx$/, replacement: '$1t'},
-					{matcher: /rd$/, replacement: 'rs'},
 					{matcher: /(pà|kó)nd$/, replacement: '$1nt'},
 					{matcher: /pónd$/, replacement: 'póst'},
 					{matcher: /fónd$/, replacement: 'fúx'},
-					{matcher: /nd$/, replacement: 'x'},
+					{matcher: /([^fv])énd$/, replacement: '$1éx'},
 					{matcher: /véd$/, replacement: 'víst'},
 					{matcher: /([csŧ])éd$/, replacement: '$1ès'},
 					{matcher: /([aeiouàèéíòóúnl])d$/, replacement: '$1x'},
@@ -462,10 +462,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 					{matcher: /prím$/, replacement: 'près'},
 					{matcher: /xím$/, replacement: 'xént'},
 					{matcher: /úm$/, replacement: 'únt'},
-					{matcher: /espèl$/, replacement: 'espúls'},
+					{matcher: /espè[lƚ]$/, replacement: 'espúls'},
 					{matcher: /kòj$/, replacement: 'kòlt'},
 					{matcher: /kór$/, replacement: 'kórs'},
-					{matcher: /íɉ$/, replacement: 'àt'},
+					{matcher: /í[jɉ]$/, replacement: 'àt'},
 					{matcher: /nàs$/, replacement: 'nàt'},
 					{matcher: /n[sŧ]$/, replacement: 'nt'},
 					{matcher: /pón$/, replacement: 'pòst'},
@@ -475,13 +475,13 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				],
 				//rhizoatone
 				[
-					{matcher: /sól$/, replacement: 'sólit'},
-					{matcher: /vàl$/, replacement: 'vàls'},
+					{matcher: /só([lƚ])$/, replacement: 'só$1it'},
+					{matcher: /và[lƚ]$/, replacement: 'vàls'},
 					//(per|re)maner
 					{matcher: /n$/, replacement: 'x'},
 					//{matcher: /n$/, replacement: 'st'},
 					{matcher: /r$/, replacement: 'rs'},
-					{matcher: /tòl$/, replacement: 'tòlt'}
+					{matcher: /tò[lƚ]$/, replacement: 'tòlt'}
 				]
 			],
 
@@ -489,7 +489,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 			[
 				{matcher: /mòr$/, falsePositives: /(inti|mar)mòr$/, replacement: 'mòrt'},
 				{matcher: /([^aeiouàèéíòóú])r$/, falsePositives: /(mòr|núdr)$/, replacement: '$1èrt'},
-				{matcher: /sepel$/, replacement: 'sepólt'},
+				{matcher: /sepe[lƚ]$/, replacement: 'sepólt'},
 				{matcher: /fér$/, replacement: 'fèrt'},
 				{matcher: /([aeiouàèéíòóú])r$/, replacement: '$1rs'}
 			]
@@ -598,7 +598,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				if(key.match(/^archaic/))
 					subParadigm[key] = subParadigm[key].replace(/^#(re)?/, '$1' + morpheme);
 			});
-			morpheme = (dialect.none? '(x/j)': (dialect.centralNorthern || dialect.oriental? 'j': '[x/j]'));
+			morpheme = (dialect.none? '(x/j/ɉ)': (dialect.centralNorthern || dialect.oriental? 'j': '[x/j/ɉ]'));
 			visit(this.indicative.imperfect.irregular, function(subParadigm, key){
 				if(!key.match(/^northern/) || key.match(/oriental/))
 					subParadigm[key] = subParadigm[key].replace(/^#(re)?/, '$1' + morpheme);
