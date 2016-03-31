@@ -85,9 +85,10 @@
 					.replace(/j/, '[jɉ]');
 				expandForm(inf).forEach(function(t){
 					if(verbs.indexOf(t) < 0)
-						verbs.push(new Verb(t));
+						verbs.push(t);
 				});
 			});
+			verbs = verbs.map(function(v){ return new Verb(v); });
 
 			/*var verbs = [],
 				infinitives = [],
