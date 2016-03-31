@@ -128,20 +128,20 @@ define(function(){
 	};
 
 	/**
-    * Creates a throttled version of the passed function which, when called repeatedly and rapidly, invokes the passed function only
+	 * Creates a throttled version of the passed function which, when called repeatedly and rapidly, invokes the passed function only
 	 * after a certain interval has elapsed since the previous invocation.
-    * <p>
-    * This is useful for wrapping functions which may be called repeatedly, such as a handler of a mouse move event when the processing
+	 * <p>
+	 * This is useful for wrapping functions which may be called repeatedly, such as a handler of a mouse move event when the processing
 	 * is expensive.
 	 *
 	 * @see Ext JS 4.0.7's Ext.Function.createThrottled
-    *
-    * @param {Function} fn			The function to execute at a regular time interval.
-    * @param {Number} interval	The interval **in milliseconds** on which the passed function is executed.
-    * @param {Object} [scope]		The scope (<code>this</code> reference) in which the passed function is executed.
+	 *
+	 * @param {Function} fn			The function to execute at a regular time interval.
+	 * @param {Number} interval	The interval **in milliseconds** on which the passed function is executed.
+	 * @param {Object} [scope]		The scope (<code>this</code> reference) in which the passed function is executed.
 	 *										If omitted, defaults to the scope specified by the caller.
-    * @returns {Function}			A function which invokes the passed function at the specified interval.
-    */
+	 * @returns {Function}			A function which invokes the passed function at the specified interval.
+	 */
 	var createThrottled = function(fn, interval, scope){
 		var execute = function(){
 				fn.apply(scope || this, lastArgs);

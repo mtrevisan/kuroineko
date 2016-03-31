@@ -350,7 +350,7 @@ var AMDLoader = (function(doc){
 		//	- remove any /* */ comments in the function body (because they can occur in the parameters)
 		//	- extract the dependencies
 		//	- split and trim them, return an array
-		return  (fn? fn.toString().replace(/\/\*.*?\*\//g, '').match(/^function ?\((.*?)\)$/)[1].split(',')
+		return (fn? fn.toString().replace(/\/\*.*?\*\//g, '').match(/^function ?\((.*?)\)$/)[1].split(',')
 			.filter(Boolean)
 			.map(function(dependency){
 				return this + dependency.trim();
