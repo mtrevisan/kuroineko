@@ -75,18 +75,19 @@
 			verbsDictionary.forEach(function(infinitive){
 				inf = composeInfinitive(infinitive);
 
-//if(['domàr', 'domandàr', 'domenàr', 'domestegàr'].indexOf(inf) >= 0)
-//if(['skoltàr'].indexOf(inf) >= 0)
-//if(['èser', 'avér'].indexOf(inf) >= 0)
-				inf = inf.replace(/(^|[aeiouàèéíòóú])l([aeiouàèéíòóú])/, '$1[lƚ]$2')
-					.replace(/(^|[aeiouàèéíòóú])đ([aeiouàèéíòóú])/, '$1[đx]$2')
-					.replace(/([lnr])đ([aeiouàèéíòóú])/, '$1[dđx]$2')
-					.replace(/(^|[aeiouàèéíòóú])ŧ([aeiouàèéíòóú])/, '$1[sŧ]$2')
-					.replace(/j/, '[jɉ]');
-				expandForm(inf).forEach(function(t){
-					if(verbs.indexOf(t) < 0)
-						verbs.push(t);
-				});
+//if(['domàr', 'domandàr', 'domenàr', 'domestegàr'].indexOf(inf) >= 0){
+//if(['skoltàr', 'kovèrđer'].indexOf(inf) >= 0){
+//if(['èser', 'avér'].indexOf(inf) >= 0){
+					inf = inf.replace(/(^|[aeiouàèéíòóú])l([aeiouàèéíòóú])/, '$1[lƚ]$2')
+						.replace(/(^|[aeiouàèéíòóú])đ([aeiouàèéíòóú])/, '$1[đx]$2')
+						.replace(/([lnr])đ([aeiouàèéíòóú])/, '$1[dđx]$2')
+						.replace(/(^|[aeiouàèéíòóú])ŧ([aeiouàèéíòóú])/, '$1[sŧ]$2')
+						.replace(/j/, '[jɉ]');
+					expandForm(inf).forEach(function(t){
+						if(verbs.indexOf(t) < 0)
+							verbs.push(t);
+					});
+//				}
 			});
 			verbs = verbs.map(function(v){ return new Verb(v); });
 
