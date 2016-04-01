@@ -1,7 +1,7 @@
 /**
  * @class AMDLoader
  *
- * NOTE: Circular dependencies will be reported.
+ * NOTE: Circular dependencies will be reported (there must be the file /tools/data/structs/Tarjan.js present).
  *
  * @example
  * <code>
