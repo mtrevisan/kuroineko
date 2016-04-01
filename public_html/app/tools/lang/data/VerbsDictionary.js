@@ -1932,6 +1932,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kàd",			"s",			3,	1,	"g",	"2007",			"",
 "kaden",			"in",			1,	3,	"a",	"1560",			"",
 "kaden",			"s",			1,	3,	"a",	"1867",			"",
+"kaduk",			"",			1,	1,	"g",	"1821",			"",
 "kaec",			"in",			1,	2,	"a",	"1821",			"",
 "kaen",			"des",		1,	2,	"a",	"1821",			"Skadenar.",
 "kaen",			"in",			1,	2,	"a",	"1560",			"",

@@ -2,6 +2,7 @@
  * @class Decorator
  *
  * @see {@link http://robdodson.me/javascript-design-patterns-decorator/}
+ * @see {@link http://nickmeldrum.com/blog/decorators-in-javascript-using-monkey-patching-closures-prototypes-proxies-and-middleware?utm_source=javascriptweekly&utm_medium=email}
  *
  * @author Mauro Trevisan
  */
