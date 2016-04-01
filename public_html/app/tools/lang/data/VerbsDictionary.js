@@ -1950,6 +1950,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kal",			"",			1,	1,	"g",	"1821",			"",
 "kal",			"in",			4,	3,	"a",	"1867",			"Far el kalo.",
 "kal",			"inter",		1,	1,	"g",	"1867",			"",
+"kalaf",			"",			1,	3,	"g",	"1821",			"Ratopar i navigli par no far entrar akua.",
 "kalafat",		"",			1,	5,	"g",	"1867",			"Ratopar i navigli par no far entrar akua.",
 "kald",			"s",			1,	1,	"g",	"1821",			"",
 "kald",			"res",		1,	1,	"g",	"1821",			"",
