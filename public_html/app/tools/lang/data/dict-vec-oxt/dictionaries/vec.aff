@@ -1,6 +1,6 @@
 # Diŧionario de lengua vèneta
 #
-# Venetam hunspell affix file
+# Venetan hunspell affix file
 # Copyright (C) 2016 Màuro Trevixan
 # Version 1.0.2 (2016/04/01) (YYYY/MM/DD)
 #
@@ -19,7 +19,7 @@
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public
-# License along with the "diŧionario vèneto", if not,
+# License along with the "diŧionario de lengua vèneta", if not,
 # see <http://www.gnu.org/licenses/>.
 
 
@@ -128,7 +128,7 @@ REP ^‘ g
 KEEPCASE Z  # km, GHz, DVD, ...
 
 
-SFX A Y 59654 # vèrbi
+SFX A Y 59677 # vèrbi
 SFX A abalar àbala/FR abalar
 SFX A abalar àbale/IJLR abalar
 SFX A abalar àbalelo/S abalar
@@ -330,22 +330,29 @@ SFX A aduar àdui/N aduar
 SFX A aduar àduitu/O aduar
 SFX A aduar àduo/JL aduar
 SFX A aduar àduomi/K aduar
+SFX A aer eme/H aer
+SFX A aer epiede aer
+SFX A aer epiege aer
+SFX A aer epiemo aer
+SFX A aer epien aer
+SFX A aer epiene aer
+SFX A aer epion aer
+SFX A aer epione aer
+SFX A aer epiè aer
+SFX A aer epié aer
 SFX A aer ga/R aer
 SFX A aer gelo/S aer
-SFX A aer àa aer
-SFX A aer àe/FJLR aer
-SFX A aer àee/JL aer
-SFX A aer àeemi/K aer
-SFX A aer àei/N aer
-SFX A aer àeitu/O aer
-SFX A aer àelo/S aer
-SFX A aer àeme/H aer
+SFX A aer à/FJLNR aer
+SFX A aer àe/JL aer
 SFX A aer àemi/K aer
-SFX A aer àeo/JL aer
-SFX A aer àeomi/K aer
-SFX A aer àga aer
-SFX A aer àgi aer
-SFX A aer ài aer
+SFX A aer ào/JL aer
+SFX A aer àomi/K aer
+SFX A aer è/JL aer
+SFX A aer èpi aer
+SFX A aer èpia aer
+SFX A aer èpie aer
+SFX A aer ò/JL aer
+SFX A aer òmi/K aer
 SFX A aer ‘biando aer
 SFX A aer ‘biàndoge aer
 SFX A aer ‘vendo aer
@@ -1966,20 +1973,6 @@ SFX A arɉar àrɉeme/H arɉar
 SFX A arɉar àrɉemi/K arɉar
 SFX A arɉar àrɉitu/O arɉar
 SFX A arɉar àrɉomi/K arɉar
-SFX A asaer àsaa asaer
-SFX A asaer àsae/FJLR asaer
-SFX A asaer àsaee/JL asaer
-SFX A asaer àsaeemi/K asaer
-SFX A asaer àsaei/N asaer
-SFX A asaer àsaeitu/O asaer
-SFX A asaer àsaelo/S asaer
-SFX A asaer àsaeme/H asaer
-SFX A asaer àsaemi/K asaer
-SFX A asaer àsaeo/JL asaer
-SFX A asaer àsaeomi/K asaer
-SFX A asaer àsaga asaer
-SFX A asaer àsagi asaer
-SFX A asaer àsai asaer
 SFX A asar àselo/S asar
 SFX A asar àseme/H asar
 SFX A asar àsemi/K asar
@@ -3820,8 +3813,20 @@ SFX A er arímoi/M er
 SFX A er aríu/Q er
 SFX A er arò/JL er
 SFX A er aròmi/K er
+SFX A er bi er
+SFX A er bia er
 SFX A er biando er
+SFX A er bie er
+SFX A er biede er
+SFX A er biege er
+SFX A er biemo er
+SFX A er bien er
+SFX A er biene er
+SFX A er bion er
+SFX A er bione er
 SFX A er biàndoge er
+SFX A er biè er
+SFX A er bié er
 SFX A er e/FIJLPR er
 SFX A er emi/K er
 SFX A er en/L er
@@ -3870,12 +3875,29 @@ SFX A er ié/P er
 SFX A er iéde/P er
 SFX A er iége/P er
 SFX A er iéu/Q er
+SFX A er lo/S er
+SFX A er mi/K er
 SFX A er o/JL er
 SFX A er omi/K er
 SFX A er on/L er
 SFX A er one er
 SFX A er oni/M er
 SFX A er onse er
+SFX A er pi er
+SFX A er pia er
+SFX A er pie er
+SFX A er piede er
+SFX A er piege er
+SFX A er piemo er
+SFX A er pien er
+SFX A er piene er
+SFX A er piga er
+SFX A er pigi er
+SFX A er pii er
+SFX A er pion er
+SFX A er pione er
+SFX A er piè er
+SFX A er pié er
 SFX A er ralo/S er
 SFX A er rami/K er
 SFX A er ratu/O er
@@ -3931,6 +3953,7 @@ SFX A er sa er
 SFX A er se er
 SFX A er si er
 SFX A er so/I er
+SFX A er tu/O er
 SFX A er u/ er
 SFX A er uda er
 SFX A er ude er
@@ -3938,7 +3961,7 @@ SFX A er udi er
 SFX A er udo er
 SFX A er vendo er
 SFX A er véndoge er
-SFX A er é/FJLPR er
+SFX A er é/FP er
 SFX A er éa/JLPR er
 SFX A er éami/K er
 SFX A er éau/Q er

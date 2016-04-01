@@ -3,7 +3,7 @@ COMMENT OF THE EXTENSION OWNER (MAURO TREVISAN)
 Compatibility
 =============
 This extension is compatible with:
-- LibreOffice (Version 5.1)
+- LibreOffice (Version 5.x)
 
 Please note
 ===========
