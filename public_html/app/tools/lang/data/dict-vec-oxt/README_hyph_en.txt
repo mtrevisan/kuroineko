@@ -33,7 +33,7 @@ example:
 \hyphenation{su-per-in-du-tor su-per-in-du-to-ri}
 
 If you use, as you should, the venetan option of the babel package, then you
-have available the active charater "that allows you to put a discretionary
+have available the active character "that allows you to put a discretionary
 break at a word boundary of a compound word while maintaning the hyphenation
 algorithm on the rest of the word.
 

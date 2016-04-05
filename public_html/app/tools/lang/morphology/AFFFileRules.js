@@ -1,6 +1,8 @@
 /**
  * @class AFFFileRules
  *
+ * @see {@link http://pwet.fr/man/linux/fichiers_speciaux/hunspell}
+ *
  * @author Mauro Trevisan
  */
 define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lang/Dialect', 'tools/lang/morphology/Themizer', 'tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatterns/vec', 'tools/data/ArrayHelper', 'tools/data/Assert'], function(Word, Grapheme, Dialect, Themizer, Hyphenator, pattern_vec, ArrayHelper, Assert){
