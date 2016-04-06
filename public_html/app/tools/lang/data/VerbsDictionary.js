@@ -2272,6 +2272,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kónb",			"so",			3,	1,	"a",	"1821",			"",
 "konbàt",		"",			3,	4,	"g",	"1867",			"(far k.) dar dele preokupaŧion.",
 "konbàt",		"s",			3,	4,	"g",	"1867",			"Martelar ke fà na feria a guixa de polso.",
+"konbi",		"",				1,	1,	"a",	"1775",			"Komiatar.",
 "konc",			"",			1,	1,	"a",	"2008",			"Rekuxir, ramendar.",
 "kond",			"",			4,	4,	"a",	"2007",			"",
 "konét",			"",			3,	3,	"a",	"1867",			"",
