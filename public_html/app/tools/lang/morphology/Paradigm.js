@@ -477,6 +477,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 				[
 					{matcher: /só([lƚ])$/, replacement: 'só$1it'},
 					{matcher: /và[lƚ]$/, replacement: 'vàls'},
+					{matcher: /poséd$/, replacement: 'posès'},
 					//(per|re)maner
 					{matcher: /n$/, replacement: 'x'},
 					//{matcher: /n$/, replacement: 'st'},
