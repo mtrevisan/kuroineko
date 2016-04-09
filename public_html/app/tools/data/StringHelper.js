@@ -27,7 +27,7 @@ define(function(){
 		return (idx >= 0? word.substr(0, idx) + changeFn(word[idx]) + word.substr(idx + 1): word);
 	};
 
-	/** Matches a string with an array of regexp, checking for an equivalent array of false positives. */
+	/** Matches a string with an array of regexp, excluding a match with an equivalent array of false positives. */
 	var isMatching = function(str, matchers, falsePositiveMatchers){
 		var m;
 		return (!matchers.some(function(el){ m = el; return this.match(el); }, str)
