@@ -4287,6 +4287,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sek",			"",			1,	1,	"a",	"1821",			"",
 "sek",			"",			4,	3,	"a",	"1854",			"",
 "sek",			"de",			1,	1,	"a",	"1867",			"",
+"sek",			"di",			1,	1,	"a",	"1775",			"",
 "sek",			"in",			4,	3,	"a",	"1854",			"",
 "sek",			"re",			1,	1,	"a",	"1867",			"",
 "sekol",			"stra",		1,	1,	"g",	"1821",			"Trasekolar.",
