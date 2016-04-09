@@ -39,7 +39,7 @@ WORDCHARS -'‘’
 
 FLAG UTF-8
 # use double chars as flags
-#FLAG long
+#flag long
 
 # affix rules can strip full words, not only one less characters
 FULLSTRIP
@@ -60,11 +60,11 @@ MAP uúù
 
 # replace input characters
 ICONV 27
-ICONV ‒  -
-ICONV –  -
-ICONV —  -
-ICONV ―  -
-ICONV ƚ  l
+ICONV ‒ -
+ICONV – -
+ICONV — -
+ICONV ― -
+ICONV ƚ l
 ICONV dh đ
 ICONV jh ɉ
 ICONV lh l
@@ -103,14 +103,14 @@ REP o ó
 REP u ú
 REP ci c # ci[aàeèéiíoòóuú]>c.
 REP ɉi ɉ # ɉi[aàeèéiíoòóuú]>ɉ.
-REP d  đ # đ[aàeèéiíoòóuú]>d.
-REP x  đ
-REP j  ɉ
-REP ɉ  j
-REP l  ƚ
-REP ƚ  l
+REP d đ # đ[aàeèéiíoòóuú]>d.
+REP x đ
+REP j ɉ
+REP ɉ j
+REP l ƚ
+REP ƚ l
 REP li j # li[aàeèéiíoòóuú]>j.
-REP s  ŧ # sion([aeio])$>ŧion(.), [aeiou](n)s(i)[aeio]$>.(n)ŧ(i).
+REP s ŧ # sion([aeio])$>ŧion(.), [aeiou](n)s(i)[aeio]$>.(n)ŧ(i).
 REP ti c # ti[aàeèéiíoòóuú]>c.
 REP di ɉ # di[aàeèéiíoòóuú]>ɉ.
 REP ^v ‘ # ^v[aàeèéiíoòóuú]>‘.
@@ -128,7 +128,7 @@ REP ^‘ g
 KEEPCASE Z  # km, GHz, DVD, ...
 
 
-SFX A Y 61521 # vèrbi
+SFX A Y 61741 # vèrbi
 SFX A abalar àbala/FR abalar
 SFX A abalar àbale/IJLR abalar
 SFX A abalar àbalelo/S abalar
@@ -398,6 +398,24 @@ SFX A afegar àfegi/N afegar
 SFX A afegar àfegitu/O afegar
 SFX A afegar àfego/JL afegar
 SFX A afegar àfegomi/K afegar
+SFX A aferar àfara/FR aferar
+SFX A aferar àfare/IJLR aferar
+SFX A aferar àfarelo/S aferar
+SFX A aferar àfareme/H aferar
+SFX A aferar àfaremi/K aferar
+SFX A aferar àfari/N aferar
+SFX A aferar àfaritu/O aferar
+SFX A aferar àfaro/JL aferar
+SFX A aferar àfaromi/K aferar
+SFX A aferar àfera/FR aferar
+SFX A aferar àfere/IJLR aferar
+SFX A aferar àferelo/S aferar
+SFX A aferar àfereme/H aferar
+SFX A aferar àferemi/K aferar
+SFX A aferar àferi/N aferar
+SFX A aferar àferitu/O aferar
+SFX A aferar àfero/JL aferar
+SFX A aferar àferomi/K aferar
 SFX A afiar àfielo/S afiar
 SFX A afiar àfieme/H afiar
 SFX A afiar àfiemi/K afiar
@@ -45540,6 +45558,208 @@ SFX A àñer añúa àñer
 SFX A àñer añúe àñer
 SFX A àñer añúi àñer
 SFX A àñer añúo àñer
+SFX A àđer ađa àđer
+SFX A àđer ađaralo/S àđer
+SFX A àđer ađarami/K àđer
+SFX A àđer ađaratu/O àđer
+SFX A àđer ađarave/RT àđer
+SFX A àđer ađaremo/L àđer
+SFX A àđer ađaren/L àđer
+SFX A àđer ađareni/M àđer
+SFX A àđer ađarense àđer
+SFX A àđer ađaresi/P àđer
+SFX A àđer ađaresiu/Q àđer
+SFX A àđer ađarimo/L àđer
+SFX A àđer ađarion/L àđer
+SFX A àđer ađarioni/M àđer
+SFX A àđer ađarionse àđer
+SFX A àđer ađarisen/L àđer
+SFX A àđer ađariseni/M àđer
+SFX A àđer ađarisense àđer
+SFX A àđer ađarision/L àđer
+SFX A àđer ađarisioni/M àđer
+SFX A àđer ađarisionse àđer
+SFX A àđer ađarisié/P àđer
+SFX A àđer ađarisiéu/Q àđer
+SFX A àđer ađarison/L àđer
+SFX A àđer ađarisoni/M àđer
+SFX A àđer ađarisonse àđer
+SFX A àđer ađarié/P àđer
+SFX A àđer ađariéu/Q àđer
+SFX A àđer ađaron/L àđer
+SFX A àđer ađaroni/M àđer
+SFX A àđer ađaronse àđer
+SFX A àđer ađarà/JLNR àđer
+SFX A àđer ađaràe/R àđer
+SFX A àđer ađarè/JL àđer
+SFX A àđer ađarèmi/K àđer
+SFX A àđer ađaré/P àđer
+SFX A àđer ađarémoi/M àđer
+SFX A àđer ađarésimo/L àđer
+SFX A àđer ađarésimoi/M àđer
+SFX A àđer ađaréu/Q àđer
+SFX A àđer ađarí/P àđer
+SFX A àđer ađaría/JLNR àđer
+SFX A àđer ađaríami/K àđer
+SFX A àđer ađaríatu/O àđer
+SFX A àđer ađaríe/JLR àđer
+SFX A àđer ađaríelo/S àđer
+SFX A àđer ađaríemi/K àđer
+SFX A àđer ađarímoi/M àđer
+SFX A àđer ađaríu/Q àđer
+SFX A àđer ađarò/JL àđer
+SFX A àđer ađaròmi/K àđer
+SFX A àđer ađe/IJLR àđer
+SFX A àđer ađede àđer
+SFX A àđer ađege àđer
+SFX A àđer ađeme/H àđer
+SFX A àđer ađemo/L àđer
+SFX A àđer ađen/L àđer
+SFX A àđer ađendo/E àđer
+SFX A àđer ađene àđer
+SFX A àđer ađeni/M àđer
+SFX A àđer ađense àđer
+SFX A àđer ađente/ àđer
+SFX A àđer ađeralo/S àđer
+SFX A àđer ađerami/K àđer
+SFX A àđer ađeratu/O àđer
+SFX A àđer ađerave/RT àđer
+SFX A àđer ađeremo/L àđer
+SFX A àđer ađeren/L àđer
+SFX A àđer ađereni/M àđer
+SFX A àđer ađerense àđer
+SFX A àđer ađeresi/P àđer
+SFX A àđer ađeresiu/Q àđer
+SFX A àđer ađerimo/L àđer
+SFX A àđer ađerion/L àđer
+SFX A àđer ađerioni/M àđer
+SFX A àđer ađerionse àđer
+SFX A àđer ađerisen/L àđer
+SFX A àđer ađeriseni/M àđer
+SFX A àđer ađerisense àđer
+SFX A àđer ađerision/L àđer
+SFX A àđer ađerisioni/M àđer
+SFX A àđer ađerisionse àđer
+SFX A àđer ađerisié/P àđer
+SFX A àđer ađerisiéu/Q àđer
+SFX A àđer ađerison/L àđer
+SFX A àđer ađerisoni/M àđer
+SFX A àđer ađerisonse àđer
+SFX A àđer ađerié/P àđer
+SFX A àđer ađeriéu/Q àđer
+SFX A àđer ađeron/L àđer
+SFX A àđer ađeroni/M àđer
+SFX A àđer ađeronse àđer
+SFX A àđer ađerà/JLNR àđer
+SFX A àđer ađeràe/R àđer
+SFX A àđer ađerè/JL àđer
+SFX A àđer ađerèmi/K àđer
+SFX A àđer ađeré/P àđer
+SFX A àđer ađerémoi/M àđer
+SFX A àđer ađerésimo/L àđer
+SFX A àđer ađerésimoi/M àđer
+SFX A àđer ađeréu/Q àđer
+SFX A àđer ađerí/P àđer
+SFX A àđer ađería/JLNR àđer
+SFX A àđer ađeríami/K àđer
+SFX A àđer ađeríatu/O àđer
+SFX A àđer ađeríe/JLR àđer
+SFX A àđer ađeríelo/S àđer
+SFX A àđer ađeríemi/K àđer
+SFX A àđer ađerímoi/M àđer
+SFX A àđer ađeríu/Q àđer
+SFX A àđer ađerò/JL àđer
+SFX A àđer ađeròmi/K àđer
+SFX A àđer ađese/I àđer
+SFX A àđer ađesi àđer
+SFX A àđer ađesta/I àđer
+SFX A àđer ađeste/I àđer
+SFX A àđer ađesti/I àđer
+SFX A àđer ađesto/I àđer
+SFX A àđer ađeva/JLPR àđer
+SFX A àđer ađeve/JL àđer
+SFX A àđer ađevi/NP àđer
+SFX A àđer ađevo/JL àđer
+SFX A àđer ađi/FN àđer
+SFX A àđer ađime/H àđer
+SFX A àđer ađimo/L àđer
+SFX A àđer ađion/L àđer
+SFX A àđer ađione àđer
+SFX A àđer ađioni/M àđer
+SFX A àđer ađionse àđer
+SFX A àđer ađisen/L àđer
+SFX A àđer ađisene àđer
+SFX A àđer ađiseni/M àđer
+SFX A àđer ađisense àđer
+SFX A àđer ađision/L àđer
+SFX A àđer ađisione àđer
+SFX A àđer ađisioni/M àđer
+SFX A àđer ađisionse àđer
+SFX A àđer ađisié/P àđer
+SFX A àđer ađisiéde/P àđer
+SFX A àđer ađisiége/P àđer
+SFX A àđer ađison/L àđer
+SFX A àđer ađisone àđer
+SFX A àđer ađisoni/M àđer
+SFX A àđer ađisonse àđer
+SFX A àđer ađiven/L àđer
+SFX A àđer ađiveni/M àđer
+SFX A àđer ađivense àđer
+SFX A àđer ađivion/L àđer
+SFX A àđer ađivioni/M àđer
+SFX A àđer ađivionse àđer
+SFX A àđer ađivié/P àđer
+SFX A àđer ađiviéu/Q àđer
+SFX A àđer ađivon/L àđer
+SFX A àđer ađivoni/M àđer
+SFX A àđer ađivonse àđer
+SFX A àđer ađié/P àđer
+SFX A àđer ađiéde/P àđer
+SFX A àđer ađiége/P àđer
+SFX A àđer ađiéu/Q àđer
+SFX A àđer ađo/JL àđer
+SFX A àđer ađon/L àđer
+SFX A àđer ađone àđer
+SFX A àđer ađoni/M àđer
+SFX A àđer ađonse àđer
+SFX A àđer ađuda àđer
+SFX A àđer ađude àđer
+SFX A àđer ađudi àđer
+SFX A àđer ađudo àđer
+SFX A àđer ađé/FP àđer
+SFX A àđer ađéa/JLPR àđer
+SFX A àđer ađéami/K àđer
+SFX A àđer ađéau/Q àđer
+SFX A àđer ađée/JL àđer
+SFX A àđer ađéelo/S àđer
+SFX A àđer ađéemi/K àđer
+SFX A àđer ađéi/NP àđer
+SFX A àđer ađéimo/L àđer
+SFX A àđer ađéimoi/M àđer
+SFX A àđer ađéitu/O àđer
+SFX A àđer ađémoi/M àđer
+SFX A àđer ađéndome/G àđer
+SFX A àđer ađéndomene/G àđer
+SFX A àđer ađéo/JL àđer
+SFX A àđer ađéomi/K àđer
+SFX A àđer ađésimo àđer
+SFX A àđer ađéu/Q àđer
+SFX A àđer ađévami/K àđer
+SFX A àđer ađévau/Q àđer
+SFX A àđer ađévelo/S àđer
+SFX A àđer ađévemi/K àđer
+SFX A àđer ađévimo/L àđer
+SFX A àđer ađévimoi/M àđer
+SFX A àđer ađévitu/O àđer
+SFX A àđer ađévomi/K àđer
+SFX A àđer ađí/FP àđer
+SFX A àđer ađímoi/M àđer
+SFX A àđer ađíu/Q àđer
+SFX A àđer ađú/ àđer
+SFX A àđer ađúa àđer
+SFX A àđer ađúe àđer
+SFX A àđer ađúi àđer
+SFX A àđer ađúo àđer
 SFX A àŧer aŧa àŧer
 SFX A àŧer aŧaralo/S àŧer
 SFX A àŧer aŧarami/K àŧer
@@ -61998,21 +62218,21 @@ SFX W èr ari èr
 SFX W èr aro èr
 
 SFX X Y 12 # avèrbi
-SFX X 0 mente/IY  [^aeiou]
+SFX X 0 mente/IY [^aeiou]
 SFX X o amente/IY [^t]o
 SFX X o amente/IY [^n]to
 SFX X o amente/IY [^e]nto
 SFX X o amente/IY [^lu]ento
 SFX X o emente/IY [lu]ento
-SFX X 0 mente/IY  [^rln]e
-SFX X e mente/IY  [aeiou]re
-SFX X 0 mente/IY  [^aeiou]re
-SFX X e mente/IY  le
+SFX X 0 mente/IY [^rln]e
+SFX X e mente/IY [aeiou]re
+SFX X 0 mente/IY [^aeiou]re
+SFX X e mente/IY le
 SFX X e amente/IY one
-SFX X 0 mente/IY  [^o]ne
+SFX X 0 mente/IY [^o]ne
 
 SFX Y Y 2 # avèrbi
-SFX Y nte n  mente
+SFX Y nte n mente
 SFX Y e re mente
 
 
@@ -62051,121 +62271,121 @@ SFX Y e re mente
 #SFX & . aŧo/B
 #SFX & . uko/B
 
-SFX % N 30 # numerali - koletivi
-SFX % ète    etena/V    ète
-SFX % ète    etèna/V    ète
-SFX % òto    otena/V    òto
-SFX % òto    otèna/V    òto
-SFX % e      ena/V      ove
-SFX % e      èna/V      ove
-SFX % èxe    exena/V    èxe
-SFX % èxe    exèna/V    èxe
-SFX % èxe    eŧena/V    èxe
-SFX % ièxe   exena/V    ièxe
-SFX % ièxe   exèna/V    ièxe
-SFX % ièxe   eŧena/V    ièxe
+SFX % N 32 # numerali - koletivi
+SFX % ète etena/V ète
+SFX % ète etèna/V ète
+SFX % òto otena/V òto
+SFX % òto otèna/V òto
+SFX % e ena/V ove
+SFX % e èna/V ove
+SFX % èxe exena/V ièxe
+SFX % èxe exèna/V ièxe
+SFX % èxe eŧena/V ièxe
+SFX % èxe esena/V ièxe
+SFX % ièxe exena/V ièxe
+SFX % ièxe exèna/V ièxe
+SFX % ièxe eŧena/V ièxe
+SFX % ièxe esena/V ièxe
 SFX % úndexe undexena/V úndexe
 SFX % úndexe undexèna/V úndexe
-SFX % ódexe  odexena/V  ódexe
-SFX % ódexe  odexèna/V  ódexe
-SFX % édexe  edexena/V  édexe
-SFX % édexe  edexèna/V  édexe
+SFX % ódexe odexena/V ódexe
+SFX % ódexe odexèna/V ódexe
+SFX % édexe edexena/V édexe
+SFX % édexe edexèna/V édexe
 SFX % òrdexe ordexena/V òrdexe
 SFX % òrdexe ordexèna/V òrdexe
 SFX % índexe indexena/V índexe
 SFX % índexe indexèna/V índexe
-SFX % i      ena/V      nti
-SFX % i      èna/V      nti
-SFX % a      ena/V      nta
-SFX % a      èna/V      nta
-SFX % o      enèr/BW    nto
-SFX % e      èr/BW      mile
-SFX % 0      èr/BW      lion
-SFX % o      èr/BW      liardo
+SFX % i ena/V nti
+SFX % i èna/V nti
+SFX % a ena/V nta
+SFX % a èna/V nta
+SFX % o enèr/BW nto
+SFX % e èr/BW mile
+SFX % 0 èr/BW lion
+SFX % o èr/BW liardo
 
 
 SFX £ N 10 # numeraŧion latina
-SFX £ 0 I    [IVXLCDM]
-SFX £ 0 II   [IVXLCDM]
-SFX £ 0 III  [VXLCDM]
-SFX £ 0 IV   [XLCDM]
-SFX £ 0 V    [IXLCDM]
-SFX £ 0 VI   [XLCDM]
-SFX £ 0 VII  [XLCDM]
+SFX £ 0 I [IVXLCDM]
+SFX £ 0 II [IVXLCDM]
+SFX £ 0 III [VXLCDM]
+SFX £ 0 IV [XLCDM]
+SFX £ 0 V [IXLCDM]
+SFX £ 0 VI [XLCDM]
+SFX £ 0 VII [XLCDM]
 SFX £ 0 VIII [XLCDM]
-SFX £ 0 IX   [XLCDM]
-SFX £ 0 X    I
+SFX £ 0 IX [XLCDM]
+SFX £ 0 X I
 
 PFX $ N 62 # numeraŧion latina
-PFX $ 0 X      [LC]
-PFX $ 0 L      X
-PFX $ 0 C      [XLCDM]
-PFX $ 0 CX     [LC]
-PFX $ 0 CL     X
-PFX $ 0 CC     [XLC]
-PFX $ 0 CCX    [LC]
-PFX $ 0 CCL    X
-PFX $ 0 CCC    [XL]
-PFX $ 0 CCCX   [LC]
-PFX $ 0 CCCL   X
-PFX $ 0 CD     [XL]
-PFX $ 0 CDX    [LC]
-PFX $ 0 CDL    X
-PFX $ 0 D      [XLC]
-PFX $ 0 DX     [LC]
-PFX $ 0 DL     X
-PFX $ 0 DC     [XLC]
-PFX $ 0 DCX    [LC]
-PFX $ 0 DCL    X
-PFX $ 0 DCC    [XLC]
-PFX $ 0 DCCX   [LC]
-PFX $ 0 DCCL   X
-PFX $ 0 DCCC   [XL]
-PFX $ 0 DCCCX  [LC]
-PFX $ 0 DCCCL  X
-PFX $ 0 CM     [XL]
-PFX $ 0 CMX    [LC]
-PFX $ 0 CML    X
-PFX $ 0 M      [XLCDM]
-PFX $ 0 MX     [LC]
-PFX $ 0 ML     X
-PFX $ 0 MC     [XLCMD]
-PFX $ 0 MCX    [LC]
-PFX $ 0 MCL    X
-PFX $ 0 MCC    [XLC]
-PFX $ 0 MCCX   [LC]
-PFX $ 0 MCCL   X
-PFX $ 0 MCCC   [XL]
-PFX $ 0 MCCCX  [LC]
-PFX $ 0 MCCCL  X
-PFX $ 0 MCD    [XL]
-PFX $ 0 MCDX   [LC]
-PFX $ 0 MCDL   X
-PFX $ 0 MD     [XLC]
-PFX $ 0 MDX    [LC]
-PFX $ 0 MDL    X
-PFX $ 0 MDC    [XLC]
-PFX $ 0 MDCX   [LC]
-PFX $ 0 MDCL   X
-PFX $ 0 MDCC   [XLC]
-PFX $ 0 MDCCX  [LC]
-PFX $ 0 MDCCL  X
-PFX $ 0 MDCCC  [XL]
+PFX $ 0 X [LC]
+PFX $ 0 L X
+PFX $ 0 C [XLCDM]
+PFX $ 0 CX [LC]
+PFX $ 0 CL X
+PFX $ 0 CC [XLC]
+PFX $ 0 CCX [LC]
+PFX $ 0 CCL X
+PFX $ 0 CCC [XL]
+PFX $ 0 CCCX [LC]
+PFX $ 0 CCCL X
+PFX $ 0 CD [XL]
+PFX $ 0 CDX [LC]
+PFX $ 0 CDL X
+PFX $ 0 D [XLC]
+PFX $ 0 DX [LC]
+PFX $ 0 DL X
+PFX $ 0 DC [XLC]
+PFX $ 0 DCX [LC]
+PFX $ 0 DCL X
+PFX $ 0 DCC [XLC]
+PFX $ 0 DCCX [LC]
+PFX $ 0 DCCL X
+PFX $ 0 DCCC [XL]
+PFX $ 0 DCCCX [LC]
+PFX $ 0 DCCCL X
+PFX $ 0 CM [XL]
+PFX $ 0 CMX [LC]
+PFX $ 0 CML X
+PFX $ 0 M [XLCDM]
+PFX $ 0 MX [LC]
+PFX $ 0 ML X
+PFX $ 0 MC [XLCMD]
+PFX $ 0 MCX [LC]
+PFX $ 0 MCL X
+PFX $ 0 MCC [XLC]
+PFX $ 0 MCCX [LC]
+PFX $ 0 MCCL X
+PFX $ 0 MCCC [XL]
+PFX $ 0 MCCC [LC]
+PFX $ 0 MCCC X
+PFX $ 0 MCD [XL]
+PFX $ 0 MCDX [LC]
+PFX $ 0 MCDL X
+PFX $ 0 MD [XLC]
+PFX $ 0 MDX [LC]
+PFX $ 0 MDL X
+PFX $ 0 MDC [XLC]
+PFX $ 0 MDCX [LC]
+PFX $ 0 MDCL X
+PFX $ 0 MDCC [XLC]
+PFX $ 0 MDCCX [LC]
+PFX $ 0 MDCCL X
+PFX $ 0 MDCCC [XL]
 PFX $ 0 MDCCCX [LC]
 PFX $ 0 MDCCCL X
-PFX $ 0 MCM    [XL]
-PFX $ 0 MCMX   [LC]
-PFX $ 0 MCML   X
-PFX $ 0 MM     [XLC]
-PFX $ 0 MMX    [LC]
-PFX $ 0 MML    X
+PFX $ 0 MCM [XL]
+PFX $ 0 MCMX [LC]
+PFX $ 0 MCML X
+PFX $ 0 MM [XLC]
+PFX $ 0 MMX [LC]
+PFX $ 0 MML X
 
 
 
-#FX d Y 1
+#PFX d Y 1
 #PFX d 0 stra .
 
 #PFX e Y 1
 #PFX e 0 pre .
-
-#DICT vec IT-34 vec
