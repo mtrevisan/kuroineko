@@ -77,7 +77,7 @@
 
 //if(['domàr', 'domandàr', 'domenàr', 'domestegàr'].indexOf(inf) >= 0){
 //if(['skoltàr', 'kovèrđer'].indexOf(inf) >= 0){
-//if(['èser', 'avér', 'xbolŧàr'].indexOf(inf) >= 0){
+if(['èser', 'avér', 'xbolŧàr'].indexOf(inf) >= 0){
 					inf = inf.replace(/(^|[aeiouàèéíòóú])l([aeiouàèéíòóú])/g, '$1[lƚ]$2')
 						.replace(/([^lnr])đ([aeiouàèéíòóú])/g, '$1[đx]$2')
 						.replace(/([lnr])đ([aeiouàèéíòóú])/g, '$1[dđx]$2')
@@ -87,7 +87,7 @@
 						if(verbs.indexOf(t) < 0)
 							verbs.push(t);
 					});
-//				}
+				}
 			});
 			verbs = verbs.map(function(v){ return new Verb(v); });
 

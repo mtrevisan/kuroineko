@@ -213,7 +213,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		//collect and expand forms
 		var suffixes = [];
 		paradigm.forEach(function(sublist){
-			suffixes = suffixes.concat(sublist.suffixes.map(expandForm));
+			suffixes = suffixes.concat(sublist.suffixes.map(function(suffix){
+				return expandForm(suffix).map(function(form){ return form + (this && this.length? '|' + this.join(','): ''); }, this);
+			}, sublist.origins));
 		});
 		suffixes = mergeIdenticalTransformations(ArrayHelper.flatten(suffixes));
 
@@ -359,8 +361,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		if(list.length && list[0] != undefined)
 			list.forEach(function(suffix){
 				m = suffix.match(this);
-				storeSuffix(logs, 1, m[1], m[2]);
-			}, /^(.+)>(.+)$/);
+				storeSuffix(logs, 1, m[1], m[2], undefined, m[3].split(','));
+			}, /^(.+)>([^|]+)(?:\|(.+))?$/);
 
 		if(logs.length)
 			printSuffixes(logs, 1, 'vèrbi');
@@ -448,11 +450,11 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	};
 
 	/** @private */
-	var storeSuffix = function(logs, i, replaced, replacement, flags, constraint, parents){
+	var storeSuffix = function(logs, i, replaced, replacement, constraint, parents){
 		if(!replaced)
 			replaced = 0;
 		if(replacement.indexOf(MARKER_FLAGS) >= 0)
-			replacement = addFlag(replacement.replace(MARKER_FLAGS, ''), flags);
+			replacement = replacement.replace('/' + MARKER_FLAGS, '').replace(MARKER_FLAGS, '');
 		if(!constraint && replaced)
 			constraint = replaced;
 
@@ -473,8 +475,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		}
 
 		//FIXME
-//		return 'SFX ' + flag + ' ' + replaced + ' ' + replacement + (constraint != '0' && constraint != ''? ' ' + (parents && parents.length == 1? '^': '') + constraint: '') + (parents? ' # ' + parents.sort().join(FLAG_SEPARATOR): '');
-		return 'SFX ' + flag + ' ' + replaced + ' ' + replacement + (constraint && constraint != '0'? ' ' /*+ (parents && parents.length == 1? '^': '')*/ + constraint: '');
+		return 'SFX ' + flag + ' ' + replaced + ' ' + replacement
+			+ (constraint && constraint != '0'? ' ' + (parents && parents.length == 1 && constraint == parents[0]? '[^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]': '') + constraint: '')
+//			+ (parents? ' # ' + parents.sort().join(FLAG_SEPARATOR): '')
+			;
 	};
 
 	/** @private */
