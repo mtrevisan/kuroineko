@@ -213,6 +213,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		//collect and expand forms
 		var suffixes = [];
 		paradigm.forEach(function(sublist){
+			sublist.origins = unique(sublist.origins);
+
 			suffixes = suffixes.concat(sublist.suffixes.map(function(suffix){
 				return expandForm(suffix).map(function(form){ return form + (this && this.length? '|' + this.join(','): ''); }, this);
 			}, sublist.origins));
@@ -474,7 +476,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				replacement = m[1] + m[2].split(FLAG_SEPARATOR).map(function(rep){ return String.fromCharCode(Number(rep) + startChar); }).join('');
 		}
 
-		//FIXME
 		return 'SFX ' + flag + ' ' + replaced + ' ' + replacement
 			+ (constraint && constraint != '0'? ' ' + (parents && parents.length == 1 && constraint == parents[0]? '[^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]': '') + constraint: '')
 //			+ (parents? ' # ' + parents.sort().join(FLAG_SEPARATOR): '')
@@ -516,7 +517,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	/** @private */
 	var uniteFlags = function(flags1, flags2){
 		return {
-			forms: (flags1.constraint == flags2.constraint?unique(flags2.forms.concat(flags1.forms)).sort(function(a, b){ return Number(a) - Number(b); }): []),
+			forms: (flags1.constraint == flags2.constraint? unique(flags2.forms.concat(flags1.forms)).sort(function(a, b){ return Number(a) - Number(b); }): []),
 			markers: (flags1.constraint == flags2.constraint? unique(flags2.markers.concat(flags1.markers)).sort(): []),
 			constraint: (flags1.constraint == flags2.constraint? flags1.constraint: '_')
 		};
