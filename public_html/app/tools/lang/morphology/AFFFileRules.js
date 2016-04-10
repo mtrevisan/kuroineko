@@ -213,7 +213,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		//collect and expand forms
 		var suffixes = [];
 		paradigm.forEach(function(sublist){
-			sublist.origins = unique(sublist.origins);
+			sublist.origins = unique(sublist.origins).sort();
 
 			suffixes = suffixes.concat(sublist.suffixes.map(function(suffix){
 				return expandForm(suffix).map(function(form){ return form + (this && this.length? '|' + this.join(','): ''); }, this);
