@@ -217,7 +217,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 			suffixes = suffixes.concat(sublist.suffixes.map(function(suffix){
 				return expandForm(suffix).map(function(form){
-					return form + (this && this.length? '|' + this.join(','): '');
+					return form + (this && this.length? '#' + this.join(','): '');
 				}, this);
 			}, sublist.origins));
 		});
@@ -366,7 +366,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			list.forEach(function(suffix){
 				m = suffix.match(this);
 				storeSuffix(logs, 1, m[1], m[2], undefined, m[3].split(','));
-			}, /^(.+)>([^|]+)(?:\|(.+))?$/);
+			}, /^(.+)>([^#]+)(?:\#(.+))?$/);
 
 		if(logs.length)
 			printSuffixes(logs, 1, 'vèrbi');
