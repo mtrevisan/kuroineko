@@ -493,7 +493,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 		return 'SFX ' + flag + ' ' + replaced + ' ' + replacement
 			+ (constraint && constraint != '0'? ' ' + (parents && parents.length == 1 && parents[0][0] != '‘'? '^' + parents[0]: constraint): '')
-//			+ (parents? ' # ' + parents.join(FLAG_SEPARATOR): '')
+			+ (parents? ' # ' + parents.join(FLAG_SEPARATOR): '')
 			;
 	};
 
