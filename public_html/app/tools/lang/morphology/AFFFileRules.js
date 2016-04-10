@@ -217,7 +217,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 			suffixes = suffixes.concat(sublist.suffixes.map(function(suffix){
 				return expandForm(suffix).map(function(form){
-					return form + (this && this.length? '#' + this.join(','): '');
+					return form + (this && this.length? ' # ' + this.join(','): '');
 				}, this);
 			}, sublist.origins));
 		});
@@ -226,7 +226,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		paradigm = [{suffixes: suffixes}];
 
 		if(logOnConsole){
-			printParadigm(suffixes);
+			printParadigm(suffixes, verbs.map(function(verb){ return unmarkDefaultStress(verb.infinitive); }));
 
 			if(logNonVerbs){
 				printReductions(adjectives, 'ajetivi');
@@ -359,14 +359,26 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 
 	/** @private */
-	var printParadigm = function(list){
+	var printParadigm = function(list, verbs){
 		var logs = [],
-			m;
+			m, parents, diff,
+			lst = [];
 		if(list.length && list[0] != undefined)
 			list.forEach(function(suffix){
 				m = suffix.match(this);
-				storeSuffix(logs, 1, m[1], m[2], undefined, m[3].split(','));
-			}, /^(.+)>([^#]+)(?:\#(.+))?$/);
+				parents = m[3].split(',').sort();
+
+//				diff = difference(verbs, parents);
+//				if(diff.some(function(verb){ return verb.match(this); }, new RegExp('^' + m[1] + '$'))){
+//					partition({origins: parents}, verbs, lst);
+//console.log('');
+//				}
+
+				storeSuffix(logs, 1, m[1], m[2], undefined, parents);
+			}, /^(.+)>([^ ]+)(?: \# (.+))?$/);
+
+//		var ll = unique(logs.map(function(log){ var ar = log.match(this); return ar[1] + ' ' + ar[2]; }, /^SFX . (.+?) .+? # (.+)$/));
+//console.log(ll);
 
 		if(logs.length)
 			printSuffixes(logs, 1, 'vèrbi');
@@ -479,8 +491,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		}
 
 		return 'SFX ' + flag + ' ' + replaced + ' ' + replacement
-			+ (constraint && constraint != '0'? ' ' + (parents && parents.length == 1 && constraint == parents[0]? '[^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]': '') + constraint: '')
-//			+ (parents? ' # ' + parents.sort().join(FLAG_SEPARATOR): '')
+			+ (constraint && constraint != '0'? ' ' + (parents && parents.length == 1? '[^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]' + parents[0]: constraint): '')
+			+ (parents? ' # ' + parents.join(FLAG_SEPARATOR): '')
 			;
 	};
 
@@ -632,7 +644,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	var partition = function(obj, origins, list){
 		var stack = [obj],
 			common, part, diff,
-			partitioningResults, key;
+			partitioningResults;
 		while(stack.length){
 			obj = stack.shift();
 			common = extractCommonPartFromList(obj.origins);
@@ -642,8 +654,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			//partitin origins into those who match the keys of part and who doesn't
 			partitioningResults = {true: [], false: []};
 			Object.keys(part).forEach(function(k){
-				key = diff.some(function(el){ return el.match(this); }, new RegExp(k + common + '$'));
-				partitioningResults[key].push(k);
+				partitioningResults[diff.some(function(el){ return el.match(this); }, new RegExp(k + common + '$'))].push(k);
 			});
 
 			if(partitioningResults[false].length){
