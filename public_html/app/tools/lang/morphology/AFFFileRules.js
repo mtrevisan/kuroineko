@@ -361,12 +361,13 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	/** @private */
 	var printParadigm = function(list, verbs){
 		var logs = [],
-			m, parents, diff,
+			m, parents, constraint, diff,
 			lst = [];
 		if(list.length && list[0] != undefined)
 			list.forEach(function(suffix){
 				m = suffix.match(this);
-				parents = m[3].split(',').sort();
+				parents = (m[3] || '').split(',').sort();
+				constraint = extractCommonPartFromList(parents);
 
 //				diff = difference(verbs, parents);
 //				if(diff.some(function(verb){ return verb.match(this); }, new RegExp('^' + m[1] + '$'))){
@@ -374,7 +375,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 //console.log('');
 //				}
 
-				storeSuffix(logs, 1, m[1], m[2], undefined, parents);
+				storeSuffix(logs, 1, m[1], m[2], constraint, parents);
 			}, /^(.+)>([^ ]+)(?: \# (.+))?$/);
 
 //		var ll = unique(logs.map(function(log){ var ar = log.match(this); return ar[1] + ' ' + ar[2]; }, /^SFX . (.+?) .+? # (.+)$/));
@@ -492,7 +493,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 		return 'SFX ' + flag + ' ' + replaced + ' ' + replacement
 			+ (constraint && constraint != '0'? ' ' + (parents && parents.length == 1? '[^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]' + parents[0]: constraint): '')
-			+ (parents? ' # ' + parents.join(FLAG_SEPARATOR): '')
+//			+ (parents? ' # ' + parents.join(FLAG_SEPARATOR): '')
 			;
 	};
 
@@ -659,7 +660,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 			if(partitioningResults[false].length){
 				obj.matcher = (partitioningResults[false].indexOf('^') < 0 && partitioningResults[true].length?
-					listToRegExp(partitioningResults[false]): '') + common;
+					listToRegExp(partitioningResults[false]): '[^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]') + common;
 				//extract the parent w.r.t. the partitioning results
 				obj.origins = ArrayHelper.flatten(partitioningResults[false].map(function(chr){ return part[chr]; }));
 			}
