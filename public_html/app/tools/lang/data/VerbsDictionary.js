@@ -2273,7 +2273,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "komenŧi",		"",			1,	3,	"a",	"",				"",
 "komenŧi",		"in",			1,	3,	"a",	"1433",			"",
 "komenŧi",		"s",			1,	3,	"a",	"1509",			"",
-"komi",			"es",			1,	1,	"g",	"1867",			"Dar komià.",
+"komi",			"es",			1,	1,	"g",	"1775",			"Dar komià, esklúder, rebutar.",
 "komision",		"",			1,	6,	"a",	"1867",			"",
 "komod",			"",			1,	1,	"g",	"1821",			"",
 "komod",			"des",		1,	1,	"g",	"1821",			"",

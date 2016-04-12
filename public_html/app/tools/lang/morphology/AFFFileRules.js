@@ -361,28 +361,53 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	/** @private */
 	var printParadigm = function(list, verbs){
 		var logs = [],
-			m, parents, constraint, diff,
-			lst = [];
+			newList = [];
 		if(list.length && list[0] != undefined)
-			list.forEach(function(suffix){
-				m = suffix.match(this);
-				parents = (m[3] || '').split(',').sort();
-				constraint = extractCommonPartFromList(parents);
+			while(list.length){
+				newList.length = 0;
+				list.forEach(function(suffix){
+					printParadigmSuffix(suffix, this, verbs, logs, newList);
+				}, /^(.+)>([^ ]+)(?: \# (.+))?$/);
 
-//				diff = difference(verbs, parents);
-//				if(diff.some(function(verb){ return verb.match(this); }, new RegExp('^' + m[1] + '$'))){
-//					partition({origins: parents}, verbs, lst);
-//console.log('');
-//				}
-
-				storeSuffix(logs, 1, m[1], m[2], constraint, parents);
-			}, /^(.+)>([^ ]+)(?: \# (.+))?$/);
+				list.length = 0;
+				newList.forEach(function(suffix){
+					printParadigmSuffix(suffix, this, verbs, logs, list);
+				}, /^(.+)>([^ ]+)(?: \# (.+))?$/);
+			}
 
 //		var ll = unique(logs.map(function(log){ var ar = log.match(this); return ar[1] + ' ' + ar[2]; }, /^SFX . (.+?) .+? # (.+)$/));
 //console.log(ll);
 
 		if(logs.length)
 			printSuffixes(logs, 1, 'vèrbi');
+	};
+
+	/** @private */
+	var printParadigmSuffix = function(suffix, re, verbs, logs, newList){
+		var m = suffix.match(re),
+			parents = (m[3] || '').split(',').filter(function(parent){ return parent; }).sort(),
+			constraint = extractCommonPartFromList(parents),
+			skip = false,
+			part, keys, pre, diff;
+		if(constraint){
+			diff = difference(verbs, parents);
+			if(diff.some(function(verb){ return verb.match(this); }, new RegExp(constraint + '$'))){
+				part = ArrayHelper.partition(parents, function(el){ return (el.length - constraint.length >= 1? el[el.length - constraint.length - 1]: '^'); });
+				keys = Object.keys(part);
+				pre = listToRegExp(keys);
+				if(diff.some(function(verb){ return verb.match(this); }, new RegExp(pre + constraint + '$'))){
+					//separate each part into its corresponding entry
+					keys.map(function(k){ return m[1] + '>' + m[2] + '|' + extractCommonPartFromList(this[k]) + ' # ' + this[k].join(','); }, part)
+						.forEach(function(line){ newList.push(line); });
+					skip = true;
+				}
+				else
+					constraint = pre + constraint;
+			}
+		}
+
+		if(!skip)
+			storeSuffix(logs, 1, m[1], m[2], constraint, parents);
 	};
 
 	/** @private */
@@ -492,7 +517,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		}
 
 		return 'SFX ' + flag + ' ' + replaced + ' ' + replacement
-			+ (constraint && constraint != '0'? ' ' + (parents && parents.length == 1 && parents[0][0] != '‘'? '^' + parents[0]: constraint): '')
+			+ (constraint && constraint != '0'? ' ' + (parents && parents.length == 1 && parents[0][0] != '‘'? /*'^' +*/ parents[0]: constraint): '')
 			+ (parents? ' # ' + parents.join(FLAG_SEPARATOR): '')
 			;
 	};
@@ -603,6 +628,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	 * @private
 	 */
 	var mergeIdenticalTransformations = function(sublist){
+		sublist = unique(sublist);
+
 		var flag = sublist.shift();
 		if(!Number.isFinite(flag)){
 			sublist.unshift(flag);
@@ -610,17 +637,19 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		}
 
 		if(sublist.length && sublist[0] != undefined){
-			var parts = ArrayHelper.partition(unique(sublist), function(el){ return el.replace(/\/[\d,]*@?$/, ''); }),
-				constraints, markerFlagFound;
+			var parts = ArrayHelper.partition(sublist, function(el){ return el.replace(/\/[\d,]*@?/, ''); }),
+				constraints, markerFlagFound, parents;
 			sublist = Object.keys(parts).map(function(p){
-				constraints = parts[p].map(function(el){ return /[\d,]*@?$/.exec(el)[0]; });
+				constraints = parts[p].map(function(el){ return el.match(this)[1]; }, /([\d,]*@?)?( # .+)?$/)
+					.filter(function(constraint){ return constraint; });
 				markerFlagFound = constraints.some(function(el){ return (el.indexOf(MARKER_FLAGS) >= 0); });
 				constraints = ArrayHelper.flatten(constraints.map(function(el){ return el.replace(MARKER_FLAGS, '').split(','); }))
 					.filter(function(el){ return el; })
 					.map(function(el){ return Number(el); })
 					.sort(function(a, b){ return a - b; });
 				constraints = unique(constraints).join(',') + (markerFlagFound? MARKER_FLAGS: '');
-				return (constraints? p + '/' + constraints: p);
+				parents = p.match(/( # .+)?$/)[1];
+				return (constraints? p.replace(/( # .+)?$/, '') + '/' + constraints + (parents || ''): p);
 			});
 		}
 
@@ -659,8 +688,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			});
 
 			if(partitioningResults[false].length){
-				obj.matcher = (partitioningResults[false].indexOf('^') < 0 && partitioningResults[true].length?
-					listToRegExp(partitioningResults[false]): '[^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]') + common;
+				obj.matcher = (partitioningResults[false].indexOf('^') < 0 && partitioningResults[true].length? listToRegExp(partitioningResults[false]): '') + common;
 				//extract the parent w.r.t. the partitioning results
 				obj.origins = ArrayHelper.flatten(partitioningResults[false].map(function(chr){ return part[chr]; }));
 			}
@@ -692,9 +720,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	var listToRegExp = function(list){
 		if(!list.length)
 			return '';
-		if(list.length == 1)
-			return list[0];
-		return '[' + list.sort().join('') + ']';
+		if(list.indexOf('^') >= 0)
+			return '[^' + difference('aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx'.split(''), list).join('') + ']';
+		return (list.length == 1? list[0]: '[' + list.sort().join('') + ']');
 	};
 
 	var expandForm = (function(){
@@ -1654,12 +1682,14 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	/** @private */
 	var insert = function(paradigm, theme, infinitive, origin, stressedSuffix, replaceMatch, replacement, addedSuffix){
-		var suffix;
-		//se pòl ‘ver un xbasamento de la vokal (àtona) drio konsonante no prosimante e vanti vibrante
+		var suffix, free;
 		if(runAllForms && stressedSuffix.match(/[^aàeèéíoòóú]er/)){
-			suffix = composeSuffix(unstressedVowelBeforeVibrantFreeVariation(stressedSuffix), replaceMatch, replacement, addedSuffix);
+			free = unstressedVowelBeforeVibrantFreeVariation(stressedSuffix);
+			if(free != stressedSuffix){
+				suffix = composeSuffix(free, replaceMatch, replacement, addedSuffix);
 
-			insertIntoParadigm(paradigm, theme, infinitive, origin, suffix);
+				insertIntoParadigm(paradigm, theme, infinitive, origin, suffix);
+			}
 		}
 
 		suffix = composeSuffix(stressedSuffix, replaceMatch, replacement, addedSuffix);
@@ -1667,7 +1697,11 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		insertIntoParadigm(paradigm, theme, infinitive, origin, suffix);
 	};
 
-	/** @private */
+	/**
+	 * Se pòl ‘ver un xbasamento de la vokal (àtona) drio konsonante no prosimante e vanti vibrante
+	 *
+	 * @private
+	 */
 	var unstressedVowelBeforeVibrantFreeVariation = function(word){
 		var hyp = hyphenatePhones(word);
 		return word.replace(/([^aàeèéíoòóú])er/g, function(group, pre, idx){
