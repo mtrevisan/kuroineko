@@ -375,9 +375,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				}, /^(.+)>([^ ]+)(?: \# (.+))?$/);
 			}
 
-//		var ll = unique(logs.map(function(log){ var ar = log.match(this); return ar[1] + ' ' + ar[2]; }, /^SFX . (.+?) .+? # (.+)$/));
-//console.log(ll);
-
 		if(logs.length)
 			printSuffixes(logs, 1, 'vèrbi');
 	};
