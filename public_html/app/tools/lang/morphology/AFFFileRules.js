@@ -515,7 +515,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 		return 'SFX ' + flag + ' ' + replaced + ' ' + replacement
 			+ (constraint && constraint != '0'? ' ' + (parents && parents.length == 1 && parents[0][0] != '‘'? /*'^' +*/ parents[0]: constraint): '')
-			+ (parents? ' # ' + parents.join(FLAG_SEPARATOR): '')
+//			+ (parents? ' # ' + parents.join(FLAG_SEPARATOR): '')
 			;
 	};
 
@@ -634,10 +634,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		}
 
 		if(sublist.length && sublist[0] != undefined){
-			var parts = ArrayHelper.partition(sublist, function(el){ return el.replace(/\/[\d,]*@?/, ''); }),
+			var parts = ArrayHelper.partition(sublist, function(el){ return el.replace(/\/[\d,@]+/, ''); }),
 				constraints, markerFlagFound, parents;
 			sublist = Object.keys(parts).map(function(p){
-				constraints = parts[p].map(function(el){ return el.match(this)[1]; }, /([\d,]*@?)?( # .+)?$/)
+				constraints = parts[p].map(function(el){ return el.match(this)[1]; }, /[\d,@]*( # .+)?$/)
 					.filter(function(constraint){ return constraint; });
 				markerFlagFound = constraints.some(function(el){ return (el.indexOf(MARKER_FLAGS) >= 0); });
 				constraints = ArrayHelper.flatten(constraints.map(function(el){ return el.replace(MARKER_FLAGS, '').split(','); }))
