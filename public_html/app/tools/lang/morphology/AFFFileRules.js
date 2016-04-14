@@ -106,20 +106,20 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			[INTERROGATIVE_MARK_2S_2, 'u>o', 'tu>stu'],
 			[INTERROGATIVE_MARK_2P, '0>-[uo]'],
 			[INTERROGATIVE_MARK_2P_2, 'u>o'],
-			[INTERROGATIVE_MARK_3, 'a>e-l[oaie]', 'i>e-l[oaie]', '0>-l[oaie]|[^ai]'],
+			[INTERROGATIVE_MARK_3, 'a>e-[lƚ][oaie]', 'i>e-[lƚ][oaie]', '0>-[lƚ][oaie]|[^ai]'],
 			[INTERROGATIVE_MARK_3_2, 'o>[aie]'],
-			[INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE, 'ave>ise-l[oaie]|rave', 'ave>ísel[oaie]|rave']
+			[INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE, 'ave>ise-[lƚ][oaie]|rave', 'ave>ísel[oaie]|rave']
 		]
 	};
 
 	var pronomenals = {
 		1: [
-			[PRONOMENAL_MARK, '0>-l[oaie]', '0>-[gmstv]e(ne)', '0>-[gmstv]el[oaie]', '0>-ne'],
-			[PRONOMENAL_IMPERATIVE_MARK, '0>-[gmntv]e|[^a]', '0>-l[oaie]|[^a]', 'a>e-[gmntv]e', 'a>e-l[oaie]']
+			[PRONOMENAL_MARK, '0>-[lƚ][oaie]', '0>-[gmstv]e(ne)', '0>-[gmstv]e[lƚ][oaie]', '0>-ne'],
+			[PRONOMENAL_IMPERATIVE_MARK, '0>-[gmntv]e|[^a]', '0>-[lƚ][oaie]|[^a]', 'a>e-[gmntv]e', 'a>e-[lƚ][oaie]']
 		],
 		2: [
-			[PRONOMENAL_MARK_2, 'me>l[oaie]', 'me>[gnstv]e', 'mene>mel[oaie]', 'mene>[gstv]ene', 'mene>[gstv]el[oaie]'],
-			[PRONOMENAL_IMPERATIVE_MARK_2, 'me>[gntv]e|[^a]me', 'ame>e[gmntv]e', 'me>l[oaie]|[^a]me', 'ame>el[oaie]']
+			[PRONOMENAL_MARK_2, 'me>[lƚ][oaie]', 'me>[gnstv]e', 'mene>me[lƚ][oaie]', 'mene>[gstv]ene', 'mene>[gstv]e[lƚ][oaie]'],
+			[PRONOMENAL_IMPERATIVE_MARK_2, 'me>[gntv]e|[^a]me', 'ame>e[gmntv]e', 'me>[lƚ][oaie]|[^a]me', 'ame>e[lƚ][oaie]']
 		]
 	};
 
@@ -171,12 +171,12 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				'o>amente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|[^t]o',
 				'o>amente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|[^n]to',
 				'o>amente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|[^e]nto',
-				'o>amente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|[^lu]ento',
-				'o>emente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|[lu]ento',
-				'0>mente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|[^rln]e',
+				'o>amente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|[^lƚu]ento',
+				'o>emente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|[[ƚu]ento',
+				'0>mente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|[^rlƚn]e',
 				'e>mente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|[aeiou]re',
 				'0>mente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|[^aeiou]re',
-				'e>mente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|le',
+				'e>mente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|[lƚ]e',
 				'0>mente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|[^o]ne',
 				'e>amente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|one'
 			],
@@ -498,6 +498,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			constraint = replaced;
 
 		var line = getSuffixLine(i, replaced, replacement, constraint, parents);
+if(line.indexOf('/ ') >= 0)
+	console.log('');
+if(replaced == 'afar' && replacement.indexOf('àfelo') >= 0)
+	console.log('');
 		if(logs.indexOf(line) < 0)
 			logs.push(line);
 	};
@@ -637,7 +641,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			var parts = ArrayHelper.partition(sublist, function(el){ return el.replace(/\/[\d,@]+/, ''); }),
 				constraints, markerFlagFound, parents;
 			sublist = Object.keys(parts).map(function(p){
-				constraints = parts[p].map(function(el){ return el.match(this)[1]; }, /[\d,@]*( # .+)?$/)
+				constraints = parts[p].map(function(el){ return el.match(this)[1]; }, /([\d,@]*)(?: # .+)?$/)
 					.filter(function(constraint){ return constraint; });
 				markerFlagFound = constraints.some(function(el){ return (el.indexOf(MARKER_FLAGS) >= 0); });
 				constraints = ArrayHelper.flatten(constraints.map(function(el){ return el.replace(MARKER_FLAGS, '').split(','); }))
