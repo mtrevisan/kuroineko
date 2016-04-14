@@ -401,9 +401,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 		if(!skip){
 			//if m[1] and m[2] does not contain any l or ƚ, and if constraint contain an l or an ƚ
-			re = /(^|[aeiouàèéíòóú])[lƚ]([aeiouàèéíòóú])/g;
-			if(!m[1].match(re) && !m[2].match(re) && constraint.match(re))
-				constraint = constraint.replace(re, '$1[lƚ]$2');
+			re = /(^|[aeiouàèéíòóú])[lƚ]([aeiouàèéíòóú])/;
+			if(!m[1].match(re) && !m[1].match(/[đŧ]/) && !m[2].match(re) && !m[2].match(/[đŧ]/) && constraint.match(re) && !constraint.match(/[đŧ]/))
+				constraint = constraint.replace(/(^|[aeiouàèéíòóú])[lƚ]([aeiouàèéíòóú])/g, '$1[lƚ]$2');
 
 			storeSuffix(logs, 1, m[1], m[2], constraint, parents);
 		}
