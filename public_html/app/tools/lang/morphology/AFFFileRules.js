@@ -498,16 +498,14 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			constraint = replaced;
 
 		var line = getSuffixLine(i, replaced, replacement, constraint, parents);
-if(line.indexOf('/ ') >= 0)
-	console.log('');
-if(replaced == 'afar' && replacement.indexOf('àfelo') >= 0)
-	console.log('');
 		if(logs.indexOf(line) < 0)
 			logs.push(line);
 	};
 
 	/** @private */
 	var getSuffixLine = function(flag, replaced, replacement, constraint, parents){
+		replacement = replacement.replace(/\|.+$/, '');
+
 		if(!printFlagsAsNumber){
 			var startChar = FLAG_START.charCodeAt(0) - 1;
 			flag = String.fromCharCode(flag + startChar);
