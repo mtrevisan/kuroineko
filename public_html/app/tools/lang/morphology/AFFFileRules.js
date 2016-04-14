@@ -39,13 +39,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	/** @constant */
 		PRONOMENAL_MARK = REDUCTION_RESERVED_0 + 3,
 	/** @constant */
-		//PRONOMENAL_MARK_RESERVED_0 = REDUCTION_RESERVED_0 + 4,
-	/** @constant */
 		PRONOMENAL_IMPERATIVE_MARK = REDUCTION_RESERVED_0 + 4,
 	/** @constant */
 		PRONOMENAL_MARK_2 = REDUCTION_RESERVED_0 + 5,
-	/** @constant */
-		//PRONOMENAL_MARK_RESERVED_1 = REDUCTION_RESERVED_0 + 6,
 	/** @constant */
 		PRONOMENAL_IMPERATIVE_MARK_2 = REDUCTION_RESERVED_0 + 6,
 	/** @constant */
@@ -108,7 +104,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			[INTERROGATIVE_MARK_2P_2, 'u>o'],
 			[INTERROGATIVE_MARK_3, 'a>e-[lƚ][oaie]', 'i>e-[lƚ][oaie]', '0>-[lƚ][oaie]|[^ai]'],
 			[INTERROGATIVE_MARK_3_2, 'o>[aie]'],
-			[INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE, 'ave>ise-[lƚ][oaie]|rave', 'ave>ísel[oaie]|rave']
+			[INTERROGATIVE_MARK_3_CONDITIONAL_SIMPLE, 'ave>ise-[lƚ][oaie]|rave', 'ave>íse[lƚ][oaie]|rave']
 		]
 	};
 
@@ -172,7 +168,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				'o>amente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|[^n]to',
 				'o>amente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|[^e]nto',
 				'o>amente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|[^lƚu]ento',
-				'o>emente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|[[ƚu]ento',
+				'o>emente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|[ƚu]ento',
 				'0>mente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|[^rlƚn]e',
 				'e>mente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|[aeiou]re',
 				'0>mente/' + FINAL_CONSONANT_VOICING_MARK + ',' + ADVERB_1 + '|[^aeiou]re',
@@ -530,41 +526,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		logs.sort().forEach(function(log){
 			console.log(log);
 		});
-	};
-
-	/** @private */
-	var addFlag = function(replacement, flags){
-		if(!flags)
-			return replacement;
-
-		var mFlag = extractFlags('/' + (Array.isArray(flags)? flags.join(FLAG_SEPARATOR): flags)),
-			mRep = extractFlags(replacement);
-
-		flags = uniteFlags(mRep, mFlag);
-
-		return replacement.replace(PATTERN_FLAGS, '') + printFlags(flags);
-	};
-
-	/** @private */
-	var extractFlags = function(flags){
-		var m = flags.match(PATTERN_FLAGS);
-		m[1] = (m[1]? m[1].split(FLAG_SEPARATOR): []);
-		m[2] = (m[2]? m[2].split(''): []);
-		return {forms: m[1], markers: m[2], constraint: (m[3] || '').replace(/\|/, '')};
-	};
-
-	/** @private */
-	var uniteFlags = function(flags1, flags2){
-		return {
-			forms: (flags1.constraint == flags2.constraint? unique(flags2.forms.concat(flags1.forms)).sort(function(a, b){ return Number(a) - Number(b); }): []),
-			markers: (flags1.constraint == flags2.constraint? unique(flags2.markers.concat(flags1.markers)).sort(): []),
-			constraint: (flags1.constraint == flags2.constraint? flags1.constraint: '_')
-		};
-	};
-
-	/** @private */
-	var printFlags = function(flags){
-		return (flags.forms.length? '/' + flags.forms.sort().join(FLAG_SEPARATOR): '') + flags.markers.join('');
 	};
 
 	/** @private */
@@ -931,8 +892,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				expandForm('[e‘]séndo').forEach(function(t){
 					insert(paradigm, 2, verb.infinitive, origin, t);
 				});
-//				insert(paradigm, 2, verb.infinitive, origin, 'siàndome', null, null, '/' + PRONOMENAL_MARK_2);
-//				insert(paradigm, 2, verb.infinitive, origin, 'siàndomene', null, null, '/' + PRONOMENAL_MARK_3);
+				insert(paradigm, 2, verb.infinitive, origin, 'siàndome', null, null, '/' + PRONOMENAL_MARK_2);
+				insert(paradigm, 2, verb.infinitive, origin, 'siàndomene', null, null, '/' + PRONOMENAL_MARK_2);
 			}
 			else if(verb.irregularity.aver){
 				expandForm('[a‘]biàndo(ge)').forEach(function(t){
@@ -941,8 +902,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				expandForm('[a‘]véndo(ge)').forEach(function(t){
 					insert(paradigm, 2, verb.infinitive, origin, t);
 				});
-//				insert(paradigm, 2, verb.infinitive, origin, 'abiàndome', null, null, '/' + PRONOMENAL_MARK_2);
-//				insert(paradigm, 2, verb.infinitive, origin, 'abiàndomene', null, null, '/' + PRONOMENAL_MARK_3);
+				insert(paradigm, 2, verb.infinitive, origin, 'abiàndome', null, null, '/' + PRONOMENAL_MARK_2);
+				insert(paradigm, 2, verb.infinitive, origin, 'abiàndomene', null, null, '/' + PRONOMENAL_MARK_2);
 			}
 
 			//se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug.
@@ -1682,8 +1643,23 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	/** @private */
 	var insert = function(paradigm, theme, infinitive, origin, stressedSuffix, replaceMatch, replacement, addedSuffix){
 		var suffix, free;
-		if(runAllForms && stressedSuffix.match(/[^aàeèéíoòóú]er/)){
-			free = unstressedVowelBeforeVibrantFreeVariation(stressedSuffix);
+		if(runAllForms){
+			free = unstressedVowelBeforeVibrantFreeVariation(stressedSuffix)
+				.replace(/([^aeiouàèéíòóúlnr])đ([aeiouàèéíòóú])/g, '$1[đx]$2')
+				.replace(/([aeiouàèéíòóúlnr])đ([aeiouàèéíòóú])/g, '$1[dđx]$2')
+				.replace(/ŧ/g, '[sŧ]')
+				.replace(/[jɉ]/g, '[jɉ]');
+			if(free != stressedSuffix){
+				suffix = composeSuffix(free, replaceMatch, replacement, addedSuffix);
+
+				insertIntoParadigm(paradigm, theme, infinitive, origin, suffix);
+			}
+
+			free = unstressedVowelBeforeVibrantFreeVariation(stressedSuffix)
+				.replace(/(^|[aeiouàèéíòóú])l([aeiouàèéíòóú])/g, '$1[lƚ]$2')
+				.replace(/đ/g, 'x')
+				.replace(/ŧ/g, 's')
+				.replace(/[jɉ]/g, '[jɉ]');
 			if(free != stressedSuffix){
 				suffix = composeSuffix(free, replaceMatch, replacement, addedSuffix);
 
@@ -1704,7 +1680,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	var unstressedVowelBeforeVibrantFreeVariation = function(word){
 		var hyp = hyphenatePhones(word);
 		return word.replace(/([^aàeèéíoòóú])er/g, function(group, pre, idx){
-			return (hyp.getSyllabe(idx).match(/[^jw]e/)? pre + 'ar': group);
+			return (hyp.getSyllabe(idx).match(/[^jw]e/)? pre + '[ea]r': group);
 		});
 	};
 

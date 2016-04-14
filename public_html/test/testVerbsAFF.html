@@ -73,18 +73,13 @@
 			var verbs = [],
 				inf;
 			verbsDictionary.forEach(function(infinitive, idx){
-//if(idx > 2000)
+//if(idx > 100)
 //	return;
 				inf = composeInfinitive(infinitive);
 
 //if(['domàr', 'domandàr', 'domenàr', 'domestegàr'].indexOf(inf) >= 0){
 //if(['skoltàr', 'kovèrđer'].indexOf(inf) >= 0){
 //if(['èser', 'avér', 'xbolŧàr'].indexOf(inf) >= 0){
-					inf = inf.replace(/(^|[aeiouàèéíòóú])l([aeiouàèéíòóú])/g, '$1[lƚ]$2')
-						.replace(/([^aeiouàèéíòóúlnr])đ([aeiouàèéíòóú])/g, '$1[đx]$2')
-						.replace(/([aeiouàèéíòóúlnr])đ([aeiouàèéíòóú])/g, '$1[dđx]$2')
-						.replace(/ŧ/g, '[sŧ]')
-						.replace(/[jɉ]/g, '[jɉ]');
 					expandForm(inf).forEach(function(t){
 						if(verbs.indexOf(t) < 0)
 							verbs.push(t);
