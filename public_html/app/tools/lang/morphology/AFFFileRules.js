@@ -399,8 +399,14 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			}
 		}
 
-		if(!skip)
+		if(!skip){
+			//if m[1] and m[2] does not contain any l or ƚ, and if constraint contain an l or an ƚ
+			re = /(^|[aeiouàèéíòóú])[lƚ]([aeiouàèéíòóú])/g;
+			if(!m[1].match(re) && !m[2].match(re) && constraint.match(re))
+				constraint = constraint.replace(re, '$1[lƚ]$2');
+
 			storeSuffix(logs, 1, m[1], m[2], constraint, parents);
+		}
 	};
 
 	/** @private */
@@ -511,8 +517,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				replacement = m[1] + m[2].split(FLAG_SEPARATOR).map(function(rep){ return String.fromCharCode(Number(rep) + startChar); }).join('');
 		}
 
-		return 'SFX ' + flag + ' ' + replaced + ' ' + replacement
-			+ (constraint && constraint != '0'? ' ' + (parents && parents.length == 1 && parents[0][0] != '‘'? /*'^' +*/ parents[0]: constraint): '')
+		constraint = (constraint && constraint != '0'? ' ' + (parents && parents.length == 1? parents[0]: constraint): '');
+
+		return 'SFX ' + flag + ' ' + replaced + ' ' + replacement + constraint
 //			+ (parents? ' # ' + parents.join(FLAG_SEPARATOR): '')
 			;
 	};
