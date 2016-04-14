@@ -26,44 +26,6 @@
 			};
 		})();
 
-		var expandForm = (function(){
-			var add = function(list, value){
-				if(list.indexOf(value) < 0)
-					list.push(value);
-			};
-
-
-			return function recurse(forms, list){
-				var m;
-				if(!Array.isArray(list))
-					list = [];
-				[].concat(forms).forEach(function(form){
-					m = form.match(/^(.*)([\(\[])(.+)[\)\]](.*)$/);
-					if(m){
-						m[1] = m[1] || '';
-						m[4] = m[4] || '';
-
-						if(m[2] == '('){
-							recurse(m[1] + m[4], list);
-							if(m[3].indexOf('/') >= 0)
-								m[3].split('/').forEach(function(el){
-									recurse(m[1] + el + m[4], list);
-								});
-							else
-								recurse(m[1] + m[3] + m[4], list);
-						}
-						else
-							m[3].split(m[3].indexOf('/') >= 0? '/': '').forEach(function(el){
-								recurse(m[1] + el + m[4], list);
-							});
-					}
-					else
-						add(list, form);
-				});
-				return list;
-			};
-		})();
-
 
 		require(['tools/lang/morphology/AFFFileRules', 'tools/lang/morphology/Verb', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(AFFFileRules, Verb, verbsDictionary, JSONH){
 			verbsDictionary = JSONH.unpack(verbsDictionary);
@@ -80,10 +42,8 @@
 //if(['domàr', 'domandàr', 'domenàr', 'domestegàr'].indexOf(inf) >= 0){
 //if(['skoltàr', 'kovèrđer'].indexOf(inf) >= 0){
 //if(['èser', 'avér', 'xbolŧàr'].indexOf(inf) >= 0){
-					expandForm(inf).forEach(function(t){
-						if(verbs.indexOf(t) < 0)
-							verbs.push(t);
-					});
+					if(verbs.indexOf(inf) < 0)
+						verbs.push(inf);
 //				}
 			});
 			verbs = verbs.map(function(v){ return new Verb(v); });
