@@ -219,8 +219,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		});
 		suffixes = mergeIdenticalTransformations(ArrayHelper.flatten(suffixes));
 
-		paradigm = [{suffixes: suffixes}];
-
 		if(logOnConsole){
 			printParadigm(suffixes, verbs.map(function(verb){ return unmarkDefaultStress(verb.infinitive); }));
 
@@ -240,6 +238,25 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				printReductions(adverbs, 'avèrbi');
 			}
 		}
+	};
+
+	var generateThemeT8 = function(verb){
+		var dialect = new Dialect(),
+			infinitiveThemes = {},
+			paradigm;
+		infinitiveThemes[verb.infinitive] = Themizer.generate(verb, dialect);
+
+		//dict: -r/A
+		paradigm = [];
+		Array.prototype.push.apply(paradigm, generateTheme([verb], infinitiveThemes, 13, 0));
+
+		//collect and expand forms
+		var suffixes = [];
+		paradigm.forEach(function(sublist){
+			suffixes = suffixes.concat(sublist.suffixes.map(expandForm));
+		});
+
+		printParadigm(suffixes, [unmarkDefaultStress(verb.infinitive)]);
 	};
 
 	var generateTheme = (function(){
@@ -332,6 +349,11 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 					generateThemeT12SubjunctivePresent(paradigm, verb, themes, REGULAR, origins, originTheme);
 				generateThemeT12SubjunctivePresent(paradigm, verb, themes, IRREGULAR, origins, originTheme);
 			},
+
+			function(paradigm, verb, themes, origins, originTheme){
+				generateThemeT13IndicativePresent(paradigm, verb, themes, REGULAR, origins, originTheme);
+				generateThemeT13IndicativePresent(paradigm, verb, themes, IRREGULAR, origins, originTheme);
+			}
 		];
 
 		return function(verbs, infinitiveThemes, theme, originTheme){
@@ -1290,6 +1312,37 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	};
 
 	/** @private */
+	var generateThemeT13IndicativePresent = function(paradigm, verb, themes, type, origins, originTheme){
+		themes = themes[type];
+		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
+
+		Assert.assert(!themes.themeT8 || origin, 'Error on origin for theme T13 "' + themes.themeT8 + '" ("' + verb.infinitive + '") indicative present');
+		if(themes.themeT8 && origin){
+			if(origins.indexOf(origin) < 0)
+				origins.push(origin);
+
+			expandForm(themes.themeT8).forEach(function(t){
+				if(verb.irregularity.eser)
+					insert(paradigm, 8, verb.infinitive, origin, t + 'ón', /([^cijɉñ])on$/, '$1(i)on', '/' + INTERROGATIVE_MARK_1S + ',' + INTERROGATIVE_MARK_1P);
+				else if(verb.irregularity.aver)
+					insert(paradigm, 8, verb.infinitive, origin, t, /à$/, '[àèò]', '/' + INTERROGATIVE_MARK_1S + ',' + INTERROGATIVE_MARK_1P);
+				else{
+					insert(paradigm, 8, verb.infinitive, origin, t + 'o', null, null, '/' + INTERROGATIVE_MARK_1S + ',' + INTERROGATIVE_MARK_1P);
+
+					if(verb.irregularity.verb && type == IRREGULAR){
+						if(verb.irregularity.saver)
+							insert(paradigm, 8, verb.infinitive, origin, t.replace(/à$/, 'ò'), null, null, '/' + INTERROGATIVE_MARK_1S + ',' + INTERROGATIVE_MARK_1P);
+						else
+							insert(paradigm, 8, verb.infinitive, origin, t + 'o', /([aeiouàèéíòóú])o$/, '$1(g)o', '/' + INTERROGATIVE_MARK_1S + ',' + INTERROGATIVE_MARK_1P);
+					}
+				}
+				if(verb.irregularity.verb.match(/^(dixer|traer|toler)$/))
+					insert(paradigm, 8, verb.infinitive, origin, t.replace(/[lƚx]?$/, 'go'), null, null, '/' + INTERROGATIVE_MARK_1S + ',' + INTERROGATIVE_MARK_1P);
+			});
+		}
+	};
+
+	/** @private */
 	var generateThemeT8SubjunctivePresent = function(paradigm, verb, themes, type, origins, originTheme){
 		themes = themes[type];
 		themes = themes.subjunctive || themes;
@@ -1651,11 +1704,11 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	var insert = function(paradigm, theme, infinitive, origin, stressedSuffix, replaceMatch, replacement, addedSuffix){
 		var suffix, free;
 		if(runAllForms){
-			free = unstressedVowelBeforeVibrantFreeVariation(stressedSuffix)
+			free = unstressedVowelBeforeVibrantFreeVariation(stressedSuffix
 				.replace(/([^aeiouàèéíòóúlnr])đ([aeiouàèéíòóú])/g, '$1[đx]$2')
 				.replace(/([aeiouàèéíòóúlnr])đ([aeiouàèéíòóú])/g, '$1[dđx]$2')
 				.replace(/ŧ/g, '[sŧ]')
-				.replace(/[jɉ]/g, '[jɉ]');
+				.replace(/[jɉ]/g, '[jɉ]'));
 			if(free != stressedSuffix){
 				suffix = composeSuffix(free, replaceMatch, replacement, addedSuffix);
 
@@ -1750,7 +1803,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 
 	return {
-		generate: generate
+		generate: generate,
+		generateThemeT8: generateThemeT8
 	};
 
 });
