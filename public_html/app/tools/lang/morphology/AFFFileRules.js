@@ -242,21 +242,18 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	var generateThemeT8 = function(verb){
 		var dialect = new Dialect(),
-			infinitiveThemes = {},
-			paradigm;
-		infinitiveThemes[verb.infinitive] = Themizer.generate(verb, dialect);
+			themes = Themizer.generate(verb, dialect),
+			suffixes = [],
+			themes;
 
-		//dict: -r/A
-		paradigm = [];
-		Array.prototype.push.apply(paradigm, generateTheme([verb], infinitiveThemes, 13, 0));
+		generateThemeT13IndicativePresent(suffixes, verb, themes, REGULAR, 0);
+		generateThemeT13IndicativePresent(suffixes, verb, themes, IRREGULAR, 0);
 
-		//collect and expand forms
-		var suffixes = [];
-		paradigm.forEach(function(sublist){
-			suffixes = suffixes.concat(sublist.suffixes.map(expandForm));
-		});
-
-		printParadigm(suffixes, [unmarkDefaultStress(verb.infinitive)]);
+		//expand forms
+		suffixes.map(expandForm)
+			.map(function(suffix){
+				console.log(suffix);
+			});
 	};
 
 	var generateTheme = (function(){
@@ -348,11 +345,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				if(!verb.irregularity.verb.match(/^(dever|eser|s?aver)$/))
 					generateThemeT12SubjunctivePresent(paradigm, verb, themes, REGULAR, origins, originTheme);
 				generateThemeT12SubjunctivePresent(paradigm, verb, themes, IRREGULAR, origins, originTheme);
-			},
-
-			function(paradigm, verb, themes, origins, originTheme){
-				generateThemeT13IndicativePresent(paradigm, verb, themes, REGULAR, origins, originTheme);
-				generateThemeT13IndicativePresent(paradigm, verb, themes, IRREGULAR, origins, originTheme);
 			}
 		];
 
@@ -1312,32 +1304,29 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	};
 
 	/** @private */
-	var generateThemeT13IndicativePresent = function(paradigm, verb, themes, type, origins, originTheme){
+	var generateThemeT13IndicativePresent = function(paradigm, verb, themes, type, originTheme){
 		themes = themes[type];
 		var origin = unmarkDefaultStress(getOrigin(themes, verb, originTheme));
 
 		Assert.assert(!themes.themeT8 || origin, 'Error on origin for theme T13 "' + themes.themeT8 + '" ("' + verb.infinitive + '") indicative present');
 		if(themes.themeT8 && origin){
-			if(origins.indexOf(origin) < 0)
-				origins.push(origin);
-
 			expandForm(themes.themeT8).forEach(function(t){
 				if(verb.irregularity.eser)
-					insert(paradigm, 8, verb.infinitive, origin, t + 'ón', /([^cijɉñ])on$/, '$1(i)on', '/' + INTERROGATIVE_MARK_1S + ',' + INTERROGATIVE_MARK_1P);
+					paradigm.push((t + 'ón').replace(/([^cijɉñ])on$/, '$1(i)on'));
 				else if(verb.irregularity.aver)
-					insert(paradigm, 8, verb.infinitive, origin, t, /à$/, '[àèò]', '/' + INTERROGATIVE_MARK_1S + ',' + INTERROGATIVE_MARK_1P);
+					paradigm.push(t.replace(/à$/, '[àèò]'));
 				else{
-					insert(paradigm, 8, verb.infinitive, origin, t + 'o', null, null, '/' + INTERROGATIVE_MARK_1S + ',' + INTERROGATIVE_MARK_1P);
+					paradigm.push(t + 'o');
 
 					if(verb.irregularity.verb && type == IRREGULAR){
 						if(verb.irregularity.saver)
-							insert(paradigm, 8, verb.infinitive, origin, t.replace(/à$/, 'ò'), null, null, '/' + INTERROGATIVE_MARK_1S + ',' + INTERROGATIVE_MARK_1P);
+							paradigm.push(t.replace(/à$/, 'ò'));
 						else
-							insert(paradigm, 8, verb.infinitive, origin, t + 'o', /([aeiouàèéíòóú])o$/, '$1(g)o', '/' + INTERROGATIVE_MARK_1S + ',' + INTERROGATIVE_MARK_1P);
+							paradigm.push((t + 'o').replace(/([aeiouàèéíòóú])o$/, '$1(g)o'));
 					}
 				}
 				if(verb.irregularity.verb.match(/^(dixer|traer|toler)$/))
-					insert(paradigm, 8, verb.infinitive, origin, t.replace(/[lƚx]?$/, 'go'), null, null, '/' + INTERROGATIVE_MARK_1S + ',' + INTERROGATIVE_MARK_1P);
+					paradigm.push(t.replace(/[lƚx]?$/, 'go'));
 			});
 		}
 	};
