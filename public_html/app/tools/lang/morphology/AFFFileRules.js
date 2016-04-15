@@ -251,8 +251,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 		//expand forms
 		suffixes.map(expandForm)
-			.map(function(suffix){
-				console.log(suffix);
+			.map(function(expanded){
+				expanded.map(function(suff){
+					console.log(suff + '/a');
+				});
 			});
 	};
 
