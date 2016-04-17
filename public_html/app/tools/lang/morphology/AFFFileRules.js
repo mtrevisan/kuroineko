@@ -1438,7 +1438,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				],
 				//rhizoatone
 				[
-					{matcher: /só([lƚ])$/, replacement: 'só$1it'},
+					{matcher: /só([lƚ])$/, replacement: 'sò$1it'},
 					{matcher: /và[lƚ]$/, replacement: 'vàls'},
 					{matcher: /poséd$/, replacement: 'posès'},
 					//(per|re)maner
