@@ -114,7 +114,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			[PRONOMENAL_IMPERATIVE_MARK, '0>-[gmntv]e|[^a]', '0>-[lƚ][oaie]|[^a]', 'a>e-[gmntv]e', 'a>e-[lƚ][oaie]']
 		],
 		2: [
-			[PRONOMENAL_MARK_2, 'me>[lƚ][oaie]', 'me>[gnstv]e', 'mene>me[lƚ][oaie]', 'mene>[gstv]ene', 'mene>[gstv]e[lƚ][oaie]'],
+			[PRONOMENAL_MARK_2, 'me>[lƚ][oaie]', 'me>[gnstv]e', 'me>mene', 'me>me[lƚ][oaie]', 'me>[gstv]ene', 'me>[gstv]e[lƚ][oaie]'],
 			[PRONOMENAL_IMPERATIVE_MARK_2, 'me>[gntv]e|[^a]me', 'ame>e[gmntv]e', 'me>[lƚ][oaie]|[^a]me', 'ame>e[lƚ][oaie]']
 		]
 	};
@@ -765,7 +765,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			else{
 				insert(paradigm, 1, verb.infinitive, origin, themes.themeT1 + 'r', null, null, '/' + PRONOMENAL_MARK + MARKER_FLAGS);
 				insert(paradigm, 1, verb.infinitive, origin, themes.themeT1 + 'rme', null, null, '/' + PRONOMENAL_MARK_2);
-				insert(paradigm, 1, verb.infinitive, origin, themes.themeT1 + 'rmene', null, null, '/' + PRONOMENAL_MARK_2);
 			}
 			insert(paradigm, 1, verb.infinitive, origin, themes.themeT1 + 're');
 		}
@@ -906,7 +905,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?av?ér|^[‘']vér)$/)){
 				insert(paradigm, 2, verb.infinitive, origin, themes.themeT2 + 'ndo', null, null, '/' + PRONOMENAL_MARK + MARKER_FLAGS);
 				insert(paradigm, 2, verb.infinitive, origin, themes.themeT2 + 'ndome', null, null, '/' + PRONOMENAL_MARK_2);
-				insert(paradigm, 2, verb.infinitive, origin, themes.themeT2 + 'ndomene', null, null, '/' + PRONOMENAL_MARK_2);
 			}
 			else
 				insert(paradigm, 2, verb.infinitive, origin, themes.themeT2 + 'ndo', null, null, '/' + MARKER_FLAGS);
@@ -916,7 +914,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 					insert(paradigm, 2, verb.infinitive, origin, t);
 				});
 				insert(paradigm, 2, verb.infinitive, origin, 'siàndome', null, null, '/' + PRONOMENAL_MARK_2);
-				insert(paradigm, 2, verb.infinitive, origin, 'siàndomene', null, null, '/' + PRONOMENAL_MARK_2);
 			}
 			else if(verb.irregularity.aver){
 				expandForm('[a‘]biàndo(ge)').forEach(function(t){
@@ -926,7 +923,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 					insert(paradigm, 2, verb.infinitive, origin, t);
 				});
 				insert(paradigm, 2, verb.infinitive, origin, 'abiàndome', null, null, '/' + PRONOMENAL_MARK_2);
-				insert(paradigm, 2, verb.infinitive, origin, 'abiàndomene', null, null, '/' + PRONOMENAL_MARK_2);
 			}
 
 			//se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug.
@@ -937,7 +933,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 					if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?av?ér|^[‘']vér)$/)){
 						insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + PRONOMENAL_MARK + MARKER_FLAGS);
 						insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'ndome', null, null, '/' + PRONOMENAL_MARK_2);
-						insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'ndomene', null, null, '/' + PRONOMENAL_MARK_2);
 					}
 					else
 						insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + MARKER_FLAGS);
@@ -947,7 +942,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 					if(!verb.infinitive.match(/(déver|(^|[^t])èser|s?av?ér|^[‘']vér)$/)){
 						insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + PRONOMENAL_MARK + MARKER_FLAGS);
 						insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'ndome', null, null, '/' + PRONOMENAL_MARK_2);
-						insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'ndomene', null, null, '/' + PRONOMENAL_MARK_2);
 					}
 					else
 						insert(paradigm, 2, verb.infinitive, origin, themeT2 + 'ndo', null, null, '/' + MARKER_FLAGS);
@@ -1249,7 +1243,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				else{
 					insert(paradigm, 7, verb.infinitive, origin, themes.themeT7 + 'ndo', null, null, '/' + PRONOMENAL_MARK);
 					insert(paradigm, 7, verb.infinitive, origin, themes.themeT7 + 'ndome', null, null, '/' + PRONOMENAL_MARK_2);
-					insert(paradigm, 7, verb.infinitive, origin, themes.themeT7 + 'ndomene', null, null, '/' + PRONOMENAL_MARK_2);
 				}
 			}
 		}

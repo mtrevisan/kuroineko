@@ -1,0 +1,1289 @@
+# Diŧionario de lengua vèneta
+#
+# Venetan hunspell affix file
+# Copyright (C) 2016 Màuro Trevixan
+# Version 1.0.4 (2016/04/14) (YYYY/MM/DD)
+#
+# This file is distributed under GPL license.
+#
+# This file is part of the "diŧionario de lengua vèneta".
+#
+# The "diŧionario de lengua vèneta" is free software; you can redistribute
+# it and/or modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; either version 3 of the
+# License, or (at your option) any later version.
+#
+# The "diŧionario de lengua vèneta" is distributed in the hope that it
+# will be useful, but WITHOUT ANY WARRANTY; without even the implied
+# warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public
+# License along with the "diŧionario de lengua vèneta", if not,
+# see <http://www.gnu.org/licenses/>.
+
+
+NAME Diŧionario de lengua vèneta
+VERSION 1.0.4 (2016/04/08)
+HOME http://parnodexmentegar.orgfree.com/
+LANG vec
+
+SET UTF-8
+
+TRY -'‘’eaoinrtlƚsdkpvmuèxgfàòbíhéŧójñcúSđLȽIPETKKAMDNFBRJGɉCOUĐXÀÈŦHɈÒÑÍÉÓÚ
+
+KEY esdr|redft|trfg|uhji|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà-|àòèù-|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìè'
+
+WORDCHARS -'‘’
+
+FLAG UTF-8
+
+# affix rules can strip full words, not only one less characters
+FULLSTRIP
+
+# define break points for breaking words and checking word parts separately
+BREAK 3
+BREAK &
+BREAK /
+BREAK _
+
+# suggest the right forms for words which incorrectly choose the wrong letter from a related set more than once in a word
+MAP 5
+MAP eéè
+MAP aáà
+MAP iíì
+MAP oóò
+MAP uúù
+
+# replace input characters
+ICONV 26
+ICONV ‒ -
+ICONV – -
+ICONV — -
+ICONV ― -
+ICONV dh đ
+ICONV jh ɉ
+ICONV lh l
+ICONV nh ñ
+ICONV th ŧ
+ICONV xc sc
+ICONV xf sf
+ICONV xk sk
+ICONV xp sp
+ICONV xt st
+ICONV sm xm
+ICONV sn xn
+ICONV sñ xñ
+ICONV sb xb
+ICONV sd xd
+ICONV sg xg
+ICONV sj xj
+ICONV sɉ xɉ
+ICONV ss xs
+ICONV sv xv
+ICONV sr xr
+ICONV sl xl
+
+# frequently switched character groups
+REP 13
+REP ^' ‘
+REP ^’ ‘
+REP '$ ’
+REP ‘$ ’
+REP a à
+REP e è
+REP e é
+REP i í
+REP ì í
+REP o ò
+REP o ó
+REP u ú
+REP ù ú
+# REP ’[eèéaàoòóiínrlƚtskdpvmuúgxfŧbjɉñđc]>’_.
+# REP ‘[eèéaàoòóiínrlƚtskdpvmuúgxfŧbjɉñđc]>’_.
+# REP '[eèéaàoòóiínrlƚtskdpvmuúgxfŧbjɉñđc]>’_.
+
+
+# avoid wrong spelling of letterwords
+KEEPCASE Z  # km, GHz, DVD, ...
+
+
+SFX a Y 295 # vèrbi -àr
+SFX a 0 e ar # theme T1 - infinitive simple
+SFX a 0 ò ar # theme T4 - indicative future
+SFX a 0 à ar # theme T4 - indicative future
+SFX a 0 è ar # theme T4 - indicative future
+SFX a 0 é ar # theme T4 - indicative future
+SFX a 0 emo ar # theme T4 - indicative future
+SFX a 0 on ar # theme T4 - indicative future, conditional simple
+SFX a 0 en ar # theme T4 - indicative future, conditional simple
+SFX a 0 ía ar # theme T4 - conditional simple
+SFX a 0 íe ar # theme T4 - conditional simple
+SFX a 0 esi ar # theme T4 - conditional simple
+SFX a 0 ésimo ar # theme T4 - conditional simple
+SFX a 0 onse ar # theme T4 - conditional simple
+SFX a 0 ion ar # theme T4 - conditional simple
+SFX a 0 ionse ar # theme T4 - conditional simple
+SFX a 0 ison ar # theme T4 - conditional simple
+SFX a 0 isonse ar # theme T4 - conditional simple
+SFX a 0 ision ar # theme T4 - conditional simple
+SFX a 0 isionse ar # theme T4 - conditional simple
+SFX a 0 ense ar # theme T4 - conditional simple
+SFX a 0 isen ar # theme T4 - conditional simple
+SFX a 0 isense ar # theme T4 - conditional simple
+SFX a 0 àe ar # theme T4 - conditional simple
+SFX a 0 ave ar # theme T4 - conditional simple
+SFX a 0 ié ar # theme T4 - conditional simple
+SFX a 0 isié ar # theme T4 - conditional simple
+SFX a o e o # theme T8 - indicative present, subjunctive present; regular T8: no dar, r[ei]dar, dexdar, star, malstar, movestar, sotostar, far, konfar, kontrafar, [lƚ]ikuefar, r[ei]far, rarefar, putrefar, sorafar, strafar, stupefar, torefar, tumefar
+SFX a o i [^i]o # theme T8 - indicative present, subjunctive present; regular T8: no dar, r[ei]dar, dexdar, star, malstar, movestar, sotostar, far, konfar, kontrafar, [lƚ]ikuefar, r[ei]far, rarefar, putrefar, sorafar, strafar, stupefar, torefar, tumefar
+SFX a io i io # theme T8 - indicative present, subjunctive present; regular T8: no dar, r[ei]dar, dexdar, star, malstar, movestar, sotostar, far, konfar, kontrafar, [lƚ]ikuefar, r[ei]far, rarefar, putrefar, sorafar, strafar, stupefar, torefar, tumefar
+SFX a o a/F o # theme T8 - subjunctive present, theme T9 - imperative present, theme T10 - indicative present; regular T10: no dar, r[ei]dar, dexdar, star, malstar, movestar, sotostar, far, konfar, kontrafar, [lƚ]ikuefar, r[ei]far, rarefar, putrefar, sorafar, strafar, stupefar, torefar, tumefar
+SFX a o ame/H o # theme T8 - subjunctive present, theme T9 - imperative present, theme T10 - indicative present; regular T10: no dar, r[ei]dar, dexdar, star, malstar, movestar, sotostar, far, konfar, kontrafar, [lƚ]ikuefar, r[ei]far, rarefar, putrefar, sorafar, strafar, stupefar, torefar, tumefar
+SFX a r r/E ar # theme T1 - infinitive simple
+SFX a r rme/G ar # theme T1 - infinitive simple
+SFX a r se ar # theme T2 - subjunctive imperfect
+SFX a r si ar # theme T2 - subjunctive imperfect
+SFX a r vo/B ar # theme T2 - indicative imperfect
+SFX a r sto/B ar # theme T2 - participle perfect
+SFX a r nte ar # theme T7 - participle imperfect
+SFX a r ndo/E ar # theme T2 - gerund simple
+SFX a ar àndome/H ar # theme T2 - gerund simple
+SFX a ar ào/B ar # theme T2 - indicative imperfect, theme T6 - participle perfect
+SFX a ar àimo ar # theme T2 - indicative imperfect
+SFX a ar àvimo ar # theme T2 - indicative imperfect
+SFX a ar àsimo ar # theme T2 - subjunctive imperfect
+SFX a ar è/F ar # theme T5 - indicative present, subjunctive present, imperative present
+SFX a ar ème/H ar # theme T5 - indicative present, subjunctive present, imperative present
+SFX a ar é/F ar # theme T5 - imperative present, subjunctive present, theme T12 - indicative present
+SFX a ar eme/H ar # theme T5 - imperative present, subjunctive present, theme T12 - indicative present
+SFX a ar emo ar # theme T5 - indicative present, subjunctive present
+SFX a ar ede ar # theme T5 - subjunctive present
+SFX a ar ege ar # theme T5 - subjunctive present
+SFX a ar à ar # theme T6 - participle perfect
+SFX a ar ado/B ar # theme T6 - participle perfect
+SFX a ar ié ar # theme T11 - indicative imperfect, subjunctive imperfect
+SFX a ar ivié ar # theme T11 - indicative imperfect
+SFX a ar on ar # theme T11 - indicative imperfect, subjunctive imperfect, theme T12 - indicative present, subjunctive present
+SFX a ar onse ar # theme T11 - indicative imperfect, subjunctive imperfect
+SFX a ar ion [^cijɉñ]ar # theme T11 - indicative imperfect, subjunctive imperfect, theme T12 - subjunctive present
+SFX a ar ionse [^cijɉñ]ar # theme T11 - indicative imperfect, subjunctive imperfect
+SFX a ar ivon ar # theme T11 - indicative imperfect
+SFX a ar ivion ar # theme T11 - indicative imperfect
+SFX a ar ivonse ar # theme T11 - indicative imperfect
+SFX a ar ivionse ar # theme T11 - indicative imperfect
+SFX a ar en ar # theme T11 - indicative imperfect, subjunctive imperfect, theme T12 - indicative present
+SFX a ar iven ar # theme T11 - indicative imperfect
+SFX a ar ense ar # theme T11 - indicative imperfect, subjunctive imperfect
+SFX a ar ivense ar # theme T11 - indicative imperfect
+SFX a ar iede ar # theme T11 - subjunctive imperfect
+SFX a ar iege ar # theme T11 - subjunctive imperfect
+SFX a ar isié ar # theme T11 - subjunctive imperfect
+SFX a ar isiede ar # theme T11 - subjunctive imperfect
+SFX a ar isiege ar # theme T11 - subjunctive imperfect
+SFX a ar one ar # theme T11 - subjunctive imperfect, theme T12 - subjunctive present
+SFX a ar ione [^cijɉñ]ar # theme T11 - subjunctive imperfect, theme T12 - subjunctive present
+SFX a ar ison ar # theme T11 - subjunctive imperfect
+SFX a ar isone ar # theme T11 - subjunctive imperfect
+SFX a ar isonse ar # theme T11 - subjunctive imperfect
+SFX a ar ision ar # theme T11 - subjunctive imperfect
+SFX a ar isione ar # theme T11 - subjunctive imperfect
+SFX a ar isionse ar # theme T11 - subjunctive imperfect
+SFX a ar ene ar # theme T11 - subjunctive imperfect
+SFX a ar isen ar # theme T11 - subjunctive imperfect
+SFX a ar isene ar # theme T11 - subjunctive imperfect
+SFX a ar isense ar # theme T11 - subjunctive imperfect
+SFX a ando vao [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]ando # andar: theme T8 - indicative present
+SFX a ando vago [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]ando # andar: theme T8 - indicative present
+SFX a ando vae [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]ando # andar: theme T8 - indicative present, subjunctive present
+SFX a ando vaa [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]ando # andar: theme T8 - subjunctive present
+SFX a ando vaga [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]ando # andar: theme T8 - subjunctive present
+SFX a ando vai [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]ando # andar: theme T8 - indicative present, subjunctive present
+SFX a ando vagi [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]ando # andar: theme T8 - subjunctive present
+SFX a ando và/F [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]ando # andar: theme T8 - subjunctive present, theme T9 - imperative present, theme T10 - indicative present
+SFX a ando vame/H [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]ando # andar: theme T8 - subjunctive present, theme T9 - imperative present, theme T10 - indicative present
+SFX a andar vè/F [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]andar # andar: theme T5 - indicative present, subjunctive present, imperative present
+SFX a andar vème/H [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]andar # andar: theme T5 - indicative present, subjunctive present, imperative present
+SFX a andar vé/F [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]andar # andar: theme T5 - imperative present, subjunctive present, theme T12 - indicative present
+SFX a andar veme/H [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]andar # andar: theme T5 - imperative present, subjunctive present, theme T12 - indicative present
+SFX a andar vemo [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]andar # andar: theme T5 - indicative present, subjunctive present
+SFX a andar vede [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]andar # andar: theme T5 - subjunctive present
+SFX a andar vege [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]andar # andar: theme T5 - subjunctive present
+SFX a andar von [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]andar # andar: theme T12 - indicative present, subjunctive present
+SFX a andar vion [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]andar # andar: theme T12 - subjunctive present
+SFX a andar ven [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]andar # andar: theme T12 - indicative present
+SFX a andar vone [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]andar # andar: theme T12 - subjunctive present
+SFX a andar vione [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]andar # andar: theme T12 - subjunctive present
+SFX a ando vao r[ei]ando # r[ei]andar: theme T8 - indicative present
+SFX a ando vago r[ei]ando # r[ei]andar: theme T8 - indicative present
+SFX a ando vae r[ei]ando # r[ei]andar: theme T8 - indicative present, subjunctive present
+SFX a ando vaa r[ei]ando # r[ei]andar: theme T8 - indicative present, subjunctive present
+SFX a ando vaga r[ei]ando # r[ei]andar: theme T8 - indicative present, subjunctive present
+SFX a ando vai r[ei]ando # r[ei]andar: theme T8 - indicative present, subjunctive present
+SFX a ando vagi r[ei]ando # r[ei]andar: theme T8 - indicative present, subjunctive present
+SFX a ando và/F r[ei]ando # r[ei]andar: theme T8 - subjunctive present, theme T9 - imperative present, theme T10 - indicative present
+SFX a ando vame/H r[ei]ando # r[ei]andar: theme T8 - subjunctive present, theme T9 - imperative present, theme T10 - indicative present
+SFX a andar vè/F r[ei]andar # r[ei]andar: theme T5 - indicative present, subjunctive present, imperative present
+SFX a andar vème/H r[ei]andar # r[ei]andar: theme T5 - indicative present, subjunctive present, imperative present
+SFX a andar vé/F r[ei]andar # r[ei]andar: theme T5 - imperative present, subjunctive present, theme T12 - indicative present
+SFX a andar veme/H r[ei]andar # r[ei]andar: theme T5 - imperative present, subjunctive present, theme T12 - indicative present
+SFX a andar vemo r[ei]andar # r[ei]andar: theme T5 - indicative present, subjunctive present
+SFX a andar vede r[ei]andar # r[ei]andar: theme T5 - subjunctive present
+SFX a andar vege r[ei]andar # r[ei]andar: theme T5 - subjunctive present
+SFX a andar von r[ei]andar # r[ei]andar: theme T12 - indicative present, subjunctive present
+SFX a andar vion r[ei]andar # r[ei]andar: theme T12 - subjunctive present
+SFX a andar ven r[ei]andar # r[ei]andar: theme T12 - indicative present
+SFX a andar vone r[ei]andar # r[ei]andar: theme T12 - subjunctive present
+SFX a andar vione r[ei]andar # r[ei]andar: theme T12 - subjunctive present
+SFX a o go [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]dao # dar (no regular T8, T10): theme T8 - indicative present
+SFX a o e [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]dao # dar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a o a/F [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]dao # dar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o ame/H [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]dao # dar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o ga/F [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]dao # dar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o game/H [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]dao # dar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o i [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]dao # dar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a o gi [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]dao # dar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ao à/F [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]dao # dar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ao ame/H [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]dao # dar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ago r[ei]dào # r[ei]dar (no regular T8, T10): theme T8 - indicative present
+SFX a o e r[ei]dào # r[ei]dar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a o a/F r[ei]dào # r[ei]dar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o ame/H r[ei]dào # r[ei]dar (no regular T8, T10): theme T8 - subjunctive present
+SFX a ào aga/F r[ei]dào # r[ei]dar (no regular T8, T10): theme T8 - subjunctive present
+SFX a ào àgame/H r[ei]dào # r[ei]dar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o i r[ei]dào # r[ei]dar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào agi r[ei]dào # r[ei]dar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào à/F r[ei]dào # dao # r[ei]dar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ame/H r[ei]dào # dao # r[ei]dar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ago dexdào # dexdar (no regular T8, T10): theme T8 - indicative present
+SFX a o e dexdào # dexdar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a o a/F dexdào # dexdar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o ame/H dexdào # dexdar (no regular T8, T10): theme T8 - subjunctive present
+SFX a ào aga/F dexdào # dexdar (no regular T8, T10): theme T8 - subjunctive present
+SFX a ào àgame/H dexdào # dexdar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o i dexdào # dexdar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào agi dexdào # dexdar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào à/F dexdào # dao # dexdar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ame/H dexdào # dao # dexdar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a o go [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]stao # star (no regular T8, T10): theme T8 - indicative present
+SFX a o e [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]stao # star (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a o a/F [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]stao # star (no regular T8, T10): theme T8 - subjunctive present
+SFX a o ame/H [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]stao # star (no regular T8, T10): theme T8 - subjunctive present
+SFX a o ga/F [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]stao # star (no regular T8, T10): theme T8 - subjunctive present
+SFX a ao àgame/H [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]stao # star (no regular T8, T10): theme T8 - subjunctive present
+SFX a o i [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]stao # star (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a o gi [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]stao # star (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ao à/F [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]stao # star (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ao ame/H [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]stao # star (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ago malstào # malstar (no regular T8, T10): theme T8 - indicative present
+SFX a o e malstào # malstar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a o a/F malstào # malstar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o ame/H malstào # malstar (no regular T8, T10): theme T8 - subjunctive present
+SFX a ào aga/F malstào # malstar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o game/H malstào # malstar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o i malstào # malstar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào agi malstào # malstar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào à/F malstào # malstar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ame/H malstào # malstar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ago movestào # movestar (no regular T8, T10): theme T8 - indicative present
+SFX a o e movestào # movestar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a o a/F movestào # movestar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o ame/H movestào # movestar (no regular T8, T10): theme T8 - subjunctive present
+SFX a ào aga/F movestào # movestar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o game/H movestào # movestar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o i movestào # movestar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào agi movestào # movestar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào à/F movestào # movestar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ame/H movestào # movestar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ago sotostào # sotostar (no regular T8, T10): theme T8 - indicative present
+SFX a o e sotostào # sotostar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a o a/F sotostào # sotostar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o ame/H sotostào # sotostar (no regular T8, T10): theme T8 - subjunctive present
+SFX a ào aga/F sotostào # sotostar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o game/H sotostào # sotostar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o i sotostào # sotostar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào agi sotostào # sotostar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào à/F sotostào # sotostar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ame/H sotostào # sotostar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a o go [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]fao # far (no regular T8, T10): theme T8 - indicative present
+SFX a o e [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]fao # far (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a o a/F [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]fao # far (no regular T8, T10): theme T8 - subjunctive present
+SFX a o ame/H [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]fao # far (no regular T8, T10): theme T8 - subjunctive present
+SFX a o ga/F [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]fao # far (no regular T8, T10): theme T8 - subjunctive present
+SFX a ao àgame/H [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]fao # far (no regular T8, T10): theme T8 - subjunctive present
+SFX a o i [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]fao # far (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a o gi [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]fao # far (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ao à/F [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]fao # far (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ao ame/H [^aàbcdđeéèfghiíjɉklƚmnñoóòprstŧuúvx]fao # far (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ago konfào # konfar (no regular T8, T10): theme T8 - indicative present
+SFX a o e konfào # konfar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a o a/F konfào # konfar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o ame/H konfào # konfar (no regular T8, T10): theme T8 - subjunctive present
+SFX a ào aga/F konfào # konfar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o game/H konfào # konfar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o i konfào # konfar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào agi konfào # konfar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào à/F konfào # konfar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ame/H konfào # konfar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ago kontrafào # kontrafar (no regular T8, T10): theme T8 - indicative present
+SFX a o e kontrafào # kontrafar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a o a/F kontrafào # kontrafar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o ame/H kontrafào # kontrafar (no regular T8, T10): theme T8 - subjunctive present
+SFX a ào aga/F kontrafào # kontrafar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o game/H kontrafào # kontrafar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o i kontrafào # kontrafar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào agi kontrafào # kontrafar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào à/F kontrafào # kontrafar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ame/H kontrafào # kontrafar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ago [lƚ]ikuefào # [lƚ]ikuefar (no regular T8, T10): theme T8 - indicative present
+SFX a o e [lƚ]ikuefào # [lƚ]ikuefar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a o a/F [lƚ]ikuefào # [lƚ]ikuefar (no regular T8, T10): theme T8 - subjunctive present
+SFX a ào aga/F [lƚ]ikuefào # [lƚ]ikuefar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o game/H [lƚ]ikuefào # [lƚ]ikuefar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o i [lƚ]ikuefào # [lƚ]ikuefar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào agi [lƚ]ikuefào # [lƚ]ikuefar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào à/F [lƚ]ikuefào # [lƚ]ikuefar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ame/H [lƚ]ikuefào # [lƚ]ikuefar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ago r[ei]fào # r[ei]far/rarefar/putrefar (no regular T8, T10): theme T8 - indicative present
+SFX a o e r[ei]fào # r[ei]far/rarefar/putrefar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a o a/F r[ei]fào # r[ei]far/rarefar/putrefar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o ame/H r[ei]fào # r[ei]far/rarefar/putrefar (no regular T8, T10): theme T8 - subjunctive present
+SFX a ào aga/F r[ei]fào # r[ei]far/rarefar/putrefar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o game/H r[ei]fào # r[ei]far/rarefar/putrefar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o i r[ei]fào # r[ei]far/rarefar/putrefar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào agi r[ei]fào # r[ei]far/rarefar/putrefar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào à/F r[ei]fào # r[ei]far/rarefar/putrefar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ame/H r[ei]fào # r[ei]far/rarefar/putrefar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ago sorafào # sorafar (no regular T8, T10): theme T8 - indicative present
+SFX a o e sorafào # sorafar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a o a/F sorafào # sorafar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o ame/H sorafào # sorafar (no regular T8, T10): theme T8 - subjunctive present
+SFX a ào aga/F sorafào # sorafar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o game/H sorafào # sorafar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o i sorafào # sorafar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào agi sorafào # sorafar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào à/F sorafào # sorafar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ame/H sorafào # sorafar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ago strafào # strafar (no regular T8, T10): theme T8 - indicative present
+SFX a o e strafào # strafar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a o a/F strafào # strafar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o ame/H strafào # strafar (no regular T8, T10): theme T8 - subjunctive present
+SFX a ào aga/F strafào # strafar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o game/H strafào # strafar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o i strafào # strafar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào agi strafào # strafar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào à/F strafào # strafar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ame/H strafào # strafar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ago stupefào # stupefar (no regular T8, T10): theme T8 - indicative present
+SFX a o e stupefào # stupefar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a o a/F stupefào # stupefar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o ame/H stupefào # stupefar (no regular T8, T10): theme T8 - subjunctive present
+SFX a ào aga/F stupefào # stupefar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o game/H stupefào # stupefar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o i stupefào # stupefar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào agi stupefào # stupefar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào à/F stupefào # stupefar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ame/H stupefào # stupefar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ago torefào # torefar (no regular T8, T10): theme T8 - indicative present
+SFX a o e torefào # torefar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a o a/F torefào # torefar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o ame/H torefào # torefar (no regular T8, T10): theme T8 - subjunctive present
+SFX a ào aga/F torefào # torefar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o game/H torefào # torefar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o i torefào # torefar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào agi torefào # torefar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào à/F torefào # torefar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ame/H torefào # torefar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ago tumefào # tumefar (no regular T8, T10): theme T8 - indicative present
+SFX a o e tumefào # tumefar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a o a/F tumefào # tumefar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o ame/H tumefào # tumefar (no regular T8, T10): theme T8 - subjunctive present
+SFX a ào aga/F tumefào # tumefar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o game/H tumefào # tumefar (no regular T8, T10): theme T8 - subjunctive present
+SFX a o i tumefào # tumefar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào agi tumefào # tumefar (no regular T8, T10): theme T8 - indicative present, subjunctive present
+SFX a ào à/F tumefào # tumefar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+SFX a ào ame/H tumefào # tumefar (no regular T8, T10): theme T8 - indicative present, subjunctive present, theme T10 - indicative present
+
+SFX b Y 254 # vèrbi -ér
+SFX b 0 e er # theme T1 - infinitive simple
+SFX b 0 ò er # theme T4 - indicative future
+SFX b 0 à er # theme T4 - indicative future
+SFX b 0 è er # theme T4 - indicative future
+SFX b 0 é er # theme T4 - indicative future
+SFX b 0 í er # theme T4 - indicative future
+SFX b 0 emo er # theme T4 - indicative future
+SFX b 0 imo er # theme T4 - indicative future
+SFX b 0 on er # theme T4 - indicative future, conditional simple
+SFX b 0 en er # theme T4 - indicative future, conditional simple
+SFX b 0 ía er # theme T4 - conditional simple
+SFX b 0 íe er # theme T4 - conditional simple
+SFX b 0 esi er # theme T4 - conditional simple
+SFX b 0 ésimo er # theme T4 - conditional simple
+SFX b 0 onse er # theme T4 - conditional simple
+SFX b 0 ion er # theme T4 - conditional simple
+SFX b 0 ionse er # theme T4 - conditional simple
+SFX b 0 ison er # theme T4 - conditional simple
+SFX b 0 isonse er # theme T4 - conditional simple
+SFX b 0 ision er # theme T4 - conditional simple
+SFX b 0 isionse er # theme T4 - conditional simple
+SFX b 0 ense er # theme T4 - conditional simple
+SFX b 0 isen er # theme T4 - conditional simple
+SFX b 0 isense er # theme T4 - conditional simple
+SFX b 0 àe er # theme T4 - conditional simple
+SFX b 0 ave er # theme T4 - conditional simple
+SFX b 0 ié er # theme T4 - conditional simple
+SFX b 0 isié er # theme T4 - conditional simple
+SFX b o e o # theme T8 - indicative present, subjunctive present; regular T8: no (g?av?|reg?av?|[‘']v)er
+SFX b o a/F o # theme T8 - subjunctive present; regular T8: no (g?av?|reg?av?|[‘']v)er
+SFX b o ame/H o # theme T8 - subjunctive present; regular T8: no (g?av?|reg?av?|[‘']v)er
+SFX b o i/F [^i]o # theme T8 - indicative present, subjunctive present, theme T9 - imperative present; regular T8: no (g?av?|reg?av?|[‘']v)er
+SFX b io i/F io # theme T8 - indicative present, subjunctive present, theme T9 - imperative present; regular T8: no (g?av?|reg?av?|[‘']v)er
+SFX b o ime/H o # theme T9 - imperative present; regular T8: no (g?av?|reg?av?|[‘']v)er
+SFX b o e/F o # theme T10 - indicative present; regular T8: no (g?av?|reg?av?|[‘']v)er
+SFX b o eme/H o # theme T10 - indicative present; regular T8: no (g?av?|reg?av?|[‘']v)er
+SFX b r r/E er # theme T1 - infinitive simple
+SFX b r rme/G er # theme T1 - infinitive simple
+SFX b r se er # theme T2 - subjunctive imperfect
+SFX b r si er # theme T2 - subjunctive imperfect
+SFX b r vo/B er # theme T2 - indicative imperfect
+SFX b r sto/B er # theme T2 - participle perfect
+SFX b r nte er # theme T7 - participle imperfect
+SFX b r ndo/E er # theme T2 - gerund simple
+SFX b er éndome/H er # theme T2 - gerund simple
+SFX b er éo/B er # theme T2 - indicative imperfect
+SFX b er éimo er # theme T2 - indicative imperfect
+SFX b er évimo er # theme T2 - indicative imperfect
+SFX b er ésimo er # theme T2 - subjunctive imperfect
+SFX b er è/F er # theme T5 - indicative present, subjunctive present, imperative present; regular T5 subjunctive: no pod?er, to[lƚ]er, vo[lƚ]er
+SFX b er é/F er # theme T5 - indicative present, subjunctive present, imperative present; regular T5 subjunctive: no pod?er, to[lƚ]er, vo[lƚ]er
+SFX b er eme/H er # theme T5 - indicative present, subjunctive present, imperative present; regular T5 subjunctive: no pod?er, to[lƚ]er, vo[lƚ]er
+SFX b er í/F [^i]er # theme T5 - imperative present, subjunctive present, theme T12 - indicative present; regular T5 subjunctive: no pod?er, to[lƚ]er, vo[lƚ]er
+SFX b ier í/F ier # theme T5 - imperative present, subjunctive present, theme T12 - indicative present; regular T5 subjunctive: no pod?er, to[lƚ]er, vo[lƚ]er
+SFX b er ime/H [^i]er # theme T5 - imperative present, subjunctive present, theme T12 - indicative present; regular T5 subjunctive: no pod?er, to[lƚ]er, vo[lƚ]er
+SFX b ier ime/H ier # theme T5 - imperative present, subjunctive present, theme T12 - indicative present; regular T5 subjunctive: no pod?er, to[lƚ]er, vo[lƚ]er
+SFX b r mo er # theme T5 - indicative present, subjunctive present; regular T5 subjunctive: no pod?er, to[lƚ]er, vo[lƚ]er
+SFX b er imo [^i]er # theme T5 - indicative present, subjunctive present; regular T5 subjunctive: no pod?er, to[lƚ]er, vo[lƚ]er
+SFX b ier imo ier # theme T5 - indicative present, subjunctive present; regular T5 subjunctive: no pod?er, to[lƚ]er, vo[lƚ]er
+SFX b er ede er # theme T5 - subjunctive present; regular T5 subjunctive: no pod?er, to[lƚ]er, vo[lƚ]er
+SFX b er ege er # theme T5 - subjunctive present; regular T5 subjunctive: no pod?er, to[lƚ]er, vo[lƚ]er
+SFX b er ú er # theme T6 - participle perfect
+SFX b er úo/B er # theme T6 - participle perfect
+SFX b er udo/B er # theme T6 - participle perfect
+SFX b er ié er # theme T11 - indicative imperfect, subjunctive imperfect
+SFX b er ivié er # theme T11 - indicative imperfect
+SFX b er on er # theme T11 - indicative imperfect, subjunctive imperfect, theme T12 - indicative present, subjunctive present
+SFX b er onse er # theme T11 - indicative imperfect, subjunctive imperfect
+SFX b er ion [^cijɉñ]er # theme T11 - indicative imperfect, subjunctive imperfect, theme T12 - subjunctive present
+SFX b er ionse [^cijɉñ]er # theme T11 - indicative imperfect, subjunctive imperfect
+SFX b er ivon er # theme T11 - indicative imperfect
+SFX b er ivion er # theme T11 - indicative imperfect
+SFX b er ivonse er # theme T11 - indicative imperfect
+SFX b er ivionse er # theme T11 - indicative imperfect
+SFX b er en er # theme T11 - indicative imperfect, subjunctive imperfect, theme T12 - indicative present
+SFX b er iven er # theme T11 - indicative imperfect
+SFX b er ense er # theme T11 - indicative imperfect, subjunctive imperfect
+SFX b er ivense er # theme T11 - indicative imperfect
+SFX b er iede er # theme T11 - subjunctive imperfect
+SFX b er iege er # theme T11 - subjunctive imperfect
+SFX b er isié er # theme T11 - subjunctive imperfect
+SFX b er isiede er # theme T11 - subjunctive imperfect
+SFX b er isiege er # theme T11 - subjunctive imperfect
+SFX b er one er # theme T11 - subjunctive imperfect, theme T12 - subjunctive present
+SFX b er ione [^cijɉñ]er # theme T11 - subjunctive imperfect, theme T12 - subjunctive present
+SFX b er ison er # theme T11 - subjunctive imperfect
+SFX b er isone er # theme T11 - subjunctive imperfect
+SFX b er isonse er # theme T11 - subjunctive imperfect
+SFX b er ision er # theme T11 - subjunctive imperfect
+SFX b er isione er # theme T11 - subjunctive imperfect
+SFX b er isionse er # theme T11 - subjunctive imperfect
+SFX b er ene er # theme T11 - subjunctive imperfect
+SFX b er isen er # theme T11 - subjunctive imperfect
+SFX b er isene er # theme T11 - subjunctive imperfect
+SFX b er isense er # theme T11 - subjunctive imperfect
+SFX b der rò poder # poder (no regular T4, T10): theme T4 - indicative future
+SFX b der rà poder # poder (no regular T4, T10): theme T4 - indicative future
+SFX b der rè poder # poder (no regular T4, T10): theme T4 - indicative future
+SFX b der ré poder # poder (no regular T4, T10): theme T4 - indicative future
+SFX b der rí poder # poder (no regular T4, T10): theme T4 - indicative future
+SFX b der remo poder # poder (no regular T4, T10): theme T4 - indicative future
+SFX b der rimo poder # poder (no regular T4, T10): theme T4 - indicative future
+SFX b der ron poder # poder (no regular T4, T10): theme T4 - indicative future, conditional simple
+SFX b der ren poder # poder (no regular T4, T10): theme T4 - indicative future, conditional simple
+SFX b der ría poder # poder (no regular T4, T10): theme T4 - conditional simple
+SFX b der ríe poder # poder (no regular T4, T10): theme T4 - conditional simple
+SFX b der resi poder # poder (no regular T4, T10): theme T4 - conditional simple
+SFX b der résimo poder # poder (no regular T4, T10): theme T4 - conditional simple
+SFX b der ronse poder # poder (no regular T4, T10): theme T4 - conditional simple
+SFX b der rion poder # poder (no regular T4, T10): theme T4 - conditional simple
+SFX b der rionse poder # poder (no regular T4, T10): theme T4 - conditional simple
+SFX b der rison poder # poder (no regular T4, T10): theme T4 - conditional simple
+SFX b der risonse poder # poder (no regular T4, T10): theme T4 - conditional simple
+SFX b der rision poder # poder (no regular T4, T10): theme T4 - conditional simple
+SFX b der risionse poder # poder (no regular T4, T10): theme T4 - conditional simple
+SFX b der rense poder # poder (no regular T4, T10): theme T4 - conditional simple
+SFX b der risen poder # poder (no regular T4, T10): theme T4 - conditional simple
+SFX b der risense poder # poder (no regular T4, T10): theme T4 - conditional simple
+SFX b der ràe poder # poder (no regular T4, T10): theme T4 - conditional simple
+SFX b der rave poder # poder (no regular T4, T10): theme T4 - conditional simple
+SFX b der rié poder # poder (no regular T4, T10): theme T4 - conditional simple
+SFX b der risié poder # poder (no regular T4, T10): theme T4 - conditional simple
+SFX b do le/F pòdo # poder (no regular T4, T10): theme T10 - indicative present
+SFX b do leme/H pòdo # poder (no regular T4, T10): theme T10 - indicative present
+SFX b er éo/B aver # aver (no regular T8, T9, T10): theme T2 - indicative imperfect
+SFX b aver gavéo/B aver # aver (no regular T8, T9, T10): theme T2 - indicative imperfect
+SFX b aver gavéimo aver # aver (no regular T8, T9, T10): theme T2 - indicative imperfect
+SFX b aver gavévimo aver # aver (no regular T8, T9, T10): theme T2 - indicative imperfect
+SFX b aver gavevo/B aver # aver (no regular T8, T9, T10): theme T2 - indicative imperfect
+SFX b aver gavese aver # aver (no regular T8, T9, T10): theme T2 - subjunctive imperfect
+SFX b aver gavesi aver # aver (no regular T8, T9, T10): theme T2 - subjunctive imperfect
+SFX b aver gavésimo aver # aver (no regular T8, T9, T10): theme T2 - subjunctive imperfect
+SFX b aver gaverò aver # aver (no regular T8, T9, T10): theme T4 - indicative future
+SFX b aver gaverà aver # aver (no regular T8, T9, T10): theme T4 - indicative future
+SFX b aver gaverè aver # aver (no regular T8, T9, T10): theme T4 - indicative future
+SFX b aver gaveré aver # aver (no regular T8, T9, T10): theme T4 - indicative future
+SFX b aver gaverí aver # aver (no regular T8, T9, T10): theme T4 - indicative future
+SFX b aver gaveremo aver # aver (no regular T8, T9, T10): theme T4 - indicative future
+SFX b aver gaverimo aver # aver (no regular T8, T9, T10): theme T4 - indicative future
+SFX b aver gavería aver # aver (no regular T8, T9, T10): theme T4 - conditional simple
+SFX b aver gaveríe aver # aver (no regular T8, T9, T10): theme T4 - conditional simple
+SFX b aver gavesi aver # aver (no regular T8, T9, T10): theme T4 - conditional simple
+SFX b aver gaveresi aver # aver (no regular T8, T9, T10): theme T4 - conditional simple
+SFX b aver gaverésimo aver # aver (no regular T8, T9, T10): theme T4 - conditional simple
+SFX b aver gaveràe aver # aver (no regular T8, T9, T10): theme T4 - conditional simple
+SFX b aver gaverave aver # aver (no regular T8, T9, T10): theme T4 - conditional simple
+SFX b aver gavé aver # aver (no regular T8, T9, T10): theme T4 - indicative future
+SFX b aver gaví aver # aver (no regular T8, T9, T10): theme T4 - indicative future
+SFX b aver gavemo aver # aver (no regular T8, T9, T10): theme T4 - indicative future
+SFX b aver gavimo aver # aver (no regular T8, T9, T10): theme T4 - indicative future
+SFX b ver piè/F aver # aver (no regular T8, T9, T10): theme T5 - subjunctive present
+SFX b ver pième/H aver # aver (no regular T8, T9, T10): theme T5 - subjunctive present
+SFX b aver gapiè/F aver # aver (no regular T8, T9, T10): theme T5 - subjunctive present
+SFX b aver gapième/H aver # aver (no regular T8, T9, T10): theme T5 - subjunctive present
+SFX b ver pié/F aver # aver (no regular T8, T9, T10): theme T5 - subjunctive present
+SFX b ver pieme/H aver # aver (no regular T8, T9, T10): theme T5 - subjunctive present
+SFX b ver piemo aver # aver (no regular T8, T9, T10): theme T5 - subjunctive present
+SFX b aver gapiemo aver # aver (no regular T8, T9, T10): theme T5 - subjunctive present
+SFX b ver piede aver # aver (no regular T8, T9, T10): theme T5 - subjunctive present
+SFX b ver piege aver # aver (no regular T8, T9, T10): theme T5 - subjunctive present
+SFX b ver biando/E aver # aver (no regular T8, T9, T10): theme T2 - gerund simple
+SFX b ver pion aver # aver (no regular T8, T9, T10): theme T12 - subjunctive present
+SFX b ver pione aver # aver (no regular T8, T9, T10): theme T12 - subjunctive present
+SFX b ver pien aver # aver (no regular T8, T9, T10): theme T12 - subjunctive present
+SFX b ver piene aver # aver (no regular T8, T9, T10): theme T12 - subjunctive present
+SFX b ò gò ò # aver (no regular T8, T9, T10): theme T8 - indicative present
+SFX b ò à/F ò # aver (no regular T8, T9, T10): theme T8 - indicative present
+SFX b ò gà/F ò # aver (no regular T8, T9, T10): theme T8 - indicative present
+SFX b ò è ò # aver (no regular T8, T9, T10): theme T8 - indicative present
+SFX b ò apia ò # aver (no regular T8, T9, T10): theme T8 - subjunctive present
+SFX b ò gapia ò # aver (no regular T8, T9, T10): theme T8 - subjunctive present
+SFX b ò apie ò # aver (no regular T8, T9, T10): theme T8 - subjunctive present
+SFX b ò api ò # aver (no regular T8, T9, T10): theme T8 - subjunctive present
+SFX b ò gapi ò # aver (no regular T8, T9, T10): theme T8 - subjunctive present
+SFX b ò ame/H ò # aver (no regular T8, T9, T10): theme T8 - subjunctive present
+SFX b aver avérgeme/G aver # aver (no regular T8, T9, T10): theme T1 - infinitive simple
+SFX b er piè/F aer # aer (no regular T8, T9, T10): theme T5 - subjunctive present
+SFX b er pié/F aer # aer (no regular T8, T9, T10): theme T5 - subjunctive present
+SFX b er pieme/H aer # aer (no regular T8, T9, T10): theme T5 - subjunctive present
+SFX b er pí/F aer # aer (no regular T8, T9, T10): theme T5 - subjunctive present
+SFX b er pime/H aer # aer (no regular T8, T9, T10): theme T5 - subjunctive present
+SFX b er piemo aer # aer (no regular T8, T9, T10): theme T5 - subjunctive present
+SFX b er piede aer # aer (no regular T8, T9, T10): theme T5 - subjunctive present
+SFX b er piege aer # aer (no regular T8, T9, T10): theme T5 - subjunctive present
+SFX b ver pie saver # saver (no regular T8, T9, T10): theme T8 - subjunctive present
+SFX b ver pi saver # saver (no regular T8, T9, T10): theme T8 - subjunctive present
+SFX b ver pia/F saver # saver (no regular T8, T9, T10): theme T8 - subjunctive present
+SFX b ver piame/H saver # saver (no regular T8, T9, T10): theme T8 - subjunctive present
+SFX b ver pion saver # saver (no regular T8, T9, T10): theme T12 - subjunctive present
+SFX b ver pione saver # saver (no regular T8, T9, T10): theme T12 - subjunctive present
+SFX b ao ò sao # saver (no regular T8, T9, T10): theme T8 - indicative present
+SFX b o e sao # saver (no regular T8, T9, T10): theme T8 - indicative present
+SFX b o i sao # saver (no regular T8, T9, T10): theme T8 - indicative present
+SFX b ao à/F sao # saver (no regular T8, T9, T10): theme T9 - imperative present
+SFX b o me/H sao # saver (no regular T8, T9, T10): theme T9 - imperative present
+SFX b .er r/E to[lƚ]er # toler (no regular T1, T4): theme T1 - infinitive simple
+SFX b .er rme/G to[lƚ]er # toler (no regular T1, T4): theme T1 - infinitive simple
+SFX b .er rò to[lƚ]er # toler (no regular T1, T4): theme T4 - indicative future
+SFX b .er rà to[lƚ]er # toler (no regular T1, T4): theme T4 - indicative future
+SFX b .er rè to[lƚ]er # toler (no regular T1, T4): theme T4 - indicative future
+SFX b .er ré to[lƚ]er # toler (no regular T1, T4): theme T4 - indicative future
+SFX b .er rí to[lƚ]er # toler (no regular T1, T4): theme T4 - indicative future
+SFX b .er remo to[lƚ]er # toler (no regular T1, T4): theme T4 - indicative future
+SFX b .er rimo to[lƚ]er # toler (no regular T1, T4): theme T4 - indicative future
+SFX b .er ron to[lƚ]er # toler (no regular T1, T4): theme T4 - indicative future, conditional simple
+SFX b .er ren to[lƚ]er # toler (no regular T1, T4): theme T4 - indicative future, conditional simple
+SFX b .er ría to[lƚ]er # toler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er ríe to[lƚ]er # toler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er resi to[lƚ]er # toler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er résimo to[lƚ]er # toler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er ronse to[lƚ]er # toler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er rion to[lƚ]er # toler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er rionse to[lƚ]er # toler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er rison to[lƚ]er # toler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er risonse to[lƚ]er # toler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er rision to[lƚ]er # toler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er risionse to[lƚ]er # toler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er rense to[lƚ]er # toler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er risen to[lƚ]er # toler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er risense to[lƚ]er # toler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er ràe to[lƚ]er # toler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er rave to[lƚ]er # toler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er rié to[lƚ]er # toler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er risié to[lƚ]er # toler (no regular T1, T4): theme T4 - conditional simple
+SFX b .o go to[lƚ]o # toler (no regular T1, T4): theme T8 - indicative present
+SFX b .o ga to[lƚ]o # toler (no regular T1, T4): theme T8 - subjunctive present
+SFX b .o gi to[lƚ]o # toler (no regular T1, T4): theme T8 - subjunctive present
+SFX b .er rò vo[lƚ]er # voler (no regular T1, T4): theme T4 - indicative future
+SFX b .er rà vo[lƚ]er # voler (no regular T1, T4): theme T4 - indicative future
+SFX b .er rè vo[lƚ]er # voler (no regular T1, T4): theme T4 - indicative future
+SFX b .er ré vo[lƚ]er # voler (no regular T1, T4): theme T4 - indicative future
+SFX b .er rí vo[lƚ]er # voler (no regular T1, T4): theme T4 - indicative future
+SFX b .er remo vo[lƚ]er # voler (no regular T1, T4): theme T4 - indicative future
+SFX b .er rimo vo[lƚ]er # voler (no regular T1, T4): theme T4 - indicative future
+SFX b .er ron vo[lƚ]er # voler (no regular T1, T4): theme T4 - indicative future, conditional simple
+SFX b .er ren vo[lƚ]er # voler (no regular T1, T4): theme T4 - indicative future, conditional simple
+SFX b .er ría vo[lƚ]er # voler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er ríe vo[lƚ]er # voler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er resi vo[lƚ]er # voler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er résimo vo[lƚ]er # voler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er ronse vo[lƚ]er # voler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er rion vo[lƚ]er # voler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er rionse vo[lƚ]er # voler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er rison vo[lƚ]er # voler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er risonse vo[lƚ]er # voler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er rision vo[lƚ]er # voler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er risionse vo[lƚ]er # voler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er rense vo[lƚ]er # voler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er risen vo[lƚ]er # voler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er risense vo[lƚ]er # voler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er ràe vo[lƚ]er # voler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er rave vo[lƚ]er # voler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er rié vo[lƚ]er # voler (no regular T1, T4): theme T4 - conditional simple
+SFX b .er risié vo[lƚ]er # voler (no regular T1, T4): theme T4 - conditional simple
+
+#SFX c Y 0 # vèrbi '-er
+#SFX d Y 0 # vèrbi -ir
+#SFX e Y 0 # vèrbi -<is>ir
+
+
+
+SFX B Y 9 # tute le deklinaŧion, ajetivi de prima klase
+SFX B o a o
+SFX B o e o
+SFX B o i [^ij]o
+SFX B io i io
+SFX B jo i jo
+SFX B 0 o [^aieo]
+SFX B 0 a [^aieo]
+SFX B 0 i [^aieo]
+SFX B 0 e [^aieo]
+
+SFX C Y 5 # ajetivi de sekonda klase
+SFX C a e a
+SFX C a i a
+SFX C 0 a [^aieo]
+SFX C 0 i [^aieo]
+SFX C 0 e [^aieo]
+
+SFX D Y 3 # ajetivi de tèrŧa klase
+SFX D e i e
+SFX D 0 e [^aieo]
+SFX D 0 i [^aieo]
+
+SFX E Y 59 # vèrbi prokonplementari
+SFX E 0 -ge
+SFX E 0 -gene
+SFX E 0 -gelo
+SFX E 0 -gela
+SFX E 0 -geli
+SFX E 0 -gele
+SFX E 0 -geƚo
+SFX E 0 -geƚa
+SFX E 0 -geƚi
+SFX E 0 -geƚe
+SFX E 0 -lo
+SFX E 0 -la
+SFX E 0 -li
+SFX E 0 -le
+SFX E 0 -ƚo
+SFX E 0 -ƚa
+SFX E 0 -ƚi
+SFX E 0 -ƚe
+SFX E 0 -me
+SFX E 0 -mene
+SFX E 0 -melo
+SFX E 0 -mela
+SFX E 0 -meli
+SFX E 0 -mele
+SFX E 0 -meƚo
+SFX E 0 -meƚa
+SFX E 0 -meƚi
+SFX E 0 -meƚe
+SFX E 0 -ne
+SFX E 0 -se
+SFX E 0 -sene
+SFX E 0 -selo
+SFX E 0 -sela
+SFX E 0 -seli
+SFX E 0 -sele
+SFX E 0 -seƚo
+SFX E 0 -seƚa
+SFX E 0 -seƚi
+SFX E 0 -seƚe
+SFX E 0 -te
+SFX E 0 -tene
+SFX E 0 -telo
+SFX E 0 -tela
+SFX E 0 -teli
+SFX E 0 -tele
+SFX E 0 -teƚo
+SFX E 0 -teƚa
+SFX E 0 -teƚi
+SFX E 0 -teƚe
+SFX E 0 -ve
+SFX E 0 -vene
+SFX E 0 -velo
+SFX E 0 -vela
+SFX E 0 -veli
+SFX E 0 -vele
+SFX E 0 -veƚo
+SFX E 0 -veƚa
+SFX E 0 -veƚi
+SFX E 0 -veƚe
+
+SFX F Y 26 # vèrbi prokonplementari pal komandativo
+SFX F a e-me a
+SFX F a e-ne a
+SFX F a e-te a
+SFX F a e-ve a
+SFX F a e-ge a
+SFX F a e-lo a
+SFX F a e-la a
+SFX F a e-li a
+SFX F a e-le a
+SFX F a e-ƚo a
+SFX F a e-ƚa a
+SFX F a e-ƚi a
+SFX F a e-ƚe a
+SFX F 0 -me [^a]
+SFX F 0 -ne [^a]
+SFX F 0 -te [^a]
+SFX F 0 -ve [^a]
+SFX F 0 -ge [^a]
+SFX F 0 -lo [^a]
+SFX F 0 -la [^a]
+SFX F 0 -li [^a]
+SFX F 0 -le [^a]
+SFX F 0 -ƚo [^a]
+SFX F 0 -ƚa [^a]
+SFX F 0 -ƚi [^a]
+SFX F 0 -ƚe [^a]
+
+SFX G Y 57 # vèrbi prokonplementari
+SFX G me ne me
+SFX G me se me
+SFX G me te me
+SFX G me ve me
+SFX G me ge me
+SFX G me lo me
+SFX G me la me
+SFX G me li me
+SFX G me le me
+SFX G me ƚo me
+SFX G me ƚa me
+SFX G me ƚi me
+SFX G me ƚe me
+SFX G mene melo mene
+SFX G mene mela mene
+SFX G mene meli mene
+SFX G mene mele mene
+SFX G mene meƚo mene
+SFX G mene meƚa mene
+SFX G mene meƚi mene
+SFX G mene meƚe mene
+SFX G mene sene mene
+SFX G mene selo mene
+SFX G mene sela mene
+SFX G mene seli mene
+SFX G mene sele mene
+SFX G mene seƚo mene
+SFX G mene seƚa mene
+SFX G mene seƚi mene
+SFX G mene seƚe mene
+SFX G mene tene mene
+SFX G mene telo mene
+SFX G mene tela mene
+SFX G mene teli mene
+SFX G mene tele mene
+SFX G mene teƚo mene
+SFX G mene teƚa mene
+SFX G mene teƚi mene
+SFX G mene teƚe mene
+SFX G mene vene mene
+SFX G mene velo mene
+SFX G mene vela mene
+SFX G mene veli mene
+SFX G mene vele mene
+SFX G mene veƚo mene
+SFX G mene veƚa mene
+SFX G mene veƚi mene
+SFX G mene veƚe mene
+SFX G mene gene mene
+SFX G mene gelo mene
+SFX G mene gela mene
+SFX G mene geli mene
+SFX G mene gele mene
+SFX G mene geƚo mene
+SFX G mene geƚa mene
+SFX G mene geƚi mene
+SFX G mene geƚe mene
+
+SFX H Y 25 # vèrbi prokonplementari
+SFX H ame eme ame
+SFX H ame ene ame
+SFX H ame ete ame
+SFX H ame eve ame
+SFX H ame ege ame
+SFX H ame elo ame
+SFX H ame ela ame
+SFX H ame eli ame
+SFX H ame ele ame
+SFX H ame eƚo ame
+SFX H ame eƚa ame
+SFX H ame eƚi ame
+SFX H ame eƚe ame
+SFX H me ne [^a]me
+SFX H me te [^a]me
+SFX H me ve [^a]me
+SFX H me ge [^a]me
+SFX H me lo [^a]me
+SFX H me la [^a]me
+SFX H me li [^a]me
+SFX H me le [^a]me
+SFX H me ƚo [^a]me
+SFX H me ƚa [^a]me
+SFX H me ƚi [^a]me
+SFX H me ƚe [^a]me
+
+SFX I Y 60 # sonoriđaŧion konsonanti finali
+SFX I bo p bo
+SFX I be p be
+SFX I bi p bi
+SFX I co c co
+SFX I ce c ce
+SFX I ci c ci
+SFX I do t do
+SFX I de t de
+SFX I di t di
+SFX I fo f fo
+SFX I fe f fe
+SFX I fi f fi
+SFX I go k go
+SFX I ge k ge
+SFX I gi k gi
+SFX I ko k ko
+SFX I ke k ke
+SFX I ki k ki
+SFX I mo n mo
+SFX I me n me
+SFX I mi n mi
+SFX I no n no
+SFX I ne n ne
+SFX I ni n ni
+SFX I po p po
+SFX I pe p pe
+SFX I pi p pi
+SFX I so s so
+SFX I se s se
+SFX I si s si
+SFX I to t to
+SFX I te t te
+SFX I ti t ti
+SFX I vo f vo
+SFX I ve f ve
+SFX I vi f vi
+SFX I xo s xo
+SFX I xe s xe
+SFX I xi s xi
+SFX I ño in ño
+SFX I ñe in ñe
+SFX I ña in ña
+SFX I ño n ño
+SFX I ñe n ñe
+SFX I ña n ña
+SFX I ño nc ño
+SFX I ñe nc ñe
+SFX I ña nc ña
+SFX I ño ñ ño
+SFX I ñe ñ ñe
+SFX I ña ñ ña
+SFX I đo ŧ đo
+SFX I đe ŧ đe
+SFX I đi ŧ đi
+SFX I ŧo ŧ ŧo
+SFX I ŧe ŧ ŧe
+SFX I ŧi ŧ ŧi
+SFX I ɉo c ɉo
+SFX I ɉe c ɉe
+SFX I ɉi c ɉi
+
+SFX J Y 1 # interogativi
+SFX J 0 -mi
+
+SFX K Y 8 # interogativi
+SFX K mi e nmi
+SFX K mi i nmi
+SFX K mi te nmi
+SFX K mi ti nmi
+SFX K mi ne [^n]mi
+SFX K mi ni [^n]mi
+SFX K mi nte [^n]mi
+SFX K mi nti [^n]mi
+
+SFX L Y 8 # interogativi
+SFX L 0 -e n
+SFX L 0 -i n
+SFX L 0 -te n
+SFX L 0 -ti n
+SFX L 0 -ne [^n]
+SFX L 0 -ni [^n]
+SFX L 0 -nte [^n]
+SFX L 0 -nti [^n]
+
+SFX M Y 7 # interogativi
+SFX M i e ni
+SFX M i te ni
+SFX M i ti ni
+SFX M i ne [^n]i
+SFX M i ni [^n]i
+SFX M i nte [^n]i
+SFX M i nti [^n]i
+
+SFX N Y 3 # interogativi
+SFX N 0 -stu
+SFX N 0 -to
+SFX N 0 -tu
+
+SFX O Y 2 # interogativi
+SFX O u o u
+SFX O tu stu tu
+
+SFX P Y 2 # interogativi
+SFX P 0 -o
+SFX P 0 -u
+
+SFX Q Y 1 # interogativi
+SFX Q u o u
+
+SFX R Y 24 # interogativi
+SFX R a e-lo a
+SFX R a e-la a
+SFX R a e-li a
+SFX R a e-le a
+SFX R a e-ƚo a
+SFX R a e-ƚa a
+SFX R a e-ƚi a
+SFX R a e-ƚe a
+SFX R i e-lo i
+SFX R i e-la i
+SFX R i e-li i
+SFX R i e-le i
+SFX R i e-ƚo i
+SFX R i e-ƚa i
+SFX R i e-ƚi i
+SFX R i e-ƚe i
+SFX R 0 -lo [^ai]
+SFX R 0 -la [^ai]
+SFX R 0 -li [^ai]
+SFX R 0 -le [^ai]
+SFX R 0 -ƚo [^ai]
+SFX R 0 -ƚa [^ai]
+SFX R 0 -ƚi [^ai]
+SFX R 0 -ƚe [^ai]
+
+SFX S Y 3 # interogativi
+SFX S o a o
+SFX S o e o
+SFX S o i o
+
+SFX T Y 16 # interogativi
+SFX T ave ise-lo rave
+SFX T ave ise-la rave
+SFX T ave ise-li rave
+SFX T ave ise-le rave
+SFX T ave ise-ƚo rave
+SFX T ave ise-ƚa rave
+SFX T ave ise-ƚi rave
+SFX T ave ise-ƚe rave
+SFX T ave íselo rave
+SFX T ave ísela rave
+SFX T ave íseli rave
+SFX T ave ísele rave
+SFX T ave íseƚo rave
+SFX T ave íseƚa rave
+SFX T ave íseƚi rave
+SFX T ave íseƚe rave
+
+SFX U Y 17 # sostantivi plurali maskili
+SFX U 0 i [^oaie]
+SFX U 0 o [^oaie]
+SFX U 0 i [àèé]
+SFX U 0 i i[ln]
+SFX U a i a
+SFX U e i e
+SFX U al ài al
+SFX U an ài an
+SFX U el éi el
+SFX U en éi en
+SFX U o i [^ij]o
+SFX U io i io
+SFX U jo i jo
+SFX U ol ói ol
+SFX U on ói on
+SFX U ul úi ul
+SFX U un úi un
+
+SFX V Y 13 # sostantivi plurali femenili
+SFX V 0 e [^oaieln]
+SFX V 0 i [^oaieln]
+SFX V a e a
+SFX V e i e
+SFX V al ài al
+SFX V an ài an
+SFX V el éi el
+SFX V en éi en
+SFX V 0 i i[ln]
+SFX V ol ói ol
+SFX V on ói on
+SFX V ul úi ul
+SFX V un úi un
+
+SFX W Y 37 # piante e mistièri
+SFX W dor or [aeiou]dor
+SFX W dor ora [aeiou]dor
+SFX W dor ore [aeiou]dor
+SFX W dor ori [aeiou]dor
+SFX W dor oro [aeiou]dor
+SFX W ol iol rol
+SFX W ol iola rol
+SFX W ol iole rol
+SFX W ol ioli rol
+SFX W ol iolo rol
+SFX W ol ioƚa rol
+SFX W ol ioƚe rol
+SFX W ol ioƚi rol
+SFX W ol ioƚo rol
+SFX W ol iòl rol
+SFX W ol iòla rol
+SFX W ol iòle rol
+SFX W ol iòli rol
+SFX W ol iòlo rol
+SFX W ol iòƚa rol
+SFX W ol iòƚe rol
+SFX W ol iòƚi rol
+SFX W ol iòƚo rol
+SFX W ol òl rol
+SFX W ol òla rol
+SFX W ol òle rol
+SFX W ol òli rol
+SFX W ol òlo rol
+SFX W ol òƚa rol
+SFX W ol òƚe rol
+SFX W ol òƚi rol
+SFX W ol òƚo rol
+SFX W èr ar èr
+SFX W èr ara èr
+SFX W èr are èr
+SFX W èr ari èr
+SFX W èr aro èr
+
+SFX X Y 12 # avèrbi
+SFX X 0 mente/IY [^aeiou]
+SFX X o amente/IY [^t]o
+SFX X o amente/IY [^n]to
+SFX X o amente/IY [^e]nto
+SFX X o amente/IY [^lƚu]ento
+SFX X o emente/IY [lƚu]ento
+SFX X 0 mente/IY [^rlƚn]e
+SFX X e mente/IY [aeiou]re
+SFX X 0 mente/IY [^aeiou]re
+SFX X e mente/IY [lƚ]e
+SFX X e amente/IY one
+SFX X 0 mente/IY [^o]ne
+
+SFX Y Y 2 # avèrbi
+SFX Y nte n mente
+SFX Y e re mente
+
+
+# FIXME
+# Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug. par tuti i mòdi e i tenpi fora ke inté ‘l infenío, partithipio ativo, e xerundio
+# Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug. intel partithipio pasivo ko la dexinentha in -st-, e intel xerundio
+
+#SFX & N 47 # sostantivi alterài
+#SFX & . òto/BI
+#SFX & . ato/B
+#SFX & . on/B
+#SFX & . eto/BI
+#SFX & . òl/B
+#SFX & . èl/B
+#SFX & . el/B
+#SFX & . òƚo/B
+#SFX & . èƚo/B
+#SFX & . eƚo/B
+#SFX & . in/B
+#SFX & . uŧo/BI
+#SFX & . uso/B
+#SFX & . sin/B
+#SFX & . esin/B
+#SFX & . ŧin/B
+#SFX & . sin/B
+#SFX & . eŧin/B
+#SFX & . esin/B
+#SFX & . ŧuŧo/B
+#SFX & . suso/B
+#SFX & . eŧuŧo/B
+#SFX & . esuso/B
+#SFX & . đin/B
+#SFX & . eđin/B
+#SFX & . edin/B
+#SFX & . exin/B
+#SFX & . đuŧo/B
+#SFX & . eđuŧo/B
+#SFX & . eduso/B
+#SFX & . exuso/B
+#SFX & . lin/B
+#SFX & . olin/B
+#SFX & . oƚin/B
+#SFX & . luŧo/B
+#SFX & . oluŧo/B
+#SFX & . oluso/B
+#SFX & . oƚuso/B
+#SFX & . rin/B
+#SFX & . erin/B
+#SFX & . ruŧo/B
+#SFX & . ruso/B
+#SFX & . eruŧo/B
+#SFX & . eruso/B
+#SFX & . aŧo/B
+#SFX & . aso/B
+#SFX & . uko/B
+
+SFX % N 32 # numerali - koletivi
+SFX % ète etena/V ète
+SFX % ète etèna/V ète
+SFX % òto otena/V òto
+SFX % òto otèna/V òto
+SFX % e ena/V ove
+SFX % e èna/V ove
+SFX % èxe exena/V ièxe
+SFX % èxe exèna/V ièxe
+SFX % èxe eŧena/V ièxe
+SFX % èxe esena/V ièxe
+SFX % ièxe exena/V ièxe
+SFX % ièxe exèna/V ièxe
+SFX % ièxe eŧena/V ièxe
+SFX % ièxe esena/V ièxe
+SFX % úndexe undexena/V úndexe
+SFX % úndexe undexèna/V úndexe
+SFX % ódexe odexena/V ódexe
+SFX % ódexe odexèna/V ódexe
+SFX % édexe edexena/V édexe
+SFX % édexe edexèna/V édexe
+SFX % òrdexe ordexena/V òrdexe
+SFX % òrdexe ordexèna/V òrdexe
+SFX % índexe indexena/V índexe
+SFX % índexe indexèna/V índexe
+SFX % i ena/V nti
+SFX % i èna/V nti
+SFX % a ena/V nta
+SFX % a èna/V nta
+SFX % o enèr/BW nto
+SFX % e èr/BW mi[lƚ]e
+SFX % 0 èr/BW ion
+SFX % o èr/BW iardo
+
+
+SFX £ N 10 # numeraŧion latina
+SFX £ 0 I [IVXLCDM]
+SFX £ 0 II [IVXLCDM]
+SFX £ 0 III [VXLCDM]
+SFX £ 0 IV [XLCDM]
+SFX £ 0 V [IXLCDM]
+SFX £ 0 VI [XLCDM]
+SFX £ 0 VII [XLCDM]
+SFX £ 0 VIII [XLCDM]
+SFX £ 0 IX [XLCDM]
+SFX £ 0 X I
+
+PFX $ N 62 # numeraŧion latina
+PFX $ 0 X [LC]
+PFX $ 0 L X
+PFX $ 0 C [XLCDM]
+PFX $ 0 CX [LC]
+PFX $ 0 CL X
+PFX $ 0 CC [XLC]
+PFX $ 0 CCX [LC]
+PFX $ 0 CCL X
+PFX $ 0 CCC [XL]
+PFX $ 0 CCCX [LC]
+PFX $ 0 CCCL X
+PFX $ 0 CD [XL]
+PFX $ 0 CDX [LC]
+PFX $ 0 CDL X
+PFX $ 0 D [XLC]
+PFX $ 0 DX [LC]
+PFX $ 0 DL X
+PFX $ 0 DC [XLC]
+PFX $ 0 DCX [LC]
+PFX $ 0 DCL X
+PFX $ 0 DCC [XLC]
+PFX $ 0 DCCX [LC]
+PFX $ 0 DCCL X
+PFX $ 0 DCCC [XL]
+PFX $ 0 DCCCX [LC]
+PFX $ 0 DCCCL X
+PFX $ 0 CM [XL]
+PFX $ 0 CMX [LC]
+PFX $ 0 CML X
+PFX $ 0 M [XLCDM]
+PFX $ 0 MX [LC]
+PFX $ 0 ML X
+PFX $ 0 MC [XLCMD]
+PFX $ 0 MCX [LC]
+PFX $ 0 MCL X
+PFX $ 0 MCC [XLC]
+PFX $ 0 MCCX [LC]
+PFX $ 0 MCCL X
+PFX $ 0 MCCC [XL]
+PFX $ 0 MCCC [LC]
+PFX $ 0 MCCC X
+PFX $ 0 MCD [XL]
+PFX $ 0 MCDX [LC]
+PFX $ 0 MCDL X
+PFX $ 0 MD [XLC]
+PFX $ 0 MDX [LC]
+PFX $ 0 MDL X
+PFX $ 0 MDC [XLC]
+PFX $ 0 MDCX [LC]
+PFX $ 0 MDCL X
+PFX $ 0 MDCC [XLC]
+PFX $ 0 MDCCX [LC]
+PFX $ 0 MDCCL X
+PFX $ 0 MDCCC [XL]
+PFX $ 0 MDCCCX [LC]
+PFX $ 0 MDCCCL X
+PFX $ 0 MCM [XL]
+PFX $ 0 MCMX [LC]
+PFX $ 0 MCML X
+PFX $ 0 MM [XLC]
+PFX $ 0 MMX [LC]
+PFX $ 0 MML X
+
+
+
+#PFX d Y 1
+#PFX d 0 stra .
+
+#PFX e Y 1
+#PFX e 0 pre .
