@@ -260,6 +260,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	var generateDic = function(verbs){
 		var dialect = new Dialect(),
+			cont = false,
 			theme, inf;
 		verbs.forEach(function(v){
 			generateExpansions(v.infinitive, function(verb){
@@ -271,14 +272,14 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 					case 1:
 						console.log(inf + '/aE');
 						console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/aJL');
-						console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/a$/, 'e') + 'me') + '/fH');
+						console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/a$/, 'e') + 'me') + '/gH');
 						break;
 
 					case 2:
 						if(!verb.rhizotonic){
 							console.log(inf + '/bE');
 							console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/bJL');
-							console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/fH');
+							console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/gH');
 						}
 						else{
 							console.log(inf + '/cE');
@@ -287,17 +288,16 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 						break;
 
 					case 3:
-						if(verb.special3rd){
-							console.log(inf + '/dE');
-							console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/fH');
+						if(verb.semiSpecial3rd){
+							console.log(inf + '/fE');
+							console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/gH');
+							console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/fJL');
 						}
-						else if(!verb.isSemiSpecial3rd){
-							console.log(inf + '/eE');
-							console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/eJL');
+						else if(verb.special3rd){
+							console.log(inf + '/dE');
+							console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/gH');
 						}
 						else{
-							console.log(inf + '/dE');
-							console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/fH');
 							console.log(inf + '/eE');
 							console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/eJL');
 						}

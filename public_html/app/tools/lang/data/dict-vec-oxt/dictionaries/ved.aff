@@ -111,7 +111,7 @@ KEEPCASE Z  # km, GHz, DVD, ...
 # vèrbi -àr
 # themeT1 + r/aE
 # themeT8 + o/aJL
-# themeT9 + eme/fH
+# themeT9 + eme/gH
 SFX a Y 609
 SFX a 0 à/JLNR ar
 SFX a 0 àe/R ar
@@ -726,7 +726,7 @@ SFX a o omi/K tumefào
 # vèrbi -ér
 # themeT1 + r/bE
 # themeT8 + o/bJL
-# themeT9 + ime/fH
+# themeT9 + ime/gH
 SFX b Y 461
 SFX b er àrmene/G er
 SFX b er é/FP er
@@ -1780,9 +1780,9 @@ SFX c ser ritu/O [^aàbcdđéèfghíjɉklƚmnñoóòprstŧuúvx]èser
 SFX c ser ro/JL [^aàbcdđéèfghíjɉklƚmnñoóòprstŧuúvx]èser
 SFX c ser romi/K [^aàbcdđéèfghíjɉklƚmnñoóòprstŧuúvx]èser
 
-# vèrbi -<is>ir
-# themeT1 + ir/dE
-# themeT9 + ime/fH
+# vèrbi -<is>ír
+# themeT1 + ír/dE
+# themeT9 + ime/gH
 SFX d Y 280
 SFX d ir aralo/B ir
 SFX d ir araƚo/B ir
@@ -2067,7 +2067,7 @@ SFX d r vonse ir
 
 # vèrbi -ír
 # themeT1 + ír/eE
-# themeT8 + o/cJL
+# themeT8 + o/eJL
 SFX e Y 276
 SFX e ir é/FP ir
 SFX e ir éa/JLPR ir
@@ -2238,10 +2238,14 @@ SFX e ir ié/P ir
 SFX e ir iede/P ir
 SFX e ir iege/P ir
 SFX e ir iéu/Q ir
-SFX e ir ion/L ir
-SFX e ir ione ir
-SFX e ir ioni/M ir
-SFX e ir ionse ir
+SFX e ir ion/L [^cijɉñ]ir
+SFX e ir on/L [cijɉñ]ir
+SFX e ir ione [^cijɉñ]ir
+SFX e ir one [cijɉñ]ir
+SFX e ir ioni/M [^cijɉñ]ir
+SFX e ir oni/M [cijɉñ]ir
+SFX e ir ionse [^cijɉñ]ir
+SFX e ir onse [cijɉñ]ir
 SFX e ir isen/L ir
 SFX e ir isene ir
 SFX e ir iseni/M ir
@@ -2254,10 +2258,6 @@ SFX e ir iveni/M ir
 SFX e ir ivense ir
 SFX e ir ivié/P ir
 SFX e ir iviéu/Q ir
-SFX e ir on/L ir
-SFX e ir one ir
-SFX e ir oni/M ir
-SFX e ir onse ir
 SFX e r do/B ir
 SFX e r ge ir
 SFX e r me/H ir
@@ -2346,17 +2346,323 @@ SFX e o itu/O o
 SFX e o o/JL o
 SFX e o omi/K o
 
-SFX f Y 10
-SFX f me lo/B eme
-SFX f me ƚo/B eme
-SFX f me mi/K eme
-SFX f eme itu/O eme
-SFX f eme omi/K eme
-SFX f ime elo/B ime
-SFX f ime eƚo/B ime
-SFX f ime emi/K ime
-SFX f me tu/O ime
-SFX f ime omi/K ime
+# vèrbi -<is>ír/-ír
+# themeT1 + ír/fE
+# themeT9 + ime/fH
+# themeT8 + o/fJL
+SFX f Y 295
+SFX f ir a ir
+SFX f ir aralo/B ir
+SFX f ir araƚo/B ir
+SFX f ir arami/K ir
+SFX f ir aratu/O ir
+SFX f ir arave/RT ir
+SFX f ir aremo/L ir
+SFX f ir aren/L ir
+SFX f ir areni/M ir
+SFX f ir arense ir
+SFX f ir aresi/P ir
+SFX f ir aresiu/Q ir
+SFX f ir arion/L ir
+SFX f ir arioni/M ir
+SFX f ir arionse ir
+SFX f ir arisen/L ir
+SFX f ir ariseni/M ir
+SFX f ir arisense ir
+SFX f ir arision/L ir
+SFX f ir arisioni/M ir
+SFX f ir arisionse ir
+SFX f ir arisié/P ir
+SFX f ir arisiéu/Q ir
+SFX f ir arison/L ir
+SFX f ir arisoni/M ir
+SFX f ir arisonse ir
+SFX f ir arié/P ir
+SFX f ir ariéu/Q ir
+SFX f ir aron/L ir
+SFX f ir aroni/M ir
+SFX f ir aronse ir
+SFX f ir arà/JLNR ir
+SFX f ir aràe/R ir
+SFX f ir arè/JL ir
+SFX f ir arèmi/K ir
+SFX f ir aré/P ir
+SFX f ir arémoi/M ir
+SFX f ir arésimo/L ir
+SFX f ir arésimoi/M ir
+SFX f ir aréu/Q ir
+SFX f ir aría/JLNR ir
+SFX f ir aríami/K ir
+SFX f ir aríatu/O ir
+SFX f ir aríe/JLR ir
+SFX f ir aríelo/B ir
+SFX f ir aríeƚo/B ir
+SFX f ir aríemi/K ir
+SFX f ir arò/JL ir
+SFX f ir aròmi/K ir
+SFX f ir e/IJLR ir
+SFX f ir ede ir
+SFX f ir ege ir
+SFX f ir elo/B ir
+SFX f ir eƚo/B ir
+SFX f ir emi/K ir
+SFX f ir en/L ir
+SFX f ir endo/E ir
+SFX f ir ene ir
+SFX f ir eni/M ir
+SFX f ir ense ir
+SFX f ir ente ir
+SFX f ir eralo/B ir
+SFX f ir eraƚo/B ir
+SFX f ir erami/K ir
+SFX f ir eratu/O ir
+SFX f ir erave/RT ir
+SFX f ir eremo/L ir
+SFX f ir eren/L ir
+SFX f ir ereni/M ir
+SFX f ir erense ir
+SFX f ir eresi/P ir
+SFX f ir eresiu/Q ir
+SFX f ir erion/L ir
+SFX f ir erioni/M ir
+SFX f ir erionse ir
+SFX f ir erisen/L ir
+SFX f ir eriseni/M ir
+SFX f ir erisense ir
+SFX f ir erision/L ir
+SFX f ir erisioni/M ir
+SFX f ir erisionse ir
+SFX f ir erisié/P ir
+SFX f ir erisiéu/Q ir
+SFX f ir erison/L ir
+SFX f ir erisoni/M ir
+SFX f ir erisonse ir
+SFX f ir erié/P ir
+SFX f ir eriéu/Q ir
+SFX f ir eron/L ir
+SFX f ir eroni/M ir
+SFX f ir eronse ir
+SFX f ir erà/JLNR ir
+SFX f ir eràe/R ir
+SFX f ir erè/JL ir
+SFX f ir erèmi/K ir
+SFX f ir eré/P ir
+SFX f ir erémoi/M ir
+SFX f ir erésimo/L ir
+SFX f ir erésimoi/M ir
+SFX f ir eréu/Q ir
+SFX f ir ería/JLNR ir
+SFX f ir eríami/K ir
+SFX f ir eríatu/O ir
+SFX f ir eríe/JLR ir
+SFX f ir eríelo/B ir
+SFX f ir eríeƚo/B ir
+SFX f ir eríemi/K ir
+SFX f ir erò/JL ir
+SFX f ir eròmi/K ir
+SFX f ir ese/I ir
+SFX f ir esi ir
+SFX f ir esto/BI ir
+SFX f ir eva/JLPR ir
+SFX f ir eve/JL ir
+SFX f ir evi/NP ir
+SFX f ir evo/JL ir
+SFX f ir i/FN ir
+SFX f ir iede ir
+SFX f ir iege ir
+SFX f ir ion/L [^cijɉñ]ir
+SFX f ir on/L [cijɉñ]ir
+SFX f ir ione [^cijɉñ]ir
+SFX f ir one [cijɉñ]ir
+SFX f ir ioni/M [^cijɉñ]ir
+SFX f ir oni/M [cijɉñ]ir
+SFX f ir ionse [^cijɉñ]ir
+SFX f ir onse [cijɉñ]ir
+SFX f ir isen/L ir
+SFX f ir isene ir
+SFX f ir iseni/M ir
+SFX f ir isense ir
+SFX f ir isié/P ir
+SFX f ir isiéde/P ir
+SFX f ir isiége/P ir
+SFX f ir iven/L ir
+SFX f ir iveni/M ir
+SFX f ir ivense ir
+SFX f ir ivié/P ir
+SFX f ir iviéu/Q ir
+SFX f ir ié/P ir
+SFX f ir iéde/P ir
+SFX f ir iége/P ir
+SFX f ir iéu/Q ir
+SFX f ir o/JL ir
+SFX f ir omi/K ir
+SFX f ir so/BI ir
+SFX f ir é/FP ir
+SFX f ir éa/JLPR ir
+SFX f ir éami/K ir
+SFX f ir éau/Q ir
+SFX f ir ée/JL ir
+SFX f ir éelo/B ir
+SFX f ir éeƚo/B ir
+SFX f ir éemi/K ir
+SFX f ir éi/NP ir
+SFX f ir éimo/L ir
+SFX f ir éimoi/M ir
+SFX f ir éitu/O ir
+SFX f ir éndome/G ir
+SFX f ir éo/JL ir
+SFX f ir éomi/K ir
+SFX f ir ésimo ir
+SFX f ir éu/Q ir
+SFX f ir évami/K ir
+SFX f ir évau/Q ir
+SFX f ir évelo/B ir
+SFX f ir éveƚo/B ir
+SFX f ir évemi/K ir
+SFX f ir évimo/L ir
+SFX f ir évimoi/M ir
+SFX f ir évitu/O ir
+SFX f ir évomi/K ir
+SFX f ir í ir
+SFX f ir í/FP ir
+SFX f ir ía/JLPR ir
+SFX f ir íami/K ir
+SFX f ir íau/Q ir
+SFX f ir íe/JL ir
+SFX f ir íelo/B ir
+SFX f ir íeƚo/B ir
+SFX f ir íemi/K ir
+SFX f ir íi/NP ir
+SFX f ir íimo/L ir
+SFX f ir íimoi/M ir
+SFX f ir íitu/O ir
+SFX f ir ímoi/M ir
+SFX f ir índome/G ir
+SFX f ir ío/JL ir
+SFX f ir íomi/K ir
+SFX f ir íselo/B ir
+SFX f ir íseƚo/B ir
+SFX f ir ísemi/K ir
+SFX f ir ísime/H ir
+SFX f ir ísimo ir
+SFX f ir ísitu/O ir
+SFX f ir ísomi/K ir
+SFX f ir íu/Q ir
+SFX f ir ívami/K ir
+SFX f ir ívau/Q ir
+SFX f ir ívelo/B ir
+SFX f ir íveƚo/B ir
+SFX f ir ívemi/K ir
+SFX f ir ívimo/L ir
+SFX f ir ívimoi/M ir
+SFX f ir ívitu/O ir
+SFX f ir ívomi/K ir
+SFX f r do/B ir
+SFX f r me/H ir
+SFX f r mo/L ir
+SFX f r ndo/E ir
+SFX f r r/E ir
+SFX f r ralo/B ir
+SFX f r raƚo/B ir
+SFX f r rami/K ir
+SFX f r ratu/O ir
+SFX f r rave/RT ir
+SFX f r re ir
+SFX f r remo/L ir
+SFX f r ren/L ir
+SFX f r reni/M ir
+SFX f r rense ir
+SFX f r resi/P ir
+SFX f r resiu/Q ir
+SFX f r rion/L ir
+SFX f r rioni/M ir
+SFX f r rionse ir
+SFX f r risen/L ir
+SFX f r riseni/M ir
+SFX f r risense ir
+SFX f r rision/L ir
+SFX f r risioni/M ir
+SFX f r risionse ir
+SFX f r risié/P ir
+SFX f r risiéu/Q ir
+SFX f r rison/L ir
+SFX f r risoni/M ir
+SFX f r risonse ir
+SFX f r rié/P ir
+SFX f r riéu/Q ir
+SFX f r rme/G ir
+SFX f r ron/L ir
+SFX f r roni/M ir
+SFX f r ronse ir
+SFX f r rà/JLNR ir
+SFX f r ràe/R ir
+SFX f r rè/JL ir
+SFX f r rèmi/K ir
+SFX f r ré/P ir
+SFX f r rémoi/M ir
+SFX f r résimo/L ir
+SFX f r résimoi/M ir
+SFX f r réu/Q ir
+SFX f r ría/JLNR ir
+SFX f r ríami/K ir
+SFX f r ríatu/O ir
+SFX f r ríe/JLR ir
+SFX f r ríelo/B ir
+SFX f r ríeƚo/B ir
+SFX f r ríemi/K ir
+SFX f r rò/JL ir
+SFX f r ròmi/K ir
+SFX f r sa ir
+SFX f r se/IJLR ir
+SFX f r sede ir
+SFX f r sege ir
+SFX f r sen/L ir
+SFX f r sene ir
+SFX f r seni/M ir
+SFX f r si/FN ir
+SFX f r siede ir
+SFX f r siege ir
+SFX f r sion/L ir
+SFX f r sione ir
+SFX f r sioni/M ir
+SFX f r sionse ir
+SFX f r sié ir
+SFX f r so/JL ir
+SFX f r son/L ir
+SFX f r sone ir
+SFX f r soni/M ir
+SFX f r sonse ir
+SFX f r sto/BI ir
+SFX f r sé/P ir
+SFX f r séu/Q ir
+SFX f r tu/O ir
+SFX f r va/JLPR ir
+SFX f r ve/JL ir
+SFX f r vi/NP ir
+SFX f r vion/L ir
+SFX f r vioni/M ir
+SFX f r vionse ir
+SFX f r vo/JL ir
+SFX f r von/L ir
+SFX f r voni/M ir
+SFX f r vonse ir
+
+SFX g Y 15
+SFX g ame elo/B ame
+SFX g ame eƚo/B ame
+SFX g ame emi/K ame
+SFX g ame itu/O ame
+SFX g ame omi/K ame
+SFX g me lo/B eme
+SFX g me ƚo/B eme
+SFX g me mi/K eme
+SFX g eme itu/O eme
+SFX g eme omi/K eme
+SFX g ime elo/B ime
+SFX g ime eƚo/B ime
+SFX g ime emi/K ime
+SFX g me tu/O ime
+SFX g ime omi/K ime
 
 SFX B Y 9 # tute le deklinaŧion, ajetivi de prima klase
 SFX B o a o
