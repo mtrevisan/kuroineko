@@ -5,7 +5,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lang/Dialect', 'tools/lang/morphology/Themizer', 'tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatterns/vec', 'tools/data/ArrayHelper', 'tools/data/Assert'], function(Word, Grapheme, Dialect, Themizer, Hyphenator, pattern_vec, ArrayHelper, Assert){
+define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lang/morphology/Verb', 'tools/lang/Dialect', 'tools/lang/morphology/Themizer', 'tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatterns/vec', 'tools/data/ArrayHelper', 'tools/data/Assert'], function(Word, Grapheme, Verb, Dialect, Themizer, Hyphenator, pattern_vec, ArrayHelper, Assert){
 
 	var runAllForms = true;
 
@@ -260,44 +260,111 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	var generateDic = function(verbs){
 		var dialect = new Dialect(),
-			themes, flag, inf;
-		verbs.forEach(function(verb){
-			themes = Themizer.generate(verb, dialect);
-			inf = unmarkDefaultStress(verb.infinitive);
+			theme, inf;
+		verbs.forEach(function(v){
+			generateExpansions(v.infinitive, function(verb){
+				verb = new Verb(verb);
+				theme = Themizer.generate(verb, dialect);
+				inf = unmarkDefaultStress(verb.infinitive);
 
-			switch(verb.conjugation){
-				case 1:
-					console.log(inf + '/aE');
-					console.log((themes.regular.themeT8? themes.regular.themeT8: themes.irregular.themeT8) + 'o/aJL');
-					console.log((themes.regular.themeT9? themes.regular.themeT9: themes.irregular.themeT9).replace(/a$/, 'e') + 'me/fH');
-					break;
+				switch(verb.conjugation){
+					case 1:
+						console.log(inf + '/aE');
+						console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/aJL');
+						console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/a$/, 'e') + 'me') + '/fH');
+						break;
 
-				case 2:
-					if(!verb.rhizotonic){
-						console.log(inf + '/bE');
-						console.log((themes.regular.themeT8? themes.regular.themeT8: themes.irregular.themeT8) + 'o/bJL');
-						console.log((themes.regular.themeT9? themes.regular.themeT9: themes.irregular.themeT9).replace(/i$/, '') + 'ime/fH');
-					}
-					else{
-						console.log(inf + '/cE');
-						console.log((themes.regular.themeT4? themes.regular.themeT4: themes.irregular.themeT4) + 'rò/cJL');
-					}
-					break;
+					case 2:
+						if(!verb.rhizotonic){
+							console.log(inf + '/bE');
+							console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/bJL');
+							console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/fH');
+						}
+						else{
+							console.log(inf + '/cE');
+							console.log(unmarkDefaultStress((theme.regular.themeT4? theme.regular.themeT4: theme.irregular.themeT4) + 'rò') + '/cJL');
+						}
+						break;
 
-				case 3:
-					if(verb.special3rd){
-						console.log(inf + '/dE');
-						console.log((themes.regular.themeT9? themes.regular.themeT9: themes.irregular.themeT9) + 'ime/fH');
-					}
-					//else if(verb.isSemiSpecial3rd){
-						//
-					//}
-					else{
-						console.log(inf + '/eE');
-						console.log((themes.regular.themeT8? themes.regular.themeT8: themes.irregular.themeT8) + 'o/eJL');
-					}
+					case 3:
+						if(verb.special3rd){
+							console.log(inf + '/dE');
+							console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/fH');
+						}
+						else if(!verb.isSemiSpecial3rd){
+							console.log(inf + '/eE');
+							console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/eJL');
+						}
+						else{
+							console.log(inf + '/dE');
+							console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/fH');
+							console.log(inf + '/eE');
+							console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/eJL');
+						}
+				}
+
+				generateThemeT8ParticiplePerfectStrong(verb, theme);
+				generateThemeT6ParticiplePerfectAlternative(verb, theme);
+			});
+		});
+	};
+
+	var generateThemeT8ParticiplePerfectStrong = function(verb, theme){
+		var t;
+		[REGULAR, IRREGULAR].forEach(function(k){
+			if(!t || !t.themeT8){
+				t = theme[k];
+				t = t.participlePerfect || t;
 			}
 		});
+		if(t.themeT8){
+			var strong = generateParticiplePerfectStrong(verb, t.themeT8);
+			if(strong)
+				console.log(unmarkDefaultStress(strong + 'o') + '/BI');
+		}
+	};
+
+	var generateThemeT6ParticiplePerfectAlternative = function(verb, theme){
+		var t = ((theme || {}).irregular || {}).participlePerfect || {};
+		if(t.themeT6){
+			console.log(unmarkDefaultStress(t.themeT6));
+			console.log(unmarkDefaultStress(t.themeT6 + 'o') + '/B');
+			console.log(unmarkDefaultStress(t.themeT6 + 'do') + '/B');
+		}
+	};
+
+	/** @private */
+	var generateExpansions = function(word, callback){
+		var expanded = false,
+			expansion;
+		expansion = unstressedVowelBeforeVibrantFreeVariation(word
+			.replace(/([^aeiouàèéíòóúlnr])đ([aeiouàèéíòóú])/g, '$1[đx]$2')
+			.replace(/([aeiouàèéíòóúlnr])đ([aeiouàèéíòóú])/g, '$1[dđx]$2')
+			.replace(/ŧ/g, '[sŧ]')
+			.replace(/[jɉ]/g, '[jɉ]'));
+		if(expansion != word){
+			expanded = true;
+
+			expandForm(expansion).forEach(function(s){
+				callback(s);
+			});
+		}
+
+		expansion = unstressedVowelBeforeVibrantFreeVariation(word)
+			.replace(/(^|[aeiouàèéíòóú])l([aeiouàèéíòóú])/g, '$1[lƚ]$2')
+			.replace(/đ/g, 'x')
+			.replace(/ŧ/g, 's')
+			.replace(/[jɉ]/g, '[jɉ]');
+		if(expansion != word){
+			expanded = true;
+
+			expandForm(expansion).forEach(function(s){
+				callback(s);
+			});
+		}
+
+		if(!expanded)
+			callback(word);
 	};
 
 	var generateTheme = (function(){

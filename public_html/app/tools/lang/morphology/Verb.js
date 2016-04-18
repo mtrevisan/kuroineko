@@ -61,16 +61,16 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/data/Asse
 
 	/** @private */
 	var checkForErrors = function(infinitive, syllabation){
-		Assert.assert(infinitive.match(/^(['‘’aàbcdđeèéfgiíjɉklƚmnñoòóprsʃtŧuúvxʒ]|[djlnstx]h)+$/), 'NOT_ALFABETIC');
+		Assert.assert(infinitive.match(/^(['‘’aàbcdđeèéfgiíjɉklƚmnñoòóprsʃtŧuúvxʒ]|[djlnstx]h)+$/), 'NOT_ALFABETIC: ' + infinitive);
 
 		//NOTE: [^aeio]*e would be erroneous because it wouldn't consider the eterophonic sequence /ier$/.
-		Assert.assert(infinitive.match(/([àèéí]|[àèéíòóú][^aeo]*e)r$/), 'NOT_A_VERB_INFINITIVE');
+		Assert.assert(infinitive.match(/([àèéí]|[àèéíòóú][^aeo]*[ea])r$/), 'NOT_A_VERB_INFINITIVE: ' + infinitive);
 
 		var m = infinitive.match(/[àèéíòóú]/g);
-		Assert.assert(m, 'NOT_STRESSABLE');
-		Assert.assert(m.length <= 1, 'TOO_MUCH_STRESSES');
+		Assert.assert(m, 'NOT_STRESSABLE: ' + infinitive);
+		Assert.assert(m.length <= 1, 'TOO_MUCH_STRESSES: ' + infinitive);
 
-		Assert.assert(!syllabation.hasSyllabationErrors(), 'NOT_SYLLABABLE');
+		Assert.assert(!syllabation.hasSyllabationErrors(), 'NOT_SYLLABABLE: ' + infinitive);
 	};
 
 	/** @private */
