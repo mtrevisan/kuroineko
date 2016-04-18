@@ -258,6 +258,48 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			});
 	};
 
+	var generateDic = function(verbs){
+		var dialect = new Dialect(),
+			themes, flag, inf;
+		verbs.forEach(function(verb){
+			themes = Themizer.generate(verb, dialect);
+			inf = unmarkDefaultStress(verb.infinitive);
+
+			switch(verb.conjugation){
+				case 1:
+					console.log(inf + '/aE');
+					console.log((themes.regular.themeT8? themes.regular.themeT8: themes.irregular.themeT8) + 'o/aJL');
+					console.log((themes.regular.themeT9? themes.regular.themeT9: themes.irregular.themeT9).replace(/a$/, 'e') + 'me/fH');
+					break;
+
+				case 2:
+					if(!verb.rhizotonic){
+						console.log(inf + '/bE');
+						console.log((themes.regular.themeT8? themes.regular.themeT8: themes.irregular.themeT8) + 'o/bJL');
+						console.log((themes.regular.themeT9? themes.regular.themeT9: themes.irregular.themeT9).replace(/i$/, '') + 'ime/fH');
+					}
+					else{
+						console.log(inf + '/cE');
+						console.log((themes.regular.themeT4? themes.regular.themeT4: themes.irregular.themeT4) + 'rò/cJL');
+					}
+					break;
+
+				case 3:
+					if(verb.special3rd){
+						console.log(inf + '/dE');
+						console.log((themes.regular.themeT9? themes.regular.themeT9: themes.irregular.themeT9) + 'ime/fH');
+					}
+					//else if(verb.isSemiSpecial3rd){
+						//
+					//}
+					else{
+						console.log(inf + '/eE');
+						console.log((themes.regular.themeT8? themes.regular.themeT8: themes.irregular.themeT8) + 'o/eJL');
+					}
+			}
+		});
+	};
+
 	var generateTheme = (function(){
 		var themeFuncts = [
 			undefined,
@@ -1788,7 +1830,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	return {
 		generate: generate,
-		generateThemeT8: generateThemeT8
+		generateThemeT8: generateThemeT8,
+		generateDic: generateDic
 	};
 
 });
