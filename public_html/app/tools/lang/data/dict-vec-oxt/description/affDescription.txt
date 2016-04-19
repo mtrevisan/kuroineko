@@ -3,31 +3,31 @@ This file is a summary of the switches used in the vec affix file.
 
 The vec.aff affix file was created from scratch by Mauro Trevisan.
 
-2016/03/08
+2016/04/19
 ---------------------------------------------------------------------
 
 A: (public) verbs infinitives
 B: (public) all declinations, adjectives of 1st class (0>[oaie]|[^oaie], o>i|[^ij]o, .o>i|[ij]o, o>[ae])
 C: (public) declination, adjectives of 2nd class (0>[aie]|[^oaie], a>[ie])
 D: (public) declination, adjectives of 3rd class (0>[ei]|[^oaie], e>i)
-E: procomplementar verbs (0>-l[oaie], 0>-[gmstv]e(ne), 0>-[gmstv]el[oaie], 0>-ne)
-F: procomplementar verbs (0>-[gmntv]e|[^a], 0>-l[oaie]|[^a], a>e-[gmntv]e, a>e-l[oaie])
-G: procomplementar verbs (me>l[oaie], me>[gnstv]e)
-H: procomplementar verbs (mene>mel[oaie], mene>[gstv]ene, mene>[gstv]el[oaie], me>[gntv]e|[^a]me, ame>e[gmntv]e, me>l[oaie]|[^a]me, ame>el[oaie])
+E: procomplementar verbs (0>-[lƚ][oaie], 0>-[gmstv]e(ne), 0>-[gmstv]e[lƚ][oaie], 0>-ne)
+F: procomplementar verbs (0>-[gmntv]e|[^a], 0>-[lƚ][oaie]|[^a], a>e-[gmntv]e, a>e-[lƚ][oaie])
+G: procomplementar verbs (me>[lƚ][oaie], me>[gnstv]e, mene>me[lƚ][oaie], mene>[gstv]ene, mene>[gstv]e[lƚ][oaie])
+H: procomplementar verbs (me>[gntv]e|[^a]me, ame>e[gmntv]e, me>[lƚ][oaie]|[^a]me, ame>e[lƚ][oaie])
 I: (public) sonorization of final consonants (ñ.>nc|ñ[oei], ñ.>in|ñ[oei], ñ.>n|ñ[oei], ñ.>ñ|ñ[oei], b.>p|b[oei], p.>p|p[oei], ...)
-J: interrogatives (0>-mi, 0>-[ei], 0>-t[ei]|n, 0>-n(t)[ei]|[^n])
-K: interrogatives (mi>[ei], mi>t[ei]|nmi, mi>n(t)[ei]|[^n]mi)
-L: interrogatives (0>-[ei], 0>-t[ei]|n, 0>-n(t)[ei]|[^n])
-M: interrogatives (ni>[ei], i>(t)[ei]|ni)
+J: interrogatives (0>-mi)
+K: interrogatives (mi>(t)[ei]|nmi, mi>n(t)[ei]|[^n]mi)
+L: interrogatives (0>-(t)[ei]|n, 0>-n(t)[ei]|[^n])
+M: interrogatives (i>(t)[ei]|ni, ni>[ei]|[^n]i)
 N: interrogatives (0>-t[uo], 0>-stu)
 O: interrogatives (u>o, tu>stu)
 P: interrogatives (0>-[uo])
 Q: interrogatives (u>o)
-R: interrogatives (.>e-l[oaie]|[ai], 0>-l[oaie]|[^ai])
-S: interrogatives (ave>ise-l[oaie]|rave, ave>ísel[oaie]|rave)
-T: (public) plural masculine substantives (0>[oi]|[^oaie], o.>ói|o[ln], a.>ài|a[ln], e.>éi|e[ln], 0>i|i[ln], u.>úi|u[ln], o>i|[^ij]o, .o>i|[ij]o, .>i|[ae], 0>i|[àèé])
+R: interrogatives (.>e-[lƚ][oaie]|[ai], 0>-[lƚ][oaie]|[^ai])
+S: interrogatives (ave>ise-[lƚ][oaie]|rave, ave>íse[lƚ][oaie]|rave)
+T: (public) plural masculine substantives (0>[oi]|[^oaie], o.>ói|o[ln], a.>ài|a[ln], e.>éi|e[ln], u.>úi|u[ln], o>i|[^ij]o, .o>i|[ij]o, .>i|[ae], 0>i|[àèé])
 U: (public) plural feminine substantives (0>[ei]|[^oaie], 0>i|i[ln], a.>ài|a[ln], e.>éi|e[ln], o.>ói|o[ln], u.>úi|u[ln], a>e, e>i)
-V: (public) plants and crafts (èr>ar(o/a/i/e), ol>iol(o/a/i/e)|rol, ol>(i)òl(o/a/i/e)|rol, 'ol>ioƚ[oaie]|rol', 'ol>(i)òƚ[oaie]|rol', dor>or(o/a/i/e)|[aeiou]dor)
+V: (public) plants and crafts (èr>ar(o/a/i/e), ol>io[lƚ](o/a/i/e)|rol, ol>(i)ò[lƚ](o/a/i/e)|rol, dor>or(o/a/i/e)|[aeiou]dor)
 W: (public) adverbs in -mente
 X: adverbs in -men/-mentre
 Z: (public) ignore upper/lower case (used, e.g., for latin numerals)
