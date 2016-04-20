@@ -1083,6 +1083,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fakin",			"s",			1,	3,	"a",	"1847",			"",
 "fal",			"",			1,	1,	"g",	"XIII",			"",
 "fal",			"",			4,	3,	"a",	"1821",			"",
+"falbal",		"",			1,	4,	"g",	"1775",			"",
 "fald",			"in",			1,	1,	"g",	"1821",			"",
 "fald",			"s",			1,	1,	"g",	"",				"",
 "faldeɉ",		"",			1,	4,	"a",	"1867",			"Paneɉar.",

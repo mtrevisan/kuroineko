@@ -260,51 +260,55 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 	var generateDic = function(verbs){
 		var dialect = new Dialect(),
-			cont = false,
+			all = {},
 			theme, inf;
 		verbs.forEach(function(v){
 			generateExpansions(v.infinitive, function(verb){
-				verb = new Verb(verb);
-				theme = Themizer.generate(verb, dialect);
-				inf = unmarkDefaultStress(verb.infinitive);
+				if(!all[verb]){
+					all[verb] = true;
 
-				switch(verb.conjugation){
-					case 1:
-						console.log(inf + '/aE');
-						console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/aJL');
-						console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/a$/, 'e') + 'me') + '/gH');
-						break;
+					verb = new Verb(verb);
+					theme = Themizer.generate(verb, dialect);
+					inf = unmarkDefaultStress(verb.infinitive);
 
-					case 2:
-						if(!verb.rhizotonic){
-							console.log(inf + '/bE');
-							console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/bJL');
-							console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/gH');
-						}
-						else{
-							console.log(inf + '/cE');
-							console.log(unmarkDefaultStress((theme.regular.themeT4? theme.regular.themeT4: theme.irregular.themeT4) + 'rò') + '/cJL');
-						}
-						break;
+					switch(verb.conjugation){
+						case 1:
+							console.log(inf + '/aE	po:verb is:infinitive');
+							console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/aJL	po:verb is:present_1s st:' + inf);
+							console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/a$/, 'e') + 'me') + '/gH	po:verb is:imperative_2s st:' + inf);
+							break;
 
-					case 3:
-						if(verb.semiSpecial3rd){
-							console.log(inf + '/fE');
-							console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/gH');
-							console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/fJL');
-						}
-						else if(verb.special3rd){
-							console.log(inf + '/dE');
-							console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/gH');
-						}
-						else{
-							console.log(inf + '/eE');
-							console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/eJL');
-						}
+						case 2:
+							if(!verb.rhizotonic){
+								console.log(inf + '/bE	po:verb is:infinitive');
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/bJL	po:verb is:present_1s st:' + inf);
+								console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/gH	po:verb is:imperative_2s st:' + inf);
+							}
+							else{
+								console.log(inf + '/cE	po:verb is:infinitive');
+								console.log(unmarkDefaultStress((theme.regular.themeT4? theme.regular.themeT4: theme.irregular.themeT4) + 'rò') + '/cJL	po:verb is:indicative_future_1s st:' + inf);
+							}
+							break;
+
+						case 3:
+							if(verb.semiSpecial3rd){
+								console.log(inf + '/fE	po:verb is:infinitive');
+								console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/gH	po:verb is:imperative_2s st:' + inf);
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/fJL	po:verb is:present_1s st:' + inf);
+							}
+							else if(verb.special3rd){
+								console.log(inf + '/dE	po:verb is:infinitive');
+								console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/gH	po:verb is:imperative_2s st:' + inf);
+							}
+							else{
+								console.log(inf + '/eE	po:verb is:infinitive');
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/eJL	po:verb is:present_1s st:' + inf);
+							}
+					}
+
+					generateThemeT8ParticiplePerfectStrong(verb, theme);
+					generateThemeT6ParticiplePerfectAlternative(verb, theme);
 				}
-
-				generateThemeT8ParticiplePerfectStrong(verb, theme);
-				generateThemeT6ParticiplePerfectAlternative(verb, theme);
 			});
 		});
 	};
@@ -320,16 +324,16 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		if(t.themeT8){
 			var strong = generateParticiplePerfectStrong(verb, t.themeT8);
 			if(strong)
-				console.log(unmarkDefaultStress(strong + 'o') + '/BI');
+				console.log(unmarkDefaultStress(strong + 'o') + '/BI	po:verb is:participle_perfect_strong_1s st:' + verb.infinitive);
 		}
 	};
 
 	var generateThemeT6ParticiplePerfectAlternative = function(verb, theme){
 		var t = ((theme || {}).irregular || {}).participlePerfect || {};
 		if(t.themeT6){
-			console.log(unmarkDefaultStress(t.themeT6));
-			console.log(unmarkDefaultStress(t.themeT6 + 'o') + '/B');
-			console.log(unmarkDefaultStress(t.themeT6 + 'do') + '/B');
+			console.log(unmarkDefaultStress(t.themeT6) + '	po:verb is:participle_perfect_strong_1s st:' + verb.infinitive);
+			console.log(unmarkDefaultStress(t.themeT6 + 'o') + '/B	po:verb is:participle_perfect_strong_1s st:' + verb.infinitive);
+			console.log(unmarkDefaultStress(t.themeT6 + 'do') + '/B	po:verb is:participle_perfect_strong_1s st:' + verb.infinitive);
 		}
 	};
 
