@@ -27,59 +27,33 @@
 		})();
 
 
-		require(['tools/lang/morphology/AFFFileRules', 'tools/lang/morphology/Verb', 'tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatterns/vec', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(AFFFileRules, Verb, Word, Grapheme, Hyphenator, pattern_vec, verbsDictionary, JSONH){
+		require(['tools/lang/morphology/AFFFileRules', 'tools/lang/morphology/Verb', 'tools/lang/data/VerbsDictionary', 'libs/jsonh'], function(AFFFileRules, Verb, verbsDictionary, JSONH){
 			verbsDictionary = JSONH.unpack(verbsDictionary);
-			var hyphenator = new Hyphenator(pattern_vec);
-
-			var printInfinitives = true;
-
-			var unmarkDefaultStress = function(word){
-				if(!word)
-					return undefined;
-
-				var idx = Word.getIndexOfStress(word),
-					tmp;
-				if(idx >= 0){
-					//exclude unmark from one-syllabe words ending in vowel
-					tmp = ((hyphenator.hyphenate(word).syllabes.length > 1 || word.match(/[^aeiouàèéíòóú]$/))
-							&& !Grapheme.isDiphtong(word.substr(idx, 2))
-							&& !Grapheme.isHyatus(word.substr(idx, 2))
-							&& !word.match(/^(re)?\(?g?\)?(à\/è|à|é|ò)[oaie]?$/)
-							&& !word.match(/^\(?x?\)?é$|^s[éí][oaie]?$/)
-							&& !word.match(/^((r[ei])?d[àé]|(kon(tra)?|[lƚ]ikue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?f[àé]|(mal|move|soto)?st[àé])[oaie]?$/)
-							&& !word.match(/^(và[oaie]?|vé)[oaie]?$/)
-							&& !word.match(/^s[àò][oaie]?$/)
-							&& !word.match(/^(|as?|des?|es|kon|pro|re|so)tr[àé][oaie]?$/)?
-						word.replace(/[àéíóú]/g, function(chr){ return 'aeiou'['àéíóú'.indexOf(chr)]; }): word);
-					if(tmp != word && Word.markDefaultStress(tmp) == word)
-						word = tmp;
-				}
-
-				return word;
-			};
 
 			var start = +new Date();
 
 			var verbs = [],
 				inf;
 			verbsDictionary.forEach(function(infinitive, idx){
-if(idx > 10)
-	return;
+//if(idx > 1000)
+//	return;
 				inf = composeInfinitive(infinitive);
 
-//if(['domàr', 'domandàr', 'domenàr', 'domestegàr'].indexOf(inf) >= 0){
-//if(['skoltàr', 'kovèrđer'].indexOf(inf) >= 0){
+//if(['domàr', 'domandàr', 'domenàr', 'domestegàr'].indexOf(inf) >= 0)
+//if(['tèser'].indexOf(inf) >= 0)
 //if(['èser', 'avér'].indexOf(inf) >= 0)
+//if(['parír'].indexOf(inf) >= 0)
 					if(verbs.indexOf(inf) < 0)
 						verbs.push(inf);
 			});
-			if(printInfinitives){
-				verbs.forEach(function(verb){
-					console.log(unmarkDefaultStress(verb) + '/A');
-					AFFFileRules.generateThemeT8(new Verb(verb));
-				});
-			}
 			verbs = verbs.map(function(v){ return new Verb(v); });
+
+//			verbs.forEach(function(v){
+//				if(v.semiSpecial3rd)
+//					console.log(v.infinitive);
+//			});
+
+			AFFFileRules.generateDic(verbs);
 
 			/*var verbs = [],
 				infinitives = [],
@@ -98,7 +72,7 @@ if(['skoltàr', 'abdikàr'].indexOf(infinitive) >= 0)
 					verbs.push(new Verb(infinitive));
 				}
 			});*/
-			AFFFileRules.generate(verbs);
+//			AFFFileRules.generate(verbs);
 
 			console.log(((+new Date() - start) / 1000).toFixed(2) + ' s');
 		});
