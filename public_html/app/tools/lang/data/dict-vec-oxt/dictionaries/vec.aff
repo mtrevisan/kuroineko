@@ -42,12 +42,10 @@ FLAG UTF-8
 FULLSTRIP
 
 # define break points for breaking words and checking word parts separately
-BREAK 5
+BREAK 3
 BREAK &
 BREAK /
 BREAK _
-BREAK ^‘
-BREAK ’$
 
 # suggest the right forms for words which incorrectly choose the wrong letter from a related set more than once in a word
 MAP 5
@@ -108,10 +106,6 @@ REP ù ú
 
 # avoid wrong spelling of letterwords
 KEEPCASE Z # km, GHz, DVD, ...
-
-# am 1
-# am po:nom is:mas
-# sfx A 0 à/JLNR [aei]r 1
 
 
 SFX A Y 59
