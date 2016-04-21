@@ -32,7 +32,7 @@ SET UTF-8
 
 TRY -'‘’eaoinrtlƚsdkpvmuèxgfàòbíhéŧójñcúSđLȽIPETKKAMDNFBRJGɉCOUĐXÀÈŦHɈÒÑÍÉÓÚ
 
-KEY esdr|redft|trfg|uhji|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà-|àòèù-|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìè'
+KEY esdr|redft|trfg|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà-|àòèù-|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìè'
 
 WORDCHARS -'‘’
 
@@ -42,10 +42,12 @@ FLAG UTF-8
 FULLSTRIP
 
 # define break points for breaking words and checking word parts separately
-BREAK 3
+BREAK 5
 BREAK &
 BREAK /
 BREAK _
+BREAK ^‘
+BREAK ’$
 
 # suggest the right forms for words which incorrectly choose the wrong letter from a related set more than once in a word
 MAP 5
@@ -107,6 +109,10 @@ REP ù ú
 # avoid wrong spelling of letterwords
 KEEPCASE Z # km, GHz, DVD, ...
 
+# am 1
+# am po:nom is:mas
+# sfx A 0 à/JLNR [aei]r 1
+
 
 SFX A Y 59
 SFX A 0 à/JLNR [aei]r
@@ -121,14 +127,14 @@ SFX A 0 éu/Q [aei]r
 SFX A 0 ía/JLNR [aei]r
 SFX A 0 íami/K [aei]r
 SFX A 0 íatu/O [aei]r
+SFX A 0 íelo/B [aei]r
 SFX A 0 íeƚo/B [aei]r
 SFX A 0 íe/JLR [aei]r
-SFX A 0 íelo/B [aei]r
 SFX A 0 íemi/K [aei]r
 SFX A 0 ò/JL [aei]r
 SFX A 0 òmi/K [aei]r
-SFX A 0 aƚo/B [aei]r
 SFX A 0 alo/B [aei]r
+SFX A 0 aƚo/B [aei]r
 SFX A 0 ami/K [aei]r
 SFX A 0 atu/O [aei]r
 SFX A 0 ave/RS [aei]r
@@ -2693,22 +2699,22 @@ SFX V èr ari èr
 SFX V èr aro èr
 
 SFX W Y 12 # avèrbi
-SFX W 0 mente/IX [^aeiou]	ds:mente_adverb
-SFX W o amente/IX [^t]o	ds:mente_adverb
-SFX W o amente/IX [^n]to	ds:mente_adverb
-SFX W o amente/IX [^e]nto	ds:mente_adverb
-SFX W o amente/IX [^lƚu]ento	ds:mente_adverb
-SFX W o emente/IX [lƚu]ento	ds:mente_adverb
-SFX W 0 mente/IX [^rlƚn]e	ds:mente_adverb
-SFX W e mente/IX [aeiou]re	ds:mente_adverb
-SFX W 0 mente/IX [^aeiou]re	ds:mente_adverb
-SFX W e mente/IX [lƚ]e	ds:mente_adverb
-SFX W e amente/IX one	ds:mente_adverb
-SFX W 0 mente/IX [^o]ne	ds:mente_adverb
+SFX W 0 mente/IX [^aeiou]
+SFX W o amente/IX [^t]o
+SFX W o amente/IX [^n]to
+SFX W o amente/IX [^e]nto
+SFX W o amente/IX [^lƚu]ento
+SFX W o emente/IX [lƚu]ento
+SFX W 0 mente/IX [^rlƚn]e
+SFX W e mente/IX [aeiou]re
+SFX W 0 mente/IX [^aeiou]re
+SFX W e mente/IX [lƚ]e
+SFX W e amente/IX one
+SFX W 0 mente/IX [^o]ne
 
 SFX X Y 2 # avèrbi
-SFX X nte n mente	ds:mente_adverb
-SFX X e re mente	ds:mente_adverb
+SFX X nte n mente
+SFX X e re mente
 
 
 # FIXME
@@ -2765,44 +2771,44 @@ SFX X e re mente	ds:mente_adverb
 #SFX & . uko/B
 
 SFX % N 32 # numerali - koletivi
-SFX % ète etena/V ète
-SFX % ète etèna/V ète
-SFX % òto otena/V òto
-SFX % òto otèna/V òto
-SFX % e ena/V ove
-SFX % e èna/V ove
-SFX % èxe exena/V ièxe
-SFX % èxe exèna/V ièxe
-SFX % èxe eŧena/V ièxe
-SFX % èxe esena/V ièxe
-SFX % ièxe exena/V ièxe
-SFX % ièxe exèna/V ièxe
-SFX % ièxe eŧena/V ièxe
-SFX % ièxe esena/V ièxe
-SFX % úndexe undexena/V úndexe
-SFX % úndexe undexèna/V úndexe
-SFX % ódexe odexena/V ódexe
-SFX % ódexe odexèna/V ódexe
-SFX % édexe edexena/V édexe
-SFX % édexe edexèna/V édexe
-SFX % òrdexe ordexena/V òrdexe
-SFX % òrdexe ordexèna/V òrdexe
-SFX % índexe indexena/V índexe
-SFX % índexe indexèna/V índexe
-SFX % i ena/V nti
-SFX % i èna/V nti
-SFX % a ena/V nta
-SFX % a èna/V nta
-SFX % o enèr/BW nto
-SFX % e èr/BW mi[lƚ]e
-SFX % 0 èr/BW ion
-SFX % o èr/BW iardo
+SFX % ète etena/U ète
+SFX % ète etèna/U ète
+SFX % òto otena/U òto
+SFX % òto otèna/U òto
+SFX % e ena/U ove
+SFX % e èna/U ove
+SFX % èxe exena/U ièxe
+SFX % èxe exèna/U ièxe
+SFX % èxe eŧena/U ièxe
+SFX % èxe esena/U ièxe
+SFX % ièxe exena/U ièxe
+SFX % ièxe exèna/U ièxe
+SFX % ièxe eŧena/U ièxe
+SFX % ièxe esena/U ièxe
+SFX % úndexe undexena/U úndexe
+SFX % úndexe undexèna/U úndexe
+SFX % ódexe odexena/U ódexe
+SFX % ódexe odexèna/U ódexe
+SFX % édexe edexena/U édexe
+SFX % édexe edexèna/U édexe
+SFX % òrdexe ordexena/U òrdexe
+SFX % òrdexe ordexèna/U òrdexe
+SFX % índexe indexena/U índexe
+SFX % índexe indexèna/U índexe
+SFX % i ena/U nti
+SFX % i èna/U nti
+SFX % a ena/U nta
+SFX % a èna/U nta
+SFX % o enèr/BV nto
+SFX % e èr/BV mi[lƚ]e
+SFX % 0 èr/BV ion
+SFX % o èr/BV iardo
 
 
 SFX £ N 10 # numeraŧion latina
 SFX £ 0 I [IVXLCDM]
 SFX £ 0 II [IVXLCDM]
-SFX £ 0 III [VXLCDM]
+SFX £ 0 III [IVXLCDM]
 SFX £ 0 IV [XLCDM]
 SFX £ 0 V [IXLCDM]
 SFX £ 0 VI [XLCDM]
@@ -2811,7 +2817,7 @@ SFX £ 0 VIII [XLCDM]
 SFX £ 0 IX [XLCDM]
 SFX £ 0 X I
 
-PFX $ N 62 # numeraŧion latina
+PFX $ N 60 # numeraŧion latina
 PFX $ 0 X [LC]
 PFX $ 0 L X
 PFX $ 0 C [XLCDM]
@@ -2850,9 +2856,7 @@ PFX $ 0 MCL X
 PFX $ 0 MCC [XLC]
 PFX $ 0 MCCX [LC]
 PFX $ 0 MCCL X
-PFX $ 0 MCCC [XL]
-PFX $ 0 MCCC [LC]
-PFX $ 0 MCCC X
+PFX $ 0 MCCC [XLC]
 PFX $ 0 MCD [XL]
 PFX $ 0 MCDX [LC]
 PFX $ 0 MCDL X

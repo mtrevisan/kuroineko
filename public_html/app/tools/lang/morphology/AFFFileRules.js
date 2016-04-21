@@ -273,36 +273,36 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 					switch(verb.conjugation){
 						case 1:
-							console.log(inf + '/aE	po:verb is:infinitive');
-							console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/aJL	po:verb is:present_1s st:' + inf);
+							console.log(inf + '/AaE	po:verb is:infinitive_simple');
+							console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/aJL	po:verb is:indicative_present_1s st:' + inf);
 							console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/a$/, 'e') + 'me') + '/gH	po:verb is:imperative_2s st:' + inf);
 							break;
 
 						case 2:
 							if(!verb.rhizotonic){
-								console.log(inf + '/bE	po:verb is:infinitive');
-								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/bJL	po:verb is:present_1s st:' + inf);
+								console.log(inf + '/AbE	po:verb is:infinitive_simple');
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/bJL	po:verb is:indicative_present_1s st:' + inf);
 								console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/gH	po:verb is:imperative_2s st:' + inf);
 							}
 							else{
-								console.log(inf + '/cE	po:verb is:infinitive');
+								console.log(inf + '/cE	po:verb is:infinitive_simple');
 								console.log(unmarkDefaultStress((theme.regular.themeT4? theme.regular.themeT4: theme.irregular.themeT4) + 'rò') + '/cJL	po:verb is:indicative_future_1s st:' + inf);
 							}
 							break;
 
 						case 3:
 							if(verb.semiSpecial3rd){
-								console.log(inf + '/fE	po:verb is:infinitive');
+								console.log(inf + '/AfE	po:verb is:infinitive_simple');
 								console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/gH	po:verb is:imperative_2s st:' + inf);
-								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/fJL	po:verb is:present_1s st:' + inf);
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/fJL	po:verb is:indicative_present_1s st:' + inf);
 							}
 							else if(verb.special3rd){
-								console.log(inf + '/dE	po:verb is:infinitive');
+								console.log(inf + '/AdE	po:verb is:infinitive_simple');
 								console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/gH	po:verb is:imperative_2s st:' + inf);
 							}
 							else{
-								console.log(inf + '/eE	po:verb is:infinitive');
-								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/eJL	po:verb is:present_1s st:' + inf);
+								console.log(inf + '/AeE	po:verb is:infinitive_simple');
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/eJL	po:verb is:indicative_present_1s st:' + inf);
 							}
 					}
 
@@ -343,7 +343,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			expansion;
 		expansion = unstressedVowelBeforeVibrantFreeVariation(word
 			.replace(/([^aeiouàèéíòóúlnr])đ([aeiouàèéíòóú])/g, '$1[đx]$2')
-			.replace(/([aeiouàèéíòóúlnr])đ([aeiouàèéíòóú])/g, '$1[dđx]$2')
+			.replace(/(^|[aeiouàèéíòóúlnr])đ([aeiouàèéíòóú])/g, '$1[dđx]$2')
 			.replace(/ŧ/g, '[sŧ]')
 			.replace(/[jɉ]/g, '[jɉ]'));
 		if(expansion != word){
@@ -1521,13 +1521,13 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 					{matcher: /([lƚ])[èí][dđx]$/, replacement: '$1èt'},
 					{matcher: /strén[dđx]$/, replacement: 'strét'},
 					{matcher: /rd$/, replacement: 'rs'},
-					{matcher: /([rn]|frí)[dđx]$/, replacement: '$1t'},
 					{matcher: /ríx$/, replacement: 'rèt'},
 					{matcher: /([aeiouàèéíòóúl])x$/, falsePositives: /nòx$/, replacement: '$1t'},
 					{matcher: /(pà|kó)nd$/, replacement: '$1nt'},
-					{matcher: /pónd$/, replacement: 'póst'},
+					{matcher: /pónd$/, replacement: 'pòst'},
 					{matcher: /fónd$/, replacement: 'fúx'},
 					{matcher: /([^fv])énd$/, replacement: '$1éx'},
+					{matcher: /([rn]|frí)[dđx]$/, replacement: '$1t'},
 					{matcher: /véd$/, replacement: 'víst'},
 					{matcher: /([csŧ])éd$/, replacement: '$1ès'},
 					{matcher: /([aeiouàèéíòóúnl])d$/, replacement: '$1x'},
