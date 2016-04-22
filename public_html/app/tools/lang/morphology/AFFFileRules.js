@@ -324,16 +324,17 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		if(t.themeT8){
 			var strong = generateParticiplePerfectStrong(verb, t.themeT8);
 			if(strong)
-				console.log(unmarkDefaultStress(strong + 'o') + '/BI	po:verb is:participle_perfect_strong_1s st:' + verb.infinitive);
+				console.log(unmarkDefaultStress(strong + 'o') + '/BI	po:verb is:participle_perfect_strong_1s st:' + unmarkDefaultStress(verb.infinitive));
 		}
 	};
 
 	var generateThemeT6ParticiplePerfectAlternative = function(verb, theme){
 		var t = ((theme || {}).irregular || {}).participlePerfect || {};
 		if(t.themeT6){
-			console.log(unmarkDefaultStress(t.themeT6) + '	po:verb is:participle_perfect_strong_1s st:' + verb.infinitive);
-			console.log(unmarkDefaultStress(t.themeT6 + 'o') + '/B	po:verb is:participle_perfect_strong_1s st:' + verb.infinitive);
-			console.log(unmarkDefaultStress(t.themeT6 + 'do') + '/B	po:verb is:participle_perfect_strong_1s st:' + verb.infinitive);
+			var inf = unmarkDefaultStress(verb.infinitive);
+			console.log(unmarkDefaultStress(t.themeT6) + '	po:verb is:participle_perfect_strong_1s st:' + inf);
+			console.log(unmarkDefaultStress(t.themeT6 + 'o') + '/B	po:verb is:participle_perfect_strong_1s st:' + inf);
+			console.log(unmarkDefaultStress(t.themeT6 + 'do') + '/B	po:verb is:participle_perfect_strong_1s st:' + inf);
 		}
 	};
 
@@ -1602,7 +1603,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 			expandForm(themes.themeT9).forEach(function(t){
 				insert(paradigm, 9, verb.infinitive, origin, t, null, null, '/' + PRONOMENAL_IMPERATIVE_MARK + MARKER_FLAGS);
-				insert(paradigm, 9, verb.infinitive, origin, t + 'me', /ame$/, 'eme', '/' + PRONOMENAL_IMPERATIVE_MARK_2);
+				insert(paradigm, 9, verb.infinitive, origin, t + 'me', null, null, '/' + PRONOMENAL_IMPERATIVE_MARK_2);
 			});
 		}
 	};
