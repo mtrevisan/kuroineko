@@ -109,8 +109,8 @@ KEEPCASE Z # km, GHz, DVD, ...
 
 
 # vèrbi -àr, -ér, -<is>ír, -ír, -<is>ír/-ír
-# themeT1 + r/AaE, themeT1 + r/AbE, themeT1 + r/AdE, themeT1 + r/AeE, themeT1 + r/AfE
-SFX A Y 55
+# themeT1 + r/AahE, themeT1 + r/AbiE, themeT1 + r/AdE, themeT1 + r/AeE, themeT1 + r/AfE
+SFX A Y 56
 SFX A 0 à/FJLN [aei]r
 SFX A 0 àe/F [aei]r
 SFX A 0 è/JL [aei]r
@@ -134,6 +134,7 @@ SFX A 0 aƚo/B [aei]r
 SFX A 0 ami/K [aei]r
 SFX A 0 atu/O [aei]r
 SFX A 0 ave/F [aei]r
+SFX A 0 e [aei]r
 SFX A 0 emo/EL [aei]r
 SFX A 0 en/L [aei]r
 SFX A 0 eni/M [aei]r
@@ -168,9 +169,9 @@ SFX A r vi/NP [aei]r
 SFX A r vo/JL [aei]r
 
 # vèrbi -àr
-# themeT1 + r/AaE
-# themeT8 + o/aJL
-# themeT9 + eme/gH
+# themeT1 + r/AahE
+# themeT8 + o/ahJL
+# themeT9 + omi/gK
 SFX a Y 10
 SFX a ar àa/FJLP ar
 SFX a ar àe/JL ar
@@ -184,8 +185,8 @@ SFX a ar éo/JL ar
 SFX a ar éu/Q ar
 
 # vèrbi -ér
-# themeT1 + r/AbE
-# themeT8 + o/bJL
+# themeT1 + r/AbiE
+# themeT8 + o/biJL
 SFX b Y 8
 SFX b o e/FIJKL o
 SFX b o elo/B o
@@ -196,131 +197,6 @@ SFX b o ime/H o
 SFX b o itu/O o
 SFX b o a o
 
-#SFX b o a ò[lƚ]o
-#SFX b o e/FIJL ò[lƚ]o
-#SFX b o i/FN ò[lƚ]o
-#SFX b ler rà/FJLN oler
-#SFX b ler ràe/F oler
-#SFX b ler rè/JL oler
-#SFX b ler rèmi/K oler
-#SFX b ler ré/P oler
-#SFX b ler rémoi/M oler
-#SFX b ler rémome/G oler
-#SFX b ler résimo/L oler
-#SFX b ler résimoi/M oler
-#SFX b ler réu/Q oler
-#SFX b ler rí/P oler
-#SFX b ler ría/FJLN oler
-#SFX b ler ríami/K oler
-#SFX b ler ríatu/O oler
-#SFX b ler ríe/FJL oler
-#SFX b ler ríelo/B oler
-#SFX b ler ríeƚo/B oler
-#SFX b ler ríemi/K oler
-#SFX b ler rímoi/M oler
-#SFX b ler rò/JL oler
-#SFX b ler ròmi/K oler
-#SFX b ler ralo/B oler
-#SFX b ler raƚo/B oler
-#SFX b ler rami/K oler
-#SFX b ler ratu/O oler
-#SFX b ler rave/F oler
-#SFX b ler remo/EL oler
-#SFX b ler ren/L oler
-#SFX b ler reni/M oler
-#SFX b ler rense oler
-#SFX b ler resi/P oler
-#SFX b ler resiu/Q oler
-#SFX b ler rié/P oler
-#SFX b ler riéu/Q oler
-#SFX b ler rimo/L oler
-#SFX b ler rion/L oler
-#SFX b ler rioni/M oler
-#SFX b ler rionse oler
-#SFX b ler risen/L oler
-#SFX b ler riseni/M oler
-#SFX b ler risié/P oler
-#SFX b ler risense oler
-#SFX b ler risiéu/Q oler
-#SFX b ler rision/L oler
-#SFX b ler risioni/M oler
-#SFX b ler risionse oler
-#SFX b ler rison/L oler
-#SFX b ler risoni/M oler
-#SFX b ler risonse oler
-#SFX b ler ron/L oler
-#SFX b ler roni/M oler
-#SFX b ler ronse oler
-#SFX b ƚer rà/FJLN oƚer
-#SFX b ƚer ràe/F oƚer
-#SFX b ƚer rè/JL oƚer
-#SFX b ƚer rèmi/K oƚer
-#SFX b ƚer ré/P oƚer
-#SFX b ƚer rémoi/M oƚer
-#SFX b ƚer rémome/G oƚer
-#SFX b ƚer résimo/L oƚer
-#SFX b ƚer résimoi/M oƚer
-#SFX b ƚer réu/Q oƚer
-#SFX b ƚer rí/P oƚer
-#SFX b ƚer ría/FJLN oƚer
-#SFX b ƚer ríami/K oƚer
-#SFX b ƚer ríatu/O oƚer
-#SFX b ƚer ríe/FJL oƚer
-#SFX b ƚer ríelo/B oƚer
-#SFX b ƚer ríeƚo/B oƚer
-#SFX b ƚer ríemi/K oƚer
-#SFX b ƚer rímoi/M oƚer
-#SFX b ƚer rò/JL oƚer
-#SFX b ƚer ròmi/K oƚer
-#SFX b ƚer ralo/B oƚer
-#SFX b ƚer raƚo/B oƚer
-#SFX b ƚer rami/K oƚer
-#SFX b ƚer ratu/O oƚer
-#SFX b ƚer rave/F oƚer
-#SFX b ƚer remo/EL oƚer
-#SFX b ƚer ren/L oƚer
-#SFX b ƚer reni/M oƚer
-#SFX b ƚer rense oƚer
-#SFX b ƚer resi/P oƚer
-#SFX b ƚer resiu/Q oƚer
-#SFX b ƚer rié/P oƚer
-#SFX b ƚer riéu/Q oƚer
-#SFX b ƚer rimo/L oƚer
-#SFX b ƚer rion/L oƚer
-#SFX b ƚer rioni/M oƚer
-#SFX b ƚer rionse oƚer
-#SFX b ƚer risen/L oƚer
-#SFX b ƚer riseni/M oƚer
-#SFX b ƚer risié/P oƚer
-#SFX b ƚer risense oƚer
-#SFX b ƚer risiéu/Q oƚer
-#SFX b ƚer rision/L oƚer
-#SFX b ƚer risioni/M oƚer
-#SFX b ƚer risionse oƚer
-#SFX b ƚer rison/L oƚer
-#SFX b ƚer risoni/M oƚer
-#SFX b ƚer risonse oƚer
-#SFX b ƚer ron/L oƚer
-#SFX b ƚer roni/M oƚer
-#SFX b ƚer ronse oƚer
-#SFX b lo ga òlo
-#SFX b lo gi òlo
-#SFX b lo go/JL òlo
-#SFX b lo gomi/K òlo
-#SFX b lo r/E òlo
-#SFX b lo re òlo
-#SFX b lo rme/G òlo
-#SFX b o a òlo
-#SFX b o e/FIJL òlo
-#SFX b o ga òlo
-#SFX b o gi òlo
-#SFX b o i/FN òlo
-#SFX b o to/BI òlo
-#SFX b o a òƚo
-#SFX b o e/FIJL òƚo
-#SFX b o ga òƚo
-#SFX b o gi òƚo
-#SFX b o i/FN òƚo
 #SFX b aver epiè aver
 #SFX b aver epié aver
 #SFX b aver epiede aver
@@ -418,7 +294,7 @@ SFX b o a o
 # vèrbi '-er
 # themeT1 + er/cE
 # themeT4 + rò/cJL
-SFX c Y 219
+SFX c Y 218
 SFX c ò à/FJLN ò
 SFX c ò àe/F ò
 SFX c ò è/JL ò
@@ -471,7 +347,6 @@ SFX c ò isonse ò
 SFX c ò on/L ò
 SFX c ò oni/M ò
 SFX c ò onse ò
-SFX c 0 e er
 SFX c 0 me/G er
 SFX c 0 mene/G er
 SFX c 0 mi/K erò
@@ -638,6 +513,7 @@ SFX c rò vo/JL rò
 SFX c r lo/B er
 SFX c r ƚo/B er
 SFX c r mi/K er
+
 #SFX c èñer en/F èñer
 #SFX c èñer enlo/B èñer
 #SFX c èñer enme/H èñer
@@ -1078,8 +954,7 @@ SFX c r mi/K er
 
 # vèrbi -<is>ír
 # themeT1 + ír/AdE
-SFX d Y 227
-SFX d 0 e ir
+SFX d Y 226
 SFX d 0 me/G ir
 SFX d ir é/F ir
 SFX d ir éa/FJLP ir
@@ -1310,7 +1185,7 @@ SFX d r vonse ir
 # vèrbi -ír
 # themeT1 + ír/AeE
 # themeT8 + o/eJL
-SFX e Y 224
+SFX e Y 223
 SFX e o a o
 SFX e o e/FIJL o
 SFX e o elo/B o
@@ -1320,7 +1195,6 @@ SFX e o i/FN o
 SFX e o ime/H o
 SFX e o itu/O o
 SFX e o omi/K o
-SFX e 0 e ir
 SFX e 0 me/G ir
 SFX e ir é/FP ir
 SFX e ir éa/FJLP ir
@@ -1539,8 +1413,7 @@ SFX e r vonse ir
 # vèrbi -<is>ír/-ír
 # themeT1 + ír/AfE
 # themeT8 + o/fJL
-SFX f Y 247
-SFX f 0 e ir
+SFX f Y 246
 SFX f 0 me/G ir
 SFX f ir é/FP ir
 SFX f ir éa/FJLP ir
@@ -1799,11 +1672,7 @@ SFX g omi imi/K omi
 SFX g omi ami/K omi
 
 # vèrbi -àr inregolari
-SFX h Y 160
-SFX h o a/F o
-SFX h o e/FIJL o
-SFX h o i/FN o
-SFX h 0 e ar
+SFX h Y 159
 SFX h ar à ar
 SFX h ar àami/K ar
 SFX h ar àau/Q ar
@@ -1957,20 +1826,21 @@ SFX h ar on/L ar
 SFX h ar one ar
 SFX h ar oni/M ar
 SFX h ar onse ar
+SFX h o a/F o
+SFX h o e/FIJL o
+SFX h o i/FN o
 SFX h r do/B ar
 SFX h r nte ar
 SFX h r se/IT ar
 
-# vèrbi -ér inregolari
-SFX i Y 152
+# vèrbi -ér inregolari (saver)
+SFX i Y 151
 SFX i 0 í/P er
 SFX i 0 íe/FJL er
 SFX i 0 ímoi/M er
 SFX i 0 íu/Q er
-SFX i 0 e er
 SFX i 0 imo/EL er
 SFX i 0 me/G er
-SFX i o omi/K o
 SFX i er é/FP er
 SFX i er éa/FJLP er
 SFX i er éami/K er
@@ -2006,9 +1876,7 @@ SFX i er í/FP er
 SFX i er ímoi/M er
 SFX i er íu/Q er
 SFX i er ú [^u]er
-SFX i uer ú uer
 SFX i er úo/B [^u]er
-SFX i uer úo/B uer
 SFX i er arà/FJLN er
 SFX i er aràe/F er
 SFX i er arè/JL er
@@ -2104,7 +1972,7 @@ SFX i er one er
 SFX i er oni/M er
 SFX i er onse er
 SFX i er udo/B [^u]er
-SFX i uer udo/B uer
+SFX i o omi/K o
 SFX i r de er
 SFX i r ge er
 SFX i r me/H er
@@ -2115,7 +1983,59 @@ SFX i r ni/M er
 SFX i r nse er
 SFX i r nte er
 SFX i r se/IT er
+SFX i uer ú uer
+SFX i uer úo/B uer
+SFX i uer udo/B uer
 
+# vèrbi -ér inregolari (toler, retoler, voler, malvoler, revoler)
+SFX j Y 47
+SFX j ler rà/FJLN oler
+SFX j ler ràe/F oler
+SFX j ler rè/JL oler
+SFX j ler rèmi/K oler
+SFX j ler ré/P oler
+SFX j ler résimo/L oler
+SFX j ler résimoi/M oler
+SFX j ler réu/Q oler
+SFX j ler rí/P oler
+SFX j ler ría/FJLN oler
+SFX j ler ríami/K oler
+SFX j ler ríatu/O oler
+SFX j ler ríe/FJL oler
+SFX j ler ríelo/B oler
+SFX j ler ríeƚo/B oler
+SFX j ler ríemi/K oler
+SFX j ler ríu/Q oler
+SFX j ler rò/JL oler
+SFX j ler ròmi/K oler
+SFX j ler rave/F oler
+SFX j ler remo/EL oler
+SFX j ler ren/L oler
+SFX j ler rense oler
+SFX j ler rimo/EL oler
+SFX j ler rion/L oler
+SFX j ler rionse oler
+SFX j ler risen/L oler
+SFX j ler risense oler
+SFX j ler rision/L oler
+SFX j ler risionse oler
+SFX j ler rison/L oler
+SFX j ler risonse oler
+SFX j ler ron/L oler
+SFX j ler ronse oler
+SFX j ler rié/P oler
+SFX j ler riéu/Q oler
+SFX j ler risié/P oler
+SFX j ler risiéu/Q oler
+SFX j ler resi/P oler
+SFX j ler resiu/Q oler
+SFX j lo gò/JL tòlo
+SFX j lo gòmi/K tòlo
+SFX j lo gi/FN tòlo
+SFX j lo gime/H tòlo
+SFX j lo gitu/O tòlo
+SFX j lo ga tòlo
+SFX j lo go/JL tòlo
 
 SFX B Y 9 # tute le deklinaŧion, ajetivi de prima klase
 SFX B o a o
