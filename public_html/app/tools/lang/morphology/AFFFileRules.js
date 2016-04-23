@@ -273,32 +273,35 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 					switch(verb.conjugation){
 						case 1:
-							console.log(inf + '/AaE	po:verb is:infinitive_simple');
-							console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/aJL	po:verb is:indicative_present_1s st:' + inf);
-							console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/a$/, 'e') + 'me') + '/gH	po:verb is:imperative_2s st:' + inf);
+							console.log(inf + '/AahE	po:verb is:infinitive_simple');
+							if(!Word.isStressed(inf)){
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/ahJL	po:verb is:indicative_present_1s st:' + inf);
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'omi') + '/gK	po:verb is:indicative_present_1s is:interrogative_1s st:' + inf);
+							}
 							break;
 
 						case 2:
 							if(!verb.rhizotonic){
 								console.log(inf + '/AbE	po:verb is:infinitive_simple');
 								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/bJL	po:verb is:indicative_present_1s st:' + inf);
-								console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/gH	po:verb is:imperative_2s st:' + inf);
+//								console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/gH	po:verb is:imperative_2s st:' + inf);
 							}
 							else{
 								console.log(inf + '/cE	po:verb is:infinitive_simple');
 								console.log(unmarkDefaultStress((theme.regular.themeT4? theme.regular.themeT4: theme.irregular.themeT4) + 'rò') + '/cJL	po:verb is:indicative_future_1s st:' + inf);
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/cJKL	po:verb is:indicative_present_1s st:' + inf);
 							}
 							break;
 
 						case 3:
 							if(verb.semiSpecial3rd){
 								console.log(inf + '/AfE	po:verb is:infinitive_simple');
-								console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/gH	po:verb is:imperative_2s st:' + inf);
+//								console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/gH	po:verb is:imperative_2s st:' + inf);
 								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/fJL	po:verb is:indicative_present_1s st:' + inf);
 							}
 							else if(verb.special3rd){
 								console.log(inf + '/AdE	po:verb is:infinitive_simple');
-								console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/gH	po:verb is:imperative_2s st:' + inf);
+//								console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/gH	po:verb is:imperative_2s st:' + inf);
 							}
 							else{
 								console.log(inf + '/AeE	po:verb is:infinitive_simple');
