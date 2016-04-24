@@ -273,10 +273,15 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 					switch(verb.conjugation){
 						case 1:
-							console.log(inf + '/AahE	po:verb is:infinitive_simple');
 							if(!Word.isStressed(inf)){
+								console.log(inf + '/AahE	po:verb is:infinitive_simple');
 								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/ahJL	po:verb is:indicative_present_1s st:' + inf);
 								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'omi') + '/gK	po:verb is:indicative_present_1s is:interrogative_1s st:' + inf);
+							}
+							else{
+								console.log(inf + '/cE	po:verb is:infinitive_simple');
+								console.log(unmarkDefaultStress((theme.regular.themeT4? theme.regular.themeT4: theme.irregular.themeT4) + 'rò') + '/cJL	po:verb is:indicative_future_1s st:' + inf);
+//								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/cJKL	po:verb is:indicative_present_1s st:' + inf);
 							}
 							break;
 
@@ -345,11 +350,13 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	var generateExpansions = function(word, callback){
 		var expanded = false,
 			expansion;
-		expansion = unstressedVowelBeforeVibrantFreeVariation(word
+		expansion = word
 			.replace(/([^aeiouàèéíòóúlnr])đ([aeiouàèéíòóú])/g, '$1[đx]$2')
 			.replace(/(^|[aeiouàèéíòóúlnr])đ([aeiouàèéíòóú])/g, '$1[dđx]$2')
 			.replace(/ŧ/g, '[sŧ]')
-			.replace(/[jɉ]/g, '[jɉ]'));
+			.replace(/[jɉ]/g, '[jɉ]');
+		if(!word.match(/[đŧ]/))
+			expansion = unstressedVowelBeforeVibrantFreeVariation(expansion);
 		if(expansion != word){
 			expanded = true;
 
@@ -358,11 +365,13 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 			});
 		}
 
-		expansion = unstressedVowelBeforeVibrantFreeVariation(word)
+		expansion = word
 			.replace(/(^|[aeiouàèéíòóú])l([aeiouàèéíòóú])/g, '$1[lƚ]$2')
 			.replace(/đ/g, 'x')
 			.replace(/ŧ/g, 's')
 			.replace(/[jɉ]/g, '[jɉ]');
+		if(!word.match(/[đŧ]/))
+			expansion = unstressedVowelBeforeVibrantFreeVariation(expansion);
 		if(expansion != word){
 			expanded = true;
 

@@ -43,7 +43,7 @@
 //if(['tèser'].indexOf(inf) >= 0)
 //if(['èser', 'avér'].indexOf(inf) >= 0)
 //if(['parír'].indexOf(inf) >= 0)
-if(inf == 'èser')
+//if(inf == 'èser')
 					if(verbs.indexOf(inf) < 0)
 						verbs.push(inf);
 			});
@@ -54,7 +54,7 @@ if(inf == 'èser')
 //					console.log(v.infinitive);
 //			});
 
-//			AFFFileRules.generateDic(verbs);
+			AFFFileRules.generateDic(verbs);
 
 			/*var verbs = [],
 				infinitives = [],
@@ -73,7 +73,7 @@ if(['skoltàr', 'abdikàr'].indexOf(infinitive) >= 0)
 					verbs.push(new Verb(infinitive));
 				}
 			});*/
-			AFFFileRules.generate(verbs);
+	//		AFFFileRules.generate(verbs);
 
 			console.log(((+new Date() - start) / 1000).toFixed(2) + ' s');
 		});
