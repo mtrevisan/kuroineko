@@ -1251,6 +1251,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fid",			"res",		1,	1,	"a",	"1867",			"",
 "fid",			"s",			1,	1,	"a",	"1854",			"",
 "fier",			"in",			4,	4,	"a",	"1821",			"",
+"fievar",		"",			1,	2,	"a",	"1775",			"",
 "fif",			"",			1,	1,	"a",	"1821",			"Piànđer.",
 "fif",			"re",			1,	1,	"a",	"2008",			"Renvèñer, restabilir.",
 "fifot",			"",			1,	3,	"g",	"2008",			"Piànđer.",
