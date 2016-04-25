@@ -2302,16 +2302,25 @@ SFX p ser ro/JL èser
 SFX p ser romi/K èser
 
 
-SFX B Y 9 # tute le deklinaŧion, ajetivi de prima klase
+SFX B Y 18 # tute le deklinaŧion, ajetivi de prima klase
+SFX B 0 o [^aieo]
+SFX B 0 a [^aieo]
+SFX B 0 i [^aieo]
+SFX B 0 e [^aieo]
+SFX B 0 i [àèé]
 SFX B o a o
 SFX B o e o
 SFX B o i [^ij]o
 SFX B io i io
 SFX B jo i jo
-SFX B 0 o [^aieo]
-SFX B 0 a [^aieo]
-SFX B 0 i [^aieo]
-SFX B 0 e [^aieo]
+SFX B al ài al
+SFX B an ài an
+SFX B el éi el
+SFX B en éi en
+SFX B ol ói ol
+SFX B on ói on
+SFX B ul úi ul
+SFX B un úi un
 
 SFX C Y 5 # ajetivi de sekonda klase
 SFX C a e a
