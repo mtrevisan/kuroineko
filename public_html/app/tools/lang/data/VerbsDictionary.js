@@ -1273,6 +1273,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "filaŧ",			"s",			1,	3,	"g",	"1854",			"",
 "filoxof",		"",			1,	3,	"g",	"",				"",
 "filtr",			"",			1,	1,	"a",	"1854",			"",
+"filŧ",			"",			1,	1,	"a",	"1775",			"Karpir.",
 "fin",			"",			1,	1,	"a",	"1821",			"Afinar",
 "fin",			"a",			1,	1,	"a",	"",				"Afinar",
 "fin",			"kon",		1,	1,	"a",	"1851",			"",
