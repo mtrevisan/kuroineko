@@ -17,7 +17,7 @@
 			}
 		};
 
-		require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatterns/vec', 'tools/lang/phonology/Syllabe', 'tools/lang/phonology/Word', 'tools/lang/data/VerbsDictionary', 'libs/jsonh', 'tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/lang/morphology/Verb'], function(Hyphenator, pattern_vec, Syllabe, Word, verbsDictionary, JSONH, Word, StringHelper, Verb){
+		require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatterns/vec', 'tools/lang/phonology/Syllabe', 'tools/lang/phonology/Word', 'tools/lang/data/VerbsDictionary', 'libs/jsonh', 'tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/lang/morphology/Verb', 'tools/lang/morphology/AFFFileRules'], function(Hyphenator, pattern_vec, Syllabe, Word, verbsDictionary, JSONH, Word, StringHelper, Verb, AFFFileRules){
 			var all = [],
 				idx = 0,
 				k, v, themeVowel, a, b;
@@ -434,6 +434,20 @@
 				if(errorStressType > 0)
 					console.log('error on stress type:\t\t\t' + leftPad((100 * errorStressType / size).toFixed(2), 7) + '% (' + leftPad(errorStressType, padSizeLog10) + '/' + size + ')');
 			}
+
+
+			var showDicForms = function(verbs){
+				if(verbs && verbs.length){
+					console.log('');
+
+					verbs = verbs.map(Word.markDefaultStress)
+						.map(function(v){ return new Verb(v); });
+					AFFFileRules.generateDic(verbs);
+				}
+			};
+
+			var verbs = ['sorapóner'];
+			showDicForms(verbs);
 		});
 
 		var leftPad = function(str, size, character){
