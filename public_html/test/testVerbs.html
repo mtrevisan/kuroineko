@@ -60,10 +60,10 @@
 			}
 
 
-			var getStressThemeT3 = function(infinitive, prefixLength, stressIdx){
+			var getStressThemeT3 = function(infinitive, stressIdx){
 				var verb = new Verb(infinitive);
 
-				var themeT3 = generateRegularThemes(verb, prefixLength, stressIdx);
+				var themeT3 = generateRegularThemes(verb, stressIdx);
 
 				var stressIndex = Word.getIndexOfStress(themeT3),
 					stressType = Word.getStressType(themeT3[stressIndex]);
@@ -76,7 +76,7 @@
 				};
 			};
 
-			var generateRegularThemes = function(verb, prefixLength, stressIdx){
+			var generateRegularThemes = function(verb, stressIdx){
 				//T1
 				var themeT1 = verb.infinitive.replace(/.$/, '');
 
@@ -349,7 +349,7 @@
 
 				var stressIdx = v.prefix.length + v.stressIdx;
 				try{
-					var result = getStressThemeT3(infinitive, v.prefix.length, stressIdx);
+					var result = getStressThemeT3(infinitive, stressIdx);
 				}
 				catch(e){
 					console.log(infinitive + ': ', e);
