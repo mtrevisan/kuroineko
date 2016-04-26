@@ -359,7 +359,7 @@
 					errorPrefix ++;
 
 					console.log('prefix error for ' + infinitive + ': ' + v.prefix + ' != ' + conjugation.prefix);
-				}*/
+				}/**/
 
 				if(result.paradigmInfo.stressIndex < 0){
 					errorStressMissing ++;
@@ -412,17 +412,7 @@
 			var size = verbsDictionary.length;
 			var padSizeLog10 = String(Math.max(errorStressMissing, errorStressPositionExpectedLate, errorStressPositionExpectedEarly, errorStressType)).length;
 			//var padSizeLog10 = String(Math.max(errorPrefix, errorStressMissing, errorStressPositionExpectedLate, errorStressPositionExpectedEarly, errorStressType)).length;
-			if(/*errorPrefix +*/ errorStressMissing + errorStressPositionExpectedLate + errorStressPositionExpectedEarly + errorStressType == 0){
-				console.log('verbal forms: ' + size);
-				console.log('-àr:            ' + leftPad((100 * coniugationType[0] / size).toFixed(1), 4) + '%');
-				console.log('-ér:            ' + leftPad((100 * coniugationType[1] / size).toFixed(1), 4) + '%');
-				console.log('\'-er:           ' + leftPad((100 * coniugationType[2] / size).toFixed(1), 4) + '%');
-				console.log('-ír/-ís-:       ' + leftPad((100 * coniugationType[3] / size).toFixed(1), 4) + '%');
-				console.log('-ír:            ' + leftPad((100 * coniugationType[4] / size).toFixed(1), 4) + '%');
-				console.log('acute stress:   ' + leftPad((100 * stressTypeAcute / size).toFixed(1), 4) + '%');
-				console.log('proparossitone: ' + leftPad((100 * proparossitone / size).toFixed(1), 4) + '%');
-			}
-			else{
+			if(/*errorPrefix +*/ errorStressMissing + errorStressPositionExpectedLate + errorStressPositionExpectedEarly + errorStressType){
 				//if(errorPrefix > 0)
 				//	console.log('error on prefix:\t\t ' + leftPad((100 * errorPrefix / size).toFixed(2), 7) + '% (' + leftPad(errorPrefix, padSizeLog10) + '/' + size + ')');
 				if(errorStressMissing > 0)
@@ -433,6 +423,16 @@
 					console.log('error on stress position early:\t' + leftPad((100 * errorStressPositionExpectedEarly / size).toFixed(2), 7) + '% (' + leftPad(errorStressPositionExpectedEarly, padSizeLog10) + '/' + size + ')');
 				if(errorStressType > 0)
 					console.log('error on stress type:\t\t\t' + leftPad((100 * errorStressType / size).toFixed(2), 7) + '% (' + leftPad(errorStressType, padSizeLog10) + '/' + size + ')');
+			}
+			else{
+				console.log('verbal forms: ' + size);
+				console.log('-àr:            ' + leftPad((100 * coniugationType[0] / size).toFixed(1), 4) + '%');
+				console.log('-ér:            ' + leftPad((100 * coniugationType[1] / size).toFixed(1), 4) + '%');
+				console.log('\'-er:           ' + leftPad((100 * coniugationType[2] / size).toFixed(1), 4) + '%');
+				console.log('-ír/-ís-:       ' + leftPad((100 * coniugationType[3] / size).toFixed(1), 4) + '%');
+				console.log('-ír:            ' + leftPad((100 * coniugationType[4] / size).toFixed(1), 4) + '%');
+				console.log('acute stress:   ' + leftPad((100 * stressTypeAcute / size).toFixed(1), 4) + '%');
+				console.log('proparossitone: ' + leftPad((100 * proparossitone / size).toFixed(1), 4) + '%');
 			}
 
 
