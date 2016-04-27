@@ -1423,6 +1423,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "frànđ",			"in",			3,	2,	"g",	"1821",			"",
 "frànđ",			"s",			3,	2,	"g",	"1590",			"",
 "franŧex",		"",			1,	5,	"a",	"1821",			"",
+"frap",			"in",			4,	4,	"a",	"1775",			"",
 "frapol",		"",			1,	2,	"g",	"1854",			"Xgualŧir.",
 "frapol",		"in",			1,	2,	"g",	"1854",			"Rénder xgualŧio.",
 "frapol",		"in",			4,	6,	"a",	"1821",			"",
