@@ -136,7 +136,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/data/Asse
 
 	/** @private */
 	var isOssitone = (function(){
-		var ossitones = [/^(g?av?|reg?av?|[‘']v)ér$/, /manér$/, /parér$/, /pod?ér$/, /sav?ér$/, /[tv]o[lƚ]ér$/, /va[lƚ]ér$/];
+		var ossitones = [/^(g?av?|reg?av?|‘v)ér$/, /manér$/, /parér$/, /pod?ér$/, /sav?ér$/, /[tv]o[lƚ]ér$/, /va[lƚ]ér$/];
 
 		return function(infinitive){
 			return StringHelper.isMatching(infinitive, ossitones);

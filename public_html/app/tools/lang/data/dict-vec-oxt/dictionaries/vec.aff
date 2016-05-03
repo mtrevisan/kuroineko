@@ -98,9 +98,6 @@ REP o ò
 REP o ó
 REP u ú
 REP ù ú
-# REP ’[eèéaàoòóiínrlƚtskdpvmuúgxfŧbjɉñđc]>’_.
-# REP ‘[eèéaàoòóiínrlƚtskdpvmuúgxfŧbjɉñđc]>’_.
-# REP '[eèéaàoòóiínrlƚtskdpvmuúgxfŧbjɉñđc]>’_.
 
 
 # avoid wrong spelling of letterwords
@@ -169,7 +166,7 @@ SFX A r vo/JL [aei]r
 
 # vèrbi -àr
 # themeT1 + r/AahE
-# themeT8 + o/ahJL
+# themeT8 + o/hJL
 # themeT9 + omi/gK
 SFX a Y 9
 SFX a ar àa/FJLP ar
@@ -1640,9 +1637,11 @@ SFX k lo go/JL tòlo
 
 # vèrbi '-er inregolari ((a|apar|as|de|inkon|intra|kon|man|o|re|sos|tra)[ctv]èñer)
 # themeT1 + r/clE
-SFX l Y 2
+SFX l Y 4
 SFX l ñer n/FJL èñer
 SFX l èñer ièn/FJL èñer
+SFX l éñer en/FJL éñer
+SFX l éñer ien/FJL éñer
 
 # vèrbi '-er inregolari (déver)
 # themeT4 + rò/cmJL
@@ -2527,7 +2526,7 @@ SFX H me ƚa [^a]me
 SFX H me ƚi [^a]me
 SFX H me ƚe [^a]me
 
-SFX I Y 60 # sonoriđaŧion konsonanti finali
+SFX I Y 63 # sonoriđaŧion konsonanti finali
 SFX I bo p bo
 SFX I be p be
 SFX I bi p bi
@@ -2546,6 +2545,9 @@ SFX I gi k gi
 SFX I ko k ko
 SFX I ke k ke
 SFX I ki k ki
+SFX I lo l lo
+SFX I le l le
+SFX I li l li
 SFX I mo n mo
 SFX I me n me
 SFX I mi n mi
@@ -2703,8 +2705,8 @@ SFX T ul úi ul
 SFX T un úi un
 
 SFX U Y 13 # sostantivi plurali femenili
-SFX U 0 e [^oaieln]
-SFX U 0 i [^oaieln]
+SFX U 0 e [^oaie]
+SFX U 0 i [^oaie]
 SFX U a e a
 SFX U e i e
 SFX U al ài al
@@ -2774,8 +2776,9 @@ SFX X Y 2 # avèrbi
 SFX X nte n mente
 SFX X e re mente
 
-SFX Y Y 1 # sostantivi koletivi
-SFX Y dura ura [aeiou]dura
+SFX Y Y 2
+SFX Y dura ura/U [aeiou]dura # sostantivi koletivi
+SFX Y ada àa/U ada
 
 
 # FIXME

@@ -275,7 +275,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 						case 1:
 							if(!Word.isStressed(inf)){
 								console.log(inf + '/AahE	po:verb is:infinitive_simple');
-								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/ahJL	po:verb is:indicative_present_1s st:' + inf);
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/hJL	po:verb is:indicative_present_1s st:' + inf);
 								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'omi') + '/gK	po:verb is:indicative_present_1s is:interrogative_1s st:' + inf);
 							}
 							else{

@@ -393,9 +393,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/data
 	var hasGraveStress = (function(){
 		var infixes = [
 			/^e([flƚ]a|xe|xi|du)/,
-			/aela/,
-			/[lp]ea/,
-			/lexe/,
+			/ae[lƚ]a/,
+			/[lƚp]ea/,
 			/^re([dglƚs]a|xe|go)/,
 			/xrego/,
 			/be([fglƚ]a|re|ko)/,
@@ -406,7 +405,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/data
 			/ie[đgtx]a/,
 			/[jɉ]e[lƚt]a/,
 			/ke(ga|[lƚ]e)/,
-			/le([fv]a|via|gua|[sŧ]i|fo)/,
+			/[lƚ]e([fv]a|via|gua|xe|[sŧ]i|fo)/,
 			/me([lƚr]a|dia|[dr]e|ri)/,
 			/ne([glƚr]a|bia|du|t[ei])/,
 			/pe([cklƚrt]a|te|po|[kt]u)/,
@@ -422,10 +421,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/data
 			/fervo/,
 			/[jɉ]erma/,
 			/ker[msŧ]a/,
-			/[dl]erna/,
+			/[dlƚ]erna/,
 			/mer(da|[sŧ]ia)/,
 			/ner[bv]a/,
-			/per(la|[pt]e|mu)/,
+			/per([lƚ]a|[pt]e|mu)/,
 			/ser([btv]a|vi)/,
 			/ter([gnsŧ]a|(m|pr)e|mi)/,
 			/ŧert?a/,
@@ -434,12 +433,12 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/data
 			/xer(ma|[sŧ]i)/,
 
 			/estra/,
-			/^[flnrst]?esta/,
+			/^[flƚnrst]?esta/,
 			/[un]estra/,
 			/deste/,
 			/vesti/,
 
-			/lieva/,
+			/[lƚ]ieva/,
 			/mie[lƚ]a/,
 			/[pt]iera/,
 			/pleta/,
@@ -468,7 +467,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/data
 			/io([klƚt]a|ŧi)/,
 			/[jɉ]o[kt]a/,
 			/ko([krstŧx]a|pia|[dt]e|[gkmt]o)/,
-			/lo([jɉkmpstŧvx]a|[gx]o)/,
+			/[lƚ]o([jɉkmpstŧvx]a|[gx]o)/,
 			/mo([jɉklƚstŧ]a|nia|xe|ri|[klƚ]o|du)/,
 			/no([jɉklƚstv]a|vra|me|dri)/,
 			/ñoko/,
@@ -518,7 +517,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/data
 			/grosa/,
 			/kro([klƚs]a|ko)/,
 			/pro([nt]a|pia|[dv]e|spe|di|vo)/,
-			/tro([clƚñstŧx]a|le|to)/
+			/tro([clƚñstŧx]a|[lƚ]e|to)/
 		];
 		//note: only /^(re)?xeta/ is a true positive, so /xeta/ is used in 'infixes' and /[aun]xeta/ here
 		var falsePositives = [/^(inca|des|[pr]o|sco)?peta/, /[aun]xeta/, /^[pv]e[lƚ]a/, /^(re)?poxa/];
