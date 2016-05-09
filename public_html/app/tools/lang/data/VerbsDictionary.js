@@ -3355,6 +3355,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "osti",			"",			1,	0,	"g",	"1852",			"Bestemar.",
 "ostin",			"",			1,	3,	"a",	"1560",			"",
 "ostreg",		"",			1,	0,	"g",	"1854",			"Spuar kataro.",
+"oŧiox",			"",			1,	3,	"a",	"1775",			"Star osioxo.",
 "ovat",			"",			1,	2,	"g",	"1852",			"Inbotir on abito.",
 "ovi",			"",			1,	0,	"g",	"1415",			"",
 "ovr",			"man",		1,	0,	"g",	"1867",			"",
