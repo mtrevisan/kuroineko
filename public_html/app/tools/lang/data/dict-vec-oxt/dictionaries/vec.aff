@@ -1381,7 +1381,7 @@ SFX i andar vege/P andar
 
 # vèrbi -ér inregolari ((stra)saver, (re)aver, (re)gaver)
 # themeT1 + r/AjE
-SFX j Y 193
+SFX j Y 194
 SFX j 0 í/P aver
 SFX j 0 íe/FJL aver
 SFX j 0 ímoi/M aver
@@ -1390,6 +1390,7 @@ SFX j 0 imo/EL aver
 SFX j 0 me/G aver
 SFX j 0 mi/K o
 SFX j aver à/FJKLN aver
+SFX j aver àlo/B aver
 SFX j aver àpielo/B aver
 SFX j aver àpieƚo/B aver
 SFX j aver àpiemi/K aver
@@ -2011,7 +2012,7 @@ SFX o o i/FN o
 
 # vèrbi '-er inregolari ((r[ei])èser)
 # themeT1 + er/p
-SFX p Y 284
+SFX p Y 285
 SFX p èser esú èser
 SFX p èser esúo/B èser
 SFX p èser esudo/B èser
@@ -2019,6 +2020,7 @@ SFX p èser stà èser
 SFX p èser stado/B èser
 SFX p èser stao/B èser
 SFX p èser é/P èser
+SFX p èser élo/B èser
 SFX p èser ɉèra/FJLP èser
 SFX p èser ɉèrami/K èser
 SFX p èser ɉèrau/Q èser
@@ -2713,14 +2715,14 @@ SFX U a e a
 SFX U e i e
 
 SFX V Y 8 # piante e mistièri
-SFX V dor or/C [aeiou]dor
-SFX V ol iol/B rol
-SFX V ol ioƚo/B rol
-SFX V ol iòl/B rol
-SFX V ol iòƚo/B rol
-SFX V ol òl/B rol
-SFX V ol òƚo/B rol
 SFX V èr ar/B èr
+SFX V dor or/C [aeiou]dor
+SFX V ol iol/Bt rol
+SFX V ol iòl/Bt rol
+SFX V ol òl/Bt rol
+SFX V oƚo ioƚo/B roƚo
+SFX V oƚo iòƚo/B roƚo
+SFX V oƚo òƚo/B roƚo
 
 SFX W Y 12 # avèrbi
 SFX W 0 mente/IX [^aeiou]
@@ -2729,10 +2731,10 @@ SFX W o amente/IX [^n]to
 SFX W o amente/IX [^e]nto
 SFX W o amente/IX [^lƚu]ento
 SFX W o emente/IX [lƚu]ento
+SFX W e mente/IX [lƚ]e
 SFX W 0 mente/IX [^rlƚn]e
 SFX W e mente/IX [aeiou]re
 SFX W 0 mente/IX [^aeiou]re
-SFX W e mente/IX [lƚ]e
 SFX W e amente/IX one
 SFX W 0 mente/IX [^o]ne
 
@@ -2750,51 +2752,56 @@ SFX Y ada àa/U ada
 # Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug. intel partithipio pasivo ko la dexinentha in -st-, e intel xerundio
 
 #SFX & N 47 # sostantivi alterài
-#SFX & . òto/BI
-#SFX & . ato/BI
-#SFX & . on/B
-#SFX & . eto/BI
-#SFX & . òl/B
-#SFX & . òƚo/B
-#SFX & . èl/B
-#SFX & . èƚo/B
-#SFX & . el/B
-#SFX & . eƚo/B
-#SFX & . in/B
-#SFX & . uŧo/BI
-#SFX & . uso/B
-#SFX & . ŧin/B ?
-#SFX & . eŧin/B [?]
-#SFX & o esin/B o
-#SFX & . sin/B [^o]
-#SFX & . ŧuŧo/B ?
-#SFX & . suso/B ?
-#SFX & . eŧuŧo/B [?]
-#SFX & . esuso/B [?]
-#SFX & . đin/B ?
-#SFX & . eđin/B [?]
-#SFX & . edin/B [?]
-#SFX & . exin/B [?]
-#SFX & . đuŧo/B ?
-#SFX & . eđuŧo/B [?]
-#SFX & . eduso/B [?]
-#SFX & . exuso/B [?]
-#SFX & . lin/B ?
-#SFX & . olin/B [?]
-#SFX & . oƚin/B [?]
-#SFX & . luŧo/B ?
-#SFX & . oluŧo/B [?]
-#SFX & . oluso/B [?]
-#SFX & . oƚuso/B [?]
-#SFX & . rin/B ?
-#SFX & . erin/B [?]
-#SFX & . ruŧo/B ?
-#SFX & . eruŧo/B [?]
-#SFX & . ruso/B ?
-#SFX & . eruso/B [?]
-#SFX & . aŧo/BI
-#SFX & . aso/B
-#SFX & . uko/B
+#SFX & 0 òto/BI [lƚnr]
+#SFX & . òto/BI [aeo]
+#SFX & 0 ato/BI [lƚnr]
+#SFX & . ato/BI [aeo]
+#SFX & . on/B ?
+#SFX & 0 eto/BI [lƚnr]
+#SFX & o eto/BI o
+#SFX & a eta/BI a
+#SFX & 0 to/BI [^aolƚnr]
+#SFX & . òl/B ?
+#SFX & . òƚo/B ?
+#SFX & . èl/B ?
+#SFX & . èƚo/B ?
+#SFX & . el/B ?
+#SFX & . eƚo/B ?
+#SFX & . in/B ?
+#SFX & . uŧo/BI ?
+#SFX & . uso/B ?
+#SFX & . ŧin/B [?]
+#SFX & . eŧin/B ?
+#SFX & . esin/B ?
+#SFX & . sin/B [?]
+#SFX & . ŧuŧo/B [?]
+#SFX & . suso/B [?]
+#SFX & . eŧuŧo/B ?
+#SFX & . esuso/B ?
+#SFX & . đin/B [?]
+#SFX & . eđin/B ?
+#SFX & . edin/B ?
+#SFX & . exin/B ?
+#SFX & . đuŧo/B [?]
+#SFX & . eđuŧo/B ?
+#SFX & . eduso/B ?
+#SFX & . exuso/B ?
+#SFX & . lin/B [?]
+#SFX & . olin/B ?
+#SFX & . oƚin/B ?
+#SFX & . luŧo/B [?]
+#SFX & . oluŧo/B ?
+#SFX & . oluso/B ?
+#SFX & . oƚuso/B ?
+#SFX & . rin/B [?]
+#SFX & . erin/B ?
+#SFX & . ruŧo/B [?]
+#SFX & . eruŧo/B ?
+#SFX & . ruso/B [?]
+#SFX & . eruso/B ?
+#SFX & . aŧo/BI ?
+#SFX & . aso/B ?
+#SFX & . uko/B ?
 
 SFX % N 32 # numerali - koletivi
 SFX % ète etena/U ète
