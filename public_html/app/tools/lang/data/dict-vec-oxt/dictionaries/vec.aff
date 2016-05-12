@@ -56,12 +56,13 @@ MAP oóò
 MAP uúù
 
 # replace input characters
-ICONV 26
+ICONV 27
 ICONV ‒ -
 ICONV – -
 ICONV — -
 ICONV ― -
 ICONV dh đ
+ICONV fh f
 ICONV jh ɉ
 ICONV lh l
 ICONV nh ñ
@@ -2333,7 +2334,7 @@ SFX D e i e
 SFX D 0 e [^aieo]
 SFX D 0 i [^aieo]
 
-SFX E Y 59 # vèrbi prokonplementari
+SFX E Y 177 # vèrbi prokonplementari
 SFX E 0 -ge
 SFX E 0 -gene
 SFX E 0 -gelo
@@ -2393,6 +2394,124 @@ SFX E 0 -veƚo
 SFX E 0 -veƚa
 SFX E 0 -veƚi
 SFX E 0 -veƚe
+SFX E o a-ge o
+SFX E o a-gene o
+SFX E o a-gelo o
+SFX E o a-gela o
+SFX E o a-geli o
+SFX E o a-gele o
+SFX E o a-geƚo o
+SFX E o a-geƚa o
+SFX E o a-geƚi o
+SFX E o a-geƚe o
+SFX E o a-lo o
+SFX E o a-la o
+SFX E o a-li o
+SFX E o a-le o
+SFX E o a-ƚo o
+SFX E o a-ƚa o
+SFX E o a-ƚi o
+SFX E o a-ƚe o
+SFX E o a-me o
+SFX E o a-mene o
+SFX E o a-melo o
+SFX E o a-mela o
+SFX E o a-meli o
+SFX E o a-mele o
+SFX E o a-meƚo o
+SFX E o a-meƚa o
+SFX E o a-meƚi o
+SFX E o a-meƚe o
+SFX E o a-ne o
+SFX E o a-se o
+SFX E o a-sene o
+SFX E o a-selo o
+SFX E o a-sela o
+SFX E o a-seli o
+SFX E o a-sele o
+SFX E o a-seƚo o
+SFX E o a-seƚa o
+SFX E o a-seƚi o
+SFX E o a-seƚe o
+SFX E o a-te o
+SFX E o a-tene o
+SFX E o a-telo o
+SFX E o a-tela o
+SFX E o a-teli o
+SFX E o a-tele o
+SFX E o a-teƚo o
+SFX E o a-teƚa o
+SFX E o a-teƚi o
+SFX E o a-teƚe o
+SFX E o a-ve o
+SFX E o a-vene o
+SFX E o a-velo o
+SFX E o a-vela o
+SFX E o a-veli o
+SFX E o a-vele o
+SFX E o a-veƚo o
+SFX E o a-veƚa o
+SFX E o a-veƚi o
+SFX E o a-veƚe o
+SFX E o e-ge o
+SFX E o e-gene o
+SFX E o e-gelo o
+SFX E o e-gela o
+SFX E o e-geli o
+SFX E o e-gele o
+SFX E o e-geƚo o
+SFX E o e-geƚa o
+SFX E o e-geƚi o
+SFX E o e-geƚe o
+SFX E o e-lo o
+SFX E o e-la o
+SFX E o e-li o
+SFX E o e-le o
+SFX E o e-ƚo o
+SFX E o e-ƚa o
+SFX E o e-ƚi o
+SFX E o e-ƚe o
+SFX E o e-me o
+SFX E o e-mene o
+SFX E o e-melo o
+SFX E o e-mela o
+SFX E o e-meli o
+SFX E o e-mele o
+SFX E o e-meƚo o
+SFX E o e-meƚa o
+SFX E o e-meƚi o
+SFX E o e-meƚe o
+SFX E o e-ne o
+SFX E o e-se o
+SFX E o e-sene o
+SFX E o e-selo o
+SFX E o e-sela o
+SFX E o e-seli o
+SFX E o e-sele o
+SFX E o e-seƚo o
+SFX E o e-seƚa o
+SFX E o e-seƚi o
+SFX E o e-seƚe o
+SFX E o e-te o
+SFX E o e-tene o
+SFX E o e-telo o
+SFX E o e-tela o
+SFX E o e-teli o
+SFX E o e-tele o
+SFX E o e-teƚo o
+SFX E o e-teƚa o
+SFX E o e-teƚi o
+SFX E o e-teƚe o
+SFX E o e-ve o
+SFX E o e-vene o
+SFX E o e-velo o
+SFX E o e-vela o
+SFX E o e-veli o
+SFX E o e-vele o
+SFX E o e-veƚo o
+SFX E o e-veƚa o
+SFX E o e-veƚi o
+SFX E o e-veƚe o
 
 SFX F Y 39 # vèrbi prokonplementari pal komandativo
 SFX F a e-me a
@@ -2597,7 +2716,7 @@ SFX J 0 -i
 SFX J 0 -me
 SFX J 0 -mi
 
-SFX K Y 9 # interogativi
+SFX K Y 184 # interogativi
 SFX K i e mi
 SFX K mi e mi
 SFX K mi i mi
@@ -2607,6 +2726,181 @@ SFX K mi ne [^n]mi
 SFX K mi ni [^n]mi
 SFX K mi nte [^n]mi
 SFX K mi nti [^n]mi
+SFX K i e mi # vèrbi prokonplementari
+SFX K mi ne mi
+SFX K mi se mi
+SFX K mi te mi
+SFX K mi ve mi
+SFX K mi ge mi
+SFX K mi lo mi
+SFX K mi la mi
+SFX K mi li mi
+SFX K mi le mi
+SFX K mi ƚo mi
+SFX K mi ƚa mi
+SFX K mi ƚi mi
+SFX K mi ƚe mi
+SFX K omi ane omi
+SFX K omi ase omi
+SFX K omi ate omi
+SFX K omi ave omi
+SFX K omi age omi
+SFX K omi alo omi
+SFX K omi ala omi
+SFX K omi ali omi
+SFX K omi ale omi
+SFX K omi aƚo omi
+SFX K omi aƚa omi
+SFX K omi aƚi omi
+SFX K omi aƚe omi
+SFX K omi ene omi
+SFX K omi ese omi
+SFX K omi ete omi
+SFX K omi eve omi
+SFX K omi ege omi
+SFX K omi elo omi
+SFX K omi ela omi
+SFX K omi eli omi
+SFX K omi ele omi
+SFX K omi eƚo omi
+SFX K omi eƚa omi
+SFX K omi eƚi omi
+SFX K omi eƚe omi
+SFX K i ene mi
+SFX K i elo mi
+SFX K i ela mi
+SFX K i eli mi
+SFX K i ele mi
+SFX K i eƚo mi
+SFX K i eƚa mi
+SFX K i eƚi mi
+SFX K i eƚe mi
+SFX K mi sene mi
+SFX K mi selo mi
+SFX K mi sela mi
+SFX K mi seli mi
+SFX K mi sele mi
+SFX K mi seƚo mi
+SFX K mi seƚa mi
+SFX K mi seƚi mi
+SFX K mi seƚe mi
+SFX K mi tene mi
+SFX K mi telo mi
+SFX K mi tela mi
+SFX K mi teli mi
+SFX K mi tele mi
+SFX K mi teƚo mi
+SFX K mi teƚa mi
+SFX K mi teƚi mi
+SFX K mi teƚe mi
+SFX K mi vene mi
+SFX K mi velo mi
+SFX K mi vela mi
+SFX K mi veli mi
+SFX K mi vele mi
+SFX K mi veƚo mi
+SFX K mi veƚa mi
+SFX K mi veƚi mi
+SFX K mi veƚe mi
+SFX K mi gene mi
+SFX K mi gelo mi
+SFX K mi gela mi
+SFX K mi geli mi
+SFX K mi gele mi
+SFX K mi geƚo mi
+SFX K mi geƚa mi
+SFX K mi geƚi mi
+SFX K mi geƚe mi
+SFX K omi amene omi
+SFX K omi amelo omi
+SFX K omi amela omi
+SFX K omi ameli omi
+SFX K omi amele omi
+SFX K omi ameƚo omi
+SFX K omi ameƚa omi
+SFX K omi ameƚi omi
+SFX K omi ameƚe omi
+SFX K omi asene omi
+SFX K omi aselo omi
+SFX K omi asela omi
+SFX K omi aseli omi
+SFX K omi asele omi
+SFX K omi aseƚo omi
+SFX K omi aseƚa omi
+SFX K omi aseƚi omi
+SFX K omi aseƚe omi
+SFX K omi atene omi
+SFX K omi atelo omi
+SFX K omi atela omi
+SFX K omi ateli omi
+SFX K omi atele omi
+SFX K omi ateƚo omi
+SFX K omi ateƚa omi
+SFX K omi ateƚi omi
+SFX K omi ateƚe omi
+SFX K omi avene omi
+SFX K omi avelo omi
+SFX K omi avela omi
+SFX K omi aveli omi
+SFX K omi avele omi
+SFX K omi aveƚo omi
+SFX K omi aveƚa omi
+SFX K omi aveƚi omi
+SFX K omi aveƚe omi
+SFX K omi agene omi
+SFX K omi agelo omi
+SFX K omi agela omi
+SFX K omi ageli omi
+SFX K omi agele omi
+SFX K omi ageƚo omi
+SFX K omi ageƚa omi
+SFX K omi ageƚi omi
+SFX K omi ageƚe omi
+SFX K omi emene omi
+SFX K omi emelo omi
+SFX K omi emela omi
+SFX K omi emeli omi
+SFX K omi emele omi
+SFX K omi emeƚo omi
+SFX K omi emeƚa omi
+SFX K omi emeƚi omi
+SFX K omi emeƚe omi
+SFX K omi esene omi
+SFX K omi eselo omi
+SFX K omi esela omi
+SFX K omi eseli omi
+SFX K omi esele omi
+SFX K omi eseƚo omi
+SFX K omi eseƚa omi
+SFX K omi eseƚi omi
+SFX K omi eseƚe omi
+SFX K omi etene omi
+SFX K omi etelo omi
+SFX K omi etela omi
+SFX K omi eteli omi
+SFX K omi etele omi
+SFX K omi eteƚo omi
+SFX K omi eteƚa omi
+SFX K omi eteƚi omi
+SFX K omi eteƚe omi
+SFX K omi evene omi
+SFX K omi evelo omi
+SFX K omi evela omi
+SFX K omi eveli omi
+SFX K omi evele omi
+SFX K omi eveƚo omi
+SFX K omi eveƚa omi
+SFX K omi eveƚi omi
+SFX K omi eveƚe omi
+SFX K omi egene omi
+SFX K omi egelo omi
+SFX K omi egela omi
+SFX K omi egeli omi
+SFX K omi egele omi
+SFX K omi egeƚo omi
+SFX K omi egeƚa omi
+SFX K omi egeƚi omi
+SFX K omi egeƚe omi
 
 SFX L Y 7 # interogativi
 SFX L 0 -e
