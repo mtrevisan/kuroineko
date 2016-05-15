@@ -3,7 +3,7 @@ This file is a summary of the switches used in the vec affix file.
 
 The vec.aff affix file was created from scratch by Mauro Trevisan.
 
-2016/04/19
+2016/05/14
 ---------------------------------------------------------------------
 
 a: (public) first conjugation verbs
@@ -13,10 +13,19 @@ d: (public) third conjugation verbs with the inclusion of the <is> affix
 e: (public) third conjugation verbs without the inclusion of the <is> affix
 f: (public) third conjugation verbs both with and without the inclusion of the <is> affix
 g: interrogatives for common verbs
+h: irregular first conjugation (dar, far, star)
+i: irregular first conjugation (andar)
+j: irregular second conjugation arrhizotonic (saver, (g)aver)
+k: irregular second conjugation arrhizotonic (toler, voler)
+l: irregular second conjugation rhizotonic (cèñer, tèñer, vèñer)
+m: irregular second conjugation rhizotonic (déver)
+n: irregular second conjugation rhizotonic (díxer)
+o: irregular second conjugation rhizotonic (tràer)
+p: irregular second conjugation rhizotonic (èser)
 A: (public) common verbs
 B: (public) all declinations, adjectives of 1st class (0>[oaie]|[^oaie], o>i|[^ij]o, .o>i|[ij]o, o>[ae])
-C: (public) declination, adjectives of 2nd class (0>[aie]|[^oaie], a>[ie])
-D: (public) declination, adjectives of 3rd class (0>[ei]|[^oaie], e>i)
+C: (public) adjectives of 2nd class (0>[aie]|[^oaie], a>[ie])
+D: (public) feminine plural substantives, adjectives of 3rd class (0>[ei]|[^oaie], a>e, e>i)
 E: procomplementar verbs (0>-[lƚ][oaie], 0>-[gmstv]e(ne), 0>-[gmstv]e[lƚ][oaie], 0>-ne)
 F: procomplementar verbs (0>-[gmntv]e|[^a], 0>-[lƚ][oaie]|[^a], a>e-[gmntv]e, a>e-[lƚ][oaie])
 G: procomplementar verbs (me>[lƚ][oaie], me>[gnstv]e, mene>me[lƚ][oaie], mene>[gstv]ene, mene>[gstv]e[lƚ][oaie])
@@ -32,13 +41,12 @@ P: interrogatives (0>-[uo])
 Q: interrogatives (u>o)
 R: interrogatives (.>e-[lƚ][oaie]|[ai], 0>-[lƚ][oaie]|[^ai])
 S: interrogatives (ave>ise-[lƚ][oaie]|rave, ave>íse[lƚ][oaie]|rave)
-T: (public) substantives plural masculine (0>[oi]|[^oaie], o>i|[^ij]o, .o>i|[ij]o, .>i|[ae], 0>i|[àèé])
-t: (public) substantives plural masculine with transformation V[ln] > V'i (.>i|[èò][ln], a.>ài|a[ln], e.>éi|e[ln], o.>ói|o[ln], u.>úi|u[ln])
-U: (public) substantives plural feminine (0>[ei]|[^oaie], a>e, e>i)
+T: (public) masculine plural substantives (0>[oi]|[^oaie], o>i|[^ij]o, .o>i|[ij]o, .>i|[ae], 0>i|[àèé])
+U: (public) plural substantives with transformation V[ln] > V'i (.>i|[èò][ln], a.>ài|a[ln], e.>éi|e[ln], o.>ói|o[ln], u.>úi|u[ln])
 V: (public) plants and crafts (èr>ar(o/a/i/e), ol>io[lƚ](o/a/i/e)|rol, ol>(i)ò[lƚ](o/a/i/e)|rol, dor>or(o/a/i/e)|[aeiou]dor)
 W: (public) adverbs in -mente
 X: adverbs in -men/-mentre
-Y: (public) substantives collectives, etc (Vdura > Vura/U, ada > àa/U)
+Y: (public) substantives collectives, etc (Vdura > Vura/D, ada > àa/D)
 Z: (public) ignore upper/lower case (used, e.g., for latin numerals)
 £: (public) latin numerals
 $: (public) latin numerals from X upwards
