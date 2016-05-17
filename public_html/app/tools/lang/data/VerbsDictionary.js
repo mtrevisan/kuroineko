@@ -4578,7 +4578,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "skrív",			"in",			3,	3,	"a",	"",				"",
 "skrív",			"re",			3,	3,	"a",	"1450",			"",
 "skrív",			"sora",		3,	3,	"a",	"1447",			"",
-"skrivaki",		"",			1,	5,	"g",	"1854",			"",
+"skrivac",		"",			1,	5,	"g",	"1775",			"",
 "skrutin",		"",			1,	5,	"a",	"1867",			"",
 "skuam",			"",			1,	3,	"g",	"1847",			"",
 "skuar",			"",			1,	3,	"g",	"1854",			"Mexurar kon la skuadra.",
