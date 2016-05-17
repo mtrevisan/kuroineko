@@ -140,7 +140,7 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/measure/data/MeasureVeneto'],
 			[/([^iàèéíòóuú])$/i, '$1i']
 		];
 
-		return function(uom){
+		var makePlural = function(uom){
 			//FIXME
 			//uom = PhonologyHelper.finalConsonantVoicing(uom);
 
@@ -153,6 +153,15 @@ define(['HTMLHelper', 'tools/ui/Validator', 'tools/measure/data/MeasureVeneto'],
 					return uom.replace(tuple[0], tuple[1]);
 			}
 			return uom;
+		};
+
+
+		return function(uom){
+			return uom.split(' ')
+				.map(function(u){
+					return (u[0] != '('? makePlural(u): '(' + makePlural(u.replace(/[\(\)]/g, '')) + ')');
+				})
+				.join(' ');
 		};
 	})();
 

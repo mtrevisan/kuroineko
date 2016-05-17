@@ -109,7 +109,7 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 	var reducePlaceLengthEarthIndustrial = (function(){
 		var places = {
 			'Trevixo': /^(Àxol|Céneda|Kastelfranko|Kuèr|Meduna de Livenŧa|Mèstre|Mòta de Livenŧa|Trè Pòrti|Trevixo \((ŧità|kanpaña)\))$/,
-			'Pàdoa': /^(Dòlo|Ŧitadèla)$/,
+			'Pàdoa': /^(Basan|Dòlo|Ŧitadèla)$/,
 			'Venèŧia': /^(Còxa|Piève de Kador)$/
 		};
 		addCommonPlaceLength(places);

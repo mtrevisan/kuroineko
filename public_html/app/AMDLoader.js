@@ -57,6 +57,11 @@ var AMDLoader = (function(doc){
 	};
 
 	/** @private */
+	var isObject = function(value){
+		return (value === Object(value));
+	};
+
+	/** @private */
 	var plugins = {
 		base: function(url){
 			injectScript({
@@ -164,8 +169,10 @@ var AMDLoader = (function(doc){
 	var define = function(id, dependencies, definition){
 		var args = [id, dependencies, definition];
 		args.unshift(typeof id == 'string'? normalizeURL(args.shift()): getCurrentID());
-		if(!Array.isArray(args[1]))
+		if(isFunction(args[1]))
 			args.splice(1, 0, extractDependencies(dependencies));
+		else if(!Array.isArray(args[1]))
+			args.splice(1, 0, []);
 
 		id = addJSExtension(args[0]);
 		dependencies = args[1];
@@ -292,7 +299,7 @@ var AMDLoader = (function(doc){
 
 	/** @private */
 	var addJSExtension = function(value){
-		return (/*!value.match(/\.min$/) &&*/ value.match(/\.[^./]+$/)? value: value + '.js');
+		return (value.match(/\.min$/) || !value.match(/(\.[^./]+|!)$/)? value + '.js': value);
 	};
 
 	/** @private */
@@ -471,7 +478,7 @@ var AMDLoader = (function(doc){
 	/** @private */
 	var loadDependencies = function(){
 		setTimeout(function(){
-			//when all the current file is loaded, load all the (remaining) dependencies
+			//when all of the current file is loaded, load all the (remaining) dependencies
 			loader.forEach(plugins.base);
 			loader.clear();
 		}, 0);
@@ -480,12 +487,12 @@ var AMDLoader = (function(doc){
 
 	/** @private*/
 	(function(){
-		var tarjanFile = '/app/tools/data/structs/Tarjan';
+		/*var tarjanFile = '/app/tools/data/structs/Tarjan';
 		existFile(tarjanFile, function(){
 			require(tarjanFile, function(Tarjan){
 				tree = new Tarjan();
 			});
-		});
+		});*/
 
 		var bootScriptAttr = 'data-load',
 			bootScript = doc.currentScript.getAttribute(bootScriptAttr);

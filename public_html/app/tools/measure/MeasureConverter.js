@@ -67,7 +67,7 @@ define(['tools/data/ObjectHelper', 'tools/math/Fraction', 'tools/data/ArrayHelpe
 			i, m;
 		uom = data[0];
 		for(i = 1; i < size; i ++){
-			m = data[i].match(/^([^ ]+) ([^ ]+)$/);
+			m = data[i].match(/^([^ ]+?) (.+)$/);
 
 			var parentValue = new Fraction(m[1]),
 				parentUOM = m[2];
