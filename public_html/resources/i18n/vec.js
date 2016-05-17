@@ -69,6 +69,7 @@ define({
 		veronexe: 'veronexe',
 		'alto veronexe': 'alto veronexe',
 		'baso veronexe': 'baso veronexe',
+		triestin: 'triestin',
 
 		sentence: 'La fraxe',
 		is: '&eacute;la',

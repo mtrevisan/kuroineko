@@ -46,8 +46,9 @@ define(['tools/data/mining/DecisionTree', 'HTMLHelper', 'tools/ui/Validator', 't
 			[ , , , , , , , ,1, , , , , , , , ,0,0,0,0,1,1, , , , , , , , , , , , , ,0,0, i18nResources.variant.talian],
 			[1,1,0,0, ,0,1, , , , , , ,0,1, , , , , , , , , , , , , , , ,0, , , ,1, ,1,1, i18nResources.variant.veronexe],
 			[ , , , , , , , , , , , , ,0, , , ,0,0,0,0,1,0, , , , , , , ,0, , , , , , , , i18nResources.variant['alto veronexe']],
-			[ , , , , , , , , , , , , ,0, , , ,0,0,0,1,0,0, , , , , , , ,0, , , , , , , , i18nResources.variant['baso veronexe']]
-			//{"timestamp":"2015-12-09T15:10:01.086Z","instance":[null,null,null,0,null,1],"nodeClass":"liventino","newClass":false,"supervisorName":"fortunato","supervisorAge":"59","supervisorPlace":"concordia sagittaria","ip":"193.43.176.11","city":"Trieste","country":"Italy","latitude":45.6433,"longitude":13.7903}
+			[ , , , , , , , , , , , , ,0, , , ,0,0,0,1,0,0, , , , , , , ,0, , , , , , , , i18nResources.variant['baso veronexe']],
+			//{"timestamp":"2016-05-17T10:23:38.228Z","instance":[null,1,1,null,0,null,null,0,null,null,null,null,null,null,1,null,null,null,null,null,null,null,null,null,null,null,null,null,1],"nodeClass":"lagunare","newClass":false,"supervisorName":"Elisa","supervisorAge":"26","supervisorPlace":"Trieste","ip":"151.51.181.186","city":"Malo","country":"Italy","latitude":45.6591,"longitude":11.416}
+			[ ,1,1, ,0, , ,0, , , , , , ,1, , , , , , , , , , , , , ,1, , , , , , , , , , i18nResources.variant.triestin]
 		];
 
 		btnInquireDOM.onclick = doInquire;

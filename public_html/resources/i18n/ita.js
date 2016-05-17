@@ -69,6 +69,7 @@ define({
 		veronexe: 'veronese',
 		'alto veronexe': 'alto veronese',
 		'baso veronexe': 'basso veronese',
+		triestin: 'triestino',
 
 		sentence: 'La frase',
 		is: '&egrave;',
