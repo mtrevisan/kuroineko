@@ -2524,6 +2524,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kuaj",			"s",			1,	2,	"g",	"1852",			"Konóser, skovrir, palexar.",
 "kuaɉ",			"",			1,	2,	"g",	"1775",			"Andar par kuaje.",
 "kuaɉ",			"s",			1,	2,	"g",	"1775",			"Skovrir, palexar.",
+"kuakuar",		"s",			1,	2,	"g",	"1775",			"",
 "kuart",			"in",			1,	2,	"g",	"1854",			"",
 "kuart",			"s",			1,	2,	"g",	"1852",			"Divíder in kuarti.",
 "kuat",			"",			1,	2,	"g",	"1854",			"Akuatar.",
