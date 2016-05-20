@@ -1,7 +1,7 @@
 # Diŧionario de lengua vèneta
 #
 # Venetan hunspell affix file
-# Copyright (C) 2016 Màuro Trevixan
+# Copyright (C) 2016 Mauro Trevisan
 #
 # This file is distributed under GPL license.
 #
@@ -22,7 +22,7 @@
 # see <http://www.gnu.org/licenses/>.
 
 NAME Diŧionario de lengua vèneta
-VERSION 1.2.2 (2016/05/15)
+VERSION 1.2.3 (2016/05/20)
 HOME http://parnodexmentegar.orgfree.com/
 LANG vec
 
@@ -2415,7 +2415,7 @@ SFX p ser ro/JL èser
 SFX p ser romi/K èser
 
 
-SFX B Y 19 # tute le deklinaŧion, ajetivi de prima klase
+SFX B Y 9 # tute le deklinaŧion, ajetivi de prima klase
 SFX B 0 o [^aieo]
 SFX B 0 a [^aieo]
 SFX B 0 i [^aieo]
@@ -2425,16 +2425,6 @@ SFX B o e o
 SFX B o i [^ij]o
 SFX B io i io
 SFX B jo i jo
-SFX B l i [èò]l
-SFX B n i [èò]n
-SFX B al ài al
-SFX B an ài an
-SFX B el éi el
-SFX B en éi en
-SFX B ol ói ol
-SFX B on ói on
-SFX B ul úi ul
-SFX B un úi un
 
 SFX C Y 5 # ajetivi de sekonda klase
 SFX C a e a
@@ -2805,10 +2795,9 @@ SFX S ave íseƚa rave
 SFX S ave íseƚi rave
 SFX S ave íseƚe rave
 
-SFX T Y 8 # sostantivi plurali maskili
+SFX T Y 7 # sostantivi plurali maskili
 SFX T 0 i [^oaie]
 SFX T 0 o [^oaie]
-SFX T 0 i [àèé]
 SFX T o i [^ij]o
 SFX T io i io
 SFX T jo i jo
@@ -2855,9 +2844,11 @@ SFX X Y 2 # avèrbi
 SFX X nte n mente
 SFX X e re mente
 
-SFX Y Y 2 # sostantivi koletivi, ...
+SFX Y Y 4 # sostantivi koletivi, ...
+SFX Y duro uro/T [aeiou]duro
 SFX Y dura ura/D [aeiou]dura
 SFX Y ada àa/D ada
+SFX Y ida ía/D ida
 
 
 # FIXME
