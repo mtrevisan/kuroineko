@@ -4965,6 +4965,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sutil",			"",			4,	5,	"a",	"1854",			"Asotiliar.",
 "sutil",			"in",			4,	5,	"a",	"1852",			"Asotiliar.",
 "suŧ",			"",			1,	1,	"a",	"1867",			"Sucar.",
+"sux",			"",			1,	1,	"a",	"1775",			"",
 
 "tabak",			"",			1,	3,	"g",	"1775",			"Fiutar el tabako, inalar fumi in đenere.",
 "tabar",			"des",		1,	3,	"g",	"1775",			"",
