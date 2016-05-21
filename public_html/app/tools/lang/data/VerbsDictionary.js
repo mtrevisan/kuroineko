@@ -1894,6 +1894,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "intron",		"",			1,	4,	"a",	"1852",			"Stordir, xbalordir.",
 "inŧit",			"",			1,	0,	"a",	"",				"",
 "invenŧion",	"",			1,	7,	"a",	"1867",			"Reinvenir, deskovrir on kontrabando.",
+"invern",		"",			1,	3,	"g",	"1775",			"",
 "invidi",		"",			1,	3,	"a",	"1775",			"",
 "inxavask",		"",			1,	5,	"g",	"1775",			"",
 "inxuri",		"",			1,	3,	"a",	"1414",			"",
