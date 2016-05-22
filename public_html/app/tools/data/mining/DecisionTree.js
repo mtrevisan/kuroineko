@@ -13,6 +13,7 @@ define(['tools/data/mining/DecisionTreeContext', 'tools/data/ObjectHelper'], fun
 	var attachSupervisor = function(fnSupervisorConfirmClass, fnSupervisorAskBranch, fnSupervisorAskNewAttributeAndClass){
 		this.supervisor = {
 			supervisedInstance: [],
+			questionOrder: [],
 
 			confirmClass: fnSupervisorConfirmClass,
 			askBranch: fnSupervisorAskBranch,
@@ -123,6 +124,10 @@ define(['tools/data/mining/DecisionTreeContext', 'tools/data/ObjectHelper'], fun
 		return (this.supervisor? this.supervisor.supervisedInstance: undefined);
 	};
 
+	var getQuestionOrder = function(){
+		return (this.supervisor? this.supervisor.questionOrder: undefined);
+	};
+
 	/** @private */
 	var confirmClass = function(scope, node){
 		scope.supervisor.confirmClass(node['class']).then(function(correct){
@@ -149,9 +154,11 @@ define(['tools/data/mining/DecisionTreeContext', 'tools/data/ObjectHelper'], fun
 				var hasData = loadNextSubContext(node, context, stack, info, [condition]);
 
 				if(scope.supervisor){
-					if(hasData)
+					if(hasData){
 						//store path followed so far
 						scope.supervisor.supervisedInstance[info.attributeIndex] = Number(info.cutPoint);
+						scope.supervisor.questionOrder.push(info.attributeIndex);
+					}
 					//no branches to follow
 					else
 						//ask supervisor for this newly discovered class
@@ -235,7 +242,8 @@ define(['tools/data/mining/DecisionTreeContext', 'tools/data/ObjectHelper'], fun
 
 		//updateTree: updateTree,
 		getRoot: function(){ return this.root; },
-		getSupervisedInstance: getSupervisedInstance
+		getSupervisedInstance: getSupervisedInstance,
+		getQuestionOrder: getQuestionOrder
 	};
 
 	return Constructor;

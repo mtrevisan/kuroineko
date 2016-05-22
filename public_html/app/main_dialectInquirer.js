@@ -74,6 +74,7 @@ define(['tools/data/mining/DecisionTree', 'HTMLHelper', 'tools/ui/Validator', 't
 			var payload = {
 				timestamp: (new Date()).toISOString(),
 				instance: dt.getSupervisedInstance(),
+				questionOrder: dt.getQuestionOrder(),
 				nodeClass: nodeClass,
 				newClass: newClass,
 				supervisorName: name,

@@ -5573,7 +5573,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vard",			"",			1,	1,	"g",	"1548",			"(longobardo)",
 "vard",			"re",			1,	1,	"g",	"1775",			"",
 "varent",		"",			1,	3,	"a",	"1867",			"",
-"vareŧ",			"",			1,	3,	"a",	"1775",			"Skomenŧiar madurar/xvilupar, se dixe de l' ua ke la capa el kolor nero, e vai se dixerà i asíni kó se inerise.",
+"varex",			"",			1,	3,	"a",	"1775",			"Skomenŧiar madurar/xvilupar, se dixe de l' ua ke la capa el kolor nero, e vai se dixerà i asíni kó se inerise.",
 "vark",			"",			1,	1,	"g",	"",				"",
 "vari",			"",			1,	1,	"g",	"1980",			"",
 "vari",			"in",			1,	1,	"g",	"1980",			"",
