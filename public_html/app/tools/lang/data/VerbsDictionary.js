@@ -2898,6 +2898,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "masel",			"dex",		1,	3,	"g",	"1775",			"Xmaselar.",
 "masel",			"x",			1,	3,	"g",	"",				"",
 "maser",			"x",			1,	1,	"g",	"1852",			"Far da masaja.",
+"maskab",		"",			1,	1,	"g",	"1775",			"",
 "maskar",		"",			1,	1,	"g",	"1847",			"",
 "maskar",		"dex",		1,	1,	"g",	"1867",			"",
 "maskar",		"in",			1,	1,	"g",	"1867",			"",
@@ -5511,6 +5512,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧukar",			"in",			1,	1,	"a",	"1590",			"",
 "ŧup",			"in",			1,	1,	"a",	"1867",			"",
 "ŧupeg",			"",			1,	1,	"a",	"1590",			"Sorbir, cucar.",
+"ŧux",			"",			1,	1,	"a",	"1775",			"Sucar.",
 
 "ud",				"",			1,	0,	"a",	"1775",			"Versar.",
 "uj",				"",			1,	0,	"a",	"1855",			"Xvodar.",
@@ -5900,6 +5902,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "xir",			"ra",			1,	1,	"a",	"1854",			"",
 "xirandol",		"",			1,	3,	"g",	"1854",			"",
 "xiron",			"",			1,	3,	"a",	"1867",			"",
+"xit",			"",			4,	3,	"a",	"1775",			"",
 "xɉànx",			"",			3,	2,	"g",	"1867",			"Aspèrxer.",
 "xɉavent",		"",			1,	4,	"a",	"1560",			"Xetar.",
 "xlain",			"",			1,	3,	"a",	"1590",			"Kontar na storia, xguainar.",

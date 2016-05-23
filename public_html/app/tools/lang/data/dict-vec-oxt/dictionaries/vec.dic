@@ -13614,6 +13614,9 @@ xmàseromi/gK	po:verb is:indicative_present_1s is:interrogative_1s st:xmaserar
 xmasarar/AahE	po:verb is:infinitive_simple
 xmasaro/hEJL	po:verb is:indicative_present_1s st:xmasarar
 xmasàromi/gK	po:verb is:indicative_present_1s is:interrogative_1s st:xmasarar
+maskabar/AahE	po:verb is:infinitive_simple
+màskabo/hEJL	po:verb is:indicative_present_1s st:maskabar
+màskabomi/gK	po:verb is:indicative_present_1s is:interrogative_1s st:maskabar
 maskarar/AahE	po:verb is:infinitive_simple
 màskaro/hEJL	po:verb is:indicative_present_1s st:maskarar
 màskaromi/gK	po:verb is:indicative_present_1s is:interrogative_1s st:maskarar
@@ -25494,6 +25497,12 @@ súpegomi/gK	po:verb is:indicative_present_1s is:interrogative_1s st:supegar
 ŧupegar/AahE	po:verb is:infinitive_simple
 ŧúpego/hEJL	po:verb is:indicative_present_1s st:ŧupegar
 ŧúpegomi/gK	po:verb is:indicative_present_1s is:interrogative_1s st:ŧupegar
+suxar/AahE	po:verb is:infinitive_simple
+suxo/hEJL	po:verb is:indicative_present_1s st:suxar
+súxomi/gK	po:verb is:indicative_present_1s is:interrogative_1s st:suxar
+ŧuxar/AahE	po:verb is:infinitive_simple
+ŧuxo/hEJL	po:verb is:indicative_present_1s st:ŧuxar
+ŧúxomi/gK	po:verb is:indicative_present_1s is:interrogative_1s st:ŧuxar
 udar/AahE	po:verb is:infinitive_simple
 udo/hEJL	po:verb is:indicative_present_1s st:udar
 údomi/gK	po:verb is:indicative_present_1s is:interrogative_1s st:udar
@@ -27440,6 +27449,7 @@ xiràndoƚomi/gK	po:verb is:indicative_present_1s is:interrogative_1s st:xirando
 xironar/AahE	po:verb is:infinitive_simple
 xirono/hEJL	po:verb is:indicative_present_1s st:xironar
 xirónomi/gK	po:verb is:indicative_present_1s is:interrogative_1s st:xironar
+xitir/AdE	po:verb is:infinitive_simple
 xjànxer/cE	po:verb is:infinitive_simple
 xjanxerò/cJL	po:verb is:indicative_future_1s st:xjànxer
 xjanxo/cEJKL	po:verb is:indicative_present_1s st:xjànxer
@@ -29244,7 +29254,7 @@ bàtola/D	po:noun
 bàtoƚa/D	po:noun
 bekamòrto/TI	po:adjective po:noun
 bekanòto/TI	po:noun
-bekèr/TV	po:noun
+bekèr/BV	po:noun
 bekon/DU	po:noun
 beko/T	po:noun
 belesa/D	po:noun
@@ -29676,7 +29686,7 @@ doxo	po:adverb
 dóven/B	po:adjective po:noun al:dóvei
 dóvei	po:adjective po:noun is:plural st:dóven
 dóvin/B	po:adjective po:noun
-dògo/TI	po:noun al:đòo
+dògo/TI	po:noun
 dòna/D	po:noun
 dòo/T	po:noun st:dògo is:singular
 dòso	po:adverb
@@ -29728,8 +29738,8 @@ durèƚo/T	po:noun
 đóven/B	po:adjective po:noun al:đóvei
 đóvei	po:adjective po:noun is:plural st:đóven
 đóvin/B	po:adjective po:noun
-đògo/TI	po:noun al:đòo
-đogo/TI	po:noun al:đoo
+đògo/TI	po:noun
+đogo/TI	po:noun
 đòna/D	po:noun
 đòo/T	po:noun is:singular st:đògo
 đoo/T	po:noun is:singular st:đogo
@@ -30527,7 +30537,7 @@ kanon/DU	po:noun
 kanpanèl/BU	po:noun
 kanpanil/D	po:noun
 kanpaniƚe/D	po:noun
-kanpanon/DU	po:noun
+kanpanon/DU	po:adjective po:noun
 kanpaña/D	po:noun
 kanpejo/T	po:noun
 kanpeɉo/T	po:noun
@@ -33032,6 +33042,7 @@ somejanŧa/D	po:noun
 someɉansa/D	po:noun
 someɉante/D	po:adjective
 someɉanŧa/D	po:noun
+ŧon/T	po:noun
 son/T	po:noun al:soi
 soi	po:noun is:plural st:son
 sonador/CV	po:noun
@@ -33294,7 +33305,7 @@ sufiso/T	po:noun
 sugaman/TU	po:noun
 suketo/BI	po:noun
 sukèra/D	po:noun
-sukon/CU	po:noun
+sukon/DU	po:noun
 suko/B	po:noun
 sunto/T	po:noun
 super	po:adjective po:noun
@@ -33581,8 +33592,7 @@ turuƚú	po:adjective
 ŧòkoi	po:noun is:plural st:ŧòkol
 ŧòto/BI	po:adjective
 ŧuketo/BI	po:noun
-ŧukèra/D	po:noun
-ŧukon/CU	po:noun
+ŧukon/DU	po:noun
 ŧuko/BI	po:noun
 ŧurlo/B	po:adjective
 ŧúkaro/T	po:noun
@@ -33888,7 +33898,8 @@ xñapa/D	po:noun
 xñariko/TI	po:noun
 xñeko/BI	po:adjective
 xo	po:adverb
-xogador/CV	po:noun
+xogador/CV	po:noun al:xugador
+xugador/CV	po:noun st:xogador
 xokondo/B	po:adjective
 xonsion/DU	po:noun
 xonta/D	po:noun
@@ -33905,7 +33916,8 @@ xoxo	po:adverb
 xóven/B	po:adjective po:noun al:xóvei
 xóvei	po:adjective po:noun is:plural st:xóven
 xóvin/C	po:adjective po:noun
-xògo/TI	po:noun al:đòo
+xògo/TI	po:noun al:xugo
+xugo/T	po:noun st:xògo
 xòna/D	po:noun
 xòo/T	po:noun st:xògo is:singular
 xudisio/T	po:noun
@@ -34796,8 +34808,8 @@ burana/D	po:noun
 buratador/CV	po:noun
 buratèl/TU	po:noun
 buratèƚo/T	po:noun
-buratin/T	po:noun
-burato/T	po:noun
+buratin/B	po:noun
+burato/B	po:noun
 buregòso/T	po:noun
 buregòŧo/T	po:noun
 burelòto/TI	po:noun
@@ -41574,7 +41586,189 @@ xardineto/T	po:noun
 xardinièr/BV	po:noun
 ŧarlatanon/DU	po:noun
 sarlatanon/D	po:noun
-9
+xejo/B	po:noun
+xeɉo/B	po:noun
+xejeto/B	po:noun
+xeɉeto/B	po:noun
+paonaŧo/BI	po:adjective po:noun
+paonaso/BI	po:adjective po:noun
+xeladína/D	po:noun
+xeƚadína/D	po:noun
+xemèl/TU	po:noun
+xemèƚo/T	po:noun
+đenocèl/TU	po:noun
+denocèl/TU	po:noun
+xenocèl/TU	po:noun
+xenocèƚo/T	po:noun
+đentaja/D	po:non
+dentaja/D	po:non
+xentaja/D	po:non
+xentaɉa/D	po:non
+ŧarabaldan/B	po:noun
+sarabaldan/B	po:noun
+ŧangarin/T	po:noun
+sangarin/T	po:noun
+xanada/DY	po:noun
+xenso/B	po:noun
+xana/D	po:noun
+ŧàina/D	po:noun
+sàina/D	po:noun
+xentilòmeni	po:noun is:plural st:xentilòmo
+xentiƚòmeni	po:noun is:plural st:xentilòmo
+xentilòmo/TI	po:noun al:xentilòmeni
+xentiƚòmo/T	po:noun al:xentilòmeni
+xentilometo/TI	po:noun
+xentiƚometo/T	po:noun
+sensalièra/D	po:noun
+sensaƚièra/D	po:noun
+xènxero/T	po:noun
+xèrla/D	po:noun
+xerman/BU	po:noun
+xermujo/T	po:noun
+xèso/T	po:noun
+ŧibaldon/DU	po:noun
+sibaldon/D	po:noun
+xigante/T	po:noun
+xiña/D	po:noun
+xiliato/T	po:noun
+xiƚiato/T	po:noun
+ximèla/D	po:noun
+ximèƚa/D	po:noun
+xipon/D	po:noun
+xirada/DY	po:noun
+xiramento/TI	po:noun
+xiràndola/D	po:noun
+xiràndoƚa/D	po:noun
+xirasol/DU	po:noun
+xirasoƚe/D	po:noun
+xiravòlta/D	po:noun
+xirèlo/B	po:noun
+xirèƚo/B	po:noun
+xireto/T	po:noun
+xixolèr/BV	po:noun
+xixoƚèr/BV	po:noun
+ŧoko/B	po:noun
+soko/B	po:noun
+ŧókara/D	po:noun
+sókara/D	po:noun
+ŧokèro/T	po:noun
+sokèro/T	po:noun
+ankúxene/T	po:noun
+ŧokolada/DY	po:noun
+sokolada/DY	po:noun
+sokoƚada/DY	po:noun
+ŧokolante/T	po:adjective
+sokolante/T	po:adjective
+sokoƚante/T	po:adjective
+ŧokolèr/BV	po:noun
+sokolèr/BV	po:noun
+sokoƚèr/BV	po:noun
+xodío/B	po:adjective po:noun
+ŧoetin/T	po:noun
+soetin/T	po:noun
+xojelièr/BV	po:noun
+xojeƚièr/BV	po:noun
+xoɉelièr/BV	po:noun
+xoɉeƚièr/BV	po:noun
+xojèl/TU	po:noun
+xojèƚo/T	po:noun
+xoɉèl/TU	po:noun
+xoɉèƚo/T	po:noun
+xojeta/D	po:noun
+xoɉeta/D	po:noun
+xògolo/T	po:noun
+xògoƚo/T	po:noun
+xoncada/DY	po:noun
+ŧonfo/B	po:adjective
+sonfo/B	po:adjective
+ŧopeta/D	po:noun
+sopeta/D	po:noun
+đornalièr/B	po:adjective po:noun
+dornalièr/B	po:adjective po:noun
+xornalièr/B	po:adjective po:noun
+xornaƚièr/B	po:adjective po:noun
+ŧotin/B	po:noun
+sotin/B	po:noun
+ŧoton/B	po:noun
+soton/B	po:noun
+đovenòto/BI	po:noun
+dovenòto/BI	po:noun
+xovenòto/BI	po:noun
+đovenon/CU	po:noun
+dovenon/CU	po:noun
+xovenon/CU	po:noun
+đoventú	po:noun
+doventú	po:noun
+xoventú	po:noun
+pelada/DY	po:noun
+peƚada/DY	po:noun
+ŧukada/DY	po:noun
+sukada/DY	po:noun
+ŧukèr/BV	po:noun
+sukèr/BV	po:noun
+ŧukarièra/D	po:noun
+sukarièra/D	po:noun
+kàndido/B	po:adjective
+ŧukòl/TU	po:noun
+sukòl/TU	po:noun
+sukòƚo/T	po:noun
+ŧukolon/DU	po:noun
+sukolon/DU	po:noun
+sukoƚon/D	po:noun
+ŧukonada/DY	po:noun
+sukonada/DY	po:noun
+xufo/T	po:noun
+xufolòto/TI	po:noun
+xufoƚòto/T	po:noun
+busolòto/TI	po:noun
+busoƚòto/T	po:noun
+disparo/T	po:noun
+manàtola/D	po:noun
+manàtoƚa/D	po:noun
+piastrèla/D	po:noun
+piastrèƚa/D	po:noun
+toko/T	po:noun
+đogàtol/T	po:noun al:đogàtoi
+đogàtoi	po:noun is:plural st:đogàtol
+dogàtol/T	po:noun al:dogàtoi
+dogàtoi	po:noun is:plural st:dogàtol
+xogàtol/T	po:noun al:xogàtoi
+xogàtoi	po:noun is:plural st:xogàtol
+xogàtoƚo/T	po:noun
+đugàtol/T	po:noun al:đugàtoi
+đugàtoi	po:noun is:plural st:đugàtol
+dugàtol/T	po:noun al:dugàtoi
+dugàtoi	po:noun is:plural st:dugàtol
+xugàtol/T	po:noun al:xugàtoi
+xugàtoi	po:noun is:plural st:xugàtol
+xugàtoƚo/T	po:noun
+đogaŧo/TI	po:noun
+dogaŧo/TI	po:noun
+xogaso/T	po:noun
+đugaŧo/TI	po:noun
+dugaŧo/TI	po:noun
+xugaso/T	po:noun
+xugèlo/T	po:noun
+xugèƚo/T	po:noun
+đogeto/TI	po:noun
+dogeto/TI	po:noun
+xogeto/TI	po:noun
+đugeto/TI	po:noun
+dugeto/TI	po:noun
+xugeto/TI	po:noun
+ŧulaja/D	po:noun
+ŧulaɉa/D	po:noun
+sulaja/D	po:noun
+suƚaja/D	po:noun
+sulaɉa/D	po:noun
+suƚaɉa/D	po:noun
+xulo/T	po:noun
+xuƚo/T	po:noun
+đuramento/TI	po:noun
+duramento/TI	po:noun
+xuramento/TI	po:noun
+ŧurma/D	po:noun
+surma/D	po:noun
 
 
 
@@ -41590,9 +41784,9 @@ sarlatanon/D	po:noun
 
 
 
-*zafà	po:noun - giumella
-*zaina/D	po:noun - piattellone, concola, catinella, catinaccio
-*zana/D	po:noun - frangia
-*zanada/DY	po:noun - baccelleria, gaglioffaggine
-*zangarin/T	po:noun - luccetto
-*zarabaldan/B	po:noun - ghiabaldano
+
+
+
+
+
+
