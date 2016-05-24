@@ -102,7 +102,7 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme', 'tools/lang/
 	};
 
 
-	var sorterFn = (function(){
+	var sorterFn = function(){
 		var alphabet = 'aàbcdđeéèfghiíjɉklƚmnñoóòprsʃtŧuúvxʒ';
 
 		/** @private */
@@ -124,7 +124,7 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme', 'tools/lang/
 			}
 			return tmp;
 		};
-	})();
+	};
 
 
 	return {
