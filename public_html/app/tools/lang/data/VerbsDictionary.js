@@ -2093,6 +2093,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kapar",			"",			1,	3,	"g",	"1867",			"",
 "kapar",			"in",			1,	3,	"g",	"1775",			"",
 "kapeɉ",			"",			1,	3,	"a",	"1867",			"Méter a kapa, ŧoè sarar tute le vele, fora ke la maestra, e fermar el bastimento.",
+"kapel",			"",			1,	3,	"g",	"1796",			"",
 "kapel",			"des",		1,	3,	"g",	"1854",			"",
 "kapel",			"in",			1,	3,	"g",	"1560",			"Méter el kapel, inkoronar, xbaliar.",
 "kapit",			"",			1,	1,	"g",	"1851",			"Vèñer.",
