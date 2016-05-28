@@ -22,7 +22,7 @@
 # see <http://www.gnu.org/licenses/>.
 
 NAME Diŧionario de lengua vèneta
-VERSION 1.3.0 (2016/05/22)
+VERSION 1.3.1 (2016/05/28)
 HOME http://parnodexmentegar.orgfree.com/
 LANG vec
 
@@ -176,12 +176,10 @@ SFX A r vo/JL [aei]r
 
 # vèrbi -àr
 # themeT1 + r/AahE
-SFX a Y 14
+SFX a Y 12
 SFX a ar àa/FJLP ar
 SFX a ar àe/JL ar
 SFX a ar ài/NP ar
-SFX a ar àndome/G ar
-SFX a ar àndomene/G ar
 SFX a ar ào/JL ar
 SFX a ar àsitu/O ar
 SFX a ar éa/FJLP ar
@@ -1272,6 +1270,8 @@ SFX g omi imi/K omi
 SFX g omi itu/O omi
 SFX g omi u/Q omi
 
+# vèrbi -àr
+# themeT1 + r/AahE
 # vèrbi -àr inregolari ((dex)dar, (kon|kontra|[lƚ]ikue|putre|rare|re|sora|stra|stupe|tore|tume)far, (mal|move|soto)star)
 # themeT1 + r/AhE
 # themeT8 + o/hEJL
@@ -1481,7 +1481,7 @@ SFX i o i v[aà]o
 
 # vèrbi -ér inregolari ((stra)saver, (re)aver, (re)gaver)
 # themeT1 + r/AjE
-SFX j Y 287
+SFX j Y 288
 SFX j 0 í/P aver
 SFX j 0 íe/FJL aver
 SFX j 0 ímoi/M aver
@@ -2685,7 +2685,7 @@ SFX F 0 -ƚa [^a]
 SFX F 0 -ƚi [^a]
 SFX F 0 -ƚe [^a]
 
-SFX G Y 57 # vèrbi prokonplementari
+SFX G Y 59 # vèrbi prokonplementari
 SFX G me ne me
 SFX G me se me
 SFX G me te me
@@ -2961,8 +2961,9 @@ SFX U on ói on
 SFX U ul úi ul
 SFX U un úi un
 
-SFX V Y 8 # piante e mistièri
+SFX V Y 9 # piante e mistièri
 SFX V èr ar/B èr
+SFX V ièr er/B ièr
 SFX V dor or/C [aeiou]dor
 SFX V ol iol/BU rol
 SFX V ol iòl/BU rol
@@ -2989,11 +2990,12 @@ SFX X Y 2 # avèrbi
 SFX X nte n mente
 SFX X e re mente
 
-SFX Y Y 4 # sostantivi koletivi, ...
+SFX Y Y 5 # sostantivi koletivi, ...
 SFX Y duro uro/T [aeiou]duro
 SFX Y dura ura/D [aeiou]dura
 SFX Y ada àa/D ada
 SFX Y ida ía/D ida
+SFX Y uda úa/D uda
 
 
 # FIXME
@@ -3053,7 +3055,7 @@ SFX Y ida ía/D ida
 #SFX & . aso/B ?
 #SFX & . uko/B ?
 
-SFX % N 32 # numerali - koletivi
+SFX % N 35 # numerali - koletivi
 SFX % ète etena/D ète
 SFX % ète etèna/D ète
 SFX % òto otena/D òto
@@ -3083,9 +3085,12 @@ SFX % i èna/D nti
 SFX % a ena/D nta
 SFX % a èna/D nta
 SFX % o enèr/BV nto
-SFX % e èr/BV mi[lƚ]e
-SFX % 0 èr/BV ion
-SFX % o èr/BV iardo
+SFX % e èr/B mi[lƚ]e
+SFX % e ar/B mi[lƚ]e
+SFX % 0 èr/B ion
+SFX % 0 ar/B ion
+SFX % o èr/B iardo
+SFX % o ar/B iardo
 
 
 SFX £ N 10 # numeraŧion latina
