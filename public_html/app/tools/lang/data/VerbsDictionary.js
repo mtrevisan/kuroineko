@@ -1597,6 +1597,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "garbel",		"x",			1,	4,	"g",	"1852",			"Titar le palpebre ko i dei.",
 "garbiđ",		"",			1,	4,	"a",	"1775",			"Garbar.",
 "garbin",		"",			1,	4,	"a",	"1775",			"Libecar.",
+"garbuj",		"",			1,	4,	"a",	"1796",			"",
 "garbuj",		"in",			1,	4,	"a",	"1535",			"",
 "garbuj",		"x",			1,	4,	"a",	"1535",			"Barar.",
 "garbuɉ",		"in",			1,	4,	"a",	"1775",			"",
