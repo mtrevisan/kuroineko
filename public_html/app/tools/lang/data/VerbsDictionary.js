@@ -3255,6 +3255,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "no",				"",			1,	1,	"g",	"1311",			"",
 "no",				"dex",		1,	1,	"g",	"1980",			"",
 "nobil",			"",			4,	5,	"a",	"1854",			"Nobilitar.",
+"nobilit",		"",			1,	3,	"a",	"1796",			"",
 "nobel",			"i",			4,	5,	"a",	"1867",			"Nobilitar.",
 "nod",			"",			1,	1,	"g",	"1775",			"Noar.",
 "nodrig",		"",			1,	1,	"g",	"1560",			"",
