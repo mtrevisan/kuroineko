@@ -3472,6 +3472,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pantađ",		"s",			1,	4,	"g",	"1775",			"El desfarse ke fà na roba molexina kuando ke la kaska, rovinar, sprofondar.",
 "panteđ",		"",			1,	1,	"g",	"1810",			"Ansemar, respirar ko afàno.",
 "panteg",		"s",			1,	1,	"g",	"1980",			"Kaskar, sbàter kontro kalkòsa.",
+"pantin",		"",			1,	4,	"a",	"1796",			"",
 "panŧ",			"",			1,	1,	"g",	"1854",			"",
 "panŧ",			"s",			1,	1,	"g",	"1854",			"",
 "paoniđ",		"",			1,	4,	"a",	"1775",			"",
