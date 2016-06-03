@@ -464,7 +464,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/data
 			/fo([fgjɉlƚñrst]a|i|go)/,
 			/go([bmñrtx]a|sia|de|mi)/,
 			/io([klƚt]a|ŧi)/,
-			/[jɉ]o[kt]a/,
+			/[jɉ]o[klƚt]a/,
 			/ko([kñrstŧx]a|[mnp]ia|[dt]e|[gkmt]o)/,
 			/[lƚ]o([dfgjɉkmñpstŧvx]a|[gx]o)/,
 			/mo([gjɉklƚstŧ]a|nia|xe|ri|[klƚ]o|du)/,
