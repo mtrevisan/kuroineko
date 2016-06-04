@@ -505,6 +505,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/data
 			/sco[kp]a/,
 
 			/siope/,
+			/xioga/,
 
 			/bloka/,
 			/flosa/,
