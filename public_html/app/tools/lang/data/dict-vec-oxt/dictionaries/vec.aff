@@ -22,7 +22,7 @@
 # see <http://www.gnu.org/licenses/>.
 
 NAME Diŧionario de lengua vèneta
-VERSION 1.3.2 (2016/05/29)
+VERSION 1.3.2 (2016/06/04)
 HOME http://parnodexmentegar.orgfree.com/
 LANG vec
 
@@ -3002,16 +3002,17 @@ SFX Y uda úa/D uda
 # Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug. par tuti i mòdi e i tenpi fora ke inté ‘l infenío, partithipio ativo, e xerundio
 # Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug. intel partithipio pasivo ko la dexinentha in -st-, e intel xerundio
 
-#SFX & N 47 # sostantivi alterài
+SFX & N 2 # sostantivi alterài
+SFX & 0 eto/BI [lnr]
+SFX & o eto/BI o
+#SFX & 0 eta/D [lnr]
+#SFX & a eta/D a
 #SFX & 0 òto/BI [lƚnr]
 #SFX & . òto/BI [aeo]
 #SFX & 0 ato/BI [lƚnr]
 #SFX & . ato/BI [aeo]
-#SFX & o on/D o
+#SFX & . on/D [eo]
 #SFX & a ona/D a
-#SFX & 0 eto/BI [lƚnr]
-#SFX & o eto/BI o
-#SFX & a eta/BI a
 #SFX & 0 to/BI [^aolƚnr]
 #SFX & . òl/B ?
 #SFX & . òƚo/B ?
