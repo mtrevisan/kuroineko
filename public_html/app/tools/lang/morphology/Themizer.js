@@ -516,7 +516,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Syllabe', 'tools/data
 			/grosa/,
 			/kro([klƚs]a|i|k?o)/,
 			/pro([nt]a|pia|[dv]e|spe|di|vo)/,
-			/tro([clƚñstŧx]a|[lƚ]e|to)/
+			/tro([cdđlƚñstŧx]a|[lƚ]e|to)/
 		];
 		//note: only /^(re)?xeta/ is a true positive, so /xeta/ is used in 'infixes' and /[aun]xeta/ here
 		var falsePositives = [/^(inca|des|[pr]o|sco)?peta/, /[aun]xeta/, /^[pv]e[lƚ]a/, /^(re)?poxa/];
