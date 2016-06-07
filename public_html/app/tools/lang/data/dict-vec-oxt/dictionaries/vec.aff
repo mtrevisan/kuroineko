@@ -29,14 +29,14 @@ LANG vec
 SET UTF-8
 
 
-TRY eaoinrtlƚsdkpvmuèxgfàòbíhéŧójɉñcúSđLȽIPETKKAMDNFBRJGCOUĐXÀÈŦɈÒÑÍÉÓÚ-'‘’
+TRY eaoinrtlƚsdkpvmuèxgfàòbíhéŧójɉñcúSđLȽIPETKKAMDNFBRJGCOUĐXÀÈŦɈÒÑÍÉÓÚ-'
 
 KEY esdr|redft|trfg|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà-|àòèù-|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìè'
 
-#wORDCHARS '‘’
+#ORDCHARS '‘’
 
 # workaround to match words that begins or ends with an apostrophe like 'lora or indo'
-IGNORE '
+#GNORE '
 
 
 # avoid wrong spelling of letterwords
@@ -104,7 +104,6 @@ REP o ó
 REP u ú
 REP ù ú
 REP ' _
-
 
 FLAG UTF-8
 
@@ -3168,9 +3167,91 @@ PFX $ 0 MMX [LC]
 PFX $ 0 MML X
 
 
+#OMPOUNDMIN 2
+#
+#OMPOUNDBEGIN 0
+#OMPOUNDMIDDLE 0
+#OMPOUNDEND 1
+#OMPOUNDRULE 1
+#OMPOUNDRULE 01
+#
+#NLYINCOMPOUND 2
+#
+#PFX - Y 1
+#PFX - 0 -/1
+#
+#qq/02
+#ww/-2
+
+#      1000-100-13
+#1000000000-100-13-
+#   1000000-100-13-
+#      1000-100-13
+
+#      1000-100-20-
+#1000000000-100-20-
+#   1000000-100-20-
+#      1000-100-20-
+#                  1/../9
+#sfx
+#8 meliardi 012345
+#7 meliardo 012345
+#6 melioni 01234
+#5 melion 01234
+#4 mile 012368
+#3 doxento 012468
+#3 sento 012468
+#2 vinti 01468
+#2 trédexe 468
+#1 do 468
+#0 un 57
+
+PFX 8 Y 1
+PFX 8 0 -/012345
+PFX 7 Y 1
+PFX 7 0 -/012345
+PFX 6 Y 1
+PFX 6 0 -/01234
+PFX 5 Y 1
+PFX 5 0 -/01234
+PFX 4 Y 1
+PFX 4 0 -/012368
+PFX 3 Y 1
+PFX 3 0 -/012468
+PFX 2 Y 1
+PFX 2 0 -/468
+PFX 1 Y 1
+PFX 1 0 -/468
+PFX 0 Y 1
+PFX 0 0 -/57 un
+
+
+PFX ‘ Y 6
+PFX ‘ a ' a
+PFX ‘ i ' i
+PFX ‘ in ' in
+PFX ‘ g ' g
+PFX ‘ v ' v
+PFX ‘ kò ' kò
+
+SFX ’ Y 10
+SFX ’ a ' [^r]a
+SFX ’ ra ' ra
+SFX ’ e ' e
+SFX ’ o ' [^x]o
+SFX ’ xo ' xo
+SFX ’ u ' u
+SFX ’ r ' r
+SFX ’ ove ó' dove
+SFX ’ inté t' inté
+SFX ’ é ' inté
+
+#ORBIDDENWORD ‘
+#EEDAFFIX ‘
+
 
 #PFX d Y 1
-#PFX d 0 stra .
+#PFX d 0 stra
 
 #PFX e Y 1
-#PFX e 0 pre .
+#PFX e 0 pre
