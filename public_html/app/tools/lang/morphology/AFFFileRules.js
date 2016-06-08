@@ -276,7 +276,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 							if(!Word.isStressed(inf)){
 								console.log(inf + '/AahE	po:verb is:infinitive_simple');
 								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/hEJ	po:verb is:indicative_present_1s st:' + inf);
-								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'omi') + '/gK	po:verb is:indicative_present_1s is:interrogative_1s st:' + inf);
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'oe') + '/gKT	po:verb is:indicative_present_1s is:interrogative_1s st:' + inf);
 							}
 							else{
 								console.log(inf + '/cE	po:verb is:infinitive_simple');
@@ -295,7 +295,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 								console.log(inf + '/cE	po:verb is:infinitive_simple');
 								console.log(unmarkDefaultStress((theme.regular.themeT4? theme.regular.themeT4: theme.irregular.themeT4) + 'rò') + '/cJ	po:verb is:indicative_future_1s st:' + inf);
 								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/cEJ	po:verb is:indicative_present_1s st:' + inf);
-								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'omi') + '/gK	po:verb is:indicative_present_1s is:interrogative_1s st:' + inf);
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'oe') + '/gKT	po:verb is:indicative_present_1s is:interrogative_1s st:' + inf);
 							}
 							break;
 
@@ -307,12 +307,12 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 							}
 							else if(verb.special3rd){
 								console.log(inf + '/AdE	po:verb is:infinitive_simple');
-//								console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT8) + 'omi') + '/gK	po:verb is:indicative_present_1s is:interrogative_1s st:' + inf);
+//								console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT8) + 'oe') + '/gKT	po:verb is:indicative_present_1s is:interrogative_1s st:' + inf);
 							}
 							else{
 								console.log(inf + '/AeE	po:verb is:infinitive_simple');
 								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/eEJ	po:verb is:indicative_present_1s st:' + inf);
-								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'omi') + '/gK	po:verb is:indicative_present_1s is:interrogative_1s st:' + inf);
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'oe') + '/gKT	po:verb is:indicative_present_1s is:interrogative_1s st:' + inf);
 							}
 					}
 
