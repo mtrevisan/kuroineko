@@ -3183,20 +3183,10 @@ PFX $ 0 MML X
 #qq/02
 #ww/-2
 
-#      1000-100-13
-#1000000000-100-13-
-#   1000000-100-13-
-#      1000-100-13
-
-#      1000-100-20-
-#1000000000-100-20-
-#   1000000-100-20-
-#      1000-100-20-
-#                  1/../9
 #sfx
-#8 meliardi 012345
+#8 meliardi 012345 cannot start a number
 #7 meliardo 012345
-#6 melioni 01234
+#6 melioni 01234 cannot start a number
 #5 melion 01234
 #4 mile 012368
 #3 doxento 012468
@@ -3205,34 +3195,33 @@ PFX $ 0 MML X
 #2 trédexe 468
 #1 do 468
 #0 un 57
-
-PFX 8 Y 1
-PFX 8 0 -/012345
-PFX 7 Y 1
-PFX 7 0 -/012345
-PFX 6 Y 1
-PFX 6 0 -/01234
-PFX 5 Y 1
-PFX 5 0 -/01234
-PFX 4 Y 1
-PFX 4 0 -/012368
-PFX 3 Y 1
-PFX 3 0 -/012468
-PFX 2 Y 1
-PFX 2 0 -/468
-PFX 1 Y 1
-PFX 1 0 -/468
-PFX 0 Y 1
-PFX 0 0 -/57 un
+#SFX 8 Y 1
+#SFX 8 0 -/012345
+#SFX 7 Y 1
+#SFX 7 0 -/012345
+#SFX 6 Y 1
+#SFX 6 0 -/01234
+#SFX 5 Y 1
+#SFX 5 0 -/01234
+#SFX 4 Y 1
+#SFX 4 0 -/012368
+#SFX 3 Y 1
+#SFX 3 0 -/012468
+#SFX 2 Y 1
+#SFX 2 0 -/468
+#SFX 1 Y 1
+#SFX 1 0 -/468
+#SFX 0 Y 1
+#SFX 0 0 -/57 un
 
 
 PFX ‘ Y 6
 PFX ‘ a ' a
 PFX ‘ i ' i
-PFX ‘ in ' in
 PFX ‘ g ' g
 PFX ‘ v ' v
 PFX ‘ kò ' kò
+PFX ‘ in ' in
 
 SFX ’ Y 10
 SFX ’ a ' [^r]a
