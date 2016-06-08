@@ -29,14 +29,9 @@ LANG vec
 SET UTF-8
 
 
-TRY eaoinrtlƚsdkpvmuèxgfàòbíhéŧójɉñcúSđLȽIPETKKAMDNFBRJGCOUĐXÀÈŦɈÒÑÍÉÓÚ-'
+TRY ʼeaoinrtlƚsdkpvmuèxgfàòbíhéŧójɉñcúSđLȽIPETKKAMDNFBRJGCOUĐXÀÈŦɈÒÑÍÉÓÚ-
 
-KEY esdr|redft|trfg|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà-|àòèù-|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìè'
-
-#ORDCHARS '‘’
-
-# workaround to match words that begins or ends with an apostrophe like 'lora or indo'
-IGNORE '
+KEY esdr|redft|trfg|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà-|àòèù-|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìèʼ
 
 
 # avoid wrong spelling of letterwords (km, GHz, DVD, ...)
@@ -57,11 +52,7 @@ MAP oóò
 MAP uúù
 
 # replace input characters
-ICONV 33
-ICONV ‒ -
-ICONV – -
-ICONV — -
-ICONV ― -
+ICONV 29
 ICONV dh đ
 ICONV Dh Đ
 ICONV fh f
@@ -103,7 +94,7 @@ REP o ò
 REP o ó
 REP u ú
 REP ù ú
-REP ' _
+REP ʼ ʼ_
 
 FLAG UTF-8
 
@@ -3202,21 +3193,21 @@ PFX $ 0 MML X
 
 
 PFX ‘ Y 6
-PFX ‘ a ' a
-PFX ‘ i ' i
-PFX ‘ in ' in
-PFX ‘ g ' g
-PFX ‘ v ' v
-PFX ‘ kò ' kò
+PFX ‘ a ʼ a
+PFX ‘ i ʼ i
+PFX ‘ in ʼ in
+PFX ‘ g ʼ g
+PFX ‘ v ʼ v
+PFX ‘ kò ʼ kò
 
-SFX ’ Y 10
-SFX ’ a ' [^r]a
-SFX ’ ra ' ra
-SFX ’ e ' e
-SFX ’ o ' [^x]o
-SFX ’ xo ' xo
-SFX ’ u ' u
-SFX ’ r ' r
-SFX ’ ove ó' dove
-SFX ’ inté t' inté
-SFX ’ é ' inté
+SFX ʼ Y 10
+SFX ʼ a ʼ [^r]a
+SFX ʼ ra ʼ ra
+SFX ʼ e ʼ e
+SFX ʼ o ʼ [^x]o
+SFX ʼ xo ʼ xo
+SFX ʼ u ʼ u
+SFX ʼ r ʼ r
+SFX ʼ ove óʼ dove
+SFX ʼ inté tʼ inté
+SFX ʼ é ʼ inté
