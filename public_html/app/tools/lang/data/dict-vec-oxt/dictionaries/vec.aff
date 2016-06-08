@@ -96,7 +96,9 @@ REP u ú
 REP ù ú
 REP ʼ ʼ_
 
+
 FLAG UTF-8
+
 
 # vèrbi -àr, -ér, -<is>ír, -ír, -<is>ír/-ír
 # themeT1 + r/AahE, themeT1 + r/AbE, themeT1 + r/AdE, themeT1 + r/AeE, themeT1 + r/AfE
@@ -3192,6 +3194,7 @@ PFX $ 0 MMX [LC]
 PFX $ 0 MML X
 
 
+# word truncated at the begin
 PFX ‘ Y 6
 PFX ‘ a ʼ a
 PFX ‘ i ʼ i
@@ -3200,14 +3203,15 @@ PFX ‘ g ʼ g
 PFX ‘ v ʼ v
 PFX ‘ kò ʼ kò
 
-SFX ʼ Y 10
-SFX ʼ a ʼ [^r]a
-SFX ʼ ra ʼ ra
-SFX ʼ e ʼ e
-SFX ʼ o ʼ [^x]o
-SFX ʼ xo ʼ xo
-SFX ʼ u ʼ u
-SFX ʼ r ʼ r
-SFX ʼ ove óʼ dove
-SFX ʼ inté tʼ inté
-SFX ʼ é ʼ inté
+# word truncated at the end
+SFX ’ Y 10
+SFX ’ a ʼ [^r]a
+SFX ’ ra ʼ ra
+SFX ’ e ʼ e
+SFX ’ o ʼ [^x]o
+SFX ’ xo ʼ xo
+SFX ’ u ʼ u
+SFX ’ r ʼ r
+SFX ’ ove óʼ dove
+SFX ’ inté tʼ inté
+SFX ’ é ʼ inté
