@@ -8,7 +8,7 @@
 # This file is part of the "diŧionario de lengua vèneta".
 #
 # The "diŧionario de lengua vèneta" is free software; you can redistribute
-# it and/or modify it under the terms of the GLU General Nublic License as
+# it and/or modify it under the terms of the GNU General Public License as
 # published by the Free Software Foundation; either version 3 of the
 # License, or (at your option) any later version.
 #
@@ -22,7 +22,7 @@
 # see <http://www.gnu.org/licenses/>.
 
 NAME Diŧionario de lengua vèneta
-VERSION 1.3.3 (2016/06/05)
+VERSION 1.3.3 (2016/06/10)
 HOME http://parnodexmentegar.orgfree.com/
 LANG vec
 
@@ -31,7 +31,7 @@ SET UTF-8
 
 TRY ʼeaoinrtlƚsdkpvmuèxgfàòbíhéŧójɉñcúSđLȽIPETKKAMDNFBRJGCOUĐXÀÈŦɈÒÑÍÉÓÚ-
 
-KEY esdr|redft|trfg|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà-|àòèù-|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìèʼ
+KEY esdr|redft|trfg|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà-|àòèù-|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìè
 
 
 # avoid wrong spelling of letterwords (km, GHz, DVD, ...)
@@ -1285,8 +1285,10 @@ SFX g oe u/O oe
 # vèrbi -àr inregolari ((dex)dar, (kon|kontra|[lƚ]ikue|putre|rare|re|sora|stra|stupe|tore|tume)far, (mal|move|soto)star)
 # themeT1 + r/AhE
 # themeT8 + o/hEJ
-SFX h Y 165
-SFX h ar à/F ar
+SFX h Y 167
+SFX h ar à/E ar
+SFX h ar àme/G ar
+SFX h ar àmene/G ar
 SFX h ar àami/K ar
 SFX h ar àau/O ar
 SFX h ar àelo/B ar
@@ -1448,24 +1450,26 @@ SFX h o i/EFL o
 SFX h o ime/H o
 SFX h o itu/M o
 SFX h o omi/K o
-SFX h r do/B ar
+SFX h r do/BI ar
 SFX h r nte/I ar
 SFX h r se/IT ar
 
 # vèrbi -àr inregolari ((re)andar)
 # themeT1 + r/AahiE
-SFX i Y 33
+SFX i Y 35
 SFX i ào aga vào
 SFX i ào agi/FL vào
 SFX i ào ago/J vào
-SFX i andar và/F andar
+SFX i andar và/E andar
+SFX i andar vàme/G andar
+SFX i andar vàmene/G andar
 SFX i andar vè/FN andar
 SFX i andar vè/J andar
 SFX i andar vème/H andar
 SFX i andar vètu/M andar
 SFX i andar vèu/O andar
 SFX i andar vé/FN andar
-SFX i andar vé/N andar
+SFX i andar vé/N andarx
 SFX i andar vatu/M andar
 SFX i andar vede/N andar
 SFX i andar vege/N andar
@@ -1491,7 +1495,7 @@ SFX i o i v[aà]o
 
 # vèrbi -ér inregolari ((stra)saver, (re)aver, (re)gaver)
 # themeT1 + r/AjE
-SFX j Y 289
+SFX j Y 291
 SFX j 0 í/N aver
 SFX j 0 íe/FJ aver
 SFX j 0 ímoe/K aver
@@ -1500,7 +1504,9 @@ SFX j 0 imo/EJ aver
 SFX j 0 me/G aver
 SFX j 0 mi/K o
 SFX j aver àƚo/B aver
-SFX j aver à/FJL aver
+SFX j aver à/EJL aver
+SFX j aver àme/G aver
+SFX j aver àmene/G aver
 SFX j aver àlo/B aver
 SFX j aver àpieƚo/B aver
 SFX j aver àpielo/B aver
@@ -1785,7 +1791,7 @@ SFX j ver tu/M aver
 # vèrbi -ér inregolari ((re)toler, (mal|re)voler)
 # themeT1 + r/AbikE
 # themeT8 + o/bikJ
-SFX k Y 60
+SFX k Y 59
 SFX k er éndome/G er
 SFX k er éndomene/G er
 SFX k ler rà/FJL oler
@@ -1839,13 +1845,12 @@ SFX k ler risonse oler
 SFX k ler ron/EJ oler
 SFX k ler rone/K oler
 SFX k ler ronme/G oler
-SFX k lo gò/J tòlo
-SFX k lo gòmi/K tòlo
 SFX k lo ga tòlo
 SFX k lo gi/FL tòlo
 SFX k lo gime/H tòlo
 SFX k lo gitu/M tòlo
 SFX k lo go/J tòlo
+SFX k lo gomi/K tòlo
 
 # vèrbi '-er inregolari ((a|apar|as|de|inkon|intra|kon|man|o|re|sos|tra)[ctv]èñer)
 # themeT1 + r/clE
@@ -1868,8 +1873,9 @@ SFX l er éndome/G er
 SFX l er éndomene/G er
 
 # vèrbi '-er inregolari (déver)
-# themeT4 + rò/cmJ
-SFX m Y 247
+# themeT1 + r/mE
+# themeT4 + rò/mJ
+SFX m Y 172
 SFX m ò à/FJL ò
 SFX m ò àe/F ò
 SFX m ò è/J ò
@@ -1886,14 +1892,14 @@ SFX m ò í/N ò
 SFX m ò ía/FJL ò
 SFX m ò íami/K ò
 SFX m ò íatu/M ò
+SFX m ò íeƚo/B ò
 SFX m ò íe/FJ ò
 SFX m ò íelo/B ò
-SFX m ò íeƚo/B ò
 SFX m ò íemi/K ò
 SFX m ò ímoe/K ò
 SFX m ò íu/O ò
-SFX m ò alo/B ò
 SFX m ò aƚo/B ò
+SFX m ò alo/B ò
 SFX m ò ami/K ò
 SFX m ò atu/M ò
 SFX m ò ave/FQ ò
@@ -1926,91 +1932,14 @@ SFX m ò onme/G ò
 SFX m 0 e [ea]r
 SFX m 0 me/G [ea]r
 SFX m 0 mene/G [ea]r
-SFX m 0 mi/K [ea]rò
-SFX m arò é/FN arò
-SFX m arò éa/FJN arò
-SFX m arò éami/K arò
-SFX m arò éau/O arò
-SFX m arò ée/J arò
-SFX m arò éelo/B arò
-SFX m arò éeƚo/B arò
-SFX m arò éemi/K arò
-SFX m arò éi/JLN arò
-SFX m arò éimo/J arò
-SFX m arò éimoe/K arò
-SFX m arò éitu/M arò
-SFX m arò émoe/K arò
-SFX m arò émome/G arò
-SFX m arò émomene/G arò
-SFX m arò éndome/G arò
-SFX m arò éndomene/G arò
-SFX m arò éo/J arò
-SFX m arò éomi/K arò
-SFX m arò ésimo arò
-SFX m arò éu/O arò
-SFX m arò évami/K arò
-SFX m arò évau/O arò
-SFX m arò évelo/B arò
-SFX m arò éveƚo/B arò
-SFX m arò évemi/K arò
-SFX m arò évimo/J arò
-SFX m arò évimoe/K arò
-SFX m arò évitu/M arò
-SFX m arò évomi/K arò
-SFX m arò í/FN arò
-SFX m arò ímoe/K arò
-SFX m arò íu/O arò
-SFX m arò ú arò
-SFX m arò úo/B arò
-SFX m arò a/E arò
-SFX m arò e/EFIJ arò
-SFX m arò ié/N arò
-SFX m arò iéu/O arò
-SFX m arò i/FL arò
-SFX m arò iede/N arò
-SFX m arò iege/N arò
-SFX m arò ime/H arò
-SFX m arò imo/EJ arò
-SFX m arò ion/EJ arò
-SFX m arò ione/K arò
-SFX m arò ionme/G arò
-SFX m arò isen/J arò
-SFX m arò isene/K arò
-SFX m arò isense arò
-SFX m arò isié/N arò
-SFX m arò isiede/N arò
-SFX m arò isiege/N arò
-SFX m arò ision/J arò
-SFX m arò isione/K arò
-SFX m arò isionse arò
-SFX m arò ison/J arò
-SFX m arò isone/K arò
-SFX m arò isonse arò
-SFX m arò iven/J arò
-SFX m arò ivene/K arò
-SFX m arò ivense arò
-SFX m arò ivié/N arò
-SFX m arò iviéu/O arò
-SFX m arò ivion/J arò
-SFX m arò ivione/K arò
-SFX m arò ivionse arò
-SFX m arò ivon/J arò
-SFX m arò ivone/K arò
-SFX m arò ivonse arò
-SFX m arò on/EJ arò
-SFX m arò one/K arò
-SFX m arò onme/G arò
-SFX m arò udo/B arò
-SFX m ar ime/H ar
-SFX m ar itu/M ar
-SFX m ar omi/K ar
+SFX m 0 mi/K rò
 SFX m erò é/FN erò
 SFX m erò éa/FJN erò
 SFX m erò éami/K erò
 SFX m erò éau/O erò
+SFX m erò éeƚo/B erò
 SFX m erò ée/J erò
 SFX m erò éelo/B erò
-SFX m erò éeƚo/B erò
 SFX m erò éemi/K erò
 SFX m erò éi/JLN erò
 SFX m erò éimo/J erò
@@ -2027,8 +1956,8 @@ SFX m erò ésimo erò
 SFX m erò éu/O erò
 SFX m erò évami/K erò
 SFX m erò évau/O erò
-SFX m erò évelo/B erò
 SFX m erò éveƚo/B erò
+SFX m erò évelo/B erò
 SFX m erò évemi/K erò
 SFX m erò évimo/J erò
 SFX m erò évimoe/K erò
@@ -2078,16 +2007,16 @@ SFX m erò on/EJ erò
 SFX m erò one/K erò
 SFX m erò onme/G erò
 SFX m erò udo/B erò
-SFX m er ime/H er
+SFX m er ime/GH er
+SFX m er imene/G er
 SFX m er itu/M er
 SFX m er omi/K er
+SFX m o e/K vo
+SFX m o i/E o
 SFX m rò de rò
-SFX m rò ge rò
-SFX m rò me/H rò
 SFX m rò mo/EJ rò
 SFX m rò n/J rò
 SFX m rò ndo/E rò
-SFX m rò e/K rò
 SFX m rò nse rò
 SFX m rò nte/I rò
 SFX m rò se/IT rò
@@ -2096,27 +2025,29 @@ SFX m rò va/FJN rò
 SFX m rò ve/J rò
 SFX m rò vi/JLN rò
 SFX m rò vo/J rò
-SFX m r lo/B er
 SFX m r ƚo/B er
+SFX m r ge er
+SFX m r lo/B er
+SFX m r me/H er
 SFX m r mi/K [ea]r
-SFX m verò biè/J verò
-SFX m verò bièmi/K verò
-SFX m verò bié/N verò
-SFX m verò biémoe/K verò
-SFX m verò biéu/O verò
-SFX m verò bi/JLN verò
-SFX m verò bia/FJN verò
-SFX m verò bie/J verò
-SFX m verò biede/N verò
-SFX m verò biege/N verò
-SFX m verò biemo/EJ verò
-SFX m verò bien/J verò
-SFX m verò biene/K verò
-SFX m verò bime/H verò
-SFX m verò bion/EJ verò
-SFX m verò bione/K verò
-SFX m verò bionme/G verò
-SFX m verò bitu/M verò
+SFX m vo biè/J vo
+SFX m vo bièmi/K vo
+SFX m vo bié/N vo
+SFX m vo biémoe/K vo
+SFX m vo biéu/O vo
+SFX m vo bi/JLN vo
+SFX m vo bia/FJN vo
+SFX m vo bie/J vo
+SFX m vo biede/N vo
+SFX m vo biege/N vo
+SFX m vo biemo/EJ vo
+SFX m vo bien/J vo
+SFX m vo biene/K vo
+SFX m vo bime/H vo
+SFX m vo bion/EJ vo
+SFX m vo bione/K vo
+SFX m vo bionme/G vo
+SFX m vo bitu/M vo
 
 # vèrbi '-er inregolari ((bene|d[ei]x|ind|inter|kontra|ma[lƚ]e|pre|re)díxer)
 # themeT1 + er/cnE
@@ -2184,9 +2115,7 @@ SFX n xerò ronme/G xerò
 # themeT1 + er/coE
 # themeT4 + rò/coJ
 # themeT8 + o/oJ
-SFX o Y 74
-SFX o er gomi/K tràer
-SFX o er gemi/K tràer
+SFX o Y 76
 SFX o aerò à/E aerò
 SFX o aerò è/FN aerò
 SFX o aerò ème/H aerò
@@ -2203,8 +2132,8 @@ SFX o erò gi/FL erò
 SFX o erò go/J erò
 SFX o erò rà/FJL erò
 SFX o erò ràe/F erò
-SFX o erò ràvelo/B erò
 SFX o erò ràveƚo/B erò
+SFX o erò ràvelo/B erò
 SFX o erò ràvemi/K erò
 SFX o erò rè/J erò
 SFX o erò rèmi/K erò
@@ -2217,9 +2146,9 @@ SFX o erò rí/N erò
 SFX o erò ría/FJL erò
 SFX o erò ríami/K erò
 SFX o erò ríatu/M erò
+SFX o erò ríeƚo/B erò
 SFX o erò ríe/FJ erò
 SFX o erò ríelo/B erò
-SFX o erò ríeƚo/B erò
 SFX o erò ríemi/K erò
 SFX o erò rísitu/M erò
 SFX o erò ríu/O erò
@@ -2256,13 +2185,17 @@ SFX o erò rmene/G erò
 SFX o erò ron/EJ erò
 SFX o erò rone/K erò
 SFX o erò ronme/G erò
+SFX o er gemi/K tràer
+SFX o er gomi/K tràer
+SFX o er ime/G er
+SFX o er imene/G er
 SFX o o a/E o
 SFX o o e/EFIJ o
-SFX o o i/FL o
+SFX o o i/EFL o
 
 # vèrbi '-er inregolari ((r[ei])èser)
 # themeT1 + er/p
-SFX p Y 304
+SFX p Y 306
 SFX p èser é/N èser
 SFX p èser élo/B èser
 SFX p èser éƚo/B èser
@@ -2386,7 +2319,9 @@ SFX p èser jèromi/K èser
 SFX p èser sé/FNP èser
 SFX p èser sémoe/K èser
 SFX p èser séu/O èser
-SFX p èser sí/FLN èser
+SFX p èser sí/EFLN èser
+SFX p èser síme/G èser
+SFX p èser símene/G èser
 SFX p èser símoe/K èser
 SFX p èser síu/O èser
 SFX p èser sarà/FJL èser
@@ -2522,7 +2457,7 @@ SFX p èser son/J èser
 SFX p èser sone/K èser
 SFX p èser sonmi/K èser
 SFX p èser stà èser
-SFX p èser stado/B èser
+SFX p èser stado/BI èser
 SFX p èser stao/B èser
 SFX p èser stasto/BI èser
 SFX p èser stato/BI èser
@@ -3029,13 +2964,13 @@ SFX & 0 eto/BI [lnr]
 SFX & o eto/BI o
 SFX & a eta/D a
 SFX & 0 ta/D e
-#SFX & 0 òto/BI [lƚnr]
+#SFX & 0 òto/BI [lnr]
 #SFX & . òto/BI [aeo]
-#SFX & 0 ato/BI [lƚnr]
+#SFX & 0 ato/BI [lnr]
 #SFX & . ato/BI [aeo]
 #SFX & . on/D [eo]
 #SFX & a ona/D a
-#SFX & 0 to/BI [^aolƚnr]
+#SFX & 0 to/BI [^aolnr]
 #SFX & . òl/B ?
 #SFX & . òƚo/B ?
 #SFX & . èl/B ?
@@ -3079,34 +3014,50 @@ SFX & 0 ta/D e
 #SFX & . uko/B ?
 
 # numerali - koletivi
-SFX % N 35
-SFX % ète etena/D& ète
+SFX % N 51
+SFX % ète etena/D ète
+SFX % ète eteneta/D ète
 SFX % ète etèna/D ète
-SFX % òto otena/D& òto
+SFX % òto otena/D òto
+SFX % òto oteneta/D òto
 SFX % òto otèna/D òto
-SFX % e ena/D& ove
+SFX % e ena/D ove
+SFX % e eneta/D ove
 SFX % e èna/D ove
-SFX % èxe exena/D& ièxe
+SFX % èxe exena/D ièxe
+SFX % èxe exeneta/D ièxe
 SFX % èxe exèna/D ièxe
-SFX % èxe eŧena/D& ièxe
-SFX % èxe esena/D& ièxe
-SFX % ièxe exena/D& ièxe
+SFX % èxe eŧena/D ièxe
+SFX % èxe eŧeneta/D ièxe
+SFX % èxe esena/D ièxe
+SFX % èxe eseneta/D ièxe
+SFX % ièxe exena/D ièxe
+SFX % ièxe exeneta/D ièxe
 SFX % ièxe exèna/D ièxe
-SFX % ièxe eŧena/D& ièxe
-SFX % ièxe esena/D& ièxe
-SFX % úndexe undexena/D& úndexe
+SFX % ièxe eŧena/D ièxe
+SFX % ièxe eŧeneta/D ièxe
+SFX % ièxe esena/D ièxe
+SFX % ièxe eseneta/D ièxe
+SFX % úndexe undexena/D úndexe
+SFX % úndexe undexeneta/D úndexe
 SFX % úndexe undexèna/D úndexe
-SFX % ódexe odexena/D& ódexe
+SFX % ódexe odexena/D ódexe
+SFX % ódexe odexeneta/D ódexe
 SFX % ódexe odexèna/D ódexe
-SFX % édexe edexena/D& édexe
+SFX % édexe edexena/D édexe
+SFX % édexe edexeneta/D édexe
 SFX % édexe edexèna/D édexe
-SFX % òrdexe ordexena/D& òrdexe
+SFX % òrdexe ordexena/D òrdexe
+SFX % òrdexe ordexeneta/D òrdexe
 SFX % òrdexe ordexèna/D òrdexe
-SFX % índexe indexena/D& índexe
+SFX % índexe indexena/D índexe
+SFX % índexe indexeneta/D índexe
 SFX % índexe indexèna/D índexe
-SFX % i ena/D& nti
+SFX % i ena/D nti
+SFX % i eneta/D nti
 SFX % i èna/D nti
-SFX % a ena/D& nta
+SFX % a ena/D nta
+SFX % a eneta/D nta
 SFX % a èna/D nta
 SFX % o enèr/BV nto
 SFX % e èr/B mi[lƚ]e
