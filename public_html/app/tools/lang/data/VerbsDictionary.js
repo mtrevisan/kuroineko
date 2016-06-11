@@ -812,7 +812,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "dan",			"in",			1,	1,	"g",	"1980",			"(bixiak)",
 "daneđ",			"",			1,	3,	"a",	"1487",			"",
 "dat",			"",			1,	1,	"g",	"1980",			"(bixiak)",
-"dat",			"pos",		1,	1,	"g",	"1980",			"",
+"dat",			"pox",		1,	1,	"g",	"1980",			"",
 "daŧi",			"",			1,	1,	"g",	"1867",			"Méter on daŧio.",
 "davañ",			"",			1,	3,	"g",	"1867",			"Guadañar.",
 "debit",			"in",			1,	1,	"g",	"1775",			"",
