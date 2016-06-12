@@ -4288,6 +4288,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 
 "sa",				"",			2,	1,	"g",	"1560",			"Saver.",
 "sa",				"stra",		2,	1,	"g",	"1980",			"",
+"sabal",			"",			1,	1,	"g",	"1821",			"Dar de sàbala.",
 "sabat",			"mal",		1,	3,	"g",	"1775",			"Indispóner.",
 "sabi",			"in",			1,	1,	"g",	"",				"Méter soto sabia, skónder.",
 "sabion",		"",			1,	4,	"a",	"1854",			"",
