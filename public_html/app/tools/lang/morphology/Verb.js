@@ -146,7 +146,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/data/Asse
 	/** @private */
 	var isSpecial3rd = (function(){
 		var special3rds = [
-			/dormír$/,
+			/d(or|ro)mír$/,
 			/en?sír$/, /entír$/, /eñír$/,
 			/guír$/,
 			/morír$/,
