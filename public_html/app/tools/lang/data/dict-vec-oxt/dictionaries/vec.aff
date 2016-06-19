@@ -22,7 +22,7 @@
 # see <http://www.gnu.org/licenses/>.
 
 NAME Diŧionario de lengua vèneta
-VERSION 1.3.4 (2016/06/13)
+VERSION 1.3.4 (2016/06/19)
 HOME http://parnodexmentegar.orgfree.com/
 LANG vec
 
@@ -1320,8 +1320,9 @@ SFX g oe u/O oe
 # vèrbi -àr inregolari ((dex)dar, (kon|kontra|[lƚ]ikue|putre|rare|re|sora|stra|stupe|tore|tume)far, (mal|move|soto)star)
 # themeT1 + r/AhE
 # themeT8 + o/hEJ
-SFX h Y 172
-SFX h ar à/E ar
+SFX h Y 173
+SFX h ar à/BE ar
+SFX h ar è ar
 SFX h ar ò ar
 SFX h ar ame/G ar
 SFX h ar àmene/G ar
@@ -2247,7 +2248,7 @@ SFX o o i/EFL o
 
 # vèrbi '-er inregolari ((r[ei])èser)
 # themeT1 + er/p
-SFX p Y 315
+SFX p Y 316
 SFX p èser é/N èser
 SFX p èser élo/B èser
 SFX p èser éƚo/B èser
@@ -2517,11 +2518,12 @@ SFX p èser son/J èser
 SFX p èser sone/K èser
 SFX p èser sonmi/K èser
 SFX p èser stà èser
-SFX p èser stò èser
 SFX p èser stado/BI èser
 SFX p èser stao/B èser
+SFX p èser stò èser
 SFX p èser stasto/BI èser
 SFX p èser stato/BI èser
+SFX p èser stè èser
 SFX p èser stesto/BI èser
 SFX p èser xèra/FJN èser
 SFX p èser xèrami/K èser
@@ -2961,7 +2963,7 @@ SFX T io i io
 SFX T a i a
 SFX T e i e
 
-# sostantivi plurali maskili e femenili ko trasformaŧion V[ln] > V'i
+# sostantivi plurali maskili e femenili ko trasformaŧion '[aeou][ln] > 'Vi
 SFX U Y 10
 SFX U l i [èò]l
 SFX U n i [èò]n
@@ -2980,8 +2982,8 @@ SFX V èr ar/B èr
 SFX V ièr er/B ièr
 SFX V dor or/C [aeiou]dor
 SFX V ol iol/BU rol
-SFX V ol iòl/BU rol
-SFX V ol òl/BU rol
+SFX V ol iòl/B rol
+SFX V ol òl/B rol
 SFX V oƚo ioƚo/B roƚo
 SFX V oƚo iòƚo/B roƚo
 SFX V oƚo òƚo/B roƚo
@@ -2997,12 +2999,14 @@ SFX X nte n mente
 SFX X e re mente
 
 # sostantivi koletivi, ...
-SFX Y Y 7
+SFX Y Y 9
 SFX Y duro uro/T [aeiou]duro
 SFX Y dura ura/D [aeiou]dura
-SFX Y ada à ada
-SFX Y ada è ada
+SFX Y ado à/T ado
+SFX Y ado ò ado
+SFX Y ado è ado
 SFX Y ada àa/D ada
+SFX Y ada à ada
 SFX Y ida ía/D ida
 SFX Y uda úa/D uda
 

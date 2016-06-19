@@ -84,7 +84,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/data/Asse
 			{matcher: /^(.*)([èé]ne|e[nñ]é)r$/, replacement: '$1èñer'},
 			{matcher: /^(.*p)ór$/, replacement: '$1onér'},
 			{matcher: /^(.*t)ór$/, replacement: '$1olér'},
-			{matcher: /^(kon(tra)?|[lƚ]ikue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?fàr$/, replacement: '$1fàŧer'},
+			{matcher: /^(kon(tra)?|[lƚ]iku[ei]|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?fàr$/, replacement: '$1fàŧer'},
 			{matcher: /^(po)d?ér$/, replacement: '$1sér'}
 		];
 
@@ -107,7 +107,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/data/Asse
 	var getIrregularity = (function(){
 		var data = {
 			andar: /^((r[ei])?and|[‘']nd?)àr$/,
-			darStarFar: /^((r[ei]|dex)?dàr|(mal|move|soto)?stàr|(kon(tra)?|[lƚ]ikue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?fàr)$/,
+			darStarFar: /^((r[ei]|dex)?dàr|(mal|move|soto)?stàr|(kon(tra)?|[lƚ]iku[ei]|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?fàr)$/,
 			aver: /^(g?av?|reg?av?|[‘']v)ér$/,
 			dever: /déver$/,
 			eser: /^(r[ei])?èser$/,

@@ -1901,7 +1901,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 					&& !Grapheme.isHyatus(word.substr(idx, 2))
 					&& !word.match(/^(re)?\(?g?\)?(à\/è|à|é|ò)[oaie]?$/)
 					&& !word.match(/^\(?x?\)?é$|^s[éí][oaie]?$/)
-					&& !word.match(/^((r[ei])?d[àé]|(kon(tra)?|[lƚ]ikue|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?f[àé]|(mal|move|soto)?st[àé])[oaie]?$/)
+					&& !word.match(/^((r[ei])?d[àé]|(kon(tra)?|[lƚ]iku[ei]|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?f[àé]|(mal|move|soto)?st[àé])[oaie]?$/)
 					&& !word.match(/^(và[oaie]?|vé)[oaie]?$/)
 					&& !word.match(/^s[àò][oaie]?$/)
 					&& !word.match(/^(|as?|des?|es|kon|pro|re|so)tr[àé][oaie]?$/)?
