@@ -3072,6 +3072,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ment",			"x",			4,	4,	"a",	"",				"",
 "menteg",		"dex",		1,	1,	"a",	"1463",			"",
 "menteg",		"x",			1,	1,	"a",	"1980",			"Dexmentegar.",
+"menŧon",		"",			1,	4,	"a",	"1560",			"",
 "menu",			"x",			4,	4,	"a",	"1867",			"",
 "menuŧ",			"x",			1,	3,	"a",	"1775",			"",
 "menxon",		"",			1,	4,	"a",	"1560",			"Nomenar.",
