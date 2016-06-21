@@ -3146,6 +3146,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "misi",			"",			1,	1,	"a",	"1810",			"",
 "misi",			"dex",		1,	1,	"a",	"1560",			"Svejar.",
 "misi",			"x",			1,	1,	"a",	"1560",			"",
+"misid",			"",			1,	3,	"a",	"1463",			"Misiar.",
 "mistur",		"",			1,	4,	"a",	"1980",			"",
 "mitig",			"",			1,	1,	"a",	"1415",			"",
 "mixer",			"in",			4,	5,	"a",	"1775",			"Inpigrir, infingardir.",
