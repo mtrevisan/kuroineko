@@ -463,7 +463,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Orthography', 'tools/
 					{matcher: /xím$/, replacement: 'xént'},
 					{matcher: /úm$/, replacement: 'únt'},
 					{matcher: /(e[sŧ])è[lƚ]$/, replacement: '$1èls'},
-					{matcher: /espè[lƚ]$/, replacement: 'espúls'},
+					{matcher: /pè[lƚ]$/, replacement: 'púls'},
 					{matcher: /kòj$/, replacement: 'kòlt'},
 					{matcher: /kór$/, replacement: 'kórs'},
 					{matcher: /í[jɉ]$/, replacement: 'àt'},

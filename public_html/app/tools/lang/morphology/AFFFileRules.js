@@ -293,6 +293,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 							}
 							else{
 								console.log(inf + '/cE	po:verb is:infinitive_simple');
+								if(inf.match(/der$/))
+									console.log(unmarkDefaultStress(inf.replace(/der$/, 'dre')) + '	po:verb is:infinitive_simple st:' + inf);
 								console.log(unmarkDefaultStress((theme.regular.themeT4? theme.regular.themeT4: theme.irregular.themeT4) + 'rò') + '/cJ	po:verb is:indicative_future_1s st:' + inf);
 								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/cEJ	po:verb is:indicative_present_1s st:' + inf);
 								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'oe') + '/gKT	po:verb is:indicative_present_1s is:interrogative_1s st:' + inf);
@@ -1553,7 +1555,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 					{matcher: /prím$/, replacement: 'près'},
 					{matcher: /xím$/, replacement: 'xént'},
 					{matcher: /úm$/, replacement: 'únt'},
-					{matcher: /espè[lƚ]$/, replacement: 'espúls'},
+					{matcher: /pè[lƚ]$/, replacement: 'púls'},
 					{matcher: /kòj$/, replacement: 'kòlt'},
 					{matcher: /kór$/, replacement: 'kórs'},
 					{matcher: /í[jɉ]$/, replacement: 'àt'},
