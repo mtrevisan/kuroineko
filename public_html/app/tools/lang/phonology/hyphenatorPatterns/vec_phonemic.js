@@ -50,7 +50,7 @@ define({
 		4: '.f2t.p2n.p2s.t2m',
 		5: '.bio1.pre1l3f2t',
 		6: '.di2s3.de2s3.di2x3.de2x3.anti1.auto1.opto1.orto3.para1.poli3.re1is',
-		7: 'kontro1èkstra1ekstra1sirkum3ŧirkum3.ipe2r1.polip2.ortop2.dis3p2.des3p2'
+		7: 'kontro1ekstra1èkstra1sirkum3ŧirkum3.ipe2r1.polip2.ortop2.dis3p2.des3p2'
 			+ '.pos4dat'
 			+ '.de3x4in.de3x4ín',
 		8: 'sirkums2ŧirkums2'

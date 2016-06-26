@@ -38,13 +38,13 @@ define({
 			+ 'v2lv2r',
 		4: '.f2t.p2n.p2s.t2m',
 		5: '.bio1.pre1l3f2t',
-		6: '.di2s3.de2s3.di2x3.de2x3.anti1.auto1.opto1.orto3.para1.poli3.re1is'
-			+ 'sub3s2',
-		7: 'kontro1èkstra1ekstra1sirkum3ŧirkum3.ipe2r1.polip2.ortop2.dis3p2.des3p2',
+		6: 'sub3s2'
+			+ '.di2s3.de2s3.di2x3.de2x3.anti1.auto1.opto1.orto3.para1.poli3.re1is'
+			+ '.po4sd',
+		7: 'kontro1ekstra1èkstra1sirkum3ŧirkum3.ipe2r1.polip2.ortop2.dis3p2.des3p2',
 		8: 'sirkums2ŧirkums2'
-			+ '.po4sdat'
 			+ '.de3x4in.de3x4ín',
 		9: '.de3x4ide.de3x4íde',
-		10: '.su2b3entr.su2b3éntr'
+		10: '.su2b3entr.su2b3éntr.su2b3intr.su2b3íntr'
 	}
 });

@@ -428,11 +428,11 @@ require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatt
 			'gua', 'ingua', 'frua', 'grua', 'sua', 'strasua',
 			'arfia', 'efia', 'ifia', 'nia', 'dexnia', 'kria', 'pria', 'stria', 'sia', 'devia', 'invia', 'xvia',
 			'dixèrta', 'dexeredar',
-			'subentro',
+			'subentro', 'subintrar',
 			'subé', 'subí', 'subíimo', 'subísimo', 'subívimo', 'suben', 'subendo', 'subene', 'subense', 'subente', 'subesto', 'subié', 'subia', 'subido',
 			'subon', 'subone', 'subonse',
 			'sublimà', 'sublimo',
-			'subion', 'subisen', 'subisié', 'subiven', 'subiè',
+			'subio', 'subion', 'subisen', 'subisié', 'subiven', 'subiè',
 			'posdatar', 'dexine'
 		];
 		var expected = [
@@ -472,11 +472,11 @@ require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatt
 			'gua', 'in-gua', 'frua', 'grua', 'sua', 'stra-sua',
 			'ar-fia', 'e-fia', 'i-fia', 'nia', 'dex-nia', 'kria', 'pria', 'stria', 'sia', 'de-via', 'in-via', 'xvia',
 			'dix-èr-ta', 'dex-e-re-dar',
-			'sub-en-tro',
+			'sub-en-tro', 'sub-in-trar',
 			'su-bé', 'su-bí', 'su-bíi-mo', 'su-bí-si-mo', 'su-bí-vi-mo', 'su-ben', 'su-ben-do', 'su-be-ne', 'su-ben-se', 'su-ben-te', 'su-bes-to',
 			'su-bié', 'su-bia', 'su-bi-do', 'su-bon', 'su-bo-ne', 'su-bon-se',
 			'su-bli-mà', 'su-bli-mo',
-			'su-bion', 'su-bi-sen', 'su-bi-sié', 'su-bi-ven', 'su-biè',
+			'su-bio', 'su-bion', 'su-bi-sen', 'su-bi-sié', 'su-bi-ven', 'su-biè',
 			'pos-da-tar', 'de-xi-ne'
 		];
 
@@ -912,7 +912,7 @@ require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatt
 			'gua', 'ingua', 'frua', 'grua', 'sua', 'strasua',
 			'arfia', 'efia', 'ifia', 'nia', 'dexnia', 'kria', 'pria', 'stria', 'sia', 'devia', 'invia', 'xvia',
 			'dixèrta', 'dexeredar',
-			'subentro',
+			'subentro', 'subintrar',
 			'subé', 'subí', 'subíimo', 'subísimo', 'subívimo', 'suben', 'subendo', 'subene', 'subense', 'subente', 'subesto', 'subié', 'subia', 'subido',
 			'subon', 'subone', 'subonse',
 			'sublimà', 'sublimo',
@@ -956,7 +956,7 @@ require(['tools/lang/phonology/Hyphenator', 'tools/lang/phonology/hyphenatorPatt
 			'gua', 'in-gua', 'frua', 'grua', 'sua', 'stra-sua',
 			'ar-fia', 'e-fia', 'i-fia', 'nia', 'de-xnia', 'kria', 'pria', 'stria', 'sia', 'de-via', 'in-via', 'xvia',
 			'dix-èr-ta', 'dex-e-re-dar',
-			'su-ben-tro',
+			'su-ben-tro', 'su-bin-trar',
 			'su-bé', 'su-bí', 'su-bí-i-mo', 'su-bí-si-mo', 'su-bí-vi-mo', 'su-ben', 'su-ben-do', 'su-be-ne', 'su-ben-se', 'su-ben-te', 'su-be-sto',
 			'su-bié', 'su-bia', 'su-bi-do', 'su-bon', 'su-bo-ne', 'su-bon-se',
 			'su-bli-mà', 'su-bli-mo',
