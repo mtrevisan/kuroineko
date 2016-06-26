@@ -198,13 +198,13 @@ var AMDLoader = (function(doc){
 	 *
 	 * @example
 	 * <code>
-	 * require(['tools/data/Lexer'], function(Lexer){ ... });
+	 * require(['tools/grammar/Lexer'], function(Lexer){ ... });
 	 * </code>
 	 *
 	 * @example
 	 * To be used only if a module has already been loaded.
 	 * <code>
-	 * var Lexer = require('tools/data/Lexer');
+	 * var Lexer = require('tools/grammar/Lexer');
 	 * </code>
 	 *
 	 * @param {Array/String} [dependencies]	Array of dependencies, or dependency to load if string

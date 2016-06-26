@@ -42,9 +42,11 @@ define(function(){
 	};
 
 	/**
-	 * Processes the input stream, matching and tokenizing left to right in a single pass.
+	 * Processes the input stream, matching and tokenizing left to right in a single pass.<br>
+	 * Extracts the most problable (aka longest) rule that matches, or <code>undefined</code> if no rules matches.
 	 *
 	 * @param {String} [source]	String to set as source and lex.
+	 * @return {Object}	The value returned by the callback whose rule matches.
 	 */
 	var lex = function(source){
 		if(source){
