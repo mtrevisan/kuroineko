@@ -5704,6 +5704,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "turbi",			"in",			1,	1,	"a",	"1775",			"Far deventar torbio.",
 "turbin",		"",			1,	1,	"a",	"",				"",
 "turg",			"",			1,	1,	"a",	"1867",			"Peđorar de 'l tenpo.",
+"turn",			"",			1,	1,	"a",	"1560",			"Tornar.",
 "tuseg",			"s",			1,	1,	"a",	"1852",			"",
 "tutel",			"",			1,	3,	"g",	"",				"",
 "tuŧeg",			"s",			1,	1,	"a",	"1775",			"",
