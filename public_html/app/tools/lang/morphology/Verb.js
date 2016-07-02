@@ -147,7 +147,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/data/Asse
 	var isSpecial3rd = (function(){
 		var special3rds = [
 			/d(or|ro)mír$/,
-			/en?sír$/, /entír$/, /eñír$/,
+			/^(r[ei])?(en?|u)sír$/, /spesír$/, /entír$/, /eñír$/,
 			/[en][gk]uír$/,
 			/morír$/,
 			//note: n[ou][dt]rír is a "regular" 3rd
