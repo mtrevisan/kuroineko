@@ -146,6 +146,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/data/Asse
 	/** @private */
 	var isSpecial3rd = (function(){
 		var special3rds = [
+			/avrír$/,
 			/d(or|ro)mír$/,
 			/^(r[ei])?(en?|u)sír$/, /spesír$/, /entír$/, /eñír$/,
 			/[en][gk]uír$/,
@@ -164,7 +165,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/data/Asse
 
 	/** @private */
 	var isSemiSpecial3rd = (function(){
-		var semiSpecial3rds = [/part?ír$/, /sorbír$/, /vertír$/];
+		var semiSpecial3rds = [/audír$/, /part?ír$/, /sorbír$/, /vertír$/];
 
 		return function(infinitive){
 			return StringHelper.isMatching(infinitive, semiSpecial3rds);
