@@ -514,6 +514,9 @@ arkibúɉoe/gKT	po:verb is:indicative_present_1s is:interrogative_1s st:arkibuɉ
 arkibuxar/AahE	po:verb is:infinitive_simple
 arkibuxo/hEJ	po:verb is:indicative_present_1s st:arkibuxar
 arkibúxoe/gKT	po:verb is:indicative_present_1s is:interrogative_1s st:arkibuxar
+arlekinar/AahE	po:verb is:infinitive_simple
+arlekino/hEJ	po:verb is:indicative_present_1s st:arlekinar
+arlekínoe/gKT	po:verb is:indicative_present_1s is:interrogative_1s st:arlekinar
 armar/AahE	po:verb is:infinitive_simple
 armo/hEJ	po:verb is:indicative_present_1s st:armar
 àrmoe/gKT	po:verb is:indicative_present_1s is:interrogative_1s st:armar
@@ -10017,6 +10020,9 @@ kalúñoe/gKT	po:verb is:indicative_present_1s is:interrogative_1s st:kaluñar
 kaƚuñar/AahE	po:verb is:infinitive_simple
 kaƚuño/hEJ	po:verb is:indicative_present_1s st:kaƚuñar
 kaƚúñoe/gKT	po:verb is:indicative_present_1s is:interrogative_1s st:kaƚuñar
+skamatar/AahE	po:verb is:infinitive_simple
+skamato/hEJ	po:verb is:indicative_present_1s st:skamatar
+skamàtoe/gKT	po:verb is:indicative_present_1s is:interrogative_1s st:skamatar
 kaminar/AahE	po:verb is:infinitive_simple
 kamino/hEJ	po:verb is:indicative_present_1s st:kaminar
 kamínoe/gKT	po:verb is:indicative_present_1s is:interrogative_1s st:kaminar
@@ -29893,7 +29899,7 @@ del/B	po:article al:dei
 dei	po:article is:plural st:del
 / ajetivi
 molto/B	po:adjective po:adverb po:pronoun
-molton/D	po:adjective po:adverb po:pronoun po:noun
+molton/DU	po:adjective po:adverb po:pronoun po:noun
 poko/BI	po:adjective po:adverb po:pronoun
 bon/BU	po:adjective po:noun
 kativo/BWI	po:adjective po:noun
@@ -31286,7 +31292,7 @@ asíndeto/T	po:noun
 asocasion/DU	po:noun
 asocativo/BWI	po:adjective
 asocaŧion/DU	po:noun
-aso/TI	po:noun
+aso/BI	po:noun
 aspetual/DU	po:adjective
 aspetuaƚe/D	po:adjective
 aspèto/T	po:noun
@@ -31353,7 +31359,8 @@ axente/TI	po:adjective po:noun
 àtoƚa/D	po:noun
 àtono/B	po:adjective
 àuto	po:noun
-àxen/T	po:noun
+àxen/T	po:noun al:àxei
+àxei	po:noun is:plural st:àxen
 baba/D	po:adjective
 Babàu/Z	po:noun
 badía/D	po:noun
@@ -32226,7 +32233,7 @@ fórmoƚa/D	po:noun
 fògo/TI	po:noun
 fòjo/B	po:noun
 fòɉo/B	po:noun
-fòn/T	po:noun
+fòn/TU	po:noun
 fònego/T	po:noun
 fòrvese/DI	po:noun
 fòto	po:noun
@@ -32764,7 +32771,7 @@ kapiklase	po:noun
 kapisaldi	po:noun
 kapistasion	po:noun
 kapistaŧion	po:noun
-kapital/D	po:noun
+kapital/DU	po:noun
 kapitaƚe/D	po:noun
 kapitèl/TU	po:noun
 kapitèƚo/T	po:noun
@@ -34038,7 +34045,8 @@ oxmarin/T	po:noun
 òpera/D	po:noun
 òpara/D	po:noun
 òrbo/B	po:adjective
-òrgan/T	po:noun
+òrgan/T	po:noun al:òrgai
+òrgai	po:noun is:plural st:òrgan
 òsca/D	po:noun
 òso/TI	po:noun
 òspite/D	po:noun
@@ -34271,8 +34279,8 @@ pèten/D	po:noun al:pètei
 pètei	po:noun is:plural st:pèten
 pèŧo/BI	po:noun
 pian/T	po:noun po:adverb al:piai
-piana/D&	po:noun po:adverb
 piai	po:noun po:adverb is:plural st:pian
+piana/D&	po:noun po:adverb
 pianamente/IX	po:adverb
 pianeta/T	po:noun
 pianeto	po:adverb
@@ -35669,7 +35677,7 @@ tremaròƚa/D	po:noun
 trepíe	po:noun
 trepié	po:noun
 trepiè	po:noun
-trèn/T	po:noun
+trèn/TU	po:noun
 tria	po:noun
 trikò	po:noun
 trisílaba/D	po:adjective po:noun
@@ -36158,6 +36166,7 @@ akuto/B	po:adjective
 alamaro/T	po:noun
 albareta/D	po:noun
 alberon/DU	po:noun
+albio/T	po:noun
 albéo/T	po:noun
 albèo/T	po:noun
 albío/T	po:noun
@@ -36199,8 +36208,8 @@ anelin/T	po:noun
 aneƚin/T	po:noun
 anemèr/BV	po:noun
 aneto/TI	po:noun
-anèmoi	po:noun is:plural st:anèmol
 anèmol/T	po:noun al:anèmoi
+anèmoi	po:noun is:plural st:anèmol
 anèmoƚo/T	po:noun
 angonaja/D	po:noun
 angonaɉa/D	po:noun
@@ -36215,14 +36224,13 @@ animeta/D	po:noun
 animèla/D	po:noun
 animèƚa/D	po:noun
 ankiòa/D	po:noun
-ankudene/D&	po:noun
+ankúdene/D&	po:noun
 ankudenèla/D	po:noun
-ankuđene/D&	po:noun
+ankúđene/D&	po:noun
 ankuđenèla/D	po:noun
-ankuxene/D&	po:noun
+ankúxene/D&	po:noun
 ankuxenèla/D	po:noun
 ankuxenèƚa/D	po:noun
-ankúxene/T	po:noun
 anporètiko/BI	po:adjective po:noun
 ansin/T	po:noun
 ansineto/TI	po:noun
@@ -36252,8 +36260,8 @@ ardariva/D	po:noun
 ardenadura/DY	po:noun
 ardentería/D	po:noun
 ardentièr/BV	po:noun
-ardigògoi	po:noun is:plural st:ardigògol
 ardigògol/T	po:noun al:ardigògoi
+ardigògoi	po:noun is:plural st:ardigògol
 ardiñon/DU	po:noun
 arđareto/TI	po:noun
 arđare/T	po:noun
@@ -36263,8 +36271,8 @@ arđariva/D	po:noun
 arđenadura/DY	po:noun
 arđentería/D	po:noun
 arđentièr/BV	po:noun
-arđigògoi	po:noun is:plural st:arđigògol
 arđigògol/T	po:noun al:arđigògoi
+arđigògoi	po:noun is:plural st:arđigògol
 arđiñon/DU	po:noun
 arenato/TI	po:noun
 areneta/D	po:noun
@@ -36315,8 +36323,8 @@ arxariva/D	po:noun
 arxenadura/DY	po:noun
 arxentería/D	po:noun
 arxentièr/BV	po:noun
-arxigògoi	po:noun is:plural st:arxigògol
 arxigògol/T	po:noun al:arxigògoi
+arxigògoi	po:noun is:plural st:arxigògol
 arxigògoƚo/T	po:noun
 arxiñon/DU	po:noun
 asal/TU	po:noun
@@ -36354,7 +36362,6 @@ axoƚeta/D	po:noun
 àbito/T	po:noun
 àdemo/T	po:adjective
 àđemo/T	po:adjective
-àlbio/T	po:noun
 àlega/D	po:noun
 àndoi	po:noun is:plural st:àndol
 àndol/T	po:noun al:àndoi
@@ -40198,7 +40205,7 @@ pareño/B	po:noun
 parexo/T	po:noun
 parè/D	po:noun
 parlador/CV	po:noun
-parol/TV	po:noun
+parol/TUV	po:noun
 paroleto/TI	po:noun
 paroƚeto/T	po:noun
 paroƚo/T	po:noun
@@ -44762,7 +44769,7 @@ andador/BV	po:noun
 anemal/DU	po:noun
 anemaƚe/D	po:noun
 angièr/BV	po:noun
-angon/D	po:noun
+angon/DU	po:noun
 angonara/D&	po:noun
 angonía/D	po:noun
 anal/DU	po:noun
@@ -44774,7 +44781,7 @@ anti	po:preposition po:adverb po:noun
 antigaja/D	po:noun
 antigaɉa/D	po:noun
 antipèto/T	po:noun
-anton/T	po:noun
+anton/TU	po:noun
 anŧopresèr/BV	po:noun
 ansopresèr/BV	po:noun
 anŧoprèso/T	po:noun
@@ -44797,8 +44804,8 @@ arketeko/B	po:noun
 arkoteto/B	po:noun
 arkodreto/B	po:noun
 arkibuxièr/BV	po:noun
-ardejon/D	po:noun
-ardeɉon/D	po:noun
+ardejon/DU	po:noun
+ardeɉon/DU	po:noun
 ardimente/IX	po:adverb
 rengador/BV	po:noun
 argomentador/BV	po:noun
@@ -46900,7 +46907,7 @@ triboƚasion/D	po:adjective
 torexin/T	po:noun
 tornèr/BV	po:noun
 tornièr/BV	po:noun
-toron/D	po:noun
+toron/DU	po:noun
 tortolato/TI	po:noun
 tortoƚato/T	po:noun
 torŧatòrio/T	po:noun
@@ -46950,7 +46957,7 @@ trobolasion/DU	po:adjective
 troboƚasion/D	po:adjective
 tronbeto/TI	po:noun al:tronbiti
 tronbiti	po:noun is:plural st:tronbeto
-troton/D	po:noun
+troton/DU	po:noun
 trovador/BV	po:noun
 trebiador/BV	po:noun
 tubiador/BV	po:noun
@@ -46985,7 +46992,8 @@ urso/B&	po:noun
 uxévole/T	po:adjective po:noun
 uxévoƚe/T	po:adjective po:noun
 uxurèr/BV	po:noun
-útel/D	po:adjective po:noun
+útel/D	po:adjective po:noun al:útei
+útei	po:adjective po:noun is:plural st:útel
 úteƚe/D	po:adjective po:noun
 utilitade/TY	po:noun
 utiƚitade/TY	po:noun
@@ -47026,7 +47034,7 @@ vendador/BV	po:noun
 vendedor/BV	po:noun
 véndeda/D	po:noun
 vendiŧion/DU	po:adjective
-vendision/D	po:adjective
+vendision/DU	po:adjective
 ventoxo/BW	po:adjective
 ventrame/T	po:noun
 venŧador/BV	po:noun
@@ -47210,3 +47218,27 @@ sukara/D	po:noun
 xúdexe/T	po:noun
 xunko/T	po:noun
 xuxe/T	po:noun
+/ Venturi, Giuseppe. Saggio di un dizionario veronese-italiano. Verona : s.n., 1810.
+bogon/DU	po:adverb po:noun
+akuavida/D	po:noun
+anpómola/D	po:noun
+anpómoƚa/D	po:noun
+anaròto/TI	po:noun
+andivia/D	po:noun
+anŧana/D	po:noun
+ansana/D	po:noun
+arlan/TU	po:noun
+armilèr/BV	po:noun
+armiƚèr/BV	po:noun
+armil/T	po:noun
+armiƚo/T	po:noun
+arximo/T	po:noun
+vertura/DY	po:noun
+bagoleŧo/TI	po:noun
+bagoleso/TI	po:noun
+bagoƚeso/TI	po:noun
+
+
+/ 11
+(sost.)|anguria|languria|ƚanguria
+(sost.)|arminèr|arminaro|armilèr|armilaro|armiƚèr|armiƚaro
