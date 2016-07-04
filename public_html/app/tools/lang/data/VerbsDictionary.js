@@ -2556,6 +2556,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kordel",		"in",			1,	4,	"g",	"1854",			"",
 "kordon",		"",			1,	4,	"a",	"1847",			"Kojonbarar.",
 "korèx",			"",			3,	3,	"g",	"1433",			"",
+"korg",			"",			1,	1,	"g",	"1810",			"Koregar.",
 "korl",			"in",			1,	1,	"a",	"1867",			"(ark.) Indevenar.",
 "korn",			"in",			1,	1,	"g",	"",				"",
 "korn",			"s",			1,	1,	"g",	"1854",			"",

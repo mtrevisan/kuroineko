@@ -453,7 +453,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/lang/phon
 			/d(or|ro)mi/,
 			/for[fstŧ]a/,
 			/konvo/,
-			/kor([dđnstŧx]a|po)/,
+			/kor([dđgnstŧx]a|po)/,
 			/mor([bsŧ]a|[kf]ia|se|[gm]o)/,
 			/norba/,
 			/porta/,
