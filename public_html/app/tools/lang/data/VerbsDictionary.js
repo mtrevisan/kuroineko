@@ -434,6 +434,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bin",			"inkon",		1,	1,	"a",	"1867",			"",
 "bin",			"skon",		1,	1,	"a",	"1980",			"",
 "bind",			"",			1,	1,	"a",	"1847",			"Bendar.",
+"bindel",		"",			1,	4,	"g",	"1810",			"Méter na benda.",
 "bindel",		"in",			1,	4,	"g",	"1847",			"Méter na benda.",
 "bindol",		"",			1,	1,	"a",	"1854",			"Condolar, penxolar.",
 "bingol",		"dex",		1,	1,	"a",	"1867",			"",
