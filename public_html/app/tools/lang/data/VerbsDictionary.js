@@ -2385,6 +2385,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kodeg",			"des",		1,	1,	"g",	"1867",			"",
 "kodeg",			"in",			1,	1,	"g",	"1854",			"Piotar, se dixe de 'l teren ke 'l é kuerto da ŧope ko ankora l' erba takàa.",
 "kodeg",			"s",			1,	1,	"g",	"1854",			"",
+"kodoñ",			"",			1,	3,	"a",	"1810",			"",
 "kofon",			"s",			1,	3,	"a",	"1775",			"Befar, motejar.",
 "kogol",			"",			1,	1,	"g",	"1775",			"Méter đo el selcà.",
 "kogol",			"in",			1,	1,	"g",	"1854",			"Lastregar ko kogole.",
