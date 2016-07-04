@@ -21674,10 +21674,9 @@ insensar/AahE	po:verb is:infinitive_simple
 insenso/hEJ	po:verb is:indicative_present_1s st:insensar
 insénsoe/gKT	po:verb is:indicative_present_1s is:interrogative_1s st:insensar
 sentar/AahE	po:verb is:infinitive_simple
-sento/hEJ	po:verb is:indicative_present_1s st:sentar
+sento/hEJ	po:verb is:indicative_present_1s st:sentar st:sentir
 séntoe/gKT	po:verb is:indicative_present_1s is:interrogative_1s st:sentar
 sentir/AeE	po:verb is:infinitive_simple
-sento/eEJ	po:verb is:indicative_present_1s st:sentir
 séntoe/gKT	po:verb is:indicative_present_1s is:interrogative_1s st:sentir
 akonsentir/AeE	po:verb is:infinitive_simple
 akonsento/eEJ	po:verb is:indicative_present_1s st:akonsentir
@@ -30255,7 +30254,9 @@ otanta/%	po:numeral_cardenal
 nonanta/%	po:numeral_cardenal
 novanta/%	po:numeral_cardenal
 ŧento/%	po:numeral_cardenal
+ŧentenèr/BV	po:numeral_cardenal
 sento/%	po:numeral_cardenal
+sentenèr/BV	po:numeral_cardenal
 do-xento/%	po:numeral_cardenal
 du-xento/%	po:numeral_cardenal
 trè-xento/%	po:numeral_cardenal
@@ -30371,6 +30372,9 @@ Sabo/Z	po:noun
 Sàbado/Z	po:noun
 Doménega/Z	po:noun po:proper_noun
 / mexi
+Đenar/Z	po:noun
+Denar/Z	po:noun
+Xenar/Z	po:noun
 Đenaro/Z	po:noun
 Denaro/Z	po:noun
 Xenaro/Z	po:noun
@@ -30898,11 +30902,12 @@ karbonaso/B	po:adjective po:noun
 karnexin/B	po:adjective po:noun
 koroto/BI	po:adjective po:noun
 krémexe/T	po:adjective po:noun
-latexin/T	po:adjective po:noun
-ƚatexin/T	po:adjective po:noun
+latexin/B	po:adjective po:noun
+ƚatexin/B	po:adjective po:noun
 malgaraño/B	po:adjective po:noun
-maranto/T	po:adjective po:noun
+maranto/B	po:adjective po:noun
 maron/CU	po:adjective po:noun
+monegin/B	po:adjective po:noun
 mòro/B	po:adjective po:noun
 moròto/BI	po:adjective po:noun
 negro/B	po:adjective po:noun
@@ -30916,15 +30921,15 @@ ruđenon/CU	po:adjective po:noun
 rudenon/CU	po:adjective po:noun
 ruxenon/CU	po:adjective po:noun
 skarlato/BI	po:adjective po:noun
-skarlatin/T	po:adjective po:noun
+skarlatin/B	po:adjective po:noun
 senerin/B&	po:adjective po:noun
 teriŧo/BI	po:adjective po:noun
 teriso/B	po:adjective po:noun
 turkexe/T	po:adjective po:noun
 turkin/B&	po:adjective po:noun
 turkinon/DU	po:adjective po:noun
-veludin/T	po:adjective po:noun
-veƚudin/T	po:adjective po:noun
+veludin/B	po:adjective po:noun
+veƚudin/B	po:adjective po:noun
 verdođal/BU	po:adjective po:noun
 verdodal/BU	po:adjective po:noun
 verdoxal/BU	po:adjective po:noun
@@ -32380,7 +32385,7 @@ gò/T	po:noun
 gòja/D	po:noun
 gòɉa/D	po:noun
 gòlf	po:noun
-gòto/TI	po:noun
+gòto/BI	po:noun
 grao	po:noun
 grafèma/T	po:noun
 grafo/T	po:noun
@@ -33299,7 +33304,7 @@ leniŧion/DU	po:noun
 lensiòl/TU	po:noun
 lenŧiòl/TU	po:noun
 leñèr/BV	po:noun
-leño/BI	po:noun
+leño/BI&	po:noun
 leon/DU	al:leuni
 lesegal/DU	po:adjective
 lesèma/T	po:noun
@@ -33446,7 +33451,7 @@ luxe/D&	po:noun
 ƚenision/DU	po:noun
 ƚensiòƚo/T	po:noun
 ƚeñèr/BV	po:noun
-ƚeño/B	po:noun
+ƚeño/B&	po:noun
 ƚeon/DU	al:leuni
 ƚesegaƚe/D	po:adjective
 ƚesèma/T	po:noun
@@ -33799,7 +33804,6 @@ moskardin/T	po:adjective
 moskaròla/D	po:noun
 moskaròƚa/D	po:noun
 moskato/TI	po:noun
-mostaco/T	po:noun
 motivo/T	po:noun
 motosikleta/D	po:noun
 motoŧikleta/D	po:noun
@@ -39088,8 +39092,8 @@ lira/D	po:noun
 lisarin/T	po:noun
 lisèr/BV	po:noun
 lisiara/D	po:noun
-lisiaso/T	po:noun
-lisiaŧo/TI	po:noun
+lisiaso/B	po:noun
+lisiaŧo/BI	po:noun
 liso/BI	po:adjective po:noun
 lispio/B	po:adjective
 litarjilio/T	po:noun
@@ -39139,7 +39143,7 @@ lume/T&	po:noun
 lumièra/D	po:noun
 lumin/T	po:noun
 luminal/DU	po:noun
-luminaria/D	po:noun
+luminario/B	po:noun
 lupa/D	po:noun
 lusatèl/TU	po:noun
 lusato/TI	po:noun
@@ -39593,7 +39597,7 @@ megòƚa/D	po:noun
 mejarina/D	po:noun
 mejarola/D	po:adjective po:noun
 mejaroƚa/D	po:adjective po:noun
-mejaro/B	po:noun
+mejar/B	po:noun
 mejolara/D	po:noun
 mejoƚara/D	po:noun
 meɉarina/D	po:noun
@@ -45501,8 +45505,6 @@ liñeo/B	po:adjective
 lionsèl/TU	po:noun
 lionŧèl/TU	po:noun
 lioxo/BWI	po:adjective
-lisiasa/D	po:noun
-lisiaŧa/D	po:noun
 livra/D	po:noun
 lísito/BW	po:adjective
 líŧito/BW	po:adjective
@@ -47337,8 +47339,76 @@ garísola/D	po:noun
 garísoƚa/D	po:noun
 gatarol/BUV	po:noun
 gataroƚo/BV	po:noun
+goloxeŧo/TI	po:noun
+goloxeso/TI	po:noun
+goƚoxeso/TI	po:noun
+gonbio/T	po:noun
+gomisièl/TU	po:noun
+gomisièƚo/T	po:noun
+grijo/T	po:noun
+griɉo/T	po:noun
+grostin/T	po:noun
+guíndol/T	po:noun al:guíndoi
+guíndoi	po:noun is:plural st:guíndol
+guíndoƚo/T	po:noun
+kuxmerin/T	po:noun
+introl/TU	po:noun
+introƚo/T	po:noun
+stupo/T	po:noun
+jonkilia/D	po:noun
+jonkiƚia/D	po:noun
+ɉonkilia/D	po:noun
+ɉonkiƚia/D	po:noun
+langurièr/BV	po:noun
+ƚangurièr/BV	po:noun
+làpis	po:noun
+ƚàpis	po:noun
+lavativo/B	po:noun
+ƚavativo/B	po:noun
+lèndena/D	po:noun
+ƚèndena/D	po:noun
+léoro/T	po:noun
+ƚéoro/T	po:noun
+lesèna/D	po:noun
+ƚesèna/D	po:noun
+lèsena/D	po:noun
+ƚèsena/D	po:noun
+leturin/T	po:noun
+ƚeturin/T	po:noun
+limaŧo/T	po:noun
+limaso/T	po:noun
+ƚimaso/T	po:noun
+lòta/D	po:noun
+ƚòta/D	po:noun
+loŧa/D	po:noun
+losa/D	po:noun
+ƚosa/D	po:noun
+lukèla/D	po:noun
+ƚukèƚa/D	po:noun
+ludria/D	po:noun
+ƚudria/D	po:noun
+magraño/T	po:noun
+manestrador/BV	po:noun
+manil/T	po:noun
+maniƚo/T	po:noun
+maròña/D	po:noun
+maxon/D	po:noun
+màsola/D	po:noun
+màsoƚa/D	po:noun
+mexa/D	po:noun
+mígola/D	po:noun
+mígoƚa/D	po:noun
+miola/D	po:noun
+mioƚa/D	po:noun
+moketa/D	po:noun
+pestarol/BUV	po:noun
+pestaroƚo/BV	po:noun
+móskol/T	po:noun al:móskoi
+móskoi	po:noun is:plural st:móskol
+móskoƚo/T	po:noun
+moŧakoa/D	po:noun
+mosakoa/D	po:noun
 
 
 
-/ 24
-(sost.)|anguria|languria|ƚanguria
+/ 33
