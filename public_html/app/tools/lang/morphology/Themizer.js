@@ -364,7 +364,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/lang/phon
 			/ce([fklƚrst]a|[lƚ]e|ko)/, /cara/,
 			/de([lƚt]a|[bdsŧ]i|[dlƚ]e|ro)/,
 			/đe[lƚ]a/,
-			/fe([lƚrst]a|tu)/, /fara/,
+			/fe([lƚrst]a|ria|tu)/, /fara/,
 			/ie[đgtx]a/,
 			/[jɉ]e[lƚt]a/,
 			/ke(ga|[lƚ]e)/,
@@ -433,7 +433,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/lang/phon
 			/[lƚ]o([dfgjɉkmñpstŧvx]a|[gx]o)/,
 			/mo([gjɉklƚstŧ]a|nia|xe|ri|[klƚ]o|du)/,
 			/no([cdjɉklƚstv]a|vra|me|dri|ku)/,
-			/ñoko/,
+			/ñok[ao]/,
 			/po([cđjɉlƚtx]a|[ds]e|xi|[kpv]o)/,
 			/ro([bcdgklƚñ]a|[vx]e|[df]o)/,
 			/so([djɉmñrt]a|[nsŧ]ia|fri)/,
@@ -444,6 +444,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/lang/phon
 
 			/^olsa/,
 			/^kol[gt]a/,
+			/solda/,
 			/vol([đtx]a|to)/,
 
 			/^or[bđsx]a/,
