@@ -61,7 +61,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/data/Asse
 
 	/** @private */
 	var checkForErrors = function(infinitive, syllabation){
-		Assert.assert(infinitive.match(/^(['‘’aàbcdđeèéfgiíjɉklƚmnñoòóprsʃtŧuúvxʒ]|[djlnstx]h)+$/), 'NOT_ALFABETIC: ' + infinitive);
+		Assert.assert(infinitive.match(/^([ʼnaàbcdđeèéfgiíjɉklƚmnñoòóprsʃtŧuúvxʒ]|[djlnstx]h)+$/), 'NOT_ALFABETIC: ' + infinitive);
 
 		//NOTE: [^aeio]*e would be erroneous because it wouldn't consider the eterophonic sequence /ier$/.
 		Assert.assert(infinitive.match(/([àèéí]|[àèéíòóú][^aeo]*[ea])r$/), 'NOT_A_VERB_INFINITIVE: ' + infinitive);

@@ -41,7 +41,7 @@ define(function(){
 			.replace(/([cjñ])i([aeiou])/, '$1$2')
 
 		//correct apostrophes
-			/*.replace(/['‘’]([^aoélnñstv])/, '$1').replace(/([^aodglnstŧv])['‘’]/, '$1')*/;
+			.replace(/['‘’]/, 'ʼ');
 	};
 
 

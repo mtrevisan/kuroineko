@@ -103,7 +103,7 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme', 'tools/lang/
 
 
 	var sorterFn = function(){
-		var alphabet = 'aàbcdđeéèfghiíjɉklƚmnñoóòprsʃtŧuúvxʒ';
+		var alphabet = 'aàbcdđeéèfghiíjɉklƚmnñoóòprsʃtŧuúvxʒʼ';
 
 		/** @private */
 		var getCharValue = function(chr){

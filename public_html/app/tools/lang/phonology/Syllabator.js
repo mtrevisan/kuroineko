@@ -77,8 +77,8 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 		};
 
 		var cleanPhone = function(word){
-			//return Grapheme.removeJLikePhone(word.replace(/['‘’]/g, ''));
-			return word.replace(/['‘’]/g, '');
+			//return Grapheme.removeJLikePhone(word.replace(/ʼ/g, ''));
+			return word.replace(/[ʼ]/g, '');
 		};
 
 		var storeSyllabe = function(syllabe, syllabes){
@@ -283,7 +283,7 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 					break;
 			}
 
-			syll = syllabate(word.replace(/[\-'‘’]/g, ''), dialect).syllabes;
+			syll = syllabate(word.replace(/[\-ʼ]/g, ''), dialect).syllabes;
 
 			//restore previously resetted syllabe count accounting for pseudo-word
 			totalSyllabeCount += syll.length - 1;
@@ -313,8 +313,8 @@ define(['tools/lang/phonology/Phone', 'tools/lang/phonology/Grapheme', 'tools/la
 	/** @private */
 	var extractWords = function(text){
 		return {
-			words: text.split(/[^'‘’aàbcdđeèéfghiìíjɉklƚmnñoòóprsʃtŧuùúvxʒ]+/i),
-			separators: text.split(/['‘’aàbcdđeèéfghiìíjɉklƚmnñoòóprsʃtŧuùúvxʒ]+/i)
+			words: text.split(/[^ʼaàbcdđeèéfghiìíjɉklƚmnñoòóprsʃtŧuùúvxʒ]+/i),
+			separators: text.split(/[ʼaàbcdđeèéfghiìíjɉklƚmnñoòóprsʃtŧuùúvxʒ]+/i)
 		};
 	};
 
