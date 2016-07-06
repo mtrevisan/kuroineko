@@ -333,9 +333,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/lang/phon
 			/^(albregà|anplifegà|defraudà|desfabr([ei]g|ik)à|desfogonà|deskankarà|deskapità|deskavedà|deskodegà|deskomodà|despe[nt]o[lƚ]à|despetenà|despetorà|desp[ei]go[lƚ]à|despolv[ae]rà|destego[lƚ]à|destenp[ae]rà|dest[ae]rminà|destoko[lƚ]à|destuà|dexba[fv][ae]rà|dexbingo[lƚ]à|dexboxemà|dexbo[sŧ]o[lƚ]à|dexbu[sx]o[lƚ]à|dexdà|dexganbarà|dexlanegà|dexmanegà|dexmaskarà|dexm[eo]ntegà|dexmestegà|dexmunegà|dexnaxo[lƚ]à|dexnià|dexnonbo[lƚ]à|dexn[ou]à|dexri[sŧ]o[lƚ]à|dexv[ae]rxenà|dexvià|dol[sŧ]ifegà|sfad[ei]gà|falsifegà|farnet([ei]g|ik)à|farnetegà|formigo[lƚ]à|fortifegà|glorif([ei]g|ik)à|inaxeà|inbra[sŧ]o[lƚ]à|infrapo[lƚ]à|ingravidà|inkreà|inkrosto[lƚ]à|inkro[sŧ]o[lƚ]à|inprià|inskato[lƚ]à|inske[lƚ]etrà|inspaxemà|inspeà|inspirità|instaurà|intrapo[lƚ]à|introità|kalki[dđx]o[lƚ]à|klasifegà|konpanegà|konpenetrà|konsid[ae]rà|kontaminà|mo[lr]tip[lr]([ei]g|ik)à|mortifegà|parte[sŧ]ipà|p[ae]rmudarà|p([ae]r|re)se[gk]uità|piovexinà|posti[sŧ]ipà|predestenà|predomenà|presostatà|prexud([ei]g|ik)à|profumegà|pronostegà|regroà|represtinà|respexo[lƚ]à|restaurà|rin[đx]ovenà|sakrifegà|scarifegà|skomunegà|spe[sŧ]ifegà|stenografà|straordenà|tartufo[lƚ]à|tramuà|tramudarà|xbixigo[lƚ]à|xbonigo[lƚ]à|xgarofo[lƚ]à)$/,
 			/^(skonpa[jɉ]inà|strasaé|barafuxo[lƚ]à|desfrab([ei]g|ik)à|desfrego[lƚ]à|destr[ei]go[lƚ]à|dexabi[lƚ]ità|dexbramegà|dexbraxo[lƚ]à|dexgr[ae]ndenà|identifegà|inv[ae]rigo[lƚ]à|inxeñato[lƚ]à|konglom[ae]rà|kongratu[lƚ]à|kuantifegà|rekapito[lƚ]à|rinprov[ae]rà|senplifegà|skarnifegà|skonbuso[lƚ]à|skonpaxenà|spa[sŧ]aorà|sprexud([ei]g|ik)à|stramuà|stra[ns]uà|straseko[lƚ]à|xbarbato[lƚ]à|xmo[lr]tip[lr]([ei]g|ik)à|[sŧ]entrifugà)$/,
 			/^(dex(bonigo[lƚ]à|infià|intosegà)|deversif(ik|eg)à|in(formigo[lƚ]à|kantexemà)|konpanadegà|reinprov[ae]rà|rekonsid[ae]rà|skrimiato[lƚ]à)$/,
-
 			/^(inkat[ao]rigo[lƚ]à|[sŧ]irkumnavegà|despropoxità)$/,
-
 			/^dexlonbrià$/
 		];
 
