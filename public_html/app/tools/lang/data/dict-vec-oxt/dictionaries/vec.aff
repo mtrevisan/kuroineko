@@ -2995,7 +2995,7 @@ SFX U uni úi uni
 
 # sostantivi plurali maskili e femenili ko trasformaŧion '.+[aeou][ln] > Vi
 SFX u Y 3
-SFX u đ i [aeou]đ
+SFX u đo i òđo
 SFX u l i [aeou]l
 SFX u n i [aeou]n
 
@@ -3010,6 +3010,87 @@ SFX V ol òl/BU [rs]ol
 SFX V oƚo ioƚo/B [rs]oƚo
 SFX V oƚo iòƚo/B [rs]oƚo
 SFX V oƚo òƚo/B [rs]oƚo
+
+# nominali denominali
+SFX R Y 5
+SFX R 0 ista/C l
+SFX R a ista/C a
+SFX R e ista/C e
+SFX R o ista/C [^i]o
+SFX R o sta/C io
+
+# nominali deverbali
+SFX r Y 14
+SFX r r mento/TI [^e]r
+SFX r r mento/TI [^ñstx]er
+SFX r r mento/TI [^àéò]ser
+SFX r r mento/TI [^è]ñer
+SFX r r mento/TI [^à]ter
+SFX r r mento/TI [^èr]xer
+SFX r r mento/TI [^à]rxer
+SFX r àser asimento/TI àser
+SFX r àter atimento/TI àter
+SFX r éser esimento/TI éser
+SFX r òver ovimento/TI òver
+SFX r èxer eximento/TI èxer
+SFX r èñer eñimento/TI èñer
+SFX r àrxer arximento/TI àrxer
+
+# nominali deverbali
+SFX s Y 48
+SFX s r sion/DU [^aei]r
+SFX s r ŧion/DU [^aei]r
+SFX s r sion/DU [^t]ar
+SFX s r ŧion/DU [^t]ar
+SFX s r sion/DU [^en]tar
+SFX s r ŧion/DU [^en]tar
+SFX s r sion/DU [^p]etar
+SFX s r ŧion/DU [^p]etar
+SFX s r sion/DU [^s]petar
+SFX s r ŧion/DU [^s]petar
+SFX s r sion/DU [^e]ntar
+SFX s r ŧion/DU [^e]ntar
+SFX s r sion/DU [^x]entar
+SFX s r ŧion/DU [^x]entar
+SFX s r sion/DU [^à]er
+SFX s r ŧion/DU [^à]er
+SFX s r sion/DU [^u]ir
+SFX s r ŧion/DU [^u]ir
+SFX s tar sion/DU spetar
+SFX s tar ŧion/DU spetar
+SFX s tar sion/DU xentar
+SFX s tar ŧion/DU xentar
+SFX s àer asion/DU àer
+SFX s àer aŧion/DU àer
+SFX s ir sion/DU uir
+SFX s ir ŧion/DU uir
+SFX s xerò sion/DU [eiu]xerò
+SFX s xerò ŧion/DU [eiu]xerò
+SFX s orxerò ureŧion sorxerò
+SFX s merò nsion/DU umerò
+SFX s merò nŧion/DU umerò
+SFX s nerò xision/DU onerò
+SFX s nerò xiŧion/DU onerò
+SFX s verò sion/DU iverò
+SFX s verò ŧion/DU iverò
+SFX s erò ision/DU eterò
+SFX s erò iŧion/DU eterò
+SFX s derò sion/DU enderò
+SFX s derò ŧion/DU enderò
+SFX s ñerò nsion/DU eñerò
+SFX s ñerò nŧion/DU eñerò
+SFX s tar sion/DU ventar
+SFX s tar ŧion/DU ventar
+SFX s verò usion/DU olverò
+SFX s verò uŧion/DU olverò
+SFX s lverò ƚusion/DU olverò
+SFX s guerò sion/DU stinguerò
+SFX s guerò ŧion/DU stinguerò
+
+# nominali deaverbiali
+SFX S Y 2
+SFX S 0 ixmo/T n
+SFX S a ixmo/T a
 
 # avèrbi
 SFX W Y 4
