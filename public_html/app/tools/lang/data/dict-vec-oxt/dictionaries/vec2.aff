@@ -22,7 +22,6 @@
 # License along with the "diŧionario de lengua vèneta", if not,
 # see <http://www.gnu.org/licenses/>.
 
-
 NAME Diŧionario de lengua vèneta
 VERSION 1.0.4 (2016/04/08)
 HOME http://parnodexmentegar.orgfree.com/
@@ -30,13 +29,15 @@ LANG vec
 
 SET UTF-8
 
-TRY -'‘’eaoinrtlƚsdkpvmuèxgfàòbíhéŧójñcúSđLȽIPETKKAMDNFBRJGɉCOUĐXÀÈŦHɈÒÑÍÉÓÚ
 
-KEY esdr|redft|trfg|uhji|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà-|àòèù-|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìè'
+TRY ʼeaoinrtlƚsdkpvmuèxgfàòbíhéŧójɉñcúSđLȽIPETKKAMDNFBRJGCOUĐXÀÈŦɈÒÑÍÉÓÚ-
+
+KEY esdr|redft|trfg|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà-|àòèù-|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìè
 
 WORDCHARS -'‘’
 
-FLAG UTF-8
+# avoid wrong spelling of letterwords (km, GHz, DVD, ...)
+KEEPCASE Z
 
 # affix rules can strip full words, not only one less characters
 FULLSTRIP
@@ -104,8 +105,7 @@ REP ù ú
 # REP '[eèéaàoòóiínrlƚtskdpvmuúgxfŧbjɉñđc]>’_.
 
 
-# avoid wrong spelling of letterwords
-KEEPCASE Z  # km, GHz, DVD, ...
+FLAG UTF-8
 
 
 SFX A Y 73031 # vèrbi
@@ -73754,10 +73754,3 @@ PFX $ 0 MM [XLC]
 PFX $ 0 MMX [LC]
 PFX $ 0 MML X
 
-
-
-#PFX d Y 1
-#PFX d 0 stra .
-
-#PFX e Y 1
-#PFX e 0 pre .

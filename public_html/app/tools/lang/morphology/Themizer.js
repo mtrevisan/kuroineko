@@ -482,7 +482,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/lang/phon
 			/glo(ria|me|bo)/,
 
 			/groa/,
-			/bro([dgjɉx]a|de|[dk]o)/,
+			/bro([dgjɉx]a|[dk]o)/,
 			/fro[dñx]a/,
 			/grosa/,
 			/kro([klƚs]a|i|k?o)/,
