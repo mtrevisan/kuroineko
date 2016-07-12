@@ -436,7 +436,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/lang/phon
 			/mo([gjɉklƚstŧ]a|nia|xe|ri|[klƚ]o|du)/,
 			/no([cdjɉklƚstv]a|vra|me|dri|ku)/,
 			/ñok[ao]/,
-			/po([cđjɉlƚtx]a|[ds]e|xi|[kpv]o)/,
+			/po([cđjɉlƚt]a|[ds]e|xi|[kpv]o)/,
 			/ro([bcdgklƚñ]a|[vx]e|[df]o)/,
 			/so([cdjɉmñrt]a|[nsŧ]ia|[lƚ]i|fri)/,
 			/to([clƚpsŧ]a|[lƚs]e|ko)/,
