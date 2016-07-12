@@ -1996,7 +1996,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ingrotol",		"",			4,	8,	"a",	"",				"Intiriŧir, ranikiar.",
 "iniŧi",			"",			1,	2,	"a",	"1775",			"",
 "inɉuri",		"",			1,	3,	"a",	"1433",			"",
-"inkiostr",		"",			1,	4,	"g",	"1775",			"",
+"incostr",		"",			1,	3,	"g",	"1775",			"",
 "inond",			"",			1,	2,	"a",	"",				"",
 "inp",			"ad",			4,	3,	"a",	"1503",			"",
 "inpax",			"",			1,	3,	"g",	"1409",			"",
