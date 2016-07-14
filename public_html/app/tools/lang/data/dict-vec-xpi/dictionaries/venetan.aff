@@ -373,7 +373,7 @@ SFX b uer udo/B uer
 # themeT1 + er/cE, themeT1 + ar/cE
 # themeT4 + rò/cJ
 # themeT8 + o/cEJ
-SFX c Y 178
+SFX c Y 177
 SFX c ò à/FJL ò
 SFX c ò àe/F ò
 SFX c ò è/J ò
@@ -534,12 +534,11 @@ SFX c rò ge rò
 SFX c rò me/G rò
 SFX c rò mo/EJ rò
 SFX c rò n/J rò
-SFX c rò ndo/E [^ai]rò
+SFX c rò ndo/E rò
 SFX c rò ne/K rò
 SFX c rò nse rò
 SFX c rò nte/I rò
-SFX c rò nto rò
-SFX c rò nto/E [^ai]rò
+SFX c rò nto/E rò
 SFX c rò se/IT rò
 SFX c rò sto/BI rò
 SFX c rò va/FJN rò
@@ -555,7 +554,7 @@ SFX c uerò udo/B uerò
 
 # vèrbi -<is>ír
 # themeT1 + ir/AdE
-SFX d Y 256
+SFX d Y 254
 SFX d 0 me/G ir
 SFX d ir é/F ir
 SFX d ir éa/FJN ir
@@ -695,11 +694,10 @@ SFX d ir arone/K ir
 SFX d ir aronse ir
 SFX d ir en/J ir
 SFX d ir endo/E ir
-SFX d ir ento/E ir
 SFX d ir ene/K ir
 SFX d ir ense ir
 SFX d ir ente/I ir
-SFX d ir ento ir
+SFX d ir ento/E ir
 SFX d ir erà/FJL ir
 SFX d ir eràe/F ir
 SFX d ir eràvelo/B ir
@@ -789,7 +787,6 @@ SFX d r sege/N ir
 SFX d r sen/J ir
 SFX d r sene/K ir
 SFX d r sense ir
-SFX d r sié ir
 SFX d r sié/N ir
 SFX d r si/EFL ir
 SFX d r siede/N ir
@@ -1063,7 +1060,7 @@ SFX e r vonse ir
 # vèrbi -<is>ír/-ír
 # themeT1 + ir/AfE
 # themeT8 + o/fEJ
-SFX f Y 263
+SFX f Y 262
 SFX f 0 me/G ir
 SFX f ir é/FN ir
 SFX f ir éa/FJN ir
@@ -1298,7 +1295,6 @@ SFX f r sege/N ir
 SFX f r sen/J ir
 SFX f r sene/K ir
 SFX f r sense ir
-SFX f r sié ir
 SFX f r sié/N ir
 SFX f r si/EFL ir
 SFX f r siede/N ir
@@ -1352,7 +1348,7 @@ SFX g oe ine/K oe
 # vèrbi -àr inregolari ((dex)dar, (kon|kontra|[lƚ]ikue|putre|rare|re|sora|stra|stupe|tore|tume)far, (mal|move|soto)star)
 # themeT1 + r/AhE
 # themeT8 + o/hEJ
-SFX h Y 176
+SFX h Y 175
 SFX h ar à/BE ar
 SFX h ar àami/K ar
 SFX h ar àau/O ar
@@ -1378,7 +1374,6 @@ SFX h ar àvimo/J ar
 SFX h ar àvimoe/K ar
 SFX h ar àvitu/M ar
 SFX h ar àvomi/K ar
-SFX h ar è ar
 SFX h ar è/FN ar
 SFX h ar ème/G ar
 SFX h ar èmene/G ar
@@ -1532,7 +1527,7 @@ SFX h r se/IT ar
 
 # vèrbi -àr inregolari ((re)andar)
 # themeT1 + r/AahiE
-SFX i Y 38
+SFX i Y 37
 SFX i ào aga vào
 SFX i ào agi/FL vào
 SFX i ào ago/J vào
@@ -1560,7 +1555,6 @@ SFX i andar vione/K andar
 SFX i andar vionme/G andar
 SFX i andar viónmene/G andar
 SFX i andar von/EJ andar
-SFX i andar vone andar
 SFX i andar vone/K andar
 SFX i andar vonme/G andar
 SFX i andar vónmene/G andar
@@ -1970,7 +1964,7 @@ SFX l er éntomene/G er
 # vèrbi '-er inregolari (déver)
 # themeT1 + r/mE
 # themeT4 + rò/mJ
-SFX m Y 184
+SFX m Y 183
 SFX m ò à/FJL ò
 SFX m ò àe/F ò
 SFX m ò è/J ò
@@ -2129,7 +2123,6 @@ SFX m rò n/J rò
 SFX m rò ndo/E rò
 SFX m rò nse rò
 SFX m rò nte/I rò
-SFX m rò nto rò
 SFX m rò nto/E rò
 SFX m rò se/IT rò
 SFX m rò sto/BI rò
@@ -2897,11 +2890,12 @@ SFX I ɉa c ɉa
 SFX I ɉe c ɉe
 
 # interogativi prima parsona singolar e plural (stakài)
-SFX J Y 10
+SFX J Y 11
 SFX J 0 -e
 SFX J 0 -i
-SFX J 0 -mi [^m][^o]
-SFX J 0 -mi [^n]
+SFX J 0 -mi [^on]
+SFX J 0 -mi [^m]o
+SFX J 0 -mi [^eo]n
 SFX J 0 -te n
 SFX J 0 -ti n
 SFX J 0 -ne [^n]
