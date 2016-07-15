@@ -102,57 +102,58 @@ FLAG UTF-8
 
 # vèrbi -àr, -ér, -<is>ír, -ír, -<is>ír/-ír
 # T1 + r/AaE, T1 + r/AbE, T1 + r/AdE, T1 + r/AeE, T1 + r/AfE
-# T4 + rà/AJELP
-# T8 + o/AJT
-SFX A Y 178
-SFX A à è/J rà po:indicative_future
-SFX A à èmi rà po:indicative_future
-SFX A à é/N rà po:indicative_future
-SFX A à émone/K rà po:indicative_future
-SFX A à ésimo/J rà po:conditional_present
-SFX A à ésimoe/K rà po:conditional_present po:interrogative
-SFX A à éu/O rà po:indicative_future
-SFX A à ía/JLP rà po:conditional_present
-SFX A à íami rà po:conditional_present po:interrogative
-SFX A à íatu/M rà po:conditional_present po:interrogative
-SFX A à íe/JP rà po:conditional_present
-SFX A à íelo/B rà po:conditional_present po:interrogative
-SFX A à íemi rà po:conditional_present po:interrogative
-SFX A à íselo/B rà po:conditional_present
-SFX A à ò/J rà po:indicative_future
-SFX A à òmi rà po:indicative_future po:interrogative
-SFX A à alo/B rà po:indicative_future
-SFX A à ame/GT rà po:indicative_future
-SFX A à atu/M rà po:indicative_future
-SFX A à ave/PQ rà po:conditional_present
-SFX A à emo/J rà po:indicative_future
-SFX A à en/J rà po:indicative_future po:conditional_present
-SFX A à ene/K rà po:indicative_future po:conditional_present po:interrogative
-SFX A à ense rà po:conditional_present
-SFX A à esi/N rà po:conditional_present
-SFX A à esiu/O rà po:conditional_present po:interrogative
-SFX A à ié/N rà po:conditional_present
-SFX A à iéu/O rà po:conditional_present po:interrogative
-SFX A à ion/J rà po:conditional_present
-SFX A à ionse rà po:conditional_present
-SFX A à ise-lo/B rà po:conditional_present
-SFX A à isen/J rà po:conditional_present
-SFX A à isene/K rà po:conditional_present po:interrogative
-SFX A à isense rà po:conditional_present
-SFX A à isié/N rà po:conditional_present
-SFX A à isiéu/O rà po:conditional_present po:interrogative
-SFX A à ision/J rà po:conditional_present
-SFX A à isionse rà po:conditional_present
-SFX A à ison/J rà po:conditional_present
-SFX A à isonse rà po:conditional_present
-SFX A à on/J rà po:indicative_future po:conditional_present
-SFX A à one/K rà po:indicative_future po:interrogative
-SFX A à onse rà po:conditional_present
-SFX A 0 èmi [aei]r po:interrogative
+# T4 + rà/AJLP
+# T8 + o/AaJ, T8 + o/AbJ
+# T8 + oe/AaK, T8 + oe/AbK
+SFX A Y 184
+SFX A ò è/J rò po:indicative_future
+SFX A ò é/N rò po:indicative_future
+SFX A ò émone/K rò po:indicative_future
+SFX A ò ésimo/J rò po:conditional_present
+SFX A ò ésimoe/K rò po:conditional_present po:interrogative
+SFX A ò ésitu/M rò po:conditional_present po:interrogative
+SFX A ò éu/O rò po:indicative_future
+SFX A ò ía/JLP rò po:conditional_present
+SFX A ò íami rò po:conditional_present po:interrogative
+SFX A ò íatu/M rò po:conditional_present po:interrogative
+SFX A ò íe/JP rò po:conditional_present
+SFX A ò íelo/B rò po:conditional_present po:interrogative
+SFX A ò íemi rò po:conditional_present po:interrogative
+SFX A ò íselo/B rò po:conditional_present
+SFX A ò ò/J rò po:indicative_future
+SFX A ò alo/B rò po:indicative_future
+SFX A ò ame/GT rò po:indicative_future
+SFX A ò atu/M rò po:indicative_future
+SFX A ò ave/PQ rò po:conditional_present
+SFX A ò emo/J rò po:indicative_future
+SFX A ò en/J rò po:indicative_future po:conditional_present
+SFX A ò ene/K rò po:indicative_future po:conditional_present po:interrogative
+SFX A ò ense rò po:conditional_present
+SFX A ò esi/LN rò po:conditional_present
+SFX A ò esiu/O rò po:conditional_present po:interrogative
+SFX A ò ié/N rò po:conditional_present
+SFX A ò iéu/O rò po:conditional_present po:interrogative
+SFX A ò ion/J rò po:conditional_present
+SFX A ò ionse rò po:conditional_present
+SFX A ò ise-lo/B rò po:conditional_present
+SFX A ò isen/J rò po:conditional_present
+SFX A ò isene/K rò po:conditional_present po:interrogative
+SFX A ò isense rò po:conditional_present
+SFX A ò isié/N rò po:conditional_present
+SFX A ò isiéu/O rò po:conditional_present po:interrogative
+SFX A ò ision/J rò po:conditional_present
+SFX A ò isionse rò po:conditional_present
+SFX A ò ison/J rò po:conditional_present
+SFX A ò isonse rò po:conditional_present
+SFX A ò on/J rò po:indicative_future po:conditional_present
+SFX A ò one/K rò po:indicative_future po:interrogative
+SFX A ò onse rò po:conditional_present
+SFX A 0 èmi [aei]r po:indicative_future po:interrogative
 SFX A 0 e [aei]r po:infinitive_simple
-SFX A 0 e/P rà po:conditional_present
+SFX A 0 e/P rò po:conditional_present
 SFX A 0 me/G [aei]r is:infinitive_simple
-SFX A 0 mene/G rà po:indicative_future
+SFX A 0 mene/G rò po:indicative_future
+SFX A 0 mi rò po:indicative_future po:interrogative
 SFX A 0 n/J o po:indicative_present po:subjunctive_present
 SFX A 0 ne/K o po:indicative_present po:subjunctive_present
 SFX A ar àndome/G ar po:gerund po:simple
@@ -226,51 +227,57 @@ SFX A ir ívone/K ir po:indicative_imperfect po:interrogative
 SFX A ir eme/H ir po:imperative_present
 SFX A ir emo/J ir po:indicative_present po:subjunctive_present
 SFX A ir endo/E ir po:gerund po:simple
-SFX A o a o po:subjunctive_present
-SFX A o e/J o po:indicative_present po:subjunctive_present
-SFX A o eme/G o po:indicative_present
+SFX A o a/F o po:subjunctive_present po:imperative_present
+SFX A o e/EJ o po:indicative_present po:subjunctive_present
 SFX A o en/J o po:indicative_present po:subjunctive_present
-SFX A o ene/K o po:indicative_present po:subjunctive_present
+SFX A o i/FL o po:indicative_present po:imperative_present
 SFX A o ion [^cijɉñ]o po:subjunctive_present
 SFX A o ione [^cijɉñ]o po:subjunctive_present
-SFX A o ome/G o po:indicative_present
-SFX A rà en/J rà po:indicative_imperfect po:subjunctive_imperfect
-SFX A rà ene/K rà po:indicative_imperfect po:subjunctive_imperfect
-SFX A rà ense rà po:indicative_imperfect po:subjunctive_imperfect
-SFX A rà ié/N rà po:indicative_imperfect po:subjunctive_imperfect
-SFX A rà iéu/O rà po:indicative_imperfect
-SFX A rà iede/N rà po:subjunctive_imperfect
-SFX A rà iege/N rà po:subjunctive_imperfect
-SFX A rà ion/J [^cijɉñ][aei]rà po:indicative_imperfect po:subjunctive_imperfect
-SFX A rà ione/K [^cijɉñ][aei]rà po:indicative_imperfect po:subjunctive_imperfect
-SFX A rà ione/K rà po:subjunctive_imperfect
-SFX A rà ionse/K [^cijɉñ][aei]rà po:indicative_imperfect po:subjunctive_imperfect
-SFX A rà isen/J rà po:subjunctive_imperfect
-SFX A rà isene/K rà po:subjunctive_imperfect
-SFX A rà isense rà po:subjunctive_imperfect
-SFX A rà isié/N rà po:subjunctive_imperfect
-SFX A rà isiede/N rà po:subjunctive_imperfect
-SFX A rà isiege/N rà po:subjunctive_imperfect
-SFX A rà ision/J rà po:subjunctive_imperfect
-SFX A rà isione/K rà po:subjunctive_imperfect
-SFX A rà isionse rà po:subjunctive_imperfect
-SFX A rà ison/J rà po:subjunctive_imperfect
-SFX A rà isone/K rà po:subjunctive_imperfect
-SFX A rà isonse rà po:subjunctive_imperfect
-SFX A rà iven/J rà po:indicative_imperfect
-SFX A rà ivene/K rà po:indicative_imperfect
-SFX A rà ivense rà po:indicative_imperfect
-SFX A rà ivié/N rà po:indicative_imperfect
-SFX A rà iviéu/O rà po:indicative_imperfect
-SFX A rà ivion/J rà po:indicative_imperfect
-SFX A rà ivione/K rà po:indicative_imperfect
-SFX A rà ivionse [^cijɉñ][aei]rà po:indicative_imperfect
-SFX A rà ivon/J rà po:indicative_imperfect
-SFX A rà ivone/K rà po:indicative_imperfect
-SFX A rà ivonse rà po:indicative_imperfect
-SFX A rà on/J rà po:indicative_imperfect po:subjunctive_imperfect
-SFX A rà one/K rà po:indicative_imperfect po:subjunctive_imperfect
-SFX A rà onse rà po:indicative_imperfect po:subjunctive_imperfect
+SFX A oe ame/H oe po:imperative_present
+SFX A oe elo/B oe po:indicative_present
+SFX A oe eme/G oe po:indicative_present
+SFX A oe emene/G oe po:indicative_present
+SFX A oe ene/K oe po:indicative_present po:subjunctive_present
+SFX A oe ime/H oe po:imperative_present
+SFX A oe itu/M oe po:imperative_present
+SFX A oe ome/G oe po:indicative_present
+SFX A oe omene/G oe po:indicative_present
+SFX A rò en/J rò po:indicative_imperfect po:subjunctive_imperfect
+SFX A rò ene/K rò po:indicative_imperfect po:subjunctive_imperfect
+SFX A rò ense rò po:indicative_imperfect po:subjunctive_imperfect
+SFX A rò ié/N rò po:indicative_imperfect po:subjunctive_imperfect
+SFX A rò iéu/O rò po:indicative_imperfect
+SFX A rò iede/N rò po:subjunctive_imperfect
+SFX A rò iege/N rò po:subjunctive_imperfect
+SFX A rò ion/J [^cijɉñ][aei]rò po:indicative_imperfect po:subjunctive_imperfect
+SFX A rò ione/K rò po:indicative_imperfect po:subjunctive_imperfect
+SFX A rò ionse/K [^cijɉñ][aei]rò po:indicative_imperfect po:subjunctive_imperfect
+SFX A rò isen/J rò po:subjunctive_imperfect
+SFX A rò isene/K rò po:subjunctive_imperfect
+SFX A rò isense rò po:subjunctive_imperfect
+SFX A rò isié/N rò po:subjunctive_imperfect
+SFX A rò isiede/N rò po:subjunctive_imperfect
+SFX A rò isiege/N rò po:subjunctive_imperfect
+SFX A rò ision/J rò po:subjunctive_imperfect
+SFX A rò isione/K rò po:subjunctive_imperfect
+SFX A rò isionse rò po:subjunctive_imperfect
+SFX A rò ison/J rò po:subjunctive_imperfect
+SFX A rò isone/K rò po:subjunctive_imperfect
+SFX A rò isonse rò po:subjunctive_imperfect
+SFX A rò iven/J rò po:indicative_imperfect
+SFX A rò ivene/K rò po:indicative_imperfect
+SFX A rò ivense rò po:indicative_imperfect
+SFX A rò ivié/N rò po:indicative_imperfect
+SFX A rò iviéu/O rò po:indicative_imperfect
+SFX A rò ivion/J rò po:indicative_imperfect
+SFX A rò ivione/K rò po:indicative_imperfect
+SFX A rò ivionse [^cijɉñ][aei]rò po:indicative_imperfect
+SFX A rò ivon/J rò po:indicative_imperfect
+SFX A rò ivone/K rò po:indicative_imperfect
+SFX A rò ivonse rò po:indicative_imperfect
+SFX A rò on/J rò po:indicative_imperfect po:subjunctive_imperfect
+SFX A rò one/K rò po:indicative_imperfect po:subjunctive_imperfect
+SFX A rò onse rò po:indicative_imperfect po:subjunctive_imperfect
 SFX A r da/DY [ai]r po:participle po:perfect
 SFX A r do/TY [ai]r po:participle po:perfect
 SFX A r me/H ir po:imperative_present
@@ -287,46 +294,44 @@ SFX A r vo/J [aei]r po:indicative_imperfect
 # vèrbi -àr
 # T1 + r/AaE
 # T8 + o/AaJT
-SFX a Y 2
-SFX a o a/F o po:imperative_present
-SFX a o ame/H o po:imperative_present
+# T8 + oe/AaK
+#SFX a Y 0
 
 # vèrbi -ér
 # T1 + r/AbE
-# T8 + o/AbJT
-SFX b Y 2
-SFX b o i/F o po:imperative_present
-SFX b o ime/H o po:imperative_present
+# T8 + o/AbJ
+# T8 + oe/AbK
+#SFX b Y 0
 
 # vèrbi '-er/'-ar
 # T1 + [ea]r/c
 # T8 + o/c
 SFX c Y 2
 SFX c o i/F o po:imperative_present
-SFX c o ime/H o po:imperative_present
+SFX c oe ime/H oe po:imperative_present
 
 # vèrbi -<is>ír
 # T1 + ir/AdE
 # T8 + o/AdJT
-SFX d Y 2
-SFX d o ísime/H o po:imperative_present
-SFX d o isi/F o po:imperative_present
+#SFX d Y 2
+#SFX d iso ísime/H iso po:imperative_present
+#SFX d o i/F iso po:imperative_present
 
 # vèrbi -ír
 # T1 + ir/AeE
 # T8 + o/AeJT
 SFX e Y 2
 SFX e o i/F o po:imperative_present
-SFX e o ime/H o po:imperative_present
+SFX e oe ime/H oe po:imperative_present
 
 # vèrbi -<is>ír/-ír
 # T1 + ir/AfE
 # T8 + o/AfJT
 SFX f Y 4
-SFX f o ísime/H o po:imperative_present
+SFX f iso ísime/H iso po:imperative_present
 SFX f o i/F o po:imperative_present
-SFX f o ime/H o po:imperative_present
-SFX f o isi/F o po:imperative_present
+SFX f oe ime/H oe po:imperative_present
+SFX f o i/F iso po:imperative_present
 
 
 
