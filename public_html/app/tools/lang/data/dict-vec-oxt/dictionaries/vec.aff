@@ -112,7 +112,7 @@ FLAG UTF-8
 # themeT1 + r/aE, themeT1 + r/acE, themeT1 + r/adE, themeT1 + r/aeE
 # themeT8 + o/aEIJ
 # themeT8 + oe/aK
-SFX a Y 432
+SFX a Y 431
 SFX a 0 à/FJL [aei]r
 SFX a 0 àe/F [aei]r
 SFX a 0 àvelo/B [aei]r
@@ -499,7 +499,6 @@ SFX a er onme/G er
 SFX a er udo/B [^u]er
 SFX a ir ímene/G ir
 SFX a ir írmene/G ir
-SFX a ne e/T ne
 SFX a o ímene/G o
 SFX a o a/EF o
 SFX a o e/EFIJ o
@@ -1503,14 +1502,76 @@ SFX e r vonse ir
 
 
 # vèrbi -àr inregolari ((dex)dar, (kon|kontra|[lƚ]iku[ei]|putre|rare|re|sora|stra|stupe|tore|tume)far, (mal|move|soto)star)
-# themeT1 + r/ahE
-SFX h Y 176
+# themeT1 + r/hE
+# themeT8 + o/hEIJ
+# themeT8 + oe/hEIJ
+# themeT6 + do/TY
+# themeT6 + da/DY
+SFX h Y 286
+SFX h 0 à/FJL ar
+SFX h 0 àe/F ar
+SFX h 0 àvelo/B ar
+SFX h 0 àveƚo/B ar
+SFX h 0 è/J ar
+SFX h 0 ène/K ar
+SFX h 0 é/N ar
+SFX h 0 émoe/K ar
+SFX h 0 ésimo/J ar
+SFX h 0 ésimoe/K ar
+SFX h 0 ésitu/M ar
+SFX h 0 éu/O ar
+SFX h 0 ía/FJL ar
+SFX h 0 íane/K ar
+SFX h 0 íatu/M ar
+SFX h 0 íe/FJ ar
+SFX h 0 íelo/B ar
+SFX h 0 íeƚo/B ar
+SFX h 0 íene/K ar
+SFX h 0 ò/J ar
+SFX h 0 òne/K ar
+SFX h 0 ónmene/G ar
+SFX h 0 alo/B ar
+SFX h 0 aƚo/B ar
+SFX h 0 ane/K ar
+SFX h 0 atu/M ar
+SFX h 0 ave/FQ ar
+SFX h 0 e ar
+SFX h 0 emo/EJ ar
+SFX h 0 en/J ar
+SFX h 0 ene/K ar
+SFX h 0 ense ar
+SFX h 0 esi/N ar
+SFX h 0 esiu/O ar
+SFX h 0 ié/N ar
+SFX h 0 iéu/O ar
+SFX h 0 iónmene/G [^cijɉñ]ar
+SFX h 0 ion/EJ [^cijɉñ]ar
+SFX h 0 ione/K [^cijɉñ]ar
+SFX h 0 ionme/G [^cijɉñ]ar
+SFX h 0 isen/J ar
+SFX h 0 isene/K ar
+SFX h 0 isense ar
+SFX h 0 isié/N ar
+SFX h 0 isiéu/O ar
+SFX h 0 ision/J ar
+SFX h 0 isione/K ar
+SFX h 0 isionse ar
+SFX h 0 ison/J ar
+SFX h 0 isone/K ar
+SFX h 0 isonse ar
+SFX h 0 me/G ar
+SFX h 0 on/EJ ar
+SFX h 0 one/K ar
+SFX h 0 onme/G ar
 SFX h ar à/BE ar
+SFX h ar àa/FJN ar
 SFX h ar àane/K ar
 SFX h ar àau/O ar
+SFX h ar àe/J ar
 SFX h ar àelo/B ar
 SFX h ar àeƚo/B ar
 SFX h ar àene/K ar
+SFX h ar ài/JLN ar
 SFX h ar àimo/J ar
 SFX h ar àimoe/K ar
 SFX h ar àitu/M ar
@@ -1519,9 +1580,11 @@ SFX h ar àndome/G ar
 SFX h ar àndomene/G ar
 SFX h ar àntome/G ar
 SFX h ar àntomene/G ar
+SFX h ar ào/J ar
 SFX h ar àone/K ar
 SFX h ar àrmene/G ar
 SFX h ar àsimo ar
+SFX h ar àsitu/M ar
 SFX h ar àvane/K ar
 SFX h ar àvau/O ar
 SFX h ar àvelo/B ar
@@ -1536,23 +1599,32 @@ SFX h ar ème/G ar
 SFX h ar èmene/G ar
 SFX h ar èu/O ar
 SFX h ar é/FN ar
+SFX h ar éa/FJN ar
 SFX h ar éane/K ar
 SFX h ar éau/O ar
+SFX h ar ée/J ar
 SFX h ar éelo/B ar
 SFX h ar éeƚo/B ar
 SFX h ar éene/K ar
+SFX h ar éi/JLN ar
 SFX h ar éimo/J ar
 SFX h ar éimoe/K ar
 SFX h ar éitu/M ar
 SFX h ar émoe/K ar
 SFX h ar émome/G ar
 SFX h ar émomene/G ar
+SFX h ar éndome/G ar
+SFX h ar éndomene/G ar
+SFX h ar éntome/G ar
+SFX h ar éntomene/G ar
+SFX h ar éo/J ar
 SFX h ar éone/K ar
 SFX h ar ésimo ar
+SFX h ar éu/O ar
 SFX h ar évane/K ar
 SFX h ar évau/O ar
 SFX h ar évelo/B ar
-SFX h ar éVeƚo/B ar
+SFX h ar éveƚo/B ar
 SFX h ar évene/K ar
 SFX h ar évimo/J ar
 SFX h ar évimoe/K ar
@@ -1647,7 +1719,6 @@ SFX h ar isié/N ar
 SFX h ar isiede/N ar
 SFX h ar isiege/N ar
 SFX h ar ision/J ar
-SFX h ar isione ar
 SFX h ar isione/K ar
 SFX h ar isionse ar
 SFX h ar ison/J ar
@@ -1667,23 +1738,65 @@ SFX h ar ivonse ar
 SFX h ar on/EJ ar
 SFX h ar one/K ar
 SFX h ar onme/G ar
+SFX h e me/G oe
+SFX h e mene/G oe
+SFX h e ne/T [^n]e
+SFX h e nte/T [^n]e
+SFX h e nto [^n]e
+SFX h e te/T ne
+SFX h e u/O oe
+SFX h o ímene/G o
 SFX h o a/EF o
+SFX h o ga/EF o
+SFX h o go/EIJ o
 SFX h o e/EFIJ o
+SFX h o elo/B o
+SFX h o eƚo/B o
+SFX h o ene/K o
 SFX h o i/EFL o
+SFX h ào à/EFL ào
+SFX h o gi/EFL o
+SFX h o ime/G o
+SFX h o itu/M o
+SFX h o one/K o
+SFX h oe ae/T oe
+SFX h oe ame/G oe
+SFX h oe amene/G oe
+SFX h oe ane/K oe
+SFX h oe gae/T oe
+SFX h oe game/G oe
+SFX h oe gamene/G oe
+SFX h oe gane/K oe
+SFX h oe ee/T oe
 SFX h oe elo/B oe
 SFX h oe eƚo/B oe
+SFX h oe eme/G oe
+SFX h oe emene/G oe
 SFX h oe ene/K oe
 SFX h oe ime/G oe
 SFX h oe imene/G oe
+SFX h oe ine/K oe
 SFX h oe itu/M oe
+SFX h oe gime/G oe
+SFX h oe gimene/G oe
+SFX h oe gine/K oe
+SFX h oe gitu/M oe
 SFX h oe one/K oe
+SFX h oe gone/K oe
 SFX h r do/BI ar
 SFX h r me/G ar
+SFX h r ndo/E ar
 SFX h r nte/I ar
+SFX h r nto/E ar
 SFX h r se/IT ar
+SFX h r sto/BI ar
+SFX h r va/FJN ar
+SFX h r ve/J ar
+SFX h r vi/JLN ar
+SFX h r vo/J ar
 
 # vèrbi -àr inregolari ((re)andar)
-# themeT1 + r/AahiE
+# themeT1 + r/ahiE
 SFX i Y 37
 SFX i ào aga vào
 SFX i ào agi/FL vào
