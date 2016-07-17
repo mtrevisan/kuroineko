@@ -102,6 +102,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "arkibuj",		"",			1,	5,	"a",	"1563",			"",
 "arkibux",		"",			1,	5,	"a",	"1587",			"",
 "arlekin",		"",			1,	5,	"a",	"1810",			"",
+"arlikin",		"",			1,	5,	"a",	"1847",			"",
 "arm",			"",			1,	0,	"g",	"1775",			"",
 "armiđ",			"",			1,	3,	"a",	"1852",			"Ormexar on bastimento.",
 "armiđ",			"dex",		1,	3,	"a",	"1854",			"",
