@@ -105,7 +105,7 @@ FLAG UTF-8
 # themeT1 + r/aE, themeT1 + r/acE, themeT1 + r/adE, themeT1 + r/aeE
 # themeT8 + o/aEIJ
 # themeT8 + oe/aK
-SFX a Y 433
+SFX a Y 432
 SFX a 0 à/FJL [aei]r
 SFX a 0 àe/F [aei]r
 SFX a 0 àvelo/B [aei]r
@@ -129,6 +129,7 @@ SFX a 0 íene/K [aei]r
 SFX a 0 ímoe/K er
 SFX a 0 íu/O er
 SFX a 0 ò/J [aei]r
+SFX a 0 òne/K [aei]r
 SFX a 0 ónmene/G [aei]r
 SFX a 0 alo/B [aei]r
 SFX a 0 aƚo/B [aei]r
@@ -172,7 +173,6 @@ SFX a ar àe/J ar
 SFX a ar àelo/B ar
 SFX a ar àeƚo/B ar
 SFX a ar àene/K ar
-SFX a ar àgene/G ar
 SFX a ar ài/JLN ar
 SFX a ar àimo/J ar
 SFX a ar àimoe/K ar
@@ -359,7 +359,6 @@ SFX a er ée/J er
 SFX a er éelo/B er
 SFX a er éeƚo/B er
 SFX a er éene/K er
-SFX a er égene/G er
 SFX a er éi/JLN er
 SFX a er éimo/J er
 SFX a er éimoe/K er
@@ -452,7 +451,7 @@ SFX a er arison/J er
 SFX a er arisone/K er
 SFX a er arisonse er
 SFX a er aron/EJ er
-SFX a er arone/K er
+SFX a er aròne/K er
 SFX a er aronme/G er
 SFX a er ié/N er
 SFX a er iéu/O er
@@ -491,7 +490,7 @@ SFX a er on/EJ er
 SFX a er one/K er
 SFX a er onme/G er
 SFX a er udo/B [^u]er
-SFX a ir ígene/G ir
+SFX a ir ímene/G ir
 SFX a ir írmene/G ir
 SFX a ne e/T ne
 SFX a o ímene/G o
@@ -521,8 +520,8 @@ SFX a oe itu/M oe
 SFX a oe one/K oe
 SFX a r de er
 SFX a r do/BI ar
-SFX a r ge/G [aei]r
-SFX a r me/G er
+SFX a r ge er
+SFX a r me/G [aei]r
 SFX a r mo/J er
 SFX a r n/J er
 SFX a r ndo/E [aei]r
@@ -539,44 +538,6 @@ SFX a r vo/J [aei]r
 SFX a uer ú uer
 SFX a uer úo/B uer
 SFX a uer udo/B uer
-
-SFX 0 Y 17
-SFX 0 0 àvelo/B [aei]r
-SFX 0 0 íelo/B [aei]r
-SFX 0 0 alo/B [aei]r
-SFX 0 ar àelo/B ar
-SFX 0 ar àvelo/B ar
-SFX 0 ar éelo/B ar
-SFX 0 ar évelo/B ar
-SFX 0 ar eràvelo/B ar
-SFX 0 ar eríelo/B ar
-SFX 0 ar eralo/B ar
-SFX 0 er éelo/B er
-SFX 0 er évelo/B er
-SFX 0 er aràvelo/B er
-SFX 0 er aríelo/B er
-SFX 0 er aralo/B er
-SFX 0 o elo/B o
-SFX 0 oe elo/B oe
-
-SFX 1 Y 17
-SFX 1 0 àveƚo/B [aei]r
-SFX 1 0 íeƚo/B [aei]r
-SFX 1 0 aƚo/B [aei]r
-SFX 1 ar àeƚo/B ar
-SFX 1 ar àveƚo/B ar
-SFX 1 ar éeƚo/B ar
-SFX 1 ar éveƚo/B ar
-SFX 1 ar eràveƚo/B ar
-SFX 1 ar eríeƚo/B ar
-SFX 1 ar eraƚo/B ar
-SFX 1 er éeƚo/B er
-SFX 1 er éveƚo/B er
-SFX 1 er aràveƚo/B er
-SFX 1 er aríeƚo/B er
-SFX 1 er araƚo/B er
-SFX 1 o eƚo/B o
-SFX 1 oe eƚo/B oe
 
 # vèrbi '-er/'-ar
 # themeT1 + [ea]r/bE
@@ -1165,7 +1126,7 @@ SFX d ir erémome/G ir
 SFX d ir erémomene/G ir
 SFX d ir erésimo/J ir
 SFX d ir erésimoe/K ir
-SFX d ir erésitu/O ir
+SFX d ir erésitu/M ir
 SFX d ir eréu/O ir
 SFX d ir ería/FJL ir
 SFX d ir eríane/K ir
@@ -1174,7 +1135,7 @@ SFX d ir eríe/FJ ir
 SFX d ir eríelo/B ir
 SFX d ir eríeƚo/B ir
 SFX d ir eríene/K ir
-SFX d ir erísitu/O ir
+SFX d ir erísitu/M ir
 SFX d ir erò/J ir
 SFX d ir eròne/K ir
 SFX d ir eralo/B ir
@@ -1532,6 +1493,7 @@ SFX e r vo/J ir
 SFX e r von/J ir
 SFX e r vone/K ir
 SFX e r vonse ir
+
 
 # vèrbi -àr inregolari ((dex)dar, (kon|kontra|[lƚ]ikue|putre|rare|re|sora|stra|stupe|tore|tume)far, (mal|move|soto)star)
 # themeT1 + r/ahE
