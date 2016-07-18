@@ -1930,6 +1930,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "guant",			"dex",		1,	2,	"g",	"1867",			"Kaŧar fora.",
 "guant",			"in",			1,	2,	"g",	"1867",			"",
 "guanŧ",			"x",			1,	2,	"g",	"1775",			"Xmusar.",
+"guɉ",			"",			1,	1,	"a",	"1847",			"",
 "guɉ",			"in",			1,	1,	"a",	"1854",			"Far laori a maja.",
 "guŧ",			"",			1,	1,	"a",	"1854",			"Far laori a maja.",
 "guadañ",		"",			1,	4,	"g",	"1509",			"",
