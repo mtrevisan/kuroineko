@@ -4130,6 +4130,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pixol",			"",			1,	1,	"a",	"1810",			"",
 "plak",			"",			1,	2,	"g",	"1980",			"(bixiak)",
 "platin",		"",			1,	2,	"g",	"",				"",
+"plaŧit",		"",			1,	2,	"g",	"1847",			"Defamar.",
 "plàud",			"a",			3,	2,	"g",	"1485",			"",
 "plaud",			"a",			4,	5,	"a",	"",				"",
 "pleg",			"kon",		1,	-2,"a",	"1980",			"",
