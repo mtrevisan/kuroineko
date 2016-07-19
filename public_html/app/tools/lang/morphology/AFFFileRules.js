@@ -310,8 +310,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/fEJL	po:verb is:indicative_present st:' + inf);
 							}
 							else if(verb.special3rd){
-								console.log(inf + '/AdE	po:verb is:infinitive_simple');
-//								console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT8) + 'oe') + '/ghK	po:verb is:indicative_present is:interrogative st:' + inf);
+//ok
+								console.log(inf + '/acE	po:verb is:infinitive_simple');
+//								console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT8) + 'oe') + '/aK	po:verb is:indicative_present is:interrogative st:' + inf);
 							}
 							else{
 								console.log(inf + '/AeE	po:verb is:infinitive_simple');
