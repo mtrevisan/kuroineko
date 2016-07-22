@@ -112,7 +112,7 @@ FLAG UTF-8
 # themeT1 + r/aE, themeT1 + r/acE, themeT1 + r/adE, themeT1 + r/aeE
 # themeT8 + o/aEIJ
 # themeT8 + oe/aK
-SFX a Y 425
+SFX a Y 426
 SFX a 0 í/N er
 SFX a 0 ímoe/K er
 SFX a 0 íu/O er
@@ -446,7 +446,8 @@ SFX a ir ímene/G ir
 SFX a ir írmene/G ir
 SFX a o a/EF o
 SFX a o e/EFJ o
-SFX a o i/EFL o
+SFX a o i/EFL [^i]o
+SFX a io i/EFL io
 SFX a oe ae/T oe
 SFX a oe ame/G oe
 SFX a oe amene/G oe
@@ -969,7 +970,7 @@ SFX ć ir onme/G ir
 # vèrbi -ír
 # themeT1 + r/adE
 # themeT8 + o/dEJ
-SFX d Y 233
+SFX d Y 234
 SFX d 0 me/G ir
 SFX d ir é/FN ir
 SFX d ir éa/FJN ir
@@ -1166,7 +1167,8 @@ SFX d ir onme/G ir
 SFX d ir ónmene/G ir
 SFX d o a/E o
 SFX d o e/EFIJ o
-SFX d o i/EFL o
+SFX d o i/EFL [^i]o
+SFX d io i/EFL io
 SFX d r é/N ir
 SFX d r éu/O ir
 SFX d r do/B ir
@@ -1478,7 +1480,7 @@ SFX e r vonse ir
 # themeT8 + oe/hEIJ
 # themeT6 + do/TY
 # themeT6 + da/DY
-SFX h Y 279
+SFX h Y 280
 SFX h ào à/EFL ào
 SFX h 0 à/FJL ar
 SFX h 0 àe/F ar
@@ -1722,7 +1724,8 @@ SFX h o e/EFIJ o
 SFX h o ga/EF o
 SFX h o gi/EFL o
 SFX h o go/EIJ o
-SFX h o i/EFL o
+SFX h o i/EFL [^i]o
+SFX h io i/EFL io
 SFX h oe ae/T oe
 SFX h oe ame/G oe
 SFX h oe amene/G oe
@@ -2449,7 +2452,7 @@ SFX n xerò rónmene/G xerò
 # themeT1 + er/coE
 # themeT4 + rò/coJ
 # themeT8 + o/oJ
-SFX o Y 80
+SFX o Y 81
 SFX o aerò à/E aerò
 SFX o aerò àrmene/G aerò
 SFX o aerò è/FN aerò
@@ -2529,7 +2532,8 @@ SFX o er gone/K àer
 SFX o er ime/G er
 SFX o o a/E o
 SFX o o e/EFIJ o
-SFX o o i/EFL o
+SFX o o i/EFL [^i]o
+SFX o io i/EFL io
 
 # vèrbi '-er inregolari ((r[ei])èser)
 # themeT1 + er/p
