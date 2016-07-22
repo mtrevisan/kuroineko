@@ -1540,6 +1540,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 					{matcher: /dúx$/, replacement: 'dót'},
 					{matcher: /([lƚ])[èí][dđx]$/, replacement: '$1èt'},
 					{matcher: /strén[dđx]$/, replacement: 'strét'},
+//TODO kuèrder > kuèrto!
 					{matcher: /rd$/, replacement: 'rs'},
 					{matcher: /([^v])énd$/, replacement: '$1éx'},
 					{matcher: /([rn]|frí)[dđx]$/, replacement: '$1t'},
