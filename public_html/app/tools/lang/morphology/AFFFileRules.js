@@ -1588,6 +1588,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 				{matcher: /mòr$/, falsePositives: /(inti|mar)mòr$/, replacement: 'mòrt'},
 				{matcher: /([^aeiouàèéíòóú])r$/, falsePositives: /(mòr|núdr)$/, replacement: '$1èrt'},
 				{matcher: /sepe[lƚ]$/, replacement: 'sepólt'},
+//TODO konferir > konfèrto!
 				{matcher: /fér$/, replacement: 'fèrt'},
 				{matcher: /([aeiouàèéíòóú])r$/, replacement: '$1rs'}
 			]
