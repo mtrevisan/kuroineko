@@ -2736,6 +2736,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kuer",			"re",			4,	4,	"a",	"1412",			"",
 "kuerc",			"in",			1,	2,	"g",	"",				"Méter el kuerco.",
 "kuerc",			"s",			1,	2,	"g",	"1867",			"",
+"kuer",			"in",			4,	4,	"a",	"1852",			"",
 "kuent",			"",			1,	2,	"a",	"1560",			"Aver el korajo.",
 "kuer",			"in",			1,	2,	"g",	"1851",			"Inkuixir, procesar uno, investigar, reŧerkar.",
 "kuer",			"inter",		1,	2,	"g",	"1852",			"Inkuerir.",
