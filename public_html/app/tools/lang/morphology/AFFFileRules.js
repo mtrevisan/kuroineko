@@ -298,7 +298,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 								if(inf.match(/der$/))
 									console.log(unmarkDefaultStress(inf.replace(/der$/, 'dre')) + '	po:verb is:infinitive_simple st:' + inf);
 								console.log(unmarkDefaultStress((theme.regular.themeT4? theme.regular.themeT4: theme.irregular.themeT4) + 'rò') + '/bJ	po:verb is:indicative_future st:' + inf);
-								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/bEJ	po:verb is:indicative_present st:' + inf);
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/bEIJ	po:verb is:indicative_present st:' + inf);
 								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'oe') + '/aK	po:verb is:indicative_present is:interrogative st:' + inf);
 							}
 							break;
@@ -307,7 +307,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 							if(verb.semiSpecial3rd){
 								console.log(inf + '/AfE	po:verb is:infinitive_simple');
 //								console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/gH	po:verb is:imperative st:' + inf);
-								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/fEJL	po:verb is:indicative_present st:' + inf);
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/fEIJL	po:verb is:indicative_present st:' + inf);
 							}
 							else if(verb.special3rd){
 //ok
@@ -316,8 +316,8 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 							}
 							else{
 								console.log(inf + '/AeE	po:verb is:infinitive_simple');
-								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/eEJ	po:verb is:indicative_present st:' + inf);
-								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'oe') + '/ghK	po:verb is:indicative_present is:interrogative st:' + inf);
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/eEIJ	po:verb is:indicative_present st:' + inf);
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'oe') + '/aK	po:verb is:indicative_present is:interrogative st:' + inf);
 							}
 					}
 
@@ -339,7 +339,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 		if(t.themeT8){
 			var strong = generateParticiplePerfectStrong(verb, t.themeT8);
 			if(strong)
-				console.log(unmarkDefaultStress(strong + 'o') + '/BI	po:verb is:participle is:perfect_strong is:pers_1s st:' + unmarkDefaultStress(verb.infinitive));
+				console.log(unmarkDefaultStress(strong + 'o') + '/BI	po:verb is:participle_perfect_strong st:' + unmarkDefaultStress(verb.infinitive));
 		}
 	};
 
