@@ -2165,9 +2165,9 @@ SFX j ver risi/N gaver
 SFX j ver risiu/O gaver
 SFX j ver tu/M aver
 
-# vèrbi -ér inregolari ((re)toler, (mal|re)voler)
-# themeT1 + r/AbikE
-# themeT8 + o/bikJ
+# vèrbi -ér inregolari ((des|re)[ct]oler, (mal|re)voler)
+# themeT1 + r/akE
+# themeT8 + o/akIJ
 SFX k Y 63
 SFX k er éndome/G er
 SFX k er éndomene/G er
@@ -2225,13 +2225,13 @@ SFX k ler ron/EJ oler
 SFX k ler rone/K oler
 SFX k ler ronme/G oler
 SFX k ler rónmene/G oler
-SFX k lo ga tòlo
-SFX k lo gi/FL tòlo
-SFX k lo gime/G tòlo
-SFX k lo gimene/G tòlo
-SFX k lo gitu/M tòlo
-SFX k lo go/J tòlo
-SFX k lo gone/K tòlo
+SFX k lo ga [ct]òlo
+SFX k lo gi/FL [ct]òlo
+SFX k lo gime/G [ct]òlo
+SFX k lo gimene/G [ct]òlo
+SFX k lo gitu/M [ct]òlo
+SFX k lo go/J [ct]òlo
+SFX k lo gone/K [ct]òlo
 
 # vèrbi '-er inregolari ((a|apar|as|de|inkon|intra|kon|man|o|re|sos|tra)[ctv]èñer)
 # themeT1 + r/clE
@@ -3327,11 +3327,12 @@ SFX T a i a
 SFX T e i e
 
 # trasformaŧion intra varianti (l > ƚ, j > ɉ, ŧ > s)
-SFX t Y 15
+SFX t Y 16
 SFX t l ƚo/T [aeiouàèéíòóú]l
 SFX t la ƚa/D [aeiouàèéíòóú]la
 SFX t lio ƚio/T [aeiouàèéíòóú]lio
 SFX t lia ƚia/D [aeiouàèéíòóú]lia
+SFX t lin ƚin/T lin
 SFX t jo ɉo/T jo
 SFX t ja ɉa/D ja
 SFX t jon ɉon/DU jon
@@ -3343,6 +3344,17 @@ SFX t ŧía sía/D ŧía
 SFX t ŧion sion/DU ŧion
 SFX t ŧial sial/DU ŧial
 SFX t ŧin sin/T ŧin
+
+# trasformaŧion intra varianti iniŧial de paròla (l > ƚ, j > ɉ, ŧ > s)
+PFX ŧ Y 8
+PFX ŧ l ƚ l
+PFX ŧ ŧ s ŧ
+PFX ŧ đ d đ
+PFX ŧ đ x đ
+PFX ŧ L Ƚ L
+PFX ŧ Ŧ S Ŧ
+PFX ŧ Đ D Đ
+PFX ŧ Đ X Đ
 
 # sostantivi plurali maskili e femenili ko trasformaŧion '[aeou][ln] > 'Vi
 SFX U Y 12
@@ -3382,6 +3394,39 @@ SFX V ola òla/DU [rs]ola
 SFX V oƚa ioƚa/D [rs]oƚa
 SFX V oƚa iòƚa/D [rs]oƚa
 SFX V oƚa òƚa/D [rs]oƚa
+
+# negòŧi, atività komerŧali o industriali, aŧion, scapi de ròbe o de parsone
+SFX v Y 30
+SFX v e aría/D e
+SFX v 0 ría/D e
+SFX v 0 ría/D a
+SFX v a ería/D a
+SFX v o aría/D [^èò][^cdđkx]o
+SFX v o ería/D [^èò][^cdđkx]o
+SFX v o aría/D [^èò]do
+SFX v o ería/D [^èò]do
+SFX v o aría/D [^è][đx]o
+SFX v o ería/D [^è][đx]o
+SFX v o aría/D [^ò][ck]o
+SFX v o ería/D [^ò][ck]o
+SFX v èdo edaría/D èdo
+SFX v èdo edería/D èdo
+SFX v èđo eđaría/D èđo
+SFX v èđo eđería/D èđo
+SFX v èxo exaría/D èxo
+SFX v èxo exería/D èxo
+SFX v òco ocaría/D òco
+SFX v òco ocería/D òco
+SFX v òdo odaría/D òdo
+SFX v òdo odería/D òdo
+SFX v òko okaría/D òko
+SFX v òko okería/D òko
+SFX v 0 ía/D [^è]r
+SFX v ar ería/D ar
+SFX v èr aría/D èr
+SFX v èr ería/D èr
+SFX v 0 aría/D [ln]
+SFX v 0 ería/D [ln]
 
 # nominali denominali
 SFX R Y 5
@@ -3500,7 +3545,7 @@ SFX Y ude ú/T ude
 # Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug. intel partithipio pasivo ko la dexinentha in -st-, e intel xerundio
 
 # sostantivi alterài - demenutivi
-SFX & N 38
+SFX & N 39
 SFX & 0 eto/TI [^èò]l
 SFX & èl eleto/TI èl
 SFX & òl oleto/TI òl
@@ -3524,8 +3569,9 @@ SFX & òvo oveto/TI òvo
 SFX & òxo oxeto/TI òxo
 SFX & 0 iti [lnr]
 SFX & o iti o
-SFX & a eta/D [^bjklnñrpx]a
-SFX & a eta/D [^èò][bjklnñprx]a
+SFX & a eta/D [^bgjklnñrpx]a
+SFX & a eta/D [^èò][bgjklnñprx]a
+SFX & èga egeta/D èga
 SFX & èla eleta/D èla
 SFX & èpa epeta/D èpa
 SFX & èra ereta/D èra

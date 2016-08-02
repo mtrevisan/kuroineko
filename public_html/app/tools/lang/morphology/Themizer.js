@@ -424,7 +424,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/lang/phon
 			/[dn]oa/,
 			/poe/,
 			/bo([cgrsŧ]a|[ksŧv]o)/,
-			/co[dkpt]a/,
+			/co([dkpt]a|[lƚ]e)/,
 			/do([bcglƚmprstx]?a|[lƚmp]e)/,
 			/đo[gtv]?a/,
 			/fo([fgjɉlƚñrst]a|i|go)/,
