@@ -2601,7 +2601,7 @@ SFX o io i/EFL io
 
 # vèrbi '-er inregolari ((r[ei])èser)
 # themeT1 + er/p
-SFX p Y 324
+SFX p Y 326
 SFX p èser é/N èser
 SFX p èser élo/B èser
 SFX p èser éƚo/B èser
@@ -2732,7 +2732,7 @@ SFX p èser jèro/J èser
 SFX p èser jèrone/K èser
 SFX p èser sé/FNP èser
 SFX p èser sémoe/K èser
-SFX p èser séu/O èser
+SFX p èser seu/O èser
 SFX p èser sí/EFLN èser
 SFX p èser símene/G èser
 SFX p èser símoe/K èser
@@ -2874,6 +2874,8 @@ SFX p èser situ/M èser
 SFX p èser setu/M èser
 SFX p èser son/J èser
 SFX p èser sone/KT èser
+SFX p èser sonjo èser
+SFX p èser sonɉo èser
 SFX p èser sonmi èser
 SFX p èser stà èser
 SFX p èser stè èser
@@ -3327,7 +3329,7 @@ SFX T a i a
 SFX T e i e
 
 # trasformaŧion intra varianti (l > ƚ, j > ɉ, ŧ > s)
-SFX t Y 25
+SFX t Y 27
 SFX t lò ƚò lò
 SFX t là ƚà là
 SFX t leto ƚeto/T [aeiouàèéíòóú]leto
@@ -3346,7 +3348,9 @@ SFX t ŧa sa/D ŧa
 SFX t ŧio sio/T ŧio
 SFX t ŧia sia/D ŧia
 SFX t ŧía sía/D ŧía
+SFX t ŧon son/DU ŧon
 SFX t ŧion sion/DU ŧion
+SFX t ŧal sal/DU ŧal
 SFX t ŧial sial/DU ŧial
 SFX t ŧin sin/T ŧin
 SFX t đo do/T đo
@@ -3354,7 +3358,7 @@ SFX t đo xo/T đo
 SFX t đa da/D đa
 SFX t đa xa/D đa
 
-# trasformaŧion intra varianti iniŧial de paròla (l > ƚ, j > ɉ, ŧ > s, đ > d/x)
+# trasformaŧion iniŧial de paròla intra varianti (l > ƚ, j > ɉ, ŧ > s, đ > d/x)
 PFX ŧ Y 10
 PFX ŧ j ɉ j
 PFX ŧ l ƚ l
@@ -3465,55 +3469,60 @@ SFX r èñer eñimento/TI èñer
 SFX r àrxer arximento/TI àrxer
 
 # nominali deverbali
-SFX s Y 48
-SFX s r sion/DU [^aei]r
+SFX s Y 25
 SFX s r ŧion/DU [^aei]r
-SFX s r sion/DU [^t]ar
 SFX s r ŧion/DU [^t]ar
-SFX s r sion/DU [^en]tar
 SFX s r ŧion/DU [^en]tar
-SFX s r sion/DU [^p]etar
 SFX s r ŧion/DU [^p]etar
-SFX s r sion/DU [^s]petar
 SFX s r ŧion/DU [^s]petar
-SFX s r sion/DU [^e]ntar
 SFX s r ŧion/DU [^e]ntar
-SFX s r sion/DU [^x]entar
 SFX s r ŧion/DU [^x]entar
-SFX s r sion/DU [^à]er
 SFX s r ŧion/DU [^à]er
-SFX s r sion/DU [^u]ir
 SFX s r ŧion/DU [^u]ir
-SFX s tar sion/DU spetar
 SFX s tar ŧion/DU spetar
-SFX s tar sion/DU xentar
 SFX s tar ŧion/DU xentar
-SFX s àer asion/DU àer
 SFX s àer aŧion/DU àer
-SFX s ir sion/DU uir
 SFX s ir ŧion/DU uir
-SFX s xerò sion/DU [eiu]xerò
 SFX s xerò ŧion/DU [eiu]xerò
 SFX s orxerò ureŧion sorxerò
-SFX s merò nsion/DU umerò
 SFX s merò nŧion/DU umerò
-SFX s nerò xision/DU onerò
 SFX s nerò xiŧion/DU onerò
-SFX s verò sion/DU iverò
 SFX s verò ŧion/DU iverò
-SFX s erò ision/DU eterò
 SFX s erò iŧion/DU eterò
-SFX s derò sion/DU enderò
 SFX s derò ŧion/DU enderò
-SFX s ñerò nsion/DU eñerò
 SFX s ñerò nŧion/DU eñerò
-SFX s tar sion/DU ventar
 SFX s tar ŧion/DU ventar
-SFX s verò usion/DU olverò
 SFX s verò uŧion/DU olverò
-SFX s lverò ƚusion/DU olverò
-SFX s guerò sion/DU stinguerò
+SFX s lverò luŧion/DU olverò
 SFX s guerò ŧion/DU stinguerò
+
+# nominali deverbali
+SFX ś Y 25
+SFX ś r sion/DU [^aei]r
+SFX ś r sion/DU [^t]ar
+SFX ś r sion/DU [^en]tar
+SFX ś r sion/DU [^p]etar
+SFX ś r sion/DU [^s]petar
+SFX ś r sion/DU [^e]ntar
+SFX ś r sion/DU [^x]entar
+SFX ś r sion/DU [^à]er
+SFX ś r sion/DU [^u]ir
+SFX ś tar sion/DU spetar
+SFX ś tar sion/DU xentar
+SFX ś àer asion/DU àer
+SFX ś ir sion/DU uir
+SFX ś xerò sion/DU [eiu]xerò
+SFX ś orxerò uresion sorxerò
+SFX ś merò nsion/DU umerò
+SFX ś nerò xision/DU onerò
+SFX ś verò sion/DU iverò
+SFX ś erò ision/DU eterò
+SFX ś derò sion/DU enderò
+SFX ś ñerò nsion/DU eñerò
+SFX ś tar sion/DU ventar
+SFX ś verò usion/DU olverò
+SFX ś lverò ƚusion/DU olverò
+SFX ś guerò sion/DU stinguerò
 
 # nominali deaverbiali
 SFX S Y 2
@@ -3661,7 +3670,7 @@ PFX ^ 0 pre
 PFX ^ 0 pre-
 
 # numerali - koletivi
-SFX % N 71
+SFX % N 74
 SFX % ète etena/D ète
 SFX % ète eteneta/D ète
 SFX % ète etèna/D ète
@@ -3695,6 +3704,9 @@ SFX % úndexe undexeneta/D úndexe
 SFX % úndexe undexèna/D úndexe
 SFX % úndexe undèŧimo/B úndexe
 SFX % úndexe undèsimo/B úndexe
+SFX % ódexe oxena/D ódexe
+SFX % ódexe oxeneta/D ódexe
+SFX % ódexe oxèna/D ódexe
 SFX % ódexe odexena/D ódexe
 SFX % ódexe odexeneta/D ódexe
 SFX % ódexe odexèna/D ódexe
