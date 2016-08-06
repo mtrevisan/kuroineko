@@ -3329,7 +3329,7 @@ SFX T a i a
 SFX T e i e
 
 # trasformaŧion intra varianti (l > ƚ, j > ɉ, ŧ > s)
-SFX t Y 27
+SFX t Y 29
 SFX t lò ƚò lò
 SFX t là ƚà là
 SFX t leto ƚeto/T [aeiouàèéíòóú]leto
@@ -3340,6 +3340,7 @@ SFX t la ƚa/D [aeiouàèéíòóú]la
 SFX t lio ƚio/T [aeiouàèéíòóú]lio
 SFX t lia ƚia/D [aeiouàèéíòóú]lia
 SFX t lin ƚin/T lin
+SFX t lina ƚina/D lina
 SFX t jo ɉo/T jo
 SFX t ja ɉa/D ja
 SFX t jon ɉon/DU jon
@@ -3353,18 +3354,22 @@ SFX t ŧion sion/DU ŧion
 SFX t ŧal sal/DU ŧal
 SFX t ŧial sial/DU ŧial
 SFX t ŧin sin/T ŧin
+SFX t ŧina sina/D ŧina
 SFX t đo do/T đo
 SFX t đo xo/T đo
 SFX t đa da/D đa
 SFX t đa xa/D đa
 
 # trasformaŧion iniŧial de paròla intra varianti (l > ƚ, j > ɉ, ŧ > s, đ > d/x)
-PFX ŧ Y 10
+PFX ŧ Y 13
 PFX ŧ j ɉ j
+PFX ŧ xj xɉ xj
 PFX ŧ l ƚ l
 PFX ŧ ŧ s ŧ
 PFX ŧ đ d đ
 PFX ŧ đ x đ
+PFX ŧ inđ ind inđ
+PFX ŧ inđ inx inđ
 PDX ŧ J Ɉ J
 PFX ŧ L Ƚ L
 PFX ŧ Ŧ S Ŧ

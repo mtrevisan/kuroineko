@@ -305,9 +305,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 
 						case 3:
 							if(verb.semiSpecial3rd){
-								console.log(inf + '/AfE	po:verb is:infinitive_simple');
+								console.log(inf + '/aeE	po:verb is:infinitive_simple');
 //								console.log(unmarkDefaultStress((theme.regular.themeT9? theme.regular.themeT9: theme.irregular.themeT9).replace(/i$/, '') + 'ime') + '/gH	po:verb is:imperative st:' + inf);
-								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/fEIJL	po:verb is:indicative_present st:' + inf);
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/eEIJ	po:verb is:indicative_present st:' + inf);
 							}
 							else if(verb.special3rd){
 //ok

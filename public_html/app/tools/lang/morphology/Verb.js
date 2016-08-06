@@ -136,7 +136,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/data/Asse
 
 	/** @private */
 	var isOssitone = (function(){
-		var ossitones = [/^(g?av?|reg?av?|‘v)ér$/, /manér$/, /parér$/, /pod?ér$/, /sav?ér$/, /[tv]o[lƚ]ér$/, /va[lƚ]ér$/];
+		var ossitones = [/^(g?av?|reg?av?|‘v)ér$/, /manér$/, /parér$/, /pod?ér$/, /sav?ér$/, /([cv]|ti?)o[lƚ]ér$/, /va[lƚ]ér$/];
 
 		return function(infinitive){
 			return StringHelper.isMatching(infinitive, ossitones);
@@ -146,17 +146,17 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/data/Asse
 	/** @private */
 	var isSpecial3rd = (function(){
 		var special3rds = [
-			/avrír$/,
+			/sa[lƚ]ír$/,
 			/d(or|ro)mír$/,
-			/^(r[ei])?(en?|u)sír$/, /spesír$/, /entír$/, /eñír$/,
-			/[en][gk]uír$/,
-			/morír$/,
+			/eñír$/,
 			//note: n[ou][dt]rír is a "regular" 3rd
-			/ofrír$/,
-			/sa[lƚ]ír$/, /servír$/,
-			/vestír$/
+			/ofrír$/, /morír$/, /avrír$/,
+			/^(r[ei])?(en?|u)sír$/, /spesír$/,
+			/entír$/, /vestír$/,
+			/[en][gk]uír$/,
+			/servír$/
 		];
-		var falsePositives = [/(inti|mar)morír$/, /censír$/, /xmentír$/, /rguír$/];
+		var falsePositives = [/(inti|mar)morír$/, /[csŧ]ensír$/, /xmentír$/, /rguír$/];
 
 		return function(infinitive){
 			return !StringHelper.isMatching(infinitive, special3rds, falsePositives);
@@ -165,7 +165,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/data/Asse
 
 	/** @private */
 	var isSemiSpecial3rd = (function(){
-		var semiSpecial3rds = [/audír$/, /part?ír$/, /sorbír$/, /vertír$/];
+		var semiSpecial3rds = [/sorbír$/, /audír$/, /pixo[lƚ]ír$/, /part?ír$/, /vertír$/];
 
 		return function(infinitive){
 			return StringHelper.isMatching(infinitive, semiSpecial3rds);
