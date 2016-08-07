@@ -3329,7 +3329,7 @@ SFX T a i a
 SFX T e i e
 
 # trasformaŧion intra varianti (l > ƚ, j > ɉ, ŧ > s)
-SFX t Y 29
+SFX t Y 31
 SFX t lò ƚò lò
 SFX t là ƚà là
 SFX t leto ƚeto/T [aeiouàèéíòóú]leto
@@ -3339,6 +3339,8 @@ SFX t l ƚo/T [aeiouàèéíòóú]l
 SFX t la ƚa/D [aeiouàèéíòóú]la
 SFX t lio ƚio/T [aeiouàèéíòóú]lio
 SFX t lia ƚia/D [aeiouàèéíòóú]lia
+SFX t lan ƚano/T lan
+SFX t lana ƚana/D lana
 SFX t lin ƚin/T lin
 SFX t lina ƚina/D lina
 SFX t jo ɉo/T jo
@@ -3398,9 +3400,13 @@ SFX u l i [aeouàèéòóú]l
 SFX u n i [aeouàèéòóú]n
 
 # piante e mistièri
-SFX V Y 15
-SFX V èr ar/B èr
+SFX V Y 19
+SFX V èr ar/B [^cijɉñ]èr
+SFX V ièr ar/B ièr
 SFX V ièr er/B ièr
+SFX V èr er/B ièr
+SFX V èr ier/B [^cijɉñ]èr
+SFX V èr ièr/B [^cijɉñ]èr
 SFX V dor or/C [aeiou]dor
 SFX V ol iol/TU [rs]ol
 SFX V ol iòl/TU [rs]ol
