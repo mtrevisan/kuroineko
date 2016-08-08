@@ -1691,6 +1691,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "gal",			"in",			1,	1,	"g",	"1775",			"Inamorar, èser roso in vixo kofà el gal, ʼl aver de i vovi la predispoxiŧion a đenerar on pito, ecitar, montar el rabioxo.",
 "galantej",		"",			1,	6,	"a",	"1852",			"Far el galante.",
 "galban",		"in",			1,	4,	"g",	"1851",			"Deventar rosico kofà el Galban (Libanotis Galbanifera), inpisar, infiamar de premura.",
+"gàld",			"",			3,	1,	"g",	"1852",			"Gòder.",
 "gald",			"",			4,	4,	"a",	"1560",			"Gòder.",
 "galeđ",			"",			1,	3,	"a",	"1775",			"Braveđar de i kavali.",
 "galiđ",			"",			1,	3,	"a",	"1867",			"Galeđar.",
