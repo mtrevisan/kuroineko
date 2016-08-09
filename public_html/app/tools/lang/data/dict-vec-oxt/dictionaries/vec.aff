@@ -22,7 +22,7 @@
 # see <http://www.gnu.org/licenses/>.
 
 NAME Diŧionario de lengua vèneta
-VERSION 1.3.6 (2016/07/14)
+VERSION 1.4.0 (2016/08/09)
 HOME http://parnodexmentegar.orgfree.com/
 LANG vec
 
@@ -1810,7 +1810,11 @@ SFX i r gando/E andar
 
 # vèrbi -ér inregolari ((stra)saver, (re)aver, (re)gaver)
 # themeT1 + r/ajE
-SFX j Y 353
+SFX j Y 357
+SFX j saver sojo saver
+SFX j saver soɉo saver
+SFX j saver sòjo saver
+SFX j saver sòɉo saver
 SFX j 0 í/N aver
 SFX j 0 íe/FJ aver
 SFX j 0 ímoe/K aver
@@ -3329,7 +3333,7 @@ SFX T a i a
 SFX T e i e
 
 # trasformaŧion intra varianti (l > ƚ, j > ɉ, ŧ > s)
-SFX t Y 31
+SFX t Y 33
 SFX t lò ƚò lò
 SFX t là ƚà là
 SFX t leto ƚeto/T [aeiouàèéíòóú]leto
@@ -3339,10 +3343,12 @@ SFX t l ƚo/T [aeiouàèéíòóú]l
 SFX t la ƚa/D [aeiouàèéíòóú]la
 SFX t lio ƚio/T [aeiouàèéíòóú]lio
 SFX t lia ƚia/D [aeiouàèéíòóú]lia
-SFX t lan ƚano/T lan
+SFX t lan ƚan/T lan
 SFX t lana ƚana/D lana
 SFX t lin ƚin/T lin
 SFX t lina ƚina/D lina
+SFX t len ƚen/T len
+SFX t lena ƚena/D lena
 SFX t jo ɉo/T jo
 SFX t ja ɉa/D ja
 SFX t jon ɉon/DU jon
@@ -3578,7 +3584,7 @@ SFX Y ude ú/T ude
 # Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug. intel partithipio pasivo ko la dexinentha in -st-, e intel xerundio
 
 # sostantivi alterài - demenutivi
-SFX & N 45
+SFX & N 46
 SFX & 0 eto/TI [^èò]l
 SFX & èl eleto/TI èl
 SFX & òl oleto/TI òl
@@ -3587,10 +3593,11 @@ SFX & òn oneto/TI òn
 SFX & 0 eto/TI [^è]r
 SFX & èr ereto/TI èr
 SFX & o eto/TI [^cdđkgƚmpsŧvx]o
-SFX & o eto/TI [^aioòèu][cdđkgƚmpsŧvx]o
+SFX & o eto/TI [^èò][kg]o
+SFX & o eto/TI [^ò][cdđmpsŧvx]o
 SFX & èko eketo/TI èko
 SFX & ègo egeto/TI ègo
-SFX & o eto/T [aiou]ƚo
+SFX & o eto/T [aeiou]ƚo
 SFX & òƚo oƚeto/T òƚo
 SFX & èƚo eƚeto/T èƚo
 SFX & òco oceto/TI òco
