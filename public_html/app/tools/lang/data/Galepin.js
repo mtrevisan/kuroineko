@@ -28409,7 +28409,7 @@
 "senŧièr",["aj."],{"ita":"sincero","eng":"sincere"},28408,["BL"],
 "senŧièr",["aj."],{"ita":"sobrio, non ubriaco","eng":"sober"},28409,["BL"],
 "senŧièr",["aj."],{"ita":"asciutto (locale), non umido"},28410,["BL"],
-"séo",["n. m. sing."],{"ita":"sego, sevo","eng":"tallow"},28411,["TS","VR","BL","TV","PD","TF","VE"],
+"seo",["n. m. sing."],{"ita":"sego, sevo","eng":"tallow"},28411,["TS","VR","BL","TV","PD","TF","VE"],
 "sèo",["n. m. sing."],{"ita":"giudizio, esperienza","eng":"judgement, experience"},28412,["VI"],
 "seola",["n. f. sing."],{"ita":"cipolla","eng":"onion"},28413,["VI"],
 "séola",["n. f. sing."],{"ita":"cipolla","eng":"onion"},28414,["PD","TF","VE","VR"],
