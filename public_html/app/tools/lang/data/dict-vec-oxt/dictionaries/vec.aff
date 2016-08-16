@@ -22,7 +22,7 @@
 # see <http://www.gnu.org/licenses/>.
 
 NAME Diŧionario de lengua vèneta
-VERSION 1.4.0 (2016/08/14)
+VERSION 1.4.0 (2016/08/15)
 HOME http://parnodexmentegar.orgfree.com/
 LANG vec
 
@@ -112,7 +112,7 @@ FLAG UTF-8
 # themeT1 + r/aE, themeT1 + r/acE, themeT1 + r/adE, themeT1 + r/aeE
 # themeT8 + o/aEIJ
 # themeT8 + oe/aK
-SFX a Y 425
+SFX a Y 424
 SFX a 0 í/N er
 SFX a 0 ímoe/K er
 SFX a 0 íu/O er
@@ -535,7 +535,6 @@ SFX a 0 isone/K [aei]r
 SFX a 0 isonse [aei]r
 SFX a 0 me/G [aei]r
 SFX a 0 mene/G [aei]r
-SFX a 0 ne/K [aei]r
 SFX a 0 on/EJ [aei]r
 SFX a 0 onme/G [aei]r
 
@@ -710,11 +709,11 @@ SFX b rò vo/J erò
 SFX b uerò ú uerò
 SFX b uerò úo/B uerò
 SFX b uerò udo/B uerò
+SFX b xerò gando/E dixerò
 SFX b xerò gàndome/G dixerò
 SFX b xerò gàndomene/G dixerò
 SFX b xerò gàntome/G dixerò
 SFX b xerò gàntomene/G dixerò
-SFX b xerò gando/E dixerò
 
 # vèrbi -<is>ír
 # themeT1 + ir/acE
@@ -1482,7 +1481,7 @@ SFX e r vonse ir
 # themeT8 + oe/hEIJ
 # themeT6 + do/TY
 # themeT6 + da/DY
-SFX h Y 282
+SFX h Y 286
 SFX h ào à/EFL ào
 SFX h 0 à/FJL ar
 SFX h 0 àe/F ar
@@ -1506,8 +1505,6 @@ SFX h 0 íene/K ar
 SFX h 0 ò/J ar
 SFX h 0 òe/K ar
 SFX h 0 ónmene/G ar
-SFX h 0 alo/B ar
-SFX h 0 aƚo/B ar
 SFX h 0 ane/K ar
 SFX h 0 atu/M ar
 SFX h 0 ave/FQ ar
@@ -1725,10 +1722,12 @@ SFX h e te/T ne
 SFX h e u/O oe
 SFX h o a/EF o
 SFX h o e/EFIJ o
-SFX h o ga/EF o
-SFX h o gi/EFL o
-SFX h o go/EIJ o
+SFX h ào aga/EF ào
+SFX h ào agi/EFL ào
+SFX h ào ago/EIJ ào
 SFX h o i/EFL o
+SFX h o lo/B o
+SFX h o ƚo/B o
 SFX h oe ae/T oe
 SFX h oe ame/G oe
 SFX h oe amene/G oe
@@ -1757,6 +1756,10 @@ SFX h r do/BI ar
 SFX h r me/G ar
 SFX h r ndo/E ar
 SFX h r gando/E ar
+SFX h r gàndome/G ar
+SFX h r gàndomene/G ar
+SFX h r gàntome/G ar
+SFX h r gàntomene/G ar
 SFX h r nte/I ar
 SFX h r nto/E ar
 SFX h r se/IT ar
@@ -1768,7 +1771,7 @@ SFX h r vo/J ar
 
 # vèrbi -àr inregolari ((re)andar)
 # themeT1 + r/aiE
-SFX i Y 38
+SFX i Y 41
 SFX i ào aga vào
 SFX i ào agi/FL vào
 SFX i ào ago/J vào
@@ -1799,18 +1802,21 @@ SFX i andar von/EJ andar
 SFX i andar vone/K andar
 SFX i andar vonme/G andar
 SFX i andar vónmene/G andar
-SFX i ao àgone/K vao
-SFX i o a v[aà]o
-SFX i o e/FIJ v[aà]o
-SFX i o ga vao
-SFX i o go/JT vao
+SFX i o a vào
+SFX i o e/FIJ vào
+SFX i o ga vào
+SFX i o go/JT vào
 SFX i o gone/K vào
-SFX i o i v[aà]o
+SFX i o i vào
 SFX i r gando/E andar
+SFX i r gàndome/G andar
+SFX i r gàndomene/G andar
+SFX i r gàntome/G andar
+SFX i r gàntomene/G andar
 
 # vèrbi -ér inregolari ((stra)saver, (re)aver, (re)gaver)
 # themeT1 + r/ajE
-SFX j Y 357
+SFX j Y 358
 SFX j saver sojo saver
 SFX j saver soɉo saver
 SFX j saver sòjo saver
@@ -2074,6 +2080,7 @@ SFX j er on/EJ aver
 SFX j er one/K aver
 SFX j er onme/G aver
 SFX j er udo/B aver
+SFX j o e/EFJ o
 SFX j r de aver
 SFX j r e/K aver
 SFX j r ge aver
@@ -2238,8 +2245,8 @@ SFX k lo go/J [ct]òlo
 SFX k lo gone/K [ct]òlo
 
 # vèrbi '-er inregolari ((a|apar|as|de|inkon|intra|kon|man|o|re|sos|tra)[ctv]èñer)
-# themeT1 + r/clE
-SFX l Y 18
+# themeT1 + r/blE
+SFX l Y 26
 SFX l èñer ièn/EFJL [^c]èñer
 SFX l èñer iènme/G [^c]èñer
 SFX l èñer iènmene/G [^c]èñer
@@ -2255,9 +2262,17 @@ SFX l ñer nme/G èñer
 SFX l ñer nmene/G [èé]ñer
 SFX l ñer ntu/M èñer
 SFX l èñer òr/E [ct]èñer
+SFX l èñer òrme/G [ct]èñer
+SFX l èñer òrmene/G [ct]èñer
 SFX l éñer or/E [ct]éñer
+SFX l éñer orme/G [ct]éñer
+SFX l éñer ormene/G [ct]éñer
 SFX l èñer iòr/E tèñer
+SFX l èñer iòrme/G tèñer
+SFX l èñer iòrmene/G tèñer
 SFX l éñer ior/E téñer
+SFX l éñer iorme/G téñer
+SFX l éñer iormene/G téñer
 
 # vèrbi '-er inregolari (déver)
 # themeT1 + r/mE
@@ -2517,8 +2532,8 @@ SFX n xerò ronme/G xerò
 SFX n xerò rónmene/G xerò
 
 # vèrbi '-er inregolari ((a|as|de|des|es|kon|pro|re|so)tràer)
-# themeT1 + er/coE
-# themeT4 + rò/coJ
+# themeT1 + er/boE
+# themeT4 + rò/boJ
 # themeT8 + o/oJ
 SFX o Y 81
 SFX o aerò à/E aerò
@@ -2885,7 +2900,7 @@ SFX p èser stà èser
 SFX p èser stè èser
 SFX p èser stò èser
 SFX p èser stado/BI èser
-SFX p èser stao/B èser
+SFX p èser stào/B èser
 SFX p èser stasto/BI èser
 SFX p èser stato/BI èser
 SFX p èser stesto/BI èser
@@ -3654,14 +3669,15 @@ SFX Y ude ú/T ude
 # Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug. intel partithipio pasivo ko la dexinentha in -st-, e intel xerundio
 
 # sostantivi alterài - demenutivi
-SFX & N 47
+SFX & N 50
 SFX & 0 eto/TI [^èò]l
 SFX & èl eleto/TI èl
 SFX & òl oleto/TI òl
 SFX & 0 eto/TI [^ò]n
 SFX & òn oneto/TI òn
-SFX & 0 eto/TI [^è]r
+SFX & 0 eto/TI [^èò]r
 SFX & èr ereto/TI èr
+SFX & òr oreto/TI òr
 SFX & o eto/TI [^cdđkgƚmpsŧvx]o
 SFX & o eto/TI [^èò][kg]o
 SFX & o eto/TI [^ò][cdđmpsŧvx]o
@@ -3683,8 +3699,8 @@ SFX & òvo oveto/TI òvo
 SFX & òxo oxeto/TI òxo
 SFX & 0 iti [lnr]
 SFX & o iti o
-SFX & a eta/D [^bgjɉklƚnñrpx]a
-SFX & a eta/D [^èò][bgjɉklƚnñprx]a
+SFX & a eta/D [^bgjɉklƚnñrpsŧx]a
+SFX & a eta/D [^èò][bgjɉklƚnñprsŧx]a
 SFX & èga egeta/D èga
 SFX & èla eleta/D èla
 SFX & èƚa eƚeta/D èƚa
@@ -3700,6 +3716,8 @@ SFX & òna oneta/D òna
 SFX & òña oneta/D òña
 SFX & òpa opeta/D òpa
 SFX & òra oreta/D òra
+SFX & òsa oseta/D òsa
+SFX & òŧa oŧeta/D òŧa
 SFX & òxa oxeta/D òxa
 SFX & 0 ta/D e
 #SFX & . èl/B ?
@@ -3778,37 +3796,45 @@ SFX ( òƚo oƚòto/T òƚo
 #SFX & . aso/B ?
 #SFX & . uko/B ?
 
-# sostantivi alterài (62 occurrences over 6531 verbs)
+# sostantivi alterài (62 occurrences over 6548 verbs)
 PFX = Y 2
 PFX = 0 stra
 PFX = 0 stra-
 
-# sostantivi alterài (27 occurrences over 6531 verbs)
+# sostantivi alterài (27 occurrences over 6548 verbs)
 PFX ^ Y 2
 PFX ^ 0 pre
 PFX ^ 0 pre-
 
-# sostantivi alterài (174 occurrences of <des> and 174 of <dex> over 6531 verbs)
+# sostantivi alterài (174 occurrences of <des> and 174 of <dex> over 6548 verbs)
 PFX + Y 2
 PFX + 0 des [cfkpt]
 PFX + 0 dex [aàeèéiíoòóúmnñbdgjɉsvrl]
 
-# sostantivi alterài (923 occurrences over 6531 verbs)
+# sostantivi alterài (923 occurrences over 6548 verbs)
 PFX - Y 1
 PFX - 0 in
 
-# sostantivi alterài (381 occurrences of <s> and 471 of <x> over 6531 verbs)
+# sostantivi alterài (381 occurrences of <s> and 471 of <x> over 6548 verbs)
 PFX * Y 2
 PFX * 0 s [cfkpt]
 PFX * 0 x [aàeèéiíoòóúmnñbdgjɉsvrl]
 
-# sostantivi alterài (239 occurrences over 6531 verbs)
+# sostantivi alterài (239 occurrences over 6548 verbs)
 PFX . Y 1
 PFX . 0 re
 
-# sostantivi alterài (135 occurrences over 6531 verbs)
+# sostantivi alterài (135 occurrences over 6548 verbs)
 PFX , Y 1
 PFX , 0 de
+
+# sostantivi alterài (112 occurrences over 6548 verbs)
+PFX @ Y 1
+PFX @ 0 a
+
+# sostantivi alterài (78 occurrences over 6548 verbs)
+PFX : Y 1
+PFX : 0 kon
 
 # numerali - koletivi
 SFX % N 74
@@ -3890,90 +3916,106 @@ SFX % o èximo/B iardo
 
 # numeraŧion latina
 SFX £ N 10
-SFX £ 0 I [IVXLCDM]
-SFX £ 0 II [IVXLCDM]
-SFX £ 0 III [IVXLCDM]
-SFX £ 0 IV [XLCDM]
-SFX £ 0 V [IXLCDM]
-SFX £ 0 VI [XLCDM]
-SFX £ 0 VII [XLCDM]
-SFX £ 0 VIII [XLCDM]
-SFX £ 0 IX [XLCDM]
-SFX £ 0 X I
+SFX £ 0 i [ivxlcdm]
+SFX £ 0 ii [ivxlcdm]
+SFX £ 0 iii [ivxlcdm]
+SFX £ 0 iv [xlcdm]
+SFX £ 0 v [ixlcdm]
+SFX £ 0 vi [xlcdm]
+SFX £ 0 vii [xlcdm]
+SFX £ 0 viii [xlcdm]
+SFX £ 0 ix [xlcdm]
+SFX £ 0 x i
 
 # numeraŧion latina
 PFX $ N 60
-PFX $ 0 X [LC]
-PFX $ 0 L X
-PFX $ 0 C [XLCDM]
-PFX $ 0 CX [LC]
-PFX $ 0 CL X
-PFX $ 0 CC [XLC]
-PFX $ 0 CCX [LC]
-PFX $ 0 CCL X
-PFX $ 0 CCC [XL]
-PFX $ 0 CCCX [LC]
-PFX $ 0 CCCL X
-PFX $ 0 CD [XL]
-PFX $ 0 CDX [LC]
-PFX $ 0 CDL X
-PFX $ 0 D [XLC]
-PFX $ 0 DX [LC]
-PFX $ 0 DL X
-PFX $ 0 DC [XLC]
-PFX $ 0 DCX [LC]
-PFX $ 0 DCL X
-PFX $ 0 DCC [XLC]
-PFX $ 0 DCCX [LC]
-PFX $ 0 DCCL X
-PFX $ 0 DCCC [XL]
-PFX $ 0 DCCCX [LC]
-PFX $ 0 DCCCL X
-PFX $ 0 CM [XL]
-PFX $ 0 CMX [LC]
-PFX $ 0 CML X
-PFX $ 0 M [XLCDM]
-PFX $ 0 MX [LC]
-PFX $ 0 ML X
-PFX $ 0 MC [XLCMD]
-PFX $ 0 MCX [LC]
-PFX $ 0 MCL X
-PFX $ 0 MCC [XLC]
-PFX $ 0 MCCX [LC]
-PFX $ 0 MCCL X
-PFX $ 0 MCCC [XLC]
-PFX $ 0 MCD [XL]
-PFX $ 0 MCDX [LC]
-PFX $ 0 MCDL X
-PFX $ 0 MD [XLC]
-PFX $ 0 MDX [LC]
-PFX $ 0 MDL X
-PFX $ 0 MDC [XLC]
-PFX $ 0 MDCX [LC]
-PFX $ 0 MDCL X
-PFX $ 0 MDCC [XLC]
-PFX $ 0 MDCCX [LC]
-PFX $ 0 MDCCL X
-PFX $ 0 MDCCC [XL]
-PFX $ 0 MDCCCX [LC]
-PFX $ 0 MDCCCL X
-PFX $ 0 MCM [XL]
-PFX $ 0 MCMX [LC]
-PFX $ 0 MCML X
-PFX $ 0 MM [XLC]
-PFX $ 0 MMX [LC]
-PFX $ 0 MML X
+PFX $ 0 x [lc]
+PFX $ 0 l x
+PFX $ 0 c [xlcdm]
+PFX $ 0 cx [lc]
+PFX $ 0 cl x
+PFX $ 0 cc [xlc]
+PFX $ 0 ccx [lc]
+PFX $ 0 ccl x
+PFX $ 0 ccc [xl]
+PFX $ 0 cccx [lc]
+PFX $ 0 cccl x
+PFX $ 0 cd [xl]
+PFX $ 0 cdx [lc]
+PFX $ 0 cdl x
+PFX $ 0 d [xlc]
+PFX $ 0 dx [lc]
+PFX $ 0 dl x
+PFX $ 0 dc [xlc]
+PFX $ 0 dcx [lc]
+PFX $ 0 dcl x
+PFX $ 0 dcc [xlc]
+PFX $ 0 dccx [lc]
+PFX $ 0 dccl x
+PFX $ 0 dccc [xl]
+PFX $ 0 dcccx [lc]
+PFX $ 0 dcccl x
+PFX $ 0 cm [xl]
+PFX $ 0 cmx [lc]
+PFX $ 0 cml x
+PFX $ 0 m [xlcdm]
+PFX $ 0 mx [lc]
+PFX $ 0 ml x
+PFX $ 0 mc [xlcmd]
+PFX $ 0 mcx [lc]
+PFX $ 0 mcl x
+PFX $ 0 mcc [xlc]
+PFX $ 0 mccx [lc]
+PFX $ 0 mccl x
+PFX $ 0 mccc [xlc]
+PFX $ 0 mcd [xl]
+PFX $ 0 mcdx [lc]
+PFX $ 0 mcdl x
+PFX $ 0 md [xlc]
+PFX $ 0 mdx [lc]
+PFX $ 0 mdl x
+PFX $ 0 mdc [xlc]
+PFX $ 0 mdcx [lc]
+PFX $ 0 mdcl x
+PFX $ 0 mdcc [xlc]
+PFX $ 0 mdccx [lc]
+PFX $ 0 mdccl x
+PFX $ 0 mdccc [xl]
+PFX $ 0 mdcccx [lc]
+PFX $ 0 mdcccl x
+PFX $ 0 mcm [xl]
+PFX $ 0 mcmx [lc]
+PFX $ 0 mcml x
+PFX $ 0 mm [xlc]
+PFX $ 0 mmx [lc]
+PFX $ 0 mml x
 
 
 # word truncated at the begin
-PFX ‘ Y 7
+PFX ‘ Y 23
 PFX ‘ a ʼ a
+PFX ‘ al ʼL al
+PFX ‘ an ʼN an
 PFX ‘ i ʼ i
+PFX ‘ in ʼN in
 PFX ‘ d ʼ d
+PFX ‘ di ʼI di
 PFX ‘ in ʼ in
+PFX ‘ int ʼT int
 PFX ‘ g ʼ g
+PFX ‘ go ʼO go
 PFX ‘ v ʼ v
+PFX ‘ va ʼA va
+PFX ‘ var ʼ var
+PFX ‘ vara ʼA vara
+PFX ‘ vo ʼO vo
+PFX ‘ vu ʼU vu
+PFX ‘ và ʼÀ và
+PFX ‘ vò ʼÒ vò
+PFX ‘ vó ʼÓ vó
+PFX ‘ vú ʼÚ vú
 PFX ‘ kò ʼ kò
+PFX ‘ kòs ʼS kòs
 
 # word truncated at the end
 SFX ’ Y 10
@@ -3981,7 +4023,7 @@ SFX ’ a ʼ [^r]a
 SFX ’ ra ʼ ra
 SFX ’ o ʼ [^x]o
 SFX ’ xo ʼ xo
-SFX ’ e ʼ e
+SFX ’ e ʼ [^v]e
 SFX ’ u ʼ u
 SFX ’ r ʼ r
 SFX ’ ove óʼ dove

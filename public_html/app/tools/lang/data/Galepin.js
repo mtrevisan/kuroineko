@@ -35498,7 +35498,7 @@
 "vatikata",["av."],{"ita":"chissà","eng":"who knows"},35497,["TV"],
 "vaxelina",["n. f. sing."],{"ita":"vasellina","eng":"vaseline"},35498,["TV","PD","TF","VE"],
 "vaxeto",["n. m. sing."],{"ita":"vasetto","eng":"pot (small p.)"},35499,["PD","TF","VE"],
-"vađina",["n. f. sing."],{"ita":"guaina, fodero","eng":"sheath"},35500,["VE","TV"],
+"vasina",["n. f. sing."],{"ita":"guaina, fodero","eng":"sheath"},35500,["VE","TV"],
 "vaxo",["n. m. sing."],{"ita":"vaso","eng":"vase, pot"},35501,["TV","PD","TF","VE"],
 
 "vaŧinar",["v. tr."],{"ita":"vaccinare","eng":"vaccinate"},35503,["TV"],
@@ -36386,7 +36386,7 @@
 "đogolar",["v. intr."],{"ita":"giocolare, giocherellare","eng":"toy, fiddle"},36385,["TF","VE"],
 "đogolin",["n. m. sing."],{"ita":"giocherello","eng":"child's play, game (little g.)"},36386,["VE"],
 "xógolo",["n. m. sing."],{"ita":"zimbello","eng":"laughinstock"},36387,["VE"],
-"xolar",["v. intr."],{"ita":"volare","eng":"fly"},36388,["BL"],
+"xolar",["v. intr."],{"ita":"volare, allacciare","eng":"fly, tie"},36388,["BL"],
 "xolatar",["v. intr."],{"ita":"svolazzare","eng":"flutter, fly about"},36389,["BL"],
 "đontà",["aj."],{"ita":"giuntato, congiunto, riunito, attaccato","eng":"joined, joint"},36390,["TF","VE"],
 "đonta",["n. f. sing."],{"ita":"aggiunta, supplemento, appendice, corollario","eng":"adding, supplement"},36391,["VR","VI","PD","TF","VE"],
