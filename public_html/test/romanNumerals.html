@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<link rel="shortcut icon" href="../favicon.png" />
+
+	<title>test</title>
+
+	<link rel="stylesheet" href="../test/lib/qunit/qunit-2.0.1.css">
+
+	<script src="../test/lib/qunit/qunit-2.0.1.js"></script>
+
+	<script>
+	var romanize = function(num){
+		var lookup = {
+				M: 1000, CM: 900,
+				D: 500, CD: 400,
+				C: 100, XC: 90,
+				L: 50, XL: 40,
+				X: 10, IX: 9,
+				V: 5, IV: 4,
+				I: 1},
+			roman = '',
+			i;
+		for(i in lookup)
+			while(num >= lookup[i]){
+				roman += i;
+				num -= lookup[i];
+			}
+		return roman;
+	};
+
+	for(var i = 0; i < 5000; i ++)
+		console.log(romanize(i));
+	console.log('end');
+	</script>
+</head>
+
+<body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture"></div>
+</body>
+</html>

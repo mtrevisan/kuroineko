@@ -368,7 +368,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/lang/phon
 			/ie[đgtx]a/,
 			/[jɉ]e[lƚ]a/,
 			/ke(ga|[lƚ]e)/,
-			/[lƚ]e([fv]a|via|gua|xe|[sŧ]i|fo)/,
+			/[lƚ]e([fgv]a|via|gua|xe|[sŧ]i|fo)/,
 			/me([lƚr]a|[dlƚ]ia|[dr]e|[rlƚ]i)/, /mar[aei]/,
 			/ne([glƚr]a|bia|du|t[ei])/, /nara/,
 			/pe([cklƚrt]a|[nt]e|po|[kt]u)/, /para/,
