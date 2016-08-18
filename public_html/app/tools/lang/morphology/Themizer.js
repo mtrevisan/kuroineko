@@ -362,7 +362,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/lang/phon
 			/xrego/,
 			/be([fglƚ]a|re|ko)/, /bare/,
 			/ce([fklƚrst]a|[lƚ]e|ko)/, /cara/,
-			/de([lƚt]a|[bdsŧ]i|[dlƚ]e|ro)/,
+			/de([lƚt]a|[kg]ua|[bdsŧ]i|[dlƚ]e|ro)/,
 			/đe([lƚ]a|ne)/,
 			/fe([lƚrst]a|ria|tu)/, /fara/,
 			/ie[đgtx]a/,
@@ -465,7 +465,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/lang/phon
 			/xor[bt]a/,
 
 			/os(tia|tre|p[ei])/,
-			/[mpt]osta/,
+			/[kmpt]osta/,
 			/[icjɉ]ostra/,
 			/noste/,
 			/sosta/,
@@ -490,7 +490,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/lang/phon
 			/tro([cdđlƚñstŧx]a|[lƚ]e|to)/
 		];
 		//note: only /^(re)?xeta/ is a true positive, so /xeta/ is used in 'infixes' above and /[aun]xeta/ here
-		var falsePositives = [/^(inca|des|[pr]o|sco)?peta/, /[aun]xeta/, /^[pv]e[lƚ]a/, /^(re)?poxa/, /^(in)?bota$/];
+		var falsePositives = [/^(inca|des|[pr]o|sco)?peta/, /[aun]xeta/, /^[pv]e[lƚ]a/, /^(re)?poxa/, /^(in)?bota$/, /(^|des)kosta$/];
 
 		return function(themeT4, syllabationT4, idx){
 			idx = syllabationT4.getSyllabeIndex(idx);

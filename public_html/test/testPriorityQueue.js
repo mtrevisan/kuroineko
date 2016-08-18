@@ -4,7 +4,7 @@ require(['tools/data/structs/PriorityQueue'], function(PriorityQueue){
 	QUnit.test('is empty', function(assert){
 		var pq = new PriorityQueue();
 
-		ok(pq.isEmpty());
+		assert.ok(pq.isEmpty());
 		assert.equal(pq.get(), undefined);
 		assert.equal(pq.extract(), undefined);
 

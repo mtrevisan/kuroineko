@@ -9,7 +9,7 @@ require(['tools/logging/Logger'], function(Logger){
 	});
 
 	QUnit.test('should call intercept', function(assert){
-		QUnit.expect(5);
+		assert.expect(5);
 
 		var logger = new Logger('bla 2', {
 			showTime: false,
