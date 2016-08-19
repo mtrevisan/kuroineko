@@ -22,7 +22,7 @@
 # see <http://www.gnu.org/licenses/>.
 
 NAME Diŧionario de lengua vèneta
-VERSION 1.4.0 (2016/08/15)
+VERSION 1.4.1 (2016/08/19)
 HOME http://parnodexmentegar.orgfree.com/
 LANG vec
 
@@ -1797,10 +1797,10 @@ SFX i andar von/EJ andar
 SFX i andar vone/K andar
 SFX i andar vonme/G andar
 SFX i andar vónmene/G andar
+SFX i ào aga vào
+SFX i ào ago/JT vào
 SFX i o a vào
 SFX i o e/FIJ vào
-SFX i o ga vào
-SFX i o go/JT vào
 SFX i o gone/K vào
 SFX i o i vào
 SFX i r gando/E andar
@@ -2613,7 +2613,7 @@ SFX o io i/EFL io
 
 # vèrbi '-er inregolari ((r[ei])èser)
 # themeT1 + er/p
-SFX p Y 344
+SFX p Y 346
 SFX p èser é/N èser
 SFX p èser élo/B èser
 SFX p èser éƚo/B èser
@@ -2631,6 +2631,8 @@ SFX p èser ɉèrimoe/K èser
 SFX p èser ɉèritu/M èser
 SFX p èser ɉèro/J èser
 SFX p èser ɉèrone/K èser
+SFX p èser astando/E èser
+SFX p èser astanto/E èser
 SFX p èser erímoe/K èser
 SFX p èser erónmene/G èser
 SFX p èser eren/J èser
@@ -3549,18 +3551,18 @@ SFX ŕ òɉo oɉoxo/BWIḿ òɉo
 SFX ŕ òɉo uɉuxi òɉo
 
 # nominali deverbali
-SFX s Y 25
+SFX s Y 23
 SFX s r ŧion/DU [^aei]r
 SFX s r ŧion/DU [^t]ar
 SFX s r ŧion/DU [^en]tar
 SFX s r ŧion/DU [^p]etar
 SFX s r ŧion/DU [^s]petar
 SFX s r ŧion/DU [^e]ntar
-SFX s r ŧion/DU [^x]entar
+SFX s r ŧion/DU [^vx]entar
 SFX s r ŧion/DU [^à]er
 SFX s r ŧion/DU [^u]ir
 SFX s tar ŧion/DU spetar
-SFX s tar ŧion/DU xentar
+SFX s tar ŧion/DU [vx]entar
 SFX s àer aŧion/DU àer
 SFX s ir ŧion/DU uir
 SFX s xerò ŧion/DU [eiu]xerò
@@ -3571,24 +3573,22 @@ SFX s verò ŧion/DU iverò
 SFX s erò iŧion/DU eterò
 SFX s derò ŧion/DU enderò
 SFX s ñerò nŧion/DU eñerò
-SFX s tar ŧion/DU ventar
 SFX s verò uŧion/DU olverò
-SFX s lverò luŧion/DU olverò
 SFX s guerò ŧion/DU stinguerò
 
 # nominali deverbali
-SFX ś Y 25
+SFX ś Y 24
 SFX ś r sion/DU [^aei]r
 SFX ś r sion/DU [^t]ar
 SFX ś r sion/DU [^en]tar
 SFX ś r sion/DU [^p]etar
 SFX ś r sion/DU [^s]petar
 SFX ś r sion/DU [^e]ntar
-SFX ś r sion/DU [^x]entar
+SFX ś r sion/DU [^vx]entar
 SFX ś r sion/DU [^à]er
 SFX ś r sion/DU [^u]ir
 SFX ś tar sion/DU spetar
-SFX ś tar sion/DU xentar
+SFX ś tar sion/DU [vx]entar
 SFX ś àer asion/DU àer
 SFX ś ir sion/DU uir
 SFX ś xerò sion/DU [eiu]xerò
@@ -3599,7 +3599,6 @@ SFX ś verò sion/DU iverò
 SFX ś erò ision/DU eterò
 SFX ś derò sion/DU enderò
 SFX ś ñerò nsion/DU eñerò
-SFX ś tar sion/DU ventar
 SFX ś verò usion/DU olverò
 SFX ś lverò ƚusion/DU olverò
 SFX ś guerò sion/DU stinguerò
