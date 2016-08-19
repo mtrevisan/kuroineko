@@ -52,7 +52,7 @@ MAP oóò
 MAP uúù
 
 # replace input characters
-ICONV 29
+ICONV 12
 ICONV dh đ
 ICONV Dh Đ
 ICONV fh f
@@ -65,26 +65,9 @@ ICONV nh ñ
 ICONV Nh Ñ
 ICONV th ŧ
 ICONV Th Ŧ
-ICONV xc sc
-ICONV xf sf
-ICONV xk sk
-ICONV xp sp
-ICONV xt st
-ICONV sm xm
-ICONV sn xn
-ICONV sñ xñ
-ICONV sb xb
-ICONV sd xd
-ICONV sg xg
-ICONV sj xj
-ICONV sɉ xɉ
-ICONV ss xs
-ICONV sv xv
-ICONV sr xr
-ICONV sl xl
 
 # frequently switched character groups
-REP 10
+REP 12
 REP a à
 REP e è
 REP e é
@@ -94,6 +77,8 @@ REP o ò
 REP o ó
 REP u ú
 REP ù ú
+REP s x
+REP x s
 REP ʼ ʼ_
 
 
@@ -3688,7 +3673,7 @@ SFX Y ude ú/T ude
 # Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug. intel partithipio pasivo ko la dexinentha in -st-, e intel xerundio
 
 # sostantivi alterài - demenutivi
-SFX & N 50
+SFX & N 52
 SFX & 0 eto/TI [^èò]l
 SFX & èl eleto/TI èl
 SFX & òl oleto/TI òl
@@ -3718,17 +3703,19 @@ SFX & òvo oveto/TI òvo
 SFX & òxo oxeto/TI òxo
 SFX & 0 iti [lnr]
 SFX & o iti o
-SFX & a eta/D [^bgjɉklƚnñrpsŧx]a
-SFX & a eta/D [^èò][bgjɉklƚnñprsŧx]a
+SFX & a eta/D [^bcgjɉklƚnñrpsŧx]a
+SFX & a eta/D [^è][glƚpr]a
+SFX & a eta/D [^èò][bcjɉklƚnñprsŧx]a
 SFX & èga egeta/D èga
 SFX & èla eleta/D èla
 SFX & èƚa eƚeta/D èƚa
 SFX & èpa epeta/D èpa
 SFX & èra ereta/D èra
 SFX & òba obeta/D òba
-SFX & òka oketa/D òka
+SFX & òca oceta/D òca
 SFX & òja ojeta/D òja
 SFX & òɉa oɉeta/D òɉa
+SFX & òka oketa/D òka
 SFX & òla oleta/D òla
 SFX & òƚa oƚeta/D òƚa
 SFX & òna oneta/D òna
@@ -4058,8 +4045,8 @@ PFX ‘ i ʼ i
 PFX ‘ in ʼN in
 PFX ‘ d ʼ d
 PFX ‘ di ʼI di
-PFX ‘ in ʼ in
-PFX ‘ int ʼT int
+PFX ‘ in ʼ inte
+PFX ‘ int ʼT int[ae]
 PFX ‘ g ʼ g
 PFX ‘ go ʼO go
 PFX ‘ v ʼ v
