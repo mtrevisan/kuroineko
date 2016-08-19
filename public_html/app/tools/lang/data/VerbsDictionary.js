@@ -123,6 +123,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "arpi",			"",			1,	0,	"g",	"1852",			"Véder pena on barlume.",
 "arpij",			"",			1,	3,	"a",	"1775",			"Raprénder, apijarse de le piante.",
 "ars",			"",			1,	0,	"g",	"1775",			"Bruxar, skotar.",
+"ars",			"",			4,	3,	"a",	"1829",			"Arsar.",
 "arsir",			"",			1,	3,	"a",	"1852", 			"Arsar, skotar.",
 "artikol",		"",			1,	3,	"a",	"", 				"",
 "arxar",			"",			1,	0,	"g",	"1851", 			"Arxinar.",

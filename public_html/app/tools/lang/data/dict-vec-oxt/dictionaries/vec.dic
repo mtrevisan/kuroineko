@@ -510,7 +510,7 @@ arlekínoe/aK	po:verb is:indicative_present is:interrogative st:arlekinar
 arlikinar/aE	po:verb is:infinitive is:simple
 arlikino/aEIJ	po:verb is:indicative_present st:arlikinar
 arlikínoe/aK	po:verb is:indicative_present is:interrogative st:arlikinar
-armar/aE	po:verb is:infinitive_simple
+armar/aEr	po:verb is:infinitive_simple
 armo/aEIJ	po:verb is:indicative_present st:armar
 àrmoe/aK	po:verb is:indicative_present is:interrogative st:armar
 armidar/aE+	po:verb is:infinitive_simple
@@ -552,6 +552,7 @@ arpíɉoe/aK	po:verb is:indicative_present is:interrogative st:arpiɉar
 arsar/aE	po:verb is:infinitive_simple
 arso/aEIJ	po:verb is:indicative_present st:arsar is:participle_perfect_strong st:àrder
 àrsoe/aK	po:verb is:indicative_present is:interrogative st:arsar
+arsir/acE	po:verb is:infinitive_simple
 arsirar/aE	po:verb is:infinitive_simple
 arsiro/aEIJ	po:verb is:indicative_present st:arsirar
 arsíroe/aK	po:verb is:indicative_present is:interrogative st:arsirar
@@ -5734,8 +5735,8 @@ galderò/bJ-	po:verb is:indicative_future st:gàlder
 galdo/aEIJ-	po:verb is:indicative_present st:gàlder
 gàldoe/aK-	po:verb is:indicative_present is:interrogative st:gàlder
 galxo/BI-	po:verb is:participle_perfect_strong st:gàlder
-gàldar/cE-	po:verb is:infinitive_simple
-galdarò/cJ-	po:verb is:indicative_future st:gàldar
+gàldar/bE-	po:verb is:infinitive_simple
+galdarò/bJ-	po:verb is:indicative_future st:gàldar
 galdir/acE	po:verb is:infinitive_simple
 galedar/aE	po:verb is:infinitive_simple
 galedo/aEIJ	po:verb is:indicative_present st:galedar
@@ -20844,8 +20845,8 @@ vardar/aE‘.	po:verb is:infinitive_simple
 vardo/aEIJ‘.	po:verb is:indicative_present st:vardar
 vàrdoe/aK‘.	po:verb is:indicative_present is:interrogative st:vardar
 varentar/aE	po:verb is:infinitive_simple
-varentir/aceE	po:verb is:infinitive_simple
-varento/aeEIJ	po:verb is:indicative_present st:varentar st:varentir
+varentir/adE	po:verb is:infinitive_simple
+varento/dEIJ	po:verb is:indicative_present st:varentar st:varentir
 varéntoe/aK	po:verb is:indicative_present is:interrogative st:varentar st:varentir
 varexar/aE	po:verb is:infinitive_simple
 varexo/aEIJ	po:verb is:indicative_present st:varexar
@@ -22291,6 +22292,7 @@ Alipio/Z	po:proper_noun
 Aƚipia/Z	po:proper_noun
 Aƚipio/Z	po:proper_noun
 Almorado/YZ	po:proper_noun
+Armorado/YZ	po:proper_noun
 Alovixia/Z	po:proper_noun
 Alovixio/Z	po:proper_noun
 Alvixe/Z	po:proper_noun
@@ -22907,8 +22909,8 @@ negun/BU	po:quantifier po:adjective st:nesun
 nigun/BU	po:quantifier po:adjective st:nesun
 arkuanto/BI	po:quantifier al:arkoanto
 arkoanto/BI	po:quantifier st:arkuanto
-rakuanto/BI	po:quantifier al:rakoanto
-rakoanto/BI	po:quantifier st:rakuanto
+rakuanto/BI	po:quantifier al:rakoanto st:arkuanto
+rakoanto/BI	po:quantifier st:arkuanto
 altretanto/BI	po:quantifier
 artanto/BI	po:quantifier
 tuto/BI	po:quantifier
@@ -24181,7 +24183,7 @@ aréntemene/G	po:adjective po:noun po:adverb
 argomental/DU	po:adjective
 argomentaƚe/D	po:adjective
 argomento/TI	po:noun
-ari	po:noun
+ari	po:interjection
 aria/D	po:noun
 armelin/Tt	po:noun
 armelinèr/BV	po:noun
@@ -28270,10 +28272,10 @@ armaroƚa/DV	po:noun
 armaron/DU	po:noun al:armarói
 armèr/BV&	po:noun
 arnaxo/T	po:noun
-aromàtiko/BI	po:noun
+aromàtiko/BI	po:adjective
 arpegara/D	po:noun
 arpexeto/TI	po:noun
-arpía/D	po:adjective
+arpía/D	po:noun
 arsenal/DU	po:noun
 arsenalòto/BI	po:noun
 arsenaƚe/D	po:noun
@@ -37741,7 +37743,7 @@ xmoroxin/B	po:noun
 alŧa/Dt	po:noun
 anemar/T	po:noun
 anguèla/Dt	po:noun
-arion/DU	po:noun
+arion/CU	po:noun
 arkaŧa/Dt	po:noun
 arkàvol/Ttu	po:noun
 asto/BŕI	po:adjective po:noun
@@ -38804,7 +38806,7 @@ cokoƚatin/T	po:noun
 còŧo/TtI	po:noun
 kítara/D	po:noun
 cunbon/CU	po:noun
-ŧiato/Tŧ	po:noun
+ŧiato/TŧI	po:noun
 ŧigalò/ŧ	po:noun
 sigaƚò	po:noun
 ŧigor/Dŧ	po:noun
@@ -40548,6 +40550,31 @@ ardentin/T	po:noun
 arđentin/T	po:noun
 arxentin/T	po:noun
 arguŧia/Dt	po:noun
+arieta/D	po:noun
+arioxo/BWIḿ	po:adjective po:noun
+arixmètika/D	po:noun
+arixmètega/D	po:noun
+arlaso/T	po:noun
+arlekin/T	po:noun
+armadina/D	po:noun
+armeraŧo/Tt	po:noun
+armereto/TI	po:noun
+armeron/DU	po:noun
+perlèr/BV	po:noun
+armirajo/Tt	po:noun
+armixo/T	po:noun
+armo/T	po:noun
+aro/T	po:noun
+arogantin/B	po:adjective
+aromàtego/BI	po:adjective
+aròmato/TI	po:noun
+aron	po:noun
+rum	po:noun
+àrpego/T	po:noun
+arkuilà/T	po:noun
+arkuiƚà/T	po:noun
+arsadin/B	po:adjective
 
 
-/ 40
+
+/ 42
