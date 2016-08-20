@@ -3347,8 +3347,8 @@ SFX T e i e
 
 # trasformaŧion intra varianti (l > ƚ, j > ɉ, ŧ > s)
 SFX t Y 33
-SFX t lò ƚò lò
-SFX t là ƚà là
+SFX t lò ƚò [aeiouàèéíòóú]lò
+SFX t là ƚà [aeiouàèéíòóú]là
 SFX t leto ƚeto/T [aeiouàèéíòóú]leto
 SFX t leta ƚeta/D [aeiouàèéíòóú]leta
 SFX t lon ƚon/D [aeiouàèéíòóú]lon
@@ -3356,12 +3356,12 @@ SFX t l ƚo/T [aeiouàèéíòóú]l
 SFX t la ƚa/D [aeiouàèéíòóú]la
 SFX t lio ƚio/T [aeiouàèéíòóú]lio
 SFX t lia ƚia/D [aeiouàèéíòóú]lia
-SFX t lan ƚan/T lan
-SFX t lana ƚana/D lana
-SFX t lin ƚin/T lin
-SFX t lina ƚina/D lina
-SFX t len ƚen/T len
-SFX t lena ƚena/D lena
+SFX t lan ƚan/T [aeiouàèéíòóú]lan
+SFX t lana ƚana/D [aeiouàèéíòóú]lana
+SFX t lin ƚin/T [aeiouàèéíòóú]lin
+SFX t lina ƚina/D [aeiouàèéíòóú]lina
+SFX t len ƚen/T [aeiouàèéíòóú]len
+SFX t lena ƚena/D [aeiouàèéíòóú]lena
 SFX t jo ɉo/T jo
 SFX t ja ɉa/D ja
 SFX t jon ɉon/DU jon
@@ -3433,9 +3433,9 @@ SFX V ol òl/TU [rs]ol
 SFX V oƚo ioƚo/T [rs]oƚo
 SFX V oƚo iòƚo/T [rs]oƚo
 SFX V oƚo òƚo/T [rs]oƚo
-SFX V ola iola/DU [rs]ola
-SFX V ola iòla/DU [rs]ola
-SFX V ola òla/DU [rs]ola
+SFX V ola iola/D [rs]ola
+SFX V ola iòla/D [rs]ola
+SFX V ola òla/D [rs]ola
 SFX V oƚa ioƚa/D [rs]oƚa
 SFX V oƚa iòƚa/D [rs]oƚa
 SFX V oƚa òƚa/D [rs]oƚa
@@ -3673,7 +3673,7 @@ SFX Y ude ú/T ude
 # Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug. intel partithipio pasivo ko la dexinentha in -st-, e intel xerundio
 
 # sostantivi alterài - demenutivi
-SFX & N 52
+SFX & N 51
 SFX & 0 eto/TI [^èò]l
 SFX & èl eleto/TI èl
 SFX & òl oleto/TI òl
@@ -3704,8 +3704,7 @@ SFX & òxo oxeto/TI òxo
 SFX & 0 iti [lnr]
 SFX & o iti o
 SFX & a eta/D [^bcgjɉklƚnñrpsŧx]a
-SFX & a eta/D [^è][glƚpr]a
-SFX & a eta/D [^èò][bcjɉklƚnñprsŧx]a
+SFX & a eta/D [^èò][bcgjɉklƚnñprsŧx]a
 SFX & èga egeta/D èga
 SFX & èla eleta/D èla
 SFX & èƚa eƚeta/D èƚa
@@ -3758,7 +3757,7 @@ SFX ( 0 òto/TI [^è][nr]
 SFX ( èl elòto/TI èl
 SFX ( èr eròto/BI èr
 SFX ( òl olòto/TI òl
-SFX ( o òto/TI [^csŧ]o
+SFX ( o òto/TI [^cƚsŧ]o
 SFX ( o òto/TI [^è][csŧ]o
 SFX ( èco ecòto/TI èco
 SFX ( èso esòto/TI èso
