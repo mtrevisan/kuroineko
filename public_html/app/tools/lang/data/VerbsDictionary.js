@@ -307,6 +307,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "barbuŧ",		"",			1,	4,	"a",	"1829",			"Kolpir soto el mento.",
 "bard",			"",			1,	1,	"g",	"1854",			"",
 "bardas",		"",			1,	4,	"g",	"1829",			"",
+"berekin",		"",			1,	5,	"a",	"1829",			"",
 "baret",			"in",			1,	3,	"a",	"1980",			"",
 "barik",			"",			1,	1,	"g",	"1867",			"",
 "bark",			"",			1,	1,	"g",	"1980",			"Varkar.",
