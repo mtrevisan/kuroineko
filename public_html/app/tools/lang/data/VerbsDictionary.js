@@ -599,6 +599,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bort",			"",			4,	4,	"a",	"1867",			"Abortir.",
 "boseg",			"x",			1,	1,	"a",	"1775",			"Tosir.",
 "bosk",			"dex",		1,	1,	"a",	"1854",			"",
+"bosk",			"",			1,	1,	"a",	"1829",			"",
 "bosk",			"in",			1,	1,	"a",	"1854",			"",
 "bosk",			"x",			1,	1,	"a",	"1775",			"",
 "boskaɉ",		"in",			1,	4,	"g",	"1867",			"Deventar boskaja.",

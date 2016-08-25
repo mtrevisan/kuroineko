@@ -2104,9 +2104,9 @@ xbósegoe/aK	po:verb ts:indicative_present is:interrogative st:xbosegar
 dexboskar/aE	po:verb is:infinitive_simple
 dexbosko/aEIJ	po:verb ts:indicative_present st:dexboskar
 dexbóskoe/aK	po:verb ts:indicative_present is:interrogative st:dexboskar
-inboskar/aE	po:verb is:infinitive_simple
-inbosko/aEIJ	po:verb ts:indicative_present st:inboskar
-inbóskoe/aK	po:verb ts:indicative_present is:interrogative st:inboskar
+boskar/aE-	po:verb is:infinitive_simple
+bosko/aEIJ-	po:verb ts:indicative_present st:boskar
+bóskoe/aK-	po:verb ts:indicative_present is:interrogative st:boskar
 xboskar/aE	po:verb is:infinitive_simple
 xbosko/aEIJ	po:verb ts:indicative_present st:xboskar
 xbóskoe/aK	po:verb ts:indicative_present is:interrogative st:xboskar
@@ -2145,13 +2145,13 @@ inbotílioe/aK	po:verb ts:indicative_present is:interrogative st:inbotiliar
 inbotiƚiar/aE	po:verb is:infinitive_simple
 inbotiƚio/aEIJ	po:verb ts:indicative_present st:inbotiƚiar
 inbotíƚioe/aK	po:verb ts:indicative_present is:interrogative st:inbotiƚiar
-botidar/aE	po:verb is:infinitive_simple
+botidar/aEr	po:verb is:infinitive_simple
 botido/aEIJ	po:verb ts:indicative_present st:botidar
 botídoe/aK	po:verb ts:indicative_present is:interrogative st:botidar
-botiđar/aE	po:verb is:infinitive_simple
+botiđar/aEr	po:verb is:infinitive_simple
 botiđo/aEIJ	po:verb ts:indicative_present st:botiđar
 botíđoe/aK	po:verb ts:indicative_present is:interrogative st:botiđar
-botixar/aE	po:verb is:infinitive_simple
+botixar/aEr	po:verb is:infinitive_simple
 botixo/aEIJ	po:verb ts:indicative_present st:botixar
 botíxoe/aK	po:verb ts:indicative_present is:interrogative st:botixar
 botonar/aE+-*	po:verb is:infinitive_simple
@@ -22377,13 +22377,15 @@ Bio/Z	po:proper_noun
 Bolda/Z	po:proper_noun
 Boldo/Z	po:proper_noun
 Bórtol/Z	po:proper_noun
+Bórtola/Z	po:proper_noun
+Bórtoƚa/Z	po:proper_noun
 Bórtoƚo/Z	po:proper_noun
 Bóskol/Z	po:proper_noun
 Bóskoƚo/Z	po:proper_noun
-Brotolamía/Z	po:proper_noun
-Brotolamío/Z	po:proper_noun
-Brotoƚamía/Z	po:proper_noun
-Brotoƚamío/Z	po:proper_noun
+Bortolamía/Z	po:proper_noun
+Bortolamío/Z	po:proper_noun
+Bortoƚamía/Z	po:proper_noun
+Bortoƚamío/Z	po:proper_noun
 Bruna/Z	po:proper_noun
 Bruno/Z	po:proper_noun
 Cano/Z	po:proper_noun
@@ -25159,13 +25161,15 @@ gaja/Dŕ	po:noun
 gaɉa/Dŕ	po:noun
 gal/Tu&	po:noun
 gala/D&(	po:noun
-galantòmo/TI	po:adjective
+galantòmo/TI	po:adjective al:galantòmeni
+galantòmeni	po:adjective is:plural st:galantòmo
 galepin/T	po:noun
 galina/D&	po:noun
 galinèr/BV	po:noun
 galòfa/D	po:noun
 gaƚa/D&(	po:noun
-gaƚantòmo/T	po:adjective
+gaƚantòmo/T	po:adjective al:gaƚantòmeni
+gaƚantòmeni	po:adjective is:plural st:gaƚantòmo
 gaƚepin/T	po:noun
 gaƚina/D&	po:noun
 gaƚinèr/BV	po:noun
@@ -28786,11 +28790,12 @@ bonbardièr/B	po:noun
 bonbaxèr/BV	po:noun
 bonemani	po:noun is:plural st:bonaman
 bonígol/Ttu	po:noun
-bonòmo/TI	po:adjective
-bonpaston/DU	po:adjective
-bontenpon/BU	po:noun
-bontenpo/T	po:noun
-bonvivan/BU	po:noun
+bonòmo/TI	po:adjective po:noun al:bonòmeni
+bonòmeni	po:adjective po:noun is:plural st:bonòmo
+bonpaston/DU	po:adjective po:noun
+bontenpon/BU	po:adjective po:noun
+bontenpo/T	po:adjective po:noun
+bonvivan/BU	po:adjective po:noun
 boñon/DU	po:noun
 boraca/D&	po:noun
 borana/D	po:noun
@@ -34026,10 +34031,11 @@ bekonèl/TtU	po:noun
 bekonèla/Dt	po:noun
 belbèl/TtU	po:adverb
 belòmeni	po:noun is:plural st:belòmo
-belòmo/TI	po:noun
+belòmo/TI	po:noun al:belòmeni
 belsixin/B	po:adjective
 beƚòmeni	po:noun is:plural st:beƚòmo
-beƚòmo/T	po:noun
+beƚòmo/T	po:noun al:beƚòmeni
+beƚòmeni	po:noun is:plural st:beƚòmo
 benarlevà	po:adjective
 benda/D&	po:noun
 benefisio/T&	po:noun
@@ -34068,9 +34074,10 @@ bolŧon/DtU	po:noun
 boƚèo/T	po:noun
 bonorivo/BWI	po:adjective
 bor/T	po:noun
-boraska/D	po:noun
+boraska/D&	po:noun
 boróndol/Ttu	po:noun
-boteja/Dt	po:noun
+boteja/Dv	po:noun
+boteɉa/Dv	po:noun
 botija/Dt	po:noun
 botonara/D	po:noun
 bòa/D	po:adjective po:noun
@@ -38776,7 +38783,7 @@ bonprèso/T	po:noun
 bora/D	po:noun
 bordú	po:noun
 boridon/DU	po:noun
-borin/T	po:adjective
+borin/B	po:adjective po:noun
 borò	po:noun
 botana/D	po:noun
 bóxega/D	po:noun
@@ -41125,7 +41132,62 @@ bondiòla/Dt	po:noun
 bonèl/TtU	po:noun
 boneta/D	po:noun
 bongusto/T	po:noun
+bonin/B	po:adjective
+bonintrada/DY	po:noun
+bonmò	po:noun
+bonon/DU	po:adjective
+bonorota/D	po:adverb
+bonsior/Bḿ	po:noun al:bonsiuri
+bontà	po:noun
+bontòn/TU	po:noun
+bonton/TU	po:noun
+bontonista/C	po:noun
+boraŧina/D	po:noun
+borasina/D	po:noun
+boraxin/T	po:noun
+bordajo/Tt	po:noun
+bordion/DU	po:noun
+bordú	po:noun
+borèl/TtU	po:noun
+borelòto/TI	po:noun
+boreƚòto/T	po:noun
+borexin/B	po:adjective
+borgexan/BU	po:adjective po:noun
+boriñòl/TtU	po:noun
+boriñòla/Dt	po:noun
+borò/T	po:noun
+boròxa/D	po:noun
+borselin/Tt	po:noun
+borso/B	po:adjective
+borsòta/D	po:noun
+borŧakin/T	po:noun
+borsakin/T	po:noun
+boxegin/T	po:noun
+boso/T	po:noun
+bósola/Dt	po:noun
+botame/T	po:noun
+botàniko/B	po:adjective po:noun
+botànego/B	po:adjective po:noun
+botegon/DU	po:noun
+botexina/D	po:noun
+botilia/Dv	po:noun
+botiƚia/Dv	po:noun
+butilia/Dv	po:noun
+butiƚia/Dv	po:noun
+botirante/T	po:noun
+botiro/Tŕ	po:noun
+botiron/DU	po:noun
+botonadura/DY	po:noun
+botonador/CV	po:noun
+bova/D	po:noun
+boŧador/CV	po:noun
+bosador/CV	po:noun
+boŧèl/TU	po:noun
+bosèl/TtU	po:noun
+bòŧo/Tt	po:noun
+braŧiòl/TtU	po:noun
+brasiòl/TtU	po:noun
 
 
 
-/ 83
+/ 88
