@@ -710,6 +710,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "broɉ",			"in",			1,	2,	"g",	"1775",			"",
 "broɉ",			"x",			1,	2,	"g",	"1775",			"Skalfir, xbucar.",
 "brok",			"dex",		1,	2,	"g",	"1775",			"Scodar, rexòlver.",
+"brok",			"",			1,	2,	"g",	"1829",			"",
 "brok",			"in",			1,	2,	"g",	"1775",			"Incodar, intivar.",
 "brok",			"x",			1,	2,	"g",	"1775",			"Scopar.",
 "broket",		"dex",		1,	4,	"a",	"1775",			"",
