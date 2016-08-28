@@ -2546,6 +2546,9 @@ brústoƚoe/aK	po:verb ts:indicative_present is:interrogative st:brustoƚar
 bruxar/aEr*	po:verb is:infinitive_simple
 bruxo/aEIJ*	po:verb ts:indicative_present st:bruxar
 brúxoe/aK*	po:verb ts:indicative_present is:interrogative st:bruxar
+bublar/aE	po:verb is:infinitive_simple
+bublo/aEIJ	po:verb ts:indicative_present st:bublar
+búbloe/aK	po:verb ts:indicative_present is:interrogative st:bublar
 budelar/aE*	po:verb is:infinitive_simple
 budèlo/aEIJ*	po:verb ts:indicative_present st:budelar
 budèloe/aK*	po:verb ts:indicative_present is:interrogative st:budelar
@@ -2564,7 +2567,7 @@ búfoe/aK*.	po:verb ts:indicative_present is:interrogative st:bufar
 rabufar/aE	po:verb is:infinitive_simple
 rabufo/aEIJ	po:verb ts:indicative_present st:rabufar
 rabúfoe/aK	po:verb ts:indicative_present is:interrogative st:rabufar
-bufonar/aE*	po:verb is:infinitive_simple
+bufonar/aEv*	po:verb is:infinitive_simple
 bufono/aEIJ*	po:verb ts:indicative_present st:bufonar
 bufónoe/aK*	po:verb ts:indicative_present is:interrogative st:bufonar
 xbufonedar/aE	po:verb is:infinitive_simple
@@ -2579,6 +2582,8 @@ xbufonéxoe/aK	po:verb ts:indicative_present is:interrogative st:xbufonexar
 inbugar/aE	po:verb is:infinitive_simple
 inbugo/aEIJ	po:verb ts:indicative_present st:inbugar
 inbúgoe/aK	po:verb ts:indicative_present is:interrogative st:inbugar
+bujir/acE	po:verb is:infinitive_simple
+buɉir/acE	po:verb is:infinitive_simple
 bular/aE	po:verb is:infinitive_simple
 bulo/aEIJ	po:verb ts:indicative_present st:bular
 búloe/aK	po:verb ts:indicative_present is:interrogative st:bular
@@ -23845,7 +23850,8 @@ bixa/D&(	po:adjective po:noun
 bixo/TI&	po:adjective po:noun
 blè	po:adjective po:noun
 blò	po:adjective po:noun
-blú	po:adjective po:noun
+blu	po:adjective po:noun
+bru	po:adjective po:noun
 brun/BU	po:adjective po:noun
 dal/Tu&	po:adjective po:noun
 dala/D&	po:adjective po:noun al:đal
@@ -24598,17 +24604,18 @@ brulè	po:adjective
 bruƚè	po:adjective
 bruska/D&	po:noun
 bruskàndol/Ttu	po:noun
-bruskin/T	po:noun
-brusko/TI	po:noun
+bruskin/T&	po:noun
+brusko/TI&	po:noun
 bruteŧa/Dt	po:noun
-bruto/BI	po:adjective
-bruxor/D	po:noun
+bruto/TI&	po:adjective
+bruta/D&	po:adjective
+bruxor/D&	po:noun
 budèl/TtU	po:noun
 buèl/TtU	po:noun
 buèla/Dt	po:noun
 buganŧa/Dt	po:noun
 bugaŧa/Dt	po:noun
-burco/T	po:noun
+burco/T&	po:noun
 burlako/TI	po:adjective
 burlamato/TI	po:adjective
 burlan/TU	po:adjective
@@ -28928,7 +28935,8 @@ bruskadura/DY	po:noun
 bruskinèr/BV	po:noun
 bruskoloxo/BWIḿ	po:adjective po:noun al:bruskoluxi al:bruskuluxi
 bruskoƚoxo/BWḿ	po:adjective po:noun al:bruskoƚuxi al:bruskuƚuxi
-brustolin/Tt	po:noun
+brustolin/Tt	po:adjective po:noun
+brustolina/Dt	po:adjective
 bruxaja/Dt	po:noun
 bruxaòco/T	po:noun
 bruxegin/B	po:adjective
@@ -28966,8 +28974,8 @@ buratèl/TtU	po:noun
 buratin/B	po:noun
 burato/BI	po:noun
 buregòŧo/TtI	po:noun
-burelòto/TI	po:noun
-bureƚòto/T	po:noun
+burèl/T(	po:noun
+burèƚo/T(	po:noun
 burèla/Dt	po:noun
 burla/D&	po:noun
 burò/T	po:noun
@@ -34104,7 +34112,7 @@ bruxadura/DY	po:noun
 bruxico/T	po:noun
 bruxoleto/TtI	po:noun
 brúfoleto/TtI	po:noun
-bufon/DU	po:noun
+bufon/CU	po:adjective o:noun
 bukòliko/BI	po:adjective po:noun
 bukòƚiko/B	po:adjective po:noun
 burlièr/BV	po:noun
@@ -38821,7 +38829,7 @@ bustina/D	po:noun
 butirante/TI	po:noun
 buxar/T&	po:noun
 buxara/D&	po:noun
-buxaron/CU	po:noun
+buxaron/CU	po:adjective
 buxico/T	po:noun
 buxinèl/TtU	po:noun
 buxon/DU	po:noun
@@ -41144,9 +41152,8 @@ borasina/D	po:noun
 boraxin/T	po:noun
 bordajo/Tt	po:noun
 bordion/DU	po:noun
-borèl/TtU	po:noun
-borelòto/TI	po:noun
-boreƚòto/T	po:noun
+borèl/T(	po:noun
+borèƚo/T(	po:noun
 borexin/B	po:adjective
 borgexan/BU	po:adjective po:noun
 boriñòl/TtU	po:noun
@@ -41225,7 +41232,60 @@ broñola/Dt	po:noun
 bronboleta/Dt	po:noun
 bronbon/CU	po:adjective
 brosur	po:adverb
+brufoloxo/BWIḿ	po:adjective po:noun al:brufoluxi al:brufuluxi
+brufoƚoxo/BWḿ	po:adjective po:noun al:brufoƚuxi al:brufuƚuxi
+brulòto/TI	po:noun
+bruƚòto/T	po:noun
+brunal/DU	po:noun
+brunaƚe/D	po:noun
+bruolongo	po:adverb
+bruoƚongo	po:adverb
+bruxadin/B	po:adjective
+bruskèra/D	po:noun
+brusketina/D	po:noun
+brusa/D	po:noun
+brúsol/Ttu	po:noun
+brústol/Ttu	po:noun
+brustolon/Dt	po:adjective
+brutakòpia/D	po:noun
+bubarata/D	po:noun
+bubo/TI	po:noun
+bubon/DU	po:noun
+buŧintòro/T	po:noun
+busintòro/T	po:noun
+bukòlego/BI	po:adjective po:noun
+bukòƚego/B	po:adjective po:noun
+búdela/Dt	po:noun
+budeladaŧo/TtI	po:adjective
+budeladaŧa/Dt	po:adjective
+budeƚadaso/B	po:adjective
+brikonsèl/TtU	po:adjective po:noun
+brikonsèla/Dt	po:adjective po:noun
+brikonŧèl/BU	po:adjective po:noun
+budelon/CU	po:adjective
+budeƚon/C	po:adjective
+búfal/Ttu	po:noun
+bufador/CV&	po:noun
+bufonèl/TtU	po:noun
+bufonèla/Dt	po:noun
+bufoneto/BI	po:adjective o:noun
+bufoneŧo/Tt	po:noun
+bufonon/CU	po:noun
+bugadina/D	po:noun
+buganŧèr/BV	po:noun
+bugansèr/BV	po:noun
+jemè/ŧ	po:noun
+bujòl/TtU	po:noun
+buɉòl/TtU	po:noun
+bulegeŧo/Tt	po:noun
+buƚegeso/T	po:noun
+buratara/D	po:noun
+burlandòto/BI	po:noun
+burlina/D	po:adjective
+búskara/D	po:noun
+buskaron/CU	po:adjective
+buxenèo/T	po:noun
 
 
 
-/ 93
+/ 98

@@ -33,6 +33,8 @@ define(['tools/data/mining/DecisionTree', 'HTMLHelper', 'tools/ui/Validator', 't
 			[1,1,0,0, ,0,0,0, ,0,0,0,0,0,1,0, ,0,0,0,0,1,0,1,0, , ,1,1,0,0,0,1,0, , ,0,0, i18nResources.variant.lagunar],
 			[1,0,0,0, ,0,0,0, ,0,0,0,0,0,1,0, ,0,0,0,0,1,0,1,0, , , , ,0,0,0, ,1, , ,0,0, i18nResources.variant['cox&ograve;to']],
 			[1, ,0,0, ,0,0,0, ,0,0,0,0,0,1,0, ,0,0,0,0,1,0,1,0, , , , ,1,0,0, ,0, , ,0,0, i18nResources.variant.mestrin],
+//{"timestamp":"2016-08-27T21:48:43.599Z","instance":[null,1,1,null,null,null,null,0,null,null,null,null,null,null,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null,null,0],"questionOrder":[2,14,7,33,1,29],"nodeClass":"buranello","newClass":false,"supervisorName":"giuseppe siviero","supervisorAge":"69","supervisorPlace":"adria"}
+//{"timestamp":"2016-08-27T21:50:52.724Z","instance":[null,1,1,null,null,null,null,0,null,null,null,null,null,null,1,null,null,null,null,null,null,null,null,null,null,null,null,null,1],"questionOrder":[2,14,7,28,1],"nodeClass":"","newClass":true,"supervisorName":"giuseppe siviero","supervisorAge":"69","supervisorPlace":"adria"}
 			[1, ,0,0, ,0,0,0, ,0,0,0,0,0,1,0, ,0,0,0,0,1,0,1,0, , , , ,0,0,1, ,0, , ,0,0, i18nResources.variant['buran&egrave;l']],
 			[1,0,0,0, ,0,0, , , , , , ,0,1, , ,0,0,0,0,1,0,1, , , , , , ,1, , , ,1,0,0,0, i18nResources.variant.padoan],
 			//{"timestamp":"2015-04-02T19:09:34.305Z","newClass":false,"supervisorName":"Luca","supervisorAge":"37","supervisorPlace":"Vigonza","ip":"87.3.95.182","city":"Bagnacavallo","zipcode":"48012","region":"Emilia-Romagna","regionCode":"05","country":"Italy","countryCode":"ITA","latitude":44.4699,"longitude":12.0825}

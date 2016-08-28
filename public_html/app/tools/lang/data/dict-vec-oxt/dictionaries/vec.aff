@@ -1796,7 +1796,7 @@ SFX i r gàntomene/G andar
 
 # vèrbi -ér inregolari ((stra)saver, (re)aver, (re)gaver)
 # themeT1 + r/ajE
-SFX j Y 357
+SFX j Y 358
 SFX j saver sojo saver
 SFX j saver soɉo saver
 SFX j saver sòjo saver
@@ -1873,6 +1873,7 @@ SFX j aver ímoe/K gaver
 SFX j aver ò/J aver
 SFX j aver òe/K aver
 SFX j aver ame/G aver
+SFX j aver bú/B aver
 SFX j aver ebiè/J aver
 SFX j aver ebiène/K aver
 SFX j aver ebié/N aver
@@ -3674,15 +3675,19 @@ SFX Y ude ú/T ude
 # Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug. intel partithipio pasivo ko la dexinentha in -st-, e intel xerundio
 
 # sostantivi alterài - demenutivi
-SFX & N 54
+SFX & N 58
 SFX & 0 eto/TI [^èò]l
 SFX & èl eleto/TI èl
 SFX & òl oleto/TI òl
 SFX & 0 eto/TI [^ò]n
 SFX & òn oneto/TI òn
-SFX & 0 eto/TI [^èò]r
+SFX & 0 eto/TI [^èòo]r
+SFX & 0 eto/TI [^d]or
+SFX & 0 eto/TI [^aeiou]dor
 SFX & èr ereto/BI èr
 SFX & òr oreto/TI òr
+SFX & 0 eto/BI [aeiou]dor
+SFX & dor oreto/BI [aeiou]dor
 SFX & o eto/TI [^cdđkgjɉƚmñpsŧvx]o
 SFX & o eto/TI [^èò][kg]o
 SFX & o eto/TI [^ò][cdđjɉmñpsŧvx]o
