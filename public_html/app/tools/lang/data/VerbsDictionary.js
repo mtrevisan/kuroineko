@@ -770,6 +770,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "busol",			"skon",		1,	1,	"a",	"1775",			"",
 "busolot",		"in",			1,	5,	"g",	"1426",			"Méter drento intʼ un busolot.",
 "bust",			"in",			1,	1,	"a",	"1852",			"",
+"bustir",		"in",			1,	4,	"a",	"1829",			"Benedíxer.",
 "butili",		"in",			1,	3,	"a",	"1789",			"Méter drento na butilia.",
 "but",			"",			1,	1,	"a",	"1810",			"(franko) Xermojar.",
 "but",			"dex",		1,	1,	"a",	"1775",			"Disputar.",
