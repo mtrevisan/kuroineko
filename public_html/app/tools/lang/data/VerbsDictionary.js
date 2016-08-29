@@ -2253,6 +2253,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kalŧ",			"in",			1,	1,	"g",	"1775",			"",
 "kalŧ",			"re",			1,	1,	"g",	"1867",			"Inkalŧar (agr.).",
 "kalŧ",			"s",			1,	1,	"g",	"1775",			"",
+"kalŧer",		"",			1,	1,	"g",	"1829",			"Karŧerar.",
 "kalŧin",		"",			1,	4,	"a",	"1867",			"Ridúxer in kalŧina.",
 "kalŧin",		"des",		1,	4,	"a",	"1847",			"Kavar la kalŧina.",
 "kalŧin",		"in",			1,	4,	"a",	"1560",			"",
