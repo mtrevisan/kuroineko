@@ -395,9 +395,8 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/lang/phon
 			/v[ae]r([cgns]a|sia|[dx]e)/,
 			/x[ae]r(ma|[sŧ]i)/,
 
-			/estra/,
 			/^[flƚnrst]?esta/,
-			/[un]estra/,
+			/[alƚnu]estra/,
 			/deste/,
 			/melmo/,
 			/vesti/,
