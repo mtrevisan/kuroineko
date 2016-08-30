@@ -3674,8 +3674,8 @@ SFX Y ude ú/T ude
 # Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug. par tuti i mòdi e i tenpi fora ke inté ‘l infenío, partithipio ativo, e xerundio
 # Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug. intel partithipio pasivo ko la dexinentha in -st-, e intel xerundio
 
-# sostantivi alterài - demenutivi
-SFX & N 59
+# sostantivi alterài - demenutivi in -eto/a
+SFX & Y 59
 SFX & 0 eto/TI [^èò]l
 SFX & èl eleto/TI èl
 SFX & òl oleto/TI òl
@@ -3735,6 +3735,8 @@ SFX & òsa oseta/D òsa
 SFX & òŧa oŧeta/D òŧa
 SFX & òxa oxeta/D òxa
 SFX & 0 ta/D e
+
+# sostantivi alterài - demenutivi in -?
 #SFX & . èl/B ?
 #SFX & . èƚo/B ?
 #SFX & . el/B ?
@@ -3754,8 +3756,8 @@ SFX & 0 ta/D e
 #SFX & . rin/B [?]
 #SFX & . erin/B ?
 
-# sostantivi alterài - kresitivi
-SFX ( N 21
+# sostantivi alterài - kresitivi in -òto/a
+SFX ( Y 21
 SFX ( a òta/D [^cƚsŧ]a
 SFX ( a òta/D [^è][csŧ]a
 SFX ( èca ecòta/D èca
@@ -3778,8 +3780,8 @@ SFX ( o òto/T [^èò]ƚo
 SFX ( èƚo eƚòto/T èƚo
 SFX ( òƚo oƚòto/T òƚo
 
-# sostantivi alterài - kresitivi
-#SFX ) N 6
+# sostantivi alterài - kresitivi in -on
+#SFX ) Y 6
 #SFX ) 0 on/DU n
 #SFX ) a on/DU a
 #SFX ) e on/DU e
@@ -3788,9 +3790,23 @@ SFX ( òƚo oƚòto/T òƚo
 #SFX ) èko ekon/DU èko
 #SFX ) 0 to/BI [^aolnr]
 
-# sostantivi alterài - peđorativi
-#SFX & 0 ato/BI [lnr]
-#SFX & . ato/BI [aeo]
+# sostantivi alterài - peđorativi in -ato/a
+SFX § Y 10
+SFX § èl elato/TI èl
+SFX § o ato/TI [^mƚ]o
+SFX § o ato/T [^è]ƚo
+SFX § o ato/TI [^ò]mo
+SFX § òmo omato/TI òmo
+SFX § èƚo eƚato/T èƚo
+SFX § 0 ta/D [^lƚ]a
+SFX § 0 ta/D [^è][lƚ]a
+SFX § èla elata/D èla
+SFX § èƚa eƚata/D èƚa
+#SFX § e ato/BI e
+#SFX § 0 ato/BI [lnr]
+#SFX § . ato/BI [aeo]
+
+# sostantivi alterài - peđorativi in -?
 #SFX & . òl/B ?
 #SFX & . òƚo/B ?
 #SFX & . uŧo/BI ?
@@ -3815,48 +3831,48 @@ SFX ( òƚo oƚòto/T òƚo
 #SFX & . aso/B ?
 #SFX & . uko/B ?
 
-# sostantivi alterài (62 occurrences over 6548 verbs)
+# sostantivi alterài
 PFX = Y 2
 PFX = 0 stra .
 PFX = 0 stra- .
 
-# sostantivi alterài (27 occurrences over 6548 verbs)
+# sostantivi alterài
 PFX ^ Y 2
 PFX ^ 0 pre .
 PFX ^ 0 pre- .
 
-# sostantivi alterài (174 occurrences of <des> and 174 of <dex> over 6548 verbs)
+# sostantivi alterài
 PFX + Y 2
 PFX + 0 des [cfkpt]
 PFX + 0 dex [aàeèéiíoòóúmnñbdgjɉsvrl]
 
-# sostantivi alterài (923 occurrences over 6548 verbs)
+# sostantivi alterài
 PFX - Y 1
 PFX - 0 in .
 
-# sostantivi alterài (381 occurrences of <s> and 471 of <x> over 6548 verbs)
+# sostantivi alterài
 PFX * Y 2
 PFX * 0 s [cfkpt]
 PFX * 0 x [aàeèéiíoòóúmnñbdgjɉsvrl]
 
-# sostantivi alterài (239 occurrences over 6548 verbs)
+# sostantivi alterài
 PFX . Y 1
 PFX . 0 re .
 
-# sostantivi alterài (135 occurrences over 6548 verbs)
+# sostantivi alterài
 PFX , Y 1
 PFX , 0 de .
 
-# sostantivi alterài (112 occurrences over 6548 verbs)
+# sostantivi alterài
 PFX @ Y 1
 PFX @ 0 a .
 
-# sostantivi alterài (78 occurrences over 6548 verbs)
+# sostantivi alterài
 PFX : Y 1
 PFX : 0 kon .
 
 # numerali - koletivi
-SFX % N 74
+SFX % Y 74
 SFX % ète etena/D ète
 SFX % ète eteneta/D ète
 SFX % ète etèna/D ète
