@@ -7815,13 +7815,13 @@ kapèƚoe/aK+-	po:verb ts:indicative_present is:interrogative st:kapeƚar
 kapitar/aE+.,	po:verb is:infinitive_simple
 kàpito/aEIJ+.,	po:verb ts:indicative_present st:kapitar
 kàpitoe/aK+.,	po:verb ts:indicative_present is:interrogative st:kapitar
-kapitolar/aE.	po:verb is:infinitive_simple
+kapitolar/aEsś.	po:verb is:infinitive_simple
 kapítolo/aEIJ.	po:verb ts:indicative_present st:kapitolar
 kapítoloe/aK.	po:verb ts:indicative_present is:interrogative st:kapitolar
-kapitoƚar/aE.	po:verb is:infinitive_simple
+kapitoƚar/aEś.	po:verb is:infinitive_simple
 kapítoƚo/aEIJ.	po:verb ts:indicative_present st:kapitoƚar
 kapítoƚoe/aK.	po:verb ts:indicative_present is:interrogative st:kapitoƚar
-kapocar/aE	po:verb is:infinitive_simple
+kapocar/aEv	po:verb is:infinitive_simple
 kapòco/aEIJ	po:verb ts:indicative_present st:kapocar
 kapòcoe/aK	po:verb ts:indicative_present is:interrogative st:kapocar
 kaponar/aE-*	po:verb is:infinitive_simple
@@ -24048,6 +24048,7 @@ kanarol/TUV	po:adjective
 kanarola/DV	po:adjective
 kanaroƚa/DV	po:adjective
 kanaroƚo/TV	po:adjective
+kaorlòto/BI	po:adjective
 kararexe/T	po:adjective
 kastelan/TtU	po:adjective
 kastelana/Dt	po:adjective
@@ -24430,11 +24431,11 @@ barban/TU	po:noun
 barbo/T(	po:noun
 bardon/DU	po:noun
 barèla/Dt	po:noun
-baril/&	po:noun is:singular
+baril/&	po:noun is:singular al:barili
 barila/D&	po:noun
-barili	po:noun is:plural
-bariƚa/D&	po:noun
-bariƚi	po:noun is:plural
+barili	po:noun is:plural st:baril
+bariƚa/D&	po:noun al:bariƚi
+bariƚi	po:noun is:plural st:bariƚe
 barka/D&	po:noun
 barkar/T	po:noun
 barkarol/TUV	po:noun
@@ -24801,8 +24802,8 @@ dorsaƚe/D	po:adjective po:noun
 dorso/T	po:noun
 dotor/Cḿ	po:noun
 dòna/D&	po:noun
-dòsi	po:noun is:plural
-dòso/-	po:adverb po:noun is:singular
+dòsi	po:noun is:plural st:dòso
+dòso/-	po:adverb po:noun is:singular al:dòsi
 dòxa/C	po:noun
 dreto/BWI	po:adjective po:noun
 dreŧa/Dt	po:noun
@@ -25508,8 +25509,7 @@ kanpejo/Tt	po:noun
 kanpion/CU	po:noun
 kanpo/TI&	po:noun
 kantèr/BV	po:noun
-kanton/DU	po:noun al:kantuni
-kantuni	po:noun is:plural st:kanton
+kanton/DUḿ	po:noun
 kanŧon/DtU	po:noun
 kañar/B	po:noun
 kañon/CU	po:noun
@@ -25521,26 +25521,27 @@ kapèl/TU&	po:noun
 kapèla/D&	po:noun
 kapèƚa/D&	po:noun
 kapèƚo/T&	po:noun
-kapiklase	po:noun is:plural
-kapisaldi	po:noun is:plural
-kapistasion	po:noun is:plural
-kapistaŧion	po:noun is:plural
+kapiklase	po:noun is:plural st:kapoklase
+kapisaldi	po:noun is:plural st:kaposaldo
+kapistasion	po:noun is:plural st:kapostasion
+kapistaŧion	po:noun is:plural st:kapostaŧion
 kapital/D	po:noun
 kapitaƚe/D	po:noun
 kapitèl/TtU	po:noun
-kapitòle	po:noun is:plural
-kapitòƚe	po:noun is:plural
+kapitòla	po:noun is:plural st:kapotòla
+kapitòƚa	po:noun is:plural st:kapotòƚa
 kapítol/Ttu	po:noun
-kapoklase	po:noun is:singular
+kapoklase	po:noun is:singular al:kapiklase
 kapolaor/T	po:noun
 kapoƚaoro/T	po:noun
-kaposaldo	po:noun is:singular
-kapostasion	po:noun is:singular
-kapostaŧion	po:noun is:singular
-kapotòla	po:noun is:singular
-kapotòƚa	po:noun is:singular
+kaposaldo	po:noun is:singular al:kapisaldi
+kapostasion	po:noun is:singular al:kapistasion
+kapostaŧion	po:noun is:singular al:kapistaŧion
+kapotòla	po:noun is:singular al:kapitòla
+kapotòƚa	po:noun is:singular al:kapitòƚa
 kapovèrso/T	po:noun
-kapo/B(	po:noun
+kapo/TI(	po:noun
+kapa/D&	po:noun
 kapuŧo/TtI	po:adjective po:noun
 kar/T&	po:adjective po:noun
 kara/D&	po:adjective po:noun
@@ -25575,9 +25576,9 @@ karpía/D*	po:noun
 karta/D	po:noun
 karugo/T	po:noun
 kasa/D	po:noun
-kasafòrte	po:noun is:singular
+kasafòrte	po:noun is:singular al:kasefòrti
 kasavide/D	po:noun
-kasefòrti	po:noun is:plural
+kasefòrti	po:noun is:plural st:kasafòrte
 kaseto/BI	po:noun
 kasèl/TtU	po:noun
 kasèla/Dt	po:noun
@@ -25662,12 +25663,10 @@ klase/D	po:noun
 klinto/TI	po:noun
 klítego/B	po:adjective po:noun
 koa/D&	po:noun
-koaroso/I	po:noun is:singular
+koaroso/TI	po:noun
 koda/D&	po:noun
-kodaroso/I	po:noun is:singular
-koderosi	po:noun is:plural
+kodaroso/TI	po:noun
 kodolà/t	po:noun
-koerosi	po:noun is:plural
 kogo/T	po:noun
 kojon/CUv	po:adjective po:noun
 koɉon/CUv	po:adjective po:noun
@@ -25968,13 +25967,12 @@ lenŧiòl/TU	po:noun
 leña/D&	po:noun
 leñèr/BŧV	po:noun
 leño/TIŕ&	po:noun
-leon/DU	al:leuni
+leon/DUḿ	po:noun
 lesegal/DU	po:adjective
 lesèma/Tŧ	po:noun
 leterario/BŧW	po:adjective
 letura/Dŧ	po:noun
 leŧion/DtU	po:noun
-leuni/ŧ	po:noun is:plural st:leon
 levado/TŧY	po:adjective po:noun
 lexe/Dŧ	po:noun
 lexier/Bŧ	po:adjective
@@ -26066,7 +26064,7 @@ luxe/Dŧ&	po:noun
 ƚensiòƚo/T	po:noun
 ƚeña/D&	po:noun
 ƚeño/T&	po:noun
-ƚeon/D	al:leuni
+ƚeon/Dḿ	po:noun
 ƚesegaƚe/D	po:adjective
 ƚesion/D	po:noun
 ƚèto/T	po:noun
@@ -26223,8 +26221,8 @@ medodí	po:noun
 medodorno/T	po:noun
 medòl/TtU	po:noun
 međan/BU	po:adjective
-međanòte/I	po:noun is:singular
-međenòti	po:noun is:plural
+međanòte/I	po:noun is:singular al:međenòti
+međenòti	po:noun is:plural st:međanòte
 međeto/BI	po:adjective po:noun
 međèno/B	po:adjective po:noun
 međodí	po:noun
@@ -26466,7 +26464,7 @@ noxèla/Dt	po:noun
 nónsol/Ttu	po:noun
 nónŧol/Tu	po:noun
 nòma	po:adverb
-nòme	po:noun is:singular po:adverb
+nòme	po:noun is:singular po:adverb al:nòmi
 nòmi	po:noun is:plural st:nòme
 nòra/D	po:noun
 nòrma/D	po:noun
@@ -26675,7 +26673,7 @@ parformativo/BWI	po:adjective
 paríodo/T	po:noun
 parmeso/T	po:noun
 parmisivo/BWI	po:adjective
-paron/CU	po:noun al:parúi
+paron/CUḿ	po:noun
 paròla/Dt	po:noun
 parsémol/Ttu	po:noun
 parsona/D	po:noun
@@ -26691,7 +26689,6 @@ partikoƚarità	po:noun
 partisipio/T	po:noun
 partitivo/BWI	po:adjective
 partiŧipio/T	po:noun
-paruni	po:noun is:plural st:paron
 pasiensa/D-	po:noun
 pasiente/TI	po:adjective po:noun
 pasin/T	po:noun
@@ -26699,8 +26696,8 @@ pasion/DU	po:noun
 pasivante/D	po:adjective
 pasivo/BWI	po:adjective
 paso/TI&*	po:noun
-pastasuta	po:noun is:singular
-pastesute	po:noun is:plural
+pastasuta	po:noun is:singular al:pastesute
+pastesute	po:noun is:plural st:pastasuta
 pastin/T	po:noun
 pasto/TŕI	po:noun
 pastròco/TI	po:noun
@@ -26756,10 +26753,9 @@ persona/D	po:noun
 perŧeŧion/DU	po:noun
 perúxola/Dt	po:noun
 pesa/D&	po:noun
-pesekan	po:noun is:singular
-pesekani	po:noun is:plural
-pesespada	po:noun is:singular
-pesispada	po:noun is:plural
+pesekan/D	po:noun
+pesespada	po:noun is:singular al:pesispada
+pesispada	po:noun is:plural st:pesespada
 peso/TI&	po:noun
 pesúkola/Dt	po:noun
 peŧo/TI	po:noun
@@ -26878,8 +26874,8 @@ poƚisíndeto/T	po:noun
 poƚivaƚente/T	po:adjective
 pomèla/Dt	po:noun
 pomèr/BV	po:noun
-pomikòti	po:noun is:plural
-pomokòto	po:noun is:singular
+pomikòti	po:noun is:plural st:pomokòto
+pomokòto	po:noun is:singular al:pomikòti
 pomo/TIv&	po:noun
 ponèr/BV	po:noun
 pontarol/TUV&	po:adjective po:noun
@@ -26922,10 +26918,8 @@ postònego/B	po:adjective
 potaco/Tŕ&	po:noun
 poŧa/D&	po:noun
 poŧo/TI&	po:noun
-poxasendre	po:noun is:singular
-poxasendri	po:noun is:plural
-poxaŧendre	po:noun is:singular
-poxaŧendri	po:noun is:plural
+poxasendre/D	po:noun
+poxaŧendre/D	po:noun
 poxitivo/BWI	po:adjective
 pómol/Ttu	po:noun
 pòar/B	po:adjective
@@ -29904,7 +29898,6 @@ kagoleso/T	po:noun
 kagoƚeso/T	po:noun
 kagon/CU	po:adjective
 kain/T	po:noun
-kainegri	po:noun is:plural st:kaonegro
 kainèl/TtU	po:noun
 kakomir/B	po:noun
 kako/B	po:noun
@@ -30007,7 +30000,7 @@ kañin/B	po:adjective
 kañità	po:noun
 kañoleto/TtI	po:noun
 kañòl/TtU&	po:noun
-kaonegro	po:noun is:singular al:kainegri
+kaonegro/T	po:noun is:singular
 kaorío/T	po:noun
 kaoroso/T	po:noun
 kaostòrto/TI	po:adjective po:noun
@@ -30015,7 +30008,6 @@ kaparòsol/Ttu	po:noun
 kaparòŧol/Tu	po:noun
 kapelin/Tt	po:noun
 kapelina/Dt	po:noun
-kapeta/D	po:noun
 kapitan/BU	po:noun
 kapitaniado/TY	po:noun
 kapivènere/D	po:noun
@@ -30164,7 +30156,7 @@ kànker/T	po:noun
 kànola/Dt	po:noun
 kàol/Ttu*	po:noun
 kàos	po:noun
-kàparo/T	po:noun
+kàpar/T	po:interjection po:noun
 kàrpane	po:noun is:singular
 kàrpano/T	po:noun
 kàsega/D	po:interjection
@@ -30415,8 +30407,8 @@ kòrbo/B	po:noun
 kòrdol/Ttu	po:noun
 kòtego/B	po:adjective po:noun
 kòŧo/TtI	po:noun
-kòxa	po:adverb po:noun is:singular
-kòxe	po:noun is:plural
+kòxa	po:adverb po:noun is:singular al:kòxe
+kòxe	po:noun is:plural st:kòxa
 kòxo/T	po:noun
 krapaŧa/Dt	po:noun
 krapolon/DtU	po:noun
@@ -31659,7 +31651,7 @@ pigaŧa/Dt	po:noun
 pigoseto/TI	po:noun
 pigòso/TI&	po:noun
 pigòŧo/TI&	po:noun
-pii	po:noun is:plural
+pii	po:noun is:plural st:pio
 pikaja/Dt	po:noun
 pikàndol/Ttu	po:noun
 pikon/DU	po:noun
@@ -31681,7 +31673,7 @@ piñòl/TU&	po:noun
 piñòla/D&	po:noun
 piñòƚa/D&	po:noun
 piñòƚo/T&	po:noun
-pio	po:interjection po:noun is:singular
+pio	po:interjection po:noun is:singular sl:pii
 pionbin/T	po:noun
 pionbo/T	po:noun
 pioval/D	po:noun al:piovài
@@ -35326,7 +35318,7 @@ kañaŧa/Dt	po:noun
 kañaŧo/TtI	po:noun
 kapase/T	po:adjective
 kapaŧe/T	po:adjective
-kapitanio	po:noun is:singular
+kapitanio/B	po:noun is:singular
 kapotanio/B	po:noun
 kapotaño/B	po:noun
 karador/CV	po:noun
@@ -35689,8 +35681,8 @@ nevolon/DtU	po:noun
 nevó/B	po:noun
 nia/D*	po:adjective po:adverb po:conjunction po:noun
 niar/T	po:noun
-nii/*	po:adjective po:noun is:plural
-nio/*&	po:adjective po:noun is:singular
+nii/*	po:adjective po:noun is:plural st:nio
+nio/*&	po:adjective po:noun is:singular al:nii
 nito/BI	po:adjective
 nobeltade/TY	po:noun
 nobeltè	po:noun
@@ -37106,7 +37098,7 @@ fàrfara/D	po:noun
 fenocina/D	po:noun
 ferèr/BV	po:noun
 ferivèci	po:noun is:plural st:ferovèco
-ferovèco	po:noun is:singular
+ferovèco	po:noun is:singular al:ferivèci
 fevereta/D	po:noun
 feveron/DU	po:noun
 fevreta/D	po:noun
@@ -37244,10 +37236,8 @@ kavedin/T	po:noun
 kaxèla/Dt	po:noun
 kàmixo/T	po:noun
 kàmixe	po:noun
-koalonga	po:noun is:singular al:koelonge
-koaƚonga	po:noun is:singular al:koeƚonge
-koelonge	po:noun is:plural st:koalonga
-koeƚonge	po:noun is:plural st:koaƚonga
+koalonga/D	po:noun
+koaƚonga/D	po:noun
 komisario/B	po:noun
 komunitade/TY	po:noun
 konfalon/CtU	po:noun
@@ -38122,7 +38112,8 @@ kandio/B	po:adjective
 kanpatego/T	po:noun
 kanpédego/T	po:adjective
 kantinèla/Dt	po:noun
-kaposòldo/T	po:noun
+kaposòldo/T	po:noun al:kapisòldo
+kapisòldo	po:noun is:plural st:kaposòldo
 kapusal/DU	po:noun
 kapuŧal/DU	po:noun
 kasièr/BV	po:noun
@@ -39016,7 +39007,7 @@ kàmito/TI	po:noun
 kànbrik	po:noun
 kàntar/T	po:noun
 kàorlo/T	po:noun
-kàpero/T	po:noun
+kàper/T	po:interjection po:noun
 kil/Tt	po:noun
 kítara/D	po:noun
 koaròla/Dt	po:adjective po:noun
@@ -39382,9 +39373,9 @@ oƚà	po:interjection
 omenato/TI	po:noun
 omeneto/TI	po:noun
 ometo/TI	po:noun
-ominúi	po:noun is:plural
+ominúi	po:noun is:plural st:omonúo
 omon/DU	po:noun
-omonúo	po:noun is:singular
+omonúo	po:noun is:singular al:ominúi
 onbrelin/Tt	po:noun
 onđa/Dt	po:noun
 onxadin/B	po:adjective
@@ -39955,8 +39946,8 @@ trexiòla/Dt	po:noun
 trèmola/Dt	po:noun
 trinèla/Dt	po:noun
 trinketina/D	po:noun
-tripapenin	po:noun is:singular
-tripepenini	po:noun is:plural
+tripapenin	po:noun is:singular al:tripepenini
+tripepenini	po:noun is:plural st:tripapenin
 tripeta/D	po:noun
 tronbon/CU	po:noun
 tronfeto/TI	po:noun
@@ -40189,10 +40180,10 @@ erède/T	po:noun
 farfujon/Dt	po:adjective po:noun
 fèfo/T	po:noun
 fínfol/Ttu	po:noun
-gatapeloxa	po:noun is:singular
-gatapeƚoxa	po:noun is:singular
-gatepeloxe	po:noun is:plural
-gatepeƚoxe	po:noun is:plural
+gatapeloxa	po:noun is:singular al:gatepeloxe
+gatapeƚoxa	po:noun is:singular al:gatepeƚoxe
+gatepeloxe	po:noun is:plural st:gatapeloxa
+gatepeƚoxe	po:noun is:plural st:gatapeƚoxa
 gaveñà/T	po:noun
 granga/D	po:noun
 grondolaresa/D	po:noun
@@ -40823,10 +40814,8 @@ beñiño/B	po:adjective
 begoxo/BWIḿ	po:adjective po:noun
 takabega/D	po:adjective po:noun
 metibega/D	po:adjective po:noun
-beladòna	po:noun is:singular
-beledòne	po:noun is:plural
-beƚadòna	po:noun is:singular
-beƚedòne	po:noun is:plural
+beladòna/D	po:noun
+beƚadòna/D	po:noun
 belon/DtU	po:noun
 belonaŧo/TtI	po:adjective
 beƚonaso/T	po:adjective
@@ -40915,8 +40904,8 @@ biondon/DU	po:adjective
 birèr/BV	po:noun
 birbon/DU	po:noun
 birlo/T	po:noun
-brio	po:noun is:singular
-brii	po:noun is:plural
+brio	po:noun is:singular al:brii
+brii	po:noun is:plural st:brio
 biròco/T&	po:noun
 biŧarin/T	po:noun
 bisarin/T	po:noun
@@ -41301,7 +41290,72 @@ kantareto/TI	po:noun
 kanterin/B	po:noun
 kantinbanko/T	po:noun
 kanto/T	po:noun
+kanŧonata/D	po:noun
+kansonata/D	po:noun
+kanŧoneta/D	po:noun
+kansoneta/D	po:noun
+kaoŧénbal/Tu	po:noun
+kaolame/T	po:noun
+kaoƚame/T	po:noun
+kàolfior/D	po:noun
+kolostòrto/T	po:noun
+koƚostòrto/T	po:noun
+kapana/D	po:noun
+kaparon/DU	po:noun
+kaparoŧoleto/TI	po:noun
+kaparosoleto/TtI	po:noun
+kapaŧa/Dt	po:noun
+kape	po:interjection
+kapelato/TI	po:noun
+kapeƚato/TI	po:noun
+kapeleta/Dt	po:noun
+kapeleto/Tt	po:noun
+kapelièra/D	po:noun
+kapeƚièra/D	po:noun
+kapelon/DtU	po:noun
+kapelòŧo/TI	po:noun
+kapelòso/TI	po:noun
+kapeƚòso/T	po:noun
+kapelúa/D	po:adjective po:noun
+kapeƚúa/D	po:adjective po:noun
+kapivèner/D	po:noun
+kapion/DU	po:noun
+kapitalista/C	po:noun
+kapitaƚista/C	po:noun
+kapokasa	po:noun is:singular al:kapikasa
+kapikasa	po:noun is:plural st:kapokasa
+kapokaŧa	po:noun is:singular al:kapikaŧa
+kapikaŧa	po:noun is:plural st:kapokaŧa
+kapòca/D	po:noun
+kapocon/CU	po:noun
+kapokòmego/B	po:noun
+kapokòmiko/B	po:noun
+kapokòro	po:noun is:singular al:kapikòro
+kapikòro	po:noun is:plural st:kapokòro
+kapofila	po:noun is:singular al:kapifila
+kapofiƚa	po:noun is:singular al:kapifiƚa
+kapifila	po:noun is:plural st:kapofila
+kapifiƚa	po:noun is:plural st:kapofiƚa
+serafila/Dt	po:noun
+kapogato/TI	po:noun
+kaponesa/D	po:noun
+kaponeto/TI	po:noun
+kapoposto	po:noun is:singular al:kapiposto
+kapiposto	po:noun is:plural st:kapoposto
+kapopòsto	po:noun is:singular al:kapipòsto
+kapipòsto	po:noun is:plural st:kapopòsto
+kaporal/Dt	po:noun
+kapotajo/Tt	po:noun
+kapotasto/T	po:noun
+kapotèr/BV	po:noun
+kapuŧèr/BV	po:noun
+kapòto/TI	po:noun
+kapotrupa	po:noun is:singular al:kapitrupa
+kapitrupa	po:noun is:plural st:kapotrupa
+kapoxiro/T	po:noun
+kapriŧio/Tt	po:noun
+kapriŧo/Tt	po:noun
 
 
 
-/ 116
+/ 121
