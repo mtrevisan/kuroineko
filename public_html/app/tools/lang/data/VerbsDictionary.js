@@ -2489,6 +2489,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kaved",			"des",		1,	1,	"g",	"1775",			"Deskapitar, vanŧar.",
 "kaveɉ",			"s",			1,	3,	"a",	"1775",			"",
 "kaveñ",			"s",			1,	3,	"a",	"1821",			"",
+"kaveŧ",			"",			1,	3,	"a",	"1829",			"",
 "kaveŧ",			"in",			1,	3,	"a",	"1775",			"",
 "kaveŧ",			"s",			1,	3,	"a",	"1445",			"",
 "kavil",			"",			1,	3,	"a",	"1867",			"",
