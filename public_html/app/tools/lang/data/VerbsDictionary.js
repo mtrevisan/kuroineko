@@ -6073,6 +6073,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧeđ",			"re",			1,	1,	"a",	"1775",			"Skoltar de skondon.",
 "ŧef",			"",			1,	1,	"g",	"1775",			"Ŧerpir.",
 "ŧef",			"in",			1,	1,	"g",	"1854",			"Skoronar, tajar a korona.",
+"ŧej",			"",			1,	1,	"a",	"1829",			"",
 "ŧekol",			"",			1,	1,	"g",	"1775",			"Minuŧar, tajar, far skeje.",
 "ŧeler",			"",			1,	1,	"g",	"XIV-XV",		"",
 "ŧeler",			"a",			1,	1,	"g",	"1980",			"(bixiak)",

@@ -52,7 +52,7 @@ MAP oóò
 MAP uúù
 
 # replace input characters
-ICONV 29
+ICONV 12
 ICONV dh đ
 ICONV Dh Đ
 ICONV fh f
@@ -65,26 +65,9 @@ ICONV nh ñ
 ICONV Nh Ñ
 ICONV th ŧ
 ICONV Th Ŧ
-ICONV xc sc
-ICONV xf sf
-ICONV xk sk
-ICONV xp sp
-ICONV xt st
-ICONV sm xm
-ICONV sn xn
-ICONV sñ xñ
-ICONV sb xb
-ICONV sd xd
-ICONV sg xg
-ICONV sj xj
-ICONV sɉ xɉ
-ICONV ss xs
-ICONV sv xv
-ICONV sr xr
-ICONV sl xl
 
 # frequently switched character groups
-REP 10
+REP 12
 REP a à
 REP e è
 REP e é
@@ -94,6 +77,8 @@ REP o ò
 REP o ó
 REP u ú
 REP ù ú
+REP s x
+REP x s
 REP ʼ ʼ_
 
 
@@ -3362,8 +3347,8 @@ SFX T e i e
 
 # trasformaŧion intra varianti (l > ƚ, j > ɉ, ŧ > s)
 SFX t Y 33
-SFX t lò ƚò lò
-SFX t là ƚà là
+SFX t lò ƚò [aeiouàèéíòóú]lò
+SFX t là ƚà [aeiouàèéíòóú]là
 SFX t leto ƚeto/T [aeiouàèéíòóú]leto
 SFX t leta ƚeta/D [aeiouàèéíòóú]leta
 SFX t lon ƚon/D [aeiouàèéíòóú]lon
@@ -3371,12 +3356,12 @@ SFX t l ƚo/T [aeiouàèéíòóú]l
 SFX t la ƚa/D [aeiouàèéíòóú]la
 SFX t lio ƚio/T [aeiouàèéíòóú]lio
 SFX t lia ƚia/D [aeiouàèéíòóú]lia
-SFX t lan ƚan/T lan
-SFX t lana ƚana/D lana
-SFX t lin ƚin/T lin
-SFX t lina ƚina/D lina
-SFX t len ƚen/T len
-SFX t lena ƚena/D lena
+SFX t lan ƚan/T [aeiouàèéíòóú]lan
+SFX t lana ƚana/D [aeiouàèéíòóú]lana
+SFX t lin ƚin/T [aeiouàèéíòóú]lin
+SFX t lina ƚina/D [aeiouàèéíòóú]lina
+SFX t len ƚen/T [aeiouàèéíòóú]len
+SFX t lena ƚena/D [aeiouàèéíòóú]lena
 SFX t jo ɉo/T jo
 SFX t ja ɉa/D ja
 SFX t jon ɉon/DU jon
@@ -3439,8 +3424,8 @@ SFX V èr ar/B [^cijɉñ]èr
 SFX V ièr ar/B ièr
 SFX V ièr er/B ièr
 SFX V èr er/B ièr
-SFX V èr ier/B [^cijɉñ]èr
-SFX V èr ièr/B [^cijɉñ]èr
+SFX V èr ier/B [^aeoucijɉñ]èr
+SFX V èr ièr/B [^aeoucijɉñ]èr
 SFX V dor or/C [aeiou]dor
 SFX V ol iol/TU [rs]ol
 SFX V ol iòl/TU [rs]ol
@@ -3448,19 +3433,25 @@ SFX V ol òl/TU [rs]ol
 SFX V oƚo ioƚo/T [rs]oƚo
 SFX V oƚo iòƚo/T [rs]oƚo
 SFX V oƚo òƚo/T [rs]oƚo
-SFX V ola iola/DU [rs]ola
-SFX V ola iòla/DU [rs]ola
-SFX V ola òla/DU [rs]ola
+SFX V ola iola/D [rs]ola
+SFX V ola iòla/D [rs]ola
+SFX V ola òla/D [rs]ola
 SFX V oƚa ioƚa/D [rs]oƚa
 SFX V oƚa iòƚa/D [rs]oƚa
 SFX V oƚa òƚa/D [rs]oƚa
 
 # negòŧi, atività komerŧali o industriali, aŧion, scapi de ròbe o de parsone
-SFX v Y 32
+SFX v Y 38
 SFX v e aría/D e
 SFX v 0 ría/D e
-SFX v 0 ría/D a
-SFX v a ería/D a
+SFX v 0 ría/D [^lƚ]a
+SFX v 0 ría/D [^è][lƚ]a
+SFX v èla elaría/D èla
+SFX v èƚa eƚaría/D èƚa
+SFX v a ería/D [^lƚ]a
+SFX v a ería/D [^è][lƚ]a
+SFX v èla elería/D èla
+SFX v èƚa eƚería/D èƚa
 SFX v o aría/D [^èò][^cdđktx]o
 SFX v o ería/D [^èò][^cdđktx]o
 SFX v o aría/D [^èò]do
@@ -3491,8 +3482,9 @@ SFX v 0 aría/D [ln]
 SFX v 0 ería/D [ln]
 
 # nominali denominali
-SFX R Y 5
+SFX R Y 6
 SFX R 0 ista/C l
+SFX R èr erista/C èr
 SFX R a ista/C a
 SFX R e ista/C e
 SFX R o ista/C [^i]o
@@ -3687,30 +3679,40 @@ SFX Y ude ú/T ude
 # Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug. par tuti i mòdi e i tenpi fora ke inté ‘l infenío, partithipio ativo, e xerundio
 # Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug. intel partithipio pasivo ko la dexinentha in -st-, e intel xerundio
 
-# sostantivi alterài - demenutivi
-SFX & N 50
+# sostantivi alterài - demenutivi in -eto/a
+SFX & Y 65
 SFX & 0 eto/TI [^èò]l
 SFX & èl eleto/TI èl
 SFX & òl oleto/TI òl
 SFX & 0 eto/TI [^ò]n
 SFX & òn oneto/TI òn
-SFX & 0 eto/TI [^èò]r
-SFX & èr ereto/TI èr
+SFX & 0 eto/TI [^èòo]r
+SFX & 0 eto/TI [^d]or
+SFX & 0 eto/TI [^aeiou]dor
+SFX & èr ereto/BI èr
 SFX & òr oreto/TI òr
-SFX & o eto/TI [^cdđkgƚmpsŧvx]o
-SFX & o eto/TI [^èò][kg]o
-SFX & o eto/TI [^ò][cdđmpsŧvx]o
-SFX & èko eketo/TI èko
+SFX & 0 eto/BI [aeiou]dor
+SFX & dor oreto/BI [aeiou]dor
+SFX & o eto/TI [^cdđgkjɉƚmñpsŧvx]o
+SFX & o eto/TI [^èò][dđgkx]o
+SFX & o eto/TI [^ò][cjɉmñpsŧv]o
+SFX & èdo edeto/TI èdo
+SFX & èđo eđeto/TI èđo
 SFX & ègo egeto/TI ègo
+SFX & èko eketo/TI èko
+SFX & èxo exeto/TI èxo
 SFX & o eto/T [aeiou]ƚo
 SFX & òƚo oƚeto/T òƚo
 SFX & èƚo eƚeto/T èƚo
 SFX & òco oceto/TI òco
 SFX & òdo odeto/TI òdo
 SFX & òđo ođeto/TI òđo
-SFX & òko oketo/TI òko
 SFX & ògo ogeto/TI ògo
+SFX & òjo ojeto/TI òjo
+SFX & òɉo oɉeto/TI òɉo
+SFX & òko oketo/TI òko
 SFX & òmo ometo/TI òmo
+SFX & òño oñeto/TI òño
 SFX & òpo opeto/TI òpo
 SFX & òso oseto/TI òso
 SFX & òŧo oŧeto/TI òŧo
@@ -3718,17 +3720,22 @@ SFX & òvo oveto/TI òvo
 SFX & òxo oxeto/TI òxo
 SFX & 0 iti [lnr]
 SFX & o iti o
-SFX & a eta/D [^bgjɉklƚnñrpsŧx]a
-SFX & a eta/D [^èò][bgjɉklƚnñprsŧx]a
+SFX & a eta/D [^bcdđgíjɉklƚnñrpsŧx]a
+SFX & a eta/D [^èò][bcdđgjɉklƚnñprsŧx]a
+SFX & ía ieta/D ía
+SFX & èda edeta/D èda
+SFX & èđa eđeta/D èđa
 SFX & èga egeta/D èga
 SFX & èla eleta/D èla
 SFX & èƚa eƚeta/D èƚa
 SFX & èpa epeta/D èpa
 SFX & èra ereta/D èra
+SFX & èxa exeta/D èxa
 SFX & òba obeta/D òba
-SFX & òka oketa/D òka
+SFX & òca oceta/D òca
 SFX & òja ojeta/D òja
 SFX & òɉa oɉeta/D òɉa
+SFX & òka oketa/D òka
 SFX & òla oleta/D òla
 SFX & òƚa oƚeta/D òƚa
 SFX & òna oneta/D òna
@@ -3739,6 +3746,8 @@ SFX & òsa oseta/D òsa
 SFX & òŧa oŧeta/D òŧa
 SFX & òxa oxeta/D òxa
 SFX & 0 ta/D e
+
+# sostantivi alterài - demenutivi in -?
 #SFX & . èl/B ?
 #SFX & . èƚo/B ?
 #SFX & . el/B ?
@@ -3758,8 +3767,8 @@ SFX & 0 ta/D e
 #SFX & . rin/B [?]
 #SFX & . erin/B ?
 
-# sostantivi alterài - kresitivi
-SFX ( N 21
+# sostantivi alterài - kresitivi in -òto/a
+SFX ( Y 23
 SFX ( a òta/D [^cƚsŧ]a
 SFX ( a òta/D [^è][csŧ]a
 SFX ( èca ecòta/D èca
@@ -3771,9 +3780,11 @@ SFX ( 0 òto/TI [^è][nr]
 SFX ( èl elòto/TI èl
 SFX ( èr eròto/BI èr
 SFX ( òl olòto/TI òl
-SFX ( o òto/TI [^csŧ]o
+SFX ( o òto/TI [^ckƚsŧ]o
 SFX ( o òto/TI [^è][csŧ]o
+SFX ( o òto/TI [^ò]ko
 SFX ( èco ecòto/TI èco
+SFX ( òko okòto/TI òko
 SFX ( èso esòto/TI èso
 SFX ( èŧo eŧòto/TI èŧo
 SFX ( òr oròto/TI òr
@@ -3782,8 +3793,8 @@ SFX ( o òto/T [^èò]ƚo
 SFX ( èƚo eƚòto/T èƚo
 SFX ( òƚo oƚòto/T òƚo
 
-# sostantivi alterài - kresitivi
-#SFX ) N 6
+# sostantivi alterài - kresitivi in -on
+#SFX ) Y 6
 #SFX ) 0 on/DU n
 #SFX ) a on/DU a
 #SFX ) e on/DU e
@@ -3792,9 +3803,23 @@ SFX ( òƚo oƚòto/T òƚo
 #SFX ) èko ekon/DU èko
 #SFX ) 0 to/BI [^aolnr]
 
-# sostantivi alterài - peđorativi
-#SFX & 0 ato/BI [lnr]
-#SFX & . ato/BI [aeo]
+# sostantivi alterài - peđorativi in -ato/a
+SFX § Y 10
+SFX § èl elato/TI èl
+SFX § o ato/TI [^mƚ]o
+SFX § o ato/T [^è]ƚo
+SFX § o ato/TI [^ò]mo
+SFX § òmo omato/TI òmo
+SFX § èƚo eƚato/T èƚo
+SFX § 0 ta/D [^lƚ]a
+SFX § 0 ta/D [^è][lƚ]a
+SFX § èla elata/D èla
+SFX § èƚa eƚata/D èƚa
+#SFX § e ato/BI e
+#SFX § 0 ato/BI [lnr]
+#SFX § . ato/BI [aeo]
+
+# sostantivi alterài - peđorativi in -?
 #SFX & . òl/B ?
 #SFX & . òƚo/B ?
 #SFX & . uŧo/BI ?
@@ -3819,48 +3844,48 @@ SFX ( òƚo oƚòto/T òƚo
 #SFX & . aso/B ?
 #SFX & . uko/B ?
 
-# sostantivi alterài (62 occurrences over 6548 verbs)
+# sostantivi alterài
 PFX = Y 2
 PFX = 0 stra .
 PFX = 0 stra- .
 
-# sostantivi alterài (27 occurrences over 6548 verbs)
+# sostantivi alterài
 PFX ^ Y 2
 PFX ^ 0 pre .
 PFX ^ 0 pre- .
 
-# sostantivi alterài (174 occurrences of <des> and 174 of <dex> over 6548 verbs)
+# sostantivi alterài
 PFX + Y 2
 PFX + 0 des [cfkpt]
 PFX + 0 dex [aàeèéiíoòóúmnñbdgjɉsvrl]
 
-# sostantivi alterài (923 occurrences over 6548 verbs)
+# sostantivi alterài
 PFX - Y 1
 PFX - 0 in .
 
-# sostantivi alterài (381 occurrences of <s> and 471 of <x> over 6548 verbs)
+# sostantivi alterài
 PFX * Y 2
 PFX * 0 s [cfkpt]
 PFX * 0 x [aàeèéiíoòóúmnñbdgjɉsvrl]
 
-# sostantivi alterài (239 occurrences over 6548 verbs)
+# sostantivi alterài
 PFX . Y 1
 PFX . 0 re .
 
-# sostantivi alterài (135 occurrences over 6548 verbs)
+# sostantivi alterài
 PFX , Y 1
 PFX , 0 de .
 
-# sostantivi alterài (112 occurrences over 6548 verbs)
+# sostantivi alterài
 PFX @ Y 1
 PFX @ 0 a .
 
-# sostantivi alterài (78 occurrences over 6548 verbs)
+# sostantivi alterài
 PFX : Y 1
 PFX : 0 kon .
 
 # numerali - koletivi
-SFX % N 74
+SFX % Y 74
 SFX % ète etena/D ète
 SFX % ète eteneta/D ète
 SFX % ète etèna/D ète
@@ -4050,7 +4075,7 @@ PFX $ 0 mmmcl x
 
 
 # word truncated at the begin
-PFX ‘ Y 23
+PFX ‘ Y 27
 PFX ‘ a ʼ a
 PFX ‘ al ʼL al
 PFX ‘ an ʼN an
@@ -4058,8 +4083,12 @@ PFX ‘ i ʼ i
 PFX ‘ in ʼN in
 PFX ‘ d ʼ d
 PFX ‘ di ʼI di
-PFX ‘ in ʼ in
-PFX ‘ int ʼT int
+PFX ‘ in ʼ inta
+PFX ‘ in ʼ inte
+PFX ‘ in ʼ inté
+PFX ‘ int ʼT inta
+PFX ‘ int ʼT inte
+PFX ‘ int ʼT inté
 PFX ‘ g ʼ g
 PFX ‘ go ʼO go
 PFX ‘ v ʼ v
