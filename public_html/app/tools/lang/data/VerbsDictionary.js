@@ -6095,6 +6095,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧerc",			"in",			1,	1,	"a",	"1854",			"Kontornar de ŧerci.",
 "ŧercel",		"in",			1,	4,	"g",	"1867",			"Kontornar de ŧerceli.",
 "ŧereg",			"in",			1,	1,	"g",	"1775",			"Inkapricar, inamoracar.",
+"ŧeremoni",		"",			1,	5,	"g",	"1829",			"",
 "ŧerk",			"",			1,	1,	"a",	"1560",			"",
 "ŧerk",			"re",			1,	1,	"a",	"1867",			"",
 "ŧern",			"",			4,	4,	"a",	"1775",			"",
