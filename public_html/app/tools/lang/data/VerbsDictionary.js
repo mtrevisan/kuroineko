@@ -790,6 +790,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "buxol",			"dex",		1,	1,	"a",	"1854",			"Skonsertar, guastar.",
 "buxol",			"x",			1,	1,	"a",	"1854",			"Xbuxar, forar.",
 
+"car",			"",			1,	1,	"g",	"1829",			"",
 "cacar",			"",			1,	1,	"g",	"1527",			"Cakolar.",
 "cacer",			"",			1,	1,	"g",	"1980",			"Cakolar.",
 "cakol",			"",			1,	1,	"g",	"1810",			"",
@@ -847,6 +848,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "céñ",			"sos",		3,	1,	"a",	"1376",			"",
 "céñ",			"tra",		3,	1,	"a",	"",				"",
 "cep",			"in",			1,	1,	"a",	"1867",			"",
+"cereg",			"",			1,	1,	"g",	"1829",			"",
 "cet",			"",			1,	1,	"g",	"1321",			"",
 "cet",			"in",			1,	1,	"g",	"1867",			"",
 "cet",			"pre",		1,	1,	"g",	"1867",			"",
