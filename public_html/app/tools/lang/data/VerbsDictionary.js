@@ -6111,6 +6111,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧervel",		"de",			1,	4,	"g",	"1775",			"",
 "ŧervel",		"des",		1,	4,	"g",	"1854",			"",
 "ŧes",			"",			1,	1,	"g",	"1415",			"",
+"ŧest",			"",			1,	1,	"a",	"1829",			"",
 "ŧet",			"in",			1,	1,	"a",	"1854",			"",
 "ŧet",			"re",			1,	1,	"a",	"1867",			"Rekoverar.",
 "ŧet",			"skon",		1,	1,	"a",	"1854",			"Difamar.",
