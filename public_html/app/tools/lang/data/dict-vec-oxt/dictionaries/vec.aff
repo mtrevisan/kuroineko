@@ -3482,16 +3482,20 @@ SFX v 0 aría/D [ln]
 SFX v 0 ería/D [ln]
 
 # nominali denominali
-SFX R Y 6
-SFX R 0 ista/C l
+SFX R Y 9
+SFX R 0 ista/C [ln]
 SFX R èr erista/C èr
-SFX R a ista/C a
+SFX R a ista/C [^dí]a
+SFX R a ista/C [^ò]da
+SFX R òda odista/C òda
+SFX R ía ista/C ía
 SFX R e ista/C e
 SFX R o ista/C [^i]o
 SFX R o sta/C io
 
 # nominali deverbali
-SFX r Y 23
+SFX r Y 24
+SFX r o amento/TI o
 SFX r r mento/TI [^e]r
 SFX r r mento/TI [^dđñstx]er
 SFX r r mento/TI [^àéò]ser
