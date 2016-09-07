@@ -556,6 +556,9 @@ arsir/acE	po:verb ts:infinitive_simple
 arsirar/aE	po:verb ts:infinitive_simple
 arsiro/aEIJ	po:verb ts:indicative_present st:arsirar
 arsíroe/aK	po:verb ts:indicative_present is:interrogative st:arsirar
+koartar/aE	po:verb is:infinitive_simple
+koarto/aEIJ	po:verb ts:indicative_present st:koartar
+koàrtoe/aK	po:verb ts:indicative_present is:interrogative st:koartar
 artikolar/aEsś	po:verb ts:infinitive_simple
 artíkolo/aEIJ	po:verb ts:indicative_present st:artikolar
 artíkoloe/aK	po:verb ts:indicative_present is:interrogative st:artikolar
@@ -2973,10 +2976,7 @@ cúdoe/aK	po:verb ts:indicative_present is:interrogative st:cúder
 cuxo/BI	po:verb is:participle_perfect_strong st:cúder
 cúdar/bE	po:verb is:infinitive_simple
 cudarò/bJ	po:verb ts:indicative_future st:cúdar
-
 dixo/anJ^+-.	po:verb ts:indicative_present st:díxer
-
-
 incukar/aE	po:verb ts:infinitive_simple
 incuko/aEIJ	po:verb ts:indicative_present st:incukar
 incúkoe/aK	po:verb ts:indicative_present is:interrogative st:incukar
@@ -4702,6 +4702,18 @@ transferir/acE	po:verb ts:infinitive_simple
 transfarir/acE	po:verb ts:infinitive_simple
 trasferir/acEr	po:verb ts:infinitive_simple
 trasfarir/acEr	po:verb ts:infinitive_simple
+feralar/aE	po:verb is:infinitive_simple
+feralo/aEIJ	po:verb ts:indicative_present st:feralar
+feràloe/aK	po:verb ts:indicative_present is:interrogative st:feralar
+faralar/aE	po:verb is:infinitive_simple
+faralo/aEIJ	po:verb ts:indicative_present st:faralar
+faràloe/aK	po:verb ts:indicative_present is:interrogative st:faralar
+feraƚar/aE	po:verb is:infinitive_simple
+feraƚo/aEIJ	po:verb ts:indicative_present st:feraƚar
+feràƚoe/aK	po:verb ts:indicative_present is:interrogative st:feraƚar
+faraƚar/aE	po:verb is:infinitive_simple
+faraƚo/aEIJ	po:verb ts:indicative_present st:faraƚar
+faràƚoe/aK	po:verb ts:indicative_present is:interrogative st:faraƚar
 desferensiar/aE	po:verb ts:infinitive_simple
 desferensio/aEIJ	po:verb ts:indicative_present st:desferensiar
 desferénsioe/aK	po:verb ts:indicative_present is:interrogative st:desferensiar
@@ -8484,10 +8496,10 @@ arkòjar/bE	po:verb ts:infinitive_simple
 arkojarò/bJ	po:verb ts:indicative_future st:arkòjar
 arkòɉar/bE	po:verb ts:infinitive_simple
 arkoɉarò/bJ	po:verb ts:indicative_future st:arkòɉar
-kojonar/aE+*	po:verb ts:infinitive_simple
+kojonar/aEv+*	po:verb ts:infinitive_simple
 kojono/aEIJ+*	po:verb ts:indicative_present st:kojonar
 kojónoe/aK+*	po:verb ts:indicative_present is:interrogative st:kojonar
-koɉonar/aE+*	po:verb ts:infinitive_simple
+koɉonar/aEv+*	po:verb ts:infinitive_simple
 koɉono/aEIJ+*	po:verb ts:indicative_present st:koɉonar
 koɉónoe/aK+*	po:verb ts:indicative_present is:interrogative st:koɉonar
 kojonbarar/aEv	po:verb ts:infinitive_simple
@@ -8510,10 +8522,10 @@ skòko/aEIJ	po:verb ts:indicative_present st:skokar
 skòkoe/aK	po:verb ts:indicative_present is:interrogative st:skokar
 inkokalir/acE	po:verb ts:infinitive_simple
 inkokaƚir/acE	po:verb ts:infinitive_simple
-kokolar/aE	po:verb ts:infinitive_simple
+kokolar/aEv	po:verb ts:infinitive_simple
 kòkolo/aEIJ	po:verb ts:indicative_present st:kokolar
 kòkoloe/aK	po:verb ts:indicative_present is:interrogative st:kokolar
-kokoƚar/aE	po:verb ts:infinitive_simple
+kokoƚar/aEv	po:verb ts:infinitive_simple
 kòkoƚo/aEJ	po:verb ts:indicative_present st:kokoƚar
 kòkoƚoe/aK	po:verb ts:indicative_present is:interrogative st:kokoƚar
 kokonar/aE+-*	po:verb ts:infinitive_simple
@@ -20615,7 +20627,8 @@ sírkoƚoe/aK	po:verb ts:indicative_present is:interrogative st:sirkoƚar
 ŧirkondo/aEIJŧ	po:verb ts:indicative_present st:ŧirkondar
 ŧirkóndoe/aKŧ	po:verb ts:indicative_present is:interrogative st:ŧirkondar
 ŧirkuir/acEŧ	po:verb ts:infinitive_simple
-ŧitar/aEŧr-.	po:verb ts:infinitive_simple
+sitar/aErs-.	po:verb ts:infinitive_simple
+ŧitar/aErś-.	po:verb ts:infinitive_simple
 ŧito/aEIJŧ-.	po:verb ts:indicative_present st:ŧitar
 ŧítoe/aKŧ-.	po:verb ts:indicative_present is:interrogative st:ŧitar
 ŧitir/acEŧ	po:verb ts:infinitive_simple
@@ -22986,8 +22999,8 @@ onde	po:pronoun po:adjective_interrogative al:indoʼ al:unde po:noun
 unde	po:pronoun po:adjective_interrogative st:onde
 onve	po:pronoun po:adjective_interrogative
 dove	po:pronoun po:adjective_interrogative
-indove/’	po:pronoun po:adjective_interrogative al:indoʼ al:unde
-kome	po:pronoun po:adjective_interrogative al:komo
+indove/’	po:pronoun po:adjective_interrogative al:unde
+kome/’	po:pronoun po:adjective_interrogative al:komo
 komo	po:pronoun po:adjective_interrogative st:kome
 kuando	po:pronoun po:adjective_interrogative al:kuande al:koando
 koando	po:pronoun po:adjective_interrogative st:kuando
@@ -22995,7 +23008,7 @@ kuande	po:pronoun po:adjective_interrogative st:kuando
 parké	po:pronoun po:adjective_interrogative
 parkòsa	po:pronoun po:adjective_interrogative
 ci	po:pronoun po:adjective_interrogative
-kòsa/DI‘	po:pronoun po:adjective_interrogative po:noun al:ʼsa
+kòsa/DI‘	po:pronoun po:adjective_interrogative po:noun
 / kuantifegador
 uno	po:quantifier
 una	po:quantifier
@@ -25664,14 +25677,14 @@ klase/D	po:noun
 klinto/TI	po:noun
 klítego/B	po:adjective po:noun
 koa/D&	po:noun
-koaroso/TI	po:noun
+koaroso/BI	po:noun
 koda/D&	po:noun
 kodaroso/TI	po:noun
 kodolà/t	po:noun
 kogo/T	po:noun
 kojon/CUv	po:adjective po:noun
 koɉon/CUv	po:adjective po:noun
-kokon/DU	po:noun
+kokon/DU&	po:noun
 kokúmer/T	po:noun
 koletivo/BWI	po:adjective po:noun
 kolmo/B	po:adjective po:noun
@@ -27952,8 +27965,8 @@ turuƚú	po:adjective
 ŧiera/Dŧ&	po:noun
 ŧièxa/Dŧ&	po:noun
 ŧigareta/Dŧ	po:noun
-ŧima/Dŧ	po:noun
-ŧimento/TŧI	po:noun
+ŧima/Dŧ&	po:noun
+ŧimento/TŧIŕ	po:noun
 ŧinematògrafo/Tŧ	po:noun
 ŧirkospeŧion/DU	po:noun
 ŧirkostante/Dŧ	po:adjective po:noun
@@ -30153,10 +30166,8 @@ kiŧa/D&*	po:noun
 klavisénbal/Ttu	po:noun
 klaviŧénbal/Tu	po:noun
 klàustro/T	po:noun
-koarosa/D	po:noun
 koaton/DU	po:noun
 koato/TI*	po:noun
-koceta/D	po:noun
 kodegin/T	po:noun
 kodeguño/TI	po:noun
 kodoñèr/BV	po:noun
@@ -30373,11 +30384,12 @@ kovertur/B	po:noun
 kovèrco/T	po:noun
 koxeto/BI	po:noun
 kógoma/D	po:noun
-kòco/B	po:noun
-kòfano/T	po:noun
-kòkol/Ttu	po:adjective po:noun
-kòkola/Dt	po:adjective po:noun
-kòko/TI*	po:adjective po:noun
+kòco/T	po:noun
+kòca/D&	po:noun
+kòfan/T	po:noun
+kòkol/Ttu	po:noun
+kòkola/Dt	po:noun
+kòko/TI*	po:noun
 kòlera/D	po:noun
 kòƚera/D	po:noun
 kòmiko/BI	po:adjective po:noun
@@ -32403,7 +32415,7 @@ siɉil/Tt	po:noun
 siƚièra/D	po:noun
 simiotin/T	po:noun
 simiòto/BI	po:noun
-simoƚin/T	po:noun
+simoƚin/C	po:noun
 simonada/DY	po:noun
 sinagòga/D	po:noun
 sionada/DY	po:noun
@@ -33418,7 +33430,7 @@ turno/T	po:noun
 ŧimadura/DŧY	po:noun
 ŧimaxa/Dŧ	po:noun
 ŧimegin/Tŧ	po:adjective
-ŧimolin/Tŧ	po:noun
+ŧimolin/Cŧ	po:noun
 ŧimòŧa/D	po:noun
 ŧinbanèr/BŧV	po:noun
 ŧinganeska/Dŧ	po:noun
@@ -33431,7 +33443,7 @@ turno/T	po:noun
 ŧiton/DŧU	po:noun
 ŧito/Bŧ	po:adjective po:noun
 ŧiŧa/D	po:noun
-ŧiŧin/T	po:noun
+ŧiŧin/C	po:noun
 ŧiŧola/D	po:noun
 ŧivièra/Dŧ	po:noun
 ŧixara/Dŧ	po:noun
@@ -37819,7 +37831,7 @@ senxaƚièra/D	po:noun
 seraval/DU	po:noun
 seravaƚe/D	po:noun
 sfadegon/CU	po:adjective
-sisin/T	po:noun
+sisin/C	po:noun
 sisinin/C	po:adjective po:pronoun po:adverb
 skila/Dt	po:noun
 skufièr/BV	po:noun
@@ -37842,7 +37854,7 @@ tinèla/Dt	po:noun
 ŧerŧeña/D	po:noun
 ŧénban/TŧU	po:noun
 ŧionpo/Bŧ	po:adjective
-ŧirio/Tŧ	po:noun
+ŧirio/Tŧ(	po:noun
 ŧiŧin/T	po:noun
 ŧiŧinin/C	po:adjective po:pronoun po:adverb
 ŧokara/Dŧ	po:noun
@@ -38443,7 +38455,6 @@ turlon/DU	po:noun
 ŧèrnida/Dŧ	po:noun
 ŧèvente/TŧI	po:noun
 ŧimeriòto/BŧI	po:noun
-ŧimiereto/BŧI	po:noun
 ŧimièr/BŧV	po:noun
 ŧinbanista/Cŧ	po:noun
 ŧinŧapòtol/Tu	po:noun
@@ -38962,6 +38973,7 @@ kojonador/CV	po:noun
 koɉonador/CV	po:noun
 kokaleta/Dt	po:noun
 kokodè	po:adjective po:interjection po:noun
+kokodèo	po:adjective po:interjection po:noun
 kokolon/CU	po:adjective
 kokoƚon/C	po:adjective
 kokoñèl/TtU	po:noun
@@ -39403,7 +39415,8 @@ peñaroƚa/DV	po:noun
 peñaroƚo/TV	po:noun
 perdon/TU	po:noun
 pereto/TI*	po:noun
-permalin/Ct	po:noun
+permalin/C	po:noun
+permaƚin/C	po:noun
 permaloxo/BWIḿ	po:adjective po:noun
 permaƚoxo/BWḿ	po:adjective po:noun
 perolòto/TI	po:noun
@@ -39606,7 +39619,8 @@ scaranŧana/D	po:noun
 scenđa/Dt	po:interjection po:noun
 sedenò	po:adverb
 sekantin/C	po:adjective
-sekolin/Ct	po:adjective
+sekolin/C	po:adjective
+sekoƚin/C	po:adjective
 selmo/T	po:noun
 seƚegeta/D	po:noun
 semolin/Tt	po:noun
@@ -41428,8 +41442,8 @@ sernieroƚo/TV	po:noun
 ŧexarina/Dŧ	po:noun
 ŧexaròto/Tŧ	po:noun
 ŧèxa/Dŧ&	po:noun
-ŧexor/Dŧ	po:noun
-ŧixor/Dŧ	po:noun
+ŧexor/Cŧ	po:noun
+ŧixor/Cŧ	po:noun
 ŧesòlfaut/ŧ	po:noun
 ŧèto/Tŧ	po:noun
 ŧetoxa/Dŧ	po:noun
@@ -41536,6 +41550,68 @@ sigaleso/TI	po:noun
 sigaƚeso/T	po:noun
 ŧígar/Tŧ	po:noun
 ŧigòña/Dŧ	po:noun
+ŧinbanèl/TŧU	po:noun
+sinbanèƚo/T	po:noun
+ŧinbanon/DŧU	po:noun
+ŧimexon/DŧU	po:noun
+ŧimitèrio/Tŧ	po:noun
+ŧinŧinato/BI	po:adjective
+sinsinato/BI	po:adjective
+ŧinkuedéa/Dŧ	po:noun
+ŧinkuefòja/Dŧt	po:noun
+ŧinkuina/Dŧ	po:noun
+ŧinto/BŧI	po:noun
+cokaleta/Dt	po:noun
+ŧipo/TŧI	po:noun
+ŧio/Tŧ	po:noun
+ŧiga/Dŧ	po:noun
+ŧiòto/TŧI	po:noun
+ŧipria/Dŧ	po:noun
+ŧirkostanŧa/D	po:noun
+sirkostansa/D	po:noun
+ŧixarin/Tŧ	po:noun
+ŧexerin/Tŧ	po:noun
+ŧixila/D	po:noun
+sixiƚa/D	po:noun
+ŧixmatiko/BŧI	po:adjective
+ŧixmatego/Bŧ	po:adjective
+ŧixon/Cŧ	po:adjective
+ŧitèla/Dŧ	po:noun
+sitèƚa/D	po:noun
+ŧiveto/Tŧ	po:noun
+ŧivil/Dŧ	po:adjective
+siviƚe/D	po:adjective
+klistièr/BV	po:noun
+kloklò	po:interjection po:noun
+kloaka/D	po:noun
+klub/D	po:noun
+koadiudor/CV	po:noun
+kokàxine/T	po:noun
+kojonàxine/T	po:noun
+koɉonàxine/T	po:noun
+kocèr/BV	po:noun
+koŧinilia/D	po:noun
+kosinilia/Dt	po:noun
+kòklea/D	po:noun
+kokolin/C	po:noun
+kokoƚin/C	po:noun
+kokoloxo/BWIḿ	po:adjective po:noun al:kukuluxi
+kokoƚoxo/BWḿ	po:adjective po:noun al:kukuƚuxi
+kukuluxi	po:adjective po:noun is:plural st:kokoloxo
+kukuƚuxi	po:adjective po:noun is:plural st:kokoƚoxo
+kokonèra/D	po:noun
+kokoneŧo/Tt	po:noun
+kokonixmo/T	po:noun
+kokonon/CU	po:noun
+tartajon/CU	po:noun
+tartaɉon/CU	po:noun
+kodatario/B	po:noun
+kodegon/DU	po:noun
+koevía/D	po:adjective
+kojonasanti	po:noun
+koɉonasanti	po:noun
 
 
-/ 152
+
+
+/ 157
