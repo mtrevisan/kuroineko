@@ -2966,6 +2966,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "laŧ",			"in",			1,	1,	"g",	"",				"Méter el laŧo.",
 "laŧ",			"x",			1,	1,	"g",	"1867",			"",
 "laud",			"",			1,	1,	"g",	"1851",			"Aprovar, el konfermar intel tribunal. El kontrario el seria taɉar.",
+"laud",			"ko",			1,	1,	"g",	"1829",			"Laudar.",
 "laure",			"",			1,	1,	"g",	"",				"",
 "lav",			"",			1,	1,	"g",	"1376",			"",
 "lav",			"x",			1,	1,	"g",	"1775",			"",
