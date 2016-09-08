@@ -3483,7 +3483,7 @@ SFX v 0 ería/D [ln]
 
 # nominali denominali
 SFX R Y 9
-SFX R 0 ista/C [ln]
+SFX R 0 ista/C [lnr]
 SFX R èr erista/C èr
 SFX R a ista/C [^dí]a
 SFX R a ista/C [^ò]da
@@ -3675,11 +3675,25 @@ SFX ḿ orse ursi orse
 
 
 # avèrbi
-SFX W Y 4
-SFX W 0 mente/IX [alr]
-SFX W o amente/IX o
+SFX W Y 18
+SFX W 0 emente/IX n
+SFX W 0 mente/IX a
+SFX W 0 mente/IX [^è]r
+SFX W èr eramente/IX èr
+SFX W 0 mente/IX [^è]l
+SFX W èl elmente/IX èl
+SFX W o amente/IX [^mst]o
+SFX W o amente/IX [^è]mo
+SFX W o amente/IX [^ò]so
+SFX W o amente/IX [^èò]to
+SFX W èmo emamente/IX èmo
+SFX W òso osamente/IX òso
+SFX W èto etamente/IX èto
+SFX W òto otamente/IX òto
+SFX W 0 mente/IX [^lv]e
+SFX W 0 mente/IX [^è]ve
 SFX W e mente/IX le
-SFX W 0 mente/IX [^l]e
+SFX W ève evemente/IX ève
 
 # avèrbi
 SFX X Y 2
@@ -4136,10 +4150,11 @@ PFX ‘ kò ʼ kò
 PFX ‘ kòs ʼS kòs
 
 # word truncated at the end
-SFX ’ Y 11
+SFX ’ Y 12
 SFX ’ a ʼ [^r]a
 SFX ’ ra ʼ ra
-SFX ’ o ʼ [^x]o
+SFX ’ o ʼ [^dx]o
+SFX ’ do ʼ do
 SFX ’ xo ʼ xo
 SFX ’ e ʼ [^mv]e
 SFX ’ me ʼ me
