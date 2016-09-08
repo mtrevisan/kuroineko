@@ -2964,7 +2964,6 @@ cúcoloe/aK	po:verb ts:indicative_present is:interrogative st:cucolar
 cucoƚar/aE	po:verb is:infinitive_simple
 cúcoƚo/aEIJ	po:verb ts:indicative_present st:cucoƚar
 cúcoƚoe/aK	po:verb ts:indicative_present is:interrogative st:cucoƚar
-
 cúder/bE	po:verb is:infinitive_simple
 cudre	po:verb is:infinitive_simple st:cúder
 cuderò/bJ	po:verb ts:indicative_future st:cúder
@@ -3302,10 +3301,10 @@ dolar/aE+	po:verb ts:infinitive_simple
 dòloe/aK+	po:verb ts:indicative_present is:interrogative st:dolar
 doƚar/aE+	po:verb ts:infinitive_simple
 dòƚoe/aK+	po:verb ts:indicative_present is:interrogative st:doƚar
-doler/aE	po:verb ts:infinitive_simple
-dòlo/aEIJ+	po:verb ts:indicative_present st:doler st:dolar
-doƚer/aE	po:verb ts:infinitive_simple
-dòƚo/aEJ+	po:verb ts:indicative_present st:doƚer st:doƚar
+doler/aE:	po:verb ts:infinitive_simple
+dòlo/aEIJ+:	po:verb ts:indicative_present st:doler st:dolar
+doƚer/aE:	po:verb ts:infinitive_simple
+dòƚo/aEJ+:	po:verb ts:indicative_present st:doƚer st:doƚar
 indolentrar/aEr	po:verb ts:infinitive_simple
 indolentro/aEIJ	po:verb ts:indicative_present st:indolentrar
 indoléntroe/aK	po:verb ts:indicative_present is:interrogative st:indolentrar
@@ -7110,6 +7109,12 @@ jàŧoe/aK-*	po:verb ts:indicative_present is:interrogative st:jaŧar
 ɉaŧar/aEr-*	po:verb ts:infinitive_simple
 ɉaŧo/aEIJ-*	po:verb ts:indicative_present st:jaŧar
 ɉàŧoe/aK-*	po:verb ts:indicative_present is:interrogative st:jaŧar
+konjeturar/aE	po:verb is:infinitive_simple
+konjeturo/aEIJ	po:verb ts:indicative_present st:konjeturar
+konjetúroe/aK	po:verb ts:indicative_present is:interrogative st:konjeturar
+konɉeturar/aE	po:verb is:infinitive_simple
+konɉeturo/aEIJ	po:verb ts:indicative_present st:konɉeturar
+konɉetúroe/aK	po:verb ts:indicative_present is:interrogative st:konɉeturar
 rejistrar/aE	po:verb ts:infinitive_simple
 rejistro/aEIJ	po:verb ts:indicative_present st:rejistrar
 rejístroe/aK	po:verb ts:indicative_present is:interrogative st:rejistrar
@@ -9195,12 +9200,13 @@ krépoƚoe/aK*	po:verb ts:indicative_present is:interrogative st:krepoƚar
 inkrespar/aE	po:verb ts:infinitive_simple
 inkrespo/aEIJ	po:verb ts:indicative_present st:inkrespar
 inkréspoe/aK	po:verb ts:indicative_present is:interrogative st:inkrespar
-kréser/bEr.,	po:verb ts:infinitive_simple
-kreserò/bJ.,	po:verb ts:indicative_future st:kréser
-kreso/aEIJ.,	po:verb ts:indicative_present st:kréser
-krésoe/aK.,	po:verb ts:indicative_present is:interrogative st:kréser
-krésar/bE.,	po:verb ts:infinitive_simple
-kresarò/bJ.,	po:verb ts:indicative_future st:krésar
+kréser/bEr.,:	po:verb ts:infinitive_simple
+kreserò/bJ.,:	po:verb ts:indicative_future st:kréser
+kreso/aEIJ.,:	po:verb ts:indicative_present st:kréser
+krésoe/aK.,:	po:verb ts:indicative_present is:interrogative st:kréser
+krèto/BI.,:	po:verb ts:participle_perfect_strong st:kréser
+krésar/bE.,:	po:verb ts:infinitive_simple
+kresarò/bJ.,:	po:verb ts:indicative_future st:krésar
 renkréser/bEr	po:verb ts:infinitive_simple
 renkreserò/bJ	po:verb ts:indicative_future st:renkréser
 renkreso/aEIJ	po:verb ts:indicative_present st:renkréser
@@ -25740,7 +25746,6 @@ konkluxion/DU	po:noun
 konkluxivo/BWI	po:adjective
 konkordanŧa/Dt	po:noun
 konkòl/TtU	po:noun
-konkrèto/BI	po:adjective
 konostrèl/TtU	po:noun
 konòja/Dt	po:noun
 konpanàsego/T	po:noun
@@ -28347,13 +28352,13 @@ ankúxene/D	po:noun
 anporètiko/BI	po:adjective po:noun
 ansin/T&	po:noun
 ansipresèr/BV	po:noun
-ansiprèso/T	po:noun
+ansiprèso/TI	po:noun
 antegaja/Dt	po:noun
 antian/TU	po:noun
 antianèl/TtU	po:noun
 anŧin/T&	po:noun
 anŧipresèr/BV	po:noun
-anŧiprèso/T	po:noun
+anŧiprèso/TI	po:noun
 anxoleto/BI	po:noun
 anxoƚeto/B	po:noun
 aprension/DU	po:noun
@@ -30253,7 +30258,7 @@ komunal/DUW	po:adjective
 komunaƚe/D	po:adjective
 kondutor/CV	po:noun
 konejo/Tt	po:noun
-konestrela/Dt	po:noun
+konestrèla/Dt	po:noun
 konetral/DU	po:adjective
 konetraƚe/D	po:adjective
 konetraría/D	po:adjective
@@ -30267,7 +30272,7 @@ koniador/CV	po:noun
 konieto/TI	po:noun
 konijo/Tt	po:noun
 konin/T	po:noun
-konío/T	po:noun
+konío/T&	po:noun
 konka/D&	po:noun
 konkorenŧa/Dt	po:noun
 konkorso/T	po:noun
@@ -33743,7 +33748,7 @@ xenxalièra/D	po:noun
 xenxaƚièra/D	po:noun
 xermujo/Tt	po:noun
 xènxer/T	po:noun
-xèso/T	po:noun
+xèso/TI	po:noun
 xèsto/TI	po:noun
 xgalenbro/T	po:noun
 xgalmièra/D	po:noun
@@ -34287,7 +34292,7 @@ kokalina/Dt	po:noun
 konastrèl/TtU	po:noun
 konbina/D	po:noun
 kondana/D	po:noun
-konfèso/T	po:noun
+konfèso/TI	po:noun
 konpoxitor/C	po:noun
 konsalaveso/T	po:noun
 konsaƚaveso/T	po:noun
@@ -34514,7 +34519,7 @@ sardeƚèr/BV	po:noun
 sarlatanaso/B	po:noun
 scama/D	po:noun
 scopetadaŧa/Dt	po:noun
-secèso/T	po:noun
+secèso/TI	po:noun
 sedenŧa/Dt	po:noun
 sedronèƚa/D	po:noun
 sekador/CV	po:noun
@@ -34832,11 +34837,11 @@ alienador/CV	po:noun
 alièn/BU	po:adjective po:noun
 alinpio/B	po:adjective
 alínpigo/B	po:adjective
-alsiprèso/T	po:noun
+alsiprèso/TI	po:noun
 altroe	po:adverb
 altrotanto/BI	po:adjective po:adverb
 altrò	po:adverb
-alŧiprèso/T	po:noun
+alŧiprèso/TI	po:noun
 aƚienador/CV	po:noun
 aƚièn/B	po:adjective po:noun
 aƚinpio/B	po:adjective
@@ -34860,14 +34865,14 @@ ankona/D&	po:noun
 anoal/DU	po:noun
 anoaƚe/D	po:noun
 ansopresèr/BV	po:noun
-ansoprèso/T	po:noun
+ansoprèso/TI	po:noun
 antan/BU	po:noun
 anti	po:preposition po:adverb po:noun
 antigaja/Dt	po:noun
 antipèto/TI	po:noun
 anton/TU	po:noun
 anŧopresèr/BV	po:noun
-anŧoprèso/T	po:noun
+anŧoprèso/TI	po:noun
 añon/BU	po:quantifier
 aparente/TI	po:adjective
 aparenŧa/Dt	po:noun
@@ -38493,7 +38498,7 @@ ansa/D	po:noun al:anso
 anso	po:noun st:ansa
 arboradura/DY	po:noun
 ariata/D	po:noun
-arsiprèso/T	po:noun
+arsiprèso/TI	po:noun
 arŧiprèso/TI	po:noun
 asexa/D	po:noun
 aspreto/BI	po:adjective
@@ -38598,7 +38603,7 @@ bonbina/D	po:noun
 bondamar/D	po:noun
 bondiòla/Dt	po:noun
 boniman/TU	po:noun
-bonprèso/T	po:noun
+bonprèso/TI	po:noun
 bora/D	po:noun
 bordú	po:noun
 boridon/DU	po:noun
@@ -38692,10 +38697,10 @@ eklise/T	po:noun
 ekrise/T	po:noun
 erbaría/D	po:noun
 esera/D	po:noun
-esèso/T	po:noun
+esèso/TI	po:noun
 estroxo/BWIḿ	po:adjective po:noun
 etisía/D	po:noun
-eŧèso/T	po:noun
+eŧèso/TI	po:noun
 ète	po:noun
 fakojon/DtU	po:noun
 falilolèla/D	po:noun
@@ -38980,7 +38985,7 @@ konparixmo/T	po:noun
 konpoxidor/CV	po:noun
 konprita/D	po:noun
 konsafenèstra/D	po:noun
-konsistòro/T	po:noun
+konsistòr/T	po:noun
 konterèl/TtU	po:noun
 kontrakasa/D	po:noun
 kontro-medana/D	po:noun
@@ -38990,7 +38995,7 @@ kontrokolonba/D	po:noun
 kontrokoƚonba/D	po:noun
 konŧafenèstra/D	po:noun
 konŧina/Dt	po:noun
-konŧistòro/T	po:noun
+konŧistòr/T	po:noun
 koñosanŧa/Dt	po:noun
 kopelon/DtU*	po:noun
 kopin/T	po:noun
@@ -41110,7 +41115,7 @@ kaƚepin/T	po:noun
 kalèra/D	po:adjective
 kaƚèra/D	po:adjective
 kalèspol/Tu	po:noun
-kalèso/T	po:noun
+kalèso/TI	po:noun
 kaƚèso/T	po:noun
 kalèse	po:noun
 kaƚèse	po:noun
@@ -41135,7 +41140,8 @@ kaƚònego/B	po:noun
 kanònego/B	po:noun
 kalorna/D	po:noun
 kaƚorna/D	po:noun
-mantexenal/DtU	po:noun
+mantexenal/DU	po:noun
+mantexenaƚe/D	po:noun
 kalpestro/T	po:noun
 kalŧetèr/BV	po:noun
 kalsetèr/BV	po:noun
@@ -41194,7 +41200,8 @@ kanevaroƚo/TV	po:adjective
 kanevarola/DV	po:adjective
 kanevaroƚa/DV	po:adjective
 kanevon/DU	po:noun
-kaníbal/Dtu	po:noun
+kaníbal/Du	po:noun
+kaníbaƚe/D	po:noun
 kanòniko/B	po:noun
 kalòniko/B	po:noun
 kaƚòniko/B	po:noun
@@ -41250,7 +41257,8 @@ kapoposto	po:noun is:singular al:kapiposto
 kapiposto	po:noun is:plural st:kapoposto
 kapopòsto	po:noun is:singular al:kapipòsto
 kapipòsto	po:noun is:plural st:kapopòsto
-kaporal/DtU	po:noun
+kaporal/DU	po:noun
+kaporaƚe/D	po:noun
 kapotajo/Tt	po:noun
 kapotasto/T	po:noun
 kapotèr/BV	po:noun
@@ -41277,7 +41285,8 @@ kariđo/T&	po:noun
 karixo/T&	po:noun
 karitade/TY	po:noun
 karitadèla/Dt	po:noun
-karitatévol/Dtu	po:noun
+karitatévol/Du	po:noun
+karitatévoƚe/D	po:noun
 karnaxon/DU	po:noun
 karnume/T	po:noun
 karobina/D	po:noun
@@ -41395,8 +41404,8 @@ sendalina/Dt	po:noun
 ŧentòniko/Tŧ	po:noun
 ŧentònego/Tŧ	po:noun
 asinŧio/Tt	po:noun
-ŧentopèŧo/T	po:noun
-sentopèso/T	po:noun
+ŧentopèŧo/TI	po:noun
+sentopèso/TI	po:noun
 ŧentura/Dŧ&	po:noun
 sauroxa/D	po:noun
 ŧeoleta/D	po:noun
@@ -41661,7 +41670,7 @@ kòmego/B	po:adjective po:noun
 komision/DU	po:noun
 komitente/TI	po:noun
 kòmito/BI	po:noun
-komodàbil/D	po:adjective
+komodàbil/Du	po:adjective
 komodàbiƚe/D	po:adjective
 konparto/T	po:noun
 konpaso/T	po:noun
@@ -41676,7 +41685,31 @@ kònprita/D	po:noun
 komunikata/D	po:noun
 komunegata/D	po:noun
 komunion/DU	po:noun
+konŧepista/C	po:noun
+konsepista/C	po:noun
+konŧèrto/T	po:noun
+konsèrto/T	po:noun
+konŧerton/DU	po:noun
+konserton/DU	po:noun
+konkubina/D	po:noun
+konda	po:adjective
+kóndito/TI	po:noun
+kondon/TU	po:noun
+kondoto/TI	po:noun
+konfà	po:adverb
+konfèrta/D	po:noun
+konfesional/DU	po:adjective
+konfesionaƚe/D	po:adjective
+konfèto/TI	po:noun
+konfetin/T	po:noun
+konforme/T	po:adverb
+konformità	po:noun
+konfortador/CV	po:noun
+konfrontàbil/D	po:adjective
+konfrontàbiƚe/D	po:adjective
+konfuxo/BI	po:adjective
+kònomo/B	po:noun
 
 
 
-/ 166
+/ 168

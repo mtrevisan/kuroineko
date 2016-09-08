@@ -19,6 +19,7 @@ define(['tools/data/mining/DecisionTree', 'HTMLHelper', 'tools/ui/Validator', 't
 
 		data = [
 			[1,1,1,0,1,1,0,1,1, , , , , , , , ,0,0,1,0,0,0,0, , , , ,1,0, ,0, ,1, , ,0,0, i18nResources.variant.liventin],
+			//{"timestamp":"2016-09-08T14:52:26.130Z","instance":[null,null,null,null,null,null,null,null,null,null,null,null,1,1],"questionOrder":[13,12],"nodeClass":"feltrino-bellunese","newClass":false,"supervisorName":"Serena","supervisorAge":"30","supervisorPlace":"Longarone","ip":"85.36.104.70","city":false,"country":"Italy","latitude":43.1479,"longitude":12.1097}
 			[1,1,1,1,1,1,0,1,1,1,1,1, ,1,1,1,1,1,1,0,0,0,0,0, , , , , ,0,0,0, ,1, , ,0,0, i18nResources.variant['feltrin-belumat']],
 			[ , , , , , , , , , , , ,1,1,1, , , , , , , , ,0, ,1,0, , ,0, ,0, ,1, , ,0,0, i18nResources.variant.feltrin],
 			[ , , , , , , ,1, , , , , , , , , , , , , , , ,0,1,1,0, , ,0, ,0, ,1, , ,0,0, i18nResources.variant.belumat],

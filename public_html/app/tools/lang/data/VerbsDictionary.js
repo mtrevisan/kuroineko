@@ -989,6 +989,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "doɉiđ",			"",			1,	3,	"a",	"1775",			"Provar el dolor vanti de le dolie.",
 "dol",			"",			1,	1,	"g",	"1867",			"Pialar, Asiar.",
 "dol",			"dex",		1,	1,	"g",	"1852",			"Fiakar.",
+"dol",			"kon",		1,	1,	"g",	"1829",			"",
 "dol",			"",			2,	1,	"g",	"1867",			"",
 "dolentr",		"in",			1,	3,	"a",	"1847",			"Indolenŧir, adolorar.",
 "dolor",			"",			1,	3,	"a",	"1867",			"",
@@ -2144,6 +2145,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "íɉ",				"tranx",		3,	0,	"a",	"1867",			"",
 
 "jaŧ",			"",			1,	1,	"g",	"",				"",
+"jetur",			"kon",		1,	3,	"a",	"1829",			"",
 "jistr",			"re",			1,	1,	"a",	"1433",			"",
 "joŧ",			"",			1,	1,	"a",	"",				"",
 "joŧol",			"",			1,	1,	"a",	"",				"Piovixenar.",
