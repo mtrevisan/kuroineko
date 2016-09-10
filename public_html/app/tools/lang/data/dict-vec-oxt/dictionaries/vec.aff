@@ -3797,34 +3797,54 @@ SFX & òxa oxeta/D òxa
 SFX & 0 ta/D e
 
 # sostantivi alterài - demenutivi in -èl/-èla
-SFX [ Y 19
-SFX [ 0 èl/TtU n
-SFX [ 0 èl/TtU [^ò]r
-SFX [ òr orèl/TtU òr
-SFX [ e èl/TtU e
-SFX [ o èl/TtU [^cdkt]o
-SFX [ o èl/TtU [^ò][cdkt]o
-SFX [ òco ocèl/TtU òco
-SFX [ òdo odèl/TtU òdo
-SFX [ òko okèl/TtU òko
-SFX [ òto otèl/TtU òto
-SFX [ e èla/Dt e
-SFX [ a èla/Dt [^dknrsŧ]a
-SFX [ a èla/Dt [^ò][dknrsŧ]a
-SFX [ òda odèla/Dt òda
-SFX [ òka okèla/Dt òka
-SFX [ òna onèla/Dt òna
-SFX [ òra orèla/Dt òra
-SFX [ òsa osèla/Dt òsa
-SFX [ òŧa oŧèla/Dt òŧa
+SFX [ Y 22
+SFX [ 0 èl/TU [ln]
+SFX [ 0 èl/TU [^ò]r
+SFX [ òr orèl/TU òr
+SFX [ e èl/TU e
+SFX [ o èl/TU [^cdkprstŧ]o
+SFX [ o èl/TU [^ò][cdkprstŧ]o
+SFX [ òco ocèl/TU òco
+SFX [ òdo odèl/TU òdo
+SFX [ òko okèl/TU òko
+SFX [ òpo opèl/TU òpo
+SFX [ òro orèl/TU òro
+SFX [ òso osèl/TU òso
+SFX [ òto otèl/TU òto
+SFX [ òŧo oŧèl/TU òŧo
+SFX [ a èla/D [^dknrsŧ]a
+SFX [ a èla/D [^ò][dknrsŧ]a
+SFX [ òda odèla/D òda
+SFX [ òka okèla/D òka
+SFX [ òna onèla/D òna
+SFX [ òra orèla/D òra
+SFX [ òsa osèla/D òsa
+SFX [ òŧa oŧèla/D òŧa
 
 # sostantivi alterài - demenutivi in -èƚo/-èƚa
-SFX ] Y 5
+SFX ] Y 22
 SFX ] 0 èƚo/T n
-SFX ] a èƚa/D a
-SFX ] o èƚo/T [^c]o
-SFX ] o èƚo/T [^ò]co
+SFX ] 0 èƚo/T [^ò]r
+SFX ] òr orèƚo/T òr
+SFX ] e èƚo/T e
+SFX ] o èƚo/T [^cdkprstŧ]o
+SFX ] o èƚo/T [^ò][cdkprstŧ]o
 SFX ] òco ocèƚo/T òco
+SFX ] òdo odèƚo/T òdo
+SFX ] òko okèƚo/T òko
+SFX ] òpo opèƚo/T òpo
+SFX ] òro orèƚo/T òro
+SFX ] òso osèƚo/T òso
+SFX ] òto otèƚo/T òto
+SFX ] òŧo oŧèƚo/T òŧo
+SFX ] a èƚa/D [^dknrsŧ]a
+SFX ] a èƚa/D [^ò][dknrsŧ]a
+SFX ] òda odèƚa/D òda
+SFX ] òka okèƚa/D òka
+SFX ] òna onèƚa/D òna
+SFX ] òra orèƚa/D òra
+SFX ] òsa osèƚa/D òsa
+SFX ] òŧa oŧèƚa/D òŧa
 
 # sostantivi alterài - demenutivi in -?
 #SFX & . in/B ?
@@ -3843,8 +3863,8 @@ SFX ] òco ocèƚo/T òco
 #SFX & . erin/B ?
 
 # sostantivi alterài - kresitivi in -òto/a
-SFX ( Y 23
-SFX ( a òta/D [^cƚsŧ]a
+SFX ( Y 22
+SFX ( a òta/D [^csŧ]a
 SFX ( a òta/D [^è][csŧ]a
 SFX ( èca ecòta/D èca
 SFX ( èsa esòta/D èsa
@@ -3863,20 +3883,32 @@ SFX ( òko okòto/TI òko
 SFX ( èso esòto/TI èso
 SFX ( èŧo eŧòto/TI èŧo
 SFX ( òr oròto/TI òr
-SFX ( a òta/D ƚa
 SFX ( o òto/T [^èò]ƚo
 SFX ( èƚo eƚòto/T èƚo
 SFX ( òƚo oƚòto/T òƚo
 
 # sostantivi alterài - kresitivi in -on
-#SFX ) Y 6
-#SFX ) 0 on/DU n
-#SFX ) a on/DU a
-#SFX ) e on/DU e
-#SFX ) 0 n/DU [^k]o
-#SFX ) 0 n/DU [^è]ko
-#SFX ) èko ekon/DU èko
-#SFX ) 0 to/BI [^aolnr]
+SFX ) Y 20
+SFX ) 0 on/DU n
+SFX ) 0 n/DU [^ckmñst]o
+SFX ) 0 n/DU [^ò][ckmñst]o
+SFX ) òco ocon/DU òco
+SFX ) òko okon/DU òko
+SFX ) òmo omon/DU òmo
+SFX ) òño oñon/DU òño
+SFX ) òso oson/DU òso
+SFX ) òto oton/DU òto
+SFX ) 0 on/DU [^è]r
+SFX ) èr aron/DU èr
+SFX ) èr eron/DU èr
+SFX ) a on/DU [^gprt]a
+SFX ) a on/DU [^è][gpr]a
+SFX ) a on/DU [^ò]ta
+SFX ) èga egon/DU èga
+SFX ) èpa epon/DU èpa
+SFX ) èra eron/DU èra
+SFX ) òta oton/DU òta
+SFX ) e on/DU e
 
 # sostantivi alterài - peđorativi in -ato/a
 SFX § Y 10
