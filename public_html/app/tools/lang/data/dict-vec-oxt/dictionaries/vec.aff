@@ -3346,7 +3346,7 @@ SFX T a i a
 SFX T e i e
 
 # trasformaŧion intra varianti (l > ƚ, j > ɉ, ŧ > s)
-SFX t Y 33
+SFX t Y 34
 SFX t lò ƚò [aeiouàèéíòóú]lò
 SFX t là ƚà [aeiouàèéíòóú]là
 SFX t leto ƚeto/T [aeiouàèéíòóú]leto
@@ -3373,6 +3373,7 @@ SFX t ŧía sía/D ŧía
 SFX t ŧon son/DU ŧon
 SFX t ŧion sion/DU ŧion
 SFX t ŧal sal/DU ŧal
+SFX t ŧèl sèl/TU ŧèl
 SFX t ŧial sial/DU ŧial
 SFX t ŧin sin/T ŧin
 SFX t ŧina sina/D ŧina
@@ -3795,11 +3796,37 @@ SFX & òŧa oŧeta/D òŧa
 SFX & òxa oxeta/D òxa
 SFX & 0 ta/D e
 
+# sostantivi alterài - demenutivi in -èl/-èla
+SFX [ Y 19
+SFX [ 0 èl/TtU n
+SFX [ 0 èl/TtU [^ò]r
+SFX [ òr orèl/TtU òr
+SFX [ e èl/TtU e
+SFX [ o èl/TtU [^cdkt]o
+SFX [ o èl/TtU [^ò][cdkt]o
+SFX [ òco ocèl/TtU òco
+SFX [ òdo odèl/TtU òdo
+SFX [ òko okèl/TtU òko
+SFX [ òto otèl/TtU òto
+SFX [ e èla/Dt e
+SFX [ a èla/Dt [^dknrsŧ]a
+SFX [ a èla/Dt [^ò][dknrsŧ]a
+SFX [ òda odèla/Dt òda
+SFX [ òka okèla/Dt òka
+SFX [ òna onèla/Dt òna
+SFX [ òra orèla/Dt òra
+SFX [ òsa osèla/Dt òsa
+SFX [ òŧa oŧèla/Dt òŧa
+
+# sostantivi alterài - demenutivi in -èƚo/-èƚa
+SFX ] Y 5
+SFX ] 0 èƚo/T n
+SFX ] a èƚa/D a
+SFX ] o èƚo/T [^c]o
+SFX ] o èƚo/T [^ò]co
+SFX ] òco ocèƚo/T òco
+
 # sostantivi alterài - demenutivi in -?
-#SFX & . èl/B ?
-#SFX & . èƚo/B ?
-#SFX & . el/B ?
-#SFX & . eƚo/B ?
 #SFX & . in/B ?
 #SFX & . đin/B [?]
 #SFX & . eđin/B ?
@@ -3863,9 +3890,6 @@ SFX § 0 ta/D [^lƚ]a
 SFX § 0 ta/D [^è][lƚ]a
 SFX § èla elata/D èla
 SFX § èƚa eƚata/D èƚa
-#SFX § e ato/BI e
-#SFX § 0 ato/BI [lnr]
-#SFX § . ato/BI [aeo]
 
 # sostantivi alterài - peđorativi in -?
 #SFX & . òl/B ?
