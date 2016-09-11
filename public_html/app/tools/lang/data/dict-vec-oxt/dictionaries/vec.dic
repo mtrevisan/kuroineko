@@ -9029,9 +9029,9 @@ kòrgoe/aK	po:verb ts:indicative_present is:interrogative st:korgar
 inkorlar/aE	po:verb ts:infinitive_simple
 inkorlo/aEIJ	po:verb ts:indicative_present st:inkorlar
 inkórloe/aK	po:verb ts:indicative_present is:interrogative st:inkorlar
-inkornar/aE	po:verb ts:infinitive_simple
-inkòrno/aEIJ	po:verb ts:indicative_present st:inkornar
-inkòrnoe/aK	po:verb ts:indicative_present is:interrogative st:inkornar
+kornar/aE-	po:verb ts:infinitive_simple
+kòrno/aEIJ-	po:verb ts:indicative_present st:kornar
+kòrnoe/aK-	po:verb ts:indicative_present is:interrogative st:kornar
 skornar/aE	po:verb ts:infinitive_simple
 skòrno/aEIJ	po:verb ts:indicative_present st:skornar
 skòrnoe/aK	po:verb ts:indicative_present is:interrogative st:skornar
@@ -15906,7 +15906,7 @@ korónper/bE	po:verb ts:infinitive_simple
 koronperò/bJ	po:verb ts:indicative_future st:korónper
 koronpo/aEIJ	po:verb ts:indicative_present st:korónper
 korónpoe/aK	po:verb ts:indicative_present is:interrogative st:korónper
-koroto/BI	po:verb ts:participle_perfect_strong st:korónper
+koroto/BI	po:verb ts:participle_perfect_strong st:korónper po:adjective po:noun
 korónpar/bE	po:verb ts:infinitive_simple
 koronparò/bJ	po:verb ts:indicative_future st:korónpar
 roñar/aE+	po:verb ts:infinitive_simple
@@ -17910,6 +17910,15 @@ spòloe/aK	po:verb ts:indicative_present is:interrogative st:spolar
 spoƚar/aE	po:verb ts:infinitive_simple
 spòƚo/aEJ	po:verb ts:indicative_present st:spoƚar
 spòƚoe/aK	po:verb ts:indicative_present is:interrogative st:spoƚar
+korespónder/bE	po:verb is:infinitive_simple
+korespondre	po:verb is:infinitive_simple st:korespónder
+koresponderò/bJ	po:verb ts:indicative_future st:korespónder
+korespondo/aEIJ	po:verb ts:indicative_present st:korespónder
+korespóndoe/aK	po:verb ts:indicative_present is:interrogative st:korespónder
+koresposto/BI	po:verb ts:participle_perfect_strong st:korespónder
+korespòsto/BI	po:verb ts:participle_perfect_strong st:korespónder
+korespóndar/bE	po:verb is:infinitive_simple
+korespondarò/bJ	po:verb ts:indicative_future st:korespóndar
 respónder/bE	po:verb ts:infinitive_simple
 responderò/bJ	po:verb ts:indicative_future st:respónder
 respondo/aEIJ	po:verb ts:indicative_present st:respónder
@@ -23994,7 +24003,6 @@ karmelit/B	po:adjective po:noun
 karmeƚit/B	po:adjective po:noun
 karmin/C	po:adjective po:noun
 karnexin/C	po:adjective po:noun
-koroto/BI	po:adjective po:noun
 krémexe/T	po:adjective po:noun
 krèmexe/T	po:adjective po:noun
 latexin/Cŧ	po:adjective po:noun
@@ -25855,7 +25863,7 @@ kopa/D&[]	po:noun
 kopo/TI&	po:noun
 kopulativo/BWI	po:adjective
 kopuƚativo/BW	po:adjective
-kor/B	po:noun
+kor/B&	po:noun
 kordèla/D&	po:noun
 kordèƚa/D&	po:noun
 kordon/DU	po:noun
@@ -25900,9 +25908,10 @@ kògoma/D	po:noun
 kògo/T	po:noun
 kòka/D&*	po:noun
 kòl/TU&=	po:noun
-kòla/Dt*	po:noun
+kòla/D*	po:noun
 kòlf	po:noun
 kòƚo/T&=	po:noun
+kòƚa/D*	po:noun
 kòmodo/B+	po:adjective po:noun
 kòpula/Dt	po:noun
 kòr/B	po:noun
@@ -25986,7 +25995,7 @@ kuistion/DU	po:noun
 kuisto/BI	po:adjective po:pronoun
 kukú	po:noun
 kul/Tu=&	po:noun
-kulata/D	po:noun
+kulata/D)	po:noun
 kultura/D	po:noun
 kultural/DU	po:adjective
 kulturaƚe/D	po:adjective
@@ -26021,7 +26030,6 @@ laso/TI&	po:noun
 lasta/D)	po:noun
 lastra/D)	po:noun
 lateral/DU	po:noun
-late/Iv	po:noun
 latin/Tŧ&	po:adjective po:noun
 latina/Dŧ&	po:adjective po:noun
 laŧo/TI&	po:noun
@@ -26146,7 +26154,6 @@ luxe/Dŧ&	po:noun
 ƚaston/D	po:noun
 ƚastron/D	po:noun
 ƚateraƚe/D	po:noun
-ƚate/v	po:noun
 ƚavapiato/T	po:noun
 ƚàrexe/D	po:noun
 ƚàvaro-dentaƚe/D	po:adjective
@@ -30322,20 +30329,24 @@ koredol/TU&	po:noun
 koređol/TU&	po:noun
 korentía/D	po:adjective po:noun
 korexin/C	po:noun
-koresol/TUV&	po:noun
 korexola/Dt	po:noun
-korexoƚeto/T	po:noun
-koresoƚo/TV&	po:noun
+koresol/TU&	po:noun
+koresòl/TU	po:noun
+koresiol/TU&	po:noun
+koresiòl/TU	po:noun
+koresoƚo/T&	po:noun
+koresòƚo/T	po:noun
+koresioƚo/T&	po:noun
+koresiòƚo/T	po:noun
 korièr/B	po:noun
 korivo/B	po:noun
 kormelon/DtU	po:noun
-kormèl/TU&	po:noun
-kormèƚo/T&	po:noun
-kornada/DY	po:noun
+kormèl/TU&)	po:noun
+kormèƚo/T&)	po:noun
 korneleto/TtI	po:noun
-korneto/TI	po:noun
+korneto/BI	po:noun
 kornixame/T	po:noun
-kornixe/D)	po:noun
+kornixe/D&)	po:noun
 koronèr/BV	po:noun
 korpaduda/DY	po:adjective
 korpadudo/TYI	po:adjective
@@ -30441,12 +30452,10 @@ kuba/D	po:noun
 kucarada/DY	po:noun
 kuintèrno/T	po:noun
 kuko/BI	po:adjective po:noun
-kulata/D)	po:noun
 kular/T	po:noun
 kulatina/D	po:noun
 kulaŧo/TtI	po:noun
 kulon/DtU	po:noun
-kuƚata/D	po:noun
 kuƚaton/D	po:noun
 kuƚaro/T	po:noun
 kuƚaso/T	po:noun
@@ -30497,7 +30506,7 @@ lasko/BI	po:adjective po:noun
 latarol/TUV	po:noun
 latarola/DV	po:noun
 latoleta/D	po:adjective po:noun
-lata/D)	po:noun
+lata/DIv)	po:noun
 latonèr/BŧV	po:noun
 latuga/Dŧ	po:noun
 lavadura/DŧY	po:noun
@@ -30642,10 +30651,9 @@ luxor/Dŧ	po:noun
 ƚardèƚa/D	po:noun
 ƚaseto/T	po:noun
 ƚasko/B	po:adjective po:noun
-ƚastron/D	po:noun
 ƚataroƚo/BV	po:noun
 ƚatoƚeta/D	po:adjective po:noun
-ƚata/D	po:noun
+ƚata/Dv	po:noun
 ƚaton/D	po:noun
 ƚavaduro/TY	po:noun
 ƚavareto/T	po:noun
@@ -30676,7 +30684,6 @@ luxor/Dŧ	po:noun
 ƚinsoƚeto/T	po:noun
 ƚionfante/T	po:noun
 ƚira/D	po:noun
-ƚiron/D	po:noun
 ƚisiaso/B	po:noun
 ƚitarjiƚio/T	po:noun
 ƚitarɉiƚio/T	po:noun
@@ -34031,7 +34038,6 @@ duraja/Dt	po:noun
 đúgol/Tŧu	po:noun
 engual/DU	po:noun
 enguaƚe/D	po:noun
-entrà	po:noun
 esto/TI	po:noun
 fabriceta/D	po:noun
 fabrikator/C	po:noun
@@ -38866,14 +38872,11 @@ kopin/T	po:noun
 korbato/TI	po:noun
 koresponsion/DU	po:noun
 koriàndol/Ttu	po:noun
-kornuda/DY	po:noun
-kornudo/TY	po:noun
 korosolon/DtU	po:noun
 korpetin/T	po:noun
 kortexanon/CU	po:noun
 korúgol/Ttu	po:noun
 kosinija/Dt	po:noun
-kosinilia/Dt	po:noun
 kostrao/T	po:noun
 koverta/D	po:noun
 kovertor/C	po:noun
@@ -41460,7 +41463,6 @@ kòƚara/D	po:noun
 kolaŧionŧèla/D	po:noun
 kolasionsèla/D	po:noun
 koƚasionsèƚa/D	po:noun
-koleta/Dt	po:noun
 koletàbil/D	po:noun
 koƚetàbiƚe/D	po:noun
 koletiŧio/Tt	po:adjective
@@ -41630,8 +41632,18 @@ kordialon/DtU	po:adjective
 kordin/T	po:noun
 kordolon/DtU	po:noun
 kordonaŧo/Tt	po:noun
+koretor/C	po:noun
+koreda/D&	po:noun
+koređa/D&	po:noun
+korexa/D&	po:noun
+koreŧionŧèla/D	po:noun
+koresionsèla/Dt	po:noun
+koronona/D	po:noun
+korpaŧo/Tt	po:noun
+korpaŧudo/TY	po:noun
+korpaŧuda/DY	po:noun
+korpasudo/TY	po:noun
+korpasuda/DY	po:noun
 
 
-
-
-/ 176
+/ 178
