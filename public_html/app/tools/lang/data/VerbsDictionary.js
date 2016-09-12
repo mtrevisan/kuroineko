@@ -2819,6 +2819,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "krostin",		"",			1,	5,	"a",	"1775",			"Xgranocar, mañar robe ke mastegando le se xgretola.",
 "krostol",		"",			1,	2,	"a",	"",				"",
 "krostol",		"in",			1,	2,	"a",	"1867",			"",
+"krostol",		"",			4,	7,	"a",	"1829",			"",
+"krostol",		"in",			4,	7,	"a",	"1829",			"",
 "krostolin",	"",			1,	7,	"a",	"1854",			"Xgranocar, mañar robe ke mastegando le se xgretola.",
 "krostoliđ",	"",			1,	7,	"a",	"1854",			"Krostinar.",
 "kroŧol",		"in",			1,	2,	"a",	"1847",			"Se dixe de ʼl kaval ke ʼl é streto de peto.",
