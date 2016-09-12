@@ -3130,7 +3130,7 @@ dexeñar/aE	po:verb ts:infinitive_simple
 dexeño/aEIJ	po:verb ts:indicative_present st:dexeñar
 dexéñoe/aK	po:verb ts:indicative_present is:interrogative st:dexeñar
 dexertar/aE	po:verb ts:infinitive_simple
-dexèrto/aEIJ	po:verb ts:indicative_present st:dexertar
+dexèrto/aEIJ	po:verb ts:indicative_present st:dexertar po:noun
 dexèrtoe/aK	po:verb ts:indicative_present is:interrogative st:dexertar
 dexartar/aE	po:verb ts:infinitive_simple
 dexarto/aEIJ	po:verb ts:indicative_present st:dexartar
@@ -9116,7 +9116,7 @@ skorúsoe/aK	po:verb ts:indicative_present is:interrogative st:skorusar
 skoruŧar/aE	po:verb ts:infinitive_simple
 skoruŧo/aEIJ	po:verb ts:indicative_present st:skoruŧar
 skorúŧoe/aK	po:verb ts:indicative_present is:interrogative st:skoruŧar
-kosar/aE+-*	po:verb ts:infinitive_simple
+kosar/aEr+-*	po:verb ts:infinitive_simple
 kòso/aEIJ+-*)	po:verb ts:indicative_present st:kosar
 kòsoe/aK+-*	po:verb ts:indicative_present is:interrogative st:kosar
 kosperar/aE	po:verb ts:infinitive_simple
@@ -9171,7 +9171,7 @@ skòtoloe/aK	po:verb ts:indicative_present is:interrogative st:skotolar
 skotoƚar/aE	po:verb ts:infinitive_simple
 skòtoƚo/aEJ	po:verb ts:indicative_present st:skotoƚar
 skòtoƚoe/aK	po:verb ts:indicative_present is:interrogative st:skotoƚar
-koŧar/aE+-	po:verb ts:infinitive_simple
+koŧar/aEr+-	po:verb ts:infinitive_simple
 kòŧo/aEIJ+-	po:verb ts:indicative_present st:koŧar
 kòŧoe/aK+-	po:verb ts:indicative_present is:interrogative st:koŧar
 inkosir/acE	po:verb ts:infinitive_simple
@@ -9193,14 +9193,14 @@ kovèrđer/bE+*.	po:verb ts:infinitive_simple
 koverđerò/bJ+*.	po:verb ts:indicative_future st:kovèrđer
 kovèrđo/aEIJ+*.	po:verb ts:indicative_present st:kovèrđer
 kovèrđoe/aK+*.	po:verb ts:indicative_present is:interrogative st:kovèrđer
-kovèrto/BI+*.	po:verb ts:participle_perfect_strong st:kovèrđer st:kovèrder st:kovèrxer
+kovèrto/BI+*.	po:verb ts:participle_perfect_strong st:kovèrđer st:kovèrder st:kovèrxer po:noun
 kovèrxer/bE+*.	po:verb ts:infinitive_simple
 koverxerò/bJ+*.	po:verb ts:indicative_future st:kovèrxer
 kovèrxo/aEIJ+*.	po:verb ts:indicative_present st:kovèrxer st:kovèrxar
 kovèrxoe/aK+*.	po:verb ts:indicative_present is:interrogative st:kovèrxer st:kovèrxar
 kovèrxar/bE+*.	po:verb ts:infinitive_simple
 koverxarò/bJ+*.	po:verb ts:indicative_future st:kovèrxar
-deskovrir/acE	po:verb ts:infinitive_simple
+kovrir/acE+	po:verb ts:infinitive_simple
 skoolar/aE	po:verb ts:infinitive_simple
 skóolo/aEIJ	po:verb ts:indicative_present st:skoolar
 skóoloe/aK	po:verb ts:indicative_present is:interrogative st:skoolar
@@ -9229,6 +9229,12 @@ koxínoe/aK	po:verb ts:indicative_present is:interrogative st:koxinar
 krear/aE-	po:verb ts:infinitive_simple
 krèo/aEIJ-	po:verb ts:indicative_present st:krear
 krèoe/aK-	po:verb ts:indicative_present is:interrogative st:krear
+kreansar/aE	po:verb is:infinitive_simple
+kreanso/aEIJ	po:verb ts:indicative_present st:kreansar
+kreànsoe/aK	po:verb ts:indicative_present is:interrogative st:kreansar
+kreanŧar/aE	po:verb is:infinitive_simple
+kreanŧo/aEIJ	po:verb ts:indicative_present st:kreanŧar
+kreànŧoe/aK	po:verb ts:indicative_present is:interrogative st:kreanŧar
 kréder/bE=.	po:verb ts:infinitive_simple
 krederò/bJ=.	po:verb ts:indicative_future st:kréder
 kredo/aEIJ=.	po:verb ts:indicative_present st:kréder
@@ -25933,13 +25939,12 @@ kòtola/Dt	po:noun
 krapa/D	po:noun
 kravatin/T	po:noun
 krea/Dŕ	po:noun
-kreanŧa/Dt	po:noun
 kreda/D	po:noun
 kren	po:noun
 krepakor/D	po:noun
 krepakòr/D	po:noun
 kresitivo/BWI	po:adjective po:noun
-krèpo/BI	po:noun
+krèpo/BI&)	po:noun
 kriko/BI	po:noun
 kripia/D	po:noun
 kristian/CU	po:adjective po:noun
@@ -29693,7 +29698,7 @@ gratakaxa/D	po:noun
 gravianŧa/Dt	po:noun
 gràmola/Dt	po:noun
 gràtis	po:adverb
-grene/T	po:noun
+grena/C	po:noun
 grespin/C	po:adjective
 grespo/B	po:adjective po:noun
 grexo/BI	po:adjective po:noun
@@ -30388,8 +30393,8 @@ kostruto/TI	po:adjective po:noun
 koteco/B	po:noun
 kotoleta/Dt	po:noun
 kotolin/Tt	po:noun
-kotor/T	po:adjective
-kotorno/T	po:noun
+kotor/B	po:adjective
+kotorn/T	po:noun
 kovertèla/Dt	po:noun
 koverton/DU	po:noun
 kovertur/B	po:noun
@@ -30419,10 +30424,11 @@ krapaŧa/Dt	po:noun
 krapolon/DtU	po:noun
 kràuto/TI	po:noun
 kreatura/D	po:noun
-kredenŧa/Dt	po:noun
+kredenŧa/D)	po:noun
+kredensa/D)	po:noun
 krena/D	po:noun
 kreola/Dt	po:noun
-krepadura/DY	po:noun
+krepadura/DY&	po:noun
 kresta/Dŕ	po:noun
 krédito/TI	po:noun
 krior/D	po:noun
@@ -37673,7 +37679,6 @@ kogomer/T	po:noun
 kontajènio/T	po:noun
 kontaɉènio/T	po:noun
 koturno/T	po:noun
-kovèrto/TI	po:noun
 kógol/Ttu	po:noun
 kòñito/TI	po:noun
 kròñol/Ttu	po:noun
@@ -37841,7 +37846,6 @@ depoxitario/B	po:noun
 despiŧio/Tt	po:noun
 destajador/CV	po:noun
 destaɉador/CV	po:noun
-dexèrto/TI	po:noun
 débele/T	po:adjective po:noun
 débeƚe/T	po:adjective po:noun
 dèstro/B	po:adjective po:noun
@@ -41650,7 +41654,27 @@ kòtimo/T	po:noun
 kotimon/DU	po:noun
 kòtol/Ttu	po:noun
 koton/DU	po:noun
+kovièl/Tt	po:noun
+kovismòdo	po:adverb
+graiŧèr/T	po:noun
+graisèr/T	po:noun
+krañiŧo/Tt	po:noun
+kraoŧénbol/Tu	po:noun
+kraosénbol/Ttu	po:noun
+krava/D	po:adjective
+kre	po:interjection
+kredador/CV	po:noun
+kreditor/CV	po:noun
+krèma/D	po:noun
+krenŧa/Dt	po:noun
+kriola/Dt	po:noun
+krepaŧa/Dt	po:noun
+krespo/B	po:noun
+krespin/T	po:noun
+kreson/DU	po:noun
+kresudin/B	po:adjective
 
 
 
-/ 182
+
+/ 185
