@@ -3345,6 +3345,12 @@ SFX T io i io
 SFX T a i a
 SFX T e i e
 
+SFX Ŧ Y 4
+SFX Ŧ 0 io [nr]
+SFX Ŧ o io o
+SFX Ŧ a ia/D a
+SFX Ŧ e io e
+
 # trasformaŧion intra varianti (l > ƚ, j > ɉ, ŧ > s)
 SFX t Y 34
 SFX t lò ƚò [aeiouàèéíòóú]lò
@@ -3428,15 +3434,15 @@ SFX V èr er/B ièr
 SFX V èr ier/B [^aeoucijɉñ]èr
 SFX V èr ièr/B [^aeoucijɉñ]èr
 SFX V dor or/C [aeiou]dor
-SFX V ol iol/TU [rs]ol
-SFX V ol iòl/TU [rs]ol
-SFX V ol òl/TU [rs]ol
+SFX V ol iol/TU [rsŧ]ol
+SFX V ol iòl/TU [rsŧ]ol
+SFX V ol òl/TU [rsŧ]ol
 SFX V oƚo ioƚo/T [rs]oƚo
 SFX V oƚo iòƚo/T [rs]oƚo
 SFX V oƚo òƚo/T [rs]oƚo
-SFX V ola iola/D [rs]ola
-SFX V ola iòla/D [rs]ola
-SFX V ola òla/D [rs]ola
+SFX V ola iola/D [rsŧ]ola
+SFX V ola iòla/D [rsŧ]ola
+SFX V ola òla/D [rsŧ]ola
 SFX V oƚa ioƚa/D [rs]oƚa
 SFX V oƚa iòƚa/D [rs]oƚa
 SFX V oƚa òƚa/D [rs]oƚa
@@ -3728,7 +3734,7 @@ SFX Y ude ú/T ude
 # Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug. intel partithipio pasivo ko la dexinentha in -st-, e intel xerundio
 
 # sostantivi alterài - demenutivi in -eto/a
-SFX & Y 69
+SFX & Y 71
 SFX & 0 eto/TI [^èò]l
 SFX & èl eleto/TI èl
 SFX & òl oleto/TI òl
@@ -3797,7 +3803,9 @@ SFX & òra oreta/D òra
 SFX & òsa oseta/D òsa
 SFX & òŧa oŧeta/D òŧa
 SFX & òxa oxeta/D òxa
-SFX & 0 ta/D e
+SFX & 0 ta/D [^v]e
+SFX & 0 ta/D [^è]ve
+SFX & ève eveta/D ève
 
 # sostantivi alterài - demenutivi in -èl/-èla
 SFX [ Y 22
@@ -3891,7 +3899,8 @@ SFX ( èƚo eƚòto/T èƚo
 SFX ( òƚo oƚòto/T òƚo
 
 # sostantivi alterài - kresitivi in -on
-SFX ) Y 26
+SFX ) Y 28
+SFX ) 0 on/DU [^è]l
 SFX ) 0 on/DU n
 SFX ) 0 n/DU [^ckƚmñpst]o
 SFX ) 0 n/DU [^è]po
@@ -3909,6 +3918,7 @@ SFX ) 0 on/DU [^è]r
 SFX ) èr aron/DU èr
 SFX ) èr eron/DU èr
 SFX ) èl elon/DU èl
+SFX ) ƚo ƚon/D [^è]ƚo
 SFX ) èƚo eƚon/D èƚo
 SFX ) a on/DU [^gprt]a
 SFX ) a on/DU [^è][gpr]a
