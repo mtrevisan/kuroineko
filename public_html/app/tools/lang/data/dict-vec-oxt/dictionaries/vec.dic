@@ -562,7 +562,7 @@ koàrtoe/aK	po:verb ts:indicative_present is:interrogative st:koartar
 artikolar/aEsś	po:verb ts:infinitive_simple
 artíkolo/aEIJ	po:verb ts:indicative_present st:artikolar
 artíkoloe/aK	po:verb ts:indicative_present is:interrogative st:artikolar
-artikoƚar/aEś	po:verb ts:infinitive_simple
+artikoƚar/aE	po:verb ts:infinitive_simple
 artíkoƚo/aEJ	po:verb ts:indicative_present st:artikoƚar
 artíkoƚoe/aK	po:verb ts:indicative_present is:interrogative st:artikoƚar
 asar/aE	po:verb ts:infinitive_simple
@@ -995,7 +995,7 @@ baƚordir/acE-*	po:verb ts:infinitive_simple
 balotar/aEsś*	po:verb ts:infinitive_simple
 balòto/aEIJ*	po:verb ts:indicative_present st:balotar
 balòtoe/aK*	po:verb ts:indicative_present is:interrogative st:balotar
-baƚotar/aEś*	po:verb ts:infinitive_simple
+baƚotar/aE*	po:verb ts:infinitive_simple
 baƚòto/aEJ*	po:verb ts:indicative_present st:baƚotar
 baƚòtoe/aK*	po:verb ts:indicative_present is:interrogative st:baƚotar
 balsamar/aE-	po:verb ts:infinitive_simple
@@ -2359,7 +2359,7 @@ dexbriagar/aE	po:verb ts:infinitive_simple
 dexbriago/aEIJ	po:verb ts:indicative_present st:dexbriagar
 dexbriàgoe/aK	po:verb ts:indicative_present is:interrogative st:dexbriagar
 inbriagar/aE	po:verb ts:infinitive_simple
-inbriago/aEIJ	po:verb ts:indicative_present st:inbriagar
+inbriago/aEIJ	po:verb ts:indicative_present st:inbriagar po:adjective
 inbriàgoe/aK	po:verb ts:indicative_present is:interrogative st:inbriagar
 brigar/aE+*	po:verb ts:infinitive_simple
 brigo/aEIJ+*	po:verb ts:indicative_present st:brigar
@@ -3270,7 +3270,7 @@ docar/aE	po:verb ts:infinitive_simple
 dòco/aEIJ	po:verb ts:indicative_present st:docar
 dòcoe/aK	po:verb ts:indicative_present is:interrogative st:docar
 dokumentar/aE	po:verb ts:infinitive_simple
-dokumento/aEIJ	po:verb ts:indicative_present st:dokumentar
+dokumento/aEIJ	po:verb ts:indicative_present st:dokumentar po:noun
 dokuméntoe/aK	po:verb ts:indicative_present is:interrogative st:dokumentar
 indogar/aE	po:verb ts:infinitive_simple
 indògo/aEIJ	po:verb ts:indicative_present st:indogar
@@ -3654,10 +3654,10 @@ xiràndoƚoe/aK	po:verb ts:indicative_present is:interrogative st:xirandoƚar
 đirno/aEIJŧ	po:verb ts:indicative_present st:đirnar
 đírnoe/aKŧ	po:verb ts:indicative_present is:interrogative st:đirnar
 đoar/aEŧ	po:verb ts:infinitive_simple
-đòo/aEIJŧ	po:verb ts:indicative_present st:đoar
+đòo/aEIJŧ	po:verb ts:indicative_present st:đoar po:noun st:đògo
 đòoe/aKŧ	po:verb ts:indicative_present is:interrogative st:đoar
 đogar/aEŧ	po:verb ts:infinitive_simple
-đògo/aEIJŧ	po:verb ts:indicative_present st:đogar
+đògo/aEIJŧ	po:verb ts:indicative_present st:đogar po:noun al:đugo
 đògoe/aKŧ	po:verb ts:indicative_present is:interrogative st:đogar
 đogatar/aEŧ	po:verb ts:infinitive_simple
 đogato/aEIJŧ	po:verb ts:indicative_present st:đogatar
@@ -3967,7 +3967,7 @@ elèxo/aEIJ.	po:verb ts:indicative_present st:elèxer st:elèxar
 elèxoe/aK.	po:verb ts:indicative_present is:interrogative st:elèxer st:elèxar
 elèxar/bE.	po:verb ts:infinitive_simple
 elexarò/bJ.	po:verb ts:indicative_future st:elèxar
-eƚèxer/bEś.	po:verb ts:infinitive_simple
+eƚèxer/bE.	po:verb ts:infinitive_simple
 eƚexerò/bJ.	po:verb ts:indicative_future st:eƚèxer
 eƚèxo/aEJ.	po:verb ts:indicative_present st:eƚèxer st:eƚèxar
 eƚèxoe/aK.	po:verb ts:indicative_present is:interrogative st:eƚèxer st:eƚèxar
@@ -3989,7 +3989,7 @@ emuƚar/aE	po:verb ts:infinitive_simple
 enpir/acE	po:verb ts:infinitive_simple
 adenpir/acE	po:verb ts:infinitive_simple
 exenpiar/aE	po:verb ts:infinitive_simple
-exenpio/aEIJ	po:verb ts:indicative_present st:exenpiar
+exenpio/aEIJ	po:verb ts:indicative_present st:exenpiar po:noun
 exénpioe/aK	po:verb ts:indicative_present is:interrogative st:exenpiar
 ensir/adE.	po:verb ts:infinitive_simple
 enso/dEIJ.	po:verb ts:indicative_present st:ensir
@@ -4190,7 +4190,7 @@ fào/hEIJ.:	po:verb ts:indicative_present st:far
 fàoe/hEIJ.:	po:verb ts:indicative_present is:interrogative st:far
 fao/B.:	po:verb ts:participle_perfect_strong st:far
 fado/BI.:	po:verb ts:participle_perfect_strong st:far
-fato/BI.:	po:verb ts:participle_perfect_strong st:far st:fàxer
+fato/BI.:,	po:verb ts:participle_perfect_strong st:far st:fàxer po:noun
 asuefar/aE	po:verb ts:infinitive_simple
 asuèfo/aEIJ	po:verb ts:indicative_present st:asuefar
 asuèfoe/aK	po:verb ts:indicative_present is:interrogative st:asuefar
@@ -4269,7 +4269,7 @@ tumefato/BI	po:verb ts:participle_perfect_strong st:tumefar
 fir/acE	po:verb ts:infinitive_simple
 fàser/bE	po:verb ts:infinitive_simple
 faserò/bJ	po:verb ts:indicative_future st:fàser
-faso/aEIJ+-*	po:verb ts:indicative_present st:fàser st:fàsar st:fasar
+faso/aEIJ+-*	po:verb ts:indicative_present st:fàser st:fàsar st:fasar po:interjection po:noun
 fàsoe/aK+-*	po:verb ts:indicative_present is:interrogative st:fàser st:fàsar st:fasar
 fàŧer/bE	po:verb ts:infinitive_simple
 faŧerò/bJ	po:verb ts:indicative_future st:fàŧer
@@ -4363,7 +4363,7 @@ faldeɉar/aE	po:verb ts:infinitive_simple
 faldeɉo/aEIJ	po:verb ts:indicative_present st:faldeɉar
 faldéɉoe/aK	po:verb ts:indicative_present is:interrogative st:faldeɉar
 falkar/aE*,	po:verb ts:infinitive_simple
-falko/aEIJ*,	po:verb ts:indicative_present st:falkar
+falko/aEIJ*,&	po:verb ts:indicative_present st:falkar po:noun
 fàlkoe/aK*,	po:verb ts:indicative_present is:interrogative st:falkar
 faliar/aE	po:verb ts:infinitive_simple
 falio/aEIJ	po:verb ts:indicative_present st:faliar
@@ -4399,10 +4399,10 @@ famar/aE+*	po:verb ts:infinitive_simple
 famo/aEIJ+*	po:verb ts:indicative_present st:famar
 fàmoe/aK+*	po:verb ts:indicative_present is:interrogative st:famar
 famejar/aE	po:verb ts:infinitive_simple
-famejo/aEIJ	po:verb ts:indicative_present st:famejar
+famejo/aEIJ	po:verb ts:indicative_present st:famejar po:noun
 faméjoe/aK	po:verb ts:indicative_present is:interrogative st:famejar
 fameɉar/aE	po:verb ts:infinitive_simple
-fameɉo/aEIJ	po:verb ts:indicative_present st:fameɉar
+fameɉo/aEIJ	po:verb ts:indicative_present st:fameɉar po:noun
 faméɉoe/aK	po:verb ts:indicative_present is:interrogative st:fameɉar
 fameliaridar/aE	po:verb ts:infinitive_simple
 fameliarido/aEIJ	po:verb ts:indicative_present st:fameliaridar
@@ -4865,7 +4865,7 @@ sfiadar/aE	po:verb ts:infinitive_simple
 sfiado/aEIJ	po:verb ts:indicative_present st:sfiadar
 sfiàdoe/aK	po:verb ts:indicative_present is:interrogative st:sfiadar
 fiakar/aE	po:verb ts:infinitive_simple
-fiako/aEIJ	po:verb ts:indicative_present st:fiakar
+fiako/aEIJ	po:verb ts:indicative_present st:fiakar po:adjective po:noun
 fiàkoe/aK	po:verb ts:indicative_present is:interrogative st:fiakar
 infiakir/acE	po:verb ts:infinitive_simple
 fiamar/aE+-	po:verb ts:infinitive_simple
@@ -4885,7 +4885,7 @@ fiankonar/aE*	po:verb ts:infinitive_simple
 fiankono/aEIJ*	po:verb ts:indicative_present st:fiankonar
 fiankónoe/aK*	po:verb ts:indicative_present is:interrogative st:fiankonar
 fiapar/aE	po:verb ts:infinitive_simple
-fiapo/aEIJ	po:verb ts:indicative_present st:fiapar
+fiapo/aEIJ&	po:verb ts:indicative_present st:fiapar po:adjective
 fiàpoe/aK	po:verb ts:indicative_present is:interrogative st:fiapar
 fiapir/acE+-*	po:verb ts:infinitive_simple
 fiaskar/aE-	po:verb ts:infinitive_simple
@@ -5022,7 +5022,7 @@ finto/BI)	po:verb ts:participle_perfect_strong st:fínxer po:adjective
 fínxar/bE	po:verb ts:infinitive_simple
 finxarò/bJ	po:verb ts:indicative_future st:fínxar
 fiokar/aE-*	po:verb ts:infinitive_simple
-fiòko/aEIJ-*	po:verb ts:indicative_present st:fiokar
+fiòko/aEIJ-*&)	po:verb ts:indicative_present st:fiokar po:adjective po:noun
 fiòkoe/aK-*	po:verb ts:indicative_present is:interrogative st:fiokar
 fiolar/aE	po:verb ts:infinitive_simple
 fiòlo/aEIJ	po:verb ts:indicative_present st:fiolar
@@ -5065,7 +5065,7 @@ firmar/aE-	po:verb ts:infinitive_simple
 firmo/aEIJW-	po:verb ts:indicative_present st:firmar po:noun
 fírmoe/aK-	po:verb ts:indicative_present is:interrogative st:firmar
 fisar/aEsś^	po:verb ts:infinitive_simple
-fiso/aEIJ^	po:verb ts:indicative_present st:fisar
+fiso/aEIJ^	po:verb ts:indicative_present st:fisar po:adjective
 físoe/aK^	po:verb ts:indicative_present is:interrogative st:fisar
 desfisir/acE	po:verb ts:infinitive_simple
 infisir/acE	po:verb ts:infinitive_simple
@@ -5153,7 +5153,7 @@ fofar/aE	po:verb ts:infinitive_simple
 fòfo/aEIJ	po:verb ts:indicative_present st:fofar
 fòfoe/aK	po:verb ts:indicative_present is:interrogative st:fofar
 fogar/aE+-	po:verb ts:infinitive_simple
-fògo/aEIJ+-	po:verb ts:indicative_present st:fogar
+fògo/aEIJ+-&	po:verb ts:indicative_present st:fogar po:noun
 fògoe/aK+-	po:verb ts:indicative_present is:interrogative st:fogar
 sfogar/aE-	po:verb ts:infinitive_simple
 sfògo/aEIJ-	po:verb ts:indicative_present st:sfogar
@@ -5171,10 +5171,10 @@ infoibar/aE	po:verb ts:infinitive_simple
 infòibo/aEIJ	po:verb ts:indicative_present st:infoibar
 infòiboe/aK	po:verb ts:indicative_present is:interrogative st:infoibar
 fojar/aE+*	po:verb ts:infinitive_simple
-fòjo/aEIJ+*	po:verb ts:indicative_present st:fojar
+fòjo/aEIJ+*=	po:verb ts:indicative_present st:fojar po:noun
 fòjoe/aK+*	po:verb ts:indicative_present is:interrogative st:fojar
 foɉar/aE+*	po:verb ts:infinitive_simple
-fòɉo/aEIJ+*	po:verb ts:indicative_present st:foɉar
+fòɉo/aEIJ+*=	po:verb ts:indicative_present st:foɉar po:noun
 fòɉoe/aK+*	po:verb ts:indicative_present is:interrogative st:foɉar
 sfojolar/aE	po:verb ts:infinitive_simple
 sfójolo/aEIJ	po:verb ts:indicative_present st:sfojolar
@@ -5223,7 +5223,7 @@ infolponar/aE	po:verb ts:infinitive_simple
 infolpono/aEIJ	po:verb ts:indicative_present st:infolponar
 infolpónoe/aK	po:verb ts:indicative_present is:interrogative st:infolponar
 fondar/aEr*	po:verb ts:infinitive_simple
-fondo/aEIJ*.:	po:verb ts:indicative_present st:fondar st:fónder
+fondo/aEIJ*.:[]	po:verb ts:indicative_present st:fondar st:fónder po:adjective po:noun
 fóndoe/aK*.:	po:verb ts:indicative_present is:interrogative st:fondar st:fónder
 fónder/bE.:	po:verb ts:infinitive_simple
 fonderò/bJ.:	po:verb ts:indicative_future st:fónder
@@ -5328,7 +5328,7 @@ formoƚar/aE	po:verb ts:infinitive_simple
 fórmoƚo/aEJ	po:verb ts:indicative_present st:formoƚar
 fórmoƚoe/aK	po:verb ts:indicative_present is:interrogative st:formoƚar
 fornar/aE+-	po:verb ts:infinitive_simple
-forno/aEIJ+-	po:verb ts:indicative_present st:fornar
+forno/aEIJ+-&	po:verb ts:indicative_present st:fornar po:noun
 fórnoe/aK+-	po:verb ts:indicative_present is:interrogative st:fornar
 fornir/acEr+.	po:verb ts:infinitive_simple
 fornegar/aE	po:verb ts:infinitive_simple
@@ -5408,7 +5408,7 @@ fraɉar/aE	po:verb ts:infinitive_simple
 fraɉo/aEIJ	po:verb ts:indicative_present st:fraɉar
 fràɉoe/aK	po:verb ts:indicative_present is:interrogative st:fraɉar
 frakar/aE	po:verb ts:infinitive_simple
-frako/aEIJ	po:verb ts:indicative_present st:frakar
+frako/aEIJ	po:verb ts:indicative_present st:frakar po:noun
 fràkoe/aK	po:verb ts:indicative_present is:interrogative st:frakar
 frakasar/aE*	po:verb ts:infinitive_simple
 frakaso/aEIJ*	po:verb ts:indicative_present st:frakasar
@@ -5417,7 +5417,7 @@ franar/aE	po:verb ts:infinitive_simple
 frano/aEIJ	po:verb ts:indicative_present st:franar
 frànoe/aK	po:verb ts:indicative_present is:interrogative st:franar
 frankar/aEsś-@	po:verb ts:infinitive_simple
-franko/aEIJ-@	po:verb ts:indicative_present st:frankar
+franko/aEIJ-@	po:verb ts:indicative_present st:frankar po:adjective
 frànkoe/aK-@	po:verb ts:indicative_present is:interrogative st:frankar
 sfranpuñar/aE	po:verb ts:infinitive_simple
 sfranpuño/aEIJ	po:verb ts:indicative_present st:sfranpuñar
@@ -5723,7 +5723,7 @@ fulminar/aE*	po:verb ts:infinitive_simple
 fúlmino/aEIJ*	po:verb ts:indicative_present st:fulminar
 fúlminoe/aK*	po:verb ts:indicative_present is:interrogative st:fulminar
 fumar/aE=*	po:verb ts:infinitive_simple
-fumo/aEIJ=*	po:verb ts:indicative_present st:fumar
+fumo/aEIJ=*	po:verb ts:indicative_present st:fumar po:noun
 fúmoe/aK=*	po:verb ts:indicative_present is:interrogative st:fumar
 perfumar/aE	po:verb ts:infinitive_simple
 perfumo/aEIJ	po:verb ts:indicative_present st:perfumar
@@ -6766,10 +6766,10 @@ xguaitar/aE	po:verb ts:infinitive_simple
 xguàito/aEIJ	po:verb ts:indicative_present st:xguaitar
 xguàitoe/aK	po:verb ts:indicative_present is:interrogative st:xguaitar
 gualivar/aEr*	po:verb ts:infinitive_simple
-gualivo/aEIJ*	po:verb ts:indicative_present st:gualivar
+gualivo/aEIJW*	po:verb ts:indicative_present st:gualivar po:adjective po:noun
 gualívoe/aK*	po:verb ts:indicative_present is:interrogative st:gualivar
 guaƚivar/aEŔ*	po:verb ts:infinitive_simple
-guaƚivo/aEJ*	po:verb ts:indicative_present st:guaƚivar
+guaƚivo/aEJW*	po:verb ts:indicative_present st:guaƚivar po:adjective po:noun
 guaƚívoe/aK*	po:verb ts:indicative_present is:interrogative st:guaƚivar
 malgualivar/aE	po:verb ts:infinitive_simple
 malgualivo/aEIJW	po:verb ts:indicative_present st:malgualivar po:adjective po:noun
@@ -6847,7 +6847,7 @@ regurxitar/aE	po:verb ts:infinitive_simple
 regúrxito/aEIJ	po:verb ts:indicative_present st:regurxitar
 regúrxitoe/aK	po:verb ts:indicative_present is:interrogative st:regurxitar
 gustar/aE+	po:verb ts:infinitive_simple
-gusto/aEIJ+	po:verb ts:indicative_present st:gustar
+gusto/aEIJ+	po:verb ts:indicative_present st:gustar po:noun
 gústoe/aK+	po:verb ts:indicative_present is:interrogative st:gustar
 guxar/aE.	po:verb ts:infinitive_simple
 guxo/aEIJ.	po:verb ts:indicative_present st:guxar
@@ -7023,7 +7023,7 @@ interisir/acE	po:verb ts:infinitive_simple
 intarisir/acE	po:verb ts:infinitive_simple
 interiŧir/acE	po:verb ts:infinitive_simple
 internar/aE	po:verb ts:infinitive_simple
-intèrno/aEIJ	po:verb ts:indicative_present st:internar
+intèrno/aEIJ	po:verb ts:indicative_present st:internar po:adjective po:noun
 intèrnoe/aK	po:verb ts:indicative_present is:interrogative st:internar
 intarnar/aE	po:verb ts:infinitive_simple
 intarno/aEIJ	po:verb ts:indicative_present st:intarnar
@@ -7361,12 +7361,12 @@ injotir/acE	po:verb ts:infinitive_simple
 inɉotir/acE	po:verb ts:infinitive_simple
 injòter/bE	po:verb ts:infinitive_simple
 injoterò/bJ	po:verb ts:indicative_future st:injòter
-injòto/aEIJ	po:verb ts:indicative_present st:injòter st:injotar
+injòto/aEIJ	po:verb ts:indicative_present st:injòter st:injotar po:noun
 injòtoe/aK	po:verb ts:indicative_present is:interrogative st:injòter st:injotar
 injòso/BI	po:verb ts:participle_perfect_strong st:injòter
 inɉòter/bE	po:verb ts:infinitive_simple
 inɉoterò/bJ	po:verb ts:indicative_future st:inɉòter
-inɉòto/aEIJ	po:verb ts:indicative_present st:inɉòter st:inɉotar
+inɉòto/aEIJ	po:verb ts:indicative_present st:inɉòter st:inɉotar po:noun
 inɉòtoe/aK	po:verb ts:indicative_present is:interrogative st:inɉòter st:inɉotar
 inɉòso/BI	po:verb ts:participle_perfect_strong st:inɉòter
 injòtar/bE	po:verb ts:infinitive_simple
@@ -7847,7 +7847,7 @@ kansèloe/aK*	po:verb ts:indicative_present is:interrogative st:kanselar
 kanŧelar/aEsv*	po:verb ts:infinitive_simple
 kanŧèlo/aEIJ*	po:verb ts:indicative_present st:kanŧelar
 kanŧèloe/aK*	po:verb ts:indicative_present is:interrogative st:kanŧelar
-kanseƚar/aEśv*	po:verb ts:infinitive_simple
+kanseƚar/aEv*	po:verb ts:infinitive_simple
 kansèƚo/aEJ*	po:verb ts:indicative_present st:kanseƚar
 kansèƚoe/aK*	po:verb ts:indicative_present is:interrogative st:kanseƚar
 kansonar/aE	po:verb ts:infinitive_simple
@@ -7886,7 +7886,7 @@ kàpitoe/aK+.,	po:verb ts:indicative_present is:interrogative st:kapitar
 kapitolar/aEsś.	po:verb ts:infinitive_simple
 kapítolo/aEIJ.	po:verb ts:indicative_present st:kapitolar
 kapítoloe/aK.	po:verb ts:indicative_present is:interrogative st:kapitolar
-kapitoƚar/aEś.	po:verb ts:infinitive_simple
+kapitoƚar/aE.	po:verb ts:infinitive_simple
 kapítoƚo/aEJ.	po:verb ts:indicative_present st:kapitoƚar
 kapítoƚoe/aK.	po:verb ts:indicative_present is:interrogative st:kapitoƚar
 kapocar/aEv	po:verb ts:infinitive_simple
@@ -9745,7 +9745,7 @@ laldar/aEŧ	po:verb ts:infinitive_simple
 laldo/aEIJŧ	po:verb ts:indicative_present st:laldar
 làldoe/aKŧ	po:verb ts:indicative_present is:interrogative st:laldar
 lamentar/aEsś	po:verb ts:infinitive_simple
-ƚamentar/aEś	po:verb ts:infinitive_simple
+ƚamentar/aE	po:verb ts:infinitive_simple
 lamento/aEIJŧ	po:verb ts:indicative_present st:lamentar
 laméntoe/aKŧ	po:verb ts:indicative_present is:interrogative st:lamentar
 xlanbar/aEr	po:verb ts:infinitive_simple
@@ -9891,7 +9891,7 @@ làudoe/aKŧ	po:verb ts:indicative_present is:interrogative st:laudar
 kolaudar/aEsś	po:verb ts:infinitive_simple
 kolàudo/aEIJ	po:verb ts:indicative_present st:kolaudar
 kolàudoe/aK	po:verb ts:indicative_present is:interrogative st:kolaudar
-koƚaudar/aEś	po:verb ts:infinitive_simple
+koƚaudar/aE	po:verb ts:infinitive_simple
 koƚàudo/aEIJ	po:verb ts:indicative_present st:koƚaudar
 koƚàudoe/aK	po:verb ts:indicative_present is:interrogative st:koƚaudar
 laurear/aEŧ	po:verb ts:infinitive_simple
@@ -9963,7 +9963,7 @@ xlekíñoe/aK	po:verb ts:indicative_present is:interrogative st:xlekiñar
 legar/aEsś.,@	po:verb ts:infinitive_simple
 lègo/aEIJ.,@	po:verb ts:indicative_present st:legar
 lègoe/aK.,@	po:verb ts:indicative_present is:interrogative st:legar
-ƚegar/aEś.,@	po:verb ts:infinitive_simple
+ƚegar/aE.,@	po:verb ts:infinitive_simple
 ƚègo/aEJ.,@	po:verb ts:indicative_present st:ƚegar
 ƚègoe/aK.,@	po:verb ts:indicative_present is:interrogative st:ƚegar
 legalidar/aE	po:verb ts:infinitive_simple
@@ -9991,7 +9991,7 @@ dexleguar/aE	po:verb ts:infinitive_simple
 dexlèguo/aEIJ	po:verb ts:indicative_present st:dexleguar
 dexlèguoe/aK	po:verb ts:indicative_present is:interrogative st:dexleguar
 lenir/acEsś	po:verb ts:infinitive_simple
-ƚenir/acEś	po:verb ts:infinitive_simple
+ƚenir/acE	po:verb ts:infinitive_simple
 xlénder/bE	po:verb ts:infinitive_simple
 xlendo/aEIJ	po:verb ts:indicative_present st:xlénder
 xléndoe/aK	po:verb ts:indicative_present is:interrogative st:xlénder
@@ -10071,7 +10071,7 @@ léteroe/aKŧ	po:verb ts:indicative_present is:interrogative st:leterar
 levar/aEsś*.@	po:verb ts:infinitive_simple
 lèvo/aEIJ*.@	po:verb ts:indicative_present st:levar
 lèvoe/aK*.@	po:verb ts:indicative_present is:interrogative st:levar
-ƚevar/aEś*.@	po:verb ts:infinitive_simple
+ƚevar/aE*.@	po:verb ts:infinitive_simple
 ƚèvo/aEJ*.@	po:verb ts:indicative_present st:ƚevar
 ƚèvoe/aK*.@	po:verb ts:indicative_present is:interrogative st:ƚevar
 arlevar/aE	po:verb ts:infinitive_simple
@@ -10080,13 +10080,13 @@ arlèvoe/aK	po:verb ts:indicative_present is:interrogative st:arlevar
 elevar/aEsś	po:verb ts:infinitive_simple
 elèvo/aEIJ	po:verb ts:indicative_present st:elevar
 elèvoe/aK	po:verb ts:indicative_present is:interrogative st:elevar
-eƚevar/aEś	po:verb ts:infinitive_simple
+eƚevar/aE	po:verb ts:infinitive_simple
 eƚèvo/aEJ	po:verb ts:indicative_present st:eƚevar
 eƚèvoe/aK	po:verb ts:indicative_present is:interrogative st:eƚevar
 solevar/aEsś	po:verb ts:infinitive_simple
 solèvo/aEIJ	po:verb ts:indicative_present st:solevar
 solèvoe/aK	po:verb ts:indicative_present is:interrogative st:solevar
-soƚevar/aEś	po:verb ts:infinitive_simple
+soƚevar/aE	po:verb ts:infinitive_simple
 soƚèvo/aEJ	po:verb ts:indicative_present st:soƚevar
 soƚèvoe/aK	po:verb ts:indicative_present is:interrogative st:soƚevar
 sublevar/aE	po:verb ts:infinitive_simple
@@ -10116,10 +10116,10 @@ líberoe/aK,	po:verb ts:indicative_present is:interrogative st:liberar
 libarar/aEsś,	po:verb ts:infinitive_simple
 líbaro/aEIJ,	po:verb ts:indicative_present st:libarar
 líbaroe/aK,	po:verb ts:indicative_present is:interrogative st:libarar
-ƚiberar/aEś,	po:verb ts:infinitive_simple
+ƚiberar/aE,	po:verb ts:infinitive_simple
 ƚíbero/aEJ,	po:verb ts:indicative_present st:liberar
 ƚíberoe/aK,	po:verb ts:indicative_present is:interrogative st:liberar
-ƚibarar/aEś,	po:verb ts:infinitive_simple
+ƚibarar/aE,	po:verb ts:infinitive_simple
 ƚíbaro/aEJ,	po:verb ts:indicative_present st:libarar
 ƚíbaroe/aK,	po:verb ts:indicative_present is:interrogative st:libarar
 libicar/aEŧ	po:verb ts:infinitive_simple
@@ -10211,7 +10211,7 @@ limegar/aEŧ*	po:verb ts:infinitive_simple
 límego/aEIJŧ*	po:verb ts:indicative_present st:limegar
 límegoe/aKŧ*	po:verb ts:indicative_present is:interrogative st:limegar
 limitar/aEsś	po:verb ts:infinitive_simple
-ƚimitar/aEś	po:verb ts:infinitive_simple
+ƚimitar/aE	po:verb ts:infinitive_simple
 límito/aEIJŧ	po:verb ts:indicative_present st:limitar po:noun
 límitoe/aKŧ	po:verb ts:indicative_present is:interrogative st:limitar
 limonar/aEŧ	po:verb ts:infinitive_simple
@@ -10328,7 +10328,7 @@ traxlokar/aE	po:verb ts:infinitive_simple
 traxlòko/aEIJ	po:verb ts:indicative_present st:traxlokar
 traxlòkoe/aK	po:verb ts:indicative_present is:interrogative st:traxlokar
 lokuir/acEsś	po:verb ts:infinitive_simple
-ƚokuir/acEś	po:verb ts:infinitive_simple
+ƚokuir/acE	po:verb ts:infinitive_simple
 interlokuir/acE	po:verb ts:infinitive_simple
 intarlokuir/acE	po:verb ts:infinitive_simple
 intrelokuir/acE	po:verb ts:infinitive_simple
@@ -10459,7 +10459,7 @@ arlúminoe/aK	po:verb ts:indicative_present is:interrogative st:arluminar
 iluminar/aEsś	po:verb ts:infinitive_simple
 ilúmino/aEIJ	po:verb ts:indicative_present st:iluminar
 ilúminoe/aK	po:verb ts:indicative_present is:interrogative st:iluminar
-iƚuminar/aEś	po:verb ts:infinitive_simple
+iƚuminar/aE	po:verb ts:infinitive_simple
 iƚúmino/aEJ	po:verb ts:indicative_present st:iƚuminar
 iƚúminoe/aK	po:verb ts:indicative_present is:interrogative st:iƚuminar
 inluminar/aEsś	po:verb ts:infinitive_simple
@@ -13436,7 +13436,7 @@ inpéɉoe/aK	po:verb ts:indicative_present is:interrogative st:inpeɉar
 pelar/aEsś-*@	po:verb ts:infinitive_simple
 pelo/aEIJ-*@	po:verb ts:indicative_present st:pelar
 péloe/aK-*@	po:verb ts:indicative_present is:interrogative st:pelar
-peƚar/aEś-*@	po:verb ts:infinitive_simple
+peƚar/aE-*@	po:verb ts:infinitive_simple
 peƚo/aEJ-*@	po:verb ts:indicative_present st:peƚar
 péƚoe/aK-*@	po:verb ts:indicative_present is:interrogative st:peƚar
 repelir/acE	po:verb ts:infinitive_simple
@@ -16286,7 +16286,7 @@ saƚúdoe/aK	po:verb ts:indicative_present is:interrogative st:saƚudar
 salutar/aEsś	po:verb ts:infinitive_simple
 saluto/aEIJ	po:verb ts:indicative_present st:salutar
 salútoe/aK	po:verb ts:indicative_present is:interrogative st:salutar
-saƚutar/aEś	po:verb ts:infinitive_simple
+saƚutar/aE	po:verb ts:infinitive_simple
 saƚuto/aEJ	po:verb ts:indicative_present st:saƚutar
 saƚútoe/aK	po:verb ts:indicative_present is:interrogative st:saƚutar
 salvar/aEsś.	po:verb ts:infinitive_simple
@@ -16871,13 +16871,13 @@ trasímoe/aK	po:verb ts:indicative_present is:interrogative st:trasimar
 asimilar/aEsś	po:verb ts:infinitive_simple
 asímilo/aEIJ	po:verb ts:indicative_present st:asimilar
 asímiloe/aK	po:verb ts:indicative_present is:interrogative st:asimilar
-asimiƚar/aEś	po:verb ts:infinitive_simple
+asimiƚar/aE	po:verb ts:infinitive_simple
 asímiƚo/aEJ	po:verb ts:indicative_present st:asimiƚar
 asímiƚoe/aK	po:verb ts:indicative_present is:interrogative st:asimiƚar
 desimilar/aEsś	po:verb ts:infinitive_simple
 desímilo/aEIJ	po:verb ts:indicative_present st:desimilar
 desímiloe/aK	po:verb ts:indicative_present is:interrogative st:desimilar
-desimiƚar/aEś	po:verb ts:infinitive_simple
+desimiƚar/aE	po:verb ts:infinitive_simple
 desímiƚo/aEJ	po:verb ts:indicative_present st:desimiƚar
 desímiƚoe/aK	po:verb ts:indicative_present is:interrogative st:desimiƚar
 simiotar/aE	po:verb ts:infinitive_simple
@@ -17559,7 +17559,7 @@ sonetar/aE	po:verb ts:infinitive_simple
 soneto/aEIJ	po:verb ts:indicative_present st:sonetar
 sonétoe/aK	po:verb ts:indicative_present is:interrogative st:sonetar
 insoniar/aE	po:verb ts:infinitive_simple
-insònio/aEIJ	po:verb ts:indicative_present st:insoniar
+insònio/aEIJ	po:verb ts:indicative_present st:insoniar po:noun
 insònioe/aK	po:verb ts:indicative_present is:interrogative st:insoniar
 insonolir/acE	po:verb ts:infinitive_simple
 insonoƚir/acE	po:verb ts:infinitive_simple
@@ -18168,7 +18168,7 @@ instekir/acE	po:verb ts:infinitive_simple
 stelar/aEsś.:	po:verb ts:infinitive_simple
 stelo/aEIJ.:	po:verb ts:indicative_present st:stelar
 stéloe/aK.:	po:verb ts:indicative_present is:interrogative st:stelar
-steƚar/aEś.:	po:verb ts:infinitive_simple
+steƚar/aE.:	po:verb ts:infinitive_simple
 steƚo/aEJ.:	po:verb ts:indicative_present st:steƚar
 stéƚoe/aK.:	po:verb ts:indicative_present is:interrogative st:steƚar
 destenar/aE^	po:verb ts:infinitive_simple
@@ -18218,7 +18218,7 @@ istígoe/aK	po:verb ts:indicative_present is:interrogative st:istigar
 stilar/aEsś,	po:verb ts:infinitive_simple
 stilo/aEIJ,	po:verb ts:indicative_present st:stilar
 stíloe/aK,	po:verb ts:indicative_present is:interrogative st:stilar
-stiƚar/aEś,	po:verb ts:infinitive_simple
+stiƚar/aE,	po:verb ts:infinitive_simple
 stiƚo/aEJ,	po:verb ts:indicative_present st:stiƚar
 stíƚoe/aK,	po:verb ts:indicative_present is:interrogative st:stiƚar
 stiletar/aE	po:verb ts:infinitive_simple
@@ -18441,7 +18441,7 @@ strísoe/aK	po:verb ts:indicative_present is:interrogative st:strisar
 strolegar/aEsś	po:verb ts:infinitive_simple
 stròlego/aEIJ	po:verb ts:indicative_present st:strolegar po:noun
 stròlegoe/aK	po:verb ts:indicative_present is:interrogative st:strolegar
-stroƚegar/aEś	po:verb ts:infinitive_simple
+stroƚegar/aE	po:verb ts:infinitive_simple
 stròƚego/aEJ	po:verb ts:indicative_present st:stroƚegar po:noun
 stròƚegoe/aK	po:verb ts:indicative_present is:interrogative st:stroƚegar
 istromentar/aE	po:verb ts:infinitive_simple
@@ -18626,7 +18626,7 @@ sucar/aE	po:verb ts:infinitive_simple
 suco/aEIJ	po:verb ts:indicative_present st:sucar
 súcoe/aK	po:verb ts:indicative_present is:interrogative st:sucar
 insultar/aE	po:verb ts:infinitive_simple
-insulto/aEIJ	po:verb ts:indicative_present st:insultar
+insulto/aEIJ	po:verb ts:indicative_present st:insultar po:noun
 insúltoe/aK	po:verb ts:indicative_present is:interrogative st:insultar
 susultar/aE	po:verb ts:infinitive_simple
 susulto/aEIJ	po:verb ts:indicative_present st:susultar
@@ -19627,7 +19627,7 @@ intorbidir/acE	po:verb ts:infinitive_simple
 torbolar/aEsś	po:verb ts:infinitive_simple
 tórbolo/aEIJ	po:verb ts:indicative_present st:torbolar
 tórboloe/aK	po:verb ts:indicative_present is:interrogative st:torbolar
-torboƚar/aEś	po:verb ts:infinitive_simple
+torboƚar/aE	po:verb ts:infinitive_simple
 tórboƚo/aEJ	po:verb ts:indicative_present st:torboƚar
 tórboƚoe/aK	po:verb ts:indicative_present is:interrogative st:torboƚar
 torcar/aE-	po:verb ts:infinitive_simple
@@ -19975,7 +19975,7 @@ trexéndoe/aK	po:verb ts:indicative_present is:interrogative st:trexendar
 tribolar/aErsś	po:verb ts:infinitive_simple
 tríbolo/aEIJ	po:verb ts:indicative_present st:tribolar
 tríboloe/aK	po:verb ts:indicative_present is:interrogative st:tribolar
-triboƚar/aEŔś	po:verb ts:infinitive_simple
+triboƚar/aEŔ	po:verb ts:infinitive_simple
 tríboƚo/aEJ	po:verb ts:indicative_present st:triboƚar
 tríboƚoe/aK	po:verb ts:indicative_present is:interrogative st:triboƚar
 destribuir/acEsś	po:verb ts:infinitive_simple
@@ -20034,7 +20034,7 @@ triúnfoe/aK	po:verb ts:indicative_present is:interrogative st:triunfar
 trobolar/aEsś	po:verb ts:infinitive_simple
 tróbolo/aEIJ	po:verb ts:indicative_present st:trobolar
 tróboloe/aK	po:verb ts:indicative_present is:interrogative st:trobolar
-troboƚar/aEś	po:verb ts:infinitive_simple
+troboƚar/aE	po:verb ts:infinitive_simple
 tróboƚo/aEJ	po:verb ts:indicative_present st:troboƚar
 tróboƚoe/aK	po:verb ts:indicative_present is:interrogative st:troboƚar
 trodar/aE	po:verb ts:infinitive_simple
@@ -20161,7 +20161,7 @@ túrbinoe/aK	po:verb ts:indicative_present is:interrogative st:turbinar
 turbular/aEsś	po:verb ts:infinitive_simple
 túrbulo/aEIJ	po:verb ts:indicative_present st:turbular
 túrbuloe/aK	po:verb ts:indicative_present is:interrogative st:turbular
-turbuƚar/aEś	po:verb ts:infinitive_simple
+turbuƚar/aE	po:verb ts:infinitive_simple
 túrbuƚo/aEJ	po:verb ts:indicative_present st:turbuƚar
 túrbuƚoe/aK	po:verb ts:indicative_present is:interrogative st:turbuƚar
 turgar/aE	po:verb ts:infinitive_simple
@@ -21029,7 +21029,7 @@ xvaƚíxoe/aK	po:verb ts:indicative_present is:interrogative st:xvaƚixar
 valutar/aEsś	po:verb ts:infinitive_simple
 vàluto/aEIJ	po:verb ts:indicative_present st:valutar
 vàlutoe/aK	po:verb ts:indicative_present is:interrogative st:valutar
-vaƚutar/aEś	po:verb ts:infinitive_simple
+vaƚutar/aE	po:verb ts:infinitive_simple
 vàƚuto/aEJ	po:verb ts:indicative_present st:vaƚutar
 vàƚutoe/aK	po:verb ts:indicative_present is:interrogative st:vaƚutar
 vanir/acE=*	po:verb ts:infinitive_simple
@@ -24896,7 +24896,7 @@ diretor/D	po:noun
 direŧion/DtU	po:noun
 dirèto/BI-	po:adjective po:noun
 diritura/D	po:adverb
-dita	po:noun
+dita/D	po:noun
 ditongo/T	po:noun
 divan/TU	po:noun
 divertente/TI	po:adverb
@@ -24907,7 +24907,6 @@ divixíbiƚe/D	po:adjective
 dixnèra/D	po:noun
 dí	po:noun
 dínamo	po:noun
-dokumento/TI	po:noun
 dolor/D&	po:noun
 dolsa/D&	po:adjective po:noun
 dolso/TW&	po:adjective po:noun
@@ -24933,7 +24932,7 @@ dòso/-	po:adverb po:noun is:singular al:dòsi
 dòxa/C&	po:noun
 dreto/BWI	po:adjective po:noun
 dreŧa/Dt	po:noun
-drioman/T	po:adverb
+drioman	po:adverb
 dròga/D	po:noun
 dubio/Tŕ	po:adjective po:noun
 dubitativo/BWI	po:adjective
@@ -24977,9 +24976,7 @@ xenòco/T[]	po:noun
 đóvena/Dŧ&	po:adjective po:noun
 đóvin/Tŧ&	po:adjective po:noun
 đóvina/Dŧ&	po:adjective po:noun
-đògo/TIŧ	po:noun al:đugo
 đòna/D	po:noun
-đòo/Tŧ	po:noun st:đògo
 đudiŧio/T	po:noun
 efetivo/BWI	po:adjective po:noun
 efèto/TI	po:noun
@@ -24998,6 +24995,21 @@ eƚevasion/D	po:noun
 eƚixion/D	po:noun
 eƚítego/B	po:adjective
 emision/DU	po:noun
+baƚotasion/D	po:noun
+eƚesion/D	po:noun
+kanseƚasion/D*	po:noun
+kapitoƚasion/D.	po:noun
+ƚamentasion/D	po:noun
+koƚaudasion/D	po:noun
+ƚegasion/D.,@	po:noun
+ƚevasion/D*.@	po:noun
+ƚibarasion/D,	po:noun
+ƚokuision/D	po:noun
+peƚasion/D-*@	po:noun
+steƚasion/D.:	po:noun
+stiƚasion/D,	po:noun
+stroƚegasion/D	po:noun
+triboƚasion/D	po:noun
 emotivo/BWI	po:adjective po:noun
 emoŧion/DtU	po:noun
 endegar/T	po:noun
@@ -25012,7 +25024,7 @@ enklítego/B	po:adjective
 ente/TI	po:noun
 entità	po:noun
 epèntexi	po:noun
-erba/D	po:noun
+èrba/D	po:noun
 ergativo/BWI-	po:adjective
 eror/D	po:noun
 eròe/T	po:noun
@@ -25038,7 +25050,6 @@ evanesenŧa/Dt	po:noun
 evento/TI	po:noun
 evidenŧa/Dt	po:noun
 exame/T	po:noun
-exenpio/T	po:noun
 exenpon/DU	po:noun
 existensial/DU	po:adjective
 existensiaƚe/D	po:adjective
@@ -25056,12 +25067,10 @@ fagèr/BV	po:noun
 fakoltativo/BWI	po:adjective
 faldin/T	po:noun
 faliva/D	po:noun
-falko/TI&	po:noun
 falŧin/Tt	po:noun
 faƚiva/D	po:noun
 fameja/D&	po:noun
 famejar/D	po:adjective
-famejo/Tt	po:noun
 fameɉa/D&	po:noun
 fameɉar/D	po:adjective
 fame/I&	po:noun
@@ -25077,10 +25086,8 @@ fasilità	po:noun
 fasilmente/IX	po:adverb
 fasiƚità	po:noun
 fasin/C	po:noun
-faso/TI	po:noun po:interjection
 fastidio/Tŕ	po:noun
 fastuko/TI	po:noun
-fato/TI,	po:noun
 faŧendon/CU	po:noun
 faŧilità	po:noun
 faŧilmente/IX	po:adverb
@@ -25124,11 +25131,9 @@ fiaba/D&	po:noun
 fiada/D	po:adverb po:noun
 fiado/T	po:noun
 fiadun/TU	po:noun
-fiako/BI	po:adjective po:noun
 fiama/D	po:noun
 fiao/T	po:noun
 fiapa/D&	po:adjective
-fiapo/TI&	po:adjective
 fiatin/T	po:noun
 fià	po:adverb po:noun
 fiévera/D	po:noun
@@ -25153,14 +25158,12 @@ fiora/&	po:noun
 fiorin/T	po:noun
 fio/T	po:conjunction po:noun
 fiò	po:noun
-fiòko/TI&)	po:adjective po:noun
 fiòŧa/Dt	po:noun
 fiòŧo/TtI	po:noun
 fisa/D&	po:adjective po:noun
-fiso/TI	po:adjective
 fiŧa/D	po:noun
 fiume/D	po:noun
-fínferlo/T	po:noun
+fínferl/T	po:noun
 fíxima/D	po:noun
 flesion/DU	po:noun
 fogarata/D	po:noun
@@ -25180,7 +25183,6 @@ fondamenta/D	po:noun
 fondamental/DU	po:adjective
 fondamentaƚe/D	po:adjective
 fondina/D	po:noun
-fondo/B[]	po:adjective po:noun
 fonemàtego/B	po:adjective
 fonèma/T	po:noun
 fonètego/B	po:adjective
@@ -25207,13 +25209,11 @@ formento/TI)	po:noun
 formiga/D&)	po:noun
 formigar/T	po:noun
 formigèr/T	po:noun
-formigoƚamento/T-	po:noun
 fornase/DI	po:noun
 fornèl/TtU	po:noun
 fornèla/Dt	po:noun
 fornèr/BV	po:noun
 fornidor/CV	po:noun
-forno/T&	po:noun
 forsadura/DY	po:noun
 forse/Tḿ	po:adverb
 forsèl/TtU	po:noun
@@ -25224,27 +25224,22 @@ fortifegador/CV	po:noun
 fortuna/D	po:noun
 forŧadura/DY	po:noun
 forŧèl/BU	po:noun
-fotío	po:noun
+fotío/T	po:noun
 fotografía/D	po:noun
 fórmola/Dt	po:noun
-fògo/TI&	po:noun
+fórvexe/DI	po:noun
 fòja/Dt	po:noun
-fòjo/Tt=	po:noun
 fòn/T	po:noun
 fònego/T	po:noun
-fòrvese/DI	po:noun
 fòto	po:noun
 fradèl/TtU	po:noun
 fraèl/TtU	po:noun
 fragolèr/BV	po:noun
 fragoƚèr/BV	po:noun
-frako/BI	po:noun
 franda/D&	po:noun
 franđa/D&	po:noun
 franxa/D&	po:noun
-franko/BI	po:adjective
 frasionario/BW	po:adjective
-fraskar/T	po:noun
 fraskèr/BV	po:noun
 fraŧion/DtU	po:noun
 fraŧionario/BW	po:adjective
@@ -25263,7 +25258,7 @@ freskin/T	po:adjective po:noun
 fresko/TI&	po:adjective po:noun
 freŧa/Dv	po:noun
 freve/D)	po:noun
-fréa/D&	po:adjective po:noun
+frea/D&	po:adjective po:noun
 frégola/Dt	po:noun
 frèl/TtU	po:noun
 frève/D&	po:noun
@@ -25289,7 +25284,6 @@ fuƚiva/D	po:noun
 fumèra/D)	po:noun
 fuminante/TI	po:noun
 fuminanto	po:noun
-fumo/TI	po:noun
 fustaño/TI	po:noun
 futur/B	po:adjective po:noun
 fuxil/D	po:noun
@@ -25391,11 +25385,8 @@ gru	po:noun
 grumo/TI&	po:noun
 grupuluxi	po:adjective po:noun is:plural st:gropoloxo
 grupuƚuxi	po:adjective po:noun is:plural st:gropoƚoxo
-gualivo/BWI	po:adjective po:noun
-guaƚivo/BW	po:adjective po:noun
 guantièra/D	po:noun
 guèra/D	po:noun
-gusto/TI	po:noun
 guxèla/Dt	po:noun
 identifegativo/BWI	po:adjective po:noun
 identità	po:noun
@@ -25405,7 +25396,6 @@ iƚegaƚe/D	po:adjective
 imaxinario/BW	po:adjective po:noun
 imedià	po:adjective
 inativo/BWI	po:adjective
-inbriago/B	po:adjective
 incesta/D	po:noun
 incixo/TI	po:noun
 indeboƚimento/T	po:noun
@@ -25415,7 +25405,7 @@ individual/DU	po:adjective
 individuaƚe/D	po:adjective
 indovinèl/TtU	po:noun
 indòrmia/D	po:noun
-inetitúdine/D	po:noun
+inetitúdin/D	po:noun
 infin	po:adverb
 infina/W	po:adverb
 infiso/TI	po:adjective po:noun
@@ -25427,8 +25417,6 @@ inima/D	po:noun
 inisial/DU	po:adjective po:noun
 inisiaƚe/D	po:adjective po:noun
 iniŧial/DU	po:adjective po:noun
-injòto/TI	po:noun
-inɉòto/TI	po:noun
 inkonpatíbil/D	po:adjective
 inkonpatíbiƚe/D	po:adjective
 inkontrarietà	po:noun
@@ -25466,9 +25454,7 @@ insieme	po:adverb po:noun
 insième	po:adverb po:noun
 insin	po:preposition po:adverb
 insina	po:preposition po:adverb
-insònio/T	po:noun
 instantàneo/B	po:adjective
-insulto/TI	po:noun
 intensivo/BWI	po:adjective
 intento/BI	po:adjective po:noun
 interesante/D	po:adjective
@@ -25483,7 +25469,6 @@ interogativo/BWI	po:adjective po:noun
 intertònego/B	po:adjective
 intervokàlego/B	po:adjective
 intervokàƚego/B	po:adjective
-intèrno/B	po:adjective po:noun
 intièr/B	po:adjective
 intòrto/BI	po:adjective
 intramèđo/Tt	po:adjective
@@ -25828,7 +25813,6 @@ konseguenŧa/Dt	po:noun
 konsekutivo/BWI	po:adjective
 konsistenŧa/Dt	po:noun
 konsonante/D	po:noun
-konstelasion/D	po:noun
 konsteƚasion/D	po:noun
 kontadin/T(	po:adjective po:noun
 kontadina/D(	po:adjective po:noun
@@ -29018,7 +29002,6 @@ exoxo/BWIḿ	po:adjective po:noun
 èlexe/T	po:noun
 èƚera/D	po:noun
 èƚexe/T	po:noun
-èrba/D	po:noun
 èrta/D	po:noun
 faa/D	po:noun
 fabrisièr/BV	po:noun
@@ -36388,8 +36371,6 @@ grúmol/Ttu	po:noun
 gumer/T	po:noun
 gustin/T	po:noun
 guxmarin/T	po:noun
-iluminaŧion/D	po:noun
-iluminasion/D	po:noun
 iƚuminasion/D	po:noun
 inbrunidura/DY	po:noun
 infiúxene/T	po:noun
@@ -40946,4 +40927,4 @@ kutèr/BV	po:noun
 
 
 / 193
-/ 25500
+/ 24900
