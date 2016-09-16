@@ -171,17 +171,17 @@
 					/xrego/,
 					/be([fglƚ]a|re|ko)/, /bare/,
 					/ce([fklƚrst]a|[lƚr]e|ko)/, /cara/,
-					/de([lƚt]a|[kg]ua|[bdsŧ]i|[dlƚ]e|ro)/,
+					/de([lƚt]a|[kg]ua|[bdsŧ]i|[dlƚ]e|ro|pu)/,
 					/đe([lƚ]a|ne)/,
 					/fe([lƚrst]a|ria|tu)/, /fara/,
 					/ie[đgtx]a/,
 					/[jɉ]e[lƚ]a/,
 					/ke(ga|[lƚ]e)/,
-					/[lƚ]e([fgv]a|via|gua|xe|[sŧ]i|fo)/,
+					/[lƚ]e([fgtv]a|via|gua|[tx]e|[sŧ]i|fo)/,
 					/me([lƚr]a|[dlƚ]ia|[dr]e|[rlƚ]i)/, /mar[aei]/,
 					/ne([glƚr]a|bia|du|t[ei])/, /nara/,
 					/pe([cklƚrt]a|[nt]e|po|[kt]u)/, /para/,
-					/re([dsŧ]i|pli|[lƚ]e|ku|klu)/,
+					/re([dsŧ]i|pli|[lƚ]e|[kp]u|klu)/,
 					/se([dlƚrs]a|dia|re|v?i|[gk]ui|ko|tu)/, /sar[ae]/,
 					/^te([glƚr]a|dia|[lƚ]e|[sŧ]i|ro|nu)/, /^tar[ao]/,
 					/ŧe([flƚs]a|[lƚr]e|ko|tu)/, /ŧare/,
@@ -206,7 +206,7 @@
 
 					/^[flƚnrst]?esta/,
 					/[alƚnu]estra/,
-					/deste/,
+					/des(te|pu)/,
 					/melmo/,
 					/vesti/,
 
@@ -299,7 +299,7 @@
 					/tro([cdđlƚñstŧx]a|[lƚ]e|to)/
 				];
 				//note: only /^(re)?xeta/ is a true positive, so /xeta/ is used in 'infixes' above and /[aun]xeta/ here
-				var falsePositives = [/^(inca|des|[pr]o|sco)?peta/, /[aun]xeta/, /^[pv]e[lƚ]a/, /^(re)?poxa/, /^(in)?bota$/, /(^|des)kosta$/];
+				var falsePositives = [/^(inca|des|[pr]o|sco)?peta/, /[aun]xeta/, /^[pv]e[lƚ]a/, /^(re)?poxa/, /^(in)?bota$/, /(^|des)kosta$/, /([gp]a|[bx]e|[stŧ]o|per|sti)[lƚ]eta$/];
 
 				return function(themeT4, syllabationT4, idx){
 					idx = syllabationT4.getSyllabeIndex(idx);
@@ -452,7 +452,7 @@
 				}
 			};
 
-			var verbs = ['dexverđenar'];
+			var verbs = ['dolođar'];
 			showDicForms(verbs);
 		});
 
