@@ -92,6 +92,10 @@ FLAG UTF-8
 # languidir	4 -<is>ír
 # languir	5 -ír
 
+# FIXME
+# Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug. par tuti i mòdi e i tenpi fora ke inté ‘l infenío, partithipio ativo, e xerundio
+# Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug. intel partithipio pasivo ko la dexinentha in -st-, e intel xerundio
+
 # vèrbi -àr, -ér, -<is>ír, -ír, -<is>ír/-ír
 # themeT1 + r/aE, themeT1 + r/acE, themeT1 + r/adE, themeT1 + r/aeE
 # themeT8 + o/aEIJ
@@ -2599,7 +2603,7 @@ SFX o io i/EFL io
 
 # vèrbi '-er inregolari ((r[ei])èser)
 # themeT1 + er/p
-SFX p Y 346
+SFX p Y 347
 SFX p èser é/N èser
 SFX p èser élo/B èser
 SFX p èser éƚo/B èser
@@ -2946,6 +2950,7 @@ SFX p ser rimo/EJ èser
 SFX p ser ritu/M èser
 SFX p ser ro/J èser
 SFX p ser rone/K èser
+SFX p ser sí/EFLN èser
 
 
 # tute le deklinaŧion, ajetivi de prima klase
@@ -3346,7 +3351,7 @@ SFX T io i io
 SFX T a i a
 SFX T e i e
 
-SFX Ŧ Y 4
+SFX Ŧ Y 4 (-[nr] > -[nr]io, -o/e > -io, -a > -ia)
 SFX Ŧ 0 io [nr]
 SFX Ŧ o io o
 SFX Ŧ a ia/D a
@@ -3431,7 +3436,7 @@ SFX u l i l
 SFX u lo i lo
 SFX u n i n
 
-# piante e mistièri
+# piante e mistièri (-èr, -aro, -(i)ol)
 SFX V Y 19
 SFX V èr ar/B èr
 SFX V ièr ar/B ièr
@@ -3453,7 +3458,7 @@ SFX V oƚa ioƚa/D [rs]oƚa
 SFX V oƚa iòƚa/D [rs]oƚa
 SFX V oƚa òƚa/D [rs]oƚa
 
-# negòŧi, atività komerŧali o industriali, aŧion, scapi de ròbe o de parsone
+# negòŧi, atività komerŧali o industriali, aŧion, scapi de ròbe o de parsone (-ría)
 SFX v Y 38
 SFX v e aría/D e
 SFX v 0 ría/D e
@@ -3494,7 +3499,7 @@ SFX v èr ería/D èr
 SFX v 0 aría/D [ln]
 SFX v 0 ería/D [ln]
 
-# nominali denominali
+# nominali denominali (-ista)
 SFX R Y 12
 SFX R 0 ista/C [lnr]
 SFX R èr erista/C èr
@@ -3509,7 +3514,7 @@ SFX R e ista/C e
 SFX R o ista/C [^i]o
 SFX R o sta/C io
 
-# nominali deverbali
+# nominali deverbali (-mento)
 SFX r Y 24
 SFX r o amento/TI o
 SFX r r mento/TI [^e]r
@@ -3536,7 +3541,7 @@ SFX r èñer eñimento/TI èñer
 SFX r àrxer arximento/TI àrxer
 SFX r òrxer orximento/TI òrxer
 
-# nominali deverbali (ko èle evanesente)
+# nominali deverbali (-mento ko èle evanesente)
 SFX Ŕ Y 23
 SFX Ŕ r mento/T [^e]r
 SFX Ŕ r mento/T [^dđñstx]er
@@ -3562,7 +3567,7 @@ SFX Ŕ èñer eñimento/T èñer
 SFX Ŕ àrxer arximento/T àrxer
 SFX Ŕ òrxer orximento/T òrxer
 
-# ajetivali denomenali
+# ajetivali denomenali (-oxo)
 SFX ŕ Y 23
 SFX ŕ a oxo/BWIḿ [^íjñ]a
 SFX ŕ a oxo/BWIḿ [^ò][jñ]a
@@ -3588,7 +3593,7 @@ SFX ŕ òjo ujuxi òjo
 SFX ŕ òɉo oɉoxo/BWIḿ òɉo
 SFX ŕ òɉo uɉuxi òɉo
 
-# nominali deverbali
+# nominali deverbali (-ŧion)
 SFX s Y 24
 SFX s r ŧion/DU [^aei]r
 SFX s r ŧion/DU [^t]ar
@@ -3604,7 +3609,7 @@ SFX s tar ŧion/DU [vx]entar
 SFX s àer aŧion/DU àer
 SFX s ir ŧion/DU uir
 SFX s erò ion/DU [^dmnñtuvx]erò
-SFX s xerò ŧion/DU [eiu]xerò
+SFX s xerò ŧion/DU [aeiu]xerò
 SFX s orxerò ureŧion sorxerò
 SFX s merò nŧion/DU umerò
 SFX s nerò xiŧion/DU onerò
@@ -3615,7 +3620,7 @@ SFX s ñerò nŧion/DU eñerò
 SFX s verò uŧion/DU olverò
 SFX s guerò ŧion/DU stinguerò
 
-# nominali deverbali
+# nominali deverbali (-sion)
 SFX ś Y 24
 SFX ś r sion/DU [^aei]r
 SFX ś r sion/DU [^t]ar
@@ -3630,19 +3635,24 @@ SFX ś tar sion/DU spetar
 SFX ś tar sion/DU [vx]entar
 SFX ś àer asion/DU àer
 SFX ś ir sion/DU uir
-SFX ś xerò sion/DU [eiu]xerò
-SFX ś orxerò uresion sorxerò
+SFX ś xerò sion/DU [aeiu]xerò
+SFX ś orxerò uresion/DU sorxerò
 SFX ś merò nsion/DU umerò
 SFX ś nerò xision/DU onerò
 SFX ś verò sion/DU iverò
-SFX ś erò ision/DU eterò
-SFX ś derò sion/DU enderò
-SFX ś ñerò nsion/DU eñerò
 SFX ś verò usion/DU olverò
-SFX ś lverò ƚusion/DU olverò
+SFX ś erò ision/DU eterò
+SFX ś derò sion/DU [ae]nderò
+SFX ś ñerò nsion/DU eñerò
+SFX ś lverò lusion/DU olverò
 SFX ś guerò sion/DU stinguerò
 
-# nominali deaverbiali
+# nominali deverbali ko èle evanesente (-sion)
+SFX š Y 2
+SFX š r sion/D r
+SFX š lverò ƚusion/D olverò
+
+# nominali deaverbiali (-ixmo)
 SFX S Y 4
 SFX S 0 ixmo/T [nr]
 SFX S a ixmo/T a
@@ -3693,31 +3703,31 @@ SFX ḿ exe ixi exe
 SFX ḿ orse ursi orse
 
 
-# avèrbi
+# avèrbi (-mente)
 SFX W Y 18
-SFX W 0 emente/IX n
-SFX W 0 mente/IX a
-SFX W 0 mente/IX [^è]r
-SFX W èr eramente/IX èr
-SFX W 0 mente/IX [^è]l
-SFX W èl elmente/IX èl
-SFX W o amente/IX [^mst]o
-SFX W o amente/IX [^è]mo
-SFX W o amente/IX [^ò]so
-SFX W o amente/IX [^èò]to
-SFX W èmo emamente/IX èmo
-SFX W òso osamente/IX òso
-SFX W èto etamente/IX èto
-SFX W òto otamente/IX òto
-SFX W 0 mente/IX [^lv]e
-SFX W 0 mente/IX [^è]ve
-SFX W e mente/IX le
-SFX W ève evemente/IX ève
+SFX W 0 emente/IẂ n
+SFX W 0 mente/IẂ a
+SFX W 0 mente/IẂ [^è]r
+SFX W èr eramente/IẂ èr
+SFX W 0 mente/IẂ [^è]l
+SFX W èl elmente/IẂ èl
+SFX W o amente/IẂ [^mst]o
+SFX W o amente/IẂ [^è]mo
+SFX W o amente/IẂ [^ò]so
+SFX W o amente/IẂ [^èò]to
+SFX W èmo emamente/IẂ èmo
+SFX W òso osamente/IẂ òso
+SFX W èto etamente/IẂ èto
+SFX W òto otamente/IẂ òto
+SFX W 0 mente/IẂ [^lv]e
+SFX W 0 mente/IẂ [^è]ve
+SFX W e mente/IẂ le
+SFX W ève evemente/IẂ ève
 
-# avèrbi
-SFX X Y 2
-SFX X nte n mente
-SFX X e re mente
+# avèrbi (-mente)
+SFX Ẃ Y 2
+SFX Ẃ nte n mente
+SFX Ẃ e re mente
 
 # sostantivi koletivi, ...
 SFX Y Y 15
@@ -3736,11 +3746,6 @@ SFX Y edo é/T edo
 SFX Y udo ú/T udo
 SFX Y uda úa/D uda
 SFX Y ude ú/T ude
-
-
-# FIXME
-# Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug. par tuti i mòdi e i tenpi fora ke inté ‘l infenío, partithipio ativo, e xerundio
-# Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug. intel partithipio pasivo ko la dexinentha in -st-, e intel xerundio
 
 # sostantivi alterài - demenutivi in -eto/a
 SFX & Y 73
@@ -3843,7 +3848,7 @@ SFX [ òra orèla/D òra
 SFX [ òsa osèla/D òsa
 SFX [ òŧa oŧèla/D òŧa
 
-# sostantivi alterài - demenutivi in -èƚo/-èƚa
+# sostantivi alterài - demenutivi in -èƚo/a
 SFX ] Y 22
 SFX ] 0 èƚo/T n
 SFX ] 0 èƚo/T [^ò]r
