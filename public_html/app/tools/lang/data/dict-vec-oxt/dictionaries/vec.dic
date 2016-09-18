@@ -4237,7 +4237,7 @@ fào/hEIJ.:	po:verb ts:indicative_present st:far
 fàoe/hEIJ.:	po:verb ts:indicative_present is:interrogative st:far
 fado/TY+.:	po:verb ts:participle_perfect_strong st:far
 fada/DY+.:	po:verb ts:participle_perfect_strong st:far
-fato/BI+.:,	po:verb ts:participle_perfect_strong st:far st:fàxer po:noun
+fato/BI+.:,	po:verb ts:participle_perfect_strong st:far st:fàxer po:adjective po:noun
 asuefar/aE	po:verb ts:infinitive_simple
 asuèfo/aEIJ	po:verb ts:indicative_present st:asuefar
 asuèfoe/aK	po:verb ts:indicative_present is:interrogative st:asuefar
@@ -4316,7 +4316,7 @@ tumefato/BI	po:verb ts:participle_perfect_strong st:tumefar
 fir/acE	po:verb ts:infinitive_simple
 fàser/bE	po:verb ts:infinitive_simple
 faserò/bJ	po:verb ts:indicative_future st:fàser
-faso/aEIJ+-*	po:verb ts:indicative_present st:fàser st:fàsar st:fasar po:interjection po:noun
+faso/aEIJ+-*()&	po:verb ts:indicative_present st:fàser st:fàsar st:fasar po:interjection po:noun
 fàsoe/aK+-*	po:verb ts:indicative_present is:interrogative st:fàser st:fàsar st:fasar
 fàŧer/bE	po:verb ts:infinitive_simple
 faŧerò/bJ	po:verb ts:indicative_future st:fàŧer
@@ -4473,6 +4473,9 @@ fameƚiarixar/aE	po:verb ts:infinitive_simple
 fameƚiarixo/aEJ	po:verb ts:indicative_present st:fameƚiarixar
 fameƚiaríxoe/aK	po:verb ts:indicative_present is:interrogative st:fameƚiarixar
 infanatikir/acE	po:verb ts:infinitive_simple
+fanfanar/aE	po:verb is:infinitive_simple
+fànfano/aEIJ	po:verb ts:indicative_present st:fanfanar
+fànfanoe/aK	po:verb ts:indicative_present is:interrogative st:fanfanar
 fanfruñar/aE	po:verb ts:infinitive_simple
 fanfruño/aEIJ	po:verb ts:indicative_present st:fanfruñar
 fanfrúñoe/aK	po:verb ts:indicative_present is:interrogative st:fanfruñar
@@ -4540,7 +4543,7 @@ fataƚíxoe/aK	po:verb ts:indicative_present is:interrogative st:fataƚixar
 fatuar/aE-	po:verb ts:infinitive_simple
 fatuo/aEIJ-	po:verb ts:indicative_present st:fatuar
 fàtuoe/aK-	po:verb ts:indicative_present is:interrogative st:fatuar
-fatucar/aE	po:verb ts:infinitive_simple
+fatucar/aEv	po:verb ts:infinitive_simple
 fatuco/aEIJ	po:verb ts:indicative_present st:fatucar
 fatúcoe/aK	po:verb ts:indicative_present is:interrogative st:fatucar
 faturar/aE	po:verb ts:infinitive_simple
@@ -4581,10 +4584,10 @@ infasoƚar/aE	po:verb ts:infinitive_simple
 infàsoƚo/aEJ	po:verb ts:indicative_present st:infasoƚar
 infàsoƚoe/aK	po:verb ts:indicative_present is:interrogative st:infasoƚar
 fasoletar/aE	po:verb ts:infinitive_simple
-fasoleto/aEIJ	po:verb ts:indicative_present st:fasoletar
+fasoleto/aEIJ)	po:verb ts:indicative_present st:fasoletar
 fasolétoe/aK	po:verb ts:indicative_present is:interrogative st:fasoletar
 faŧoletar/aE	po:verb ts:infinitive_simple
-faŧoleto/aEIJ	po:verb ts:indicative_present st:faŧoletar
+faŧoleto/aEIJ)	po:verb ts:indicative_present st:faŧoletar
 faŧolétoe/aK	po:verb ts:indicative_present is:interrogative st:faŧoletar
 fasoƚetar/aE	po:verb ts:infinitive_simple
 fasoƚeto/aEJ	po:verb ts:indicative_present st:fasoƚetar
@@ -12777,9 +12780,9 @@ padroníđoe/aK	po:verb ts:indicative_present is:interrogative st:padroniđar
 padronixar/aE	po:verb ts:infinitive_simple
 padronixo/aEIJ	po:verb ts:indicative_present st:padronixar
 padroníxoe/aK	po:verb ts:indicative_present is:interrogative st:padronixar
-pagar/aEr=.@	po:verb ts:infinitive_simple
-pago/aEIJ=.@	po:verb ts:indicative_present st:pagar
-pàgoe/aK=.@	po:verb ts:indicative_present is:interrogative st:pagar
+pagar/aEr=.@*	po:verb ts:infinitive_simple
+pago/aEIJ=.@*	po:verb ts:indicative_present st:pagar
+pàgoe/aK=.@*	po:verb ts:indicative_present is:interrogative st:pagar
 pagontar/aE	po:verb ts:infinitive_simple
 pagonto/aEIJ	po:verb ts:indicative_present st:pagontar
 pagóntoe/aK	po:verb ts:indicative_present is:interrogative st:pagontar
@@ -13824,7 +13827,7 @@ inparsutir/acE	po:verb ts:infinitive_simple
 pesegar/aE*	po:verb ts:infinitive_simple
 pésego/aEIJ*	po:verb ts:indicative_present st:pesegar
 pésegoe/aK*	po:verb ts:indicative_present is:interrogative st:pesegar
-peskar/aE.	po:verb ts:infinitive_simple
+peskar/aEv.	po:verb ts:infinitive_simple
 pesko/aEIJ.	po:verb ts:indicative_present st:peskar
 péskoe/aK.	po:verb ts:indicative_present is:interrogative st:peskar
 pestar/aEr-	po:verb ts:infinitive_simple
@@ -15649,10 +15652,10 @@ respéxoƚoe/aK	po:verb ts:indicative_present is:interrogative st:respexoƚar
 arestar/aE	po:verb ts:infinitive_simple
 arèsto/aEIJ	po:verb ts:indicative_present st:arestar
 arèstoe/aK	po:verb ts:indicative_present is:interrogative st:arestar
-retelar/aE	po:verb ts:infinitive_simple
+retelar/aEv	po:verb ts:infinitive_simple
 retèlo/aEIJ	po:verb ts:indicative_present st:retelar
 retèloe/aK	po:verb ts:indicative_present is:interrogative st:retelar
-reteƚar/aE	po:verb ts:infinitive_simple
+reteƚar/aEv	po:verb ts:infinitive_simple
 retèƚo/aEJ	po:verb ts:indicative_present st:reteƚar
 retèƚoe/aK	po:verb ts:indicative_present is:interrogative st:reteƚar
 retribuir/acE	po:verb ts:infinitive_simple
@@ -17489,7 +17492,7 @@ soƚàjoe/aK	po:verb ts:indicative_present is:interrogative st:soƚajar
 soƚaɉar/aE	po:verb ts:infinitive_simple
 soƚaɉo/aEJ	po:verb ts:indicative_present st:soƚaɉar
 soƚàɉoe/aK	po:verb ts:indicative_present is:interrogative st:soƚaɉar
-soldar/aE	po:verb ts:infinitive_simple
+soldar/aEv	po:verb ts:infinitive_simple
 sòldo/aEIJ	po:verb ts:indicative_present st:soldar po:noun
 sòldoe/aK	po:verb ts:indicative_present is:interrogative st:soldar
 solejar/aE	po:verb ts:infinitive_simple
@@ -17945,10 +17948,10 @@ ispíritoe/aK	po:verb ts:indicative_present is:interrogative st:ispiritar
 spitar/aE	po:verb ts:infinitive_simple
 spito/aEIJ	po:verb ts:indicative_present st:spitar
 spítoe/aK	po:verb ts:indicative_present is:interrogative st:spitar
-spisiar/aE	po:verb ts:infinitive_simple
+spisiar/aEv	po:verb ts:infinitive_simple
 spisio/aEIJ	po:verb ts:indicative_present st:spisiar
 spísioe/aK	po:verb ts:indicative_present is:interrogative st:spisiar
-spiŧiar/aE	po:verb ts:infinitive_simple
+spiŧiar/aEv	po:verb ts:infinitive_simple
 spiŧio/aEIJ	po:verb ts:indicative_present st:spiŧiar
 spíŧioe/aK	po:verb ts:indicative_present is:interrogative st:spiŧiar
 spiumasar/aE	po:verb ts:infinitive_simple
@@ -21596,7 +21599,7 @@ vergédoe/aK	po:verb ts:indicative_present is:interrogative st:vergedar
 vergeđar/aE	po:verb ts:infinitive_simple
 vergeđo/aEIJ	po:verb ts:indicative_present st:vergeđar
 vergéđoe/aK	po:verb ts:indicative_present is:interrogative st:vergeđar
-vergexar/aE	po:verb ts:infinitive_simple
+vergexar/aEv	po:verb ts:infinitive_simple
 vergexo/aEIJ	po:verb ts:indicative_present st:vergexar
 vergéxoe/aK	po:verb ts:indicative_present is:interrogative st:vergexar
 vergidar/aE	po:verb ts:infinitive_simple
@@ -25062,9 +25065,9 @@ faganèl/TtU	po:adjective po:noun
 fagèr/BV	po:noun
 fakoltativo/BWI	po:adjective
 faldin/T	po:noun
-faliva/D	po:noun
+faliva/D&	po:noun
 falŧin/Tt	po:noun
-faƚiva/D	po:noun
+faƚiva/D&	po:noun
 fameja/D&	po:noun
 famejar/D	po:adjective
 fameɉa/D&	po:noun
@@ -25072,7 +25075,7 @@ fameɉar/D	po:adjective
 fame/I&	po:noun
 fanèl/TtU	po:noun
 fanèla/Dt	po:noun
-fantaxía/D	po:noun
+fantaxía/D&	po:noun
 farato/TI	po:noun
 farina/Dŕ[]	po:noun
 fasa/D&[]	po:noun
@@ -25101,7 +25104,7 @@ fàsil/Dⱦ	po:adjective
 fàŧil/DW	po:adjective
 fàvar/T	po:noun
 fàver/T	po:noun
-feda/D	po:noun
+feda/C	po:noun
 fedeltà	po:noun
 fegura/D	po:noun
 femenil/Dⱦ	po:adjective
@@ -26793,7 +26796,7 @@ pojana/D	po:noun
 pojato/TI	po:noun
 poɉana/D	po:noun
 poɉato/TI	po:noun
-polar/D	po:adjective
+polar/Dv	po:adjective
 polenta/D	po:noun
 poliamente/IẂ	po:adverb
 polidamente/IẂ	po:adverb
@@ -26801,7 +26804,7 @@ polin/Tt	po:noun
 polisílaba/D	po:adjective po:noun
 polisíndeto/TI	po:noun
 polivalente/TI	po:adjective
-poƚar/D	po:adjective
+poƚar/Dv	po:adjective
 poƚenta/D	po:noun
 poƚiamente/Ẃ	po:adverb
 poƚidamente/Ẃ	po:adverb
@@ -27260,7 +27263,7 @@ sintasi	po:noun
 sintàtego/B	po:adjective
 sinŧièr/B	po:adjective
 siñor/Bḿv	po:noun
-sior/C&	po:adjective po:noun
+sior/Cv&	po:adjective po:noun
 sioraŧa/Dt	po:noun
 sioraŧo/TtI	po:noun
 siòl/TU(	po:noun
@@ -28878,14 +28881,14 @@ fabrisièr/BV	po:noun
 fabriŧièr/BV	po:noun
 fada/D	po:noun
 fagotin/T	po:noun
-fagòto/TI[]	po:noun
+fagòto/TI)[]	po:noun
 faja/Dt	po:noun
 fal/Tu&	po:noun
 falanca/D	po:noun
 falda/D)	po:noun
 falilèla/D	po:noun
 falkonièr/BV	po:noun
-falòpa/D	po:noun
+falòpa/D	po:adjective po:noun
 falsa/D&	po:adjective po:noun
 falsariga/D	po:noun
 faltròko/BI	po:noun
@@ -28893,13 +28896,13 @@ faƚanca/D	po:noun
 faƚiƚèƚa/D	po:noun
 faƚimento/T	po:noun
 faƚo/T&	po:noun
-faƚòpa/D	po:noun
+faƚòpa/D	po:adjective po:noun
 fanfaron/CU	po:noun
 fangèra/D	po:noun
 fante/TIv	po:noun
 fapèl/DⱦU	po:noun
 farabuto/BI	po:noun
-faraona/D	po:noun
+faraon/C	po:noun
 faràjine/T	po:noun
 faràɉine/T	po:noun
 farinato/BI	po:noun
@@ -28912,8 +28915,7 @@ fasoletin/T	po:noun
 fasoƚetin/T	po:noun
 fatiŧa/Dt	po:adjective
 fatiŧo/TtI	po:adjective
-fator/Cḿv	po:noun
-faŧa/D	po:noun
+fator/Cḿv&	po:noun
 faŧadina/D	po:noun
 faŧenda/D	po:noun
 faŧendin/C	po:adjective
@@ -31157,7 +31159,6 @@ poja/Dt	po:noun
 poketo/BI	po:adjective po:pronoun po:adverb
 polaceta/D	po:noun
 polame/T	po:noun
-polaría/D	po:noun
 polarol/TUV	po:noun
 polarola/DV	po:noun
 polaroƚa/DV	po:noun
@@ -31166,19 +31167,16 @@ polastra/D	po:noun
 polastro/T[	po:noun
 polegana/D	po:noun
 polenton/CU	po:noun
-polería/D	po:noun
 polexeto/TI	po:noun
 polièr/B	po:noun
 polpa/D&	po:noun
 poƚaceta/D	po:noun
 poƚame/T	po:noun
-poƚaría/D	po:noun
 poƚaroƚo/BV	po:noun
 poƚastrèƚo/T	po:noun
 poƚastro/B	po:noun
 poƚegana/D	po:noun
 poƚenton/D	po:noun
-poƚería/D	po:noun
 poƚexeto/T	po:noun
 poƚièr/B	po:noun
 pomade/TY	po:noun
@@ -31990,8 +31988,6 @@ soɉèr/BV	po:noun
 sokoƚante/T	po:adjective
 sokoƚèr/BV	po:noun
 solar/T	po:noun
-soldaría/D	po:noun
-soldería/D	po:noun
 soldon/DU	po:noun
 solèr/TV	po:noun
 solfa/D	po:noun
@@ -32707,7 +32703,6 @@ turluƚú	po:noun
 ŧixiolato/TŧI	po:noun
 ŧixiòla/Dŧ&	po:noun
 ŧixma/Dŧ	po:noun
-ŧixoría/Dŧ	po:noun
 ŧímexe/Tŧ	po:noun
 ŧímexon/Dŧu	po:noun
 ŧímol/Tŧu	po:noun
@@ -33367,10 +33362,6 @@ grijoleto/TtI	po:noun
 grijolina/Dt	po:noun
 griɉoleto/TtI	po:noun
 griɉolina/Dt	po:noun
-grilaría/D	po:noun
-grilería/D	po:noun
-griƚaría/D	po:noun
-griƚería/D	po:noun
 grimo/B	po:adjective po:noun
 grinta/Dŕ	po:noun
 grinxòl/TtU	po:noun
@@ -33731,7 +33722,7 @@ skotadina/D	po:noun
 skotin/C	po:noun
 skòjo/Tt	po:noun
 skrivan/CU	po:noun
-skuaso/T	po:noun
+skuaso/TI	po:noun
 skuƚiereto/T	po:noun
 skursàbil/Dⱦ	po:adjective
 skurŧàbil/D	po:adjective
@@ -33883,8 +33874,6 @@ vagabondon/CU	po:noun
 vedeleto/BI	po:noun
 vedeƚeto/B	po:noun
 vena/D&	po:noun
-vergexaría/D	po:noun
-vergexería/D	po:noun
 vergolòto/TI	po:noun
 vergoƚòto/T	po:noun
 vesal/DⱦU	po:noun
@@ -34900,8 +34889,6 @@ pesaroƚo/TV	po:noun
 pesenin/T&(	po:noun
 pesenina/D&(	po:noun
 peseninato/BI	po:noun
-peskaría/D	po:noun
-peskería/D	po:noun
 pestenaga/D	po:noun
 pestilenŧa/Dt	po:noun
 pestilenŧia/Dt	po:noun
@@ -35117,10 +35104,6 @@ resetador/CV	po:noun
 resetàkol/Ttu	po:noun
 resèrva/D	po:noun
 resta/D	po:noun
-retelaría/D	po:noun
-retelería/D	po:noun
-reteƚaría/D	po:noun
-reteƚería/D	po:noun
 retor/D	po:noun
 reŧetador/CV	po:noun
 reŧetàkol/Tu	po:noun
@@ -35240,7 +35223,7 @@ skonxurador/CV	po:noun
 skorlièr/BV	po:noun
 skrivadura/DY	po:noun
 skrokoƚamento/T	po:noun
-skrova/C	po:adjective po:noun
+skrova/Cv	po:adjective po:noun
 skrópol/Ttu	po:noun
 skuarsadura/DY	po:noun
 skuarsafaso/TI	po:noun
@@ -35331,11 +35314,7 @@ spigaŧon/DtU	po:noun
 spiràkul/Ttu	po:noun
 spirto/TI	po:noun
 spisial/DⱦUW	po:noun
-spisiaría/D	po:noun
-spisiería/D	po:noun
 spiŧial/DUW	po:noun
-spiŧiaría/D	po:noun
-spiŧiería/D	po:noun
 spiximoxo/BWIḿ	po:adjective po:noun
 sponja/D&	po:noun
 sponɉa/D&	po:noun
@@ -36177,7 +36156,8 @@ kavasin/T	po:noun
 kavaŧal/DU&	po:noun
 kavedaña/D	po:noun
 kavedin/T	po:noun
-kaxèla/Dt	po:noun
+kaxèla/Dv	po:noun
+kaxèƚa/Dv	po:noun
 kàmixe	po:noun
 kàmixo/T	po:noun
 koalonga/D	po:noun
@@ -36910,8 +36890,6 @@ examinador/CV	po:noun
 exekudor/CV	po:noun
 exeunte/TI	po:noun
 exmerato/BI	po:adjective
-falkonaría/D	po:noun
-falkonería/D	po:noun
 far/T	po:noun
 faresa/D	po:noun
 farfo/T	po:noun
@@ -36999,11 +36977,7 @@ kaxarol/TUV	po:noun
 kaxarola/DV	po:noun
 kaxaroƚa/DV	po:noun
 kaxaroƚo/TV	po:noun
-kaxelaría/D	po:noun
-kaxelería/D	po:noun
 kaxelèr/BV	po:noun
-kaxeƚaría/D	po:noun
-kaxeƚería/D	po:noun
 kaxeƚèr/BV	po:noun
 kànipa/D	po:noun
 kelandía/D	po:noun
@@ -37180,9 +37154,9 @@ padron/DU	po:noun
 pair/T	po:noun
 pajeto/TI	po:noun
 paɉeto/TI	po:noun
-palandaria/D	po:noun
+palandaría/D	po:noun
 palandría/D	po:noun
-paƚandaria/D	po:noun
+paƚandaría/D	po:noun
 paƚandría/D	po:noun
 panataría/D	po:noun
 panatería/D	po:noun
@@ -37712,8 +37686,8 @@ granxiòl/TU	po:noun
 gratarol/TUV	po:noun
 grataroƚo/TV	po:noun
 grèla/Dt	po:noun
-gril/T&	po:noun
-griƚo/T&	po:noun
+gril/Tv&	po:noun
+griƚo/Tv&	po:noun
 grísol/Ttu*	po:noun
 grongo/T	po:noun
 groto/TI	po:noun
@@ -38212,7 +38186,7 @@ paƚèrno/T	po:noun
 paƚikario/T	po:adjective
 paƚòstrega/D	po:noun
 panatièra/D	po:noun
-panatika/D	po:noun
+panàtika/D	po:noun
 panfil/Tt	po:noun
 papalina/Dt	po:noun
 papuŧa/Dt	po:noun
@@ -38480,7 +38454,6 @@ simiton/CU	po:noun
 sinamai	po:adverb
 sinamente	po:adverb
 sinsin/T	po:noun
-sioría/D	po:noun
 skabio/T	po:noun
 skafon/CU	po:adjective po:noun
 skagasèr/BV	po:noun
@@ -38517,14 +38490,11 @@ skonbro/T	po:noun
 skondariòla/Dt	po:noun
 skontrin/T	po:noun
 skoranŧa/Dt	po:noun
-skorsería/D	po:noun
-skorŧería/D	po:noun
 skorŧon/DtU	po:noun
 skotor/D	po:noun
 skòso/TIW	po:noun
 skòta/D	po:noun
 skrépola/Dt	po:noun
-skrovería/D	po:noun
 skuaena/D	po:noun
 skuakuarina/D	po:noun
 skuartadon/CU	po:noun
@@ -39022,6 +38992,17 @@ xɉensaƚièra/D	po:noun
 xɉenŧala/D	po:noun
 xɉenŧalièra/D	po:noun
 / Boerio, Giuseppe. Dizionario del dialetto veneziano. Venezia : s.n., [1829].
+/ nòte muxegali
+/ DO: cesolfaut = C sol fa ut
+ŧesòlfaut/ŧ	po:noun
+/ FA: fefaut = F fa ut
+fèfaut	po:noun
+/ gesolreut = G sol re ut (sol)
+/ elami = E la mi (mi)
+/ delasolre = D la sol re (re)
+/ befa / bemi = B fa / B mi (si bemòle/ si dièxis)
+/ alamire = A la mi re (la)
+/ altro
 abatin/T	po:noun
 abilitadaŧa/Dt	po:noun
 abiƚitadasa/D	po:noun
@@ -39474,15 +39455,15 @@ beƚadòna/D	po:noun
 beƚonaso/T	po:adjective
 beƚumor/D	po:noun
 bemontà	po:adjective
-benasaso/T	po:noun
-benaŧaŧo/T	po:noun
+benasaso/TI	po:noun
+benaŧaŧo/TI	po:noun
 benaŧo/TtI	po:noun
 bendadura/DY	po:noun
 bendisposto/BI	po:adjective
 bendispòsto/BI	po:adjective
 benedeto/BI	po:adjective
-benefisiaso/T	po:noun
-benefiŧiaŧo/T	po:noun
+benefisiaso/TI	po:noun
+benefiŧiaŧo/TI	po:noun
 beniñità	po:noun
 beniño/B	po:adjective
 benservir	po:noun
@@ -39931,7 +39912,7 @@ kanevaroƚo/TV	po:adjective
 kanevon/DU	po:noun
 kanèstro/T	po:noun
 kaníbal/Dⱦu	po:noun
-kankaraŧo/Tt	po:interjection
+kankaraŧo/TtI	po:interjection
 kanònego/B	po:noun
 kanòniko/B	po:noun
 kanpanato/BI	po:adjective
@@ -40054,7 +40035,7 @@ kataiŧa/Dt	po:noun
 katalpa/D	po:noun
 katapuŧa/Dt	po:noun
 katarata/D	po:noun
-kataraŧo/Tt	po:noun
+kataraŧo/TtI	po:noun
 katarin/T*	po:noun
 kataron/DU*	po:noun
 kataròba/D	po:noun
@@ -40075,7 +40056,7 @@ kavadina/D	po:noun
 kavalariŧa/Dt	po:noun
 kavalariŧo/Tt	po:noun
 kavalaŧa/Dt	po:noun
-kavalaŧo/Tt	po:noun
+kavalaŧo/TtI	po:noun
 kavalmarin/T	po:noun
 kavaluŧo/Tt	po:noun
 kavaƚariso/B	po:noun
@@ -40096,7 +40077,7 @@ kavriaga/D	po:noun
 kavriòla/Dt	po:noun
 kaxanŧa/Dt	po:noun
 kaxaŧa/Dt	po:noun
-kaxaŧo/Tt	po:noun
+kaxaŧo/TtI	po:noun
 kaxàdego/T	po:noun
 kaxermajo/Tt	po:noun
 kaxermièr/BV	po:noun
@@ -40202,7 +40183,7 @@ kolmèl/TU&	po:noun
 kolmèƚo/T&	po:noun
 kolomèl/TU	po:noun
 kolonato/TI	po:noun
-koloraŧo/Tt	po:noun
+koloraŧo/TtI	po:noun
 kolostòrto/T	po:noun
 kolpetin/T	po:noun
 koltrexina/D	po:noun
@@ -40266,7 +40247,7 @@ kontenton/CU	po:adjective
 kontestual/DⱦW	po:adjective
 kontinuato/BW	po:adjective po:noun
 kontorno/T	po:noun
-kontrabraŧo/Tt	po:noun
+kontrabraŧo/TtI	po:noun
 kontraditor/Cḿ	po:noun
 kontrador/CV	po:noun
 kontradragante/TI	po:noun
@@ -40335,7 +40316,7 @@ kordialon/DtU	po:adjective
 kordièr/B	po:noun
 kordin/T	po:noun
 kordolon/DtU	po:noun
-kordonaŧo/Tt	po:noun
+kordonaŧo/TtI	po:noun
 koreda/D&	po:noun
 koređa/D&	po:noun
 koresionsèla/Dt	po:noun
@@ -40347,7 +40328,7 @@ korkondanŧa/Dt	po:noun
 koronona/D	po:noun
 korpasuda/DY	po:noun
 korpasudo/TY	po:noun
-korpaŧo/Tt	po:noun
+korpaŧo/TtI	po:noun
 korpaŧuda/DY	po:noun
 korpaŧudo/TY	po:noun
 kortelina/Dt	po:noun
@@ -40359,6 +40340,7 @@ kostante/TIW	po:adjective po:noun
 kostanŧa/D	po:noun
 kostina/D	po:noun
 kostonada/DY	po:noun
+kotaría/D	po:noun
 kotería/D	po:noun
 kotimon/DU	po:noun
 koton/DU	po:noun
@@ -40545,7 +40527,6 @@ tenperin/T	po:noun
 ŧernierol/TŧUV	po:noun
 ŧervato/Tŧ	po:noun
 ŧervièr/BŧV	po:adjective
-ŧesòlfaut/ŧ	po:noun
 ŧetoxa/Dŧ	po:noun
 ŧetraka/Dŧ	po:noun
 ŧevente/TŧI	po:noun
@@ -40561,6 +40542,7 @@ tenperin/T	po:noun
 ŧiarla/Dŧ	po:noun
 ŧiarlon/DŧU	po:noun
 ŧiatilion/DŧU	po:noun
+ŧibaldaría/Dŧ	po:noun
 ŧibaldería/Dŧ	po:noun
 ŧibéndola/Dŧ	po:noun
 ŧibibo/Tŧ	po:noun
@@ -40594,7 +40576,7 @@ tenperin/T	po:noun
 ŧixmatego/Bŧ	po:adjective
 ŧixmatiko/BŧI	po:adjective
 ŧixon/Cŧ	po:adjective
-ŧixor/Cŧ	po:noun
+ŧixor/Cŧv	po:noun
 ŧífol/Ttŧu	po:noun
 ŧígar/Tŧ	po:noun
 ŧíkola/Dŧ	po:noun
@@ -40905,13 +40887,54 @@ fasendièr/BV	po:noun
 faŧèŧia/D	po:noun
 fasèsia/D	po:noun
 fakinato/B	po:noun
-fakinaŧo/Tt	po:noun
+fakinaŧo/TtI	po:noun
 fakinaŧa/Dt	po:noun
 fakinon/CU	po:noun
 faŧiente/T	po:adjective
 fasiente/T	po:adjective
 faeton/DU	po:noun
+fajòl/TtU	po:noun
+faɉòl/TtU	po:noun
+fajòleto/TI	po:noun
+faɉòleto/TI	po:noun
+fañato/BI	po:adjective
+fala/Dt	po:noun
+falkon/DUv	po:noun
+falsifegador/CV	po:noun
+falson/CU	po:adjective po:noun
+montanèr/BV	po:noun
+famadin/C	po:adjective
+famaŧa/Dt	po:noun
+famejòla/Dt	po:noun
+fameɉòla/Dt	po:noun
+fandònia/D	po:noun
+fandòña/D	po:noun
+fanfaluga/D	po:adjective po:noun
+fànfan/Tu	po:noun
+fanfarièl/TtU	po:adjective po:noun
+fanfaronada/DY	po:noun
+fanfo/B	po:adjective
+fanfruñon/CU	po:noun
+fangaŧo/TtI	po:noun
+fantaxma/D	po:noun
+fantin/T	po:noun
+fantòŧo/TtI	po:noun
+faraŧo/TtI	po:noun
+farinèla/Dt	po:noun
+farixèo/B	po:adjective po:noun
+faròba/D	po:noun
+faxanèra/D	po:noun
+fasakoda/D	po:noun
+fasakóa/D	po:noun
+fasèr/BV	po:noun
+fatarèl/TtU	po:noun
+faton/CU	po:adjective
+fatostà	po:adverb
+faturaŧa/Dt	po:noun
+faturòtola/Dt	po:noun
+favoleta/Dt	po:noun
+favorite/T	po:noun
+fedina/D	po:noun
 
 
-
-/ 229
+/ 234
