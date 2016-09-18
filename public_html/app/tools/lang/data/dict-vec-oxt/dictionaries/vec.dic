@@ -1,4 +1,4 @@
-40539
+40747
 / létare
 à	po:noun
 b	po:noun
@@ -3491,8 +3491,11 @@ adúƚoe/aK	po:verb ts:indicative_present is:interrogative st:aduƚar
 dulkorar/aE	po:verb ts:infinitive_simple
 dúlkoro/aEIJ	po:verb ts:indicative_present st:dulkorar
 dúlkoroe/aK	po:verb ts:indicative_present is:interrogative st:dulkorar
+duplikar/aEr	po:verb ts:infinitive_simple
+dúpliko/aEIJ	po:verb ts:indicative_present st:duplikar
+dúplikoe/aK	po:verb ts:indicative_present is:interrogative st:duplikar
 durar/aEr	po:verb ts:infinitive_simple
-duro/aEIJ	po:verb ts:indicative_present st:durar
+duro/aEIJ&	po:verb ts:indicative_present st:durar
 dúroe/aK	po:verb ts:indicative_present is:interrogative st:durar
 kondurir/acE	po:verb ts:infinitive_simple
 indurir/acE	po:verb ts:infinitive_simple
@@ -22533,6 +22536,7 @@ Armorado/YZ	po:proper_noun
 Àñoƚa/Z	po:proper_noun
 Àñoƚo/Z	po:proper_noun
 Babào/Z	po:noun
+Babàu/Z	po:noun
 Balda/Z	po:proper_noun
 Baldina/IZ	po:proper_noun
 Baldisèra/Z	po:proper_noun
@@ -23586,9 +23590,9 @@ intanto/‘	po:adverb
 entanto	po:adverb
 kó	po:adverb po:conjunction
 vanti	po:preposition po:adverb
-endrio	po:adverb
-endrí	po:adverb
-drio	po:adverb
+endrio	po:adverb al:endrí
+endrí	po:adverb st:endrio
+drio	po:adverb al:driedo al:dredo al:dreo
 dríome	po:adverb
 dríone	po:adverb
 dríose	po:adverb
@@ -23601,8 +23605,8 @@ drio-se	po:adverb
 drio-te	po:adverb
 drio-ve	po:adverb
 drio-ge	po:adverb
-dredo	po:adverb
-dreo	po:adverb
+dredo	po:adverb st:drio
+dreo	po:adverb st:drio
 man/T=	po:noun
 mana/D	po:noun
 kondiŧion/DtU	po:noun
@@ -23702,19 +23706,6 @@ kikirikí	po:interjection
 Àxoƚo/Z	po:proper_noun
 Àxol/Z	po:proper_noun
 Đènoa/ŧZ	po:proper_noun
-Ƚímana/Z	po:proper_noun
-Ƚadrio/Z	po:proper_noun
-Ƚamon/Z	po:proper_noun
-Ƚanpèso/Z	po:proper_noun
-Ƚeñago/Z	po:proper_noun
-Ƚendinara/Z	po:proper_noun
-Ƚiñan/Z	po:proper_noun
-Ƚido/Z	po:proper_noun
-Ƚio/Z	po:proper_noun
-Ƚisafuxina/Z	po:proper_noun
-Ƚivensa/Z	po:proper_noun
-Ƚongaron/Z	po:proper_noun
-Ƚonigo/Z	po:proper_noun
 Adrio/Z	po:proper_noun
 Albiòƚa/Z	po:proper_noun
 Albiòla/Z	po:proper_noun
@@ -24512,7 +24503,6 @@ axente/TI	po:adjective po:noun
 àuto	po:noun
 àxen/Tu	po:noun
 baba/D	po:adjective po:noun
-Babàu/Z	po:noun
 badía/D	po:noun
 bagolina/Dt	po:noun
 bajijo/T	po:noun
@@ -24831,7 +24821,6 @@ dexiderativo/BWI	po:adjective po:noun
 dexidèrio/T	po:noun
 dexinenŧa/Dt	po:noun
 dexío/T	po:noun
-dexórden/Du	po:noun
 débol/Dⱦu	po:adjective po:noun al:débel
 dèa/D	po:noun
 dèrda/D	po:noun
@@ -24946,7 +24935,6 @@ elítego/B	po:adjective
 eƚementar/D	po:adjective
 eƚemento/T	po:noun
 eƚenko/T	po:noun
-eƚesion/D	po:noun
 eƚetivo/BW	po:adjective
 eƚevasion/D	po:noun
 eƚixion/D	po:noun
@@ -25724,7 +25712,6 @@ konseguenŧa/Dt	po:noun
 konsekutivo/BWI	po:adjective
 konsistenŧa/Dt	po:noun
 konsonante/D	po:noun
-konsteƚasion/D	po:noun
 kontadin/T(	po:adjective po:noun
 kontadina/D(	po:adjective po:noun
 kontain/C	po:adjective po:noun
@@ -25955,11 +25942,11 @@ libro/Bŧv	po:noun
 lidial/DU	po:noun
 lidier/B	po:adjective
 liđier/B	po:adjective
-liéor/ŧT	po:noun
-lièvar/ŧT	po:noun
+liéor/T	po:noun
+lièvar/T	po:noun
 lièvro/Tŧ	po:noun
 ligame/Tŧ	po:noun
-likòter/ŧT	po:noun
+likòter/T	po:noun
 limitativo/BWI,	po:adjective
 lineeta/Dŧ	po:noun
 linjà/ŧ	po:noun
@@ -26356,14 +26343,14 @@ nido/B	po:noun
 nin/C	po:noun
 ninin	po:adjective
 ninsiol/TtU	po:noun
-ninsioƚo/T&	po:noun
+ninsioƚo/T	po:noun
 ninsiòl/TU&	po:noun
 ninsiòƚo/T&	po:noun
 ninŧiol/TU	po:noun
 ninŧiòl/TU&	po:noun
 niòra/D	po:noun
 nisiol/TtU	po:noun
-nisioƚo/T&	po:noun
+nisioƚo/T	po:noun
 nisiòl/TU&	po:noun
 nisiòƚo/T&	po:noun
 niŧiol/TU	po:noun
@@ -27079,13 +27066,11 @@ saòn/DU	po:noun
 sapin/Tŧ	po:noun
 sarangon/DU	po:noun
 sardèla/Dt	po:noun
-sarlatanèl/TtU	po:adjective
 sartor/Cḿ	po:noun
 saŧo/TtI	po:noun
 savaja/Dt	po:noun
 savajòto/TI	po:adjective
 savaɉòto/TI	po:adjective
-savàtol/Ttu	po:noun
 savòja/Dt	po:noun
 saxon/DU	po:noun
 sàlgar/T	po:noun
@@ -27102,8 +27087,7 @@ scao/B	po:adjective po:noun
 scapa/D	po:noun
 scapo/TI	po:noun
 scenxa/D&	po:noun
-sceto/TI	po:adjective
-scèto/TI	po:adjective
+scèto/BI	po:adjective
 scòna/D	po:noun
 scòpo/TI&	po:noun
 scuxo/TI	po:noun
@@ -27171,10 +27155,6 @@ setimana/D	po:noun
 seturko/T	po:noun
 sé	po:pronoun po:noun
 sée	po:noun
-ségola/Dt	po:noun
-séola/Dt	po:noun
-sérkol/Ttu	po:noun
-sèkol/Ttu	po:noun
 sènen/T	po:noun
 sèrio/B	po:adjective po:noun
 sèrpa/CI	po:noun
@@ -27347,8 +27327,6 @@ sonoriđaŧion/DU,	po:noun
 sonorità	po:noun
 sonorixasion/DU,	po:noun
 sonòr/B	po:adjective
-sopèl/Tt	po:noun
-sopèla/Dt	po:noun
 sopièra/D	po:noun
 soportàbil/Dⱦ	po:adjective
 sopresion/DU	po:noun
@@ -27380,7 +27358,6 @@ soturko/T	po:noun
 soŧal/DU	po:adjective
 soviŧion/DtU	po:noun
 sovran/CU	po:adjective po:noun
-sòkol/Tt	po:noun
 sòn/TŦ&	po:noun
 sòrte/DI	po:noun
 sòxia	po:noun
@@ -28230,7 +28207,6 @@ barsígola/Dt	po:noun
 bartavèl/TtU	po:noun
 barŧígola/D	po:noun
 barufa/D	po:noun
-basinèla/Dt	po:noun
 basta/D	po:noun
 bastèr/BV	po:noun
 bastimento/TI	po:noun
@@ -28673,7 +28649,6 @@ deèla/Dt	po:noun
 delubio/T*)	po:noun
 deƚubion/D	po:noun
 deƚubio/T*	po:noun
-deƚuvion/D	po:noun
 denar/T	po:noun
 denonca/D	po:noun
 denonŧa/Dt	po:noun
@@ -28697,7 +28672,6 @@ desperdadura/DY	po:noun
 despetoxa/D&	po:adjective
 despetoxo/TWIḿ&	po:adjective po:noun
 desposente/TI	po:adjective
-destiƚasion/D	po:noun
 deŧipon/CU	po:noun
 devosioneta/D	po:noun
 devoŧion/DtU	po:noun
@@ -28781,7 +28755,7 @@ dragante/TI	po:noun
 dragoman/CU	po:noun
 drago/T)	po:adjective po:noun
 dresaño/B	po:noun
-dreton/CU	po:noun
+dreton/CU	po:adjective po:noun
 dretura/D-	po:noun
 dreŧaño/B	po:noun
 drogeto/TI	po:noun
@@ -31021,7 +30995,7 @@ piaja/Dt	po:adjective
 piajo/Tt	po:adjective
 piala/Dt	po:noun
 piantàxen/T	po:noun
-piantàxene/T	po:noun
+piantàxene	po:noun
 piantexina/D	po:noun
 pianton/DU*	po:noun
 pianura/D	po:noun
@@ -34608,7 +34582,7 @@ maxo/TI)	po:noun
 màkola/Dt	po:noun
 màkula/Dt	po:noun
 màrmor/T	po:noun
-màrmore/T	po:noun
+màrmore	po:noun
 màrtere/T	po:noun
 màrtore/T	po:noun
 màstexe/T	po:noun
@@ -35064,7 +35038,6 @@ relijoxo/BWIḿ	po:adjective po:noun
 reliɉoxo/BWIḿ	po:adjective po:noun
 relikuia/D	po:noun
 relito/BI	po:adjective po:noun
-reƚevasion/D	po:noun
 reƚijon/D	po:noun
 reƚiɉon/D	po:noun
 reƚikuia/D	po:noun
@@ -40391,7 +40364,7 @@ kuriàtol/Ttu	po:noun
 kurin/C	po:noun
 kurtexin/C	po:adjective
 kutèr/BV	po:noun
-kuxinièr/BV	po:noun
+kuxinièr/B	po:noun
 kúrkuma/D	po:adjective po:noun
 kúrtola/Dt	po:noun
 lanxa/Dŧ	po:noun
@@ -40647,7 +40620,6 @@ dereƚito/T	po:adjective
 rexbogo	po:adverb
 deretan/T	po:noun
 rufe	po:interjection
-rafe	po:interjection
 dexabilié	po:noun
 dexabiƚié	po:noun
 dexbratakàmara/D	po:noun
@@ -40750,13 +40722,30 @@ dopodiman	po:adverb al:dopodoman
 dopodoman	po:adverb st:dopodiman
 doreta/D	po:adjective
 dorlindana/D	po:noun
-doxa/C&	po:noun
+doxa/C	po:noun
 dotaŧa/Dt	po:noun
 dotivo/B	po:adjective
 doxenal/DⱦU	po:adjective
 doxenante/TI	po:noun
 draparol/TUV	po:noun
 draparoƚo/TV	po:noun
+dreŧiòla/D	po:noun
+dresiòla/Dt	po:noun
+driedo	po:adverb sr:drio
+drogièr/BV	po:noun
+dukatèl/TtU	po:noun
+duca/D	po:noun
+duèrno/T	po:noun
+tèrno/T	po:noun
+dugo/T	po:noun
+dulkamalia/Dt	po:noun
+dulkamara/D	po:noun
+violipan/T	po:noun
+vioƚipan/T	po:noun
+dupla/D	po:noun
+duraketo/TI	po:noun
+durlindana/D	po:noun
 
 
-/ 220
+
+/ 222

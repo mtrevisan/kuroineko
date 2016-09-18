@@ -1062,6 +1062,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "dubit",			"in",			1,	1,	"a",	"1887",			"",
 "dul",			"a",			1,	1,	"a",	"1560",			"",
 "dulkor",		"",			1,	1,	"a",	"",				"",
+"duplik",		"",			1,	1,	"a",	"1829",			"",
 "dur",			"",			1,	1,	"a",	"1415",			"",
 "dur",			"kon",		4,	3,	"a",	"1980",			"(bixiak)",
 "dur",			"in",			4,	3,	"a",	"1775",			"",
