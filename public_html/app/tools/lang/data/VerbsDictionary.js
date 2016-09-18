@@ -1386,6 +1386,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ferm",			"deskon",	1,	1,	"a",	"1775",			"",
 "ferment",		"",			1,	4,	"a",	"1867",			"",
 "fervor",		"in",			1,	1,	"g",	"1867",			"",
+"fersor",		"",			1,	4,	"a",	"1829",			"",
 "festeđ",		"",			1,	4,	"a",	"1415",			"",
 "festiđ",		"",			1,	4,	"a",	"1867",			"",
 "feston",		"",			1,	4,	"a",	"",				"",
