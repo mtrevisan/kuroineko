@@ -364,13 +364,13 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/lang/phon
 			/ce([fklƚrst]a|[lƚr]e|ko)/, /cara/,
 			/de([lƚt]a|[kg]ua|[bdsŧ]i|[dlƚ]e|ro|pu)/,
 			/đe([lƚ]a|ne)/,
-			/fe([lƚrst]a|ria|tu)/, /fara/,
+			/fe([lƚst]a|ria|tu)/,
 			/ie[đgtx]a/,
 			/[jɉ]e[lƚ]a/,
 			/ke(ga|[lƚ]e)/,
 			/[lƚ]e([fgtv]a|via|gua|[tx]e|[sŧ]i|fo)/,
 			/me([lƚr]a|[dlƚ]ia|[dr]e|[rlƚ]i)/, /mar[aei]/,
-			/ne([glƚr]a|bia|du|t[ei])/, /nara/,
+			/ne([glƚ]a|bia|du|t[ei])/,
 			/pe([cklƚrt]a|[nt]e|po|[kt]u)/, /para/,
 			/re([dsŧ]i|pli|[lƚ]e|[kp]u|klu)/,
 			/se([dlƚrs]a|dia|re|v?i|[gk]ui|ko|tu)/, /sar[ae]/,
@@ -381,12 +381,12 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/lang/phon
 
 			/[ae]r([nst]a|pe|vi)/,
 			/b[ae]r[gl]a/,
-			/f[ae]rvo/,
+			/f[ae]r(a|vo)/,
 			/[jɉ][ae]rma/,
 			/k[ae]r[msŧ]a/,
 			/[dlƚ][ae]rna/,
 			/m[ae]r([dkl]a|[sŧ]ia)/,
-			/n[ae]r[bv]a/,
+			/n[ae]r[bv]?a/,
 			/p[ae]r(la|[pt]e|mu)/,
 			/s[ae]r([btv]a|vi)/,
 			/t[ae]r([gnsŧ]a|(m|pr)e|mi)/,
@@ -490,7 +490,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/lang/phon
 			/tro([cdđlƚñstŧx]a|[lƚ]e|to)/
 		];
 		//note: only /^(re)?xeta/ is a true positive, so /xeta/ is used in 'infixes' above and /[aun]xeta/ here
-		var falsePositives = [/^(inca|des|[pr]o|sco)?peta/, /[aun]xeta/, /^[pv]e[lƚ]a/, /^(re)?poxa/, /^(in)?bota$/, /(^|des)kosta$/, /([gp]a|[bx]e|[stŧ]o|per|sti)[lƚ]eta$/];
+		var falsePositives = [/^(inca|des|[pr]o|sco)?peta/, /[aun]xeta/, /^[pv]e[lƚ]a/, /^(re)?poxa/, /^(in)?bota$/, /(^|des)kosta$/, /([gp]a|[bx]e|[stŧ]o|per|sti)[lƚ]eta$/, /rsora$/];
 
 		return function(themeT4, syllabationT4, idx){
 			idx = syllabationT4.getSyllabeIndex(idx);
