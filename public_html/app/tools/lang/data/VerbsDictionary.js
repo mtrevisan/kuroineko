@@ -1593,7 +1593,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "forn",			"re",			4,	4,	"a",	"1980",			"",
 "forneg",		"",			1,	1,	"a",	"",				"",
 "fornel",		"",			1,	4,	"g",	"1829",			"",
-"forteđ",		"",			1,	4,	"a",	"1854",			"Interlusar, armar (de i sarti).",
+"forteŧ",		"",			1,	4,	"a",	"1829",			"Interlusar, armar (de i sarti).",
 "fort",			"deskon",	1,	1,	"g",	"1867",			"",
 "fort",			"kon",		1,	1,	"g",	"",				"",
 "fortun",		"",			1,	4,	"a",	"1415",			"",
