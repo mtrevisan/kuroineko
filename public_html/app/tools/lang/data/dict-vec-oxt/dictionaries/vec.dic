@@ -5577,7 +5577,7 @@ infraskonar/aE	po:verb ts:infinitive_simple
 infraskono/aEIJ	po:verb ts:indicative_present st:infraskonar
 infraskónoe/aK	po:verb ts:indicative_present is:interrogative st:infraskonar
 fratar/aE+*	po:verb ts:infinitive_simple
-frato/aEIJ+*	po:verb ts:indicative_present st:fratar
+frato/aEIJ+*)	po:verb ts:indicative_present st:fratar
 fràtoe/aK+*	po:verb ts:indicative_present is:interrogative st:fratar
 fraternidar/aE	po:verb ts:infinitive_simple
 fraternido/aEIJ	po:verb ts:indicative_present st:fraternidar
@@ -5600,6 +5600,15 @@ fratúroe/aK	po:verb ts:indicative_present is:interrogative st:fraturar
 fraudar/aE,	po:verb ts:infinitive_simple
 fràudo/aEIJ,	po:verb ts:indicative_present st:fraudar
 fràudoe/aK,	po:verb ts:indicative_present is:interrogative st:fraudar
+fratidar/aE	po:verb is:infinitive_simple
+fratido/aEIJ	po:verb ts:indicative_present st:fratidar
+fratídoe/aK	po:verb ts:indicative_present is:interrogative st:fratidar
+fratiđar/aE	po:verb is:infinitive_simple
+fratiđo/aEIJ	po:verb ts:indicative_present st:fratiđar
+fratíđoe/aK	po:verb ts:indicative_present is:interrogative st:fratiđar
+fratixar/aE	po:verb is:infinitive_simple
+fratixo/aEIJ	po:verb ts:indicative_present st:fratixar
+fratíxoe/aK	po:verb ts:indicative_present is:interrogative st:fratixar
 fraŧar/aE*	po:verb ts:infinitive_simple
 fraŧo/aEIJ*	po:verb ts:indicative_present st:fraŧar
 fràŧoe/aK*	po:verb ts:indicative_present is:interrogative st:fraŧar
@@ -5647,7 +5656,7 @@ frédoƚoe/aK	po:verb ts:indicative_present is:interrogative st:fredoƚar
 frekuentar/aE	po:verb ts:infinitive_simple
 frekuento/aEIJ	po:verb ts:indicative_present st:frekuentar
 frekuéntoe/aK	po:verb ts:indicative_present is:interrogative st:frekuentar
-fregar/aE*	po:verb ts:infinitive_simple
+fregar/aErsś*	po:verb ts:infinitive_simple
 frego/aEIJ*	po:verb ts:indicative_present st:fregar
 frégoe/aK*	po:verb ts:indicative_present is:interrogative st:fregar
 fregolar/aE+*	po:verb ts:infinitive_simple
@@ -5685,10 +5694,10 @@ fríđer/bE+*.	po:verb ts:infinitive_simple
 friđerò/bJ+*.	po:verb ts:indicative_future st:fríđer
 friđo/aEIJ+*.	po:verb ts:indicative_present st:fríđer
 fríđoe/aK+*.	po:verb ts:indicative_present is:interrogative st:fríđer
-frito/BI+*.	po:verb ts:participle_perfect_strong st:fríđer st:fríder st:fríxer
+frito/BI+*.	po:verb ts:participle_perfect_strong st:fríđer st:fríder st:fríxer po:adjective po:noun
 fríxer/bE+*.	po:verb ts:infinitive_simple
 frixerò/bJ+*.	po:verb ts:indicative_future st:fríxer
-frixo/aEIJ+-*.&	po:verb ts:indicative_present st:fríxer st:fríxar st:frixar po:noun
+frixo/aEIJ+-*.&)	po:verb ts:indicative_present st:fríxer st:fríxar st:frixar po:noun
 fríxoe/aK+-*.	po:verb ts:indicative_present is:interrogative st:fríxer st:fríxar st:frixar
 fríxar/bE+*.	po:verb ts:infinitive_simple
 frixarò/bJ+*.	po:verb ts:indicative_future st:fríxar
@@ -5750,17 +5759,17 @@ sfrónxoe/aK	po:verb ts:indicative_present is:interrogative st:sfronxar
 sfroxar/aE	po:verb ts:infinitive_simple
 sfròxo/aEIJ	po:verb ts:indicative_present st:sfroxar po:adjective
 sfròxoe/aK	po:verb ts:indicative_present is:interrogative st:sfroxar
-fruar/aE	po:verb ts:infinitive_simple
+fruar/aEr	po:verb ts:infinitive_simple
 fruo/aEIJ	po:verb ts:indicative_present st:fruar
 frúoe/aK	po:verb ts:indicative_present is:interrogative st:fruar
 frular/aE	po:verb ts:infinitive_simple
-frulo/aEIJ	po:verb ts:indicative_present st:frular
+frulo/aEIJ	po:verb ts:indicative_present st:frular po:noun
 frúloe/aK	po:verb ts:indicative_present is:interrogative st:frular
 fruƚar/aE	po:verb ts:infinitive_simple
-fruƚo/aEJ	po:verb ts:indicative_present st:fruƚar
+fruƚo/aEJ	po:verb ts:indicative_present st:fruƚar po:noun
 frúƚoe/aK	po:verb ts:indicative_present is:interrogative st:fruƚar
 fruñar/aE*	po:verb ts:infinitive_simple
-fruño/aEIJ*	po:verb ts:indicative_present st:fruñar
+fruño/aEIJ*)	po:verb ts:indicative_present st:fruñar
 frúñoe/aK*	po:verb ts:indicative_present is:interrogative st:fruñar
 fruñolar/aE	po:verb ts:infinitive_simple
 frúñolo/aEIJ	po:verb ts:indicative_present st:fruñolar
@@ -5774,6 +5783,9 @@ frúskoe/aK	po:verb ts:indicative_present is:interrogative st:fruskar
 frustar/aE	po:verb ts:infinitive_simple
 frusto/aEIJ	po:verb ts:indicative_present st:frustar
 frústoe/aK	po:verb ts:indicative_present is:interrogative st:frustar
+frutar/aE*	po:verb ts:infinitive_simple
+fruto/aEIJ*	po:verb ts:indicative_present st:frutar
+frútoe/aK*	po:verb ts:indicative_present is:interrogative st:frutar
 frutuar/aE	po:verb ts:infinitive_simple
 frutuo/aEIJ	po:verb ts:indicative_present st:frutuar
 frútuoe/aK	po:verb ts:indicative_present is:interrogative st:frutuar
@@ -5781,7 +5793,7 @@ refuar/aE	po:verb ts:infinitive_simple
 refúo/aEIJ	po:verb ts:indicative_present st:refuar
 refúoe/aK	po:verb ts:indicative_present is:interrogative st:refuar
 fufiñar/aE	po:verb ts:infinitive_simple
-fufiño/aEIJ(	po:verb ts:indicative_present st:fufiñar
+fufiño/aEIJ()	po:verb ts:indicative_present st:fufiñar
 fufíñoe/aK	po:verb ts:indicative_present is:interrogative st:fufiñar
 refudar/aE	po:verb ts:infinitive_simple
 refudo/aEIJ	po:verb ts:indicative_present st:refudar po:noun
@@ -16861,9 +16873,6 @@ sfríđegoe/aK	po:verb ts:indicative_present is:interrogative st:sfriđegar
 sfrixegar/aE	po:verb ts:infinitive_simple
 sfríxego/aEIJ	po:verb ts:indicative_present st:sfrixegar
 sfríxegoe/aK	po:verb ts:indicative_present is:interrogative st:sfrixegar
-sfrutar/aE	po:verb ts:infinitive_simple
-sfruto/aEIJ	po:verb ts:indicative_present st:sfrutar
-sfrútoe/aK	po:verb ts:indicative_present is:interrogative st:sfrutar
 siar/aE	po:verb ts:infinitive_simple
 sio/aEIJ	po:verb ts:indicative_present st:siar
 síoe/aK	po:verb ts:indicative_present is:interrogative st:siar
@@ -23610,8 +23619,9 @@ Autòn/TZ	po:noun
 Autun/TZ	po:noun
 Otun/TZ	po:noun
 Fardima/DZ	po:noun
-Fraima/DZ	po:noun
 Farnima/DZ	po:noun
+Fraima/DZ	po:noun
+Frima/DZ	po:noun
 Invèrno/TZ	po:noun
 Ibèrno/TZ	po:noun
 primaveril/Dⱦ	po:adjective
@@ -23624,8 +23634,9 @@ autunal/DⱦU	po:adjective
 autonal/DⱦU	po:adjective
 otunal/DⱦU	po:adjective
 fardimal/DⱦU	po:adjective
-fraimal/DⱦU	po:adjective
 farnimal/DⱦU	po:adjective
+fraimal/DⱦU	po:adjective
+frimal/DⱦU	po:adjective
 invernal/DⱦU	po:adjective
 ibernal/DⱦU	po:adjective
 / đonture koordenanti
@@ -24266,6 +24277,8 @@ fiorentin/C	po:adjective
 fosaltin/C	po:adjective
 fransexa/CS	po:adjective
 franŧexa/CS	po:adjective
+friular/CU	po:adjective
+friuƚar/C	po:adjective
 furlan/CU	po:adjective
 gàlego/B	po:adjective
 gàƚego/B	po:adjective
@@ -25263,19 +25276,21 @@ frekuentativo/BWI	po:adjective
 frekuente/TI	po:adjective
 frekuenŧa/Dt	po:noun
 fresa/Dv	po:noun
-freska/D&	po:adjective po:noun
-freskin/T	po:adjective po:noun
-fresko/TI&	po:adjective po:noun
+freska/D&(	po:adjective po:noun
+freskin/C	po:adjective po:noun
+fresko/TI&(	po:adjective po:noun
 freŧa/Dv	po:noun
 freve/D)	po:noun
-frégola/Dt	po:noun
+frégola/D&	po:noun
+frégoƚa/D&	po:noun
 frèl/TtU	po:noun
 frève/D&	po:noun
 frikativo/BWI	po:adjective
 friŧion/DtU	po:noun
 frítola/Dt	po:noun
-frontal/DⱦU	po:adjective po:noun
-fronte/D	po:noun
+frontal/DⱦU&	po:adjective po:noun
+frontaƚeto/TI	po:adjective po:noun
+fronte/D)	po:noun
 fròsena/D	po:noun
 fruta/D&	po:noun
 frutarol/TUV	po:noun
@@ -25472,7 +25487,7 @@ intramèđo/Tt	po:adjective
 intramuskolar/D	po:adjective
 intramuskoƚar/D	po:adjective
 intranxitivo/BWI	po:adjective po:noun
-intrigon/CU	po:noun
+intrigona/D	po:noun
 introdutor/D	po:noun
 inŧèrto/BI	po:adjective po:noun
 inŧial/DU	po:adjective po:noun
@@ -29004,7 +29019,7 @@ fitual/DⱦU	po:noun
 fiuba/D&	po:noun
 flèma/D	po:noun
 fluso/T-	po:noun
-fodra/D&	po:noun
+fodra/D&	po:noun al:froda
 fodrin/T	po:noun
 fogareta/D	po:noun
 fogaron/DU	po:noun
@@ -29064,11 +29079,10 @@ frandígol/Ttu	po:noun
 frañòkola/Dt	po:noun
 frapa/D&	po:noun
 frasenèr/BV	po:noun
-fraska/D&	po:noun
-fraskon/CU	po:noun
+fraska/D&)	po:noun
+fraskon/CU<	po:noun
 frate/T’<	po:noun al:frar
 fratin/T	po:noun
-fraton/DU	po:noun
 fràbika/D	po:noun
 fràgola/Dt	po:noun
 fràsen/Du	po:noun
@@ -29088,18 +29102,19 @@ fritoƚèr/BV	po:noun
 friŧo/TtI	po:noun
 frixa/D&	po:noun
 frixadura/DY	po:noun
+fridarin/T	po:noun
+friđarin/T	po:noun
 frixarin/T	po:noun
 frixon/CU	po:noun
 frixòpo/T	po:noun
 frola/Dt	po:adjective
 fronda/D	po:noun
 frondígol/Ttu	po:noun
-frontin/T	po:noun
+frontin/C	po:noun
 frontiŧo/TtI	po:noun
 fròla/Dt	po:adjective
 fròtola/Dt	po:noun
 frul/Ttu	po:noun
-frusta/D	po:interjection po:noun
 fruston/CU	po:adverb po:noun
 frutaresa/D	po:adjective
 frutèr/BV	po:noun
@@ -29408,7 +29423,7 @@ interèse/T	po:noun
 intermèđo/Tt	po:noun
 interveniente/TI	po:noun
 intrigamestièr/B	po:noun
-intrigo/Tŕ	po:noun
+intrigo/Tŕ)	po:noun
 inveriadura/DY	po:noun
 inverisimil/Dⱦ	po:adjective
 invernesa/D	po:noun
@@ -33286,7 +33301,6 @@ frasièla/Dt	po:noun
 fraúskola/Dt	po:noun
 fraxa/C	po:noun
 fràskola/Dt	po:noun
-fufiña/D	po:noun
 fureto/TI	po:noun
 fusténgol/TtU	po:noun
 fuxilièr/BV	po:noun
@@ -34209,7 +34223,7 @@ fromaja/Dt	po:noun
 fromajo/Tt	po:noun
 fromento/TI	po:noun
 fromiga/D&	po:noun
-frontespisio/T	po:noun
+frontespiŧio/Tt	po:noun
 frutífer/B	po:adjective
 furto/BI	po:noun
 gajardeŧa/Dt	po:noun
@@ -37533,7 +37547,7 @@ fravo/Bv	po:noun
 frikandò	po:noun
 fritolin/Tt	po:noun
 fufiñeŧo/TtI	po:noun
-fufiñon/CU	po:noun
+fufiñona/D	po:noun
 fufú	po:interjection
 furàtola/Dt	po:noun
 furbità	po:noun
@@ -40942,7 +40956,31 @@ frankolin/Tt	po:noun
 frapador/CV	po:noun
 frar/D	po:noun
 frasketin/B	po:adjective
+fratòco/TI	po:noun
+fregadona/D	po:adjective
+fregador/CV	po:noun
+fregoloxo/BWIḿ	po:adjective po:noun
+fregoƚoxo/BWḿ	po:adjective po:noun
+fregolòto/TI	po:noun
+fregoƚòto/T	po:noun
+fregona/D	po:noun
+frèxo/T	po:noun
+frevaŧa/Dt	po:noun
+frevenŧa/Dt	po:noun
+fritoleta/Dt	po:noun
+fríŧega/D	po:noun
+frísega/D	po:noun
+froda/D	po:noun st:fodra
+frónbola/Dt	po:noun
+frotador/CV	po:noun
+frusion/DU	po:noun
+flusion/DU	po:noun
+fruso/T-	po:noun
+frustabanko/T	po:noun
+frustadon/CU	po:adjective
+frustegon/CU	po:adjective
+fumador/CV	po:noun
 
 
 
-/ 255
+/ 259
