@@ -1,4 +1,4 @@
-40823
+40993
 / létare
 à	po:noun
 b	po:noun
@@ -3861,7 +3861,7 @@ xugoƚar/aE	po:verb ts:infinitive_simple
 xúgoƚo/aEJ	po:verb ts:indicative_present st:xugoƚar
 xúgoƚoe/aK	po:verb ts:indicative_present is:interrogative st:xugoƚar
 đugatolar/aEŧ	po:verb ts:infinitive_simple
-đugàtolo/aEIJŧ	po:verb ts:indicative_present st:đugatolar
+đugàtolo/aEIJŧ	po:verb ts:indicative_present st:đugatolar po:noun
 đugàtoloe/aKŧ	po:verb ts:indicative_present is:interrogative st:đugatolar
 xugatoƚar/aE	po:verb ts:infinitive_simple
 xugàtoƚo/aEJ	po:verb ts:indicative_present st:xugatoƚar
@@ -3873,10 +3873,10 @@ dúloe/aK,	po:verb ts:indicative_present is:interrogative st:đular
 đulo/aEIJ,	po:verb ts:indicative_present st:đular
 đúloe/aK,	po:verb ts:indicative_present is:interrogative st:đular
 xular/aE,	po:verb ts:infinitive_simple
-xulo/aEIJ,	po:verb ts:indicative_present st:đular
+xulo/aEIJ,	po:verb ts:indicative_present st:đular po:noun
 xúloe/aK,	po:verb ts:indicative_present is:interrogative st:đular
 xuƚar/aE,	po:verb ts:infinitive_simple
-xuƚo/aEJ,	po:verb ts:indicative_present st:xuƚar
+xuƚo/aEJ,	po:verb ts:indicative_present st:xuƚar po:noun
 xúƚoe/aK,	po:verb ts:indicative_present is:interrogative st:xuƚar
 đurar/aErŧ	po:verb ts:infinitive_simple
 đuro/aEIJŧ	po:verb ts:indicative_present st:đurar
@@ -5225,6 +5225,9 @@ fódaroe/aK*	po:verb ts:indicative_present is:interrogative st:fodarar
 fodrar/aE+*	po:verb ts:infinitive_simple
 fodro/aEIJ+*&	po:verb ts:indicative_present st:fodrar po:noun
 fódroe/aK+*	po:verb ts:indicative_present is:interrogative st:fodrar
+fodir/acE.	po:verb ts:infinitive_simple
+fođir/acE.	po:verb ts:infinitive_simple
+foxir/acE.	po:verb ts:infinitive_simple
 fofar/aE	po:verb ts:infinitive_simple
 fòfo/aEIJ	po:verb ts:indicative_present st:fofar
 fòfoe/aK	po:verb ts:indicative_present is:interrogative st:fofar
@@ -5464,7 +5467,6 @@ foto/aEIJ-	po:verb ts:indicative_present st:fóter
 fótoe/aK-	po:verb ts:indicative_present is:interrogative st:fóter
 fótar/bE-	po:verb ts:infinitive_simple
 fotarò/bJ-	po:verb ts:indicative_future st:fótar
-foxir/acE.	po:verb ts:infinitive_simple
 frabikar/aE+	po:verb ts:infinitive_simple
 fràbiko/aEIJ+	po:verb ts:indicative_present st:frabikar
 fràbikoe/aK+	po:verb ts:indicative_present is:interrogative st:frabikar
@@ -5798,6 +5800,9 @@ fufíñoe/aK	po:verb ts:indicative_present is:interrogative st:fufiñar
 refudar/aE	po:verb ts:infinitive_simple
 refudo/aEIJ	po:verb ts:indicative_present st:refudar po:noun
 refúdoe/aK	po:verb ts:indicative_present is:interrogative st:refudar
+fudir/acE.	po:verb is:infinitive_simple
+fuđir/acE.	po:verb is:infinitive_simple
+fuxir/acE.	po:verb is:infinitive_simple
 fugar/aE-	po:verb ts:infinitive_simple
 fugo/aEIJ-	po:verb ts:indicative_present st:fugar
 fúgoe/aK-	po:verb ts:indicative_present is:interrogative st:fugar
@@ -5859,7 +5864,7 @@ funŧionar/aE	po:verb ts:infinitive_simple
 funŧiono/aEIJ	po:verb ts:indicative_present st:funŧionar
 funŧiónoe/aK	po:verb ts:indicative_present is:interrogative st:funŧionar
 furbir/acE	po:verb ts:infinitive_simple
-furegar/aE*	po:verb ts:infinitive_simple
+furegar/aEr*	po:verb ts:infinitive_simple
 fúrego/aEIJ*	po:verb ts:indicative_present st:furegar
 fúregoe/aK*	po:verb ts:indicative_present is:interrogative st:furegar
 furfar/aE	po:verb ts:infinitive_simple
@@ -5875,7 +5880,7 @@ fustegar/aE	po:verb ts:infinitive_simple
 fústego/aEIJ	po:verb ts:indicative_present st:fustegar
 fústegoe/aK	po:verb ts:indicative_present is:interrogative st:fustegar
 futiñar/aEr	po:verb ts:infinitive_simple
-futiño/aEIJ	po:verb ts:indicative_present st:futiñar
+futiño/aEIJ)	po:verb ts:indicative_present st:futiñar
 futíñoe/aK	po:verb ts:indicative_present is:interrogative st:futiñar
 futuridar/aE	po:verb ts:infinitive_simple
 futurido/aEIJ	po:verb ts:indicative_present st:futuridar
@@ -5895,13 +5900,17 @@ fuŧíloe/aK	po:verb ts:indicative_present is:interrogative st:fuŧilar
 fusiƚar/aE	po:verb ts:infinitive_simple
 fusiƚo/aEJ	po:verb ts:indicative_present st:fusiƚar
 fusíƚoe/aK	po:verb ts:indicative_present is:interrogative st:fusiƚar
+fúder/bE.	po:verb ts:infinitive_simple
+fuderò/bJ.	po:verb ts:indicative_future st:fúder
+fúdoe/aK.	po:verb ts:indicative_present is:interrogative st:fúder
+fúđer/bE.	po:verb ts:infinitive_simple
+fuđerò/bJ.	po:verb ts:indicative_future st:fúđer
+fúđoe/aK.	po:verb ts:indicative_present is:interrogative st:fúđer
 fúxer/bE.	po:verb ts:infinitive_simple
 fuxerò/bJ.	po:verb ts:indicative_future st:fúxer
 fúxoe/aK.	po:verb ts:indicative_present is:interrogative st:fúxer
-futo/BI.	po:verb ts:participle_perfect_strong st:fúxer
 fúxar/bE.	po:verb ts:infinitive_simple
 fuxarò/bJ.	po:verb ts:indicative_future st:fúxar
-fuxir/acE.	po:verb ts:infinitive_simple
 fuxelar/aE	po:verb ts:infinitive_simple
 fuxèlo/aEIJ	po:verb ts:indicative_present st:fuxelar
 fuxèloe/aK	po:verb ts:indicative_present is:interrogative st:fuxelar
@@ -5915,10 +5924,10 @@ fuxiƚar/aE	po:verb ts:infinitive_simple
 fuxiƚo/aEJ	po:verb ts:indicative_present st:fuxiƚar
 fuxíƚoe/aK	po:verb ts:indicative_present is:interrogative st:fuxiƚar
 fuxolar/aE-	po:verb ts:infinitive_simple
-fúxolo/aEIJ-	po:verb ts:indicative_present st:fuxolar
+fúxolo/aEIJ-	po:verb ts:indicative_present st:fuxolar po:noun
 fúxoloe/aK-	po:verb ts:indicative_present is:interrogative st:fuxolar
 fuxoƚar/aE-	po:verb ts:infinitive_simple
-fúxoƚo/aEJ-	po:verb ts:indicative_present st:fuxoƚar
+fúxoƚo/aEJ-	po:verb ts:indicative_present st:fuxoƚar po:noun
 fúxoƚoe/aK-	po:verb ts:indicative_present is:interrogative st:fuxoƚar
 gabar/aE	po:verb ts:infinitive_simple
 gabo/aEIJ	po:verb ts:indicative_present st:gabar
@@ -11541,7 +11550,7 @@ xminuŧar/aE	po:verb ts:infinitive_simple
 xminuŧo/aEIJ	po:verb ts:indicative_present st:xminuŧar
 xminúŧoe/aK	po:verb ts:indicative_present is:interrogative st:xminuŧar
 mirar/aEsś*.@	po:verb ts:infinitive_simple
-miro/aEIJ*.@	po:verb ts:indicative_present st:mirar
+miro/aEIJ*.@	po:verb ts:indicative_present st:mirar po:noun
 míroe/aK*.@	po:verb ts:indicative_present is:interrogative st:mirar
 misiar/aEr+*	po:verb ts:infinitive_simple
 misio/aEIJ+*	po:verb ts:indicative_present st:misiar
@@ -11803,12 +11812,6 @@ inmortàloe/aK	po:verb ts:indicative_present is:interrogative st:inmortalar
 inmortaƚar/aE	po:verb ts:infinitive_simple
 inmortaƚo/aEJ	po:verb ts:indicative_present st:inmortaƚar
 inmortàƚoe/aK	po:verb ts:indicative_present is:interrogative st:inmortaƚar
-dexmorŧar/aE	po:verb ts:infinitive_simple
-dexmòrŧo/aEIJ	po:verb ts:indicative_present st:dexmorŧar
-dexmòrŧoe/aK	po:verb ts:indicative_present is:interrogative st:dexmorŧar
-xmorŧar/aE	po:verb ts:infinitive_simple
-xmòrŧo/aEIJ	po:verb ts:indicative_present st:xmorŧar
-xmòrŧoe/aK	po:verb ts:indicative_present is:interrogative st:xmorŧar
 moskar/aE	po:verb ts:infinitive_simple
 mosko/aEIJ	po:verb ts:indicative_present st:moskar
 móskoe/aK	po:verb ts:indicative_present is:interrogative st:moskar
@@ -22510,16 +22513,16 @@ xoetar/aE	po:verb ts:infinitive_simple
 xoeto/aEIJ	po:verb ts:indicative_present st:xoetar
 xoétoe/aK	po:verb ts:indicative_present is:interrogative st:xoetar
 xojelar/aE-	po:verb ts:infinitive_simple
-xojèlo/aEIJ-	po:verb ts:indicative_present st:xojelar
+xojèlo/aEIJ-	po:verb ts:indicative_present st:xojelar po:noun
 xojèloe/aK-	po:verb ts:indicative_present is:interrogative st:xojelar
 xoɉelar/aE-	po:verb ts:infinitive_simple
-xoɉèlo/aEIJ-	po:verb ts:indicative_present st:xoɉelar
+xoɉèlo/aEIJ-	po:verb ts:indicative_present st:xoɉelar po:noun
 xoɉèloe/aK-	po:verb ts:indicative_present is:interrogative st:xoɉelar
 xojeƚar/aE-	po:verb ts:infinitive_simple
-xojèƚo/aEJ-	po:verb ts:indicative_present st:xojeƚar
+xojèƚo/aEJ-	po:verb ts:indicative_present st:xojeƚar po:noun
 xojèƚoe/aK-	po:verb ts:indicative_present is:interrogative st:xojeƚar
 xoɉeƚar/aE-	po:verb ts:infinitive_simple
-xoɉèƚo/aEJ-	po:verb ts:indicative_present st:xoɉeƚar
+xoɉèƚo/aEJ-	po:verb ts:indicative_present st:xoɉeƚar po:noun
 xoɉèƚoe/aK-	po:verb ts:indicative_present is:interrogative st:xoɉeƚar
 xolar/aE	po:verb ts:infinitive_simple
 xòlo/aEIJ	po:verb ts:indicative_present st:xolar
@@ -22734,6 +22737,8 @@ Franko/Z	po:proper_noun
 Franseskina/IZ	po:noun
 Franŧeskina/IZ	po:noun
 Freo/Z	po:proper_noun
+Fumía/Z	po:proper_noun
+Fumío/Z	po:proper_noun
 Galiaso/Z	po:proper_noun
 Galiaŧo/IZ	po:proper_noun
 Gaƚiaso/Z	po:proper_noun
@@ -25235,7 +25240,6 @@ fornèr/BV	po:noun
 fornidor/CV	po:noun
 forsadura/DY	po:noun
 forse/Tḿ[]	po:adverb
-forsèl/TtU	po:noun
 forsèla/Dt	po:noun
 fortaja/D)	po:noun
 fortaɉa/D)	po:noun
@@ -26329,7 +26333,6 @@ miga	po:adverb po:noun
 minal/DⱦU	po:noun
 minimal/DⱦU	po:adjective po:noun
 miodí	po:noun
-mir/T*	po:noun
 miser/D	po:noun
 miserion/CU	po:adjective
 misiòto/TI*	po:noun
@@ -28859,7 +28862,6 @@ dura/D&	po:adjective
 đoventude/TŧY	po:noun
 đògol/Tŧu	po:noun
 đugaŧo/TI	po:noun
-đugàtol/Tŧu	po:noun
 elefante/D	po:noun
 eƚefante/D	po:noun
 enfiaxion/DU	po:noun
@@ -29129,18 +29131,19 @@ fumaria/D	po:noun
 fumarol/TUV	po:noun
 fumaroƚo/TV	po:noun
 fumegara/D	po:noun
-fur/B	po:adjective
+fur/T&)	po:adjective
+fura/D&	po:adjective
 furba/D&<	po:adjective po:noun
-furbo/T&<	po:adjective po:noun
+furbo/Tv&<	po:adjective po:noun
 furegata/D	po:noun
 furegin/C	po:adjective po:noun
 furegon/DU	po:noun
 furegòto/TI	po:noun
 fureŧo/TtI	po:noun
 furia/D	po:noun
-furlon/DU	po:noun
+furlo/T)	po:noun
 fustegon/DU	po:noun
-fusto/TI	po:noun
+fusto/TI&	po:noun
 fuxarola/Dt	po:noun
 fuxaròla/Dt	po:noun
 fuxèr/BV	po:noun
@@ -33047,10 +33050,8 @@ xogaso/TI	po:noun
 xogàtoƚo/T	po:noun
 xojelièr/BV	po:noun
 xojeƚièr/BV	po:noun
-xojèl/TtU	po:noun
 xoɉelièr/BV	po:noun
 xoɉeƚièr/BV	po:noun
-xoɉèl/TtU	po:noun
 xoncada/DY	po:noun
 xornaƚièr/B	po:adjective po:noun
 xògoƚo/T	po:noun
@@ -33061,7 +33062,6 @@ xufoƚòto/T	po:noun
 xugaso/TI	po:noun
 xugàtoƚo/T	po:noun
 xugèl/TtU	po:noun
-xul/Ttu	po:noun
 xulaja/Dt	po:noun
 xuƚaja/Dt	po:noun
 xvario/T	po:noun
@@ -37531,7 +37531,7 @@ foràjine/T	po:noun
 foràɉine/T	po:noun
 forbikul/TtU	po:noun
 formígola/Dt	po:noun
-fota/D)	po:noun
+fota/D	po:noun
 fotica/D	po:noun
 fòfan/Bu	po:adjective po:noun
 fòsfor/T	po:noun
@@ -40925,15 +40925,13 @@ forkamèl/TtU	po:noun
 forkolin/Tt	po:adjective
 forkolina/Dt	po:adjective
 fordemexura	po:adverb
-forean/T	po:adjective
+forean/T	po:adjective po:noun
 foresito/BI	po:adjective po:noun
-intimèla/Dt	po:noun
 forfeta/D	po:noun
 formaxo/T	po:noun
 formigoleta/Dt	po:noun
 fornereto/TI	po:noun
 fornereta/D	po:noun
-fursi/Tḿ[]	po:adverb
 fortexin/C	po:adjective
 forteto/BI	po:adjective
 fortiño/B	po:adjective
@@ -40949,7 +40947,6 @@ fosoleta/Dt	po:noun
 fotaco/B	po:adjective
 fotiaria/D	po:adjective
 frakarola/DV	po:noun
-frakasè	po:noun
 fraldo/T	po:noun
 franklin/T	po:noun
 frankolin/Tt	po:noun
@@ -40980,7 +40977,21 @@ frustabanko/T	po:noun
 frustadon/CU	po:adjective
 frustegon/CU	po:adjective
 fumador/CV	po:noun
+funto/TI	po:noun
+foxa/D	po:noun
+furatolièr/BV	po:noun
+furatoƚièr/BV	po:noun
+furbarieta/D	po:noun
+furbesko/BW	po:adjective
+furegàtol/Ttu	po:noun
+furian/T	po:adjective po:noun
+furità	po:noun
+furónkol/Ttu	po:noun
+furtarèl/TtU	po:noun
+latronŧinio/T	po:noun
+latronsinio/Tŧ	po:noun
+fustañin/C	po:noun
 
 
 
-/ 259
+/ 261
