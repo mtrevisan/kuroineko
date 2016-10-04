@@ -2184,9 +2184,11 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "íɉ",				"ex",			3,	0,	"a",	"1867",			"",
 "íɉ",				"tranx",		3,	0,	"a",	"1867",			"",
 
+"jad",			"",			1,	1,	"g",	"1829",			"",
 "jaŧ",			"",			1,	1,	"g",	"",				"",
 "jetur",			"kon",		1,	3,	"a",	"1829",			"",
 "jistr",			"re",			1,	1,	"a",	"1433",			"",
+"jond",			"",			1,	1,	"a",	"1829",			"",
 "joŧ",			"",			1,	1,	"a",	"",				"",
 "joŧol",			"",			1,	1,	"a",	"",				"Piovixenar.",
 "joŧiđ",			"x",			1,	3,	"a",	"1852",			"Xjoŧar.",
