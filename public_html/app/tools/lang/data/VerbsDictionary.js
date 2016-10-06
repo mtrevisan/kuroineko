@@ -2199,6 +2199,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "jur",			"",			1,	1,	"a",	"1509",			"",
 "judeg",			"",			1,	1,	"a",	"1415",			"",
 "just",			"",			1,	1,	"a",	"1363",			"",
+"just",			"dex",		1,	1,	"a",	"",				"",
 "justiŧi",		"",			1,	4,	"a",	"1509",			"",
 "jut",			"",			1,	1,	"a",	"1292",			"",
 
@@ -2236,7 +2237,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ɉoŧol",			"",			1,	1,	"a",	"1350",			"Piovixenar.",
 "ɉoŧol",			"x",			1,	1,	"a",	"1565",			"Piovixenar.",
 "ɉubil",			"",			1,	1,	"a",	"1775",			"",
-"ɉugul",			"",			1,	1,	"a",	"1867",			"",
+"ɉugul",			"",			1,	1,	"a",	"1829",			"Méter a le strete.",
 "ɉust",			"",			1,	1,	"a",	"1775",			"",
 "ɉust",			"dex",		1,	1,	"a",	"1854",			"Guastar, skonpóner.",
 "ɉut",			"",			1,	1,	"a",	"",				"",
@@ -6745,6 +6746,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "xol",			"",			1,	1,	"g",	"1560",			"Volar.",
 "xòlv",			"re",			3,	1,	"g",	"1980",			"",
 "xov",			"",			1,	1,	"g",	"",				"",
+"xubil",			"",			1,	1,	"a",	"1829",			"",
 "xudeg",			"",			1,	1,	"a",	"",				"",
 "xudeg",			"pre",		1,	1,	"a",	"",				"",
 "xudeg",			"spre",		1,	1,	"a",	"",				"",
@@ -6753,9 +6755,11 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "xudig",			"spre",		1,	1,	"a",	"1775",			"Sprexudegar.",
 "xuf",			"",			1,	1,	"a",	"1854",			"Brinkar.",
 "xufru",			"",			4,	5,	"a",	"1980",			"",
+"xugul",			"",			1,	1,	"a",	"1829",			"Méter a le strete.",
 "xult",			"e",			1,	1,	"a",	"",				"",
 "xult",			"re",			1,	1,	"a",	"1867",			"",
 "xun",			"",			1,	1,	"a",	"",				"Dexunar.",
 "xun",			"de",			1,	1,	"a",	"1447",			"Star senŧa mañar.",
+"xust",			"",			1,	1,	"a",	"1829",			"",
 "xustiŧi",		"",			1,	4,	"a",	"1509",			""
 ]});
