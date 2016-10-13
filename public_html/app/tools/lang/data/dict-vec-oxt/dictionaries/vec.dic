@@ -6408,6 +6408,9 @@ ingolfo/aEIJ	po:verb ts:indicative_present st:ingolfar
 ingólfoe/aK	po:verb ts:indicative_present is:interrogative st:ingolfar
 ingoloxir/acE	po:verb ts:infinitive_simple
 ingoƚoxir/acE	po:verb ts:infinitive_simple
+gomar/aE	po:verb is:infinitive_simple
+gomo/aEIJ	po:verb ts:indicative_present st:gomar
+gómoe/aK	po:verb ts:indicative_present is:interrogative st:gomar
 xgomentar/aE	po:verb ts:infinitive_simple
 xgomento/aEIJ	po:verb ts:indicative_present st:xgomentar
 xgoméntoe/aK	po:verb ts:indicative_present is:interrogative st:xgomentar
@@ -6432,6 +6435,9 @@ góndoloe/aK	po:verb ts:indicative_present is:interrogative st:gondolar
 gondoƚar/aE	po:verb ts:infinitive_simple
 góndoƚo/aEJ	po:verb ts:indicative_present st:gondoƚar
 góndoƚoe/aK	po:verb ts:indicative_present is:interrogative st:gondoƚar
+gonfiar/aE	po:verb is:infinitive_simple
+gonfio/aEIJ	po:verb ts:indicative_present st:gonfiar
+gónfioe/aK	po:verb ts:indicative_present is:interrogative st:gonfiar
 gongolar/aE	po:verb ts:infinitive_simple
 góngolo/aEIJ	po:verb ts:indicative_present st:gongolar
 góngoloe/aK	po:verb ts:indicative_present is:interrogative st:gongolar
@@ -6465,6 +6471,21 @@ gorgéđoe/aK*	po:verb ts:indicative_present is:interrogative st:gorgeđar
 gorgexar/aE*	po:verb ts:infinitive_simple
 gorgexo/aEIJ*	po:verb ts:indicative_present st:gorgexar
 gorgéxoe/aK*	po:verb ts:indicative_present is:interrogative st:gorgexar
+gorgejar/aE	po:verb is:infinitive_simple
+gorgejo/aEIJ	po:verb ts:indicative_present st:gorgejar
+gorgéjoe/aK	po:verb ts:indicative_present is:interrogative st:gorgejar
+gorgeɉar/aE	po:verb is:infinitive_simple
+gorgeɉo/aEIJ	po:verb ts:indicative_present st:gorgeɉar
+gorgéɉoe/aK	po:verb ts:indicative_present is:interrogative st:gorgeɉar
+gorgidar/aE*	po:verb ts:infinitive_simple
+gorgido/aEIJ*	po:verb ts:indicative_present st:gorgidar
+gorgídoe/aK*	po:verb ts:indicative_present is:interrogative st:gorgidar
+gorgiđar/aE*	po:verb ts:infinitive_simple
+gorgiđo/aEIJ*	po:verb ts:indicative_present st:gorgiđar
+gorgíđoe/aK*	po:verb ts:indicative_present is:interrogative st:gorgiđar
+gorgixar/aE*	po:verb ts:infinitive_simple
+gorgixo/aEIJ*	po:verb ts:indicative_present st:gorgixar
+gorgíxoe/aK*	po:verb ts:indicative_present is:interrogative st:gorgixar
 xgorgonar/aE	po:verb ts:infinitive_simple
 xgorgono/aEIJ	po:verb ts:indicative_present st:xgorgonar
 xgorgónoe/aK	po:verb ts:indicative_present is:interrogative st:xgorgonar
@@ -23447,9 +23468,12 @@ koatro	po:numeral_cardenal st:kuatro
 sie	po:numeral_cardenal
 sète/%	po:numeral_cardenal
 òto/%	po:numeral_cardenal
-noe/%	po:numeral_cardenal po:adjective po:noun al:nuve
-nove/%	po:numeral_cardenal po:adjective po:noun al:nuve
-nòve	po:numeral_cardenal po:adjective po:noun
+noe/%	po:numeral_cardenal po:adjective po:noun al:ñove al:nuve st:nove
+nòe	po:numeral_cardenal po:adjective po:noun al:ñòve al:nuve st:nòve
+nove/%	po:numeral_cardenal po:adjective po:noun al:ñove al:nuve al:noe
+ñove/%	po:numeral_cardenal po:adjective po:noun al:nove al:nuve al:noe st:nove
+nòve	po:numeral_cardenal po:adjective po:noun al:ñòve al:nuve al:nòe
+ñòve	po:numeral_cardenal po:adjective po:noun al:nove al:nuve al:noe st:nove
 dièxe/%	po:numeral_cardenal
 diexe	po:numeral_cardenal
 dexe	po:numeral_cardenal
@@ -25440,7 +25464,7 @@ goldon/DU	po:noun
 gonfio/B‘	po:adjective po:noun
 gorila	po:noun
 goriƚa	po:noun
-gorna/D	po:noun
+gorna/D&	po:noun
 góndola/Dt	po:noun
 gò/T	po:noun
 gòja/Dt	po:noun
@@ -29324,7 +29348,8 @@ gomio/T&	po:noun
 gomitadura/DY	po:noun
 gomitòrio/B	po:noun
 gonbina/D	po:noun
-gonxo/B	po:adjective po:noun
+gonđo/Tt	po:adjective po:noun
+gonđa/Dt	po:adjective po:noun
 gorga/D	po:noun
 gosa/D&	po:noun
 gostaròl/TtU	po:adjective
@@ -35768,10 +35793,10 @@ gatarol/TUV	po:noun
 gatarola/DV	po:noun
 gataroƚa/DV	po:noun
 gataroƚo/TV	po:noun
-goloxeŧa/Dt	po:noun
-goloxeŧo/TtI	po:noun
-goƚoxesa/D	po:noun
-goƚoxeso/T	po:noun
+goloxeŧa/Dt	po:noun al:goleŧa
+goloxeŧo/TtI	po:noun al:goleŧo
+goƚoxesa/D	po:noun al:golesa
+goƚoxeso/T	po:noun al:goleso
 gomisièl/TtU	po:noun
 gonbio/T&	po:noun
 grijo/Tt	po:noun
@@ -36101,6 +36126,7 @@ goƚoxon/C	po:adjective
 gondolièr/BV	po:noun
 gondoƚièr/BV	po:noun
 goŧon/DtU	po:noun
+gòña/D*	po:noun
 gramaño/TI	po:noun
 graniòla/Dt	po:noun
 granita/D	po:noun
@@ -36637,7 +36663,6 @@ xbuxaŧièxa/D	po:noun
 xdòrmia/D	po:noun
 xgerlon/CU	po:noun
 xgèrla/D	po:noun
-xgòña/D	po:noun
 xgrendenon/CU	po:adjective po:noun
 xguiŧo/TtI	po:noun
 xgurbia/D	po:noun
@@ -41256,7 +41281,43 @@ glòxa/D	po:noun
 ñoñoleta/Dt	po:adjective
 ñoñolin/Tt	po:adjective
 ñoñolina/Dt	po:adjective
+godíbel/Dⱦ	po:adjective
+godíbil/Dⱦ	po:adjective
+gòfo/B	po:adjective po:noun
+gogò	po:adjective
+golena/D	po:noun
+goƚena/D	po:noun
+goleŧa/Dt	po:noun st:goloxeŧa
+goleŧo/TtI	po:noun st:goloxeŧo
+goƚesa/D	po:noun st:goloxesa
+goƚeso/T	po:noun st:goloxeso
+golié	po:noun
+goƚié	po:noun
+goloxità	po:noun
+goƚoxità	po:noun
+goldarina/D	po:noun
+golđarina/D	po:noun
+golxarina/D	po:noun
+goldièra/D&	po:noun
+golđièra/D&	po:noun
+golxièra/D&	po:noun
+gómena/D	po:noun
+gomeneta/D	po:noun
+gomèra/D	po:noun
+gomara/D	po:noun
+gondoleta/Dt	po:noun
+gonfiadura/DY&	po:noun
+gonfieŧeta/D	po:noun
+gonfieseta/D	po:noun
+gordonièra/D	po:noun
+gorfa/D	po:noun
+gorgejo/Dt	po:noun
+gordon/DU	po:noun
+gorđon/DU	po:noun
+gorxon/DU	po:noun
 
 
 
-/ 275
+
+
+/ 277
