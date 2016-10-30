@@ -18,6 +18,7 @@ define(['tools/data/mining/DecisionTree', 'HTMLHelper', 'tools/ui/Validator', 't
 			attributes.push({name: i18nResources.variant.attributes[i], discrete: true});
 
 		data = [
+//{"timestamp":"2016-10-17T09:21:08.794Z","instance":[1,1,1,0],"questionOrder":[2,1,0,3],"nodeClass":"feltrino-bellunese","newClass":false,"supervisorName":"Emanuele","supervisorAge":"24","supervisorPlace":"possagno","ip":"151.51.143.88","city":"Albignasego","country":"Italy","latitude":45.3471,"longitude":11.8678}
 			[1,1,1,0,1,1,0,1,1, , , , , , , , ,0,0,1,0,0,0,0, , , , ,1,0, ,0, ,1, , ,0,0, i18nResources.variant.liventin],
 			//{"timestamp":"2016-09-08T14:52:26.130Z","instance":[null,null,null,null,null,null,null,null,null,null,null,null,1,1],"questionOrder":[13,12],"nodeClass":"feltrino-bellunese","newClass":false,"supervisorName":"Serena","supervisorAge":"30","supervisorPlace":"Longarone","ip":"85.36.104.70","city":false,"country":"Italy","latitude":43.1479,"longitude":12.1097}
 			[1,1,1,1,1,1,0,1,1,1,1,1, ,1,1,1,1,1,1,0,0,0,0,0, , , , , ,0,0,0, ,1, , ,0,0, i18nResources.variant['feltrin-belumat']],
