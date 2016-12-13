@@ -2259,6 +2259,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 
 "ka",				"",			4,	2,	"a",	"1775",			"(liv., pad.) Kaskar.",
 "ka",				"des",		4,	2,	"a",	"1775",			"",
+"ka",				"in",			4,	2,	"a",	"1829",			"",
 "kabal",			"",			1,	1,	"g",	"1775",			"Inganar.",
 "kabal",			"in",			1,	1,	"g",	"1775",			"Gabar.",
 "kaciđ",			"s",			1,	3,	"a",	"1867",			"Skacir.",
@@ -2314,6 +2315,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kalman",		"s",			1,	1,	"g",	"1560",			"",
 "kalom",			"",			1,	3,	"g",	"1867",			"Kalumar.",
 "kalor",			"in",			4,	5,	"a",	"1854",			"Skaldar, riskaldar.",
+"kalot",			"in",			1,	3,	"g",	"1829",			"Inbaretar.",
 "kalot",			"in",			4,	5,	"a",	"1854",			"Inbaretar.",
 "kalpest",		"",			1,	4,	"a",	"1829",			"",
 "kalpestr",		"",			1,	4,	"a",	"1829",			"Kalpestar.",
