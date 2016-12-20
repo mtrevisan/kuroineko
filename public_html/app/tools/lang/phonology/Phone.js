@@ -257,7 +257,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		//u02C8
 		'ˈ': [{str: 1}, {str: -1}, 'stressed'],
 		//u02D0
-		'ː': [{long: 1}, {long: -1}, 'long'],
+		'ː': [{'long': 1}, {'long': -1}, 'long'],
 		//also known as retroflexed (applied to vowel sounds)
 		//u02DE
 		'˞': [{cor: 1, ant: 1, dst: 1, strid: -1}, {syl: 1, con: -1, son: 1, tap: -1, tri: -1, cor: -1, dor: 1}, 'rhotic'],

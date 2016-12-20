@@ -115,7 +115,7 @@ define(function(){
 			if(attr !== undefined)
 				attributeAndClassValues.push({
 					attribute: attr,
-					class: fnExtractClassValue(instance)
+					'class': fnExtractClassValue(instance)
 				});
 		});
 

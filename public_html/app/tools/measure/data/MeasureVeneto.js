@@ -123,7 +123,7 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 			'Pàdoa':		0.6809806,
 			'Piève de Kador':	0.6954697,
 			'Roigo':		0.6698203,
-			'Trevixo':	0.6761983,
+			'Venèŧia':	0.6761983,
 			//braŧo longo
 			'Verona':	0.6489908,
 			'Viŧenŧa':	0.6903053
@@ -144,10 +144,9 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 	/** @private */
 	var reducePlaceLengthCotton = (function(){
 		var places = {
-			'Trevixo': /^(Àxol|Céneda|Fèltre|Kastelfranko|Konejan|Kuèr|Meduna de Livenŧa|Mòta de Livenŧa|Trè Pòrti|Trevixo \((ŧità|kanpaña)\))$/,
 			'Pàdoa': /^(Basan|Belun|Dòlo|Ŧitadèla)$/,
 			'Piève de Kador': /^(Mèl)$/,
-			'Venèŧia': /^(Còxa)$/
+			'Venèŧia': /^(Còxa|Àxol|Céneda|Fèltre|Kastelfranko|Konejan|Kuèr|Meduna de Livenŧa|Mòta de Livenŧa|Trè Pòrti|Trevixo \((ŧità|kanpaña)\))$/
 		};
 		addCommonPlaceLength(places);
 
@@ -218,10 +217,8 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 	/** @private */
 	var reducePlaceLengthWool = (function(){
 		var places = {
-			'Trevixo': /^(Àxol|Céneda|Fèltre|Kastelfranko|Konejan|Kuèr|Meduna de Livenŧa|Mèl|Mèstre|Mòta de Livenŧa|Trè Pòrti|Trevixo \((ŧità|kanpaña))$/,
 			//'Belun': ?,
-			'Pàdoa': /^(Dòlo|Ŧitadèla)$/,
-			'Venèŧia': /^(Basan|Còxa|Pàdoa|Piève de Kador)$/
+			'Venèŧia': /^(Pàdoa|Basan|Dòlo|Ŧitadèla|Còxa|Piève de Kador|Belun|Àxol|Céneda|Fèltre|Kastelfranko|Konejan|Kuèr|Meduna de Livenŧa|Mèl|Mèstre|Mòta de Livenŧa|Trè Pòrti|Trevixo \((ŧità|kanpaña)\))$/
 		};
 		addCommonPlaceLength(places);
 
@@ -230,7 +227,7 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 
 	var getMeasureLengthLinen = (function(){
 		var conversions = {
-			'Piève de Kador':	0.7653610,
+			'Venèŧia':	0.7653610,
 			//kome el só braŧo da pano
 			'Roigo':		0.6698203,
 			//braŧo longo
@@ -252,9 +249,7 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 	/** @private */
 	var reducePlaceLengthLinen = (function(){
 		var places = {
-			'Trevixo': /^(Àxol|Céneda|Fèltre|Kastelfranko|Konejan|Kuèr|Meduna de Livenŧa|Mèl|Mèstre|Mòta de Livenŧa|Trè Pòrti|Trevixo \((ŧità|kanpaña))$/,
-			'Pàdoa': /^(Basan|Dòlo|Ŧitadèla)$/,
-			'Venèŧia': /^(Còxa)$/
+			'Venèŧia': /^(Còxa|Pàdoa|Basan|Dòlo|Ŧitadèla|Belun|Piève de Kador|Àxol|Céneda|Fèltre|Kastelfranko|Konejan|Kuèr|Meduna de Livenŧa|Mèl|Mèstre|Mòta de Livenŧa|Trè Pòrti|Trevixo \((ŧità|kanpaña)\))$/
 		};
 		addCommonPlaceLength(places);
 
@@ -265,7 +260,7 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 	var getMeasureAreaEarth = function(place){
 		place = reducePlaceAreaEarth(place);
 
-		var a = (place.match(/Belun|Roigo|Verona/)? 'paso': 'pèrtega' + (place.match(/Venèŧia/)? ' (granda)': '')),
+		var a = (place.match(/Belun|Roigo|Verona/)? 'paso': 'pèrtega' + (place.match(/Venèŧia|Piève de Kador/)? ' (granda)': '')),
 			m = new MeasureConverter(['tòla = 1 ' + a + '\u00B2'], 'tòla');
 		getUnitsAreaEarth(place).forEach(function(unit){
 			m.addUnit(unit);
@@ -369,7 +364,7 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 	/** @private */
 	var reducePlaceVolumeDry = (function(){
 		var places = {
-			'Trevixo': /^(Kastelfranko|Kuèr|Meduna de Livenŧa|Mèstre|Trè Pòrti|Trevixo \((ŧità|kanpaña))$/,
+			'Trevixo': /^(Kastelfranko|Kuèr|Meduna de Livenŧa|Mèstre|Trè Pòrti|Trevixo \((ŧità|kanpaña)\))$/,
 			'Venèŧia': /^(Còxa)$/
 		};
 		addCommonPlaceVolume(places);
@@ -503,7 +498,7 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 	/** @private */
 	var reducePlaceVolumeLiquid = (function(){
 		var places = {
-			'Trevixo': /^(Kastelfranko|Kuèr|Meduna de Livenŧa|Trè Pòrti)$/
+			'Trevixo (kanpaña)': /^(Kastelfranko|Kuèr|Meduna de Livenŧa|Trè Pòrti)$/
 		};
 		addCommonPlaceVolume(places);
 
@@ -578,9 +573,8 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 	var reducePlaceWeightLight = (function(){
 		var places = {
 			'Trevixo': /^(Arxiñan|Axiago|Àxol|Fèltre|Kastelfranko|Konejan|Kuèr|Meduna de Livenŧa|Mèl|Mèstre|Mòta de Livenŧa|Pàdoa|Trè Pòrti|Trevixo \((ŧità|kanpaña)\)|Viŧenŧa)$/,
-			'Pàdoa': /^(Basan|Dòlo|Ŧitadèla)$/,
 			'Roigo': /^(Lendinara)$/,
-			'Venèŧia': /^(Belun|Céneda|Còxa|Piève de Kador)$/,
+			'Venèŧia': /^(Belun|Céneda|Còxa|Piève de Kador|Pàdoa|Basan|Dòlo|Ŧitadèla)$/,
 			'Verona': /^(Kaldièro|San Bonifaco|San Martin Bon Albèrgo|Soave)$/,
 			'Viŧenŧa': /^(Kamixan viŧentin|Lonigo|Montebèl|Rekoaro|Skio|Thiène)$/
 		};
