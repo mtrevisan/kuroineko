@@ -3440,10 +3440,10 @@ dòroe/aK+-@	po:verb ts:indicative_present is:interrogative st:dorar
 dormir/adE-	po:verb ts:infinitive_simple
 dòrmo/dEIJ-	po:verb ts:indicative_present st:dormir
 dòrmoe/aK-	po:verb ts:indicative_present is:interrogative st:dormir
-dormensar/aE-	po:verb ts:infinitive_simple
+dormensar/aEr-	po:verb ts:infinitive_simple
 dormenso/aEIJ-	po:verb ts:indicative_present st:dormensar
 dorménsoe/aK-	po:verb ts:indicative_present is:interrogative st:dormensar
-dormenŧar/aE-	po:verb ts:infinitive_simple
+dormenŧar/aEr-	po:verb ts:infinitive_simple
 dormenŧo/aEIJ-	po:verb ts:indicative_present st:dormenŧar
 dorménŧoe/aK-	po:verb ts:indicative_present is:interrogative st:dormenŧar
 dormicar/aE	po:verb ts:infinitive_simple
@@ -3537,7 +3537,7 @@ durar/aEr	po:verb ts:infinitive_simple
 duro/aEIJ&	po:verb ts:indicative_present st:durar
 dúroe/aK	po:verb ts:indicative_present is:interrogative st:durar
 kondurir/acE	po:verb ts:infinitive_simple
-indurir/acE	po:verb ts:infinitive_simple
+indurir/acEr	po:verb ts:infinitive_simple
 dúxer/bE^-.:	po:verb ts:infinitive_simple
 duxerò/bJsś^-.:	po:verb ts:indicative_future st:dúxer
 duxo/aEIJ^-.:	po:verb ts:indicative_present st:dúxer
@@ -4139,6 +4139,7 @@ adéskoe/aK	po:verb ts:indicative_present is:interrogative st:adeskar
 ineskar/aE	po:verb ts:infinitive_simple
 inesko/aEIJ	po:verb ts:indicative_present st:ineskar
 inéskoe/aK	po:verb ts:indicative_present is:interrogative st:ineskar
+inespedir/acE	po:verb is:infinitive_simple
 espèler/bE	po:verb ts:infinitive_simple
 espelerò/bJ	po:verb ts:indicative_future st:espèler
 espèlo/aEIJ	po:verb ts:indicative_present st:espèler
@@ -7146,7 +7147,7 @@ indavalkar/aE	po:verb ts:infinitive_simple
 indavalko/aEIJ	po:verb ts:indicative_present st:indavalkar
 indavàlkoe/aK	po:verb ts:indicative_present is:interrogative st:indavalkar
 indovinar/aE	po:verb ts:infinitive_simple
-indovino/aEIJ	po:verb ts:indicative_present st:indovinar
+indovino/aEIJ	po:verb ts:indicative_present st:indovinar po:noun
 indovínoe/aK	po:verb ts:indicative_present is:interrogative st:indovinar
 industriar/aE	po:verb ts:infinitive_simple
 industrio/aEIJ	po:verb ts:indicative_present st:industriar
@@ -11660,8 +11661,8 @@ ministrar/aEsś@	po:verb ts:infinitive_simple
 ministro/aEIJ@	po:verb ts:indicative_present st:ministrar po:noun
 minístroe/aK@	po:verb ts:indicative_present is:interrogative st:ministrar
 ministrato/BI@	po:verb ts:participle_perfect_strong st:ministrar
-deminuir/acE	po:verb ts:infinitive_simple
-diminuir/acE	po:verb ts:infinitive_simple
+deminuir/acE-	po:verb ts:infinitive_simple
+diminuir/acE-	po:verb ts:infinitive_simple
 xminuir/acE	po:verb ts:infinitive_simple
 xminusar/aE	po:verb ts:infinitive_simple
 xminuso/aEIJ	po:verb ts:indicative_present st:xminusar
@@ -25166,7 +25167,7 @@ diferenŧa/Dt-	po:noun
 diferenŧia/Dt-	po:noun
 digrama/T	po:noun
 dii	po:noun is:plural st:dio
-diman/D	po:adverb al:doman
+diman/D-	po:adverb al:doman
 dimension/DU	po:noun
 dio	po:noun is:singular al:dii
 diretor/D	po:noun
@@ -25189,7 +25190,7 @@ dolso/TW&	po:adjective po:noun
 dolŧa/D&	po:adjective po:noun
 dolŧo/TIW&	po:adjective po:noun
 doƚor/D	po:noun
-doman/D	po:adverb st:diman
+doman/D-	po:adverb st:diman
 domenante/D	po:adjective
 donde	po:adverb
 donŧion/DU	po:noun
@@ -40893,7 +40894,7 @@ tintin	po:interjection
 tin-tin	po:interjection
 doxèna/D	po:noun al:donxèna
 donxèna/D	po:noun st:doxèna
-dopiador/CV	po:noun
+dopiador/CV-	po:noun
 dopin/T	po:noun
 dopodiman	po:adverb al:dopodoman
 dopodoman	po:adverb st:dopodiman
@@ -41618,7 +41619,33 @@ inkroxadura/DY	po:noun
 inkuranŧa/Dt	po:noun
 indilatamente/IẂ	po:adverb
 indiƚatamente/IẂ	po:adverb
+indeminutamente/IẂ	po:adverb
+indiminutamente/IẂ	po:adverb
+indiriŧo/TtI	po:noun
+indolenŧa/Dt	po:noun
+indoƚenŧa/Dt	po:noun
+indorso/T	po:noun
+indovin/C	po:noun
+indukaŧion/DtU	po:noun
+edukaŧion/DtU	po:noun
+induria/D	po:noun
+industria/D&	po:noun
+ineŧepíbil/D	po:adjective
+inesepíbil/Dⱦ	po:adjective
+inèdia/D	po:noun
+inegual/Dⱦ	po:adjective
+dexegual/Dⱦ	po:adjective
+egual/Dⱦ	po:adjective
+exateŧa/Dt-	po:noun
+inexivamente/IẂ	po:adverb
+infalibilmente/IẂ	po:adverb
+infaƚibilmente/IẂ	po:adverb
+infalantemente/IẂ	po:adverb
+infaƚantemente/IẂ	po:adverb
+infamemente/IẂ	po:adverb
+infamità	po:noun
+infarinadin/C	po:adjective po:noun
 
 
 
-/ 30
+/ 302

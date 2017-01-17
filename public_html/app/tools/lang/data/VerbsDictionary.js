@@ -1186,6 +1186,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "és",				"ri",			3,	0,	"a",	"",				"",
 "esk",			"ad",			1,	0,	"a",	"",				"",
 "esk",			"in",			1,	0,	"a",	"1867",			"",
+"esped",			"in",			4,	5,	"a",	"1829",			"No èser resolúo.",
 "espèl",			"",			3,	3,	"g",	"",				"",
 "esplòd",		"",			3,	4,	"g",	"1980",			"",
 "estaxi",		"",			1,	3,	"g",	"1867",			"",
