@@ -1816,6 +1816,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "gan",			"in",			1,	1,	"g",	"1519",			"",
 "ganas",			"dex",		1,	3,	"g",	"1854",			"Xganasar.",
 "ganas",			"x",			1,	3,	"g",	"1560",			"Xbelegar dal ríder.",
+"ganb",			"in",			1,	1,	"g",	"1829",			"Butar fòra èrba kuando ke le vòl far semenŧa.",
 "ganbar",		"",			1,	1,	"g",	"1810",			"",
 "ganbar",		"dex",		1,	1,	"g",	"1854",			"Trar fora da on problema.",
 "ganbar",		"in",			1,	1,	"g",	"1775",			"Intrigar, inpacar.",
