@@ -2250,6 +2250,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ɉonf",			"dex",		1,	1,	"a",	"1775",			"",
 "ɉonf",			"x",			1,	1,	"a",	"1775",			"",
 "ɉostr",			"",			1,	1,	"g",	"",				"",
+"ɉostr",			"in",			1,	1,	"g",	"1829",			"",
 "ɉot",			"in",			1,	1,	"g",	"1306",			"",
 "ɉot",			"in",			4,	3,	"a",	"1980",			"",
 "ɉòt",			"in",			3,	1,	"g",	"1306",			"",
