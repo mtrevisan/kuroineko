@@ -3414,6 +3414,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "međ",			"fra",		1,	1,	"a",	"",				"",
 "međ",			"infra",		1,	1,	"a",	"1598",			"",
 "međ",			"inter",		1,	1,	"a",	"",				"",
+"međ",			"intra",		1,	1,	"a",	"1829",			"",
 "međ",			"intre",		1,	1,	"a",	"",				"",
 "međ",			"stra",		1,	1,	"a",	"1775",			"",
 "međ",			"tra",		1,	1,	"a",	"1527",			"Divíder.",
