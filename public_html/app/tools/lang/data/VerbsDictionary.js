@@ -3020,6 +3020,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "lagrem",		"",			1,	1,	"g",	"1294",			"",
 "lald",			"",			1,	1,	"g",	"1560",			"",
 "lament",		"",			1,	3,	"a",	"1503",			"",
+"lan",			"",			1,	1,	"g",	"1829",			"",
 "lanb",			"x",			1,	1,	"g",	"1560",			"",
 "lanbik",		"",			1,	4,	"a",	"1867",			"Destilar.",
 "lanbik",		"x",			1,	4,	"a",	"1",			"Destilar.",
