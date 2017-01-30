@@ -3052,6 +3052,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "lard",			"",			1,	1,	"g",	"1854",			"Méter el lardo.",
 "lard",			"in",			1,	1,	"g",	"1775",			"Méter el lardo.",
 "lardel",		"in",			1,	4,	"g",	"1560",			"",
+"larg",			"",			1,	1,	"g",	"1829",			"",
 "larg",			"x",			1,	1,	"g",	"1560",			"",
 "largiđ",		"x",			1,	4,	"a",	"1867",			"",
 "las",			"",			1,	1,	"g",	"1433",			"",
