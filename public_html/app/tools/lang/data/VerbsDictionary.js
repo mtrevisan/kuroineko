@@ -3014,6 +3014,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kux",			"s",			4,	3,	"a",	"1980",			"Deskúxer.",
 "kuxin",			"",			1,	3,	"a",	"1342",			"",
 
+"ladr",			"",			1,	1,	"g",	"1829",			"Robar.",
 "lakoniđ",		"",			1,	5,	"a",	"1867",			"Èser precixo, breve.",
 "lag",			"",			1,	1,	"g",	"1980",			"(bixiak) Alagar.",
 "lagrem",		"",			1,	1,	"g",	"1294",			"",
