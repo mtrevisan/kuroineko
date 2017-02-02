@@ -13,7 +13,7 @@ HunSpell Venetan Spellchecker
 This Venetan Dictionary for Spell-checking is maintained by
 Mauro Trevisan <mauro.trevisan@gmail.com>.
 
-Copyright © 2016 Mauro Trevisan <mauro.trevisan@gmail.com>.
+Copyright © 2017 Mauro Trevisan <mauro.trevisan@gmail.com>.
 
 
 The HunSpell Venetan dictionary is based on various dictionaries (starting from
