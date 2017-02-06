@@ -3247,6 +3247,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "mac",			"",			1,	1,	"g",	"1535",			"",
 "mac",			"in",			1,	1,	"g",	"1867",			"",
 "mac",			"x",			1,	1,	"g",	"1560",			"Umiliar.",
+"madređ",		"",			1,	4,	"a",	"1829",			"Matriđar.",
 "madur",			"",			1,	3,	"a",	"1560",			"",
 "madur",			"stra",		1,	3,	"a",	"1775",			"",
 "mađor",			"",			1,	3,	"a",	"1852",			"",
