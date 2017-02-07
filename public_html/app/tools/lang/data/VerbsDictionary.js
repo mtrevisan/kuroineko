@@ -3267,6 +3267,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "magr",			"x",			1,	1,	"g",	"1560",			"",
 "main",			"",			1,	2,	"a",	"1851",			"Amainar, rakòjer le vele.",
 "maistr",		"",			1,	2,	"a",	"1463",			"",
+"maistral",		"",			1,	6,	"g",	"1829",			"Infuriar de 'l Maistral.",
 "maɉ",			"x",			1,	1,	"g",	"1775",			"Xbasar, ribàter.",
 "mak",			"",			1,	1,	"g",	"1775",			"",
 "mak",			"x",			1,	1,	"g",	"1852",			"Umiliar.",
