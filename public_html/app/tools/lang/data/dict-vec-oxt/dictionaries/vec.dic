@@ -3036,8 +3036,8 @@ interdir/acE	po:verb ts:infinitive_simple
 intredir/acE	po:verb ts:infinitive_simple
 intardir/acE	po:verb ts:infinitive_simple
 kontradir/acE	po:verb ts:infinitive_simple
-maledir/acE	po:verb ts:infinitive_simple
-maƚedir/acE	po:verb ts:infinitive_simple
+maledir/acEsś	po:verb ts:infinitive_simple
+maƚedir/acEś	po:verb ts:infinitive_simple
 indafarar/aE	po:verb ts:infinitive_simple
 indàfaro/aEIJ	po:verb ts:indicative_present st:indafarar
 indàfaroe/aK	po:verb ts:indicative_present is:interrogative st:indafarar
@@ -9514,6 +9514,13 @@ kòxoe/aK=.,	po:verb ts:indicative_present is:interrogative st:kòxer
 kòto/BI=.,	po:verb ts:participle_perfect_strong st:kòxer po:adjective
 kòxar/bE=.,	po:verb ts:infinitive_simple
 koxarò/bJ=.,	po:verb ts:indicative_future st:kòxar
+malkòxer/bE	po:verb ts:infinitive_simple
+malkoxerò/bJ	po:verb ts:indicative_future st:malkòxer
+malkòxo/aEIJ	po:verb ts:indicative_present st:malkòxer
+malkòxoe/aK	po:verb ts:indicative_present is:interrogative st:malkòxer
+malkòto/BI	po:verb ts:participle_perfect_strong st:malkòxer po:adjective
+malkòxar/bE	po:verb ts:infinitive_simple
+malkoxarò/bJ	po:verb ts:indicative_future st:malkòxar
 koxenar/aE	po:verb ts:infinitive_simple
 koxeno/aEIJ	po:verb ts:indicative_present st:koxenar
 koxénoe/aK	po:verb ts:indicative_present is:interrogative st:koxenar
@@ -9523,12 +9530,18 @@ koxínoe/aK	po:verb ts:indicative_present is:interrogative st:koxinar
 krear/aE-	po:verb ts:infinitive_simple
 krèo/aEIJ-	po:verb ts:indicative_present st:krear
 krèoe/aK-	po:verb ts:indicative_present is:interrogative st:krear
+malkrear/aE-	po:verb ts:infinitive_simple
+malkrèo/aEIJ-	po:verb ts:indicative_present st:malkrear
+malkrèoe/aK-	po:verb ts:indicative_present is:interrogative st:malkrear
 kreansar/aE	po:verb is:infinitive_simple
 kreanso/aEIJ	po:verb ts:indicative_present st:kreansar
 kreànsoe/aK	po:verb ts:indicative_present is:interrogative st:kreansar
 kreanŧar/aE	po:verb is:infinitive_simple
 kreanŧo/aEIJ	po:verb ts:indicative_present st:kreanŧar
 kreànŧoe/aK	po:verb ts:indicative_present is:interrogative st:kreanŧar
+malkreanŧar/aE	po:verb is:infinitive_simple
+malkreanŧo/aEIJ	po:verb ts:indicative_present st:malkreanŧar
+malkreànŧoe/aK	po:verb ts:indicative_present is:interrogative st:malkreanŧar
 kréder/bE=.	po:verb ts:infinitive_simple
 krederò/bJ=.	po:verb ts:indicative_future st:kréder
 kredo/aEIJ=.	po:verb ts:indicative_present st:kréder
@@ -21600,12 +21613,18 @@ vàlidoe/aK-	po:verb ts:indicative_present is:interrogative st:validar
 vaƚidar/aE-	po:verb ts:infinitive_simple
 vàƚido/aEJ-	po:verb ts:indicative_present st:vaƚidar
 vàƚidoe/aK-	po:verb ts:indicative_present is:interrogative st:vaƚidar
-xvalivar/aE	po:verb ts:infinitive_simple
-xvalivo/aEIJ	po:verb ts:indicative_present st:xvalivar
-xvalívoe/aK	po:verb ts:indicative_present is:interrogative st:xvalivar
-xvaƚivar/aE	po:verb ts:infinitive_simple
-xvaƚivo/aEJ	po:verb ts:indicative_present st:xvaƚivar
-xvaƚívoe/aK	po:verb ts:indicative_present is:interrogative st:xvaƚivar
+valivar/aE*	po:verb ts:infinitive_simple
+valivo/aEIJ*	po:verb ts:indicative_present st:valivar
+valívoe/aK*	po:verb ts:indicative_present is:interrogative st:xvalivar
+vaƚivar/aE*	po:verb ts:infinitive_simple
+vaƚivo/aEJ*	po:verb ts:indicative_present st:vaƚivar
+vaƚívoe/aK*	po:verb ts:indicative_present is:interrogative st:xvaƚivar
+malvalivar/aE	po:verb ts:infinitive_simple
+malvalivo/aEIJ	po:verb ts:indicative_present st:malvalivar
+malvalívoe/aK	po:verb ts:indicative_present is:interrogative st:malvalivar
+malvaƚivar/aE	po:verb ts:infinitive_simple
+malvaƚivo/aEJ	po:verb ts:indicative_present st:malvaƚivar
+malvaƚívoe/aK	po:verb ts:indicative_present is:interrogative st:malvaƚivar
 xvalixar/aE	po:verb ts:infinitive_simple
 xvalixo/aEIJ	po:verb ts:indicative_present st:xvalixar
 xvalíxoe/aK	po:verb ts:indicative_present is:interrogative st:xvalixar
@@ -24235,7 +24254,8 @@ eviva	po:interjection al:viva
 viva	po:interjection st:eviva
 viú	po:interjection
 brr	po:interjection
-malan/TtŕU	po:interjection po:noun
+malan/TtŕU&	po:interjection po:noun
+maƚaneto/T	po:interjection po:noun
 guajo/Ttğ	po:interjection po:noun
 fiol/TḿU<	po:noun
 fioƚo/Tḿ	po:noun
@@ -41788,7 +41808,7 @@ lokante/TI	po:noun
 ƚokante/T	po:noun
 malatiso/BI	po:adjective
 malatiŧo/BI	po:adjective
-malbia	po:interjection
+malbía	po:interjection
 maƚatiso/B	po:adjective
 mantexenal/DⱦU	po:noun
 masapedòco/T	po:noun
@@ -42284,8 +42304,38 @@ mañifiŧitúdin/D	po:noun
 mañifisitúdin/D	po:noun
 aredódexa/C	po:noun
 magonèra/D	po:noun
+malagraŧieta/D	po:noun
+malagrasieta/D	po:noun
+maƚagrasieta/D	po:noun
+malaiso/BI	po:adjective
+malaiŧo/BI	po:adjective
+maƚaiso/B	po:adjective
+malalengua/D	po:noun
+maƚaƚengua/D	po:noun
+malànemo/T	po:noun
+maƚànemo/T	po:noun
+malapena	po:adverb
+maƚapena	po:adverb
+malaspexa/D	po:noun
+maƚaspexa/D	po:noun
+malatisio/BI	po:adjective
+malatiŧio/BI	po:adjective
+maƚatisio/B	po:adjective
+malbigato/TI	po:noun
+malbigata/D	po:noun
+malkaduto/TI	po:noun
+maliñaŧo/TtI	po:adjective
+maliñaŧa/Dt	po:adjective
+maƚiñaso/B	po:adjective
+maledeño/BI	po:adjective
+maƚedeño/B	po:adjective
+maledetonaŧo/TtI	po:adjective
+maƚedetonaso/T	po:adjective
+màlega/D	po:noun
+màƚega/D	po:noun
+malestente	po:adverb
+maƚestente	po:adverb
 
 
 
-
-/ 345
+/ 346
