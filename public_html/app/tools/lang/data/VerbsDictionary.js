@@ -3306,6 +3306,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "mand",			"kontra",	1,	1,	"g",	"1829",			"",
 "mand",			"kontro",	1,	1,	"g",	"1829",			"Kontramandar.",
 "mand",			"re",			1,	1,	"g",	"1775",			"",
+"mandol",		"",			1,	1,	"g",	"1829",			"Rénder de màndola.",
 "maned",			"",			1,	1,	"g",	"",				"Xbrigar, afretar.",
 "maneg",			"",			1,	1,	"g",	"1847",			"",
 "maneg",			"dex",		1,	1,	"g",	"1560",			"Kavar el manego.",
