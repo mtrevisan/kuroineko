@@ -20424,7 +20424,7 @@ estratar/aE	po:verb ts:infinitive_simple
 estrato/aEIJ	po:verb ts:indicative_present st:estratar
 estràtoe/aK	po:verb ts:indicative_present is:interrogative st:estratar
 maltratar/aE	po:verb ts:infinitive_simple
-maltrato/aEIJ	po:verb ts:indicative_present st:maltratar
+maltrato/aEIJ	po:verb ts:indicative_present st:maltratar po:noun
 maltràtoe/aK	po:verb ts:indicative_present is:interrogative st:maltratar
 tratedar/aE	po:verb ts:infinitive_simple
 tratedo/aEIJ	po:verb ts:indicative_present st:tratedar
@@ -20737,6 +20737,12 @@ otúndoe/aK	po:verb ts:indicative_present is:interrogative st:otúnder
 otunto/BI	po:verb ts:participle_perfect_strong st:otúnder
 otúndar/bE	po:verb ts:infinitive_simple
 otundarò/bJ	po:verb ts:indicative_future st:otúndar
+malŧabatar/aE	po:verb ts:infinitive_simple
+malŧabato/aEIJ	po:verb ts:indicative_present st:malŧabatar
+malŧabàtoe/aK	po:verb ts:indicative_present is:interrogative st:malŧabatar
+malsabatar/aE	po:verb ts:infinitive_simple
+malsabato/aEIJ	po:verb ts:indicative_present st:malsabatar
+malsabàtoe/aK	po:verb ts:indicative_present is:interrogative st:malsabatar
 ŧakar/aEŧ	po:verb ts:infinitive_simple
 ŧako/aEIJŧ	po:verb ts:indicative_present st:ŧakar
 ŧàkoe/aKŧ	po:verb ts:indicative_present is:interrogative st:ŧakar
@@ -21390,6 +21396,12 @@ insópoe/aK	po:verb ts:indicative_present is:interrogative st:insopar
 ŧonkar/aErŧ	po:verb ts:infinitive_simple
 ŧonko/aEIJŧ	po:verb ts:indicative_present st:ŧonkar po:adjective po:noun
 ŧónkoe/aKŧ	po:verb ts:indicative_present is:interrogative st:ŧonkar
+malŧontar/aErŧ	po:verb ts:infinitive_simple
+malŧonto/aEIJŧ	po:verb ts:indicative_present st:malŧontar
+malŧóntoe/aKŧ	po:verb ts:indicative_present is:interrogative st:malŧontar
+malsontar/aErŧ	po:verb ts:infinitive_simple
+malsonto/aEIJŧ	po:verb ts:indicative_present st:malsontar
+malsóntoe/aKŧ	po:verb ts:indicative_present is:interrogative st:malsontar
 inŧopar/aE	po:verb ts:infinitive_simple
 inŧopo/aEIJ	po:verb ts:indicative_present st:inŧopar
 inŧópoe/aK	po:verb ts:indicative_present is:interrogative st:inŧopar
@@ -21755,6 +21767,13 @@ intravédoe/aK	po:verb ts:indicative_present is:interrogative st:intravéder
 intravisto/BI	po:verb ts:participle_perfect_strong st:intravéder
 intravédar/bE	po:verb ts:infinitive_simple
 intravedarò/bJ	po:verb ts:indicative_future st:intravédar
+malvéder/bE	po:verb ts:infinitive_simple
+malvederò/bJ	po:verb ts:indicative_future st:malvéder
+malvedo/aEIJ	po:verb ts:indicative_present st:malvéder
+malvédoe/aK	po:verb ts:indicative_present is:interrogative st:malvéder
+malvisto/BI	po:verb ts:participle_perfect_strong st:malvéder
+malvédar/bE	po:verb ts:infinitive_simple
+malvedarò/bJ	po:verb ts:indicative_future st:malvédar
 provéder/bE+	po:verb ts:infinitive_simple
 provederò/bJ+	po:verb ts:indicative_future st:provéder
 provedo/aEIJ+	po:verb ts:indicative_present st:provéder
@@ -22177,10 +22196,10 @@ vèrsoe/aK:	po:verb ts:indicative_present is:interrogative st:versar
 varsar/aE:	po:verb ts:infinitive_simple
 varso/aEIJ:	po:verb ts:indicative_present st:varsar
 vàrsoe/aK:	po:verb ts:indicative_present is:interrogative st:varsar
-malversar/aE	po:verb ts:infinitive_simple
+malversar/aEsś	po:verb ts:infinitive_simple
 malvèrso/aEIJ	po:verb ts:indicative_present st:malversar
 malvèrsoe/aK	po:verb ts:indicative_present is:interrogative st:malversar
-malvarsar/aE	po:verb ts:infinitive_simple
+malvarsar/aEsś	po:verb ts:infinitive_simple
 malvarso/aEIJ	po:verb ts:indicative_present st:malvarsar
 malvàrsoe/aK	po:verb ts:indicative_present is:interrogative st:malvarsar
 traversar/aE-	po:verb ts:infinitive_simple
@@ -26713,7 +26732,8 @@ maƚatía/D	po:noun
 maƚegrasia/D	po:noun
 maƚora/D	po:noun
 maƚuto/T	po:noun
-mamo/B	po:noun
+mamo/T	po:noun
+mama/D&	po:noun
 manarin/T	po:noun
 manda/D&	po:noun
 mandorlato/TI	po:noun
@@ -30817,7 +30837,7 @@ maƚeñaso/T	po:interjection
 maƚinkòniko/B	po:adjective
 maƚòrsa/D	po:noun
 mamaƚuko/B	po:noun
-mamào/B	po:noun
+mamào/B	po:interjection po:noun
 manada/DY=	po:noun
 manara/D&	po:noun
 manàtola/Dt	po:noun
@@ -34019,7 +34039,7 @@ maskariŧo/TtI	po:noun
 mataraŧo/TtI	po:noun
 maŧasète/T	po:noun
 mauko/BI	po:adjective
-màmara/D	po:adverb
+màmara	po:adverb
 medegamente/IẂ	po:adverb
 menaman/T	po:adverb
 menudin/T	po:noun
@@ -37179,7 +37199,7 @@ liofante/TI	po:noun
 luŧèrna/D	po:noun
 luŧerneta/D	po:noun
 luserneta/D	po:noun
-malvaxio/B	po:adjective
+malvaxio/B(	po:adjective
 marŧion/DtU	po:noun
 masar/T	po:noun
 masara/D&	po:noun
@@ -42365,8 +42385,9 @@ maƚívoƚe/D	po:adjective
 màlmar/T	po:noun
 malmaŧuko/TI	po:noun
 malmasuko/TI	po:noun
+malva/D	po:noun
+mamada/DY	po:noun
 
 
 
-
-/ 347
+/ 348

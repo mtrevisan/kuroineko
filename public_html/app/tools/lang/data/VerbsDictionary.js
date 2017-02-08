@@ -6211,6 +6211,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tuŧeg",			"s",			1,	1,	"a",	"1775",			"",
 "túnd",			"o",			3,	1,	"a",	"1509",			"",
 
+"ŧabat",			"mal",		1,	3,	"g",	"1829",			"Deventar malà.",
 "ŧak",			"",			1,	1,	"g",	"1998",			"Mastegar.",
 "ŧakol",			"",			1,	1,	"g",	"1867",			"",
 "ŧakol",			"de",			1,	1,	"g",	"1867",			"Kavar le ŧakole.",
@@ -6336,6 +6337,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧol",			"de",			1,	1,	"g",	"1854",			"Dexligar.",
 "ŧol",			"in",			1,	1,	"g",	"1998",			"Ligar, inganŧar.",
 "ŧonk",			"",			1,	1,	"a",	"1980",			"",
+"ŧont",			"mal",		1,	1,	"a",	"1829",			"Mal rival.",
 "ŧop",			"in",			1,	1,	"a",	"1998",			"El rikréser de lʼ erba intʼ un kanpo o orto.",
 "ŧopeg",			"",			1,	1,	"a",	"1775",			"Ŧotar.",
 "ŧot",			"",			1,	1,	"g",	"1854",			"Èser ŧòto.",
@@ -6455,6 +6457,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "véd",			"despro",	3,	1,	"a",	"1867",			"",
 "véd",			"inpre",		3,	1,	"a",	"1829",			"",
 "véd",			"intra",		3,	1,	"a",	"1980",			"",
+"véd",			"mal",		3,	1,	"a",	"1829",			"",
 "véd",			"pre",		3,	1,	"a",	"1867",			"",
 "véd",			"pro",		3,	1,	"a",	"1384",			"",
 "véd",			"ra",			3,	1,	"a",	"",				"",
