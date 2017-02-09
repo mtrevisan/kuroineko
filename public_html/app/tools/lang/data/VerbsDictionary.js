@@ -3319,6 +3319,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "maneđ",			"x",			1,	3,	"a",	"1590",			"",
 "maner",			"",			1,	3,	"g",	"1852",			"Dar de manèra.",
 "mangan",		"",			1,	4,	"g",	"1867",			"",
+"manganel",		"",			1,	6,	"g",	"1829",			"",
 "mank",			"",			1,	1,	"g",	"1560",			"",
 "mank",			"a",			1,	1,	"g",	"",				"",
 "mani",			"x",			1,	1,	"g",	"1852",			"Ŧerkar ko ansia.",
