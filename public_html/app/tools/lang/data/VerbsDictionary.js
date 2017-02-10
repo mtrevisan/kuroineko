@@ -3348,6 +3348,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "mark",			"",			1,	1,	"g",	"2004",			"",
 "mark",			"de",			1,	1,	"g",	"1829",			"",
 "mark",			"re",			1,	1,	"g",	"1548",			"",
+"markex",		"",			1,	4,	"a",	"1829",			"Mestruar.",
 "markex",		"in",			1,	4,	"a",	"1829",			"Mestruar.",
 "mareɉ",			"",			1,	3,	"a",	"1867",			"Deventar amaro.",
 "marel",			"",			1,	3,	"g",	"1854",			"Abarkar, far mari de fen despò ʼverlo sekà.",
