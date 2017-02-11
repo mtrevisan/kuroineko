@@ -1,7 +1,7 @@
 # Diŧionario de lengua vèneta
 #
 # Venetan hunspell affix file
-# Copyright (C) 2016 Mauro Trevisan
+# Copyright (C) 2017 Mauro Trevisan
 #
 # This file is distributed under GPL license.
 #
@@ -22,7 +22,7 @@
 # see <http://www.gnu.org/licenses/>.
 
 NAME Diŧionario de lengua vèneta
-VERSION 1.4.1 (2016/08/19)
+VERSION 1.4.4 (2017/02/09)
 HOME http://parnodexmentegar.orgfree.com/
 LANG vec
 
@@ -3358,7 +3358,7 @@ SFX Ŧ a ia/D a
 SFX Ŧ e io e
 
 # trasformaŧion intra varianti (l > ƚ, j > ɉ, ŧ > s)
-SFX t Y 35
+SFX t Y 36
 SFX t lò ƚò [aeiouàèéíòóú]lò
 SFX t là ƚà [aeiouàèéíòóú]là
 SFX t lè ƚè [aeiouàèéíòóú]lè
@@ -3378,6 +3378,7 @@ SFX t lena ƚena/D [aeiouàèéíòóú]lena
 SFX t jo ɉo/T jo
 SFX t ja ɉa/D ja
 SFX t jon ɉon/DU jon
+SFX t jona ɉona/DU jona
 SFX t ŧo so/TI ŧo
 SFX t ŧa sa/D ŧa
 SFX t ŧio sio/T ŧio
@@ -3725,6 +3726,27 @@ SFX W 0 mente/IẂ [^è]ve
 SFX W e mente/IẂ le
 SFX W ève evemente/IẂ ève
 
+# avèrbi (-mente with vanishing el)
+SFX Ẁ Y 18
+SFX Ẁ 0 emente/Ẃ n
+SFX Ẁ 0 mente/Ẃ a
+SFX Ẁ 0 mente/Ẃ [^è]r
+SFX Ẁ èr eramente/Ẃ èr
+SFX Ẁ 0 mente/Ẃ [^è]l
+SFX Ẁ èl elmente/Ẃ èl
+SFX Ẁ o amente/Ẃ [^mst]o
+SFX Ẁ o amente/Ẃ [^è]mo
+SFX Ẁ o amente/Ẃ [^ò]so
+SFX Ẁ o amente/Ẃ [^èò]to
+SFX Ẁ èmo emamente/Ẃ èmo
+SFX Ẁ òso osamente/Ẃ òso
+SFX Ẁ èto etamente/Ẃ èto
+SFX Ẁ òto otamente/Ẃ òto
+SFX Ẁ 0 mente/Ẃ [^lv]e
+SFX Ẁ 0 mente/Ẃ [^è]ve
+SFX Ẁ e mente/Ẃ le
+SFX Ẁ ève evemente/Ẃ ève
+
 # avèrbi (-mente)
 SFX Ẃ Y 2
 SFX Ẃ nte n mente
@@ -3736,7 +3758,7 @@ SFX Y dor or/T [aeiou]dor
 SFX Y dora ora/D [aeiou]dora
 SFX Y duro uro/TI [aeiou]duro
 SFX Y dura ura/D [aeiou]dura
-SFX Y ade à/T ade
+SFX Y ade à/D ade
 SFX Y ado à/T ado
 SFX Y ado ò ado
 SFX Y ado è/T ado
@@ -3749,7 +3771,7 @@ SFX Y uda úa/D uda
 SFX Y ude ú/T ude
 
 # sostantivi alterài - demenutivi in -eto/a
-SFX & Y 113
+SFX & Y 115
 SFX & 0 eto/TI [^èò]l
 SFX & èl eleto/TI èl
 SFX & òl oleto/TI òl
@@ -3843,11 +3865,13 @@ SFX & èđa eđeta/D èđa
 SFX & èga egeta/D èga
 SFX & èla eleta/D èla
 SFX & èƚa eƚeta/D èƚa
+SFX & èna eneta/D èna
 SFX & èpa epeta/D èpa
 SFX & èra ereta/D èra
 SFX & èxa exeta/D èxa
 SFX & òba obeta/D òba
 SFX & òca oceta/D òca
+SFX & òđa ođeta/D òđa
 SFX & òja ojeta/D òja
 SFX & òɉa oɉeta/D òɉa
 SFX & òka oketa/D òka
@@ -3956,15 +3980,17 @@ SFX ( èƚo eƚòto/T èƚo
 SFX ( òƚo oƚòto/T òƚo
 
 # sostantivi alterài - kresitivi in -on
-SFX ) Y 28
+SFX ) Y 30
 SFX ) 0 on/DU [^è]l
 SFX ) 0 on/DU n
-SFX ) 0 n/DU [^ckƚmñpst]o
+SFX ) 0 n/DU [^cjɉkƚmñpst]o
 SFX ) 0 n/DU [^è]po
 SFX ) 0 n/DU [^èò]to
 SFX ) 0 n/DU [^ò][ckmñs]o
 SFX ) òco ocon/DU òco
 SFX ) òko okon/DU òko
+SFX ) òjo ojon/DU òjo
+SFX ) òɉo oɉon/DU òɉo
 SFX ) òmo omon/DU òmo
 SFX ) òño oñon/DU òño
 SFX ) òso oson/DU òso
@@ -4095,6 +4121,10 @@ PFX @ 0 a .
 # sostantivi alterài
 PFX : Y 1
 PFX : 0 kon .
+
+# gua- > va-
+PFX ğ Y 1
+PFX ğ gu v gua
 
 # numerali - koletivi
 SFX % Y 74
