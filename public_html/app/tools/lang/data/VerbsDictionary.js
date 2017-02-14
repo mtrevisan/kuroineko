@@ -3367,6 +3367,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "marmit",		"in",			4,	6,	"a",	"1847",			"Instupidir.",
 "marmoriđ",		"",			1,	6,	"a",	"1529",			"",
 "marmot",		"in",			4,	6,	"a",	"1854",			"Instupidir, konfónder.",
+"marokin",		"",			1,	5,	"a",	"1829",			"",
 "maron",			"x",			1,	3,	"a",	"1980",			"Skovrir on ingano.",
 "martel",		"",			1,	4,	"g",	"1867",			"",
 "martel",		"x",			1,	4,	"g",	"1560",			"",
