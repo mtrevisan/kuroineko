@@ -3405,6 +3405,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "mat",			"x",			1,	1,	"g",	"1775",			"Befar, xvergoñar, burlar.",
 "matiđ",			"",			1,	3,	"a",	"1854",			"",
 "matiđ",			"x",			1,	3,	"a",	"1854",			"",
+"matit",			"",			1,	3,	"a",	"1829",			"Deventar mato.",
 "maton",			"",			1,	3,	"a",	"1854",			"",
 "maton",			"",			4,	5,	"a",	"1775",			"",
 "maton",			"in",			4,	5,	"a",	"1810",			"Far masa luxe, stordir, intronar, intorpidir pal sòno.",
