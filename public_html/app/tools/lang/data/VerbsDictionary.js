@@ -3433,6 +3433,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "maxer",			"in",			4,	5,	"a",	"1854",			"",
 "maxn",			"",			1,	1,	"g",	"1980",			"Maxenar.",
 "medeg",			"",			1,	1,	"g",	"1867",			"",
+"medexin",		"",			1,	5,	"a",	"1829",			"",
 "medi",			"",			1,	1,	"g",	"",				"",
 "medi",			"re",			1,	1,	"g",	"1867",			"",
 "međ",			"",			1,	1,	"a",	"",				"",
