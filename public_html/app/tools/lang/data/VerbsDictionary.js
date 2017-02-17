@@ -3584,6 +3584,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "molac",			"x",			1,	3,	"g",	"1852",			"Alentar, sligar.",
 "mòlđ",			"",			3,	1,	"g",	"1980",			"",
 "molest",		"",			1,	3,	"g",	"1362",			"",
+"molifeg",		"",			1,	3,	"a",	"1829",			"Deventar mòlo.",
 "molixin",		"x",			1,	3,	"a",	"1821",			"Deventar mòl.",
 "molt",			"x",			4,	4,	"a",	"1847",			"Xmontar de 'l kolor.",
 "moltipleg",	"",			1,	4,	"a",	"1980",			"",
