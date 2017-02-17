@@ -3584,6 +3584,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "molt",			"x",			4,	4,	"a",	"1847",			"Xmontar de 'l kolor.",
 "moltipleg",	"",			1,	4,	"a",	"1980",			"",
 "moltipleg",	"x",			1,	4,	"a",	"1560",			"",
+"morfiđ",		"meta",		1,	1,	"g",	"1829",			"",
 "mortiprik",	"x",			1,	4,	"a",	"1560",			"Xmoltiplegar.",
 "molton",		"",			1,	4,	"a",	"1775",			"Xbàter, koŧar.",
 "molton",		"x",			1,	4,	"a",	"1854",			"Andar xbàter, spénđer ko forŧa.",
