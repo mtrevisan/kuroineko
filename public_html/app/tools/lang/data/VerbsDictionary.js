@@ -3640,6 +3640,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "moređ",			"x",			1,	3,	"a",	"1560",			"",
 "morf",			"",			4,	4,	"a",	"1867",			"(termine de i barkaroli) Mañar.",
 "morf",			"x",			4,	4,	"a",	"1980",			"Mañar ko avidità, mañar fora tuto.",
+"morg",			"",			1,	1,	"a",	"1829",			"Travaxar.",
 "morg",			"x",			1,	1,	"a",	"1980",			"Lusar, xlogar, stortar.",
 "morc",			"re",			1,	1,	"g",	"1775",			"",
 "morox",			"",			1,	3,	"a",	"1560",			"Far ʼl amor.",
