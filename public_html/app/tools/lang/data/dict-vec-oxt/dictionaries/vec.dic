@@ -12291,7 +12291,7 @@ mostar/aE	po:verb ts:infinitive_simple
 mòsto/aEIJ	po:verb ts:indicative_present st:mostar
 mòstoe/aK	po:verb ts:indicative_present is:interrogative st:mostar
 mostrar/aE+,	po:verb ts:infinitive_simple
-mostro/aEIJ+,	po:verb ts:indicative_present st:mostrar po:interjection po:noun
+mostro/aEIJŕ+,	po:verb ts:indicative_present st:mostrar po:interjection po:noun
 móstroe/aK+,	po:verb ts:indicative_present is:interrogative st:mostrar
 mostrato/BI+,	po:verb ts:participle_perfect_strong st:mostrar
 motar/aE	po:verb ts:infinitive_simple
@@ -12306,6 +12306,15 @@ motéđoe/aK	po:verb ts:indicative_present is:interrogative st:moteđar
 motexar/aE	po:verb ts:infinitive_simple
 motexo/aEIJ	po:verb ts:indicative_present st:motexar
 motéxoe/aK	po:verb ts:indicative_present is:interrogative st:motexar
+motidar/aE	po:verb ts:infinitive_simple
+motido/aEIJ	po:verb ts:indicative_present st:motidar
+motídoe/aK	po:verb ts:indicative_present is:interrogative st:motidar
+motiđar/aE	po:verb ts:infinitive_simple
+motiđo/aEIJ	po:verb ts:indicative_present st:motiđar
+motíđoe/aK	po:verb ts:indicative_present is:interrogative st:motiđar
+motixar/aE	po:verb ts:infinitive_simple
+motixo/aEIJ	po:verb ts:indicative_present st:motixar
+motíxoe/aK	po:verb ts:indicative_present is:interrogative st:motixar
 motivar/aE	po:verb ts:infinitive_simple
 motivo/aEIJ	po:verb ts:indicative_present st:motivar po:noun
 motívoe/aK	po:verb ts:indicative_present is:interrogative st:motivar
@@ -12395,10 +12404,10 @@ mufo/aEIJ	po:verb ts:indicative_present st:mufar po:adjective
 múfoe/aK	po:verb ts:indicative_present is:interrogative st:mufar
 mufir/acE-	po:verb ts:infinitive_simple
 mujar/aE	po:verb ts:infinitive_simple
-mujo/aEIJ	po:verb ts:indicative_present st:mujar
+mujo/aEIJ	po:verb ts:indicative_present st:mujar po:noun
 mújoe/aK	po:verb ts:indicative_present is:interrogative st:mujar
 muɉar/aE	po:verb ts:infinitive_simple
-muɉo/aEIJ	po:verb ts:indicative_present st:muɉar
+muɉo/aEIJ	po:verb ts:indicative_present st:muɉar po:noun
 múɉoe/aK	po:verb ts:indicative_present is:interrogative st:muɉar
 mular/aE-	po:verb ts:infinitive_simple
 mulo/aEIJ-	po:verb ts:indicative_present st:mular
@@ -12419,7 +12428,7 @@ remúneroe/aK	po:verb ts:indicative_present is:interrogative st:remunerar
 remunarar/aE	po:verb ts:infinitive_simple
 remunaro/aEIJ	po:verb ts:indicative_present st:remunarar
 remunàroe/aK	po:verb ts:indicative_present is:interrogative st:remunarar
-muñegar/aE	po:verb ts:infinitive_simple
+muñegar/aEr	po:verb ts:infinitive_simple
 múñego/aEIJ	po:verb ts:indicative_present st:muñegar
 múñegoe/aK	po:verb ts:indicative_present is:interrogative st:muñegar
 murar/aE+-	po:verb ts:infinitive_simple
@@ -12473,6 +12482,12 @@ inmútrioe/aK	po:verb ts:indicative_present is:interrogative st:inmutriar
 muŧar/aE	po:verb ts:infinitive_simple
 muŧo/aEIJ	po:verb ts:indicative_present st:muŧar
 múŧoe/aK	po:verb ts:indicative_present is:interrogative st:muŧar
+musegar/aE	po:verb is:infinitive_simple
+músego/aEIJ	po:verb ts:indicative_present st:musegar
+músegoe/aK	po:verb ts:indicative_present is:interrogative st:musegar
+muŧegar/aE	po:verb is:infinitive_simple
+múŧego/aEIJ	po:verb ts:indicative_present st:muŧegar
+múŧegoe/aK	po:verb ts:indicative_present is:interrogative st:muŧegar
 muxegar/aE*	po:verb ts:infinitive_simple
 múxego/aEIJ*	po:verb ts:indicative_present st:muxegar
 múxegoe/aK*	po:verb ts:indicative_present is:interrogative st:muxegar
@@ -31289,7 +31304,8 @@ mòma/D	po:noun
 mòrbio/B	po:noun
 mòrfia/D	po:noun
 mua/D	po:noun
-mucin/C	po:noun
+muŧin/C	po:noun
+musin/C	po:noun
 muda/D	po:noun
 mul/Tu&(<	po:adjective po:noun
 mula/D&<	po:adjective po:noun
@@ -37731,7 +37747,7 @@ moreska/D	po:adjective
 mucaco/B	po:noun
 mukajardo/T	po:noun
 mukaɉardo/T	po:noun
-murlon/CU	po:noun
+murlon/CU	po:adjective po:noun
 muxivo/T	po:noun
 napamondo/T	po:noun
 naviata/D	po:noun
@@ -38706,6 +38722,7 @@ morè/T	po:noun
 morion/DU	po:noun
 mosato/TI	po:noun
 mosegòto/TI	po:noun
+moŧin/C	po:noun
 mosin/C	po:noun
 moskardo/B	po:adjective
 mostalevría/D	po:noun
@@ -42806,7 +42823,20 @@ moskèa/D	po:noun
 mostravento/T	po:noun
 mostrexin/C	po:adjective
 mostrin/T	po:noun
+mostroxitade/TY	po:noun
+mòđo/Tt	po:noun
+mođa/Dt	po:noun
+moŧafadiga/D	po:noun
+mosafadiga/D	po:noun
+moŧokóa/D	po:noun
+mosokóa/D	po:noun
+moŧoreca/D	po:noun
+mosoreca/D	po:noun
+mufa/D	po:noun
+mumento/TḿI	po:noun
+mumia/D	po:noun
+munegeŧo/Tt	po:noun
 
 
 
-/ 386
+/ 389
