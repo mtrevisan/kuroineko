@@ -3771,7 +3771,9 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "net",			"",			1,	1,	"a",	"1328",			"",
 "net",			"dex",		1,	1,	"a",	"1867",			"",
 "net",			"x",			1,	1,	"a",	"1775",			"",
+"nev",			"",			1,	1,	"a",	"1829",			"",
 "neveg",			"",			1,	1,	"a",	"1560",			"",
+"never",			"",			1,	1,	"a",	"1829",			"",
 "ni",				"",			1,	1,	"a",	"1854",			"Kovar, apolajar.",
 "ni",				"ar",			1,	1,	"a",	"1560",			"",
 "ni",				"dex",		1,	1,	"a",	"1852",			"Xnidar.",
@@ -3830,6 +3832,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "nuvol",			"",			4,	5,	"a",	"1854",			"",
 "nuvol",			"i",			4,	5,	"a",	"1775",			"",
 
+"ñ",				"",			1,	1,	"g",	"1829",			"Niar.",
 "ñaf",			"x",			1,	1,	"g",	"1980",			"Pianđotar.",
 "ñanf",			"x",			1,	1,	"g",	"1775",			"Parlar kol naxo, fifar.",
 "ñanfiđ",		"x",			1,	4,	"a",	"1867",			"",
