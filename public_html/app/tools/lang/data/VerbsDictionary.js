@@ -3877,6 +3877,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "okup",			"",			1,	0,	"g",	"1980",			"",
 "okup",			"pre",		1,	0,	"g",	"1980",			"",
 "ol",				"",			4,	2,	"a",	"1560",			"Mandar odor.",
+"oland",			"",			1,	2,	"g",	"1829",			"Olandiđar.",
+"olandiđ",		"",			1,	5,	"a",	"1829",			"Far lúŧide le pene da skríver.",
 "oli",			"",			1,	0,	"g",	"1851",			"",
 "òld",			"",			3,	0,	"g",	"",				"",
 "old",			"",			4,	3,	"a",	"1381",			"Udir.",
