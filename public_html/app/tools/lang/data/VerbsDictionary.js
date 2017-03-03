@@ -3903,6 +3903,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "onɉ",			"",			1,	0,	"a",	"1775",			"Xgrafar.",
 "onor",			"",			1,	2,	"a",	"1463",			"",
 "onor",			"dex",		1,	2,	"a",	"1867",			"",
+"ont",			"",			1,	0,	"a",	"1829",			"Ónđer.",
 "ontol",			"",			1,	0,	"a",	"1980",			"(bixiak) Ónđer.",
 "opar",			"",			1,	0,	"g",	"",				"",
 "oper",			"",			1,	0,	"g",	"1433",			"",
