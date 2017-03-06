@@ -4162,6 +4162,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "paŧient",		"in",			1,	4,	"a",	"1775",			"",
 "paŧient",		"ins",		1,	4,	"a",	"",				"",
 "paŧient",		"s",			1,	4,	"a",	"",				"",
+"paŧifeg",		"",			1,	3,	"a",	"1829",			"",
 "paur",			"in",			4,	4,	"a",	"1560",			"",
 "paur",			"ins",		4,	4,	"a",	"1590",			"",
 "paur",			"s",			4,	4,	"a",	"1980",			"Inpaurir.",
