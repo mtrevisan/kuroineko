@@ -120,4 +120,4 @@ s rude/aspra = x
 chi naturale = ki
 
 ^[^ƚ\n]*[eaouèàòéóú][ln]/[^Uu\t]*\t	> add U/u
-ƚ[^/]+/[^\t]*& > remove & and replace with eto/T
+ƚ[^/\r\n]{1,}[^a]/[^\t\r\n]*& > remove & and replace with eto/T
