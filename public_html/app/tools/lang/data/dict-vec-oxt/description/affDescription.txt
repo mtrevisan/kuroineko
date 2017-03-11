@@ -121,3 +121,7 @@ chi naturale = ki
 
 ^[^ƚ\n]*[eaouèàòéóú][ln]/[^Uu\t]*\t	> add U/u
 ƚ[^/\r\n]{1,}[^a]/[^\t\r\n]*& > remove & and replace with eto/T
+/([^\t\r\n\sğ]*)ğ([^ğ\t\r\n\s]*[\t\s\r\n]+) > ($1)GV$2
+# [^\n]+\n > 
+/ [^\n]*\r > 
+\t[^\r\n]*\n > \n
