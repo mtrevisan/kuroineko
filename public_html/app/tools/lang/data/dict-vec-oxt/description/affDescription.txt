@@ -120,8 +120,8 @@ s rude/aspra = x
 chi naturale = ki
 
 ^[^ƚ\n]*[eaouèàòéóú][ln]/[^Uu\t]*\t	> add U/u
-ƚ[^/\r\n]{1,}[^a]/[^\t\r\n]*& > remove & and replace with eto/T
-/([^\t\r\n\sğ]*)ğ([^ğ\t\r\n\s]*[\t\s\r\n]+) > ($1)GV$2
+ƚ[^/\n]{1,}[^a]/[^\t\n]*& > remove & and replace with eto/T
+/([^\t\n\sğ]*)ğ([^ğ\t\n\s]*[\t\s\n]+) > ($1)GV$2
 # [^\n]+\n > 
-/ [^\n]*\r > 
+/ [^\n]*\n > 
 \t[^\r\n]*\n > \n
