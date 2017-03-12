@@ -3931,7 +3931,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "oriđon",		"",			1,	4,	"a",	"1867",			"",
 "oriđont",		"",			1,	4,	"a",	"1829",			"",
 "orin",			"",			1,	2,	"a",	"1854",			"",
-"orixen",		"",			1,	2,	"a",	"",				"",
+"oriđen",		"",			1,	2,	"a",	"",				"",
 "orl",			"",			1,	0,	"a",	"1854",			"",
 "ormeđ",			"",			1,	3,	"a",	"1980",			"",
 "orn",			"",			1,	0,	"a",	"1980",			"(bixiak)",
