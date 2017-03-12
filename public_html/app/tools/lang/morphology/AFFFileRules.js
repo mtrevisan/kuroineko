@@ -306,8 +306,6 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 							else{
 								//'-er
 								console.log(inf + '/bE' + getVanishingFlag(inf) + '	po:verb is:infinitive_simple');
-								if(inf.match(/der$/))
-									console.log(unmarkDefaultStress(inf.replace(/der$/, 'dre')) + '	po:verb is:infinitive_simple st:' + inf);
 								console.log(unmarkDefaultStress((theme.regular.themeT4? theme.regular.themeT4: theme.irregular.themeT4) + 'rò') + '/bJ	po:verb ts:indicative_future st:' + inf);
 								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/aE' + getVanishingFlag(inf) + 'IJ	po:verb ts:indicative_present st:' + inf);
 								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'oe') + '/aK	po:verb ts:indicative_present is:interrogative st:' + inf);
