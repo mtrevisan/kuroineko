@@ -262,9 +262,9 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	//if inf contains ƚ > add /aEÉ
 	//if inf does not contains l or ƚ > add /aEÈÉ
 	var getVanishingFlag = function(word){
-		if(word.search(/(^|[aeiouàèéíòóú])ƚ[aeiouàèéíòóú]/))
+		if(word.search(/ƚ/) >= 0)
 			return 'É';
-		if(word.search(/(^|[aeiouàèéíòóú])l[aeiouàèéíòóú]/) || word.search(/[đŧ]/))
+		if(word.search(/(^|[aeiouàèéíòóú])l[aeiouàèéíòóú]/) >= 0 || word.search(/[đŧ]/) >= 0)
 			return 'È';
 		return 'ÈÉ';
 	};
