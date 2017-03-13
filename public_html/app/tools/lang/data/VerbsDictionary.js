@@ -4084,6 +4084,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "par",			"s",			4,	3,	"a",	"1775",			"",
 "par",			"skon",		4,	3,	"a",	"1867",			"",
 "parabolan",	"",			1,	7,	"g",	"1810",			"",
+"paraden",		"",			1,	5,	"a",	"1829",			"",
+"paraf",			"",			1,	3,	"g",	"1829",			"Firmar ko un númaro.",
 "pare",			"",			1,	3,	"a",	"1364",			"",
 "parec",			"",			1,	3,	"a",	"1560",			"",
 "parec",			"des",		1,	3,	"a",	"1590",			"",
