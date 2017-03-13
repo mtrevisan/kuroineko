@@ -22,7 +22,7 @@
 # see <http://www.gnu.org/licenses/>.
 
 NAME Diŧionario de lengua vèneta
-VERSION 1.4.4 (2017/02/15)
+VERSION 1.4.4 (2017/03/13)
 HOME http://parnodexmentegar.orgfree.com/
 LANG vec
 
@@ -31,7 +31,7 @@ SET UTF-8
 
 TRY ʼeaoinrtlƚsdkpvmuèxgfàòbíhéŧójɉñcúSđLȽIPETKVAMDNFBRJGCOUĐXÀÈŦHɈÒÑÍÉÓÚ-
 
-KEY esdr|redft|trfg|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà-|àòèù-|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìè
+KEY esdr|redft|trfg|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà-|àòèù-|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìèòà
 
 
 # avoid wrong spelling of letterwords (km, GHz, DVD, ...)
@@ -52,7 +52,7 @@ MAP oóòOÓÒ
 MAP uúUÚ
 
 # replace input characters
-ICONV 12
+ICONV 13
 ICONV dh đ
 ICONV Dh Đ
 ICONV fh f
@@ -65,9 +65,10 @@ ICONV nh ñ
 ICONV Nh Ñ
 ICONV th ŧ
 ICONV Th Ŧ
+ICONV ' ʼ
 
 # frequently switched character groups
-REP 12
+REP 16
 REP a à
 REP e è
 REP e é
@@ -80,17 +81,14 @@ REP ù ú
 REP s x
 REP x s
 REP ʼ ʼ_
+REP iko$ ego
+REP iki$ egi
+REP ika$ ega
+REP ike$ ege
 
 
 FLAG UTF-8
 
-
-# max vanishing l position
-# lemoxinar	1 -àr
-# toler		2 -ér
-# lènđer		3 '-er
-# languidir	4 -<is>ír
-# languir	5 -ír
 
 # FIXME
 # Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug. par tuti i mòdi e i tenpi fora ke inté ‘l infenío, partithipio ativo, e xerundio
