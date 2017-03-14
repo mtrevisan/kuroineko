@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<link rel="shortcut icon" href="../favicon.png" />
+
+	<title>test HunspellGenerator</title>
+
+	<script src="../app/AMDLoader.js"></script>
+
+	<script>
+		AMDLoader.config = {
+			baseUrl: '../app',
+			paths: {
+				libs: '../libs'
+			}
+		};
+
+
+		require(['tools/spellchecker/HunspellGenerator', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.aff'], function(HunspellGenerator, affFile){
+			var generator = new HunspellGenerator(affFile);
+
+			var word = 'man/W';
+			var suggestions = generator.applyRules(word);
+			var plainSuggestions = suggestions.map(function(el){ return el.suggestion; });
+console.log(plainSuggestions);
+console.log(suggestions);
+		});
+
+	</script>
+</head>
+
+<body>
+</body>
+</html>
