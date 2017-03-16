@@ -22,7 +22,7 @@
 # see <http://www.gnu.org/licenses/>.
 
 NAME Diŧionario de lengua vèneta
-VERSION 1.4.4 (2017/03/13)
+VERSION 2.0.0 (2017/03/16)
 HOME http://parnodexmentegar.orgfree.com/
 LANG vec
 
@@ -424,7 +424,7 @@ SFX a0 oe ime/G0G1G2 oe
 SFX a0 oe imene/G0G1G2 oe
 SFX a0 oe ine/K0 oe
 SFX a0 oe itu/M0 oe
-SFX a0 oe one/K0 oe
+SFX a0 e ne/K0 oe
 SFX a0 r de er
 SFX a0 r do/B0I0 ar
 SFX a0 r ge er
@@ -540,23 +540,6 @@ SFX a1 0 àvelo/B0 [aei]r
 SFX a1 0 ave-lo/B0 [aei]r
 SFX a1 0 íelo/B0 [aei]r
 SFX a1 0 íe-lo/B0 [aei]r
-
-# SFX a ar àelo/B ar
-# SFX a ar àvelo/B ar
-# SFX a ar éelo/B ar
-# SFX a ar évelo/B ar
-# SFX a ar eràvelo/B ar
-# SFX a ar eríelo/B ar
-# SFX a ar eralo/B ar
-# SFX a er éelo/B er
-# SFX a er évelo/B er
-# SFX a er aràvelo/B er
-# SFX a er aríelo/B er
-# SFX a er aralo/B er
-# SFX a oe elo/B oe
-# SFX a 0 àvelo/B [aei]r
-# SFX a 0 íelo/B [aei]r
-# SFX a 0 alo/B [aei]r
 
 SFX a2 Y 46
 SFX a2 ar àeƚo/B0 ar
@@ -765,7 +748,7 @@ SFX b0 rò ve/J0 erò
 SFX b0 rò vi/J0L0N0 erò
 SFX b0 rò vo/J0 erò
 SFX b0 uerò ú/B0 uerò
-SFX b0 uerò udo/B0 uerò
+SFX b0 erò do/B0 uerò
 SFX b0 xerò gando/E0E1E2 dixerò
 SFX b0 xerò gàndome/G0G1G2 dixerò
 SFX b0 xerò gàndomene/G0G1G2 dixerò
@@ -1971,7 +1954,7 @@ SFX h0 oe ime/G0G1G2 oe
 SFX h0 oe imene/G0G1G2 oe
 SFX h0 oe ine/K0 oe
 SFX h0 oe itu/M0 oe
-SFX h0 oe one/K0 oe
+SFX h0 e ne/K0 oe
 SFX h0 r do/B0I0 ar
 SFX h0 r me/G0G1G2 ar
 SFX h0 r ndo/E0E1E2 ar
@@ -2122,10 +2105,10 @@ SFX i0 r gàntomene/G0G1G2 andar
 # vèrbi -ér inregolari ((stra)saver, (re)aver, (re)gaver)
 # themeT1 + r/a0jE0E1E2
 SFX j0 Y 357
-SFX j0 saver sojo saver
-SFX j0 saver soɉo saver
-SFX j0 saver sòjo saver
-SFX j0 saver sòɉo saver
+SFX j0 aver ojo saver
+SFX j0 aver oɉo saver
+SFX j0 aver òjo saver
+SFX j0 aver òɉo saver
 SFX j0 0 í/N0 aver
 SFX j0 0 íe/F0F1F2J0 aver
 SFX j0 0 ímoe/K0 aver
@@ -2344,9 +2327,9 @@ SFX j0 er arisonse aver
 SFX j0 er aron/J0 aver
 SFX j0 er arone/K0 aver
 SFX j0 er aronse aver
-SFX j0 er elo/B0 aver
-SFX j0 er eƚo/B0 aver
-SFX j0 er ene/K0 aver
+SFX j0 r lo/B0 aver
+SFX j0 r ƚo/B0 aver
+SFX j0 r ne/K0 aver
 SFX j0 er ié/N0 aver
 SFX j0 er iéu/O0 aver
 SFX j0 er iónmene/G0G1G2 aver
@@ -2754,12 +2737,12 @@ SFX m0 er ímene/G0G1G2 er
 SFX m0 er ime/G0G1G2H er
 SFX m0 er itu/M0 er
 SFX m0 er one/K0 er
-SFX m0 evo ebiene/K0 evo
-SFX m0 evo ebime/G0G1G2 evo
-SFX m0 evo ebímene/G0G1G2 evo
-SFX m0 evo ebione/K0 evo
-SFX m0 evo ebionme/G0G1G2 evo
-SFX m0 evo ebiónmene/G0G1G2 evo
+SFX m0 vo biene/K0 evo
+SFX m0 vo bime/G0G1G2 evo
+SFX m0 vo bímene/G0G1G2 evo
+SFX m0 vo bione/K0 evo
+SFX m0 vo bionme/G0G1G2 evo
+SFX m0 vo biónmene/G0G1G2 evo
 SFX m0 evo ébitu/M0 evo
 SFX m0 o e/K0 vo
 SFX m0 o i/E0E1E2 o
@@ -2905,9 +2888,9 @@ SFX o0 aerò é/F0F1F2N0 aerò
 SFX o0 aerò éu/O0 aerò
 SFX o0 aerò ò aerò
 SFX o0 aerò ónmene/G0G1G2 aerò
-SFX o0 aerò arónmene/G0G1G2 aerò
-SFX o0 aerò arone/K0 aerò
-SFX o0 aerò aronme/G0G1G2 aerò
+SFX o0 erò rónmene/G0G1G2 aerò
+SFX o0 erò rone/K0 aerò
+SFX o0 erò ronme/G0G1G2 aerò
 SFX o0 aerò emo/E0E1E2J0 aerò
 SFX o0 aerò en/J0 aerò
 SFX o0 aerò on/E0E1E2J0 aerò
@@ -3030,6 +3013,7 @@ SFX p0 èser eséndome/G0G1G2 èser
 SFX p0 èser eséndomene/G0G1G2 èser
 SFX p0 èser eséntome/G0G1G2 èser
 SFX p0 èser eséntomene/G0G1G2 èser
+SFX p0 èser esí/E0E1E2F0F1F2L0N0 èser
 SFX p0 èser esú/B0 èser
 SFX p0 èser esendo/E0E1E2 èser
 SFX p0 èser esente/T0I0 èser
@@ -3326,7 +3310,6 @@ SFX p0 ser rimo/E0E1E2J0 èser
 SFX p0 ser ritu/M0 èser
 SFX p0 ser ro/J0 èser
 SFX p0 ser rone/K0 èser
-SFX p0 ser sí/E0E1E2F0F1F2L0N0 èser
 
 
 # tute le deklinaŧion, ajetivi de prima klase
