@@ -19,7 +19,12 @@ define(function(){
 	var Constructor = function(affData, flags){
 		this.flags = flags || {};
 
-		parseAFF.call(this, affData);
+		try{
+			parseAFF.call(this, affData);
+		}
+		catch(e){
+			console.log(e);
+		}
 	};
 
 	/**
@@ -140,7 +145,7 @@ define(function(){
 			var suggestionsToAdd = applyRule.call(this, word, cl);
 			Array.prototype.push.apply(suggestions, suggestionsToAdd);
 		}, this);
-		
+
 		return suggestions;
 	};
 

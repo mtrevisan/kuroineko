@@ -21,7 +21,7 @@
 		require(['tools/spellchecker/HunspellGenerator', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.aff'], function(HunspellGenerator, affFile){
 			var generator = new HunspellGenerator(affFile);
 
-			var word = 'man/W';
+			var word = 'partamento/T0mfI0';
 			var suggestions = generator.applyRules(word);
 			var plainSuggestions = suggestions.map(function(el){ return el.suggestion; });
 console.log(plainSuggestions);
