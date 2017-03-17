@@ -263,10 +263,10 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 	//if inf does not contains l or ƚ > add /aEÈÉ
 	var getVanishingFlag = function(word){
 		if(word.search(/ƚ/) >= 0)
-			return 'É';
+			return 'E2';
 		if(word.search(/(^|[aeiouàèéíòóú])l[aeiouàèéíòóú]/) >= 0 || word.search(/[đŧ]/) >= 0)
-			return 'È';
-		return 'ÈÉ';
+			return 'E1';
+		return 'E1E2';
 	};
 
 	var generateDic = function(verbs){
@@ -286,13 +286,13 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 						case 1:
 							if(!Word.isStressed(inf)){
 								//-àr
-								console.log(inf + '/a0a1a2E0E1E2' + getVanishingFlag(inf) + '	po:verb is:infinitive_simple');
-								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/a0a1a2E0E1E2' + getVanishingFlag(inf) + 'I0J0	po:verb ts:indicative_present st:' + inf);
+								console.log(inf + '/a0a1a2E0' + getVanishingFlag(inf) + '	po:verb is:infinitive_simple');
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/a0a1a2E0' + getVanishingFlag(inf) + 'I0J0	po:verb ts:indicative_present st:' + inf);
 								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'oe') + '/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:' + inf);
 							}
 							else{
 								//'-ar
-								console.log(inf + '/b0b1b2E0E1E2' + getVanishingFlag(inf) + '	po:verb is:infinitive_simple');
+								console.log(inf + '/b0b1b2E0' + getVanishingFlag(inf) + '	po:verb is:infinitive_simple');
 								console.log(unmarkDefaultStress((theme.regular.themeT4? theme.regular.themeT4: theme.irregular.themeT4) + 'rò') + '/b0b1b2J0	po:verb ts:indicative_future st:' + inf);
 							}
 							break;
@@ -300,14 +300,14 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 						case 2:
 							if(!verb.rhizotonic){
 								//-ér
-								console.log(inf + '/a0a1a2E0E1E2' + getVanishingFlag(inf) + '	po:verb is:infinitive_simple');
-								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/a0a1a2E0E1E2' + getVanishingFlag(inf) + 'I0J0	po:verb ts:indicative_present st:' + inf);
+								console.log(inf + '/a0a1a2E0' + getVanishingFlag(inf) + '	po:verb is:infinitive_simple');
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/a0a1a2E0' + getVanishingFlag(inf) + 'I0J0	po:verb ts:indicative_present st:' + inf);
 							}
 							else{
 								//'-er
-								console.log(inf + '/b0b1b2E0E1E2' + getVanishingFlag(inf) + '	po:verb is:infinitive_simple');
+								console.log(inf + '/b0b1b2E0' + getVanishingFlag(inf) + '	po:verb is:infinitive_simple');
 								console.log(unmarkDefaultStress((theme.regular.themeT4? theme.regular.themeT4: theme.irregular.themeT4) + 'rò') + '/b0b1b2J0	po:verb ts:indicative_future st:' + inf);
-								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/a0a1a2E0E1E2' + getVanishingFlag(inf) + 'I0J0	po:verb ts:indicative_present st:' + inf);
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/a0a1a2E0' + getVanishingFlag(inf) + 'I0J0	po:verb ts:indicative_present st:' + inf);
 								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'oe') + '/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:' + inf);
 							}
 							break;
@@ -315,17 +315,17 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 						case 3:
 							if(verb.semiSpecial3rd){
 								//-<is>ír/-ír
-								console.log(inf + '/a0a1a2e0e1e2E0E1E2' + getVanishingFlag(inf) + '	po:verb is:infinitive_simple');
-								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/e0e1e2E0E1E2' + getVanishingFlag(inf) + 'I0J0	po:verb ts:indicative_present st:' + inf);
+								console.log(inf + '/a0a1a2e0e1e2E0' + getVanishingFlag(inf) + '	po:verb is:infinitive_simple');
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/e0e1e2E0' + getVanishingFlag(inf) + 'I0J0	po:verb ts:indicative_present st:' + inf);
 							}
 							else if(verb.special3rd){
 								//-<is>ír
-								console.log(inf + '/a0a1a2c0c1c2E0E1E2' + getVanishingFlag(inf) + '	po:verb is:infinitive_simple');
+								console.log(inf + '/a0a1a2c0c1c2E0' + getVanishingFlag(inf) + '	po:verb is:infinitive_simple');
 							}
 							else{
 								//-ír
-								console.log(inf + '/a0a1a2d0d1d2E0E1E2' + getVanishingFlag(inf) + '	po:verb is:infinitive_simple');
-								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/d0d1d2E0E1E2' + getVanishingFlag(inf) + 'I0J0	po:verb ts:indicative_present st:' + inf);
+								console.log(inf + '/a0a1a2d0d1d2E0' + getVanishingFlag(inf) + '	po:verb is:infinitive_simple');
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/d0d1d2E0' + getVanishingFlag(inf) + 'I0J0	po:verb ts:indicative_present st:' + inf);
 								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'oe') + '/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:' + inf);
 							}
 					}
