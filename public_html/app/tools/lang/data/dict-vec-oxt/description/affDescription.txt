@@ -62,7 +62,7 @@ Z0: (public) ignore upper/lower case (used, e.g., for latin numerals)
 (0: (public) altered substantives (-òto/a)
 )0: (public) altered substantives (-on)
 §0: (public) altered substantives (-ato/a)
-<0: (oublic) altered substantives (-aŧo/a)
+<0: (public) altered substantives (-aŧo/a)
 =0: (public) altered substantives (stra-)
 ^0: (public) altered substantives (pre-)
 +0: (public) altered substantives (des/x-)
@@ -118,7 +118,7 @@ chi naturale = ki
 
 ^[^ƚ\n]*[eaouèàòéóú][ln]/[^Uu\t]*\t	> add U/u
 ƚ[^/\n]{1,}[^a]/[^\t\n]*& > remove & and replace with eto/T
-/([^\t\n\sğ]*)ğ([^ğ\t\n\s]*[\t\s\n]+) > /($1)GV$2
+/([^\t\n\s]*)ğ([^\t\n\s]*[\t\s\n]+) > /($1)GV$2
 # [^\n]+\n > 
 / [^\n]*\n > 
 \t[^\r\n]*\n > \n
