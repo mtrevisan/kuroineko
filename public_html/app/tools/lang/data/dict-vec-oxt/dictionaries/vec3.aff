@@ -1,6 +1,40 @@
+NAME Diŧionario de lengua vèneta
+VERSION 2.0.0 (2017/03/16)
+HOME http://parnodexmentegar.orgfree.com/
+LANG vec
 
+SET UTF-8
+
+FLAG long
+
+
+TRY ʼeaoinrtlƚsdkpvmuèxgfàòbíhéŧójɉñcúSđLȽIPETKVAMDNFBRJGCOUĐXÀÈŦHɈÒÑÍÉÓÚ-
+
+KEY esdr|redft|trfg|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà-|àòèù-|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìèòà
+
+
+# forbid upper case characters at word bound in compounds
+#HECKCOMPOUNDCASE
+
+# minimum length of words in compound words
 #OMPOUNDMIN 2
-#
+
+#OMPOUNDBEGIN Cb
+#OMPOUNDMIDDLE Cm
+#OMPOUNDEND Ce
+##OMPOUNDLAST Ce
+#OMPOUNDPERMITFLAG Cp
+
+#OMPOUNDRULE 1
+#OMPOUNDRULE (Cb)-(Ce)
+
+# forbid word duplication in compounds
+#HECKCOMPOUNDDUP
+
+CHECKCOMPOUNDPATTERN 2
+CHECKCOMPOUNDPATTERN do sento do-xento
+CHECKCOMPOUNDPATTERN trè sento trè-xento
+
 #OMPOUNDBEGIN 0
 #OMPOUNDMIDDLE 0
 #OMPOUNDEND 1
@@ -15,52 +49,43 @@
 #qq/02
 #ww/-2
 
-#      1000-100-13
-#1000000000-100-13-
-#   1000000-100-13-
-#      1000-100-13
-
-#      1000-100-20-
-#1000000000-100-20-
-#   1000000-100-20-
-#      1000-100-20-
-#                  1/../9
 #sfx
-#8 meliardi 012345
-#7 meliardo 012345
-#6 melioni 01234
-#5 melion 01234
-#4 mile 012368
-#3 doxento 012468
-#3 sento 012468
-#2 vinti 01468
-#2 trédexe 468
-#1 do 468
-#0 un 57
+#Ci meliardi CaCbCcCdCeCf
+#Ch meliardo CaCbCcCdCeCf
+#Cg melioni CaCbCcCdCe
+#Cf melion CaCbCcCdCe
+#Ce mile CaCbCcCdCgCi
+#Cd doxento CaCbCcCeCgCi
+#Cd sento CaCbCcCeCgCi
+#Cc vinti CaCbCeCgCi
+#Cc trédexe CeCgCi
+#Cb do CeCgCi
+#Ca un CfCh
 
-PFX 8 Y 1
-PFX 8 0 -/012345
+PFX Ci Y 1
+PFX Ci 0 -/CaCbCcCdCeCf
 
-PFX 7 Y 1
-PFX 7 0 -/012345
+PFX Ch Y 1
+PFX Ch 0 -/CaCbCcCdCeCf
 
-PFX 6 Y 1
-PFX 6 0 -/01234
+PFX Cg Y 1
+PFX Cg 0 -/CaCbCcCdCe
 
-PFX 5 Y 1
-PFX 5 0 -/01234
+PFX Cf Y 1
+PFX Cf 0 -/CaCbCcCdCe
 
-PFX 4 Y 1
-PFX 4 0 -/012368
+PFX Ce Y 1
+PFX Ce 0 -/CaCbCcCdCgCi mile
 
-PFX 3 Y 1
-PFX 3 0 -/012468
+PFX Cd Y 2
+PFX Cd 0 -/CaCbCcCeCgCi [sŧ]ento
+PFX Cd 0 -/CaCbCcCeCgCi xento
 
-PFX 2 Y 1
-PFX 2 0 -/468
+PFX Cc Y 1
+PFX Cc 0 -/CeCgCi
 
-PFX 1 Y 1
-PFX 1 0 -/468
+PFX Cb Y 1
+PFX Cb 0 -/CeCgCi
 
-PFX 0 Y 1
-PFX 0 0 -/57 un
+PFX Ca Y 1
+PFX Ca 0 -/CfCh un
