@@ -48,10 +48,8 @@ define(function(){
 			//remove comment lines
 			data = removeAffixComments.call(this, data);
 
-			var lines = data.split(/\r?\n/)
-				//filter out empty lines
-				.filter(function(line){ return line.length; });
-			var len = lines.length,
+			var lines = data.split(/\r?\n/),
+				len = lines.length,
 				i,
 				definitionParts, ruleType, fun;
 			for(i = 0; i < len; i ++){
