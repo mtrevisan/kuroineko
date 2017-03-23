@@ -3537,6 +3537,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "mili",			"ar",			1,	1,	"a",	"1560",			"Umiliar.",
 "milit",			"",			1,	1,	"a",	"1980",			"",
 "milŧ",			"x",			4,	4,	"a",	"1847",			"Ameđar (de i fruti).",
+"min",			"per",		4,	3,	"a",	"1829",			"Pagar el fio.",
 "min",			"pre",		4,	3,	"a",	"1775",			"Pagar el fio.",
 "minaŧ",			"",			1,	3,	"g",	"1867",			"Fra na bravàa, minacar.",
 "mincon",		"",			1,	4,	"a",	"1775",			"Oxelar.",
