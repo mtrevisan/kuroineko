@@ -14696,7 +14696,7 @@ peskar/a0a1a2E0E1E2v0.0	po:verb ts:infinitive_simple
 pesko/a0a1a2E0E1E2I0J0.0	po:verb ts:indicative_present st:peskar
 péskoe/a0a1a2K0.0	po:verb ts:indicative_present is:interrogative st:peskar
 pestar/a0a1a2E0E1E2r0-0	po:verb ts:infinitive_simple
-pesto/a0a1a2E0E1E2I0J0-0)0	po:verb ts:indicative_present st:pestar po:noun
+pesto/a0a1a2E0E1E2I0J0-0)0	po:verb ts:indicative_present st:pestar po:adjective po:noun
 péstoe/a0a1a2K0-0	po:verb ts:indicative_present is:interrogative st:pestar
 pestegar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 péstego/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:pestegar
@@ -14795,7 +14795,7 @@ petufar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 petufo/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:petufar
 petúfoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:petufar
 pesar/a0a1a2E0E1E2-0.0	po:verb ts:infinitive_simple
-peso/a0a1a2E0E1E2I0J0-0.0&0	po:verb ts:indicative_present st:pesar po:noun
+peso/a0a1a2E0E1E2I0J0-0.0&0)0	po:verb ts:indicative_present st:pesar po:noun
 pésoe/a0a1a2K0-0.0	po:verb ts:indicative_present is:interrogative st:pesar
 peŧar/a0a1E0E1-0.0	po:verb ts:infinitive_simple
 peŧo/a0a1E0E1I0J0-0.0&0	po:verb ts:indicative_present st:peŧar po:noun
@@ -19534,7 +19534,7 @@ persuadre	po:verb ts:infinitive_simple st:persuàder
 persuaderò/b0b1b2J0	po:verb ts:indicative_future st:persuàder
 persuado/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:persuàder
 persuàdoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:persuàder
-persuaxo/B0I0	po:verb ts:participle_perfect_strong st:persuàder
+persuaxo/B0I0	po:verb ts:participle_perfect_strong st:persuàder po:adjective
 parsuàder/b0b1b2E0E1E2	po:verb ts:infinitive_simple
 parsuadre	po:verb ts:infinitive_simple st:parsuàder
 parsuaderò/b0b1b2J0	po:verb ts:indicative_future st:parsuàder
@@ -24329,6 +24329,10 @@ komo	po:pronoun po:adverb po:adjective_interrogative st:kome
 kuando	po:pronoun po:adjective_interrogative al:kuande al:koando
 koando	po:pronoun po:adjective_interrogative st:kuando
 kuande	po:pronoun po:adjective_interrogative st:kuando
+perŧò	po:pronoun po:adjective_interrogative
+persò	po:pronoun po:adjective_interrogative
+parŧò	po:pronoun po:adjective_interrogative
+parsò	po:pronoun po:adjective_interrogative
 percò	po:pronoun po:adjective_interrogative
 parcò	po:pronoun po:adjective_interrogative
 perké	po:pronoun po:adjective_interrogative
@@ -26033,6 +26037,7 @@ dabon	po:adverb
 dadrío	po:preposition po:adverb
 danbra/D0	po:noun
 dapartuto/I0	po:adverb
+dapertuto/I0	po:adverb
 darente/E0E1E2T0I0	po:adjective po:adverb po:noun
 daréntemene/G0G1G2	po:adjective po:adverb po:noun
 darénteme/G0G1G2	po:adjective po:adverb po:noun
@@ -27961,7 +27966,7 @@ pèrsego/T0	po:noun
 pèrtega/D0	po:noun
 pèsa/D0(0	po:noun
 pèso/T0I0(0	po:noun
-pèste/D0	po:noun
+pèsta/C0	po:noun
 pèten/D0u0	po:noun
 pèŧa/D0(0	po:noun
 pèŧo/T0I0(0	po:noun
@@ -32221,14 +32226,13 @@ persegeto/T0I0	po:noun
 persénbol/T0T2u0	po:noun
 personèr/B0V0	po:noun
 pertegador/C0V0	po:noun
-peruka/D0)0	po:noun
+peruka/D0&0	po:noun
 perusoleta/D0T2	po:noun
 peruŧoleta/D0	po:noun
 perúsola/D0T2	po:noun
 perúŧola/D0	po:noun
 pesarèl/T0T2U0	po:noun
 pesato/B0I0	po:noun
-peseto/B0I0	po:noun
 peskador/C0V0	po:noun
 pesòl/T0T2U0	po:noun
 pestacada/D0Y0	po:noun
@@ -35855,7 +35859,7 @@ morévol/D0T3u0	po:adjective
 mormolador/C0V0	po:noun
 mormorador/C0V0	po:noun
 mortal/D0T3U0*0	po:adjective po:noun
-mortòr/T0	po:adjective
+mortòr/T0T1	po:adjective
 mostaso/T0I0&0	po:noun
 mostaŧo/T0I0&0	po:noun
 moxo/T0	po:adjective
@@ -35975,12 +35979,14 @@ paradixo/T0I0&0	po:noun
 paraixo/T0I0&0	po:noun
 parangon/D0U0	po:noun
 parentado/T0Y0	po:noun
+parsenar/T0	po:noun
 partisipasion/D0U0	po:noun
 partisipévol/D0T3u0	po:noun
 partiŧipaŧion/D0U0	po:noun
 partiŧipévol/D0u0	po:noun
 partísipe/T0	po:noun
 partíŧipe/T0	po:noun
+parŧòndena	po:adverb
 parúsola/D0T2	po:noun
 pasadiman/D0u0	po:adverb al:pasadoman
 pasadoman/D0u0	po:adverb st:pasadiman
@@ -36008,7 +36014,6 @@ pentimento/T0mfI0	po:noun
 pentura/D0-0,0	po:noun
 penxador/C0V0	po:noun
 pepè	po:noun
-perdiŧion/D0T2U0	po:noun
 perdonanŧa/D0T2	po:noun
 perdonanŧia/D0T2	po:noun
 perdonévol/D0T3u0	po:adjective
@@ -36030,7 +36035,6 @@ persòndena	po:adverb
 perspikase/T0	po:adjective
 perspikaŧe/T0	po:adjective
 pertegon/C0U0	po:noun
-perŧò	po:conjunction
 perŧòndena	po:adverb
 pesame/T0	po:noun
 pesarol/T0U0V0	po:noun
@@ -36436,7 +36440,6 @@ sparapè/T0	po:noun
 spasadamente/I0W2	po:adverb
 spasadura/D0Y0	po:noun
 spasanamente/I0W2	po:adjective po:adverb
-spatafio/T0	po:noun
 spaŧadamente/I0W2	po:adverb
 spaŧadura/D0Y0	po:noun
 spaŧanamente/I0W2	po:adjective po:adverb
@@ -43050,7 +43053,6 @@ mormir/T0	po:noun
 morñao	po:interjection
 moroxeŧo/T0T2*0	po:noun
 morseta/D0	po:noun
-mortòrio/T0	po:noun
 mosafadiga/D0	po:noun
 mosenigo/T0	po:noun
 moseta/D0	po:noun
@@ -43629,8 +43631,8 @@ pastoril/D0T3	po:noun
 pastran/T0U0	po:noun
 pastuko/B0I0	po:adjective po:noun
 patafia/D0	po:adverb
-patafio/T0	po:noun
-petafio/T0	po:noun
+patafio/T0*0	po:noun
+petafio/T0*0	po:noun
 patatin	po:interjection
 patatúnfete	po:interjection
 túnfete	po:interjection
@@ -43712,12 +43714,8 @@ perfil/T0T2	po:noun
 pèrga/D0	po:noun
 perikoloxo/B0W0I0mf	po:adjective po:noun al:perikuluxi
 perikoƚoxo/B0W1mf	po:adjective po:noun al:perikuƚuxi
-perikuluxi	po:adjective po:noun is:plural st:perikoloxo
-perikuƚuxi	po:adjective po:noun is:plural st:perikoƚoxo
 parikoloxo/B0W0I0mf	po:adjective po:noun al:parikuluxi
 parikoƚoxo/B0W1mf	po:adjective po:noun al:parikuƚuxi
-parikuluxi	po:adjective po:noun is:plural st:parikoloxo
-parikuƚuxi	po:adjective po:noun is:plural st:parikoƚoxo
 petrièra/D0	po:noun
 perièra/D0	po:noun
 periklitante/T0I0	po:adjective po:noun
@@ -43727,7 +43725,36 @@ peroxin/T0	po:noun st:pérol st:péroƚo
 perpetuèl/T0T2U0	po:noun
 persekudor/C0V0	po:noun
 persekutor/C0V0	po:noun
+parsar/T0	po:noun
+persar/T0	po:noun
+xkalenbro/T0	po:noun
+xkaƚenbro/T0	po:noun
+personaxo/T0	po:noun
+parsonaxo/T0	po:noun
+parsor/T0	po:noun
+persor/T0	po:noun
+parsuaxion/D0U0	po:noun
+persuaxion/D0U0	po:noun
+pertanto	po:conjunction
+partanto	po:conjunction
+pertegèr/T0	po:noun
+pertegeta/D0	po:noun
+perukèr/B0V0	po:noun
+parukèr/B0V0	po:noun
+perukin/T0	po:noun
+parukin/T0	po:noun
+perukon/C0U0	po:adjective po:noun
+peskadoreto/B0I0	po:noun
+peskaoreto/B0I0	po:noun
+peskaresa/D0	po:noun
+pesòko/B0I0	po:adjective
+pesatèl/T0T2U0	po:noun
+asprèo/T0	po:noun
+pesièra/D0	po:noun
+pestenega/D0	po:noun
+pestífer/B0	po:adjective
+pestrinèr/B0V0	po:noun
 
 
 
-/ 447
+/ 450
