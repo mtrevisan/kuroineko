@@ -35,8 +35,12 @@ KEY esdr|redft|trfg|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gf
 
 WORDCHARS -
 
-# switch off default word break at hyphens and n-dashes
-BREAK 0
+BREAK 5
+BREAK .
+BREAK ^'
+BREAK ^‘
+BREAK '$
+BREAK ’$
 
 # avoid wrong spelling of letterwords (km, GHz, DVD, ...)
 KEEPCASE Z0
