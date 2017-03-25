@@ -1,7 +1,7 @@
 # Diŧionario de lengua vèneta
 #
 # Venetan hunspell affix file
-# Copyright (C) 2017 Mauro Trevisan
+# Copyright (C) 2016-2017 Mauro Trevisan
 #
 # This file is distributed under GPL license.
 #
@@ -33,6 +33,10 @@ TRY ʼeaoinrtlƚsdkpvmuèxgfàòbíhéŧójɉñcúSđLȽIPETKVAMDNFBRJGCOUĐXÀ�
 
 KEY esdr|redft|trfg|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà-|àòèù-|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìèòà
 
+WORDCHARS -
+
+# switch off default word break at hyphens and n-dashes
+BREAK 0
 
 # avoid wrong spelling of letterwords (km, GHz, DVD, ...)
 KEEPCASE Z0
@@ -40,13 +44,10 @@ KEEPCASE Z0
 # affix rules can strip full words, not only one less characters
 FULLSTRIP
 
-# switch off default word break at hyphens and n-dashes
-BREAK 0
-
 # suggest the right forms for words which incorrectly choose the wrong letter from a related set more than once in a word
 MAP 5
 MAP eéèEÉÈ
-MAP aáAÀ
+MAP aàAÀ
 MAP iíIÍ
 MAP oóòOÓÒ
 MAP uúUÚ
@@ -119,7 +120,6 @@ FLAG long
 # themeT1 + r/a0E0E1E2, themeT1 + r/a0cE0E1E2, themeT1 + r/a0dE0E1E2, themeT1 + r/a0eE0E1E2
 # themeT8 + o/a0E0E1E2I0J0
 # themeT8 + oe/a0K0
-# abordar/abordir
 SFX a0 Y 389
 SFX a0 0 í/N0 er
 SFX a0 0 ímoe/K0 er
@@ -430,7 +430,7 @@ SFX a0 ir írmene/G0 ir
 SFX a0 o a/E0E1E2F0 o
 SFX a0 o e/E0E1E2F0J0 o
 SFX a0 o i/E0E1E2F0L0 [^i]o
-SFX a0 io i/E0E1E2F0L0 io
+SFX a0 o 0/E0E1E2F0L0 io
 SFX a0 oe ae/T0 oe
 SFX a0 oe ame/G0 oe
 SFX a0 oe amene/G0 oe
@@ -461,7 +461,7 @@ SFX a0 r ve/J0 [aei]r
 SFX a0 r vi/J0L0N0 [aei]r
 SFX a0 r vo/J0 [aei]r
 SFX a0 uer ú/B0 uer
-SFX a0 uer udo/B0 uer
+SFX a0 er do/B0 uer
 SFX a0 0 à/F0J0L0 [aei]r
 SFX a0 0 àe/F0 [aei]r
 SFX a0 0 è/J0 [aei]r
@@ -539,7 +539,7 @@ SFX a1 er arave-lo/B0 er
 SFX a1 er aràvelo/B0 er
 SFX a1 er aríelo/B0 er
 SFX a1 er aríe-lo/B0 er
-SFX a1 er elo/B0 er
+SFX a1 r lo/B0 er
 SFX a1 er é-lo/B0 er
 SFX a1 oe elo/B0 [^i]oe
 SFX a1 oe e-lo/B0 [^i]oe
@@ -886,7 +886,7 @@ SFX b1 ò íelo/B0 ò
 SFX b1 ò íe-lo/B0 ò
 SFX b1 ò àvelo/B0 ò
 SFX b1 ò ave-lo/B0 ò
-SFX b1 erò elo/B0 erò
+SFX b1 rò lo/B0 erò
 SFX b1 erò é-lo/B0 erò
 SFX b1 erò éelo/B0 erò
 SFX b1 erò ée-lo/B0 erò
@@ -1493,7 +1493,7 @@ SFX d0 ir ónmene/G0 ir
 SFX d0 o a/E0E1E2 o
 SFX d0 o e/E0E1E2F0I0J0 o
 SFX d0 o i/E0E1E2F0L0 [^i]o
-SFX d0 io i/E0E1E2F0L0 io
+SFX d0 o 0/E0E1E2F0L0 io
 SFX d0 r é/N0 ir
 SFX d0 r éu/O0 ir
 SFX d0 r do/B0 ir
@@ -1819,7 +1819,7 @@ SFX e0 ir eva/F0J0N0 ir
 SFX e0 ir eve/J0 ir
 SFX e0 ir evi/J0L0N0 ir
 SFX e0 ir evo/J0 ir
-SFX e0 ir i/E0E1E2F0L0 ir
+SFX e0 r 0/E0E1E2F0L0 ir
 SFX e0 ir o/J0 ir
 SFX e0 ir one/K0 ir
 SFX e0 ir on/E0E1E2J0 ir
@@ -2250,7 +2250,6 @@ SFX h0 r vo/J0 ar
 # themeT6 + da/D0Y0
 SFX h1 Y 71
 SFX h1 ào alo/B0 ào
-SFX h1 ào à-lo/B0 ào
 SFX h1 0 alo/B0 ar
 SFX h1 0 à-lo/B0 ar
 SFX h1 0 àe-lo/B0 ar
@@ -2274,9 +2273,10 @@ SFX h1 ar eràvelo/B0 ar
 SFX h1 ar erave-lo/B0 ar
 SFX h1 ar évelo/B0 ar
 SFX h1 ar eve-lo/B0 ar
+SFX h1 o -lo/B0 ào
 SFX h1 o elo/B0 o
 SFX h1 o e-lo/B0 o
-SFX h1 ào àgelo/B0 ào
+SFX h1 o gelo/B0 ào
 SFX h1 ào age-lo/B0 ào
 SFX h1 ar àvelo/B0 ar
 SFX h1 r ve-lo/B0 ar
@@ -2329,7 +2329,6 @@ SFX h1 ar eríselo/Q1 ar
 # themeT6 + da/D0Y0
 SFX h2 Y 71
 SFX h2 ào aƚo/B0 ào
-SFX h2 ào à-ƚo/B0 ào
 SFX h2 0 aƚo/B0 ar
 SFX h2 0 à-ƚo/B0 ar
 SFX h2 0 àe-ƚo/B0 ar
@@ -2353,9 +2352,10 @@ SFX h2 ar eràveƚo/B0 ar
 SFX h2 ar erave-ƚo/B0 ar
 SFX h2 ar éveƚo/B0 ar
 SFX h2 ar eve-ƚo/B0 ar
+SFX h2 o -ƚo/B0 ào
 SFX h2 o eƚo/B0 o
 SFX h2 o e-ƚo/B0 o
-SFX h2 ào àgeƚo/B0 ào
+SFX h2 o geƚo/B0 ào
 SFX h2 ào age-ƚo/B0 ào
 SFX h2 ar àveƚo/B0 ar
 SFX h2 r ve-ƚo/B0 ar
@@ -2523,7 +2523,7 @@ SFX j0 aver í/F0F1F2N0 gaver
 SFX j0 aver ímoe/K0 gaver
 SFX j0 aver ò/J0 aver
 SFX j0 aver òe/K0 aver
-SFX j0 aver ame/G0G1G2 aver
+SFX j0 ver me/G0G1G2 aver
 SFX j0 aver ebiè/J0 aver
 SFX j0 aver ebiène/K0 aver
 SFX j0 aver ebié/N0 aver
@@ -2712,7 +2712,7 @@ SFX j0 er onme/G0G1G2 aver
 SFX j0 er udo/B0 aver
 SFX j0 o e/E0E1E2F0F1F2J0 o
 SFX j0 r de aver
-SFX j0 r e/K0 aver
+SFX j0 r 0/K0 aver
 SFX j0 r ge aver
 SFX j0 r me/G0G1G2 aver
 SFX j0 r mo/J0 aver
@@ -3330,7 +3330,7 @@ SFX o0 er ime/G0G1G2 er
 SFX o0 o a/E0E1E2 o
 SFX o0 o e/E0E1E2F0F1F2I0J0 o
 SFX o0 o i/E0E1E2F0F1F2L0 [^i]o
-SFX o0 io i/E0E1E2F0F1F2L0 io
+SFX o0 o 0/E0E1E2F0F1F2L0 io
 
 # vèrbi '-er inregolari ((r[ei])èser)
 # themeT1 + er/p
