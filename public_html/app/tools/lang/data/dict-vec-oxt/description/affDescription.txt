@@ -112,8 +112,8 @@ z aspra-cruda/dolce = ŧ/đ
 s rude/aspra = x
 chi naturale = ki
 
-^[^ƚ\n]*[eaouèàòéóú][ln]/[^Uu\t]*\t	> add U/u
-ƚ[^/\n]{1,}[^a]/[^\t\n]*& > remove & and replace with eto/T
+^[^ƚ\n]*[eaouèàòéóú][ln]/[^ZUu\t]*\t	> add U0/u0
+ƚ[^/\n]{1,}[^a]/[^\t\n]*&0 > remove &0 and replace with o/T0
 /([^\t\n\s]*)ğ([^\t\n\s]*[\t\s\n]+) > /($1)GV$2
 # [^\n]+\n > 
 / [^\n]*\n > 
