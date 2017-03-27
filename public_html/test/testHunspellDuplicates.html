@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<link rel="shortcut icon" href="../favicon.png" />
+
+	<title>test HunspellDuplicates</title>
+
+	<script src="../app/AMDLoader.js"></script>
+
+	<script>
+		AMDLoader.config = {
+			baseUrl: '../app',
+			paths: {
+				libs: '../libs'
+			}
+		};
+
+
+		require(['tools/spellchecker/HunspellGenerator', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.aff', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.dic'], function(HunspellGenerator, affFile, dicFile){
+			var generator = new HunspellGenerator(affFile);
+			var dictionary = dicFile.split(/[\r\n]+/)
+				.shift();
+
+			var duplicates = new Map();
+			var dict = new Set();
+			dictionary.forEach(function(word){
+				var suggestions = generator.applyRules(word);
+				suggestions.forEach(function(el){
+					var suggestion = el.suggestion;
+					if(dict.has(suggestion))
+						duplicates.set(suggestion, duplicates.get(suggestion) + 1);
+					else
+						dict.add(suggestion);
+				});
+			});
+console.log(duplicates);
+		});
+
+	</script>
+</head>
+
+<body>
+</body>
+</html>
