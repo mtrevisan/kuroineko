@@ -18,21 +18,29 @@
 		};
 
 
-		require(['tools/spellchecker/HunspellGenerator', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.aff', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.dic'], function(HunspellGenerator, affFile, dicFile){
+		require(['tools/spellchecker/HunspellGenerator', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.aff', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.dic', 'tools/data/structs/Trie'], function(HunspellGenerator, affFile, dicFile, Trie){
 			var generator = new HunspellGenerator(affFile);
 			var dictionary = dicFile.split(/[\r\n]+/);
 			//remove the counter
 			dictionary.shift();
 
-			var duplicates = new Map();
+			var t = new Trie();
+			/*var duplicates = new Map();
 			var dict = new Set();
-			var productions = [];
+			var productions = [];*/
 			dictionary.forEach(function(word){
 				if(!/^\s*\//.test(word) && word.length){
+					word = word.replace(/\t.*$/, '');
+
 					var continuationClasses = generator.extractContinuationClasses(word);
 					continuationClasses.forEach(function(continuationClass){
 						if(!generator.hasRule(continuationClass))
 							console.log('rule for class ' + continuationClass + ' not found');
+					});
+
+					var suggestions = generator.applyRules(word);
+					suggestions.forEach(function(el){
+						t.add(el.suggestion);
 					});
 /*					word = word.replace(/\t.*$/, '');
 
@@ -51,7 +59,7 @@
 					});*/
 				}
 			});
-			
+
 			/*productions.forEach(function(suggestion, idx){
 				//find if there is a duplicate or not
 				if(productions.indexOf(suggestion, idx + 1) > -1)
