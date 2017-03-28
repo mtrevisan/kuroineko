@@ -9,7 +9,7 @@ require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 
 		assert.deepEqual(suggestions, [
 			{
-				lnProbability: -4.1345870582808955,
+				lnProbability: -4.13458705828089,
 				values: [
 					'àbb'
 				]
@@ -31,7 +31,7 @@ require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 
 		assert.deepEqual(suggestions, [
 			{
-				lnProbability: -4.102391866339485,
+				lnProbability: -4.102391866339481,
 				values: [
 					'ad͡ʒuto'
 				]
@@ -47,7 +47,7 @@ require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 
 		assert.deepEqual(suggestions, [
 			{
-				lnProbability: -2.6656147363405216,
+				lnProbability: -2.6656147363405043,
 				values: [
 					'abb'
 				]
@@ -69,13 +69,13 @@ require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 
 		assert.deepEqual(suggestions, [
 			{
-				lnProbability: -4.1319225308155945,
+				lnProbability: -4.131922530815591,
 				values: [
 					'abb'
 				]
 			},
 			{
-				lnProbability: -7.761071211694906,
+				lnProbability: -7.7610712116949045,
 				values: [
 					'acbd'
 				]
@@ -98,7 +98,7 @@ require(['tools/spellchecker/NorvigSpellChecker'], function(NorvigSpellChecker){
 					]
 				},
 				{
-					lnProbability: -8.845697258388276,
+					lnProbability: -8.845697258388274,
 					values: [
 						'acbd'
 					]
