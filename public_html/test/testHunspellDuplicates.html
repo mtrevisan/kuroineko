@@ -25,8 +25,8 @@
 			dictionary.shift();
 
 			var t = new Trie();
-			/*var duplicates = new Map();
-			var dict = new Set();
+			var duplicates = new Map();
+			/*var dict = new Set();
 			var productions = [];*/
 			dictionary.forEach(function(word){
 				if(!/^\s*\//.test(word) && word.length){
@@ -40,7 +40,13 @@
 
 					var suggestions = generator.applyRules(word);
 					suggestions.forEach(function(el){
-						t.add(el.suggestion);
+						var suggestion = el.suggestion;
+						if(t.contains(suggestion)){
+							var count = duplicates.get(suggestion) | 0;
+							duplicates.set(suggestion, count + 1);
+						}
+						else
+							t.add(suggestion);
 					});
 /*					word = word.replace(/\t.*$/, '');
 
@@ -67,7 +73,7 @@
 					duplicates.put(suggestion, (duplicates.get(suggestion) | 0) + 1);
 			});*/
 //console.log(productions);
-//console.log(duplicates);
+console.log(duplicates);
 console.log('end');
 		});
 
