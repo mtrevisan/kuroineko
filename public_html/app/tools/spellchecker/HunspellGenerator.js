@@ -138,7 +138,7 @@ define(function(){
 		var word = parts[0];
 		var continuationClasses = parseRuleCodes.call(this, parts[1]);
 
-		var suggestions = [];
+		var suggestions = [{suggestion: word, productionRules: []}];
 		continuationClasses.forEach(function(cl){
 			var suggestionsToAdd = applyRule.call(this, word, cl);
 			Array.prototype.push.apply(suggestions, suggestionsToAdd);
