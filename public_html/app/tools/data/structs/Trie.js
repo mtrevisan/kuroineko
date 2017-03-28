@@ -44,7 +44,7 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 	var remove = function(word){
 		var results = this.findPrefix(word);
 		if(results.length == 1)
-			removeSingle(results[0]);
+			removeSingle(word, results[0]);
 	};
 
 	var removeAll = function(word){
@@ -52,7 +52,7 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 	};
 
 	/** @private */
-	var removeSingle = function(pref){
+	var removeSingle = function(word, pref){
 		if(pref.node && pref.node.leaf){
 			word = word.match(Phone.REGEX_UNICODE_SPLITTER);
 			pref.parent.children[word[word.length - 1]] = undefined;
@@ -64,7 +64,8 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 		var node = this.root,
 			results = [],
 			parent, tmp;
-		word.match(Phone.REGEX_UNICODE_SPLITTER).some(function(stem, idx){
+		word = word.match(Phone.REGEX_UNICODE_SPLITTER);
+		word.some(function(stem, idx){
 			parent = node;
 			tmp = node.children[stem];
 			if(tmp){
@@ -85,7 +86,8 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 	/** Search the given string and return an object (the same of findPrefix) if it lands on a word, essentially testing if the word exists in the trie. */
 	var contains = function(word){
 		var node = this.root;
-		word.match(Phone.REGEX_UNICODE_SPLITTER).some(function(stem){
+		word = word.match(Phone.REGEX_UNICODE_SPLITTER);
+		word.some(function(stem){
 			node = node.children[stem];
 			return !node;
 		});
