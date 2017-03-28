@@ -100,6 +100,17 @@ define(function(){
 		return numEntries;
 	};
 
+	var extractContinuationClasses = function(line){
+		var lineParts = line.split(SEPARATOR);
+		additionParts = lineParts[0].split('/');
+		var continuationClasses = parseRuleCodes.call(this, additionParts[1]);
+		return continuationClasses;
+	};
+
+	var hasRule = function(ruleClass){
+		return !!this.rules[ruleClass];
+	};
+
 	/**
 	 * Removes comment lines and then cleans up blank lines and trailing whitespace.
 	 *
@@ -186,7 +197,9 @@ define(function(){
 	Constructor.prototype = {
 		constructor: Constructor,
 
-		applyRules: applyRules
+		applyRules: applyRules,
+		extractContinuationClasses: extractContinuationClasses,
+		hasRule: hasRule
 	};
 
 	return Constructor;
