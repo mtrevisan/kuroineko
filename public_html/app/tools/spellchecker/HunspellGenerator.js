@@ -46,7 +46,7 @@ define(function(){
 			this.rules = {};
 
 			//remove comment lines
-			data = removeAffixComments.call(this, data);
+			data = removeAffixComments(data);
 
 			var lines = data.split(/\r?\n/),
 				len = lines.length,
@@ -102,7 +102,7 @@ define(function(){
 
 	var extractContinuationClasses = function(line){
 		var lineParts = line.split(SEPARATOR);
-		additionParts = lineParts[0].split('/');
+		var additionParts = lineParts[0].split('/');
 		var continuationClasses = parseRuleCodes.call(this, additionParts[1]);
 		return continuationClasses;
 	};
