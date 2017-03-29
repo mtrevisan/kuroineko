@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<link rel="shortcut icon" href="../favicon.png" />
+
+	<title>test FileHelper</title>
+
+	<script src="../app/AMDLoader.js"></script>
+
+	<script>
+		AMDLoader.config = {
+			baseUrl: '../app',
+			paths: {
+				libs: '../libs'
+			}
+		};
+
+
+		require(['tools/data/FileHelper'], function(FileHelper){
+			var blob = new Blob(['Hello, world!'], {type: 'text/plain;charset=utf-8'});
+			FileHelper.saveAs(blob, 'hello world.txt');
+		});
+	</script>
+</head>
+
+<body>
+</body>
+</html>
