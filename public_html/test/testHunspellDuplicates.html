@@ -24,7 +24,7 @@
 			//remove the counter
 			dictionary.shift();
 
-			var t = new Trie();
+//			var t = new Trie();
 			var duplicates = new Map();
 			/*var dict = new Set();
 			var productions = [];*/
@@ -38,7 +38,7 @@
 							console.log('rule for class ' + continuationClass + ' not found');
 					});
 
-					var suggestions = generator.applyRules(word);
+/*					var suggestions = generator.applyRules(word);
 					suggestions.forEach(function(el){
 						var suggestion = el.suggestion;
 						if(t.contains(suggestion)){
