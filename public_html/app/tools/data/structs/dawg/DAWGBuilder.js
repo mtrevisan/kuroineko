@@ -5,7 +5,7 @@
  *
  * @author Mauro Trevisan
  */
-define(['tools/lang/phonology/Phone', 'tools/data/structs/DAWG'], function(Phone, DAWG){
+define(['tools/lang/phonology/Phone', 'tools/data/structs/dawg/DAWG', 'tools/data/structs/dawg/Node'], function(Phone, DAWG, Node){
 
 	var Constructor = function(){
 		this.reset();
@@ -14,7 +14,10 @@ define(['tools/lang/phonology/Phone', 'tools/data/structs/DAWG'], function(Phone
 
 	var reset = function(){
 		this.wordCount = 0;
-		this.root = {};
+		this.root = new Node();
+
+		this.nodes = [];
+		this.childDepths = new Map();
 	};
 
 	/**
@@ -46,16 +49,28 @@ define(['tools/lang/phonology/Phone', 'tools/data/structs/DAWG'], function(Phone
 		return this;
 	};
 
+	/** Search the given string and return an object (the same of findPrefix) if it lands on a word, essentially testing if the word exists in the trie. */
+	var contains = function(word){
+		word = word.match(Phone.REGEX_UNICODE_SPLITTER);
+
+		var ptr = this.root;
+		ptr = word.some(function(chr){
+			ptr = ptr.findChild(chr);
+			return !ptr;
+		});
+		return (ptr && ptr.leaf);
+	};
+
 	/** Builds the DAWG based on the words added. */
 	var build = function(){
-		compress();
+		this.compress();
 
 		this.nodes.forEach(function(node){
 			node.index = -1;
 		});
+		this.nodes.length = 0;
 
 		var stack = [this.root];
-		this.nodes.clear();
 		var index = 0;
 		while(stack.length){
 			var ptr = stack.pop();
@@ -70,28 +85,27 @@ define(['tools/lang/phonology/Phone', 'tools/data/structs/DAWG'], function(Phone
 				stack.push(ptr.child);
 		}
 
-		var ints = new Array(index);
+		var indices = new Array(index);
 		this.nodes.forEach(function(node){
-			ints[node.index] = node.toInteger();
+			indices[node.index] = node.toInteger();
 		});
 
-		return new DAWG(ints);
+		return new DAWG(indices);
 	};
 
 	/** @private */
 	var compress = function(){
-		this.nodes = [];
-		this.childDepths = new Map();
+		this.nodes.length = 0;
+		this.childDepths.clear();
 
-		var stack = [];
+		var stack = [this.root];
 		var index = 0;
 
-		stack.push(this.root);
 		while(stack.length){
 			var ptr = stack.pop();
 
 			ptr.index = index ++;
-			if(this.root != ptr)
+			if(ptr !== this.root)
 				ptr.siblings = ptr.parent.nextChildren.length - 1 + (ptr.parent.child? 1: 0);
 			this.nodes.add(ptr);
 
@@ -109,11 +123,12 @@ define(['tools/lang/phonology/Phone', 'tools/data/structs/DAWG'], function(Phone
 
 				var ptr = node;
 				var depth = 0;
-				while(root !== ptr){
+				while(ptr !== this.root){
 					ptr = ptr.parent;
 					depth ++;
 					if(depth <= ptr.childDepth)
 						break;
+
 					ptr.childDepth = depth;
 				}
 			}
@@ -131,7 +146,7 @@ define(['tools/lang/phonology/Phone', 'tools/data/structs/DAWG'], function(Phone
 		}, this);
 
 		var maxDepth = -1;
-		this.childDepths.keys().forEach(function(depth){
+		this.childDepths.forEach(function(value, depth){
 			if(depth > maxDepth)
 				maxDepth = depth;
 		});
@@ -141,28 +156,19 @@ define(['tools/lang/phonology/Phone', 'tools/data/structs/DAWG'], function(Phone
 			if(!ns)
 				continue;
 
-			ns.listIterator().forEach(function(pickNode){
-				if(!pickNode.replaceMeWith && pickNode.isChild && !pickNode.siblings)
-					ns.listIterator(pickNode.nextIndex()).forEach(function(searchNode){
+			for(var i = 0; i < ns.lentgh; i ++){
+				var pickNode = ns[i];
+				if(!pickNode.replaceMeWith && pickNode.isChild && !pickNode.siblings){
+					for(var j = i + 1; j < ns.lentgh; j ++){
+						var searchNode = ns[j];
 						if(!searchNode.replaceMeWith && searchNode.isChild && !searchNode.siblings && pickNode.equals(searchNode)){
 							searchNode.parent.child = pickNode;
 							searchNode.replaceMeWith = pickNode;
 						}
-					});
-			});
+					}
+				}
+			}
 		}
-	};
-
-	/** Search the given string and return an object (the same of findPrefix) if it lands on a word, essentially testing if the word exists in the trie. */
-	var contains = function(word){
-		word = word.match(Phone.REGEX_UNICODE_SPLITTER);
-
-		var ptr = this.root;
-		word.some(function(chr){
-			ptr = ptr.findChild(chr);
-			return !ptr;
-		});
-		return (ptr && ptr.left);
 	};
 
 
@@ -172,15 +178,9 @@ define(['tools/lang/phonology/Phone', 'tools/data/structs/DAWG'], function(Phone
 		reset: reset,
 
 		add: add,
+		contains: contains,
 		wordCount: function(){ return this.wordCount; },
-		build: build,
-		/*remove: remove,
-		removeAll: removeAll,
-		findPrefix: findPrefix,*/
-		contains: contains/*,
-		apply: apply,
-		getWords: getWords,
-		findMatchesOnPath: findMatchesOnPath*/
+		build: build
 	};
 
 	return Constructor;

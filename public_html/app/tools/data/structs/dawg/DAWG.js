@@ -9,8 +9,8 @@
  */
 define(['tools/lang/phonology/Phone'], function(Phone){
 
-	var Constructor = function(ints){
-		this.nodes = ints.clone();
+	var Constructor = function(indices){
+		this.nodes = indices;
 	};
 
 
@@ -18,11 +18,23 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 		word = word.match(Phone.REGEX_UNICODE_SPLITTER);
 
 		var ptr = this.nodes[0];
-		return word.some(function(chr){
-			ptr = findChild(ptr, chr);
-			return (ptr < 0);
+		var result = word.some(function(chr){
+			ptr = this.findChild(ptr, chr);
+			return (ptr >= 0);
 		});
+		return (result && Node.canTerminate(ptr));
 	};
+
+	/** @private */
+	var findChild = function(int node, char c){
+		for(Iterator<Integer> iter = new ChildIterator(node); iter.hasNext(); ){
+			int child = iter.next();
+
+			if(getChar(child) == c)
+				return child;
+		}
+		return -1;
+	}
 
 /*
 public class Dawg{
@@ -224,11 +236,6 @@ public class Dawg{
       }
     }
     return results.toArray (new Result[results.size ()]);
-  }
-
-  private ChildIterator childIterator (int parent)
-  {
-    return new ChildIterator (parent);
   }
 
   private boolean lettersValid (String letters)
@@ -443,19 +450,6 @@ public class Dawg{
     return words;
   }
 
-  private Integer findChild (int node, char c)
-  {
-    for (Iterator<Integer> iter = childIterator (node); iter.hasNext ();)
-    {
-      int child = iter.next ();
-
-      if (getChar (child) == c)
-        return child;
-    }
-
-    return -1;
-  }
-
   private static int getFirstChildIndex (int node)
   {
     return (node >> 10);
@@ -464,11 +458,6 @@ public class Dawg{
   private static boolean isLastChild (int node)
   {
     return (((node >> 9) & 0x1) == 1);
-  }
-
-  private static boolean canTerminate (int node)
-  {
-    return (((node >> 8) & 0x1) == 1);
   }
 
   private static char getChar (int node)
@@ -522,215 +511,47 @@ public class Dawg{
     public final int patternIndex;
   }
 
-  public static void main (String[] args) throws IOException
-  {
-    Dawg dawg = Dawg.load (Dawg.class.getResourceAsStream ("/twl06.dat"));
+  public static void main(String[] args) throws IOException{
+    Dawg dawg = Dawg.load(Dawg.class.getResourceAsStream("/twl06.dat"));
 
-    InputStreamReader isr = new InputStreamReader (System.in);
-    BufferedReader reader = new BufferedReader (isr);
+    InputStreamReader isr = new InputStreamReader(System.in);
+    BufferedReader reader = new BufferedReader(isr);
 
-    StopWatch stopWatch = new StopWatch ();
+    StopWatch stopWatch = new StopWatch();
 
-    while (true)
-    {
-      System.out.print ("letters:  ");
-      String letters = reader.readLine ();
-      System.out.print ("pattern:  ");
-      String pattern = reader.readLine ();
+    while(true){
+      System.out.print("letters:  ");
+      String letters = reader.readLine();
+      System.out.print("pattern:  ");
+      String pattern = reader.readLine();
 
-      stopWatch.reset ();
-      stopWatch.start ();
-      Result[] results = dawg.subwords (letters.toUpperCase (), pattern.toUpperCase ());
-      stopWatch.stop ();
+      stopWatch.reset();
+      stopWatch.start();
+      Result[] results = dawg.subwords(letters.toUpperCase(), pattern.toUpperCase());
+      stopWatch.stop();
 
-      if (results != null)
-      {
-        System.out.println ();
+      if(results != null){
+        System.out.println();
 
-        for (Result result: results)
-        {
-          StringBuilder message = new StringBuilder (result.word);
-          if (result.wildcardPositions != null)
-          {
-            message.append (" with wildcards at");
-            for (int position : result.wildcardPositions)
-              message.append (" ").append (position);
+        for(Result result : results){
+          StringBuilder message = new StringBuilder(result.word);
+          if(result.wildcardPositions != null){
+            message.append(" with wildcards at");
+            for(int position : result.wildcardPositions)
+              message.append(" ").append(position);
           }
-          System.out.println (message.toString ());
-          System.out.println ();
+          System.out.println(message.toString ());
+          System.out.println();
         }
 
-        System.out.println ("Found " + results.length + " matches in " + stopWatch.getTime () + " ms.");
+        System.out.println("Found " + results.length + " matches in " + stopWatch.getTime () + " ms.");
       }
 
-      System.out.println ();
+      System.out.println();
     }
   }
 }*/
 
-/*
-class Node
-{
-  char value;
-  Node parent = null;
-  Node child = null;
-  final List<Node> nextChildren = new LinkedList<Node> ();
-  boolean terminal = false;
-
-  private Node (Node parent, char value)
-  {
-    this.parent = parent;
-    this.value = value;
-  }
-
-  public Node (char value)
-  {
-    this.value = value;
-  }
-
-  private Node ()
-  {
-  }
-
-  public Node findChild (char value)
-  {
-    if (null == child)
-      return null;
-
-    if (value == child.value)
-      return child;
-
-    for (Node nextChild: nextChildren)
-      if (nextChild.value == value)
-        return nextChild;
-
-    return null;
-  }
-
-  public Node addChild (char value)
-  {
-    Node rv;
-
-    if (null == child)
-    {
-      rv = child = new Node (this, value);
-      child.isChild = true;
-      child.lastChild = true;
-    }
-    else
-    {
-      Node nextChild = new Node (this, value);
-      nextChildren.add (nextChild);
-      rv = nextChild;
-    }
-
-    return rv;
-  }
-
-  @Override
-  public String toString ()
-  {
-    String prefix = prefix ();
-
-    StringBuilder stringBuilder = new StringBuilder ();
-    stringBuilder.append ("[value:")
-      .append (value)
-      .append (" prefix:")
-      .append (prefix)
-      .append (" child:")
-      .append ((null != child) ? child.value : "n/a")
-      .append (" next:");
-
-    for (Node nextChild: nextChildren)
-      stringBuilder.append (nextChild.value);
-
-      stringBuilder.append ("]");
-
-    return stringBuilder.toString ();
-  }
-
-  public int toInteger ()
-  {
-    int rv;
-
-    // start with the first child index.  use MAX_INDEX, if there are no children
-    if (nextChildren.isEmpty ())
-      if (null == child)
-        rv = -1;
-      else rv = child.index;
-    else rv = nextChildren.get (0).index;
-
-    // shift 1 and add the last child bit
-    rv = (rv << 1) | (lastChild ? 0x1 : 0x0);
-    // shift 1 and add the terminal bit
-    rv = (rv << 1) | (terminal ? 0x1 : 0x0);
-    // shift 8 and add the value
-    rv = (rv << 8) | value;
-
-    return rv;
-  }
-
-  String prefix ()
-  {
-    StringBuilder prefix = new StringBuilder ();
-    Node ptr = this;
-    while (null != ptr.parent)
-    {
-      prefix.append (ptr.value);
-      ptr = ptr.parent;
-    }
-
-    prefix.reverse ();
-    return prefix.toString ();
-  }
-
-  // compression internals
-  int index = -1;
-  int childDepth = -1;
-  boolean isChild = false;
-  boolean lastChild = false;
-  int siblings = 0;
-  Node replaceMeWith = null;
-
-  @Override
-  public boolean equals (Object obj)
-  {
-    if (null == obj)
-      return false;
-    if (this == obj)
-      return true;
-    if (getClass () != obj.getClass ())
-      return false;
-
-    Node other = (Node) obj;
-
-    if (value != other.value)
-      return false;
-
-    if (terminal != other.terminal)
-      return false;
-
-    if ((null != child) && (null == other.child))
-      return false;
-
-    if ((null == child) && (null != other.child))
-      return false;
-
-    if ((null != child) && (!child.equals (other.child)))
-      return false;
-
-    if (nextChildren.size () != other.nextChildren.size ())
-      return false;
-
-    int size = nextChildren.size ();
-    for (int i = 0; i < size; ++i)
-      if (!nextChildren.get (i).equals (other.nextChildren.get (i)))
-        return false;
-
-    return true;
-  }
-}
-*/
 
 	Constructor.prototype = {
 		constructor: Constructor,
