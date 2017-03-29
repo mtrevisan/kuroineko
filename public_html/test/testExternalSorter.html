@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<link rel="shortcut icon" href="../favicon.png" />
+
+	<title>test ExternalSorter</title>
+
+	<script src="../app/AMDLoader.js"></script>
+
+	<script>
+		AMDLoader.config = {
+			baseUrl: '../app',
+			paths: {
+				libs: '../libs'
+			}
+		};
+
+
+		require(['domReady!', 'tools/data/sorting/ExternalSorter', 'text!tools/data/sorting/file1.txt', 'text!tools/data/sorting/file2.txt', 'text!tools/data/sorting/file3.txt'], function(ExternalSorter){
+			var sorter = new ExternalSorter();
+			sorter.sort('../app/tools/data/sorting/file1.txt', '../app/tools/data/sorting/file2.txt', '../app/tools/data/sorting/file3.txt');
+
+console.log('end');
+		});
+
+	</script>
+</head>
+
+<body>
+</body>
+</html>

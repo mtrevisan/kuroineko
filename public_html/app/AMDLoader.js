@@ -72,7 +72,7 @@ var AMDLoader = (function(doc){
 
 		domReady: function(url, id){
 			var common = function(){
-				resolve(id);
+				resolve(id, true);
 
 				loadDependencies();
 			};
@@ -218,7 +218,8 @@ var AMDLoader = (function(doc){
 		else if(!Array.isArray(dependencies))
 			dependencies = [dependencies];
 		//enforce domReady
-		dependencies.unshift('domReady!');
+		if(definition && dependencies.indexOf('domReady!') < 0)
+			dependencies.unshift('domReady!');
 
 		//console.log('require module' + (dependencies.length? ' with dependencies [' + dependencies.map(function(dep){ return dep.replace(/.+\//, ''); }).join(', ') + ']': '') + ', remains [' + Object.keys(promises).filter(function(k){ return !!resolves[k]; }).map(function(k){ return k.replace(/.+\//, ''); }).join(', ') + ']');
 
@@ -231,8 +232,8 @@ var AMDLoader = (function(doc){
 
 				//need to wait for all dependencies to load
 				Promise.all(proms).then(function(result){
-					//remove js! plugins from result
-					result = result.filter(function(res, idx){ return (res && !!this[idx].indexOf('js!')); }, dependencies);
+					//remove domReady! and js! plugins from result
+					result = result.filter(function(res, idx){ return (res && !/(domReady|js)!/.test(this[idx])); }, dependencies);
 
 					definition.apply(this, result);
 				});
