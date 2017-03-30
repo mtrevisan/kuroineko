@@ -36,10 +36,12 @@ define(function(){
 	 * @private
 	 */
 	var parseAFF = (function(){
+		var copyOver = function(ruleType, definitionParts){ this.flags[ruleType] = definitionParts[0]; return 0; };
 		var ruleFunction = {
 			PFX: function(ruleType, definitionParts, lines, i){ return parseAffix.call(this, ruleType, definitionParts, lines, i); },
 			SFX: function(ruleType, definitionParts, lines, i){ return parseAffix.call(this, ruleType, definitionParts, lines, i); },
-			FLAG: function(ruleType, definitionParts){ this.flags[ruleType] = definitionParts[0]; return 0; }
+			FLAG: function(ruleType, definitionParts){ this.flags[ruleType] = definitionParts[0]; return 0; },
+			KEEPCASE: copyOver
 		};
 
 		return function(data){
@@ -59,9 +61,9 @@ define(function(){
 				fun = ruleFunction[ruleType];
 				if(fun)
 					i += fun.call(this, ruleType, definitionParts, lines, i);
+				else
+					console.log('Cannot determine reader for command ' + ruleType);
 			}
-
-			data = null;
 		};
 	})();
 
@@ -108,7 +110,7 @@ define(function(){
 	};
 
 	var hasRule = function(ruleClass){
-		return !!this.rules[ruleClass];
+		return (!!this.rules[ruleClass] || this.flags['KEEPCASE'] === ruleClass);
 	};
 
 	/**
@@ -122,13 +124,14 @@ define(function(){
 	var removeAffixComments = function(data){
 		return data
 			//remove comments
-			.replace(/\s*#.*$/mg, '')
+			.replace(/^$|\s*#.*$/mg, '')
+			.replace(/^\r?\n/mg, '')
 			//trim each line
-			.replace(/^[^\S\r\n]+|[^\S\r\n]+$/m, '')
+			.replace(/^[^\S\r\n]+|[^\S\r\n]+$/mg, '')
 			//remove blank lines
-			.replace(/(\r?\n){2,}/g, EOL)
+			.replace(/(\r?\n){2,}/mg, EOL)
 			//trim the entire string
-			.replace(/^[^\S\r\n]+|[^\S\r\n]+$|\r?\n$/, '');
+			.replace(/^[^\S\r\n]+|[^\S\r\n]+$|\r?\n$/mg, '');
 	};
 
 	/** @private */
@@ -172,24 +175,29 @@ define(function(){
 		var rule = this.rules[ruleClass],
 			newWords = [],
 			newWord;
-		rule.entries.forEach(function(entry){
-			if(!entry.match || word.match(entry.match)){
-				newWord = (entry.remove? word.replace(entry.remove, ''): word);
-				newWord = (rule.type == 'SFX'? newWord + entry.add: entry.add + newWord);
+		if(rule)
+			rule.entries.forEach(function(entry){
+				if(!entry.match || word.match(entry.match)){
+					newWord = (entry.remove? word.replace(entry.remove, ''): word);
+					newWord = (rule.type == 'SFX'? newWord + entry.add: entry.add + newWord);
 
-				var formattedRule = rule.type
-					+ ' ' + ruleClass
-					+ ' ' + (entry.remove? entry.remove.source.replace(/\^|\$/, ''): '0')
-					+ ' ' + entry.add + (entry.continuationClasses? '/' + entry.continuationClasses.join(''): '')
-					+ ' ' + (entry.match? entry.match.source.replace(/\^|\$/, ''): '.');
-				newWords.push({suggestion: newWord, productionRules: [previousGeneration, formattedRule].filter(function(el){ return !!el; })});
+					var formattedRule = rule.type
+						+ ' ' + ruleClass
+						+ ' ' + (entry.remove? entry.remove.source.replace(/\^|\$/, ''): '0')
+						+ ' ' + entry.add + (entry.continuationClasses? '/' + entry.continuationClasses.join(''): '')
+						+ ' ' + (entry.match? entry.match.source.replace(/\^|\$/, ''): '.');
+					newWords.push({suggestion: newWord, productionRules: [previousGeneration, formattedRule].filter(function(el){ return !!el; })});
 
-				if(!previousGeneration && 'continuationClasses' in entry)
-					entry.continuationClasses.forEach(function(cl){
-						Array.prototype.push.apply(newWords, applyRule.call(this, newWord, cl, formattedRule));
-					}, this);
-			}
-		}, this);
+					if(!previousGeneration && 'continuationClasses' in entry)
+						entry.continuationClasses.forEach(function(cl){
+							Array.prototype.push.apply(newWords, applyRule.call(this, newWord, cl, formattedRule));
+						}, this);
+				}
+			}, this);
+		else if(this.flags['KEEPCASE'] === ruleClass)
+			newWords.push(word);
+		else
+			console.log(word + ' does not have a rule for class ' + ruleClass + (previousGeneration? ' (previous generation is ' + previousGeneration + ')': ''));
 		return newWords;
 	};
 

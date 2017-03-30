@@ -25,52 +25,6 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	var view = (ObjectHelper.isDefined(self) && self || ObjectHelper.isDefined(window) && window || this.content);
 
 
-	var getURL = function(){
-		return (view.URL || view.webkitURL || view);
-	};
-
-	var throwOutside = function(ex){
-		(view.setImmediate || view.setTimeout)(function(){
-			throw ex;
-		}, 0);
-	};
-
-	var revoke = function(file){
-		var revoker = function(){
-			//file is an object URL
-			if(ObjectHelper.isString(file))
-				getURL().revokeObjectURL(file);
-			//file is a File
-			else
-				file.remove();
-		};
-		//the Blob API is fundamentally broken as there is no "downloadfinished" event to subscribe to
-		setTimeout(revoker, 1000 * 40);
-	};
-
-	var dispatch = function(filesaver, eventTypes, event){
-		eventTypes = [].concat(eventTypes);
-		var i = eventTypes.length;
-		while(i --){
-			var listener = filesaver['on' + eventTypes[i]];
-			if(ObjectHelper.isFunction(listener)){
-				try{
-					listener.call(filesaver, event || filesaver);
-				}
-				catch(ex){
-					throwOutside(ex);
-				}
-			}
-		}
-	};
-
-	var autoBOM = function(blob){
-		//prepend BOM for UTF-8 XML and text/* types (including HTML)
-		//note: your browser will automatically convert UTF-16 U+FEFF to EF BB BF
-		return (/^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(blob.type)?
-			new Blob([String.fromCharCode(0xFEFF), blob], {type: blob.type}): blob);
-	};
-
 	var FileSaver = function(blob, name, noAutoBOM){
 		if(!noAutoBOM)
 			blob = autoBOM(blob);
@@ -146,10 +100,9 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 				filesaver.readyState = filesaver.DONE;
 			});
-			return;
 		}
-
-		fsError();
+		else
+			fsError();
 	};
 
 	var FSProto = FileSaver.prototype;
@@ -165,6 +118,57 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	FSProto.onabort = null;
 	FSProto.onerror = null;
 	FSProto.onwriteend = null;
+
+	/** @private */
+	var autoBOM = function(blob){
+		//prepend BOM for UTF-8 XML and text/* types (including HTML)
+		//note: your browser will automatically convert UTF-16 U+FEFF to EF BB BF
+		return (/^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(blob.type)?
+			new Blob([String.fromCharCode(0xFEFF), blob], {type: blob.type}): blob);
+	};
+
+	/** @private */
+	var dispatch = function(filesaver, eventTypes, event){
+		eventTypes = [].concat(eventTypes);
+		var i = eventTypes.length;
+		while(i --){
+			var listener = filesaver['on' + eventTypes[i]];
+			if(ObjectHelper.isFunction(listener)){
+				try{
+					listener.call(filesaver, event || filesaver);
+				}
+				catch(ex){
+					throwOutside(ex);
+				}
+			}
+		}
+	};
+
+	/** @private */
+	var throwOutside = function(ex){
+		(view.setImmediate || view.setTimeout)(function(){
+			throw ex;
+		}, 0);
+	};
+
+	/** @private */
+	var getURL = function(){
+		return (view.URL || view.webkitURL || view);
+	};
+
+	/** @private */
+	var revoke = function(file){
+		var revoker = function(){
+			//file is an object URL
+			if(ObjectHelper.isString(file))
+				getURL().revokeObjectURL(file);
+			//file is a File
+			else
+				file.remove();
+		};
+		//the Blob API is fundamentally broken as there is no "downloadfinished" event to subscribe to
+		setTimeout(revoker, 1000 * 40);
+	};
 
 
 	var saveAs = function(blob, name, noAutoBOM){
