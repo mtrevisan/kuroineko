@@ -83,6 +83,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 		//if can use save link
 		var saveLink = view.document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
+		saveLink.id = String.fromCharCode(65 + Math.floor(Math.random() * 26)) + Date.now();
 		if('download' in saveLink){
 			var click = function(node){
 				var event = new MouseEvent('click');
@@ -98,7 +99,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
 				dispatchAll();
 
-				revoke(objectURL);
+				revoke(objectURL, saveLink);
 
 				filesaver.readyState = filesaver.DONE;
 			});
@@ -159,7 +160,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	};
 
 	/** @private */
-	var revoke = function(file){
+	var revoke = function(file, saveLink){
 		var revoker = function(){
 			//file is an object URL
 			if(ObjectHelper.isString(file))
@@ -167,9 +168,13 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 			//file is a File
 			else
 				file.remove();
+
+			if(saveLink)
+				saveLink.parentNode.removeChild(saveLink);
 		};
+
 		//the Blob API is fundamentally broken as there is no "downloadfinished" event to subscribe to
-		setTimeout(revoker, 1000 * 40);
+		setTimeout(revoker, 1000 * 10);
 	};
 
 	var saveAs = function(blob, name, noAutoBOM){

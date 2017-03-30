@@ -36,11 +36,13 @@ define(function(){
 	 * @private
 	 */
 	var parseAFF = (function(){
-		var copyOver = function(ruleType, definitionParts){ this.flags[ruleType] = definitionParts[0]; return 0; };
+		var copyOver = function(ruleType, definitionParts){ this.flags[ruleType] = definitionParts[0]; return 0; },
+			copyOverJoined = function(ruleType, definitionParts){ this.flags[ruleType] = definitionParts.join(' '); return 0; };
 		var ruleFunction = {
 			PFX: function(ruleType, definitionParts, lines, i){ return parseAffix.call(this, ruleType, definitionParts, lines, i); },
 			SFX: function(ruleType, definitionParts, lines, i){ return parseAffix.call(this, ruleType, definitionParts, lines, i); },
 			FLAG: function(ruleType, definitionParts){ this.flags[ruleType] = definitionParts[0]; return 0; },
+			FULLSTRIP: copyOverJoined,
 			KEEPCASE: copyOver
 		};
 
@@ -179,6 +181,9 @@ define(function(){
 			rule.entries.forEach(function(entry){
 				if(!entry.match || word.match(entry.match)){
 					newWord = (entry.remove? word.replace(entry.remove, ''): word);
+					if(!newWord.length && !('FULLSTRIP' in this.flags))
+						throw 'Cannot strip full words without the flag FULLSTRIP';
+
 					newWord = (rule.type == 'SFX'? newWord + entry.add: entry.add + newWord);
 
 					var formattedRule = rule.type
