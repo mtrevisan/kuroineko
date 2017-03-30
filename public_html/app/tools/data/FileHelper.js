@@ -22,9 +22,11 @@
  */
 define(['tools/data/ObjectHelper'], function(ObjectHelper){
 
+	/** @private */
 	var view = (ObjectHelper.isDefined(self) && self || ObjectHelper.isDefined(window) && window || this.content);
 
 
+	/** @private */
 	var FileSaver = function(blob, name, noAutoBOM){
 		if(!noAutoBOM)
 			blob = autoBOM(blob);
@@ -170,10 +172,10 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		setTimeout(revoker, 1000 * 40);
 	};
 
-
 	var saveAs = function(blob, name, noAutoBOM){
 		return new FileSaver(blob, name || blob.name || 'download', noAutoBOM);
 	};
+
 
 	return {
 		saveAs: saveAs

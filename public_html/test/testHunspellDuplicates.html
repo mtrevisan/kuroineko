@@ -19,15 +19,15 @@
 
 
 		require(['tools/spellchecker/HunspellGenerator', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.aff', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.dic', 'tools/data/FileHelper'], function(HunspellGenerator, affFile, dicFile, FileHelper){
-			var generator = new HunspellGenerator(affFile);
-			var dictionary = dicFile.split(/[\r\n]+/);
+			var generator = new HunspellGenerator(affFile),
+				dictionary = dicFile.split(/[\r\n]+/);
 			//remove the counter
 			dictionary.shift();
 
-			var productions = [];
-			var size = dictionary.length;
-			var writeFile = false;
-			var filename = 'all12.txt';
+			var productions = [],
+				size = dictionary.length,
+				writeFile = false,
+				filename = 'all12.txt';
 			for(var i = 0; i < size; i ++){
 				var word = dictionary[i];
 				if(!/^\s*\//.test(word) && word.length){
