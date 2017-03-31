@@ -4443,6 +4443,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "piot",			"",			1,	2,	"g",	"1980",			"Piañukolar.",
 "piòv",			"",			3,	2,	"g",	"1509",			"",
 "piovan",		"des",		1,	4,	"g",	"1829",			"Privar de 'l títol de piovan.",
+"piovaniđ",		"",			1,	6,	"a",	"1829",			"Prekoniđar a ìl piovanato.",
 "piovexin",		"",			1,	4,	"a",	"1810",			"",
 "pip",			"",			1,	1,	"a",	"1775",			"Fumar.",
 "pipol",			"s",			1,	1,	"a",	"1867",			"Spapolar.",
