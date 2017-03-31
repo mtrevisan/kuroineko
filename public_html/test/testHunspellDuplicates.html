@@ -18,13 +18,25 @@
 		};
 
 
-		require(['tools/spellchecker/HunspellGenerator', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.aff', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.dic', 'tools/data/FileHelper'], function(HunspellGenerator, affFile, dicFile, FileHelper){
+		require(['tools/spellchecker/HunspellGenerator', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.aff', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.dic', 'tools/data/FileHelper', 'tools/data/structs/DAWG'], function(HunspellGenerator, affFile, dicFile, FileHelper, DAWG){
 			var generator = new HunspellGenerator(affFile),
 				dictionary = dicFile.split(/[\r\n]+/);
 			//remove the counter
 			dictionary.shift();
 
-			var productions = [],
+/*			dictionary.forEach(function(word){
+				if(!/^\s*\//.test(word) && word.length){
+					word = word.replace(/\t.*$/, '');
+
+					var continuationClasses = generator.extractContinuationClasses(word);
+					continuationClasses.forEach(function(continuationClass){
+						if(!generator.hasRule(continuationClass))
+							console.log('rule for class ' + continuationClass + ' not found');
+					});
+				}
+			});/**/
+
+/*			var productions = [],
 				size = dictionary.length,
 				writeFile = false,
 				filename = 'all12.txt';
@@ -43,7 +55,7 @@
 							FileHelper.saveAs(blob, filename);
 
 							console.log(i + 1);
-//							break;
+							break;
 						}
 					}
 				}
@@ -51,69 +63,28 @@
 			if(writeFile){
 				var blob = new Blob(productions, {type: 'text/plain;charset=utf-8'});
 				FileHelper.saveAs(blob, filename);
-			}
+			}/**/
 
-			/*var duplicates = new Map();
-			var dict = new Set();*/
-/*			var productions = [];
+			var duplicates = new Map();
+			var dawg = new DAWG();
 			dictionary.forEach(function(word){
 				if(!/^\s*\//.test(word) && word.length){
 					word = word.replace(/\t.*$/, '');
 
-					/*var continuationClasses = generator.extractContinuationClasses(word);
-					continuationClasses.forEach(function(continuationClass){
-						if(!generator.hasRule(continuationClass))
-							console.log('rule for class ' + continuationClass + ' not found');
-					});/**/
-
-/*					var suggestions = generator.applyRules(word);
-					suggestions.forEach(function(el){
-						productions.push(JSON.stringify(el) + '\n');
-					});
-					if(productions.length > 1000000){
-						var blob = new Blob(productions, {type: 'text/plain;charset=utf-8'});
-						FileHelper.saveAs(blob, 'all' + i + '.txt');
-
-						productions = null;
-						productions = [];
-						i ++;
-					}*/
-
-/*					var suggestions = generator.applyRules(word);
-					suggestions.forEach(function(el){
-						var suggestion = el.suggestion;
-						if(t.contains(suggestion)){
-							var count = duplicates.get(suggestion) | 0;
-							duplicates.set(suggestion, count + 1);
-						}
-						else
-							t.add(suggestion);
-					});
-/*					word = word.replace(/\t.*$/, '');
-
 					var suggestions = generator.applyRules(word);
-					/*suggestions.forEach(function(el){
+					suggestions.forEach(function(el){
 						var suggestion = el.suggestion;
-						if(dict.has(suggestion)){
-							var count = duplicates.get(suggestion) | 0;
-							duplicates.set(suggestion, count + 1);
+						if(dawg.contains(suggestion)){
+							var value = duplicates.get(suggestion) | '';
+							duplicates.set(suggestion, value + '|' + JSON.stringify(el));
 						}
 						else
-							dict.add(suggestion);
-					});*/
-/*					suggestions.forEach(function(el){
-						productions.push(el.suggestion);
-					});*/
-/*				}
-			});*/
+							dawg.add(suggestion);
+					});
+				}
+			});
+			console.log(productions);
 
-			/*productions.forEach(function(suggestion, idx){
-				//find if there is a duplicate or not
-				if(productions.indexOf(suggestion, idx + 1) > -1)
-					//find if the element is already in the duplicates or not
-					duplicates.put(suggestion, (duplicates.get(suggestion) | 0) + 1);
-			});*/
-//console.log(productions);
 //console.log(duplicates);
 console.log('end');
 		});

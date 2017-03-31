@@ -10,7 +10,7 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 	var Constructor = function(value, parent){
 		this.value = value;
 		this.parent = parent;
-		this.nextChildren = [];
+		this.children = [];
 		this.leaf = false;
 
 		//compression internals
@@ -21,22 +21,22 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 	var findChild = function(value){
 		if(!value)
 			return null;
-		return this.nextChildren.find(function(nextChild){
+		return this.children.find(function(nextChild){
 			return (value == nextChild.value);
 		});
 	};
 
 	var addChild = function(value){
 		var nextChild = new Node(value, this);
-		this.nextChildren.push(nextChild);
+		this.children.push(nextChild);
 		return nextChild;
 	};
 
 	var toInteger = function(){
 		var rv = -1;
 		//start with the first child index (use MAX_INDEX, if there are no children)
-		if(this.nextChildren.length)
-			rv = this.nextChildren[0].index;
+		if(this.children.length)
+			rv = this.children[0].index;
 
 		//shift 1 and add the terminal bit
 		rv = (rv << 1) | (this.leaf? 0x01: 0x00);
@@ -55,7 +55,7 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 
 	var toString = function(){
 		var result = '[value:' + this.value + ' prefix:' + prefix() + ' next:';
-		this.nextChildren.forEach(function(nextChild){
+		this.children.forEach(function(nextChild){
 			result += nextChild.value;
 		});
 		return result + ']';
@@ -84,11 +84,11 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 			return false;
 		if(this.terminal !== other.terminal)
 			return false;
-		if(this.nextChildren.length != other.nextChildren.length)
+		if(this.children.length != other.children.length)
 			return false;
-		var size = this.nextChildren.length;
+		var size = this.children.length;
 		for(var i = 0; i < size; i ++)
-			if(!this.nextChildren[i].equals(other.nextChildren[i]))
+			if(!this.children[i].equals(other.children[i]))
 				return false;
 
 		return true;
