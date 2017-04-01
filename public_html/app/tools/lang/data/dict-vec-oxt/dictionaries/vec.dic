@@ -1588,8 +1588,12 @@ béver/b0b1b2E0E1E2=0-0	po:verb ts:infinitive_simple
 beverò/b0b1b2J0=0-0	po:verb ts:indicative_future st:béver
 bevo/a0E0E1E2I0J0=0-0	po:verb ts:indicative_present st:béver
 bévoe/a0a1a2K0=0-0	po:verb ts:indicative_present is:interrogative st:béver
+beo/a0E0E1E2I0J0=0-0	po:verb ts:indicative_present st:béver
+béoe/a0a1a2K0=0-0	po:verb ts:indicative_present is:interrogative st:béver
 bévar/b0b1b2E0E1E2-0=0	po:verb ts:infinitive_simple
 bevarò/b0b1b2J0=0-0	po:verb ts:indicative_future st:bévar
+béar/b0b1b2E0E1E2-0=0	po:verb ts:infinitive_simple
+bearò/b0b1b2J0=0-0	po:verb ts:indicative_future st:bévar
 bearar/a0a1a2E0E1E2-0	po:verb ts:infinitive_simple
 béaro/a0E0E1E2I0J0-0	po:verb ts:indicative_present st:bearar
 béaroe/a0a1a2K0-0	po:verb ts:indicative_present is:interrogative st:bearar
@@ -13992,7 +13996,7 @@ papuŧo/a0E0E1I0J0	po:verb ts:indicative_present st:papuŧar
 papúŧoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:papuŧar
 parar/a0a1a2E0E1E2r0s0s1^0+0-0*0.0:0	po:verb ts:infinitive_simple
 paro/a0E0E1E2I0J0^0+0-0*0.0,0	po:verb ts:indicative_present st:parar st:parer st:parir
-pàroe/a0a1a2K0^0+0-0*0.0:0	po:verb ts:indicative_present is:interrogative st:parar
+pàroe/a0a1a2K0^0+0-0*0.0:0	po:verb ts:indicative_present is:interrogative st:parar st:parer
 parer/a0a1a2E0E1E2:0	po:verb ts:infinitive_simple
 parso/B0I0+0,0	po:verb ts:participle_perfect_strong st:parer st:parir
 parvente/T0I0	po:verb ts:participle_imperfect st:parer
@@ -16983,13 +16987,9 @@ interonperò/b0b1b2J0	po:verb ts:indicative_future st:interónper
 interonpo/a0E0E1E2I0J0	po:verb ts:indicative_present st:interónper
 interónpoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:interónper
 interoto/B0I0	po:verb ts:participle_perfect_strong st:interónper
-intarónper/b0b1b2E0E1E2	po:verb ts:infinitive_simple
-intaronperò/b0b1b2J0	po:verb ts:indicative_future st:intarónper
 intaronpo/a0E0E1E2I0J0	po:verb ts:indicative_present st:intarónper
 intarónpoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:intarónper
 intaroto/B0I0	po:verb ts:participle_perfect_strong st:intarónper
-interónpar/b0b1b2E0E1E2	po:verb ts:infinitive_simple
-interonparò/b0b1b2J0	po:verb ts:indicative_future st:interónpar
 intarónpar/b0b1b2E0E1E2	po:verb ts:infinitive_simple
 intaronparò/b0b1b2J0	po:verb ts:indicative_future st:intarónpar
 korónper/b0b1b2E0E1E2	po:verb ts:infinitive_simple
@@ -20055,7 +20055,7 @@ tastixar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 tastixo/a0E0E1E2I0J0	po:verb ts:indicative_present st:tastixar
 tastíxoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:tastixar
 tatar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
-tato/a0E0E1E2I0J0	po:verb ts:indicative_present st:tatar ts:participle_perfect_strong st:tàxer
+tato/a0E0E1E2I0J0	po:verb ts:indicative_present st:tatar ts:participle_perfect_strong
 tàtoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:tatar po:noun
 tatarar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 tataro/a0E0E1E2I0J0	po:verb ts:indicative_present st:tatarar
@@ -20488,12 +20488,12 @@ teràsoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:terasar
 teraŧar/a0a1E0E1	po:verb ts:infinitive_simple
 teraŧo/a0E0E1I0J0	po:verb ts:indicative_present st:teraŧar po:noun
 teràŧoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:teraŧar
-termenar/a0a1a2E0E1E2s0s1,0	po:verb ts:infinitive_simple
-tèrmeno/a0E0E1E2I0J0,0	po:verb ts:indicative_present st:termenar
-tèrmenoe/a0a1a2K0,0	po:verb ts:indicative_present is:interrogative st:termenar
-detarmenar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
-detàrmeno/a0E0E1E2I0J0	po:verb ts:indicative_present st:detarmenar
-detàrmenoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:detarmenar
+termenar/a0a1a2E0E1E2s0s1+0*0,0	po:verb ts:infinitive_simple
+tèrmeno/a0E0E1E2I0J0+0*0,0	po:verb ts:indicative_present st:termenar
+tèrmenoe/a0a1a2K0+0*0,0	po:verb ts:indicative_present is:interrogative st:termenar
+estermenar/a0a1a2E0E1E2s0s1	po:verb ts:infinitive_simple
+estèrmeno/a0E0E1E2I0J0	po:verb ts:indicative_present st:estermenar
+estèrmenoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:estermenar
 terminar/a0a1a2E0E1E2s0s1+0*0,0	po:verb ts:infinitive_simple
 tèrmino/a0E0E1E2I0J0+0*0,0	po:verb ts:indicative_present st:terminar
 tèrminoe/a0a1a2K0+0*0,0	po:verb ts:indicative_present is:interrogative st:terminar
@@ -21871,7 +21871,7 @@ insídoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:insíder
 insixo/B0I0	po:verb ts:participle_perfect_strong st:insíder
 inŧíder/b0b1E0E1	po:verb ts:infinitive_simple
 inŧidre	po:verb ts:infinitive_simple st:inŧíder
-nŧiderò/b0b1J0	po:verb ts:indicative_future st:inŧíder
+inŧiderò/b0b1J0	po:verb ts:indicative_future st:inŧíder
 inŧido/a0E0E1I0J0	po:verb ts:indicative_present st:inŧíder
 inŧídoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:inŧíder
 inŧixo/B0I0	po:verb ts:participle_perfect_strong st:inŧíder
@@ -22167,7 +22167,7 @@ umílioe/a0a1K0	po:verb ts:indicative_present is:interrogative st:umiliar
 umiƚiar/a0a2E0E2	po:verb ts:infinitive_simple
 umiƚio/a0E0E2J0	po:verb ts:indicative_present st:umiƚiar
 umíƚioe/a0a2K0	po:verb ts:indicative_present is:interrogative st:umiƚiar
-unir/a0a1a2c0c1c2E0E1E2	po:verb ts:infinitive_simple
+unir/a0a1a2c0c1c2E0E1E2.0	po:verb ts:infinitive_simple
 adunar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 aduno/a0E0E1E2I0J0	po:verb ts:indicative_present st:adunar
 adúnoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:adunar
@@ -24533,6 +24533,10 @@ sóramene/G0G1G2	po:preposition po:adverb
 sore/E0E1E2	po:preposition po:adverb
 sóreme/G0G1G2	po:preposition po:adverb
 sóremene/G0G1G2	po:preposition po:adverb
+sote/E0E1E2	po:preposition po:adverb
+sóteme/G0G1G2	po:preposition po:adverb
+sótemene/G0G1G2	po:preposition po:adverb
+soto	po:preposition po:adverb
 rente/I0	po:preposition
 rento	po:preposition
 dentro	po:preposition po:adverb
@@ -24999,8 +25003,8 @@ pata/D0	po:noun
 kaxo/T0R0v0I0’0&0(0[0]0<0<1	po:noun
 kaxa/D0&0(0<0<1	po:noun
 kaxomài	po:noun
-kuaxi	po:adverb po:conjunction al:koaxi
-koaxi	po:adverb po:conjunction st:kuaxi
+kuaxi/*0	po:adverb po:conjunction al:koaxi
+koaxi/*0	po:adverb po:conjunction st:kuaxi
 skuaxio	po:adverb po:conjunction al:skoaxio
 skoaxio	po:adverb po:conjunction st:skuaxio
 skuaxo/T0I0,0	po:adverb po:conjunction al:skoaxo
@@ -27378,6 +27382,7 @@ livelòga	po:adverb
 live/T4	po:adverb
 livèl/B0U0	po:noun
 lixier/B0T4	po:adjective
+lixièr/B0T4	po:adjective
 lí/T4	po:adverb
 líbar/B0T4	po:adjective
 líber/B0T4	po:adjective
@@ -28779,6 +28784,7 @@ sorprexa/D0	po:noun
 sorxente/T0I0	po:noun
 sorxe/D0	po:noun
 sosal/D0T3U0	po:adjective
+sosial/D0T3U0	po:adjective
 sospension/D0U0	po:noun
 sostanŧa/D0T2	po:noun
 sostitutivo/B0W0I0	po:adjective
@@ -28791,6 +28797,7 @@ sotovèste/D0	po:noun
 sotrativo/B0W0I0	po:adjective
 soturko/T0	po:noun
 soŧal/D0U0	po:adjective
+soŧial/D0U0	po:adjective
 soviŧion/D0T2U0	po:noun
 sovran/C0U0	po:adjective po:noun
 sòn/T0T1&0	po:noun
