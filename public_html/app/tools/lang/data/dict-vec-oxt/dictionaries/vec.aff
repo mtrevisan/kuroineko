@@ -511,7 +511,7 @@ SFX a0 r vi/J0L0N0 [aei]r
 SFX a0 r vo/J0 [aei]r
 SFX a0 uer ú/B0 uer
 
-SFX a1 Y 95
+SFX a1 Y 94
 SFX a1 0 alo/B0 [aei]r
 SFX a1 0 ave-lo/B0 [aei]r
 SFX a1 0 iónmelo/G1 [^cijɉñ][aei]r
@@ -545,7 +545,6 @@ SFX a1 ar àndomelo/G1 ar
 SFX a1 ar àntolo/G1 ar
 SFX a1 ar àntomelo/G1 ar
 SFX a1 ar àrmelo/G1 ar
-SFX a1 ar àvelo/B0 ar
 SFX a1 ar è-lo/B0 ar
 SFX a1 ar èlo/B0G1 ar
 SFX a1 ar èmelo/G1 ar
@@ -608,7 +607,7 @@ SFX a1 oe imelo/G1 oe
 SFX a1 r lo/B0 er
 SFX a1 r ve-lo/B0 [aei]r
 
-SFX a2 Y 95
+SFX a2 Y 94
 SFX a2 0 ave-ƚo/B0 [aei]r
 SFX a2 0 aƚo/B0 [aei]r
 SFX a2 0 iónmeƚo/G2 [^cijɉñ][aei]r
@@ -642,7 +641,6 @@ SFX a2 ar àndoƚo/G2 ar
 SFX a2 ar àntomeƚo/G2 ar
 SFX a2 ar àntoƚo/G2 ar
 SFX a2 ar àrmeƚo/G2 ar
-SFX a2 ar àveƚo/B0 ar
 SFX a2 ar è-ƚo/B0 ar
 SFX a2 ar èmeƚo/G2 ar
 SFX a2 ar èƚo/B0G2 ar
@@ -3840,9 +3838,9 @@ SFX G1 me lo me
 SFX G1 me la me
 SFX G1 me li me
 SFX G1 me le me
-SFX G1 o a lo
-SFX G1 o i lo
-SFX G1 o e lo
+SFX G1 o a [^m][^e]lo
+SFX G1 o i [^m][^e]lo
+SFX G1 o e [^m][^e]lo
 SFX G1 ne lo mene
 SFX G1 ne la mene
 SFX G1 ne li mene
@@ -3889,9 +3887,9 @@ SFX G2 me ƚo me
 SFX G2 me ƚa me
 SFX G2 me ƚi me
 SFX G2 me ƚe me
-SFX G2 o a ƚo
-SFX G2 o i ƚo
-SFX G2 o e ƚo
+SFX G2 o a [^m][^e]ƚo
+SFX G2 o i [^m][^e]ƚo
+SFX G2 o e [^m][^e]ƚo
 SFX G2 ne ƚo mene
 SFX G2 ne ƚa mene
 SFX G2 ne ƚi mene
@@ -3912,6 +3910,9 @@ SFX G2 mene geƚo mene
 SFX G2 mene geƚa mene
 SFX G2 mene geƚi mene
 SFX G2 mene geƚe mene
+SFX G1 o a meƚo
+SFX G1 o i meƚo
+SFX G1 o e meƚo
 SFX G2 meƚo seƚo meƚo
 SFX G2 meƚo seƚa meƚo
 SFX G2 meƚo seƚi meƚo
@@ -5188,9 +5189,10 @@ PFX $3 0 ki .
 
 
 # word truncated at the begin
-PFX ‘0 Y 27
+PFX ‘0 Y 28
 PFX ‘0 a ʼ a
 PFX ‘0 al ʼL al
+PFX ‘0 aƚ ʼȽ aƚ
 PFX ‘0 an ʼN an
 PFX ‘0 i ʼ i
 PFX ‘0 in ʼN in
