@@ -24,7 +24,7 @@
 			//remove the counter
 			dictionary.shift();
 
-/*			dictionary.forEach(function(word){
+			dictionary.forEach(function(word){
 				if(!/^\s*\//.test(word) && word.length){
 					word = word.replace(/\t.*$/, '');
 
@@ -32,9 +32,12 @@
 					continuationClasses.forEach(function(continuationClass){
 						if(!generator.hasRule(continuationClass))
 							console.log('rule for class ' + continuationClass + ' not found');
+						if(!generator.canParse(word, continuationClass))
+							console.log('no derivations can be extracted from word ' + word + ' with class ' + continuationClass);
 					});
 				}
 			});/**/
+
 
 /*			var productions = [],
 				size = dictionary.length,
@@ -65,7 +68,8 @@
 				FileHelper.saveAs(blob, filename);
 			}/**/
 
-			var duplicates = new Map();
+
+			/*var duplicates = new Map();
 			var dawg = new DAWG();
 			dictionary.forEach(function(word){
 				if(!/^\s*\//.test(word) && word.length){
@@ -83,7 +87,7 @@
 					});
 				}
 			});
-			console.log(productions);
+			console.log(productions);/**/
 
 //console.log(duplicates);
 console.log('end');

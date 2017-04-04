@@ -115,6 +115,11 @@ define(function(){
 		return (!!this.rules[ruleClass] || this.flags['KEEPCASE'] === ruleClass);
 	};
 
+	var canParse = function(word, continuationClass){
+		var suggestionsToAdd = applyRule.call(this, word, continuationClass);
+		return !!suggestionsToAdd.lentgh;
+	};
+
 	/**
 	 * Removes comment lines and then cleans up blank lines and trailing whitespace.
 	 *
@@ -212,7 +217,8 @@ define(function(){
 
 		applyRules: applyRules,
 		extractContinuationClasses: extractContinuationClasses,
-		hasRule: hasRule
+		hasRule: hasRule,
+		canParse: canParse
 	};
 
 	return Constructor;
