@@ -29,6 +29,9 @@
 					word = word.replace(/\t.*$/, '');
 
 					var continuationClasses = generator.extractContinuationClasses(word);
+					if(continuationClasses.length)
+						word = word.replace(/\/.+/, '');
+
 					continuationClasses.forEach(function(continuationClass){
 						if(!generator.hasRule(continuationClass))
 							console.log('rule for class ' + continuationClass + ' not found');

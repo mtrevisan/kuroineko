@@ -117,7 +117,7 @@ define(function(){
 
 	var canParse = function(word, continuationClass){
 		var suggestionsToAdd = applyRule.call(this, word, continuationClass);
-		return !!suggestionsToAdd.lentgh;
+		return !!suggestionsToAdd.length;
 	};
 
 	/**
