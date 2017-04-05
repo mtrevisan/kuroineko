@@ -4533,6 +4533,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "polveriđ",		"s",			1,	6,	"a",	"1867",			"",
 "pom",			"",			1,	1,	"a",	"1980",			"Andar vanti inte la maturaŧion.",
 "pomeg",			"",			1,	1,	"a",	"1775",			"Uxar la piera pomixe.",
+"pomol",			"",			1,	1,	"a",	"1829",			"",
 "pomol",			"in",			1,	1,	"a",	"1867",			"",
 "pon",			"in",			1,	1,	"a",	"1829",			"Inponarar.",
 "pón",			"",			3,	1,	"a",	"1415",			"",
