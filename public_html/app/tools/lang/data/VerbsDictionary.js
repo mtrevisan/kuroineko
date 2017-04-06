@@ -4566,6 +4566,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ponar",			"in",			1,	3,	"g",	"1775",			"Apolajar, rifúxer, spoxar na dona rika.",
 "ponc",			"",			1,	1,	"a",	"1854",			"Far on potinico, far na kuxidura mal fata.",
 "ponc",			"s",			1,	1,	"a",	"1867",			"[pontia > ponca?]",
+"ponent",		"",			1,	3,	"a",	"1829",			"Dar de Ponente.",
 "pong",			"in",			1,	1,	"a",	"1852",			"Gonfiar, afolar, rinpinŧar.",
 "pong",			"s",			1,	1,	"a",	"1775",			"",
 "ponp",			"",			1,	1,	"a",	"1852",			"",
