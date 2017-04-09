@@ -10869,12 +10869,12 @@ loàmoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:loamar
 ƚoamar/a0a2E0E2	po:verb ts:infinitive_simple
 ƚoamo/a0E0E2J0	po:verb ts:indicative_present st:ƚoamar
 ƚoàmoe/a0a2K0	po:verb ts:indicative_present is:interrogative st:ƚoamar
-lodar/a0a1E0E1	po:verb ts:infinitive_simple
-lòdo/a0E0E1I0J0	po:verb ts:indicative_present st:lodar
-lòdoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:lodar
-ƚodar/a0a2E0E2	po:verb ts:infinitive_simple
-ƚòdo/a0E0E2J0	po:verb ts:indicative_present st:ƚodar
-ƚòdoe/a0a2K0	po:verb ts:indicative_present is:interrogative st:ƚodar
+lodar/a0a1E0E1r0*0^0	po:verb ts:infinitive_simple
+lòdo/a0E0E1I0J0*0^0	po:verb ts:indicative_present st:lodar
+lòdoe/a0a1K0*0^0	po:verb ts:indicative_present is:interrogative st:lodar
+ƚodar/a0a2E0E2^0	po:verb ts:infinitive_simple
+ƚòdo/a0E0E2J0^0	po:verb ts:indicative_present st:ƚodar
+ƚòdoe/a0a2K0^0	po:verb ts:indicative_present is:interrogative st:ƚodar
 xlofar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 xlòfo/a0E0E1E2I0J0	po:verb ts:indicative_present st:xlofar
 xlòfoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:xlofar
@@ -11004,9 +11004,6 @@ lòtoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:lotar
 xlovar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 xlòvo/a0E0E1E2I0J0	po:verb ts:indicative_present st:xlovar
 xlòvoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:xlovar
-lodar/a0a1E0E1r0*0	po:verb ts:infinitive_simple
-lòdo/a0E0E1I0J0*0	po:verb ts:indicative_present st:lodar
-lòdoe/a0a1K0*0	po:verb ts:indicative_present is:interrogative st:lodar
 lođar/a0a1E0E1r0*0	po:verb ts:infinitive_simple
 lòđo/a0E0E1I0J0*0	po:verb ts:indicative_present st:lođar
 lòđoe/a0a1K0*0	po:verb ts:indicative_present is:interrogative st:lođar
@@ -13373,9 +13370,9 @@ oparar/a0a1a2E0E1E2s0s1	po:verb ts:infinitive_simple
 operar/a0a1a2E0E1E2s0s1	po:verb ts:infinitive_simple
 òpero/a0E0E1E2I0J0	po:verb ts:indicative_present st:operar
 òperoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:operar
-opinar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
-opino/a0E0E1E2I0J0	po:verb ts:indicative_present st:opinar
-opínoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:opinar
+opinar/a0a1a2E0E1E2s0s1^0	po:verb ts:infinitive_simple
+opino/a0E0E1E2I0J0^0	po:verb ts:indicative_present st:opinar
+opínoe/a0a1a2K0^0	po:verb ts:indicative_present is:interrogative st:opinar
 opiniar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 opinio/a0E0E1E2J0	po:verb ts:indicative_present st:opiniar
 opínioe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:opiniar
@@ -15993,7 +15990,7 @@ predegar/a0a1a2E0E1E2r0	po:verb ts:infinitive_simple
 prèdego/a0E0E1E2I0J0	po:verb ts:indicative_present st:predegar
 prèdegoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:predegar
 pregar/a0a1a2E0E1E2=0	po:verb ts:infinitive_simple
-prègo/a0E0E1E2I0J0=0	po:verb ts:indicative_present st:pregar
+prègo/a0E0E1E2I0J0=0	po:verb ts:indicative_present st:pregar po:noun
 prègoe/a0a1a2K0=0	po:verb ts:indicative_present is:interrogative st:pregar
 prèmer/b0b1b2E0E1E2	po:verb ts:infinitive_simple
 premerò/b0b1b2J0	po:verb ts:indicative_future st:prèmer
@@ -16002,7 +15999,7 @@ prèmoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:prèmer
 prèmar/b0b1b2E0E1E2	po:verb ts:infinitive_simple
 premarò/b0b1b2J0	po:verb ts:indicative_future st:prèmar
 premiar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
-prèmio/a0E0E1E2J0	po:verb ts:indicative_present st:premiar
+prèmio/a0E0E1E2J0	po:verb ts:indicative_present st:premiar po:noun
 prèmioe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:premiar
 prénder/b0b1b2E0E1E2.0:0	po:verb ts:infinitive_simple
 prendre	po:verb ts:infinitive_simple st:prénder
@@ -29380,7 +29377,8 @@ xonsion/D0U0	po:noun
 xoo/T0	po:noun st:đogo
 xornaƚe/D0R0	po:noun
 xòna/D0	po:noun
-xudisio/T0&0<1	po:noun
+xudiŧio/T0&0^0<1	po:noun
+xudisio/T0&0^0<1	po:noun
 xugador/C0V0	po:noun st:xogador
 xusto/B0I0	po:adjective
 xvansaròto/T0I0	po:noun
@@ -44064,7 +44062,7 @@ postro/T0	po:noun
 potamarina/D0	po:noun
 potejòla/D0T2	po:noun
 poteɉòla/D0T2	po:noun
-potente/T0I0	po:adjective
+potente/T0I0^0	po:adjective
 potifon/D0U0	po:adjective po:noun
 povarin/B0	po:adjective
 poverin/B0	po:adjective
@@ -44091,6 +44089,16 @@ presixità	po:noun
 predial/D0T3U0	po:noun
 predegin/T0	po:noun
 preferíbil/D0T3W0	po:adjective po:noun
+prefetiŧio/T0T2	po:noun
+prexudiŧiévol/D0u0	po:adjective
+prexudisiévol/D0T3u0	po:adjective
+pregièra/D0	po:noun
+preludio/T0	po:noun
+preƚudio/T0	po:noun
+préndexe/T0	po:noun
+preòsto/T0I0	po:noun
+preostura/D0	po:noun
 
 
-/ 481
+
+/ 483

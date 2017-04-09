@@ -3918,6 +3918,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "opar",			"",			1,	0,	"g",	"",				"",
 "oper",			"",			1,	0,	"g",	"1433",			"",
 "opin",			"",			1,	2,	"a",	"1847",			"Ostinar, inkaponir.",
+"opin",			"pre",		1,	2,	"a",	"1829",			"Pensar diversamente.",
 "opini",			"",			1,	2,	"a",	"1775",			"Ostinar, inkaponir.",
 "or",				"",			1,	0,	"g",	"1829",			"Far oraŧion.",
 "or",				"",			4,	2,	"a",	"1851",			"(Veneŧia, Coxa) Atínxer akua.",
