@@ -204,7 +204,9 @@ define(function(){
 						}, this);
 				}
 			}, this);
-		else if(this.flags['KEEPCASE'] !== ruleClass)
+		else if(this.flags['KEEPCASE'] === ruleClass)
+			newWords.push({production: word, productionRules: []});
+		else
 			console.log(word + ' does not have a rule for class ' + ruleClass + (previousGeneration? ' (previous generation is ' + previousGeneration + ')': ''));
 		return newWords;
 	};
