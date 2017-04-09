@@ -16041,14 +16041,14 @@ presostatar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 presòstato/a0E0E1E2I0J0	po:verb ts:indicative_present st:presostatar
 presòstatoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:presostatar
 prestar/a0a1a2E0E1E2-0	po:verb ts:infinitive_simple
-presto/a0E0E1E2I0J0W0-0	po:verb ts:indicative_present st:prestar
+presto/a0E0E1E2I0J0W0-0	po:verb ts:indicative_present st:prestar po:adverb
 préstoe/a0a1a2K0-0	po:verb ts:indicative_present is:interrogative st:prestar
 represtinar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 représtino/a0E0E1E2I0J0	po:verb ts:indicative_present st:represtinar
 représtinoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:represtinar
-despretar/a0a1a2E0E1E2	po:verb is:infinitive_simple
-desprèto/a0E0E1E2I0J0	po:verb ts:indicative_present st:despretar
-desprètoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:despretar
+pretar/a0a1a2E0E1E2+0	po:verb is:infinitive_simple
+prèto/a0E0E1E2I0J0+0	po:verb ts:indicative_present st:despretar
+prètoe/a0a1a2K0+0	po:verb ts:indicative_present is:interrogative st:despretar
 preŧar/a0a1E0E1+0*0@0	po:verb ts:infinitive_simple
 prèŧo/a0E0E1I0J0+0*0@0	po:verb ts:indicative_present st:preŧar po:adverb po:preposition po:noun
 prèŧoe/a0a1K0+0*0@0	po:verb ts:indicative_present is:interrogative st:preŧar
@@ -17462,9 +17462,9 @@ sàsioe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:sasiar
 saŧiar/a0a1E0E1	po:verb ts:infinitive_simple
 saŧio/a0E0E1J0	po:verb ts:indicative_present st:saŧiar po:noun
 sàŧioe/a0a1K0	po:verb ts:indicative_present is:interrogative st:saŧiar
-saver/a0a1a2j1E0E1E2=0.0	po:verb ts:infinitive_simple
-sào/j1J0=0.0	po:verb ts:indicative_present st:saver st:saer
-saer/a0a1a2j1E0E1E2=0.0	po:verb ts:infinitive_simple
+saver/a0a1a2j1E0E1E2^0=0.0	po:verb ts:infinitive_simple
+sào/j1J0^0=0.0	po:verb ts:indicative_present st:saver st:saer
+saer/a0a1a2j1E0E1E2^0=0.0	po:verb ts:infinitive_simple
 desavir/a0a1a2c0c1c2E0E1E2	po:verb ts:infinitive_simple
 resavir/a0a1a2c0c1c2E0E1E2	po:verb ts:infinitive_simple
 insavonar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
@@ -20483,8 +20483,8 @@ tèroe/a0a1a2K0-0@0	po:verb ts:indicative_present is:interrogative st:terar
 tarar/a0a1a2E0E1E2r0-0@0	po:verb ts:infinitive_simple
 taro/a0E0E1E2I0J0-0@0	po:verb ts:indicative_present st:tarar
 tàroe/a0a1a2K0-0@0	po:verb ts:indicative_present is:interrogative st:tarar
-terir/a0a1a2c0c1c2E0E1E2@0	po:verb ts:infinitive_simple
-tarir/a0a1a2c0c1c2E0E1E2@0	po:verb ts:infinitive_simple
+terir/a0a1a2c0c1c2E0E1E2^0@0	po:verb ts:infinitive_simple
+tarir/a0a1a2c0c1c2E0E1E2^0@0	po:verb ts:infinitive_simple
 soterar/a0a1a2E0E1E2,0	po:verb ts:infinitive_simple
 sotèro/a0E0E1E2I0J0,0	po:verb ts:indicative_present st:soterar
 sotèroe/a0a1a2K0,0	po:verb ts:indicative_present is:interrogative st:soterar
@@ -22425,6 +22425,9 @@ vàrkoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:varkar
 variar/a0a1a2E0E1E2s0s1-0*0	po:verb ts:infinitive_simple
 vario/a0E0E1E2J0W0-0*0	po:verb ts:indicative_present st:variar po:adjective
 vàrioe/a0a1a2K0-0*0	po:verb ts:indicative_present is:interrogative st:variar
+prevarikar/a0a1a2E0E1E2s0s1	po:verb ts:infinitive_simple
+prevàriko/a0E0E1E2I0J0	po:verb ts:indicative_present st:prevarikar
+prevàrikoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:prevarikar
 varolar/a0a1E0E1	po:verb ts:infinitive_simple
 varòlo/a0E0E1I0J0	po:verb ts:indicative_present st:varolar
 varòloe/a0a1K0	po:verb ts:indicative_present is:interrogative st:varolar
@@ -22640,7 +22643,7 @@ venŧerò/b0b1J0	po:verb ts:indicative_future st:vénŧer
 venŧo/a0E0E1I0J0	po:verb ts:indicative_present st:vénŧer
 vénŧoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:vénŧer
 vénsar/b0b1b2E0E1E2	po:verb ts:infinitive_simple
-veñir/a0a1a2d0d1d2E0E1E2+0.0,0@0	po:verb ts:infinitive_simple
+veñir/a0a1a2d0d1d2E0E1E2^0+0.0,0@0	po:verb ts:infinitive_simple
 arveñir/a0a1a2d0d1d2E0E1E2	po:verb ts:infinitive_simple
 interveñir/a0a1a2d0d1d2E0E1E2	po:verb ts:infinitive_simple
 intarveñir/a0a1a2d0d1d2E0E1E2	po:verb ts:infinitive_simple
@@ -38446,7 +38449,7 @@ plaja/D0T2	po:noun
 plato/T0I0	po:noun
 poleja/D0T2	po:noun
 poƚeja/D0T2	po:noun
-pretèsta/D0	po:noun
+pretèsto/B0	po:noun
 prèvio	po:adjective
 primisèrio/T0	po:noun
 primiŧèrio/T0	po:noun
@@ -39527,7 +39530,7 @@ prepòside/D0	po:noun
 prexentin/C0	po:noun
 prèdega/D0	po:noun
 propinkuo/B0	po:adjective
-proskinò	po:noun
+prostinò	po:noun
 provenxa/D0	po:noun
 provexe/T0	po:noun
 provin/T0	po:noun
@@ -40713,7 +40716,6 @@ bè	po:interjection
 bètola/D0T2	po:noun
 biankume/T0	po:noun
 biansemin/T0	po:noun
-bibaraŧa/D0T2	po:noun
 bibaron/D0U0	po:noun
 bibioxaría/D0	po:noun
 bifolko/B0	po:noun
@@ -41374,7 +41376,6 @@ fiordeƚixo/T0	po:noun
 fioridor/D0	po:noun
 fiorior/D0	po:noun
 fiorita/D0	po:noun
-fiseka/D0	po:noun
 fiseŧa/D0T2	po:noun
 fitakàmara/D0	po:noun
 fitalèto/T0I0	po:noun
@@ -42839,8 +42840,8 @@ mañasòrbol/D0T3u0	po:noun
 mañàbil/D0T3	po:adjective
 mañàfara/D0	po:noun
 mañèxia/D0	po:noun
-mañifisitúdin/D0	po:noun
-mañifiŧitúdin/D0	po:noun
+mañifikasitúdin/D0	po:noun
+mañifikaŧitúdin/D0	po:noun
 mapador/C0V0	po:noun
 mapamondo/T0	po:noun
 marabuto/T0I0	po:noun
@@ -43314,9 +43315,9 @@ santiƚion/D0U0	po:noun
 sarvèƚo/T0	po:noun
 sauroxa/D0	po:noun
 sekoleta/D0T2	po:noun
-selèbro/T0T1	po:noun
+sèlebro/T0T1	po:noun
 seƚegèo/T0	po:noun
-seƚèbro/T0T1	po:noun
+sèƚebro/T0T1	po:noun
 senal/D0T3U0	po:noun
 sendalina/D0T2	po:noun
 sendaƚèr/B0V0	po:noun
@@ -43398,7 +43399,7 @@ tron/T0U0	po:noun
 ŧekin/T0T4	po:noun
 ŧekoleta/D0	po:noun
 ŧelegèo/T0T4	po:noun
-ŧelèbro/T0T1	po:noun
+ŧèlebro/T0T1	po:noun
 ŧendalèr/B0T4V0	po:noun
 ŧendalina/D0	po:noun
 ŧenerata/D0T4	po:noun
@@ -43479,7 +43480,6 @@ tron/T0U0	po:noun
 ŧixor/C0T4v0-0	po:noun
 ŧífol/T0T2T4u0	po:noun
 ŧígar/T0T4	po:noun
-ŧíkola/D0T4	po:noun
 vantikor/D0	po:noun
 vantikòr/D0	po:noun
 vaxina/D0	po:noun
@@ -43798,6 +43798,7 @@ peskaoreto/B0I0	po:noun
 peskaresa/D0	po:noun
 pesòko/B0I0	po:adjective
 pesatèl/T0T2U0	po:noun
+prèo/T0	po:noun
 asprèo/T0	po:noun
 pesièra/D0	po:noun
 pestenega/D0	po:noun
@@ -44098,7 +44099,31 @@ preƚudio/T0	po:noun
 préndexe/T0	po:noun
 preòsto/T0I0	po:noun
 preostura/D0	po:noun
+prerogativo/B0	po:noun
+prexetina/D0	po:noun
+prexon/D0U0	po:noun
+presidente/T0I0	po:noun
+presidenŧa/D0T2	po:noun
+prexidenŧial/D0U0	po:adjective
+prexidensial/D0T3U0	po:adjective
+presidenŧial/D0U0	po:adjective
+presidensial/D0T3U0	po:adjective
+presidial/D0T3U0	po:adjective
+presidio/T0	po:noun
+prexidio/T0	po:noun
+presura/D0	po:noun
+tension/D0U0^0	po:noun
+pretèrito/T0I0	po:noun
+gederodo/T0	po:noun
+pretexa/D0	po:noun
+pretin/T0	po:noun
+pretor/D0	po:noun
+prevenŧion/D0T2U0	po:noun
+primaxenitura/D0	po:noun
+primavera/D0	po:noun
 
 
 
-/ 483
+/ 485
+/ v. batidor 676-1-28 > ponidor
+/ ventilòkuio 709-3-48 > ventrilòkuo

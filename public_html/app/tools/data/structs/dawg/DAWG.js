@@ -26,7 +26,7 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 	};
 
 	/** @private */
-	var findChild = function(int node, char c){
+/*	var findChild = function(int node, char c){
 		for(Iterator<Integer> iter = new ChildIterator(node); iter.hasNext(); ){
 			int child = iter.next();
 
