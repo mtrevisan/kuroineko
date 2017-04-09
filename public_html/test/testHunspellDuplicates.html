@@ -38,6 +38,22 @@
 						if(!generator.canParse(word, continuationClass))
 							console.log('no derivations can be extracted from word ' + word + ' with class ' + continuationClass);
 					});
+
+					var productions = generator.applyRules(word);
+					productions.forEach(function(el){
+						var production = el.production;
+						if(/ƚ/.test(word) && /[ŧđ]/.test(word))
+							console.log('word with a vanishing el cannot contain characters from another variant: ' + JSON.stringify(el));
+						if(/ƚ$/.test(word))
+							console.log('word cannot end with a vanishing el: ' + JSON.stringify(el));
+						word.split('-').some(function(subword){
+							if(/^([^àèéíòóú]*[àèéíòóú]){2,}[^àèéíòóú]*$/.test(subword)){
+								console.log('word cannot have multiple accents: ' + JSON.stringify(el));
+								return true;
+							}
+							return false;
+						})
+					});
 				}
 			});/**/
 
@@ -51,9 +67,9 @@
 				if(!/^\s*\//.test(word) && word.length){
 					word = word.replace(/\t.*$/, '');
 
-					var suggestions = generator.applyRules(word);
+					var productions = generator.applyRules(word);
 					if(writeFile){
-						suggestions.forEach(function(el){
+						productions.forEach(function(el){
 							productions.push(JSON.stringify(el) + '\n');
 						});
 						if(productions.length > 2000000){
@@ -78,15 +94,15 @@
 				if(!/^\s*\//.test(word) && word.length){
 					word = word.replace(/\t.*$/, '');
 
-					var suggestions = generator.applyRules(word);
-					suggestions.forEach(function(el){
-						var suggestion = el.suggestion;
-						if(dawg.contains(suggestion)){
-							var value = duplicates.get(suggestion) | '';
-							duplicates.set(suggestion, value + '|' + JSON.stringify(el));
+					var productions = generator.applyRules(word);
+					productions.forEach(function(el){
+						var production = el.production;
+						if(dawg.contains(production)){
+							var value = duplicates.get(production) | '';
+							duplicates.set(production, value + '|' + JSON.stringify(el));
 						}
 						else
-							dawg.add(suggestion);
+							dawg.add(production);
 					});
 				}
 			});
