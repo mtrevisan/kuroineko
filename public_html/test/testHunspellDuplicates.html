@@ -47,7 +47,7 @@
 						if(/ƚ$/.test(word))
 							console.log('word cannot end with a vanishing el: ' + JSON.stringify(el));
 						word.split('-').some(function(subword){
-							if(/^([^àèéíòóú]*[àèéíòóú]){2,}[^àèéíòóú]*$/.test(subword)){
+							if(/^([^àèéíòóú]*[àèéíòóú]){2,}/.test(subword)){
 								console.log('word cannot have multiple accents: ' + JSON.stringify(el));
 								return true;
 							}
