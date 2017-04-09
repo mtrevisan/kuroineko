@@ -287,7 +287,7 @@ define(['tools/lang/phonology/Word', 'tools/lang/phonology/Grapheme', 'tools/lan
 							if(!Word.isStressed(inf)){
 								//-àr
 								console.log(inf + '/a0a1a2E0' + getVanishingFlag(inf) + '	po:verb is:infinitive_simple');
-								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/a0a1a2E0' + getVanishingFlag(inf) + 'I0J0	po:verb ts:indicative_present st:' + inf);
+								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'o') + '/a0E0' + getVanishingFlag(inf) + 'I0J0	po:verb ts:indicative_present st:' + inf);
 								console.log(unmarkDefaultStress((theme.regular.themeT8? theme.regular.themeT8: theme.irregular.themeT8) + 'oe') + '/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:' + inf);
 							}
 							else{
