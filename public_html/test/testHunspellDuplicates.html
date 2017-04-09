@@ -28,31 +28,32 @@
 				if(!/^\s*\//.test(word) && word.length){
 					word = word.replace(/\t.*$/, '');
 
-					var continuationClasses = generator.extractContinuationClasses(word);
-					if(continuationClasses.length)
-						word = word.replace(/\/.+/, '');
-
-					continuationClasses.forEach(function(continuationClass){
-						if(!generator.hasRule(continuationClass))
-							console.log('rule for class ' + continuationClass + ' not found');
-						if(!generator.canParse(word, continuationClass))
-							console.log('no derivations can be extracted from word ' + word + ' with class ' + continuationClass);
-					});
-
 					var productions = generator.applyRules(word);
 					productions.forEach(function(el){
 						var production = el.production;
-						if(/ƚ/.test(word) && /[ŧđ]/.test(word))
+						if(/ƚ/.test(production) && /[ŧđ]/.test(production))
 							console.log('word with a vanishing el cannot contain characters from another variant: ' + JSON.stringify(el));
-						if(/ƚ$/.test(word))
+						if(/ƚ$/.test(production))
 							console.log('word cannot end with a vanishing el: ' + JSON.stringify(el));
-						word.split('-').some(function(subword){
+						production.split('-').some(function(subword){
 							if(/^([^àèéíòóú]*[àèéíòóú]){2,}/.test(subword)){
 								console.log('word cannot have multiple accents: ' + JSON.stringify(el));
 								return true;
 							}
 							return false;
-						})
+						});
+						if(/[cijɉñ]i[aàeèéiíoòóuú]/.test(production) && !/ciuí$/.test(production))
+							console.log('word cannot have [cijɉñ]iV: ' + JSON.stringify(el));
+					});
+
+					var continuationClasses = generator.extractContinuationClasses(word);
+					if(continuationClasses.length)
+						word = word.replace(/\/.+/, '');
+					continuationClasses.forEach(function(continuationClass){
+						if(!generator.hasRule(continuationClass))
+							console.log('rule for class ' + continuationClass + ' not found');
+						if(!generator.canParse(word, continuationClass))
+							console.log('no derivations can be extracted from word ' + word + ' with class ' + continuationClass);
 					});
 				}
 			});/**/
