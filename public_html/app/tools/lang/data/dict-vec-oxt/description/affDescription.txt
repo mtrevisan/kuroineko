@@ -11,10 +11,10 @@ b0/b1/b2: (public) second conjugation rhizotonic verbs
 c0/c1/c2: (public) third conjugation verbs with the inclusion of the <is> affix
 d0/d1/d2: (public) third conjugation verbs without the inclusion of the <is> affix
 e0/e1/e2: (public) third conjugation verbs both with and without the inclusion of the <is> affix
-h0/h1/h2: irregular first conjugation (dar, far, star)
-i0: irregular first conjugation (andar)
-j0: irregular second conjugation arrhizotonic ((g)aver)
-j1: irregular second conjugation arrhizotonic (sa(v)er)
+f0/f1/f2: irregular first conjugation (dar, far, star)
+g0: irregular first conjugation (andar)
+h0: irregular second conjugation arrhizotonic ((g)aver)
+j0: irregular second conjugation arrhizotonic (sa(v)er)
 k0/k1/k2: irregular second conjugation arrhizotonic (toler, voler)
 l0: irregular second conjugation rhizotonic (cèñer, tèñer, vèñer)
 m0: irregular second conjugation rhizotonic (déver)
@@ -54,8 +54,8 @@ mf: (public) metaphonesis (oxo>uxi, ...)
 W0/W1/W2: (public) adverbs in -mente
 Y0/Y1: (public) final lenition (Vduro>Vur[oi], ada>à[ae], ida>í[ae], uda>ú[ae])
 Z0: (public) ignore upper/lower case
-&0: (public) altered substantives (-eto/a)
-[0/]0: (public) altered substantives (-el/ela, -eƚo/a)
+&0/&1: (public) altered substantives (-eto/a)
+[0/[1: (public) altered substantives (-el/ela, -eƚo/a)
 (0: (public) altered substantives (-òto/a)
 )0: (public) altered substantives (-on)
 §0: (public) altered substantives (-ato/a)
@@ -114,9 +114,11 @@ s rude/aspra = x
 chi naturale = ki
 
 ^[^ƚ\n]*[eaouèàòéóú][ln]/[^ZUu\t]*\t > # add U0/u0
-ƚ[^/\n]{1,}[^a]/[^\t\n]*&0 > # remove &0 and replace with o/T0
+ƚ[^/\n]{1,}[^a]/[^\t\n]*&0 > # remove &0 and replace with o/T0 if vanishing el
 /([^\t\n\s]*)ğ([^\t\n\s]*[\t\s\n]+) > /($1)GV$2 # substitute flags
 # [^\n]+\n > # remove # comments
 / [^\n]*\n > # remove / comments
 \t[^\r\n]*\n > \n # remove tags
 ^(.*?)$\s+?^(?=.*^\1$) > # remove duplicates
+ƚ[^/\n]+eto/T0\t > add &1 to $1
+ƚ[^/\n]+eta/D0\t > add &1 to $1
