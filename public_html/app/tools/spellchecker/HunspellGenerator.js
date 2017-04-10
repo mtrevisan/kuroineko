@@ -193,9 +193,9 @@ define(function(){
 
 					var formattedRule = rule.type
 						+ ' ' + ruleClass
-						+ ' ' + (entry.remove? entry.remove.source.replace(/\^|\$/, ''): '0')
+						+ ' ' + (entry.remove? entry.remove.source.replace(/\^|\$/g, ''): '0')
 						+ ' ' + entry.add + (entry.continuationClasses? '/' + entry.continuationClasses.join(''): '')
-						+ ' ' + (entry.match? entry.match.source.replace(/\^|\$/, ''): '.');
+						+ ' ' + (entry.match? entry.match.source.replace(/\^|\$/g, ''): '.');
 					newWords.push({production: newWord, productionRules: [previousGeneration, formattedRule].filter(function(el){ return !!el; })});
 
 					if(!previousGeneration && 'continuationClasses' in entry)

@@ -33,8 +33,6 @@
 						var production = el.production;
 						if(/ƚ/.test(production) && /[ŧđ]/.test(production))
 							console.log('word with a vanishing el cannot contain characters from another variant: ' + JSON.stringify(el));
-						if(/ƚ$/.test(production))
-							console.log('word cannot end with a vanishing el: ' + JSON.stringify(el));
 						production.split('-').some(function(subword){
 							if(/^([^àèéíòóú]*[àèéíòóú]){2,}/.test(subword)){
 								console.log('word cannot have multiple accents: ' + JSON.stringify(el));
