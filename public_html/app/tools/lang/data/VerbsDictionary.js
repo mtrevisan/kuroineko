@@ -2932,6 +2932,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kuadr",			"in",			1,	2,	"g",	"",				"",
 "kuadr",			"re",			1,	2,	"g",	"1854",			"",
 "kuadr",			"s",			1,	2,	"g",	"1775",			"",
+"kuadret",		"",			1,	5,	"a",	"1829",			"",
 "kuadriđ",		"",			1,	5,	"a",	"1854",			"Rikuadrar, kuadrar.",
 "kuadron",		"s",			1,	5,	"a",	"1867",			"",
 "kuaj",			"s",			1,	2,	"g",	"1852",			"Konóser, skovrir, palexar.",
