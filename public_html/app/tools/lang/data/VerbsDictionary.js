@@ -4779,6 +4779,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "rabi",			"sko",		1,	1,	"g",	"1775",			"Skoraŧar, skavalar.",
 "rabot",			"",			1,	3,	"g",	"1855",			"Xgualivar on muro.",
 "rac",			"",			1,	1,	"g",	"1980",			"Xmakar, un fià marŧo (de un fruto).",
+"rad",			"",			1,	1,	"g",	"1829",			"Ràder.",
 "ràd",			"",			3,	1,	"g",	"1847",			"",
 "radeg",			"",			1,	1,	"g",	"1775",			"Brontolar, litigar, konténder.",
 "radeg",			"e",			1,	1,	"g",	"1509",			"Xradegar.",
