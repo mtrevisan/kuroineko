@@ -8751,6 +8751,12 @@ kekéñoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:kekeñar
 kegar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 kègo/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:kegar
 kègoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:kegar
+ketar/a0a1a2E0E1E2	po:verb is:infinitive_simple
+keto/a0E0E1E2I0J0	po:verb ts:indicative_present st:ketar po:adjective
+kétoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:ketar
+kietar/a0a1a2E0E1E2	po:verb is:infinitive_simple
+kieto/a0E0E1E2I0J0	po:verb ts:indicative_present st:kietar po:adjective
+kiétoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:kietar
 kijar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 kijo/a0a1a2E0E1E2J0	po:verb ts:indicative_present st:kijar
 kíjoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:kijar
@@ -9871,7 +9877,7 @@ skuartar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 skuarto/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:skuartar
 skuàrtoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:skuartar
 kuatar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
-kuato/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:kuatar
+kuato/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:kuatar po:adjective po:adverb
 kuàtoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:kuatar
 kubiar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 kubio/a0a1a2E0E1E2J0	po:verb ts:indicative_present st:kubiar
@@ -9936,6 +9942,9 @@ kuestiónoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:kuestiona
 kuestuar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 kuèstuo/a0a1a2E0E1E2J0	po:verb ts:indicative_present st:kuestuar
 kuèstuoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:kuestuar
+kuetar/a0a1a2E0E1E2	po:verb is:infinitive_simple
+kueto/a0E0E1E2I0J0	po:verb ts:indicative_present st:kuetar po:adjective
+kuétoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:kuetar
 kufar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 kufo/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:kufar
 kúfoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:kufar
@@ -9948,9 +9957,9 @@ kúfoƚoe/a0a2K0	po:verb ts:indicative_present is:interrogative st:kufoƚar
 skufonar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 skufono/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:skufonar
 skufónoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:skufonar
-inkuietar/a0a1a2E0E1E2	po:verb is:infinitive_simple
-inkuieto/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:inkuietar
-inkuiétoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:inkuietar
+kuietar/a0a1a2E0E1E2-0	po:verb is:infinitive_simple
+kuieto/a0a1a2E0E1E2I0J0-0	po:verb ts:indicative_present st:kuietar po:adjective
+kuiétoe/a0a1a2K0-0	po:verb ts:indicative_present is:interrogative st:kuietar
 skuinternar/a0a1a2E0E1E2r0,0	po:verb ts:infinitive_simple
 skuintèrno/a0a1a2E0E1E2I0J0,0	po:verb ts:indicative_present st:skuinternar
 skuintèrnoe/a0a1a2K0,0	po:verb ts:indicative_present is:interrogative st:skuinternar
@@ -24517,7 +24526,7 @@ medèmo/B0W0	po:pronoun po:adjective_identificative
 tal/D0T3W0u0	po:pronoun po:adjective_identificative
 / pronòme e ajetivo interogativo e esklamativo
 kuanto/B0I0	po:pronoun po:adjective_interrogative
-kual/T0T2u0	po:pronoun po:adjective_interrogative is:masculine
+kual/T0T2u0W0	po:pronoun po:adjective_interrogative is:masculine
 kuala/D0T2	po:pronoun po:adjective_interrogative is:femenine
 onde	po:pronoun po:adjective_interrogative
 dondeké	po:pronoun po:adjective_interrogative
@@ -24553,15 +24562,15 @@ intrame/T0	po:quantifier
 kualke	po:quantifier al:kalke al:koalke
 koalke	po:quantifier st:kualke
 kalke	po:quantifier st:kualke po:noun
-kualkòsa	po:quantifier al:kalkòsa al:koalkòsa
-koalkòsa	po:quantifier st:kualkòsa
-kalkòsa	po:quantifier st:kualkòsa
-kualkoseta	po:quantifier al:kalkoseta al:koalkoseta
-koalkoseta	po:quantifier st:kualkoseta
-kalkoseta	po:quantifier st:kualkoseta
+kualkòsa/&0	po:quantifier al:kalkòsa al:koalkòsa
+koalkòsa/&0	po:quantifier st:kualkòsa
+kalkòsa/&0	po:quantifier st:kualkòsa
 kualkedun/C0U0	po:quantifier al:kalkedun al:koalkedun
 koalkedun/C0U0	po:quantifier st:kualkedun
 kalkedun/C0U0	po:quantifier st:kualkedun
+kualkun/C0U0	po:pronoun al:kalkun al:koalkedun
+koalkun/C0U0	po:pronoun st:kualkun
+kalkun/C0U0	po:pronoun st:kualkun
 kualsíasi	po:quantifier po:adjective al:koalsíasi
 koalsíasi	po:quantifier po:adjective st:kualsíasi
 ñaun	po:quantifier po:adjective po:adverb
@@ -24754,9 +24763,10 @@ tèrŧo/B0I0’0	po:numeral_ordenal
 tèrso/B0’0	po:numeral_ordenal
 tèrŧiario/B0W0	po:adjective
 tèrsiario/B0W0	po:adjective
-kuarto/T0’0	po:numeral_ordenal al:koarto
-kuarta/D0[0[1	po:numeral_ordenal al:koarto
-koarto/B0’0	po:numeral_ordenal st:kuarto
+kuarto/T0’0&0	po:numeral_ordenal al:koarto
+kuarta/D0[0[1&0	po:numeral_ordenal al:koarto
+koarto/T0’0&0	po:numeral_ordenal st:kuarto
+koarta/D0[0[1&0	po:numeral_ordenal st:kuarto
 kuinto/B0’0[0[1	po:numeral_ordenal
 sèsto/B0I0’0	po:numeral_ordenal
 sètimo/B0	po:numeral_ordenal
@@ -25769,6 +25779,7 @@ Sud/Z0	po:noun
 / venti
 Bòra/Z0	po:noun
 Forean/Z0	po:noun
+Kuarnera/D0	po:noun
 Garbin/Z0	po:noun
 Grègo/Z0	po:noun
 Inbato/I0Z0	po:noun
@@ -27313,7 +27324,6 @@ kuađó	po:adverb
 kuaja/D0T2	po:noun
 kualifegativo/B0W0I0	po:adjective
 kualífega/D0	po:noun
-kualkun/C0U0	po:pronoun al:kalkun
 kuaƚifegativo/B0W1	po:adjective
 kuaƚífega/D0	po:noun
 kuantifegador/C0V0	po:adjective po:noun
@@ -31381,6 +31391,7 @@ kuajaroƚo/T0V0	po:noun
 kuarèl/T0U0&0	po:noun
 kuarèƚo/T0&1	po:noun
 kuarisèl/T0T2U0	po:noun
+kuariŧèl/T0U0	po:noun
 kuartexin/T0	po:noun
 kuatrin/T0	po:noun
 kuba/D0	po:noun
@@ -40140,7 +40151,6 @@ konsolar/D0	po:noun
 konsoƚar/D0	po:noun
 kódego/B0	po:noun
 kròta/D0	po:noun
-kuarixèl/T0T2U0	po:noun
 lagrimèr/B0V0	po:noun
 laguja/D0T2	po:noun
 levra/D0T4	po:noun
@@ -41985,7 +41995,6 @@ kaligèra/D0	po:noun
 kalka	po:noun
 kalkador/C0V0	po:noun
 kalkañòl/T0T2U0	po:noun
-kalkun/C0U0	po:pronoun st:kualkun
 kalmuk	po:noun
 kalolin/T0	po:noun
 kalònego/B0	po:noun
@@ -44048,7 +44057,6 @@ posanŧa/D0T2	po:noun
 posatièra/D0	po:noun
 posèso/T0	po:adjective po:noun
 posidente/T0I0	po:noun
-pòst	po:preposition
 postatamente/I0W2	po:adverb
 posterioxitade/T0Y0	po:noun
 posterità	po:noun
@@ -44187,10 +44195,6 @@ puđapiè/D0	po:noun
 pudapè/D0	po:noun
 pudapié/D0	po:noun
 pudapiè/D0	po:noun
-puxapè/D0	po:noun
-puxapié/D0	po:noun
-puxapiè/D0	po:noun
-puxapíe/D0	po:noun
 pođapè/D0	po:noun
 pođapié/D0	po:noun
 pođapiè/D0	po:noun
@@ -44207,9 +44211,29 @@ kuadretin/T0	po:noun
 kuadreton/D0U0	po:noun
 kuajèra/D0	po:noun
 kuaɉèra/D0	po:noun
+kualsesía	po:adjective
+kualtrato	po:adverb
+kuarantía/D0	po:noun
+kuarantiòto/B0I0	po:noun
+kuaréxema/D0	po:noun
+kuartal/T0T2U0	po:noun
+kuatroŧentista/C0	po:noun
+kuatrosentista/C0	po:noun
+kuetanŧa/D0T2	po:noun
+kueteŧa/D0T2	po:noun
+keteŧa/D0T2	po:noun
+kuieteŧa/D0T2	po:noun
+kieteŧa/D0T2	po:noun
+kuetin/B0	po:adjective
+ketin/B0	po:adjective
+kuietin/B0	po:adjective
+kietin/B0	po:adjective
+kuiesente/T0I0	po:noun
+kuintana/D0	po:noun
+kuintijo/T0T2	po:noun
 
 
 
-/ 494
+/ 498
 / v. batidor 676-1-28 > ponidor
 / ventilòkuio 709-3-48 > ventrilòkuo
