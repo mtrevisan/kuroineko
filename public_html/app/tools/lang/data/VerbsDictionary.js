@@ -4802,6 +4802,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ralent",		"",			1,	3,	"a",	"1980",			"",
 "ram",			"",			1,	1,	"g",	"1998",			"Potar.",
 "ram",			"de",			1,	1,	"g",	"1867",			"",
+"rameng",		"",			1,	3,	"a",	"1829",			"Kondúxer, andar ramengo.",
 "ranb",			"",			1,	1,	"g",	"1775",			"Portar via ko furia, portar via de skondon.",
 "rancin",		"",			1,	4,	"a",	"1854",			"Gualsir, agrinŧar.",
 "ranciñ",		"",			1,	4,	"a",	"1854",			"Gualsir, agrinŧar.",
