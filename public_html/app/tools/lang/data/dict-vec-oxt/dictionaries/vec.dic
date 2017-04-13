@@ -5849,6 +5849,11 @@ refréskoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:refreskar
 renfreskar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 renfresko/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:renfreskar po:noun
 renfréskoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:renfreskar
+refrèter/b0b1b2E0E1E2	po:verb ts:infinitive_simple
+refreterò/b0b1b2J0	po:verb ts:indicative_future st:refrèter
+refrèto/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:refrèter
+refrètoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:refrèter
+refrèso/B0I0	po:verb ts:participle_perfect_strong st:refrèter
 frexar/a0a1a2E0E1E2*0	po:verb ts:infinitive_simple
 frexo/a0a1a2E0E1E2I0J0*0	po:verb ts:indicative_present st:frexar
 fréxoe/a0a1a2K0*0	po:verb ts:indicative_present is:interrogative st:frexar
@@ -9234,9 +9239,9 @@ kòño/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:kòñer st:koñar
 kòñoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:kòñer st:koñar
 kòñar/b0b1b2E0E1E2	po:verb ts:infinitive_simple
 koñarò/b0b1b2J0	po:verb ts:indicative_future st:kòñar
-koñóser/b0b1b2E0E1E2	po:verb ts:infinitive_simple
-koñoserò/b0b1b2J0	po:verb ts:indicative_future st:koñóser
-koñoso/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:koñóser
+koñóser/b0b1b2E0E1E2.0	po:verb ts:infinitive_simple
+koñoserò/b0b1b2J0.0	po:verb ts:indicative_future st:koñóser
+koñoso/a0a1a2E0E1E2I0J0.0	po:verb ts:indicative_present st:koñóser
 koñósoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:koñóser
 koñósar/b0b1b2E0E1E2	po:verb ts:infinitive_simple
 koñosarò/b0b1b2J0	po:verb ts:indicative_future st:koñósar
@@ -10066,10 +10071,10 @@ kupo/a0a1a2E0E1E2I0J0@0	po:verb ts:indicative_present st:kupar po:adjective
 kúpoe/a0a1a2K0@0	po:verb ts:indicative_present is:interrogative st:kupar
 semikupir/a0a1a2c0c1c2E0E1E2	po:verb ts:infinitive_simple
 rekuperar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
-rekúpero/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:rekuperar
+rekúpero/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:rekuperar po:noun
 rekúperoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:rekuperar
 rekuparar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
-rekúparo/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:rekuparar
+rekúparo/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:rekuparar po:noun
 rekúparoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:rekuparar
 kurar/a0a1a2E0E1E2r0^0-0	po:verb ts:infinitive_simple
 kuro/a0a1a2E0E1E2I0J0^0-0	po:verb ts:indicative_present st:kurar
@@ -16654,8 +16659,11 @@ rédoe/a0a1a2K0+0	po:verb ts:indicative_present is:interrogative st:redar
 reditar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 rèdito/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:reditar
 rèditoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:reditar
+rekar/a0a1a2E0E1E2	po:verb is:infinitive_simple
+rèko/a0E0E1E2I0J0	po:verb ts:indicative_present st:rekar
+rèkoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:rekar
 rekamar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
-rekamo/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:rekamar po:noun
+rekamo/a0a1a2E0E1E2I0J0&0	po:verb ts:indicative_present st:rekamar po:noun
 rekàmoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:rekamar
 reklutar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 rèkluto/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:reklutar
@@ -21757,8 +21765,8 @@ seremoniar/a0a1a2E0E1E2	po:verb is:infinitive_simple
 seremònio/a0a1a2E0E1E2J0	po:verb ts:indicative_present st:ŧeremoniar
 ŧeremònioe/a0a1K0T4	po:verb ts:indicative_present is:interrogative st:ŧeremoniar
 serkar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
-serko/a0a1a2E0E1E2I0J0.0	po:verb ts:indicative_present st:ŧerkar
-sérkoe/a0a1a2K0.0	po:verb ts:indicative_present is:interrogative st:ŧerkar
+serko/a0a1a2E0E1E2I0J0.0	po:verb ts:indicative_present st:serkar
+sérkoe/a0a1a2K0.0	po:verb ts:indicative_present is:interrogative st:serkar
 ŧerkar/a0a1E0E1.0	po:verb ts:infinitive_simple
 ŧerko/a0a1E0E1I0J0.0	po:verb ts:indicative_present st:ŧerkar
 ŧérkoe/a0a1K0.0	po:verb ts:indicative_present is:interrogative st:ŧerkar
@@ -28489,7 +28497,7 @@ reaƚe/T0R0-0	po:adjective
 reaƚeto/T0	po:adjective
 reaƚixasion/D0	po:noun
 rebatin/T0	po:noun
-reca/D0(0	po:noun
+reca/D0(0<0<1[0[1	po:noun
 recesta/D0	po:noun
 recin/T0	po:noun
 recon/C0U0	po:noun
@@ -32876,7 +32884,7 @@ revoltolon/D0T2U0	po:noun
 revolton/D0U0	po:adjective po:noun
 rexentadura/D0Y0	po:noun
 rexeto/T0I0	po:noun
-réden/D0u0	po:noun
+réden/C0u0	po:noun
 réfol/T0T2u0	po:noun
 rènso/T0	po:noun
 rètina/D0	po:noun
@@ -38543,7 +38551,6 @@ revèra	po:adverb
 rexidente/T0I0	po:noun
 reximento/T0I0mf	po:noun
 ribola/D0T2	po:noun
-ridoto/T0I0	po:noun
 rigabèl/T0T2U0	po:noun
 ripa/D0&0	po:noun
 rota/D0	po:noun
@@ -39633,7 +39640,7 @@ ratina/D0	po:noun
 rebuton/D0U0	po:noun
 redexèl/T0T2U0	po:noun
 redèstola/D0T2	po:noun
-redina/D0	po:noun
+redin/C0	po:noun
 refretario/B0	po:adjective po:noun
 refudaja/D0T2	po:noun
 refudajo/T0T2	po:noun
@@ -44349,8 +44356,47 @@ rebufo/T0I0r2	po:noun
 rekalŧitroxo/B0I0mf	po:adjective
 rekalsitroxo/B0I0mf	po:adjective
 rekamador/C0V0	po:noun
+rekamadura/D0Y0	po:noun
+rekamin/T0	po:noun
+rekàul/T0T2	po:noun
+reŧetario/T0	po:noun
+resetario/T0	po:noun
+reŧèto/T0I0	po:noun
+resèto/T0I0	po:noun
+reŧetor/D0	po:noun
+resetor/D0	po:noun
+reŧetoría/D0	po:noun
+resetoría/D0	po:noun
+reciname/T0	po:noun
+rèŧipe/T0	po:noun
+rèsipe/T0	po:noun
+reŧíproko/B0	po:adjective
+resíproko/B0	po:adjective
+reŧixion/D0U0	po:noun
+resixion/D0U0	po:noun
+rekluxion/D0U0	po:noun
+rekoñiŧion/D0T2U0	po:noun
+rekordante/T0	po:noun
+rekòta/D0	po:noun
+rekuperàbil/D0T3	po:adjective po:noun
+rekuparàbil/D0T3	po:adjective po:noun
+rekurin/T0	po:noun
+rekursòria/D0	po:noun
+rekuxo/T0	po:noun
+redator/C0mf	po:noun
+redaŧion/D0T2U0	po:noun
+reditario/B0	po:adjective
+reduto/T0I0	po:noun
+redutin/T0	po:noun
+referatèl/T0T2U0	po:noun
+referato/T0I0	po:noun
+referendario/B0	po:noun
+refèrta/D0	po:noun
+reflèso/T0	po:noun
+refluso/T0	po:noun
 
 
-/ 507
+
+/ 511
 / v. batidor 676-1-28 > ponidor
 / ventilòkuio 709-3-48 > ventrilòkuo
