@@ -252,6 +252,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "balord",		"in",			4,	6,	"a",	"1867",			"",
 "balord",		"x",			4,	6,	"a",	"1775",			"",
 "balot",			"",			1,	3,	"g",	"1450",			"",
+"balot",			"re",			1,	3,	"g",	"1829",			"",
 "balot",			"x",			1,	3,	"g",	"1775",			"",
 "balsam",		"",			1,	1,	"g",	"1980",			"",
 "balsam",		"in",			1,	1,	"g",	"1342",			"",
