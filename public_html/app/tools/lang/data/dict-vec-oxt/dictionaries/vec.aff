@@ -532,6 +532,7 @@ SFX a1 o 0/E1 io
 SFX a1 o a/E1 o
 SFX a1 o e/E1 o
 SFX a1 o i/E1 [^i]o
+SFX a1 r e-lo/B0 [^i]ar
 SFX a1 r ndo/E1 [aei]r
 SFX a1 r nto/E1 [aei]r
 SFX a1 0 alo/B0 [aei]r
@@ -613,14 +614,13 @@ SFX a1 er érmelo/G1 er
 SFX a1 er évelo/B0 er
 SFX a1 er ímelo/G1 er
 SFX a1 er ónmelo/G1 er
-SFX a1 ioe e-lo/B0 ioe
+SFX a1 iar e-lo/B0 iar
 SFX a1 ioe elo/B0 ioe
 SFX a1 ir ímelo/G1 ir
 SFX a1 ir írmelo/G1 ir
 SFX a1 ir ívelo/B0 ir
 SFX a1 oe alo/G1 oe
 SFX a1 oe amelo/G1 oe
-SFX a1 oe e-lo/B0 [^i]oe
 SFX a1 oe elo/B0G1 [^i]oe
 SFX a1 oe elo/G1 ioe
 SFX a1 oe emelo/G1 oe
@@ -650,6 +650,7 @@ SFX a2 o 0/E2 io
 SFX a2 o a/E2 o
 SFX a2 o e/E2 o
 SFX a2 o i/E2 [^i]o
+SFX a2 r e-ƚo/B0 [^i]ar
 SFX a2 r ndo/E2 [aei]r
 SFX a2 r nto/E2 [aei]r
 SFX a2 0 ave-ƚo/B0 [aei]r
@@ -732,14 +733,13 @@ SFX a2 er érmeƚo/G2 er
 SFX a2 er éveƚo/B0 er
 SFX a2 er ímeƚo/G2 er
 SFX a2 er ónmeƚo/G2 er
-SFX a2 ioe e-ƚo/B0 ioe
+SFX a2 iar e-ƚo/B0 iar
 SFX a2 ioe eƚo/B0 ioe
 SFX a2 ir ímeƚo/G2 ir
 SFX a2 ir írmeƚo/G2 ir
 SFX a2 ir íveƚo/B0 ir
 SFX a2 oe ameƚo/G2 oe
 SFX a2 oe aƚo/G2 oe
-SFX a2 oe e-ƚo/B0 [^i]oe
 SFX a2 oe emeƚo/G2 oe
 SFX a2 oe eƚo/B0G2 [^i]oe
 SFX a2 oe eƚo/G2 ioe
@@ -822,7 +822,7 @@ SFX b0 erò éntome/G0 erò
 SFX b0 erò éntomene/G0 erò
 SFX b0 erò éo/J0 erò
 SFX b0 erò éone/K0 erò
-SFX b0 erò érme/G0G1 erò
+SFX b0 erò erme/G0G1 erò
 SFX b0 erò érmene/G0 erò
 SFX b0 erò ésimo erò
 SFX b0 erò éu/O0 erò
@@ -1202,7 +1202,7 @@ SFX c0 ir ísimene/G0 ir
 SFX c0 ir ísimo ir
 SFX c0 ir ísine/K0 ir
 SFX c0 ir ísitu/M0 ir
-SFX c0 ir ísiu/O0 ir
+SFX c0 ir isiu/O0 ir
 SFX c0 ir ísoe/T0 ir
 SFX c0 ir ísome/G0 ir
 SFX c0 ir ísomene/G0 ir
@@ -4607,14 +4607,16 @@ SFX J0 0 -nte [^n]
 SFX J0 0 -nti [^n]
 
 # interogativi prima parsona singolar e plural (takài)
-SFX K0 Y 15
+SFX K0 Y 17
 SFX K0 e i e
 SFX K0 e mi [^no]e
 SFX K0 e mi [^m]oe
 SFX K0 e mi [^éí]moe
 SFX K0 émoe emio émoe
 SFX K0 ímoe imio ímoe
-SFX K0 one io vone
+SFX K0 àvone avio àvone
+SFX K0 évone evio évone
+SFX K0 ívone ivio ívone
 SFX K0 ne mi ne
 SFX K0 e io [^n]e
 SFX K0 e te ne

@@ -18,7 +18,7 @@
 		};
 
 
-		require(['tools/spellchecker/HunspellGenerator', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.aff', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.dic', 'tools/data/FileHelper', 'tools/data/structs/DAWG'], function(HunspellGenerator, affFile, dicFile, FileHelper, DAWG){
+		require(['tools/spellchecker/HunspellGenerator', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.aff', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.dic', 'tools/data/FileHelper', 'tools/lang/phonology/Word', 'tools/data/structs/DAWG'], function(HunspellGenerator, affFile, dicFile, FileHelper, Word, DAWG){
 			var generator = new HunspellGenerator(affFile),
 				dictionary = dicFile.split(/[\r\n]+/);
 			//remove the counter
@@ -36,6 +36,10 @@
 						production.split('-').some(function(subword){
 							if(/^([^àèéíòóú]*[àèéíòóú]){2,}/.test(subword)){
 								console.log('word cannot have multiple accents: ' + JSON.stringify(el));
+								return true;
+							}
+							if(Word.isStressed(subword) && subword !== Word.unmarkDefaultStress(subword)){
+								console.log('word cannot have an accent here: ' + JSON.stringify(el));
 								return true;
 							}
 							return false;
