@@ -6959,9 +6959,9 @@ ingrínsoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:ingrinsar
 ingrinŧar/a0a1E0E1	po:verb ts:infinitive_simple
 ingrinŧo/a0a1E0E1I0J0	po:verb ts:indicative_present st:ingrinŧar
 ingrínŧoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:ingrinŧar
-griñar/a0a1a2E0E1E2r0*0	po:verb ts:infinitive_simple
-griño/a0a1a2E0E1E2I0J0*0	po:verb ts:indicative_present st:griñar
-gríñoe/a0a1a2K0*0	po:verb ts:indicative_present is:interrogative st:griñar
+griñar/a0a1a2E0E1E2r0*0.0	po:verb ts:infinitive_simple
+griño/a0a1a2E0E1E2I0J0*0.0	po:verb ts:indicative_present st:griñar
+gríñoe/a0a1a2K0*0	po:verb.0 ts:indicative_present is:interrogative st:griñar
 xgriñasar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 xgriñaso/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:xgriñasar
 xgriñàsoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:xgriñasar
@@ -16412,10 +16412,10 @@ ragar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 rago/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:ragar
 ràgoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:ragar
 ragasar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
-ragaso/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:ragasar
+ragaso/a0a1a2E0E1E2I0J0&0	po:verb ts:indicative_present st:ragasar po:noun
 ragàsoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:ragasar
 ragaŧar/a0a1E0E1	po:verb ts:infinitive_simple
-ragaŧo/a0a1E0E1I0J0	po:verb ts:indicative_present st:ragaŧar
+ragaŧo/a0a1E0E1I0J0&0	po:verb ts:indicative_present st:ragaŧar po:noun
 ragàŧoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:ragaŧar
 rakolar/a0a1E0E1	po:verb ts:infinitive_simple
 ràkolo/a0a1E0E1I0J0	po:verb ts:indicative_present st:rakolar
@@ -23692,7 +23692,7 @@ xarmòjoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:xarmojar
 xarmoɉar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 xarmòɉo/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:xarmoɉar
 xarmòɉoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:xarmoɉar
-xetar/a0a1a2E0E1E2.0	po:verb ts:infinitive_simple
+xetar/a0a1a2E0E1E2.0s0s1	po:verb ts:infinitive_simple
 xèto/a0a1a2E0E1E2I0J0.0	po:verb ts:indicative_present st:xetar po:noun
 xètoe/a0a1a2K0.0	po:verb ts:indicative_present is:interrogative st:xetar
 proxetar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
@@ -25781,7 +25781,7 @@ polexan/C0U0	po:adjective
 poƚako/T0)0	po:adjective
 poƚaka/D0&0	po:adjective
 poƚexan/C0	po:adjective
-realtin/C0	po:adjective
+realtin/C0	po:adjective po:noun
 roigòto/B0I0	po:adjective
 roman/C0U0	po:adjective
 ruso/T0I0	po:adjective
@@ -28199,7 +28199,7 @@ persin	po:adverb
 persona/D0	po:noun
 perŧeŧion/D0U0	po:noun
 perúxola/D0T2	po:noun
-pesa/D0&0	po:noun
+pesa/C0&0	po:noun
 pesekan/D0U0	po:noun
 pesespada	po:noun is:singular al:pesispada
 pesispada	po:noun is:plural st:pesespada
@@ -29562,7 +29562,7 @@ anŧiprèso/T0I0	po:noun
 anxoleto/B0I0	po:noun
 anxoƚeto/B0	po:noun
 aprension/D0U0	po:noun
-ara/D0&0[0[1	po:noun
+ara/D0&0	po:noun
 arativo/B0W0I0	po:adjective
 ardareto/T0I0	po:noun
 ardarèl/T0U0	po:noun
@@ -29616,7 +29616,7 @@ arxenadura/D0Y0	po:noun
 arxentièr/B0V0	po:noun
 arxigògol/T0T2u0	po:noun
 arxiñon/D0U0	po:noun
-asaƚe/T0	po:noun
+asaƚe	po:noun
 asalin/T0T2	po:noun
 asalina/D0T2	po:noun
 asejo/T0T2	po:noun
@@ -32812,7 +32812,6 @@ rebonbo/T0	po:noun
 rebuxa/D0	po:noun
 recamo/T0	po:noun
 recela/D0T2	po:adjective
-recèla/D0T2	po:noun
 recotin/T0	po:adjective po:pronoun po:adverb
 rede/D0	po:noun
 reditarol/T0U0V0	po:noun
@@ -32827,10 +32826,10 @@ regaƚeto/T0	po:noun
 regaƚixasion/D0	po:noun
 regasada/D0Y0Y1	po:noun
 regasame/T0	po:noun
-regaso/T0I0&0	po:noun
+regaso/T0I0&0)0	po:noun
 regaŧada/D0Y0Y1	po:noun
 regaŧame/T0	po:noun
-regaŧo/T0I0&0	po:noun
+regaŧo/T0I0&0)0	po:noun
 regoliŧia/D0T2	po:noun
 regolon/D0T2U0	po:noun
 regoƚisia/D0	po:noun
@@ -33142,7 +33141,7 @@ sensalièra/D0	po:noun
 sensaƚa/D0&1	po:noun
 sensaƚièra/D0	po:noun
 sensitivo/B0W0I0	po:adjective po:noun
-senta/D0)0	po:noun
+senta/D0	po:noun
 sentenŧa/D0T2	po:noun
 senturèƚa/D0	po:noun
 seo/T0	po:noun
@@ -35410,7 +35409,8 @@ balordita/D0	po:adjective
 baltreska/D0	po:noun
 balustro/T0	po:noun
 baƚestrèr/B0V0	po:noun
-baƚordito/B0	po:adjective
+baƚordito/I0	po:adjective
+baƚordita/D0	po:adjective
 baƚustro/T0	po:noun
 banbaxina/D0	po:noun
 banbaxo/T0I0	po:noun
@@ -36243,7 +36243,6 @@ peŧarol/T0U0V0	po:noun
 peŧarola/D0V0	po:noun
 peŧenin/T0&0(0§0	po:noun
 peŧenina/D0&0(0§0	po:noun
-pese/T0	po:noun
 peŧe/T0	po:noun
 pexel/T0T2U0	po:noun
 piaxevoleŧa/D0T2	po:noun
@@ -36263,7 +36262,7 @@ pisaròto/B0I0	po:adjective po:noun
 pisegamòrto/T0I0	po:noun
 piŧegamòrto/T0I0	po:noun
 piumaxo/T0I0	po:noun
-piviario/T0	po:noun
+piviario	po:noun
 pivioxo/B0W0I0mf	po:adjective po:noun
 pixinente/T0I0	po:adjective
 pixo/B0I0	po:noun
@@ -36391,7 +36390,6 @@ puƚitan/C0	po:adjective
 purpio/B0W0	po:adjective po:adverb
 putata/D0,0[0[1	po:noun
 putato/T0I0,0[0[1	po:noun
-raixon/D0U0	po:noun
 rajon/D0T2U0	po:noun
 ramonaŧo/T0T2I0	po:noun
 rankurador/C0V0	po:noun
@@ -38724,6 +38722,7 @@ basen/C0U0	po:noun
 basilòto/B0I0	po:adjective
 basiƚòto/B0	po:adjective
 basir/T0	po:adjective
+batadura/D0Y0.0	po:noun
 batiala/D0T2	po:noun
 batidura/D0Y0.0	po:noun
 batikanafio/B0	po:noun
@@ -38989,7 +38988,7 @@ grandiòl/T0U0	po:noun
 granđiol/T0U0	po:noun
 granđio/T0	po:noun
 granđiòl/T0U0	po:noun
-granito/T0I0	po:noun
+granito/I0	po:noun
 gransipòr/T0&0	po:noun
 granŧipòr/T0&0	po:noun
 granxio/T0	po:noun
@@ -39128,7 +39127,8 @@ komin/T0	po:noun
 komò	po:noun
 komunèla/D0T2	po:noun
 konduxio/B0	po:adjective po:noun
-konfuxionario/B0	po:noun
+konfuxionario	po:noun
+konfuxionaria/D0	po:noun
 konfuxionèr/B0V0	po:noun
 konomía/D0	po:noun
 konpar/D0S0	po:noun
@@ -39155,7 +39155,7 @@ korosolon/D0T2U0	po:noun
 korpetin/T0	po:noun
 korúgol/T0T2u0	po:noun
 kosinija/D0T2	po:noun
-kovertor/C0mf	po:noun
+kovertor/C0	po:noun
 koxako/T0	po:noun
 kòfa/D0	po:noun
 kòndito/T0I0	po:noun
@@ -43999,7 +43999,6 @@ partèr/T0	po:noun
 paver/T0	po:noun
 plateal/D0T3U0	po:noun
 plokama/T0	po:noun
-plus	po:noun
 pluton/D0U0	po:noun
 pocin/B0	po:adjective
 pojapian/B0U0	po:adjective po:noun
@@ -44289,7 +44288,7 @@ rak	po:noun
 rakomandatario/B0	po:noun
 rakoŧamento/T0I0mf	po:noun
 rakosamento/T0I0mf	po:noun
-radada/D0Y0	po:noun
+radada/D0Y0Y1	po:noun
 radanca/D0	po:noun
 radador/C0V0	po:noun
 radaŧa/D0T2	po:noun
@@ -44298,8 +44297,6 @@ ràdika/D0	po:noun
 radiketa/D0	po:noun
 rafinador/C0V0	po:noun
 rafinadura/D0Y0	po:noun
-rafiòl/T0T2U0	po:noun
-rufiòl/T0T2U0	po:noun
 ragan/T0U0	po:noun
 rejèstola/D0T2	po:noun
 reɉèstola/D0T2	po:noun
@@ -44324,7 +44321,7 @@ raxonŧèla/D0	po:noun
 raxonsèla/D0T2	po:noun
 ratèra/D0	po:noun
 ratixbogo/T0	po:adverb
-ravada/D0Y0	po:noun
+ravada/D0Y0Y1	po:noun
 ravajo/T0T2	po:noun
 raviŧa/D0)0	po:noun
 ravisa/D0)0	po:noun
@@ -44334,7 +44331,6 @@ raxiron/C0U0	po:noun
 rađo/T0T2	po:noun
 kavalarin/T0	po:noun
 kavaƚarin/T0	po:noun
-realtina/D0	po:adjective po:noun
 reàol/T0T2	po:noun
 riàol/T0T2	po:noun
 rebaldo/B0	po:interjection
@@ -44342,9 +44338,7 @@ rebaltaiŧa/D0T2	po:noun
 rabaltaiŧa/D0T2	po:noun
 rebaltela/D0T2	po:noun
 rabaltela/D0T2	po:noun
-rebatadura/D0Y0	po:noun
 rabatadura/D0Y0	po:noun
-rebatidura/D0Y0	po:noun
 rabatidura/D0Y0	po:noun
 rebèba/D0	po:noun
 rebòto/T0I0	po:noun
@@ -44394,9 +44388,20 @@ refluso/T0	po:noun
 refuxo/B0I0	po:noun
 regalía/D0	po:noun
 regaƚía/D0	po:noun
+regaŧa/D0&0	po:noun
+regasa/D0&0	po:noun
+ragaŧada/D0Y0Y1	po:noun
+ragasada/D0Y0Y1	po:noun
+ragaŧa/D0&0	po:noun
+ragasa/D0&0	po:noun
+rexime/T0	po:noun
+regotin/T0	po:noun
+regrèso/T0	po:noun
+rèla/D0T2@0	po:noun
 
 
 
-/ 512
+
+/ 513
 / v. batidor 676-1-28 > ponidor
 / ventilòkuio 709-3-48 > ventrilòkuo

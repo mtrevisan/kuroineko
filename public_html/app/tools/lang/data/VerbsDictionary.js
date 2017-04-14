@@ -2044,6 +2044,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "grint",			"in",			1,	2,	"a",	"1775",			"Inrabiar, ingrespar.",
 "grinŧ",			"in",			1,	2,	"a",	"1852",			"Agrinŧar.",
 "griñ",			"",			1,	2,	"a",	"1560",			"Ríder.",
+"griñ",			"re",			1,	2,	"a",	"1829",			"Ragrinŧir.",
 "griñ",			"x",			1,	2,	"a",	"1775",			"Sogiñar.",
 "griñaŧ",		"x",			1,	4,	"g",	"1590",			"Xgiñaŧar.",
 "griñol",		"in",			4,	6,	"a",	"1854",			"Intristar, intristir.",
