@@ -96,6 +96,8 @@ define(function(){
 				entry.match = new RegExp(ruleType == 'SFX'? regexToMatch + '$': '^' + regexToMatch);
 			if(charactersToRemove != '0')
 				entry.remove = new RegExp(ruleType == 'SFX'? charactersToRemove + '$': '^' + charactersToRemove);
+			//if(ruleType == 'SFX' && charactersToRemove && additionParts[0].length > 1 && charactersToRemove[0] == additionParts[0][0])
+			//	console.log('This line has characters in common between removed and added part' + lines[j]);
 			entries.push(entry);
 		}
 
