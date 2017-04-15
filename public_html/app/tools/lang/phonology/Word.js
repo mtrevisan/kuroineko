@@ -82,7 +82,7 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme', 'tools/lang/
 
 		var idx = getIndexOfStress(word),
 			tmp;
-		if(idx >= 0){
+		if(idx >= 0 && !word.match(/[àèéíòóú]$/)){
 			//exclude unmark from words that can be truncated like "fenisié(de)" or "(g)à"
 			tmp = ((word[idx - 1] != ')' && word[idx + 1] != '(')
 					&& !Grapheme.isDiphtong(word.substr(idx, 2))
