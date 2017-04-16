@@ -24,7 +24,10 @@
 			//remove the counter
 			dictionary.shift();
 
-			dictionary.forEach(function(word){
+var productions = generator.applyRules('tajo/+0-0&0');
+console.log(productions);
+
+/*			dictionary.forEach(function(word){
 				if(!/^\s*\//.test(word) && word.length){
 					word = word.replace(/\t.*$/, '');
 
@@ -91,7 +94,7 @@
 			}/**/
 
 
-			/*var duplicates = new Map();
+/*			var duplicates = new Map();
 			var dawg = new DAWG();
 			dictionary.forEach(function(word){
 				if(!/^\s*\//.test(word) && word.length){

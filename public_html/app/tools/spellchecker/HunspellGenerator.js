@@ -71,7 +71,8 @@ define(function(){
 
 	/** @private */
 	var parseAffix = function(ruleType, definitionParts, lines, i){
-		var ruleCode = definitionParts[0],
+		var isSuffix = (ruleType == 'SFX'),
+			ruleCode = definitionParts[0],
 			combineable = (definitionParts[1] == 'Y'),
 			numEntries = parseInt(definitionParts[2], 10);
 
@@ -93,15 +94,15 @@ define(function(){
 			if(continuationClasses.length)
 				entry.continuationClasses = continuationClasses;
 			if(regexToMatch && regexToMatch != '.')
-				entry.match = new RegExp(ruleType == 'SFX'? regexToMatch + '$': '^' + regexToMatch);
+				entry.match = new RegExp(isSuffix? regexToMatch + '$': '^' + regexToMatch);
 			if(charactersToRemove != '0')
-				entry.remove = new RegExp(ruleType == 'SFX'? charactersToRemove + '$': '^' + charactersToRemove);
-			//if(ruleType == 'SFX' && charactersToRemove && additionParts[0].length > 1 && charactersToRemove[0] == additionParts[0][0])
+				entry.remove = new RegExp(isSuffix? charactersToRemove + '$': '^' + charactersToRemove);
+			//if(isSuffix && charactersToRemove && additionParts[0].length > 1 && charactersToRemove[0] == additionParts[0][0])
 			//	console.log('This line has characters in common between removed and added part' + lines[j]);
 			entries.push(entry);
 		}
 
-		this.rules[ruleCode] = {type: ruleType, combineable: combineable, entries: entries};
+		this.rules[ruleCode] = {isSuffix: isSuffix, combineable: combineable, entries: entries};
 
 		return numEntries;
 	};
@@ -159,11 +160,17 @@ define(function(){
 	var applyRules = function(wordFlags){
 		var parts = wordFlags.split('/');
 		var word = parts[0];
-		var continuationClasses = parseRuleCodes.call(this, parts[1]);
+		var continuationClasses = {
+			prefixes: [],
+			suffixes: []
+		};
+		parseRuleCodes.call(this, parts[1]).forEach(function(ruleClass){
+			continuationClasses[this.rules[ruleClass].isSuffix? 'suffixes': 'prefixes'].push(ruleClass);
+		}, this);
 
 		var productions = [{production: word, rules: []}];
-		continuationClasses.forEach(function(cl){
-			var productionsToAdd = applyRule.call(this, word, cl);
+		continuationClasses.forEach(function(ruleClass){
+			var productionsToAdd = applyRule.call(this, word, ruleClass);
 			Array.prototype.push.apply(productions, productionsToAdd);
 		}, this);
 
