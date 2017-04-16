@@ -169,9 +169,18 @@ define(function(){
 		}, this);
 
 		var productions = [{production: word, rules: []}];
-		continuationClasses.forEach(function(ruleClass){
-			var productionsToAdd = applyRule.call(this, word, ruleClass);
+		continuationClasses.suffixes.forEach(function(suffix){
+			var productionsToAdd = applyRule.call(this, word, suffix);
 			Array.prototype.push.apply(productions, productionsToAdd);
+			continuationClasses.prefixes.forEach(function(prefix){
+				productionsToAdd.forEach(function(prod){
+					productionsToAdd = applyRule.call(this, prod.production, prefix);
+					productionsToAdd.forEach(function(prodToAdd){
+						Array.prototype.unshift.apply(prodToAdd.rules, prod.rules);
+					}, this);
+					Array.prototype.push.apply(productions, productionsToAdd);
+				}, this);
+			}, this);
 		}, this);
 
 		return productions;
@@ -198,9 +207,9 @@ define(function(){
 					if(!newWord.length && !('FULLSTRIP' in this.flags))
 						throw 'Cannot strip full words without the flag FULLSTRIP';
 
-					newWord = (rule.type == 'SFX'? newWord + entry.add: entry.add + newWord);
+					newWord = (rule.isSuffix? newWord + entry.add: entry.add + newWord);
 
-					var formattedRule = rule.type
+					var formattedRule = (rule.isSuffix? 'SFX': 'PFX')
 						+ ' ' + ruleClass
 						+ ' ' + (entry.remove? entry.remove.source.replace(/^\^|\$$/g, ''): '0')
 						+ ' ' + entry.add + (entry.continuationClasses? '/' + entry.continuationClasses.join(''): '')
