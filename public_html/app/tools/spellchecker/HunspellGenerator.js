@@ -165,13 +165,16 @@ define(function(){
 			suffixes: []
 		};
 		parseRuleCodes.call(this, parts[1]).forEach(function(ruleClass){
-			continuationClasses[this.rules[ruleClass].isSuffix? 'suffixes': 'prefixes'].push(ruleClass);
+			var rule = this.rules[ruleClass];
+			if('isSuffix' in rule)
+				continuationClasses[rule.isSuffix? 'suffixes': 'prefixes'].push(ruleClass);
 		}, this);
 
 		var productions = [{production: word, rules: []}];
 		continuationClasses.suffixes.forEach(function(suffix){
 			var productionsToAdd = applyRule.call(this, word, suffix);
 			Array.prototype.push.apply(productions, productionsToAdd);
+
 			continuationClasses.prefixes.forEach(function(prefix){
 				productionsToAdd.forEach(function(prod){
 					productionsToAdd = applyRule.call(this, prod.production, prefix);
