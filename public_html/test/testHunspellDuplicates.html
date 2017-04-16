@@ -29,11 +29,10 @@
 					word = word.replace(/\t.*$/, '');
 
 					var continuationClasses = generator.extractContinuationClasses(word);
-					if(continuationClasses.length)
-						word = word.replace(/\/.+/, '');
+					var baseWord = word.replace(/\/.+/, '');
 					continuationClasses.forEach(function(continuationClass){
-						if(!generator.canParse(word, continuationClass))
-							console.log('no derivations can be extracted from word ' + word + ' with class ' + continuationClass);
+						if(!generator.canParse(baseWord, continuationClass))
+							console.log('no derivations can be extracted from word ' + baseWord + ' with class ' + continuationClass);
 					});
 
 					var productions = generator.applyRules(word);
