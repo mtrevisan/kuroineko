@@ -2610,7 +2610,7 @@ bueƚar/a0a2E0E2r1*0	po:verb ts:infinitive_simple
 buèƚo/a0a2E0E2J0*0	po:verb ts:indicative_present st:bueƚar
 buèƚoe/a0a2K0*0	po:verb ts:indicative_present is:interrogative st:bueƚar
 bufar/a0a1a2E0E1E2*0.0	po:verb ts:infinitive_simple
-bufo/a0a1a2E0E1E2I0J0r2*0.0	po:verb ts:indicative_present st:bufar po:interjection po:noun
+bufo/a0a1a2E0E1E2I0J0r2*0	po:verb ts:indicative_present st:bufar po:interjection po:noun
 búfoe/a0a1a2K0*0.0	po:verb ts:indicative_present is:interrogative st:bufar
 rabufar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 rabufo/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:rabufar
@@ -16666,9 +16666,9 @@ rèklutoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:reklutar
 rekuiar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 rèkuio/a0a1a2E0E1E2J0	po:verb ts:indicative_present st:rekuiar
 rèkuioe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:rekuiar
-rekuidir/a0a1c0c1E0E1	po:verb ts:infinitive_simple
-rekuiđir/a0a1c0c1E0E1	po:verb ts:infinitive_simple
-rekuixir/a0a1a2c0c1c2E0E1E2	po:verb ts:infinitive_simple
+rekuidir/a0a1c0c1E0E1s0	po:verb ts:infinitive_simple
+rekuiđir/a0a1c0c1E0E1s0	po:verb ts:infinitive_simple
+rekuixir/a0a1a2c0c1c2E0E1E2s0s1	po:verb ts:infinitive_simple
 rekuirar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 rekuiro/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:rekuirar
 rekuíroe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:rekuirar
@@ -26206,7 +26206,7 @@ bòf	po:noun
 bòkol/T0T2u0	po:noun
 bòkola/D0T2	po:noun
 bòsa/D0&0[1	po:noun
-bòto/B0I0	po:noun
+bòto/B0I0.0	po:noun
 bòŧa/D0&0[0	po:noun
 braga/D0&0	po:noun po:interjection
 bragesa/D0&0	po:noun
@@ -30463,7 +30463,7 @@ fisura/D0*0	po:noun
 fitual/D0T3U0	po:noun
 fiuba/D0&0	po:noun
 flèma/D0	po:noun
-fluso/T0-0	po:noun
+fluso/T0-0.0	po:noun
 fodra/D0&0	po:noun al:froda
 fodrin/T0	po:noun
 fogareta/D0	po:noun
@@ -30981,7 +30981,7 @@ kamaron/D0U0	po:noun
 kamaròto/B0I0	po:noun
 kamason/T0U0	po:noun
 kamaŧon/T0U0	po:noun
-kamin/T0&0	po:noun
+kamin/T0&0.0	po:noun
 kamixada/D0Y0Y1	po:noun
 kamixola/D0T2	po:noun
 kamixolin/T0T2	po:noun
@@ -31918,7 +31918,7 @@ memin/T0	po:noun
 memorieta/D0	po:noun
 menara/D0	po:noun
 menareŧa/D0T2	po:noun
-mendadura/D0Y0	po:noun
+mendadura/D0Y0.0	po:noun
 mendaresa/D0	po:noun
 menestrin/T0	po:noun
 menestron/D0U0	po:noun
@@ -32843,7 +32843,6 @@ resapadura/D0Y0	po:noun
 resipilia/D0T2	po:noun
 resipiloxo/B0W0I0mf	po:adjective po:noun
 resipiƚoxo/B0W1mf	po:adjective po:noun
-respir/T0	po:noun
 restaño/T0I0	po:noun
 restàur/T0	po:noun
 restelièra/D0	po:noun
@@ -43364,6 +43363,7 @@ seoƚòto/T0	po:noun
 serafila/D0T2	po:noun
 sernieroƚo/T0V0	po:noun
 setimanal/D0T3U0	po:noun
+sèto/T0.0	po:noun
 siatiƚion/D0	po:noun
 sibéndoƚa/D0	po:noun
 sierasa/D0	po:noun
@@ -43470,7 +43470,7 @@ tron/T0U0	po:noun
 ŧexor/C0T4	po:noun
 ŧéxara/D0T4	po:noun
 ŧèrnia/D0T4	po:noun
-ŧèto/T0T4	po:noun
+ŧèto/T0.0	po:noun
 ŧèxa/D0T4&0	po:noun
 ŧiarla/D0T4	po:noun
 ŧiarlon/D0T4U0	po:noun
@@ -44315,19 +44315,15 @@ rabaltela/D0T2	po:noun
 rabatadura/D0Y0	po:noun
 rabatidura/D0Y0	po:noun
 rebèba/D0	po:noun
-rebòto/T0I0	po:noun
 rebufin/T0	po:noun
 rebufo/T0I0r2	po:noun
 rekalŧitroxo/B0I0mf	po:adjective
 rekalsitroxo/B0I0mf	po:adjective
 rekamador/C0V0	po:noun
 rekamadura/D0Y0	po:noun
-rekamin/T0	po:noun
 rekàul/T0T2	po:noun
 reŧetario/T0	po:noun
 resetario/T0	po:noun
-reŧèto/T0I0	po:noun
-resèto/T0I0	po:noun
 reŧetor/D0	po:noun
 resetor/D0	po:noun
 reŧetoría/D0	po:noun
@@ -44357,8 +44353,6 @@ referatèl/T0T2U0	po:noun
 referato/T0I0	po:noun
 referendario/B0	po:noun
 refèrta/D0	po:noun
-reflèso/T0	po:noun
-refluso/T0	po:noun
 refuxo/B0I0	po:noun
 regalía/D0	po:noun
 regaƚía/D0	po:noun
@@ -44383,7 +44377,6 @@ relegaŧion/D0T2U0	po:noun
 relevanŧa/D0T2	po:noun
 reƚevansa/D0	po:noun
 remador/C0V0	po:noun
-remendadura/D0Y0	po:noun
 remiŧion/D0T2U0	po:noun
 rèmora/D0	po:noun
 remòto/B0	po:adjective
@@ -44391,7 +44384,7 @@ remoŧion/D0T2U0	po:noun
 remurcadura/D0Y0	po:noun
 réndeda/D0	po:noun
 rendévol/D0T3u0	po:adjective po:noun
-rendikonto/T0	po:noun
+rendikonto/T0I0	po:noun
 renditina/D0	po:noun
 renga/D0&0	po:noun
 reo/T0	po:noun
@@ -44404,9 +44397,13 @@ represivo/B0	po:adjective
 reprimenda/D0	po:noun
 skandesenŧa/D0T2	po:noun
 repudia/D0	po:noun
+stopaŧo/T0T2I0	po:noun
+reskiaŧo/T0T2I0	po:noun
+rexikonto/T0I0	po:noun
 
 
 
-/ 517
+
+/ 518
 / v. batidor 676-1-28 > ponidor
 / ventilòkuio 709-3-48 > ventrilòkuo
