@@ -28,6 +28,14 @@
 				if(!/^\s*\//.test(word) && word.length){
 					word = word.replace(/\t.*$/, '');
 
+					var continuationClasses = generator.extractContinuationClasses(word);
+					if(continuationClasses.length)
+						word = word.replace(/\/.+/, '');
+					continuationClasses.forEach(function(continuationClass){
+						if(!generator.canParse(word, continuationClass))
+							console.log('no derivations can be extracted from word ' + word + ' with class ' + continuationClass);
+					});
+
 					var productions = generator.applyRules(word);
 					productions.forEach(function(el){
 						var production = el.production;
@@ -46,16 +54,6 @@
 						});
 						if(/[cijɉñ]i[aàeèéiíoòóuú]/.test(production) && !/ciuí$/.test(production))
 							console.log('word cannot have [cijɉñ]iV: ' + JSON.stringify(el));
-					});
-
-					var continuationClasses = generator.extractContinuationClasses(word);
-					if(continuationClasses.length)
-						word = word.replace(/\/.+/, '');
-					continuationClasses.forEach(function(continuationClass){
-						if(!generator.hasRule(continuationClass))
-							console.log('rule for class ' + continuationClass + ' not found');
-						if(!generator.canParse(word, continuationClass))
-							console.log('no derivations can be extracted from word ' + word + ' with class ' + continuationClass);
 					});
 				}
 			});/**/

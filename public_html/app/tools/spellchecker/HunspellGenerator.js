@@ -166,7 +166,7 @@ define(function(){
 		};
 		parseRuleCodes.call(this, parts[1]).forEach(function(ruleClass){
 			var rule = this.rules[ruleClass];
-			if('isSuffix' in rule)
+			if(rule && 'isSuffix' in rule)
 				continuationClasses[rule.isSuffix? 'suffixes': 'prefixes'].push(ruleClass);
 		}, this);
 
