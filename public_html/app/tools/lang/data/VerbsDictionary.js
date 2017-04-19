@@ -5042,7 +5042,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ruvid",			"in",			4,	5,	"a",	"1852",			"Far deventar ruvido.",
 "ruviɉ",			"",			1,	3,	"a",	"1775",			"Inbatufolar.",
 "ruviɉ",			"dex",		1,	3,	"a",	"1847",			"Xvòlxer.",
-"rux",			"",			1,	1,	"a",	"1775",			"Ringiar de i kani, frular de i oxei, far rumore, rinproverar.",
+"ruđ",			"",			1,	1,	"a",	"1775",			"Ringiar de i kani, frular de i oxei, far rumore, rinproverar.",
 "rux",			"",			4,	3,	"a",	"1829",			"Ruɉir.",
 "ruxen",			"in",			4,	5,	"a",	"1847",			"",
 
