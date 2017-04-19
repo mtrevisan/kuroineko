@@ -4971,6 +4971,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "rol",			"",			1,	1,	"g",	"1867",			"",
 "rol",			"a",			1,	1,	"g",	"",				"",
 "romanxin",		"",			1,	3,	"g",	"1867",			"",
+"romanŧin",		"",			1,	3,	"g",	"1829",			"",
 "romàñ",			"",			3,	3,	"g",	"1382",			"",
 "romañ",			"",			4,	5,	"a",	"1454",			"",
 "romatiđ",		"",			1,	5,	"a",	"1867",			"Agravar de reuma.",
