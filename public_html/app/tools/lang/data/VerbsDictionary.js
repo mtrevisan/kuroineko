@@ -5104,6 +5104,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "salut",			"",			1,	3,	"a",	"1463",			"",
 "salv",			"",			1,	1,	"g",	"1775",			"Konservar.",
 "salv",			"re",			1,	1,	"g",	"1499",			"",
+"salvadeg",		"",			1,	4,	"g",	"1829",			"",
 "salvi",			"in",			1,	1,	"g",	"1867",			"Saver da salvia.",
 "sam",			"",			1,	1,	"g",	"1847",			"Siamar.",
 "san",			"",			1,	1,	"g",	"",				"",
