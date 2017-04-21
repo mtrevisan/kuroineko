@@ -407,6 +407,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "beket",			"x",			1,	3,	"a",	"1980",			"Xbekotar.",
 "bekol",			"",			1,	1,	"g",	"1775",			"Bekar ripetutamente, spicolar, far kualke pikolo guadaño.",
 "bekol",			"re",			1,	1,	"g",	"1980",			"Rebàter, bisticar.",
+"bekolaŧ",		"x",			1,	5,	"g",	"1829",			"",
 "bekon",			"",			1,	3,	"a",	"1854",			"Ferir kol beko.",
 "bekot",			"x",			1,	3,	"g",	"1854",			"",
 "beg",			"",			1,	1,	"g",	"1854",			"(gotiko) Konténder, kontrastar, katar da dir.",
