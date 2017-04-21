@@ -46,13 +46,23 @@
 								return true;
 							}
 							if(Word.isStressed(subword) && subword !== Word.unmarkDefaultStress(subword)){
-								console.log('word cannot have an accent here: ' + JSON.stringify(el));
-								return true;
+								var lBetweenVowelsRemoval = el.rules.some(function(rule){
+									return /l i l$/.test(rule);
+								});
+								if(!lBetweenVowelsRemoval){
+									console.log('word cannot have an accent here: ' + JSON.stringify(el));
+									return true;
+								}
 							}
 							return false;
 						});
-						if(/[cijɉñ]i[aàeèéiíoòóuú]/.test(production) && !/ciuí$/.test(production))
-							console.log('word cannot have [cijɉñ]iV: ' + JSON.stringify(el));
+						if(/[cijɉñ]i[aàeèéiíoòóuú]/.test(production) && !/ciuí$/.test(production)){
+							var dBetweenVowelsRemoval = el.rules.some(function(rule){
+								return /dor or\/[^ ]+ \[aeiou\]dor$/.test(rule);
+							});
+							if(!dBetweenVowelsRemoval)
+								console.log('word cannot have [cijɉñ]iV: ' + JSON.stringify(el));
+						}
 					});
 				}
 			});/**/
