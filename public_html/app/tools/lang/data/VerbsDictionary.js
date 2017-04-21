@@ -431,6 +431,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "berlúx",		"x",			3,	4,	"a",	"1560",			"Resplénder.",
 "bersaj",		"",			1,	4,	"g",	"1867",			"",
 "berteđ",		"x",			1,	4,	"a",	"1560",			"",
+"bertevel",		"x",			1,	6,	"g",	"1829",			"Spiatelar, xvelar.",
 "berton",		"",			1,	4,	"a",	"1775",			"Tondér.",
 "berton",		"in",			1,	4,	"a",	"1590",			"",
 "berton",		"x",			1,	4,	"a",	"1775",			"Skonvòlđer, dexordenar.",
