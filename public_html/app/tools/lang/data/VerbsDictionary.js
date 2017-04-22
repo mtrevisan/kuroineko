@@ -719,6 +719,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "briñ",			"x",			1,	2,	"a",	"1775",			"Xviñar.",
 "briŧol",		"x",			1,	2,	"a",	"1980",			"Deventar briŧolà.",
 "briv",			"",			1,	2,	"a",	"1854",			"Abriviar.",
+"brix",			"x",			1,	2,	"a",	"1829",			"Èser temerario.",
 "bro",			"",			1,	2,	"a",	"1775",			"Brovar.",
 "broac",			"x",			1,	3,	"g",	"1775",			"Inbrodolar.",
 "brod",			"in",			1,	2,	"g",	"1521",			"",
