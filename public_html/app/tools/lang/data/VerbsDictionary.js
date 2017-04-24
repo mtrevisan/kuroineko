@@ -2625,6 +2625,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kekeđ",			"s",			1,	3,	"a",	"1998",			"Balbetar.",
 "kekeñ",			"",			1,	3,	"a",	"1980",			"Balbetar.",
 "keg",			"",			1,	1,	"g",	"1980",			"Kagar.",
+"kerm",			"s",			4,	4,	"a",	"1829",			"Skarmir.",
 "ket",			"",			1,	1,	"a",	"1829",			"Kietar.",
 "kiet",			"",			1,	2,	"a",	"1829",			"Kietar.",
 "kiɉ",			"",			1,	1,	"a",	"1847",			"Petenar el lino.",
