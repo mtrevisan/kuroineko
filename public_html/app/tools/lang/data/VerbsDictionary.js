@@ -2365,6 +2365,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kalot",			"in",			4,	5,	"a",	"1854",			"Inbaretar.",
 "kalpest",		"",			1,	4,	"a",	"1829",			"",
 "kalpestr",		"",			1,	4,	"a",	"1829",			"Kalpestar.",
+"kalpestr",		"s",			1,	4,	"a",	"1829",			"",
 "kaltr",			"s",			4,	5,	"a",	"1852",			"Skalfir, penetrar intel vivo.",
 "kalŧ",			"",			1,	1,	"g",	"1867",			"",
 "kalŧ",			"des",		1,	1,	"g",	"1560",			"",
