@@ -2426,6 +2426,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kanpan",		"",			1,	1,	"g",	"1852",			"",
 "kanpan",		"s",			1,	1,	"g",	"1867",			"",
 "kanpaneđ",		"s",			1,	6,	"a",	"1867",			"",
+"kanpanel",		"s",			1,	6,	"a",	"1829",			"",
+"kanpaniđ",		"s",			1,	6,	"a",	"1829",			"Skanpaneđar.",
 "kanpanot",		"s",			1,	6,	"g",	"1980",			"(bixiak)",
 "kanpion",		"",			1,	5,	"a",	"1854",			"",
 "kans",			"s",			1,	1,	"g",	"1854",			"",
