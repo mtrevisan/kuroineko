@@ -11585,7 +11585,7 @@ margotar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 margòto/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:margotar po:noun
 margòtoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:margotar
 mariar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
-marío/a0a1a2E0E1E2J0	po:verb ts:indicative_present st:mariar
+marío/a0a1a2E0E1E2J0<0<1	po:verb ts:indicative_present st:mariar
 maríoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:mariar
 xmariasar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 xmariaso/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:xmariasar po:noun
@@ -24482,10 +24482,8 @@ dopo	po:adverb po:preposition
 dòpo	po:adverb po:preposition
 kuà	po:adverb
 kuí	po:adverb
-mèjo	po:adjective po:adverb
-mèɉo	po:adjective po:adverb
-meɉeto	po:adjective po:adverb
-mejeto	po:adjective po:adverb
+mèjo/&0	po:adjective po:adverb
+mèɉo/&0	po:adjective po:adverb
 pèđo	po:adverb
 pèdo	po:adverb
 pèxo	po:adverb
@@ -24636,7 +24634,6 @@ kòsa/D0I0‘0&0<0<1§0	po:pronoun po:adjective_interrogative po:noun is:femenin
 / kuantifegador
 uno	po:quantifier
 una	po:quantifier
-oñi	po:quantifier
 peròmo/I0	po:quantifier
 paròmo/I0	po:quantifier
 oñun/C0U0	po:quantifier
@@ -24656,7 +24653,7 @@ koalkun/C0U0	po:pronoun st:kualkun
 kalkun/C0U0	po:pronoun st:kualkun
 kualsíasi	po:quantifier po:adjective al:koalsíasi
 koalsíasi	po:quantifier po:adjective st:kualsíasi
-ñaun	po:quantifier po:adjective po:adverb
+ñaun/C0U0	po:quantifier po:adjective po:adverb
 ñesun/C0U0	po:quantifier po:adjective st:nesun
 ñisun/C0U0	po:quantifier po:adjective st:nesun
 nesun/C0U0	po:quantifier po:adjective al:ñesun al:ñisun al:nisun al:negun al:nigun
@@ -24879,7 +24876,7 @@ sénpliŧe/T0	po:numeral_multiplicative
 sinpio/B0	po:numeral_multiplicative
 sinplio/B0	po:numeral_multiplicative
 senpio/B0	po:numeral_multiplicative po:adjective
-dopio/W0&0)0	po:numeral_multiplicative
+dopio/B0W0&0)0	po:numeral_multiplicative
 triplo/B0	po:numeral_multiplicative
 kuàdruplo/B0	po:numeral_multiplicative
 kuíntuplo/B0	po:numeral_multiplicative
@@ -26022,7 +26019,7 @@ arna/D0	po:noun
 arnèr/T0	po:noun
 arteluso/T0I0	po:noun
 arteƚuso/T0	po:noun
-arte/R0T0	po:noun
+arte/T0R0	po:noun
 artijèr/D0	po:noun
 artilièr/D0	po:noun
 artiƚièr/D0	po:noun
@@ -26365,7 +26362,7 @@ denòco/T0[0	po:noun
 dental-alveolar/D0	po:adjective
 dental/D0T3U0	po:adjective po:noun
 dentaƚe-alveoƚar/D0	po:adjective
-dente/R0T0I0[0[1<0<1	po:noun
+dente/T0I0R0[0[1<0<1	po:noun
 deóntego/B0	po:adjective
 deo/T0)0<0<1	po:noun is:singular
 dependente/T0I0-0	po:adjective po:noun
@@ -26770,7 +26767,7 @@ frutarol/T0U0V0	po:noun
 frutarola/D0V0	po:noun
 frutaroƚa/D0V0	po:noun
 frutaroƚo/T0V0	po:noun
-fruto/T0&0	po:noun
+fruto/T0I0&0	po:noun
 fugasa/D0&0	po:noun
 fugaŧa/D0&0	po:noun
 fuliska/D0	po:noun
@@ -28252,7 +28249,7 @@ pèrgol/T0T2u0*0	po:noun
 pèrgola/D0T2*0	po:noun
 pèrsego/T0	po:noun
 pèrtega/D0	po:noun
-pèsa/D0(0	po:noun
+pèsa/D0(0&0	po:noun
 pèso/T0I0(0&0	po:noun
 pèsta/C0	po:noun
 pèten/D0u0	po:noun
@@ -28315,7 +28312,7 @@ plurivaƚente/T0	po:adjective
 poareto/B0I0	po:adjective po:noun
 poexía/D0	po:noun
 poèma/T0	po:noun
-poèta/T0	po:noun
+poèta/C0	po:noun
 poètego/B0	po:adjective
 pojana/D0	po:noun
 poɉana/D0	po:noun
@@ -29160,7 +29157,7 @@ tèƚego/B0	po:adjective
 tèma/T0	po:noun
 tèniko/B0I0	po:adjective po:noun
 tèra/D0	po:noun
-tèrmene/D0I0	po:noun
+tèrmen/D0	po:noun
 tèsera/D0	po:noun
 tieda/D0	po:noun
 tilde/D0	po:noun
@@ -29500,7 +29497,7 @@ xonsion/D0U0	po:noun
 xoo/T0	po:noun st:đogo
 xornaƚe/D0R0	po:noun
 xòna/D0	po:noun
-xudiŧio/T0&0^0<1	po:noun
+xudiŧio/T0&0^0<0	po:noun
 xudisio/T0&0^0<1	po:noun
 xugador/C0V0	po:noun st:xogador
 xusto/B0I0	po:adjective
@@ -32937,7 +32934,6 @@ risolèr/B0V0	po:noun
 risoloxo/B0W0I0mf	po:adjective po:noun
 risoƚèr/B0V0	po:noun
 risoƚoxo/B0W1mf	po:adjective po:noun
-ritorno/T0	po:noun
 riŧadura/D0Y0	po:noun
 riŧolèr/B0V0	po:noun
 riŧoloxo/B0W0I0	po:adjective
@@ -36172,7 +36168,7 @@ osea	po:conjunction
 oservanŧa/D0T2	po:noun
 oservanŧia/D0T2	po:noun
 oskur/B0	po:adjective
-ospedal/D0T3U0	po:noun
+ospedal/D0T3U0&0	po:noun
 ostaxo/T0I0	po:noun
 ostèr/B0V0	po:noun
 over	po:conjunction
@@ -36656,7 +36652,7 @@ spasanamente/I0W2	po:adjective po:adverb
 spaŧadamente/I0W2	po:adverb
 spaŧadura/D0Y0	po:noun
 spaŧanamente/I0W2	po:adjective po:adverb
-speal/D0T3U0	po:noun
+speal/D0T3U0&0	po:noun
 spegaŧon/D0T2U0	po:noun
 spelukativo/B0W0I0	po:adjective
 speƚukativo/B0W1	po:adjective
