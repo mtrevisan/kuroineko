@@ -5162,6 +5162,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "scafeđ",		"",			1,	4,	"a",	"1775",			"",
 "scafiđ",		"",			1,	4,	"a",	"1854",			"",
 "scam",			"",			1,	2,	"g",	"1775",			"Kavar le scame (skuame).",
+"scamaŧ",		"",			1,	4,	"g",	"1829",			"Scamar.",
 "scantin",		"",			1,	5,	"a",	"1854",			"",
 "scantiđ",		"",			1,	5,	"a",	"1775",			"",
 "scanx",			"",			1,	2,	"g",	"",				"Sprusar, bañar.",
