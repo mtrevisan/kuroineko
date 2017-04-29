@@ -156,7 +156,7 @@ define(['tools/data/mining/DecisionTreeContext', 'tools/data/ObjectHelper'], fun
 				if(scope.supervisor){
 					if(hasData){
 						//store path followed so far
-						scope.supervisor.supervisedInstance[info.attributeIndex] = Number(info.cutPoint);
+						scope.supervisor.supervisedInstance[info.attributeIndex] = condition;
 						scope.supervisor.questionOrder.push(info.attributeIndex);
 					}
 					//no branches to follow
