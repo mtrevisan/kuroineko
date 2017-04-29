@@ -37,13 +37,26 @@ define(function(){
 	 */
 	var parseAFF = (function(){
 		var copyOver = function(ruleType, definitionParts){ this.flags[ruleType] = definitionParts[0]; return 0; },
-			copyOverJoined = function(ruleType, definitionParts){ this.flags[ruleType] = definitionParts.join(' '); return 0; };
+			copyOverJoined = function(ruleType, definitionParts){ this.flags[ruleType] = definitionParts.join(' '); return 0; },
+			doNothing = function(ruleType, definitionParts){ return (Number(definitionParts) == definitionParts? Number(definitionParts): 0); };
 		var ruleFunction = {
-			PFX: function(ruleType, definitionParts, lines, i){ return parseAffix.call(this, ruleType, definitionParts, lines, i); },
-			SFX: function(ruleType, definitionParts, lines, i){ return parseAffix.call(this, ruleType, definitionParts, lines, i); },
-			FLAG: function(ruleType, definitionParts){ this.flags[ruleType] = definitionParts[0]; return 0; },
+			NAME: doNothing,
+			VERSION: doNothing,
+			HOME: doNothing,
+			LANG: doNothing,
+			SET: doNothing,
+			TRY: doNothing,
+			KEY: doNothing,
+			WORDCHARS: doNothing,
+			BREAK: doNothing,
+			KEEPCASE: copyOver,
 			FULLSTRIP: copyOverJoined,
-			KEEPCASE: copyOver
+			MAP: doNothing,
+			ICONV: doNothing,
+			REP: doNothing,
+			FLAG: function(ruleType, definitionParts){ this.flags[ruleType] = definitionParts[0]; return 0; },
+			PFX: function(ruleType, definitionParts, lines, i){ return parseAffix.call(this, ruleType, definitionParts, lines, i); },
+			SFX: function(ruleType, definitionParts, lines, i){ return parseAffix.call(this, ruleType, definitionParts, lines, i); }
 		};
 
 		return function(data){
