@@ -5307,6 +5307,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sfris",			"",			1,	3,	"a",	"1775",			"Sfiorar, pasar raxente.",
 "sfriđeg",		"",			1,	3,	"a",	"",				"Sofríđer.",
 "si",				"",			1,	1,	"a",	"1980",			"Far sia de i remi vogando a ritroxo, béver tuto su un kolpo.",
+"siaku",			"",			1,	2,	"g",	"1829",			"",
 "sial",			"",			1,	2,	"g",	"1775",			"",
 "sialaku",		"",			1,	4,	"g",	"1867",			"",
 "sibil",			"",			1,	1,	"a",	"",				"",
