@@ -214,7 +214,7 @@ define(function(){
 	 */
 	var applyRule = function(word, ruleClass, previousGeneration){
 		var rule = this.rules[ruleClass],
-			newWords = [],
+			productions = [],
 			newWord;
 		if(rule)
 			rule.entries.forEach(function(entry){
@@ -230,19 +230,19 @@ define(function(){
 						+ ' ' + (entry.remove? entry.remove.source.replace(/^\^|\$$/g, ''): '0')
 						+ ' ' + entry.add + (entry.continuationClasses? '/' + entry.continuationClasses.join(''): '')
 						+ ' ' + (entry.match? entry.match.source.replace(/^\^|\$$/g, ''): '.');
-					newWords.push({production: newWord, rules: [previousGeneration, formattedRule].filter(function(el){ return !!el; })});
+					productions.push({production: newWord, rules: [previousGeneration, formattedRule].filter(function(el){ return !!el; })});
 
 					if(!previousGeneration && 'continuationClasses' in entry)
 						entry.continuationClasses.forEach(function(cl){
-							Array.prototype.push.apply(newWords, applyRule.call(this, newWord, cl, formattedRule));
+							Array.prototype.push.apply(productions, applyRule.call(this, newWord, cl, formattedRule));
 						}, this);
 				}
 			}, this);
 		else if(this.flags['KEEPCASE'] === ruleClass)
-			newWords.push({production: word, rules: []});
+			productions.push({production: word, rules: []});
 		else
 			console.log(word + ' does not have a rule for class ' + ruleClass + (previousGeneration? ' (previous generation is ' + previousGeneration + ')': ''));
-		return newWords;
+		return productions;
 	};
 
 
