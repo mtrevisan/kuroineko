@@ -2852,6 +2852,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kortel",		"",			1,	4,	"g",	"1775",			"",
 "kortel",		"s",			1,	4,	"g",	"1980",			"",
 "kortiđ",		"",			1,	4,	"a",	"1867",			"Far la korte a na femena.",
+"korŧon",		"s",			1,	4,	"a",	"1829",			"Skoŧonar.",
 "koruŧ",			"s",			1,	3,	"a",	"1775",			"",
 "kos",			"",			1,	1,	"g",	"",				"Far kose.",
 "kos",			"in",			1,	1,	"g",	"1852",			"Akosiar, sporkar.",
