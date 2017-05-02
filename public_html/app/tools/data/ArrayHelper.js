@@ -39,6 +39,23 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 		return destination;
 	};
 
+	var clone = function(source){
+		if(Array.isArray(source)){
+			var copy = source.slice(0);
+			for(var i = 0, len = copy.length; i < len; i ++)
+				copy[i] = arrayClone(copy[i]);
+			return copy;
+		}
+		else if(ObjectHelper.isObject(source)){
+			var copy = source.constructor();
+			for(var attr in source)
+				if(source.hasOwnProperty(attr))
+					copy[attr] = source[attr];
+			return copy;
+		}
+		return source;
+	};
+
 	/** NOTE: elements should be unique! */
 	var equals = function(a, b){
 		return (a.length == b.length && a.every(function(el){ return (b.indexOf(el) >= 0); }));
@@ -229,6 +246,7 @@ define(['tools/data/ObjectHelper'], function(ObjectHelper){
 	return {
 		repeat: repeat,
 		copy: copy,
+		clone: clone,
 		equals: equals,
 		contains: contains,
 		intersection: intersection,

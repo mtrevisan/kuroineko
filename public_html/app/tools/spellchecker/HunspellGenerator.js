@@ -187,19 +187,34 @@ define(function(){
 		continuationClasses.suffixes.forEach(function(suffix){
 			var productionsToAdd = applyRule.call(this, word, suffix);
 			Array.prototype.push.apply(productions, productionsToAdd);
-
-			continuationClasses.prefixes.forEach(function(prefix){
-				productionsToAdd.forEach(function(prod){
-					productionsToAdd = applyRule.call(this, prod.production, prefix);
-					productionsToAdd.forEach(function(prodToAdd){
-						Array.prototype.unshift.apply(prodToAdd.rules, prod.rules);
-					}, this);
-					Array.prototype.push.apply(productions, productionsToAdd);
-				}, this);
+		}, this);
+		var productionsToAdd = arrayClone(productions);
+		continuationClasses.prefixes.forEach(function(prefix){
+			productionsToAdd.forEach(function(prod){
+				var productionsToAdd = applyRule.call(this,prod.production, prefix);
+				Array.prototype.push.apply(productions, productionsToAdd);
 			}, this);
 		}, this);
 
 		return productions;
+	};
+
+	/** {@link ArrayHelper.clone} */
+	var arrayClone = function(obj){
+		if(Array.isArray(obj)){
+			var copy = obj.slice(0);
+			for(var i = 0, len = copy.length; i < len; i ++)
+				copy[i] = arrayClone(copy[i]);
+			return copy;
+		}
+		else if(typeof obj === 'object'){
+			var copy = obj.constructor();
+			for(var attr in obj)
+				if(obj.hasOwnProperty(attr))
+					copy[attr] = obj[attr];
+			return copy;
+		}
+		return obj;
 	};
 
 	/**
