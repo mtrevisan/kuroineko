@@ -188,10 +188,10 @@ define(function(){
 			var productionsToAdd = applyRule.call(this, word, suffix);
 			Array.prototype.push.apply(productions, productionsToAdd);
 		}, this);
-		var productionsToAdd = arrayClone(productions);
+		var productionsCopy = arrayClone(productions);
 		continuationClasses.prefixes.forEach(function(prefix){
-			productionsToAdd.forEach(function(prod){
-				var productionsToAdd = applyRule.call(this,prod.production, prefix);
+			roductionsCopy.forEach(function(prod){
+				var productionsToAdd = applyRule.call(this, prod.production, prefix);
 				Array.prototype.push.apply(productions, productionsToAdd);
 			}, this);
 		}, this);
