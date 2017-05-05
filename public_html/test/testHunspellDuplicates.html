@@ -56,7 +56,7 @@
 							}
 							return false;
 						});
-						if(/[cijɉñ]i[aàeèéiíoòóuú]/.test(production) && !/ciuí$/.test(production)){
+						if(production.indexOf('%') < 0 && /[cijɉñ]i[aàeèéiíoòóuú]/.test(production) && !/ciuí$/.test(production)){
 							var dBetweenVowelsRemoval = el.rules.some(function(rule){
 								return /dor or\/[^ ]+ \[aeiou\]dor$/.test(rule);
 							});

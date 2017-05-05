@@ -87,11 +87,17 @@ define(['tools/data/StringHelper', 'tools/lang/phonology/Grapheme', 'tools/lang/
 			tmp = ((word[idx - 1] != ')' && word[idx + 1] != '(')
 					&& !Grapheme.isDiphtong(word.substr(idx, 2))
 					&& !Grapheme.isHyatus(word.substr(idx, 2))
-					&& !word.match(/^(re)?\(?g?\)?(à\/è|à|é|ò)[oaie]?$/)
-					&& !word.match(/^\(?x?\)?é$|^s[éí][oaie]?$/)
-					&& !word.match(/^((r[ei])?d[àé]|(kon(tra)?|[lƚ]iku[ei]|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?f[àé]|(mal|move|soto)?st[àé])[oaie]?$/)
-					&& !word.match(/^v[àé]$/)
-					/*&& !word.match(/^s[éí]$/)*/
+					//aver
+					&& !word.match(/^(r[ei])?g?(ar)?[àé]([lƚ][oaie]|[gmnstv]e|[mn]i|nt[ei]|s?t[ou])$|^(r[ei])?\(?[gsx]?\)?(à\/è|à|é|ò)([lƚ]?[oaie]|s?t[ou])$/)
+					//èser
+					&& !word.match(/^^(r[ei])?((s[ae]r)?[àé]|[sx]é)([lƚ][oaie]|[gmnstv]e|[mn]i|nt[ei]|s?t[ou])$|\(?x?\)?é$|^s[éí][oaie]?$/)
+					//dar/far/star
+					&& !word.match(/^((dex)?d|((dex)?asue|des|kon(tra)?|[lƚ]iku[ei]|putre|(ra)?re|sastu|sat[iu]s|sodis|sora|stra|stupe|tore|tume)?f|(kon(tra)?|mal|move|o|re|so(ra|to))?st)([ae]rà|[àé])([lƚ][oaie]|[gmnstv]e|[mn]i|nt[ei]|s?t[ou])$|^((r[ei])?d[àé]|(kon(tra)?|[lƚ]iku[ei]|putre|rare|r[ei]|sora|stra|stupe|tore|tume)?f[àé]|(mal|move|soto)?st[àé])[oaie]?$/)
+					//saver
+					&& !word.match(/^(p?re|stra)?(sà|sav?arà)([lƚ][oaie]|[gmnstv]e|[mn]i|nt[ei]|s?t[ou])$|^(p?re|stra-?)?sà[lƚ][oaie]$/)
+					//andar
+					&& !word.match(/^(re)?v[àé]([lƚ][oaie]|[gmnstv]e|[mn]i|nt[ei]|s?t[ou])?$|^(re)?v[àé]([gmnstv]e|[lƚ][oaie]|s?t[ou])?$/)
+					//tràer
 					&& !word.match(/^(|as?|des?|es|kon|pro|re|so)tr[àé][oaie]?$/)?
 				word.replace(/[àéíóú]/g, function(chr){ return 'aeiou'['àéíóú'.indexOf(chr)]; }): word);
 			if(tmp != word && markDefaultStress(tmp) == word)
