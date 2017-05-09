@@ -190,7 +190,7 @@ define(function(){
 		}, this);
 		var productionsCopy = arrayClone(productions);
 		continuationClasses.prefixes.forEach(function(prefix){
-			roductionsCopy.forEach(function(prod){
+			productionsCopy.forEach(function(prod){
 				var productionsToAdd = applyRule.call(this, prod.production, prefix);
 				Array.prototype.push.apply(productions, productionsToAdd);
 			}, this);
