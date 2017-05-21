@@ -48,7 +48,10 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 	};
 
 	var removeAll = function(word){
-		this.findPrefix(word).forEach(removeSingle);
+		this.findPrefix(word)
+			.forEach(function(pref){
+				removeSingle(word, pref)
+			});
 	};
 
 	/** @private */
@@ -66,16 +69,16 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 			parent, tmp;
 		word = word.match(Phone.REGEX_UNICODE_SPLITTER);
 		word.some(function(stem, idx){
-			parent = node;
 			tmp = node.children[stem];
 			if(tmp){
+				parent = node;
 				node = tmp;
 
 				if(node.leaf)
 					results.push({
 						node: node,
 						index: idx,
-						parent: (node? parent: undefined)
+						parent: parent
 					});
 			}
 			return !tmp;

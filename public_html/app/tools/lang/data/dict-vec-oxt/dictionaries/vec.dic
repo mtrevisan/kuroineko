@@ -1311,6 +1311,12 @@ kontrobàtoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:kontrob�
 kontrobaso/B0I0	po:verb ts:participle_perfect_strong st:kontrobàter
 kontrobàtar/b0b1b2E0E1E2	po:verb ts:infinitive_simple
 kontrobatarò/b0b1b2J0	po:verb ts:indicative_future st:kontrobàtar
+sebàter/b0b1b2E0E1E2r0	po:verb ts:infinitive_simple
+sebaterò/b0b1b2J0	po:verb ts:indicative_future st:sebàter
+sebato/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:sebàter
+sebàtoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:sebàter
+sebàtar/b0b1b2E0E1E2	po:verb ts:infinitive_simple
+sebatarò/b0b1b2J0	po:verb ts:indicative_future st:sebàtar
 batedar/a0a1E0E1+0	po:verb ts:infinitive_simple
 batedo/a0a1E0E1I0J0+0	po:verb ts:indicative_present st:batedar
 batédoe/a0a1a2K0+0	po:verb ts:indicative_present is:interrogative st:batedar
@@ -8881,7 +8887,7 @@ arkoatar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 arkoato/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:arkoatar
 arkoàtoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:arkoatar
 inkocir/a0a1a2c0c1c2E0E1E2	po:verb is:infinitive_simple
-skòder/b0b1b2E0E1E2	po:verb ts:infinitive_simple
+skòder/b0b1b2E0E1E2r0	po:verb ts:infinitive_simple
 skòdre	po:verb ts:infinitive_simple st:skòder
 skoderò/b0b1b2J0	po:verb ts:indicative_future st:skòder
 skòdo/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:skòder
@@ -17690,7 +17696,7 @@ sédoloe/a0a1K0	po:verb ts:indicative_present is:interrogative st:sedolar
 sedoƚar/a0a2E0E2	po:verb ts:infinitive_simple
 sédoƚo/a0a2E0E2J0	po:verb ts:indicative_present st:sedoƚar
 sédoƚoe/a0a2K0	po:verb ts:indicative_present is:interrogative st:sedoƚar
-sekar/a0a1a2E0E1E2.0,0	po:verb ts:infinitive_simple
+sekar/a0a1a2E0E1E2r0.0,0	po:verb ts:infinitive_simple
 seko/a0a1a2E0E1E2I0J0.0,0	po:verb ts:indicative_present st:sekar
 sékoe/a0a1a2K0.0,0	po:verb ts:indicative_present is:interrogative st:sekar
 sekir/a0a1a2c0c1c2E0E1E2-0	po:verb ts:infinitive_simple
@@ -18597,8 +18603,8 @@ skuarŧar/a0a1E0E1	po:verb ts:infinitive_simple
 skuarŧo/a0a1E0E1I0J0	po:verb ts:indicative_present st:skuarŧar
 skuàrŧoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:skuarŧar
 skuenir/a0a1a2c0c1c2E0E1E2	po:verb ts:infinitive_simple
-skurir/a0a1a2c0c1c2E0E1E2-0	po:verb ts:infinitive_simple
-iskurir/a0a1a2c0c1c2E0E1E2	po:verb ts:infinitive_simple
+skurir/a0a1a2c0c1c2E0E1E2r0-0	po:verb ts:infinitive_simple
+iskurir/a0a1a2c0c1c2E0E1E2r0	po:verb ts:infinitive_simple
 skuriar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 skurio/a0a1a2E0E1E2J0	po:verb ts:indicative_present st:skuriar
 skúrioe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:skuriar
@@ -25255,6 +25261,7 @@ invenŧe	po:adverb
 invense	po:adverb
 anpò	po:conjunction
 siben	po:adverb
+seben	po:adverb
 donka	po:adverb
 adonka	po:adverb
 alora/‘0	po:adverb
@@ -28921,12 +28928,12 @@ scèto/B0I0	po:adjective
 scòna/D0&0[0[1	po:noun
 scòpo/T0I0&0	po:noun
 scuxo/T0I0	po:noun
-sea/D0	po:noun
+sea/D0	po:noun st:seda
 seca/D0&0	po:noun
 secar/T0	po:noun
 secèr/T0	po:noun
 secon/C0U0	po:adjective
-seda/D0	po:noun
+seda/D0	po:noun al:sea
 segadiŧo/T0T2I0	po:noun
 segaiŧo/T0T2I0	po:noun
 seguro/I0	po:adverb
@@ -28934,8 +28941,8 @@ segur/T0&0	po:adjective
 segura/D0&0	po:adjective
 sejuto/T0I0	po:noun
 seɉuto/T0I0	po:noun
-sekabala/D0(0	po:noun
-sekabaƚa/D0(1	po:noun
+sekabala/D0(0	po:adjective
+sekabaƚa/D0(1	po:adjective
 sekuenŧa/D0T2	po:noun
 seleŧion/D0T2U0	po:noun
 selvàrego/B0I0	po:adjective
@@ -28983,7 +28990,8 @@ serviŧio/T0&0	po:noun
 setemana/D0	po:noun
 setimana/D0	po:noun
 seturko/T0	po:noun
-sé	po:pronoun po:noun
+sé	po:pronoun
+sé	po:noun
 sée	po:noun
 sènen/T0u0	po:noun
 sèrio/B0	po:adjective po:noun
@@ -29116,10 +29124,12 @@ skrúpol/T0T2u0	po:noun
 skudèla/D0T2	po:noun
 skufiòto/T0I0	po:noun
 skuinŧa/D0T2	po:noun
-skulièr/T0&0	po:noun
-skuƚièr/T0&1	po:noun
-skur/T0&0	po:adjective po:noun
-skura/D0&0	po:adjective po:noun
+skulièr/T0&0)0	po:noun
+skuƚièr/T0&1)1	po:noun
+skur/T0&0(0	po:adjective
+skur/T0&0	po:noun
+skura/D0&0(0	po:adjective
+skura/D0&0	po:noun
 skuria/D0	po:noun
 skurtadura/D0Y0	po:noun
 socetà	po:noun
@@ -31887,7 +31897,7 @@ lixèl/T0U0	po:noun
 lixon/D0U0	po:noun
 loame/T0T4	po:noun
 loamèr/B0T4V0	po:noun
-lodro/B0T4	po:adjective po:noun
+lodro/B0*0	po:adjective po:noun
 longaña/D0T4	po:noun
 lontananŧa/D0T2	po:noun
 lonŧa/D0T2	po:noun
@@ -31967,6 +31977,7 @@ luxor/D0T4	po:noun
 ƚitigon/C0	po:noun
 ƚixèƚo/T0	po:noun
 ƚixon/D0	po:noun
+ƚodro/B0*0	po:adjective po:noun
 ƚonsa/D0	po:noun
 ƚontanansa/D0	po:noun
 ƚoskon/D0	po:adjective
@@ -33685,11 +33696,11 @@ skuasakóa/D0	po:noun
 skudelin/T0T2	po:noun
 skudelòto/T0I0	po:noun
 skudeƚòto/T0	po:noun
-skuelòto/T0I0	po:noun
-skueƚòto/T0	po:noun
+skuelòto/T0I0)0	po:noun
+skueƚòto/T0)1	po:noun
 skuena/D0	po:noun
 skuèko/B0I0	po:adjective
-skuèla/D0T2	po:noun
+skuèla/D0T2&0	po:noun
 skuinco/B0	po:noun
 skulasabanko/T0	po:noun
 skulasadina/D0	po:noun
@@ -36912,7 +36923,7 @@ skuarŧadura/D0Y0	po:noun
 skuarŧafaso/T0I0	po:noun
 skudésol/T0T2u0	po:noun
 skudéŧol/T0u0	po:noun
-skudo/T0	po:noun
+skudo/T0)0	po:noun
 skuelin/T0T2	po:noun
 skufa/D0	po:noun
 sofisiensa/D0	po:noun
@@ -37568,7 +37579,7 @@ skiƚato/T0	po:noun
 skortejon/D0T2U0	po:noun
 skudelèr/B0V0	po:adjective
 skudeƚèr/B0V0	po:adjective
-skufia/D0	po:noun
+skufia/D0&0)0	po:noun
 skuriadin/T0	po:noun
 soventro/T0	po:noun
 sósola/D0T2	po:noun
@@ -46231,10 +46242,38 @@ skrupoloxo/B0W0I0mf	po:adjective po:noun al:skrupuluxi
 skrupoƚoxo/B0W1mf	po:adjective po:noun al:skrupuƚuxi
 skudería/D0	po:noun
 skudaría/D0	po:noun
+skuelotin/T0	po:noun
+skueƚotin/T0	po:noun
+skufina/D0	po:noun
+skuladina/D0	po:noun
+skuƚadina/D0	po:noun
+skurità	po:noun
+skurtada/D0Y0Y1	po:noun
+skurtadina/D0	po:noun
+skurtinio/T0	po:noun
+skúrŧol/T0u0	po:noun
+skúrsol/T0u0	po:noun
+deño/T0I0&0*0	po:noun
+xdenton/C0U0	po:adjective
+xdro/B0	po:adjective
+xdro/B0	po:noun
+xdrúŧol/T0u0	po:adjective
+xdrúsol/T0u0	po:adjective
+seana/D0	po:noun
+sobatadura/D0Y0	po:noun
+sebatadura/D0Y0	po:noun
+sekakojon/D0U0	po:adjective
+sekakoɉon/D0U0	po:adjective
+sekàxine/T0	po:noun
+sekatin/C0	po:adjective
+sekator/C0mf	po:noun
+sekatòtan/T0U0	po:noun
+seŧèso/T0	po:noun
+sesèso/T0	po:noun
 
 
 
-/ 584
+/ 587
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
 / v. batidor 696-1-28 > ponidor

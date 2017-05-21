@@ -356,6 +356,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bàt",			"in",			3,	1,	"g",	"1560",			"Inkontrar.",
 "bàt",			"kontro",	3,	1,	"g",	"1980",			"",
 "bàt",			"re",			3,	1,	"g",	"1300",			"",
+"bàt",			"se",			3,	1,	"g",	"1829",			"Inkapusar.",
 "bàt",			"x",			3,	1,	"g",	"1775",			"",
 "bateđ",			"",			1,	3,	"a",	"1775",			"",
 "bateđ",			"dex",		1,	3,	"a",	"1775",			"",
