@@ -4322,20 +4322,25 @@ SFX D0 e i e
 SFX D0 a e a
 
 # vèrbi prokonplementari
-SFX E0 Y 13
+SFX E0 Y 18
 SFX E0 0 -ge .
 SFX E0 0 -gine .
 SFX E0 0 -gene .
+SFX E0 0 -gende .
 SFX E0 0 -gen .
 SFX E0 0 -me .
 SFX E0 0 -mene .
+SFX E0 0 -mende .
 SFX E0 0 -ne .
 SFX E0 0 -se .
 SFX E0 0 -sene .
+SFX E0 0 -sende .
 SFX E0 0 -te .
 SFX E0 0 -tene .
+SFX E0 0 -tende .
 SFX E0 0 -ve .
 SFX E0 0 -vene .
+SFX E0 0 -vende .
 
 # vèrbi prokonplementari
 SFX E1 Y 24
@@ -4392,19 +4397,22 @@ SFX E2 0 -veƚi .
 SFX E2 0 -veƚe .
 
 # vèrbi prokonplementari pal komandativo
-SFX F0 Y 15
+SFX F0 Y 18
 SFX F0 a e-me a
 SFX F0 a e-ne a
+SFX F0 a e-nde a
 SFX F0 a e-te a
 SFX F0 a e-ve a
 SFX F0 a e-ge a
 SFX F0 i e-me i
 SFX F0 i e-ne i
+SFX F0 i e-nde i
 SFX F0 i e-te i
 SFX F0 i e-ve i
 SFX F0 i e-ge i
 SFX F0 0 -me [^a]
 SFX F0 0 -ne [^a]
+SFX F0 0 -nde [^a]
 SFX F0 0 -te [^a]
 SFX F0 0 -ve [^a]
 SFX F0 0 -ge [^a]
@@ -4440,8 +4448,9 @@ SFX F2 0 -ƚi [^a]
 SFX F2 0 -ƚe [^a]
 
 # vèrbi prokonplementari
-SFX G0 Y 11
+SFX G0 Y 16
 SFX G0 me ne me
+SFX G0 me nde me
 SFX G0 me se me
 SFX G0 me te me
 SFX G0 me ve me
@@ -4451,6 +4460,10 @@ SFX G0 mene tene mene
 SFX G0 mene vene mene
 SFX G0 mene gine mene
 SFX G0 mene gene mene
+SFX G0 mene sende mene
+SFX G0 mene tende mene
+SFX G0 mene vende mene
+SFX G0 mene gende mene
 SFX G0 mene gen mene
 
 # vèrbi prokonplementari
