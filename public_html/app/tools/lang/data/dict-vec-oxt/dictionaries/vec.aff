@@ -121,7 +121,7 @@ FLAG long
 # themeT1 + r/a0a1a2E0E1E2, themeT1 + r/a0a1a2c0c1c2E0E1E2, themeT1 + r/a0a1a2d0d1d2E0E1E2, themeT1 + r/a0a1a2e0e1e2E0E1E2
 # themeT8 + o/a0a1a2E0E1E2I0J0
 # themeT8 + oe/a0a1a2K0
-SFX a0 Y 388
+SFX a0 Y 390
 SFX a0 0 ane/K0 [aei]r	ts:indicative_future is:interrogative
 SFX a0 0 atu/M0 [aei]r	ts:indicative_future is:interrogative
 SFX a0 0 ave/F0 [aei]r	ts:conditional_present
@@ -130,6 +130,7 @@ SFX a0 0 emo/E0J0 [aei]r	ts:indicative_future
 SFX a0 0 en/J0 [aei]r	ts:indicative_future
 SFX a0 0 ene/K0 [aei]r	ts:indicative_future is:interrogative
 SFX a0 0 ense [aei]r	ts:conditional_present
+SFX a0 0 esene/K0 [aei]r	ts:conditional_present is:interrogative
 SFX a0 0 esi/N0 [aei]r	ts:conditional_present
 SFX a0 0 esiu/O0 [aei]r	ts:conditional_present is:interrogative
 SFX a0 0 imo/E0J0 er	ts:indicative_future
@@ -333,6 +334,7 @@ SFX a0 ar évimo/J0 ar	ts:indicative_imperfect
 SFX a0 ar évimoe/K0 ar	ts:indicative_imperfect is:interrogative
 SFX a0 ar évitu/M0 ar	ts:indicative_imperfect is:interrogative
 SFX a0 ar évone/K0 ar	ts:indicative_imperfect is:interrogative
+SFX a0 ar í/F0N0 ar	ts:indicative_present
 SFX a0 ar ò ar	ts:participle_passive
 SFX a0 ar ónmene/G0 ar
 SFX a0 e me/G0 oe
@@ -4322,25 +4324,20 @@ SFX D0 e i e
 SFX D0 a e a
 
 # vèrbi prokonplementari
-SFX E0 Y 18
+SFX E0 Y 13
 SFX E0 0 -ge .
 SFX E0 0 -gine .
 SFX E0 0 -gene .
-SFX E0 0 -gende .
 SFX E0 0 -gen .
 SFX E0 0 -me .
 SFX E0 0 -mene .
-SFX E0 0 -mende .
 SFX E0 0 -ne .
 SFX E0 0 -se .
 SFX E0 0 -sene .
-SFX E0 0 -sende .
 SFX E0 0 -te .
 SFX E0 0 -tene .
-SFX E0 0 -tende .
 SFX E0 0 -ve .
 SFX E0 0 -vene .
-SFX E0 0 -vende .
 
 # vèrbi prokonplementari
 SFX E1 Y 24
@@ -4397,22 +4394,19 @@ SFX E2 0 -veƚi .
 SFX E2 0 -veƚe .
 
 # vèrbi prokonplementari pal komandativo
-SFX F0 Y 18
+SFX F0 Y 15
 SFX F0 a e-me a
 SFX F0 a e-ne a
-SFX F0 a e-nde a
 SFX F0 a e-te a
 SFX F0 a e-ve a
 SFX F0 a e-ge a
 SFX F0 i e-me i
 SFX F0 i e-ne i
-SFX F0 i e-nde i
 SFX F0 i e-te i
 SFX F0 i e-ve i
 SFX F0 i e-ge i
 SFX F0 0 -me [^a]
 SFX F0 0 -ne [^a]
-SFX F0 0 -nde [^a]
 SFX F0 0 -te [^a]
 SFX F0 0 -ve [^a]
 SFX F0 0 -ge [^a]
@@ -4448,9 +4442,8 @@ SFX F2 0 -ƚi [^a]
 SFX F2 0 -ƚe [^a]
 
 # vèrbi prokonplementari
-SFX G0 Y 16
+SFX G0 Y 11
 SFX G0 me ne me
-SFX G0 me nde me
 SFX G0 me se me
 SFX G0 me te me
 SFX G0 me ve me
@@ -4460,10 +4453,6 @@ SFX G0 mene tene mene
 SFX G0 mene vene mene
 SFX G0 mene gine mene
 SFX G0 mene gene mene
-SFX G0 mene sende mene
-SFX G0 mene tende mene
-SFX G0 mene vende mene
-SFX G0 mene gende mene
 SFX G0 mene gen mene
 
 # vèrbi prokonplementari
@@ -5340,7 +5329,7 @@ SFX &0 0 ta/D0 [^è]ve
 SFX &0 ève eveta/D0 ève
 
 # sostantivi alterài - demenutivi in -eto/a ko èle evanesente
-SFX &1 Y 50
+SFX &1 Y 49
 SFX &1 ú ueto/T0mf ú
 SFX &1 0 eto/T0mf [^èò]l
 SFX &1 èl eleto/T0I0mf èl
@@ -5390,7 +5379,6 @@ SFX &1 a eta/D0 [^ƚ]a
 SFX &1 a eta/D0 [^èò]ƚa
 SFX &1 èƚa eƚeta/D0 èƚa
 SFX &1 òƚa oƚeta/D0 òƚa
-SFX &1 0 ta/D0 e
 
 # sostantivi alterài - demenutivi in -èl/-èla
 SFX [0 Y 22
