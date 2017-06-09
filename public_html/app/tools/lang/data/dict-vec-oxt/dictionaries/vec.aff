@@ -69,7 +69,7 @@ ICONV Th Ŧ
 ICONV ' ʼ
 
 # frequently switched character groups
-REP 38
+REP 43
 REP a à
 REP e è
 REP e é
@@ -82,6 +82,8 @@ REP ù ú
 REP s x
 REP x s
 REP ʼ ʼ_
+REP mb nb
+REP mp np
 REP sb xb
 REP xc sc
 REP sd xd
@@ -108,6 +110,9 @@ REP iko$ ego
 REP iki$ egi
 REP ika$ ega
 REP ike$ ege
+REP itor$ idor
+REP ator$ ador
+REP etor$ edor
 
 
 FLAG long
@@ -5239,7 +5244,7 @@ SFX Y0 ida ía/D0 ida
 SFX Y0 edo é/T0 edo
 SFX Y0 udo ú/T0 udo
 SFX Y0 uda úa/D0 uda
-SFX Y0 ude ú/T0 ude
+SFX Y0 ude ú/D0 ude
 
 # sostantivi koletivi, ...
 SFX Y1 Y 1
