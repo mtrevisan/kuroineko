@@ -5281,6 +5281,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "señor",			"",			1,	3,	"a",	"1509",			"",
 "señor",			"in",			1,	3,	"a",	"",				"",
 "señoređ",		"",			1,	5,	"a",	"1509",			"",
+"seol",			"",			1,	1,	"a",	"1829",			"",
 "separ",			"",			1,	3,	"g",	"",				"",
 "separ",			"de",			1,	3,	"g",	"1854",			"",
 "sepel",			"",			4,	5,	"a",	"1447",			"",
