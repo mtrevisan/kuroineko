@@ -5479,10 +5479,10 @@ sfògonoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:sfogonar
 infoibar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 infòibo/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:infoibar
 infòiboe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:infoibar
-fojar/a0a1a2E0E1E2+0*0	po:verb ts:infinitive_simple
+fojar/a0a1a2E0E1E2r0+0*0	po:verb ts:infinitive_simple
 fòjo/a0a1a2E0E1E2J0r2+0*0=0	po:verb ts:indicative_present st:fojar
 fòjoe/a0a1a2K0+0*0	po:verb ts:indicative_present is:interrogative st:fojar
-foɉar/a0a1a2E0E1E2+0*0	po:verb ts:infinitive_simple
+foɉar/a0a1a2E0E1E2r0+0*0	po:verb ts:infinitive_simple
 fòɉo/a0a1a2E0E1E2I0J0r2+0*0=0	po:verb ts:indicative_present st:foɉar
 fòɉoe/a0a1a2K0+0*0	po:verb ts:indicative_present is:interrogative st:foɉar
 sfojolar/a0a1E0E1	po:verb ts:infinitive_simple
@@ -5643,7 +5643,7 @@ fórmoƚoe/a0a2K0	po:verb ts:indicative_present is:interrogative st:formoƚar
 fornar/a0a1a2E0E1E2+0-0	po:verb ts:infinitive_simple
 forno/a0a1a2E0E1E2I0J0+0-0	po:verb ts:indicative_present st:fornar
 fórnoe/a0a1a2K0+0-0	po:verb ts:indicative_present is:interrogative st:fornar
-fornir/a0a1a2c0c1c2E0E1E2r0+0.0	po:verb ts:infinitive_simple
+fornir/a0a1a2c0c1c2E0E1E2r0+0.0*0	po:verb ts:infinitive_simple
 fornegar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 fórnego/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:fornegar
 fórnegoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:fornegar
@@ -27115,7 +27115,7 @@ fortaja/D0)0	po:noun
 fortaɉa/D0)0	po:noun
 fortemente/I0W2	po:adverb
 fortifegador/C0V0	po:noun
-fortuna/D0[0[1<0<1	po:noun
+fortuna/D0*0[0[1<0<1	po:noun
 forŧadura/D0Y0	po:noun
 forŧèl/B0U0	po:noun
 fotío/T0	po:noun
@@ -33711,9 +33711,10 @@ sferdor/D0	po:noun
 sfilŧa/D0T2	po:noun
 sfogor/D0	po:noun
 sfondron/C0U0	po:noun
-sforsana/D0	po:noun
-sforŧana/D0	po:noun
-sfòjo/T0T2	po:noun
+sforsana/D0[0	po:noun
+sforŧana/D0[0	po:noun
+sfòjo/T0&0	po:noun
+sfòɉo/T0&0	po:noun
 sfrantume/T0	po:noun
 sfredor/D0	po:noun
 sfrontadon/C0U0	po:noun
@@ -36154,7 +36155,7 @@ fraɉa/D0(0	po:noun
 fraor/D0	po:noun
 fratèrnita/D0	po:noun
 fraxèl/T0T2U0	po:noun
-fraxèla/D0T2	po:noun
+fraxèla/D0T2*0	po:noun
 fràola/D0T2	po:noun
 fregolon/D0T2U0	po:noun
 fremo/B0W0	po:adjective
@@ -42004,7 +42005,7 @@ filareto/T0I0	po:noun
 filatogèr/B0V0	po:noun
 filatòjo/T0T2	po:noun
 filièra/D0	po:noun
-filoxo/B0W0I0mf)0	po:adjective
+filoxo/B0W0I0mf*0)0	po:adjective
 filsòƚo/T0	po:noun
 filŧòl/T0U0	po:noun
 fiƚakaƚigo/T0	po:noun
@@ -42013,7 +42014,7 @@ fiƚareso/B0	po:noun
 fiƚatogèr/B0V0	po:noun
 fiƚatòjo/T0T2	po:noun
 fiƚièra/D0	po:noun
-fiƚoxo/B0W1mf	po:adjective
+fiƚoxo/B0W1mf*0)1	po:adjective
 fiƚoxon/C0	po:noun
 finoxomía/D0R0	po:noun
 fiokèr/B0V0	po:noun
@@ -45544,7 +45545,7 @@ speŧífego/B0	po:adjective
 fermo/B0	po:adjective po:noun
 fermento/T0I0	po:noun
 sfexo/B0I0	po:adjective
-sfexa/D0	po:noun
+sfexa/D0&0	po:noun
 fiako/B0I0	po:adjective po:noun
 fianko/T0&0)0	po:noun
 fiapo/T0I0&0	po:adjective
@@ -46588,10 +46589,29 @@ sfaŧateŧa/D0	po:noun
 sfasatesa/D0	po:noun
 sfendela/D0T2	po:noun
 sfendidura/D0Y0	po:noun
+sfexetina/D0	po:noun
+sfido/T0	po:noun
+sfojadura/D0Y0	po:noun
+sfoɉadura/D0Y0	po:noun
+vetara/D0	po:noun
+viatara/D0	po:noun
+sfondradiŧo/T0T2I0	po:adjective
+sfondraiŧo/T0T2I0	po:adjective
+fornidura/D0Y0*0	po:noun
+fornir/a0a1a2c0c1c2E0E1E2r0
+fortunatamente/I0W2*0	po:adverb
+jarígola/D0T2	po:noun
+ɉarígola/D0T2	po:noun
+sforŧanèr/B0V0	po:noun
+sforsanèr/B0V0	po:noun
+sforŧèla/D0	po:noun
+sforsèla/D0T2	po:noun
+sfòrŧo/T0T2	po:noun
+sfrakason/C0U0	po:adjective
 
 
 
-/ 598
+/ 600
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
 / v. batidor 696-1-28 > ponidor
@@ -46621,3 +46641,13 @@ sfendidura/D0Y0	po:noun
 (sost.)|sfaŧatàxin|sfasatàxin|sfaŧateŧa|sfasatesa
 / sfèra? sfera?	po:noun
 (v.)|sfredir|sferdir
+(sost.)|sfexeta|sfexetina
+(v.)|sfidar|desfidar
+(sost.)|sfilaŧo|sfilaso|sfiƚaso|trinèla|trinèƚa
+(sost.)|fòjo|fòɉo|sfòjo|sfòɉo
+(sost.)|sfòjo|sfòɉo|vetara|viatara|jiràtola|jiràtoƚa|ɉiràtola|ɉiràtoƚa
+(sost.)|sfogor|skotor
+(aj.)|sfondradiŧo|sfondradiso|sfondraiŧo|sfondraiso|sfondradon
+(v.)|sfortunar|desfortunar
+(sost.)|sforŧana|sforsana|jarígola|jarígoƚa|ɉarígola|ɉarígoƚa
+(v.)|sfranpuñar|sfrapuñar
