@@ -5307,6 +5307,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sest",			"mal",		1,	1,	"g",	"1867",			"",
 "set",			"",			1,	1,	"a",	"1775",			"Asetar, méter in ordene.",
 "set",			"a",			1,	1,	"a",	"1450",			"",
+"setenbriđ",	"",			1,	7,	"a",	"1829",			"Festejar Setenbre.",
 "sevit",			"",			1,	1,	"g",	"",				"Seguitar.",
 "sfalt",			"",			1,	2,	"g",	"1980",			"",
 "sfarŧ",			"",			1,	2,	"g",	"1775",			"Póner in mostra.",

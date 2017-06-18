@@ -4764,7 +4764,7 @@ fatúcoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:fatucar
 faturar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 faturo/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:faturar
 fatúroe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:faturar
-faŧar/a0a1E0E1+0	po:verb ts:infinitive_simple
+faŧar/a0a1E0E1+0*0	po:verb ts:infinitive_simple
 renfasar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 renfaso/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:renfasar
 renfàsoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:renfasar
@@ -4946,7 +4946,7 @@ varífegoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:varifegar
 vinifegar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 vinífego/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:vinifegar
 vinífegoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:vinifegar
-sfegatar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
+sfegatar/a0a1a2E0E1E2r0	po:verb ts:infinitive_simple
 sfegato/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:sfegatar
 sfegàtoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:sfegatar
 fegurar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
@@ -4976,7 +4976,7 @@ fémeno/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:femenar
 fémenoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:femenar
 infemenir/a0a1a2c0c1c2E0E1E2	po:verb ts:infinitive_simple
 fenir/a0a1a2c0c1c2E0E1E2r0s0s1-0*0,0	po:verb ts:infinitive_simple
-fénder/b0b1b2E0E1E2*0,0	po:verb ts:infinitive_simple
+fénder/b0b1b2E0E1E2r0*0,0	po:verb ts:infinitive_simple
 fendre	po:verb ts:infinitive_simple st:fénder
 fenderò/b0b1b2J0s0s1*0,0	po:verb ts:indicative_future st:fénder
 fendo/a0a1a2E0E1E2I0J0*0,0	po:verb ts:indicative_present st:fénder
@@ -18137,6 +18137,15 @@ malsèstoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:malsestar
 setar/a0a1a2E0E1E2-0.0@0	po:verb ts:infinitive_simple
 seto/a0a1a2E0E1E2I0J0-0.0@0	po:verb ts:indicative_present st:setar
 sétoe/a0a1a2K0-0.0@0	po:verb ts:indicative_present is:interrogative st:setar
+setenbriđar/a0a1E0E1	po:verb ts:infinitive_simple
+setenbriđo/a0a1E0E1I0J0	po:verb ts:indicative_present st:setenbriđar
+setenbríđoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:setenbriđar
+setenbridar/a0a1E0E1	po:verb ts:infinitive_simple
+setenbrido/a0a1E0E1I0J0	po:verb ts:indicative_present st:setenbridar
+setenbrídoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:setenbridar
+setenbrixar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
+setenbrixo/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:setenbrixar
+setenbríxoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:setenbrixar
 sevitar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 sèvito/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:sevitar
 sèvitoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:sevitar
@@ -26967,14 +26976,16 @@ fantaxía/D0&0	po:noun
 farina/D0r2[0[1	po:noun
 fasa/D0&0[0[1	po:noun
 fasadura/D0Y0-0	po:noun
-fasendon/C0U0	po:noun
+fasendon/C0U0*0	po:adjective
+fasendon/C0U0*0	po:noun
 fasilità	po:noun
 fasilmente/I0W2	po:adverb
 fasiƚità	po:noun
 fasin/C0	po:noun
 fastidio/T0r2	po:noun
 fastuko/T0I0	po:noun
-faŧendon/C0U0	po:noun
+faŧendon/C0U0*0	po:adjective
+faŧendon/C0U0*0	po:noun
 faŧilità	po:noun
 faŧilmente/I0W2	po:adverb
 favor/D0	po:noun
@@ -33692,6 +33703,7 @@ sèlen/T0T2u0	po:noun
 sènape	po:noun
 sèrola/D0T2	po:noun
 sfadigon/C0U0	po:adjective
+sfadigon/C0U0	po:noun
 sfarinoxo/B0W0I0mf	po:adjective po:noun
 sfasadon/C0U0	po:adjective
 sfaŧadon/C0U0	po:adjective
@@ -41906,7 +41918,8 @@ faeton/D0U0	po:noun
 fajòl/T0T2U0&0	po:noun
 faɉòl/T0T2U0&0	po:noun
 fakinata/D0	po:noun
-fakinon/C0U0	po:noun
+fakinon/C0U0*0	po:adjective
+fakinon/C0U0*0	po:noun
 fala/D0T2	po:noun
 falkon/D0U0v0	po:noun
 falsifegador/C0V0	po:noun
@@ -46556,11 +46569,29 @@ dueto/B0I0	po:noun
 kuarteto/B0I0	po:noun
 kuinteto/B0I0	po:noun
 sesteto/B0I0	po:noun
+seteto/B0I0	po:noun
+oteto/B0I0	po:noun
+sestièr/D0	po:noun
+setemanal/D0T3U0	po:adjective
+setenbrin/B0	po:adjective
+setimài	po:adverb
+setimin/C0	po:adjective
+setemin/C0	po:adjective
+fadigoxo/B0W0I0mf*0	po:adjective
+fadigoxo/B0I0mf*0	po:noun
+sfarŧo/T0I0T2	po:noun
+sfasadin/C0U0	po:adjective
+sfaŧadin/C0U0	po:adjective
+sfaŧatàxin/D0	po:noun
+sfasatàxin/D0	po:noun
+sfaŧateŧa/D0	po:noun
+sfasatesa/D0	po:noun
+sfendela/D0T2	po:noun
+sfendidura/D0Y0	po:noun
 
 
 
-
-/ 596
+/ 598
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
 / v. batidor 696-1-28 > ponidor
@@ -46579,3 +46610,14 @@ sesteto/B0I0	po:noun
 (sost.)|sesin|sisin
 (sost.)|sesion|seduta
 (sost.)|sèsola|sèsoƚa|palòto|paƚòto
+(aj.)|setemin|setimin
+(aj., sost.)|sfaŧendon|sfasendon|sfadigon|sfakinon
+(v.)|sfamar|desfamar
+(v.)|sfangar|desfangar
+(v.)|sfantar|desfantar
+(v.)|sfarinar|desfarinar
+(aj., sost.)|sfarinoxo|sfregoloxo|sfregoƚoxo
+(sost.)|skuarŧo|skuarso|sfarŧo|sfarso
+(sost.)|sfaŧatàxin|sfasatàxin|sfaŧateŧa|sfasatesa
+/ sfèra? sfera?	po:noun
+(v.)|sfredir|sferdir
