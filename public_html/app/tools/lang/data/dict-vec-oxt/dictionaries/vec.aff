@@ -126,7 +126,7 @@ FLAG long
 # themeT1 + r/a0a1a2E0E1E2, themeT1 + r/a0a1a2c0c1c2E0E1E2, themeT1 + r/a0a1a2d0d1d2E0E1E2, themeT1 + r/a0a1a2e0e1e2E0E1E2
 # themeT8 + o/a0a1a2E0E1E2I0J0
 # themeT8 + oe/a0a1a2K0
-SFX a0 Y 390
+SFX a0 Y 405
 SFX a0 0 ane/K0 [aei]r	ts:indicative_future is:interrogative
 SFX a0 0 atu/M0 [aei]r	ts:indicative_future is:interrogative
 SFX a0 0 ave/F0 [aei]r	ts:conditional_present
@@ -135,6 +135,7 @@ SFX a0 0 emo/E0J0 [aei]r	ts:indicative_future
 SFX a0 0 en/J0 [aei]r	ts:indicative_future
 SFX a0 0 ene/K0 [aei]r	ts:indicative_future is:interrogative
 SFX a0 0 ense [aei]r	ts:conditional_present
+SFX a0 0 ensi [aei]r	ts:conditional_present
 SFX a0 0 esene/K0 [aei]r	ts:conditional_present is:interrogative
 SFX a0 0 esi/N0 [aei]r	ts:conditional_present
 SFX a0 0 esiu/O0 [aei]r	ts:conditional_present is:interrogative
@@ -145,6 +146,7 @@ SFX a0 0 ionme/G0G1 [^cijɉñ][aei]r
 SFX a0 0 isen/J0 [aei]r	ts:conditional_present
 SFX a0 0 isene/K0 [aei]r	ts:conditional_present is:interrogative
 SFX a0 0 isense [aei]r	ts:conditional_present
+SFX a0 0 isensi [aei]r	ts:conditional_present
 SFX a0 0 ision/J0 [aei]r	ts:conditional_present
 SFX a0 0 isione/K0 [aei]r	ts:conditional_present is:interrogative
 SFX a0 0 isionse [aei]r	ts:conditional_present
@@ -171,6 +173,7 @@ SFX a0 0 ésitu/M0 [aei]r	ts:conditional_present is:interrogative
 SFX a0 0 éu/O0 [aei]r	ts:indicative_future is:interrogative
 SFX a0 0 í/N0 er	ts:indicative_future
 SFX a0 0 ía/F0J0L0 [aei]r	ts:conditional_present
+SFX a0 0 èe/F0J0L0 [aei]r	ts:conditional_present
 SFX a0 0 íane/K0 [aei]r	ts:conditional_present is:interrogative
 SFX a0 0 íatu/M0 [aei]r	ts:conditional_present is:interrogative
 SFX a0 0 íe/F0J0 [aei]r	ts:conditional_present
@@ -187,6 +190,7 @@ SFX a0 ar en/J0 ar	ts:indicative_present ts:subjunctive_present
 SFX a0 ar endo/E0 ar	ts:gerund_simple
 SFX a0 ar ene/K0 ar	ts:indicative_present ts:subjunctive_present is:interrogative
 SFX a0 ar ense ar	ts:indicative_imperfect ts:subjunctive_imperfect
+SFX a0 ar ensi ar	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX a0 ar ente/T0I0 ar	ts:participle_active
 SFX a0 ar ento/E0 ar	ts:gerund_simple
 SFX a0 ar erane/K0 ar	ts:indicative_future is:interrogative
@@ -196,6 +200,7 @@ SFX a0 ar eremo/E0J0 ar	ts:indicative_future
 SFX a0 ar eren/J0 ar	ts:indicative_future
 SFX a0 ar erene/K0 ar	ts:indicative_future is:interrogative
 SFX a0 ar erense ar	ts:conditional_present
+SFX a0 ar erensi ar	ts:conditional_present
 SFX a0 ar eresi/N0 ar	ts:conditional_present
 SFX a0 ar eresiu/O0 ar	ts:conditional_present is:interrogative
 SFX a0 ar erion/J0 ar	ts:conditional_present
@@ -204,6 +209,7 @@ SFX a0 ar erionse ar	ts:conditional_present
 SFX a0 ar erisen/J0 ar	ts:conditional_present
 SFX a0 ar erisene/K0 ar	ts:conditional_present is:interrogative
 SFX a0 ar erisense ar	ts:conditional_present
+SFX a0 ar erisensi ar	ts:conditional_present
 SFX a0 ar erisi/N0 ar	ts:conditional_present
 SFX a0 ar erision/J0 ar	ts:conditional_present
 SFX a0 ar erisione/K0 ar	ts:conditional_present is:interrogative
@@ -233,9 +239,10 @@ SFX a0 ar erésimoe/K0 ar	ts:conditional_present is:interrogative
 SFX a0 ar erésitu/M0 ar	ts:conditional_present is:interrogative
 SFX a0 ar eréu/O0 ar	ts:indicative_future is:interrogative
 SFX a0 ar ería/F0J0L0 ar	ts:conditional_present
+SFX a0 ar erèe/F0J0L0 ar	ts:conditional_present
 SFX a0 ar eríane/K0 ar	ts:conditional_present is:interrogative
 SFX a0 ar eríatu/M0 ar	ts:conditional_present is:interrogative
-SFX a0 ar eríe/F0J0 ar	ts:conditional_present
+SFX a0 ar eríe/F0J0L0 ar	ts:conditional_present
 SFX a0 ar eríene/K0 ar	ts:conditional_present is:interrogative
 SFX a0 ar erísitu/M0 ar	ts:conditional_present is:interrogative
 SFX a0 ar erò/J0 ar	ts:indicative_future
@@ -254,6 +261,7 @@ SFX a0 ar ionme/G0G1 [^cijɉñ]ar
 SFX a0 ar isen/J0 ar	ts:subjunctive_imperfect
 SFX a0 ar isene/K0 ar	ts:subjunctive_imperfect is:interrogative
 SFX a0 ar isense ar	ts:subjunctive_imperfect
+SFX a0 ar isensi ar	ts:subjunctive_imperfect
 SFX a0 ar isiede/N0 ar	ts:subjunctive_imperfect
 SFX a0 ar isiege/N0 ar	ts:subjunctive_imperfect
 SFX a0 ar ision/J0 ar	ts:subjunctive_imperfect
@@ -266,6 +274,7 @@ SFX a0 ar isonse ar	ts:subjunctive_imperfect
 SFX a0 ar iven/J0 ar	ts:indicative_imperfect
 SFX a0 ar ivene/K0 ar	ts:indicative_imperfect is:interrogative
 SFX a0 ar ivense ar	ts:indicative_imperfect
+SFX a0 ar ivensi ar	ts:indicative_imperfect
 SFX a0 ar ivion/J0 ar	ts:indicative_imperfect
 SFX a0 ar ivione/K0 ar	ts:indicative_imperfect is:interrogative
 SFX a0 ar ivionse ar	ts:indicative_imperfect
@@ -356,6 +365,7 @@ SFX a0 er aremo/E0J0 er	ts:indicative_future
 SFX a0 er aren/J0 er	ts:indicative_future
 SFX a0 er arene/K0 er	ts:indicative_future is:interrogative
 SFX a0 er arense er	ts:conditional_present
+SFX a0 er arensi er	ts:conditional_present
 SFX a0 er aresi/N0 er	ts:conditional_present
 SFX a0 er aresiu/O0 er	ts:conditional_present is:interrogative
 SFX a0 er arimo/J0 er	ts:indicative_future
@@ -365,6 +375,7 @@ SFX a0 er arionse er	ts:conditional_present
 SFX a0 er arisen/J0 er	ts:conditional_present
 SFX a0 er arisene/K0 er	ts:conditional_present is:interrogative
 SFX a0 er arisense er	ts:conditional_present
+SFX a0 er arisensi er	ts:conditional_present
 SFX a0 er arisi/N0 er	ts:conditional_present
 SFX a0 er arision/J0 er	ts:conditional_present
 SFX a0 er arisione/K0 er	ts:conditional_present is:interrogative
@@ -394,9 +405,10 @@ SFX a0 er arésitu/M0 er	ts:conditional_present is:interrogative
 SFX a0 er aréu/O0 er	ts:indicative_future is:interrogative
 SFX a0 er arí/N0 er	ts:indicative_future
 SFX a0 er aría/F0J0L0 er	ts:conditional_present
+SFX a0 er arèe/F0J0L0 er	ts:conditional_present
 SFX a0 er aríane/K0 er	ts:conditional_present is:interrogative
 SFX a0 er aríatu/M0 er	ts:conditional_present is:interrogative
-SFX a0 er aríe/F0J0 er	ts:conditional_present
+SFX a0 er aríe/F0J0L0 er	ts:conditional_present
 SFX a0 er aríene/K0 er	ts:conditional_present is:interrogative
 SFX a0 er arímoe/K0 er	ts:indicative_future
 SFX a0 er arísitu/M0 er	ts:conditional_present is:interrogative
@@ -415,6 +427,7 @@ SFX a0 er ionme/G0G1 [^cijɉñ]er
 SFX a0 er isen/J0 er	ts:subjunctive_imperfect
 SFX a0 er isene/K0 er	ts:subjunctive_imperfect is:interrogative
 SFX a0 er isense er	ts:subjunctive_imperfect
+SFX a0 er isensi er	ts:subjunctive_imperfect
 SFX a0 er isiede/N0 er	ts:subjunctive_imperfect
 SFX a0 er isiege/N0 er	ts:subjunctive_imperfect
 SFX a0 er ision/J0 er	ts:subjunctive_imperfect
@@ -427,6 +440,7 @@ SFX a0 er isonse er	ts:subjunctive_imperfect
 SFX a0 er iven/J0 er	ts:indicative_imperfect
 SFX a0 er ivene/K0 er	ts:indicative_imperfect is:interrogative
 SFX a0 er ivense er	ts:indicative_imperfect
+SFX a0 er ivensi er	ts:indicative_imperfect
 SFX a0 er ivion/J0 er	ts:indicative_imperfect
 SFX a0 er ivione/K0 er	ts:indicative_imperfect is:interrogative
 SFX a0 er ivionse er	ts:indicative_imperfect
@@ -508,6 +522,7 @@ SFX a0 r n/J0 er	ts:indicative_present ts:subjunctive_present
 SFX a0 r ndo/E0 [aei]r	ts:gerund_simple
 SFX a0 r ne/K0 er	ts:indicative_present ts:subjunctive_present is:interrogative
 SFX a0 r nse er	ts:indicative_imperfect ts:subjunctive_imperfect
+SFX a0 r nsi er	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX a0 r nte/T0I0 [ae]r	ts:participle_active
 SFX a0 r nto/E0 [aei]r	ts:gerund_simple
 SFX a0 r se/I0T0 [ae]r	ts:subjunctive_imperfect
@@ -764,7 +779,7 @@ SFX a2 r ƚo/B0 er
 # themeT1 + [ea]r/b0b1b2E0E1E2
 # themeT4 + rò/b0b1b2J0
 # themeT8 + o/a0a1a2E0E1E2I0J0
-SFX b0 Y 155
+SFX b0 Y 161
 SFX b0 0 e [ea]r
 SFX b0 0 me/G0G1 [ea]r
 SFX b0 0 mene/G0 [ae]r
@@ -784,6 +799,7 @@ SFX b0 erò ionme/G0G1 [^cijɉñ]erò
 SFX b0 erò isen/J0 erò
 SFX b0 erò isene/K0 erò	is:interrogative
 SFX b0 erò isense erò
+SFX b0 erò isensi erò
 SFX b0 erò isiede/N0 erò
 SFX b0 erò isiege/N0 erò
 SFX b0 erò ision/J0 erò
@@ -796,6 +812,7 @@ SFX b0 erò isonse erò
 SFX b0 erò iven/J0 erò
 SFX b0 erò ivene/K0 erò	is:interrogative
 SFX b0 erò ivense erò
+SFX b0 erò ivensi erò
 SFX b0 erò ivion/J0 erò
 SFX b0 erò ivione/K0 erò	is:interrogative
 SFX b0 erò ivionse erò
@@ -859,6 +876,7 @@ SFX b0 rò n/J0 erò
 SFX b0 rò ndo/E0 erò
 SFX b0 rò ne/K0 erò	is:interrogative
 SFX b0 rò nse erò
+SFX b0 rò nsi erò
 SFX b0 rò nte/T0I0 erò
 SFX b0 rò nto/E0 erò
 SFX b0 rò se/I0T0 erò
@@ -875,6 +893,7 @@ SFX b0 ò emo/E0J0 ò
 SFX b0 ò en/J0 ò
 SFX b0 ò ene/K0 ò	ts:indicative_future is:interrogative
 SFX b0 ò ense ò
+SFX b0 ò ensi ò
 SFX b0 ò esi/N0 ò	ts:conditional_present
 SFX b0 ò esiu/O0 ò	ts:conditional_present is:interrogative
 SFX b0 ò imo/E0J0 ò
@@ -884,6 +903,7 @@ SFX b0 ò ionme/G0G1 ò
 SFX b0 ò isen/J0 ò
 SFX b0 ò isene/K0 ò	is:interrogative
 SFX b0 ò isense ò
+SFX b0 ò isensi ò
 SFX b0 ò ision/J0 ò
 SFX b0 ò isione/K0 ò	is:interrogative
 SFX b0 ò isionse ò
@@ -913,6 +933,7 @@ SFX b0 ò ésitu/M0 ò	is:interrogative
 SFX b0 ò éu/O0 ò
 SFX b0 ò í/N0 ò
 SFX b0 ò ía/F0J0L0 ò
+SFX b0 ò èe/F0J0L0 ò
 SFX b0 ò íane/K0 ò	is:interrogative
 SFX b0 ò íatu/M0 ò	is:interrogative
 SFX b0 ò íe/F0J0 ò
@@ -1037,7 +1058,7 @@ SFX b2 ò ónmeƚo/G2 ò
 
 # vèrbi -<is>ír
 # themeT1 + ir/a0a1a2c0c1c2E0E1E2
-SFX c0 Y 228
+SFX c0 Y 239
 SFX c0 ir arane/K0 ir	is:interrogative
 SFX c0 ir aratu/M0 ir	is:interrogative
 SFX c0 ir arave/F0 ir	ts:conditional_present
@@ -1045,6 +1066,7 @@ SFX c0 ir aremo/E0J0 ir
 SFX c0 ir aren/J0 ir
 SFX c0 ir arene/K0 ir	is:interrogative
 SFX c0 ir arense ir
+SFX c0 ir arensi ir
 SFX c0 ir aresi/N0 ir
 SFX c0 ir aresiu/O0 ir
 SFX c0 ir arion/J0 ir
@@ -1053,6 +1075,7 @@ SFX c0 ir arionse ir
 SFX c0 ir arisen/J0 ir
 SFX c0 ir arisene/K0 ir	is:interrogative
 SFX c0 ir arisense ir
+SFX c0 ir arisensi ir
 SFX c0 ir arisi/N0 ir
 SFX c0 ir arision/J0 ir
 SFX c0 ir arisione/K0 ir	is:interrogative
@@ -1082,9 +1105,10 @@ SFX c0 ir arésimoe/K0 ir
 SFX c0 ir arésitu/M0 ir	is:interrogative
 SFX c0 ir aréu/O0 ir
 SFX c0 ir aría/F0J0L0 ir
+SFX c0 ir arèe/F0J0L0 ir
 SFX c0 ir aríane/K0 ir	is:interrogative
 SFX c0 ir aríatu/M0 ir	is:interrogative
-SFX c0 ir aríe/F0J0 ir
+SFX c0 ir aríe/F0J0L0 ir
 SFX c0 ir aríene/K0 ir	is:interrogative
 SFX c0 ir arísitu/M0 ir	is:interrogative
 SFX c0 ir arò/J0 ir
@@ -1093,6 +1117,7 @@ SFX c0 ir en/J0 ir
 SFX c0 ir endo/E0 ir
 SFX c0 ir ene/K0 ir	ts:indicative_future is:interrogative
 SFX c0 ir ense ir	ts:indicative_imperfect ts:subjunctive_imperfect
+SFX c0 ir insi ir	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX c0 ir ente/T0I0 ir
 SFX c0 ir ento/E0 ir
 SFX c0 ir erane/K0 ir	is:interrogative
@@ -1102,6 +1127,7 @@ SFX c0 ir eremo/E0J0 ir
 SFX c0 ir eren/J0 ir
 SFX c0 ir erene/K0 ir	is:interrogative
 SFX c0 ir erense ir
+SFX c0 ir erensi ir
 SFX c0 ir eresi/N0 ir
 SFX c0 ir eresiu/O0 ir
 SFX c0 ir erion/J0 ir
@@ -1110,6 +1136,7 @@ SFX c0 ir erionse ir
 SFX c0 ir erisen/J0 ir
 SFX c0 ir erisene/K0 ir	is:interrogative
 SFX c0 ir erisense ir
+SFX c0 ir erisensi ir
 SFX c0 ir erisi/N0 ir
 SFX c0 ir erision/J0 ir
 SFX c0 ir erisione/K0 ir	is:interrogative
@@ -1139,9 +1166,10 @@ SFX c0 ir erésimoe/K0 ir
 SFX c0 ir erésitu/M0 ir	is:interrogative
 SFX c0 ir eréu/O0 ir
 SFX c0 ir ería/F0J0L0 ir
+SFX c0 ir erèe/F0J0L0 ir
 SFX c0 ir eríane/K0 ir	is:interrogative
 SFX c0 ir eríatu/M0 ir	is:interrogative
-SFX c0 ir eríe/F0J0 ir
+SFX c0 ir eríe/F0J0L0 ir
 SFX c0 ir eríene/K0 ir	is:interrogative
 SFX c0 ir erísitu/M0 ir	is:interrogative
 SFX c0 ir erò/J0 ir
@@ -1181,6 +1209,7 @@ SFX c0 ir évitu/M0 ir	is:interrogative
 SFX c0 ir évone/K0 ir	is:interrogative
 SFX c0 ir í/F0N0 ir
 SFX c0 ir ía/F0J0N0 ir
+SFX c0 ir èe/F0J0N0 ir
 SFX c0 ir íane/K0 ir	is:interrogative
 SFX c0 ir íau/O0 ir
 SFX c0 ir íe/J0 ir
@@ -1228,6 +1257,7 @@ SFX c0 r ege/N0 [^cijɉñ]ir	ts:subjunctive_present
 SFX c0 r ente/T0I0 [^cijɉñ]ir
 SFX c0 r ento [^cijɉñ]ir
 SFX c0 r mo/E0J0 ir
+SFX c0 r n/J0 ir
 SFX c0 r on/E0J0 [^cijɉñ]ir
 SFX c0 r one/K0 [^cijɉñ]ir	is:interrogative
 SFX c0 r onme/G0G1 [^cijɉñ]ir
@@ -1238,6 +1268,7 @@ SFX c0 r sege/N0 ir
 SFX c0 r sen/J0 ir
 SFX c0 r sene/K0 ir	is:interrogative
 SFX c0 r sense ir
+SFX c0 r sensi ir
 SFX c0 r si/E0F0L0 ir
 SFX c0 r siede/N0 ir
 SFX c0 r siege/N0 ir
@@ -1255,6 +1286,7 @@ SFX c0 r séu/O0 ir
 SFX c0 r ven/J0 ir
 SFX c0 r vene/K0 ir	is:interrogative
 SFX c0 r vense ir
+SFX c0 r vensi ir
 SFX c0 r vion/J0 ir
 SFX c0 r vione/K0 ir	is:interrogative
 SFX c0 r vionse ir
@@ -1400,7 +1432,7 @@ SFX c2 r ónmeƚo/G2 [^cijɉñ]ir
 # vèrbi -ír
 # themeT1 + r/a0a1a2d0d1d2E0E1E2
 # themeT8 + o/d0d1d2E0E1E2J0
-SFX d0 Y 213
+SFX d0 Y 224
 SFX d0 io i/E0E1E2F0L0 io
 SFX d0 ir arane/K0 ir	is:interrogative
 SFX d0 ir aratu/M0 ir	is:interrogative
@@ -1409,6 +1441,7 @@ SFX d0 ir aremo/E0E1E2J0 ir
 SFX d0 ir aren/J0 ir
 SFX d0 ir arene/K0 ir	is:interrogative
 SFX d0 ir arense ir
+SFX d0 ir arensi ir
 SFX d0 ir aresi/N0 ir
 SFX d0 ir aresiu/O0 ir
 SFX d0 ir arion/J0 ir
@@ -1417,6 +1450,7 @@ SFX d0 ir arionse ir
 SFX d0 ir arisen/J0 ir
 SFX d0 ir arisene/K0 ir	is:interrogative
 SFX d0 ir arisense ir
+SFX d0 ir arisensi ir
 SFX d0 ir arisi/N0 ir
 SFX d0 ir arision/J0 ir
 SFX d0 ir arisione/K0 ir	is:interrogative
@@ -1446,9 +1480,10 @@ SFX d0 ir arésimoe/K0 ir
 SFX d0 ir arésitu/M0 ir	is:interrogative
 SFX d0 ir aréu/O0 ir
 SFX d0 ir aría/F0J0L0 ir
+SFX d0 ir arèe/F0J0L0 ir
 SFX d0 ir aríane/K0 ir	is:interrogative
 SFX d0 ir aríatu/M0 ir	is:interrogative
-SFX d0 ir aríe/F0J0 ir
+SFX d0 ir aríe/F0J0L0 ir
 SFX d0 ir aríene/K0 ir	is:interrogative
 SFX d0 ir arísitu/M0 ir	is:interrogative
 SFX d0 ir arò/J0 ir
@@ -1459,6 +1494,7 @@ SFX d0 ir en/J0 ir
 SFX d0 ir endo/E0E1E2 ir
 SFX d0 ir ene/K0 ir	ts:indicative_future is:interrogative
 SFX d0 ir ense ir	ts:indicative_imperfect ts:subjunctive_imperfect
+SFX d0 ir insi ir	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX d0 ir ente/T0I0 ir
 SFX d0 ir ento ir
 SFX d0 ir ento/E0E1E2 ir
@@ -1469,6 +1505,7 @@ SFX d0 ir eremo/E0E1E2J0 ir
 SFX d0 ir eren/J0 ir
 SFX d0 ir erene/K0 ir	is:interrogative
 SFX d0 ir erense ir
+SFX d0 ir erensi ir
 SFX d0 ir eresi/N0 ir
 SFX d0 ir eresiu/O0 ir
 SFX d0 ir erion/J0 ir
@@ -1477,6 +1514,7 @@ SFX d0 ir erionse ir
 SFX d0 ir erisen/J0 ir
 SFX d0 ir erisene/K0 ir	is:interrogative
 SFX d0 ir erisense ir
+SFX d0 ir erisensi ir
 SFX d0 ir erisi/N0 ir
 SFX d0 ir erision/J0 ir
 SFX d0 ir erisione/K0 ir	is:interrogative
@@ -1506,9 +1544,10 @@ SFX d0 ir erésimoe/K0 ir
 SFX d0 ir erésitu/M0 ir	is:interrogative
 SFX d0 ir eréu/O0 ir
 SFX d0 ir ería/F0J0L0 ir
+SFX d0 ir erèe/F0J0L0 ir
 SFX d0 ir eríane/K0 ir	is:interrogative
 SFX d0 ir eríatu/M0 ir	is:interrogative
-SFX d0 ir eríe/F0J0 ir
+SFX d0 ir eríe/F0J0L0 ir
 SFX d0 ir eríene/K0 ir	is:interrogative
 SFX d0 ir erísitu/M0 ir	is:interrogative
 SFX d0 ir erò/J0 ir
@@ -1548,7 +1587,8 @@ SFX d0 ir évimoe/K0 ir
 SFX d0 ir évitu/M0 ir	is:interrogative
 SFX d0 ir évone/K0 ir	is:interrogative
 SFX d0 ir í/F0N0 ir
-SFX d0 ir ía/F0J0N0 ir
+SFX d0 ir ía/F0J0L0N0 ir
+SFX d0 ir èe/F0J0L0N0 ir
 SFX d0 ir íane/K0 ir	is:interrogative
 SFX d0 ir íau/O0 ir
 SFX d0 ir íe/J0 ir
@@ -1584,6 +1624,7 @@ SFX d0 r ege/N0 [^cijɉñ]ir
 SFX d0 r ge ir
 SFX d0 r me/G0 ir
 SFX d0 r mo/E0E1E2J0 ir
+SFX d0 r n/J0 ir
 SFX d0 r on/E0E1E2J0 [^cijɉñ]ir
 SFX d0 r one/K0 [^cijɉñ]ir	is:interrogative
 SFX d0 r onme/G0G1 [^cijɉñ]ir
@@ -1591,6 +1632,7 @@ SFX d0 r se/I0T0 ir
 SFX d0 r sen/J0 ir
 SFX d0 r sene/K0 ir	is:interrogative
 SFX d0 r sense ir
+SFX d0 r sensi ir
 SFX d0 r siede/N0 ir
 SFX d0 r siege/N0 ir
 SFX d0 r sion/J0 ir
@@ -1603,6 +1645,7 @@ SFX d0 r sonse ir
 SFX d0 r ven/J0 ir
 SFX d0 r vene/K0 ir	is:interrogative
 SFX d0 r vense ir
+SFX d0 r vensi ir
 SFX d0 r vion/J0 ir
 SFX d0 r vione/K0 ir	is:interrogative
 SFX d0 r vionse ir
@@ -1724,7 +1767,7 @@ SFX d2 r ƚo/G2 ir
 # vèrbi -<is>ír/-ír
 # themeT1 + r/a0a1a2e0e1e2E0E1E2
 # themeT8 + o/e0e1e2E0E1E2J0
-SFX e0 Y 227
+SFX e0 Y 238
 SFX e0 0 me/G0 ir
 SFX e0 ir a/E0E1E2 ir
 SFX e0 ir arane/K0 ir	is:interrogative
@@ -1734,6 +1777,7 @@ SFX e0 ir aremo/E0E1E2J0 ir
 SFX e0 ir aren/J0 ir
 SFX e0 ir arene/K0 ir	is:interrogative
 SFX e0 ir arense ir
+SFX e0 ir arensi ir
 SFX e0 ir aresi/N0 ir
 SFX e0 ir aresiu/O0 ir
 SFX e0 ir arion/J0 ir
@@ -1742,6 +1786,7 @@ SFX e0 ir arionse ir
 SFX e0 ir arisen/J0 ir
 SFX e0 ir arisene/K0 ir	is:interrogative
 SFX e0 ir arisense ir
+SFX e0 ir arisensi ir
 SFX e0 ir arisi/N0 ir
 SFX e0 ir arision/J0 ir
 SFX e0 ir arisione/K0 ir	is:interrogative
@@ -1771,9 +1816,10 @@ SFX e0 ir arésimoe/K0 ir
 SFX e0 ir arésitu/M0 ir	is:interrogative
 SFX e0 ir aréu/O0 ir
 SFX e0 ir aría/F0J0L0 ir
+SFX e0 ir arèe/F0J0L0 ir
 SFX e0 ir aríane/K0 ir	is:interrogative
 SFX e0 ir aríatu/M0 ir	is:interrogative
-SFX e0 ir aríe/F0J0 ir
+SFX e0 ir aríe/F0J0L0 ir
 SFX e0 ir aríene/K0 ir	is:interrogative
 SFX e0 ir arísitu/M0 ir	is:interrogative
 SFX e0 ir arò/J0 ir
@@ -1785,6 +1831,7 @@ SFX e0 ir en/J0 ir
 SFX e0 ir endo/E0E1E2 ir
 SFX e0 ir ene/K0 ir	ts:indicative_future is:interrogative
 SFX e0 ir ense ir	ts:indicative_imperfect ts:subjunctive_imperfect
+SFX e0 ir ensi ir	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX e0 ir ente/T0I0 ir
 SFX e0 ir ento ir
 SFX e0 ir ento/E0E1E2 ir
@@ -1795,6 +1842,7 @@ SFX e0 ir eremo/E0E1E2J0 ir
 SFX e0 ir eren/J0 ir
 SFX e0 ir erene/K0 ir	is:interrogative
 SFX e0 ir erense ir
+SFX e0 ir erensi ir
 SFX e0 ir eresi/N0 ir
 SFX e0 ir eresiu/O0 ir
 SFX e0 ir erion/J0 ir
@@ -1803,6 +1851,7 @@ SFX e0 ir erionse ir
 SFX e0 ir erisen/J0 ir
 SFX e0 ir erisene/K0 ir	is:interrogative
 SFX e0 ir erisense ir
+SFX e0 ir erisensi ir
 SFX e0 ir erisi/N0 ir
 SFX e0 ir erision/J0 ir
 SFX e0 ir erisione/K0 ir	is:interrogative
@@ -1832,9 +1881,10 @@ SFX e0 ir erésimoe/K0 ir
 SFX e0 ir erésitu/M0 ir	is:interrogative
 SFX e0 ir eréu/O0 ir
 SFX e0 ir ería/F0J0L0 ir
+SFX e0 ir erèe/F0J0L0 ir
 SFX e0 ir eríane/K0 ir	is:interrogative
 SFX e0 ir eríatu/M0 ir	is:interrogative
-SFX e0 ir eríe/F0J0 ir
+SFX e0 ir eríe/F0J0L0 ir
 SFX e0 ir eríene/K0 ir	is:interrogative
 SFX e0 ir erísitu/M0 ir	is:interrogative
 SFX e0 ir erò/J0 ir
@@ -1876,7 +1926,8 @@ SFX e0 ir évimoe/K0 ir
 SFX e0 ir évitu/M0 ir	is:interrogative
 SFX e0 ir évone/K0 ir	is:interrogative
 SFX e0 ir í/F0N0 ir
-SFX e0 ir ía/F0J0N0 ir
+SFX e0 ir ía/F0J0L0N0 ir
+SFX e0 ir èe/F0J0L0N0 ir
 SFX e0 ir íane/K0 ir	is:interrogative
 SFX e0 ir íau/O0 ir
 SFX e0 ir íe/J0 ir
@@ -1914,6 +1965,7 @@ SFX e0 r ede/N0 ir
 SFX e0 r ege/N0 ir
 SFX e0 r me/G0 ir
 SFX e0 r mo/J0 ir
+SFX e0 r n/J0 ir
 SFX e0 r on/E0E1E2J0 [^cijɉñ]ir
 SFX e0 r one/K0 [^cijɉñ]ir	is:interrogative
 SFX e0 r onme/G0G1 [^cijɉñ]ir
@@ -1924,6 +1976,7 @@ SFX e0 r sege/N0 ir
 SFX e0 r sen/J0 ir
 SFX e0 r sene/K0 ir	is:interrogative
 SFX e0 r sense ir
+SFX e0 r sensi ir
 SFX e0 r si/E0E1E2F0L0 ir
 SFX e0 r siede/N0 ir
 SFX e0 r siege/N0 ir
@@ -1941,6 +1994,7 @@ SFX e0 r tu/M0 ir	is:interrogative
 SFX e0 r ven/J0 ir
 SFX e0 r vene/K0 ir	is:interrogative
 SFX e0 r vense ir
+SFX e0 r vensi ir
 SFX e0 r vion/J0 ir
 SFX e0 r vione/K0 ir	is:interrogative
 SFX e0 r vionse ir
@@ -2067,7 +2121,7 @@ SFX e2 r ƚo/G2 ir
 # themeT8 + oe/f0f1f2E0E1E2I0J0
 # themeT6 + do/T0Y0
 # themeT6 + da/D0Y0
-SFX f0 Y 256
+SFX f0 Y 265
 SFX f0 0 àne/K0 ar	is:interrogative
 SFX f0 0 àtu/M0 ar	is:interrogative
 SFX f0 0 ave/F0 ar	ts:conditional_present
@@ -2076,6 +2130,7 @@ SFX f0 0 emo/E0E1E2J0 ar	ts:indicative_future
 SFX f0 0 en/J0 ar
 SFX f0 0 ene/K0 ar	ts:indicative_future is:interrogative
 SFX f0 0 ense ar
+SFX f0 0 ensi ar
 SFX f0 0 esi/N0 ar	ts:conditional_present
 SFX f0 0 esiu/O0 ar	ts:conditional_present is:interrogative
 SFX f0 0 ion/E0E1E2J0 [^cijɉñ]ar
@@ -2084,6 +2139,7 @@ SFX f0 0 ionme/G0G1 [^cijɉñ]ar
 SFX f0 0 isen/J0 ar
 SFX f0 0 isene/K0 ar	is:interrogative
 SFX f0 0 isense ar
+SFX f0 0 isensi ar
 SFX f0 0 ision/J0 ar
 SFX f0 0 isione/K0 ar	is:interrogative
 SFX f0 0 isionse ar
@@ -2110,6 +2166,7 @@ SFX f0 0 ésimoe/K0 ar
 SFX f0 0 ésitu/M0 ar	is:interrogative
 SFX f0 0 éu/O0 ar
 SFX f0 0 ía/F0J0L0 ar
+SFX f0 0 èe/F0J0L0 ar
 SFX f0 0 íane/K0 ar	is:interrogative
 SFX f0 0 íatu/M0 ar	is:interrogative
 SFX f0 0 íe/F0J0 ar
@@ -2124,6 +2181,7 @@ SFX f0 ar en/J0 ar
 SFX f0 ar endo/E0E1E2 ar
 SFX f0 ar ene/K0 ar	ts:indicative_future is:interrogative
 SFX f0 ar ense ar	ts:indicative_imperfect ts:subjunctive_imperfect
+SFX f0 ar ensi ar	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX f0 ar ente/T0I0 ar
 SFX f0 ar ento/E0E1E2 ar
 SFX f0 ar eràne/K0 ar	is:interrogative
@@ -2133,6 +2191,7 @@ SFX f0 ar eremo/E0E1E2J0 ar
 SFX f0 ar eren/J0 ar
 SFX f0 ar erene/K0 ar	is:interrogative
 SFX f0 ar erense ar
+SFX f0 ar erensi ar
 SFX f0 ar eresi/N0 ar
 SFX f0 ar eresiu/O0 ar
 SFX f0 ar erion/J0 ar
@@ -2141,6 +2200,7 @@ SFX f0 ar erionse ar
 SFX f0 ar erisen/J0 ar
 SFX f0 ar erisene/K0 ar	is:interrogative
 SFX f0 ar erisense ar
+SFX f0 ar erisensi ar
 SFX f0 ar erisi/N0 ar
 SFX f0 ar erision/J0 ar
 SFX f0 ar erisione/K0 ar	is:interrogative
@@ -2170,9 +2230,10 @@ SFX f0 ar erésimoe/K0 ar
 SFX f0 ar erésitu/M0 ar	is:interrogative
 SFX f0 ar eréu/O0 ar
 SFX f0 ar ería/F0J0L0 ar
+SFX f0 ar erèe/F0J0L0 ar
 SFX f0 ar eríane/K0 ar	is:interrogative
 SFX f0 ar eríatu/M0 ar	is:interrogative
-SFX f0 ar eríe/F0J0 ar
+SFX f0 ar eríe/F0J0L0 ar
 SFX f0 ar eríene/K0 ar	is:interrogative
 SFX f0 ar erísitu/M0 ar	is:interrogative
 SFX f0 ar erò/J0 ar
@@ -2191,6 +2252,7 @@ SFX f0 ar ionme/G0G1 [^cijɉñ]ar
 SFX f0 ar isen/J0 ar
 SFX f0 ar isene/K0 ar	is:interrogative
 SFX f0 ar isense ar
+SFX f0 ar isensi ar
 SFX f0 ar isiede/N0 ar
 SFX f0 ar isiege/N0 ar
 SFX f0 ar ision/J0 ar
@@ -2203,6 +2265,7 @@ SFX f0 ar isonse ar
 SFX f0 ar iven/J0 ar
 SFX f0 ar ivene/K0 ar	is:interrogative
 SFX f0 ar ivense ar
+SFX f0 ar ivensi ar
 SFX f0 ar ivion/J0 ar
 SFX f0 ar ivione/K0 ar	is:interrogative
 SFX f0 ar ivionse ar
@@ -2527,7 +2590,7 @@ SFX g0 ào ago/J0T0 vào
 
 # vèrbi -ér inregolari ((re)(g)aver)
 # themeT1 + r/a0a1a2h0E0E1E2
-SFX h0 Y 194
+SFX h0 Y 195
 SFX h0 0 me/G0G1G2 aver
 SFX h0 0 ne/K0 o	is:interrogative
 SFX h0 aver ebi/F0F1F2L0 aver
@@ -2711,6 +2774,7 @@ SFX h0 ver résimoe/K0 aver
 SFX h0 ver réu/O0 aver
 SFX h0 ver rí/N0 aver
 SFX h0 ver ría/F0F1F2J0L0 aver
+SFX h0 ver rèe/F0F1F2J0L0 aver
 SFX h0 ver ríane/K0 aver	is:interrogative
 SFX h0 ver ríatu/M0 aver	is:interrogative
 SFX h0 ver ríelo/B0 aver
@@ -2725,7 +2789,7 @@ SFX h0 ver tu/M0 aver	is:interrogative
 
 # vèrbi -ér inregolari ((stra)sav?er)
 # themeT1 + r/a0a1a2j0E0E1E2
-SFX j0 Y 458
+SFX j0 Y 468
 SFX j0 0 imo/E0E1E2J0 aver
 SFX j0 0 me/G0G1G2 aver
 SFX j0 0 ne/K0 o	is:interrogative
@@ -2771,6 +2835,7 @@ SFX j0 er aremo/E0E1E2J0 aver
 SFX j0 er aren/J0 aver
 SFX j0 er arene/K0 aver	is:interrogative
 SFX j0 er arense aver
+SFX j0 er arensi aver
 SFX j0 er aresi/N0 aver
 SFX j0 er aresiu/O0 aver
 SFX j0 er arimo/J0 aver
@@ -2780,6 +2845,7 @@ SFX j0 er arionse aver
 SFX j0 er arisen/J0 aver
 SFX j0 er arisene/K0 aver	is:interrogative
 SFX j0 er arisense aver
+SFX j0 er arisensi aver
 SFX j0 er arisi/N0 aver
 SFX j0 er arision/J0 aver
 SFX j0 er arisione/K0 aver	is:interrogative
@@ -2812,9 +2878,10 @@ SFX j0 er arésitu/M0 aver	is:interrogative
 SFX j0 er aréu/O0 aver
 SFX j0 er arí/N0 aver
 SFX j0 er aría/F0F1F2J0L0 aver
+SFX j0 er arèe/F0F1F2J0L0 aver
 SFX j0 er aríane/K0 aver	is:interrogative
 SFX j0 er aríatu/M0 aver	is:interrogative
-SFX j0 er aríe/F0F1F2J0 aver
+SFX j0 er aríe/F0F1F2J0L0 aver
 SFX j0 er aríelo/B0 aver
 SFX j0 er aríene/K0 aver	is:interrogative
 SFX j0 er aríeƚo/B0 aver
@@ -2833,6 +2900,7 @@ SFX j0 er ionme/G0G1G2 aver
 SFX j0 er isen/J0 aver
 SFX j0 er isene/K0 aver	is:interrogative
 SFX j0 er isense aver
+SFX j0 er isensi aver
 SFX j0 er isiede/N0 aver
 SFX j0 er isiege/N0 aver
 SFX j0 er ision/J0 aver
@@ -2845,6 +2913,7 @@ SFX j0 er isonse aver
 SFX j0 er iven/J0 aver
 SFX j0 er ivene/K0 aver	is:interrogative
 SFX j0 er ivense aver
+SFX j0 er ivensi aver
 SFX j0 er ivion/J0 aver
 SFX j0 er ivione/K0 aver	is:interrogative
 SFX j0 er ivionse aver
@@ -2997,6 +3066,7 @@ SFX j0 er aremo/E0E1E2J0 aer
 SFX j0 er aren/J0 aer
 SFX j0 er arene/K0 aer	is:interrogative
 SFX j0 er arense aer
+SFX j0 er arensi aer
 SFX j0 er aresi/N0 aer
 SFX j0 er aresiu/O0 aer
 SFX j0 er arimo/J0 aer
@@ -3006,6 +3076,7 @@ SFX j0 er arionse aer
 SFX j0 er arisen/J0 aer
 SFX j0 er arisene/K0 aer	is:interrogative
 SFX j0 er arisense aer
+SFX j0 er arisensi aer
 SFX j0 er arisi/N0 aer
 SFX j0 er arision/J0 aer
 SFX j0 er arisione/K0 aer	is:interrogative
@@ -3038,9 +3109,10 @@ SFX j0 er arésitu/M0 aer	is:interrogative
 SFX j0 er aréu/O0 aer
 SFX j0 er arí/N0 aer
 SFX j0 er aría/F0F1F2J0L0 aer
+SFX j0 er arèe/F0F1F2J0L0 aer
 SFX j0 er aríane/K0 aer	is:interrogative
 SFX j0 er aríatu/M0 aer	is:interrogative
-SFX j0 er aríe/F0F1F2J0 aer
+SFX j0 er aríe/F0F1F2J0L0 aer
 SFX j0 er aríelo/B0 aer
 SFX j0 er aríene/K0 aer	is:interrogative
 SFX j0 er aríeƚo/B0 aer
@@ -3081,6 +3153,7 @@ SFX j0 er ionme/G0G1G2 aer
 SFX j0 er isen/J0 aer
 SFX j0 er isene/K0 aer	is:interrogative
 SFX j0 er isense aer
+SFX j0 er isensi aer
 SFX j0 er isiede/N0 aer
 SFX j0 er isiege/N0 aer
 SFX j0 er ision/J0 aer
@@ -3093,6 +3166,7 @@ SFX j0 er isonse aer
 SFX j0 er iven/J0 aer
 SFX j0 er ivene/K0 aer	is:interrogative
 SFX j0 er ivense aer
+SFX j0 er ivensi aer
 SFX j0 er ivion/J0 aer
 SFX j0 er ivione/K0 aer	is:interrogative
 SFX j0 er ivionse aer
@@ -3188,7 +3262,7 @@ SFX j0 r ƚo/B0 aer
 # vèrbi -ér inregolari ((des|re)(c|ti?)oler, (mal|re)voler)
 # themeT1 + r/a0a1a2k0k1k2E0E1E2
 # themeT8 + o/a0a1a2k0k1k2I0J0
-SFX k0 Y 59
+SFX k0 Y 62
 SFX k0 er éndome/G0 er
 SFX k0 er éndomene/G0 er
 SFX k0 er éntome/G0 er
@@ -3197,6 +3271,7 @@ SFX k0 ler rave/F0 oler	ts:conditional_present
 SFX k0 ler remo/E0E1E2J0 oler
 SFX k0 ler ren/J0 oler
 SFX k0 ler rense oler
+SFX k0 ler rensi oler
 SFX k0 ler resi/N0 oler
 SFX k0 ler resiu/O0 oler
 SFX k0 ler rimo/E0E1E2J0 oler
@@ -3205,6 +3280,7 @@ SFX k0 ler rione/K0 oler
 SFX k0 ler rionse oler
 SFX k0 ler risen/J0 oler
 SFX k0 ler risense oler
+SFX k0 ler risensi oler
 SFX k0 ler risi/N0 oler
 SFX k0 ler rision/J0 oler
 SFX k0 ler risione/K0 oler	is:interrogative
@@ -3232,9 +3308,10 @@ SFX k0 ler résitu/M0 oler	is:interrogative
 SFX k0 ler réu/O0 oler
 SFX k0 ler rí/N0 oler
 SFX k0 ler ría/F0J0L0 oler
+SFX k0 ler rèe/F0J0L0 oler
 SFX k0 ler ríane/K0 oler	is:interrogative
 SFX k0 ler ríatu/M0 oler	is:interrogative
-SFX k0 ler ríe/F0J0 oler
+SFX k0 ler ríe/F0J0L0 oler
 SFX k0 ler ríene/K0 oler	is:interrogative
 SFX k0 ler rísitu/M0 oler	is:interrogative
 SFX k0 ler ríu/O0 oler
@@ -3331,7 +3408,7 @@ SFX l0 ñer ntu/M0 èñer	is:interrogative
 # vèrbi '-er inregolari (déver)
 # themeT1 + r/m0E0E1E2
 # themeT4 + rò/m0J0
-SFX m0 Y 187
+SFX m0 Y 192
 SFX m0 0 e [ea]r
 SFX m0 0 me/G0G1G2 [ea]r
 SFX m0 0 mene/G0G1G2 ar
@@ -3354,6 +3431,7 @@ SFX m0 erò ionme/G0G1G2 erò
 SFX m0 erò isen/J0 erò
 SFX m0 erò isene/K0 erò	is:interrogative
 SFX m0 erò isense erò
+SFX m0 erò isensi erò
 SFX m0 erò isiede/N0 erò
 SFX m0 erò isiege/N0 erò
 SFX m0 erò ision/J0 erò
@@ -3366,6 +3444,7 @@ SFX m0 erò isonse erò
 SFX m0 erò iven/J0 erò
 SFX m0 erò ivene/K0 erò	is:interrogative
 SFX m0 erò ivense erò
+SFX m0 erò ivensi erò
 SFX m0 erò ivion/J0 erò
 SFX m0 erò ivione/K0 erò	is:interrogative
 SFX m0 erò ivionse erò
@@ -3473,6 +3552,7 @@ SFX m0 ò emo/E0E1E2J0 ò
 SFX m0 ò en/J0 ò
 SFX m0 ò ene/K0 ò	ts:indicative_future is:interrogative
 SFX m0 ò ense ò
+SFX m0 ò ensi ò
 SFX m0 ò esi/N0 ò	ts:conditional_present
 SFX m0 ò esiu/O0 ò	ts:conditional_present is:interrogative
 SFX m0 ò imo/E0E1E2J0 ò
@@ -3482,6 +3562,7 @@ SFX m0 ò ionme/G0G1G2 ò
 SFX m0 ò isen/J0 ò
 SFX m0 ò isene/K0 ò	is:interrogative
 SFX m0 ò isense ò
+SFX m0 ò isensi ò
 SFX m0 ò ision/J0 ò
 SFX m0 ò isione/K0 ò	is:interrogative
 SFX m0 ò isionse ò
@@ -3510,6 +3591,7 @@ SFX m0 ò ésitu/M0 ò	is:interrogative
 SFX m0 ò éu/O0 ò
 SFX m0 ò í/N0 ò
 SFX m0 ò ía/F0F1F2J0L0 ò
+SFX m0 ò èe/F0F1F2J0L0 ò
 SFX m0 ò íane/K0 ò	is:interrogative
 SFX m0 ò íatu/M0 ò	is:interrogative
 SFX m0 ò íe/F0F1F2J0 ò
@@ -3523,7 +3605,7 @@ SFX m0 ò ónmene/G0G1G2 ò
 # vèrbi '-er inregolari ((bene|d[ei]x|ind|inter|kontra|ma[lƚ]e|pre|re)díxer)
 # themeT1 + er/c0c1c2n0n1n2E0E1E2
 # themeT4 + rò/c0c1c2n0n1n2J0
-SFX n0 Y 61
+SFX n0 Y 64
 SFX n0 erò éndome/G0 xerò
 SFX n0 erò éndomene/G0 xerò
 SFX n0 erò éntome/G0 xerò
@@ -3543,6 +3625,7 @@ SFX n0 xerò re xerò
 SFX n0 xerò remo/E0E1E2J0 xerò
 SFX n0 xerò ren/J0 xerò
 SFX n0 xerò rense xerò
+SFX n0 xerò rensi xerò
 SFX n0 xerò resi/N0 xerò
 SFX n0 xerò resiu/O0 xerò
 SFX n0 xerò rimo/E0E1E2J0 xerò
@@ -3551,6 +3634,7 @@ SFX n0 xerò rione/K0 xerò
 SFX n0 xerò rionse xerò
 SFX n0 xerò risen/J0 xerò
 SFX n0 xerò risense xerò
+SFX n0 xerò risensi xerò
 SFX n0 xerò risi/N0 xerò
 SFX n0 xerò rision/J0 xerò
 SFX n0 xerò risione/K0 xerò	is:interrogative
@@ -3578,9 +3662,10 @@ SFX n0 xerò résitu/M0 xerò	is:interrogative
 SFX n0 xerò réu/O0 xerò
 SFX n0 xerò rí/N0 xerò
 SFX n0 xerò ría/F0J0L0 xerò
+SFX n0 xerò rèe/F0J0L0 xerò
 SFX n0 xerò ríane/K0 xerò	is:interrogative
 SFX n0 xerò ríatu/M0 xerò	is:interrogative
-SFX n0 xerò ríe/F0J0 xerò
+SFX n0 xerò ríe/F0J0L0 xerò
 SFX n0 xerò ríene/K0 xerò	is:interrogative
 SFX n0 xerò rísitu/M0 xerò	is:interrogative
 SFX n0 xerò rò/J0 xerò
@@ -3640,7 +3725,7 @@ SFX n2 xerò rónmeƚo/G2 xerò
 # themeT1 + er/o0E0E1E2
 # themeT4 + rò/o0J0
 # themeT8 + o/o0J0
-SFX o0 Y 308
+SFX o0 Y 316
 SFX o0 ò à-ƚo/B0 ò
 SFX o0 ò à-lo/B0 ò
 SFX o0 ò à/F0J0L0 ò
@@ -3667,6 +3752,7 @@ SFX o0 ò ésitu/M0 ò	is:interrogative
 SFX o0 ò éu/O0 ò
 SFX o0 ò í/N0 ò
 SFX o0 ò ía/F0J0L0 ò
+SFX o0 ò èe/F0J0L0 ò
 SFX o0 ò íane/K0 ò	is:interrogative
 SFX o0 ò íatu/M0 ò	is:interrogative
 SFX o0 ò íeƚo/B0 ò
@@ -3693,6 +3779,7 @@ SFX o0 ò emo/E0E1E2J0 ò
 SFX o0 ò en/J0 ò
 SFX o0 ò ene/K0 ò	ts:indicative_future is:interrogative
 SFX o0 ò ense ò
+SFX o0 ò ensi ò
 SFX o0 ò esi/N0 ò	ts:conditional_present
 SFX o0 ò esiu/O0 ò	ts:conditional_present is:interrogative
 SFX o0 ò ié/N0 ò	ts:conditional_present
@@ -3707,6 +3794,7 @@ SFX o0 ò ionme/G0G1 ò
 SFX o0 ò isen/J0 ò
 SFX o0 ò isene/K0 ò	is:interrogative
 SFX o0 ò isense ò
+SFX o0 ò isensi ò
 SFX o0 ò isié/N0 ò	ts:conditional_present
 SFX o0 ò isiéu/O0 ò	ts:conditional_present is:interrogative
 SFX o0 ò ision/J0 ò
@@ -3841,6 +3929,7 @@ SFX o0 erò ionme/G0G1 [^cijɉñ]erò
 SFX o0 erò isen/J0 erò
 SFX o0 erò isene/K0 erò	is:interrogative
 SFX o0 erò isense erò
+SFX o0 erò isensi erò
 SFX o0 erò isié/N0 erò
 SFX o0 erò isiede/N0 erò
 SFX o0 erò isiege/N0 erò
@@ -3853,6 +3942,7 @@ SFX o0 erò isonse erò
 SFX o0 erò iven/J0 erò
 SFX o0 erò ivene/K0 erò	is:interrogative
 SFX o0 erò ivense erò
+SFX o0 erò ivensi erò
 SFX o0 erò ivié/N0 erò
 SFX o0 erò iviéu/O0 erò
 SFX o0 erò ivion/J0 erò
@@ -3878,10 +3968,11 @@ SFX o0 erò résitu/M0 erò	is:interrogative
 SFX o0 erò réu/O0 erò
 SFX o0 erò rí/N0 erò
 SFX o0 erò ría/F0F1F2J0L0 erò
+SFX o0 erò rèe/F0F1F2J0L0 erò
 SFX o0 erò ríane/K0 erò	is:interrogative
 SFX o0 erò ríatu/M0 erò	is:interrogative
 SFX o0 erò ríeƚo/B0 erò
-SFX o0 erò ríe/F0F1F2J0 erò
+SFX o0 erò ríe/F0F1F2J0L0 erò
 SFX o0 erò ríelo/B0 erò
 SFX o0 erò ríene/K0 erò	is:interrogative
 SFX o0 erò rísitu/M0 erò	is:interrogative
@@ -3895,6 +3986,7 @@ SFX o0 erò re erò
 SFX o0 erò remo/E0E1E2J0 erò
 SFX o0 erò ren/J0 erò
 SFX o0 erò rense erò
+SFX o0 erò rensi erò
 SFX o0 erò resi/N0 erò
 SFX o0 erò resiu/O0 erò
 SFX o0 erò rié/N0 erò
@@ -3905,6 +3997,7 @@ SFX o0 erò rione/K0 erò
 SFX o0 erò rionse erò
 SFX o0 erò risen/J0 erò
 SFX o0 erò risense erò
+SFX o0 erò risensi erò
 SFX o0 erò risié/N0 erò
 SFX o0 erò risiéu/O0 erò
 SFX o0 erò risi/N0 erò
@@ -3952,7 +4045,7 @@ SFX o0 rò vo/J0 erò
 
 # vèrbi '-er inregolari ((r[ei])èser)
 # themeT1 + er/p0
-SFX p0 Y 347
+SFX p0 Y 357
 SFX p0 0 e èser
 SFX p0 0 ge èser
 SFX p0 0 me/G0G1G2 èser
@@ -3984,6 +4077,7 @@ SFX p0 èser eren/J0 [ae]r
 SFX p0 èser eren/J0 èser
 SFX p0 èser erene/K0 [ae]r	is:interrogative
 SFX p0 èser erense [ae]r
+SFX p0 èser erensi [ae]r
 SFX p0 èser erion/E0E1E2J0 èser
 SFX p0 èser erione/K0 èser
 SFX p0 èser erionme/G0G1G2 èser
@@ -3991,6 +4085,7 @@ SFX p0 èser eriven/J0 [aei]r
 SFX p0 èser eriven/J0 èser
 SFX p0 èser erivene/K0 [ae]r	is:interrogative
 SFX p0 èser erivense [ae]r
+SFX p0 èser erivensi [ae]r
 SFX p0 èser erivion/J0 èser
 SFX p0 èser erivione/K0 èser	is:interrogative
 SFX p0 èser erivionse èser
@@ -4023,6 +4118,7 @@ SFX p0 èser furese/I0T0 èser
 SFX p0 èser furesen/J0 èser
 SFX p0 èser furesene/K0 èser	is:interrogative
 SFX p0 èser furesense èser
+SFX p0 èser furesensi èser
 SFX p0 èser furesiede/N0 èser
 SFX p0 èser furesiege/N0 èser
 SFX p0 èser furesion/J0 èser
@@ -4031,6 +4127,7 @@ SFX p0 èser furesionse èser
 SFX p0 èser furesisen/J0 èser
 SFX p0 èser furesisene/K0 èser	is:interrogative
 SFX p0 èser furesisense èser
+SFX p0 èser furesisensi èser
 SFX p0 èser furesisiede/N0 èser
 SFX p0 èser furesisiege/N0 èser
 SFX p0 èser furesision/J0 èser
@@ -4051,6 +4148,7 @@ SFX p0 èser fuse/I0P1P2T0 èser
 SFX p0 èser fusen/J0 èser
 SFX p0 èser fusene/K0 èser	is:interrogative
 SFX p0 èser fusense èser
+SFX p0 èser fusensi èser
 SFX p0 èser fusiede/N0 èser
 SFX p0 èser fusiege/N0 èser
 SFX p0 èser fusion/J0 èser
@@ -4059,6 +4157,7 @@ SFX p0 èser fusionse èser
 SFX p0 èser fusisen/J0 èser
 SFX p0 èser fusisene/K0 èser	is:interrogative
 SFX p0 èser fusisense èser
+SFX p0 èser fusisensi èser
 SFX p0 èser fusisiede/N0 èser
 SFX p0 èser fusisiege/N0 èser
 SFX p0 èser fusision/J0 èser
@@ -4117,9 +4216,10 @@ SFX p0 èser sarémoe/K0 èser
 SFX p0 èser saréu/O0 èser
 SFX p0 èser sarí/N0 èser
 SFX p0 èser saría/F0F1F2J0L0 èser
+SFX p0 èser sarèe/F0F1F2J0L0 èser
 SFX p0 èser saríane/K0 èser	is:interrogative
 SFX p0 èser saríatu/M0 èser	is:interrogative
-SFX p0 èser saríe/F0F1F2J0 èser
+SFX p0 èser saríe/F0F1F2J0L0 èser
 SFX p0 èser saríelo/B0 èser
 SFX p0 èser saríene/K0 èser	is:interrogative
 SFX p0 èser saríeƚo/B0 èser
@@ -4159,6 +4259,7 @@ SFX p0 èser seremo/E0E1E2J0 èser
 SFX p0 èser seren/J0 èser
 SFX p0 èser seréne/K0 èser	is:interrogative
 SFX p0 èser serense èser
+SFX p0 èser serensi èser
 SFX p0 èser seresi/N0 èser
 SFX p0 èser seresiu/O0 èser
 SFX p0 èser serimo/E0E1E2J0 èser
@@ -4168,6 +4269,7 @@ SFX p0 èser serionse èser
 SFX p0 èser serisen/J0 èser
 SFX p0 èser serisene/K0 èser	is:interrogative
 SFX p0 èser serisense èser
+SFX p0 èser serisensi èser
 SFX p0 èser serisi/N0 èser
 SFX p0 èser serision/J0 èser
 SFX p0 èser serisione/K0 èser	is:interrogative
@@ -4198,9 +4300,10 @@ SFX p0 èser serésitu/M0 èser	is:interrogative
 SFX p0 èser seréu/O0 èser
 SFX p0 èser serí/N0 èser
 SFX p0 èser sería/F0F1F2J0L0 èser
+SFX p0 èser serèe/F0F1F2J0L0 èser
 SFX p0 èser seríane/K0 èser	is:interrogative
 SFX p0 èser seríatu/M0 èser	is:interrogative
-SFX p0 èser seríe/F0F1F2J0 èser
+SFX p0 èser seríe/F0F1F2J0L0 èser
 SFX p0 èser seríelo/B0 èser
 SFX p0 èser seríene/K0 èser	is:interrogative
 SFX p0 èser seríeƚo/B0 èser
@@ -4959,7 +5062,7 @@ SFX R0 o ista/C0 [^i]o	po:noun
 SFX R0 o sta/C0 io	po:noun
 
 # nominali deverbali (-mento)
-SFX r0 Y 35
+SFX r0 Y 36
 SFX r0 o amento/T0I0mf o	po:noun
 SFX r0 r mento/T0I0mf [^e]r	po:noun
 SFX r0 r mento/T0I0mf [^dđjɉñstx]er	po:noun
@@ -4991,6 +5094,7 @@ SFX r0 òder odimento/T0I0mf òder	po:noun
 SFX r0 òver ovimento/T0I0mf òver	po:noun
 SFX r0 èxer eximento/T0I0mf èxer	po:noun
 SFX r0 èñer eñimento/T0I0mf èñer	po:noun
+SFX r0 énder endimento/T0I0mf énder	po:noun
 SFX r0 ónder ondimento/T0I0mf ónder	po:noun
 SFX r0 ónđer onđimento/T0I0mf ónđer	po:noun
 SFX r0 ónxer onximento/T0I0mf ónxer	po:noun
