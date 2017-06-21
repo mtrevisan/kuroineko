@@ -56,6 +56,6 @@ define({
 			+ '.de3x4in.de3x4ín',
 		8: 'sirkums2ŧirkums2'
 			+ '.de3x4in.de3x4ín',
-		9: '.de3x4ide.de3x4íde.dess2kon'
+		9: '.de3x4ide.de3x4íde.dexs2kon'
 	}
 });

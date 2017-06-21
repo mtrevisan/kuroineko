@@ -45,7 +45,7 @@ define({
 		7: 'kontro1ekstra1èkstra1sirkum3ŧirkum3.ipe2r1.polip2.ortop2.dis3p2.des3p2',
 		8: 'sirkums2ŧirkums2'
 			+ '.de3x4in.de3x4ín',
-		9: '.de3x4ide.de3x4íde.dess2kon',
+		9: '.de3x4ide.de3x4íde.dexs2kon',
 		10: '.su2b3entr.su2b3éntr.su2b3intr.su2b3íntr'
 	}
 });
