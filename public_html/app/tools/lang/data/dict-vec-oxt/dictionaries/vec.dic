@@ -6943,6 +6943,9 @@ dexgràvioe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:dexgravia
 ingraviar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 ingravio/a0a1a2E0E1E2J0	po:verb ts:indicative_present st:ingraviar
 ingràvioe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:ingraviar
+xgraviar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
+xgravio/a0a1a2E0E1E2J0	po:verb ts:indicative_present st:xgraviar
+xgràvioe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:xgraviar
 agredir/a0a1a2c0c1c2E0E1E2	po:verb ts:infinitive_simple
 traxgredir/a0a1a2c0c1c2E0E1E2	po:verb ts:infinitive_simple
 gredar/a0a1E0E1+0-0	po:verb ts:infinitive_simple
@@ -7079,6 +7082,12 @@ xgriñaŧo/a0a1E0E1I0J0	po:verb ts:indicative_present st:xgriñaŧar
 xgriñàŧoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:xgriñaŧar
 ingriñolir/a0a1c0c1E0E1	po:verb ts:infinitive_simple
 ingriñoƚir/a0a2c0c2E0E2	po:verb ts:infinitive_simple
+xgriñolar/a0a1E0E1	po:verb ts:infinitive_simple
+xgríñolo/a0a1E0E1I0J0	po:verb ts:indicative_present st:xgriñolar
+xgríñoloe/a0a1K0	po:verb ts:indicative_present is:interrogative st:xgriñolar
+xgriñoƚar/a0a2E0E2	po:verb ts:infinitive_simple
+xgríñoƚo/a0a2E0E2J0	po:verb ts:indicative_present st:xgriñoƚar
+xgríñoƚoe/a0a2K0	po:verb ts:indicative_present is:interrogative st:xgriñoƚar
 xgriñolir/a0a1c0c1E0E1	po:verb ts:infinitive_simple
 xgriñoƚir/a0a2c0c2E0E2	po:verb ts:infinitive_simple
 gritar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
@@ -7220,6 +7229,12 @@ xguànsoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:xguansar
 xguanŧar/a0a1E0E1	po:verb ts:infinitive_simple
 xguanŧo/a0a1E0E1I0J0	po:verb ts:indicative_present st:xguanŧar
 xguànŧoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:xguanŧar
+xguajatar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
+xguajato/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:xguajatar
+xguajàtoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:xguajatar
+xguaɉatar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
+xguaɉato/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:xguaɉatar
+xguaɉàtoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:xguaɉatar
 gujar/a0a1a2E0E1E2-0	po:verb ts:infinitive_simple
 gujo/a0a1a2E0E1E2J0-0	po:verb ts:indicative_present st:gujar
 gújoe/a0a1a2K0-0	po:verb ts:indicative_present is:interrogative st:gujar
@@ -34944,9 +34959,7 @@ xgatoƚame/T0	po:noun
 xgàlmar/B0	po:noun
 xgèr/B0	po:noun
 xgirato/T0I0	po:noun
-xgrinfa/D0	po:noun
-xgriñeto/T0I0	po:noun
-xgruño/T0I0&0	po:noun
+xgrinfa/D0&0	po:noun
 xgualdraka/D0	po:noun
 xguansal/D0T3U0	po:noun
 xguanŧa/D0T2	po:noun
@@ -38537,7 +38550,8 @@ xbuxaŧièxa/D0	po:noun
 xdòrmia/D0	po:noun
 xgerlon/C0U0	po:noun
 xgèrla/D0	po:noun
-xgrendenon/C0U0	po:adjective po:noun
+xgrendenon/C0U0	po:adjective
+xgrendenon/C0U0	po:noun
 xguiŧo/T0T2I0	po:noun
 xgurbia/D0	po:noun
 xinxala/D0T2	po:noun
@@ -40708,7 +40722,7 @@ xbrufon/C0U0	po:adjective
 xeniko/T0I0	po:noun
 xganberlon/C0U0	po:noun
 xganbirla/D0	po:noun
-xgriño/T0I0(0)0	po:noun
+xgriño/T0I0&0(0)0	po:noun
 xgriñona	po:noun
 xgualdrina/D0	po:noun
 xguarseto/T0I0	po:noun
@@ -42547,8 +42561,10 @@ graveŧa/D0T2	po:noun
 gravio/B0@0	po:noun
 gravion/C0U0	po:adjective
 gravità	po:noun
-gređa/D0T2	po:adjective po:noun
-gređo/T0T2	po:adjective po:noun
+gređa/D0T2	po:adjective
+gređa/D0T2	po:noun
+gređo/T0T2	po:adjective
+gređo/T0T2*0	po:noun
 grenal/D0T3U0	po:noun
 greveto/B0I0	po:adjective
 grevòto/B0I0	po:adjective
@@ -42572,7 +42588,7 @@ gropido/B0	po:adjective
 gropièr/B0V0	po:noun
 gropío/B0	po:adjective
 gròlia/D0T2	po:noun st:glòria
-gruño/T0I0&0	po:noun
+gruño/T0I0&0*0	po:noun
 guadaño/T0I0gv&0)0	po:noun
 gualiva/D0	po:adjective po:noun
 gualiveŧa/D0T2	po:noun
@@ -46669,14 +46685,27 @@ xgrafapolenta/D0	po:noun
 xgrafapoƚenta/D0	po:noun
 xgrafiñador/C0V0	po:noun
 xgrafiñon/D0U0	po:noun
-xgranfiñon/D0U0	po:noun
+xgranfiñana/D0	po:noun
+xgranfiñon/C0U0	po:adjective
+xgraŧiateŧa/D0	po:noun
+xgrasiatesa/D0	po:noun
+xgréndena/D0	po:noun
+xgrendenadon/C0U0	po:adjective
+xgriñapàpole/D0T2	po:adjective
+xgrinfon/C0U0	po:adjective
+xgruñadin/C0	po:adjective
+xguajatin/C0	po:adjective
+xguaɉatin/C0	po:adjective
+xguajatèl/T0T2U0	po:adjective
+xguaɉatèl/T0T2U0	po:adjective
 
 
 
-/ 604
+/ 605
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
 / v. batidor 696-1-28 > ponidor
 / ventilòkuio 729-3-48 > ventrilòkuo
-/xgodan/xgòdan
+/xgodan/xgòdan|leño đal de Ingiltèra|leño dal de Ingiltèra|leño xal de Ingiltèra|ƚeño xaƚo de Ingiltèra
 / once added a new thesaurus, re-focus on the edit box
+/ mantain text field on forced insertion
