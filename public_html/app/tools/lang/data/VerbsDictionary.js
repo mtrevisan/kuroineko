@@ -5353,6 +5353,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "simil",			"de",			1,	1,	"a",	"",				"",
 "simiot",		"",			1,	4,	"g",	"1775",			"Imitar.",
 "simol",			"",			1,	1,	"a",	"1854",			"Spelukar.",
+"simon",			"",			1,	3,	"a",	"1829",			"Far aŧioni da mona.",
 "simul",			"",			1,	1,	"a",	"1867",			"",
 "sinŧer",		"",			1,	4,	"g",	"1775",			"",
 "sindak",		"",			1,	1,	"a",	"1499",			"",
