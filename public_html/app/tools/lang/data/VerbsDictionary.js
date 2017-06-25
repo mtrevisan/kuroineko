@@ -1922,6 +1922,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "get",			"in",			1,	1,	"a",	"1854",			"Incetar.",
 "get",			"re",			1,	1,	"a",	"1775",			"",
 "gianŧ",			"x",			1,	2,	"g",	"1854",			"Kospàrxer, anafiar.",
+"gilŧ",			"x",			1,	1,	"a",	"1829",			"Xguiŧar.",
 "gind",			"",			1,	1,	"a",	"1867",			"Tirar in alto on albaro o na vela.",
 "ginŧ",			"x",			1,	1,	"a",	"1854",			"Spruŧar.",
 "giñaŧ",			"",			1,	3,	"g",	"1829",			".",
