@@ -10375,6 +10375,9 @@ lànoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:lanar
 xlanbar/a0a1a2E0E1E2r0	po:verb ts:infinitive_simple
 xlanbo/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:xlanbar
 xlànboe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:xlanbar
+xlanbanar/a0a1a2E0E1E2r0	po:verb ts:infinitive_simple
+xlànbano/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:xlanbanar
+xlànbanoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:xlanbanar
 lanbikar/a0a1E0E1r0*0	po:verb ts:infinitive_simple
 lanbiko/a0a1E0E1I0J0*0	po:verb ts:indicative_present st:lanbikar
 lanbíkoe/a0a1K0*0	po:verb ts:indicative_present is:interrogative st:lanbikar
@@ -18345,7 +18348,7 @@ sinŧèroe/a0a1K0	po:verb ts:indicative_present is:interrogative st:sinŧerar
 sindakar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 síndako/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:sindakar
 síndakoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:sindakar
-sindikar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
+sindikar/a0a1a2E0E1E2s0s1	po:verb ts:infinitive_simple
 síndiko/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:sindikar
 síndikoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:sindikar
 sinkopar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
@@ -18394,6 +18397,15 @@ siòparoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:sioparar
 siringar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 siringo/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:siringar
 siríngoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:siringar
+sirokar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
+siròko/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:sirokar
+siròkoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:sirokar
+sirokalar/a0a1E0E1	po:verb ts:infinitive_simple
+siròkalo/a0a1E0E1I0J0	po:verb ts:indicative_present st:sirokalar
+siròkaloe/a0a1K0	po:verb ts:indicative_present is:interrogative st:sirokalar
+sirokaƚar/a0a2E0E2	po:verb ts:infinitive_simple
+siròkaƚo/a0a2E0E2J0	po:verb ts:indicative_present st:sirokaƚar
+siròkaƚoe/a0a2K0	po:verb ts:indicative_present is:interrogative st:sirokaƚar
 siropar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 siropo/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:siropar
 sirópoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:siropar
@@ -18421,7 +18433,7 @@ insisto/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:insíster
 insístoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:insíster
 insístar/b0b1b2E0E1E2	po:verb ts:infinitive_simple
 insistarò/b0b1b2J0	po:verb ts:indicative_future st:insístar
-sistemar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
+sistemar/a0a1a2E0E1E2s0s1	po:verb ts:infinitive_simple
 sistemo/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:sistemar
 sistémoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:sistemar
 sitonar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
@@ -25227,7 +25239,7 @@ meƚiardo/T0%0	po:numeral_cardenal
 miliardo/T0%0	po:numeral_cardenal
 miƚiardo/T0%0	po:numeral_cardenal
 / numerali - ordenali
-primo/B0W0	po:numeral_ordenal
+primo/B0W0I0	po:numeral_ordenal
 primo	po:adverb
 primèr/B0W0	po:numeral_ordenal
 primièr/B0W0	po:numeral_ordenal
@@ -26310,6 +26322,8 @@ Maistro/Z0	po:noun
 Ostro/Z0	po:noun
 Ponente/I0Z0	po:noun
 Presin/T0	po:noun
+Siròkal/Z0	po:noun
+Siròkaƚe/Z0	po:noun
 Siròko/I0Z0	po:noun
 / fèste
 Batimarso/Z0	po:noun
@@ -27407,7 +27421,6 @@ insieme	po:noun al:insième
 insième	po:adverb st:insieme
 insième	po:noun st:insieme
 insina/I0W0	po:adverb
-insina/I0	po:preposition
 instantàneo/B0	po:adjective
 intaresante/T0	po:adjective
 intensivo/B0W0I0	po:adjective
@@ -29285,6 +29298,7 @@ simia/D0&0)0<0	po:noun
 similituden/D0U0	po:noun
 similmente/I0W2	po:adverb
 simiƚitudene/D0	po:noun
+sina/I0-0	po:preposition
 sinfonía/D0	po:noun
 singolar/D0W0	po:adjective po:noun
 singoƚar/D0W1	po:adjective po:noun
@@ -29298,7 +29312,8 @@ sintàtego/B0	po:adjective
 sinŧièr/B0	po:adjective
 siñor/T0mfv0&0	po:noun st:señor
 siñora/D0&0	po:noun st:señora
-sior/B0v0&0<0<1	po:adjective po:noun
+sior/B0	po:adjective
+sior/B0v0&0<0<1	po:noun
 siòl/T0U0(0	po:noun
 siòla/D0T2	po:noun
 siòƚo/T0(1	po:noun
@@ -30331,7 +30346,7 @@ bastimento/T0I0mf	po:noun
 bastin/C0	po:noun
 bastonadura/D0Y0	po:noun
 batador/C0V0	po:noun
-bataduro/T0I0Y0	po:noun
+batadur/T0Y0	po:noun
 bataiŧa/D0T2*0	po:noun
 batajòla/D0	po:noun
 bataɉòla/D0	po:noun
@@ -30404,7 +30419,7 @@ betolin/T0T2	po:noun
 betònega/D0	po:noun
 beŧa/D0&0	po:noun
 beŧo/T0I0&0	po:noun
-bevaduro/T0I0Y0	po:noun
+bevadur/T0Y0	po:noun
 bevandèra/D0	po:noun
 bevaño/B0	po:noun
 bevarin/C0	po:adjective po:noun
@@ -31514,7 +31529,7 @@ kaenona/D0	po:noun
 kagador/C0V0	po:noun
 kagadubio/T0	po:noun
 kagadura/D0Y0	po:noun
-kagaduro/T0I0Y0	po:noun
+kagadur/T0Y0	po:noun
 kagarèla/D0T2	po:noun
 kagasote	po:noun
 kagasoto	po:noun
@@ -32059,7 +32074,7 @@ kuxinadura/D0Y0	po:noun
 kuxinèr/B0V0	po:noun
 labarda/D0T4	po:noun
 ladro/T0T4v0W0&0	po:noun
-laka/D0T4&0	po:noun
+laka/D0T4&0*0	po:noun
 lakè/T4	po:noun
 lanbarinto/T0I0	po:noun
 lanèr/B0T4V0	po:noun
@@ -32079,7 +32094,7 @@ latoleta/D0	po:adjective po:noun
 latonèr/B0T4V0	po:noun
 latuga/D0T4	po:noun
 lavadura/D0T4Y0	po:noun
-lavaduro/T0I0Y0	po:noun
+lavadur/T0Y0	po:noun
 lavanda/D0T4	po:noun
 lavandèr/B0T4V0	po:noun
 lavareto/T0I0	po:noun
@@ -32210,7 +32225,7 @@ luxor/D0T4	po:noun
 ƚataroƚa/D0V0	po:noun
 ƚataroƚo/T0V0	po:noun
 ƚatoƚeta/D0	po:adjective po:noun
-ƚavaduro/T0Y0	po:noun
+ƚavadur/T0Y0	po:noun
 ƚavareto/T0	po:noun
 ƚavexo/T0	po:noun
 ƚaxareto/T0	po:noun
@@ -32793,10 +32808,10 @@ orbàxene/T0	po:noun
 orbolon	po:adverb
 orboƚon	po:adverb
 orbon/C0U0	po:adverb
-ordaduro/T0I0Y0	po:noun
+ordadur/T0Y0	po:noun
 ordeño/T0I0	po:noun
 ordidura/D0Y0	po:noun
-ordiduro/T0I0Y0	po:noun
+ordidur/T0Y0	po:noun
 ordòl/T0U0	po:noun
 orđòl/T0U0	po:noun
 orexa/C0	po:noun
@@ -33936,9 +33951,9 @@ skorladina/D0	po:noun
 skorsèr/B0V0	po:noun
 skortegador/C0V0	po:noun
 skortegadura/D0Y0	po:noun
-skortegaduro/T0I0Y0	po:noun
+skortegadur/T0Y0	po:noun
 skorŧèr/B0V0	po:noun
-skorusoxo/B0W0mf	po:adjective po:noun
+skorusoxo/B0W0I0mf	po:adjective po:noun
 skoruŧoxo/B0W0I0	po:adjective
 skotadéo	po:adverb
 skotadura/D0Y0	po:noun
@@ -35046,7 +35061,6 @@ xjosaròla/D0T2T4	po:noun
 xjosaura/D0T4&0	po:noun
 xjoŧarola/D0T4	po:noun
 xjoŧaròla/D0T4	po:noun
-xlaka/D0&0	po:noun
 xlandron/C0U0	po:adjective po:noun
 xlanŧo/T0T2I0	po:noun
 xlapon/C0U0	po:noun
@@ -35684,7 +35698,7 @@ sièol/T0T2u0	po:noun
 sièval/T0T2u0	po:noun
 simòŧa/D0T2	po:noun
 sion/D0U0	po:noun
-sir	po:noun
+sir/T0	po:noun
 sixil/T0T2	po:noun
 sixolòto/T0I0	po:noun
 sixoƚòto/T0	po:noun
@@ -36056,7 +36070,7 @@ belèño/B0	po:adjective
 beltè	po:noun
 beƚèño/B0	po:adjective
 benefator/C0mf	po:noun
-beneño/B0W0	po:adjective
+beneño/B0W0I0	po:adjective
 beniŧion/D0T2U0	po:noun
 beolko/B0I0	po:noun
 beroèr/B0V0	po:noun
@@ -36227,7 +36241,7 @@ fraxèl/T0T2U0	po:noun
 fraxèla/D0T2*0	po:noun
 fràola/D0T2	po:noun
 fregolon/D0T2U0	po:noun
-fremo/B0W0	po:adjective
+fremo/B0W0I0	po:adjective
 fresèr/B0V0	po:noun
 freŧèr/B0V0	po:noun
 fromaja/D0T2	po:noun
@@ -36374,10 +36388,10 @@ kàvera/D0	po:noun
 kivalò/T2	po:adverb
 kivelò/T2	po:adverb
 koladura/D0Y0*0	po:noun
-koladuro/T0I0Y0	po:noun
+koladur/T0Y0	po:noun
 kològo/T0I0	po:noun
 koƚadura/D0Y0*0	po:noun
-koƚaduro/T0Y0	po:noun
+koƚadur/T0Y0	po:noun
 koƚògo/T0	po:noun
 kondotièr/B0V0	po:noun
 konduxador/C0V0	po:noun
@@ -39672,7 +39686,7 @@ intardeganŧa/D0T2	po:noun
 intardiganŧa/D0T2	po:noun
 intopo/T0	po:noun
 intradèla/D0T2	po:noun
-intrego/B0W0	po:adjective
+intrego/B0W0I0	po:adjective
 jagà/T4	po:noun
 jalapa/D0T4	po:noun
 jaƚapa/D0T4	po:noun
@@ -40399,7 +40413,7 @@ sigaƚò	po:noun
 sikurtade/T0Y0	po:noun
 siƚèƚa/D0	po:noun
 simiton/C0U0	po:noun
-sinamai	po:adverb
+sinamài	po:adverb
 sinamente	po:adverb
 sinsin/T0§0	po:noun
 skabio/B0	po:noun
@@ -41896,7 +41910,7 @@ deskargabaril/D0T3	po:noun
 desko/T0	po:noun
 deskonsamanèstra/D0	po:noun
 deskonŧamanèstra/D0	po:noun
-deskorsivo/B0W0	po:noun
+deskorsivo/B0W0I0	po:noun
 deskortexía/D0	po:noun
 deskreteŧa/D0T2	po:noun
 desoravía	po:adverb
@@ -42404,7 +42418,7 @@ funto/T0I0	po:noun
 furatolièr/B0V0	po:noun
 furatoƚièr/B0V0	po:noun
 furbarieta/D0	po:noun
-furbesko/B0W0	po:adjective
+furbesko/B0W0I0	po:adjective
 furbikul/T0T2U0	po:noun
 furbiòco/T0	po:noun
 furegàtol/T0T2u0	po:noun
@@ -43096,7 +43110,7 @@ kantinbanko/T0	po:noun
 kanto/T0	po:noun
 kanŧonata/D0	po:noun
 kanŧoneta/D0	po:noun
-kañesko/B0W0	po:adjective
+kañesko/B0W0I0	po:adjective
 kañèa/D0	po:noun
 kañèra/D0	po:noun
 kaño/T0I0<0<1	po:adjective
@@ -43445,7 +43459,7 @@ kontenenŧa/D0T2	po:noun
 kontento/B0I0	po:adjective po:noun
 kontenton/C0U0	po:adjective
 kontestual/D0T3U0W0	po:adjective
-kontinuato/B0W0	po:adjective po:noun
+kontinuato/B0W0I0	po:adjective po:noun
 kontinuo/B0	po:adjective po:noun
 kontinuo	po:adverb
 konto/T0§0	po:noun
@@ -44639,7 +44653,7 @@ pañía/D0	po:noun
 pañòta/D0	po:noun
 papador/C0V0	po:noun
 papadura/D0Y0	po:noun
-papaduro/T0Y0	po:noun
+papadur/T0Y0	po:noun
 papagà	po:noun
 papalista/C0	po:adjective
 papalon/D0T2U0	po:adjective
@@ -45604,7 +45618,7 @@ ríxego/T0	po:noun
 ríxigo/T0	po:noun
 roara/D0	po:noun
 robegoŧo/T0T2	po:noun
-robegoxo/B0W0mf	po:adjective po:noun
+robegoxo/B0W0I0mf	po:adjective po:noun
 robina/D0	po:noun
 rodengòto/T0I0	po:noun
 rodèla/D0&0	po:noun
@@ -46034,7 +46048,7 @@ simitèra/D0	po:noun
 sinbanèƚo/T0	po:noun
 sinbòlego/B0	po:adjective
 sinbòƚego/B0	po:adjective
-sinistro/B0	po:adjective
+sinistro/B0W0	po:adjective
 sinsinata/D0	po:adjective
 sirkostansa/D0	po:noun
 siseronsin/C0	po:noun
@@ -46625,7 +46639,7 @@ xbregon/C0U0	po:noun
 xbregonŧin/T0T2	po:noun
 xbrenadòna/D0	po:adjective
 xbrègo/T0	po:noun
-xbrigativo/B0W0	po:adjective
+xbrigativo/B0W0I0	po:adjective
 xbrikeŧo/T0T2	po:noun
 xbrindàkol/T0T2u0	po:noun
 xbrindoleta/D0T2	po:noun
@@ -46777,17 +46791,44 @@ xustina/D0	po:noun
 xusto/B0I0	po:adjective po:noun
 xusto/I0	po:adverb
 xvol/T0T2u0	po:noun
+xgòdan/T0	po:noun
+simon/B0U0	po:adjective
+simunito/B0I0	po:adjective
+sinapixmo/T0	po:noun
+sinŧèr/B0	po:adjective
+sinsèr/B0	po:adjective
+síndexe	po:adverb
+sindikado/T0Y0	po:noun
+sínedo/T0	po:noun
+sinèdrio/T0	po:noun
+konbríkola/D0T2	po:noun
+sinèstra/D0	po:noun
+siniskalko/B0	po:noun
+sintila/D0T2	po:noun
+siokàxin/D0	po:noun
+siòko/T0I0v0&0	po:adjective
+siòka/D0&0	po:adjective
+siolteŧa/D0T2	po:noun
+siòlto/B0I0	po:adjective
+sirèna/D0	po:noun
+siringa/D0	po:noun
+levantèr/B0T4	po:adjective
+sixanpio/B0	po:adjective
+sixila/D0&0	po:noun
+sixiƚa/D0&0	po:noun
+tartaxin/D0	po:noun
+sixin/T0	po:noun
+xlakañoxo/B0W0I0	po:adjective
+xlanŧalovo/T0I0	po:noun
+xlansalovo/T0I0	po:noun
+xlansaƚovo/T0	po:noun
 
 
-/ 609
+
+/ 611
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
 / v. batidor 696-1-28 > ponidor
 / ventilòkuio 729-3-48 > ventrilòkuo
-/(sost.)|xgodan/xgòdan|leño đal de Ingiltèra|leño dal de Ingiltèra|leño xal de Ingiltèra|ƚeño xaƚo de Ingiltèra
-/(sost.)|xgura|rixòla/rixola
-/ dic: "Word cannot have [cijɉñ]iV: from" > exclude [cijɉñ]ior[aei]?
-/ the: once added a new thesaurus, re-focus on the edit box
-/ the: mantain text field on forced insertion
-/ the: find duplicates
+/kanariòl/kanariol|xio de kanèra
 / hyp: add rule | Add | Undo | Redo \n Syllabation: ? \n Syllabes: ?
