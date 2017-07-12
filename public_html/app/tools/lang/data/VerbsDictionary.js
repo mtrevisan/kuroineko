@@ -5531,6 +5531,7 @@ xmoŧegar
 "solf",			"in",			1,	1,	"a",	"1775",			"Adirar, alterar.",
 "solfar",		"",			1,	1,	"a",	"1980",			"Dar el solfato a le vide.",
 "solfar",		"in",			1,	1,	"a",	"1867",			"",
+"solfej",		"",			1,	4,	"a",	"1829",			"Solfiđar.",
 "solfiđ",		"",			1,	4,	"a",	"1867",			"Far el solfexo.",
 "solk",			"",			1,	1,	"a",	"1980",			"",
 "solid",			"in",			1,	1,	"g",	"1810",			"",
