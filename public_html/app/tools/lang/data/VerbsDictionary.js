@@ -3739,7 +3739,6 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "moŧ",			"",			1,	1,	"g",	"1867",			"",
 "moŧ",			"x",			1,	1,	"g",	"1810",			"Xmusar.",
 "moŧeg",			"x",			1,	1,	"g",	"1829",			"Xbiaxegar.",
-xmoŧegar
 "moxeg",			"",			1,	1,	"g",	"1998",			"Dito de ʼl fogo ke ʼl bruxa skonto soto la ŧenere.",
 "mòv",			"",			3,	1,	"g",	"1775",			"",
 "mòv",			"ko",			3,	1,	"g",	"1980",			"",
