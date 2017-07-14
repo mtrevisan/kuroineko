@@ -4732,6 +4732,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "povol",			"",			1,	1,	"g",	"",				"",
 "povol",			"re",			1,	1,	"g",	"",				"",
 "povol",			"s",			1,	1,	"g",	"1855",			"Divulgar in segreto.",
+"pras",			"so",			1,	2,	"g",	"1829",			"Sopresar.",
 "prateg",		"",			1,	2,	"g",	"",				"",
 "prateg",		"mal",		1,	2,	"g",	"1829",			"",
 "preŧix",		"",			1,	4,	"a",	"1560",			"",
