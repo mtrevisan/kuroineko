@@ -5581,6 +5581,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sòrx",			"",			3,	1,	"g",	"",				"",
 "sòrx",			"re",			3,	1,	"g",	"",				"",
 "sostantiv",	"",			1,	7,	"a",	"1980",			"",
+"sotili",		"",			1,	3,	"a",	"1829",			"Asotiliar.",
 "sotiliđ",		"",			1,	5,	"a",	"1867",			"Asotiliar.",
 "soŧi",			"",			1,	1,	"g",	"1463",			"Asocar.",
 "soŧol",			"in",			1,	1,	"a",	"1775",			"",
@@ -5923,6 +5924,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sutil",			"",			1,	3,	"a",	"1854",			"Asotiliar.",
 "sutil",			"",			4,	5,	"a",	"1854",			"Asotiliar.",
 "sutil",			"in",			4,	5,	"a",	"1852",			"Asotiliar.",
+"sutiliđ",		"",			1,	5,	"a",	"1829",			"Asotiliar.",
 "suŧ",			"",			1,	1,	"a",	"1867",			"Sucar.",
 "sux",			"",			1,	1,	"a",	"1775",			"",
 
