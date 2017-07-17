@@ -5577,6 +5577,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sorseɉ",		"",			1,	4,	"a",	"1854",			"",
 "sorseđ",		"",			1,	4,	"a",	"1775",			"",
 "sort",			"",			4,	4,	"a",	"1867",			"",
+"sortan",		"",			1,	4,	"a",	"1829",			"",
 "sòrx",			"",			3,	1,	"g",	"",				"",
 "sòrx",			"re",			3,	1,	"g",	"",				"",
 "sostantiv",	"",			1,	7,	"a",	"1980",			"",
