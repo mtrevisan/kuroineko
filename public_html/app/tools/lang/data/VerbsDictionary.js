@@ -4235,7 +4235,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "patri",			"",			1,	1,	"g",	"1867",			"",
 "patri",			"es",			1,	1,	"g",	"1854",			"",
 "patri",			"re",			1,	1,	"g",	"1867",			"",
-"patri",			"s",			1,	1,	"g",	"1867",			"",
+"patri",			"s",			1,	1,	"g",	"1829",			"",
 "patri",			"rin",		1,	1,	"g",	"1509",			"",
 "patriak",		"in",			1,	5,	"g",	"1829",			"Inpatriarkar.",
 "patriark",		"in",			1,	5,	"g",	"1775",			"Dar arie, inpetir.",
