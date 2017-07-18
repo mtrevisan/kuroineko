@@ -5589,6 +5589,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sovenŧion",	"",			1,	7,	"a",	"1512",			"",
 "soverc",		"",			1,	3,	"g",	"1867",			"",
 "sovraniđ",		"",			1,	6,	"a",	"1867",			"",
+"spad",			"",			1,	1,	"g",	"1829",			"Dar de spada.",
 "spalank",		"",			1,	4,	"g",	"1867",			"",
 "spaleđ",		"",			1,	4,	"a",	"1847",			"",
 "spalm",			"",			1,	2,	"g",	"1852",			"",
