@@ -4071,6 +4071,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "paɉet",			"in",			1,	3,	"a",	"1854",			"Inpajetar.",
 "pak",			"in",			1,	1,	"g",	"1852",			"Afardelar. (polexan) Indormensarse profondamente.",
 "pak",			"s",			1,	1,	"g",	"1775",			"",
+"pakaŧ",			"s",			1,	3,	"g",	"1829",			"Slanŧar, skaraventar.",
 "paket",			"des",		1,	3,	"a",	"1854",			"",
 "paket",			"in",			1,	3,	"a",	"1854",			"",
 "paiŧ",			"",			1,	2,	"a",	"1775",			"Pàsier, pàser.",
