@@ -4340,6 +4340,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pens",			"dis",		1,	1,	"a",	"1775",			"",
 "pens",			"in",			1,	1,	"a",	"1560",			"",
 "pens",			"kon",		1,	1,	"a",	"1980",			"",
+"pensier",		"s",			1,	5,	"g",	"1829",			"",
 "pensier",		"in",			4,	7,	"a",	"1980",			"",
 "pension",		"",			1,	5,	"a",	"1867",			"",
 "pent",			"",			5,	1,	"a",	"1980",			"",
