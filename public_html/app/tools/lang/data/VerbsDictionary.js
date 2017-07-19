@@ -5622,6 +5622,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sper",			"",			1,	2,	"g",	"1450",			"",
 "sper",			"de",			1,	2,	"g",	"1450",			"",
 "sper",			"pro",		1,	-1,"g",	"",				"",
+"speranŧ",		"",			1,	4,	"g",	"1829",			"Víver de speranŧa.",
 "spergoŧ",		"",			1,	5,	"a",	"1810",			"Aspèrxer.",
 "speriment",	"",			1,	6,	"a",	"1867",			"",
 "speron",		"",			1,	4,	"a",	"1560",			"Spronar.",
