@@ -4426,6 +4426,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "peŧ",			"",			1,	1,	"a",	"1775",			"",
 "peŧ",			"in",			1,	1,	"a",	"1867",			"",
 "peŧ",			"re",			1,	1,	"a",	"1775",			"Méter na peŧa.",
+"peŧ",			"s",			1,	1,	"g",	"1829",			"",
 "peŧeg",			"s",			1,	1,	"a",	"1415",			"Far in presa.",
 "peŧolat",		"",			1,	5,	"g",	"1854",			"",
 "peŧolat",		"in",			1,	5,	"g",	"1854",			"",
