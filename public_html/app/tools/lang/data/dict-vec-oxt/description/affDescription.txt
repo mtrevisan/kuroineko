@@ -123,3 +123,5 @@ chi naturale = ki
 ƚ[^/\n]+eto/T0\t > add &1 to $1
 ƚ[^/\n]+eta/D0\t > add &1 to $1
 po:[^\n]+po: > split line
+^(.+)(\t|\/[^\r\n]+)[\r\n]+\g1\/ > duplicated deinitions
+
