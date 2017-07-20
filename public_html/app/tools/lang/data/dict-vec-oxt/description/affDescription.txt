@@ -113,15 +113,11 @@ z aspra-cruda/dolce = ŧ/đ
 s rude-aspra/dolce = s/x
 chi naturale = ki
 
-^[^ƚ\n]*[eaouèàòéóú][ln]/[^ZUu\t]*\t > # add U0/u0
-ƚ[^/\n]{1,}[^a]/[^\t\n]*&0 > # remove &0 and replace with o/T0 if vanishing el
 /([^\t\n\s]*)ğ([^\t\n\s]*[\t\s\n]+) > /($1)GV$2 # substitute flags
 # [^\n]+\n > # remove # comments
 / [^\n]*\n > # remove / comments
 \t[^\r\n]*\n > \n # remove tags
 ^(.*?)$\s+?^(?=.*^\1$) > # remove duplicates
-ƚ[^/\n]+eto/T0\t > add &1 to $1
-ƚ[^/\n]+eta/D0\t > add &1 to $1
+(ƚ[^/\n]+)et[ao]/[DT]0\t > add &1 to $1
 po:[^\n]+po: > split line
-^(.+)(\t|\/[^\r\n]+)[\r\n]+\g1\/ > duplicated deinitions
-
+^(.+)(\t|\/[^\r\n]+)[\r\n]+\1\/ > duplicated definitions
