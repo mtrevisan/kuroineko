@@ -5648,6 +5648,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "spifer",		"",			1,	2,	"a",	"1775",			"",
 "spig",			"",			1,	2,	"a",	"1775",			"",
 "spigaŧ",		"",			1,	4,	"g",	"",				"",
+"spiget",		"",			1,	4,	"a",	"1829",			"Far sú a spige.",
 "spigol",		"",			1,	2,	"a",	"1775",			"",
 "spigol",		"de",			1,	2,	"a",	"1867",			"",
 "spin",			"",			1,	2,	"a",	"1560",			"",
