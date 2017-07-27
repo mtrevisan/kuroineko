@@ -4594,6 +4594,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "polgon",		"",			1,	4,	"a",	"1560",			"Palpejar.",
 "polin",			"s",			1,	3,	"a",	"1998",			"Kavarse le polexi (de le galine).",
 "polmon",		"in",			1,	4,	"a",	"1867",			"Aver el kolor de la pele ke ʼl trà al đal, par infeŧion interna de i polmoni.",
+"polmon",		"s",			1,	4,	"a",	"1829",			"Inpolmonar.",
 "polp",			"des",		1,	1,	"a",	"1867",			"",
 "polp",			"in",			1,	1,	"a",	"",				"",
 "polp",			"s",			1,	1,	"a",	"1867",			"",
