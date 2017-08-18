@@ -22,14 +22,14 @@
 # see <http://www.gnu.org/licenses/>.
 
 NAME Diŧionario de lengua vèneta
-VERSION 2.0.0 (2017/04/11)
+VERSION 2.1.0 (2017/08/08)
 HOME http://parnodexmentegar.orgfree.com/
 LANG vec
 
 SET UTF-8
 
 
-TRY ʼeaoinrtlƚsdkpvmuèxgfàòbíhéŧójɉñcúSđLȽIPETKVAMDNFBRJGCOUĐXÀÈŦHɈÒÑÍÉÓÚ-
+TRY eaoinrtlƚsdkpvmuèxgfàòbíhéŧójɉñcúSđLȽIPETKVAMDNFBRJGCOUĐXÀÈŦHɈÒÑÍÉÓÚʼ-
 
 KEY esdr|redft|trfg|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà-|àòèù-|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìèòà
 
@@ -2548,8 +2548,7 @@ SFX f2 r ve-ƚo/B0 ar
 
 # vèrbi -àr inregolari ((re)andar)
 # themeT1 + r/a0a1a2g0E0E1E2
-SFX g0 Y 38
-SFX g0 andar vàme/G0G1G2 andar
+SFX g0 Y 37
 SFX g0 andar vàtu/M0 andar	is:interrogative
 SFX g0 andar vede/N0 andar
 SFX g0 andar vege/N0 andar
@@ -5127,7 +5126,7 @@ SFX s0 verò uŧion/D0U0 olverò	po:noun
 SFX s0 guerò ŧion/D0U0 stinguerò	po:noun
 
 # nominali deverbali (-sion)
-SFX s1 Y 24
+SFX s1 Y 23
 SFX s1 r sion/D0U0 [^aei]r	po:noun
 SFX s1 r sion/D0U0 [^t]ar	po:noun
 SFX s1 r sion/D0U0 [^en]tar	po:noun
@@ -5151,7 +5150,6 @@ SFX s1 erò ision/D0U0 eterò	po:noun
 SFX s1 derò sion/D0U0 [ae]nderò	po:noun
 SFX s1 ñerò nsion/D0U0 eñerò	po:noun
 SFX s1 guerò sion/D0U0 stinguerò	po:noun
-SFX s1 verò usion/D0U0 olverò	po:noun
 
 # nominali deverbali ko èle evanesente (-sion)
 SFX s2 Y 2
