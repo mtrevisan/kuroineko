@@ -120,4 +120,3 @@ chi naturale = ki
 ^(.*?)$\s+?^(?=.*^\1$) > # remove duplicates
 (ƚ[^/\n]+)et[ao]/[DT]0\t > add &1 to $1
 po:[^\n]+po: > split line
-^(.+)(\t|\/[^\r\n]+)[\r\n]+\1\/ > duplicated definitions
