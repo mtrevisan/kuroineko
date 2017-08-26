@@ -9267,9 +9267,6 @@ konglòmaroe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:kongloma
 inkonkar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 inkonko/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:inkonkar
 inkónkoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:inkonkar
-konkuasar/a0a1a2E0E1E2*0	po:verb ts:infinitive_simple
-konkuaso/a0a1a2E0E1E2I0J0*0	po:verb ts:indicative_present st:konkuasar
-konkuàsoe/a0a1a2K0*0	po:verb ts:indicative_present is:interrogative st:konkuasar
 inkonkolar/a0a1E0E1	po:verb ts:infinitive_simple
 inkónkolo/a0a1E0E1I0J0	po:verb ts:indicative_present st:inkonkolar
 inkónkoloe/a0a1K0	po:verb ts:indicative_present is:interrogative st:inkonkolar
@@ -10082,6 +10079,12 @@ inkuàrtoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:inkuartar
 skuartar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 skuarto/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:skuartar
 skuàrtoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:skuartar
+konkuasar/a0a1a2E0E1E2*0	po:verb ts:infinitive_simple
+konkuaso/a0a1a2E0E1E2I0J0*0	po:verb ts:indicative_present st:konkuasar
+konkuàsoe/a0a1a2K0*0	po:verb ts:indicative_present is:interrogative st:konkuasar
+skuasar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
+skuaso/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:skuasar
+skuàsoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:skuasar
 kuatar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 kuato/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:kuatar
 kuàtoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:kuatar
@@ -25350,16 +25353,16 @@ tuto/B0I0	po:quantifier
 una	po:quantifier
 uno	po:quantifier
 / prepoxiŧion
-a/Z0	po:preposition
 a/$0$1$2Z0	po:noun
+a/Z0	po:preposition
 ai	po:preposition
 da	po:adverb
 da	po:preposition
 dapò	po:preposition st:daspò
 daspò	po:preposition al:dapò al:despò
 de/’0	po:adverb
-de/’0	po:preposition
 de/’0	po:noun
+de/’0	po:preposition
 dentro/I0	po:adverb
 dentro/I0	po:preposition
 dentrovia	po:adverb
@@ -25395,11 +25398,11 @@ intro/I0	po:adverb
 intro/I0	po:preposition
 inver	po:preposition
 ko	po:preposition
-kol/u0	po:preposition
 kol/T0u0	po:noun
+kol/u0	po:preposition
 konpañía/D0	po:noun
-pal/u0	po:preposition
 pal/T0u0&0(0	po:noun
+pal/u0	po:preposition
 paƚo/T0&1(1	po:noun
 posto/B0I0	po:noun
 pòsto/B0I0	po:noun
@@ -25831,8 +25834,8 @@ an	po:conjunction
 anka	po:conjunction al:ʼka
 anpò	po:conjunction
 ansi	po:adverb
-ansi	po:preposition
 ansi	po:noun
+ansi	po:preposition
 anŧi	po:adverb
 anŧi	po:preposition
 donka	po:adverb
@@ -25927,21 +25930,17 @@ pena	po:adverb
 pena/C0&0)0<0<1	po:noun
 perkome	po:adverb
 perkome	po:conjunction
-sensa/’0	po:preposition
-sensa/’0	po:adjective
 sensa	po:noun
+sensa/’0	po:adjective
+sensa/’0	po:preposition
 senŧa/’0	po:preposition
 sikome	po:adverb
 sikome	po:conjunction
 sí	po:adverb
-skoaxio	po:adverb st:skuaxio
-skoaxio	po:conjunction st:skuaxio
-skoaxo/I0	po:adverb st:skuaxo
-skoaxo/T0I0,0	po:conjunction st:skuaxo
-skuaxio	po:adverb al:skoaxio
-skuaxio	po:conjunction al:skoaxio
-skuaxo/I0	po:adverb al:skoaxo
-skuaxo/T0I0,0	po:conjunction al:skoaxo
+koaxo/T0I0T1*0	po:adverb st:skuaxo
+koaxo/T0I0T1*0,0	po:conjunction st:skuaxo
+kuaxo/T0I0T1*0	po:adverb al:skoaxo
+kuaxo/T0I0T1*0,0	po:conjunction al:skoaxo
 vanti	po:adverb
 vanti	po:preposition
 via	po:adverb
@@ -25953,21 +25952,21 @@ ahi	po:interjection
 bah	po:interjection
 bèl/T0U0=0&0	po:adjective is:masculine
 bèl/U0=0	po:interjection is:masculine
-bèla/D0=0&0	po:adjective is:femenine
 bèla/=0	po:interjection is:femenine
-bèƚa/D0=0&1	po:adjective is:femenine
+bèla/D0=0&0	po:adjective is:femenine
 bèƚa/=0	po:interjection is:femenine
-bèƚo/T0=0&1	po:adjective is:masculine
+bèƚa/D0=0&1	po:adjective is:femenine
 bèƚo/=0	po:interjection is:masculine
+bèƚo/T0=0&1	po:adjective is:masculine
 brao/B0	po:adjective
-brao/B0	po:noun
 brao/B0	po:interjection
+brao/B0	po:noun
 brava/D0&0<0<1	po:adjective is:femenine
-brava/D0	po:interjection is:femenine
 brava/D0&0<0<1	po:noun is:femenine
+brava/D0	po:interjection is:femenine
 bravo/T0&0<0<1	po:adjective is:masculine
-bravo/T0	po:interjection is:masculine
 bravo/T0&0<0<1	po:noun is:masculine
+bravo/T0	po:interjection is:masculine
 brr	po:interjection
 cak	po:interjection
 cao/T0	po:interjection
@@ -26011,10 +26010,10 @@ koraɉo/I0	po:interjection
 koraɉo/T0I0	po:noun
 magari	po:interjection
 mah	po:interjection
-malan/T0U0	po:interjection
 malan/T0U0&0	po:noun
-maƚan/T0	po:interjection
+malan/T0U0	po:interjection
 maƚan/T0&1	po:noun
+maƚan/T0	po:interjection
 mh	po:interjection
 mixèria	po:interjection
 mixèria/D0	po:noun
@@ -26027,14 +26026,14 @@ ohe/T0	po:interjection
 ohé	po:interjection
 ohh	po:interjection
 ohu	po:interjection
-òco/T0&0[0[1)0	po:noun
 òco	po:interjection
+òco/T0&0[0[1)0	po:noun
 òcu	po:interjection
 òhi	po:interjection
 òhu	po:interjection
 òr	po:interjection
-òro	po:interjection
 òr/T0	po:noun
+òro	po:interjection
 patapúnfete	po:interjection
 pàfete	po:interjection
 pò	po:adverb
@@ -26395,9 +26394,9 @@ bru	po:adjective is:masculine st:blè
 bru	po:noun is:masculine st:blè
 brun/C0U0	po:adjective is:masculine
 brun/C0U0	po:noun is:masculine
-dal/T0u0	po:preposition is:masculine
 dal/T0u0&0	po:adjective is:masculine
 dal/T0u0&0	po:noun is:masculine
+dal/T0u0	po:preposition is:masculine
 dala/D0&0	po:adjective is:femenine st:đala
 dala/D0&0	po:noun is:femenine st:đala
 dorè	po:adjective is:masculine
@@ -27269,18 +27268,18 @@ darente/E0E1E2I0	po:adverb
 darente/E0E1E2T0I0	po:adjective
 darente/E0E1E2T0I0	po:noun
 darénteme/G0G1G2	po:adjective
-darénteme/G0G1G2	po:noun
 darénteme/G0G1G2	po:adverb
+darénteme/G0G1G2	po:noun
 daréntemene/G0G1G2	po:adjective
-daréntemene/G0G1G2	po:noun
 daréntemene/G0G1G2	po:adverb
+daréntemene/G0G1G2	po:noun
 daseno	po:adverb
 data/D0	po:noun
 dativo/B0W0I0	po:adjective
 dativo/B0I0	po:noun
 davanti	po:adjective
-davanti	po:noun
 davanti	po:adverb
+davanti	po:noun
 davero	po:adverb
 dàlmeda/D0	po:noun
 debolmente/I0W2	po:adverb
@@ -28207,12 +28206,12 @@ koda/D0&0(0)0	po:noun
 kodaroso/T0I0	po:noun
 kodolà/T2	po:noun
 kogo/T0	po:noun
-kojon/D0U0v0&0[0[1<0<1§0	po:adjective
 kojon/D0U0	po:interjection
+kojon/D0U0v0&0[0[1<0<1§0	po:adjective
 kojon/D0U0v0&0[0[1<0<1§0	po:noun
 kojona/&0[0[1§0	po:adjective po:noun
-koɉon/D0U0v0&0[0[1<0<1§0	po:adjective
 koɉon/D0U0	po:interjection
+koɉon/D0U0v0&0[0[1<0<1§0	po:adjective
 koɉon/D0U0v0&0[0[1<0<1§0	po:noun
 koɉona/&0[0[1§0	po:adjective po:noun
 kokon/D0U0S0&0	po:noun
@@ -30093,8 +30092,8 @@ straŧon/C0U0	po:adjective
 stravèrso/I0	po:adverb
 strà	po:noun
 striga/D0v0)0	po:noun
-strika/D0	po:interjection
 strika/D0&0	po:noun
+strika/D0	po:interjection
 strolegativo/B0W0I0	po:adjective
 stroƚegasion/D0	po:noun
 stroƚegativo/B0W1	po:adjective
@@ -37868,20 +37867,28 @@ sponxa/D0&0	po:noun
 spóxego/T0	po:noun
 spravèrso/B0	po:adjective
 sprefèta/T0	po:noun
-spresilioxo/B0W0I0mf	po:adjective po:noun
-spresiƚioxo/B0W1mf	po:adjective po:noun
-spreŧilioxo/B0W0I0	po:adjective po:noun
-sprovixo/B0I0	po:adjective po:noun
-stabeleto/T0T2I0	po:adjective po:noun
-stabileto/T0T2I0	po:adjective po:noun
+spresilioxo/B0W0I0mf	po:adjective
+spresilioxo/B0W0I0mf	po:noun
+spresiƚioxo/B0W1mf	po:adjective
+spresiƚioxo/B0W1mf	po:noun
+spreŧilioxo/B0W0I0	po:adjective
+spreŧilioxo/B0W0I0	po:noun
+sprovixo/B0I0	po:adjective
+sprovixo/B0I0	po:noun
+stabeleto/T0T2I0	po:adjective
+stabeleto/T0T2I0	po:noun
+stabileto/T0T2I0	po:adjective
+stabileto/T0T2I0	po:noun
 stadelèr/B0V0	po:noun
 stadeƚèr/B0V0	po:noun
 stadèla/D0T2	po:noun
 stameña/D0	po:noun
 stañòl/T0T2U0	po:noun
 stañòla/D0T2	po:noun
-stàbel/D0T3u0	po:adjective po:noun
-stàbil/D0T3	po:adjective po:noun
+stàbel/D0T3u0	po:adjective
+stàbel/D0T3u0	po:noun
+stàbil/D0T3	po:adjective
+stàbil/D0T3	po:noun
 stàtola/D0T2	po:noun
 stea/D0	po:noun
 stegaño/B0	po:noun
@@ -39281,8 +39288,8 @@ senxaƚa/D0	po:noun
 senxaƚièra/D0	po:noun
 seraval/D0T3U0	po:noun
 sfadegon/C0U0	po:adjective
-sisinin/C0	po:adjective po:pronoun
 sisinin	po:adverb
+sisinin/C0	po:adjective po:pronoun
 skila/D0T2	po:noun
 skufièr/B0V0	po:noun
 spiaxa/D0	po:noun
@@ -39302,8 +39309,8 @@ tinèla/D0T2	po:noun
 ŧénban/T0T4u0	po:noun
 ŧirio/T0T4(0	po:noun
 ŧiŧin/C0	po:noun
-ŧiŧinin/C0	po:adjective po:pronoun
 ŧiŧinin	po:adverb
+ŧiŧinin/C0	po:adjective po:pronoun
 ŧokara/D0T4	po:noun
 xago/T0	po:noun
 xbiankexin/C0	po:noun
@@ -39586,8 +39593,8 @@ lòbia/D0T4	po:noun
 ƚatisio/T0	po:noun
 ƚensa/D0	po:noun
 ƚerijon/D0	po:noun
-ƚeriɉon/D0	po:noun
 ƚerijoxo/B0W1mf	po:adjective po:noun
+ƚeriɉon/D0	po:noun
 ƚeriɉoxo/B0W1mf	po:adjective po:noun
 ƚibo/T0[1	po:noun
 ƚirasa/D0	po:noun
@@ -46255,6 +46262,7 @@ promotor/C0mf	po:noun
 pronòstego/T0	po:noun
 pronto/B0I0	po:adjective
 prontuario/T0	po:noun
+proporŧion/D0T2U0+0*0	po:noun
 prosedibilità	po:noun
 prosedibiƚità	po:noun
 prosedíbil/D0T3	po:adjective
@@ -47056,10 +47064,12 @@ sfròxo/B0I0	po:noun
 sfumin/T0	po:noun
 sial/D0T3u0	po:noun
 sialakuador/C0V0	po:noun
+sialakuo/T0	po:noun
 sialakuon/C0U0	po:adjective
 sialo	po:noun
 sialupa/D0	po:noun
 siaƚakuador/C0V0	po:noun
+siaƚakuo/T0	po:noun
 siaƚakuon/C0U0	po:adjective
 siaƚo	po:noun
 siaƚupa/D0	po:noun
@@ -47296,10 +47306,19 @@ skrupoloxo/B0W0I0mf	po:adjective al:skrupuluxi
 skrupoloxo/B0I0mf	po:noun al:skrupuluxi
 skrupoƚoxo/B0W1mf	po:adjective al:skrupuƚuxi
 skrupoƚoxo/B0mf	po:noun al:skrupuƚuxi
+skuadra/D0)0	po:noun
 skuakuacò/T0	po:noun
+skual/T0T2u0	po:noun
+skualor/D0	po:noun
+skuaƚor/D0	po:noun
+skuama/D0	po:noun
+skuamaŧo/T0T2	po:noun
 skuaron/D0U0	po:noun
-skuarŧo/T0I0&0	po:noun
+skuarsina/D0	po:noun
 skuarso/T0I0&0	po:noun
+skuarŧina/D0	po:noun
+skuarŧo/T0I0&0	po:noun
+skuàkuara/D0	po:noun
 skudaría/D0	po:noun
 skudería/D0	po:noun
 skuelotin/T0	po:noun
@@ -47634,16 +47653,40 @@ spórtula/D0T2	po:noun
 spòja/D0T2	po:adjective
 spòjo/D0T2	po:noun
 spòjo/T0T2	po:adjective
+spranga/D0	po:noun
+sprendor/D0	po:noun
+sprèđo/T0T2	po:noun
+sprèo/T0	po:noun
 sprimento/T0I0	po:noun
 springo/B0	po:adjective
+sprokadura/D0Y0	po:noun
+spropòxito/T0I0	po:noun
+sprotin/C0	po:noun
 spròlego/T0	po:noun
 spròƚego/T0	po:noun
+spròn/T0U0	po:noun
 spròto/B0I0)0	po:adjective
 spròto/B0I0)0	po:noun
 spruŧo/T0I0T2	po:noun
 spuaco/T0)0	po:noun
+spuadolse/T0	po:noun
+spuadolŧe/T0	po:noun
+spuapèrla/D0	po:noun
+spuar/T0	po:noun
 spuaŧo/T0I0T2	po:noun
+spuledèra/D0	po:noun
+spuledon/C0U0	po:adjective
+spuleđèra/D0	po:noun
+spuleđon/C0U0	po:adjective
+spulexèr/B0V0	po:noun
+spulexèra/D0	po:noun
+spulexon/C0U0	po:adjective
+spuƚexèr/B0V0	po:noun
+spuƚexèra/D0	po:noun
+spuƚexon/C0	po:adjective
 spuo/T0&0	po:noun
+spurgo/T0	po:noun
+spurio/B0	po:noun
 stankejo/T0I0T2	po:noun
 stanpo/T0	po:noun
 stantufo/T0I0	po:noun
@@ -48254,46 +48297,34 @@ xustadin/B0	po:adjective
 xustaposto/B0I0	po:adjective
 xustapòsto/B0I0	po:adjective
 xustina/D0	po:noun
-sialakuo/T0	po:noun
-siaƚakuo/T0	po:noun
-spranga/D0	po:noun
-sprendor/D0	po:noun
-sprèo/T0	po:noun
-sprèđo/T0T2	po:noun
-sprokadura/D0Y0	po:noun
-spròn/T0U0	po:noun
-proporŧion/D0T2U0+0*0	po:noun
-spropòxito/T0I0	po:noun
-sprotin/C0	po:noun
-spuadolŧe/T0	po:noun
-spuadolse/T0	po:noun
-spuapèrla/D0	po:noun
-spuar/T0	po:noun
-spuleđèra/D0	po:noun
-spuledèra/D0	po:noun
-spulexèra/D0	po:noun
-spuƚexèra/D0	po:noun
-spuleđon/C0U0	po:adjective
-spuledon/C0U0	po:adjective
-spulexon/C0U0	po:adjective
-spuƚexon/C0	po:adjective
-spulexèr/B0V0	po:noun
-spuƚexèr/B0V0	po:noun
-spurgo/T0	po:noun
-spurio/B0	po:noun
-skuadra/D0)0	po:noun
-skual/T0T2u0	po:noun
-skualor/D0	po:noun
-skuaƚor/D0	po:noun
-skuama/D0	po:noun
-skuamaŧo/T0T2	po:noun
-skuàkuara/D0	po:noun
-skuarŧina/D0	po:noun
-skuarsina/D0	po:noun
+skuarŧakor/D0	po:noun
+skuarŧakòr/D0	po:noun
+skuarsakor/D0	po:noun
+skuarsakòr/D0	po:noun
+skuarŧavela/D0	po:noun
+skuarsavela/D0T2	po:noun
+skuarŧoxo/T0I0mf&0	po:noun
+skuarsoxo/T0I0mf&0	po:noun
+skuèkuo/B0	po:adjective
+skuerarol/T0U0V0	po:noun
+skueraroƚo/T0V0	po:noun
+skuerarola/D0V0	po:noun
+skueraroƚa/D0V0	po:noun
+skuadro/T0	po:noun
+teđa/D0T2	po:noun
+skuexiteŧa/D0T2	po:noun
+skuexito/B0I0	po:adjective
+skuilibrio/T0	po:noun
+skuiƚibrio/T0	po:noun
+skuinŧio/T0T2	po:noun
+skuinŧia/D0T2	po:noun
+stabelidura/D0Y0	po:noun
+stabeƚidura/D0Y0	po:noun
 
 
 
-/ 645
+
+/ 646
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
 / v. batidor 696-1-28 > ponidor
