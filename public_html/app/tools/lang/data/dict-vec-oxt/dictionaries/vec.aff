@@ -1432,7 +1432,7 @@ SFX c2 r ónmeƚo/G2 [^cijɉñ]ir
 # vèrbi -ír
 # themeT1 + r/a0a1a2d0d1d2E0E1E2
 # themeT8 + o/d0d1d2E0E1E2J0
-SFX d0 Y 224
+SFX d0 Y 226
 SFX d0 io i/E0E1E2F0L0 io
 SFX d0 ir arane/K0 ir	is:interrogative
 SFX d0 ir aratu/M0 ir	is:interrogative
@@ -1615,7 +1615,9 @@ SFX d0 ir ívitu/M0 ir	is:interrogative
 SFX d0 ir ívone/K0 ir	is:interrogative
 SFX d0 ir ónmene/G0 ir
 SFX d0 o a/E0E1E2 o
-SFX d0 o e/E0E1E2F0I0J0 o
+SFX d0 o e/E0E1E2F0I0J0 [^lr]o
+SFX d0 o e/E0E1E2F0I0J0 [aeiouàèéíòóú][lr]o
+SFX d0 o e/E0E1E2F0J0 [^aeiouàèéíòóú][lr]o
 SFX d0 o i/E0E1E2F0L0 [^i]o
 SFX d0 r do/B0 ir
 SFX d0 r ede/N0 [^cijɉñ]ir
