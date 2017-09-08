@@ -5759,6 +5759,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "stenu",			"",			4,	5,	"a",	"1775",			"",
 "stenu",			"e",			4,	5,	"a",	"1852",			"",
 "stenograf",	"",			1,	4,	"a",	"",				"",
+"steril",		"",			4,	6,	"a",	"1829",			"",
 "steriliđ",		"",			1,	6,	"a",	"",				"",
 "sterŧ",			"",			1,	2,	"g",	"1775",			"Divertir.",
 "stik",			"",			1,	2,	"a",	"1775",			"Goder, sguaŧar, trionfar.",
