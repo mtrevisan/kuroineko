@@ -5802,6 +5802,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "stok",			"in",			1,	2,	"a",	"1775",			"Piegetar.",
 "stokol",		"de",			1,	2,	"g",	"1867",			"Destokar.",
 "stol",			"",			4,	4,	"a",	"1980",			"Skaldar masa.",
+"stolid",		"",			4,	6,	"a",	"1829",			"",
 "stolid",		"i",			4,	6,	"a",	"1867",			"",
 "stolid",		"in",			4,	6,	"a",	"1796",			"",
 "stomeg",		"",			1,	2,	"a",	"1775",			"",
