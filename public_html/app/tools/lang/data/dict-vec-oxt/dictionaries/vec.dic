@@ -259,9 +259,9 @@ dexàlveoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:dexalvear
 alvegar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 àlvego/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:alvegar
 àlvegoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:alvegar
-amar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
-amo/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:amar
-àmoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:amar
+amar/a0a1a2E0E1E2=0	po:verb ts:infinitive_simple
+amo/a0a1a2E0E1E2I0J0=0	po:verb ts:indicative_present st:amar
+àmoe/a0a1a2K0=0	po:verb ts:indicative_present is:interrogative st:amar
 amaredar/a0a1E0E1	po:verb ts:infinitive_simple
 amarèdo/a0a1E0E1I0J0	po:verb ts:indicative_present st:amaredar
 amarèdoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:amaredar
@@ -21318,19 +21318,17 @@ tòrdre	po:verb ts:infinitive_simple st:tòrder
 torderò/b0b1J0+0-0*0.0:0	po:verb ts:indicative_future st:tòrder
 tòrdo/a0a1a2E0E1E2I0J0+0-0*0.0:0	po:verb ts:indicative_present st:tòrder
 tòrdoe/a0a1K0+0-0*0.0:0	po:verb ts:indicative_present is:interrogative st:tòrder
-tòrđer/b0b1E0E1+0-0*0.0:0	po:verb ts:infinitive_simple
+tòrđer/b0b1E0E1r0+0-0*0.0:0	po:verb ts:infinitive_simple
 torđerò/b0b1J0+0-0*0.0:0	po:verb ts:indicative_future st:tòrđer
 tòrđo/a0a1E0E1I0J0+0-0*0.0:0	po:verb ts:indicative_present st:tòrđer
 tòrđoe/a0a1K0+0-0*0.0:0	po:verb ts:indicative_present is:interrogative st:tòrđer
 tòrto/B0I0+0-0*0.0:0	po:verb ts:participle_perfect_strong st:tòrđer st:tòrder st:tòrxer
-tòrxer/b0b1b2E0E1E2+0-0*0.0:0	po:verb ts:infinitive_simple
+tòrxer/b0b1b2E0E1E2r0+0-0*0.0:0	po:verb ts:infinitive_simple
 torxerò/b0b1b2J0+0-0*0.0:0	po:verb ts:indicative_future st:tòrxer
 tòrxo/a0a1a2E0E1E2I0J0+0-0*0.0:0	po:verb ts:indicative_present st:tòrxer
 tòrxoe/a0a1a2K0+0-0*0.0:0	po:verb ts:indicative_present is:interrogative st:tòrxer
 tòrđar/b0b1E0E1+0-0*0.0:0	po:verb ts:infinitive_simple
 torđarò/b0b1J0+0-0*0.0:0	po:verb ts:indicative_future st:tòrđar
-tòrdar/b0b1E0E1+0-0*0.0:0	po:verb ts:infinitive_simple
-tordarò/b0b1J0+0-0*0.0:0	po:verb ts:indicative_future st:tòrdar
 tòrxar/b0b1b2E0E1E2+0-0*0.0:0	po:verb ts:infinitive_simple
 torxarò/b0b1b2J0+0-0*0.0:0	po:verb ts:indicative_future st:tòrxar
 stordar/a0a1E0E1	po:verb ts:infinitive_simple
@@ -25295,7 +25293,7 @@ unde	po:adjective_interrogative
 unde	po:pronoun
 / kuantifegador
 altretanto/B0I0	po:quantifier
-altro/B0W0	po:quantifier
+altro/B0W0=0	po:quantifier
 anbo/T0)0	po:quantifier
 antro/B0W0	po:quantifier
 año/T0I0	po:quantifier
@@ -35454,6 +35452,7 @@ stomegin/T0	po:noun
 stopa/D0&0	po:noun
 stopin/T0&0	po:noun
 stora/D0	po:noun
+storno/B0I0	po:adjective
 storno/B0I0v0	po:noun
 stòiko/B0	po:adjective
 stòiko/B0	po:noun
@@ -38819,7 +38818,7 @@ toajòl/T0T2U0	po:noun
 tomía/D0	po:noun
 torboƚasion/D0mf	po:adjective
 torexin/T0	po:noun
-torion/D0U0mf	po:noun
+torion/D0U0*0mf	po:noun
 tornèr/B0V0	po:noun
 toron/D0U0mf	po:noun
 torsatòrio/T0	po:noun
@@ -47158,6 +47157,7 @@ poron/D0U0mf	po:noun
 porsèdo/T0	po:noun
 porsijòla/D0T2	po:noun
 porsiɉòla/D0T2	po:noun
+porsil/D0T3	po:noun
 porsioneta/D0	po:noun
 portabala/D0	po:noun
 portaboŧon/D0T2U0mf	po:noun
@@ -47200,6 +47200,7 @@ portuƚaka/D0	po:noun
 porŧèdo/T0	po:noun
 porŧijòla/D0	po:noun
 porŧiɉòla/D0	po:noun
+porŧil/D0	po:noun
 porŧion/D0T2U0mf	po:noun
 porŧioneta/D0	po:noun
 posadina/D0	po:noun
@@ -48798,11 +48799,18 @@ stamenal/D0T3U0	po:noun
 staminara/D0	po:noun
 standufo/T0I0	po:noun
 stangèra/D0	po:noun
+stangon/C0U0mf	po:adjective
+stangon/C0U0mf	po:noun
 stankejo/T0I0T2	po:noun
 stanko/B0I0	po:adjective
+stanòte	po:noun is:singular
 stanpa/D0&0	po:noun
 stanpatèl/T0T2U0	po:noun
 stanpo/T0	po:noun
+stante	po:adjective_demonstrative
+stante/T0	po:noun
+stantivo/B0	po:adjective
+stantío/B0	po:adjective
 stantufo/T0I0	po:noun
 staña/D0&0	po:adjective
 stañada/D0Y0Y1	po:noun
@@ -48813,18 +48821,67 @@ staño/B0I0	po:noun
 staño/T0I0&0	po:adjective
 stasadon/C0U0mf	po:adjective
 staso/T0I0T1	po:noun
+statarèl/T0T2U0	po:noun
+staterèl/T0T2U0	po:noun
+statista/C0	po:noun
 stato/T0I0	po:noun
 staŧadon/C0U0mf	po:adjective
+staŧio/T0T2	po:noun
 staŧo/T0I0T1	po:noun
+stàol/T0T2u0mf	po:noun
+stekado/T0Y0	po:noun
 steko/T0I0&0mf	po:noun
+stelèr/B0V0	po:noun
+stelon/D0T2U0mf	po:noun
+steƚèr/B0V0	po:noun
+stendardo/T0	po:noun
+stendidor/C0V0mf	po:noun
+stenografía/D0	po:noun
+stenòti	po:noun is:plural
+stentarèl/T0T2U0	po:noun
+stentarol/T0U0V0mf	po:noun
+stentaroƚo/T0V0mf	po:noun
+stente/T0mf	po:noun
+stentoxo/B0I0mf	po:adjective
+sterlina/D0	po:noun
+sterseto/T0mf	po:noun
+sterŧeto/T0mf	po:noun
+stèra	po:noun is:plural st:stèr
+stèrpo/B0	po:adjective
+stèrpo/B0	po:noun
+stèrso/T0	po:noun
+stèrŧo/T0	po:noun
 stiko/T0I0	po:noun
+stil/T0&0	po:noun
+stiƚo/T0&1	po:noun
+stiorèr/B0V0	po:noun
+stirpàtego/T0	po:noun
+stirpàtiko/T0	po:noun
 stiso/T0I0&0)0	po:noun
+stisonsin/T0	po:noun
+stitiketo/B0I0mf	po:adjective
 stiŧo/T0I0&0)0	po:noun
+stiŧonŧin/T0	po:noun
 stivador/C0V0mf	po:noun
 stivalina/D0T2	po:noun
+stítiko/B0I0	po:adjective
+stobia/D0	po:noun
+stokadina/D0	po:noun
+stokfis	po:noun
+stolideŧo/T0T2I0	po:noun
+stolidon/C0U0mf	po:adjective
+stoƚideso/T0mf	po:noun
+stoƚidon/C0mf	po:adjective
+stomegeto/T0I0mf	po:noun
+stomegon/D0U0mf	po:noun
 stopoxo/B0W0I0mf	po:adjective
 stopoxo/B0I0mf	po:noun
+storase/T0	po:noun
+storaŧe/T0	po:noun
+stordèla/D0T2	po:noun
 stómego/T0	po:noun
+stòko/T0I0	po:noun
+stòla/D0T2&0	po:noun
 stòrto/B0I0	po:adjective
 stòrto/B0I0	po:noun
 strabalŧo/T0T2I0	po:noun
@@ -48920,8 +48977,8 @@ tetakavra/D0	po:noun
 teto/T0I0mf	po:noun
 texa/D0	po:adjective
 texa/D0	po:noun
-texo/T0I0)0mf	po:noun
 texo/T0I0)0mf	po:adjective
+texo/T0I0)0mf	po:noun
 tèrno/T0	po:noun
 tèsto/B0	po:noun
 tin-tin	po:interjection
@@ -49419,68 +49476,19 @@ xustadin/B0	po:adjective
 xustaposto/B0I0	po:adjective
 xustapòsto/B0I0	po:adjective
 xustina/D0	po:noun
-stangon/C0U0mf	po:adjective
-stangon/C0U0mf	po:noun
-stanòte	po:noun is:singular
-stenòti	po:noun is:plural
-stante	po:adjective_demonstrative
-stante/T0	po:noun
-stantío/B0	po:adjective
-stantivo/B0	po:adjective
-porsil/D0T3	po:noun
-porŧil/D0	po:noun
-stàol/T0T2u0mf	po:noun
-staterèl/T0T2U0	po:noun
-statarèl/T0T2U0	po:noun
-statista/C0	po:noun
-staŧio/T0T2	po:noun
-stekado/T0Y0	po:noun
-stelèr/B0V0	po:noun
-steƚèr/B0V0	po:noun
-stelon/D0T2U0mf	po:noun
-stendardo/T0	po:noun
-stendidor/C0V0mf	po:noun
-stenografía/D0	po:noun
-stentarèl/T0T2U0	po:noun
-stentarol/T0U0V0mf	po:noun
-stentaroƚo/T0V0mf	po:noun
-stente/T0mf	po:noun
-stentoxo/B0I0mf	po:adjective
-stèra	po:noun is:plural st:stèr
-sterlina/D0	po:noun
-stèrpo/B0	po:adjective
-stèrpo/B0	po:noun
-stèrŧo/T0	po:noun
-stèrso/T0	po:noun
-sterŧeto/T0mf	po:noun
-sterseto/T0mf	po:noun
-stil/T0&0	po:noun
-stiƚo/T0&1	po:noun
-stiorèr/B0V0	po:noun
-stirpàtego/T0	po:noun
-stirpàtiko/T0	po:noun
-stitiketo/B0I0mf	po:adjective
-stítiko/B0I0	po:adjective
-stiŧonŧin/T0	po:noun
-stisonsin/T0	po:noun
-stobia/D0	po:noun
-stokadina/D0	po:noun
-stokfis	po:noun
-stòko/T0I0	po:noun
-stòla/D0T2&0	po:noun
-stolideŧo/T0T2I0	po:noun
-stoƚideso/T0mf	po:noun
-stolidon/C0U0mf	po:adjective
-stoƚidon/C0mf	po:adjective
-stomegeto/T0I0mf	po:noun
-stomegon/D0U0mf	po:noun
-storaŧe/T0	po:noun
-storase/T0	po:noun
-stordèla/D0T2	po:noun
+gavinèl/T0T2U0	po:noun
+storiòl/T0T2U0	po:noun
+storlin/T0	po:noun
+storon/D0U0mf	po:noun
+stortada/D0Y0Y1	po:noun
+stortame/T0	po:noun
+stortina/D0	po:noun
+storton/C0u0mf	po:adjective
+storđikòl/T0U0	po:noun
 
 
 
-/ 654
+/ 655
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
 / v. batidor 696-1-28 > ponidor
