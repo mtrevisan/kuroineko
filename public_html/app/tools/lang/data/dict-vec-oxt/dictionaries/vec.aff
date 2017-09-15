@@ -4406,22 +4406,22 @@ SFX p0 èser ɉèrone/K0 èser	is:interrogative
 
 # tute le deklinaŧion, ajetivi de prima klase
 SFX B0 Y 8
-SFX B0 0 o [^aieo]
-SFX B0 0 a [^aieo]
-SFX B0 0 i [^aieo]
-SFX B0 0 e [^aieo]
-SFX B0 o a o
-SFX B0 o e o
-SFX B0 o i [^i]o
-SFX B0 io i io
+SFX B0 0 o [^aieo]	is:singular
+SFX B0 0 a [^aieo]	is:singular is:femenine
+SFX B0 0 i [^aieo]	is:plural
+SFX B0 0 e [^aieo]	is:plural
+SFX B0 o a o	is:singular is:femenine
+SFX B0 o e o	is:plural
+SFX B0 o i [^i]o	is:plural
+SFX B0 io i io	is:plural
 
 # ajetivi de sekonda klase
 SFX C0 Y 5
-SFX C0 0 a [^aieo]
-SFX C0 0 i [^aieo]
+SFX C0 0 a [^aieo]	is:singular is:femenine
+SFX C0 0 i [^aieo]	is:plural
 SFX C0 0 e [^aieo]
 SFX C0 a e a
-SFX C0 a i a
+SFX C0 a i a	is:plural
 
 # sostantivi plurali femenili, ajetivi de tèrŧa klase
 SFX D0 Y 4
