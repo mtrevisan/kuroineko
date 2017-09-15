@@ -50,6 +50,7 @@ define(['tools/data/mining/DecisionTree', 'HTMLHelper', 'tools/ui/Validator', 't
 			[1,0,0,0, ,0,0, , , , , , ,0,1, , ,0,0,1,0,0,0,0, , , , , , , , , , , , ,0,0, i18nResources.variant.polexan],
 			[ , , , , , , , ,1, , , , , , , , ,0,0,0,0,1,1, , , , , , , , , , , , , ,0,0, i18nResources.variant.talian],
 			[1,1,0,0, ,0,1, , , , , , ,0,1, , , , , , , , , , , , , , , ,0, , , ,1, ,1,1, i18nResources.variant.veronexe],
+//{"timestamp":"2017-09-14T12:15:19","instance":[null,null,null,"EQ",null,null,null,"EQ"],"questionOrder":[7,3],"nodeClass":"liventin","newClass":false,"supervisorName":"marco","supervisorAge":"42","supervisorPlace":"verona","ip":"37.186.201.54","city":"Milan","country":"Italy","latitude":45.4643,"longitude":9.1895}
 			[ , , , , , , , , , , , , ,0, , , ,0,0,0,0,1,0, , , , , , , ,0, , , , , , , , i18nResources.variant['alto veronexe']],
 			[ , , , , , , , , , , , , ,0, , , ,0,0,0,1,0,0, , , , , , , ,0, , , , , , , , i18nResources.variant['baso veronexe']],
 //{"timestamp":"2017-04-28T17:37:24","instance":[null,null,null,null,null,null,null,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1],"questionOrder":[26,7],"nodeClass":"","newClass":true,"supervisorName":"Giovanni","supervisorAge":"14","supervisorPlace":"verona","ip":"79.31.182.146","city":"Milan","country":"Italy","latitude":45.4667,"longitude":9.2}
