@@ -5853,6 +5853,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "strigon",		"",			1,	5,	"a",	"1775",			"",
 "strik",			"",			1,	3,	"a",	"1980",			"",
 "strik",			"de",			1,	3,	"a",	"1980",			"Depenar.",
+"stril",			"",			1,	3,	"a",	"1829",			"",
 "string",		"",			1,	3,	"a",	"1854",			"",
 "stris",			"",			1,	3,	"a",	"1775",			"",
 "stroleg",		"",			1,	3,	"g",	"1560",			"Pensar, prevéder.",
