@@ -5858,7 +5858,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "stris",			"",			1,	3,	"a",	"1775",			"",
 "stroleg",		"",			1,	3,	"g",	"1560",			"Pensar, prevéder.",
 "stroment",		"in",			1,	5,	"a",	"1829",			"Far on stromento.",
-"stronŧ",		"",			1,	3,	"a",	"1867",			"Tajar o limar via el bordo esterna de na monea par diminuirgene el valor.",
+"stronđ",		"",			1,	3,	"a",	"1829",			"Tajar o limar via el bordo esterna de na monea par diminuirgene el valor.",
 "strop",			"",			1,	3,	"a",	"1510",			"Sarar on buxo.",
 "strop",			"de",			1,	3,	"a",	"1560",			"Vérđer on buxo, sturar, strapar.",
 "stroŧ",			"",			1,	3,	"g",	"1867",			"",
