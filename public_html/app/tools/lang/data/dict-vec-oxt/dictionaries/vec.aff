@@ -1615,8 +1615,8 @@ SFX d0 ir ívitu/M0 ir	is:interrogative
 SFX d0 ir ívone/K0 ir	is:interrogative
 SFX d0 ir ónmene/G0 ir
 SFX d0 o a/E0E1E2 o
-SFX d0 o e/E0E1E2F0I0J0 [^lr]o
-SFX d0 o e/E0E1E2F0I0J0 [aeiouàèéíòóú][lr]o
+SFX d0 o e/E0E1E2F0J0 [^lr]o
+SFX d0 o e/E0E1E2F0J0 [aeiouàèéíòóú][lr]o
 SFX d0 o e/E0E1E2F0J0 [^aeiouàèéíòóú][lr]o
 SFX d0 o i/E0E1E2F0L0 [^i]o
 SFX d0 r do/B0 ir
@@ -2066,8 +2066,7 @@ SFX e1 r ónmelo/G1 [^cijɉñ]ir
 # vèrbi -<is>ír/-ír
 # themeT1 + r/a0a1a2e0e1e2E0E1E2
 # themeT8 + o/e0e1e2E0E1E2J0
-SFX e2 Y 49
-SFX e2 0 ƚo/G2 ir
+SFX e2 Y 48
 SFX e2 ir arave-ƚo/B0 ir
 SFX e2 ir araƚo/B0 ir
 SFX e2 ir arà-ƚo/B0 ir
@@ -2347,7 +2346,7 @@ SFX f0 e nto oe
 SFX f0 e te/T0 oe
 SFX f0 e u/O0 oe
 SFX f0 o a/E0E1E2F0 o
-SFX f0 o e/E0E1E2F0I0J0 o
+SFX f0 o e/E0E1E2F0J0 o
 SFX f0 o i/E0E1E2F0L0 o
 SFX f0 oe ae/T0 oe
 SFX f0 oe ame/G0 oe
@@ -2475,7 +2474,7 @@ SFX f1 o lo/B0 ào
 # themeT8 + oe/f0f1f2E0E1E2I0J0
 # themeT6 + do/T0Y0
 # themeT6 + da/D0Y0
-SFX f2 Y 71
+SFX f2 Y 70
 SFX f2 ào age-ƚo/B0 ào
 SFX f2 0 àƚo/B0 ar
 SFX f2 0 à-ƚo/B0 ar
@@ -2485,7 +2484,6 @@ SFX f2 0 íeƚo/B0 ar
 SFX f2 0 íe-ƚo/B0 ar
 SFX f2 0 íseƚo/Q2 ar
 SFX f2 0 ónmeƚo/G2 ar
-SFX f2 0 ƚo/G2 ar
 SFX f2 0 ave-ƚo/B0 ar
 SFX f2 0 iónmeƚo/G2 [^cijɉñ]ar
 SFX f2 ar àmeƚo/G2 ar
@@ -4563,14 +4561,14 @@ SFX G0 mene gene mene
 SFX G0 mene gen mene
 
 # vèrbi prokonplementari
-SFX G1 Y 46
+SFX G1 Y 43
 SFX G1 me lo me
 SFX G1 me la me
 SFX G1 me li me
 SFX G1 me le me
-SFX G1 o a [^m][^e]lo
-SFX G1 o i [^m][^e]lo
-SFX G1 o e [^m][^e]lo
+SFX G1 o a [aeèior]lo
+SFX G1 o i [aeèior]lo
+SFX G1 o e [aeèior]lo
 SFX G1 ne lo mene
 SFX G1 ne la mene
 SFX G1 ne li mene
@@ -4591,9 +4589,6 @@ SFX G1 mene gelo mene
 SFX G1 mene gela mene
 SFX G1 mene geli mene
 SFX G1 mene gele mene
-SFX G1 o a melo
-SFX G1 o i melo
-SFX G1 o e melo
 SFX G1 melo selo melo
 SFX G1 melo sela melo
 SFX G1 melo seli melo
@@ -4612,14 +4607,14 @@ SFX G1 melo geli melo
 SFX G1 melo gele melo
 
 # vèrbi prokonplementari
-SFX G2 Y 46
+SFX G2 Y 43
 SFX G2 me ƚo me
 SFX G2 me ƚa me
 SFX G2 me ƚi me
 SFX G2 me ƚe me
-SFX G2 o a [^m][^e]ƚo
-SFX G2 o i [^m][^e]ƚo
-SFX G2 o e [^m][^e]ƚo
+SFX G2 o a [aeèio]ƚo
+SFX G2 o i [aeèio]ƚo
+SFX G2 o e [aeèio]ƚo
 SFX G2 ne ƚo mene
 SFX G2 ne ƚa mene
 SFX G2 ne ƚi mene
@@ -4640,9 +4635,6 @@ SFX G2 mene geƚo mene
 SFX G2 mene geƚa mene
 SFX G2 mene geƚi mene
 SFX G2 mene geƚe mene
-SFX G2 o a meƚo
-SFX G2 o i meƚo
-SFX G2 o e meƚo
 SFX G2 meƚo seƚo meƚo
 SFX G2 meƚo seƚa meƚo
 SFX G2 meƚo seƚi meƚo
@@ -4892,7 +4884,7 @@ SFX u0 n i n
 
 
 # trasformaŧion intra varianti (l > ƚ, j > ɉ, ŧ > s)
-SFX T2 Y 38
+SFX T2 Y 39
 SFX T2 lò ƚò [aeiouàèéíòóú]lò
 SFX T2 là ƚà [aeiouàèéíòóú]là
 SFX T2 lè ƚè [aeiouàèéíòóú]lè
@@ -4915,7 +4907,8 @@ SFX T2 lena ƚena/D0 [aeiouàèéíòóú]lena
 SFX T2 jo ɉo/T0I0 jo
 SFX T2 ja ɉa/D0 ja
 SFX T2 jon ɉon/D0U0mf jon
-SFX T2 ŧo so/T0I0mf ŧo
+SFX T2 ŧo so/T0I0mf [^u]ŧo
+SFX T2 ŧo so/T0I0 uŧo
 SFX T2 ŧa sa/D0 ŧa
 SFX T2 ŧio sio/T0 ŧio
 SFX T2 ŧia sia/D0 ŧia
@@ -4976,7 +4969,7 @@ SFX V0 oƚa ioƚa/D0 [rs]oƚa	po:noun
 SFX V0 oƚa iòƚa/D0 [rs]oƚa	po:noun
 
 # negòŧi, atività komerŧali o industriali, aŧion, scapi de ròbe o de parsone (-ría)
-SFX v0 Y 42
+SFX v0 Y 44
 SFX v0 e aría/D0 e	po:noun
 SFX v0 0 ría/D0 e	po:noun
 SFX v0 0 ría/D0 [^ilƚ]a	po:noun
@@ -4991,8 +4984,10 @@ SFX v0 èla elería/D0 èla	po:noun
 SFX v0 èƚa eƚería/D0 èƚa	po:noun
 SFX v0 èsia esiería/D0 èsia	po:noun
 SFX v0 èŧia eŧiería/D0 èŧia	po:noun
-SFX v0 o aría/D0 [^èò][^cdđktx]o	po:noun
-SFX v0 o ería/D0 [^èò][^cdđktx]o	po:noun
+SFX v0 o aría/D0 [^èò][cdđktx]o	po:noun
+SFX v0 o ería/D0 [^èò][cdđktx]o	po:noun
+SFX v0 o aría/D0 [èò][^cdđktx]o	po:noun
+SFX v0 o ería/D0 [èò][^cdđktx]o	po:noun
 SFX v0 o aría/D0 [^èò]do	po:noun
 SFX v0 o ería/D0 [^èò]do	po:noun
 SFX v0 o aría/D0 [^è][đtx]o	po:noun
@@ -5165,7 +5160,7 @@ SFX S0 òto otixmo/T0 òto	po:noun
 
 
 # metafonèxi
-SFX mf Y 40
+SFX mf Y 43
 SFX mf el ili el
 SFX mf en ini en
 SFX mf on uni on
@@ -5174,8 +5169,10 @@ SFX mf er iri er
 SFX mf eko iki eko
 SFX mf eƚo iƚi eƚo
 SFX mf eño iñi eño
+SFX mf eso isi eso
 SFX mf eto iti eto
 SFX mf exo ixi exo
+SFX mf èƚo iƚi èƚo
 SFX mf oƚo uƚi oƚo
 SFX mf ol uli ol
 SFX mf or uri or
@@ -5202,6 +5199,7 @@ SFX mf oƚoxo uƚuxi oƚoxo
 SFX mf omoxo umuxi omoxo
 SFX mf oroxo uruxi oroxo
 SFX mf ostoxo ustuxi ostoxo
+SFX mf ente inti ente
 SFX mf ento inti ento
 SFX mf onte unti onte
 SFX mf exe ixi exe
