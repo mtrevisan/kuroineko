@@ -4909,9 +4909,7 @@ SFX T2 jo ɉo/T0I0 jo
 SFX T2 ja ɉa/D0 ja
 SFX T2 jon ɉon/D0U0mf jon
 SFX T2 ŧo so/T0I0mf [eoèéòó]ŧo
-SFX T2 ŧo so/T0I0 [^lu]ŧo
-SFX T2 ŧo so/T0I0 [^a]lŧo
-SFX T2 ŧo so/T0I0 uŧo
+SFX T2 ŧo so/T0I0 [^eoèéòó]ŧo
 SFX T2 ŧa sa/D0 ŧa
 SFX T2 ŧio sio/T0 ŧio
 SFX T2 ŧia sia/D0 ŧia
@@ -4974,31 +4972,29 @@ SFX V0 oƚa ioƚa/D0 [rs]oƚa	po:noun
 SFX V0 oƚa iòƚa/D0 [rs]oƚa	po:noun
 
 # negòŧi, atività komerŧali o industriali, aŧion, scapi de ròbe o de parsone (-ría)
-SFX v0 Y 44
+SFX v0 Y 42
 SFX v0 e aría/D0 e	po:noun
 SFX v0 0 ría/D0 e	po:noun
-SFX v0 0 ría/D0 [^ilƚ]a	po:noun
-SFX v0 0 ría/D0 [^è][lƚ]a	po:noun
-SFX v0 èla elaría/D0 èla	po:noun
-SFX v0 èƚa eƚaría/D0 èƚa	po:noun
-SFX v0 èsia esiaría/D0 èsia	po:noun
-SFX v0 èŧia eŧiaría/D0 èŧia	po:noun
-SFX v0 a ería/D0 [^ilƚ]a	po:noun
+SFX v0 a ería/D0 [^lƚ]a	po:noun
+SFX v0 0 ría/D0 [^lƚ]a	po:noun
 SFX v0 a ería/D0 [^è][lƚ]a	po:noun
+SFX v0 0 ría/D0 [^è][lƚ]a	po:noun
 SFX v0 èla elería/D0 èla	po:noun
+SFX v0 èla elaría/D0 èla	po:noun
 SFX v0 èƚa eƚería/D0 èƚa	po:noun
+SFX v0 èƚa eƚaría/D0 èƚa	po:noun
 SFX v0 èsia esiería/D0 èsia	po:noun
+SFX v0 èsia esiaría/D0 èsia	po:noun
 SFX v0 èŧia eŧiería/D0 èŧia	po:noun
-SFX v0 o aría/D0 [^èò][bcdđmrktx]o	po:noun
-SFX v0 o ería/D0 [^èò][bcdđmrktx]o	po:noun
-SFX v0 o aría/D0 [èò][^bcdđmrktx]o	po:noun
-SFX v0 o ería/D0 [èò][^bcdđmrktx]o	po:noun
-SFX v0 o aría/D0 [^èò]do	po:noun
+SFX v0 èŧia eŧiaría/D0 èŧia	po:noun
+SFX v0 o ería/D0 [^cdđktx]o	po:noun
+SFX v0 o aría/D0 [^cdđktx]o	po:noun
 SFX v0 o ería/D0 [^èò]do	po:noun
-SFX v0 o aría/D0 [^è][đtx]o	po:noun
+SFX v0 o aría/D0 [^èò]do	po:noun
 SFX v0 o ería/D0 [^è][đtx]o	po:noun
-SFX v0 o aría/D0 [^ò][ck]o	po:noun
+SFX v0 o aría/D0 [^è][đtx]o	po:noun
 SFX v0 o ería/D0 [^ò][ck]o	po:noun
+SFX v0 o aría/D0 [^ò][ck]o	po:noun
 SFX v0 èdo edaría/D0 èdo	po:noun
 SFX v0 èdo edería/D0 èdo	po:noun
 SFX v0 èđo eđaría/D0 èđo	po:noun
@@ -5165,30 +5161,46 @@ SFX S0 òto otixmo/T0 òto	po:noun
 
 
 # metafonèxi
-SFX mf Y 44
+SFX mf Y 61
 SFX mf el ili el
 SFX mf en ini en
 SFX mf on uni on
 SFX mf órden úrdini órden
 SFX mf er iri er
+SFX mf edo idi edo
+SFX mf èdo idi èdo
+SFX mf eđo iđi eđo
+SFX mf èđo iđi èđo
 SFX mf eko iki eko
 SFX mf eƚo iƚi eƚo
+SFX mf èƚo iƚi èƚo
 SFX mf eño iñi eño
 SFX mf eso isi eso
+SFX mf èso isi èso
 SFX mf eto iti eto
+SFX mf èto iti èto
+SFX mf eŧo iŧi eŧo
 SFX mf exo ixi exo
-SFX mf èƚo iƚi èƚo
+SFX mf èxo ixi èxo
+SFX mf evo ivi evo
+SFX mf òdo udi òdo
+SFX mf òđo uđi òđo
+SFX mf oko uki oko
 SFX mf oƚo uƚi oƚo
+SFX mf òƚo uƚi òƚo
+SFX mf oño iñi oño
+SFX mf oso usi oso
+SFX mf òso usi òso
+SFX mf oto uti oto
+SFX mf oŧo uŧi oŧo
+SFX mf oxo uxi oxo
+SFX mf òxo uxi òxo
+SFX mf ovo uvi ovo
 SFX mf ol uli ol
 SFX mf or uri or
 SFX mf olko ulki olko
 SFX mf ordo urdi ordo
 SFX mf orko urki orko
-SFX mf oko uki oko
-SFX mf oso usi oso
-SFX mf oto uti oto
-SFX mf oxo uxi oxo
-SFX mf ovo uvi ovo
 SFX mf obioxo ubiuxi obioxo
 SFX mf obrioxo ubriuxi obrioxo
 SFX mf ofioxo ufiuxi ofioxo
@@ -5208,6 +5220,7 @@ SFX mf ostoxo ustuxi ostoxo
 SFX mf ente inti ente
 SFX mf ento inti ento
 SFX mf onte unti onte
+SFX mf onto unti onto
 SFX mf exe ixi exe
 SFX mf orse ursi orse
 
@@ -5287,7 +5300,7 @@ SFX Y1 ada à ada
 
 
 # sostantivi alterài - demenutivi in -eto/a
-SFX &0 Y 80
+SFX &0 Y 81
 SFX &0 ú ueto/T0I0mf ú
 SFX &0 0 eto/T0I0mf [^èò]l
 SFX &0 èl eleto/T0I0mf èl
@@ -5334,6 +5347,7 @@ SFX &0 òvo oveto/T0I0mf òvo
 SFX &0 òxo oxeto/T0I0mf òxo
 SFX &0 ía ieta/D0 ía
 SFX &0 a eta/D0 [^bcdđgíjɉklmnñprsŧvx]a
+SFX &0 a eta/D0 [^ò]ma
 SFX &0 a eta/D0 [^è][gv]a
 SFX &0 a eta/D0 [^èò][bdđklnprŧx]a
 SFX &0 a eta/D0 [^ò][cjɉñs]a
