@@ -6884,6 +6884,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vin",			"stra",		1,	1,	"a",	"1775",			"Trasudar de i likuori.",
 "vinaŧ",			"",			1,	3,	"g",	"1867",			"Abuxar de ʼl vin.",
 "vinaŧ",			"in",			1,	3,	"g",	"1560",			"",
+"vinaŧ",			"x",			1,	3,	"g",	"1829",			"",
 "vindik",		"",			1,	1,	"a",	"1509",			"Vendegar.",
 "vinkol",		"",			1,	1,	"a",	"",				"",
 "vínŧ",			"",			3,	1,	"a",	"1454",			"",
