@@ -5894,6 +5894,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "stup",			"de",			1,	2,	"a",	"1810",			"Sturar.",
 "stupaj",		"de",			1,	4,	"g",	"1810",			"",
 "stupid",		"",			4,	6,	"a",	"1867",			"",
+"stupid",		"in",			4,	6,	"a",	"1829",			"",
 "stupin",		"",			1,	4,	"a",	"1775",			"Turar, stukar, rinxafar.",
 "stur",			"",			1,	2,	"a",	"",				"",
 "su",				"",			1,	1,	"a",	"1847",			"",
