@@ -111,6 +111,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "arđin",			"",			1,	0,	"g",	"", 				"",
 "arđiñ",			"",			1,	0,	"g",	"1980", 			"",
 "aren",			"",			1,	2,	"a",	"1867",			"",
+"arend",			"sub",		1,	2,	"a",	"1829",			"Dar in apalto.",
 "argoment",		"",			1,	5,	"a",	"1568",			"",
 "argu",			"",			4,	4,	"a",	"1348",			"",
 "ark",			"",			1,	0,	"g",	"1854",			"Piegar, mòver el braŧ par dar na xberla.",
