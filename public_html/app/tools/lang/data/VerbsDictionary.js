@@ -6775,6 +6775,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vèñ",			"skon",		3,	1,	"g",	"1854",			"",
 "vèñ",			"so",			3,	1,	"g",	"1450",			"Jutar, sokórer, vèñer inamente.",
 "vèñ",			"sora",		3,	1,	"g",	"",				"",
+"vèñ",			"x",			3,	1,	"g",	"1829",			"",
 /*"véñ",			"",			3,	1,	"g",	"1362",			"",
 "véñ",			"a",			3,	1,	"g",	"",				"",
 "véñ",			"ar",			3,	1,	"g",	"1560",			"",
