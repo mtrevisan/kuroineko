@@ -6009,6 +6009,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tans",			"",			1,	1,	"g",	"1775",			"Tasar.",
 "tanf",			"s",			1,	1,	"g",	"1998",			"",
 "tanfi",			"",			1,	1,	"g",	"1847",			"Tafiar.",
+"tanpan",		"",			1,	1,	"a",	"1829",			"Tinpanar.",
 "tant",			"des",		1,	1,	"g",	"1829",			"Intantar, opòsto a inkocar, vínŧer l' ostinaŧion.",
 "tant",			"in",			1,	1,	"g",	"1775",			"Korucar, invelenir.",
 "tantar",		"s",			1,	1,	"g",	"1829",			"",
