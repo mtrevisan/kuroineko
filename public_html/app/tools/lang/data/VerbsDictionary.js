@@ -6062,6 +6062,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tec",			"in",			1,	1,	"a",	"1775",			"",
 "tedi",			"",			1,	1,	"g",	"1775",			"",
 "tegol",			"des",		1,	1,	"a",	"1775",			"Destregolar, xgusar.",
+"tej",			"",			1,	2,	"a",	"1829",			"",
 "telefon",		"",			1,	3,	"g",	"1980",			"",
 "teler",			"in",			1,	1,	"g",	"1854",			"Méter intel telèr.",
 "tèm",			"",			3,	1,	"g",	"1980",			"",
