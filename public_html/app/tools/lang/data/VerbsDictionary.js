@@ -6093,6 +6093,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tenper",		"in",			1,	1,	"a",	"1852",			"Tenperar.",
 "tenper",		"o",			1,	1,	"a",	"1415",			"",
 "tenper",		"s",			1,	1,	"a",	"1998",			"",
+"tenperin",		"",			1,	6,	"a",	"1829",			"Dar un kolpo ko ʼl tenperin.",
 "tenpoređ",		"",			1,	6,	"a",	"1775",			"",
 "tenporeɉ",		"",			1,	6,	"a",	"1867",			"",
 "tenporiđ",		"",			1,	6,	"a",	"1509",			"",
