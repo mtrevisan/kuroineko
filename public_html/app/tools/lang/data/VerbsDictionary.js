@@ -6187,6 +6187,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "termin",		"s",			1,	1,	"g",	"1847",			"",
 "terŧ",			"in",			1,	1,	"g",	"1775",			"Divíder in terŧi, aviŧendar.",
 "terŧariol",	"",			1,	7,	"g",	"1867",			"Divíder in terŧi, aviŧendar.",
+"terŧarol",		"",			1,	7,	"g",	"1829",			"Divíder in terŧi, aviŧendar.",
 "tès",			"",			3,	1,	"g",	"1562",			"",
 "tès",			"des",		3,	1,	"g",	"1854",			"",
 "tès",			"pre",		3,	1,	"g",	"1415",			"",
