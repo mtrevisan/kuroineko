@@ -6205,6 +6205,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "texor",			"",			1,	3,	"g",	"1852",			"",
 "tibi",			"",			1,	1,	"a",	"1775",			"Trebiar.",
 "tikiñ",			"",			1,	3,	"a",	"1852",			"Frugar, stimolar, insitar.",
+"tigr",			"",			1,	1,	"a",	"1829",			"",
+"til",			"",			1,	1,	"a",	"1829",			"Atilar.",
 "timon",			"",			1,	3,	"a",	"",				"",
 "timor",			"in",			4,	5,	"a",	"1605",			"",
 "tinbr",			"",			1,	1,	"a",	"1980",			"",
