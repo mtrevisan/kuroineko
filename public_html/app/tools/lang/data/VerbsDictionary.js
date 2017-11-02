@@ -6232,6 +6232,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tok",			"in",			1,	1,	"a",	"1775",			"Apalotolar.",
 "tok",			"re",			1,	1,	"a",	"1775",			"",
 "tokiđ",			"s",			1,	3,	"a",	"1852",			"Skrokiar.",
+"tol",			"",			1,	1,	"g",	"1829",			"",
 "tol",			"in",			1,	1,	"g",	"1854",			"Méter in tola.",
 "tol",			"",			2,	1,	"g",	"1376",			"",
 "tol",			"des",		2,	1,	"g",	"1810",			"",
