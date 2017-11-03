@@ -3417,9 +3417,8 @@ SFX k0 lo gone/K0 [cit][oò]lo	is:interrogative
 # vèrbi -ér inregolari ((des|re)(c|ti?)oler, (mal|re)voler)
 # themeT1 + r/a0a1a2k0k1k2E0E1E2
 # themeT8 + o/a0a1a2k0k1k2I0J0
-SFX k1 Y 19
+SFX k1 Y 18
 SFX k1 er éndolo/G1 er
-SFX k1 er éndomelo/G1 er
 SFX k1 er éntolo/G1 er
 SFX k1 er éntomelo/G1 er
 SFX k1 ler rave-lo/B0 oler
@@ -3441,8 +3440,7 @@ SFX k1 lo gimelo/G1 [cit][oò]lo
 # vèrbi -ér inregolari ((des|re)(c|ti?)oler, (mal|re)voler)
 # themeT1 + r/a0a1a2k0k1k2E0E1E2
 # themeT8 + o/a0a1a2k0k1k2I0J0
-SFX k2 Y 19
-SFX k2 er éndomeƚo/G2 er
+SFX k2 Y 18
 SFX k2 er éndoƚo/G2 er
 SFX k2 er éntomeƚo/G2 er
 SFX k2 er éntoƚo/G2 er
@@ -4504,17 +4502,17 @@ SFX p0 èser ɉèrone/K0 èser	is:interrogative
 # tute le deklinaŧion, ajetivi de prima klase
 SFX B0 Y 8
 SFX B0 0 o [^aieo]	is:singular
-SFX B0 0 a [^aieo]	is:singular is:femenine
+SFX B0 0 a [^aieo]	is:singular_femenine
 SFX B0 0 i [^aieo]	is:plural
 SFX B0 0 e [^aieo]	is:plural
-SFX B0 o a o	is:singular is:femenine
+SFX B0 o a o	is:singular_femenine
 SFX B0 o e o	is:plural
 SFX B0 o i [^i]o	is:plural
 SFX B0 io i io	is:plural
 
 # ajetivi de sekonda klase
 SFX C0 Y 5
-SFX C0 0 a [^aieo]	is:singular is:femenine
+SFX C0 0 a [^aieo]	is:singular_femenine
 SFX C0 0 i [^aieo]	is:plural
 SFX C0 0 e [^aieo]
 SFX C0 a e a
@@ -4529,227 +4527,227 @@ SFX D0 a e a
 
 # vèrbi prokonplementari
 SFX E0 Y 13
-SFX E0 0 -ge .
-SFX E0 0 -gine .
-SFX E0 0 -gene .
-SFX E0 0 -gen .
-SFX E0 0 -me .
-SFX E0 0 -mene .
-SFX E0 0 -ne .
-SFX E0 0 -se .
-SFX E0 0 -sene .
-SFX E0 0 -te .
-SFX E0 0 -tene .
-SFX E0 0 -ve .
-SFX E0 0 -vene .
+SFX E0 0 -ge .	is:procomplementar
+SFX E0 0 -gine .	is:procomplementar
+SFX E0 0 -gene .	is:procomplementar
+SFX E0 0 -gen .	is:procomplementar
+SFX E0 0 -me .	is:procomplementar
+SFX E0 0 -mene .	is:procomplementar
+SFX E0 0 -ne .	is:procomplementar
+SFX E0 0 -se .	is:procomplementar
+SFX E0 0 -sene .	is:procomplementar
+SFX E0 0 -te .	is:procomplementar
+SFX E0 0 -tene .	is:procomplementar
+SFX E0 0 -ve .	is:procomplementar
+SFX E0 0 -vene .	is:procomplementar
 
 # vèrbi prokonplementari
 SFX E1 Y 24
-SFX E1 0 -gelo .
-SFX E1 0 -gela .
-SFX E1 0 -geli .
-SFX E1 0 -gele .
-SFX E1 0 -lo .
-SFX E1 0 -la .
-SFX E1 0 -li .
-SFX E1 0 -le .
-SFX E1 0 -melo .
-SFX E1 0 -mela .
-SFX E1 0 -meli .
-SFX E1 0 -mele .
-SFX E1 0 -selo .
-SFX E1 0 -sela .
-SFX E1 0 -seli .
-SFX E1 0 -sele .
-SFX E1 0 -telo .
-SFX E1 0 -tela .
-SFX E1 0 -teli .
-SFX E1 0 -tele .
-SFX E1 0 -velo .
-SFX E1 0 -vela .
-SFX E1 0 -veli .
-SFX E1 0 -vele .
+SFX E1 0 -gelo .	is:procomplementar
+SFX E1 0 -gela .	is:procomplementar
+SFX E1 0 -geli .	is:procomplementar
+SFX E1 0 -gele .	is:procomplementar
+SFX E1 0 -lo .	is:procomplementar
+SFX E1 0 -la .	is:procomplementar
+SFX E1 0 -li .	is:procomplementar
+SFX E1 0 -le .	is:procomplementar
+SFX E1 0 -melo .	is:procomplementar
+SFX E1 0 -mela .	is:procomplementar
+SFX E1 0 -meli .	is:procomplementar
+SFX E1 0 -mele .	is:procomplementar
+SFX E1 0 -selo .	is:procomplementar
+SFX E1 0 -sela .	is:procomplementar
+SFX E1 0 -seli .	is:procomplementar
+SFX E1 0 -sele .	is:procomplementar
+SFX E1 0 -telo .	is:procomplementar
+SFX E1 0 -tela .	is:procomplementar
+SFX E1 0 -teli .	is:procomplementar
+SFX E1 0 -tele .	is:procomplementar
+SFX E1 0 -velo .	is:procomplementar
+SFX E1 0 -vela .	is:procomplementar
+SFX E1 0 -veli .	is:procomplementar
+SFX E1 0 -vele .	is:procomplementar
 
 # vèrbi prokonplementari
 SFX E2 Y 24
-SFX E2 0 -geƚo .
-SFX E2 0 -geƚa .
-SFX E2 0 -geƚi .
-SFX E2 0 -geƚe .
-SFX E2 0 -ƚo [aàeèéiíoòóuú]
-SFX E2 0 -ƚa [aàeèéiíoòóuú]
-SFX E2 0 -ƚi [aàeèéiíoòóuú]
-SFX E2 0 -ƚe [aàeèéiíoòóuú]
-SFX E2 0 -meƚo .
-SFX E2 0 -meƚa .
-SFX E2 0 -meƚi .
-SFX E2 0 -meƚe .
-SFX E2 0 -seƚo .
-SFX E2 0 -seƚa .
-SFX E2 0 -seƚi .
-SFX E2 0 -seƚe .
-SFX E2 0 -teƚo .
-SFX E2 0 -teƚa .
-SFX E2 0 -teƚi .
-SFX E2 0 -teƚe .
-SFX E2 0 -veƚo .
-SFX E2 0 -veƚa .
-SFX E2 0 -veƚi .
-SFX E2 0 -veƚe .
+SFX E2 0 -geƚo .	is:procomplementar
+SFX E2 0 -geƚa .	is:procomplementar
+SFX E2 0 -geƚi .	is:procomplementar
+SFX E2 0 -geƚe .	is:procomplementar
+SFX E2 0 -ƚo [aàeèéiíoòóuú]	is:procomplementar
+SFX E2 0 -ƚa [aàeèéiíoòóuú]	is:procomplementar
+SFX E2 0 -ƚi [aàeèéiíoòóuú]	is:procomplementar
+SFX E2 0 -ƚe [aàeèéiíoòóuú]	is:procomplementar
+SFX E2 0 -meƚo .	is:procomplementar
+SFX E2 0 -meƚa .	is:procomplementar
+SFX E2 0 -meƚi .	is:procomplementar
+SFX E2 0 -meƚe .	is:procomplementar
+SFX E2 0 -seƚo .	is:procomplementar
+SFX E2 0 -seƚa .	is:procomplementar
+SFX E2 0 -seƚi .	is:procomplementar
+SFX E2 0 -seƚe .	is:procomplementar
+SFX E2 0 -teƚo .	is:procomplementar
+SFX E2 0 -teƚa .	is:procomplementar
+SFX E2 0 -teƚi .	is:procomplementar
+SFX E2 0 -teƚe .	is:procomplementar
+SFX E2 0 -veƚo .	is:procomplementar
+SFX E2 0 -veƚa .	is:procomplementar
+SFX E2 0 -veƚi .	is:procomplementar
+SFX E2 0 -veƚe .	is:procomplementar
 
 # vèrbi prokonplementari pal komandativo
 SFX F0 Y 15
-SFX F0 a e-me a
-SFX F0 a e-ne a
-SFX F0 a e-te a
-SFX F0 a e-ve a
-SFX F0 a e-ge a
-SFX F0 i e-me i
-SFX F0 i e-ne i
-SFX F0 i e-te i
-SFX F0 i e-ve i
-SFX F0 i e-ge i
-SFX F0 0 -me [^a]
-SFX F0 0 -ne [^a]
-SFX F0 0 -te [^a]
-SFX F0 0 -ve [^a]
-SFX F0 0 -ge [^a]
+SFX F0 a e-me a	is:procomplementar
+SFX F0 a e-ne a	is:procomplementar
+SFX F0 a e-te a	is:procomplementar
+SFX F0 a e-ve a	is:procomplementar
+SFX F0 a e-ge a	is:procomplementar
+SFX F0 i e-me i	is:procomplementar
+SFX F0 i e-ne i	is:procomplementar
+SFX F0 i e-te i	is:procomplementar
+SFX F0 i e-ve i	is:procomplementar
+SFX F0 i e-ge i	is:procomplementar
+SFX F0 0 -me [^a]	is:procomplementar
+SFX F0 0 -ne [^a]	is:procomplementar
+SFX F0 0 -te [^a]	is:procomplementar
+SFX F0 0 -ve [^a]	is:procomplementar
+SFX F0 0 -ge [^a]	is:procomplementar
 
 # vèrbi prokonplementari pal komandativo
 SFX F1 Y 12
-SFX F1 a e-lo a
-SFX F1 a e-la a
-SFX F1 a e-li a
-SFX F1 a e-le a
-SFX F1 i e-lo i
-SFX F1 i e-la i
-SFX F1 i e-li i
-SFX F1 i e-le i
-SFX F1 0 -lo [^a]
-SFX F1 0 -la [^a]
-SFX F1 0 -li [^a]
-SFX F1 0 -le [^a]
+SFX F1 a e-lo a	is:procomplementar
+SFX F1 a e-la a	is:procomplementar
+SFX F1 a e-li a	is:procomplementar
+SFX F1 a e-le a	is:procomplementar
+SFX F1 i e-lo i	is:procomplementar
+SFX F1 i e-la i	is:procomplementar
+SFX F1 i e-li i	is:procomplementar
+SFX F1 i e-le i	is:procomplementar
+SFX F1 0 -lo [^a]	is:procomplementar
+SFX F1 0 -la [^a]	is:procomplementar
+SFX F1 0 -li [^a]	is:procomplementar
+SFX F1 0 -le [^a]	is:procomplementar
 
 # vèrbi prokonplementari pal komandativo
 SFX F2 Y 12
-SFX F2 a e-ƚo a
-SFX F2 a e-ƚa a
-SFX F2 a e-ƚi a
-SFX F2 a e-ƚe a
-SFX F2 i e-ƚo i
-SFX F2 i e-ƚa i
-SFX F2 i e-ƚi i
-SFX F2 i e-ƚe i
-SFX F2 0 -ƚo [^a]
-SFX F2 0 -ƚa [^a]
-SFX F2 0 -ƚi [^a]
-SFX F2 0 -ƚe [^a]
+SFX F2 a e-ƚo a	is:procomplementar
+SFX F2 a e-ƚa a	is:procomplementar
+SFX F2 a e-ƚi a	is:procomplementar
+SFX F2 a e-ƚe a	is:procomplementar
+SFX F2 i e-ƚo i	is:procomplementar
+SFX F2 i e-ƚa i	is:procomplementar
+SFX F2 i e-ƚi i	is:procomplementar
+SFX F2 i e-ƚe i	is:procomplementar
+SFX F2 0 -ƚo [^a]	is:procomplementar
+SFX F2 0 -ƚa [^a]	is:procomplementar
+SFX F2 0 -ƚi [^a]	is:procomplementar
+SFX F2 0 -ƚe [^a]	is:procomplementar
 
 # vèrbi prokonplementari
 SFX G0 Y 11
-SFX G0 me ne me
-SFX G0 me se me
-SFX G0 me te me
-SFX G0 me ve me
-SFX G0 me ge me
-SFX G0 mene sene mene
-SFX G0 mene tene mene
-SFX G0 mene vene mene
-SFX G0 mene gine mene
-SFX G0 mene gene mene
-SFX G0 mene gen mene
+SFX G0 me ne me	is:procomplementar
+SFX G0 me se me	is:procomplementar
+SFX G0 me te me	is:procomplementar
+SFX G0 me ve me	is:procomplementar
+SFX G0 me ge me	is:procomplementar
+SFX G0 mene sene mene	is:procomplementar
+SFX G0 mene tene mene	is:procomplementar
+SFX G0 mene vene mene	is:procomplementar
+SFX G0 mene gine mene	is:procomplementar
+SFX G0 mene gene mene	is:procomplementar
+SFX G0 mene gen mene	is:procomplementar
 
 # vèrbi prokonplementari
 SFX G1 Y 43
-SFX G1 me lo me
-SFX G1 me la me
-SFX G1 me li me
-SFX G1 me le me
-SFX G1 o a [aeèior]lo
-SFX G1 o i [aeèior]lo
-SFX G1 o e [aeèior]lo
-SFX G1 ne lo mene
-SFX G1 ne la mene
-SFX G1 ne li mene
-SFX G1 ne le mene
-SFX G1 mene selo mene
-SFX G1 mene sela mene
-SFX G1 mene seli mene
-SFX G1 mene sele mene
-SFX G1 mene telo mene
-SFX G1 mene tela mene
-SFX G1 mene teli mene
-SFX G1 mene tele mene
-SFX G1 mene velo mene
-SFX G1 mene vela mene
-SFX G1 mene veli mene
-SFX G1 mene vele mene
-SFX G1 mene gelo mene
-SFX G1 mene gela mene
-SFX G1 mene geli mene
-SFX G1 mene gele mene
-SFX G1 melo selo melo
-SFX G1 melo sela melo
-SFX G1 melo seli melo
-SFX G1 melo sele melo
-SFX G1 melo telo melo
-SFX G1 melo tela melo
-SFX G1 melo teli melo
-SFX G1 melo tele melo
-SFX G1 melo velo melo
-SFX G1 melo vela melo
-SFX G1 melo veli melo
-SFX G1 melo vele melo
-SFX G1 melo gelo melo
-SFX G1 melo gela melo
-SFX G1 melo geli melo
-SFX G1 melo gele melo
+SFX G1 me lo me	is:procomplementar
+SFX G1 me la me	is:procomplementar
+SFX G1 me li me	is:procomplementar
+SFX G1 me le me	is:procomplementar
+SFX G1 o a [aeèior]lo	is:procomplementar
+SFX G1 o i [aeèior]lo	is:procomplementar
+SFX G1 o e [aeèior]lo	is:procomplementar
+SFX G1 ne lo mene	is:procomplementar
+SFX G1 ne la mene	is:procomplementar
+SFX G1 ne li mene	is:procomplementar
+SFX G1 ne le mene	is:procomplementar
+SFX G1 mene selo mene	is:procomplementar
+SFX G1 mene sela mene	is:procomplementar
+SFX G1 mene seli mene	is:procomplementar
+SFX G1 mene sele mene	is:procomplementar
+SFX G1 mene telo mene	is:procomplementar
+SFX G1 mene tela mene	is:procomplementar
+SFX G1 mene teli mene	is:procomplementar
+SFX G1 mene tele mene	is:procomplementar
+SFX G1 mene velo mene	is:procomplementar
+SFX G1 mene vela mene	is:procomplementar
+SFX G1 mene veli mene	is:procomplementar
+SFX G1 mene vele mene	is:procomplementar
+SFX G1 mene gelo mene	is:procomplementar
+SFX G1 mene gela mene	is:procomplementar
+SFX G1 mene geli mene	is:procomplementar
+SFX G1 mene gele mene	is:procomplementar
+SFX G1 melo selo melo	is:procomplementar
+SFX G1 melo sela melo	is:procomplementar
+SFX G1 melo seli melo	is:procomplementar
+SFX G1 melo sele melo	is:procomplementar
+SFX G1 melo telo melo	is:procomplementar
+SFX G1 melo tela melo	is:procomplementar
+SFX G1 melo teli melo	is:procomplementar
+SFX G1 melo tele melo	is:procomplementar
+SFX G1 melo velo melo	is:procomplementar
+SFX G1 melo vela melo	is:procomplementar
+SFX G1 melo veli melo	is:procomplementar
+SFX G1 melo vele melo	is:procomplementar
+SFX G1 melo gelo melo	is:procomplementar
+SFX G1 melo gela melo	is:procomplementar
+SFX G1 melo geli melo	is:procomplementar
+SFX G1 melo gele melo	is:procomplementar
 
 # vèrbi prokonplementari
 SFX G2 Y 43
-SFX G2 me ƚo [aàeèéiíoòóuú]me
-SFX G2 me ƚa [aàeèéiíoòóuú]me
-SFX G2 me ƚi [aàeèéiíoòóuú]me
-SFX G2 me ƚe [aàeèéiíoòóuú]me
-SFX G2 o a [aeèio]ƚo
-SFX G2 o i [aeèio]ƚo
-SFX G2 o e [aeèio]ƚo
-SFX G2 ne ƚo mene
-SFX G2 ne ƚa mene
-SFX G2 ne ƚi mene
-SFX G2 ne ƚe mene
-SFX G2 mene seƚo mene
-SFX G2 mene seƚa mene
-SFX G2 mene seƚi mene
-SFX G2 mene seƚe mene
-SFX G2 mene teƚo mene
-SFX G2 mene teƚa mene
-SFX G2 mene teƚi mene
-SFX G2 mene teƚe mene
-SFX G2 mene veƚo mene
-SFX G2 mene veƚa mene
-SFX G2 mene veƚi mene
-SFX G2 mene veƚe mene
-SFX G2 mene geƚo mene
-SFX G2 mene geƚa mene
-SFX G2 mene geƚi mene
-SFX G2 mene geƚe mene
-SFX G2 meƚo seƚo meƚo
-SFX G2 meƚo seƚa meƚo
-SFX G2 meƚo seƚi meƚo
-SFX G2 meƚo seƚe meƚo
-SFX G2 meƚo teƚo meƚo
-SFX G2 meƚo teƚa meƚo
-SFX G2 meƚo teƚi meƚo
-SFX G2 meƚo teƚe meƚo
-SFX G2 meƚo veƚo meƚo
-SFX G2 meƚo veƚa meƚo
-SFX G2 meƚo veƚi meƚo
-SFX G2 meƚo veƚe meƚo
-SFX G2 meƚo geƚo meƚo
-SFX G2 meƚo geƚa meƚo
-SFX G2 meƚo geƚi meƚo
-SFX G2 meƚo geƚe meƚo
+SFX G2 me ƚo [aàeèéiíoòóuú]me	is:procomplementar
+SFX G2 me ƚa [aàeèéiíoòóuú]me	is:procomplementar
+SFX G2 me ƚi [aàeèéiíoòóuú]me	is:procomplementar
+SFX G2 me ƚe [aàeèéiíoòóuú]me	is:procomplementar
+SFX G2 o a [aeèio]ƚo	is:procomplementar
+SFX G2 o i [aeèio]ƚo	is:procomplementar
+SFX G2 o e [aeèio]ƚo	is:procomplementar
+SFX G2 ne ƚo mene	is:procomplementar
+SFX G2 ne ƚa mene	is:procomplementar
+SFX G2 ne ƚi mene	is:procomplementar
+SFX G2 ne ƚe mene	is:procomplementar
+SFX G2 mene seƚo mene	is:procomplementar
+SFX G2 mene seƚa mene	is:procomplementar
+SFX G2 mene seƚi mene	is:procomplementar
+SFX G2 mene seƚe mene	is:procomplementar
+SFX G2 mene teƚo mene	is:procomplementar
+SFX G2 mene teƚa mene	is:procomplementar
+SFX G2 mene teƚi mene	is:procomplementar
+SFX G2 mene teƚe mene	is:procomplementar
+SFX G2 mene veƚo mene	is:procomplementar
+SFX G2 mene veƚa mene	is:procomplementar
+SFX G2 mene veƚi mene	is:procomplementar
+SFX G2 mene veƚe mene	is:procomplementar
+SFX G2 mene geƚo mene	is:procomplementar
+SFX G2 mene geƚa mene	is:procomplementar
+SFX G2 mene geƚi mene	is:procomplementar
+SFX G2 mene geƚe mene	is:procomplementar
+SFX G2 meƚo seƚo meƚo	is:procomplementar
+SFX G2 meƚo seƚa meƚo	is:procomplementar
+SFX G2 meƚo seƚi meƚo	is:procomplementar
+SFX G2 meƚo seƚe meƚo	is:procomplementar
+SFX G2 meƚo teƚo meƚo	is:procomplementar
+SFX G2 meƚo teƚa meƚo	is:procomplementar
+SFX G2 meƚo teƚi meƚo	is:procomplementar
+SFX G2 meƚo teƚe meƚo	is:procomplementar
+SFX G2 meƚo veƚo meƚo	is:procomplementar
+SFX G2 meƚo veƚa meƚo	is:procomplementar
+SFX G2 meƚo veƚi meƚo	is:procomplementar
+SFX G2 meƚo veƚe meƚo	is:procomplementar
+SFX G2 meƚo geƚo meƚo	is:procomplementar
+SFX G2 meƚo geƚa meƚo	is:procomplementar
+SFX G2 meƚo geƚi meƚo	is:procomplementar
+SFX G2 meƚo geƚe meƚo	is:procomplementar
 
 # sonoriđaŧion konsonanti finali
 SFX I0 Y 66
