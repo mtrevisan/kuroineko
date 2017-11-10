@@ -6290,7 +6290,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tòrđ",			"s",			3,	1,	"g",	"1560",			"",
 "torđ",			"s",			1,	1,	"a",	"1980",			"Stòrđer.",
 "torŧ",			"in",			1,	1,	"a",	"1980",			"",
-"torxi",			"",			1,	1,	"g",	"1775",			"Andar a xonxo.",
+"torđi",			"",			1,	1,	"g",	"1775",			"Andar a xonxo.",
 "tòs",			"",			3,	1,	"g",	"1852",			"",
 "tos",			"",			4,	3,	"a",	"1560",			"",
 "toseg",			"",			1,	1,	"g",	"1590",			"Far déventar tosego.",
