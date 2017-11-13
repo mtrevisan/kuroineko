@@ -6297,6 +6297,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "toseg",			"in",			1,	1,	"g",	"1775",			"Far déventar tosego, avelenar.",
 "toseg",			"dexin",		1,	1,	"g",	"1980",			"",
 "tost",			"",			1,	1,	"g",	"1854",			"",
+"tot",			"",			1,	1,	"g",	"1829",			"",
+"totaliđ",		"",			1,	5,	"a",	"1829",			"",
 "tovaɉ",			"",			1,	3,	"g",	"1852",			"",
 "tovaɉ",			"in",			1,	3,	"g",	"1775",			"",
 "tox",			"",			1,	1,	"a",	"1775",			"",
