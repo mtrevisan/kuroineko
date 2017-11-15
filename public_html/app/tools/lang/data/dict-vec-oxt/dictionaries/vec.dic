@@ -1021,12 +1021,12 @@ strabàlsoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:strabalsa
 strabalŧar/a0a1E0E1	po:verb ts:infinitive_simple
 strabalŧo/a0a1E0E1I0J0	po:verb ts:indicative_present st:strabalŧar
 strabàlŧoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:strabalŧar
-xbalsar/a0a1a2E0E1E2.0	po:verb ts:infinitive_simple
-xbalso/a0a1a2E0E1E2I0J0.0	po:verb ts:indicative_present st:xbalsar
-xbàlsoe/a0a1a2K0.0	po:verb ts:indicative_present is:interrogative st:xbalsar
-xbalŧar/a0a1E0E1.0	po:verb ts:infinitive_simple
-xbalŧo/a0a1E0E1I0J0.0	po:verb ts:indicative_present st:xbalŧar
-xbàlŧoe/a0a1K0.0	po:verb ts:indicative_present is:interrogative st:xbalŧar
+xbalsar/a0a1a2E0E1E2.0|0	po:verb ts:infinitive_simple
+xbalso/a0a1a2E0E1E2I0J0.0|0	po:verb ts:indicative_present st:xbalsar
+xbàlsoe/a0a1a2K0.0|0	po:verb ts:indicative_present is:interrogative st:xbalsar
+xbalŧar/a0a1E0E1.0|0	po:verb ts:infinitive_simple
+xbalŧo/a0a1E0E1I0J0.0|0	po:verb ts:indicative_present st:xbalŧar
+xbàlŧoe/a0a1K0.0|0	po:verb ts:indicative_present is:interrogative st:xbalŧar
 balukar/a0a1E0E1-0	po:verb ts:infinitive_simple
 baluko/a0a1E0E1I0J0-0	po:verb ts:indicative_present st:balukar
 balúkoe/a0a1K0-0	po:verb ts:indicative_present is:interrogative st:balukar
@@ -10551,6 +10551,9 @@ làtoe/a0a1K0+0*0,0	po:verb ts:indicative_present is:interrogative st:latar
 ƚatar/a0a2E0E2r1,0	po:verb ts:infinitive_simple
 ƚato/a0a2E0E2J0,0	po:verb ts:indicative_present st:ƚatar
 ƚàtoe/a0a2K0,0	po:verb ts:indicative_present is:interrogative st:ƚatar
+traxlatar/a0a1a2E0E1E2r0	po:verb ts:infinitive_simple
+traxlato/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:traxlatar
+traxlàtoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:traxlatar
 xlatinar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 xlatino/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:xlatinar
 xlatínoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:xlatinar
@@ -11147,7 +11150,7 @@ kòƚokoe/a0a2K0	po:verb ts:indicative_present is:interrogative st:koƚokar
 sublokar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 sublòko/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:sublokar
 sublòkoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:sublokar
-traxlokar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
+traxlokar/a0a1a2E0E1E2s0s1	po:verb ts:infinitive_simple
 traxlòko/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:traxlokar
 traxlòkoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:traxlokar
 lokuir/a0a1c0c1E0E1s0s1	po:verb ts:infinitive_simple
@@ -14340,8 +14343,8 @@ inparsiaƚixar/a0a2E0E2	po:verb ts:infinitive_simple
 inparsiaƚixo/a0a2E0E2J0	po:verb ts:indicative_present st:inparsiaƚixar
 inparsiaƚíxoe/a0a2K0	po:verb ts:indicative_present is:interrogative st:inparsiaƚixar
 pasar/a0a1a2E0E1E2=0-0*0.0:0|0	po:verb ts:infinitive_simple
-paso/a0a1a2E0E1E2I0J0=0-0*0.0:0|0	po:verb ts:indicative_present st:pasar
-pàsoe/a0a1a2K0=0-0*0.0:0|0	po:verb ts:indicative_present is:interrogative st:pasar
+paso/a0a1a2E0E1E2I0J0=0-0*0.0:0|0	po:verb ts:indicative_present st:pasar st:pàser
+pàsoe/a0a1a2K0=0-0*0.0:0|0	po:verb ts:indicative_present is:interrogative st:pasar st:pàser
 arpasar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 arpaso/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:arpasar
 arpàsoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:arpasar
@@ -14353,8 +14356,6 @@ sorpaso/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:sorpasar
 sorpàsoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:sorpasar
 pàser/b0b1b2E0E1E2	po:verb is:infinitive_simple
 paserò/b0b1b2J0	po:verb ts:indicative_future st:pàser
-paso/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:pàser
-pàsoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:pàser
 pàsar/b0b1b2E0E1E2	po:verb is:infinitive_simple
 pasarò/b0b1b2J0	po:verb ts:indicative_future st:pàsar
 pasir/a0a1a2c0c1c2E0E1E2-0	po:verb ts:infinitive_simple
@@ -16086,16 +16087,16 @@ sponđo/a0a1E0E1I0J0	po:verb ts:indicative_present st:sponđar
 spónđoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:sponđar
 spondar/a0a1E0E1	po:verb ts:infinitive_simple
 sponxar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
-pónder/b0b1b2E0E1E2r0=0*0	po:verb ts:infinitive_simple
-ponderò/b0b1b2J0=0*0	po:verb ts:indicative_future st:pónder
-pondo/a0a1a2E0E1E2I0J0=0*0	po:verb ts:indicative_present st:pónder st:spondar
-póndoe/a0a1a2K0=0*0	po:verb ts:indicative_present is:interrogative st:pónder st:spondar
-póndar/b0b1b2E0E1E2	po:verb ts:infinitive_simple
-pondarò/b0b1b2J0	po:verb ts:indicative_future st:póndar
-pónđer/b0b1E0E1r0=0*0	po:verb ts:infinitive_simple
-ponđerò/b0b1J0=0*0	po:verb ts:indicative_future st:pónđer
-ponđo/a0a1E0E1I0J0=0*0	po:verb ts:indicative_present st:pónđer
-pónđoe/a0a1K0=0*0	po:verb ts:indicative_present is:interrogative st:pónđer
+pónder/b0b1b2E0E1E2r0=0*0|0	po:verb ts:infinitive_simple
+ponderò/b0b1b2J0=0*0|0	po:verb ts:indicative_future st:pónder
+pondo/a0a1a2E0E1E2I0J0=0*0|0	po:verb ts:indicative_present st:pónder st:spondar
+póndoe/a0a1a2K0=0*0|0	po:verb ts:indicative_present is:interrogative st:pónder st:spondar
+póndar/b0b1b2E0E1E2=0*0|0	po:verb ts:infinitive_simple
+pondarò/b0b1b2J0=0*0|0	po:verb ts:indicative_future st:póndar
+pónđer/b0b1E0E1r0=0*0|0	po:verb ts:infinitive_simple
+ponđerò/b0b1J0=0*0|0	po:verb ts:indicative_future st:pónđer
+ponđo/a0a1E0E1I0J0=0*0|0	po:verb ts:indicative_present st:pónđer
+pónđoe/a0a1K0=0*0|0	po:verb ts:indicative_present is:interrogative st:pónđer
 pónxer/b0b1b2E0E1E2r0=0*0|0	po:verb ts:infinitive_simple
 ponxerò/b0b1b2J0=0*0|0	po:verb ts:indicative_future st:pónxer
 ponxo/a0a1a2E0E1E2I0J0=0*0|0	po:verb ts:indicative_present st:pónxer st:sponxar
@@ -20295,6 +20296,9 @@ arsúnoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:arsunar
 insuniar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 insunio/a0a1a2E0E1E2J0	po:verb ts:indicative_present st:insuniar
 insúnioe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:insuniar
+suntar/a0a1a2E0E1E2|0	po:verb ts:infinitive_simple
+sunto/a0a1a2E0E1E2I0J0|0	po:verb ts:indicative_present st:suntar
+súntoe/a0a1a2K0|0	po:verb ts:indicative_present is:interrogative st:suntar
 supar/a0a1a2E0E1E2-0	po:verb ts:infinitive_simple
 supo/a0a1a2E0E1E2I0J0-0	po:verb ts:indicative_present st:supar
 súpoe/a0a1a2K0-0	po:verb ts:indicative_present is:interrogative st:supar
@@ -21580,7 +21584,7 @@ trankuilíxoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:trankuili
 trankuiƚixar/a0a2E0E2	po:verb ts:infinitive_simple
 trankuiƚixo/a0a2E0E2J0	po:verb ts:indicative_present st:trankuiƚixar
 trankuiƚíxoe/a0a2K0	po:verb ts:indicative_present is:interrogative st:trankuiƚixar
-tranxar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
+tranxar/a0a1a2E0E1E2s0s1	po:verb ts:infinitive_simple
 tranxo/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:tranxar
 trànxoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:tranxar
 trapar/a0a1a2E0E1E2r0*0@0	po:verb ts:infinitive_simple
@@ -21598,7 +21602,7 @@ tràroe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:trarar
 trasinar/a0a1a2E0E1E2+0*0	po:verb ts:infinitive_simple
 trasino/a0a1a2E0E1E2I0J0+0*0	po:verb ts:indicative_present st:trasinar
 trasínoe/a0a1a2K0+0*0	po:verb ts:indicative_present is:interrogative st:trasinar
-tratar/a0a1a2E0E1E2s0s1.0:0	po:verb ts:infinitive_simple
+tratar/a0a1a2E0E1E2r0s0s1.0:0	po:verb ts:infinitive_simple
 tràtoe/a0a1a2K0.0:0	po:verb ts:indicative_present is:interrogative st:tratar
 estratar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 estrato/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:estratar
@@ -30550,7 +30554,8 @@ suđo	po:adverb
 suđo	po:preposition
 sufiso/T0I0	po:noun
 sugaman/T0	po:noun
-sunto/B0I0	po:noun
+sunta/D0	po:noun
+sunto/T0I0|0	po:noun
 superlativo/B0W0I0	po:adjective
 supernova/D0	po:noun
 supernòva/D0	po:noun
@@ -40121,7 +40126,6 @@ tortejonŧin/T0T2	po:noun
 torteɉonŧin/T0T2	po:noun
 torŧiman/T0U0	po:noun
 trabàkola/D0T2	po:noun
-tranxaŧion/D0T2U0mf	po:noun
 trementina/D0	po:noun
 tugon/C0U0mf	po:noun
 tuin/T0	po:noun
@@ -46891,7 +46895,7 @@ pasarola/D0V0	po:noun
 pasaroƚa/D0V0	po:noun
 pase	po:noun
 paskuin/B0	po:noun
-paso/T0I0&0)0	po:noun
+paso/T0I0&0)0|0	po:noun
 pastière/T0	po:noun
 pastilia/D0T2	po:noun
 pastina/D0	po:noun
@@ -49100,15 +49104,15 @@ strasamerkào	po:adverb
 strasamerkè	po:adverb
 strasamerkò	po:adverb
 straseferut/T0	po:noun
-strasejadur/T0Y0	po:noun
-straseɉadur/T0Y0	po:noun
+traxejadur/T0Y0*0	po:noun
+traxeɉadur/T0Y0*0	po:noun
 straso/T0I0T1	po:noun
 strasoloxo/B0W0I0mf	po:adjective
 strasoloxo/B0I0mf	po:noun
 strasoƚoxo/B0W1mf	po:adjective
 strasoƚoxo/B0mf	po:noun
 strasoxo/B0W0I0mf	po:adjective
-strataxèma/D0	po:noun
+trataxèma/D0*0	po:noun
 stratenpo/T0	po:noun
 straŧamarkado	po:adverb
 straŧamarkà	po:adverb
@@ -50106,10 +50110,14 @@ tramòđa/D0T2	po:noun
 trangujon/C0U0mf	po:adjective
 tranguɉon/C0U0mf	po:adjective
 trankuil/T0T3	po:adjective
+trànxito/T0	po:noun
+traxador/D0mf	po:noun
+trasfèrta/D0	po:noun
+traspianto/T0I0	po:noun
 
 
 
-/ 709
+/ 711
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
 / ventilòkuio 729-3-48 > ventrilòkuo
