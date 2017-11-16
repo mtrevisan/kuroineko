@@ -265,7 +265,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "balŧ",			"in",			1,	1,	"g",	"1775",			"Rinbalŧar.",
 "balŧ",			"rex",		1,	1,	"g",	"1775",			"Rinbekar.",
 "balŧ",			"stra",		1,	1,	"g",	"1854",			"",
-"balŧ",			"tras",		1,	1,	"g",	"1829",			"",
+"balŧ",			"trax",		1,	1,	"g",	"1829",			"",
 "balŧ",			"x",			1,	1,	"g",	"1775",			"",
 "baluk",			"",			1,	3,	"a",	"1867",			"Star kome on mona.",
 "baluk",			"in",			1,	3,	"a",	"1852",			"Inbaukar.",

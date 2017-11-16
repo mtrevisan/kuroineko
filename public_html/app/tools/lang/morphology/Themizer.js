@@ -440,7 +440,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/lang/phon
 			/po([cjɉlƚt]a|[ds]e|xi|[kpv]o)/,
 			/ro([bcdgklƚñ]a|[vx]e|[df]o)/,
 			/so([cdjɉmñrt]a|[nsŧ]ia|[lƚ]i|fri|[kn]o)/,
-			/to([clƚpsŧ]a|[lƚs]e|ko)/,
+			/to([clƚpsŧt]a|[lƚs]e|ko)/,
 			/ŧo([lƚt]a|ko)/,
 			/vo([dgjɉk]a|vra|[lƚ]e|mi)/,
 			/xo[gklƚñrstv]?a/,
@@ -461,7 +461,7 @@ define(['tools/lang/phonology/Word', 'tools/data/StringHelper', 'tools/lang/phon
 			/mor([bcsŧ]a|[bf]ia|se|fi|[gm]o)/,
 			/norba/,
 			/porta/,
-			/tor([ct]a|[kx]ia|to)/,
+			/tor([ct]a|[dđkx]ia|to)/,
 			/vor[sŧ]ia/,
 			/xor[bt]a/,
 
