@@ -4790,7 +4790,7 @@ SFX G2 meƚo geƚa meƚo	is:procomplementar
 SFX G2 meƚo geƚi meƚo	is:procomplementar
 SFX G2 meƚo geƚe meƚo	is:procomplementar
 
-# sonoriđaŧion konsonanti finali
+# sonoriđaŧion finali
 SFX I0 Y 66
 SFX I0 bo p .bo
 SFX I0 be p .be
@@ -4820,8 +4820,8 @@ SFX I0 no n .no
 SFX I0 ne n .ne
 SFX I0 po p .po
 SFX I0 pe p .pe
-SFX I0 ro r .ro
-SFX I0 re r .re
+SFX I0 ro r [^bdt]ro
+SFX I0 re r [^bdt]re
 SFX I0 so s .so
 SFX I0 se s .se
 SFX I0 to t .to
