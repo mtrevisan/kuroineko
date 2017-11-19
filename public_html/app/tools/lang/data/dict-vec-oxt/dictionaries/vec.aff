@@ -5961,9 +5961,10 @@ PFX ^0 Y 1
 PFX ^0 0 pre .
 
 # sostantivi alterài
-PFX +0 Y 2
+PFX +0 Y 3
 PFX +0 0 des [cfkpt]
-PFX +0 0 dex [aàeèéiíoòóuúmnñbdgjɉsvrlx]
+PFX +0 0 dex [aàeèéiíoòóuúmnñbdgjɉsvrl]
+PFX +0 0 de x
 
 # sostantivi alterài
 PFX -0 Y 2
@@ -5988,8 +5989,9 @@ PFX @0 Y 1
 PFX @0 0 a .
 
 # sostantivi alterài
-PFX :0 Y 1
-PFX :0 0 kon .
+PFX :0 Y 2
+PFX :0 0 kon [^n]
+PFX :0 0 ko n
 
 # gua- > va-
 PFX gv Y 1
