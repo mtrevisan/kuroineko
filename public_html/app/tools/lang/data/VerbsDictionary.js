@@ -6400,6 +6400,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "trink",			"",			1,	2,	"a",	"1775",			"",
 "trinŧ",			"",			1,	2,	"a",	"1775",			"",
 "trionf",		"",			1,	3,	"a",	"1509",			"",
+"trip",			"",			1,	2,	"a",	"1828",			"",
 "tripudi",		"",			1,	4,	"a",	"1775",			"",
 "trist",			"in",			1,	2,	"a",	"",				"Far deventar tristo.",
 "trist",			"in",			4,	5,	"a",	"",				"Deventar tristo.",
