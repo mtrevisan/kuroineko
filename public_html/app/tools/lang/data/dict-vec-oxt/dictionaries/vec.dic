@@ -3194,6 +3194,9 @@ devo/m0I0J0	po:verb ts:indicative_present st:déver
 dévoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:déver
 dévar/m0E0E1E2	po:verb ts:infinitive_simple
 devarò/m0J0	po:verb ts:indicative_future st:dévar
+vaskonar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
+vaskono/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:vaskonar
+vaskónoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:vaskonar
 devastar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 devasto/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:devastar
 devàstoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:devastar
@@ -7291,7 +7294,7 @@ malgualívoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:malgualiva
 malguaƚivar/a0a2E0E2	po:verb ts:infinitive_simple
 malguaƚivo/a0a2E0E2J0W1	po:verb ts:indicative_present st:malguaƚivar
 malguaƚívoe/a0a2K0	po:verb ts:indicative_present is:interrogative st:malguaƚivar
-guarir/a0a1a2c0c1c2E0E1E2	po:verb ts:infinitive_simple
+guarir/a0a1a2c0c1c2E0E1E2gv	po:verb ts:infinitive_simple
 guarantir/a0a1a2c0c1c2E0E1E2	po:verb ts:infinitive_simple
 xguaratar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 xguarato/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:xguaratar
@@ -23022,8 +23025,17 @@ vàroe/a0a1a2K0‘0	po:verb ts:indicative_present is:interrogative st:varar
 vardar/a0a1a2E0E1E2‘0.0	po:verb ts:infinitive_simple
 vardo/a0a1a2E0E1E2I0J0‘0.0	po:verb ts:indicative_present st:vardar
 vàrdoe/a0a1a2K0‘0.0	po:verb ts:indicative_present is:interrogative st:vardar
+varentar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
+varento/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:varentar
+varéntoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:varentar
 varentir/a0a1a2d0d1d2E0E1E2	po:verb ts:infinitive_simple
 varento/d0d1d2E0E1E2I0J0	po:verb ts:indicative_present st:varentar st:varentir
+vaređar/a0a1E0E1	po:verb ts:infinitive_simple
+vaređo/a0a1E0E1I0J0	po:verb ts:indicative_present st:vaređar
+varéđoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:vaređar
+varedar/a0a1E0E1	po:verb ts:infinitive_simple
+varedo/a0a1E0E1I0J0	po:verb ts:indicative_present st:varedar
+varédoe/a0a1K0	po:verb ts:indicative_present is:interrogative st:varedar
 varexar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 varexo/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:varexar
 varéxoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:varexar
@@ -23036,6 +23048,12 @@ vàrioe/a0a1a2K0-0*0	po:verb ts:indicative_present is:interrogative st:variar
 prevarikar/a0a1a2E0E1E2s0s1	po:verb ts:infinitive_simple
 prevàriko/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:prevarikar
 prevàrikoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:prevarikar
+variolar/a0a1E0E1	po:verb ts:infinitive_simple
+variòlo/a0a1E0E1I0J0	po:verb ts:indicative_present st:variolar
+variòloe/a0a1K0	po:verb ts:indicative_present is:interrogative st:variolar
+varioƚar/a0a2E0E2	po:verb ts:infinitive_simple
+variòƚo/a0a2E0E2J0	po:verb ts:indicative_present st:varioƚar
+variòƚoe/a0a2K0	po:verb ts:indicative_present is:interrogative st:varioƚar
 varolar/a0a1E0E1	po:verb ts:infinitive_simple
 varòlo/a0a1E0E1I0J0	po:verb ts:indicative_present st:varolar
 varòloe/a0a1K0	po:verb ts:indicative_present is:interrogative st:varolar
@@ -25058,6 +25076,8 @@ Ufèmia/Z0	po:proper_noun
 Ufèmio/Z0	po:proper_noun
 Ustaca/Z0	po:proper_noun
 Ustaco/I0Z0	po:proper_noun
+Varista/Z0	po:proper_noun
+Varisto/Z0	po:proper_noun
 Verxilio/Z0	po:proper_noun
 Verxiƚio/Z0	po:proper_noun
 Vida/Z0	po:proper_noun
@@ -30925,7 +30945,8 @@ varietà	po:noun
 variŧo/T0I0T2	po:noun
 varola/D0T2	po:noun
 varòla/D0T2	po:noun
-vasèl/T0U0T2	po:noun
+vasèl/T0U0&0	po:noun
+vasèƚo/T0&1	po:noun
 vaxelame/T0	po:noun
 vaxeƚame/T0	po:noun
 vaxo/T0I0&0)0	po:noun
@@ -50406,10 +50427,20 @@ varañòla/D0T2	po:noun
 varda/D0	po:noun
 guardabaso/T0I0gv	po:noun
 guardarobièr/B0V0gv	po:noun
+vanin/T0	po:noun
+variòla/D0T2	po:noun
+vasko/B0	po:noun
+vaskon/C0U0	po:noun
+vaskonada/D0Y0Y1	po:noun
+bulada/D0Y0Y1	po:noun
+buƚada/D0Y0Y1	po:noun
+vaxolin/T0T2	po:noun
+vastimento/T0I0	po:noun
+vasto/B0I0	po:adjective
 
 
 
-/ 723
+/ 724
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
 / ventilòkuio 729-3-48 > ventrilòkuo
