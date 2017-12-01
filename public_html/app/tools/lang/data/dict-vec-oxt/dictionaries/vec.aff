@@ -4555,16 +4555,16 @@ SFX B0 io i io	is:plural_masculine
 SFX C0 Y 5
 SFX C0 0 a [^aieo]	is:singular_femenine
 SFX C0 0 i [^aieo]	is:plural_masculine
-SFX C0 0 e [^aieo]
-SFX C0 a e a
+SFX C0 0 e [^aieo]	is:plural
+SFX C0 a e a	is:plural
 SFX C0 a i a	is:plural_masculine
 
 # sostantivi plurali femenili, ajetivi de tèrŧa klase
 SFX D0 Y 4
-SFX D0 0 e [^oaie]
-SFX D0 0 i [^oaie]
-SFX D0 e i e
-SFX D0 a e a
+SFX D0 0 e [^oaie]	is:plural
+SFX D0 0 i [^oaie]	is:plural_masculine
+SFX D0 e i e	is:plural_femenine
+SFX D0 a e a	is:plural
 
 # vèrbi prokonplementari
 SFX E0 Y 13
@@ -5153,13 +5153,14 @@ PFX T4 Đ X Đ
 
 
 # piante e mistièri (-èr, -aro, -(i)ol)
-SFX V0 Y 19
+SFX V0 Y 20
 SFX V0 èr ar/B0 èr	po:noun
 SFX V0 ièr ar/B0 ièr	po:noun
 SFX V0 ièr er/B0mf ièr	po:noun
 SFX V0 èr er/B0mf ièr	po:noun
 SFX V0 èr ier/B0mf [^aeoucijɉñ]èr	po:noun
 SFX V0 èr ièr/B0 [^aeoucijɉñ]èr	po:noun
+SFX V0 dor tor/C0mf [aei]dor	po:noun
 SFX V0 dor or/C0mf [aei]dor	po:noun
 SFX V0 ol òl/T0U0 [drsŧ]ol	po:noun
 SFX V0 ol iol/T0U0mf [drsŧ]ol	po:noun
@@ -5509,7 +5510,7 @@ SFX Y1 ada à ada
 
 
 # sostantivi alterài - demenutivi in -eto/a
-SFX &0 Y 82
+SFX &0 Y 83
 SFX &0 ú ueto/T0I0mf ú
 SFX &0 0 eto/T0I0mf [^èò]l
 SFX &0 èl eleto/T0I0mf èl
@@ -5558,9 +5559,10 @@ SFX &0 ía ieta/D0 ía
 SFX &0 a eta/D0 [^bcdđgíjɉklmnñprsŧvx]a
 SFX &0 a eta/D0 [^ò]ma
 SFX &0 a eta/D0 [^è][gv]a
-SFX &0 a eta/D0 [^èò][bdđklnprsŧx]a
-SFX &0 a eta/D0 [^ò][cjɉñ]a
+SFX &0 a eta/D0 [^èò][bcdđklnprsŧx]a
+SFX &0 a eta/D0 [^ò][jɉñ]a
 SFX &0 èba ebeta/D0 èba
+SFX &0 èca eceta/D0 èca
 SFX &0 èda edeta/D0 èda
 SFX &0 èđa eđeta/D0 èđa
 SFX &0 èga egeta/D0 èga
