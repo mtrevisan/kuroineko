@@ -1,5 +1,5 @@
 # kuroineko library
-[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](http://niceue.com/licenses/MIT-LICENSE.txt)[![bitHound Overall Score](https://www.bithound.io/github/mtrevisan/library/badges/score.svg)](https://www.bithound.io/github/mtrevisan/library)[![Codacy Badge](https://api.codacy.com/project/badge/grade/1335b9b55ebd40bc934789ea5f5af751)](https://www.codacy.com/app/mauro-trevisan/library)<a href="https://codeclimate.com/github/mtrevisan/library/maintainability"><img src="https://api.codeclimate.com/v1/badges/78fbcee7524a9fbe1d47/maintainability" /></a>
+[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](http://niceue.com/licenses/MIT-LICENSE.txt)&nbsp;[![bitHound Overall Score](https://www.bithound.io/github/mtrevisan/library/badges/score.svg)](https://www.bithound.io/github/mtrevisan/library)&nbsp;[![Codacy Badge](https://api.codacy.com/project/badge/grade/1335b9b55ebd40bc934789ea5f5af751)](https://www.codacy.com/app/mauro-trevisan/library)&nbsp;<a href="https://codeclimate.com/github/mtrevisan/library/maintainability"><img src="https://api.codeclimate.com/v1/badges/78fbcee7524a9fbe1d47/maintainability" /></a>
 =========
 This is a bunch of utilities I put together. Unfortunately I miss some references to the original projects. I beg pardon, and whenever I found out the original ones I'll update my references.
 
