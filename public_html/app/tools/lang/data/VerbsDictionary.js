@@ -6749,6 +6749,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vent",			"x",			1,	1,	"a",	"1560",			"Sofiar de ʼl vento.",
 "ventil",		"",			1,	4,	"a",	"1854",			"",
 "ventiđ",		"",			1,	4,	"a",	"1867",			"",
+"ventol",		"",			1,	1,	"a",	"1829",			"",
 "ventol",		"x",			1,	1,	"a",	"1775",			"",
 "ventox",		"x",			1,	4,	"a",	"1560",			"Méter le ventoxe.",
 "ventr",			"x",			1,	1,	"a",	"1852",			"",
