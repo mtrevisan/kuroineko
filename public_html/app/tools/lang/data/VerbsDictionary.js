@@ -6839,6 +6839,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vern",			"x",			1,	1,	"g",	"",				"",
 "verniđ",		"",			1,	4,	"a",	"1852",			"",
 "verniđ",		"in",			1,	4,	"a",	"1854",			"",
+"vermen",		"",			1,	1,	"g",	"1829",			"Far pièn de vèrmi.",
 "verol",			"",			1,	3,	"g",	"1998",			"Madurar de lʼ úa.",
 "vers",			"",			1,	1,	"g",	"",				"",
 "vers",			"intra",		1,	1,	"g",	"1775",			"Kontrataliar.",
