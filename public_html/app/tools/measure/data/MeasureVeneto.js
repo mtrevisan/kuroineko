@@ -78,7 +78,7 @@ define(['tools/measure/MeasureConverter', 'tools/measure/data/MeasureSI', 'tools
 			if(isVenice)
 				m.addUnit('pèrtega (cea) = 4.5 piè');
 
-			if(place.match(/Belun|Konejan|Roigo|Trevixo/))
+			if(place.match(/Belun|Konejan|Roigo|Trevixo|Viŧenŧa/))
 				place = 'Venèŧia';
 			m.addConverter(m, MeasureSI.length, conversions[place]);
 
