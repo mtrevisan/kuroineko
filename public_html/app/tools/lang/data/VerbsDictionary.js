@@ -6965,6 +6965,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vivol",			"ra",			1,	1,	"a",	"1590",			"",
 "vix",			"a",			1,	1,	"a",	"1447",			"",
 "vix",			"prea",		1,	1,	"a",	"1829",			"",
+"vixdekaŧ",		"",			1,	6,	"g",	"1829",			"Far ròbe da mona.",
 "vixion",		"",			1,	4,	"a",	"1867",			"",
 "vixion",		"pro",		1,	4,	"a",	"1852",			"Provéder.",
 "vixion",		"re",			1,	4,	"a",	"1867",			"",
