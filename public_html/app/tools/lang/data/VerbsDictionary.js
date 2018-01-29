@@ -6948,6 +6948,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "visig",			"",			1,	3,	"a",	"1829",			"Vesigar",
 "visig",			"in",			1,	3,	"a",	"1829",			"Vesigar",
 "vitaliđ",		"",			1,	5,	"a",	"1867",			"Dar a vitaliŧio.",
+"vitaliŧi",		"",			1,	5,	"a",	"1829",			"",
 "viŧ",			"",			1,	1,	"a",	"",				"",
 "viŧi",			"",			1,	1,	"a",	"",				"",
 "viŧi",			"dex",		1,	1,	"a",	"1775",			"",
