@@ -4332,6 +4332,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pénd",			"s",			3,	1,	"a",	"1412",			"",
 "pénd",			"sos",		3,	1,	"a",	"1854",			"",
 "pénd",			"sus",		3,	1,	"a",	"1893",			"",
+"pénd",			"vili",		3,	1,	"a",	"1829",			"",
 "pénđ",			"",			3,	1,	"a",	"1775",			"Far forŧa par spénđer for i eskrementi dal korpo.",
 "pénđ",			"de",			3,	1,	"a",	"1474",			"",
 "pénđ",			"in",			3,	1,	"a",	"1412",			"",
