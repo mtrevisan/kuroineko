@@ -6472,6 +6472,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧapon",			"",			1,	3,	"a",	"1560",			"Ŧapar.",
 "ŧaramel",		"",			1,	5,	"g",	"1560",			"Sonar la baga.",
 "ŧaratan",		"",			1,	5,	"g",	"1867",			"Inkantar, far inténder na roba par nʼ altra.",
+"ŧarfoj",		"",			1,	4,	"g",	"1829",			"Semear a ŧarfòji.",
 "ŧarl",			"",			1,	1,	"g",	"1560",			"Parlar.",
 "ŧat",			"",			1,	1,	"g",	"1852",			"",
 "ŧavari",		"",			1,	3,	"g",	"1775",			"Delirar, farnetegar.",
