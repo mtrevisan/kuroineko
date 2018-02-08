@@ -1117,6 +1117,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "đel",			"in",			4,	3,	"a",	"1980",			"Pasar da ʼl stato líkuido a kuelo sòlido.",
 "đelox",			"in",			4,	5,	"a",	"1867",			"",
 "đan",			"",			1,	1,	"g",	"1829",			"Far na komèdia bruta.",
+"đas",			"",			2,	1,	"g",	"1829",			"",
 "đener",			"",			1,	1,	"g",	"1867",			"",
 "đener",			"in",			1,	1,	"g",	"1775",			"",
 "đeneraliđ",	"",			1,	7,	"a",	"1980",			"",
