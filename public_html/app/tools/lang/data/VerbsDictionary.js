@@ -1120,6 +1120,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "đas",			"",			2,	1,	"g",	"1829",			"",
 "đel",			"",			1,	1,	"g",	"1775",			"",
 "đel",			"kon",		1,	1,	"g",	"1867",			"",
+"đenbr",			"",			1,	1,	"a",	"1829",			"Tonfar, bastonar.",
 "đener",			"",			1,	1,	"g",	"1867",			"",
 "đener",			"in",			1,	1,	"g",	"1775",			"",
 "đeneraliđ",	"",			1,	7,	"a",	"1980",			"",
