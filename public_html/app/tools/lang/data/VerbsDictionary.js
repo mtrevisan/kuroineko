@@ -1124,6 +1124,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "đener",			"",			1,	1,	"g",	"1867",			"",
 "đener",			"in",			1,	1,	"g",	"1775",			"",
 "đeneraliđ",	"",			1,	7,	"a",	"1980",			"",
+"đenoc",			"",			1,	3,	"g",	"1829",			"",
 "đenoc",			"in",			1,	3,	"g",	"1509",			"",
 "đentil",		"in",			4,	6,	"a",	"1867",			"",
 "đeñ",			"in",			1,	1,	"a",	"1509",			"",
