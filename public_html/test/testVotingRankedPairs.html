@@ -168,17 +168,40 @@
 
 
 		//example:
-		var candidates = ['Memphis', 'Nashville', 'Chattanooga', 'Knoxville'];
+		var candidates = ['ALV', 'LA', 'ILV', 'SA', 'BS', 'TM'];
 		var ballots = [
-			{'Memphis': 0, 'Nashville': 1, 'Chattanooga': 2, 'Knoxville': 3},
-			{'Nashville': 0, 'Chattanooga': 1, 'Knoxville': 2, 'Memphis': 3},
-			{'Chattanooga': 0, 'Knoxville': 1, 'Nashville': 2, 'Memphis': 3},
-			{'Knoxville': 0, 'Chattanooga': 1, 'Nashville': 2, 'Memphis': 3}
+			//Stefano Battaggia
+			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined},
+			//Mauro Bonato
+			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined},
+			//Ferdinando Camon
+			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined},
+			//Franco Cavallini
+			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined},
+			//Deborah Coron
+			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined},
+			//Ezio Crosara
+			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined},
+			//Andrea Lunardon
+			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined},
+			//Loris Palmerini
+			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined},
+			//Franco Rocchetta
+			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined},
+			//Andrea Sinigallia
+			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined},
+			//Beglari Tavartkiladze
+			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined},
+			//Mauro Trevisan
+			{'ALV': 2,	'LA': 3,	'ILV': 5,	'SA': 4,	'BS': 1,	'TM': 0},
+			//Denis Zarantonello
+			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined}
 		];
+
 		winners = elect(candidates, ballots, candidates.length);
 
 		winners.forEach(function(winner, i){
-			console.log('Winner #', i + 1, winner);
+			console.log('Winner #', i + 1, ':', winner);
 		});
 
 	</script>
