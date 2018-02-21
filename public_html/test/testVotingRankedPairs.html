@@ -58,7 +58,7 @@
 		var calculateMajorities = function(candidates, ballots){
 			var V = {};
 			var majorities = [];
-			var noPreferences = candidates.length;
+			var noPreferences = candidates.length * 2;
 			candidates.forEach(function(xCID){
 				var Vx = V[xCID] = {};
 				candidates.forEach(function(yCID){
@@ -106,7 +106,7 @@
 		 * @returns [candidate]	Array of candidates which are the sources of the locked-in graph.
 		 */
 		var electSingle = function(candidates, ballots){
-			var noPreferences = candidates.length;
+			var noPreferences = candidates.length * 2;
 			if(!noPreferences)
 				return [];
 
@@ -193,7 +193,7 @@
 			//Beglari Tavartkiladze
 			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined},
 			//Mauro Trevisan
-			{'ALV': 2,	'LA': 3,	'ILV': 5,	'SA': 4,	'BS': 1,	'TM': 0},
+			{'ALV': 2,	'LA': 3,	'SA': 4,	'BS': 1,	'TM': 0},
 			//Denis Zarantonello
 			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined}
 		];
