@@ -13,8 +13,12 @@
 		var enableDebug = false;
 
 
-		var getPreference = function(candidate, ballot){
-			return ballot.indexOf(candidate);
+		var getPreference = function(candidate, ballot, noPreference){
+			var preference = ballot[candidate];
+			if(preference === undefined)
+				preference = noPreference;
+
+			return preference;
 		};
 
 		/**
@@ -26,21 +30,21 @@
 		 * @returns [candidate]	Array of candidates of size *wanted* (given that there are enough candidates)
 		 */
 		var elect = function(candidates, ballots, wantedWinners){
-			if(typeof wantedWinners !== "number")
+			if(typeof wantedWinners !== 'number')
 				wantedWinners = 1;
 
 			var winners = [];
 			while(winners.length < wantedWinners){
 				var thisElection = electSingle(candidates, ballots);
 				if(!thisElection.length){
-					console.log("Could not elect enough?");
+					console.log('Could not elect enough?');
 
 					break;
 				}
 
 				winners.push.apply(winners, thisElection);
 				if(winners.length > wantedWinners)
-					console.log("Too many winners");
+					console.log('Too many winners');
 				if(winners.length >= wantedWinners)
 					break;
 
@@ -54,7 +58,7 @@
 		var calculateMajorities = function(candidates, ballots){
 			var V = {};
 			var majorities = [];
-
+			var noPreferences = candidates.length;
 			candidates.forEach(function(xCID){
 				var Vx = V[xCID] = {};
 				candidates.forEach(function(yCID){
@@ -62,7 +66,7 @@
 						return;
 
 					Vx[yCID] = ballots.reduce(function(count, ballot){
-						return count + (getPreference(xCID, ballot) < getPreference(yCID, ballot)? 1: 0);
+						return count + (getPreference(xCID, ballot, noPreferences) < getPreference(yCID, ballot, noPreferences)? 1: 0);
 					}, 0);
 					majorities.push({
 						x: xCID,
@@ -102,24 +106,25 @@
 		 * @returns [candidate]	Array of candidates which are the sources of the locked-in graph.
 		 */
 		var electSingle = function(candidates, ballots){
-			if(!candidates.length)
+			var noPreferences = candidates.length;
+			if(!noPreferences)
 				return [];
 
 			if(enableDebug){
-				console.log(ballots.length + " Ballots:")
-				console.log(candidates.join("\t"));
+				console.log(ballots.length + ' Ballots:')
+				console.log(candidates.join('\t'));
 				ballots.forEach(function(ballot){
 					var scores = candidates.map(function(candidate){
-						return getPreference(candidate, ballot);
+						return getPreference(candidate, ballot, noPreferences);
 					});
-					console.log(scores.join("\t"));
+					console.log(scores.join('\t'));
 				});
 		 	}
 
 			var majorities = calculateMajorities(candidates, ballots);
 
 			if(enableDebug)
-				console.log("Majorities:\n", majorities);
+				console.log('Majorities:\n', majorities);
 
 			//lock in:
 			var G = {};
@@ -145,7 +150,7 @@
 			});
 
 			if(enableDebug)
-				console.log("Locked Graph:\n", G);
+				console.log('Locked Graph:\n', G);
 
 			var sources = candidates.filter(function(candidate){
 				//not reachable from every candidate
@@ -155,7 +160,7 @@
 			});
 
 			if(enableDebug)
-				console.log("Graph Sources:", sources);
+				console.log('Graph Sources:', sources);
 
 			return sources;
 		};
@@ -163,17 +168,17 @@
 
 
 		//example:
-		var candidates = ["Memphis", "Nashville", "Chattanooga", "Knoxville"];
+		var candidates = ['Memphis', 'Nashville', 'Chattanooga', 'Knoxville'];
 		var ballots = [
-			[candidates[0], candidates[1], candidates[2], candidates[3]],
-			[candidates[1], candidates[2], candidates[3], candidates[0]],
-			[candidates[2], candidates[3], candidates[1], candidates[0]],
-			[candidates[3], candidates[2], candidates[1], candidates[0]]
+			{'Memphis': 0, 'Nashville': 1, 'Chattanooga': 2, 'Knoxville': 3},
+			{'Nashville': 0, 'Chattanooga': 1, 'Knoxville': 2, 'Memphis': 3},
+			{'Chattanooga': 0, 'Knoxville': 1, 'Nashville': 2, 'Memphis': 3},
+			{'Knoxville': 0, 'Chattanooga': 1, 'Nashville': 2, 'Memphis': 3}
 		];
 		winners = elect(candidates, ballots, candidates.length);
 
 		winners.forEach(function(winner, i){
-			console.log("Winner #", i + 1, winner);
+			console.log('Winner #', i + 1, winner);
 		});
 
 	</script>
