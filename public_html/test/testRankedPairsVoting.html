@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<link rel="shortcut icon" href="../favicon.png" />
+
+	<title>test Ranked Pairs voting</title>
+
+	<script>
+		//@see <a href="https://gist.github.com/asafh/a8e9af7a3e5282cbba27">Ranked Pairs voting</a>
+
+		var enableDebug = false;
+
+
+		var getPreference = function(candidate, ballot){
+			return ballot.indexOf(candidate);
+		};
+
+		/**
+		 * Runs electSingle until at least *wanted* winners are elected, returns the first *wanted* winners.
+		 *
+		 * @param candidates		An array of strings, each representing a candidate
+		 * @param ballots			Array of <any>, each is a ballot that is passed to getPreference
+		 * @param wantedWinners	The number of wanted winners
+		 * @returns [candidate]	Array of candidates of size *wanted* (given that there are enough candidates)
+		 */
+		var elect = function(candidates, ballots, wantedWinners){
+			if(typeof wantedWinners !== "number")
+				wantedWinners = 1;
+
+			var winners = [];
+			while(winners.length < wantedWinners){
+				var thisElection = electSingle(candidates, ballots);
+				if(!thisElection.length){
+					console.log("Could not elect enough?");
+
+					break;
+				}
+
+				winners.push.apply(winners, thisElection);
+				if(winners.length > wantedWinners)
+					console.log("Too many winners");
+				if(winners.length >= wantedWinners)
+					break;
+
+				candidates = candidates.filter(function(candidate){
+					return (thisElection.indexOf(candidate) === -1);
+				});
+			}
+			return winners;
+		};
+
+		var calculateMajorities = function(candidates, ballots){
+			var V = {};
+			var majorities = [];
+
+			candidates.forEach(function(xCID){
+				var Vx = V[xCID] = {};
+				candidates.forEach(function(yCID){
+					if(yCID == xCID)
+						return;
+
+					Vx[yCID] = ballots.reduce(function(count, ballot){
+						return count + (getPreference(xCID, ballot) < getPreference(yCID, ballot)? 1: 0);
+					}, 0);
+					majorities.push({
+						x: xCID,
+						y: yCID,
+						Vxy: Vx[yCID]
+					});
+				});
+			});
+
+			majorities.sort(function(m1, m2){
+				var x = m1.x;
+				var y = m1.y;
+				var z = m2.x;
+				var w = m2.y;
+
+				//Vxy - Vzw
+				var diff = m1.Vxy - m2.Vxy;
+				//Vxy > Vzw
+				if(diff > 0)
+					return 1;
+
+				if(diff == 0)
+					//Vwz > Vyx smaller minority opposition (now wz and yz)
+					return V[w][z] - V[y][x];
+
+				return -1;
+			}).reverse();
+
+			return majorities;
+		};
+
+		/**
+		 * Runs the a Ranked Pairs vote, and returns an array of winners (which is usually single, unless the graph has more than one source)
+		 *
+		 * @param candidates		An array of strings, each representing a candidate
+		 * @param ballots			Array of <any>, each is a ballot that is passed to getPreference
+		 * @returns [candidate]	Array of candidates which are the sources of the locked-in graph.
+		 */
+		var electSingle = function(candidates, ballots){
+			if(!candidates.length)
+				return [];
+
+			if(enableDebug){
+				console.log(ballots.length + " Ballots:")
+				console.log(candidates.join("\t"));
+				ballots.forEach(function(ballot){
+					var scores = candidates.map(function(candidate){
+						return getPreference(candidate, ballot);
+					});
+					console.log(scores.join("\t"));
+				});
+		 	}
+
+			var majorities = calculateMajorities(candidates, ballots);
+
+			if(enableDebug)
+				console.log("Majorities:\n", majorities);
+
+			//lock in:
+			var G = {};
+			candidates.forEach(function(candidate){
+				G[candidate] = [];
+			});
+			var reachable = function(from, to){
+				var nFrom = G[from];
+
+				//can be reached from one of the connections
+				return nFrom.some(function(neighbor){
+					return (neighbor == to || reachable(neighbor, to));
+				});
+			};
+
+			majorities.forEach(function(m){
+				//if x is accessible from y, then x->y would create a circle
+				if(reachable(m.y, m.x))
+					return;
+
+				G[m.x] = G[m.x] || [];
+				G[m.x].push(m.y);
+			});
+
+			if(enableDebug)
+				console.log("Locked Graph:\n", G);
+
+			var sources = candidates.filter(function(candidate){
+				//not reachable from every candidate
+				return candidates.every(function(neighbor){
+					return (G[neighbor].indexOf(candidate) === -1);
+				});
+			});
+
+			if(enableDebug)
+				console.log("Graph Sources:", sources);
+
+			return sources;
+		};
+
+
+
+		//example:
+		var candidates = ["Memphis", "Nashville", "Chattanooga", "Knoxville"];
+		var ballots = [
+			[candidates[0], candidates[1], candidates[2], candidates[3]],
+			[candidates[1], candidates[2], candidates[3], candidates[0]],
+			[candidates[2], candidates[3], candidates[1], candidates[0]],
+			[candidates[3], candidates[2], candidates[1], candidates[0]]
+		];
+		winners = elect(candidates, ballots, candidates.length);
+
+		winners.forEach(function(winner, i){
+			console.log("Winner #", i + 1, winner);
+		});
+
+	</script>
+</head>
+
+<body>
+</body>
+</html>
