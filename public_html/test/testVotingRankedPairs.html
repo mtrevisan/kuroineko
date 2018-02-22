@@ -60,7 +60,7 @@
 		 * @private
 		 */
 		var electWinner = function(candidates, ballots, noPreferenceValue){
-			if(!noPreferenceValue)
+			if(!candidates.length)
 				return [];
 
 			if(enableDebug){
@@ -79,36 +79,12 @@
 			if(enableDebug)
 				console.log('Majorities:\n', majorities);
 
-			//lock in:
-			var graph = {};
-			candidates.forEach(function(candidate){
-				graph[candidate] = [];
-			});
-			var reachable = function(from, to){
-				//can be reached from one of the connections
-				return graph[from].some(function(neighbor){
-					return (neighbor === to || reachable(neighbor, to));
-				});
-			};
-
-			majorities.forEach(function(m){
-				//if x is accessible from y, then x->y would create a circle
-				if(reachable(m.y, m.x))
-					return;
-
-				graph[m.x] = graph[m.x] || [];
-				graph[m.x].push(m.y);
-			});
+			var graph = createGraph(candidates, majorities);
 
 			if(enableDebug)
 				console.log('Locked graph:\n', graph);
 
-			var sources = candidates.filter(function(candidate){
-				//not reachable from every candidate
-				return candidates.every(function(neighbor){
-					return (graph[neighbor].indexOf(candidate) === -1);
-				});
-			});
+			var sources = extractSources(candidates, graph);
 
 			if(enableDebug)
 				console.log('Graph sources:', sources);
@@ -130,6 +106,7 @@
 					vx[y] = ballots.reduce(function(count, ballot){
 						return count + (getPreference(x, ballot, noPreferenceValue) < getPreference(y, ballot, noPreferenceValue)? 1: 0);
 					}, 0);
+
 					majorities.push({
 						x: x,
 						y: y,
@@ -138,21 +115,58 @@
 				});
 			});
 
-			majorities.sort(function(m1, m2){
-				//Vxy - Vzw
-				var diff = m1.vxy - m2.vxy;
-				//Vxy > Vzw
-				if(diff > 0)
-					return 1;
+			majorities.sort(
+				function(m1, m2){
+					//Vxy - Vzw
+					var diff = m1.vxy - m2.vxy;
+					//Vxy > Vzw
+					if(diff > 0)
+						return 1;
 
-				if(diff === 0)
-					//Vwz > Vyx smaller minority opposition (now wz and yz)
-					return v[m2.y][m2.x] - v[m1.y][m1.x];
+					//resolve tie-breaking
+					if(diff === 0)
+						//Vwz > Vyx smaller minority opposition (now wz and yz)
+						return v[m2.y][m2.x] - v[m1.y][m1.x];
 
-				return -1;
-			}).reverse();
+					return -1;
+				})
+				.reverse();
 
 			return majorities;
+		};
+
+		/** @private */
+		var createGraph = function(candidates, majorities){
+			var graph = {};
+			candidates.forEach(function(candidate){
+				graph[candidate] = [];
+			});
+			var reachable = function(from, to){
+				//can be reached from one of the connections
+				return graph[from].some(function(neighbor){
+					return (neighbor === to || reachable(neighbor, to));
+				});
+			};
+
+			//lock-in:
+			majorities.forEach(function(m){
+				//if x is accessible from y, then x->y would create a circle, so the edge is skipped
+				if(!reachable(m.y, m.x)){
+					graph[m.x] = graph[m.x] || [];
+					graph[m.x].push(m.y);
+				}
+			});
+			return graph;
+		};
+
+		/** @private */
+		var extractSources = function(candidates, graph){
+			return candidates.filter(function(candidate){
+				//not reachable from every candidate
+				return candidates.every(function(neighbor){
+					return (graph[neighbor].indexOf(candidate) === -1);
+				});
+			});
 		};
 
 		/** @private */
