@@ -103,7 +103,7 @@
 				return [];
 
 			if(enableDebug){
-				console.log(ballots.length + ' Ballots:');
+				console.log(ballots.length + ' ballots:');
 				console.log(candidates.join('\t'));
 				ballots.forEach(function(ballot){
 					var scores = candidates.map(function(candidate){
@@ -119,12 +119,12 @@
 				console.log('Majorities:\n', majorities);
 
 			//lock in:
-			var G = {};
+			var graph = {};
 			candidates.forEach(function(candidate){
-				G[candidate] = [];
+				graph[candidate] = [];
 			});
 			var reachable = function(from, to){
-				var nFrom = G[from];
+				var nFrom = graph[from];
 
 				//can be reached from one of the connections
 				return nFrom.some(function(neighbor){
@@ -137,22 +137,22 @@
 				if(reachable(m.y, m.x))
 					return;
 
-				G[m.x] = G[m.x] || [];
-				G[m.x].push(m.y);
+				graph[m.x] = graph[m.x] || [];
+				graph[m.x].push(m.y);
 			});
 
 			if(enableDebug)
-				console.log('Locked Graph:\n', G);
+				console.log('Locked graph:\n', graph);
 
 			var sources = candidates.filter(function(candidate){
 				//not reachable from every candidate
 				return candidates.every(function(neighbor){
-					return (G[neighbor].indexOf(candidate) === -1);
+					return (graph[neighbor].indexOf(candidate) === -1);
 				});
 			});
 
 			if(enableDebug)
-				console.log('Graph Sources:', sources);
+				console.log('Graph sources:', sources);
 
 			return sources;
 		};
