@@ -17,9 +17,9 @@
 		 * Given a list of candidates and a list of ballots, return the first given number of winners.
 		 *
 		 * @param candidates			An array of strings, each representing a candidate
-		 * @param ballots				Array of map, each is a ballot that is passed to getPreference
+		 * @param ballots				An array of maps, each is a ballot
 		 * @param [wantedWinners]	The number of wanted winners, optional, default to <code>1</code>
-		 * @returns candidate		Array of candidates of size *wanted* (given that there are enough candidates)
+		 * @returns candidate		Array of winning candidates
 		 */
 		var elect = function(candidates, ballots, wantedWinners){
 			if(typeof wantedWinners !== 'number')
@@ -29,13 +29,13 @@
 			var noPreferences = candidates.length;
 			while(winners.length < wantedWinners){
 				var thisElection = electSingle(candidates, ballots, noPreferences);
-				if(!thisElection.length){
+				if(!thisElection.size){
 					console.log('Could not elect another candidate, wanted ' + wantedWinners + ' winners, obtained ' + winners.length);
 
 					break;
 				}
 
-				winners.push.apply(winners, thisElection);
+				winners.push(thisElection);
 				if(winners.length > wantedWinners)
 					console.log('Too many winners, wanted ' + wantedWinners + ' winners, obtained ' + winners.length);
 				if(winners.length >= wantedWinners)
@@ -43,10 +43,77 @@
 
 				//filter out winner candidate(s)
 				candidates = candidates.filter(function(candidate){
-					return (thisElection.indexOf(candidate) === -1);
+					return !thisElection.has(candidate);
 				});
 			}
 			return winners;
+		};
+
+		/**
+		 * Runs the Ranked Pairs vote
+		 *
+		 * @param candidates		An array of strings, each representing a candidate
+		 * @param ballots			An array of maps, each is a ballot
+		 * @param noPreferences	Value to associate to a candidate not present in the preference list
+		 * @returns candidate	Set of candidates which are the sources of the locked-in graph (which is usually single, unless the graph has more than one source)
+		 * 
+		 * @private
+		 */
+		var electSingle = function(candidates, ballots, noPreferences){
+			if(!noPreferences)
+				return [];
+
+			if(enableDebug){
+				console.log(ballots.length + ' ballots:');
+				console.log(candidates.join('\t'));
+				ballots.forEach(function(ballot){
+					var scores = candidates.map(function(candidate){
+						return getPreference(candidate, ballot, noPreferences);
+					});
+					console.log(scores.join('\t'));
+				});
+		 	}
+
+			var majorities = calculateMajorities(candidates, ballots, noPreferences);
+
+			if(enableDebug)
+				console.log('Majorities:\n', majorities);
+
+			//lock in:
+			var graph = {};
+			candidates.forEach(function(candidate){
+				graph[candidate] = [];
+			});
+			var reachable = function(from, to){
+				//can be reached from one of the connections
+				return graph[from].some(function(neighbor){
+					return (neighbor === to || reachable(neighbor, to));
+				});
+			};
+
+			majorities.forEach(function(m){
+				//if x is accessible from y, then x->y would create a circle
+				if(reachable(m.y, m.x))
+					return;
+
+				graph[m.x] = graph[m.x] || [];
+				graph[m.x].push(m.y);
+			});
+
+			if(enableDebug)
+				console.log('Locked graph:\n', graph);
+
+			var sources = candidates.filter(function(candidate){
+				//not reachable from every candidate
+				return candidates.every(function(neighbor){
+					return (graph[neighbor].indexOf(candidate) === -1);
+				});
+			});
+
+			if(enableDebug)
+				console.log('Graph sources:', sources);
+
+			return new Set(sources);
 		};
 
 		/** @private */
@@ -86,75 +153,6 @@
 			}).reverse();
 
 			return majorities;
-		};
-
-		/**
-		 * Runs the a Ranked Pairs vote, and returns an array of winners (which is usually single, unless the graph has more than one source)
-		 *
-		 * @param candidates		An array of strings, each representing a candidate
-		 * @param ballots			Array of map, each is a ballot that is passed to getPreference
-		 * @param noPreferences	Value to associate to a candidate not present in the preference list
-		 * @returns candidate	Array of candidates which are the sources of the locked-in graph
-		 * 
-		 * @private
-		 */
-		var electSingle = function(candidates, ballots, noPreferences){
-			if(!noPreferences)
-				return [];
-
-			if(enableDebug){
-				console.log(ballots.length + ' ballots:');
-				console.log(candidates.join('\t'));
-				ballots.forEach(function(ballot){
-					var scores = candidates.map(function(candidate){
-						return getPreference(candidate, ballot, noPreferences);
-					});
-					console.log(scores.join('\t'));
-				});
-		 	}
-
-			var majorities = calculateMajorities(candidates, ballots, noPreferences);
-
-			if(enableDebug)
-				console.log('Majorities:\n', majorities);
-
-			//lock in:
-			var graph = {};
-			candidates.forEach(function(candidate){
-				graph[candidate] = [];
-			});
-			var reachable = function(from, to){
-				var nFrom = graph[from];
-
-				//can be reached from one of the connections
-				return nFrom.some(function(neighbor){
-					return (neighbor === to || reachable(neighbor, to));
-				});
-			};
-
-			majorities.forEach(function(m){
-				//if x is accessible from y, then x->y would create a circle
-				if(reachable(m.y, m.x))
-					return;
-
-				graph[m.x] = graph[m.x] || [];
-				graph[m.x].push(m.y);
-			});
-
-			if(enableDebug)
-				console.log('Locked graph:\n', graph);
-
-			var sources = candidates.filter(function(candidate){
-				//not reachable from every candidate
-				return candidates.every(function(neighbor){
-					return (graph[neighbor].indexOf(candidate) === -1);
-				});
-			});
-
-			if(enableDebug)
-				console.log('Graph sources:', sources);
-
-			return sources;
 		};
 
 		/** @private */
@@ -202,7 +200,7 @@
 		winners = elect(candidates, ballots, candidates.length);
 
 		winners.forEach(function(winner, i){
-			console.log('Winner #', i + 1, ':', winner);
+			console.log('Winner #', i + 1, ':', Array.from(winner).join(' = '));
 		});
 
 	</script>
