@@ -24,8 +24,8 @@
 		/**
 		 * Runs electSingle until at least *wanted* winners are elected, returns the first *wanted* winners.
 		 *
-		 * @param candidates		An array of strings, each representing a candidate
-		 * @param ballots			Array of <any>, each is a ballot that is passed to getPreference
+		 * @param [candidates]	An array of strings, each representing a candidate
+		 * @param [ballots]		Array of map, each is a ballot that is passed to getPreference
 		 * @param wantedWinners	The number of wanted winners
 		 * @returns [candidate]	Array of candidates of size *wanted* (given that there are enough candidates)
 		 */
@@ -34,8 +34,9 @@
 				wantedWinners = 1;
 
 			var winners = [];
+			var noPreferences = candidates.length;
 			while(winners.length < wantedWinners){
-				var thisElection = electSingle(candidates, ballots);
+				var thisElection = electSingle(candidates, ballots, noPreferences);
 				if(!thisElection.length){
 					console.log('Could not elect enough?');
 
@@ -55,10 +56,9 @@
 			return winners;
 		};
 
-		var calculateMajorities = function(candidates, ballots){
+		var calculateMajorities = function(candidates, ballots, noPreferences){
 			var V = {};
 			var majorities = [];
-			var noPreferences = candidates.length * 2;
 			candidates.forEach(function(xCID){
 				var Vx = V[xCID] = {};
 				candidates.forEach(function(yCID){
@@ -101,12 +101,12 @@
 		/**
 		 * Runs the a Ranked Pairs vote, and returns an array of winners (which is usually single, unless the graph has more than one source)
 		 *
-		 * @param candidates		An array of strings, each representing a candidate
-		 * @param ballots			Array of <any>, each is a ballot that is passed to getPreference
-		 * @returns [candidate]	Array of candidates which are the sources of the locked-in graph.
+		 * @param [candidates]	An array of strings, each representing a candidate
+		 * @param [ballots]		Array of map, each is a ballot that is passed to getPreference
+		 * @param noPreferences	Value to associate to a candidate not present in the preference list
+		 * @returns [candidate]	Array of candidates which are the sources of the locked-in graph
 		 */
-		var electSingle = function(candidates, ballots){
-			var noPreferences = candidates.length * 2;
+		var electSingle = function(candidates, ballots, noPreferences){
 			if(!noPreferences)
 				return [];
 
@@ -121,7 +121,7 @@
 				});
 		 	}
 
-			var majorities = calculateMajorities(candidates, ballots);
+			var majorities = calculateMajorities(candidates, ballots, noPreferences);
 
 			if(enableDebug)
 				console.log('Majorities:\n', majorities);
@@ -193,7 +193,7 @@
 			//Beglari Tavartkiladze
 			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined,	'SR': undefined,	'T': undefined},
 			//Mauro Trevisan
-			{'ALV': 3,	'LA': 4,	'SA': 5,	'BS': 1,	'TM': 0,	'SR': 2},
+			{'ALV': 3,	'LA': 4,	'ILV': 6,	'SA': 5,	'BS': 1,	'TM': 0,	'SR': 2},
 			//Denis Zarantonello
 			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined,	'SR': undefined,	'T': undefined}
 		];
