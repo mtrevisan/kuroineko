@@ -28,7 +28,7 @@
 			var winners = [];
 			var noPreferenceValue = candidates.length;
 			while(winners.length < wantedWinners){
-				var thisElection = electSingle(candidates, ballots, noPreferenceValue);
+				var thisElection = electWinner(candidates, ballots, noPreferenceValue);
 				if(!thisElection.size){
 					console.log('Could not elect another candidate, wanted ' + wantedWinners + ' winners, obtained ' + winners.length);
 
@@ -59,7 +59,7 @@
 		 * 
 		 * @private
 		 */
-		var electSingle = function(candidates, ballots, noPreferenceValue){
+		var electWinner = function(candidates, ballots, noPreferenceValue){
 			if(!noPreferenceValue)
 				return [];
 
