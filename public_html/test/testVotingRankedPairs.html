@@ -18,7 +18,7 @@
 		 *
 		 * @param candidates			An array of strings, each representing a candidate
 		 * @param ballots				An array of maps, each is a ballot
-		 * @param [wantedWinners]	The number of wanted winners, optional, default to <code>1</code>
+		 * @param [wantedWinners]	The number of wanted winners, optional, defaults to <code>1</code>
 		 * @returns candidate		Array of winning candidates
 		 */
 		var elect = function(candidates, ballots, wantedWinners){
@@ -60,35 +60,33 @@
 		 * @private
 		 */
 		var electWinner = function(candidates, ballots, noPreferenceValue){
-			if(!candidates.length)
-				return [];
-
-			if(enableDebug){
-				console.log(ballots.length + ' ballots:');
-				console.log(candidates.join('\t'));
-				ballots.forEach(function(ballot){
-					var scores = candidates.map(function(candidate){
-						return getPreference(candidate, ballot, noPreferenceValue);
+			var sources = [];
+			if(candidates.length === 1)
+				sources = candidates;
+			else if(candidates.length > 0){
+				if(enableDebug){
+					console.log(ballots.length + ' ballots:');
+					console.log(candidates.join('\t'));
+					ballots.forEach(function(ballot){
+						var scores = candidates.map(function(candidate){
+							return getPreference(candidate, ballot, noPreferenceValue);
+						});
+						console.log(scores.join('\t'));
 					});
-					console.log(scores.join('\t'));
-				});
-		 	}
+				}
 
-			var majorities = calculateMajorities(candidates, ballots, noPreferenceValue);
+				var majorities = calculateMajorities(candidates, ballots, noPreferenceValue);
+				if(enableDebug)
+					console.log('Majorities:\n', majorities);
 
-			if(enableDebug)
-				console.log('Majorities:\n', majorities);
+				var graph = createGraph(candidates, majorities);
+				if(enableDebug)
+					console.log('Locked graph:\n', graph);
 
-			var graph = createGraph(candidates, majorities);
-
-			if(enableDebug)
-				console.log('Locked graph:\n', graph);
-
-			var sources = extractSources(candidates, graph);
-
-			if(enableDebug)
-				console.log('Graph sources:', sources);
-
+				sources = extractSources(candidates, graph);
+				if(enableDebug)
+					console.log('Graph sources:', sources);
+			}
 			return new Set(sources);
 		};
 
