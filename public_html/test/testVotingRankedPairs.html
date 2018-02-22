@@ -26,9 +26,9 @@
 				wantedWinners = 1;
 
 			var winners = [];
-			var noPreferences = candidates.length;
+			var noPreferenceValue = candidates.length;
 			while(winners.length < wantedWinners){
-				var thisElection = electSingle(candidates, ballots, noPreferences);
+				var thisElection = electSingle(candidates, ballots, noPreferenceValue);
 				if(!thisElection.size){
 					console.log('Could not elect another candidate, wanted ' + wantedWinners + ' winners, obtained ' + winners.length);
 
@@ -59,8 +59,8 @@
 		 * 
 		 * @private
 		 */
-		var electSingle = function(candidates, ballots, noPreferences){
-			if(!noPreferences)
+		var electSingle = function(candidates, ballots, noPreferenceValue){
+			if(!noPreferenceValue)
 				return [];
 
 			if(enableDebug){
@@ -68,13 +68,13 @@
 				console.log(candidates.join('\t'));
 				ballots.forEach(function(ballot){
 					var scores = candidates.map(function(candidate){
-						return getPreference(candidate, ballot, noPreferences);
+						return getPreference(candidate, ballot, noPreferenceValue);
 					});
 					console.log(scores.join('\t'));
 				});
 		 	}
 
-			var majorities = calculateMajorities(candidates, ballots, noPreferences);
+			var majorities = calculateMajorities(candidates, ballots, noPreferenceValue);
 
 			if(enableDebug)
 				console.log('Majorities:\n', majorities);
@@ -117,7 +117,7 @@
 		};
 
 		/** @private */
-		var calculateMajorities = function(candidates, ballots, noPreferences){
+		var calculateMajorities = function(candidates, ballots, noPreferenceValue){
 			var v = {};
 			var majorities = [];
 			candidates.forEach(function(x){
@@ -128,7 +128,7 @@
 						return;
 
 					vx[y] = ballots.reduce(function(count, ballot){
-						return count + (getPreference(x, ballot, noPreferences) < getPreference(y, ballot, noPreferences)? 1: 0);
+						return count + (getPreference(x, ballot, noPreferenceValue) < getPreference(y, ballot, noPreferenceValue)? 1: 0);
 					}, 0);
 					majorities.push({
 						x: x,
@@ -156,10 +156,10 @@
 		};
 
 		/** @private */
-		var getPreference = function(candidate, ballot, noPreference){
+		var getPreference = function(candidate, ballot, noPreferenceValue){
 			var preference = ballot[candidate];
 			if(preference === undefined)
-				preference = noPreference;
+				preference = noPreferenceValue;
 
 			return preference;
 		};
