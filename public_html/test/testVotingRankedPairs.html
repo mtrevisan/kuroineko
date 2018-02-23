@@ -5,10 +5,11 @@
 	<meta name="author" content="Mauro Trevisan">
 	<link rel="shortcut icon" href="../favicon.png" />
 
-	<title>test Ranked Pairs voting</title>
+	<title>test Tideman's Ranked Pairs voting</title>
 
 	<script>
-		//@see <a href="https://gist.github.com/asafh/a8e9af7a3e5282cbba27">Ranked Pairs voting</a>
+		//@see <a href="https://en.wikipedia.org/wiki/Ranked_pairs">Tideman's Ranked Pairs voting - Wiki</a>
+		//@see <a href="https://gist.github.com/asafh/a8e9af7a3e5282cbba27">Tideman's Ranked Pairs voting - GitHub</a>
 
 		var enableDebug = false;
 
@@ -42,15 +43,13 @@
 					break;
 
 				//filter out winner candidate(s)
-				candidates = candidates.filter(function(candidate){
-					return !thisElection.has(candidate);
-				});
+				candidates = candidates.filter(candidate => !thisElection.has(candidate));
 			}
 			return winners;
 		};
 
 		/**
-		 * Runs the Ranked Pairs vote
+		 * Runs the Tideman's Ranked Pairs vote
 		 *
 		 * @param candidates		An array of strings, each representing a candidate
 		 * @param ballots			An array of maps, each is a ballot
@@ -62,17 +61,13 @@
 		var electWinner = function(candidates, ballots, noPreferenceValue){
 			var sources = [];
 			if(candidates.length === 1)
+				//short-circuit (the only candidate who competes is also the winner)
 				sources = candidates;
 			else if(candidates.length > 0){
 				if(enableDebug){
 					console.log(ballots.length + ' ballots:');
 					console.log(candidates.join('\t'));
-					ballots.forEach(function(ballot){
-						var scores = candidates.map(function(candidate){
-							return getPreference(candidate, ballot, noPreferenceValue);
-						});
-						console.log(scores.join('\t'));
-					});
+					ballots.forEach(ballot => console.log(candidates.map(candidate => getPreference(candidate, ballot, undefined)).join('\t')));
 				}
 
 				var majorities = calculateMajorities(candidates, ballots, noPreferenceValue);
@@ -83,7 +78,7 @@
 				if(enableDebug)
 					console.log('Locked graph:\n', graph);
 
-				sources = extractSources(candidates, graph);
+				sources = graphSources(candidates, graph);
 				if(enableDebug)
 					console.log('Graph sources:', sources);
 			}
@@ -101,9 +96,7 @@
 					if(y === x)
 						return;
 
-					vx[y] = ballots.reduce(function(count, ballot){
-						return count + (getPreference(x, ballot, noPreferenceValue) < getPreference(y, ballot, noPreferenceValue)? 1: 0);
-					}, 0);
+					vx[y] = ballots.reduce((count, ballot) => count + (getPreference(x, ballot, noPreferenceValue) < getPreference(y, ballot, noPreferenceValue)? 1: 0), 0);
 
 					majorities.push({
 						x: x,
@@ -113,8 +106,15 @@
 				});
 			});
 
-			majorities.sort(
-				function(m1, m2){
+			sortMajorities(majorities, v);
+
+			return majorities;
+		};
+
+		/** @private */
+		var sortMajorities = function(majorities, v){
+			//sort majorities
+			majorities.sort(function(m1, m2){
 					//Vxy - Vzw
 					var diff = m1.vxy - m2.vxy;
 					//Vxy > Vzw
@@ -129,27 +129,17 @@
 					return -1;
 				})
 				.reverse();
-
-			return majorities;
 		};
 
 		/** @private */
 		var createGraph = function(candidates, majorities){
 			var graph = {};
-			candidates.forEach(function(candidate){
-				graph[candidate] = [];
-			});
-			var reachable = function(from, to){
-				//can be reached from one of the connections
-				return graph[from].some(function(neighbor){
-					return (neighbor === to || reachable(neighbor, to));
-				});
-			};
+			candidates.forEach(candidate => graph[candidate] = []);
 
 			//lock-in:
 			majorities.forEach(function(m){
 				//if x is accessible from y, then x->y would create a circle, so the edge is skipped
-				if(!reachable(m.y, m.x)){
+				if(!graphNodeReachable(graph, m.y, m.x)){
 					graph[m.x] = graph[m.x] || [];
 					graph[m.x].push(m.y);
 				}
@@ -158,13 +148,17 @@
 		};
 
 		/** @private */
-		var extractSources = function(candidates, graph){
-			return candidates.filter(function(candidate){
-				//not reachable from every candidate
-				return candidates.every(function(neighbor){
-					return (graph[neighbor].indexOf(candidate) === -1);
-				});
-			});
+		var graphNodeReachable = function(graph, from, to){
+			//can be reached from one of the connections
+			return graph[from].some(neighbor => (neighbor === to || graphNodeReachable(graph, neighbor, to)));
+		};
+
+		/** @private */
+		var graphSources = function(candidates, graph){
+			return candidates.filter(candidate =>
+				//filter out if neighbor is not reachable from every candidate
+				candidates.every(neighbor => (graph[neighbor].indexOf(candidate) === -1))
+			);
 		};
 
 		/** @private */
@@ -179,41 +173,71 @@
 
 
 		//example:
+		var sortProperties = function(obj){
+			//convert object into array
+			var sortable = [];
+			for(var key in obj)
+				if(obj.hasOwnProperty(key))
+					//each item is an array in format [key, value]
+					sortable.push([key, obj[key]]);
+
+			//sort items by value
+			sortable.sort((a, b) => b[1] - a[1]);
+			//array in format [[key1, val1], [key2, val2], ...]
+			return sortable;
+		};
+		var convertInput = function(ballot){
+			ballot = sortProperties(ballot);
+
+			var keys = ballot.map(b => b[1])
+				.filter((elem, index, array) => array.indexOf(elem) === index);
+			ballot = ballot.filter(vote => vote[1] !== undefined)
+				.map(vote => [vote[0], keys.indexOf(vote[1])])
+				.reduce(function(p, vote){
+					p[vote[0]] = vote[1];
+					return p;
+				}, {});
+
+			return ballot;
+		};
+
 		var candidates = ['ALV', 'LA', 'ILV', 'SA', 'BS', 'TM', 'SR', 'T'];
 		var ballots = [
 			//Stefano Battaggia
-			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined,	'SR': undefined,	'T': undefined},
+			{},
 			//Mauro Bonato
-			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined,	'SR': undefined,	'T': undefined},
+			{},
 			//Ferdinando Camon
-			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined,	'SR': undefined,	'T': undefined},
+			{},
 			//Franco Cavallini
-			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined,	'SR': undefined,	'T': undefined},
+			{},
 			//Deborah Coron
-			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined,	'SR': undefined,	'T': undefined},
+			{},
 			//Ezio Crosara
-			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined,	'SR': undefined,	'T': undefined},
+			{},
 			//Andrea Lunardon
-			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined,	'SR': undefined,	'T': undefined},
+			{},
 			//Loris Palmerini
-			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined,	'SR': undefined,	'T': undefined},
+			{},
 			//Franco Rocchetta
-			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined,	'SR': undefined,	'T': undefined},
+			{},
 			//Andrea Sinigallia
-			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined,	'SR': undefined,	'T': undefined},
+			{},
 			//Beglari Tavartkiladze
-			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined,	'SR': undefined,	'T': undefined},
+			{},
 			//Mauro Trevisan
-			{'ALV': 3,	'LA': 4,	'ILV': 6,	'SA': 5,	'BS': 1,	'TM': 0,	'SR': 2},
+			{'ALV': 2.3,	'LA': 2.2,	'ILV': 1.2,	'SA': 1.8,	'BS': 2.5,	'TM': 4.8,	'SR': 2.6},
 			//Denis Zarantonello
-			{'ALV': undefined,	'LA': undefined,	'ILV': undefined,	'SA': undefined,	'BS': undefined,	'TM': undefined,	'SR': undefined,	'T': undefined}
+			{}
 		];
+	
+		ballots = ballots.map(ballot => convertInput(ballot))
+			//filter out empty ballots
+			.filter(ballot => Object.keys(ballot).length > 0);
 
 		winners = elect(candidates, ballots, candidates.length);
 
-		winners.forEach(function(winner, i){
-			console.log('Winner #', i + 1, ':', Array.from(winner).join(' = '));
-		});
+		winners.forEach((winner, i) => console.log('Winner #', i + 1, ':', Array.from(winner).join(' = ')));
 
 	</script>
 </head>
