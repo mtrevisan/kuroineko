@@ -5,10 +5,10 @@
 	<meta name="author" content="Mauro Trevisan">
 	<link rel="shortcut icon" href="../favicon.png" />
 
-	<title>test Ranked Pairs voting</title>
+	<title>test Tideman's Ranked Pairs voting</title>
 
 	<script>
-		//@see <a href="https://gist.github.com/asafh/a8e9af7a3e5282cbba27">Ranked Pairs voting</a>
+		//@see <a href="https://gist.github.com/asafh/a8e9af7a3e5282cbba27">Tideman's Ranked Pairs voting</a>
 
 		var enableDebug = false;
 
@@ -50,7 +50,7 @@
 		};
 
 		/**
-		 * Runs the Ranked Pairs vote
+		 * Runs the Tideman's Ranked Pairs vote
 		 *
 		 * @param candidates		An array of strings, each representing a candidate
 		 * @param ballots			An array of maps, each is a ballot
@@ -62,6 +62,7 @@
 		var electWinner = function(candidates, ballots, noPreferenceValue){
 			var sources = [];
 			if(candidates.length === 1)
+				//short-circuit (the only candidate who competes is also the winner)
 				sources = candidates;
 			else if(candidates.length > 0){
 				if(enableDebug){
@@ -83,7 +84,7 @@
 				if(enableDebug)
 					console.log('Locked graph:\n', graph);
 
-				sources = extractSources(candidates, graph);
+				sources = graphSources(candidates, graph);
 				if(enableDebug)
 					console.log('Graph sources:', sources);
 			}
@@ -113,6 +114,14 @@
 				});
 			});
 
+			sortMajorities(majorities, v);
+
+			return majorities;
+		};
+
+		/** @private */
+		var sortMajorities = function(majorities, v){
+			//sort majorities
 			majorities.sort(
 				function(m1, m2){
 					//Vxy - Vzw
@@ -129,8 +138,6 @@
 					return -1;
 				})
 				.reverse();
-
-			return majorities;
 		};
 
 		/** @private */
@@ -139,17 +146,11 @@
 			candidates.forEach(function(candidate){
 				graph[candidate] = [];
 			});
-			var reachable = function(from, to){
-				//can be reached from one of the connections
-				return graph[from].some(function(neighbor){
-					return (neighbor === to || reachable(neighbor, to));
-				});
-			};
 
 			//lock-in:
 			majorities.forEach(function(m){
 				//if x is accessible from y, then x->y would create a circle, so the edge is skipped
-				if(!reachable(m.y, m.x)){
+				if(!graphNodeReachable(graph, m.y, m.x)){
 					graph[m.x] = graph[m.x] || [];
 					graph[m.x].push(m.y);
 				}
@@ -158,9 +159,17 @@
 		};
 
 		/** @private */
-		var extractSources = function(candidates, graph){
+		var graphNodeReachable = function(graph, from, to){
+			//can be reached from one of the connections
+			return graph[from].some(function(neighbor){
+				return (neighbor === to || graphNodeReachable(graph, neighbor, to));
+			});
+		};
+
+		/** @private */
+		var graphSources = function(candidates, graph){
 			return candidates.filter(function(candidate){
-				//not reachable from every candidate
+				//filter out if neighbor is not reachable from every candidate
 				return candidates.every(function(neighbor){
 					return (graph[neighbor].indexOf(candidate) === -1);
 				});
