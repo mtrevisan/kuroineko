@@ -192,9 +192,9 @@
 			var keys = ballot.map(b => b[1])
 				.filter((elem, index, array) => array.indexOf(elem) === index);
 			ballot = ballot.filter(vote => vote[1] !== undefined)
-				.map(s => [s[0], keys.indexOf(s[1])])
-				.reduce(function(p, c){
-					p[c[0]] = c[1];
+				.map(vote => [vote[0], keys.indexOf(vote[1])])
+				.reduce(function(p, vote){
+					p[vote[0]] = vote[1];
 					return p;
 				}, {});
 
