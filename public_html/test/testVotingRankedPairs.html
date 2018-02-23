@@ -188,6 +188,7 @@
 		};
 		var convertInput = function(ballot){
 			ballot = sortProperties(ballot);
+
 			var keys = ballot.map(b => b[1])
 				.filter((elem, index, array) => array.indexOf(elem) === index);
 			ballot = ballot.filter(vote => vote[1] !== undefined)
@@ -196,6 +197,7 @@
 					p[c[0]] = c[1];
 					return p;
 				}, {});
+
 			return ballot;
 		};
 
