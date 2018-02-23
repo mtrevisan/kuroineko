@@ -70,7 +70,7 @@
 					console.log(candidates.join('\t'));
 					ballots.forEach(function(ballot){
 						var scores = candidates.map(function(candidate){
-							return getPreference(candidate, ballot, noPreferenceValue);
+							return getPreference(candidate, ballot, undefined);
 						});
 						console.log(scores.join('\t'));
 					});
