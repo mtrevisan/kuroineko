@@ -3440,6 +3440,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "marias",		"x",			1,	4,	"g",	"1852",			"Xmarjasar.",
 "marid",			"",			1,	3,	"a",	"1412",			"",
 "mariđ",			"",			1,	3,	"a",	"1775",			"Far deventar amaro.",
+"mariđ",			"a",			1,	3,	"a",	"1829",			"Mariđar.",
 "marik",			"re",			1,	1,	"g",	"1509",			"",
 "marin",			"",			1,	3,	"a",	"1867",			"",
 "mariol",		"",			1,	4,	"g",	"1829",			"",
