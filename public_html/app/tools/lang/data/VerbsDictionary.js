@@ -1177,6 +1177,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "đugatol",		"",			1,	3,	"g",	"1775",			"",
 "đul",			"",			1,	1,	"a",	"1775",			"Ligar, alacar, afibiar.",
 "đul",			"de",			1,	1,	"a",	"1775",			"",
+"đun",			"",			1,	1,	"a",	"1829",			"Dexunar.",
+"đun",			"de",			1,	1,	"a",	"1447",			"Star senŧa mañar.",
 "đur",			"",			1,	1,	"a",	"1376",			"",
 "đur",			"kon",		1,	1,	"a",	"1867",			"",
 "đur",			"skon",		1,	1,	"a",	"1560",			"",
@@ -5967,7 +5969,6 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sutil",			"in",			4,	5,	"a",	"1852",			"Asotiliar.",
 "sutiliđ",		"",			1,	5,	"a",	"1829",			"Asotiliar.",
 "suŧ",			"",			1,	1,	"a",	"1867",			"Sucar.",
-"sux",			"",			1,	1,	"a",	"1775",			"",
 "suxi",			"",			1,	1,	"a",	"1854",			"Ronxar de le xanxare.",
 
 "tabak",			"",			1,	3,	"g",	"1775",			"Fiutar el tabako, inalar fumi in đenere.",
@@ -6616,7 +6617,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧup",			"in",			1,	1,	"a",	"1867",			"",
 "ŧupeg",			"",			1,	1,	"a",	"1590",			"Sorbir, cucar.",
 "ŧurl",			"",			1,	1,	"a",	"1852",			"Delirar, molestar, inkietar.",
-"ŧux",			"",			1,	1,	"a",	"1775",			"Sucar.",
+"ŧuŧ",			"",			1,	1,	"a",	"1775",			"Sucar.",
 
 "ubig",			"",			1,	0,	"a",	"1893",			"Ubegar.",
 "ud",				"",			1,	0,	"a",	"1775",			"Versar.",
@@ -7137,8 +7138,6 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "xugul",			"",			1,	1,	"a",	"1829",			"Méter a le strete.",
 "xult",			"e",			1,	1,	"a",	"",				"",
 "xult",			"re",			1,	1,	"a",	"1867",			"",
-"xun",			"",			1,	1,	"a",	"",				"Dexunar.",
-"xun",			"de",			1,	1,	"a",	"1447",			"Star senŧa mañar.",
 "xust",			"",			1,	1,	"a",	"1829",			"",
 "xustiŧi",		"",			1,	4,	"a",	"1509",			""
 ]});
