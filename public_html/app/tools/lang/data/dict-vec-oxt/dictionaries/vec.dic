@@ -1628,9 +1628,9 @@ béveroe/a0a1a2K0-0	po:verb ts:indicative_present is:interrogative st:beverar
 bevarar/a0a1a2E0E1E2-0	po:verb ts:infinitive_simple
 bévaro/a0a1a2E0E1E2I0J0-0	po:verb ts:indicative_present st:bevarar
 bévaroe/a0a1a2K0-0	po:verb ts:indicative_present is:interrogative st:bevarar
-xbevacar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
-xbevaco/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:xbevacar
-xbevàcoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:xbevacar
+bevacar/a0a1a2E0E1E2*0	po:verb ts:infinitive_simple
+bevaco/a0a1a2E0E1E2I0J0*0	po:verb ts:indicative_present st:bevacar
+bevàcoe/a0a1a2K0*0	po:verb ts:indicative_present is:interrogative st:bevacar
 bevasar/a0a1a2E0E1E2*0	po:verb ts:infinitive_simple
 bevaso/a0a1a2E0E1E2I0J0*0	po:verb ts:indicative_present st:bevasar
 bevàsoe/a0a1a2K0*0	po:verb ts:indicative_present is:interrogative st:bevasar
@@ -24799,6 +24799,8 @@ Bernarda/Z0	po:proper_noun
 Bernardin/Z0	po:proper_noun
 Bernardina/Z0	po:proper_noun
 Bernardo/I0Z0	po:proper_noun
+Bertuŧi/Z0	po:proper_noun
+Bertusi/Z0	po:proper_noun
 Beta/Z0	po:proper_noun
 Betin/Z0	po:proper_noun
 Betina/Z0	po:proper_noun
@@ -25343,7 +25345,7 @@ asè	po:adverb
 basa/D0&0	po:adjective is:singular_femenine
 basa/D0&0	po:noun is:singular_femenine
 baso/T0I0&0	po:adjective is:singular_masculine
-baso/T0I0&0	po:noun is:singular_masculine
+baso/T0I0r0&0	po:noun is:singular_masculine
 ben/=0	po:adverb
 ben/C0u0=0mf	po:noun
 benon	po:adverb
@@ -26319,13 +26321,13 @@ ah/@0	po:interjection
 ahi	po:interjection
 bah	po:interjection
 bèl/T0U0=0&0	po:adjective is:singular_masculine
-bèl/U0=0	po:interjection is:singular_masculine
-bèla/=0	po:interjection is:singular_femenine
-bèla/D0=0&0	po:adjective is:singular_femenine
-bèƚa/=0	po:interjection is:singular_femenine
-bèƚa/D0=0&1	po:adjective is:singular_femenine
+bèl/U0(0=0	po:interjection is:singular_masculine
+bèla/(0=0	po:interjection is:singular_femenine
+bèla/D0W0=0&0	po:adjective is:singular_femenine
+bèƚa/(1=0	po:interjection is:singular_femenine
+bèƚa/D0W1=0&1	po:adjective is:singular_femenine
 bèƚo/=0	po:interjection is:singular_masculine
-bèƚo/T0=0&1	po:adjective is:singular_masculine
+bèƚo/T0(1=0&1	po:adjective is:singular_masculine
 brao/B0=0	po:adjective
 brao/B0=0	po:noun
 brao/B0	po:interjection
@@ -26333,7 +26335,7 @@ brava/D0&0<0<1=0	po:adjective is:singular_femenine
 brava/D0&0<0<1=0	po:noun is:singular_femenine
 brava/D0=0	po:interjection is:singular_femenine
 bravo/T0&0<0<1=0	po:adjective is:singular_masculine
-bravo/T0&0<0<1=0	po:noun is:singular_masculine
+bravo/T0W0&0<0<1=0	po:noun is:singular_masculine
 bravo/T0=0	po:interjection is:singular_masculine
 brr	po:interjection
 cake/I0	po:interjection
@@ -27577,7 +27579,7 @@ bivalente/T0I0mf	po:noun
 bivaƚente/T0mf	po:adjective
 bivaƚente/T0mf	po:noun
 bixantin/C0	po:adjective
-bixefe/T0I0	po:preposition
+bixefe/T0I0	po:adverb
 bixlísego/B0	po:adjective
 bixnente/T0I0mf	po:adjective
 bixonto/B0I0mf	po:adjective
@@ -27624,6 +27626,7 @@ bòf	po:noun
 bòkol/T0u0T2mf	po:noun
 bòkola/D0T2	po:noun
 bòsa/D0&0[1	po:noun
+bòto	po:adverb
 bòto/B0I0.0	po:noun
 bòŧa/D0&0[0	po:noun
 braga/D0&0	po:noun
@@ -37278,6 +37281,8 @@ baiƚeto/T0mf	po:noun
 baranbàgola/D0T2	po:noun
 barbàgola/D0T2	po:noun
 barulè/T2	po:noun
+barđígola/D0	po:noun
+bardígola/D0	po:noun
 barxígola/D0T2	po:noun
 basà	po:noun
 basura/D0	po:noun
@@ -37287,6 +37292,8 @@ batisègola/D0T2	po:noun
 batiŧéxola/D0	po:noun
 batiŧègola/D0	po:noun
 baxar/T0	po:noun
+bađariòto/B0I0	po:noun
+badariòto/B0I0	po:noun
 baxariòto/B0I0	po:noun
 baxenfio/B0	po:adjective
 bàrbola/D0T2	po:noun
@@ -37320,7 +37327,7 @@ bibiana/D0	po:adjective
 biñè	po:noun
 bion/C0U0mf	po:noun
 birbante/T0I0v0	po:noun
-bisaka/D0	po:noun
+bisako/B0	po:noun
 bisara/D0	po:noun
 bisterèl/T0U0T2	po:noun
 biviòl/T0U0T2	po:noun
@@ -40080,8 +40087,8 @@ xbraŧaron/D0U0mf	po:noun
 xbravaŧon/D0T2U0mf	po:noun
 xbravièr/T0V0	po:noun
 xbravièra/D0V0	po:noun
-xbravoxo/B0W0I0mf	po:adjective
-xbravoxo/B0I0mf	po:noun
+bravoxo/B0W0I0mf*0	po:adjective
+bravoxo/B0I0mf*0	po:noun
 xbregafià	po:adverb
 xenabrio/T0	po:noun
 xendal/D0T3U0	po:noun
@@ -44383,7 +44390,7 @@ bixutaría/D0	po:noun
 bíndol/T0u0T2mf	po:noun
 blateron/C0U0mf	po:noun
 blonda/D0	po:noun
-blòko/T0	po:noun
+blòko/B0	po:noun
 boada/Y0Y1	po:adverb
 boason/C0U0mf	po:adjective
 boaŧo/T0I0T2	po:noun
@@ -44392,12 +44399,12 @@ bodoleto/T0I0T2mf	po:adjective
 boeta/D0	po:noun
 bojadiŧa/D0T2	po:noun
 bojaiŧa/D0T2	po:noun
-bojo/T0I0&0	po:noun
+bojo/T0I0&0<0<1	po:noun
 bojon/D0T2U0mf	po:noun
 bojura/D0	po:noun
 boɉadiŧa/D0T2	po:noun
 boɉaiŧa/D0T2	po:noun
-boɉo/T0&0	po:noun
+boɉo/T0&0<0<1	po:noun
 boɉura/D0	po:noun
 bokadura/D0Y0*0	po:noun
 bokalina/D0T2	po:noun
@@ -44617,6 +44624,8 @@ buŧoladin/T0	po:noun
 buxaradaŧa/D0T2	po:noun
 buxaradaŧo/T0I0T2	po:noun
 buxaraña/D0	po:noun
+buđarosa	po:interjection
+budarosa	po:interjection
 buxarosa	po:interjection
 buxenèo/T0	po:noun
 buxianŧa/D0T2	po:noun
@@ -51952,10 +51961,63 @@ baluko/B0I0	po:adjective
 baƚuko/B0	po:adjective
 bankièr/C0&0	po:noun
 bandièra/D0	po:noun
+baràtol/T0u0T2mf	po:noun
+baroal/D0T3U0	po:noun
+barđeleta/D0	po:noun
+bardeleta/D0	po:noun
+barxeleta/D0T2	po:noun
+batiŧèsola/D0	po:noun
+bađar/T0	po:noun
+badar/T0	po:noun
+baxar/T0	po:noun
+bebè	po:interjection
+berga/D0	po:noun
+berñifo/B0	po:noun
+bilibào/B0	po:adjective
+biƚibào/B0	po:adjective
+biskiŧo/T0T2	po:adverb
+bixebejo/T0T2	po:noun
+bisefe	po:adverb
+boar/B0	po:noun
+boketo/T0I0mf	po:noun
+bokon/D0U0mf	po:noun
+boñígol/T0u0T2mf	po:noun
+bonorótola	po:adverb
+bonorótoƚa	po:adverb
+bòria/D0	po:noun
+boton/D0U0mf	po:noun
+bovolon/D0U0mf	po:noun
+bovoƚon/D0mf	po:noun
+branŧo/T0T2	po:noun
+brigada/D0Y0Y1	po:noun
+brigente/T0mf	po:noun
+brodoxo/B0mfI0	po:adjective
+bruxa/D0	po:noun
+bruxakamixa	po:adverb
+bu	po:interjection
+ba	po:interjection
+bubako/B0I0	po:adjective
+pofardía	po:interjection
+buevía	po:interjection
+buf	po:interjection
+boña/D0	po:noun
+buña/D0	po:noun
+búlega	po:interjection
+búƚega	po:interjection
+burata/D0	po:noun
+buregòtol/T0u0T2mf	po:noun
+borèla/D0T2	po:noun
+buridon/D0U0mf	po:noun
+burlenga/D0	po:noun
+burlon/C0U0mf	po:adjective
+burlòto/B0I0	po:noun
+burokràtego/B0	po:adjective
+buđaroska	po:interjection
+budaroska	po:interjection
+buxaroska	po:interjection
 
 
 
-/ 779
+/ 784
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
-/(sost.)|baxo|abà (infant.)

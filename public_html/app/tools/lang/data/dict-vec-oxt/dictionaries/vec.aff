@@ -5503,9 +5503,11 @@ SFX mf orse ursi orse
 
 
 # avèrbi (-mente)
-SFX W0 Y 25
+SFX W0 Y 27
 SFX W0 0 emente/I0W2 n	po:adverb
-SFX W0 0 mente/I0W2 a	po:adverb
+SFX W0 0 mente/I0W2 [^l]a	po:adverb
+SFX W0 0 mente/I0W2 [^è]la	po:adverb
+SFX W0 èla elamente/I0W2 èla	po:adverb
 SFX W0 0 mente/I0W2 [^è]r	po:adverb
 SFX W0 èr eramente/I0W2 èr	po:adverb
 SFX W0 0 mente/I0W2 [^èi]l	po:adverb
@@ -5531,9 +5533,11 @@ SFX W0 e mente/I0W2 le	po:adverb
 SFX W0 ève evemente/I0W2 ève	po:adverb
 
 # avèrbi (-mente ko èle evanesente)
-SFX W1 Y 18
+SFX W1 Y 20
 SFX W1 0 emente/W2 n	po:adverb
-SFX W1 0 mente/W2 a	po:adverb
+SFX W1 0 mente/W2 [^ƚ]a	po:adverb
+SFX W1 0 mente/W2 [^è]ƚa	po:adverb
+SFX W1 èƚa eƚamente/W2 èƚa	po:adverb
 SFX W1 0 mente/W2 [^è]r	po:adverb
 SFX W1 èr eramente/W2 èr	po:adverb
 SFX W1 0 mente/W2 [^è]l	po:adverb
@@ -5784,7 +5788,7 @@ SFX [1 òsa osèƚa/D0 òsa
 #SFX 00 . erin/B0 ?
 
 # sostantivi alterài - kresitivi in -òto/a (el pòl èsar nòme o ajetivo)
-SFX (0 Y 21
+SFX (0 Y 22
 SFX (0 0 òto/T0I0 [^èò]l
 SFX (0 0 òto/T0I0 [^èò][nr]
 SFX (0 èl elòto/T0I0 èl
@@ -5798,17 +5802,18 @@ SFX (0 òko okòto/T0I0 òko
 SFX (0 èso esòto/T0I0 èso
 SFX (0 èŧo eŧòto/T0I0 èŧo
 SFX (0 òr oròto/T0I0 òr
-SFX (0 a òta/D0 [^círsŧ]a
+SFX (0 a òta/D0 [^cílrsŧ]a
 SFX (0 ía iòta/D0 ía
-SFX (0 a òta/D0 [^è][crsŧ]a
+SFX (0 a òta/D0 [^è][clrsŧ]a
 SFX (0 èca ecòta/D0 èca
+SFX (0 èla elòta/D0 èla
 SFX (0 èra eròta/D0 èra
 SFX (0 èsa esòta/D0 èsa
 SFX (0 èŧa eŧòta/D0 èŧa
 SFX (0 òra oròta/D0 òra
 
 # sostantivi alterài - kresitivi in -òto/a ko èle evanesente
-SFX (1 Y 18
+SFX (1 Y 19
 SFX (1 o òto/T0 [^èò]ƚo
 SFX (1 0 òto/T0 [^èò][nr]
 SFX (1 èƚo eƚòto/T0 èƚo
@@ -5821,10 +5826,11 @@ SFX (1 èco ecòto/T0 èco
 SFX (1 òko okòto/T0 òko
 SFX (1 èso esòto/T0 èso
 SFX (1 òr oròto/T0 òr
-SFX (1 a òta/D0 [^cís]a
+SFX (1 a òta/D0 [^cíƚs]a
 SFX (1 ía iòta/D0 ía
-SFX (1 a òta/D0 [^è][cs]a
+SFX (1 a òta/D0 [^è][cƚs]a
 SFX (1 èca ecòta/D0 èca
+SFX (1 èƚa eƚòta/D0 èƚa
 SFX (1 èsa esòta/D0 èsa
 SFX (1 òra oròta/D0 òra
 
