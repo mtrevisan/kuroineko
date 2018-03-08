@@ -2781,6 +2781,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "konpil",		"",			1,	4,	"a",	"1775",			"",
 "konplet",		"",			1,	5,	"g",	"1867",			"",
 "konpónd",		"",			3,	4,	"a",	"1775",			"Stajonar, kòxer ben, kroxolar, poltrir.",
+"konpr",			"",			1,	1,	"a",	"1829",			"",
 "konput",		"",			1,	4,	"a",	"1464",			"",
 "konós",			"",			3,	3,	"a",	"1854",			"",
 "konós",			"re",			3,	3,	"a",	"1980",			"",
