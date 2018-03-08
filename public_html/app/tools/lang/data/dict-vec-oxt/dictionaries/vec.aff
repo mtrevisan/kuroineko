@@ -165,7 +165,7 @@ FLAG long
 # themeT1 + r/a0a1a2E0E1E2, themeT1 + r/a0a1a2c0c1c2E0E1E2, themeT1 + r/a0a1a2d0d1d2E0E1E2, themeT1 + r/a0a1a2e0e1e2E0E1E2
 # themeT8 + o/a0a1a2E0E1E2I0J0
 # themeT8 + oe/a0a1a2K0
-SFX a0 Y 406
+SFX a0 Y 405
 SFX a0 0 ane/K0 [aei]r	ts:indicative_future is:interrogative
 SFX a0 0 atu/M0 [aei]r	ts:indicative_future is:interrogative
 SFX a0 0 ave/F0 [aei]r	ts:conditional_present
@@ -231,7 +231,6 @@ SFX a0 ar ene/K0 ar	ts:indicative_present ts:subjunctive_present is:interrogativ
 SFX a0 ar ense ar	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX a0 ar ensi ar	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX a0 ar ente/T0I0mf ar	ts:participle_active
-SFX a0 ar ento/E0 ar	ts:gerund_simple
 SFX a0 ar erane/K0 ar	ts:indicative_future is:interrogative
 SFX a0 ar eratu/M0 ar	ts:indicative_future is:interrogative
 SFX a0 ar erave/F0 ar	ts:conditional_present
@@ -593,7 +592,7 @@ SFX a1 ar e-lo/B0 [^i]ar
 SFX a1 ar elo/B0 ar
 SFX a1 ar emo/E1 ar
 SFX a1 ar endo/E1 ar
-SFX a1 ar ento/E1 ar
+SFX a1 ar ento/E0E1I0 ar	ts:gerund_simple
 SFX a1 ar eralo/B0 ar
 SFX a1 ar erave-lo/B0 ar
 SFX a1 ar eremo/E1 ar
@@ -713,7 +712,7 @@ SFX a2 0 ónmeƚo/G2 [aei]r
 SFX a2 ar e-ƚo/B0 [^i]ar
 SFX a2 ar emo/E2 ar
 SFX a2 ar endo/E2 ar
-SFX a2 ar ento/E2 ar
+SFX a2 ar ento/E0E2I0 ar	ts:gerund_simple
 SFX a2 ar erave-ƚo/B0 ar
 SFX a2 ar eraƚo/B0 ar
 SFX a2 ar eremo/E2 ar
@@ -1098,7 +1097,7 @@ SFX b2 ò ónmeƚo/G2 ò
 
 # vèrbi -<is>ír
 # themeT1 + ir/a0a1a2c0c1c2E0E1E2
-SFX c0 Y 239
+SFX c0 Y 237
 SFX c0 ir arane/K0 ir	is:interrogative
 SFX c0 ir aratu/M0 ir	is:interrogative
 SFX c0 ir arave/F0 ir	ts:conditional_present
@@ -1158,7 +1157,6 @@ SFX c0 ir endo/E0 ir
 SFX c0 ir ene/K0 ir	ts:indicative_future is:interrogative
 SFX c0 ir ense ir	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX c0 ir ente/T0I0mf ir
-SFX c0 ir ento/E0 ir
 SFX c0 ir erane/K0 ir	is:interrogative
 SFX c0 ir eratu/M0 ir	is:interrogative
 SFX c0 ir erave/F0 ir	ts:conditional_present
@@ -1294,7 +1292,6 @@ SFX c0 r do/B0I0 ir
 SFX c0 r ede/N0 [^cijɉñ]ir	ts:subjunctive_present
 SFX c0 r ege/N0 [^cijɉñ]ir	ts:subjunctive_present
 SFX c0 r ente/T0I0mf [^cijɉñ]ir
-SFX c0 r ento [^cijɉñ]ir
 SFX c0 r mo/E0J0 ir
 SFX c0 r n/J0 ir
 SFX c0 r nsi ir	ts:indicative_imperfect ts:subjunctive_imperfect
@@ -1341,7 +1338,7 @@ SFX c0 r ónmene/G0 [^cijɉñ]ir
 
 # vèrbi -<is>ír
 # themeT1 + ir/a0a1a2c0c1c2E0E1E2
-SFX c1 Y 61
+SFX c1 Y 62
 SFX c1 ir aralo/B0 ir
 SFX c1 ir arave-lo/B0 ir
 SFX c1 ir aremo/E1 ir
@@ -1356,7 +1353,8 @@ SFX c1 ir aríelo/B0 ir
 SFX c1 ir aríselo/Q1 ir
 SFX c1 ir elo/B0 ir
 SFX c1 ir endo/E1 ir
-SFX c1 ir ento/E1 ir
+SFX c1 ir ento/E0E1I0 ir	ts:gerund_simple
+SFX c1 r ento/E0E1I0 [^cijɉñ]ir	ts:gerund_simple
 SFX c1 ir eralo/B0 ir
 SFX c1 ir erave-lo/B0 ir
 SFX c1 ir eremo/E1 ir
@@ -1406,7 +1404,7 @@ SFX c1 r ónmelo/G1 [^cijɉñ]ir
 
 # vèrbi -<is>ír
 # themeT1 + ir/a0a1a2c0c1c2E0E1E2
-SFX c2 Y 61
+SFX c2 Y 62
 SFX c2 ir arave-ƚo/B0 ir
 SFX c2 ir araƚo/B0 ir
 SFX c2 ir aremo/E2 ir
@@ -1420,7 +1418,8 @@ SFX c2 ir aríe-ƚo/B0 ir
 SFX c2 ir aríeƚo/B0 ir
 SFX c2 ir aríseƚo/Q2 ir
 SFX c2 ir endo/E2 ir
-SFX c2 ir ento/E2 ir
+SFX c2 ir ento/E0E2I0 ir	ts:gerund_simple
+SFX c2 r ento/E0E2I0 [^cijɉñ]ir	ts:gerund_simple
 SFX c2 ir erave-ƚo/B0 ir
 SFX c2 ir eraƚo/B0 ir
 SFX c2 ir eremo/E2 ir
@@ -1472,7 +1471,7 @@ SFX c2 r ónmeƚo/G2 [^cijɉñ]ir
 # vèrbi -ír
 # themeT1 + r/a0a1a2d0d1d2E0E1E2
 # themeT8 + o/d0d1d2E0E1E2J0
-SFX d0 Y 226
+SFX d0 Y 224
 SFX d0 io i/E0F0L0 io
 SFX d0 ir arane/K0 ir	is:interrogative
 SFX d0 ir aratu/M0 ir	is:interrogative
@@ -1535,8 +1534,6 @@ SFX d0 ir endo/E0 ir
 SFX d0 ir ene/K0 ir	ts:indicative_future is:interrogative
 SFX d0 ir ense ir	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX d0 ir ente/T0I0mf ir
-SFX d0 ir ento ir
-SFX d0 ir ento/E0 ir
 SFX d0 ir erane/K0 ir	is:interrogative
 SFX d0 ir eratu/M0 ir	is:interrogative
 SFX d0 ir erave/F0 ir	ts:conditional_present
@@ -1703,7 +1700,7 @@ SFX d0 r ónmene/G0 [^cijɉñ]ir
 # vèrbi -ír
 # themeT1 + r/a0a1a2d0d1d2E0E1E2
 # themeT8 + o/d0d1d2E0E1E2J0
-SFX d1 Y 61
+SFX d1 Y 62
 SFX d1 io i/E1 io
 SFX d1 io e-lo/B0 io
 SFX d1 io elo/B0 io
@@ -1721,7 +1718,8 @@ SFX d1 ir aríelo/B0 ir
 SFX d1 ir aríselo/Q1 ir
 SFX d1 ir elo/B0 ir
 SFX d1 ir endo/E1 ir
-SFX d1 ir ento/E1 ir
+SFX d1 ir ento/E0E1I0 ir	ts:gerund_simple
+SFX d1 r ento/E0E1I0 [^cijɉñ]ir	ts:gerund_simple
 SFX d1 ir eralo/B0 ir
 SFX d1 ir erave-lo/B0 ir
 SFX d1 ir erà-lo/B0 ir
@@ -1769,7 +1767,7 @@ SFX d1 r ónmelo/G1 [^cijɉñ]ir
 # vèrbi -ír
 # themeT1 + r/a0a1a2d0d1d2E0E1E2
 # themeT8 + o/d0d1d2E0E1E2J0
-SFX d2 Y 61
+SFX d2 Y 62
 SFX d2 io i/E2 io
 SFX d2 io e-ƚo/B0 io
 SFX d2 io eƚo/B0 io
@@ -1786,7 +1784,8 @@ SFX d2 ir aríe-ƚo/B0 ir
 SFX d2 ir aríeƚo/B0 ir
 SFX d2 ir aríseƚo/Q2 ir
 SFX d2 ir endo/E2 ir
-SFX d2 ir ento/E2 ir
+SFX d2 ir ento/E0E2I0 ir	ts:gerund_simple
+SFX d2 r ento/E0E2I0 [^cijɉñ]ir	ts:gerund_simple
 SFX d2 ir erave-ƚo/B0 ir
 SFX d2 ir eraƚo/B0 ir
 SFX d2 ir erà-ƚo/B0 ir
@@ -1835,7 +1834,7 @@ SFX d2 r on/E2 [^cijɉñ]ir
 # vèrbi -<is>ír/-ír
 # themeT1 + r/a0a1a2e0e1e2E0E1E2
 # themeT8 + o/e0e1e2E0E1E2J0
-SFX e0 Y 237
+SFX e0 Y 236
 SFX e0 0 me/G0 ir
 SFX e0 ir a/E0 ir
 SFX e0 ir arane/K0 ir	is:interrogative
@@ -1901,7 +1900,6 @@ SFX e0 ir ene/K0 ir	ts:indicative_future is:interrogative
 SFX e0 ir ense ir	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX e0 ir ensi ir	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX e0 ir ente/T0I0mf ir
-SFX e0 ir ento/E0 ir
 SFX e0 ir erane/K0 ir	is:interrogative
 SFX e0 ir eratu/M0 ir	is:interrogative
 SFX e0 ir erave/F0 ir	ts:conditional_present
@@ -2077,7 +2075,7 @@ SFX e0 r ónmene/G0 [^cijɉñ]ir
 # vèrbi -<is>ír/-ír
 # themeT1 + r/a0a1a2e0e1e2E0E1E2
 # themeT8 + o/e0e1e2E0E1E2J0
-SFX e1 Y 62
+SFX e1 Y 63
 SFX e1 0 lo/G1 ir
 SFX e1 ir a/E1 ir
 SFX e1 ir aralo/B0 ir
@@ -2112,7 +2110,8 @@ SFX e1 ir éelo/B0 ir
 SFX e1 ir endo/E1 ir
 SFX e1 ir éndolo/G1 ir
 SFX e1 ir éndomelo/G1 ir
-SFX e1 ir ento/E1 ir
+SFX e1 ir ento/E0E1I0 ir	ts:gerund_simple
+SFX e1 r ento/E0E1I0 [^cijɉñ]ir	ts:gerund_simple
 SFX e1 ir éntolo/G1 ir
 SFX e1 ir éntomelo/G1 ir
 SFX e1 ir eremo/E1 ir
@@ -2144,7 +2143,7 @@ SFX e1 r ónmelo/G1 [^cijɉñ]ir
 # vèrbi -<is>ír/-ír
 # themeT1 + r/a0a1a2e0e1e2E0E1E2
 # themeT8 + o/e0e1e2E0E1E2J0
-SFX e2 Y 61
+SFX e2 Y 62
 SFX e2 ir a/E2 ir
 SFX e2 ir arave-ƚo/B0 ir
 SFX e2 ir araƚo/B0 ir
@@ -2179,7 +2178,8 @@ SFX e2 ir endo/E2 ir
 SFX e2 ir éndomeƚo/G2 ir
 SFX e2 ir éndoƚo/G2 ir
 SFX e2 ir éntomeƚo/G2 ir
-SFX e2 ir ento/E2 ir
+SFX e2 ir ento/E0E2I0 ir	ts:gerund_simple
+SFX e2 r ento/E0E2I0 [^cijɉñ]ir	ts:gerund_simple
 SFX e2 ir éntoƚo/G2 ir
 SFX e2 ir eremo/E2 ir
 SFX e2 ir éveƚo/B0 ir
@@ -2213,7 +2213,7 @@ SFX e2 r ƚo/G2 ir
 # themeT8 + oe/f0f1f2E0E1E2I0J0
 # themeT6 + do/T0Y0
 # themeT6 + da/D0Y0
-SFX f0 Y 265
+SFX f0 Y 264
 SFX f0 0 àne/K0 ar	is:interrogative
 SFX f0 0 àtu/M0 ar	is:interrogative
 SFX f0 0 ave/F0 ar	ts:conditional_present
@@ -2275,7 +2275,6 @@ SFX f0 ar ene/K0 ar	ts:indicative_future is:interrogative
 SFX f0 ar ense ar	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX f0 ar ensi ar	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX f0 ar ente/T0I0mf ar
-SFX f0 ar ento/E0 ar
 SFX f0 ar eràne/K0 ar	is:interrogative
 SFX f0 ar eràtu/M0 ar	is:interrogative
 SFX f0 ar erave/F0 ar	ts:conditional_present
@@ -2537,7 +2536,7 @@ SFX f1 ar émomelo/G1 ar
 SFX f1 ar endo/E1 ar
 SFX f1 ar éndolo/G1 ar
 SFX f1 ar éndomelo/G1 ar
-SFX f1 ar ento/E1 ar
+SFX f1 ar ento/E0E1I0 ar	ts:gerund_simple
 SFX f1 ar éntolo/G1 ar
 SFX f1 ar éntomelo/G1 ar
 SFX f1 ar eremo/E1 ar
@@ -2621,7 +2620,7 @@ SFX f2 ar émomeƚo/G2 ar
 SFX f2 ar endo/E2 ar
 SFX f2 ar éndoƚo/G2 ar
 SFX f2 ar éndomeƚo/G2 ar
-SFX f2 ar ento/E2 ar
+SFX f2 ar ento/E0E2I0 ar	ts:gerund_simple
 SFX f2 ar éntoƚo/G2 ar
 SFX f2 ar éntomeƚo/G2 ar
 SFX f2 ar éveƚo/B0 ar
@@ -4239,7 +4238,7 @@ SFX p0 èser erímoe/K0 èser
 SFX p0 èser erónmene/G0G1G2 èser
 SFX p0 èser esendo/E0E1E2 èser
 SFX p0 èser esente/T0I0mf èser
-SFX p0 èser esento/E0E1E2 èser
+SFX p0 èser esento/E0E1E2I0 èser
 SFX p0 èser esesto/B0I0 èser
 SFX p0 èser esudo/B0 èser
 SFX p0 èser eséndome/G0G1G2 èser
