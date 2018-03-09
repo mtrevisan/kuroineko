@@ -6544,6 +6544,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧep",			"e",			4,	3,	"a",	"1829",			"",
 "ŧep",			"per",		4,	3,	"a",	"",				"",
 "ŧèrn",			"",			3,	1,	"g",	"1517",			"Ŧernir.",
+"ŧèrn",			"de",			3,	1,	"g",	"1829",			"",
 "ŧèrn",			"in",			3,	1,	"g",	"1854",			"Ŧernir.",
 "ŧerp",			"",			4,	4,	"a",	"1847",			"Tajar le rame de i albari veŧin al tronko.",
 "ŧerpid",		"in",			5,	6,	"a",	"1980",			"Intorpidir.",
