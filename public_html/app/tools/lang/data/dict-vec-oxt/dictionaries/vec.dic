@@ -9636,12 +9636,9 @@ kòrgoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:korgar
 inkorlar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 inkorlo/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:inkorlar
 inkórloe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:inkorlar
-kornar/a0a1a2E0E1E2-0	po:verb ts:infinitive_simple
-kòrno/a0a1a2E0E1E2I0J0-0	po:verb ts:indicative_present st:kornar
-kòrnoe/a0a1a2K0-0	po:verb ts:indicative_present is:interrogative st:kornar
-skornar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
-skòrno/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:skornar
-skòrnoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:skornar
+kornar/a0a1a2E0E1E2-0*0	po:verb ts:infinitive_simple
+kòrno/a0a1a2E0E1E2I0J0-0*0	po:verb ts:indicative_present st:kornar
+kòrnoe/a0a1a2K0-0*0	po:verb ts:indicative_present is:interrogative st:kornar
 kornidar/a0a1E0E1-0*0	po:verb ts:infinitive_simple
 kornido/a0a1E0E1I0J0-0*0	po:verb ts:indicative_present st:kornidar
 kornídoe/a0a1K0-0*0	po:verb ts:indicative_present is:interrogative st:kornidar
@@ -24993,12 +24990,18 @@ Koƚastiko/Z0	po:proper_noun
 Korado/Y0Z0	po:proper_noun
 Kòla/Z0	po:proper_noun
 Kòƚa/Z0	po:proper_noun
+Kostantin/Z0	po:proper_noun
+Kostantina/Z0	po:proper_noun
 Kòxma/Z0	po:proper_noun
 Kòxmo/I0Z0	po:proper_noun
 Krestian/Z0	po:proper_noun
 Krestiana/Z0	po:proper_noun
 Kristòfana/Z0	po:proper_noun
 Kristòfano/I0Z0	po:proper_noun
+Krestòfol/Z0	po:proper_noun
+Krestòfola/Z0	po:proper_noun
+Krestòfoƚa/Z0	po:proper_noun
+Krestòfoƚo/Z0	po:proper_noun
 Kristòfol/Z0	po:proper_noun
 Kristòfola/Z0	po:proper_noun
 Kristòfoƚa/Z0	po:proper_noun
@@ -28905,7 +28908,7 @@ koridora/D0V0	po:adjective
 koridora/D0V0	po:noun
 koriman/T0	po:noun
 korleta/D0	po:noun
-korlo/T0	po:noun
+korlo/T0(0	po:noun
 kornaŧa/D0T2	po:noun
 kornolèr/T0V0	po:noun
 kornolèra/D0V0	po:noun
@@ -46747,9 +46750,9 @@ kontrofòrte/T0	po:noun
 kontrokapon/D0U0mf	po:noun
 kontrokartèla/D0T2	po:noun
 kontrokorsía/D0	po:noun
-kontrolor/D0mf	po:noun
+kontrolor/C0mf	po:noun
 kontrolume/T0	po:noun
-kontroƚor/D0mf	po:noun
+kontroƚor/C0mf	po:noun
 kontroƚume/T0	po:noun
 kontropel/T0U0T2mf	po:noun
 kontrovero/T0	po:noun
@@ -50934,7 +50937,7 @@ tòrxio/T0	po:noun
 tòsego/B0I0	po:adjective
 tòsego/B0I0	po:noun
 tòsto/B0I0	po:adjective
-trabàkol/T0T2u0mf	po:noun
+trabàkol/T0u0T2mf	po:noun
 traboko/T0I0[0[1mf	po:noun
 trabuko/T0I0[0[1)0	po:noun
 trabukon	po:adverb
@@ -51240,12 +51243,12 @@ túnfete/I0	po:interjection
 ŧixor/C0T4v0-0mf	po:noun
 ŧía/D0T2	po:noun
 ŧífera/D0T4	po:noun
-ŧífol/T0T4u0mf	po:noun
+ŧífol/T0u0T4mf	po:noun
 ŧígar/T0T4	po:noun
 ŧokatèl/T0U0T4	po:noun
 ŧokèra/D0T4	po:noun
 ŧokolada/D0Y0Y1T4	po:noun
-ŧol/T0T4mf	po:noun
+ŧol/T0u0T4mf	po:noun
 ŧolajo/T0T4	po:noun
 ŧolaɉo/T0T4	po:noun
 ŧonka/D0T4	po:adjective
@@ -51559,7 +51562,7 @@ vípera/D0	po:noun
 vodo/B0I0mf	po:adjective
 vodo/B0I0mf	po:noun
 voga/D0	po:noun
-vol/T0T2*0mf	po:noun
+vol/T0u0T2*0mf	po:noun
 voltada/D0Y0‘0	po:noun
 voltarèla/D0T2	po:noun
 voltèr/T0V0	po:noun
@@ -51791,7 +51794,7 @@ xige-xage	po:interjection
 xiƚoxía/D0	po:noun
 ximarúgoƚa/D0	po:noun
 xinbèƚo/T0	po:noun
-xiónxol/T0T2mf	po:noun
+xiónxol/T0u0T2mf	po:noun
 xirardina/D0	po:noun
 xiràtola/D0T2	po:noun
 xirnar/D0	po:noun
@@ -52063,20 +52066,20 @@ kerebiŧo/T0I0T2	po:noun
 cacarador/T0V0mf	po:noun
 cacaradora/D0V0	po:noun
 formèla/D0T2	po:noun
-cimento/T0	po:noun
+cimento/T0mf	po:noun
 còfe	po:interjection
 conpin/C0	po:adjective
 cixdò	po:noun
 canca/D0&0	po:noun
 ŧirkas/T4	po:noun
-klarineto/T0I0	po:noun
+klarineto/T0I0mf	po:noun
 koarola/D0V0	po:adjective
 koaroƚa/D0V1	po:adjective
 skagòŧa/D0T2	po:noun
 kokò	po:noun
 koño/T0I0mf	po:noun
 kolakuinta/D0	po:noun
-koƚakuinta/D0
+koƚakuinta/D0	po:noun
 kolàudo/T0	po:noun
 koƚàudo/T0	po:noun
 konbustion/D0U0mf	po:noun
@@ -52084,14 +52087,41 @@ konplean/T0	po:noun
 konplension/D0U0mf	po:noun
 konŧèto/T0I0	po:noun
 konsèto/T0I0	po:noun
-kónkol/T0T2	po:noun
-konsenŧiente/T0	po:adjective
-konsensiente/T0	po:adjective
+kónkol/T0u0T2mf	po:noun
+konsenŧiente/T0mf	po:adjective
+konsensiente/T0mf	po:adjective
 konsiderando/T0	po:noun
 konsobrin/B0	po:noun
+kontenteŧa/D0T2	po:noun
+kontràrđar/D0	po:noun
+kontràrdar/D0	po:noun
+kontràrxar/D0	po:noun
+konvulso/B0	po:adjective
+koraŧa/D0&0	po:noun
+korasa/D0&0	po:noun
+kurba/D0	po:noun
+koriàxin/D0	po:noun
+korista/D0	po:noun
+koronèla/D0T2	po:noun
+korpon/D0U0mf	po:noun
+korsa/D0	po:noun
+korte/D0	po:noun
+kortèla/D0T2	po:noun
+kòspo/T0	po:noun
+koverceto/T0I0	po:noun
+kuerceto/T0I0	po:noun
+kraño/T0	po:noun
+kredenŧièr/T0V0	po:noun
+kredenŧièra/D0V0	po:noun
+kredensièr/T0V0	po:noun
+kredensièra/D0V0	po:noun
+krioreto/T0I0	po:noun
+krosko/T0	po:noun
+króŧol/T0u0mf	po:noun
+krósol/T0T2	po:noun
 
 
 
-/ 792
+/ 794
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
