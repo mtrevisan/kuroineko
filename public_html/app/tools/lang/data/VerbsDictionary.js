@@ -1431,6 +1431,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fer",			"trans",		4,	3,	"a",	"1412",			"",
 "fer",			"tras",		4,	3,	"a",	"",				"",
 "feral",			"",			1,	3,	"g",	"1829",			"Portar el feral.",
+"ferament",		"",			1,	6,	"a",	"1829",			"Munir de fèr.",
 "ferenŧi",		"des",		1,	3,	"a",	"1867",			"",
 "feret",			"in",			1,	3,	"a",	"1775",			"Far i ageti.",
 "feri",			"",			1,	1,	"g",	"",				"",
