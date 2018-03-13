@@ -1744,6 +1744,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fregol",		"des",		1,	2,	"a",	"1775",			"Sfregolar.",
 "fregol",		"s",			1,	2,	"a",	"1560",			"Ridúxer in fregole.",
 "frèm",			"",			3,	2,	"g",	"1867",			"",
+"frem",			"",			4,	4,	"a",	"1829",			"Frèmer.",
 "fren",			"",			1,	2,	"a",	"1775",			"",
 "fren",			"s",			1,	2,	"a",	"1829",			"",
 "fresk",			"re",			1,	2,	"a",	"1560",			"",
