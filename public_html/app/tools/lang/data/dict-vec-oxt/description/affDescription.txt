@@ -121,3 +121,4 @@ chi naturale = ki
 (ƚ[^/\n]+)et[ao]/[DT]0\t > add &1 to $1
 po:[^\n]+po: > split line
 ^[^ƚ\r\n]*eto/[BTD]0[^I] > I0 # add I0
+[bcdđfghjɉklƚmnñprstŧvx]i[aeiou] > $1ï$2 # dièrexi
