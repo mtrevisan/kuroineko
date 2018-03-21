@@ -4816,6 +4816,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "prexent",		"ra",			1,	4,	"a",	"1450",			"",
 "prexent",		"re",			1,	4,	"a",	"",				"",
 "prexenŧi",		"",			1,	4,	"a",	"",				"",
+"prexi",			"",			1,	2,	"g",	"1829",			"Apreŧar.",
 "prexon",		"in",			1,	4,	"a",	"1463",			"Méter in prexon.",
 "prexúm",		"",			3,	4,	"a",	"1433",			"",
 "pri",			"",			1,	2,	"a",	"1980",			"(bixiak) Aviar.",
