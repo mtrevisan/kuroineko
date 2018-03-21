@@ -6794,6 +6794,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vénd",			"x",			3,	1,	"a",	"",				"",
 "vendeg",		"",			1,	1,	"a",	"1980",			"",
 "vendem",		"",			1,	4,	"a",	"1590",			"",
+"veneŧian",		"",			1,	6,	"g",	"1829",			"Deventar veneŧian.",
 "vent",			"",			1,	1,	"a",	"1775",			"Far vento.",
 "vent",			"de",			1,	1,	"a",	"1560",			"",
 "vent",			"rede",		1,	1,	"a",	"",				"",
