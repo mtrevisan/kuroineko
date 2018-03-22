@@ -5750,7 +5750,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "spud",			"",			1,	2,	"a",	"1980",			"(bixiak.)",
 "sputan",		"",			1,	4,	"g",	"",				"",
 "st",				"",			1,	2,	"g",	"1775",			"",
-"st",				"kon",		1,	-2,"g",	"1867",			"",
+"st",				"kon",		1,	-2,"g",	"1856",			"",
 "st",				"kontra",	1,	-1,"g",	"1376",			"",
 "st",				"mal",		1,	2,	"g",	"1867",			"",
 "st",				"move",		1,	2,	"g",	"1980",			"Xmòver, remòver.",
