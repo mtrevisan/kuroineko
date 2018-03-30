@@ -107,6 +107,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "arđent",		"in",			1,	3,	"a",	"1560",			"",
 "arđer",			"",			1,	0,	"g",	"1851",			"Defénder ko arđeri.",
 "arđer",			"in",			1,	0,	"g",	"1775",			"Defénder ko arđeri.",
+"arđar",			"",			1,	0,	"g",	"1851",			"Arđerar.",
+"arđar",			"in",			1,	0,	"g",	"1851",			"Arđerar.",
 "arđen",			"",			1,	0,	"g",	"", 				"",
 "arđin",			"",			1,	0,	"g",	"", 				"",
 "arđiñ",			"",			1,	0,	"g",	"1980", 			"",
