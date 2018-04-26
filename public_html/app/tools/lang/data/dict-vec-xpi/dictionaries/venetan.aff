@@ -165,7 +165,7 @@ FLAG long
 # themeT1 + r/a0a1a2E0E1E2, themeT1 + r/a0a1a2c0c1c2E0E1E2, themeT1 + r/a0a1a2d0d1d2E0E1E2, themeT1 + r/a0a1a2e0e1e2E0E1E2
 # themeT8 + o/a0a1a2E0E1E2I0J0
 # themeT8 + oe/a0a1a2K0
-SFX a0 Y 406
+SFX a0 Y 405
 SFX a0 0 ane/K0 [aei]r	ts:indicative_future is:interrogative
 SFX a0 0 atu/M0 [aei]r	ts:indicative_future is:interrogative
 SFX a0 0 ave/F0 [aei]r	ts:conditional_present
@@ -231,7 +231,6 @@ SFX a0 ar ene/K0 ar	ts:indicative_present ts:subjunctive_present is:interrogativ
 SFX a0 ar ense ar	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX a0 ar ensi ar	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX a0 ar ente/T0I0mf ar	ts:participle_active
-SFX a0 ar ento/E0 ar	ts:gerund_simple
 SFX a0 ar erane/K0 ar	ts:indicative_future is:interrogative
 SFX a0 ar eratu/M0 ar	ts:indicative_future is:interrogative
 SFX a0 ar erave/F0 ar	ts:conditional_present
@@ -593,7 +592,7 @@ SFX a1 ar e-lo/B0 [^i]ar
 SFX a1 ar elo/B0 ar
 SFX a1 ar emo/E1 ar
 SFX a1 ar endo/E1 ar
-SFX a1 ar ento/E1 ar
+SFX a1 ar ento/E0E1I0 ar	ts:gerund_simple
 SFX a1 ar eralo/B0 ar
 SFX a1 ar erave-lo/B0 ar
 SFX a1 ar eremo/E1 ar
@@ -713,7 +712,7 @@ SFX a2 0 ónmeƚo/G2 [aei]r
 SFX a2 ar e-ƚo/B0 [^i]ar
 SFX a2 ar emo/E2 ar
 SFX a2 ar endo/E2 ar
-SFX a2 ar ento/E2 ar
+SFX a2 ar ento/E0E2 ar	ts:gerund_simple
 SFX a2 ar erave-ƚo/B0 ar
 SFX a2 ar eraƚo/B0 ar
 SFX a2 ar eremo/E2 ar
@@ -1098,7 +1097,7 @@ SFX b2 ò ónmeƚo/G2 ò
 
 # vèrbi -<is>ír
 # themeT1 + ir/a0a1a2c0c1c2E0E1E2
-SFX c0 Y 239
+SFX c0 Y 237
 SFX c0 ir arane/K0 ir	is:interrogative
 SFX c0 ir aratu/M0 ir	is:interrogative
 SFX c0 ir arave/F0 ir	ts:conditional_present
@@ -1158,7 +1157,6 @@ SFX c0 ir endo/E0 ir
 SFX c0 ir ene/K0 ir	ts:indicative_future is:interrogative
 SFX c0 ir ense ir	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX c0 ir ente/T0I0mf ir
-SFX c0 ir ento/E0 ir
 SFX c0 ir erane/K0 ir	is:interrogative
 SFX c0 ir eratu/M0 ir	is:interrogative
 SFX c0 ir erave/F0 ir	ts:conditional_present
@@ -1294,7 +1292,6 @@ SFX c0 r do/B0I0 ir
 SFX c0 r ede/N0 [^cijɉñ]ir	ts:subjunctive_present
 SFX c0 r ege/N0 [^cijɉñ]ir	ts:subjunctive_present
 SFX c0 r ente/T0I0mf [^cijɉñ]ir
-SFX c0 r ento [^cijɉñ]ir
 SFX c0 r mo/E0J0 ir
 SFX c0 r n/J0 ir
 SFX c0 r nsi ir	ts:indicative_imperfect ts:subjunctive_imperfect
@@ -1341,7 +1338,7 @@ SFX c0 r ónmene/G0 [^cijɉñ]ir
 
 # vèrbi -<is>ír
 # themeT1 + ir/a0a1a2c0c1c2E0E1E2
-SFX c1 Y 61
+SFX c1 Y 62
 SFX c1 ir aralo/B0 ir
 SFX c1 ir arave-lo/B0 ir
 SFX c1 ir aremo/E1 ir
@@ -1356,7 +1353,8 @@ SFX c1 ir aríelo/B0 ir
 SFX c1 ir aríselo/Q1 ir
 SFX c1 ir elo/B0 ir
 SFX c1 ir endo/E1 ir
-SFX c1 ir ento/E1 ir
+SFX c1 ir ento/E0E1I0 ir	ts:gerund_simple
+SFX c1 r ento/E0E1I0 [^cijɉñ]ir	ts:gerund_simple
 SFX c1 ir eralo/B0 ir
 SFX c1 ir erave-lo/B0 ir
 SFX c1 ir eremo/E1 ir
@@ -1406,7 +1404,7 @@ SFX c1 r ónmelo/G1 [^cijɉñ]ir
 
 # vèrbi -<is>ír
 # themeT1 + ir/a0a1a2c0c1c2E0E1E2
-SFX c2 Y 61
+SFX c2 Y 62
 SFX c2 ir arave-ƚo/B0 ir
 SFX c2 ir araƚo/B0 ir
 SFX c2 ir aremo/E2 ir
@@ -1420,7 +1418,8 @@ SFX c2 ir aríe-ƚo/B0 ir
 SFX c2 ir aríeƚo/B0 ir
 SFX c2 ir aríseƚo/Q2 ir
 SFX c2 ir endo/E2 ir
-SFX c2 ir ento/E2 ir
+SFX c2 ir ento/E0E2 ir	ts:gerund_simple
+SFX c2 r ento/E0E2 [^cijɉñ]ir	ts:gerund_simple
 SFX c2 ir erave-ƚo/B0 ir
 SFX c2 ir eraƚo/B0 ir
 SFX c2 ir eremo/E2 ir
@@ -1472,7 +1471,7 @@ SFX c2 r ónmeƚo/G2 [^cijɉñ]ir
 # vèrbi -ír
 # themeT1 + r/a0a1a2d0d1d2E0E1E2
 # themeT8 + o/d0d1d2E0E1E2J0
-SFX d0 Y 226
+SFX d0 Y 224
 SFX d0 io i/E0F0L0 io
 SFX d0 ir arane/K0 ir	is:interrogative
 SFX d0 ir aratu/M0 ir	is:interrogative
@@ -1535,8 +1534,6 @@ SFX d0 ir endo/E0 ir
 SFX d0 ir ene/K0 ir	ts:indicative_future is:interrogative
 SFX d0 ir ense ir	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX d0 ir ente/T0I0mf ir
-SFX d0 ir ento ir
-SFX d0 ir ento/E0 ir
 SFX d0 ir erane/K0 ir	is:interrogative
 SFX d0 ir eratu/M0 ir	is:interrogative
 SFX d0 ir erave/F0 ir	ts:conditional_present
@@ -1703,7 +1700,7 @@ SFX d0 r ónmene/G0 [^cijɉñ]ir
 # vèrbi -ír
 # themeT1 + r/a0a1a2d0d1d2E0E1E2
 # themeT8 + o/d0d1d2E0E1E2J0
-SFX d1 Y 61
+SFX d1 Y 62
 SFX d1 io i/E1 io
 SFX d1 io e-lo/B0 io
 SFX d1 io elo/B0 io
@@ -1721,7 +1718,8 @@ SFX d1 ir aríelo/B0 ir
 SFX d1 ir aríselo/Q1 ir
 SFX d1 ir elo/B0 ir
 SFX d1 ir endo/E1 ir
-SFX d1 ir ento/E1 ir
+SFX d1 ir ento/E0E1I0 ir	ts:gerund_simple
+SFX d1 r ento/E0E1I0 [^cijɉñ]ir	ts:gerund_simple
 SFX d1 ir eralo/B0 ir
 SFX d1 ir erave-lo/B0 ir
 SFX d1 ir erà-lo/B0 ir
@@ -1769,7 +1767,7 @@ SFX d1 r ónmelo/G1 [^cijɉñ]ir
 # vèrbi -ír
 # themeT1 + r/a0a1a2d0d1d2E0E1E2
 # themeT8 + o/d0d1d2E0E1E2J0
-SFX d2 Y 61
+SFX d2 Y 62
 SFX d2 io i/E2 io
 SFX d2 io e-ƚo/B0 io
 SFX d2 io eƚo/B0 io
@@ -1786,7 +1784,8 @@ SFX d2 ir aríe-ƚo/B0 ir
 SFX d2 ir aríeƚo/B0 ir
 SFX d2 ir aríseƚo/Q2 ir
 SFX d2 ir endo/E2 ir
-SFX d2 ir ento/E2 ir
+SFX d2 ir ento/E0E2 ir	ts:gerund_simple
+SFX d2 r ento/E0E2 [^cijɉñ]ir	ts:gerund_simple
 SFX d2 ir erave-ƚo/B0 ir
 SFX d2 ir eraƚo/B0 ir
 SFX d2 ir erà-ƚo/B0 ir
@@ -1835,7 +1834,7 @@ SFX d2 r on/E2 [^cijɉñ]ir
 # vèrbi -<is>ír/-ír
 # themeT1 + r/a0a1a2e0e1e2E0E1E2
 # themeT8 + o/e0e1e2E0E1E2J0
-SFX e0 Y 237
+SFX e0 Y 236
 SFX e0 0 me/G0 ir
 SFX e0 ir a/E0 ir
 SFX e0 ir arane/K0 ir	is:interrogative
@@ -1901,7 +1900,6 @@ SFX e0 ir ene/K0 ir	ts:indicative_future is:interrogative
 SFX e0 ir ense ir	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX e0 ir ensi ir	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX e0 ir ente/T0I0mf ir
-SFX e0 ir ento/E0 ir
 SFX e0 ir erane/K0 ir	is:interrogative
 SFX e0 ir eratu/M0 ir	is:interrogative
 SFX e0 ir erave/F0 ir	ts:conditional_present
@@ -2077,7 +2075,7 @@ SFX e0 r ónmene/G0 [^cijɉñ]ir
 # vèrbi -<is>ír/-ír
 # themeT1 + r/a0a1a2e0e1e2E0E1E2
 # themeT8 + o/e0e1e2E0E1E2J0
-SFX e1 Y 62
+SFX e1 Y 63
 SFX e1 0 lo/G1 ir
 SFX e1 ir a/E1 ir
 SFX e1 ir aralo/B0 ir
@@ -2112,7 +2110,8 @@ SFX e1 ir éelo/B0 ir
 SFX e1 ir endo/E1 ir
 SFX e1 ir éndolo/G1 ir
 SFX e1 ir éndomelo/G1 ir
-SFX e1 ir ento/E1 ir
+SFX e1 ir ento/E0E1I0 ir	ts:gerund_simple
+SFX e1 r ento/E0E1I0 [^cijɉñ]ir	ts:gerund_simple
 SFX e1 ir éntolo/G1 ir
 SFX e1 ir éntomelo/G1 ir
 SFX e1 ir eremo/E1 ir
@@ -2144,7 +2143,7 @@ SFX e1 r ónmelo/G1 [^cijɉñ]ir
 # vèrbi -<is>ír/-ír
 # themeT1 + r/a0a1a2e0e1e2E0E1E2
 # themeT8 + o/e0e1e2E0E1E2J0
-SFX e2 Y 61
+SFX e2 Y 62
 SFX e2 ir a/E2 ir
 SFX e2 ir arave-ƚo/B0 ir
 SFX e2 ir araƚo/B0 ir
@@ -2179,7 +2178,8 @@ SFX e2 ir endo/E2 ir
 SFX e2 ir éndomeƚo/G2 ir
 SFX e2 ir éndoƚo/G2 ir
 SFX e2 ir éntomeƚo/G2 ir
-SFX e2 ir ento/E2 ir
+SFX e2 ir ento/E0E2 ir	ts:gerund_simple
+SFX e2 r ento/E0E2 [^cijɉñ]ir	ts:gerund_simple
 SFX e2 ir éntoƚo/G2 ir
 SFX e2 ir eremo/E2 ir
 SFX e2 ir éveƚo/B0 ir
@@ -2213,7 +2213,7 @@ SFX e2 r ƚo/G2 ir
 # themeT8 + oe/f0f1f2E0E1E2I0J0
 # themeT6 + do/T0Y0
 # themeT6 + da/D0Y0
-SFX f0 Y 265
+SFX f0 Y 264
 SFX f0 0 àne/K0 ar	is:interrogative
 SFX f0 0 àtu/M0 ar	is:interrogative
 SFX f0 0 ave/F0 ar	ts:conditional_present
@@ -2275,7 +2275,6 @@ SFX f0 ar ene/K0 ar	ts:indicative_future is:interrogative
 SFX f0 ar ense ar	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX f0 ar ensi ar	ts:indicative_imperfect ts:subjunctive_imperfect
 SFX f0 ar ente/T0I0mf ar
-SFX f0 ar ento/E0 ar
 SFX f0 ar eràne/K0 ar	is:interrogative
 SFX f0 ar eràtu/M0 ar	is:interrogative
 SFX f0 ar erave/F0 ar	ts:conditional_present
@@ -2537,7 +2536,7 @@ SFX f1 ar émomelo/G1 ar
 SFX f1 ar endo/E1 ar
 SFX f1 ar éndolo/G1 ar
 SFX f1 ar éndomelo/G1 ar
-SFX f1 ar ento/E1 ar
+SFX f1 ar ento/E0E1I0 ar	ts:gerund_simple
 SFX f1 ar éntolo/G1 ar
 SFX f1 ar éntomelo/G1 ar
 SFX f1 ar eremo/E1 ar
@@ -2621,7 +2620,7 @@ SFX f2 ar émomeƚo/G2 ar
 SFX f2 ar endo/E2 ar
 SFX f2 ar éndoƚo/G2 ar
 SFX f2 ar éndomeƚo/G2 ar
-SFX f2 ar ento/E2 ar
+SFX f2 ar ento/E0E2 ar	ts:gerund_simple
 SFX f2 ar éntoƚo/G2 ar
 SFX f2 ar éntomeƚo/G2 ar
 SFX f2 ar éveƚo/B0 ar
@@ -4239,7 +4238,7 @@ SFX p0 èser erímoe/K0 èser
 SFX p0 èser erónmene/G0G1G2 èser
 SFX p0 èser esendo/E0E1E2 èser
 SFX p0 èser esente/T0I0mf èser
-SFX p0 èser esento/E0E1E2 èser
+SFX p0 èser esento/E0E1E2I0 èser
 SFX p0 èser esesto/B0I0 èser
 SFX p0 èser esudo/B0 èser
 SFX p0 èser eséndome/G0G1G2 èser
@@ -5087,7 +5086,7 @@ SFX u0 n i n
 
 
 # trasformaŧion intra varianti (l > ƚ, j > ɉ, ŧ > s)
-SFX T2 Y 42
+SFX T2 Y 46
 SFX T2 lò ƚò [aeiouàèéíòóú]lò
 SFX T2 là ƚà [aeiouàèéíòóú]là
 SFX T2 lè ƚè [aeiouàèéíòóú]lè
@@ -5130,6 +5129,10 @@ SFX T2 đo xo/T0mf [eoèéòó]đo
 SFX T2 đo xo/T0 [^eoèéòó]đo
 SFX T2 đa da/D0 đa
 SFX T2 đa xa/D0 đa
+SFX T2 đan dan/T0 đan
+SFX T2 đan xan/T0 đan
+SFX T2 đana dana/D0 đana
+SFX T2 đana xana/D0 đana
 
 # trasformaŧion intra varianti (femenil l > ƚe)
 SFX T3 Y 1
@@ -5300,7 +5303,8 @@ SFX R0 o ista/C0 [^i]o	po:noun
 SFX R0 o sta/C0 io	po:noun
 
 # nominali deverbali (-mento)
-SFX r0 Y 36
+SFX r0 Y 37
+SFX r0 0 amento/T0I0mf n	po:noun
 SFX r0 o amento/T0I0mf o	po:noun
 SFX r0 r mento/T0I0mf [^e]r	po:noun
 SFX r0 r mento/T0I0mf [^dđjɉñstx]er	po:noun
@@ -5416,10 +5420,11 @@ SFX s1 ñerò nsion/D0U0mf eñerò	po:noun
 SFX s1 guerò sion/D0U0mf stinguerò	po:noun
 
 # nominali deverbali ko èle evanesente (-sion)
-SFX s2 Y 3
+SFX s2 Y 4
 SFX s2 r sion/D0mf r	po:noun
 SFX s2 lverò ƚusion/D0mf olverò	po:noun
 SFX s2 xerò sion/D0mf xerò	po:noun
+SFX s2 derò sion/D0U0mf [ae]nderò	po:noun
 
 # nominali deaverbiali (-ixmo)
 SFX S0 Y 5
@@ -5501,9 +5506,11 @@ SFX mf orse ursi orse
 
 
 # avèrbi (-mente)
-SFX W0 Y 25
+SFX W0 Y 27
 SFX W0 0 emente/I0W2 n	po:adverb
-SFX W0 0 mente/I0W2 a	po:adverb
+SFX W0 0 mente/I0W2 [^l]a	po:adverb
+SFX W0 0 mente/I0W2 [^è]la	po:adverb
+SFX W0 èla elamente/I0W2 èla	po:adverb
 SFX W0 0 mente/I0W2 [^è]r	po:adverb
 SFX W0 èr eramente/I0W2 èr	po:adverb
 SFX W0 0 mente/I0W2 [^èi]l	po:adverb
@@ -5529,9 +5536,11 @@ SFX W0 e mente/I0W2 le	po:adverb
 SFX W0 ève evemente/I0W2 ève	po:adverb
 
 # avèrbi (-mente ko èle evanesente)
-SFX W1 Y 18
+SFX W1 Y 20
 SFX W1 0 emente/W2 n	po:adverb
-SFX W1 0 mente/W2 a	po:adverb
+SFX W1 0 mente/W2 [^ƚ]a	po:adverb
+SFX W1 0 mente/W2 [^è]ƚa	po:adverb
+SFX W1 èƚa eƚamente/W2 èƚa	po:adverb
 SFX W1 0 mente/W2 [^è]r	po:adverb
 SFX W1 èr eramente/W2 èr	po:adverb
 SFX W1 0 mente/W2 [^è]l	po:adverb
@@ -5578,8 +5587,12 @@ SFX Y1 ada à ada
 
 
 # sostantivi alterài - demenutivi in -eto/a
-SFX &0 Y 83
+SFX &0 Y 86
+SFX &0 è eeto/T0I0mf è
 SFX &0 ú ueto/T0I0mf ú
+SFX &0 ío ieto/T0I0mf ío
+SFX &0 òo oeto/T0I0mf òo
+SFX &0 úo ueto/T0I0mf úo
 SFX &0 0 eto/T0I0mf [^èò]l
 SFX &0 èl eleto/T0I0mf èl
 SFX &0 òl oleto/T0I0mf òl
@@ -5588,9 +5601,7 @@ SFX &0 òn oneto/T0I0mf òn
 SFX &0 0 eto/T0I0mf [^èò]r
 SFX &0 èr ereto/T0I0mf èr
 SFX &0 òr oreto/T0I0mf òr
-SFX &0 òo oeto/T0I0mf òo
-SFX &0 úo ueto/T0I0mf úo
-SFX &0 o eto/T0I0mf [^bcdđjɉkgmnñòprsŧúvx]o
+SFX &0 o eto/T0I0mf [^bcdđíjɉkgmnñòprsŧúvx]o
 SFX &0 o eto/T0I0mf [^è]đo
 SFX &0 o eto/T0I0mf [^èò][cdgkjɉprsŧvx]o
 SFX &0 o eto/T0I0mf [^ò][bmnñ]o
@@ -5624,7 +5635,8 @@ SFX &0 òŧo oŧeto/T0I0mf òŧo
 SFX &0 òvo oveto/T0I0mf òvo
 SFX &0 òxo oxeto/T0I0mf òxo
 SFX &0 ía ieta/D0 ía
-SFX &0 a eta/D0 [^bcdđgíjɉklmnñprsŧvx]a
+SFX &0 úa ueta/D0 úa
+SFX &0 a eta/D0 [^bcdđgíjɉklmnñprsŧúvx]a
 SFX &0 a eta/D0 [^ò]ma
 SFX &0 a eta/D0 [^è][gv]a
 SFX &0 a eta/D0 [^èò][bcdđklnprsŧx]a
@@ -5664,11 +5676,12 @@ SFX &0 0 ta/D0 [^è]ve
 SFX &0 ève eveta/D0 ève
 
 # sostantivi alterài - demenutivi in -eto/a ko èle evanesente
-SFX &1 Y 49
+SFX &1 Y 51
+SFX &1 è eeto/T0mf è
 SFX &1 ú ueto/T0mf ú
 SFX &1 0 eto/T0mf [^èò]l
-SFX &1 èl eleto/T0I0mf èl
-SFX &1 òl oleto/T0mf òl
+SFX &1 èl eƚeto/T0I0mf èl
+SFX &1 òl oƚeto/T0mf òl
 SFX &1 0 eto/T0mf [^ò]n
 SFX &1 òn oneto/T0mf òn
 SFX &1 0 eto/T0mf [^èò]r
@@ -5710,6 +5723,7 @@ SFX &1 òso oseto/T0mf òso
 SFX &1 òŧo oŧeto/T0mf òŧo
 SFX &1 òvo oveto/T0mf òvo
 SFX &1 òxo oxeto/T0mf òxo
+SFX &1 0 to/T0mf ƚe
 SFX &1 a eta/D0 [^ƚ]a
 SFX &1 a eta/D0 [^èò]ƚa
 SFX &1 èƚa eƚeta/D0 èƚa
@@ -5780,7 +5794,7 @@ SFX [1 òsa osèƚa/D0 òsa
 #SFX 00 . erin/B0 ?
 
 # sostantivi alterài - kresitivi in -òto/a (el pòl èsar nòme o ajetivo)
-SFX (0 Y 21
+SFX (0 Y 22
 SFX (0 0 òto/T0I0 [^èò]l
 SFX (0 0 òto/T0I0 [^èò][nr]
 SFX (0 èl elòto/T0I0 èl
@@ -5794,17 +5808,18 @@ SFX (0 òko okòto/T0I0 òko
 SFX (0 èso esòto/T0I0 èso
 SFX (0 èŧo eŧòto/T0I0 èŧo
 SFX (0 òr oròto/T0I0 òr
-SFX (0 a òta/D0 [^círsŧ]a
+SFX (0 a òta/D0 [^cílrsŧ]a
 SFX (0 ía iòta/D0 ía
-SFX (0 a òta/D0 [^è][crsŧ]a
+SFX (0 a òta/D0 [^è][clrsŧ]a
 SFX (0 èca ecòta/D0 èca
+SFX (0 èla elòta/D0 èla
 SFX (0 èra eròta/D0 èra
 SFX (0 èsa esòta/D0 èsa
 SFX (0 èŧa eŧòta/D0 èŧa
 SFX (0 òra oròta/D0 òra
 
 # sostantivi alterài - kresitivi in -òto/a ko èle evanesente
-SFX (1 Y 18
+SFX (1 Y 19
 SFX (1 o òto/T0 [^èò]ƚo
 SFX (1 0 òto/T0 [^èò][nr]
 SFX (1 èƚo eƚòto/T0 èƚo
@@ -5817,20 +5832,21 @@ SFX (1 èco ecòto/T0 èco
 SFX (1 òko okòto/T0 òko
 SFX (1 èso esòto/T0 èso
 SFX (1 òr oròto/T0 òr
-SFX (1 a òta/D0 [^cís]a
+SFX (1 a òta/D0 [^cíƚs]a
 SFX (1 ía iòta/D0 ía
-SFX (1 a òta/D0 [^è][cs]a
+SFX (1 a òta/D0 [^è][cƚs]a
 SFX (1 èca ecòta/D0 èca
+SFX (1 èƚa eƚòta/D0 èƚa
 SFX (1 èsa esòta/D0 èsa
 SFX (1 òra oròta/D0 òra
 
 # sostantivi alterài - kresitivi in -on
-SFX )0 Y 36
+SFX )0 Y 37
 SFX )0 0 on/D0U0mf [^è]l
 SFX )0 0 on/D0U0mf n
-SFX )0 0 n/D0U0mf [^cjɉkƚmñpst]o
+SFX )0 0 n/D0U0mf [^cjɉkƚmñpstŧ]o
 SFX )0 0 n/D0U0mf [^èò][pt]o
-SFX )0 0 n/D0U0mf [^ò][cjɉkmñs]o
+SFX )0 0 n/D0U0mf [^ò][cjɉkmñsŧ]o
 SFX )0 òco ocon/D0U0mf òco
 SFX )0 òko okon/D0U0mf òko
 SFX )0 òjo ojon/D0U0mf òjo
@@ -5840,6 +5856,7 @@ SFX )0 òño oñon/D0U0mf òño
 SFX )0 òpo opon/D0U0mf òpo
 SFX )0 òso oson/D0U0mf òso
 SFX )0 òto oton/D0U0mf òto
+SFX )0 òŧo oŧon/D0U0mf òŧo
 SFX )0 èpo epon/D0U0mf èpo
 SFX )0 èto eton/D0U0mf èto
 SFX )0 0 on/D0U0mf [^è]r
@@ -5848,19 +5865,19 @@ SFX )0 èr eron/D0U0mf èr
 SFX )0 èl elon/D0U0mf èl
 SFX )0 0 n/D0mf [^è]ƚo
 SFX )0 èƚo eƚon/D0mf èƚo
-SFX )0 a on/D0U0mf [^gklƚpñrt]a
-SFX )0 a on/D0U0mf [^èò]ta
-SFX )0 a on/D0U0mf [^è][glƚpr]a
-SFX )0 a on/D0U0mf [^ò][kñ]a
-SFX )0 èga egon/D0U0mf èga
-SFX )0 èla elon/D0U0mf èla
-SFX )0 èƚa eƚon/D0mf èƚa
-SFX )0 èpa epon/D0U0mf èpa
-SFX )0 èra eron/D0U0mf èra
-SFX )0 èta eton/D0U0mf èta
-SFX )0 òka okon/D0U0mf òka
-SFX )0 òña oñon/D0U0mf òña
-SFX )0 òta oton/D0U0mf òta
+SFX )0 a ona/D0 [^gklƚpñrt]a
+SFX )0 a ona/D0 [^èò]ta
+SFX )0 a ona/D0 [^è][glƚpr]a
+SFX )0 a ona/D0 [^ò][kñ]a
+SFX )0 èga egona/D0 èga
+SFX )0 èla elona/D0 èla
+SFX )0 èƚa eƚona/D0 èƚa
+SFX )0 èpa epona/D0 èpa
+SFX )0 èra erona/D0 èra
+SFX )0 èta etona/D0 èta
+SFX )0 òka okona/D0 òka
+SFX )0 òña oñona/D0 òña
+SFX )0 òta otona/D0 òta
 SFX )0 e on/D0U0mf e
 
 # sostantivi alterài - kresitivi in -on ko èle evanesente
@@ -5885,16 +5902,16 @@ SFX )1 0 on/D0mf [^è]r
 SFX )1 èr aron/D0mf èr
 SFX )1 èr eron/D0mf èr
 SFX )1 èƚo eƚon/D0mf èƚo
-SFX )1 a on/D0mf [^glƚpñrt]a
-SFX )1 a on/D0mf [^è][glƚpr]a
-SFX )1 a on/D0mf [^ò][ñt]a
-SFX )1 èga egon/D0mf èga
-SFX )1 èla elon/D0mf èla
-SFX )1 èƚa eƚon/D0mf èƚa
-SFX )1 èpa epon/D0mf èpa
-SFX )1 èra eron/D0mf èra
-SFX )1 òña oñon/D0mf òña
-SFX )1 òta oton/D0mf òta
+SFX )1 a ona/D0 [^glƚpñrt]a
+SFX )1 a ona/D0 [^è][glƚpr]a
+SFX )1 a ona/D0 [^ò][ñt]a
+SFX )1 èga egona/D0 èga
+SFX )1 èla elona/D0 èla
+SFX )1 èƚa eƚona/D0 èƚa
+SFX )1 èpa epona/D0 èpa
+SFX )1 èra erona/D0 èra
+SFX )1 òña oñona/D0 òña
+SFX )1 òta otona/D0 òta
 SFX )1 e on/D0mf e
 
 # sostantivi alterài - peđorativi in -ato/a
@@ -5924,26 +5941,27 @@ SFX §0 èla elata/D0 èla
 SFX §0 èƚa eƚata/D0 èƚa
 
 # sostantivi alterài - peđorativi in -aŧo/a
-SFX <0 Y 35
+SFX <0 Y 36
 SFX <0 0 aŧo/T0I0 [^è]l
 SFX <0 èl elaŧo/T0I0 èl
 SFX <0 0 aŧo/T0I0 [^è]r
 SFX <0 èr eraŧo/T0I0 èr
 SFX <0 0 aŧo/T0I0 n
-SFX <0 o aŧo/T0I0 [^ckjɉm]o
+SFX <0 o aŧo/T0I0 [^ckjɉgmtò]o
 SFX <0 o aŧo/T0I0 [^è]ko
-SFX <0 o aŧo/T0I0 [^ò][cjɉm]o
+SFX <0 o aŧo/T0I0 [^ò][cjɉgmt]o
 SFX <0 èko ekaŧo/T0I0 èko
+SFX <0 òo oaŧo/T0I0 òo
 SFX <0 òco ocaŧo/T0I0 òco
 SFX <0 òjo ojaŧo/T0I0 òjo
 SFX <0 òɉo oɉaŧo/T0I0 òɉo
+SFX <0 ògo ogaŧo/T0I0 ògo
 SFX <0 òmo omaŧo/T0I0 òmo
-SFX <0 0 aŧa/D0 [^è]r
+SFX <0 òto otaŧo/T0I0 òto
 SFX <0 èr eraŧa/D0 èr
-SFX <0 0 aŧa/D0 n
-SFX <0 0 ŧa/D0 [^bkèíjɉlnñòrstx]a
+SFX <0 0 ŧa/D0 [^bkèíjɉklnñòrstvx]a
 SFX <0 èa eaŧa/D0 èa
-SFX <0 0 ŧa/D0 [^è][kr]a
+SFX <0 0 ŧa/D0 [^è][krv]a
 SFX <0 0 ŧa/D0 [^ò][bjɉlnñstx]a
 SFX <0 òba obaŧa/D0 òba
 SFX <0 ía iaŧa/D0 ía
@@ -5962,7 +5980,7 @@ SFX <0 òxa oxaŧa/D0 òxa
 SFX <0 e aŧo/T0I0 e
 
 # sostantivi alterài - peđorativi in -aso/a
-SFX <1 Y 35
+SFX <1 Y 33
 SFX <1 0 aso/T0I0 [^è]l
 SFX <1 èl elaso/T0I0 èl
 SFX <1 0 aso/T0I0 [^è]r
@@ -5976,12 +5994,10 @@ SFX <1 òco ocaso/T0I0 òco
 SFX <1 òjo ojaso/T0I0 òjo
 SFX <1 òɉo oɉaso/T0I0 òɉo
 SFX <1 òmo omaso/T0I0 òmo
-SFX <1 0 asa/D0 [^è]r
 SFX <1 èr erasa/D0 èr
-SFX <1 0 asa/D0 n
-SFX <1 0 sa/D0 [^bkèíjɉlnñòrstx]a
+SFX <1 0 sa/D0 [^bkèíjɉklnñòrstvx]a
 SFX <1 èa easa/D0 èa
-SFX <1 0 sa/D0 [^è][kr]a
+SFX <1 0 sa/D0 [^è][krv]a
 SFX <1 0 sa/D0 [^ò][bjɉlnñstx]a
 SFX <1 òba obasa/D0 òba
 SFX <1 ía iasa/D0 ía
@@ -6001,31 +6017,25 @@ SFX <1 e aso/T0I0 e
 
 # sostantivi alterài - peđorativi in -uŧo, -òl, e -uko
 #SFX 00 . òl/B0 ?
-#SFX 00 . òƚo/B0 ?
 #SFX 00 . uŧo/B0I0 ?
-#SFX 00 . uso/B0 ?
 #SFX 00 . ŧuŧo/B0 [?]
-#SFX 00 . suso/B0 [?]
 #SFX 00 . eŧuŧo/B0 ?
-#SFX 00 . esuso/B0 ?
 #SFX 00 . đuŧo/B0 [?]
 #SFX 00 . eđuŧo/B0 ?
-#SFX 00 . eduso/B0 ?
-#SFX 00 . exuso/B0 ?
 #SFX 00 . luŧo/B0 [?]
 #SFX 00 . oluŧo/B0 ?
-#SFX 00 . oluso/B0 ?
-#SFX 00 . oƚuso/B0 ?
 #SFX 00 . ruŧo/B0 [?]
 #SFX 00 . eruŧo/B0 ?
-#SFX 00 . ruso/B0 [?]
-#SFX 00 . eruso/B0 ?
 #SFX 00 . uko/B0 ?
 
 # sostantivi alterài
 PFX =0 Y 2
 PFX =0 0 stra .
 PFX =0 0 stra- .
+
+# sostantivi alterài
+PFX °0 Y 1
+PFX °0 0 anti .
 
 # sostantivi alterài
 PFX |0 Y 1
@@ -6307,7 +6317,7 @@ PFX $3 0 Mi .
 PFX $3 0 ki .
 
 
-# word truncated at the begin
+# paròle ŧonkàe a l' iniŧio
 PFX ‘0 Y 28
 PFX ‘0 a ʼ a
 PFX ‘0 al ʼL al
@@ -6338,7 +6348,7 @@ PFX ‘0 vú ʼÚ vú
 PFX ‘0 kò ʼ kò
 PFX ‘0 kòs ʼS kòs
 
-# word truncated at the end
+# paròle ŧonkàe a la fine
 SFX ’0 Y 13
 SFX ’0 a ʼ [^r]a
 SFX ’0 ra ʼ ra
