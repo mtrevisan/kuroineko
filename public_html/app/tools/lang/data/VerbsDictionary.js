@@ -773,6 +773,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "brusc",			"",			1,	2,	"a",	"1775",			"Gratabujar.",
 "bruskin",		"",			1,	2,	"a",	"1775",			"Spaŧolar, setolar.",
 "brustol",		"",			1,	2,	"a",	"1560",			"",
+"brustol",		"",			4,	7,	"a",	"1851",			"",
 "brux",			"",			1,	2,	"a",	"1264",			"",
 "brux",			"x",			1,	2,	"a",	"1775",			"",
 "bubl",			"",			1,	1,	"a",	"1829",			"Buxarar.",
