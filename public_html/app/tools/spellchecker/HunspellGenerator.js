@@ -37,13 +37,26 @@ define(function(){
 	 */
 	var parseAFF = (function(){
 		var copyOver = function(ruleType, definitionParts){ this.flags[ruleType] = definitionParts[0]; return 0; },
-			copyOverJoined = function(ruleType, definitionParts){ this.flags[ruleType] = definitionParts.join(' '); return 0; };
+			copyOverJoined = function(ruleType, definitionParts){ this.flags[ruleType] = definitionParts.join(' '); return 0; },
+			doNothing = function(ruleType, definitionParts){ return (Number(definitionParts) == definitionParts? Number(definitionParts): 0); };
 		var ruleFunction = {
-			PFX: function(ruleType, definitionParts, lines, i){ return parseAffix.call(this, ruleType, definitionParts, lines, i); },
-			SFX: function(ruleType, definitionParts, lines, i){ return parseAffix.call(this, ruleType, definitionParts, lines, i); },
-			FLAG: function(ruleType, definitionParts){ this.flags[ruleType] = definitionParts[0]; return 0; },
+			NAME: doNothing,
+			VERSION: doNothing,
+			HOME: doNothing,
+			LANG: doNothing,
+			SET: doNothing,
+			TRY: doNothing,
+			KEY: doNothing,
+			WORDCHARS: doNothing,
+			BREAK: doNothing,
+			KEEPCASE: copyOver,
 			FULLSTRIP: copyOverJoined,
-			KEEPCASE: copyOver
+			MAP: doNothing,
+			ICONV: doNothing,
+			REP: doNothing,
+			FLAG: function(ruleType, definitionParts){ this.flags[ruleType] = definitionParts[0]; return 0; },
+			PFX: function(ruleType, definitionParts, lines, i){ return parseAffix.call(this, ruleType, definitionParts, lines, i); },
+			SFX: function(ruleType, definitionParts, lines, i){ return parseAffix.call(this, ruleType, definitionParts, lines, i); }
 		};
 
 		return function(data){
@@ -71,7 +84,8 @@ define(function(){
 
 	/** @private */
 	var parseAffix = function(ruleType, definitionParts, lines, i){
-		var ruleCode = definitionParts[0],
+		var isSuffix = (ruleType == 'SFX'),
+			ruleCode = definitionParts[0],
 			combineable = (definitionParts[1] == 'Y'),
 			numEntries = parseInt(definitionParts[2], 10);
 
@@ -93,13 +107,15 @@ define(function(){
 			if(continuationClasses.length)
 				entry.continuationClasses = continuationClasses;
 			if(regexToMatch && regexToMatch != '.')
-				entry.match = new RegExp(ruleType == 'SFX'? regexToMatch + '$': '^' + regexToMatch);
+				entry.match = new RegExp(isSuffix? regexToMatch + '$': '^' + regexToMatch);
 			if(charactersToRemove != '0')
-				entry.remove = new RegExp(ruleType == 'SFX'? charactersToRemove + '$': '^' + charactersToRemove);
+				entry.remove = new RegExp(isSuffix? charactersToRemove + '$': '^' + charactersToRemove);
+			//if(isSuffix && charactersToRemove && additionParts[0].length > 1 && charactersToRemove[0] == additionParts[0][0])
+			//	console.log('This line has characters in common between removed and added part' + lines[j]);
 			entries.push(entry);
 		}
 
-		this.rules[ruleCode] = {type: ruleType, combineable: combineable, entries: entries};
+		this.rules[ruleCode] = {isSuffix: isSuffix, combineable: combineable, entries: entries};
 
 		return numEntries;
 	};
@@ -157,15 +173,48 @@ define(function(){
 	var applyRules = function(wordFlags){
 		var parts = wordFlags.split('/');
 		var word = parts[0];
-		var continuationClasses = parseRuleCodes.call(this, parts[1]);
+		var continuationClasses = {
+			prefixes: [],
+			suffixes: []
+		};
+		parseRuleCodes.call(this, parts[1]).forEach(function(ruleClass){
+			var rule = this.rules[ruleClass];
+			if(rule && 'isSuffix' in rule)
+				continuationClasses[rule.isSuffix? 'suffixes': 'prefixes'].push(ruleClass);
+		}, this);
 
-		var productions = [{production: word, productionRules: []}];
-		continuationClasses.forEach(function(cl){
-			var productionsToAdd = applyRule.call(this, word, cl);
+		var productions = [{production: word, rules: []}];
+		continuationClasses.suffixes.forEach(function(suffix){
+			var productionsToAdd = applyRule.call(this, word, suffix);
 			Array.prototype.push.apply(productions, productionsToAdd);
+		}, this);
+		var productionsCopy = arrayClone(productions);
+		continuationClasses.prefixes.forEach(function(prefix){
+			productionsCopy.forEach(function(prod){
+				var productionsToAdd = applyRule.call(this, prod.production, prefix);
+				Array.prototype.push.apply(productions, productionsToAdd);
+			}, this);
 		}, this);
 
 		return productions;
+	};
+
+	/** {@link ArrayHelper.clone} */
+	var arrayClone = function(obj){
+		if(Array.isArray(obj)){
+			var copy = obj.slice(0);
+			for(var i = 0, len = copy.length; i < len; i ++)
+				copy[i] = arrayClone(copy[i]);
+			return copy;
+		}
+		else if(typeof obj === 'object'){
+			var copy = obj.constructor();
+			for(var attr in obj)
+				if(obj.hasOwnProperty(attr))
+					copy[attr] = obj[attr];
+			return copy;
+		}
+		return obj;
 	};
 
 	/**
@@ -174,13 +223,13 @@ define(function(){
 	 * @param {String} word	The base word.
 	 * @param {String} ruleClass	The affix rule class.
 	 * @param {String} previousGeneration	Previous generation rule.
-	 * @returns {Object[]}	The new words generated by the rule, composed by 'production' and 'productionRules'.
+	 * @returns {Object[]}	The new words generated by the rule, composed by 'production' and 'rules'.
 	 *
 	 * @private
 	 */
 	var applyRule = function(word, ruleClass, previousGeneration){
 		var rule = this.rules[ruleClass],
-			newWords = [],
+			productions = [],
 			newWord;
 		if(rule)
 			rule.entries.forEach(function(entry){
@@ -189,26 +238,26 @@ define(function(){
 					if(!newWord.length && !('FULLSTRIP' in this.flags))
 						throw 'Cannot strip full words without the flag FULLSTRIP';
 
-					newWord = (rule.type == 'SFX'? newWord + entry.add: entry.add + newWord);
+					newWord = (rule.isSuffix? newWord + entry.add: entry.add + newWord);
 
-					var formattedRule = rule.type
+					var formattedRule = (rule.isSuffix? 'SFX': 'PFX')
 						+ ' ' + ruleClass
-						+ ' ' + (entry.remove? entry.remove.source.replace(/\^|\$/g, ''): '0')
+						+ ' ' + (entry.remove? entry.remove.source.replace(/^\^|\$$/g, ''): '0')
 						+ ' ' + entry.add + (entry.continuationClasses? '/' + entry.continuationClasses.join(''): '')
-						+ ' ' + (entry.match? entry.match.source.replace(/\^|\$/g, ''): '.');
-					newWords.push({production: newWord, productionRules: [previousGeneration, formattedRule].filter(function(el){ return !!el; })});
+						+ ' ' + (entry.match? entry.match.source.replace(/^\^|\$$/g, ''): '.');
+					productions.push({production: newWord, rules: [previousGeneration, formattedRule].filter(function(el){ return !!el; })});
 
 					if(!previousGeneration && 'continuationClasses' in entry)
 						entry.continuationClasses.forEach(function(cl){
-							Array.prototype.push.apply(newWords, applyRule.call(this, newWord, cl, formattedRule));
+							Array.prototype.push.apply(productions, applyRule.call(this, newWord, cl, formattedRule));
 						}, this);
 				}
 			}, this);
 		else if(this.flags['KEEPCASE'] === ruleClass)
-			newWords.push({production: word, productionRules: []});
+			productions.push({production: word, rules: []});
 		else
 			console.log(word + ' does not have a rule for class ' + ruleClass + (previousGeneration? ' (previous generation is ' + previousGeneration + ')': ''));
-		return newWords;
+		return productions;
 	};
 
 

@@ -18,7 +18,7 @@
 		};
 
 
-		require(['tools/spellchecker/HunspellGenerator', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.aff', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.dic', 'tools/data/FileHelper', 'tools/data/structs/DAWG'], function(HunspellGenerator, affFile, dicFile, FileHelper, DAWG){
+		require(['tools/spellchecker/HunspellGenerator', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.aff', 'text!tools/lang/data/dict-vec-oxt/dictionaries/vec.dic', 'tools/data/FileHelper', 'tools/lang/phonology/Word', 'tools/data/structs/DAWG'], function(HunspellGenerator, affFile, dicFile, FileHelper, Word, DAWG){
 			var generator = new HunspellGenerator(affFile),
 				dictionary = dicFile.split(/[\r\n]+/);
 			//remove the counter
@@ -27,6 +27,13 @@
 			dictionary.forEach(function(word){
 				if(!/^\s*\//.test(word) && word.length){
 					word = word.replace(/\t.*$/, '');
+
+					var continuationClasses = generator.extractContinuationClasses(word);
+					var baseWord = word.replace(/\/.+/, '');
+					continuationClasses.forEach(function(continuationClass){
+						if(!generator.canParse(baseWord, continuationClass))
+							console.log('no derivations can be extracted from word ' + baseWord + ' with class ' + continuationClass);
+					});
 
 					var productions = generator.applyRules(word);
 					productions.forEach(function(el){
@@ -38,20 +45,24 @@
 								console.log('word cannot have multiple accents: ' + JSON.stringify(el));
 								return true;
 							}
+							if(Word.isStressed(subword) && subword !== Word.unmarkDefaultStress(subword)){
+								var lBetweenVowelsRemoval = el.rules.some(function(rule){
+									return /l i l$/.test(rule);
+								});
+								if(!lBetweenVowelsRemoval){
+									console.log('word cannot have an accent here: ' + JSON.stringify(el));
+									return true;
+								}
+							}
 							return false;
 						});
-						if(/[cijɉñ]i[aàeèéiíoòóuú]/.test(production) && !/ciuí$/.test(production))
-							console.log('word cannot have [cijɉñ]iV: ' + JSON.stringify(el));
-					});
-
-					var continuationClasses = generator.extractContinuationClasses(word);
-					if(continuationClasses.length)
-						word = word.replace(/\/.+/, '');
-					continuationClasses.forEach(function(continuationClass){
-						if(!generator.hasRule(continuationClass))
-							console.log('rule for class ' + continuationClass + ' not found');
-						if(!generator.canParse(word, continuationClass))
-							console.log('no derivations can be extracted from word ' + word + ' with class ' + continuationClass);
+						if(production.indexOf('%') < 0 && /[cijɉñ]i[aàeèéiíoòóuú]/.test(production) && !/ciuí$/.test(production)){
+							var dBetweenVowelsRemoval = el.rules.some(function(rule){
+								return /dor or\/[^ ]+ \[aeiou\]dor$/.test(rule);
+							});
+							if(!dBetweenVowelsRemoval)
+								console.log('word cannot have [cijɉñ]iV: ' + JSON.stringify(el));
+						}
 					});
 				}
 			});/**/
@@ -87,7 +98,7 @@
 			}/**/
 
 
-			/*var duplicates = new Map();
+/*			var duplicates = new Map();
 			var dawg = new DAWG();
 			dictionary.forEach(function(word){
 				if(!/^\s*\//.test(word) && word.length){

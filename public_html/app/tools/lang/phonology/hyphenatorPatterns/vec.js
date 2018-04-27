@@ -36,7 +36,8 @@ define({
 			+ 'p2lp2r'
 			+ 't2lt2r'
 			+ 'v2lv2r',
-		4: '.f2t.p2n.p2s.t2m',
+		4: '.f2t.p2n.p2s.t2m'
+			+ 'a1ore1ori1ora1ure1uri1ur',
 		5: '.bio1.pre1l3f2t',
 		6: 'sub3s2'
 			+ '.di2s3.de2s3.di2x3.de2x3.anti1.auto1.opto1.orto3.para1.poli3.re1is'
@@ -44,7 +45,7 @@ define({
 		7: 'kontro1ekstra1èkstra1sirkum3ŧirkum3.ipe2r1.polip2.ortop2.dis3p2.des3p2',
 		8: 'sirkums2ŧirkums2'
 			+ '.de3x4in.de3x4ín',
-		9: '.de3x4ide.de3x4íde',
+		9: '.de3x4ide.de3x4íde.dexs2kon',
 		10: '.su2b3entr.su2b3éntr.su2b3intr.su2b3íntr'
 	}
 });

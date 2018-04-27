@@ -117,7 +117,9 @@ define(['tools/lang/phonology/Phone'], function(Phone){
 		var len = 0;
 		var ptr = this.root;
 		while(ptr){
-			var subword = (ptr.children.length? chars.slice(len, len + ptr.children[0].value.match(Phone.REGEX_UNICODE_SPLITTER).length).join(''): chars.slice(len));
+			var subword = (ptr.children.length?
+				chars.slice(len, len + (ptr.children[0].value.length? ptr.children[0].value.match(Phone.REGEX_UNICODE_SPLITTER).length: 0)).join(''):
+				chars.slice(len));
 			ptr = ptr.children.find(function(child){
 				return subword.startsWith(child.value);
 			});

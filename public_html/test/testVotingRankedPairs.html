@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Mauro Trevisan">
+	<link rel="shortcut icon" href="../favicon.png" />
+
+	<title>test Tideman's Ranked Pairs voting</title>
+
+	<script>
+		//@see <a href="https://en.wikipedia.org/wiki/Ranked_pairs">Tideman's Ranked Pairs voting - Wiki</a>
+		//@see <a href="https://gist.github.com/asafh/a8e9af7a3e5282cbba27">Tideman's Ranked Pairs voting - GitHub</a>
+
+		var enableDebug = false;
+
+
+		/**
+		 * Given a list of candidates and a list of ballots, return the first given number of winners.
+		 *
+		 * @param candidates			An array of strings, each representing a candidate
+		 * @param ballots				An array of maps, each is a ballot
+		 * @param [wantedWinners]	The number of wanted winners, optional, defaults to <code>1</code>
+		 * @returns candidate		Array of winning candidates
+		 */
+		var elect = function(candidates, ballots, wantedWinners){
+			if(typeof wantedWinners !== 'number')
+				wantedWinners = 1;
+
+			var winners = [];
+			var noPreferenceValue = candidates.length;
+			while(winners.length < wantedWinners){
+				var thisElection = electWinner(candidates, ballots, noPreferenceValue);
+				if(!thisElection.size){
+					console.log('Could not elect another candidate, wanted ' + wantedWinners + ' winners, obtained ' + winners.length);
+
+					break;
+				}
+
+				winners.push(thisElection);
+				if(winners.length > wantedWinners)
+					console.log('Too many winners, wanted ' + wantedWinners + ' winners, obtained ' + winners.length);
+				if(winners.length >= wantedWinners)
+					break;
+
+				//filter out winner candidate(s)
+				candidates = candidates.filter(candidate => !thisElection.has(candidate));
+			}
+			return winners;
+		};
+
+		/**
+		 * Runs the Tideman's Ranked Pairs vote
+		 *
+		 * @param candidates		An array of strings, each representing a candidate
+		 * @param ballots			An array of maps, each is a ballot
+		 * @param noPreferences	Value to associate to a candidate not present in the preference list
+		 * @returns candidate	Set of candidates which are the sources of the locked-in graph (which is usually single, unless the graph has more than one source)
+		 * 
+		 * @private
+		 */
+		var electWinner = function(candidates, ballots, noPreferenceValue){
+			var sources = [];
+			if(candidates.length === 1)
+				//short-circuit (the only candidate who competes is also the winner)
+				sources = candidates;
+			else if(candidates.length > 0){
+				if(enableDebug){
+					console.log(ballots.length + ' ballots:');
+					console.log(candidates.join('\t'));
+					ballots.forEach(ballot => console.log(candidates.map(candidate => getPreference(candidate, ballot, undefined)).join('\t')));
+				}
+
+				var majorities = calculateMajorities(candidates, ballots, noPreferenceValue);
+				if(enableDebug)
+					console.log('Majorities:\n', majorities);
+
+				var graph = createGraph(candidates, majorities);
+				if(enableDebug)
+					console.log('Locked graph:\n', graph);
+
+				sources = graphSources(candidates, graph);
+				if(enableDebug)
+					console.log('Graph sources:', sources);
+			}
+			return new Set(sources);
+		};
+
+		/** @private */
+		var calculateMajorities = function(candidates, ballots, noPreferenceValue){
+			var v = {};
+			var majorities = [];
+			candidates.forEach(function(x){
+				v[x] = {};
+				var vx = v[x];
+				candidates.forEach(function(y){
+					if(y === x)
+						return;
+
+					vx[y] = ballots.reduce((count, ballot) => count + (getPreference(x, ballot, noPreferenceValue) < getPreference(y, ballot, noPreferenceValue)? 1: 0), 0);
+
+					majorities.push({
+						x: x,
+						y: y,
+						vxy: vx[y]
+					});
+				});
+			});
+
+			sortMajorities(majorities, v);
+
+			return majorities;
+		};
+
+		/** @private */
+		var sortMajorities = function(majorities, v){
+			//sort majorities
+			majorities.sort(function(m1, m2){
+					//Vxy - Vzw
+					var diff = m1.vxy - m2.vxy;
+					//Vxy > Vzw
+					if(diff > 0)
+						return 1;
+
+					//resolve tie-breaking
+					if(diff === 0)
+						//Vwz > Vyx smaller minority opposition (now wz and yz)
+						return v[m2.y][m2.x] - v[m1.y][m1.x];
+
+					return -1;
+				})
+				.reverse();
+		};
+
+		/** @private */
+		var createGraph = function(candidates, majorities){
+			var graph = {};
+			candidates.forEach(candidate => graph[candidate] = []);
+
+			//lock-in:
+			majorities.forEach(function(m){
+				//if x is accessible from y, then x->y would create a circle, so the edge is skipped
+				if(!graphNodeReachable(graph, m.y, m.x)){
+					graph[m.x] = graph[m.x] || [];
+					graph[m.x].push(m.y);
+				}
+			});
+			return graph;
+		};
+
+		/** @private */
+		var graphNodeReachable = function(graph, from, to){
+			//can be reached from one of the connections
+			return graph[from].some(neighbor => (neighbor === to || graphNodeReachable(graph, neighbor, to)));
+		};
+
+		/** @private */
+		var graphSources = function(candidates, graph){
+			return candidates.filter(candidate =>
+				//filter out if neighbor is not reachable from every candidate
+				candidates.every(neighbor => (graph[neighbor].indexOf(candidate) === -1))
+			);
+		};
+
+		/** @private */
+		var getPreference = function(candidate, ballot, noPreferenceValue){
+			var preference = ballot[candidate];
+			if(preference === undefined)
+				preference = noPreferenceValue;
+
+			return preference;
+		};
+
+
+
+		//example:
+		var sortProperties = function(obj){
+			//convert object into array
+			var sortable = [];
+			for(var key in obj)
+				if(obj.hasOwnProperty(key))
+					//each item is an array in format [key, value]
+					sortable.push([key, obj[key]]);
+
+			//sort items by value
+			sortable.sort((a, b) => b[1] - a[1]);
+			//array in format [[key1, val1], [key2, val2], ...]
+			return sortable;
+		};
+		var convertInput = function(ballot){
+			ballot = sortProperties(ballot);
+
+			var keys = ballot.map(b => b[1])
+				.filter((elem, index, array) => array.indexOf(elem) === index);
+			ballot = ballot.filter(vote => vote[1] !== undefined)
+				.map(vote => [vote[0], keys.indexOf(vote[1])])
+				.reduce(function(p, vote){
+					p[vote[0]] = vote[1];
+					return p;
+				}, {});
+
+			return ballot;
+		};
+
+		var candidates = ['ALV', 'LA', 'ILV', 'SA', 'BS', 'TM', 'SR', 'T'];
+		var ballots = [
+			//Stefano Battaggia
+			{'LA': 8,	'ILV': 8,	'SA': 7,	'TM': 6,	'SR': 7,	'T': 7},
+			//Mauro Bonato
+			{'ALV': 9,	'LA': 5,	'ILV': 5,	'SA': 5,	'BS': 5,	'TM': 6,	'SR': 5,	'T': 5},
+			//Ferdinando Camon
+			{'ILV': 8},
+			//Franco Cavallini
+			{'ALV': 10,	'LA': 5,	'ILV': 5,	'SA': 5,	'BS': 5,	'TM': 5,	'SR': 5,	'T': 5},
+			//Deborah Coron
+			{'ALV': 9,	'LA': 7,	'ILV': 5,	'SA': 5,	'BS': 6,	'TM': 8,	'SR': 5,	'T': 5},
+			//Ezio Crosara
+			{'ALV': 9,	'LA': 7,	'ILV': 5,	'SA': 5,	'BS': 6,	'TM': 6,	'SR': 5,	'T': 5},
+			//Andrea Lunardon
+			{'ALV': 7,	'SA': 6,	'BS': 9,	'TM': 9,	'SR': 9,	'T': 8},
+			//Loris Palmerini
+			{'ALV': 5,	'LA': 8,	'SA': 10,	'BS': 7,	'TM': 6},
+			//Franco Rocchetta
+			{'ALV': 9,	'LA': 5,	'ILV': 5,	'SA': 5,	'BS': 5,	'TM': 6,	'SR': 5,	'T': 5},
+			//Andrea Sinigallia
+			{'LA': 5,	'ILV': 5,	'SA': 5,	'BS': 5,	'TM': 5,	'SR': 5,	'T': 5},
+			//Beglari Tavartkiladze
+			{'ALV': 10,	'LA': 5,	'ILV': 5,	'SA': 5,	'BS': 5,	'TM': 5,	'SR': 5,	'T': 5},
+			//Mauro Trevisan
+			{'ALV': 2.3,	'LA': 2.2,	'ILV': 1.2,	'SA': 1.8,	'BS': 2.5,	'TM': 4.8,	'SR': 2.6},
+			//Denis Zarantonello
+			{'ALV': 9,	'LA': 5,	'ILV': 5,	'SA': 5,	'BS': 5,	'TM': 5,	'SR': 5,	'T': 5}
+		];
+	
+		ballots = ballots.map(ballot => convertInput(ballot))
+			//filter out empty ballots
+			.filter(ballot => Object.keys(ballot).length > 0);
+
+		winners = elect(candidates, ballots, candidates.length);
+
+		winners.forEach((winner, i) => console.log('Winner #', i + 1, ':', Array.from(winner).join(' = ')));
+
+	</script>
+</head>
+
+<body>
+</body>
+</html>
