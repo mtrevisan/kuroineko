@@ -5941,7 +5941,7 @@ SFX §0 èla elata/D0 èla
 SFX §0 èƚa eƚata/D0 èƚa
 
 # sostantivi alterài - peđorativi in -aŧo/a
-SFX <0 Y 36
+SFX <0 Y 37
 SFX <0 0 aŧo/T0I0 [^è]l
 SFX <0 èl elaŧo/T0I0 èl
 SFX <0 0 aŧo/T0I0 [^è]r
@@ -5961,12 +5961,13 @@ SFX <0 òto otaŧo/T0I0 òto
 SFX <0 èr eraŧa/D0 èr
 SFX <0 0 ŧa/D0 [^bkèíjɉklnñòrstvx]a
 SFX <0 èa eaŧa/D0 èa
-SFX <0 0 ŧa/D0 [^è][krv]a
-SFX <0 0 ŧa/D0 [^ò][bjɉlnñstx]a
+SFX <0 0 ŧa/D0 [^è][klrv]a
+SFX <0 0 ŧa/D0 [^ò][bljɉnñstx]a
 SFX <0 òba obaŧa/D0 òba
 SFX <0 ía iaŧa/D0 ía
 SFX <0 òa oaŧa/D0 òa
 SFX <0 èka ekaŧa/D0 èka
+SFX <0 èla elaŧa/D0 èla
 SFX <0 èpa epaŧa/D0 èpa
 SFX <0 èra eraŧa/D0 èra
 SFX <0 òja ojaŧa/D0 òja
@@ -5980,7 +5981,7 @@ SFX <0 òxa oxaŧa/D0 òxa
 SFX <0 e aŧo/T0I0 e
 
 # sostantivi alterài - peđorativi in -aso/a
-SFX <1 Y 33
+SFX <1 Y 35
 SFX <1 0 aso/T0I0 [^è]l
 SFX <1 èl elaso/T0I0 èl
 SFX <1 0 aso/T0I0 [^è]r
@@ -5995,14 +5996,16 @@ SFX <1 òjo ojaso/T0I0 òjo
 SFX <1 òɉo oɉaso/T0I0 òɉo
 SFX <1 òmo omaso/T0I0 òmo
 SFX <1 èr erasa/D0 èr
-SFX <1 0 sa/D0 [^bkèíjɉklnñòrstvx]a
+SFX <1 0 sa/D0 [^bkèíjɉklƚnñòrstvx]a
 SFX <1 èa easa/D0 èa
-SFX <1 0 sa/D0 [^è][krv]a
-SFX <1 0 sa/D0 [^ò][bjɉlnñstx]a
+SFX <1 0 sa/D0 [^è][klƚrv]a
+SFX <1 0 sa/D0 [^ò][bljɉnñstx]a
 SFX <1 òba obasa/D0 òba
 SFX <1 ía iasa/D0 ía
 SFX <1 òa oasa/D0 òa
 SFX <1 èka ekasa/D0 èka
+SFX <1 èla elasa/D0 èla
+SFX <1 èƚa eƚasa/D0 èƚa
 SFX <1 èpa epasa/D0 èpa
 SFX <1 èra erasa/D0 èra
 SFX <1 òja ojasa/D0 òja
@@ -6044,6 +6047,16 @@ PFX |0 0 tra .
 # sostantivi alterài
 PFX ^0 Y 1
 PFX ^0 0 pre .
+
+# sostantivi alterài (singolar)
+PFX ^1 Y 2
+PFX ^1 0 kapo .
+PFX ^1 0 kapo- .
+
+# sostantivi alterài (plural)
+PFX ^2 Y 2
+PFX ^2 0 kapi .
+PFX ^2 0 kapi- .
 
 # sostantivi alterài
 PFX +0 Y 3
