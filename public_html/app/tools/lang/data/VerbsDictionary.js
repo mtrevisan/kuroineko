@@ -2652,6 +2652,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kavalk",		"",			1,	3,	"g",	"1775",			"",
 "kavalk",		"in",			1,	3,	"g",	"1980",			"",
 "kavalk",		"s",			1,	3,	"g",	"1775",			"",
+"kavalot",		"",			1,	5,	"g",	"1851",			"",
 "kaved",			"des",		1,	1,	"g",	"1775",			"Deskapitar, vanŧar.",
 "kaveɉ",			"s",			1,	3,	"a",	"1775",			"",
 "kaveñ",			"s",			1,	3,	"a",	"1821",			"",
