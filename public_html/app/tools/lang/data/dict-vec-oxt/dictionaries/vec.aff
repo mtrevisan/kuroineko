@@ -6356,3 +6356,30 @@ SFX ’0 ove óʼ dove
 SFX ’0 u ʼ u
 SFX ’0 te ʼ te
 SFX ’0 xo ʼ xo
+
+
+
+#SFX AA Y 1
+#SFX AA 0 a/BBDD .
+#SFX BB Y 1
+#SFX BB 0 b .
+#SFX CC Y 1
+#SFX CC 0 c/DD .
+#PFX DD Y 1
+#PFX DD 0 d .
+#PFX EE Y 1
+#PFX EE 0 e/BB .
+#r/EE
+#r				
+#ra		SFX AA 0 a/BBCCDDEEFF .		
+#rab		SFX AA 0 a/BBCCDDEEFF .	SFX BB 0 b .	
+#rac		SFX AA 0 a/BBCCDDEEFF .	SFX CC 0 c/DD .	
+#dra		SFX AA 0 a/BBCCDDEEFF .	PFX DD 0 d .	
+#era		SFX AA 0 a/BBCCDDEEFF .	PFX EE 0 e/BB .	
+#fra		SFX AA 0 a/BBCCDDEEFF .	PFX FF 0 f/DD .	
+#drab		SFX AA 0 a/BBCCDDEEFF .	SFX BB 0 b .		PFX DD 0 d .
+#erab		SFX AA 0 a/BBCCDDEEFF .	SFX BB 0 b .		PFX EE 0 e/BB .
+#frab		SFX AA 0 a/BBCCDDEEFF .	SFX BB 0 b .		PFX FF 0 f/DD .
+#drac		SFX AA 0 a/BBCCDDEEFF .	SFX CC 0 c/DD .	PFX DD 0 d .
+#erac		SFX AA 0 a/BBCCDDEEFF .	SFX CC 0 c/DD .	PFX EE 0 e/BB .
+#frac		SFX AA 0 a/BBCCDDEEFF .	SFX CC 0 c/DD .	PFX FF 0 f/DD .
