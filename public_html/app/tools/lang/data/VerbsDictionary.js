@@ -891,6 +891,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "cetar",			"",			1,	1,	"g",	"1980",			"Robar, inbrojar.",
 "cex",			"",			1,	1,	"a",	"1867",			"Frekuentar cexe.",
 "cicol",			"",			1,	1,	"a",	"1775",			"Cacarar, cakolar.",
+"cijar",			"",			1,	1,	"a",	"1851",			"Penetar lin o kàneva",
 "cikar",			"s",			1,	1,	"a",	"1854",			"",
 "cinc",			"",			1,	1,	"a",	"1852",			"Atilar, rafaŧonar.",
 "cincin",		"",			1,	4,	"a",	"1980",			"(bixiak) Adobar.",
