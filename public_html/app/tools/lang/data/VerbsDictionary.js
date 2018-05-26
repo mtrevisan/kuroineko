@@ -2613,6 +2613,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "katarigol",	"in",			1,	5,	"a",	"1867",			"",
 "kataron",		"s",			1,	5,	"a",	"1854",			"Monar, netar.",
 "katasteg",		"",			1,	3,	"g",	"1854",			"Akatastar.",
+"kateɉ",			"des",		1,	3,	"a",	"1851",			"Destrigar.",
 "katej",			"in",			1,	3,	"a",	"1852",			"Intralcar, avilupar.",
 "katif",			"in",			1,	3,	"a",	"1851",			"(ark.) Deventar kativo.",
 "katiɉ",			"des",		1,	3,	"a",	"1775",			"Xvilupar.",
