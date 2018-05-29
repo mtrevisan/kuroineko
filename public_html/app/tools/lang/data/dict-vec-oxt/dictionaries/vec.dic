@@ -3152,6 +3152,13 @@ diàƚogoe/a0a2K0	po:verb ts:indicative_present is:interrogative st:diaƚogar
 diamantar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 diamanto/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:diamantar
 diamàntoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:diamantar
+dibàter/b0b1b2E0E1E2	po:verb ts:infinitive_simple
+dibaterò/b0b1b2J0	po:verb ts:indicative_future st:dibàter
+dibato/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:dibàter
+dibàtoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:dibàter
+dibàtito/B0I0	po:verb ts:participle_perfect_strong st:dibàter
+dibàtar/b0b1b2E0E1E2	po:verb ts:infinitive_simple
+dibatarò/b0b1b2J0	po:verb ts:indicative_future st:dibàtar
 prodigar/a0a1a2E0E1E2	po:verb ts:infinitive_simple
 pròdigo/a0a1a2E0E1E2I0J0	po:verb ts:indicative_present st:prodigar
 pròdigoe/a0a1a2K0	po:verb ts:indicative_present is:interrogative st:prodigar
@@ -25091,8 +25098,8 @@ dòpo/I0	po:adverb
 dòpo/I0	po:preposition
 fintimài	po:adverb
 fòrte/I0	po:adverb
-fòrte/T0I0	po:adjective
 fòrte/T0I0^2^3	po:noun
+fòrte/T0I0	po:adjective
 gran/T0u0&0[0[1	po:adjective is:singular_masculine
 gran/T0u0&0[0[1	po:noun is:singular_masculine
 grana/D0	po:adjective is:singular_femenine
@@ -27610,6 +27617,7 @@ derito/T0I0	po:adjective
 derito/T0I0	po:noun
 desènio/T0	po:noun
 desimal/D0T3U0	po:adjective
+deskalŧa/D0T2	po:noun
 deskolŧa/D0T2	po:adjective
 deskolŧo/T0I0T2	po:adjective
 deskritivo/B0I0W0	po:adjective
@@ -28457,13 +28465,29 @@ kapèl/T0U0&0<0<1§0	po:noun
 kapèla/D0&0<0<1§0	po:noun
 kapèƚa/D0&1<1§0	po:noun
 kapèƚo/T0&1§0	po:noun
+kapi-klase	po:noun is:plural_masculine st:kapo-klase
 kapi-saldi	po:noun is:plural_masculine st:kapo-saldo
+kapi-staŧion/T2mf	po:noun is:plural_masculine st:kapo-staŧion
+kapi-tòla	po:noun is:plural_masculine st:kapo-tòla
+kapi-tòƚa	po:noun is:plural_masculine st:kapo-tòƚa
+kapiklase	po:noun is:plural_masculine st:kapoklase
 kapisaldi	po:noun is:plural_masculine st:kaposaldo
+kapistaŧion/T2mf	po:noun is:plural_masculine st:kapostaŧion
 kapital/D0R0U0	po:noun
 kapitaƚe/D0R0	po:noun
 kapitèl/T0U0T2	po:noun
+kapitòla	po:noun is:plural_masculine st:kapitòla
+kapitòƚa	po:noun is:plural_masculine st:kapotòƚa
 kapítol/T0u0T2mf	po:noun
+kapo-klase	po:noun is:singular_masculine al:kapi-klase
+kapo-staŧion/T2	po:noun is:singular_masculine al:kapi-staŧion
+kapo-tòla	po:noun is:singular_masculine al:kapi-tòla
+kapo-tòƚa	po:noun is:singular_masculine al:kapi-tòƚa
 kapo-vèrso/T0	po:noun
+kapoklase	po:noun is:singular_masculine al:kapikalse
+kapostaŧion/T2	po:noun is:singular_masculine al:kapistaŧion
+kapotòla	po:noun is:singular_masculine al:kapitòla
+kapotòƚa	po:noun is:singular_masculine al:kapitòƚa
 kapovèrso/T0	po:noun
 kapuŧo/T0I0T2	po:adjective
 kapuŧo/T0I0T2	po:noun
@@ -28589,10 +28613,6 @@ kíkera/D0	po:noun
 kímego/B0I0	po:adjective
 kímego/B0I0	po:noun
 klase/D0	po:noun
-kapoklase	po:noun is:singular_masculine al:kapikalse
-kapo-klase	po:noun is:singular_masculine al:kapi-klase
-kapiklase	po:noun is:plural_masculine st:kapoklase
-kapi-klase	po:noun is:plural_masculine st:kapo-klase
 klinto/T0I0	po:noun
 klítego/B0I0	po:adjective
 klítego/B0I0	po:noun
@@ -30334,6 +30354,7 @@ semi-aŧentada/D0Y0Y1	po:adjective
 semi-lateral/D0U0	po:adjective
 semi-ƚateraƚe/D0	po:adjective
 semi-naxal/D0T3U0	po:adjective
+senja/D0T2^2	po:noun
 senjuto/T0I0	po:noun
 senɉuto/T0I0	po:noun
 senò	po:adverb
@@ -30461,7 +30482,6 @@ skaldin/T0&0	po:noun
 skalsamito/B0I0	po:noun
 skalŧamito/B0I0	po:noun
 skalŧo/T0I0T2,0	po:noun
-deskalŧa/D0T2	po:noun
 skaƚa/D0&1	po:noun
 skanafòso/T0I0	po:noun
 skanbio/T0&0	po:noun
@@ -30667,10 +30687,6 @@ stativo/B0I0W0	po:adjective
 stativo/B0I0	po:noun
 statua/D0	po:noun
 staŧion/D0U0T2mf	po:noun
-kapo-staŧion/T2	po:noun is:singular_masculine al:kapi-staŧion
-kapostaŧion/T2	po:noun is:singular_masculine al:kapistaŧion
-kapi-staŧion/T2mf	po:noun is:plural_masculine st:kapo-staŧion
-kapistaŧion/T2mf	po:noun is:plural_masculine st:kapostaŧion
 stavolta	po:adverb
 stavòlta	po:adverb
 staxon/D0U0mf	po:noun
@@ -30891,15 +30907,7 @@ toxa/D0&0§0	po:noun
 tórgol/T0u0T2mf	po:adjective
 tòko/T0I0&0*0(0	po:noun
 tòla/D0&0*0<0<1	po:noun
-kapo-tòla	po:noun is:singular_masculine al:kapi-tòla
-kapotòla	po:noun is:singular_masculine al:kapitòla
-kapi-tòla	po:noun is:plural_masculine st:kapo-tòla
-kapitòla	po:noun is:plural_masculine st:kapitòla
 tòƚa/D0&1*0<1	po:noun
-kapo-tòƚa	po:noun is:singular_masculine al:kapi-tòƚa
-kapotòƚa	po:noun is:singular_masculine al:kapitòƚa
-kapi-tòƚa	po:noun is:plural_masculine st:kapo-tòƚa
-kapitòƚa	po:noun is:plural_masculine st:kapotòƚa
 tòmo/T0	po:noun
 tòn/T0U0	po:noun
 tònego/B0I0	po:noun
@@ -30975,7 +30983,6 @@ turuƚú	po:adjective
 ŧendre/D0T4	po:noun
 ŧendro/T4	po:noun
 ŧenja/D0T2^2	po:noun
-senja/D0T2^2	po:noun
 ŧenòco/T0I0[0	po:noun
 ŧenpedon/D0T4U0mf	po:noun
 ŧentral/D0T4U0	po:adjective
@@ -37249,6 +37256,8 @@ cuso/T0	po:noun
 cú	po:noun
 dafar/D0&0	po:noun
 daía/D0	po:noun st:dadía
+dedun/T0U0T1	po:noun
+deđun/T0U0T1	po:noun
 delikatin/C0	po:adjective
 delikato/B0I0	po:adjective
 deƚikatin/C0	po:adjective
@@ -37262,8 +37271,6 @@ destamexador/T0V0mf	po:noun
 destamexadora/D0V0	po:noun
 destrasinon	po:adverb
 dexmestegeŧo/T0I0T2mf	po:noun
-dedun/T0U0T1	po:noun
-deđun/T0U0T1	po:noun
 dexun/T0U0T1	po:noun
 diànbarna/C0	po:noun
 diànberna/C0	po:noun
@@ -42291,13 +42298,13 @@ konprita/D0	po:noun
 konsafenèstra/D0	po:noun
 konsistòr/T0	po:noun
 konterèl/T0U0T2	po:noun
+kontra-međana/D0T2	po:noun
 kontrakasa/D0	po:noun
 kontrameđana/D0T2	po:noun
-kontra-međana/D0T2	po:noun
-kontromeđana/D0T2	po:noun
 kontro-međana/D0T2	po:noun
 kontrokolonba/D0	po:noun
 kontrokoƚonba/D0	po:noun
+kontromeđana/D0T2	po:noun
 konŧafenèstra/D0	po:noun
 konŧina/D0T2	po:noun
 konŧistòr/T0	po:noun
@@ -44807,6 +44814,7 @@ dèsipo/T0	po:noun
 dèŧipo/T0	po:noun
 diabòliko/B0I0	po:adjective
 diabòƚiko/B0	po:adjective
+diakilon/D0T2u0mf	po:noun
 dialtía/D0	po:noun
 diamantèr/T0V0	po:noun
 diamantèra/D0V0	po:noun
@@ -44816,7 +44824,6 @@ diavoleta/D0T2	po:noun
 diavoleto/T0I0T2mf	po:noun
 diavolin/C0	po:noun
 diavoƚin/C0	po:noun
-diakilon/D0T2u0mf	po:noun
 diàskaxe/D0	po:noun
 didolada/D0Y0Y1	po:noun
 didolòto/B0I0	po:adjective
@@ -45282,8 +45289,8 @@ fietin/T0	po:noun
 fifeŧo/T0I0T2mf	po:noun
 figadin/T0	po:noun
 figaeto/T0I0mf	po:noun
-fiko/T0I0&0	po:noun
 fiko/T0I0&0	po:adjective
+fiko/T0I0&0	po:noun
 filakaligo/T0	po:noun
 filantropixmo/T0	po:noun
 filaòr/B0	po:noun
@@ -52283,8 +52290,14 @@ demoniaŧo/T0I0T2	po:noun
 demoniaŧa/D0T2	po:noun
 dexaxio/T0	po:noun
 desèr	po:noun
+dexestion/D0U0mf	po:noun
+dixestion/D0U0mf	po:noun
+dixo	po:interjection
+digo	po:interjection
+dixabilié	po:adverb
 
 
-/ 88
+
+/ 89
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
