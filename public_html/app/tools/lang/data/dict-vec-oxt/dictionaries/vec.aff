@@ -35,6 +35,9 @@ KEY esdr|redft|trfg|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gf
 
 WORDCHARS -
 
+BREAK 1
+BREAK -
+
 # avoid wrong spelling of letterwords (km, GHz, DVD, ...)
 KEEPCASE Z0
 
@@ -66,7 +69,7 @@ ICONV Th Ŧ
 ICONV ' ʼ
 
 # frequently switched character groups
-REP 82
+REP 77
 REP a à
 REP e è
 REP e é
@@ -103,13 +106,8 @@ REP sv xv
 REP sx xx
 REP ^di de
 REP ^ri re
-REP iko$ ego
-REP iki$ egi
-REP ika$ ega
-REP ike$ ege
-REP itor$ idor
-REP ator$ ador
-REP etor$ edor
+REP ik eg
+REP tor dor
 REP ae aƚe
 REP àe àƚe
 REP ee eƚe
@@ -6363,3 +6361,7 @@ SFX ’0 ove óʼ dove
 SFX ’0 u ʼ u
 SFX ’0 te ʼ te
 SFX ’0 xo ʼ xo
+
+
+SFX 00 Y 1
+SFX 00 o a [aeou]..o
