@@ -1809,6 +1809,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fug",			"tra",		1,	1,	"a",	"1464",			"",
 "fug",			"trans",		1,	1,	"a",	"1509",			"Dixertar.",
 "fug",			"ŧentri",	1,	-1,"a",	"",				"",
+"fugaŧ",			"",			1,	3,	"g",	"1851",			"",
 "fugaŧ",			"s",			1,	3,	"g",	"1854",			"",
 "fuɉ",			"re",			1,	1,	"a",	"1867",			"",
 "fulmen",		"",			1,	1,	"a",	"",				"",
