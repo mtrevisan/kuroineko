@@ -2320,7 +2320,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ɉavet",			"in",			1,	3,	"a",	"1854",			"Incavardar, cavardar.",
 "ɉavet",			"x",			1,	3,	"a",	"1775",			"Aventar.",
 "ɉedol",			"x",			1,	1,	"a",	"1998",			"Xlitar.",
-"ɉegom",			"",			1,	1,	"a",	"1829",			"Andar a ɉegomi (it. 'tonni').",
+"ɉegom",			"",			1,	1,	"g",	"1829",			"Andar a ɉegomi (it. 'tonni').",
 "ɉegomar",		"",			1,	5,	"g",	"1854",			"Andar a ɉegomi (it. 'tonni').",
 "ɉel",			"",			1,	1,	"g",	"1854",			"",
 "ɉelomar",		"",			1,	3,	"g",	"1867",			"Andar a ɉegomi (it. 'tonni').",
