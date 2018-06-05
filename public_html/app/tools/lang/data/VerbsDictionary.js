@@ -2295,6 +2295,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "jad",			"",			1,	1,	"g",	"1829",			"",
 "jaŧ",			"",			1,	1,	"g",	"",				"",
 "jetur",			"kon",		1,	3,	"a",	"1829",			"",
+"jil",			"",			1,	1,	"a",	"1851",			"Far jilè.",
 "jistr",			"re",			1,	1,	"a",	"1433",			"",
 "jond",			"",			1,	1,	"a",	"1829",			"",
 "joŧ",			"",			1,	1,	"a",	"",				"",
