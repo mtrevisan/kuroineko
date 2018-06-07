@@ -5981,13 +5981,12 @@ SFX (5 èƚo eƚon/C0mf èƚo
 SFX (5 òƚo oƚon/C0mf òƚo
 
 # sostantivi alterài - peđorativi in -ato/a
-SFX §0 Y 23
+SFX §0 Y 19
 SFX §0 0 ato/T0I0 [nr]
 SFX §0 0 ato/T0I0 [^è]l
 SFX §0 èl elato/T0I0 èl
-SFX §0 o ato/T0I0 [^bgjɉkmƚ]o
+SFX §0 o ato/T0I0 [^bgjɉkm]o
 SFX §0 o ato/T0I0 [^ò]bo
-SFX §0 o ato/T0 [^è]ƚo
 SFX §0 o ato/T0I0 [^ò][jɉkm]o
 SFX §0 òbo obato/T0I0 òbo
 SFX §0 òjo ojato/T0I0 òjo
@@ -5995,16 +5994,22 @@ SFX §0 òɉo oɉato/T0I0 òɉo
 SFX §0 òko okato/T0I0 òko
 SFX §0 òmo omato/T0I0 òmo
 SFX §0 ègo egato/T0I0 ègo
-SFX §0 èƚo eƚato/T0 èƚo
-SFX §0 0 ta/D0 [^bklƚns]a
+SFX §0 0 ta/D0 [^bklns]a
 SFX §0 0 ta/D0 [^ò][bkns]a
 SFX §0 òba obata/D0 òba
 SFX §0 òka okata/D0 òka
 SFX §0 òna onata/D0 òna
 SFX §0 òsa osata/D0 òsa
-SFX §0 0 ta/D0 [^è][lƚ]a
 SFX §0 èla elata/D0 èla
-SFX §0 èƚa eƚata/D0 èƚa
+
+# sostantivi alterài - peđorativi in -ato/a ko èle evanesente
+SFX §1 Y 6
+SFX §1 o ato/T0 [^ƚ]o
+SFX §1 o ato/T0 [^è]ƚo
+SFX §1 èƚo eƚato/T0 èƚo
+SFX §1 0 ta/D0 [^ƚ]a
+SFX §1 0 ta/D0 [^è]ƚa
+SFX §1 èƚa eƚata/D0 èƚa
 
 # sostantivi alterài - peđorativi in -aŧo/a
 SFX <0 Y 38
@@ -6210,24 +6215,20 @@ PFX gv Y 1
 PFX gv gu v gu[aà]
 
 
-# numerali - koletivi
-SFX %0 Y 78
+# numerali - koletivi (-èna)
+SFX %0 Y 68
 SFX %0 ète etena/D0 ète
 SFX %0 ète eteneta/D0 ète
 SFX %0 ète etèna/D0 ète
-SFX %0 ète etèximo/B0I0 ète
 SFX %0 òto otena/D0 òto
 SFX %0 òto oteneta/D0 òto
 SFX %0 òto otèna/D0 òto
-SFX %0 òto otèximo/B0I0 òto
 SFX %0 0 na/D0 oe
 SFX %0 0 neta/D0 oe
 SFX %0 e èna/D0 oe
-SFX %0 e èximo/B0I0 oe
 SFX %0 0 na/D0 ove
 SFX %0 0 neta/D0 ove
 SFX %0 e èna/D0 ove
-SFX %0 e èximo/B0I0 ove
 SFX %0 èxe exena/D0 ièxe
 SFX %0 èxe exeneta/D0 ièxe
 SFX %0 èxe exèna/D0 ièxe
@@ -6272,135 +6273,155 @@ SFX %0 índexe indexeneta/D0 índexe
 SFX %0 índexe indexèna/D0 índexe
 SFX %0 índexe indèŧimo/T0I0 índexe
 SFX %0 índexe indèsimo/T0I0 índexe
-SFX %0 o èximo/B0I0 nto
 SFX %0 i ena/D0 nti
 SFX %0 i eneta/D0 nti
 SFX %0 i èna/D0 nti
-SFX %0 i èximo/B0I0 nti
 SFX %0 a ena/D0 nta
 SFX %0 a eneta/D0 nta
 SFX %0 a èna/D0 nta
-SFX %0 a èximo/B0I0 nta
 SFX %0 e èr/B0 mi[lƚ]e
 SFX %0 e ar/B0 mi[lƚ]e
-SFX %0 e èximo/B0I0 mi[lƚ]e
 SFX %0 0 èr/B0 ion
 SFX %0 0 ar/B0 ion
-SFX %0 0 èximo/B0I0 ion
 SFX %0 o èr/B0 iardo
 SFX %0 o ar/B0 iardo
-SFX %0 o èximo/B0I0 iardo
+
+# numerali - koletivi (-èximo)
+SFX %1 Y 10
+SFX %1 ète etèximo/B0I0 ète
+SFX %1 òto otèximo/B0I0 òto
+SFX %1 e èximo/B0I0 oe
+SFX %1 e èximo/B0I0 ove
+SFX %1 o èximo/B0I0 nto
+SFX %1 i èximo/B0I0 nti
+SFX %1 a èximo/B0I0 nta
+SFX %1 e èximo/B0I0 mile
+SFX %1 0 èximo/B0I0 ion
+SFX %1 o èximo/B0I0 iardo
+
+# numerali - koletivi ko èle evanesente (-èximo)
+SFX %2 Y 10
+SFX %2 ète etèximo/B0 ète
+SFX %2 òto otèximo/B0 òto
+SFX %2 e èximo/B0 oe
+SFX %2 e èximo/B0 ove
+SFX %2 o èximo/B0 nto
+SFX %2 i èximo/B0 nti
+SFX %2 a èximo/B0 nta
+SFX %2 e èximo/B0 miƚe
+SFX %2 0 èximo/B0 ion
+SFX %2 o èximo/B0 iardo
 
 # numeraŧion latina
-SFX %1 Y 10
-SFX %1 0 i [ivxlcdm]
-SFX %1 0 ii [ivxlcdm]
-SFX %1 0 iii [ivxlcdm]
-SFX %1 0 iv [xlcdm]
-SFX %1 0 v [ixlcdm]
-SFX %1 0 vi [xlcdm]
-SFX %1 0 vii [xlcdm]
-SFX %1 0 viii [xlcdm]
-SFX %1 0 ix [xlcdm]
-SFX %1 0 x i
+SFX %3 Y 10
+SFX %3 0 i [ivxlcdm]
+SFX %3 0 ii [ivxlcdm]
+SFX %3 0 iii [ivxlcdm]
+SFX %3 0 iv [xlcdm]
+SFX %3 0 v [ixlcdm]
+SFX %3 0 vi [xlcdm]
+SFX %3 0 vii [xlcdm]
+SFX %3 0 viii [xlcdm]
+SFX %3 0 ix [xlcdm]
+SFX %3 0 x i
 
 # numeraŧion latina (el funŧiona fin al númaro 3209)
-PFX %2 Y 95
-PFX %2 0 x [lc]
-PFX %2 0 l x
-PFX %2 0 c [xlcdm]
-PFX %2 0 cx [lc]
-PFX %2 0 cl x
-PFX %2 0 cc [xlc]
-PFX %2 0 ccx [lc]
-PFX %2 0 ccl x
-PFX %2 0 ccc [xl]
-PFX %2 0 cccx [lc]
-PFX %2 0 cccl x
-PFX %2 0 cd [xl]
-PFX %2 0 cdx [lc]
-PFX %2 0 cdl x
-PFX %2 0 d [xlc]
-PFX %2 0 dx [lc]
-PFX %2 0 dl x
-PFX %2 0 dc [xlc]
-PFX %2 0 dcx [lc]
-PFX %2 0 dcl x
-PFX %2 0 dcc [xlc]
-PFX %2 0 dccx [lc]
-PFX %2 0 dccl x
-PFX %2 0 dccc [xl]
-PFX %2 0 dcccx [lc]
-PFX %2 0 dcccl x
-PFX %2 0 cm [xl]
-PFX %2 0 cmx [lc]
-PFX %2 0 cml x
-PFX %2 0 m [xlcdm]
-PFX %2 0 mx [lc]
-PFX %2 0 ml x
-PFX %2 0 mc [xlcmd]
-PFX %2 0 mcx [lc]
-PFX %2 0 mcl x
-PFX %2 0 mcc [xlc]
-PFX %2 0 mccx [lc]
-PFX %2 0 mccl x
-PFX %2 0 mccc [xl]
-PFX %2 0 mcccx [lc]
-PFX %2 0 mcccl x
-PFX %2 0 mcd [xl]
-PFX %2 0 mcdx [lc]
-PFX %2 0 mcdl x
-PFX %2 0 md [xlc]
-PFX %2 0 mdx [lc]
-PFX %2 0 mdl x
-PFX %2 0 mdc [xlc]
-PFX %2 0 mdcx [lc]
-PFX %2 0 mdcl x
-PFX %2 0 mdcc [xlc]
-PFX %2 0 mdccx [lc]
-PFX %2 0 mdccl x
-PFX %2 0 mdccc [xl]
-PFX %2 0 mdcccx [lc]
-PFX %2 0 mdcccl x
-PFX %2 0 mcm [xl]
-PFX %2 0 mcmx [lc]
-PFX %2 0 mcml x
-PFX %2 0 mm [xlcdm]
-PFX %2 0 mmx [lc]
-PFX %2 0 mml x
-PFX %2 0 mmc [xlcmd]
-PFX %2 0 mmcx [lc]
-PFX %2 0 mmcl x
-PFX %2 0 mmcc [xlc]
-PFX %2 0 mmccx [lc]
-PFX %2 0 mmccl x
-PFX %2 0 mmccc [xl]
-PFX %2 0 mmcccx [lc]
-PFX %2 0 mmcccl x
-PFX %2 0 mmcd [xl]
-PFX %2 0 mmcdx [lc]
-PFX %2 0 mmcdl x
-PFX %2 0 mmd [xlc]
-PFX %2 0 mmdx [lc]
-PFX %2 0 mmdl x
-PFX %2 0 mmdc [xlc]
-PFX %2 0 mmdcx [lc]
-PFX %2 0 mmdcl x
-PFX %2 0 mmdcc [xlc]
-PFX %2 0 mmdccx [lc]
-PFX %2 0 mmdccl x
-PFX %2 0 mmdccc [xl]
-PFX %2 0 mmdcccx [lc]
-PFX %2 0 mmdcccl x
-PFX %2 0 mmcm [xl]
-PFX %2 0 mmcmx [lc]
-PFX %2 0 mmcml x
-PFX %2 0 mmm [xlcdm]
-PFX %2 0 mmmx [lc]
-PFX %2 0 mmml x
-PFX %2 0 mmmc [xlcmd]
-PFX %2 0 mmmcx [lc]
-PFX %2 0 mmmcl x
+PFX %4 Y 95
+PFX %4 0 x [lc]
+PFX %4 0 l x
+PFX %4 0 c [xlcdm]
+PFX %4 0 cx [lc]
+PFX %4 0 cl x
+PFX %4 0 cc [xlc]
+PFX %4 0 ccx [lc]
+PFX %4 0 ccl x
+PFX %4 0 ccc [xl]
+PFX %4 0 cccx [lc]
+PFX %4 0 cccl x
+PFX %4 0 cd [xl]
+PFX %4 0 cdx [lc]
+PFX %4 0 cdl x
+PFX %4 0 d [xlc]
+PFX %4 0 dx [lc]
+PFX %4 0 dl x
+PFX %4 0 dc [xlc]
+PFX %4 0 dcx [lc]
+PFX %4 0 dcl x
+PFX %4 0 dcc [xlc]
+PFX %4 0 dccx [lc]
+PFX %4 0 dccl x
+PFX %4 0 dccc [xl]
+PFX %4 0 dcccx [lc]
+PFX %4 0 dcccl x
+PFX %4 0 cm [xl]
+PFX %4 0 cmx [lc]
+PFX %4 0 cml x
+PFX %4 0 m [xlcdm]
+PFX %4 0 mx [lc]
+PFX %4 0 ml x
+PFX %4 0 mc [xlcmd]
+PFX %4 0 mcx [lc]
+PFX %4 0 mcl x
+PFX %4 0 mcc [xlc]
+PFX %4 0 mccx [lc]
+PFX %4 0 mccl x
+PFX %4 0 mccc [xl]
+PFX %4 0 mcccx [lc]
+PFX %4 0 mcccl x
+PFX %4 0 mcd [xl]
+PFX %4 0 mcdx [lc]
+PFX %4 0 mcdl x
+PFX %4 0 md [xlc]
+PFX %4 0 mdx [lc]
+PFX %4 0 mdl x
+PFX %4 0 mdc [xlc]
+PFX %4 0 mdcx [lc]
+PFX %4 0 mdcl x
+PFX %4 0 mdcc [xlc]
+PFX %4 0 mdccx [lc]
+PFX %4 0 mdccl x
+PFX %4 0 mdccc [xl]
+PFX %4 0 mdcccx [lc]
+PFX %4 0 mdcccl x
+PFX %4 0 mcm [xl]
+PFX %4 0 mcmx [lc]
+PFX %4 0 mcml x
+PFX %4 0 mm [xlcdm]
+PFX %4 0 mmx [lc]
+PFX %4 0 mml x
+PFX %4 0 mmc [xlcmd]
+PFX %4 0 mmcx [lc]
+PFX %4 0 mmcl x
+PFX %4 0 mmcc [xlc]
+PFX %4 0 mmccx [lc]
+PFX %4 0 mmccl x
+PFX %4 0 mmccc [xl]
+PFX %4 0 mmcccx [lc]
+PFX %4 0 mmcccl x
+PFX %4 0 mmcd [xl]
+PFX %4 0 mmcdx [lc]
+PFX %4 0 mmcdl x
+PFX %4 0 mmd [xlc]
+PFX %4 0 mmdx [lc]
+PFX %4 0 mmdl x
+PFX %4 0 mmdc [xlc]
+PFX %4 0 mmdcx [lc]
+PFX %4 0 mmdcl x
+PFX %4 0 mmdcc [xlc]
+PFX %4 0 mmdccx [lc]
+PFX %4 0 mmdccl x
+PFX %4 0 mmdccc [xl]
+PFX %4 0 mmdcccx [lc]
+PFX %4 0 mmdcccl x
+PFX %4 0 mmcm [xl]
+PFX %4 0 mmcmx [lc]
+PFX %4 0 mmcml x
+PFX %4 0 mmm [xlcdm]
+PFX %4 0 mmmx [lc]
+PFX %4 0 mmml x
+PFX %4 0 mmmc [xlcmd]
+PFX %4 0 mmmcx [lc]
+PFX %4 0 mmmcl x
 
 
 # unidà de mexura (múltepli de dièxe)
