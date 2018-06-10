@@ -532,7 +532,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bix",			"",			1,	1,	"a",	"1854",			"Traforar.",
 "bix",			"in",			1,	1,	"a",	"1829",			"",
 "bixak",			"in",			1,	3,	"g",	"1775",			"Méter drento na bixaca.",
-"bixar",			"in",			4,	5,	"a",	"1829",			"Méter in fantaxía.",
+"biđar",			"in",			4,	5,	"a",	"1829",			"Méter in fantaxía.",
 "bixat",			"",			1,	3,	"g",	"1829",			"Rénder de mal umor.",
 "bixeg",			"",			1,	1,	"a",	"1560",			"Frugar, andar smòver, ŧerkar.",
 "bixeg",			"x",			1,	1,	"a",	"1980",			"(bixiak)",
