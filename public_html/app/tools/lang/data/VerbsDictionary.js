@@ -2899,6 +2899,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "korpor",		"s",			1,	1,	"g",	"1854",			"",
 "korpon",		"",			1,	4,	"a",	"1821",			"Porkonar.",
 "korponiđ",		"",			1,	6,	"a",	"1852",			"Porkonar.",
+"kors",			"in",			1,	1,	"a",	"1851",			"",
 "korsiđ",		"",			1,	4,	"a",	"1854",			"Korsexar.",
 "korsiđ",		"s",			1,	4,	"a",	"1867",			"Korsexar.",
 "korteg",		"",			1,	1,	"a",	"1829",			"",
