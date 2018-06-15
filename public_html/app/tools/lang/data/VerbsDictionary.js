@@ -1116,9 +1116,11 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 
 "đaf",			"",			1,	1,	"g",	"1829",			"(Muran) Acufar.",
 "đafran",		"",			1,	4,	"g",	"1829",			"",
+"đakol",			"in",			1,	1,	"g",	"1775",			"Inxakerar.",
 "đal",			"in",			1,	1,	"g",	"1854",			"",
 "đal",			"in",			4,	3,	"a",	"1775",			"",
 "đaliđ",			"",			1,	3,	"a",	"1854",			"Tràxer al đalo.",
+"đalontr",		"in",			1,	3,	"a",	"1854",			"Inbratar, inxakerar.",
 "đanđ",			"in",			4,	4,	"a",	"1829",			"Aviar.",
 "đavaj",			"",			1,	3,	"g",	"",				"Baratar, inbrojar.",
 "đavaɉ",			"",			1,	3,	"g",	"1775",			"Baratar, inbrojar.",
@@ -7109,9 +7111,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ʼud",			"",			1,	1,	"a",	"1810",			"Vodar.",
 "vulner",		"",			1,	1,	"a",	"",				"",
 
-"xakol",			"in",			1,	1,	"g",	"1775",			"Inxakerar.",
 "xal",			"tra",		5,	3,	"a",	"",				"",
-"xalontr",		"in",			1,	3,	"a",	"1854",			"Inbratar, inxakerar.",
 "xanbel",		"",			1,	4,	"g",	"1560",			"Xinbelar.",
 "xaol",			"",			1,	1,	"g",	"",				"Bigelonar.",
 "xars",			"re",			4,	4,	"a",	"1590",			"",
