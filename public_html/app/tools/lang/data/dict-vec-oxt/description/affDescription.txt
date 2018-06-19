@@ -24,7 +24,7 @@ f0/f1/f2: (public) third conjugation verbs both with and without the inclusion o
 P0/P1/P2: procomplementar verbs (0>-[lƚ][oaie], 0>-[gmstv]e(ne), 0>-[gmstv]e[lƚ][oaie], 0>-ne)
 P3/P4/P5: procomplementar verbs (0>-[gmntv]e|[^a], 0>-[lƚ][oaie]|[^a], a>e-[gmntv]e, a>e-[lƚ][oaie])
 P6/P7/P8: procomplementar verbs (me>[gntv]e|[^a]me, ame>e[gmntv]e, me>[lƚ][oaie]|[^a]me, ame>e[lƚ][oaie], mene>me[lƚ][oaie], mene>[gstv]ene, mene>[gstv]e[lƚ][oaie])
-S0: (public) sonorization of final consonants (ñ.>nc|ñ[oei], ñ.>in|ñ[oei], ñ.>n|ñ[oei], ñ.>ñ|ñ[oei], b.>p|b[oei], p.>p|p[oei], ...)
+FS: (public) sonorization of final consonants (ñ.>nc|ñ[oei], ñ.>in|ñ[oei], ñ.>n|ñ[oei], ñ.>ñ|ñ[oei], b.>p|b[oei], p.>p|p[oei], ...)
 I0: interrogatives (0>-[ei], 0>-mi|[^m][^o], 0>-mi|[^n], 0>-t[ei]|n, 0>-n(t)[ei]|[^n])
 I1: interrogatives (e>i, e>mi|[^m][^o]e, e>mi|[^n]e, e>t[ei]|ne, e>n(t)[ei]|[^n]e)
 I2: interrogatives (0>-t[ou], 0>-stu)
@@ -129,5 +129,5 @@ chi naturale = ki
 ^(.*?)$\s+?^(?=.*^\1$) > # remove duplicates
 (ƚ[^/\n]+)et[ao]/[DT]0\t > add &1 to $1
 po:[^\n]+po: > split line
-^[^ƚ\r\n]*eto/[BTD]0[^I] > S0 # add S0
+^[^ƚ\r\n]*eto/[BTD]0[^I] > FS # add FS
 [bcdđfghjɉklƚmnñprstŧvx]i[aeiou] > $1ï$2 # dièrexi
