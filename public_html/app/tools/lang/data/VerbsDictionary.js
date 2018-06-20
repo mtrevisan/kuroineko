@@ -3340,6 +3340,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "luk",			"stra",		1,	1,	"a",	"1980",			"Far straneŧe.",
 "lum",			"",			1,	1,	"a",	"1775",			"Peskar de note ko na lanterna, oservar, spiar.",
 "lument",		"",			1,	3,	"a",	"1590",			"Lamentar.",
+"lumin",			"",			1,	1,	"a",	"1851",			"",
 "lumin",			"ar",			1,	1,	"a",	"1560",			"",
 "lumin",			"i",			1,	1,	"a",	"1855",			"",
 "lumin",			"in",			1,	1,	"a",	"1980",			"(bixiak)",
