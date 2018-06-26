@@ -3671,6 +3671,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "minu",			"de",			4,	4,	"a",	"",				"",
 "minu",			"di",			4,	4,	"a",	"1867",			"",
 "minu",			"x",			4,	4,	"a",	"1509",			"",
+"minuŧ",			"",			1,	3,	"a",	"1851",			"",
 "minuŧ",			"x",			1,	3,	"a",	"1867",			"",
 "mir",			"",			1,	1,	"a",	"1590",			"Vardar.",
 "mir",			"a",			1,	1,	"a",	"1867",			"",
