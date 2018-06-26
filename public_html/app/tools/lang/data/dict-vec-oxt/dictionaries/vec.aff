@@ -4615,7 +4615,7 @@ SFX P1 0 -vela .	is:procomplementar
 SFX P1 0 -veli .	is:procomplementar
 SFX P1 0 -vele .	is:procomplementar
 
-# vèrbi prokonplementari (ko èle evanesente)
+# vèrbi prokonplementari ko èle evanesente
 SFX P2 Y 24
 SFX P2 0 -geƚo .	is:procomplementar
 SFX P2 0 -geƚa .	is:procomplementar
@@ -4675,7 +4675,7 @@ SFX P4 0 -la [^a]	is:procomplementar
 SFX P4 0 -li [^a]	is:procomplementar
 SFX P4 0 -le [^a]	is:procomplementar
 
-# vèrbi prokonplementari pal komandativo (ko èle evanesente)
+# vèrbi prokonplementari pal komandativo ko èle evanesente
 SFX P5 Y 12
 SFX P5 a e-ƚo a	is:procomplementar
 SFX P5 a e-ƚa a	is:procomplementar
@@ -4783,7 +4783,7 @@ SFX P7 smelo xgela smelo	is:procomplementar
 SFX P7 smelo xgeli smelo	is:procomplementar
 SFX P7 smelo xgele smelo	is:procomplementar
 
-# vèrbi prokonplementari (ko èle evanesente)
+# vèrbi prokonplementari ko èle evanesente
 SFX P8 Y 75
 SFX P8 me ƚo [aàeèéiíoòóuú]me	is:procomplementar
 SFX P8 me ƚa [aàeèéiíoòóuú]me	is:procomplementar
@@ -5650,7 +5650,7 @@ SFX W0 0 mente/FSW2 [^è]ve	po:adverb
 SFX W0 e mente/FSW2 le	po:adverb
 SFX W0 ève evemente/FSW2 ève	po:adverb
 
-# avèrbi (-mente ko èle evanesente)
+# avèrbi ko èle evanesente (-mente)
 SFX W1 Y 20
 SFX W1 0 emente/W2 n	po:adverb
 SFX W1 0 mente/W2 [^ƚ]a	po:adverb
@@ -5701,7 +5701,7 @@ SFX Y1 Y 1
 SFX Y1 ada à ada
 
 
-# sostantivi alterài - demenutivi in -eto/a
+# sostantivi alterài - demenutivi (-eto/a)
 SFX &0 Y 86
 SFX &0 è eeto/M0FSmf è
 SFX &0 ú ueto/M0FSmf ú
@@ -5790,7 +5790,7 @@ SFX &0 0 ta/F0 [^v]e
 SFX &0 0 ta/F0 [^è]ve
 SFX &0 ève eveta/F0 ève
 
-# sostantivi alterài - demenutivi in -eto/a ko èle evanesente
+# sostantivi alterài - demenutivi ko èle evanesente (-eto/a)
 SFX &1 Y 52
 SFX &1 è eeto/M0mf è
 SFX &1 ú ueto/M0mf ú
@@ -5845,7 +5845,7 @@ SFX &1 èƚa eƚeta/F0 èƚa
 SFX &1 òƚa oƚeta/F0 òƚa
 SFX &1 0 ta/F0 e
 
-# sostantivi alterài - demenutivi in -èl/-èla
+# sostantivi alterài - demenutivi (-èl/-èla)
 SFX &2 Y 22
 SFX &2 0 èl/M0U0 [ln]
 SFX &2 0 èl/M0U0 [^ò]r
@@ -5870,7 +5870,7 @@ SFX &2 òra orèla/F0 òra
 SFX &2 òsa osèla/F0 òsa
 SFX &2 òŧa oŧèla/F0 òŧa
 
-# sostantivi alterài - demenutivi in -èƚo/a
+# sostantivi alterài - demenutivi ko èle evanesente (-èƚo/a)
 SFX &3 Y 20
 SFX &3 0 èƚo/M0 n
 SFX &3 0 èƚo/M0 [^ò]r
@@ -5893,7 +5893,7 @@ SFX &3 òna onèƚa/F0 òna
 SFX &3 òra orèƚa/F0 òra
 SFX &3 òsa osèƚa/F0 òsa
 
-# sostantivi alterài - demenutivi in -?
+# sostantivi alterài - demenutivi (-?)
 #SFX 00 . in/A1 ?
 #SFX 00 . đin/A1 [?]
 #SFX 00 . eđin/A1 ?
@@ -5909,7 +5909,7 @@ SFX &3 òsa osèƚa/F0 òsa
 #SFX 00 . rin/A1 [?]
 #SFX 00 . erin/A1 ?
 
-# sostantivi alterài - kresitivi in -òto/a (el pòl èsar nòme o ajetivo)
+# sostantivi alterài - kresitivi (-òto/a)
 SFX (0 Y 22
 SFX (0 0 òto/M0FS [^èò]l
 SFX (0 0 òto/M0FS [^èò][nr]
@@ -5934,7 +5934,7 @@ SFX (0 èsa esòta/F0 èsa
 SFX (0 èŧa eŧòta/F0 èŧa
 SFX (0 òra oròta/F0 òra
 
-# sostantivi alterài - kresitivi in -òto/a ko èle evanesente
+# sostantivi alterài - kresitivi ko èle evanesente (-òto/a)
 SFX (1 Y 19
 SFX (1 o òto/M0 [^èò]ƚo
 SFX (1 0 òto/M0 [^èò][nr]
@@ -5956,7 +5956,7 @@ SFX (1 èƚa eƚòta/F0 èƚa
 SFX (1 èsa esòta/F0 èsa
 SFX (1 òra oròta/F0 òra
 
-# sostantivi/ajetivi alterài - kresitivi in -on(e/i)
+# sostantivi/ajetivi alterài - kresitivi (-on(e/i))
 SFX (2 Y 39
 SFX (2 0 on/F0U0mf [^è]l
 SFX (2 0 on/F0U0mf n
@@ -5998,7 +5998,7 @@ SFX (2 òña oñona/F0 òña
 SFX (2 òta otona/F0 òta
 SFX (2 e on/F0U0mf e
 
-# sostantivi/ajetivi alterài - kresitivi in -on(e/i) ko èle evanesente
+# sostantivi/ajetivi alterài - kresitivi ko èle evanesente (-on(e/i))
 SFX (3 Y 31
 SFX (3 0 on/F0mf [^è]ƚo
 SFX (3 0 on/F0mf n
@@ -6032,7 +6032,7 @@ SFX (3 òña oñona/F0 òña
 SFX (3 òta otona/F0 òta
 SFX (3 e on/F0mf e
 
-# sostantivi/ajetivi alterài - kresitivi in -on(a/e/i)
+# sostantivi/ajetivi alterài - kresitivi (-on(a/e/i))
 SFX (4 Y 22
 SFX (4 0 n/A2U0mf [^ckst]o
 SFX (4 0 n/A2U0mf [^ò][cks]o
@@ -6057,7 +6057,7 @@ SFX (4 a on/A2U0mf [^è]ra
 SFX (4 èra eron/A2U0mf èra
 SFX (4 e on/A2U0mf e
 
-# sostantivi/ajetivi alterài - kresitivi in -on(a/e/i) ko èle evanesente
+# sostantivi/ajetivi alterài - kresitivi ko èle evanesente (-on(a/e/i))
 SFX (5 Y 8
 SFX (5 èr eron/A2mf èr
 SFX (5 e on/A2mf e
@@ -6068,7 +6068,7 @@ SFX (5 0 n/A2mf [^èò]ƚo
 SFX (5 èƚo eƚon/A2mf èƚo
 SFX (5 òƚo oƚon/A2mf òƚo
 
-# sostantivi alterài - peđorativi in -ato/a
+# sostantivi alterài - peđorativi (-ato/a)
 SFX §0 Y 19
 SFX §0 0 ato/M0FS [nr]
 SFX §0 0 ato/M0FS [^è]l
@@ -6090,7 +6090,7 @@ SFX §0 òna onata/F0 òna
 SFX §0 òsa osata/F0 òsa
 SFX §0 èla elata/F0 èla
 
-# sostantivi alterài - peđorativi in -ato/a ko èle evanesente
+# sostantivi alterài - peđorativi ko èle evanesente (-ato/a)
 SFX §1 Y 6
 SFX §1 o ato/M0 [^ƚ]o
 SFX §1 o ato/M0 [^è]ƚo
@@ -6099,7 +6099,7 @@ SFX §1 0 ta/F0 [^ƚ]a
 SFX §1 0 ta/F0 [^è]ƚa
 SFX §1 èƚa eƚata/F0 èƚa
 
-# sostantivi alterài - peđorativi in -aŧo/a
+# sostantivi alterài - peđorativi (-aŧo/a)
 SFX <0 Y 38
 SFX <0 0 aŧo/M0FS [^è]l
 SFX <0 èl elaŧo/M0FS èl
@@ -6140,7 +6140,7 @@ SFX <0 òta otaŧa/F0 òta
 SFX <0 òxa oxaŧa/F0 òxa
 SFX <0 e aŧo/M0FS e
 
-# sostantivi alterài - peđorativi in -aso/a
+# sostantivi alterài - peđorativi (-aso/a)
 SFX <1 Y 37
 SFX <1 0 aso/M0FS [^è]l
 SFX <1 èl elaso/M0FS èl
@@ -6180,7 +6180,7 @@ SFX <1 òta otasa/F0 òta
 SFX <1 òxa oxasa/F0 òxa
 SFX <1 e aso/M0FS e
 
-# sostantivi alterài - peđorativi in -aso/a ko èle evanesente
+# sostantivi alterài - peđorativi ko èle evanesente (-aso/a)
 SFX <2 Y 37
 SFX <2 0 aso/M0 [^è]l
 SFX <2 èl elaso/M0 èl
@@ -6220,7 +6220,7 @@ SFX <2 òta otasa/F0 òta
 SFX <2 òxa oxasa/F0 òxa
 SFX <2 e aso/M0 e
 
-# sostantivi alterài - peđorativi in -uŧo, -òl, e -uko
+# sostantivi alterài - peđorativi (-uŧo, -òl, -uko)
 #SFX 00 . òl/A1 ?
 #SFX 00 . uŧo/A1FS ?
 #SFX 00 . ŧuŧo/A1 [?]
