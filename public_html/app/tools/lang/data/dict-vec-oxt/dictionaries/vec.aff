@@ -24,7 +24,7 @@
 SET UTF-8
 
 NAME Diŧionario de lengua vèneta
-VERSION 2.1.2 (2018/04/22)
+VERSION 2.2.0 (2018/06/30)
 HOME http://parnodexmentegar.orgfree.com/
 LANG vec
 
@@ -36,9 +36,9 @@ KEY esdr|redft|trfg|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gf
 WORDCHARS -
 
 BREAK 3
-BREAK -	# minus sign
-BREAK ‒	# figure dash
-BREAK –	# en dash
+BREAK -		# minus sign
+BREAK ‒		# figure dash
+BREAK --	# en dash
 
 # avoid wrong spelling of letterwords (km, GHz, DVD, ...)
 KEEPCASE Z0
@@ -71,7 +71,7 @@ ICONV Th Ŧ
 ICONV ' ʼ
 
 # frequently switched character groups
-REP 79
+REP 84
 REP a à
 REP e è
 REP e é
@@ -110,8 +110,13 @@ REP sv xv
 REP sx xx
 REP ^di de
 REP ^ri re
-REP ik eg
-REP tor dor
+REP iko$ ego
+REP iki$ egi
+REP ika$ ega
+REP ike$ ege
+REP itor$ idor
+REP ator$ ador
+REP etor$ edor
 REP ae aƚe
 REP àe àƚe
 REP ee eƚe
