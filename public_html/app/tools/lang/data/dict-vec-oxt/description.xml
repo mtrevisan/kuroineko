@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <description xmlns="http://openoffice.org/extensions/description/2006" xmlns:d="http://openoffice.org/extensions/description/2006" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<version value="2018.04.22" />
+	<version value="2018.06.30" />
 	<identifier value="parnodexmentegar.vec" />
 	<display-name>
 		<name lang="en">Spelling dictionary, thesaurus, and hyphenator for the venetan language</name>
@@ -8,6 +8,7 @@
 		<name lang="it">Dizionario ortografico, vocabolario, e sillabatore per la lingua veneta</name>
 		<name lang="es">Diccionario ortográfico, de sinónimos, y la separación de sílabas para la lengua véneta</name>
 		<name lang="gl">Dicionario ortográfico, de sinónimos, e hifenizador para a lingua véneta</name>
+		<name lang="pt">Dicionário ortográfico, dicionário de sinônimos e hifenizador para a língua veneta</name>
 	</display-name>
 	<!-- Dictionaries should work with all platforms -->
 	<platform value="all" />
@@ -26,6 +27,9 @@
 		<src xlink:href="description/desc_en.txt" lang="en" />
 		<src xlink:href="description/desc_vec.txt" lang="vec" />
 		<src xlink:href="description/desc_it.txt" lang="it" />
+		<src xlink:href="description/desc_es.txt" lang="es" />
+		<src xlink:href="description/desc_gl.txt" lang="gl" />
+		<src xlink:href="description/desc_pt.txt" lang="pt" />
 	</extension-description>
 	<registration>
 		<simple-license accept-by="admin" default-license-id="en" suppress-if-required="true">
