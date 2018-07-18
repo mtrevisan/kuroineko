@@ -29,7 +29,7 @@ HOME http://parnodexmentegar.orgfree.com/
 LANG vec
 
 
-TRY eaoinrtlƚsdkpvmuèxgfàòbíhéŧójɉñcúSđLȽIPETKVAMDNFBRJGCOUĐXÀÈŦHɈÒÑÍÉÓÚʼ-‒–
+TRY eaoinrtlƚsdkpvmuèxgfàòbíhéŧójɉñcúSđLȽIPETKVAMDNFBRJGCOUĐXÀÈŦHɈÒÑÍÉÓÚ’-‒–
 
 KEY esdr|redft|trfg|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà-|àòèù-|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìèòà
 
@@ -67,7 +67,7 @@ ICONV nh ñ
 ICONV Nh Ñ
 ICONV th ŧ
 ICONV Th Ŧ
-ICONV ' ʼ
+ICONV ' ’
 
 # frequently switched character groups
 REP 84
@@ -82,7 +82,7 @@ REP u ú
 REP ù ú
 REP s x
 REP x s
-REP ʼ ʼ_
+REP ’ ’_
 REP - ‒	# figure dash
 REP - –	# en dash
 REP mb nb
@@ -1629,7 +1629,7 @@ SFX b2 ò ónmeƚo/P8 ò
 # vèrbi '-er inregolari ((a|apar|as|de|inkon|intra|kon|man|o|re|sos|tra)[ctv]èñer)
 # themeT1 + r/b0b1b2b3P0P1P2
 SFX b3 Y 27
-SFX b3 r nmene/P6P7P8 ʼñer
+SFX b3 r nmene/P6P7P8 [èé’]ñer
 SFX b3 èñer ièn/P0P1P2P3P4P5I0I2 [^c]èñer
 SFX b3 èñer iènme/P6P7 [^c]èñer
 SFX b3 èñer iènmene/P6P7P8 [^c]èñer
@@ -1654,7 +1654,7 @@ SFX b3 éñer orme/P6P7 [ct]éñer
 SFX b3 éñer ormene/P6P7P8 [ct]éñer
 SFX b3 ñer n/P0P1P2P3P4P5I0I2 èñer
 SFX b3 ñer nme/P6P7 èñer
-SFX b3 ñer nmene/P6P7P8 [èé]ñer
+SFX b3 ñer nmene/P6P7P8 [èé’]ñer
 SFX b3 ñer ntu/I3 èñer	is:interrogative
 
 # vèrbi '-er inregolari (déver)
@@ -6575,26 +6575,26 @@ PFX $3 0 ki/Z0 .
 
 # paròle ŧonkàe a l' iniŧio
 PFX ‘0 Y 7
-PFX ‘0 a ʼ a
-PFX ‘0 d ʼ d
-PFX ‘0 g ʼ g
-PFX ‘0 i ʼ i
-PFX ‘0 in ʼ int[aeé]
-PFX ‘0 kò ʼ kò
-PFX ‘0 v ʼ v
+PFX ‘0 a ’ a
+PFX ‘0 d ’ d
+PFX ‘0 g ’ g
+PFX ‘0 i ’ i
+PFX ‘0 in ’ int[aeé]
+PFX ‘0 kò ’ kò
+PFX ‘0 v ’ v
 
 # paròle ŧonkàe a la fine
 SFX ’0 Y 13
-SFX ’0 a ʼ [^r]a
-SFX ’0 do ʼ do
-SFX ’0 e ʼ [^mtv]e
-SFX ’0 é ʼ inté
-SFX ’0 inté tʼ inté
-SFX ’0 me ʼ me
-SFX ’0 r ʼ r
-SFX ’0 ra ʼ ra
-SFX ’0 o ʼ [^dx]o
-SFX ’0 ove óʼ dove
-SFX ’0 u ʼ u
-SFX ’0 te ʼ te
-SFX ’0 xo ʼ xo
+SFX ’0 a ’ [^r]a
+SFX ’0 do ’ do
+SFX ’0 e ’ [^mtv]e
+SFX ’0 é ’ inté
+SFX ’0 inté t’ inté
+SFX ’0 me ’ me
+SFX ’0 r ’ r
+SFX ’0 ra ’ ra
+SFX ’0 o ’ [^dx]o
+SFX ’0 ove ó’ dove
+SFX ’0 u ’ u
+SFX ’0 te ’ te
+SFX ’0 xo ’ xo
