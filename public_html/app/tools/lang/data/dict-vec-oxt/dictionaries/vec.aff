@@ -69,7 +69,7 @@ ICONV th ŧ
 ICONV Th Ŧ
 
 # frequently switched character groups
-REP 84
+REP 119
 REP a à
 REP e è
 REP e é
@@ -81,9 +81,13 @@ REP u ú
 REP ù ú
 REP s x
 REP x s
-REP ' '_
-REP - ‒	# figure dash
-REP - –	# en dash
+REP ' '_	# put a space after apostrophe
+REP - ‒	# minus sign to figure dash
+REP - –	# minus sign to en dash
+REP – ‒	# en dash to figure dash
+REP – -	# en dash to minus sign
+REP ‒ -	# figure dash to minus sign
+REP ‒ –	# figure dash to en dash
 REP mb nb
 REP mp np
 REP sb xb
@@ -154,6 +158,37 @@ REP eí eƚí
 REP ií iƚí
 REP oí oƚí
 REP uí uƚí
+REP ^ea ƚa
+REP ^ee ƚe
+REP ^ji ƚi
+REP ^eo ƚo
+REP ^iu ƚu
+REP ^ju ƚu
+REP aeo aƚo
+REP àeo àƚo
+REP ueo uƚo
+REP úeo úƚo
+REP oeo oƚo
+REP òeo òƚo
+REP óeo óƚo
+REP ueo uƚo
+REP úeo úƚo
+REP aeò aƚò
+REP oeò oƚò
+REP ueò uƚò
+REP aeó aƚó
+REP oeó oƚó
+REP ueó uƚó
+REP aeu aƚu
+REP àeu àƚu
+REP oeu oƚu
+REP òeu òƚu
+REP óeu óƚu
+REP ueu uƚu
+REP úeu úƚu
+REP aeú aƚú
+REP oeú oƚú
+REP ueú uƚú
 
 
 FLAG long
