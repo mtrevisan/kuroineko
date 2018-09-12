@@ -4190,6 +4190,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "panoc",			"in",			1,	3,	"g",	"1867",			"",
 "panoc",			"s",			1,	3,	"g",	"1854",			"",
 "panpal",		"s",			1,	4,	"g",	"1867",			"Spanpanar.",
+"panpalug",		"",			1,	6,	"a",	"1851",			"",
 "panpaluget",	"",			1,	8,	"a",	"1829",			"",
 "panpan",		"s",			1,	1,	"g",	"1560",			"Spàrxer, dispérder.",
 "pantalon",		"",			1,	6,	"a",	"1852",			"Reinsir mona.",
