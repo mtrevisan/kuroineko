@@ -25285,8 +25285,6 @@ basa/F0&0	po:noun is:singular_femenine
 baso/M0FSr0&0	po:noun is:singular_masculine
 baso/M0FS&0	po:adjective is:singular_masculine
 ben/A2U1mf	po:noun
-straben/A2U0mf	po:noun
-stra-ben/A2U0mf	po:noun
 ben/^6	po:adverb
 benon	po:adverb
 benon	po:noun
@@ -25431,6 +25429,8 @@ pòstumo/A1FS	po:noun
 purasà/F0	po:adverb
 puraséi	po:adverb
 purasè	po:adverb
+stra-ben/A2U0mf	po:noun
+straben/A2U0mf	po:noun
 superior/F0mf	po:noun
 superior/F0W0mf	po:adjective
 suprèmo/A1FSW0	po:adjective
@@ -26347,10 +26347,8 @@ a	po:interjection
 àà	po:interjection
 à	po:interjection
 ba	po:interjection
-bèl/M0U0^6&0	po:adjective is:singular_masculine
 bèl/M0U0(0	po:interjection is:singular_masculine
-strabèl/M0U0(0	po:interjection is:singular_masculine
-stra-bèl/M0U0(0	po:interjection is:singular_masculine
+bèl/M0U0^6&0	po:adjective is:singular_masculine
 bèla/F0W0^6&0	po:adjective is:singular_femenine
 bèla/(0^6	po:interjection is:singular_femenine
 bèƚa/F0W1^6&1	po:adjective is:singular_femenine
@@ -26458,6 +26456,8 @@ sanità	po:interjection
 sanité	po:interjection
 sss	po:interjection
 ss	po:interjection
+stra-bèl/M0U0(0	po:interjection is:singular_masculine
+strabèl/M0U0(0	po:interjection is:singular_masculine
 tak	po:interjection
 tarà	po:verb
 tik	po:interjection
@@ -26869,11 +26869,11 @@ krèmexe/M0FSmf	po:noun is:singular_masculine al:krémexe
 latexin/A2TB	po:adjective is:singular_masculine
 latexin/A2TB	po:noun is:singular_masculine
 léndego/M0FS	po:adjective is:singular_masculine
-ƚéndego/M0	po:adjective is:singular_masculine
 léndego/M0FS	po:noun is:singular_masculine
-ƚéndego/M0	po:noun is:singular_masculine
 lilà	po:adjective is:singular_masculine
 lilà	po:noun is:singular_masculine
+ƚéndego/M0	po:adjective is:singular_masculine
+ƚéndego/M0	po:noun is:singular_masculine
 ƚiƚà	po:adjective is:singular_masculine
 ƚiƚà	po:noun is:singular_masculine
 malgaraño/A1FS	po:adjective is:singular_masculine
@@ -29062,8 +29062,6 @@ kuisto/A1FS	po:adjective
 kuisto/A1FS	po:pronoun
 kukú	po:noun
 kul/M0U1&0(0(4<0<1	po:noun
-strakul/M0U0&0(0(4<0<1	po:noun
-stra-kul/M0U0&0(0(4<0<1	po:noun
 kulata/F0(2	po:noun
 kultura/F0	po:noun
 kultural/F0TFU0	po:adjective
@@ -29103,8 +29101,6 @@ latina/F0&0	po:adjective
 latina/F0&0	po:noun
 laŧo/M0FS&0	po:noun
 lavajo/M0FSTE	po:noun
-ƚavajo/M0	po:noun
-ƚavaɉo/M0	po:noun
 lavapiato/M0FS	po:noun
 lavro/M0&0	po:noun
 laxó/TB	po:adverb
@@ -29129,14 +29125,10 @@ lekapié/F0TB	po:adjective
 lekapiè/F0TB	po:adjective
 lekapíe/F0TB	po:adjective
 lendegaro/M0FS	po:noun
-ƚendegaro/M0	po:noun
 lengoa/F0&0&2<0<1	po:noun
 lengua/F0&0&2<0<1	po:noun
 lenguajo/M0FSTE	po:noun
-ƚenguajo/M0	po:noun
-ƚenguaɉo/M0	po:noun
 lenguístego/A1FS	po:adjective
-ƚenguístego/A1	po:adjective
 lensiòl/M0U0	po:noun
 lenŧiòl/M0U0	po:noun
 leña/F0&0	po:noun
@@ -29157,10 +29149,8 @@ létara/F0TB	po:noun
 létera/F0TB	po:noun
 lévar/M0TB	po:noun
 lèsego/M0FS	po:noun
-ƚèsego/M0	po:noun
 lèta/F0TB	po:noun
 lèto/M0FS	po:noun
-ƚèto/M0	po:noun
 lialòndena	po:adverb
 lialò	po:adverb
 liberamente/FSW2	po:adverb
@@ -29190,7 +29180,6 @@ lisia/F0&0<0<1	po:noun
 lisivèra/F0TB	po:noun
 lispa/F0TB	po:adjective
 lispo/M0FS	po:adjective
-ƚispo/M0	po:adjective
 lista/F0(2	po:noun
 liŧenŧa/F0	po:noun
 livalòndena	po:adverb
@@ -29232,7 +29221,6 @@ loŧo/M0FSTEmf	po:noun
 lovo/M0FS&0<0<1(2mf	po:noun
 lòvo/M0FS	po:noun
 lòxego/A1FS	po:adjective
-ƚòxego/A1	po:adjective
 lugànega/F0TB	po:noun
 lugerin/M0TB	po:noun
 luja/F0TETB	po:noun
@@ -29257,13 +29245,19 @@ luxe/F0&0	po:noun
 ƚatin/M0&1	po:noun
 ƚatina/F0&1	po:adjective
 ƚatina/F0&1	po:noun
+ƚavajo/M0	po:noun
+ƚavaɉo/M0	po:noun
 ƚavapiato/M0	po:noun
 ƚavro/M0&1	po:noun
 ƚàrexe/F0mf	po:noun
 ƚàvaro–dentaƚe/F0	po:adjective
 ƚedan/F0	po:noun
+ƚendegaro/M0	po:noun
 ƚengoa/F0&1&3<2	po:noun
 ƚengua/F0&1&3<2	po:noun
+ƚenguajo/M0	po:noun
+ƚenguaɉo/M0	po:noun
+ƚenguístego/A1	po:adjective
 ƚensiòƚo/M0	po:noun
 ƚeña/F0&1	po:noun
 ƚeñèr/M0V1	po:noun
@@ -29277,6 +29271,8 @@ luxe/F0&0	po:noun
 ƚexe/F0q0mf	po:noun
 ƚexièr/M0W1&1	po:adjective
 ƚexièra/F0&1	po:adjective
+ƚèsego/M0	po:noun
+ƚèto/M0	po:noun
 ƚiaƚòndena	po:adverb
 ƚiaƚò	po:adverb
 ƚiberamente/W2	po:adverb
@@ -29294,6 +29290,7 @@ luxe/F0&0	po:noun
 ƚion/A2mf	po:noun
 ƚisia/F0&1	po:noun
 ƚisiaso/A1	po:noun
+ƚispo/M0	po:adjective
 ƚista/F0(3<2	po:noun
 ƚivaƚòndena	po:adverb
 ƚivaƚò	po:adverb
@@ -29319,6 +29316,7 @@ luxe/F0&0	po:noun
 ƚoso/M0mf	po:noun
 ƚovo/M0&1(3<2mf	po:noun
 ƚòvo/M0	po:noun
+ƚòxego/A1	po:adjective
 ƚuna/F0&1	po:noun
 ƚunato/M0	po:noun
 ƚuxe/F0&1	po:noun
@@ -30037,9 +30035,6 @@ piàdena/F0	po:noun
 piàtola/F0TE	po:adjective
 piàtola/F0TE	po:noun
 pien/A2W0U1(0mf	po:adjective
-repien/A2W0U0(0mf	po:adjective
-strapien/A2W0U0(0.0mf	po:adjective
-stra-pien/A2W0U0(0.0mf	po:adjective
 piéi	po:noun is:plural_masculine st:pié
 pié	po:noun al:piéi
 piègora/F0	po:noun
@@ -30345,6 +30340,7 @@ reƚòɉo/M0&1<2	po:noun
 reoxo/A1FSmf	po:noun
 reoxo/A1FSW0mf	po:adjective
 repetitivo/A1FSW0	po:adjective
+repien/A2W0U0(0mf	po:adjective
 reprístin/M0	po:noun
 repúblega/F0	po:noun
 rerorar/M0	po:noun
@@ -30879,6 +30875,8 @@ stòfa/F0	po:noun
 stòrego/A1FS	po:adjective
 stòrego/A1FS	po:noun
 stòria/F0	po:noun
+stra-kul/M0U0&0(0(4<0<1	po:noun
+stra-pien/A2W0U0(0.0mf	po:adjective
 straa/F0&0	po:noun
 strada/F0&0(4	po:noun
 stradal/F0TFU0	po:adjective
@@ -30886,6 +30884,7 @@ stradal/F0TFU0	po:noun
 straka/F0&0	po:adjective
 strakaganasa/F0	po:noun
 strakapiaŧa/F0TE	po:noun
+strakul/M0U0&0(0(4<0<1	po:noun
 stramasèr/M0V0	po:noun
 stramasèra/F0V0	po:noun
 stramaso/M0FS&0(2	po:noun
@@ -30894,6 +30893,7 @@ stramaŧèra/F0V0	po:noun
 stramaŧo/M0FS&0(2	po:noun
 strangolon	po:adverb
 strangoƚon	po:adverb
+strapien/A2W0U0(0.0mf	po:adjective
 strasa/F0v0&0	po:noun
 straseña/F0	po:noun
 strason/A2U0mf	po:adjective
@@ -34457,11 +34457,11 @@ ordidur/M0Y0	po:noun
 ordòl/M0U0	po:noun
 orđòl/M0U0	po:noun
 orexa/A2	po:noun
+orexe/M0	po:noun
 orèr/M0V0	po:noun
 orèra/F0V0	po:noun
 orèvexe/M0FSmf	po:noun
 orèxe/M0	po:noun
-orexe/M0	po:noun
 orgaxmo/M0	po:noun
 orin/A2	po:noun
 orixma/M0	po:noun
@@ -38282,7 +38282,6 @@ kuestion/F0U0mf	po:noun
 kuèr/M0*0	po:noun
 labastro/M0TB	po:noun
 lado/M0FSY0	po:noun
-ƚado/M0Y0	po:noun
 ladron/A2U0v0&0mf	po:noun
 ladronsèl/A1U0	po:noun
 ladronŧèl/A1U0	po:noun
@@ -38362,6 +38361,7 @@ lòika/F0TB	po:adjective
 lòme/M0TB	po:noun
 lumèga/F0TB	po:noun
 lúgar/M0	po:noun
+ƚado/M0Y0	po:noun
 ƚadron/A2v0&1mf	po:noun
 ƚadronsèƚo/A1	po:noun
 ƚagremon/A2mf	po:noun
@@ -40655,11 +40655,11 @@ kòñito/M0FS	po:noun
 kròñol/M0U1TEmf	po:noun
 lànpada/F0TB	po:noun
 lèsto/A1FS	po:adjective
-ƚèsto/A1	po:adjective
 liofante/M0FS	po:noun
 luserneta/F0	po:noun
 luŧerneta/F0	po:noun
 luŧèrna/F0	po:noun
+ƚèsto/A1	po:adjective
 ƚiofante/M0	po:noun
 malvaxia/F0(0	po:adjective
 malvaxio/M0(0	po:adjective
@@ -40999,7 +40999,6 @@ latiŧio/M0TE	po:noun
 lautèr/M0V0	po:noun
 lautèra/F0V0	po:noun
 lauto/M0FS	po:noun
-ƚauto/M0	po:noun
 lavedèr/M0V0	po:noun
 lavedèra/F0V0	po:noun
 laveđèr/M0V0	po:noun
@@ -41016,8 +41015,6 @@ leriɉoxo/A1FSW0mf	po:adjective
 lerikia/F0TB	po:noun
 lerikuia/F0TB	po:noun
 leròjo/M0FSTE	po:noun
-ƚeròjo/M0	po:noun
-ƚeròɉo/M0	po:noun
 liagò/TB	po:noun
 libo/M0&2	po:noun
 lixardo/A1TB	po:adjective
@@ -41030,6 +41027,7 @@ lòbia/F0TB	po:noun
 ƚatisio/M0	po:noun
 ƚautèr/M0V1	po:noun
 ƚautèra/F0V1	po:noun
+ƚauto/M0	po:noun
 ƚavexèr/M0V1	po:noun
 ƚavexèra/F0V1	po:noun
 ƚensa/F0	po:noun
@@ -41039,6 +41037,8 @@ lòbia/F0TB	po:noun
 ƚeriɉon/F0mf	po:noun
 ƚeriɉoxo/A1mf	po:noun
 ƚeriɉoxo/A1W1mf	po:adjective
+ƚeròjo/M0	po:noun
+ƚeròɉo/M0	po:noun
 ƚibo/M0&3	po:noun
 madengo/A1FS	po:adjective
 madorengo/A1	po:adjective
@@ -41914,7 +41914,6 @@ languisan/A2U0	po:noun
 lankúden/F0U1mf	po:noun
 lankúđen/F0U1mf	po:noun
 lankúxen/F0U1mf	po:noun
-ƚankúxen/F0mf	po:noun
 lanpio/A1TB	po:adjective
 lanprèda/F0&0	po:noun
 lansardo/M0TB	po:noun
@@ -41923,8 +41922,6 @@ lanternon/M0U0mf	po:noun
 lanŧardo/M0FS	po:noun
 lapaŧa/F0TE	po:noun
 laròjo/M0FSTE	po:noun
-ƚaròjo/M0	po:noun
-ƚaròɉo/M0	po:noun
 latexiol/M0U0mf	po:noun
 latexiòl/M0U0	po:noun
 lavran/M0U0&0	po:noun
@@ -41933,7 +41930,6 @@ leandro/M0TB	po:noun
 lentíden/F0U1mf	po:noun
 lentíđen/F0U1mf	po:noun
 lentíxen/F0U1mf	po:noun
-ƚentíxen/F0mf	po:noun
 levaresa/F0TB	po:noun
 lexèr/A1TB	po:adjective
 lèko/M0TB	po:noun
@@ -41961,13 +41957,17 @@ luxèrta/F0TB	po:noun
 lúmar/M0TB	po:noun
 lúmer/M0TBmf	po:noun
 ƚanguisan/A2	po:noun
+ƚankúxen/F0mf	po:noun
 ƚanprèda/F0&1	po:noun
 ƚanternon/M0mf	po:adjective
 ƚanternon/M0mf	po:noun
 ƚapasa/F0	po:noun
+ƚaròjo/M0	po:noun
+ƚaròɉo/M0	po:noun
 ƚatexioƚo/M0mf	po:noun
 ƚatexiòƚo/M0	po:noun
 ƚavran/M0&1	po:noun
+ƚentíxen/F0mf	po:noun
 ƚiogo/M0	po:noun
 ƚiògo/M0	po:noun
 ƚitarisia/F0	po:noun
@@ -46393,7 +46393,6 @@ kúrkuma/F0	po:adjective
 kúrkuma/F0	po:noun
 kúrtola/F0TE	po:noun
 labarinto/M0FS	po:noun
-ƚabarinto/M0	po:noun
 ladareto/M0FSmf	po:noun
 ladarol/M0U0V0mf	po:noun
 ladaron/A2U0mf	po:adjective
@@ -46406,14 +46405,11 @@ lago/M0FS	po:noun
 lagremeta/F0TB	po:noun
 lagremin/A2TB	po:adjective
 lakonixmo/M0FS	po:noun
-ƚakonixmo/M0	po:noun
 lakònika/F0TB	po:adjective
 lakòniko/M0TB	po:adjective
 lamentin/M0TB	po:noun
 lanbiko/A1FS	po:adjective
-ƚanbiko/A1	po:adjective
 lanbiko/A1FS	po:noun
-ƚanbiko/A1	po:noun
 lanbrusko/M0TB	po:noun
 landa/F0TB	po:noun
 landò/TB	po:noun
@@ -46425,7 +46421,6 @@ lanpideŧa/F0TE	po:noun
 lanpido/M0	po:noun
 lanpiđo/M0	po:noun
 lanpixo/M0FS	po:noun
-ƚanpixo/M0	po:noun
 lanpo/M0FS<0	po:noun
 lanxa/F0TB	po:noun
 lañanŧa/F0TE	po:noun
@@ -46446,12 +46441,9 @@ lasú/TB	po:adverb
 lasú/TB	po:preposition
 latakavra/F0TB	po:noun
 latinador/M0V0mf	po:noun
-ƚatinador/M0V1mf	po:noun
 latinadora/F0V0	po:noun
-ƚatinadora/F0V1	po:noun
 latiŧin/M0TE	po:noun
 lato/M0FS	po:noun
-ƚato/M0	po:noun
 latronsinio/M0TB	po:noun
 latronŧinio/M0	po:noun
 latume/M0TB	po:noun
@@ -46501,7 +46493,6 @@ lesionario/M0TB	po:noun
 lesionsèla/F0	po:noun
 leso/A1FSmf	po:adjective
 leterato/A1FS	po:noun
-ƚeterato/A1	po:noun
 leteriŧia/F0TE	po:noun
 leŧionario/M0	po:noun
 leŧionŧèla/F0	po:noun
@@ -46566,7 +46557,6 @@ litièra/F0TB	po:noun
 litikonsòrti/TB	po:noun is:plural_masculine
 liŧarol/M0U0V0mf	po:noun
 liuto/M0FS	po:noun
-ƚiuto/M0	po:noun
 livelario/A1	po:noun
 lixadría/F0TB	po:noun
 lixadro/A1TB	po:adjective
@@ -46588,11 +46578,9 @@ lòk/F0	po:noun
 lòto/M0FS	po:noun
 lòxika/F0TB	po:noun
 lubriko/A1FS	po:adjective
-ƚubriko/A1	po:adjective
 lukro/M0TB	po:noun
 lumaŧa/F0TE	po:noun
 lumegòto/M0FS	po:noun
-ƚumegòto/M0	po:noun
 luminador/M0V0mf	po:noun
 luminadora/F0V0	po:noun
 luminadura/F0TBY0	po:noun
@@ -46612,10 +46600,15 @@ lusurioxo/A1FSmf	po:noun
 lusurioxo/A1FSW0mf	po:adjective
 luxerton/F0U0mf	po:noun
 luxverde/F0TB	po:noun
+ƚabarinto/M0	po:noun
 ƚadroneso/M0mf	po:noun
 ƚago/M0	po:noun
+ƚakonixmo/M0	po:noun
+ƚanbiko/A1	po:adjective
+ƚanbiko/A1	po:noun
 ƚanpeso/M0mf	po:noun
 ƚanpidesa/F0	po:noun
+ƚanpixo/M0	po:noun
 ƚanpo/M0<2	po:noun
 ƚañansa/F0	po:noun
 ƚaorensía/F0	po:noun
@@ -46624,7 +46617,10 @@ luxverde/F0TB	po:noun
 ƚardo/M0(5	po:noun
 ƚardon/A2mf	po:adjective
 ƚastrikato/M0	po:noun
+ƚatinador/M0V1mf	po:noun
+ƚatinadora/F0V1	po:noun
 ƚatisin/M0	po:noun
+ƚato/M0	po:noun
 ƚavo/M0&3<2	po:noun
 ƚavranereto/M0mf	po:noun
 ƚavranèra/F0V1	po:noun
@@ -46650,6 +46646,7 @@ luxverde/F0TB	po:noun
 ƚesionsèƚa/F0	po:noun
 ƚeso/A1mf	po:adjective
 ƚeso/A1mf	po:noun
+ƚeterato/A1	po:noun
 ƚeterisia/F0	po:noun
 ƚeutèr/M0V1	po:noun
 ƚeutèra/F0V1	po:noun
@@ -46679,6 +46676,7 @@ luxverde/F0TB	po:noun
 ƚiso/M0&1	po:noun
 ƚisto/M0&3	po:noun
 ƚiterisia/F0	po:noun
+ƚiuto/M0	po:noun
 ƚiveƚario/A1	po:noun
 ƚokante/M0	po:noun
 ƚonxa/F0	po:noun
@@ -46686,7 +46684,9 @@ luxverde/F0TB	po:noun
 ƚòɉo/M0(3	po:noun
 ƚòke/F0	po:noun
 ƚòto/M0	po:noun
+ƚubriko/A1	po:adjective
 ƚumasa/F0	po:noun
+ƚumegòto/M0	po:noun
 ƚuminador/M0V1mf	po:noun
 ƚuminadora/F0V1	po:noun
 ƚunàtego/A1	po:noun
@@ -51284,6 +51284,7 @@ cijarol/M0U0V0mf	po:noun
 cijarola/F0V0	po:noun
 cijaroƚa/F0V1	po:noun
 cijaroƚo/M0V1mf	po:noun
+ciú	po:noun
 cò	po:noun
 dato/M0	po:noun
 demoniaŧa/F0TE	po:noun
@@ -51385,20 +51386,15 @@ kusoƚon/A2mf	po:adjective
 kuŧolon/A2U0mf	po:adjective
 laño/M0TB	po:noun
 laveso/M0FSmf	po:noun
-ƚaveso/M0mf	po:noun
 laveŧo/M0FSmf	po:noun
 leàtego/M0FS	po:noun
-ƚeàtego/M0	po:noun
 legatin/A2TB	po:noun
 legato/M0FS	po:noun
-ƚegato/M0	po:noun
 lendeneta/F0TB	po:noun
 lendenèla/F0	po:noun
 lendenoxo/A1FSW0mf	po:adjective
-ƚendenoxo/A1W1mf	po:adjective
 lesa/F0TB	po:noun
 liàtego/M0FS	po:noun
-ƚiàtego/M0	po:noun
 likoxo/A1FSmf	po:noun
 likoxo/A1FSW0mf	po:adjective
 limon/F0U0mf	po:noun
@@ -51406,7 +51402,12 @@ liña/F0TB	po:noun
 lodria/F0TB	po:noun
 lorda/F0TB	po:noun
 lòto–lòto	po:adverb
+ƚaveso/M0mf	po:noun
+ƚeàtego/M0	po:noun
+ƚegato/M0	po:noun
 ƚendenèƚa/F0	po:noun
+ƚendenoxo/A1W1mf	po:adjective
+ƚiàtego/M0	po:noun
 ƚikoxo/A1mf	po:noun
 ƚikoxo/A1W1mf	po:adjective
 ƚimon/F0mf	po:noun
@@ -51451,6 +51452,18 @@ nasa/F0	po:noun
 nodariato/M0FS	po:noun
 noliđo/M0TE	po:noun
 noƚixo/M0	po:noun
+onda/F0	po:noun
+ordimento/M0	po:noun
+pacugoxo/A1FSmf	po:noun
+pacugoxo/A1FSW0mf	po:adjective
+palaror/M0mf	po:noun
+palarora/F0	po:noun
+palmar/A1	po:adjective
+papaor/F0mf	po:noun
+paraor/F0mf	po:noun
+partida/F0Y0	po:noun
+pàpol/M0U1TEmf	po:noun
+pàsara/F0	po:noun
 pojato/M0FS	po:noun
 poɉato/M0FS	po:noun
 salingardo/M0FS	po:noun
@@ -51479,26 +51492,13 @@ tèdio/M0	po:noun
 ŧimexería/F0TB	po:noun
 ŧintura/F0&0&2	po:noun
 ŧiòla/F0TB	po:noun
+volàdega/F0‘0	po:noun
+voƚàdega/F0‘0	po:noun
 xemè	po:noun
 xendeneta/F0	po:noun
 xendenèla/F0TE	po:noun
 xendenoxo/A1FSW0mf	po:adjective
 xéndena/F0	po:noun
-volàdega/F0‘0	po:noun
-voƚàdega/F0‘0	po:noun
-onda/F0	po:noun
-ordimento/M0	po:noun
-pacugoxo/A1FSmf	po:noun
-pacugoxo/A1FSW0mf	po:adjective
-palaror/M0mf	po:noun
-palarora/F0	po:noun
-palmar/A1	po:adjective
-ciú	po:noun
-papaor/F0mf	po:noun
-pàpol/M0U1TEmf	po:noun
-paraor/F0mf	po:noun
-partida/F0Y0	po:noun
-pàsara/F0	po:noun
 
 
 
