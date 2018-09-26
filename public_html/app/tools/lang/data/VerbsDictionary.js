@@ -4727,6 +4727,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pont",			"a",			1,	1,	"a",	"1867",			"",
 "pont",			"des",		1,	1,	"a",	"1775",			"",
 "pont",			"in",			1,	1,	"a",	"1775",			"",
+"pont",			"",			4,	4,	"a",	"1874",			"",
 "pont",			"in",			4,	4,	"a",	"1867",			"",
 "pont",			"s",			1,	1,	"a",	"1560",			"",
 "pont",			"stra",		1,	1,	"a",	"1854",			"",
