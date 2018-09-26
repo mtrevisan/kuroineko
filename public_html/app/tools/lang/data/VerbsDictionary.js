@@ -4668,6 +4668,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "polp",			"s",			1,	1,	"a",	"1867",			"",
 "pols",			"",			1,	1,	"a",	"1980",			"Repoxar, sostar.",
 "poltron",		"des",		1,	5,	"a",	"1867",			"",
+"poltron",		"",			1,	5,	"a",	"",				"",
 "poltron",		"in",			1,	5,	"a",	"1829",			"",
 "poltron",		"",			4,	7,	"a",	"1829",			"Poltrir.",
 "poltron",		"in",			4,	7,	"a",	"1854",			"Poltrir.",
