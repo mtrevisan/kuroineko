@@ -3250,6 +3250,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "leđier",		"",			4,	6,	"a",	"1980",			"(bixiak)",
 "leđier",		"x",			4,	6,	"a",	"1867",			"",
 "lexitim",		"",			1,	3,	"a",	"",				"",
+"lexixl",		"",			1,	3,	"a",	"",				"",
 "lib",			"",			1,	1,	"a",	"1851",			"Solevar de pexo na barka kavandoge na parte de kargo.",
 "liber",			"",			1,	1,	"a",	"1304",			"",
 "liber",			"de",			1,	1,	"a",	"1276",			"",
