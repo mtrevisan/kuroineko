@@ -2934,6 +2934,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "koŧ",			"",			1,	1,	"g",	"1867",			"",
 "koŧ",			"des",		1,	1,	"g",	"1847",			"Netar.",
 "koŧ",			"in",			1,	1,	"g",	"1775",			"Sporkar, onfegar.",
+"koŧ",			"ra",			1,	1,	"g",	"1851",			"",
 "koŧ",			"in",			4,	3,	"a",	"1867",			"",
 "koŧon",			"s",			1,	3,	"a",	"1775",			"Skaltrir.",
 "kov",			"",			1,	1,	"a",	"1852",			"",
