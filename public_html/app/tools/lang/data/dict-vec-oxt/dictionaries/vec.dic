@@ -15933,14 +15933,14 @@ fraposto/A1FS	po:verb ts:participle_perfect_strong st:frapóner
 frapòsto/A1FS	po:verb ts:participle_perfect_strong st:frapóner
 frapónar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 fraponarò/b0b1b2I0	po:verb ts:indicative_future st:frapónar
-konpóner/b0b1b2P0P1P2+0	po:verb ts:infinitive_simple
-konponerò/b0b1b2I0+0r2r3	po:verb ts:indicative_future st:konpóner
-konpono/a0a1a2P0P1P2FSI0+0	po:verb ts:indicative_present st:konpóner
-konpónoe/a0a1a2I1+0	po:verb ts:indicative_present is:interrogative st:konpóner
-konposto/A1FS+0*0	po:verb ts:participle_perfect_strong st:konpóner st:konpónder
-konpòsto/A1FS+0*0	po:verb ts:participle_perfect_strong st:konpóner st:konpónder
-konpónar/b0b1b2P0P1P2+0	po:verb ts:infinitive_simple
-konponarò/b0b1b2I0+0	po:verb ts:indicative_future st:konpónar
+konpóner/b0b1b2P0P1P2+0.0	po:verb ts:infinitive_simple
+konponerò/b0b1b2I0+0.0r2r3	po:verb ts:indicative_future st:konpóner
+konpono/a0a1a2P0P1P2FSI0+0.0	po:verb ts:indicative_present st:konpóner
+konpónoe/a0a1a2I1+0.0	po:verb ts:indicative_present is:interrogative st:konpóner
+konposto/A1FS+0.0*0	po:verb ts:participle_perfect_strong st:konpóner st:konpónder
+konpòsto/A1FS+0.0*0	po:verb ts:participle_perfect_strong st:konpóner st:konpónder
+konpónar/b0b1b2P0P1P2+0.0	po:verb ts:infinitive_simple
+konponarò/b0b1b2I0+0.0	po:verb ts:indicative_future st:konpónar
 opóner/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 oponerò/b0b1b2I0r2r3	po:verb ts:indicative_future st:opóner
 opono/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:opóner
@@ -15973,14 +15973,6 @@ proposto/A1FS+0	po:verb ts:participle_perfect_strong st:propóner
 propòsto/A1FS+0	po:verb ts:participle_perfect_strong st:propóner
 propónar/b0b1b2P0P1P2+0	po:verb ts:infinitive_simple
 proponarò/b0b1b2I0+0	po:verb ts:indicative_future st:propónar
-rekonpóner/b0b1b2P0P1P2	po:verb ts:infinitive_simple
-rekonponerò/b0b1b2I0	po:verb ts:indicative_future st:rekonpóner
-rekonpono/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:rekonpóner
-rekonpónoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:rekonpóner
-rekonposto/A1FS	po:verb ts:participle_perfect_strong st:rekonpóner
-rekonpòsto/A1FS	po:verb ts:participle_perfect_strong st:rekonpóner
-rekonpónar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
-rekonponarò/b0b1b2I0	po:verb ts:indicative_future st:rekonpónar
 skonpóner/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 skonponerò/b0b1b2I0	po:verb ts:indicative_future st:skonpóner
 skonpono/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:skonpóner
@@ -35168,6 +35160,7 @@ revixion/F0U0mf	po:noun
 revoltolon/F0TEU0mf	po:noun
 revolton/F0U0mf	po:adjective
 revolton/F0U0mf	po:noun
+revoltolon	po:adverb
 revolton	po:adverb
 rexeto/M0FSmf	po:noun
 réden/A2U1mf	po:noun
@@ -35179,9 +35172,8 @@ ridacon/A2U0mf	po:adjective
 ridòtol/M0U1TEmf	po:noun
 ridòtola/F0TE	po:noun
 rigadin/A2	po:adjective
-rigarola/F0TE	po:noun
-rigaròla/F0&0	po:noun
-rigaròƚa/F0&1	po:noun
+rigarola/F0V0	po:noun
+rigaroƚa/F0V1	po:noun
 rigor/F0mf	po:noun
 rii	po:noun is:plural_masculine st:rio
 riko/A1FS^6(4	po:adjective
@@ -43188,7 +43180,7 @@ altèria/F0	po:noun
 altièr/A1	po:adjective
 altolà	po:interjection
 altoƚà	po:interjection
-alŧo/M0TE	po:noun
+alŧo/M0TE.0	po:noun
 aƚarme/M0q0	po:noun
 aƚokon/A2mf	po:adjective
 aƚon	po:interjection
@@ -50072,7 +50064,7 @@ tajapié/F0	po:noun
 tajapiè/F0	po:noun
 tajapíe/F0	po:noun
 tajarola/F0TE	po:noun
-tajo/M0FS-0&0(2	po:noun
+tajo/M0FS-0.0&0(2	po:noun
 taɉabraŧo/M0FSTE	po:noun
 taɉadin/A1	po:adjective
 taɉagrixiòla/F0TE	po:noun
@@ -50084,7 +50076,7 @@ taɉapié/F0	po:noun
 taɉapiè/F0	po:noun
 taɉapíe/F0	po:noun
 taɉarola/F0TE	po:noun
-taɉo/M0FS-0&0(2	po:noun
+taɉo/M0FS-0.0&0(2	po:noun
 takabega/F0	po:adjective
 takabega/F0	po:noun
 takabèga/F0	po:adjective
@@ -50334,8 +50326,8 @@ tòr/M0&0	po:noun
 tòrco/M0FS	po:noun
 tòrdio/M0	po:noun
 tòrđio/M0	po:noun
-tòrto/A1FS	po:adjective
-tòrto/A1FS	po:noun
+tòrto/A1FS.0	po:adjective
+tòrto/A1FS.0	po:noun
 tòrtola/F0TE	po:noun
 tòrxio/M0	po:noun
 tòsego/A1FS	po:adjective
@@ -51609,9 +51601,15 @@ reskaldo/M0	po:noun
 rexèstola/F0TE	po:noun
 respiro/M0	po:noun
 sporga/F0	po:noun
+restièr/A1	po:noun
+reŧapadura/F0r5&0	po:noun
+resapadura/F0r5&0	po:noun
+rièl/M0U0TE	po:noun
 
 
-/ 262
+
+/ 264
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
 / ràfioi
+/ rúfioi
