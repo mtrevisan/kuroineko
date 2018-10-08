@@ -17897,14 +17897,29 @@ scantíđoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:scantiđar
 scantixar/a0a1a2P0P1P2r0	po:verb ts:infinitive_simple
 scantixo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:scantixar
 scantíxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:scantixar
+scandar/a0a1P0P1	po:verb ts:infinitive_simple
+scànder/b0b1P0P1	po:verb ts:infinitive_simple
+scanderò/b0b1I0	po:verb ts:indicative_future st:scànder
+scando/a0a1P0P1FSI0	po:verb ts:indicative_present st:scànder st:scandar
+scàndoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:scànder st:scandar
+scàndar/b0b1P0P1	po:verb ts:infinitive_simple
+scandarò/b0b1I0	po:verb ts:indicative_future st:scàndar
+scanđar/a0a1P0P1	po:verb ts:infinitive_simple
+scànđer/b0b1P0P1	po:verb ts:infinitive_simple
+scanđerò/b0b1I0	po:verb ts:indicative_future st:scànđer
+scanđo/a0a1P0P1FSI0	po:verb ts:indicative_present st:scànđer st:scanđar
+scànđoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:scànđer st:scanđar
+scànđar/b0b1P0P1	po:verb ts:infinitive_simple
+scanđarò/b0b1I0	po:verb ts:indicative_future st:scànđar
 scanxar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 scànxer/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 scanxerò/b0b1b2I0	po:verb ts:indicative_future st:scànxer
 scanxo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:scànxer st:scanxar
 scànxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:scànxer st:scanxar
-scanto/A1FS	po:verb ts:participle_perfect_strong st:scànxer
+scanto/A1FS	po:verb ts:participle_perfect_strong st:scànđer st:scànder st:scànxer
 scànxar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 scanxarò/b0b1b2I0	po:verb ts:indicative_future st:scànxar
+
 scenxar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 scenxo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:scenxar
 scénxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:scenxar
@@ -30500,7 +30515,7 @@ scantiŧo/M0FSTE	po:noun
 scantiva/F0	po:noun
 scao/A1	po:adjective
 scao/A1(4	po:noun
-scapa/F0	po:noun
+scapa/F0	po:adjective
 scapo/M0FS	po:noun
 scenxa/F0&0	po:noun
 scèto/A1FS	po:adjective
@@ -35372,6 +35387,8 @@ sàngona/F0	po:noun
 sànxana/F0	po:noun
 scapasoko/M0FSmf	po:noun
 scapaŧoko/M0FSmf	po:noun
+scapasuko/M0FSmf	po:adjective
+scapaŧuko/M0FSmf	po:adjective
 scapin/A2(4	po:noun
 scapuŧo/M0FSTE	po:noun
 scararola/F0TE	po:noun
@@ -48968,9 +48985,9 @@ scamoxo/A1FSW0mf	po:adjective
 scantiđo/M0TE	po:noun
 scanxo/M0	po:noun
 scapasoka/F0	po:noun
-scapasuka/F0	po:noun
+scapasuka/F0	po:adjective
 scapaŧoka/F0	po:noun
-scapaŧuka/F0	po:noun
+scapaŧuka/F0	po:adjective
 scaranto/M0FS	po:noun
 scauson/A2U0mf	po:adjective
 scavèra/F0	po:noun
@@ -49280,7 +49297,7 @@ skejoxo/A1FSW0mf	po:adjective
 skeɉa/F0&0(2	po:noun
 skeɉoxo/A1FSmf	po:noun
 skeɉoxo/A1FSW0mf	po:adjective
-skèrmo/M0	po:noun
+skèrmo/A1	po:noun
 skèrŧo/M0TE	po:noun
 skifo/M0FS	po:noun
 skinko/M0FS&0	po:noun
@@ -51659,9 +51676,10 @@ skuaŧaròto/M0FS	po:noun
 skuasaròto/M0FS	po:noun
 skavalon/A2U0mf	po:noun
 skavaƚon/A2mf	po:noun
+scarèla/F0TE	po:noun
 
 
-/ 290
+/ 291
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
 / aŧento? rufioi, rafioi, rofioi, rafioli; sansirol
