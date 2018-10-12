@@ -5580,6 +5580,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "skrofol",		"",			1,	3,	"g",	"1775",			"",
 "skroit",		"",			1,	3,	"g",	"1775",			"",
 "skrool",		"",			1,	3,	"g",	"1775",			"",
+"skrovol",		"",			1,	3,	"g",	"1851",			"",
 "skrutin",		"",			1,	5,	"a",	"1867",			"",
 "skuam",			"",			1,	3,	"g",	"1847",			"",
 "skuar",			"",			1,	3,	"g",	"1854",			"Mexurar kon la skuadra.",
