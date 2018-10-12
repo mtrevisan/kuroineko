@@ -5586,6 +5586,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "skuar",			"",			1,	3,	"g",	"1854",			"Mexurar kon la skuadra.",
 "skuarŧ",		"",			1,	3,	"g",	"1560",			"(ark.) Skuartar.",
 "skuen",			"",			4,	5,	"a",	"1560",			"Konvèñer.",
+"skulier",		"",			1,	5,	"g",	"1851",			"",
 "skur",			"",			4,	4,	"a",	"1854",			"",
 "skur",			"i",			4,	4,	"a",	"1867",			"",
 "skur",			"in",			4,	4,	"a",	"1775",			"",
