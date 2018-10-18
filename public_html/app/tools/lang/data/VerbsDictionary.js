@@ -5437,6 +5437,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sider",			"rekon",		1,	1,	"a",	"",				"",
 "sidi",			"",			1,	1,	"a",	"1775",			"Sfiankar, strakar, inportunar.",
 "sidi",			"pre",		1,	1,	"a",	"1867",			"",
+"sieg",			"",			1,	1,	"a",	"1851",			"",
 "siéd",			"re",			3,	2,	"a",	"1829",			"",
 "sifer",			"de",			1,	1,	"a",	"1775",			"",
 "sifol",			"",			1,	1,	"a",	"1775",			"",
