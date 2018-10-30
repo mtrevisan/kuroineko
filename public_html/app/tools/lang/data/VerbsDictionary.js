@@ -4744,6 +4744,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pontel",		"",			1,	4,	"g",	"1509",			"",
 "pontel",		"a",			1,	4,	"g",	"1527",			"",
 "pontel",		"des",		1,	4,	"g",	"1854",			"",
+"pontig",		"s",			1,	4,	"a",	"1851",			"",
 "pontij",		"",			1,	4,	"a",	"1796",			"",
 "pontili",		"in",			1,	4,	"a",	"1829",			"Star in gara ko ʼn altro.",
 "pontiñ",		"",			1,	4,	"a",	"1854",			"Far on potinico.",
