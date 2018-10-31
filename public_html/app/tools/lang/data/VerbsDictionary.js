@@ -5804,6 +5804,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "staf",			"in",			1,	2,	"g",	"1775",			"",
 "stafil",		"",			1,	4,	"a",	"1854",			"",
 "stagañ",		"",			1,	4,	"g",	"1590",			"Tormentar.",
+"stanp",			"",			4,	5,	"a",	"1851",			"Far diskorsi nojoxi.",
 "staj",			"kontro",	1,	2,	"g",	"1852",			"Inbardar.",
 "staɉ",			"kontro",	1,	2,	"g",	"1852",			"Inbardar.",
 "staj",			"kontra",	1,	2,	"g",	"1854",			"Inbardar.",
