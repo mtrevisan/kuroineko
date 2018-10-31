@@ -4870,6 +4870,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "prob",			"in",			1,	2,	"g",	"1509",			"",
 "prob",			"re",			1,	2,	"g",	"1474",			"",
 "proces",		"",			1,	4,	"g",	"1775",			"",
+"prok",			"s",			1,	2,	"a",	"1851",			"Supurar na ferida.",
 "profes",		"",			1,	4,	"g",	"1867",			"",
 "profetiđ",		"",			1,	6,	"a",	"1867",			"",
 "profond",		"s",			1,	4,	"a",	"1560",			"",
