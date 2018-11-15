@@ -6359,6 +6359,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "torn",			"re",			1,	1,	"a",	"1381",			"",
 "torn",			"s",			1,	1,	"a",	"1867",			"",
 "torni",			"",			1,	1,	"a",	"1854",			"",
+"tors",			"",			1,	1,	"a",	"1851",			"",
 "tort",			"s",			1,	1,	"g",	"",				"",
 "torteɉ",		"",			1,	4,	"a",	"",				"Stortiliar, intórđer.",
 "torteɉ",		"des",		1,	4,	"a",	"",				"Sdopiar.",
