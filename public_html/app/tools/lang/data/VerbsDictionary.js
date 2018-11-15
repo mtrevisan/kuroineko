@@ -6112,6 +6112,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "taređ",			"",			1,	3,	"a",	"1775",			"Apuntar.",
 "tariđ",			"",			1,	3,	"a",	"1854",			"Taređar, apuntar, kritegar.",
 "tarif",			"",			1,	3,	"a",	"1867",			"",
+"tarl",			"",			1,	1,	"g",	"1851",			"Karolar.",
 "tarm",			"",			1,	1,	"g",	"1775",			"Robar, fregar, tarlar.",
 "tarok",			"",			1,	3,	"g",	"1775",			"Alterkar, adirar ŧigando, batostar.",
 "tarsi",			"in",			1,	1,	"g",	"1867",			"",
