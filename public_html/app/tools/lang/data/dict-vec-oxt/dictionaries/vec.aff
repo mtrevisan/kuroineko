@@ -5764,7 +5764,7 @@ SFX Y1 ada à ada
 
 
 # sostantivi alterài - demenutivi (-eto/a)
-SFX &0 Y 86
+SFX &0 Y 87
 SFX &0 è eeto/M0FSmf è
 SFX &0 ú ueto/M0FSmf ú
 SFX &0 ío ieto/M0FSmf ío
@@ -5780,14 +5780,15 @@ SFX &0 èr ereto/M0FSmf èr
 SFX &0 òr oreto/M0FSmf òr
 SFX &0 o eto/M0FSmf [^bcdđíjɉkgmnñòprsŧúvx]o
 SFX &0 o eto/M0FSmf [^è]đo
-SFX &0 o eto/M0FSmf [^èò][cdgkjɉprsŧvx]o
-SFX &0 o eto/M0FSmf [^ò][bmnñ]o
+SFX &0 o eto/M0FSmf [^èò][cdgkjɉmprsŧvx]o
+SFX &0 o eto/M0FSmf [^ò][bnñ]o
 SFX &0 èco eceto/M0FSmf èco
 SFX &0 èdo edeto/M0FSmf èdo
 SFX &0 èđo eđeto/M0FSmf èđo
 SFX &0 èko eketo/M0FSmf èko
 SFX &0 èjo ejeto/M0FSmf èjo
 SFX &0 èɉo eɉeto/M0FSmf èɉo
+SFX &0 èmo emeto/M0FSmf èmo
 SFX &0 èpo epeto/M0FSmf èpo
 SFX &0 èso eseto/M0FSmf èso
 SFX &0 èŧo eŧeto/M0FSmf èŧo
@@ -5814,9 +5815,8 @@ SFX &0 òxo oxeto/M0FSmf òxo
 SFX &0 ía ieta/F0 ía
 SFX &0 úa ueta/F0 úa
 SFX &0 a eta/F0 [^bcdđgíjɉklmnñprsŧúvx]a
-SFX &0 a eta/F0 [^è]ga
-SFX &0 a eta/F0 [^èò][bcdđklnprsŧvx]a
-SFX &0 a eta/F0 [^ò][jɉmñv]a
+SFX &0 a eta/F0 [^èò][bcdđgklnprsŧvx]a
+SFX &0 a eta/F0 [^ò][jɉmñ]a
 SFX &0 èba ebeta/F0 èba
 SFX &0 èca eceta/F0 èca
 SFX &0 èda edeta/F0 èda
@@ -5835,6 +5835,7 @@ SFX &0 òba obeta/F0 òba
 SFX &0 òca oceta/F0 òca
 SFX &0 òda odeta/F0 òda
 SFX &0 òđa ođeta/F0 òđa
+SFX &0 òga ogeta/F0 òga
 SFX &0 òja ojeta/F0 òja
 SFX &0 òɉa oɉeta/F0 òɉa
 SFX &0 òka oketa/F0 òka
@@ -5853,7 +5854,7 @@ SFX &0 0 ta/F0 [^è]ve
 SFX &0 ève eveta/F0 ève
 
 # sostantivi alterài - demenutivi ko èle evanesente (-eto/a)
-SFX &1 Y 52
+SFX &1 Y 55
 SFX &1 è eeto/M0mf è
 SFX &1 ú ueto/M0mf ú
 SFX &1 0 eto/M0mf [^èò]l
@@ -5900,12 +5901,15 @@ SFX &1 òso oseto/M0mf òso
 SFX &1 òŧo oŧeto/M0mf òŧo
 SFX &1 òvo oveto/M0mf òvo
 SFX &1 òxo oxeto/M0mf òxo
-SFX &1 0 to/M0mf ƚe
-SFX &1 a eta/F0 [^ƚ]a
+SFX &1 ía ieta/F0 ía
+SFX &1 a eta/F0 [^díƚ]a
+SFX &1 a eta/F0 [^è]da
 SFX &1 a eta/F0 [^èò]ƚa
+SFX &1 èda edeta/F0 èda
 SFX &1 èƚa eƚeta/F0 èƚa
 SFX &1 òƚa oƚeta/F0 òƚa
 SFX &1 0 ta/F0 e
+SFX &1 0 to/M0mf ƚe
 
 # sostantivi alterài - demenutivi (-èl/-èla)
 SFX &2 Y 24
@@ -6168,17 +6172,18 @@ SFX §1 0 ta/F0 [^è]ƚa
 SFX §1 èƚa eƚata/F0 èƚa
 
 # sostantivi alterài - peđorativi (-aŧo/a)
-SFX <0 Y 39
+SFX <0 Y 40
 SFX <0 0 aŧo/M0FS [^è]l
 SFX <0 èl elaŧo/M0FS èl
 SFX <0 0 aŧo/M0FS [^è]r
 SFX <0 èr eraŧo/M0FS èr
 SFX <0 0 aŧo/M0FS n
-SFX <0 o aŧo/M0FS [^ckjɉgmtò]o
+SFX <0 o aŧo/M0FS [^ckíjɉgmòt]o
 SFX <0 o aŧo/M0FS [^è]ko
 SFX <0 o aŧo/M0FS [^ò][cjɉgmt]o
 SFX <0 èko ekaŧo/M0FS èko
 SFX <0 òo oaŧo/M0FS òo
+SFX <0 ío iaŧo/M0FS ío
 SFX <0 òco ocaŧo/M0FS òco
 SFX <0 òjo ojaŧo/M0FS òjo
 SFX <0 òɉo oɉaŧo/M0FS òɉo
@@ -6210,40 +6215,41 @@ SFX <0 òxa oxaŧa/F0 òxa
 SFX <0 e aŧo/M0FS e
 
 # sostantivi alterài - peđorativi (-aso/a)
-SFX <1 Y 39
+SFX <1 Y 40
 SFX <1 0 aso/M0FS [^è]l
 SFX <1 èl elaso/M0FS èl
 SFX <1 0 aso/M0FS [^è]r
 SFX <1 èr eraso/M0FS èr
 SFX <1 0 aso/M0FS n
-SFX <1 o aso/M0FS [^ckjɉm]o
+SFX <1 o aso/M0FS [^ckíjɉgmòt]o
 SFX <1 o aso/M0FS [^è]ko
-SFX <1 o aso/M0FS [^ò][cjɉm]o
+SFX <1 o aso/M0FS [^ò][cjɉgmt]o
 SFX <1 èko ekaso/M0FS èko
+SFX <1 òo oaso/M0FS òo
+SFX <1 ío iaso/M0FS ío
 SFX <1 òco ocaso/M0FS òco
 SFX <1 òjo ojaso/M0FS òjo
 SFX <1 òɉo oɉaso/M0FS òɉo
+SFX <1 ògo ogaso/M0FS ògo
 SFX <1 òmo omaso/M0FS òmo
 SFX <1 òto otaso/M0FS òto
 SFX <1 èr erasa/F0 èr
-SFX <1 0 sa/F0 [^bkgèíjɉklƚnñòrstvx]a
+SFX <1 0 sa/F0 [^bkgèíjɉklnñòrstvx]a
 SFX <1 èa easa/F0 èa
 SFX <1 0 sa/F0 [^è][kgrv]a
 SFX <1 0 sa/F0 [^ò][bjɉnñstx]a
-SFX <1 0 sa/F0 [^èò][lƚ]a
+SFX <1 0 sa/F0 [^èò]la
 SFX <1 òba obasa/F0 òba
 SFX <1 ía iasa/F0 ía
 SFX <1 òa oasa/F0 òa
 SFX <1 èka ekasa/F0 èka
 SFX <1 èga egasa/F0 èga
 SFX <1 èla elasa/F0 èla
-SFX <1 èƚa eƚasa/F0 èƚa
 SFX <1 èpa epasa/F0 èpa
 SFX <1 èra erasa/F0 èra
 SFX <1 òja ojasa/F0 òja
 SFX <1 òɉa oɉasa/F0 òɉa
 SFX <1 òla olasa/F0 òla
-SFX <1 òƚa oƚasa/F0 òƚa
 SFX <1 òna onasa/F0 òna
 SFX <1 òña oñasa/F0 òña
 SFX <1 òsa osasa/F0 òsa
