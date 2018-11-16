@@ -7547,7 +7547,7 @@ insuƚar/a0a2P0P2	po:verb ts:infinitive_simple
 ínsuƚo/a0a2P0P2I0	po:verb ts:indicative_present st:insuƚar
 ínsuƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:insuƚar
 integrar/a0a1a2P0P1P2.0	po:verb ts:infinitive_simple
-íntegro/a0a1a2P0P1P2I0W0.0	po:verb ts:indicative_present st:integrar
+íntegro/a0a1a2P0P1P2I0.0	po:verb ts:indicative_present st:integrar
 íntegroe/a0a1a2I1.0	po:verb ts:indicative_present is:interrogative st:integrar
 intensionar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 intensiono/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:intensionar
@@ -28160,8 +28160,10 @@ faxoƚo/M0&1(5mf	po:noun
 faxòl/M0U0TE	po:noun
 fa	po:adverb
 fàbrega/F0	po:noun
-fàsil/F0TFW0^6	po:adjective
-fàŧil/F0W0^6	po:adjective
+fàsil/F0TF^6	po:adjective
+fàŧil/F0^6	po:adjective
+fasilmente/FSW2	po:adverb
+faŧilmente/FSW2	po:adverb
 fàvar/M0	po:noun
 fàver/M0mf	po:noun
 feda/A2	po:noun
@@ -28833,8 +28835,8 @@ kavin/M0	po:noun
 kavra/F0(2	po:noun
 kaxèr/M0V0	po:noun
 kaxèra/F0V0	po:noun
-kàlivo/A1FSW0	po:adjective
-kàƚivo/A1W1	po:adjective
+kalivo/A1FSW0	po:adjective
+kaƚivo/A1W1	po:adjective
 kàmara/F0^0	po:noun
 kàmera/F0^0	po:noun
 kànevo/A1mf	po:noun
@@ -31993,8 +31995,10 @@ bixinèla/F0TE	po:adjective
 bixinèla/F0TE	po:noun
 bixlako/A1FS	po:adjective
 bixnòn/A1U0	po:noun
-bískol/M0W0U1mf	po:noun
-bískoƚo/M0W1mf	po:noun
+bískol/M0U1mf	po:noun
+bískoƚo/M0mf	po:noun
+biskolamente/FSW2	po:noun
+biskoƚamente/W2	po:noun
 boarina/F0	po:noun
 boarol/M0U0V0mf	po:noun
 boarola/F0V0	po:noun
@@ -38421,8 +38425,10 @@ levorato/M0FS	po:noun
 lexadro/A1TB	po:adjective
 lexil/F0	po:noun
 lèpore/M0TB	po:noun
-lèsito/A1FSW0-0	po:adjective
-lèŧito/A1FSW0-0	po:adjective
+lèsito/A1FS-0	po:adjective
+lèŧito/A1FS-0	po:adjective
+lesitamente/FSW2	po:adverb
+leŧitamente/FSW2	po:adverb
 lial/F0U0	po:adjective
 libaralità	po:noun
 liberalità	po:noun
@@ -38443,8 +38449,10 @@ lionŧèl/M0U0	po:noun
 lioxo/A1FSmf	po:noun
 lioxo/A1FSW0mf	po:adjective
 livra/F0TB	po:noun
-lísito/A1FSW0	po:adjective
-líŧito/A1FSW0	po:adjective
+lísito/A1FS	po:adjective
+líŧito/A1FS	po:adjective
+lisitamente/FSW2	po:adverb
+liŧitamente/FSW2	po:adverb
 lodevol/F0U0mf	po:adjective
 logotenente/M0FSmf	po:noun
 lògo/M0FS	po:noun
@@ -38479,7 +38487,8 @@ lúgar/M0	po:noun
 ƚetisia/F0	po:noun
 ƚevorato/M0	po:noun
 ƚexiƚe/F0	po:noun
-ƚèsito/A1W1	po:adjective
+ƚèsito/A1	po:adjective
+ƚesitamente/W2	po:adverb
 ƚiaƚe/F0	po:adjective
 ƚibaraƚità	po:noun
 ƚiberaƚità	po:noun
@@ -38493,7 +38502,8 @@ lúgar/M0	po:noun
 ƚionsèƚo/M0	po:noun
 ƚioxo/A1mf	po:noun
 ƚioxo/A1W1mf	po:adjective
-ƚísito/A1W1	po:adjective
+ƚísito/A1	po:adjective
+ƚisitamente/W2	po:adverb
 ƚodevoƚe/F0	po:adjective
 ƚogotenente/M0mf	po:noun
 ƚoxamento/M0mf	po:noun
@@ -45600,6 +45610,7 @@ iu	po:interjection
 íkese	po:noun
 ínpito/M0FS	po:noun
 íntegro/A1	po:adjective
+integramente/FSW2	po:adverb
 ípsilon/F0U1TEmf	po:noun
 írios	po:noun
 jada/F0TB	po:noun
@@ -45631,10 +45642,6 @@ jexòla/F0TETB	po:noun
 jexuato/M0FSTB	po:noun
 jéstina/F0TB	po:noun
 jè/TB	po:interjection
-jèloxo/A1FSTBmf	po:noun
-jèloxo/A1FSW0TBmf	po:adjective
-jèƚoxo/A1TBmf	po:noun
-jèƚoxo/A1W1TBmf	po:adjective
 jètito/M0FSTB	po:noun
 jèto/M0FSTB	po:noun
 jiaspro/M0TB	po:noun
