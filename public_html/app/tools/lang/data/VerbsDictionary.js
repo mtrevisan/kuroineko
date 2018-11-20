@@ -6496,6 +6496,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tronbet",		"",			1,	5,	"a",	"1867",			"",
 "tronbeđ",		"",			1,	5,	"a",	"1509",			"",
 "tronbiđ",		"",			1,	5,	"a",	"1867",			"",
+"tronbon",		"",			1,	5,	"a",	"1851",			"",
 "tronbon",		"in",			1,	5,	"a",	"",				"Intaxar, rienpir.",
 "troneđ",		"",			1,	4,	"a",	"1980",			"",
 "tronk",			"",			1,	2,	"a",	"1854",			"",
