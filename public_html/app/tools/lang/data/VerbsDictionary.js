@@ -6462,7 +6462,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tres",			"",			1,	2,	"a",	"1775",			"Skancelar, sfregar.",
 "tres",			"des",		1,	2,	"a",	"1854",			"Intraversar.",
 "tres",			"in",			1,	2,	"a",	"1854",			"Xbarar, aserajar.",
-"tresend",		"",			1,	4,	"a",	"1829",			"Pontelar.",
+"trexend",		"",			1,	4,	"a",	"1829",			"Pontelar.",
 "tresk",			"",			1,	2,	"a",	"1867",			"Skerŧar.",
 "trespi",		"",			1,	2,	"a",	"1775",			"Armexar.",
 "treŧ",			"",			1,	2,	"a",	"1980",			"(bixiak) Atreŧar.",
