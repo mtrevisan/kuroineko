@@ -29,11 +29,11 @@ HOME http://parnodexmentegar.orgfree.com/
 LANG vec
 
 
-TRY eaoinrtlƚsdkpvmuèxgfàòbíhéŧójɉñcúSđLȽIPETKVAMDNFBRJGCOUĐXÀÈŦHɈÒÑÍÉÓÚ'-‒–
+TRY eaoinrtlƚsdkpvmuèxgfàòbíhéŧójɉñcúSđLȽIPETKVAMDNFBRJGCOUĐXÀÈŦHɈÒÑÍÉÓÚʼ-‒–
 
 KEY esdr|redft|trfg|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà-|àòèù-|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìèòà
 
-WORDCHARS -
+WORDCHARS -ʼ
 
 BREAK 2
 BREAK ‒	# figure dash
@@ -54,7 +54,7 @@ MAP oóòOÓÒ
 MAP uúUÚ
 
 # replace input characters
-ICONV 12
+ICONV 13
 ICONV dh đ
 ICONV Dh Đ
 ICONV fh f
@@ -67,6 +67,7 @@ ICONV nh ñ
 ICONV Nh Ñ
 ICONV th ŧ
 ICONV Th Ŧ
+ICONV ' ʼ
 
 # frequently switched character groups
 REP 119
@@ -81,7 +82,7 @@ REP u ú
 REP ù ú
 REP s x
 REP x s
-REP ' '_	# put a space after apostrophe
+REP ʼ ʼ_	# put a space after apostrophe
 REP - ‒	# minus sign to figure dash
 REP - –	# minus sign to en dash
 REP – ‒	# en dash to figure dash
@@ -195,7 +196,7 @@ FLAG long
 
 
 # FIXME
-# Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug. par tuti i mòdi e i tenpi fora ke inté 'l infenío, partiŧipio ativo, e xerundio
+# Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug. par tuti i mòdi e i tenpi fora ke inté ʼl infenío, partiŧipio ativo, e xerundio
 # Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug. intel partiŧipio pasivo ko la dexinenŧa in -st-, e intel xerundio
 
 # vèrbi -àr, -ér, -<is>ír, -ír, -<is>ír/-ír
@@ -1663,7 +1664,7 @@ SFX b2 ò ónmeƚo/P8 ò
 # vèrbi '-er inregolari ((a|apar|as|de|inkon|intra|kon|man|o|re|sos|tra)[ctv]èñer)
 # themeT1 + r/b0b1b2b3P0P1P2
 SFX b3 Y 27
-SFX b3 r nmene/P6P7P8 [èé']ñer
+SFX b3 r nmene/P6P7P8 [èéʼ]ñer
 SFX b3 èñer ièn/P0P1P2P3P4P5I0I2 [^c]èñer
 SFX b3 èñer iènme/P6P7 [^c]èñer
 SFX b3 èñer iènmene/P6P7P8 [^c]èñer
@@ -1688,7 +1689,7 @@ SFX b3 éñer orme/P6P7 [ct]éñer
 SFX b3 éñer ormene/P6P7P8 [ct]éñer
 SFX b3 ñer n/P0P1P2P3P4P5I0I2 èñer
 SFX b3 ñer nme/P6P7 èñer
-SFX b3 ñer nmene/P6P7P8 [èé']ñer
+SFX b3 ñer nmene/P6P7P8 [èéʼ]ñer
 SFX b3 ñer ntu/I3 èñer	is:interrogative
 
 # vèrbi '-er inregolari (déver)
@@ -6654,28 +6655,28 @@ PFX $3 0 Mi/Z0 .
 PFX $3 0 ki/Z0 .
 
 
-# paròle ŧonkàe a l' iniŧio
+# paròle ŧonkàe a lʼ iniŧio
 PFX ‘0 Y 7
-PFX ‘0 a ' a
-PFX ‘0 d ' d
-PFX ‘0 g ' g
-PFX ‘0 i ' i
-PFX ‘0 in ' int[aeé]
-PFX ‘0 kò ' kò
-PFX ‘0 v ' v
+PFX ‘0 a ʼ a
+PFX ‘0 d ʼ d
+PFX ‘0 g ʼ g
+PFX ‘0 i ʼ i
+PFX ‘0 in ʼ int[aeé]
+PFX ‘0 kò ʼ kò
+PFX ‘0 v ʼ v
 
 # paròle ŧonkàe a la fine
 SFX ʼ0 Y 13
-SFX ʼ0 a ' [^r]a
-SFX ʼ0 do ' do
-SFX ʼ0 e ' [^mtv]e
-SFX ʼ0 é ' inté
-SFX ʼ0 inté t' inté
-SFX ʼ0 me ' me
-SFX ʼ0 r ' r
-SFX ʼ0 ra ' ra
-SFX ʼ0 o ' [^dx]o
-SFX ʼ0 ove ó' dove
-SFX ʼ0 u ' u
-SFX ʼ0 te ' te
-SFX ʼ0 xo ' xo
+SFX ʼ0 a ʼ [^r]a
+SFX ʼ0 do ʼ do
+SFX ʼ0 e ʼ [^mtv]e
+SFX ʼ0 é ʼ inté
+SFX ʼ0 inté tʼ inté
+SFX ʼ0 me ʼ me
+SFX ʼ0 r ʼ r
+SFX ʼ0 ra ʼ ra
+SFX ʼ0 o ʼ [^dx]o
+SFX ʼ0 ove óʼ dove
+SFX ʼ0 u ʼ u
+SFX ʼ0 te ʼ te
+SFX ʼ0 xo ʼ xo
