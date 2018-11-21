@@ -6547,6 +6547,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧaltron",		"in",			1,	5,	"a",	"1867",			"",
 "ŧangol",		"in",			1,	1,	"g",	"1854",			"Inbratar, infangar, lordar.",
 "ŧank",			"in",			1,	1,	"g",	"1775",			"Inkurvar.",
+"ŧanp",			"",			1,	1,	"g",	"1851",			"",
 "ŧanp",			"in",			1,	1,	"g",	"1810",			"",
 "ŧanŧ",			"",			1,	1,	"g",	"1560",			"",
 "ŧap",			"",			1,	1,	"g",	"1560",			"",
