@@ -7000,6 +7000,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vil",			"",			4,	3,	"a",	"1775",			"",
 "vil",			"a",			4,	3,	"a",	"",				"",
 "vil",			"in",			4,	3,	"a",	"1775",			"",
+"vilan",			"",			1,	3,	"a",	"1881",			"",
 "vilan",			"in",			4,	5,	"a",	"1775",			"",
 "vimen",			"x",			1,	1,	"a",	"1590",			"Bàter kol vimini.",
 "vin",			"",			1,	1,	"a",	"1867",			"Rexentar la bote ko on fià de vin despò ʼverla lavàa.",
