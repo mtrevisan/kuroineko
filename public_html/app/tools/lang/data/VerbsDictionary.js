@@ -5134,6 +5134,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "rosiđ",			"",			1,	3,	"a",	"1829",			"Trar al roso.",
 "roseđ",			"",			1,	3,	"a",	"1854",			"",
 "rost",			"",			1,	1,	"a",	"1829",			"Far na ròsta.",
+"rost",			"a",			1,	1,	"a",	"1896",			"",
+"rost",			"in",			1,	1,	"a",	"1896",			"",
 "rost",			"",			4,	4,	"a",	"1464",			"(franko) Far na rosta.",
 "rostel",		"",			1,	4,	"g",	"1847",			"Restelar.",
 "rot",			"de",			1,	1,	"a",	"",				"",
