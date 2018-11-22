@@ -241,6 +241,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "balanŧ",		"x",			1,	3,	"g",	"",				"",
 "balb",			"in",			1,	1,	"g",	"",				"Balbetar, incanpar.",
 "balbet",		"",			1,	4,	"a",	"1854",			"",
+"balbot",		"",			1,	4,	"a",	"1896",			"",
 "bald",			"x",			4,	4,	"a",	"1796",			"",
 "baleg",			"",			1,	1,	"g",	"1867",			"Vacilar, ondeđar.",
 "baleg",			"in",			1,	1,	"g",	"1775",			"Akalapiar, invilupar.",
