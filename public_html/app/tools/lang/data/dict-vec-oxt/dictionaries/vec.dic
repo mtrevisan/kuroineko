@@ -1942,8 +1942,8 @@ inbójoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inbojar
 inboɉar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 inboɉo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:inboɉar
 inbóɉoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inboɉar
-bojir/a0a1a2d0d1d2P0P1P2.0r0	po:verb ts:infinitive_simple
-boɉir/a0a1a2d0d1d2P0P1P2.0r0	po:verb ts:infinitive_simple
+bojir/a0a1a2d0d1d2P0P1P2.0r0r5	po:verb ts:infinitive_simple
+boɉir/a0a1a2d0d1d2P0P1P2.0r0r5	po:verb ts:infinitive_simple
 sobojir/a0a1a2d0d1d2P0P1P2r0	po:verb ts:infinitive_simple
 soboɉir/a0a1a2d0d1d2P0P1P2r0	po:verb ts:infinitive_simple
 xbojentar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
@@ -1997,6 +1997,12 @@ bóloe/a0a1I1+0.0	po:verb ts:indicative_present is:interrogative st:bolar
 boƚar/a0a2P0P2+0.0r5r8	po:verb ts:infinitive_simple
 boƚo/a0a2P0P2I0+0.0	po:verb ts:indicative_present st:boƚar
 bóƚoe/a0a2I1+0.0	po:verb ts:indicative_present is:interrogative st:boƚar
+bolegar/a0a1P0P1r0	po:verb ts:infinitive_simple
+bólego/a0a1P0P1FSI0	po:verb ts:indicative_present st:bolegar
+bólegoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:bolegar
+boƚegar/a0a2P0P2r1	po:verb ts:infinitive_simple
+bóƚego/a0a2P0P2I0	po:verb ts:indicative_present st:boƚegar
+bóƚegoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:boƚegar
 inboloñar/a0a1P0P1	po:verb ts:infinitive_simple
 inbolòño/a0a1P0P1FSI0	po:verb ts:indicative_present st:inboloñar
 inbolòñoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:inboloñar
@@ -2053,6 +2059,7 @@ inbonbàxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inbonbaxa
 inbonbegar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 inbónbego/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:inbonbegar
 inbónbegoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inbonbegar
+bonbir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 bondar/a0a1a2P0P1P2@0	po:verb ts:infinitive_simple
 bondo/a0a1a2P0P1P2FSI0@0	po:verb ts:indicative_present st:bondar
 bóndoe/a0a1a2I1@0	po:verb ts:indicative_present is:interrogative st:bondar
@@ -2078,6 +2085,9 @@ borar/a0a1a2P0P1P2*0r0r5r7	po:verb ts:infinitive_simple
 bòro/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:borar
 bòroe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:borar
 borir/a0a1a2d0d1d2P0P1P2*0	po:verb ts:infinitive_simple
+boranar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+borano/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:boranar
+borànoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:boranar
 boraskar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 borasko/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:boraskar
 boràskoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:boraskar
@@ -27773,7 +27783,7 @@ bokal/F0TFU0	po:noun
 bolincèra/M0	po:adverb
 bolpato/A1FS	po:noun
 bolpe/F0FS(4	po:noun
-bonba/F0&0	po:noun
+bonba/F0&0q0	po:noun
 bonbaxin/A2	po:noun
 bonbaxo/M0FS	po:noun
 bonbo/A1	po:adjective
@@ -32099,7 +32109,7 @@ bokasin/M0	po:adjective
 bokàden/F0U1mf	po:noun
 bokàđen/F0U1mf	po:noun
 bokàxen/F0U1mf	po:noun
-bokin/M0	po:noun
+bokin/A1	po:noun
 bokoleto/M0FSTEmf	po:noun
 bokonŧin/M0TE	po:noun
 bol/M0U1TEmf	po:noun
@@ -52079,8 +52089,30 @@ bobana/F0	po:noun
 bobon/F0U0mf	po:noun
 feŧion/F0TEU0mf	po:noun
 juto/M0TB	po:noun
+bokè	po:noun
+bokon/F0U0mf	po:noun
+bofo/A1mf	po:adjective
+bojegana/F0	po:noun
+boɉegana/F0	po:noun
+bojorèla/F0TE	po:noun
+boɉorèla/F0TE	po:noun
+boledo/M0Y0mf	po:noun
+boƚedo/M0Y0mf	po:noun
+bólgar/M0	po:noun
+bolsanèl/M0U0TE	po:noun
+bolsonèl/M0U0TE	po:noun
+bonbonièra/F0	po:noun
+boranoxo/A1FSmf	po:noun
+boranoxo/A1FSW0mf	po:adjective
+bordèl/M0U0TE	po:noun
+bordelon/F0TEU0mf	po:adjective
+bordeloxo/A1FSmf	po:noun
+bordeloxo/A1FSW0mf	po:adjective
+bordeƚoxo/A1mf	po:noun
+bordeƚoxo/A1W1mf	po:adjective
+bordonal/F0TFU0	po:noun
 
 
-/ 52
+/ 55
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
