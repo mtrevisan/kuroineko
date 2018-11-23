@@ -555,6 +555,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "blater",		"",			1,	2,	"g",	"1854",			"",
 "blok",			"",			1,	2,	"g",	"1980",			"(bixiak)",
 "bo",				"x",			1,	1,	"a",	"1998",			"Ŧéder, roinar a vale.",
+"boas",			"",			1,	2,	"g",	"1896",			"Inbovinar.",
 "boc",			"",			1,	1,	"g",	"",				"",
 "boc",			"dex",		1,	1,	"g",	"1854",			"Sfocar, spurgar la foce de i fiumi.",
 "boc",			"x",			1,	1,	"g",	"1775",			"",
