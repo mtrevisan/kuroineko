@@ -684,6 +684,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "brag",			"x",			1,	2,	"g",	"1590",			"Fra na bravada.",
 "bragañ",		"",			1,	4,	"g",	"1560",			"Bragolar, bransikar, tor in man.",
 "bragañ",		"x",			1,	4,	"g",	"1980",			"Maneđar in maniera conpa, palpexar.",
+"bragas",		"",			1,	4,	"a",	"1896",			"Bravar.",
 "brages",		"dex",		1,	4,	"a",	"1854",			"Xbragar.",
 "brages",		"in",			1,	4,	"a",	"1854",			"",
 "brages",		"x",			1,	4,	"a",	"1854",			"Xbragar.",
