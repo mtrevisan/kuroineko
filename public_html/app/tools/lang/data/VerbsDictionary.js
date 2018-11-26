@@ -2418,6 +2418,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kaldier",		"",			1,	5,	"a",	"1829",			"",
 "kalef",			"",			1,	3,	"g",	"1851",			"Iskernir.",
 "kalibr",		"",			1,	1,	"g",	"",				"",
+"kalier",		"",			1,	5,	"a",	"1896",			"",
 "kalig",			"",			1,	1,	"g",	"1854",			"",
 "kaliv",			"",			1,	3,	"a",	"2011",			"Piovixenar.",
 "kaliv",			"s",			1,	3,	"a",	"1980",			"Piovixenar.",
