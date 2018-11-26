@@ -780,6 +780,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bronkol",		"x",			1,	2,	"a",	"1560",			"Destakar i xermoji ke i kava rotondità al ramo.",
 "brontol",		"",			1,	2,	"a",	"1775",			"",
 "brox",			"in",			1,	2,	"g",	"1867",			"",
+"broxem",		"",			1,	2,	"g",	"1896",			"Brinar.",
 "bruf",			"x",			1,	2,	"a",	"1775",			"Spruŧar.",
 "brul",			"in",			1,	2,	"a",	"1775",			"Inpacar, méter le manete, katurar.",
 "bruleg",		"",			1,	2,	"a",	"",				"",
