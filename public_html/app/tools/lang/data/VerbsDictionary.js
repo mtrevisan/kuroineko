@@ -744,6 +744,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "brindol",		"x",			1,	2,	"a",	"1775",			"",
 "brink",			"",			1,	2,	"a",	"1775",			"Aferar, germir ko forŧa.",
 "briñ",			"x",			1,	2,	"a",	"1775",			"Xviñar.",
+"briskol",		"",			1,	2,	"a",	"1896",			"Xgorlar.",
 "briŧol",		"x",			1,	2,	"a",	"1980",			"Deventar briŧolà.",
 "briv",			"",			1,	2,	"a",	"1854",			"Abriviar.",
 "brix",			"x",			1,	2,	"a",	"1829",			"Èser temerario.",
