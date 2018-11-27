@@ -2631,7 +2631,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kastañ",		"",			1,	4,	"g",	"1829",			"",
 "kastel",		"",			1,	4,	"g",	"1829",			"",
 "kastel",		"in",			1,	4,	"g",	"1854",			"",
-"kastig",		"",			1,	1,	"g",	"1775",			"",
+"kastig",		"",			1,	4,	"a",	"1775",			"",
 "kastr",			"",			1,	1,	"g",	"1775",			"",
 "kastr",			"in",			1,	1,	"g",	"1775",			"",
 "kastron",		"",			1,	5,	"a",	"1852",			"Far on xbalio.",
