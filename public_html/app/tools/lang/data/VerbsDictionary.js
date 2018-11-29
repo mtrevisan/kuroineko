@@ -2549,6 +2549,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kapon",			"",			1,	3,	"a",	"1867",			"",
 "kapon",			"in",			1,	3,	"a",	"1775",			"",
 "kapon",			"s",			1,	3,	"a",	"1775",			"Kastrar le galine.",
+"kapriŧi",		"",			1,	4,	"a",	"1896",			"",
 "kapriŧi",		"des",		1,	4,	"a",	"1810",			"",
 "kapriŧi",		"in",			1,	4,	"a",	"1775",			"Inamorar, invagir.",
 "kapriŧi",		"s",			1,	4,	"a",	"1867",			"",
