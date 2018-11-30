@@ -2656,6 +2656,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "katekiđ",		"",			1,	5,	"a",	"1775",			"Skovrir el sentimento de un.",
 "katig",			"in",			1,	1,	"g",	"1854",			"Skonpijar.",
 "kativ",			"",			1,	3,	"a",	"1867",			"",
+"katram",		"",			1,	4,	"g",	"1896",			"",
 "katram",		"des",		1,	4,	"g",	"1775",			"",
 "katram",		"in",			1,	4,	"g",	"1775",			"",
 "katon",			"s",			1,	3,	"a",	"1775",			"Aricar el muro, preparar el muro par lʼ ultima intenacatura.",
