@@ -913,6 +913,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "cex",			"",			1,	1,	"a",	"1867",			"Frekuentar cexe.",
 "cicol",			"",			1,	1,	"a",	"1775",			"Cacarar, cakolar.",
 "cijar",			"",			1,	1,	"a",	"1851",			"Penetar lin o kàneva",
+"cik",			"",			1,	1,	"a",	"1896",			"",
+"cik",			"s",			1,	1,	"a",	"",				"",
 "cikar",			"s",			1,	1,	"a",	"1854",			"",
 "cinc",			"",			1,	1,	"a",	"1852",			"Atilar, rafaŧonar.",
 "cincin",		"",			1,	4,	"a",	"1980",			"(bixiak) Adobar.",
