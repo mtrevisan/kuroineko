@@ -9269,7 +9269,7 @@ koƚorar/a0a2P0P2-0	po:verb ts:infinitive_simple
 koƚoro/a0a2P0P2I0-0	po:verb ts:indicative_present st:koƚorar
 koƚóroe/a0a2I1-0	po:verb ts:indicative_present is:interrogative st:koƚorar
 kolorir/a0a1d0d1P0P1+0-0*0r7	po:verb ts:infinitive_simple
-koƚorir/a0a2d0d2P0P2+0-0*0r7	po:verb ts:infinitive_simple
+koƚorir/a0a2d0d2P0P2+0-0*0r8	po:verb ts:infinitive_simple
 kolpar/a0a1a2P0P1P2+0-0*0	po:verb ts:infinitive_simple
 kolpo/a0a1a2P0P1P2FSI0+0-0*0	po:verb ts:indicative_present st:kolpar
 kólpoe/a0a1a2I1+0-0*0	po:verb ts:indicative_present is:interrogative st:kolpar
@@ -9495,6 +9495,10 @@ skontrar/a0a1a2P0P1P2.0r5	po:verb ts:infinitive_simple
 skontro/a0a1a2P0P1P2I0.0	po:verb ts:indicative_present st:skontrar
 skóntroe/a0a1a2I1.0	po:verb ts:indicative_present is:interrogative st:skontrar
 skontrato/A1FS.0	po:verb ts:participle_perfect_strong st:skontrar
+kontrariar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+kontrario/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:kontrariar
+kontràrioe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:kontrariar
+kontrariato/A1FS	po:verb ts:participle_perfect_strong st:kontrariar
 kontrolar/a0a1P0P1v0	po:verb ts:infinitive_simple
 kontròlo/a0a1P0P1FSI0	po:verb ts:indicative_present st:kontrolar
 kontròloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:kontrolar
@@ -21459,9 +21463,9 @@ tórkoƚoe/a0a2I1-0	po:verb ts:indicative_present is:interrogative st:torkoƚar
 tormentar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 tormento/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:tormentar
 torméntoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:tormentar
-tornar/a0a1a2P0P1P2+0*0.0	po:verb ts:infinitive_simple
-torno/a0a1a2P0P1P2FSI0+0*0.0	po:verb ts:indicative_present st:tornar
-tórnoe/a0a1a2I1+0*0.0	po:verb ts:indicative_present is:interrogative st:tornar
+tornar/a0a1a2P0P1P2+0*0.0:0	po:verb ts:infinitive_simple
+torno/a0a1a2P0P1P2FSI0+0*0.0:0	po:verb ts:indicative_present st:tornar
+tórnoe/a0a1a2I1+0*0.0:0	po:verb ts:indicative_present is:interrogative st:tornar
 tornir/a0a1a2d0d1d2P0P1P2r7	po:verb ts:infinitive_simple
 torniar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 tornio/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:torniar
@@ -29075,6 +29079,8 @@ kontrario/W0-0	po:adverb
 kontrastivo/A1FSW0	po:adjective
 kontra	po:adverb
 kontrofegura/F0	po:noun
+kontrovoja	po:adverb
+kontrovoɉa	po:adverb
 kontrovòja	po:adverb
 kontrovòɉa	po:adverb
 kontro	po:adverb
@@ -36826,7 +36832,7 @@ vergedin/A2	po:noun
 vergeđin/A2	po:noun
 vergexin/A2	po:noun
 vergòña/F0	po:noun
-veriada/F0Y0Y1	po:noun
+veriada/F0Y0Y1^5	po:noun
 veriòl/M0U0TE	po:noun
 veriòla/F0TE	po:noun
 verígola/F0TE	po:noun
@@ -43471,7 +43477,6 @@ apalto/M0FS	po:noun
 apèl/M0U0TE	po:noun
 apiko/M0FS	po:noun
 aponto/FS	po:adverb
-aponto/M0FSmf	po:noun
 apoplesía/F0	po:noun
 apoplètego/A1FS	po:adjective
 apoplètiko/A1FS	po:adjective
@@ -44483,7 +44488,7 @@ deŧixamente/FSW2	po:adverb
 devario/M0	po:noun
 dexabilié	po:adverb
 dexabiƚié	po:adverb
-dexapunto/M0FS	po:noun
+dexaponto/M0FSmf	po:noun
 dexbratakaxa/F0	po:noun
 dexbratakàmara/F0	po:noun
 dexegual/F0TFU0	po:adjective
@@ -48352,7 +48357,7 @@ pontiɉoxo/A1FSmf	po:noun
 pontiɉoxo/A1FSW0mf	po:adjective
 pontixo/A1FS	po:adjective
 ponto/A1FSmf	po:adjective
-ponto/M0FS<0<1mf	po:noun
+ponto/M0FS<0<1@0^4mf	po:noun
 pontonèr/M0V0	po:noun
 pontonèra/F0V0	po:noun
 popièr/M0V0	po:noun
@@ -52311,12 +52316,21 @@ sesin/A2	po:adjective
 komaco/M0	po:noun
 komediante/M0FS	po:noun
 komesura/F0	po:noun
-konpareso/A1	po:noun
+konpareso/A1mf	po:noun
 kónprita/F0	po:noun
 kondiŧion/F0TEU0mf	po:noun
 konfesionario/A1	po:adjective
+kontarol/M0U0V0mf	po:noun
+kontarola/F0V0	po:noun
+kontaroƚa/F0V1	po:noun
+kontaroƚo/M0V1mf	po:noun
+kontrabando/M0	po:noun
+kontrasto/M0	po:noun
+kontrastoxo/A1FSmf	po:noun
+kontrastoxo/A1FSW0mf	po:adjective
+verada/F0Y0Y1^5	po:noun
 
 
-/ 87
+/ 88
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
