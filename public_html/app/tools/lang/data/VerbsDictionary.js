@@ -3018,6 +3018,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "krikol",		"",			1,	2,	"a",	"1867",			"Krekolar.",
 "krikol",		"s",			1,	2,	"a",	"1775",			"Skrikiolar.",
 "kriol",			"",			1,	3,	"g",	"1854",			"Krivelar.",
+"krist",			"",			1,	2,	"a",	"1896",			"",
 "kriteg",		"",			1,	2,	"a",	"1980",			"",
 "krivel",		"",			1,	4,	"g",	"1775",			"",
 "kro",			"",			1,	2,	"a",	"1560",			"Apasir, krovar.",
