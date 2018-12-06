@@ -1330,6 +1330,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fadig",			"",			1,	3,	"a",	"1590",			"",
 "fadig",			"s",			1,	3,	"a",	"1775",			"",
 "fael",			"",			1,	2,	"g",	"1560",			"",
+"fagot",			"",			1,	3,	"g",	"1896",			"",
 "fagot",			"in",			1,	3,	"g",	"1775",			"",
 "faig",			"",			1,	2,	"a",	"1590",			"Fadigar.",
 "fait",			"",			1,	2,	"a",	"1415",			"",
