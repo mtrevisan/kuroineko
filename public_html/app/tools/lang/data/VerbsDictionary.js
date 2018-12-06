@@ -6725,6 +6725,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧirkond",		"",			1,	4,	"a",	"1980",			"",
 "ŧirku",			"",			4,	5,	"a",	"1775",			"",
 "ŧit",			"",			1,	1,	"a",	"1775",			"Camar in đudisio.",
+"ŧit",			"e",			1,	-1,"g",	"1896",			"",
 "ŧit",			"",			4,	3,	"a",	"1775",			"",
 "ŧiŧon",			"",			1,	3,	"a",	"1829",			"Skarmejar.",
 "ŧiviliđ",		"",			1,	5,	"a",	"1980",			"",
