@@ -1387,6 +1387,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fas",			"s",			1,	1,	"g",	"1980",			"",
 "fasin",			"",			1,	3,	"a",	"1775",			"Far su fasine.",
 "fastid",		"in",			4,	6,	"a",	"1980",			"",
+"fastidi",		"",			1,	4,	"a",	"1896",			"",
 "fat",			"des",		1,	1,	"g",	"1472",			"",
 "fat",			"in",			4,	3,	"a",	"1855",			"Inmarŧir.",
 "fataliđ",		"",			1,	5,	"a",	"1867",			"Rénder dexgraŧià.",
