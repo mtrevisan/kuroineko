@@ -1619,6 +1619,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fit",			"suba",		1,	1,	"a",	"1867",			"",
 "fiŧi",			"bene",		1,	1,	"a",	"1375",			"",
 "fiŧi",			"re",			1,	1,	"a",	"1775",			"Restorar.",
+"fiub",			"",			1,	2,	"a",	"1896",			"",
 "fiub",			"des",		1,	2,	"a",	"1854",			"Kavar la fibia, xlacar.",
 "fiub",			"in",			1,	2,	"a",	"1854",			"Méter la fibia, inlacar.",
 "flèt",			"",			3,	2,	"g",	"1980",			"",
