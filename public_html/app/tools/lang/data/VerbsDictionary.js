@@ -1582,6 +1582,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fin",			"",			4,	3,	"a",	"1292",			"",
 "fin",			"de",			4,	3,	"a",	"",				"",
 "fin",			"s",			4,	3,	"a",	"1727",			"",
+"finfol",		"",			1,	1,	"a",	"1896",			"",
 "fínx",			"",			3,	1,	"a",	"1529",			"Far finta.",
 "fiok",			"",			1,	2,	"g",	"1327",			"Kaskar de la neve.",
 "fiok",			"in",			1,	2,	"g",	"1775",			"",
