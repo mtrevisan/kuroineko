@@ -6221,6 +6221,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ténd",			"des",		3,	1,	"a",	"1560",			"",
 "ténd",			"en",			3,	1,	"a",	"1376",			"",
 "ténd",			"es",			3,	1,	"a",	"1521",			"",
+"ténd",			"frain",		3,	1,	"a",	"1896",			"",
 "ténd",			"in",			3,	1,	"a",	"XIII",			"Kapir, konprénder, sentir dixer, vèñer a konosenŧa.",
 "ténd",			"perin",		3,	1,	"a",	"1867",			"",
 "ténd",			"pre",		3,	1,	"a",	"1454",			"",
