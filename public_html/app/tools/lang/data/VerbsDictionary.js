@@ -1879,6 +1879,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fureg",			"",			1,	1,	"a",	"1321",			"Frugar.",
 "fureg",			"s",			1,	1,	"a",	"1560",			"Frugar.",
 "furf",			"",			1,	1,	"a",	"1980",			"Frugar.",
+"furi",			"",			1,	1,	"a",	"1896",			"",
 "furi",			"in",			1,	1,	"a",	"1854",			"",
 "fusk",			"o",			1,	1,	"a",	"1867",			"",
 "fusteg",		"",			1,	1,	"a",	"1980",			"Molestar.",
