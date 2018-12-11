@@ -2370,6 +2370,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 
 "ɉandol",		"in",			4,	6,	"a",	"1775",			"Intorpidir.",
 "ɉanŧ",			"x",			1,	1,	"g",	"1852",			"Xbianŧar.",
+"ɉar",			"",			1,	1,	"g",	"1896",			"",
 "ɉar",			"in",			1,	1,	"g",	"1775",			"Arenar.",
 "ɉarm",			"in",			1,	1,	"g",	"1851",			"(termine de marina) Fatar, curmar.",
 "ɉaŧ",			"",			1,	1,	"g",	"1560",			"",

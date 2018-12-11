@@ -7913,12 +7913,12 @@ xjànsoe/a0a1a2I1TB	po:verb ts:indicative_present is:interrogative st:xjansar
 xjanŧar/a0a1P0P1TB	po:verb ts:infinitive_simple
 xjanŧo/a0a1P0P1FSI0TB	po:verb ts:indicative_present st:xjanŧar
 xjànŧoe/a0a1I1TB	po:verb ts:indicative_present is:interrogative st:xjanŧar
-injarar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-injaro/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:injarar
-injàroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:injarar
-inɉarar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-inɉaro/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:inɉarar
-inɉàroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inɉarar
+jarar/a0a1a2P0P1P2-0	po:verb ts:infinitive_simple
+jaro/a0a1a2P0P1P2FSI0-0	po:verb ts:indicative_present st:jarar
+jàroe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:jarar
+ɉarar/a0a1a2P0P1P2-0	po:verb ts:infinitive_simple
+ɉaro/a0a1a2P0P1P2FSI0-0	po:verb ts:indicative_present st:ɉarar
+ɉàroe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:ɉarar
 injarmar/a0a1a2P0P1P2r5	po:verb ts:infinitive_simple
 injarmo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:injarmar
 injàrmoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:injarmar
@@ -24610,7 +24610,7 @@ xarmòjoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xarmojar
 xarmoɉar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 xarmòɉo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xarmoɉar
 xarmòɉoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xarmoɉar
-xetar/a0a1a2P0P1P2.0r2r3	po:verb ts:infinitive_simple
+xetar/a0a1a2P0P1P2.0r2r3r5	po:verb ts:infinitive_simple
 xèto/a0a1a2P0P1P2FSI0.0	po:verb ts:indicative_present st:xetar
 xètoe/a0a1a2I1.0	po:verb ts:indicative_present is:interrogative st:xetar
 proxetar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
@@ -25239,6 +25239,14 @@ Matío/Z0	po:proper_noun
 Màlgari/Z0	po:proper_noun
 Màsimo/FSZ0	po:proper_noun
 Màuro/FSZ0	po:proper_noun
+Jakomina/TBZ0	po:proper_noun
+Jakomin/TBZ0	po:proper_noun
+Gitana/Z0	po:proper_noun
+Gitan/Z0	po:proper_noun
+Xeròlimo/Z0	po:proper_noun
+Xeròƚimo/Z0	po:proper_noun
+Jeròlimo/TBZ0	po:proper_noun
+Jeròƚimo/TBZ0	po:proper_noun
 Mena/Z0	po:proper_noun
 Menegeta/Z0	po:proper_noun
 Menegeto/FSZ0	po:proper_noun
@@ -35151,7 +35159,7 @@ pitarèra/F0V0	po:noun
 piton/A2U0mf	po:noun
 pitor/A2mf	po:noun
 pitòka/F0	po:noun
-pitòko/M0FS(4	po:noun
+pitòko/M0FSs0(4	po:noun
 pitura/F0&0<0<1	po:noun
 piŧa/F0TE*0	po:noun
 piŧegon/F0U0mf	po:noun
@@ -37147,10 +37155,14 @@ xixoƚèr/M0V1	po:noun
 xixoƚèra/F0V1	po:noun
 xíxola/F0TE	po:noun
 xjosadura/F0r5&0	po:noun
-xjosarola/F0TETB	po:noun
-xjosaròla/F0TETB	po:noun
-xjoŧarola/F0TB	po:noun
-xjoŧaròla/F0TB	po:noun
+josarola/F0TE*0	po:noun
+josaròla/F0TE*0	po:noun
+joŧarola/F0*0	po:noun
+joŧaròla/F0*0	po:noun
+ɉosarola/F0TE*0	po:noun
+ɉosaròla/F0TE*0	po:noun
+ɉoŧarola/F0*0	po:noun
+ɉoŧaròla/F0*0	po:noun
 xlandron/A2U0mf	po:adjective
 xlandron/A2U0mf	po:noun
 xlanŧo/M0FSTE	po:noun
@@ -40156,7 +40168,6 @@ xgarafon/A2U0mf	po:noun
 xgranfion/F0U0mf	po:noun
 xluxin/M0	po:noun
 / Angeli, Gaetano. Piccolo vocabolario veronese e toscano. Verona, 1821.
-ʼveta/F0	po:noun st:gaveta
 akuarèla/F0TE	po:noun
 akuerèla/F0TE	po:noun
 anarin/M0	po:noun
@@ -40302,7 +40313,7 @@ gabian/A2U0	po:noun
 ganbarèla/F0TE*0	po:noun
 garante/M0FS	po:noun
 garofolin/M0TE	po:noun
-gaveta/F0	po:noun al:ʼveta
+gaveta/F0‘0	po:noun
 gaxol/M0U0TEmf	po:noun
 godon/A2U0mf	po:noun
 gondolièr/M0V0	po:noun
@@ -45825,9 +45836,9 @@ jirometa/F0TB	po:noun
 jomo/M0FSTB&0	po:noun
 jonko/M0FSTB	po:noun
 joso/M0FS&0mf	po:noun
-josona/F0TB(2	po:noun
+joson/F0TB(4mf	po:noun
 joŧo/M0FS&0mf	po:noun
-joŧona/F0TB(2	po:noun
+joŧon/F0TB(4mf	po:noun
 jòko/M0FSTB	po:noun
 jòstro/M0TB	po:noun
 jus/TB	po:noun
@@ -48296,7 +48307,6 @@ pistoƚexe/M0mf	po:noun
 piston/F0U0mf	po:noun
 pistonŧin/M0TE	po:noun
 pistòjo/M0FSTE	po:noun
-pitokixmo/M0FS	po:noun
 piŧegeto/M0FSmf	po:noun
 piŧegòto/M0FS	po:noun
 piŧikàñol/A1U1mf	po:noun
@@ -51338,7 +51348,7 @@ xgargatèla/F0TE	po:noun
 xgarlejo/M0FSTE	po:noun
 xgarliko/M0FS	po:noun
 xgiba/F0	po:noun
-xgiño/M0FS&0	po:noun
+giño/M0FS&0*0	po:noun
 xgol/M0U1TEmf	po:noun
 xgonbro/M0	po:noun
 xgorlon/F0U0mf	po:noun
@@ -52557,8 +52567,22 @@ sesin/A2	po:adjective
 ŧeŧin/A2	po:adjective
 verada/F0Y0Y1^5	po:noun
 xòvo/M0&2&3	po:noun
+gatolar/M0	po:noun
+gatoƚar/M0	po:noun
+gatomào	po:adverb
+gatopardo/M0FS	po:noun
+gatúsola/F0TE	po:noun
+jelsomin/M0TB	po:noun
+xèma/F0	po:noun
+gebo/M0	po:noun
+jaketin/M0TB	po:noun
+jandèr/M0TBV0	po:noun
+jandèra/F0TBV0	po:noun
+josolòto/M0TBFS	po:noun
+josoƚòto/M0TB	po:noun
+jòstra/F0TB	po:noun
 
 
-/ 128
+/ 130
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
