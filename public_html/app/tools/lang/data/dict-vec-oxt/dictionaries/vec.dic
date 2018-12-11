@@ -6333,6 +6333,9 @@ fúdar/b0b1P0P1.0	po:verb ts:infinitive_simple
 fudarò/b0b1I0.0	po:verb ts:indicative_future st:fúdar
 fúxar/b0b1b2P0P1P2.0	po:verb ts:infinitive_simple
 fuxarò/b0b1b2I0.0	po:verb ts:indicative_future st:fúxar
+fuxar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+fuxo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:fuxar
+fúxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:fuxar
 fuxelar/a0a1P0P1	po:verb ts:infinitive_simple
 fuxèlo/a0a1P0P1FSI0	po:verb ts:indicative_present st:fuxelar
 fuxèloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:fuxelar
@@ -6363,12 +6366,12 @@ xgabànoe/a0a1a2I1,0	po:verb ts:indicative_present is:interrogative st:xgabanar
 gabiar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 gabio/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:gabiar
 gàbioe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:gabiar
-dexgajar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-dexgajo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:dexgajar
-dexgàjoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:dexgajar
-dexgaɉar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-dexgaɉo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:dexgaɉar
-dexgàɉoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:dexgaɉar
+gajar/a0a1a2P0P1P2+0	po:verb ts:infinitive_simple
+gajo/a0a1a2P0P1P2FSI0+0	po:verb ts:indicative_present st:gajar
+gàjoe/a0a1a2I1+0	po:verb ts:indicative_present is:interrogative st:gajar
+gaɉar/a0a1a2P0P1P2+0	po:verb ts:infinitive_simple
+gaɉo/a0a1a2P0P1P2FSI0+0	po:verb ts:indicative_present st:gaɉar
+gàɉoe/a0a1a2I1+0	po:verb ts:indicative_present is:interrogative st:gaɉar
 ingajar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 ingajo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:ingajar
 ingàjoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:ingajar
@@ -27063,6 +27066,8 @@ dorè	po:noun is:singular_masculine
 èndego/M0FS	po:noun is:singular_masculine st:éndego
 feranto/A1FS	po:adjective is:singular_masculine
 feranto/A1FS	po:noun is:singular_masculine
+fusia/F0	po:adjective is:singular_masculine
+fusia/F0	po:noun is:singular_masculine
 grixa/F0&0	po:adjective is:singular_femenine
 grixa/F0&0	po:noun is:singular_femenine
 grixdefèr/M0	po:adjective is:singular_masculine
@@ -28562,7 +28567,7 @@ futur/A1	po:adjective
 futur/A1	po:noun
 fuxil/F0TF	po:noun
 fuxion/F0U0-0mf	po:noun
-gaban/A2U0&2&3	po:noun
+gaban/A2U0&2&3(0	po:noun
 gabia/F0&0(2	po:noun
 gadía/F0	po:noun
 gado/M0FS&0(0	po:noun
@@ -33183,7 +33188,7 @@ guèrŧa/F0TE*0	po:adjective
 guèrŧo/M0FSTE*0	po:adjective
 guè	po:noun
 gufo/A1	po:adjective
-gufo/M0	po:noun
+gufo/M0FS	po:noun
 guinsajo/M0FSTE*0	po:noun
 guinŧajo/M0FSTE*0	po:noun
 guò	po:noun
@@ -40805,7 +40810,7 @@ turbian/M0U0	po:noun
 ŧivèl/M0TBU0	po:noun
 ŧíngol/M0U1mf	po:noun
 ŧónkol/M0TBU1mf	po:noun
-ŧufo/M0TB&0	po:noun
+ŧufo/M0TBFS&0	po:noun
 ucarol/M0U0V0mf	po:noun
 ucarola/F0V0	po:noun
 ucaroƚa/F0V1	po:noun
@@ -52006,7 +52011,7 @@ xbiankidin/A2	po:noun
 xbiankiđin/A2	po:noun
 xbiankixin/A2	po:noun
 xbofio/A1	po:noun
-xbrufo/M0	po:noun
+xbrufo/M0FS	po:noun
 xemè	po:noun
 xendeneta/F0	po:noun
 xendenèla/F0TE	po:noun
@@ -52207,7 +52212,7 @@ coato/A1FS	po:adjective
 codin/M0	po:noun
 coè	po:noun
 cóndol/M0U1TEmf	po:noun
-cufo/M0	po:noun
+cufo/M0FS	po:noun
 cupinara/F0	po:noun
 cúpexe	po:interjection
 dalia/F0TE	po:noun
@@ -52523,8 +52528,14 @@ sesin/A2	po:adjective
 ŧeŧin/A2	po:adjective
 verada/F0Y0Y1^5	po:noun
 xòvo/M0&2&3	po:noun
+gajufo/M0FS	po:adjective
+gajufo/M0FS	po:noun
+gaɉufo/M0FS	po:adjective
+gaɉufo/M0FS	po:noun
+galeòto/A1FS	po:noun
+gaƚeòto/A1FS	po:noun
 
 
-/ 125
+/ 126
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
