@@ -3151,9 +3151,6 @@ defàmoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:defamar
 prodegar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 pròdego/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:prodegar
 pròdegoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:prodegar
-deklinar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-deklino/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:deklinar
-deklínoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:deklinar
 dekorar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 dekòro/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:dekorar
 dekòroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:dekorar
@@ -9170,6 +9167,12 @@ esklàmoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:esklamar
 proklamar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 proklamo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:proklamar
 proklàmoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:proklamar
+deklinar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+deklino/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:deklinar
+deklínoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:deklinar
+inklinar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+inklino/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:inklinar
+inklínoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inklinar
 klonar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 klono/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:klonar
 klónoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:klonar
@@ -9326,6 +9329,8 @@ kòkoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:kokolar
 kokoƚar/a0a2P0P2v0	po:verb ts:infinitive_simple
 kòkoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:kokoƚar
 kòkoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:kokoƚar
+inkokolir/a0a1d0d1P0P1	po:verb ts:infinitive_simple
+inkokoƚir/a0a2d0d2P0P2	po:verb ts:infinitive_simple
 kokonar/a0a1a2P0P1P2+0-0*0r0	po:verb ts:infinitive_simple
 kokono/a0a1a2P0P1P2FSI0+0-0*0	po:verb ts:indicative_present st:kokonar
 kokónoe/a0a1a2I1+0-0*0	po:verb ts:indicative_present is:interrogative st:kokonar
@@ -9450,6 +9455,12 @@ skonbato/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:skonbàter
 skonbàtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:skonbàter
 skonbàtar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 skonbatarò/b0b1b2I0	po:verb ts:indicative_future st:skonbàtar
+inkonbensar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+inkonbenso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:inkonbensar
+inkonbénsoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inkonbensar
+inkonbenŧar/a0a1P0P1	po:verb ts:infinitive_simple
+inkonbenŧo/a0a1P0P1FSI0	po:verb ts:indicative_present st:inkonbenŧar
+inkonbénŧoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:inkonbenŧar
 konbiar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 konbio/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:konbiar
 kónbioe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:konbiar
@@ -42274,7 +42285,7 @@ kòrbola/F0TE	po:noun
 krako/M0FS	po:noun
 kraniŧo/M0FSTE	po:noun
 kraña/F0	po:noun
-kreante/M0FS	po:noun
+kreante/M0FS-0	po:noun
 kresiman/M0	po:noun
 krékola/F0TE	po:noun
 krésita/F0	po:noun
@@ -45748,7 +45759,6 @@ inkatiɉo/M0FS(2	po:noun
 inkavo/M0	po:noun
 inkin/M0	po:noun
 inkin	po:adverb
-inkonplèto/A1FS	po:adjective
 inkontro/M0	po:noun
 inkontro	po:adverb
 inkròja/F0TE	po:adjective
@@ -46473,8 +46483,8 @@ konpaño/A1FS+0(4	po:noun
 konpenso/A1	po:noun
 konplean/M0U0	po:noun
 konplension/F0U0mf	po:noun
-konplèto/A1FS	po:adjective
-konplèto/A1FS	po:noun
+konplèto/A1FS-0	po:adjective
+konplèto/A1FS-0	po:noun
 konplòto/M0FS	po:noun
 konponidor/M0V0mf	po:noun
 konponidora/F0V0	po:noun
@@ -52728,8 +52738,9 @@ xuxolèra/F0V0	po:noun
 xuxoƚèr/M0V1	po:noun
 xuxoƚèra/F0V1	po:noun
 xúxola/F0TE	po:noun
+konprensíbel/F0TFU1-0mf	po:adjective
 
 
-/ 143
+/ 144
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
