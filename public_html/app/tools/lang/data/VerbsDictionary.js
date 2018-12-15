@@ -3330,6 +3330,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "lèđ",			"",			3,	1,	"g",	"1219",			"",
 "lèđ",			"re",			3,	1,	"g",	"1980",			"",
 "lek",			"",			1,	1,	"a",	"XIII",			"",
+"lekiñ",			"",			1,	3,	"a",	"1896",			"",
 "lekiñ",			"x",			1,	3,	"a",	"1847",			"",
 "leg",			"",			1,	1,	"g",	"1852",			"Lasar.",
 "leg",			"de",			1,	-1,"g",	"",				"",

@@ -10885,8 +10885,14 @@ lavorar/a0a1P0P1r7	po:verb ts:infinitive_simple
 lavoro/a0a1P0P1FSI0	po:verb ts:indicative_present st:lavorar
 lavóroe/a0a1I1	po:verb ts:indicative_present is:interrogative st:lavorar
 ƚavorar/a0a2P0P2r8	po:verb ts:infinitive_simple
-ƚavoro/a0a2P0P2I0&1	po:verb ts:indicative_present st:ƚavorar
+ƚavoro/a0a2P0P2I0	po:verb ts:indicative_present st:ƚavorar
 ƚavóroe/a0a2I1	po:verb ts:indicative_present is:interrogative st:ƚavorar
+lavoratar/a0a1P0P1	po:verb ts:infinitive_simple
+lavorato/a0a1P0P1FSI0	po:verb ts:indicative_present st:lavoratar
+lavoràtoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:lavoratar
+ƚavoratar/a0a2P0P2	po:verb ts:infinitive_simple
+ƚavorato/a0a2P0P2I0	po:verb ts:indicative_present st:ƚavoratar
+ƚavoràtoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:ƚavoratar
 xlavrar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 xlavro/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:xlavrar
 xlàvroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xlavrar
@@ -10950,9 +10956,12 @@ lékoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:lekar
 ƚekar/a0a2P0P2	po:verb ts:infinitive_simple
 ƚeko/a0a2P0P2I0	po:verb ts:indicative_present st:ƚekar
 ƚékoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:ƚekar
-xlekiñar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-xlekiño/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xlekiñar
-xlekíñoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xlekiñar
+lekiñar/a0a1P0P1*0	po:verb ts:infinitive_simple
+lekiño/a0a1P0P1FSI0*0	po:verb ts:indicative_present st:lekiñar
+lekíñoe/a0a1I1*0	po:verb ts:indicative_present is:interrogative st:lekiñar
+ƚekiñar/a0a2P0P2	po:verb ts:infinitive_simple
+ƚekiño/a0a2P0P2I0	po:verb ts:indicative_present st:ƚekiñar
+ƚekíñoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:ƚekiñar
 legar/a0a1P0P1.0,0r2r3	po:verb ts:infinitive_simple
 lègo/a0a1P0P1FSI0.0,0	po:verb ts:indicative_present st:legar
 lègoe/a0a1I1.0,0	po:verb ts:indicative_present is:interrogative st:legar
@@ -25310,6 +25319,7 @@ Laurensio/TBZ0	po:proper_noun
 Laurenŧia/Z0	po:proper_noun
 Laurenŧio/Z0	po:proper_noun
 Làura/TBZ0	po:proper_noun
+Làxar/Z0	po:proper_noun
 Leandra/TBZ0	po:proper_noun
 Leandro/TBZ0	po:proper_noun
 Lena/TBZ0	po:proper_noun
@@ -25394,7 +25404,6 @@ Matío/Z0	po:proper_noun
 Màlgari/Z0	po:proper_noun
 Màsimo/FSZ0	po:proper_noun
 Màuro/FSZ0	po:proper_noun
-Làxar/Z0	po:proper_noun
 Mena/Z0	po:proper_noun
 Menegeta/Z0	po:proper_noun
 Menegeto/FSZ0	po:proper_noun
@@ -29518,6 +29527,7 @@ latina/F0&0	po:noun
 laŧo/M0FS&0	po:noun
 lavajo/M0FSTE	po:noun
 lavapiato/M0FS	po:noun
+lavor/M0&0^3mf	po:noun
 lavro/M0&0	po:noun
 laxó/TB	po:adverb
 làgrema/F0TB	po:noun
@@ -29661,6 +29671,7 @@ luxe/F0&0	po:noun
 ƚatina/F0&1	po:noun
 ƚavajo/M0Te	po:noun
 ƚavapiato/M0	po:noun
+ƚavor/M0&1^3mf	po:noun
 ƚavro/M0&1	po:noun
 ƚàrexe/F0mf	po:noun
 ƚàvaro–dentaƚe/F0	po:adjective
@@ -52628,9 +52639,33 @@ kunio/M0	po:noun
 kura-kondoto/M0FSmf	po:noun
 kurakondoto/M0FSmf	po:noun
 lamento/M0FS(2mf	po:noun
-ƚamento/M0(3mf	po:noun
 lamerin/M0TB	po:noun
 lanpedario/M0TB	po:noun
+lanŧon/F0U0(2mf	po:noun
+lanson/F0U0(2mf	po:noun
+laorenŧa/F0TE	po:noun
+lateco/M0TB	po:noun
+latèr/M0V0	po:noun
+latèra/F0V0	po:noun
+lator/F0TBmf	po:noun
+latrina/F0TB	po:noun
+lavandin/M0TB	po:noun
+lavorenŧa/F0TE	po:noun
+laxarèla/F0	po:noun
+làstego/M0FS	po:noun
+ƚàstego/M0	po:noun
+làur/M0TB	po:noun
+lekaiŧo/M0FSTE	po:noun
+lekin/M0TB	po:noun
+lekina/F0TB	po:noun
+ƚamento/M0(3mf	po:noun
+ƚanson/F0(3mf	po:noun
+ƚaorensa/F0	po:noun
+ƚatèr/M0V1	po:noun
+ƚatèra/F0V1	po:noun
+ƚavorensa/F0	po:noun
+ƚaxarèƚa/F0	po:noun
+ƚekaiso/M0	po:noun
 malkreanŧa/F0TE	po:noun
 moralità/-0	po:noun
 moraƚità/-0	po:noun
@@ -52651,24 +52686,8 @@ xuxolèra/F0V0	po:noun
 xuxoƚèr/M0V1	po:noun
 xuxoƚèra/F0V1	po:noun
 xúxola/F0TE	po:noun
-lanŧon/F0TE(2	po:noun
-ƚanson/F0(3	po:noun
-laorenŧa/F0TE	po:noun
-ƚaorensa/F0	po:noun
-laxarèla/F0	po:noun
-ƚaxarèƚa/F0	po:noun
-làstego/M0FSTB	po:noun
-latèr/M0V0	po:noun
-latèra/F0V0	po:noun
-ƚatèr/M0V1	po:noun
-ƚatèra/F0V1	po:noun
-lateco/M0TB	po:noun
-lator/F0TBmf	po:noun
-latrina/F0TB	po:noun
-làur/M0TB	po:noun
-lavandin/M0TB	po:noun
 
 
-/ 155
+/ 156
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
