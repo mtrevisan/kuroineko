@@ -4623,6 +4623,12 @@ likuifado/M0FSY0	po:verb ts:participle_perfect_strong st:likuifar
 likuifada/F0Y0TB	po:verb ts:participle_perfect_strong st:likuifar
 likuifato/A1FS	po:verb ts:participle_perfect_strong st:likuifar
 ƚikuifato/A1	po:verb ts:participle_perfect_strong st:ƚikuifar
+malfar/a3a4a5P0P1P2r2r3	po:verb ts:infinitive_simple
+malfào/a3a4a5P0P1P2I0I2	po:verb ts:indicative_present st:malfar
+malfàoe/a3a4a5P0P1P2I0	po:verb ts:indicative_present is:interrogative st:malfar
+malfado/M0FSY0	po:verb ts:participle_perfect_strong st:malfar
+malfada/F0Y0	po:verb ts:participle_perfect_strong st:malfar
+malfato/A1FS	po:verb ts:participle_perfect_strong st:malfar
 putrefar/a3a4a5P0P1P2r2r3	po:verb ts:infinitive_simple
 putrefào/a3a4a5P0P1P2I0I2	po:verb ts:indicative_present st:putrefar
 putrefàoe/a3a4a5P0P1P2I0	po:verb ts:indicative_present is:interrogative st:putrefar
@@ -12032,12 +12038,12 @@ mañetíđoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:mañetiđa
 mañetixar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 mañetixo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:mañetixar
 mañetíxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:mañetixar
-xmañusar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-xmañuso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xmañusar
-xmañúsoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xmañusar
-xmañuŧar/a0a1P0P1	po:verb ts:infinitive_simple
-xmañuŧo/a0a1P0P1FSI0	po:verb ts:indicative_present st:xmañuŧar
-xmañúŧoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:xmañuŧar
+mañusar/a0a1a2P0P1P2*0	po:verb ts:infinitive_simple
+mañuso/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:mañusar
+mañúsoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:mañusar
+mañuŧar/a0a1P0P1*0	po:verb ts:infinitive_simple
+mañuŧo/a0a1P0P1FSI0*0	po:verb ts:indicative_present st:mañuŧar
+mañúŧoe/a0a1I1*0	po:verb ts:indicative_present is:interrogative st:mañuŧar
 xmarar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 xmaro/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xmarar
 xmàroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xmarar
@@ -21074,6 +21080,21 @@ perinténdar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 perintendarò/b0b1b2I0	po:verb ts:indicative_future st:perinténdar
 parinténdar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 parintendarò/b0b1b2I0	po:verb ts:indicative_future st:parinténdar
+malinténder/b0b1P0P1	po:verb ts:infinitive_simple
+malintendre	po:verb ts:infinitive_simple st:malinténder
+malintenderò/b0b1I0	po:verb ts:indicative_future st:malinténder
+malintendo/a0a1P0P1FSI0	po:verb ts:indicative_present st:malinténder
+malinténdoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:malinténder
+malintexo/A1FSmf	po:verb ts:participle_perfect_strong st:malinténder
+malinténdar/b0b1P0P1	po:verb ts:infinitive_simple
+malintendarò/b0b1I0	po:verb ts:indicative_future st:malinténdar
+maƚinténder/b0b2P0P2	po:verb ts:infinitive_simple
+maƚintenderò/b0b2I0	po:verb ts:indicative_future st:maƚinténder
+maƚintendo/a0a2P0P2I0	po:verb ts:indicative_present st:maƚinténder
+maƚinténdoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:maƚinténder
+maƚintexo/A1mf	po:verb ts:participle_perfect_strong st:maƚinténder
+maƚinténdar/b0b2P0P2	po:verb ts:infinitive_simple
+maƚintendarò/b0b2I0	po:verb ts:indicative_future st:maƚinténdar
 preinténder/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 preintendre	po:verb ts:infinitive_simple st:preinténder
 preintenderò/b0b1b2I0	po:verb ts:indicative_future st:preinténder
@@ -25392,8 +25413,13 @@ Mafía/Z0	po:proper_noun
 Mafío/Z0	po:proper_noun
 Magdalena/Z0	po:proper_noun
 Magdaƚena/Z0	po:proper_noun
+Maldo/Z0	po:proper_noun
+Malgareta/Z0	po:proper_noun
 Malgarita/Z0	po:proper_noun
 Malgèra/Z0	po:proper_noun
+Malgèri/Z0	po:proper_noun
+Malia/Z0	po:proper_noun
+Maƚia/Z0	po:proper_noun
 Manfréa/Z0	po:proper_noun
 Manfréo/Z0	po:proper_noun
 Manuèl/Z0	po:proper_noun
@@ -34441,7 +34467,7 @@ malagraŧia/F0&0	po:adjective
 malaugurio/M0&0	po:noun
 maledeto/A1FSW0^6mf	po:adjective
 malenaŧa/F0TE	po:noun
-maleñaŧo/M0FSTE	po:interjection
+maleñaŧo/M0FSTE	po:noun
 malfar/F0	po:noun
 malgarita/F0	po:noun
 malgaritina/F0	po:noun
@@ -34459,7 +34485,7 @@ maƚaugurioxo/M0&1mf	po:noun
 maƚaugurioxo/M0W1&1mf	po:adjective
 maƚedeto/A1W1^6mf	po:adjective
 maƚenasa/F0	po:noun
-maƚeñaso/M0	po:interjection
+maƚeñaso/M0	po:noun
 maƚinkòniko/A1	po:adjective
 maƚòrsa/F0	po:noun
 mamaluko/A1FS	po:noun
@@ -52855,7 +52881,34 @@ madresèlva/F0	po:noun
 magaño/A1	po:noun
 makabèo/A1	po:adjective
 makineta/F0	po:noun
+malagrasioxo/A1FSmf	po:noun
+malagrasioxo/A1FSW0mf	po:adjective
+malagraŧioxo/A1FSmf	po:noun
+malagraŧioxo/A1FSW0mf	po:adjective
+malankonía/F0	po:noun
+malavòja/A2	po:noun
+malavòɉa/A2	po:noun
+malbia	po:interjection
+maledeño	po:interjection
+maleñaŧa/F0TE	po:noun
+malgarañèr/M0V0	po:noun
+malgarañèra/F0V0	po:noun
+malinaŧa/F0TE	po:noun
+maliñaŧo/M0FSTE	po:noun
+maliŧia/F0TE	po:noun
 malkreanŧa/F0TE	po:noun
+maƚagrasioxo/A1mf	po:noun
+maƚagrasioxo/A1W1mf	po:adjective
+maƚankonía/F0	po:noun
+maƚavòja/A2	po:noun
+maƚavòɉa/A2	po:noun
+maƚedeño	po:interjection
+maƚeñasa/F0	po:noun
+maƚinasa/F0	po:noun
+maƚiñaso/M0	po:noun
+maƚisia/F0	po:noun
+mañaformiga/F0	po:noun
+mañòlia/F0TE	po:noun
 moralità/-0	po:noun
 moraƚità/-0	po:noun
 nibiaŧo/M0FSTE	po:noun
@@ -52882,6 +52935,6 @@ xuxoƚèra/F0V1	po:noun
 xúxola/F0TE	po:noun
 
 
-/ 163
+/ 165
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
