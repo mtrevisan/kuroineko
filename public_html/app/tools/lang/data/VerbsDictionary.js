@@ -3639,7 +3639,6 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "marŧ",			"x",			4,	4,	"a",	"1867",			"",
 "marxin",		"",			1,	1,	"g",	"1829",			"Konsolidar, cikatriŧar.",
 "marxin",		"in",			1,	1,	"g",	"1829",			"Marxinar.",
-"mas",			"",			1,	1,	"g",	"",				"",
 "masakr",		"",			1,	3,	"g",	"1867",			"",
 "masaređ",		"x",			1,	5,	"a",	"1560",			"Far da masaja.",
 "masc",			"",			1,	1,	"g",	"",				"",

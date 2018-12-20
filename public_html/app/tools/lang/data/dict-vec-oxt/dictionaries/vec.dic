@@ -12197,9 +12197,12 @@ marŧir/a0a1d0d1P0P1-0*0	po:verb ts:infinitive_simple
 marxinar/a0a1a2P0P1P2-0	po:verb ts:infinitive_simple
 màrxino/a0a1a2P0P1P2FSI0-0	po:verb ts:indicative_present st:marxinar
 màrxinoe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:marxinar
-masar/a0a1a2P0P1P2+0-0*0^6r0	po:verb ts:infinitive_simple
+masar/a0a1a2P0P1P2+0-0*0^6r0r7	po:verb ts:infinitive_simple
 maso/a0a1a2P0P1P2FSI0+0-0*0^6	po:verb ts:indicative_present st:masar
 màsoe/a0a1a2I1+0-0*0^6	po:verb ts:indicative_present is:interrogative st:masar
+maŧar/a0a1P0P1+0-0*0^6r0r7	po:verb ts:infinitive_simple
+maŧo/a0a1P0P1FSI0+0-0*0^6	po:verb ts:indicative_present st:maŧar
+màŧoe/a0a1I1+0-0*0^6	po:verb ts:indicative_present is:interrogative st:maŧar
 masakrar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 masakro/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:masakrar
 masàkroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:masakrar
@@ -12277,9 +12280,6 @@ matríđoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:matriđar
 matrixar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 matrixo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:matrixar
 matríxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:matrixar
-maŧar/a0a1P0P1+0-0*0^6r0	po:verb ts:infinitive_simple
-maŧo/a0a1P0P1FSI0+0-0*0^6	po:verb ts:indicative_present st:maŧar
-màŧoe/a0a1I1+0-0*0^6	po:verb ts:indicative_present is:interrogative st:maŧar
 masañar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 màsaño/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:masañar
 màsañoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:masañar
@@ -25439,9 +25439,15 @@ María/&0Z0	po:proper_noun
 Markantònia/Z0	po:proper_noun
 Markantònio/M0Z0	po:proper_noun
 Marko/FSZ0	po:proper_noun
+Marsèlin/Z0	po:proper_noun
+Marsèlina/Z0	po:proper_noun
+Marsèƚin/Z0	po:proper_noun
+Marsèƚina/Z0	po:proper_noun
 Marta/Z0	po:proper_noun
 Martin/Z0	po:proper_noun
 Martina/Z0	po:proper_noun
+Marŧèlin/Z0	po:proper_noun
+Marŧèlina/Z0	po:proper_noun
 Masimian/Z0	po:proper_noun
 Masimiana/Z0	po:proper_noun
 Matèa/Z0	po:proper_noun
@@ -25451,12 +25457,6 @@ Matío/Z0	po:proper_noun
 Màlgari/Z0	po:proper_noun
 Màsimo/FSZ0	po:proper_noun
 Màuro/FSZ0	po:proper_noun
-Marŧèlin/Z0	po:proper_noun
-Marŧèlina/Z0	po:proper_noun
-Marsèlin/Z0	po:proper_noun
-Marsèlina/Z0	po:proper_noun
-Marsèƚin/Z0	po:proper_noun
-Marsèƚina/Z0	po:proper_noun
 Mena/Z0	po:proper_noun
 Menegeta/Z0	po:proper_noun
 Menegeto/FSZ0	po:proper_noun
@@ -34646,7 +34646,7 @@ maselèr/M0V0	po:noun
 maselèra/F0V0	po:noun
 maseƚèr/M0V1	po:noun
 maseƚèra/F0V1	po:noun
-masèr/M0&0<0<1	po:noun
+masèr/M0&0<0<1v0	po:noun
 masèra/F0&0<0<1	po:noun
 maskaron/A2U0mf	po:noun
 maskarpin/M0	po:noun
@@ -41278,8 +41278,6 @@ luŧèrna/F0	po:noun
 malvaxia/F0(0	po:adjective
 malvaxio/M0(0	po:adjective
 marŧion/F0TEU0mf	po:noun
-masar/M0&0v0	po:noun
-masara/F0&0	po:noun
 melifo/A1	po:adjective
 meƚifo/A1	po:adjective
 menarin/M0	po:noun
@@ -52956,7 +52954,20 @@ maridaròla/F0TE	po:noun
 maridiana/F0	po:noun
 mariuŧo/M0TE	po:noun
 marobolin/M0TE	po:noun
+marubolin/M0TE	po:noun
+masakan/F0U0	po:noun
+masamasco/M0	po:noun
+mascèr/M0V0	po:noun
+mascèra/F0V0	po:noun
+maskalson/A2U0mf	po:noun
+maŧakan/F0U0	po:noun
+maŧamasco/M0	po:noun
+maxèr/M0V0	po:noun
+maxèra/F0V0	po:noun
+maxinin/M0	po:noun
+maxòla/F0TE	po:noun
 màntexa	po:noun is:singular_femenine
+màxar/M0	po:noun
 menaŧa/F0TE	po:noun
 moralità/-0	po:noun
 moraƚità/-0	po:noun
@@ -52989,13 +53000,8 @@ xuxolèra/F0V0	po:noun
 xuxoƚèr/M0V1	po:noun
 xuxoƚèra/F0V1	po:noun
 xúxola/F0TE	po:noun
-marubolin/M0TE	po:noun
-màxar/M0	po:noun
-maskalson/A2U0mf	po:noun
-mascèr/M0V0	po:noun
-mascèra/F0V0	po:noun
 
 
-/ 171
+/ 172
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
