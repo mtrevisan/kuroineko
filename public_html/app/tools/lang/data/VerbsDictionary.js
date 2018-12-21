@@ -4137,6 +4137,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "obed",			"",			4,	4,	"a",	"1450",			"",
 "obed",			"dex",		4,	4,	"a",	"1447",			"",
 "obed",			"in",			4,	4,	"a",	"1509",			"",
+"obl",			"",			1,	0,	"g",	"1896",			"",
 "obleg",			"",			1,	0,	"g",	"1980",			"(bixiak)",
 "oblig",			"",			1,	0,	"g",	"1362",			"",
 "oblig",			"stra",		1,	0,	"g",	"1829",			"",

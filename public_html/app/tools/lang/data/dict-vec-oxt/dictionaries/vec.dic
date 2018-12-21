@@ -13681,10 +13681,10 @@ núnsioe/a0a1a2I1.0	po:verb ts:indicative_present is:interrogative st:nunsiar
 nunŧiar/a0a1P0P1.0	po:verb ts:infinitive_simple
 nunŧio/a0a1P0P1I0.0	po:verb ts:indicative_present st:nunŧiar
 núnŧioe/a0a1I1.0	po:verb ts:indicative_present is:interrogative st:nunŧiar
-nuvolar/a0a1P0P1-0	po:verb ts:infinitive_simple
+nuvolar/a0a1P0P1-0r0	po:verb ts:infinitive_simple
 núvolo/a0a1P0P1FSI0-0	po:verb ts:indicative_present st:nuvolar
 núvoloe/a0a1I1-0	po:verb ts:indicative_present is:interrogative st:nuvolar
-nuvoƚar/a0a2P0P2-0	po:verb ts:infinitive_simple
+nuvoƚar/a0a2P0P2-0r1	po:verb ts:infinitive_simple
 núvoƚo/a0a2P0P2I0-0	po:verb ts:indicative_present st:nuvoƚar
 núvoƚoe/a0a2I1-0	po:verb ts:indicative_present is:interrogative st:nuvoƚar
 nuvolir/a0a1d0d1P0P1-0	po:verb ts:infinitive_simple
@@ -13744,6 +13744,9 @@ xñínfoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xñinfar
 ñòkoƚo/a0a2P0P2I0*0	po:verb ts:indicative_present st:ñokoƚar
 ñòkoƚoe/a0a2I1*0	po:verb ts:indicative_present is:interrogative st:ñokoƚar
 obedir/a0a1a2d0d1d2P0P1P2+0-0	po:verb ts:infinitive_simple
+oblar/a0a1a2P0P1P2r2r3	po:verb ts:infinitive_simple
+òblo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:oblar
+òbloe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:oblar
 oblegar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 òblego/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:oblegar
 òblegoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:oblegar
@@ -25593,6 +25596,10 @@ Nino/M0FSZ0	po:proper_noun is:singular_masculine
 Nise/Z0	po:proper_noun is:singular_femenine
 Niŧe/Z0	po:proper_noun is:singular_femenine
 Nòni/Z0	po:proper_noun is:singular_masculine
+Nunsiata/Z0	po:proper_noun is:singular_femenine
+Nunŧiata/Z0	po:proper_noun is:singular_femenine
+Nusiata/Z0	po:proper_noun is:singular_femenine
+Nuŧiata/Z0	po:proper_noun is:singular_femenine
 Ñeña/Z0	po:proper_noun is:singular_femenine
 Ñeño/FSZ0	po:proper_noun is:singular_masculine
 Ñexe/FSZ0	po:proper_noun is:singular_femenine
@@ -30307,7 +30314,8 @@ novento	po:adjective
 novità	po:noun
 novo/M0FS&2&3<0<1mf	po:adjective
 novo/M0FS&2&3<0<1mf	po:noun
-noxa/A2	po:noun
+noxa/F0&2&3	po:noun
+noxi	po:noun is:plural_femenine
 noxelèr/M0V0	po:noun
 noxelèra/F0V0	po:noun
 noxeƚèr/M0V1	po:noun
@@ -30315,7 +30323,6 @@ noxeƚèra/F0V1	po:noun
 noxeta/F0	po:noun
 noxeto/M0FSmf	po:noun
 noxèl/M0U0	po:noun
-noxèla/F0	po:noun
 nónsol/M0U1TEmf	po:noun
 nónŧol/M0U1mf	po:noun
 nòma/F0	po:adverb
@@ -39299,7 +39306,6 @@ nòja/F0TE	po:noun
 ñoranŧa/F0TE	po:noun
 ñoranŧia/F0TE	po:noun
 obedienŧa/F0TE-0	po:noun
-oblaŧion/F0TEU0mf	po:noun
 obrobioxo/A1FSmf	po:noun
 obrobioxo/A1FSW0mf	po:adjective
 obròbio/M0	po:noun
@@ -53119,6 +53125,7 @@ moreja/F0TE	po:noun
 mortalità	po:noun
 mortaƚità	po:noun
 mortar/M0&0	po:noun
+moskada/F0Y0Y1	po:adjective
 mostaco/M0&0(4	po:noun
 moxegaño/M0	po:noun
 moxegòto/M0FS	po:noun
@@ -53150,9 +53157,15 @@ negoŧiante/M0FS	po:noun
 nervuto/A1FS	po:noun
 netiŧia/F0TE	po:noun
 nevara/F0	po:noun
-nèspol/M0TEmf	po:noun
+nèspol/M0TEU1mf	po:noun
 nibiaŧo/M0FSTE	po:noun
 nisol/M0U0TEmf	po:noun
+novità	po:noun
+noviŧia/F0TE	po:noun
+noviŧio/M0TE	po:noun
+nòse	po:noun
+nòŧe	po:noun
+núbil/F0TF	po:noun
 ñoñoleŧo/M0FSTEmf	po:noun
 ñoñoƚeso/A1mf	po:noun
 pisolamente/FSW2	po:adverb
@@ -53183,7 +53196,7 @@ xuxoƚèra/F0V1	po:noun
 xúxola/F0TE	po:noun
 
 
-/ 189
+/ 191
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
 /mis-mas? mix-mas?
