@@ -4037,6 +4037,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "neg",			"de",			1,	1,	"g",	"1867",			"(bixiak)",
 "neg",			"re",			1,	1,	"g",	"1560",			"",
 "neglijent",	"",			1,	6,	"a",	"1810",			"",
+"negoŧi",		"",			1,	3,	"g",	"1896",			"",
 "negr",			"",			4,	4,	"a",	"",				"",
 "negr",			"i",			4,	4,	"a",	"1560",			"",
 "negriđ",		"",			1,	4,	"a",	"1854",			"",
