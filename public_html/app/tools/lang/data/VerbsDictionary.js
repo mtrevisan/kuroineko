@@ -3724,6 +3724,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "men",			"xmal",		1,	-2,"g",	"1590",			"",
 "men",			"re",			1,	1,	"a",	"1560",			"Skòter, misiar, inpastar.",
 "men",			"x",			1,	1,	"a",	"1980",			"Tirar par le longe kó se xe drio parlar.",
+"menar",			"",			1,	3,	"g",	"1896",			"Dar de manara.",
 "menaŧ",			"",			1,	3,	"g",	"1509",			"",
 "menbr",			"re",			1,	1,	"a",	"1509",			"Rekordar.",
 "menbr",			"x",			1,	1,	"a",	"1829",			"",
