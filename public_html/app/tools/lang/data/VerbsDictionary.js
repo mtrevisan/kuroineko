@@ -4349,6 +4349,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "panpalug",		"",			1,	6,	"a",	"1851",			"",
 "panpaluget",	"",			1,	8,	"a",	"1829",			"",
 "panpan",		"s",			1,	1,	"g",	"1560",			"Spàrxer, dispérder.",
+"pantan",		"",			1,	4,	"g",	"1896",			"",
 "pantalon",		"",			1,	6,	"a",	"1852",			"Reinsir mona.",
 "pantaŧ",		"s",			1,	4,	"g",	"1775",			"El desfarse ke fà na roba molexina kuando ke la kaska, rovinar, sprofondar.",
 "panteđ",		"",			1,	4,	"a",	"1810",			"Ansemar, respirar ko afàno.",
