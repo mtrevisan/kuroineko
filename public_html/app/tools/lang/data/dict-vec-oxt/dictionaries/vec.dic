@@ -15261,9 +15261,15 @@ péntoe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:pentir
 arpentir/a0a1a2e0e1e2P0P1P2r0	po:verb ts:infinitive_simple
 arpento/e0e1e2P0P1P2FSI0	po:verb ts:indicative_present st:arpentir
 arpéntoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:arpentir
-spentonar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-spentono/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:spentonar
-spentónoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:spentonar
+pentonar/a0a1a2P0P1P2*0	po:verb ts:infinitive_simple
+pentono/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:pentonar
+pentónoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:pentonar
+penxolar/a0a1P0P1	po:verb ts:infinitive_simple
+pénxolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:penxolar
+pénxoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:penxolar
+penxoƚar/a0a2P0P2	po:verb ts:infinitive_simple
+pénxoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:penxoƚar
+pénxoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:penxoƚar
 enpeñar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 enpeño/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:enpeñar
 enpéñoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:enpeñar
@@ -26917,12 +26923,12 @@ parkome	po:conjunction
 pata/F0	po:noun is:singular_femenine
 pato/M0FS^0&2&3	po:noun is:singular_masculine
 pena/F0&0	po:noun
-peni	po:noun st:pene
 penaŧa/F0TE	po:noun
 penaŧo/M0FSTE	po:noun
 pena	po:adverb
 peneta/F0	po:noun
 peneto/M0FSmf	po:noun
+peni	po:noun st:pene
 penona/F0	po:noun
 perkome	po:adverb
 perkome	po:conjunction
@@ -30539,7 +30545,7 @@ paréntexi	po:noun
 parfetivo/A1FSW0-0	po:adjective
 parfèto/A1FS-0*0	po:noun
 parfèto/A1FSW0-0*0	po:adjective
-parfina	po:adverb
+parfina	po:adverb st:perfin
 parfina	po:preposition
 parfino/FS	po:adverb
 parfino/FS	po:preposition
@@ -30621,14 +30627,16 @@ per/M0mf	po:noun
 pera/F0&0(2	po:noun
 perèr/M0V0	po:noun
 perèra/F0V0	po:noun
-perfin	po:adverb
+perfina	po:adverb st:perfin
+perfin	po:adverb al:perfina al:parfina
 perífraxi	po:noun
 perímetro/M0	po:noun
 perlin/A2	po:noun
 permanente/M0FSmf	po:adjective
 permanente/M0FSmf	po:noun
 permanenŧa/F0TE	po:noun
-pernixe/F0FS	po:noun
+pernixa	po:noun st:pernixe
+pernixe/F0FS	po:noun al:pernixa
 persegèr/M0V0v0	po:noun
 persegèra/F0V0	po:noun
 persesion/F0U0mf	po:noun
@@ -53287,14 +53295,28 @@ pelandron/A2U0mf	po:adjective
 pelandron/A2U0mf	po:noun
 pelatèr/M0V0	po:noun
 pelatèra/F0V0	po:noun
+peluŧo/M0FSTE	po:noun
 peƚagra/F0	po:noun
 peƚandron/A2mf	po:adjective
 peƚandron/A2mf	po:noun
 peƚatèr/M0V1	po:noun
 peƚatèra/F0V1	po:noun
+peƚuso/M0	po:noun
+pendente/M0mf	po:noun
+pendío/M0	po:noun
+pensada/F0Y0Y1	po:noun
+peon/F0U0mf	po:noun
+peònia/F0	po:noun
+pepafreda/A2	po:adjective
+perakòta	po:noun is:singular_femenine
+perekòte	po:noun is:plural_femenine
+periòl/M0U0TE	po:noun
+pernixòto/M0FS	po:noun
+péndol/M0U1TEmf	po:noun
 pisolamente/FSW2	po:adverb
 pisoƚamente/W2	po:adverb
 piŧolamente/FSW2	po:adverb
+prepontina/F0	po:noun
 roinaŧo/M0FSTE	po:noun
 rovinaŧo/M0FSTE	po:noun
 ruinaŧo/M0FSTE	po:noun
@@ -53318,14 +53340,8 @@ xuxolèra/F0V0	po:noun
 xuxoƚèr/M0V1	po:noun
 xuxoƚèra/F0V1	po:noun
 xúxola/F0TE	po:noun
-peluŧo/M0FSTE	po:noun
-peƚuso/M0	po:noun
-pendente/M0mf	po:noun
-pendío/M0	po:noun
-péndol/M0U1TEmf	po:noun
-pensada/F0Y0Y1	po:noun
 
 
-/ 210
+/ 211
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
