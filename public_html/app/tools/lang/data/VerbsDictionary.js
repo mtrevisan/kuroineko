@@ -4465,6 +4465,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "patriak",		"in",			1,	5,	"g",	"1829",			"Inpatriarkar.",
 "patriark",		"in",			1,	5,	"g",	"1775",			"Dar arie, inpetir.",
 "patriđ",		"",			1,	4,	"a",	"1829",			"Somejar a ʼl pare.",
+"patrisi",		"",			1,	4,	"a",	"1896",			"",
 "patron",		"in",			4,	6,	"a",	"1829",			"Inpadronir.",
 "patroniđ",		"",			1,	6,	"a",	"1829",			"Padroniđar.",
 "patu",			"",			4,	4,	"a",	"1829",			"",
