@@ -4513,6 +4513,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "peg",			"ra",			1,	-1,"g",	"1867",			"Ropegar.",
 "peg",			"stra",		1,	-1,"g",	"1560",			"Strasinar, portar/kaminar ko fadiga, strapar poko par volta.",
 "pegaŧ",			"s",			1,	3,	"g",	"1560",			"Spigaŧar.",
+"pegol",			"",			1,	1,	"a",	"1896",			"",
 "pegol",			"des",		1,	1,	"a",	"1775",			"Liberar da un intrigo, netar da la pegola.",
 "pegol",			"in",			1,	1,	"a",	"1810",			"Méter la pegola, méter in situaŧion difiŧili.",
 "peɉ",			"in",			1,	1,	"a",	"1775",			"Asipejar, asijar.",
