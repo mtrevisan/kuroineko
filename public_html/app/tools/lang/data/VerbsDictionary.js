@@ -4730,6 +4730,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pikol",			"",			4,	5,	"a",	"1775",			"Penxolar.",
 "pikol",			"in",			4,	5,	"a",	"1854",			"Far deventar pikolo.",
 "pikol",			"s",			4,	5,	"a",	"1852",			"Far deventar pikolo.",
+"pikon",			"",			1,	3,	"a",	"1896",			"",
 "pikot",			"",			1,	3,	"g",	"1852",			"Pikietar.",
 "pil",			"",			1,	1,	"a",	"1775",			"Brilar el rixo/méjo/orđo.",
 "pil",			"es",			1,	1,	"a",	"1796",			"",
