@@ -5042,6 +5042,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "prok",			"s",			1,	2,	"g",	"1851",			"Supurar na ferida.",
 "profes",		"",			1,	4,	"g",	"1867",			"",
 "profetiđ",		"",			1,	6,	"a",	"1867",			"",
+"profond",		"",			1,	4,	"a",	"1896",			"",
 "profond",		"s",			1,	4,	"a",	"1560",			"",
 "pronosteg",	"",			1,	4,	"g",	"1867",			"",
 "pront",			"",			1,	2,	"a",	"1980",			"(bixiak)",
