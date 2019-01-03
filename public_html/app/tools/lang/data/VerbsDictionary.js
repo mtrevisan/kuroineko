@@ -4673,6 +4673,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "piadeđ",		"",			1,	4,	"a",	"1851",			"Desputar o perorar na kauxa.",
 "piag",			"",			1,	2,	"g",	"1867",			"",
 "piag",			"in",			1,	2,	"g",	"1867",			"",
+"piaj",			"",			1,	2,	"g",	"1896",			"",
 "pial",			"",			1,	2,	"g",	"1775",			"",
 "pian",			"",			1,	2,	"g",	"1852",			"",
 "pian",			"s",			1,	2,	"g",	"1854",			"",
