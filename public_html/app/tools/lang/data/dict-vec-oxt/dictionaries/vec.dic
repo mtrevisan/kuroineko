@@ -13636,6 +13636,12 @@ nónsioe/a0a1a2I1.0,0	po:verb ts:indicative_present is:interrogative st:nonsiar
 nonŧiar/a0a1P0P1.0,0	po:verb ts:infinitive_simple
 nonŧio/a0a1P0P1I0.0,0	po:verb ts:indicative_present st:nonŧiar
 nónŧioe/a0a1I1.0,0	po:verb ts:indicative_present is:interrogative st:nonŧiar
+ranonsiar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+ranonsio/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:ranonsiar
+ranónsioe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:ranonsiar
+ranonŧiar/a0a1P0P1	po:verb ts:infinitive_simple
+ranonŧio/a0a1P0P1I0	po:verb ts:indicative_present st:ranonŧiar
+ranónŧioe/a0a1I1	po:verb ts:indicative_present is:interrogative st:ranonŧiar
 norir/a0a1a2d0d1d2P0P1P2-0	po:verb ts:infinitive_simple
 norigar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 norigo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:norigar
@@ -15507,6 +15513,9 @@ peto/a0a1a2P0P1P2FSI0+0*0.0	po:verb ts:indicative_present st:petar
 pétoe/a0a1a2I1+0*0.0	po:verb ts:indicative_present is:interrogative st:petar
 pèto/a0a1a2P0P1P2FSI0+0*0.0	po:verb ts:indicative_present st:petar
 pètoe/a0a1a2I1+0*0.0	po:verb ts:indicative_present is:interrogative st:petar
+rapetar/a0a1a2P0P1P2r0r7	po:verb ts:infinitive_simple
+rapeto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:rapetar
+rapétoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:rapetar
 petir/a0a1a2d0d1d2P0P1P2-0@0r2r3	po:verb ts:infinitive_simple
 konpèter/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 konpeterò/b0b1b2I0	po:verb ts:indicative_future st:konpèter
@@ -30754,7 +30763,7 @@ pesekan/F0U0	po:noun
 pesespada	po:noun al:pesispada
 pesispada	po:noun is:plural_masculine st:pesespada
 pesúkola/F0TE	po:noun
-peton/A2U0.0mf	po:noun
+peton/A2U0mf	po:noun
 peveron/F0U0mf	po:noun
 pexorativo/A1FSW0	po:adjective
 pé/-0	po:noun
@@ -31118,6 +31127,7 @@ reƚòɉo/M0&1<2	po:noun
 reoxo/A1FSmf	po:noun
 reoxo/A1FSW0mf	po:adjective
 repetitivo/A1FSW0	po:adjective
+repeton	po:adverb
 repien/M0W0U0q0q1(0mf	po:adjective
 repiena/F0(0	po:adjective
 reprístin/M0	po:noun
@@ -35846,7 +35856,7 @@ raixame/M0	po:noun
 raixòto/M0FS	po:noun
 rakoleta/F0TE	po:noun
 rakonto/M0FSmf	po:noun
-rana/F0&0	po:noun
+rana/F0&0&2&3	po:noun
 ranarol/M0U0V0mf	po:noun
 ranarola/F0V0	po:noun
 ranaroƚa/F0V1	po:noun
@@ -49276,7 +49286,7 @@ raxonŧèla/F0	po:noun
 ràdego/M0FS	po:noun
 ràdika/F0	po:noun
 rànsido/M0	po:noun
-ràntego/M0FS	po:noun
+ràntego/A1FS	po:noun
 rànŧido/M0	po:noun
 reàol/M0U1TEmf	po:noun
 rebaldo/A1	po:interjection
@@ -53568,6 +53578,7 @@ ragal/M0U0TE	po:noun
 raixon/F0U0mf	po:noun
 rajotèl/M0U0TE	po:noun
 raɉotèl/M0U0TE	po:noun
+rakuajo/M0TE	po:noun
 ralojèr/M0V0	po:noun
 ralojèra/F0V0	po:noun
 raloɉèr/M0V0	po:noun
@@ -53579,6 +53590,14 @@ raƚojèra/F0V1	po:noun
 raƚoɉèr/M0V1	po:noun
 raƚoɉèra/F0V1	po:noun
 ramenato/M0FS	po:noun
+ranòto/M0FS	po:noun
+rantegeto/M0FSmf	po:noun
+rapanèl/M0U0TE	po:noun
+raparèla/F0TE	po:noun
+rapeton	po:adverb
+rapónsol/M0U1TEmf	po:noun
+rapónŧol/M0U1mf	po:noun
+ràpan/M0U1	po:noun
 recotèl/M0U0TE	po:noun
 rejotèl/M0U0TE	po:noun
 reɉotèl/M0U0TE	po:noun
@@ -53608,6 +53627,6 @@ xuxoƚèra/F0V1	po:noun
 xúxola/F0TE	po:noun
 
 
-/ 234
+/ 235
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
