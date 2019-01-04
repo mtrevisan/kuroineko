@@ -1311,6 +1311,12 @@ bato/a0a1a2P0P1P2FSI0+0-0*0.0,0:0^5	po:verb ts:indicative_present st:bàter
 bàtoe/a0a1a2I1+0-0*0.0,0:0^5	po:verb ts:indicative_present is:interrogative st:bàter
 bàtar/b0b1b2P0P1P2+0-0*0.0,0:0^5	po:verb ts:infinitive_simple
 batarò/b0b1b2I0+0-0*0.0,0:0^5	po:verb ts:indicative_future st:bàtar
+rabàter/b0b1b2P0P1P2r0	po:verb ts:infinitive_simple
+rabaterò/b0b1b2I0	po:verb ts:indicative_future st:rabàter
+rabato/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:rabàter
+rabàtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:rabàter
+rabàtar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
+rabatarò/b0b1b2I0	po:verb ts:indicative_future st:rabàtar
 sebàter/b0b1b2P0P1P2r0	po:verb ts:infinitive_simple
 sebaterò/b0b1b2I0	po:verb ts:indicative_future st:sebàter
 sebato/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:sebàter
@@ -1459,8 +1465,11 @@ xbefexar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 xbefexo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xbefexar
 xbeféxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xbefexar
 bekar/a0a1a2P0P1P2-0*0.0r5	po:verb ts:infinitive_simple
-beko/a0a1a2P0P1P2FSI0-0*0.0^6	po:verb ts:indicative_present st:bekar
+beko/a0a1a2P0P1P2FSI0-0*0.0	po:verb ts:indicative_present st:bekar
 békoe/a0a1a2I1-0*0.0	po:verb ts:indicative_present is:interrogative st:bekar
+rabekar/a0a1a2P0P1P2r5	po:verb ts:infinitive_simple
+rabeko/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:bekar
+rabékoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:bekar
 xbeketar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 xbeketo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xbeketar
 xbekétoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xbeketar
@@ -17050,6 +17059,9 @@ púŧoe/a0a1I1*0	po:verb ts:indicative_present is:interrogative st:puŧar
 spusolir/a0a1d0d1P0P1	po:verb ts:infinitive_simple
 spuŧolir/a0a1d0d1P0P1	po:verb ts:infinitive_simple
 spusoƚir/a0a2d0d2P0P2	po:verb ts:infinitive_simple
+raar/a0a1a2P0P1P2r5r7	po:verb ts:infinitive_simple
+rao/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:raar
+ràoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:raar
 rabir/a0a1a2d0d1d2P0P1P2-0	po:verb ts:infinitive_simple
 rabiar/a0a1a2P0P1P2-0	po:verb ts:infinitive_simple
 rabio/a0a1a2P0P1P2I0-0	po:verb ts:indicative_present st:rabiar
@@ -25538,6 +25550,7 @@ Matío/Z0	po:proper_noun is:singular_masculine
 Màsima/Z0	po:proper_noun is:singular_femenine
 Màsimo/FSZ0	po:proper_noun is:singular_masculine
 Màuro/FSZ0	po:proper_noun is:singular_masculine
+Rabeka/Z0	po:proper_noun is:singular_femenine
 Mena/Z0	po:proper_noun is:singular_femenine
 Menegeta/Z0	po:proper_noun is:singular_femenine
 Menegeto/FSZ0	po:proper_noun is:singular_masculine
@@ -29699,7 +29712,8 @@ kuadratin/M0	po:noun
 kuadro/M0&0*0&2&3(2.0§0	po:adjective
 kuadro/M0&2&3(2.0§0	po:noun
 kuađó	po:adverb
-kuaja/F0TE	po:noun
+kuaja/F0&0	po:noun
+kuaɉa/F0&0	po:noun
 kualifegativo/A1FSW0	po:adjective
 kualífega/F0	po:noun
 kuaƚifegativo/A1W1	po:adjective
@@ -44378,7 +44392,7 @@ bekasofotúo/A1	po:adjective
 bekaŧofotúo/A1	po:adjective
 bekiñòl/M0U0TE	po:noun
 beko/A1FSmf	po:adjective
-beko/M0FS<0<1mf	po:noun
+beko/M0FS<0<1^6mf	po:noun
 bekoinkroxe/M0FS	po:noun
 bekostòrto/M0	po:noun
 bekuadro/M0	po:noun
@@ -53474,8 +53488,15 @@ xuxolèra/F0V0	po:noun
 xuxoƚèr/M0V1	po:noun
 xuxoƚèra/F0V1	po:noun
 xúxola/F0TE	po:noun
+kuajastro/M0	po:noun
+kuaɉastro/M0	po:noun
+kuajòto/M0	po:noun
+kuaɉòto/M0	po:noun
+kuèstua/F0	po:noun
+rabàrbar/M0	po:noun
+rabégol/M0U1TEmf	po:noun
 
 
-/ 230
+/ 231
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
