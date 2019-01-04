@@ -6345,9 +6345,11 @@ PFX *0 Y 2
 PFX *0 0 s [cfkptŧ]
 PFX *0 0 x [aàeèéiíoòóuúmnñbdđgjɉsvrl]
 
-# prefiso par aŧion repetúa (re-)
-PFX .0 Y 1
+# prefiso par aŧion repetúa (re-/ra-/ar-)
+PFX .0 Y 3
 PFX .0 0 re .
+PFX .0 0 ra [^a]
+PFX .0 0 ar [^ƚ]
 
 # prefiso par direŧion, veŧinamento, đontamento, valor intensivo (a-)
 PFX @0 Y 1
