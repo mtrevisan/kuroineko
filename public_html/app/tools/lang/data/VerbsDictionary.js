@@ -5315,6 +5315,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "rónp",			"de",			3,	1,	"a",	"1829",			"",
 "rónp",			"inte",		3,	1,	"a",	"1980",			"",
 "rónp",			"ko",			3,	1,	"a",	"",				"",
+"ronx",			"",			1,	1,	"a",	"1896",			"",
 "roñ",			"",			1,	1,	"g",	"1998",			"Brontolar, protestar.",
 "roñ",			"",			4,	3,	"a",	"1560",			"(ark., Coxa) Roñar, gruñir.",
 "roñ",			"dex",		1,	1,	"g",	"1854",			"",
