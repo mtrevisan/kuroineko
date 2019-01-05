@@ -6660,7 +6660,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "trateđ",		"",			1,	4,	"a",	"1854",			"",
 "tratiđ",		"",			1,	4,	"a",	"1775",			"",
 "traŧ",			"",			1,	2,	"g",	"",				"",
-"traŧ",			"rin",		1,	2,	"g",	"1867",			"",
+"traŧ",			"ren",		1,	2,	"g",	"1867",			"",
 "trav",			"",			1,	2,	"g",	"1867",			"",
 "travi",			"des",		1,	2,	"g",	"1775",			"",
 "travi",			"s",			1,	2,	"g",	"1852",			"Pensar a altro.",
