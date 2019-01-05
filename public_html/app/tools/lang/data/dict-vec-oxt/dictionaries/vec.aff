@@ -1,7 +1,7 @@
 # Diŧionario de lengua vèneta
 #
 # Venetan hunspell affix file
-# Copyright (C) 2016-2018 Mauro Trevisan
+# Copyright (C) 2016+0018 Mauro Trevisan
 #
 # This file is distributed under GPL license.
 #
@@ -6326,26 +6326,26 @@ PFX ^6 0 stra .
 PFX ^6 0 stra– .
 
 # prefiso par lontanamento o sbasamento (de-)
-PFX ,0 Y 1
-PFX ,0 0 de .
+PFX -0 Y 1
+PFX -0 0 de .
 
 # prefiso par lontanamento o sbasamento, eufònego a de- (de(s/x)-)
-PFX +0 Y 3
-PFX +0 0 des [cfkptŧ]
-PFX +0 0 dex [aàeèéiíoòóuúmnñbdđgjɉsvrl]
-PFX +0 0 de x
+PFX -1 Y 3
+PFX -1 0 des [cfkptŧ]
+PFX -1 0 dex [aàeèéiíoòóuúmnñbdđgjɉsvrl]
+PFX -1 0 de x
 
 # vèrbi deajetivali (i(n)-)
-PFX -0 Y 2
-PFX -0 0 in [^n]
-PFX -0 0 i n
+PFX +0 Y 2
+PFX +0 0 in [^n]
+PFX +0 0 i n
 
 # prefiso par aŧion kontraria o privativa-peđorativa, xlontanamento, esía, separaŧion (s/x-)
 PFX *0 Y 2
 PFX *0 0 s [cfkptŧ]
 PFX *0 0 x [aàeèéiíoòóuúmnñbdđgjɉsvrl]
 
-# prefiso par aŧion repetúa (re-/ra-/ar-)
+# prefiso par aŧion repetúa (r[ea]-/ar-)
 PFX .0 Y 3
 PFX .0 0 re .
 PFX .0 0 ra [^a]
