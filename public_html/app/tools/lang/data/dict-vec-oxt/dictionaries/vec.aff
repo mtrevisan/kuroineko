@@ -5599,15 +5599,18 @@ SFX s1 òto otixmo/M0 òto	po:noun
 
 
 # negòŧi, atività komerŧali o industriali, aŧion, scapi de ròbe o de parsone (-ría/F0&0)
-SFX v0 Y 84
+SFX v0 Y 87
+SFX v0 ería aría/F0 ería	po:noun
+SFX v0 ería arieta/F0 ería	po:noun
+SFX v0 ía ieta/F0 ería	po:noun
 SFX v0 e aría/F0 e	po:noun
 SFX v0 e arieta/F0 e	po:noun
 SFX v0 0 ría/F0 e	po:noun
 SFX v0 0 rieta/F0 e	po:noun
-SFX v0 a ería/F0 [^lƚ]a	po:noun
-SFX v0 a erieta/F0 [^lƚ]a	po:noun
-SFX v0 0 ría/F0 [^lƚ]a	po:noun
-SFX v0 0 rieta/F0 [^lƚ]a	po:noun
+SFX v0 a ería/F0 [^ílƚ]a	po:noun
+SFX v0 a erieta/F0 [^ílƚ]a	po:noun
+SFX v0 0 ría/F0 [^ílƚ]a	po:noun
+SFX v0 0 rieta/F0 [^ílƚ]a	po:noun
 SFX v0 a ería/F0 [^è][lƚ]a	po:noun
 SFX v0 a erieta/F0 [^è][lƚ]a	po:noun
 SFX v0 0 ría/F0 [^è][lƚ]a	po:noun
@@ -6286,7 +6289,8 @@ SFX <2 òɉo oɉaso/M0 òɉo	po:noun
 
 # sostantivi alterài - peđorativi (-uŧo, -òl, -uko)
 #SFX 00 . òl/A1 ?
-#SFX 00 . uŧo/A1FS ?
+#SFX 00 . uŧo/M0TEFS ?
+#SFX 00 . uŧa/F0TE ?
 #SFX 00 . ŧuŧo/A1 [?]
 #SFX 00 . eŧuŧo/A1 ?
 #SFX 00 . đuŧo/A1 [?]
@@ -6368,11 +6372,12 @@ PFX :0 0 ko n
 PFX gv Y 1
 PFX gv gu v gu[aà]
 
-# kanbio viŧentin (re- > ra-)
-PFX vŧ Y 3
+# kanbio viŧentin (re- > ra-, se- > sa-)
+PFX vŧ Y 4
 PFX vŧ re ra re
 PFX vŧ ré rà ré
 PFX vŧ rè rà rè
+PFX vŧ se sa se
 
 
 # numerali - koletivi (-èna)
