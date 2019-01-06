@@ -1299,13 +1299,19 @@ bato/a0a1a2P0P1P2FSI0-0-1+0*0.0:0^5	po:verb ts:indicative_present st:bàter
 bàtoe/a0a1a2I1-0-1+0*0.0:0^5	po:verb ts:indicative_present is:interrogative st:bàter
 bàtar/b0b1b2P0P1P2-0-1+0*0.0:0^5	po:verb ts:infinitive_simple
 batarò/b0b1b2I0-0-1+0*0.0:0^5	po:verb ts:indicative_future st:bàtar
-sebàter/b0b1b2P0P1P2r0	po:verb ts:infinitive_simple
+sabàter/b0b1b2P0P1P2r0r5	po:verb ts:infinitive_simple
+sabaterò/b0b1b2I0	po:verb ts:indicative_future st:sabàter
+sabato/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:sabàter
+sabàtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:sabàter
+sabàtar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
+sabatarò/b0b1b2I0	po:verb ts:indicative_future st:sabàtar
+sebàter/b0b1b2P0P1P2r0r5	po:verb ts:infinitive_simple
 sebaterò/b0b1b2I0	po:verb ts:indicative_future st:sebàter
 sebato/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:sebàter
 sebàtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:sebàter
 sebàtar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 sebatarò/b0b1b2I0	po:verb ts:indicative_future st:sebàtar
-sobàter/b0b1b2P0P1P2r0	po:verb ts:infinitive_simple
+sobàter/b0b1b2P0P1P2r0r5	po:verb ts:infinitive_simple
 sobaterò/b0b1b2I0	po:verb ts:indicative_future st:sobàter
 sobato/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:sobàter
 sobàtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:sobàter
@@ -17768,9 +17774,9 @@ rovíjoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:rovijoƚar
 roviɉoƚar/a0a2P0P2	po:verb ts:infinitive_simple
 rovíɉoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:roviɉoƚar
 rovíɉoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:roviɉoƚar
-rovinar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-rovino/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:rovinar
-rovínoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:rovinar
+rovinar/a0a1a2P0P1P2-0	po:verb ts:infinitive_simple
+rovino/a0a1a2P0P1P2FSI0-0	po:verb ts:indicative_present st:rovinar
+rovínoe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:rovinar
 rođar/a0a1P0P1-0r0	po:verb ts:infinitive_simple
 rođo/a0a1P0P1FSI0-0	po:verb ts:indicative_present st:rođar
 róđoe/a0a1I1-0	po:verb ts:indicative_present is:interrogative st:rođar
@@ -17853,12 +17859,24 @@ rúskoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:ruskar
 ruspar/a0a1a2P0P1P2r0	po:verb ts:infinitive_simple
 ruspo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:ruspar
 rúspoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:ruspar
+ruspiar/a0a1a2P0P1P2r0	po:verb ts:infinitive_simple
+ruspio/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:ruspiar
+rúspioe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:ruspiar
 rutar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 ruto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:rutar
 rútoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:rutar
 ruŧar/a0a1P0P1	po:verb ts:infinitive_simple
 ruŧo/a0a1P0P1FSI0	po:verb ts:indicative_present st:ruŧar
 rúŧoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:ruŧar
+ruŧolar/a0a1P0P1	po:verb ts:infinitive_simple
+rúŧolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:ruŧolar
+rúŧoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:ruŧolar
+rusolar/a0a1P0P1	po:verb ts:infinitive_simple
+rúsolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:rusolar
+rúsoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:rusolar
+rusoƚar/a0a2P0P2	po:verb ts:infinitive_simple
+rúsoƚo/a0a2P0P2FSI0	po:verb ts:indicative_present st:rusoƚar
+rúsoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:rusoƚar
 iruvidir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 inruvidir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 ruvijar/a0a1a2P0P1P2-1	po:verb ts:infinitive_simple
@@ -17867,6 +17885,12 @@ ruvíjoe/a0a1a2I1-1	po:verb ts:indicative_present is:interrogative st:ruvijar
 ruviɉar/a0a1a2P0P1P2-1	po:verb ts:infinitive_simple
 ruviɉo/a0a1a2P0P1P2FSI0-1	po:verb ts:indicative_present st:ruviɉar
 ruvíɉoe/a0a1a2I1-1	po:verb ts:indicative_present is:interrogative st:ruviɉar
+ruinar/a0a1a2P0P1P2-0	po:verb ts:infinitive_simple
+ruino/a0a1a2P0P1P2FSI0-0	po:verb ts:indicative_present st:ruinar
+ruínoe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:ruinar
+ruvinar/a0a1a2P0P1P2-0	po:verb ts:infinitive_simple
+ruvino/a0a1a2P0P1P2FSI0-0	po:verb ts:indicative_present st:ruvinar
+ruvínoe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:ruvinar
 ruđar/a0a1P0P1r0	po:verb ts:infinitive_simple
 ruđo/a0a1P0P1FSI0	po:verb ts:indicative_present st:ruđar
 rúđoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:ruđar
@@ -17886,9 +17910,9 @@ sàbaloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:sabalar
 sabaƚar/a0a2P0P2	po:verb ts:infinitive_simple
 sàbaƚo/a0a2P0P2I0	po:verb ts:indicative_present st:sabaƚar
 sàbaƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:sabaƚar
-insabiar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-insabio/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:insabiar
-insàbioe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:insabiar
+sabiar/a0a1a2P0P1P2+0	po:verb ts:infinitive_simple
+sabio/a0a1a2P0P1P2I0+0	po:verb ts:indicative_present st:sabiar
+sàbioe/a0a1a2I1+0	po:verb ts:indicative_present is:interrogative st:sabiar
 sabionar/a0a1a2P0P1P2+0	po:verb ts:infinitive_simple
 sabiono/a0a1a2P0P1P2FSI0+0	po:verb ts:indicative_present st:sabionar
 sabiónoe/a0a1a2I1+0	po:verb ts:indicative_present is:interrogative st:sabionar
@@ -53429,8 +53453,19 @@ xuxolèra/F0V0	po:noun
 xuxoƚèr/M0V1	po:noun
 xuxoƚèra/F0V1	po:noun
 xúxola/F0TE	po:noun
+ruđenente/M0FSmf	po:noun
+rudenente/M0FSmf	po:noun
+ruxenente/M0FSmf	po:noun
+rusa/F0	po:noun
+rusèl/M0U0TE	po:noun
+ruŧolon/F0U0mf	po:noun
+rusolon/F0TEU0mf	po:noun
+ruson/F0U0mf	po:noun
+sabalon/A2U0mf	po:adjective
+sabaƚon/A2mf	po:adjective
+sakrado/M0FSY0	po:noun
 
 
-/ 247
+/ 248
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
