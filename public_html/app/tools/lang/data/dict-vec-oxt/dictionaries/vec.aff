@@ -1,7 +1,7 @@
 # Diŧionario de lengua vèneta
 #
 # Venetan hunspell affix file
-# Copyright (C) 2016+0018 Mauro Trevisan
+# Copyright (C) 2019 Mauro Trevisan
 #
 # This file is distributed under GPL license.
 #
@@ -38,9 +38,6 @@ WORDCHARS -ʼ
 BREAK 2
 BREAK ‒	# figure dash
 BREAK --	# en dash
-
-# avoid wrong spelling of letterwords (km, GHz, DVD, ...)
-KEEPCASE Z0
 
 # affix rules can strip full words, not only one less characters
 FULLSTRIP
@@ -194,6 +191,9 @@ REP ueú uƚú
 
 FLAG long
 
+
+# avoid wrong spelling of letterwords (km, GHz, DVD, ...)
+KEEPCASE Z0
 
 # FIXME
 # Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug. par tuti i mòdi e i tenpi fora ke inté ʼl infenío, partiŧipio ativo, e xerundio

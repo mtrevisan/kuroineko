@@ -7,7 +7,7 @@ License:  LaTeX Project Public License <http://www.latex-project.org/lppl.txt>
 Author:   conversion author is Mauro Trevisan <mauro.trevisan@gmail.com>
 
 
-Copyright (c) 2017 Mauro Trevisan
+Copyright (c) 2019 Mauro Trevisan
 
 This program is free software; it can be redistributed and/or modified
 under the terms of the GNU Lesser General Public Licence,
