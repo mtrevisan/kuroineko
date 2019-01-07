@@ -794,9 +794,9 @@ audiso/P0P1P2FSI0I2	po:verb ts:indicative_present st:audir
 babar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 babo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:babar
 bàboe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:babar
-badar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-bado/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:badar
-bàdoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:badar
+badar/a0a1a2P0P1P2*0	po:verb ts:infinitive_simple
+bado/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:badar
+bàdoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:badar
 badajar/a0a1a2P0P1P2*0	po:verb ts:infinitive_simple
 badajo/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:badajar
 badàjoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:badajar
@@ -1028,12 +1028,12 @@ xbàlsoe/a0a1a2I1.0^1	po:verb ts:indicative_present is:interrogative st:xbalsar
 xbalŧar/a0a1P0P1.0^1	po:verb ts:infinitive_simple
 xbalŧo/a0a1P0P1FSI0.0^1	po:verb ts:indicative_present st:xbalŧar
 xbàlŧoe/a0a1I1.0^1	po:verb ts:indicative_present is:interrogative st:xbalŧar
-balukar/a0a1P0P1+0	po:verb ts:infinitive_simple
-baluko/a0a1P0P1FSI0+0	po:verb ts:indicative_present st:balukar
-balúkoe/a0a1I1+0	po:verb ts:indicative_present is:interrogative st:balukar
-baƚukar/a0a2P0P2+0	po:verb ts:infinitive_simple
-baƚuko/a0a2P0P2I0+0	po:verb ts:indicative_present st:baƚukar
-baƚúkoe/a0a2I1+0	po:verb ts:indicative_present is:interrogative st:baƚukar
+balukar/a0a1P0P1*0+0	po:verb ts:infinitive_simple
+baluko/a0a1P0P1FSI0*0+0	po:verb ts:indicative_present st:balukar
+balúkoe/a0a1I1*0+0	po:verb ts:indicative_present is:interrogative st:balukar
+baƚukar/a0a2P0P2*0+0	po:verb ts:infinitive_simple
+baƚuko/a0a2P0P2I0*0+0	po:verb ts:indicative_present st:baƚukar
+baƚúkoe/a0a2I1*0+0	po:verb ts:indicative_present is:interrogative st:baƚukar
 baluxenar/a0a1P0P1	po:verb ts:infinitive_simple
 balúxeno/a0a1P0P1FSI0	po:verb ts:indicative_present st:baluxenar
 balúxenoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:baluxenar
@@ -49404,7 +49404,6 @@ sanàbil/F0TF	po:adjective
 sanbeko/M0FSmf	po:noun
 sanbeƚan/M0	po:noun
 sanbeƚana/F0	po:noun
-sanbugo/M0FS	po:noun
 sandraka/F0	po:noun
 sanguinoxo/A1FSW0mf	po:adjective
 sanitario/A1	po:adjective
@@ -52360,6 +52359,7 @@ brioxo/A1FSmf	po:noun
 brioxo/A1FSW0mf	po:adjective
 brískol/M0U1mf	po:noun
 brískoƚo/M0mf	po:noun
+brodin/M0*0	po:noun
 brol/M0TEmf	po:noun
 bronbejol/M0U0mf	po:noun
 bronbejoƚo/M0mf	po:noun
@@ -52443,6 +52443,7 @@ duɉar/M0	po:noun
 dukamara/F0	po:noun
 Duŧe/M0TE	po:noun
 dúdola/F0TE	po:noun
+đavajon/F0TETBU0mf	po:noun
 đòvo/M0&2	po:noun
 đudexeto/M0FSTBmf	po:noun
 đuđolèr/M0V0	po:noun
@@ -53389,6 +53390,7 @@ sapientèla/F0TE	po:noun
 sara–ponto/M0mf	po:noun
 sarexin/M0	po:adjective
 sarexin/M0	po:noun
+savarion/A2U0mf	po:adjective
 segretería/F0v0vŧ	po:noun
 seraponto/M0mfvŧ	po:noun
 serneja/F0TEvŧ	po:noun
@@ -53404,6 +53406,11 @@ vario/A1W0	po:adjective
 verada/F0Y0Y1^5	po:noun
 viro/M0M1	po:noun
 xago/M0	po:noun
+xbacarola/F0V0	po:noun
+xbacaroƚa/F0V1	po:noun
+xbalŧo/M0TE	po:noun
+xbertexo/M0FSmf	po:noun
+xbesolon/F0TEU0mf	po:noun
 xèma/F0	po:noun
 xiròvago/M0	po:noun
 xita/F0	po:noun
@@ -53415,6 +53422,6 @@ xuxoƚèra/F0V1	po:noun
 xúxola/F0TE	po:noun
 
 
-/ 253
+/ 256
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ

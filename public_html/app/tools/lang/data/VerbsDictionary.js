@@ -198,6 +198,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 
 "bab",			"",			1,	1,	"g",	"1998",			"Carlar.",
 "bad",			"",			1,	1,	"g",	"1775",			"",
+"bad",			"x",			1,	1,	"g",	"1896",			"",
 "badaj",			"",			1,	3,	"g",	"1867",			"",
 "badaj",			"x",			1,	3,	"g",	"1847",			"",
 "badan",			"",			1,	3,	"g",	"1851",			"Afanar, inketar, alterar.",
@@ -276,6 +277,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "balŧ",			"x",			1,	1,	"g",	"1775",			"",
 "baluk",			"",			1,	3,	"a",	"1867",			"Star kome un mona.",
 "baluk",			"in",			1,	3,	"a",	"1852",			"Inbaukar.",
+"baluk",			"x",			1,	3,	"a",	"1896",			"",
 "baluxen",		"",			1,	3,	"a",	"",				"",
 "banb",			"re",			4,	4,	"a",	"1829",			"Vèco ke ʼl fà da cèo.",
 "banbol",		"in",			1,	1,	"g",	"1998",			"Inkantar.",
