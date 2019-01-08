@@ -8569,9 +8569,9 @@ kanpiónoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:kanpionar
 skansar/a0a1a2P0P1P2r7	po:verb ts:infinitive_simple
 skanso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:skansar
 skànsoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:skansar
-kantar/a0a1a2P0P1P2-1+0r7	po:verb ts:infinitive_simple
-kanto/a0a1a2P0P1P2FSI0-1+0	po:verb ts:indicative_present st:kantar ts:participle_perfect_strong st:kànđer st:kànder st:kànxer
-kàntoe/a0a1a2I1-1+0	po:verb ts:indicative_present is:interrogative st:kantar
+kantar/a0a1a2P0P1P2-1+0*0r7	po:verb ts:infinitive_simple
+kanto/a0a1a2P0P1P2FSI0-1+0*0	po:verb ts:indicative_present st:kantar ts:participle_perfect_strong st:kànđer st:kànder st:kànxer
+kàntoe/a0a1a2I1-1+0*0	po:verb ts:indicative_present is:interrogative st:kantar
 kantarar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 kantaro/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:kantarar
 kantàroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:kantarar
@@ -8614,9 +8614,9 @@ kapar/a0a1a2P0P1P2+0*0r5r7	po:verb ts:infinitive_simple
 kapo/a0a1a2P0P1P2FSI0+0*0	po:verb ts:indicative_present st:kapar
 kàpoe/a0a1a2I1+0*0	po:verb ts:indicative_present is:interrogative st:kapar
 kapir/a0a1a2d0d1d2P0P1P2r0	po:verb ts:infinitive_simple
-kaparar/a0a1a2P0P1P2-1+0	po:verb ts:infinitive_simple
-kaparo/a0a1a2P0P1P2FSI0-1+0	po:verb ts:indicative_present st:kaparar
-kapàroe/a0a1a2I1-1+0	po:verb ts:indicative_present is:interrogative st:kaparar
+kaparar/a0a1a2P0P1P2-1+0*0	po:verb ts:infinitive_simple
+kaparo/a0a1a2P0P1P2FSI0-1+0*0	po:verb ts:indicative_present st:kaparar
+kapàroe/a0a1a2I1-1+0*0	po:verb ts:indicative_present is:interrogative st:kaparar
 kapejar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 kapejo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:kapejar
 kapéjoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:kapejar
@@ -18938,6 +18938,7 @@ skandalíxoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:skandalixa
 skandaƚixar/a0a2P0P2	po:verb ts:infinitive_simple
 skandaƚixo/a0a2P0P2I0	po:verb ts:indicative_present st:skandaƚixar
 skandaƚíxoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:skandaƚixar
+skankir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 skaolar/a0a1P0P1	po:verb ts:infinitive_simple
 skàolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:skaolar
 skàoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:skaolar
@@ -40328,10 +40329,10 @@ sekamòr/M0	po:noun
 sendaƚo/M0&1	po:noun
 sigàñoƚa/F0	po:noun
 siñàpoƚa/F0	po:noun
-skaldalèto/M0FS	po:noun
-skaldaƚèto/M0	po:noun
 skalda–lèto/M0FS	po:noun
 skalda–ƚèto/M0	po:noun
+skaldalèto/M0FS	po:noun
+skaldaƚèto/M0	po:noun
 skauja/F0TE	po:noun
 skaujara/F0	po:noun
 skauɉara/F0	po:noun
@@ -44754,7 +44755,6 @@ desipo/M0	po:noun
 desistenŧa/F0TE	po:noun
 desixamente/FSW2	po:adverb
 desípul/M0U1TE	po:noun
-deskanpon	po:adverb
 deskargabaril/F0TF	po:noun
 desko/M0	po:noun
 deskonsamanèstra/F0	po:noun
@@ -49674,7 +49674,6 @@ skagòŧa/F0TE	po:noun
 skagòŧo/M0FSTE	po:adjective
 skakieto/M0FSmf	po:adjective
 skal/M0U1(0	po:noun
-skaƚo/M0U1(1	po:noun
 skaldadin/A2	po:noun
 skalenbro/M0	po:noun
 skalé	po:noun
@@ -49685,6 +49684,7 @@ skalsadina/F0	po:noun
 skalŧadina/F0	po:noun
 skaƚenbro/M0	po:noun
 skaƚé	po:noun
+skaƚo/M0(1	po:noun
 skaƚonsin/M0	po:noun
 skamonèa/F0	po:noun
 skanakonfèto/M0FS	po:noun
@@ -49696,6 +49696,7 @@ skanpadiŧa/F0TE	po:adjective
 skanpadiŧo/M0FSTE	po:adjective
 skanpaiŧa/F0TE	po:adjective
 skanpaiŧo/M0FSTE	po:adjective
+skanpon	po:adverb
 skapuso/M0FS(2	po:noun
 skapuŧo/M0FS(2	po:noun
 skarabòco/M0FS	po:noun
@@ -53342,6 +53343,18 @@ seraponto/M0mfvŧ	po:noun
 serneja/F0TEvŧ	po:noun
 sesin/A2	po:adjective
 sèra–ponto/M0mf	po:noun
+skalinon/F0U0mf	po:noun
+skalsaròto/M0FS	po:noun
+skalseron/F0U0mf	po:noun
+skalŧaròto/M0FS	po:noun
+skaƚinon/F0mf	po:noun
+skamufieŧo/M0FSTEmf	po:noun
+skamufioxo/A1FSmf	po:noun
+skamufioxo/A1FSW0mf	po:adjective
+skansía/F0	po:noun
+skàndal/M0U1TE	po:noun
+skàola/F0TE	po:adverb
+skàpar/M0	po:noun
 staso/M0FSM1	po:noun
 staŧo/M0FSM1	po:noun
 stinko/M0	po:noun
@@ -53370,6 +53383,8 @@ xbraŧèr/M0V0	po:noun
 xbraŧèra/F0V0	po:noun
 xbrisioxo/A1FSmf	po:noun
 xbrisioxo/A1FSW0mf	po:adjective
+xbròdega/F0	po:noun
+xbròdego/M0	po:noun
 xèma/F0	po:noun
 xiròvago/M0	po:noun
 xita/F0	po:noun
@@ -53379,12 +53394,8 @@ xuxolèra/F0V0	po:noun
 xuxoƚèr/M0V1	po:noun
 xuxoƚèra/F0V1	po:noun
 xúxola/F0TE	po:noun
-xbròdega/F0	po:noun
-xbròdego/M0	po:noun
-skalinon/F0U0mf	po:noun
-skaƚinon/F0U0mf	po:noun
 
 
-/ 260
+/ 261
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
