@@ -9684,6 +9684,12 @@ kópoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:kopar
 kopatar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 kopato/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:kopatar
 kopàtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:kopatar
+skopelar/a0a1P0P1	po:verb ts:infinitive_simple
+skopèlo/a0a1P0P1FSI0	po:verb ts:indicative_present st:skopelar
+skopèloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:skopelar
+skopeƚar/a0a2P0P2	po:verb ts:infinitive_simple
+skopèƚo/a0a2P0P2I0	po:verb ts:indicative_present st:skopeƚar
+skopèƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:skopeƚar
 skopelotar/a0a1P0P1	po:verb ts:infinitive_simple
 skopelòto/a0a1P0P1FSI0	po:verb ts:indicative_present st:skopelotar
 skopelòtoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:skopelotar
@@ -9832,6 +9838,12 @@ korèxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:korèxer
 korèto/A1FS	po:verb ts:participle_perfect_strong st:korèxer
 korèxar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 korexarò/b0b1b2I0	po:verb ts:indicative_future st:korèxar
+skorkolar/a0a1P0P1r0	po:verb ts:infinitive_simple
+skórkolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:skorkolar
+skórkoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:skorkolar
+skorkoƚar/a0a2P0P2r0	po:verb ts:infinitive_simple
+skórkoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:skorkoƚar
+skórkoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:skorkoƚar
 korgar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 kòrgo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:korgar
 kòrgoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:korgar
@@ -17100,10 +17112,10 @@ inkoràjoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inkorajar
 inkoraɉar/a0a1a2P0P1P2r0	po:verb ts:infinitive_simple
 inkoraɉo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:inkoraɉar
 inkoràɉoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inkoraɉar
-skorajar/a0a1a2P0P1P2-0	po:verb ts:infinitive_simple
+skorajar/a0a1a2P0P1P2-0r0	po:verb ts:infinitive_simple
 skorajo/a0a1a2P0P1P2FSI0-0	po:verb ts:indicative_present st:skorajar
 skoràjoe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:skorajar
-skoraɉar/a0a1a2P0P1P2-0	po:verb ts:infinitive_simple
+skoraɉar/a0a1a2P0P1P2-0r0	po:verb ts:infinitive_simple
 skoraɉo/a0a1a2P0P1P2FSI0-0	po:verb ts:indicative_present st:skoraɉar
 skoràɉoe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:skoraɉar
 inkoraxar/a0a1a2P0P1P2r0	po:verb ts:infinitive_simple
@@ -34008,7 +34020,7 @@ konŧavéntola/F0	po:noun
 konŧièr/M0V0	po:noun
 konŧièra/F0V0	po:noun
 koral/M0U0TE	po:noun
-korbame/M0	po:noun
+korbame/M0*0	po:noun
 kordame/M0	po:noun
 kordarol/M0U0V0mf	po:noun
 kordarola/F0V0	po:noun
@@ -36210,13 +36222,13 @@ skondarola/F0V0	po:noun
 skondaroƚa/F0V1	po:noun
 skondaroƚo/M0V1mf	po:noun
 skondur/M0&0	po:noun
-skondura/F0&0	po:noun
+kondura/F0*0&0	po:noun
 skonđur/M0&0	po:noun
-skonđura/F0&0	po:noun
+konđura/F0*0&0	po:noun
 skonsamenèstra/F0	po:noun
 skonŧamenèstra/F0	po:noun
 skonxur/M0&0	po:noun
-skonxura/F0&0	po:noun
+konxura/F0*0&0	po:noun
 skooleta/F0TE	po:noun
 skopaŧon/F0TEU0mf	po:noun
 skorabion/A2U0mf	po:adjective
@@ -36237,7 +36249,9 @@ skotadéo	po:adverb
 skotente/M0FSmf	po:adjective
 skoŧon/A2U0mf	po:noun
 skovoleta/F0TE	po:noun
-skóol/A1TEU1mf	po:noun
+skóol/M0TEU1mf	po:noun
+skóola/F0&0	po:noun
+skóoƚa/F0&1	po:noun
 skóvol/M0U1TEmf	po:noun
 skóvola/F0TE	po:noun
 skòca/F0	po:noun
@@ -41649,10 +41663,10 @@ markado/M0FSY0	po:noun
 markuŧo/M0FSTE	po:noun
 maròde/M0	po:noun
 maròta/F0	po:noun
-marsaría/F0&0	po:noun
+marsería/F0v0&0	po:noun
 marsiliana/F0	po:noun
 marsiƚiana/F0	po:noun
-marŧaría/F0&0	po:noun
+marŧería/F0v0&0	po:noun
 marŧiliana/F0	po:noun
 maxengo/A1FS	po:adjective
 maxorengo/A1	po:adjective
@@ -41666,8 +41680,8 @@ medanin/M0	po:noun
 mediator/A2mf	po:noun
 međanin/M0	po:noun
 merkado/M0FSY0	po:noun
-mersaría/F0&0	po:noun
-merŧaría/F0&0	po:noun
+mersería/F0v0&0	po:noun
+merŧería/F0v0&0	po:noun
 meseto/A1FSv0mf	po:adjective
 mexanin/M0	po:noun
 miceleto/M0FSTEmf	po:noun
@@ -41730,9 +41744,9 @@ padrona/F0§0	po:noun
 pair/M0	po:noun
 pajeto/M0FSmf	po:noun
 paɉeto/M0FSmf	po:noun
-palandaría/F0	po:noun
+palandería/F0v0&0	po:noun
 palandría/F0	po:noun
-paƚandaría/F0	po:noun
+paƚandería/F0v0&0	po:noun
 paƚandría/F0	po:noun
 panatería/F0v0	po:noun
 pankógol/M0U1TEmf	po:noun
@@ -42112,7 +42126,7 @@ daolin/M0TE	po:noun
 daòl/M0U0TE	po:noun
 demonieŧo/M0FSTEmf	po:noun
 deolin/M0TE	po:noun
-desentaría/F0	po:noun
+desentería/F0v0&0	po:noun
 detregan/M0U0	po:noun
 diaolon/F0TEU0mf	po:noun
 dimandon/A2U0mf	po:noun
@@ -42138,7 +42152,7 @@ dukato/M0FS(2	po:noun
 đorđolina/F0	po:noun
 eklise/M0	po:noun
 ekrise/M0	po:noun
-erbaría/F0	po:noun
+erbería/F0v0&0	po:noun
 esera/F0	po:noun
 esèso/M0FS	po:noun
 estroxo/A1FSmf	po:noun
@@ -45849,7 +45863,7 @@ imàxene/M0	po:noun
 inamorada/F0Y0Y1	po:noun
 inarivàbil/F0TF	po:adjective
 inbandixon/F0U0mf	po:noun
-inbasaría/F0	po:noun
+inbasería/F0v0&0	po:noun
 inbojo/M0FSTE	po:noun
 inbotidina/F0	po:noun
 inbriaga/F0&0	po:adjective
@@ -46151,7 +46165,7 @@ kagòŧo/M0FSTE	po:adjective
 kajo/M0FSTE	po:noun
 kakasèn/A2U0	po:noun
 kakatú	po:noun
-kakofonaría/F0	po:noun
+kakofonería/F0v0&0	po:noun
 kalabron/F0U0mf	po:noun
 kalamina	po:noun
 kalandrina/F0	po:noun
@@ -49410,7 +49424,7 @@ santarèla/F0TE	po:adjective
 santèlmo/M0	po:noun
 santilion/F0U0mf	po:noun
 santiƚion/F0mf	po:noun
-santocaría/F0	po:noun
+santocería/F0v0&0	po:noun
 santon/A2U0mf	po:adjective
 santòca/F0	po:noun
 santòco/M0FS	po:noun
@@ -50053,7 +50067,7 @@ sotoskòrŧo/M0TE	po:noun
 sotovento/M0FSmf	po:noun
 soŧietà	po:noun
 soŧiévol/F0U1mf	po:adjective
-sovarcaría/F0	po:noun
+sovarcería/F0v0&0	po:noun
 soventor/A2mf	po:noun
 soveño/M0mf	po:noun
 sovercería/F0v0	po:noun
@@ -50509,7 +50523,7 @@ sumona/F0	po:noun
 superbieta/F0	po:noun
 superbonaŧa/F0TE	po:adjective
 superbonaŧo/M0FSTE	po:adjective
-supercaría/F0	po:noun
+supercería/F0v0&0	po:noun
 superfisial/F0TFU0W0	po:adjective
 superfiŧial/F0U0W0	po:adjective
 superiorità	po:noun
@@ -50643,10 +50657,10 @@ tàrtar/M0	po:noun
 teatrin/M0	po:noun
 teđa/F0TE	po:adjective
 teđa/F0TE	po:noun
-telaría/F0	po:noun
+telería/F0v0&0	po:noun
 telmente/FS	po:adverb
 telònio/M0	po:noun
-teƚaría/F0	po:noun
+teƚería/F0v0&1	po:noun
 teƚònio/M0	po:noun
 tema/F0	po:noun
 temerarità	po:noun
@@ -50667,7 +50681,7 @@ tentoxo/A1FSW0mf	po:adjective
 teñon/F0U0mf	po:noun
 teñoxa/F0&0	po:adjective
 teñoxa/F0&0	po:noun
-teñoxaría/F0	po:noun
+teñoxería/F0v0&0	po:noun
 teñoxo/M0FS&0mf	po:noun
 teñoxo/M0FSW0&0mf	po:adjective
 teñuda/F0Y0	po:noun
@@ -51325,7 +51339,7 @@ vestexina/F0	po:noun
 vestidin/M0	po:adjective
 vetara/F0	po:noun
 vetrajo/M0TE	po:noun
-vetraría/F0	po:noun
+vetrería/F0v0&1	po:noun
 vetriada/F0Y0Y1	po:noun
 vetupèrio/M0	po:noun
 vexo/M0FS(0§0mf	po:noun
@@ -51675,7 +51689,7 @@ xmèrsie/M0	po:noun
 xmèrŧie/M0	po:noun
 xmoka/F0	po:noun
 xmorbeŧo/M0FSTEmf	po:adjective
-xmorfiaría/F0	po:noun
+xmorfiería/F0v0&0	po:noun
 xmorfioxeŧo/M0FSTEmf	po:noun
 xmorkajo/M0FSTE	po:noun
 xmorsinoxo/A1FSmf	po:noun
@@ -51855,7 +51869,7 @@ fuga/F0	po:noun
 gaiton/F0U0mf	po:noun
 gràsil/F0TF	po:adjective
 gràŧil/F0	po:adjective
-grixonaría/F0	po:noun
+grixonería/F0v0&0	po:noun
 inbastio/M0	po:noun
 infiaxon/F0U0mf	po:noun
 ingranfio/A1	po:adjective
@@ -52104,8 +52118,8 @@ skontroxo/A1FSW0mf	po:adjective
 skorobuto/M0FS	po:noun
 skorsana/F0	po:noun
 skorŧana/F0	po:noun
-skroaría/F0	po:noun
-skrovaría/F0	po:noun
+skroería/F0v0&0	po:noun
+skrovería/F0v0&0	po:noun
 skuasaròto/M0FS	po:noun
 skuaŧaròto/M0FS	po:noun
 sodin/A2	po:adjective
@@ -52913,7 +52927,7 @@ marubolin/M0TE	po:noun
 masakan/F0U0	po:noun
 masamasco/M0	po:noun
 masariŧia/F0TE	po:noun
-masaría/F0&0
+masería/F0v0&0	po:noun
 mascèr/M0V0	po:noun
 mascèra/F0V0	po:noun
 maseriŧia/F0TE	po:noun
@@ -53478,6 +53492,14 @@ skòmio/M0	po:noun
 skonkaso/M0	po:noun
 skondarola/F0V0	po:noun
 skondaroƚa/F0V1	po:noun
+skonsa/F0	po:noun
+skoolin/M0TE	po:noun
+skopèl/M0U0(0	po:noun
+skopèƚo/M0U0(1	po:noun
+skopeloton/F0U0mf	po:noun
+skopeƚoton/F0U0mf	po:noun
+skopeton/F0U0mf	po:noun
+skorería/F0v0&0	po:noun
 
 
 / 268
