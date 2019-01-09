@@ -3554,12 +3554,12 @@ drésoe/a0a1a2I1+0.0	po:verb ts:indicative_present is:interrogative st:dresar
 dreŧar/a0a1P0P1+0.0	po:verb ts:infinitive_simple
 dreŧo/a0a1P0P1FSI0+0.0	po:verb ts:indicative_present st:dreŧar
 dréŧoe/a0a1I1+0.0	po:verb ts:indicative_present is:interrogative st:dreŧar
-drisar/a0a1a2P0P1P2+0	po:verb ts:infinitive_simple
-driso/a0a1a2P0P1P2FSI0+0	po:verb ts:indicative_present st:drisar
-drísoe/a0a1a2I1+0	po:verb ts:indicative_present is:interrogative st:drisar
-driŧar/a0a1P0P1+0	po:verb ts:infinitive_simple
-driŧo/a0a1P0P1FSI0+0	po:verb ts:indicative_present st:driŧar
-dríŧoe/a0a1I1+0	po:verb ts:indicative_present is:interrogative st:driŧar
+drisar/a0a1a2P0P1P2+0*0	po:verb ts:infinitive_simple
+driso/a0a1a2P0P1P2FSI0+0*0	po:verb ts:indicative_present st:drisar
+drísoe/a0a1a2I1+0*0	po:verb ts:indicative_present is:interrogative st:drisar
+driŧar/a0a1P0P1+0*0	po:verb ts:infinitive_simple
+driŧo/a0a1P0P1FSI0+0*0	po:verb ts:indicative_present st:driŧar
+dríŧoe/a0a1I1+0*0	po:verb ts:indicative_present is:interrogative st:driŧar
 dromir/a0a1a2e0e1e2P0P1P2+0	po:verb ts:infinitive_simple
 dròmo/e0e1e2P0P1P2FSI0+0	po:verb ts:indicative_present st:dromir
 dròmoe/a0a1a2I1+0	po:verb ts:indicative_present is:interrogative st:dromir
@@ -10625,12 +10625,12 @@ rekúxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:rekuxar
 skuxar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 skuxo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:skuxar
 skúxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:skuxar
-kúxer/b0b1b2P0P1P2-1.0	po:verb ts:infinitive_simple
-kuxerò/b0b1b2I0-1.0	po:verb ts:indicative_future st:kúxer
-kuxo/a0a1a2P0P1P2FSI0-1.0	po:verb ts:indicative_present st:kúxer
-kúxoe/a0a1a2I1-1.0	po:verb ts:indicative_present is:interrogative st:kúxer
-kúxar/b0b1b2P0P1P2-1.0	po:verb ts:infinitive_simple
-kuxarò/b0b1b2I0-1.0	po:verb ts:indicative_future st:kúxar
+kúxer/b0b1b2P0P1P2-1*0.0	po:verb ts:infinitive_simple
+kuxerò/b0b1b2I0-1*0.0	po:verb ts:indicative_future st:kúxer
+kuxo/a0a1a2P0P1P2FSI0-1*0.0	po:verb ts:indicative_present st:kúxer
+kúxoe/a0a1a2I1-1*0.0	po:verb ts:indicative_present is:interrogative st:kúxer
+kúxar/b0b1b2P0P1P2-1*0.0	po:verb ts:infinitive_simple
+kuxarò/b0b1b2I0-1*0.0	po:verb ts:indicative_future st:kúxar
 kuxir/a0a1a2d0d1d2P0P1P2-1*0.0r5	po:verb ts:infinitive_simple
 kuxinar/a0a1a2P0P1P2r5	po:verb ts:infinitive_simple
 kuxino/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:kuxinar
@@ -36274,10 +36274,10 @@ skuakuarèla/F0TE	po:noun
 skuakuaron/A2U0mf	po:noun
 skuakuerin/M0	po:noun
 skuakueron/A2U0mf	po:noun
-skuarsabataja/F0TE	po:noun
 skuarsa–bataja/F0TE	po:noun
-skuarŧabataja/F0TE	po:noun
+skuarsabataja/F0TE	po:noun
 skuarŧa–bataja/F0TE	po:noun
+skuarŧabataja/F0TE	po:noun
 skuasakóa/F0	po:noun
 skudelin/M0TE	po:noun
 skudelòto/M0FS	po:noun
@@ -43124,6 +43124,7 @@ skamofieŧo/M0FSTEmf	po:noun
 skankariato/A1FS	po:adjective
 skankàniko/A1FS	po:adjective
 skanpo/M0(2	po:noun
+skansa–fadiga/F0	po:noun
 skansafadiga/F0	po:noun
 skansèl/M0U0TE	po:noun
 skanŧèl/M0U0	po:noun
@@ -47851,7 +47852,9 @@ mòrmora/F0	po:noun
 mòrsa/F0	po:noun
 mòrta/F0*0	po:adjective
 mòrto/M0FS*0	po:adjective
+mòsa–fadiga/F0	po:noun
 mòto/A1FS	po:noun
+mòŧa–fadiga/F0	po:noun
 muci	po:interjection
 muco/M0&0(2	po:noun
 mufa/F0	po:noun
@@ -47860,12 +47863,14 @@ mujo/M0FSTE	po:noun
 mumento/M0FSmf	po:noun
 mumia/F0	po:noun
 munegeŧo/M0FSTEmf	po:noun
+musa–fadiga/F0	po:noun
 musafadiga/F0	po:noun
 musco/M0&0	po:noun
 muso/M0FS&0§0(4	po:noun
 mustafà	po:noun
 muto/A1FS	po:adjective
 muto/A1FS	po:noun
+muŧa–fadiga/F0	po:noun
 muŧafadiga/F0	po:noun
 muxegeto/M0FSmf	po:noun
 muxièra/F0	po:noun
@@ -49828,7 +49833,8 @@ skiŧadina/F0	po:noun
 skiŧiñoxo/A1FSW0mf	po:adjective
 skiŧo/M0FS&0	po:adjective
 skiŧo/M0FS&0(2	po:noun
-skivafadiga/F0	po:adjective
+skiva–fadiga/F0	po:noun
+skivafadiga/F0	po:noun
 skivo/A1	po:adjective
 sklamo/M0	po:noun
 skoadina/F0	po:noun
@@ -52121,7 +52127,8 @@ skalinada/F0Y0Y1	po:noun
 skaƚinada/F0Y0Y1	po:noun
 skanso	po:adverb
 skaso/M0FS	po:noun
-skivofadiga/F0	po:adjective
+skivo–fadiga/F0	po:noun
+skivofadiga/F0	po:noun
 skontroxo/A1FSmf	po:noun
 skontroxo/A1FSW0mf	po:adjective
 skorobuto/M0FS	po:noun
@@ -52138,6 +52145,7 @@ sotoskuadra/F0	po:noun
 spakadura/F0r5&0	po:noun
 spalar/M0	po:noun
 spaƚaro/M0	po:noun
+sparaña–fadiga/F0	po:noun
 sparañafadiga/F0	po:noun
 spaureto/M0FSmf	po:noun
 spolverinajo/M0TE	po:noun
@@ -53407,6 +53415,7 @@ scoparoƚo/M0V1mf	po:noun
 scopaskónder	po:noun
 scòpa–skónder	po:noun
 segretería/F0v0vŧ	po:noun
+sekatrise/F0	po:noun
 seraponto/M0mfvŧ	po:noun
 serneja/F0TEvŧ	po:noun
 sesin/A2	po:adjective
@@ -53472,10 +53481,17 @@ skorería/F0v0&0	po:noun
 skorpionŧin/M0TE	po:noun
 skòmio/M0	po:noun
 skravaso/M0FS	po:noun
+skudería/F0v0	po:noun
+skudisio/M0	po:noun
+skursa–fadiga/F0	po:noun
+skursafadiga/F0	po:noun
+skurŧa–fadiga/F0	po:noun
+skurŧafadiga/F0	po:noun
 staso/M0FSM1	po:noun
 staŧo/M0FSM1	po:noun
 stinko/M0	po:noun
 ŧalmòr/M0TB	po:noun
+ŧekatriŧe/F0	po:noun
 ŧeŧin/A2	po:adjective
 vardabosko/M0	po:noun
 vario/A1W0	po:adjective
@@ -53511,10 +53527,8 @@ xuxolèra/F0V0	po:noun
 xuxoƚèr/M0V1	po:noun
 xuxoƚèra/F0V1	po:noun
 xúxola/F0TE	po:noun
-skudería/F0v0	po:noun
-skudisio/M0	po:noun
 
 
-/ 271
+/ 272
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
