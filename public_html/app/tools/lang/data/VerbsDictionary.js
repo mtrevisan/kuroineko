@@ -6848,6 +6848,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧement",		"",			1,	3,	"a",	"1980",			"",
 "ŧen",			"",			1,	1,	"a",	"1854",			"",
 "ŧénd",			"in",			3,	1,	"a",	"1775",			"Rénder amaro, aver de ʼl amaro, provokar iritaŧion kutànea, friŧar, koròder.",
+"ŧener",			"",			1,	1,	"a",	"1896",			"",
 "ŧenɉ",			"",			1,	1,	"a",	"1867",			"Ligar ko na ŧenɉa.",
 "ŧentr",			"",			1,	1,	"a",	"",				"",
 "ŧentr",			"kon",		1,	1,	"a",	"1775",			"",
