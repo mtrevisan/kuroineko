@@ -3260,6 +3260,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kur",			"in",			1,	1,	"a",	"1847",			"Afretar, dar premura o pensieri.",
 "kur",			"pra",		1,	1,	"a",	"1560",			"",
 "kur",			"pro",		1,	1,	"a",	"1867",			"",
+"kur",			"s",			1,	1,	"a",	"1896",			"",
 "kur",			"tras",		1,	1,	"a",	"1980",			"",
 "kurt",			"s",			1,	1,	"a",	"1854",			"",
 "kuriox",		"",			1,	4,	"a",	"1980",			"",

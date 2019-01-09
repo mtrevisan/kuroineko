@@ -10296,9 +10296,9 @@ inkrósoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:inkrosoƚa
 krovar/a0a1a2P0P1P2*0	po:verb ts:infinitive_simple
 krovo/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:krovar
 króvoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:krovar
-deskroxar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-deskroxo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:deskroxar
-deskróxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:deskroxar
+skroxar/a0a1a2P0P1P2-0	po:verb ts:infinitive_simple
+skroxo/a0a1a2P0P1P2FSI0-0	po:verb ts:indicative_present st:skroxar
+skróxoe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:skroxar
 inkroxar/a0a1a2P0P1P2r0r5	po:verb ts:infinitive_simple
 inkroxo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:inkroxar
 inkróxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inkroxar
@@ -10569,9 +10569,9 @@ rekúperoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:rekuperar
 rekuparar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 rekúparo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:rekuparar
 rekúparoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:rekuparar
-kurar/a0a1a2P0P1P2+0^2r0r5r7	po:verb ts:infinitive_simple
-kuro/a0a1a2P0P1P2FSI0+0^2	po:verb ts:indicative_present st:kurar
-kúroe/a0a1a2I1+0^2	po:verb ts:indicative_present is:interrogative st:kurar
+kurar/a0a1a2P0P1P2+0*0^2r0r5r7	po:verb ts:infinitive_simple
+kuro/a0a1a2P0P1P2FSI0+0*0^2	po:verb ts:indicative_present st:kurar
+kúroe/a0a1a2I1+0*0^2	po:verb ts:indicative_present is:interrogative st:kurar
 prokurar/a0a1a2P0P1P2r7	po:verb ts:infinitive_simple
 prokuro/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:prokurar
 prokúroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:prokurar
@@ -29557,7 +29557,7 @@ krivèl/M0U0&0(2	po:noun
 krivèƚo/M0&1(3	po:noun
 kroco/M0FS	po:noun
 kroxe/F0FS&0(4	po:noun
-kroxèra/F0	po:noun
+kroxèra/F0V0	po:noun
 króstol/M0U1TEmf	po:noun
 kròda/F0	po:noun
 kròsola/F0TE	po:noun
@@ -29612,7 +29612,7 @@ kuisto/A1FS	po:pronoun
 kukú	po:noun
 kul/M0U1&0(0(4<0<1	po:noun
 kulata/F0(2	po:noun
-kultura/F0	po:noun
+kultura/F0*0	po:noun
 kultural/F0TFU0	po:adjective
 kuƚata/F0	po:noun
 kuƚo/M0^6&1(1(5<2	po:noun
@@ -31284,9 +31284,9 @@ skudèla/F0TE	po:noun
 skufiòto/M0FS	po:noun
 skuinŧa/F0TE	po:noun
 skuliaron/F0U0mf	po:noun
-skulièr/M0&0(2	po:noun
+skulièr/M0&0(0(2	po:noun
 skuƚiaron/F0mf	po:noun
-skuƚièr/M0&1(3	po:noun
+skuƚièr/M0&1(1(3	po:noun
 skur/M0&0	po:noun
 skur/M0&0(0	po:adjective
 skura/F0&0	po:noun
@@ -34145,9 +34145,7 @@ kroñòl/M0U0TE	po:noun
 krosta/F0	po:noun
 krostin/M0	po:noun
 krovata/F0	po:noun
-kroxara/F0	po:noun
 kroxato/M0FS	po:noun
-kroxièra/F0	po:noun
 krósola/F0TE	po:noun
 króŧola/F0	po:noun
 kruciñòla/F0TE	po:noun
@@ -36277,7 +36275,9 @@ skuakuaron/A2U0mf	po:noun
 skuakuerin/M0	po:noun
 skuakueron/A2U0mf	po:noun
 skuarsabataja/F0TE	po:noun
+skuarsa–bataja/F0TE	po:noun
 skuarŧabataja/F0TE	po:noun
+skuarŧa–bataja/F0TE	po:noun
 skuasakóa/F0	po:noun
 skudelin/M0TE	po:noun
 skudelòto/M0FS	po:noun
@@ -36289,11 +36289,13 @@ skuèko/A1FS	po:adjective
 skuèla/F0&0	po:noun
 skuèƚa/F0&1	po:noun
 skuinco/A1FS	po:noun
+skulasa–banko/M0FS	po:noun
 skulasabanko/M0FS	po:noun
 skulasadina/F0	po:noun
 skulaŧabanko/M0FS	po:noun
 skulaŧadina/F0	po:noun
 skultor/F0mf	po:noun
+skuƚasa–banko/M0	po:noun
 skuƚasabanko/M0	po:noun
 skuƚasadina/F0	po:noun
 skuƚierada/F0Y0Y1	po:noun
@@ -53509,8 +53511,10 @@ xuxolèra/F0V0	po:noun
 xuxoƚèr/M0V1	po:noun
 xuxoƚèra/F0V1	po:noun
 xúxola/F0TE	po:noun
+skudería/F0v0	po:noun
+skudisio/M0	po:noun
 
 
-/ 270
+/ 271
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
