@@ -9841,7 +9841,7 @@ korexarò/b0b1b2I0	po:verb ts:indicative_future st:korèxar
 skorkolar/a0a1P0P1r0	po:verb ts:infinitive_simple
 skórkolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:skorkolar
 skórkoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:skorkolar
-skorkoƚar/a0a2P0P2r0	po:verb ts:infinitive_simple
+skorkoƚar/a0a2P0P2r1	po:verb ts:infinitive_simple
 skórkoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:skorkoƚar
 skórkoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:skorkoƚar
 korgar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
@@ -9955,6 +9955,9 @@ kòsoe/a0a1a2I1-1+0*0	po:verb ts:indicative_present is:interrogative st:kosar
 rakosar/a0a1a2P0P1P2r0	po:verb ts:infinitive_simple
 rakòso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:rakosar
 rakòsoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:rakosar
+skosatar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+skosato/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:skosatar
+skosàtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:skosatar
 kosperar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 kòspero/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:kosperar
 kòsperoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:kosperar
@@ -19184,7 +19187,7 @@ skoréđoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:skoređar
 skorexar/a0a1a2P0P1P2r0	po:verb ts:infinitive_simple
 skorexo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:skorexar
 skoréxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:skorexar
-skorlar/a0a1a2P0P1P2r5	po:verb ts:infinitive_simple
+skorlar/a0a1a2P0P1P2r0r5	po:verb ts:infinitive_simple
 skorlo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:skorlar
 skórloe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:skorlar
 skorpir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
@@ -23889,6 +23892,12 @@ rinvèño/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:rinvèñer
 rinvèñoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:rinvèñer
 rinvèñar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 rinveñarò/b0b1b2I0	po:verb ts:indicative_future st:rinvèñar st:rinvéñar
+skovèñer/b0b1b2b3P0P1P2	po:verb ts:infinitive_simple
+skoveñerò/b0b1b2I0	po:verb ts:indicative_future st:konvèñer st:skovèñer
+skovèño/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:konvèñer
+skovèñoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:skovèñer
+skovèñar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
+skoveñarò/b0b1b2I0	po:verb ts:indicative_future st:konvèñar st:skovèñar
 sovèñer/b0b1b2b3P0P1P2.0	po:verb ts:infinitive_simple
 soveñerò/b0b1b2I0.0	po:verb ts:indicative_future st:sovèñer st:sovéñer
 sovèño/a0a1a2P0P1P2FSI0.0	po:verb ts:indicative_present st:sovèñer
@@ -29305,7 +29314,7 @@ kavaƚixièr/M0	po:noun
 kavaƚo/M0&1(1<2	po:noun
 kavaòco/M0FS	po:noun
 kavaron/F0U0mf	po:noun
-kavaso/M0(2	po:noun
+kavaso/M0FS(2	po:noun
 kavastròpol/M0U1TEmf	po:noun
 kavasur/M0	po:noun
 kavaŧo/M0(2	po:noun
@@ -33969,7 +33978,9 @@ komisura/F0	po:noun
 komodeto/A1FS+0mf	po:noun
 komodin/A2	po:noun
 komunal/F0TFU0W0	po:adjective
+kondura/F0*0&0	po:noun
 kondutor/A2mf	po:noun
+konđura/F0*0&0	po:noun
 konejo/M0FSTE	po:noun
 konesion/F0U0*0mf	po:noun
 konestrèla/F0TE	po:noun
@@ -34019,6 +34030,7 @@ konŧatèsta/F0	po:noun
 konŧavéntola/F0	po:noun
 konŧièr/M0V0	po:noun
 konŧièra/F0V0	po:noun
+konxura/F0*0&0	po:noun
 koral/M0U0TE	po:noun
 korbame/M0*0	po:noun
 kordame/M0	po:noun
@@ -36222,13 +36234,10 @@ skondarola/F0V0	po:noun
 skondaroƚa/F0V1	po:noun
 skondaroƚo/M0V1mf	po:noun
 skondur/M0&0	po:noun
-kondura/F0*0&0	po:noun
 skonđur/M0&0	po:noun
-konđura/F0*0&0	po:noun
 skonsamenèstra/F0	po:noun
 skonŧamenèstra/F0	po:noun
 skonxur/M0&0	po:noun
-konxura/F0*0&0	po:noun
 skooleta/F0TE	po:noun
 skopaŧon/F0TEU0mf	po:noun
 skorabion/A2U0mf	po:adjective
@@ -36249,9 +36258,7 @@ skotadéo	po:adverb
 skotente/M0FSmf	po:adjective
 skoŧon/A2U0mf	po:noun
 skovoleta/F0TE	po:noun
-skóol/M0TEU1mf	po:noun
-skóola/F0&0	po:noun
-skóoƚa/F0&1	po:noun
+skóol/A1TEU1mf	po:noun
 skóvol/M0U1TEmf	po:noun
 skóvola/F0TE	po:noun
 skòca/F0	po:noun
@@ -41746,7 +41753,7 @@ pajeto/M0FSmf	po:noun
 paɉeto/M0FSmf	po:noun
 palandería/F0v0&0	po:noun
 palandría/F0	po:noun
-paƚandería/F0v0&0	po:noun
+paƚandería/F0v0&1	po:noun
 paƚandría/F0	po:noun
 panatería/F0v0	po:noun
 pankógol/M0U1TEmf	po:noun
@@ -52927,10 +52934,10 @@ marubolin/M0TE	po:noun
 masakan/F0U0	po:noun
 masamasco/M0	po:noun
 masariŧia/F0TE	po:noun
-masería/F0v0&0	po:noun
 mascèr/M0V0	po:noun
 mascèra/F0V0	po:noun
 maseriŧia/F0TE	po:noun
+masería/F0v0&0	po:noun
 maskalson/A2U0mf	po:noun
 mataron/F0U0mf	po:noun
 maton/F0U0&2&3mf	po:noun
@@ -53393,6 +53400,10 @@ sarexin/M0	po:adjective
 sarexin/M0	po:noun
 savarion/A2U0mf	po:adjective
 scanteđo/M0TEmf	po:noun
+scoparol/M0U0V0mf	po:noun
+scoparoƚo/M0V1mf	po:noun
+scopaskónder	po:noun
+scòpa–skónder	po:noun
 segretería/F0v0vŧ	po:noun
 seraponto/M0mfvŧ	po:noun
 serneja/F0TEvŧ	po:noun
@@ -53443,7 +53454,22 @@ skerŧoxo/A1FSmf	po:noun
 skerŧoxo/A1FSW0mf	po:adjective
 skifoxo/A1FSmf	po:noun
 skifoxo/A1FSW0mf	po:adjective
+skoatina/F0	po:noun
+skondarola/F0V0	po:noun
+skondaroƚa/F0V1	po:noun
+skonkaso/M0	po:noun
+skonsa/F0	po:noun
+skoolin/M0TE	po:noun
+skopeloton/F0U0mf	po:noun
+skopeƚoton/F0mf	po:noun
+skopeton/F0U0mf	po:noun
+skopèl/M0U0(0	po:noun
+skopèƚo/M0(1	po:noun
+skor/M0mf	po:noun
+skorería/F0v0&0	po:noun
 skorpionŧin/M0TE	po:noun
+skòmio/M0	po:noun
+skravaso/M0FS	po:noun
 staso/M0FSM1	po:noun
 staŧo/M0FSM1	po:noun
 stinko/M0	po:noun
@@ -53483,25 +53509,8 @@ xuxolèra/F0V0	po:noun
 xuxoƚèr/M0V1	po:noun
 xuxoƚèra/F0V1	po:noun
 xúxola/F0TE	po:noun
-scòpa–skónder	po:noun
-scopaskónder	po:noun
-scoparol/M0U0V0mf	po:noun
-scoparoƚo/M0V1mf	po:noun
-skoatina/F0	po:noun
-skòmio/M0	po:noun
-skonkaso/M0	po:noun
-skondarola/F0V0	po:noun
-skondaroƚa/F0V1	po:noun
-skonsa/F0	po:noun
-skoolin/M0TE	po:noun
-skopèl/M0U0(0	po:noun
-skopèƚo/M0U0(1	po:noun
-skopeloton/F0U0mf	po:noun
-skopeƚoton/F0U0mf	po:noun
-skopeton/F0U0mf	po:noun
-skorería/F0v0&0	po:noun
 
 
-/ 268
+/ 270
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
