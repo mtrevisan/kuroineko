@@ -5096,9 +5096,12 @@ vinífegoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:vinifegar
 sfegatar/a0a1a2P0P1P2r0	po:verb ts:infinitive_simple
 sfegato/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:sfegatar
 sfegàtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:sfegatar
-fegurar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-feguro/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:fegurar
-fegúroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:fegurar
+fegurar/a0a1a2P0P1P2-1*0	po:verb ts:infinitive_simple
+feguro/a0a1a2P0P1P2FSI0-1*0	po:verb ts:indicative_present st:fegurar
+fegúroe/a0a1a2I1-1*0	po:verb ts:indicative_present is:interrogative st:fegurar
+rafegurar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+rafeguro/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:rafegurar
+rafegúroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:rafegurar
 felisitar/a0a1P0P1	po:verb ts:infinitive_simple
 felísito/a0a1P0P1FSI0	po:verb ts:indicative_present st:felisitar
 felísitoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:felisitar
@@ -5390,9 +5393,9 @@ fifòtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:fifotar
 infigar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 infigo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:infigar
 infígoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:infigar
-figurar/a0a1a2P0P1P2-1	po:verb ts:infinitive_simple
-figuro/a0a1a2P0P1P2FSI0-1	po:verb ts:indicative_present st:figurar
-figúroe/a0a1a2I1-1	po:verb ts:indicative_present is:interrogative st:figurar
+figurar/a0a1a2P0P1P2-1*0	po:verb ts:infinitive_simple
+figuro/a0a1a2P0P1P2FSI0-1*0	po:verb ts:indicative_present st:figurar
+figúroe/a0a1a2I1-1*0	po:verb ts:indicative_present is:interrogative st:figurar
 rafigurar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 rafiguro/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:rafigurar
 rafigúroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:rafigurar
@@ -5520,7 +5523,7 @@ fírmoe/a0a1a2I1+0	po:verb ts:indicative_present is:interrogative st:firmar
 fisar/a0a1a2P0P1P2+0^2r2r3	po:verb ts:infinitive_simple
 fiso/a0a1a2P0P1P2FSI0+0^2	po:verb ts:indicative_present st:fisar
 físoe/a0a1a2I1+0^2	po:verb ts:indicative_present is:interrogative st:fisar
-desfisir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
+sfisir/a0a1a2d0d1d2P0P1P2-0	po:verb ts:infinitive_simple
 infisir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 fiscar/a0a1a2P0P1P2+0	po:verb ts:infinitive_simple
 fisco/a0a1a2P0P1P2FSI0+0	po:verb ts:indicative_present st:fiscar
@@ -5579,9 +5582,9 @@ refísioe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:refisiar
 refiŧiar/a0a1P0P1	po:verb ts:infinitive_simple
 refiŧio/a0a1P0P1I0	po:verb ts:indicative_present st:refiŧiar
 refíŧioe/a0a1I1	po:verb ts:indicative_present is:interrogative st:refiŧiar
-fiubar/a0a1a2P0P1P2-1+0	po:verb ts:infinitive_simple
-fiubo/a0a1a2P0P1P2FSI0-1+0	po:verb ts:indicative_present st:fiubar
-fiúboe/a0a1a2I1-1+0	po:verb ts:indicative_present is:interrogative st:fiubar
+fiubar/a0a1a2P0P1P2-1+0*0	po:verb ts:infinitive_simple
+fiubo/a0a1a2P0P1P2FSI0-1+0*0	po:verb ts:indicative_present st:fiubar
+fiúboe/a0a1a2I1-1+0*0	po:verb ts:indicative_present is:interrogative st:fiubar
 flèter/b0b1b2P0P1P2.0	po:verb ts:infinitive_simple
 fleterò/b0b1b2I0.0	po:verb ts:indicative_future st:flèter
 flèto/a0a1a2P0P1P2FSI0.0	po:verb ts:indicative_present st:flèter
@@ -49665,7 +49668,7 @@ sfendidura/F0r5&0	po:noun
 sfexa/F0&0	po:noun
 sfexetina/F0	po:noun
 sfexo/A1FSmf	po:adjective
-sfido/M0	po:noun
+sfido/A1	po:noun
 sfilaŧo/M0FSTE	po:noun
 sfiƚaso/M0	po:noun
 sfondradiŧo/M0FSTE	po:adjective
@@ -53556,8 +53559,10 @@ xuxolèra/F0V0	po:noun
 xuxoƚèr/M0V1	po:noun
 xuxoƚèra/F0V1	po:noun
 xúxola/F0TE	po:noun
+sfrakaso/M0FS	po:noun
+sfrasèl/M0TEU0	po:noun
 
 
-/ 279
+/ 280
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
