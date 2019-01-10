@@ -4881,7 +4881,6 @@ farsoro/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:farsorar
 farsóroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:farsorar
 farŧir/a0a1d0d1P0P1	po:verb ts:infinitive_simple
 farsir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
-fasar/a0a1a2P0P1P2-1+0*0r5	po:verb ts:infinitive_simple
 fasinar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 fasino/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:fasinar
 fasínoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:fasinar
@@ -4912,6 +4911,7 @@ faturar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 faturo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:faturar
 fatúroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:faturar
 faŧar/a0a1P0P1-1*0	po:verb ts:infinitive_simple
+fasar/a0a1a2P0P1P2-1+0*0r5	po:verb ts:infinitive_simple
 renfasar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 renfaso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:renfasar
 renfàsoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:renfasar
@@ -5293,6 +5293,9 @@ enfíoe/a0a1a2I1-0-1	po:verb ts:indicative_present is:interrogative st:enfiar
 infiar/a0a1a2P0P1P2-0-1r0r5r7	po:verb ts:infinitive_simple
 infío/a0a1a2P0P1P2I0-0-1	po:verb ts:indicative_present st:infiar
 infíoe/a0a1a2I1-0-1	po:verb ts:indicative_present is:interrogative st:infiar
+sfiar/a0a1a2P0P1P2-0	po:verb ts:infinitive_simple
+sfío/a0a1a2P0P1P2I0-0	po:verb ts:indicative_present st:sfiar
+sfíoe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:sfiar
 fiabar/a0a1a2P0P1P2r7	po:verb ts:infinitive_simple
 fiabo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:fiabar
 fiàboe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:fiabar
@@ -18625,10 +18628,10 @@ serverò/b0b1b2I0	po:verb ts:indicative_future st:sèrver
 sèrvoe/a0a1a2I1.0-0@0	po:verb ts:indicative_present is:interrogative st:sèrver st:servar st:servir
 sèrvar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 servarò/b0b1b2I0	po:verb ts:indicative_future st:sèrvar
-sesolar/a0a1P0P1	po:verb ts:infinitive_simple
+sesolar/a0a1P0P1r7	po:verb ts:infinitive_simple
 sésolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:sesolar
 sésoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:sesolar
-sesoƚar/a0a2P0P2	po:verb ts:infinitive_simple
+sesoƚar/a0a2P0P2r8	po:verb ts:infinitive_simple
 sésoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:sesoƚar
 sésoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:sesoƚar
 malsestar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
@@ -25505,10 +25508,6 @@ Matío/Z0	po:proper_noun is:singular_masculine
 Màsima/Z0	po:proper_noun is:singular_femenine
 Màsimo/FSZ0	po:proper_noun is:singular_masculine
 Màuro/FSZ0	po:proper_noun is:singular_masculine
-Ŧexarin/Z0	po:proper_noun is:singular_masculine
-Sexarin/Z0	po:proper_noun is:singular_masculine
-Ŧexarina/Z0	po:proper_noun is:singular_femenine
-Sexarina/Z0	po:proper_noun is:singular_femenine
 Mena/Z0	po:proper_noun is:singular_femenine
 Menegeta/Z0	po:proper_noun is:singular_femenine
 Menegeto/FSZ0	po:proper_noun is:singular_masculine
@@ -25691,6 +25690,8 @@ Sandrina/Z0	po:proper_noun is:singular_femenine
 Sandro/Z0	po:proper_noun is:singular_masculine
 Sara/Z0	po:proper_noun is:singular_femenine
 Sasarone/FSZ0	po:proper_noun is:singular_masculine
+Sexarin/Z0	po:proper_noun is:singular_masculine
+Sexarina/Z0	po:proper_noun is:singular_femenine
 Sénxon/Z0	po:proper_noun is:singular_masculine
 Sènaka/Z0	po:proper_noun is:singular_masculine
 Sèrvol/Z0	po:proper_noun is:singular_masculine
@@ -25757,6 +25758,8 @@ Trovaxo/FSZ0	po:proper_noun is:singular_masculine
 Ŧaŧaron/Z0	po:proper_noun is:singular_masculine
 Ŧeskina/TBZ0	po:proper_noun is:singular_femenine
 Ŧeskineta/TBZ0	po:proper_noun is:singular_femenine
+Ŧexarin/Z0	po:proper_noun is:singular_masculine
+Ŧexarina/Z0	po:proper_noun is:singular_femenine
 Ŧéndon/Z0	po:proper_noun is:singular_masculine
 Ŧénđon/Z0	po:proper_noun is:singular_masculine
 Ŧéxare/TBZ0	po:proper_noun is:singular_masculine
@@ -29335,7 +29338,7 @@ kavasur/M0	po:noun
 kavaŧo/M0(2	po:noun
 kavedal/F0TFU0	po:noun
 kavedon/F0U0mf	po:noun
-kavel/M0U0TEmf	po:noun
+kavel/M0TEU0mf	po:noun
 kavelada/F0Y0Y1	po:adjective
 kaveƚada/F0Y0Y1	po:adjective
 kavin/M0	po:noun
@@ -29372,7 +29375,7 @@ kivalà/TE	po:interjection
 kivalà/TE	po:noun
 kive	po:adverb
 kivo/M0	po:noun
-kivol/M0U0TEmf	po:noun
+kivol/M0TEU0mf	po:noun
 kíkera/F0	po:noun
 kímego/A1FS	po:adjective
 kímego/A1FS	po:noun
@@ -30223,13 +30226,13 @@ nido/M0&0	po:noun
 nin/&0	po:noun
 nina/F0&0	po:noun
 ninin	po:adjective
-ninsiol/M0U0TEmf	po:noun
+ninsiol/M0TEU0mf	po:noun
 ninsiòl/M0U0&0	po:noun
 ninsiòƚo/M0&1	po:noun
 ninŧiol/M0U0mf	po:noun
 ninŧiòl/M0U0&0	po:noun
 niòra/F0	po:noun
-nisiol/M0U0TEmf	po:noun
+nisiol/M0TEU0mf	po:noun
 nisiòl/M0U0&0	po:noun
 nisiòƚo/M0&1	po:noun
 niŧiol/M0U0mf	po:noun
@@ -31262,7 +31265,7 @@ skoasa/F0v0&0	po:noun
 skoaŧa/F0v0&0	po:noun
 skodèla/F0TE	po:noun
 skoinŧa/F0TE	po:noun
-skol/M0U0TEmf	po:noun
+skol/M0TEU0mf	po:noun
 skola/F0&0	po:noun
 skolàstego/A1FS	po:noun
 skoƚa/F0&1	po:noun
@@ -31539,7 +31542,7 @@ taja/F0TE	po:noun
 tajadèla/F0TE	po:noun
 tajèr/F0&0	po:noun
 tajèro	po:noun is:singular_masculine
-tajol/M0U0TEmf	po:noun
+tajol/M0TEU0mf	po:noun
 tajola/F0TE	po:noun
 tajòl/M0U0TE	po:noun
 tajòla/F0TE	po:noun
@@ -33030,6 +33033,8 @@ fabrisièra/F0V0	po:noun
 fabriŧièr/M0V0	po:noun
 fabriŧièra/F0V0	po:noun
 fada/F0Y0	po:noun
+fadigon/A2U0*0mf	po:adjective
+fadigon/A2U0*0mf	po:noun
 fagotin/M0	po:noun
 fagòto/M0FS(2&2&3	po:noun
 faja/F0TE	po:noun
@@ -33703,7 +33708,7 @@ kamixolin/M0TE	po:noun
 kamojar/A1	po:noun
 kamoɉar/A1	po:noun
 kamopina/F0	po:noun
-kanapiol/M0U0TEmf	po:noun
+kanapiol/M0TEU0mf	po:noun
 kanapiola/F0TE	po:noun
 kanarin/M0	po:noun
 kanata/F0(2	po:noun
@@ -35523,7 +35528,7 @@ pontapíe/F0	po:noun
 pontexina/F0	po:noun
 pontivo/A1FSW0	po:noun
 popa/F0	po:noun
-porexol/M0U0TEmf	po:noun
+porexol/M0TEU0mf	po:noun
 porkèr/M0V0	po:adjective
 porkèr/M0V0	po:noun
 porkèra/F0V0	po:adjective
@@ -36096,8 +36101,6 @@ sèlen/M0U1TEmf	po:noun
 sèƚa/F0&1	po:noun
 sènape	po:noun
 sèrola/F0TE	po:noun
-sfadigon/A2U0mf	po:adjective
-sfadigon/A2U0mf	po:noun
 sfasadon/A2U0mf	po:adjective
 sfaŧadon/A2U0mf	po:adjective
 sferdor/F0mf	po:noun
@@ -36178,7 +36181,7 @@ skapadèla/F0TE	po:noun
 skapin/M0&0	po:noun
 skapulario/M0	po:adjective
 skapuƚario/M0	po:adjective
-skapusiol/M0U0TEmf	po:noun
+skapusiol/M0TEU0mf	po:noun
 skapusiola/F0TE	po:noun
 skapusiòl/M0U0TE	po:noun
 skapuŧiol/M0U0mf	po:noun
@@ -36636,7 +36639,7 @@ strangoƚaprète/M0	po:noun
 stranpalà/TE	po:adjective
 stranuèla/F0TE	po:noun
 strapadina/F0	po:noun
-strapel/M0U0TEmf	po:noun
+strapel/M0TEU0mf	po:noun
 strapel	po:adverb
 strapeƚo	po:adverb
 strapo/M0FS(2	po:noun
@@ -37808,7 +37811,7 @@ kagoloxo/A1FSW0mf	po:adjective
 kagoƚoxo/A1mf	po:noun
 kagoƚoxo/A1W1mf	po:adjective
 kaileto/M0FSTEmf	po:noun
-kairol/M0U0TEmf	po:noun
+kairol/M0TEU0mf	po:noun
 kairòl/M0U0TE	po:noun
 kalekute	po:noun
 kalison/F0U0mf	po:noun
@@ -37856,7 +37859,7 @@ kautèla/F0TE	po:noun
 kavadente/M0FSmf	po:noun
 kavakavel/M0U0TE	po:adverb
 kavalkante/M0FS	po:noun
-kaveel/M0U0TEmf	po:noun
+kaveel/M0TEU0mf	po:noun
 kaveon/F0U0mf	po:noun
 kavèa/F0	po:noun
 kavèstro/A1	po:noun
@@ -39381,7 +39384,7 @@ peŧarola/F0V0	po:noun
 peŧenin/M0&0(0§0	po:noun
 peŧenina/F0&0(0§0	po:noun
 peŧe	po:noun
-pexel/M0U0TEmf	po:noun
+pexel/M0TEU0mf	po:noun
 piaxevoleŧa/F0TE	po:noun
 piaxevolmente/FSW2	po:adverb
 piaxevoƚesa/F0	po:noun
@@ -39831,7 +39834,7 @@ stilò/TE	po:noun
 stinenŧa/F0TE	po:noun
 stinenŧia/F0TE	po:noun
 stopor/F0mf	po:noun
-storol/M0U0TEmf	po:noun
+storol/M0TEU0mf	po:noun
 stramejara/F0	po:adjective
 strameɉara/F0	po:adjective
 strana/F0&0	po:adjective
@@ -40272,7 +40275,7 @@ gonbio/M0&0	po:noun
 grijo/M0FSTE	po:noun
 grostin/M0	po:noun
 guíndol/M0U1TEmf	po:noun
-introl/M0U0TEmf	po:noun
+introl/M0TEU0mf	po:noun
 jonkilia/F0TETB	po:noun
 kalúden/F0U1mf	po:noun
 kalúđen/F0U1mf	po:noun
@@ -40339,7 +40342,7 @@ onbrígol/M0U1TEmf	po:noun
 orbexin/A2	po:adjective
 orbexin/A2	po:noun
 oridèl/M0U0TE	po:noun
-orxol/M0U0TEmf	po:noun
+orxol/M0TEU0mf	po:noun
 òn/M0U0	po:noun
 palòso/M0FS&0	po:noun
 palpera/F0	po:noun
@@ -40367,7 +40370,7 @@ pingoƚon/A2mf	po:noun
 pingoƚon	po:adverb
 piona/F0	po:noun
 piòpa/F0	po:noun
-pipirol/M0U0TEmf	po:noun
+pipirol/M0TEU0mf	po:noun
 pipistrèl/M0U0TE	po:noun
 pisòkera/F0	po:noun
 piŧon/F0U0*0mf	po:noun
@@ -40376,7 +40379,7 @@ poeja/F0TE	po:noun
 polèr/M0	po:noun
 poƚèr/M0	po:noun
 pontara/F0	po:noun
-pontirol/M0U0TEmf	po:noun
+pontirol/M0TEU0mf	po:noun
 ponxikul/M0U0TE	po:noun
 prexèpio/M0	po:noun
 pulŧo/M0FSTE	po:noun
@@ -40392,7 +40395,7 @@ revendaroƚa/F0V1	po:noun
 revendaroƚo/M0V1mf	po:noun
 riobàrbar/M0	po:noun
 riòma/F0	po:noun
-rofiol/M0U0TEmf	po:noun
+rofiol/M0TEU0mf	po:noun
 rudenato/M0FS	po:noun
 ruđenato/M0FS	po:noun
 ruxenato/M0FS	po:noun
@@ -40626,7 +40629,7 @@ ganbarèla/F0TE*0	po:noun
 garante/M0FS	po:noun
 garofolin/M0TE	po:noun
 gaveta/F0‘0	po:noun
-gaxol/M0U0TEmf	po:noun
+gaxol/M0TEU0mf	po:noun
 godon/A2U0mf	po:noun
 gondolièr/M0V0	po:noun
 gondolièra/F0V0	po:noun
@@ -40728,7 +40731,7 @@ kotolon/F0TEU0mf	po:noun
 kovèrcol/M0U1TEmf	po:noun
 kristal/M0U0TE	po:noun
 kroata/F0	po:noun
-kroxol/M0U0TEmf	po:noun
+kroxol/M0TEU0mf	po:noun
 kufolon/A2U0mf	po:adjective
 kufoƚon/A2mf	po:adjective
 kukajo/M0FSTE	po:noun
@@ -40789,7 +40792,7 @@ manifaturièr/M0V0	po:noun
 manifaturièra/F0V0	po:noun
 manuèl/M0U0TE	po:noun
 manuèla/F0TE	po:noun
-mañarol/M0U0TEmf	po:noun
+mañarol/M0TEU0mf	po:noun
 mapèl/M0U0TE	po:noun
 maraskalko/A1FS	po:noun
 marendin/A2	po:noun
@@ -40900,7 +40903,7 @@ pedestal/M0U0TE	po:noun
 peràtola/F0TE	po:noun
 pertegal/M0U0TE	po:noun
 pesin/M0	po:noun
-pesol/M0U0TEmf	po:noun
+pesol/M0TEU0mf	po:noun
 pestèr/M0V0	po:noun
 pestèra/F0V0	po:noun
 petimètre/M0	po:noun
@@ -41022,7 +41025,7 @@ skandèla/F0TE	po:noun
 skarlexa/F0	po:noun
 skarpanaŧo/M0FSTE	po:noun
 skia/F0	po:noun
-skodirol/M0U0TEmf	po:noun
+skodirol/M0TEU0mf	po:noun
 skoladiŧa/F0TE	po:noun
 skoladiŧo/M0FSTE	po:noun
 skolka/F0	po:noun
@@ -42018,7 +42021,7 @@ bandiereŧo/M0FSTEmf	po:noun
 bañadin/A2	po:adjective
 barakòkola/F0TE	po:noun
 baràkola/F0TE	po:noun
-barbastel/M0U0TEmf	po:noun
+barbastel/M0TEU0mf	po:noun
 bardasame/M0	po:noun
 baroneŧo/M0FSTEmf	po:noun
 bartoèla/F0TE	po:noun
@@ -42101,7 +42104,7 @@ broxa/F0	po:noun
 brula/F0TE	po:noun
 brunbrun/M0U0	po:noun
 bruo/M0&0	po:noun
-bruxarol/M0U0TEmf	po:noun
+bruxarol/M0TEU0mf	po:noun
 brúxola/F0TE	po:noun
 bua/F0	po:noun
 buba/F0	po:noun
@@ -42276,8 +42279,8 @@ garđa/F0v0&0*0	po:noun
 gargame/M0	po:noun
 gariŧo/M0FSTE	po:noun
 garítol/M0U1TEmf	po:noun
-garsiñol/M0U0TEmf	po:adjective
-garsiñol/M0U0TEmf	po:noun
+garsiñol/M0TEU0mf	po:adjective
+garsiñol/M0TEU0mf	po:noun
 garsiñola/F0TE	po:adjective
 garsiñola/F0TE	po:noun
 garŧiñol/M0U0mf	po:adjective
@@ -43633,7 +43636,7 @@ ronpin/A2	po:noun
 rovejana/F0	po:noun
 rovejol/M0TEU0mf	po:noun
 roveɉana/F0	po:noun
-roveɉol/M0U0TEmf	po:noun
+roveɉol/M0TEU0mf	po:noun
 sanbuèl/M0U0TE	po:noun
 sila/F0TE	po:noun
 skarkòŧo/M0TE	po:noun
@@ -44524,7 +44527,7 @@ bronbo/A1(4	po:adjective
 bronbo/M0&0	po:noun
 bronboleta/F0TE	po:noun
 broña/F0	po:noun
-broñol/M0U0TEmf	po:noun
+broñol/M0TEU0mf	po:noun
 broñola/F0TE	po:noun
 brosur	po:adverb
 brova/F0	po:noun
@@ -45314,7 +45317,7 @@ fenocana/F0	po:noun
 fenònom/M0	po:noun
 feralante/M0FS	po:noun
 feraƚante/M0	po:noun
-ferasol/M0U0TEmf	po:noun
+ferasol/M0TEU0mf	po:noun
 feraŧol/M0U0mf	po:noun
 feriada/F0Y0Y1	po:noun
 feridora/F0r7	po:noun
@@ -46738,7 +46741,7 @@ kontrakoƚonba/F0	po:noun
 kontralto/M0	po:noun
 kontramantexe/M0FSmf	po:noun
 kontrapaso/M0FS	po:noun
-kontrapel/M0U0TEmf	po:noun
+kontrapel/M0TEU0mf	po:noun
 kontraròda/F0	po:noun
 kontraseño/M0FSmf	po:noun
 kontrasivada/F0Y0Y1	po:noun
@@ -46760,7 +46763,7 @@ kontrolor/A2mf	po:noun
 kontrolume/M0	po:noun
 kontroƚor/A2mf	po:noun
 kontroƚume/M0	po:noun
-kontropel/M0U0TEmf	po:noun
+kontropel/M0TEU0mf	po:noun
 kontrover/M0mf	po:noun
 konturbo/M0	po:noun
 konŧepista/A2	po:noun
@@ -48346,7 +48349,7 @@ pegoron/A2U0mf	po:noun
 pekataŧo/M0FSTE	po:noun
 pekatin/M0	po:noun
 pekatoron/F0U0mf	po:adjective
-pekol/M0U0TEmf	po:noun
+pekol/M0TEU0mf	po:noun
 pelatina/F0	po:noun
 peletin/M0	po:noun
 pelèla/F0	po:noun
@@ -48529,7 +48532,7 @@ piaxevoƚeto/A1mf	po:adjective
 piàntola/F0TE	po:noun
 picarèl/M0U0TE	po:noun
 picata/F0	po:noun
-picol/M0U0TEmf	po:noun
+picol/M0TEU0mf	po:noun
 piegadèl/M0U0TE	po:noun
 piegadina/F0	po:noun
 piegévol/F0TFU1mf	po:adjective
@@ -49843,7 +49846,7 @@ skiso/M0FS&0(2	po:adjective
 skitariòla/F0TE	po:noun
 skito/M0FS(2	po:noun
 skiton/A2U0mf	po:adjective
-skitoŧon/M0U0TEmf	po:adjective
+skitoŧon/M0TEU0mf	po:adjective
 skitòŧo/M0TE	po:adjective
 skiŧa/F0&0	po:adjective
 skiŧadina/F0	po:noun
@@ -50511,7 +50514,7 @@ struto/M0FS	po:noun
 struŧo/M0FS	po:noun
 strúfiño/A1FS	po:adjective
 studio/M0	po:noun
-studiol/M0U0TEmf	po:noun
+studiol/M0TEU0mf	po:noun
 stufada/F0Y0Y1	po:noun
 stufo/A1FS	po:adjective
 stuko/M0FS	po:noun
@@ -50521,7 +50524,7 @@ stupendo/A1	po:adjective
 stupendonaŧo/M0FSTE	po:noun
 stupia/F0	po:noun
 stupo/A1	po:adjective
-sturiol/M0U0TEmf	po:noun
+sturiol/M0TEU0mf	po:noun
 sturola/F0TE	po:noun
 stusegadente/M0FSmf	po:noun
 stuŧegadente/M0FSmf	po:noun
@@ -50583,7 +50586,7 @@ sutiƚin/A2	po:adjective
 sutiƚitade/M0Y0	po:noun
 suto/A1FSW0(4	po:adjective
 suto/A1FSq0q1	po:noun
-suŧon/M0U0TEmf	po:noun
+suŧon/M0TEU0mf	po:noun
 súbdol/M0U1TEmf	po:noun
 tabakèr/M0V0	po:noun
 tabakèra/F0V0	po:noun
@@ -52070,7 +52073,7 @@ putelaŧa/F0TE	po:noun
 putelaŧo/M0FSTE	po:noun
 puteƚasa/F0	po:noun
 puteƚaso/M0	po:noun
-rafiol/M0U0TEmf	po:noun
+rafiol/M0TEU0mf	po:noun
 ranpon/F0U0mf	po:noun
 rebeka/F0	po:noun
 redabio/M0	po:noun
@@ -52091,7 +52094,7 @@ rofioo/M0	po:noun
 rokoleto/M0FSTEmf	po:noun
 ronkiđo/M0TE	po:noun
 roxo/M0(4mf	po:noun
-rufiol/M0U0TEmf	po:noun
+rufiol/M0TEU0mf	po:noun
 rufioo/M0	po:noun
 rugolon/A2U0mf	po:noun
 rugoƚon/A2mf	po:noun
@@ -52344,7 +52347,7 @@ bisinèl/M0U0TE	po:noun
 bisinèla/F0TE	po:noun
 biskotèr/M0V0	po:noun
 biskotèra/F0V0	po:noun
-bisol/M0U0TEmf	po:noun
+bisol/M0TEU0mf	po:noun
 bistèk	po:noun
 bixar/A1	po:adjective
 bixata/F0	po:noun
@@ -52473,6 +52476,8 @@ dukamara/F0	po:noun
 Duŧe/M0TE	po:noun
 dúdola/F0TE	po:noun
 đenocèl/M0U0	po:noun
+đermòjo/M0TBTEFS	po:noun
+đermujo/M0TBTEFS	po:noun
 đòvo/M0&2	po:noun
 đudexeto/M0FSTBmf	po:noun
 đuđolèr/M0V0	po:noun
@@ -52774,7 +52779,7 @@ koramèla/F0TE	po:noun
 koramèr/M0V0	po:noun
 koramèra/F0V0	po:noun
 korbeta/F0	po:noun
-korexol/M0U0TEmf	po:noun
+korexol/M0TEU0mf	po:noun
 kornixa	po:noun st:kornixe
 korñòl/M0TEU0	po:noun
 korporadura/F0r5&0	po:noun
@@ -53065,7 +53070,7 @@ netiŧia/F0TE	po:noun
 nevara/F0	po:noun
 nèspol/M0TEU1mf	po:noun
 nibiaŧo/M0FSTE	po:noun
-nisol/M0U0TEmf	po:noun
+nisol/M0TEU0mf	po:noun
 noviŧia/F0TE	po:noun
 noviŧio/M0TE	po:noun
 núbil/F0TF	po:noun
@@ -53417,6 +53422,8 @@ scòpa–skónder	po:noun
 secèl/M0U0TE	po:noun
 seconsèl/M0U0TE	po:noun
 seconŧèl/M0U0	po:noun
+sedèl/M0U0	po:noun
+seđèl/M0U0	po:noun
 segantin/M0	po:noun
 segaño/M0FS	po:noun
 segaŧo/M0FSTE	po:noun
@@ -53432,10 +53439,17 @@ seon/F0U0mf	po:noun
 sepa/F0	po:noun
 seraponto/M0mfvŧ	po:noun
 serata/F0vŧ	po:noun
-ŧarneja/F0TETB	po:noun
+sesejol/M0TEU0mf	po:noun
+seseɉol/M0TEU0mf	po:noun
 sesin/A2	po:adjective
+sexèja/F0TE	po:noun
+sexèl/M0U0TE	po:noun
 sékola/F0TE	po:noun
+sérsene/M0	po:noun
+sésola/F0TE	po:noun
 sèra–ponto/M0mf	po:noun
+sèrvo/A1	po:noun
+sfalto/M0	po:noun
 skalinon/F0U0mf	po:noun
 skalsaròto/M0FS	po:noun
 skalseron/F0U0mf	po:noun
@@ -53501,10 +53515,16 @@ skurŧa–fadiga/F0	po:noun
 skurŧafadiga/F0	po:noun
 stinko/M0	po:noun
 ŧalmòr/M0TB	po:noun
+ŧarneja/F0TETB	po:noun
 ŧekatriŧe/F0	po:noun
 ŧentoganba/F0TB	po:noun
+ŧerlatan/M0U0TB	po:adjective
+ŧerlatan/M0U0TB&0&2	po:noun
+ŧerlatana/F0TB	po:adjective
+ŧerlatana/F0TB&0&2	po:noun
 ŧeŧin/A2	po:adjective
 ŧénar/F0TB	po:noun
+ŧérŧene/M0	po:noun
 vardabosko/M0	po:noun
 vario/A1W0	po:adjective
 verada/F0Y0Y1^5	po:noun
@@ -53536,18 +53556,8 @@ xuxolèra/F0V0	po:noun
 xuxoƚèr/M0V1	po:noun
 xuxoƚèra/F0V1	po:noun
 xúxola/F0TE	po:noun
-ŧerlatan/M0U0TB	po:adjective
-ŧerlatan/M0U0TB&0&2	po:noun
-ŧerlatana/F0TB	po:adjective
-ŧerlatana/F0TB&0&2	po:noun
-đermòjo/M0TBTEFS	po:noun
-đermujo/M0TBTEFS	po:noun
-ŧérŧene/M0	po:noun
-sérsene/M0	po:noun
-sèrvo/A1	po:noun
-sexèja/F0TE	po:noun
 
 
-/ 278
+/ 279
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
