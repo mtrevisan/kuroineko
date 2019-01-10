@@ -2100,6 +2100,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "gondol",		"",			1,	1,	"a",	"1775",			"Luxingar, aletar, adeskar, tirar uno ko astuŧia a le só voje.",
 "gonfi",			"",			1,	1,	"a",	"1829",			"",
 "gonfi",			"dex",		1,	1,	"a",	"1896",			"",
+"gonfi",			"x",			1,	1,	"a",	"1896",			"",
 "gongol",		"",			1,	1,	"a",	"1775",			"",
 "goñ",			"x",			1,	1,	"g",	"1854",			"Burlar, skernir.",
 "gor",			"",			1,	1,	"g",	"1590",			"Augurar.",
@@ -2440,6 +2441,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "judeg",			"",			1,	1,	"a",	"1415",			"",
 "just",			"",			1,	1,	"a",	"1363",			"",
 "just",			"dex",		1,	1,	"a",	"",				"",
+"just",			"x",			1,	1,	"a",	"1896",			"",
 "justiŧi",		"",			1,	4,	"a",	"1509",			"",
 "jut",			"",			1,	1,	"a",	"1292",			"",
 
@@ -4173,6 +4175,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ñ",				"",			1,	1,	"g",	"1829",			"Niar.",
 "ñaf",			"x",			1,	1,	"g",	"1980",			"Pianđotar.",
 "ñanf",			"x",			1,	1,	"g",	"1775",			"Parlar kol naxo, fifar.",
+"ñanfeđ",		"x",			1,	4,	"a",	"1896",			"",
 "ñanfiđ",		"x",			1,	4,	"a",	"1867",			"",
 "ñaol",			"",			1,	1,	"g",	"1775",			"Miagolar, lamentar.",
 "ñaol",			"x",			1,	1,	"g",	"1775",			"Miagolar.",
