@@ -5724,6 +5724,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sindik",		"",			1,	1,	"a",	"1867",			"",
 "sinkop",		"",			1,	1,	"a",	"",				"",
 "singolariđ",	"",			1,	8,	"a",	"1867",			"",
+"sinik",			"",			1,	1,	"a",	"1896",			"Sindakar.",
 "sinu",			"in",			1,	1,	"a",	"1867",			"",
 "siñ",			"in",			4,	3,	"a",	"1867",			"",
 "siñal",			"",			1,	3,	"g",	"1829",			"",
