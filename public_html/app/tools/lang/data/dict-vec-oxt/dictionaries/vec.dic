@@ -25927,8 +25927,8 @@ grana/F0	po:adjective is:singular_femenine
 grana/F0&2&3	po:noun is:singular_femenine
 granda/F0&0^6	po:adjective is:singular_femenine
 granda/F0&0^6(0	po:noun is:singular_femenine
-grando/M0FSM1&0^6(0	po:adjective is:singular_masculine
-grando/M0FSM1&0q0q1^6	po:noun is:singular_masculine
+grando/M0FS&0^6(0	po:adjective is:singular_masculine
+grando/M0FS&0q0q1^6	po:noun is:singular_masculine
 grandon/M0U0&0^6(2mf	po:noun is:singular_masculine
 grandona/F0&0^6(2	po:adjective is:singular_femenine
 inferior/F0mf	po:noun is:singular_masculine
@@ -28164,7 +28164,8 @@ barba/F0&0(0(4<0<1	po:noun
 barbajijo/M0FS	po:noun
 barbaɉiɉo/M0FS	po:noun
 barban/M0U0	po:noun
-barbo/M0M1(0<0<1	po:noun
+barbio	po:noun is:singular_masculine
+barbo/M0(0<0<1	po:noun
 bardon/A2U0mf	po:noun
 baril/&0(0	po:noun al:barili
 barila/F0&0	po:noun
@@ -29473,7 +29474,8 @@ koletivo/A1FSW0	po:adjective
 kolonbèra/F0	po:noun
 kolonía/F0	po:noun
 kolor/F0v1<0<1mf	po:noun
-kolòna/F0M1&0	po:noun
+kolòna/F0&0	po:noun
+kolònia/F0	po:noun
 kolpévol/F0TFU1mf	po:adjective
 kolpévol/F0TFU1mf	po:noun
 koƚetivo/A1	po:noun
@@ -29481,7 +29483,8 @@ koƚetivo/A1W1	po:adjective
 koƚonbèra/F0	po:noun
 koƚonía/F0	po:noun
 koƚor/F0v1<2mf	po:noun
-koƚòna/F0M1&1	po:noun
+koƚòna/F0&1	po:noun
+koƚònia/F0	po:noun
 komandativo/A1FSW0	po:adjective
 komariŧo/M0FSTE	po:noun
 komarò	po:noun
@@ -30476,9 +30479,11 @@ paka/F0*0	po:noun
 pala/F0(0	po:noun
 palado/M0FSY0	po:noun
 palankin/M0	po:noun
-palaso/M0FSM1v1&0(2	po:noun
+palasio	po:noun is:singular_masculine
+palaso/M0FSv1&0(2	po:noun
 palatal/F0U0^2	po:adjective
-palaŧo/M0FSM1v1&0(2	po:noun
+palaŧio	po:noun is:singular_masculine
+palaŧo/M0FSv1&0(2	po:noun
 palèstra/F0	po:noun
 palta/F0	po:noun
 paltan/M0U0<0<1	po:noun
@@ -30487,7 +30492,8 @@ paluko/M0FS	po:noun
 paƚado/M0Y0	po:noun
 paƚankin/M0	po:noun
 paƚaseto/v1M0mf	po:noun
-paƚaso/M0M1v1(3	po:noun
+paƚasio	po:noun is:singular_masculine
+paƚaso/M0v1(3	po:noun
 paƚataƚe/F0^2	po:adjective
 paƚatixasion/F0-0mf	po:noun
 paƚèstra/F0	po:noun
@@ -31124,7 +31130,9 @@ saòn/F0U0	po:noun
 sarangon/F0U0mf	po:noun
 sardèla/F0TE	po:noun
 sartor/A2mf	po:noun
-saŧo/M0FSM1&0(2	po:noun
+sasio	po:noun is:singular_masculine
+saŧio	po:noun is:singular_masculine
+saŧo/M0FS&0(2	po:noun
 savaja/F0TE	po:noun
 savajòto/M0FS	po:adjective
 savaɉòto/M0FS	po:adjective
@@ -36003,8 +36011,10 @@ salsa/F0&0	po:noun
 salso/M0	po:adjective
 saltainbanko/A1FS	po:noun
 saltarèl/M0U0TE	po:noun
-saltèr/M0V0M1	po:noun
-saltèra/F0V0M1	po:noun
+saltèr/M0V0	po:noun
+saltèra/F0V0	po:noun
+saltèria	po:noun is:singular_femenine
+saltèrio	po:noun is:singular_masculine
 saltin/M0	po:noun
 salute/M0	po:noun
 salvadegume/M0	po:noun
@@ -37009,7 +37019,7 @@ torkoƚèra/F0V1	po:noun
 tornèl/M0U0TE*0	po:noun
 torobuxo/M0FS	po:noun
 torseta/F0	po:noun
-torseto/M0FSM1mf	po:noun
+torseto/M0FSmf	po:noun
 torsidor/M0V0mf	po:noun
 torsidora/F0V0	po:noun
 torŧeta/F0	po:noun
@@ -37261,10 +37271,11 @@ vanarèl/M0U0TE	po:adjective
 vanarèla/F0TE	po:adjective
 vanía/F0	po:noun
 vaon/F0U0mf	po:noun
-var/M0M1(0	po:adjective
+var/M0(0	po:adjective
 var/M0(0	po:noun
 vardanado/M0FSY0	po:noun
 varéa/F0	po:noun
+vario	po:adjective is:singular_masculine
 varía/F0	po:noun
 varniŧion/F0TEU0mf	po:noun
 varotèr/M0V0	po:noun
@@ -43823,10 +43834,11 @@ akrimonioxo/A1FSmf	po:noun
 akrimonioxo/A1FSW0mf	po:adjective
 akrimònia/F0	po:noun
 akuafòrte/M0FS	po:noun
-akuar/M0M1&2&3	po:noun
+akuar/M0&2&3	po:noun
 akuaraja/F0TE	po:noun
 akuaraxa/F0	po:noun
 akuarèja/F0TE	po:noun
+akuario	po:noun is:singular_masculine
 akuaròxa/F0	po:noun
 akuavita/F0	po:noun
 akuoxa/F0&0	po:adjective
@@ -48015,7 +48027,8 @@ nio/M0&0	po:noun
 niolon/M0U0mf	po:noun
 nioƚon/M0mf	po:noun
 nitideŧa/F0TE	po:noun
-nitro/M0M1(2	po:noun
+nitrio	po:noun is:singular_masculine
+nitro/M0(2	po:noun
 noal/F0TFU0	po:adjective
 nobilista/A2	po:noun
 nobiƚista/A2	po:noun
@@ -49563,7 +49576,8 @@ sasarin/M0	po:noun
 sasaron/A2U0mf	po:noun
 sasente/M0FSmf	po:adjective
 sasente/M0FSmf	po:noun
-saso/M0FSM1&0(2	po:noun
+sasio	po:noun is:singular_masculine
+saso/M0FS&0(2	po:noun
 sasolin/M0TE	po:noun
 sasoxo/A1FSmf	po:noun
 sasoxo/A1FSW0mf	po:adjective
@@ -50099,8 +50113,9 @@ soƚitario/A1	po:adjective
 soƚitario/M0	po:noun
 soƚubiƚità/+0	po:noun
 somar/A1	po:adjective
-somar/M0M1&2&3	po:noun
+somar/M0&2&3	po:noun
 somara/F0&2&3	po:noun
+somario	po:noun is:singular_masculine
 somision/F0U0mf	po:noun
 sonajèra/F0	po:noun
 sonajin/M0	po:noun
@@ -50235,8 +50250,9 @@ spasidon/A2U0mf	po:adjective
 spasiđon/A2U0mf	po:adjective
 spasioxo/A1FSmf	po:noun
 spasioxo/A1FSW0mf	po:adjective
+spasio	po:noun is:singular_masculine
 spasixon/A2U0mf	po:adjective
-spaso/M0FSM1&0	po:noun
+spaso/M0FS&0	po:noun
 spaŧakamin/A2	po:noun
 spaŧeta/F0(4	po:noun
 spaŧion/F0U0TEmf	po:noun
@@ -53668,3 +53684,4 @@ xúxola/F0TE	po:noun
 / 283
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
+/sost.:xguatarujo,xguataruɉo,xbroaco
