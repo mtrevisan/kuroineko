@@ -3906,6 +3906,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "mol",			"a",			4,	3,	"a",	"1854",			"Ramolir, méter a molo.",
 "mol",			"dex",		1,	1,	"g",	"1852",			"",
 "mol",			"x",			1,	1,	"g",	"2004",			"",
+"molac",			"",			1,	3,	"g",	"1896",			"",
 "molac",			"x",			1,	3,	"g",	"1852",			"Alentar, sligar.",
 "mòlđ",			"",			3,	1,	"g",	"1980",			"",
 "molest",		"",			1,	3,	"g",	"1362",			"",
