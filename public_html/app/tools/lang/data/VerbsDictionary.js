@@ -7061,6 +7061,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vantax",		"",			1,	4,	"g",	"",				"",
 "vanŧ",			"",			1,	1,	"g",	"1775",			"",
 "vanŧ",			"x",			1,	1,	"g",	"1854",			"Xmusar.",
+"vanŧ",			"si",			1,	1,	"g",	"1896",			"Vanŧar.",
 "vanŧ",			"sora",		1,	1,	"g",	"1867",			"",
 "vapor",			"x",			1,	1,	"g",	"1854",			"Sfogar, exalar.",
 "var",			"",			1,	1,	"g",	"1852",			"Guarir.",
