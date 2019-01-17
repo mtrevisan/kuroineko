@@ -4595,6 +4595,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pèl",			"re",			3,	1,	"g",	"1509",			"",
 "pelac",			"s",			1,	3,	"g",	"1854",			"",
 "pelat",			"s",			1,	3,	"g",	"1775",			"",
+"pelaŧ",			"s",			1,	3,	"g",	"1896",			"",
 "peleg",			"s",			1,	1,	"a",	"1854",			"Spilukar.",
 "peliŧ",			"in",			1,	3,	"a",	"1775",			"",
 "pelug",			"in",			1,	3,	"a",	"1854",			"Inpelar.",
