@@ -15628,12 +15628,12 @@ petíxoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:petixolar
 petixoƚar/a0a2P0P2	po:verb ts:infinitive_simple
 petíxoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:petixoƚar
 petíxoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:petixoƚar
-petolar/a0a1P0P1-1+0	po:verb ts:infinitive_simple
-pétolo/a0a1P0P1FSI0-1+0	po:verb ts:indicative_present st:petolar
-pétoloe/a0a1I1-1+0	po:verb ts:indicative_present is:interrogative st:petolar
-petoƚar/a0a2P0P2-1+0	po:verb ts:infinitive_simple
-pétoƚo/a0a2P0P2I0-1+0	po:verb ts:indicative_present st:petoƚar
-pétoƚoe/a0a2I1-1+0	po:verb ts:indicative_present is:interrogative st:petoƚar
+petolar/a0a1P0P1-1+0*0	po:verb ts:infinitive_simple
+pétolo/a0a1P0P1FSI0-1+0*0	po:verb ts:indicative_present st:petolar
+pétoloe/a0a1I1-1+0*0	po:verb ts:indicative_present is:interrogative st:petolar
+petoƚar/a0a2P0P2-1+0*0	po:verb ts:infinitive_simple
+pétoƚo/a0a2P0P2I0-1+0*0	po:verb ts:indicative_present st:petoƚar
+pétoƚoe/a0a2I1-1+0*0	po:verb ts:indicative_present is:interrogative st:petoƚar
 espetorar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 espétoro/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:espetorar
 espétoroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:espetorar
@@ -15964,6 +15964,15 @@ piƚastrar/a0a2P0P2	po:verb ts:infinitive_simple
 piƚastro/a0a2P0P2I0	po:verb ts:indicative_present st:piƚastrar
 piƚàstroe/a0a2I1	po:verb ts:indicative_present is:interrogative st:piƚastrar
 piƚastrato/A1	po:verb ts:participle_perfect_strong st:piƚastrar
+spilorŧar/a0a1P0P1v0	po:verb ts:infinitive_simple
+spilòrŧo/a0a1P0P1FSI0	po:verb ts:indicative_present st:spilorŧar
+spilòrŧoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:spilorŧar
+spilorsar/a0a1P0P1v0	po:verb ts:infinitive_simple
+spilòrso/a0a1P0P1FSI0	po:verb ts:indicative_present st:spilorsar
+spilòrsoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:spilorsar
+spiƚorsar/a0a2P0P2v1	po:verb ts:infinitive_simple
+spiƚòrso/a0a2P0P2I0	po:verb ts:indicative_present st:spiƚorsar
+spiƚòrsoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:spiƚorsar
 pilotar/a0a1P0P1+0	po:verb ts:infinitive_simple
 pilòto/a0a1P0P1FSI0+0	po:verb ts:indicative_present st:pilotar
 pilòtoe/a0a1I1+0	po:verb ts:indicative_present is:interrogative st:pilotar
@@ -19942,10 +19951,10 @@ spífaroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:spifarar
 spiferar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 spífero/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:spiferar
 spíferoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:spiferar
-spigasar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+spigasar/a0a1a2P0P1P2r0	po:verb ts:infinitive_simple
 spigaso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:spigasar
 spigàsoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:spigasar
-spigaŧar/a0a1P0P1	po:verb ts:infinitive_simple
+spigaŧar/a0a1P0P1r0	po:verb ts:infinitive_simple
 spigaŧo/a0a1P0P1FSI0	po:verb ts:indicative_present st:spigaŧar
 spigàŧoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:spigaŧar
 spigetar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
@@ -31538,12 +31547,13 @@ speranŧa/F0&0	po:noun
 speriente/M0FSmf	po:adjective
 speriente/M0FSmf	po:noun
 sperimental/F0TFU0	po:adjective
+spesa/F0§0	po:noun
 spesegon/F0U0mf	po:noun
 spesièr/M0V0v0	po:noun
 spesièra/F0V0	po:noun
-speso/A1FS§0mf	po:noun
 speso/A1FSmf	po:adjective
 speso/FS	po:adverb
+speso/M0FS§0mf	po:noun
 spetàkol/M0U1TEmf	po:noun
 speŧegon/F0U0mf	po:noun
 speŧièr/M0V0v0	po:noun
@@ -35568,8 +35578,8 @@ pieta/F0:0	po:noun
 pietina/F0	po:noun
 piè/F0	po:noun
 pigaŧa/F0TE	po:noun
-pigòso/M0FS&0	po:noun
-pigòŧo/M0FS&0	po:noun
+pigòso/M0FS&0*0	po:noun
+pigòŧo/M0FS&0*0	po:noun
 pii	po:adjective is:plural_masculine st:pio
 pikaja/F0TE	po:noun
 pikàndol/M0U1TEmf	po:noun
@@ -36644,7 +36654,10 @@ spia/F0(4	po:noun
 spienŧa/F0TE	po:noun
 spièra/F0&0	po:noun
 spiga/F0&0	po:noun
-spigaròl/M0U0TE	po:noun
+spigarol/M0U0V0mf	po:noun
+spigarola/F0V0	po:noun
+spigaroƚa/F0V1	po:noun
+spigaroƚo/M0V1mf	po:noun
 spigo/M0&0<0<1	po:noun
 spigoleto/M0FSTEmf	po:noun
 spil/M0&0	po:noun
@@ -50369,12 +50382,9 @@ spicativo/A1FS	po:adjective
 spietatamente/FSW2	po:adverb
 spigariòla/F0TE	po:noun
 spila/F0(4	po:noun
-spilorsería/F0v0	po:noun
-spilorŧería/F0v0	po:noun
 spilòrŧa/F0TE	po:adjective
 spilòrŧo/M0FSTE	po:adjective
 spiƚa/F0(5	po:noun
-spiƚorsería/F0v0	po:noun
 spiƚòrso/A1	po:adjective
 spinetina/F0	po:noun
 spinèl/M0U0&0	po:noun
@@ -53706,7 +53716,18 @@ spaŧastrada/F0	po:noun
 speditivo/A1FSW0	po:adjective
 spelonka/F0	po:noun
 speƚonka/F0	po:noun
+spenditon/F0U0mf	po:noun
+sperénsola/F0TE	po:noun
+speriol/M0TEU0mf	po:noun
 spèkola/F0TE	po:noun
+spigaròto/M0FS	po:noun
+spigaŧin/M0TE	po:noun
+spigaŧina/F0TE	po:noun
+spigaŧo/M0FSTE	po:noun
+spilorŧon/F0TEU0mf	po:noun
+spilungon/A2U0mf	po:noun
+spiƚorson/F0mf	po:noun
+spiƚungon/A2mf	po:noun
 stinko/M0	po:noun
 trufon/A1U0mf	po:adjective
 ŧalmòr/M0TB	po:noun
@@ -53824,11 +53845,8 @@ xuxolèra/F0V0	po:noun
 xuxoƚèr/M0V1	po:noun
 xuxoƚèra/F0V1	po:noun
 xúxola/F0TE	po:noun
-spenditon/F0U0mf	po:noun
-sperénsola/F0TE	po:noun
-speriol/M0TEU0mf	po:noun
 
 
-/ 301
+/ 302
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
