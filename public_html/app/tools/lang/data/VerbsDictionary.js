@@ -6005,6 +6005,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "speron",		"in",			1,	4,	"a",	"1854",			"Méter i sproni.",
 "spes",			"i",			1,	2,	"a",	"",				"",
 "spes",			"in",			1,	2,	"a",	"1854",			"",
+"spes",			"",			5,	2,	"a",	"1896",			"",
 "spes",			"i",			5,	2,	"a",	"1867",			"",
 "spes",			"in",			5,	2,	"a",	"1775",			"",
 "spet",			"",			1,	2,	"g",	"1509",			"",
