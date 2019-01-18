@@ -16103,6 +16103,9 @@ skonpísoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:skonpisar
 spisacar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 spisaco/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:spisacar
 spisàcoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:spisacar
+spiserotar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+spiseróto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:spiserotar
+spiserótoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:spiserotar
 pisolar/a0a1P0P1+0*0@0W0	po:verb ts:infinitive_simple
 písolo/a0a1P0P1FSI0+0*0@0	po:verb ts:indicative_present st:pisolar
 písoloe/a0a1I1+0*0@0	po:verb ts:indicative_present is:interrogative st:pisolar
@@ -16354,10 +16357,10 @@ pólveroe/a0a1a2I1+0	po:verb ts:indicative_present is:interrogative st:polverar
 polvarar/a0a1a2P0P1P2+0	po:verb ts:infinitive_simple
 pólvaro/a0a1a2P0P1P2FSI0+0	po:verb ts:indicative_present st:polvarar
 pólvaroe/a0a1a2I1+0	po:verb ts:indicative_present is:interrogative st:polvarar
-spolverar/a0a1a2P0P1P2-0	po:verb ts:infinitive_simple
+spolverar/a0a1a2P0P1P2-0r0	po:verb ts:infinitive_simple
 spólvero/a0a1a2P0P1P2FSI0-0	po:verb ts:indicative_present st:spolverar
 spólveroe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:spolverar
-spolvarar/a0a1a2P0P1P2-0	po:verb ts:infinitive_simple
+spolvarar/a0a1a2P0P1P2-0r0	po:verb ts:infinitive_simple
 spólvaro/a0a1a2P0P1P2FSI0-0	po:verb ts:indicative_present st:spolvarar
 spólvaroe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:spolvarar
 polveridar/a0a1P0P1*0	po:verb ts:infinitive_simple
@@ -16372,6 +16375,9 @@ polveríxoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:polveri
 polvarixar/a0a1a2P0P1P2*0	po:verb ts:infinitive_simple
 polvarixo/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:polvarixar
 polvaríxoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:polvarixar
+polxar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+polxo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:polxar
+pólxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:polxar
 pomar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 pomo/a0a1a2P0P1P2FSI0v0	po:verb ts:indicative_present st:pomar
 pómoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:pomar
@@ -33758,7 +33764,8 @@ janpikon/F0TBU0mf	po:noun
 jaon/F0TBU0mf	po:noun
 jasaròtol/M0TETBU1mf	po:noun
 jasinto/A1FSTB	po:noun
-jasòl/A1TETBU0	po:noun
+jasòl/M0TETBU0	po:noun
+jasòla/F0TETB	po:noun
 jaŧaròtol/M0TBU1mf	po:noun
 jaŧinto/A1FSTB	po:noun
 jaŧòl/A1TBU0	po:noun
@@ -36436,7 +36443,8 @@ skotadéo	po:adverb
 skotente/M0FSmf	po:adjective
 skoŧon/A2U0mf	po:noun
 skovoleta/F0TE	po:noun
-skóol/A1TEU1mf	po:noun
+skóol/M0TEU1mf	po:noun
+skóola/F0TE	po:noun
 skóvol/M0U1TEmf	po:noun
 skóvola/F0TE	po:noun
 skòca/F0	po:noun
@@ -36663,7 +36671,7 @@ spigoleto/M0FSTEmf	po:noun
 spil/M0&0	po:noun
 spiƚo/M0&1	po:noun
 spin/M0&0<0<1	po:adjective
-spin/M0&0<0<1	po:noun
+spin/M0&0(2<0<1	po:noun
 spina/F0&0	po:adjective
 spina/F0&0	po:noun
 spinakarpo/M0FS	po:noun
@@ -36673,8 +36681,7 @@ spinoleto/M0FSTEmf	po:noun
 spiriteŧo/M0FSTEmf	po:noun
 spisengo/A1FS	po:adjective
 spiŧengo/A1FS	po:adjective
-spíxima/F0	po:adjective
-spíximo	po:adjective
+spíximo/A1	po:adjective
 spolverin/A1	po:noun
 spolverinèr/M0V0	po:noun
 spolverinèra/F0V0	po:noun
@@ -36966,7 +36973,8 @@ tasko/M0FS&0	po:noun
 tasta/F0(2	po:noun
 tastadina/F0	po:noun
 tatareta/F0	po:noun
-taŧon/A2TEU0*0mf	po:noun
+taŧon/M0TEU0*0mf	po:noun
+taŧona/F0TE*0	po:noun
 tavareta/F0	po:noun
 tavernèla/F0TE	po:noun
 tavolada/F0Y0	po:noun
@@ -39559,8 +39567,8 @@ pin/A2	po:noun
 pin/A2W0	po:adjective
 pinion/F0U0mf	po:noun
 pipion/F0U0mf	po:noun
-pisaròto/A1FS	po:adjective
-pisaròto/A1FS	po:noun
+pisaròto/A1FS*0	po:adjective
+pisaròto/A1FS*0	po:noun
 pisegamòrto/M0FS	po:noun
 piŧegamòrto/M0FS	po:noun
 piumaxo/M0FS	po:noun
@@ -41515,7 +41523,8 @@ xbiuma/F0	po:noun
 abào/M0	po:noun
 abènŧa/F0TE	po:noun
 advokato/A1FS	po:noun
-aguŧin/A2TE	po:noun
+aguŧin/M0TE	po:noun
+aguŧina/F0TE	po:noun
 akuaiŧa/F0TE	po:noun
 albul/M0U0TE	po:noun
 almirante/M0FS	po:noun
@@ -42176,7 +42185,8 @@ baƚansioƚo/M0mf	po:noun
 baƚengo/A1	po:adjective
 baƚixa/F0	po:noun
 baƚòso/A1	po:noun
-banbinèl/A1TEU0	po:noun
+banbinèl/M0TEU0	po:noun
+banbinèla/F0TE	po:noun
 bandiereŧo/M0FSTEmf	po:noun
 bañadin/A2	po:adjective
 barakòkola/F0TE	po:noun
@@ -43726,8 +43736,10 @@ buŧarosa/F0	po:interjection
 degòra/F0	po:noun
 dova/F0	po:noun al:doa
 erède/M0	po:noun al:rède
-farfujon/A2TEU0mf	po:adjective
-farfujon/A2TEU0mf	po:noun
+farfujon/M0TEU0mf	po:adjective
+farfujona/F0TE	po:adjective
+farfujon/M0TEU0mf	po:noun
+farfujona/F0TE	po:noun
 fèfo/M0FS	po:noun
 fínfol/M0U1TEmf	po:noun
 gatapeloxa	po:noun al:gatepeloxe
@@ -44589,7 +44601,8 @@ bonton/M0v1U0mf	po:noun
 bontòn/M0U0	po:noun
 boña/F0	po:noun
 boñígol/M0U1TEmf	po:noun
-boraŧin/A2TE	po:noun
+boraŧin/M0TE	po:noun
+boraŧina/F0TE	po:noun
 boraxin/M0	po:noun
 bordajo/M0FSTE	po:noun
 bordion/F0U0mf	po:noun
@@ -45171,7 +45184,8 @@ durlindana/F0	po:noun
 đarda/F0TB	po:noun
 đavajin/A2	po:noun
 đavajo/M0TETB	po:noun
-đavajon/A2TETBU0mf	po:noun
+đavajon/M0TETBU0mf	po:noun
+đavajona/F0TETB	po:noun
 đavaɉin/A2	po:noun
 đàfara/F0TB	po:noun
 đàino/M0FSTB	po:adjective
@@ -49968,7 +49982,8 @@ skarpionŧin/M0TE	po:noun
 skarpolin/M0TE	po:noun
 skarpolina/F0TE	po:noun
 skartamaŧo/M0FSTE	po:noun
-skartoŧin/A2TE	po:noun
+skartoŧin/M0TE	po:noun
+skartoŧina/F0TE	po:noun
 skartòso/M0FS&0	po:noun
 skartòŧo/M0FS&0	po:noun
 skasafasi	po:adverb
@@ -50350,7 +50365,8 @@ spendidora/F0V0	po:noun
 spendin/A1	po:noun
 spenta/F0	po:adjective
 spenta/F0(2	po:noun
-spento/M0FS(2mf	po:adjective
+spento/M0FSmf	po:adjective
+spento/M0FS(2mf	po:noun
 speo/M0&0(2	po:noun
 sperdur/M0	po:noun
 sperđur/M0	po:noun
@@ -53845,8 +53861,11 @@ xuxolèra/F0V0	po:noun
 xuxoƚèr/M0V1	po:noun
 xuxoƚèra/F0V1	po:noun
 xúxola/F0TE	po:noun
+spinaŧa/F0TE	po:noun
+spinolin/M0TE	po:noun
+spis	po:noun
 
 
-/ 302
+/ 303
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
