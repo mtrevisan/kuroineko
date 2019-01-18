@@ -5072,6 +5072,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "prénd",			"intra",		3,	2,	"a",	"1775",			"",
 "prénd",			"kon",		3,	2,	"a",	"",				"",
 "prénd",			"re",			3,	2,	"a",	"1450",			"",
+"prepar",		"s",			1,	4,	"g",	"1896",			"",
 "pres",			"",			1,	2,	"g",	"1775",			"",
 "pres",			"in",			1,	2,	"g",	"1775",			"Afretar, aselerar.",
 "pres",			"so",			1,	2,	"g",	"1775",			"",
