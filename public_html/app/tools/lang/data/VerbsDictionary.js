@@ -6455,6 +6455,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ténd",			"prein",		3,	1,	"a",	"1854",			"",
 "ténd",			"pro",		3,	1,	"a",	"1980",			"",
 "ténd",			"re",			3,	1,	"a",	"1821",			"",
+"ténd",			"s",			3,	1,	"a",	"1896",			"",
 "ténd",			"sorain",	3,	1,	"a",	"1867",			"",
 "ténd",			"sorin",		3,	1,	"a",	"1775",			"",
 "ténd",			"sotin",		3,	1,	"a",	"1980",			"",
