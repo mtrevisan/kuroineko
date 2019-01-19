@@ -6690,6 +6690,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tovaɉ",			"",			1,	3,	"g",	"1852",			"",
 "tovaɉ",			"in",			1,	3,	"g",	"1775",			"",
 "tox",			"",			1,	1,	"a",	"1775",			"",
+"tox",			"s",			1,	1,	"a",	"1896",			"",
 "tra",			"",			4,	3,	"a",	"1893",			"Tradir.",
 "trà",			"",			3,	2,	"g",	"1562",			"",
 "trà",			"a",			3,	2,	"g",	"",				"",
