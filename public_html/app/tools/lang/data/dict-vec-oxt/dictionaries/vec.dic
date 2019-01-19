@@ -4867,6 +4867,9 @@ infàntoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:infantar
 sfantar/a0a1a2P0P1P2-0	po:verb ts:infinitive_simple
 sfanto/a0a1a2P0P1P2FSI0-0	po:verb ts:indicative_present st:sfantar
 sfàntoe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:sfantar
+strafantar/a0a1a2P0P1P2v0	po:verb ts:infinitive_simple
+strafanto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:strafantar
+strafàntoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:strafantar
 fantastegar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 fantàstego/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:fantastegar
 fantàstegoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:fantastegar
@@ -7640,12 +7643,12 @@ iníkuitoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inikuitar
 ilkamar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 ilkamo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:ilkamar
 ilkàmoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:ilkamar
-lunar/a0a1P0P1+0	po:verb ts:infinitive_simple
-luno/a0a1P0P1FSI0+0	po:verb ts:indicative_present st:lunar
-lúnoe/a0a1I1+0	po:verb ts:indicative_present is:interrogative st:lunar
-ƚunar/a0a2P0P2	po:verb ts:infinitive_simple
-ƚuno/a0a2P0P2I0	po:verb ts:indicative_present st:lunar
-ƚúnoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:lunar
+lunar/a0a1P0P1+0^6	po:verb ts:infinitive_simple
+luno/a0a1P0P1FSI0+0^6	po:verb ts:indicative_present st:lunar
+lúnoe/a0a1I1+0^6	po:verb ts:indicative_present is:interrogative st:lunar
+ƚunar/a0a2P0P2^6	po:verb ts:infinitive_simple
+ƚuno/a0a2P0P2I0^6	po:verb ts:indicative_present st:lunar
+ƚúnoe/a0a2I1^6	po:verb ts:indicative_present is:interrogative st:lunar
 imaxinar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 imàxino/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:imaxinar
 imàxinoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:imaxinar
@@ -10860,18 +10863,18 @@ xlargíđoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:xlargiđar
 xlargixar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 xlargixo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xlargixar
 xlargíxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xlargixar
-lasar/a0a1P0P1-1+0*0.0	po:verb ts:infinitive_simple
-laso/a0a1P0P1FSI0-1+0*0.0	po:verb ts:indicative_present st:lasar
-làsoe/a0a1I1-1+0*0.0	po:verb ts:indicative_present is:interrogative st:lasar
-ƚasar/a0a2P0P2.0	po:verb ts:infinitive_simple
-ƚaso/a0a2P0P2I0.0	po:verb ts:indicative_present st:ƚasar
-ƚàsoe/a0a2I1.0	po:verb ts:indicative_present is:interrogative st:ƚasar
-tralasar/a0a1P0P1*0	po:verb ts:infinitive_simple
-tralaso/a0a1P0P1FSI0*0	po:verb ts:indicative_present st:stralasar
-tralàsoe/a0a1I1*0	po:verb ts:indicative_present is:interrogative st:stralasar
-traƚasar/a0a2P0P2*0	po:verb ts:infinitive_simple
-traƚaso/a0a2P0P2I0*0	po:verb ts:indicative_present st:straƚasar
-traƚàsoe/a0a2I1*0	po:verb ts:indicative_present is:interrogative st:straƚasar
+lasar/a0a1P0P1-1+0*0.0^6	po:verb ts:infinitive_simple
+laso/a0a1P0P1FSI0-1+0*0.0^6	po:verb ts:indicative_present st:lasar
+làsoe/a0a1I1-1+0*0.0^6	po:verb ts:indicative_present is:interrogative st:lasar
+ƚasar/a0a2P0P2.0^6	po:verb ts:infinitive_simple
+ƚaso/a0a2P0P2I0.0^6	po:verb ts:indicative_present st:ƚasar
+ƚàsoe/a0a2I1.0^6	po:verb ts:indicative_present is:interrogative st:ƚasar
+tralasar/a0a1P0P1	po:verb ts:infinitive_simple
+tralaso/a0a1P0P1FSI0	po:verb ts:indicative_present st:tralasar
+tralàsoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:tralasar
+traƚasar/a0a2P0P2	po:verb ts:infinitive_simple
+traƚaso/a0a2P0P2I0	po:verb ts:indicative_present st:traƚasar
+traƚàsoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:traƚasar
 laskar/a0a1P0P1	po:verb ts:infinitive_simple
 lasko/a0a1P0P1FSI0	po:verb ts:indicative_present st:laskar
 làskoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:laskar
@@ -11710,12 +11713,6 @@ iƚúminoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:iƚuminar
 inlunar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 inluno/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:inlunar
 inlúnoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inlunar
-stralunar/a0a1P0P1	po:verb ts:infinitive_simple
-straluno/a0a1P0P1FSI0	po:verb ts:indicative_present st:stralunar
-stralúnoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:stralunar
-straƚunar/a0a2P0P2	po:verb ts:infinitive_simple
-straƚuno/a0a2P0P2I0	po:verb ts:indicative_present st:straƚunar
-straƚúnoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:straƚunar
 lunariar/a0a1P0P1	po:verb ts:infinitive_simple
 lunario/a0a1P0P1I0	po:verb ts:indicative_present st:lunariar
 lunàrioe/a0a1I1	po:verb ts:indicative_present is:interrogative st:lunariar
@@ -11768,30 +11765,18 @@ deƚúvioe/a0a2I1	po:verb ts:indicative_present is:interrogative st:deƚuviar
 dexluviar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 dexluvio/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:dexluviar
 dexlúvioe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:dexluviar
-lúxer/b0b1P0P1*0.0^1	po:verb ts:infinitive_simple
-luxerò/b0b1I0*0.0^1	po:verb ts:indicative_future st:lúxer
-luxo/a0a1P0P1FSI0*0.0^1	po:verb ts:indicative_present st:lúxer
-lúxoe/a0a1I1*0.0^1	po:verb ts:indicative_present is:interrogative st:lúxer
-lúxar/b0b1P0P1*0.0^1	po:verb ts:infinitive_simple
-luxarò/b0b1I0*0.0^1r0	po:verb ts:indicative_future st:lúxar
-ƚúxer/b0b2P0P2.0^1	po:verb ts:infinitive_simple
-ƚuxerò/b0b2I0.0^1	po:verb ts:indicative_future st:ƚúxer
-ƚuxo/a0a2P0P2I0.0^1	po:verb ts:indicative_present st:ƚúxer
-ƚúxoe/a0a2I1.0^1	po:verb ts:indicative_present is:interrogative st:ƚúxer
-ƚúxar/b0b2P0P2.0^1	po:verb ts:infinitive_simple
-ƚuxarò/b0b2I0.0^1r1	po:verb ts:indicative_future st:ƚúxar
-stralúxer/b0b1P0P1	po:verb ts:infinitive_simple
-straluxerò/b0b1I0	po:verb ts:indicative_future st:stralúxer
-straluxo/a0a1P0P1FSI0	po:verb ts:indicative_present st:stralúxer
-stralúxoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:stralúxer
-stralúxar/b0b1P0P1	po:verb ts:infinitive_simple
-straluxarò/b0b1I0	po:verb ts:indicative_future st:stralúxar
-straƚúxer/b0b2P0P2	po:verb ts:infinitive_simple
-straƚuxerò/b0b2I0	po:verb ts:indicative_future st:straƚúxer
-straƚuxo/a0a2P0P2I0	po:verb ts:indicative_present st:straƚúxer
-straƚúxoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:straƚúxer
-straƚúxar/b0b2P0P2	po:verb ts:infinitive_simple
-straƚuxarò/b0b2I0	po:verb ts:indicative_future st:straƚúxar
+lúxer/b0b1P0P1*0.0^1^6	po:verb ts:infinitive_simple
+luxerò/b0b1I0*0.0^1^6	po:verb ts:indicative_future st:lúxer
+luxo/a0a1P0P1FSI0*0.0^1^6	po:verb ts:indicative_present st:lúxer
+lúxoe/a0a1I1*0.0^1^6	po:verb ts:indicative_present is:interrogative st:lúxer
+lúxar/b0b1P0P1*0.0^1^6	po:verb ts:infinitive_simple
+luxarò/b0b1I0*0.0^1^6r0	po:verb ts:indicative_future st:lúxar
+ƚúxer/b0b2P0P2.0^1^6	po:verb ts:infinitive_simple
+ƚuxerò/b0b2I0.0^1^6	po:verb ts:indicative_future st:ƚúxer
+ƚuxo/a0a2P0P2I0.0^1^6	po:verb ts:indicative_present st:ƚúxer
+ƚúxoe/a0a2I1.0^1^6	po:verb ts:indicative_present is:interrogative st:ƚúxer
+ƚúxar/b0b2P0P2.0^1^6	po:verb ts:infinitive_simple
+ƚuxarò/b0b2I0.0^1^6r1	po:verb ts:indicative_future st:ƚúxar
 xluxegar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 xlúxego/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xluxegar
 xlúxegoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xluxegar
@@ -31648,11 +31633,11 @@ straa/F0&0(4	po:noun
 strada/F0&0(4	po:noun
 stradal/F0TFU0	po:adjective
 stradal/F0TFU0	po:noun
+straka–ganasa/F0	po:noun
+straka–piaŧa/F0TE	po:noun
 straka/F0&0	po:adjective
 strakaganasa/F0	po:noun
-straka–ganasa/F0	po:noun
 strakapiaŧa/F0TE	po:noun
-straka–piaŧa/F0TE	po:noun
 strakul/M0U0&0(0(4<0<1	po:noun
 stramasèr/M0V0	po:noun
 stramasèra/F0V0	po:noun
@@ -34034,7 +34019,7 @@ kastèl/M0U0&0(0(2	po:noun
 kastèla/F0TE	po:noun
 kastèƚo/M0&1(1(3	po:noun
 kastòr/M0	po:noun
-kastradin/A2	po:noun
+kastradin/A1	po:noun
 kastrakan/F0U0	po:noun
 katalite/M0	po:noun
 kataƚite/M0	po:noun
@@ -53792,11 +53777,24 @@ stoko/M0FSmf	po:noun
 stokofis	po:noun
 stolideŧa/F0TE	po:noun
 stoƚidesa/F0	po:noun
+stopèr/M0V0	po:noun
+stopèra/F0V0	po:noun
+stornità	po:noun
 stòla/F0TE	po:noun
 stòlido/A1	po:adjective
 stòlido/A1	po:noun
 stòƚido/A1	po:adjective
 stòƚido/A1	po:noun
+stradarol/M0U0V0mf	po:noun
+stradarola/F0V0	po:noun
+stradaroƚa/F0V1	po:noun
+stradaroƚo/M0V1mf	po:noun
+stradelà	po:adverb
+stradeƚà	po:adverb
+stradin/A1	po:noun
+stradonŧin/M0TE	po:noun
+straduŧa/F0TE	po:noun
+strakòl/M0U0TE	po:noun
 trufon/A1U0mf	po:adjective
 ŧalmòr/M0TB	po:noun
 ŧarneja/F0TETB	po:noun
@@ -53913,12 +53911,8 @@ xuxolèra/F0V0	po:noun
 xuxoƚèr/M0V1	po:noun
 xuxoƚèra/F0V1	po:noun
 xúxola/F0TE	po:noun
-stopèr/M0V0	po:noun
-stopèra/F0V0	po:noun
-stornità	po:noun
-strakòl/M0U0TE	po:noun
 
 
-/ 311
+/ 312
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ

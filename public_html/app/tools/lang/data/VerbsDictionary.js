@@ -1404,6 +1404,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fant",			"des",		1,	1,	"g",	"1560",			"Siòlier, skonparir, xgonfiar, deradar.",
 "fant",			"in",			1,	1,	"g",	"1775",			"Intivar, inventar.",
 "fant",			"s",			1,	1,	"g",	"1775",			"Deradar.",
+"fant",			"stra",		1,	1,	"g",	"1896",			"",
 "fantasteg",	"",			1,	4,	"g",	"1856",			"",
 "faoređ",		"",			1,	4,	"a",	"1560",			"",
 "farfuñ",		"",			1,	4,	"a",	"",				"Balbetar.",
