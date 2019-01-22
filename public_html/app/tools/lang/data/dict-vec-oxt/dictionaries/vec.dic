@@ -20472,12 +20472,18 @@ stràngoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:strangolar
 strangoƚar/a0a2P0P2	po:verb ts:infinitive_simple
 stràngoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:strangoƚar
 stràngoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:strangoƚar
-strasar/a0a1a2P0P1P2v0	po:verb ts:infinitive_simple
+strasar/a0a1a2P0P1P2r0v0	po:verb ts:infinitive_simple
 straso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:strasar
 stràsoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:strasar
-straŧar/a0a1P0P1v0	po:verb ts:infinitive_simple
+straŧar/a0a1P0P1r0v0	po:verb ts:infinitive_simple
 straŧo/a0a1P0P1FSI0	po:verb ts:indicative_present st:straŧar
 stràŧoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:straŧar
+strasonar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+strasono/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:strasonar
+strasónoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:strasonar
+straŧonar/a0a1P0P1	po:verb ts:infinitive_simple
+straŧono/a0a1P0P1FSI0	po:verb ts:indicative_present st:straŧonar
+straŧónoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:straŧonar
 straxir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 strejar/a0a1a2P0P1P2-0	po:verb ts:infinitive_simple
 strejo/a0a1a2P0P1P2FSI0-0	po:verb ts:indicative_present st:strejar
@@ -22140,7 +22146,7 @@ tràpoƚoe/a0a2I1+0	po:verb ts:indicative_present is:interrogative st:trapoƚar
 trarar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 traro/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:trarar
 tràroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:trarar
-trasinar/a0a1a2P0P1P2-1*0r7	po:verb ts:infinitive_simple
+trasinar/a0a1a2P0P1P2-1*0r0r7	po:verb ts:infinitive_simple
 trasino/a0a1a2P0P1P2FSI0-1*0	po:verb ts:indicative_present st:trasinar
 trasínoe/a0a1a2I1-1*0	po:verb ts:indicative_present is:interrogative st:trasinar
 tratar/a0a1a2P0P1P2.0:0r0r2r3	po:verb ts:infinitive_simple
@@ -24350,9 +24356,9 @@ vésoe/a0a1a2I1-1.0	po:verb ts:indicative_present is:interrogative st:vesar
 vesigar/a0a1a2P0P1P2+0	po:verb ts:infinitive_simple
 vesigo/a0a1a2P0P1P2FSI0+0	po:verb ts:indicative_present st:vesigar
 vesígoe/a0a1a2I1+0	po:verb ts:indicative_present is:interrogative st:vesigar
-vestir/a0a1a2e0e1e2P0P1P2-1+0*0.0^1^6r0r2r3r5	po:verb ts:infinitive_simple
-vèsto/e0e1e2P0P1P2FSI0-1+0*0.0^1^6	po:verb ts:indicative_present st:vestir
-vèstoe/a0a1a2I1-1+0*0.0^1^6	po:verb ts:indicative_present is:interrogative st:vestir
+vestir/a0a1a2e0e1e2P0P1P2-1+0.0^1^6r0r2r3r5	po:verb ts:infinitive_simple
+vèsto/e0e1e2P0P1P2FSI0-1+0.0^1^6	po:verb ts:indicative_present st:vestir
+vèstoe/a0a1a2I1-1+0.0^1^6	po:verb ts:indicative_present is:interrogative st:vestir
 envestir/a0a1a2e0e1e2P0P1P2	po:verb ts:infinitive_simple
 envèsto/e0e1e2P0P1P2FSI0	po:verb ts:indicative_present st:envestir
 envèstoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:envestir
@@ -24362,6 +24368,9 @@ malvèstoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:malvestir
 reinvestir/a0a1a2e0e1e2P0P1P2	po:verb ts:infinitive_simple
 reinvèsto/e0e1e2P0P1P2FSI0	po:verb ts:indicative_present st:reinvestir
 reinvèstoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:reinvestir
+xvestir/a0a1a2e0e1e2P0P1P2^6	po:verb ts:infinitive_simple
+xvèsto/e0e1e2P0P1P2FSI0^6	po:verb ts:indicative_present st:vestir
+xvèstoe/a0a1a2I1^6	po:verb ts:indicative_present is:interrogative st:vestir
 investigar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 invèstigo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:investigar
 invèstigoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:investigar
@@ -26997,11 +27006,11 @@ parkome	po:conjunction
 pata/F0	po:noun is:singular_femenine
 pato/M0FS^0&2&3	po:noun is:singular_masculine
 pena/F0&0	po:noun is:singular_femenine
-pene	po:noun is:singular_masculine
 penaŧa/F0TE	po:noun is:singular_femenine
 penaŧo/M0FSTE	po:noun is:singular_masculine
 pena	po:adverb
 peneto/M0FSmf	po:noun is:singular_masculine
+pene	po:noun is:singular_masculine
 peni	po:noun is:plural_masculine st:pene
 penona/F0	po:noun is:singular_femenine
 perkome	po:adverb
@@ -28113,18 +28122,18 @@ ardor/F0mf	po:noun is:singular_masculine
 arente/P0P1P2	po:adjective
 arente/P0P1P2	po:adverb
 arente/P0P1P2	po:noun
-arénteme/P6P7P8	po:adjective
-arénteme/P6P7P8	po:adverb
-arénteme/P6P7P8	po:noun
-aréntemene/P6P7P8	po:adjective
-aréntemene/P6P7P8	po:adverb
-aréntemene/P6P7P8	po:noun
 arénte-me/P6P7P8	po:adjective
 arénte-me/P6P7P8	po:adverb
 arénte-me/P6P7P8	po:noun
 arénte-mene/P6P7P8	po:adjective
 arénte-mene/P6P7P8	po:adverb
 arénte-mene/P6P7P8	po:noun
+arénteme/P6P7P8	po:adjective
+arénteme/P6P7P8	po:adverb
+arénteme/P6P7P8	po:noun
+aréntemene/P6P7P8	po:adjective
+aréntemene/P6P7P8	po:adverb
+aréntemene/P6P7P8	po:noun
 argomental/F0TFU0	po:adjective
 aria/F0&0<0<1§0(4	po:noun is:singular_femenine
 armelin/M0TE	po:noun is:singular_masculine
@@ -28497,18 +28506,18 @@ dapertuto/FS	po:adverb
 darente/P0P1P2FS	po:adverb
 darente/P0P1P2M0FSmf	po:adjective
 darente/P0P1P2M0FSmf	po:noun
-darénteme/P6P7P8	po:adjective
-darénteme/P6P7P8	po:adverb
-darénteme/P6P7P8	po:noun
-daréntemene/P6P7P8	po:adjective
-daréntemene/P6P7P8	po:adverb
-daréntemene/P6P7P8	po:noun
 darénte-me/P6P7P8	po:adjective
 darénte-me/P6P7P8	po:adverb
 darénte-me/P6P7P8	po:noun
 darénte-mene/P6P7P8	po:adjective
 darénte-mene/P6P7P8	po:adverb
 darénte-mene/P6P7P8	po:noun
+darénteme/P6P7P8	po:adjective
+darénteme/P6P7P8	po:adverb
+darénteme/P6P7P8	po:noun
+daréntemene/P6P7P8	po:adjective
+daréntemene/P6P7P8	po:adverb
+daréntemene/P6P7P8	po:noun
 daseno/FS	po:adverb
 data/F0	po:noun is:singular_femenine
 dativo/A1FS	po:noun is:singular_masculine
@@ -29208,10 +29217,10 @@ insèrto/A1FS	po:noun is:singular_masculine
 insial/F0TFU0	po:adjective is:singular_masculine
 insial/F0TFU0	po:noun is:singular_masculine
 insidental/F0TFU0	po:adjective is:singular_masculine
-insieme	po:adverb al:insième
 insieme/M0	po:noun is:singular_masculine al:insième
-insième	po:adverb st:insieme
+insieme	po:adverb al:insième
 insième/M0	po:noun is:singular_masculine st:insieme
+insième	po:adverb st:insieme
 insina/W0	po:adverb
 insin	po:adverb
 instantàneo/A1	po:adjective is:singular_masculine
@@ -29929,10 +29938,10 @@ líbar/A1TB	po:adjective is:singular_masculine
 líber/A1TBmf	po:adjective is:singular_masculine
 límite/F0TB	po:noun is:singular_masculine
 línea/F0TB	po:noun is:singular_femenine
-logativo–diresional/F0U0	po:adjective is:singular_masculine
-logativo–direŧional/F0U0	po:adjective is:singular_masculine
 logativa–diresional/F0U0	po:adjective is:singular_femenine
 logativa–direŧional/F0U0	po:adjective is:singular_femenine
+logativo–diresional/F0U0	po:adjective is:singular_masculine
+logativo–direŧional/F0U0	po:adjective is:singular_masculine
 logativo/A1FSW0	po:adjective is:singular_masculine
 logo/M0FS&0<0<1	po:noun is:singular_masculine
 lokutivo/A1FSW0	po:adjective is:singular_masculine
@@ -30032,8 +30041,8 @@ luxeta/F0	po:noun is:singular_femenine
 ƚiveƚòga	po:adverb
 ƚiveƚò	po:adverb
 ƚivèƚo/A1	po:noun is:singular_masculine
-ƚogativo–diresionaƚe/F0	po:adjective is:singular_masculine
 ƚogativa–diresionaƚe/F0	po:adjective is:singular_femenine
+ƚogativo–diresionaƚe/F0	po:adjective is:singular_masculine
 ƚogativo/A1W1	po:adjective is:singular_masculine
 ƚogo/M0&1<2	po:noun is:singular_masculine
 ƚokusion/F0mf	po:noun is:singular_femenine
@@ -30246,12 +30255,12 @@ mètrego/A1FS	po:adjective is:singular_masculine
 mètro/M0	po:noun is:singular_masculine
 mèxo–dí	po:noun is:masculine
 mèxo–xorno/M0	po:noun is:singular_masculine
-mia	po:adverb st:miga
 mia/F0	po:noun st:miga is:singular_femenine
+mia	po:adverb st:miga
 mico/A1FS	po:noun is:singular_masculine
 mièl/F0TFU0	po:noun is:singular_masculine
-miga	po:adverb al:mia
 miga/F0	po:noun is:singular_femenine al:mia
+miga	po:adverb al:mia
 minal/F0TFU0	po:noun is:singular_masculine
 minimal/F0TFU0	po:adjective
 minimal/F0TFU0	po:noun
@@ -31284,10 +31293,10 @@ sema/F0&0	po:noun is:singular_femenine
 semantegamente/FSW2	po:adverb
 semàntego/A1FS	po:adjective is:singular_masculine
 semenŧa/F0TE	po:noun is:singular_femenine
-semi–asentado/M0Y0	po:adjective is:singular_masculine
-semi–aŧentado/M0Y0	po:adjective is:singular_masculine
 semi–asentada/F0Y0	po:adjective is:singular_femenine
+semi–asentado/M0Y0	po:adjective is:singular_masculine
 semi–aŧentada/F0Y0	po:adjective is:singular_femenine
+semi–aŧentado/M0Y0	po:adjective is:singular_masculine
 semi–lateral/F0U0	po:adjective
 semi–ƚateraƚe/F0	po:adjective
 semi–naxal/F0TFU0	po:adjective
@@ -36818,8 +36827,6 @@ stranbon	po:adverb
 strangojon/F0TEU0mf	po:noun
 strangolaprète/M0FS	po:noun
 strangoƚaprète/M0	po:noun
-stràngola–prète/M0FS	po:noun
-stràngoƚa–prète/M0	po:noun
 stranpalà/TE	po:adjective
 stranuèla/F0TE	po:noun
 strapadina/F0	po:noun
@@ -36842,6 +36849,8 @@ straŧarol/M0U0V0mf	po:noun
 straŧarola/F0V0	po:noun
 straŧèr/M0V0	po:noun
 straŧèra/F0V0	po:noun
+stràngola–prète/M0FS	po:noun
+stràngoƚa–prète/M0	po:noun
 streja/F0TE	po:noun
 strendadura/F0r5&0	po:noun
 strendente/M0FSmf	po:adjective
@@ -53799,6 +53808,7 @@ stradin/A1	po:noun
 stradonŧin/M0TE	po:noun
 straduŧa/F0TE	po:noun
 strakòl/M0U0TE	po:noun
+strasaparè	po:noun
 trufon/A1U0mf	po:adjective
 ŧalmòr/M0TB	po:noun
 ŧarneja/F0TETB	po:noun
@@ -53917,7 +53927,6 @@ xuxoƚèra/F0V1	po:noun
 xúxola/F0TE	po:noun
 
 
-/ 313
+/ 314
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
-sost.:strapon,straponada,straponàa,straponà
