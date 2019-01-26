@@ -6411,6 +6411,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tarl",			"",			1,	1,	"g",	"1851",			"Karolar.",
 "tarm",			"",			1,	1,	"g",	"1775",			"Robar, fregar, tarlar.",
 "tarok",			"",			1,	3,	"g",	"1775",			"Alterkar, adirar ŧigando, batostar.",
+"tarp",			"",			1,	1,	"g",	"1896",			"",
 "tarsi",			"in",			1,	1,	"g",	"1867",			"",
 "tartaj",		"",			1,	4,	"g",	"1775",			"Balbetar.",
 "tartarug",		"",			1,	6,	"a",	"1829",			"",
