@@ -20537,7 +20537,7 @@ strentóroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:strentora
 strepitar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 strèpito/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:strepitar
 strèpitoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:strepitar
-striar/a0a1a2P0P1P2+0v0	po:verb ts:infinitive_simple
+striar/a0a1a2P0P1P2+0r0v0	po:verb ts:infinitive_simple
 strio/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:striar
 stríoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:striar
 stríder/b0b1b2P0P1P2	po:verb ts:infinitive_simple
@@ -20546,7 +20546,7 @@ striderò/b0b1b2I0	po:verb ts:indicative_future st:stríder
 strixo/A1FS	po:verb ts:participle_perfect_strong st:stríder
 strídar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 stridarò/b0b1b2I0	po:verb ts:indicative_future st:strídar
-strigar/a0a1a2P0P1P2+0v0	po:verb ts:infinitive_simple
+strigar/a0a1a2P0P1P2+0r0v0	po:verb ts:infinitive_simple
 strigo/a0a1a2P0P1P2FSI0+0	po:verb ts:indicative_present st:strigar
 strígoe/a0a1a2I1+0	po:verb ts:indicative_present is:interrogative st:strigar
 istrigar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
@@ -20570,6 +20570,9 @@ stríngoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:stringar
 strisar/a0a1a2P0P1P2r7	po:verb ts:infinitive_simple
 striso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:strisar
 strísoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:strisar
+strisonar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+strisono/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:strisonar
+strisónoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:strisonar
 strolegar/a0a1P0P1r2r3r7	po:verb ts:infinitive_simple
 stròlego/a0a1P0P1FSI0	po:verb ts:indicative_present st:strolegar
 stròlegoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:strolegar
@@ -20603,6 +20606,7 @@ stròsoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:strosar
 stroŧar/a0a1P0P1	po:verb ts:infinitive_simple
 stròŧo/a0a1P0P1FSI0	po:verb ts:indicative_present st:stroŧar
 stròŧoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:stroŧar
+strosir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 kostruir/a0a1a2d0d1d2P0P1P2.0r2r3	po:verb ts:infinitive_simple
 instruir/a0a1a2d0d1d2P0P1P2r2r3	po:verb ts:infinitive_simple
 ostruir/a0a1a2d0d1d2P0P1P2-1	po:verb ts:infinitive_simple
@@ -31874,10 +31878,10 @@ trodo/M0&0mf	po:noun is:singular_masculine al:troi
 trođo/M0&0mf	po:noun is:singular_masculine al:troi
 troi	po:noun is:plural_masculine st:trođo
 troxo/M0&0mf	po:noun is:singular_masculine al:troi
-tròdo/M0	po:noun is:singular_masculine
-tròđo/M0	po:noun is:singular_masculine
+tròdo/M0*0	po:noun is:singular_masculine
+tròđo/M0*0	po:noun is:singular_masculine
 tròi	po:noun is:plural_masculine st:tròđo
-tròxo/M0	po:noun is:singular_masculine
+tròxo/M0*0	po:noun is:singular_masculine
 trul/M0U0TE	po:adjective
 trula/F0TE	po:adjective
 turulú	po:adjective
@@ -34198,8 +34202,8 @@ konpienaŧo/M0FSTE	po:adjective
 konpilato/A1FS	po:noun is:singular_masculine
 konpiƚato/A1	po:noun is:singular_masculine
 konplesion/F0U0mf	po:noun is:singular_femenine
-konpravendi	po:noun
 konpra–vendi	po:noun
+konpravendi	po:noun
 konsapèl/F0TFU0	po:noun is:singular
 konsatèsta/F0	po:noun is:singular
 konsavéntola/F0TE	po:noun is:singular
@@ -36172,9 +36176,9 @@ scarola/F0TE	po:noun is:singular_femenine
 scaròla/F0TE	po:noun is:singular_femenine
 scava/F0&0	po:adjective
 scava/F0&0	po:noun is:singular_femenine
-scavàden/F0	po:noun is:singular_femenine
-scavàđen/F0	po:noun is:singular_femenine
-scavàxen/F0	po:noun is:singular_femenine
+scavàden/F0U1mf	po:noun is:singular_femenine
+scavàđen/F0U1mf	po:noun is:singular_femenine
+scavàxen/F0U1mf	po:noun is:singular_femenine
 scavina/F0	po:adjective
 scavina/F0	po:noun is:singular_femenine
 scavo/M0&0	po:adjective
@@ -37099,12 +37103,12 @@ topaŧo/M0FSTE*0	po:noun is:singular_masculine
 topè	po:noun is:masculine
 topinara/F0	po:noun is:singular_femenine
 topinèra/F0	po:noun is:singular_femenine
+tor/F0mf	po:noun is:singular_femenine
 torbia/F0&0	po:adjective
 torbio/M0&0	po:adjective
 tordara/F0	po:noun is:singular_femenine
 tordina/F0	po:noun is:singular_femenine
 tordo/M0mf	po:noun is:singular_masculine
-tor/F0mf	po:noun is:singular_femenine
 torente/M0FSmf	po:noun is:singular_masculine
 torexan/A2U0	po:adjective
 torexèla/F0TE	po:noun is:singular_femenine
@@ -39797,9 +39801,9 @@ salbexina/F0	po:noun is:singular_femenine
 salgaraŧo/M0FSTE	po:noun is:singular_masculine
 salin/M0TE	po:noun is:singular_masculine
 salivo/A1	po:noun is:singular_masculine
+salutaŧion/F0TEU0mf	po:noun is:singular_femenine
 salvastrela/F0TE	po:noun is:singular_femenine
 saƚivo/A1	po:noun is:singular_masculine
-salutaŧion/F0TEU0mf	po:noun is:singular_femenine
 saƚutasion/F0mf	po:noun is:singular_femenine
 sanguétola/F0TE	po:noun is:singular_femenine
 sansume/M0	po:noun is:singular_masculine
@@ -40614,10 +40618,10 @@ spinièl/M0U0TE	po:noun is:singular_masculine
 stèrko/M0	po:noun is:singular_masculine
 stonbio/M0	po:noun is:singular_masculine
 stranudo/M0Y0q2q3	po:noun is:singular_masculine
-tajapièra/F0	po:noun is:singular_masculine
-taɉapièra/F0	po:noun is:singular_masculine
 taja–pièra/F0	po:noun is:singular_masculine
+tajapièra/F0	po:noun is:singular_masculine
 taɉa–pièra/F0	po:noun is:singular_masculine
+taɉapièra/F0	po:noun is:singular_masculine
 tenprarin/M0	po:noun is:singular_masculine
 tomèr/M0V0	po:noun is:singular_masculine
 tomèra/F0V0	po:noun is:singular_femenine
@@ -41238,10 +41242,10 @@ sparaxèr/M0V0	po:noun is:singular_masculine
 sparaxèra/F0V0	po:noun is:singular_femenine
 sparjíriko/A1FS	po:adjective
 sparɉíriko/A1FS	po:adjective
-spasapièra/F0	po:noun is:singular_masculine
-spaŧapièra/F0	po:noun is:singular_masculine
 spasa–pièra/F0	po:noun is:singular_masculine
+spasapièra/F0	po:noun is:singular_masculine
 spaŧa–pièra/F0	po:noun is:singular_masculine
+spaŧapièra/F0	po:noun is:singular_masculine
 spauraco/M0	po:noun is:singular_masculine
 sperónsola/F0TE	po:noun is:singular_femenine
 sperónŧola/F0	po:noun is:singular_femenine
@@ -42652,24 +42656,22 @@ konpar/F0s0	po:noun is:singular_masculine
 konpoxidor/M0V0mf	po:noun is:singular_masculine
 konpoxidora/F0V0	po:noun is:singular_femenine
 konprita/F0	po:noun is:singular_femenine
-konsafenèstra/F0	po:noun is:singular_masculine
 konsa–fenèstra/F0	po:noun is:singular_masculine
+konsafenèstra/F0	po:noun is:singular_masculine
 konsistòr/M0	po:noun is:singular_masculine
 konterèl/M0U0TE	po:noun is:singular_masculine
-kontra–međana/F0TE	po:noun is:singular_femenine
 kontra–kasa/F0	po:noun is:singular_femenine
-kontrakasa/F0	po:noun is:singular_femenine
 kontra–međana/F0TE	po:noun is:singular_femenine
+kontrakasa/F0	po:noun is:singular_femenine
 kontrameđana/F0TE	po:noun is:singular_femenine
+kontro–kolonba/F0	po:noun is:singular_femenine
+kontro–koƚonba/F0	po:noun is:singular_femenine
 kontro–međana/F0TE	po:noun is:singular_femenine
 kontrokolonba/F0	po:noun is:singular_femenine
 kontrokoƚonba/F0	po:noun is:singular_femenine
-kontro–kolonba/F0	po:noun is:singular_femenine
-kontro–koƚonba/F0	po:noun is:singular_femenine
 kontromeđana/F0TE	po:noun is:singular_femenine
-kontro–međana/F0TE	po:noun is:singular_femenine
-konŧafenèstra/F0	po:noun is:singular_masculine
 konŧa–fenèstra/F0	po:noun is:singular_masculine
+konŧafenèstra/F0	po:noun is:singular_masculine
 konŧina/F0TE	po:noun is:singular_femenine
 konŧistòr/M0	po:noun is:singular_masculine
 koñosanŧa/F0TE.0	po:noun is:singular_femenine
@@ -44102,13 +44104,13 @@ arkivio/M0	po:noun is:singular_masculine
 arko–selèste/M0	po:noun is:singular_masculine
 arko–seƚèste/M0	po:noun is:singular_masculine
 arko–ŧelèste/M0	po:noun is:singular_masculine
+arko–vèrxen/F0U1mf	po:noun is:singular_masculine
 arkonbè	po:noun is:masculine
 arkoselèste/M0	po:noun is:singular_masculine
 arkoseƚèste/M0	po:noun is:singular_masculine
 arkoŧelèste/M0	po:noun is:singular_masculine
 arkova/F0	po:noun is:singular_femenine
 arkovèrxen/F0U1mf	po:noun is:singular_masculine
-arko–vèrxen/F0U1mf	po:noun is:singular_masculine
 arkuilà/M0TE	po:noun is:masculine
 arlaso/M0FS	po:noun is:singular_masculine
 arlekin/M0	po:noun is:singular_masculine
@@ -44317,7 +44319,7 @@ bankodir/M0	po:noun is:singular_masculine
 bankođir/M0	po:noun is:singular_masculine
 bankoxir/M0	po:noun is:singular_masculine
 banpòria/F0	po:noun is:singular_femenine
-bañafior/F0	po:noun is:singular_masculine
+bañafior/F0mf	po:noun is:singular_masculine
 bañèra/F0&0	po:noun is:singular_femenine
 baño/M0FS&0	po:noun is:singular_masculine
 bañomaría/F0	po:noun is:singular_femenine
@@ -46075,7 +46077,7 @@ imajinàbil/F0TFW0	po:adjective
 imaɉinaŧion/F0TEU0mf	po:noun is:singular_femenine
 imaɉinàbil/F0TF	po:noun is:singular_femenine
 imaɉinàbil/F0TFW0	po:adjective
-imàxen/F0	po:noun is:singular_femenine
+imàxen/F0U1mf	po:noun is:singular_femenine
 inamorada/F0Y0Y1	po:noun is:singular_femenine
 inarivàbil/F0TF	po:adjective
 inbandixon/F0U0mf	po:noun is:singular_masculine
@@ -48397,7 +48399,7 @@ parabordo/M0mf	po:noun
 parabòta/F0	po:noun
 parada/F0Y0Y1	po:noun
 parafúlmine/M0	po:noun
-paragrànden/F0	po:noun
+paragrànden/F0U1mf	po:noun
 paralèto/M0FS	po:noun
 paralítego/A1FS	po:adjective
 paralume/M0	po:noun
@@ -51615,7 +51617,7 @@ visigon/F0U0mf	po:noun
 visin/M0r0&2&3§0	po:noun
 visina/F0&2&3§0	po:noun
 visin	po:adverb
-visio/M0&0	po:noun
+visio/M0&0^6	po:noun
 visioxo/A1FSmf	po:noun
 visioxo/A1FSW0mf	po:adjective
 visolona/F0TE	po:noun
@@ -51633,7 +51635,7 @@ viŧiadon/A2U0+0mf	po:adjective
 viŧin/M0r0&2§0	po:noun
 viŧina/F0&2§0	po:noun
 viŧin	po:adverb
-viŧio/M0&0	po:noun
+viŧio/M0&0^6	po:noun
 viŧioxo/A1FSmf	po:noun
 viŧioxo/A1FSW0mf	po:adjective
 viva/F0^6	po:adjective
@@ -53629,7 +53631,7 @@ sesin/A2	po:adjective
 sexèja/F0TE	po:noun
 sexèl/M0U0TE	po:noun
 sékola/F0TE	po:noun
-sérsen/F0	po:noun
+sérsen/F0U1mf	po:noun
 sésola/F0TE	po:noun
 sèra–ponto/M0mf	po:noun
 sèrvo/A1	po:noun
@@ -53804,6 +53806,17 @@ stradonŧin/M0TE	po:noun
 straduŧa/F0TE	po:noun
 strakòl/M0U0TE	po:noun
 strasaparè	po:noun
+streton/F0U0mf	po:noun is:singular_masculine
+striol/M0TEU0mf	po:noun is:singular_masculine
+striul/M0U1TE	po:noun is:singular_masculine
+strodeto/M0FSmf	po:noun is:singular_masculine
+strođeto/M0FSmf	po:noun is:singular_masculine
+stroketo/M0FSmf	po:noun is:singular_masculine
+stròdol/M0U1mf	po:noun is:singular_masculine
+stròđol/M0U1mf	po:noun is:singular_masculine
+stròso/M0FS	po:noun is:singular_masculine
+stròxol/M0U1mf	po:noun is:singular_masculine
+stròxoƚo/M0mf	po:noun is:singular_masculine
 trufon/A1U0mf	po:adjective
 ŧalmòr/M0TB	po:noun
 ŧarneja/F0TETB	po:noun
@@ -53816,7 +53829,7 @@ trufon/A1U0mf	po:adjective
 ŧeŧin/A2	po:adjective
 ŧexèl/M0U0	po:noun
 ŧénar/F0TB	po:noun
-ŧérŧen/F0	po:noun
+ŧérŧen/F0U1mf	po:noun
 ŧierexa/F0TB	po:noun
 ŧiexòto/M0FSTB	po:noun
 ŧigañòla/F0	po:noun
@@ -53858,70 +53871,70 @@ xbròdego/M0	po:noun
 xenocèl/M0U0TE	po:noun
 xèma/F0	po:noun
 xgabòto/FS	po:adverb
-xgalenbo/M0	po:noun
+xgalenbo/M0	po:noun is:singular_masculine
 xgalenbo	po:adverb
 xgalmaron/A2U0mf	po:adjective
-xgarbion/F0U0mf	po:noun
-xgèrlo/M0U1	po:noun
-xgonfio/M0	po:noun
+xgarbion/F0U0mf	po:noun is:singular_masculine
+xgèrlo/M0U1	po:noun is:singular_masculine
+xgonfio/M0	po:noun is:singular_masculine
 xgraxenda/F0	po:noun
 xgreva/F0	po:noun
 xgriñapòpol/M0U1TEmf	po:adjective
 xgrixenda/F0	po:noun
-xgualivin/M0	po:noun
-xguaƚivin/M0	po:noun
+xgualivin/M0	po:noun is:singular_masculine
+xguaƚivin/M0	po:noun is:singular_masculine
 xguelteŧa/F0TE	po:noun
 ximara/F0	po:noun
-ximaròto/M0FS	po:noun
-xinko	po:noun
-xiròvago/M0	po:noun
+ximaròto/M0FS	po:noun is:singular_masculine
+xinko	po:noun is:singular_masculine
+xiròvago/M0	po:noun is:singular_masculine
 xita/F0	po:noun
-xixibèr/M0V0	po:noun
+xixibèr/M0V0	po:noun is:singular_masculine
 xixibèra/F0V0	po:noun
 xíxiba/F0	po:noun
 xjensa/F0TB	po:noun
 xjonfeŧa/F0TETB	po:noun
-xjosarol/M0U0V0mf	po:noun
-xjosaroƚo/M0V1mf	po:noun
-xjosoleto/M0FSTEmf	po:noun
-xjoŧarol/M0U0V0mf	po:noun
-xɉosarol/M0U0V0mf	po:noun
-xɉosaroƚo/M0V1mf	po:noun
-xɉosoleto/M0FSTEmf	po:noun
-xɉoŧarol/M0U0V0mf	po:noun
+xjosarol/M0U0V0mf	po:noun is:singular_masculine
+xjosaroƚo/M0V1mf	po:noun is:singular_masculine
+xjosoleto/M0FSTEmf	po:noun is:singular_masculine
+xjoŧarol/M0U0V0mf	po:noun is:singular_masculine
+xɉosarol/M0U0V0mf	po:noun is:singular_masculine
+xɉosaroƚo/M0V1mf	po:noun is:singular_masculine
+xɉosoleto/M0FSTEmf	po:noun is:singular_masculine
+xɉoŧarol/M0U0V0mf	po:noun is:singular_masculine
 xlako/A1FS	po:adjective
 xlíxola/F0TE	po:noun
 xlorda/F0	po:noun
 xlordo/M0mf	po:adjective
-xlordo/M0(2mf	po:noun
+xlordo/M0(2mf	po:noun is:singular_masculine
 xlufon/M0U0mf	po:adjective
-xlufon/M0U0mf	po:noun
-xluxarin/M0	po:noun
+xlufon/M0U0mf	po:noun is:singular_masculine
+xluxarin/M0	po:noun is:singular_masculine
 xmajarda/F0	po:noun
 xmaɉarda/F0	po:noun
 xmanfaron/A1U0mf	po:adjective
-xmanioxo/A1FSmf	po:noun
+xmanioxo/A1FSmf	po:noun is:singular_masculine
 xmanioxo/A1FSW0mf	po:adjective
-xmànfar/A1	po:adjective
-xmerijo/M0TE	po:noun
+xmànfar/A1	po:adjective is:singular_masculine
+xmerijo/M0TE	po:noun is:singular_masculine
 xmijaŧa/F0TE	po:noun
 xmiɉaŧa/F0TE	po:noun
-xminuŧo/M0TE	po:noun
+xminuŧo/M0TE	po:noun is:singular_masculine
 xmorsarèla/F0TE	po:noun
 xmorŧarèla/F0	po:noun
-xmòso/A1FS	po:adjective
-xñaròko/M0FS	po:noun
+xmòso/A1FS	po:adjective is:singular_masculine
+xñaròko/M0FS	po:noun is:singular_masculine
 xñinsa/F0	po:noun
 xñòkola/F0TE	po:noun
 xorla/F0	po:noun
-xòvo/M0&2&3	po:noun
-xuxolèr/M0V0	po:noun
+xòvo/M0&2&3	po:noun is:singular_masculine
+xuxolèr/M0V0	po:noun is:singular_masculine
 xuxolèra/F0V0	po:noun
-xuxoƚèr/M0V1	po:noun
+xuxoƚèr/M0V1	po:noun is:singular_masculine
 xuxoƚèra/F0V1	po:noun
 xúxola/F0TE	po:noun
 
 
-/ 314
+/ 316
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
