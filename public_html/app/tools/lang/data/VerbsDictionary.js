@@ -6419,6 +6419,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tas",			"",			1,	1,	"g",	"1414",			"",
 "tas",			"in",			1,	1,	"g",	"1980",			"Akatastar.",
 "task",			"in",			1,	1,	"g",	"1400",			"",
+"tasel",			"",			1,	1,	"g",	"1896",			"",
 "tast",			"",			1,	1,	"g",	"1775",			"",
 "tasteđ",		"",			1,	4,	"a",	"1560",			"Trabalar.",
 "tasteɉ",		"",			1,	4,	"a",	"1867",			"Tastiđar.",
