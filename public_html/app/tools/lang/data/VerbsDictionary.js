@@ -6360,6 +6360,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tak",			"in",			1,	1,	"g",	"1562",			"",
 "tak",			"des",		1,	1,	"g",	"1560",			"",
 "tak",			"s",			1,	1,	"g",	"",				"",
+"takeđ",			"",			1,	3,	"a",	"1896",			"Méter i taki.",
 "taket",			"",			1,	3,	"a",	"1980",			"(bixiak) Pontejar.",
 "takiđ",			"",			1,	3,	"a",	"1854",			"Méter i taki.",
 "takol",			"",			1,	1,	"g",	"1980",			"Far deventar makulà.",
