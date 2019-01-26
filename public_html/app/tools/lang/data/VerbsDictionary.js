@@ -7058,6 +7058,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vak",			"stra",		1,	1,	"g",	"1590",			"",
 "vaku",			"e",			1,	1,	"g",	"1847",			"",
 "vag",			"",			1,	1,	"g",	"",				"",
+"vag",			"x",			1,	1,	"g",	"1896",			"",
 "vag",			"stra",		1,	1,	"g",	"1829",			"",
 "vag",			"in",			4,	3,	"a",	"1854",			"",
 "vagabond",		"",			1,	5,	"a",	"1854",			"",
