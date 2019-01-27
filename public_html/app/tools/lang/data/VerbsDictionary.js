@@ -7035,6 +7035,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "un",				"ad",			1,	0,	"a",	"1454",			"",
 "un",				"rad",		1,	0,	"a",	"1896",			"",
 "únđ",			"",			3,	0,	"a",	"1560",			"Ónđer.",
+"uniform",		"",			1,	4,	"a",	"1896",			"",
 "uñol",			"",			1,	0,	"a",	"1867",			"Rénder unego.",
 "url",			"",			1,	0,	"a",	"1852",			"Ŧigar.",
 "urm",			"",			1,	0,	"a",	"",				"Pestar de bote.",
