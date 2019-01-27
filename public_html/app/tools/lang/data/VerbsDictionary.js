@@ -7094,6 +7094,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vang",			"re",			1,	1,	"g",	"1867",			"",
 "vang",			"rin",		1,	1,	"g",	"1867",			"Revangar.",
 "vang",			"x",			1,	1,	"g",	"1980",			"Revangar.",
+"vanp",			"",			1,	1,	"g",	"1896",			"",
 "vanp",			"",			4,	4,	"a",	"1980",			"",
 "vanp",			"x",			4,	4,	"a",	"1980",			"",
 "vanpol",		"x",			1,	1,	"g",	"1560",			"Divertir.",
