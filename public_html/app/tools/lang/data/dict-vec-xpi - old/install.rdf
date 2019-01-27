@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+	<Description about="urn:mozilla:install-manifest">
+		<!-- https://developer.mozilla.org/en-US/Add-ons/Install_Manifests -->
+		<em:id>vec@dictionaries.addons.mozilla.org</em:id>
+		<em:type>64</em:type>
+		<em:unpack>true</em:unpack>
+		<em:version>2.2.2</em:version>
+		<em:name>Diŧionario de lengua vèneta - Dizionario di lingua veneta</em:name>
+		<em:description>Diŧionario de lengua vèneta doparando la grafía de Màuro Trevixan (2019-01-27)</em:description>
+		<em:creator>Màuro Trevixan</em:creator>
+		<em:homepageURL>https://parnodesmentegar.wordpress.com</em:homepageURL>
+		<em:localized>
+			<Description>
+				<em:locale>en</em:locale>
+				<em:name>Venetan spell-checking dictionary</em:name>
+				<em:description>Venetan dicionary using the spelling of Mauro Trevisan (2019-01-27).</em:description>
+			</Description>
+			<Description>
+				<em:locale>vec</em:locale>
+				<em:name>Diŧionario de lengua vèneta</em:name>
+				<em:description>Diŧionario de lengua vèneta doparando la grafía de Màuro Trevixan (2019-01-27).</em:description>
+			</Description>
+			<Description>
+				<em:locale>it</em:locale>
+				<em:name>Correttore ortografico per la lingua veneta</em:name>
+				<em:description>Dizionario di lingua veneta usando la grafia di Mauro Trevisan (2019-01-27).</em:description>
+			</Description>
+			<Description>
+				<em:locale>es</em:locale>
+				<em:name>Diccionario de ortografía Venetan</em:name>
+				<em:description>Diccionario venetano utilizando la ortografía de Mauro Trevisan (2019-01-27).</em:description>
+			</Description>
+			<Description>
+				<em:locale>gl</em:locale>
+				<em:name>Dicionario de verificación ortográfica Venetan</em:name>
+				<em:description>Dicionario venetano usando a ortografía de Mauro Trevisan (2019-01-27).</em:description>
+			</Description>
+			<Description>
+				<em:locale>pt</em:locale>
+				<em:name>Dicionário de verificação ortográfica Venetan</em:name>
+				<em:description>Dicionário veneto usando a grafia de Mauro Trevisan (2019-01-27).</em:description>
+			</Description>
+		</em:localized>
+		<em:multiprocessCompatible>true</em:multiprocessCompatible>
+
+		<!-- https://addons.mozilla.org/en-US/firefox/pages/appversions/ -->
+		<!-- Firefox -->
+		<em:targetApplication>
+			<Description>
+				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+				<em:minVersion>18.0a1</em:minVersion>
+				<em:maxVersion>70.0</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+		<!-- Thunderbird -->
+		<em:targetApplication>
+			<Description>
+				<em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+				<em:minVersion>18.0a1</em:minVersion>
+				<em:maxVersion>63.0</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+		<!-- Firefox for Android -->
+		<em:targetApplication>
+			<Description>
+				<em:id>{aa3c5121-dab2-40e2-81ca-7ea25febc110}</em:id>
+				<em:minVersion>46.0</em:minVersion>
+				<em:maxVersion>70.0</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+		<!-- Mobile -->
+		<!-- <em:targetApplication>
+			<Description>
+				<em:id>{a23983c0-fd0e-11dc-95ff-0800200c9a66}</em:id>
+				<em:minVersion>40.0</em:minVersion>
+				<em:maxVersion>40.*</em:maxVersion>
+			</Description>
+		</em:targetApplication> -->
+		<!-- SeaMonkey -->
+		<em:targetApplication>
+			<Description>
+				<em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
+				<em:minVersion>2.15a1</em:minVersion>
+				<em:maxVersion>2.60</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+	</Description>
+</RDF>
