@@ -6830,6 +6830,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tu",				"",			1,	1,	"a",	"1775",			"Dar el tuin (it. 'Afa').",
 "tu",				"",			4,	2,	"a",	"1775",			"",
 "tu",				"in",			4,	2,	"a",	"1867",			"",
+"tub",			"",			1,	1,	"a",	"1896",			"",
 "tubi",			"",			1,	1,	"a",	"1775",			"Tibiar.",
 "tuf",			"",			1,	1,	"a",	"1867",			"",
 "tuf",			"in",			1,	1,	"a",	"1775",			"",
