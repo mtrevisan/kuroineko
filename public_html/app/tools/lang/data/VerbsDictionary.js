@@ -7041,6 +7041,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "urm",			"",			1,	0,	"a",	"",				"Pestar de bote.",
 "urt",			"",			1,	0,	"a",	"1810",			"Inervoxir.",
 "urteđ",			"",			1,	3,	"a",	"1775",			"Ponxacar, frugar kol komio.",
+"urton",			"",			1,	3,	"a",	"1896",			"",
 "us",				"",			5,	0,	"a",	"1590",			"Ensir.",
 "us",				"re",			5,	0,	"a",	"",				"",
 "us",				"ri",			5,	0,	"a",	"",				"",
@@ -7056,6 +7057,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ux",				"re",			1,	0,	"a",	"",				"",
 "uxit",			"",			1,	0,	"a",	"1433",			"",
 "uxm",			"",			1,	0,	"a",	"1810",			"",
+"uxufru",		"",			4,	6,	"a",	"1896",			"",
 "uxur",			"",			1,	2,	"a",	"1854",			"",
 
 "v",				"",			3,	1,	"a",	"1560",			"Véder.",
