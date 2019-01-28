@@ -361,6 +361,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "basil",			"",			1,	3,	"a",	"1867",			"Vacilar.",
 "bast",			"",			1,	1,	"g",	"1590",			"",
 "bast",			"stra",		1,	1,	"g",	"1867",			"",
+"bast",			"",			4,	4,	"a",	"1876",			"",
 "bast",			"in",			4,	4,	"a",	"1775",			"(gotiko)",
 "bastard",		"",			1,	4,	"g",	"1775",			"Dexenerar.",
 "bastard",		"in",			4,	7,	"a",	"1350",			"",
