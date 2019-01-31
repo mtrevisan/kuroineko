@@ -17202,9 +17202,6 @@ ràkoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:rakolar
 rakoƚar/a0a2P0P2	po:verb ts:infinitive_simple
 ràkoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:rakoƚar
 ràkoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:rakoƚar
-rakordar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-rakòrdo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:rakordar
-rakòrdoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:rakordar
 raixar/a0a1a2P0P1P2-1+0*0	po:verb ts:infinitive_simple
 raixo/a0a1a2P0P1P2FSI0-1+0*0	po:verb ts:indicative_present st:raixar
 raíxoe/a0a1a2I1-1+0*0	po:verb ts:indicative_present is:interrogative st:raixar
@@ -18082,9 +18079,9 @@ sàgomoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:sagomar
 desagrar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 desagro/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:desagrar
 desàgroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:desagrar
-konsagrar/a0a1a2P0P1P2*0	po:verb ts:infinitive_simple
-konsagro/a0a1a2P0P1P2I0*0	po:verb ts:indicative_present st:konsagrar
-konsàgroe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:konsagrar
+konsagrar/a0a1a2P0P1P2-1*0	po:verb ts:infinitive_simple
+konsagro/a0a1a2P0P1P2I0-1*0	po:verb ts:indicative_present st:konsagrar
+konsàgroe/a0a1a2I1-1*0	po:verb ts:indicative_present is:interrogative st:konsagrar
 sagrinar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 sagrino/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:sagrinar
 sagrínoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:sagrinar
@@ -18118,6 +18115,9 @@ sakòsoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:sakosar
 sakoŧar/a0a1P0P1	po:verb ts:infinitive_simple
 sakòŧo/a0a1P0P1FSI0	po:verb ts:indicative_present st:sakoŧar
 sakòŧoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:sakoŧar
+desakrar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+desakro/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:desakrar
+desàkroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:desakrar
 konsakrar/a0a1a2P0P1P2-1*0	po:verb ts:infinitive_simple
 konsakro/a0a1a2P0P1P2I0-1*0	po:verb ts:indicative_present st:konsakrar
 konsàkroe/a0a1a2I1-1*0	po:verb ts:indicative_present is:interrogative st:konsakrar
@@ -46669,7 +46669,7 @@ kareŧévol/F0U1mf	po:noun is:singular_masculine
 kareŧo/M0FSTEmf	po:noun is:singular_masculine
 karexo/M0FS&0mf	po:noun is:singular_masculine
 kargo/A1FS	po:adjective
-kargo/M0FS-1*0	po:noun is:singular_masculine
+kargo/M0FS-1+0*0	po:noun is:singular_masculine
 karido/M0&0	po:noun is:singular_masculine
 kariđo/M0&0	po:noun is:singular_masculine
 karitade/M0Y0	po:noun is:singular_femenine
@@ -47119,8 +47119,8 @@ kòƚara/F0	po:noun is:singular_femenine
 kòmego/A1FS	po:adjective
 kòmego/A1FS^3	po:noun is:singular_masculine
 kòmito/A1FS	po:noun is:singular_masculine
-kòmodo/A1-1*0mf	po:noun is:singular_masculine
-kòmodo/A1mf	po:adjective
+kòmodo/A1-1+0*0mf	po:adjective
+kòmodo/A1-1+0*0mf	po:noun is:singular_masculine
 kònio/M0	po:noun is:singular_masculine
 kònomo/A1	po:noun is:singular_masculine
 kònprita/F0	po:noun is:singular_femenine
@@ -54209,6 +54209,7 @@ cakolada/F0Y0Y1	po:noun is:singular_femenine
 cakoƚada/F0Y0Y1	po:noun is:singular_femenine
 casada/F0Y0Y1	po:noun is:singular_femenine
 cucada/F0Y0Y1	po:noun is:singular_femenine
+dexbrokada/F0Y0Y1	po:noun is:singular_femenine
 kaldierada/F0Y0Y1	po:noun is:singular_femenine
 kalerada/F0Y0Y1	po:noun is:singular_femenine
 kalkada/F0Y0Y1	po:noun is:singular_femenine
@@ -54220,6 +54221,7 @@ kapeƚada/F0Y0Y1	po:noun is:singular_femenine
 kapodir/M0	po:noun is:singular_masculine
 kapođir/M0	po:noun is:singular_masculine
 kapoxir/M0	po:noun is:singular_masculine
+kargada/F0Y0Y1-1+0*0	po:noun is:singular_femenine
 karidada/F0Y0Y1	po:noun is:singular_femenine
 kariđada/F0Y0Y1	po:noun is:singular_femenine
 karixada/F0Y0Y1	po:noun is:singular_femenine
@@ -54268,12 +54270,8 @@ laxañon/A2U0mf	po:noun is:singular
 ƚaxañon/A2mf	po:noun is:singular
 manko/M0FS@0	po:noun is:singular_masculine
 sète	po:interjection
-dexbrokada/F0Y0Y1	po:noun is:singular_femenine
 
 
-/ 73
+/ 74
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
-sost.:dàtola,dàtoƚa,làtola,ƚàtoƚa
-av.:skanpon,rexbogo
-v.:dexbrokar,dexbroketar
