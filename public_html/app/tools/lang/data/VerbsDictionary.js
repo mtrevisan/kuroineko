@@ -6229,6 +6229,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "stri",			"",			1,	3,	"a",	"1810",			"Strigar.",
 "stríd",			"",			3,	3,	"a",	"",				"",
 "strig",			"",			1,	3,	"a",	"1775",			"",
+"strig",			"de",			1,	3,	"a",	"1876",			"",
 "strig",			"i",			1,	3,	"a",	"1867",			"",
 "strig",			"in",			1,	3,	"a",	"1775",			"",
 "strigon",		"",			1,	5,	"a",	"1775",			"",
