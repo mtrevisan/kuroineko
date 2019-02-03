@@ -5770,6 +5770,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "siton",			"",			1,	3,	"a",	"",				"",
 "situ",			"",			1,	1,	"a",	"1867",			"",
 "sixil",			"",			1,	3,	"a",	"1412",			"",
+"sixil",			"de",			1,	3,	"a",	"1876",			"",
 "sixol",			"",			1,	1,	"a",	"1775",			"Skominŧiar a bòjer de lʼ akua.",
 "jantil",		"x",			1,	4,	"a",	"1590",			"Scantiđar.",
 "skakañ",		"",			1,	4,	"g",	"1854",			"Saketar.",
