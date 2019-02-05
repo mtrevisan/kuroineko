@@ -3327,6 +3327,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "langu",			"x",			5,	1,	"g",	"",				"Indebolir, infiakir, afamar.",
 "langur",		"x",			4,	6,	"a",	"1796",			"Infiakir.",
 "languid",		"",			4,	7,	"a",	"1867",			"",
+"languid",		"i",			4,	7,	"a",	"1876",			"",
 "languid",		"in",			4,	7,	"a",	"1775",			"",
 "lank",			"dex",		1,	1,	"g",	"1796",			"Andar ŧòto.",
 "lanp",			"",			1,	1,	"g",	"1980",			"",
