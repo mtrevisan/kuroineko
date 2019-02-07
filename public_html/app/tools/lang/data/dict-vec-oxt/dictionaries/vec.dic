@@ -7753,12 +7753,6 @@ inritar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 ínritoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inritar
 insir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 insipidir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
-insosolar/a0a1P0P1	po:verb ts:infinitive_simple
-insósolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:insosolar
-insósoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:insosolar
-insosoƚar/a0a2P0P2	po:verb ts:infinitive_simple
-insósoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:insosoƚar
-insósoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:insosoƚar
 insular/a0a1P0P1	po:verb ts:infinitive_simple
 ínsulo/a0a1P0P1FSI0	po:verb ts:indicative_present st:insular
 ínsuloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:insular
@@ -19726,6 +19720,12 @@ sòsioe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:sosiar
 soŧiar/a0a1P0P1	po:verb ts:infinitive_simple
 sòŧio/a0a1P0P1I0	po:verb ts:indicative_present st:soŧiar
 sòŧioe/a0a1I1	po:verb ts:indicative_present is:interrogative st:soŧiar
+insosolar/a0a1P0P1	po:verb ts:infinitive_simple
+insósolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:insosolar
+insósoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:insosolar
+insosoƚar/a0a2P0P2	po:verb ts:infinitive_simple
+insósoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:insosoƚar
+insósoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:insosoƚar
 insoŧolar/a0a1P0P1	po:verb ts:infinitive_simple
 insóŧolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:insoŧolar
 insóŧoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:insoŧolar
@@ -22772,7 +22772,7 @@ sèfoe/a0a1a2I1+0	po:verb ts:indicative_present is:interrogative st:ŧefar
 ŧejar/a0a1P0P1+0r5	po:verb ts:infinitive_simple
 ŧejo/a0a1P0P1FSI0TE+0	po:verb ts:indicative_present st:ŧejar
 ŧéjoe/a0a1I1+0	po:verb ts:indicative_present is:interrogative st:ŧejar
-sejar/a0a1a2P0P1P2+0r5-0@0	po:verb ts:infinitive_simple
+sejar/a0a1a2P0P1P2+0-0@0r5	po:verb ts:infinitive_simple
 sejo/a0a1a2P0P1P2FSI0TE-0+0@0	po:verb ts:indicative_present st:ŧejar st:sejar
 séjoe/a0a1a2I1-0+0@0	po:verb ts:indicative_present is:interrogative st:ŧejar st:sejar
 ŧeɉar/a0a1P0P1+0r5	po:verb ts:infinitive_simple
@@ -33775,8 +33775,8 @@ infermiŧo/M0FSTE	po:adjective
 infiaxonsèla/F0TE	po:noun is:singular_femenine
 ingrato/A1FS	po:adjective
 injerenŧa/F0TE	po:noun is:singular_femenine
-inɉerenŧa/F0TE	po:noun is:singular_femenine
 injòstro/M0	po:noun is:singular_masculine
+inɉerenŧa/F0TE	po:noun is:singular_femenine
 inɉòstro/M0	po:noun is:singular_masculine
 inkonbenŧa/F0TE	po:noun is:singular_femenine
 inkòñito/A1FS	po:adjective
@@ -42592,7 +42592,6 @@ inpar/M0	po:noun is:singular_masculine
 inposta/F0	po:noun is:singular_femenine
 inpòsta/F0	po:noun is:singular_femenine
 intardeganŧa/F0TE	po:noun is:singular_femenine
-intardiganŧa/F0TE	po:noun is:singular_femenine
 intopo/M0	po:noun is:singular_masculine
 intrego/A1FSW0	po:adjective
 jagà/TB	po:noun is:femenine
@@ -43534,6 +43533,7 @@ tantunkue	po:noun is:singular_masculine
 tantúnden	po:noun is:singular_masculine
 tarañòla/F0TE	po:noun is:singular_femenine
 tarda/F0&0	po:adjective
+tardiganŧa/F0TE+0	po:noun is:singular_femenine
 tardo/M0W0&0	po:adjective
 tardoxa	po:adverb
 tardo	po:adverb
@@ -46408,7 +46408,6 @@ joson/F0TBU0(4mf	po:noun is:singular_masculine
 joŧo/M0FS&0mf	po:noun is:singular_masculine
 joŧon/F0TBU0(4mf	po:noun is:singular_masculine
 jòko/M0FSTB	po:noun is:singular_masculine
-jòstro/M0TB+0	po:noun is:singular_masculine
 jòstro/M0TB	po:noun is:singular_masculine
 jus/TB	po:noun is:masculine
 justa/F0TB	po:adjective
@@ -50903,7 +50902,6 @@ tapeeto/M0FSmf	po:noun is:singular_masculine
 tapo/M0FS&0	po:noun is:singular_masculine
 taramòto/M0FS	po:noun is:singular_masculine
 tarapatà	po:interjection
-tardiganŧa/F0TE	po:noun is:singular_femenine
 tardoxo/A1W0FSmf	po:adjective
 targa/F0	po:noun is:singular_femenine
 tarifa/F0	po:noun is:singular_femenine
@@ -54322,6 +54320,37 @@ inbrenada/F0Y0Y1	po:noun is:singular_femenine
 inbriagada/F0Y0Y1	po:noun is:singular_femenine
 inbrokada/F0Y0Y1	po:noun is:singular_femenine
 inbroxado/M0FSY0	po:noun is:singular_masculine
+indafarado/M0FSY0	po:noun is:singular_masculine
+indolentrado/M0FSY0	po:noun is:singular_masculine
+indormensada/F0Y0Y1	po:noun is:singular_femenine
+indormenŧada/F0Y0Y1	po:noun is:singular_femenine
+indurido/M0Y0	po:noun is:singular_masculine
+infangada/F0Y0Y1	po:noun is:singular_femenine
+infasada/F0Y0Y1	po:noun is:singular_femenine
+infenocada/F0Y0Y1	po:noun is:singular_femenine
+informigada/F0Y0	po:noun is:singular_femenine
+informigado/M0FSY0	po:noun is:singular_masculine
+infuriada/F0Y0	po:noun is:singular_femenine
+ingalado/M0FSY0	po:noun is:singular_masculine
+ingalbanada/F0Y0	po:noun is:singular_femenine
+ingalbanado/M0FSY0	po:noun is:singular_masculine
+ingaƚado/M0Y0	po:noun is:singular_masculine
+ingarbelada/F0Y0	po:noun is:singular_femenine
+ingarbelado/M0FSY0	po:noun is:singular_masculine
+ingarbeƚada/F0Y0	po:noun is:singular_femenine
+ingarbeƚado/M0Y0	po:noun is:singular_masculine
+ingarbujada/F0Y0Y1	po:noun is:singular_femenine
+ingarbuɉada/F0Y0Y1	po:noun is:singular_femenine
+ingranado/M0FSY0	po:noun is:singular_masculine
+ingrasada/F0Y0Y1	po:noun is:singular_femenine
+ingropada/F0Y0	po:noun is:singular_femenine
+ingropado/M0FSY0	po:noun is:singular_masculine
+ingrotida/F0Y0	po:noun is:singular_femenine
+ingrotido/M0Y0	po:noun is:singular_masculine
+injarada/F0Y0Y1	po:noun is:singular_femenine
+injotida/F0Y0	po:noun is:singular_femenine
+inɉarada/F0Y0Y1	po:noun is:singular_femenine
+inɉotida/F0Y0	po:noun is:singular_femenine
 inkalmada/F0Y0Y1	po:noun is:singular_femenine
 inkantada/F0Y0Y1	po:noun is:singular_femenine
 inkantonada/F0Y0	po:noun is:singular_femenine
@@ -54333,6 +54362,14 @@ inkartosada/F0Y0	po:noun is:singular_femenine
 inkartosado/M0FSY0	po:noun is:singular_masculine
 inkartoŧada/F0Y0	po:noun is:singular_femenine
 inkartoŧado/M0FSY0	po:noun is:singular_masculine
+inkaucado/M0FSY0	po:noun is:singular_masculine
+inkolada/F0Y0Y1	po:noun is:singular_femenine
+inkoƚada/F0Y0Y1	po:noun is:singular_femenine
+inkomodado/M0FSY0	po:noun is:singular_masculine
+inkrostolido/M0Y0	po:noun is:singular_masculine
+inkrostoƚido/M0Y0	po:noun is:singular_masculine
+inkroxada/F0Y0Y1	po:noun is:singular_femenine
+inkurvada/F0Y0Y1	po:noun is:singular_femenine
 inmatonida/F0Y0	po:noun is:singular_femenine
 inmusada/F0Y0Y1	po:noun is:singular_femenine
 inpacugada/F0Y0Y1	po:noun is:singular_femenine
@@ -54348,6 +54385,35 @@ inpoltronido/M0Y0	po:noun is:singular_masculine
 inpontido/M0Y0	po:noun is:singular_masculine
 inpotacada/F0Y0Y1	po:noun is:singular_femenine
 inprovixada/F0Y0Y1	po:noun is:singular_femenine
+insakolada/F0Y0Y1	po:noun is:singular_femenine
+insakoƚada/F0Y0Y1	po:noun is:singular_femenine
+insanpado/M0Y0	po:noun is:singular_masculine
+insemenida/F0Y0	po:noun is:singular_femenine
+insemenido/M0Y0	po:noun is:singular_masculine
+insinganada/F0Y0Y1	po:noun is:singular_femenine
+insolfarado/M0FSY0	po:noun is:singular_masculine
+insolidado/M0FSY0	po:noun is:singular_masculine
+insoƚidado/M0Y0	po:noun is:singular_masculine
+insonada/F0Y0	po:noun is:singular_femenine
+insonado/M0FSY0	po:noun is:singular_masculine
+insonolida/F0Y0	po:noun is:singular_femenine
+insonolido/M0Y0	po:noun is:singular_masculine
+insonoƚida/F0Y0	po:noun is:singular_femenine
+insonoƚido/M0Y0	po:noun is:singular_masculine
+insosolada/F0Y0	po:noun is:singular_femenine
+insosolado/M0Y0	po:noun is:singular_masculine
+insosoƚada/F0Y0	po:noun is:singular_femenine
+insosoƚado/M0Y0	po:noun is:singular_masculine
+insoŧolada/F0Y0	po:noun is:singular_femenine
+insoŧolado/M0Y0	po:noun is:singular_masculine
+intanada/F0Y0	po:noun is:singular_femenine
+intanado/M0Y0	po:noun is:singular_masculine
+intemerada/F0Y0Y1	po:noun is:singular_femenine
+intestada/F0Y0	po:noun is:singular_femenine
+intestado/M0Y0	po:noun is:singular_masculine
+intokada/F0Y0Y1	po:noun is:singular_femenine
+intopada/F0Y0Y1	po:noun is:singular_femenine
+inŧanpado/M0Y0	po:noun is:singular_masculine
 jasada/F0Y0Y1TB	po:noun is:singular_femenine
 jèndena/F0TB	po:noun is:singular_femenine
 jènio/M0TB	po:noun is:singular_masculine
@@ -54412,52 +54478,11 @@ laxañon/A2U0mf	po:noun is:singular
 ƚaxañon/A2mf	po:noun is:singular
 manko/M0FS@0	po:noun is:singular_masculine
 sète	po:interjection
+tovajado/M0Y0+0	po:noun is:singular_masculine
+tovaɉado/M0Y0+0	po:noun is:singular_masculine
 xustada/F0Y0Y1	po:noun is:singular_femenine
-inkaucado/M0FSY0	po:noun is:singular_masculine
-inkolada/F0Y0Y1	po:noun is:singular_femenine
-inkoƚada/F0Y0Y1	po:noun is:singular_femenine
-inkomodado/M0FSY0	po:noun is:singular_masculine
-inkroxada/F0Y0Y1	po:noun is:singular_femenine
-inkrostolido/M0Y0	po:noun is:singular_masculine
-inkrostoƚido/M0Y0	po:noun is:singular_masculine
-inkurvada/F0Y0Y1	po:noun is:singular_femenine
-indafarado/M0FSY0	po:noun is:singular_masculine
-indolentrado/M0FSY0	po:noun is:singular_masculine
-indormenŧada/F0Y0Y1	po:noun is:singular_femenine
-indormensada/F0Y0Y1	po:noun is:singular_femenine
-indurido/M0Y0	po:noun is:singular_masculine
-infangada/F0Y0Y1	po:noun is:singular_femenine
-infasada/F0Y0Y1	po:noun is:singular_femenine
-infenocada/F0Y0Y1	po:noun is:singular_femenine
-informigada/F0Y0	po:noun is:singular_femenine
-informigado/M0FSY0	po:noun is:singular_masculine
-infuriada/F0Y0	po:noun is:singular_femenine
-ingalado/M0FSY0	po:noun is:singular_masculine
-ingaƚado/M0Y0	po:noun is:singular_masculine
-ingalbanada/F0Y0	po:noun is:singular_femenine
-ingalbanado/M0FSY0	po:noun is:singular_masculine
-ingarbelada/F0Y0	po:noun is:singular_femenine
-ingarbelado/M0FSY0	po:noun is:singular_masculine
-ingarbeƚada/F0Y0	po:noun is:singular_femenine
-ingarbeƚado/M0Y0	po:noun is:singular_masculine
-ingarbujada/F0Y0Y1	po:noun is:singular_femenine
-ingarbuɉada/F0Y0Y1	po:noun is:singular_femenine
-injarada/F0Y0Y1	po:noun is:singular_femenine
-inɉarada/F0Y0Y1	po:noun is:singular_femenine
-injotida/F0Y0	po:noun is:singular_femenine
-inɉotida/F0Y0	po:noun is:singular_femenine
-ingranado/M0FSY0	po:noun is:singular_masculine
-ingrasada/F0Y0Y1	po:noun is:singular_femenine
-ingropada/F0Y0	po:noun is:singular_femenine
-ingropado/M0FSY0	po:noun is:singular_masculine
-ingrotida/F0Y0	po:noun is:singular_femenine
-ingrotido/M0Y0	po:noun is:singular_masculine
-insakolada/F0Y0Y1	po:noun is:singular_femenine
-insakoƚada/F0Y0Y1	po:noun is:singular_femenine
-inŧanpado/M0Y0	po:noun is:singular_masculine
-insanpado/M0Y0	po:noun is:singular_masculine
 
 
-/ 93
+/ 94
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
