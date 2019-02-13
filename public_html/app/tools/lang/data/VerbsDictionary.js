@@ -1259,6 +1259,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "đur",			"sper",		1,	1,	"a",	"1415",			"",
 "đur",			"spre",		1,	1,	"a",	"1829",			"",
 "đur",			"stra",		1,	1,	"a",	"1867",			"",
+"đust",			"",			1,	1,	"a",	"1829",			"",
 
 "ebraiđ",		"",			1,	4,	"a",	"1810",			"",
 "ebet",			"in",			4,	4,	"a",	"1896",			"",
@@ -7560,6 +7561,5 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "xugul",			"",			1,	1,	"a",	"1829",			"Méter a le strete.",
 "xult",			"e",			1,	1,	"a",	"",				"",
 "xult",			"re",			1,	1,	"a",	"1867",			"",
-"xust",			"",			1,	1,	"a",	"1829",			"",
 "xustiŧi",		"",			1,	4,	"a",	"1509",			""
 ]});
