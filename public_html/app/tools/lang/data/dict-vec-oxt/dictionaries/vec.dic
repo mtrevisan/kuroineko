@@ -10660,7 +10660,7 @@ skuxar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 skuxo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:skuxar
 skúxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:skuxar
 kúxer/b0b1b2P0P1P2-1*0.0	po:verb ts:infinitive_simple
-kuxerò/b0b1b2I0-1*0.0	po:verb ts:indicative_future st:kúxer
+kuxerò/b0b1b2I0-1*0.0r5	po:verb ts:indicative_future st:kúxer
 kuxo/a0a1a2P0P1P2FSI0-1*0.0	po:verb ts:indicative_present st:kúxer
 kúxoe/a0a1a2I1-1*0.0	po:verb ts:indicative_present is:interrogative st:kúxer
 kúxar/b0b1b2P0P1P2-1*0.0	po:verb ts:infinitive_simple
@@ -32894,7 +32894,7 @@ bugarola/F0V0	po:noun is:singular_femenine
 bugaroƚa/F0V1	po:noun is:singular_femenine
 bugaroƚo/M0V1mf	po:noun is:singular_masculine
 bukolon/F0TEU0mf	po:noun is:singular_masculine
-bul/M0U0q0q1&0&2(0	po:noun is:singular_masculine
+bul/M0U0q0q1&0&2(0.0	po:noun is:singular_masculine
 bula/F0TE	po:noun is:singular_femenine
 bulegin/A2	po:noun is:singular_masculine
 buleŧo/M0FSTEmf	po:adjective is:singular_masculine
@@ -32902,7 +32902,7 @@ buleŧo/M0FSTEmf	po:noun is:singular_masculine
 buƚegin/A2	po:noun is:singular_masculine
 buƚeso/A1mf	po:adjective is:singular_masculine
 buƚeso/A1mf	po:noun is:singular_masculine
-buƚo/M0&1&3(1	po:noun is:singular_masculine
+buƚo/M0q1&1&3(1.0	po:noun is:singular_masculine
 buña/F0(2	po:noun is:singular_femenine
 burana/F0	po:noun is:singular_femenine
 buratin/A2	po:noun is:singular_masculine
@@ -54079,6 +54079,7 @@ frakada/F0Y0Y1	po:noun is:singular_femenine
 fraskada/F0Y0Y1	po:noun is:singular_femenine
 fruñada/F0Y0Y1	po:noun is:singular_femenine
 fuada/F0Y0Y1	po:noun is:singular_femenine
+fumada/F0Y0	po:noun is:singular_femenine
 fumado/M0FSY0	po:noun is:singular_masculine
 furegada/F0Y0Y1	po:noun is:singular_femenine
 fuxilada/F0Y0Y1	po:noun is:singular_femenine
@@ -54245,7 +54246,7 @@ karixada/F0Y0Y1	po:noun is:singular_femenine
 karolada/F0Y0Y1	po:noun is:singular_femenine
 karoƚada/F0Y0Y1	po:noun is:singular_femenine
 kasada/F0Y0Y1	po:noun is:singular_femenine
-kaskada/F0Y0Y1	po:noun is:singular_femenine
+kaskada/F0Y0Y1.0	po:noun is:singular_femenine
 kaŧada/F0Y0Y1	po:noun is:singular_femenine
 kavada/F0Y0Y1	po:noun is:singular_femenine
 kavalada/F0Y0Y1	po:noun is:singular_femenine
@@ -54387,7 +54388,7 @@ mokada/F0Y0Y1	po:noun is:singular_femenine
 molifegada/F0Y0Y1	po:noun is:singular_femenine
 moltonada/F0Y0Y1	po:noun is:singular_femenine
 moƚifegada/F0Y0Y1	po:noun is:singular_femenine
-montada/F0Y0Y1	po:noun is:singular_femenine
+montada/F0Y0Y1.0	po:noun is:singular_femenine
 morsegada/F0Y0Y1	po:noun is:singular_femenine
 mufida/F0Y0	po:adjective is:singular_femenine
 mufido/M0Y0	po:adjective is:singular_masculine
@@ -54421,7 +54422,7 @@ oxelada/F0Y0Y1	po:noun is:singular_femenine
 oxeƚada/F0Y0Y1	po:noun is:singular_femenine
 pacada/F0Y0Y1	po:noun is:singular_femenine
 pacugada/F0Y0Y1	po:noun is:singular_femenine
-pasada/F0Y0Y1	po:noun is:singular_femenine
+pasada/F0Y0Y1.0	po:noun is:singular_femenine
 pastròca/F0	po:noun is:singular_femenine
 pasuda/F0Y0	po:adjective is:singular_femenine
 pasudo/M0Y0	po:adjective is:singular_masculine
@@ -54483,7 +54484,6 @@ putelada/F0Y0Y1	po:noun is:singular_femenine
 puteƚada/F0Y0Y1	po:noun is:singular_femenine
 rabiada/F0Y0	po:noun is:singular_femenine
 rabiado/M0Y0	po:noun is:singular_masculine
-rabufada/F0Y0Y1	po:noun is:singular_femenine
 rajada/F0Y0Y1	po:noun is:singular_femenine
 raɉada/F0Y0Y1	po:noun is:singular_femenine
 ramada/F0Y0Y1	po:noun is:singular_femenine
@@ -54494,7 +54494,7 @@ rànsia/F0	po:adjective is:singular_femenine
 rànsida/F0	po:adjective is:singular_femenine
 rànŧia/F0	po:adjective is:singular_femenine
 rànŧida/F0	po:adjective is:singular_femenine
-rebalton/F0U0vŧmf	po:noun is:singular
+rebalton/F0U0vŧmf	po:noun is:singular_masculine
 rebalto	po:adverb
 sète	po:interjection
 spiritada/F0Y0	po:noun is:singular_femenine
@@ -54503,8 +54503,27 @@ stadèra/F0V0	po:noun is:singular_femenine
 tovajado/M0Y0+0	po:noun is:singular_masculine
 tovaɉado/M0Y0+0	po:noun is:singular_masculine
 voxada/F0Y0Y1‘0	po:noun is:singular_femenine
+bekada/F0Y0.0	po:noun is:singular_femenine
+bekado/M0Y0.0	po:noun is:singular_masculine
+revédol/M0U1TEmf	po:noun is:singular_masculine
+rebokada/F0Y0Y1	po:noun is:singular_femenine
+bojida/F0Y0.0	po:adjective is:singular_femenine
+bojido/M0Y0.0	po:adjective is:singular_masculine
+boɉida/F0Y0.0	po:adjective is:singular_femenine
+boɉido/M0Y0.0	po:adjective is:singular_masculine
+bufada/F0Y0Y1.0	po:adjective is:singular_femenine
+refada/F0Y0Y1	po:adjective is:singular_femenine
+filada/F0Y0Y1.0	po:adjective is:singular_femenine
+fiƚada/F0Y0Y1.0	po:adjective is:singular_femenine
+folada/F0Y0Y1.0	po:adjective is:singular_femenine
+foƚada/F0Y0Y1.0	po:adjective is:singular_femenine
+refosada/F0Y0Y1	po:adjective is:singular_femenine
+remada/F0Y0Y1	po:adjective is:singular_femenine
+menada/F0Y0.0	po:adjective is:singular_femenine
+menado/M0Y0.0	po:noun is:singular_masculine
+rexentada/F0Y0Y1	po:adjective is:singular_femenine
 
 
-/ 126
+/ 128
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
