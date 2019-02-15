@@ -1239,6 +1239,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "đov",			"",			1,	1,	"g",	"1980",			"(bixiak)",
 "đoven",			"rin",		1,	1,	"a",	"1867",			"",
 "đoven",			"re",			4,	5,	"a",	"1829",			"",
+"đoven",			"ren",		4,	5,	"a",	"1876",			"",
 "đoven",			"rin",		4,	5,	"a",	"1829",			"",
 "đudeg",			"",			1,	1,	"a",	"",				"",
 "đudeg",			"pre",		1,	1,	"a",	"",				"",
