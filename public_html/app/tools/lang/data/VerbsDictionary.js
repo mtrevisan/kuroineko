@@ -5842,7 +5842,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "skiv",			"",			1,	2,	"a",	"1775",			"",
 "sko",			"",			1,	2,	"a",	"1519",			"",
 "sko",			"de",			1,	2,	"a",	"1829",			"Frustrar.",
-"skoet",			"",			1,	3,	"a",	"1854",			"",
+"skolet",		"",			1,	3,	"a",	"1854",			"",
 "skoin",			"",			1,	3,	"a",	"1775",			"Spingar, guiŧar ko le ganbe o ko i piè.",
 "skolp",			"",			4,	5,	"a",	"1412",			"",
 "skolt",			"",			1,	2,	"a",	"1560",			"",
