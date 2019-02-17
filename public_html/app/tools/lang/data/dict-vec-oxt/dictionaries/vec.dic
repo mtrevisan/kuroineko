@@ -656,12 +656,6 @@ aséntoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:asentar
 aŧentar/a0a1P0P1	po:verb ts:infinitive_simple
 aŧento/a0a1P0P1FSI0	po:verb ts:indicative_present st:aŧentar
 aŧéntoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:aŧentar
-asertar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-asèrto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:asertar
-asèrtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:asertar
-aŧertar/a0a1P0P1	po:verb ts:infinitive_simple
-aŧèrto/a0a1P0P1FSI0	po:verb ts:indicative_present st:aŧertar
-aŧèrtoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:aŧertar
 asidar/a0a1a2P0P1P2+0	po:verb ts:infinitive_simple
 àsido/a0a1a2P0P1P2FSI0+0	po:verb ts:indicative_present st:asidar
 àsidoe/a0a1a2I1+0	po:verb ts:indicative_present is:interrogative st:asidar
@@ -4921,6 +4915,9 @@ fasinar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 fasino/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:fasinar
 fasínoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:fasinar
 infastidir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
+sfatar/a0a1a2P0P1P2-0	po:verb ts:infinitive_simple
+sfato/a0a1a2P0P1P2FSI0-0	po:verb ts:indicative_present st:sfatar
+sfàtoe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:sfatar
 infatir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 fastidiar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 fastidio/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:fastidiar
@@ -22940,11 +22937,12 @@ sarpir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 inserpidir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 inŧerpidir/a0a1d0d1P0P1	po:verb ts:infinitive_simple
 insarpidir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
-ŧertar/a0a1P0P1	po:verb ts:infinitive_simple
-sertar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-ŧèrto/a0a1P0P1FSI0	po:verb ts:indicative_present st:ŧertar
-sèrto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:ŧertar
-ŧèrtoe/a0a1I1TB	po:verb ts:indicative_present is:interrogative st:ŧertar
+ŧertar/a0a1P0P1@0	po:verb ts:infinitive_simple
+ŧèrto/a0a1P0P1FSI0@0	po:verb ts:indicative_present st:ŧertar
+ŧèrtoe/a0a1I1@0	po:verb ts:indicative_present is:interrogative st:ŧertar
+sertar/a0a1a2P0P1P2@0	po:verb ts:infinitive_simple
+sèrto/a0a1a2P0P1P2FSI0@0	po:verb ts:indicative_present st:sertar
+sèrtoe/a0a1a2I1@0	po:verb ts:indicative_present is:interrogative st:sertar
 sartar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 sarto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:sartar
 sàrtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:sartar
@@ -41395,6 +41393,8 @@ desavío/A1	po:adjective is:singular_masculine
 deskonío/A1	po:adjective is:singular_masculine
 dexdita/F0	po:noun is:singular_femenine
 đarman/A2TB	po:noun is:singular_masculine
+fadegon/A2U0*0mf	po:adjective is:singular_masculine
+fadegon/A2U0*0mf	po:noun is:singular_masculine
 fanferon/A2U0mf	po:noun is:singular_masculine
 fanoxo/A1FSmf	po:noun is:singular_masculine
 fanoxo/A1FSW0mf	po:adjective is:singular_masculine
@@ -41480,7 +41480,6 @@ seneraso/M0FS	po:noun is:singular_masculine
 sensaƚa/F0&1	po:noun is:singular_femenine
 senxaƚièra/F0	po:noun is:singular_femenine
 seraval/F0TFU0	po:noun is:singular_masculine
-sfadegon/A2U0mf	po:adjective is:singular_masculine
 sisinin/A2	po:adjective is:singular_masculine
 sisinin/A2	po:pronoun
 sisinin	po:adverb
@@ -45535,6 +45534,7 @@ filatogèra/F0V0	po:noun is:singular_femenine
 filatòjo/M0FSTE	po:noun is:singular_masculine
 filièra/F0	po:noun is:singular_femenine
 filoxa/F0*0	po:adjective is:singular_femenine
+filoxo/M0FS*0mf	po:noun is:singular_masculine
 filoxo/M0FSW0*0mf	po:adjective is:singular_masculine
 filoxon/A2U0mf	po:noun is:singular_masculine
 filsòƚo/M0	po:noun is:singular_masculine
@@ -45549,6 +45549,7 @@ fiƚatogèra/F0V1	po:noun is:singular_femenine
 fiƚatòjo/M0Te	po:noun is:singular_masculine
 fiƚièra/F0	po:noun is:singular_femenine
 fiƚoxa/F0*0	po:adjective is:singular_femenine
+fiƚoxo/M0*0(3mf	po:noun is:singular_masculine
 fiƚoxo/M0W1*0(3mf	po:adjective is:singular_masculine
 fiƚoxon/A2mf	po:noun is:singular_masculine
 finoxomía/F0v1	po:noun is:singular_femenine
@@ -45607,7 +45608,7 @@ flòta/F0	po:noun is:singular_femenine
 flusion/F0U0mf	po:noun is:singular_femenine
 fluvio/M0	po:noun is:singular_masculine
 fodro/M0&0	po:noun is:singular_masculine
-fogada/F0Y0Y1	po:noun is:singular_femenine
+fogada/F0Y0Y1*0	po:noun is:singular_femenine
 fogoxitada/F0Y0Y1	po:noun is:singular_femenine
 fojoxo/A1FSmf	po:noun is:singular_masculine
 fojoxo/A1FSW0mf	po:adjective is:singular_masculine
@@ -52235,8 +52236,8 @@ sekàjin/F0	po:noun is:singular_femenine
 sekàɉin/F0	po:noun is:singular_femenine
 seƚegeto/M0mf	po:noun is:singular_masculine
 semena/F0	po:noun is:singular_femenine
-serarola/F0V0	po:noun is:singular_femenine
 serarol/M0U0V0mf	po:noun is:singular_masculine
+serarola/F0V0	po:noun is:singular_femenine
 seraroƚa/F0V1	po:noun is:singular_femenine
 seraroƚo/M0V1mf	po:noun is:singular_masculine
 serpiƚo/M0M1	po:noun is:singular_masculine
@@ -53532,6 +53533,7 @@ sèra–ponto/M0mf	po:noun is:singular_masculine
 sfalto/M0	po:noun is:singular_masculine
 sfrakaso/M0FS	po:noun is:singular_masculine
 sfrasèl/M0TEU0	po:noun is:singular_masculine
+sfrasèla/F0TE	po:noun is:singular_femenine
 sfroxon	po:adverb
 sfròxo/FS	po:adverb
 sierpeta/F0	po:noun is:singular_femenine
@@ -54057,7 +54059,7 @@ driŧaño/A1	po:noun is:singular_masculine
 elsara/F0	po:noun is:singular_femenine
 erbetarava/F0	po:noun is:singular_femenine
 erbeterave/F0	po:noun is:plural_femenine
-fakinada/F0Y0Y1	po:noun is:singular_femenine
+fakinada/F0Y0Y1*0	po:noun is:singular_femenine
 falsada/F0Y0Y1	po:noun is:singular_femenine
 fanfarada/F0Y0Y1	po:noun is:singular_femenine
 fanfaronada/F0Y0Y1	po:noun is:singular_femenine
@@ -54569,8 +54571,26 @@ scapinada/F0Y0Y1	po:noun is:singular_femenine
 scokada/F0Y0Y1	po:noun is:singular_femenine
 scopada/F0Y0Y1	po:noun is:singular_femenine
 sekada/F0Y0Y1	po:noun is:singular_femenine
+semada/F0Y0Y1	po:noun is:singular_femenine
+semenada/F0Y0Y1	po:noun is:singular_femenine
+senpiada/F0Y0Y1	po:noun is:singular_femenine
 señato/M0FS	po:noun is:singular_masculine
+serberào/M0	po:noun is:singular_masculine
+serpilio/M0TE	po:noun is:singular_masculine
+sexaròto/M0FS	po:noun is:singular_masculine
+sémena/F0	po:noun is:singular_femenine
 sète	po:interjection
+sfadegada/F0Y0Y1	po:noun is:singular_femenine
+sfadigada/F0Y0Y1	po:noun is:singular_femenine
+sfibrada/F0Y0Y1	po:noun is:singular_femenine
+sfiorida/F0Y0	po:noun is:singular_femenine
+sfojada/F0Y0Y1	po:noun is:singular_femenine
+sfoɉada/F0Y0Y1	po:noun is:singular_femenine
+sfrakasada/F0Y0Y1	po:noun is:singular_femenine
+sfrantumada/F0Y0Y1	po:noun is:singular_femenine
+sfregolada/F0Y0Y1	po:noun is:singular_femenine
+sfregoƚada/F0Y0Y1	po:noun is:singular_femenine
+sfrixada/F0Y0Y1	po:noun is:singular_femenine
 skakida/F0Y0	po:noun is:singular_femenine
 skakido/M0Y0	po:noun is:singular_masculine
 skaldada/F0Y0Y1	po:noun is:singular_femenine
@@ -54610,6 +54630,10 @@ tovaɉado/M0Y0+0	po:noun is:singular_masculine
 ŧapada/F0Y0Y1TB	po:noun is:singular_femenine
 ŧarlatanada/F0Y0Y1TB	po:noun is:singular_femenine
 ŧavatada/F0Y0Y1TB	po:noun is:singular_femenine
+ŧenada/F0Y0Y1TB	po:noun is:singular_femenine
+ŧentosate/TB	po:noun is:singular_masculine
+ŧernida/F0Y0TB	po:noun is:singular_femenine
+ŧestada/F0Y0Y1TB	po:noun is:singular_femenine
 voxada/F0Y0Y1‘0	po:noun is:singular_femenine
 xbadajada/F0Y0Y1	po:noun is:singular_femenine
 xbadaɉada/F0Y0Y1	po:noun is:singular_femenine
@@ -54655,15 +54679,15 @@ xbroɉada/F0Y0Y1	po:noun is:singular_femenine
 xbrokada/F0Y0Y1	po:noun is:singular_femenine
 xbrufada/F0Y0Y1	po:noun is:singular_femenine
 xbufonada/F0Y0Y1	po:noun is:singular_femenine
-semada/F0Y0Y1	po:noun is:singular_femenine
-sémena/F0	po:noun is:singular_femenine
-semenada/F0Y0Y1	po:noun is:singular_femenine
-senpiada/F0Y0Y1	po:noun is:singular_femenine
-ŧenada/F0Y0Y1TB	po:noun is:singular_femenine
-ŧentosate/TB	po:noun is:singular_masculine
-serberào/M0	po:noun is:singular_masculine
+xganasada/F0Y0Y1	po:noun is:singular_femenine
+xganbada/F0Y0Y1	po:noun is:singular_femenine
+xganbetada/F0Y0Y1	po:noun is:singular_femenine
+xgarbelada/F0Y0	po:noun is:singular_femenine
+xgarbelado/M0FSY0	po:noun is:singular_masculine
+xgarlada/F0Y0	po:noun is:singular_femenine
+xgarlado/M0FSY0	po:noun is:singular_masculine
 
 
-/ 140
+/ 142
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ

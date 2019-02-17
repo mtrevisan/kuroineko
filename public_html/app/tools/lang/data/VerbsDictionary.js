@@ -1427,6 +1427,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fastid",		"in",			4,	6,	"a",	"1980",			"",
 "fastidi",		"",			1,	4,	"a",	"1896",			"",
 "fat",			"des",		1,	1,	"g",	"1472",			"",
+"fat",			"s",			1,	1,	"g",	"1876",			"",
 "fat",			"in",			4,	3,	"a",	"1855",			"Inmarŧir.",
 "fataliđ",		"",			1,	5,	"a",	"1867",			"Rénder dexgraŧià.",
 "fatu",			"",			1,	1,	"g",	"",				"",
