@@ -5686,6 +5686,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "seraj",			"in",			1,	3,	"g",	"1560",			"Serar sú entel serajo.",
 "seraɉ",			"",			1,	3,	"g",	"1775",			"",
 "serb",			"",			1,	1,	"g",	"",				"",
+"seren",			"",			1,	3,	"a",	"1876",			"",
 "serk",			"",			1,	1,	"a",	"",				"",
 "serv",			"",			5,	1,	"g",	"1590",			"",
 "serv",			"a",			5,	1,	"g",	"",				"",
