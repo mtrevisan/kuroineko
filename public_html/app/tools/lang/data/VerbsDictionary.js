@@ -4883,6 +4883,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "piŧol",			"",			1,	1,	"a",	"1810",			"Xɉoŧar.",
 "piŧol",			"a",			1,	1,	"a",	"1852",			"(da ʼl gr. picilos, vario)",
 "piŧol",			"in",			1,	1,	"a",	"1852",			"",
+"piŧol",			"s",			1,	1,	"a",	"1876",			"Spicar.",
 "pixok",			"",			1,	3,	"g",	"1775",			"Pixolar.",
 "pixol",			"",			1,	1,	"a",	"1810",			"",
 "pixol",			"in",			5,	5,	"a",	"1852",			"",

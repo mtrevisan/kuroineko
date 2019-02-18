@@ -16069,9 +16069,9 @@ pisegòtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:pisegotar
 piŧegotar/a0a1P0P1	po:verb ts:infinitive_simple
 piŧegòto/a0a1P0P1FSI0	po:verb ts:indicative_present st:piŧegotar
 piŧegòtoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:piŧegotar
-piŧolar/a0a1P0P1@0W0	po:verb ts:infinitive_simple
-píŧolo/a0a1P0P1FSI0@0	po:verb ts:indicative_present st:piŧolar
-píŧoloe/a0a1I1@0	po:verb ts:indicative_present is:interrogative st:piŧolar
+piŧolar/a0a1P0P1*0@0W0	po:verb ts:infinitive_simple
+píŧolo/a0a1P0P1FSI0*0@0	po:verb ts:indicative_present st:piŧolar
+píŧoloe/a0a1I1*0@0	po:verb ts:indicative_present is:interrogative st:piŧolar
 pixokar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 pixòko/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:pixokar
 pixòkoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:pixokar
@@ -38345,8 +38345,10 @@ spavíxego/A1FS	po:adjective is:singular_masculine
 speditamente/FSW2	po:adverb
 spico/M0FS	po:noun is:singular_masculine
 spigolon/F0TEU0mf	po:noun is:singular_masculine
-spua–sentenŧa/F0TE	po:noun is:singular
-spuasentenŧa/F0TE	po:noun is:singular
+spua–sentense	po:noun is:singular
+spua–sentenŧe	po:noun is:singular
+spuasentense	po:noun is:singular
+spuasentenŧe	po:noun is:singular
 stalfin/M0	po:adjective is:singular_masculine
 stante/M0FS+0	po:noun is:singular_masculine
 stañin/A2	po:noun is:singular_masculine
@@ -50420,8 +50422,10 @@ spuledon/A2U0mf	po:adjective is:singular_masculine
 spuleđèra/F0	po:noun is:singular_femenine
 spuleđon/A2U0mf	po:adjective is:singular_masculine
 spulexèr/M0V0	po:noun is:singular_masculine
+spulexèra/F0	po:noun is:singular_femenine
 spulexon/A2U0mf	po:adjective is:singular_masculine
 spuƚexèr/M0V1	po:noun is:singular_masculine
+spuƚexèra/F0	po:noun is:singular_femenine
 spuƚexon/A2mf	po:adjective is:singular_masculine
 spuo/M0&0	po:noun is:singular_masculine
 spurgo/M0	po:noun is:singular_masculine
@@ -54215,6 +54219,7 @@ iskarpiado/M0FSY0	po:noun is:singular_masculine
 iskaturido/M0Y0	po:noun is:singular_masculine
 iskenada/F0Y0	po:noun is:singular_femenine
 iskenado/M0FSY0	po:noun is:singular_masculine
+ispeada/F0Y0Y1	po:noun is:singular_femenine
 jasada/F0Y0Y1TB	po:noun is:singular_femenine
 jèndena/F0TB	po:noun is:singular_femenine
 jènio/M0TB	po:noun is:singular_masculine
@@ -54454,7 +54459,7 @@ poltronida/F0Y0	po:adjective is:singular_femenine
 poltronido/M0Y0	po:adjective is:singular_masculine
 polverada/F0Y0	po:noun is:singular_femenine
 polverado/M0FSY0	po:noun is:singular_masculine
-pontada/F0Y0Y1	po:noun is:singular_femenine
+pontada/F0Y0Y1*0	po:noun is:singular_femenine
 pontexèl/M0U0TE	po:noun is:singular_masculine
 postisipada/F0Y0Y1	po:noun is:singular_femenine
 postiŧipada/F0Y0Y1	po:noun is:singular_femenine
@@ -54627,8 +54632,46 @@ sonada/F0Y0+0	po:noun is:singular_femenine
 sopresada/F0Y0Y1	po:noun is:singular_femenine
 sorada/F0Y0Y1	po:noun is:singular_femenine
 sólfara/F0	po:noun is:singular_femenine
+spakada/F0Y0Y1	po:noun is:singular_femenine
+spalada/F0Y0Y1	po:noun is:singular_femenine
+spalar/M0	po:noun is:singular_masculine
+spaƚada/F0Y0Y1	po:noun is:singular_femenine
+spaƚar/M0	po:noun is:singular_masculine
+spanpanada/F0Y0Y1	po:noun is:singular_femenine
+spansada/F0Y0Y1	po:noun is:singular_femenine
+spanŧada/F0Y0Y1	po:noun is:singular_femenine
+sparnacada/F0Y0	po:adjective is:singular_femenine
+sparnacado/M0FSY0	po:adjective is:singular_masculine
+spaseto/M0FSmf	po:noun is:singular_masculine
+spasidada/F0Y0Y1	po:noun is:singular_femenine
+spasiđada/F0Y0Y1	po:noun is:singular_femenine
+spasixada/F0Y0Y1	po:noun is:singular_femenine
+spaŧeto/M0FSmf	po:noun is:singular_masculine
+spaventada/F0Y0Y1	po:noun is:singular_femenine
+speada/F0Y0Y1	po:noun is:singular_femenine
+spendacon/A2U0mf	po:noun is:singular_masculine
+spentonada/F0Y0Y1	po:noun is:singular_femenine
+speronada/F0Y0Y1	po:noun is:singular_femenine
+spesegada/F0Y0Y1	po:noun is:singular_femenine
+spetorada/F0Y0	po:adjective is:singular_femenine
+spetorado/M0FSY0	po:adjective is:singular_masculine
+spiantada/F0Y0	po:adjective is:singular_femenine
+spiantado/M0FSY0	po:adjective is:singular_masculine
+spiantan/M0U0	po:noun is:singular_masculine
+spinada/F0Y0	po:adjective is:singular_femenine
+spinado/M0FSY0	po:adjective is:singular_masculine
+spinaŧo/M0TE	po:noun is:singular_masculine
 spiritada/F0Y0	po:noun is:singular_femenine
 spiritado/M0FSY0	po:noun is:singular_masculine
+spontonada/F0Y0Y1	po:adjective is:singular_femenine
+sporkada/F0Y0Y1	po:adjective is:singular_femenine
+sprotada/F0Y0Y1	po:adjective is:singular_femenine
+spuaca/F0	po:noun is:singular_femenine
+spuacada/F0Y0Y1	po:adjective is:singular_femenine
+spuada/F0Y0	po:adjective is:singular_femenine
+spuado/M0FSY0	po:adjective is:singular_masculine
+spusada/F0Y0Y1	po:adjective is:singular_femenine
+spuŧada/F0Y0Y1	po:adjective is:singular_femenine
 stadèra/F0V0	po:noun is:singular_femenine
 tovajado/M0FSY0+0	po:noun is:singular_masculine
 tovaɉado/M0FSY0+0	po:noun is:singular_masculine
@@ -54767,37 +54810,8 @@ xnonboƚada/F0Y0Y1	po:noun is:singular_femenine
 xñokolada/F0Y0Y1	po:noun is:singular_femenine
 xñokoƚada/F0Y0Y1	po:noun is:singular_femenine
 xol/M0U1&0mf	po:noun is:singular_masculine
-spakada/F0Y0Y1	po:noun is:singular_femenine
-spalada/F0Y0Y1	po:noun is:singular_femenine
-spaƚada/F0Y0Y1	po:noun is:singular_femenine
-spalar/M0	po:noun is:singular_masculine
-spaƚar/M0	po:noun is:singular_masculine
-spanpanada/F0Y0Y1	po:noun is:singular_femenine
-spanŧada/F0Y0Y1	po:noun is:singular_femenine
-spansada/F0Y0Y1	po:noun is:singular_femenine
-sparnacada/F0Y0	po:adjective is:singular_femenine
-sparnacado/M0FSY0	po:adjective is:singular_masculine
-spaseto/M0FSmf	po:noun is:singular_masculine
-spaŧeto/M0FSmf	po:noun is:singular_masculine
-spasiđada/F0Y0Y1	po:noun is:singular_femenine
-spasidada/F0Y0Y1	po:noun is:singular_femenine
-spasixada/F0Y0Y1	po:noun is:singular_femenine
-spaventada/F0Y0Y1	po:noun is:singular_femenine
-speada/F0Y0Y1	po:noun is:singular_femenine
-ispeada/F0Y0Y1	po:noun is:singular_femenine
-spendacon/A2U0mf	po:noun is:singular_masculine
-spentonada/F0Y0Y1	po:noun is:singular_femenine
-speronada/F0Y0Y1	po:noun is:singular_femenine
-spesegada/F0Y0Y1	po:noun is:singular_femenine
-spetorada/F0Y0	po:adjective is:singular_femenine
-spetorado/M0FSY0	po:adjective is:singular_masculine
-spiantada/F0Y0	po:adjective is:singular_femenine
-spiantado/M0FSY0	po:adjective is:singular_masculine
-spiantan/M0U0	po:noun is:singular_masculine
-spinada/F0Y0	po:adjective is:singular_femenine
-spinado/M0FSY0	po:adjective is:singular_masculine
 
 
-/ 150
+/ 151
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
