@@ -6347,7 +6347,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sutil",			"in",			4,	5,	"a",	"1852",			"Asotiliar.",
 "sutiliđ",		"",			1,	5,	"a",	"1829",			"Asotiliar.",
 "suŧ",			"",			1,	1,	"a",	"1867",			"Sucar.",
-"suxi",			"",			1,	1,	"a",	"1854",			"Ronxar de le xanxare.",
+"susi",			"",			1,	1,	"a",	"1854",			"Ronxar de le xanxare.",
 
 "tabak",			"",			1,	3,	"g",	"1775",			"Fiutar el tabako, inalar fumi in đenere.",
 "tabar",			"des",		1,	3,	"g",	"1775",			"",
