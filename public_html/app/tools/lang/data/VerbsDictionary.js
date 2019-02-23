@@ -7417,6 +7417,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vív",			"kon",		3,	1,	"a",	"1867",			"",
 "vív",			"re",			3,	1,	"a",	"1867",			"",
 "vív",			"sora",		3,	1,	"a",	"1442",			"",
+"vivac",			"",			1,	3,	"g",	"1876",			"Vivatar.",
 "vivat",			"",			1,	3,	"g",	"1775",			"",
 "vivaŧ",			"",			1,	3,	"g",	"1854",			"Vivatar.",
 "vivatol",		"",			1,	3,	"g",	"1852",			"Vivatar.",
