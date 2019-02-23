@@ -7286,6 +7286,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vergoñ",		"",			1,	4,	"g",	"1867",			"",
 "vergoñ",		"x",			1,	4,	"g",	"1775",			"",
 "vergoñaŧ",		"x",			1,	6,	"g",	"1867",			"",
+"veri",			"",			1,	1,	"g",	"1876",			"",
 "veri",			"in",			1,	1,	"g",	"1847",			"Invetrar, invetriar.",
 "verigol",		"",			1,	3,	"a",	"1854",			"Xbuxar, atorsiliar.",
 "verigol",		"in",			1,	3,	"a",	"1852",			"Xbuxar, atorsiliar.",
