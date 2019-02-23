@@ -5144,7 +5144,7 @@ SFX A1 io i io	is:plural_masculine
 # ajetivi de sekonda klase (-i, -a/e)
 SFX A2 Y 5
 SFX A2 0 a [^aieo]	is:singular_femenine
-SFX A2 0 i [^aieo]	is:plural_masculine
+SFX A2 0 i [^aieo]	is:plural
 SFX A2 0 e [^aieo]	is:plural
 SFX A2 a e a	is:plural
 SFX A2 a i a	is:plural_masculine
@@ -5249,7 +5249,8 @@ SFX Te Y 1
 SFX Te jo ɉo/M0 jo
 
 # trasformaŧion intra varianti (femenil l > ƚe, j > ɉ)
-SFX TF Y 1
+SFX TF Y 2
+SFX TF le ƚe/F0 [aeiouàèéíòóú]le
 SFX TF l ƚe/F0 [aeiouàèéíòóú]l
 
 
@@ -5502,7 +5503,7 @@ SFX r6 dur ur/M0 [ai]dur	po:noun
 SFX r6 dur ureto/M0mf [ai]dur	po:noun
 
 # nominali deverbali (-[dt]or/M0&0mf, -[dt]ora/F0&0)
-SFX r7 Y 22
+SFX r7 Y 34
 SFX r7 r dor/M0mf [ai]r	po:noun
 SFX r7 r dora/F0 [ai]r	po:noun
 SFX r7 r tor/M0mf [ai]r	po:noun
@@ -5515,6 +5516,18 @@ SFX r7 r or/M0mf [ai]r	po:noun
 SFX r7 r ora/F0 [ai]r	po:noun
 SFX r7 r oreto/M0FSmf [ai]r	po:noun
 SFX r7 r oreta/F0 [ai]r	po:noun
+SFX r7 rò dor/M0mf arò	po:noun
+SFX r7 rò dora/F0 arò	po:noun
+SFX r7 rò tor/M0mf arò	po:noun
+SFX r7 rò tora/F0 arò	po:noun
+SFX r7 rò doreto/M0FSmf arò	po:noun
+SFX r7 rò doreta/F0 arò	po:noun
+SFX r7 rò toreto/M0FSmf arò	po:noun
+SFX r7 rò toreta/F0 arò	po:noun
+SFX r7 rò or/M0mf arò	po:noun
+SFX r7 rò ora/F0 arò	po:noun
+SFX r7 rò oreto/M0FSmf arò	po:noun
+SFX r7 rò oreta/F0 arò	po:noun
 SFX r7 dor or/M0mf [ai]dor	po:noun
 SFX r7 0 eto/M0FSmf [ai]dor	po:noun
 SFX r7 dor oreto/M0FSmf [ai]dor	po:noun
@@ -5793,17 +5806,18 @@ SFX W2 te 0 mente	po:adverb
 
 
 # sostantivi koletivi, ...
-SFX Y0 Y 10
-SFX Y0 uda úa/F0 uda
-SFX Y0 ida ía/F0 ida
+SFX Y0 Y 11
 SFX Y0 udo ú/M0 udo
-SFX Y0 ade à/F0 ade
+SFX Y0 uda úa/F0 uda
+SFX Y0 ido ío/M0 ido
+SFX Y0 ida ía/F0 ida
 SFX Y0 ado ò ado
 SFX Y0 ado à/M0 ado
 SFX Y0 ado è/M0 ado
-SFX Y0 edo é/M0 edo
-SFX Y0 ude ú/F0 ude
 SFX Y0 ada àa/F0 ada
+SFX Y0 edo é/M0 edo
+SFX Y0 ade à/F0 ade
+SFX Y0 ude ú/F0 ude
 
 # sostantivi koletivi, ... (-ada > -à)
 SFX Y1 Y 1
@@ -6077,7 +6091,7 @@ SFX (2 òl olon/F0U0mf òl	po:noun
 SFX (2 0 on/F0U0mf n	po:noun
 
 # sostantivi/ajetivi alterài - kresitivi ko èle vanesente (-on(e/i))
-SFX (3 Y 14
+SFX (3 Y 15
 SFX (3 0 n/F0mf [^jɉƚt]o	po:noun
 SFX (3 0 n/F0mf [^èò]ƚo	po:noun
 SFX (3 0 n/F0mf [^ò][jɉt]o	po:noun
@@ -6087,8 +6101,9 @@ SFX (3 òɉo oɉon/F0mf òɉo	po:noun
 SFX (3 òƚo oƚon/F0mf òƚo	po:noun
 SFX (3 òto oton/F0mf òto	po:noun
 SFX (3 e on/F0mf e	po:noun
-SFX (3 a ona/F0 [^g]a	po:noun
-SFX (3 a ona/F0 [^è]ga	po:noun
+SFX (3 a ona/F0 [^gƚ]a	po:noun
+SFX (3 a ona/F0 [^è][gƚ]a	po:noun
+SFX (3 èƚa eƚona/F0 èƚa	po:noun
 SFX (3 èga egona/F0 èga	po:noun
 SFX (3 0 on/F0mf n	po:noun
 SFX (3 èr eron/F0mf èr	po:noun
@@ -6347,14 +6362,23 @@ PFX :0 0 ko n
 PFX gv Y 1
 PFX gv gu v gu[aà]
 
-# kanbio viŧentin (re- > ra-, se- > sa-)
-PFX vŧ Y 6
+# kanbio viŧentin (re- > ra-, se- > sa-, per- > par-)
+PFX vŧ Y 15
+PFX vŧ fe fa fer
+PFX vŧ fè fà fèr
+PFX vŧ fé fà fér
+PFX vŧ pe pa per
+PFX vŧ pè pà pèr
+PFX vŧ pé pà pér
 PFX vŧ re ra re
-PFX vŧ ré rà ré
 PFX vŧ rè rà rè
+PFX vŧ ré rà ré
 PFX vŧ se sa se
-PFX vŧ sé sà sé
 PFX vŧ sè sà sè
+PFX vŧ sé sà sé
+PFX vŧ te ta te
+PFX vŧ tè tà tè
+PFX vŧ té tà té
 
 
 # numerali - koletivi (-èna)
