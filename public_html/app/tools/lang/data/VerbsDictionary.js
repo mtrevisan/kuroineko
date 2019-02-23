@@ -7035,6 +7035,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 
 "ubig",			"",			1,	0,	"a",	"1893",			"Ubegar.",
 "ud",				"",			1,	0,	"a",	"1775",			"Versar.",
+"ufeg",			"",			1,	0,	"a",	"1876",			"Onfegar.",
 "ufiŧi",			"",			1,	2,	"a",	"1829",			"",
 "uj",				"",			1,	0,	"a",	"1855",			"Xvodar.",
 "ukel",			"",			1,	0,	"a",	"1590",			"Elokuar, ŧigar, far kaxin.",
