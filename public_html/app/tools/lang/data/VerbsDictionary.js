@@ -6700,6 +6700,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tòrđ",			"re",			3,	1,	"g",	"1854",			"",
 "tòrđ",			"s",			3,	1,	"g",	"1560",			"",
 "torđ",			"s",			1,	1,	"a",	"1980",			"Stòrđer.",
+"torŧ",			"",			1,	1,	"a",	"1876",			"",
 "torŧ",			"in",			1,	1,	"a",	"1980",			"",
 "torđi",			"",			1,	1,	"g",	"1775",			"Andar a xonxo.",
 "tòs",			"",			3,	1,	"g",	"1852",			"",
