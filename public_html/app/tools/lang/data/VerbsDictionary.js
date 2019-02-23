@@ -7143,6 +7143,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vax",			"tra",		1,	1,	"g",	"1560",			"",
 "ve",				"",			1,	1,	"a",	"1415",			"Vietar.",
 "ve",				"de",			1,	1,	"a",	"1415",			"Vietar.",
+"vec",			"",			1,	1,	"g",	"1876",			"",
 "vec",			"in",			1,	1,	"g",	"1560",			"Deventar veco.",
 "vec",			"in",			4,	3,	"a",	"1980",			"Deventar veco.",
 "ved",			"",			1,	1,	"a",	"1433",			"Vietar.",
