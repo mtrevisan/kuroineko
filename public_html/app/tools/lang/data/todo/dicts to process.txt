@@ -25,3 +25,4 @@ po:[^\n]+po: > split line
 [bcdđfghjɉklƚmnñprstŧvx]i[aeiou] > $1ï$2 # dièrexi
 (\b(\w*?)([ae])(\w*)\b)(?=[\s\S]*(\b\2(?!\3)[ae]\4\b)) # find couples of words that differs only for [ae]
 po:adjective( [^i]|$) # add is:...
+o[nl]/[^\r\nU]+U\d > add exception to hyphenation rules
