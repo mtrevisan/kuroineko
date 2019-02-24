@@ -5886,12 +5886,9 @@ rinfòrsoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:rinforsar
 rinforŧar/a0a1P0P1	po:verb ts:infinitive_simple
 rinfòrŧo/a0a1P0P1FSI0	po:verb ts:indicative_present st:rinforŧar
 rinfòrŧoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:rinforŧar
-infosar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-infòso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:infosar
-infòsoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:infosar
-refosar/a0a1a2P0P1P2vŧ	po:verb ts:infinitive_simple
-refòso/a0a1a2P0P1P2FSI0vŧ	po:verb ts:indicative_present st:refosar
-refòsoe/a0a1a2I1vŧ	po:verb ts:indicative_present is:interrogative st:refosar
+fosar/a0a1a2P0P1P2+0.0	po:verb ts:infinitive_simple
+fòso/a0a1a2P0P1P2FSI0+0.0	po:verb ts:indicative_present st:fosar
+fòsoe/a0a1a2I1+0.0	po:verb ts:indicative_present is:interrogative st:fosar
 fosinar/a0a1a2P0P1P2+0	po:verb ts:infinitive_simple
 fosino/a0a1a2P0P1P2FSI0+0	po:verb ts:indicative_present st:fosinar
 fosínoe/a0a1a2I1+0	po:verb ts:indicative_present is:interrogative st:fosinar
@@ -9797,12 +9794,15 @@ koràtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:koratar
 korbetar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 korbeto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:korbetar
 korbétoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:korbetar
-kordar/a0a1a2P0P1P2-1+0*0.0@0v0r0r5	po:verb ts:infinitive_simple
-kòrdo/a0a1a2P0P1P2FSI0-1+0*0.0@0	po:verb ts:indicative_present st:kordar
-kòrdoe/a0a1a2I1-1+0*0.0@0	po:verb ts:indicative_present is:interrogative st:kordar
+kordar/a0a1a2P0P1P2-1+0*0@0v0r0r5	po:verb ts:infinitive_simple
+kòrdo/a0a1a2P0P1P2FSI0-1+0*0@0	po:verb ts:indicative_present st:kordar
+kòrdoe/a0a1a2I1-1+0*0@0	po:verb ts:indicative_present is:interrogative st:kordar
 konkordar/a0a1a2P0P1P2-1	po:verb ts:infinitive_simple
 konkòrdo/a0a1a2P0P1P2FSI0-1	po:verb ts:indicative_present st:konkordar
 konkòrdoe/a0a1a2I1-1	po:verb ts:indicative_present is:interrogative st:konkordar
+rekordar/a0a1a2P0P1P2@0v0r0r5	po:verb ts:infinitive_simple
+rekòrdo/a0a1a2P0P1P2FSI0@0	po:verb ts:indicative_present st:rekordar
+rekòrdoe/a0a1a2I1@0	po:verb ts:indicative_present is:interrogative st:rekordar
 akòrder/b0b1P0P1+0	po:verb ts:infinitive_simple
 akòrdre/+0	po:verb ts:infinitive_simple st:akòrder
 akorderò/b0b1I0+0r0	po:verb ts:indicative_future st:akòrder
@@ -26911,6 +26911,7 @@ siben	po:adverb
 ultra	po:adverb
 ultra	po:preposition
 / đonture subordenanti
+adrío	po:adverb al:driedo al:dredo al:dreo
 almanko	po:adverb
 almànkol	po:adverb
 deskuaxo/M0FSM1	po:adverb al:deskoaxo
@@ -26924,7 +26925,6 @@ drio–se/@0	po:adverb
 drio–te/@0	po:adverb
 drio–ve/@0	po:adverb
 drio	po:adverb al:driedo al:dredo al:dreo
-adrío	po:adverb al:driedo al:dredo al:dreo
 dríoge/@0	po:adverb
 dríome/@0	po:adverb
 dríone/@0	po:adverb
@@ -44021,7 +44021,7 @@ arditon/A2U0mf	po:adjective is:singular_masculine
 arđaron/F0U0mf	po:noun is:singular_masculine
 arđentin/A1	po:noun is:singular_masculine
 arđento/M0FS&2mf	po:noun is:singular_masculine
-arena/F0&0	po:noun is:singular_femenine
+arena/F0&0(0	po:noun is:singular_femenine
 arenda/F0	po:noun is:singular_femenine
 arfièr/A1	po:noun is:singular_masculine
 arganèla/F0TE	po:noun is:singular_femenine
@@ -52346,6 +52346,8 @@ andata/F0	po:noun is:singular_femenine
 antimèla/F0&0	po:noun is:singular_femenine
 antimèƚa/F0&1	po:noun is:singular_femenine
 aratro/M0	po:noun is:singular_masculine
+ardiva/F0	po:noun is:singular_femenine
+arđiva/F0	po:noun is:singular_femenine
 arfòso/M0FS	po:noun is:singular_masculine
 argastro/M0	po:noun is:singular_masculine
 arimètega/F0	po:noun is:singular_femenine
@@ -54968,11 +54970,16 @@ xvoƚada/F0Y0Y1	po:noun is:singular_femenine
 / Nazari, Giulio. Dizionario vicentino-italiano e regole di grammatica ad uso delle scuole elementari di Vicenza. Oderzo, 1876.
 akanada/F0Y0	po:adjective is:singular_femenine
 akanado/M0Y0	po:adjective is:singular_masculine
-ankúdin/F0U1mf	po:noun is:singular_femenine
-ankúđin/F0U1mf	po:noun is:singular_femenine
-ankúxin/F0U1mf	po:noun is:singular_femenine
+ankúdin/F0mf	po:noun is:singular_femenine
+ankúđin/F0mf	po:noun is:singular_femenine
+ankúxin/F0mf	po:noun is:singular_femenine
+antikaja/F0TE	po:noun is:singular_femenine
+akuaŧo/M0FSTE	po:noun is:singular_masculine
+ardida/F0Y0	po:noun is:singular_femenine
+ardido/M0FSY0	po:noun is:singular_masculine
+axenada/F0Y0Y1	po:noun is:singular_femenine
 
 
-/ 50
+/ 51
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
