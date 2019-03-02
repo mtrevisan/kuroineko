@@ -15254,12 +15254,12 @@ spenxarò/b0b1b2I0.0	po:verb ts:indicative_future st:spénxar
 despendiar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 despendio/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:despendiar
 despéndioe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:despendiar
-pendolar/a0a1P0P1	po:verb ts:infinitive_simple
-péndolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:pendolar
-péndoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:pendolar
-pendoƚar/a0a2P0P2	po:verb ts:infinitive_simple
-péndoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:pendoƚar
-péndoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:pendoƚar
+pendolar/a0a1P0P1+0	po:verb ts:infinitive_simple
+péndolo/a0a1P0P1FSI0+0	po:verb ts:indicative_present st:pendolar
+péndoloe/a0a1I1+0	po:verb ts:indicative_present is:interrogative st:pendolar
+pendoƚar/a0a2P0P2+0	po:verb ts:infinitive_simple
+péndoƚo/a0a2P0P2I0+0	po:verb ts:indicative_present st:pendoƚar
+péndoƚoe/a0a2I1+0	po:verb ts:indicative_present is:interrogative st:pendoƚar
 penelar/a0a1P0P1+0*0	po:verb ts:infinitive_simple
 penèlo/a0a1P0P1FSI0+0*0	po:verb ts:indicative_present st:penelar
 penèloe/a0a1I1+0*0	po:verb ts:indicative_present is:interrogative st:penelar
@@ -17003,6 +17003,9 @@ spuƚexar/a0a2P0P2-0	po:verb ts:infinitive_simple
 spuƚexo/a0a2P0P2I0-0	po:verb ts:indicative_present st:spuƚexar
 spuƚéxoe/a0a2I1-0	po:verb ts:indicative_present is:interrogative st:spuƚexar
 punir/a0a1a2d0d1d2P0P1P2+0r2r3	po:verb ts:infinitive_simple
+punarar/a0a1a2P0P1P2-1+0	po:verb ts:infinitive_simple
+punaro/a0a1a2P0P1P2FSI0-1+0	po:verb ts:indicative_present st:punarar
+punàroe/a0a1a2I1-1+0	po:verb ts:indicative_present is:interrogative st:punarar
 spuncar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 spunco/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:spuncar
 spúncoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:spuncar
@@ -46354,7 +46357,7 @@ kalka/F0	po:noun is:singular_femenine
 kalkaño/M0FS&0	po:noun is:singular_masculine
 kalkañòl/M0U0TE	po:noun is:singular_masculine
 kalmo/M0	po:adjective is:singular_masculine
-kalmo/M0(4	po:noun is:singular_masculine
+kalmo/M0+0(4	po:noun is:singular_masculine
 kalmuk	po:noun is:masculine
 kalolin/M0	po:noun is:singular_masculine
 kaloroxa/F0&0	po:adjective is:singular_femenine
@@ -51997,7 +52000,6 @@ grixonería/F0v0	po:noun is:singular_femenine
 inbastio/M0	po:noun is:singular_masculine
 infiaxon/F0U0mf	po:noun is:singular_femenine
 ingranfio/A1	po:adjective is:singular_masculine
-inkalmo/M0	po:noun is:singular_masculine
 insanpo/M0	po:noun is:singular_masculine
 insemenío/A1	po:adjective is:singular_masculine
 inseneto/A1FSmf	po:adjective is:singular_masculine
@@ -54153,9 +54155,8 @@ inpiagada/F0Y0Y1	po:noun is:singular_femenine
 inpikada/F0Y0Y1	po:noun is:singular_femenine
 inpirada/F0Y0Y1	po:noun is:singular_femenine
 inpironada/F0Y0Y1	po:noun is:singular_femenine
-inpoltronido/M0Y0	po:noun is:singular_masculine
+inpontida/F0Y0	po:noun is:singular_femenine
 inpontido/M0Y0	po:noun is:singular_masculine
-inpotacada/F0Y0Y1	po:noun is:singular_femenine
 inprovixada/F0Y0Y1	po:noun is:singular_femenine
 inrokida/F0Y0	po:noun is:singular_femenine
 inruvidido/M0Y0	po:noun is:singular_masculine
@@ -54376,8 +54377,8 @@ mufida/F0Y0	po:adjective is:singular_femenine
 mufido/M0Y0	po:adjective is:singular_masculine
 mustasada/F0Y0Y1	po:noun is:singular_femenine
 mustaŧada/F0Y0Y1	po:noun is:singular_femenine
-muxonada/F0Y0	po:noun is:singular_femenine
-muxonado/M0FSY0	po:noun is:singular_masculine
+muxonada/F0Y0*0+0	po:noun is:singular_femenine
+muxonado/M0FSY0+0	po:noun is:singular_masculine
 nalbon/F0U0mf	po:noun is:singular_femenine
 napolon/F0U0mf	po:noun is:singular_masculine
 nasente/M0FSmf	po:adjective is:singular
@@ -54440,15 +54441,15 @@ piovada/F0Y0Y1	po:noun is:singular_femenine
 pironada/F0Y0Y1	po:noun is:singular_femenine
 podiòl/M0U0	po:noun is:singular_masculine
 pođiòl/M0U0	po:noun is:singular_masculine
-poltronida/F0Y0	po:adjective is:singular_femenine
-poltronido/M0Y0	po:adjective is:singular_masculine
+poltronida/F0Y0+0	po:adjective is:singular_femenine
+poltronido/M0Y0+0	po:adjective is:singular_masculine
 polverada/F0Y0	po:noun is:singular_femenine
 polverado/M0FSY0	po:noun is:singular_masculine
 pontada/F0Y0Y1*0	po:noun is:singular_femenine
 pontexèl/M0U0TE	po:noun is:singular_masculine
 postisipada/F0Y0Y1	po:noun is:singular_femenine
 postiŧipada/F0Y0Y1	po:noun is:singular_femenine
-potacada/F0Y0Y1	po:noun is:singular_femenine
+potacada/F0Y0Y1+0	po:noun is:singular_femenine
 poxiòl/M0U0	po:noun is:singular_masculine
 poxiòƚo/M0	po:noun is:singular_masculine
 presetada/F0Y0	po:noun is:singular_femenine
@@ -54952,7 +54953,6 @@ xmonada/F0Y0	po:adjective is:singular_femenine
 xmonado/M0FSY0	po:adjective is:singular_masculine
 xmortida/F0Y0	po:adjective is:singular_femenine
 xmortido/M0FSY0	po:adjective is:singular_masculine
-xmuxonada/F0Y0Y1	po:noun is:singular_femenine
 xnonbolada/F0Y0Y1	po:noun is:singular_femenine
 xnonboƚada/F0Y0Y1	po:noun is:singular_femenine
 xñokolada/F0Y0Y1	po:noun is:singular_femenine
@@ -55081,6 +55081,9 @@ gujado/M0FSY0	po:noun is:singular_masculine
 guɉado/M0FSY0	po:noun is:singular_masculine
 guliè	po:noun is:singular_masculine
 guƚiè	po:noun is:singular_masculine
+inadamò	po:adverb
+inađamò	po:adverb
+inaxamò	po:adverb
 inbestialida/F0Y0	po:noun is:singular_masculine
 inbestialido/M0FSY0	po:noun is:singular_masculine
 inbestiaƚida/F0Y0	po:noun is:singular_masculine
@@ -55091,6 +55094,14 @@ inboƚoñada/F0Y0	po:noun is:singular_femenine
 inboƚoñado/M0FSY0	po:noun is:singular_masculine
 inbrojada/F0Y0Y1	po:noun is:singular_femenine
 inbroɉada/F0Y0Y1	po:noun is:singular_femenine
+inkaecada/F0Y0	po:noun is:singular_masculine
+inkaecado/M0FSY0	po:noun is:singular_masculine
+inpetrida/F0Y0	po:noun is:singular_masculine
+inpetrido/M0FSY0	po:noun is:singular_masculine
+inpixolida/F0Y0	po:noun is:singular_masculine
+inpixolido/M0FSY0	po:noun is:singular_masculine
+inpixoƚida/F0Y0	po:noun is:singular_masculine
+inpixoƚido/M0FSY0	po:noun is:singular_masculine
 intrada/F0Y0Y1&2&3	po:noun is:singular_femenine
 jasada/F0Y0Y1TB	po:adjective is:singular_femenine
 jaŧada/F0Y0Y1TB	po:adjective is:singular_femenine
@@ -55123,6 +55134,6 @@ xujado/M0FSY0	po:noun is:singular_masculine
 xuɉado/M0FSY0	po:noun is:singular_masculine
 
 
-/ 89
+/ 90
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
