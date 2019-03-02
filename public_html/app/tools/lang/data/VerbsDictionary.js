@@ -2040,6 +2040,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "garbuɉ",		"in",			1,	4,	"a",	"1775",			"",
 "gard",			"dex",		1,	1,	"g",	"1998",			"Lasar poki bocòli parké la pianta fatha fiori pi beli.",
 "garduf",		"x",			1,	4,	"a",	"1980",			"(bixiak) Arufar.",
+"garđ",			"in",			4,	4,	"a",	"1876",			"Ingaxiar.",
 "gargat",		"x",			1,	4,	"g",	"1560",			"Tajar el gargat, xgoŧar, tosir, rexentar la boka.",
 "gargariđ",		"",			1,	6,	"a",	"1810",			"",
 "gargariđ",		"x",			1,	6,	"a",	"1775",			"Rexentar la boka.",
