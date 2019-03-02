@@ -3490,6 +3490,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "líx",			"prede",		3,	1,	"a",	"",				"",
 "lixer",			"in",			4,	5,	"a",	"1829",			"Inxerir, xlexierir.",
 "loam",			"",			1,	2,	"g",	"1775",			"",
+"loam",			"in",			1,	2,	"g",	"1876",			"",
 "lod",			"",			1,	1,	"g",	"1560",			"",
 "lof",			"x",			1,	1,	"g",	"1867",			"Xlovar.",
 "lofit",			"de",			1,	3,	"a",	"1775",			"Spalkar, rénder senŧa palko.",
