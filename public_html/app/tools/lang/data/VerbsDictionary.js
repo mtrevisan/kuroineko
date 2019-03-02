@@ -2437,6 +2437,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "jaŧ",			"",			1,	1,	"g",	"",				"",
 "jetur",			"kon",		1,	3,	"a",	"1829",			"",
 "jil",			"",			1,	1,	"a",	"1851",			"Far jilè.",
+"jirland",		"",			1,	4,	"g",	"1876",			"",
 "jiron",			"in",			1,	3,	"a",	"1896",			"",
 "jistr",			"re",			1,	1,	"a",	"1433",			"",
 "jond",			"",			1,	1,	"a",	"1829",			"",
