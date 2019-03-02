@@ -2354,6 +2354,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ikuit",			"in",			1,	0,	"a",	"1796",			"",
 "ilkam",			"",			1,	3,	"g",	"1775",			"Inleamar.",
 "ilun",			"",			1,	2,	"a",	"1852",			"Asiliar.",
+"imaxen",		"",			1,	2,	"g",	"1876",			"",
 "imaxin",		"",			1,	2,	"g",	"",				"",
 "inber",			"",			4,	5,	"a",	"",				"Intiriŧir, intorpidir.",
 "incens",		"",			1,	3,	"a",	"1867",			"Dar ʼl incenso.",
