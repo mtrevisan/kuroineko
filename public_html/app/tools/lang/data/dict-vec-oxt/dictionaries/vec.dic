@@ -10786,6 +10786,18 @@ lànpoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:lanpar
 ƚanpar/a0a2P0P2	po:verb ts:infinitive_simple
 ƚanpo/a0a2P0P2I0	po:verb ts:indicative_present st:ƚanpar
 ƚànpoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:lanpar
+lanpedar/a0a1P0P1r0	po:verb ts:infinitive_simple
+lanpedo/a0a1P0P1FSI0	po:verb ts:indicative_present st:lanpedar
+lanpédoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:lanpedar
+lanpeđar/a0a1P0P1r0	po:verb ts:infinitive_simple
+lanpeđo/a0a1P0P1FSI0	po:verb ts:indicative_present st:lanpeđar
+lanpéđoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:lanpeđar
+lanpexar/a0a1P0P1r0	po:verb ts:infinitive_simple
+lanpexo/a0a1P0P1FSI0	po:verb ts:indicative_present st:lanpear
+lanpéxoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:lanpexar
+ƚanpexar/a0a2P0P2r1	po:verb ts:infinitive_simple
+ƚanpexo/a0a2P0P2I0	po:verb ts:indicative_present st:ƚanpexar
+ƚanpéxoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:ƚanpexar
 lanpidar/a0a1P0P1r0	po:verb ts:infinitive_simple
 lanpido/a0a1P0P1FSI0	po:verb ts:indicative_present st:lanpidar
 lanpídoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:lanpidar
@@ -47175,6 +47187,7 @@ langur/M0TB	po:noun is:singular_masculine
 lanpada/F0Y0Y1TB	po:noun is:singular_femenine
 lanpeŧo/M0TEmf	po:noun is:singular_masculine
 lanpideŧa/F0TE	po:noun is:singular_femenine
+lanpeđo/M0TE	po:noun is:singular_masculine
 lanpiđo/M0TE	po:noun is:singular_masculine
 lanpo/M0FS<0	po:noun is:singular_masculine
 lanxa/F0TB	po:noun is:singular_femenine
@@ -47363,6 +47376,7 @@ luxverde/F0TB	po:noun is:singular_masculine
 ƚanbiko/A1	po:noun is:singular_masculine
 ƚanpeso/M0mf	po:noun is:singular_masculine
 ƚanpidesa/F0	po:noun is:singular_femenine
+ƚanpexo/M0	po:noun is:singular_masculine
 ƚanpixo/M0	po:noun is:singular_masculine
 ƚanpo/M0<2	po:noun is:singular_masculine
 ƚañansa/F0	po:noun is:singular_femenine
@@ -54282,6 +54296,9 @@ kustú	po:pronoun st:kostú is:singular_masculine
 kuxinada/F0Y0Y1	po:noun is:singular_femenine
 ladrosinio/M0TB	po:noun is:singular_masculine
 ladroŧinio/M0	po:noun is:singular_masculine
+lanpedada/F0Y0Y1	po:noun is:singular_femenine
+lanpeđada/F0Y0Y1	po:noun is:singular_femenine
+lanpexada/F0Y0Y1TB	po:noun is:singular_femenine
 lanpidada/F0Y0Y1	po:noun is:singular_femenine
 lanpiđada/F0Y0Y1	po:noun is:singular_femenine
 lanpixada/F0Y0Y1TB	po:noun is:singular_femenine
@@ -54655,10 +54672,15 @@ spiantan/M0U0	po:noun is:singular_masculine
 spinada/F0Y0	po:adjective is:singular_femenine
 spinado/M0FSY0	po:adjective is:singular_masculine
 spinaŧo/M0TE	po:noun is:singular_masculine
-spiritada/F0Y0	po:noun is:singular_femenine
-spiritado/M0FSY0	po:noun is:singular_masculine
+spiritada/F0Y0+0	po:noun is:singular_femenine
+spiritado/M0FSY0+0	po:noun is:singular_masculine
+ispiritada/F0Y0	po:noun is:singular_femenine
+ispiritado/M0FSY0	po:noun is:singular_masculine
 spontonada/F0Y0Y1	po:adjective is:singular_femenine
-sporkada/F0Y0Y1	po:adjective is:singular_femenine
+sporkada/F0Y0+0	po:adjective is:singular_femenine
+sporkado/M0FSY0+0	po:adjective is:singular_masculine
+isporkada/F0Y0	po:adjective is:singular_femenine
+isporkado/M0FSY0	po:adjective is:singular_masculine
 sprotada/F0Y0Y1	po:adjective is:singular_femenine
 spuaca/F0	po:noun is:singular_femenine
 spuacada/F0Y0Y1	po:adjective is:singular_femenine
@@ -54706,7 +54728,8 @@ strasada/F0Y0Y1	po:noun is:singular_femenine
 strasinada/F0Y0Y1	po:noun is:singular_femenine
 straŧada/F0Y0Y1	po:noun is:singular_femenine
 strepitada/F0Y0Y1	po:noun is:singular_femenine
-strigada/F0Y0Y1-0	po:noun is:singular_femenine
+strigada/F0Y0-0	po:noun is:singular_femenine
+strigado/M0FSY0-0	po:noun is:singular_masculine
 strigonada/F0Y0	po:adjective is:singular_femenine
 strigonado/M0FSY0	po:adjective is:singular_masculine
 strolegada/F0Y0	po:adjective is:singular_femenine
@@ -55181,8 +55204,11 @@ kostú po:pronoun is:singular_masculine
 rebogo	po:adverb
 xujado/M0FSY0	po:noun is:singular_masculine
 xuɉado/M0FSY0	po:noun is:singular_masculine
+là/TB	po:adverb
+laorante/M0FS	po:noun is:singular
+ƚaorante/M0	po:noun is:singular
 
 
-/ 94
+/ 95
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
