@@ -13357,7 +13357,7 @@ músegoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:musegar
 muŧegar/a0a1P0P1	po:verb ts:infinitive_simple
 múŧego/a0a1P0P1FSI0	po:verb ts:indicative_present st:muŧegar
 múŧegoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:muŧegar
-muxegar/a0a1a2P0P1P2*0	po:verb ts:infinitive_simple
+muxegar/a0a1a2P0P1P2*0r0	po:verb ts:infinitive_simple
 múxego/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:muxegar
 múxegoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:muxegar
 muxolar/a0a1P0P1	po:verb ts:infinitive_simple
@@ -30039,8 +30039,6 @@ madoranŧa/F0	po:noun is:singular_femenine
 madòna/F0	po:noun is:singular_femenine
 madur/M0r5&0^6	po:adjective is:singular_masculine
 madura/F0r5&0^6	po:adjective is:singular_femenine
-maur/M0r5&0^6	po:adjective is:singular_masculine
-maura/F0r5&0^6	po:adjective is:singular_femenine
 mađoranŧa/F0	po:noun is:singular_femenine
 maestà/M0	po:noun is:singular_femenine
 mago/M0(4	po:noun is:singular_masculine
@@ -48016,7 +48014,8 @@ moŧenigo/M0	po:noun is:singular_masculine
 moŧeta/F0	po:noun is:singular_femenine
 moŧokóa/F0	po:noun is:singular_femenine
 moŧoreca/F0	po:noun is:singular_femenine
-mòđo/M0TE	po:noun is:singular_masculine
+mòdo/M0&0	po:noun is:singular_masculine
+mòđo/M0&0	po:noun is:singular_masculine
 mòja/F0&0	po:adjective is:singular_femenine
 mòja/F0<0<1	po:noun is:singular_femenine
 mòjo/M0FS&0	po:adjective is:singular_masculine
@@ -48034,6 +48033,7 @@ mòrto/M0FS*0	po:adjective is:singular_masculine
 mòsa–fadiga/F0	po:noun is:singular
 mòto/A1FS	po:noun is:singular_masculine
 mòŧa–fadiga/F0	po:noun is:singular
+mòxo/M0&0	po:noun is:singular_masculine
 muci	po:interjection
 muco/M0&0(2	po:noun is:singular_masculine
 mufa/F0	po:noun is:singular_femenine
@@ -50227,6 +50227,7 @@ sostiŧio/M0TE	po:noun is:singular_masculine
 sotana/F0	po:noun is:singular_femenine
 sotanin/M0	po:noun is:singular_masculine
 sotinsú	po:adverb
+soto–mistro/A1	po:noun is:singular_masculine
 sotobraga/F0	po:noun is:singular_femenine
 sotodegan/A2U0	po:noun is:singular_masculine
 sotogrondal/F0TFU0	po:noun is:singular_masculine
@@ -50235,7 +50236,6 @@ sotokòtol/M0U1TEmf	po:noun is:singular_masculine
 sotomaèstro/A1	po:noun is:singular_masculine
 sotomànego/A1FS	po:noun is:singular_masculine
 sotomistro/A1	po:noun is:singular_masculine
-soto–mistro/A1	po:noun is:singular_masculine
 sotopanŧa/F0TE	po:noun is:singular_masculine
 sotopòpa/F0	po:noun is:singular_masculine
 sotopòrtego/M0FS	po:noun is:singular_masculine
@@ -53143,7 +53143,6 @@ moskada/F0Y0Y1	po:adjective is:singular_femenine
 mostaco/M0&0(4	po:noun is:singular_masculine
 moxegaño/M0FS	po:noun is:singular_masculine
 moxegòto/M0FS	po:noun is:singular_masculine
-mòdo/M0	po:noun is:singular_masculine
 mòdula/F0TE	po:noun is:singular_femenine
 mòko/M0FS	po:noun is:singular_masculine
 mòrbio/A1	po:adjective is:singular_masculine
@@ -53173,7 +53172,11 @@ netiŧia/F0TE	po:noun is:singular_femenine
 nevara/F0	po:noun is:singular_femenine
 nèspol/M0TEU1mf	po:noun is:singular_masculine
 nibiaŧo/M0FSTE	po:noun is:singular_masculine
-nisol/M0TEU0mf	po:noun is:singular_masculine
+nisol/M0U0&0mf	po:noun is:singular_masculine
+nisoƚo/M0&1mf	po:noun is:singular_masculine
+nisòl/M0U0TE	po:noun is:singular_masculine
+niŧol/M0U0&0mf	po:noun is:singular_masculine
+niŧòl/M0U0	po:noun is:singular_masculine
 núbil/F0TF	po:noun is:singular_masculine
 ñoñoleŧo/M0FSTEmf	po:noun is:singular_masculine
 ñoñoƚeso/A1mf	po:noun is:singular_masculine
@@ -55223,21 +55226,25 @@ maneŧon/F0TEU0mf	po:noun is:singular_masculine
 maridado/M0FSY0	po:noun is:singular_masculine
 mariđado/M0FSY0	po:noun is:singular_masculine
 marixado/M0FSY0	po:noun is:singular_masculine
+materon/A2U0mf	po:adjective is:singular_masculine
+medado/M0FSY0	po:noun is:singular_masculine
+medotèrmen/F0U1mf	po:adjective is:singular
+međado/M0FSY0	po:noun is:singular_masculine
+međotèrmen/F0U1mf	po:adjective is:singular
+mexado/M0FSY0	po:noun is:singular_masculine
+mexotèrmen/F0U1mf	po:adjective is:singular
+molton/F0U0mf	po:noun is:singular_masculine
+monegèla/F0TE	po:noun is:singular_femenine
+nebiada/F0Y0	po:noun is:singular_femenine
+nebiado/M0FSY0	po:noun is:singular_masculine
+nibiada/F0Y0	po:noun is:singular_femenine
+nibiado/M0FSY0	po:noun is:singular_masculine
 ñarada/F0Y0Y1	po:adjective is:singular_femenine
 rebogo	po:adverb
 xujado/M0FSY0	po:noun is:singular_masculine
 xuɉado/M0FSY0	po:noun is:singular_masculine
-materon/A2U0mf	po:adjective is:singular_masculine
-međado/M0FSY0	po:noun is:singular_masculine
-medado/M0FSY0	po:noun is:singular_masculine
-mexado/M0FSY0	po:noun is:singular_masculine
-međotèrmen/F0	po:adjective is:singular
-medotèrmen/F0	po:adjective is:singular
-mexotèrmen/F0	po:adjective is:singular
-molton/F0U0mf	po:noun is:singular_masculine
-monegèla/F0TE	po:noun is:singular_femenine
 
 
-/ 105
+/ 107
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
