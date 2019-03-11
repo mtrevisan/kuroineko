@@ -4352,6 +4352,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "padron",		"in",			4,	6,	"a",	"1867",			"",
 "padroneđ",		"",			1,	6,	"a",	"1775",			"",
 "padroniđ",		"",			1,	6,	"a",	"1854",			"",
+"padel",			"",			1,	2,	"g",	"1896",			"",
+"padel",			"s",			1,	2,	"g",	"1896",			"",
 "pael",			"",			1,	2,	"g",	"1896",			"",
 "pael",			"s",			1,	2,	"g",	"1896",			"",
 "pag",			"",			1,	1,	"g",	"1381",			"",
