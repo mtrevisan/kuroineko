@@ -7256,6 +7256,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vèñ",			"kon",		3,	1,	"g",	"1387",			"",
 "vèñ",			"kontra",	3,	1,	"g",	"1450",			"",
 "vèñ",			"per",		3,	1,	"g",	"1412",			"",
+"vèñ",			"pre",		3,	1,	"g",	"1876",			"",
 "vèñ",			"re",			3,	1,	"g",	"1775",			"",
 "vèñ",			"reso",		3,	1,	"g",	"1867",			"",
 "vèñ",			"rin",		3,	1,	"g",	"1867",			"Revèñer.",
