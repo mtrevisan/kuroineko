@@ -5997,6 +5997,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sotiliđ",		"",			1,	5,	"a",	"1867",			"Asotiliar.",
 "soŧi",			"",			1,	1,	"g",	"1463",			"Asocar.",
 "soŧol",			"in",			1,	1,	"a",	"1775",			"",
+"soven",			"re",			4,	5,	"a",	"1876",			"",
 "sovenŧion",	"",			1,	7,	"a",	"1512",			"",
 "soverc",		"",			1,	3,	"g",	"1867",			"",
 "sovraniđ",		"",			1,	6,	"a",	"1867",			"",
