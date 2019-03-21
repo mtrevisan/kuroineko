@@ -5768,6 +5768,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "simul",			"",			1,	1,	"a",	"1867",			"",
 "simul",			"de",			1,	1,	"a",	"1829",			"",
 "sinŧer",		"",			1,	4,	"g",	"1775",			"",
+"sinŧier",		"",			1,	4,	"g",	"1876",			"",
 "sindak",		"",			1,	1,	"a",	"1499",			"",
 "sindik",		"",			1,	1,	"a",	"1867",			"",
 "sinkop",		"",			1,	1,	"a",	"",				"",
