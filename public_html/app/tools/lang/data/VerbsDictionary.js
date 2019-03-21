@@ -2014,6 +2014,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ganber",		"in",			1,	1,	"g",	"1775",			"Intrigar, inpacar.",
 "ganber",		"x",			1,	1,	"g",	"1775",			"",
 "ganbet",		"x",			1,	4,	"a",	"1775",			"Strakar le ganbe.",
+"ganbeŧ",		"x",			1,	4,	"a",	"1876",			"",
 "ganbin",		"",			1,	4,	"a",	"1855",			"Se dixe de kuando, par xbasar un kanpo no se vòl trasportar la tèra frutífera de tuta la só superfise, e ʼlora se vèrđe tante fòse paralèle longo el pòsto kondanà tanto kuanto el xe largo, e de kuele solke se kava la tèra, e po le se inpinise ko i àrđeri de kuele laterali, xgualivàndole.",
 "gànđ",			"",			3,	1,	"g",	"1847",			"Kànđer.",
 "gang",			"x",			4,	4,	"a",	"1775",			"Strúxer.",
