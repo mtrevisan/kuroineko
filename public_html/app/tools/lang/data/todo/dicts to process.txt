@@ -26,3 +26,9 @@ po:[^\n]+po: > split line
 (\b(\w*?)([ae])(\w*)\b)(?=[\s\S]*(\b\2(?!\3)[ae]\4\b)) # find couples of words that differs only for [ae]
 po:adjective( [^i]|$) # add is:...
 o[nl]/[^\r\nU]+U\d > add exception to hyphenation rules
+
+correctness time = 463 s
+total words = 38378178
+unique words = 35904033
+difference = 2474145 = 30 s
+speed = 82890 w/s = 12.06 µs/w
