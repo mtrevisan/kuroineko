@@ -6651,6 +6651,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tixik",			"in",			4,	5,	"a",	"1854",			"Arabiar de la biada, deventar tixiko.",
 "to",				"",			4,	2,	"a",	"1775",			"Rifinir, struxerse.",
 "toc",			"",			1,	1,	"g",	"1810",			"Intinđer, tokar poko na roba likuida.",
+"tođ",			"s",			1,	1,	"a",	"1876",			"Spolverar.",
 "tok",			"",			1,	1,	"a",	"1415",			"",
 "tok",			"in",			1,	1,	"a",	"1775",			"Apalotolar.",
 "tok",			"re",			1,	1,	"a",	"1775",			"",
