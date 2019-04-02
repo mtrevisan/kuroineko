@@ -23351,15 +23351,15 @@ konsòƚoe/a0a2I1-1*0	po:verb ts:indicative_present is:interrogative st:konsoƚa
 konsolar/a0a1P0P1-1*0	po:verb ts:infinitive_simple
 konsòlo/a0a1P0P1FSI0-1*0	po:verb ts:indicative_present st:konsolar
 konsòloe/a0a1I1-1*0	po:verb ts:indicative_present is:interrogative st:konsolar
-soƚar/a0a2P0P2+0.0-0r6	po:verb ts:infinitive_simple
-sòƚo/a0a2P0P2I0+0.0-0	po:verb ts:indicative_present st:soƚar st:soƚer
-sòƚoe/a0a2I1+0.0-0	po:verb ts:indicative_present is:interrogative st:soƚar
-solar/a0a1P0P1+0.0-0r5	po:verb ts:infinitive_simple
-sòlo/a0a1P0P1FSI0+0.0-0	po:verb ts:indicative_present st:solar
-sòloe/a0a1I1+0.0-0	po:verb ts:indicative_present is:interrogative st:solar
-ŧolar/a0a1P0P1+0.0-0:0	po:verb ts:infinitive_simple
-ŧòlo/a0a1P0P1FSI0+0.0-0:0	po:verb ts:indicative_present st:ŧolar
-ŧòloe/a0a1I1+0.0-0:0	po:verb ts:indicative_present is:interrogative st:ŧolar
+soƚar/a0a2P0P2.0-0+0r6	po:verb ts:infinitive_simple
+sòƚo/a0a2P0P2I0.0-0+0	po:verb ts:indicative_present st:soƚar st:soƚer
+sòƚoe/a0a2I1.0-0+0	po:verb ts:indicative_present is:interrogative st:soƚar
+solar/a0a1P0P1.0-0+0r5	po:verb ts:infinitive_simple
+sòlo/a0a1P0P1FSI0.0-0+0	po:verb ts:indicative_present st:solar
+sòloe/a0a1I1.0-0+0	po:verb ts:indicative_present is:interrogative st:solar
+ŧolar/a0a1P0P1.0-0+0:0	po:verb ts:infinitive_simple
+ŧòlo/a0a1P0P1FSI0.0-0+0:0	po:verb ts:indicative_present st:ŧolar
+ŧòloe/a0a1I1.0-0+0:0	po:verb ts:indicative_present is:interrogative st:ŧolar
 insopar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 insopo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:insopar
 insópoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:insopar
@@ -45756,8 +45756,8 @@ frevenŧa/F0TE	po:noun is:singular_femenine
 frèxo/M0	po:noun is:singular_masculine
 fridiménola/F0	po:noun is:singular_femenine
 friđiménola/F0	po:noun is:singular_femenine
-frito/A1FS	po:adjective is:singular_masculine
-frito/A1FS*0	po:noun is:singular_masculine
+frito/A1FS*0-1	po:adjective is:singular_masculine
+frito/A1FS*0-1	po:noun is:singular_masculine
 fritoleta/F0TE	po:noun is:singular_femenine
 friximénola/F0TE	po:noun is:singular_femenine
 frixo/M0FS&0*0(4	po:noun is:singular_masculine
@@ -54401,8 +54401,10 @@ koɉonada/F0Y0Y1	po:noun is:singular_femenine
 kolto/M0FS	po:noun is:singular_masculine
 komiada/F0Y0Y1	po:noun is:singular_femenine
 komodada/F0Y0Y1	po:noun is:singular_femenine
-konsada/F0Y0Y1	po:noun is:singular_femenine
-konŧada/F0Y0Y1	po:noun is:singular_femenine
+konsada/F0Y0-1	po:noun is:singular_femenine
+konsado/M0Y0-1	po:noun is:singular_masculine
+konŧada/F0Y0-1	po:noun is:singular_femenine
+konŧado/M0Y0-1	po:noun is:singular_masculine
 kopañado/M0FSY0	po:noun is:singular_masculine
 kortegada/F0Y0Y1*0	po:noun is:singular_femenine
 kortelada/F0Y0Y1	po:noun is:singular_femenine
@@ -54871,7 +54873,8 @@ strolegada/F0Y0	po:adjective is:singular_femenine
 strolegado/M0FSY0	po:adjective is:singular_masculine
 stroƚegada/F0Y0	po:adjective is:singular_femenine
 stroƚegado/M0Y0	po:adjective is:singular_masculine
-stropada/F0Y0Y1-0	po:noun is:singular_femenine
+stropada/F0Y0-0	po:noun is:singular_femenine
+stropado/M0FSY0-0	po:noun is:singular_masculine
 strosada/F0Y0Y1	po:noun is:singular_femenine
 stroŧada/F0Y0Y1	po:noun is:singular_femenine
 strukada/F0Y0Y1	po:noun is:singular_femenine
@@ -55014,7 +55017,7 @@ xanpèƚa/F0	po:noun is:singular_femenine
 xbadajada/F0Y0Y1	po:noun is:singular_femenine
 xbadaɉada/F0Y0Y1	po:noun is:singular_femenine
 xbafarada/F0Y0	po:noun is:singular_femenine
-xbafarado/M0FSY0	po:noun is:singular_masculine
+xbafarado/M0FSY0-0	po:noun is:singular_masculine
 xbailada/F0Y0Y1	po:noun is:singular_femenine
 xbaiƚada/F0Y0Y1	po:noun is:singular_femenine
 xbaketada/F0Y0Y1	po:noun is:singular_femenine
@@ -55566,6 +55569,18 @@ buxarada	po:interjection
 buxaràa	po:interjection
 buxarà	po:interjection
 cexiòla/F0TE	po:noun is:singular_femenine
+deskaenada/F0Y0	po:noun is:singular_femenine
+deskaenado/M0FSY0	po:noun is:singular_masculine
+deskonida/F0Y0	po:noun is:singular_femenine
+deskonido/M0FSY0	po:noun is:singular_masculine
+deskordada/F0Y0	po:noun is:singular_femenine
+deskordado/M0FSY0	po:noun is:singular_masculine
+dexbonigolada/F0Y0	po:noun is:singular_femenine
+dexbonigolado/M0FSY0	po:noun is:singular_masculine
+dexbonigoƚada/F0Y0	po:noun is:singular_femenine
+dexbonigoƚado/M0Y0	po:noun is:singular_masculine
+diàvol–fòrte	po:noun is:masculine
+diàvoƚo–fòrte	po:noun is:masculine
 kagada/F0Y0	po:noun is:singular_femenine
 kagado/M0FSY0	po:noun is:singular_masculine
 kagadonào	po:noun
@@ -55599,14 +55614,14 @@ kopado/M0FSY0	po:noun is:singular_masculine
 kordoleta/F0TE	po:noun is:singular_femenine
 korlo/A1	po:adjective is:singular_masculine
 krañiŧa/F0TE	po:noun is:singular_femenine
-kuxida/F0Y0	po:noun is:singular_femenine
-kuxido/M0FSY0	po:noun is:singular_masculine
+kuxida/F0Y0-1	po:noun is:singular_femenine
+kuxido/M0FSY0-1	po:noun is:singular_masculine
 masado/M0FSY0@0	po:noun is:singular_masculine
 maŧado/M0FSY0@0	po:noun is:singular_masculine
 ŧendada/F0Y0TB	po:noun is:singular_femenine
 ŧimexin/A1TB	po:adjective is:singular_masculine
 
 
-/ 56
+/ 60
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
