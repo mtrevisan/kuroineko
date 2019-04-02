@@ -297,6 +297,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bandon",		"ar",			1,	4,	"a",	"1998",			"",
 "bandon",		"kontra",	1,	4,	"a",	"1867",			"",
 "bandon",		"x",			1,	4,	"a",	"1854",			"",
+"bank",			"in",			1,	1,	"g",	"1888",			"Inkantar, stolidir.",
 "bank",			"x",			1,	1,	"g",	"1775",			"",
 "banket",		"",			1,	4,	"a",	"1867",			"",
 "banp",			"",			1,	1,	"g",	"1852",			"Vanpir, àrder.",
