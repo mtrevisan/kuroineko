@@ -1889,7 +1889,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "frol",			"in",			4,	4,	"a",	"1775",			"Frolar.",
 "frol",			"s",			4,	4,	"a",	"1896",			"",
 "fromaj",		"in",			1,	4,	"g",	"1590",			"",
-"froñ",			"s",			1,	2,	"g",	"1854",			"Ŧavatar.",
+"froñ",			"s",			1,	2,	"a",	"1854",			"Ŧavatar.",
 "frondeđ",		"",			1,	5,	"a",	"1775",			"Dixeñar le fronde de i albari.",
 "froskeđ",		"",			1,	5,	"a",	"1810",			"Fraskeđasr.",
 "front",			"",			1,	2,	"a",	"1852",			"Afrontar, pontelar.",
