@@ -4776,6 +4776,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "piant",			"re",			1,	2,	"g",	"1854",			"",
 "piant",			"s",			1,	2,	"g",	"1775",			"",
 "piant",			"so",			1,	2,	"g",	"1852",			"",
+"piant",			"su",			1,	2,	"g",	"1888",			"",
 "piant",			"stra",		1,	2,	"g",	"1775",			"",
 "piant",			"tra",		1,	2,	"g",	"1896",			"Strapiantar.",
 "piant",			"tras",		1,	2,	"g",	"1867",			"",
