@@ -6533,6 +6533,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tent",			"sos",		1,	1,	"a",	"",				"",
 "tent",			"subs",		1,	1,	"a",	"1499",			"",
 "tent",			"sus",		1,	1,	"a",	"1590",			"",
+"tenteñ",		"",			1,	4,	"a",	"1888",			"",
 "tentinag",		"",			1,	6,	"g",	"1775",			"Tentenar (pad.).",
 "tentiñ",		"",			1,	4,	"a",	"1852",			"Tentenar.",
 "tenut",			"",			1,	3,	"a",	"1775",			"",
