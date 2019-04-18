@@ -3179,6 +3179,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kriteg",		"",			1,	2,	"a",	"1980",			"",
 "krivel",		"",			1,	4,	"g",	"1775",			"",
 "kro",			"",			1,	2,	"a",	"1560",			"Apasir, krovar.",
+"krociđ",		"",			1,	4,	"a",	"1884",			"Cokar de le galine.",
 "kroj",			"in",			1,	2,	"a",	"1852",			"Èser senpre malà; de kativa aparensa, kofà kurame mòjo e pò rensekío.",
 "krok",			"",			1,	2,	"g",	"1980",			"(bixiak)",
 "krok",			"s",			1,	2,	"g",	"1775",			"Rugiar, far skokar el skato de ʼl grileto.",
