@@ -1300,6 +1300,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "entuxiaxm",	"",			1,	6,	"g",	"1867",			"",
 "epilog",		"",			1,	2,	"a",	"",				"",
 "erb",			"in",			1,	0,	"g",	"1867",			"Mandar le bestie a mañar erba.",
+"erb",			"in",			4,	3,	"a",	"1884",			"",
 "ergoiđ",		"",			1,	4,	"a",	"1829",			"Far o tràer konseguenŧe.",
 "ered",			"dex",		1,	2,	"a",	"1867",			"",
 "erpeg",			"",			1,	0,	"g",	"1775",			"",
