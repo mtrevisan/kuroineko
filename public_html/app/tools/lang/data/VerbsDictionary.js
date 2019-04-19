@@ -4163,7 +4163,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "nin",			"",			1,	1,	"a",	"1775",			"Axitar la testa.",
 "nineg",			"",			1,	1,	"a",	"1775",			"Xmòver.",
 "ninol",			"",			1,	1,	"a",	"1852",			"Barkolar.",
-"niŧ",			"",			1,	1,	"a",	"1998",			"Tajar na kastaña parké no la scope inte la padela, skomenŧiar doparar.",
+"nix",			"",			1,	1,	"a",	"1884",			"Tajar na kastaña parké no la scope inte la padela, skomenŧiar doparar.",
 "nix",			"",			4,	3,	"a",	"1851",			"Netar de nòvo.",
 "no",				"",			1,	1,	"g",	"1311",			"",
 "no",				"dex",		1,	1,	"g",	"1980",			"",
