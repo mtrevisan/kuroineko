@@ -709,6 +709,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "brages",		"dex",		1,	4,	"a",	"1854",			"Xbragar.",
 "brages",		"in",			1,	4,	"a",	"1854",			"",
 "brages",		"x",			1,	4,	"a",	"1854",			"Xbragar.",
+"brageson",		"x",			1,	6,	"a",	"1884",			"Xbragesar.",
 "braget",		"",			1,	4,	"a",	"1854",			"(termine de kostrutori navali) Incodar le tole de inbono.",
 "braget",		"in",			1,	4,	"a",	"1867",			"",
 "bragol",		"",			1,	2,	"g",	"1851",			"Bransikar, tor in man.",
