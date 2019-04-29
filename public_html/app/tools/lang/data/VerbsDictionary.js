@@ -2091,6 +2091,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "gilŧ",			"x",			1,	1,	"a",	"1829",			"Xguiŧar.",
 "gind",			"",			1,	1,	"a",	"1867",			"Tirar in alto un albaro o na vela.",
 "ginŧ",			"x",			1,	1,	"a",	"1854",			"Spruŧar.",
+"giñ",			"x",			1,	3,	"g",	"1884",			"Xgiñaŧar.",
 "giñaŧ",			"",			1,	3,	"g",	"1829",			".",
 "giñaŧ",			"x",			1,	3,	"g",	"1590",			"",
 "girland",		"",			1,	4,	"g",	"1896",			".",
