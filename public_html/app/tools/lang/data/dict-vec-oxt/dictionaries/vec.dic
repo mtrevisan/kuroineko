@@ -10070,8 +10070,8 @@ kostumo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:kostumar
 kostúmoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:kostumar
 perkòter/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 perkoterò/b0b1b2I0	po:verb ts:indicative_future st:perkòter
-perkòto/a0a1a2P0P1P2FSI0vŧ	po:verb ts:indicative_present st:perkòter
-perkòtoe/a0a1a2I1vŧ	po:verb ts:indicative_present is:interrogative st:perkòter st:parkotar
+perkòto/a0a1a2P0P1P2FSI0vŧ	po:verb ts:indicative_present st:perkòter al:perkotar al:prekotar
+perkòtoe/a0a1a2I1vŧ	po:verb ts:indicative_present is:interrogative st:perkòter al:perkotar al:prekotar
 parkòtar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 parkotarò/b0b1b2I0	po:verb ts:indicative_future st:parkòtar
 skòtar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
@@ -15426,6 +15426,9 @@ insparitar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 insparito/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:insparitar
 insparítoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:insparitar
 perkotar/a0a1a2P0P1P2vŧ	po:verb ts:infinitive_simple
+prekotar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+prekòto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:prekotar
+prekòtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:prekotar
 perlar/a0a1a2P0P1P2+0	po:verb ts:infinitive_simple
 pèrlo/a0a1a2P0P1P2FSI0+0	po:verb ts:indicative_present st:perlar
 pèrloe/a0a1a2I1+0	po:verb ts:indicative_present is:interrogative st:perlar
@@ -30919,9 +30922,15 @@ porsèl/M0U0&0(4	po:noun is:singular_masculine
 porsèla/F0&0	po:noun is:singular_femenine
 porsèƚa/F0&1	po:noun is:singular_femenine
 porsèƚo/M0&1(5	po:noun is:singular_masculine
+porsèl/M0U0&0(4	po:adjective is:singular_masculine
+porsèla/F0&0	po:adjective is:singular_femenine
+porsèƚa/F0&1	po:adjective is:singular_femenine
+porsèƚo/M0&1(5	po:adjective is:singular_masculine
 portèla/F0&0*0	po:noun is:singular_femenine
 portèƚa/F0&1*0	po:noun is:singular_femenine
 porton/M0U0mf	po:noun is:singular_masculine
+porŧèl/M0U0&0(4	po:adjective is:singular_masculine
+porŧèla/F0&0	po:adjective is:singular_femenine
 porŧèl/M0U0&0(4	po:noun is:singular_masculine
 porŧèla/F0&0	po:noun is:singular_femenine
 posa/F0&0	po:noun is:singular_femenine
@@ -35756,6 +35765,7 @@ pontapié/F0	po:noun is:singular_masculine
 pontapiè/F0	po:noun is:singular_masculine
 pontapíe	po:noun is:singular_masculine
 pontexina/F0	po:noun is:singular_femenine
+pontivo/A1FSW0	po:adjective is:singular_masculine
 pontivo/A1FSW0	po:noun is:singular_masculine
 popa/F0	po:noun is:singular_femenine
 porésol/M0U1TEmf	po:noun is:singular_masculine
@@ -39647,8 +39657,10 @@ pinion/F0U0mf	po:noun is:singular_femenine
 pipion/F0U0mf	po:noun is:singular_femenine
 pisaròto/A1FS*0	po:adjective is:singular_masculine
 pisaròto/A1FS*0	po:noun is:singular_masculine
-pisegamòrto/M0FS	po:noun is:singular_masculine
-piŧegamòrto/M0FS	po:noun is:singular_masculine
+pisegamòrti	po:noun
+piŧegamòrti	po:noun
+písega–mòrti	po:noun
+píŧega–mòrti	po:noun
 piumaxo/M0FS	po:noun is:singular_masculine
 piviario	po:noun is:singular_masculine
 pivioxo/A1FSmf	po:noun is:singular_masculine
@@ -47286,10 +47298,12 @@ kúrtola/F0TE	po:noun is:singular_femenine
 labarinto/M0FS	po:noun is:singular_masculine
 ladareto/M0FSmf	po:noun is:singular_masculine
 ladarol/M0U0V0mf	po:noun is:singular_masculine
+ladarol/M0U0V0mf	po:adjective is:singular_masculine
 ladaron/A2U0mf	po:adjective is:singular_masculine
 ladroneŧo/M0FSTEmf	po:noun is:singular_masculine
 lađareto/M0FSmf	po:noun is:singular_masculine
 lađarol/M0U0V0mf	po:noun is:singular_masculine
+lađarol/M0U0V0mf	po:adjective is:singular_masculine
 lađaron/A2U0mf	po:adjective is:singular_masculine
 lađo/M0FSTE	po:adverb
 lago/M0FS	po:noun is:singular_masculine
@@ -56128,8 +56142,18 @@ verioƚèra/F0V1	po:noun is:singular_femenine
 pendoleta/F0TE	po:noun is:singular_femenine
 petel/M0U0TE	po:noun is:singular_masculine
 piantada/F0Y0Y1	po:noun is:singular_femenine
+pixoleto/M0TE	po:noun is:singular_masculine
+pividèl/F0TFU0	po:noun is:singular_masculine
+piŧegamòrto/M0FS
+piŧigamòrti	po:noun
+pisigamòrti	po:noun
+píŧiga–mòrti	po:noun
+písiga–mòrti	po:noun
+postòto/A1FS	po:adjective is:singular_masculine
+puntivo/A1FSW0	po:noun is:singular_masculine
+puntivo/A1FSW0	po:adjective is:singular_masculine
 
 
-/ 66
+/ 68
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ

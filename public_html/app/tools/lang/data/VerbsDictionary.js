@@ -5108,6 +5108,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "prateg",		"mal",		1,	2,	"g",	"1829",			"",
 "preŧix",		"",			1,	4,	"a",	"1560",			"",
 "predeg",		"",			1,	2,	"g",	"1980",			"",
+"prekot",		"",			1,	4,	"g",	"1884",			"Perkotar.",
 "preg",			"",			1,	2,	"g",	"1463",			"",
 "preg",			"stra",		1,	2,	"g",	"1867",			"",
 "prèm",			"",			3,	2,	"g",	"1851",			"Vòlŧer la barka a ŧanka, interesar, ʼver kura.",
