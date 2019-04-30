@@ -6334,6 +6334,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "stuđ",			"",			1,	2,	"a",	"",				"",
 "stuđ",			"de",			1,	2,	"a",	"1980",			"",
 "stuj",			"",			1,	2,	"a",	"1560",			"Studiar.",
+"stul",			"",			4,	4,	"a",	"1884",			"Bruxar un fià fin ke ʼl divente bruno.",
 "stup",			"",			1,	2,	"a",	"1538",			"Sarar.",
 "stup",			"",			4,	4,	"a",	"1560",			"Turar, intaxar, sarar na fenestra.",
 "stup",			"de",			1,	2,	"a",	"1810",			"Sturar.",
