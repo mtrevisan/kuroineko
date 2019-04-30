@@ -4605,6 +4605,7 @@ exàsparo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:exasparar
 exàsparoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:exasparar
 exaurir/a0a1a2d0d1d2P0P1P2r0	po:verb ts:infinitive_simple
 exebir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
+xeguir/a0a1a2e0e1e2P0P1P2	po:verb ts:infinitive_simple
 exeguir/a0a1a2e0e1e2P0P1P2	po:verb ts:infinitive_simple
 exèguo/e0e1e2P0P1P2I0	po:verb ts:indicative_present st:exeguir
 exèguoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:exeguir
@@ -23085,30 +23086,12 @@ sèstoe/a0a1a2I1-0+0@0	po:verb ts:indicative_present is:interrogative st:sestar
 ŧestar/a0a1P0P1	po:verb ts:infinitive_simple
 ŧesto/a0a1P0P1FSI0	po:verb ts:indicative_present st:ŧestar
 ŧéstoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:ŧestar
-asetar/a0a1a2P0P1P2r3r7	po:verb ts:infinitive_simple
-asèto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:asetar
-asètoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:asetar
-aŧetar/a0a1P0P1r2r7	po:verb ts:infinitive_simple
-aŧèto/a0a1P0P1FSI0	po:verb ts:indicative_present st:aŧetar
-aŧètoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:aŧetar
-insetar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-inseto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:insetar
-insétoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:insetar
-inŧetar/a0a1P0P1	po:verb ts:infinitive_simple
-inŧeto/a0a1P0P1FSI0	po:verb ts:indicative_present st:inŧetar
-inŧétoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:inŧetar
-presetar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-preseto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:presetar
-presétoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:presetar
-preŧetar/a0a1P0P1	po:verb ts:infinitive_simple
-preŧeto/a0a1P0P1FSI0	po:verb ts:indicative_present st:preŧetar
-preŧétoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:preŧetar
-resetar/a0a1a2P0P1P2r7	po:verb ts:infinitive_simple
-reseto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:resetar
-resétoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:resetar
-reŧetar/a0a1P0P1r7	po:verb ts:infinitive_simple
-reŧeto/a0a1P0P1FSI0	po:verb ts:indicative_present st:reŧetar
-reŧétoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:reŧetar
+setar/a0a1a2P0P1P2r3r7@0.0+0^2	po:verb ts:infinitive_simple
+sèto/a0a1a2P0P1P2FSI0@0.0+0^2	po:verb ts:indicative_present st:setar
+sètoe/a0a1a2I1@0.0+0^2	po:verb ts:indicative_present is:interrogative st:setar
+ŧetar/a0a1P0P1r2r7@0.0+0^2	po:verb ts:infinitive_simple
+ŧèto/a0a1P0P1FSI0@0.0+0^2	po:verb ts:indicative_present st:ŧetar
+ŧètoe/a0a1I1@0.0+0^2	po:verb ts:indicative_present is:interrogative st:ŧetar
 skonsetar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 skonseto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:skonsetar
 skonsétoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:skonsetar
@@ -26308,8 +26291,8 @@ nòstro/A1	po:pronoun is:singular_masculine
 nòstro/A1	po:adjective_possessive is:singular_masculine
 tó/A1	po:pronoun is:singular_masculine
 tó/A1	po:adjective_possessive is:singular_masculine
-vòstro/A1	po:pronoun is:singular_masculine
-vòstro/A1	po:adjective_possessive is:singular_masculine
+vòstro/A1‘0	po:pronoun is:singular_masculine
+vòstro/A1‘0	po:adjective_possessive is:singular_masculine
 só/A1	po:pronoun is:singular_masculine
 só/A1	po:adjective_possessive is:singular_masculine
 / pronòme e ajetivo demostrativo
@@ -30686,7 +30669,8 @@ paràgrafo/M0FS	po:noun is:singular_masculine
 parànkola/F0TE	po:noun is:singular_femenine
 parentèla/F0TE	po:noun is:singular_femenine
 parento/A1FSmf	po:noun is:singular_masculine
-parenŧa/F0TE	po:noun is:singular_femenine
+parenŧa/F0M1@0	po:noun is:singular_femenine
+parensa/F0M1@0	po:noun is:singular_femenine
 paréntexi	po:noun is:femenine
 parfetivo/A1FSW0+0	po:adjective is:singular_masculine
 parfèto/A1FS+0*0	po:noun is:singular_masculine
@@ -38676,9 +38660,7 @@ anŧopresèr/M0V0	po:noun is:singular_masculine
 anŧopresèra/F0V0	po:noun is:singular_femenine
 anŧoprèso/M0FS	po:noun is:singular_masculine
 añon/A2U0mf	po:quantifier
-aparensa/F0M1	po:noun is:singular_femenine
 aparente/M0FSmf	po:adjective is:singular
-aparenŧa/F0M1	po:noun is:singular_femenine
 aparesente/M0FSmf	po:adjective is:singular
 apè	po:adverb
 apè	po:preposition
@@ -56251,8 +56233,10 @@ xirandoƚon	po:adverb
 xlonfron/A2U0mf	po:adjective is:singular_masculine
 xlonfron/A2U0mf	po:noun is:singular_masculine
 / Nazari, Giulio. Parallelo fra il dialetto bellunese rustico e la lingua italiana. Belluno, 1894.
+mesisia/F0@0&0	po:noun is:singular_femenine
+meŧiŧia/F0@0&0	po:noun is:singular_femenine
 
 
-/ 14
+/ 15
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
