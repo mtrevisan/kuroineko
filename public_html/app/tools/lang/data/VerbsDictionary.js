@@ -6919,6 +6919,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "túnd",			"o",			3,	1,	"a",	"1509",			"",
 
 "ŧabat",			"mal",		1,	3,	"g",	"1829",			"Deventar malà.",
+"ŧabot",			"",			1,	3,	"g",	"1884",			"Balbetar.",
 "ŧak",			"",			1,	1,	"g",	"1998",			"Mastegar.",
 "ŧakol",			"",			1,	1,	"g",	"1867",			"",
 "ŧakol",			"de",			1,	1,	"g",	"1867",			"Kavar le ŧakole.",
