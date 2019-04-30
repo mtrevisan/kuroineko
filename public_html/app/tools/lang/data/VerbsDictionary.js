@@ -5194,6 +5194,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "puleg",			"s",			1,	1,	"a",	"",				"Kavar le pulexi.",
 "puleđ",			"s",			1,	3,	"a",	"1775",			"",
 "puleđ",			"des",		1,	3,	"a",	"1854",			"Spulexar.",
+"pulin",			"s",			1,	3,	"a",	"1884",			"Spulexar.",
 "pun",			"",			4,	3,	"a",	"1414",			"",
 "pun",			"in",			4,	3,	"a",	"1560",			"",
 "punar",			"",			1,	3,	"g",	"",				"Ponarar.",
