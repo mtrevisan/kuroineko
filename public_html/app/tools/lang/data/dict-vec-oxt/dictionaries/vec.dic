@@ -26455,8 +26455,6 @@ tuto/A1FSʼ0	po:quantifier is:singular_masculine
 una	po:quantifier is:singular_femenine
 uno	po:quantifier is:singular_masculine
 / prepoxiŧion
-ʼnte	po:preposition st:inté
-ʼte	po:preposition st:inté
 a/Z0	po:preposition
 ai	po:preposition
 dapò	po:preposition st:daspò
@@ -26492,8 +26490,8 @@ indréo	po:preposition
 indrío/‘0	po:adverb
 indrío/‘0	po:preposition
 insenbre/W0	po:adverb
-inte/‘0	po:preposition al:intʼ
 intʼ/‘0	po:preposition st:te
+inté/‘0	po:preposition al:intʼ
 intro	po:adverb
 intro	po:preposition
 inver	po:preposition
@@ -28493,8 +28491,8 @@ brulè/TE	po:adjective is:singular
 bruska/F0&0	po:noun is:singular_femenine
 bruskàndol/M0U1TEmf	po:noun is:singular_masculine
 bruskin/M0&0	po:noun is:singular_masculine
-bruta/F0&0	po:adjective is:singular_femenine
-bruto/M0FSq0q1&0	po:adjective is:singular_masculine
+bruta/F0&0	po:adjective is:singular_femenine al:burta
+bruto/M0FSq0q1&0	po:adjective is:singular_masculine al:burto
 bruxor/F0*0&0mf	po:noun is:singular_masculine
 budèl/M0U0(0	po:noun is:singular_masculine
 budèƚo/M0(1	po:noun is:singular_masculine
@@ -29567,8 +29565,8 @@ kavin/M0	po:noun is:singular_masculine
 kavra/F0(2	po:noun is:singular_femenine
 kaxèr/M0V0	po:noun is:singular_masculine
 kaxèra/F0V0	po:noun is:singular_femenine
-kàmara/F0^0	po:noun is:singular_femenine
-kàmera/F0^0	po:noun is:singular_femenine
+kàmara/F0^0	po:noun is:singular_femenine al:kanbra
+kàmera/F0^0	po:noun is:singular_femenine al:kàmara al:kanbra
 kànevo/A1mf	po:noun is:singular_masculine
 kànkar/A1	po:interjection is:singular_masculine
 kànkar/A1	po:noun is:singular_masculine
@@ -30498,8 +30496,7 @@ noxi	po:noun is:plural_femenine
 nónsol/M0U1TEmf	po:noun is:singular_masculine
 nónŧol/M0U1mf	po:noun is:singular_masculine
 nòma/F0	po:adverb
-nòme	po:noun is:singular_masculine al:nòmi
-nòmi	po:noun is:plural_masculine st:nòme
+nòme/M0	po:noun is:singular_masculine al:ñòme
 nòra/F0	po:noun is:singular_femenine
 nòrma/F0	po:noun is:singular_femenine
 nòse	po:noun is:femenine
@@ -30526,6 +30523,7 @@ núvola/F0TE	po:noun is:singular_femenine
 ñàñera/F0	po:noun is:singular_femenine
 ñèl/M0U0TE	po:noun is:singular_masculine
 ñoko/A1FSmf	po:noun is:singular_masculine
+ñòme	po:noun is:singular_masculine st:nòme
 ñu	po:noun is:masculine
 obietivo/A1FS	po:noun is:singular_masculine
 obietivo/A1FSW0	po:adjective is:singular_masculine
@@ -31067,7 +31065,7 @@ pronunŧia/F0TE	po:noun is:singular_femenine
 propietà	po:noun is:femenine
 proposta/F0	po:noun is:singular_femenine
 propòsta/F0	po:noun is:singular_femenine
-propòxito/M0FS*0	po:noun is:singular_masculine
+propòxito/M0FS	po:noun is:singular_masculine
 prosimia/F0	po:noun is:singular_femenine
 prosperità	po:noun is:femenine
 prospetivo/A1FSW0	po:adjective is:singular_masculine
@@ -31673,6 +31671,7 @@ spiŧo/M0FS	po:noun is:singular_masculine
 spongarola/F0TE	po:noun is:singular_femenine
 springaorto/M0FS	po:noun is:singular_masculine
 spriŧo/M0FSTE	po:noun is:singular_masculine
+spropòxito/M0FS	po:noun is:singular_masculine al:sparpòxito
 spusolente/M0FSmf	po:adjective is:singular
 spusoƚente/M0mf	po:adjective is:singular
 spuŧolente/M0FSmf	po:adjective is:singular
@@ -39399,7 +39398,7 @@ međen/F0U0mf	po:noun is:singular_masculine
 meexina/F0	po:noun is:singular_femenine
 menaròto/M0FS	po:noun is:singular_masculine
 menata/F0	po:noun is:singular_femenine
-menbro/A1	po:noun is:singular_masculine
+menbro/A1	po:noun is:singular_masculine al:nenbro
 mencon/M0U0<0<1mf	po:adjective is:singular_masculine
 mencona/F0<0<1	po:adjective is:singular_femenine
 mendeké	po:adverb
@@ -52989,7 +52988,7 @@ kamomila/F0TE	po:noun is:singular_femenine
 kanavasa/F0	po:noun is:singular_femenine
 kanbiovaluta/F0	po:noun is:singular
 kanbiovaƚuta/F0	po:noun is:singular
-kanbra/F0	po:noun is:singular_femenine
+kanbra/F0	po:noun is:singular_femenine al:kàmera
 kanerin/M0	po:noun is:singular_masculine
 kanfin/M0	po:noun is:singular_masculine
 kanica/F0	po:noun is:singular_femenine
@@ -56255,19 +56254,23 @@ xirandoƚon	po:adverb
 xlonfron/A2U0mf	po:adjective is:singular_masculine
 xlonfron/A2U0mf	po:noun is:singular_masculine
 / Nazari, Giulio. Parallelo fra il dialetto bellunese rustico e la lingua italiana. Belluno, 1894.
+burta/F0&0	po:adjective is:singular_femenine st:bruta
+burto/M0FSq0q1&0	po:adjective is:singular_masculine st:bruto
 defexa/F0	po:noun is:singular_femenine
 fursi	po:adverb st:forse
 konkruxion/F0U0mf	po:noun is:singular_femenine st:konkluxion
 konkruxivo/A1FSW0	po:adjective is:singular_masculine st:konkluxivo
 mesisia/F0@0&0	po:noun is:singular_femenine
 meŧiŧia/F0@0&0	po:noun is:singular_femenine
+nenbro/A1	po:noun is:singular_masculine st:menbro
 polito/A1FS(4	po:adjective is:singular_masculine
 polito/FS	po:adverb is:singular_masculine
 ronpon/F0U0mf	po:noun is:singular_masculine st:ranpon
 sopèrbia/F0	po:noun is:singular_femenine
 sopèrbo/A1	po:adjective is:singular_masculine
+sparpòxito/M0FS	po:noun is:singular_masculine st:spropòxito
 
 
-/ 18
+/ 19
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
