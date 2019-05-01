@@ -2876,6 +2876,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kit",			"",			1,	1,	"a",	"1829",			"Renunŧiar a ʼl servixo, otèñer el konjhèdo",
 "klam",			"es",			1,	2,	"g",	"",				"",
 "klam",			"pro",		1,	2,	"g",	"1775",			"",
+"klam",			"s",			1,	2,	"g",	"1894",			"Esklamar.",
 "klin",			"de",			1,	2,	"a",	"",				"",
 "klin",			"in",			1,	2,	"a",	"1896",			"",
 "klon",			"",			1,	2,	"a",	"",				"",
