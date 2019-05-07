@@ -1888,6 +1888,9 @@ bixégoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:bixegolar
 bixegoƚar/a0a2P0P2	po:verb ts:infinitive_simple
 bixégoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:bixegoƚar
 bixégoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:bixegoƚar
+bixigar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+bíxigo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:bixigar
+bíxigoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:bixigar
 bixigolar/a0a1P0P1*0	po:verb ts:infinitive_simple
 bixígolo/a0a1P0P1FSI0*0	po:verb ts:indicative_present st:bixigolar
 bixígoloe/a0a1I1*0	po:verb ts:indicative_present is:interrogative st:bixigolar
@@ -2042,12 +2045,9 @@ xbolŧar/a0a1P0P1	po:verb ts:infinitive_simple
 xbolŧo/a0a1P0P1FSI0	po:verb ts:indicative_present st:xbolŧar
 xbólŧoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:xbolŧar
 bonir/a0a1a2d0d1d2P0P1P2+0r0	po:verb ts:infinitive_simple
-abonar/a0a1a2P0P1P2r0r5	po:verb ts:infinitive_simple
-abono/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:abonar
-abónoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:abonar
-inbonar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-inbono/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:inbonar
-inbónoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inbonar
+bonar/a0a1a2P0P1P2r0@0+0r5	po:verb ts:infinitive_simple
+bono/a0a1a2P0P1P2FSI0@0+0	po:verb ts:indicative_present st:bonar
+bónoe/a0a1a2I1@0+0	po:verb ts:indicative_present is:interrogative st:bonar
 bonasar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 bonaso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:bonasar
 bonàsoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:bonasar
@@ -32750,7 +32750,7 @@ bikòka/F0	po:noun is:singular_femenine
 bilanŧo/M0FSTE*0	po:noun is:singular_masculine
 biƚanso/M0*0	po:noun is:singular_masculine
 binbin/M0	po:noun is:singular_masculine
-binbo/M0	po:noun is:singular_masculine
+binbo/A1	po:noun is:singular_masculine
 binda/F0&0	po:noun is:singular_femenine
 biolko/A1FSmf	po:noun is:singular_masculine
 bioto/A1FSmf	po:adjective is:singular_masculine
@@ -44772,7 +44772,7 @@ boriñòla/F0TE	po:noun is:singular_femenine
 boròxa/F0	po:noun is:singular_femenine
 borsakin/M0	po:noun is:singular_masculine
 borselin/M0TE	po:noun is:singular_masculine
-borso/M0FS§0	po:adjective is:singular_masculine
+borso/M0FS§0&2&3	po:adjective is:singular_masculine
 borŧakin/M0	po:noun is:singular_masculine
 bosko/M0FS§0&0	po:noun is:singular_masculine
 botame/M0	po:noun is:singular_masculine
@@ -44802,7 +44802,7 @@ bragadièr/A1	po:noun is:singular_masculine
 brago/M0(0	po:noun is:singular_masculine
 bragòŧo/M0FSTE	po:noun is:singular_masculine
 brandestòko/M0FS	po:noun is:singular_masculine
-brando/M0	po:noun is:singular_masculine
+brando/M0&2&3	po:noun is:singular_masculine
 brankadina/F0	po:noun is:singular_femenine
 branko/M0FS	po:noun is:singular_masculine
 branŧo/M0FSTE	po:noun is:singular_masculine
@@ -52170,6 +52170,7 @@ borina/F0	po:noun is:singular_femenine
 boroxa/F0	po:noun is:singular_femenine
 botiđo/M0TE	po:noun is:singular_masculine
 bròa/F0	po:noun is:singular_femenine
+brufo/M0FS*0	po:noun is:singular_masculine
 buskato/M0FS	po:noun is:singular_masculine
 capa–capa	po:interjection
 cija/F0TE	po:noun is:singular_femenine
@@ -52549,7 +52550,6 @@ xbiankiđin/A2	po:noun is:singular_masculine
 xbiankixin/A2	po:noun is:singular_masculine
 xbofio/A1	po:noun is:singular_masculine
 xbrufo/M0FS	po:adjective is:singular_masculine
-xbrufo/M0FS	po:noun is:singular_masculine
 xemè	po:noun is:masculine
 xendeneta/F0	po:noun is:singular_femenine
 xendenèla/F0TE	po:noun is:singular_femenine
@@ -54698,9 +54698,8 @@ rajada/F0Y0Y1	po:noun is:singular_femenine
 raɉada/F0Y0Y1	po:noun is:singular_femenine
 ramada/F0Y0Y1	po:noun is:singular_femenine
 ranaròtol/M0U1TEmf	po:noun is:singular_masculine
-ransia/F0	po:adjective is:singular_femenine
 rantegèla/F0TE	po:noun is:singular_femenine
-ranŧia/F0	po:adjective is:singular_femenine
+ranŧia/F0TE	po:adjective is:singular_femenine
 rasada/F0Y0Y1	po:adjective is:singular_femenine
 rànsida/F0	po:adjective is:singular_femenine
 rànŧida/F0	po:adjective is:singular_femenine
@@ -56286,9 +56285,25 @@ bàsker/M0mf	po:noun is:singular_masculine
 bekaleño/M0FS	po:noun is:singular_masculine
 bekaƚeño/M0	po:noun is:singular_masculine
 bekaran/M0U0	po:noun is:singular_masculine
+bekèŧo/M0TE	po:noun is:singular_masculine
+biòso/A1FS	po:adjective is:singular_masculine
+bodata/F0	po:noun is:singular_femenine
+boskardèla/F0TE	po:noun is:singular_femenine
+brenŧia/F0TE	po:noun is:singular_femenine
+brinka/F0	po:noun is:singular_femenine
+bronbelèr/M0V0	po:noun is:singular_masculine
+bronbelèra/F0V0	po:noun is:singular_femenine
+bronbeƚèr/M0V1	po:noun is:singular_masculine
+bronbeƚèra/F0V1	po:noun is:singular_femenine
+bronbexèr/M0V0	po:noun is:singular_masculine
+bronbexèra/F0V0	po:noun is:singular_femenine
 brontin/M0	po:noun is:singular_masculine
+bruma/F0	po:noun is:singular_femenine
 burta/F0&0	po:adjective is:singular_femenine st:bruta
 burto/M0FSq0q1&0	po:adjective is:singular_masculine st:bruto
+buxnèl/M0U0TE	po:adjective is:singular_masculine
+buxnor/F0mf	po:noun is:singular_masculine
+búdol/M0U1TEmf	po:noun is:singular_masculine
 defexa/F0	po:noun is:singular_femenine
 egua/F0&0(2<0<1	po:noun is:singular_femenine st:akua
 fardèl/M0U0&0	po:noun is:singular_masculine st:fradèl
@@ -56300,6 +56315,12 @@ inkontro–me/P6	po:adverb
 inkóntrame/P6	po:adverb
 inkóntrome/P6	po:adverb
 intorʼ	po:preposition st:intorno
+kalvía/F0	po:noun is:singular_femenine
+kamexo/M0FS(0	po:noun is:singular_masculine
+kamexolin/M0TE	po:noun is:singular_masculine
+kamexòla/F0TE	po:noun is:singular_femenine
+kamixòla/F0TE	po:noun is:singular_femenine
+kamòl/M0U0	po:noun is:singular_masculine
 konkruxion/F0U0mf	po:noun is:singular_femenine st:konkluxion
 konkruxivo/A1FSW0	po:adjective is:singular_masculine st:konkluxivo
 litra/F0TB	po:noun is:singular_femenine
@@ -56318,7 +56339,7 @@ sparpòxito/M0FS	po:noun is:singular_masculine st:spropòxito
 spàsol/M0U1TEmf	po:noun is:singular_masculine
 
 
-/ 32/93
+/ 32/94
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
 / da sè = da só pòsta
