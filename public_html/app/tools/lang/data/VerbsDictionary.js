@@ -3001,6 +3001,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "konpañ",		"s",			1,	4,	"g",	"1854",			"",
 "konpas",		"",			1,	4,	"g",	"1867",			"Mexurar kol konpaso.",
 "konpil",		"",			1,	4,	"a",	"1775",			"",
+"konpit",		"",			1,	1,	"a",	"1894",			"Numarar.",
 "konplet",		"",			1,	5,	"g",	"1867",			"",
 "konpónd",		"",			3,	4,	"a",	"1775",			"Stajonar, kòxer ben, kroxolar, poltrir.",
 "konpr",			"",			1,	1,	"a",	"1829",			"",
