@@ -3874,6 +3874,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "merkantiđ",	"",			1,	7,	"a",	"1867",			"",
 "merŧ",			"x",			1,	1,	"g",	"1896",			"Xmerŧiar.",
 "merŧi",			"x",			1,	1,	"g",	"1775",			"Spacar.",
+"mesed",			"",			1,	1,	"a",	"1894",			"Misiar.",
 "mesi",			"dex",		1,	1,	"a",	"1894",			"Xvejar.",
 "mesteg",		"",			1,	1,	"a",	"1980",			"Domestegar.",
 "mesteg",		"de",			1,	1,	"a",	"1796",			"Domestegar.",
