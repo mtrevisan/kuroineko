@@ -6359,6 +6359,9 @@ fúrfoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:furfar
 furiar/a0a1a2P0P1P2+0	po:verb ts:infinitive_simple
 furio/a0a1a2P0P1P2I0+0	po:verb ts:indicative_present st:furiar
 fúrioe/a0a1a2I1+0	po:verb ts:indicative_present is:interrogative st:furiar
+furigar/a0a1a2P0P1P2*0r0	po:verb ts:infinitive_simple
+fúrigo/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:furigar
+fúrigoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:furigar
 ofuskar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 ofusko/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:ofuskar
 ofúskoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:ofuskar
@@ -12721,7 +12724,7 @@ xmerŧiar/a0a1P0P1	po:verb ts:infinitive_simple
 xmèrŧio/a0a1P0P1I0	po:verb ts:indicative_present st:xmerŧiar
 xmèrŧioe/a0a1I1	po:verb ts:indicative_present is:interrogative st:xmerŧiar
 dexmesiar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-dexmesio/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:dexmesiar
+dexmesio/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:dexmesiar
 dexmésioe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:dexmesiar
 mestegar/a0a1a2P0P1P2-0-1	po:verb ts:infinitive_simple
 méstego/a0a1a2P0P1P2FSI0-0-1	po:verb ts:indicative_present st:mestegar
@@ -26915,6 +26918,7 @@ Febrar/Z0	po:noun is:singular_masculine
 Febraro/Z0	po:noun is:singular_masculine
 Fevraro/Z0	po:noun is:singular_masculine
 Fevrèr/Z0	po:noun is:singular_masculine
+Feverèr/Z0	po:noun is:singular_masculine
 Marŧo/FSZ0	po:noun is:singular_masculine
 Marso/Z0	po:noun is:singular_masculine
 Aprile/FSZ0	po:noun is:singular_masculine
@@ -33493,9 +33497,9 @@ fóntego/A1FS	po:noun is:singular_masculine
 fórfexe/M0FSmf	po:noun is:singular_femenine
 fórkola/F0TE	po:noun is:singular_femenine
 fòfio/A1	po:adjective is:singular_masculine
-fòl/M0	po:noun is:singular_masculine
+fòl/M0(4	po:noun is:singular_masculine
 fòla/F0TE	po:noun is:singular_femenine
-fòƚo/M0	po:noun is:singular_masculine
+fòƚo/M0(5	po:noun is:singular_masculine
 fòsa/F0&0&2&3<0<1	po:noun is:singular_femenine
 fòsina/F0	po:noun is:singular_femenine
 fòso/M0FS&0(2	po:noun is:singular_masculine
@@ -56340,8 +56344,25 @@ duka/F0	po:noun is:singular_femenine
 đuso/M0TB	po:noun is:singular_masculine
 egua/F0&0(2<0<1	po:noun is:singular_femenine st:akua
 èstra	po:adverb
+falkar/M0	po:noun is:singular_masculine
 fardèl/M0U0&0	po:noun is:singular_masculine st:fradèl
 fardèƚo/M0&1	po:noun is:singular_masculine st:fardèƚo
+ferion/F0U0mf	po:adjective is:singular_masculine
+fersorin/F0vŧ	po:noun is:singular_masculine
+filandèl/M0U0	po:noun is:singular_masculine
+fiƚandèƚo/M0	po:noun is:singular_masculine
+fiŧo/M0FSTE	po:noun is:singular_masculine
+forígol/A1U1mf	po:adjective is:singular_masculine
+forígoƚo/A1	po:adjective is:singular_masculine
+forsana/F0	po:noun is:singular_femenine
+forŧana/F0	po:noun is:singular_femenine
+franbolon/F0TEU0mf	po:noun is:singular_masculine
+fraròtol/M0U1TEmf	po:noun is:singular_masculine
+fregenin/A2	po:noun is:singular_masculine
+frégol/M0U1TE	po:noun is:singular_masculine
+frièl/M0TE	po:noun is:singular_masculine
+fugada/F0Y0	po:adjective is:singular_femenine
+fugado/M0FSY0	po:adjective is:singular_masculine
 fursi	po:adverb st:forse
 inkontra–me/P6	po:adverb
 inkontra	po:adverb

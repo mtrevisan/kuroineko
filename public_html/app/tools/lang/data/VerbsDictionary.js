@@ -1953,6 +1953,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "furf",			"",			1,	1,	"a",	"1980",			"Frugar.",
 "furi",			"",			1,	1,	"a",	"1896",			"",
 "furi",			"in",			1,	1,	"a",	"1854",			"",
+"furig",			"",			1,	1,	"a",	"1894",			"Furegar.",
+"furig",			"s",			1,	1,	"a",	"",				"Sfuregar.",
 "fusk",			"o",			1,	1,	"a",	"1867",			"",
 "fusteg",		"",			1,	1,	"a",	"1980",			"Molestar.",
 "futiñ",			"",			1,	3,	"a",	"1775",			"Fruñar, frugar, frugacar, stuŧegar.",
