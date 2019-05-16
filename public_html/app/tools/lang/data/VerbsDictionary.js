@@ -2267,6 +2267,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "grit",			"",			1,	2,	"a",	"1854",			"Dentelar, roxegar.",
 "gritol",		"dex",		4,	6,	"a",	"1867",			"",
 "gritol",		"in",			4,	6,	"a",	"1852",			"Ragriŧar.",
+"griŧ",			"",			1,	2,	"a",	"1894",			"Vergoñar, no oxar.",
 "griŧol",		"x",			1,	2,	"a",	"1852",			"Skriŧar.",
 "grix",			"a",			1,	2,	"a",	"1829",			"Ingremir.",
 "grix",			"x",			1,	2,	"a",	"1852",			"Strofinar na roba dura par krear un sòn akuto.",
