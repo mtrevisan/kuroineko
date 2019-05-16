@@ -7101,6 +7101,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧuet",			"",			1,	2,	"a",	"1829",			"Ŧoetar.",
 "ŧuk",			"",			1,	1,	"a",	"1852",			"Bàter la tèsta.",
 "ŧuk",			"in",			1,	1,	"a",	"1852",			"Inbéver, inpresionar, reskaldar, xbalordir.",
+"ŧuk",			"in",			4,	3,	"a",	"1894",			"Restar de saso.",
 "ŧukar",			"",			1,	1,	"a",	"1980",			"",
 "ŧukar",			"in",			1,	1,	"a",	"1590",			"",
 "ŧukon",			"",			1,	3,	"a",	"1851",			"",
