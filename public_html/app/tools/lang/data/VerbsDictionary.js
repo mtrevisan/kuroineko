@@ -5477,6 +5477,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "rost",			"",			4,	4,	"a",	"1464",			"(franko) Far na rosta.",
 "rost",			"in",			4,	4,	"a",	"1896",			"",
 "rostel",		"",			1,	4,	"g",	"1847",			"Restelar.",
+"rot",			"",			1,	1,	"a",	"1894",			"Rantar.",
 "rot",			"de",			1,	1,	"a",	"",				"",
 "rotam",			"",			1,	3,	"g",	"1775",			"",
 "roŧ",			"",			1,	3,	"g",	"1829",			"",
