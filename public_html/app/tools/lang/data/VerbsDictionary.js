@@ -4760,6 +4760,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pest",			"",			1,	1,	"a",	"1529",			"",
 "pest",			"in",			1,	1,	"a",	"1775",			"Infetar.",
 "pesteg",		"",			1,	1,	"a",	"1980",			"(bixiak)",
+"pestiđ",		"",			1,	4,	"a",	"1894",			"Domandar ko insistenŧa.",
 "pestol",		"",			1,	1,	"a",	"1775",			"Pestar kaminando, andar vant e indrio ko inpasienŧa.",
 "pestuñ",		"",			1,	4,	"a",	"",				"Ŧanpetar, pestar ko insistenŧa, kalpestar.",
 "pet",			"",			1,	1,	"g",	"1590",			"Infetar.",
