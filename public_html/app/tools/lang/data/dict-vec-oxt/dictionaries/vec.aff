@@ -1820,7 +1820,7 @@ SFX b4 rò nse rò
 SFX b4 rò nte/M0FS arò
 SFX b4 rò nte/M0FSmf erò
 SFX b4 rò nto/P0P1P2 rò
-SFX b4 rò se/FSM0 rò
+SFX b4 rò se/M0FS rò
 SFX b4 rò sto/A1FS rò
 SFX b4 rò va/P3P4P5I0I4 rò
 SFX b4 rò ve/I0 rò
@@ -2349,7 +2349,7 @@ SFX b8 rò ne/I1 erò	is:interrogative
 SFX b8 rò nse erò
 SFX b8 rò nte/M0FSmf erò
 SFX b8 rò nto/P0P1P2 erò
-SFX b8 rò se/FSM0 erò
+SFX b8 rò se/M0FS erò
 SFX b8 rò sto/A1FS erò
 SFX b8 rò va/P3I0I4 erò
 SFX b8 rò veƚo/A1 erò
@@ -2433,7 +2433,7 @@ SFX b9 èser eséntomene/P6P7P8 èser
 SFX b9 èser esí/P0P1P2P3P4P5I2I4 èser
 SFX b9 èser esú/A1 èser
 SFX b9 èser étu/I3 èser	is:interrogative
-SFX b9 èser furese/FSM0 èser
+SFX b9 èser furese/M0FS èser
 SFX b9 èser furesen/I0 èser
 SFX b9 èser furesene/I1 èser	is:interrogative
 SFX b9 èser furesense èser
@@ -2768,7 +2768,7 @@ SFX c0 aver epié/I4 aver
 SFX c0 aver epiémoe/I1 aver
 SFX c0 aver epiéu/I5 aver
 SFX c0 aver epiónmene/P6P7P8 aver
-SFX c0 aver ese/FSM0 aver
+SFX c0 aver ese/M0FS aver
 SFX c0 aver eva/P3P4P5I0I4 aver
 SFX c0 aver eve/I0 aver
 SFX c0 aver evi/I0I2I4 aver
@@ -3120,7 +3120,7 @@ SFX c1 r ne/I1 aver	is:interrogative
 SFX c1 r nse aver
 SFX c1 r nte/M0FSmf aver
 SFX c1 r nto aver
-SFX c1 r se/FSM0 aver
+SFX c1 r se/M0FS aver
 SFX c1 r va/P3P4P5I0I4 aver
 SFX c1 r ve/I0 aver
 SFX c1 r vi/I0I2I4 aver
@@ -3391,7 +3391,7 @@ SFX c1 r ne/I1 aer	is:interrogative
 SFX c1 r nse aer
 SFX c1 r nte/M0FSmf aer
 SFX c1 r nto aer
-SFX c1 r se/FSM0 aer
+SFX c1 r se/M0FS aer
 SFX c1 r va/P3P4P5I0I4 aer
 SFX c1 r ve/I0 aer
 SFX c1 r vi/I0I2I4 aer
@@ -5415,67 +5415,67 @@ SFX r0 Y 7
 SFX r0 0 amento/M0FSmf n
 SFX r0 o amento/M0FSmf o
 SFX r0 r mento/M0FSmf [^a]r
-SFX r0 r mento/M0FSmf [^u]ar
-SFX r0 uar omento/M0FSmf uar
-SFX r0 rò mento/M0FSmf arò
 SFX r0 erò imento/M0FSmf erò
+SFX r0 uar omento/M0FSmf uar
+SFX r0 r mento/M0FSmf [^u]ar
+SFX r0 rò mento/M0FSmf arò
 
 # nominali deverbali ko èle vanesente (-mento)
 SFX r1 Y 2
 SFX r1 r mento/M0mf r
-SFX r1 rò mento/M0mf arò
+SFX r1 rò mento/M0mf rò
 
 # nominali deverbali (-ŧion)
 SFX r2 Y 26
-SFX r2 r ŧion/F0U0mf [^aei]r
+SFX r2 ir ŧion/F0U0mf uir
+SFX r2 àer aŧion/F0U0mf àer
 SFX r2 r ŧion/F0U0mf [^t]ar
+SFX r2 r ŧion/F0U0mf [^u]ir
+SFX r2 erò iŧion/F0U0mf terò
+SFX r2 merò nŧion/F0U0mf merò
+SFX r2 nerò xiŧion/F0U0mf nerò
+SFX r2 ñerò nŧion/F0U0mf ñerò
 SFX r2 r ŧion/F0U0mf [^en]tar
+SFX r2 erò ion/F0U0mf [^dmnñtuvsŧx]erò
+SFX r2 tar ŧion/F0U0mf petar
+SFX r2 derò ŧion/F0U0mf nderò
+SFX r2 verò uŧion/F0U0mf lverò
+SFX r2 guerò ŧion/F0U0mf guerò
 SFX r2 r ŧion/F0U0mf [^p]etar
+SFX r2 derò uŧion/F0U0mf lderò
+SFX r2 verò ŧion/F0U0mf iverò
+SFX r2 xerò ŧion/F0U0mf [aeiu]xerò
+SFX r2 orxerò ureŧion/F0U0mf orxerò
+SFX r2 r ŧion/F0U0mf [^vx]entar
+SFX r2 tar ŧion/F0U0mf [^mt]entar
+SFX r2 erò ion/F0U0mf [sŧ]erò
+SFX r2 r ŧion/F0U0mf [^aei]r
 SFX r2 r ŧion/F0U0mf [^s]petar
 SFX r2 r ŧion/F0U0mf [^e]ntar
-SFX r2 r ŧion/F0U0mf [^vx]entar
 SFX r2 r ŧion/F0U0mf [^à]er
-SFX r2 r ŧion/F0U0mf [^u]ir
-SFX r2 tar ŧion/F0U0mf spetar
-SFX r2 tar ŧion/F0U0mf [vx]entar
-SFX r2 àer aŧion/F0U0mf àer
-SFX r2 ir ŧion/F0U0mf uir
-SFX r2 erò ion/F0U0mf [^dmnñtuvsŧx]erò
-SFX r2 erò ion/F0U0mf [sŧ]erò
-SFX r2 xerò ŧion/F0U0mf [aeiu]xerò
-SFX r2 orxerò ureŧion/F0U0mf sorxerò
-SFX r2 merò nŧion/F0U0mf umerò
-SFX r2 nerò xiŧion/F0U0mf onerò
-SFX r2 verò ŧion/F0U0mf iverò
-SFX r2 erò iŧion/F0U0mf eterò
-SFX r2 derò ŧion/F0U0mf [ae]nderò
-SFX r2 ñerò nŧion/F0U0mf eñerò
-SFX r2 derò uŧion/F0U0mf olderò
-SFX r2 verò uŧion/F0U0mf olverò
-SFX r2 guerò ŧion/F0U0mf stinguerò
 
 # nominali deverbali (-sion)
 SFX r3 Y 20
-SFX r3 àer asion/F0U0mf àer
 SFX r3 ir sion/F0U0mf uir
+SFX r3 àer asion/F0U0mf àer
 SFX r3 r sion/F0U0mf [^t]ar
 SFX r3 r sion/F0U0mf [^u]ir
+SFX r3 erò ision/F0U0mf terò
 SFX r3 merò nsion/F0U0mf merò
 SFX r3 nerò xision/F0U0mf nerò
 SFX r3 ñerò nsion/F0U0mf ñerò
-SFX r3 erò ision/F0U0mf terò
 SFX r3 r sion/F0U0mf [^en]tar
+SFX r3 tar sion/F0U0mf petar
 SFX r3 derò usion/F0U0mf lderò
 SFX r3 derò sion/F0U0mf nderò
+SFX r3 verò usion/F0U0mf lverò
 SFX r3 guerò sion/F0U0mf guerò
 SFX r3 verò sion/F0U0mf iverò
-SFX r3 verò usion/F0U0mf lverò
-SFX r3 tar sion/F0U0mf petar
-SFX r3 xerò sion/F0U0mf [^r]xerò
 SFX r3 r sion/F0U0mf [^p]etar
+SFX r3 xerò sion/F0U0mf [^r]xerò
 SFX r3 orxerò uresion/F0U0mf orxerò
-SFX r3 tar sion/F0U0mf [vx]entar
 SFX r3 r sion/F0U0mf [^vx]entar
+SFX r3 tar sion/F0U0mf [^mt]entar
 
 # nominali deverbali ko èle vanesente (-sion)
 SFX r4 Y 4
@@ -5597,6 +5597,8 @@ SFX v0 èr aría/F0 èr
 SFX v0 èr ería/F0 èr
 SFX v0 èr arieta/F0 èr
 SFX v0 èr erieta/F0 èr
+SFX v0 0 ía/F0 or
+SFX v0 0 ieta/F0 or
 SFX v0 0 ría/F0 [^ílƚ]a
 SFX v0 0 rieta/F0 [^ílƚ]a
 SFX v0 a ería/F0 [^ílƚ]a
@@ -5605,8 +5607,6 @@ SFX v0 o aría/F0 [^cdđkx]o
 SFX v0 o ería/F0 [^cdđkx]o
 SFX v0 o arieta/F0 [^cdđkx]o
 SFX v0 o erieta/F0 [^cdđkx]o
-SFX v0 0 ía/F0 [^aè]r
-SFX v0 0 ieta/F0 [^aè]r
 SFX v0 èla elaría/F0 èla
 SFX v0 èla elería/F0 èla
 SFX v0 èla elarieta/F0 èla
