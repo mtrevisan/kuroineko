@@ -5174,16 +5174,16 @@ SFX M1 e io e
 
 # sostantivi plurali ko trasformaŧion '[aeou][ln] > 'Vi
 SFX U0 Y 10
+SFX U0 al ài al
+SFX U0 el éi el
+SFX U0 ol ói ol
+SFX U0 ul úi ul
+SFX U0 an ài an
+SFX U0 en éi en
+SFX U0 on ói on
+SFX U0 un úi un
 SFX U0 l i [àéèóòú]l
 SFX U0 n i [àéèóòú]n
-SFX U0 al ài al
-SFX U0 an ài an
-SFX U0 el éi el
-SFX U0 en éi en
-SFX U0 ol ói ol
-SFX U0 on ói on
-SFX U0 ul úi ul
-SFX U0 un úi un
 
 # sostantivi plurali ko trasformaŧion '[aeou].+[aeou][ln] > Vi
 SFX U1 Y 3
@@ -5194,68 +5194,67 @@ SFX U1 n i [aeou]n
 
 # trasformaŧion intra varianti (l > ƚ, j > ɉ, ŧ > s)
 SFX TE Y 53
-SFX TE đa da/F0 đa
-SFX TE đa xa/F0 đa
-SFX TE ja ɉa/F0 ja
-SFX TE ŧa sa/F0 ŧa
-SFX TE la ƚa/F0 [aeiouàèéíòóú]la
-SFX TE ŧe se/M0 ŧe
-SFX TE jo ɉo/M0FS jo
-SFX TE l ƚo/M0mf [eo]l
-SFX TE l ƚo/M0 [aiuàèéíòóú]l
-SFX TE đo do/M0mf [eo]đo
-SFX TE đo xo/M0mf [eo]đo
+SFX TE lò ƚò [aeiou]lò
 SFX TE là ƚà [aeiou]là
 SFX TE lè ƚè [aeiou]lè
-SFX TE lò ƚò [aeiou]lò
-SFX TE đan dan/M0 đan
-SFX TE đan xan/M0 đan
-SFX TE ŧia sia/F0 ŧia
-SFX TE ŧía sía/F0 ŧía
-SFX TE ŧin sin/M0 ŧin
-SFX TE jon ɉon/F0U0mf jon
-SFX TE ŧon son/F0U0mf ŧon
-SFX TE ŧal sal/F0U0 ŧal
-SFX TE ŧèl sèl/M0U0 ŧèl
-SFX TE ŧen sen/M0 ŧen
-SFX TE ŧio sio/M0 ŧio
-SFX TE đo do/M0 [^eo]đo
-SFX TE đo xo/M0 [^eo]đo
-SFX TE ŧo so/M0FSmf [eo]ŧo
-SFX TE ŧo so/M0FS [^eo]ŧo
+SFX TE leto ƚeto/M0mf [aeiouàèéíòóú]leto
+SFX TE lèto ƚèto/M0 [aeiou]lèto
+SFX TE leta ƚeta/F0 [aeiouàèéíòóú]leta
+SFX TE lèta ƚèta/F0 [aeiou]lèta
+SFX TE lon ƚon/F0mf [aeiouàèéíòóú]lon
+SFX TE lona ƚona/F0 [aeiouàèéíòóú]lona
+SFX TE l ƚo/M0mf [eo]l
+SFX TE l ƚo/M0 [aiuàèéíòóú]l
+SFX TE la ƚa/F0 [aeiouàèéíòóú]la
+SFX TE lio ƚio/M0 [aeiouàèéíòóú]lio
 SFX TE lia ƚia/F0 [aeiouàèéíòóú]lia
 SFX TE lan ƚan/M0 [aeiouàèéíòóú]lan
-SFX TE len ƚen/M0mf [aeiouàèéíòóú]len
-SFX TE lèn ƚèn/M0mf [aeiouàèéíòóú]lèn
+SFX TE lana ƚana/F0 [aeiouàèéíòóú]lana
 SFX TE lin ƚin/M0 [aeiouàèéíòóú]lin
-SFX TE lon ƚon/F0mf [aeiouàèéíòóú]lon
-SFX TE lio ƚio/M0 [aeiouàèéíòóú]lio
+SFX TE lina ƚina/F0 [aeiouàèéíòóú]lina
+SFX TE len ƚen/M0mf [aeiouàèéíòóú]len
+SFX TE lena ƚena/F0 [aeiouàèéíòóú]lena
+SFX TE lèn ƚèn/M0mf [aeiouàèéíòóú]lèn
+SFX TE lèna ƚèna/F0 [aeiouàèéíòóú]lèna
+SFX TE jo ɉo/M0FS jo
+SFX TE ja ɉa/F0 ja
+SFX TE jon ɉon/F0U0mf jon
+SFX TE jona ɉona/F0 jona
+SFX TE ŧo so/M0FSmf [eo]ŧo
+SFX TE ŧo so/M0FS [^eo]ŧo
+SFX TE ŧa sa/F0 ŧa
+SFX TE ŧe se/M0 ŧe
+SFX TE ŧio sio/M0 ŧio
+SFX TE ŧia sia/F0 ŧia
+SFX TE ŧía sía/F0 ŧía
+SFX TE ŧon son/F0U0mf ŧon
+SFX TE ŧona sona/F0 ŧona
+SFX TE ŧion sion/F0U0mf ŧion
+SFX TE ŧal sal/F0U0 ŧal
+SFX TE ŧèl sèl/M0U0 ŧèl
+SFX TE ŧial sial/F0U0 ŧial
+SFX TE ŧin sin/M0 ŧin
+SFX TE ŧina sina/F0 ŧina
+SFX TE ŧen sen/M0 ŧen
+SFX TE ŧena sena/F0 ŧena
+SFX TE đo do/M0mf [eo]đo
+SFX TE đo do/M0 [^eo]đo
+SFX TE đo xo/M0mf [eo]đo
+SFX TE đo xo/M0 [^eo]đo
+SFX TE đa da/F0 đa
+SFX TE đa xa/F0 đa
+SFX TE đan dan/M0 đan
+SFX TE đan xan/M0 đan
 SFX TE đana dana/F0 đana
 SFX TE đana xana/F0 đana
-SFX TE jona ɉona/F0 jona
-SFX TE ŧena sena/F0 ŧena
-SFX TE ŧina sina/F0 ŧina
-SFX TE ŧona sona/F0 ŧona
-SFX TE lana ƚana/F0 [aeiouàèéíòóú]lana
-SFX TE lena ƚena/F0 [aeiouàèéíòóú]lena
-SFX TE lèna ƚèna/F0 [aeiouàèéíòóú]lèna
-SFX TE lina ƚina/F0 [aeiouàèéíòóú]lina
-SFX TE lona ƚona/F0 [aeiouàèéíòóú]lona
-SFX TE leta ƚeta/F0 [aeiouàèéíòóú]leta
-SFX TE leto ƚeto/M0mf [aeiouàèéíòóú]leto
-SFX TE lèta ƚèta/F0 [aeiou]lèta
-SFX TE lèto ƚèto/M0 [aeiou]lèto
-SFX TE ŧial sial/F0U0 ŧial
-SFX TE ŧion sion/F0U0mf ŧion
 
 # trasformaŧion intra varianti ko èle vanesente (j > ɉ)
 SFX Te Y 1
 SFX Te jo ɉo/M0 jo
 
-# trasformaŧion intra varianti (femenil l > ƚe)
-SFX TF Y 2
+# trasformaŧion intra varianti (femenil l > ƚe, j > ɉ)
+SFX TF Y 1
 SFX TF l ƚe/F0 [aeiouàèéíòóú]l
-SFX TF le ƚe/F0 [aeiouàèéíòóú]le
 
 
 # trasformaŧion iniŧial de paròla intra varianti (l > ƚ, j > ɉ, ŧ > s, đ > d/x)
@@ -5277,93 +5276,93 @@ PFX TB Đ X Đ
 
 # piante e mistièri (-(i)èr/-(i)er, -aro, -dor/-tor, -(i)ol/-(i)òl)
 SFX V0 Y 42
-SFX V0 èr ar/M0 [^i]èr
-SFX V0 èr ereto/M0FSmf [^i]èr
-SFX V0 èr areto/M0FSmf [^i]èr
-SFX V0 èra era/F0 [^i]èra
-SFX V0 èra ara/F0 [^i]èra
-SFX V0 èra ereta/F0 [^i]èra
-SFX V0 èra areta/F0 [^i]èra
-SFX V0 ièr er/M0mf ièr
-SFX V0 ièr ar/M0 ièr
-SFX V0 ièr ereto/M0FSmf ièr
-SFX V0 ièr areto/M0FSmf ièr
-SFX V0 ièra era/F0 ièra
-SFX V0 ièra ara/F0 ièra
-SFX V0 ièra ereta/F0 ièra
-SFX V0 ièra areta/F0 ièra
-SFX V0 èr er/M0mf ièr
-SFX V0 èr ier/M0mf [^aeoucijɉñ]èr
-SFX V0 èr iereto/M0FSmf [^aeoucijɉñ]èr
-SFX V0 èra iera/F0 [^aeoucijɉñ]èra
-SFX V0 èra iereta/F0 [^aeoucijɉñ]èra
-SFX V0 èr ièr/M0 [^aeoucijɉñ]èr
-SFX V0 èra ièra/F0 [^aeoucijɉñ]èra
-SFX V0 dor tor/M0mf [aei]dor
-SFX V0 dor toreto/M0FSmf [aei]dor
-SFX V0 0 eto/M0FSmf [aei]dor
-SFX V0 dor or/M0mf [aei]dor
-SFX V0 dor oreto/M0FSmf [aei]dor
-SFX V0 dora tora/F0 [aei]dora
-SFX V0 a eta/F0 [aei]dora
-SFX V0 dora toreta/F0 [aei]dora
-SFX V0 dora ora/F0 [aei]dora
-SFX V0 dora oreta/F0 [aei]dora
-SFX V0 ol òl/M0U0 [dđrsŧx]ol
 SFX V0 0 eto/M0FSmf [dđrsŧx]ol
+SFX V0 ol òl/M0U0 [dđrsŧx]ol
+SFX V0 ol iòl/M0U0 [dđrsŧx]ol
 SFX V0 ol iol/M0U0mf [dđrsŧx]ol
 SFX V0 ol ioleto/M0FSmf [dđrsŧx]ol
-SFX V0 ol iòl/M0U0 [dđrsŧx]ol
-SFX V0 ola òla/F0 [dđrsŧx]ola
 SFX V0 a eta/F0 [dđrsŧx]ola
+SFX V0 0 eto/M0FSmf [aei]dor
+SFX V0 èr er/M0mf ièr
+SFX V0 ola òla/F0 [dđrsŧx]ola
 SFX V0 ola iola/F0 [dđrsŧx]ola
-SFX V0 ola ioleta/F0 [dđrsŧx]ola
 SFX V0 ola iòla/F0 [dđrsŧx]ola
+SFX V0 ola ioleta/F0 [dđrsŧx]ola
+SFX V0 ièr ar/M0 ièr
+SFX V0 ièr er/M0mf ièr
+SFX V0 ièr areto/M0FSmf ièr
+SFX V0 ièr ereto/M0FSmf ièr
+SFX V0 dor or/M0mf [aei]dor
+SFX V0 dor tor/M0mf [aei]dor
+SFX V0 dor oreto/M0FSmf [aei]dor
+SFX V0 dor toreto/M0FSmf [aei]dor
+SFX V0 èr ar/M0 [^i]èr
+SFX V0 èr areto/M0FSmf [^i]èr
+SFX V0 èr ereto/M0FSmf [^i]èr
+SFX V0 èr ièr/M0 [^aeoucijɉñ]èr
+SFX V0 èr ier/M0mf [^aeoucijɉñ]èr
+SFX V0 èr iereto/M0FSmf [^aeoucijɉñ]èr
+SFX V0 a eta/F0 [aei]dora
+SFX V0 ièra ara/F0 ièra
+SFX V0 ièra era/F0 ièra
+SFX V0 ièra areta/F0 ièra
+SFX V0 ièra ereta/F0 ièra
+SFX V0 dora ora/F0 [aei]dora
+SFX V0 dora tora/F0 [aei]dora
+SFX V0 dora oreta/F0 [aei]dora
+SFX V0 dora toreta/F0 [aei]dora
+SFX V0 èra ara/F0 [^i]èra
+SFX V0 èra era/F0 [^i]èra
+SFX V0 èra areta/F0 [^i]èra
+SFX V0 èra ereta/F0 [^i]èra
+SFX V0 èra iera/F0 [^aeoucijɉñ]èra
+SFX V0 èra ièra/F0 [^aeoucijɉñ]èra
+SFX V0 èra iereta/F0 [^aeoucijɉñ]èra
 
 # piante e mistièri ko èle vanesente (-èr, -aro, -(i)oƚo/-(i)òƚo)
 SFX V1 Y 42
-SFX V1 èr ar/M0 [^i]èr
-SFX V1 èr ereto/M0mf [^i]èr
-SFX V1 èr areto/M0mf [^i]èr
-SFX V1 èra era/F0 [^i]èra
-SFX V1 èra ara/F0 [^i]èra
-SFX V1 èra ereta/F0 [^i]èra
-SFX V1 èra areta/F0 [^i]èra
-SFX V1 ièr er/M0mf ièr
-SFX V1 ièr ar/M0 ièr
-SFX V1 ièr ereto/M0mf ièr
-SFX V1 ièr areto/M0mf ièr
-SFX V1 ièra era/F0 ièra
-SFX V1 ièra ara/F0 ièra
-SFX V1 ièra ereta/F0 ièra
-SFX V1 ièra areta/F0 ièra
-SFX V1 èr er/M0mf ièr
-SFX V1 èr ier/M0mf [^aeoucijɉñ]èr
-SFX V1 èr iereto/M0mf [^aeoucijɉñ]èr
-SFX V1 èra iera/F0 [^aeoucijɉñ]èra
-SFX V1 èra iereta/F0 [^aeoucijɉñ]èra
-SFX V1 èr ièr/M0 [^aeoucijɉñ]èr
-SFX V1 èra ièra/F0 [^aeoucijɉñ]èra
-SFX V1 dor tor/M0mf [aei]dor
-SFX V1 dor toreto/M0mf [aei]dor
-SFX V1 0 eto/M0mf [aei]dor
-SFX V1 dor or/M0mf [aei]dor
-SFX V1 dor oreto/M0mf [aei]dor
-SFX V1 dora tora/F0 [aei]dora
-SFX V1 a eta/F0 [aei]dora
-SFX V1 dora toreta/F0 [aei]dora
-SFX V1 dora ora/F0 [aei]dora
-SFX V1 dora oreta/F0 [aei]dora
-SFX V1 oƚo òƚo/M0 [drsx]oƚo
+SFX V1 a eta/F0 [rsx]oƚa
 SFX V1 o eto/M0mf [drsx]oƚo
+SFX V1 0 eto/M0mf [aei]dor
+SFX V1 èr er/M0mf ièr
+SFX V1 oƚa òƚa/F0 [rsx]oƚa
+SFX V1 oƚa ioƚa/F0 [rsx]oƚa
+SFX V1 oƚa iòƚa/F0 [rsx]oƚa
+SFX V1 oƚa ioƚeta/F0 [rsx]oƚa
+SFX V1 oƚo òƚo/M0 [drsx]oƚo
+SFX V1 oƚo iòƚo/M0 [drsx]oƚo
 SFX V1 oƚo ioƚo/M0mf [drsx]oƚo
 SFX V1 oƚo ioƚeto/M0mf [drsx]oƚo
-SFX V1 oƚo iòƚo/M0 [drsx]oƚo
-SFX V1 oƚa òƚa/F0 [rsx]oƚa
-SFX V1 a eta/F0 [rsx]oƚa
-SFX V1 oƚa ioƚa/F0 [rsx]oƚa
-SFX V1 oƚa ioƚeta/F0 [rsx]oƚa
-SFX V1 oƚa iòƚa/F0 [rsx]oƚa
+SFX V1 ièr ar/M0 ièr
+SFX V1 ièr er/M0mf ièr
+SFX V1 ièr areto/M0mf ièr
+SFX V1 ièr ereto/M0mf ièr
+SFX V1 dor or/M0mf [aei]dor
+SFX V1 dor tor/M0mf [aei]dor
+SFX V1 dor oreto/M0mf [aei]dor
+SFX V1 dor toreto/M0mf [aei]dor
+SFX V1 èr ar/M0 [^i]èr
+SFX V1 èr ièr/M0 [^aeoucijɉñ]èr
+SFX V1 èr ier/M0mf [^aeoucijɉñ]èr
+SFX V1 èr areto/M0mf [^i]èr
+SFX V1 èr ereto/M0mf [^i]èr
+SFX V1 èr iereto/M0mf [^aeoucijɉñ]èr
+SFX V1 a eta/F0 [aei]dora
+SFX V1 ièra ara/F0 ièra
+SFX V1 ièra era/F0 ièra
+SFX V1 ièra areta/F0 ièra
+SFX V1 ièra ereta/F0 ièra
+SFX V1 dora ora/F0 [aei]dora
+SFX V1 dora tora/F0 [aei]dora
+SFX V1 dora oreta/F0 [aei]dora
+SFX V1 dora toreta/F0 [aei]dora
+SFX V1 èra ara/F0 [^i]èra
+SFX V1 èra era/F0 [^i]èra
+SFX V1 èra iera/F0 [^aeoucijɉñ]èra
+SFX V1 èra ièra/F0 [^aeoucijɉñ]èra
+SFX V1 èra areta/F0 [^i]èra
+SFX V1 èra ereta/F0 [^i]èra
+SFX V1 èra iereta/F0 [^aeoucijɉñ]èra
 
 
 # nominali deajetivali (-eŧa)
@@ -5402,8 +5401,8 @@ SFX q2 o iŧia/F0 o
 # nominali deajetivali (-isia)
 SFX q3 Y 3
 SFX q3 0 isia/F0 l
-SFX q3 e isia/F0 ƚe
 SFX q3 o isia/F0 o
+SFX q3 e isia/F0 ƚe
 
 
 # nominali deverbali (-mento)
@@ -5414,7 +5413,7 @@ SFX r0 r mento/M0FSmf [^a]r
 SFX r0 erò imento/M0FSmf erò
 SFX r0 uar omento/M0FSmf uar
 SFX r0 r mento/M0FSmf [^u]ar
-SFX r0 rò mento/M0FSmf arò
+SFX r0 rò mento/M0FSmf [^e]rò
 
 # nominali deverbali ko èle vanesente (-mento)
 SFX r1 Y 2
@@ -5423,40 +5422,40 @@ SFX r1 rò mento/M0mf rò
 
 # nominali deverbali (-ŧion)
 SFX r2 Y 16
-SFX r2 r ŧion ar
-SFX r2 ir ŧion uir
-SFX r2 àer aŧion àer
-SFX r2 r ŧion [^u]ir
-SFX r2 erò iŧion terò
-SFX r2 merò nŧion merò
-SFX r2 nerò xiŧion nerò
-SFX r2 ñerò nŧion ñerò
-SFX r2 erò ion [đsŧ]erò
-SFX r2 derò uŧion lderò
-SFX r2 derò ŧion nderò
-SFX r2 verò ŧion iverò
-SFX r2 verò uŧion lverò
-SFX r2 guerò ŧion guerò
-SFX r2 xerò ŧion [^r]xerò
-SFX r2 orxerò ureŧion orxerò
+SFX r2 r ŧion/F0U0mf ar
+SFX r2 ir ŧion/F0U0mf uir
+SFX r2 àer aŧion/F0U0mf àer
+SFX r2 r ŧion/F0U0mf [^u]ir
+SFX r2 erò iŧion/F0U0mf terò
+SFX r2 merò nŧion/F0U0mf merò
+SFX r2 nerò xiŧion/F0U0mf nerò
+SFX r2 ñerò nŧion/F0U0mf ñerò
+SFX r2 erò ion/F0U0mf [đsŧ]erò
+SFX r2 derò uŧion/F0U0mf lderò
+SFX r2 derò ŧion/F0U0mf nderò
+SFX r2 verò ŧion/F0U0mf iverò
+SFX r2 verò uŧion/F0U0mf lverò
+SFX r2 guerò ŧion/F0U0mf guerò
+SFX r2 xerò ŧion/F0U0mf [^r]xerò
+SFX r2 orxerò ureŧion/F0U0mf orxerò
 
 # nominali deverbali (-sion)
 SFX r3 Y 15
-SFX r3 r sion ar
-SFX r3 ir sion uir
-SFX r3 àer asion àer
-SFX r3 r sion [^u]ir
-SFX r3 erò ision terò
-SFX r3 merò nsion merò
-SFX r3 nerò xision nerò
-SFX r3 ñerò nsion ñerò
-SFX r3 derò usion lderò
-SFX r3 derò sion nderò
-SFX r3 verò sion iverò
-SFX r3 verò usion lverò
-SFX r3 guerò sion guerò
-SFX r3 xerò sion [^r]xerò
-SFX r3 orxerò uresion orxerò
+SFX r3 r sion/F0U0mf [^i]r
+SFX r3 ir sion/F0U0mf uir
+SFX r3 àer asion/F0U0mf àer
+SFX r3 r sion/F0U0mf [^u]ir
+SFX r3 erò ision/F0U0mf terò
+SFX r3 merò nsion/F0U0mf merò
+SFX r3 nerò xision/F0U0mf nerò
+SFX r3 ñerò nsion/F0U0mf ñerò
+SFX r3 derò usion/F0U0mf lderò
+SFX r3 derò sion/F0U0mf nderò
+SFX r3 verò sion/F0U0mf iverò
+SFX r3 verò usion/F0U0mf lverò
+SFX r3 guerò sion/F0U0mf guerò
+SFX r3 xerò sion/F0U0mf [^r]xerò
+SFX r3 orxerò uresion/F0U0mf orxerò
 
 # nominali deverbali ko èle vanesente (-sion)
 SFX r4 Y 4
@@ -5572,14 +5571,14 @@ SFX v0 0 arieta/F0 [ln]
 SFX v0 0 erieta/F0 [ln]
 SFX v0 0 ía/F0 ar
 SFX v0 0 ieta/F0 ar
+SFX v0 0 ía/F0 or
+SFX v0 0 ieta/F0 or
 SFX v0 ar ería/F0 ar
 SFX v0 ar erieta/F0 ar
 SFX v0 èr aría/F0 èr
 SFX v0 èr ería/F0 èr
 SFX v0 èr arieta/F0 èr
 SFX v0 èr erieta/F0 èr
-SFX v0 0 ía/F0 or
-SFX v0 0 ieta/F0 or
 SFX v0 0 ría/F0 [^ílƚ]a
 SFX v0 0 rieta/F0 [^ílƚ]a
 SFX v0 a ería/F0 [^ílƚ]a
@@ -5640,8 +5639,8 @@ SFX v0 ería arieta/F0 ería
 SFX v1 Y 10
 SFX v1 e ista/A2 e
 SFX v1 0 ista/A2 [ln]
-SFX v1 ía ista/A2 ía
 SFX v1 o sta/A2 io
+SFX v1 ía ista/A2 ía
 SFX v1 èr erista/A2 èr
 SFX v1 a ista/A2 [^dií]a
 SFX v1 o ista/A2 [^i]o
@@ -5653,60 +5652,60 @@ SFX v1 ònia onista/A2 ònia
 # metafonèxi
 SFX mf Y 55
 SFX mf el ili el
+SFX mf ol uli ol
 SFX mf en ini en
+SFX mf on uni on
 SFX mf er iri er
+SFX mf or uri or
 SFX mf exe ixi exe
 SFX mf edo idi edo
-SFX mf eđo iđi eđo
-SFX mf eko iki eko
-SFX mf eƚo iƚi eƚo
-SFX mf eño iñi eño
-SFX mf eso isi eso
-SFX mf eto iti eto
-SFX mf eŧo iŧi eŧo
-SFX mf exo ixi exo
-SFX mf evo ivi evo
 SFX mf odo udi odo
+SFX mf eđo iđi eđo
 SFX mf ođo uđi ođo
+SFX mf eko iki eko
 SFX mf oko uki oko
+SFX mf eƚo iƚi eƚo
 SFX mf oƚo uƚi oƚo
+SFX mf eño iñi eño
 SFX mf oño iñi oño
+SFX mf eso isi eso
 SFX mf oso usi oso
+SFX mf eto iti eto
 SFX mf oto uti oto
+SFX mf eŧo iŧi eŧo
 SFX mf oŧo uŧi oŧo
-SFX mf oxo uxi oxo
+SFX mf evo ivi evo
 SFX mf ovo uvi ovo
-SFX mf ol uli ol
-SFX mf on uni on
-SFX mf or uri or
-SFX mf órden úrdini órden
+SFX mf exo ixi exo
+SFX mf oxo uxi oxo
+SFX mf orse ursi orse
+SFX mf ente inti ente
+SFX mf onte unti onte
 SFX mf oldo uldi oldo
-SFX mf olko ulki olko
 SFX mf ordo urdi ordo
 SFX mf orđo urđi orđo
-SFX mf orxo urxi orxo
+SFX mf olko ulki olko
 SFX mf orko urki orko
-SFX mf obioxo ubiuxi obioxo
-SFX mf obrioxo ubriuxi obrioxo
-SFX mf ofioxo ufiuxi ofioxo
-SFX mf olioxo uliuxi olioxo
-SFX mf oƚioxo uƚiuxi oƚioxo
-SFX mf onioxo uniuxi onioxo
-SFX mf oñoxo uñuxi oñoxo
-SFX mf orioxo uriuxi orioxo
-SFX mf ordioxo urdiuxi ordioxo
+SFX mf ento inti ento
+SFX mf onto unti onto
+SFX mf orxo urxi orxo
+SFX mf órden úrdini órden
 SFX mf ojoxo ujuxi ojoxo
 SFX mf oɉoxo uɉuxi oɉoxo
 SFX mf oloxo uluxi oloxo
 SFX mf oƚoxo uƚuxi oƚoxo
 SFX mf omoxo umuxi omoxo
+SFX mf oñoxo uñuxi oñoxo
 SFX mf oroxo uruxi oroxo
+SFX mf obioxo ubiuxi obioxo
+SFX mf ofioxo ufiuxi ofioxo
+SFX mf olioxo uliuxi olioxo
+SFX mf oƚioxo uƚiuxi oƚioxo
+SFX mf onioxo uniuxi onioxo
+SFX mf orioxo uriuxi orioxo
 SFX mf ostoxo ustuxi ostoxo
-SFX mf ente inti ente
-SFX mf ento inti ento
-SFX mf onte unti onte
-SFX mf onto unti onto
-SFX mf orse ursi orse
+SFX mf ordioxo urdiuxi ordioxo
+SFX mf obrioxo ubriuxi obrioxo
 
 
 # avèrbi (-mente)
@@ -5747,8 +5746,8 @@ SFX W1 èƚa eƚamente/W2 èƚa	po:adverb
 
 # avèrbi (-mente)
 SFX W2 Y 2
-SFX W2 e re mente	po:adverb
-SFX W2 te 0 mente	po:adverb
+SFX W2 e re te	po:adverb
+SFX W2 te 0 te	po:adverb
 
 
 # sostantivi koletivi, ...
