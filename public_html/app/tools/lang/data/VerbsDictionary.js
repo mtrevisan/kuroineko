@@ -7087,6 +7087,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧim",			"",			1,	1,	"a",	"1775",			"Spontar, tajar la ponta, skurtar.",
 "ŧimeg",			"",			1,	1,	"a",	"1560",			"Sintilar, amikar, xbircar.",
 "ŧiment",		"",			1,	3,	"a",	"1854",			"",
+"ŧimig",			"",			1,	1,	"a",	"1894",			"Spontar (alba, stele, polxin da ʼl vòvo).",
 "ŧimol",			"",			1,	1,	"a",	"1775",			"Kavar le ŧime, spelaŧar el lana.",
 "ŧinkuant",		"",			1,	5,	"g",	"1854",			"Ŧinguetar.",
 "ŧingan",		"",			1,	4,	"g",	"1980",			"(bixiak) Adeskar.",
