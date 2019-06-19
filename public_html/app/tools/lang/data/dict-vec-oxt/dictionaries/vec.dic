@@ -2662,6 +2662,14 @@ brústoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:brustoƚar
 brústoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:brustoƚar
 brustolir/a0a1d0d1P0P1	po:verb ts:infinitive_simple
 brustoƚir/a0a2d0d2P0P2	po:verb ts:infinitive_simple
+brustular/a0a1P0P1	po:verb ts:infinitive_simple
+brústulo/a0a1P0P1FSI0	po:verb ts:indicative_present st:brustular
+brústuloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:brustular
+brustuƚar/a0a2P0P2	po:verb ts:infinitive_simple
+brústuƚo/a0a2P0P2I0	po:verb ts:indicative_present st:brustuƚar
+brústuƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:brustuƚar
+brustulir/a0a1d0d1P0P1	po:verb ts:infinitive_simple
+brustuƚir/a0a2d0d2P0P2	po:verb ts:infinitive_simple
 bruxar/a0a1a2P0P1P2*0r0r5	po:verb ts:infinitive_simple
 bruxo/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:bruxar
 brúxoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:bruxar
@@ -35849,6 +35857,7 @@ pèra/F0	po:noun is:singular_femenine
 pèrla/F0	po:noun is:singular_femenine
 pèto–roso/M0FSmf	po:noun is:singular_masculine
 pia/F0	po:adjective is:singular_femenine
+pia/F0	po:adjective is:singular_masculine
 pia/F0	po:noun is:singular_femenine
 piaga/F0	po:noun is:singular_femenine
 piaja/F0TE	po:adjective is:singular_femenine
@@ -35920,9 +35929,7 @@ piovan/M0U0&0	po:adjective is:singular_masculine
 piovana/F0&0	po:adjective is:singular_femenine
 piovexina/F0	po:noun is:singular_femenine
 pioxetina/F0	po:noun is:singular_femenine
-pia/F0	po:adjective is:singular_masculine
 pio	po:adjective is:singular_masculine al:pii
-pii	po:adjective is:plural_masculine st:pio
 pio	po:interjection
 piòxa/F0&0	po:noun is:singular_femenine
 pipa/F0(4	po:noun is:singular_femenine
@@ -46339,8 +46346,8 @@ graŧioxo/M0FS&0-1mf	po:noun is:singular_masculine
 graŧioxo/M0FSW0&0-1mf	po:adjective is:singular_masculine
 grave/M0q0q1	po:noun is:singular_masculine st:grava
 graveto/A1FSmf	po:adjective is:singular_masculine
-gravion/A2U0mf	po:adjective is:singular_masculine
 gravio/A1	po:noun is:singular_masculine
+gravion/A2U0mf	po:adjective is:singular_masculine
 gravità	po:noun is:femenine
 gredo/M0*0mf	po:adjective is:singular_masculine
 gredo/M0*0mf	po:noun is:singular_masculine
@@ -48774,14 +48781,14 @@ pareastro/M0	po:noun is:singular_masculine
 pareco/M0FS	po:noun is:singular_masculine
 parejo/M0FSTE	po:noun is:singular_masculine
 parekio/M0	po:adjective is:singular_masculine
-parekio/M0	po:pronoun
 parekio/M0	po:adverb
+parekio/M0	po:pronoun
 parentévol/F0TFU1mf	po:adjective is:singular
 parentévol/F0TFU1mf	po:noun is:singular
 parexo/M0FSmf	po:noun is:singular_masculine
 parikio/M0	po:adjective is:singular_masculine
-parikio/M0	po:pronoun
 parikio/M0	po:adverb
+parikio/M0	po:pronoun
 parilia/F0TE	po:noun is:singular_femenine
 parità/-1	po:noun is:femenine
 parladoron/A2U0mf	po:adjective is:singular_masculine
@@ -50714,10 +50721,10 @@ sparte	po:adverb
 spaseta/F0(4	po:noun is:singular_femenine
 spasidon/A2U0mf	po:adjective is:singular_masculine
 spasiđon/A2U0mf	po:adjective is:singular_masculine
+spasio/&0	po:noun is:singular_masculine al:spasi
 spasioxo/A1FSmf	po:noun is:singular_masculine
 spasioxo/A1FSW0mf	po:adjective is:singular_masculine
 spasixon/A2U0mf	po:adjective is:singular_masculine
-spasio/&0	po:noun is:singular_masculine al:spasi
 spaso/M0FS&0	po:noun is:singular_masculine
 spaŧakamin/A2	po:noun is:singular_masculine
 spaŧeta/F0(4	po:noun is:singular_femenine
@@ -55827,10 +55834,10 @@ broada/F0Y0Y1	po:noun is:singular_femenine
 broente/M0mf	po:noun is:singular
 brovada/F0Y0Y1	po:noun is:singular_femenine
 brun–brun	po:interjection
-brustolada/F0Y0	po:noun is:singular_femenine
-brustolado/M0FSY0	po:noun is:singular_masculine
-brustoƚada/F0Y0	po:noun is:singular_femenine
-brustoƚado/M0Y0	po:noun is:singular_masculine
+brustolada/F0Y0	po:adjective is:singular_femenine
+brustolado/M0FSY0	po:adjective is:singular_masculine
+brustoƚada/F0Y0	po:adjective is:singular_femenine
+brustoƚado/M0Y0	po:adjective is:singular_masculine
 budarada	po:interjection
 budaràa	po:interjection
 budarà	po:interjection
@@ -56904,11 +56911,65 @@ balotolèr/M0V0	po:noun is:singular_masculine
 baƚinèra/F0V1	po:noun is:singular_femenine
 baƚotoƚèr/M0V1	po:noun is:singular_masculine
 barkastranba	po:noun
+basileta/F0TE	po:noun is:singular_femenine
+batisangue	po:noun is:singular_masculine
+batitàngol/M0U1TEmf	po:noun is:singular_masculine
+baŧileta/F0	po:noun is:singular_femenine
+baulèr/M0V0	po:noun is:singular_masculine
+baulèra/F0V0	po:noun is:singular_femenine
+bauƚèr/M0V1	po:noun is:singular_masculine
+bauƚèra/F0V1	po:noun is:singular_femenine
+bavixa/F0	po:noun is:singular_femenine
 bàkol/M0U1TEmf	po:noun is:singular_masculine
+bekasoki	po:noun is:masculine
+bekaŧa/F0TE	po:noun is:singular_femenine
+bekaŧoki	po:noun is:masculine
+bièko/M0FS	po:noun is:singular_masculine
+bii	po:noun is:plural_masculine al:bio
+bio	po:noun is:singular_masculine al:bii
+bojente/M0FSmf	po:adjective is:singular
+boɉente/M0FSmf	po:adjective is:singular
+boletinèr/M0V0	po:noun is:singular_masculine
+boletinèra/F0V0	po:noun is:singular_femenine
+boƚetinèr/M0V1	po:noun is:singular_masculine
+boƚetinèra/F0V1	po:noun is:singular_femenine
+bon–bon	po:noun
+bonbista/A2	po:noun is:singular
+bosèl/M0U0TE	po:noun is:singular_masculine
+boŧèl/M0U0	po:noun is:singular_masculine
+briña/F0	po:noun is:singular_femenine
+briñèr/M0V0	po:noun is:singular_masculine
+briñèra/F0V0	po:noun is:singular_femenine
+britulin/M0TE	po:noun is:singular_masculine
+brustulada/F0Y0	po:adjective is:singular_femenine
+brustulado/M0FSY0	po:adjective is:singular_masculine
+brustulin/M0TE	po:adjective is:singular_masculine
+brustulin/M0TE	po:noun is:singular_masculine
+brustuƚada/F0Y0	po:adjective is:singular_femenine
+brustuƚado/M0Y0	po:adjective is:singular_masculine
+bruxigin/A2	po:adjective is:singular_masculine
+bukal/F0TFU0	po:adjective is:singular
+bukal/F0TFU0	po:noun is:singular_masculine
+bukè	po:noun is:masculine
+buletin/M0v0	po:noun is:singular_masculine
+bulin/M0TE	po:noun is:singular_masculine
+buƚetin/M0v0	po:noun is:singular_masculine
+bunígol/M0U1TEmf	po:noun is:singular_masculine
+buñon/F0U0mf	po:noun is:singular_masculine
 famada/F0Y0	po:adjective is:singular_femenine
 famado/M0FSY0	po:adjective is:singular_masculine
 fetada/F0Y0	po:adjective is:singular_femenine
 fetado/M0FSY0	po:adjective is:singular_masculine
+kagabale	po:noun
+kagabaƚe	po:noun
+kagòja/F0TE	po:noun is:singular_femenine
+kalafada/F0Y0	po:noun is:singular_femenine
+kalafado/M0FSY0	po:noun is:singular_masculine
+kalafòña/F0	po:noun is:singular_femenine
+kaƚafada/F0Y0	po:noun is:singular_femenine
+kaƚafado/M0Y0	po:noun is:singular_masculine
+kaƚafòña/F0	po:noun is:singular_femenine
+kañiŧa/F0TE	po:noun is:singular_femenine
 pionbo	po:adverb
 sikurada/F0Y0	po:adjective is:singular_femenine
 sikurado/M0FSY0	po:adjective is:singular_masculine
@@ -56918,31 +56979,8 @@ vilida/F0Y0	po:adjective is:singular_femenine
 vilido/M0FSY0	po:adjective is:singular_masculine
 viƚida/F0Y0	po:adjective is:singular_femenine
 viƚido/M0Y0	po:adjective is:singular_masculine
-batitàngol/M0U1TEmf	po:noun is:singular_masculine
-batisangue	po:noun is:singular_masculine
-baulèr/M0V0	po:noun is:singular_masculine
-baulèra/F0V0	po:noun is:singular_femenine
-bauƚèr/M0V1	po:noun is:singular_masculine
-bauƚèra/F0V1	po:noun is:singular_femenine
-bavixa/F0	po:noun is:singular_femenine
-baŧileta/F0	po:noun is:singular_femenine
-basileta/F0TE	po:noun is:singular_femenine
-bekaŧoki	po:noun is:masculine
-bekasoki	po:noun is:masculine
-bekaŧa/F0TE	po:noun is:singular_femenine
-bièko/M0FS	po:noun is:singular_masculine
-bio	po:noun is:singular_masculine al:bii
-bii	po:noun is:plural_masculine al:bio
-bojente/M0FSmf	po:adjective is:singular
-boɉente/M0FSmf	po:adjective is:singular
-boletinèr/M0V0	po:noun is:singular_masculine
-boletinèra/F0V0	po:noun is:singular_femenine
-boƚetinèr/M0V1	po:noun is:singular_masculine
-boƚetinèra/F0V1	po:noun is:singular_femenine
-bonbista/A2	po:noun is:singular
-bon–bon	po:noun
 
 
-/ 9
+/ 10
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
