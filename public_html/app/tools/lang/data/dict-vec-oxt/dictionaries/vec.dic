@@ -6408,6 +6408,12 @@ fústegoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:fustegar
 futiñar/a0a1a2P0P1P2r0	po:verb ts:infinitive_simple
 futiño/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:futiñar
 futíñoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:futiñar
+futiŧar/a0a1P0P1	po:verb ts:infinitive_simple
+futiŧo/a0a1P0P1FSI0	po:verb ts:indicative_present st:futiŧar
+futíŧoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:futiŧar
+futisar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+futiso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:futisar
+futísoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:futisar
 futuridar/a0a1P0P1	po:verb ts:infinitive_simple
 futurido/a0a1P0P1FSI0	po:verb ts:indicative_present st:futuridar
 futurídoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:futuridar
@@ -33701,7 +33707,8 @@ formajèr/M0V0	po:noun is:singular_masculine
 formajèra/F0V0	po:noun is:singular_femenine
 formaɉèr/M0V0	po:noun is:singular_masculine
 formaɉèra/F0V0	po:noun is:singular_femenine
-fornaxa/F0&0&2&3	po:noun is:singular_femenine
+fornaxa/F0&0&2&3	po:noun is:singular_femenine al:fornaxi
+fornaxi	po:noun is:singular_femenine st:fornaxe
 fornaxèr/M0V0	po:noun is:singular_masculine
 fornaxèra/F0V0	po:noun is:singular_femenine
 fornimentin/F0	po:noun is:singular_masculine
@@ -33732,8 +33739,8 @@ fraska/F0v0&0	po:noun is:singular_femenine
 fraskon/M0U0<0<1mf	po:noun is:singular_masculine
 fraskona/F0<0<1	po:noun is:singular_femenine
 frate/M0ʼ0<0<1	po:noun is:singular_masculine al:frar
-fratin/M0	po:adjective is:singular_masculine
-fratin/M0	po:noun is:singular_masculine
+fratin/A1	po:adjective is:singular_masculine
+fratin/A1	po:noun is:singular_masculine
 fràbika/F0	po:noun is:singular_femenine
 fràgola/F0TE	po:noun is:singular_femenine
 fràsen/F0U1mf	po:noun is:singular_masculine
@@ -54482,6 +54489,8 @@ fortunado/M0FSY0-1(4	po:noun is:singular_masculine
 frajada/F0Y0Y1	po:noun is:singular_femenine
 fraɉada/F0Y0Y1	po:noun is:singular_femenine
 frakada/F0Y0Y1	po:noun is:singular_femenine
+frakasada/F0Y0*0	po:adjective is:singular_femenine
+frakasado/M0FSY0*0	po:adjective is:singular_masculine
 fraskada/F0Y0Y1	po:noun is:singular_femenine
 fruñada/F0Y0Y1	po:noun is:singular_femenine
 fuada/F0Y0Y1	po:noun is:singular_femenine
@@ -55028,7 +55037,6 @@ sfogonada/F0Y0-0	po:noun is:singular_femenine
 sfogonado/M0FSY0-0	po:noun is:singular_masculine
 sfojada/F0Y0Y1	po:noun is:singular_femenine
 sfoɉada/F0Y0Y1	po:noun is:singular_femenine
-sfrakasada/F0Y0Y1	po:noun is:singular_femenine
 sfrantumada/F0Y0Y1	po:noun is:singular_femenine
 sfregolada/F0Y0Y1	po:noun is:singular_femenine
 sfregoƚada/F0Y0Y1	po:noun is:singular_femenine
@@ -57026,9 +57034,51 @@ famada/F0Y0	po:adjective is:singular_femenine
 famado/M0FSY0	po:adjective is:singular_masculine
 farinèr/M0V0	po:noun is:singular_masculine
 farinèra/F0V0	po:noun is:singular_femenine
+fartadin/F0	po:noun is:singular_masculine
+fartađin/F0	po:noun is:singular_masculine
+fartaxin/F0	po:noun is:singular_masculine
+farton/F0U0mf	po:noun is:singular_masculine
 fàkola/F0TE	po:noun is:singular_femenine
+fegurada/F0Y0	po:adjective is:singular_femenine
+fegurado/M0FSY0	po:adjective is:singular_masculine
+ferata/F0	po:noun is:singular_femenine
 fetada/F0Y0	po:adjective is:singular_femenine
 fetado/M0FSY0	po:adjective is:singular_masculine
+fidada/F0Y0	po:adjective is:singular_femenine
+fidado/M0FSY0	po:adjective is:singular_masculine
+fièpa/F0	po:noun is:singular_femenine
+figurada/F0Y0	po:adjective is:singular_femenine
+figurado/M0FSY0	po:adjective is:singular_masculine
+finida/F0Y0	po:adjective is:singular_femenine
+finido/M0FSY0	po:adjective is:singular_masculine
+fioluŧa/F0TE	po:noun is:singular_femenine
+fioluŧo/M0FSTE	po:noun is:singular_masculine
+fioƚusa/F0	po:noun is:singular_femenine
+fioƚuso/M0	po:noun is:singular_masculine
+firma/F0	po:noun is:singular_femenine
+fóliga/F0	po:noun is:singular_femenine
+fóƚiga/F0	po:noun is:singular_femenine
+fòiba/F0	po:noun is:singular_femenine
+fratisèl/M0U0TE	po:noun is:singular_masculine
+fratiŧèl/M0U0	po:noun is:singular_masculine
+frekuentada/F0Y0	po:adjective is:singular_femenine
+frekuentado/M0FSY0	po:adjective is:singular_masculine
+fresada/F0Y0	po:noun is:singular_femenine
+freŧada/F0Y0	po:noun is:singular_femenine
+friŧa/F0TE	po:noun is:singular_femenine
+galina/F0	po:adjective is:singular_femenine
+gaƚina/F0	po:adjective is:singular_femenine
+garansía/F0	po:noun is:singular_femenine
+garanŧía/F0	po:noun is:singular_femenine
+garofolada/F0Y0	po:adjective is:singular_femenine
+garofolado/M0FSY0	po:adjective is:singular_masculine
+garofoƚada/F0Y0	po:adjective is:singular_femenine
+garofoƚado/M0Y0	po:adjective is:singular_masculine
+jandolèr/A1TB	po:adjective is:singular_masculine
+jandoƚèr/A1TB	po:adjective is:singular_masculine
+jelapa/F0TB	po:noun is:singular_femenine
+jeƚapa/F0TB	po:noun is:singular_femenine
+jéndin/A2TB	po:noun is:singular_masculine
 kagabale	po:noun
 kagabaƚe	po:noun
 kagòja/F0TE	po:noun is:singular_femenine
@@ -57118,28 +57168,6 @@ vilida/F0Y0	po:adjective is:singular_femenine
 vilido/M0FSY0	po:adjective is:singular_masculine
 viƚida/F0Y0	po:adjective is:singular_femenine
 viƚido/M0Y0	po:adjective is:singular_masculine
-fartađin/F0	po:noun is:singular_masculine
-fartadin/F0	po:noun is:singular_masculine
-fartaxin/F0	po:noun is:singular_masculine
-farton/F0U0mf	po:noun is:singular_masculine
-ferata/F0	po:noun is:singular_femenine
-fidada/F0Y0	po:adjective is:singular_femenine
-fidado/M0FSY0	po:adjective is:singular_masculine
-fièpa/F0	po:noun is:singular_femenine
-fegurada/F0Y0	po:adjective is:singular_femenine
-fegurado/M0FSY0	po:adjective is:singular_masculine
-figurada/F0Y0	po:adjective is:singular_femenine
-figurado/M0FSY0	po:adjective is:singular_masculine
-finida/F0Y0	po:adjective is:singular_femenine
-finido/M0FSY0	po:adjective is:singular_masculine
-fioluŧo/M0FSTE	po:noun is:singular_masculine
-fioƚuso/M0	po:noun is:singular_masculine
-fioluŧa/F0TE	po:noun is:singular_femenine
-fioƚusa/F0	po:noun is:singular_femenine
-firma/F0	po:noun is:singular_femenine
-fòiba/F0	po:noun is:singular_femenine
-fóliga/F0	po:noun is:singular_femenine
-fóƚiga/F0	po:noun is:singular_femenine
 
 
 / 17

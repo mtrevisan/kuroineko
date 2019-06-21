@@ -1973,6 +1973,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fusk",			"o",			1,	1,	"a",	"1867",			"",
 "fusteg",		"",			1,	1,	"a",	"1980",			"Molestar.",
 "futiñ",			"",			1,	3,	"a",	"1775",			"Fruñar, frugar, frugacar, stuŧegar.",
+"futiŧ",			"",			1,	3,	"a",	"1877",			"Laoratar.",
 "futuriđ",		"",			1,	5,	"a",	"1867",			"Predíxer, pronostegar.",
 "fuŧil",			"",			1,	3,	"a",	"1980",			"",
 "fúđ",			"",			3,	1,	"a",	"1463",			"Skanpar.",
