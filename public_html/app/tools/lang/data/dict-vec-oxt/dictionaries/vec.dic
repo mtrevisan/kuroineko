@@ -1072,6 +1072,9 @@ bandíđoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:bandiđar
 bandixar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 bandixo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:bandixar
 bandíxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:bandixar
+inbandierar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+inbandièro/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:inbandierar
+inbandièroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inbandierar
 bandonar/a0a1a2P0P1P2*0@0^4	po:verb ts:infinitive_simple
 bandono/a0a1a2P0P1P2FSI0*0@0^4	po:verb ts:indicative_present st:bandonar
 bandónoe/a0a1a2I1*0@0^4	po:verb ts:indicative_present is:interrogative st:bandonar
@@ -1662,7 +1665,7 @@ xbiàkoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xbiakar
 bianar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 biano/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:bianar
 biànoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:bianar
-biankir/a0a1a2d0d1d2P0P1P2*0r0	po:verb ts:infinitive_simple
+biankir/a0a1a2d0d1d2P0P1P2+0*0r0	po:verb ts:infinitive_simple
 inbiankar/a0a1a2P0P1P2r7	po:verb ts:infinitive_simple
 inbianko/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:inbiankar
 inbiànkoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inbiankar
@@ -7726,6 +7729,9 @@ proibir/a0a1a2d0d1d2P0P1P2r2r3	po:verb ts:infinitive_simple
 ibridar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 íbrido/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:ibridar
 íbridoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:ibridar
+idear/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+idèo/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:idear
+idèoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:idear
 idratar/a0a1a2P0P1P2-0	po:verb ts:infinitive_simple
 idrato/a0a1a2P0P1P2FSI0-0	po:verb ts:indicative_present st:idratar
 idràtoe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:idratar
@@ -35792,11 +35798,13 @@ pelatèra/F0V0	po:noun is:singular_femenine
 pelaŧa/F0TE	po:noun is:singular_femenine
 pelegrin/A2	po:adjective is:singular_masculine
 pelegrin/A2	po:noun is:singular_masculine
-pelisada/F0Y0Y1	po:noun is:singular_femenine
+pelisada/F0Y0+0	po:noun is:singular_femenine
+pelisado/M0FSY0+0	po:noun is:singular_masculine
 pelisèr/M0V0	po:noun is:singular_masculine
 pelisèra/F0V0	po:noun is:singular_femenine
 peliŧa/F0TE	po:noun is:singular_femenine
-peliŧada/F0Y0Y1	po:noun is:singular_femenine
+peliŧada/F0Y0+0	po:noun is:singular_femenine
+peliŧado/M0FSY0+0	po:noun is:singular_masculine
 peliŧèr/M0V0	po:noun is:singular_masculine
 peliŧèra/F0V0	po:noun is:singular_femenine
 peliŧo/M0FSTE	po:noun is:singular_masculine
@@ -35811,7 +35819,8 @@ peƚatèra/F0V1	po:noun is:singular_femenine
 peƚaton/A2mf	po:adjective is:singular_masculine
 peƚegrin/A2	po:adjective is:singular_masculine
 peƚegrin/A2	po:noun is:singular_masculine
-peƚisada/F0Y0Y1	po:noun is:singular_femenine
+peƚisada/F0Y0+0	po:noun is:singular_femenine
+peƚisado/M0Y0+0	po:noun is:singular_masculine
 peƚisèr/M0V1	po:noun is:singular_masculine
 peƚisèra/F0V1	po:noun is:singular_femenine
 peƚiso/A1	po:noun is:singular_masculine
@@ -37927,6 +37936,7 @@ xbrufa/F0	po:noun is:singular_femenine
 xbruxarixo/M0FS	po:adjective is:singular_masculine
 xbruxarixo/M0FS	po:noun is:singular_masculine
 xbruxo/M0FS	po:noun is:singular_masculine
+xbuxada/F0Y0	po:adjective is:singular_femenine
 xbuxado/M0FSY0	po:adjective is:singular_masculine
 xbúxega/F0	po:noun is:singular_femenine
 xeja/F0&0	po:noun is:singular_femenine
@@ -49038,8 +49048,10 @@ petorido/M0FSY0+0	po:adjective is:singular_masculine
 petrièra/F0	po:noun is:singular_femenine
 peŧetin/M0	po:noun is:singular_masculine
 peŧo/M0FS	po:noun is:singular_masculine
-pevarada/F0Y0Y1	po:noun is:singular_femenine
-peverada/F0Y0Y1	po:noun is:singular_femenine
+pevarada/F0Y0+0	po:noun is:singular_femenine
+pevarado/M0FSY0+0	po:noun is:singular_masculine
+peverada/F0Y0+0	po:noun is:singular_femenine
+peverado/M0FSY0+0	po:noun is:singular_masculine
 peveraŧa/F0TE	po:noun is:singular_femenine
 pexo/M0FS&0	po:noun is:singular_masculine
 pexòtol/M0U1TEmf	po:adjective is:singular_masculine
@@ -53642,11 +53654,11 @@ pacan/A2U0	po:adjective is:singular_masculine
 pacèra/F0&2&3	po:noun is:singular_femenine
 pacoxo/A1FSmf	po:noun is:singular_masculine
 pacoxo/A1FSW0mf	po:adjective is:singular_masculine
-pajada/F0Y0Y1	po:noun is:singular_femenine
+pajada/F0Y0Y1+0	po:noun is:singular_femenine
 pajo/M0FS<0<1	po:noun is:singular_masculine
 pajuŧa/F0TE	po:noun is:singular_femenine
 pajuŧo/M0FSTE	po:noun is:singular_masculine
-paɉada/F0Y0Y1	po:noun is:singular_femenine
+paɉada/F0Y0Y1+0	po:noun is:singular_femenine
 paɉo/M0FS<0<1	po:noun is:singular_masculine
 paɉuŧa/F0TE	po:noun is:singular_femenine
 paɉuŧo/M0FSTE	po:noun is:singular_masculine
@@ -53709,7 +53721,8 @@ peƚandron/A2mf	po:noun is:singular_masculine
 peƚuso/M0	po:noun is:singular_masculine
 pendente/M0mf	po:noun is:singular
 pendío/M0	po:noun is:singular_masculine
-pensada/F0Y0Y1	po:noun is:singular_femenine
+pensada/F0Y0+0	po:noun is:singular_femenine
+pensado/M0FSY0+0	po:noun is:singular_masculine
 peònia/F0	po:noun is:singular_femenine
 pepafreda/F0	po:adjective is:singular
 perakòta	po:noun is:singular_femenine
@@ -54902,7 +54915,8 @@ pelada/F0Y0	po:noun is:singular_femenine
 peltre/M0	po:noun is:singular_masculine
 peƚada/F0Y0	po:noun is:singular_femenine
 penoni	po:adverb
-pestada/F0Y0Y1	po:noun is:singular_femenine
+pestada/F0Y0+0	po:noun is:singular_femenine
+pestado/M0FSY0+0	po:noun is:singular_masculine
 petada/F0Y0	po:noun is:singular_femenine
 petado/M0FSY0	po:noun is:singular_masculine
 petenada/F0Y0-1	po:noun is:singular_femenine
@@ -55631,8 +55645,10 @@ inŧendioxo/A1FSW0mf	po:adjective is:singular_masculine
 invaxada/F0Y0	po:noun is:singular_masculine
 invaxado/M0FSY0	po:noun is:singular_masculine
 inxenocada/F0Y0Y1	po:adjective is:singular_femenine
-jasada/F0Y0Y1TB	po:adjective is:singular_femenine
-jaŧada/F0Y0Y1TB	po:adjective is:singular_femenine
+jasada/F0Y0TB	po:adjective is:singular_femenine
+jasado/M0FSY0TB	po:adjective is:singular_masculine
+jaŧada/F0Y0TB	po:adjective is:singular_femenine
+jaŧado/M0FSY0TB	po:adjective is:singular_masculine
 jelsemin/M0TB	po:noun is:singular_masculine
 jiranio/M0TB	po:noun is:singular_masculine
 jirlanda/F0TB	po:noun is:singular_femenine
@@ -57089,6 +57105,34 @@ grasiado/M0FSY0-1	po:adjective is:singular_masculine
 gratakarta/F0	po:noun is:singular_masculine
 graŧiada/F0Y0-1	po:adjective is:singular_femenine
 graŧiado/M0FSY0-1	po:adjective is:singular_masculine
+ideada/F0Y0	po:adjective is:singular_femenine
+ideado/M0FSY0	po:adjective is:singular_masculine
+ideal/F0TFU0	po:adjective is:singular
+idròpigo/A1FS	po:adjective is:singular_masculine st:intròpiko
+inbandierada/F0Y0	po:adjective is:singular_femenine
+inbandierado/M0FSY0	po:adjective is:singular_masculine
+inboskada/F0Y0Y1	po:noun is:singular_femenine
+inbotejada/F0Y0	po:adjective is:singular_femenine
+inbotejado/M0FSY0	po:adjective is:singular_masculine
+inboteɉada/F0Y0	po:adjective is:singular_femenine
+inboteɉado/M0FSY0	po:adjective is:singular_masculine
+inbotijada/F0Y0	po:adjective is:singular_femenine
+inbotijado/M0FSY0	po:adjective is:singular_masculine
+inbotiɉada/F0Y0	po:adjective is:singular_femenine
+inbotiɉado/M0FSY0	po:adjective is:singular_masculine
+inbotiliada/F0Y0	po:adjective is:singular_femenine
+inbotiliado/M0FSY0	po:adjective is:singular_masculine
+inbotiƚiada/F0Y0	po:adjective is:singular_femenine
+inbotiƚiado/M0Y0	po:adjective is:singular_masculine
+inbutida/F0Y0	po:adjective is:singular_femenine
+inbuxada/F0Y0	po:adjective is:singular_femenine
+inbuxado/M0FSY0	po:adjective is:singular_masculine
+inkadenada/F0Y0	po:noun is:singular_femenine
+inkadenado/M0FSY0	po:noun is:singular_masculine
+inpalkadura/F0r5	po:adjective is:singular_femenine
+inpinida/F0Y0	po:noun is:singular_femenine
+inprovixada/F0Y0	po:noun is:singular_femenine
+inprovixado/M0FSY0	po:noun is:singular_masculine
 jandolèr/A1TB	po:adjective is:singular_masculine
 jandoƚèr/A1TB	po:adjective is:singular_masculine
 jelapa/F0TB	po:noun is:singular_femenine
@@ -57192,9 +57236,9 @@ vilida/F0Y0	po:adjective is:singular_femenine
 vilido/M0FSY0	po:adjective is:singular_masculine
 viƚida/F0Y0	po:adjective is:singular_femenine
 viƚido/M0Y0	po:adjective is:singular_masculine
-xiràndoƚo/M0U1mf	po:noun is:singular_masculine
+xiràndoƚo/M0mf	po:noun is:singular_masculine
 
 
-/ 19
+/ 20
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
