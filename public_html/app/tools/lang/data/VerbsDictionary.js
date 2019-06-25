@@ -3561,6 +3561,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "loam",			"",			1,	2,	"g",	"1775",			"",
 "loam",			"in",			1,	2,	"g",	"1876",			"",
 "lod",			"",			1,	1,	"g",	"1560",			"",
+"lodam",			"",			1,	2,	"g",	"1877",			"",
+"lodam",			"in",			1,	2,	"g",	"",				"",
 "lof",			"x",			1,	1,	"g",	"1867",			"Xlovar.",
 "lofit",			"de",			1,	3,	"a",	"1775",			"Spalkar, rénder senŧa palko.",
 "lok",			"",			1,	1,	"g",	"1433",			"",

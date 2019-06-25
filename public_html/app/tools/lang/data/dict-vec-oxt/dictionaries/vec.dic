@@ -11669,6 +11669,12 @@ lòdoe/a0a1I1*0^2	po:verb ts:indicative_present is:interrogative st:lodar
 ƚodar/a0a2P0P2^2	po:verb ts:infinitive_simple
 ƚòdo/a0a2P0P2I0^2	po:verb ts:indicative_present st:ƚodar
 ƚòdoe/a0a2I1^2	po:verb ts:indicative_present is:interrogative st:ƚodar
+lodamar/a0a1P0P1+0	po:verb ts:infinitive_simple
+lodamo/a0a1P0P1FSI0+0	po:verb ts:indicative_present st:lodamar
+lodàmoe/a0a1I1+0	po:verb ts:indicative_present is:interrogative st:lodamar
+ƚodamar/a0a2P0P2	po:verb ts:infinitive_simple
+ƚodamo/a0a2P0P2I0	po:verb ts:indicative_present st:ƚodamar
+ƚodàmoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:ƚodamar
 xlofar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 xlòfo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xlofar
 xlòfoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xlofar
@@ -57086,7 +57092,7 @@ diavolaŧa/F0TE	po:noun is:singular_femenine
 diavolaŧo/M0FSTE	po:noun is:singular_masculine
 diavoƚaso/A1	po:noun is:singular_masculine
 duron/F0U0mf	po:noun is:singular_masculine
-điràndol/M0U1TBmf	po:noun is:singular_masculine
+điràndol/M0U1TBmf	po:noun is:singular_masculine al:xiràndoƚo
 edukada/F0Y0	po:adjective is:singular_femenine
 edukado/M0FSY0	po:adjective is:singular_masculine
 etikanŧa/F0TE	po:noun is:singular_femenine
@@ -57219,8 +57225,8 @@ inprovixada/F0Y0	po:noun is:singular_femenine
 inprovixado/M0FSY0	po:noun is:singular_masculine
 insanguenada/F0Y0	po:adjective is:singular_femenine
 insanguenado/M0FSY0	po:adjective is:singular_masculine
-inserada/F0Y0	po:adjective is:singular_femenine
-inserado/M0FSY0	po:adjective is:singular_masculine
+inserada/F0Y0	po:adjective is:singular_femenine st:inŧerada
+inserado/M0FSY0	po:adjective is:singular_masculine st:inŧerado
 instruida/F0Y0	po:adjective is:singular_femenine
 instruido/M0FSY0	po:adjective is:singular_masculine
 instupidida/F0Y0	po:adjective is:singular_femenine
@@ -57231,8 +57237,8 @@ interesada/F0Y0	po:adjective is:singular_femenine
 interesado/M0FSY0	po:adjective is:singular_masculine
 intimada/F0Y0	po:adjective is:singular_femenine
 intimado/M0FSY0	po:adjective is:singular_masculine
-inŧerada/F0Y0	po:adjective is:singular_femenine
-inŧerado/M0FSY0	po:adjective is:singular_masculine
+inŧerada/F0Y0	po:adjective is:singular_femenine al:inserada
+inŧerado/M0FSY0	po:adjective is:singular_masculine al:inserado
 isada/F0Y0	po:adjective is:singular_femenine
 isado/M0FSY0	po:adjective is:singular_masculine
 istigada/F0Y0	po:adjective is:singular_femenine
@@ -57240,53 +57246,53 @@ istigado/M0FSY0	po:adjective is:singular_masculine
 istrion/F0U0v0mf	po:noun is:singular_masculine
 istruida/F0Y0	po:adjective is:singular_femenine
 istruido/M0FSY0	po:adjective is:singular_masculine
-jandolèr/A1TB	po:adjective is:singular_masculine
-jandoƚèr/A1TB	po:adjective is:singular_masculine
-jelapa/F0TB	po:noun is:singular_femenine
-jeƚapa/F0TB	po:noun is:singular_femenine
+jandolèr/A1TB	po:adjective is:singular_masculine al:jandoƚèr
+jandoƚèr/A1TB	po:adjective is:singular_masculine st:jandolèr
+jelapa/F0TB	po:noun is:singular_femenine al:jeƚapa
+jeƚapa/F0TB	po:noun is:singular_femenine st:jelapa
 jéndin/A2TB	po:noun is:singular_masculine
 jiral/F0TBTFU0	po:noun is:singular_masculine
-josada/F0Y0	po:adjective is:singular_femenine
-josado/M0FSY0	po:adjective is:singular_masculine
-josetin/M0	po:noun is:singular_masculine
-josetin	po:adverb
-joŧada/F0Y0	po:adjective is:singular_femenine
-joŧado/M0FSY0	po:adjective is:singular_masculine
-joŧetin/M0	po:noun is:singular_masculine
-joŧetin	po:adverb
-ɉosada/F0Y0	po:adjective is:singular_femenine
-ɉosado/M0FSY0	po:adjective is:singular_masculine
-ɉosetin/M0	po:noun is:singular_masculine
-ɉosetin	po:adverb
-ɉoŧada/F0Y0	po:adjective is:singular_femenine
-ɉoŧado/M0FSY0	po:adjective is:singular_masculine
-ɉoŧetin/M0	po:noun is:singular_masculine
-ɉoŧetin	po:adverb
-kagabale	po:noun
-kagabaƚe	po:noun
+josada/F0Y0	po:adjective is:singular_femenine st:joŧada
+josado/M0FSY0	po:adjective is:singular_masculine st:joŧado
+josetin/M0	po:noun is:singular_masculine st:joŧetin
+josetin	po:adverb st:joŧetin
+joŧada/F0Y0	po:adjective is:singular_femenine al:josada
+joŧado/M0FSY0	po:adjective is:singular_masculine al:josado
+joŧetin/M0	po:noun is:singular_masculine al:josetin
+joŧetin	po:adverb al:josetin
+ɉosada/F0Y0	po:adjective is:singular_femenine st:ɉoŧada
+ɉosado/M0FSY0	po:adjective is:singular_masculine st:ɉoŧado
+ɉosetin/M0	po:noun is:singular_masculine st:ɉoŧetin
+ɉosetin	po:adverb al:ɉoŧetin
+ɉoŧada/F0Y0	po:adjective is:singular_femenine al:ɉosada
+ɉoŧado/M0FSY0	po:adjective is:singular_masculine al:ɉosado
+ɉoŧetin/M0	po:noun is:singular_masculine al:ɉosetin
+ɉoŧetin	po:adverb al:ɉosetin
+kagabale	po:noun al:kagabaƚe
+kagabaƚe	po:noun st:kagabale
 kagòja/F0TE	po:noun is:singular_femenine
-kalafada/F0Y0	po:noun is:singular_femenine
-kalafado/M0FSY0	po:noun is:singular_masculine
-kalafòña/F0	po:noun is:singular_femenine
-kalixenoxo/A1FSmf	po:noun is:singular_masculine
-kalixenoxo/A1FSW0mf	po:adjective is:singular_masculine
-kalixinoxo/A1FSmf	po:noun is:singular_masculine
-kalixinoxo/A1FSW0mf	po:adjective is:singular_masculine
-kalídin/F0	po:noun is:singular_femenine
-kalíđin/F0	po:noun is:singular_femenine
-kalíxin/F0	po:noun is:singular_femenine
-kaluxenoxo/A1FSmf	po:noun is:singular_masculine
-kaluxenoxo/A1FSW0mf	po:adjective is:singular_masculine
-kaƚafada/F0Y0	po:noun is:singular_femenine
-kaƚafado/M0Y0	po:noun is:singular_masculine
-kaƚafòña/F0	po:noun is:singular_femenine
-kaƚixenoxo/A1mf	po:noun is:singular_masculine
-kaƚixenoxo/A1W1mf	po:adjective is:singular_masculine
-kaƚixinoxo/A1mf	po:noun is:singular_masculine
-kaƚixinoxo/A1W1mf	po:adjective is:singular_masculine
-kaƚíxin/F0	po:noun is:singular_femenine
-kaƚuxenoxo/A1mf	po:noun is:singular_masculine
-kaƚuxenoxo/A1W1mf	po:adjective is:singular_masculine
+kalafada/F0Y0	po:noun is:singular_femenine al:kaƚafada
+kalafado/M0FSY0	po:noun is:singular_masculine al:kaƚafado
+kalafòña/F0	po:noun is:singular_femenine al:kaƚafòña
+kalixenoxo/A1FSmf	po:noun is:singular_masculine al:kaƚixenoxo
+kalixenoxo/A1FSW0mf	po:adjective is:singular_masculine al:kaƚixenoxo
+kalixinoxo/A1FSmf	po:noun is:singular_masculine al:kaƚixinoxo
+kalixinoxo/A1FSW0mf	po:adjective is:singular_masculine al:kaƚixinoxo
+kalídin/F0	po:noun is:singular_femenine st:kalíđin
+kalíđin/F0	po:noun is:singular_femenine al:kalídin al:kalíxin al:kaƚíxin
+kalíxin/F0	po:noun is:singular_femenine st:kalíđin
+kaluxenoxo/A1FSmf	po:noun is:singular_masculine al:kaƚuxenoxo
+kaluxenoxo/A1FSW0mf	po:adjective is:singular_masculine al:kaƚuxenoxo
+kaƚafada/F0Y0	po:noun is:singular_femenine st:kalafada
+kaƚafado/M0Y0	po:noun is:singular_masculine st:kalafado
+kaƚafòña/F0	po:noun is:singular_femenine st:kalafòña
+kaƚixenoxo/A1mf	po:noun is:singular_masculine st:kalixenoxo
+kaƚixenoxo/A1W1mf	po:adjective is:singular_masculine st:kalixenoxo
+kaƚixinoxo/A1mf	po:noun is:singular_masculine st:kalixinoxo
+kaƚixinoxo/A1W1mf	po:adjective is:singular_masculine st:kalixinoxo
+kaƚíxin/F0	po:noun is:singular_femenine st:kalíđin
+kaƚuxenoxo/A1mf	po:noun is:singular_masculine st:kaluxenoxo
+kaƚuxenoxo/A1W1mf	po:adjective is:singular_masculine st:kaluxenoxo
 kaminada/F0Y0Y1	po:noun is:singular_femenine
 kamixiolin/M0TE	po:noun is:singular_masculine
 kanixèla/F0TE	po:noun is:singular_femenine
@@ -57295,8 +57301,8 @@ kantinèra/F0V0	po:noun is:singular_femenine
 kañiŧa/F0TE	po:noun is:singular_femenine
 karta–straŧa/F0TE	po:noun is:singular_femenine
 kartastraŧa/F0TE	po:noun is:singular_femenine
-kasiul/M0U0TE	po:noun is:singular_masculine
-kaŧiul/M0U0	po:noun is:singular_masculine
+kasiul/M0U0TE	po:noun is:singular_masculine st:kaŧiul
+kaŧiul/M0U0	po:noun is:singular_masculine al:kasiul
 kavastropon/F0U0mf	po:noun is:singular_masculine
 kavidin/M0	po:noun is:singular_masculine
 kavodòjo/M0FSTE	po:noun is:singular_masculine
@@ -57304,23 +57310,23 @@ kaxarma/F0	po:noun is:singular_femenine
 kànovo/M0	po:noun is:singular_masculine
 kodin/M0	po:noun is:singular_masculine
 konplimento/M0FSmf	po:noun is:singular_masculine
-konsalastra/F0	po:noun is:singular
-konsaƚastra/F0	po:noun is:singular
-konsapiñata/F0	po:noun is:singular
+konsalastra/F0	po:noun is:singular st:konŧalastra
+konsaƚastra/F0	po:noun is:singular st:konŧalastra
+konsapiñata/F0	po:noun is:singular st:konŧapiñata
 konsumada/F0Y0	po:adjective is:singular_femenine
 konsumado/M0FSY0	po:adjective is:singular_masculine
-konŧalastra/F0	po:noun is:singular
-konŧapiñata/F0	po:noun is:singular
+konŧalastra/F0	po:noun is:singular al:konsalastra al:konsaƚastra
+konŧapiñata/F0	po:noun is:singular al:konsapiñata
 korexidor/M0V0mf	po:noun is:singular_masculine
 korexidora/F0V0	po:noun is:singular_femenine
-kovaseto/M0FSmf	po:noun is:singular_masculine
-kovaŧeto/M0FSmf	po:noun is:singular_masculine
-kràsola/F0TE	po:noun is:singular_femenine
-kràŧola/F0	po:noun is:singular_femenine
-kreansada/F0Y0	po:adjective is:singular_femenine
-kreansado/M0FSY0	po:adjective is:singular_masculine
-kreanŧada/F0Y0	po:adjective is:singular_femenine
-kreanŧado/M0FSY0	po:adjective is:singular_masculine
+kovaseto/M0FSmf	po:noun is:singular_masculine st:kovaŧeto
+kovaŧeto/M0FSmf	po:noun is:singular_masculine al:kovaseto
+kràsola/F0TE	po:noun is:singular_femenine st:kràŧola
+kràŧola/F0	po:noun is:singular_femenine al:kràsola
+kreansada/F0Y0	po:adjective is:singular_femenine st:kreanŧada
+kreansado/M0FSY0	po:adjective is:singular_masculine st:kreanŧado
+kreanŧada/F0Y0	po:adjective is:singular_femenine al:kreansada
+kreanŧado/M0FSY0	po:adjective is:singular_masculine al:kreansado
 kripiŧa/F0TE	po:noun is:singular_femenine
 kródiga/F0	po:noun is:singular_femenine
 krusta/F0	po:noun is:singular_femenine
@@ -57330,50 +57336,78 @@ kucèra/F0V0	po:noun is:singular_femenine
 kudin/M0	po:noun is:singular_masculine
 kukal/F0TFU0	po:noun is:singular_masculine
 kukúmar/M0	po:noun is:singular_masculine
-kulatada/F0Y0Y1	po:adjective is:singular_femenine
+kulatada/F0Y0Y1	po:adjective is:singular_femenine al:kuƚatada
 kultrina/F0&0	po:noun is:singular_femenine
-kuƚatada/F0Y0Y1	po:adjective is:singular_femenine
+kuƚatada/F0Y0Y1	po:adjective is:singular_femenine st:kulatada
 kunin/M0	po:noun is:singular_masculine
 kupin/M0	po:noun is:singular_masculine
 kusinada/F0Y0Y1	po:noun is:singular_femenine
 laorada/F0Y0TB	po:adjective is:singular_femenine
-laorado/M0FSY0	po:adjective is:singular_masculine
+laorado/M0FSY0	po:adjective is:singular_masculine al:ƚaorado
 lavorada/F0Y0TB	po:adjective is:singular_femenine
-lavorado/M0FSY0	po:adjective is:singular_masculine
+lavorado/M0FSY0	po:adjective is:singular_masculine al:ƚavorado
 lavoratòrio/M0TB	po:noun is:singular_masculine
 lavra/F0TB	po:noun is:singular_femenine
-lavruŧo/M0TEFS	po:noun is:singular_masculine
-làvarno/M0FS	po:noun is:singular_masculine
-ƚaorado/M0Y0	po:adjective is:singular_masculine
-ƚavorado/M0Y0	po:adjective is:singular_masculine
-ƚavruso/M0	po:noun is:singular_masculine
-ƚàvarno/M0	po:noun is:singular_masculine
+lavruŧo/M0TEFS	po:noun is:singular_masculine al:ƚavruso
+làvarno/M0FS	po:noun is:singular_masculine al:ƚàvarno
+ledame/M0TB	po:noun is:singular_masculine
+leñada/F0Y0Y1TB	po:noun is:singular_femenine
+leonfante/M0FS	po:noun is:singular_masculine al:ƚeonfante
+letuŧo/M0FSTE	po:noun is:singular_masculine al:ƚetuso
+libruŧo/M0FSTE	po:noun is:singular_masculine al:ƚetuso
+linsiòl/M0U0&0	po:noun is:singular_masculine
+linŧiòl/M0U0&0	po:noun is:singular_masculine
+liñada/F0Y0Y1TB	po:noun is:singular_femenine
+lodame/M0TB	po:noun is:singular_masculine
+lodamèr/M0V0	po:noun is:singular_masculine
+lodamèra/F0V0	po:noun is:singular_femenine
+loketo/M0FSmf	po:noun is:singular_masculine
+luganigèr/M0V0	po:noun is:singular_masculine al:ƚuganigèr
+luganigèra/F0V0	po:noun is:singular_femenine al:ƚuganigèra
+lugar/M0TB	po:noun is:singular_masculine
+lugàniga/F0TB	po:noun is:singular_femenine
+luto/M0FS	po:noun is:singular_masculine
+luxente/M0FSmf	po:adjective is:singular_masculine al:ƚuxente
+luxente/M0FSmf	po:noun is:singular_masculine al:ƚuxente
+ƚaorado/M0Y0	po:adjective is:singular_masculine st:laorado
+ƚavorado/M0Y0	po:adjective is:singular_masculine st:lavorado
+ƚavruso/M0	po:noun is:singular_masculine st:lavruŧo
+ƚàvarno/M0	po:noun is:singular_masculine st:làvarno
+ƚeonfante/M0	po:noun is:singular_masculine st:leonfante
+ƚetuso/M0	po:noun is:singular_masculine st:letuŧo
+ƚibruso/M0	po:noun is:singular_masculine al:ƚetuso
+ƚinsiòƚo/M0&1	po:noun is:singular_masculine
+ƚuganigèr/M0V1	po:noun is:singular_masculine st:luganigèr
+ƚuganigèra/F0V1	po:noun is:singular_femenine st:luganigèra
+ƚuto/M0	po:noun is:singular_masculine
+ƚuxente/M0mf	po:adjective is:singular_masculine st:luxente
+ƚuxente/M0mf	po:noun is:singular_masculine st:luxente
 ñàkera/F0*0	po:noun is:singular_femenine
 ñespoleta/F0TE	po:noun is:singular_femenine
-ñespolèr/M0V0	po:noun is:singular_masculine
-ñespolèra/F0V0	po:noun is:singular_femenine
-ñespoƚèr/M0V1	po:noun is:singular_masculine
-ñespoƚèra/F0V1	po:noun is:singular_femenine
+ñespolèr/M0V0	po:noun is:singular_masculine al:ñespoƚèr
+ñespolèra/F0V0	po:noun is:singular_femenine al:ñespoƚèra
+ñespoƚèr/M0V1	po:noun is:singular_masculine st:ñespolèr
+ñespoƚèra/F0V1	po:noun is:singular_femenine st:ñespolèra
 ñèspola/F0TE	po:noun is:singular_femenine
 ñòra/F0	po:noun is:singular_femenine
 pionbo	po:adverb
 sikurada/F0Y0	po:adjective is:singular_femenine
 sikurado/M0FSY0	po:adjective is:singular_masculine
-studada/F0Y0	po:adjective is:singular_femenine
-studado/M0FSY0	po:adjective is:singular_masculine
-stuđada/F0Y0	po:adjective is:singular_femenine
-stuđado/M0FSY0	po:adjective is:singular_masculine
-stuxada/F0Y0	po:adjective is:singular_femenine
-stuxado/M0FSY0	po:adjective is:singular_masculine
+studada/F0Y0	po:adjective is:singular_femenine st:stuđada
+studado/M0FSY0	po:adjective is:singular_masculine st:stuđado
+stuđada/F0Y0	po:adjective is:singular_femenine al:studada al:stuxada
+stuđado/M0FSY0	po:adjective is:singular_masculine al:studado al:stuxado
+stuxada/F0Y0	po:adjective is:singular_femenine st:stuđada
+stuxado/M0FSY0	po:adjective is:singular_masculine st:stuđado
 vertida/F0Y0	po:adjective is:singular_femenine
 vertido/M0FSY0	po:adjective is:singular_masculine
-vilida/F0Y0	po:adjective is:singular_femenine
-vilido/M0FSY0	po:adjective is:singular_masculine
-viƚida/F0Y0	po:adjective is:singular_femenine
-viƚido/M0Y0	po:adjective is:singular_masculine
-xiràndoƚo/M0mf	po:noun is:singular_masculine
+vilida/F0Y0	po:adjective is:singular_femenine al:viƚida
+vilido/M0FSY0	po:adjective is:singular_masculine al:viƚido
+viƚida/F0Y0	po:adjective is:singular_femenine st:vilida
+viƚido/M0Y0	po:adjective is:singular_masculine st:vilido
+xiràndoƚo/M0mf	po:noun is:singular_masculine st:điràndol
 
 
-/ 22
+/ 22 m
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
