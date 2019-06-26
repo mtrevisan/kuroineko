@@ -1127,7 +1127,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "don",			"kon",		1,	1,	"a",	"",				"",
 "don",			"par",		1,	1,	"a",	"",				"",
 "don",			"re",			1,	1,	"a",	"",				"",
-"dont",			"a",			1,	1,	"a",	"1896",			"Versene a mal.",
+"dont",			"a",			1,	1,	"a",	"1896",			"Vérsene a mal.",
 "dopar",			"",			1,	1,	"g",	"1219 (Veneŧia: adhovrare)",	"Uxar.",
 "doper",			"",			1,	1,	"g",	"1775",			"Uxar.",
 "dopi",			"",			1,	1,	"a",	"1775",			"",
