@@ -67,7 +67,7 @@ ICONV Th Ŧ
 ICONV ' ʼ
 
 # frequently switched character groups
-REP 119
+REP 120
 REP a à
 REP e è
 REP e é
@@ -77,6 +77,7 @@ REP o ò
 REP o ó
 REP u ú
 REP ù ú
+REP d đ
 REP s x
 REP x s
 REP ʼ ʼ_	# put a space after apostrophe
@@ -5193,7 +5194,7 @@ SFX U1 n i [aeou]n
 
 
 # trasformaŧion intra varianti (l > ƚ, j > ɉ, ŧ > s)
-SFX TE Y 53
+SFX TE Y 48
 SFX TE lò ƚò [aeiou]lò
 SFX TE là ƚà [aeiou]là
 SFX TE lè ƚè [aeiou]lè
@@ -5237,15 +5238,10 @@ SFX TE ŧin sin/M0 ŧin
 SFX TE ŧina sina/F0 ŧina
 SFX TE ŧen sen/M0 ŧen
 SFX TE ŧena sena/F0 ŧena
-SFX TE đo do/M0mf [eo]đo
-SFX TE đo do/M0 [^eo]đo
 SFX TE đo xo/M0mf [eo]đo
 SFX TE đo xo/M0 [^eo]đo
-SFX TE đa da/F0 đa
 SFX TE đa xa/F0 đa
-SFX TE đan dan/M0 đan
 SFX TE đan xan/M0 đan
-SFX TE đana dana/F0 đana
 SFX TE đana xana/F0 đana
 
 # trasformaŧion intra varianti ko èle vanesente (j > ɉ)
@@ -5257,20 +5253,17 @@ SFX TF Y 1
 SFX TF l ƚe/F0 [aeiouàèéíòóú]l
 
 
-# trasformaŧion iniŧial de paròla intra varianti (l > ƚ, j > ɉ, ŧ > s, đ > d/x)
-PFX TB Y 13
+# trasformaŧion iniŧial de paròla intra varianti (l > ƚ, j > ɉ, ŧ > s, đ > x)
+PFX TB Y 10
 PFX TB j ɉ j
 PFX TB xj xɉ xj
 PFX TB l ƚ l
 PFX TB ŧ s ŧ
-PFX TB đ d đ
 PFX TB đ x đ
-PFX TB inđ ind inđ
 PFX TB inđ inx inđ
 PFX TB J Ɉ J
 PFX TB L Ƚ L
 PFX TB Ŧ S Ŧ
-PFX TB Đ D Đ
 PFX TB Đ X Đ
 
 
