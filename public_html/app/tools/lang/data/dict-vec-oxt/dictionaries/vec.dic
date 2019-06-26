@@ -11516,6 +11516,9 @@ mariòloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:mariolar
 marioƚar/a0a2P0P2	po:verb ts:infinitive_simple
 mariòƚo/a0a2P0P2I0	po:verb ts:indicative_present st:marioƚar
 mariòƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:marioƚar
+maridar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+marido/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:maridar
+marídoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:maridar
 mariđar/a0a1P0P1@0	po:verb ts:infinitive_simple
 mariđo/a0a1P0P1FSI0@0	po:verb ts:indicative_present st:mariđar
 maríđoe/a0a1I1@0	po:verb ts:indicative_present is:interrogative st:mariđar
@@ -17648,13 +17651,9 @@ serénoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:serenar
 sarkar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 sarko/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:sarkar
 sàrkoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:sarkar
-servir/a0a1a2e0e1e2P0P1P2@0-0	po:verb ts:infinitive_simple
-sèrvo/a0e0e1e2P0P1P2FSI0@0-0.0:0	po:verb ts:indicative_present st:servar st:servir st:sèrver
-sarvir/a0a1a2d0d1d2P0P1P2@0-0	po:verb ts:infinitive_simple
-benservir/a0a1a2e0e1e2P0P1P2	po:verb ts:infinitive_simple
-bensèrvo/e0e1e2P0P1P2FSI0	po:verb ts:indicative_present st:benservir
-bensèrvoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:benservir
-bensarvir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
+servir/a0a1a2e0e1e2P0P1P2@0-0^8	po:verb ts:infinitive_simple
+sèrvo/a0e0e1e2P0P1P2FSI0@0-0.0:0^8	po:verb ts:indicative_present st:servar st:servir st:sèrver
+sarvir/a0a1a2d0d1d2P0P1P2@0-0^8	po:verb ts:infinitive_simple
 servar/a0a1a2P0P1P2.0:0r2r3r7	po:verb ts:infinitive_simple
 sarvar/a0a1a2P0P1P2.0:0r2r3r7	po:verb ts:infinitive_simple
 sarvo/a0a1a2P0P1P2FSI0@0-0.0:0	po:verb ts:indicative_present st:sarvar
@@ -17667,7 +17666,7 @@ osarvo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:osarvar
 osàrvoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:osarvar
 sèrver/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 serverò/b0b1b2I0	po:verb ts:indicative_future st:sèrver
-sèrvoe/a0a1a2I1.0-0@0	po:verb ts:indicative_present is:interrogative st:sèrver st:servar st:servir
+sèrvoe/a0a1a2I1.0-0@0^8	po:verb ts:indicative_present is:interrogative st:sèrver st:servar st:servir
 sèrvar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 servarò/b0b1b2I0	po:verb ts:indicative_future st:sèrvar
 sesolar/a0a1P0P1r7	po:verb ts:infinitive_simple
@@ -23461,28 +23460,22 @@ volar/a0a1P0P1‘0+0*0	po:verb ts:infinitive_simple
 vóloe/a0a1I1‘0+0*0	po:verb ts:indicative_present is:interrogative st:volar
 voƚar/a0a2P0P2‘0+0*0	po:verb ts:infinitive_simple
 vóƚoe/a0a2I1‘0+0*0	po:verb ts:indicative_present is:interrogative st:voƚar
-voler/a0a1c2c3P0P1‘0.0^7	po:verb ts:infinitive_simple
-volo/a0a1P0P1FSI0‘0*0.0^7	po:verb ts:indicative_present st:voler st:volar
-vòlo/a0a1P0P1FSI0‘0.0^7	po:verb ts:indicative_present st:voler
-vòtu/I3‘0.0^7	po:verb ts:indicative_present is:interrogative st:voler st:voƚer
-vò-tu/I3‘0.0^7	po:verb ts:indicative_present is:interrogative st:voler st:voƚer
-vutu/I3‘0.0^7	po:verb ts:indicative_present is:interrogative st:voler st:voƚer
-vu-tu/I3‘0.0^7	po:verb ts:indicative_present is:interrogative st:voler st:voƚer
-volsudo/M0FSY0‘0.0^7	po:verb ts:participle_perfect_strong st:voler st:voƚer
-volsuda/F0Y0‘0.0^7	po:verb ts:participle_perfect_strong st:voler st:voƚer
-vosudo/M0FSY0‘0.0^7	po:verb ts:participle_perfect_strong st:voler st:voƚer
-vosuda/F0Y0‘0.0^7	po:verb ts:participle_perfect_strong st:voler st:voƚer
-vòlvo/M0‘0.0^7	po:verb ts:participle_perfect_strong st:voler st:voƚer
-vòlva/F0‘0.0^7	po:verb ts:participle_perfect_strong st:voler st:voƚer
-voƚer/a0a2c2c4P0P2‘0.0^7	po:verb ts:infinitive_simple
-voƚo/a0a2P0P2I0‘0*0.0^7	po:verb ts:indicative_present st:voƚer st:voƚar
-vòƚo/a0a2P0P2I0‘0.0^7	po:verb ts:indicative_present st:voƚer
-benvoler/a0a1c2c3P0P1	po:verb ts:infinitive_simple
-benvòlo/a0a1P0P1FSI0	po:verb ts:indicative_present st:benvoler
-benvosudo/M0FSY0	po:verb ts:participle_perfect_strong st:benvoler st:benvoƚer
-benvosuda/F0Y0	po:verb ts:participle_perfect_strong st:benvoler st:benvoƚer
-benvoƚer/a0a2c2c4P0P2	po:verb ts:infinitive_simple
-benvòƚo/a0a2P0P2I0	po:verb ts:indicative_present st:benvoƚer
+voler/a0a1c2c3P0P1‘0.0^7^8	po:verb ts:infinitive_simple
+volo/a0a1P0P1FSI0‘0*0.0^7^8	po:verb ts:indicative_present st:voler st:volar
+vòlo/a0a1P0P1FSI0‘0.0^7^8	po:verb ts:indicative_present st:voler
+vòtu/I3‘0.0^7^8	po:verb ts:indicative_present is:interrogative st:voler st:voƚer
+vò-tu/I3‘0.0^7^8	po:verb ts:indicative_present is:interrogative st:voler st:voƚer
+vutu/I3‘0.0^7^8	po:verb ts:indicative_present is:interrogative st:voler st:voƚer
+vu-tu/I3‘0.0^7^8	po:verb ts:indicative_present is:interrogative st:voler st:voƚer
+volsudo/M0FSY0‘0.0^7^8	po:verb ts:participle_perfect_strong st:voler st:voƚer
+volsuda/F0Y0‘0.0^7^8	po:verb ts:participle_perfect_strong st:voler st:voƚer
+vosudo/M0FSY0‘0.0^7^8	po:verb ts:participle_perfect_strong st:voler st:voƚer
+vosuda/F0Y0‘0.0^7^8	po:verb ts:participle_perfect_strong st:voler st:voƚer
+vòlvo/M0‘0.0^7^8	po:verb ts:participle_perfect_strong st:voler st:voƚer
+vòlva/F0‘0.0^7^8	po:verb ts:participle_perfect_strong st:voler st:voƚer
+voƚer/a0a2c2c4P0P2‘0.0^7^8	po:verb ts:infinitive_simple
+voƚo/a0a2P0P2I0‘0*0.0^7^8	po:verb ts:indicative_present st:voƚer st:voƚar
+vòƚo/a0a2P0P2I0‘0.0^7^8	po:verb ts:indicative_present st:voƚer
 xvolasar/a0a1P0P1	po:verb ts:infinitive_simple
 xvolaso/a0a1P0P1FSI0	po:verb ts:indicative_present st:xvolasar
 xvolàsoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:xvolasar
@@ -32290,12 +32283,6 @@ gualío/A1^7	po:adjective is:singular_masculine
 guaƚivo/A1W1^7	po:adjective is:singular_masculine
 guaƚivo/A1q1^7	po:noun is:singular_masculine
 guaƚío/A1^7	po:adjective is:singular_masculine
-valivo/A1FSW0^7	po:adjective is:singular_masculine
-valivo/A1FSq0q1^7	po:noun is:singular_masculine
-valío/A1^7	po:adjective is:singular_masculine
-vaƚivo/A1W1^7	po:adjective is:singular_masculine
-vaƚivo/A1q1^7	po:noun is:singular_masculine
-vaƚío/A1^7	po:adjective is:singular_masculine
 guantèr/M0V0gv	po:noun is:singular_masculine
 guantèra/F0V0gv	po:noun is:singular_femenine
 guao/M0	po:noun is:singular_masculine
@@ -33298,8 +33285,8 @@ maɉèr/M0	po:noun is:singular_masculine
 maɉòl/M0U0TE	po:noun is:singular_masculine
 maɉòlika/F0	po:noun is:singular_femenine
 maɉòƚika/F0	po:noun is:singular_femenine
-makako/A1FS	po:adjective is:singular_masculine
 makaka/F0(0(2	po:noun is:singular_femenine
+makako/A1FS	po:adjective is:singular_masculine
 makako/M0FS(0(2	po:noun is:singular_masculine
 makaron/A2U0mf	po:noun is:singular_masculine
 makaronŧin/M0TE	po:noun is:singular_masculine
@@ -35983,12 +35970,18 @@ valdrapa/F0	po:noun is:singular_femenine
 valentiŧia/F0TE	po:noun is:singular_femenine
 valexan/A2U0	po:adjective is:singular_masculine
 valexan/A2U0	po:noun is:singular_masculine
+valivo/A1FSW0^7	po:adjective is:singular_masculine
+valivo/A1FSq0q1^7	po:noun is:singular_masculine
+valío/A1^7	po:adjective is:singular_masculine
 valserka/F0	po:noun is:singular_femenine
 valŧerka/F0	po:noun is:singular_femenine
 vaƚangin/M0	po:noun is:singular_masculine
 vaƚentisia/F0	po:noun is:singular_femenine
 vaƚexan/A2	po:adjective is:singular_masculine
 vaƚexan/A2	po:noun is:singular_masculine
+vaƚivo/A1W1^7	po:adjective is:singular_masculine
+vaƚivo/A1q1^7	po:noun is:singular_masculine
+vaƚío/A1^7	po:adjective is:singular_masculine
 vanarèl/M0U0TE	po:adjective is:singular_masculine
 vanarèla/F0TE	po:adjective is:singular_femenine
 vanía/F0	po:noun is:singular_femenine
@@ -36372,7 +36365,7 @@ beƚòmo/M0	po:noun is:singular_masculine al:beƚòmeni
 benarlevà	po:adjective is:singular
 benda/F0&0	po:noun is:singular_femenine
 benefiŧion/F0TEU0mf	po:noun is:singular_femenine
-benmontà	po:adjective is:singular
+benmontado/M0FSY0	po:adjective is:singular_masculine
 berikòkola/F0TEvŧ	po:noun is:singular_femenine
 bertovèl/M0U0TEvŧ	po:noun is:singular_masculine
 bertovèla/F0TEvŧ	po:noun is:singular_femenine
@@ -37862,7 +37855,7 @@ mañifisensa/F0M1	po:noun is:singular_femenine
 mañifiŧenŧa/F0M1	po:noun is:singular_femenine
 mañífiko/A1FS*0	po:adjective is:singular_masculine
 mar/M0(0&2&3	po:noun is:singular_masculine
-mara/F0&2&3(0	po:noun is:singular_femenine
+mara/F0&0&2&3(0	po:noun is:singular_femenine
 maregal/F0TFU0	po:noun is:singular_masculine
 mariña/F0	po:noun is:singular_femenine
 marígola/F0TE	po:noun is:singular_femenine
@@ -40792,7 +40785,6 @@ bekofotudo/M0FSY0	po:noun is:singular_masculine
 bekofutristo/A1FS	po:adjective is:singular_masculine
 belòtol/A1U1mf	po:adjective is:singular_masculine
 beƚòtoƚo/A1mf	po:adjective is:singular_masculine
-benintrada/F0Y0Y1	po:noun is:singular_femenine
 bersò	po:noun is:masculine
 berton/A2U0mf	po:noun is:singular_masculine
 beta/F0	po:noun is:singular_femenine
@@ -43005,8 +42997,6 @@ beniño/A1FS	po:adjective is:singular_masculine
 benservir	po:noun is:singular_masculine
 bentornada/F0Y0	po:adjective is:singular_femenine
 bentornado/M0FSY0	po:adjective is:singular_masculine
-benveñuda/F0Y0	po:adjective is:singular_femenine
-benveñudo/M0FSY0	po:adjective is:singular_masculine
 benvojente/M0FSmf	po:adjective is:singular
 benvoɉente/M0FSmf	po:adjective is:singular
 beñiñità	po:noun is:femenine
@@ -50503,7 +50493,7 @@ insemenío/A1	po:adjective is:singular_masculine
 inseneto/A1FSmf	po:adjective is:singular_masculine
 insimenío/A1	po:adjective is:singular_masculine
 intòrta/F0	po:noun is:singular_femenine
-intrada/F0Y0Y1&2&3	po:noun is:singular_femenine
+intrada/F0Y0Y1&2&3^8	po:noun is:singular_femenine
 inŧanpo/M0FS	po:noun is:singular_masculine
 janíser/M0TBmf	po:noun is:singular_masculine
 janíŧer/M0TBmf	po:noun is:singular_masculine
@@ -54176,9 +54166,9 @@ truxo/M0FS	po:noun is:singular_masculine
 ŧimexin/A1TB	po:adjective is:singular_masculine
 ŧólfar/M0TB	po:noun is:singular_masculine
 vakada/F0Y0Y1	po:noun is:singular_femenine
-veñuda/F0Y0Y1	po:adjective is:singular_femenine
-veñuda/F0Y0*0^7	po:noun is:singular_femenine
-veñudo/M0FSY0*0^7	po:adjective is:singular_masculine
+veñuda/F0Y0	po:adjective is:singular_femenine
+veñuda/F0Y0*0^7^8	po:noun is:singular_femenine
+veñudo/M0FSY0*0^7^8	po:adjective is:singular_masculine
 vié	po:interjection
 volante/M0FS	po:noun is:singular
 xbanpida/F0Y0	po:adjective is:singular_femenine
@@ -55020,7 +55010,7 @@ graŧiado/M0FSY0-1	po:adjective is:singular_masculine
 ideada/F0Y0	po:adjective is:singular_femenine
 ideado/M0FSY0	po:adjective is:singular_masculine
 ideal/F0TFU0	po:adjective is:singular
-idròpigo/A1FS	po:adjective is:singular_masculine st:intròpiko
+idròpego/A1FS	po:adjective is:singular_masculine st:intròpiko
 inbandierada/F0Y0	po:adjective is:singular_femenine
 inbandierado/M0FSY0	po:adjective is:singular_masculine
 inboskada/F0Y0Y1	po:noun is:singular_femenine
@@ -55180,7 +55170,7 @@ kreansado/M0FSY0	po:adjective is:singular_masculine st:kreanŧado
 kreanŧada/F0Y0	po:adjective is:singular_femenine al:kreansada
 kreanŧado/M0FSY0	po:adjective is:singular_masculine al:kreansado
 kripiŧa/F0TE	po:noun is:singular_femenine
-kródiga/F0	po:noun is:singular_femenine
+kródega/F0	po:noun is:singular_femenine
 krusta/F0	po:noun is:singular_femenine
 kuca/F0&0	po:noun is:singular_femenine
 kucèr/M0V0	po:noun is:singular_masculine
@@ -55217,7 +55207,6 @@ loketo/M0FSmf	po:noun is:singular_masculine
 luganigèr/M0V0	po:noun is:singular_masculine al:ƚuganigèr
 luganigèra/F0V0	po:noun is:singular_femenine al:ƚuganigèra
 lugar/M0TB	po:noun is:singular_masculine
-lugàniga/F0TB	po:noun is:singular_femenine
 luto/M0FS	po:noun is:singular_masculine al:ƚuto
 luxente/M0FSmf	po:adjective is:singular_masculine al:ƚuxente
 luxente/M0FSmf	po:noun is:singular_masculine al:ƚuxente
@@ -55240,9 +55229,29 @@ macada/F0Y0	po:adjective is:singular_femenine
 macado/M0FSY0	po:adjective is:singular_masculine
 madasa/F0	po:noun is:singular_femenine
 madreña/F0	po:noun is:singular_femenine
+majoleto/M0FSTEmf	po:noun is:singular_masculine
+maɉoleto/M0FSTEmf	po:noun is:singular_masculine
+malkapitada/F0Y0	po:adjective is:singular_femenine
+malkapitado/M0FSY0	po:adjective is:singular_masculine
+mamo/A1FS	po:adjective is:singular_masculine
+mandrièr/M0V0	po:noun is:singular_masculine
+mandrièra/F0V0	po:noun is:singular_femenine
+mandriòl/M0U0TE	po:noun is:singular_masculine
+manerin/M0	po:noun is:singular_masculine
+maneron/F0U0mf	po:noun is:singular_masculine
+mangin/M0	po:noun is:singular_masculine
 mañagalina/F0	po:noun
 mañagaƚina/F0	po:noun
 mañamòkol/M0U1TEmf	po:noun is:singular_masculine
+marmoriđada/F0Y0	po:adjective is:singular_femenine
+marmoriđado/M0FSY0	po:adjective is:singular_masculine
+marmorixada/F0Y0	po:adjective is:singular_femenine
+marmorixado/M0FSY0	po:adjective is:singular_masculine
+marsida/F0Y0	po:adjective is:singular_femenine
+marsido/M0FSY0	po:adjective is:singular_masculine
+marŧida/F0Y0	po:adjective is:singular_femenine
+marŧido/M0FSY0	po:adjective is:singular_masculine
+masketa/F0	po:noun is:singular_femenine
 ñàkera/F0*0	po:noun is:singular_femenine
 ñespoleta/F0TE	po:noun is:singular_femenine
 ñespolèr/M0V0	po:noun is:singular_masculine al:ñespoƚèr
@@ -55265,17 +55274,8 @@ vilido/M0FSY0	po:adjective is:singular_masculine al:viƚido
 viƚida/F0Y0	po:adjective is:singular_femenine st:vilida
 viƚido/M0Y0	po:adjective is:singular_masculine st:vilido
 xiràndoƚo/M0mf	po:noun is:singular_masculine st:điràndol
-majoleto/M0FSTEmf	po:noun is:singular_masculine
-maɉoleto/M0FSTEmf	po:noun is:singular_masculine
-malkapitada/F0Y0	po:adjective is:singular_femenine
-malkapitado/M0FSY0	po:adjective is:singular_masculine
-mamo/A1FS	po:adjective is:singular_masculine
-mandrièr/M0V0	po:noun is:singular_masculine
-mandrièra/F0V0	po:noun is:singular_femenine
-mandriòl/M0U0TE	po:noun is:singular_masculine
-manerin/M0	po:noun is:singular_masculine
 
 
-/ 23
+/ 24
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
