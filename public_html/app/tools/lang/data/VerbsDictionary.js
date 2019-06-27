@@ -3815,6 +3815,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "maton",			"",			4,	5,	"a",	"1775",			"",
 "maton",			"in",			4,	5,	"a",	"1810",			"Far masa luxe, stordir, intronar, intorpidir pal sòno.",
 "maton",			"x",			4,	5,	"a",	"1829",			"Inmatonir.",
+"matrikol",		"",			1,	4,	"a",	"1877",			"",
 "matriđ",		"",			1,	4,	"a",	"1847",			"",
 "matun",			"",			4,	5,	"a",	"",				"Matonir.",
 "matun",			"in",			4,	5,	"a",	"1884",			"Inmatonir.",

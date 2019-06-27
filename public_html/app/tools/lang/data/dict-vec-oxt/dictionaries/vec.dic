@@ -11682,6 +11682,12 @@ matónoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:matonar
 matonir/a0a1a2d0d1d2P0P1P2+0*0	po:verb ts:infinitive_simple
 matunir/a0a1a2d0d1d2P0P1P2+0*0	po:verb ts:infinitive_simple
 matriđar/a0a1P0P1	po:verb ts:infinitive_simple
+matrikolar/a0a1P0P1	po:verb ts:infinitive_simple
+matríkolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:matrikolar
+matríkoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:matrikolar
+matrikoƚar/a0a2P0P2	po:verb ts:infinitive_simple
+matríkoƚo/a0a2P0P2FSI0	po:verb ts:indicative_present st:matrikoƚar
+matríkoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:matrikoƚar
 matriđo/a0a1P0P1FSI0	po:verb ts:indicative_present st:matriđar
 matríđoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:matriđar
 matrixar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
@@ -36268,7 +36274,6 @@ xlòfa/F0	po:noun is:singular_femenine
 xlòfer/M0mf	po:noun is:singular_masculine
 xluxaroƚa/F0V1	po:noun is:singular_femenine
 xmania/F0	po:noun is:singular_femenine
-xmato/M0FS	po:noun is:singular_masculine
 xmàfar/A1	po:noun is:singular_masculine
 xmejaŧa/F0TE	po:noun is:singular_femenine
 xmeɉaŧa/F0TE	po:noun is:singular_femenine
@@ -36365,7 +36370,6 @@ beƚòmo/M0	po:noun is:singular_masculine al:beƚòmeni
 benarlevà	po:adjective is:singular
 benda/F0&0	po:noun is:singular_femenine
 benefiŧion/F0TEU0mf	po:noun is:singular_femenine
-benmontado/M0FSY0	po:adjective is:singular_masculine
 berikòkola/F0TEvŧ	po:noun is:singular_femenine
 bertovèl/M0U0TEvŧ	po:noun is:singular_masculine
 bertovèla/F0TEvŧ	po:noun is:singular_femenine
@@ -41377,7 +41381,8 @@ marxòka/F0&0	po:noun is:singular_femenine
 marxòko/M0FS&0(4	po:adjective is:singular_masculine
 marxòko/M0FS&0(4	po:noun is:singular_masculine
 masarin/A2	po:adjective is:singular_masculine
-masiŧo/M0FSTE	po:noun is:singular_masculine
+masiŧa/F0TE	po:adjective is:singular_femenine
+masiŧo/M0FSTE	po:adjective is:singular_masculine
 maskareta/F0	po:noun is:singular_femenine
 maskarin/A2	po:adjective is:singular_masculine
 maskarpon/F0U0mf	po:noun is:singular_masculine
@@ -46223,7 +46228,7 @@ matelòt	po:noun is:masculine
 mateƚòt	po:adverb
 mateƚòt	po:noun is:masculine
 materaso/M0FS	po:noun is:singular_masculine
-mato/M0FS	po:noun is:singular_masculine
+mato/M0FS*0	po:noun is:singular_masculine
 mato/M0FS<0<1^6	po:adjective is:singular_masculine
 matonèla/F0TE	po:noun is:singular_femenine
 maturamente/FSW2	po:adverb
@@ -52760,7 +52765,6 @@ maliŧiada/F0Y0*0	po:adjective is:singular_femenine
 maliŧiado/M0FSY0*0	po:adjective is:singular_masculine
 malkreada/F0Y0	po:adjective is:singular_femenine
 malkreado/M0FSY0	po:adjective is:singular_masculine
-malmontado/M0FSY0	po:noun is:singular_masculine
 maltapada/F0Y0	po:noun is:singular_femenine
 maltapado/M0FSY0	po:noun is:singular_masculine
 malvestida/F0Y0	po:noun is:singular_femenine
@@ -52823,8 +52827,10 @@ mokada/F0Y0Y1	po:noun is:singular_femenine
 molifegada/F0Y0Y1	po:noun is:singular_femenine
 moltonada/F0Y0Y1	po:noun is:singular_femenine
 moƚifegada/F0Y0Y1	po:noun is:singular_femenine
-montada/F0Y0Y1.0	po:adjective is:singular_femenine
-montada/F0Y0Y1.0^7	po:noun is:singular_femenine
+montada/F0Y0.0	po:noun is:singular_femenine
+montada/F0Y0.0^7^8	po:adjective is:singular_femenine
+montado/M0FSY0.0	po:noun is:singular_masculine
+montado/M0FSY0.0^7^8	po:adjective is:singular_masculine
 morsegada/F0Y0Y1	po:noun is:singular_femenine
 mufida/F0Y0	po:adjective is:singular_femenine
 mufido/M0FSY0	po:adjective is:singular_masculine
@@ -55252,6 +55258,24 @@ marsido/M0FSY0	po:adjective is:singular_masculine
 marŧida/F0Y0	po:adjective is:singular_femenine
 marŧido/M0FSY0	po:adjective is:singular_masculine
 masketa/F0	po:noun is:singular_femenine
+matrikolada/F0Y0	po:adjective is:singular_femenine
+matrikolado/M0FSY0	po:adjective is:singular_masculine
+matrikoƚada/F0Y0	po:adjective is:singular_femenine
+matrikoƚado/M0Y0	po:adjective is:singular_masculine
+međiguanti	po:noun is:plural_masculine st:međoguanto
+međoguanto	po:noun is:singular_masculine al:međiguanti
+međomarinèr/M0	po:noun is:singular_masculine
+menegrin/M0	po:noun is:singular_masculine
+mexiguanti	po:noun is:plural_masculine st:mexoguanto
+mexoguanto	po:noun is:singular_masculine al:mexiguanti
+mexomarinèr/M0	po:noun is:singular_masculine
+médola/F0TE	po:noun is:singular_femenine
+mèđi–guanti	po:noun is:plural_masculine st:mèđo–guanto
+mèđo–guanto	po:noun is:singular_masculine al:mèđi–guanti
+mèđo–marinèr/M0	po:noun is:singular_masculine
+mèxi–guanti	po:noun is:plural_masculine st:mèxo–guanto
+mèxo–guanto	po:noun is:singular_masculine al:mèxi–guanti
+mèxo–marinèr/M0	po:noun is:singular_masculine
 ñàkera/F0*0	po:noun is:singular_femenine
 ñespoleta/F0TE	po:noun is:singular_femenine
 ñespolèr/M0V0	po:noun is:singular_masculine al:ñespoƚèr
@@ -55276,6 +55300,6 @@ viƚido/M0Y0	po:adjective is:singular_masculine st:vilido
 xiràndoƚo/M0mf	po:noun is:singular_masculine st:điràndol
 
 
-/ 24
+/ 25
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
