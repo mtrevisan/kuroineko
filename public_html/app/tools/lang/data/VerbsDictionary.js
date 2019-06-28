@@ -4350,6 +4350,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "onbri",			"in",			1,	0,	"a",	"",				"",
 "onbriđ",		"",			1,	4,	"a",	"1775",			"Far le onbre intʼ un kuadro.",
 "onbređ",		"",			1,	4,	"a",	"1893",			"Onbriđar.",
+"onbrel",		"",			1,	4,	"g",	"1877",			"",
 "ond",			"",			1,	0,	"a",	"1775",			"",
 "ond",			"ab",			1,	0,	"a",	"1517",			"",
 "ondeđ",			"",			1,	3,	"a",	"1775",			"",
