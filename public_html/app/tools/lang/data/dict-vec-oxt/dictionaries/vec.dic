@@ -12793,6 +12793,9 @@ nícoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:nicar
 ranicar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 ranico/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:ranicar
 ranícoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:ranicar
+nidar/a0a1a2P0P1P2+0-1^6	po:verb ts:infinitive_simple
+nido/a0a1a2P0P1P2I0+0-1	po:verb ts:indicative_present st:nidar
+nídoe/a0a1a2I1+0-1	po:verb ts:indicative_present is:interrogative st:nidar
 nikar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 niko/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:nikar
 níkoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:nikar
@@ -12938,6 +12941,9 @@ nuo/a0a1a2P0P1P2I0-1*0^6	po:verb ts:indicative_present st:nuar
 núoe/a0a1a2I1-1*0^6	po:verb ts:indicative_present is:interrogative st:nuar
 dexnúo/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:dexnuar
 stranúo/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:stranuar
+nudar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+nudo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:nudar
+núdoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:nudar
 nudrir/a0a1a2d0d1d2P0P1P2r2r3	po:verb ts:infinitive_simple
 nudrigar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 nudrigo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:nudrigar
@@ -25117,6 +25123,7 @@ nisun/A2U0	po:quantifier st:nesun
 ñinte/FS	po:quantifier st:ñente
 ñisun/A2U0	po:adjective is:singular_masculine st:nesun
 ñisun/A2U0	po:quantifier st:nesun
+oñidun/A2U0	po:quantifier
 oñun/A2U0	po:quantifier
 òñe	po:quantifier st:òñi
 òño/M0FS	po:quantifier al:òñe
@@ -25849,7 +25856,7 @@ ooo	po:interjection
 oo	po:interjection
 ou	po:interjection
 o	po:interjection
-òco/M0&0&2&3(2	po:noun is:singular_masculine
+òco/M0&0&2&3<0<1(2	po:noun is:singular_masculine
 òco	po:interjection
 òcu	po:interjection
 òi	po:interjection
@@ -33700,8 +33707,8 @@ mua/F0	po:noun is:singular_femenine st:muda
 muda/F0	po:noun is:singular_femenine al:mua
 mul/M0U1&0(0<0<1	po:noun is:singular_masculine
 mul/M0U1&0<0<1	po:adjective is:singular_masculine
+mula/F0&0<0<1v0	po:noun is:singular_femenine
 mula/F0&0<0<1	po:adjective is:singular_femenine
-mula/F0&0<0<1	po:noun is:singular_femenine
 mulinèr/M0V0	po:noun is:singular_masculine
 mulinèra/F0V0	po:noun is:singular_femenine
 muƚa/F0&1<2	po:adjective is:singular_femenine
@@ -41484,8 +41491,8 @@ mostrico/A1FS	po:adjective is:singular_masculine
 motexin/M0	po:noun is:singular_masculine
 moŧa/F0TE	po:noun is:singular_femenine
 moŧegòto/M0FS	po:noun is:singular_masculine
-moŧin/M0TE	po:noun is:singular_masculine
-moŧina/F0TE	po:noun is:singular_femenine
+moŧin/M0TE	po:adjective is:singular_masculine
+moŧina/F0TE	po:adjective is:singular_femenine
 moŧo/M0FSmf	po:noun is:singular_masculine
 mògan/M0U1	po:noun is:singular_masculine
 mòmola/F0TE	po:noun is:singular_femenine
@@ -52842,14 +52849,18 @@ napolon/F0U0TEmf	po:noun is:singular_masculine
 nasente/M0FSmf	po:adjective is:singular
 naxada/F0Y0*0	po:noun is:singular_femenine
 naxado/M0FSY0*0	po:noun is:singular_masculine
-negada/F0Y0Y1	po:noun is:singular_femenine
+negada/F0Y0	po:noun is:singular_femenine
+negado/M0FSY0	po:noun is:singular_masculine
 negrida/F0Y0	po:adjective is:singular_femenine
 negrido/M0FSY0	po:adjective is:singular_masculine
-nevegada/F0Y0Y1	po:noun is:singular_femenine
+nevegada/F0Y0	po:noun is:singular_femenine
+nevegado/M0FSY0	po:noun is:singular_masculine
 notolada/F0Y0Y1	po:noun is:singular_femenine
 notoƚada/F0Y0Y1	po:noun is:singular_femenine
-nuvolado/M0FSY0	po:noun is:singular_masculine
-nuvoƚado/M0Y0	po:noun is:singular_masculine
+nuvolada/F0Y0	po:adjective is:singular_femenine
+nuvolado/M0FSY0	po:adjective is:singular_masculine
+nuvoƚada/F0Y0	po:adjective is:singular_femenine
+nuvoƚado/M0Y0	po:adjective is:singular_masculine
 ocada/F0Y0Y1	po:noun is:singular_femenine
 ondada/F0Y0Y1	po:noun is:singular_femenine
 onđada/F0Y0Y1	po:noun is:singular_femenine
@@ -54009,10 +54020,13 @@ lasado/M0FSY0	po:noun is:singular_masculine
 latada/F0Y0TB	po:noun is:singular_femenine
 latado/M0FSY0	po:noun is:singular_masculine
 lojada/F0Y0TB	po:noun is:singular_femenine
-lojado/M0FSY0	po:noun is:singular_masculine
+lojado/M0FSY0	po:noun is:singular_masculine al:ƚojado
+loɉada/F0Y0TB	po:noun is:singular_femenine
+loɉado/M0FSY0	po:noun is:singular_masculine al:ƚoɉado
 ƚasado/M0Y0	po:noun is:singular_masculine
 ƚatado/M0Y0	po:noun is:singular_masculine
-ƚojado/M0Y0	po:noun is:singular_masculine
+ƚojado/M0Y0	po:noun is:singular_masculine st:lojado
+ƚoɉado/M0Y0	po:noun is:singular_masculine st:loɉado
 magonada/F0Y0*0	po:adjective is:singular_femenine
 magonado/M0FSY0*0	po:adjective is:singular_masculine
 malsabatada/F0Y0	po:adjective is:singular_femenine
@@ -54931,8 +54945,6 @@ derixion/F0U0mf	po:noun is:singular_femenine
 dexabitada/F0Y0	po:adjective is:singular_femenine
 dexabitado/M0FSY0	po:adjective is:singular_masculine
 dexertor/F0mf	po:noun is:singular_masculine
-dexokupada/F0Y0	po:adjective is:singular_femenine
-dexokupado/M0FSY0	po:adjective is:singular_masculine
 dexvesada/F0Y0	po:adjective is:singular_femenine st:dexveŧada
 dexvesado/M0FSY0	po:adjective is:singular_masculine st:dexveŧado
 dexveŧada/F0Y0	po:adjective is:singular_femenine al:dexvesada
@@ -55276,6 +55288,23 @@ mèđo–marinèr/M0	po:noun is:singular_masculine
 mèxi–guanti	po:noun is:plural_masculine st:mèxo–guanto
 mèxo–guanto	po:noun is:singular_masculine al:mèxi–guanti
 mèxo–marinèr/M0	po:noun is:singular_masculine
+mulŧa/F0TE	po:noun is:singular_femenine
+muscada/F0Y0	po:adjective is:singular_femenine
+muscado/M0FSY0	po:adjective is:singular_masculine
+muŧin/M0TE	po:adjective is:singular_masculine
+muŧina/F0TE	po:adjective is:singular_femenine
+nanka/F0	po:conjunction
+nanka	po:adverb
+naransada/F0Y0Y1	po:noun is:singular_femenine
+naranŧada/F0Y0Y1	po:noun is:singular_femenine
+neta–kondoti	po:noun
+neta–rece	po:noun
+netakondoti	po:noun
+netarece	po:noun
+nidada/F0Y0Y1	po:noun is:singular_femenine
+noxèr/M0V0	po:noun is:singular_masculine
+noxèra/F0V0	po:noun is:singular_femenine
+númor/M0mf	po:noun is:singular_masculine
 ñàkera/F0*0	po:noun is:singular_femenine
 ñespoleta/F0TE	po:noun is:singular_femenine
 ñespolèr/M0V0	po:noun is:singular_masculine al:ñespoƚèr
@@ -55284,6 +55313,17 @@ mèxo–marinèr/M0	po:noun is:singular_masculine
 ñespoƚèra/F0V1	po:noun is:singular_femenine st:ñespolèra
 ñèspola/F0TE	po:noun is:singular_femenine
 ñòra/F0	po:noun is:singular_femenine
+oblegada/F0Y0	po:adjective is:singular_femenine
+oblegado/M0FSY0	po:adjective is:singular_masculine
+ocalin/M0TE	po:noun is:singular_masculine
+odiada/F0Y0	po:adjective is:singular_femenine
+odiado/M0FSY0	po:adjective is:singular_masculine
+ojada/F0Y0	po:noun is:singular_femenine
+ojado/M0FSY0	po:noun is:singular_masculine
+oɉada/F0Y0	po:noun is:singular_femenine
+oɉado/M0FSY0	po:noun is:singular_masculine
+okupada/F0Y0-1	po:adjective is:singular_femenine
+okupado/M0FSY0-1	po:adjective is:singular_masculine
 pionbo	po:adverb
 sikurada/F0Y0	po:adjective is:singular_femenine
 sikurado/M0FSY0	po:adjective is:singular_masculine
@@ -55300,6 +55340,6 @@ viƚido/M0Y0	po:adjective is:singular_masculine st:vilido
 xiràndoƚo/M0mf	po:noun is:singular_masculine st:điràndol
 
 
-/ 25
+/ 26
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
