@@ -966,6 +966,7 @@ baƚuxenar/a0a2P0P2	po:verb ts:infinitive_simple
 baƚúxeno/a0a2P0P2I0	po:verb ts:indicative_present st:baƚuxenar
 baƚúxenoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:baƚuxenar
 rebanbir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
+renbanbir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 inbanbolar/a0a1P0P1	po:verb ts:infinitive_simple
 inbànbolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:inbanbolar
 inbànboloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:inbanbolar
@@ -11972,6 +11973,9 @@ xmàrsioe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xmarsiar
 xmerŧiar/a0a1P0P1	po:verb ts:infinitive_simple
 xmèrŧio/a0a1P0P1I0	po:verb ts:indicative_present st:xmerŧiar
 xmèrŧioe/a0a1I1	po:verb ts:indicative_present is:interrogative st:xmerŧiar
+remesar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+remeso/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:remesar
+remésoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:remesar
 mesedar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 mésedo/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:mesedar
 mésedoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:mesedar
@@ -29859,6 +29863,7 @@ ronko/M0FS&0(2	po:noun is:singular_masculine
 ronpitòle	po:noun
 ronpitòƚe	po:noun
 rore/M0	po:noun is:singular_masculine
+rosto/A1FS	po:adjective is:singular_masculine
 rosto/A1FS	po:noun is:singular_masculine
 roxegonko/M0FS	po:noun is:singular_masculine
 roxegòto/M0FS	po:noun is:singular_masculine
@@ -37727,6 +37732,7 @@ letièra/F0TB	po:noun is:singular_femenine
 letiŧia/F0TE	po:noun is:singular_femenine
 letra/F0*0	po:noun is:singular_femenine
 leŧitamente/FSW2	po:adverb
+levada/F0Y0.0	po:noun is:singular_femenine
 levado/M0FSY0.0	po:noun is:singular_masculine
 levorato/M0FS	po:noun is:singular_masculine
 lexadro/A1TB	po:adjective is:singular_masculine
@@ -37794,6 +37800,7 @@ lúgar/M0	po:noun is:singular_masculine
 ƚesitamente/W2	po:adverb
 ƚetisia/F0	po:noun is:singular_femenine
 ƚetra/F0	po:noun is:singular_femenine
+ƚevada/F0Y0.0	po:noun is:singular_femenine
 ƚevado/M0Y0.0	po:noun is:singular_masculine
 ƚevorato/M0	po:noun is:singular_masculine
 ƚexiƚe/F0	po:noun is:singular_masculine
@@ -52444,8 +52451,6 @@ desfigurado/M0FSY0	po:noun is:singular_masculine
 desipada/F0Y0Y1	po:noun is:singular_femenine
 desparecada/F0Y0Y1	po:noun is:singular_femenine
 despòjo/M0FSTE	po:noun is:singular_masculine
-destirada/F0Y0	po:adjective is:singular_femenine
-destirado/M0FSY0	po:adjective is:singular_masculine
 destornada/F0Y0Y1	po:noun is:singular_femenine
 dexafitado/M0FSY0	po:noun is:singular_masculine
 dexditada/F0Y0	po:noun is:singular_femenine
@@ -52986,8 +52991,6 @@ renfasada/F0Y0Y1	po:noun is:singular_femenine
 renfaŧada/F0Y0Y1	po:noun is:singular_femenine
 restelada/F0Y0Y1vŧ	po:adjective is:singular_femenine
 resteƚada/F0Y0Y1vŧ	po:adjective is:singular_femenine
-retirada/F0Y0	po:noun is:singular_femenine
-retirado/M0FSY0	po:noun is:singular_masculine
 retokada/F0Y0	po:noun is:singular_femenine
 retokado/M0FSY0	po:noun is:singular_masculine
 revalsa/F0	po:noun is:singular_femenine
@@ -52995,8 +52998,8 @@ revédol/M0U1TEmf	po:noun is:singular_masculine
 rexentada/F0Y0Y1	po:adjective is:singular_femenine
 ridolòto/A1FS	po:noun is:singular_masculine
 ridoƚòto/A1	po:noun is:singular_masculine
-rigada/F0Y0	po:noun is:singular_femenine
-rigado/M0FSY0	po:noun is:singular_masculine
+rigada/F0Y0	po:adjective is:singular_femenine
+rigado/M0FSY0	po:adjective is:singular_masculine
 risolida/F0Y0	po:adjective is:singular_femenine
 risolido/M0FSY0	po:adjective is:singular_masculine
 risoƚida/F0Y0	po:adjective is:singular_femenine
@@ -53244,7 +53247,8 @@ tatada/F0Y0Y1	po:noun is:singular_femenine
 tecada/F0Y0Y1	po:noun is:singular_femenine
 tigrada/F0Y0	po:adjective is:singular_femenine
 tigrado/M0FSY0	po:adjective is:singular_masculine
-tirada/F0Y0Y1	po:adjective is:singular_femenine
+tirada/F0Y0.0-1	po:adjective is:singular_femenine
+tirado/M0FSY0.0-1	po:adjective is:singular_masculine
 tolada/F0Y0	po:noun is:singular_femenine
 toƚada/F0Y0	po:noun is:singular_femenine
 tonada/F0Y0Y1	po:noun is:singular_femenine
@@ -55473,9 +55477,32 @@ raspo/M0FS&0	po:noun is:singular_masculine
 rava/M0	po:noun is:singular_femenine
 redixèla/F0TE	po:noun is:singular_femenine
 renpinpin/M0	po:noun is:singular_masculine
+rabaltaòmini	po:noun
+rebòto/M0FS	po:noun is:singular_masculine
+rekuperada/F0Y0	po:adjective is:singular_femenine
+rekuperado/M0FSY0	po:adjective is:singular_masculine
+remonta/F0	po:noun is:singular_femenine
+riòda/F0	po:noun is:singular_femenine
+riodèla/F0&0	po:noun is:singular_femenine
+riodèƚa/F0&1	po:noun is:singular_femenine
+riscada/F0Y0	po:adjective is:singular_femenine
+riscado/M0FSY0	po:adjective is:singular_masculine
+ristelièra/F0	po:noun is:singular_femenine
+risteƚièra/F0	po:noun is:singular_femenine
+roñolada/F0Y0Y1	po:noun is:singular_femenine
+roñoƚada/F0Y0Y1	po:noun is:singular_femenine
+rúkula/F0TE	po:noun is:singular_femenine
+ruda/F0	po:noun is:singular_femenine
+rudinaŧo/M0FSTE	po:noun is:singular_masculine
+ruñada/F0Y0Y1	po:noun is:singular_femenine
 
 
-/ 31
+/ 32
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
 sost.:graspo,raspo
+sost.:akuavida,akuavita,ranpegamuri,rabaltaòmini
+sost.:ròda,riòda
+sost.:rodèla,rodèƚa,riodèla,riodèƚa
+sost.:restelèra,resteƚèra,restelièra,resteƚièra,ristelièra,risteƚièra
+sost.:rovinaŧo,rovinaso,ruvinaŧo,ruvinaso,rudinaŧo,rudinaso
