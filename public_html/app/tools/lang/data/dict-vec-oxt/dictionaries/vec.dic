@@ -5212,6 +5212,9 @@ fítoe/a0a1a2I1-1	po:verb ts:indicative_present is:interrogative st:fitar
 afitar/a0a1a2P0P1P2-1+0	po:verb ts:infinitive_simple
 afito/a0a1a2P0P1P2FSI0-1+0	po:verb ts:indicative_present st:afitar
 afítoe/a0a1a2I1-1+0	po:verb ts:indicative_present is:interrogative st:afitar
+profitar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+profito/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:profitar
+profítoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:profitar
 subafitar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 subafito/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:subafitar
 subafítoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:subafitar
@@ -15858,6 +15861,12 @@ sprepàroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:spreparar
 presar/a0a1a2P0P1P2-1+0*0@0r5	po:verb ts:infinitive_simple
 prèso/a0a1a2P0P1P2FSI0-1+0*0@0	po:verb ts:indicative_present st:presar
 prèsoe/a0a1a2I1-1+0*0@0	po:verb ts:indicative_present is:interrogative st:presar
+pranŧar/a0a1P0P1	po:verb ts:infinitive_simple
+pranŧo/a0a1P0P1FSI0	po:verb ts:indicative_present st:pranŧar
+prànŧoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:pranŧar
+pransar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+pranso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:pransar
+prànsoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:pransar
 soprasar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 sopraso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:soprasar
 sopràsoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:soprasar
@@ -34311,7 +34320,8 @@ poƚastro/M0&3	po:noun is:singular_masculine
 poƚegana/F0	po:noun is:singular_femenine
 poƚexeto/M0mf	po:noun is:singular_masculine
 poƚièr/A1	po:noun is:singular_masculine
-pomade/M0Y0	po:noun is:singular_masculine
+pomada/F0Y0	po:noun is:singular_masculine al:pomadi
+pomadi	po:noun is:plural_masculine st:pomade
 ponarol/M0U0V0mf	po:noun is:singular_masculine
 ponarola/F0V0	po:noun is:singular_femenine
 ponaroƚa/F0V1	po:noun is:singular_femenine
@@ -34364,7 +34374,9 @@ pòer/A1mf	po:adjective is:singular_masculine
 pòja/F0TE	po:noun is:singular_femenine
 pòmega/F0	po:noun is:singular_femenine
 pòrkola/F0TE	po:noun is:singular_femenine
-pòrta–mantèl/M0U0TE	po:noun is:singular_masculine
+pòrta–mantèi	po:noun is:masculine
+pòrta–mantèli	po:noun is:masculine
+pòrta–mantèƚi	po:noun is:masculine
 pòver/A1mf	po:adjective is:singular_masculine
 pradèla/F0TE	po:noun is:singular_femenine
 pranso/M0FS	po:noun is:singular_masculine
@@ -38211,8 +38223,8 @@ polgòto/M0FS	po:noun is:singular_masculine
 polon/F0TEU0*0mf	po:noun is:singular_masculine
 poltron/M0U0<0<1mf	po:adjective is:singular_masculine
 poltron/M0U0<0<1mf	po:noun is:singular_masculine
+poltrona/F0<0<1v0	po:noun is:singular_femenine
 poltrona/F0<0<1	po:adjective is:singular_femenine
-poltrona/F0<0<1	po:noun is:singular_femenine
 poltronsèla/F0TE	po:noun is:singular_femenine
 poltronŧèla/F0	po:noun is:singular_femenine
 polŧin/M0TE	po:noun is:singular_masculine
@@ -38245,12 +38257,12 @@ poveraŧa/F0TE	po:adjective is:singular_femenine
 poveraŧo/M0FSTE	po:adjective is:singular_masculine
 povereto/A1FSmf	po:noun is:singular_masculine
 pòpul/M0U1TE	po:noun is:singular_masculine
-pòrta–letra/F0	po:noun is:singular_masculine
-pòrta–létara/F0	po:noun is:singular_masculine
-pòrta–létera/F0	po:noun is:singular_masculine
-pòrta–ƚetra/F0	po:noun is:singular_masculine
-pòrta–ƚétara/F0	po:noun is:singular_masculine
-pòrta–ƚétera/F0	po:noun is:singular_masculine
+pòrta–letre	po:noun is:masculine
+pòrta–létare	po:noun is:masculine
+pòrta–létere	po:noun is:masculine
+pòrta–ƚetre	po:noun is:masculine
+pòrta–ƚétare	po:noun is:masculine
+pòrta–ƚétere	po:noun is:masculine
 pòvol/M0U1TEmf	po:noun is:singular_masculine
 pòvro/A1	po:adjective is:singular_masculine
 pradivo/A1FSW0	po:adjective is:singular_masculine
@@ -47392,8 +47404,8 @@ portaŧenjon/F0TEU0mf	po:noun is:singular_masculine
 portaŧígaro/M0	po:noun is:singular_masculine
 portavento/M0FSmf	po:noun is:singular_masculine
 portavivanda/F0	po:noun is:singular_masculine
-portavovo/M0FSmf	po:noun is:singular_masculine
-portavòvo/M0FS	po:noun is:singular_masculine
+portavovi	po:noun is:masculine
+portavòvi	po:noun is:masculine
 portento/M0FSmf	po:noun is:singular_masculine
 portogal/M0U0TE	po:adjective is:singular_masculine
 portolan/M0U0TE	po:noun is:singular_masculine
@@ -51777,7 +51789,9 @@ porporina/F0	po:noun is:singular_femenine
 portabraga/F0	po:noun is:singular_masculine
 portada/F0Y0Y1	po:noun is:singular_femenine
 portadolŧe/M0TE	po:noun is:singular_masculine
-portakapèl/M0U0TE	po:noun is:singular_masculine
+portakapèi	po:noun is:masculine
+portakapèli	po:noun is:masculine
+portakapèƚi	po:noun is:masculine
 portalaròjo/M0FSTE	po:noun is:singular_masculine
 portaleròjo/M0FSTE	po:noun is:singular_masculine
 portaƚaròjo/M0	po:noun is:singular_masculine
@@ -51799,7 +51813,9 @@ poxapian	po:noun is:singular
 pólpito/M0FS	po:noun is:singular_masculine
 pòrta–braga/F0	po:noun is:singular_masculine
 pòrta–dolŧe/M0TE	po:noun is:singular_masculine
-pòrta–kapèl/M0U0TE	po:noun is:singular_masculine
+pòrta–kapèi	po:noun is:masculine
+pòrta–kapèli	po:noun is:masculine
+pòrta–kapèƚi	po:noun is:masculine
 pòrta–laròjo/M0FSTE	po:noun is:singular_masculine
 pòrta–leròjo/M0FSTE	po:noun is:singular_masculine
 pòrta–ƚaròjo/M0	po:noun is:singular_masculine
@@ -53697,10 +53713,10 @@ pontijo/M0TE	po:noun is:singular_masculine
 porket–riŧo/M0FS	po:noun is:singular_masculine
 porketo–riŧo/M0FSTE	po:noun is:singular_masculine
 porketoriŧo/M0FSTE	po:noun is:singular_masculine
-portaovo/M0FSmf	po:noun is:singular_masculine
-portaòvo/M0FS	po:noun is:singular_masculine
-pòrta–ovo/M0FSmf	po:noun is:singular_masculine
-pòrta–òvo/M0FS	po:noun is:singular_masculine
+portaovi	po:noun is:masculine
+portaòvi	po:noun is:masculine
+pòrta–ovi	po:noun is:masculine
+pòrta–òvi	po:noun is:masculine
 ranponada/F0Y0	po:adjective is:singular_femenine
 ranponado/M0FSY0	po:adjective is:singular_masculine
 ransida/F0Y0	po:noun is:singular_femenine
@@ -55395,6 +55411,33 @@ pisafarài	po:noun
 piŧafarali	po:noun
 piŧafarài	po:noun
 plako/M0	po:noun is:singular_masculine
+pođa–karte	po:noun is:masculine
+pođakarte	po:noun is:masculine
+popolada/F0Y0	po:adjective is:singular_femenine
+popolado/M0FSY0	po:adjective is:singular_masculine
+popoƚada/F0Y0	po:adjective is:singular_femenine
+popoƚado/M0Y0	po:adjective is:singular_masculine
+portaguanti	po:noun is:masculine
+portapè	po:noun is:masculine
+portavoxe/M0	po:noun is:singular_masculine
+portoñèr/M0V0	po:noun is:singular_masculine
+portoñèra/F0V0	po:noun is:singular_femenine
+poxa–karte	po:noun is:masculine
+poxakarte	po:noun is:masculine
+pòrta–guanti	po:noun is:masculine
+pranŧo/M0TE	po:noun is:singular_masculine
+privilejada/F0Y0	po:adjective is:singular_femenine
+privilejado/M0FSY0	po:adjective is:singular_masculine
+privileɉada/F0Y0	po:adjective is:singular_femenine
+privileɉado/M0FSY0	po:adjective is:singular_masculine
+priviƚejada/F0Y0	po:adjective is:singular_femenine
+priviƚejado/M0Y0	po:adjective is:singular_masculine
+priviƚeɉada/F0Y0	po:adjective is:singular_femenine
+priviƚeɉado/M0Y0	po:adjective is:singular_masculine
+proibida/F0Y0	po:adjective is:singular_femenine
+proibido/M0FSY0	po:adjective is:singular_masculine
+púpul/M0U1TE	po:noun is:singular_masculine
+púpula/F0TE	po:noun is:singular_femenine
 sikurada/F0Y0	po:adjective is:singular_femenine
 sikurado/M0FSY0	po:adjective is:singular_masculine
 stuđada/F0Y0	po:adjective is:singular_femenine al:stuxada
@@ -55410,6 +55453,6 @@ viƚido/M0Y0	po:adjective is:singular_masculine st:vilido
 xiràndoƚo/M0mf	po:noun is:singular_masculine st:điràndol
 
 
-/ 29
+/ 30
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
