@@ -2628,6 +2628,9 @@ xbúrfoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xburfar
 burlar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 burlo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:burlar
 búrloe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:burlar
+xburtar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+xburto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xburtar
+xbúrtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xburtar
 busar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 buso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:busar
 búsoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:busar
@@ -8398,6 +8401,12 @@ skartabèloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:skartabela
 skartabeƚar/a0a2P0P2	po:verb ts:infinitive_simple
 skartabèƚo/a0a2P0P2I0	po:verb ts:indicative_present st:skartabeƚar
 skartabèƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:skartabeƚar
+skartasar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+skartaso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:skartasar
+skartàsoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:skartasar
+skartaŧar/a0a1P0P1	po:verb ts:infinitive_simple
+skartaŧo/a0a1P0P1FSI0	po:verb ts:indicative_present st:skartaŧar
+skartàŧoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:skartaŧar
 skartamasar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 skartamaso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:skartamasar
 skartamàsoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:skartamasar
@@ -8639,9 +8648,12 @@ kavalotoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:kavalotar
 kavaƚotar/a0a2P0P2	po:verb ts:infinitive_simple
 kavaƚoto/a0a2P0P2I0	po:verb ts:indicative_present st:kavaƚotar
 kavaƚotoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:kavaƚotar
-inkavasar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-inkavaso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:inkavasar
-inkavàsoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inkavasar
+kavasar/a0a1a2P0P1P2+0*0r5r7	po:verb ts:infinitive_simple
+kavaso/a0a1a2P0P1P2FSI0+0*0	po:verb ts:indicative_present st:kavasar
+kavàsoe/a0a1a2I1+0*0	po:verb ts:indicative_present is:interrogative st:kavasar
+kavaŧar/a0a1P0P1+0*0r5r7	po:verb ts:infinitive_simple
+kavaŧo/a0a1P0P1FSI0+0*0	po:verb ts:indicative_present st:kavaŧar
+kavàŧoe/a0a1I1+0*0	po:verb ts:indicative_present is:interrogative st:kavaŧar
 deskavedar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 deskàvedo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:deskavedar
 deskàvedoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:deskavedar
@@ -52718,7 +52730,8 @@ karoƚado/M0Y0+0	po:adjective is:singular_masculine
 kasada/F0Y0Y1	po:noun is:singular_femenine
 kaskada/F0Y0.0	po:noun is:singular_femenine
 kaskado/M0FSY0.0	po:noun is:singular_masculine
-kaŧada/F0Y0Y1	po:noun is:singular_femenine
+kaŧada/F0Y0*0	po:adjective is:singular_femenine
+kaŧado/M0FSY0*0	po:adjective is:singular_masculine
 kavada/F0Y0Y1	po:noun is:singular_femenine
 kavalada/F0Y0Y1	po:noun is:singular_femenine
 kavaƚada/F0Y0Y1	po:noun is:singular_femenine
@@ -53092,8 +53105,10 @@ skeƚetrido/M0Y0	po:noun is:singular_masculine
 skenada/F0Y0+0	po:noun is:singular_femenine
 skenado/M0FSY0+0	po:noun is:singular_masculine
 skinkada/F0Y0Y1	po:noun is:singular_femenine
-skisada/F0Y0Y1	po:noun is:singular_femenine
-skiŧada/F0Y0Y1	po:noun is:singular_femenine
+skisada/F0Y0	po:noun is:singular_femenine
+skisado/M0FSY0	po:noun is:singular_masculine
+skiŧada/F0Y0	po:noun is:singular_femenine
+skiŧado/M0FSY0	po:noun is:singular_masculine
 skoada/F0Y0Y1	po:noun is:singular_femenine
 skorlada/F0Y0Y1	po:noun is:singular_femenine
 skornada/F0Y0Y1	po:noun is:singular_femenine
@@ -53871,7 +53886,7 @@ bigoƚante/M0	po:noun is:singular
 bixègol/M0U1TEmf	po:noun is:singular_masculine
 borada/F0Y0Y1	po:noun is:singular_femenine
 broada/F0Y0Y1	po:noun is:singular_femenine
-broente/M0mf	po:noun is:singular
+broente/M0mf	po:adjective is:singular
 brovada/F0Y0Y1	po:noun is:singular_femenine
 brun–brun	po:interjection
 brustolada/F0Y0	po:adjective is:singular_femenine
@@ -55506,10 +55521,18 @@ savonèr/M0V0	po:noun is:singular_masculine
 savonèra/F0V0	po:noun is:singular_femenine
 savor/F0&0mf	po:noun is:singular_masculine
 sàbola/F0TE	po:noun is:singular_femenine
+scabàtol/M0U1TEmf	po:noun is:singular_masculine
 siabolada/F0Y0Y1	po:noun is:singular_femenine
 siaboƚada/F0Y0Y1	po:noun is:singular_femenine
 sikurada/F0Y0	po:adjective is:singular_femenine
 sikurado/M0FSY0	po:adjective is:singular_masculine
+skaloñoxo/A1FSmf	po:noun is:singular_masculine
+skaloñoxo/A1FSW0mf	po:adjective is:singular_masculine
+skaƚoñoxo/A1mf	po:noun is:singular_masculine
+skaƚoñoxo/A1W1mf	po:adjective is:singular_masculine
+skarfaròto/M0FS	po:noun is:singular_masculine
+skartaŧa/F0TE	po:noun is:singular_femenine
+skasakódol/M0U1TEmf	po:noun is:singular_masculine
 stuđada/F0Y0	po:adjective is:singular_femenine al:stuxada
 stuđado/M0FSY0	po:adjective is:singular_masculine al:stuxado
 stuxada/F0Y0	po:adjective is:singular_femenine st:stuđada
@@ -55520,9 +55543,12 @@ vilida/F0Y0	po:adjective is:singular_femenine al:viƚida
 vilido/M0FSY0	po:adjective is:singular_masculine al:viƚido
 viƚida/F0Y0	po:adjective is:singular_femenine st:vilida
 viƚido/M0Y0	po:adjective is:singular_masculine st:vilido
+xbrovente/M0mf	po:adjective is:singular
+xburtada/F0Y0Y1	po:noun is:singular_femenine
+xburton/F0U0mf	po:noun is:singular_masculine
 xiràndoƚo/M0mf	po:noun is:singular_masculine st:điràndol
 
 
-/ 33
+/ 34
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
