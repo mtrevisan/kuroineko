@@ -6132,6 +6132,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "spar",			"de",			1,	2,	"g",	"1867",			"",
 "sparañ",		"",			1,	4,	"g",	"1535",			"(todesko ark.)",
 "sparlac",		"",			1,	5,	"g",	"",				"Parlar mal de kualkeduni.",
+"sparniđ",		"",			1,	5,	"g",	"1877",			"Spàrxer.",
 "sparpaj",		"",			1,	5,	"g",	"1775",			"",
 "sparpan",		"",			1,	5,	"g",	"1560",			"Semenar.",
 "sparpañ",		"",			1,	5,	"g",	"1560",			"Semenar.",
