@@ -19744,6 +19744,9 @@ súsioe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:susiar
 suefar/a0a1a2P0P1P2-1	po:verb ts:infinitive_simple
 suèfo/a0a1a2P0P1P2FSI0-1	po:verb ts:indicative_present st:suefar
 suèfoe/a0a1a2I1-1	po:verb ts:indicative_present is:interrogative st:suefar
+sufiar/a0a1a2P0P1P2r7	po:verb ts:infinitive_simple
+sufio/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:sufiar
+súfioe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:sufiar
 sufitar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 sufito/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:sufitar
 sufítoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:sufitar
@@ -21367,9 +21370,9 @@ intújoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:intujar
 intuɉar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 intuɉo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:intuɉar
 intúɉoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:intuɉar
-desturbar/a0a1a2P0P1P2r7	po:verb ts:infinitive_simple
-desturbo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:desturbar
-destúrboe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:desturbar
+sturbar/a0a1a2P0P1P2-0r7	po:verb ts:infinitive_simple
+sturbo/a0a1a2P0P1P2FSI0-0	po:verb ts:indicative_present st:sturbar
+stúrboe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:sturbar
 turbiar/a0a1a2P0P1P2+0	po:verb ts:infinitive_simple
 turbio/a0a1a2P0P1P2I0+0	po:verb ts:indicative_present st:turbiar
 túrbioe/a0a1a2I1+0	po:verb ts:indicative_present is:interrogative st:turbiar
@@ -23575,7 +23578,7 @@ volxar/a0a1a2P0P1P2+0	po:verb ts:infinitive_simple
 volponar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 volpono/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:volponar
 volpónoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:volponar
-voltar/a0a1a2P0P1P2‘0-1+0*0.0r0	po:verb ts:infinitive_simple
+voltar/a0a1a2P0P1P2‘0-1+0*0.0r0r7	po:verb ts:infinitive_simple
 volto/a0a1a2P0P1P2FSI0‘0-1+0*0.0	po:verb ts:indicative_present st:voltar ts:participle_perfect_strong st:vòlđer
 vòlto/a0a1a2P0P1P2FSI0‘0-1+0*0.0	po:verb ts:indicative_present st:voltar ts:participle_perfect_strong st:vòlđer
 vòltoe/a0a1a2I1‘0-1+0*0.0	po:verb ts:indicative_present is:interrogative st:voltar
@@ -23805,8 +23808,8 @@ dexarir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 dixerir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 inxerir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 inxarir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
-suxerir/a0a1a2d0d1d2P0P1P2r7	po:verb ts:infinitive_simple
-suxarir/a0a1a2d0d1d2P0P1P2r7	po:verb ts:infinitive_simple
+suxerir/a0a1a2d0d1d2P0P1P2r0r7	po:verb ts:infinitive_simple
+suxarir/a0a1a2d0d1d2P0P1P2r0r7	po:verb ts:infinitive_simple
 xarmojar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 xarmòjo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xarmojar
 xarmòjoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xarmojar
@@ -53312,7 +53315,8 @@ takado/M0FSY0	po:noun is:singular_masculine
 takonada/F0Y0Y1	po:noun is:singular_femenine
 talèo/M0	po:noun is:singular_masculine
 taƚèo/M0	po:noun is:singular_masculine
-tamixada/F0Y0Y1	po:noun is:singular_femenine
+tamixada/F0Y0	po:adjective is:singular_femenine
+tamixado/M0FSY0	po:adjective is:singular_masculine
 tarisada/F0Y0	po:adjective is:singular_femenine
 tarisado/M0FSY0	po:adjective is:singular_masculine
 tarlada/F0Y0	po:adjective is:singular_femenine
@@ -53404,8 +53408,8 @@ venduda/F0Y0	po:adjective is:singular_femenine
 vendudo/M0FSY0	po:adjective is:singular_masculine
 ventilada/F0Y0Y1	po:noun is:singular_femenine
 ventiƚada/F0Y0Y1	po:noun is:singular_femenine
-ventolada/F0Y0Y1	po:noun is:singular_femenine
-ventoƚada/F0Y0Y1	po:noun is:singular_femenine
+ventolada/F0Y0Y1*0	po:noun is:singular_femenine
+ventoƚada/F0Y0Y1*0	po:noun is:singular_femenine
 verđelada/F0Y0	po:noun is:singular_femenine
 verđelado/M0FSY0	po:noun is:singular_masculine
 vergada/F0Y0Y1	po:noun is:singular_femenine
@@ -53424,8 +53428,8 @@ vinaŧada/F0Y0	po:noun is:singular_femenine
 vinaŧado/M0FSY0	po:noun is:singular_masculine
 viscada/F0Y0Y1	po:noun is:singular_femenine
 vogada/F0Y0Y1	po:noun is:singular_femenine
-volada/F0Y0Y1	po:noun is:singular_femenine
-voƚada/F0Y0Y1	po:noun is:singular_femenine
+volada/F0Y0Y1*0	po:noun is:singular_femenine
+voƚada/F0Y0Y1*0	po:noun is:singular_femenine
 voxada/F0Y0Y1‘0	po:noun is:singular_femenine
 xanpèƚa/F0	po:noun is:singular_femenine
 xbadajada/F0Y0Y1	po:noun is:singular_femenine
@@ -53556,15 +53560,11 @@ xveɉada/F0Y0	po:noun is:singular_femenine
 xveɉado/M0FSY0(4	po:noun is:singular_masculine
 xventada/F0Y0	po:adjective is:singular_femenine
 xventado/M0FSY0	po:adjective is:singular_masculine
-xventolada/F0Y0Y1	po:noun is:singular_femenine
-xventoƚada/F0Y0Y1	po:noun is:singular_femenine
 xventrada/F0Y0Y1	po:noun is:singular_femenine
 xvojada/F0Y0	po:adjective is:singular_femenine
 xvojado/M0FSY0	po:adjective is:singular_masculine
 xvoɉada/F0Y0	po:adjective is:singular_femenine
 xvoɉado/M0FSY0	po:adjective is:singular_masculine
-xvolada/F0Y0Y1	po:noun is:singular_femenine
-xvoƚada/F0Y0Y1	po:noun is:singular_femenine
 / Nazari, Giulio. Dizionario vicentino-italiano e regole di grammatica ad uso delle scuole elementari di Vicenza. Oderzo, 1876.
 akanada/F0Y0	po:adjective is:singular_femenine
 akanado/M0FSY0	po:adjective is:singular_masculine
@@ -53866,7 +53866,8 @@ storèr/M0V0	po:noun is:singular_masculine
 storèra/F0V0	po:noun is:singular_femenine
 strafanto/M0FS	po:noun is:singular_masculine
 stranudèla/F0TE	po:noun is:singular_femenine
-sudada/F0Y0Y1	po:noun is:singular_femenine
+sudada/F0Y0	po:noun is:singular_femenine
+sudado/M0FSY0	po:noun is:singular_masculine
 toneđada/F0Y0Y1	po:adjective is:singular_femenine
 tonexada/F0Y0Y1	po:adjective is:singular_femenine
 travajada/F0Y0	po:noun is:singular_femenine
@@ -55744,6 +55745,18 @@ stupideŧa/F0TE	po:noun is:singular_femenine
 stupidità	po:adjective is:femenine
 stuxada/F0Y0	po:adjective is:singular_femenine st:stuđada
 stuxado/M0FSY0	po:adjective is:singular_masculine st:stuđado
+subafito/M0FS	po:noun is:singular_masculine
+subisada/F0Y0Y1	po:noun is:singular_femenine
+sufiada/F0Y0Y1	po:noun is:singular_femenine
+sufio/M0&0(2	po:noun is:singular_masculine
+sufita/F0	po:noun is:singular_femenine
+tabakin/A2	po:noun is:singular_masculine
+tajaborse	po:noun
+tajaforfe	po:noun
+taɉaborse	po:noun
+taɉaforfe	po:noun
+tenajada/F0Y0Y1vŧ	po:noun is:singular_femenine
+tenaɉada/F0Y0Y1vŧ	po:noun is:singular_femenine
 vertida/F0Y0	po:adjective is:singular_femenine
 vertido/M0FSY0	po:adjective is:singular_masculine
 vilida/F0Y0	po:adjective is:singular_femenine al:viƚida
@@ -55772,8 +55785,11 @@ xmorŧada/F0Y0	po:adjective is:singular_femenine
 xmorŧado/M0FSY0	po:adjective is:singular_masculine
 xnita/F0	po:noun is:singular_femenine
 xñéxula/F0TE	po:noun is:singular_femenine
+xvaso/M0FS&0(2	po:noun is:singular_masculine
+xvaŧo/M0FS&0(2	po:noun is:singular_masculine
+xvaxa/F0	po:noun is:singular_femenine
 
 
-/ 40
+/ 41
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
