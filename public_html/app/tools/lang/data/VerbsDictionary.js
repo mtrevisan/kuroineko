@@ -7219,6 +7219,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ukel",			"",			1,	0,	"a",	"1590",			"Elokuar, ŧigar, far kaxin.",
 "uli",			"",			1,	0,	"a",	"1829",			"",
 "ultim",			"",			1,	0,	"a",	"",				"",
+"ulŧer",			"",			1,	0,	"a",	"1877",			"",
 "ulul",			"",			1,	0,	"a",	"",				"",
 "uman",			"dex",		1,	2,	"g",	"1854",			"",
 "umaniđ",		"",			1,	4,	"a",	"1829",			"",
