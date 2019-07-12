@@ -550,9 +550,6 @@ astio/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:astiar
 atar/a0a1a2P0P1P2.0	po:verb ts:infinitive_simple
 ato/a0a1a2P0P1P2FSI0.0	po:verb ts:indicative_present st:atar
 àtoe/a0a1a2I1.0	po:verb ts:indicative_present is:interrogative st:atar
-adatar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-adato/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:adatar
-adàtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:adatar
 atenuar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 atènuo/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:atenuar
 atènuoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:atenuar
@@ -3008,9 +3005,9 @@ danéđoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:daneđar
 danexar/a0a1a2P0P1P2V0	po:verb ts:infinitive_simple
 danexo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:danexar
 danéxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:danexar
-datar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-dato/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:datar ts:participle_perfect_strong st:dar
-dàtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:datar
+datar/a0a1a2P0P1P2@0	po:verb ts:infinitive_simple
+dato/a0a1a2P0P1P2FSI0@0	po:verb ts:indicative_present st:datar ts:participle_perfect_strong st:dar
+dàtoe/a0a1a2I1@0	po:verb ts:indicative_present is:interrogative st:datar
 poxdatar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 poxdato/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:poxdatar
 poxdàtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:poxdatar
@@ -3264,7 +3261,7 @@ indivíxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:indivixar
 indoar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 indòo/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:indoar
 indòoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:indoar
-dobar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+dobar/a0a1a2P0P1P2V0	po:verb ts:infinitive_simple
 dòbo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:dobar
 dòboe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:dobar
 docar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
@@ -26271,13 +26268,13 @@ Trièste/Z0	po:proper_noun
 Ŧividale/TBFSZ0	po:proper_noun al:Sividaƚe
 Una/Z0	po:proper_noun
 Valsugana/Z0	po:proper_noun
+Varona/Z0	po:proper_noun
 Vendura/Z0	po:proper_noun
 Venèsia/F0Z0	po:proper_noun st:Venèŧia
 Venèŧia/F0Z0	po:proper_noun al:Venèsia
 Venièsia/F0Z0	po:proper_noun st:Venièŧia
 Venièŧia/F0Z0	po:proper_noun al:Venièsia
 Veñèsia/F0Z0	po:proper_noun
-Varona/Z0	po:proper_noun
 Verona/Z0	po:proper_noun
 Vesensa/Z0	po:proper_noun st:Veŧenŧa
 Vesensia/Z0	po:proper_noun st:Vesenŧia
@@ -33056,6 +33053,7 @@ kòmiko/A1FS^3	po:noun is:singular_masculine
 kòpan/M0U1	po:noun is:singular_masculine
 kòpexe/M0FSmf	po:noun is:singular_masculine
 kòrbo/A1	po:noun is:singular_masculine
+kòrdo/M0FS@0.0	po:noun is:singular_masculine
 kòrdol/M0U1TEmf	po:noun is:singular_masculine
 kòtego/A1FS	po:adjective is:singular_masculine
 kòtego/A1FS	po:noun is:singular_masculine
@@ -34628,7 +34626,6 @@ regoliŧia/F0TE	po:noun is:singular_femenine
 regolon/F0TEU0mf	po:noun is:singular_masculine
 regoƚisia/F0	po:noun is:singular_femenine
 rekalcin/M0	po:noun is:singular_masculine
-rekòrdo/M0FS	po:noun is:singular_masculine
 rekuilia/F0TE	po:noun is:singular_femenine
 relaso/M0FS&0	po:noun is:singular_masculine
 relikia/F0	po:noun is:singular_femenine
@@ -43287,7 +43284,7 @@ boraŧina/F0TE	po:noun is:singular_femenine
 boraxin/M0	po:noun is:singular_masculine
 bordajo/M0FSTE	po:noun is:singular_masculine
 bordion/F0U0mf	po:noun is:singular_masculine
-bordo/M0FS(2mf	po:noun is:singular_masculine
+bordo/M0FS@0(2mf	po:noun is:singular_masculine
 borèl/M0U0(0	po:noun is:singular_masculine
 borèƚo/M0(1	po:noun is:singular_masculine
 borgexan/A2U0	po:adjective is:singular_masculine
@@ -45664,7 +45661,6 @@ kòmodo/A1-1+0*0mf	po:noun is:singular_masculine
 kònio/M0	po:noun is:singular_masculine
 kònomo/A1	po:noun is:singular_masculine
 kònprita/F0	po:noun is:singular_femenine
-kòrdo/M0FS	po:noun is:singular_masculine
 kòrkul/M0U1TE	po:noun is:singular_masculine
 kòrno/M0	po:noun is:singular_masculine
 kòso/M0FS&0(2	po:noun is:singular_masculine
@@ -55837,10 +55833,10 @@ xvaso/M0FS&0(2	po:noun is:singular_masculine
 xvaŧo/M0FS&0(2	po:noun is:singular_masculine
 xvaxa/F0	po:noun is:singular_femenine
 / Patuzzi, Gaetano Lionello; Bolognini, Giorgio; Bolognini, Adolfo. Piccolo dizionario del dialetto moderno della città di Verona. Verona, 1900.
+abaxur/M0	po:noun is:singular_masculine
+bitúdine/M0@0	po:noun is:singular_femenine
 
 
-/ 56
+/ 57
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
-sost. pròp.:Verona,Varona
-sost.:tèra,tara
