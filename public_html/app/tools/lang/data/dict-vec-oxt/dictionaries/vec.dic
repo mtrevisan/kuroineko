@@ -1004,6 +1004,9 @@ bandónoe/a0a1a2I1*0@0^4	po:verb ts:indicative_present is:interrogative st:bando
 arbandonar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 arbandono/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:arbandonar
 arbandónoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:arbandonar
+banfar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+banfo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:banfar
+bànfoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:banfar
 inbankar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 inbanko/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:inbankar
 inbànkoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inbankar
@@ -1119,6 +1122,12 @@ xbardèloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:xbardelar
 xbardeƚar/a0a2P0P2	po:verb ts:infinitive_simple
 xbardèƚo/a0a2P0P2I0	po:verb ts:indicative_present st:xbardeƚar
 xbardèƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:xbardeƚar
+bardevelar/a0a1P0P1*0	po:verb ts:infinitive_simple
+bardevèlo/a0a1P0P1FSI0*0	po:verb ts:indicative_present st:bardevelar
+bardevèloe/a0a1I1*0	po:verb ts:indicative_present is:interrogative st:bardevelar
+bardeveƚar/a0a2P0P2*0	po:verb ts:infinitive_simple
+bardevèƚo/a0a2P0P2I0*0	po:verb ts:indicative_present st:bardeveƚar
+bardevèƚoe/a0a2I1*0	po:verb ts:indicative_present is:interrogative st:bardeveƚar
 berekinar/a0a1a2P0P1P2v0vŧ	po:verb ts:infinitive_simple
 berekino/a0a1a2P0P1P2FSI0vŧ	po:verb ts:indicative_present st:berekinar
 berekínoe/a0a1a2I1vŧ	po:verb ts:indicative_present is:interrogative st:berekinar
@@ -1181,6 +1190,9 @@ xbarósoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xbarosar
 xbaroŧar/a0a1P0P1	po:verb ts:infinitive_simple
 xbaroŧo/a0a1P0P1FSI0	po:verb ts:indicative_present st:xbaroŧar
 xbaróŧoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:xbaroŧar
+barsigar/a0a1a2P0P1P2*0	po:verb ts:infinitive_simple
+barsigo/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:barsigar
+barsígoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:barsigar
 barufar/a0a1a2P0P1P2*0	po:verb ts:infinitive_simple
 barufo/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:barufar
 barúfoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:barufar
@@ -27055,7 +27067,7 @@ baƚotasion/F0mf	po:noun is:singular_femenine
 banbuko/M0FS	po:noun is:singular_masculine
 banbú	po:noun is:masculine
 banda/F0&0	po:noun is:singular_femenine
-bando/M0FS^4	po:noun is:singular_masculine
+bando/M0FS(0^4	po:noun is:singular_masculine
 banɉèra/F0	po:noun is:singular_femenine
 banka/F0&0&2&3<0<1	po:noun is:singular_femenine
 banko/M0FSv0&0(2	po:noun is:singular_masculine
@@ -31287,7 +31299,7 @@ barixèl/M0U0TE	po:noun is:singular_masculine
 barkesa/F0	po:noun is:singular_femenine
 barkolame/M0	po:noun is:singular_masculine
 barkoƚame/M0	po:noun is:singular_masculine
-baron/F0U0s0§0mf	po:noun is:singular_masculine
+baron/F0U0s0§0mf	po:adjective is:singular_masculine
 barona/§0	po:noun is:singular_femenine
 baronaja/F0TE	po:noun is:singular_femenine
 baronon/A2U0*0mf	po:noun is:singular_masculine
@@ -42405,7 +42417,7 @@ xvòda–ŧàngola/F0	po:noun is:singular_femenine
 / da Schio, Giovanni. Saggio del dialetto vicentino, uno dei veneti, ossia, raccolta di voci usate a Vicenza, per servire
 / alla storia del suo popolo e della sua civiltà. Estratto dʼopera assai maggiore. Padova, 1855.
 anŧa/F0TE	po:noun is:singular_femenine
-barñifo/A1FS*0	po:adjective is:singular_masculine
+barñifo/A1FS*0(4	po:adjective is:singular_masculine
 baskro/M0	po:noun is:singular_masculine
 baxavèjo/M0FSTE	po:noun is:singular_masculine
 bela/F0TE	po:noun is:singular_femenine
@@ -55870,12 +55882,20 @@ balengada/F0Y0Y1	po:noun is:singular_femenine
 balsa/F0	po:noun is:singular_femenine
 baƚansoƚa/F0	po:noun is:singular_femenine
 baƚengada/F0Y0Y1	po:noun is:singular_femenine
+barbisol/M0U0TE	po:noun is:singular_masculine st:barbiŧol
+barbiŧol/M0U0	po:noun is:singular_masculine al:barbisol
+barbixa/F0	po:noun is:singular_femenine
+bardevèla/F0TE*0	po:noun is:singular_femenine
+bariana/F0	po:noun is:singular_femenine
+barlikete	po:adverb
+basakuna/F0	po:noun is:singular_femenine
 bàila/F0TE	po:noun is:singular_femenine
+berlike/vŧ	po:adverb
 bitúdine/M0@0	po:noun is:singular_femenine
 dòbo/M0	po:noun is:singular_masculine
 vertor/F0mf	po:noun is:singular_masculine
 
 
-/ 68
+/ 69
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
