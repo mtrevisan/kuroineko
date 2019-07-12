@@ -395,6 +395,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "batiment",		"x",			1,	5,	"a",	"1775",			"(voxe de pitura)",
 "batoc",			"",			1,	3,	"g",	"1980",			"",
 "batoc",			"x",			1,	3,	"g",	"1775",			"Skanpanar.",
+"batokol",		"",			1,	3,	"g",	"1900",			"",
 "batol",			"",			1,	1,	"g",	"1775",			"Carlar.",
 "batol",			"x",			1,	1,	"g",	"",				"(bixiak) Carlar.",
 "baŧil",			"",			1,	3,	"a",	"1775",			"Farnetegar, inportunar.",
