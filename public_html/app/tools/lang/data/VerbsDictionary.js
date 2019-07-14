@@ -516,6 +516,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bibi",			"",			1,	1,	"a",	"1775",			"Induxiar, tentenar, andar lento.",
 "bibiat",		"",			1,	4,	"g",	"1867",			"",
 "biek",			"",			1,	2,	"g",	"1877",			"Ratopar.",
+"bif",			"",			1,	1,	"a",	"190",			"Skuadrar, vardar fiso.",
+"bikok",			"",			1,	3,	"g",	"1900",			"Bigelonar, oŧiar.",
 "bigat",			"x",			1,	3,	"g",	"1980",			"Ríder forte da far mal a la panŧa.",
 "bigol",			"",			1,	1,	"a",	"1852",			"",
 "bigol",			"dex",		1,	1,	"a",	"1829",			"",
