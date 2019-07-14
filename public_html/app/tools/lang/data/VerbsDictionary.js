@@ -563,6 +563,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bisk",			"",			1,	1,	"a",	"1852",			"Kruxarse internamente, xbufar.",
 "biskol",		"",			1,	1,	"a",	"1775",			"Dondolar, tentenar, demenar.",
 "biskot",		"",			1,	4,	"g",	"1867",			"",
+"bisimi",		"",			1,	4,	"a",	"1900",			"Kanŧonar.",
 "bit",			"",			1,	1,	"a",	"1854",			"Dar volta a la gomona sora le bite.",
 "bitu",			"",			1,	1,	"a",	"1322",			"",
 "bium",			"x",			1,	1,	"a",	"1896",			"Skiumar.",
