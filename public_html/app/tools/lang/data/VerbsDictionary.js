@@ -879,6 +879,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bulgaređ",		"x",			1,	6,	"a",	"1560",			"",
 "bulig",			"",			1,	1,	"a",	"1980",			"Rumorexar baso e repetúo.",
 "burat",			"",			1,	3,	"g",	"1775",			"Axitar, setacar.",
+"buratin",		"",			1,	5,	"a",	"1900",			"",
 "burf",			"x",			1,	1,	"a",	"1829",			"Xbrufar.",
 "burl",			"",			1,	1,	"a",	"1775",			"",
 "burt",			"x",			1,	1,	"a",	"1877",			"Spénđer.",
