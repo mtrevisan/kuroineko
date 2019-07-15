@@ -757,6 +757,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "brat",			"x",			1,	2,	"g",	"1867",			"",
 "braŧ",			"",			1,	2,	"g",	"1852",			"Abraŧar.",
 "braŧ",			"a",			1,	2,	"g",	"1847",			"",
+"braŧ",			"in",			1,	2,	"g",	"1900",			"",
 "braŧ",			"x",			1,	2,	"g",	"1775",			"Xmenar la brase par ŧerkar el fogo.",
 "braŧol",		"",			1,	2,	"g",	"1980",			"(bixiak)",
 "braŧol",		"in",			1,	2,	"g",	"1867",			"",
