@@ -1787,7 +1787,7 @@ biskotar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 biskòto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:biskotar
 biskòtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:biskotar
 bisimiar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-bisimio/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:bisimiar
+bisimio/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:bisimiar
 bisímioe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:bisimiar
 bitar/a0a1a2P0P1P2r2*0r3V0	po:verb ts:infinitive_simple
 bito/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:bitar
@@ -27196,7 +27196,7 @@ bojaka/F0	po:noun is:singular_femenine
 boɉaka/F0	po:noun is:singular_femenine
 boka/F0&0<0<1(4	po:noun is:singular_femenine
 bokal/F0TFU0	po:adjective is:singular
-bokal/F0TFU0	po:noun is:singular_masculine
+bokal/F0TFU0&0	po:noun is:singular_masculine
 bolincèra/M0	po:adverb
 bolpato/A1FS	po:noun is:singular_masculine
 bolpe/F0FS(4	po:noun is:singular_femenine
@@ -41424,7 +41424,6 @@ latexiol/M0U0mf	po:noun is:singular_masculine
 latexiòl/M0U0	po:noun is:singular_masculine
 lavran/M0U0&0	po:noun is:singular_masculine
 lànpido/A1FS	po:adjective is:singular_masculine
-ƚànpido/A1	po:adjective is:singular_masculine
 leandro/M0@0	po:noun is:singular_masculine
 lentíđen/F0U1mf	po:noun is:singular_femenine
 lentíxen/F0U1mf	po:noun is:singular_femenine
@@ -41465,6 +41464,7 @@ lúmer/M0TBmf	po:noun is:singular_masculine
 ƚatexioƚo/M0mf	po:noun is:singular_masculine
 ƚatexiòƚo/M0	po:noun is:singular_masculine
 ƚavran/M0&1	po:noun is:singular_masculine
+ƚànpido/A1	po:adjective is:singular_masculine
 ƚeandro/M0@0	po:noun is:singular_masculine
 ƚentíxen/F0mf	po:noun is:singular_femenine
 ƚèko/M0	po:noun is:singular_masculine
@@ -45980,9 +45980,7 @@ livelario/A1	po:noun is:singular_masculine
 lixadría/F0TB	po:noun is:singular_femenine
 lixadro/A1TB	po:adjective is:singular_masculine
 líkuido/A1FS	po:adjective is:singular_masculine
-ƚíkuido/A1	po:adjective is:singular_masculine
 líkuido/A1FS	po:noun is:singular_masculine
-ƚíkuido/A1	po:noun is:singular_masculine
 límito/TB	po:noun is:singular_masculine
 lokante/M0FS	po:noun is:singular
 lokuèstra/F0TB	po:noun is:singular_femenine
@@ -46104,6 +46102,8 @@ luxverde/F0TB	po:noun is:singular_masculine
 ƚiterisia/F0	po:noun is:singular_femenine
 ƚiuto/M0	po:noun is:singular_masculine
 ƚiveƚario/A1	po:noun is:singular_masculine
+ƚíkuido/A1	po:adjective is:singular_masculine
+ƚíkuido/A1	po:noun is:singular_masculine
 ƚokante/M0	po:noun is:singular
 ƚonxa/F0	po:noun is:singular_femenine
 ƚòjo/M0(3	po:noun is:singular_masculine
@@ -51542,7 +51542,6 @@ lujèga/F0TB	po:noun is:singular_femenine
 luɉèga/F0TB	po:noun is:singular_femenine
 lusuria/F0TB	po:noun is:singular_femenine
 lúsido/A1FS	po:adjective is:singular_masculine
-ƚúsido/A1	po:adjective is:singular_masculine
 ƚamento/M0(3mf	po:noun is:singular_masculine
 ƚanson/F0(3mf	po:noun is:singular_masculine
 ƚaorensa/F0	po:noun is:singular_femenine
@@ -51566,6 +51565,7 @@ lúsido/A1FS	po:adjective is:singular_masculine
 ƚiteriesia/F0	po:noun is:singular_femenine
 ƚosa/F0	po:noun is:singular_femenine
 ƚoxon/F0mf	po:noun is:singular_masculine
+ƚúsido/A1	po:adjective is:singular_masculine
 madresèlva/F0	po:noun is:singular_masculine
 magaño/A1FS	po:noun is:singular_masculine
 makabèo/A1	po:adjective is:singular_masculine
@@ -55915,29 +55915,25 @@ baxa/F0(0	po:adjective is:singular_femenine
 baxo/M0(0	po:adjective is:singular_masculine
 bàila/F0TE	po:noun is:singular_femenine
 bàrsiga/F0	po:noun is:singular_femenine
-bekin/A1	po:noun is:singular_masculine
-bekonada/F0Y0Y1	po:noun is:singular_femenine
-berlike/vŧ	po:adverb
-bitúdene/M0@0	po:noun is:singular_femenine
-dòbo/M0	po:noun is:singular_masculine
-vertor/F0mf	po:noun is:singular_masculine
-bernifon/F0U0mf	po:adjective is:singular_masculine
 bearin/A2	po:adjective is:singular_masculine
 bearin/A2	po:noun is:singular_masculine
 bearol/M0U0V0mf	po:noun is:singular_masculine
 bearoƚo/M0V1mf	po:noun is:singular_masculine
 bearon/F0U0mf	po:noun is:singular_masculine
+bekin/A1	po:noun is:singular_masculine
+bekonada/F0Y0Y1	po:noun is:singular_femenine
+berikòkol/M0U1TEmf	po:noun is:singular_masculine
+berlike/vŧ	po:adverb
+bernifon/F0U0mf	po:adjective is:singular_masculine
 biaxòto/M0FS	po:noun is:singular_masculine
-bibía/F0	po:noun is:singular_femenine
 bibion/A2U0mf	po:adjective is:singular_masculine
+bibía/F0	po:noun is:singular_femenine
 bidèl/M0U0TE	po:noun is:singular_masculine
 bidèla/F0TE	po:noun is:singular_femenine
 bifa/F0	po:noun is:singular_femenine
-bífido/A1FS	po:adjective is:singular_masculine
 bigolin/M0TE	po:noun is:singular_masculine
 binde	po:adverb
 bioto/A1FS	po:adjective is:singular_masculine
-berikòkol/M0U1TEmf	po:noun is:singular_masculine
 birikòkol/M0U1TEmf	po:noun is:singular_masculine
 birocin/A2	po:noun is:singular_masculine
 bironŧin/M0TE	po:noun is:singular_masculine
@@ -55945,11 +55941,19 @@ bisimiada/F0Y0Y1	po:noun is:singular_femenine
 bisola/F0TE	po:noun is:singular_femenine
 bistòrto/A1FS	po:adjective is:singular_masculine
 bistòrto/A1FS	po:noun is:singular_masculine
+bitúdene/M0@0	po:noun is:singular_femenine
+bífido/A1FS	po:adjective is:singular_masculine
 blux	po:noun is:femenine
 boaròto/A1FS	po:noun is:singular_masculine
+bocin/M0	po:noun is:singular_masculine
+bogon/F0U0mf	po:noun is:singular_masculine
 bokada/F0Y0Y1	po:noun is:singular_femenine
+bokon/F0U0mf	po:noun is:singular_masculine
+buña/F0	po:noun is:singular_femenine
+dòbo/M0	po:noun is:singular_masculine
+vertor/F0mf	po:noun is:singular_masculine
 
 
-/ 75
+/ 76
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
