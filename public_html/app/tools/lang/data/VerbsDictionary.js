@@ -898,6 +898,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "but",			"ra",			1,	1,	"a",	"1896",			"Rebutar.",
 "but",			"re",			1,	1,	"a",	"1560",			"Xermojar de novo, refudar.",
 "but",			"x",			1,	1,	"a",	"1896",			"Skaturir.",
+"butel",			"",			1,	3,	"g",	"1900",			"Putelar.",
 "butir",			"in",			1,	3,	"a",	"1775",			"Konsar ko butiro.",
 "buŧol",			"in",			1,	1,	"a",	"1775",			"Akokolar.",
 "bux",			"in",			1,	1,	"a",	"1325",			"Skónder.",

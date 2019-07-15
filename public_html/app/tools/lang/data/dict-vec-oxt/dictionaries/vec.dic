@@ -16224,6 +16224,12 @@ putèloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:putelar
 puteƚar/a0a2P0P2v0	po:verb ts:infinitive_simple
 putèƚo/a0a2P0P2I0	po:verb ts:indicative_present st:puteƚar
 putèƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:puteƚar
+butelar/a0a1P0P1v0	po:verb ts:infinitive_simple
+butèlo/a0a1P0P1FSI0	po:verb ts:indicative_present st:butelar
+butèloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:butelar
+buteƚar/a0a2P0P2v0	po:verb ts:infinitive_simple
+butèƚo/a0a2P0P2I0	po:verb ts:indicative_present st:buteƚar
+butèƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:buteƚar
 inputridir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 pusar/a0a1a2P0P1P2*0	po:verb ts:infinitive_simple
 puso/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:pusar
@@ -34564,7 +34570,7 @@ puo/M0(0	po:noun is:singular_masculine
 pur/M0+0	po:adjective is:singular_masculine
 pura/F0W0	po:adjective is:singular_femenine
 puricinèla/F0TE	po:noun is:singular_femenine
-puta/F0&2&3<0<1(0	po:noun is:singular_femenine
+puta/F0<0<1(0	po:noun is:singular_femenine
 putana/F0&2&3<0<1	po:noun is:singular_femenine
 putanexmo/M0FS	po:noun is:singular_masculine
 puteleto/A1FSmf	po:noun is:singular_masculine
@@ -34572,8 +34578,12 @@ puteleŧa/F0TE	po:noun is:singular_femenine
 puteleŧo/M0FSTEmf	po:noun is:singular_masculine
 puteƚeso/A1mf	po:noun is:singular_masculine
 puteƚeto/A1mf	po:noun is:singular_masculine
+putèl/M0U0(0(2	po:noun is:singular_masculine
+putèla/F0(0(2	po:noun is:singular_femenine
+putèƚa/F0(1(3	po:noun is:singular_femenine
+putèƚo/M0(1(3	po:noun is:singular_masculine
 putin/A2(4	po:noun is:singular_masculine
-puto/M0FS&2&3<0<1(0	po:noun is:singular_masculine
+puto/M0FS<0<1(0	po:noun is:singular_masculine
 puŧa/F0TE	po:noun is:singular_femenine
 públego/A1FS	po:adjective is:singular_masculine
 públego/A1FS	po:noun is:singular_masculine
@@ -43500,7 +43510,7 @@ butilia/F0v0	po:noun is:singular_femenine
 butiƚia/F0v0	po:noun is:singular_femenine
 butiroxo/A1FSmf	po:noun is:singular_masculine
 butiroxo/A1FSW0mf	po:adjective is:singular_masculine
-buto/M0FS*0.0	po:noun is:singular_masculine
+buto/M0FS&2&3<0<1(0	po:noun is:singular_masculine
 buŧintòro/M0	po:noun is:singular_masculine
 buŧoladin/M0	po:noun is:singular_masculine
 buxaradaŧa/F0TE	po:noun is:singular_femenine
@@ -47796,6 +47806,7 @@ rabioxa/F0&0	po:adjective is:singular_femenine
 rabioxa/F0&0	po:noun is:singular_femenine
 rabioxo/M0FS&0mf	po:noun is:singular_masculine
 rabioxo/M0FSW0&0mf	po:adjective is:singular_masculine
+rabuto/M0FS	po:noun is:singular_masculine
 radanca/F0	po:noun is:singular_femenine
 radaŧa/F0TE	po:noun is:singular_femenine
 radegeto/M0FSmf	po:noun is:singular_masculine
@@ -47865,6 +47876,7 @@ rebufin/M0vŧ	po:noun is:singular_masculine
 rebufo/M0FS	po:noun is:singular_masculine
 rebufoxo/A1FSmf	po:noun is:singular_masculine
 rebufoxo/A1FSW0mf	po:adjective is:singular_masculine
+rebuto/M0FS	po:noun is:singular_masculine
 recèra/F0	po:noun is:singular_femenine
 reciname/M0	po:noun is:singular_masculine
 reco/M0FS&0(0	po:noun is:singular_masculine
@@ -50314,6 +50326,7 @@ xbugaría/F0	po:noun is:singular_femenine
 xbugeŧo/M0FSTEmf	po:noun is:singular_masculine
 xbugo/M0FS	po:adjective is:singular_masculine
 xbuòr/M0	po:noun is:singular_masculine
+xbuto/M0FS	po:noun is:singular_masculine
 xbuxaja/F0TE	po:noun is:singular_femenine
 xbuxo/A1FS	po:adjective is:singular_masculine
 xbuxo/A1FS	po:noun is:singular_masculine
@@ -55987,10 +56000,28 @@ brúxega	po:adverb
 buña/F0	po:noun is:singular_femenine
 buñon/F0U0mf	po:noun is:singular_masculine
 buratinada/F0Y0Y1	po:noun is:singular_femenine
+busolon/F0TEU0mf	po:noun is:singular_masculine
+buta/F0&2&3<0<1(0	po:noun is:singular_femenine
+butelada/F0Y0Y1	po:noun is:singular_femenine
+butelame/M0	po:noun is:singular_masculine
+buteleto/A1FSmf	po:noun is:singular_masculine
+buteleŧa/F0TE	po:noun is:singular_femenine
+buteleŧo/M0FSTEmf	po:noun is:singular_masculine
+buteƚada/F0Y0Y1	po:noun is:singular_femenine
+buteƚame/M0	po:noun is:singular_masculine
+buteƚeso/A1mf	po:noun is:singular_masculine
+buteƚeto/A1mf	po:noun is:singular_masculine
+butèl/M0U0(0	po:noun is:singular_masculine
+butèla/F0(0	po:noun is:singular_femenine
+butèƚa/F0(1	po:noun is:singular_femenine
+butèƚo/M0(1	po:noun is:singular_masculine
+butin/A2(4	po:noun is:singular_masculine
 dòbo/M0	po:noun is:singular_masculine
+kabalista/A2	po:noun is:singular
+kabaƚista/A2	po:noun is:singular
 vertor/F0mf	po:noun is:singular_masculine
 
 
-/ 83
+/ 84
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
