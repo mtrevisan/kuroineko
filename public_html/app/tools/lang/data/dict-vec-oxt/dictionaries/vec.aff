@@ -24,7 +24,7 @@
 SET UTF-8
 
 NAME Diŧionario de lengua vèneta
-VERSION 2.2.6 (b019/07/10)
+VERSION 2.2.6 (2019/07/10)
 HOME http://parnodexmentegar.orgfree.com/
 LANG vec
 
@@ -5702,45 +5702,45 @@ SFX mf obrioxo ubriuxi obrioxo
 
 
 # avèrbi (-mente)
-SFX W0 Y 24
-SFX W0 0 emente/W2FS n	po:adverb
-SFX W0 èl elmente/W2FS èl	po:adverb
-SFX W0 ío iamente/W2FS ío	po:adverb
-SFX W0 èr eramente/W2FS èr	po:adverb
-SFX W0 0 mente/W2FS [^l]a	po:adverb
-SFX W0 0 mente/W2FS [^v]e	po:adverb
-SFX W0 0 mente/W2FS [^èi]l	po:adverb
-SFX W0 o amente/W2FS [^íkmnst]o	po:adverb
-SFX W0 0 mente/W2FS [^è]r	po:adverb
-SFX W0 èla elamente/W2FS èla	po:adverb
-SFX W0 ève evemente/W2FS ève	po:adverb
-SFX W0 òko okamente/W2FS òko	po:adverb
-SFX W0 èmo emamente/W2FS èmo	po:adverb
-SFX W0 òso osamente/W2FS òso	po:adverb
-SFX W0 èto etamente/W2FS èto	po:adverb
-SFX W0 òto otamente/W2FS òto	po:adverb
-SFX W0 0 mente/W2FS [^b]il	po:adverb
-SFX W0 o amente/W2FS [^è]mo	po:adverb
-SFX W0 o amente/W2FS [^r]no	po:adverb
-SFX W0 o amente/W2FS [^èò]to	po:adverb
-SFX W0 o amente/W2FS [^ò][ks]o	po:adverb
-SFX W0 àbil abilmente/W2FS àbil	po:adverb
-SFX W0 íbil ibilmente/W2FS íbil	po:adverb
-SFX W0 èrno ernamente/W2FS èrno	po:adverb
+SFX Wa Y 24
+SFX Wa 0 emente/W0FS n	po:adverb
+SFX Wa èl elmente/W0FS èl	po:adverb
+SFX Wa ío iamente/W0FS ío	po:adverb
+SFX Wa èr eramente/W0FS èr	po:adverb
+SFX Wa 0 mente/W0FS [^l]a	po:adverb
+SFX Wa 0 mente/W0FS [^v]e	po:adverb
+SFX Wa 0 mente/W0FS [^èi]l	po:adverb
+SFX Wa o amente/W0FS [^íkmnst]o	po:adverb
+SFX Wa 0 mente/W0FS [^è]r	po:adverb
+SFX Wa èla elamente/W0FS èla	po:adverb
+SFX Wa ève evemente/W0FS ève	po:adverb
+SFX Wa òko okamente/W0FS òko	po:adverb
+SFX Wa èmo emamente/W0FS èmo	po:adverb
+SFX Wa òso osamente/W0FS òso	po:adverb
+SFX Wa èto etamente/W0FS èto	po:adverb
+SFX Wa òto otamente/W0FS òto	po:adverb
+SFX Wa 0 mente/W0FS [^b]il	po:adverb
+SFX Wa o amente/W0FS [^è]mo	po:adverb
+SFX Wa o amente/W0FS [^r]no	po:adverb
+SFX Wa o amente/W0FS [^èò]to	po:adverb
+SFX Wa o amente/W0FS [^ò][ks]o	po:adverb
+SFX Wa àbil abilmente/W0FS àbil	po:adverb
+SFX Wa íbil ibilmente/W0FS íbil	po:adverb
+SFX Wa èrno ernamente/W0FS èrno	po:adverb
 
 # avèrbi ko èle vanesente (-mente)
-SFX W1 Y 6
-SFX W1 0 mente/W2 e	po:adverb
-SFX W1 o amente/W2 o	po:adverb
-SFX W1 èr eramente/W2 èr	po:adverb
-SFX W1 0 mente/W2 [^ƚ]a	po:adverb
-SFX W1 0 mente/W2 [^è]r	po:adverb
-SFX W1 èƚa eƚamente/W2 èƚa	po:adverb
+SFX Wⱥ Y 6
+SFX Wⱥ 0 mente/W0 e	po:adverb
+SFX Wⱥ o amente/W0 o	po:adverb
+SFX Wⱥ èr eramente/W0 èr	po:adverb
+SFX Wⱥ 0 mente/W0 [^ƚ]a	po:adverb
+SFX Wⱥ 0 mente/W0 [^è]r	po:adverb
+SFX Wⱥ èƚa eƚamente/W0 èƚa	po:adverb
 
 # avèrbi (-mente)
-SFX W2 Y 2
-SFX W2 e re te	po:adverb
-SFX W2 te 0 te	po:adverb
+SFX W0 Y 2
+SFX W0 e re te	po:adverb
+SFX W0 te 0 te	po:adverb
 
 
 # sostantivi koletivi, ...
@@ -6275,13 +6275,13 @@ PFX ^6 0 stra– .
 
 # sostantivi/vèrbi alterài (mal-)
 PFX ^7 Y 2
-PFX ^7 0 mal [^aàeèéiíoòóuú]
-PFX ^7 0 mal– [^aàeèéiíoòóuú]
+PFX ^7 0 mal [^aàeèéiíoòóuúƚ]
+PFX ^7 0 mal– [^aàeèéiíoòóuúƚ]
 
 # sostantivi/vèrbi alterài (ben-)
 PFX ^8 Y 2
-PFX ^8 0 ben .
-PFX ^8 0 ben– .
+PFX ^8 0 ben [^ƚ]
+PFX ^8 0 ben– [^ƚ]
 
 # prefiso par lontanamento o sbasamento (de-)
 PFX -0 Y 1
@@ -6347,227 +6347,227 @@ PFX vŧ ve va ver
 
 
 # numerali - koletivi (-èna)
-SFX %a Y 76
-SFX %a ète etena/F0 ète
-SFX %a ète eteneta/F0 ète
-SFX %a ète etèna/F0 ète
-SFX %a òto otena/F0 òto
-SFX %a òto oteneta/F0 òto
-SFX %a òto otèna/F0 òto
-SFX %a 0 na/F0 oe
-SFX %a 0 neta/F0 oe
-SFX %a e èna/F0 oe
-SFX %a 0 na/F0 ove
-SFX %a 0 neta/F0 ove
-SFX %a e èna/F0 ove
-SFX %a èxe exena/F0 ièxe
-SFX %a èxe exeneta/F0 ièxe
-SFX %a èxe exèna/F0 ièxe
-SFX %a èxe eŧena/F0 ièxe
-SFX %a èxe eŧeneta/F0 ièxe
-SFX %a èxe esena/F0 ièxe
-SFX %a èxe eseneta/F0 ièxe
-SFX %a ièxe exena/F0 ièxe
-SFX %a ièxe exeneta/F0 ièxe
-SFX %a ièxe exèna/F0 ièxe
-SFX %a ièxe eŧena/F0 ièxe
-SFX %a ièxe eŧeneta/F0 ièxe
-SFX %a ièxe esena/F0 ièxe
-SFX %a ièxe eseneta/F0 ièxe
-SFX %a úndexe undexena/F0 úndexe
-SFX %a úndexe undexeneta/F0 úndexe
-SFX %a úndexe undexèna/F0 úndexe
-SFX %a óndexe ondexena/F0 óndexe
-SFX %a óndexe ondexeneta/F0 óndexe
-SFX %a óndexe ondexèna/F0 óndexe
-SFX %a úndixe undixena/F0 úndixe
-SFX %a úndixe undixeneta/F0 úndixe
-SFX %a úndixe undixèna/F0 úndixe
-SFX %a ódexe oxena/F0 ódexe
-SFX %a ódexe oxeneta/F0 ódexe
-SFX %a ódexe oxèna/F0 ódexe
-SFX %a ódexe odexena/F0 ódexe
-SFX %a ódexe odexeneta/F0 ódexe
-SFX %a ódexe odexèna/F0 ódexe
-SFX %a ódixe oxina/F0 ódixe
-SFX %a ódixe oxineta/F0 ódixe
-SFX %a ódixe odixena/F0 ódixe
-SFX %a ódixe odixeneta/F0 ódixe
-SFX %a ódixe odixèna/F0 ódixe
-SFX %a édexe edexena/F0 édexe
-SFX %a édexe edexeneta/F0 édexe
-SFX %a édexe edexèna/F0 édexe
-SFX %a édixe edixena/F0 édixe
-SFX %a édixe edixeneta/F0 édixe
-SFX %a édixe edixèna/F0 édixe
-SFX %a òrdexe ordexena/F0 òrdexe
-SFX %a òrdexe ordexeneta/F0 òrdexe
-SFX %a òrdexe ordexèna/F0 òrdexe
-SFX %a òrdixe ordixena/F0 òrdixe
-SFX %a òrdixe ordixeneta/F0 òrdixe
-SFX %a òrdixe ordixèna/F0 òrdixe
-SFX %a índexe indexena/F0 índexe
-SFX %a índexe indexeneta/F0 índexe
-SFX %a índexe indexèna/F0 índexe
-SFX %a índixe indixena/F0 índixe
-SFX %a índixe indixeneta/F0 índixe
-SFX %a índixe indixèna/F0 índixe
-SFX %a i ena/F0 nti
-SFX %a i eneta/F0 nti
-SFX %a i èna/F0 nti
-SFX %a a ena/F0 nta
-SFX %a a eneta/F0 nta
-SFX %a a èna/F0 nta
-SFX %a e èr/A1 mi[lƚ]e
-SFX %a e ar/A1 mi[lƚ]e
-SFX %a 0 èr/A1 ion
-SFX %a 0 ar/A1 ion
-SFX %a o èr/A1 iardo
-SFX %a o ar/A1 iardo
+SFX %0 Y 76
+SFX %0 ète etena/F0 ète
+SFX %0 ète eteneta/F0 ète
+SFX %0 ète etèna/F0 ète
+SFX %0 òto otena/F0 òto
+SFX %0 òto oteneta/F0 òto
+SFX %0 òto otèna/F0 òto
+SFX %0 0 na/F0 oe
+SFX %0 0 neta/F0 oe
+SFX %0 e èna/F0 oe
+SFX %0 0 na/F0 ove
+SFX %0 0 neta/F0 ove
+SFX %0 e èna/F0 ove
+SFX %0 èxe exena/F0 ièxe
+SFX %0 èxe exeneta/F0 ièxe
+SFX %0 èxe exèna/F0 ièxe
+SFX %0 èxe eŧena/F0 ièxe
+SFX %0 èxe eŧeneta/F0 ièxe
+SFX %0 èxe esena/F0 ièxe
+SFX %0 èxe eseneta/F0 ièxe
+SFX %0 ièxe exena/F0 ièxe
+SFX %0 ièxe exeneta/F0 ièxe
+SFX %0 ièxe exèna/F0 ièxe
+SFX %0 ièxe eŧena/F0 ièxe
+SFX %0 ièxe eŧeneta/F0 ièxe
+SFX %0 ièxe esena/F0 ièxe
+SFX %0 ièxe eseneta/F0 ièxe
+SFX %0 úndexe undexena/F0 úndexe
+SFX %0 úndexe undexeneta/F0 úndexe
+SFX %0 úndexe undexèna/F0 úndexe
+SFX %0 óndexe ondexena/F0 óndexe
+SFX %0 óndexe ondexeneta/F0 óndexe
+SFX %0 óndexe ondexèna/F0 óndexe
+SFX %0 úndixe undixena/F0 úndixe
+SFX %0 úndixe undixeneta/F0 úndixe
+SFX %0 úndixe undixèna/F0 úndixe
+SFX %0 ódexe oxena/F0 ódexe
+SFX %0 ódexe oxeneta/F0 ódexe
+SFX %0 ódexe oxèna/F0 ódexe
+SFX %0 ódexe odexena/F0 ódexe
+SFX %0 ódexe odexeneta/F0 ódexe
+SFX %0 ódexe odexèna/F0 ódexe
+SFX %0 ódixe oxina/F0 ódixe
+SFX %0 ódixe oxineta/F0 ódixe
+SFX %0 ódixe odixena/F0 ódixe
+SFX %0 ódixe odixeneta/F0 ódixe
+SFX %0 ódixe odixèna/F0 ódixe
+SFX %0 édexe edexena/F0 édexe
+SFX %0 édexe edexeneta/F0 édexe
+SFX %0 édexe edexèna/F0 édexe
+SFX %0 édixe edixena/F0 édixe
+SFX %0 édixe edixeneta/F0 édixe
+SFX %0 édixe edixèna/F0 édixe
+SFX %0 òrdexe ordexena/F0 òrdexe
+SFX %0 òrdexe ordexeneta/F0 òrdexe
+SFX %0 òrdexe ordexèna/F0 òrdexe
+SFX %0 òrdixe ordixena/F0 òrdixe
+SFX %0 òrdixe ordixeneta/F0 òrdixe
+SFX %0 òrdixe ordixèna/F0 òrdixe
+SFX %0 índexe indexena/F0 índexe
+SFX %0 índexe indexeneta/F0 índexe
+SFX %0 índexe indexèna/F0 índexe
+SFX %0 índixe indixena/F0 índixe
+SFX %0 índixe indixeneta/F0 índixe
+SFX %0 índixe indixèna/F0 índixe
+SFX %0 i ena/F0 nti
+SFX %0 i eneta/F0 nti
+SFX %0 i èna/F0 nti
+SFX %0 a ena/F0 nta
+SFX %0 a eneta/F0 nta
+SFX %0 a èna/F0 nta
+SFX %0 e èr/A1 mi[lƚ]e
+SFX %0 e ar/A1 mi[lƚ]e
+SFX %0 0 èr/A1 ion
+SFX %0 0 ar/A1 ion
+SFX %0 o èr/A1 iardo
+SFX %0 o ar/A1 iardo
 
 # numerali - koletivi (-èximo)
-SFX %b Y 24
-SFX %b ète etèximo/A1FS ète
-SFX %b òto otèximo/A1FS òto
-SFX %b e èximo/A1FS oe
-SFX %b e èximo/A1FS ove
-SFX %b o èximo/A1FS nto
-SFX %b i èximo/A1FS nti
-SFX %b a èximo/A1FS nta
-SFX %b e èximo/A1FS mile
-SFX %b 0 èximo/A1FS ion
-SFX %b o èximo/A1FS iardo
-SFX %b ièxe èŧimo/A1FS ièxe
-SFX %b ièxe èsimo/A1FS ièxe
-SFX %b úndexe undèŧimo/A1FS úndexe
-SFX %b úndexe undèsimo/A1FS úndexe
-SFX %b óndexe ondèŧimo/A1FS óndexe
-SFX %b óndexe ondèsimo/A1FS óndexe
-SFX %b ódexe odèŧimo/A1FS ódexe
-SFX %b ódexe odèsimo/A1FS ódexe
-SFX %b édexe edèŧimo/A1FS édexe
-SFX %b édexe edèsimo/A1FS édexe
-SFX %b òrdexe ordèŧimo/A1FS òrdexe
-SFX %b òrdexe ordèsimo/A1FS òrdexe
-SFX %b índexe indèŧimo/M0FS índexe
-SFX %b índexe indèsimo/M0FS índexe
+SFX %a Y 24
+SFX %a ète etèximo/A1FS ète
+SFX %a òto otèximo/A1FS òto
+SFX %a e èximo/A1FS oe
+SFX %a e èximo/A1FS ove
+SFX %a o èximo/A1FS nto
+SFX %a i èximo/A1FS nti
+SFX %a a èximo/A1FS nta
+SFX %a e èximo/A1FS mile
+SFX %a 0 èximo/A1FS ion
+SFX %a o èximo/A1FS iardo
+SFX %a ièxe èŧimo/A1FS ièxe
+SFX %a ièxe èsimo/A1FS ièxe
+SFX %a úndexe undèŧimo/A1FS úndexe
+SFX %a úndexe undèsimo/A1FS úndexe
+SFX %a óndexe ondèŧimo/A1FS óndexe
+SFX %a óndexe ondèsimo/A1FS óndexe
+SFX %a ódexe odèŧimo/A1FS ódexe
+SFX %a ódexe odèsimo/A1FS ódexe
+SFX %a édexe edèŧimo/A1FS édexe
+SFX %a édexe edèsimo/A1FS édexe
+SFX %a òrdexe ordèŧimo/A1FS òrdexe
+SFX %a òrdexe ordèsimo/A1FS òrdexe
+SFX %a índexe indèŧimo/M0FS índexe
+SFX %a índexe indèsimo/M0FS índexe
 
 # numerali - koletivi ko èle vanesente (-èximo)
-SFX %ƀ Y 3
-SFX %ƀ e èximo/A1 miƚe
-SFX %ƀ 0 èximo/A1 ion
-SFX %ƀ o èximo/A1 iardo
+SFX %ⱥ Y 3
+SFX %ⱥ e èximo/A1 miƚe
+SFX %ⱥ 0 èximo/A1 ion
+SFX %ⱥ o èximo/A1 iardo
 
 # numeraŧion latina
-SFX %c Y 10
-SFX %c 0 i [ivxlcdm]	po:numeral_latin
-SFX %c 0 ii [ivxlcdm]	po:numeral_latin
-SFX %c 0 iii [ivxlcdm]	po:numeral_latin
-SFX %c 0 iv [xlcdm]	po:numeral_latin
-SFX %c 0 v [ixlcdm]	po:numeral_latin
-SFX %c 0 vi [xlcdm]	po:numeral_latin
-SFX %c 0 vii [xlcdm]	po:numeral_latin
-SFX %c 0 viii [xlcdm]	po:numeral_latin
-SFX %c 0 ix [xlcdm]	po:numeral_latin
-SFX %c 0 x i	po:numeral_latin
+SFX %1 Y 10
+SFX %1 0 i [ivxlcdm]	po:numeral_latin
+SFX %1 0 ii [ivxlcdm]	po:numeral_latin
+SFX %1 0 iii [ivxlcdm]	po:numeral_latin
+SFX %1 0 iv [xlcdm]	po:numeral_latin
+SFX %1 0 v [ixlcdm]	po:numeral_latin
+SFX %1 0 vi [xlcdm]	po:numeral_latin
+SFX %1 0 vii [xlcdm]	po:numeral_latin
+SFX %1 0 viii [xlcdm]	po:numeral_latin
+SFX %1 0 ix [xlcdm]	po:numeral_latin
+SFX %1 0 x i	po:numeral_latin
 
 # numeraŧion latina (el funŧiona fin al númaro 3209)
-PFX %ȼ Y 95
-PFX %ȼ 0 x [lc]	po:numeral_latin
-PFX %ȼ 0 l x	po:numeral_latin
-PFX %ȼ 0 c [xlcdm]	po:numeral_latin
-PFX %ȼ 0 cx [lc]	po:numeral_latin
-PFX %ȼ 0 cl x	po:numeral_latin
-PFX %ȼ 0 cc [xlc]	po:numeral_latin
-PFX %ȼ 0 ccx [lc]	po:numeral_latin
-PFX %ȼ 0 ccl x	po:numeral_latin
-PFX %ȼ 0 ccc [xl]	po:numeral_latin
-PFX %ȼ 0 cccx [lc]	po:numeral_latin
-PFX %ȼ 0 cccl x	po:numeral_latin
-PFX %ȼ 0 cd [xl]	po:numeral_latin
-PFX %ȼ 0 cdx [lc]	po:numeral_latin
-PFX %ȼ 0 cdl x	po:numeral_latin
-PFX %ȼ 0 d [xlc]	po:numeral_latin
-PFX %ȼ 0 dx [lc]	po:numeral_latin
-PFX %ȼ 0 dl x	po:numeral_latin
-PFX %ȼ 0 dc [xlc]	po:numeral_latin
-PFX %ȼ 0 dcx [lc]	po:numeral_latin
-PFX %ȼ 0 dcl x	po:numeral_latin
-PFX %ȼ 0 dcc [xlc]	po:numeral_latin
-PFX %ȼ 0 dccx [lc]	po:numeral_latin
-PFX %ȼ 0 dccl x	po:numeral_latin
-PFX %ȼ 0 dccc [xl]	po:numeral_latin
-PFX %ȼ 0 dcccx [lc]	po:numeral_latin
-PFX %ȼ 0 dcccl x	po:numeral_latin
-PFX %ȼ 0 cm [xl]	po:numeral_latin
-PFX %ȼ 0 cmx [lc]	po:numeral_latin
-PFX %ȼ 0 cml x	po:numeral_latin
-PFX %ȼ 0 m [xlcdm]	po:numeral_latin
-PFX %ȼ 0 mx [lc]	po:numeral_latin
-PFX %ȼ 0 ml x	po:numeral_latin
-PFX %ȼ 0 mc [xlcmd]	po:numeral_latin
-PFX %ȼ 0 mcx [lc]	po:numeral_latin
-PFX %ȼ 0 mcl x	po:numeral_latin
-PFX %ȼ 0 mcc [xlc]	po:numeral_latin
-PFX %ȼ 0 mccx [lc]	po:numeral_latin
-PFX %ȼ 0 mccl x	po:numeral_latin
-PFX %ȼ 0 mccc [xl]	po:numeral_latin
-PFX %ȼ 0 mcccx [lc]	po:numeral_latin
-PFX %ȼ 0 mcccl x	po:numeral_latin
-PFX %ȼ 0 mcd [xl]	po:numeral_latin
-PFX %ȼ 0 mcdx [lc]	po:numeral_latin
-PFX %ȼ 0 mcdl x	po:numeral_latin
-PFX %ȼ 0 md [xlc]	po:numeral_latin
-PFX %ȼ 0 mdx [lc]	po:numeral_latin
-PFX %ȼ 0 mdl x	po:numeral_latin
-PFX %ȼ 0 mdc [xlc]	po:numeral_latin
-PFX %ȼ 0 mdcx [lc]	po:numeral_latin
-PFX %ȼ 0 mdcl x	po:numeral_latin
-PFX %ȼ 0 mdcc [xlc]	po:numeral_latin
-PFX %ȼ 0 mdccx [lc]	po:numeral_latin
-PFX %ȼ 0 mdccl x	po:numeral_latin
-PFX %ȼ 0 mdccc [xl]	po:numeral_latin
-PFX %ȼ 0 mdcccx [lc]	po:numeral_latin
-PFX %ȼ 0 mdcccl x	po:numeral_latin
-PFX %ȼ 0 mcm [xl]	po:numeral_latin
-PFX %ȼ 0 mcmx [lc]	po:numeral_latin
-PFX %ȼ 0 mcml x	po:numeral_latin
-PFX %ȼ 0 mm [xlcdm]	po:numeral_latin
-PFX %ȼ 0 mmx [lc]	po:numeral_latin
-PFX %ȼ 0 mml x	po:numeral_latin
-PFX %ȼ 0 mmc [xlcmd]	po:numeral_latin
-PFX %ȼ 0 mmcx [lc]	po:numeral_latin
-PFX %ȼ 0 mmcl x	po:numeral_latin
-PFX %ȼ 0 mmcc [xlc]	po:numeral_latin
-PFX %ȼ 0 mmccx [lc]	po:numeral_latin
-PFX %ȼ 0 mmccl x	po:numeral_latin
-PFX %ȼ 0 mmccc [xl]	po:numeral_latin
-PFX %ȼ 0 mmcccx [lc]	po:numeral_latin
-PFX %ȼ 0 mmcccl x	po:numeral_latin
-PFX %ȼ 0 mmcd [xl]	po:numeral_latin
-PFX %ȼ 0 mmcdx [lc]	po:numeral_latin
-PFX %ȼ 0 mmcdl x	po:numeral_latin
-PFX %ȼ 0 mmd [xlc]	po:numeral_latin
-PFX %ȼ 0 mmdx [lc]	po:numeral_latin
-PFX %ȼ 0 mmdl x	po:numeral_latin
-PFX %ȼ 0 mmdc [xlc]	po:numeral_latin
-PFX %ȼ 0 mmdcx [lc]	po:numeral_latin
-PFX %ȼ 0 mmdcl x	po:numeral_latin
-PFX %ȼ 0 mmdcc [xlc]	po:numeral_latin
-PFX %ȼ 0 mmdccx [lc]	po:numeral_latin
-PFX %ȼ 0 mmdccl x	po:numeral_latin
-PFX %ȼ 0 mmdccc [xl]	po:numeral_latin
-PFX %ȼ 0 mmdcccx [lc]	po:numeral_latin
-PFX %ȼ 0 mmdcccl x	po:numeral_latin
-PFX %ȼ 0 mmcm [xl]	po:numeral_latin
-PFX %ȼ 0 mmcmx [lc]	po:numeral_latin
-PFX %ȼ 0 mmcml x	po:numeral_latin
-PFX %ȼ 0 mmm [xlcdm]	po:numeral_latin
-PFX %ȼ 0 mmmx [lc]	po:numeral_latin
-PFX %ȼ 0 mmml x	po:numeral_latin
-PFX %ȼ 0 mmmc [xlcmd]	po:numeral_latin
-PFX %ȼ 0 mmmcx [lc]	po:numeral_latin
-PFX %ȼ 0 mmmcl x	po:numeral_latin
+PFX %2 Y 95
+PFX %2 0 x [lc]	po:numeral_latin
+PFX %2 0 l x	po:numeral_latin
+PFX %2 0 c [xlcdm]	po:numeral_latin
+PFX %2 0 cx [lc]	po:numeral_latin
+PFX %2 0 cl x	po:numeral_latin
+PFX %2 0 cc [xlc]	po:numeral_latin
+PFX %2 0 ccx [lc]	po:numeral_latin
+PFX %2 0 ccl x	po:numeral_latin
+PFX %2 0 ccc [xl]	po:numeral_latin
+PFX %2 0 cccx [lc]	po:numeral_latin
+PFX %2 0 cccl x	po:numeral_latin
+PFX %2 0 cd [xl]	po:numeral_latin
+PFX %2 0 cdx [lc]	po:numeral_latin
+PFX %2 0 cdl x	po:numeral_latin
+PFX %2 0 d [xlc]	po:numeral_latin
+PFX %2 0 dx [lc]	po:numeral_latin
+PFX %2 0 dl x	po:numeral_latin
+PFX %2 0 dc [xlc]	po:numeral_latin
+PFX %2 0 dcx [lc]	po:numeral_latin
+PFX %2 0 dcl x	po:numeral_latin
+PFX %2 0 dcc [xlc]	po:numeral_latin
+PFX %2 0 dccx [lc]	po:numeral_latin
+PFX %2 0 dccl x	po:numeral_latin
+PFX %2 0 dccc [xl]	po:numeral_latin
+PFX %2 0 dcccx [lc]	po:numeral_latin
+PFX %2 0 dcccl x	po:numeral_latin
+PFX %2 0 cm [xl]	po:numeral_latin
+PFX %2 0 cmx [lc]	po:numeral_latin
+PFX %2 0 cml x	po:numeral_latin
+PFX %2 0 m [xlcdm]	po:numeral_latin
+PFX %2 0 mx [lc]	po:numeral_latin
+PFX %2 0 ml x	po:numeral_latin
+PFX %2 0 mc [xlcmd]	po:numeral_latin
+PFX %2 0 mcx [lc]	po:numeral_latin
+PFX %2 0 mcl x	po:numeral_latin
+PFX %2 0 mcc [xlc]	po:numeral_latin
+PFX %2 0 mccx [lc]	po:numeral_latin
+PFX %2 0 mccl x	po:numeral_latin
+PFX %2 0 mccc [xl]	po:numeral_latin
+PFX %2 0 mcccx [lc]	po:numeral_latin
+PFX %2 0 mcccl x	po:numeral_latin
+PFX %2 0 mcd [xl]	po:numeral_latin
+PFX %2 0 mcdx [lc]	po:numeral_latin
+PFX %2 0 mcdl x	po:numeral_latin
+PFX %2 0 md [xlc]	po:numeral_latin
+PFX %2 0 mdx [lc]	po:numeral_latin
+PFX %2 0 mdl x	po:numeral_latin
+PFX %2 0 mdc [xlc]	po:numeral_latin
+PFX %2 0 mdcx [lc]	po:numeral_latin
+PFX %2 0 mdcl x	po:numeral_latin
+PFX %2 0 mdcc [xlc]	po:numeral_latin
+PFX %2 0 mdccx [lc]	po:numeral_latin
+PFX %2 0 mdccl x	po:numeral_latin
+PFX %2 0 mdccc [xl]	po:numeral_latin
+PFX %2 0 mdcccx [lc]	po:numeral_latin
+PFX %2 0 mdcccl x	po:numeral_latin
+PFX %2 0 mcm [xl]	po:numeral_latin
+PFX %2 0 mcmx [lc]	po:numeral_latin
+PFX %2 0 mcml x	po:numeral_latin
+PFX %2 0 mm [xlcdm]	po:numeral_latin
+PFX %2 0 mmx [lc]	po:numeral_latin
+PFX %2 0 mml x	po:numeral_latin
+PFX %2 0 mmc [xlcmd]	po:numeral_latin
+PFX %2 0 mmcx [lc]	po:numeral_latin
+PFX %2 0 mmcl x	po:numeral_latin
+PFX %2 0 mmcc [xlc]	po:numeral_latin
+PFX %2 0 mmccx [lc]	po:numeral_latin
+PFX %2 0 mmccl x	po:numeral_latin
+PFX %2 0 mmccc [xl]	po:numeral_latin
+PFX %2 0 mmcccx [lc]	po:numeral_latin
+PFX %2 0 mmcccl x	po:numeral_latin
+PFX %2 0 mmcd [xl]	po:numeral_latin
+PFX %2 0 mmcdx [lc]	po:numeral_latin
+PFX %2 0 mmcdl x	po:numeral_latin
+PFX %2 0 mmd [xlc]	po:numeral_latin
+PFX %2 0 mmdx [lc]	po:numeral_latin
+PFX %2 0 mmdl x	po:numeral_latin
+PFX %2 0 mmdc [xlc]	po:numeral_latin
+PFX %2 0 mmdcx [lc]	po:numeral_latin
+PFX %2 0 mmdcl x	po:numeral_latin
+PFX %2 0 mmdcc [xlc]	po:numeral_latin
+PFX %2 0 mmdccx [lc]	po:numeral_latin
+PFX %2 0 mmdccl x	po:numeral_latin
+PFX %2 0 mmdccc [xl]	po:numeral_latin
+PFX %2 0 mmdcccx [lc]	po:numeral_latin
+PFX %2 0 mmdcccl x	po:numeral_latin
+PFX %2 0 mmcm [xl]	po:numeral_latin
+PFX %2 0 mmcmx [lc]	po:numeral_latin
+PFX %2 0 mmcml x	po:numeral_latin
+PFX %2 0 mmm [xlcdm]	po:numeral_latin
+PFX %2 0 mmmx [lc]	po:numeral_latin
+PFX %2 0 mmml x	po:numeral_latin
+PFX %2 0 mmmc [xlcmd]	po:numeral_latin
+PFX %2 0 mmmcx [lc]	po:numeral_latin
+PFX %2 0 mmmcl x	po:numeral_latin
 
 
 # unidà de mexura (múltepli de dièxe)
