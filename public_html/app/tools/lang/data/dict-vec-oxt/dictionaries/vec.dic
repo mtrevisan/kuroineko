@@ -8256,6 +8256,9 @@ kapèƚoe/a0a2I1-1+0*0	po:verb ts:indicative_present is:interrogative st:kapeƚa
 inkapestrar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 inkapestro/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:inkapestrar
 inkapéstroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inkapestrar
+kapinar/a0a1a2P0P1P2*0	po:verb ts:infinitive_simple
+kapino/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:kapinar
+kapínoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:kapinar
 kapitar/a0a1a2P0P1P2-0-1.0^7	po:verb ts:infinitive_simple
 kàpito/a0a1a2P0P1P2FSI0-0-1.0^7	po:verb ts:indicative_present st:kapitar
 kàpitoe/a0a1a2I1-0-1.0^7	po:verb ts:indicative_present is:interrogative st:kapitar
@@ -18111,9 +18114,6 @@ skàoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:skaolar
 skaoƚar/a0a2P0P2	po:verb ts:infinitive_simple
 skàoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:skaoƚar
 skàoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:skaoƚar
-skapinar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-skapino/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:skapinar
-skapínoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:skapinar
 skapolar/a0a1P0P1	po:verb ts:infinitive_simple
 skàpolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:skapolar
 skàpoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:skapolar
@@ -25073,12 +25073,12 @@ straben/A2U0mf	po:noun is:singular
 superior/F0mf	po:noun is:singular_masculine
 superior/F0Wamf	po:adjective is:singular_masculine
 suprèmo/A1FSWa	po:adjective is:singular_masculine
-tantin	po:adverb
-tanto/M0FS&c	po:adjective is:singular_masculine
 tanta/F0&c	po:adjective is:singular_femenine
-tanto/M0FS&c	po:pronoun is:singular_masculine
 tanta/F0&c	po:pronoun is:singular_femenine
+tantin	po:adverb
 tanto/FS	po:adverb
+tanto/M0FS&c	po:adjective is:singular_masculine
+tanto/M0FS&c	po:pronoun is:singular_masculine
 tanton/A1U0mf	po:adjective is:singular_masculine
 tanton/A1U0mf	po:pronoun is:singular_masculine
 tanton	po:adverb
@@ -26364,10 +26364,10 @@ biava/F0&a	po:noun is:singular_femenine
 biava/F0*0&a	po:adjective is:singular_femenine
 biavo/M0FS*0&a	po:adjective is:singular_masculine
 biavo/M0FS*0&a	po:noun is:singular_masculine
-biondo/M0FS&c*0^6	po:noun is:singular_masculine
-biondo/M0FS&c*0^6(c	po:adjective is:singular_masculine
 bionda/F0&c*0^6	po:noun is:singular_femenine
 bionda/F0&c*0^6(c	po:adjective is:singular_femenine
+biondo/M0FS&c*0^6	po:noun is:singular_masculine
+biondo/M0FS&c*0^6(c	po:adjective is:singular_masculine
 bixa/F0&a(a	po:adjective is:singular_femenine
 bixa/F0&a(a	po:noun is:singular_femenine
 blè	po:adjective is:masculine
@@ -26499,10 +26499,10 @@ seƚestin/A2	po:adjective is:singular_masculine
 seƚestin/A2	po:noun is:singular_masculine
 seƚèste/M0	po:adjective is:singular_masculine
 seƚèste/M0	po:noun is:singular_masculine
-skarlato/M0FS&c	po:adjective is:singular_masculine
-skarlato/M0FS&c	po:noun is:singular_masculine
 skarlata/F0&c	po:adjective is:singular_femenine
 skarlata/F0&c	po:noun is:singular_femenine
+skarlato/M0FS&c	po:adjective is:singular_masculine
+skarlato/M0FS&c	po:noun is:singular_masculine
 surian/A2U0	po:adjective is:singular_masculine
 surian/A2U0	po:noun is:singular_masculine
 susí	po:adjective is:masculine
@@ -28225,8 +28225,6 @@ kanpaña/F0&a	po:noun is:singular_femenine
 kanpejo/M0FSTE	po:noun is:singular_masculine
 kanpion/A2U0mf	po:noun is:singular_masculine
 kanseƚasion/F0*0mf	po:noun is:singular_femenine
-kantèr/M0V0	po:noun is:singular_masculine
-kantèra/F0V0	po:noun is:singular_femenine
 kanton/F0U0^6mf	po:noun is:singular_masculine
 kanŧon/F0TEU0mf	po:noun is:singular_femenine
 kañar/A1	po:noun is:singular_masculine
@@ -28239,8 +28237,8 @@ kapelèra/F0V0	po:noun is:singular_femenine
 kapeƚèr/M0V1	po:noun is:singular_masculine
 kapeƚèra/F0V1	po:noun is:singular_femenine
 kapèl/M0U0&a<A<a(a§a	po:noun is:singular_masculine
-kapèla/F0&a<A<a§a	po:noun is:singular_femenine
-kapèƚa/F0&ⱥ<ⱥ§ⱥ	po:noun is:singular_femenine
+kapèla/F0&a<A<a§a(a	po:noun is:singular_femenine
+kapèƚa/F0&ⱥ<ⱥ§ⱥ(ⱥ	po:noun is:singular_femenine
 kapèƚo/M0&ⱥ<ⱥ(ⱥ§ⱥ	po:noun is:singular_masculine
 kapi–klase	po:noun is:plural_masculine st:kapo–klase
 kapi–saldi	po:noun is:plural_masculine st:kapo–saldo
@@ -28361,6 +28359,7 @@ kàmera/F0^0	po:noun is:singular_femenine
 kànevo/A1mf	po:noun is:singular_masculine
 kànkar/A1	po:interjection is:singular_masculine
 kànkar/A1	po:noun is:singular_masculine
+kàntar/A1	po:noun is:singular_masculine
 kàora/F0	po:noun is:singular_femenine
 kàrega/F0	po:noun is:singular_femenine
 kàrpen/M0U1mf	po:noun is:singular_masculine
@@ -32756,7 +32755,7 @@ kapomistro/M0	po:noun is:singular_masculine
 kapon/F0U0&amf	po:noun is:singular_masculine
 kaponèr/M0V0	po:noun is:singular_masculine
 kaponèra/F0V0	po:noun is:singular_femenine
-kapotin/M0	po:noun is:singular_masculine
+kapotin/A1	po:noun is:singular_masculine
 kapriòla/F0TE	po:noun is:singular_femenine
 kapusòl/M0U0TE	po:noun is:singular_masculine
 kapuŧin/M0TE*0	po:adjective is:singular_masculine
@@ -41378,7 +41377,6 @@ kaxolina/F0TE	po:noun is:singular_femenine
 kaxoƚin/M0v0	po:noun is:singular_masculine
 kàmito/M0FS	po:noun is:singular_masculine
 kànbrik	po:noun is:masculine
-kàntar/M0	po:noun is:singular_masculine
 kàorlo/M0U1	po:noun is:singular_masculine
 kàper/M0mf	po:interjection
 kàper/M0mf	po:noun is:singular_masculine
@@ -45254,7 +45252,7 @@ kapo–kòro/FS	po:noun is:singular al:kapi–kòro
 kapo–posto	po:noun is:singular_masculine al:kapi–posto
 kapo–pòsto	po:noun is:singular_masculine al:kapi–pòsto
 kapo–trupa	po:noun is:singular al:kapi–trupa
-kapo/M0FS	po:noun is:singular_masculine
+kapo/M0FS&a	po:noun is:singular_masculine
 kapofila	po:noun is:singular al:kapifila
 kapofiƚa	po:noun is:singular al:kapifiƚa
 kapogato/M0FS	po:noun is:singular_masculine
@@ -51452,7 +51450,7 @@ kapòta/F0	po:noun is:singular_femenine
 kapula/F0TE	po:noun is:singular_femenine
 karatèr/M0V0	po:noun is:singular_masculine
 karatèra/F0V0	po:noun is:singular_femenine
-karegin/M0	po:noun is:singular_masculine
+karegin/A1	po:noun is:singular_masculine
 karegòto/M0FS	po:noun is:singular_masculine
 karetèla/F0TE	po:noun is:singular_femenine
 karetèr/M0V0	po:noun is:singular_masculine
@@ -56075,17 +56073,25 @@ kamiƚion/F0mf	po:noun is:singular_femenine
 kamixina/F0	po:noun is:singular_femenine
 kandelabro/M0	po:noun is:singular_masculine
 kandeƚabro/M0	po:noun is:singular_masculine
+kanipa/F0	po:noun is:singular_femenine
 kankaneto/M0FSmf	po:noun is:singular_masculine
 kanpanon/F0U0mf	po:noun is:singular_masculine
 kanpexèl/M0U0TE	po:noun is:singular_masculine
 kanpionŧin/M0TE	po:noun is:singular_masculine
+kanutilia/F0TE	po:noun is:singular_femenine
 kaña	po:interjection
+kapelan/M0U0TE	po:noun is:singular_masculine
+kaprisio/M0&a	po:noun is:singular_masculine
+kapriŧio/M0&a	po:noun is:singular_masculine
+karbonŧin/M0TE	po:noun is:singular_masculine
+karè	po:noun is:masculine
 kasirèl/M0U0TE	po:noun is:singular_masculine
 kaŧirèl/M0U0	po:noun is:singular_masculine
 kàmola/F0TE	po:noun is:singular_femenine
+kàpola/F0TE	po:noun is:singular_femenine
 vertor/F0mf	po:noun is:singular_masculine
 
 
-/ 90
+/ 92
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
