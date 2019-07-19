@@ -982,6 +982,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "cincin",		"",			1,	4,	"a",	"1980",			"(bixiak) Adobar.",
 "cincon",		"",			1,	4,	"a",	"1980",			"Pèrder tenpo.",
 "cink",			"s",			1,	1,	"a",	"1775",			"Spontar, guastar la ponta de na pena.",
+"cinp",			"",			1,	1,	"a",	"1900",			"Béver.",
 "cipeg",			"",			1,	1,	"a",	"1980",			"Mastegar, biasikar.",
 "cisc",			"in",			1,	1,	"a",	"1894",			"Provokar.",
 "coc",			"",			1,	1,	"g",	"1877",			"",
