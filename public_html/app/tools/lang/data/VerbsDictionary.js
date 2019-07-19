@@ -2890,6 +2890,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kaŧ",			"in",			4,	3,	"a",	"1867",			"Inŧukar.",
 "kaŧorl",		"s",			1,	3,	"a",	"1560",			"",
 "kaŧot",			"",			1,	3,	"g",	"1900",			"",
+"kauc",			"",			1,	2,	"a",	"1900",			"Laorar ko na guca.",
 "kauc",			"in",			1,	2,	"a",	"1867",			"Tèñer insieme par le kaece.",
 "kaut",			"",			1,	2,	"a",	"1852",			"Kautelar.",
 "kauteriđ",		"",			1,	6,	"a",	"",				"",
