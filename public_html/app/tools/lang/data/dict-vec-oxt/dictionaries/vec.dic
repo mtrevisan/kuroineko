@@ -2980,6 +2980,9 @@ scòtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:scotar
 cucar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 cuco/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:cucar
 cúcoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:cucar
+cucotar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+cucòto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:cucotar
+cucòtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:cucotar
 cucolar/a0a1P0P1	po:verb ts:infinitive_simple
 cúcolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:cucolar
 cúcoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:cucolar
@@ -3003,6 +3006,9 @@ cúnboe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:cunbar
 scupar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 scupo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:scupar
 scúpoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:scupar
+curlar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+curlo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:curlar
+cúrloe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:curlar
 dar/a3a4a5P0P1P2-1	po:verb ts:infinitive_simple
 dào/a3a4a5P0P1P2I0-1	po:verb ts:indicative_present st:dar
 dàoe/a3a4a5P0P1P2I0-1	po:verb ts:indicative_present is:interrogative st:dar
@@ -22227,6 +22233,12 @@ insíprioe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:insipriar
 inŧipriar/a0a1P0P1	po:verb ts:infinitive_simple
 inŧiprio/a0a1P0P1I0	po:verb ts:indicative_present st:inŧipriar
 inŧíprioe/a0a1I1	po:verb ts:indicative_present is:interrogative st:inŧipriar
+sirexinar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+sirèxino/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:sirexinar
+sirèxinoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:sirexinar
+ŧirexinar/a0a1P0P1	po:verb ts:infinitive_simple
+ŧirèxino/a0a1P0P1I0	po:verb ts:indicative_present st:ŧirexinar
+ŧirèxinoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:ŧirexinar
 ŧirkolar/a0a1P0P1TB	po:verb ts:infinitive_simple
 ŧírkolo/a0a1P0P1FSI0TB	po:verb ts:indicative_present st:ŧirkolar
 ŧírkoloe/a0a1I1TB	po:verb ts:indicative_present is:interrogative st:ŧirkolar
@@ -27341,6 +27353,7 @@ censuario/A1	po:noun is:singular_masculine
 censuario/A1Wa	po:adjective is:singular_masculine
 ceto/A1FSq0q1*0	po:adjective is:singular_masculine
 cexa/F0ětǒN	po:noun is:singular_femenine
+cèto/A1FS*0	po:adjective is:singular_masculine
 cicinin/A2	po:adjective is:singular_masculine
 cicinin/A2	po:noun is:singular_masculine
 cicinin	po:adverb
@@ -28418,6 +28431,7 @@ koɉon/F0U0ǎSǎsǎtělěƚětmf	po:adjective is:singular_masculine
 koɉon/F0U0v0ǎSǎsǎtělěƚětǒNmf	po:noun is:singular_masculine
 koɉona/ǎtělěƚět	po:adjective is:singular_femenine
 koɉona/ǎtělěƚět	po:noun is:singular_femenine
+kokon/F0U0mf	po:adjective is:singular_masculine
 kokon/F0U0s0ělěƚětǒNmf	po:noun is:singular_masculine
 kokúmer/M0mf	po:noun is:singular_masculine
 koletivo/A1FS	po:noun is:singular_masculine
@@ -30105,7 +30119,6 @@ scao/A1	po:adjective is:singular_masculine
 scao/A1	po:noun is:singular_masculine
 scapa/F0	po:adjective is:singular_femenine
 scenxa/F0ět	po:noun is:singular_femenine
-cèto/A1FS*0	po:adjective is:singular_masculine
 scòna/F0ělěƚět	po:noun is:singular_femenine
 scòpo/M0FSět	po:noun is:singular_masculine
 scuxo/M0FS	po:noun is:singular_masculine
@@ -42344,7 +42357,6 @@ tubèrkol/M0U1TEmf	po:noun is:singular_masculine
 ŧiò/TB	po:noun is:masculine
 ŧirkasiè/TB	po:noun is:masculine
 ŧivada/F0TBY0Y1	po:noun is:singular_femenine
-ŧiveta/F0TB	po:noun is:singular_femenine
 ŧiveton/F0TBU0mf	po:noun is:singular_masculine
 ŧòtol/M0U1mf	po:noun is:singular_masculine
 ŧukarola/F0	po:noun is:singular_femenine
@@ -43639,9 +43651,9 @@ còfe	po:interjection
 còo/M0ět	po:noun is:singular_masculine
 còsa/F0	po:noun is:singular_femenine
 cucavaka/F0	po:noun is:singular_femenine
-cuco/M0FSǒN	po:noun is:singular_masculine
+cuco/M0FSǒNǒt	po:noun is:singular_masculine
 cuí	po:noun is:masculine
-cuko/M0FS	po:noun is:singular_masculine
+cuko/A1FS	po:noun is:singular_masculine
 cuxura/F0ět	po:noun is:singular_femenine
 daben	po:adverb
 dada/F0	po:noun is:singular_femenine
@@ -45471,8 +45483,10 @@ kloklò	po:interjection
 kloklò	po:noun is:masculine
 klub/F0	po:noun is:masculine
 koadiudor/A2mf	po:noun is:singular_masculine
+koarol/M0U0V0mf	po:noun is:singular_masculine
 koarola/F0V0	po:adjective is:singular_femenine
 koaroƚa/F0V1	po:adjective is:singular_femenine
+koaroƚo/M0V1	po:noun is:singular_masculine
 koato/M0ǒn	po:noun is:singular_masculine
 kocèr/M0V0	po:noun is:singular_masculine
 kocèra/F0V0	po:noun is:singular_femenine
@@ -51189,7 +51203,7 @@ coato/A1FS	po:adjective is:singular_masculine
 codin/M0	po:noun is:singular_masculine
 coè	po:noun is:masculine
 cóndol/M0U1TEmf	po:noun is:singular_masculine
-cufo/M0FS	po:noun is:singular_masculine
+cufo/M0FSět	po:noun is:singular_masculine
 cupinara/F0	po:noun is:singular_femenine
 cúpexe	po:interjection
 dalia/F0TE	po:noun is:singular_femenine
@@ -56055,10 +56069,22 @@ butèla/F0ǒt	po:noun is:singular_femenine
 butèƚa/F0ǒŧ	po:noun is:singular_femenine
 butèƚo/M0ǒŧ	po:noun is:singular_masculine
 butin/A2ǒN	po:noun is:singular_masculine
+cak	po:interjection
+canpèrla/F0	po:noun is:singular_femenine
+caparin/M0	po:noun is:singular_masculine
+capin/M0	po:noun is:singular_masculine
+caro/FS	po:adverb
 cexara/F0	po:noun is:singular_femenine
 cexola/F0TE	po:noun is:singular_femenine
 cérega/F0	po:noun is:singular_femenine
 cèko/A1FS	po:noun is:singular_femenine
+cicin/A2	po:adjective is:singular_masculine
+cicin/A2	po:noun is:singular_masculine
+cincibin/M0	po:noun is:singular_masculine
+cífer/M0	po:noun is:singular_masculine
+còkol/M0U1TEmf	po:noun is:singular_masculine
+cupin/M0	po:noun is:singular_masculine
+curlada/F0Y0Y1	po:adjective is:singular_femenine
 dòbo/M0	po:noun is:singular_masculine
 kabalista/A2	po:noun is:singular
 kabaƚista/A2	po:noun is:singular
@@ -56114,28 +56140,23 @@ kavriol/M0U0TE	po:noun is:singular_masculine
 kavriola/F0TE	po:noun is:singular_femenine
 kàmola/F0TE	po:noun is:singular_femenine
 kàpola/F0TE	po:noun is:singular_femenine
+klai	po:adverb
+kokuca/F0	po:noun is:singular_femenine
 senbaleto/M0FSTEmf	po:noun is:singular_masculine
 serúmola/F0TEvŧ	po:noun is:singular_femenine
+siéoƚo/M0mf	po:noun is:singular_masculine
 ŧenbaleto/M0FSmf	po:noun is:singular_masculine
 ŧenjo/M0TETB	po:noun is:singular_masculine
 ŧentain/M0TB	po:noun is:singular_masculine
 ŧerúmola/F0vŧ	po:noun is:singular_femenine
-vertor/F0mf	po:noun is:singular_masculine
-cífer/M0	po:noun is:singular_masculine
-cak	po:interjection
-canpèrla/F0	po:noun is:singular_femenine
-capin/M0	po:noun is:singular_masculine
-caparin/M0	po:noun is:singular_masculine
-caro/FS	po:adverb
-cicin/A2	po:adjective is:singular_masculine
-cicin/A2	po:noun is:singular_masculine
 ŧiéol/M0TBU1mf	po:noun is:singular_masculine
-siéoƚo/M0mf	po:noun is:singular_masculine
-ŧínbarli/TB	po:adverb
 ŧimosa/F0TB	po:noun is:singular_femenine
-cincibin/M0	po:noun is:singular_masculine
+ŧirexa/F0TB	po:noun is:singular_femenine
+ŧirexin/M0TB	po:noun is:singular_masculine
+ŧínbarli/TB	po:adverb
+vertor/F0mf	po:noun is:singular_masculine
 
 
-/ 105
+/ 107
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
