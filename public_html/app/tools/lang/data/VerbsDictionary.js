@@ -1100,6 +1100,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "dilat",			"in",			1,	3,	"g",	"1829",			"",
 "dindol",		"",			1,	1,	"a",	"1775",			"Demenar, barkolar, trabalar, condolar.",
 "dindol",		"x",			1,	1,	"a",	"1775",			"",
+"dindon",		"",			1,	4,	"a",	"1900",			"Tentenar.",
 "diol",			"",			2,	1,	"g",	"1877",			"Doler.",
 "disi",			"dix",		1,	1,	"a",	"1560",			"Xvejar.",
 "disip",			"",			1,	1,	"a",	"1560",			"Guastar, butar via.",
