@@ -7263,6 +7263,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧurl",			"",			1,	1,	"a",	"1852",			"Delirar, molestar, inkietar.",
 "ŧuŧ",			"",			1,	1,	"a",	"1775",			"Sucar.",
 
+"ubid",			"dex",		4,	4,	"a",	"1900",			"",
 "ubig",			"",			1,	0,	"a",	"1893",			"Ubegar.",
 "ud",				"",			1,	0,	"a",	"1775",			"Versar.",
 "ufeg",			"",			1,	0,	"a",	"1876",			"Onfegar.",
