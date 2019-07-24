@@ -1865,6 +1865,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "frànđ",			"s",			3,	2,	"g",	"1590",			"",
 "franđox",		"",			1,	5,	"a",	"1829",			"Far vèñer el mal franŧexe.",
 "franđox",		"in",			1,	5,	"a",	"1829",			"Far vèñer el mal franŧexe.",
+"franfuñ",		"",			1,	5,	"a",	"1900",			"Fanfuñar.",
 "frank",			"",			1,	2,	"g",	"1775",			"",
 "frank",			"a",			1,	2,	"g",	"1851",			"Restituir el kapital al propietario.",
 "frank",			"in",			1,	2,	"g",	"1852",			"Inpratikir.",
