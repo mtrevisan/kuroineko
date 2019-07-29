@@ -3199,6 +3199,12 @@ diàƚogoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:diaƚogar
 diamantar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 diamanto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:diamantar
 diamàntoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:diamantar
+indiaolar/a0a1P0P1	po:verb ts:infinitive_simple
+indiàolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:indiaolar
+indiàoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:indiaolar
+indiaoƚar/a0a2P0P2	po:verb ts:infinitive_simple
+indiàoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:indiaoƚar
+indiàoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:indiaoƚar
 dibàter/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 dibaterò/b0b1b2I0	po:verb ts:indicative_future st:dibàter
 dibato/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:dibàter
@@ -25455,10 +25461,10 @@ dapò	po:preposition
 daspò	po:preposition
 da	po:preposition
 de/ʼ0	po:preposition
+dentro/+0	po:adverb
+dentro/+0	po:preposition
 dentrovia	po:adverb
 dentrovia	po:preposition
-dentro	po:adverb
-dentro	po:preposition
 despèto/M0FS	po:adjective is:singular_masculine
 despèto/M0FS	po:noun is:singular_masculine
 despò	po:preposition
@@ -29379,7 +29385,7 @@ nàlexi/@0	po:noun is:femenine
 nàƚexi/@0	po:noun is:femenine
 negativo/A1FSWa	po:adjective is:singular_masculine
 neoda/F0ět	po:noun is:singular_femenine
-neodo/M0ětmf	po:noun is:singular_masculine
+neodo/M0FSětmf	po:noun is:singular_masculine
 neoeta/F0	po:noun is:singular_femenine
 neoeto/M0FSmf	po:noun is:singular_masculine
 neóa/F0	po:noun is:singular_femenine
@@ -30887,9 +30893,9 @@ trivaƚente/M0mf	po:adjective is:singular
 trivelin/M0ět	po:noun is:singular_masculine
 triveƚin/M0ěŧ	po:noun is:singular_masculine
 trixlísego/A1FS	po:adjective is:singular_masculine
-trođo/M0ětmf	po:noun is:singular_masculine al:troi
+trođo/M0FSětmf	po:noun is:singular_masculine al:troi
 troi	po:noun is:plural_masculine st:trođo
-troxo/M0ětmf	po:noun is:singular_masculine
+troxo/M0FSětmf	po:noun is:singular_masculine
 tròđo/M0*0	po:noun is:singular_masculine al:tròi
 tròi	po:noun is:plural_masculine st:tròđo
 tròxo/M0*0	po:noun is:singular_masculine
@@ -35541,7 +35547,7 @@ sotiƚa/^6	po:adjective is:singular_femenine
 sotiƚo/^6	po:adjective is:singular_masculine
 sotobragesa/F0	po:noun is:singular_femenine
 sotogola/F0TE	po:noun is:singular_masculine
-sotokogo/M0	po:noun is:singular_masculine
+sotokogo/M0FS	po:noun is:singular_masculine
 sotokopa/F0	po:noun is:singular_femenine
 sotokóa/F0	po:noun is:singular_femenine
 sotokògo/M0	po:noun is:singular_masculine
@@ -37070,8 +37076,8 @@ languría/F0TB	po:noun is:singular_femenine
 laxañèr/M0V0	po:noun is:singular_masculine
 laxañèra/F0V0	po:noun is:singular_femenine
 letigeta/F0TB	po:noun is:singular_femenine
-ligoxo/M0TBmf	po:adjective is:singular_masculine
-ligoxo/M0TBmf	po:noun is:singular_masculine
+ligoxo/M0FSmf	po:adjective is:singular_masculine
+ligoxo/M0FSmf	po:noun is:singular_masculine
 londrina/F0TB	po:noun is:singular_femenine
 lubrikante/M0FS	po:noun is:singular_masculine
 lunàtiko/A1FS	po:noun is:singular_masculine
@@ -37080,6 +37086,8 @@ lusernèra/F0V0	po:noun is:singular_femenine
 ƚaxañèr/M0V1	po:noun is:singular_masculine
 ƚaxañèra/F0V1	po:noun is:singular_femenine
 ƚesena/F0	po:noun is:singular_femenine
+ƚigoxo/M0mf	po:adjective is:singular_masculine
+ƚigoxo/M0mf	po:noun is:singular_masculine
 ƚubrikante/M0	po:noun is:singular_masculine
 ƚunàtiko/A1	po:noun is:singular_masculine
 ƚusernèr/M0V1	po:noun is:singular_masculine
@@ -37213,7 +37221,7 @@ reparèla/F0TEvŧ	po:noun is:singular_femenine
 repoxin/M0	po:noun is:singular_masculine
 revixor/A2mf	po:noun is:singular_masculine
 rexentadina/F0	po:noun is:singular_femenine
-rèprobo/M0	po:noun is:singular_masculine
+rèprobo/M0FS	po:noun is:singular_masculine
 ridikolería/F0v0	po:noun is:singular_femenine
 ridikoƚería/F0v0	po:noun is:singular_femenine
 riguardo/M0FS	po:noun is:singular_masculine
@@ -43493,7 +43501,7 @@ bojon/F0TEU0mf	po:noun is:singular_masculine
 bojura/F0	po:noun is:singular_femenine
 boɉadiŧa/F0TE	po:noun is:singular_femenine
 boɉaiŧa/F0TE	po:noun is:singular_femenine
-boɉo/M0q0q1ǎSǎsět	po:noun is:singular_masculine
+boɉo/M0FSq0q1ǎSǎsět	po:noun is:singular_masculine
 boɉura/F0	po:noun is:singular_femenine
 bokadura/F0r5ět	po:noun is:singular_femenine
 bokalina/F0TE	po:noun is:singular_femenine
@@ -44398,13 +44406,13 @@ fermo/A1	po:noun is:singular_masculine
 fermo/A1Wa	po:adjective is:singular_masculine
 fermolà	po:interjection
 fermoƚà	po:interjection
-feroroto/M0mf	po:noun is:singular_masculine
-feroto/M0mf	po:noun is:singular_masculine
+feroroto/M0FSmf	po:noun is:singular_masculine
+feroto/M0FSmf	po:noun is:singular_masculine
 festaŧa/F0TE	po:noun is:singular_femenine
 festexòla/F0TE	po:noun is:singular_femenine
 festin/A1	po:noun is:singular_masculine
 fetadin/A2	po:adjective is:singular_masculine
-fèro–roto/M0mf	po:noun is:singular_masculine
+fèro–roto/M0FSmf	po:noun is:singular_masculine
 fèrŧo/M0FSTE	po:noun is:singular_masculine
 fètido/A1FS	po:adjective is:singular_masculine
 fiaka/F0ět	po:noun is:singular_femenine
@@ -45524,7 +45532,7 @@ kataroxo/M0FS*0ětmf	po:noun is:singular_masculine
 kataroxo/M0FSWa*0ětmf	po:adjective is:singular_masculine
 kataròba/F0	po:noun is:singular
 kataver/M0mf	po:noun is:singular_masculine
-katàlogo/M0	po:noun is:singular_masculine
+katàlogo/M0FS	po:noun is:singular_masculine
 katàƚogo/M0	po:noun is:singular_masculine
 katàstego/M0FS	po:noun is:singular_masculine
 kategorikamente/FSW0	po:adverb
@@ -46226,7 +46234,7 @@ longàxin/F0TB	po:noun is:singular_masculine
 lorí/TB	po:noun is:masculine
 lova/F0TB	po:noun is:singular_femenine
 lógora/F0TB	po:adjective is:singular_femenine
-lógoro/M0TB	po:adjective is:singular_masculine
+lógoro/M0FS	po:adjective is:singular_masculine
 lòjo/M0FSǒn	po:noun is:singular_masculine
 lòɉo/M0FSǒn	po:noun is:singular_masculine
 lòke/TB	po:noun is:singular_masculine
@@ -46342,6 +46350,7 @@ luxverde/F0TB	po:noun is:singular_masculine
 ƚíkuido/A1	po:noun is:singular_masculine
 ƚokante/M0	po:noun is:singular
 ƚonxa/F0	po:noun is:singular_femenine
+ƚógoro/M0	po:adjective is:singular_masculine
 ƚòjo/M0ǒñ	po:noun is:singular_masculine
 ƚòɉo/M0ǒñ	po:noun is:singular_masculine
 ƚòto/M0@0	po:noun is:singular_masculine
@@ -50441,7 +50450,7 @@ voltin/A2	po:noun is:singular_masculine
 voltixòla/F0TE	po:noun is:singular_femenine
 voltor/F0mf	po:noun is:singular_masculine
 voltura/F0	po:noun is:singular_femenine
-voto/M0mf	po:noun is:singular_masculine
+voto/M0FSmf	po:noun is:singular_masculine
 vòda/F0	po:noun is:singular_femenine
 vòdo/A1FS	po:adjective is:singular_masculine
 vòdo/M0FS+0*0	po:noun is:singular_masculine
@@ -50998,7 +51007,7 @@ pexa/F0	po:noun is:singular_femenine
 piada/F0Y0*0	po:noun is:singular_femenine
 pivila/F0TE	po:noun is:singular_femenine
 pixolin/M0TE	po:noun is:singular_masculine
-pođo/M0mf	po:noun is:singular_masculine
+pođo/M0FSmf	po:noun is:singular_masculine
 pojato/M0FS	po:noun is:singular_masculine
 poɉato/M0FS	po:noun is:singular_masculine
 polexe/M0FSmf	po:noun is:singular_masculine
@@ -51038,10 +51047,10 @@ reŧapadura/F0r5ět	po:noun is:singular_femenine
 rexbalŧo/M0FSTE	po:noun is:singular_masculine
 rexbojo/M0FSTE	po:noun is:singular_masculine
 rexèstola/F0TE	po:noun is:singular_femenine
-rođo/M0ǒNmf	po:noun is:singular_masculine
+rođo/M0FSǒNmf	po:noun is:singular_masculine
 rokoleto/M0FSTEmf	po:noun is:singular_masculine
 ronkiđo/M0TE	po:noun is:singular_masculine
-roxo/M0ǒNmf	po:noun is:singular_masculine
+roxo/M0FSǒNmf	po:noun is:singular_masculine
 rufiol/M0TEU0mf	po:noun is:singular_masculine
 rugolon/A2U0mf	po:noun is:singular_masculine
 rugoƚon/A2mf	po:noun is:singular_masculine
@@ -55543,7 +55552,7 @@ kavastropon/F0U0mf	po:noun is:singular_masculine
 kavidin/M0	po:noun is:singular_masculine
 kavodòjo/M0FSTE	po:noun is:singular_masculine
 kaxarma/F0	po:noun is:singular_femenine
-kànovo/M0	po:noun is:singular_masculine
+kànovo/M0FS	po:noun is:singular_masculine
 kodin/M0	po:noun is:singular_masculine
 konplimento/M0FSmf	po:noun is:singular_masculine
 konsalastra/F0	po:noun is:singular
@@ -56386,6 +56395,9 @@ inbul/M0U0	po:noun is:singular_masculine
 inbuƚo/M0	po:noun is:singular_masculine
 inkarnada/F0Y0	po:adjective is:singular_femenine
 inkarnado/M0FSY0	po:adjective is:singular_masculine
+inkosido/M0FSY0	po:adjective is:singular_masculine
+inkotido/M0FSY0	po:adjective is:singular_masculine
+inkroxo/M0FS	po:noun is:singular_masculine
 inmakakada/F0Y0	po:noun is:singular_femenine
 inmakakado/M0FSY0	po:noun is:singular_masculine
 inparmè	po:adverb
@@ -56533,6 +56545,6 @@ xdentada/F0Y0-0	po:adjective is:singular_femenine
 xdentado/M0FSY0-0	po:adjective is:singular_masculine
 
 
-/ 166
+/ 167
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ

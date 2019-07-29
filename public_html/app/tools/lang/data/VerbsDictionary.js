@@ -1097,6 +1097,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "dexnod",		"",			1,	4,	"g",	"1560",			"",
 "dialog",		"",			1,	2,	"g",	"1867",			"",
 "diamant",		"",			1,	4,	"g",	"1775",			"",
+"diaol",			"in",			1,	2,	"g",	"1900",			"Indemoniar.",
 "dibàt",			"",			3,	3,	"g",	"1851",			"Xbàter, malagamar.",
 "dig",			"pro",		1,	-1,"g",	"1854",			"",
 "diladi",		"",			1,	3,	"g",	"1867",			"Konténder, alterkar, kontrastar.",
