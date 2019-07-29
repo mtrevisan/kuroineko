@@ -2711,6 +2711,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kanal",			"in",			1,	3,	"g",	"1867",			"",
 "kanal",			"s",			1,	3,	"g",	"1854",			"Kanalar.",
 "kanaliđ",		"",			1,	5,	"a",	"1980",			"",
+"kanbr",			"in",			1,	1,	"g",	"1900",			"Unir ko grape do travi o altro.",
 "kaneđ",			"",			1,	3,	"a",	"1867",			"Lasar el kan drio la bestia ko se và kaŧar.",
 "kanel",			"",			1,	3,	"g",	"1535",			"",
 "kanel",			"s",			1,	3,	"g",	"1775",			"",
