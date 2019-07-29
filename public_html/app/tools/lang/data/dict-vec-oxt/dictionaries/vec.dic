@@ -8163,7 +8163,7 @@ kanaƚixar/a0a2P0P2	po:verb ts:infinitive_simple
 kanaƚixo/a0a2P0P2I0	po:verb ts:indicative_present st:kanaƚixar
 kanaƚíxoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:kanaƚixar
 inkanbrar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-inkanbro/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:inkanbrar
+inkanbro/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:inkanbrar
 inkànbroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inkanbrar
 kaneđar/a0a1P0P1	po:verb ts:infinitive_simple
 kaneđo/a0a1P0P1FSI0	po:verb ts:indicative_present st:kaneđar
@@ -15043,7 +15043,7 @@ pianixar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 pianixo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:pianixar
 pianíxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:pianixar
 inpiastrar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-inpiastro/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:inpiastrar
+inpiastro/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:inpiastrar
 inpiàstroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inpiastrar
 piatolar/a0a1P0P1	po:verb ts:infinitive_simple
 piàtolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:piatolar
@@ -21878,6 +21878,15 @@ semento/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:ŧementar
 senar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 seno/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:senar
 sénoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:senar
+inŧendrolar/a0a1P0P1	po:verb ts:infinitive_simple
+inŧèndrolo/a0a1P0P1I0	po:verb ts:indicative_present st:inŧendrolar
+inŧèndroloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:inŧendrolar
+insendrolar/a0a1P0P1	po:verb ts:infinitive_simple
+insèndrolo/a0a1P0P1I0	po:verb ts:indicative_present st:insendrolar
+insèndroloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:insendrolar
+insendroƚar/a0a2P0P2	po:verb ts:infinitive_simple
+insèndroƚo/a0a2P0P2I0	po:verb ts:indicative_present st:insendroƚar
+insèndroƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:insendroƚar
 insénder/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 insenderò/b0b1b2I0	po:verb ts:indicative_future st:insénder
 insendo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:insénder
@@ -22028,6 +22037,15 @@ esepir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 eŧepir/a0a1d0d1P0P1	po:verb ts:infinitive_simple
 persepir/a0a1a2d0d1d2P0P1P2vŧ	po:verb ts:infinitive_simple
 perŧepir/a0a1d0d1P0P1vŧ	po:verb ts:infinitive_simple
+inŧerkolar/a0a1P0P1	po:verb ts:infinitive_simple
+inŧérkolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:inŧerkolar
+inŧérkoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:inŧerkolar
+inserkolar/a0a1P0P1	po:verb ts:infinitive_simple
+insérkolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:inserkolar
+insérkoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:inserkolar
+inserkoƚar/a0a2P0P2	po:verb ts:infinitive_simple
+insérkoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:inserkoƚar
+insérkoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:inserkoƚar
 sèrner/b0b1b2P0P1P2-0+0	po:verb ts:infinitive_simple
 sernerò/b0b1b2I0-0+0	po:verb ts:indicative_future st:sèrner
 sèrno/a0a1a2P0P1P2FSI0-0+0	po:verb ts:indicative_present st:sèrner
@@ -28526,7 +28544,7 @@ kera/F0	po:noun is:singular_femenine
 ké	po:conjunction
 kègola/F0TE	po:noun is:singular_femenine
 kèo/M0	po:noun is:singular_masculine
-kièto/A1FS	po:adjective is:singular_masculine
+kièto/A1FS+0	po:adjective is:singular_masculine
 kilòmetro/M0	po:noun is:singular_masculine
 kiƚòmetro/M0	po:noun is:singular_masculine
 kipa/F0	po:noun is:singular_femenine
@@ -56366,12 +56384,16 @@ inbanboƚado/M0Y0	po:adjective is:singular_masculine
 inbrentada/F0Y0Y1	po:noun is:singular_femenine
 inbul/M0U0	po:noun is:singular_masculine
 inbuƚo/M0	po:noun is:singular_masculine
+inkarnada/F0Y0	po:adjective is:singular_femenine
+inkarnado/M0FSY0	po:adjective is:singular_masculine
 inmakakada/F0Y0	po:noun is:singular_femenine
 inmakakado/M0FSY0	po:noun is:singular_masculine
 inparmè	po:adverb
 inpico/M0FS	po:noun is:singular_masculine
 inpostor/F0mf	po:adjective is:singular_masculine
 inpostor/F0mf	po:noun is:singular_masculine
+inpresto/M0	po:noun is:singular_masculine
+inpropèria/F0	po:noun is:singular_femenine
 jako/M0TBFS	po:noun is:singular_masculine
 jeniko/M0FSTB	po:adjective is:singular_masculine
 jeniko/M0FSTB	po:noun is:singular_masculine
@@ -56506,12 +56528,11 @@ siéoƚo/M0mf	po:noun is:singular_masculine
 ŧirexin/M0TB	po:noun is:singular_masculine
 ŧínbarli/TB	po:adverb
 vertor/F0mf	po:noun is:singular_masculine
+vincòstro/M0	po:noun is:singular_masculine
 xdentada/F0Y0-0	po:adjective is:singular_femenine
 xdentado/M0FSY0-0	po:adjective is:singular_masculine
-inpresto/M0	po:noun is:singular_masculine
-inpropèria/F0	po:noun is:singular_femenine
 
 
-/ 165
+/ 166
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
