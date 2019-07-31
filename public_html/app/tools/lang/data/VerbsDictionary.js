@@ -3668,6 +3668,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "log",			"dex",		1,	1,	"g",	"1854",			"Xlogar.",
 "log",			"x",			1,	1,	"g",	"1852",			"",
 "logor",			"",			1,	1,	"g",	"1867",			"",
+"loin",			"",			1,	1,	"g",	"1900",			"Friñar.",
 "loj",			"",			1,	1,	"g",	"1852",			"Formento misià ko ʼl lòjo.",
 "loj",			"dex",		1,	1,	"g",	"1854",			"Parar via el nemigo.",
 "loj",			"x",			1,	1,	"g",	"1867",			"",
