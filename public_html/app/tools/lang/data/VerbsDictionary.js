@@ -3754,6 +3754,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "main",			"in",			1,	2,	"a",	"1900",			"Mainar.",
 "maistr",		"",			1,	2,	"a",	"1463",			"",
 "maistral",		"",			1,	6,	"g",	"1829",			"Infuriar de ʼl Maistral.",
+"majol",			"",			1,	3,	"g",	"1900",			"Komerŧar in seda.",
 "maɉ",			"x",			1,	1,	"g",	"1775",			"Xbasar, ribàter.",
 "mak",			"",			1,	1,	"g",	"1775",			"",
 "mak",			"x",			1,	1,	"g",	"1852",			"Umiliar.",
