@@ -3945,6 +3945,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "medexin",		"",			1,	5,	"a",	"1829",			"",
 "medi",			"",			1,	1,	"g",	"",				"",
 "medi",			"re",			1,	1,	"g",	"1867",			"",
+"méd",			"",			3,	2,	"g",	"1900",			"Mièder.",
 "međ",			"",			1,	1,	"a",	"",				"",
 "međ",			"destra",	1,	1,	"a",	"1775",			"",
 "međ",			"fra",		1,	1,	"a",	"",				"",
