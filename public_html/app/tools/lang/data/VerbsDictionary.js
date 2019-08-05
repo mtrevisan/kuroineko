@@ -3849,6 +3849,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "mareɉ",			"",			1,	3,	"a",	"1867",			"Deventar amaro.",
 "marel",			"",			1,	3,	"g",	"1854",			"Abarkar, far mari de fen despò ʼverlo sekà.",
 "marend",		"",			1,	3,	"a",	"1775",			"Far marenda.",
+"marg",			"",			1,	1,	"g",	"1900",			"Fadegar.",
 "margot",		"",			1,	4,	"g",	"1867",			"",
 "mari",			"",			1,	3,	"a",	"1560",			"",
 "marias",		"x",			1,	4,	"g",	"1852",			"Xmarjasar.",
