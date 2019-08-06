@@ -4905,6 +4905,18 @@ oféndoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:ofénder
 ofexo/A1FSmf	po:verb ts:participle_perfect_strong st:ofénder
 oféndar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 ofendarò/b0b1b2I0	po:verb ts:indicative_future st:oféndar
+fènder/b0b1b2P0P1P2*0-0	po:verb ts:infinitive_simple
+fèndre/*0-0	po:verb ts:infinitive_simple st:fènder
+fèndo/a0a1a2P0P1P2FSI0*0-0	po:verb ts:indicative_present st:fènder
+fèndoe/a0a1a2I1*0-0	po:verb ts:indicative_present is:interrogative st:fènder
+fèxo/A1FS*0-0	po:verb ts:participle_perfect_strong st:fènder
+fèndar/b0b1b2P0P1P2*0-0	po:verb ts:infinitive_simple
+ofènder/b0b1b2P0P1P2	po:verb ts:infinitive_simple
+ofèndre	po:verb ts:infinitive_simple st:ofènder
+ofèndo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:ofènder
+ofèndoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:ofènder
+ofèxo/A1FS	po:verb ts:participle_perfect_strong st:ofènder
+ofèndar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 fenestrar/a0a1a2P0P1P2-0	po:verb ts:infinitive_simple
 fenèstro/a0a1a2P0P1P2I0-0	po:verb ts:indicative_present st:fenestrar
 fenèstroe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:fenestrar
@@ -13328,6 +13340,12 @@ oblíteroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:obliterar
 oblitarar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 oblítaro/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:oblitarar
 oblítaroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:oblitarar
+ocalar/a0a1P0P1	po:verb ts:infinitive_simple
+ocalo/a0a1P0P1FSI0	po:verb ts:indicative_present st:ocalar
+ocaloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:ocalar
+ocaƚar/a0a2P0P2	po:verb ts:infinitive_simple
+ocaƚo/a0a2P0P2I0	po:verb ts:indicative_present st:ocaƚar
+ocaƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:ocaƚar
 ocar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 òco/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:ocar
 òcoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:ocar
@@ -13451,6 +13469,9 @@ inóltroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inoltrar
 oltrigar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 oltrigo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:oltrigar
 oltrígoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:oltrigar
+olvar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+olvo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:olvar
+ólvoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:olvar
 omologar/a0a1P0P1	po:verb ts:infinitive_simple
 omòlogo/a0a1P0P1FSI0	po:verb ts:indicative_present st:omologar
 omòlogoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:omologar
@@ -13478,6 +13499,12 @@ onbréđoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:onbređar
 onbrexar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 onbrexo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:onbrexar
 onbréxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:onbrexar
+onbrejar/a0a1P0P1	po:verb ts:infinitive_simple
+onbrejo/a0a1P0P1FSI0	po:verb ts:indicative_present st:onbrejar
+onbréjoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:onbrejar
+onbreɉar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+onbreɉo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:onbreɉar
+onbréɉoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:onbreɉar
 onbrelar/a0a1P0P1	po:verb ts:infinitive_simple
 onbrèlo/a0a1P0P1FSI0	po:verb ts:indicative_present st:onbrelar
 onbrèloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:onbrelar
@@ -29569,6 +29596,7 @@ niŧiol/M0U0mf	po:noun is:singular_masculine
 niŧiòl/M0U0ět	po:noun is:singular_masculine
 nogèr/M0V0	po:noun is:singular_masculine
 nogèra/F0V0	po:noun is:singular_femenine
+noma/F0	po:adverb
 nomài	po:adverb
 nomà	po:adverb
 nomenaja/F0TE	po:noun is:singular_femenine
@@ -29597,7 +29625,6 @@ noxèl/M0U0	po:noun is:singular_masculine
 noxi	po:noun is:plural_femenine
 nónsol/M0U1TEmf	po:noun is:singular_masculine
 nónŧol/M0U1mf	po:noun is:singular_masculine
-noma/F0	po:adverb
 nòme/M0	po:noun is:singular_masculine
 nòra/F0	po:noun is:singular_femenine
 nòrma/F0	po:noun is:singular_femenine
@@ -29630,7 +29657,8 @@ núvola/F0TE	po:noun is:singular_femenine
 obietivo/A1FS	po:noun is:singular_masculine
 obietivo/A1FSWa	po:adjective is:singular_masculine
 obligatòrio/A1	po:adjective is:singular_masculine
-ocal/F0TFU0ět	po:noun is:singular_masculine
+ocal/F0U0ětǒn	po:noun is:singular_masculine
+ocaƚe/F0ěŧǒÑ	po:noun is:singular_masculine
 ojetivo/A1FSWa	po:adjective is:singular_masculine
 ojèto/M0FS	po:noun is:singular_masculine
 oɉetivo/A1FSWa	po:adjective is:singular_masculine
@@ -56965,11 +56993,18 @@ nisolèra/F0V0	po:noun is:singular_femenine
 nisoƚèr/M0V1	po:noun is:singular_masculine
 nisoƚèra/F0V1	po:noun is:singular_femenine
 nonbrígol/M0U1TEmf	po:noun is:singular_masculine
+núgola/F0TE	po:noun is:singular_femenine
 ñañ/A1	po:adjective is:singular_masculine
 ñèko/A1FS	po:adjective is:singular_masculine
 ñèxa/F0	po:noun is:singular_femenine
 ñòla/F0TE	po:noun is:singular_femenine
 ñuko/A1FS	po:adjective is:singular_masculine
+ofèla/F0v0	po:noun is:singular_femenine
+ofèƚa/F0v0	po:noun is:singular_femenine
+okada/F0Y0Y1	po:noun is:singular_femenine
+olío/A1v0	po:noun is:singular_masculine
+oƚío/A1v0	po:noun is:singular_masculine
+onbrelon/F0TEU0mf	po:noun is:singular_masculine
 senbaleto/M0FSTEmf	po:noun is:singular_masculine
 serúmola/F0TEvŧ	po:noun is:singular_femenine
 siéoƚo/M0mf	po:noun is:singular_masculine
@@ -56987,9 +57022,8 @@ vertor/F0mf	po:noun is:singular_masculine
 vincòstro/M0	po:noun is:singular_masculine
 xdentada/F0Y0-0	po:adjective is:singular_femenine
 xdentado/M0FSY0-0	po:adjective is:singular_masculine
-núgola/F0TE	po:noun is:singular_femenine
 
 
-/ 205
+/ 207
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
