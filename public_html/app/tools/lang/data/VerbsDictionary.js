@@ -4234,6 +4234,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "muf",			"",			4,	3,	"a",	"1867",			"",
 "muf",			"in",			4,	3,	"a",	"1562",			"",
 "mufar",			"x",			1,	1,	"a",	"1877",			"Furar.",
+"mug",			"",			1,	1,	"a",	"1900",			"",
 "muɉ",			"",			1,	1,	"a",	"1854",			"Voxe ke fa la muka.",
 "mul",			"",			1,	1,	"a",	"1854",			"Voxe ke fa la muka.",
 "mul",			"in",			1,	1,	"a",	"1867",			"Inmusar.",
