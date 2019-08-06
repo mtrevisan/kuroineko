@@ -12732,12 +12732,12 @@ mòver/b0b1b2P0P1P2*0.0	po:verb ts:infinitive_simple
 moverò/b0b1b2I0*0.0r0	po:verb ts:indicative_future st:mòver
 mòvo/a0a1a2P0P1P2FSI0*0.0	po:verb ts:indicative_present st:mòver
 mòvoe/a0a1a2I1*0.0	po:verb ts:indicative_present is:interrogative st:mòver
-móver/b0b1b2P0P1P2*0.0	po:verb ts:infinitive_simple
-movo/a0a1a2P0P1P2FSI0*0.0	po:verb ts:indicative_present st:mòver
-móvoe/a0a1a2I1*0.0	po:verb ts:indicative_present is:interrogative st:mòver
 mòvar/b0b1b2P0P1P2*0.0	po:verb ts:infinitive_simple
-móvar/b0b1b2P0P1P2*0.0	po:verb ts:infinitive_simple
 movarò/b0b1b2I0*0.0	po:verb ts:indicative_future st:mòvar
+móver/b0b1b2P0P1P2*0.0	po:verb ts:infinitive_simple
+movo/a0a1a2P0P1P2FSI0*0.0	po:verb ts:indicative_present st:móver
+móvoe/a0a1a2I1*0.0	po:verb ts:indicative_present is:interrogative st:móver
+móvar/b0b1b2P0P1P2*0.0	po:verb ts:infinitive_simple
 komòver/b0b1b2P0P1P2*0	po:verb ts:infinitive_simple
 komoverò/b0b1b2I0*0	po:verb ts:indicative_future st:komòver
 komòvo/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:komòver
@@ -12745,6 +12745,11 @@ komòvoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:komòver
 komòso/A1FS*0	po:verb ts:participle_perfect_strong st:komòver
 komòvar/b0b1b2P0P1P2*0	po:verb ts:infinitive_simple
 komovarò/b0b1b2I0*0	po:verb ts:indicative_future st:komòvar
+komóver/b0b1b2P0P1P2*0	po:verb ts:infinitive_simple
+komovo/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:komóver
+komóvoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:komóver
+komoso/A1FS*0	po:verb ts:participle_perfect_strong st:komóver
+komóvar/b0b1b2P0P1P2*0	po:verb ts:infinitive_simple
 promòver/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 promoverò/b0b1b2I0	po:verb ts:indicative_future st:promòver
 promòvo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:promòver
@@ -12752,6 +12757,11 @@ promòvoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:promòver
 promòso/A1FS	po:verb ts:participle_perfect_strong st:promòver
 promòvar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 promovarò/b0b1b2I0	po:verb ts:indicative_future st:promòvar
+promóver/b0b1b2P0P1P2*0	po:verb ts:infinitive_simple
+promovo/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:komóver
+promóvoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:komóver
+promoso/A1FS*0	po:verb ts:participle_perfect_strong st:komóver
+promóvar/b0b1b2P0P1P2*0	po:verb ts:infinitive_simple
 muar/a0a1a2P0P1P2^1^6	po:verb ts:infinitive_simple
 muo/a0a1a2P0P1P2I0^1^6	po:verb ts:indicative_present st:muar
 múoe/a0a1a2I1^1^6	po:verb ts:indicative_present is:interrogative st:muar
@@ -34160,8 +34170,8 @@ monka/F0ět	po:adjective is:singular_femenine
 monko/M0FSět	po:adjective is:singular_masculine
 monokòrdo/M0FS	po:noun is:singular_masculine
 montexèl/M0U0TE	po:noun is:singular_masculine
-moracòto/A1FS	po:noun is:singular_masculine
 moracòto/A1FS	po:adjective is:singular_masculine
+moracòto/A1FS	po:noun is:singular_masculine
 morbieŧo/M0FSTEmf	po:noun is:singular_masculine
 morijola/F0TE	po:noun is:singular_femenine
 moriɉola/F0TE	po:noun is:singular_femenine
@@ -47057,10 +47067,10 @@ mòrbido/A1FS	po:adjective is:singular_masculine
 mòrbo/M0M1	po:noun is:singular_masculine
 mòrmora/F0	po:noun is:singular_femenine
 mòrsa/F0	po:noun is:singular_femenine
-mòrta/F0*0	po:noun is:singular_femenine
-mòrto/M0FS*0	po:noun is:singular_masculine
 mòrta/F0*0	po:adjective is:singular_femenine
+mòrta/F0*0	po:noun is:singular_femenine
 mòrto/M0FS*0	po:adjective is:singular_masculine
+mòrto/M0FS*0	po:noun is:singular_masculine
 mòsa–fadige	po:noun
 mòto/A1FS	po:noun is:singular_masculine
 mòŧa–fadige	po:noun
@@ -52098,7 +52108,8 @@ moraƚità/+0	po:noun is:femenine
 moreja/F0TE	po:noun is:singular_femenine
 mortalità	po:noun is:femenine
 mortaƚità	po:noun is:femenine
-moskada/F0Y0Y1	po:adjective is:singular_femenine
+moskada/F0Y0	po:adjective is:singular_femenine
+moskado/M0FSY0	po:adjective is:singular_masculine
 mostaco/M0FSětǒN	po:noun is:singular_masculine
 moxegaño/M0FS	po:noun is:singular_masculine
 moxegòto/M0FS	po:noun is:singular_masculine
@@ -56903,7 +56914,25 @@ moƚo/M0ěŧǒñ	po:noun is:singular_masculine
 moƚo/M0ěŧ	po:adjective is:singular_masculine
 monbrígol/M0U1TEmf	po:noun is:singular_masculine
 mondúgol/M0U1TEmf	po:noun is:singular_masculine
+montara/F0	po:noun is:singular_femenine
+morécola/F0TE	po:noun is:singular_femenine
+morta/F0*0	po:adjective is:singular_femenine
+morta/F0*0	po:noun is:singular_femenine
+morto/M0FS*0	po:adjective is:singular_masculine
+morto/M0FS*0	po:noun is:singular_masculine
+moskarin/M0	po:noun is:singular_masculine
+mosketada/F0Y0	po:adjective is:singular_femenine
+mosketado/M0FSY0	po:adjective is:singular_masculine
+mostarola/F0V0	po:noun is:singular_femenine
+mostaroƚa/F0V1	po:noun is:singular_femenine
+mostasada/F0Y0Y1	po:noun is:singular_femenine
+mostaŧada/F0Y0Y1	po:noun is:singular_femenine
+motafaso/FS	po:adverb
+motafaŧo/FS	po:adverb
 mòdo/M0	po:noun is:singular_masculine
+mòrbio/A1	po:adjective is:singular_masculine
+mòxa/F0	po:noun is:singular_femenine
+muco/A1FS	po:adjective is:singular_masculine
 nonbrígol/M0U1TEmf	po:noun is:singular_masculine
 ñañ/A1	po:adjective is:singular_masculine
 ñèko/A1FS	po:adjective is:singular_masculine
@@ -56927,16 +56956,8 @@ vertor/F0mf	po:noun is:singular_masculine
 vincòstro/M0	po:noun is:singular_masculine
 xdentada/F0Y0-0	po:adjective is:singular_femenine
 xdentado/M0FSY0-0	po:adjective is:singular_masculine
-montara/F0	po:noun is:singular_femenine
-mòrbio/A1FS	po:adjective is:singular_masculine
-morécola/F0TE	po:noun is:singular_femenine
-morta/F0*0	po:noun is:singular_femenine
-morto/M0FS*0	po:noun is:singular_masculine
-morta/F0*0	po:adjective is:singular_femenine
-morto/M0FS*0	po:adjective is:singular_masculine
-mòxa/F0	po:noun is:singular_femenine
 
 
-/ 199
+/ 200
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
