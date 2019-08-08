@@ -5072,6 +5072,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pinc",			"",			1,	1,	"a",	"1980",			"",
 "pindol",		"",			1,	1,	"a",	"1854",			"Penxolar, condolar, pénder.",
 "pin",			"in",			4,	3,	"a",	"1854",			"",
+"pingol",		"",			1,	1,	"a",	"1900",			"Pindolar.",
 "pinku",			"pro",		1,	1,	"a",	"1896",			"",
 "pinŧ",			"",			1,	1,	"a",	"1775",			"",
 "piñat",			"",			1,	3,	"g",	"",				"",
