@@ -5013,6 +5013,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "piànđ",			"rin",		3,	2,	"g",	"",				"",
 "pianđot",		"",			1,	5,	"g",	"1775",			"Piañukolar.",
 "pianiđ",		"",			1,	4,	"a",	"1854",			"Gualivar.",
+"pianton",		"",			1,	5,	"a",	"1900",			"",
 "piastr",		"in",			1,	2,	"g",	"1900",			"",
 "piatol",		"",			1,	2,	"g",	"1847",			"Andar lento, stiracar.",
 "piatoleđ",		"s",			1,	6,	"a",	"1775",			"",
