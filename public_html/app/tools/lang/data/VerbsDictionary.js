@@ -4837,6 +4837,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "peliŧ",			"in",			1,	3,	"a",	"1775",			"",
 "peltr",			"in",			4,	5,	"a",	"1900",			"",
 "pelug",			"in",			1,	3,	"a",	"1854",			"Inpelar.",
+"peluk",			"",			1,	3,	"a",	"1900",			"",
 "peluk",			"in",			1,	3,	"a",	"1775",			"Inpelar.",
 "peluk",			"s",			1,	3,	"a",	"1775",			"",
 "pelum",			"in",			1,	3,	"a",	"1852",			"Sporkar de pel.",
