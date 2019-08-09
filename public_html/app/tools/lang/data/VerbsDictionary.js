@@ -5469,6 +5469,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "rafes",			"",			1,	3,	"a",	"1896",			"Restorar.",
 "rag",			"",			1,	1,	"g",	"1854",			"Saepolar, saetolar.",
 "ragaŧ",			"",			1,	3,	"g",	"1796",			"",
+"rajon",			"",			1,	3,	"a",	"1900",			"Rađonar.",
 "rakol",			"",			1,	1,	"g",	"",				"Menar la rakola.",
 "rakord",		"",			1,	3,	"g",	"",				"Takar ko un rakordo.",
 "raix",			"",			1,	2,	"a",	"1775",			"",
