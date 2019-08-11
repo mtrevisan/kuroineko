@@ -469,9 +469,9 @@ arđiñar/a0a1P0P1	po:verb ts:infinitive_simple
 arxiñar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 àrxiño/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:arxiñar
 àrxiñoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:arxiñar
-arenar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-areno/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:arenar
-arénoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:arenar
+renar/a0a1a2P0P1P2@0	po:verb ts:infinitive_simple
+reno/a0a1a2P0P1P2FSI0@0	po:verb ts:indicative_present st:renar
+rénoe/a0a1a2I1@0	po:verb ts:indicative_present is:interrogative st:renar
 subarendar/a0a1a2P0P1P2r2r3V0	po:verb ts:infinitive_simple
 subarendo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:subarendar
 subaréndoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:subarendar
@@ -11344,12 +11344,12 @@ lúngoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:lungar
 xlupar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 xlupo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xlupar
 xlúpoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xlupar
-lusar/a0a1P0P1	po:verb ts:infinitive_simple
-luso/a0a1P0P1FSI0	po:verb ts:indicative_present st:lusar
-lúsoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:lusar
-ƚusar/a0a2P0P2	po:verb ts:infinitive_simple
-ƚuso/a0a2P0P2I0	po:verb ts:indicative_present st:ƚusar
-ƚúsoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:ƚusar
+lusar/a0a1P0P1.0	po:verb ts:infinitive_simple
+luso/a0a1P0P1FSI0.0	po:verb ts:indicative_present st:lusar
+lúsoe/a0a1I1.0	po:verb ts:indicative_present is:interrogative st:lusar
+ƚusar/a0a2P0P2.0	po:verb ts:infinitive_simple
+ƚuso/a0a2P0P2I0.0	po:verb ts:indicative_present st:ƚusar
+ƚúsoe/a0a2I1.0	po:verb ts:indicative_present is:interrogative st:ƚusar
 lustrar/a0a1P0P1V0	po:verb ts:infinitive_simple
 lustro/a0a1P0P1I0	po:verb ts:indicative_present st:lustrar
 lústroe/a0a1I1	po:verb ts:indicative_present is:interrogative st:lustrar
@@ -12499,9 +12499,9 @@ mòɉar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 moɉarò/b0b1b2I0	po:verb ts:indicative_future st:mòɉar
 mojar/a0a1a2P0P1P2+0*0r0	po:verb ts:infinitive_simple
 moɉar/a0a1a2P0P1P2+0*0r0	po:verb ts:infinitive_simple
-mokar/a0a1a2P0P1P2*0r5V0	po:verb ts:infinitive_simple
-mòko/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:mokar
-mòkoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:mokar
+mokar/a0a1a2P0P1P2.0*0r5V0	po:verb ts:infinitive_simple
+mòko/a0a1a2P0P1P2FSI0.0*0	po:verb ts:indicative_present st:mokar
+mòkoe/a0a1a2I1.0*0	po:verb ts:indicative_present is:interrogative st:mokar
 mokajar/a0a1a2P0P1P2*0+0	po:verb ts:infinitive_simple
 mokajo/a0a1a2P0P1P2FSI0*0+0	po:verb ts:indicative_present st:mokajar
 mokàjoe/a0a1a2I1*0+0	po:verb ts:indicative_present is:interrogative st:mokajar
@@ -16989,6 +16989,9 @@ rexistrato/A1FS	po:verb ts:participle_perfect_strong st:rexistrar
 rexonar/a0a1a2P0P1P2vŧ	po:verb ts:infinitive_simple
 rexono/a0a1a2P0P1P2FSI0vŧ	po:verb ts:indicative_present st:rexonar
 rexónoe/a0a1a2I1vŧ	po:verb ts:indicative_present is:interrogative st:rexonar
+riar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+rio/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:riar
+ríoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:riar
 ribelar/a0a1P0P1	po:verb ts:infinitive_simple
 ribèlo/a0a1P0P1FSI0	po:verb ts:indicative_present st:ribelar
 ribèloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:ribelar
@@ -25148,9 +25151,13 @@ Rebeka/Z0	po:proper_noun is:singular_femenine
 Reinalda/Z0	po:proper_noun is:singular_femenine
 Reinaldo/FSZ0	po:proper_noun is:singular_masculine
 Rensa/Z0	po:proper_noun is:singular_femenine
+Rènsa/Z0	po:proper_noun is:singular_femenine
 Renso/FSZ0	po:proper_noun is:singular_masculine
+Rènso/FSZ0	po:proper_noun is:singular_masculine
 Renŧa/Z0	po:proper_noun is:singular_femenine
+Rènŧa/Z0	po:proper_noun is:singular_femenine
 Renŧo/FSZ0	po:proper_noun is:singular_masculine
+Rènŧo/FSZ0	po:proper_noun is:singular_masculine
 Rexi/Z0	po:proper_noun is:singular_femenine
 Riga/Z0	po:proper_noun is:singular_femenine
 Rigo/FSZ0	po:proper_noun is:singular_masculine
@@ -35189,7 +35196,7 @@ retenŧion/F0TEU0mf	po:noun is:singular_femenine
 retrocesion/F0U0mf	po:noun is:singular_femenine
 reŧevuda/F0Y0	po:noun is:singular_femenine
 reŧipilia/F0	po:noun is:singular_femenine
-reve	po:noun is:singular_femenine
+reve/M0	po:noun is:singular_masculine
 revixion/F0U0mf	po:noun is:singular_femenine
 revoltolon/F0TEU0vŧmf	po:noun is:singular_masculine
 revoltolon/vŧ	po:adverb
@@ -39798,7 +39805,7 @@ raeco/M0FS	po:noun is:singular_masculine
 ramin/M0	po:noun is:singular_masculine
 ramina/F0ět	po:noun is:singular_femenine
 rengaja/F0TEvŧ	po:noun is:singular_femenine
-reska/F0	po:noun is:singular_femenine
+rèska/F0	po:noun is:singular_femenine
 revendarol/M0U0V0mf	po:noun is:singular_masculine
 revendarola/F0V0	po:noun is:singular_femenine
 revendaroƚa/F0V1	po:noun is:singular_femenine
@@ -49890,7 +49897,7 @@ tajapié/F0	po:noun is:masculine
 tajapiè/F0	po:noun is:masculine
 tajapíe	po:noun is:masculine
 tajarola/F0TE	po:noun is:singular_femenine
-tajo/M0FS+0.0ětǒn	po:noun is:singular_masculine
+tajo/M0FS-0+0.0ětǒn	po:noun is:singular_masculine
 taɉabraŧo/M0FSTE	po:noun is:singular_masculine
 taɉadin/A2	po:adjective is:singular_masculine
 taɉagrixiòla/F0TE	po:noun is:singular_femenine
@@ -49902,7 +49909,7 @@ taɉapié/F0	po:noun is:masculine
 taɉapiè/F0	po:noun is:masculine
 taɉapíe	po:noun is:masculine
 taɉarola/F0TE	po:noun is:singular_femenine
-taɉo/M0FS+0.0ětǒn	po:noun is:singular_masculine
+taɉo/M0FS-0+0.0ětǒn	po:noun is:singular_masculine
 takabega/F0	po:adjective is:singular
 takabega/F0	po:noun is:singular
 takabèga/F0	po:adjective is:singular
@@ -52503,8 +52510,8 @@ resevidora/F0V0	po:noun is:singular_femenine
 resevitoría/F0	po:noun is:singular_femenine
 resèso/M0FS	po:noun is:singular_masculine
 resipiente/M0FSmf	po:noun is:singular
-restelèra/F0vŧ	po:noun is:singular_femenine
-resteƚèra/F0vŧ	po:noun is:singular_femenine
+restelèra/F0V0vŧ	po:noun is:singular_femenine
+resteƚèra/F0V1vŧ	po:noun is:singular_femenine
 reteño/M0FSvŧmf	po:noun is:singular_masculine
 reŧeidor/M0V0mf	po:noun is:singular_masculine
 reŧeidora/F0V0	po:noun is:singular_femenine
@@ -54156,7 +54163,6 @@ cicoƚò	po:noun is:masculine
 cixbo/A1	po:noun is:singular_masculine
 deskantado/M0FSY0	po:adjective is:singular_masculine
 deskaparada/F0Y0Y1	po:adjective is:singular_femenine
-detajo/M0TE	po:noun is:singular_masculine
 dexbonbolada/F0Y0	po:adjective is:singular_femenine
 dexbonbolado/M0FSY0	po:adjective is:singular_masculine
 dexbonboƚada/F0Y0	po:adjective is:singular_femenine
@@ -57249,8 +57255,15 @@ xdentada/F0Y0-0	po:adjective is:singular_femenine
 xdentado/M0FSY0-0	po:adjective is:singular_masculine
 xgrafapolènta/F0	po:noun is:singular_masculine
 xgrafapoƚènta/F0	po:noun is:singular_masculine
+remengiŧia/F0TE	po:noun is:singular_femenine
+rengala/F0TE	po:noun is:singular_femenine
+resker/M0	po:noun is:singular_masculine
+resènte/M0FSvŧ	po:adjective is:singular
+reŧènte/M0FSvŧ	po:adjective is:singular
+retrè/vŧ	po:noun is:masculine
+refe/M0	po:noun is:singular_masculine
 
 
-/ 237
+/ 239
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
