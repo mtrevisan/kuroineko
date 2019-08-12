@@ -5698,6 +5698,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "rođ",			"",			1,	1,	"a",	"1847",			"",
 "rođ",			"de",			1,	1,	"a",	"1829",			"Dexgrosar.",
 "roxeg",			"",			1,	1,	"g",	"1415",			"",
+"roxol",			"",			1,	1,	"g",	"1900",			"",
 "ru",				"",			1,	1,	"a",	"1980",			"Rivar.",
 "rubrik",		"",			1,	1,	"a",	"1829",			"",
 "ruđ",			"",			1,	1,	"a",	"1775",			"Ringiar de i kani, frular de i oxei, far rumore, rinproverar.",
