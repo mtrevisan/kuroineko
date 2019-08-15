@@ -1246,6 +1246,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "đaltron",		"",			1,	5,	"a",	"1854",			"Inbratar.",
 "đaltron",		"in",			1,	5,	"a",	"1867",			"",
 "đanđ",			"in",			4,	4,	"a",	"1829",			"Aviar.",
+"đanpon",		"",			1,	4,	"a",	"1900",			"",
 "đavaj",			"",			1,	3,	"g",	"",				"Baratar, inbrojar.",
 "đavaɉ",			"",			1,	3,	"g",	"1775",			"Baratar, inbrojar.",
 "đan",			"",			1,	1,	"g",	"1829",			"Far na komèdia bruta.",
