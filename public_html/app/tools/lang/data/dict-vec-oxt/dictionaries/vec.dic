@@ -1969,9 +1969,9 @@ xbókoe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:xbokar
 xbokalar/a0a1P0P1	po:verb ts:infinitive_simple
 xbokalo/a0a1P0P1FSI0	po:verb ts:indicative_present st:xbokalar
 xbokàloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:xbokalar
-xbokalar/a0a2P0P2	po:verb ts:infinitive_simple
-xbokaƚo/a0a2P0P2I0	po:verb ts:indicative_present st:xbokalar
-xbokàƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:xbokalar
+xbokaƚar/a0a2P0P2	po:verb ts:infinitive_simple
+xbokaƚo/a0a2P0P2I0	po:verb ts:indicative_present st:xbokaƚar
+xbokàƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:xbokaƚar
 bokiđar/a0a1P0P1	po:verb ts:infinitive_simple
 bokiđo/a0a1P0P1FSI0	po:verb ts:indicative_present st:bokiđar
 bokíđoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:bokiđar
@@ -2296,9 +2296,9 @@ bràgoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:bragolar
 bragoƚar/a0a2P0P2	po:verb ts:infinitive_simple
 bràgoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:bragoƚar
 bràgoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:bragoƚar
-bragonar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-bragono/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:bragonar
-bragónoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:bragonar
+bragonar/a0a1a2P0P1P2*0	po:verb ts:infinitive_simple
+bragono/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:bragonar
+bragónoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:bragonar
 bragosar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 bragòso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:bragosar
 bragòsoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:bragosar
@@ -36910,7 +36910,7 @@ xbrajon/A2U0mf	po:adjective is:singular_masculine
 xbraɉon/A2U0mf	po:adjective is:singular_masculine
 xbratakàmara/F0	po:noun is:singular
 xbrefèl/M0U0TE	po:noun is:singular_masculine
-xbrèga/F0ět	po:noun is:singular_femenine
+xbrèga/F0	po:noun is:singular_femenine
 xbrindèl/M0U0TE	po:noun is:singular_masculine
 xbrindoloxo/A1FSmf	po:noun is:singular_masculine
 xbrindoloxo/A1FSWamf	po:adjective is:singular_masculine
@@ -40675,7 +40675,6 @@ xbolŧiròto/M0FS	po:noun is:singular_masculine
 xbriko/A1FS	po:adjective is:singular_masculine
 xbriko/A1FS	po:noun is:singular_masculine
 xbrin/M0ǒn	po:noun is:singular_masculine
-xbrision/F0U0mf	po:noun is:singular_masculine
 xbrodolon/A2U0mf	po:noun is:singular_masculine
 xbrodoƚon/A2mf	po:noun is:singular_masculine
 xbruxegin/M0	po:noun is:singular_masculine
@@ -50716,7 +50715,7 @@ xbregonŧin/M0TE	po:noun is:singular_masculine
 xbrenadòna/F0	po:adjective is:singular_femenine
 xbrèga–mandati	po:adjective
 xbrèga–mandati	po:noun
-xbrègo/M0FSět	po:noun is:singular_masculine
+xbrègo/M0FS	po:noun is:singular_masculine
 xbrigativo/A1FSWa	po:adjective is:singular_masculine
 xbrikeŧo/M0FSTEmf	po:noun is:singular_masculine
 xbrindàkol/M0U1TEmf	po:noun is:singular_masculine
@@ -57204,13 +57203,9 @@ xbièso/A1FS	po:adjective is:singular_masculine
 xbièso/FS	po:adverb
 xbindada/F0Y0	po:adjective is:singular_femenine
 xbindado/M0FSY0	po:adjective is:singular_masculine
-xdentada/F0Y0-0	po:adjective is:singular_femenine
-xdentado/M0FSY0-0	po:adjective is:singular_masculine
-xgrafapolènta/F0	po:noun is:singular_masculine
-xgrafapoƚènta/F0	po:noun is:singular_masculine
-xbiògol/M0U1TEmf	po:noun is:singular_masculine
 xbionada/F0Y0	po:adjective is:singular_femenine
 xbionado/M0FSY0	po:adjective is:singular_masculine
+xbiògol/M0U1TEmf	po:noun is:singular_masculine
 xbisada/F0Y0	po:adjective is:singular_femenine
 xbisado/M0FSY0	po:adjective is:singular_masculine
 xbixegolin/M0TE	po:noun is:singular_masculine
@@ -57219,8 +57214,24 @@ xbixegon/A2U0mf	po:noun is:singular_masculine
 xbocon/F0U0mf	po:noun is:singular_masculine
 xbolŧin/M0TE	po:noun is:singular_masculine
 xbòsega/F0	po:noun is:singular_femenine
+xbrega–mandati	po:adjective
+xbrega–mandati	po:noun
+xbrega/F0ět	po:noun is:singular_femenine
+xbrego/M0FSětǒN	po:noun is:singular_masculine
+xbrisiada/F0Y0	po:noun is:singular_femenine
+xbrisiado/M0FSY0	po:noun is:singular_masculine
+xbrisiarola/F0V0	po:noun is:singular_femenine
+xbrisiaroƚa/F0V1	po:noun is:singular_femenine
+xbrisio/M0ǒn	po:noun is:singular_masculine
+xbrisioxo/A1FSmf	po:noun is:singular_masculine
+xbrisioxo/A1FSWamf	po:adjective is:singular_masculine
+xbròdola/F0TE	po:noun is:singular_femenine
+xdentada/F0Y0-0	po:adjective is:singular_femenine
+xdentado/M0FSY0-0	po:adjective is:singular_masculine
+xgrafapolènta/F0	po:noun is:singular_masculine
+xgrafapoƚènta/F0	po:noun is:singular_masculine
 
 
-/ 251
+/ 252
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ

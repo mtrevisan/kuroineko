@@ -759,6 +759,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "braget",		"in",			1,	4,	"a",	"1867",			"",
 "bragol",		"",			1,	2,	"g",	"1851",			"Bransikar, tor in man.",
 "bragon",		"",			1,	4,	"a",	"1821",			"",
+"bragon",		"x",			1,	4,	"a",	"1900",			"Sparoneđar.",
 "bragoŧ",		"",			1,	4,	"a",	"1829",			"Kondúxer el bragoŧo.",
 "braj",			"x",			1,	2,	"g",	"1560",			"Ŧigar, kantar, xgridar.",
 "bram",			"",			1,	2,	"g",	"1980",			"",
