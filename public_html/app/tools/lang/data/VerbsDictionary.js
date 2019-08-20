@@ -6101,6 +6101,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "skank",			"",			4,	5,	"a",	"1896",			"Skeletrir.",
 "skaol",			"",			1,	2,	"g",	"1855",			"Separar el gran, la kastaña, la noxe, evd da la lopa, riŧo, xgusa, evd (el skaolo el xe ʼl enbrion de na kastaña).",
 "skapol",		"",			1,	2,	"g",	"1775",			"Vèñer fora par poko.",
+"skapul",		"",			1,	2,	"g",	"1900",			"Skapolar.",
 "skar",			"",			1,	2,	"g",	"",				"",
 "skaraboc",		"",			1,	6,	"g",	"1867",			"",
 "skarabot",		"",			1,	6,	"a",	"1980",			"(bixiak) gorgojar.",
