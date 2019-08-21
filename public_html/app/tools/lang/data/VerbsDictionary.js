@@ -6153,6 +6153,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "skit",			"",			1,	2,	"a",	"1775",			"",
 "skitol",		"",			1,	2,	"a",	"1775",			"",
 "skiŧ",			"",			1,	2,	"a",	"1810",			"",
+"skiŧañ",		"",			1,	4,	"a",	"1900",			"Skiŧar.",
 "skiŧet",		"",			1,	4,	"a",	"1854",			"",
 "skiv",			"",			1,	2,	"a",	"1775",			"",
 "sko",			"",			1,	2,	"a",	"1519",			"",
