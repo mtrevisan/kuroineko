@@ -5970,6 +5970,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "senbr",			"in",			1,	1,	"a",	"1560",			"Méter insieme, meskolar.",
 "seneɉ",			"",			1,	3,	"a",	"1867",			"Atejar, ɉestikolar.",
 "senet",			"in",			4,	5,	"a",	"1775",			"Intristir.",
+"sengal",		"",			1,	1,	"a",	"1900",			"Insengalar.",
 "sengal",		"in",			1,	1,	"a",	"1900",			"Insordir, far vèñer mal de tèsta a un ko le càkole.",
 "senpi",			"",			1,	1,	"a",	"1867",			"",
 "senpi",			"in",			1,	1,	"a",	"1775",			"Rénder sémo.",
