@@ -18868,7 +18868,7 @@ skrioltolar/a0a1P0P1	po:verb ts:infinitive_simple
 skrioltolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:skrioltolar
 skrioltoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:skrioltolar
 skrioltoƚar/a0a2P0P2	po:verb ts:infinitive_simple
-skrioltoƚo/a0a2P0P2FSI0	po:verb ts:indicative_present st:skrioltoƚar
+skrioltoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:skrioltoƚar
 skrioltoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:skrioltoƚar
 skriturar/a0a1a2P0P1P2r2r3	po:verb ts:infinitive_simple
 skrituro/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:skriturar
@@ -18930,7 +18930,7 @@ skrivoltolar/a0a1P0P1	po:verb ts:infinitive_simple
 skrivoltolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:skrivoltolar
 skrivoltoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:skrivoltolar
 skrivoltoƚar/a0a2P0P2	po:verb ts:infinitive_simple
-skrivoltoƚo/a0a2P0P2FSI0	po:verb ts:indicative_present st:skrivoltoƚar
+skrivoltoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:skrivoltoƚar
 skrivoltoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:skrivoltoƚar
 skrofolar/a0a1P0P1	po:verb ts:infinitive_simple
 skròfolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:skrofolar
@@ -30879,6 +30879,8 @@ skoasa/F0v0ětǐn	po:noun is:singular_femenine
 skoaŧa/F0v0ětǐn	po:noun is:singular_femenine
 skodèla/F0ět	po:noun is:singular_femenine
 skodèƚa/F0ěŧ	po:noun is:singular_femenine
+skoèla/F0ět	po:noun is:singular_femenine
+skoèƚa/F0ěŧ	po:noun is:singular_femenine
 skoinŧa/F0TE	po:noun is:singular_femenine
 skol/M0U0ětmf	po:noun is:singular_masculine
 skola/F0ět	po:noun is:singular_femenine
@@ -49132,12 +49134,12 @@ skritor/F0mf	po:noun is:singular_masculine
 skritoreto/A1FSmf	po:noun is:singular_masculine
 skritural/F0TFU0	po:noun is:singular_masculine
 skriŧo/M0FSTE	po:noun is:singular_masculine
+skrokon	po:adverb
 skróola/A2	po:noun is:singular_femenine
 skróoƚa/A2	po:noun is:singular_femenine
 skròkan/M0U1	po:noun is:singular_masculine
 skròka	po:adverb
 skròko	po:adverb
-skrokon	po:adverb
 skrupoloxo/A1FSmf	po:noun is:singular_masculine
 skrupoloxo/A1FSWamf	po:adjective is:singular_masculine
 skrupoƚoxo/A1mf	po:noun is:singular_masculine
@@ -56043,8 +56045,10 @@ skarfaròto/M0FS	po:noun is:singular_masculine
 skartaŧa/F0TE	po:noun is:singular_femenine
 skasakódol/M0U1TEmf	po:noun is:singular_masculine
 skoaŧon/F0TEU0mf	po:noun is:singular_masculine
-skodelòto/M0FS	po:noun is:singular_masculine
-skodeƚòto/M0	po:noun is:singular_masculine
+skodelòto/M0FSǐnǒn	po:noun is:singular_masculine
+skodeƚòto/M0ǐnǒñ	po:noun is:singular_masculine
+skoelòto/M0FSǐnǒn	po:noun is:singular_masculine
+skoeƚòto/M0ǐnǒñ	po:noun is:singular_masculine
 skoeto/M0FSmf	po:noun is:singular_masculine
 skomiato/M0FS	po:noun is:singular_masculine
 skomunegada/F0Y0	po:adjective is:singular_femenine
@@ -57177,6 +57181,16 @@ skocon/F0U0mf	po:noun is:singular_masculine
 skoolada/F0Y0Y1	po:noun is:singular_femenine
 skooƚada/F0Y0Y1	po:noun is:singular_femenine
 skornacada/F0Y0Y1	po:noun is:singular_femenine
+skravaso/M0FS	po:noun is:singular_masculine
+skricada/F0Y0Y1	po:noun is:singular_femenine
+skrico/A1	po:adjective is:singular_masculine
+skrico/A1	po:noun is:singular_masculine
+skrimia/F0	po:noun is:singular_femenine
+skrioltolon/F0TEU0mf	po:noun is:singular_masculine
+skriòltola/F0TE	po:noun is:singular_femenine
+skrivoltolon/F0TEU0mf	po:noun is:singular_masculine
+skrivòltola/F0TE	po:noun is:singular_femenine
+skròso/M0FS	po:noun is:singular_masculine
 skunida/F0Y0-0	po:adjective is:singular_femenine
 skunido/M0FSY0-0	po:adjective is:singular_masculine
 sotomaistro/A1	po:noun is:singular_masculine
@@ -57242,23 +57256,8 @@ xdentado/M0FSY0-0	po:adjective is:singular_masculine
 xgia/F0	po:noun is:singular_femenine
 xgrafapolènta/F0	po:noun is:singular_masculine
 xgrafapoƚènta/F0	po:noun is:singular_masculine
-skravaso/M0FS	po:noun is:singular_masculine
-skricada/F0Y0Y1	po:noun is:singular_femenine
-skrico/A1	po:noun is:singular_masculine
-skrico/A1	po:adjective is:singular_masculine
-skrimia/F0	po:noun is:singular_femenine
-skrivòltola/F0TE	po:noun is:singular_femenine
-skriòltola/F0TE	po:noun is:singular_femenine
-skrivoltolon/F0TEU0mf	po:noun is:singular_masculine
-skrioltolon/F0TEU0mf	po:noun is:singular_masculine
-skròso/M0FS	po:noun is:singular_masculine
 
 
 / 261
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
-v.:skarabocar,skrimajar,skrimaɉar
-sost.:skodèla,skodèƚa,skudèla,skudèƚa
-sost.:skodeleta,skodeƚeta,skudeleta,skudeƚeta
-sost.:skodelòto,skodeƚòto,skudelòto,skudeƚòto
-v.:kunar,skunar,kuninar,skuninar
