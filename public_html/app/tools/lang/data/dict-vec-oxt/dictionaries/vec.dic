@@ -11575,6 +11575,9 @@ inmagèloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:inmagelar
 inmageƚar/a0a2P0P2	po:verb ts:infinitive_simple
 inmagèƚo/a0a2P0P2I0	po:verb ts:indicative_present st:inmageƚar
 inmagèƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:inmageƚar
+xmagisar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+xmagiso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xmagisar
+xmagísoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xmagisar
 magonar/a0a1a2P0P1P2+0*0	po:verb ts:infinitive_simple
 magono/a0a1a2P0P1P2FSI0+0*0	po:verb ts:indicative_present st:magonar
 magónoe/a0a1a2I1+0*0	po:verb ts:indicative_present is:interrogative st:magonar
@@ -11642,12 +11645,12 @@ màloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:malar
 maƚar/a0a2P0P2	po:verb ts:infinitive_simple
 maƚo/a0a2P0P2I0	po:verb ts:indicative_present st:maƚar
 màƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:maƚar
-malabiar/a0a1P0P1	po:verb ts:infinitive_simple
-malabio/a0a1P0P1I0	po:verb ts:indicative_present st:malabiar
-malàbioe/a0a1I1	po:verb ts:indicative_present is:interrogative st:malabiar
-maƚabiar/a0a2P0P2	po:verb ts:infinitive_simple
-maƚabio/a0a2P0P2I0	po:verb ts:indicative_present st:maƚabiar
-maƚàbioe/a0a2I1	po:verb ts:indicative_present is:interrogative st:maƚabiar
+malabiar/a0a1P0P1*0	po:verb ts:infinitive_simple
+malabio/a0a1P0P1I0*0	po:verb ts:indicative_present st:malabiar
+malàbioe/a0a1I1*0	po:verb ts:indicative_present is:interrogative st:malabiar
+maƚabiar/a0a2P0P2*0	po:verb ts:infinitive_simple
+maƚabio/a0a2P0P2I0*0	po:verb ts:indicative_present st:maƚabiar
+maƚàbioe/a0a2I1*0	po:verb ts:indicative_present is:interrogative st:maƚabiar
 malatar/a0a1P0P1@0	po:verb ts:infinitive_simple
 malato/a0a1P0P1FSI0@0	po:verb ts:indicative_present st:malatar
 malàtoe/a0a1I1@0	po:verb ts:indicative_present is:interrogative st:malatar
@@ -29545,7 +29548,7 @@ luxe/F0FSět	po:noun is:singular_femenine
 ƚonxitudenaƚe/F0	po:adjective is:singular
 ƚora/F0ěŧ	po:noun is:singular_femenine
 ƚoso/M0mf	po:adjective is:singular_masculine
-ƚoso/M0	po:noun is:singular_masculine
+ƚoso/M0mf	po:noun is:singular_masculine
 ƚovo/M0ǎᶊěŧǒñmf	po:noun is:singular_masculine
 ƚòvo/M0	po:noun is:singular_masculine
 ƚòxego/A1	po:adjective is:singular_masculine
@@ -34301,8 +34304,8 @@ màntexa	po:noun is:singular_femenine st:màntexe
 màskara/F0	po:noun is:singular_femenine
 màskera/F0	po:noun is:singular_femenine
 màskol/M0U1TEmf	po:noun is:singular_masculine
-màxara/F0	po:noun is:singular_femenine
-màxera/F0	po:noun is:singular_femenine
+màxara/F0*0	po:noun is:singular_femenine
+màxera/F0*0	po:noun is:singular_femenine
 medegeto/A1FSmf	po:adjective is:singular_masculine
 medegeto/A1FSmf	po:noun is:singular_masculine
 medegòto/A1FS	po:adjective is:singular_masculine
@@ -51007,7 +51010,7 @@ skarpena/F0	po:noun is:singular_femenine
 tolpo/M0FSětǒn	po:noun is:singular_masculine
 topitèra/F0	po:noun is:singular_femenine
 xguseton/F0U0mf	po:noun is:singular_masculine
-/ Paoletti, Ermolao. Dizionario tascabile veneziano–italiano. Venezia, 1851.
+/ Paoletti, Ermolao. Dizionario tascabile veneziano–italiano. I ed. Venezia, 1851.
 aŧa/F0TE	po:noun is:singular_femenine
 bakariòl/M0U0TE	po:noun is:singular_masculine
 bakariòla/F0TE	po:noun is:singular_femenine
@@ -51143,7 +51146,9 @@ likoxo/A1FSmf	po:noun is:singular_masculine
 likoxo/A1FSWamf	po:adjective is:singular_masculine
 liña/F0TB	po:noun is:singular_femenine
 lodria/F0TB	po:noun is:singular_femenine
-lorda/F0*0	po:noun is:singular_femenine
+lorda/F0TB	po:noun is:singular_femenine
+xlorda/F0	po:adjective is:singular_femenine
+xlorda/F0ǒn	po:noun is:singular_femenine
 lòto–lòto	po:adverb
 ƚaño/M0	po:noun is:singular_masculine
 ƚegato/M0	po:noun is:singular_masculine
@@ -51151,7 +51156,6 @@ lòto–lòto	po:adverb
 ƚendenoxo/A1Wⱥmf	po:adjective is:singular_masculine
 ƚikoxo/A1mf	po:noun is:singular_masculine
 ƚikoxo/A1Wⱥmf	po:adjective is:singular_masculine
-ƚorda/F0	po:noun is:singular_femenine
 malgexa/A2	po:noun is:singular_femenine
 manganèl/M0U0TE	po:noun is:singular_masculine
 marcèr/M0V0	po:noun is:singular_masculine
@@ -51406,7 +51410,7 @@ xguŧeton/F0U0mf	po:noun is:singular_masculine
 xlapon/A2U0mf	po:adjective is:singular_masculine
 xvodakantièr/M0	po:noun is:singular_masculine
 xvodarka/F0	po:noun is:singular_femenine
-/ Paoletti, Ermolao. Dizionario tascabile veneziano–italiano. Venezia, 1874.
+/ Paoletti, Ermolao. Dizionario tascabile veneziano–italiano. II ed. Venezia, 1874.
 / Pajello, Luigi. Dizionario vicentino-italiano e italiano-vicentino. Vicenza, 1896.
 abio/M0ět	po:noun is:singular_masculine
 abrexè	po:adverb
@@ -57383,8 +57387,17 @@ xlímega/A2	po:adjective is:singular
 xlímega/A2	po:noun is:singular
 xlòdego/M0FS	po:noun is:singular_masculine
 xlòden/M0U1	po:noun is:singular_masculine
+ƚòso/M0	po:adjective is:singular_masculine
+ƚòso/M0	po:noun is:singular_masculine
+lòso/M0FS*0	po:noun is:singular_masculine
+lòŧo/M0FSTE*0	po:adjective is:singular_masculine
+lòŧo/M0FS*0	po:noun is:singular_masculine
+xludrada/F0Y0Y1	po:noun is:singular_femenine
+xluxirola/F0TE	po:noun is:singular_femenine
+xmaxarin/M0	po:noun is:singular_masculine
 
 
-/ 270
+/ 271
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
+aj., sost.:loŧo,loso,ƚoso,lòŧo,lòso,ƚòso
