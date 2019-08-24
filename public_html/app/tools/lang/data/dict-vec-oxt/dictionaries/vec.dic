@@ -12645,7 +12645,7 @@ mokàɉoe/a0a1a2I1*0+0	po:verb ts:indicative_present is:interrogative st:mokaɉa
 mokolar/a0a1P0P1*0r5	po:verb ts:infinitive_simple
 mòkolo/a0a1P0P1FSI0*0	po:verb ts:indicative_present st:mokolar
 mòkoloe/a0a1I1*0	po:verb ts:indicative_present is:interrogative st:mokolar
-mokoƚar/a0a2P0P2*0r5	po:verb ts:infinitive_simple
+mokoƚar/a0a2P0P2*0r6	po:verb ts:infinitive_simple
 mòkoƚo/a0a2P0P2I0*0	po:verb ts:indicative_present st:mokoƚar
 mòkoƚoe/a0a2I1*0	po:verb ts:indicative_present is:interrogative st:mokoƚar
 molar/a0a1P0P1-1*0r5	po:verb ts:infinitive_simple
@@ -51160,8 +51160,6 @@ likoxo/A1FSWamf	po:adjective is:singular_masculine
 liña/F0TB	po:noun is:singular_femenine
 lodria/F0TB	po:noun is:singular_femenine
 lorda/F0TB	po:noun is:singular_femenine
-xlorda/F0	po:adjective is:singular_femenine
-xlorda/F0ǒn	po:noun is:singular_femenine
 lòto–lòto	po:adverb
 ƚaño/M0	po:noun is:singular_masculine
 ƚegato/M0	po:noun is:singular_masculine
@@ -51421,6 +51419,8 @@ xgianŧo/M0FSTE	po:noun is:singular_masculine
 xginŧo/M0FSTE	po:noun is:singular_masculine
 xguŧeton/F0U0mf	po:noun is:singular_masculine
 xlapon/A2U0mf	po:adjective is:singular_masculine
+xlorda/F0ǒn	po:noun is:singular_femenine
+xlorda/F0	po:adjective is:singular_femenine
 xvodakantièr/M0	po:noun is:singular_masculine
 xvodarka/F0	po:noun is:singular_femenine
 / Paoletti, Ermolao. Dizionario tascabile veneziano–italiano. II ed. Venezia, 1874.
@@ -56786,8 +56786,11 @@ lonbrígol/M0U1	po:noun is:singular_masculine
 loo/M0TB	po:noun is:singular_masculine
 loròto/M0FS	po:noun is:singular_masculine
 lónbal/M0U1	po:noun is:singular_masculine
+lòso/M0FS*0	po:noun is:singular_masculine
 lòta/F0TB	po:adjective is:singular_femenine
 lòto/M0FS	po:adjective is:singular_masculine
+lòŧo/M0FSTE*0	po:adjective is:singular_masculine
+lòŧo/M0FS*0	po:noun is:singular_masculine
 luamarol/M0U0V0mf	po:noun is:singular_masculine
 luamarola/F0V0	po:noun is:singular_femenine
 luliana/F0	po:adjective is:singular_femenine
@@ -56819,6 +56822,8 @@ luviana/F0TB	po:adjective is:singular_femenine
 ƚonbrígoƚo/M0	po:noun is:singular_masculine
 ƚoròto/M0	po:noun is:singular_masculine
 ƚónbaƚo/M0	po:noun is:singular_masculine
+ƚòso/M0	po:adjective is:singular_masculine
+ƚòso/M0	po:noun is:singular_masculine
 ƚòto/M0	po:adjective is:singular_masculine
 ƚuamaroƚa/F0V1	po:noun is:singular_femenine
 ƚuamaroƚo/M0V1mf	po:noun is:singular_masculine
@@ -57394,40 +57399,25 @@ xlavariŧo/M0FSTE	po:adjective is:singular_masculine
 xlèka/F0	po:noun is:singular_femenine
 xlimegon/A2U0mf	po:adjective is:singular_masculine
 xlimegon/A2U0mf	po:noun is:singular_masculine
+xlinfio/A1	po:adjective is:singular_masculine
 xlinpio/A1	po:adjective is:singular_masculine
 xlixo/A1	po:adjective is:singular_masculine
 xlímega/A2	po:adjective is:singular
 xlímega/A2	po:noun is:singular
 xlòdego/M0FS	po:noun is:singular_masculine
 xlòden/M0U1	po:noun is:singular_masculine
-ƚòso/M0	po:adjective is:singular_masculine
-ƚòso/M0	po:noun is:singular_masculine
-lòso/M0FS*0	po:noun is:singular_masculine
-lòŧo/M0FSTE*0	po:adjective is:singular_masculine
-lòŧo/M0FS*0	po:noun is:singular_masculine
 xludrada/F0Y0Y1	po:noun is:singular_femenine
 xluxirola/F0TE	po:noun is:singular_femenine
 xmaxarin/M0	po:noun is:singular_masculine
-xbiògol/M0U1TEmf	po:noun is:singular_masculine
 xmiògol/M0U1TEmf	po:noun is:singular_masculine
-xmorŧamòkol/M0U1TEmf	po:noun is:singular_masculine
 xmorsamòkol/M0U1TEmf	po:noun is:singular_masculine
+xmorŧamòkol/M0U1mf	po:noun is:singular_masculine
 xmusada/F0Y0	po:noun is:singular_femenine
 xmusado/M0FSY0	po:noun is:singular_masculine
 xmuxaron/F0U0mf	po:noun is:singular_masculine
 xninfio/A1	po:adjective is:singular_masculine
-xlinfio/A1	po:adjective is:singular_masculine
 
 
 / 272
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
-aj., sost.:loŧo,loso,ƚoso,lòŧo,lòso,ƚòso
-sost.:xbiògol,xbiògoƚo,xmiògol,xmiògoƚo
-v.:xmolexinar,xmoƚexinar,xmolixinar,xmoƚixinar
-v.:morsegar,xmordegar
-v.:xmorfir,xmolfir
-v.:tugar,xmoroxar,xmoroxinar
-sost.:stuamòkol,stuamòkoƚo,xmorŧamòkol,xmorsamòkol,xmorsamòkoƚo
-v.:renfaŧar,renfasar,xmuxar
-aj.:xninfio,xlinfio
