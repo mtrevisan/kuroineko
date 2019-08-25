@@ -6252,6 +6252,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sofit",			"",			1,	3,	"a",	"1775",			"Inpalkar.",
 "sofit",			"de",			1,	3,	"a",	"1796",			"",
 "sofr",			"",			5,	1,	"g",	"1560",			"",
+"sog",			"",			1,	1,	"a",	"1900",			"Kalar na fune.",
 "soɉ",			"",			1,	1,	"g",	"1775",			"Méter in sedili la bote, inpantanar.",
 "sok",			"a",			4,	3,	"a",	"1829",			"Asopir.",
 "sok",			"in",			4,	3,	"a",	"1775",			"Asopir.",
