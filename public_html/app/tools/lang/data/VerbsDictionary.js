@@ -6334,6 +6334,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sotil",			"in",			4,	5,	"a",	"1896",			"Insutilir.",
 "sotili",		"",			1,	3,	"a",	"1829",			"Asotiliar.",
 "sotiliđ",		"",			1,	5,	"a",	"1867",			"Asotiliar.",
+"sotr",			"",			1,	1,	"a",	"1900",			"",
 "soŧi",			"",			1,	1,	"g",	"1463",			"Asocar.",
 "soŧol",			"",			1,	1,	"a",	"1900",			"Siabordar, axitar, demenar.",
 "soŧol",			"in",			1,	1,	"a",	"1775",			"",
