@@ -4699,6 +4699,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pangrat",		"",			1,	5,	"g",	"1829",			"Far el pangratà.",
 "paniđ",			"",			1,	3,	"a",	"1829",			"",
 "paniđ",			"kon",		1,	3,	"a",	"1852",			"Sparañar.",
+"paniđ",			"s",			1,	3,	"a",	"1900",			"Spanpanar.",
 "paniŧ",			"s",			1,	3,	"a",	"1980",			"Xbàter violentemento kontro kalkòsa.",
 "panoc",			"des",		1,	3,	"g",	"1854",			"Liberar la panoca da ʼl involukro.",
 "panoc",			"in",			1,	3,	"g",	"1867",			"",
