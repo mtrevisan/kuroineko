@@ -1566,6 +1566,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "feg",			"skarni",	1,	-1,"a",	"1867",			"",
 "feg",			"so",			1,	-1,"a",	"1590",			"",
 "feg",			"speŧi",		1,	-1,"a",	"1867",			"",
+"feg",			"sto",		1,	-1,"a",	"1900",			"Sofegar.",
 "feg",			"tra",		1,	-1,"g",	"1852",			"",
 "feg",			"veri",		1,	-1,"a",	"",				"",
 "feg",			"vini",		1,	-1,"a",	"1980",			"",
