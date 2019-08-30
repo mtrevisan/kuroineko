@@ -21879,6 +21879,12 @@ travàjoe/a0a1a2I1+0*0	po:verb ts:indicative_present is:interrogative st:travaja
 travaɉar/a0a1a2P0P1P2+0*0	po:verb ts:infinitive_simple
 travaɉo/a0a1a2P0P1P2FSI0+0*0	po:verb ts:indicative_present st:travaɉar
 travàɉoe/a0a1a2I1+0*0	po:verb ts:indicative_present is:interrogative st:travaɉar
+xvajar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+xvajo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xvajar
+xvàjoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xvajar
+xvaɉar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+xvaɉo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xvaɉar
+xvàɉoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xvaɉar
 tràder/b0b1b2P0P1P2.0	po:verb ts:infinitive_simple
 tradre/.0	po:verb ts:infinitive_simple st:tràder
 traderò/b0b1b2I0.0	po:verb ts:indicative_future st:tràder
@@ -23378,6 +23384,18 @@ sprevalo/a0a1P0P1FSI0	po:verb ts:indicative_present st:sprevaler
 sprevalso/A1FS	po:verb ts:participle_perfect_strong st:sprevaler st:sprevaƚer
 sprevaƚer/a0a2P0P2	po:verb ts:infinitive_simple
 sprevaƚo/a0a2P0P2I0	po:verb ts:indicative_present st:sprevaƚer
+invalexar/a0a1P0P1	po:verb ts:infinitive_simple
+invalexo/a0a1P0P1FSI0	po:verb ts:indicative_present st:invalexar
+invaléxoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:invalexar
+invaƚexar/a0a2P0P2	po:verb ts:infinitive_simple
+invaƚexo/a0a2P0P2I0	po:verb ts:indicative_present st:invaƚexar
+invaƚéxoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:invaƚexar
+xvalexar/a0a1P0P1	po:verb ts:infinitive_simple
+xvalexo/a0a1P0P1FSI0	po:verb ts:indicative_present st:xvalexar
+xvaléxoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:xvalexar
+xvaƚexar/a0a2P0P2	po:verb ts:infinitive_simple
+xvaƚexo/a0a2P0P2I0	po:verb ts:indicative_present st:xvaƚexar
+xvaƚéxoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:xvaƚexar
 valir/a0a1d0d1P0P1r0r5	po:verb ts:infinitive_simple
 vaƚir/a0a2d0d2P0P2r1r6	po:verb ts:infinitive_simple
 validar/a0a1P0P1+0	po:verb ts:infinitive_simple
@@ -24204,12 +24222,12 @@ soraviñir/a0a1a2e0e1e2P0P1P2	po:verb ts:infinitive_simple
 virar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 viro/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:virar
 víroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:virar
-violar/a0a1P0P1	po:verb ts:infinitive_simple
-víolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:violar
-víoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:violar
-vioƚar/a0a2P0P2	po:verb ts:infinitive_simple
-víoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:vioƚar
-víoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:vioƚar
+violar/a0a1P0P1*0	po:verb ts:infinitive_simple
+víolo/a0a1P0P1FSI0*0	po:verb ts:indicative_present st:violar
+víoloe/a0a1I1*0	po:verb ts:indicative_present is:interrogative st:violar
+vioƚar/a0a2P0P2*0	po:verb ts:infinitive_simple
+víoƚo/a0a2P0P2I0*0	po:verb ts:indicative_present st:vioƚar
+víoƚoe/a0a2I1*0	po:verb ts:indicative_present is:interrogative st:vioƚar
 viscar/a0a1a2P0P1P2-1+0	po:verb ts:infinitive_simple
 visco/a0a1a2P0P1P2FSI0-1+0	po:verb ts:indicative_present st:viscar
 víscoe/a0a1a2I1-1+0	po:verb ts:indicative_present is:interrogative st:viscar
@@ -31379,7 +31397,7 @@ súper	po:adjective
 súper	po:noun is:singular
 sú	po:adverb
 sú	po:preposition
-tabar/M0ǎtělětǐn	po:noun is:singular_masculine
+tabar/M0ǎtělětǐnǒn	po:noun is:singular_masculine
 tabèla/F0TE	po:noun is:singular_femenine
 tabiado/M0FSY0	po:noun is:singular_masculine
 tafanario/M0	po:noun is:singular_masculine
@@ -40760,7 +40778,7 @@ stufeŧo/M0FSTEmf	po:noun is:singular_masculine
 stufiñin/M0	po:noun is:singular_masculine
 stupabuxi	po:noun
 stupabuxo/M0FS	po:adjective is:singular_masculine
-sugarina/F0	po:noun is:singular_femenine
+sugarina/F0	po:adjective is:singular_femenine
 suisidio/M0	po:noun is:singular_masculine
 suiŧidio/M0	po:noun is:singular_masculine
 talon/F0TEU0*0mf	po:noun is:singular_masculine
@@ -49960,7 +49978,7 @@ superstisioxo/M0FSmf	po:noun is:singular_masculine
 superstiŧioxo/M0FSmf	po:noun is:singular_masculine
 supèrbia/F0	po:noun is:singular_femenine
 supèrbo/A1	po:adjective is:singular_masculine
-supio/M0ětǒn	po:noun is:singular_masculine
+supio/M0ětǒnǒt	po:noun is:singular_masculine
 supionŧin/M0TE	po:noun is:singular_masculine
 suplanto/M0FS	po:noun is:singular_masculine
 supon/A2U0mf	po:noun is:singular_masculine
@@ -56636,6 +56654,8 @@ dòbo/M0	po:noun is:singular_masculine
 đènte/M0TBFS	po:noun is:singular_masculine
 đira/F0TB	po:noun is:singular_femenine
 đirondon/TB	po:adverb
+đugatolon/A2U0TBmf	po:noun is:singular_masculine
+đugolin/A2TB	po:noun is:singular_masculine
 ekolomía/F0	po:noun is:singular_femenine
 ekoƚomía/F0	po:noun is:singular_femenine
 ekonomía/F0	po:noun is:singular_femenine
@@ -57566,9 +57586,18 @@ stufaroƚa/F0V1	po:noun is:singular_femenine
 stupakul/M0U0TE	po:noun is:singular_masculine
 stúrmola/F0TE	po:noun is:singular_femenine
 suga/F0	po:adjective is:singular_femenine
+supin/M0	po:noun is:singular_masculine
+suposto/M0FS	po:noun is:singular_masculine
+supòsto/M0FS	po:noun is:singular_masculine
 surbolòta/F0TE	po:adjective is:singular_femenine
 surbolòto/M0TEFS	po:adjective is:singular_masculine
 surbolòto/M0TEFS	po:noun is:singular_masculine
+surla/F0	po:noun is:singular_femenine
+sustada/F0Y0+0	po:adjective is:singular_femenine
+sustado/M0FSY0+0	po:adjective is:singular_masculine
+tabakoxo/A1FSmf	po:noun is:singular_masculine
+tabakoxo/A1FSWamf	po:adjective is:singular_masculine
+tabariol/M0U0TEmf	po:noun is:singular_masculine
 ŧaŧareta/F0	po:noun is:singular_femenine
 ŧenbaleto/M0FSmf	po:noun is:singular_masculine
 ŧentain/M0TB	po:noun is:singular_masculine
@@ -57677,6 +57706,6 @@ xmuxaron/F0U0mf	po:noun is:singular_masculine
 xninfio/A1	po:adjective is:singular_masculine
 
 
-/ 291
+/ 293
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
