@@ -7070,6 +7070,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tond",			"s",			1,	1,	"a",	"1998",			"",
 "tond",			"",			4,	4,	"a",	"1894",			"Toxar.",
 "toneđ",			"",			1,	3,	"a",	"1560",			"Tonar.",
+"tonej",			"",			1,	3,	"a",	"1900",			"(veronexe) Tonar.",
 "toniđ",			"",			1,	3,	"a",	"1852",			"Tonar.",
 "toniđ",			"sin",		1,	3,	"a",	"",				"",
 "tonf",			"",			1,	1,	"a",	"1775",			"Bàter, dar bòte.",
