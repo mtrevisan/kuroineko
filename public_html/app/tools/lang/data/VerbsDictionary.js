@@ -7192,6 +7192,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "trat",			"re",			1,	2,	"g",	"1415",			"",
 "trateđ",		"",			1,	4,	"a",	"1854",			"",
 "tratiđ",		"",			1,	4,	"a",	"1775",			"",
+"trator",		"",			1,	4,	"a",	"1900",			"(veronexe) Propaxinar.",
 "traŧ",			"",			1,	2,	"g",	"",				"",
 "traŧ",			"ren",		1,	2,	"g",	"1867",			"",
 "trav",			"",			1,	2,	"g",	"1867",			"",
