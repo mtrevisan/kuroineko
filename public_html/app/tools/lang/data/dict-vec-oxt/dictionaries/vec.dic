@@ -2254,12 +2254,9 @@ inbòvoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:inbovolar
 inbovoƚar/a0a2P0P2	po:verb ts:infinitive_simple
 inbòvoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:inbovoƚar
 inbòvoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:inbovoƚar
-inboxemar/a0a1a2P0P1P2r5	po:verb ts:infinitive_simple
-inbóxemo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:inboxemar
-inbóxemoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inboxemar
-xboxemar/a0a1a2P0P1P2-0	po:verb ts:infinitive_simple
-xbóxemo/a0a1a2P0P1P2FSI0-0	po:verb ts:indicative_present st:xboxemar
-xbóxemoe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:xboxemar
+boxemar/a0a1a2P0P1P2+0-1*0r5	po:verb ts:infinitive_simple
+bóxemo/a0a1a2P0P1P2FSI0+0-1*0	po:verb ts:indicative_present st:boxemar
+bóxemoe/a0a1a2I1+0-1*0	po:verb ts:indicative_present is:interrogative st:boxemar
 boxoñar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 boxòño/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:boxoñar
 boxòñoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:boxoñar
@@ -24501,6 +24498,9 @@ ravívoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:ravivolar
 ravivoƚar/a0a2P0P2	po:verb ts:infinitive_simple
 ravívoƚo/a0a2P0P2I0	po:verb ts:indicative_present st:ravivoƚar
 ravívoƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:ravivoƚar
+vivotar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+vivòto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:vivotar
+vivòtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:vivotar
 avixar/a0a1a2P0P1P2^2	po:verb ts:infinitive_simple
 avixo/a0a1a2P0P1P2FSI0^2	po:verb ts:indicative_present st:avixar
 avíxoe/a0a1a2I1^2	po:verb ts:indicative_present is:interrogative st:avixar
@@ -25860,6 +25860,10 @@ Viga/Z0	po:proper_noun is:singular_femenine
 Vigo/FSZ0	po:proper_noun is:singular_masculine
 Vika/Z0	po:proper_noun is:singular_femenine
 Viko/Z0	po:proper_noun is:singular_masculine
+Vinsensa/Z0	po:proper_noun is:singular_femenine
+Vinsenso/FSZ0	po:proper_noun is:singular_masculine
+Vinŧenŧa/Z0	po:proper_noun is:singular_femenine
+Vinŧenŧo/FSZ0	po:proper_noun is:singular_masculine
 Visensa/Z0	po:proper_noun is:singular_femenine
 Visenso/FSZ0	po:proper_noun is:singular_masculine
 Viŧenŧa/Z0	po:proper_noun is:singular_femenine
@@ -28211,7 +28215,7 @@ bolpe/F0FSǒN	po:noun is:singular_femenine
 bonba/F0v1ětǐn	po:noun is:singular_femenine
 bonbaxin/A2	po:adjective is:singular_masculine
 bonbaxin/A2	po:noun is:singular_masculine
-bonbaxo/M0FS	po:noun is:singular_masculine
+bonbaxo/M0FSǒN	po:noun is:singular_masculine
 bonbo/A1	po:adjective is:singular_masculine
 bonbo/M0ětǐn	po:noun is:singular_masculine
 bondanŧa/F0TE	po:noun is:singular_femenine
@@ -31960,7 +31964,7 @@ vokàƚego/A1	po:adjective is:singular_masculine
 volentièra/M0‘0^7	po:adverb
 volgar/F0Wa	po:adjective is:singular
 volgarità	po:noun is:femenine
-volintièra/M0‘0	po:adverb
+volintièra/M0‘0^7	po:adverb
 volitivo/A1FSWa	po:adjective is:singular_masculine
 volontario/A1	po:noun is:singular_masculine
 volontario/A1Wa	po:adjective is:singular_masculine
@@ -39993,7 +39997,7 @@ voƚontaroxo/A1Wⱥmf	po:adjective is:singular_masculine
 voƚonteroxo/A1mf	po:noun is:singular_masculine
 voƚonteroxo/A1Wⱥmf	po:adjective is:singular_masculine
 voƚuntade/M0Y0	po:noun is:singular_femenine
-vontièra/M0	po:adverb
+vontièra/M0‘0^7	po:adverb
 vòvera/F0	po:noun is:singular_femenine
 vòvra/F0	po:noun is:singular_femenine
 vulgar/F0Wa	po:adjective is:singular
@@ -41877,7 +41881,7 @@ bekofotudo/M0FSY0	po:noun is:singular_masculine
 bekofutristo/A1FS	po:adjective is:singular_masculine
 belòtol/A1U1mf	po:adjective is:singular_masculine
 beƚòtoƚo/A1mf	po:adjective is:singular_masculine
-bersò	po:noun is:masculine
+bersó	po:noun is:masculine
 berton/A2U0mf	po:noun is:singular_masculine
 beta/F0	po:noun is:singular_femenine
 bégol/M0U1TE*0mf	po:noun is:singular_masculine
@@ -43609,8 +43613,6 @@ anbasada/F0Y0Y1	po:noun is:singular_femenine
 anbasador/M0V0mf	po:noun is:singular_masculine
 anbasadora/F0V0	po:noun is:singular_femenine
 anbigú	po:noun is:masculine
-anbisioxeto/A1FSmf	po:adjective is:singular_masculine
-anbiŧioxeto/A1FSmf	po:adjective is:singular_masculine
 anbroxina/F0	po:adjective is:singular_femenine
 anbroxina/F0	po:noun is:singular_femenine
 anbulixe/M0	po:noun is:singular_masculine
@@ -56645,6 +56647,11 @@ altur/M0	po:noun is:singular_masculine
 alŧebibo/M0	po:noun is:singular_masculine
 aƚedon	po:interjection
 anada/F0Y0Y1	po:noun is:singular_femenine
+anbisioxo/M0FSětmf	po:noun is:singular_masculine
+anbiŧion/F0TEU0mf	po:noun is:singular_femenine
+anbiŧioxa/F0ět	po:adjective is:singular_femenine
+anbiŧioxa/F0ět	po:noun is:singular_femenine
+anbiŧioxo/M0FSětmf	po:noun is:singular_masculine
 anbron/M0U0	po:noun is:singular_masculine
 anbrúxen/F0U1	po:adjective is:singular_femenine
 anexin/M0	po:noun is:singular_masculine
@@ -56678,11 +56685,15 @@ barbixa/F0	po:noun is:singular_femenine
 bardevèla/F0TE*0	po:noun is:singular_femenine
 bariana/F0	po:noun is:singular_femenine
 barlikete	po:adverb
+baròkola/F0TE	po:noun is:singular_femenine
 basakuna/F0	po:noun is:singular_femenine
 baseda/F0Y0	po:noun is:singular_femenine
 basíxego/M0FS	po:noun is:singular_masculine
 bastimènto/M0FS	po:noun is:singular_masculine
 bastonada/F0Y0Y1ǐn	po:noun is:singular_femenine
+batar/M0	po:noun is:singular_masculine
+batibojo/M0TE	po:noun is:singular_masculine
+batibujo/M0TE	po:noun is:singular_masculine
 batucèl/M0U0	po:noun is:singular_masculine
 baxo/A1	po:adjective is:singular_masculine
 bàila/F0TE	po:noun is:singular_femenine
@@ -56704,6 +56715,8 @@ bidèl/M0U0TE	po:noun is:singular_masculine
 bidèla/F0TE	po:noun is:singular_femenine
 bifa/F0	po:noun is:singular_femenine
 bigolin/M0TE	po:noun is:singular_masculine
+bigoña/F0	po:noun is:singular_femenine
+bigòña/F0	po:noun is:singular_femenine
 binde	po:adverb
 birikòkol/M0U1TEmf	po:noun is:singular_masculine
 birocina/F0	po:noun is:singular_femenine
@@ -56716,15 +56729,19 @@ bitúdene/M0@0	po:noun is:singular_femenine
 bífido/A1FS	po:adjective is:singular_masculine
 blux	po:noun is:femenine
 boaròto/A1FS	po:noun is:singular_masculine
+bocada/F0Y0Y1	po:noun is:singular_femenine
 bocin/M0	po:noun is:singular_masculine
 bokada/F0Y0Y1	po:noun is:singular_femenine
 boleton/F0U0mf	po:noun is:singular_masculine
 boƚeton/F0mf	po:noun is:singular_masculine
+bonbaxon/A2U0mf	po:adjective is:singular_masculine
 bonbrígol/M0U1TEmf	po:noun is:singular_masculine
 bontènpo/M0FS	po:adjective is:singular_masculine
 bontènpo/M0FS	po:noun is:singular_masculine
 borisol/M0TEU0mf	po:noun is:singular_masculine
 borosin/M0	po:noun is:singular_masculine
+boxemada/F0Y0Y1+0	po:noun is:singular_femenine
+bógar/M0	po:noun is:singular_masculine
 bóxema/F0	po:noun is:singular_femenine
 brigolòto/M0TEFS	po:noun is:singular_masculine
 brikola	po:adverb
@@ -57193,6 +57210,8 @@ maɉoƚante/M0	po:noun is:singular
 maɉor/F0mf	po:adjective is:singular_masculine
 maɉor/F0mf	po:noun is:singular_masculine
 makanica/F0	po:noun is:singular_femenine
+malavoja/A2	po:noun is:singular_femenine
+malavoɉa/A2	po:noun is:singular_femenine
 malingreto/A1FSmf	po:adjective is:singular_masculine
 malisioxo/A1FSmf	po:noun is:singular_masculine
 malisioxo/A1FSWamf	po:adjective is:singular_masculine
@@ -57202,6 +57221,8 @@ malkonŧa/F0TE	po:adjective is:singular_femenine
 malkonŧo/M0FSTE	po:adjective is:singular_masculine
 maltèka/F0	po:noun is:singular_femenine
 malvia	po:interjection
+maƚavoja/A2	po:noun is:singular_femenine
+maƚavoɉa/A2	po:noun is:singular_femenine
 maƚingreto/A1mf	po:adjective is:singular_masculine
 maƚisioxo/A1mf	po:noun is:singular_masculine
 maƚisioxo/A1Wⱥmf	po:adjective is:singular_masculine
@@ -57895,9 +57916,25 @@ vergoñoxo/A1FSvŧmf	po:noun is:singular_masculine
 vergoñoxo/A1FSWavŧmf	po:adjective is:singular_masculine
 verinoxo/A1FSmf	po:adjective is:singular_masculine
 vertor/F0mf	po:noun is:singular_masculine
+vexòto/M0FS	po:noun is:singular_masculine
 vèra	po:adjective
 vincòstro/M0	po:noun is:singular_masculine
+vitin/M0	po:noun is:singular_masculine
 vixamènto/M0FS	po:noun is:singular_masculine
+vixdemèmola/F0TE	po:adjective is:singular
+víkol/M0U1TEmf	po:noun is:singular_masculine
+vípara/F0‘0	po:noun is:singular_femenine
+víxil/F0TF	po:noun is:singular_masculine
+voja/A2	po:noun is:singular_femenine
+voɉa/A2	po:noun is:singular_femenine
+volatera/F0	po:noun is:singular_femenine
+volentiera/M0‘0^7	po:adverb
+volintiera/M0‘0^7	po:adverb
+voƚatera/F0	po:noun is:singular_femenine
+voƚentiera/M0‘0^7	po:adverb
+voƚintiera/M0‘0^7	po:adverb
+voxèla/F0TE	po:noun is:singular_femenine
+vò	po:noun is:masculine
 xbañasèo/A1	po:noun is:singular_masculine
 xbañaŧèo/A1	po:noun is:singular_masculine
 xbarlòto/A1FS	po:adjective is:singular_masculine
@@ -57977,11 +58014,8 @@ xmusada/F0Y0	po:noun is:singular_femenine
 xmusado/M0FSY0	po:noun is:singular_masculine
 xmuxaron/F0U0mf	po:noun is:singular_masculine
 xninfio/A1	po:adjective is:singular_masculine
-vexòto/M0FS	po:noun is:singular_masculine
-víkol/M0U1TEmf	po:noun is:singular_masculine
-víxil/F0TF	po:noun is:singular_masculine
 
 
-/ 314
-/ íóúđƚñŧ
+/ 322
+/ íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
