@@ -4481,6 +4481,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ñok",			"",			1,	1,	"g",	"1896",			"",
 "ñokol",			"",			1,	1,	"g",	"1867",			"",
 "ñokol",			"x",			1,	1,	"g",	"1852",			"",
+"ñol",			"",			1,	1,	"g",	"1900",			"(veronexe) Friñar.",
 "ñuk",			"in",			1,	1,	"a",	"1900",			"(veronexe) Ostinar.",
 
 "obed",			"",			4,	4,	"a",	"1450",			"",
