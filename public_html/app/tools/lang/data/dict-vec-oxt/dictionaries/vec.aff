@@ -204,7 +204,7 @@ KEEPCASE Z0
 # themeT1 + r/a0a1a2P0P1P2, themeT1 + r/a0a1a2d0d1d2P0P1P2, themeT1 + r/a0a1a2e0e1e2P0P1P2, themeT1 + r/a0a1a2f0f1f2P0P1P2
 # themeT8 + o/a0a1a2P0P1P2FSI0
 # themeT8 + oe/a0a1a2I1
-SFX a0 Y 406
+SFX a0 Y 410
 SFX a0 0 ane/I1 [aei]r	ts:indicative_future is:interrogative
 SFX a0 0 atu/I3 [aei]r	ts:indicative_future is:interrogative
 SFX a0 0 ave/P3 [aei]r	ts:conditional_present
@@ -331,6 +331,10 @@ SFX a0 ar eva/P3I0I4 ar	ts:indicative_imperfect
 SFX a0 ar eve/I0 ar	ts:indicative_imperfect
 SFX a0 ar evi/I0I2I4 ar	ts:indicative_imperfect
 SFX a0 ar evo/I0 ar	ts:indicative_imperfect
+SFX a0 ar èva/P3I0I4 ar	ts:indicative_imperfect
+SFX a0 ar ève/I0 ar	ts:indicative_imperfect
+SFX a0 ar èvi/I0I2I4 ar	ts:indicative_imperfect
+SFX a0 ar èvo/I0 ar	ts:indicative_imperfect
 SFX a0 ar iede/I4 [^cijɉñ]ar	ts:subjunctive_imperfect
 SFX a0 ar iege/I4 [^cijɉñ]ar	ts:subjunctive_imperfect
 SFX a0 ar ion/P0I0 [^cijɉñ]ar	ts:indicative_imperfect ts:subjunctive_present ts:subjunctive_imperfect
@@ -869,13 +873,13 @@ SFX a2 r nto/P2 [aei]r
 SFX a2 r ve-ƚo/A1 [aei]r
 SFX a2 r ƚo/A1 er
 
-# vèrbi -àr inregolari ((dex)dar, (kon|kontra|[lƚ]iku[ei]|putre|rare|re|sora|stra|stupe|tore|tume)far, (mal|move|soto)star)
+# vèrbi -àr inregolari ((dex)dar, ((dex)?asue|des|kon(tra)?|[lƚ]iku[ei]|putre|(ra)?re|sastu|sat[iu]s|sodis|sora|stra|stupe|tore|tume)far, (kon(tra)?|mal|move|o|re|so(ra|to))star)
 # themeT1 + r/a3a4a5P0P1P2
 # themeT8 + o/a3a4a5P0P1P2FSI0
 # themeT8 + oe/a3a4a5P0P1P2FSI0
 # themeT6 + do/M0Y0
 # themeT6 + da/F0Y0
-SFX a3 Y 265
+SFX a3 Y 269
 SFX a3 0 àne/I1 ar	is:interrogative
 SFX a3 0 àtu/I3 ar	is:interrogative
 SFX a3 0 ave/P3 ar	ts:conditional_present
@@ -998,6 +1002,10 @@ SFX a3 ar eva/P3I0I4 ar
 SFX a3 ar eve/I0 ar
 SFX a3 ar evi/I0I2I4 ar
 SFX a3 ar evo/I0 ar
+SFX a3 ar èva/P3I0I4 ar
+SFX a3 ar ève/I0 ar
+SFX a3 ar èvi/I0I2I4 ar
+SFX a3 ar èvo/I0 ar
 SFX a3 ar iede/I4 ar
 SFX a3 ar iege/I4 ar
 SFX a3 ar ion/P0I0 [^cijɉñ]ar
@@ -1253,7 +1261,7 @@ SFX a4 ào aga/P1 ào
 SFX a4 ào agi/P1 ào
 SFX a4 ào ago/P1 ào
 
-# vèrbi -àr inregolari ((dex)dar, (kon|kontra|[lƚ]iku[ei]|putre|rare|re|sora|stra|stupe|tore|tume)far, (mal|move|soto)star)
+# vèrbi -àr inregolari ((dex)dar, ((dex)?asue|des|kon(tra)?|[lƚ]iku[ei]|putre|(ra)?re|sastu|sat[iu]s|sodis|sora|stra|stupe|tore|tume)far, (kon(tra)?|mal|move|o|re|so(ra|to))star)
 # themeT1 + r/a3a4a5P0P1P2
 # themeT8 + o/a3a4a5P0P1P2FSI0
 # themeT8 + oe/a3a4a5P0P1P2FSI0
@@ -2733,7 +2741,7 @@ SFX b9 èser ɉèrone/I1 èser	is:interrogative
 
 # vèrbi -ér inregolari ((re)(g)aver)
 # themeT1 + r/a0a1a2c0P0P1P2
-SFX c0 Y 195
+SFX c0 Y 199
 SFX c0 0 me/P6P7 aver
 SFX c0 0 ne/I1 o	is:interrogative
 SFX c0 aver ebi/P3P4P5I2 aver
@@ -2777,6 +2785,10 @@ SFX c0 aver eva/P3P4P5I0I4 aver
 SFX c0 aver eve/I0 aver
 SFX c0 aver evi/I0I2I4 aver
 SFX c0 aver evo/I0 aver
+SFX c0 aver èva/P3P4P5I0I4 aver
+SFX c0 aver ève/I0 aver
+SFX c0 aver èvi/I0I2I4 aver
+SFX c0 aver èvo/I0 aver
 SFX c0 aver éƚo/A1 aver
 SFX c0 aver à/P0P1P2I0I2 aver
 SFX c0 aver àbielo/A1 aver
@@ -3518,7 +3530,7 @@ SFX c4 ƚo giƚo/P8 [cit]òƚo
 
 # vèrbi -<is>ír
 # themeT1 + ir/a0a1a2d0d1d2P0P1P2
-SFX d0 Y 239
+SFX d0 Y 243
 SFX d0 ir arane/I1 ir	is:interrogative
 SFX d0 ir aratu/I3 ir	is:interrogative
 SFX d0 ir arave/P3 ir	ts:conditional_present
@@ -3639,6 +3651,10 @@ SFX d0 ir eva/P3I0I4 ir
 SFX d0 ir eve/I0 ir
 SFX d0 ir evi/I0I2I4 ir
 SFX d0 ir evo/I0 ir
+SFX d0 ir èva/P3I0I4 ir
+SFX d0 ir ève/I0 ir
+SFX d0 ir èvi/I0I2I4 ir
+SFX d0 ir èvo/I0 ir
 SFX d0 ir on/P0I0 ir
 SFX d0 ir one/I1 ir	is:interrogative
 SFX d0 ir onme/P6 ir
@@ -3901,7 +3917,7 @@ SFX d2 r ónmeƚo/P8 [^cijɉñ]ir
 # vèrbi -ír
 # themeT1 + r/a0a1a2e0e1e2P0P1P2
 # themeT8 + o/e0e1e2P0P1P2I0
-SFX e0 Y 225
+SFX e0 Y 229
 SFX e0 io i/P0P3I2 io
 SFX e0 ir arane/I1 ir	is:interrogative
 SFX e0 ir aratu/I3 ir	is:interrogative
@@ -4025,6 +4041,10 @@ SFX e0 ir eva/P3I0I4 ir
 SFX e0 ir eve/I0 ir
 SFX e0 ir evi/I0I2I4 ir
 SFX e0 ir evo/I0 ir
+SFX e0 ir èva/P3I0I4 ir
+SFX e0 ir ève/I0 ir
+SFX e0 ir èvi/I0I2I4 ir
+SFX e0 ir èvo/I0 ir
 SFX e0 ir on/P0I0 ir
 SFX e0 ir one/I1 ir	is:interrogative
 SFX e0 ir onme/P6 ir
@@ -4271,7 +4291,7 @@ SFX e2 r on/P2 [^cijɉñ]ir
 # vèrbi -<is>ír/-ír
 # themeT1 + r/a0a1a2f0f1f2P0P1P2
 # themeT8 + o/f0f1f2P0P1P2I0
-SFX f0 Y 237
+SFX f0 Y 241
 SFX f0 0 me/P6 ir
 SFX f0 ir a/P0 ir
 SFX f0 ir arane/I1 ir	is:interrogative
@@ -4398,6 +4418,10 @@ SFX f0 ir eva/P3I0I4 ir
 SFX f0 ir eve/I0 ir
 SFX f0 ir evi/I0I2I4 ir
 SFX f0 ir evo/I0 ir
+SFX f0 ir èva/P3I0I4 ir
+SFX f0 ir ève/I0 ir
+SFX f0 ir èvi/I0I2I4 ir
+SFX f0 ir èvo/I0 ir
 SFX f0 ir i/P0P3I2 ir
 SFX f0 ir o/I0 ir
 SFX f0 ir on/P0I0 ir
@@ -6698,7 +6722,8 @@ PFX ‘0 l ʼ l
 PFX ‘0 v ʼ v
 
 # paròle ŧonkàe a la fine
-SFX ʼ0 Y 12
+SFX ʼ0 Y 13
+SFX ʼ0 n ʼ n
 SFX ʼ0 r ʼ r
 SFX ʼ0 u ʼ u
 SFX ʼ0 ra ʼ ra
