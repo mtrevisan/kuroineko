@@ -2671,6 +2671,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kabi",			"",			1,	1,	"g",	"1896",			"Gabiar.",
 "kabi",			"in",			1,	1,	"g",	"1896",			"Ingabiar.",
 "kaciđ",			"s",			1,	3,	"a",	"1867",			"Skacir.",
+"kàd",			"",			3,	1,	"g",	"1908",			"(coxòto)",
 "kàd",			"a",			3,	1,	"g",	"1450",			"",
 "kàd",			"de",			3,	1,	"g",	"1829",			"",
 "kàd",			"re",			3,	1,	"g",	"1829",			"",
