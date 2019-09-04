@@ -1131,6 +1131,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "dindol",		"x",			1,	1,	"a",	"1775",			"",
 "dindon",		"",			1,	4,	"a",	"1900",			"(veronexe) Tentenar.",
 "diol",			"",			2,	1,	"g",	"1877",			"Doler.",
+"dipon",			"",			1,	3,	"g",	"1908",			"(coxòto)",
 "disi",			"dix",		1,	1,	"a",	"1560",			"Xvejar.",
 "disip",			"",			1,	1,	"a",	"1560",			"Guastar, butar via.",
 "distribu",		"",			4,	8,	"a",	"1412",			"",
