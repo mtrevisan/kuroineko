@@ -7013,6 +7013,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tes",			"",			1,	1,	"a",	"1829",			"",
 "tès",			"",			3,	1,	"g",	"1562",			"",
 "tès",			"des",		3,	1,	"g",	"1854",			"",
+"tès",			"in",			3,	1,	"g",	"",				"",
 "tès",			"pre",		3,	1,	"g",	"1415",			"",
 "test",			"",			1,	1,	"g",	"1412",			"",
 "test",			"a",			1,	1,	"g",	"",				"",
