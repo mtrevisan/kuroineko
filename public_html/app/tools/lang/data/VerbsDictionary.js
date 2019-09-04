@@ -142,6 +142,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "asi",			"in",			1,	0,	"g",	"1810",			"Aprestar.",
 "aspr",			"in",			4,	4,	"a",	"1867",			"",
 "ast",			"sub",		1,	0,	"g",	"1867",			"Vénder soto lʼ asta a ʼl inkanto.",
+"ast",			"",			1,	1,	"g",	"1906",			"(coxòto)",
 "asti",			"",			1,	0,	"g",	"1104",			"Dar fastidio.",
 "at",				"",			1,	0,	"g",	"1829",			"",
 "at",				"ad",			1,	0,	"g",	"1775",			"Konpóner.",
