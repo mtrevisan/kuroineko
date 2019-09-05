@@ -7276,6 +7276,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "troneđ",		"",			1,	4,	"a",	"1980",			"",
 "tronk",			"",			1,	2,	"a",	"1854",			"",
 "tronk",			"s",			1,	2,	"a",	"",				"",
+"tronkon",		"in",			1,	5,	"a",	"1908",			"(coxòto)",
 "troñ",			"",			1,	2,	"g",	"1560",			"Dar la berta, urlar.",
 "trot",			"",			1,	2,	"g",	"1867",			"",
 "trotol",		"",			1,	2,	"g",	"1560",			"",
