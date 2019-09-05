@@ -3353,9 +3353,6 @@ dipònoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:diponar
 dixdisiar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 dixdisio/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:dixdisiar
 dixdísioe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:dixdisiar
-disipar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-dísipo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:disipar
-dísipoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:disipar
 distribuir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 dexditar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 dexdito/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:dexditar ts:participle_perfect_strong st:dexdíxer
@@ -18753,6 +18750,15 @@ siòperoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:sioperar
 sioparar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 siòparo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:sioparar
 siòparoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:sioparar
+desipar/a0a1a2P0P1P2r0	po:verb ts:infinitive_simple
+dèsipo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:desipar
+dèsipoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:desipar
+malsipar/a0a1a2P0P1P2r3	po:verb ts:infinitive_simple
+màlsipo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:malsipar
+màlsipoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:malsipar
+mansipar/a0a1a2P0P1P2r3	po:verb ts:infinitive_simple
+mànsipo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:mansipar
+mànsipoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:mansipar
 siringar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 siringo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:siringar
 siríngoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:siringar
@@ -23246,24 +23252,12 @@ sípoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:sipar
 ŧipar/a0a1P0P1	po:verb ts:infinitive_simple
 ŧipo/a0a1P0P1FSI0	po:verb ts:indicative_present st:ŧipar
 ŧípoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:ŧipar
-desipar/a0a1a2P0P1P2r0	po:verb ts:infinitive_simple
-dèsipo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:desipar
-dèsipoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:desipar
-deŧipar/a0a1P0P1r0	po:verb ts:infinitive_simple
-dèŧipo/a0a1P0P1FSI0	po:verb ts:indicative_present st:deŧipar
-dèŧipoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:deŧipar
 postisipar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 postísipo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:postisipar
 postísipoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:postisipar
 postiŧipar/a0a1P0P1	po:verb ts:infinitive_simple
 postíŧipo/a0a1P0P1FSI0	po:verb ts:indicative_present st:postiŧipar
 postíŧipoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:postiŧipar
-mansipar/a0a1a2P0P1P2r3	po:verb ts:infinitive_simple
-mànsipo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:mansipar
-mànsipoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:mansipar
-manŧipar/a0a1P0P1r2	po:verb ts:infinitive_simple
-mànŧipo/a0a1P0P1FSI0	po:verb ts:indicative_present st:manŧipar
-mànŧipoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:manŧipar
 inŧipidir/a0a1d0d1P0P1	po:verb ts:infinitive_simple
 insipidir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 presipitar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
@@ -25683,6 +25677,7 @@ Matèa/Z0	po:proper_noun is:singular_femenine
 Matèo/Z0	po:proper_noun is:singular_masculine
 Matía/Z0	po:proper_noun is:singular_masculine
 Matío/Z0	po:proper_noun is:singular_masculine
+Irma/Z0	po:proper_noun is:singular_femenine
 Màsima/Z0	po:proper_noun is:singular_femenine
 Màsimo/FSZ0	po:proper_noun is:singular_masculine
 Màuro/FSZ0	po:proper_noun is:singular_masculine
@@ -58262,8 +58257,15 @@ vemenŧa/F0TE	po:noun is:singular_femenine
 vèspar/M0	po:noun is:singular_masculine
 xbrodegeŧo/M0FSTEmf	po:noun is:singular_masculine
 xenxía/F0	po:noun is:singular_femenine
+finamente/FSW0	po:adverb
+maluxo/M0FSět	po:noun is:singular_masculine
+maluxa/F0ět	po:noun is:singular_femenine
+maƚuxo/M0FSěŧ	po:noun is:singular_masculine
+maƚuxa/F0ěŧ	po:noun is:singular_femenine
 
 
-/ 72
+/ 74
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
+v.:malsipar,mansipar
+av.:finalmente,finamente
