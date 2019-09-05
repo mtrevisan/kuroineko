@@ -4994,6 +4994,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pepol",			"",			1,	1,	"g",	"1775",			"Trotolar.",
 "per",			"",			4,	3,	"a",	"",				"",
 "per",			"de",			4,	3,	"a",	"1867",			"",
+"per",			"mal",		4,	3,	"a",	"1908",			"(coxòto)",
 "pèrd",			"",			3,	1,	"g",	"1412",			"",
 "pèrd",			"des",		3,	1,	"g",	"1561",			"Sperperar, abortir.",
 "perdon",		"",			1,	4,	"a",	"1463",			"",
