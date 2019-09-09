@@ -6553,6 +6553,12 @@ SFX %0 0 ar/A1 ion
 SFX %0 o èr/A1 iardo
 SFX %0 o ar/A1 iardo
 
+# numerali - koletivi (-ando)
+SFX %1 Y 3
+SFX %1 0 ndo nta
+SFX %1 o anto nto
+SFX %1 i ando nti
+
 # numerali - koletivi (-èximo)
 SFX %a Y 24
 SFX %a ète etèximo/A1FS ète
@@ -6587,115 +6593,115 @@ SFX %ⱥ 0 èximo/A1 ion
 SFX %ⱥ o èximo/A1 iardo
 
 # numeraŧion latina
-SFX %1 Y 10
-SFX %1 0 i [ivxlcdm]	po:numeral_latin
-SFX %1 0 ii [ivxlcdm]	po:numeral_latin
-SFX %1 0 iii [ivxlcdm]	po:numeral_latin
-SFX %1 0 iv [xlcdm]	po:numeral_latin
-SFX %1 0 v [ixlcdm]	po:numeral_latin
-SFX %1 0 vi [xlcdm]	po:numeral_latin
-SFX %1 0 vii [xlcdm]	po:numeral_latin
-SFX %1 0 viii [xlcdm]	po:numeral_latin
-SFX %1 0 ix [xlcdm]	po:numeral_latin
-SFX %1 0 x i	po:numeral_latin
+SFX %2 Y 10
+SFX %2 0 i [ivxlcdm]	po:numeral_latin
+SFX %2 0 ii [ivxlcdm]	po:numeral_latin
+SFX %2 0 iii [ivxlcdm]	po:numeral_latin
+SFX %2 0 iv [xlcdm]	po:numeral_latin
+SFX %2 0 v [ixlcdm]	po:numeral_latin
+SFX %2 0 vi [xlcdm]	po:numeral_latin
+SFX %2 0 vii [xlcdm]	po:numeral_latin
+SFX %2 0 viii [xlcdm]	po:numeral_latin
+SFX %2 0 ix [xlcdm]	po:numeral_latin
+SFX %2 0 x i	po:numeral_latin
 
 # numeraŧion latina (el funŧiona fin al númaro 3209)
-PFX %2 Y 95
-PFX %2 0 x [lc]	po:numeral_latin
-PFX %2 0 l x	po:numeral_latin
-PFX %2 0 c [xlcdm]	po:numeral_latin
-PFX %2 0 cx [lc]	po:numeral_latin
-PFX %2 0 cl x	po:numeral_latin
-PFX %2 0 cc [xlc]	po:numeral_latin
-PFX %2 0 ccx [lc]	po:numeral_latin
-PFX %2 0 ccl x	po:numeral_latin
-PFX %2 0 ccc [xl]	po:numeral_latin
-PFX %2 0 cccx [lc]	po:numeral_latin
-PFX %2 0 cccl x	po:numeral_latin
-PFX %2 0 cd [xl]	po:numeral_latin
-PFX %2 0 cdx [lc]	po:numeral_latin
-PFX %2 0 cdl x	po:numeral_latin
-PFX %2 0 d [xlc]	po:numeral_latin
-PFX %2 0 dx [lc]	po:numeral_latin
-PFX %2 0 dl x	po:numeral_latin
-PFX %2 0 dc [xlc]	po:numeral_latin
-PFX %2 0 dcx [lc]	po:numeral_latin
-PFX %2 0 dcl x	po:numeral_latin
-PFX %2 0 dcc [xlc]	po:numeral_latin
-PFX %2 0 dccx [lc]	po:numeral_latin
-PFX %2 0 dccl x	po:numeral_latin
-PFX %2 0 dccc [xl]	po:numeral_latin
-PFX %2 0 dcccx [lc]	po:numeral_latin
-PFX %2 0 dcccl x	po:numeral_latin
-PFX %2 0 cm [xl]	po:numeral_latin
-PFX %2 0 cmx [lc]	po:numeral_latin
-PFX %2 0 cml x	po:numeral_latin
-PFX %2 0 m [xlcdm]	po:numeral_latin
-PFX %2 0 mx [lc]	po:numeral_latin
-PFX %2 0 ml x	po:numeral_latin
-PFX %2 0 mc [xlcmd]	po:numeral_latin
-PFX %2 0 mcx [lc]	po:numeral_latin
-PFX %2 0 mcl x	po:numeral_latin
-PFX %2 0 mcc [xlc]	po:numeral_latin
-PFX %2 0 mccx [lc]	po:numeral_latin
-PFX %2 0 mccl x	po:numeral_latin
-PFX %2 0 mccc [xl]	po:numeral_latin
-PFX %2 0 mcccx [lc]	po:numeral_latin
-PFX %2 0 mcccl x	po:numeral_latin
-PFX %2 0 mcd [xl]	po:numeral_latin
-PFX %2 0 mcdx [lc]	po:numeral_latin
-PFX %2 0 mcdl x	po:numeral_latin
-PFX %2 0 md [xlc]	po:numeral_latin
-PFX %2 0 mdx [lc]	po:numeral_latin
-PFX %2 0 mdl x	po:numeral_latin
-PFX %2 0 mdc [xlc]	po:numeral_latin
-PFX %2 0 mdcx [lc]	po:numeral_latin
-PFX %2 0 mdcl x	po:numeral_latin
-PFX %2 0 mdcc [xlc]	po:numeral_latin
-PFX %2 0 mdccx [lc]	po:numeral_latin
-PFX %2 0 mdccl x	po:numeral_latin
-PFX %2 0 mdccc [xl]	po:numeral_latin
-PFX %2 0 mdcccx [lc]	po:numeral_latin
-PFX %2 0 mdcccl x	po:numeral_latin
-PFX %2 0 mcm [xl]	po:numeral_latin
-PFX %2 0 mcmx [lc]	po:numeral_latin
-PFX %2 0 mcml x	po:numeral_latin
-PFX %2 0 mm [xlcdm]	po:numeral_latin
-PFX %2 0 mmx [lc]	po:numeral_latin
-PFX %2 0 mml x	po:numeral_latin
-PFX %2 0 mmc [xlcmd]	po:numeral_latin
-PFX %2 0 mmcx [lc]	po:numeral_latin
-PFX %2 0 mmcl x	po:numeral_latin
-PFX %2 0 mmcc [xlc]	po:numeral_latin
-PFX %2 0 mmccx [lc]	po:numeral_latin
-PFX %2 0 mmccl x	po:numeral_latin
-PFX %2 0 mmccc [xl]	po:numeral_latin
-PFX %2 0 mmcccx [lc]	po:numeral_latin
-PFX %2 0 mmcccl x	po:numeral_latin
-PFX %2 0 mmcd [xl]	po:numeral_latin
-PFX %2 0 mmcdx [lc]	po:numeral_latin
-PFX %2 0 mmcdl x	po:numeral_latin
-PFX %2 0 mmd [xlc]	po:numeral_latin
-PFX %2 0 mmdx [lc]	po:numeral_latin
-PFX %2 0 mmdl x	po:numeral_latin
-PFX %2 0 mmdc [xlc]	po:numeral_latin
-PFX %2 0 mmdcx [lc]	po:numeral_latin
-PFX %2 0 mmdcl x	po:numeral_latin
-PFX %2 0 mmdcc [xlc]	po:numeral_latin
-PFX %2 0 mmdccx [lc]	po:numeral_latin
-PFX %2 0 mmdccl x	po:numeral_latin
-PFX %2 0 mmdccc [xl]	po:numeral_latin
-PFX %2 0 mmdcccx [lc]	po:numeral_latin
-PFX %2 0 mmdcccl x	po:numeral_latin
-PFX %2 0 mmcm [xl]	po:numeral_latin
-PFX %2 0 mmcmx [lc]	po:numeral_latin
-PFX %2 0 mmcml x	po:numeral_latin
-PFX %2 0 mmm [xlcdm]	po:numeral_latin
-PFX %2 0 mmmx [lc]	po:numeral_latin
-PFX %2 0 mmml x	po:numeral_latin
-PFX %2 0 mmmc [xlcmd]	po:numeral_latin
-PFX %2 0 mmmcx [lc]	po:numeral_latin
-PFX %2 0 mmmcl x	po:numeral_latin
+PFX %3 Y 95
+PFX %3 0 x [lc]	po:numeral_latin
+PFX %3 0 l x	po:numeral_latin
+PFX %3 0 c [xlcdm]	po:numeral_latin
+PFX %3 0 cx [lc]	po:numeral_latin
+PFX %3 0 cl x	po:numeral_latin
+PFX %3 0 cc [xlc]	po:numeral_latin
+PFX %3 0 ccx [lc]	po:numeral_latin
+PFX %3 0 ccl x	po:numeral_latin
+PFX %3 0 ccc [xl]	po:numeral_latin
+PFX %3 0 cccx [lc]	po:numeral_latin
+PFX %3 0 cccl x	po:numeral_latin
+PFX %3 0 cd [xl]	po:numeral_latin
+PFX %3 0 cdx [lc]	po:numeral_latin
+PFX %3 0 cdl x	po:numeral_latin
+PFX %3 0 d [xlc]	po:numeral_latin
+PFX %3 0 dx [lc]	po:numeral_latin
+PFX %3 0 dl x	po:numeral_latin
+PFX %3 0 dc [xlc]	po:numeral_latin
+PFX %3 0 dcx [lc]	po:numeral_latin
+PFX %3 0 dcl x	po:numeral_latin
+PFX %3 0 dcc [xlc]	po:numeral_latin
+PFX %3 0 dccx [lc]	po:numeral_latin
+PFX %3 0 dccl x	po:numeral_latin
+PFX %3 0 dccc [xl]	po:numeral_latin
+PFX %3 0 dcccx [lc]	po:numeral_latin
+PFX %3 0 dcccl x	po:numeral_latin
+PFX %3 0 cm [xl]	po:numeral_latin
+PFX %3 0 cmx [lc]	po:numeral_latin
+PFX %3 0 cml x	po:numeral_latin
+PFX %3 0 m [xlcdm]	po:numeral_latin
+PFX %3 0 mx [lc]	po:numeral_latin
+PFX %3 0 ml x	po:numeral_latin
+PFX %3 0 mc [xlcmd]	po:numeral_latin
+PFX %3 0 mcx [lc]	po:numeral_latin
+PFX %3 0 mcl x	po:numeral_latin
+PFX %3 0 mcc [xlc]	po:numeral_latin
+PFX %3 0 mccx [lc]	po:numeral_latin
+PFX %3 0 mccl x	po:numeral_latin
+PFX %3 0 mccc [xl]	po:numeral_latin
+PFX %3 0 mcccx [lc]	po:numeral_latin
+PFX %3 0 mcccl x	po:numeral_latin
+PFX %3 0 mcd [xl]	po:numeral_latin
+PFX %3 0 mcdx [lc]	po:numeral_latin
+PFX %3 0 mcdl x	po:numeral_latin
+PFX %3 0 md [xlc]	po:numeral_latin
+PFX %3 0 mdx [lc]	po:numeral_latin
+PFX %3 0 mdl x	po:numeral_latin
+PFX %3 0 mdc [xlc]	po:numeral_latin
+PFX %3 0 mdcx [lc]	po:numeral_latin
+PFX %3 0 mdcl x	po:numeral_latin
+PFX %3 0 mdcc [xlc]	po:numeral_latin
+PFX %3 0 mdccx [lc]	po:numeral_latin
+PFX %3 0 mdccl x	po:numeral_latin
+PFX %3 0 mdccc [xl]	po:numeral_latin
+PFX %3 0 mdcccx [lc]	po:numeral_latin
+PFX %3 0 mdcccl x	po:numeral_latin
+PFX %3 0 mcm [xl]	po:numeral_latin
+PFX %3 0 mcmx [lc]	po:numeral_latin
+PFX %3 0 mcml x	po:numeral_latin
+PFX %3 0 mm [xlcdm]	po:numeral_latin
+PFX %3 0 mmx [lc]	po:numeral_latin
+PFX %3 0 mml x	po:numeral_latin
+PFX %3 0 mmc [xlcmd]	po:numeral_latin
+PFX %3 0 mmcx [lc]	po:numeral_latin
+PFX %3 0 mmcl x	po:numeral_latin
+PFX %3 0 mmcc [xlc]	po:numeral_latin
+PFX %3 0 mmccx [lc]	po:numeral_latin
+PFX %3 0 mmccl x	po:numeral_latin
+PFX %3 0 mmccc [xl]	po:numeral_latin
+PFX %3 0 mmcccx [lc]	po:numeral_latin
+PFX %3 0 mmcccl x	po:numeral_latin
+PFX %3 0 mmcd [xl]	po:numeral_latin
+PFX %3 0 mmcdx [lc]	po:numeral_latin
+PFX %3 0 mmcdl x	po:numeral_latin
+PFX %3 0 mmd [xlc]	po:numeral_latin
+PFX %3 0 mmdx [lc]	po:numeral_latin
+PFX %3 0 mmdl x	po:numeral_latin
+PFX %3 0 mmdc [xlc]	po:numeral_latin
+PFX %3 0 mmdcx [lc]	po:numeral_latin
+PFX %3 0 mmdcl x	po:numeral_latin
+PFX %3 0 mmdcc [xlc]	po:numeral_latin
+PFX %3 0 mmdccx [lc]	po:numeral_latin
+PFX %3 0 mmdccl x	po:numeral_latin
+PFX %3 0 mmdccc [xl]	po:numeral_latin
+PFX %3 0 mmdcccx [lc]	po:numeral_latin
+PFX %3 0 mmdcccl x	po:numeral_latin
+PFX %3 0 mmcm [xl]	po:numeral_latin
+PFX %3 0 mmcmx [lc]	po:numeral_latin
+PFX %3 0 mmcml x	po:numeral_latin
+PFX %3 0 mmm [xlcdm]	po:numeral_latin
+PFX %3 0 mmmx [lc]	po:numeral_latin
+PFX %3 0 mmml x	po:numeral_latin
+PFX %3 0 mmmc [xlcmd]	po:numeral_latin
+PFX %3 0 mmmcx [lc]	po:numeral_latin
+PFX %3 0 mmmcl x	po:numeral_latin
 
 
 # unidà de mexura (múltepli de dièxe)
