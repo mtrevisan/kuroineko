@@ -133,6 +133,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "arpij",			"",			1,	3,	"a",	"1775",			"Raprénder, apijarse de le piante.",
 "ars",			"",			1,	0,	"g",	"1775",			"Bruxar, skotar.",
 "ars",			"",			4,	3,	"a",	"1829",			"Arsar.",
+"arseg",			"",			1,	0,	"g",	"1928",			"(veneŧian) Arsar.",
 "arsir",			"",			1,	3,	"a",	"1852", 			"Arsar, skotar.",
 "art",			"ko",			1,	0,	"g",	"1829", 			"Prodúxer un àlibi.",
 "artikol",		"",			1,	3,	"a",	"", 				"",
