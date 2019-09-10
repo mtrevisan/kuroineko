@@ -796,6 +796,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "brav",			"",			1,	2,	"g",	"1867",			"Litigar, rinproverar.",
 "bravaŧ",		"",			1,	4,	"g",	"1896",			"Bravar.",
 "braveđ",		"x",			1,	4,	"a",	"1560",			"",
+"brax",			"",			1,	2,	"g",	"1928",			"(veneŧian)",
 "brax",			"in",			1,	2,	"g",	"1896",			"",
 "brax",			"inx",		1,	2,	"g",	"1896",			"",
 "brax",			"x",			1,	2,	"g",	"1829",			"",
