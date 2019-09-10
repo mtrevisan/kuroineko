@@ -413,6 +413,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "batuc",			"",			1,	3,	"a",	"1908",			"(coxòto)",
 "baŧil",			"",			1,	3,	"a",	"1775",			"Farnetegar, inportunar.",
 "baŧix",			"",			1,	3,	"a",	"1884",			"Baŧilar.",
+"baŧeg",			"",			1,	1,	"g",	"1928",			"(veneŧian)",
 "baŧeg",			"x",			1,	1,	"g",	"1775",			"Vacilar, xmemorar, trasoñar, farnetegar.",
 "bauc",			"",			1,	2,	"a",	"1829",			"Reinpenir de bava.",
 "bauc",			"x",			1,	2,	"a",	"1852",			"Baucar.",
