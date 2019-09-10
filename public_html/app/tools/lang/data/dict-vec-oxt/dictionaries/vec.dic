@@ -2062,9 +2062,6 @@ inbolsir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 inbolsamar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 inbólsamo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:inbolsamar
 inbólsamoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inbolsamar
-bolsegar/a0a1a2P0P1P2*0	po:verb ts:infinitive_simple
-bólsego/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:bolsegar
-bólsegoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:bolsegar
 inbolsonar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 inbólsono/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:inbolsonar
 inbólsonoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inbolsonar
@@ -2074,6 +2071,12 @@ xbólsonoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xbolsonar
 xbolŧar/a0a1P0P1	po:verb ts:infinitive_simple
 xbolŧo/a0a1P0P1FSI0	po:verb ts:indicative_present st:xbolŧar
 xbólŧoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:xbolŧar
+bolŧegar/a0a1P0P1*0	po:verb ts:infinitive_simple
+bólŧego/a0a1P0P1FSI0*0	po:verb ts:indicative_present st:bolŧegar
+bólŧegoe/a0a1I1*0	po:verb ts:indicative_present is:interrogative st:bolŧegar
+bolsegar/a0a1a2P0P1P2*0	po:verb ts:infinitive_simple
+bólsego/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:bolsegar
+bólsegoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:bolsegar
 bonir/a0a1a2d0d1d2P0P1P2+0r0	po:verb ts:infinitive_simple
 bonar/a0a1a2P0P1P2r0@0+0r5	po:verb ts:infinitive_simple
 bono/a0a1a2P0P1P2FSI0@0+0	po:verb ts:indicative_present st:bonar
@@ -2197,9 +2200,6 @@ xborsar/a0a1a2P0P1P2-0	po:verb ts:infinitive_simple
 xborso/a0a1a2P0P1P2FSI0-0	po:verb ts:indicative_present st:xborsar
 xbórsoe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:xborsar
 bortir/a0a1a2d0d1d2P0P1P2@0	po:verb ts:infinitive_simple
-xbosegar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-xbòsego/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xbosegar
-xbòsegoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xbosegar
 boskar/a0a1a2P0P1P2-1+0	po:verb ts:infinitive_simple
 bosko/a0a1a2P0P1P2FSI0-1+0	po:verb ts:indicative_present st:boskar
 bóskoe/a0a1a2I1-1+0	po:verb ts:indicative_present is:interrogative st:boskar
@@ -2262,6 +2262,12 @@ bòsoe/a0a1a2I1-1+0*0@0	po:verb ts:indicative_present is:interrogative st:bosar
 boŧar/a0a1P0P1-1+0*0@0V0	po:verb ts:infinitive_simple
 bòŧo/a0a1P0P1FSI0-1+0*0@0	po:verb ts:indicative_present st:boŧar
 bòŧoe/a0a1I1-1+0*0@0	po:verb ts:indicative_present is:interrogative st:boŧar
+xboŧegar/a0a1P0P1	po:verb ts:infinitive_simple
+xbòŧego/a0a1P0P1FSI0	po:verb ts:indicative_present st:xboŧegar
+xbòŧegoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:xboŧegar
+xbosegar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+xbòsego/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xbosegar
+xbòsegoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xbosegar
 bosolar/a0a1P0P1-1+0	po:verb ts:infinitive_simple
 bòsolo/a0a1P0P1FSI0-1+0	po:verb ts:indicative_present st:bosolar
 bòsoloe/a0a1I1-1+0	po:verb ts:indicative_present is:interrogative st:bosolar
@@ -26094,8 +26100,8 @@ bèn/A2	po:noun is:singular
 bèn/^6	po:adverb
 bon/M0U0^6ǎtělěƚětǐnǒNmf	po:adjective is:singular_masculine
 bon/M0U0^6ǎtělěƚětmf	po:noun is:singular_masculine
-bona/F0^6ǎtětǐn	po:adjective is:singular_femenine
-bona/F0^6ǎtět	po:noun is:singular_femenine
+bona/F0^6ǎSǎsǎtětǐn	po:adjective is:singular_femenine
+bona/F0^6ǎSǎsǎtět	po:noun is:singular_femenine
 cèn/A2	po:adjective is:singular_masculine
 cèn/A2	po:noun is:singular_masculine
 cèo/A1	po:adjective is:singular_masculine
@@ -32854,7 +32860,7 @@ bògol/M0U1TEmf	po:noun is:singular_masculine
 bòja/F0ět	po:noun is:singular_femenine
 bòɉa/F0ět	po:noun is:singular_femenine
 bòr/M0ǒn	po:noun is:singular_masculine
-bòra/F0	po:noun is:singular_femenine
+bòra/F0ělěƚ	po:noun is:singular_femenine
 bòsol/M0U1TEmf	po:noun is:singular_masculine
 bòtol/M0U1TEmf	po:noun is:singular_masculine
 bòŧol/M0U1mf	po:noun is:singular_masculine
@@ -38125,7 +38131,7 @@ perpetuin/M0	po:noun is:singular_masculine
 persegin/M0	po:noun is:singular_masculine
 pertenensa/F0M1	po:noun is:singular_femenine
 pertenenŧa/F0M1	po:noun is:singular_femenine
-petito/M0FS	po:noun is:singular_masculine
+petito/M0FS@0	po:noun is:singular_masculine
 pevarèla/F0TE	po:noun is:singular_femenine
 peverèla/F0TE	po:noun is:singular_femenine
 piatoloxo/A1FSmf	po:noun is:singular_masculine
@@ -44390,8 +44396,6 @@ bolso/M0FS	po:adjective is:singular_masculine
 bomò	po:noun is:masculine
 bonaroba/F0	po:noun is:singular_femenine
 bonaso/M0FSǒN	po:adjective is:singular_masculine
-bonaŧa/F0TE	po:adjective is:singular_femenine
-bonaŧa/F0TE	po:noun is:singular_femenine
 bonaŧo/M0FSǒN	po:adjective is:singular_masculine
 bonaŧo/M0FSTE	po:noun is:singular_masculine
 bonànemo/M0FS	po:noun is:singular_masculine
@@ -44451,7 +44455,7 @@ bósola/F0TE	po:noun is:singular_femenine
 bòlsera/F0	po:noun is:singular_femenine
 bòlŧera/F0	po:noun is:singular_femenine
 bòria/F0	po:noun is:singular_femenine
-bòso/M0FSělěƚět	po:noun is:singular_masculine
+bòso/M0FSělěƚětǒn	po:noun is:singular_masculine
 bòŧo/M0FSělět	po:noun is:singular_masculine
 bragadièr/A1	po:noun is:singular_masculine
 brago/M0FSǒt	po:noun is:singular_masculine
@@ -58365,7 +58369,6 @@ xbeƚorto/A1	po:noun is:singular_masculine
 xbrodegeŧo/M0FSTEmf	po:noun is:singular_masculine
 xenxía/F0	po:noun is:singular_femenine
 / Piccio, Giuseppe. Dizionario veneziano-italiano. II ed. Venezia, 1928.
-apetito/M0FS	po:noun is:singular_masculine
 arpegon/F0U0mf	po:noun is:singular_masculine
 arsada/F0Y0ǐn	po:adjective is:singular_femenine
 arsado/M0FSY0ǐn	po:adjective is:singular_masculine
@@ -58385,6 +58388,8 @@ baxejo/M0TE	po:noun is:singular_masculine
 bekonsèl/M0U0TE	po:noun is:singular_masculine
 bekonŧèl/M0U0	po:noun is:singular_masculine
 bidon/F0U0mf	po:noun is:singular_masculine
+bojaŧa/F0TE	po:noun is:singular_femenine
+boɉaŧa/F0TE	po:noun is:singular_femenine
 fragolin/M0TE	po:adjective is:singular_masculine
 katòco/M0FS	po:noun is:singular_masculine
 nervoxo/A1FSmf	po:noun is:singular_masculine
@@ -58393,6 +58398,6 @@ remònika/F0	po:noun is:singular_femenine
 skotadeo	po:adverb
 
 
-/ 20
+/ 22
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
