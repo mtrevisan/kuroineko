@@ -5227,6 +5227,8 @@ SFX M1 o io o
 SFX M1 0 io [lnr]
 
 
+### Fèltre-Belun ###
+
 # kanbio feltrin-belunexe ('[aeou][ln] > 'Vi)
 SFX ḃl Y 10
 SFX ḃl al ài al
@@ -5245,6 +5247,70 @@ SFX ḃƚ Y 3
 SFX ḃƚ lo i lo
 SFX ḃƚ l i [aeou]l
 SFX ḃƚ n i [aeou]n
+
+
+### Pàdoa ###
+
+# metafonèxi padoana
+SFX mf Y 55
+SFX mf el ili el
+SFX mf ol uli ol
+SFX mf en ini en
+SFX mf on uni on
+SFX mf er iri er
+SFX mf or uri or
+SFX mf exe ixi exe
+SFX mf edo idi edo
+SFX mf odo udi odo
+SFX mf eđo iđi eđo
+SFX mf ođo uđi ođo
+SFX mf eko iki eko
+SFX mf oko uki oko
+SFX mf eƚo iƚi eƚo
+SFX mf oƚo uƚi oƚo
+SFX mf eño iñi eño
+SFX mf oño iñi oño
+SFX mf eso isi eso
+SFX mf oso usi oso
+SFX mf eto iti eto
+SFX mf oto uti oto
+SFX mf eŧo iŧi eŧo
+SFX mf oŧo uŧi oŧo
+SFX mf evo ivi evo
+SFX mf ovo uvi ovo
+SFX mf exo ixi exo
+SFX mf oxo uxi oxo
+SFX mf orse ursi orse
+SFX mf ente inti ente
+SFX mf onte unti onte
+SFX mf oldo uldi oldo
+SFX mf ordo urdi ordo
+SFX mf orđo urđi orđo
+SFX mf olko ulki olko
+SFX mf orko urki orko
+SFX mf ento inti ento
+SFX mf onto unti onto
+SFX mf orxo urxi orxo
+SFX mf órden úrdini órden
+SFX mf ojoxo ujuxi ojoxo
+SFX mf oɉoxo uɉuxi oɉoxo
+SFX mf oloxo uluxi oloxo
+SFX mf oƚoxo uƚuxi oƚoxo
+SFX mf omoxo umuxi omoxo
+SFX mf oñoxo uñuxi oñoxo
+SFX mf oroxo uruxi oroxo
+SFX mf obioxo ubiuxi obioxo
+SFX mf ofioxo ufiuxi ofioxo
+SFX mf olioxo uliuxi olioxo
+SFX mf oƚioxo uƚiuxi oƚioxo
+SFX mf onioxo uniuxi onioxo
+SFX mf orioxo uriuxi orioxo
+SFX mf ostoxo ustuxi ostoxo
+SFX mf ordioxo urdiuxi ordioxo
+SFX mf obrioxo ubriuxi obrioxo
+
+
+### Viŧenŧa ###
 
 # kanbio viŧentin (re- > ra-, se- > sa-, per- > par-)
 PFX ǔŧ Y 24
@@ -5272,6 +5338,9 @@ PFX ǔŧ tè tà tè
 PFX ǔŧ té tà té
 PFX ǔŧ ŧe ŧa ŧe
 PFX ǔŧ ve va ver
+
+
+### Verona ###
 
 # kanbio veronexe (-ente > -ènte/M0FS, -ento > -ènto/M0FSmf)
 SFX ǔr Y 3
@@ -5347,7 +5416,6 @@ SFX TɆ jo ɉo/M0 jo
 # trasformaŧion intra varianti (femenil l > ƚe, j > ɉ)
 SFX TF Y 1
 SFX TF l ƚe/F0 [aeiouàèéíòóú]l
-
 
 # trasformaŧion iniŧial de paròla intra varianti (l > ƚ, j > ɉ, ŧ > s, đ > x)
 PFX TB Y 10
@@ -5499,45 +5567,45 @@ SFX V1 èra iereta/F0 [^aeoucijɉñ]èra
 
 
 # nominali deajetivali (-eŧa)
-SFX q0 Y 11
-SFX q0 0 eŧa/F0 n
-SFX q0 èl eleŧa/F0 èl
-SFX q0 èr ereŧa/F0 èr
-SFX q0 0 ŧa/F0 [^d]e
-SFX q0 o eŧa/F0 [^dks]o
-SFX q0 0 eŧa/F0 [^è][lr]
-SFX q0 òde odeŧa/F0 òde
-SFX q0 òdo odeŧa/F0 òdo
-SFX q0 òko okeŧa/F0 òko
-SFX q0 òso oseŧa/F0 òso
-SFX q0 o eŧa/F0 [^ò][dks]o
+SFX ěS Y 11
+SFX ěS 0 eŧa/F0 n
+SFX ěS èl eleŧa/F0 èl
+SFX ěS èr ereŧa/F0 èr
+SFX ěS 0 ŧa/F0 [^d]e
+SFX ěS o eŧa/F0 [^dks]o
+SFX ěS 0 eŧa/F0 [^è][lr]
+SFX ěS òde odeŧa/F0 òde
+SFX ěS òdo odeŧa/F0 òdo
+SFX ěS òko okeŧa/F0 òko
+SFX ěS òso oseŧa/F0 òso
+SFX ěS o eŧa/F0 [^ò][dks]o
 
 # nominali deajetivali (-esa)
-SFX q1 Y 13
-SFX q1 0 esa/F0 n
-SFX q1 èl elesa/F0 èl
-SFX q1 èr eresa/F0 èr
-SFX q1 0 sa/F0 [^d]e
-SFX q1 o esa/F0 [^dkƚs]o
-SFX q1 0 esa/F0 [^è][lr]
-SFX q1 òde odesa/F0 òde
-SFX q1 òdo odesa/F0 òdo
-SFX q1 òko okesa/F0 òko
-SFX q1 èƚo eƚesa/F0 èƚo
-SFX q1 òso osesa/F0 òso
-SFX q1 o esa/F0 [^è]ƚo
-SFX q1 o esa/F0 [^ò][dks]o
+SFX ěs Y 13
+SFX ěs 0 esa/F0 n
+SFX ěs èl elesa/F0 èl
+SFX ěs èr eresa/F0 èr
+SFX ěs 0 sa/F0 [^d]e
+SFX ěs o esa/F0 [^dkƚs]o
+SFX ěs 0 esa/F0 [^è][lr]
+SFX ěs òde odesa/F0 òde
+SFX ěs òdo odesa/F0 òdo
+SFX ěs òko okesa/F0 òko
+SFX ěs èƚo eƚesa/F0 èƚo
+SFX ěs òso osesa/F0 òso
+SFX ěs o esa/F0 [^è]ƚo
+SFX ěs o esa/F0 [^ò][dks]o
 
 # nominali deajetivali (-iŧia)
-SFX q2 Y 2
-SFX q2 0 iŧia/F0 l
-SFX q2 o iŧia/F0 o
+SFX ǐS Y 2
+SFX ǐS 0 iŧia/F0 l
+SFX ǐS o iŧia/F0 o
 
 # nominali deajetivali (-isia)
-SFX q3 Y 3
-SFX q3 0 isia/F0 l
-SFX q3 o isia/F0 o
-SFX q3 e isia/F0 ƚe
+SFX ǐs Y 3
+SFX ǐs 0 isia/F0 l
+SFX ǐs o isia/F0 o
+SFX ǐs e isia/F0 ƚe
 
 
 # nominali deverbali (-mento)
@@ -5751,65 +5819,6 @@ SFX v1 o ista/A2 [^i]o
 SFX v1 0 ista/A2 [^è]r
 SFX v1 òda odista/A2 òda
 SFX v1 ònia onista/A2 ònia
-
-
-# metafonèxi
-SFX mf Y 55
-SFX mf el ili el
-SFX mf ol uli ol
-SFX mf en ini en
-SFX mf on uni on
-SFX mf er iri er
-SFX mf or uri or
-SFX mf exe ixi exe
-SFX mf edo idi edo
-SFX mf odo udi odo
-SFX mf eđo iđi eđo
-SFX mf ođo uđi ođo
-SFX mf eko iki eko
-SFX mf oko uki oko
-SFX mf eƚo iƚi eƚo
-SFX mf oƚo uƚi oƚo
-SFX mf eño iñi eño
-SFX mf oño iñi oño
-SFX mf eso isi eso
-SFX mf oso usi oso
-SFX mf eto iti eto
-SFX mf oto uti oto
-SFX mf eŧo iŧi eŧo
-SFX mf oŧo uŧi oŧo
-SFX mf evo ivi evo
-SFX mf ovo uvi ovo
-SFX mf exo ixi exo
-SFX mf oxo uxi oxo
-SFX mf orse ursi orse
-SFX mf ente inti ente
-SFX mf onte unti onte
-SFX mf oldo uldi oldo
-SFX mf ordo urdi ordo
-SFX mf orđo urđi orđo
-SFX mf olko ulki olko
-SFX mf orko urki orko
-SFX mf ento inti ento
-SFX mf onto unti onto
-SFX mf orxo urxi orxo
-SFX mf órden úrdini órden
-SFX mf ojoxo ujuxi ojoxo
-SFX mf oɉoxo uɉuxi oɉoxo
-SFX mf oloxo uluxi oloxo
-SFX mf oƚoxo uƚuxi oƚoxo
-SFX mf omoxo umuxi omoxo
-SFX mf oñoxo uñuxi oñoxo
-SFX mf oroxo uruxi oroxo
-SFX mf obioxo ubiuxi obioxo
-SFX mf ofioxo ufiuxi ofioxo
-SFX mf olioxo uliuxi olioxo
-SFX mf oƚioxo uƚiuxi oƚioxo
-SFX mf onioxo uniuxi onioxo
-SFX mf orioxo uriuxi orioxo
-SFX mf ostoxo ustuxi ostoxo
-SFX mf ordioxo urdiuxi ordioxo
-SFX mf obrioxo ubriuxi obrioxo
 
 
 # avèrbi (-mente)
