@@ -5226,7 +5226,8 @@ SFX M1 e io e
 SFX M1 o io o
 SFX M1 0 io [lnr]
 
-# kanbio feltrin-belunexe: sostantivi plurali ko trasformaŧion '[aeou][ln] > 'Vi
+
+# kanbio feltrin-belunexe ('[aeou][ln] > 'Vi)
 SFX ḃl Y 10
 SFX ḃl al ài al
 SFX ḃl el éi el
@@ -5239,11 +5240,50 @@ SFX ḃl un úi un
 SFX ḃl l i [àéèóòú]l
 SFX ḃl n i [àéèóòú]n
 
-# kanbio feltrin-belunexe: sostantivi plurali ko trasformaŧion '[aeou].+[aeou][ln] > Vi
+# kanbio feltrin-belunexe ('[aeou].+[aeou][ln] > Vi)
 SFX ḃƚ Y 3
 SFX ḃƚ lo i lo
 SFX ḃƚ l i [aeou]l
 SFX ḃƚ n i [aeou]n
+
+# kanbio viŧentin (re- > ra-, se- > sa-, per- > par-)
+PFX ǔŧ Y 24
+PFX ǔŧ be ba ber
+PFX ǔŧ bè bà bèr
+PFX ǔŧ bé bà bér
+PFX ǔŧ fe fa fer
+PFX ǔŧ fè fà fèr
+PFX ǔŧ fé fà fér
+PFX ǔŧ me ma mer
+PFX ǔŧ mè mà mèr
+PFX ǔŧ mé mà mér
+PFX ǔŧ pe pa per
+PFX ǔŧ pè pà pèr
+PFX ǔŧ pé pà pér
+PFX ǔŧ re ra re
+PFX ǔŧ rè rà rè
+PFX ǔŧ ré rà ré
+PFX ǔŧ se sa se
+PFX ǔŧ sè sà sè
+PFX ǔŧ sé sà sé
+PFX ǔŧ Se Sa Se
+PFX ǔŧ te ta te
+PFX ǔŧ tè tà tè
+PFX ǔŧ té tà té
+PFX ǔŧ ŧe ŧa ŧe
+PFX ǔŧ ve va ver
+
+# kanbio veronexe (-ente > -ènte/M0FS, -ento > -ènto/M0FSmf)
+SFX ǔr Y 3
+SFX ǔr ente ènte/M0FS ente
+SFX ǔr ento ènto/M0FS ento
+SFX ǔr enta ènta/F0 enta
+
+# kanbio veronexe ko èle vanesente (-ente > -ènte/M0, -ento > -ènto/M0mf)
+SFX ǔř Y 3
+SFX ǔř ente ènte/M0 ente
+SFX ǔř ento ènto/M0 ento
+SFX ǔř enta ènta/F0 enta
 
 
 # trasformaŧion intra varianti (l > ƚ, j > ɉ, ŧ > s)
@@ -6473,45 +6513,6 @@ PFX :0 0 ko n
 # leniŧion iniŧial (gua- > va-)
 PFX gv Y 1
 PFX gv gu v gu[aà]
-
-# kanbio viŧentin (re- > ra-, se- > sa-, per- > par-)
-PFX ǔŧ Y 24
-PFX ǔŧ be ba ber
-PFX ǔŧ bè bà bèr
-PFX ǔŧ bé bà bér
-PFX ǔŧ fe fa fer
-PFX ǔŧ fè fà fèr
-PFX ǔŧ fé fà fér
-PFX ǔŧ me ma mer
-PFX ǔŧ mè mà mèr
-PFX ǔŧ mé mà mér
-PFX ǔŧ pe pa per
-PFX ǔŧ pè pà pèr
-PFX ǔŧ pé pà pér
-PFX ǔŧ re ra re
-PFX ǔŧ rè rà rè
-PFX ǔŧ ré rà ré
-PFX ǔŧ se sa se
-PFX ǔŧ sè sà sè
-PFX ǔŧ sé sà sé
-PFX ǔŧ Se Sa Se
-PFX ǔŧ te ta te
-PFX ǔŧ tè tà tè
-PFX ǔŧ té tà té
-PFX ǔŧ ŧe ŧa ŧe
-PFX ǔŧ ve va ver
-
-# kanbio veronexe (-ente > -ènte/M0FS, -ento > -ènto/M0FSmf)
-SFX ǔr Y 3
-SFX ǔr ente ènte/M0FS ente
-SFX ǔr ento ènto/M0FS ento
-SFX ǔr enta ènta/F0 enta
-
-# kanbio veronexe ko èle vanesente (-ente > -ènte/M0, -ento > -ènto/M0mf)
-SFX ǔř Y 3
-SFX ǔř ente ènte/M0 ente
-SFX ǔř ento ènto/M0 ento
-SFX ǔř enta ènta/F0 enta
 
 
 # numerali - koletivi (-èna)
