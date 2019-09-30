@@ -1924,6 +1924,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "frap",			"in",			4,	4,	"a",	"1775",			"",
 "frapol",		"",			1,	2,	"g",	"1854",			"Xgualŧir.",
 "frapol",		"in",			1,	2,	"g",	"1854",			"Rénder xgualŧio.",
+"frapol",		"s",			1,	2,	"g",	"1928",			"(veneŧian)",
 "frapol",		"in",			4,	6,	"a",	"1775",			"",
 "frapuñ",		"",			1,	4,	"a",	"1896",			"",
 "frapuñ",		"s",			1,	4,	"a",	"1854",			"",
