@@ -2389,6 +2389,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "grinbial",		"",			1,	6,	"g",	"",				"",
 "grinf",			"",			1,	2,	"a",	"1896",			"",
 "grinf",			"x",			1,	2,	"a",	"1775",			"Xgranfiñar.",
+"gringol",		"in",			1,	2,	"a",	"1928",			"(veneŧian)",
 "gringol",		"in",			4,	7,	"a",	"1854",			"Invojar.",
 "grint",			"",			1,	2,	"a",	"1852",			"Inrabiar.",
 "grint",			"in",			1,	2,	"a",	"1775",			"Inrabiar, ingrespar.",
