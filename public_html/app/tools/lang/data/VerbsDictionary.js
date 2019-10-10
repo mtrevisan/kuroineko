@@ -4284,6 +4284,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "mostr",			"",			1,	1,	"a",	"1775",			"",
 "mostr",			"de",			1,	1,	"a",	"1454",			"",
 "mostr",			"dex",		1,	1,	"a",	"1867",			"",
+"mostriđ",		"",			1,	5,	"a",	"1928",			"Rénder mostruoxo.",
 "mot",			"",			1,	1,	"g",	"1854",			"Koverđer erbe ko la tera par defenderle dal fredo.",
 "moteđ",			"",			1,	3,	"a",	"1775",			"",
 "motiđ",			"",			1,	3,	"a",	"1829",			"Moteđar.",
