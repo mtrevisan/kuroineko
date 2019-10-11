@@ -2706,6 +2706,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kag",			"in",			1,	1,	"g",	"1775",			"Dexgradar, saver malgrado.",
 "kag",			"rin",		1,	1,	"g",	"1867",			"",
 "kagaŧ",			"s",			1,	3,	"g",	"1854",			"",
+"kagol",			"in",			1,	1,	"g",	"1928",			"",
 "kaiđ",			"",			1,	2,	"a",	"1775",			"Sonekiar, lasar ʼndar đo el kao pal sòn.",
 "kain",			"",			1,	2,	"a",	"190",			"Guair.",
 "kaj",			"",			1,	1,	"g",	"1775",			"Kuajar, koagular.",
