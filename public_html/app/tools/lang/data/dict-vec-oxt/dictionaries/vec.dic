@@ -1505,13 +1505,13 @@ xberósoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xberosar
 xberoŧar/a0a1P0P1	po:verb ts:infinitive_simple
 xberoŧo/a0a1P0P1FSI0	po:verb ts:indicative_present st:xberoŧar
 xberóŧoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:xberoŧar
-inberlar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-inbèrlo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:inberlar
-inbèrloe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inberlar
 dexberir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 dexbarir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 inberir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 inbarir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
+inberlar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+inbèrlo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:inberlar
+inbèrloe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inberlar
 inbarlar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 inbarlo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:inbarlar
 inbàrloe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:inbarlar
@@ -2268,15 +2268,15 @@ xbòŧegoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:xboŧegar
 xbosegar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 xbòsego/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xbosegar
 xbòsegoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xbosegar
-bosolar/a0a1P0P1+0-1	po:verb ts:infinitive_simple
-bòsolo/a0a1P0P1FSI0+0-1	po:verb ts:indicative_present st:bosolar
-bòsoloe/a0a1I1+0-1	po:verb ts:indicative_present is:interrogative st:bosolar
-boŧolar/a0a1P0P1+0-1	po:verb ts:infinitive_simple
-bòŧolo/a0a1P0P1FSI0+0-1	po:verb ts:indicative_present st:boŧolar
-bòŧoloe/a0a1I1+0-1	po:verb ts:indicative_present is:interrogative st:boŧolar
-bosoƚar/a0a2P0P2+0-1	po:verb ts:infinitive_simple
-bòsoƚo/a0a2P0P2I0+0-1	po:verb ts:indicative_present st:bosoƚar
-bòsoƚoe/a0a2I1+0-1	po:verb ts:indicative_present is:interrogative st:bosoƚar
+bosolar/a0a1P0P1+0-1*0	po:verb ts:infinitive_simple
+bòsolo/a0a1P0P1FSI0+0-1*0	po:verb ts:indicative_present st:bosolar
+bòsoloe/a0a1I1+0-1*0	po:verb ts:indicative_present is:interrogative st:bosolar
+boŧolar/a0a1P0P1+0-1*0	po:verb ts:infinitive_simple
+bòŧolo/a0a1P0P1FSI0+0-1*0	po:verb ts:indicative_present st:boŧolar
+bòŧoloe/a0a1I1+0-1*0	po:verb ts:indicative_present is:interrogative st:boŧolar
+bosoƚar/a0a2P0P2+0-1*0	po:verb ts:infinitive_simple
+bòsoƚo/a0a2P0P2I0+0-1*0	po:verb ts:indicative_present st:bosoƚar
+bòsoƚoe/a0a2I1+0-1*0	po:verb ts:indicative_present is:interrogative st:bosoƚar
 inbovolar/a0a1P0P1	po:verb ts:infinitive_simple
 inbòvolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:inbovolar
 inbòvoloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:inbovolar
@@ -58141,7 +58141,7 @@ vò	po:noun is:masculine
 xake–take	po:adverb
 xbañasèo/A1	po:noun is:singular_masculine
 xbañaŧèo/A1	po:noun is:singular_masculine
-xbarlòto/A1FS	po:adjective is:singular_masculine
+xbarlòto/M0FSǒn	po:noun is:singular_masculine
 xbaveđada/F0Y0	po:adjective is:singular_femenine
 xbaveđado/M0FSY0	po:adjective is:singular_masculine
 xbavexada/F0Y0	po:adjective is:singular_femenine
@@ -58405,7 +58405,7 @@ bakalada/F0Y0	po:noun is:singular_femenine
 bakaƚada/F0Y0	po:noun is:singular_femenine
 barababào/M0	po:interjection
 barbuseto/M0FSⱣd	po:noun is:singular_masculine
-barnifo/A1FSǒN	po:adjective is:singular_masculine
+barnifo/A1FS*0ǒN	po:adjective is:singular_masculine
 baruka/F0	po:noun is:singular_femenine
 baxejo/M0Ṿe	po:noun is:singular_masculine
 bekonsèl/M0ɃlṾe	po:noun is:singular_masculine
@@ -58631,16 +58631,21 @@ ronkido/M0FSY0	po:adjective is:singular_masculine
 rovinada/F0Y0	po:adjective is:singular_femenine
 rovinado/M0FSY0	po:adjective is:singular_masculine
 roxmada/F0	po:noun is:singular_femenine
+salton	po:adverb
 sparpañada/F0Y0	po:adjective is:singular_femenine
 sparpañado/M0FSY0	po:adjective is:singular_masculine
 teñaŧo/M0FSṾe	po:noun is:singular_masculine
+xbalada/F0Y0	po:noun is:singular_femenine
+xbalado/M0FSY0	po:noun is:singular_masculine
+xbaƚada/F0Y0	po:noun is:singular_femenine
+xbaƚado/M0Y0	po:noun is:singular_masculine
 xbardelada/F0Y0	po:adjective is:singular_femenine
 xbardelado/M0FSY0	po:adjective is:singular_masculine
 xbardeƚada/F0Y0	po:adjective is:singular_femenine
 xbardeƚado/M0Y0	po:adjective is:singular_masculine
-salton	po:adverb
+xbarlefo/M0FS	po:noun is:singular_masculine
 
 
-/ 142
+/ 144
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ

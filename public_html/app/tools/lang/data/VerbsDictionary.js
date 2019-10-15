@@ -741,6 +741,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "boŧol",			"",			1,	1,	"g",	"1980",			"",
 "boŧol",			"dex",		1,	1,	"g",	"1854",			"Kavar el boŧolo.",
 "boŧol",			"in",			1,	1,	"g",	"1854",			"",
+"boŧol",			"x",			1,	1,	"g",	"1928",			"Profitar de òñi pi cèo vantajo.",
 "bovol",			"in",			1,	1,	"g",	"1854",			"Inanelar.",
 "boxem",			"",			1,	1,	"a",	"1900",			"(veronexe)",
 "boxem",			"dex",		1,	1,	"a",	"1867",			"",
