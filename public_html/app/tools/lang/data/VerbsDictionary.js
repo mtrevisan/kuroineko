@@ -8039,6 +8039,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "xbring",		"",			1,	3,	"a",	"1854",			"Spruŧar akua de i forneri sora de ʼl pan.",
 "xbris",			"",			1,	3,	"a",	"1560",			"",
 "xbrisi",		"",			1,	3,	"a",	"1810",			"",
+"xbriŧ",			"",			1,	3,	"a",	"1928",			"",
+"xbriŧi",		"",			1,	3,	"a",	"",				"",
 "xbrum",			"",			1,	3,	"a",	"1775",			"Trapelar, skiumar.",
 "xbuand",		"",			1,	3,	"g",	"1980",			"Xbàter i pani lavando.",
 "xburat",		"",			1,	4,	"g",	"",				"Saketar.",
