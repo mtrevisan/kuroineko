@@ -3084,11 +3084,11 @@ cokar/a0a1a2P0P1P2+0*0	po:verb ts:infinitive_simple
 còko/a0a1a2P0P1P2FSI0+0*0	po:verb ts:indicative_present st:cokar
 còkoe/a0a1a2I1+0*0	po:verb ts:indicative_present is:interrogative st:cokar
 cokeđar/a0a1P0P1*0	po:verb ts:infinitive_simple
-cokeđo/a0a1P0P1FSI0*0	po:verb ts:indicative_present st:cokiđar
-cokéđoe/a0a1I1*0	po:verb ts:indicative_present is:interrogative st:cokiđar
+cokeđo/a0a1P0P1FSI0*0	po:verb ts:indicative_present st:cokeđar
+cokéđoe/a0a1I1*0	po:verb ts:indicative_present is:interrogative st:cokeđar
 cokexar/a0a1a2P0P1P2*0	po:verb ts:infinitive_simple
-cokexo/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:cokixar
-cokéxoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:cokixar
+cokexo/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:cokexar
+cokéxoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:cokexar
 scoketar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 scoketo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:scoketar
 scokétoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:scoketar
@@ -31358,8 +31358,12 @@ scafo/M0FSǒNǒt	po:noun is:singular_masculine
 scanta/A2	po:adjective is:singular_femenine
 scanta/A2	po:pronoun
 scanta	po:adverb
+scantin/M0ět	po:adjective is:singular_masculine
+scantin/M0ět	po:pronoun is:singular_masculine
 scantina/F0ět	po:adjective is:singular_femenine
 scantina/F0ět	po:pronoun is:singular_femenine
+scantina	po:adverb
+scantin	po:adverb
 scantiva/F0	po:noun is:singular_femenine
 scao/A1	po:adjective is:singular_masculine
 scao/A1	po:noun is:singular_masculine
@@ -31537,13 +31541,14 @@ skaño/M0FSělěƚět	po:noun is:singular_masculine
 skapelòto/M0ṾeFS	po:noun is:singular_masculine
 skarobòla/F0Ṿe	po:noun is:singular_femenine
 skaròña/F0	po:noun is:singular_femenine
-skarpa/F0ělěƚětǒN	po:noun is:singular_femenine
+skarpa/F0ělěƚět	po:noun is:singular_femenine
 skarpanŧa/F0Ṿe	po:noun is:singular_femenine
 skarpaŧon/F0ɃlⱣdṾe	po:noun is:singular_masculine
 skarpeto/M0FSⱣd	po:noun is:singular_masculine
 skarpèr/M0V0	po:noun is:singular_masculine
 skarpèra/F0V0	po:noun is:singular_femenine
 skarpin/M0	po:noun is:singular_masculine
+skarpon/F0ɃlⱣd	po:noun is:singular_masculine
 skato/M0FSǒn	po:noun is:singular_masculine
 skatur/A1	po:noun is:singular_masculine
 skàndola/F0Ṿe	po:noun is:singular_femenine
@@ -34138,9 +34143,9 @@ kavastraŧa/F0Ṿe	po:noun is:singular_femenine
 kaveaja/F0Ṿe	po:noun is:singular_femenine
 kaveaña/F0	po:noun is:singular_femenine
 kavejèr/M0V0	po:noun is:singular_masculine
-kavejèra/F0V0	po:noun is:singular_femenine
+kavejèra/F0V0*0	po:noun is:singular_femenine
 kaveɉèr/M0V0	po:noun is:singular_masculine
-kaveɉèra/F0V0	po:noun is:singular_femenine
+kaveɉèra/F0V0*0	po:noun is:singular_femenine
 kavelon/F0ɃlⱣdṾe	po:noun is:singular_masculine
 kavesa/F0*0ǒN	po:noun is:singular_femenine
 kavesal/F0ɃlṾēět	po:noun is:singular_masculine
@@ -53750,8 +53755,6 @@ insiminido/M0FSY0	po:noun is:singular_masculine
 insinganada/F0Y0Y1	po:noun is:singular_femenine
 inskarpiada/F0Y0	po:noun is:singular_femenine
 inskarpiado/M0FSY0	po:noun is:singular_masculine
-inskaturida/F0Y0	po:noun is:singular_femenine
-inskaturido/M0FSY0	po:noun is:singular_masculine
 insolfarado/M0FSY0	po:noun is:singular_masculine
 insolidado/M0FSY0	po:noun is:singular_masculine
 insoƚidado/M0Y0	po:noun is:singular_masculine
@@ -54199,6 +54202,8 @@ skarmida/F0Y0	po:noun is:singular_femenine
 skarmido/M0FSY0	po:noun is:singular_masculine
 skarselada/F0Y0Y1	po:noun is:singular_femenine
 skarseƚada/F0Y0Y1	po:noun is:singular_femenine
+skaturida/F0Y0+0	po:noun is:singular_femenine
+skaturido/M0FSY0+0	po:noun is:singular_masculine
 skeletrida/F0Y0	po:noun is:singular_femenine
 skeletrido/M0FSY0	po:noun is:singular_masculine
 skeƚetrida/F0Y0	po:noun is:singular_femenine
@@ -55425,10 +55430,6 @@ buŧoladèra/F0V0	po:noun is:singular_femenine
 cacareŧo/M0FSⱣdṾe	po:noun is:singular_masculine
 cacarèla/F0Ṿe	po:adjective is:singular_femenine
 dakòl/M0ɃlṾe	po:noun is:singular_masculine
-deskavejada/F0Y0	po:adjective is:singular_femenine
-deskavejado/M0FSY0	po:adjective is:singular_masculine
-deskaveɉada/F0Y0	po:adjective is:singular_femenine
-deskaveɉado/M0FSY0	po:adjective is:singular_masculine
 drita/F0	po:adjective is:singular_femenine
 drito/FS	po:adjective is:singular_masculine
 đerla/F0Ṿè	po:noun is:singular_femenine
@@ -55594,6 +55595,14 @@ sikiñòƚa/F0	po:noun is:singular_femenine
 skalmanada/F0Y0	po:noun is:singular_femenine
 skalmanado/M0FSY0	po:noun is:singular_masculine
 skarabiŧo/M0FSṾe	po:noun is:singular_masculine
+skavejada/F0Y0-0	po:adjective is:singular_femenine
+skavejada/F0Y0-0	po:noun is:singular_femenine
+skavejado/M0FSY0-0	po:adjective is:singular_masculine
+skavejado/M0FSY0-0	po:noun is:singular_masculine
+skaveɉada/F0Y0-0	po:adjective is:singular_femenine
+skaveɉada/F0Y0-0	po:noun is:singular_femenine
+skaveɉado/M0FSY0-0	po:adjective is:singular_masculine
+skaveɉado/M0FSY0-0	po:noun is:singular_masculine
 skaveŧa/F0Ṿe	po:adjective is:singular_femenine
 skoaŧin/M0Ṿe	po:noun is:singular_masculine
 skodelèra/F0	po:adjective is:singular_femenine
@@ -58520,6 +58529,8 @@ ingringoƚida/F0Y0	po:adjective is:singular_femenine
 ingringoƚido/M0Y0	po:adjective is:singular_masculine
 inkañolido/M0FSY0	po:noun is:singular_masculine
 inkañoƚido/M0Y0	po:noun is:singular_masculine
+inkartada/F0Y0	po:adjective is:singular_femenine
+inkartado/M0FSY0	po:adjective is:singular_masculine
 inpatada/F0Y0	po:adjective is:singular_femenine
 inpatado/M0FSY0	po:adjective is:singular_masculine
 inpetolada/F0Y0	po:adjective is:singular_femenine
@@ -58651,9 +58662,18 @@ rovinada/F0Y0	po:adjective is:singular_femenine
 rovinado/M0FSY0	po:adjective is:singular_masculine
 roxmada/F0	po:noun is:singular_femenine
 salton	po:adverb
+scake	po:interjection
+scenđe	po:interjection
+scenxe	po:interjection
+scike–scake	po:interjection
+scike	po:interjection
 skanocada/F0Y0	po:adjective is:singular_femenine
 skanocado/M0FSY0	po:adjective is:singular_masculine
 skarapétola/F0Ṿe	po:noun is:singular_femenine
+skarponŧin/M0Ṿe	po:noun is:singular_masculine
+skàsola/F0Ṿe	po:noun is:singular_femenine
+skàŧola/F0	po:noun is:singular_femenine
+skekè	po:noun
 spajòto/M0FS	po:noun is:singular_masculine
 spaɉòto/M0FS	po:noun is:singular_masculine
 sparpañada/F0Y0	po:adjective is:singular_femenine
@@ -58673,6 +58693,6 @@ xbrodacoxo/A1FSⱣd	po:noun is:singular_masculine
 xbuxa/F0	po:noun is:singular_femenine
 
 
-/ 148
+/ 150
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
