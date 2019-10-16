@@ -2805,6 +2805,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kankar",		"in",			4,	6,	"a",	"",				"Inkartapekorir, inkativir.",
 "kankren",		"in",			1,	5,	"a",	"1867",			"",
 "kankren",		"in",			4,	7,	"a",	"1775",			"",
+"kanoc",			"s",			1,	3,	"g",	"1928",			"",
 "kanon",			"",			1,	3,	"a",	"1775",			"Butar đo kol kanon.",
 "kanoniđ",		"",			1,	5,	"a",	"",				"",
 "kanop",			"",			1,	3,	"a",	"1998",			"Xgualivar el teren kavando kropani.",
