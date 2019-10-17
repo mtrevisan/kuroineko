@@ -2326,6 +2326,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "granfiñ",		"x",			1,	5,	"a",	"1852",			"Robar.",
 "grank",			"x",			4,	5,	"a",	"",				"",
 "grank",			"dex",		4,	5,	"a",	"1854",			"Xgrankir.",
+"granol",		"x",			1,	2,	"g",	"1928",			"Xgranocar.",
 "granp",			"",			1,	2,	"g",	"1980",			"(bixiak) Brinkar.",
 "granŧ",			"",			4,	5,	"a",	"1829",			"Deventar rànsido.",
 "granx",			"",			4,	5,	"a",	"1854",			"Invietar, invietir.",
