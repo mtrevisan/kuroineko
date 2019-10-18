@@ -13197,12 +13197,12 @@ mútrigoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:mutrigar
 muŧar/a0a1P0P1	po:verb ts:infinitive_simple
 muŧo/a0a1P0P1FSI0	po:verb ts:indicative_present st:muŧar
 múŧoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:muŧar
-musegar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-músego/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:musegar
-músegoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:musegar
-muŧegar/a0a1P0P1	po:verb ts:infinitive_simple
-múŧego/a0a1P0P1FSI0	po:verb ts:indicative_present st:muŧegar
-múŧegoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:muŧegar
+musegar/a0a1a2P0P1P2*0	po:verb ts:infinitive_simple
+músego/a0a1a2P0P1P2FSI0*0	po:verb ts:indicative_present st:musegar
+músegoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:musegar
+muŧegar/a0a1P0P1*0	po:verb ts:infinitive_simple
+múŧego/a0a1P0P1FSI0*0	po:verb ts:indicative_present st:muŧegar
+múŧegoe/a0a1I1*0	po:verb ts:indicative_present is:interrogative st:muŧegar
 xmuxar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 xmuxo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xmuxar
 xmúxoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xmuxar
@@ -30442,7 +30442,7 @@ morfolòxego/A1FS	po:adjective is:singular_masculine
 morfoƚoxía/F0	po:noun is:singular_femenine
 morfoƚòxego/A1	po:adjective is:singular_masculine
 moroxa/F0@0*0ětǐn	po:noun is:singular_femenine
-moroxo/M0FS@0*0ětǐnⱣd	po:noun is:singular_masculine
+moroxo/M0FS@0*0ětǐnǒNⱣd	po:noun is:singular_masculine
 moska/F0ět	po:noun is:singular_femenine
 moskarola/F0V0	po:noun is:singular_femenine
 moskaroƚa/F0V1	po:noun is:singular_femenine
@@ -34597,7 +34597,7 @@ loamèra/F0V0	po:noun is:singular_femenine
 lodeta/F0ět	po:noun is:singular_femenine
 lodeto/M0FSětⱣd	po:noun is:singular_masculine
 lodra/F0*0	po:noun is:singular_femenine
-lodro/A1*0	po:adjective is:singular_masculine
+lodro/A1*0ǒN	po:adjective is:singular_masculine
 longaña/F0*0	po:noun is:singular_femenine
 lontananŧa/F0Ṿe	po:noun is:singular_femenine
 lonŧa/F0Ṿe	po:noun is:singular_femenine
@@ -34711,7 +34711,7 @@ luxor/F0*0Ᵽd	po:noun is:singular_masculine
 ƚodeta/F0ěŧ	po:noun is:singular_femenine
 ƚodeto/M0ěŧⱣd	po:noun is:singular_masculine
 ƚodra/F0	po:noun is:singular_femenine
-ƚodro/A1	po:adjective is:singular_masculine
+ƚodro/A1ǒÑ	po:adjective is:singular_masculine
 ƚongaña/F0	po:noun is:singular_femenine
 ƚonsa/F0	po:noun is:singular_femenine
 ƚontanansa/F0	po:noun is:singular_femenine
@@ -51502,7 +51502,6 @@ xlisoxo/A1FSWaⱣd	po:adjective is:singular_masculine
 xlisoxo/A1FSⱣd	po:noun is:singular_masculine
 xlípego/A1FS	po:adjective is:singular_masculine
 xlípego/A1FS	po:noun is:singular_masculine
-xlodron/A2ɃlⱣd	po:adjective is:singular_masculine
 xlovon/A2ɃlⱣd	po:noun is:singular_masculine
 xlubio/M0ǒn	po:noun is:singular_masculine
 xmafaradina/F0	po:noun is:singular_femenine
@@ -58632,10 +58631,10 @@ memini	po:noun is:masculine
 minconada/F0Y0	po:adjective is:singular_femenine
 minconado/M0FSY0	po:adjective is:singular_masculine
 mincónbari	po:interjection
-mojadiŧo/M0FSṾe	po:noun is:singular_masculine
-mojaiŧo/M0FSṾe	po:noun is:singular_masculine
-moɉadiŧo/M0FSṾe	po:noun is:singular_masculine
-moɉaiŧo/M0FSṾe	po:noun is:singular_masculine
+mojadiŧo/M0FSṾe*0	po:noun is:singular_masculine
+mojaiŧo/M0FSṾe*0	po:noun is:singular_masculine
+moɉadiŧo/M0FSṾe*0	po:noun is:singular_masculine
+moɉaiŧo/M0FSṾe*0	po:noun is:singular_masculine
 mulada/F0Y0Y1	po:noun is:singular_femenine
 muƚada/F0Y0Y1	po:noun is:singular_femenine
 nanarèla/F0Ṿe	po:noun is:singular_femenine
@@ -58757,8 +58756,14 @@ xlagañoxo/A1FSWaⱣd	po:adjective is:singular_masculine
 xlagañoxo/A1FSⱣd	po:noun is:singular_masculine
 xlanguorida/F0Y0	po:adjective is:singular_femenine
 xlanguorido/M0FSY0	po:adjective is:singular_masculine
+xlavacada/F0Y0	po:noun is:singular_femenine
+xlavacado/M0FSY0	po:noun is:singular_masculine
+xlondron/A2ɃlⱣd	po:adjective is:singular_masculine
+xlondron/A2ɃlⱣd	po:noun is:singular_masculine
+xmelondrina/F0	po:noun is:singular_femenine
+xmeƚondrina/F0	po:noun is:singular_femenine
 
 
-/ 161
+/ 162
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ

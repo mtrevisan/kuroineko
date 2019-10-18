@@ -4370,6 +4370,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "mutrig",		"",			1,	1,	"a",	"1894",			"Adentar.",
 "muŧ",			"",			1,	1,	"a",	"1867",			"(ark.) Skansar, evitar.",
 "muŧeg",			"",			1,	1,	"a",	"1829",			"Muñegar.",
+"muŧeg",			"x",			1,	1,	"a",	"1928",			"",
 "mux",			"x",			1,	1,	"a",	"1900",			"(veronexe) Renfaŧar.",
 "muxeg",			"",			1,	1,	"a",	"1775",			"Mañar poko, muñegar, biasegar.",
 "muxeg",			"x",			1,	1,	"a",	"1854",			"",
