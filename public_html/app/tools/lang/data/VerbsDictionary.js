@@ -6751,6 +6751,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "suàd",			"per",		3,	2,	"g",	"1867",			"",
 "sub",			"",			4,	3,	"a",	"1775",			"",
 "subi",			"",			1,	1,	"a",	"1810",			"Supiar.",
+"subiot",		"",			1,	4,	"g",	"1928",			"(veneŧian) Fiscar, supiar.",
 "subiot",		"in",			1,	4,	"g",	"",				"Vestir streto, a tubo.",
 "sublim",		"",			1,	4,	"a",	"1775",			"",
 "suc",			"",			1,	1,	"a",	"1854",			"",
