@@ -7032,6 +7032,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "téñ",			"subs",		3,	1,	"a",	"1376",			"",
 "téñ",			"sus",		3,	1,	"a",	"",				"",
 "téñ",			"tra",		3,	1,	"a",	"1775",			"",
+"teñox",			"",			1,	3,	"a",	"1928",			"(veneŧian) Lexinar so le spexe.",
 "tepid",			"",			4,	5,	"a",	"1877",			"",
 "tepid",			"in",			4,	5,	"a",	"1852",			"Rénder tepido.",
 "ter",			"",			1,	1,	"g",	"1867",			"Méter soto tera.",
