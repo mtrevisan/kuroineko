@@ -3,18 +3,20 @@
 	<node oor:name="Paths">
 		<node oor:name="AutoCorrect" oor:op="fuse" oor:mandatory="true">
 			<node oor:name="InternalPaths">
-				<node oor:name="%origin%/../autocorrect/acor_vec.dat" oor:op="fuse" />
+				<node oor:name="%origin%/../autocorrect" oor:op="fuse" />
 			</node>
 			<prop oor:name="WritePath">
-			<!-- C:\Users\mauro\AppData\Roaming\OpenOffice\4\user -->
-			<!-- C:\Program Files\LibreOffice 5\share -->
-				<value>$(userurl)/autocorr</value>
-				<!-- <value>$(insturl)/share/autocorr</value> -->
+			<!-- C:\Users\mauro\AppData\Roaming\LibreOffice\4\user\autocorr -->
+			<!-- C:\Users\utente\AppData\Roaming\LibreOffice\4\user\autocorr -->
+			<!-- C:\Program Files\LibreOffice 5\share\autocorr -->
+			<!-- C:\Program Files (x86)\LibreOffice 5\share\autocorr -->
+				<!-- <value>$(userurl)/autocorr</value> -->
+				<value>$(insturl)/share/autocorr</value>
 			</prop>
 		</node>
 		<node oor:name="AutoText" oor:op="fuse" oor:mandatory="true">
 			<node oor:name="InternalPaths">
-				<node oor:name="%origin%/../autotext/autotext_vec.bau" oor:op="fuse" />
+				<node oor:name="%origin%/../autotext" oor:op="fuse" />
 			</node>
 			<prop oor:name="WritePath">
 				<value>$(userurl)/autotext</value>
