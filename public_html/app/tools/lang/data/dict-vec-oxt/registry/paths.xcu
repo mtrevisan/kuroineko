@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<oor:component-data oor:package="org.openoffice.Office" oor:name="Paths" xmlns:install="http://openoffice.org/2004/installation" xmlns:oor="http://openoffice.org/2001/registry" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<oor:component-data xmlns:oor="http://openoffice.org/2001/registry" xmlns:xs="http://www.w3.org/2001/XMLSchema" oor:package="org.openoffice.Office" oor:name="Paths" xmlns:install="http://openoffice.org/2004/installation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<node oor:name="Paths">
 		<node oor:name="AutoCorrect" oor:op="fuse" oor:mandatory="true">
 			<node oor:name="InternalPaths">
@@ -11,7 +11,8 @@
 			<!-- C:\Program Files\LibreOffice 5\share\autocorr -->
 			<!-- C:\Program Files (x86)\LibreOffice 5\share\autocorr -->
 				<!-- <value>$(userurl)/autocorr</value> -->
-				<value>$(insturl)/share/autocorr</value>
+				<!-- <value>$(insturl)/share/autocorr</value> -->
+				<value>file:///D:/Mauro/acorr</value>
 			</prop>
 		</node>
 		<node oor:name="AutoText" oor:op="fuse" oor:mandatory="true">
@@ -19,8 +20,9 @@
 				<node oor:name="%origin%/../autotext" oor:op="fuse" />
 			</node>
 			<prop oor:name="WritePath">
-				<value>$(userurl)/autotext</value>
+				<!-- <value>$(userurl)/autotext</value> -->
 				<!-- <value>$(insturl)/share/autotext</value> -->
+				<value>file:///D:/Mauro/acorr</value>
 			</prop>
 		</node>
 	</node>
