@@ -35,9 +35,10 @@ KEY esdr|redft|trfg|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gf
 
 WORDCHARS -–ʼ
 
+# figure and en dashes
 BREAK 2
-BREAK ‒	# figure dash
-BREAK --	# en dash
+BREAK ‒
+BREAK --
 
 # affix rules can strip full words, not only one less characters
 FULLSTRIP
@@ -80,13 +81,13 @@ REP ù ú
 REP d đ
 REP s x
 REP x s
-REP ʼ ʼ_	# put a space after apostrophe
-REP - ‒	# minus sign to figure dash
-REP - –	# minus sign to en dash
-REP – ‒	# en dash to figure dash
-REP – -	# en dash to minus sign
-REP ‒ -	# figure dash to minus sign
-REP ‒ –	# figure dash to en dash
+REP ʼ ʼ_
+REP - ‒
+REP - –
+REP – ‒
+REP – -
+REP ‒ -
+REP ‒ –
 REP mb nb
 REP mp np
 REP sb xb
