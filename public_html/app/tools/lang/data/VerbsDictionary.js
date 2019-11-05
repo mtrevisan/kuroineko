@@ -7639,6 +7639,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vari",			"in",			1,	1,	"g",	"1980",			"",
 "vari",			"x",			1,	1,	"g",	"1560",			"",
 "varik",			"pre",		1,	1,	"g",	"1829",			"",
+"variol",		"",			1,	3,	"g",	"1775",			"Tòrse el vajòl",
 "varol",			"",			1,	3,	"g",	"1775",			"Tòrse el vajòl",
 "vaskon",		"",			1,	4,	"a",	"1829",			"Bular.",
 "vast",			"",			1,	1,	"g",	"1867",			"Guastar.",
