@@ -1,6 +1,17 @@
+version 2.3.0, 2019/11/06:
+- added 2.730.239 new words to the dictionary, reaching a total of 38.104.185 unique words
+- rules were revised one more time to better remember then when compiling the dictionary file
+- processed the dictionary "Patuzzi, Gaetano Lionello; Bolognini, Giorgio; Bolognini, Adolfo. Piccolo dizionario del dialetto moderno della città di Verona. Verona, 1900."
+- processed the dictionary "Padoan, Lorenzo. Saggiuoli clodiensi - Un poʼ dʼappendice al Boerio, a maggior illustrazione del dialetto di Chioggia. Adria, 1906."
+- processed the dictionary "Piccio, Giuseppe. Dizionario veneziano-italiano. II ed. Venezia, 1928."
+- added veronexe variant to certain words
+- added new rules for productions
+- corrected the `s/x` prefix before `ŧ`
+- added auto-correct, sentence exceptions, and word exceptions files
+
 version 2.2.6, 2019/07/10:
 - added 989.267 new words to the dictionary, reaching a total of 35.373.946 unique words (dictionary has been revised)
-- rules revised and simplified
+- rules were revised and simplified
 - processed the dictionary "Bindoni, Vincenzo. Vocabolarietto del dialetto trevigiano ad uso delle scuole. Treviso, 1884."
 - processed the dictionary "Nazari, Giulio. Parallelo fra il dialetto bellunese rustico e la lingua italiana. Belluno, 1894."
 - processed the dictionary "Kosovitz, Ernesto. Dizionario del dialetto triestino e della lingua italiana. Trieste, 1877."
@@ -20,7 +31,7 @@ version 2.2.3, 2019/02/24:
 
 version 2.2.2, 2019/01/27:
 - added 3.309.022 (effective) new words to the dictionary, reaching a total of 35.669.181 unique words
-- added vicentine change from 'e' to 'a' before 'r'
+- added vicentine change from `e` to `a` before `r`
 - rules cleaning
 - minor error corrections on certain rules applied together
 - processed the dictionary "Pajello, Luigi. Dizionario vicentino-italiano e italiano-vicentino. Vicenza, 1896."
@@ -55,7 +66,7 @@ version 2.1.1, 2018/01/21:
 version 2.1.0, 2017/08/10:
 - added 3.639 new words to the dictionary
 - corrected some errors on the accents, plus many sparse errors
-- added corrections on 'm' before 'b' and 'p'
+- added corrections on `m` before `b` and `p`
 - added (and corrected) a lot of thesaurus entries
 - added the Vitoriexe variant
 
@@ -64,7 +75,7 @@ version 2.0.0, 2017/04/11:
 - added the numbers separated by a dash
 - added unit of measures
 - added more immediate corrections
-- removed a bug where 'l' and 'ƚ' are mixed together in the same word
+- removed a bug where `l` and `ƚ` are mixed together in the same word
 - corrected some bugs about the rules to be applied to some words
 - corrected some verb forms
 - corrected bugs about accents
@@ -78,18 +89,18 @@ version 1.4.3, 2016/10/14:
 
 version 1.4.2, 2016/09/04:
 - added 1.172 new words to the dictionary
-- added rule for pejoratives in '-ato/a'
+- added rule for pejoratives in `-ato/a`
 
 version 1.4.1, 2016/08/16:
 - migrated to LibreOffice 5.2
 - added 530 new words to the dictionary
-- processed the dictionary "Giovanni da Schio. Saggio del dialetto vicentino, uno dei veneti, ossia, raccolta di voci usate a Vicenza, per servire alla storia del suo popolo e della sua civiltà. Estratto d'opera assai maggiore. Padova : s.n., 1855."
+- processed the dictionary "Giovanni da Schio. Saggio del dialetto vicentino, uno dei veneti, ossia, raccolta di voci usate a Vicenza, per servire alla storia del suo popolo e della sua civiltà. Estratto dʼopera assai maggiore. Padova : s.n., 1855."
 
 version 1.4.0, 2016/08/15:
 - heavily changed the production rules including the most common prefixes
 - added rules for the interrogatives of some verbs, for the production of final consonants
 - added 2.268 new words to the dictionary
-- processed the dictionary "Mutinelli, Fabio. Lessico veneto: compilato per agevolare la lettura della storia dell'antica repubblica veneta e lo studio dei documenti ad esse relativi. Venezia : s.n., 1852."
+- processed the dictionary "Mutinelli, Fabio. Lessico veneto: compilato per agevolare la lettura della storia dellʼantica repubblica veneta e lo studio dei documenti ad esse relativi. Venezia : s.n., 1852."
 - processed the dictionary "Contarini, Pietro. Dizionario tascabile delle voci e frasi particolari del dialetto veneziano. Venezia : s.n., 1852."
 
 version 1.3.6, 2016/07/25:
@@ -100,17 +111,17 @@ version 1.3.6, 2016/07/25:
 
 version 1.3.5, 2016/07/06:
 - added 2.204 new words to the dictionary
-- added the rule for the altered substantives in 'stra-'
+- added the rule for the altered substantives in `stra-`
 - processed the dictionary "Bortolan, Domenico. Vocabolario del dialetto antico vicentino (dal secolo XIV a tutto il secolo XVI). Vicenza : s.n., 1893."
 - processed the dictionary "Venturi, Giuseppe. Saggio di un dizionario veronese-italiano. Verona : s.n., 1810."
 
 version 1.3.4, 2016/06/26:
 - added 3.027 new words to the dictionary
-- added gerund in '-nto' for the Viŧenŧa variant
+- added gerund in `-nto` for the Viŧenŧa variant
 
 version 1.3.3, 2016/06/12:
 - added 137 new words to the dictionary
-- resolved the workaround IGNORE ' that serves the purpose to match words that begins or ends with an apostrophe (like 'lora or indo'), now substituted with a real apostrophe, not a quotation mark which is ignored by spellchecker
+- resolved the workaround `IGNORE '` that serves the purpose to match words that begins or ends with an apostrophe (like ʼlora or indoʼ), now substituted with a real apostrophe, not a quotation mark which is ignored by spellchecker
 - rules simplification
 - added rules for diminutives and truncated words
 - processed the dictionary "Patriarchi, Gasparo. Vocabolario veneziano e padovano co’ termini e mòdi corrispondenti toscani. III ed. Padova : s.n., 1821."
@@ -126,7 +137,7 @@ version 1.3.1, 2016/05/28:
 version 1.3.0, 2016/05/22:
 - added 381 new words to the dictionary
 - added some missing interrogatives on verbs
-- corrected the generation of plurals from substantives ending in '-jo'
+- corrected the generation of plurals from substantives ending in `-jo`
 
 version 1.2.3, 2016/05/16:
 - added 1.820 new words to the dictionary
@@ -140,13 +151,13 @@ version 1.2.2, 2016/05/15:
 
 version 1.2.1, 2016/05/13:
 - added 2.096 new words to the dictionary
-- resolved the problem of mixed 'l' and 'ƚ' on the V suffix
-- added the 't' suffix on the words that missing it in the dictionary
-- added some missing verbs' interrogatives
+- resolved the problem of mixed `l` and `ƚ` on the V suffix
+- added the `t` suffix on the words that missing it in the dictionary
+- added some missing verbsʼ interrogatives
 
 version 1.2.0, 2016/05/04:
 - added 234 new words to the dictionary
-- sligthly revised the rules to account for apostrophes at the words' boundary
+- sligthly revised the rules to account for apostrophes at the wordsʼ boundary
 - eliminated a technical debt on plurals in the form on > oi
 
 version 1.1.2, 2016/05/02:
@@ -172,7 +183,7 @@ version 1.0.3, 2016/04/07:
 
 version 1.0.2, 2016/04/01:
 - added 375 new words to the dictionary
-- revised the set of rules to produce the verbs' declination
+- revised the set of rules to produce the verbsʼ declination
 
 version 1.0.1, 2016/03/30:
 - introduction of the thesaurus
