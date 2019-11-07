@@ -1643,6 +1643,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fet",			"in",			1,	1,	"g",	"1867",			"",
 "fet",			"s",			1,	1,	"g",	"1980",			"Afetar, skanpar.",
 "feŧi",			"re",			1,	1,	"a",	"1560",			"",
+"feŧion",		"",			1,	4,	"a",	"",				"",
+"feŧion",		"a",			1,	4,	"a",	"1855",			"(belumat)",
 "fever",			"",			1,	1,	"a",	"1560",			"",
 "fex",			"s",			1,	1,	"a",	"1980",			"Krear na krèpa.",
 "feton",			"",			1,	3,	"a",	"",				"Kórer xvelto.",
