@@ -15,6 +15,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "agr",			"in",			4,	3,	"a",	"1867",			"Deventar agro.",
 "aid",			"",			1,	1,	"a",	"",				"",
 "aj",				"",			1,	0,	"g",	"1796",			"Đontar ajo.",
+"ajit",			"",			1,	0,	"g",	"1855",			"(belumat)",
 "aku",			"",			1,	0,	"g",	"1867",			"Misiar el vin ko lʼ akua.",
 "aku",			"ad",			1,	0,	"g",	"1825",			"Dar da béar al kanpo vanti ʼverlo semenà.",
 "aku",			"d",			1,	0,	"g",	"1900",			"(veronexe) Adakuar.",
@@ -2629,6 +2630,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "just",			"x",			1,	1,	"a",	"1896",			"",
 "justiŧi",		"",			1,	4,	"a",	"1509",			"",
 "jut",			"",			1,	1,	"a",	"1292",			"",
+"jut",			"a",			1,	1,	"a",	"1855",			"(belumat)",
 
 "ɉandol",		"in",			4,	6,	"a",	"1775",			"Intorpidir.",
 "ɉanŧ",			"x",			1,	1,	"g",	"1852",			"Xbianŧar.",
