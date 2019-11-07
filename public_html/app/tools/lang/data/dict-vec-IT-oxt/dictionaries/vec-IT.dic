@@ -609,6 +609,8 @@ aŧento/a0a1P0P1FSI0	po:verb ts:indicative_present st:aŧentar
 aŧéntoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:aŧentar
 aŧènto/a0a1P0P1FSI0	po:verb ts:indicative_present st:aŧentar
 aŧèntoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:aŧentar
+asetir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
+aŧetir/a0a1d0d1P0P1	po:verb ts:infinitive_simple
 asidar/a0a1a2P0P1P2+0	po:verb ts:infinitive_simple
 àsido/a0a1a2P0P1P2FSI0+0	po:verb ts:indicative_present st:asidar
 àsidoe/a0a1a2I1+0	po:verb ts:indicative_present is:interrogative st:asidar
@@ -2437,6 +2439,9 @@ xbrego/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xbregar
 xbrégoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xbregar
 xbrègo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xbregar
 xbrègoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xbregar
+xbregonar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
+xbregono/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xbregonar
+xbregónoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xbregonar
 bregierar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 bregièro/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:bregierar
 bregièroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:bregierar
@@ -9245,7 +9250,6 @@ akòjer/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 akojerò/b0b1b2I0	po:verb ts:indicative_future st:akòjer
 akòjo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:akòjer
 akòjoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:akòjer
-akòlto/A1FS	po:verb ts:participle_perfect_strong st:akòjer
 akòɉer/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 akoɉerò/b0b1b2I0	po:verb ts:indicative_future st:akòɉer
 akòɉo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:akòɉer
@@ -9267,11 +9271,23 @@ arkòjar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 arkojarò/b0b1b2I0	po:verb ts:indicative_future st:arkòjar
 arkòɉar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 arkoɉarò/b0b1b2I0	po:verb ts:indicative_future st:arkòɉar
+akòljer/b0b1b2P0P1P2	po:verb ts:infinitive_simple
+akoljerò/b0b1b2I0	po:verb ts:indicative_future st:akòljer
+akòljo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:akòljer
+akòljoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:akòljer
+akòlɉer/b0b1b2P0P1P2	po:verb ts:infinitive_simple
+akolɉerò/b0b1b2I0	po:verb ts:indicative_future st:akòlɉer
+akòlɉo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:akòlɉer
+akòlɉoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:akòlɉer
+akòlto/A1FS	po:verb ts:participle_perfect_strong st:akòljer st:akòlɉer
+akòljar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
+akoljarò/b0b1b2I0	po:verb ts:indicative_future st:akòljar
+akòlɉar/b0b1b2P0P1P2	po:verb ts:infinitive_simple
+akolɉarò/b0b1b2I0	po:verb ts:indicative_future st:akòlɉar
 arkòrjer/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 arkorjerò/b0b1b2I0	po:verb ts:indicative_future st:arkòrjer
 arkòrjo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:arkòrjer
 arkòrjoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:arkòrjer
-arkòrlto/A1FS	po:verb ts:participle_perfect_strong st:arkòrjer
 arkòrɉer/b0b1b2P0P1P2	po:verb ts:infinitive_simple
 arkorɉerò/b0b1b2I0	po:verb ts:indicative_future st:arkòrɉer
 arkòrɉo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:arkòrɉer
@@ -58860,10 +58876,21 @@ abesè	po:noun is:femenine
 abeŧè	po:noun is:femenine
 àbil/F0Ṿē	po:adjective is:singular
 bitanŧa/F0Ṿe@0	po:noun is:singular_femenine
+bondansa	po:adverb
+bondanŧa	po:adverb
+borgarol/M0ɃlV0Ᵽd	po:noun is:singular_masculine
+borgarola/F0V0	po:noun is:singular_femenine
+borgaroƚa/F0V1	po:noun is:singular_femenine
+borgaroƚo/M0V1Ᵽd	po:noun is:singular_masculine
+kalamitoxo/M0FSWaⱣd	po:adjective is:singular_masculine
+kalamitoxo/M0FSⱣd	po:noun is:singular_masculine
+kaƚamitoxo/M0WⱥⱣd	po:adjective is:singular_masculine
+kaƚamitoxo/M0Ᵽd	po:noun is:singular_masculine
 montañaso/A1FS	po:adjective is:singular_masculine
 montañaso/A1FS	po:noun is:singular_masculine
+òrđo/A1	po:noun is:singular_masculine
 
 
-/ 30
+/ 35
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
