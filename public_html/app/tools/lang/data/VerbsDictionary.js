@@ -5171,6 +5171,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pieron",		"",			1,	4,	"a",	"1896",			"",
 "pietr",			"in",			4,	5,	"a",	"1896",			"",
 "pig",			"",			1,	1,	"a",	"1560",			"",
+"pigot",			"",			1,	3,	"g",	"1855",			"(belumat)",
 "pik",			"",			1,	1,	"a",	"1590",			"",
 "pik",			"a",			1,	1,	"a",	"1412",			"",
 "pik",			"des",		1,	1,	"a",	"1775",			"Stakar.",
