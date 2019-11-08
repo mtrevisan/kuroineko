@@ -11793,12 +11793,12 @@ màkuƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:makuƚar
 dexmakukar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 dexmakuko/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:dexmakukar
 dexmakúkoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:dexmakukar
-malar/a0a1P0P1	po:verb ts:infinitive_simple
-malo/a0a1P0P1FSI0	po:verb ts:indicative_present st:malar
-màloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:malar
-maƚar/a0a2P0P2	po:verb ts:infinitive_simple
-maƚo/a0a2P0P2I0	po:verb ts:indicative_present st:maƚar
-màƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:maƚar
+malar/a0a1P0P1@0	po:verb ts:infinitive_simple
+malo/a0a1P0P1FSI0@0	po:verb ts:indicative_present st:malar
+màloe/a0a1I1@0	po:verb ts:indicative_present is:interrogative st:malar
+maƚar/a0a2P0P2@0	po:verb ts:infinitive_simple
+maƚo/a0a2P0P2I0@0	po:verb ts:indicative_present st:maƚar
+màƚoe/a0a2I1@0	po:verb ts:indicative_present is:interrogative st:maƚar
 malabiar/a0a1P0P1*0	po:verb ts:infinitive_simple
 malabio/a0a1P0P1I0*0	po:verb ts:indicative_present st:malabiar
 malàbioe/a0a1I1*0	po:verb ts:indicative_present is:interrogative st:malabiar
@@ -26529,7 +26529,6 @@ perŧò/Ṿŧ	po:pronoun
 unde	po:adjective_interrogative
 unde	po:pronoun
 / kuantifegador
-altretanto/A1FS	po:quantifier
 altro/A1Wa^6	po:quantifier
 anbo/M0ǒn	po:quantifier
 antro/A1Wa^6	po:quantifier
@@ -38608,7 +38607,8 @@ alinpio/A1	po:adjective is:singular_masculine
 alínpigo/A1	po:adjective is:singular_masculine
 alsiprèso/M0FS	po:noun is:singular_masculine
 altèa/F0	po:noun is:singular_femenine
-altroe	po:adverb
+altretanto/A1FS	po:adjective is:singular_masculine
+altretanto/FS	po:adverb
 altrotanto/A1FS	po:adjective is:singular_masculine
 altrotanto/FS	po:adverb
 altrò	po:adverb
@@ -38700,6 +38700,7 @@ axevoƚesa/F0	po:noun is:singular_femenine
 axio/M0-1	po:noun is:singular_masculine
 àere/M0	po:noun is:singular_masculine
 àire/M0	po:noun is:singular_masculine
+àltroe	po:adverb
 àndedo/M0FS	po:noun is:singular_masculine
 àndido/M0FS	po:noun is:singular_masculine
 àñol/M0ɃƚⱣdṾe	po:noun is:singular_masculine
@@ -58909,6 +58910,9 @@ akuxo/M0FS	po:noun is:singular_masculine
 aloko/M0FS	po:noun is:singular_masculine
 altan/M0	po:noun is:singular_masculine
 altariol/M0ɃlⱣdṾe	po:noun is:singular_masculine
+alteŧa/F0Ṿe	po:noun is:singular_femenine
+altía/F0	po:noun is:singular_femenine
+altro	po:adverb
 aƚoko/M0	po:noun is:singular_masculine
 àbil/F0Ṿɇ	po:adjective is:singular
 àger/M0	po:noun is:singular_masculine
@@ -58934,6 +58938,6 @@ montañaso/A1FS	po:noun is:singular_masculine
 stòmego/M0FS	po:noun is:singular_masculine
 
 
-/ 50
+/ 52
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ

@@ -3863,6 +3863,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "makul",			"",			1,	1,	"g",	"1562",			"",
 "makuk",			"dex",		1,	3,	"a",	"1896",			"Deskantar.",
 "mal",			"",			1,	1,	"g",	"1560",			"",
+"mal",			"a",			1,	1,	"g",	"1855",			"(belumat)",
 "malabi",		"",			1,	3,	"g",	"1775",			"",
 "malabi",		"x",			1,	3,	"g",	"1900",			"(veronexe)",
 "malat",			"",			1,	3,	"g",	"1775",			"",
