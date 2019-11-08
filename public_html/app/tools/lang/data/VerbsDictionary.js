@@ -4019,6 +4019,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "matun",			"in",			4,	5,	"a",	"1884",			"Inmatonir.",
 "matun",			"x",			4,	5,	"a",	"",				"Xmatonir.",
 "maŧ",			"",			1,	1,	"g",	"1775",			"Dar de maŧa, kopar.",
+"maŧ",			"a",			1,	1,	"g",	"1855",			"(belumat)",
 "maŧ",			"dex",		1,	1,	"g",	"1867",			"",
 "maŧ",			"in",			1,	1,	"g",	"1775",			"Far maŧeti de fiori o erbe.",
 "maŧ",			"stra",		1,	1,	"g",	"1560",			"Strepitar.",
