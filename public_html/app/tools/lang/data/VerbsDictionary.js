@@ -3764,6 +3764,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "logor",			"",			1,	1,	"g",	"1867",			"",
 "loin",			"",			1,	1,	"g",	"1900",			"(veronexe) Friñar.",
 "loj",			"",			1,	1,	"g",	"1852",			"Formento misià ko ʼl lòjo.",
+"loj",			"a",			1,	1,	"g",	"1855",			"(belumat)",
 "loj",			"dex",		1,	1,	"g",	"1854",			"Parar via el nemigo.",
 "loj",			"x",			1,	1,	"g",	"1867",			"",
 "loɉ",			"dex",		1,	1,	"g",	"1867",			"",
