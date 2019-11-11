@@ -539,7 +539,7 @@ arso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:arsar ts:participle_perfe
 arsegar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 arsego/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:arsegar
 arségoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:arsegar
-arsir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
+arsir/a0a1a2d0d1d2P0P1P2+0	po:verb ts:infinitive_simple
 arsirar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 arsiro/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:arsirar
 arsíroe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:arsirar
@@ -5106,7 +5106,7 @@ feraƚar/a0a2P0P2Ṿŧ	po:verb ts:infinitive_simple
 feraƚo/a0a2P0P2I0Ṿŧ	po:verb ts:indicative_present st:feraƚar
 feràƚoe/a0a2I1Ṿŧ	po:verb ts:indicative_present is:interrogative st:feraƚar
 feramentar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-feramento/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:feramentar
+feramento/a0a1a2P0P1P2I0FS	po:verb ts:indicative_present st:feramentar
 feraméntoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:feramentar
 feramènto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:feramentar
 feramèntoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:feramentar
@@ -19045,7 +19045,7 @@ skarpeƚar/a0a2P0P2-0V1	po:verb ts:infinitive_simple
 skarpèƚo/a0a2P0P2I0-0	po:verb ts:indicative_present st:skarpeƚar
 skarpèƚoe/a0a2I1-0	po:verb ts:indicative_present is:interrogative st:skarpeƚar
 skarpentar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-skarpento/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:skarpentar
+skarpento/a0a1a2P0P1P2I0FS	po:verb ts:indicative_present st:skarpentar
 skarpéntoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:skarpentar
 skarpènto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:skarpentar
 skarpèntoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:skarpentar
@@ -26678,8 +26678,8 @@ sora/ʼ0-0	po:adverb
 sora/P0P1P2ʼ0-0^6	po:preposition
 sore/P0P1P2	po:adverb
 sore/P0P1P2	po:preposition
-sote/P0P1P2	po:adverb
-sote/P0P1P2	po:preposition
+sote/P0P1P2FS	po:adverb
+sote/P0P1P2FS	po:preposition
 soto/FS-0	po:adverb
 soto/FS-0	po:preposition
 sórame/P6P7P8	po:adverb
@@ -28590,7 +28590,7 @@ boskarol/M0ɃlV0Ᵽd	po:noun is:singular_masculine
 boskarola/F0V0	po:noun is:singular_femenine
 boskaroƚa/F0V1	po:noun is:singular_femenine
 boskaroƚo/M0V1Ᵽd	po:noun is:singular_masculine
-bota/A2	po:noun is:singular_femenine
+bota/A2ǎt	po:noun is:singular_femenine
 bórsol/M0ɃƚⱣdṾe	po:noun is:singular_masculine
 bò/M0	po:noun is:singular_masculine
 bòca/F0ět	po:noun is:singular_femenine
@@ -30908,7 +30908,7 @@ penèl/M0ɃlṾe	po:noun is:singular_masculine
 pensièr/M0	po:noun is:singular_masculine
 peòco/M0FSv0ǎSǎsět	po:noun is:singular_masculine
 per/M0ětǐnⱣd	po:noun is:singular_masculine
-pera/F0ět	po:noun is:singular_femenine
+pera/F0ětǔSǔs	po:noun is:singular_femenine
 perèr/M0V0	po:noun is:singular_masculine
 perèra/F0V0	po:noun is:singular_femenine
 perfina/Ṿŧ	po:adverb
@@ -34621,7 +34621,7 @@ lekardo/M0Ṿèǐn	po:noun is:singular_masculine
 lemo/M0FS	po:noun is:singular_masculine
 lenta/F0ṾèṾr	po:adjective is:singular_femenine
 lente/M0ⱣdṾr	po:noun is:singular_femenine
-lento/M0ⱣdṾr	po:adjective is:singular_masculine
+lento/M0FSⱣdṾr	po:adjective is:singular_masculine
 leñame/M0Ṿè	po:noun is:singular_masculine
 leproxo/A1FSWaⱣd	po:adjective is:singular_masculine
 leproxo/A1FSⱣd	po:noun is:singular_masculine
@@ -35541,7 +35541,7 @@ papataso/M0FS	po:noun is:singular_masculine
 papàver/M0Ᵽd	po:noun is:singular_masculine
 papon/A2ɃlⱣd	po:adjective is:singular_masculine
 papòto/A1FS	po:adjective is:singular_masculine
-parabote/M0	po:noun is:singular_masculine
+parabote/M0FS	po:noun is:singular_masculine
 paraman/M0*0	po:noun is:singular_masculine
 paranko/M0FS	po:noun is:singular_masculine
 parapèto/M0FS	po:noun is:singular_masculine
@@ -40865,7 +40865,7 @@ forbexona/F0	po:noun is:singular_femenine
 formentin/A2	po:noun is:singular_masculine
 fotivento/M0FSⱣdṾr	po:noun is:singular_masculine
 fórbeđe/M0FS	po:noun is:singular_femenine
-fórbexe/M0Ᵽd	po:noun is:singular_femenine
+fórbexe/M0FSⱣd	po:noun is:singular_femenine
 fò/M0	po:noun is:masculine
 fòkol/M0ɃƚⱣdṾe	po:noun is:singular_masculine
 frabalado/M0FSY0	po:noun is:singular_masculine
@@ -44072,10 +44072,10 @@ arba/F0	po:noun is:singular_femenine
 ardensa/F0Ṿr	po:noun is:singular_femenine
 ardenŧa/F0Ṿr	po:noun is:singular_femenine
 ardijon/F0ɃlⱣdṾe	po:noun is:singular_masculine
-arditeto/A1FSⱣd	po:adjective is:singular_masculine
-arditèl/M0ɃlṾe	po:noun is:singular_masculine
 ardita/F0	po:adjective is:singular_femenine
 ardita/F0	po:noun is:singular_femenine
+arditeto/A1FSⱣd	po:adjective is:singular_masculine
+arditèl/M0ɃlṾe	po:noun is:singular_masculine
 ardito/M0FSěSěs	po:noun is:singular_masculine
 ardito/M0FS	po:adjective is:singular_masculine
 arditon/A2ɃlⱣd	po:adjective is:singular_masculine
@@ -51235,8 +51235,8 @@ vendarígola/F0Ṿe	po:noun is:singular_femenine
 vendema/F0	po:noun is:singular_femenine
 vendeta/F0	po:noun is:singular_femenine
 vende	po:adverb
-venesiexe/M0Ᵽd	po:noun is:singular_masculine
-veneŧiexe/M0Ᵽd	po:noun is:singular_masculine
+venesiexe/M0FSⱣd	po:noun is:singular_masculine
+veneŧiexe/M0FSⱣd	po:noun is:singular_masculine
 venialità	po:noun is:femenine
 veniaƚità	po:noun is:femenine
 ventame/M0	po:noun is:singular_masculine
@@ -57123,7 +57123,7 @@ bisimiada/F0Y0Y1	po:noun is:singular_femenine
 bisola/F0Ṿe	po:noun is:singular_femenine
 bistòrto/A1FS	po:adjective is:singular_masculine
 bistòrto/A1FS	po:noun is:singular_masculine
-bitúdene/M0@0	po:noun is:singular_femenine
+bitúdene/M0FS@0	po:noun is:singular_femenine
 bífido/A1FS	po:adjective is:singular_masculine
 blux	po:noun is:femenine
 boaròto/A1FS	po:noun is:singular_masculine
@@ -57284,7 +57284,7 @@ folar/M0	po:noun is:singular_masculine
 foƚar/M0	po:noun is:singular_masculine
 forkonada/F0Y0Y1	po:noun is:singular_femenine
 fòrbeđe/M0FS	po:noun is:singular_femenine
-fòrbexe/M0Ᵽd	po:noun is:singular_femenine
+fòrbexe/M0FSⱣd	po:noun is:singular_femenine
 fòrsi	po:adverb
 fratènpo/M0FS	po:noun is:singular_masculine
 frusto/A1FS	po:adjective is:singular_masculine
@@ -58979,14 +58979,20 @@ apaltado/M0FSY0	po:noun is:singular_masculine
 arja/F0Ṿe	po:noun is:singular_femenine
 arlikin/A1	po:noun is:singular_masculine
 arlikinada/F0Y0Y1	po:noun is:singular_femenine
+arpexèl/M0ɃlṾe	po:noun is:singular_masculine
+arpía/F0	po:adjective is:singular
 arsipandòl/M0ɃlṾe	po:noun is:singular_masculine
 arsivesko/M0FS	po:noun is:singular_masculine
+artexanal/F0ɃlṾɇ	po:noun is:singular_masculine
+artista/A2	po:noun is:singular
 arŧipandòl/M0Ƀl	po:noun is:singular_masculine
 arŧivesko/M0FS	po:noun is:singular_masculine
 àbil/F0Ṿɇ	po:adjective is:singular
 àger/M0	po:noun is:singular_masculine
 àmito/M0FS	po:noun is:singular_masculine
+àrđene/M0FS	po:noun is:singular_masculine
 àrgen/A2Ƀƚ	po:noun is:singular_masculine
+àrxene/M0FS	po:noun is:singular_masculine
 bàđer/M0Ᵽd	po:noun is:singular_masculine
 bàxer/M0Ᵽd	po:noun is:singular_masculine
 bitanŧa/F0Ṿe@0	po:noun is:singular_femenine
@@ -59005,6 +59011,8 @@ guxelèr/M0V0	po:noun is:singular_masculine
 guxelèra/F0V0	po:noun is:singular_femenine
 guxeƚèr/M0V1	po:noun is:singular_masculine
 guxeƚèra/F0V1	po:noun is:singular_femenine
+inarsida/F0Y0	po:adjective is:singular_femenine
+inarsido/M0FSY0	po:adjective is:singular_masculine
 inimigo/A1FS	po:adjective is:singular_masculine
 inimigo/A1FS	po:noun is:singular_masculine
 interese/M0FS	po:noun is:singular_masculine
@@ -59039,6 +59047,6 @@ xgrarasòto/FS	po:adverb
 xgraraŧòto/FS	po:adverb
 
 
-/ 82
+/ 85
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
