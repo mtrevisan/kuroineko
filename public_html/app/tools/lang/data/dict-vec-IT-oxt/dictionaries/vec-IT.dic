@@ -9835,9 +9835,9 @@ korníđoe/a0a1I1+0*0	po:verb ts:indicative_present is:interrogative st:korniđa
 kornixar/a0a1a2P0P1P2+0*0	po:verb ts:infinitive_simple
 kornixo/a0a1a2P0P1P2FSI0+0*0	po:verb ts:indicative_present st:kornixar
 korníxoe/a0a1a2I1+0*0	po:verb ts:indicative_present is:interrogative st:kornixar
-koronar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
-korono/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:koronar
-korónoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:koronar
+koronar/a0a1a2P0P1P2+0	po:verb ts:infinitive_simple
+korono/a0a1a2P0P1P2FSI0+0	po:verb ts:indicative_present st:koronar
+korónoe/a0a1a2I1+0	po:verb ts:indicative_present is:interrogative st:koronar
 skorosar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 skoroso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:skorosar
 skorósoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:skorosar
@@ -11074,9 +11074,13 @@ lèvoe/a0a1I1*0.0@0	po:verb ts:indicative_present is:interrogative st:levar
 ƚèvo/a0a2P0P2I0.0@0	po:verb ts:indicative_present st:ƚevar
 ƚèvoe/a0a2I1.0@0	po:verb ts:indicative_present is:interrogative st:ƚevar
 lievar/a0a1P0P1*0.0@0r1r2V0	po:verb ts:infinitive_simple
+lievo/a0a1P0P1FSI0*0.0@0	po:verb ts:indicative_present st:lievar
+liévoe/a0a1I1*0.0@0	po:verb ts:indicative_present is:interrogative st:lievar
 lièvo/a0a1P0P1FSI0*0.0@0	po:verb ts:indicative_present st:lievar
 lièvoe/a0a1I1*0.0@0	po:verb ts:indicative_present is:interrogative st:lievar
 ƚievar/a0a2P0P2.0@0ɍ2V1	po:verb ts:infinitive_simple
+ƚievo/a0a2P0P2I0.0@0	po:verb ts:indicative_present st:ƚievar
+ƚiévoe/a0a2I1.0@0	po:verb ts:indicative_present is:interrogative st:ƚievar
 ƚièvo/a0a2P0P2I0.0@0	po:verb ts:indicative_present st:ƚievar
 ƚièvoe/a0a2I1.0@0	po:verb ts:indicative_present is:interrogative st:ƚievar
 elevar/a0a1P0P1r1r2	po:verb ts:infinitive_simple
@@ -11194,12 +11198,6 @@ paraƚíxoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:paraƚixar
 liđierir/a0a1d0d1P0P1+0*0	po:verb ts:infinitive_simple
 lixierir/a0a1d0d1P0P1+0*0	po:verb ts:infinitive_simple
 ƚixierir/a0a2d0d2P0P2	po:verb ts:infinitive_simple
-relievar/a0a1P0P1	po:verb ts:infinitive_simple
-relièvo/a0a1P0P1FSI0	po:verb ts:indicative_present st:relievar
-relièvoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:relievar
-reƚievar/a0a2P0P2	po:verb ts:infinitive_simple
-reƚièvo/a0a2P0P2I0	po:verb ts:indicative_present st:reƚievar
-reƚièvoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:reƚievar
 xlièđer/b0b1P0P1	po:verb ts:infinitive_simple
 xlieđerò/b0b1I0	po:verb ts:indicative_future st:xlièđer
 xlièđo/a0a1P0P1FSI0	po:verb ts:indicative_present st:xlièđer
@@ -23976,15 +23974,15 @@ xvedèloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:xvedelar
 xvedeƚar/a0a2P0P2	po:verb ts:infinitive_simple
 xvedèƚo/a0a2P0P2I0	po:verb ts:indicative_present st:xvedeƚar
 xvedèƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:xvedeƚar
-véder/b0b1b2P0P1P2.0@0^1^2^6^7‘0	po:verb ts:infinitive_simple
-vedre/.0@0^1^2^6^7‘0	po:verb ts:infinitive_simple st:véder
-vederò/b0b1b2I0.0@0^1^2^6^7‘0r0	po:verb ts:indicative_future st:véder
-verò/b0b1b2I0.0@0^1^2^6^7‘0	po:verb ts:indicative_future st:véder st:védar st:ver
-vedo/a0a1a2P0P1P2FSI0.0-0@0^1^2^6^7‘0	po:verb ts:indicative_present st:véder st:vedar
-védoe/a0a1a2I1.0-0@0^1^2^6^7‘0	po:verb ts:indicative_present is:interrogative st:véder st:vedar
-visto/A1FS.0-0@0^1^2^6^7‘0	po:verb ts:participle_perfect_strong st:véder
-védar/b0b1b2P0P1P2.0-0@0^1^2^6^7‘0	po:verb ts:infinitive_simple
-vedarò/b0b1b2I0.0-0@0^1^2^6^7‘0	po:verb ts:indicative_future st:védar
+véder/b0b1b2P0P1P2.0@0^0^1^2^6^7‘0	po:verb ts:infinitive_simple
+vedre/.0@0^0^1^2^6^7‘0	po:verb ts:infinitive_simple st:véder
+vederò/b0b1b2I0.0@0^0^1^2^6^7‘0r0	po:verb ts:indicative_future st:véder
+verò/b0b1b2I0.0@0^0^1^2^6^7‘0	po:verb ts:indicative_future st:véder st:védar st:ver
+vedo/a0a1a2P0P1P2FSI0.0-0@0^0^1^2^6^7‘0	po:verb ts:indicative_present st:véder st:vedar
+védoe/a0a1a2I1.0-0@0^0^1^2^6^7‘0	po:verb ts:indicative_present is:interrogative st:véder st:vedar
+visto/A1FS.0-0@0^0^1^2^6^7‘0	po:verb ts:participle_perfect_strong st:véder
+védar/b0b1b2P0P1P2.0-0@0^0^1^2^6^7‘0	po:verb ts:infinitive_simple
+vedarò/b0b1b2I0.0-0@0^0^1^2^6^7‘0	po:verb ts:indicative_future st:védar
 ver/b0b1b2P0P1P2	po:verb ts:infinitive_simple st:ver
 véo/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:ver st:vear
 véoe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:ver st:vear
@@ -25740,10 +25738,10 @@ Lixandra/ṾèZ0	po:proper_noun is:singular_femenine
 Lixandro/ṾèZ0	po:proper_noun is:singular_masculine
 Lodoviga/ṾèZ0	po:proper_noun is:singular_femenine
 Lodovigo/FSṾèZ0	po:proper_noun is:singular_masculine
-Lorensa/ṾèZ0	po:proper_noun is:singular_femenine
-Lorenso/FSṾèZ0	po:proper_noun is:singular_masculine
-Lorenŧa/Z0	po:proper_noun is:singular_femenine
-Lorenŧo/FSZ0	po:proper_noun is:singular_masculine
+Lorensa/ṾrZ0	po:proper_noun is:singular_femenine
+Lorenso/FSṾrZ0	po:proper_noun is:singular_masculine
+Lorenŧa/ṾrZ0	po:proper_noun is:singular_femenine
+Lorenŧo/FSṾrZ0	po:proper_noun is:singular_masculine
 Loreta/ṾèZ0	po:proper_noun is:singular_femenine
 Loreto/FSZ0	po:proper_noun is:singular_masculine
 Lovija/ṾèZ0	po:proper_noun is:singular_femenine
@@ -25770,6 +25768,8 @@ Luviɉa/ṾèZ0	po:proper_noun is:singular_femenine
 Luviɉi/ṾèZ0	po:proper_noun is:singular_masculine
 Ƚeta/Z0	po:proper_noun is:singular_femenine
 Ƚeto/FSZ0	po:proper_noun is:singular_masculine
+Ƚorensa/Z0	po:proper_noun is:singular_femenine
+Ƚorenso/Z0	po:proper_noun is:singular_masculine
 Ƚoreto/FSZ0	po:proper_noun is:singular_masculine
 Madalena/Z0	po:proper_noun is:singular_femenine
 Madalusa/Z0	po:proper_noun is:singular_femenine
@@ -26023,6 +26023,8 @@ Pròvoƚa/Z0	po:proper_noun is:singular_femenine
 Pròvoƚo/Z0	po:proper_noun is:singular_masculine
 Prudensa/Z0	po:proper_noun is:singular_femenine
 Prudenŧa/Z0	po:proper_noun is:singular_femenine
+Prudènsa/Z0	po:proper_noun is:singular_femenine
+Prudènŧa/Z0	po:proper_noun is:singular_femenine
 Rabeka/Z0	po:proper_noun is:singular_femenine
 Ranpónsol/Z0	po:proper_noun is:singular_masculine
 Ranpónsoƚo/Z0	po:proper_noun is:singular_masculine
@@ -26031,10 +26033,10 @@ Ràxemo/FSZ0	po:proper_noun is:singular_masculine
 Rebeka/Z0	po:proper_noun is:singular_femenine
 Reinalda/Z0	po:proper_noun is:singular_femenine
 Reinaldo/FSZ0	po:proper_noun is:singular_masculine
-Rensa/Z0	po:proper_noun is:singular_femenine
-Renso/FSZ0	po:proper_noun is:singular_masculine
-Renŧa/Z0	po:proper_noun is:singular_femenine
-Renŧo/FSZ0	po:proper_noun is:singular_masculine
+Rensa/ṾrZ0	po:proper_noun is:singular_femenine
+Renso/FSṾrZ0	po:proper_noun is:singular_masculine
+Renŧa/ṾrZ0	po:proper_noun is:singular_femenine
+Renŧo/FSṾrZ0	po:proper_noun is:singular_masculine
 Rexi/Z0	po:proper_noun is:singular_femenine
 Rènsa/Z0	po:proper_noun is:singular_femenine
 Rènso/FSZ0	po:proper_noun is:singular_masculine
@@ -27466,8 +27468,8 @@ Dòƚo/Z0	po:proper_noun
 Eraklèa/Z0	po:proper_noun
 Fanadandio/Z0	po:proper_noun
 Fèltre/Z0	po:proper_noun
-Fiorensa/Z0	po:proper_noun
-Fiorenŧa/Z0	po:proper_noun
+Fiorensa/ṾrZ0	po:proper_noun
+Fiorenŧa/ṾrZ0	po:proper_noun
 Furlania/Z0	po:proper_noun
 Fuxina/Z0	po:proper_noun
 Ganbarare/Z0	po:proper_noun
@@ -28796,11 +28798,15 @@ diaolin/M0Ṿe	po:noun is:singular_masculine
 diàol/M0ɃƚⱣdṾe	po:noun is:singular_masculine
 diàola/F0Ṿe	po:noun is:singular_femenine
 diàtexi	po:noun is:femenine
+difarensa/F0Ṿr+0	po:noun is:singular_femenine
+difarensia/F0Ṿr+0	po:noun is:singular_femenine
 difarente/M0FSWa+0Ᵽd	po:adjective is:singular
-difarenŧa/F0Ṿe+0	po:noun is:singular_femenine
-difarenŧia/F0Ṿe+0	po:noun is:singular_femenine
-diferenŧa/F0Ṿe+0	po:noun is:singular_femenine
-diferenŧia/F0Ṿe+0	po:noun is:singular_femenine
+difarenŧa/F0Ṿr+0	po:noun is:singular_femenine
+difarenŧia/F0Ṿr+0	po:noun is:singular_femenine
+diferensa/F0Ṿr+0	po:noun is:singular_femenine
+diferensia/F0Ṿr+0	po:noun is:singular_femenine
+diferenŧa/F0Ṿr+0	po:noun is:singular_femenine
+diferenŧia/F0Ṿr+0	po:noun is:singular_femenine
 digrama/M0	po:noun is:singular_masculine
 dii	po:noun is:plural_masculine is:plural_masculine st:dio
 diman/F0+0	po:noun is:singular_masculine
@@ -28968,7 +28974,8 @@ eufonía/F0	po:noun is:singular_femenine
 evanesente/M0FSⱣdṾr	po:adjective is:singular
 evanesenŧa/F0Ṿe	po:noun is:singular_femenine
 evento/M0FSⱣdṾr	po:noun is:singular_masculine
-evidenŧa/F0Ṿe	po:noun is:singular_femenine
+evidensa/F0Ṿr	po:noun is:singular_femenine
+evidenŧa/F0Ṿr	po:noun is:singular_femenine
 exame/M0	po:noun is:singular_masculine
 exenpon/F0ɃlⱣd	po:noun is:singular_masculine
 existensial/F0ɃlṾɇ	po:adjective is:singular
@@ -29635,7 +29642,8 @@ karbon/F0ɃlⱣd	po:noun is:singular_masculine
 karbonèr/M0V0	po:noun is:singular_masculine
 karbonèra/F0V0	po:noun is:singular_femenine
 kardenal/F0ɃlṾɇ	po:noun is:singular_masculine
-kardenŧa/F0Ṿe	po:noun is:singular_femenine
+kardensa/F0Ṿr	po:noun is:singular_femenine
+kardenŧa/F0Ṿr	po:noun is:singular_femenine
 karegèr/M0V0	po:noun is:singular_masculine
 karegèra/F0V0	po:noun is:singular_femenine
 karegon/F0ɃlⱣd	po:noun is:singular_masculine
@@ -29871,9 +29879,10 @@ korelativo/A1FSWa	po:adjective is:singular_masculine
 koreƚativo/A1Wā	po:adjective is:singular_masculine
 korente/M0FSⱣdṾr	po:adjective is:singular_femenine
 korente/M0FSⱣdṾr	po:noun is:singular_femenine
+korespondensa/F0Ṿr	po:noun is:singular_femenine
 korespondente/M0FSⱣdṾr	po:adjective is:singular
 korespondente/M0FSⱣdṾr	po:noun is:singular
-korespondenŧa/F0Ṿe	po:noun is:singular_femenine
+korespondenŧa/F0Ṿr	po:noun is:singular_femenine
 koridor/M0V0Ᵽd	po:noun is:singular_masculine
 koridor/M0Ᵽd	po:adjective is:singular_masculine
 koridora/F0V0	po:noun is:singular_femenine
@@ -30818,10 +30827,12 @@ paragrafèma/M0	po:noun is:singular_masculine
 parasintètego/A1FS	po:adjective is:singular_masculine
 paràgrafo/M0FS	po:noun is:singular_masculine
 parànkola/F0Ṿe	po:noun is:singular_femenine
-parensa/F0M1@0	po:noun is:singular_femenine
+parensa/F0Ṿr@0	po:noun is:singular_femenine
+parensia/F0Ṿr@0	po:noun is:singular_femenine
 parentèla/F0Ṿe	po:noun is:singular_femenine
 parento/A1FSⱣdṾr	po:noun is:singular_masculine
-parenŧa/F0M1@0	po:noun is:singular_femenine
+parenŧa/F0Ṿr@0	po:noun is:singular_femenine
+parenŧia/F0Ṿr@0	po:noun is:singular_femenine
 paréntexi	po:noun is:femenine
 parfetivo/A1FSWa+0	po:adjective is:singular_masculine
 parfèto/A1FS+0*0	po:noun is:singular_masculine
@@ -31133,9 +31144,11 @@ prao/M0ět	po:noun is:singular_masculine
 pratisità	po:noun is:femenine
 pratiŧità	po:noun is:femenine
 prà	po:noun is:masculine
-precedenŧa/F0Ṿe	po:noun is:singular_femenine
+precedensa/F0Ṿr	po:noun is:singular_femenine
+precedenŧa/F0Ṿr	po:noun is:singular_femenine
 predegativo/A1FSWa	po:adjective is:singular_masculine
-prefarenŧa/F0Ṿe	po:noun is:singular_femenine
+prefarensa/F0Ṿr	po:noun is:singular_femenine
+prefarenŧa/F0Ṿr	po:noun is:singular_femenine
 prefiso/M0FS	po:noun is:singular_masculine
 premesa/F0	po:noun is:singular_femenine
 premura/F0	po:noun is:singular_femenine
@@ -31315,8 +31328,10 @@ retrobotega/F0	po:noun is:singular_masculine
 reŧíprogo/A1	po:adjective is:singular_masculine
 revendígol/M0ɃƚⱣdṾeṾŧ	po:noun is:singular_masculine
 revendígola/F0ṾeṾŧ	po:noun is:singular_femenine
-reverensa/F0M1	po:noun is:singular_femenine
-reverenŧa/F0M1	po:noun is:singular_femenine
+reverensa/F0Ṿr	po:noun is:singular_femenine
+reverensia/F0Ṿr	po:noun is:singular_femenine
+reverenŧa/F0Ṿr	po:noun is:singular_femenine
+reverenŧia/F0Ṿr	po:noun is:singular_femenine
 reversion/F0ɃlⱣd	po:noun is:singular_femenine
 reversíbil/F0Ṿɇ	po:adjective is:singular
 revexèa/F0	po:noun is:singular_femenine
@@ -33894,8 +33909,10 @@ inđeña/F0Ṿèět	po:noun is:singular_femenine
 infermiŧo/M0FSṾe	po:adjective is:singular_masculine
 infiaxonsèla/F0Ṿe	po:noun is:singular_femenine
 ingrato/A1FS	po:adjective is:singular_masculine
-injerenŧa/F0Ṿe	po:noun is:singular_femenine
-inɉerenŧa/F0Ṿe	po:noun is:singular_femenine
+injerensa/F0Ṿr	po:noun is:singular_femenine
+injerenŧa/F0Ṿr	po:noun is:singular_femenine
+inɉerensa/F0Ṿr	po:noun is:singular_femenine
+inɉerenŧa/F0Ṿr	po:noun is:singular_femenine
 inkonbenŧa/F0Ṿe	po:noun is:singular_femenine
 inkòñito/A1FS	po:adjective is:singular_masculine
 inkòñito/A1FS	po:noun is:singular_masculine
@@ -34352,12 +34369,14 @@ konfalonièr/A1	po:noun is:singular_masculine
 konfaƚonièr/A1	po:noun is:singular_masculine
 konfetièr/A1	po:noun is:singular_masculine
 konfetura/F0	po:noun is:singular_femenine
-konfidenŧa/F0Ṿe	po:noun is:singular_femenine
+konfidensa/F0Ṿr	po:noun is:singular_femenine
+konfidenŧa/F0Ṿr	po:noun is:singular_femenine
 konijo/M0FSṾe	po:noun is:singular_masculine
 konin/M0	po:noun is:singular_masculine
 konío/M0ět	po:noun is:singular_masculine
 konka/F0ět	po:noun is:singular_femenine
-konkorenŧa/F0Ṿe	po:noun is:singular_femenine
+konkorensa/F0Ṿr	po:noun is:singular_femenine
+konkorenŧa/F0Ṿr	po:noun is:singular_femenine
 konkorso/M0FS	po:noun is:singular_masculine
 konparèximo/M0FS	po:noun is:singular_masculine
 konpienaŧo/M0FSṾe	po:adjective is:singular_masculine
@@ -34489,7 +34508,8 @@ kòxe	po:noun is:plural_femenine
 krapolon/F0ɃlⱣdṾe	po:noun is:singular_masculine
 kràuto/M0FS	po:noun is:singular_masculine
 kreatura/F0	po:noun is:singular_femenine
-kredenŧa/F0Ṿe	po:noun is:singular_femenine
+kredensa/F0Ṿr	po:noun is:singular_femenine
+kredenŧa/F0Ṿr	po:noun is:singular_femenine
 kredenŧon/F0ɃlⱣdṾe	po:noun is:singular_masculine
 krena/F0	po:noun is:singular_femenine
 kreola/F0Ṿe	po:noun is:singular_femenine
@@ -36028,7 +36048,7 @@ reditarol/M0ɃlV0Ᵽd	po:noun is:singular_masculine
 reditarola/F0V0	po:noun is:singular_femenine
 reditaroƚa/F0V1	po:noun is:singular_femenine
 reditaroƚo/M0V1Ᵽd	po:noun is:singular_masculine
-redoso	po:adverb
+redòso/FS	po:adverb
 refredo/M0FSY0ⱣdṾŧ	po:noun is:singular_masculine
 refuaja/F0Ṿe	po:noun is:singular_femenine
 regaƚixasion/F0Ᵽd	po:noun is:singular_femenine
@@ -36678,7 +36698,8 @@ sorboƚèr/M0V1	po:noun is:singular_masculine
 sorboƚèra/F0V1	po:noun is:singular_femenine
 sorco/M0FS	po:noun is:singular_masculine
 sordin/A2	po:noun is:singular_masculine
-sorintendenŧa/F0Ṿe	po:noun is:singular_femenine
+sorintendensa/F0Ṿr	po:noun is:singular_femenine
+sorintendenŧa/F0Ṿr	po:noun is:singular_femenine
 sortume/M0	po:noun is:singular_masculine
 sospèxo/A1	po:adjective is:singular_masculine
 sotil/A1Ṿɇ^6	po:adjective is:singular_masculine
@@ -38363,7 +38384,8 @@ sarlatanaso/A1FS	po:noun is:singular_masculine
 scama/F0	po:noun is:singular_femenine
 scopetadaŧa/F0Ṿe	po:noun is:singular_femenine
 secèso/M0FS	po:noun is:singular_masculine
-sedenŧa/F0Ṿe	po:noun is:singular_femenine
+sedensa/F0Ṿr	po:noun is:singular_femenine
+sedenŧa/F0Ṿr	po:noun is:singular_femenine
 sedronèƚa/F0	po:noun is:singular_femenine
 seka–mincon/A2ɃlⱣd	po:adjective is:singular_masculine
 sekamincon/A2ɃlⱣd	po:adjective is:singular_masculine
@@ -38692,8 +38714,10 @@ aŧiò	po:conjunction
 aŧò	po:conjunction
 audaŧa/F0Ṿe	po:noun is:singular_femenine
 audaŧia/F0Ṿe	po:noun is:singular_femenine
-audenŧa/F0Ṿe	po:noun is:singular_femenine
-audenŧia/F0Ṿe	po:noun is:singular_femenine
+audensa/F0Ṿr	po:noun is:singular_femenine
+audensia/F0Ṿr	po:noun is:singular_femenine
+audenŧa/F0Ṿr	po:noun is:singular_femenine
+audenŧia/F0Ṿr	po:noun is:singular_femenine
 auxilio/M0Ṿe	po:noun is:singular_masculine
 aventario/M0	po:noun is:singular_masculine
 aversario/A1	po:noun is:singular_masculine
@@ -39492,8 +39516,10 @@ ofesial/F0ɃlṾɇ	po:adjective is:singular
 ofeŧial/F0Ƀl	po:adjective is:singular
 ofisial/F0ɃlṾɇ	po:adjective is:singular
 ofiŧial/F0Ƀl	po:adjective is:singular
-okorenŧa/F0Ṿe	po:noun is:singular_femenine
-okorenŧia/F0Ṿe	po:noun is:singular_femenine
+okorensa/F0Ṿr	po:noun is:singular_femenine
+okorensia/F0Ṿr	po:noun is:singular_femenine
+okorenŧa/F0Ṿr	po:noun is:singular_femenine
+okorenŧia/F0Ṿr	po:noun is:singular_femenine
 oldor/F0Ᵽd	po:noun is:singular_masculine
 olioxo/A1FSWaⱣd	po:adjective is:singular_masculine
 olioxo/A1FSⱣd	po:noun is:singular_masculine
@@ -39739,8 +39765,10 @@ previƚèjo/M0Ṿē	po:noun is:singular_masculine
 previxion/F0ɃlⱣd	po:noun is:singular_femenine
 prexentanŧa/F0Ṿe	po:noun is:singular_femenine
 prexenŧia/F0Ṿe	po:noun is:singular_femenine
-prexidenŧa/F0Ṿe	po:noun is:singular_femenine
-prexidenŧia/F0Ṿe	po:noun is:singular_femenine
+prexidensa/F0Ṿr	po:noun is:singular_femenine
+prexidensia/F0Ṿr	po:noun is:singular_femenine
+prexidenŧa/F0Ṿr	po:noun is:singular_femenine
+prexidenŧia/F0Ṿr	po:noun is:singular_femenine
 prexinŧa/F0Ṿe	po:noun is:singular_femenine
 prexinŧia/F0Ṿe	po:noun is:singular_femenine
 prexion/F0ɃlⱣd	po:noun is:singular_femenine
@@ -41992,7 +42020,8 @@ patirio/M0	po:noun is:singular_masculine
 patraso/A1FS	po:noun is:singular_masculine
 patual/F0ɃlṾɇ	po:noun is:singular_masculine
 peƚasa/F0	po:noun is:singular_femenine
-pendenŧa/F0Ṿe-0	po:noun is:singular_femenine
+pendensa/F0Ṿr-0	po:noun is:singular_femenine
+pendenŧa/F0Ṿr-0	po:noun is:singular_femenine
 penderista/A2	po:noun is:singular
 pentor/A2-0Ᵽd	po:noun is:singular_masculine
 pepian/M0Ƀl	po:noun is:singular_masculine
@@ -43205,7 +43234,6 @@ restara/F0	po:noun is:singular_femenine
 rèbus	po:noun is:masculine
 rèfol/M0ɃƚⱣdṾe	po:noun is:singular_masculine
 rifa/F0	po:interjection
-rikòvra/F0	po:noun is:singular_femenine
 rimandèl/M0ɃlṾe	po:noun is:singular_masculine
 rioda/F0	po:noun is:singular_femenine
 risaño/M0FS	po:noun is:singular_masculine
@@ -43879,7 +43907,8 @@ abrexé	po:adverb
 abrèo/A1	po:adjective is:singular_masculine
 abrèo/A1	po:noun is:singular_masculine
 adato/A1FS	po:adjective is:singular_masculine
-aderenŧa/F0Ṿe	po:noun is:singular_femenine
+aderensa/F0Ṿr	po:noun is:singular_femenine
+aderenŧa/F0Ṿr	po:noun is:singular_femenine
 adorator/A2v0Ᵽd	po:noun is:singular_masculine
 afan/M0Ƀlǐn	po:noun is:singular_masculine
 afanoxo/A1FSWaⱣd	po:adjective is:singular_masculine
@@ -44015,7 +44044,8 @@ anteato/M0FS	po:noun is:singular_masculine
 antena/F0ělěƚ	po:noun is:singular_femenine
 antigonista/A2	po:noun is:singular
 antikuario/A1	po:noun is:singular_masculine
-antividenŧa/F0Ṿe	po:noun is:singular_femenine
+antividensa/F0Ṿr	po:noun is:singular_femenine
+antividenŧa/F0Ṿr	po:noun is:singular_femenine
 antífona/F0	po:noun is:singular_femenine
 anualità	po:noun is:femenine
 anuaƚità	po:noun is:femenine
@@ -44039,11 +44069,15 @@ apòxito/A1FS	po:adjective is:singular_masculine
 ar/M0ǎSǎs	po:noun is:singular_masculine
 aramal/F0ɃlṾɇ	po:noun is:singular_masculine
 arba/F0	po:noun is:singular_femenine
-ardenŧa/F0Ṿe	po:noun is:singular_femenine
+ardensa/F0Ṿr	po:noun is:singular_femenine
+ardenŧa/F0Ṿr	po:noun is:singular_femenine
 ardijon/F0ɃlⱣdṾe	po:noun is:singular_masculine
 arditeto/A1FSⱣd	po:adjective is:singular_masculine
 arditèl/M0ɃlṾe	po:noun is:singular_masculine
+ardita/F0	po:adjective is:singular_femenine
+ardita/F0	po:noun is:singular_femenine
 ardito/M0FSěSěs	po:noun is:singular_masculine
+ardito/M0FS	po:adjective is:singular_masculine
 arditon/A2ɃlⱣd	po:adjective is:singular_masculine
 arđaron/F0ɃlⱣd	po:noun is:singular_masculine
 arđentin/A2	po:noun is:singular_masculine
@@ -44859,13 +44893,17 @@ debituŧo/M0FS	po:noun is:singular_masculine
 deboleŧa/F0Ṿe	po:noun is:singular_femenine
 deboƚesa/F0	po:noun is:singular_femenine
 debú	po:noun is:masculine
+defarensa/F0Ṿr+0	po:noun is:singular_femenine
+defarensia/F0Ṿr+0	po:noun is:singular_femenine
 defarente/M0FSWa+0Ᵽd	po:adjective is:singular
-defarenŧa/F0Ṿe+0	po:noun is:singular_femenine
-defarenŧia/F0Ṿe+0	po:noun is:singular_femenine
+defarenŧa/F0Ṿr+0	po:noun is:singular_femenine
+defarenŧia/F0Ṿr+0	po:noun is:singular_femenine
 defenitivo/A1FSWa	po:adjective is:singular_masculine
 defensivo/A1	po:adjective is:singular_masculine
-deferenŧa/F0Ṿe+0	po:noun is:singular_femenine
-deferenŧia/F0Ṿe+0	po:noun is:singular_femenine
+deferensa/F0Ṿr+0	po:noun is:singular_femenine
+deferensia/F0Ṿr+0	po:noun is:singular_femenine
+deferenŧa/F0Ṿr+0	po:noun is:singular_femenine
+deferenŧia/F0Ṿr+0	po:noun is:singular_femenine
 defetoxo/A1FSWaⱣd	po:adjective is:singular_masculine
 defetoxo/A1FSⱣd	po:noun is:singular_masculine
 definitivo/A1FSWa	po:adjective is:singular_masculine
@@ -46061,8 +46099,10 @@ inprexario/A1	po:noun is:singular_masculine
 inpropèrio/M0	po:noun is:singular_masculine
 inprosedíbil/F0Ṿɇ	po:adjective is:singular
 inproŧedíbil/F0	po:adjective is:singular
-inprudenŧa/F0Ṿe	po:noun is:singular_femenine
-inprudenŧia/F0Ṿe	po:noun is:singular_femenine
+inprudensa/F0Ṿr	po:noun is:singular_femenine
+inprudensia/F0Ṿr	po:noun is:singular_femenine
+inprudenŧa/F0Ṿr	po:noun is:singular_femenine
+inprudenŧia/F0Ṿr	po:noun is:singular_femenine
 inpunitante/M0FS	po:noun is:singular
 inpuntàbil/F0Ṿɇ	po:adjective is:singular
 inrotulaŧion/F0ɃlⱣdṾe	po:noun is:singular_femenine
@@ -46111,7 +46151,8 @@ intíngol/M0ɃƚⱣdṾe	po:adjective is:singular_masculine
 intorta/F0	po:noun is:singular_femenine
 intradaŧa/F0Ṿe	po:noun is:singular_femenine
 intralŧio/M0Ṿe	po:noun is:singular_masculine
-intraprendenŧa/F0Ṿe	po:noun is:singular_femenine
+intraprendensa/F0Ṿr	po:noun is:singular_femenine
+intraprendenŧa/F0Ṿr	po:noun is:singular_femenine
 intreŧio/M0Ṿe	po:noun is:singular_masculine
 intreuxur/M0	po:noun is:singular_masculine
 intrèpito/A1	po:noun is:singular_masculine
@@ -46926,7 +46967,8 @@ kredensièra/F0V0	po:noun is:singular_femenine
 kredenŧièr/M0V0	po:noun is:singular_masculine
 kredenŧièra/F0V0	po:noun is:singular_femenine
 kreditor/A2Ᵽd	po:noun is:singular_masculine
-krenŧa/F0Ṿe	po:noun is:singular_femenine
+krensa/F0Ṿr	po:noun is:singular_femenine
+krenŧa/F0Ṿr	po:noun is:singular_femenine
 kreoxo/A1FSWaⱣd	po:adjective is:singular_masculine
 kreoxo/A1FSⱣd	po:noun is:singular_masculine
 krepaŧa/F0Ṿe	po:noun is:singular_femenine
@@ -48824,9 +48866,10 @@ preòsto/M0FS	po:noun is:singular_masculine
 prerogativo/A1	po:noun is:singular_masculine
 presepisio/M0	po:noun is:singular_masculine
 presepiton/A2ɃlⱣd	po:adjective is:singular_masculine
+presidensa/F0Ṿr	po:noun is:singular_femenine
 presidensial/F0ɃlṾɇ	po:adjective is:singular
 presidente/M0FSⱣdṾr	po:noun is:singular
-presidenŧa/F0Ṿe	po:noun is:singular_femenine
+presidenŧa/F0Ṿr	po:noun is:singular_femenine
 presidenŧial/F0Ƀl	po:adjective is:singular
 presidial/F0ɃlṾɇ	po:adjective is:singular
 presidio/M0	po:noun is:singular_masculine
@@ -49067,7 +49110,8 @@ rekàul/M0ɃƚṾe	po:noun is:singular_masculine
 rekluxion/F0ɃlⱣd	po:noun is:singular_femenine
 rekoñiŧion/F0ɃlⱣdṾe	po:noun is:singular_femenine
 rekordante/M0FS	po:noun is:singular
-rekorenŧa/F0Ṿe	po:noun is:singular_femenine
+rekorensa/F0Ṿr	po:noun is:singular_femenine
+rekorenŧa/F0Ṿr	po:noun is:singular_femenine
 rekòta/F0	po:noun is:singular_femenine
 rekòvra/F0	po:noun is:singular_femenine
 rekuparàbil/F0Ṿɇ	po:adjective is:singular
@@ -52627,7 +52671,8 @@ lamerin/M0Ṿè	po:noun is:singular_masculine
 lanpedario/M0Ṿè	po:noun is:singular_masculine
 lanson/F0ɃlǒnⱣd	po:noun is:singular_masculine
 lanŧon/F0ɃlǒnⱣd	po:noun is:singular_masculine
-laorenŧa/F0Ṿe	po:noun is:singular_femenine
+laorensa/F0Ṿr	po:noun is:singular_femenine
+laorenŧa/F0Ṿr	po:noun is:singular_femenine
 larojèr/M0V0	po:noun is:singular_masculine
 larojèra/F0V0	po:noun is:singular_femenine
 laroɉèr/M0V0	po:noun is:singular_masculine
@@ -52638,7 +52683,8 @@ latèra/F0V0	po:noun is:singular_femenine
 lator/F0ⱣdṾè	po:noun is:singular_masculine
 latrina/F0Ṿè	po:noun is:singular_femenine
 lavandin/M0Ṿè	po:noun is:singular_masculine
-lavorenŧa/F0Ṿe	po:noun is:singular_femenine
+lavorensa/F0Ṿr	po:noun is:singular_femenine
+lavorenŧa/F0Ṿr	po:noun is:singular_femenine
 laxarèla/F0	po:noun is:singular_femenine
 làstego/M0FS	po:noun is:singular_masculine
 làur/M0Ṿè	po:noun is:singular_masculine
@@ -54754,8 +54800,6 @@ akanado/M0FSY0	po:adjective is:singular_masculine
 akuaŧo/M0FSṾe	po:noun is:singular_masculine
 ankúđin/F0	po:noun is:singular_femenine
 ankúxin/F0	po:noun is:singular_femenine
-ardida/F0Y0	po:noun is:singular_femenine
-ardido/M0FSY0	po:noun is:singular_masculine
 asalada/F0Y0	po:adjective is:singular_femenine
 asalado/M0FSY0	po:adjective is:singular_masculine
 asaƚada/F0Y0	po:adjective is:singular_femenine
@@ -55905,10 +55949,14 @@ kodarósol/M0ɃƚⱣdṾe	po:noun is:singular_masculine
 kodaxil/F0Ṿɇ	po:noun is:singular_femenine
 kodaxin/F0	po:noun is:singular_femenine
 kodèr/M0V0	po:noun is:singular_masculine
+kolada/F0Y0*0	po:noun is:singular_femenine
+kolado/M0FSY0*0	po:noun is:singular_femenine
 kolàina/F0	po:noun is:singular_femenine
 koltada/F0Y0	po:adjective is:singular_femenine
 koltado/M0FSY0	po:adjective is:singular_masculine
 kolŧa/F0Ṿe	po:adjective is:singular_femenine
+koƚada/F0Y0*0	po:noun is:singular_femenine
+koƚado/M0Y0*0	po:noun is:singular_femenine
 koƚàina/F0	po:noun is:singular_femenine
 komedon/F0ɃlⱣd	po:noun is:singular_masculine
 komò	po:adverb
@@ -56072,10 +56120,6 @@ sigoñola/F0Ṿe	po:noun is:singular_femenine
 skaltrida/F0Y0	po:adjective is:singular_femenine
 skaltrido/M0FSY0	po:adjective is:singular_masculine
 skàtol/M0ɃƚⱣdṾe	po:noun is:singular_masculine
-skolada/F0Y0	po:noun is:singular_femenine
-skolado/M0FSY0	po:noun is:singular_femenine
-skoƚada/F0Y0	po:noun is:singular_femenine
-skoƚado/M0Y0	po:noun is:singular_femenine
 skondèi	po:adverb
 skondion	po:adverb
 skorsito/M0FS	po:noun is:singular_masculine
@@ -57413,12 +57457,10 @@ koèrcol/M0ɃƚⱣdṾe	po:noun is:singular_masculine
 kokuca/F0	po:noun is:singular_femenine
 kolabrodo/M0FS	po:noun is:singular_masculine
 kolabròdo/M0FS	po:noun is:singular_masculine
-kolado/M0FSY0	po:noun is:singular_masculine
 kolónbar/A1	po:adjective is:singular_masculine
 kolónber/A1	po:adjective is:singular_masculine
 koƚabrodo/M0	po:noun is:singular_masculine
 koƚabròdo/M0	po:noun is:singular_masculine
-koƚado/M0Y0	po:noun is:singular_masculine
 koƚónbar/A1	po:adjective is:singular_masculine
 koƚónber/A1	po:adjective is:singular_masculine
 komarègo/M0FS	po:noun is:singular_masculine
@@ -57919,7 +57961,8 @@ rèntemene/P6P7P8	po:adverb
 risèra/F0V0	po:noun is:singular_femenine
 risorsa/F0	po:noun is:singular_femenine
 riŧèra/F0V0	po:noun is:singular_femenine
-rivarenŧa/F0Ṿe	po:noun is:singular_femenine
+rivarensa/F0Ṿr	po:noun is:singular_femenine
+rivarenŧa/F0Ṿr	po:noun is:singular_femenine
 rixarin/M0	po:noun is:singular_masculine
 rixeta/F0	po:noun is:singular_femenine
 robetina/F0	po:noun is:singular_femenine
@@ -58928,10 +58971,22 @@ andante/M0FS	po:adjective is:singular
 andante/M0FS	po:noun is:singular
 andio/M0	po:adjective is:singular_masculine
 anđa/F0Ṿe	po:noun is:singular_femenine
+ansa/F0	po:noun is:femenine
+antivedensa/F0Ṿr	po:noun is:singular_femenine
+antivedenŧa/F0Ṿr	po:noun is:singular_femenine
+apaltada/F0Y0	po:noun is:singular_femenine
+apaltado/M0FSY0	po:noun is:singular_masculine
 arja/F0Ṿe	po:noun is:singular_femenine
+arlikin/A1	po:noun is:singular_masculine
+arlikinada/F0Y0Y1	po:noun is:singular_femenine
+arsipandòl/M0ɃlṾe	po:noun is:singular_masculine
+arsivesko/M0FS	po:noun is:singular_masculine
+arŧipandòl/M0Ƀl	po:noun is:singular_masculine
+arŧivesko/M0FS	po:noun is:singular_masculine
 àbil/F0Ṿɇ	po:adjective is:singular
 àger/M0	po:noun is:singular_masculine
 àmito/M0FS	po:noun is:singular_masculine
+àrgen/A2Ƀƚ	po:noun is:singular_masculine
 bàđer/M0Ᵽd	po:noun is:singular_masculine
 bàxer/M0Ᵽd	po:noun is:singular_masculine
 bitanŧa/F0Ṿe@0	po:noun is:singular_femenine
@@ -58964,12 +59019,19 @@ montañaso/A1FS	po:noun is:singular_masculine
 òrđo/A1	po:noun is:singular_masculine
 palpegon	po:adverb
 pigotando	po:adverb
+pitito/M0FS@0	po:noun is:singular_masculine
 ranjer/M0V0	po:noun is:singular_masculine
 ranɉer/M0V0	po:noun is:singular_masculine
+rekòva/F0@0	po:noun is:singular_femenine
+revèl	po:adverb
+revèƚo	po:adverb
 santità	po:noun is:femenine
+scavenèla/F0Ṿe	po:noun is:singular_femenine
+sirèla/F0Ṿe	po:noun is:singular_femenine
 siròso/FS	po:adverb
 siròŧo/FS	po:adverb
 stòmego/M0FS	po:noun is:singular_masculine
+ŧirèla/F0	po:noun is:singular_femenine
 vejò	po:noun is:masculine
 veɉò	po:noun is:masculine
 xgindon	po:adverb
@@ -58977,6 +59039,6 @@ xgrarasòto/FS	po:adverb
 xgraraŧòto/FS	po:adverb
 
 
-/ 76
+/ 82
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
