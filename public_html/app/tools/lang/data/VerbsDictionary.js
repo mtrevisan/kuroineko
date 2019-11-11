@@ -6327,6 +6327,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "skujer",		"",			1,	5,	"a",	"1876",			"",
 "skulier",		"",			1,	5,	"a",	"1851",			"",
 "skur",			"",			4,	4,	"a",	"1854",			"",
+"skur",			"de",			4,	4,	"a",	"1855",			"(belumat)",
 "skur",			"i",			4,	4,	"a",	"1867",			"",
 "skur",			"in",			4,	4,	"a",	"1775",			"",
 "skuri",			"",			1,	2,	"a",	"1852",			"Skudisiar.",
