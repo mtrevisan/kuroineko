@@ -8,6 +8,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "abokad",		"",			1,	4,	"g",	"1867",			"Apaltar.",
 "adint",			"",			1,	2,	"a",	"1430",			"Jutar.",
 "adiutar",		"",			1,	3,	"a",	"1450",			"Jutar.",
+"ađard",			"",			1,	2,	"g",	"1855",			"(belumat)",
 "aer",			"",			1,	0,	"g",	"",				"",
 "afan",			"",			1,	2,	"g",	"1775",			"Darse da far ko inpeño.",
 "aflíx",			"",			3,	3,	"a",	"",				"",
