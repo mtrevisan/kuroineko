@@ -209,6 +209,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "badaj",			"x",			1,	3,	"g",	"1847",			"",
 "badan",			"",			1,	3,	"g",	"1851",			"Afanar, inketar, alterar.",
 "badej",			"x",			1,	3,	"a",	"1980",			"Xbadajar.",
+"badil",			"",			1,	2,	"a",	"1855",			"",
+"badil",			"x",			1,	2,	"a",	"",				"",
 "badin",			"",			1,	3,	"a",	"1852",			"(dal franŧexe) Skersar, befar, burlar.",
 "bađot",			"",			1,	3,	"g",	"1867",			"Tentenar.",
 "bafar",			"dex",		1,	1,	"g",	"1867",			"",
