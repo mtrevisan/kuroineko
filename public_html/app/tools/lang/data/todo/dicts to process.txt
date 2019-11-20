@@ -22,16 +22,22 @@ chi naturale = ki
 ^(.*?)$\s+?^(?=.*^\1$) > # remove duplicates
 (ƚ[^/\n]+)et[ao]/[DT]0\t > add &1 to $1
 po:[^\n]+po: > split line
-^[^ƚ\r\n]*anko(/[^\r\n\tF]*)?\t > FS # add FS
+^[^ƚ\s\r\n]*[oò][kt]o(/[^\s\r\n\tF]*)?\t > FS # add FS
 [bcdđfghjɉklƚmnñprstŧvx]i[aeiou] > $1ï$2 # dièrexi
 (\b(\w*?)([ae])(\w*)\b)(?=[\s\S]*(\b\2(?!\3)[ae]\4\b)) # find couples of words that differs only for [ae]
 po:adjective( [^i]|$) # add is:...
 o[nl]/[^\r\nU]+U\d > add exception to hyphenation rules
 
+20190325
 correctness time = 463 s
 total words = 38378178
 unique words = 35904033
-difference = 2474145 = 30 s
 speed = 82890 w/s = 12.06 µs/w
+
+20191120
+correctness time = 168 s
+total words = 41054870
+unique words = 38227613
+speed = 244374 w/s = 4.09 µs/w
 
 https://graphemica.com/%E2%B1%A5
