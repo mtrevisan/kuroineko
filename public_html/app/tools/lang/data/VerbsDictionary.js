@@ -365,6 +365,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "barkej",		"",			1,	4,	"a",	"1896",			"Menar na barka.",
 "barkiđ",		"",			1,	4,	"a",	"1867",			"Destređar, maneđar ko destreŧa.",
 "barkol",		"",			1,	4,	"a",	"1896",			"",
+"barluk",		"",			1,	4,	"a",	"1855",			"(belumat)",
 "barluk",		"in",			1,	4,	"a",	"1867",			"Gabar, trapolar.",
 "barluk",		"x",			1,	4,	"a",	"1980",			"ʼver atejamenti inkonsulti.",
 "barlúx",		"",			3,	4,	"a",	"1867",			"Luxegar, lanpeđar.",
