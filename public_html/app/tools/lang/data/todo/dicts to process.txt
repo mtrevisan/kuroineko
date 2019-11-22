@@ -22,7 +22,7 @@ chi naturale = ki
 ^(.*?)$\s+?^(?=.*^\1$) > # remove duplicates
 (ƚ[^/\n]+)et[ao]/[DT]0\t > add &1 to $1
 po:[^\n]+po: > split line
-^[^ƚ\s\r\n]*[oò][kt]o(/[^\s\r\n\tF]*)?\t > FS # add FS
+^[^ƚ\s\r\n]*usto(/[^\s\r\n\tF]*)?\t > FS # add FS
 [bcdđfghjɉklƚmnñprstŧvx]i[aeiou] > $1ï$2 # dièrexi
 (\b(\w*?)([ae])(\w*)\b)(?=[\s\S]*(\b\2(?!\3)[ae]\4\b)) # find couples of words that differs only for [ae]
 po:adjective( [^i]|$) # add is:...

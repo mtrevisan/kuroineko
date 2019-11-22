@@ -494,6 +494,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "berton",		"in",			1,	4,	"a",	"1590",			"",
 "berton",		"x",			1,	4,	"a",	"1775",			"Skonvòlđer, dexordenar.",
 "berxel",		"x",			1,	4,	"g",	"1560",			"Belar.",
+"besig",			"",			1,	3,	"a",	"",				"Vesigar.",
+"besig",			"in",			1,	3,	"a",	"",				"Invesigar.",
 "bestem",		"",			1,	4,	"a",	"1998",			"",
 "besti",			"in",			1,	1,	"g",	"1896",			"",
 "bestial",		"in",			4,	7,	"a",	"1847",			"",
