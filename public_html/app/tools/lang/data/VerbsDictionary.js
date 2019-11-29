@@ -4303,6 +4303,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "morŧ",			"",			1,	1,	"g",	"1980",			"(bixiak) Adentelar.",
 "morŧ",			"in",			1,	1,	"g",	"1775",			"Kaletar, kométer el leñame, strénđer ko la mòrŧa.",
 "morseg",		"",			1,	1,	"g",	"1775",			"",
+"morseg",		"x",			1,	1,	"g",	"1855",			"(belumat)",
 "mormol",		"",			1,	1,	"g",	"1560",			"Mormorar.",
 "mormor",		"",			1,	1,	"g",	"1463",			"",
 "mort",			"tra",		4,	4,	"a",	"",				"",
