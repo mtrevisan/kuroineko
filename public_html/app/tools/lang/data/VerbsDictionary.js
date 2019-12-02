@@ -2844,6 +2844,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kant",			"in",			1,	1,	"g",	"1847",			"Stupir.",
 "kant",			"s",			1,	1,	"g",	"1896",			"",
 "kantar",		"",			1,	4,	"g",	"1852",			"Kantikiar frekuentemente e mal.",
+"kantaŧ",		"",			1,	4,	"g",	"1855",			"(belumat)",
 "kantexem",		"in",			1,	4,	"a",	"1980",			"(bixiak)Afasinar.",
 "kantig",		"s",			1,	1,	"a",	"1908",			"(coxòto) Barkolar.",
 "kantin",		"s",			1,	1,	"a",	"1775",			"Barkolar, mankar de parola, lasar a dexiderar.",
