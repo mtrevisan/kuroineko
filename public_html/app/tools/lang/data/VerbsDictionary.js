@@ -3054,6 +3054,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kax",			"a",			1,	1,	"g",	"1829",			"",
 "kax",			"in",			1,	1,	"g",	"1775",			"",
 "kaxament",		"",			1,	5,	"a",	"1854",			"Akaxar.",
+"kaxand",		"",			1,	3,	"g",	"1855",			"(belumat) Andar de kaxa in kaxa.",
 "kaxat",			"in",			1,	3,	"a",	"1896",			"Aver i òci ŧispoxi.",
 "kaxerm",		"",			1,	3,	"g",	"1829",			"Loxar i soldài in kaxerma.",
 "kaxerm",		"a",			1,	3,	"g",	"1829",			"Kaxermar.",
