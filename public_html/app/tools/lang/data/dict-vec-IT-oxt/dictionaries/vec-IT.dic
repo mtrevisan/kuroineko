@@ -9040,6 +9040,15 @@ prokaŧo/a0a1P0P1FSI0	po:verb ts:indicative_present st:prokaŧar
 prokàŧoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:prokaŧar
 inkasir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive_simple
 inkaŧir/a0a1d0d1P0P1	po:verb ts:infinitive_simple
+kasarolar/a0a1P0P1	po:verb ts:infinitive_simple
+kasaròlo/a0a1P0P1FSI0	po:verb ts:indicative_present st:kasarolar
+kasaròloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:kasarolar
+kaŧarolar/a0a1P0P1	po:verb ts:infinitive_simple
+kaŧaròlo/a0a1P0P1FSI0	po:verb ts:indicative_present st:kaŧarolar
+kaŧaròloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:kaŧarolar
+kasaroƚar/a0a2P0P2	po:verb ts:infinitive_simple
+kasaròƚo/a0a2P0P2I0	po:verb ts:indicative_present st:kasaroƚar
+kasaròƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:kasaroƚar
 skasorlar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 skasorlo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:skasorlar
 skasórloe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:skasorlar
@@ -59388,6 +59397,8 @@ gatarigoloxo/A1FSⱣd	po:noun is:singular_masculine
 gatarigoƚoxo/A1WāⱣd	po:adjective is:singular_masculine
 gatarigoƚoxo/A1Ᵽd	po:noun is:singular_masculine
 gateŧo/M0FSⱣdṾe	po:noun is:singular_masculine
+guadañada/F0Y0gv	po:noun is:singular_femenine
+guadañado/M0FSY0gv	po:noun is:singular_masculine
 guxelèr/M0V0	po:noun is:singular_masculine
 guxelèra/F0V0	po:noun is:singular_femenine
 guxeƚèr/M0V1	po:noun is:singular_masculine
@@ -59443,6 +59454,8 @@ kanpanòto/M0FS	po:noun is:singular_masculine
 kanpedèl/M0Ƀl	po:noun is:singular_masculine
 kanpedèƚo/M0	po:noun is:singular_masculine
 kañòr/A1	po:adjective is:singular_masculine
+kaorèr/M0V0	po:noun is:singular_masculine
+kaorèra/F0V0	po:noun is:singular_femenine
 kapia/F0ět	po:noun is:singular_femenine
 kaposòldo/M0	po:noun is:singular_masculine
 kardelin/M0Ṿe	po:noun is:singular_masculine
@@ -59458,6 +59471,9 @@ karnièla/F0Ṿe	po:noun is:singular_femenine
 karñèl/M0ɃlṾe	po:noun is:singular_masculine
 karñèla/F0Ṿe	po:noun is:singular_femenine
 kartèra/F0V0	po:adjective is:singular_femenine
+kasacò	po:noun is:singular_masculine
+kasarolada/F0Y0Y1	po:noun is:singular_femenine
+kasaroƚada/F0Y0Y1	po:noun is:singular_femenine
 katabège	po:noun
 katadiŧa/Ṿe	po:noun is:singular_femenine
 kataiŧa/Ṿe	po:noun is:singular_femenine
@@ -59470,6 +59486,8 @@ katerata/F0	po:noun is:singular_femenine
 katramaca/F0	po:noun is:singular_femenine
 katúsola/F0Ṿe	po:noun is:singular_femenine
 katúŧola/F0	po:noun is:singular_femenine
+kaŧacò	po:noun is:singular_masculine
+kaŧarolada/F0Y0Y1	po:noun is:singular_femenine
 kausal/F0ɃlṾɇět	po:noun is:singular_masculine
 kausaƚeto/M0Ᵽd	po:noun is:singular_masculine
 kauŧal/F0Ƀlět	po:noun is:singular_masculine
@@ -59479,7 +59497,15 @@ kavalkina/F0	po:noun is:singular_femenine
 kavalòto/FS	po:adverb
 kavaƚierato/M0	po:noun is:singular_masculine
 kavaƚòto	po:adverb
+kavareto/A1FSⱣd	po:noun is:singular_masculine
+kavarèr/M0V0	po:noun is:singular_masculine
+kavarèra/F0V0	po:noun is:singular_femenine
 kavela/F0Ṿe	po:noun is:singular_femenine
+kavereto/A1FSⱣd	po:noun is:singular_masculine
+kaverèr/M0V0	po:noun is:singular_masculine
+kaverèra/F0V0	po:noun is:singular_femenine
+kaveto/A1FSⱣd	po:adjective is:singular_masculine
+kaveŧon/F0ɃlⱣdṾe	po:noun is:singular_masculine
 kaxemir/M0	po:noun is:singular_masculine
 kaxnada/F0Y0Y1	po:noun is:singular_femenine
 kàndola/F0Ṿe	po:noun is:singular_femenine
@@ -59495,6 +59521,7 @@ koklè–koklè	po:interjection
 kolaña/F0	po:noun is:singular_femenine
 koƚaña/F0	po:noun is:singular_femenine
 konfesonario/M0	po:noun is:singular_masculine
+kraveto/A1FSⱣd	po:adjective is:singular_masculine
 krè–krè	po:interjection
 krèdo/M0FS	po:noun is:singular_masculine
 krèk–krèk	po:interjection
@@ -59653,19 +59680,9 @@ xguaɉada/F0Y0	po:adjective is:singular_femenine
 xguaɉado/M0FSY0ǒN	po:adjective is:singular_masculine
 xi–it	po:interjection
 xii–xii	po:interjection
-kaorèr/M0V0	po:noun is:singular_masculine
-kaorèra/F0V0	po:noun is:singular_femenine
-kavarèr/M0V0	po:noun is:singular_masculine
-kavarèra/F0V0	po:noun is:singular_femenine
-kaverèr/M0V0	po:noun is:singular_masculine
-kaverèra/F0V0	po:noun is:singular_femenine
-kavareto/A1FSⱣd	po:noun is:singular_masculine
-kavereto/A1FSⱣd	po:noun is:singular_masculine
-kaveto/A1FSⱣd	po:adjective is:singular_masculine
-kraveto/A1FSⱣd	po:adjective is:singular_masculine
-kaveŧon/F0ɃlⱣdṾe	po:noun is:singular_masculine
 
 
-/ 326
+/ 328
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
+
