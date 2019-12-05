@@ -3019,6 +3019,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kaŧ",			"s",			1,	1,	"g",	"1560",			"",
 "kaŧ",			"in",			4,	3,	"a",	"1867",			"Inŧukar.",
 "kaŧarol",		"",			1,	5,	"g",	"1855",			"(belumat)",
+"kaŧol",			"",			1,	3,	"g",	"1855",			"(belumat)",
 "kaŧorl",		"s",			1,	3,	"a",	"1560",			"",
 "kaŧot",			"",			1,	3,	"g",	"1900",			"(veronexe)",
 "kauc",			"",			1,	2,	"a",	"1900",			"(veronexe) Laorar ko na guca.",
