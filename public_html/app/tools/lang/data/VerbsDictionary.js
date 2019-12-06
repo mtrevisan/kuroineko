@@ -963,6 +963,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "car",			"",			1,	1,	"g",	"1829",			"",
 "cacar",			"",			1,	1,	"g",	"1527",			"Cakolar.",
 "cacer",			"",			1,	1,	"g",	"1980",			"Cakolar.",
+"caker",			"",			1,	1,	"g",	"1855",			"(belumat) Cakolar.",
 "cakol",			"",			1,	1,	"g",	"1810",			"",
 "cam",			"",			1,	1,	"g",	"1219",			"",
 "cam",			"re",			1,	1,	"g",	"1560",			"",
