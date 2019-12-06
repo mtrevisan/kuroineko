@@ -1023,6 +1023,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "cet",			"pre",		1,	1,	"g",	"1867",			"",
 "cetar",			"",			1,	1,	"g",	"1980",			"Robar, inbrojar.",
 "cex",			"",			1,	1,	"a",	"1867",			"Frekuentar cexe.",
+"cexand",		"",			1,	3,	"g",	"1855",			"(belumat) Frekuentar cexe.",
 "cicol",			"",			1,	1,	"a",	"1775",			"Cacarar, cakolar.",
 "cijar",			"",			1,	1,	"a",	"1851",			"Penetar lin o kàneva",
 "cik",			"",			1,	1,	"a",	"1896",			"",
