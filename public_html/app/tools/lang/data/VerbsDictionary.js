@@ -3065,6 +3065,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kaxon",			"in",			1,	3,	"a",	"1851",			"Inprixonar.",
 "kekeđ",			"s",			1,	3,	"a",	"1998",			"Balbetar.",
 "kekeñ",			"",			1,	3,	"a",	"1980",			"Balbetar.",
+"kekiñ",			"",			1,	3,	"a",	"1855",			"(belumat) Balbetar.",
 "keg",			"",			1,	1,	"g",	"1980",			"Kagar.",
 "kerm",			"s",			4,	4,	"a",	"1829",			"Skarmir.",
 "ket",			"",			1,	1,	"a",	"1829",			"Kietar.",
