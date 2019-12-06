@@ -967,6 +967,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "cakol",			"",			1,	1,	"g",	"1810",			"",
 "cam",			"",			1,	1,	"g",	"1219",			"",
 "cam",			"re",			1,	1,	"g",	"1560",			"",
+"canc",			"",			1,	1,	"g",	"1855",			"(belumat) Cakolar.",
 "canŧ",			"s",			1,	1,	"g",	"1854",			"Xɉanŧar.",
 "cap",			"",			1,	1,	"g",	"1503",			"Prénder, ferir, kolpir.",
 "cap",			"des",		1,	1,	"g",	"1775",			"Xbrankar, kavar dal branko.",
