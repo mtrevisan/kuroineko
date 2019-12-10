@@ -3203,6 +3203,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "konkol",		"in",			1,	1,	"a",	"1775",			"Inkonkar.",
 "koni",			"",			1,	1,	"g",	"1775",			"Kuñar.",
 "koniug",		"",			1,	1,	"g",	"",				"",
+"konomiđ",		"",			1,	6,	"a",	"1855",			"(belumat)",
 "konp",			"",			4,	4,	"a",	"1980",			"",
 "konp",			"in",			4,	4,	"a",	"1980",			"",
 "konpajin",		"s",			1,	4,	"g",	"1775",			"",
