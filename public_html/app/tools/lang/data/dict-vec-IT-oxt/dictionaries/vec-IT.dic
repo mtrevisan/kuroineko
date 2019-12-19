@@ -19081,15 +19081,6 @@ siòperoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:sioperar
 sioparar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 siòparo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:sioparar
 siòparoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:sioparar
-desipar/a0a1a2P0P1P2r0	po:verb ts:infinitive_simple
-dèsipo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:desipar
-dèsipoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:desipar
-malsipar/a0a1a2P0P1P2r2	po:verb ts:infinitive_simple
-màlsipo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:malsipar
-màlsipoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:malsipar
-mansipar/a0a1a2P0P1P2r2	po:verb ts:infinitive_simple
-mànsipo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:mansipar
-mànsipoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:mansipar
 siringar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 siringo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:siringar
 siríngoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:siringar
@@ -23600,6 +23591,24 @@ sípoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:sipar
 ŧipar/a0a1P0P1	po:verb ts:infinitive_simple
 ŧipo/a0a1P0P1FSI0	po:verb ts:indicative_present st:ŧipar
 ŧípoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:ŧipar
+deŧipar/a0a1P0P1r0	po:verb ts:infinitive_simple
+dèŧipo/a0a1P0P1FSI0	po:verb ts:indicative_present st:deŧipar
+dèŧipoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:deŧipar
+desipar/a0a1a2P0P1P2r0	po:verb ts:infinitive_simple
+dèsipo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:desipar
+dèsipoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:desipar
+malŧipar/a0a1P0P1r2	po:verb ts:infinitive_simple
+màlŧipo/a0a1P0P1FSI0	po:verb ts:indicative_present st:malŧipar
+màlŧipoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:malŧipar
+malsipar/a0a1a2P0P1P2r2	po:verb ts:infinitive_simple
+màlsipo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:malsipar
+màlsipoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:malsipar
+manŧipar/a0a1P0P1r2	po:verb ts:infinitive_simple
+mànŧipo/a0a1P0P1FSI0	po:verb ts:indicative_present st:manŧipar
+mànŧipoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:manŧipar
+mansipar/a0a1a2P0P1P2r2	po:verb ts:infinitive_simple
+mànsipo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:mansipar
+mànsipoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:mansipar
 postisipar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 postísipo/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:postisipar
 postísipoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:postisipar
@@ -27348,6 +27357,8 @@ Novenbre/Z0	po:noun is:singular_masculine
 Novénbare/Z0	po:noun is:singular_masculine
 Novenbro/M1Z0	po:noun is:singular_masculine
 Dexenbre/Z0	po:noun is:singular_masculine
+Deŧènbre/Z0	po:noun is:singular_masculine
+Desènbre/Z0	po:noun is:singular_masculine
 Deŧenbre/Z0	po:noun is:singular_masculine
 Desenbre/Z0	po:noun is:singular_masculine
 Dexénbare/Z0	po:noun is:singular_masculine
@@ -28862,6 +28873,7 @@ bòkol/M0ɃƚⱣdṾe	po:noun is:singular_masculine
 bòkola/F0Ṿe	po:noun is:singular_femenine
 bòsa/F0ělěƚět	po:noun is:singular_femenine
 bòta/F0.0ǎSǎs	po:noun is:singular_femenine
+bòta	po:adverb
 bòto/FS.0	po:adverb
 bòto/M0FS.0ǎSǎsǐnǒn	po:noun is:singular_masculine
 bòŧa/F0ělět	po:noun is:singular_femenine
@@ -45703,7 +45715,7 @@ eufraɉeta/F0	po:noun is:singular_femenine
 evanjèlio/M0Ṿe	po:noun is:singular_masculine
 evanɉèlio/M0Ṿe	po:noun is:singular_masculine
 evaxion/F0ɃlⱣd	po:noun is:singular_femenine
-evaxivo/A1	po:noun is:singular_masculine
+evaxivo/A1FSWa	po:adjective is:singular_masculine
 exabruto/FS	po:adverb
 exangue/M0	po:adjective is:singular
 exato/A1FSěSěs+0	po:adjective is:singular_masculine
@@ -59929,8 +59941,10 @@ xguajada/F0Y0	po:adjective is:singular_femenine
 xguajado/M0FSY0ǒN	po:adjective is:singular_masculine
 xguaɉada/F0Y0	po:adjective is:singular_femenine
 xguaɉado/M0FSY0ǒN	po:adjective is:singular_masculine
+deŧixivo/A1FSWa	po:adjective is:singular_masculine
+desixivo/A1FSWa	po:adjective is:singular_masculine
 
 
-/ 516
+/ 517
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
