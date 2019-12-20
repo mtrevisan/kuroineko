@@ -5600,9 +5600,9 @@ fòfoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:fofar
 fogar/a0a1a2P0P1P2+0r0	po:verb ts:infinitive_simple
 fògo/a0a1a2P0P1P2FSI0+0	po:verb ts:indicative_present st:fogar
 fògoe/a0a1a2I1+0	po:verb ts:indicative_present is:interrogative st:fogar
-sfogar/a0a1a2P0P1P2+0-1	po:verb ts:infinitive_simple
-sfògo/a0a1a2P0P1P2FSI0+0-1	po:verb ts:indicative_present st:sfogar
-sfògoe/a0a1a2I1+0-1	po:verb ts:indicative_present is:interrogative st:sfogar
+sfogar/a0a1a2P0P1P2+0-0	po:verb ts:infinitive_simple
+sfògo/a0a1a2P0P1P2FSI0+0-0	po:verb ts:indicative_present st:sfogar
+sfògoe/a0a1a2I1+0-0	po:verb ts:indicative_present is:interrogative st:sfogar
 infogonar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 infògono/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:infogonar
 infògonoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:infogonar
@@ -6630,12 +6630,12 @@ gargaríxoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:gargari
 xgargotar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 xgargòto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:xgargotar
 xgargòtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:xgargotar
-xgarnelar/a0a1P0P1	po:verb ts:infinitive_simple
-xgarnèlo/a0a1P0P1FSI0	po:verb ts:indicative_present st:xgarnelar
-xgarnèloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:xgarnelar
-xgarneƚar/a0a2P0P2	po:verb ts:infinitive_simple
-xgarnèƚo/a0a2P0P2I0	po:verb ts:indicative_present st:xgarneƚar
-xgarnèƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:xgarneƚar
+xgarnelar/a0a1P0P1-0	po:verb ts:infinitive_simple
+xgarnèlo/a0a1P0P1FSI0-0	po:verb ts:indicative_present st:xgarnelar
+xgarnèloe/a0a1I1-0	po:verb ts:indicative_present is:interrogative st:xgarnelar
+xgarneƚar/a0a2P0P2-0	po:verb ts:infinitive_simple
+xgarnèƚo/a0a2P0P2I0-0	po:verb ts:indicative_present st:xgarneƚar
+xgarnèƚoe/a0a2I1-0	po:verb ts:indicative_present is:interrogative st:xgarneƚar
 ingariar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 ingario/a0a1a2P0P1P2I0	po:verb ts:indicative_present st:ingariar
 ingàrioe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:ingariar
@@ -45960,8 +45960,8 @@ flòta/F0	po:noun is:singular_femenine
 flusion/F0ɃlⱣd	po:noun is:singular_femenine
 fluvio/M0	po:noun is:singular_masculine
 fodro/M0ětǐn	po:noun is:singular_masculine
-fogada/F0Y0+0*0	po:noun is:singular_femenine
-fogado/M0FSY0+0*0	po:noun is:singular_masculine
+fogada/F0Y0-1*0	po:noun is:singular_femenine
+fogado/M0FSY0+0-1*0	po:noun is:singular_masculine
 fogoxitada/F0Y0Y1	po:noun is:singular_femenine
 fojo/M0FS*0ǎSǎsět	po:noun is:singular_masculine
 fojoxo/A1FSWaⱣd	po:adjective is:singular_masculine
@@ -55153,8 +55153,10 @@ xguisada/F0Y0Y1	po:noun is:singular_femenine
 xguiŧada/F0Y0Y1	po:noun is:singular_femenine
 xjansada/F0Y0Y1Ṿè	po:noun is:singular_femenine
 xjanŧada/F0Y0Y1Ṿè	po:noun is:singular_femenine
-xjonfada/F0Y0Y1-0	po:noun is:singular_femenine
-xɉonfada/F0Y0Y1-0	po:noun is:singular_femenine
+xjonfada/F0Y0-0	po:noun is:singular_femenine
+xjonfado/M0FSY0-0	po:noun is:singular_masculine
+xɉonfada/F0Y0-0	po:noun is:singular_femenine
+xɉonfado/M0FSY0-0	po:noun is:singular_masculine
 xlankada/F0Y0-0	po:noun is:singular_femenine
 xlankado/M0FSY0-0	po:noun is:singular_masculine
 xlargada/F0Y0Y1ǐn	po:noun is:singular_femenine
@@ -59563,6 +59565,9 @@ desfada/F0Y0	po:adjective is:singular_femenine
 desfado/M0FSY0	po:adjective is:singular_masculine
 desfato/A1FS	po:adjective is:singular_masculine
 desfida/F0Y0	po:noun is:singular_femenine
+desfidente/M0FSⱣdṾr	po:noun is:singular
+desfornida/F0Y0	po:noun is:singular_femenine
+desfornido/M0FSY0	po:noun is:singular_masculine
 desixivo/A1FSWa	po:adjective is:singular_masculine
 deskàpito/M0FS	po:noun is:singular_masculine
 deskroxada/F0Y0Y1	po:noun is:singular_femenine
@@ -59839,6 +59844,7 @@ ligaiso/M0FSṾè	po:adjective is:singular_masculine
 ligaiŧo/A1FS	po:adjective is:singular_masculine
 ƚèso/A1	po:adjective is:singular_masculine
 ƚèso/A1	po:noun is:singular_masculine
+manaron/F0ɃlⱣd	po:noun is:singular_masculine
 maselar/F0	po:adjective is:singular
 maseƚar/F0	po:adjective is:singular
 maxonèra/F0V0	po:noun is:singular_femenine
@@ -59971,6 +59977,6 @@ xguaɉada/F0Y0	po:adjective is:singular_femenine
 xguaɉado/M0FSY0ǒN	po:adjective is:singular_masculine
 
 
-/ 536
+/ 542
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ

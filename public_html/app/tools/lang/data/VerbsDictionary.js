@@ -2196,6 +2196,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "gargariđ",		"",			1,	6,	"a",	"1810",			"",
 "gargariđ",		"x",			1,	6,	"a",	"1775",			"Rexentar la boka.",
 "gargot",		"x",			1,	4,	"g",	"1980",			"Liberarse da ʼl kataro.",
+"garnel",		"dex",		1,	4,	"g",	"1855",			"(belumat)",
 "garnel",		"x",			1,	4,	"g",	"1980",			"Xbucar i faxiòli, kavar i kiki da la panòca de mais.",
 "gari",			"in",			1,	1,	"g",	"1980",			"Inviar, skomenŧiar.",
 "garl",			"x",			1,	1,	"g",	"1829",			"",
