@@ -481,6 +481,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "berekin",		"",			1,	5,	"a",	"1829",			"",
 "berikin",		"",			1,	5,	"a",	"1896",			"Berekinar.",
 "berl",			"in",			1,	1,	"g",	"1980",			"Storŧar, piegar, méter fora livèl.",
+"berl",			"dex",		1,	1,	"g",	"1855",			"(belumat) Rénder drita na ròba inberlada.",
 "berl",			"x",			1,	1,	"g",	"1560",			"Spalankar.",
 "berlef",		"x",			1,	4,	"g",	"1854",			"Burlar.",
 "berlot",		"x",			1,	4,	"g",	"1854",			"Dar scafe.",
