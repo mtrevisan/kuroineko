@@ -3289,6 +3289,9 @@ darénoe/a0a1a2I1*0	po:verb ts:indicative_present is:interrogative st:darenar
 darokar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 daròko/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:darokar
 daròkoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:darokar
+deseñar/a0a1a2P0P1P2V0	po:verb ts:infinitive_simple
+deseño/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:deseñar
+deséñoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:deseñar
 destinar/a0a1a2P0P1P2r1r2	po:verb ts:infinitive_simple
 destino/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:destinar
 destínoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:destinar
@@ -3328,9 +3331,6 @@ devòrsioe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:devorsiar
 devorŧiar/a0a1P0P1	po:verb ts:infinitive_simple
 devòrŧio/a0a1P0P1I0	po:verb ts:indicative_present st:devorŧiar
 devòrŧioe/a0a1I1	po:verb ts:indicative_present is:interrogative st:devorŧiar
-dexeñar/a0a1a2P0P1P2V0	po:verb ts:infinitive_simple
-dexeño/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:dexeñar
-dexéñoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:dexeñar
 dexertar/a0a1a2P0P1P2r1r2	po:verb ts:infinitive_simple
 dexèrto/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:dexertar
 dexèrtoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:dexertar
@@ -59564,6 +59564,8 @@ desfidente/M0FSⱣdṾr	po:noun is:singular
 desfornida/F0Y0	po:noun is:singular_femenine
 desfornido/M0FSY0	po:noun is:singular_masculine
 desixivo/A1FSWa	po:adjective is:singular_masculine
+deskadenada/F0Y0	po:noun is:singular_femenine
+deskadenado/M0FSY0	po:noun is:singular_masculine
 deskàpito/M0FS	po:noun is:singular_masculine
 deskroxada/F0Y0Y1	po:noun is:singular_femenine
 deskurida/F0Y0	po:noun is:singular_femenine
@@ -59585,6 +59587,10 @@ dexleguada/F0Y0	po:adjective is:singular_femenine
 dexleguado/M0FSY0	po:adjective is:singular_masculine
 dexmato/FS	po:adverb
 dèla/F0Ṿe	po:noun is:singular_femenine
+diamantada/F0Y0	po:adjective is:singular_femenine
+diamantado/M0FSY0	po:adjective is:singular_masculine
+dixinvòlto/A1FS	po:adjective is:singular_masculine
+dixinvòlto/A1FS	po:noun is:singular_masculine
 dol/M0Ṿe	po:noun is:singular_masculine
 donativo/M0FS	po:noun is:singular_masculine
 drioponto/M0FS	po:noun is:singular_masculine
@@ -59619,6 +59625,8 @@ guxeƚèr/M0V1	po:noun is:singular_masculine
 guxeƚèra/F0V1	po:noun is:singular_femenine
 inarsida/F0Y0	po:adjective is:singular_femenine
 inarsido/M0FSY0	po:adjective is:singular_masculine
+india/F0ět	po:noun is:singular_femenine
+indio/M0ětǒNǒt	po:noun is:singular_masculine
 indolente/M0FSⱣdṾr	po:adjective is:singular
 indoƚente/M0ⱣdṾɍ	po:adjective is:singular
 inimigo/A1FS	po:adjective is:singular_masculine
@@ -59629,6 +59637,7 @@ inseƚada/F0Y0	po:adjective is:singular_femenine
 inseƚado/M0FSY0	po:adjective is:singular_masculine
 interese/M0FS	po:noun is:singular_masculine
 jagur/A2Ṿè	po:adjective is:singular_masculine
+janduŧa/F0ṾeṾè	po:noun is:singular_femenine
 jol/M0ṾeṾè	po:noun is:singular_masculine
 kaderleto/M0FSⱣd	po:noun is:singular_masculine
 kadica/F0	po:noun is:singular_femenine
@@ -59902,6 +59911,7 @@ revèl	po:adverb
 revèƚo	po:adverb
 roa/F0	po:noun is:singular_femenine
 roda/F0ět	po:noun is:singular_femenine
+ròn	po:adverb
 santità	po:noun is:femenine
 scauŧa/F0Ṿe	po:noun is:singular_femenine
 scavenèla/F0Ṿe	po:noun is:singular_femenine
@@ -59932,6 +59942,7 @@ straŧapitoko/M0FS	po:noun is:singular_masculine
 sugerina/F0	po:adjective is:singular_femenine
 tamexo/M0FSět	po:noun is:singular_masculine
 tania/F0	po:noun is:singular_femenine
+teneinkago	po:interjection
 termómetro/M0	po:noun is:singular_masculine
 tèndro/A1	po:adjective is:singular_masculine
 tuk-tuk	po:interjection
@@ -59987,13 +59998,8 @@ xguajada/F0Y0	po:adjective is:singular_femenine
 xguajado/M0FSY0	po:adjective is:singular_masculine
 xguaɉada/F0Y0	po:adjective is:singular_femenine
 xguaɉado/M0FSY0	po:adjective is:singular_masculine
-diamantada/F0Y0	po:adjective is:singular_femenine
-diamantado/M0FSY0	po:adjective is:singular_masculine
-janduŧa/F0ṾeṾè	po:noun is:singular_femenine
-deskadenada/F0Y0	po:noun is:singular_femenine
-deskadenado/M0FSY0	po:noun is:singular_masculine
 
 
-/ 564
+/ 570
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
