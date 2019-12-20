@@ -11579,7 +11579,7 @@ interlokuir/a0a1a2d0d1d2P0P1	po:verb ts:infinitive_simple
 intarlokuir/a0a1a2d0d1d2P0P1	po:verb ts:infinitive_simple
 intrelokuir/a0a1d0d1P0P1	po:verb ts:infinitive_simple
 intreƚokuir/a0a2d0d2P0P2	po:verb ts:infinitive_simple
-logar/a0a1P0P1-1*0r0	po:verb ts:infinitive_simple
+logar/a0a1P0P1-1*0r0r3	po:verb ts:infinitive_simple
 lògo/a0a1P0P1FSI0-1*0	po:verb ts:indicative_present st:logar
 lògoe/a0a1I1-1*0	po:verb ts:indicative_present is:interrogative st:logar
 ƚogar/a0a2P0P2ɍ0	po:verb ts:infinitive_simple
@@ -12359,6 +12359,12 @@ mastegàsoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:mastegasa
 mastegaŧar/a0a1P0P1	po:verb ts:infinitive_simple
 mastegaŧo/a0a1P0P1FSI0	po:verb ts:indicative_present st:mastegaŧar
 mastegàŧoe/a0a1I1	po:verb ts:indicative_present is:interrogative st:mastegaŧar
+dexmastelar/a0a1P0P1	po:verb ts:infinitive_simple
+dexmastèlo/a0a1P0P1FSI0	po:verb ts:indicative_present st:dexmastelar
+dexmastèloe/a0a1I1	po:verb ts:indicative_present is:interrogative st:dexmastelar
+dexmasteƚar/a0a2P0P2	po:verb ts:infinitive_simple
+dexmastèƚo/a0a2P0P2I0	po:verb ts:indicative_present st:dexmasteƚar
+dexmastèƚoe/a0a2I1	po:verb ts:indicative_present is:interrogative st:dexmasteƚar
 mastrusar/a0a1a2P0P1P2	po:verb ts:infinitive_simple
 mastruso/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:mastrusar
 mastrúsoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:mastrusar
@@ -32055,7 +32061,7 @@ soradòso/FS	po:preposition
 sorafin/A2ěSěs	po:adjective is:singular_masculine
 soramànego/A1FS	po:noun is:singular_masculine
 sorapensièr	po:adverb
-soravía/-0	po:adverb
+soravía	po:adverb
 sordo/A1ǒNⱣd	po:adjective is:singular_masculine
 sordomuto/A1FS	po:adjective is:singular_masculine
 sordomuto/A1FS	po:noun is:singular_masculine
@@ -49310,10 +49316,10 @@ prègo/M0FS	po:noun is:singular_masculine
 prèmio/M0	po:noun is:singular_masculine
 prèso/FS	po:adverb
 prèso/FS	po:preposition
-prèso/M0FSM1	po:noun is:singular_masculine
+prèso/M0FSM1-1	po:noun is:singular_masculine
 prèŧo/FS	po:adverb
 prèŧo/FS	po:preposition
-prèŧo/M0FSM1	po:noun is:singular_masculine
+prèŧo/M0FSM1-1	po:noun is:singular_masculine
 primaŧía/F0Ṿe	po:noun is:singular_femenine
 primavera/F0	po:adjective is:singular_femenine
 primavera/F0	po:noun is:singular_femenine
@@ -50546,7 +50552,7 @@ sparnaco/A1FS	po:adjective is:singular_masculine
 sparnacon/A2ɃlⱣd	po:noun is:singular_masculine
 sparsèl/M0ɃlṾe	po:noun is:singular_masculine
 sparso/A1FS	po:adjective is:singular_masculine
-sparte/FS	po:adverb
+sparte/FS-0	po:adverb
 spaseta/F0ǒN	po:noun is:singular_femenine
 spasiđon/A2ɃlⱣd	po:adjective is:singular_masculine
 spasio/ět	po:noun is:singular_masculine
@@ -59573,12 +59579,21 @@ deskàpito/M0FS	po:noun is:singular_masculine
 deskroxada/F0Y0Y1	po:noun is:singular_femenine
 deskurida/F0Y0	po:noun is:singular_femenine
 deskurido/M0FSY0	po:noun is:singular_masculine
+despojada/F0Y0	po:adjective is:singular_femenine
+despojado/M0FSY0	po:adjective is:singular_masculine
+despoɉada/F0Y0	po:adjective is:singular_femenine
+despoɉado/M0FSY0	po:adjective is:singular_masculine
+despupilada/F0Y0	po:adjective is:singular_femenine
+despupilado/M0FSY0	po:adjective is:singular_masculine
+despupiƚada/F0Y0	po:adjective is:singular_femenine
+despupiƚado/M0FSY0	po:adjective is:singular_masculine
 deto/M0FSǎSǎsělětǒn	po:noun is:singular_masculine
 deŧixivo/A1FSWa	po:adjective is:singular_masculine
 dexamigo/A1FS	po:adjective is:singular_masculine
 dexamigo/A1FS	po:noun is:singular_masculine
 dexleguada/F0Y0	po:adjective is:singular_femenine
 dexleguado/M0FSY0	po:adjective is:singular_masculine
+dexmato/FS	po:adverb
 dèla/F0Ṿe	po:noun is:singular_femenine
 dol/M0Ṿe	po:noun is:singular_masculine
 donativo/M0FS	po:noun is:singular_masculine
@@ -59914,6 +59929,9 @@ sorgèra/F0V0	po:noun is:singular_femenine
 sókola/F0Ṿe	po:noun is:singular_femenine
 spesia	po:noun is:femenine
 speŧie	po:noun is:femenine
+spianŧo/FS	po:adverb
+spropoxitada/F0Y0-0	po:noun is:singular_femenine
+spropoxitado/M0FSY0-0	po:noun is:singular_masculine
 stadiŧa/F0Ṿe	po:adjective is:singular_femenine
 staiŧa/F0Ṿe	po:adjective is:singular_femenine
 stòmego/M0FS	po:noun is:singular_masculine
@@ -59972,11 +59990,11 @@ xgindon	po:adverb
 xgrarasòto/FS	po:adverb
 xgraraŧòto/FS	po:adverb
 xguajada/F0Y0	po:adjective is:singular_femenine
-xguajado/M0FSY0ǒN	po:adjective is:singular_masculine
+xguajado/M0FSY0	po:adjective is:singular_masculine
 xguaɉada/F0Y0	po:adjective is:singular_femenine
-xguaɉado/M0FSY0ǒN	po:adjective is:singular_masculine
+xguaɉado/M0FSY0	po:adjective is:singular_masculine
 
 
-/ 542
+/ 550
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
