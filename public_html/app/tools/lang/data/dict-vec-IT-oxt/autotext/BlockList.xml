@@ -2,10 +2,12 @@
 <block-list:block-list xmlns:block-list="http://openoffice.org/2001/block-list" block-list:list-name="autotext_vec">
 <!-- The file BlockList.xml in the archive acor_de-DE.dat in the user/autocorr folder collects all auto-corrections entries, which are not "text-only" -->
 <!-- https://forum.openoffice.org/en/forum/viewtopic.php?f=7&t=70501 -->
-	<block-list:block block-list:abbreviated-name="&lt;-" block-list:name="&lt;-" block-list:unformatted-text="false" />
-	<block-list:block block-list:abbreviated-name="-&gt;" block-list:name="-&gt;" block-list:unformatted-text="false" />
-	<block-list:block block-list:abbreviated-name="&lt;-&gt;" block-list:name="&lt;-&gt;" block-list:unformatted-text="false" />
-	<block-list:block block-list:abbreviated-name="&lt;--" block-list:name="&lt;--" block-list:unformatted-text="false" />
-	<block-list:block block-list:abbreviated-name="--&gt;" block-list:name="--&gt;" block-list:unformatted-text="false"/>
-	<block-list:block block-list:abbreviated-name="&lt;--&gt;" block-list:name="&lt;--&gt;" block-list:unformatted-text="false" />
+<!-- https://bugs.documentfoundation.org/show_bug.cgi?id=99469 -->
+<!-- https://github.com/LibreOffice/core/blob/master/extras/source/autotext/lang/km/standard/BlockList.xml -->
+	<block-list:block block-list:name="&lt;-" block-list:abbreviated-name="&lt;-" block-list:unformatted-text="false" />
+	<block-list:block block-list:name="-&gt;" block-list:abbreviated-name="-&gt;" block-list:unformatted-text="false" />
+	<block-list:block block-list:name="&lt;-&gt;" block-list:abbreviated-name="&lt;-&gt;" block-list:unformatted-text="false" />
+	<block-list:block block-list:name="&lt;--" block-list:abbreviated-name="&lt;--" block-list:unformatted-text="false" />
+	<block-list:block block-list:name="--&gt;" block-list:abbreviated-name="--&gt;" block-list:unformatted-text="false"/>
+	<block-list:block block-list:name="&lt;--&gt;" block-list:abbreviated-name="&lt;--&gt;" block-list:unformatted-text="false" />
 </block-list:block-list>
