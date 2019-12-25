@@ -4034,6 +4034,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "mat",			"de",			1,	1,	"g",	"1854",			"Dixalberar na nave.",
 "mat",			"",			4,	3,	"a",	"1852",			"",
 "mat",			"in",			4,	3,	"a",	"1810",			"",
+"mat",			"x",			4,	3,	"a",	"1855",			"(belumat)",
 "mat",			"x",			1,	1,	"g",	"1775",			"Befar, xvergoñar, burlar.",
 "mateđ",			"",			1,	3,	"a",	"1896",			"",
 "matiđ",			"",			1,	3,	"a",	"1854",			"",
