@@ -18060,7 +18060,7 @@ róxoe/a0a1a2I1-0	po:verb ts:indicative_present is:interrogative st:roxar
 roxegar/a0a1a2P0P1P2r0r3	po:verb ts:infinitive_simple
 ròxego/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:roxegar
 ròxegoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:roxegar
-róxego/a0a1a2P0P1P2FSI0
+róxego/a0a1a2P0P1P2FSI0	po:verb ts:indicative_present st:roxegar
 róxegoe/a0a1a2I1	po:verb ts:indicative_present is:interrogative st:roxegar
 roxolar/a0a1P0P1	po:verb ts:infinitive_simple
 ròxolo/a0a1P0P1FSI0	po:verb ts:indicative_present st:roxolar
@@ -26477,6 +26477,7 @@ Xvetruƚio/Z0	po:proper_noun is:singular_masculine
 al/‘0	po:article is:singular_femenine
 an/‘0	po:article is:singular_masculine
 del/Ƀƚ	po:article is:singular_masculine
+el/M0Ṿe	po:article is:singular_masculine
 la/F0Ṿèʼ0	po:article is:singular_femenine
 lo/M0Ṿè	po:article is:singular_masculine
 na/ʼ0	po:article is:singular_femenine
@@ -26571,10 +26572,10 @@ miɉor/A2Ᵽd	po:noun is:singular_masculine
 minimamente/FSW0	po:adverb
 mínimo/A1FS	po:adjective is:singular_masculine
 molta/F0	po:adjective is:singular_femenine
-molta/F0	po:pronoun is:singular_femenine
+molta/F0	po:determiner is:singular_femenine
 molto/FS	po:adverb
 molto/M0FSǒN	po:adjective is:singular_masculine
-molto/M0FSǒN	po:pronoun is:singular_masculine
+molto/M0FSǒN	po:determiner is:singular_masculine
 molton	po:adverb
 no/ʼ0	po:adverb
 nò	po:adverb
@@ -26641,7 +26642,7 @@ plurimamente/FSW0	po:adverb
 plúrimo/A1FS	po:adjective is:singular_masculine
 poko/FSʼ0	po:adverb
 poko/M0FSʼ0Ᵽd	po:adjective is:singular_masculine
-poko/M0FSʼ0Ᵽd	po:pronoun is:singular_masculine
+poko/M0FSʼ0Ᵽd	po:determiner is:singular_masculine
 posterior/F0WaⱣd	po:adjective is:singular
 postumamente/FSW0	po:adverb
 pòstumo/A1FS	po:adjective is:singular_masculine
@@ -26656,13 +26657,13 @@ superior/F0WaⱣd	po:adjective is:singular
 superior/F0Ᵽd	po:noun is:singular
 suprèmo/A1FSWa	po:adjective is:singular_masculine
 tanta/F0ǐn	po:adjective is:singular_femenine
-tanta/F0ǐn	po:pronoun is:singular_femenine
+tanta/F0ǐn	po:determiner is:singular_femenine
 tantin	po:adverb
 tanto/FSʼ0	po:adverb
 tanto/M0FSǐnʼ0	po:adjective is:singular_masculine
-tanto/M0FSǐnʼ0	po:pronoun is:singular_masculine
+tanto/M0FSǐnʼ0	po:determiner is:singular_masculine
 tanton/A2ɃlⱣd	po:adjective is:singular_masculine
-tanton/A2ɃlⱣd	po:pronoun is:singular_masculine
+tanton/A2ɃlⱣd	po:determiner is:singular_masculine
 tanton	po:adverb
 ŧiterior/F0ṾèWaⱣd	po:adjective is:singular
 ŧitimamente/FSṾèW0	po:adverb
@@ -26677,194 +26678,338 @@ vera/F0ět	po:noun is:singular_femenine
 vero/M0FSětǐn	po:noun is:singular_masculine
 vero/M0FSWaět	po:adjective is:singular_masculine
 vier/M0Ᵽd	po:noun is:singular_masculine
-/ pronòmi líberi sojèto, indirèto, e reflesivo
-el/M0Ṿe	po:article is:singular_masculine
-el/M0ⱣdṾe	po:pronoun is:singular_masculine
-ela/F0Ṿe	po:pronoun is:singular_femenine
-lore/Ṿè	po:pronoun is:plural_femenine
-lori/Ṿè	po:pronoun is:plural_masculine
-lu/Ṿè	po:pronoun is:singular_masculine
-luri/Ṿè	po:pronoun is:plural_masculine
-nialtre/M0	po:pronoun is:plural_femenine
-noaltre/M0	po:pronoun is:plural_femenine
-noantre/M0	po:pronoun is:plural_femenine
-nu/ʼ0	po:pronoun is:plural_masculine
-nualtre/M0	po:pronoun is:plural_femenine
-nui	po:pronoun is:plural_masculine
-sè	po:pronoun
-unaltre/M0	po:pronoun is:plural_femenine
-vialtre/M0	po:pronoun is:plural_femenine
-voaltre/M0	po:pronoun is:plural_femenine
-vu/ʼ0	po:pronoun is:plural_masculine
-vualtre/M0	po:pronoun is:plural_femenine
-vui/‘0	po:pronoun is:plural_masculine
-/ pronòmi klítegi konplemento e reflesivi, e inparsonal e pasivante 'se'
-me/M0	po:pronoun is:singular_masculine
-se/M0	po:pronoun is:singular_masculine
-te/M0	po:pronoun is:singular_masculine
-tu	po:pronoun is:singular_masculine
-ve	po:pronoun is:singular_masculine
-/ pronòmi klítegi partitivo 'ne/en' e logativo 'ge'
-de	po:adverb
-de	po:pronoun is:singular_masculine
-en	po:pronoun is:singular_masculine
-ge/ʼ0	po:pronoun is:singular_masculine
-ne	po:adverb
-ne	po:pronoun is:singular_masculine
-ni	po:adverb
-ni	po:pronoun is:singular_masculine
-/ pronòme relativo 'ke'
-ke/M0	po:pronoun is:singular_masculine
-/ pronòme e ajetivo posesivo
-mé/A1	po:pronoun is:singular_masculine
-mé/A1	po:adjective_possessive is:singular_masculine
-nòstro/A1	po:pronoun is:singular_masculine
+/ pronòme líbero sojèto, indirèto, e reflesivo
+mi	po:pronoun_free_subject is:first_singular
+mi	po:pronoun_free_indirect is:first_singular
+mi	po:pronoun_free_reflexive is:first_singular
+noaltri	po:pronoun_free_subject is:first_plural_masculine
+noaltri	po:pronoun_free_indirect is:first_plural_masculine
+noaltri	po:pronoun_free_reflexive is:first_plural_masculine
+noaltre	po:pronoun_free_subject is:first_plural_femenine
+noaltre	po:pronoun_free_indirect is:first_plural_femenine
+noaltre	po:pronoun_free_reflexive is:first_plural_femenine
+nialtri	po:pronoun_free_subject is:first_plural_masculine
+nialtri	po:pronoun_free_indirect is:first_plural_masculine
+nialtri	po:pronoun_free_reflexive is:first_plural_masculine
+nialtre	po:pronoun_free_subject is:first_plural_femenine
+nialtre	po:pronoun_free_indirect is:first_plural_femenine
+nialtre	po:pronoun_free_reflexive is:first_plural_femenine
+noantri	po:pronoun_free_subject is:first_plural_masculine
+noantri	po:pronoun_free_indirect is:first_plural_masculine
+noantri	po:pronoun_free_reflexive is:first_plural_masculine
+noantre	po:pronoun_free_subject is:first_plural_femenine
+noantre	po:pronoun_free_indirect is:first_plural_femenine
+noantre	po:pronoun_free_reflexive is:first_plural_femenine
+nualtri	po:pronoun_free_subject is:first_plural_masculine
+nualtri	po:pronoun_free_indirect is:first_plural_masculine
+nualtri	po:pronoun_free_reflexive is:first_plural_masculine
+nualtre	po:pronoun_free_subject is:first_plural_femenine
+nualtre	po:pronoun_free_indirect is:first_plural_femenine
+nualtre	po:pronoun_free_reflexive is:first_plural_femenine
+unaltri	po:pronoun_free_subject is:first_plural_masculine
+unaltri	po:pronoun_free_indirect is:first_plural_masculine
+unaltri	po:pronoun_free_reflexive is:first_plural_masculine
+unaltre	po:pronoun_free_subject is:first_plural_femenine
+unaltre	po:pronoun_free_indirect is:first_plural_femenine
+unaltre	po:pronoun_free_reflexive is:first_plural_femenine
+altri	po:pronoun_free_subject is:first_plural_masculine
+altri	po:pronoun_free_indirect is:first_plural_masculine
+altri	po:pronoun_free_reflexive is:first_plural_masculine
+altre	po:pronoun_free_subject is:first_plural_femenine
+altre	po:pronoun_free_indirect is:first_plural_femenine
+altre	po:pronoun_free_reflexive is:first_plural_femenine
+nu/ʼ0	po:pronoun_free_subject is:first_plural
+nu/ʼ0	po:pronoun_free_indirect is:first_plural
+nu/ʼ0	po:pronoun_free_reflexive is:first_plural
+nui	po:pronoun_free_subject is:first_plural
+nui	po:pronoun_free_indirect is:first_plural
+nui	po:pronoun_free_reflexive is:first_plural
+ti	po:pronoun_free_subject is:second_singular
+ti	po:pronoun_free_indirect is:second_singular
+ti	po:pronoun_free_reflexive is:second_singular
+voaltri	po:pronoun_free_subject is:second_plural_masculine
+voaltri	po:pronoun_free_indirect is:second_plural_masculine
+voaltri	po:pronoun_free_reflexive is:second_plural_masculine
+voaltre	po:pronoun_free_subject is:second_plural_femenine
+voaltre	po:pronoun_free_indirect is:second_plural_femenine
+voaltre	po:pronoun_free_reflexive is:second_plural_femenine
+vialtri	po:pronoun_free_subject is:second_plural_masculine
+vialtri	po:pronoun_free_indirect is:second_plural_masculine
+vialtri	po:pronoun_free_reflexive is:second_plural_masculine
+vialtre	po:pronoun_free_subject is:second_plural_femenine
+vialtre	po:pronoun_free_indirect is:second_plural_femenine
+vialtre	po:pronoun_free_reflexive is:second_plural_femenine
+vualtri	po:pronoun_free_subject is:second_plural_masculine
+vualtri	po:pronoun_free_indirect is:second_plural_masculine
+vualtri	po:pronoun_free_reflexive is:second_plural_masculine
+vualtre	po:pronoun_free_subject is:second_plural_femenine
+vualtre	po:pronoun_free_indirect is:second_plural_femenine
+vualtre	po:pronoun_free_reflexive is:second_plural_femenine
+vu/ʼ0	po:pronoun_free_subject is:second_plural
+vu/ʼ0	po:pronoun_free_indirect is:second_plural
+vu/ʼ0	po:pronoun_free_reflexive is:second_plural
+vui/‘0	po:pronoun_free_subject is:second_plural
+vui/‘0	po:pronoun_free_indirect is:second_plural
+vui/‘0	po:pronoun_free_reflexive is:second_plural
+altri	po:pronoun_free_subject is:plural_masculine
+altri	po:pronoun_free_indirect is:plural_masculine
+altri	po:pronoun_free_reflexive is:plural_masculine
+altre	po:pronoun_free_subject is:plural_femenine
+altre	po:pronoun_free_indirect is:plural_femenine
+altre	po:pronoun_free_reflexive is:plural_femenine
+elo	po:pronoun_free_subject is:third_singular_masculine
+eƚo	po:pronoun_free_subject is:third_singular_masculine
+eli	po:pronoun_free_subject is:third_plural_masculine
+eƚi	po:pronoun_free_subject is:third_plural_masculine
+lu/Ṿè	po:pronoun_free_subject is:third_singular_masculine
+lu/Ṿè	po:pronoun_free_indirect is:third_singular_masculine
+ela	po:pronoun_free_subject is:third_singular_femenine
+ela	po:pronoun_free_indirect is:third_singular_femenine
+eƚa	po:pronoun_free_subject is:third_singular_femenine
+eƚa	po:pronoun_free_indirect is:third_singular_femenine
+ele	po:pronoun_free_subject is:third_singular_femenine
+ele	po:pronoun_free_indirect is:third_singular_femenine
+eƚe	po:pronoun_free_subject is:third_singular_femenine
+eƚe	po:pronoun_free_indirect is:third_singular_femenine
+lori/Ṿè	po:pronoun_free_subject is:third_plural_masculine
+lori/Ṿè	po:pronoun_free_indirect is:third_plural_masculine
+luri/Ṿè	po:pronoun_free_subject is:third_plural_masculine
+luri/Ṿè	po:pronoun_free_indirect is:third_plural_masculine
+lore/Ṿè	po:pronoun_free_subject is:third_plural_femenine
+lore/Ṿè	po:pronoun_free_indirect is:third_plural_femenine
+si	po:pronoun_free_reflexive is:third
+sè	po:pronoun_free_reflexive is:third
+/ pronòme klítego konplemento e reflesivo
+me	po:pronoun_clitic_complement_direct is:first_singular
+me	po:pronoun_clitic_complement_indirect is:first_singular
+me	po:pronoun_clitic_reflexive is:first_singular
+ne	po:pronoun_clitic_complement_direct is:first_plural
+ne	po:pronoun_clitic_complement_indirect is:first_plural
+se	po:pronoun_clitic_reflexive is:first_plural
+se	po:pronoun_clitic_reflexive is:third
+te	po:pronoun_clitic_complement_direct is:second_singular
+te	po:pronoun_clitic_complement_indirect is:second_singular
+te	po:pronoun_clitic_reflexive is:second_singular
+tu	po:pronoun_clitic_complement_direct is:second_singular
+tu	po:pronoun_clitic_complement_indirect is:second_singular
+tu	po:pronoun_clitic_reflexive is:second_singular
+ve	po:pronoun_clitic_complement_direct is:second_plural
+ve	po:pronoun_clitic_complement_indirect is:second_plural
+ve	po:pronoun_clitic_reflexive is:second_plural
+lo/Ṿè	po:pronoun_clitic_complement_direct is:third_singular_masculine
+la/Ṿèʼ0	po:pronoun_clitic_complement_direct is:third_singular_femenine
+li/Ṿè	po:pronoun_clitic_complement_direct is:third_plural_masculine
+i	po:pronoun_clitic_complement_direct is:third_plural_masculine
+le/Ṿè	po:pronoun_clitic_complement_direct is:third_plural_femenine
+ge/ʼ0	po:pronoun_clitic_complement_indirect is:third_plural
+/ pronòme klítego sojèto
+te	po:pronoun_clitic_subject is:second_singular
+el	po:pronoun_clitic_subject is:third_singular_masculine
+al	po:pronoun_clitic_subject is:third_singular_masculine
+la/Ṿèʼ0	po:pronoun_clitic_subject is:third_singular_femenine
+i	po:pronoun_clitic_subject is:third_plural_masculine
+le/Ṿè	po:pronoun_clitic_subject is:third_plural_femenine
+/ pronòme klítegi inparsonal e pasivante
+se	po:pronoun_impersonal
+se	po:pronoun_passivating
+/ pronòme klítegi partitivo
+ne	po:pronoun_partitive
+en	po:pronoun_partitive
+ni	po:pronoun_partitive
+/ pronòme klítego logativo
+ge	po:pronoun_locative_existential
+ge	po:pronoun_locative_referential
+/ pronòme relativo
+ke/M0	po:pronoun_relative
+/ pronòme posesivo
+méo/A1	po:pronoun_possessive is:singular_masculine
+nòstro/A1	po:pronoun_possessive is:singular_masculine
+tóo/A1	po:pronoun_possessive is:singular_masculine
+vòstro/A1‘0	po:pronoun_possessive is:singular_masculine
+sóo/A1	po:pronoun_possessive is:singular_masculine
+/ pronòme demostrativo
+sto/A1ʼ0	po:pronoun_demonstrative is:singular_masculine
+kuel/M0ɃƚⱣdṾe	po:pronoun_demonstrative is:singular_masculine
+kuela/F0Ṿe	po:pronoun_demonstrative is:singular_femenine
+kel/M0ɃƚⱣdṾe	po:pronoun_demonstrative is:singular_masculine
+kela/F0Ṿe	po:pronoun_demonstrative is:singular_femenine
+kuesto/A1FS	po:pronoun_demonstrative is:singular_masculine
+kuisto/A1FS	po:pronoun_demonstrative is:singular_masculine
+kadauna	po:pronoun_demonstrative
+kadauno/FS	po:pronoun_demonstrative
+ŧaskadun/A2ɃlṾè	po:pronoun_demonstrative is:singular_masculine
+ŧaskun/A2ɃlṾè	po:pronoun_demonstrative is:singular_masculine
+tutocò	po:pronoun_demonstrative
+tutun	po:pronoun_demonstrative
+kostía	po:pronoun_demonstrative is:singular_femenine
+kostori	po:pronoun_demonstrative is:plural
+kostú	po:pronoun_demonstrative is:singular_masculine
+kulía	po:pronoun_demonstrative is:singular_femenine
+kulú	po:pronoun_demonstrative is:singular_masculine
+kuƚía	po:pronoun_demonstrative is:singular_femenine
+kuƚú	po:pronoun_demonstrative is:singular_masculine
+kustú	po:pronoun_demonstrative is:singular_masculine
+kolía	po:pronoun_demonstrative is:singular_femenine
+kolú	po:pronoun_demonstrative is:singular_masculine
+koƚía	po:pronoun_demonstrative is:singular_femenine
+koƚú	po:pronoun_demonstrative is:singular_masculine
+insteso/A1FSⱣd	po:pronoun_demonstrative is:singular_masculine
+isteso/A1FSⱣd	po:pronoun_demonstrative is:singular_masculine
+ŧèrto/A1FS	po:pronoun_demonstrative is:singular_masculine
+sèrto/A1FS	po:pronoun_demonstrative is:singular_masculine
+altro/A1	po:pronoun_demonstrative is:singular_masculine
+/ pronòme identifegativo
+insteso/FS	po:pronoun_identificative
+isteso/FS	po:pronoun_identificative
+medèmo/A1FS	po:pronoun_identificative is:singular_masculine
+medèximo/A1FS	po:pronoun_identificative is:singular_masculine
+medèxmo/A1FS	po:pronoun_identificative is:singular_masculine
+tal/F0ɃƚṾɇ	po:pronoun_identificative is:singular
+/ pronòme interogativo e esklamativo
+adove/FSʼ0	po:pronoun_interrogative
+andoʼ/‘0	po:pronoun_interrogative
+andove/FSʼ0	po:pronoun_interrogative
+ci	po:pronoun_interrogative
+dondeké	po:pronoun_interrogative
+dove/FS	po:pronoun_interrogative
+indove/FSʼ0	po:pronoun_interrogative
+koando/FS	po:pronoun_interrogative
+kome/ʼ0	po:pronoun_interrogative
+komo/FS	po:pronoun_interrogative
+kòsa/‘0	po:pronoun_interrogative
+kòs	po:pronoun_interrogative
+kual/M0ɃƚṾe	po:pronoun_interrogative is:singular_masculine
+kuala/F0Ṿe	po:pronoun_interrogative is:singular_femenine
+kuande/FS	po:pronoun_interrogative
+kuando/ʼ0FS	po:pronoun_interrogative
+kuanto/A1FS	po:pronoun_interrogative
+onde	po:pronoun_interrogative
+onve	po:pronoun_interrogative
+parkòsa	po:pronoun_interrogative
+percò/Ṿŧ	po:pronoun_interrogative
+perké/Ṿŧ	po:pronoun_interrogative
+persò/Ṿŧ	po:pronoun_interrogative
+perŧò/Ṿŧ	po:pronoun_interrogative
+unde	po:pronoun_interrogative
+komòdo/ʼ0	po:pronoun_interrogative
+/ ajetivo posesivo
+mé	po:adjective_possessive
 nòstro/A1	po:adjective_possessive is:singular_masculine
-tó/A1	po:pronoun is:singular_masculine
-tó/A1	po:adjective_possessive is:singular_masculine
-vòstro/A1‘0	po:pronoun is:singular_masculine
+tó	po:adjective_possessive
 vòstro/A1‘0	po:adjective_possessive is:singular_masculine
-só/A1	po:pronoun is:singular_masculine
-só/A1	po:adjective_possessive is:singular_masculine
-/ pronòme e ajetivo demostrativo
-cò	po:pronoun
+só	po:adjective_possessive
+/ ajetivo demostrativo
 kuel/M0ɃƚⱣdṾe	po:adjective_demonstrative is:singular_masculine
-kuel/M0ɃƚⱣdṾe	po:pronoun is:singular_masculine
 kuela/F0Ṿe	po:adjective_demonstrative is:singular_femenine
-kuela/F0Ṿe	po:pronoun is:singular_femenine
 sto/A1ʼ0	po:adjective_demonstrative is:singular_masculine
-sto/A1ʼ0	po:pronoun is:singular_masculine
+kuel/M0ɃƚⱣdṾe	po:determiner is:singular_masculine
+kuela/F0Ṿe	po:determiner is:singular_femenine
+sto/A1ʼ0	po:determiner is:singular_masculine
 sto/A1ʼ0	po:quantifier is:singular_masculine
-/ pronòme e ajetivo identifegativo
-insteso/A1FSWaⱣd	po:adjective_identificative is:singular_masculine
-insteso/A1FSⱣd	po:pronoun is:singular_masculine
+/ ajetivo identifegativo
+insteso/A1FSWaⱣd	po:adjective_identificative
 insteso/FS	po:adverb
-isteso/A1FSWaⱣd	po:adjective_identificative is:singular_masculine
-isteso/A1FSⱣd	po:pronoun is:singular_masculine
+isteso/A1FSWaⱣd	po:adjective_identificative
 isteso/FS	po:adverb
-medèmo/A1FS	po:pronoun is:singular_masculine
 medèmo/A1FSWa	po:adjective_identificative is:singular_masculine
 medèximo/A1FS	po:adjective_identificative is:singular_masculine
-medèximo/A1FS	po:pronoun is:singular_masculine
 medèxmo/A1FS	po:adjective_identificative is:singular_masculine
-medèxmo/A1FS	po:pronoun is:singular_masculine
 tal/F0WaɃƚṾɇ	po:adjective_identificative is:singular
-tal/F0ɃƚṾɇ	po:pronoun is:singular_masculine
-/ pronòme e ajetivo interogativo e esklamativo
+/ ajetivo interogativo e esklamativo
 adove/FSʼ0	po:adjective_interrogative
-adove/FSʼ0	po:pronoun
 andoʼ/‘0	po:adjective_interrogative
-andoʼ/‘0	po:pronoun
 andove/FSʼ0	po:adjective_interrogative
-andove/FSʼ0	po:pronoun
 ci	po:adjective_interrogative
-ci	po:pronoun
 dondeké	po:adjective_interrogative
-dondeké	po:pronoun
 dove/FS	po:adjective_interrogative
-dove/FS	po:pronoun
 indove/FSʼ0	po:adjective_interrogative
-indove/FSʼ0	po:pronoun
 koando/FS	po:adjective_interrogative
-koando/FS	po:pronoun
 kome/ʼ0	po:adjective_interrogative
 kome/ʼ0	po:adverb
-kome/ʼ0	po:pronoun
 komo/FS	po:adjective_interrogative
 komo/FS	po:adverb
-komo/FS	po:pronoun
 kòsa/F0ǎSǎsǎtět	po:noun is:singular_femenine
 kòsa/F0‘0	po:adjective_interrogative is:singular_femenine
-kòsa/F0‘0	po:pronoun is:singular_femenine
 kòs	po:adjective_interrogative
-kòs	po:pronoun
 kual/M0ɃƚṾe	po:adjective_interrogative is:singular_masculine
-kual/M0ɃƚṾe	po:pronoun is:singular_masculine
 kuala/F0Ṿe	po:adjective_interrogative is:singular_femenine
-kuala/F0Ṿe	po:pronoun is:singular_femenine
 kuande/FS	po:adjective_interrogative
-kuande/FS	po:pronoun
 kuando/ʼ0FS	po:adjective_interrogative
-kuando/ʼ0FS	po:pronoun
 kuanto/A1FS	po:adjective_interrogative
-kuanto/A1FS	po:pronoun
 onde	po:adjective_interrogative
-onde	po:pronoun
 onve	po:adjective_interrogative
-onve	po:pronoun
 parkòsa	po:adjective_interrogative
-parkòsa	po:pronoun
 percò/Ṿŧ	po:adjective_interrogative
-percò/Ṿŧ	po:pronoun
 perké/Ṿŧ	po:adjective_interrogative
-perké/Ṿŧ	po:pronoun
 persò/Ṿŧ	po:adjective_interrogative
-persò/Ṿŧ	po:pronoun
 perŧò/Ṿŧ	po:adjective_interrogative
-perŧò/Ṿŧ	po:pronoun
 unde	po:adjective_interrogative
-unde	po:pronoun
+de	po:adverb
+ne	po:adverb
+ni	po:adverb
 / kuantifegador
-altro/A1Wa^6	po:quantifier
+kelaltro/A1	po:quantifier is:singular_masculine
+keƚaltro/A1	po:quantifier is:singular_masculine
+kalkun/A2Ƀl	po:quantifier is:singular_masculine
+koalkun/A2Ƀl	po:quantifier is:singular_masculine
+kualkun/A2Ƀl	po:quantifier is:singular_masculine
+altro/A1Wa^6	po:quantifier is:singular_masculine
 anbo/M0ǒn	po:quantifier
-antro/A1Wa^6	po:quantifier
+antro/A1Wa^6	po:quantifier is:singular_masculine
 año/M0FS	po:noun is:singular_masculine
-año/M0FS	po:quantifier
-arkoanto/A1FS	po:quantifier
-arkuanto/A1FS	po:quantifier
-artanto/A1FS	po:quantifier
+año/M0FS	po:quantifier is:singular_masculine
+arkoanto/A1FS	po:quantifier is:singular_masculine
+arkuanto/A1FS	po:quantifier is:singular_masculine
+artanto/A1FS	po:quantifier is:singular_masculine
 bastansa	po:quantifier
 bastanŧa	po:quantifier
-intrame/M0FS	po:quantifier
-kalkedun/A2Ƀl	po:quantifier
+intrame/M0FS	po:quantifier is:singular_masculine
+kalkedun/A2Ƀl	po:quantifier is:singular_masculine
 kalke	po:quantifier
 kalkòsa/ět	po:quantifier
-kalkun/A2Ƀl	po:pronoun
 karke	po:quantifier
 karkòsa/ět	po:quantifier
-koalkedun/A2Ƀl	po:quantifier
+koalkedun/A2Ƀl	po:quantifier is:singular_masculine
 koalke	po:quantifier
 koalkòsa/ět	po:quantifier
-koalkun/A2Ƀl	po:pronoun
 koalsíasi	po:adjective
 koalsíasi	po:quantifier
-kualkedun/A2Ƀl	po:quantifier
+kualkedun/A2Ƀl	po:quantifier is:singular_masculine
 kualke	po:quantifier
-kualkidun/A2Ƀl	po:quantifier
+kualkidun/A2Ƀl	po:quantifier is:singular_masculine
 kualkòsa/ět	po:quantifier
-kualkun/A2Ƀl	po:pronoun
 kualsíasi	po:adjective
 kualsíasi	po:quantifier
 kuarke	po:quantifier
-kuelaltro/A1	po:quantifier
-kueƚaltro/A1	po:quantifier
+kuelaltro/A1	po:quantifier is:singular_masculine
+kueƚaltro/A1	po:quantifier is:singular_masculine
 masa/F0ět	po:noun is:singular_femenine
 masa/F0ět	po:quantifier
 negun/A2Ƀl	po:adjective is:singular_masculine
-negun/A2Ƀl	po:quantifier
+negun/A2Ƀl	po:quantifier is:singular_masculine
 nesun/A2Ƀl	po:adjective is:singular_masculine
-nesun/A2Ƀl	po:quantifier
+nesun/A2Ƀl	po:quantifier is:singular_masculine
 nigun/A2Ƀl	po:adjective is:singular_masculine
-nigun/A2Ƀl	po:quantifier
+nigun/A2Ƀl	po:quantifier is:singular_masculine
 nil	po:quantifier
 nisun/A2Ƀl	po:adjective is:singular_masculine
-nisun/A2Ƀl	po:quantifier
+nisun/A2Ƀl	po:quantifier is:singular_masculine
 ñaun/A2Ƀl	po:adjective is:singular_masculine
-ñaun/A2Ƀl	po:quantifier
+ñaun/A2Ƀl	po:quantifier is:singular_masculine
 ñaun	po:adverb
 ñente/FSṾr	po:quantifier
 ñesun/A2Ƀl	po:adjective is:singular_masculine
-ñesun/A2Ƀl	po:quantifier
+ñesun/A2Ƀl	po:quantifier is:singular_masculine
 ñinte/FS	po:quantifier
 ñisun/A2Ƀl	po:adjective is:singular_masculine
-ñisun/A2Ƀl	po:quantifier
-oñidun/A2Ƀl	po:quantifier
-oñun/A2Ƀl	po:quantifier
+ñisun/A2Ƀl	po:quantifier is:singular_masculine
+oñidun/A2Ƀl	po:quantifier is:singular_masculine
+oñun/A2Ƀl	po:quantifier is:singular_masculine
 òñe	po:quantifier
-òño/M0FS	po:quantifier
+òño/M0FS	po:quantifier is:singular_masculine
 peròmo/FSṾŧ	po:quantifier
-rakoanto/A1FS	po:quantifier
-rakuanto/A1FS	po:quantifier
+rakoanto/A1FS	po:quantifier is:singular_masculine
+rakuanto/A1FS	po:quantifier is:singular_masculine
 sèrto/A1FS+0	po:quantifier is:singular_masculine
 sèrto/FS+0	po:adverb
 tuto/A1FSʼ0	po:quantifier is:singular_masculine
@@ -28967,7 +29112,6 @@ buxía/F0ǎSǎsět	po:noun is:singular_femenine
 buxo/M0FSět	po:noun is:singular_masculine
 búkola/F0Ṿe	po:noun is:singular_femenine
 cantin/M0*0ět	po:adjective is:singular_masculine
-cantin/M0*0ět	po:pronoun is:singular_masculine
 cara/F0*0^6ětǐn	po:noun is:singular_femenine
 cara/F0*0^6ět	po:adjective is:singular_femenine
 cave/M0ět	po:noun is:singular_femenine
@@ -30037,11 +30181,8 @@ kàuxa/F0	po:noun is:singular_femenine
 kàvara/F0	po:noun is:singular_femenine
 keko/A1FS	po:noun is:singular_masculine
 kel/A1ɃƚⱣd	po:adjective is:singular_masculine
-kel/A1ɃƚⱣd	po:pronoun is:singular_masculine
 kelaltro/A1	po:adjective is:singular_masculine
-kelaltro/A1	po:pronoun is:singular_masculine
 keƚaltro/A1	po:adjective is:singular_masculine
-keƚaltro/A1	po:pronoun is:singular_masculine
 kera/F0	po:noun is:singular_femenine
 ké	po:conjunction
 kègola/F0Ṿe	po:noun is:singular_femenine
@@ -30103,7 +30244,6 @@ komento/M0FSⱣdṾr	po:noun is:singular_masculine
 komersal/F0ɃlṾɇ	po:adjective is:singular
 komerŧal/F0Ƀl	po:adjective is:singular
 komòdo/ʼ0	po:adjective_interrogative
-komòdo/ʼ0	po:pronoun
 komun/F0Ƀl	po:noun is:singular_masculine
 komun/F0ɃlWa	po:adjective is:singular
 komunegativo/A1FSWa	po:adjective is:singular_masculine
@@ -30314,13 +30454,11 @@ kucoƚon/A2Ᵽd	po:adjective is:singular_masculine
 kucoƚon	po:adverb
 kuertor/F0Ᵽd	po:noun is:singular_masculine
 kuesto/A1FS	po:adjective is:singular_masculine
-kuesto/A1FS	po:pronoun is:singular_masculine
 kuèrco/M0FS	po:noun is:singular_masculine
 kuèrkol/M0ɃƚⱣdṾe	po:noun is:singular_masculine
 kuintal/F0ɃlṾɇ	po:noun is:singular_masculine
 kuistion/F0ɃlⱣd	po:noun is:singular_femenine
 kuisto/A1FS	po:adjective is:singular_masculine
-kuisto/A1FS	po:pronoun is:singular_masculine
 kukú	po:noun is:masculine
 kul/M0ɃƚǎSǎsǎtětǒNǒt	po:noun is:singular_masculine
 kulata/F0ǐnǒN	po:noun is:singular_femenine
@@ -31438,10 +31576,10 @@ poxiŧion/F0ɃlṾe@0-0-1*0Ᵽd	po:noun is:singular_femenine
 pómol/M0ɃƚⱣdṾe	po:noun is:singular_masculine
 pòar/A1	po:adjective is:singular_masculine
 pòka/F0ǎtět	po:adjective is:singular_femenine
-pòka/F0ǎtět	po:pronoun is:singular_femenine
+pòka/F0ǎtět	po:determiner is:singular_femenine
 pòko/FSʼ0	po:adverb
 pòko/M0FSʼ0ǎtět	po:adjective is:singular_masculine
-pòko/M0FSʼ0	po:pronoun is:singular_masculine
+pòko/M0FSʼ0	po:determiner is:singular_masculine
 pòl/M0ɃlṾe	po:noun is:singular_masculine
 pòla/F0Ṿe	po:noun is:singular_femenine
 pòpol/M0Ƀƚ	po:noun is:singular_masculine
@@ -31782,10 +31920,10 @@ sàrkol/M0ɃƚⱣdṾe	po:noun is:singular_masculine
 scafa/F0ět	po:noun is:singular_femenine
 scafo/M0FSǒNǒt	po:noun is:singular_masculine
 scanta/A2	po:adjective is:singular_femenine
-scanta/A2	po:pronoun
+scanta/A2	po:determiner is:singular_femenine
 scanta	po:adverb
 scantina/F0ět	po:adjective is:singular_femenine
-scantina/F0ět	po:pronoun is:singular_femenine
+scantina/F0ět	po:determiner is:singular_femenine
 scantina	po:adverb
 scantin	po:adverb
 scantiva/F0	po:noun is:singular_femenine
@@ -31872,7 +32010,6 @@ setimana/F0	po:noun is:singular_femenine
 seturko/M0FS	po:noun is:singular_masculine
 sée	po:noun is:singular_femenine
 sé	po:noun is:singular_femenine
-sé	po:pronoun
 sènen/M0ɃƚⱣd	po:noun is:singular_masculine
 sèrio/A1M1	po:noun is:singular_masculine
 sèrio/A1	po:adjective is:singular_masculine
@@ -32301,7 +32438,7 @@ taƚòko/A1	po:adjective is:singular_masculine
 tamào/M0	po:noun is:singular_masculine
 tanaka/F0	po:adjective is:singular_femenine
 tananào/M0	po:adjective is:singular_masculine
-tanké	po:pronoun
+tanké	po:conjunction
 tariòl/M0ɃlṾe	po:noun is:singular_masculine
 tasa/F0ět	po:noun is:singular_femenine
 taŧa/F0ět	po:noun is:singular_femenine
@@ -36389,7 +36526,7 @@ rebuxa/F0	po:noun is:singular_femenine
 recamo/M0FS	po:noun is:singular_masculine
 recela/F0Ṿe	po:adjective is:singular_femenine
 recotin/M0	po:adjective is:singular_masculine
-recotin/M0	po:pronoun
+recotin/M0	po:determiner is:singular_masculine
 recotin	po:adverb
 rede/F0	po:noun is:singular_femenine
 reditarol/M0ɃlV0Ᵽd	po:noun is:singular_masculine
@@ -39418,10 +39555,8 @@ juredegamente/FSṾèW0	po:adverb
 juresta/A2Ṿè	po:noun is:singular_femenine
 jurixdiŧion/F0ɃlⱣdṾeṾè	po:noun is:singular_femenine
 jutòrio/A1Ṿè	po:adjective is:singular_masculine
-kadauna	po:adjective is:singular_femenine
-kadauna	po:pronoun
-kadauno/FS	po:adjective is:singular_masculine
-kadauno/FS	po:pronoun
+kadauna	po:adjective_demonstrative is:singular_femenine
+kadauno/FS	po:adjective_demonstrative is:singular_masculine
 kademegamente/FSW0@0	po:adverb
 kadenaso/M0FSět	po:noun is:singular_masculine
 kadenaŧo/M0FSět	po:noun is:singular_masculine
@@ -40060,9 +40195,9 @@ poereto/A1FSⱣd	po:noun is:singular_masculine
 poestería/F0v0	po:noun is:singular_femenine
 poina/F0ět	po:noun is:singular_femenine
 poketin/A2	po:adjective is:singular_masculine
-poketin/A2	po:pronoun
+poketin/A2	po:determiner is:singular_masculine
 poketineto/A1FSⱣd	po:adjective is:singular_masculine
-poketineto/A1FSⱣd	po:pronoun
+poketineto/A1FSⱣd	po:determiner is:singular_masculine
 poketin	po:adverb
 polđe/M0	po:noun is:singular_femenine
 polexía/F0	po:noun is:singular_femenine
@@ -40611,10 +40746,8 @@ turion/F0ɃlⱣdět	po:noun is:singular_masculine
 tuvo/M0	po:noun is:singular_masculine
 ŧanŧume/M0	po:noun is:singular_masculine
 ŧapaganfo/M0FSṾè	po:noun is:singular_masculine
-ŧaskadun/A2ɃlṾè	po:adjective is:singular_masculine
-ŧaskadun/A2ɃlṾè	po:pronoun
-ŧaskun/A2ɃlṾè	po:adjective is:singular_masculine
-ŧaskun/A2ɃlṾè	po:pronoun
+ŧaskadun/A2ɃlṾè	po:adjective_demonstrative is:singular_masculine
+ŧaskun/A2ɃlṾè	po:adjective_demonstrative is:singular_masculine
 ŧàpol/M0ɃƚⱣd	po:noun is:singular_masculine
 ŧegúa/F0Ṿè	po:noun is:singular_femenine
 ŧelaina/F0Ṿè	po:noun is:singular_femenine
@@ -41961,7 +42094,7 @@ sànsana/F0	po:noun is:singular_femenine
 seneraso/M0FS	po:noun is:singular_masculine
 seraval/F0ɃlṾɇṾŧ	po:noun is:singular_masculine
 sisinin/A2	po:adjective is:singular_masculine
-sisinin/A2	po:pronoun
+sisinin/A2	po:determiner is:singular_masculine
 sisinin	po:adverb
 skufièr/M0V0	po:noun is:singular_masculine
 skufièra/F0V0	po:noun is:singular_femenine
@@ -41979,7 +42112,7 @@ straƚeko/A1Ᵽd	po:noun is:singular_masculine
 ŧirio/M0Ṿèǒt	po:noun is:singular_masculine
 ŧiŧin/A2	po:adjective is:singular_masculine
 ŧiŧinin/A2	po:adjective is:singular_masculine
-ŧiŧinin/A2	po:pronoun
+ŧiŧinin/A2	po:determiner is:singular_masculine
 ŧiŧinin	po:adverb
 ŧokara/F0Ṿè	po:noun is:singular_femenine
 xbiankexin/A2	po:noun is:singular_masculine
@@ -42396,7 +42529,7 @@ parendaria/F0	po:noun is:singular_femenine
 parensana/F0	po:noun is:singular_femenine
 parenŧana/F0	po:noun is:singular_femenine
 parico/M0FS	po:adjective is:singular_masculine
-parico/M0FS	po:pronoun
+parico/M0FS	po:determiner is:singular_masculine
 parico	po:adverb
 parisente/M0FSⱣdṾr	po:adjective is:singular
 parisenŧia/F0Ṿe	po:noun is:singular_femenine
@@ -48688,13 +48821,13 @@ pareco/M0FS	po:noun is:singular_masculine
 parejo/M0FSṾe	po:noun is:singular_masculine
 parekio/M0	po:adjective is:singular_masculine
 parekio/M0	po:adverb
-parekio/M0	po:pronoun
+parekio/M0	po:determiner is:singular_masculine
 parentévol/F0ɃƚⱣdṾɇ	po:adjective is:singular
 parentévol/F0ɃƚⱣdṾɇ	po:noun is:singular
 parexo/M0FSⱣd	po:noun is:singular_masculine
 parikio/M0	po:adjective is:singular_masculine
 parikio/M0	po:adverb
-parikio/M0	po:pronoun
+parikio/M0	po:determiner is:singular_masculine
 parilia/F0Ṿe	po:noun is:singular_femenine
 parità/-1	po:noun is:femenine
 parladoron/A2ɃlⱣd	po:adjective is:singular_masculine
@@ -51419,8 +51552,6 @@ turo/FS	po:adverb
 tursiman/M0	po:noun is:singular_masculine
 turŧiman/M0	po:noun is:singular_masculine
 tutèla/F0Ṿe	po:noun is:singular_femenine
-tutocò	po:pronoun
-tutun	po:pronoun
 túnfete/FS	po:interjection
 ŧaltro/M0Ṿè	po:noun is:singular_masculine
 ŧanbeko/M0FSⱣdṾè	po:noun is:singular_masculine
@@ -54437,9 +54568,6 @@ kortegada/F0Y0Y1*0	po:noun is:singular_femenine
 kortelada/F0Y0Y1	po:noun is:singular_femenine
 korteƚada/F0Y0Y1	po:noun is:singular_femenine
 koruxiòl/M0ɃlṾe	po:noun is:singular_masculine
-kostía	po:pronoun is:singular_femenine
-kostori	po:pronoun is:plural
-kostú	po:pronoun is:singular_masculine
 krepada/F0Y0	po:noun is:singular_femenine
 krepado/M0FSY0	po:noun is:singular_masculine
 kriada/F0Y0Y1	po:noun is:singular_femenine
@@ -54451,11 +54579,6 @@ kualmentre	po:conjunction
 kualmènte/FS	po:conjunction
 kugúmar/M0	po:noun is:singular_masculine
 kukada/F0Y0Y1	po:noun is:singular_femenine
-kulía	po:pronoun is:singular_femenine
-kulú	po:pronoun is:singular_masculine
-kuƚía	po:pronoun is:singular_femenine
-kuƚú	po:pronoun is:singular_masculine
-kustú	po:pronoun is:singular_masculine
 kuxinada/F0Y0	po:noun is:singular_femenine
 kuxinado/M0FSY0	po:noun is:singular_masculine
 ladrosinio/M0Ṿè	po:noun is:singular_masculine
@@ -55395,10 +55518,6 @@ kariolada/F0Y0+0	po:adjective is:singular_femenine
 karioƚada/F0Y0+0	po:adjective is:singular_femenine
 kodeŧin/M0Ṿe	po:noun is:singular_masculine
 kodoñada/F0Y0Y1	po:adjective is:singular_femenine
-kolía	po:pronoun is:singular_femenine
-kolú	po:pronoun is:singular_masculine
-koƚía	po:pronoun is:singular_femenine
-koƚú	po:pronoun is:singular_masculine
 konosuda/F0Y0	po:adjective is:singular_femenine
 konosudo/M0FSY0	po:adjective is:singular_masculine
 kontrokasa/F0	po:noun is:singular_femenine
@@ -56259,7 +56378,7 @@ agua/F0ǎSǎsětǒn	po:noun is:singular_femenine
 alsonada/F0Y0Y1	po:noun is:singular_femenine
 alŧonada/F0Y0Y1	po:noun is:singular_femenine
 andé	po:adjective_interrogative
-andé	po:pronoun
+andé	po:pronoun_interrogative
 andièr/M0	po:noun is:singular_masculine
 anjèr/M0V0	po:noun is:singular_masculine
 anɉèr/M0V0	po:noun is:singular_masculine
@@ -56305,7 +56424,6 @@ carlan/A1Ƀl	po:adjective is:singular_masculine
 carlan/A1Ƀl	po:noun is:singular_masculine
 copa/F0	po:noun is:singular_femenine
 darion/F0ɃlⱣdět	po:adjective is:singular_masculine
-darion/F0ɃlⱣdět	po:pronoun is:singular_masculine
 darion	po:adverb
 defexa/F0	po:noun is:singular_femenine
 desútol/M0ɃƚⱣdṾe	po:adjective is:singular_masculine
@@ -58466,7 +58584,6 @@ serúmola/F0ṾeṾŧ	po:noun is:singular_femenine
 sexa/F0	po:noun is:singular_femenine
 séngal/M0ɃƚṾe	po:adjective is:singular_masculine
 séngala/F0Ṿe	po:adjective is:singular_femenine
-sènel/M0ⱣdṾe	po:pronoun is:singular_masculine
 sfondra/F0	po:noun is:singular_femenine
 sfràgol/M0ɃƚⱣdṾe	po:adjective is:singular_masculine
 sfràgola/F0Ṿe	po:adjective is:singular_femenine
@@ -58971,7 +59088,7 @@ pregità	po:noun is:singular_femenine
 profundo/A1*0	po:adjective is:singular_masculine
 puòko/FSʼ0	po:adverb
 puòko/M0FSʼ0ǎtět	po:adjective is:singular_masculine
-puòko/M0FSʼ0	po:pronoun is:singular_masculine
+puòko/M0FSʼ0	po:determiner is:singular_masculine
 ragadoxo/A1FSWaⱣd	po:adjective is:singular_masculine
 ragadoxo/A1FSⱣd	po:noun is:singular_masculine
 regatoxo/M0FSWaⱣdṾŧ	po:adjective is:singular_masculine
