@@ -26778,7 +26778,6 @@ luri/Ṿè	po:pronoun_free_indirect is:third_plural_masculine
 lore/Ṿè	po:pronoun_free_subject is:third_plural_femenine
 lore/Ṿè	po:pronoun_free_indirect is:third_plural_femenine
 si	po:pronoun_free_reflexive is:third
-sè	po:pronoun_free_reflexive is:third
 / pronòme klítego konplemento e reflesivo
 me	po:pronoun_clitic_complement_direct is:first_singular
 me	po:pronoun_clitic_complement_indirect is:first_singular
@@ -26814,28 +26813,34 @@ se	po:pronoun_impersonal
 se	po:pronoun_passivating
 / pronòme klítegi partitivo
 ne	po:pronoun_partitive
-en	po:pronoun_partitive
+en/‘0	po:pronoun_partitive
 ni	po:pronoun_partitive
 / pronòme klítego logativo
 ge	po:pronoun_locative_existential
 ge	po:pronoun_locative_referential
+gi	po:pronoun_locative_existential
+gi	po:pronoun_locative_referential
 / pronòme relativo
 ke/M0	po:pronoun_relative
 / pronòme posesivo
-méo/A1	po:pronoun_possessive is:singular_masculine
-nòstro/A1	po:pronoun_possessive is:singular_masculine
-tóo/A1	po:pronoun_possessive is:singular_masculine
-vòstro/A1‘0	po:pronoun_possessive is:singular_masculine
-sóo/A1	po:pronoun_possessive is:singular_masculine
+méo/A1	po:pronoun_possessive_strong is:singular_masculine
+nòstro/A1	po:pronoun_possessive_strong is:singular_masculine
+tóo/A1	po:pronoun_possessive_strong is:singular_masculine
+vòstro/A1‘0	po:pronoun_possessive_strong is:singular_masculine
+sóo/A1	po:pronoun_possessive_strong is:singular_masculine
 / pronòme demostrativo
-sto/A1ʼ0	po:pronoun_demonstrative is:singular_masculine
-kuel/M0ɃƚⱣdṾe	po:pronoun_demonstrative is:singular_masculine
-kuela/F0Ṿe	po:pronoun_demonstrative is:singular_femenine
-insteso/A1FSⱣd	po:pronoun_demonstrative is:singular_masculine
-isteso/A1FSⱣd	po:pronoun_demonstrative is:singular_masculine
-ŧèrto/A1FS	po:pronoun_demonstrative is:singular_masculine
-sèrto/A1FS	po:pronoun_demonstrative is:singular_masculine
-altro/A1	po:pronoun_demonstrative is:singular_masculine
+sto/A1ʼ0	po:pronoun_demonstrative_near is:singular_masculine
+kuel	po:pronoun_demonstrative_far_weak is:singular_masculine
+kueƚo	po:pronoun_demonstrative_far_weak is:singular_masculine
+kuelo/M0ɃƚⱣdṾe	po:pronoun_demonstrative_far_strong is:singular_masculine
+kuelo	po:pronoun_demonstrative_neutral is:singular_masculine
+kueƚo	po:pronoun_demonstrative_neutral is:singular_masculine
+kuela/F0Ṿe	po:pronoun_demonstrative_far_strong is:singular_femenine
+insteso/A1FSⱣd	po:pronoun_demonstrative_before_noun is:singular_masculine
+isteso/A1FSⱣd	po:pronoun_demonstrative_before_noun is:singular_masculine
+altro/A1	po:pronoun_demonstrative_before_noun is:singular_masculine
+ŧèrto/A1FS	po:pronoun_demonstrative_before_noun is:singular_masculine
+sèrto/A1FS	po:pronoun_demonstrative_before_noun is:singular_masculine
 / pronòme identifegativo
 insteso/FS	po:pronoun_identificative
 isteso/FS	po:pronoun_identificative
@@ -26860,7 +26865,7 @@ kual/M0ɃƚṾe	po:pronoun_interrogative is:singular_masculine
 kuala/F0Ṿe	po:pronoun_interrogative is:singular_femenine
 kuande/FS	po:pronoun_interrogative
 kuando/ʼ0FS	po:pronoun_interrogative
-kuanto/A1FS	po:pronoun_interrogative
+kuanto/A1FS	po:pronoun_interrogative is:singular_masculine
 onde	po:pronoun_interrogative
 onve	po:pronoun_interrogative
 parkòsa	po:pronoun_interrogative
@@ -30156,8 +30161,8 @@ kàuxa/F0	po:noun is:singular_femenine
 kàvara/F0	po:noun is:singular_femenine
 keko/A1FS	po:noun is:singular_masculine
 kel/A1ɃƚⱣd	po:adjective is:singular_masculine
-kel/M0ɃƚⱣdṾe	po:pronoun_demonstrative is:singular_masculine
-kela/F0Ṿe	po:pronoun_demonstrative is:singular_femenine
+kel/M0ɃƚⱣdṾe	po:pronoun_demonstrative_far is:singular_masculine
+kela/F0Ṿe	po:pronoun_demonstrative_far is:singular_femenine
 kelaltro/A1	po:adjective is:singular_masculine
 kelaltro/A1	po:quantifier is:singular_masculine
 keƚaltro/A1	po:adjective is:singular_masculine
@@ -30434,13 +30439,14 @@ kucoƚon/A2Ᵽd	po:adjective is:singular_masculine
 kucoƚon	po:adverb
 kuertor/F0Ᵽd	po:noun is:singular_masculine
 kuesto/A1FS	po:adjective is:singular_masculine
-kuesto/A1FS	po:pronoun_demonstrative is:singular_masculine
+kuesto/A1FS	po:pronoun_demonstrative_near is:singular_masculine
+kuisto/A1FS	po:pronoun_demonstrative_near is:singular_masculine
 kuèrco/M0FS	po:noun is:singular_masculine
 kuèrkol/M0ɃƚⱣdṾe	po:noun is:singular_masculine
 kuintal/F0ɃlṾɇ	po:noun is:singular_masculine
 kuistion/F0ɃlⱣd	po:noun is:singular_femenine
 kuisto/A1FS	po:adjective is:singular_masculine
-kuisto/A1FS	po:pronoun_demonstrative is:singular_masculine
+kuisto/A1FS	po:pronoun_demonstrative_near is:singular_masculine
 kukú	po:noun is:masculine
 kul/M0ɃƚǎSǎsǎtětǒNǒt	po:noun is:singular_masculine
 kulata/F0ǐnǒN	po:noun is:singular_femenine
@@ -54556,9 +54562,9 @@ kortegada/F0Y0Y1*0	po:noun is:singular_femenine
 kortelada/F0Y0Y1	po:noun is:singular_femenine
 korteƚada/F0Y0Y1	po:noun is:singular_femenine
 koruxiòl/M0ɃlṾe	po:noun is:singular_masculine
-kostía	po:pronoun_demonstrative is:singular_femenine
-kostori	po:pronoun_demonstrative is:plural
-kostú	po:pronoun_demonstrative is:singular_masculine
+kostía	po:pronoun_demonstrative_near is:singular_femenine
+kostori	po:pronoun_demonstrative_near is:plural
+kostú	po:pronoun_demonstrative_near is:singular_masculine
 krepada/F0Y0	po:noun is:singular_femenine
 krepado/M0FSY0	po:noun is:singular_masculine
 kriada/F0Y0Y1	po:noun is:singular_femenine
@@ -54570,11 +54576,11 @@ kualmentre	po:conjunction
 kualmènte/FS	po:conjunction
 kugúmar/M0	po:noun is:singular_masculine
 kukada/F0Y0Y1	po:noun is:singular_femenine
-kulía	po:pronoun_demonstrative is:singular_femenine
-kulú	po:pronoun_demonstrative is:singular_masculine
-kuƚía	po:pronoun_demonstrative is:singular_femenine
-kuƚú	po:pronoun_demonstrative is:singular_masculine
-kustú	po:pronoun_demonstrative is:singular_masculine
+kulía	po:pronoun_demonstrative_far is:singular_femenine
+kulú	po:pronoun_demonstrative_far is:singular_masculine
+kuƚía	po:pronoun_demonstrative_far is:singular_femenine
+kuƚú	po:pronoun_demonstrative_far is:singular_masculine
+kustú	po:pronoun_demonstrative_near is:singular_masculine
 kuxinada/F0Y0	po:noun is:singular_femenine
 kuxinado/M0FSY0	po:noun is:singular_masculine
 ladrosinio/M0Ṿè	po:noun is:singular_masculine
@@ -55514,10 +55520,10 @@ kariolada/F0Y0+0	po:adjective is:singular_femenine
 karioƚada/F0Y0+0	po:adjective is:singular_femenine
 kodeŧin/M0Ṿe	po:noun is:singular_masculine
 kodoñada/F0Y0Y1	po:adjective is:singular_femenine
-kolía	po:pronoun_demonstrative is:singular_femenine
-kolú	po:pronoun_demonstrative is:singular_masculine
-koƚía	po:pronoun_demonstrative is:singular_femenine
-koƚú	po:pronoun_demonstrative is:singular_masculine
+kolía	po:pronoun_demonstrative_far is:singular_femenine
+kolú	po:pronoun_demonstrative_far is:singular_masculine
+koƚía	po:pronoun_demonstrative_far is:singular_femenine
+koƚú	po:pronoun_demonstrative_far is:singular_masculine
 konosuda/F0Y0	po:adjective is:singular_femenine
 konosudo/M0FSY0	po:adjective is:singular_masculine
 kontrokasa/F0	po:noun is:singular_femenine

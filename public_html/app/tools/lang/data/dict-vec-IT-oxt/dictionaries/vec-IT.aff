@@ -5172,10 +5172,12 @@ SFX FS je j je	ds:nordic
 
 
 # interogativi prima parsona singolar e plural (stakài)
-SFX I0 Y 12
+SFX I0 Y 14
 SFX I0 0 -e .	is:interrogative
 SFX I0 0 -i .	is:interrogative
-SFX I0 0 -io [^n]	is:interrogative
+SFX I0 0 -io [^no]	is:interrogative
+SFX I0 0 -io [^mv]o	is:interrogative
+SFX I0 o -io [mv]o	is:interrogative
 SFX I0 0 -mi [^on]	is:interrogative
 SFX I0 0 -mi [^m]o	is:interrogative
 SFX I0 0 -mi [^eo]n	is:interrogative
@@ -6932,8 +6934,9 @@ PFX $3 0 ki/Z0 .
 
 
 # paròle ŧonkàe a lʼ iniŧio
-PFX ‘0 Y 10
+PFX ‘0 Y 11
 PFX ‘0 a ʼ a
+PFX ‘0 e ʼ e
 PFX ‘0 d ʼ d
 PFX ‘0 ga ʼ ga
 PFX ‘0 g ʼ go
