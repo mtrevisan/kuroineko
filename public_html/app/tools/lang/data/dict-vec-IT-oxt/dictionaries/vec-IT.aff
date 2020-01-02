@@ -5298,18 +5298,18 @@ SFX I9 o e ríseƚo	is:interrogative
 
 # tute le deklinaŧion, ajetivi de prima klase (-o/i, -a/e)
 SFX A1 Y 8
-SFX A1 0 o [^aieo]	is:singular_masculine
-SFX A1 0 a [^aieo]	is:singular_femenine
+SFX A1 0 o [^aieo]
+SFX A1 0 a [^aieo]
 SFX A1 0 i [^aieo]	is:plural_masculine
 SFX A1 0 e [^aieo]	is:plural_femenine
-SFX A1 o a o	is:singular_femenine
+SFX A1 o a o
 SFX A1 o e o	is:plural
 SFX A1 o i [^i]o	is:plural_masculine
 SFX A1 io i io	is:plural_masculine
 
 # ajetivi de sekonda klase (-i, -a/e)
 SFX A2 Y 5
-SFX A2 0 a [^aieo]	is:singular_femenine
+SFX A2 0 a [^aieo]
 SFX A2 0 i [^aieo]	is:plural
 SFX A2 0 e [^aieo]	is:plural
 SFX A2 a e a	is:plural
@@ -5317,19 +5317,19 @@ SFX A2 a i a	is:plural_masculine
 
 # sostantivi plurali femenili, ajetivi de tèrŧa klase (-a/e)
 SFX F0 Y 4
-SFX F0 0 e [^oaie]	is:plural
-SFX F0 0 i [^oaie]	is:plural_masculine
+SFX F0 0 e [^oaie]	is:plural_femenine
+SFX F0 0 i [^oaie]	is:plural_femenine
 SFX F0 e i e	is:plural_femenine
-SFX F0 a e a	is:plural
+SFX F0 a e a	is:plural_femenine
 
 # sostantivi plurali maskili (-o/i)
 SFX M0 Y 6
-SFX M0 0 i [^oaie]
+SFX M0 0 i [^oaie]	is:plural_masculine
 SFX M0 0 o [^oaie]
-SFX M0 o i [^i]o
-SFX M0 io i io
-SFX M0 a i a
-SFX M0 e i e
+SFX M0 o i [^i]o	is:plural_masculine
+SFX M0 io i io	is:plural_masculine
+SFX M0 a i a	is:plural_masculine
+SFX M0 e i e	is:plural_masculine
 
 # đontamento de -io/a a le paròle in -o/a (-[lnr] > -[lnr]io, -o/e > -io, -a > -ia)
 SFX M1 Y 4
@@ -5729,22 +5729,25 @@ SFX ěs o esa/F0 [^ò][dks]o
 
 # nominali deajetivali (-iŧia)
 SFX ǐS Y 2
-SFX ǐS 0 iŧia/F0 l
-SFX ǐS o iŧia/F0 o
+SFX ǐS 0 iŧia/F0 l	is:singular_femenine
+SFX ǐS o iŧia/F0 o	is:singular_femenine
 
 # nominali deajetivali (-isia)
 SFX ǐs Y 3
-SFX ǐs 0 isia/F0 l
-SFX ǐs o isia/F0 o
-SFX ǐs e isia/F0 ƚe
+SFX ǐs 0 isia/F0 l	is:singular_femenine
+SFX ǐs o isia/F0 o	is:singular_femenine
+SFX ǐs e isia/F0 ƚe	is:singular_femenine
 
 
 # nominali deverbali (-mento)
-SFX r0 Y 14
+SFX r0 Y 17
+SFX r0 0 mento/M0FSⱣd a	is:singular_masculine
 SFX r0 0 amento/M0FSⱣd n
 SFX r0 o amento/M0FSⱣd o
-SFX r0 r mento/M0FSⱣd [^a]r
+SFX r0 r mento/M0FSⱣd [^aiu]r
 SFX r0 erò imento/M0FSⱣd erò
+SFX r0 0 amento/M0FSⱣd ir
+SFX r0 0 amento/M0FSⱣd ur
 SFX r0 uar omento/M0FSⱣd uar
 SFX r0 r mento/M0FSⱣd [^u]ar
 SFX r0 rò mento/M0FSⱣd [^e]rò
@@ -5826,7 +5829,7 @@ SFX r3 dur ureto/M0FSⱣd dur
 SFX r3 dura ura/F0 dura
 SFX r3 dura ureta/F0 dura
 
-# nominali deverbali ko èle vanesente (-dur/M0ěŧ)
+# nominali deverbali ko èle vanesente (-dur/M0ěŧ, -dura/F0ěŧ)
 SFX ɍ3 Y 8
 SFX ɍ3 r ura/F0 [^u]r
 SFX ɍ3 r dura/F0 [^u]r
