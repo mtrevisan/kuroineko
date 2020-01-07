@@ -1949,6 +1949,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fraskeđ",		"",			1,	5,	"a",	"1775",			"Far banbinerie.",
 "fraskon",		"in",			1,	5,	"a",	"1854",			"Sepelir la ponte de un tralco de vide par tajarlo intel međo ko ʼl ga metesto radixe.",
 "fraston",		"",			1,	5,	"a",	"1896",			"",
+"frastorn",		"",			1,	5,	"a",	"1855",			"(belumat)",
 "frat",			"",			1,	2,	"g",	"",				"",
 "frat",			"des",		1,	2,	"g",	"1775",			"",
 "frat",			"s",			1,	2,	"g",	"1854",			"",
