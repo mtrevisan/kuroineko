@@ -2622,6 +2622,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "jaŧ",			"",			1,	1,	"g",	"",				"",
 "jeskol",		"",			1,	1,	"a",	"1894",			"",
 "jetur",			"kon",		1,	3,	"a",	"1829",			"",
+"jeŧol",			"",			1,	1,	"a",	"1855",			"(belumat) Xlitar so ʼl jaŧo ko ʼl ferion",
 "jil",			"",			1,	1,	"a",	"1851",			"Far jilè.",
 "jirland",		"",			1,	4,	"g",	"1876",			"",
 "jirland",		"in",			1,	4,	"g",	"1877",			"",
