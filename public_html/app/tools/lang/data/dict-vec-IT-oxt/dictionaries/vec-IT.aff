@@ -5300,12 +5300,12 @@ SFX I9 o e ríseƚo	is:interrogative
 SFX A1 Y 8
 SFX A1 0 o [^aieo]
 SFX A1 0 a [^aieo]
-SFX A1 0 i [^aieo]	is:plural_masculine
-SFX A1 0 e [^aieo]	is:plural_femenine
+SFX A1 0 i [^aieo]	is:plural+masculine
+SFX A1 0 e [^aieo]	is:plural+femenine
 SFX A1 o a o
 SFX A1 o e o	is:plural
-SFX A1 o i [^i]o	is:plural_masculine
-SFX A1 io i io	is:plural_masculine
+SFX A1 o i [^i]o	is:plural+masculine
+SFX A1 io i io	is:plural+masculine
 
 # ajetivi de sekonda klase (-i, -a/e)
 SFX A2 Y 5
@@ -5313,23 +5313,23 @@ SFX A2 0 a [^aieo]
 SFX A2 0 i [^aieo]	is:plural
 SFX A2 0 e [^aieo]	is:plural
 SFX A2 a e a	is:plural
-SFX A2 a i a	is:plural_masculine
+SFX A2 a i a	is:plural+masculine
 
 # sostantivi plurali femenili, ajetivi de tèrŧa klase (-a/e)
 SFX F0 Y 4
-SFX F0 0 e [^oaie]	is:plural_femenine
-SFX F0 0 i [^oaie]	is:plural_femenine
-SFX F0 e i e	is:plural_femenine
-SFX F0 a e a	is:plural_femenine
+SFX F0 0 e [^oaie]	is:plural+femenine
+SFX F0 0 i [^oaie]	is:plural+femenine
+SFX F0 e i e	is:plural+femenine
+SFX F0 a e a	is:plural+femenine
 
 # sostantivi plurali maskili (-o/i)
 SFX M0 Y 6
-SFX M0 0 i [^oaie]	is:plural_masculine
+SFX M0 0 i [^oaie]	is:plural+masculine
 SFX M0 0 o [^oaie]
-SFX M0 o i [^i]o	is:plural_masculine
-SFX M0 io i io	is:plural_masculine
-SFX M0 a i a	is:plural_masculine
-SFX M0 e i e	is:plural_masculine
+SFX M0 o i [^i]o	is:plural+masculine
+SFX M0 io i io	is:plural+masculine
+SFX M0 a i a	is:plural+masculine
+SFX M0 e i e	is:plural+masculine
 
 # đontamento de -io/a a le paròle in -o/a (-[lnr] > -[lnr]io, -o/e > -io, -a > -ia)
 SFX M1 Y 4
@@ -5343,22 +5343,22 @@ SFX M1 0 io [lnr]
 
 # kanbio feltrin-belunexe ('[aeou][ln] > 'Vi)
 SFX Ƀl Y 10
-SFX Ƀl al ài al	is:plural_masculine
-SFX Ƀl el éi el	is:plural_masculine
-SFX Ƀl ol ói ol	is:plural_masculine
-SFX Ƀl ul úi ul	is:plural_masculine
-SFX Ƀl an ài an	is:plural_masculine
-SFX Ƀl en éi en	is:plural_masculine
-SFX Ƀl on ói on	is:plural_masculine
-SFX Ƀl un úi un	is:plural_masculine
-SFX Ƀl l i [àéèóòú]l	is:plural_masculine
-SFX Ƀl n i [àéèóòú]n	is:plural_masculine
+SFX Ƀl al ài al	is:plural+masculine
+SFX Ƀl el éi el	is:plural+masculine
+SFX Ƀl ol ói ol	is:plural+masculine
+SFX Ƀl ul úi ul	is:plural+masculine
+SFX Ƀl an ài an	is:plural+masculine
+SFX Ƀl en éi en	is:plural+masculine
+SFX Ƀl on ói on	is:plural+masculine
+SFX Ƀl un úi un	is:plural+masculine
+SFX Ƀl l i [àéèóòú]l	is:plural+masculine
+SFX Ƀl n i [àéèóòú]n	is:plural+masculine
 
 # kanbio feltrin-belunexe ('[aeou].+[aeou][ln] > Vi)
 SFX Ƀƚ Y 3
-SFX Ƀƚ lo i [aeou]lo	is:plural_masculine
-SFX Ƀƚ l i [aeou]l	is:plural_masculine
-SFX Ƀƚ n i [aeou]n	is:plural_masculine
+SFX Ƀƚ lo i [aeou]lo	is:plural+masculine
+SFX Ƀƚ l i [aeou]l	is:plural+masculine
+SFX Ƀƚ n i [aeou]n	is:plural+masculine
 
 
 ### Venèŧia ###
@@ -5447,61 +5447,61 @@ PFX Ṿè Đ X Đ
 
 # metafonèxi padoana
 SFX Ᵽd Y 55
-SFX Ᵽd el ili el	is:plural_masculine
-SFX Ᵽd ol uli ol	is:plural_masculine
-SFX Ᵽd en ini en	is:plural_masculine
-SFX Ᵽd on uni on	is:plural_masculine
-SFX Ᵽd er iri er	is:plural_masculine
-SFX Ᵽd or uri or	is:plural_masculine
-SFX Ᵽd exe ixi exe	is:plural_masculine
-SFX Ᵽd edo idi edo	is:plural_masculine
-SFX Ᵽd odo udi odo	is:plural_masculine
-SFX Ᵽd eđo iđi eđo	is:plural_masculine
-SFX Ᵽd ođo uđi ođo	is:plural_masculine
-SFX Ᵽd eko iki eko	is:plural_masculine
-SFX Ᵽd oko uki oko	is:plural_masculine
-SFX Ᵽd eƚo iƚi eƚo	is:plural_masculine
-SFX Ᵽd oƚo uƚi oƚo	is:plural_masculine
-SFX Ᵽd eño iñi eño	is:plural_masculine
-SFX Ᵽd oño iñi oño	is:plural_masculine
-SFX Ᵽd eso isi eso	is:plural_masculine
-SFX Ᵽd oso usi oso	is:plural_masculine
-SFX Ᵽd eto iti eto	is:plural_masculine
-SFX Ᵽd oto uti oto	is:plural_masculine
-SFX Ᵽd eŧo iŧi eŧo	is:plural_masculine
-SFX Ᵽd oŧo uŧi oŧo	is:plural_masculine
-SFX Ᵽd evo ivi evo	is:plural_masculine
-SFX Ᵽd ovo uvi ovo	is:plural_masculine
-SFX Ᵽd exo ixi exo	is:plural_masculine
-SFX Ᵽd oxo uxi oxo	is:plural_masculine
-SFX Ᵽd orse ursi orse	is:plural_masculine
-SFX Ᵽd ente inti ente	is:plural_masculine
-SFX Ᵽd onte unti onte	is:plural_masculine
-SFX Ᵽd oldo uldi oldo	is:plural_masculine
-SFX Ᵽd ordo urdi ordo	is:plural_masculine
-SFX Ᵽd orđo urđi orđo	is:plural_masculine
-SFX Ᵽd olko ulki olko	is:plural_masculine
-SFX Ᵽd orko urki orko	is:plural_masculine
-SFX Ᵽd ento inti ento	is:plural_masculine
-SFX Ᵽd onto unti onto	is:plural_masculine
-SFX Ᵽd orxo urxi orxo	is:plural_masculine
-SFX Ᵽd órden úrdini órden	is:plural_masculine
-SFX Ᵽd ojoxo ujuxi ojoxo	is:plural_masculine
-SFX Ᵽd oɉoxo uɉuxi oɉoxo	is:plural_masculine
-SFX Ᵽd oloxo uluxi oloxo	is:plural_masculine
-SFX Ᵽd oƚoxo uƚuxi oƚoxo	is:plural_masculine
-SFX Ᵽd omoxo umuxi omoxo	is:plural_masculine
-SFX Ᵽd oñoxo uñuxi oñoxo	is:plural_masculine
-SFX Ᵽd oroxo uruxi oroxo	is:plural_masculine
-SFX Ᵽd obioxo ubiuxi obioxo	is:plural_masculine
-SFX Ᵽd ofioxo ufiuxi ofioxo	is:plural_masculine
-SFX Ᵽd olioxo uliuxi olioxo	is:plural_masculine
-SFX Ᵽd oƚioxo uƚiuxi oƚioxo	is:plural_masculine
-SFX Ᵽd onioxo uniuxi onioxo	is:plural_masculine
-SFX Ᵽd orioxo uriuxi orioxo	is:plural_masculine
-SFX Ᵽd ostoxo ustuxi ostoxo	is:plural_masculine
-SFX Ᵽd ordioxo urdiuxi ordioxo	is:plural_masculine
-SFX Ᵽd obrioxo ubriuxi obrioxo	is:plural_masculine
+SFX Ᵽd el ili el	is:plural+masculine
+SFX Ᵽd ol uli ol	is:plural+masculine
+SFX Ᵽd en ini en	is:plural+masculine
+SFX Ᵽd on uni on	is:plural+masculine
+SFX Ᵽd er iri er	is:plural+masculine
+SFX Ᵽd or uri or	is:plural+masculine
+SFX Ᵽd exe ixi exe	is:plural+masculine
+SFX Ᵽd edo idi edo	is:plural+masculine
+SFX Ᵽd odo udi odo	is:plural+masculine
+SFX Ᵽd eđo iđi eđo	is:plural+masculine
+SFX Ᵽd ođo uđi ođo	is:plural+masculine
+SFX Ᵽd eko iki eko	is:plural+masculine
+SFX Ᵽd oko uki oko	is:plural+masculine
+SFX Ᵽd eƚo iƚi eƚo	is:plural+masculine
+SFX Ᵽd oƚo uƚi oƚo	is:plural+masculine
+SFX Ᵽd eño iñi eño	is:plural+masculine
+SFX Ᵽd oño iñi oño	is:plural+masculine
+SFX Ᵽd eso isi eso	is:plural+masculine
+SFX Ᵽd oso usi oso	is:plural+masculine
+SFX Ᵽd eto iti eto	is:plural+masculine
+SFX Ᵽd oto uti oto	is:plural+masculine
+SFX Ᵽd eŧo iŧi eŧo	is:plural+masculine
+SFX Ᵽd oŧo uŧi oŧo	is:plural+masculine
+SFX Ᵽd evo ivi evo	is:plural+masculine
+SFX Ᵽd ovo uvi ovo	is:plural+masculine
+SFX Ᵽd exo ixi exo	is:plural+masculine
+SFX Ᵽd oxo uxi oxo	is:plural+masculine
+SFX Ᵽd orse ursi orse	is:plural+masculine
+SFX Ᵽd ente inti ente	is:plural+masculine
+SFX Ᵽd onte unti onte	is:plural+masculine
+SFX Ᵽd oldo uldi oldo	is:plural+masculine
+SFX Ᵽd ordo urdi ordo	is:plural+masculine
+SFX Ᵽd orđo urđi orđo	is:plural+masculine
+SFX Ᵽd olko ulki olko	is:plural+masculine
+SFX Ᵽd orko urki orko	is:plural+masculine
+SFX Ᵽd ento inti ento	is:plural+masculine
+SFX Ᵽd onto unti onto	is:plural+masculine
+SFX Ᵽd orxo urxi orxo	is:plural+masculine
+SFX Ᵽd órden úrdini órden	is:plural+masculine
+SFX Ᵽd ojoxo ujuxi ojoxo	is:plural+masculine
+SFX Ᵽd oɉoxo uɉuxi oɉoxo	is:plural+masculine
+SFX Ᵽd oloxo uluxi oloxo	is:plural+masculine
+SFX Ᵽd oƚoxo uƚuxi oƚoxo	is:plural+masculine
+SFX Ᵽd omoxo umuxi omoxo	is:plural+masculine
+SFX Ᵽd oñoxo uñuxi oñoxo	is:plural+masculine
+SFX Ᵽd oroxo uruxi oroxo	is:plural+masculine
+SFX Ᵽd obioxo ubiuxi obioxo	is:plural+masculine
+SFX Ᵽd ofioxo ufiuxi ofioxo	is:plural+masculine
+SFX Ᵽd olioxo uliuxi olioxo	is:plural+masculine
+SFX Ᵽd oƚioxo uƚiuxi oƚioxo	is:plural+masculine
+SFX Ᵽd onioxo uniuxi onioxo	is:plural+masculine
+SFX Ᵽd orioxo uriuxi orioxo	is:plural+masculine
+SFX Ᵽd ostoxo ustuxi ostoxo	is:plural+masculine
+SFX Ᵽd ordioxo urdiuxi ordioxo	is:plural+masculine
+SFX Ᵽd obrioxo ubriuxi obrioxo	is:plural+masculine
 
 
 ### Viŧenŧa ###
