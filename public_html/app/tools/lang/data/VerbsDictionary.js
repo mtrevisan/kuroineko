@@ -726,6 +726,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bosk",			"",			1,	1,	"a",	"1829",			"",
 "bosk",			"in",			1,	1,	"a",	"1854",			"",
 "bosk",			"x",			1,	1,	"a",	"1775",			"",
+"bosk",			"in",			4,	4,	"a",	"1855",			"(belumat)",
 "boskaɉ",		"in",			1,	4,	"g",	"1867",			"Deventar boskaja.",
 "bot",			"",			1,	1,	"a",	"1980",			"Xmakar.",
 "bot",			"dex",		1,	1,	"a",	"1896",			"",
