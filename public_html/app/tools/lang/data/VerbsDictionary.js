@@ -5218,6 +5218,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pier",			"des",		1,	2,	"g",	"1829",			"Desperar.",
 "pier",			"s",			1,	2,	"g",	"1775",			"Opor al lume na roba par véder se traspare, opor al sol na tela rada.",
 "pieron",		"",			1,	4,	"a",	"1896",			"",
+"piet",			"in",			1,	2,	"a",	"1855",			"(belumat)",
 "pietr",			"in",			4,	5,	"a",	"1896",			"",
 "pig",			"",			1,	1,	"a",	"1560",			"",
 "pigot",			"",			1,	3,	"g",	"1855",			"(belumat)",
