@@ -4973,6 +4973,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pear",			"",			1,	1,	"a",	"",				"",
 "pear",			"in",			1,	1,	"a",	"1900",			"(veronexe)",
 "pedal",			"",			1,	3,	"g",	"1980",			"",
+"pediment",		"in",			1,	5,	"a",	"1855",			"(belumat)",
+"pedoc",			"in",			1,	3,	"g",	"1855",			"(belumat)",
 "pedoc",			"s",			1,	3,	"g",	"1980",			"Kavar i pedòci.",
 "pedon",			"",			1,	3,	"a",	"1810",			"Kaminar par la kanpaña.",
 "pedot",			"",			1,	3,	"g",	"1851",			"Pilotar na barka.",
