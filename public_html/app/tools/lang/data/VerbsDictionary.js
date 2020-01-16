@@ -5517,6 +5517,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "potac",			"",			1,	3,	"g",	"1775",			"",
 "potac",			"in",			1,	3,	"g",	"1775",			"",
 "potac",			"s",			1,	3,	"g",	"1854",			"",
+"potek",			"i",			1,	3,	"g",	"1855",			"(belumat)",
+"potek",			"in",			1,	3,	"g",	"",				"",
 "poteg",			"i",			1,	3,	"g",	"1775",			"",
 "poteg",			"in",			1,	3,	"g",	"1980",			"(bixiak)",
 "potenŧi",		"",			1,	3,	"a",	"",				"",
@@ -7630,6 +7632,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧupeg",			"",			1,	1,	"a",	"1590",			"Sorbir, cucar.",
 "ŧurl",			"",			1,	1,	"a",	"1852",			"Delirar, molestar, inkietar.",
 "ŧuŧ",			"",			1,	1,	"a",	"1775",			"Sucar.",
+"ŧux",			"in",			1,	1,	"a",	"1855",			"(belumat) Inŧukir.",
+"ŧux",			"in",			4,	3,	"a",	"1855",			"(belumat) Inŧukir.",
 
 "ubid",			"dex",		4,	4,	"a",	"1900",			"(veronexe)",
 "ubig",			"",			1,	0,	"a",	"1893",			"Ubegar.",
