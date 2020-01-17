@@ -6775,6 +6775,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "stroleg",		"",			1,	3,	"g",	"1560",			"Pensar, prevéder.",
 "strolig",		"",			1,	3,	"g",	"1877",			"Strolegar.",
 "strolog",		"",			1,	3,	"g",	"",				"Strolegar.",
+"stroment",		"i",			1,	5,	"a",	"1855",			"(belumat)",
 "stroment",		"in",			1,	5,	"a",	"1829",			"Far un stromento.",
 "stronđ",		"",			1,	3,	"a",	"1829",			"Tajar o limar via el bordo esterna de na monea par diminuirgene el valor.",
 "strop",			"",			1,	3,	"a",	"1510",			"Sarar un buxo.",
