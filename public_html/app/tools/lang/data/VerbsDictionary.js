@@ -3655,6 +3655,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "las",			"stra",		1,	1,	"g",	"1852",			"Tralasar.",
 "las",			"tra",		1,	1,	"g",	"1854",			"",
 "lask",			"",			1,	1,	"g",	"1847",			"Skórer, traskórer, sorpasar, alentar.",
+"last",			"",			1,	2,	"g",	"1855",			"(belumat) Lastregar.",
 "lat",			"",			1,	1,	"g",	"1560",			"Sveŧar.",
 "lat",			"de",			1,	1,	"g",	"1829",			"",
 "lat",			"dex",		1,	1,	"g",	"1810",			"Sveŧar.",
