@@ -11208,6 +11208,12 @@ léskoe/a0a1I1+0	po:verb ts:indicative+present is:interrogative st:leskar
 ƚeskar/a0a2P0P2	po:verb ts:infinitive+simple
 ƚesko/a0a2P0P2I0	po:verb ts:indicative+present st:leskar
 ƚéskoe/a0a2I1	po:verb ts:indicative+present is:interrogative st:leskar
+lesivar/a0a1P0P1	po:verb ts:infinitive+simple
+lesivo/a0a1P0P1FSI0	po:verb ts:indicative+present st:lesivar
+lesívoe/a0a1I1	po:verb ts:indicative+present is:interrogative st:lesivar
+ƚesivar/a0a2P0P2	po:verb ts:infinitive+simple
+ƚesivo/a0a2P0P2I0	po:verb ts:indicative+present st:ƚesivar
+ƚesívoe/a0a2I1	po:verb ts:indicative+present is:interrogative st:ƚesivar
 lestir/a0a1d0d1P0P1@0	po:verb ts:infinitive+simple
 ƚestir/a0a2d0d2P0P2@0	po:verb ts:infinitive+simple
 aletar/a0a1P0P1	po:verb ts:infinitive+simple
@@ -11507,6 +11513,12 @@ lísioe/a0a1I1	po:verb ts:indicative+present is:interrogative st:lisiar
 ƚisiar/a0a2P0P2	po:verb ts:infinitive+simple
 ƚisio/a0a2P0P2I0	po:verb ts:indicative+present st:lisiar
 ƚísioe/a0a2I1	po:verb ts:indicative+present is:interrogative st:ƚisiar
+lisivar/a0a1P0P1	po:verb ts:infinitive+simple
+lisivo/a0a1P0P1FSI0	po:verb ts:indicative+present st:lisivar
+lisívoe/a0a1I1	po:verb ts:indicative+present is:interrogative st:lisivar
+ƚisivar/a0a2P0P2	po:verb ts:infinitive+simple
+ƚisivo/a0a2P0P2I0	po:verb ts:indicative+present st:ƚisivar
+ƚisívoe/a0a2I1	po:verb ts:indicative+present is:interrogative st:ƚisivar
 listar/a0a1P0P1	po:verb ts:infinitive+simple
 listo/a0a1P0P1FSI0	po:verb ts:indicative+present st:listar
 lístoe/a0a1I1	po:verb ts:indicative+present is:interrogative st:listar
@@ -26210,14 +26222,14 @@ Nasio/Z0	po:noun_proper is:singular+masculine
 Nastaxia/Z0	po:noun_proper is:singular+femenine
 Nata/Z0	po:noun_proper is:singular+femenine
 Nato/FSZ0	po:noun_proper is:singular+masculine
+Nena/F0Z0	po:noun_proper is:singular+femenine
+Neno/M0FSZ0	po:noun_proper is:singular+masculine
 Nerío/Z0	po:noun_proper is:singular+masculine
 Neta/Z0	po:noun_proper is:singular+femenine
 Nèla/Z0	po:noun_proper is:singular+femenine
 Nèlo/FSZ0	po:noun_proper is:singular+masculine
 Nèƚa/Z0	po:noun_proper is:singular+femenine
 Nèƚo/Z0	po:noun_proper is:singular+masculine
-Nena/F0Z0	po:noun_proper is:singular+femenine
-Neno/M0FSZ0	po:noun_proper is:singular+masculine
 Nèna/F0Z0	po:noun_proper is:singular+femenine
 Nèno/M0FSZ0	po:noun_proper is:singular+masculine
 Nèto/FSZ0	po:noun_proper is:singular+masculine
@@ -54418,9 +54430,10 @@ limaŧo/M0FS	po:noun is:singular+masculine
 limonèr/M0V0	po:noun is:singular+masculine
 limonèra/F0V0	po:noun is:singular+femenine
 lisapianta/F0Ṿè	po:noun is:singular+masculine
+lisia/F0ǎSǎsět	po:noun is:singular+femenine
 lisia/F0ět	po:adjective_qualificative is:singular+femenine
-lisiaŧo/M0FSṾe	po:noun is:singular+masculine
-lisio/M0ǎSǎsět	po:adjective is:singular+masculine
+lisio/M0ǎSǎsět	po:noun is:singular+masculine
+lisio/M0ět	po:adjective_qualificative is:singular+masculine
 lispio/M0Ṿè	po:noun is:singular+masculine
 litanía/F0Ṿè	po:noun is:singular+femenine
 literieŧia/F0Ṿe	po:noun is:singular+femenine
@@ -54452,8 +54465,10 @@ lúŧido/A1FS	po:adjective is:singular+masculine
 ƚeroɉèr/M0V1	po:noun is:singular+masculine
 ƚeroɉèra/F0V1	po:noun is:singular+femenine
 ƚetexoƚo/M0ⱣdṾè	po:noun is:singular+masculine
+ƚisia/F0ǎᶊěŧ	po:noun is:singular+femenine
 ƚisia/F0ěŧ	po:adjective_qualificative is:singular+femenine
-ƚisio/M0ǎᶊěŧ	po:adjective_qualificative is:singular+masculine
+ƚisio/M0ǎᶊěŧ	po:noun is:singular+masculine
+ƚisio/M0ěŧ	po:adjective_qualificative is:singular+masculine
 ƚiteriesia/F0	po:noun is:singular+femenine
 ƚosa/F0	po:adjective_qualificative is:singular+femenine
 ƚoxon/F0Ᵽd	po:noun is:singular+masculine
@@ -56173,6 +56188,7 @@ kúrtol/M0ɃƚⱣdṾe	po:noun is:singular+masculine
 laña/F0Ṿè	po:noun is:singular+masculine
 làipo/M0FS*0	po:adjective_qualificative is:singular+masculine
 lekeŧo/M0FSⱣdṾe	po:noun is:singular+masculine
+levina/F0*0	po:noun is:singular+femenine
 lèipo/M0FS	po:noun is:singular+masculine
 lèxen/M0Ƀƚ	po:adjective_qualificative is:singular+masculine
 lèxena/F0Ṿè	po:adjective_qualificative is:singular+femenine
@@ -56187,6 +56203,7 @@ lubion/F0ɃlⱣd	po:noun is:singular+masculine
 lugrin/M0Ṿè	po:noun is:singular+masculine
 ƚàipo/M0	po:noun is:singular+masculine
 ƚekeso/M0Ᵽd	po:noun is:singular+masculine
+ƚevina/F0	po:noun is:singular+femenine
 ƚèipo/M0	po:noun is:singular+masculine
 ƚèxen/M0	po:adjective_qualificative is:singular+masculine
 ƚingonto/M0	po:noun is:singular+masculine
@@ -56374,7 +56391,6 @@ xɉòra/F0	po:noun is:singular+femenine
 xɉòvo/M0FS	po:noun is:singular+masculine
 xɉufa/F0	po:noun is:singular+femenine
 xlanko/A1FS	po:adjective is:singular+masculine
-xlevina/F0	po:noun is:singular+femenine
 xlifa/F0	po:noun is:singular+femenine
 xmaldarola/F0V0	po:adjective is:singular+femenine
 xmaldaroƚa/F0V1	po:adjective is:singular+femenine
@@ -59033,8 +59049,23 @@ laberinto/M0FS	po:noun is:singular+masculine
 landra/F0Ṿè	po:noun is:singular+femenine
 laniso/M0FSṾè	po:noun is:singular+masculine
 laniŧo/M0FS	po:noun is:singular+masculine
+lasarol/M0V0ɃlⱣd	po:noun is:singular+masculine
+laŧarol/M0ɃlV0Ᵽd	po:noun is:singular+masculine
 làiko/A1FS	po:noun is:singular+masculine
 làndres/Ṿè	po:noun is:femenine
+lànler/F0Ṿè	po:adjective_qualificative is:singular
+làver–dental/F0Ƀl	po:adjective_qualificative is:singular
+làver/M0Ṿè	po:adjective_qualificative is:singular+masculine
+làvero–dental/F0Ƀl	po:adjective_qualificative is:singular
+lejereŧa/F0Ṿe	po:noun is:singular+femenine
+leɉereŧa/F0Ṿe	po:noun is:singular+femenine
+lesiva/F0ǎSǎsět	po:noun is:singular+femenine
+lesivaŧo/M0FSṾe	po:noun is:singular+femenine
+letargo/M0FS	po:noun is:singular+masculine
+letorin/M0Ṿè	po:noun is:singular+masculine
+lexaña/F0ět	po:noun is:singular+femenine
+lèje/F0	po:noun is:singular+femenine
+lèɉe/F0	po:noun is:singular+femenine
 lèso/A1FS	po:adjective_qualificative is:singular+masculine
 ligadisa/F0Ṿè	po:adjective is:singular+femenine
 ligadiso/M0FSṾè	po:adjective is:singular+masculine
@@ -59042,10 +59073,22 @@ ligadiŧo/A1FS	po:adjective is:singular+masculine
 ligaisa/F0Ṿè	po:adjective is:singular+femenine
 ligaiso/M0FSṾè	po:adjective is:singular+masculine
 ligaiŧo/A1FS	po:adjective is:singular+masculine
+lisiva/F0ǎSǎsět	po:noun is:singular+femenine
+lisivaŧo/M0FSṾe	po:noun is:singular+femenine
 línpido/A1FS	po:adjective is:singular+masculine
 ƚaberinto/M0	po:noun is:singular+masculine
+ƚasaroƚo/M0V1ⱣdṾè	po:noun is:singular+masculine
 ƚàiko/A1	po:noun is:singular+masculine
+ƚàvero–dentaƚe/F0Ṿè	po:adjective_qualificative is:singular
+ƚejeresa/F0	po:noun is:singular+femenine
+ƚeɉeresa/F0	po:noun is:singular+femenine
+ƚesiva/F0ǎᶊěŧ	po:noun is:singular+femenine
+ƚesivaso/M0	po:noun is:singular+femenine
+ƚetargo/M0	po:noun is:singular+masculine
+ƚexaña/F0ěŧ	po:noun is:singular+femenine
 ƚèso/A1	po:adjective_qualificative is:singular+masculine
+ƚisiva/F0ǎᶊěŧ	po:noun is:singular+femenine
+ƚisivaso/M0	po:noun is:singular+femenine
 madèso/FS	po:adverb
 malandreto/A1FSⱣd	po:noun is:singular+masculine
 maƚandreto/A1FSⱣd	po:noun is:singular+masculine
@@ -59065,6 +59108,7 @@ menton/F0ɃlⱣd	po:noun is:singular+masculine
 miñóñola/F0Ṿe	po:noun is:singular+femenine
 montañaso/A1FS	po:adjective_qualificative is:singular+masculine
 monŧina/F0Ṿe	po:noun is:singular+femenine
+mordente/M0FSⱣdṾr	po:noun is:singular
 moŧina/F0Ṿe	po:noun is:singular+femenine
 mòjo/FS	po:adverb
 mòɉo/FS	po:adverb
@@ -59082,6 +59126,8 @@ parŧial/F0Ƀl+0	po:adjective is:singular
 parusolòto/M0ṾeFS	po:noun is:singular+masculine
 perkòto/M0FS	po:noun is:singular+masculine
 pestaòrđo/M0FSṾe	po:adjective is:singular+masculine
+petadiŧa/F0Ṿe	po:adjective is:singular+masculine
+petaiŧa/F0Ṿe	po:adjective is:singular+masculine
 petulante/M0FS	po:adjective_qualificative is:singular
 petuƚante/M0	po:adjective_qualificative is:singular
 pexarina/F0	po:noun is:singular+femenine
@@ -59109,6 +59155,8 @@ rabula/F0Ṿe	po:noun is:singular+femenine
 ranjer/M0V0	po:noun is:singular+masculine
 ranɉer/M0V0	po:noun is:singular+masculine
 raxor/F0Ᵽd	po:noun is:singular+masculine
+rànsego/A1FS	po:adjective_qualificative is:singular+masculine
+rànŧego/A1FS	po:adjective_qualificative is:singular+masculine
 rekòva/F0@0	po:noun is:singular+femenine
 remòrso/M0FS	po:noun is:singular+masculine
 reoltin/M0	po:noun is:singular+masculine
@@ -59128,6 +59176,7 @@ sirèla/F0Ṿe	po:noun is:singular+femenine
 siròso/FS	po:adverb
 siròŧo/FS	po:adverb
 símola/F0Ṿe	po:noun is:singular+femenine
+skarpidura/F0r3ět	po:noun is:singular+femenine
 skarpòtola/F0Ṿe	po:noun is:singular+femenine
 solaròla/F0	po:adjective is:singular+masculine
 soƚaròƚa/F0	po:adjective is:singular+masculine
@@ -59209,32 +59258,8 @@ xgraraŧòto/FS	po:adverb
 xjonfun/M0ɃlṾè	po:noun is:singular+masculine
 xubiƚèo/M0	po:noun is:singular+masculine
 xunal/F0ɃlṾɇ	po:adjective_qualificative is:singular
-lànler/F0Ṿè	po:adjective_qualificative is:singular
-rànsego/A1FS	po:adjective_qualificative is:singular+masculine
-rànŧego/A1FS	po:adjective_qualificative is:singular+masculine
-lexaña/F0ět	po:noun is:singular+femenine
-ƚexaña/F0ěŧ	po:noun is:singular+femenine
-làver–dental/F0Ƀl	po:adjective_qualificative is:singular
-làver/M0Ṿè	po:adjective_qualificative is:singular+masculine
-làvero–dental/F0Ƀl	po:adjective_qualificative is:singular
-ƚàvero–dentaƚe/F0Ṿè	po:adjective_qualificative is:singular
-skarpidura/F0r3ět	po:noun is:singular+femenine
-laŧarol/M0ɃlV0Ᵽd	po:noun is:singular+masculine
-lasarol/M0V0ɃlⱣd	po:noun is:singular+masculine
-ƚasaroƚo/M0V1ⱣdṾè	po:noun is:singular+masculine
-lèje/F0	po:noun is:singular+femenine
-lèɉe/F0	po:noun is:singular+femenine
-lejereŧa/F0Ṿe	po:noun is:singular+femenine
-leɉereŧa/F0Ṿe	po:noun is:singular+femenine
-ƚejeresa/F0	po:noun is:singular+femenine
-ƚeɉeresa/F0Ṿe	po:noun is:singular+femenine
-petadiŧa/F0Ṿe	po:adjective is:singular+masculine
-petaiŧa/F0Ṿe	po:adjective is:singular+masculine
 
 
-/ 192
+/ 200
 / íóúđɉƚñŧ
 / ÀÈÉÍÒÓÚĐɈȽÑŦ
-sost.:lemòxina,ƚemòxina,limòxina,ƚimòxina
-sost. pròp.:Lena,Ƚena,Nena,Madalena,Madaƚena
-aj.:takadiŧa,takadisa,takaiŧa,takaisa,petadiŧa,petadisa,petaiŧa,petaisa
