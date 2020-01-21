@@ -15,6 +15,8 @@ s rude/forte - aspra/dolce = s/x
 c forte - dolce = k/c
 chi naturale = ki
 
+sangue, fiel, late, lume: i xe femenili!
+
 /([^\t\n\s]*)ğ([^\t\n\s]*[\t\s\n]+) > /($1)GV$2 # substitute flags
 # [^\n]+\n > # remove # comments
 / [^\n]*\n > # remove / comments
@@ -27,6 +29,7 @@ po:[^\n]+po: > split line
 (\b(\w*?)([ae])(\w*)\b)(?=[\s\S]*(\b\2(?!\3)[ae]\4\b)) # find couples of words that differs only for [ae]
 po:adjective( [^i]|$) # add is:...
 o[nl]/[^\r\nU]+U\d > add exception to hyphenation rules
+^l[^\r\n]+FS[^\r\n]*Ṿè	> split and remove FS from ƚ
 
 20190325
 correctness time = 463 s
