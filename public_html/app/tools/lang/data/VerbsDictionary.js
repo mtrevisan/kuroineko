@@ -3788,6 +3788,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "lis",			"",			1,	1,	"a",	"1854",			"",
 "lis",			"x",			1,	1,	"a",	"1775",			"Sivolar.",
 "liseg",			"",			1,	1,	"a",	"",				"Sivolar, patenar (so ʼl ɉaŧ).",
+"listrig",		"",			1,	1,	"a",	"1855",			"(belumat)",
 "liŧeg",			"x",			1,	1,	"a",	"1560",			"Slisar.",
 "liŧenŧi",		"",			1,	3,	"a",	"",				"",
 "lisi",			"",			1,	1,	"a",	"1550",			"(veneŧian) Far la lisia.",
