@@ -8096,6 +8096,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vol",			"",			2,	1,	"g",	"1362",			"",
 "vol",			"ben",		2,	1,	"g",	"1560",			"",
 "vol",			"mal",		2,	1,	"g",	"1867",			"",
+"ol",				"mal–",		2,	0,	"g",	"1855",			"(belumat)",
 "vol",			"re",			2,	1,	"g",	"1412",			"",
 "vol",			"x",			1,	1,	"a",	"1560",			"Volar.",
 "volaŧ",			"x",			1,	3,	"g",	"1560",			"Xbàter de ali.",
