@@ -4034,6 +4034,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "marteriđ",		"",			1,	6,	"a",	"1479",			"Martoriđar, martuređar.",
 "martoriđ",		"",			1,	6,	"a",	"1854",			"Marteriđar, martuređar.",
 "martuređ",		"x",			1,	6,	"a",	"1560",			"Marteriđar, martoriđar.",
+"marturiđ",		"",			1,	6,	"a",	"1588",			"(belumat) Marteriđar, martoriđar.",
 "marŧ",			"",			4,	4,	"a",	"1854",			"",
 "marŧ",			"in",			4,	4,	"a",	"1528",			"",
 "marŧ",			"x",			4,	4,	"a",	"1867",			"",
