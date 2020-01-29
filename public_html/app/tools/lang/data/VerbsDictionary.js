@@ -4286,6 +4286,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "molac",			"x",			1,	3,	"g",	"1852",			"Alentar, sligar.",
 "mólđ",			"",			3,	1,	"a",	"1980",			"",
 "molest",		"",			1,	3,	"g",	"1362",			"",
+"molin",			"",			1,	3,	"a",	"1855",			"(belumat) Disporse el tenpo a piòva, o a neve.",
 "molifeg",		"",			1,	3,	"a",	"1829",			"Deventar mòlo.",
 "molixin",		"x",			1,	3,	"a",	"1821",			"Deventar mòl.",
 "molt",			"x",			4,	4,	"a",	"1847",			"Xmontar de ʼl kolor.",
