@@ -4370,6 +4370,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "mosk",			"",			1,	1,	"a",	"1775",			"",
 "most",			"",			1,	1,	"g",	"1775",			"Skicar lʼ ua.",
 "most",			"in",			1,	1,	"g",	"1884",			"",
+"mostaŧ",		"",			1,	4,	"a",	"18555",			"(belumat)",
 "mostr",			"",			1,	1,	"a",	"1775",			"",
 "mostr",			"de",			1,	1,	"a",	"1454",			"",
 "mostr",			"dex",		1,	1,	"a",	"1867",			"",
