@@ -29,7 +29,7 @@ HOME http://parnodexmentegar.orgfree.com/
 LANG vec-IT
 
 
-TRY eaoinrtlƚsdkpvmuèxgfàòbíhéŧójɉñcúSđLȽIPETKVAMDNFBRJGCOUĐXÀÈŦHɈÒÑÍÉÓÚʼ-‒–
+TRY eaoinrtlƚsdkpvmuèxgfàòbíhéŧójɉñcúSđLȽIPETKVAMDNFBRJGCOUĐXÀÈŦHɈÒÑÍÉÓÚʼïüÏÜ-‒–
 
 KEY esdr|redft|trfg|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà-|àòèù-|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìèòà
 
@@ -5924,19 +5924,24 @@ SFX Y1 ada à ada
 
 
 # sostantivi/ajetivi alterài - demenutivi (-eto/a)
-SFX ět Y 113
+SFX ět Y 118
 SFX ět 0 ta/F0 e
 SFX ět è eeto/M0FSⱣd è
 SFX ět 0 eto/M0FSⱣd n
-SFX ět ú ueto/M0FSⱣd ú
-SFX ět ía ieta/F0 ía
-SFX ět úa ueta/F0 úa
+SFX ět ú ueto/M0FSⱣd [^aeiou]ú
+SFX ět ú üeto/M0FSⱣd [aeiou]ú
+SFX ět ía ieta/F0 [^aeiou]ía
+SFX ět úa ueta/F0 [^aeiou]úa
+SFX ět ía ïeta/F0 [aeiou]ía
+SFX ět úa üeta/F0 [aeiou]úa
 SFX ět èl eleto/M0FSⱣd èl
 SFX ět òl oleto/M0FSⱣd òl
 SFX ět èo eeto/M0FSⱣd èo
-SFX ět ío ieto/M0FSⱣd ío
+SFX ět ío ieto/M0FSⱣd [^aeiou]ío
+SFX ět ío ïeto/M0FSⱣd [aeiou]ío
 SFX ět òo oeto/M0FSⱣd òo
-SFX ět úo ueto/M0FSⱣd úo
+SFX ět úo ueto/M0FSⱣd [^aeiou]úo
+SFX ět úo üeto/M0FSⱣd [aeiou]úo
 SFX ět èr ereto/M0FSⱣd èr
 SFX ět òr oreto/M0FSⱣd òr
 SFX ět a eta/F0 [^bcdđgíjɉklmnñprsŧúvx]a
@@ -6040,11 +6045,12 @@ SFX ět èrvo erveto/M0FSⱣd èrvo
 SFX ět òrvo orveto/M0FSⱣd òrvo
 
 # sostantivi/ajetivi alterài - demenutivi ko èle vanesente (-eto/a)
-SFX ěŧ Y 29
+SFX ěŧ Y 30
 SFX ěŧ 0 to/M0Ᵽd e
 SFX ěŧ è eeto/M0Ᵽd è
 SFX ěŧ 0 eto/M0Ᵽd n
-SFX ěŧ ía ieta/F0 ía
+SFX ěŧ ía ieta/F0 [^aeiou]ía
+SFX ěŧ ía ïeta/F0 [aeiou]ía
 SFX ěŧ èr ereto/M0Ᵽd èr
 SFX ěŧ a eta/F0 [^dgíƚrx]a
 SFX ěŧ o eto/M0Ᵽd [^cjɉƚms]o
