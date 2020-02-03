@@ -22266,6 +22266,19 @@ stórđoe/a0a1I1	po:verb ts:indicative+present is:interrogative st:storđar
 storxar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 storxo/a0a1a2P0P1P2FSI0	po:verb ts:indicative+present st:storxar
 stórxoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:storxar
+tòrŧer/b0b1P0P1+0*0	po:verb ts:infinitive+simple
+torŧerò/b0b1I0+0*0	po:verb ts:indicative+future st:tòrŧer
+tòrŧo/a0a1P0P1FSI0+0*0	po:verb ts:indicative+present st:tòrŧer
+tòrŧoe/a0a1I1+0*0	po:verb ts:indicative+present is:interrogative st:tòrŧer
+tòrto/A1FS+0*0	po:verb ts:participle+perfect+strong is:singular+masculine st:tòrđer st:tòrxer
+tòrser/b0b1b2P0P1P2+0*0	po:verb ts:infinitive+simple
+torserò/b0b1b2I0+0*0	po:verb ts:indicative+future st:tòrser
+tòrso/a0a1a2P0P1P2FSI0+0*0	po:verb ts:indicative+present st:tòrser
+tòrsoe/a0a1a2I1+0*0	po:verb ts:indicative+present is:interrogative st:tòrser
+tòrŧar/b0b1P0P1+0*0	po:verb ts:infinitive+simple
+torŧarò/b0b1I0+0*0	po:verb ts:indicative+future st:tòrŧar
+tòrsar/b0b1b2P0P1P2+0*0	po:verb ts:infinitive+simple
+torsarò/b0b1b2I0+0*0	po:verb ts:indicative+future st:tòrŧar
 torsar/a0a1a2P0P1P2+0	po:verb ts:infinitive+simple
 torso/a0a1a2P0P1P2FSI0+0	po:verb ts:indicative+present st:torsar
 tórsoe/a0a1a2I1+0	po:verb ts:indicative+present is:interrogative st:torsar
@@ -22278,19 +22291,6 @@ tòrŧioe/a0a1I1	po:verb ts:indicative+present is:interrogative st:torŧiar
 torsiar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 tòrsio/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:torsiar
 tòrsioe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:torsiar
-intòrŧer/b0b1P0P1	po:verb ts:infinitive+simple
-intorŧerò/b0b1I0	po:verb ts:indicative+future st:intòrŧer
-intòrŧo/a0a1P0P1FSI0	po:verb ts:indicative+present st:intòrŧer
-intòrŧoe/a0a1I1	po:verb ts:indicative+present is:interrogative st:intòrŧer
-intòrto/A1FS	po:verb ts:participle+perfect+strong is:singular+masculine st:intòrŧer st:intòrser
-intòrser/b0b1b2P0P1P2	po:verb ts:infinitive+simple
-intorserò/b0b1b2I0	po:verb ts:indicative+future st:intòrser
-intòrso/a0a1a2P0P1P2FSI0	po:verb ts:indicative+present st:intòrser
-intòrsoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:intòrser
-intòrŧar/b0b1P0P1	po:verb ts:infinitive+simple
-intorŧarò/b0b1I0	po:verb ts:indicative+future st:intòrŧar
-intòrsar/b0b1b2P0P1P2	po:verb ts:infinitive+simple
-intorsarò/b0b1b2I0	po:verb ts:indicative+future st:intòrsar
 tòser/b0b1b2P0P1P2	po:verb ts:infinitive+simple
 toserò/b0b1b2I0	po:verb ts:indicative+future st:tòser
 tòso/a0a1a2P0P1P2FSI0	po:verb ts:indicative+present st:tòser
@@ -27875,7 +27875,6 @@ monin/M0	po:noun is:singular+masculine
 mò	po:adverb
 m	po:interjection
 ñao	po:interjection
-oe/M0	po:interjection
 oé	po:interjection
 oimèi	po:interjection
 ooo	po:interjection
@@ -27885,6 +27884,7 @@ o	po:interjection
 òco/FS	po:interjection
 òco/M0FSǎSǎsělěƚětǒn	po:noun is:singular+masculine
 òcu	po:interjection
+òe	po:interjection
 òi	po:interjection
 òòò	po:interjection
 òò	po:interjection
@@ -52472,7 +52472,7 @@ subio/M0ětǒt	po:noun is:singular+masculine
 subiso/M0FS	po:noun is:singular+masculine
 subitàneo/A1	po:adjective is:singular+masculine
 sucon/A2ɃlⱣd	po:adjective is:singular+masculine
-sudor/F0Ᵽdět	po:noun is:singular+masculine
+sudor/F0Ᵽdětǐn	po:noun is:singular+masculine
 sufiòto/M0FS	po:noun is:singular+masculine
 sufito/M0FS	po:noun is:singular+masculine
 sufomijo/M0FSṾe	po:noun is:singular+masculine
@@ -59400,10 +59400,13 @@ novèla/F0Ṿe	po:adjective_qualificative is:singular+femenine
 nòme	po:adverb
 nugaròla/F0Ṿe	po:adjective is:singular+masculine
 ñóñola/F0Ṿe	po:adjective_qualificative is:singular+femenine
+ofisiadura/F0r3ět	po:noun is:singular+femenine
+ofiŧiadura/F0r3ět	po:noun is:singular+femenine
 ópera/F0	po:noun is:singular+femenine
 òrđo/A1	po:noun is:singular+masculine
 òrgen/M0Ƀƚ	po:noun is:singular+masculine
 palpegon	po:adverb
+palpier/A1	po:noun is:singular+femenine
 paravovo/M0FSⱣd	po:noun is:singular+masculine
 paravòvo/M0FS	po:noun is:singular+masculine
 parsial/F0ɃlṾɇ+0	po:adjective is:singular
@@ -59435,6 +59438,7 @@ por/M0ět	po:adjective_qualificative is:singular+masculine
 por/M0ět	po:interjection
 pora/F0ět	po:adjective_qualificative is:singular+femenine
 pora/F0ět	po:interjection
+pólvera/F0	po:noun is:singular+femenine
 pònte/M0FS	po:noun is:singular+masculine
 pòrta–señàkol/M0ɃƚⱣdṾe	po:noun is:singular+masculine
 promesa/F0+0	po:noun is:singular+femenine
@@ -59571,6 +59575,6 @@ xvojadamente/FSW0	po:adverb
 xvoɉadamente/FSW0	po:adverb
 
 
-/ 400
+/ 410
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ

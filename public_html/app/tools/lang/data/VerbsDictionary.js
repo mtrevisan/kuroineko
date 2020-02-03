@@ -7272,6 +7272,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tòrđ",			"re",			3,	1,	"g",	"1854",			"",
 "tòrđ",			"s",			3,	1,	"g",	"1560",			"",
 "torđ",			"s",			1,	1,	"a",	"1980",			"Stòrđer.",
+"tòrŧ",			"in",			3,	1,	"g",	"1855",			"(belumat) Far déventar torto.",
+"tòrŧ",			"s",			3,	1,	"g",	"1855",			"(belumat)",
 "torŧi",			"",			1,	1,	"g",	"1775",			"Andar a xonxo.",
 "torŧ",			"",			1,	1,	"a",	"1876",			"",
 "torŧ",			"in",			1,	1,	"a",	"1980",			"",
