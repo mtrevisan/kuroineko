@@ -8,8 +8,8 @@ http://www.dmi.units.it/~borelli/utilita/dizionariotriestino.pdf [1999]
 https://books.google.it/books?id=Jz2V1LL2u1YC&pg=PA3#v=onepage&q&f=false [2007]
 
 
-íóúđɉƚñŧ
-ÀÈÉÍÒÓÚĐɈȽÑŦ
+íïóúüđɉƚñŧ
+ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ
 z aspra/forte/z - cruda/dolce/ᶎ = ŧ/đ
 s rude/forte - aspra/dolce = s/x
 c forte - dolce = k/c
@@ -40,6 +40,9 @@ po:[^\n]+po: > split line
 po:adjective( [^i]|$) # add is:...
 o[nl]/[^\r\nU]+U\d > add exception to hyphenation rules
 ^l[^\r\n]+FS[^\r\n]*Ṿè	> split and remove FS from ƚ
+
+konoja = polso
+nodèl = caviglia
 
 20190325
 correctness time = 463 s
