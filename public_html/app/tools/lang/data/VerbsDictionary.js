@@ -4723,6 +4723,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ostin",			"",			1,	3,	"a",	"",				"",
 "ostral",		"",			1,	4,	"g",	"1852",			"Furia de vento ostro.",
 "ostreg",		"",			1,	0,	"g",	"1854",			"Spuar kataro.",
+"ot",				"",			1,	0,	"g",	"1855",			"(belumat) Opsionar.",
 "otim",			"",			1,	0,	"g",	"1810",			"",
 "oŧi",			"",			1,	0,	"g",	"1829",			"Star oŧioxo.",
 "oŧiog",			"",			1,	3,	"a",	"1829",			"Star oŧioxo.",
