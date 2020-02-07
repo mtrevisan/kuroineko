@@ -1741,6 +1741,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fil",			"tra",		1,	1,	"a",	"1854",			"",
 "fil",			"tran",		1,	1,	"a",	"1867",			"",
 "filaŧ",			"s",			1,	3,	"g",	"1854",			"",
+"filig",			"s",			1,	1,	"a",	"1855",			"(belumat) Sfilacar.",
 "filoxof",		"",			1,	3,	"g",	"",				"",
 "filtr",			"",			1,	1,	"a",	"1854",			"",
 "filŧ",			"",			1,	1,	"a",	"1775",			"Karpir.",
