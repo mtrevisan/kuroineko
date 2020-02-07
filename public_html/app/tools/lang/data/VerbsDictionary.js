@@ -4807,6 +4807,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "palpier",		"",			1,	1,	"g",	"1775",			"Xbàter le palpebre.",
 "palpiñ",		"",			1,	4,	"a",	"1854",			"Palpuñar.",
 "palpit",		"",			1,	1,	"g",	"1896",			"",
+"palpug",		"",			1,	4,	"a",	"1855",			"(belumat) Palpejar.",
 "palpuñ",		"",			1,	4,	"a",	"1847",			"",
 "palpuñ",		"s",			1,	4,	"a",	"1810",			"Bransikar.",
 "paltan",		"",			1,	4,	"g",	"1896",			"",
