@@ -4889,6 +4889,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pared",			"",			1,	3,	"a",	"",				"",
 "paređ",			"",			1,	3,	"a",	"1775",			"",
 "paređ",			"des",		1,	3,	"a",	"1775",			"",
+"parej",			"",			1,	3,	"a",	"1855",			"(belumat) Paređar.",
+"parej",			"des",		1,	3,	"a",	"",				"",
 "parent",		"in",			1,	3,	"a",	"1980",			"",
 "parent",		"s",			1,	3,	"a",	"1896",			"",
 "pariđ",			"",			1,	3,	"a",	"1775",			"Xgualivar, méter a pari.",
