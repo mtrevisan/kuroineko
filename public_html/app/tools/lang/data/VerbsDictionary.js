@@ -3529,6 +3529,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kufon",			"s",			1,	3,	"a",	"1854",			"Befar, motejar.",
 "kuiet",			"",			1,	3,	"a",	"1829",			"Kietar.",
 "kuiet",			"in",			1,	3,	"a",	"1829",			"",
+"kuinkuin",		"s",			1,	6,	"a",	"1855",			"(belumat) Intoparse ʼtel parlar.",
 "kuintern",		"des",		1,	5,	"g",	"1867",			"",
 "kuintern",		"s",			1,	5,	"g",	"1775",			"Skonŧertar, dexordenar, skonbusolar.",
 "kuir",			"in",			1,	2,	"a",	"1415",			"Inkuixir, procesar uno, investigar, reŧerkar.",
