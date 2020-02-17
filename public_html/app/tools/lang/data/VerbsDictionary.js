@@ -5346,6 +5346,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "piŧeg",			"",			1,	1,	"a",	"1810",			"",
 "piŧeg",			"s",			1,	1,	"a",	"1867",			"",
 "piŧegot",		"",			1,	5,	"g",	"1829",			"Piŧegar.",
+"piŧig",			"",			1,	1,	"a",	"1855",			"(belumat)",
+"piŧig",			"s",			1,	1,	"a",	"1855",			"(belumat)",
 "piŧol",			"",			1,	1,	"a",	"1810",			"Xɉoŧar.",
 "piŧol",			"a",			1,	1,	"a",	"1852",			"(da ʼl gr. picilos, vario)",
 "piŧol",			"in",			1,	1,	"a",	"1852",			"",
