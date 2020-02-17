@@ -5525,6 +5525,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pos",			"s",			1,	1,	"a",	"1829",			"",
 "pos",			"",			2,	1,	"g",	"1980",			"",
 "pos",			"des",		2,	1,	"g",	"1560",			"",
+"pos",			"",			2,	1,	"g",	"1980",			"",
+"poséd",			"",			3,	3,	"g",	"1855",			"(belumat)",
 "poses",			"des",		1,	3,	"g",	"1775",			"",
 "poses",			"in",			1,	3,	"g",	"",				"",
 "poses",			"s",			1,	3,	"g",	"1854",			"",
