@@ -5698,7 +5698,6 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "radeg",			"e",			1,	1,	"g",	"1509",			"Xradegar.",
 "radix",			"dex",		1,	3,	"a",	"1980",			"(bixiak)",
 "radob",			"",			1,	3,	"g",	"1867",			"Reparar dani a un bastimento.",
-"rađon",			"",			1,	3,	"a",	"1876",			"",
 "raf",			"",			1,	1,	"g",	"1852",			"Arafar.",
 "rafes",			"",			1,	3,	"a",	"1896",			"Restorar.",
 "rag",			"",			1,	1,	"g",	"1854",			"Saepolar, saetolar.",
