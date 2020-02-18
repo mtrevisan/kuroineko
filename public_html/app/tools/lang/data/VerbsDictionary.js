@@ -2801,6 +2801,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kalum",			"",			1,	3,	"a",	"1775",			"Alumar, guatar, remirar, fisar, alentar pian pianeto.",
 "kalum",			"s",			1,	3,	"a",	"1980",			"Mexurar a oco, oservar.",
 "kaluñ",			"",			1,	3,	"a",	"1980",			"(bixiak) it. 'Calunniare'.",
+"kam",			"pro",		1,	2,	"g",	"1855",			"(belumat) Proklamar.",
+"kam",			"plo",		1,	2,	"g",	"1855",			"(belumat) Proklamar.",
 "kamat",			"s",			1,	3,	"g",	"1810",			"Xbàter i àbiti.",
 "kamin",			"",			1,	3,	"a",	"1775",			"",
 "kamix",			"in",			1,	3,	"a",	"1775",			"Méter la kamixa.",
