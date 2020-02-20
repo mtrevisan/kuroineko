@@ -5951,6 +5951,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "rul",			"",			1,	1,	"a",	"1867",			"",
 "rum",			"",			1,	1,	"a",	"1590",			"Rovistar, frugar, grufolar.",
 "rumeg",			"",			1,	1,	"a",	"1775",			"Remuxenar, remeskolar, ruminar.",
+"rumig",			"",			1,	1,	"a",	"1855",			"(belumat) Rumegar.",
 "rumin",			"",			1,	1,	"a",	"1775",			"",
 "ruñ",			"",			1,	1,	"a",	"1775",			"Ringiar de i kani, nitrir de i kavali, brontolar, borbotar, mugolar.",
 "ruñ",			"",			4,	3,	"a",	"1847",			"Far el verso de ʼl porko.",
