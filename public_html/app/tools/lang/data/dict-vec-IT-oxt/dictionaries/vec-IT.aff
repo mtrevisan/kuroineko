@@ -5264,10 +5264,12 @@ SFX Ƀl l i [àéèóòú]l	is:plural+masculine
 SFX Ƀl n i [àéèóòú]n	is:plural+masculine
 
 # kanbio feltrin-belunexe ('[aeou].+[aeou][ln] > Vi)
-SFX Ƀƚ Y 3
+SFX Ƀƚ Y 5
 SFX Ƀƚ lo i [aeou]lo	is:plural+masculine
-SFX Ƀƚ l i [aeou]l	is:plural+masculine
-SFX Ƀƚ n i [aeou]n	is:plural+masculine
+SFX Ƀƚ l i [aeo]l	is:plural+masculine
+SFX Ƀƚ ul üi ul	is:plural+masculine
+SFX Ƀƚ n i [aeo]n	is:plural+masculine
+SFX Ƀƚ un üi un	is:plural+masculine
 
 
 ### Venèŧia ###
@@ -5477,7 +5479,7 @@ SFX Ṿɍ enta ènta/F0 enta
 
 
 # piante e mistièri (-(i)èr/-(i)er, -aro, -dor/-tor, -(i)ol/-(i)òl)
-SFX V0 Y 72
+SFX V0 Y 80
 SFX V0 èr er/M0Ᵽd èr
 SFX V0 èr ar/M0 èr
 SFX V0 èr ereto/M0FSⱣd èr
@@ -5507,14 +5509,22 @@ SFX V0 èra iera/F0 [^aeoucijɉñ]èra
 SFX V0 èra iereta/F0 [^aeoucijɉñ]èra
 SFX V0 èra iareta/F0 [^aeoucijɉñ]èra
 SFX V0 0 eto/M0FSⱣd [aei]dor
-SFX V0 dor or/M0Ᵽd [aei]dor
+SFX V0 dor or/M0Ᵽd [^ejɉñ]idor
+SFX V0 idor ïor/M0Ᵽd [ejɉñ]idor
+SFX V0 dor or/M0Ᵽd [ae]dor
 SFX V0 dor tor/M0Ᵽd [aei]dor
-SFX V0 dor oreto/M0FSⱣd [aei]dor
+SFX V0 dor oreto/M0FSⱣd [ae]dor
+SFX V0 dor oreto/M0FSⱣd [^ejɉñ]idor
+SFX V0 idor ïoreto/M0FSⱣd [ejɉñ]idor
 SFX V0 dor toreto/M0FSⱣd [aei]dor
 SFX V0 a eta/F0 [aei]dora
-SFX V0 dora ora/F0 [aei]dora
+SFX V0 dora ora/F0 [ae]dora
+SFX V0 dora ora/F0 [^ejɉñ]idora
+SFX V0 idora ïora/F0 [ejɉñ]idora
 SFX V0 dora tora/F0 [aei]dora
-SFX V0 dora oreta/F0 [aei]dora
+SFX V0 dora oreta/F0 [ae]dora
+SFX V0 dora oreta/F0 [^ejɉñ]idora
+SFX V0 idora ïoreta/F0 [ejɉñ]idora
 SFX V0 dora toreta/F0 [aei]dora
 SFX V0 r ora/F0 [^èo]r
 SFX V0 r dora/F0 [^èo]r
@@ -5552,7 +5562,7 @@ SFX V0 ola ioleta/F0 [dđrsŧx]ola
 SFX V0 ola iòla/F0 [dđrsŧx]ola
 
 # piante e mistièri ko èle vanesente (-èr, -aro, -(i)oƚo/-(i)òƚo)
-SFX V1 Y 56
+SFX V1 Y 64
 SFX V1 a eta/F0 [ñrsx]oƚa
 SFX V1 o eto/M0Ᵽd [dñrsx]oƚo
 SFX V1 0 eto/M0Ᵽd [aei]dor
@@ -5569,9 +5579,13 @@ SFX V1 ièr ar/M0 ièr
 SFX V1 ièr er/M0Ᵽd ièr
 SFX V1 ièr areto/M0Ᵽd ièr
 SFX V1 ièr ereto/M0Ᵽd ièr
-SFX V1 dor or/M0Ᵽd [aei]dor
+SFX V1 dor or/M0Ᵽd [ae]dor
+SFX V1 dor or/M0Ᵽd [^ejɉñ]idor
+SFX V1 idor ïor/M0Ᵽd [ejɉñ]idor
 SFX V1 dor tor/M0Ᵽd [aei]dor
-SFX V1 dor oreto/M0Ᵽd [aei]dor
+SFX V1 dor oreto/M0Ᵽd [ae]dor
+SFX V1 dor oreto/M0Ᵽd [^ejɉñ]idor
+SFX V1 idor ïoreto/M0Ᵽd [ejɉñ]idor
 SFX V1 dor toreto/M0Ᵽd [aei]dor
 SFX V1 r ora/F0 r
 SFX V1 r dora/F0 r
@@ -5596,9 +5610,13 @@ SFX V1 ièra ara/F0 ièra
 SFX V1 ièra era/F0 ièra
 SFX V1 ièra areta/F0 ièra
 SFX V1 ièra ereta/F0 ièra
-SFX V1 dora ora/F0 [aei]dora
+SFX V1 dora ora/F0 [ae]dora
+SFX V1 dora ora/F0 [^ejɉñ]idora
+SFX V1 idora ïora/F0 [ejɉñ]idora
 SFX V1 dora tora/F0 [aei]dora
-SFX V1 dora oreta/F0 [aei]dora
+SFX V1 dora oreta/F0 [ae]dora
+SFX V1 dora oreta/F0 [^ejɉñ]idora
+SFX V1 idora ïoreta/F0 [ejɉñ]idora
 SFX V1 dora toreta/F0 [aei]dora
 SFX V1 èra ara/F0 [^i]èra
 SFX V1 èra era/F0 [^i]èra
@@ -5697,11 +5715,15 @@ SFX ɍ0 r mènto/M0 r
 #SFX ɍ2 lverò ƚusion/F0Ᵽd lverò
 
 # nominali deverbali (-dur/M0ět, -dura/F0ět)
-SFX r3 Y 4
-SFX r3 dur ur/M0 dur
-SFX r3 dur ureto/M0FSⱣd dur
-SFX r3 dura ura/F0 dura
-SFX r3 dura ureta/F0 dura
+SFX r3 Y 8
+SFX r3 dur ur/M0 [^i]dur
+SFX r3 idur ïur/M0 idur
+SFX r3 dur ureto/M0FSⱣd [^i]dur
+SFX r3 idur ïureto/M0FSⱣd idur
+SFX r3 dura ura/F0 [^i]dura
+SFX r3 idura ïura/F0 idura
+SFX r3 dura ureta/F0 [^i]dura
+SFX r3 idura ïureta/F0 idura
 
 # nominali deverbali ko èle vanesente (-dur/M0ěŧ, -dura/F0ěŧ)
 SFX ɍ3 Y 4
