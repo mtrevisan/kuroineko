@@ -6077,6 +6077,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sav",			"stra",		2,	1,	"g",	"1867",			"",
 "sav",			"de",			4,	3,	"a",	"1775",			"",
 "sav",			"re",			4,	3,	"a",	"1980",			"",
+"savaɉ",			"",			1,	3,	"g",	"1855",			"(belumat) Reordenar.",
 "saval",			"",			1,	3,	"g",	"1894",			"Komodar, justar.",
 "savarɉ",		"",			1,	3,	"g",	"1998",			"Delirar.",
 "savon",			"",			1,	3,	"a",	"1877",			"",
