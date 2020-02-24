@@ -748,6 +748,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "botili",		"dex",		1,	3,	"a",	"1900",			"(veronexe)",
 "botili",		"in",			1,	3,	"a",	"1854",			"",
 "botiđ",			"",			1,	3,	"a",	"1775",			"Sonar a toki.",
+"botiđ",			"x",			1,	3,	"a",	"1855",			"(belumat) Rintokar de le kanpane.",
 "boton",			"",			1,	3,	"a",	"XIV",			"",
 "boton",			"dex",		1,	3,	"a",	"XIV",			"Konfidarse, sfogarse.",
 "boton",			"in",			1,	3,	"a",	"1775",			"",
