@@ -2973,7 +2973,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "karoŧ",			"s",			1,	3,	"a",	"1854",			"",
 "karp",			"",			4,	4,	"a",	"1867",			"",
 "karp",			"s",			4,	4,	"a",	"1980",			"(bixiak) Depanar.",
-"karpeđ",		"s",			1,	1,	"g",	"1980",			"Skalcar.",
+"karpeđ",		"s",			1,	1,	"g",	"1855",			"(belumat) Tirar pedàe.",
 "karpi",			"in",			1,	1,	"g",	"1829",			"Inskarpiar.",
 "karpion",		"",			1,	5,	"a",	"1867",			"Kuxinar el pese a la maniera de i Karpioni.",
 "kart",			"",			1,	1,	"g",	"1854",			"Méter i numari a le karte de i libri.",
