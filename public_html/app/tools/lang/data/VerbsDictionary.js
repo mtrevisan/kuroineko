@@ -992,6 +992,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "car",			"",			4,	3,	"a",	"1867",			"",
 "car",			"s",			1,	1,	"g",	"1590",			"",
 "car",			"s",			4,	3,	"a",	"1775",			"",
+"caranŧ",		"s",			1,	3,	"a",	"1855",			"(belumat) Bravar.",
 "caređ",			"s",			1,	3,	"a",	"",				"Diradar.",
 "carl",			"",			1,	1,	"g",	"1867",			"",
 "cas",			"",			1,	1,	"g",	"1852",			"Far caso.",
