@@ -6107,6 +6107,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "scopaŧ",		"",			1,	4,	"g",	"1775",			"",
 "scopet",		"",			1,	4,	"a",	"1775",			"",
 "scopiđ",		"",			1,	4,	"a",	"1852",			"Krepitar.",
+"scopol",		"",			1,	2,	"g",	"1855",			"(belumat) Strepitar de la lume.",
 "scord",			"",			4,	5,	"a",	"",				"Béver tanto.",
 "scum",			"",			1,	2,	"a",	"1775",			"",
 "se",				"in",			1,	1,	"a",	"1775",			"Ónđer de sego.",
