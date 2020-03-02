@@ -3285,6 +3285,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "konvoɉ",		"",			1,	4,	"g",	"1775",			"",
 "konxetur",		"",			1,	6,	"a",	"1867",			"",
 "koñ",			"",			1,	1,	"g",	"1852",			"Koniar.",
+"koñ",			"s",			1,	1,	"g",	"1855",			"(belumat)",
 "koñ",			"",			3,	1,	"a",	"1998",			"(pad., vic., valsuganòto) Konvèñer, bexoñar.",
 "kòñ",			"",			3,	1,	"g",	"1775",			"(bel.) Konvèñer, bexoñar, èser oblegài a far.",
 "koñós",			"",			3,	3,	"a",	"1867",			"",

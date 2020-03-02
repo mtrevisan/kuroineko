@@ -9831,13 +9831,13 @@ konvòɉoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:konvoɉar
 konxeturar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 konxeturo/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:konxeturar
 konxetúroe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:konxeturar
-koñar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 koñer/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 koño/a0a1a2P0P1P2I0FS	po:verb ts:indicative+present st:koñer
 kòñer/b0b1b2P0P1P2	po:verb ts:infinitive+simple
 koñerò/b0b1b2I0	po:verb ts:indicative+future st:kòñer
-kòño/a0a1a2P0P1P2I0FS	po:verb ts:indicative+present st:kòñer st:koñar
-kòñoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:kòñer st:koñar
+koñar/a0a1a2P0P1P2*0	po:verb ts:infinitive+simple
+kòño/a0a1a2P0P1P2I0FS*0	po:verb ts:indicative+present st:kòñer st:koñar
+kòñoe/a0a1a2I1*0	po:verb ts:indicative+present is:interrogative st:kòñer st:koñar
 kòñar/b0b1b2P0P1P2	po:verb ts:infinitive+simple
 koñarò/b0b1b2I0	po:verb ts:indicative+future st:kòñar
 koñóser/b0b1b2P0P1P2.0	po:verb ts:infinitive+simple
@@ -31403,9 +31403,11 @@ kògo/A1	po:noun is:singular+masculine
 kògoma/F0	po:noun is:singular+femenine
 kòko/A1FS*0	po:adjective_qualificative is:singular+masculine
 kòl/M0Ƀl^6ět	po:noun is:singular+masculine
-kòla/F0*0^1	po:noun is:singular+femenine
+kòla/F0^1	po:noun is:singular+femenine
+skòla/F0	po:noun is:singular+femenine
 kòlf	po:noun
-kòƚa/F0*0^1	po:noun is:singular+femenine
+kòƚa/F0^1	po:noun is:singular+femenine
+skòƚa/F0	po:noun is:singular+femenine
 kòƚo/M0^6ěŧ	po:noun is:singular+masculine
 kòntra/F0	po:noun is:singular+femenine
 kòntra/F0	po:preposition
@@ -60186,9 +60188,14 @@ xubiƚèo/M0	po:noun is:singular+masculine
 xunal/F0ɃlṾɇ	po:adjective_qualificative is:singular
 xvojadamente/FSW0	po:adverb
 xvoɉadamente/FSW0	po:adverb
+skolèr/M0V0	po:noun is:singular+masculine
+skolèra/F0V0	po:noun is:singular+femenine
+skoƚèr/M0V1	po:noun is:singular+masculine
+skoƚèra/F0V1	po:noun is:singular+femenine
 
 
-/ 130
+/ 132
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ
 /sost.:rufa,skraña,xñòfa
+sost.:skola,skoƚa,skòla,skòƚa
