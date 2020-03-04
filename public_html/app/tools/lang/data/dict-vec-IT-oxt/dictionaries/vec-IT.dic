@@ -4287,7 +4287,7 @@ erxerò/b0b1b2I0	po:verb ts:indicative+future st:èrxer
 erđarò/b0b1I0	po:verb ts:indicative+future st:èrđar
 èrxar/b0b1b2P0P1P2	po:verb ts:infinitive+simple
 erxarò/b0b1b2I0	po:verb ts:indicative+future st:èrxar
-èser/b9P0P1P2.0	po:verb ts:infinitive+simple al:èstre
+èser/b9ḅ9P0P1P2.0	po:verb ts:infinitive+simple al:èstre
 èstre/.0	po:verb ts:infinitive+simple st:èser
 asiando/P0P1P2FS	po:verb ts:gerund+simple st:èser
 asiàndome/P6P7P8	po:verb ts:gerund+simple is:interrogative st:èser
@@ -4296,6 +4296,7 @@ asiàndomene/P6P7P8	po:verb ts:gerund+simple is:interrogative st:èser
 ʼséndome/P6P7P8	po:verb ts:gerund+simple is:interrogative st:èser
 ʼséndomene/P6P7P8	po:verb ts:gerund+simple is:interrogative st:èser
 rïèser/b9P0P1P2	po:verb ts:infinitive+simple
+rièser/ḅ9N0	po:verb ts:infinitive+simple
 rïèsar/P0P1P2	po:verb ts:infinitive+simple
 supeditar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 supédito/a0a1a2P0P1P2I0FS	po:verb ts:indicative+present st:supeditar
@@ -9577,6 +9578,9 @@ arekomàndoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:arekoman
 komedar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 komedo/a0a1a2P0P1P2I0FS	po:verb ts:indicative+present st:komedar
 komédoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:komedar
+skomedonar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
+skomedono/a0a1a2P0P1P2I0FS	po:verb ts:indicative+present st:skomedonar
+skomedónoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:skomedonar
 komensar/a0a1a2P0P1P2*0	po:verb ts:infinitive+simple
 komenso/a0a1a2P0P1P2I0*0	po:verb ts:indicative+present st:komensar
 koménsoe/a0a1a2I1*0	po:verb ts:indicative+present is:interrogative st:komensar
@@ -10036,9 +10040,12 @@ inkórloe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:inkorlar
 kornar/a0a1a2P0P1P2+0*0	po:verb ts:infinitive+simple
 kòrno/a0a1a2P0P1P2I0+0*0	po:verb ts:indicative+present st:kornar
 kòrnoe/a0a1a2I1+0*0	po:verb ts:indicative+present is:interrogative st:kornar
-skornacar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
-skornaco/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:skornacar
-skornàcoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:skornacar
+skornaŧar/a0a1P0P1	po:verb ts:infinitive+simple
+skornaŧo/a0a1P0P1I0	po:verb ts:indicative+present st:skornaŧar
+skornàŧoe/a0a1I1	po:verb ts:indicative+present is:interrogative st:skornaŧar
+skornasar/a0a1P0P1	po:verb ts:infinitive+simple
+skornaso/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:skornasar
+skornàsoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:skornasar
 korniđar/a0a1P0P1+0*0	po:verb ts:infinitive+simple
 korniđo/a0a1P0P1I0+0*0	po:verb ts:indicative+present st:korniđar
 korníđoe/a0a1I1+0*0	po:verb ts:indicative+present is:interrogative st:korniđar
@@ -37157,7 +37164,7 @@ koƚòso/M0	po:noun is:singular+masculine
 komandaiŧa/F0Ṿe	po:noun is:singular+femenine
 komare/F0ětǒN	po:noun is:singular+femenine
 komareŧo/M0FSⱣdṾe	po:noun is:singular+masculine
-komesa/F0ět	po:noun is:singular+femenine
+komesa/F0ět*0	po:noun is:singular+femenine
 kometa/F0	po:noun is:singular+femenine
 komèdia/F0	po:noun is:singular+femenine
 komio/M0ět	po:noun is:singular+masculine
@@ -52036,7 +52043,7 @@ skonbraroƚo/M0V1Ᵽd	po:noun is:singular+masculine
 skondon	po:adverb
 skonkuaso/M0FS	po:noun is:singular+masculine
 skonsèto/M0FS	po:noun is:singular+masculine
-skontro/M0ǐn	po:noun is:singular+masculine
+skontro/M0Ṿrǐn	po:noun is:singular+masculine
 skonŧèto/M0FS	po:noun is:singular+masculine
 skonvolto/A1FS	po:adjective is:singular+masculine
 skonvòlto/A1FS	po:adjective is:singular+masculine
@@ -52060,7 +52067,6 @@ skovolin/M0Ṿe	po:noun is:singular+masculine
 skovolon/F0ɃlⱣdṾe	po:noun is:singular+masculine
 skovoƚapiato/M0	po:noun is:singular+masculine
 skoxaña/F0	po:noun is:singular+femenine
-skòntro/M0ǐn	po:noun is:singular+masculine
 skòrbuto/M0FS	po:noun is:singular+masculine
 skòrdio/M0	po:noun is:singular+masculine
 skòrso/M0FSět	po:noun is:singular+masculine
@@ -60192,10 +60198,12 @@ skolèr/M0V0	po:noun is:singular+masculine
 skolèra/F0V0	po:noun is:singular+femenine
 skoƚèr/M0V1	po:noun is:singular+masculine
 skoƚèra/F0V1	po:noun is:singular+femenine
+kospeton/F0ɃlⱣd	po:noun is:singular+masculine
+skorbuto/M0FS	po:noun is:singular+masculine
+skòrta/F0	po:noun is:singular+femenine
 
 
-/ 132
+/ 144
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ
 /sost.:rufa,skraña,xñòfa
-sost.:skola,skoƚa,skòla,skòƚa

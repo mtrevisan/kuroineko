@@ -211,6 +211,8 @@ FLAG long
 # avoid wrong spelling of letterwords (km, GHz, DVD, ...)
 KEEPCASE Z0
 
+NEEDAFFIX N0
+
 # FIXME
 # Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug. par tuti i mòdi e i tenpi fora ke inté ʼl infenío, partiŧipio ativo, e xerundio
 # Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug. intel partiŧipio pasivo ko la dexinenŧa in -st-, e intel xerundio
@@ -2394,9 +2396,9 @@ SFX b8 rò velo/A1 erò
 SFX b8 rò vi/I0I2I4 erò
 SFX b8 rò vo/I0 erò
 
-# vèrbi '-er inregolari ((r[ei])èser)
+# vèrbi '-er inregolari ((r[eï])èser)
 # themeT1 + er/b9
-SFX b9 Y 369
+SFX b9 Y 75
 SFX b9 0 e èser
 SFX b9 0 ge èser
 SFX b9 0 me/P6P7 èser
@@ -2469,303 +2471,307 @@ SFX b9 èser eséntomene/P6P7P8 èser
 SFX b9 èser esí/P0P1P2P3P4P5I2I4 èser
 SFX b9 èser esú/A1 èser
 SFX b9 èser étu/I3 èser	is:interrogative
-SFX b9 èser furese/M0FS èser
-SFX b9 èser furesen/I0 èser
-SFX b9 èser furesene/I1 èser	is:interrogative
-SFX b9 èser furesense èser
-SFX b9 èser furesensi èser
-SFX b9 èser furesiede/I4 èser
-SFX b9 èser furesiege/I4 èser
-SFX b9 èser furesion/I0 èser
-SFX b9 èser furesione/I1 èser	is:interrogative
-SFX b9 èser furesionse èser
-SFX b9 èser furesisen/I0 èser
-SFX b9 èser furesisene/I1 èser	is:interrogative
-SFX b9 èser furesisense èser
-SFX b9 èser furesisensi èser
-SFX b9 èser furesisiede/I4 èser
-SFX b9 èser furesisiege/I4 èser
-SFX b9 èser furesision/I0 èser
-SFX b9 èser furesisione/I1 èser	is:interrogative
-SFX b9 èser furesisionse èser
-SFX b9 èser furesisié/I4 èser
-SFX b9 èser furesison/I0 èser
-SFX b9 èser furesisone/I1 èser	is:interrogative
-SFX b9 èser furesisonse èser
-SFX b9 èser furesié/I4 èser
-SFX b9 èser furesiéu/I5 èser
-SFX b9 èser fureson/I0 èser
-SFX b9 èser furesone/I1 èser	is:interrogative
-SFX b9 èser furesonse èser
-SFX b9 èser furésimo/P0P1P2I0 èser
-SFX b9 èser furésimoe/I1 èser
-SFX b9 èser fuse/FSI6I7M0 èser
-SFX b9 èser fusen/I0 èser
-SFX b9 èser fusene/I1 èser	is:interrogative
-SFX b9 èser fusense èser
-SFX b9 èser fusensi èser
-SFX b9 èser fusiede/I4 èser
-SFX b9 èser fusiege/I4 èser
-SFX b9 èser fusion/I0 èser
-SFX b9 èser fusione/I1 èser	is:interrogative
-SFX b9 èser fusionse èser
-SFX b9 èser fusisen/I0 èser
-SFX b9 èser fusisene/I1 èser	is:interrogative
-SFX b9 èser fusisense èser
-SFX b9 èser fusisensi èser
-SFX b9 èser fusisiede/I4 èser
-SFX b9 èser fusisiege/I4 èser
-SFX b9 èser fusision/I0 èser
-SFX b9 èser fusisione/I1 èser	is:interrogative
-SFX b9 èser fusisionse èser
-SFX b9 èser fusisié/I4 èser
-SFX b9 èser fusison/I0 èser
-SFX b9 èser fusisone/I1 èser	is:interrogative
-SFX b9 èser fusisonse èser
-SFX b9 èser fusié/I4 èser
-SFX b9 èser fusiéu/I5 èser
-SFX b9 èser fuson/I0 èser
-SFX b9 èser fusone/I1 èser	is:interrogative
-SFX b9 èser fusonse èser
-SFX b9 èser fúselo/A1 èser
-SFX b9 èser fúseƚo/A1 èser
-SFX b9 èser fúsimo/P0P1P2I0 èser
-SFX b9 èser fúsimoe/I1 èser
-SFX b9 èser jèra/P3P4P5I0I4 èser
-SFX b9 èser jèrane/I1 èser	is:interrogative
-SFX b9 èser jèrau/I5 èser
-SFX b9 èser jère/I0 èser
-SFX b9 èser jèrelo/A1 èser
-SFX b9 èser jèreme/P6P7P8 èser
-SFX b9 èser jèremene/P6P7P8 èser
-SFX b9 èser jèrene/I1 èser	is:interrogative
-SFX b9 èser jèreƚo/A1 èser
-SFX b9 èser jèri/I0I2I4 èser
-SFX b9 èser jèrimo/P0P1P2I0 èser
-SFX b9 èser jèrimone/I1 èser	is:interrogative
-SFX b9 èser jèritu/I3 èser	is:interrogative
-SFX b9 èser jèro/I0 èser
-SFX b9 èser jèrone/I1 èser	is:interrogative
-SFX b9 èser saràlo/A1 èser
-SFX b9 èser sarane/I1 èser	is:interrogative
-SFX b9 èser saràtu/I3 èser	is:interrogative
-SFX b9 èser sarave/P3P4P5I8I9 èser	ts:conditional+present
-SFX b9 èser saràƚo/A1 èser
-SFX b9 èser saremo/P0P1P2I0 èser
-SFX b9 èser saren/I0 èser
-SFX b9 èser saréne/I1 èser	is:interrogative
-SFX b9 èser sarimo/P0P1P2I0 èser
-SFX b9 èser sarié/I4 èser
-SFX b9 èser sariéu/I5 èser
-SFX b9 èser saron/I0 èser
-SFX b9 èser sarone/I1 èser	is:interrogative
-SFX b9 èser sarà/P3P4P5I0I2 èser
-SFX b9 èser saràe/P3P4P5 èser	ts:conditional+present
-SFX b9 èser saràvelo/A1 èser
-SFX b9 èser saràvene/I1 èser	is:interrogative
-SFX b9 èser saràveƚo/A1 èser
-SFX b9 èser sarè/I0 èser
-SFX b9 èser sarène/I1 èser	is:interrogative
-SFX b9 èser saré/I4 èser
-SFX b9 èser sarémoe/I1 èser
-SFX b9 èser saréu/I5 èser
-SFX b9 èser sarí/I4 èser
-SFX b9 èser saría/P4P5I0I2 èser
-SFX b9 èser sarèe/P3P4P5I0I2 èser
-SFX b9 èser saríane/I1 èser	is:interrogative
-SFX b9 èser saríatu/I3 èser	is:interrogative
-SFX b9 èser saríe/P3P4P5I0I2 èser
-SFX b9 èser saríelo/A1 èser
-SFX b9 èser saríene/I1 èser	is:interrogative
-SFX b9 èser saríeƚo/A1 èser
-SFX b9 èser sarímoe/I1 èser
-SFX b9 èser saríu/I5 èser
-SFX b9 èser sarò/I0 èser
-SFX b9 èser saròe/I1 èser
-SFX b9 èser sélo/A1 èser
-SFX b9 èser semo/P0P1P2I0 èser
-SFX b9 èser sen/I0 èser
-SFX b9 èser sene/I1 èser	is:interrogative
-SFX b9 èser sepi/P3P4P5I2 èser
-SFX b9 èser sepia/P0P1P2 èser
-SFX b9 èser sepie/P0P1P2P3P4P5I0 èser
-SFX b9 èser sepiede/I4 èser
-SFX b9 èser sepiege/I4 èser
-SFX b9 èser sepiemo/P0P1P2I0 èser
-SFX b9 èser sepiemo/I0 èser
-SFX b9 èser sepien/I0 èser
-SFX b9 èser sepiene/I1 èser	is:interrogative
-SFX b9 èser sepimo/P0P1P2I0 èser
-SFX b9 èser sepimo/I0 èser
-SFX b9 èser sepion/I0 èser
-SFX b9 èser sepione/I1 èser	is:interrogative
-SFX b9 èser sepiè/I0 èser
-SFX b9 èser sepiène/I1 èser	is:interrogative
-SFX b9 èser sepié/I4 èser
-SFX b9 èser sepiémoe/I1 èser
-SFX b9 èser sepiéu/I5 èser
-SFX b9 èser sepí/I4 èser
-SFX b9 èser seràlo/A1 èser
-SFX b9 èser serane/I1 èser	is:interrogative
-SFX b9 èser seràtu/I3 èser	is:interrogative
-SFX b9 èser serave/P3P4P5I8I9 èser	ts:conditional+present
-SFX b9 èser seràƚo/A1 èser
-SFX b9 èser seremo/P0P1P2I0 èser
-SFX b9 èser seren/I0 èser
-SFX b9 èser seréne/I1 èser	is:interrogative
-SFX b9 èser serense èser
-SFX b9 èser serensi èser
-SFX b9 èser seresi/I4 èser
-SFX b9 èser seresiu/I5 èser
-SFX b9 èser serimo/P0P1P2I0 èser
-SFX b9 èser serion/I0 èser
-SFX b9 èser serione/I1 èser
-SFX b9 èser serionse èser
-SFX b9 èser serisen/I0 èser
-SFX b9 èser serisene/I1 èser	is:interrogative
-SFX b9 èser serisense èser
-SFX b9 èser serisensi èser
-SFX b9 èser serisi/I4 èser
-SFX b9 èser serision/I0 èser
-SFX b9 èser serisione/I1 èser	is:interrogative
-SFX b9 èser serisionse èser
-SFX b9 èser serisiu/I5 èser
-SFX b9 èser serisié/I4 èser
-SFX b9 èser serisiéu/I5 èser
-SFX b9 èser serison/I0 èser
-SFX b9 èser serisone/I1 èser	is:interrogative
-SFX b9 èser serisonse èser
-SFX b9 èser serié/I4 èser
-SFX b9 èser seriéu/I5 èser
-SFX b9 èser seron/I0 èser
-SFX b9 èser serone/I1 èser	is:interrogative
-SFX b9 èser seronse èser
-SFX b9 èser serà/P3P4P5I0I2 èser
-SFX b9 èser seràe/P3P4P5 èser	ts:conditional+present
-SFX b9 èser seràvelo/A1 èser
-SFX b9 èser seràvene/I1 èser	is:interrogative
-SFX b9 èser seràveƚo/A1 èser
-SFX b9 èser serè/I0 èser
-SFX b9 èser serène/I1 èser	is:interrogative
-SFX b9 èser seré/I4 èser
-SFX b9 èser serémoe/I1 èser
-SFX b9 èser serésimo/I0 èser
-SFX b9 èser serésimoe/I1 èser
-SFX b9 èser serésitu/I3 èser	is:interrogative
-SFX b9 èser seréu/I5 èser
-SFX b9 èser serí/I4 èser
-SFX b9 èser sería/P4P5I0I2 èser
-SFX b9 èser serèe/P3P4P5I0I2 èser
-SFX b9 èser seríane/I1 èser	is:interrogative
-SFX b9 èser seríatu/I3 èser	is:interrogative
-SFX b9 èser seríe/P3P4P5I0I2 èser
-SFX b9 èser seríelo/A1 èser
-SFX b9 èser seríene/I1 èser	is:interrogative
-SFX b9 èser seríeƚo/A1 èser
-SFX b9 èser serímoe/I1 èser
-SFX b9 èser serísitu/I3 èser	is:interrogative
-SFX b9 èser seríu/I5 èser
-SFX b9 èser serò/I0 èser
-SFX b9 èser seròe/I1 èser
-SFX b9 èser sétu/I3 èser	is:interrogative
-SFX b9 èser séu/I5 èser
-SFX b9 èser séƚo/A1 èser
-SFX b9 èser siando/P0P1P2FS èser
-SFX b9 èser sianto/P0P1P2 èser
-SFX b9 èser sipiando/P0P1P2FS èser
-SFX b9 èser sime/P6P7P8 èser
-SFX b9 èser simo/P0P1P2I0 èser
-SFX b9 èser sion/I0 èser
-SFX b9 èser sione/I1M0 èser	is:interrogative
-SFX b9 èser sionmi èser
-SFX b9 èser sipi/P3P4P5I2 èser
-SFX b9 èser sipia/P0P1P2 èser
-SFX b9 èser sipie/P0P1P2P3P4P5I0 èser
-SFX b9 èser sipiede/I4 èser
-SFX b9 èser sipiege/I4 èser
-SFX b9 èser sipiemo/P0P1P2I0 èser
-SFX b9 èser sipiemo/I0 èser
-SFX b9 èser sipien/I0 èser
-SFX b9 èser sipiene/I1 èser	is:interrogative
-SFX b9 èser sipimo/P0P1P2I0 èser
-SFX b9 èser sipimo/I0 èser
-SFX b9 èser sipion/I0 èser
-SFX b9 èser sipione/I1 èser	is:interrogative
-SFX b9 èser sipiè/I0 èser
-SFX b9 èser sipiène/I1 èser	is:interrogative
-SFX b9 èser sipié/I4 èser
-SFX b9 èser sipiémoe/I1 èser
-SFX b9 èser sipiéu/I5 èser
-SFX b9 èser sipí/I4 èser
-SFX b9 èser situ/I3 èser	is:interrogative
-SFX b9 èser siàndome/P6P7P8 èser
-SFX b9 èser siàndomene/P6P7P8 èser
-SFX b9 èser siàntome/P6P7P8 èser
-SFX b9 èser siàntomene/P6P7P8 èser
-SFX b9 èser sipiàndome/P6P7P8 èser
-SFX b9 èser sipiàndomene/P6P7P8 èser
-SFX b9 èser son/ʼ0I0 èser
-SFX b9 èser sone/I1M0 èser	is:interrogative
-SFX b9 èser sonjo èser
-SFX b9 èser sonmi èser
-SFX b9 èser sonɉo èser
-SFX b9 èser su/I0 èser
-SFX b9 èser sue/I1M0 èser	is:interrogative
-SFX b9 èser sujo èser
-SFX b9 èser sumi èser
-SFX b9 èser suɉo èser
-SFX b9 èser stado/A1FS èser
-SFX b9 èser stasto/A1FS èser
-SFX b9 èser stato/A1FS èser
-SFX b9 èser stesto/A1FS èser
-SFX b9 èser stà èser
-SFX b9 èser stào/A1 èser
-SFX b9 èser stè èser
-SFX b9 èser stò èser
-SFX b9 èser sé/P3P4P5I4I6I7 èser
-SFX b9 èser sémoe/I1 èser
-SFX b9 èser sí/P0P1P2P3P4P5I2I4 èser
-SFX b9 èser símene/P6P7P8 èser
-SFX b9 èser símoe/I1 èser
-SFX b9 èser sípiene/I1 èser	is:interrogative
-SFX b9 èser sípime/P6P7P8 èser
-SFX b9 èser sípimene/P6P7P8 èser
-SFX b9 èser sípitu/I3 èser	is:interrogative
-SFX b9 èser síu/I5 èser
-SFX b9 èser xé-stu èser
-SFX b9 èser xé/P3P4P5I4I6I7 èser
-SFX b9 èser xélo/A1 èser
-SFX b9 èser xéstu èser
-SFX b9 èser xéƚo/A1 èser
-SFX b9 èser xèra/P3P4P5I0I4 èser
-SFX b9 èser xèrane/I1 èser	is:interrogative
-SFX b9 èser xèrau/I5 èser
-SFX b9 èser xère/I0 èser
-SFX b9 èser xèrelo/A1 èser
-SFX b9 èser xèrene/I1 èser	is:interrogative
-SFX b9 èser xèreƚo/A1 èser
-SFX b9 èser xèri/I0I2I4 èser
-SFX b9 èser xèrimo/P0P1P2I0 èser
-SFX b9 èser xèrimoe/I1 èser
-SFX b9 èser xèritu/I3 èser	is:interrogative
-SFX b9 èser xèro/I0 èser
-SFX b9 èser xèrone/I1 èser	is:interrogative
 SFX b9 èser é/I4 èser
 SFX b9 èser élo/A1 èser
 SFX b9 èser éƚo/A1 èser
-SFX b9 èser ɉèra/P3P4P5I0I4 èser
-SFX b9 èser ɉèrane/I1 èser	is:interrogative
-SFX b9 èser ɉèrau/I5 èser
-SFX b9 èser ɉère/I0 èser
-SFX b9 èser ɉèrelo/A1 èser
-SFX b9 èser ɉèrene/I1 èser	is:interrogative
-SFX b9 èser ɉèreƚo/A1 èser
-SFX b9 èser ɉèri/I0I2I4 èser
-SFX b9 èser ɉèrimo/P0P1P2I0 èser
-SFX b9 èser ɉèrimoe/I1 èser
-SFX b9 èser ɉèritu/I3 èser	is:interrogative
-SFX b9 èser ɉèro/I0 èser
-SFX b9 èser ɉèrone/I1 èser	is:interrogative
+
+# vèrbi '-er inregolari (rïèser)
+# themeT1 + er/b9ḅ9
+SFX ḅ9 Y 294
+SFX ḅ9 èser furese/M0FS èser
+SFX ḅ9 èser furesen/I0 èser
+SFX ḅ9 èser furesene/I1 èser	is:interrogative
+SFX ḅ9 èser furesense èser
+SFX ḅ9 èser furesensi èser
+SFX ḅ9 èser furesiede/I4 èser
+SFX ḅ9 èser furesiege/I4 èser
+SFX ḅ9 èser furesion/I0 èser
+SFX ḅ9 èser furesione/I1 èser	is:interrogative
+SFX ḅ9 èser furesionse èser
+SFX ḅ9 èser furesisen/I0 èser
+SFX ḅ9 èser furesisene/I1 èser	is:interrogative
+SFX ḅ9 èser furesisense èser
+SFX ḅ9 èser furesisensi èser
+SFX ḅ9 èser furesisiede/I4 èser
+SFX ḅ9 èser furesisiege/I4 èser
+SFX ḅ9 èser furesision/I0 èser
+SFX ḅ9 èser furesisione/I1 èser	is:interrogative
+SFX ḅ9 èser furesisionse èser
+SFX ḅ9 èser furesisié/I4 èser
+SFX ḅ9 èser furesison/I0 èser
+SFX ḅ9 èser furesisone/I1 èser	is:interrogative
+SFX ḅ9 èser furesisonse èser
+SFX ḅ9 èser furesié/I4 èser
+SFX ḅ9 èser furesiéu/I5 èser
+SFX ḅ9 èser fureson/I0 èser
+SFX ḅ9 èser furesone/I1 èser	is:interrogative
+SFX ḅ9 èser furesonse èser
+SFX ḅ9 èser furésimo/P0P1P2I0 èser
+SFX ḅ9 èser furésimoe/I1 èser
+SFX ḅ9 èser fuse/FSI6I7M0 èser
+SFX ḅ9 èser fusen/I0 èser
+SFX ḅ9 èser fusene/I1 èser	is:interrogative
+SFX ḅ9 èser fusense èser
+SFX ḅ9 èser fusensi èser
+SFX ḅ9 èser fusiede/I4 èser
+SFX ḅ9 èser fusiege/I4 èser
+SFX ḅ9 èser fusion/I0 èser
+SFX ḅ9 èser fusione/I1 èser	is:interrogative
+SFX ḅ9 èser fusionse èser
+SFX ḅ9 èser fusisen/I0 èser
+SFX ḅ9 èser fusisene/I1 èser	is:interrogative
+SFX ḅ9 èser fusisense èser
+SFX ḅ9 èser fusisensi èser
+SFX ḅ9 èser fusisiede/I4 èser
+SFX ḅ9 èser fusisiege/I4 èser
+SFX ḅ9 èser fusision/I0 èser
+SFX ḅ9 èser fusisione/I1 èser	is:interrogative
+SFX ḅ9 èser fusisionse èser
+SFX ḅ9 èser fusisié/I4 èser
+SFX ḅ9 èser fusison/I0 èser
+SFX ḅ9 èser fusisone/I1 èser	is:interrogative
+SFX ḅ9 èser fusisonse èser
+SFX ḅ9 èser fusié/I4 èser
+SFX ḅ9 èser fusiéu/I5 èser
+SFX ḅ9 èser fuson/I0 èser
+SFX ḅ9 èser fusone/I1 èser	is:interrogative
+SFX ḅ9 èser fusonse èser
+SFX ḅ9 èser fúselo/A1 èser
+SFX ḅ9 èser fúseƚo/A1 èser
+SFX ḅ9 èser fúsimo/P0P1P2I0 èser
+SFX ḅ9 èser fúsimoe/I1 èser
+SFX ḅ9 èser jèra/P3P4P5I0I4 èser
+SFX ḅ9 èser jèrane/I1 èser	is:interrogative
+SFX ḅ9 èser jèrau/I5 èser
+SFX ḅ9 èser jère/I0 èser
+SFX ḅ9 èser jèrelo/A1 èser
+SFX ḅ9 èser jèreme/P6P7P8 èser
+SFX ḅ9 èser jèremene/P6P7P8 èser
+SFX ḅ9 èser jèrene/I1 èser	is:interrogative
+SFX ḅ9 èser jèreƚo/A1 èser
+SFX ḅ9 èser jèri/I0I2I4 èser
+SFX ḅ9 èser jèrimo/P0P1P2I0 èser
+SFX ḅ9 èser jèrimone/I1 èser	is:interrogative
+SFX ḅ9 èser jèritu/I3 èser	is:interrogative
+SFX ḅ9 èser jèro/I0 èser
+SFX ḅ9 èser jèrone/I1 èser	is:interrogative
+SFX ḅ9 èser saralo/A1 èser
+SFX ḅ9 èser sarane/I1 èser	is:interrogative
+SFX ḅ9 èser saratu/I3 èser	is:interrogative
+SFX ḅ9 èser sarave/P3P4P5I8I9 èser	ts:conditional+present
+SFX ḅ9 èser saraƚo/A1 èser
+SFX ḅ9 èser saremo/P0P1P2I0 èser
+SFX ḅ9 èser saren/I0 èser
+SFX ḅ9 èser sarene/I1 èser	is:interrogative
+SFX ḅ9 èser sarimo/P0P1P2I0 èser
+SFX ḅ9 èser sarié/I4 èser
+SFX ḅ9 èser sariéu/I5 èser
+SFX ḅ9 èser saron/I0 èser
+SFX ḅ9 èser sarone/I1 èser	is:interrogative
+SFX ḅ9 èser sarà/P3P4P5I0I2 èser
+SFX ḅ9 èser saràe/P3P4P5 èser	ts:conditional+present
+SFX ḅ9 èser saràvelo/A1 èser
+SFX ḅ9 èser saràvene/I1 èser	is:interrogative
+SFX ḅ9 èser saràveƚo/A1 èser
+SFX ḅ9 èser sarè/I0 èser
+SFX ḅ9 èser sarène/I1 èser	is:interrogative
+SFX ḅ9 èser saré/I4 èser
+SFX ḅ9 èser sarémoe/I1 èser
+SFX ḅ9 èser saréu/I5 èser
+SFX ḅ9 èser sarí/I4 èser
+SFX ḅ9 èser saría/P4P5I0I2 èser
+SFX ḅ9 èser sarèe/P3P4P5I0I2 èser
+SFX ḅ9 èser saríane/I1 èser	is:interrogative
+SFX ḅ9 èser saríatu/I3 èser	is:interrogative
+SFX ḅ9 èser saríe/P3P4P5I0I2 èser
+SFX ḅ9 èser saríelo/A1 èser
+SFX ḅ9 èser saríene/I1 èser	is:interrogative
+SFX ḅ9 èser saríeƚo/A1 èser
+SFX ḅ9 èser sarímoe/I1 èser
+SFX ḅ9 èser saríu/I5 èser
+SFX ḅ9 èser sarò/I0 èser
+SFX ḅ9 èser saròe/I1 èser
+SFX ḅ9 èser selo/A1 èser
+SFX ḅ9 èser semo/P0P1P2I0 èser
+SFX ḅ9 èser sen/I0 èser
+SFX ḅ9 èser sene/I1 èser	is:interrogative
+SFX ḅ9 èser sepi/P3P4P5I2 èser
+SFX ḅ9 èser sepia/P0P1P2 èser
+SFX ḅ9 èser sepie/P0P1P2P3P4P5I0 èser
+SFX ḅ9 èser sepiede/I4 èser
+SFX ḅ9 èser sepiege/I4 èser
+SFX ḅ9 èser sepiemo/P0P1P2I0 èser
+SFX ḅ9 èser sepiemo/I0 èser
+SFX ḅ9 èser sepien/I0 èser
+SFX ḅ9 èser sepiene/I1 èser	is:interrogative
+SFX ḅ9 èser sepimo/P0P1P2I0 èser
+SFX ḅ9 èser sepimo/I0 èser
+SFX ḅ9 èser sepion/I0 èser
+SFX ḅ9 èser sepione/I1 èser	is:interrogative
+SFX ḅ9 èser sepiè/I0 èser
+SFX ḅ9 èser sepiène/I1 èser	is:interrogative
+SFX ḅ9 èser sepié/I4 èser
+SFX ḅ9 èser sepiémoe/I1 èser
+SFX ḅ9 èser sepiéu/I5 èser
+SFX ḅ9 èser sepí/I4 èser
+SFX ḅ9 èser seràlo/A1 èser
+SFX ḅ9 èser serane/I1 èser	is:interrogative
+SFX ḅ9 èser seràtu/I3 èser	is:interrogative
+SFX ḅ9 èser serave/P3P4P5I8I9 èser	ts:conditional+present
+SFX ḅ9 èser seràƚo/A1 èser
+SFX ḅ9 èser seremo/P0P1P2I0 èser
+SFX ḅ9 èser seren/I0 èser
+SFX ḅ9 èser serene/I1 èser	is:interrogative
+SFX ḅ9 èser serense èser
+SFX ḅ9 èser serensi èser
+SFX ḅ9 èser seresi/I4 èser
+SFX ḅ9 èser seresiu/I5 èser
+SFX ḅ9 èser serimo/P0P1P2I0 èser
+SFX ḅ9 èser serion/I0 èser
+SFX ḅ9 èser serione/I1 èser
+SFX ḅ9 èser serionse èser
+SFX ḅ9 èser serisen/I0 èser
+SFX ḅ9 èser serisene/I1 èser	is:interrogative
+SFX ḅ9 èser serisense èser
+SFX ḅ9 èser serisensi èser
+SFX ḅ9 èser serisi/I4 èser
+SFX ḅ9 èser serision/I0 èser
+SFX ḅ9 èser serisione/I1 èser	is:interrogative
+SFX ḅ9 èser serisionse èser
+SFX ḅ9 èser serisiu/I5 èser
+SFX ḅ9 èser serisié/I4 èser
+SFX ḅ9 èser serisiéu/I5 èser
+SFX ḅ9 èser serison/I0 èser
+SFX ḅ9 èser serisone/I1 èser	is:interrogative
+SFX ḅ9 èser serisonse èser
+SFX ḅ9 èser serié/I4 èser
+SFX ḅ9 èser seriéu/I5 èser
+SFX ḅ9 èser seron/I0 èser
+SFX ḅ9 èser serone/I1 èser	is:interrogative
+SFX ḅ9 èser seronse èser
+SFX ḅ9 èser serà/P3P4P5I0I2 èser
+SFX ḅ9 èser seràe/P3P4P5 èser	ts:conditional+present
+SFX ḅ9 èser seràvelo/A1 èser
+SFX ḅ9 èser seràvene/I1 èser	is:interrogative
+SFX ḅ9 èser seràveƚo/A1 èser
+SFX ḅ9 èser serè/I0 èser
+SFX ḅ9 èser serène/I1 èser	is:interrogative
+SFX ḅ9 èser seré/I4 èser
+SFX ḅ9 èser serémoe/I1 èser
+SFX ḅ9 èser serésimo/I0 èser
+SFX ḅ9 èser serésimoe/I1 èser
+SFX ḅ9 èser serésitu/I3 èser	is:interrogative
+SFX ḅ9 èser seréu/I5 èser
+SFX ḅ9 èser serí/I4 èser
+SFX ḅ9 èser sería/P4P5I0I2 èser
+SFX ḅ9 èser serèe/P3P4P5I0I2 èser
+SFX ḅ9 èser seríane/I1 èser	is:interrogative
+SFX ḅ9 èser seríatu/I3 èser	is:interrogative
+SFX ḅ9 èser seríe/P3P4P5I0I2 èser
+SFX ḅ9 èser seríelo/A1 èser
+SFX ḅ9 èser seríene/I1 èser	is:interrogative
+SFX ḅ9 èser seríeƚo/A1 èser
+SFX ḅ9 èser serímoe/I1 èser
+SFX ḅ9 èser serísitu/I3 èser	is:interrogative
+SFX ḅ9 èser seríu/I5 èser
+SFX ḅ9 èser serò/I0 èser
+SFX ḅ9 èser seròe/I1 èser
+SFX ḅ9 èser sétu/I3 èser	is:interrogative
+SFX ḅ9 èser séu/I5 èser
+SFX ḅ9 èser séƚo/A1 èser
+SFX ḅ9 èser siando/P0P1P2FS èser
+SFX ḅ9 èser sianto/P0P1P2 èser
+SFX ḅ9 èser sipiando/P0P1P2FS èser
+SFX ḅ9 èser sime/P6P7P8 èser
+SFX ḅ9 èser simo/P0P1P2I0 èser
+SFX ḅ9 èser sion/I0 èser
+SFX ḅ9 èser sione/I1M0 èser	is:interrogative
+SFX ḅ9 èser sionmi èser
+SFX ḅ9 èser sipi/P3P4P5I2 èser
+SFX ḅ9 èser sipia/P0P1P2 èser
+SFX ḅ9 èser sipie/P0P1P2P3P4P5I0 èser
+SFX ḅ9 èser sipiede/I4 èser
+SFX ḅ9 èser sipiege/I4 èser
+SFX ḅ9 èser sipiemo/P0P1P2I0 èser
+SFX ḅ9 èser sipiemo/I0 èser
+SFX ḅ9 èser sipien/I0 èser
+SFX ḅ9 èser sipiene/I1 èser	is:interrogative
+SFX ḅ9 èser sipimo/P0P1P2I0 èser
+SFX ḅ9 èser sipimo/I0 èser
+SFX ḅ9 èser sipion/I0 èser
+SFX ḅ9 èser sipione/I1 èser	is:interrogative
+SFX ḅ9 èser sipiè/I0 èser
+SFX ḅ9 èser sipiène/I1 èser	is:interrogative
+SFX ḅ9 èser sipié/I4 èser
+SFX ḅ9 èser sipiémoe/I1 èser
+SFX ḅ9 èser sipiéu/I5 èser
+SFX ḅ9 èser sipí/I4 èser
+SFX ḅ9 èser situ/I3 èser	is:interrogative
+SFX ḅ9 èser siàndome/P6P7P8 èser
+SFX ḅ9 èser siàndomene/P6P7P8 èser
+SFX ḅ9 èser siàntome/P6P7P8 èser
+SFX ḅ9 èser siàntomene/P6P7P8 èser
+SFX ḅ9 èser sipiàndome/P6P7P8 èser
+SFX ḅ9 èser sipiàndomene/P6P7P8 èser
+SFX ḅ9 èser son/ʼ0I0 èser
+SFX ḅ9 èser sone/I1M0 èser	is:interrogative
+SFX ḅ9 èser sonjo èser
+SFX ḅ9 èser sonmi èser
+SFX ḅ9 èser sonɉo èser
+SFX ḅ9 èser su/I0 èser
+SFX ḅ9 èser sue/I1M0 èser	is:interrogative
+SFX ḅ9 èser sujo èser
+SFX ḅ9 èser sumi èser
+SFX ḅ9 èser suɉo èser
+SFX ḅ9 èser stado/A1FS èser
+SFX ḅ9 èser stasto/A1FS èser
+SFX ḅ9 èser stato/A1FS èser
+SFX ḅ9 èser stesto/A1FS èser
+SFX ḅ9 èser stà èser
+SFX ḅ9 èser stào/A1 èser
+SFX ḅ9 èser stè èser
+SFX ḅ9 èser stò èser
+SFX ḅ9 èser sé/P3P4P5I4I6I7 èser
+SFX ḅ9 èser sémoe/I1 èser
+SFX ḅ9 èser sí/P0P1P2P3P4P5I2I4 èser
+SFX ḅ9 èser símene/P6P7P8 èser
+SFX ḅ9 èser símoe/I1 èser
+SFX ḅ9 èser sípiene/I1 èser	is:interrogative
+SFX ḅ9 èser sípime/P6P7P8 èser
+SFX ḅ9 èser sípimene/P6P7P8 èser
+SFX ḅ9 èser sípitu/I3 èser	is:interrogative
+SFX ḅ9 èser síu/I5 èser
+SFX ḅ9 èser xé-stu èser
+SFX ḅ9 èser xé/P3P4P5I4I6I7 èser
+SFX ḅ9 èser xélo/A1 èser
+SFX ḅ9 èser xéstu èser
+SFX ḅ9 èser xéƚo/A1 èser
+SFX ḅ9 èser xèra/P3P4P5I0I4 èser
+SFX ḅ9 èser xèrane/I1 èser	is:interrogative
+SFX ḅ9 èser xèrau/I5 èser
+SFX ḅ9 èser xère/I0 èser
+SFX ḅ9 èser xèrelo/A1 èser
+SFX ḅ9 èser xèrene/I1 èser	is:interrogative
+SFX ḅ9 èser xèreƚo/A1 èser
+SFX ḅ9 èser xèri/I0I2I4 èser
+SFX ḅ9 èser xèrimo/P0P1P2I0 èser
+SFX ḅ9 èser xèrimoe/I1 èser
+SFX ḅ9 èser xèritu/I3 èser	is:interrogative
+SFX ḅ9 èser xèro/I0 èser
+SFX ḅ9 èser xèrone/I1 èser	is:interrogative
+SFX ḅ9 èser ɉèra/P3P4P5I0I4 èser
+SFX ḅ9 èser ɉèrane/I1 èser	is:interrogative
+SFX ḅ9 èser ɉèrau/I5 èser
+SFX ḅ9 èser ɉère/I0 èser
+SFX ḅ9 èser ɉèrelo/A1 èser
+SFX ḅ9 èser ɉèrene/I1 èser	is:interrogative
+SFX ḅ9 èser ɉèreƚo/A1 èser
+SFX ḅ9 èser ɉèri/I0I2I4 èser
+SFX ḅ9 èser ɉèrimo/P0P1P2I0 èser
+SFX ḅ9 èser ɉèrimoe/I1 èser
+SFX ḅ9 èser ɉèritu/I3 èser	is:interrogative
+SFX ḅ9 èser ɉèro/I0 èser
+SFX ḅ9 èser ɉèrone/I1 èser	is:interrogative
 
 
 # vèrbi -ér inregolari ((re)(g)aver)
