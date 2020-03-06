@@ -2841,6 +2841,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kanbi",			"kontra",	1,	1,	"g",	"1980",			"",
 "kanbi",			"re",			1,	1,	"g",	"",				"",
 "kand",			"in",			4,	4,	"a",	"1775",			"Bruxar, àrder.",
+"kand",			"s",			4,	4,	"a",	"1855",			"(belumat)",
 "kandid",		"",			1,	1,	"g",	"",				"",
 "kànđ",			"",			3,	1,	"g",	"1775",			"",
 "kanel",			"in",			1,	3,	"g",	"1775",			"Avòlđer seda o fil so kaneli.",
