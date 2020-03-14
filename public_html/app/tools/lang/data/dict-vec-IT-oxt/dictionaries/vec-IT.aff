@@ -3565,7 +3565,7 @@ SFX c4 ƚo giƚo/P8 [cit]òƚo
 
 # vèrbi -<is>ír
 # themeT1 + ir/a0a1a2d0d1d2P0P1P2
-SFX d0 Y 243
+SFX d0 Y 245
 SFX d0 ir arane/I1 ir	is:interrogative
 SFX d0 ir aratu/I3 ir	is:interrogative
 SFX d0 ir arave/P3 ir	ts:conditional+present
@@ -3764,8 +3764,10 @@ SFX d0 ir ónmene/P6 ir
 SFX d0 r do/A1 ir
 SFX d0 r ede/I4 [^cijɉñ]ir	ts:subjunctive+present
 SFX d0 r ege/I4 [^cijɉñ]ir	ts:subjunctive+present
-SFX d0 r ente/M0FSⱣd [^cijɉñ]ir	ts:participle+active
-SFX d0 r ènte/M0FS [^cijɉñ]ir	ts:participle+active
+SFX d0 r ente/M0FSⱣd [^aocijɉñ]ir	ts:participle+active
+SFX d0 r ènte/M0FS [^aocijɉñ]ir	ts:participle+active
+SFX d0 ir ïente/M0FSⱣd [ao]ir	ts:participle+active
+SFX d0 ir ïènte/M0FS [ao]ir	ts:participle+active
 SFX d0 r mo/P0I0 ir
 SFX d0 r n/I0 ir
 SFX d0 r nsi ir	ts:indicative+imperfect ts:subjunctive+imperfect
@@ -3812,7 +3814,7 @@ SFX d0 r ónmene/P6 [^cijɉñ]ir
 
 # vèrbi -<is>ír
 # themeT1 + ir/a0a1a2d0d1d2P0P1P2
-SFX d1 Y 70
+SFX d1 Y 72
 SFX d1 ir aralo/A1 ir
 SFX d1 ir arave-lo/A1 ir
 SFX d1 ir aremo/P1 ir
@@ -3879,8 +3881,10 @@ SFX d1 r se-lo/A1 ir
 SFX d1 r se/P1 ir
 SFX d1 r si/P1 ir
 SFX d1 r so/P1 ir
-SFX d1 r ento/P0P1FS [^cijɉñ]ir	ts:gerund+simple
-SFX d1 r ènto/P0P1FS [^cijɉñ]ir	ts:gerund+simple
+SFX d1 r ento/P0P1FS [^aocijɉñ]ir	ts:gerund+simple
+SFX d1 r ènto/P0P1FS [^aocijɉñ]ir	ts:gerund+simple
+SFX d1 ir ïento/P0P1FS [ao]ir	ts:gerund+simple
+SFX d1 ir ïènto/P0P1FS [ao]ir	ts:gerund+simple
 SFX d1 r onme/P7 [^cijɉñ]ir
 SFX d1 r ónmelo/P7 [^cijɉñ]ir
 
@@ -5271,12 +5275,13 @@ SFX Ƀl l i [àéèóòú]l	is:plural+masculine
 SFX Ƀl n i [àéèóòú]n	is:plural+masculine
 
 # kanbio feltrin-belunexe ('[aeou].+[aeou][ln] > Vi)
-SFX Ƀƚ Y 5
-SFX Ƀƚ lo i [aeou]lo	is:plural+masculine
+SFX Ƀƚ Y 6
 SFX Ƀƚ l i [aeo]l	is:plural+masculine
-SFX Ƀƚ ul üi ul	is:plural+masculine
+SFX Ƀƚ l i [^i]ul	is:plural+masculine
 SFX Ƀƚ n i [aeo]n	is:plural+masculine
-SFX Ƀƚ un üi un	is:plural+masculine
+SFX Ƀƚ n i [^i]un	is:plural+masculine
+SFX Ƀƚ ul üi iul	is:plural+masculine
+SFX Ƀƚ un üi iun	is:plural+masculine
 
 
 ### Venèŧia ###
