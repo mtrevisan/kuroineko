@@ -2542,6 +2542,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "guilŧ",			"x",			1,	2,	"a",	"1852",			"Guiŧar de i pesi.",
 "guindol",		"",			1,	2,	"a",	"1560",			"Altalenar.",
 "guindol",		"x",			1,	2,	"a",	"1854",			"Altalenar.",
+"guindon",		"x",			1,	4,	"a",	"1855",			"(belumat) Xgindonar.",
 "guinŧ",			"x",			1,	2,	"a",	"1775",			"",
 "guiŧ",			"",			1,	2,	"a",	"1829",			"",
 "guiŧ",			"x",			1,	2,	"a",	"1829",			"",
