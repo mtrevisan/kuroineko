@@ -1066,7 +1066,7 @@ arbandonar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 arbandono/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:arbandonar
 arbandónoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:arbandonar
 banfar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
-banfo/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:banfar
+banfo/a0a1a2P0P1P2I0FS	po:verb ts:indicative+present st:banfar
 bànfoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:banfar
 inbankar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 inbanko/a0a1a2P0P1P2I0FS	po:verb ts:indicative+present st:inbankar
@@ -5154,7 +5154,7 @@ profarir/a0a1a2d0d1d2P0P1P2+0	po:verb ts:infinitive+simple
 spreferir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive+simple
 sprefarir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive+simple
 stranfar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
-stranfo/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:stranfar
+stranfo/a0a1a2P0P1P2I0FS	po:verb ts:indicative+present st:stranfar
 strànfoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:stranfar
 transferir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive+simple
 transfarir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive+simple
@@ -7087,8 +7087,7 @@ grànoe/a0a1a2I1+0-1*0	po:verb ts:indicative+present is:interrogative st:granar
 ingranatar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 ingranato/a0a1a2P0P1P2I0FS	po:verb ts:indicative+present st:ingranatar
 ingranàtoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:ingranatar
-grandir/a0a1a2d0d1d2P0P1P2+0	po:verb ts:infinitive+simple
-xgrandir/a0a1a2d0d1d2P0P1P2	po:verb ts:infinitive+simple
+grandir/a0a1a2d0d1d2P0P1P2+0*0	po:verb ts:infinitive+simple
 xgrandar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 xgrando/a0a1a2P0P1P2I0FS	po:verb ts:indicative+present st:xgrandar
 xgràndoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:xgrandar
@@ -7114,7 +7113,7 @@ ingranarar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 ingranaro/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:ingranarar
 ingranàroe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:ingranarar
 xgranfar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
-xgranfo/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:xgranfar
+xgranfo/a0a1a2P0P1P2I0FS	po:verb ts:indicative+present st:xgranfar
 xgrànfoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:xgranfar
 granfir/a0a1a2d0d1d2P0P1P2+0-1*0	po:verb ts:infinitive+simple
 granfiñar/a0a1a2P0P1P2*0	po:verb ts:infinitive+simple
@@ -7288,9 +7287,12 @@ grèvoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:grevar
 dexgrexiar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 dexgrexio/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:dexgrexiar
 dexgréxioe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:dexgrexiar
-ingriar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
+ingrïar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 ingrío/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:ingriar
 ingríoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:ingriar
+xgrifar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
+xgrifo/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:xgrifar
+xgrífoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:xgrifar
 grijolar/a0a1P0P1	po:verb ts:infinitive+simple
 grijòlo/a0a1P0P1I0	po:verb ts:indicative+present st:grijolar
 grijòloe/a0a1I1	po:verb ts:indicative+present is:interrogative st:grijolar
@@ -7580,6 +7582,9 @@ guàstoe/a0a1a2I1gv	po:verb ts:indicative+present is:interrogative st:guastar
 xguatarar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 xguataro/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:xguatarar
 xguatàroe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:xguatarar
+xguaterar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
+xguatero/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:xguaterar
+xguatéroe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:xguaterar
 guañar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 guaño/a0a1a2P0P1P2I0FS	po:verb ts:indicative+present st:guañar
 guàñoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:guañar
@@ -13935,7 +13940,7 @@ xñafar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 xñafo/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:xñafar
 xñàfoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:xñafar
 xñanfar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
-xñanfo/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:xñanfar
+xñanfo/a0a1a2P0P1P2I0FS	po:verb ts:indicative+present st:xñanfar
 xñànfoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:xñanfar
 xñanfeđar/a0a1P0P1	po:verb ts:infinitive+simple
 xñanfeđo/a0a1P0P1I0	po:verb ts:indicative+present st:xñanfeđar
@@ -17604,7 +17609,7 @@ rancar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 ranco/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:rancar
 ràncoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:rancar
 ranfar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
-ranfo/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:ranfar
+ranfo/a0a1a2P0P1P2I0FS	po:verb ts:indicative+present st:ranfar
 rànfoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:ranfar
 rangar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 rango/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:rangar
@@ -21403,7 +21408,7 @@ tansar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 tanso/a0a1a2P0P1P2I0FS	po:verb ts:indicative+present st:tansar
 tànsoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:tansar
 stanfar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
-stanfo/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:stanfar
+stanfo/a0a1a2P0P1P2I0FS	po:verb ts:indicative+present st:stanfar
 stànfoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:stanfar
 tanfiar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 tanfio/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:tanfiar
@@ -25704,6 +25709,12 @@ xbrúmoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:xbrumar
 xbüandar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 xbüando/a0a1a2P0P1P2I0FS	po:verb ts:indicative+present st:xbüandar
 xbüàndoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:xbüandar
+xdrajar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
+xdrajo/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:xdrajar
+xdràjoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:xdrajar
+xdraɉar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
+xdraɉo/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:xdraɉar
+xdràɉoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:xdraɉar
 xdrumar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 xdrumo/a0a1a2P0P1P2I0FS	po:verb ts:indicative+present st:xdrumar
 xdrúmoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:xdrumar
@@ -35338,7 +35349,7 @@ xgrenxamento/M0FSⱣdṾr	po:noun is:singular+masculine
 xgréola/F0Ṿe	po:noun is:singular+femenine
 xgréola	po:adverb
 xgréoƚa	po:adverb
-xgrifo/M0	po:noun is:singular+masculine
+xgrifo/A1FSǒn	po:noun is:singular+masculine
 xgropin/M0	po:noun is:singular+masculine
 xguàrdola/F0Ṿe	po:noun is:singular+femenine
 xgubia/F0ět	po:noun is:singular+femenine
@@ -35825,7 +35836,7 @@ bixèr/M0V0	po:noun is:singular+masculine
 bixèra/F0V0	po:noun is:singular+femenine
 bixibilio/M0Ṿe	po:noun is:singular+masculine
 bixinèla/F0Ṿe	po:adjective_qualificative is:singular+femenine
-bixlako/A1FSv0ǒN	po:adjective is:singular+masculine
+bixlako/A1FSv0ǒN	po:adjective_qualificative is:singular+masculine
 bixnòn/M0Ƀl	po:noun is:singular+masculine
 bixnòna/F0	po:noun is:singular+femenine
 bískol/M0ɃƚⱣd	po:noun is:singular+masculine
@@ -36824,7 +36835,7 @@ invidia/F0	po:noun is:singular+femenine
 involta/F0	po:adjective_qualificative is:singular+masculine
 involto/M0FSǐn	po:adjective_qualificative is:singular+masculine
 invòlto/A1FS	po:adjective_qualificative is:singular+masculine
-iñanfo/M0	po:noun is:singular+masculine
+iñanfo/M0FS	po:noun is:singular+masculine
 iñorante/M0	po:adjective_qualificative is:singular
 istòria/F0	po:noun is:singular+femenine
 ínkavo/M0	po:noun is:singular+masculine
@@ -40459,7 +40470,7 @@ apetitoxamente/FSW0	po:adverb
 apetitoxo/A1FSⱣd	po:adjective_qualificative is:singular+masculine
 apio/M0	po:noun is:singular+masculine
 arà	po:noun is:masculine
-argalifo/M0	po:noun is:singular+masculine
+argalifo/M0FS	po:noun is:singular+masculine
 argaƚifo/M0	po:noun is:singular+masculine
 arxentin/A2	po:adjective_qualificative is:singular+femenine
 asexèl/M0ɃlṾe	po:noun is:singular+masculine
@@ -42817,7 +42828,7 @@ turbuƚasion/F0Ᵽd	po:adjective is:singular
 turion/F0ɃlⱣdět	po:noun is:singular+masculine
 tuvo/M0	po:noun is:singular+masculine
 ŧanŧume/M0FS	po:noun is:singular+masculine
-ŧapaganfo/M0Ṿè	po:noun is:singular+masculine
+ŧapaganfo/M0FSṾè	po:noun is:singular+masculine
 ŧaskadun/A2ɃlṾè	po:adjective_demonstrative is:singular+masculine
 ŧaskadun/A2ɃlṾè	po:pronoun_demonstrative is:singular+masculine
 ŧaskun/A2ɃlṾè	po:adjective_demonstrative is:singular+masculine
@@ -44995,7 +45006,7 @@ gaƚume/M0	po:noun is:singular+masculine
 ganbil/M0Ṿe	po:noun is:singular+masculine
 ganđarol/M0ɃlV0Ᵽd	po:noun is:singular+masculine
 ganđarola/F0V0	po:noun is:singular+femenine
-ganfo/M0	po:noun is:singular+masculine
+ganfo/M0FS	po:noun is:singular+masculine
 ganga/F0*0	po:noun is:singular+femenine
 ganxarol/M0ɃlV0Ᵽd	po:noun is:singular+masculine
 ganxarola/F0V0	po:noun is:singular+femenine
@@ -46882,7 +46893,7 @@ berganŧon/F0ɃlⱣdṾe	po:noun is:singular+masculine
 berlika/F0	po:interjection
 berlòka/F0	po:interjection
 berñifa/F0*0	po:adjective_qualificative is:singular+femenine
-berñifo/M0*0ǒN	po:adjective_qualificative is:singular+masculine
+berñifo/M0FS*0ǒN	po:adjective_qualificative is:singular+masculine
 beròla/F0Ṿe	po:noun is:singular+femenine
 bersajo/M0ṾeṾŧ	po:noun is:singular+masculine
 besarol/M0ɃlV0*0Ᵽd	po:noun is:singular+masculine
@@ -47770,7 +47781,7 @@ fandòña/F0	po:noun is:singular+femenine
 fanfalugo/A1FS	po:adjective_qualificative is:singular+masculine
 fanfaƚugo/A1	po:adjective_qualificative is:singular+masculine
 fanfarièl/M0ɃlṾe	po:adjective_qualificative is:singular+masculine
-fanfo/A1	po:adjective is:singular+masculine
+fanfo/A1FS	po:adjective is:singular+masculine
 fanfruñon/A2ɃlⱣd	po:noun is:singular+masculine
 fango/M0ǎSǎs	po:noun is:singular+masculine
 fangoxamente/FSW0	po:adverb
@@ -48232,7 +48243,7 @@ gramita/F0	po:noun is:singular+femenine
 granarista/A2	po:noun is:singular
 grandexin/A2	po:adjective is:singular+masculine
 granfio/M0	po:noun is:singular+masculine
-granfo/M0*0ǎt	po:noun is:singular+masculine
+granfo/M0FS*0ǎt	po:noun is:singular+masculine
 granpía/F0	po:noun is:singular+femenine
 gransèla/F0Ṿe	po:noun is:singular+femenine
 gransideta/F0	po:adjective is:singular+masculine
@@ -52043,7 +52054,7 @@ skeɉoxo/A1FSⱣd	po:adjective_qualificative is:singular+masculine
 skèrmo/A1	po:noun is:singular+masculine
 skèrso/M0FSět	po:noun is:singular+masculine
 skèrŧo/M0ět	po:noun is:singular+masculine
-skifo/M0	po:noun is:singular+masculine
+skifo/M0FS	po:noun is:singular+masculine
 skinko/M0FSět	po:noun is:singular+masculine
 skirato/A1FS	po:noun is:singular+masculine
 skirèl/M0ɃlṾe	po:noun is:singular+masculine
@@ -52901,7 +52912,7 @@ tibidòi	po:noun is:masculine
 tica/F0	po:noun is:singular+femenine
 tientamente/M0FSⱣdṾr	po:noun is:singular+masculine
 tientinben/F0ɃlⱣd	po:noun is:singular+masculine
-tifo/M0	po:noun is:singular+masculine
+tifo/M0FS	po:noun is:singular+masculine
 tika/F0	po:noun is:singular+femenine
 timonièr/M0V0	po:noun is:singular+masculine
 timonièra/F0V0	po:noun is:singular+femenine
@@ -53690,8 +53701,8 @@ xgorlon/F0ɃlⱣd	po:noun is:singular+masculine
 xgòdan/M0Ƀƚ	po:noun is:singular+masculine
 xgrafapolenta/F0Ṿr	po:noun is:singular+masculine
 xgrafapoƚenta/F0Ṿɍ	po:noun is:singular+masculine
-xgrafiñon/F0ɃlⱣd	po:adjective is:singular+masculine
-xgrafo/M0ǒn	po:noun is:singular+masculine
+xgrafiñon/A2ɃlⱣd	po:adjective is:singular+masculine
+xgrafo/M0ǒN	po:noun is:singular+masculine
 xgranfiñana/F0	po:noun is:singular+femenine
 xgranfiñon/A2ɃlⱣd	po:adjective is:singular+masculine
 xgranfio/M0ǒn	po:noun is:singular+masculine
@@ -53792,7 +53803,7 @@ xmuso/A1FS	po:adjective is:singular+masculine
 xnaròco/M0FS	po:noun is:singular+masculine
 xnèl/M0ɃlṾe	po:adjective is:singular+masculine
 xnèla/F0Ṿe	po:adjective is:singular+femenine
-xñanfo/A1	po:adjective_qualificative is:singular+masculine
+xñanfo/A1FS	po:adjective_qualificative is:singular+masculine
 xñàfete	po:adverb
 xñèfo/M0FS	po:noun is:singular+masculine
 xñèko/A1FS	po:adjective_qualificative is:singular+masculine
@@ -60311,8 +60322,16 @@ xñaoƚada/F0Y0Y1	po:noun is:singular+femenine
 xñaolamento/M0FSⱣdṾr	po:noun is:singular+masculine
 xñaoƚamento/M0ⱣdṾɍ	po:noun is:singular+masculine
 xñiko/M0FS	po:noun is:singular+masculine
+xñexoleta/F0Ṿe	po:adjective_qualificative is:singular+femenine
+nènola/F0Ṿe	po:adjective_qualificative is:singular+femenine
+xñòfa/F0	po:noun is:singular+femenine
+xgranapañòte	po:noun
+xgreoso/M0FS	po:noun is:singular+masculine
+xgrifadura/F0r3ět	po:noun is:singular+femenine
+xguajado/M0FSY0ǒN	po:adjective_qualificative is:singular+masculine
+xguaɉado/M0FSY0ǒN	po:adjective_qualificative is:singular+masculine
 
 
-/ 212
+/ 220
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ
