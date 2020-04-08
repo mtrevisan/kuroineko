@@ -6536,6 +6536,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sord",			"in",			1,	1,	"a",	"1980",			"",
 "sord",			"",			4,	4,	"a",	"1854",			"",
 "sord",			"in",			4,	4,	"a",	"1867",			"",
+"sorel",			"",			1,	3,	"g",	"1855",			"(belumat)",
 "sorel",			"in",			1,	3,	"g",	"1855",			"(belumat)",
 "sors",			"",			1,	1,	"a",	"1852",			"",
 "sorseɉ",		"",			1,	4,	"a",	"1854",			"",
