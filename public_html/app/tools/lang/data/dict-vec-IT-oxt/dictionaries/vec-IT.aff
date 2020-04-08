@@ -5021,7 +5021,7 @@ SFX P8 smeƚo xgeƚe smeƚo	is:procomplementar
 
 
 # sonoriđaŧion finali
-SFX FS Y 66
+SFX FS Y 64
 SFX FS bo p bo	ds:nordic
 SFX FS be p be	ds:nordic
 SFX FS bo b bo	ds:nordic
@@ -5078,8 +5078,6 @@ SFX FS đo đ đo	ds:nordic
 SFX FS đe đ đe	ds:nordic
 SFX FS đo d đo	ds:nordic
 SFX FS đe d đe	ds:nordic
-SFX FS đo x đo	ds:nordic
-SFX FS đe x đe	ds:nordic
 SFX FS ŧo ŧ ŧo	ds:nordic
 SFX FS ŧe ŧ ŧe	ds:nordic
 SFX FS ɉo c ɉo	ds:nordic
@@ -5227,10 +5225,11 @@ SFX A1 o i [^i]o	is:plural+masculine
 SFX A1 io i io	is:plural+masculine
 
 # ajetivi de sekonda klase (–i, –a/e)
-SFX A2 Y 6
+SFX A2 Y 7
 SFX A2 0 a [^aieo]
 SFX A2 0 i [^aieo]	is:plural
-SFX A2 0 e/FS [^aieo]	is:plural
+SFX A2 0 e [lnr]	is:plural
+SFX A2 0 e/FS [^aieolnr]	is:plural
 SFX A2 a e/FS [^iƚ]a	is:plural
 SFX A2 a e [iƚ]a	is:plural
 SFX A2 a i a	is:plural+masculine
