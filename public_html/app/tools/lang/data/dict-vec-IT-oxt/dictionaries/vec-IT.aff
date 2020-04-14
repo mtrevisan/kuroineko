@@ -44,12 +44,21 @@ BREAK --
 FULLSTRIP
 
 # suggest the right forms for words which incorrectly choose the wrong letter from a related set more than once in a word
-MAP 5
-MAP aàAÀ
-MAP eéèEÉÈ
-MAP iíIÍ
-MAP oóòOÓÒ
-MAP uúUÚ
+MAP 14
+MAP aà
+MAP eè
+MAP eé
+MAP ií
+MAP oò
+MAP oó
+MAP uú
+MAP AÀ
+MAP EÈ
+MAP EÉ
+MAP IÍ
+MAP OÒ
+MAP OÓ
+MAP UÚ
 
 # replace input characters
 ICONV 19
