@@ -6662,7 +6662,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "spork",			"",			1,	2,	"a",	"1560",			"",
 "spork",			"i",			1,	2,	"a",	"1867",			"",
 "spork",			"in",			1,	2,	"a",	"1775",			"",
-"sporkac",		"",			1,	5,	"g",	"1854",			"",
+"sporkaŧ",		"",			1,	5,	"g",	"1854",			"",
 "spox",			"",			1,	2,	"a",	"1480",			"",
 "sprang",		"",			1,	3,	"g",	"1867",			"",
 "spriment",		"",			1,	5,	"a",	"1560",			"Sperimentar.",
