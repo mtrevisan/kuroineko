@@ -6915,7 +6915,7 @@ xgoƚar/a0a2P0P2	po:verb ts:infinitive+simple
 xgoƚo/a0a2P0P2I0	po:verb ts:indicative+present st:xgoƚar
 xgóƚoe/a0a2I1	po:verb ts:indicative+present is:interrogative st:xgoƚar
 ingolfar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
-ingolfo/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:ingolfar
+ingolfo/a0a1a2P0P1P2I0FS	po:verb ts:indicative+present st:ingolfar
 ingólfoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:ingolfar
 ingoloxir/a0a1d0d1P0P1	po:verb ts:infinitive+simple
 ingoƚoxir/a0a2d0d2P0P2	po:verb ts:infinitive+simple
@@ -19970,7 +19970,7 @@ soƚesitar/a0a2P0P2	po:verb ts:infinitive+simple
 soƚèsito/a0a2P0P2I0	po:verb ts:indicative+present st:soƚesitar
 soƚèsitoe/a0a2I1	po:verb ts:indicative+present is:interrogative st:soƚesitar
 insolfar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
-insolfo/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:insolfar
+insolfo/a0a1a2P0P1P2I0FS	po:verb ts:indicative+present st:insolfar
 insólfoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:insolfar
 solfarar/a0a1a2P0P1P2+0	po:verb ts:infinitive+simple
 sólfaro/a0a1a2P0P1P2I0+0	po:verb ts:indicative+present st:solfarar
@@ -22529,25 +22529,6 @@ stórđoe/a0a1I1	po:verb ts:indicative+present is:interrogative st:storđar
 storxar/a0a1a2P0P1P2	po:verb ts:infinitive+simple
 storxo/a0a1a2P0P1P2I0	po:verb ts:indicative+present st:storxar
 stórxoe/a0a1a2I1	po:verb ts:indicative+present is:interrogative st:storxar
-tòrŧer/b0b1P0P1+0*0	po:verb ts:infinitive+simple
-torŧerò/b0b1I0+0*0	po:verb ts:indicative+future st:tòrŧer
-tòrŧo/a0a1P0P1I0FS+0*0	po:verb ts:indicative+present st:tòrŧer
-tòrŧoe/a0a1I1+0*0	po:verb ts:indicative+present is:interrogative st:tòrŧer
-tòrto/A1FS+0*0	po:verb ts:participle+perfect+strong is:singular+masculine st:tòrđer st:tòrxer
-tòrser/b0b1b2P0P1P2+0*0	po:verb ts:infinitive+simple
-torserò/b0b1b2I0+0*0	po:verb ts:indicative+future st:tòrser
-tòrso/a0a1a2P0P1P2I0FS+0*0	po:verb ts:indicative+present st:tòrser
-tòrsoe/a0a1a2I1+0*0	po:verb ts:indicative+present is:interrogative st:tòrser
-tòrŧar/b0b1P0P1+0*0	po:verb ts:infinitive+simple
-torŧarò/b0b1I0+0*0	po:verb ts:indicative+future st:tòrŧar
-tòrsar/b0b1b2P0P1P2+0*0	po:verb ts:infinitive+simple
-torsarò/b0b1b2I0+0*0	po:verb ts:indicative+future st:tòrŧar
-torsar/a0a1a2P0P1P2+0	po:verb ts:infinitive+simple
-torso/a0a1a2P0P1P2I0FS+0	po:verb ts:indicative+present st:torsar
-tórsoe/a0a1a2I1+0	po:verb ts:indicative+present is:interrogative st:torsar
-torŧar/a0a1P0P1+0	po:verb ts:infinitive+simple
-torŧo/a0a1P0P1I0+0	po:verb ts:indicative+present st:torŧar
-tórŧoe/a0a1I1+0	po:verb ts:indicative+present is:interrogative st:torŧar
 torŧiar/a0a1P0P1	po:verb ts:infinitive+simple
 tòrŧio/a0a1P0P1I0	po:verb ts:indicative+present st:torŧiar
 tòrŧioe/a0a1I1	po:verb ts:indicative+present is:interrogative st:torŧiar
@@ -38108,7 +38089,7 @@ marinèra/F0V0	po:noun is:singular+femenine
 mariòl/M0ɃlṾe	po:noun is:singular+masculine
 mariòrbola/F0Ṿe	po:noun is:singular+femenine
 markexeto/M0FSⱣd	po:noun is:singular+masculine
-markolfo/A1	po:adjective is:singular+masculine
+markolfo/A1FS	po:adjective is:singular+masculine
 marmaja/F0Ṿe*0	po:noun is:singular+femenine
 marmo/M0	po:noun is:singular+masculine
 marmorin/A2	po:noun is:singular+masculine
@@ -51002,7 +50983,7 @@ paƚonbar/A1	po:noun is:singular+masculine
 panbojido/M0Y0	po:noun is:singular+masculine
 panboɉido/M0Y0	po:noun is:singular+masculine
 pancanon/A2ɃlⱣd	po:adjective_qualificative is:singular+masculine
-pandolfo/A1	po:adjective is:singular+masculine
+pandolfo/A1FS	po:adjective is:singular+masculine
 pandolon/A2ɃlⱣd	po:adjective is:singular+masculine
 pandoƚon/A2Ᵽd	po:adjective is:singular+masculine
 paneton/F0ɃlⱣd	po:noun is:singular+masculine
@@ -60883,8 +60864,19 @@ starnidura/F0r3ět	po:noun is:singular+femenine
 stèril/F0Ṿɇ	po:adjective_qualificative is:singular
 stiera/F0	po:noun is:singular+femenine
 stivaleta/F0Ṿe	po:noun is:singular+femenine
-stòka/F0	po:noun is:singular+femenine
+stolfo/A1FS	po:adjective_qualificative is:singular+masculine
+stomakal/F0ɃlṾɇ	po:noun is:singular+femenine
+stomegaŧo/M0FSṾe	po:noun is:singular+masculine
+stomegería/F0v0	po:noun is:singular+femenine
+stopolina/F0Ṿe	po:noun is:singular+femenine
+stornelería/F0v0	po:noun is:singular+femenine
+storneƚería/F0v0	po:noun is:singular+femenine
+stornèl/M0ɃlṾe	po:adjective_qualificative is:singular+masculine
+stornèla/F0Ṿe	po:adjective_qualificative is:singular+femenine
+stòko/A1FS	po:noun is:singular+femenine
+stòla/F0Ṿe	po:noun is:singular+femenine
 stòmego/M0FS	po:noun is:singular+masculine
+stòrta/F0	po:noun is:singular+femenine
 straluko/M0FS	po:noun is:singular+masculine
 straƚuko/M0	po:noun is:singular+masculine
 strasapitoko/M0FS	po:noun is:singular+masculine
@@ -61035,6 +61027,6 @@ xvojadamente/FSW0	po:adverb
 xvoɉadamente/FSW0	po:adverb
 
 
-/ 370
+/ 380
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ
