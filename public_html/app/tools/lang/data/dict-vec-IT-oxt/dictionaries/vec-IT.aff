@@ -299,10 +299,12 @@ NEEDAFFIX N0
 #kantar/a0a1a2P0P1P2
 #kanto/a0a1a2P0P1P2Ī0FS
 #kàntoe/a0a1a2I0
-#kantar/t1n1t2n2ṭ2ẗ2t4n4ṭ4ẗ4t5ṭ5ẗ5t6t7n7ṭ7ẗ7t8n8ṭ8ẗ8t9ț0ņ1ț2ņ2P0P1P2
-#kanto/t8n8ṭ8ẗ8P0P1P2FSI0N0
-#krederò/N0
-#kàntoe/I0I2I4
+
+#-àr:			kantar/t1t2n2t4n4t5t6t7n7t9ț0ņ1ț2ņ2, kanto/t8n8FS, kàntoe/I0I2I4
+#-ér:			valer/t1t2n2t4n4t5t6t7n7t9ț0ņ1ț2ņ2, valo/t8n8FS, vàloe/I0I2I4
+#'-er:		kréder/t1n1, kredo/t8n8FS, krédoe/I0I2I4, krederò/t2n2t4n4t5t6t7n7t9ț0ņ1ț2ņ2
+#-ír:			dormir/t1t2n2t4n4t5t6t7n7ņ1, dòrmo/t8n8t9ț0ț2ņ2FS, dòrmoe/I0I2I4
+#-ír/is::	fenir/t1t2n2t4n4t5t6t7n7ņ1, feniso/t8n8t9ț0ț2ņ2FS, fenísoe/I0I2I4
 
 
 # tèma 1
@@ -310,7 +312,6 @@ NEEDAFFIX N0
 SFX t1 Y 1
 SFX t1 0 e r	ts:infinitive+simple	# T1 + r(e)
 
-# '-[dptv]er > '-[dptv]re
 SFX n1 Y 12
 SFX n1 ànder andre ànder	ts:infinitive+simple
 SFX n1 énder endre énder	ts:infinitive+simple
@@ -328,7 +329,7 @@ SFX n1 àlder aldre àlder	ts:infinitive+simple
 
 # tèma 2 (from T1: aŧento PVT > VT)
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
-# '-er: skomenŧiando da 'l indikativo futuro de 1s
+# '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
 SFX t2 Y 88
 SFX t2 r va/Ī0 [aei]r	ts:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX t2 ar àva/I0N0 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)a
@@ -572,7 +573,7 @@ SFX n2 erò ènt erò	ts:gerund+simple	# T2 + nto
 
 # tèma 4 (from T1: senŧa aŧento)
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
-# '-er: skomenŧiando da 'l indikativo futuro de 1s
+# '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
 SFX t4 Y 56
 SFX t4 0 ò/Ī0I0 [aei]r	ts:indicative+future is:first+singular	# T4 + rò
 SFX t4 0 0/Ī0I0N0 erò	ts:indicative+future is:first+singular	# T4 + rò
@@ -802,7 +803,7 @@ SFX n4 ir erisié ir	ts:conditional+present is:second+singular	# T4 + r(is)ié, 
 
 # tèma 5 (from T1: aŧento PVT > VT, then T2: à > é | (é > í) | (í > é))
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
-# '-er: skomenŧiando da 'l indikativo futuro de 1s
+# '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
 SFX t5 Y 42
 SFX t5 ar emo/Ī0 ar	ts:indicative+present is:first+plural	# T5 + mo
 SFX t5 ar émo/I0N0 ar	ts:indicative+present is:first+plural	# T5 + mo
@@ -880,7 +881,7 @@ SFX t5 ir é/Ī3I3 ir	ts:imperative+present is:second+plural	# T5
 
 # tèma 6 (from T1: aŧento PVT > VT, then T2: é > ú)
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
-# '-er: skomenŧiando da 'l indikativo futuro de 1s
+# '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
 SFX t6 Y 17
 SFX t6 r do/A1 [ai]r	ts:participle+passive is:singular+masculine	# T6 + d[oiae]
 SFX t6 ar à/A1 ar	ts:participle+passive is:singular+masculine	# T6 + ([oiae])
@@ -903,7 +904,7 @@ SFX t6 ir é/A1 ir	ts:participle+passive is:singular+masculine	# T6 + ([oiae]), 
 
 # tèma 7 (from T1: aŧento PVT > VT, then T2: í > é)
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
-# '-er: skomenŧiando da 'l indikativo futuro de 1s
+# '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
 SFX t7 Y 16
 SFX t7 r nte/M0 ar	ts:participle+active	# T7 + nte
 SFX t7 r nte/M0Ᵽd er	ts:participle+active	# T7 + nte
@@ -976,9 +977,9 @@ SFX n7 r ent [^cijɉñ]ir	ts:gerund+simple	# T7 + nto
 
 
 # tèma 8 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: VT > Ø)
-# -àr, -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de 1s
+# -àr, -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
 SFX t8 Y 7
-SFX t8 o 0/Ī0 o	ts:indicative+present is:first+singular	# T8 + o
+SFX t8 o 0/Ī0N0 o	ts:indicative+present is:first+singular	# T8 + o
 SFX t8 o i/Ī2 [^i]o	ts:indicative+present is:second+singular	# T8 + i
 SFX t8 io i/Ī2 io	ts:indicative+present is:second+singular	# T8 + i
 SFX t8 o a o	ts:subjunctive+present is:first+singular	# T8 + a
@@ -1017,8 +1018,8 @@ SFX n8 o a o	ts:subjunctive+present is:third	# T8 + a
 
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
 # -àr, -ér: skomenŧiando da 'l infenío
-# '-er: skomenŧiando da 'l indikativo futuro de 1s
-# -ír, -ír/is: skomenŧiando da 'l indikativo prexente de 1s
+# '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
+# -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
 SFX t9 Y 5
 SFX t9 r 0 ar	ts:imperative+present is:second+singular	# T9
 SFX t9 er i er	ts:imperative+present is:second+singular	# T9
@@ -1029,8 +1030,8 @@ SFX t9 ar i ar	ts:imperative+present is:second+singular	# T9, T3: a > i
 
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
 # -àr, -ér: skomenŧiando da 'l infenío
-# '-er: skomenŧiando da 'l indikativo futuro de 1s
-# -ír, -ír/is: skomenŧiando da 'l indikativo prexente de 1s
+# '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
+# -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
 #T10	=	T3: i > e									kànta	vàle		kréde			dòrme			feníse
 SFX ț0 Y 3
 SFX ț0 r 0 [ae]r	ts:indicative+present is:third	# T10
@@ -1041,7 +1042,7 @@ SFX ț0 o e o	ts:indicative+present is:third	# T10
 # tèma 11 (from T1: senŧa aŧento, then T4: VT > Ø)
 # variante fel.-bel. e liv.
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
-# '-er: skomenŧiando da 'l indikativo futuro de 1s
+# '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
 SFX ņ1 Y 272
 SFX ņ1 ar on/Ī0 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX ņ1 ar ón/I0N0 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
@@ -1319,8 +1320,8 @@ SFX ņ1 r siege ir	ts:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg
 
 # tèma 12 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: VT > Ø, then T8: senŧa aŧento)
 # -àr, -ér, -ír: skomenŧiando da 'l infenío
-# '-er: skomenŧiando da 'l indikativo futuro de 1s
-# -ír/is: skomenŧiando da 'l indikativo prexente de 1s
+# '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
+# -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
 SFX ț2 Y 15
 SFX ț2 ar é/Ī3I3 ar	ts:indicative+present is:second+plural	# T12 + é
 SFX ț2 er é/Ī3I3 er	ts:indicative+present is:second+plural	# T12 + é
