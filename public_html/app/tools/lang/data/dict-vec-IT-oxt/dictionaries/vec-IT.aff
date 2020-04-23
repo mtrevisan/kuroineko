@@ -254,22 +254,22 @@ NEEDAFFIX N0
 #T12	=	T8: senŧa aŧento							kant	val		kred			dorm			fenis
 
 #						1a												2a														3a
-#						sing.			pl.							sing.						pl.					
+#						sing.			pl.							sing.						pl.
 #IND. PREX.*		T8 + [oe]	T5 + mo						T8 + i					T5							T10
 #										T12 + ón													T12 + é					(ant. T8 + e)
-#										T12 + én													
+#										T12 + én
 #DHONTAT. PREX.	T8 + [ae]	T5 + mo						T8 + i					T5							T8 + [ea]
-#										T12 + (i)ón(e)											T12 + é		
-#										T12 + én(e)												T12 + é([dg]e)		
+#										T12 + (i)ón(e)											T12 + é([dg]e)
+#										T12 + én(e)
 #IND. INPARF.*		T2 + v[aeo]	T2 + vimo					T2 + vi					T2 + vi					T2 + va
-#										T11 + (iv)(i)ón(se)									T11 + (iv)ié			
-#										T11 + (iv)én(se)							
+#										T11 + (iv)(i)ón(se)									T11 + (iv)ié
+#										T11 + (iv)én(se)
 #DHONTAT. INPARF.	T2 + se		T2 + simo					T2 + si					T2 + si					T2 + se
 #										T11 + (is)(i)ón(e/se)								T11 + (is)ié([dg]e)
 #										T11 + (is)én(e/se)
 #IND. FUT.*			T4 + r[òàè]	T4 + rémo/rímo				T4 + rà					T4 + ré/í				T4 + rà
-#										T4 + rón		
-#										T4 + rén		
+#										T4 + rón
+#										T4 + rén
 #KOND. PREX.		T4 + rí[ae]	T4 + résimo					T4 + ría					T4 + rési				T4 + ría/e
 #										T4 + r(is)(i)ón(se)									T4 + r(is)ié
 #										T4 + r(is)én(se)
@@ -1162,93 +1162,98 @@ SFX ņ1 r siege ir	ts:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg
 
 
 # tèma 12 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: VT > Ø, then T8: senŧa aŧento)
-# skomenŧiando da 'l infenío par -àr, -ér, -ír
-# skomenŧiando da 'l indikativo futuro de 1s par '-er
-# skomenŧiando da 'l indikativo prexente de 1s par -ír/is
+# -àr, -ér, -ír: skomenŧiando da 'l infenío
+# '-er: skomenŧiando da 'l indikativo futuro de 1s
+# -ír/is: skomenŧiando da 'l indikativo prexente de 1s
 SFX ț2 Y 15
-SFX ț2 ar é ar	ts:indicative+present is:second+plural	# T12 + é
-SFX ț2 er é er	ts:indicative+present is:second+plural	# T12 + é
-SFX ț2 erò é erò	ts:indicative+present is:second+plural	# T12 + é
-SFX ț2 ir é ir	ts:indicative+present is:second+plural	# T12 + é
-SFX ț2 iso é iso	ts:indicative+present is:second+plural	# T12 + é
-SFX ț2 ar é ar	ts:subjunctive+present is:second+plural	# T12 + é
-SFX ț2 er é er	ts:subjunctive+present is:second+plural	# T12 + é
-SFX ț2 erò é erò	ts:subjunctive+present is:second+plural	# T12 + é
-SFX ț2 ir é ir	ts:subjunctive+present is:second+plural	# T12 + é
-SFX ț2 iso é iso	ts:subjunctive+present is:second+plural	# T12 + é
+SFX ț2 ar é/Ī3 ar	ts:indicative+present is:second+plural	# T12 + é
+SFX ț2 er é/Ī3 er	ts:indicative+present is:second+plural	# T12 + é
+SFX ț2 erò é/Ī3 erò	ts:indicative+present is:second+plural	# T12 + é
+SFX ț2 ir é/Ī3 ir	ts:indicative+present is:second+plural	# T12 + é
+SFX ț2 o é/Ī3 iso	ts:indicative+present is:second+plural	# T12 + é
+SFX ț2 ar é ar	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
+SFX ț2 er é er	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
+SFX ț2 erò é erò	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
+SFX ț2 ir é ir	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
+SFX ț2 o é iso	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
 SFX ț2 ar é ar	ts:imperative+present is:second+plural	# T12 + é
 SFX ț2 er é er	ts:imperative+present is:second+plural	# T12 + é
 SFX ț2 erò é erò	ts:imperative+present is:second+plural	# T12 + é
 SFX ț2 ir é ir	ts:imperative+present is:second+plural	# T12 + é
-SFX ț2 iso é iso	ts:imperative+present is:second+plural	# T12 + é
+SFX ț2 o é iso	ts:imperative+present is:second+plural	# T12 + é
 
-# variante fel.-bel. e liv.
-SFX ņ2 Y 65
-SFX ņ2 ar on/P0P1 ar	ts:indicative+present is:first+plural	# T12 + ón
-SFX ņ2 er on/P0P1 er	ts:indicative+present is:first+plural	# T12 + ón
-SFX ņ2 ò on/P0P1 erò	ts:indicative+present is:first+plural	# T12 + ón
-SFX ņ2 ir on/P0P1 ir	ts:indicative+present is:first+plural	# T12 + ón
-SFX ņ2 0 n/P0P1 iso	ts:indicative+present is:first+plural	# T12 + ón
-SFX ņ2 ar en/P0P1Ī0 ar	ts:indicative+present is:first+plural	# T12 + én
-SFX ņ2 r n/P0P1Ī0 er	ts:indicative+present is:first+plural	# T12 + én
-SFX ņ2 ò en/P0P1Ī0 erò	ts:indicative+present is:first+plural	# T12 + én
-SFX ņ2 ir en/P0P1Ī0 ir	ts:indicative+present is:first+plural	# T12 + én
-SFX ņ2 o en/P0P1Ī0 iso	ts:indicative+present is:first+plural	# T12 + én
-SFX ņ2 ar onme/P7 ar	ts:indicative+present is:first+plural is:procomplementar	# T12 + ón
-SFX ņ2 ar ónmelo/P7 ar	ts:indicative+present is:first+plural is:procomplementar	# T12 + ón
-SFX ņ2 er onme/P7 er	ts:indicative+present is:first+plural is:procomplementar	# T12 + ón
-SFX ņ2 er ónmelo/P7 er	ts:indicative+present is:first+plural is:procomplementar	# T12 + ón
-SFX ņ2 ò onme/P7 erò	ts:indicative+present is:first+plural is:procomplementar	# T12 + ón
-SFX ņ2 ò ónmelo/P7 erò	ts:indicative+present is:first+plural is:procomplementar	# T12 + ón
-SFX ņ2 ir onme/P7 ir	ts:indicative+present is:first+plural is:procomplementar	# T12 + ón
-SFX ņ2 ir ónmelo/P7 ir	ts:indicative+present is:first+plural is:procomplementar	# T12 + ón
-SFX ņ2 0 nme/P7 iso	ts:indicative+present is:first+plural is:procomplementar	# T12 + ón
-SFX ņ2 o ónmelo/P7 iso	ts:indicative+present is:first+plural is:procomplementar	# T12 + ón
-SFX ņ2 ar enme/P7Ī0 ar	ts:indicative+present is:first+plural is:procomplementar	# T12 + én
-SFX ņ2 ar énmelo/P7Ī0 ar	ts:indicative+present is:first+plural is:procomplementar	# T12 + én
-SFX ņ2 r nme/P7Ī0 er	ts:indicative+present is:first+plural is:procomplementar	# T12 + én
-SFX ņ2 er énmelo/P7Ī0 er	ts:indicative+present is:first+plural is:procomplementar	# T12 + én
-SFX ņ2 ò enme/P7Ī0 erò	ts:indicative+present is:first+plural is:procomplementar	# T12 + én
-SFX ņ2 ò énmelo/P7Ī0 erò	ts:indicative+present is:first+plural is:procomplementar	# T12 + én
-SFX ņ2 ir enme/P7Ī0 ir	ts:indicative+present is:first+plural is:procomplementar	# T12 + én
-SFX ņ2 ir énmelo/P7Ī0 ir	ts:indicative+present is:first+plural is:procomplementar	# T12 + én
-SFX ņ2 o enme/P7Ī0 iso	ts:indicative+present is:first+plural is:procomplementar	# T12 + én
-SFX ņ2 o énmelo/P7Ī0 iso	ts:indicative+present is:first+plural is:procomplementar	# T12 + én
-SFX ņ2 ar on/P0P1 ar	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX ņ2 er on/P0P1 er	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX ņ2 ò on/P0P1 erò	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX ņ2 ir on/P0P1 ir	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX ņ2 0 n/P0P1 iso	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX ņ2 Y 50
+SFX ņ2 ar on/Ī0 ar	ts:indicative+present is:first+plural	# T12 + ón
+SFX ņ2 er on/Ī0 er	ts:indicative+present is:first+plural	# T12 + ón
+SFX ņ2 erò on/Ī0 erò	ts:indicative+present is:first+plural	# T12 + ón
+SFX ņ2 ir on/Ī0 ir	ts:indicative+present is:first+plural	# T12 + ón
+SFX ņ2 0 n/Ī0 o	ts:indicative+present is:first+plural	# T12 + ón
+SFX ņ2 ar en/Ī0 ar	ts:indicative+present is:first+plural	# T12 + én
+SFX ņ2 r n/Ī0 er	ts:indicative+present is:first+plural	# T12 + én
+SFX ņ2 rò n/Ī0 erò	ts:indicative+present is:first+plural	# T12 + én
+SFX ņ2 ir en/Ī0 ir	ts:indicative+present is:first+plural	# T12 + én
+SFX ņ2 o en/Ī0 o	ts:indicative+present is:first+plural	# T12 + én
+SFX ņ2 ar on ar	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
 SFX ņ2 ar one ar	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX ņ2 er one er	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX ņ2 ò one erò	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX ņ2 ir one ir	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX ņ2 0 ne iso	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX ņ2 ar ion/P0P1 [^cijɉñ]ar	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX ņ2 er ion/P0P1 [^cijɉñ]er	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX ņ2 ò ion/P0P1 [^cijɉñ]erò	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX ņ2 r on/P0P1 [^cijɉñ]ir	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX ņ2 o ion/P0P1 [^cijɉñ]iso	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX ņ2 ar ion [^cijɉñ]ar	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
 SFX ņ2 ar ione [^cijɉñ]ar	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX ņ2 er on er	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX ņ2 er one er	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX ņ2 er ion [^cijɉñ]er	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
 SFX ņ2 er ione [^cijɉñ]er	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX ņ2 ò ione [^cijɉñ]erò	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX ņ2 erò on erò	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX ņ2 erò one erò	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX ņ2 erò ion [^cijɉñ]erò	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX ņ2 erò ione [^cijɉñ]erò	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX ņ2 ir on ir	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX ņ2 ir one ir	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX ņ2 r on [^cijɉñ]ir	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
 SFX ņ2 r one [^cijɉñ]ir	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX ņ2 o ione [^cijɉñ]iso	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX ņ2 ar é ar	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
-SFX ņ2 er é er	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
-SFX ņ2 erò é erò	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
-SFX ņ2 ir é ir	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
-SFX ņ2 iso é iso	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
+SFX ņ2 0 n o	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX ņ2 0 ne o	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX ņ2 o ion [^cijɉñ]o	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX ņ2 o ione [^cijɉñ]o	ts:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX ņ2 ar en ar	ts:subjunctive+present is:first+plural	# T12 + én(e)
+SFX ņ2 ar ene ar	ts:subjunctive+present is:first+plural	# T12 + én(e)
+SFX ņ2 r n er	ts:subjunctive+present is:first+plural	# T12 + én(e)
+SFX ņ2 r ne er	ts:subjunctive+present is:first+plural	# T12 + én(e)
+SFX ņ2 rò n erò	ts:subjunctive+present is:first+plural	# T12 + én(e)
+SFX ņ2 rò ne erò	ts:subjunctive+present is:first+plural	# T12 + én(e)
+SFX ņ2 ir en ir	ts:subjunctive+present is:first+plural	# T12 + én(e)
+SFX ņ2 ir ene ir	ts:subjunctive+present is:first+plural	# T12 + én(e)
+SFX ņ2 o en o	ts:subjunctive+present is:first+plural	# T12 + én(e)
+SFX ņ2 o ene o	ts:subjunctive+present is:first+plural	# T12 + én(e)
 SFX ņ2 ar ede ar	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
-SFX ņ2 r de er	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
-SFX ņ2 rò de erò	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
-SFX ņ2 ir ede ir	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
-SFX ņ2 iso ede iso	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
 SFX ņ2 ar ege ar	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
+SFX ņ2 r de er	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
 SFX ņ2 r ge er	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
+SFX ņ2 rò de erò	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
 SFX ņ2 rò ge erò	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
+SFX ņ2 ir ede ir	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
 SFX ņ2 ir ege ir	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
-SFX ņ2 iso ege iso	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
+SFX ņ2 o ede iso	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
+SFX ņ2 o ege iso	ts:subjunctive+present is:second+plural	# T12 + é([dg]e)
+#SFX ņ2 ar onme/P7 ar	ts:indicative+present is:first+plural is:procomplementar	# T12 + ón
+#SFX ņ2 ar ónmelo/P7 ar	ts:indicative+present is:first+plural is:procomplementar	# T12 + ón
+#SFX ņ2 er onme/P7 er	ts:indicative+present is:first+plural is:procomplementar	# T12 + ón
+#SFX ņ2 er ónmelo/P7 er	ts:indicative+present is:first+plural is:procomplementar	# T12 + ón
+#SFX ņ2 ò onme/P7 erò	ts:indicative+present is:first+plural is:procomplementar	# T12 + ón
+#SFX ņ2 ò ónmelo/P7 erò	ts:indicative+present is:first+plural is:procomplementar	# T12 + ón
+#SFX ņ2 ir onme/P7 ir	ts:indicative+present is:first+plural is:procomplementar	# T12 + ón
+#SFX ņ2 ir ónmelo/P7 ir	ts:indicative+present is:first+plural is:procomplementar	# T12 + ón
+#SFX ņ2 0 nme/P7 iso	ts:indicative+present is:first+plural is:procomplementar	# T12 + ón
+#SFX ņ2 o ónmelo/P7 iso	ts:indicative+present is:first+plural is:procomplementar	# T12 + ón
+#SFX ņ2 ar enme/P7Ī0 ar	ts:indicative+present is:first+plural is:procomplementar	# T12 + én
+#SFX ņ2 ar énmelo/P7Ī0 ar	ts:indicative+present is:first+plural is:procomplementar	# T12 + én
+#SFX ņ2 r nme/P7Ī0 er	ts:indicative+present is:first+plural is:procomplementar	# T12 + én
+#SFX ņ2 er énmelo/P7Ī0 er	ts:indicative+present is:first+plural is:procomplementar	# T12 + én
+#SFX ņ2 ò enme/P7Ī0 erò	ts:indicative+present is:first+plural is:procomplementar	# T12 + én
+#SFX ņ2 ò énmelo/P7Ī0 erò	ts:indicative+present is:first+plural is:procomplementar	# T12 + én
+#SFX ņ2 ir enme/P7Ī0 ir	ts:indicative+present is:first+plural is:procomplementar	# T12 + én
+#SFX ņ2 ir énmelo/P7Ī0 ir	ts:indicative+present is:first+plural is:procomplementar	# T12 + én
+#SFX ņ2 o enme/P7Ī0 iso	ts:indicative+present is:first+plural is:procomplementar	# T12 + én
+#SFX ņ2 o énmelo/P7Ī0 iso	ts:indicative+present is:first+plural is:procomplementar	# T12 + én
+
 
 SFX VV Y 15
 SFX VV avo ào avo
