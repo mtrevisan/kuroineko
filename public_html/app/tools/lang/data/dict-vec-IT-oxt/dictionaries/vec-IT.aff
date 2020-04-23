@@ -299,7 +299,7 @@ NEEDAFFIX N0
 #kantar/a0a1a2P0P1P2
 #kanto/a0a1a2P0P1P2I0FS
 #kàntoe/a0a1a2I1
-#kantar/t1n1t2n2ṭ2ẗ2t4n4ṭ4ẗ4t5ṭ5ẗ5t6t7ṭ7ẗ7t8n8ṭ8ẗ8t9ț0ņ1ț2ņ2P0P1P2
+#kantar/t1n1t2n2ṭ2ẗ2t4n4ṭ4ẗ4t5ṭ5ẗ5t6t7n7ṭ7ẗ7t8n8ṭ8ẗ8t9ț0ņ1ț2ņ2P0P1P2
 #kanto/t8n8ṭ8ẗ8P0P1P2FSI0
 #kàntoe/I1
 
@@ -385,16 +385,16 @@ SFX t2 r si [aei]r	ts:subjunctive+imperfect is:second+plural	# T2 + si
 SFX t2 rò si erò	ts:subjunctive+imperfect is:second+plural	# T2 + si
 SFX t2 r se [aei]r	ts:subjunctive+imperfect is:third	# T2 + se
 SFX t2 rò se erò	ts:subjunctive+imperfect is:third	# T2 + se
-SFX t2 r sto/A1FS [aei]r	ts:participle+passive is:singular+masculine	# T2 + st[oiae]
-SFX t2 rò sto/A1FS erò	ts:participle+passive is:singular+masculine	# T2 + st[oiae]
-SFX t2 r ndo [aei]r	ts:gerund+simple	# T7 + ndo
-SFX t2 rò ndo erò	ts:gerund+simple	# T7 + ndo
-SFX t2 r nto/FS [aei]r	ts:gerund+simple	# T7 + nto
-SFX t2 er ènto/FS er	ts:gerund+simple	# T7 + nto
-SFX t2 rò nto/FS erò	ts:gerund+simple	# T7 + nto
-SFX t2 erò ènto/FS erò	ts:gerund+simple	# T7 + nto
+SFX t2 r sto/A1 [aei]r	ts:participle+passive is:singular+masculine	# T2 + st[oiae]
+SFX t2 rò sto/A1 erò	ts:participle+passive is:singular+masculine	# T2 + st[oiae]
+SFX t2 r ndo [aei]r	ts:gerund+simple	# T2 + ndo
+SFX t2 rò ndo erò	ts:gerund+simple	# T2 + ndo
+SFX t2 r nto [aei]r	ts:gerund+simple	# T2 + nto
+SFX t2 er ènto er	ts:gerund+simple	# T2 + nto
+SFX t2 rò nto erò	ts:gerund+simple	# T2 + nto
+SFX t2 erò ènto erò	ts:gerund+simple	# T2 + nto
 
-SFX n2 Y 50
+SFX n2 Y 56
 SFX n2 ar eva/Ī0 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 ar éa/Ī0 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 ar eve/Ī0 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)e, T2 = T1: aŧento PVT > VT | à > é
@@ -443,8 +443,14 @@ SFX n2 ir esi ir	ts:subjunctive+imperfect is:second+singular	# T2 + si, T2 = T1:
 SFX n2 ir esi ir	ts:subjunctive+imperfect is:second+plural	# T2 + si, T2 = T1: aŧento PVT > VT | í > é
 SFX n2 ir ese ir	ts:subjunctive+imperfect is:third	# T2 + se, T2 = T1: aŧento PVT > VT | í > é
 SFX n2 ir esto/A1FS ir	ts:participle+passive is:singular+masculine	# T2 + st[oiae], T2 = T1: aŧento PVT > VT | í > é
-SFX n2 ir endo ir	ts:gerund+simple	# T7 + ndo, T2 = T1: aŧento PVT > VT | í > é
-SFX n2 ir ento/FS ir	ts:gerund+simple	# T7 + nto, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir endo ir	ts:gerund+simple	# T2 + ndo, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir ento/FS ir	ts:gerund+simple	# T2 + nto, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 r st [aei]r	ts:participle+passive is:singular+masculine	# T2 + st[oiae]
+SFX n2 rò st erò	ts:participle+passive is:singular+masculine	# T2 + st[oiae]
+SFX n2 r nt [aei]r	ts:gerund+simple	# T2 + nto
+SFX n2 er ènt er	ts:gerund+simple	# T2 + nto
+SFX n2 rò nt erò	ts:gerund+simple	# T2 + nto
+SFX n2 erò ènt erò	ts:gerund+simple	# T2 + nto
 
 # senŧa èle vanesente
 #SFX ṭ2 Y 35
@@ -812,68 +818,77 @@ SFX t6 ir é/A1 ir	ts:participle+passive is:singular+masculine	# T6 + ([oiae]), 
 
 
 # tèma 7 (from T1: aŧento PVT > VT, then T2: í > é)
-# skomenŧiando da 'l infenío par -àr, -ér, -ír, -ír/is
-# skomenŧiando da 'l indikativo futuro de 1s par '-er
-# variante fel.-bel. e liv.
-SFX t7 Y 22
-SFX t7 r nte/M0FS ar	ts:participle+active	# T7 + nt[ei]
-SFX t7 ar ente/M0FS ar	ts:participle+active	# T7 + nt[ei]
-SFX t7 ar ènte/M0FS ar	ts:participle+active	# T7 + nt[ei]
-SFX t7 r nte/M0FS er	ts:participle+active	# T7 + nt[ei]
-SFX t7 er ènte/M0FS er	ts:participle+active	# T7 + nt[ei]
-SFX t7 rò nte/M0FS erò	ts:participle+active	# T7 + nt[ei]
-SFX t7 erò ènte/M0FS erò	ts:participle+active	# T7 + nt[ei]
-SFX t7 ir ente/M0FS ir	ts:participle+active	# T7 + nt[ei]
-SFX t7 ir ènte/M0FS ir	ts:participle+active	# T7 + nt[ei]
-SFX t7 r ente/M0FS [^cijɉñ]ir	ts:participle+active	# T7 + nt[ei]
-SFX t7 r ènte/M0FS [^cijɉñ]ir	ts:participle+active	# T7 + nt[ei]
-SFX t7 er ènto/P0FS er	ts:participle+active	# T7 + nto/i
-SFX t7 ir ento/P0FS ir	ts:participle+active	# T7 + nto/i
-SFX t7 ir ènto/P0FS ir	ts:participle+active	# T7 + nto/i
-SFX t7 r ento/P0FS [^cijɉñ]ir	ts:participle+active	# T7 + nto/i
-SFX t7 r ènto/P0FS [^cijɉñ]ir	ts:participle+active	# T7 + nto/i
-SFX t7 ar ento/P0FS ar	ts:participle+active	# T7 + nto/i
-SFX t7 ar ènto/P0FS ar	ts:participle+active	# T7 + nto/i
-SFX t7 rò nto/P0FS erò	ts:participle+active	# T7 + nto/i
-SFX t7 erò ènto/P0FS erò	ts:participle+active	# T7 + nto/i
-SFX t7 erò anto/P0FS erò	ts:participle+active	# T7 + nto/i
-SFX t7 erò into/P0FS erò	ts:participle+active	# T7 + nto/i
+# -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
+# '-er: skomenŧiando da 'l indikativo futuro de 1s
+SFX t7 Y 16
+SFX t7 r nte/M0 ar	ts:participle+active	# T7 + nte
+SFX t7 r nte/M0Ᵽd er	ts:participle+active	# T7 + nte
+SFX t7 er ènte/M0 er	ts:participle+active	# T7 + nte
+SFX t7 rò nte/M0Ᵽd erò	ts:participle+active	# T7 + nte
+SFX t7 erò ènte/M0 erò	ts:participle+active	# T7 + nte
+SFX t7 ir ente/M0Ᵽd ir	ts:participle+active	# T7 + nte
+SFX t7 ir ènte/M0 ir	ts:participle+active	# T7 + nte
+SFX t7 r ente/M0Ᵽd [^cijɉñ]ir	ts:participle+active	# T7 + nte
+SFX t7 r ènte/M0 [^cijɉñ]ir	ts:participle+active	# T7 + nte
+SFX t7 ir esto/A1 ir	ts:participle+passive is:singular+masculine	# T7 + st[oiae]
+SFX t7 ir endo ir	ts:gerund+simple	# T7 + ndo
+SFX t7 ir ento ir	ts:gerund+simple	# T7 + nto
+SFX t7 ir ènto ir	ts:gerund+simple	# T7 + nto
+SFX t7 r endo [^cijɉñ]ir	ts:gerund+simple	# T7 + ndo
+SFX t7 r ento [^cijɉñ]ir	ts:gerund+simple	# T7 + nto
+SFX t7 r ènto [^cijɉñ]ir	ts:gerund+simple	# T7 + nto
+
+SFX n7 Y 14
+SFX n7 r nt ar	ts:participle+active	# T7 + nte
+SFX n7 r nt er	ts:participle+active	# T7 + nte
+SFX n7 er ènt er	ts:participle+active	# T7 + nte
+SFX n7 rò nt erò	ts:participle+active	# T7 + nte
+SFX n7 erò ènt erò	ts:participle+active	# T7 + nte
+SFX n7 ir ent ir	ts:participle+active	# T7 + nte
+SFX n7 ir ènt ir	ts:participle+active	# T7 + nte
+SFX n7 r ent [^cijɉñ]ir	ts:participle+active	# T7 + nte
+SFX n7 r ènt [^cijɉñ]ir	ts:participle+active	# T7 + nte
+SFX n7 ir est ir	ts:participle+passive is:singular+masculine	# T7 + st[oiae]
+SFX n7 ir ent ir	ts:gerund+simple	# T7 + nto
+SFX n7 ir ènt ir	ts:gerund+simple	# T7 + nto
+SFX n7 r ènt [^cijɉñ]ir	ts:gerund+simple	# T7 + nto
+SFX n7 r ent [^cijɉñ]ir	ts:gerund+simple	# T7 + nto
 
 # senŧa èle vanesente
-SFX ṭ7 Y 15
-SFX ṭ7 erò ando/P1N0 erò	ts:gerund+simple	# T7 + ndo
-SFX ṭ7 erò indo/P1N0 erò	ts:gerund+simple	# T7 + ndo
-SFX ṭ7 rò ndo/P1N0 erò	ts:gerund+simple	# T7 + ndo
-SFX ṭ7 ir endo/P1N0 ir	ts:gerund+simple	# T7 + ndo
-SFX ṭ7 er ènto/P1N0 er	ts:participle+active	# T7 + nto/i
-SFX ṭ7 ir ento/P1N0 ir	ts:participle+active	# T7 + nto/i
-SFX ṭ7 ir ènto/P1N0 ir	ts:participle+active	# T7 + nto/i
-SFX ṭ7 r ento/P1N0 [^cijɉñ]ir	ts:participle+active	# T7 + nto/i
-SFX ṭ7 r ènto/P1N0 [^cijɉñ]ir	ts:participle+active	# T7 + nto/i
-SFX ṭ7 ar ento/P1N0 ar	ts:participle+active	# T7 + nto/i
-SFX ṭ7 ar ènto/P1N0 ar	ts:participle+active	# T7 + nto/i
-SFX ṭ7 rò nto/P1N0 erò	ts:participle+active	# T7 + nto/i
-SFX ṭ7 erò ènto/P1N0 erò	ts:participle+active	# T7 + nto/i
-SFX ṭ7 erò anto/P1N0 erò	ts:participle+active	# T7 + nto/i
-SFX ṭ7 erò into/P1N0 erò	ts:participle+active	# T7 + nto/i
+#SFX ṭ7 Y 15
+#SFX ṭ7 erò ando/P1N0 erò	ts:gerund+simple	# T7 + ndo
+#SFX ṭ7 erò indo/P1N0 erò	ts:gerund+simple	# T7 + ndo
+#SFX ṭ7 rò ndo/P1N0 erò	ts:gerund+simple	# T7 + ndo
+#SFX ṭ7 ir endo/P1N0 ir	ts:gerund+simple	# T7 + ndo
+#SFX ṭ7 er ènto/P1N0 er	ts:participle+active	# T7 + nto/i
+#SFX ṭ7 ir ento/P1N0 ir	ts:participle+active	# T7 + nto/i
+#SFX ṭ7 ir ènto/P1N0 ir	ts:participle+active	# T7 + nto/i
+#SFX ṭ7 r ento/P1N0 [^cijɉñ]ir	ts:participle+active	# T7 + nto/i
+#SFX ṭ7 r ènto/P1N0 [^cijɉñ]ir	ts:participle+active	# T7 + nto/i
+#SFX ṭ7 ar ento/P1N0 ar	ts:participle+active	# T7 + nto/i
+#SFX ṭ7 ar ènto/P1N0 ar	ts:participle+active	# T7 + nto/i
+#SFX ṭ7 rò nto/P1N0 erò	ts:participle+active	# T7 + nto/i
+#SFX ṭ7 erò ènto/P1N0 erò	ts:participle+active	# T7 + nto/i
+#SFX ṭ7 erò anto/P1N0 erò	ts:participle+active	# T7 + nto/i
+#SFX ṭ7 erò into/P1N0 erò	ts:participle+active	# T7 + nto/i
 
 # ko èle vanesente
-SFX ẗ7 Y 15
-SFX ẗ7 erò ando/P2N0 erò	ts:gerund+simple	# T7 + ndo
-SFX ẗ7 erò indo/P2N0 erò	ts:gerund+simple	# T7 + ndo
-SFX ẗ7 rò ndo/P2N0 erò	ts:gerund+simple	# T7 + ndo
-SFX ẗ7 ir endo/P2N0 ir	ts:gerund+simple	# T7 + ndo
-SFX ẗ7 er ènto/P2N0 er	ts:participle+active	# T7 + nto/i
-SFX ẗ7 ir ento/P2N0 ir	ts:participle+active	# T7 + nto/i
-SFX ẗ7 ir ènto/P2N0 ir	ts:participle+active	# T7 + nto/i
-SFX ẗ7 r ento/P2N0 [^cijɉñ]ir	ts:participle+active	# T7 + nto/i
-SFX ẗ7 r ènto/P2N0 [^cijɉñ]ir	ts:participle+active	# T7 + nto/i
-SFX ẗ7 ar ento/P2N0 ar	ts:participle+active	# T7 + nto/i
-SFX ẗ7 ar ènto/P2N0 ar	ts:participle+active	# T7 + nto/i
-SFX ẗ7 rò nto/P2N0 erò	ts:participle+active	# T7 + nto/i
-SFX ẗ7 erò ènto/P2N0 erò	ts:participle+active	# T7 + nto/i
-SFX ẗ7 erò anto/P2N0 erò	ts:participle+active	# T7 + nto/i
-SFX ẗ7 erò into/P2N0 erò	ts:participle+active	# T7 + nto/i
+#SFX ẗ7 Y 15
+#SFX ẗ7 erò ando/P2N0 erò	ts:gerund+simple	# T7 + ndo
+#SFX ẗ7 erò indo/P2N0 erò	ts:gerund+simple	# T7 + ndo
+#SFX ẗ7 rò ndo/P2N0 erò	ts:gerund+simple	# T7 + ndo
+#SFX ẗ7 ir endo/P2N0 ir	ts:gerund+simple	# T7 + ndo
+#SFX ẗ7 er ènto/P2N0 er	ts:participle+active	# T7 + nto/i
+#SFX ẗ7 ir ento/P2N0 ir	ts:participle+active	# T7 + nto/i
+#SFX ẗ7 ir ènto/P2N0 ir	ts:participle+active	# T7 + nto/i
+#SFX ẗ7 r ento/P2N0 [^cijɉñ]ir	ts:participle+active	# T7 + nto/i
+#SFX ẗ7 r ènto/P2N0 [^cijɉñ]ir	ts:participle+active	# T7 + nto/i
+#SFX ẗ7 ar ento/P2N0 ar	ts:participle+active	# T7 + nto/i
+#SFX ẗ7 ar ènto/P2N0 ar	ts:participle+active	# T7 + nto/i
+#SFX ẗ7 rò nto/P2N0 erò	ts:participle+active	# T7 + nto/i
+#SFX ẗ7 erò ènto/P2N0 erò	ts:participle+active	# T7 + nto/i
+#SFX ẗ7 erò anto/P2N0 erò	ts:participle+active	# T7 + nto/i
+#SFX ẗ7 erò into/P2N0 erò	ts:participle+active	# T7 + nto/i
 
 
 # tèma 8 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: VT > Ø)
