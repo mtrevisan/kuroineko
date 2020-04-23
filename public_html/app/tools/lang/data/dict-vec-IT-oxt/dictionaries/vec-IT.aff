@@ -944,15 +944,14 @@ SFX t9 o i o	ts:imperative+present is:second+singular	# T9
 
 
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
-# skomenŧiando da 'l infenío par -àr, -ér, -ír
-# skomenŧiando da 'l indikativo futuro de 1s par '-er
-# skomenŧiando da 'l indikativo prexente de 1s par -ír/is
-SFX ț0 Y 5
-SFX ț0 ar e ar	ts:indicative+present is:third	# T10
-SFX ț0 r 0 er	ts:indicative+present is:third	# T10
-SFX ț0 rò 0 erò	ts:indicative+present is:third	# T10
-SFX ț0 ir e ir	ts:indicative+present is:third	# T10
-SFX ț0 o e iso	ts:indicative+present is:third	# T10
+# -àr, -ér: skomenŧiando da 'l infenío
+# '-er: skomenŧiando da 'l indikativo futuro de 1s
+# -ír, -ír/is: skomenŧiando da 'l indikativo prexente de 1s
+#T10	=	T3: i > e									kànta	vàle		kréde			dòrme			feníse
+SFX ț0 Y 3
+SFX ț0 r 0 [ae]r	ts:indicative+present is:third	# T10
+SFX ț0 rò 0 erò	ts:imperative+present is:second+singular	# T9
+SFX ț0 o e o	ts:indicative+present is:third	# T10
 
 
 # tèma 11 (from T1: senŧa aŧento, then T4: VT > Ø)
