@@ -244,7 +244,7 @@ NEEDAFFIX N0
 #T2	=	T1: aŧento PVT > VT						kantà	valé		kredé			dormí			fení
 #T3	=	T1: aŧento VT > (A)PVT | í > <ís>i	kànta	vàle		kréde			dòrmi			fenísi
 #T4	=	T1: senŧa aŧento							kanta	vale		krede			dormi			feni
-#T5	=	T2: à > è | (é > í) | (í > é)			kantè	valé/(í)	kredé/(í)	dormí/(é)	fení/(é)
+#T5	=	T2: à > é | (é > í) | (í > é)			kanté	valé/(í)	kredé/(í)	dormí/(é)	fení/(é)
 #T6	=	T2: é > ú									kantà	valú		kredú			dormí			fení
 #T7	=	T2: í > é									kantà	valé		kredé			dormé			fené
 #T8	=	T3: VT > Ø									kànt	vàl		kréd			dòrm			fenís
@@ -524,8 +524,8 @@ SFX n2 ir ento/FS ir	ts:gerund+simple	# T7 + nto, T2 = T1: aŧento PVT > VT | í
 
 
 # tèma 4 (from T1: senŧa aŧento)
-# skomenŧiando da 'l infenío par -àr, -ér, -ír, -ír/is
-# skomenŧiando da 'l indikativo futuro de 1s par '-er
+# -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
+# '-er: skomenŧiando da 'l indikativo futuro de 1s
 SFX t4 Y 42
 SFX t4 0 ò/Ī0 [aei]r	ts:indicative+future is:first+singular	# T4 + rò
 SFX t4 0 0/Ī0N0 erò	ts:indicative+future is:first+singular	# T4 + rò
@@ -718,72 +718,74 @@ SFX n4 ir erisié ir	ts:conditional+present is:second+singular	# T4 + r(is)ié, 
 
 
 # tèma 5 (from T1: aŧento PVT > VT, then T2: à > é | (é > í) | (í > é))
-# skomenŧiando da 'l infenío par -àr, -ér, -ír, -ír/is
-# skomenŧiando da 'l indikativo futuro de 1s par '-er
-SFX t5 Y 33
-SFX t5 ar emo/P0Ī0 ar	ts:indicative+present is:first+plural	# T5 + mo
-SFX t5 r mo/P0Ī0 [ei]r	ts:indicative+present is:first+plural	# T5 + mo
-SFX t5 ir emo/P0Ī0 ir	ts:indicative+present is:first+plural	# T5 + mo
-SFX t5 er imo/P0Ī0 er	ts:indicative+present is:first+plural	# T5 + mo
-SFX t5 erò imo/P0Ī0 erò	ts:indicative+present is:first+plural	# T5 + mo
-SFX t5 rò mo/P0Ī0 erò	ts:indicative+present is:first+plural	# T5 + mo
-SFX t5 ar è ar	ts:indicative+present is:first+plural	# T5 + mo
-SFX t5 er é er	ts:indicative+present is:first+plural	# T5 + mo
-SFX t5 ir í ir	ts:indicative+present is:first+plural	# T5 + mo
-SFX t5 ir é ir	ts:indicative+present is:first+plural	# T5 + mo
-SFX t5 er í er	ts:indicative+present is:first+plural	# T5 + mo
-SFX t5 erò í erò	ts:indicative+present is:first+plural	# T5 + mo
-SFX t5 rò é erò	ts:indicative+present is:first+plural	# T5 + mo
-SFX t5 ar emo/P0Ī0 ar	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX t5 r mo/P0Ī0 [ei]r	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX t5 ir emo/P0Ī0 ir	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX t5 er imo/P0Ī0 er	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX t5 erò imo/P0Ī0 erò	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX t5 rò mo/P0Ī0 erò	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX t5 ar è ar	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX t5 er é er	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX t5 ir í ir	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX t5 ir é ir	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX t5 er í er	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX t5 erò í erò	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX t5 rò é erò	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX t5 ar è ar	ts:imperative+present is:second+plural	# T5
-SFX t5 er é er	ts:imperative+present is:second+plural	# T5
-SFX t5 ir í ir	ts:imperative+present is:second+plural	# T5
-SFX t5 ir é ir	ts:imperative+present is:second+plural	# T5
-SFX t5 er í er	ts:imperative+present is:second+plural	# T5
-SFX t5 erò í erò	ts:imperative+present is:second+plural	# T5
-SFX t5 rò é erò	ts:imperative+present is:second+plural	# T5
+# -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
+# '-er: skomenŧiando da 'l indikativo futuro de 1s
+SFX t5 Y 35
+SFX t5 ar emo/Ī0 ar	ts:indicative+present is:first+plural	# T5 + mo
+SFX t5 r mo/Ī0 er	ts:indicative+present is:first+plural	# T5 + mo
+SFX t5 rò mo/Ī0 erò	ts:indicative+present is:first+plural	# T5 + mo
+SFX t5 er imo/Ī0 er	ts:indicative+present is:first+plural	# T5 + mo
+SFX t5 erò imo/Ī0 erò	ts:indicative+present is:first+plural	# T5 + mo
+SFX t5 ir emo/Ī0 ir	ts:indicative+present is:first+plural	# T5 + mo
+SFX t5 r mo/Ī0 ir	ts:indicative+present is:first+plural	# T5 + mo
+SFX t5 ar é/Ī3 ar	ts:indicative+present is:second+plural	# T5
+SFX t5 er é/Ī3 er	ts:indicative+present is:second+plural	# T5
+SFX t5 erò é/Ī3 erò	ts:indicative+present is:second+plural	# T5
+SFX t5 er í/Ī3 er	ts:indicative+present is:second+plural	# T5
+SFX t5 erò í/Ī3 erò	ts:indicative+present is:second+plural	# T5
+SFX t5 ir í/Ī3 ir	ts:indicative+present is:second+plural	# T5
+SFX t5 ir é/Ī3 ir	ts:indicative+present is:second+plural	# T5
+SFX t5 ar emo ar	ts:subjunctive+present is:first+plural	# T5 + mo
+SFX t5 r mo er	ts:subjunctive+present is:first+plural	# T5 + mo
+SFX t5 rò mo erò	ts:subjunctive+present is:first+plural	# T5 + mo
+SFX t5 er imo er	ts:subjunctive+present is:first+plural	# T5 + mo
+SFX t5 erò imo erò	ts:subjunctive+present is:first+plural	# T5 + mo
+SFX t5 ir emo ir	ts:subjunctive+present is:first+plural	# T5 + mo
+SFX t5 r mo ir	ts:subjunctive+present is:first+plural	# T5 + mo
+SFX t5 ar é ar	ts:subjunctive+present is:second+plural	# T5
+SFX t5 er é er	ts:subjunctive+present is:second+plural	# T5
+SFX t5 erò é erò	ts:subjunctive+present is:second+plural	# T5
+SFX t5 er í er	ts:subjunctive+present is:second+plural	# T5
+SFX t5 erò í erò	ts:subjunctive+present is:second+plural	# T5
+SFX t5 ir í ir	ts:subjunctive+present is:second+plural	# T5
+SFX t5 ir é ir	ts:subjunctive+present is:second+plural	# T5
+SFX t5 ar é/Ī3 ar	ts:imperative+present is:second+plural	# T5
+SFX t5 er é/Ī3 er	ts:imperative+present is:second+plural	# T5
+SFX t5 erò é/Ī3 erò	ts:imperative+present is:second+plural	# T5
+SFX t5 er í/Ī3 er	ts:imperative+present is:second+plural	# T5
+SFX t5 erò í/Ī3 erò	ts:imperative+present is:second+plural	# T5
+SFX t5 ir í/Ī3 ir	ts:imperative+present is:second+plural	# T5
+SFX t5 ir é/Ī3 ir	ts:imperative+present is:second+plural	# T5
 
 # senŧa èle vanesente
-SFX ṭ5 Y 12
-SFX ṭ5 ar emo/P1N0 ar	ts:indicative+present is:first+plural	# T5 + mo
-SFX ṭ5 r mo/P1N0 [ei]r	ts:indicative+present is:first+plural	# T5 + mo
-SFX ṭ5 ir emo/P1N0 ir	ts:indicative+present is:first+plural	# T5 + mo
-SFX ṭ5 er imo/P1N0 er	ts:indicative+present is:first+plural	# T5 + mo
-SFX ṭ5 erò imo/P1N0 erò	ts:indicative+present is:first+plural	# T5 + mo
-SFX ṭ5 rò mo/P1N0 erò	ts:indicative+present is:first+plural	# T5 + mo
-SFX ṭ5 ar emo/P1N0 ar	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX ṭ5 r mo/P1N0 [ei]r	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX ṭ5 ir emo/P1N0 ir	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX ṭ5 er imo/P1N0 er	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX ṭ5 erò imo/P1N0 erò	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX ṭ5 rò mo/P1N0 erò	ts:subjunctive+present is:first+plural	# T5 + mo
+#SFX ṭ5 Y 12
+#SFX ṭ5 ar emo/P1N0 ar	ts:indicative+present is:first+plural	# T5 + mo
+#SFX ṭ5 r mo/P1N0 [ei]r	ts:indicative+present is:first+plural	# T5 + mo
+#SFX ṭ5 ir emo/P1N0 ir	ts:indicative+present is:first+plural	# T5 + mo
+#SFX ṭ5 er imo/P1N0 er	ts:indicative+present is:first+plural	# T5 + mo
+#SFX ṭ5 erò imo/P1N0 erò	ts:indicative+present is:first+plural	# T5 + mo
+#SFX ṭ5 rò mo/P1N0 erò	ts:indicative+present is:first+plural	# T5 + mo
+#SFX ṭ5 ar emo/P1N0 ar	ts:subjunctive+present is:first+plural	# T5 + mo
+#SFX ṭ5 r mo/P1N0 [ei]r	ts:subjunctive+present is:first+plural	# T5 + mo
+#SFX ṭ5 ir emo/P1N0 ir	ts:subjunctive+present is:first+plural	# T5 + mo
+#SFX ṭ5 er imo/P1N0 er	ts:subjunctive+present is:first+plural	# T5 + mo
+#SFX ṭ5 erò imo/P1N0 erò	ts:subjunctive+present is:first+plural	# T5 + mo
+#SFX ṭ5 rò mo/P1N0 erò	ts:subjunctive+present is:first+plural	# T5 + mo
 
 # ko èle vanesente
-SFX ẗ5 Y 12
-SFX ẗ5 ar emo/P2N0 ar	ts:indicative+present is:first+plural	# T5 + mo
-SFX ẗ5 r mo/P2N0 [ei]r	ts:indicative+present is:first+plural	# T5 + mo
-SFX ẗ5 ir emo/P2N0 ir	ts:indicative+present is:first+plural	# T5 + mo
-SFX ẗ5 er imo/P2N0 er	ts:indicative+present is:first+plural	# T5 + mo
-SFX ẗ5 erò imo/P2N0 erò	ts:indicative+present is:first+plural	# T5 + mo
-SFX ẗ5 rò mo/P2N0 erò	ts:indicative+present is:first+plural	# T5 + mo
-SFX ẗ5 ar emo/P2N0 ar	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX ẗ5 r mo/P2N0 [ei]r	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX ẗ5 ir emo/P2N0 ir	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX ẗ5 er imo/P2N0 er	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX ẗ5 erò imo/P2N0 erò	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX ẗ5 rò mo/P2N0 erò	ts:subjunctive+present is:first+plural	# T5 + mo
+#SFX ẗ5 Y 12
+#SFX ẗ5 ar emo/P2N0 ar	ts:indicative+present is:first+plural	# T5 + mo
+#SFX ẗ5 r mo/P2N0 [ei]r	ts:indicative+present is:first+plural	# T5 + mo
+#SFX ẗ5 ir emo/P2N0 ir	ts:indicative+present is:first+plural	# T5 + mo
+#SFX ẗ5 er imo/P2N0 er	ts:indicative+present is:first+plural	# T5 + mo
+#SFX ẗ5 erò imo/P2N0 erò	ts:indicative+present is:first+plural	# T5 + mo
+#SFX ẗ5 rò mo/P2N0 erò	ts:indicative+present is:first+plural	# T5 + mo
+#SFX ẗ5 ar emo/P2N0 ar	ts:subjunctive+present is:first+plural	# T5 + mo
+#SFX ẗ5 r mo/P2N0 [ei]r	ts:subjunctive+present is:first+plural	# T5 + mo
+#SFX ẗ5 ir emo/P2N0 ir	ts:subjunctive+present is:first+plural	# T5 + mo
+#SFX ẗ5 er imo/P2N0 er	ts:subjunctive+present is:first+plural	# T5 + mo
+#SFX ẗ5 erò imo/P2N0 erò	ts:subjunctive+present is:first+plural	# T5 + mo
+#SFX ẗ5 rò mo/P2N0 erò	ts:subjunctive+present is:first+plural	# T5 + mo
 
 
 # tèma 6 (from T1: aŧento PVT > VT, then T2: é > ú)
