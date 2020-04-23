@@ -301,6 +301,7 @@ NEEDAFFIX N0
 #kàntoe/a0a1a2I1
 #kantar/t1n1t2n2ṭ2ẗ2t4n4ṭ4ẗ4t5ṭ5ẗ5t6t7n7ṭ7ẗ7t8n8ṭ8ẗ8t9ț0ņ1ț2ņ2P0P1P2
 #kanto/t8n8ṭ8ẗ8P0P1P2FSI0N0
+#krederò/N0
 #kàntoe/I1
 
 
@@ -534,7 +535,7 @@ SFX n2 erò ènt erò	ts:gerund+simple	# T2 + nto
 # '-er: skomenŧiando da 'l indikativo futuro de 1s
 SFX t4 Y 42
 SFX t4 0 ò/Ī0 [aei]r	ts:indicative+future is:first+singular	# T4 + rò
-SFX t4 0 0/Ī0N0 erò	ts:indicative+future is:first+singular	# T4 + rò
+SFX t4 0 0/Ī0 erò	ts:indicative+future is:first+singular	# T4 + rò
 SFX t4 0 à/Ī0 [aei]r	ts:indicative+future is:first+singular	# T4 + rà
 SFX t4 ò à/Ī0 erò	ts:indicative+future is:first+singular	# T4 + rà
 SFX t4 0 è/Ī0 [aei]r	ts:indicative+future is:first+singular	# T4 + rè
@@ -902,7 +903,6 @@ SFX t8 o i [^i]o	ts:subjunctive+present is:second+singular	# T8 + i
 SFX t8 io i io	ts:subjunctive+present is:second+singular	# T8 + i
 SFX t8 o e o	ts:subjunctive+present is:third	# T8 + e
 
-# variante fel.-bel. e liv.
 SFX n8 Y 6
 SFX n8 o e/Ī0 o	ts:indicative+present is:first+singular	# T8 + e
 SFX n8 o e/Ī2 o	ts:indicative+present is:second+singular	# T8 + e
@@ -933,15 +933,14 @@ SFX n8 o a o	ts:subjunctive+present is:third	# T8 + a
 
 
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
-# skomenŧiando da 'l infenío par -àr, -ér, -ír
-# skomenŧiando da 'l indikativo futuro de 1s par '-er
-# skomenŧiando da 'l indikativo prexente de 1s par -ír/is
-SFX t9 Y 5
-SFX t9 ar i ar	ts:imperative+present is:second+singular	# T9
+# -àr, -ér: skomenŧiando da 'l infenío
+# '-er: skomenŧiando da 'l indikativo futuro de 1s
+# -ír, -ír/is: skomenŧiando da 'l indikativo prexente de 1s
+SFX t9 Y 4
+SFX t9 r 0 ar	ts:imperative+present is:second+singular	# T9
 SFX t9 er i er	ts:imperative+present is:second+singular	# T9
 SFX t9 erò i erò	ts:imperative+present is:second+singular	# T9
-SFX t9 r 0 ir	ts:imperative+present is:second+singular	# T9
-SFX t9 o i iso	ts:imperative+present is:second+singular	# T9
+SFX t9 o i o	ts:imperative+present is:second+singular	# T9
 
 
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
