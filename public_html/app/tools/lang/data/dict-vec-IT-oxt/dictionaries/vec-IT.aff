@@ -262,23 +262,23 @@ NEEDAFFIX N0
 #										T12 + (i)ón(e)											T12 + é([dg]e)
 #										T12 + én(e)
 #IND. INPARF.*		T2 + v[aeo]	T2 + vimo					T2 + vi					T2 + vi					T2 + va
-#										T11 + (iv)(i)ón(se)									T11 + (iv)ié
-#										T11 + (iv)én(se)
+#										T11 + (iv)(i)ón(s[ei])									T11 + (iv)ié
+#										T11 + (iv)én(s[ei])
 #DHONTAT. INPARF.	T2 + se		T2 + simo					T2 + si					T2 + si					T2 + se
-#										T11 + (is)(i)ón(e/se)								T11 + (is)ié([dg]e)
-#										T11 + (is)én(e/se)
-#IND. FUT.*			T4 + r[òàè]	T4 + rémo/rímo				T4 + rà					T4 + ré/í				T4 + rà
+#										T11 + (is)(i)ón(e/s[ei])							T11 + (is)ié([dg]e)
+#										T11 + (is)én(e/s[ei])
+#IND. FUT.*			T4 + r[òàè]	T4 + r[éí]mo				T4 + rà					T4 + r[éí]				T4 + rà
 #										T4 + rón
 #										T4 + rén
 #KOND. PREX.		T4 + rí[ae]	T4 + résimo					T4 + ría					T4 + rési				T4 + ría/e
-#										T4 + r(is)(i)ón(se)									T4 + r(is)ié
-#										T4 + r(is)én(se)
+#										T4 + r(is)(i)ón(s[ei])								T4 + r(is)ié
+#										T4 + r(is)én(s[ei])
 #						(ant. T4 + ràve*)
 #KOM. PREX.			--				--								T9							T5							--
 #																									T12 + é
 #INF. SÉNPLISE	T1 + r(e)
 #PART. ATIVO	T7 + nte
-#PART. PASIVO	T6 + (do), T6 + (d)i, T6 + (d)a/e
+#PART. PASIVO	T6 + d[oiae], T6 + ([oiae])
 #					T2 + st[oiae]
 #					T7 + st[oiae]
 #XER. SÉNPLISE	T2 + ndo
@@ -2048,7 +2048,7 @@ SFX a1 0 àelo/A1 [aei]r
 SFX a1 0 àvelo/A1 [aei]r
 SFX a1 0 íe-lo/A1 [aei]r
 SFX a1 0 íelo/A1 [aei]r
-SFX a1 0 íselo/I8 [aei]r
+SFX a1 0 íselo/Ī5 [aei]r
 SFX a1 0 onme/P1N0 [aei]r
 SFX a1 0 ónmelo/P1 [aei]r
 SFX a1 ar e-lo/A1 [^i]ar
@@ -2069,7 +2069,7 @@ SFX a1 ar erémolo/P1 ar
 SFX a1 ar erémomelo/P1 ar
 SFX a1 ar eríe-lo/A1 ar
 SFX a1 ar eríelo/A1 ar
-SFX a1 ar eríselo/I8 ar
+SFX a1 ar eríselo/Ī5 ar
 SFX a1 ar es ar	ts:subjunctive+imperfect
 SFX a1 ar est ar	ts:participle+passive
 SFX a1 ar eve-lo/A1 ar
@@ -2116,7 +2116,7 @@ SFX a1 er arémolo/P1 er
 SFX a1 er arémomelo/P1 er
 SFX a1 er aríe-lo/A1 er
 SFX a1 er aríelo/A1 er
-SFX a1 er aríselo/I8 er
+SFX a1 er aríselo/Ī5 er
 SFX a1 er aronme/P1N0 er
 SFX a1 er arónmelo/P1 er
 SFX a1 er ilo/P1 er
@@ -2184,7 +2184,7 @@ SFX a2 0 àeƚo/A1 [aei]r
 SFX a2 0 àveƚo/A1 [aei]r
 SFX a2 0 íe-ƚo/A1 [aei]r
 SFX a2 0 íeƚo/A1 [aei]r
-SFX a2 0 íseƚo/I9 [aei]r
+SFX a2 0 íseƚo/ī5 [aei]r
 SFX a2 0 ónmeƚo/p1 [aei]r
 SFX a2 ar e-ƚo/A1 [^i]ar
 SFX a2 ar emo/Ṗ1N0 ar
@@ -2202,7 +2202,7 @@ SFX a2 ar erémomeƚo/p1 ar
 SFX a2 ar erémoƚo/p1 ar
 SFX a2 ar eríe-ƚo/A1 ar
 SFX a2 ar eríeƚo/A1 ar
-SFX a2 ar eríseƚo/I9 ar
+SFX a2 ar eríseƚo/ī5 ar
 SFX a2 ar eve-ƚo/A1 ar
 SFX a2 ar eƚo/A1 ar
 SFX a2 ar ion/Ṗ1N0 [^cijɉñ]ar
@@ -2245,7 +2245,7 @@ SFX a2 er arémomeƚo/p1 er
 SFX a2 er arémoƚo/p1 er
 SFX a2 er aríe-ƚo/A1 er
 SFX a2 er aríeƚo/A1 er
-SFX a2 er aríseƚo/I9 er
+SFX a2 er aríseƚo/ī5 er
 SFX a2 er arónmeƚo/p1 er
 SFX a2 er imo/Ṗ1N0 er
 SFX a2 er ion/Ṗ1N0 [^cijɉñ]er
@@ -2583,7 +2583,7 @@ SFX a4 0 àvelo/A1 ar
 SFX a4 0 emo/Ᵽ1N0 ar	ts:indicative+future
 SFX a4 0 íelo/A1 ar
 SFX a4 0 íe-lo/A1 ar
-SFX a4 0 íselo/I8 ar
+SFX a4 0 íselo/Ī5 ar
 SFX a4 0 on/Ᵽ1N0 ar
 SFX a4 0 onme/P1N0 ar
 SFX a4 0 ónmelo/P1 ar
@@ -2604,7 +2604,7 @@ SFX a4 ar erémolo/P1 ar
 SFX a4 ar erémomelo/P1 ar
 SFX a4 ar eríe-lo/A1 ar
 SFX a4 ar eríelo/A1 ar
-SFX a4 ar eríselo/I8 ar
+SFX a4 ar eríselo/Ī5 ar
 SFX a4 ar es ar
 SFX a4 ar est ar
 SFX a4 ar eve-lo/A1 ar
@@ -2695,7 +2695,7 @@ SFX a5 0 àveƚo/A1 ar
 SFX a5 0 emo/Ṗ1N0 ar	ts:indicative+future
 SFX a5 0 íeƚo/A1 ar
 SFX a5 0 íe-ƚo/A1 ar
-SFX a5 0 íseƚo/I9 ar
+SFX a5 0 íseƚo/ī5 ar
 SFX a5 0 on/Ṗ1N0 ar
 SFX a5 0 ónmeƚo/p1 ar
 SFX a5 0 ave-ƚo/A1 ar
@@ -2739,7 +2739,7 @@ SFX a5 ar erémoƚo/p1 ar
 SFX a5 ar erémomeƚo/p1 ar
 SFX a5 ar eríeƚo/A1 ar
 SFX a5 ar eríe-ƚo/A1 ar
-SFX a5 ar eríseƚo/I9 ar
+SFX a5 ar eríseƚo/ī5 ar
 SFX a5 ar erave-ƚo/A1 ar
 SFX a5 ar eve-ƚo/A1 ar
 SFX a5 ar ion/Ṗ1N0 [^cijɉñ]ar
@@ -3049,7 +3049,7 @@ SFX b1 ò émolo/P1 ò
 SFX b1 ò émomelo/P1 ò
 SFX b1 ò íe-lo/A1 ò
 SFX b1 ò íelo/A1 ò
-SFX b1 ò íselo/I8 ò
+SFX b1 ò íselo/Ī5 ò
 SFX b1 ò onme/P1N0 ò
 SFX b1 ò ónmelo/P1 ò
 
@@ -3107,7 +3107,7 @@ SFX b2 ò émomeƚo/p1 ò
 SFX b2 ò émoƚo/p1 ò
 SFX b2 ò íe-ƚo/A1 ò
 SFX b2 ò íeƚo/A1 ò
-SFX b2 ò íseƚo/I9 ò
+SFX b2 ò íseƚo/ī5 ò
 SFX b2 ò ónmeƚo/p1 ò
 
 # vèrbi '-er inregolari ((a|apar|as|de|inkon|intra|kon|man|o|re|sos|tra)[ctv]èñer)
@@ -3287,7 +3287,7 @@ SFX b4 vo bímene/P0P1p1 evo
 SFX b4 ò alo/A1 ò
 SFX b4 ò ane/I0 ò	is:interrogative
 SFX b4 ò atu/I2 ò	is:interrogative
-SFX b4 ò ave/Ᵽ2Ᵽ3Ṗ3I8I9 ò	ts:conditional+present
+SFX b4 ò ave/Ᵽ2Ᵽ3Ṗ3Ī5ī5 ò	ts:conditional+present
 SFX b4 ò aƚo/A1 ò
 SFX b4 ò emo/Ᵽ0Ᵽ1Ṗ1Ī0 ò
 SFX b4 ò en/Ī0 ò
@@ -3438,7 +3438,7 @@ SFX b6 xerò remo/Ᵽ1N0 xerò
 SFX b6 xerò rimo/Ᵽ1N0 xerò
 SFX b6 xerò ríe-lo/A1 xerò
 SFX b6 xerò ríelo/A1 xerò
-SFX b6 xerò ríselo/I8 xerò
+SFX b6 xerò ríselo/Ī5 xerò
 SFX b6 xerò ron/Ᵽ1N0 xerò
 SFX b6 xerò ronme/P1N0 xerò
 SFX b6 xerò rónmelo/P1 xerò
@@ -3469,7 +3469,7 @@ SFX b7 xerò remo/Ṗ1N0 xerò
 SFX b7 xerò rimo/Ṗ1N0 xerò
 SFX b7 xerò ríe-ƚo/A1 xerò
 SFX b7 xerò ríeƚo/A1 xerò
-SFX b7 xerò ríseƚo/I9 xerò
+SFX b7 xerò ríseƚo/ī5 xerò
 SFX b7 xerò ron/Ṗ1N0 xerò
 SFX b7 xerò rónmeƚo/p1 xerò
 
@@ -3514,8 +3514,8 @@ SFX b8 ò íe/Ᵽ2Ī0 ò
 SFX b8 ò íelo/A1 ò
 SFX b8 ò íene/I0 ò	is:interrogative
 SFX b8 ò ímoe/I0 ò
-SFX b8 ò íseƚo/I9 ò
-SFX b8 ò íselo/I8 ò
+SFX b8 ò íseƚo/ī5 ò
+SFX b8 ò íselo/Ī5 ò
 SFX b8 ò íu/I3 ò
 SFX b8 ò ónmeƚo/p1 ò
 SFX b8 ò ónmelo/P1 ò
@@ -3733,7 +3733,7 @@ SFX b8 erò rò/Ī0 erò
 SFX b8 erò ròe/I0 erò
 SFX b8 erò rónmene/P0P1p1 aerò
 SFX b8 erò r/Ᵽ0Ᵽ1Ṗ1 erò
-SFX b8 erò rave/Ᵽ2Ᵽ3Ṗ3I8I9 erò	ts:conditional+present
+SFX b8 erò rave/Ᵽ2Ᵽ3Ṗ3Ī5ī5 erò	ts:conditional+present
 SFX b8 erò re erò
 SFX b8 erò remo/Ᵽ0Ᵽ1Ṗ1Ī0 erò
 SFX b8 erò ren/Ī0 erò
@@ -3957,7 +3957,7 @@ SFX ḅ9 èser jèrone/I0 èser	is:interrogative
 SFX ḅ9 èser saralo/A1 èser
 SFX ḅ9 èser sarane/I0 èser	is:interrogative
 SFX ḅ9 èser saratu/I2 èser	is:interrogative
-SFX ḅ9 èser sarave/Ᵽ2Ᵽ3Ṗ3I8I9 èser	ts:conditional+present
+SFX ḅ9 èser sarave/Ᵽ2Ᵽ3Ṗ3Ī5ī5 èser	ts:conditional+present
 SFX ḅ9 èser saraƚo/A1 èser
 SFX ḅ9 èser saremo/Ᵽ0Ᵽ1Ṗ1Ī0 èser
 SFX ḅ9 èser saren/Ī0 èser
@@ -4016,7 +4016,7 @@ SFX ḅ9 èser sepí/Ī3 èser
 SFX ḅ9 èser seràlo/A1 èser
 SFX ḅ9 èser serane/I0 èser	is:interrogative
 SFX ḅ9 èser seràtu/I2 èser	is:interrogative
-SFX ḅ9 èser serave/Ᵽ2Ᵽ3Ṗ3I8I9 èser	ts:conditional+present
+SFX ḅ9 èser serave/Ᵽ2Ᵽ3Ṗ3Ī5ī5 èser	ts:conditional+present
 SFX ḅ9 èser seràƚo/A1 èser
 SFX ḅ9 èser seremo/Ᵽ0Ᵽ1Ṗ1Ī0 èser
 SFX ḅ9 èser seren/Ī0 èser
@@ -4339,7 +4339,7 @@ SFX c0 ver piéu/I3 aver
 SFX c0 ver ràlo/A1 aver
 SFX c0 ver ràne/I0 aver	is:interrogative
 SFX c0 ver ràtu/I2 aver	is:interrogative
-SFX c0 ver rave/Ᵽ2Ᵽ3Ṗ3I8I9 aver	ts:conditional+present
+SFX c0 ver rave/Ᵽ2Ᵽ3Ṗ3Ī5ī5 aver	ts:conditional+present
 SFX c0 ver raƚo/A1 aver
 SFX c0 ver remo/Ᵽ0Ᵽ1Ṗ1Ī0 aver
 SFX c0 ver resi/Ī3 aver
@@ -4418,7 +4418,7 @@ SFX c1 aver òɉo aver
 SFX c1 er aràlo/A1 aver
 SFX c1 er aràne/I0 aver	is:interrogative
 SFX c1 er aràtu/I2 aver	is:interrogative
-SFX c1 er arave/Ᵽ2Ᵽ3Ṗ3I8I9 aver	ts:conditional+present
+SFX c1 er arave/Ᵽ2Ᵽ3Ṗ3Ī5ī5 aver	ts:conditional+present
 SFX c1 er aràƚo/A1 aver
 SFX c1 er aremo/Ᵽ0Ᵽ1Ṗ1Ī0 aver
 SFX c1 er aren/Ī0 aver
@@ -4649,7 +4649,7 @@ SFX c1 aer òɉo aer
 SFX c1 er aràlo/A1 aer
 SFX c1 er aràne/I0 aer	is:interrogative
 SFX c1 er aràtu/I2 aer	is:interrogative
-SFX c1 er arave/Ᵽ2Ᵽ3Ṗ3I8I9 aer	ts:conditional+present
+SFX c1 er arave/Ᵽ2Ᵽ3Ṗ3Ī5ī5 aer	ts:conditional+present
 SFX c1 er aràƚo/A1 aer
 SFX c1 er aremo/Ᵽ0Ᵽ1Ṗ1Ī0 aer
 SFX c1 er aren/Ī0 aer
@@ -4930,7 +4930,7 @@ SFX c3 ler ràelo/A1 oler
 SFX c3 ler ràvelo/A1 oler
 SFX c3 ler ríe-lo/A1 oler
 SFX c3 ler ríelo/A1 oler
-SFX c3 ler ríselo/I8 oler
+SFX c3 ler ríselo/Ī5 oler
 SFX c3 ler rónmelo/P1 oler
 SFX c3 lo ge-lo/A1 [cit][oò]lo
 SFX c3 lo gelo/A1 [cit][oò]lo
@@ -4953,7 +4953,7 @@ SFX c4 ƚer ràeƚo/A1 oƚer
 SFX c4 ƚer ràveƚo/A1 oƚer
 SFX c4 ƚer ríe-ƚo/A1 oƚer
 SFX c4 ƚer ríeƚo/A1 oƚer
-SFX c4 ƚer ríseƚo/I9 oƚer
+SFX c4 ƚer ríseƚo/ī5 oƚer
 SFX c4 ƚer rónmeƚo/p1 oƚer
 SFX c4 ƚo ge-ƚo/A1 [cit]òƚo
 SFX c4 ƚo geƚo/A1 [cit]òƚo
@@ -5225,7 +5225,7 @@ SFX d1 ir arémolo/P1 ir
 SFX d1 ir arémomelo/P1 ir
 SFX d1 ir aríe-lo/A1 ir
 SFX d1 ir aríelo/A1 ir
-SFX d1 ir aríselo/I8 ir
+SFX d1 ir aríselo/Ī5 ir
 SFX d1 ir elo/A1 ir
 SFX d1 ir endo/Ᵽ1N0 ir	ts:gerund+simple
 SFX d1 ir ento/Ᵽ0Ᵽ1FS ir	ts:gerund+simple
@@ -5241,7 +5241,7 @@ SFX d1 ir erémolo/P1 ir
 SFX d1 ir erémomelo/P1 ir
 SFX d1 ir eríe-lo/A1 ir
 SFX d1 ir eríelo/A1 ir
-SFX d1 ir eríselo/I8 ir
+SFX d1 ir eríselo/Ī5 ir
 SFX d1 ir es ir
 SFX d1 ir est ir
 SFX d1 ir eve-lo/A1 ir
@@ -5301,7 +5301,7 @@ SFX d2 ir arémomeƚo/p1 ir
 SFX d2 ir arémoƚo/p1 ir
 SFX d2 ir aríe-ƚo/A1 ir
 SFX d2 ir aríeƚo/A1 ir
-SFX d2 ir aríseƚo/I9 ir
+SFX d2 ir aríseƚo/ī5 ir
 SFX d2 ir endo/Ṗ1N0 ir	ts:gerund+simple
 SFX d2 ir ento/Ᵽ0Ṗ1 ir	ts:gerund+simple
 SFX d2 ir ènto/Ᵽ0Ṗ1 ir	ts:gerund+simple
@@ -5318,7 +5318,7 @@ SFX d2 ir erémomeƚo/p1 ir
 SFX d2 ir erémoƚo/p1 ir
 SFX d2 ir eríe-ƚo/A1 ir
 SFX d2 ir eríeƚo/A1 ir
-SFX d2 ir eríseƚo/I9 ir
+SFX d2 ir eríseƚo/ī5 ir
 SFX d2 ir eve-ƚo/A1 ir
 SFX d2 ir eƚo/A1 ir
 SFX d2 ir on/Ṗ1N0 ir
@@ -5608,7 +5608,7 @@ SFX e1 ir arémolo/P1 ir
 SFX e1 ir arémomelo/P1 ir
 SFX e1 ir aríe-lo/A1 ir
 SFX e1 ir aríelo/A1 ir
-SFX e1 ir aríselo/I8 ir
+SFX e1 ir aríselo/Ī5 ir
 SFX e1 ir elo/A1 ir
 SFX e1 ir endo/Ᵽ1N0 ir	ts:gerund+simple
 SFX e1 ir ento/Ᵽ0Ᵽ1FS ir	ts:gerund+simple
@@ -5624,7 +5624,7 @@ SFX e1 ir erémolo/P1 ir
 SFX e1 ir erémomelo/P1 ir
 SFX e1 ir eríe-lo/A1 ir
 SFX e1 ir eríelo/A1 ir
-SFX e1 ir eríselo/I8 ir
+SFX e1 ir eríselo/Ī5 ir
 SFX e1 ir es ir
 SFX e1 ir est ir
 SFX e1 ir eve-lo/A1 ir
@@ -5682,7 +5682,7 @@ SFX e2 ir arémomeƚo/p1 ir
 SFX e2 ir arémoƚo/p1 ir
 SFX e2 ir aríe-ƚo/A1 ir
 SFX e2 ir aríeƚo/A1 ir
-SFX e2 ir aríseƚo/I9 ir
+SFX e2 ir aríseƚo/ī5 ir
 SFX e2 ir endo/Ṗ1N0 ir	ts:gerund+simple
 SFX e2 ir ento/Ᵽ0Ṗ1 ir	ts:gerund+simple
 SFX e2 ir ènto/Ᵽ0Ṗ1 ir	ts:gerund+simple
@@ -5699,7 +5699,7 @@ SFX e2 ir erémomeƚo/p1 ir
 SFX e2 ir erémoƚo/p1 ir
 SFX e2 ir eríe-ƚo/A1 ir
 SFX e2 ir eríeƚo/A1 ir
-SFX e2 ir eríseƚo/I9 ir
+SFX e2 ir eríseƚo/ī5 ir
 SFX e2 ir eve-ƚo/A1 ir
 SFX e2 ir eƚo/A1 ir
 SFX e2 ir é-ƚo/A1 ir
@@ -5997,7 +5997,7 @@ SFX f1 ir arémolo/P1 ir
 SFX f1 ir arémomelo/P1 ir
 SFX f1 ir aríe-lo/A1 ir
 SFX f1 ir aríelo/A1 ir
-SFX f1 ir aríselo/I8 ir
+SFX f1 ir aríselo/Ī5 ir
 SFX f1 ir e/Ᵽ1N0 ir
 SFX f1 ir elo/A1 ir
 SFX f1 ir eralo/A1 ir
@@ -6010,7 +6010,7 @@ SFX f1 ir erémolo/P1 ir
 SFX f1 ir erémomelo/P1 ir
 SFX f1 ir eríe-lo/A1 ir
 SFX f1 ir eríelo/A1 ir
-SFX f1 ir eríselo/I8 ir
+SFX f1 ir eríselo/Ī5 ir
 SFX f1 ir eve-lo/A1 ir
 SFX f1 ir é-lo/A1 ir
 SFX f1 ir ée-lo/A1 ir
@@ -6070,7 +6070,7 @@ SFX f2 ir arémomeƚo/p1 ir
 SFX f2 ir arémoƚo/p1 ir
 SFX f2 ir aríe-ƚo/A1 ir
 SFX f2 ir aríeƚo/A1 ir
-SFX f2 ir aríseƚo/I9 ir
+SFX f2 ir aríseƚo/ī5 ir
 SFX f2 ir erave-ƚo/A1 ir
 SFX f2 ir eraƚo/A1 ir
 SFX f2 ir erà-ƚo/A1 ir
@@ -6081,7 +6081,7 @@ SFX f2 ir erémomeƚo/p1 ir
 SFX f2 ir erémoƚo/p1 ir
 SFX f2 ir eríe-ƚo/A1 ir
 SFX f2 ir eríeƚo/A1 ir
-SFX f2 ir eríseƚo/I9 ir
+SFX f2 ir eríseƚo/ī5 ir
 SFX f2 ir eve-ƚo/A1 ir
 SFX f2 ir e/Ṗ1N0 ir
 SFX f2 ir eƚo/A1 ir
@@ -6605,40 +6605,40 @@ SFX i4 0 -ƚi [eou]	is:third+interrogative
 SFX i4 0 -ƚe [eou]	is:third+interrogative
 
 # interogativi kondiŧional prexente tèrŧa parsona (stakài e takài)
-SFX I8 Y 15
-SFX I8 ave ise-lo rave	is:third+interrogative
-SFX I8 ave ise-la rave	is:third+interrogative
-SFX I8 ave ise-li rave	is:third+interrogative
-SFX I8 ave ise-le rave	is:third+interrogative
-SFX I8 ave íselo rave	is:third+interrogative
-SFX I8 ave ísela rave	is:third+interrogative
-SFX I8 ave íseli rave	is:third+interrogative
-SFX I8 ave ísele rave	is:third+interrogative
-SFX I8 íselo ise-lo ríselo	is:third+interrogative
-SFX I8 íselo ise-la ríselo	is:third+interrogative
-SFX I8 íselo ise-li ríselo	is:third+interrogative
-SFX I8 íselo ise-le ríselo	is:third+interrogative
-SFX I8 o a ríselo	is:third+interrogative
-SFX I8 o i ríselo	is:third+interrogative
-SFX I8 o e ríselo	is:third+interrogative
+SFX Ī5 Y 15
+SFX Ī5 ave ise-lo rave	is:third+interrogative
+SFX Ī5 ave ise-la rave	is:third+interrogative
+SFX Ī5 ave ise-li rave	is:third+interrogative
+SFX Ī5 ave ise-le rave	is:third+interrogative
+SFX Ī5 ave íselo rave	is:third+interrogative
+SFX Ī5 ave ísela rave	is:third+interrogative
+SFX Ī5 ave íseli rave	is:third+interrogative
+SFX Ī5 ave ísele rave	is:third+interrogative
+SFX Ī5 íselo ise-lo ríselo	is:third+interrogative
+SFX Ī5 íselo ise-la ríselo	is:third+interrogative
+SFX Ī5 íselo ise-li ríselo	is:third+interrogative
+SFX Ī5 íselo ise-le ríselo	is:third+interrogative
+SFX Ī5 o a ríselo	is:third+interrogative
+SFX Ī5 o i ríselo	is:third+interrogative
+SFX Ī5 o e ríselo	is:third+interrogative
 
 # interogativi kondiŧional prexente tèrŧa parsona ko èle vanesente (stakài e takài)
-SFX I9 Y 15
-SFX I9 ave ise-ƚo rave	is:third+interrogative
-SFX I9 ave ise-ƚa rave	is:third+interrogative
-SFX I9 ave ise-ƚi rave	is:third+interrogative
-SFX I9 ave ise-ƚe rave	is:third+interrogative
-SFX I9 ave íseƚo rave	is:third+interrogative
-SFX I9 ave íseƚa rave	is:third+interrogative
-SFX I9 ave íseƚi rave	is:third+interrogative
-SFX I9 ave íseƚe rave	is:third+interrogative
-SFX I9 íseƚo ise-ƚo ríseƚo	is:third+interrogative
-SFX I9 íseƚo ise-ƚa ríseƚo	is:third+interrogative
-SFX I9 íseƚo ise-ƚi ríseƚo	is:third+interrogative
-SFX I9 íseƚo ise-ƚe ríseƚo	is:third+interrogative
-SFX I9 o a ríseƚo	is:third+interrogative
-SFX I9 o i ríseƚo	is:third+interrogative
-SFX I9 o e ríseƚo	is:third+interrogative
+SFX ī5 Y 15
+SFX ī5 ave ise-ƚo rave	is:third+interrogative
+SFX ī5 ave ise-ƚa rave	is:third+interrogative
+SFX ī5 ave ise-ƚi rave	is:third+interrogative
+SFX ī5 ave ise-ƚe rave	is:third+interrogative
+SFX ī5 ave íseƚo rave	is:third+interrogative
+SFX ī5 ave íseƚa rave	is:third+interrogative
+SFX ī5 ave íseƚi rave	is:third+interrogative
+SFX ī5 ave íseƚe rave	is:third+interrogative
+SFX ī5 íseƚo ise-ƚo ríseƚo	is:third+interrogative
+SFX ī5 íseƚo ise-ƚa ríseƚo	is:third+interrogative
+SFX ī5 íseƚo ise-ƚi ríseƚo	is:third+interrogative
+SFX ī5 íseƚo ise-ƚe ríseƚo	is:third+interrogative
+SFX ī5 o a ríseƚo	is:third+interrogative
+SFX ī5 o i ríseƚo	is:third+interrogative
+SFX ī5 o e ríseƚo	is:third+interrogative
 
 
 
