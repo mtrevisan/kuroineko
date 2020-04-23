@@ -394,7 +394,7 @@ SFX t2 er ènto/FS er	ts:gerund+simple	# T7 + nto
 SFX t2 rò nto/FS erò	ts:gerund+simple	# T7 + nto
 SFX t2 erò ènto/FS erò	ts:gerund+simple	# T7 + nto
 
-SFX n2 Y 48
+SFX n2 Y 50
 SFX n2 ar eva/Ī0 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 ar éa/Ī0 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 ar eve/Ī0 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)e, T2 = T1: aŧento PVT > VT | à > é
@@ -417,8 +417,10 @@ SFX n2 ar eva/Ī4 ar	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧe
 SFX n2 ar éa/Ī4 ar	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 r se [aei]r	ts:subjunctive+imperfect is:second+singular	# T2 + se
 SFX n2 rò se erò	ts:subjunctive+imperfect is:second+singular	# T2 + se
-SFX n2 ar ese ar	ts:subjunctive+imperfect is:first+singular is:third	# T2 + se, T2 = T1: aŧento PVT > VT | à > é
-SFX n2 ar esi ar	ts:subjunctive+imperfect is:second+singular is:second+plural	# T2 + si, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar ese ar	ts:subjunctive+imperfect is:first+singular	# T2 + se, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar esi ar	ts:subjunctive+imperfect is:second+singular	# T2 + si, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar esi ar	ts:subjunctive+imperfect is:second+plural	# T2 + si, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar ese ar	ts:subjunctive+imperfect is:third	# T2 + se, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 ar ésimo ar	ts:subjunctive+imperfect is:second+plural	# T2 + simo, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 ar esto/A1FS ar	ts:participle+passive is:singular+masculine	# T2 + sto/i/a/e, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 ir eva/Ī0 ir	ts:indicative+imperfect is:first+singular	# T2 + (v)a, T2 = T1: aŧento PVT > VT | í > é
@@ -882,28 +884,31 @@ SFX t8 o i/P0 [^i]o	ts:subjunctive+present is:second+singular	# T8 + i
 SFX t8 io i/P0 io	ts:subjunctive+present is:second+singular	# T8 + i
 
 # variante fel.-bel. e liv.
-SFX n8 Y 3
+SFX n8 Y 4
 SFX n8 o a/P0 o	ts:indicative+present is:second+singular	# T8 + e
 SFX n8 o e/P0P1Ī0 o	ts:indicative+present is:first+singular	# T8 + e
-SFX n8 o e/P0P1Ī0 o	ts:subjunctive+present is:second+singular is:third	# T8 + e
+SFX n8 o e/P0P1Ī0 o	ts:subjunctive+present is:second+singular	# T8 + e
+SFX n8 o e/P0P1Ī0 o	ts:subjunctive+present is:third	# T8 + e
 
 # senŧa èle vanesente
-SFX ṭ8 Y 6
+SFX ṭ8 Y 7
 SFX ṭ8 0 0/P0P1N0 o	ts:indicative+present is:first+singular	# T8 + o
 SFX ṭ8 o i/P0P1Ī2N0 [^i]o	ts:indicative+present is:second+singular	# T8 + i
 SFX ṭ8 io i/P0P1Ī2N0 io	ts:indicative+present is:second+singular	# T8 + i
-SFX ṭ8 o a/P0P1N0 o	ts:subjunctive+present is:first+singular is:third	# T8 + a
+SFX ṭ8 o a/P0P1N0 o	ts:subjunctive+present is:first+singular	# T8 + a
 SFX ṭ8 o i/P0P1Ī2N0 [^i]o	ts:subjunctive+present is:second+singular	# T8 + i
 SFX ṭ8 io i/P0P1Ī2N0 io	ts:subjunctive+present is:second+singular	# T8 + i
+SFX ṭ8 o a/P0P1N0 o	ts:subjunctive+present is:third	# T8 + a
 
 # ko èle vanesente
-SFX ẗ8 Y 6
+SFX ẗ8 Y 7
 SFX ẗ8 0 0/P0P2N0 o	ts:indicative+present is:first+singular	# T8 + o
 SFX ẗ8 o i/P0P2Ī2N0 [^i]o	ts:indicative+present is:second+singular	# T8 + i
 SFX ẗ8 io i/P0P2Ī2N0 io	ts:indicative+present is:second+singular	# T8 + i
-SFX ẗ8 o a/P0P2N0 o	ts:subjunctive+present is:first+singular is:third	# T8 + a
+SFX ẗ8 o a/P0P2N0 o	ts:subjunctive+present is:first+singular	# T8 + a
 SFX ẗ8 o i/P0P2Ī2N0 [^i]o	ts:subjunctive+present is:second+singular	# T8 + i
 SFX ẗ8 io i/P0P2Ī2N0 io	ts:subjunctive+present is:second+singular	# T8 + i
+SFX ẗ8 o a/P0P2N0 o	ts:subjunctive+present is:third	# T8 + a
 
 
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
