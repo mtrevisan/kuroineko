@@ -285,26 +285,15 @@ NEEDAFFIX N0
 #					T7 + ndo
 # mòdi ko 'l asterisko i vòl dir ke i gà anka la deklinaŧion interogativa
 
-# base verbs' starting forms: -àr: T1, T8 + o, T8 + oe interrogative, -ér: ... '-er: ..., -ír: ..., -ír/is: ...
-#balar/t1t2t4t5t6t7t9ț0ț1P0P1	po:verb ts:infinitive+simple
-#balo/t8t9ț0ț2ẗ2P0P1FSĪ0	po:verb ts:indicative+present is:first+singular st:balar
-#bàloe/I0	po:verb ts:indicative+present is:first+singular is:interrogative st:balar
-
-# -àr: kantar/kanto/kàntoe, examinar/exàmino/exàminoe
-# -ér: valer/valo/vàloe, ?
-# '-er: kréder/kredo/krédoe, ?
-# -ír: dormir/dòrmo/dòrmoe, ?
-# -ír/is: fenir/feniso/fenísoe, ?
-
 #kantar/a0a1a2P0P1P2
 #kanto/a0a1a2P0P1P2Ī0FS
 #kàntoe/a0a1a2I0
 
-#-àr:			kantar/t1t2n2t4n4t5t6t7n7t9ț0ņ1ț2ņ2, kanto/t8n8FS, kàntoe/I0I2I4
-#-ér:			valer/t1t2n2t4n4t5t6t7n7t9ț0ņ1ț2ņ2, valo/t8n8FS, vàloe/I0I2I4
-#'-er:		kréder/t1n1, kredo/t8n8FS, krédoe/I0I2I4, krederò/t2n2t4n4t5t6t7n7t9ț0ņ1ț2ņ2
-#-ír:			dormir/t1t2n2t4n4t5t6t7n7ņ1, dòrmo/t8n8t9ț0ț2ņ2FS, dòrmoe/I0I2I4
-#-ír/is::	fenir/t1t2n2t4n4t5t6t7n7ņ1, feniso/t8n8t9ț0ț2ņ2FS, fenísoe/I0I2I4
+#-àr:			kantar/t1t2n2t4n4t5t6t7n7t9ț0ņ1ț2ņ2, kanto/t8n8FS, kàntoe/I0
+#-ér:			valer/t1t2n2t4n4t5t6t7n7t9ț0ņ1ț2ņ2, valo/t8n8FS, vàloe/I0
+#'-er:		kréder/t1n1, kredo/t8n8FS, krédoe/I0, krederò/t2n2t4n4t5t6t7n7t9ț0ņ1ț2ņ2
+#-ír:			dormir/t1t2n2t4n4t5t6t7n7ņ1, dòrmo/t8n8t9ț0ț2ņ2FS, dòrmoe/I0
+#-ír/is::	fenir/t1t2n2t4n4t5t6t7n7ņ1, feniso/t8n8t9ț0ț2ņ2FS, fenísoe/I0
 
 
 # tèma 1
@@ -330,7 +319,7 @@ SFX n1 àlder aldre àlder	ts:infinitive+simple
 # tèma 2 (from T1: aŧento PVT > VT)
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
-SFX t2 Y 88
+SFX t2 Y 84
 SFX t2 r va/Ī0 [aei]r	ts:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX t2 ar àva/I0N0 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX t2 er éva/I0N0 er	ts:indicative+imperfect is:first+singular	# T2 + (v)a
@@ -389,16 +378,12 @@ SFX t2 ir íi/Ī3I3 ir	ts:indicative+imperfect is:second+plural	# T2 + (v)i
 SFX t2 rò vi/Ī3 erò	ts:indicative+imperfect is:second+plural	# T2 + (v)i
 SFX t2 erò évi/I3N0 erò	ts:indicative+imperfect is:second+plural	# T2 + (v)i
 SFX t2 erò éi/Ī3I3 erò	ts:indicative+imperfect is:second+plural	# T2 + (v)i
-SFX t2 r va/Ī4 [aei]r	ts:indicative+imperfect is:third	# T2 + (v)a
-SFX t2 ar àva/I4N0 ar	ts:indicative+imperfect is:third	# T2 + (v)a
-SFX t2 er éva/I4N0 er	ts:indicative+imperfect is:third	# T2 + (v)a
-SFX t2 ir íva/I4N0 ir	ts:indicative+imperfect is:third	# T2 + (v)a
-SFX t2 ar àa/Ī4I4 ar	ts:indicative+imperfect is:third	# T2 + (v)a
-SFX t2 er éa/Ī4I4 er	ts:indicative+imperfect is:third	# T2 + (v)a
-SFX t2 ir ía/Ī4I4 ir	ts:indicative+imperfect is:third	# T2 + (v)a
-SFX t2 rò va/Ī4 erò	ts:indicative+imperfect is:third	# T2 + (v)a
-SFX t2 erò éva/I4N0 erò	ts:indicative+imperfect is:third	# T2 + (v)a
-SFX t2 erò éa/Ī4I4 erò	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX t2 r va [aei]r	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX t2 ar àa ar	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX t2 er éa er	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX t2 ir ía ir	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX t2 rò va erò	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX t2 erò éa erò	ts:indicative+imperfect is:third	# T2 + (v)a
 SFX t2 r se [aei]r	ts:subjunctive+imperfect is:first+singular	# T2 + se
 SFX t2 rò se erò	ts:subjunctive+imperfect is:first+singular	# T2 + se
 SFX t2 ar àsimo ar	ts:subjunctive+imperfect is:first+plural	# T2 + simo
@@ -420,7 +405,7 @@ SFX t2 er ènto er	ts:gerund+simple	# T2 + nto
 SFX t2 rò nto erò	ts:gerund+simple	# T2 + nto
 SFX t2 erò ènto erò	ts:gerund+simple	# T2 + nto
 
-SFX n2 Y 72
+SFX n2 Y 70
 SFX n2 ar eva/Ī0 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 ar éva/I0N0 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 ar éa/Ī0I0 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
@@ -448,9 +433,8 @@ SFX n2 ar éi/Ī2I2 ar	ts:indicative+imperfect is:second+singular	# T2 + (v)i, T
 SFX n2 ar evi/Ī3 ar	ts:indicative+imperfect is:second+plural	# T2 + (v)i, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 ar évi/I3N0 ar	ts:indicative+imperfect is:second+plural	# T2 + (v)i, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 ar éi/Ī3I3 ar	ts:indicative+imperfect is:second+plural	# T2 + (v)i, T2 = T1: aŧento PVT > VT | à > é
-SFX n2 ar eva/Ī4 ar	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
-SFX n2 ar éva/I4N0 ar	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
-SFX n2 ar éa/Ī4I4 ar	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar eva ar	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar éa ar	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 r se [aei]r	ts:subjunctive+imperfect is:second+singular	# T2 + se
 SFX n2 rò se erò	ts:subjunctive+imperfect is:second+singular	# T2 + se
 SFX n2 ar ese ar	ts:subjunctive+imperfect is:first+singular	# T2 + se, T2 = T1: aŧento PVT > VT | à > é
@@ -476,9 +460,8 @@ SFX n2 ir éi/Ī2I2 ir	ts:indicative+imperfect is:second+singular	# T2 + (v)i, T
 SFX n2 ir evi/Ī3 ir	ts:indicative+imperfect is:second+plural	# T2 + (v)i, T2 = T1: aŧento PVT > VT | í > é
 SFX n2 ir évi/I3N0 ir	ts:indicative+imperfect is:second+plural	# T2 + (v)i, T2 = T1: aŧento PVT > VT | í > é
 SFX n2 ir éi/Ī3I3 ir	ts:indicative+imperfect is:second+plural	# T2 + (v)i, T2 = T1: aŧento PVT > VT | í > é
-SFX n2 ir eva/Ī4 ir	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | í > é
-SFX n2 ir éva/I4N0 ir	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | í > é
-SFX n2 ir éa/Ī4I4 ir	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir eva ir	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir éa ir	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | í > é
 SFX n2 ir ese ir	ts:subjunctive+imperfect is:first+singular	# T2 + se, T2 = T1: aŧento PVT > VT | í > é
 SFX n2 ir ésimo ir	ts:subjunctive+imperfect is:first+plural	# T2 + simo, T2 = T1: aŧento PVT > VT | í > é
 SFX n2 ir esi ir	ts:subjunctive+imperfect is:second+singular	# T2 + si, T2 = T1: aŧento PVT > VT | í > é
@@ -495,7 +478,23 @@ SFX n2 rò nt erò	ts:gerund+simple	# T2 + nto
 SFX n2 erò ènt erò	ts:gerund+simple	# T2 + nto
 
 # senŧa èle vanesente
-#SFX ṭ2 Y 35
+SFX ṭ2 Y 16
+SFX ṭ2 r va/Ī4N0 [aei]r	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX ṭ2 ar àva/I4N0 ar	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX ṭ2 er éva/I4N0 er	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX ṭ2 ir íva/I4N0 ir	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX ṭ2 ar àa/Ī4I4N0 ar	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX ṭ2 er éa/Ī4I4N0 er	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX ṭ2 ir ía/Ī4I4N0 ir	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX ṭ2 rò va/Ī4N0 erò	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX ṭ2 erò éva/I4N0 erò	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX ṭ2 erò éa/Ī4I4N0 erò	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX ṭ2 ar eva/Ī4N0 ar	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
+SFX ṭ2 ar éva/I4N0 ar	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
+SFX ṭ2 ar éa/Ī4I4N0 ar	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
+SFX ṭ2 ir eva/Ī4N0 ir	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | í > é
+SFX ṭ2 ir éva/I4N0 ir	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | í > é
+SFX ṭ2 ir éa/Ī4I4N0 ir	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | í > é
 #SFX ṭ2 r ndo/P1N0 [aei]r	ts:gerund+simple is:procomplementar	# T7 + ndo
 #SFX ṭ2 rò ndo/P1N0 erò	ts:gerund+simple is:procomplementar	# T7 + ndo
 #SFX ṭ2 ir endo/P1N0 ir	ts:gerund+simple is:procomplementar	# T7 + ndo
@@ -533,7 +532,23 @@ SFX n2 erò ènt erò	ts:gerund+simple	# T2 + nto
 #SFX ṭ2 ir èntomelo/P7 ir	ts:gerund+simple is:procomplementar	# T7 + nto
 
 # ko èle vanesente
-#SFX ẗ2 Y 35
+SFX ẗ2 Y 16
+SFX ẗ2 r va/ī4N0 [aei]r	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX ẗ2 ar àva/i4N0 ar	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX ẗ2 er éva/i4N0 er	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX ẗ2 ir íva/i4N0 ir	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX ẗ2 ar àa/ī4i4N0 ar	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX ẗ2 er éa/ī4i4N0 er	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX ẗ2 ir ía/ī4i4N0 ir	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX ẗ2 rò va/ī4N0 erò	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX ẗ2 erò éva/i4N0 erò	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX ẗ2 erò éa/ī4i4N0 erò	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX ẗ2 ar eva/ī4N0 ar	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
+SFX ẗ2 ar éva/i4N0 ar	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
+SFX ẗ2 ar éa/ī4i4N0 ar	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
+SFX ẗ2 ir eva/ī4N0 ir	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | í > é
+SFX ẗ2 ir éva/i4N0 ir	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | í > é
+SFX ẗ2 ir éa/ī4i4N0 ir	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | í > é
 #SFX ẗ2 r ndo/P2N0 [aei]r	ts:gerund+simple is:procomplementar	# T7 + ndo
 #SFX ẗ2 rò ndo/P2N0 erò	ts:gerund+simple is:procomplementar	# T7 + ndo
 #SFX ẗ2 ir endo/P2N0 ir	ts:gerund+simple is:procomplementar	# T7 + ndo
@@ -574,7 +589,7 @@ SFX n2 erò ènt erò	ts:gerund+simple	# T2 + nto
 # tèma 4 (from T1: senŧa aŧento)
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
-SFX t4 Y 56
+SFX t4 Y 54
 SFX t4 0 ò/Ī0I0 [aei]r	ts:indicative+future is:first+singular	# T4 + rò
 SFX t4 0 0/Ī0I0N0 erò	ts:indicative+future is:first+singular	# T4 + rò
 SFX t4 0 à/Ī0I0 [aei]r	ts:indicative+future is:first+singular	# T4 + rà
@@ -595,8 +610,8 @@ SFX t4 0 é/Ī3I3 [aei]r	ts:indicative+future is:second+plural	# T4 + ré
 SFX t4 ò é/Ī3I3 erò	ts:indicative+future is:second+plural	# T4 + ré
 SFX t4 0 í/Ī3I3 [aei]r	ts:indicative+future is:second+plural	# T4 + rí
 SFX t4 ò í/Ī3I3 erò	ts:indicative+future is:second+plural	# T4 + rí
-SFX t4 0 à/Ī4I4 [aei]r	ts:indicative+future is:third	# T4 + rà
-SFX t4 ò à/Ī4I4 erò	ts:indicative+future is:third	# T4 + rà
+SFX t4 0 à [aei]r	ts:indicative+future is:third	# T4 + rà
+SFX t4 ò à erò	ts:indicative+future is:third	# T4 + rà
 SFX t4 0 ía [aei]r	ts:conditional+present is:first+singular	# T4 + ría
 SFX t4 ò ía erò	ts:conditional+present is:first+singular	# T4 + ría
 SFX t4 0 íe [aei]r	ts:conditional+present is:first+singular	# T4 + ríe
@@ -627,10 +642,8 @@ SFX t4 0 ave/Ī3 [aei]r	ts:conditional+present is:second+plural	# T4 + ràve
 SFX t4 0 àve/I3N0 [aei]r	ts:conditional+present is:second+plural	# T4 + ràve
 SFX t4 ò ave/Ī3 erò	ts:conditional+present is:second+plural	# T4 + ràve
 SFX t4 ò àve/I3N0 erò	ts:conditional+present is:second+plural	# T4 + ràve
-SFX t4 0 ave/Ī4 [aei]r	ts:conditional+present is:third	# T4 + ràve
-SFX t4 0 àve/I4N0 [aei]r	ts:conditional+present is:third	# T4 + ràve
-SFX t4 ò ave/Ī4 erò	ts:conditional+present is:third	# T4 + ràve
-SFX t4 ò àve/I4N0 erò	ts:conditional+present is:third	# T4 + ràve
+SFX t4 0 ave [aei]r	ts:conditional+present is:third	# T4 + ràve
+SFX t4 ò ave erò	ts:conditional+present is:third	# T4 + ràve
 
 SFX n4 Y 136
 SFX n4 0 on/Ī0 [aei]r	ts:indicative+future is:first+plural	# T4 + ron
@@ -771,7 +784,13 @@ SFX n4 ir erié ir	ts:conditional+present is:second+singular	# T4 + r(is)ié, T4
 SFX n4 ir erisié ir	ts:conditional+present is:second+singular	# T4 + r(is)ié, T4 = T1: senŧa aŧento | í > é
 
 # senŧa èle vanesente
-#SFX ṭ4 Y 12
+SFX ṭ4 Y 6
+SFX ṭ4 0 à/Ī4I4N0 [aei]r	ts:indicative+future is:third	# T4 + rà
+SFX ṭ4 ò à/Ī4I4N0 erò	ts:indicative+future is:third	# T4 + rà
+SFX ṭ4 0 ave/Ī4N0 [aei]r	ts:conditional+present is:third	# T4 + ràve
+SFX ṭ4 0 àve/I4N0 [aei]r	ts:conditional+present is:third	# T4 + ràve
+SFX ṭ4 ò ave/Ī4N0 erò	ts:conditional+present is:third	# T4 + ràve
+SFX ṭ4 ò àve/I4N0 erò	ts:conditional+present is:third	# T4 + ràve
 #SFX ṭ4 0 emo/P1N0 [aei]r	ts:indicative+future is:first+plural	# T4 + remo
 #SFX ṭ4 ò emo/P1N0 erò	ts:indicative+future is:first+plural	# T4 + remo
 #SFX ṭ4 0 imo/P1N0 [aei]r	ts:indicative+future is:first+plural	# T4 + rimo
@@ -786,7 +805,13 @@ SFX n4 ir erisié ir	ts:conditional+present is:second+singular	# T4 + r(is)ié, 
 #SFX ṭ4 ar erà-lo/A1 ar	ts:indicative+future is:third is:interrogative	# T4 + rà
 
 # ko èle vanesente
-#SFX ẗ4 Y 12
+SFX ẗ4 Y 6
+SFX ẗ4 0 à/ī4i4N0 [aei]r	ts:indicative+future is:third	# T4 + rà
+SFX ẗ4 ò à/ī4i4N0 erò	ts:indicative+future is:third	# T4 + rà
+SFX ẗ4 0 ave/ī4N0 [aei]r	ts:conditional+present is:third	# T4 + ràve
+SFX ẗ4 0 àve/i4N0 [aei]r	ts:conditional+present is:third	# T4 + ràve
+SFX ẗ4 ò ave/ī4N0 erò	ts:conditional+present is:third	# T4 + ràve
+SFX ẗ4 ò àve/i4N0 erò	ts:conditional+present is:third	# T4 + ràve
 #SFX ẗ4 0 emo/P2N0 [aei]r	ts:indicative+future is:first+plural	# T4 + remo
 #SFX ẗ4 ò emo/P2N0 erò	ts:indicative+future is:first+plural	# T4 + remo
 #SFX ẗ4 0 imo/P2N0 [aei]r	ts:indicative+future is:first+plural	# T4 + rimo
@@ -990,13 +1015,14 @@ SFX t8 o e o	ts:subjunctive+present is:third	# T8 + e
 SFX n8 Y 6
 SFX n8 o e/Ī0 o	ts:indicative+present is:first+singular	# T8 + e
 SFX n8 o e/Ī2 o	ts:indicative+present is:second+singular	# T8 + e
-SFX n8 o e/Ī4 o	ts:indicative+present is:third	# T8 + e
+SFX n8 o e o	ts:indicative+present is:third	# T8 + e
 SFX n8 o e o	ts:subjunctive+present is:first+singular	# T8 + e
 SFX n8 o a o	ts:subjunctive+present is:first+singular	# T8 + a
 SFX n8 o a o	ts:subjunctive+present is:third	# T8 + a
 
 # senŧa èle vanesente
-#SFX ṭ8 Y 7
+SFX ṭ8 Y 1
+SFX ṭ8 o e/Ī4N0 o	ts:indicative+present is:third	# T8 + e
 #SFX ṭ8 0 0/P0P1N0 o	ts:indicative+present is:first+singular	# T8 + o
 #SFX ṭ8 o i/P0P1Ī2N0 [^i]o	ts:indicative+present is:second+singular	# T8 + i
 #SFX ṭ8 io i/P0P1Ī2N0 io	ts:indicative+present is:second+singular	# T8 + i
@@ -1006,7 +1032,8 @@ SFX n8 o a o	ts:subjunctive+present is:third	# T8 + a
 #SFX ṭ8 o a/P0P1N0 o	ts:subjunctive+present is:third	# T8 + a
 
 # ko èle vanesente
-#SFX ẗ8 Y 7
+SFX ẗ8 Y 1
+SFX ẗ8 o e/ī4N0 o	ts:indicative+present is:third	# T8 + e
 #SFX ẗ8 0 0/P0P2N0 o	ts:indicative+present is:first+singular	# T8 + o
 #SFX ẗ8 o i/P0P2Ī2N0 [^i]o	ts:indicative+present is:second+singular	# T8 + i
 #SFX ẗ8 io i/P0P2Ī2N0 io	ts:indicative+present is:second+singular	# T8 + i
@@ -6314,34 +6341,34 @@ SFX Ī0 0 -nti [^n]	is:first+interrogative
 
 # interogativi prima parsona singolar e plural (takài)
 SFX I0 Y 17
-SFX I0 e i e	is:interrogative
-SFX I0 e mi [^no]e	is:interrogative
-SFX I0 e mi [^m]oe	is:interrogative
-SFX I0 e mi [^éí]moe	is:interrogative
-SFX I0 émoe emio émoe	is:interrogative
-SFX I0 ímoe imio ímoe	is:interrogative
-SFX I0 àvone avio àvone	is:interrogative
-SFX I0 évone evio évone	is:interrogative
-SFX I0 ívone ivio ívone	is:interrogative
-SFX I0 ne mi ne	is:interrogative
-SFX I0 e io [^n]e	is:interrogative
-SFX I0 e te ne	is:interrogative
-SFX I0 e ti ne	is:interrogative
-SFX I0 e ne [^n]e	is:interrogative
-SFX I0 e ni [^n]e	is:interrogative
-SFX I0 e nte [^n]e	is:interrogative
-SFX I0 e nti [^n]e	is:interrogative
+SFX I0 e i e	is:first+interrogative
+SFX I0 e mi [^no]e	is:first+interrogative
+SFX I0 e mi [^m]oe	is:first+interrogative
+SFX I0 e mi [^éí]moe	is:first+interrogative
+SFX I0 émoe emio émoe	is:first+interrogative
+SFX I0 ímoe imio ímoe	is:first+interrogative
+SFX I0 àvone avio àvone	is:first+interrogative
+SFX I0 évone evio évone	is:first+interrogative
+SFX I0 ívone ivio ívone	is:first+interrogative
+SFX I0 ne mi ne	is:first+interrogative
+SFX I0 e io [^n]e	is:first+interrogative
+SFX I0 e te ne	is:first+interrogative
+SFX I0 e ti ne	is:first+interrogative
+SFX I0 e ne [^n]e	is:first+interrogative
+SFX I0 e ni [^n]e	is:first+interrogative
+SFX I0 e nte [^n]e	is:first+interrogative
+SFX I0 e nti [^n]e	is:first+interrogative
 
 # interogativi sekonda parsona singolar (stakài)
 SFX Ī2 Y 3
-SFX Ī2 0 -to .	is:interrogative
-SFX Ī2 0 -tu .	is:interrogative
-SFX Ī2 0 -stu .	is:interrogative
+SFX Ī2 0 -to .	is:second+singular+interrogative
+SFX Ī2 0 -tu .	is:second+singular+interrogative
+SFX Ī2 0 -stu .	is:second+singular+interrogative
 
 # interogativi sekonda parsona singolar (takài)
 SFX I2 Y 2
-SFX I2 u o u	is:interrogative
-SFX I2 tu stu tu	is:interrogative
+SFX I2 u o u	is:second+singular+interrogative
+SFX I2 tu stu tu	is:second+singular+interrogative
 
 # interogativi sekonda parsona plural (stakài)
 SFX Ī3 Y 2
@@ -6350,7 +6377,7 @@ SFX Ī3 0 -u .	is:second+plural+interrogative
 
 # interogativi sekonda parsona plural (takài)
 SFX I3 Y 1
-SFX I3 u o u	is:interrogative
+SFX I3 u o u	is:second+plural+interrogative
 
 # interogativi tèrŧa parsona (stakài)
 SFX Ī4 Y 12
@@ -6414,39 +6441,39 @@ SFX i4 0 -ƚe [eou]	is:third+interrogative
 
 # interogativi kondiŧional prexente tèrŧa parsona (stakài e takài)
 SFX I8 Y 15
-SFX I8 ave ise-lo rave	is:interrogative
-SFX I8 ave ise-la rave	is:interrogative
-SFX I8 ave ise-li rave	is:interrogative
-SFX I8 ave ise-le rave	is:interrogative
-SFX I8 ave íselo rave	is:interrogative
-SFX I8 ave ísela rave	is:interrogative
-SFX I8 ave íseli rave	is:interrogative
-SFX I8 ave ísele rave	is:interrogative
-SFX I8 íselo ise-lo ríselo	is:interrogative
-SFX I8 íselo ise-la ríselo	is:interrogative
-SFX I8 íselo ise-li ríselo	is:interrogative
-SFX I8 íselo ise-le ríselo	is:interrogative
-SFX I8 o a ríselo	is:interrogative
-SFX I8 o i ríselo	is:interrogative
-SFX I8 o e ríselo	is:interrogative
+SFX I8 ave ise-lo rave	is:third+interrogative
+SFX I8 ave ise-la rave	is:third+interrogative
+SFX I8 ave ise-li rave	is:third+interrogative
+SFX I8 ave ise-le rave	is:third+interrogative
+SFX I8 ave íselo rave	is:third+interrogative
+SFX I8 ave ísela rave	is:third+interrogative
+SFX I8 ave íseli rave	is:third+interrogative
+SFX I8 ave ísele rave	is:third+interrogative
+SFX I8 íselo ise-lo ríselo	is:third+interrogative
+SFX I8 íselo ise-la ríselo	is:third+interrogative
+SFX I8 íselo ise-li ríselo	is:third+interrogative
+SFX I8 íselo ise-le ríselo	is:third+interrogative
+SFX I8 o a ríselo	is:third+interrogative
+SFX I8 o i ríselo	is:third+interrogative
+SFX I8 o e ríselo	is:third+interrogative
 
 # interogativi kondiŧional prexente tèrŧa parsona ko èle vanesente (stakài e takài)
 SFX I9 Y 15
-SFX I9 ave ise-ƚo rave	is:interrogative
-SFX I9 ave ise-ƚa rave	is:interrogative
-SFX I9 ave ise-ƚi rave	is:interrogative
-SFX I9 ave ise-ƚe rave	is:interrogative
-SFX I9 ave íseƚo rave	is:interrogative
-SFX I9 ave íseƚa rave	is:interrogative
-SFX I9 ave íseƚi rave	is:interrogative
-SFX I9 ave íseƚe rave	is:interrogative
-SFX I9 íseƚo ise-ƚo ríseƚo	is:interrogative
-SFX I9 íseƚo ise-ƚa ríseƚo	is:interrogative
-SFX I9 íseƚo ise-ƚi ríseƚo	is:interrogative
-SFX I9 íseƚo ise-ƚe ríseƚo	is:interrogative
-SFX I9 o a ríseƚo	is:interrogative
-SFX I9 o i ríseƚo	is:interrogative
-SFX I9 o e ríseƚo	is:interrogative
+SFX I9 ave ise-ƚo rave	is:third+interrogative
+SFX I9 ave ise-ƚa rave	is:third+interrogative
+SFX I9 ave ise-ƚi rave	is:third+interrogative
+SFX I9 ave ise-ƚe rave	is:third+interrogative
+SFX I9 ave íseƚo rave	is:third+interrogative
+SFX I9 ave íseƚa rave	is:third+interrogative
+SFX I9 ave íseƚi rave	is:third+interrogative
+SFX I9 ave íseƚe rave	is:third+interrogative
+SFX I9 íseƚo ise-ƚo ríseƚo	is:third+interrogative
+SFX I9 íseƚo ise-ƚa ríseƚo	is:third+interrogative
+SFX I9 íseƚo ise-ƚi ríseƚo	is:third+interrogative
+SFX I9 íseƚo ise-ƚe ríseƚo	is:third+interrogative
+SFX I9 o a ríseƚo	is:third+interrogative
+SFX I9 o i ríseƚo	is:third+interrogative
+SFX I9 o e ríseƚo	is:third+interrogative
 
 
 
