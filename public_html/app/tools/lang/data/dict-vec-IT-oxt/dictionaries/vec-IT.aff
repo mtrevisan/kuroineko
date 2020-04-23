@@ -300,7 +300,7 @@ NEEDAFFIX N0
 #kanto/a0a1a2P0P1P2I0FS
 #kàntoe/a0a1a2I1
 #kantar/t1n1t2n2ṭ2ẗ2t4n4ṭ4ẗ4t5ṭ5ẗ5t6t7n7ṭ7ẗ7t8n8ṭ8ẗ8t9ț0ņ1ț2ņ2P0P1P2
-#kanto/t8n8ṭ8ẗ8P0P1P2FSI0
+#kanto/t8n8ṭ8ẗ8P0P1P2FSI0N0
 #kàntoe/I1
 
 
@@ -892,41 +892,44 @@ SFX n7 r ent [^cijɉñ]ir	ts:gerund+simple	# T7 + nto
 
 
 # tèma 8 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: VT > Ø)
-# skomenŧiando da 'l indikativo prexente de 1s par -àr, -ér, '-er, -ír, -ír/is
-SFX t8 Y 6
-SFX t8 0 0/P0N0 o	ts:indicative+present is:first+singular	# T8 + o
-SFX t8 o i/P0 [^i]o	ts:indicative+present is:second+singular	# T8 + i
-SFX t8 io i/P0 io	ts:indicative+present is:second+singular	# T8 + i
-SFX t8 o a/P0 o	ts:subjunctive+present is:third	# T8 + a
-SFX t8 o i/P0 [^i]o	ts:subjunctive+present is:second+singular	# T8 + i
-SFX t8 io i/P0 io	ts:subjunctive+present is:second+singular	# T8 + i
+# -àr, -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de 1s
+SFX t8 Y 7
+SFX t8 o 0/Ī0 o	ts:indicative+present is:first+singular	# T8 + o
+SFX t8 o i/Ī2 [^i]o	ts:indicative+present is:second+singular	# T8 + i
+SFX t8 io i/Ī2 io	ts:indicative+present is:second+singular	# T8 + i
+SFX t8 o a o	ts:subjunctive+present is:first+singular	# T8 + a
+SFX t8 o i [^i]o	ts:subjunctive+present is:second+singular	# T8 + i
+SFX t8 io i io	ts:subjunctive+present is:second+singular	# T8 + i
+SFX t8 o e o	ts:subjunctive+present is:third	# T8 + e
 
 # variante fel.-bel. e liv.
-SFX n8 Y 4
-SFX n8 o a/P0 o	ts:indicative+present is:second+singular	# T8 + e
-SFX n8 o e/P0P1Ī0 o	ts:indicative+present is:first+singular	# T8 + e
-SFX n8 o e/P0P1Ī0 o	ts:subjunctive+present is:second+singular	# T8 + e
-SFX n8 o e/P0P1Ī0 o	ts:subjunctive+present is:third	# T8 + e
+SFX n8 Y 6
+SFX n8 o e/Ī0 o	ts:indicative+present is:first+singular	# T8 + e
+SFX n8 o e/Ī2 o	ts:indicative+present is:second+singular	# T8 + e
+SFX n8 o e/Ī4 o	ts:indicative+present is:third	# T8 + e
+SFX n8 o e o	ts:subjunctive+present is:first+singular	# T8 + e
+SFX n8 o a o	ts:subjunctive+present is:first+singular	# T8 + a
+SFX n8 o a o	ts:subjunctive+present is:third	# T8 + a
 
 # senŧa èle vanesente
-SFX ṭ8 Y 7
-SFX ṭ8 0 0/P0P1N0 o	ts:indicative+present is:first+singular	# T8 + o
-SFX ṭ8 o i/P0P1Ī2N0 [^i]o	ts:indicative+present is:second+singular	# T8 + i
-SFX ṭ8 io i/P0P1Ī2N0 io	ts:indicative+present is:second+singular	# T8 + i
-SFX ṭ8 o a/P0P1N0 o	ts:subjunctive+present is:first+singular	# T8 + a
-SFX ṭ8 o i/P0P1Ī2N0 [^i]o	ts:subjunctive+present is:second+singular	# T8 + i
-SFX ṭ8 io i/P0P1Ī2N0 io	ts:subjunctive+present is:second+singular	# T8 + i
-SFX ṭ8 o a/P0P1N0 o	ts:subjunctive+present is:third	# T8 + a
+#SFX ṭ8 Y 7
+#SFX ṭ8 0 0/P0P1N0 o	ts:indicative+present is:first+singular	# T8 + o
+#SFX ṭ8 o i/P0P1Ī2N0 [^i]o	ts:indicative+present is:second+singular	# T8 + i
+#SFX ṭ8 io i/P0P1Ī2N0 io	ts:indicative+present is:second+singular	# T8 + i
+#SFX ṭ8 o a/P0P1N0 o	ts:subjunctive+present is:first+singular	# T8 + a
+#SFX ṭ8 o i/P0P1Ī2N0 [^i]o	ts:subjunctive+present is:second+singular	# T8 + i
+#SFX ṭ8 io i/P0P1Ī2N0 io	ts:subjunctive+present is:second+singular	# T8 + i
+#SFX ṭ8 o a/P0P1N0 o	ts:subjunctive+present is:third	# T8 + a
 
 # ko èle vanesente
-SFX ẗ8 Y 7
-SFX ẗ8 0 0/P0P2N0 o	ts:indicative+present is:first+singular	# T8 + o
-SFX ẗ8 o i/P0P2Ī2N0 [^i]o	ts:indicative+present is:second+singular	# T8 + i
-SFX ẗ8 io i/P0P2Ī2N0 io	ts:indicative+present is:second+singular	# T8 + i
-SFX ẗ8 o a/P0P2N0 o	ts:subjunctive+present is:first+singular	# T8 + a
-SFX ẗ8 o i/P0P2Ī2N0 [^i]o	ts:subjunctive+present is:second+singular	# T8 + i
-SFX ẗ8 io i/P0P2Ī2N0 io	ts:subjunctive+present is:second+singular	# T8 + i
-SFX ẗ8 o a/P0P2N0 o	ts:subjunctive+present is:third	# T8 + a
+#SFX ẗ8 Y 7
+#SFX ẗ8 0 0/P0P2N0 o	ts:indicative+present is:first+singular	# T8 + o
+#SFX ẗ8 o i/P0P2Ī2N0 [^i]o	ts:indicative+present is:second+singular	# T8 + i
+#SFX ẗ8 io i/P0P2Ī2N0 io	ts:indicative+present is:second+singular	# T8 + i
+#SFX ẗ8 o a/P0P2N0 o	ts:subjunctive+present is:first+singular	# T8 + a
+#SFX ẗ8 o i/P0P2Ī2N0 [^i]o	ts:subjunctive+present is:second+singular	# T8 + i
+#SFX ẗ8 io i/P0P2Ī2N0 io	ts:subjunctive+present is:second+singular	# T8 + i
+#SFX ẗ8 o a/P0P2N0 o	ts:subjunctive+present is:third	# T8 + a
 
 
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
