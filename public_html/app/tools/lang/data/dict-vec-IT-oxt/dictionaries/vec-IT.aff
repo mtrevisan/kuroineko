@@ -303,117 +303,169 @@ NEEDAFFIX N0
 
 
 # tèma 1
-# skomenŧiando da 'l infenío par -àr, -ér, '-er, -ír, -ír/is
+# -àr, -ér, '-er, -ír, -ír/is: skomenŧiando da 'l infenío
 SFX t1 Y 1
 SFX t1 0 e r	ts:infinitive+simple	# T1 + r(e)
 
-# variante fel.-bel. e liv.
-# el fel.-bel. e 'l liv. i gà anka '-[dptv]er > -[dptv]re
+# '-[dptv]er > '-[dptv]re
 SFX n1 Y 12
-SFX n1 ànder andre ànder	ts:infinitive+simple ds:nordic
-SFX n1 énder endre énder	ts:infinitive+simple ds:nordic
-SFX n1 ónder ondre ónder	ts:infinitive+simple ds:nordic
-SFX n1 únder undre únder	ts:infinitive+simple ds:nordic
-SFX n1 er re èder	ts:infinitive+simple ds:nordic
-SFX n1 er tre èser	ts:infinitive+simple ds:nordic
-SFX n1 er re [èò][nr]der	ts:infinitive+simple ds:nordic
-SFX n1 àder adre àder	ts:infinitive+simple ds:nordic
-SFX n1 éder edre éder	ts:infinitive+simple ds:nordic
-SFX n1 íder idre íder	ts:infinitive+simple ds:nordic
-SFX n1 úder udre úder	ts:infinitive+simple ds:nordic
-SFX n1 àlder aldre àlder	ts:infinitive+simple ds:nordic
+SFX n1 ànder andre ànder	ts:infinitive+simple is:nordic
+SFX n1 énder endre énder	ts:infinitive+simple is:nordic
+SFX n1 ónder ondre ónder	ts:infinitive+simple is:nordic
+SFX n1 únder undre únder	ts:infinitive+simple is:nordic
+SFX n1 er re èder	ts:infinitive+simple is:nordic
+SFX n1 er tre èser	ts:infinitive+simple is:nordic
+SFX n1 er re [èò][nr]der	ts:infinitive+simple is:nordic
+SFX n1 àder adre àder	ts:infinitive+simple is:nordic
+SFX n1 éder edre éder	ts:infinitive+simple is:nordic
+SFX n1 íder idre íder	ts:infinitive+simple is:nordic
+SFX n1 úder udre úder	ts:infinitive+simple is:nordic
+SFX n1 àlder aldre àlder	ts:infinitive+simple is:nordic
 
 
 # tèma 2 (from T1: aŧento PVT > VT)
-# skomenŧiando da 'l infenío par -àr, -ér, -ír, -ír/is
-# skomenŧiando da 'l indikativo futuro de 1s par '-er
-# variante fel.-bel. e liv.
-# fel.-bel. e liv. i gà anka T2 = T1: aŧento PVT > VT | à > é
-SFX t2 Y 59
+# -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
+# '-er: skomenŧiando da 'l indikativo futuro de 1s
+SFX t2 Y 64
+SFX t2 r va/Ī0 [aei]r	ts:indicative+imperfect is:first+singular	# T2 + (v)a
+SFX t2 ar àa/Ī0 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)a
+SFX t2 er éa/Ī0 er	ts:indicative+imperfect is:first+singular	# T2 + (v)a
+SFX t2 ir ía/Ī0 ir	ts:indicative+imperfect is:first+singular	# T2 + (v)a
+SFX t2 rò va/Ī0 erò	ts:indicative+imperfect is:first+singular	# T2 + (v)a
+SFX t2 erò éa/Ī0 erò	ts:indicative+imperfect is:first+singular	# T2 + (v)a
+SFX t2 r ve/Ī0 [aei]r	ts:indicative+imperfect is:first+singular	# T2 + (v)e
+SFX t2 ar àe/Ī0 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)e
+SFX t2 er ée/Ī0 er	ts:indicative+imperfect is:first+singular	# T2 + (v)e
+SFX t2 ir íe/Ī0 ir	ts:indicative+imperfect is:first+singular	# T2 + (v)e
+SFX t2 rò ve/Ī0 erò	ts:indicative+imperfect is:first+singular	# T2 + (v)e
+SFX t2 erò ée/Ī0 erò	ts:indicative+imperfect is:first+singular	# T2 + (v)e
+SFX t2 r vo/Ī0 [aei]r	ts:indicative+imperfect is:first+singular	# T2 + (v)o
+SFX t2 ar ào/Ī0 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)o
+SFX t2 er éo/Ī0 er	ts:indicative+imperfect is:first+singular	# T2 + (v)o
+SFX t2 ir ío/Ī0 ir	ts:indicative+imperfect is:first+singular	# T2 + (v)o
+SFX t2 rò vo/Ī0 erò	ts:indicative+imperfect is:first+singular	# T2 + (v)o
+SFX t2 erò éo/Ī0 erò	ts:indicative+imperfect is:first+singular	# T2 + (v)o
+SFX t2 ar àvimo/Ī0 ar	ts:indicative+imperfect is:first+plural	# T2 + (v)imo
+SFX t2 ar àimo/Ī0 ar	ts:indicative+imperfect is:first+plural	# T2 + (v)imo
+SFX t2 er évimo/Ī0 er	ts:indicative+imperfect is:first+plural	# T2 + (v)imo
+SFX t2 er éimo/Ī0 er	ts:indicative+imperfect is:first+plural	# T2 + (v)imo
+SFX t2 erò évimo/Ī0 erò	ts:indicative+imperfect is:first+plural	# T2 + (v)imo
+SFX t2 erò éimo/Ī0 erò	ts:indicative+imperfect is:first+plural	# T2 + (v)imo
+SFX t2 ir ívimo/Ī0 ir	ts:indicative+imperfect is:first+plural	# T2 + (v)imo
+SFX t2 ir íimo/Ī0 ir	ts:indicative+imperfect is:first+plural	# T2 + (v)imo
+SFX t2 r vi/Ī2 [aei]r	ts:indicative+imperfect is:second+singular	# T2 + (v)i
+SFX t2 ar ài/Ī2 ar	ts:indicative+imperfect is:second+singular	# T2 + (v)i
+SFX t2 er éi/Ī2 er	ts:indicative+imperfect is:second+singular	# T2 + (v)i
+SFX t2 ir íi/Ī2 ir	ts:indicative+imperfect is:second+singular	# T2 + (v)i
+SFX t2 rò vi/Ī2 erò	ts:indicative+imperfect is:second+singular	# T2 + (v)i
+SFX t2 erò éi/Ī2 erò	ts:indicative+imperfect is:second+singular	# T2 + (v)i
+SFX t2 r vi/Ī3 [aei]r	ts:indicative+imperfect is:second+plural	# T2 + (v)i
+SFX t2 ar ài/Ī3 ar	ts:indicative+imperfect is:second+plural	# T2 + (v)i
+SFX t2 er éi/Ī3 er	ts:indicative+imperfect is:second+plural	# T2 + (v)i
+SFX t2 ir íi/Ī3 ir	ts:indicative+imperfect is:second+plural	# T2 + (v)i
+SFX t2 rò vi/Ī3 erò	ts:indicative+imperfect is:second+plural	# T2 + (v)i
+SFX t2 erò éi/Ī3 erò	ts:indicative+imperfect is:second+plural	# T2 + (v)i
+SFX t2 r va/Ī4 [aei]r	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX t2 ar àa/Ī4 ar	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX t2 er éa/Ī4 er	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX t2 ir ía/Ī4 ir	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX t2 rò va/Ī4 erò	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX t2 erò éa/Ī4 erò	ts:indicative+imperfect is:third	# T2 + (v)a
+SFX t2 r se [aei]r	ts:subjunctive+imperfect is:first+singular	# T2 + se
+SFX t2 rò se erò	ts:subjunctive+imperfect is:first+singular	# T2 + se
+SFX t2 ar àsimo ar	ts:subjunctive+imperfect is:first+plural	# T2 + simo
+SFX t2 er ésimo er	ts:subjunctive+imperfect is:first+plural	# T2 + simo
+SFX t2 erò ésimo erò	ts:subjunctive+imperfect is:first+plural	# T2 + simo
+SFX t2 ir ísimo ir	ts:subjunctive+imperfect is:first+plural	# T2 + simo
+SFX t2 r si [aei]r	ts:subjunctive+imperfect is:second+singular	# T2 + si
+SFX t2 rò si erò	ts:subjunctive+imperfect is:second+singular	# T2 + si
+SFX t2 r si [aei]r	ts:subjunctive+imperfect is:second+plural	# T2 + si
+SFX t2 rò si erò	ts:subjunctive+imperfect is:second+plural	# T2 + si
+SFX t2 r se [aei]r	ts:subjunctive+imperfect is:third	# T2 + se
+SFX t2 rò se erò	ts:subjunctive+imperfect is:third	# T2 + se
 SFX t2 r sto/A1FS [aei]r	ts:participle+passive is:singular+masculine	# T2 + sto/i/a/e
 SFX t2 rò sto/A1FS erò	ts:participle+passive is:singular+masculine	# T2 + sto/i/a/e
-SFX t2 ir esto/A1FS ir	ts:participle+passive is:singular+masculine	# T7 + sto/i/a/e
-SFX t2 r ndo/P0 [aei]r	ts:gerund+simple	# T7 + ndo
-SFX t2 ar endo/P0 ar	ts:gerund+simple	# T7 + ndo
-SFX t2 rò ndo/P0 erò	ts:gerund+simple	# T7 + ndo
-SFX t2 erò ando/P0 erò	ts:gerund+simple	# T7 + ndo
-SFX t2 erò indo/P0 erò	ts:gerund+simple	# T7 + ndo
-SFX t2 ir endo/P0 ir	ts:gerund+simple	# T7 + ndo
-SFX t2 ar àndome/P6 ar	ts:gerund+simple is:procomplementar	# T7 + ndo
-SFX t2 ar àndomene/P6 ar	ts:gerund+simple is:procomplementar	# T7 + ndo
-SFX t2 er éndome/P6 er	ts:gerund+simple is:procomplementar	# T7 + ndo
-SFX t2 er éndomene/P6 er	ts:gerund+simple is:procomplementar	# T7 + ndo
-SFX t2 ir índome/P6 ir	ts:gerund+simple is:procomplementar	# T7 + ndo
-SFX t2 ir índomene/P6 ir	ts:gerund+simple is:procomplementar	# T7 + ndo
-SFX t2 erò éndome/P6 erò	ts:gerund+simple is:procomplementar	# T7 + ndo
-SFX t2 erò éndomene/P6 erò	ts:gerund+simple is:procomplementar	# T7 + ndo
-SFX t2 ir éndome/P6 ir	ts:gerund+simple is:procomplementar	# T7 + ndo
-SFX t2 ir éndomene/P6 ir	ts:gerund+simple is:procomplementar	# T7 + ndo
-SFX t2 r nto/P0FS [ai]r	ts:gerund+simple	# T7 + nto
-SFX t2 er ènto/P0FS er	ts:gerund+simple	# T7 + nto
-SFX t2 rò nto/P0FS erò	ts:gerund+simple	# T7 + nto
-SFX t2 erò ènto/P0FS erò	ts:gerund+simple	# T7 + nto
-SFX t2 ir ento/P0FS ir	ts:gerund+simple	# T7 + nto
-SFX t2 ir ènto/P0FS ir	ts:gerund+simple	# T7 + nto
-SFX t2 ar àntome/P6 ar	ts:gerund+simple is:procomplementar	# T7 + nto
-SFX t2 ar àntomene/P6 ar	ts:gerund+simple is:procomplementar	# T7 + nto
-SFX t2 er éntome/P6 er	ts:gerund+simple is:procomplementar	# T7 + nto
-SFX t2 er éntomene/P6 er	ts:gerund+simple is:procomplementar	# T7 + nto
-SFX t2 ir íntome/P6 ir	ts:gerund+simple is:procomplementar	# T7 + nto
-SFX t2 ir íntomene/P6 ir	ts:gerund+simple is:procomplementar	# T7 + nto
-SFX t2 erò éntome/P6 erò	ts:gerund+simple is:procomplementar	# T7 + nto
-SFX t2 erò èntome/P6 erò	ts:gerund+simple is:procomplementar	# T7 + nto
-SFX t2 erò éntomene/P6 erò	ts:gerund+simple is:procomplementar	# T7 + nto
-SFX t2 erò èntomene/P6 erò	ts:gerund+simple is:procomplementar	# T7 + nto
-SFX t2 ir éntome/P6 ir	ts:gerund+simple is:procomplementar	# T7 + nto
-SFX t2 ir èntome/P6 ir	ts:gerund+simple is:procomplementar	# T7 + nto
-SFX t2 ir éntomene/P6 ir	ts:gerund+simple is:procomplementar	# T7 + nto
-SFX t2 ir èntomene/P6 ir	ts:gerund+simple is:procomplementar	# T7 + nto
-SFX t2 r va/VV [aei]r	ts:indicative+imperfect is:first+singular is:third	# T2 + (v)a
-SFX t2 rò va/VV erò	ts:indicative+imperfect is:first+singular is:third	# T2 + (v)a
-SFX t2 r ve/VV [aei]r	ts:indicative+imperfect is:first+singular	# T2 + (v)e
-SFX t2 rò ve/VV erò	ts:indicative+imperfect is:first+singular	# T2 + (v)e
-SFX t2 r vo/VVI0 [aei]r	ts:indicative+imperfect is:first+singular	# T2 + (v)o
-SFX t2 rò vo/VVI0 erò	ts:indicative+imperfect is:first+singular	# T2 + (v)o
-SFX t2 r vi/VV [aei]r	ts:indicative+imperfect is:second+singular is:second+plural	# T2 + (v)i
-SFX t2 rò vi/VV erò	ts:indicative+imperfect is:second+singular is:second+plural	# T2 + (v)i
-SFX t2 ar àvimo/VV ar	ts:indicative+imperfect is:second+plural	# T2 + (v)imo
-SFX t2 ar évimo/VV ar	ts:indicative+imperfect is:second+plural	# T2 + (v)imo
-SFX t2 er évimo/VV er	ts:indicative+imperfect is:second+plural	# T2 + (v)imo
-SFX t2 ir ívimo/VV ir	ts:indicative+imperfect is:second+plural	# T2 + (v)imo
-SFX t2 ir évimo/VV ir	ts:indicative+imperfect is:second+plural	# T2 + (v)imo
-SFX t2 ar àsimo ar	ts:subjunctive+imperfect is:second+plural	# T2 + simo
-SFX t2 er ésimo er	ts:subjunctive+imperfect is:second+plural	# T2 + simo
-SFX t2 ir ísimo ir	ts:subjunctive+imperfect is:second+plural	# T2 + simo
-SFX t2 r si [aei]r	ts:subjunctive+imperfect is:second+singular is:second+plural	# T2 + si
-SFX t2 rò si erò	ts:subjunctive+imperfect is:second+singular is:second+plural	# T2 + si
-SFX t2 ar ésimo ar	ts:subjunctive+imperfect is:second+plural	# T2 + simo
-SFX t2 ir ésimo ir	ts:subjunctive+imperfect is:second+plural	# T2 + simo
+SFX t2 r ndo [aei]r	ts:gerund+simple	# T7 + ndo
+SFX t2 rò ndo erò	ts:gerund+simple	# T7 + ndo
+SFX t2 r nto/FS [aei]r	ts:gerund+simple	# T7 + nto
+SFX t2 er ènto/FS er	ts:gerund+simple	# T7 + nto
+SFX t2 rò nto/FS erò	ts:gerund+simple	# T7 + nto
+SFX t2 erò ènto/FS erò	ts:gerund+simple	# T7 + nto
+#SFX t2 ar àndome/P6 ar	ts:gerund+simple is:procomplementar	# T7 + ndo
+#SFX t2 ar àndomene/P6 ar	ts:gerund+simple is:procomplementar	# T7 + ndo
+#SFX t2 er éndome/P6 er	ts:gerund+simple is:procomplementar	# T7 + ndo
+#SFX t2 er éndomene/P6 er	ts:gerund+simple is:procomplementar	# T7 + ndo
+#SFX t2 ir índome/P6 ir	ts:gerund+simple is:procomplementar	# T7 + ndo
+#SFX t2 ir índomene/P6 ir	ts:gerund+simple is:procomplementar	# T7 + ndo
+#SFX t2 erò éndome/P6 erò	ts:gerund+simple is:procomplementar	# T7 + ndo
+#SFX t2 erò éndomene/P6 erò	ts:gerund+simple is:procomplementar	# T7 + ndo
+#SFX t2 ir éndome/P6 ir	ts:gerund+simple is:procomplementar	# T7 + ndo
+#SFX t2 ir éndomene/P6 ir	ts:gerund+simple is:procomplementar	# T7 + ndo
+#SFX t2 ar àntome/P6 ar	ts:gerund+simple is:procomplementar	# T7 + nto
+#SFX t2 ar àntomene/P6 ar	ts:gerund+simple is:procomplementar	# T7 + nto
+#SFX t2 er éntome/P6 er	ts:gerund+simple is:procomplementar	# T7 + nto
+#SFX t2 er éntomene/P6 er	ts:gerund+simple is:procomplementar	# T7 + nto
+#SFX t2 ir íntome/P6 ir	ts:gerund+simple is:procomplementar	# T7 + nto
+#SFX t2 ir íntomene/P6 ir	ts:gerund+simple is:procomplementar	# T7 + nto
+#SFX t2 erò éntome/P6 erò	ts:gerund+simple is:procomplementar	# T7 + nto
+#SFX t2 erò èntome/P6 erò	ts:gerund+simple is:procomplementar	# T7 + nto
+#SFX t2 erò éntomene/P6 erò	ts:gerund+simple is:procomplementar	# T7 + nto
+#SFX t2 erò èntomene/P6 erò	ts:gerund+simple is:procomplementar	# T7 + nto
+#SFX t2 ir éntome/P6 ir	ts:gerund+simple is:procomplementar	# T7 + nto
+#SFX t2 ir èntome/P6 ir	ts:gerund+simple is:procomplementar	# T7 + nto
+#SFX t2 ir éntomene/P6 ir	ts:gerund+simple is:procomplementar	# T7 + nto
+#SFX t2 ir èntomene/P6 ir	ts:gerund+simple is:procomplementar	# T7 + nto
 
-SFX n2 Y 23
-SFX n2 ar esto/A1FS ar	ts:participle+passive ds:nordic	# T2 + sto/i/a/e
-SFX n2 ar ento/P0FS ar	ts:gerund+simple ds:nordic	# T7 + nto
-SFX n2 ar ènto/P0FS ar	ts:gerund+simple ds:nordic	# T7 + nto
-SFX n2 ar eva/VV ar	ts:indicative+imperfect is:first+singular is:second+singular is:third ds:nordic	# T2 + (v)a
-SFX n2 ir eva/VV ir	ts:indicative+imperfect is:first+singular is:second+singular is:third ds:nordic	# T2 + (v)a
-SFX n2 ar eve/VV ar	ts:indicative+imperfect is:first+singular ds:nordic	# T2 + (v)e
-SFX n2 ir eve/VV ir	ts:indicative+imperfect is:first+singular ds:nordic	# T2 + (v)e
-SFX n2 ar evo/VVI0 ar	ts:indicative+imperfect is:first+singular ds:nordic	# T2 + (v)o
-SFX n2 ir evo/VVI0 ir	ts:indicative+imperfect is:first+singular ds:nordic	# T2 + (v)e
-SFX n2 ar evi/VV ar	ts:indicative+imperfect is:second+plural ds:nordic	# T2 + (v)i
-SFX n2 ir evi/VV ir	ts:indicative+imperfect is:second+plural ds:nordic	# T2 + (v)i
-SFX n2 r se [aei]r	ts:subjunctive+imperfect is:first+singular ds:nordic	# T2 + se
-SFX n2 ar ese ar	ts:indicative+imperfect is:first+singular ds:nordic	# T2 + se
-SFX n2 ar ese ar	ts:subjunctive+imperfect is:first+singular ds:nordic	# T2 + se
-SFX n2 ir ese ir	ts:indicative+imperfect is:first+singular ds:nordic	# T2 + se
-SFX n2 ir ese ir	ts:subjunctive+imperfect is:first+singular ds:nordic	# T2 + se
-SFX n2 ar esi ar	ts:subjunctive+imperfect is:second+plural ds:nordic	# T2 + si
-SFX n2 r se [aei]r	ts:indicative+imperfect is:second+singular ds:nordic	# T2 + se
-SFX n2 ar esi ar	ts:indicative+imperfect is:second+plural ds:nordic	# T2 + si
-SFX n2 ir esi ir	ts:indicative+imperfect is:second+plural ds:nordic	# T2 + si
-SFX n2 ir esi ir	ts:subjunctive+imperfect is:second+plural ds:nordic	# T2 + si
-SFX n2 rò se erò	ts:indicative+imperfect is:second+singular ds:nordic	# T2 + se
-SFX n2 rò se erò	ts:subjunctive+imperfect is:first+singular ds:nordic	# T2 + se
+SFX n2 Y 29
+SFX n2 ar eva/Ī0 ar	ts:indicative+imperfect is:first+singular is:nordic	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar éa/Ī0 ar	ts:indicative+imperfect is:first+singular is:nordic	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar eve/Ī0 ar	ts:indicative+imperfect is:first+singular is:nordic	# T2 + (v)e, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar ée/Ī0 ar	ts:indicative+imperfect is:first+singular is:nordic	# T2 + (v)e, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar evo/Ī0 ar	ts:indicative+imperfect is:first+singular is:nordic	# T2 + (v)o, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar éo/Ī0 ar	ts:indicative+imperfect is:first+singular is:nordic	# T2 + (v)o, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar évimo/Ī0 ar	ts:indicative+imperfect is:first+plural is:nordic	# T2 + (v)imo, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar éimo/Ī0 ar	ts:indicative+imperfect is:first+plural is:nordic	# T2 + (v)imo, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 r va/Ī2 [aei]r	ts:indicative+imperfect is:second+singular is:nordic	# T2 + (v)a
+SFX n2 ar àa/Ī2 ar	ts:indicative+imperfect is:second+singular is:nordic	# T2 + (v)a
+SFX n2 er éa/Ī2 er	ts:indicative+imperfect is:second+singular is:nordic	# T2 + (v)a
+SFX n2 ir ía/Ī2 ir	ts:indicative+imperfect is:second+singular is:nordic	# T2 + (v)a
+SFX n2 rò va/Ī2 erò	ts:indicative+imperfect is:second+singular is:nordic	# T2 + (v)a
+SFX n2 erò éa/Ī2 erò	ts:indicative+imperfect is:second+singular is:nordic	# T2 + (v)a
+SFX n2 ar evi/Ī2 ar	ts:indicative+imperfect is:second+singular is:nordic	# T2 + (v)i, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar éi/Ī2 ar	ts:indicative+imperfect is:second+singular is:nordic	# T2 + (v)i, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar evi/Ī3 ar	ts:indicative+imperfect is:second+plural is:nordic	# T2 + (v)i, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar éi/Ī3 ar	ts:indicative+imperfect is:second+plural is:nordic	# T2 + (v)i, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar eva/Ī4 ar	ts:indicative+imperfect is:third is:nordic	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar éa/Ī4 ar	ts:indicative+imperfect is:third is:nordic	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 r se [aei]r	ts:subjunctive+imperfect is:second+singular is:nordic	# T2 + se
+SFX n2 rò se erò	ts:subjunctive+imperfect is:second+singular is:nordic	# T2 + se
+SFX n2 ar ese ar	ts:subjunctive+imperfect is:first+singular is:third is:nordic	# T2 + se, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar esi ar	ts:subjunctive+imperfect is:second+singular is:second+plural is:nordic	# T2 + si, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar ésimo ar	ts:subjunctive+imperfect is:second+plural is:nordic	# T2 + simo, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar esto/A1FS ar	ts:participle+passive is:singular+masculine is:nordic	# T2 + sto/i/a/e, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar endo ar	ts:gerund+simple is:nordic	# T2 + ndo, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar ento/FS ar	ts:gerund+simple is:nordic	# T2 + nto, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar ènto/FS ar	ts:gerund+simple is:nordic	# T2 + nto, T2 = T1: aŧento PVT > VT | à > é
+#SFX n2 ir ento/P0FS ir	ts:gerund+simple	# T7 + nto
+#SFX n2 ir ènto/P0FS ir	ts:gerund+simple	# T7 + nto
+#SFX n2 erò ando/P0 erò	ts:gerund+simple	# T7 + ndo
+#SFX n2 erò indo/P0 erò	ts:gerund+simple	# T7 + ndo
+#SFX n2 ir endo/P0 ir	ts:gerund+simple	# T7 + ndo
+#SFX n2 ir évimo/VV ir	ts:indicative+imperfect is:first+plural	# T2 + (v)imo
+#SFX n2 ir esto/A1FS ir	ts:participle+passive is:singular+masculine	# T7 + sto/i/a/e
+#SFX n2 ir ésimo ir	ts:subjunctive+imperfect is:second+plural	# T2 + simo
+#SFX n2 ir eva/VV ir	ts:indicative+imperfect is:first+singular is:second+singular is:third is:nordic	# T2 + (v)a
+#SFX n2 ir eve/VV ir	ts:indicative+imperfect is:first+singular is:nordic	# T2 + (v)e
+#SFX n2 ir evo/VVĪ0 ir	ts:indicative+imperfect is:first+singular is:nordic	# T2 + (v)e
+#SFX n2 ir evi/VV ir	ts:indicative+imperfect is:second+plural is:nordic	# T2 + (v)i
+#SFX n2 ar ese ar	ts:indicative+imperfect is:first+singular is:nordic	# T2 + se
+#SFX n2 ir ese ir	ts:indicative+imperfect is:first+singular is:nordic	# T2 + se
+#SFX n2 ir ese ir	ts:subjunctive+imperfect is:first+singular is:nordic	# T2 + se
+#SFX n2 r se [aei]r	ts:indicative+imperfect is:second+singular is:nordic	# T2 + se
+#SFX n2 ar esi ar	ts:indicative+imperfect is:second+plural is:nordic	# T2 + si
+#SFX n2 ir esi ir	ts:indicative+imperfect is:second+plural is:nordic	# T2 + si
+#SFX n2 ir esi ir	ts:subjunctive+imperfect is:second+plural is:nordic	# T2 + si
+#SFX n2 rò se erò	ts:indicative+imperfect is:second+singular is:nordic	# T2 + se
 
 # senŧa èle vanesente
 SFX ṭ2 Y 35
@@ -496,22 +548,22 @@ SFX ẗ2 ir èntomeƚo/P8 ir	ts:gerund+simple is:procomplementar	# T7 + nto
 # skomenŧiando da 'l infenío par -àr, -ér, -ír, -ír/is
 # skomenŧiando da 'l indikativo futuro de 1s par '-er
 SFX t4 Y 41
-SFX t4 0 ò/I0 [aei]r	ts:indicative+future is:first+singular	# T4 + rò
+SFX t4 0 ò/Ī0 [aei]r	ts:indicative+future is:first+singular	# T4 + rò
 SFX t4 0 à [aei]r	ts:indicative+future is:first+singular is:third	# T4 + rà
-SFX t4 0 à/I2 [aei]r	ts:indicative+future is:second+singular	# T4 + rà
+SFX t4 0 à/Ī2 [aei]r	ts:indicative+future is:second+singular	# T4 + rà
 SFX t4 0 atu/I3 [aei]r	ts:indicative+future is:second+singular is:interrogative	# T4 + rà
 SFX t4 0 è [aei]r	ts:indicative+future is:first+singular	# T4 + rè
-SFX t4 0 emo/P0I0 [aei]r	ts:indicative+future is:first+plural	# T4 + remo
-SFX t4 ò emo/P0I0 erò	ts:indicative+future is:first+plural	# T4 + remo
-SFX t4 0 imo/P0I0 [aei]r	ts:indicative+future is:first+plural	# T4 + rimo
+SFX t4 0 emo/P0Ī0 [aei]r	ts:indicative+future is:first+plural	# T4 + remo
+SFX t4 ò emo/P0Ī0 erò	ts:indicative+future is:first+plural	# T4 + remo
+SFX t4 0 imo/P0Ī0 [aei]r	ts:indicative+future is:first+plural	# T4 + rimo
 SFX t4 0 é [aei]r	ts:indicative+future is:second+singular	# T4 + ré
 SFX t4 ò é erò	ts:indicative+future is:second+singular	# T4 + ré
 SFX t4 0 í [aei]r	ts:indicative+future is:second+singular	# T4 + rí
 SFX t4 ò í erò	ts:indicative+future is:second+singular	# T4 + rí
 SFX t4 0 ía [aei]r	ts:conditional+present is:first+singular is:second+singular	# T4 + ría
 SFX t4 ò ía erò	ts:conditional+present is:first+singular is:second+singular	# T4 + ría
-SFX t4 0 íe/P3I0I2 [aei]r	ts:conditional+present is:first+singular is:second+singular	# T4 + ríe
-SFX t4 ò íe/P3I0I2 erò	ts:conditional+present is:first+singular	# T4 + ríe
+SFX t4 0 íe/P3Ī0Ī2 [aei]r	ts:conditional+present is:first+singular is:second+singular	# T4 + ríe
+SFX t4 ò íe/P3Ī0Ī2 erò	ts:conditional+present is:first+singular	# T4 + ríe
 SFX t4 0 ésimo [aei]r	ts:conditional+present is:first+plural	# T4 + résimo
 SFX t4 ò ésimo erò	ts:conditional+present is:first+plural	# T4 + résimo
 SFX t4 0 esi [aei]r	ts:conditional+present is:second+singular	# T4 + resi
@@ -521,56 +573,56 @@ SFX t4 ò ié erò	ts:conditional+present is:second+singular	# T4 + r(is)ié
 SFX t4 0 isié [aei]r	ts:conditional+present is:second+singular	# T4 + r(is)ié
 SFX t4 ò isié erò	ts:conditional+present is:second+singular	# T4 + r(is)ié
 SFX t4 ò ía erò	ts:conditional+present is:second+singular	# T4 + ría
-SFX t4 ò íe/P3I0I2 erò	ts:conditional+present is:second+singular	# T4 + ríe
+SFX t4 ò íe/P3Ī0Ī2 erò	ts:conditional+present is:second+singular	# T4 + ríe
 SFX t4 0 ave/P3 [aei]r	ts:conditional+present is:second+singular	# T4 + ràve
 SFX t4 ò ave/P3 erò	ts:conditional+present is:second+singular	# T4 + ràve
-SFX t4 ar erò/I0 ar	ts:indicative+future is:first+singular	# T4 + rò
+SFX t4 ar erò/Ī0 ar	ts:indicative+future is:first+singular	# T4 + rò
 SFX t4 ar erà ar	ts:indicative+future is:first+singular is:third	# T4 + rà
 SFX t4 ar eratu/I3 ar	ts:indicative+future is:second+singular is:interrogative	# T4 + rà
-SFX t4 ar erà/I2 ar	ts:indicative+future is:second+singular	# T4 + rà
+SFX t4 ar erà/Ī2 ar	ts:indicative+future is:second+singular	# T4 + rà
 SFX t4 ar erè ar	ts:indicative+future is:first+singular	# T4 + rè
-SFX t4 ar eremo/P0I0 ar	ts:indicative+future is:first+plural	# T4 + remo
-SFX t4 ar erimo/P0I0 ar	ts:indicative+future is:first+plural	# T4 + rimo
+SFX t4 ar eremo/P0Ī0 ar	ts:indicative+future is:first+plural	# T4 + remo
+SFX t4 ar erimo/P0Ī0 ar	ts:indicative+future is:first+plural	# T4 + rimo
 SFX t4 ar eresi ar	ts:conditional+present is:second+singular	# T4 + resi
 SFX t4 ar erié ar	ts:conditional+present is:second+singular	# T4 + r(is)ié
 SFX t4 ar erisié ar	ts:conditional+present is:second+singular	# T4 + r(is)ié
 SFX t4 ar ería ar	ts:conditional+present is:second+singular	# T4 + ría
-SFX t4 ar eríe/P3I0I2 ar	ts:conditional+present is:second+singular	# T4 + ríe
+SFX t4 ar eríe/P3Ī0Ī2 ar	ts:conditional+present is:second+singular	# T4 + ríe
 SFX t4 ar erave/P3 ar	ts:conditional+present is:second+singular	# T4 + ràve
 
 # variante fel.-bel. e liv.
 # fel.-bel. e liv. i gà anka T4 = T1: senŧa aŧento | à > é
 SFX n4 Y 30
-SFX n4 0 on/P0P1 [aei]r	ts:indicative+future is:first+plural ds:nordic	# T4 + ron
-SFX n4 0 en/P0P1I0 [aei]r	ts:indicative+future is:first+plural ds:nordic	# T4 + ren
-SFX n4 0 on/P0P1 [aei]r	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)(i)ón(se)
-SFX n4 0 onse [aei]r	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)(i)ón(se)
-SFX n4 0 ion/P0P1 [aei]r	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)(i)ón(se)
-SFX n4 0 ionse [aei]r	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)(i)ón(se)
-SFX n4 0 ison/P0P1 [aei]r	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)(i)ón(se)
-SFX n4 0 isonse [aei]r	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)(i)ón(se)
-SFX n4 0 ision/P0P1 [aei]r	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)(i)ón(se)
-SFX n4 0 isionse [aei]r	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)(i)ón(se)
-SFX n4 0 en/I0 [aei]r	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)én(se/i)
-SFX n4 0 ense [aei]r	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)én(se/i)
-SFX n4 0 ensi [aei]r	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)én(se/i)
-SFX n4 0 isen [aei]r	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)én(se/i)
-SFX n4 0 isense [aei]r	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)én(se/i)
-SFX n4 0 isensi [aei]r	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)én(se/i)
-SFX n4 ar eron/P0P1 ar	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)(i)ón(se)
-SFX n4 ar eronse ar	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)(i)ón(se)
-SFX n4 ar erion/P0P1 ar	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)(i)ón(se)
-SFX n4 ar erionse ar	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)(i)ón(se)
-SFX n4 ar erison/P0P1 ar	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)(i)ón(se)
-SFX n4 ar erisonse ar	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)(i)ón(se)
-SFX n4 ar erision/P0P1 ar	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)(i)ón(se)
-SFX n4 ar erisionse ar	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)(i)ón(se)
-SFX n4 ar eren/P0P1 ar	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)én(se/i)
-SFX n4 ar erense ar	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)én(se/i)
-SFX n4 ar erensi ar	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)én(se/i)
-SFX n4 ar erisen/P0P1 ar	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)én(se/i)
-SFX n4 ar erisense ar	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)én(se/i)
-SFX n4 ar erisensi ar	ts:conditional+present is:first+plural ds:nordic	# T4 + r(is)én(se/i)
+SFX n4 0 on/P0P1 [aei]r	ts:indicative+future is:first+plural is:nordic	# T4 + ron
+SFX n4 0 en/P0P1Ī0 [aei]r	ts:indicative+future is:first+plural is:nordic	# T4 + ren
+SFX n4 0 on/P0P1 [aei]r	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)(i)ón(se)
+SFX n4 0 onse [aei]r	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)(i)ón(se)
+SFX n4 0 ion/P0P1 [aei]r	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)(i)ón(se)
+SFX n4 0 ionse [aei]r	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)(i)ón(se)
+SFX n4 0 ison/P0P1 [aei]r	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)(i)ón(se)
+SFX n4 0 isonse [aei]r	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)(i)ón(se)
+SFX n4 0 ision/P0P1 [aei]r	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)(i)ón(se)
+SFX n4 0 isionse [aei]r	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)(i)ón(se)
+SFX n4 0 en/Ī0 [aei]r	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)én(se/i)
+SFX n4 0 ense [aei]r	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)én(se/i)
+SFX n4 0 ensi [aei]r	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)én(se/i)
+SFX n4 0 isen [aei]r	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)én(se/i)
+SFX n4 0 isense [aei]r	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)én(se/i)
+SFX n4 0 isensi [aei]r	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)én(se/i)
+SFX n4 ar eron/P0P1 ar	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)(i)ón(se)
+SFX n4 ar eronse ar	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)(i)ón(se)
+SFX n4 ar erion/P0P1 ar	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)(i)ón(se)
+SFX n4 ar erionse ar	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)(i)ón(se)
+SFX n4 ar erison/P0P1 ar	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)(i)ón(se)
+SFX n4 ar erisonse ar	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)(i)ón(se)
+SFX n4 ar erision/P0P1 ar	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)(i)ón(se)
+SFX n4 ar erisionse ar	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)(i)ón(se)
+SFX n4 ar eren/P0P1 ar	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)én(se/i)
+SFX n4 ar erense ar	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)én(se/i)
+SFX n4 ar erensi ar	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)én(se/i)
+SFX n4 ar erisen/P0P1 ar	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)én(se/i)
+SFX n4 ar erisense ar	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)én(se/i)
+SFX n4 ar erisensi ar	ts:conditional+present is:first+plural is:nordic	# T4 + r(is)én(se/i)
 
 # senŧa èle vanesente
 SFX ṭ4 Y 12
@@ -607,12 +659,12 @@ SFX ẗ4 ar erà-ƚo/A1 ar	ts:indicative+future is:third is:interrogative	# T4 +
 # skomenŧiando da 'l infenío par -àr, -ér, -ír, -ír/is
 # skomenŧiando da 'l indikativo futuro de 1s par '-er
 SFX t5 Y 33
-SFX t5 ar emo/P0I0 ar	ts:indicative+present is:first+plural	# T5 + mo
-SFX t5 r mo/P0I0 [ei]r	ts:indicative+present is:first+plural	# T5 + mo
-SFX t5 ir emo/P0I0 ir	ts:indicative+present is:first+plural	# T5 + mo
-SFX t5 er imo/P0I0 er	ts:indicative+present is:first+plural	# T5 + mo
-SFX t5 erò imo/P0I0 erò	ts:indicative+present is:first+plural	# T5 + mo
-SFX t5 rò mo/P0I0 erò	ts:indicative+present is:first+plural	# T5 + mo
+SFX t5 ar emo/P0Ī0 ar	ts:indicative+present is:first+plural	# T5 + mo
+SFX t5 r mo/P0Ī0 [ei]r	ts:indicative+present is:first+plural	# T5 + mo
+SFX t5 ir emo/P0Ī0 ir	ts:indicative+present is:first+plural	# T5 + mo
+SFX t5 er imo/P0Ī0 er	ts:indicative+present is:first+plural	# T5 + mo
+SFX t5 erò imo/P0Ī0 erò	ts:indicative+present is:first+plural	# T5 + mo
+SFX t5 rò mo/P0Ī0 erò	ts:indicative+present is:first+plural	# T5 + mo
 SFX t5 ar è ar	ts:indicative+present is:first+plural	# T5 + mo
 SFX t5 er é er	ts:indicative+present is:first+plural	# T5 + mo
 SFX t5 ir í ir	ts:indicative+present is:first+plural	# T5 + mo
@@ -620,12 +672,12 @@ SFX t5 ir é ir	ts:indicative+present is:first+plural	# T5 + mo
 SFX t5 er í er	ts:indicative+present is:first+plural	# T5 + mo
 SFX t5 erò í erò	ts:indicative+present is:first+plural	# T5 + mo
 SFX t5 rò é erò	ts:indicative+present is:first+plural	# T5 + mo
-SFX t5 ar emo/P0I0 ar	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX t5 r mo/P0I0 [ei]r	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX t5 ir emo/P0I0 ir	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX t5 er imo/P0I0 er	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX t5 erò imo/P0I0 erò	ts:subjunctive+present is:first+plural	# T5 + mo
-SFX t5 rò mo/P0I0 erò	ts:subjunctive+present is:first+plural	# T5 + mo
+SFX t5 ar emo/P0Ī0 ar	ts:subjunctive+present is:first+plural	# T5 + mo
+SFX t5 r mo/P0Ī0 [ei]r	ts:subjunctive+present is:first+plural	# T5 + mo
+SFX t5 ir emo/P0Ī0 ir	ts:subjunctive+present is:first+plural	# T5 + mo
+SFX t5 er imo/P0Ī0 er	ts:subjunctive+present is:first+plural	# T5 + mo
+SFX t5 erò imo/P0Ī0 erò	ts:subjunctive+present is:first+plural	# T5 + mo
+SFX t5 rò mo/P0Ī0 erò	ts:subjunctive+present is:first+plural	# T5 + mo
 SFX t5 ar è ar	ts:subjunctive+present is:first+plural	# T5 + mo
 SFX t5 er é er	ts:subjunctive+present is:first+plural	# T5 + mo
 SFX t5 ir í ir	ts:subjunctive+present is:first+plural	# T5 + mo
@@ -765,32 +817,33 @@ SFX t8 Y 6
 SFX t8 0 0/P0N0 o	ts:indicative+present is:first+singular	# T8 + o
 SFX t8 o i/P0 [^i]o	ts:indicative+present is:second+singular	# T8 + i
 SFX t8 io i/P0 io	ts:indicative+present is:second+singular	# T8 + i
-SFX t8 o a/P0 o	ts:subjunctive+present is:first+singular is:third	# T8 + a
+SFX t8 o a/P0 o	ts:subjunctive+present is:third	# T8 + a
 SFX t8 o i/P0 [^i]o	ts:subjunctive+present is:second+singular	# T8 + i
 SFX t8 io i/P0 io	ts:subjunctive+present is:second+singular	# T8 + i
 
 # variante fel.-bel. e liv.
-SFX n8 Y 2
-SFX n8 o e/P0P1I0 o	ts:indicative+present is:first+singular ds:nordic	# T8 + e
-SFX n8 o e/P0P1I0 o	ts:subjunctive+present is:third ds:nordic	# T8 + e
+SFX n8 Y 3
+SFX n8 o a/P0 o	ts:indicative+present is:second+singular is:nordic	# T8 + e
+SFX n8 o e/P0P1Ī0 o	ts:indicative+present is:first+singular is:nordic	# T8 + e
+SFX n8 o e/P0P1Ī0 o	ts:subjunctive+present is:second+singular is:third is:nordic	# T8 + e
 
 # senŧa èle vanesente
 SFX ṭ8 Y 6
 SFX ṭ8 0 0/P0P1N0 o	ts:indicative+present is:first+singular	# T8 + o
-SFX ṭ8 o i/P0P1I2N0 [^i]o	ts:indicative+present is:second+singular	# T8 + i
-SFX ṭ8 io i/P0P1I2N0 io	ts:indicative+present is:second+singular	# T8 + i
+SFX ṭ8 o i/P0P1Ī2N0 [^i]o	ts:indicative+present is:second+singular	# T8 + i
+SFX ṭ8 io i/P0P1Ī2N0 io	ts:indicative+present is:second+singular	# T8 + i
 SFX ṭ8 o a/P0P1N0 o	ts:subjunctive+present is:first+singular is:third	# T8 + a
-SFX ṭ8 o i/P0P1I2N0 [^i]o	ts:subjunctive+present is:second+singular	# T8 + i
-SFX ṭ8 io i/P0P1I2N0 io	ts:subjunctive+present is:second+singular	# T8 + i
+SFX ṭ8 o i/P0P1Ī2N0 [^i]o	ts:subjunctive+present is:second+singular	# T8 + i
+SFX ṭ8 io i/P0P1Ī2N0 io	ts:subjunctive+present is:second+singular	# T8 + i
 
 # ko èle vanesente
 SFX ẗ8 Y 6
 SFX ẗ8 0 0/P0P2N0 o	ts:indicative+present is:first+singular	# T8 + o
-SFX ẗ8 o i/P0P2I2N0 [^i]o	ts:indicative+present is:second+singular	# T8 + i
-SFX ẗ8 io i/P0P2I2N0 io	ts:indicative+present is:second+singular	# T8 + i
+SFX ẗ8 o i/P0P2Ī2N0 [^i]o	ts:indicative+present is:second+singular	# T8 + i
+SFX ẗ8 io i/P0P2Ī2N0 io	ts:indicative+present is:second+singular	# T8 + i
 SFX ẗ8 o a/P0P2N0 o	ts:subjunctive+present is:first+singular is:third	# T8 + a
-SFX ẗ8 o i/P0P2I2N0 [^i]o	ts:subjunctive+present is:second+singular	# T8 + i
-SFX ẗ8 io i/P0P2I2N0 io	ts:subjunctive+present is:second+singular	# T8 + i
+SFX ẗ8 o i/P0P2Ī2N0 [^i]o	ts:subjunctive+present is:second+singular	# T8 + i
+SFX ẗ8 io i/P0P2Ī2N0 io	ts:subjunctive+present is:second+singular	# T8 + i
 
 
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
@@ -822,134 +875,134 @@ SFX ț0 o e iso	ts:indicative+present is:third	# T10
 # skomenŧiando da 'l infenío par -àr, -ér, -ír, -ír/is
 # skomenŧiando da 'l indikativo futuro de 1s par '-er
 SFX ņ1 Y 128
-SFX ņ1 ar on ar	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 ar onse ar	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 ar ion [^cijɉñ]ar	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 ar ionse [^cijɉñ]ar	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 ar ivon ar	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 ar ivonse ar	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 ar ivion ar	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 ar ivionse ar	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 ar en ar	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)én(se)
-SFX ņ1 ar ense/M0 ar	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)én(se/i)
-SFX ņ1 ar iven ar	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)én(se)
-SFX ņ1 ar ivense/M0 ar	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)én(se/i)
-SFX ņ1 ar ié [^cijɉñ]ar	ts:indicative+imperfect is:second+plural ds:nordic	# T11 + (iv)ié
-SFX ņ1 ar ivié ar	ts:indicative+imperfect is:second+plural ds:nordic	# T11 + (iv)ié
-SFX ņ1 er on er	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 er onse er	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 er ion [^cijɉñ]er	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 er ionse [^cijɉñ]er	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 er ivon er	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 er ivonse er	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 er ivion er	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 er ivionse er	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 r n er	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)én(se)
-SFX ņ1 r nse/M0 er	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)én(se/i)
-SFX ņ1 er iven er	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)én(se)
-SFX ņ1 er ivense/M0 er	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)én(se/i)
-SFX ņ1 er ié [^cijɉñ]er	ts:indicative+imperfect is:second+plural ds:nordic	# T11 + (iv)ié
-SFX ņ1 er ivié er	ts:indicative+imperfect is:second+plural ds:nordic	# T11 + (iv)ié
-SFX ņ1 erò on [^cijɉñ]erò	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 erò onse [^cijɉñ]erò	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 erò ion [^cijɉñ]erò	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 erò ionse [^cijɉñ]erò	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 erò ivon erò	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 erò ivonse erò	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 erò ivion erò	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 erò ivionse erò	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 rò n erò	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)én(se)
-SFX ņ1 rò nse/M0 erò	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)én(se/i)
-SFX ņ1 erò iven erò	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)én(se)
-SFX ņ1 erò ivense/M0 erò	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)én(se/i)
-SFX ņ1 erò ié [^cijɉñ]erò	ts:indicative+imperfect is:second+plural ds:nordic	# T11 + (iv)ié
-SFX ņ1 erò ivié erò	ts:indicative+imperfect is:second+plural ds:nordic	# T11 + (iv)ié
-SFX ņ1 ir on ir	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 ir onse ir	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 r on [^cijɉñ]ir	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 r onse [^cijɉñ]ir	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 r von ir	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 r vonse ir	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 r vion ir	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se)
-SFX ņ1 r vionse/M0 ir	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)(i)ón(se/i)
-SFX ņ1 ir en ir	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)én(se)
-SFX ņ1 ir ense/M0 ir	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)én(se/i)
-SFX ņ1 r ven ir	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)én(se)
-SFX ņ1 r vense/M0 ir	ts:indicative+imperfect is:first+plural ds:nordic	# T11 + (iv)én(se/i)
-SFX ņ1 r é [^cijɉñ]ir	ts:indicative+imperfect is:second+plural ds:nordic	# T11 + (iv)ié
-SFX ņ1 r vié ir	ts:indicative+imperfect is:second+plural ds:nordic	# T11 + (iv)ié
-SFX ņ1 ar on ar	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 ar one ar	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 ar onse ar	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 ar ion [^cijɉñ]ar	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 ar ione [^cijɉñ]ar	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 ar ionse [^cijɉñ]ar	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 ar ison ar	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 ar isone ar	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 ar isonse ar	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 ar ision ar	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 ar isione ar	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 ar isionse ar	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 ar en ar	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)én(e/se)
-SFX ņ1 ar ene ar	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)én(e/se)
-SFX ņ1 ar ense ar	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)én(e/se)
-SFX ņ1 ar isen ar	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)én(e/se)
-SFX ņ1 ar isene ar	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)én(e/se)
-SFX ņ1 ar isense/M0 ar	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)én(e/se/i)
-SFX ņ1 ar ié [^cijɉñ]ar	ts:subjunctive+imperfect is:second+plural ds:nordic	# T11 + (is)ié(de/ge)
-SFX ņ1 ar iede [^cijɉñ]ar	ts:subjunctive+imperfect is:second+plural ds:nordic	# T11 + (is)ié(de/ge)
-SFX ņ1 ar iege [^cijɉñ]ar	ts:subjunctive+imperfect is:second+plural ds:nordic	# T11 + (is)ié(de/ge)
-SFX ņ1 ar isié ar	ts:subjunctive+imperfect is:second+plural ds:nordic	# T11 + (is)ié(de/ge)
-SFX ņ1 ar isiede ar	ts:subjunctive+imperfect is:second+plural ds:nordic	# T11 + (is)ié(de/ge)
-SFX ņ1 ar isiege ar	ts:subjunctive+imperfect is:second+plural ds:nordic	# T11 + (is)ié(de/ge)
-SFX ņ1 er on er	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 er one er	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 er onse er	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 er ion [^cijɉñ]er	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 er ione [^cijɉñ]er	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 er ionse [^cijɉñ]er	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 er ison er	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 er isone er	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 er isonse er	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 er ision er	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 er isione er	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 er isionse er	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 r n er	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)én(e/se)
-SFX ņ1 r ne er	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)én(e/se)
-SFX ņ1 r nse er	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)én(e/se)
-SFX ņ1 er isen er	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)én(e/se)
-SFX ņ1 er isene er	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)én(e/se)
-SFX ņ1 er isense/M0 er	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)én(e/se/i)
-SFX ņ1 er ié [^cijɉñ]er	ts:subjunctive+imperfect is:second+plural ds:nordic	# T11 + (is)ié(de/ge)
-SFX ņ1 er iede [^cijɉñ]er	ts:subjunctive+imperfect is:second+plural ds:nordic	# T11 + (is)ié(de/ge)
-SFX ņ1 er iege [^cijɉñ]er	ts:subjunctive+imperfect is:second+plural ds:nordic	# T11 + (is)ié(de/ge)
-SFX ņ1 er isié er	ts:subjunctive+imperfect is:second+plural ds:nordic	# T11 + (is)ié(de/ge)
-SFX ņ1 er isiede er	ts:subjunctive+imperfect is:second+plural ds:nordic	# T11 + (is)ié(de/ge)
-SFX ņ1 er isiege er	ts:subjunctive+imperfect is:second+plural ds:nordic	# T11 + (is)ié(de/ge)
-SFX ņ1 ir on ir	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 ir one ir	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 ir onse ir	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 r on [^cijɉñ]ir	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 r one [^cijɉñ]ir	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 r onse [^cijɉñ]ir	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 r son ir	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 r sone ir	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 r sonse ir	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 r sion ir	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 r sione ir	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 r sionse ir	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)(i)ón(e/se)
-SFX ņ1 ir en ir	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)én(e/se)
-SFX ņ1 ir ene ir	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)én(e/se)
-SFX ņ1 ir ense ir	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)én(e/se)
-SFX ņ1 r sen ir	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)én(e/se)
-SFX ņ1 r sene ir	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)én(e/se)
-SFX ņ1 r sense/M0 ir	ts:subjunctive+imperfect is:first+plural ds:nordic	# T11 + (is)én(e/se/i)
-SFX ņ1 r é [^cijɉñ]ir	ts:subjunctive+imperfect is:second+plural ds:nordic	# T11 + (is)ié(de/ge)
-SFX ņ1 r ede [^cijɉñ]ir	ts:subjunctive+imperfect is:second+plural ds:nordic	# T11 + (is)ié(de/ge)
-SFX ņ1 r ege [^cijɉñ]ir	ts:subjunctive+imperfect is:second+plural ds:nordic	# T11 + (is)ié(de/ge)
-SFX ņ1 r sié ir	ts:subjunctive+imperfect is:second+plural ds:nordic	# T11 + (is)ié(de/ge)
-SFX ņ1 r siede ir	ts:subjunctive+imperfect is:second+plural ds:nordic	# T11 + (is)ié(de/ge)
-SFX ņ1 r siege ir	ts:subjunctive+imperfect is:second+plural ds:nordic	# T11 + (is)ié(de/ge)
+SFX ņ1 ar on ar	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 ar onse ar	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 ar ion [^cijɉñ]ar	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 ar ionse [^cijɉñ]ar	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 ar ivon ar	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 ar ivonse ar	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 ar ivion ar	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 ar ivionse ar	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 ar en ar	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)én(se)
+SFX ņ1 ar ense/M0 ar	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)én(se/i)
+SFX ņ1 ar iven ar	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)én(se)
+SFX ņ1 ar ivense/M0 ar	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)én(se/i)
+SFX ņ1 ar ié [^cijɉñ]ar	ts:indicative+imperfect is:second+plural is:nordic	# T11 + (iv)ié
+SFX ņ1 ar ivié ar	ts:indicative+imperfect is:second+plural is:nordic	# T11 + (iv)ié
+SFX ņ1 er on er	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 er onse er	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 er ion [^cijɉñ]er	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 er ionse [^cijɉñ]er	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 er ivon er	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 er ivonse er	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 er ivion er	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 er ivionse er	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 r n er	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)én(se)
+SFX ņ1 r nse/M0 er	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)én(se/i)
+SFX ņ1 er iven er	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)én(se)
+SFX ņ1 er ivense/M0 er	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)én(se/i)
+SFX ņ1 er ié [^cijɉñ]er	ts:indicative+imperfect is:second+plural is:nordic	# T11 + (iv)ié
+SFX ņ1 er ivié er	ts:indicative+imperfect is:second+plural is:nordic	# T11 + (iv)ié
+SFX ņ1 erò on [^cijɉñ]erò	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 erò onse [^cijɉñ]erò	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 erò ion [^cijɉñ]erò	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 erò ionse [^cijɉñ]erò	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 erò ivon erò	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 erò ivonse erò	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 erò ivion erò	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 erò ivionse erò	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 rò n erò	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)én(se)
+SFX ņ1 rò nse/M0 erò	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)én(se/i)
+SFX ņ1 erò iven erò	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)én(se)
+SFX ņ1 erò ivense/M0 erò	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)én(se/i)
+SFX ņ1 erò ié [^cijɉñ]erò	ts:indicative+imperfect is:second+plural is:nordic	# T11 + (iv)ié
+SFX ņ1 erò ivié erò	ts:indicative+imperfect is:second+plural is:nordic	# T11 + (iv)ié
+SFX ņ1 ir on ir	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 ir onse ir	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 r on [^cijɉñ]ir	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 r onse [^cijɉñ]ir	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 r von ir	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 r vonse ir	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 r vion ir	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se)
+SFX ņ1 r vionse/M0 ir	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)(i)ón(se/i)
+SFX ņ1 ir en ir	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)én(se)
+SFX ņ1 ir ense/M0 ir	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)én(se/i)
+SFX ņ1 r ven ir	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)én(se)
+SFX ņ1 r vense/M0 ir	ts:indicative+imperfect is:first+plural is:nordic	# T11 + (iv)én(se/i)
+SFX ņ1 r é [^cijɉñ]ir	ts:indicative+imperfect is:second+plural is:nordic	# T11 + (iv)ié
+SFX ņ1 r vié ir	ts:indicative+imperfect is:second+plural is:nordic	# T11 + (iv)ié
+SFX ņ1 ar on ar	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 ar one ar	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 ar onse ar	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 ar ion [^cijɉñ]ar	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 ar ione [^cijɉñ]ar	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 ar ionse [^cijɉñ]ar	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 ar ison ar	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 ar isone ar	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 ar isonse ar	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 ar ision ar	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 ar isione ar	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 ar isionse ar	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 ar en ar	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)én(e/se)
+SFX ņ1 ar ene ar	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)én(e/se)
+SFX ņ1 ar ense ar	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)én(e/se)
+SFX ņ1 ar isen ar	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)én(e/se)
+SFX ņ1 ar isene ar	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)én(e/se)
+SFX ņ1 ar isense/M0 ar	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)én(e/se/i)
+SFX ņ1 ar ié [^cijɉñ]ar	ts:subjunctive+imperfect is:second+plural is:nordic	# T11 + (is)ié(de/ge)
+SFX ņ1 ar iede [^cijɉñ]ar	ts:subjunctive+imperfect is:second+plural is:nordic	# T11 + (is)ié(de/ge)
+SFX ņ1 ar iege [^cijɉñ]ar	ts:subjunctive+imperfect is:second+plural is:nordic	# T11 + (is)ié(de/ge)
+SFX ņ1 ar isié ar	ts:subjunctive+imperfect is:second+plural is:nordic	# T11 + (is)ié(de/ge)
+SFX ņ1 ar isiede ar	ts:subjunctive+imperfect is:second+plural is:nordic	# T11 + (is)ié(de/ge)
+SFX ņ1 ar isiege ar	ts:subjunctive+imperfect is:second+plural is:nordic	# T11 + (is)ié(de/ge)
+SFX ņ1 er on er	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 er one er	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 er onse er	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 er ion [^cijɉñ]er	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 er ione [^cijɉñ]er	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 er ionse [^cijɉñ]er	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 er ison er	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 er isone er	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 er isonse er	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 er ision er	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 er isione er	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 er isionse er	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 r n er	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)én(e/se)
+SFX ņ1 r ne er	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)én(e/se)
+SFX ņ1 r nse er	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)én(e/se)
+SFX ņ1 er isen er	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)én(e/se)
+SFX ņ1 er isene er	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)én(e/se)
+SFX ņ1 er isense/M0 er	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)én(e/se/i)
+SFX ņ1 er ié [^cijɉñ]er	ts:subjunctive+imperfect is:second+plural is:nordic	# T11 + (is)ié(de/ge)
+SFX ņ1 er iede [^cijɉñ]er	ts:subjunctive+imperfect is:second+plural is:nordic	# T11 + (is)ié(de/ge)
+SFX ņ1 er iege [^cijɉñ]er	ts:subjunctive+imperfect is:second+plural is:nordic	# T11 + (is)ié(de/ge)
+SFX ņ1 er isié er	ts:subjunctive+imperfect is:second+plural is:nordic	# T11 + (is)ié(de/ge)
+SFX ņ1 er isiede er	ts:subjunctive+imperfect is:second+plural is:nordic	# T11 + (is)ié(de/ge)
+SFX ņ1 er isiege er	ts:subjunctive+imperfect is:second+plural is:nordic	# T11 + (is)ié(de/ge)
+SFX ņ1 ir on ir	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 ir one ir	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 ir onse ir	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 r on [^cijɉñ]ir	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 r one [^cijɉñ]ir	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 r onse [^cijɉñ]ir	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 r son ir	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 r sone ir	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 r sonse ir	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 r sion ir	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 r sione ir	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 r sionse ir	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)(i)ón(e/se)
+SFX ņ1 ir en ir	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)én(e/se)
+SFX ņ1 ir ene ir	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)én(e/se)
+SFX ņ1 ir ense ir	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)én(e/se)
+SFX ņ1 r sen ir	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)én(e/se)
+SFX ņ1 r sene ir	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)én(e/se)
+SFX ņ1 r sense/M0 ir	ts:subjunctive+imperfect is:first+plural is:nordic	# T11 + (is)én(e/se/i)
+SFX ņ1 r é [^cijɉñ]ir	ts:subjunctive+imperfect is:second+plural is:nordic	# T11 + (is)ié(de/ge)
+SFX ņ1 r ede [^cijɉñ]ir	ts:subjunctive+imperfect is:second+plural is:nordic	# T11 + (is)ié(de/ge)
+SFX ņ1 r ege [^cijɉñ]ir	ts:subjunctive+imperfect is:second+plural is:nordic	# T11 + (is)ié(de/ge)
+SFX ņ1 r sié ir	ts:subjunctive+imperfect is:second+plural is:nordic	# T11 + (is)ié(de/ge)
+SFX ņ1 r siede ir	ts:subjunctive+imperfect is:second+plural is:nordic	# T11 + (is)ié(de/ge)
+SFX ņ1 r siege ir	ts:subjunctive+imperfect is:second+plural is:nordic	# T11 + (is)ié(de/ge)
 
 # tèma 12 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: VT > Ø, then T8: senŧa aŧento)
 # skomenŧiando da 'l infenío par -àr, -ér, -ír
@@ -974,71 +1027,71 @@ SFX ț2 iso é iso	ts:imperative+present is:second+plural	# T12 + é
 
 # variante fel.-bel. e liv.
 SFX ņ2 Y 65
-SFX ņ2 ar on/P0P1 ar	ts:indicative+present is:first+plural ds:nordic	# T12 + ón
-SFX ņ2 er on/P0P1 er	ts:indicative+present is:first+plural ds:nordic	# T12 + ón
-SFX ņ2 ò on/P0P1 erò	ts:indicative+present is:first+plural ds:nordic	# T12 + ón
-SFX ņ2 ir on/P0P1 ir	ts:indicative+present is:first+plural ds:nordic	# T12 + ón
-SFX ņ2 0 n/P0P1 iso	ts:indicative+present is:first+plural ds:nordic	# T12 + ón
-SFX ņ2 ar en/P0P1I0 ar	ts:indicative+present is:first+plural ds:nordic	# T12 + én
-SFX ņ2 r n/P0P1I0 er	ts:indicative+present is:first+plural ds:nordic	# T12 + én
-SFX ņ2 ò en/P0P1I0 erò	ts:indicative+present is:first+plural ds:nordic	# T12 + én
-SFX ņ2 ir en/P0P1I0 ir	ts:indicative+present is:first+plural ds:nordic	# T12 + én
-SFX ņ2 o en/P0P1I0 iso	ts:indicative+present is:first+plural ds:nordic	# T12 + én
-SFX ņ2 ar onme/P7 ar	ts:indicative+present is:first+plural is:procomplementar ds:nordic	# T12 + ón
-SFX ņ2 ar ónmelo/P7 ar	ts:indicative+present is:first+plural is:procomplementar ds:nordic	# T12 + ón
-SFX ņ2 er onme/P7 er	ts:indicative+present is:first+plural is:procomplementar ds:nordic	# T12 + ón
-SFX ņ2 er ónmelo/P7 er	ts:indicative+present is:first+plural is:procomplementar ds:nordic	# T12 + ón
-SFX ņ2 ò onme/P7 erò	ts:indicative+present is:first+plural is:procomplementar ds:nordic	# T12 + ón
-SFX ņ2 ò ónmelo/P7 erò	ts:indicative+present is:first+plural is:procomplementar ds:nordic	# T12 + ón
-SFX ņ2 ir onme/P7 ir	ts:indicative+present is:first+plural is:procomplementar ds:nordic	# T12 + ón
-SFX ņ2 ir ónmelo/P7 ir	ts:indicative+present is:first+plural is:procomplementar ds:nordic	# T12 + ón
-SFX ņ2 0 nme/P7 iso	ts:indicative+present is:first+plural is:procomplementar ds:nordic	# T12 + ón
-SFX ņ2 o ónmelo/P7 iso	ts:indicative+present is:first+plural is:procomplementar ds:nordic	# T12 + ón
-SFX ņ2 ar enme/P7I0 ar	ts:indicative+present is:first+plural is:procomplementar ds:nordic	# T12 + én
-SFX ņ2 ar énmelo/P7I0 ar	ts:indicative+present is:first+plural is:procomplementar ds:nordic	# T12 + én
-SFX ņ2 r nme/P7I0 er	ts:indicative+present is:first+plural is:procomplementar ds:nordic	# T12 + én
-SFX ņ2 er énmelo/P7I0 er	ts:indicative+present is:first+plural is:procomplementar ds:nordic	# T12 + én
-SFX ņ2 ò enme/P7I0 erò	ts:indicative+present is:first+plural is:procomplementar ds:nordic	# T12 + én
-SFX ņ2 ò énmelo/P7I0 erò	ts:indicative+present is:first+plural is:procomplementar ds:nordic	# T12 + én
-SFX ņ2 ir enme/P7I0 ir	ts:indicative+present is:first+plural is:procomplementar ds:nordic	# T12 + én
-SFX ņ2 ir énmelo/P7I0 ir	ts:indicative+present is:first+plural is:procomplementar ds:nordic	# T12 + én
-SFX ņ2 o enme/P7I0 iso	ts:indicative+present is:first+plural is:procomplementar ds:nordic	# T12 + én
-SFX ņ2 o énmelo/P7I0 iso	ts:indicative+present is:first+plural is:procomplementar ds:nordic	# T12 + én
-SFX ņ2 ar on/P0P1 ar	ts:subjunctive+present is:first+plural ds:nordic	# T12 + (i)ón(e)
-SFX ņ2 er on/P0P1 er	ts:subjunctive+present is:first+plural ds:nordic	# T12 + (i)ón(e)
-SFX ņ2 ò on/P0P1 erò	ts:subjunctive+present is:first+plural ds:nordic	# T12 + (i)ón(e)
-SFX ņ2 ir on/P0P1 ir	ts:subjunctive+present is:first+plural ds:nordic	# T12 + (i)ón(e)
-SFX ņ2 0 n/P0P1 iso	ts:subjunctive+present is:first+plural ds:nordic	# T12 + (i)ón(e)
-SFX ņ2 ar one ar	ts:subjunctive+present is:first+plural ds:nordic	# T12 + (i)ón(e)
-SFX ņ2 er one er	ts:subjunctive+present is:first+plural ds:nordic	# T12 + (i)ón(e)
-SFX ņ2 ò one erò	ts:subjunctive+present is:first+plural ds:nordic	# T12 + (i)ón(e)
-SFX ņ2 ir one ir	ts:subjunctive+present is:first+plural ds:nordic	# T12 + (i)ón(e)
-SFX ņ2 0 ne iso	ts:subjunctive+present is:first+plural ds:nordic	# T12 + (i)ón(e)
-SFX ņ2 ar ion/P0P1 [^cijɉñ]ar	ts:subjunctive+present is:first+plural ds:nordic	# T12 + (i)ón(e)
-SFX ņ2 er ion/P0P1 [^cijɉñ]er	ts:subjunctive+present is:first+plural ds:nordic	# T12 + (i)ón(e)
-SFX ņ2 ò ion/P0P1 [^cijɉñ]erò	ts:subjunctive+present is:first+plural ds:nordic	# T12 + (i)ón(e)
-SFX ņ2 r on/P0P1 [^cijɉñ]ir	ts:subjunctive+present is:first+plural ds:nordic	# T12 + (i)ón(e)
-SFX ņ2 o ion/P0P1 [^cijɉñ]iso	ts:subjunctive+present is:first+plural ds:nordic	# T12 + (i)ón(e)
-SFX ņ2 ar ione [^cijɉñ]ar	ts:subjunctive+present is:first+plural ds:nordic	# T12 + (i)ón(e)
-SFX ņ2 er ione [^cijɉñ]er	ts:subjunctive+present is:first+plural ds:nordic	# T12 + (i)ón(e)
-SFX ņ2 ò ione [^cijɉñ]erò	ts:subjunctive+present is:first+plural ds:nordic	# T12 + (i)ón(e)
-SFX ņ2 r one [^cijɉñ]ir	ts:subjunctive+present is:first+plural ds:nordic	# T12 + (i)ón(e)
-SFX ņ2 o ione [^cijɉñ]iso	ts:subjunctive+present is:first+plural ds:nordic	# T12 + (i)ón(e)
-SFX ņ2 ar é ar	ts:subjunctive+present is:second+plural ds:nordic	# T12 + é(de/ge)
-SFX ņ2 er é er	ts:subjunctive+present is:second+plural ds:nordic	# T12 + é(de/ge)
-SFX ņ2 erò é erò	ts:subjunctive+present is:second+plural ds:nordic	# T12 + é(de/ge)
-SFX ņ2 ir é ir	ts:subjunctive+present is:second+plural ds:nordic	# T12 + é(de/ge)
-SFX ņ2 iso é iso	ts:subjunctive+present is:second+plural ds:nordic	# T12 + é(de/ge)
-SFX ņ2 ar ede ar	ts:subjunctive+present is:second+plural ds:nordic	# T12 + é(de/ge)
-SFX ņ2 r de er	ts:subjunctive+present is:second+plural ds:nordic	# T12 + é(de/ge)
-SFX ņ2 rò de erò	ts:subjunctive+present is:second+plural ds:nordic	# T12 + é(de/ge)
-SFX ņ2 ir ede ir	ts:subjunctive+present is:second+plural ds:nordic	# T12 + é(de/ge)
-SFX ņ2 iso ede iso	ts:subjunctive+present is:second+plural ds:nordic	# T12 + é(de/ge)
-SFX ņ2 ar ege ar	ts:subjunctive+present is:second+plural ds:nordic	# T12 + é(de/ge)
-SFX ņ2 r ge er	ts:subjunctive+present is:second+plural ds:nordic	# T12 + é(de/ge)
-SFX ņ2 rò ge erò	ts:subjunctive+present is:second+plural ds:nordic	# T12 + é(de/ge)
-SFX ņ2 ir ege ir	ts:subjunctive+present is:second+plural ds:nordic	# T12 + é(de/ge)
-SFX ņ2 iso ege iso	ts:subjunctive+present is:second+plural ds:nordic	# T12 + é(de/ge)
+SFX ņ2 ar on/P0P1 ar	ts:indicative+present is:first+plural is:nordic	# T12 + ón
+SFX ņ2 er on/P0P1 er	ts:indicative+present is:first+plural is:nordic	# T12 + ón
+SFX ņ2 ò on/P0P1 erò	ts:indicative+present is:first+plural is:nordic	# T12 + ón
+SFX ņ2 ir on/P0P1 ir	ts:indicative+present is:first+plural is:nordic	# T12 + ón
+SFX ņ2 0 n/P0P1 iso	ts:indicative+present is:first+plural is:nordic	# T12 + ón
+SFX ņ2 ar en/P0P1Ī0 ar	ts:indicative+present is:first+plural is:nordic	# T12 + én
+SFX ņ2 r n/P0P1Ī0 er	ts:indicative+present is:first+plural is:nordic	# T12 + én
+SFX ņ2 ò en/P0P1Ī0 erò	ts:indicative+present is:first+plural is:nordic	# T12 + én
+SFX ņ2 ir en/P0P1Ī0 ir	ts:indicative+present is:first+plural is:nordic	# T12 + én
+SFX ņ2 o en/P0P1Ī0 iso	ts:indicative+present is:first+plural is:nordic	# T12 + én
+SFX ņ2 ar onme/P7 ar	ts:indicative+present is:first+plural is:procomplementar is:nordic	# T12 + ón
+SFX ņ2 ar ónmelo/P7 ar	ts:indicative+present is:first+plural is:procomplementar is:nordic	# T12 + ón
+SFX ņ2 er onme/P7 er	ts:indicative+present is:first+plural is:procomplementar is:nordic	# T12 + ón
+SFX ņ2 er ónmelo/P7 er	ts:indicative+present is:first+plural is:procomplementar is:nordic	# T12 + ón
+SFX ņ2 ò onme/P7 erò	ts:indicative+present is:first+plural is:procomplementar is:nordic	# T12 + ón
+SFX ņ2 ò ónmelo/P7 erò	ts:indicative+present is:first+plural is:procomplementar is:nordic	# T12 + ón
+SFX ņ2 ir onme/P7 ir	ts:indicative+present is:first+plural is:procomplementar is:nordic	# T12 + ón
+SFX ņ2 ir ónmelo/P7 ir	ts:indicative+present is:first+plural is:procomplementar is:nordic	# T12 + ón
+SFX ņ2 0 nme/P7 iso	ts:indicative+present is:first+plural is:procomplementar is:nordic	# T12 + ón
+SFX ņ2 o ónmelo/P7 iso	ts:indicative+present is:first+plural is:procomplementar is:nordic	# T12 + ón
+SFX ņ2 ar enme/P7Ī0 ar	ts:indicative+present is:first+plural is:procomplementar is:nordic	# T12 + én
+SFX ņ2 ar énmelo/P7Ī0 ar	ts:indicative+present is:first+plural is:procomplementar is:nordic	# T12 + én
+SFX ņ2 r nme/P7Ī0 er	ts:indicative+present is:first+plural is:procomplementar is:nordic	# T12 + én
+SFX ņ2 er énmelo/P7Ī0 er	ts:indicative+present is:first+plural is:procomplementar is:nordic	# T12 + én
+SFX ņ2 ò enme/P7Ī0 erò	ts:indicative+present is:first+plural is:procomplementar is:nordic	# T12 + én
+SFX ņ2 ò énmelo/P7Ī0 erò	ts:indicative+present is:first+plural is:procomplementar is:nordic	# T12 + én
+SFX ņ2 ir enme/P7Ī0 ir	ts:indicative+present is:first+plural is:procomplementar is:nordic	# T12 + én
+SFX ņ2 ir énmelo/P7Ī0 ir	ts:indicative+present is:first+plural is:procomplementar is:nordic	# T12 + én
+SFX ņ2 o enme/P7Ī0 iso	ts:indicative+present is:first+plural is:procomplementar is:nordic	# T12 + én
+SFX ņ2 o énmelo/P7Ī0 iso	ts:indicative+present is:first+plural is:procomplementar is:nordic	# T12 + én
+SFX ņ2 ar on/P0P1 ar	ts:subjunctive+present is:first+plural is:nordic	# T12 + (i)ón(e)
+SFX ņ2 er on/P0P1 er	ts:subjunctive+present is:first+plural is:nordic	# T12 + (i)ón(e)
+SFX ņ2 ò on/P0P1 erò	ts:subjunctive+present is:first+plural is:nordic	# T12 + (i)ón(e)
+SFX ņ2 ir on/P0P1 ir	ts:subjunctive+present is:first+plural is:nordic	# T12 + (i)ón(e)
+SFX ņ2 0 n/P0P1 iso	ts:subjunctive+present is:first+plural is:nordic	# T12 + (i)ón(e)
+SFX ņ2 ar one ar	ts:subjunctive+present is:first+plural is:nordic	# T12 + (i)ón(e)
+SFX ņ2 er one er	ts:subjunctive+present is:first+plural is:nordic	# T12 + (i)ón(e)
+SFX ņ2 ò one erò	ts:subjunctive+present is:first+plural is:nordic	# T12 + (i)ón(e)
+SFX ņ2 ir one ir	ts:subjunctive+present is:first+plural is:nordic	# T12 + (i)ón(e)
+SFX ņ2 0 ne iso	ts:subjunctive+present is:first+plural is:nordic	# T12 + (i)ón(e)
+SFX ņ2 ar ion/P0P1 [^cijɉñ]ar	ts:subjunctive+present is:first+plural is:nordic	# T12 + (i)ón(e)
+SFX ņ2 er ion/P0P1 [^cijɉñ]er	ts:subjunctive+present is:first+plural is:nordic	# T12 + (i)ón(e)
+SFX ņ2 ò ion/P0P1 [^cijɉñ]erò	ts:subjunctive+present is:first+plural is:nordic	# T12 + (i)ón(e)
+SFX ņ2 r on/P0P1 [^cijɉñ]ir	ts:subjunctive+present is:first+plural is:nordic	# T12 + (i)ón(e)
+SFX ņ2 o ion/P0P1 [^cijɉñ]iso	ts:subjunctive+present is:first+plural is:nordic	# T12 + (i)ón(e)
+SFX ņ2 ar ione [^cijɉñ]ar	ts:subjunctive+present is:first+plural is:nordic	# T12 + (i)ón(e)
+SFX ņ2 er ione [^cijɉñ]er	ts:subjunctive+present is:first+plural is:nordic	# T12 + (i)ón(e)
+SFX ņ2 ò ione [^cijɉñ]erò	ts:subjunctive+present is:first+plural is:nordic	# T12 + (i)ón(e)
+SFX ņ2 r one [^cijɉñ]ir	ts:subjunctive+present is:first+plural is:nordic	# T12 + (i)ón(e)
+SFX ņ2 o ione [^cijɉñ]iso	ts:subjunctive+present is:first+plural is:nordic	# T12 + (i)ón(e)
+SFX ņ2 ar é ar	ts:subjunctive+present is:second+plural is:nordic	# T12 + é(de/ge)
+SFX ņ2 er é er	ts:subjunctive+present is:second+plural is:nordic	# T12 + é(de/ge)
+SFX ņ2 erò é erò	ts:subjunctive+present is:second+plural is:nordic	# T12 + é(de/ge)
+SFX ņ2 ir é ir	ts:subjunctive+present is:second+plural is:nordic	# T12 + é(de/ge)
+SFX ņ2 iso é iso	ts:subjunctive+present is:second+plural is:nordic	# T12 + é(de/ge)
+SFX ņ2 ar ede ar	ts:subjunctive+present is:second+plural is:nordic	# T12 + é(de/ge)
+SFX ņ2 r de er	ts:subjunctive+present is:second+plural is:nordic	# T12 + é(de/ge)
+SFX ņ2 rò de erò	ts:subjunctive+present is:second+plural is:nordic	# T12 + é(de/ge)
+SFX ņ2 ir ede ir	ts:subjunctive+present is:second+plural is:nordic	# T12 + é(de/ge)
+SFX ņ2 iso ede iso	ts:subjunctive+present is:second+plural is:nordic	# T12 + é(de/ge)
+SFX ņ2 ar ege ar	ts:subjunctive+present is:second+plural is:nordic	# T12 + é(de/ge)
+SFX ņ2 r ge er	ts:subjunctive+present is:second+plural is:nordic	# T12 + é(de/ge)
+SFX ņ2 rò ge erò	ts:subjunctive+present is:second+plural is:nordic	# T12 + é(de/ge)
+SFX ņ2 ir ege ir	ts:subjunctive+present is:second+plural is:nordic	# T12 + é(de/ge)
+SFX ņ2 iso ege iso	ts:subjunctive+present is:second+plural is:nordic	# T12 + é(de/ge)
 
 SFX VV Y 15
 SFX VV avo ào avo
@@ -1056,6 +1109,65 @@ SFX VV ive íe ive
 SFX VV vimo imo àvimo
 SFX VV vimo imo évimo
 SFX VV vimo imo ívimo
+
+
+# interogativi prima parsona singolar e plural (stakài)
+SFX Ī0 Y 14
+SFX Ī0 0 -e .	is:interrogative
+SFX Ī0 0 -i .	is:interrogative
+SFX Ī0 0 -io [^no]	is:interrogative
+SFX Ī0 0 -io [^mv]o	is:interrogative
+SFX Ī0 o -io [mv]o	is:interrogative
+SFX Ī0 0 -mi [^on]	is:interrogative
+SFX Ī0 0 -mi [^m]o	is:interrogative
+SFX Ī0 0 -mi [^eo]n	is:interrogative
+SFX Ī0 0 -te n	is:interrogative
+SFX Ī0 0 -ti n	is:interrogative
+SFX Ī0 0 -ne [^n]	is:interrogative
+SFX Ī0 0 -ni [^n]	is:interrogative
+SFX Ī0 0 -nte [^n]	is:interrogative
+SFX Ī0 0 -nti [^n]	is:interrogative
+
+# interogativi sekonda parsona singolar (stakài)
+SFX Ī2 Y 3
+SFX Ī2 0 -to .	is:interrogative
+SFX Ī2 0 -tu .	is:interrogative
+SFX Ī2 0 -stu .	is:interrogative
+
+# interogativi sekonda parsona plural (stakài)
+SFX Ī3 Y 2
+SFX Ī3 0 -o .	is:interrogative
+SFX Ī3 0 -u .	is:interrogative
+
+# interogativi tèrŧa parsona (stakài)
+SFX Ī4 Y 12
+SFX Ī4 a e-lo a	is:interrogative
+SFX Ī4 a e-la a	is:interrogative
+SFX Ī4 a e-li a	is:interrogative
+SFX Ī4 a e-le a	is:interrogative
+SFX Ī4 i e-lo i	is:interrogative
+SFX Ī4 i e-la i	is:interrogative
+SFX Ī4 i e-li i	is:interrogative
+SFX Ī4 i e-le i	is:interrogative
+SFX Ī4 0 -lo [^ai]	is:interrogative
+SFX Ī4 0 -la [^ai]	is:interrogative
+SFX Ī4 0 -li [^ai]	is:interrogative
+SFX Ī4 0 -le [^ai]	is:interrogative
+
+# interogativi tèrŧa parsona ko èle vanesente (stakài)
+SFX I̱4 Y 12
+SFX I̱4 a e-ƚo a	is:interrogative
+SFX I̱4 a e-ƚa a	is:interrogative
+SFX I̱4 a e-ƚi a	is:interrogative
+SFX I̱4 a e-ƚe a	is:interrogative
+SFX I̱4 i e-ƚo i	is:interrogative
+SFX I̱4 i e-ƚa i	is:interrogative
+SFX I̱4 i e-ƚi i	is:interrogative
+SFX I̱4 i e-ƚe i	is:interrogative
+SFX I̱4 0 -ƚo [^ai]	is:interrogative
+SFX I̱4 0 -ƚa [^ai]	is:interrogative
+SFX I̱4 0 -ƚi [^ai]	is:interrogative
+SFX I̱4 0 -ƚe [^ai]	is:interrogative
 
 # ---
 
@@ -5865,70 +5977,70 @@ SFX P8 smeƚo xgeƚe smeƚo	is:procomplementar
 
 # sonoriđaŧion finali
 SFX FS Y 64
-SFX FS bo p bo	ds:nordic
-SFX FS be p be	ds:nordic
-SFX FS bo b bo	ds:nordic
-SFX FS be b be	ds:nordic
-SFX FS co c co	ds:nordic
-SFX FS ce c ce	ds:nordic
-SFX FS do t do	ds:nordic
-SFX FS de t de	ds:nordic
-SFX FS do d do	ds:nordic
-SFX FS de d de	ds:nordic
-SFX FS fo f fo	ds:nordic
-SFX FS fe f fe	ds:nordic
-SFX FS go k go	ds:nordic
-SFX FS ge k ge	ds:nordic
-SFX FS go g go	ds:nordic
-SFX FS ge g ge	ds:nordic
-SFX FS ko k ko	ds:nordic
-SFX FS ke k ke	ds:nordic
-SFX FS lo l lo	ds:nordic
-SFX FS le l le	ds:nordic
-SFX FS mo n mo	ds:nordic
-SFX FS me n me	ds:nordic
-SFX FS mo m mo	ds:nordic
-SFX FS me m me	ds:nordic
-SFX FS no n no	ds:nordic
-SFX FS ne n ne	ds:nordic
-SFX FS po p po	ds:nordic
-SFX FS pe p pe	ds:nordic
-SFX FS ro r [^bdft]ro	ds:nordic
-SFX FS re r [^bdt]re	ds:nordic
-SFX FS so s so	ds:nordic
-SFX FS se s se	ds:nordic
-SFX FS to t to	ds:nordic
-SFX FS te t te	ds:nordic
-SFX FS vo f vo	ds:nordic
-SFX FS ve f ve	ds:nordic
-SFX FS vo v vo	ds:nordic
-SFX FS ve v ve	ds:nordic
-SFX FS xo s xo	ds:nordic
-SFX FS xe s xe	ds:nordic
-SFX FS xo x xo	ds:nordic
-SFX FS xe x xe	ds:nordic
-SFX FS ño in [^i]ño	ds:nordic
-SFX FS ñe in [^i]ñe	ds:nordic
-SFX FS ño n iño	ds:nordic
-SFX FS ñe n iñe	ds:nordic
-SFX FS ño nc ño	ds:nordic
-SFX FS ñe nc ñe	ds:nordic
-SFX FS ño ñ ño	ds:nordic
-SFX FS ñe ñ ñe	ds:nordic
-SFX FS đo ŧ đo	ds:nordic
-SFX FS đe ŧ đe	ds:nordic
-SFX FS đo đ đo	ds:nordic
-SFX FS đe đ đe	ds:nordic
-SFX FS đo d đo	ds:nordic
-SFX FS đe d đe	ds:nordic
-SFX FS ŧo ŧ ŧo	ds:nordic
-SFX FS ŧe ŧ ŧe	ds:nordic
-SFX FS ɉo c ɉo	ds:nordic
-SFX FS ɉe c ɉe	ds:nordic
-SFX FS ɉo ɉ ɉo	ds:nordic
-SFX FS ɉe ɉ ɉe	ds:nordic
-SFX FS jo j jo	ds:nordic
-SFX FS je j je	ds:nordic
+SFX FS bo p bo	is:nordic
+SFX FS be p be	is:nordic
+SFX FS bo b bo	is:nordic
+SFX FS be b be	is:nordic
+SFX FS co c co	is:nordic
+SFX FS ce c ce	is:nordic
+SFX FS do t do	is:nordic
+SFX FS de t de	is:nordic
+SFX FS do d do	is:nordic
+SFX FS de d de	is:nordic
+SFX FS fo f fo	is:nordic
+SFX FS fe f fe	is:nordic
+SFX FS go k go	is:nordic
+SFX FS ge k ge	is:nordic
+SFX FS go g go	is:nordic
+SFX FS ge g ge	is:nordic
+SFX FS ko k ko	is:nordic
+SFX FS ke k ke	is:nordic
+SFX FS lo l lo	is:nordic
+SFX FS le l le	is:nordic
+SFX FS mo n mo	is:nordic
+SFX FS me n me	is:nordic
+SFX FS mo m mo	is:nordic
+SFX FS me m me	is:nordic
+SFX FS no n no	is:nordic
+SFX FS ne n ne	is:nordic
+SFX FS po p po	is:nordic
+SFX FS pe p pe	is:nordic
+SFX FS ro r [^bdft]ro	is:nordic
+SFX FS re r [^bdt]re	is:nordic
+SFX FS so s so	is:nordic
+SFX FS se s se	is:nordic
+SFX FS to t to	is:nordic
+SFX FS te t te	is:nordic
+SFX FS vo f vo	is:nordic
+SFX FS ve f ve	is:nordic
+SFX FS vo v vo	is:nordic
+SFX FS ve v ve	is:nordic
+SFX FS xo s xo	is:nordic
+SFX FS xe s xe	is:nordic
+SFX FS xo x xo	is:nordic
+SFX FS xe x xe	is:nordic
+SFX FS ño in [^i]ño	is:nordic
+SFX FS ñe in [^i]ñe	is:nordic
+SFX FS ño n iño	is:nordic
+SFX FS ñe n iñe	is:nordic
+SFX FS ño nc ño	is:nordic
+SFX FS ñe nc ñe	is:nordic
+SFX FS ño ñ ño	is:nordic
+SFX FS ñe ñ ñe	is:nordic
+SFX FS đo ŧ đo	is:nordic
+SFX FS đe ŧ đe	is:nordic
+SFX FS đo đ đo	is:nordic
+SFX FS đe đ đe	is:nordic
+SFX FS đo d đo	is:nordic
+SFX FS đe d đe	is:nordic
+SFX FS ŧo ŧ ŧo	is:nordic
+SFX FS ŧe ŧ ŧe	is:nordic
+SFX FS ɉo c ɉo	is:nordic
+SFX FS ɉe c ɉe	is:nordic
+SFX FS ɉo ɉ ɉo	is:nordic
+SFX FS ɉe ɉ ɉe	is:nordic
+SFX FS jo j jo	is:nordic
+SFX FS je j je	is:nordic
 
 
 # interogativi prima parsona singolar e plural (stakài)
