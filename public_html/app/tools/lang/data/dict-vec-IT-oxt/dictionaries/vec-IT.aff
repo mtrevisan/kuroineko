@@ -233,6 +233,8 @@ NEEDAFFIX N0
 # FIXME
 # Se pòl katar un metaplaxmo de deklinaŧion a la 2a koniug. par tuti i mòdi e i tenpi fora ke inté ʼl infenío, partiŧipio ativo, e xerundio
 # Se pòl katar un metaplaxmo da la 3a koniug. a la 2a koniug. intel partiŧipio pasivo ko la dexinenŧa in –st–, e intel xerundio
+# 1a > 2a	par tuti i mòdi e i tenpi fora ke inté ʼl infenío, partiŧipio ativo, e xerundio
+# 3a > 2a	par tuti i mòdi e i tenpi fora ke inté ʼl infenío, partiŧipio ativo e pasivo ko la dexinenŧa in –do
 
 
 # ---
@@ -416,7 +418,7 @@ SFX t2 erò ènto/FS erò	ts:gerund+simple	# T7 + nto
 #SFX t2 ir éntomene/P6 ir	ts:gerund+simple is:procomplementar	# T7 + nto
 #SFX t2 ir èntomene/P6 ir	ts:gerund+simple is:procomplementar	# T7 + nto
 
-SFX n2 Y 29
+SFX n2 Y 49
 SFX n2 ar eva/Ī0 ar	ts:indicative+imperfect is:first+singular is:nordic	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 ar éa/Ī0 ar	ts:indicative+imperfect is:first+singular is:nordic	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 ar eve/Ī0 ar	ts:indicative+imperfect is:first+singular is:nordic	# T2 + (v)e, T2 = T1: aŧento PVT > VT | à > é
@@ -443,29 +445,31 @@ SFX n2 ar ese ar	ts:subjunctive+imperfect is:first+singular is:third is:nordic	#
 SFX n2 ar esi ar	ts:subjunctive+imperfect is:second+singular is:second+plural is:nordic	# T2 + si, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 ar ésimo ar	ts:subjunctive+imperfect is:second+plural is:nordic	# T2 + simo, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 ar esto/A1FS ar	ts:participle+passive is:singular+masculine is:nordic	# T2 + sto/i/a/e, T2 = T1: aŧento PVT > VT | à > é
-SFX n2 ar endo ar	ts:gerund+simple is:nordic	# T2 + ndo, T2 = T1: aŧento PVT > VT | à > é
-SFX n2 ar ento/FS ar	ts:gerund+simple is:nordic	# T2 + nto, T2 = T1: aŧento PVT > VT | à > é
-SFX n2 ar ènto/FS ar	ts:gerund+simple is:nordic	# T2 + nto, T2 = T1: aŧento PVT > VT | à > é
-#SFX n2 ir ento/P0FS ir	ts:gerund+simple	# T7 + nto
-#SFX n2 ir ènto/P0FS ir	ts:gerund+simple	# T7 + nto
-#SFX n2 erò ando/P0 erò	ts:gerund+simple	# T7 + ndo
-#SFX n2 erò indo/P0 erò	ts:gerund+simple	# T7 + ndo
-#SFX n2 ir endo/P0 ir	ts:gerund+simple	# T7 + ndo
-#SFX n2 ir évimo/VV ir	ts:indicative+imperfect is:first+plural	# T2 + (v)imo
-#SFX n2 ir esto/A1FS ir	ts:participle+passive is:singular+masculine	# T7 + sto/i/a/e
-#SFX n2 ir ésimo ir	ts:subjunctive+imperfect is:second+plural	# T2 + simo
-#SFX n2 ir eva/VV ir	ts:indicative+imperfect is:first+singular is:second+singular is:third is:nordic	# T2 + (v)a
-#SFX n2 ir eve/VV ir	ts:indicative+imperfect is:first+singular is:nordic	# T2 + (v)e
-#SFX n2 ir evo/VVĪ0 ir	ts:indicative+imperfect is:first+singular is:nordic	# T2 + (v)e
-#SFX n2 ir evi/VV ir	ts:indicative+imperfect is:second+plural is:nordic	# T2 + (v)i
-#SFX n2 ar ese ar	ts:indicative+imperfect is:first+singular is:nordic	# T2 + se
-#SFX n2 ir ese ir	ts:indicative+imperfect is:first+singular is:nordic	# T2 + se
-#SFX n2 ir ese ir	ts:subjunctive+imperfect is:first+singular is:nordic	# T2 + se
-#SFX n2 r se [aei]r	ts:indicative+imperfect is:second+singular is:nordic	# T2 + se
-#SFX n2 ar esi ar	ts:indicative+imperfect is:second+plural is:nordic	# T2 + si
-#SFX n2 ir esi ir	ts:indicative+imperfect is:second+plural is:nordic	# T2 + si
-#SFX n2 ir esi ir	ts:subjunctive+imperfect is:second+plural is:nordic	# T2 + si
-#SFX n2 rò se erò	ts:indicative+imperfect is:second+singular is:nordic	# T2 + se
+SFX n2 ir eva/Ī0 ir	ts:indicative+imperfect is:first+singular	# T2 + (v)a, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir éa/Ī0 ir	ts:indicative+imperfect is:first+singular	# T2 + (v)a, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir eve/Ī0 ir	ts:indicative+imperfect is:first+singular	# T2 + (v)e, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir ée/Ī0 ir	ts:indicative+imperfect is:first+singular	# T2 + (v)e, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir evo/Ī0 ir	ts:indicative+imperfect is:first+singular	# T2 + (v)o, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir éo/Ī0 ir	ts:indicative+imperfect is:first+singular	# T2 + (v)o, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir évimo/Ī0 ir	ts:indicative+imperfect is:first+plural	# T2 + (v)imo, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir éimo/Ī0 ir	ts:indicative+imperfect is:first+plural	# T2 + (v)imo, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir evi/Ī2 ir	ts:indicative+imperfect is:second+singular	# T2 + (v)i, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir éi/Ī2 ir	ts:indicative+imperfect is:second+singular	# T2 + (v)i, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir evi/Ī3 ir	ts:indicative+imperfect is:second+plural	# T2 + (v)i, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir éi/Ī3 ir	ts:indicative+imperfect is:second+plural	# T2 + (v)i, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir eva/Ī4 ir	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir éa/Ī4 ir	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir ese ir	ts:subjunctive+imperfect is:first+singular	# T2 + se, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir ésimo ir	ts:subjunctive+imperfect is:first+plural	# T2 + simo, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir esi ir	ts:subjunctive+imperfect is:second+singular	# T2 + si, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir esi ir	ts:subjunctive+imperfect is:second+plural	# T2 + si, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir ese ir	ts:subjunctive+imperfect is:third	# T2 + se, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ar esto/A1FS ar	ts:participle+passive is:singular+masculine	# T2 + sto/i/a/e, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ir esto/A1FS ir	ts:participle+passive is:singular+masculine	# T2 + sto/i/a/e, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir endo ir	ts:gerund+simple	# T7 + ndo, T2 = T1: aŧento PVT > VT | í > é
+SFX n2 ir ento/FS ir	ts:gerund+simple	# T7 + nto, T2 = T1: aŧento PVT > VT | í > é
+#SFX n2 erò ando/P0 erò	ts:gerund+simple	# T7 + ndo, T2 = T1: aŧento PVT > VT | é > è
+#SFX n2 erò indo/P0 erò	ts:gerund+simple	# T7 + ndo, T2 = T1: aŧento PVT > VT | é > í
 
 # senŧa èle vanesente
 SFX ṭ2 Y 35
