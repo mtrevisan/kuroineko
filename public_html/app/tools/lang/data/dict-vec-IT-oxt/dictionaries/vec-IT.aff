@@ -285,7 +285,6 @@ NEEDAFFIX N0
 #kanto/a0a1a2Ᵽ0ⱣlⱣƚĪ1Ī2FS
 #kàntoe/a0a1a2I1
 
-#kantar/t1t2n2l2t4n4l4t5l5t6t7tønɨnʉlʉ, kanto/t8n8t9a9l9FS, kàntoe/t9a9
 #-àr:			kantar/t1l1ƚ1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7tønɨnʉlʉƚʉ, kanto/t8n8t9a9l9ƚ9FS, kàntoe/t9a9
 #-ér:			valer/t1l1ƚ1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7tønɨnʉlʉƚʉ, valo/t8n8t9l9ƚ9FS, vàloe/t9
 #'-er:		kréder/t1l1ƚ1n1P0PlPƚ, kredo/t8n8FS, krédoe/t9, krederò/t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7t9l9ƚ9tøløƚønɨnʉlʉƚʉ
@@ -295,9 +294,12 @@ NEEDAFFIX N0
 
 # tèma 1
 # -àr, -ér, '-er, -ír, -ír/is: skomenŧiando da 'l infenío
-SFX t1 Y 2
+SFX t1 Y 5
 SFX t1 0 e r	ts:infinitive+simple	# T1 + r(e)
 SFX t1 0 0/Ᵽ0N0 r	ts:infinitive+simple	# T1 + r
+SFX t1 ar à/P0N0 ar	ts:infinitive+simple
+SFX t1 er é/P0N0 er	ts:infinitive+simple
+SFX t1 ir í/P0N0 ir	ts:infinitive+simple
 
 SFX n1 Y 12
 SFX n1 ànder andre ànder	ts:infinitive+simple
@@ -313,17 +315,23 @@ SFX n1 íder idre íder	ts:infinitive+simple
 SFX n1 úder udre úder	ts:infinitive+simple
 SFX n1 àlder aldre àlder	ts:infinitive+simple
 
-SFX l1 Y 1
+SFX l1 Y 4
 SFX l1 0 0/ⱣlN0 r	ts:infinitive+simple	# T1 + r
+SFX l1 ar à/PlN0 ar	ts:infinitive+simple
+SFX l1 er é/PlN0 er	ts:infinitive+simple
+SFX l1 ir í/PlN0 ir	ts:infinitive+simple
 
-SFX ƚ1 Y 1
+SFX ƚ1 Y 4
 SFX ƚ1 0 0/ⱣƚN0 r	ts:infinitive+simple	# T1 + r
+SFX ƚ1 ar à/PƚN0 ar	ts:infinitive+simple
+SFX ƚ1 er é/PƚN0 er	ts:infinitive+simple
+SFX ƚ1 ir í/PƚN0 ir	ts:infinitive+simple
 
 
 # tèma 2 (from T1: aŧento PVT > VT)
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
-SFX t2 Y 95
+SFX t2 Y 92
 SFX t2 r va/Ī1 [aei]r	ts:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX t2 ar àva/I1N0 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX t2 er éva/I1N0 er	ts:indicative+imperfect is:first+singular	# T2 + (v)a
@@ -416,9 +424,6 @@ SFX t2 ir ínto/P0N0 ir	ts:gerund+simple	# T2 + ndo = T7 + ndo
 SFX t2 rò nto/Ᵽ0 erò	ts:gerund+simple	# T2 + nto
 SFX t2 erò énto/P0N0 erò	ts:gerund+simple	# T2 + nto
 SFX t2 erò ènto/Ᵽ0P0 erò	ts:gerund+simple	# T2 + nto
-SFX t2 ar à/P0N0 ar	ts:infinitive+simple
-SFX t2 er é/P0N0 er	ts:infinitive+simple
-SFX t2 ir í/P0N0 ir	ts:infinitive+simple
 
 SFX n2 Y 70
 SFX n2 ar eva/Ī1 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
@@ -493,7 +498,7 @@ SFX n2 rò nt erò	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX n2 erò ènt erò	ts:gerund+simple	# T2 + nto = T7 + nto
 
 # senŧa èle vanesente
-SFX l2 Y 33
+SFX l2 Y 30
 SFX l2 r va/Ī5N0 [aei]r	ts:indicative+imperfect is:third	# T2 + (v)a
 SFX l2 ar àva/I5N0 ar	ts:indicative+imperfect is:third	# T2 + (v)a
 SFX l2 er éva/I5N0 er	ts:indicative+imperfect is:third	# T2 + (v)a
@@ -524,12 +529,9 @@ SFX l2 ir ínto/PlN0 ir	ts:gerund+simple	# T2 + ndo = T7 + ndo
 SFX l2 rò nto/ⱣlN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX l2 erò énto/PlN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX l2 erò ènto/ⱣlPlN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
-SFX l2 ar à/PlN0 ar	ts:infinitive+simple
-SFX l2 er é/PlN0 er	ts:infinitive+simple
-SFX l2 ir í/PlN0 ir	ts:infinitive+simple
 
 # ko èle vanesente
-SFX ƚ2 Y 33
+SFX ƚ2 Y 30
 SFX ƚ2 r va/ī5N0 [aei]r	ts:indicative+imperfect is:third	# T2 + (v)a
 SFX ƚ2 ar àva/i5N0 ar	ts:indicative+imperfect is:third	# T2 + (v)a
 SFX ƚ2 er éva/i5N0 er	ts:indicative+imperfect is:third	# T2 + (v)a
@@ -560,9 +562,6 @@ SFX ƚ2 ir ínto/PƚN0 ir	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX ƚ2 rò nto/ⱣƚN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX ƚ2 erò énto/PƚN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX ƚ2 erò ènto/ⱣƚPƚN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
-SFX ƚ2 ar à/PƚN0 ar	ts:infinitive+simple
-SFX ƚ2 er é/PƚN0 er	ts:infinitive+simple
-SFX ƚ2 ir í/PƚN0 ir	ts:infinitive+simple
 
 
 # tèma 4 (from T1: senŧa aŧento)
@@ -896,7 +895,7 @@ SFX t6 ir é/A1 ir	ts:participle+passive is:singular+masculine	# T6 + ([oiae]), 
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
 SFX t7 Y 27
-SFX t7 r nte ar	ts:participle+active	# T7 + nte
+SFX t7 r nte/FS ar	ts:participle+active	# T7 + nte
 SFX t7 r nti ar	ts:participle+active	# T7 + nte
 SFX t7 r nte/M0Ṗd er	ts:participle+active	# T7 + nte
 SFX t7 er ènte er	ts:participle+active	# T7 + nte
@@ -5916,8 +5915,11 @@ SFX Ᵽƚ 0 -veƚe [ro]	is:plural+femenine ds:procomplementar
 
 
 # vèrbi prokonplementari (takài)
-SFX P0 Y 22
+SFX P0 Y 40
 SFX P0 0 ge [ro]	ds:procomplementar
+SFX P0 à arge à	ds:procomplementar
+SFX P0 é erge é	ds:procomplementar
+SFX P0 í irge í	ds:procomplementar
 SFX P0 0 gen [ro]	ds:procomplementar
 SFX P0 0 rgen [àéí]	ds:procomplementar
 SFX P0 0 gin [ro]	ds:procomplementar
@@ -5927,16 +5929,31 @@ SFX P0 0 rgene [àéí]	ds:procomplementar
 SFX P0 0 gine [ro]	ds:procomplementar
 SFX P0 0 rgine [àéí]	ds:procomplementar
 SFX P0 0 me [ro]	ds:procomplementar
+SFX P0 à arme à	ds:procomplementar
+SFX P0 é erme é	ds:procomplementar
+SFX P0 í irme í	ds:procomplementar
 SFX P0 0 mene [ro]	ds:procomplementar
 SFX P0 0 rmene [àéí]	ds:procomplementar
 SFX P0 0 ne [ro]	ds:procomplementar
+SFX P0 à arne à	ds:procomplementar
+SFX P0 é erne é	ds:procomplementar
+SFX P0 í irne í	ds:procomplementar
 SFX P0 0 se [ro]	ds:procomplementar
+SFX P0 à arse à	ds:procomplementar
+SFX P0 é erse é	ds:procomplementar
+SFX P0 í irse í	ds:procomplementar
 SFX P0 0 sene [ro]	ds:procomplementar
 SFX P0 0 rsene [àéí]	ds:procomplementar
 SFX P0 0 te [ro]	ds:procomplementar
+SFX P0 à arte à	ds:procomplementar
+SFX P0 é erte é	ds:procomplementar
+SFX P0 í irte í	ds:procomplementar
 SFX P0 0 tene [ro]	ds:procomplementar
 SFX P0 0 rtene [àéí]	ds:procomplementar
 SFX P0 0 ve [ro]	ds:procomplementar
+SFX P0 à arve à	ds:procomplementar
+SFX P0 é erve é	ds:procomplementar
+SFX P0 í irve í	ds:procomplementar
 SFX P0 0 vene [ro]	ds:procomplementar
 SFX P0 0 rvene [àéí]	ds:procomplementar
 
@@ -6461,7 +6478,7 @@ SFX Ī1 0 -ni [^n]	ds:interrogative	# veronexe
 SFX Ī1 0 -te n	ds:interrogative
 SFX Ī1 0 -ti n	ds:interrogative	# veronexe
 SFX Ī1 0 -e .	ds:interrogative
-SFX Ī1 0 -i n	ds:interrogative	# padoan, vithentin, polexan, veronexe
+SFX Ī1 0 -i n	ds:interrogative
 
 # interogativi prima parsona singolar (takài)
 SFX I1 Y 12
@@ -6488,10 +6505,10 @@ SFX Ī2 0 -ni [^n]	ds:interrogative	# veronexe
 SFX Ī2 0 -te n	ds:interrogative
 SFX Ī2 0 -ti n	ds:interrogative	# veronexe
 SFX Ī2 0 -e .	ds:interrogative
-SFX Ī2 0 -i n	ds:interrogative	# padoan, vithentin, polexan, veronexe
+SFX Ī2 0 -i n	ds:interrogative
 
 # interogativi prima parsona plural (takài)
-SFX I2 Y 12
+SFX I2 Y 13
 SFX I2 0 i [aeo]	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
 SFX I2 0 nte [^n]	ds:interrogative
 SFX I2 0 nti [^n]	ds:interrogative	# veronexe
@@ -6501,7 +6518,8 @@ SFX I2 0 te on	ds:interrogative
 SFX I2 0 ti on	ds:interrogative	# veronexe
 SFX I2 0 e on	ds:interrogative
 SFX I2 0 e en	ds:interrogative
-SFX I2 0 i on	ds:interrogative	# padoan, vithentin, polexan, veronexe
+SFX I2 0 i on	ds:interrogative
+SFX I2 0 i en	ds:interrogative
 SFX I2 émo emio émo	ds:interrogative	# lagunar
 SFX I2 ímo imio ímo	ds:interrogative	# lagunar
 
@@ -6577,13 +6595,13 @@ SFX ī5 i e-ƚo i	is:singular+masculine ds:interrogative
 SFX ī5 i e-ƚa i	is:singular+femenine ds:interrogative
 SFX ī5 i e-ƚi i	is:plural+masculine ds:interrogative
 SFX ī5 i e-ƚe i	is:plural+femenine ds:interrogative
-SFX ī5 0 -ƚo [eo]	is:singular+masculine ds:interrogative
-SFX ī5 0 -ƚa [eo]	is:singular+femenine ds:interrogative
-SFX ī5 0 -ƚi [eo]	is:plural+masculine ds:interrogative
-SFX ī5 0 -ƚe [eo]	is:plural+femenine ds:interrogative
+SFX ī5 0 -ƚo [^ai]	is:singular+masculine ds:interrogative
+SFX ī5 0 -ƚa [^ai]	is:singular+femenine ds:interrogative
+SFX ī5 0 -ƚi [^ai]	is:plural+masculine ds:interrogative
+SFX ī5 0 -ƚe [^ai]	is:plural+femenine ds:interrogative
 
 # interogativi tèrŧa parsona ko èle vanesente (stakài)
-SFX i5 Y 12
+SFX i5 Y 16
 SFX i5 a eƚo a	is:singular+masculine ds:interrogative
 SFX i5 a eƚa a	is:singular+femenine ds:interrogative
 SFX i5 a eƚi a	is:plural+masculine ds:interrogative
@@ -6592,10 +6610,14 @@ SFX i5 i eƚo i	is:singular+masculine ds:interrogative
 SFX i5 i eƚa i	is:singular+femenine ds:interrogative
 SFX i5 i eƚi i	is:plural+masculine ds:interrogative
 SFX i5 i eƚe i	is:plural+femenine ds:interrogative
-SFX i5 0 -ƚo [eo]	is:singular+masculine ds:interrogative
-SFX i5 0 -ƚa [eo]	is:singular+femenine ds:interrogative
-SFX i5 0 -ƚi [eo]	is:plural+masculine ds:interrogative
-SFX i5 0 -ƚe [eo]	is:plural+femenine ds:interrogative
+SFX i5 0 ƚo [^aià]	is:singular+masculine ds:interrogative
+SFX i5 à aƚo à	is:singular+masculine ds:interrogative
+SFX i5 0 ƚa [^aià]	is:singular+femenine ds:interrogative
+SFX i5 à aƚa à	is:singular+femenine ds:interrogative
+SFX i5 0 ƚi [^aià]	is:plural+masculine ds:interrogative
+SFX i5 à aƚi à	is:plural+masculine ds:interrogative
+SFX i5 0 ƚe [^aià]	is:plural+femenine ds:interrogative
+SFX i5 à aƚe à	is:plural+femenine ds:interrogative
 
 # interogativi kondiŧional prexente tèrŧa parsona (stakài e takài)
 SFX Ī6 Y 15
