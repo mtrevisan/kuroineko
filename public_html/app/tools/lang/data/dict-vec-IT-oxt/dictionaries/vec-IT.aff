@@ -998,35 +998,40 @@ SFX n8 o e o	ts:subjunctive+present is:second+singular	# T8 + e, 2s=3
 SFX n8 o e o	ts:subjunctive+present is:third	# T8 + e
 
 
+# FIXME
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
-#T9	=	T3: e > i									kànta	vàli		krédi			dòrmi			fenísi
 SFX t9 Y 7
+SFX t9 oe a/I3N0 oe	ts:subjunctive+present is:first+singular	# T8 + a
 SFX t9 o i/Đ0 o	ts:imperative+present is:second+singular	# T9, (T3: a > i)
 SFX t9 erò i/Đ0 erò	ts:imperative+present is:second+singular	# T9
 SFX t9 oe i/D0N0 oe	ts:imperative+present is:second+singular	# T9, (T3: a > i)
 SFX t9 oe i/I3N0 [^i]oe	ts:indicative+present is:second+singular	# T8 + i
 SFX t9 oe 0/I3N0 ioe	ts:indicative+present is:second+singular	# T8 + i
 SFX t9 ioe i/I3N0 ioe	ts:indicative+present is:second+singular	# T8 + i
-SFX t9 oe a/I3N0 oe	ts:subjunctive+present is:first+singular	# T8 + a
 
+# FIXME
 # -àr: skomenŧiando da 'l indikativo prexente de prima parsona singolar
 SFX a9 Y 2
 SFX a9 o a o	ts:imperative+present is:second+singular	# T9
 SFX a9 oe a/D0N0 oe	ts:imperative+present is:second+singular	# T9
 
+# FIXME
 # senŧa èle vanesente
-SFX l9 Y 3
-SFX l9 0 0/ĐlN0 o	ts:imperative+present is:second+singular	# T9
-SFX l9 erò i/ĐlN0 erò	ts:imperative+present is:second+singular	# T9
-SFX l9 o i/ĐlN0 o	ts:imperative+present is:second+singular	# T9, T3: [ai] > i
+SFX l9 Y 4
+SFX l9 0 0/DlĐlN0 o	ts:imperative+present is:second+singular	# T9
+SFX l9 erò i/DlĐlN0 erò	ts:imperative+present is:second+singular	# T9
+SFX l9 oe i/DlĐlN0 oe	ts:imperative+present is:second+singular	# T9, (T3: a > i)
+SFX l9 o i/DlĐlN0 o	ts:imperative+present is:second+singular	# T9, T3: [ai] > i
 
+# FIXME
 # ko èle vanesente
-SFX ƚ9 Y 3
-SFX ƚ9 0 0/ĐƚN0 o	ts:imperative+present is:second+singular	# T9
-SFX ƚ9 erò i/ĐƚN0 erò	ts:imperative+present is:second+singular	# T9
-SFX ƚ9 o i/ĐƚN0 o	ts:imperative+present is:second+singular	# T9, T3: [ai] > i
+SFX ƚ9 Y 4
+SFX ƚ9 0 0/DƚĐƚN0 o	ts:imperative+present is:second+singular	# T9
+SFX ƚ9 erò i/DƚĐƚN0 erò	ts:imperative+present is:second+singular	# T9
+SFX ƚ9 oe i/DƚĐƚN0 oe	ts:imperative+present is:second+singular	# T9, (T3: a > i)
+SFX ƚ9 o i/DƚĐƚN0 o	ts:imperative+present is:second+singular	# T9, T3: [ai] > i
 
 
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
