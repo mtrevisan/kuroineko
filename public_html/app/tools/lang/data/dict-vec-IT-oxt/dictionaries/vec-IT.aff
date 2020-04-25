@@ -285,12 +285,12 @@ NEEDAFFIX N0
 #kanto/a0a1a2Ᵽ0ⱣlⱣƚĪ1Ī2FS
 #kàntoe/a0a1a2I1
 
-#kantar/t1t2n2l2t4n4l4t5l5t6t7tønɨnʉlʉⱣ0ⱣlP0Pl, kanto/t8n8l8t9a9l9FS, kàntoe/t9a9I1
-#-àr:			kantar/t1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7tønɨnʉlʉƚʉⱣ0ⱣlⱣƚP0PlPƚ, kanto/t8n8l8ƚ8t9a9l9ƚ9FS, kàntoe/t9a9I1
-#-ér:			valer/t1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7tønɨnʉlʉƚʉⱣ0ⱣlⱣƚP0PlPƚ, valo/t8n8l8ƚ8t9l9ƚ9FS, vàloe/t9I1
-#'-er:		kréder/t1n1Ᵽ0ⱣlⱣƚ, kredo/t8n8l8ƚ8FS, krédoe/t9I1, krederò/t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7t9l9ƚ9tøløƚønɨnʉlʉƚʉ
-#-ír:			dormir/t1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7nɨⱣ0ⱣlⱣƚP0PlPƚ, dòrmo/t8n8l8ƚ8t9l9ƚ9tønʉFS, dòrmoe/t9I1
-#-ír/is::	fenir/t1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7nɨⱣ0ⱣlⱣƚP0PlPƚ, feniso/t8n8l8ƚ8t9l9ƚ9tønʉlʉƚʉFS, fenísoe/t9I1
+#kantar/t1t2n2l2t4n4l4t5l5t6t7tønɨnʉlʉⱣ0Ᵽl, kanto/t8n8l8t9a9l9FS, kàntoe/t9a9I1
+#-àr:			kantar/t1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7tønɨnʉlʉƚʉⱣ0ⱣlⱣƚ, kanto/t8n8l8ƚ8t9a9l9ƚ9FS, kàntoe/t9a9I1
+#-ér:			valer/t1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7tønɨnʉlʉƚʉⱣ0ⱣlⱣƚ, valo/t8n8l8ƚ8t9l9ƚ9FS, vàloe/t9I1
+#'-er:		kréder/t1n1Ᵽ0ⱣlⱣƚP0PlPƚ, kredo/t8n8l8ƚ8FS, krédoe/t9I1, krederò/t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7t9l9ƚ9tøløƚønɨnʉlʉƚʉ
+#-ír:			dormir/t1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7nɨⱣ0ⱣlⱣƚ, dòrmo/t8n8l8ƚ8t9l9ƚ9tønʉFS, dòrmoe/t9I1
+#-ír/is::	fenir/t1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7nɨⱣ0ⱣlⱣƚ, feniso/t8n8l8ƚ8t9l9ƚ9tønʉlʉƚʉFS, fenísoe/t9I1
 
 
 # tèma 1
@@ -316,7 +316,7 @@ SFX n1 àlder aldre àlder	ts:infinitive+simple
 # tèma 2 (from T1: aŧento PVT > VT)
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
-SFX t2 Y 92
+SFX t2 Y 95
 SFX t2 r va/Ī1 [aei]r	ts:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX t2 ar àva/I1N0 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX t2 er éva/I1N0 er	ts:indicative+imperfect is:first+singular	# T2 + (v)a
@@ -409,6 +409,9 @@ SFX t2 ir ínto/P0N0 ir	ts:gerund+simple	# T2 + ndo = T7 + ndo
 SFX t2 rò nto/Ᵽ0 erò	ts:gerund+simple	# T2 + nto
 SFX t2 erò énto/P0N0 erò	ts:gerund+simple	# T2 + nto
 SFX t2 erò ènto/Ᵽ0P0 erò	ts:gerund+simple	# T2 + nto
+SFX t2 ar à/P0N0 ar
+SFX t2 er é/P0N0 er
+SFX t2 ir í/P0N0 ir
 
 SFX n2 Y 70
 SFX n2 ar eva/Ī1 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
@@ -483,7 +486,7 @@ SFX n2 rò nt erò	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX n2 erò ènt erò	ts:gerund+simple	# T2 + nto = T7 + nto
 
 # senŧa èle vanesente
-SFX l2 Y 30
+SFX l2 Y 33
 SFX l2 r va/Ī5N0 [aei]r	ts:indicative+imperfect is:third	# T2 + (v)a
 SFX l2 ar àva/I5N0 ar	ts:indicative+imperfect is:third	# T2 + (v)a
 SFX l2 er éva/I5N0 er	ts:indicative+imperfect is:third	# T2 + (v)a
@@ -509,14 +512,17 @@ SFX l2 erò éndo/PlN0 erò	ts:gerund+simple	# T2 + ndo = T7 + ndo
 SFX l2 r nto/ⱣlN0 [aei]r	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX l2 ar ànto/PlN0 ar	ts:gerund+simple	# T2 + ndo = T7 + ndo
 SFX l2 er énto/PlN0 er	ts:gerund+simple	# T2 + ndo = T7 + ndo
-SFX l2 er ènto/ⱣlP1N0 er	ts:gerund+simple	# T2 + nto = T7 + nto
+SFX l2 er ènto/ⱣlPlN0 er	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX l2 ir ínto/PlN0 ir	ts:gerund+simple	# T2 + ndo = T7 + ndo
 SFX l2 rò nto/ⱣlN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX l2 erò énto/PlN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
-SFX l2 erò ènto/ⱣlP1N0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
+SFX l2 erò ènto/ⱣlPlN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
+SFX l2 ar à/PlN0 ar
+SFX l2 er é/PlN0 er
+SFX l2 ir í/PlN0 ir
 
 # ko èle vanesente
-SFX ƚ2 Y 30
+SFX ƚ2 Y 33
 SFX ƚ2 r va/ī5N0 [aei]r	ts:indicative+imperfect is:third	# T2 + (v)a
 SFX ƚ2 ar àva/i5N0 ar	ts:indicative+imperfect is:third	# T2 + (v)a
 SFX ƚ2 er éva/i5N0 er	ts:indicative+imperfect is:third	# T2 + (v)a
@@ -547,6 +553,9 @@ SFX ƚ2 ir ínto/PƚN0 ir	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX ƚ2 rò nto/ⱣƚN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX ƚ2 erò énto/PƚN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX ƚ2 erò ènto/ⱣƚPƚN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
+SFX ƚ2 ar à/PƚN0 ar
+SFX ƚ2 er é/PƚN0 er
+SFX ƚ2 ir í/PƚN0 ir
 
 
 # tèma 4 (from T1: senŧa aŧento)
@@ -780,18 +789,6 @@ SFX l4 ò ave/Ī5N0 erò	ts:conditional+present is:third	# T4 + rà(v)e
 SFX l4 ò àve/I5N0 erò	ts:conditional+present is:third	# T4 + rà(v)e
 SFX l4 0 àe/Ī5I5N0 [aei]r	ts:conditional+present is:third	# T4 + rà(v)e
 SFX l4 ò àe/Ī5I5N0 erò	ts:conditional+present is:third	# T4 + rà(v)e
-#SFX l4 0 emo/ⱣlN0 [aei]r	ts:indicative+future is:first+plural	# T4 + remo
-#SFX l4 ò emo/ⱣlN0 erò	ts:indicative+future is:first+plural	# T4 + remo
-#SFX l4 0 imo/ⱣlN0 [aei]r	ts:indicative+future is:first+plural	# T4 + rimo
-#SFX l4 ar eremo/ⱣlN0 ar	ts:indicative+future is:first+plural	# T4 + remo
-#SFX l4 ar erimo/ⱣlN0 ar	ts:indicative+future is:first+plural	# T4 + rimo
-#SFX l4 0 ave/N0 [aei]r	ts:conditional+present is:second+singular	# T4 + rà(v)e
-#SFX l4 ò ave/N0 erò	ts:conditional+present is:second+singular	# T4 + rà(v)e
-#SFX l4 ar erave/N0 ar	ts:conditional+present is:second+singular	# T4 + rà(v)e
-#SFX l4 0 alo/A1 [aei]r	ts:indicative+future is:third is:interrogative	# T4 + rà
-#SFX l4 ar eralo/A1 ar	ts:indicative+future is:third is:interrogative	# T4 + rà
-#SFX l4 0 à-lo/A1 [aei]r	ts:indicative+future is:third is:interrogative	# T4 + rà
-#SFX l4 ar erà-lo/A1 ar	ts:indicative+future is:third is:interrogative	# T4 + rà
 
 # ko èle vanesente
 SFX ƚ4 Y 8
@@ -803,18 +800,6 @@ SFX ƚ4 ò ave/ī5N0 erò	ts:conditional+present is:third	# T4 + rà(v)e
 SFX ƚ4 ò àve/i5N0 erò	ts:conditional+present is:third	# T4 + rà(v)e
 SFX ƚ4 0 àe/ī5i5N0 [aei]r	ts:conditional+present is:third	# T4 + rà(v)e
 SFX ƚ4 ò àe/ī5i5N0 erò	ts:conditional+present is:third	# T4 + rà(v)e
-#SFX ƚ4 0 emo/ⱣƚN0 [aei]r	ts:indicative+future is:first+plural	# T4 + remo
-#SFX ƚ4 ò emo/ⱣƚN0 erò	ts:indicative+future is:first+plural	# T4 + remo
-#SFX ƚ4 0 imo/ⱣƚN0 [aei]r	ts:indicative+future is:first+plural	# T4 + rimo
-#SFX ƚ4 ar eremo/ⱣƚN0 ar	ts:indicative+future is:first+plural	# T4 + remo
-#SFX ƚ4 ar erimo/ⱣƚN0 ar	ts:indicative+future is:first+plural	# T4 + rimo
-#SFX ƚ4 0 ave/N0 [aei]r	ts:conditional+present is:second+singular	# T4 + rà(v)e
-#SFX ƚ4 ò ave/N0 erò	ts:conditional+present is:second+singular	# T4 + rà(v)e
-#SFX ƚ4 ar erave/N0 ar	ts:conditional+present is:second+singular	# T4 + rà(v)e
-#SFX ƚ4 0 aƚo/A1 [aei]r	ts:indicative+future is:third is:interrogative	# T4 + rà
-#SFX ƚ4 ar eraƚo/A1 ar	ts:indicative+future is:third is:interrogative	# T4 + rà
-#SFX ƚ4 0 à-ƚo/A1 [aei]r	ts:indicative+future is:third is:interrogative	# T4 + rà
-#SFX ƚ4 ar erà-ƚo/A1 ar	ts:indicative+future is:third is:interrogative	# T4 + rà
 
 
 # tèma 5 (from T1: aŧento PVT > VT, then T2: à > é | (é > í) | (í > é))
@@ -873,18 +858,6 @@ SFX l5 er í/ĐlN0 er	ts:imperative+present is:second+plural	# T5
 SFX l5 erò í/ĐlN0 erò	ts:imperative+present is:second+plural	# T5
 SFX l5 ir í/ĐlN0 ir	ts:imperative+present is:second+plural	# T5
 SFX l5 ir é/ĐlN0 ir	ts:imperative+present is:second+plural	# T5
-#SFX l5 ar emo/ĐlN0 ar	ts:indicative+present is:first+plural	# T5 + mo
-#SFX l5 r mo/ĐlN0 [ei]r	ts:indicative+present is:first+plural	# T5 + mo
-#SFX l5 ir emo/ĐlN0 ir	ts:indicative+present is:first+plural	# T5 + mo
-#SFX l5 er imo/ĐlN0 er	ts:indicative+present is:first+plural	# T5 + mo
-#SFX l5 erò imo/ĐlN0 erò	ts:indicative+present is:first+plural	# T5 + mo
-#SFX l5 rò mo/ĐlN0 erò	ts:indicative+present is:first+plural	# T5 + mo
-#SFX l5 ar emo/ĐlN0 ar	ts:subjunctive+present is:first+plural	# T5 + mo
-#SFX l5 r mo/ĐlN0 [ei]r	ts:subjunctive+present is:first+plural	# T5 + mo
-#SFX l5 ir emo/ĐlN0 ir	ts:subjunctive+present is:first+plural	# T5 + mo
-#SFX l5 er imo/ĐlN0 er	ts:subjunctive+present is:first+plural	# T5 + mo
-#SFX l5 erò imo/ĐlN0 erò	ts:subjunctive+present is:first+plural	# T5 + mo
-#SFX l5 rò mo/ĐlN0 erò	ts:subjunctive+present is:first+plural	# T5 + mo
 
 # ko èle vanesente
 SFX ƚ5 Y 7
@@ -895,18 +868,6 @@ SFX ƚ5 er í/ĐƚN0 er	ts:imperative+present is:second+plural	# T5
 SFX ƚ5 erò í/ĐƚN0 erò	ts:imperative+present is:second+plural	# T5
 SFX ƚ5 ir í/ĐƚN0 ir	ts:imperative+present is:second+plural	# T5
 SFX ƚ5 ir é/ĐƚN0 ir	ts:imperative+present is:second+plural	# T5
-#SFX ƚ5 ar emo/ⱣƚN0 ar	ts:indicative+present is:first+plural	# T5 + mo
-#SFX ƚ5 r mo/ⱣƚN0 [ei]r	ts:indicative+present is:first+plural	# T5 + mo
-#SFX ƚ5 ir emo/ⱣƚN0 ir	ts:indicative+present is:first+plural	# T5 + mo
-#SFX ƚ5 er imo/ⱣƚN0 er	ts:indicative+present is:first+plural	# T5 + mo
-#SFX ƚ5 erò imo/ⱣƚN0 erò	ts:indicative+present is:first+plural	# T5 + mo
-#SFX ƚ5 rò mo/ⱣƚN0 erò	ts:indicative+present is:first+plural	# T5 + mo
-#SFX ƚ5 ar emo/ⱣƚN0 ar	ts:subjunctive+present is:first+plural	# T5 + mo
-#SFX ƚ5 r mo/ⱣƚN0 [ei]r	ts:subjunctive+present is:first+plural	# T5 + mo
-#SFX ƚ5 ir emo/ⱣƚN0 ir	ts:subjunctive+present is:first+plural	# T5 + mo
-#SFX ƚ5 er imo/ⱣƚN0 er	ts:subjunctive+present is:first+plural	# T5 + mo
-#SFX ƚ5 erò imo/ⱣƚN0 erò	ts:subjunctive+present is:first+plural	# T5 + mo
-#SFX ƚ5 rò mo/ⱣƚN0 erò	ts:subjunctive+present is:first+plural	# T5 + mo
 
 
 # tèma 6 (from T1: aŧento PVT > VT, then T2: é > ú)
@@ -989,20 +950,6 @@ SFX l7 ir esto/ⱣlN0 ir	ts:participle+passive is:singular+masculine	# T7 + st[o
 SFX l7 ir esti/ⱣlN0 ir	ts:participle+passive is:singular+masculine	# T7 + st[oiae]
 SFX l7 ir esta/ⱣlN0 ir	ts:participle+passive is:singular+masculine	# T7 + st[oiae]
 SFX l7 ir este/ⱣlN0 ir	ts:participle+passive is:singular+masculine	# T7 + st[oiae]
-#SFX l7 erò ando/Ᵽ0ⱣlN0 erò	ts:gerund+simple	# T7 + ndo
-#SFX l7 erò indo/Ᵽ0ⱣlN0 erò	ts:gerund+simple	# T7 + ndo
-#SFX l7 rò ndo/Ᵽ0ⱣlN0 erò	ts:gerund+simple	# T7 + ndo
-#SFX l7 ir endo/Ᵽ0ⱣlN0 ir	ts:gerund+simple	# T7 + ndo
-#SFX l7 ir ento/ⱣlN0 ir	ts:gerund+simple	# T7 + nto/i
-#SFX l7 ir ènto/ⱣlN0 ir	ts:gerund+simple	# T7 + nto/i
-#SFX l7 r ento/ⱣlN0 [^cijɉñ]ir	ts:gerund+simple	# T7 + nto/i
-#SFX l7 r ènto/ⱣlN0 [^cijɉñ]ir	ts:gerund+simple	# T7 + nto/i
-#SFX l7 ar ento/ⱣlN0 ar	ts:gerund+simple	# T7 + nto/i
-#SFX l7 ar ènto/ⱣlN0 ar	ts:gerund+simple	# T7 + nto/i
-#SFX l7 rò nto/ⱣlN0 erò	ts:gerund+simple	# T7 + nto/i
-#SFX l7 erò ènto/ⱣlN0 erò	ts:gerund+simple	# T7 + nto/i
-#SFX l7 erò anto/ⱣlN0 erò	ts:gerund+simple	# T7 + nto/i
-#SFX l7 erò into/ⱣlN0 erò	ts:gerund+simple	# T7 + nto/i
 
 # ko èle vanesente
 SFX ƚ7 Y 10
@@ -1016,20 +963,6 @@ SFX ƚ7 ir esto/ⱣƚN0 ir	ts:participle+passive is:singular+masculine	# T7 + st
 SFX ƚ7 ir esti/ⱣƚN0 ir	ts:participle+passive is:singular+masculine	# T7 + st[oiae]
 SFX ƚ7 ir esta/ⱣƚN0 ir	ts:participle+passive is:singular+masculine	# T7 + st[oiae]
 SFX ƚ7 ir este/ⱣƚN0 ir	ts:participle+passive is:singular+masculine	# T7 + st[oiae]
-#SFX ƚ7 erò ando/ⱣƚN0 erò	ts:gerund+simple	# T7 + ndo
-#SFX ƚ7 erò indo/ⱣƚN0 erò	ts:gerund+simple	# T7 + ndo
-#SFX ƚ7 rò ndo/ⱣƚN0 erò	ts:gerund+simple	# T7 + ndo
-#SFX ƚ7 ir endo/ⱣƚN0 ir	ts:gerund+simple	# T7 + ndo
-#SFX ƚ7 ir ento/ⱣƚN0 ir	ts:gerund+simple	# T7 + nto/i
-#SFX ƚ7 ir ènto/ⱣƚN0 ir	ts:gerund+simple	# T7 + nto/i
-#SFX ƚ7 r ento/ⱣƚN0 [^cijɉñ]ir	ts:gerund+simple	# T7 + nto/i
-#SFX ƚ7 r ènto/ⱣƚN0 [^cijɉñ]ir	ts:gerund+simple	# T7 + nto/i
-#SFX ƚ7 ar ento/ⱣƚN0 ar	ts:gerund+simple	# T7 + nto/i
-#SFX ƚ7 ar ènto/ⱣƚN0 ar	ts:gerund+simple	# T7 + nto/i
-#SFX ƚ7 rò nto/ⱣƚN0 erò	ts:gerund+simple	# T7 + nto/i
-#SFX ƚ7 erò ènto/ⱣƚN0 erò	ts:gerund+simple	# T7 + nto/i
-#SFX ƚ7 erò anto/ⱣƚN0 erò	ts:gerund+simple	# T7 + nto/i
-#SFX ƚ7 erò into/ⱣƚN0 erò	ts:gerund+simple	# T7 + nto/i
 
 
 # tèma 8 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: VT > Ø)
@@ -1050,28 +983,6 @@ SFX n8 o e/Ī5 o	ts:indicative+present is:third	# T8 + e
 SFX n8 o e o	ts:subjunctive+present is:first+singular	# T8 + e
 SFX n8 o e o	ts:subjunctive+present is:second+singular	# T8 + e, 2s=3
 SFX n8 o e o	ts:subjunctive+present is:third	# T8 + e
-
-# senŧa èle vanesente
-#SFX l8 Y 1
-#SFX l8 o e/Ī5N0 o	ts:indicative+present is:third	# T8 + e
-#SFX l8 0 0/Ᵽ0ⱣlN0 o	ts:indicative+present is:first+singular	# T8 + o
-#SFX l8 o i/Ᵽ0ⱣlĪ3N0 [^i]o	ts:indicative+present is:second+singular	# T8 + i
-#SFX l8 io i/Ᵽ0ⱣlĪ3N0 io	ts:indicative+present is:second+singular	# T8 + i
-#SFX l8 o a/Ᵽ0ⱣlN0 o	ts:subjunctive+present is:first+singular	# T8 + a
-#SFX l8 o i/Ᵽ0ⱣlĪ3N0 [^i]o	ts:subjunctive+present is:second+singular	# T8 + i
-#SFX l8 io i/Ᵽ0ⱣlĪ3N0 io	ts:subjunctive+present is:second+singular	# T8 + i
-#SFX l8 o a/Ᵽ0ⱣlN0 o	ts:subjunctive+present is:third	# T8 + a
-
-# ko èle vanesente
-#SFX ƚ8 Y 1
-#SFX ƚ8 o e/ī5N0 o	ts:indicative+present is:third	# T8 + e
-#SFX ƚ8 0 0/Ᵽ0ⱣƚN0 o	ts:indicative+present is:first+singular	# T8 + o
-#SFX ƚ8 o i/Ᵽ0ⱣƚĪ3N0 [^i]o	ts:indicative+present is:second+singular	# T8 + i
-#SFX ƚ8 io i/Ᵽ0ⱣƚĪ3N0 io	ts:indicative+present is:second+singular	# T8 + i
-#SFX ƚ8 o a/Ᵽ0ⱣƚN0 o	ts:subjunctive+present is:first+singular	# T8 + a
-#SFX ƚ8 o i/Ᵽ0ⱣƚĪ3N0 [^i]o	ts:subjunctive+present is:second+singular	# T8 + i
-#SFX ƚ8 io i/Ᵽ0ⱣƚĪ3N0 io	ts:subjunctive+present is:second+singular	# T8 + i
-#SFX ƚ8 o a/Ᵽ0ⱣƚN0 o	ts:subjunctive+present is:third	# T8 + a
 
 
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
@@ -5953,97 +5864,55 @@ SFX f2 r ƚo/Dƚ ir
 
 
 # vèrbi prokonplementari (stakài)
-SFX Ᵽ0 Y 28
+SFX Ᵽ0 Y 14
 SFX Ᵽ0 0 -ge [ro]	ds:procomplementar
-SFX Ᵽ0 ò -ge erò	ds:procomplementar
 SFX Ᵽ0 0 -gen [ro]	ds:procomplementar
-SFX Ᵽ0 ò -gen erò	ds:procomplementar
 SFX Ᵽ0 0 -gin [ro]	ds:procomplementar
-SFX Ᵽ0 ò -gin erò	ds:procomplementar
 SFX Ᵽ0 0 -gene [ro]	ds:procomplementar
-SFX Ᵽ0 ò -gene erò	ds:procomplementar
 SFX Ᵽ0 0 -gine [ro]	ds:procomplementar
-SFX Ᵽ0 ò -gine erò	ds:procomplementar
 SFX Ᵽ0 0 -me [ro]	ds:procomplementar
-SFX Ᵽ0 ò -me erò	ds:procomplementar
 SFX Ᵽ0 0 -mene [ro]	ds:procomplementar
-SFX Ᵽ0 ò -mene erò	ds:procomplementar
 SFX Ᵽ0 0 -ne [ro]	ds:procomplementar
-SFX Ᵽ0 ò -ne erò	ds:procomplementar
 SFX Ᵽ0 0 -se [ro]	ds:procomplementar
-SFX Ᵽ0 ò -se erò	ds:procomplementar
 SFX Ᵽ0 0 -sene [ro]	ds:procomplementar
-SFX Ᵽ0 ò -sene erò	ds:procomplementar
 SFX Ᵽ0 0 -te [ro]	ds:procomplementar
-SFX Ᵽ0 ò -te erò	ds:procomplementar
 SFX Ᵽ0 0 -tene [ro]	ds:procomplementar
-SFX Ᵽ0 ò -tene erò	ds:procomplementar
 SFX Ᵽ0 0 -ve [ro]	ds:procomplementar
-SFX Ᵽ0 ò -ve erò	ds:procomplementar
 SFX Ᵽ0 0 -vene [ro]	ds:procomplementar
-SFX Ᵽ0 ò -vene erò	ds:procomplementar
 
 # vèrbi prokonplementari (stakài ko èle no vanesente)
-SFX Ᵽl Y 48
+SFX Ᵽl Y 24
 SFX Ᵽl 0 -gelo [ro]	is:singular+masculine ds:procomplementar
 SFX Ᵽl 0 -gela [ro]	is:singular+femenine ds:procomplementar
 SFX Ᵽl 0 -geli [ro]	is:plural+masculine ds:procomplementar
 SFX Ᵽl 0 -gele [ro]	is:plural+femenine ds:procomplementar
-SFX Ᵽl ò -gelo erò	is:singular+masculine ds:procomplementar
-SFX Ᵽl ò -gela erò	is:singular+femenine ds:procomplementar
-SFX Ᵽl ò -geli erò	is:plural+masculine ds:procomplementar
-SFX Ᵽl ò -gele erò	is:plural+femenine ds:procomplementar
 SFX Ᵽl 0 -lo [ro]	is:singular+masculine ds:procomplementar
 SFX Ᵽl 0 -la [ro]	is:singular+femenine ds:procomplementar
 SFX Ᵽl 0 -li [ro]	is:plural+masculine ds:procomplementar
 SFX Ᵽl 0 -le [ro]	is:plural+femenine ds:procomplementar
-SFX Ᵽl ò -lo erò	is:singular+masculine ds:procomplementar
-SFX Ᵽl ò -la erò	is:singular+femenine ds:procomplementar
-SFX Ᵽl ò -li erò	is:plural+masculine ds:procomplementar
-SFX Ᵽl ò -le erò	is:plural+femenine ds:procomplementar
 SFX Ᵽl 0 -melo [ro]	is:singular+masculine ds:procomplementar
 SFX Ᵽl 0 -mela [ro]	is:singular+femenine ds:procomplementar
 SFX Ᵽl 0 -meli [ro]	is:plural+masculine ds:procomplementar
 SFX Ᵽl 0 -mele [ro]	is:plural+femenine ds:procomplementar
-SFX Ᵽl ò -melo erò	is:singular+masculine ds:procomplementar
-SFX Ᵽl ò -mela erò	is:singular+femenine ds:procomplementar
-SFX Ᵽl ò -meli erò	is:plural+masculine ds:procomplementar
-SFX Ᵽl ò -mele erò	is:plural+femenine ds:procomplementar
 SFX Ᵽl 0 -selo [ro]	is:singular+masculine ds:procomplementar
 SFX Ᵽl 0 -sela [ro]	is:singular+femenine ds:procomplementar
 SFX Ᵽl 0 -seli [ro]	is:plural+masculine ds:procomplementar
 SFX Ᵽl 0 -sele [ro]	is:plural+femenine ds:procomplementar
-SFX Ᵽl ò -selo erò	is:singular+masculine ds:procomplementar
-SFX Ᵽl ò -sela erò	is:singular+femenine ds:procomplementar
-SFX Ᵽl ò -seli erò	is:plural+masculine ds:procomplementar
-SFX Ᵽl ò -sele erò	is:plural+femenine ds:procomplementar
 SFX Ᵽl 0 -telo [ro]	is:singular+masculine ds:procomplementar
 SFX Ᵽl 0 -tela [ro]	is:singular+femenine ds:procomplementar
 SFX Ᵽl 0 -teli [ro]	is:plural+masculine ds:procomplementar
 SFX Ᵽl 0 -tele [ro]	is:plural+femenine ds:procomplementar
-SFX Ᵽl ò -telo erò	is:singular+masculine ds:procomplementar
-SFX Ᵽl ò -tela erò	is:singular+femenine ds:procomplementar
-SFX Ᵽl ò -teli erò	is:plural+masculine ds:procomplementar
-SFX Ᵽl ò -tele erò	is:plural+femenine ds:procomplementar
 SFX Ᵽl 0 -velo [ro]	is:singular+masculine ds:procomplementar
 SFX Ᵽl 0 -vela [ro]	is:singular+femenine ds:procomplementar
 SFX Ᵽl 0 -veli [ro]	is:plural+masculine ds:procomplementar
 SFX Ᵽl 0 -vele [ro]	is:plural+femenine ds:procomplementar
-SFX Ᵽl ò -velo erò	is:singular+masculine ds:procomplementar
-SFX Ᵽl ò -vela erò	is:singular+femenine ds:procomplementar
-SFX Ᵽl ò -veli erò	is:plural+masculine ds:procomplementar
-SFX Ᵽl ò -vele erò	is:plural+femenine ds:procomplementar
 
 # vèrbi prokonplementari (stakài ko èle vanesente)
-SFX Ᵽƚ Y 44
+SFX Ᵽƚ Y 24
 SFX Ᵽƚ 0 -geƚo [ro]	is:singular+masculine ds:procomplementar
 SFX Ᵽƚ 0 -geƚa [ro]	is:singular+femenine ds:procomplementar
 SFX Ᵽƚ 0 -geƚi [ro]	is:plural+masculine ds:procomplementar
 SFX Ᵽƚ 0 -geƚe [ro]	is:plural+femenine ds:procomplementar
-SFX Ᵽƚ ò -geƚo erò	is:singular+masculine ds:procomplementar
-SFX Ᵽƚ ò -geƚa erò	is:singular+femenine ds:procomplementar
-SFX Ᵽƚ ò -geƚi erò	is:plural+masculine ds:procomplementar
-SFX Ᵽƚ ò -geƚe erò	is:plural+femenine ds:procomplementar
 SFX Ᵽƚ 0 -ƚo [aàeèéiíoòóuú]	is:singular+masculine ds:procomplementar
 SFX Ᵽƚ 0 -ƚa [aàeèéiíoòóuú]	is:singular+femenine ds:procomplementar
 SFX Ᵽƚ 0 -ƚi [aàeèéiíoòóuú]	is:plural+masculine ds:procomplementar
@@ -6052,75 +5921,55 @@ SFX Ᵽƚ 0 -meƚo [ro]	is:singular+masculine ds:procomplementar
 SFX Ᵽƚ 0 -meƚa [ro]	is:singular+femenine is:singular+femenine ds:procomplementar
 SFX Ᵽƚ 0 -meƚi [ro]	is:plural+masculine ds:procomplementar
 SFX Ᵽƚ 0 -meƚe [ro]	is:plural+femenine ds:procomplementar
-SFX Ᵽƚ ò -meƚo erò	is:singular+masculine ds:procomplementar
-SFX Ᵽƚ ò -meƚa erò	is:singular+femenine ds:procomplementar
-SFX Ᵽƚ ò -meƚi erò	is:plural+masculine ds:procomplementar
-SFX Ᵽƚ ò -meƚe erò	is:plural+femenine ds:procomplementar
 SFX Ᵽƚ 0 -seƚo [ro]	is:singular+masculine ds:procomplementar
 SFX Ᵽƚ 0 -seƚa [ro]	is:singular+femenine ds:procomplementar
 SFX Ᵽƚ 0 -seƚi [ro]	is:plural+masculine ds:procomplementar
 SFX Ᵽƚ 0 -seƚe [ro]	is:plural+femenine ds:procomplementar
-SFX Ᵽƚ ò -seƚo erò	is:singular+masculine ds:procomplementar
-SFX Ᵽƚ ò -seƚa erò	is:singular+femenine ds:procomplementar
-SFX Ᵽƚ ò -seƚi erò	is:plural+masculine ds:procomplementar
-SFX Ᵽƚ ò -seƚe erò	is:plural+femenine ds:procomplementar
 SFX Ᵽƚ 0 -teƚo [ro]	is:singular+masculine ds:procomplementar
 SFX Ᵽƚ 0 -teƚa [ro]	is:singular+femenine ds:procomplementar
 SFX Ᵽƚ 0 -teƚi [ro]	is:plural+masculine ds:procomplementar
 SFX Ᵽƚ 0 -teƚe [ro]	is:plural+femenine ds:procomplementar
-SFX Ᵽƚ ò -teƚo erò	is:singular+masculine ds:procomplementar
-SFX Ᵽƚ ò -teƚa erò	is:singular+femenine ds:procomplementar
-SFX Ᵽƚ ò -teƚi erò	is:plural+masculine ds:procomplementar
-SFX Ᵽƚ ò -teƚe erò	is:plural+femenine ds:procomplementar
 SFX Ᵽƚ 0 -veƚo [ro]	is:singular+masculine ds:procomplementar
 SFX Ᵽƚ 0 -veƚa [ro]	is:singular+femenine ds:procomplementar
 SFX Ᵽƚ 0 -veƚi [ro]	is:plural+masculine ds:procomplementar
 SFX Ᵽƚ 0 -veƚe [ro]	is:plural+femenine ds:procomplementar
-SFX Ᵽƚ ò -veƚo erò	is:singular+masculine ds:procomplementar
-SFX Ᵽƚ ò -veƚa erò	is:singular+femenine ds:procomplementar
-SFX Ᵽƚ ò -veƚi erò	is:plural+masculine ds:procomplementar
-SFX Ᵽƚ ò -veƚe erò	is:plural+femenine ds:procomplementar
 
 
 # vèrbi prokonplementari (takài)
-# -àr, -ér, '-er, -ír, -ír/is: skomenŧiando da 'l infenío
-SFX P0 Y 28
+SFX P0 Y 22
 SFX P0 0 ge [ro]	ds:procomplementar
-SFX P0 ò ge erò	ds:procomplementar
 SFX P0 0 gen [ro]	ds:procomplementar
-SFX P0 ò gen erò	ds:procomplementar
+SFX P0 0 rgen [àéí]	ds:procomplementar
 SFX P0 0 gin [ro]	ds:procomplementar
-SFX P0 ò gin erò	ds:procomplementar
+SFX P0 0 rgin [àéí]	ds:procomplementar
 SFX P0 0 gene [ro]	ds:procomplementar
-SFX P0 ò gene erò	ds:procomplementar
+SFX P0 0 rgene [àéí]	ds:procomplementar
 SFX P0 0 gine [ro]	ds:procomplementar
-SFX P0 ò gine erò	ds:procomplementar
+SFX P0 0 rgine [àéí]	ds:procomplementar
 SFX P0 0 me [ro]	ds:procomplementar
-SFX P0 ò me erò	ds:procomplementar
 SFX P0 0 mene [ro]	ds:procomplementar
-SFX P0 ò mene erò	ds:procomplementar
+SFX P0 0 rmene [àéí]	ds:procomplementar
 SFX P0 0 ne [ro]	ds:procomplementar
-SFX P0 ò ne erò	ds:procomplementar
 SFX P0 0 se [ro]	ds:procomplementar
-SFX P0 ò se erò	ds:procomplementar
 SFX P0 0 sene [ro]	ds:procomplementar
-SFX P0 ò sene erò	ds:procomplementar
+SFX P0 0 rsene [àéí]	ds:procomplementar
 SFX P0 0 te [ro]	ds:procomplementar
-SFX P0 ò te erò	ds:procomplementar
 SFX P0 0 tene [ro]	ds:procomplementar
-SFX P0 ò tene erò	ds:procomplementar
+SFX P0 0 rtene [àéí]	ds:procomplementar
 SFX P0 0 ve [ro]	ds:procomplementar
-SFX P0 ò ve erò	ds:procomplementar
 SFX P0 0 vene [ro]	ds:procomplementar
-SFX P0 ò vene erò	ds:procomplementar
+SFX P0 0 rvene [àéí]	ds:procomplementar
 
 # vèrbi prokonplementari (takài ko èle no vanesente)
-# -àr, -ér, '-er, -ír, -ír/is: skomenŧiando da 'l infenío
-SFX Pl Y 48
+SFX Pl Y 80
 SFX Pl 0 gelo [ro]	is:singular+masculine ds:procomplementar
 SFX Pl 0 gela [ro]	is:singular+femenine ds:procomplementar
 SFX Pl 0 geli [ro]	is:plural+masculine ds:procomplementar
 SFX Pl 0 gele [ro]	is:plural+femenine ds:procomplementar
+SFX Pl 0 rgelo [àéí]	is:singular+masculine ds:procomplementar
+SFX Pl 0 rgela [àéí]	is:singular+femenine ds:procomplementar
+SFX Pl 0 rgeli [àéí]	is:plural+masculine ds:procomplementar
+SFX Pl 0 rgele [àéí]	is:plural+femenine ds:procomplementar
 SFX Pl ò gelo erò	is:singular+masculine ds:procomplementar
 SFX Pl ò gela erò	is:singular+femenine ds:procomplementar
 SFX Pl ò geli erò	is:plural+masculine ds:procomplementar
@@ -6129,6 +5978,18 @@ SFX Pl 0 lo [ro]	is:singular+masculine ds:procomplementar
 SFX Pl 0 la [ro]	is:singular+femenine ds:procomplementar
 SFX Pl 0 li [ro]	is:plural+masculine ds:procomplementar
 SFX Pl 0 le [ro]	is:plural+femenine ds:procomplementar
+SFX Pl à arlo à	is:singular+masculine ds:procomplementar
+SFX Pl é erlo é	is:singular+masculine ds:procomplementar
+SFX Pl í irlo í	is:singular+masculine ds:procomplementar
+SFX Pl à arla à	is:singular+femenine ds:procomplementar
+SFX Pl é erla é	is:singular+femenine ds:procomplementar
+SFX Pl í irla í	is:singular+femenine ds:procomplementar
+SFX Pl à arli à	is:plural+masculine ds:procomplementar
+SFX Pl é erli é	is:plural+masculine ds:procomplementar
+SFX Pl í irli í	is:plural+masculine ds:procomplementar
+SFX Pl à arle à	is:plural+femenine ds:procomplementar
+SFX Pl é erle é	is:plural+femenine ds:procomplementar
+SFX Pl í irle í	is:plural+femenine ds:procomplementar
 SFX Pl ò lo erò	is:singular+masculine ds:procomplementar
 SFX Pl ò la erò	is:singular+femenine ds:procomplementar
 SFX Pl ò li erò	is:plural+masculine ds:procomplementar
@@ -6137,6 +5998,10 @@ SFX Pl 0 melo [ro]	is:singular+masculine ds:procomplementar
 SFX Pl 0 mela [ro]	is:singular+femenine ds:procomplementar
 SFX Pl 0 meli [ro]	is:plural+masculine ds:procomplementar
 SFX Pl 0 mele [ro]	is:plural+femenine ds:procomplementar
+SFX Pl 0 rmelo [àéí]	is:singular+masculine ds:procomplementar
+SFX Pl 0 rmela [àéí]	is:singular+femenine ds:procomplementar
+SFX Pl 0 rmeli [àéí]	is:plural+masculine ds:procomplementar
+SFX Pl 0 rmele [àéí]	is:plural+femenine ds:procomplementar
 SFX Pl ò melo erò	is:singular+masculine ds:procomplementar
 SFX Pl ò mela erò	is:singular+femenine ds:procomplementar
 SFX Pl ò meli erò	is:plural+masculine ds:procomplementar
@@ -6145,6 +6010,10 @@ SFX Pl 0 selo [ro]	is:singular+masculine ds:procomplementar
 SFX Pl 0 sela [ro]	is:singular+femenine ds:procomplementar
 SFX Pl 0 seli [ro]	is:plural+masculine ds:procomplementar
 SFX Pl 0 sele [ro]	is:plural+femenine ds:procomplementar
+SFX Pl 0 rselo [àéí]	is:singular+masculine ds:procomplementar
+SFX Pl 0 rsela [àéí]	is:singular+femenine ds:procomplementar
+SFX Pl 0 rseli [àéí]	is:plural+masculine ds:procomplementar
+SFX Pl 0 rsele [àéí]	is:plural+femenine ds:procomplementar
 SFX Pl ò selo erò	is:singular+masculine ds:procomplementar
 SFX Pl ò sela erò	is:singular+femenine ds:procomplementar
 SFX Pl ò seli erò	is:plural+masculine ds:procomplementar
@@ -6153,6 +6022,10 @@ SFX Pl 0 telo [ro]	is:singular+masculine ds:procomplementar
 SFX Pl 0 tela [ro]	is:singular+femenine ds:procomplementar
 SFX Pl 0 teli [ro]	is:plural+masculine ds:procomplementar
 SFX Pl 0 tele [ro]	is:plural+femenine ds:procomplementar
+SFX Pl 0 rtelo [àéí]	is:singular+masculine ds:procomplementar
+SFX Pl 0 rtela [àéí]	is:singular+femenine ds:procomplementar
+SFX Pl 0 rteli [àéí]	is:plural+masculine ds:procomplementar
+SFX Pl 0 rtele [àéí]	is:plural+femenine ds:procomplementar
 SFX Pl ò telo erò	is:singular+masculine ds:procomplementar
 SFX Pl ò tela erò	is:singular+femenine ds:procomplementar
 SFX Pl ò teli erò	is:plural+masculine ds:procomplementar
@@ -6161,30 +6034,41 @@ SFX Pl 0 velo [ro]	is:singular+masculine ds:procomplementar
 SFX Pl 0 vela [ro]	is:singular+femenine ds:procomplementar
 SFX Pl 0 veli [ro]	is:plural+masculine ds:procomplementar
 SFX Pl 0 vele [ro]	is:plural+femenine ds:procomplementar
+SFX Pl 0 rvelo [àéí]	is:singular+masculine ds:procomplementar
+SFX Pl 0 rvela [àéí]	is:singular+femenine ds:procomplementar
+SFX Pl 0 rveli [àéí]	is:plural+masculine ds:procomplementar
+SFX Pl 0 rvele [àéí]	is:plural+femenine ds:procomplementar
 SFX Pl ò velo erò	is:singular+masculine ds:procomplementar
 SFX Pl ò vela erò	is:singular+femenine ds:procomplementar
 SFX Pl ò veli erò	is:plural+masculine ds:procomplementar
 SFX Pl ò vele erò	is:plural+femenine ds:procomplementar
 
 # vèrbi prokonplementari (takài ko èle vanesente)
-# -àr, -ér, '-er, -ír, -ír/is: skomenŧiando da 'l infenío
-SFX Pƚ Y 44
+SFX Pƚ Y 64
 SFX Pƚ 0 geƚo [ro]	is:singular+masculine ds:procomplementar
 SFX Pƚ 0 geƚa [ro]	is:singular+femenine ds:procomplementar
 SFX Pƚ 0 geƚi [ro]	is:plural+masculine ds:procomplementar
 SFX Pƚ 0 geƚe [ro]	is:plural+femenine ds:procomplementar
+SFX Pƚ 0 rgeƚo [àéí]	is:singular+masculine ds:procomplementar
+SFX Pƚ 0 rgeƚa [àéí]	is:singular+femenine ds:procomplementar
+SFX Pƚ 0 rgeƚi [àéí]	is:plural+masculine ds:procomplementar
+SFX Pƚ 0 rgeƚe [àéí]	is:plural+femenine ds:procomplementar
 SFX Pƚ ò geƚo erò	is:singular+masculine ds:procomplementar
 SFX Pƚ ò geƚa erò	is:singular+femenine ds:procomplementar
 SFX Pƚ ò geƚi erò	is:plural+masculine ds:procomplementar
 SFX Pƚ ò geƚe erò	is:plural+femenine ds:procomplementar
-SFX Pƚ 0 ƚo [aàeèéiíoòóuú]	is:singular+masculine ds:procomplementar
-SFX Pƚ 0 ƚa [aàeèéiíoòóuú]	is:singular+femenine ds:procomplementar
-SFX Pƚ 0 ƚi [aàeèéiíoòóuú]	is:plural+masculine ds:procomplementar
-SFX Pƚ 0 ƚe [aàeèéiíoòóuú]	is:plural+femenine ds:procomplementar
+SFX Pƚ 0 ƚo n[dt]o	is:singular+masculine ds:procomplementar
+SFX Pƚ 0 ƚa n[dt]o	is:singular+femenine ds:procomplementar
+SFX Pƚ 0 ƚi n[dt]o	is:plural+masculine ds:procomplementar
+SFX Pƚ 0 ƚe n[dt]o	is:plural+femenine ds:procomplementar
 SFX Pƚ 0 meƚo [ro]	is:singular+masculine ds:procomplementar
 SFX Pƚ 0 meƚa [ro]	is:singular+femenine is:singular+femenine ds:procomplementar
 SFX Pƚ 0 meƚi [ro]	is:plural+masculine ds:procomplementar
 SFX Pƚ 0 meƚe [ro]	is:plural+femenine ds:procomplementar
+SFX Pƚ 0 rmeƚo [àéí]	is:singular+masculine ds:procomplementar
+SFX Pƚ 0 rmeƚa [àéí]	is:singular+femenine is:singular+femenine ds:procomplementar
+SFX Pƚ 0 rmeƚi [àéí]	is:plural+masculine ds:procomplementar
+SFX Pƚ 0 rmeƚe [àéí]	is:plural+femenine ds:procomplementar
 SFX Pƚ ò meƚo erò	is:singular+masculine ds:procomplementar
 SFX Pƚ ò meƚa erò	is:singular+femenine ds:procomplementar
 SFX Pƚ ò meƚi erò	is:plural+masculine ds:procomplementar
@@ -6193,6 +6077,10 @@ SFX Pƚ 0 seƚo [ro]	is:singular+masculine ds:procomplementar
 SFX Pƚ 0 seƚa [ro]	is:singular+femenine ds:procomplementar
 SFX Pƚ 0 seƚi [ro]	is:plural+masculine ds:procomplementar
 SFX Pƚ 0 seƚe [ro]	is:plural+femenine ds:procomplementar
+SFX Pƚ 0 rseƚo [àéí]	is:singular+masculine ds:procomplementar
+SFX Pƚ 0 rseƚa [àéí]	is:singular+femenine ds:procomplementar
+SFX Pƚ 0 rseƚi [àéí]	is:plural+masculine ds:procomplementar
+SFX Pƚ 0 rseƚe [àéí]	is:plural+femenine ds:procomplementar
 SFX Pƚ ò seƚo erò	is:singular+masculine ds:procomplementar
 SFX Pƚ ò seƚa erò	is:singular+femenine ds:procomplementar
 SFX Pƚ ò seƚi erò	is:plural+masculine ds:procomplementar
@@ -6201,6 +6089,10 @@ SFX Pƚ 0 teƚo [ro]	is:singular+masculine ds:procomplementar
 SFX Pƚ 0 teƚa [ro]	is:singular+femenine ds:procomplementar
 SFX Pƚ 0 teƚi [ro]	is:plural+masculine ds:procomplementar
 SFX Pƚ 0 teƚe [ro]	is:plural+femenine ds:procomplementar
+SFX Pƚ 0 rteƚo [àéí]	is:singular+masculine ds:procomplementar
+SFX Pƚ 0 rteƚa [àéí]	is:singular+femenine ds:procomplementar
+SFX Pƚ 0 rteƚi [àéí]	is:plural+masculine ds:procomplementar
+SFX Pƚ 0 rteƚe [àéí]	is:plural+femenine ds:procomplementar
 SFX Pƚ ò teƚo erò	is:singular+masculine ds:procomplementar
 SFX Pƚ ò teƚa erò	is:singular+femenine ds:procomplementar
 SFX Pƚ ò teƚi erò	is:plural+masculine ds:procomplementar
@@ -6209,6 +6101,10 @@ SFX Pƚ 0 veƚo [ro]	is:singular+masculine ds:procomplementar
 SFX Pƚ 0 veƚa [ro]	is:singular+femenine ds:procomplementar
 SFX Pƚ 0 veƚi [ro]	is:plural+masculine ds:procomplementar
 SFX Pƚ 0 veƚe [ro]	is:plural+femenine ds:procomplementar
+SFX Pƚ 0 rveƚo [àéí]	is:singular+masculine ds:procomplementar
+SFX Pƚ 0 rveƚa [àéí]	is:singular+femenine ds:procomplementar
+SFX Pƚ 0 rveƚi [àéí]	is:plural+masculine ds:procomplementar
+SFX Pƚ 0 rveƚe [àéí]	is:plural+femenine ds:procomplementar
 SFX Pƚ ò veƚo erò	is:singular+masculine ds:procomplementar
 SFX Pƚ ò veƚa erò	is:singular+femenine ds:procomplementar
 SFX Pƚ ò veƚi erò	is:plural+masculine ds:procomplementar
