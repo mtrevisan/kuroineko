@@ -281,8 +281,8 @@ NEEDAFFIX N0
 #PART. PASIVO	T6 + d[oiae], T6 + ([oiae])
 #					T2 + st[oiae]
 #					T7 + st[oiae]
-#XER. SÉNPLISE	T2 + ndo
-#					T7 + ndo
+#XER. SÉNPLISE	T2 + n[dt]o
+#					T7 + n[dt]o
 # mòdi ko 'l asterisko i vòl dir ke i gà anka la deklinaŧion interogativa
 
 #kantar/a0a1a2Ᵽ0ⱣlⱣƚ
@@ -320,7 +320,7 @@ SFX n1 àlder aldre àlder	ts:infinitive+simple
 # tèma 2 (from T1: aŧento PVT > VT)
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
-SFX t2 Y 84
+SFX t2 Y 92
 SFX t2 r va/Ī1 [aei]r	ts:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX t2 ar àva/I1N0 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX t2 er éva/I1N0 er	ts:indicative+imperfect is:first+singular	# T2 + (v)a
@@ -400,11 +400,19 @@ SFX t2 rò se erò	ts:subjunctive+imperfect is:third	# T2 + se
 SFX t2 r sto/A1 [aei]r	ts:participle+passive is:singular+masculine	# T2 + st[oiae]
 SFX t2 rò sto/A1 erò	ts:participle+passive is:singular+masculine	# T2 + st[oiae]
 SFX t2 r ndo/Ᵽ0 [aei]r	ts:gerund+simple	# T2 + ndo = T7 + ndo
+SFX t2 ar àndo/P0N0 ar	ts:gerund+simple	# T2 + ndo = T7 + ndo
+SFX t2 er éndo/P0N0 er	ts:gerund+simple	# T2 + ndo = T7 + ndo
+SFX t2 ir índo/P0N0 ir	ts:gerund+simple	# T2 + ndo = T7 + ndo
 SFX t2 rò ndo/Ᵽ0 erò	ts:gerund+simple	# T2 + ndo
+SFX t2 erò éndo/P0N0 erò	ts:gerund+simple	# T2 + ndo
 SFX t2 r nto/Ᵽ0 [aei]r	ts:gerund+simple	# T2 + nto = T7 + nto
-SFX t2 er ènto/Ᵽ0 er	ts:gerund+simple	# T2 + nto
+SFX t2 ar ànto/P0N0 ar	ts:gerund+simple	# T2 + ndo = T7 + ndo
+SFX t2 er énto/P0N0 er	ts:gerund+simple	# T2 + ndo = T7 + ndo
+SFX t2 er ènto/Ᵽ0P0 er	ts:gerund+simple	# T2 + nto
+SFX t2 ir ínto/P0N0 ir	ts:gerund+simple	# T2 + ndo = T7 + ndo
 SFX t2 rò nto/Ᵽ0 erò	ts:gerund+simple	# T2 + nto
-SFX t2 erò ènto/Ᵽ0 erò	ts:gerund+simple	# T2 + nto
+SFX t2 erò énto/P0N0 erò	ts:gerund+simple	# T2 + nto
+SFX t2 erò ènto/Ᵽ0P0 erò	ts:gerund+simple	# T2 + nto
 
 SFX n2 Y 70
 SFX n2 ar eva/Ī1 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
@@ -479,7 +487,7 @@ SFX n2 rò nt erò	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX n2 erò ènt erò	ts:gerund+simple	# T2 + nto = T7 + nto
 
 # senŧa èle vanesente
-SFX l2 Y 22
+SFX l2 Y 30
 SFX l2 r va/Ī5N0 [aei]r	ts:indicative+imperfect is:third	# T2 + (v)a
 SFX l2 ar àva/I5N0 ar	ts:indicative+imperfect is:third	# T2 + (v)a
 SFX l2 er éva/I5N0 er	ts:indicative+imperfect is:third	# T2 + (v)a
@@ -497,14 +505,22 @@ SFX l2 ir eva/Ī5N0 ir	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: a�
 SFX l2 ir éva/I5N0 ir	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | í > é
 SFX l2 ir éa/Ī5I5N0 ir	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | í > é
 SFX l2 r ndo/ⱣlN0 [aei]r	ts:gerund+simple	# T2 + ndo = T7 + ndo
+SFX l2 ar àndo/PlN0 ar	ts:gerund+simple	# T2 + ndo = T7 + ndo
+SFX l2 er éndo/PlN0 er	ts:gerund+simple	# T2 + ndo = T7 + ndo
+SFX l2 ir índo/PlN0 ir	ts:gerund+simple	# T2 + ndo = T7 + ndo
 SFX l2 rò ndo/ⱣlN0 erò	ts:gerund+simple	# T2 + ndo = T7 + ndo
+SFX l2 erò éndo/PlN0 erò	ts:gerund+simple	# T2 + ndo = T7 + ndo
 SFX l2 r nto/ⱣlN0 [aei]r	ts:gerund+simple	# T2 + nto = T7 + nto
-SFX l2 er ènto/ⱣlN0 er	ts:gerund+simple	# T2 + nto = T7 + nto
+SFX l2 ar ànto/PlN0 ar	ts:gerund+simple	# T2 + ndo = T7 + ndo
+SFX l2 er énto/PlN0 er	ts:gerund+simple	# T2 + ndo = T7 + ndo
+SFX l2 er ènto/ⱣlP1N0 er	ts:gerund+simple	# T2 + nto = T7 + nto
+SFX l2 ir ínto/PlN0 ir	ts:gerund+simple	# T2 + ndo = T7 + ndo
 SFX l2 rò nto/ⱣlN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
-SFX l2 erò ènto/ⱣlN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
+SFX l2 erò énto/PlN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
+SFX l2 erò ènto/ⱣlP1N0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
 
 # ko èle vanesente
-SFX ƚ2 Y 22
+SFX ƚ2 Y 30
 SFX ƚ2 r va/ī5N0 [aei]r	ts:indicative+imperfect is:third	# T2 + (v)a
 SFX ƚ2 ar àva/i5N0 ar	ts:indicative+imperfect is:third	# T2 + (v)a
 SFX ƚ2 er éva/i5N0 er	ts:indicative+imperfect is:third	# T2 + (v)a
@@ -522,11 +538,19 @@ SFX ƚ2 ir eva/ī5N0 ir	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: a
 SFX ƚ2 ir éva/i5N0 ir	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | í > é
 SFX ƚ2 ir éa/ī5i5N0 ir	ts:indicative+imperfect is:third	# T2 + (v)a, T2 = T1: aŧento PVT > VT | í > é
 SFX ƚ2 r ndo/ⱣƚN0 [aei]r	ts:gerund+simple	# T2 + ndo = T7 + ndo
+SFX ƚ2 ar àndo/PƚN0 ar	ts:gerund+simple	# T2 + ndo = T7 + ndo
+SFX ƚ2 er éndo/PƚN0 er	ts:gerund+simple	# T2 + ndo = T7 + ndo
+SFX ƚ2 ir índo/PƚN0 ir	ts:gerund+simple	# T2 + ndo = T7 + ndo
 SFX ƚ2 rò ndo/ⱣƚN0 erò	ts:gerund+simple	# T2 + ndo = T7 + ndo
+SFX ƚ2 erò éndo/PƚN0 erò	ts:gerund+simple	# T2 + ndo = T7 + ndo
 SFX ƚ2 r nto/ⱣƚN0 [aei]r	ts:gerund+simple	# T2 + nto = T7 + nto
+SFX ƚ2 ar ànto/PƚN0 ar	ts:gerund+simple	# T2 + nto = T7 + nto
+SFX ƚ2 er énto/PƚN0 er	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX ƚ2 er ènto/ⱣƚN0 er	ts:gerund+simple	# T2 + nto = T7 + nto
+SFX ƚ2 ir ínto/PƚN0 ir	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX ƚ2 rò nto/ⱣƚN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
-SFX ƚ2 erò ènto/ⱣƚN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
+SFX ƚ2 erò énto/PƚN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
+SFX ƚ2 erò ènto/ⱣƚPƚN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
 
 
 # tèma 4 (from T1: senŧa aŧento)
@@ -6007,173 +6031,369 @@ SFX Ᵽƚ 0 -veƚe .	ds:procomplementar
 
 # vèrbi prokonplementari (takài)
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
-SFX P0 Y 30
-SFX P0 0 ge [aei]r	ds:procomplementar
+SFX P0 Y 82
+SFX P0 0 ge [ro]	ds:procomplementar
 SFX P0 ar àrgen ar	ds:procomplementar
 SFX P0 er érgen er	ds:procomplementar
+SFX P0 erò érgen erò	ds:procomplementar
 SFX P0 ir írgen ir	ds:procomplementar
+SFX P0 ando àndogen ando	ds:procomplementar
+SFX P0 endo éndogen endo	ds:procomplementar
+SFX P0 indo índogen indo	ds:procomplementar
 SFX P0 ar àrgin ar	ds:procomplementar
 SFX P0 er érgin er	ds:procomplementar
+SFX P0 erò érgin erò	ds:procomplementar
 SFX P0 ir írgin ir	ds:procomplementar
+SFX P0 ando àndogin ando	ds:procomplementar
+SFX P0 endo éndogin endo	ds:procomplementar
+SFX P0 indo índogin indo	ds:procomplementar
 SFX P0 ar àrgene ar	ds:procomplementar
 SFX P0 er érgene er	ds:procomplementar
+SFX P0 erò érgene erò	ds:procomplementar
 SFX P0 ir írgene ir	ds:procomplementar
+SFX P0 ando àndogene ando	ds:procomplementar
+SFX P0 endo éndogene endo	ds:procomplementar
+SFX P0 indo índogene indo	ds:procomplementar
 SFX P0 ar àrgine ar	ds:procomplementar
 SFX P0 er érgine er	ds:procomplementar
+SFX P0 erò érgine erò	ds:procomplementar
 SFX P0 ir írgine ir	ds:procomplementar
+SFX P0 ando àndogine ando	ds:procomplementar
+SFX P0 endo éndogine endo	ds:procomplementar
+SFX P0 indo índogine indo	ds:procomplementar
 SFX P0 0 me [aei]r	ds:procomplementar
+SFX P0 ò me erò	ds:procomplementar
+SFX P0 ando àndome ando	ds:procomplementar
+SFX P0 endo éndome endo	ds:procomplementar
+SFX P0 indo índome indo	ds:procomplementar
 SFX P0 ar àrmene ar	ds:procomplementar
 SFX P0 er érmene er	ds:procomplementar
+SFX P0 erò érmene erò	ds:procomplementar
 SFX P0 ir írmene ir	ds:procomplementar
+SFX P0 ando àndomene ando	ds:procomplementar
+SFX P0 endo éndomene endo	ds:procomplementar
+SFX P0 indo índomene indo	ds:procomplementar
 SFX P0 0 ne [aei]r	ds:procomplementar
+SFX P0 ò ne erò	ds:procomplementar
+SFX P0 ando àndone ando	ds:procomplementar
+SFX P0 endo éndone endo	ds:procomplementar
+SFX P0 indo índone indo	ds:procomplementar
 SFX P0 0 se [aei]r	ds:procomplementar
+SFX P0 ò se erò	ds:procomplementar
+SFX P0 ando àndose ando	ds:procomplementar
+SFX P0 endo éndose endo	ds:procomplementar
+SFX P0 indo índose indo	ds:procomplementar
 SFX P0 ar àrsene ar	ds:procomplementar
 SFX P0 er érsene er	ds:procomplementar
+SFX P0 erò érsene erò	ds:procomplementar
 SFX P0 ir írsene ir	ds:procomplementar
+SFX P0 ando àndosene ando	ds:procomplementar
+SFX P0 endo éndosene endo	ds:procomplementar
+SFX P0 indo índosene indo	ds:procomplementar
 SFX P0 0 te [aei]r	ds:procomplementar
+SFX P0 ò te erò	ds:procomplementar
+SFX P0 ando àndote ando	ds:procomplementar
+SFX P0 endo éndote endo	ds:procomplementar
+SFX P0 indo índote indo	ds:procomplementar
 SFX P0 ar àrtene ar	ds:procomplementar
 SFX P0 er értene er	ds:procomplementar
+SFX P0 ò tene erò	ds:procomplementar
 SFX P0 ir írtene ir	ds:procomplementar
+SFX P0 ando àndotene ando	ds:procomplementar
+SFX P0 endo éndotene endo	ds:procomplementar
+SFX P0 indo índotene indo	ds:procomplementar
 SFX P0 0 ve [aei]r	ds:procomplementar
+SFX P0 ò ve erò	ds:procomplementar
+SFX P0 ando àndove ando	ds:procomplementar
+SFX P0 endo éndove endo	ds:procomplementar
+SFX P0 indo índove indo	ds:procomplementar
 SFX P0 ar àrvene ar	ds:procomplementar
 SFX P0 er érvene er	ds:procomplementar
+SFX P0 ò vene erò	ds:procomplementar
 SFX P0 ir írvene ir	ds:procomplementar
+SFX P0 ando àndovene ando	ds:procomplementar
+SFX P0 endo éndovene endo	ds:procomplementar
+SFX P0 indo índovene indo	ds:procomplementar
 
 # vèrbi prokonplementari (takài ko èle no vanesente)
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
-SFX Pl Y 64
-SFX Pl 0 lo [aei]r	ds:procomplementar
-SFX Pl 0 la [aei]r	ds:procomplementar
-SFX Pl 0 li [aei]r	ds:procomplementar
-SFX Pl 0 le [aei]r	ds:procomplementar
-SFX Pl ar àrgelo ar	ds:procomplementar
-SFX Pl ar àrgela ar	ds:procomplementar
-SFX Pl ar àrgeli ar	ds:procomplementar
-SFX Pl ar àrgele ar	ds:procomplementar
-SFX Pl ar àrmelo ar	ds:procomplementar
-SFX Pl ar àrmela ar	ds:procomplementar
-SFX Pl ar àrmeli ar	ds:procomplementar
-SFX Pl ar àrmele ar	ds:procomplementar
-SFX Pl ar àrselo ar	ds:procomplementar
-SFX Pl ar àrsela ar	ds:procomplementar
-SFX Pl ar àrseli ar	ds:procomplementar
-SFX Pl ar àrsele ar	ds:procomplementar
-SFX Pl ar àrtelo ar	ds:procomplementar
-SFX Pl ar àrtela ar	ds:procomplementar
-SFX Pl ar àrteli ar	ds:procomplementar
-SFX Pl ar àrtele ar	ds:procomplementar
-SFX Pl ar àrvelo ar	ds:procomplementar
-SFX Pl ar àrvela ar	ds:procomplementar
-SFX Pl ar àrveli ar	ds:procomplementar
-SFX Pl ar àrvele ar	ds:procomplementar
-SFX Pl er érgelo er	ds:procomplementar
-SFX Pl er érgela er	ds:procomplementar
-SFX Pl er érgeli er	ds:procomplementar
-SFX Pl er érgele er	ds:procomplementar
-SFX Pl er érmelo er	ds:procomplementar
-SFX Pl er érmela er	ds:procomplementar
-SFX Pl er érmeli er	ds:procomplementar
-SFX Pl er érmele er	ds:procomplementar
-SFX Pl er érselo er	ds:procomplementar
-SFX Pl er érsela er	ds:procomplementar
-SFX Pl er érseli er	ds:procomplementar
-SFX Pl er érsele er	ds:procomplementar
-SFX Pl er értelo er	ds:procomplementar
-SFX Pl er értela er	ds:procomplementar
-SFX Pl er érteli er	ds:procomplementar
-SFX Pl er értele er	ds:procomplementar
-SFX Pl er érvelo er	ds:procomplementar
-SFX Pl er érvela er	ds:procomplementar
-SFX Pl er érveli er	ds:procomplementar
-SFX Pl er érvele er	ds:procomplementar
-SFX Pl ir írgelo ir	ds:procomplementar
-SFX Pl ir írgela ir	ds:procomplementar
-SFX Pl ir írgeli ir	ds:procomplementar
-SFX Pl ir írgele ir	ds:procomplementar
-SFX Pl ir írmelo ir	ds:procomplementar
-SFX Pl ir írmela ir	ds:procomplementar
-SFX Pl ir írmeli ir	ds:procomplementar
-SFX Pl ir írmele ir	ds:procomplementar
-SFX Pl ir írselo ir	ds:procomplementar
-SFX Pl ir írsela ir	ds:procomplementar
-SFX Pl ir írseli ir	ds:procomplementar
-SFX Pl ir írsele ir	ds:procomplementar
-SFX Pl ir írtelo ir	ds:procomplementar
-SFX Pl ir írtela ir	ds:procomplementar
-SFX Pl ir írteli ir	ds:procomplementar
-SFX Pl ir írtele ir	ds:procomplementar
-SFX Pl ir írvelo ir	ds:procomplementar
-SFX Pl ir írvela ir	ds:procomplementar
-SFX Pl ir írveli ir	ds:procomplementar
-SFX Pl ir írvele ir	ds:procomplementar
+SFX Pl Y 140
+SFX Pl 0 lo [aei]r	is:singular+masculine ds:procomplementar
+SFX Pl 0 la [aei]r	is:singular+femenine ds:procomplementar
+SFX Pl 0 li [aei]r	is:plural+masculine ds:procomplementar
+SFX Pl 0 le [aei]r	is:plural+femenine ds:procomplementar
+SFX Pl ò lo erò	is:singular+masculine ds:procomplementar
+SFX Pl ò la erò	is:singular+femenine ds:procomplementar
+SFX Pl ò li erò	is:plural+masculine ds:procomplementar
+SFX Pl ò le erò	is:plural+femenine ds:procomplementar
+SFX Pl ando àndolo ando	is:singular+masculine ds:procomplementar
+SFX Pl ando àndola ando	is:singular+femenine ds:procomplementar
+SFX Pl ando àndoli ando	is:plural+masculine ds:procomplementar
+SFX Pl ando àndole ando	is:plural+femenine ds:procomplementar
+SFX Pl endo éndolo endo	is:singular+masculine ds:procomplementar
+SFX Pl endo éndola endo	is:singular+femenine ds:procomplementar
+SFX Pl endo éndoli endo	is:plural+masculine ds:procomplementar
+SFX Pl endo éndole endo	is:plural+femenine ds:procomplementar
+SFX Pl indo índolo indo	is:singular+masculine ds:procomplementar
+SFX Pl indo índola indo	is:singular+femenine ds:procomplementar
+SFX Pl indo índoli indo	is:plural+masculine ds:procomplementar
+SFX Pl indo índole indo	is:plural+femenine ds:procomplementar
+SFX Pl ar àrgelo ar	is:singular+masculine ds:procomplementar
+SFX Pl ar àrgela ar	is:plural+femenine ds:procomplementar
+SFX Pl ar àrgeli ar	is:singular+masculine ds:procomplementar
+SFX Pl ar àrgele ar	is:plural+femenine ds:procomplementar
+SFX Pl er érgelo er	is:singular+masculine ds:procomplementar
+SFX Pl er érgela er	is:plural+femenine ds:procomplementar
+SFX Pl er érgeli er	is:singular+masculine ds:procomplementar
+SFX Pl er érgele er	is:plural+femenine ds:procomplementar
+SFX Pl ir írgelo ir	is:singular+masculine ds:procomplementar
+SFX Pl ir írgela ir	is:plural+femenine ds:procomplementar
+SFX Pl ir írgeli ir	is:singular+masculine ds:procomplementar
+SFX Pl ir írgele ir	is:plural+femenine ds:procomplementar
+SFX Pl ando àndogelo ando	is:singular+masculine ds:procomplementar
+SFX Pl ando àndogela ando	is:singular+femenine ds:procomplementar
+SFX Pl ando àndogeli ando	is:plural+masculine ds:procomplementar
+SFX Pl ando àndogele ando	is:plural+femenine ds:procomplementar
+SFX Pl endo éndogelo endo	is:singular+masculine ds:procomplementar
+SFX Pl endo éndogela endo	is:singular+femenine ds:procomplementar
+SFX Pl endo éndogeli endo	is:plural+masculine ds:procomplementar
+SFX Pl endo éndogele endo	is:plural+femenine ds:procomplementar
+SFX Pl indo índogelo indo	is:singular+masculine ds:procomplementar
+SFX Pl indo índogela indo	is:singular+femenine ds:procomplementar
+SFX Pl indo índogeli indo	is:plural+masculine ds:procomplementar
+SFX Pl indo índogele indo	is:plural+femenine ds:procomplementar
+SFX Pl ar àrmelo ar	is:singular+masculine ds:procomplementar
+SFX Pl ar àrmela ar	is:plural+femenine ds:procomplementar
+SFX Pl ar àrmeli ar	is:singular+masculine ds:procomplementar
+SFX Pl ar àrmele ar	is:plural+femenine ds:procomplementar
+SFX Pl er érmelo er	is:singular+masculine ds:procomplementar
+SFX Pl er érmela er	is:plural+femenine ds:procomplementar
+SFX Pl er érmeli er	is:singular+masculine ds:procomplementar
+SFX Pl er érmele er	is:plural+femenine ds:procomplementar
+SFX Pl ir írmelo ir	is:singular+masculine ds:procomplementar
+SFX Pl ir írmela ir	is:plural+femenine ds:procomplementar
+SFX Pl ir írmeli ir	is:singular+masculine ds:procomplementar
+SFX Pl ir írmele ir	is:plural+femenine ds:procomplementar
+SFX Pl ando àndomelo ando	is:singular+masculine ds:procomplementar
+SFX Pl ando àndomela ando	is:singular+femenine ds:procomplementar
+SFX Pl ando àndomeli ando	is:plural+masculine ds:procomplementar
+SFX Pl ando àndomele ando	is:plural+femenine ds:procomplementar
+SFX Pl endo éndomelo endo	is:singular+masculine ds:procomplementar
+SFX Pl endo éndomela endo	is:singular+femenine ds:procomplementar
+SFX Pl endo éndomeli endo	is:plural+masculine ds:procomplementar
+SFX Pl endo éndomele endo	is:plural+femenine ds:procomplementar
+SFX Pl indo índomelo indo	is:singular+masculine ds:procomplementar
+SFX Pl indo índomela indo	is:singular+femenine ds:procomplementar
+SFX Pl indo índomeli indo	is:plural+masculine ds:procomplementar
+SFX Pl indo índomele indo	is:plural+femenine ds:procomplementar
+SFX Pl ar àrselo ar	is:singular+masculine ds:procomplementar
+SFX Pl ar àrsela ar	is:plural+femenine ds:procomplementar
+SFX Pl ar àrseli ar	is:singular+masculine ds:procomplementar
+SFX Pl ar àrsele ar	is:plural+femenine ds:procomplementar
+SFX Pl er érselo er	is:singular+masculine ds:procomplementar
+SFX Pl er érsela er	is:plural+femenine ds:procomplementar
+SFX Pl er érseli er	is:singular+masculine ds:procomplementar
+SFX Pl er érsele er	is:plural+femenine ds:procomplementar
+SFX Pl ir írselo ir	is:singular+masculine ds:procomplementar
+SFX Pl ir írsela ir	is:plural+femenine ds:procomplementar
+SFX Pl ir írseli ir	is:singular+masculine ds:procomplementar
+SFX Pl ir írsele ir	is:plural+femenine ds:procomplementar
+SFX Pl ando àndoselo ando	is:singular+masculine ds:procomplementar
+SFX Pl ando àndosela ando	is:singular+femenine ds:procomplementar
+SFX Pl ando àndoseli ando	is:plural+masculine ds:procomplementar
+SFX Pl ando àndosele ando	is:plural+femenine ds:procomplementar
+SFX Pl endo éndoselo endo	is:singular+masculine ds:procomplementar
+SFX Pl endo éndosela endo	is:singular+femenine ds:procomplementar
+SFX Pl endo éndoseli endo	is:plural+masculine ds:procomplementar
+SFX Pl endo éndosele endo	is:plural+femenine ds:procomplementar
+SFX Pl indo índoselo indo	is:singular+masculine ds:procomplementar
+SFX Pl indo índosela indo	is:singular+femenine ds:procomplementar
+SFX Pl indo índoseli indo	is:plural+masculine ds:procomplementar
+SFX Pl indo índosele indo	is:plural+femenine ds:procomplementar
+SFX Pl ar àrtelo ar	is:singular+masculine ds:procomplementar
+SFX Pl ar àrtela ar	is:plural+femenine ds:procomplementar
+SFX Pl ar àrteli ar	is:singular+masculine ds:procomplementar
+SFX Pl ar àrtele ar	is:plural+femenine ds:procomplementar
+SFX Pl er értelo er	is:singular+masculine ds:procomplementar
+SFX Pl er értela er	is:plural+femenine ds:procomplementar
+SFX Pl er érteli er	is:singular+masculine ds:procomplementar
+SFX Pl er értele er	is:plural+femenine ds:procomplementar
+SFX Pl ir írtelo ir	is:singular+masculine ds:procomplementar
+SFX Pl ir írtela ir	is:plural+femenine ds:procomplementar
+SFX Pl ir írteli ir	is:singular+masculine ds:procomplementar
+SFX Pl ir írtele ir	is:plural+femenine ds:procomplementar
+SFX Pl ando àndotelo ando	is:singular+masculine ds:procomplementar
+SFX Pl ando àndotela ando	is:singular+femenine ds:procomplementar
+SFX Pl ando àndoteli ando	is:plural+masculine ds:procomplementar
+SFX Pl ando àndotele ando	is:plural+femenine ds:procomplementar
+SFX Pl endo éndotelo endo	is:singular+masculine ds:procomplementar
+SFX Pl endo éndotela endo	is:singular+femenine ds:procomplementar
+SFX Pl endo éndoteli endo	is:plural+masculine ds:procomplementar
+SFX Pl endo éndotele endo	is:plural+femenine ds:procomplementar
+SFX Pl indo índotelo indo	is:singular+masculine ds:procomplementar
+SFX Pl indo índotela indo	is:singular+femenine ds:procomplementar
+SFX Pl indo índoteli indo	is:plural+masculine ds:procomplementar
+SFX Pl indo índotele indo	is:plural+femenine ds:procomplementar
+SFX Pl ar àrvelo ar	is:singular+masculine ds:procomplementar
+SFX Pl ar àrvela ar	is:plural+femenine ds:procomplementar
+SFX Pl ar àrveli ar	is:singular+masculine ds:procomplementar
+SFX Pl ar àrvele ar	is:plural+femenine ds:procomplementar
+SFX Pl er érvelo er	is:singular+masculine ds:procomplementar
+SFX Pl er érvela er	is:plural+femenine ds:procomplementar
+SFX Pl er érveli er	is:singular+masculine ds:procomplementar
+SFX Pl er érvele er	is:plural+femenine ds:procomplementar
+SFX Pl ir írvelo ir	is:singular+masculine ds:procomplementar
+SFX Pl ir írvela ir	is:plural+femenine ds:procomplementar
+SFX Pl ir írveli ir	is:singular+masculine ds:procomplementar
+SFX Pl ir írvele ir	is:plural+femenine ds:procomplementar
+SFX Pl ando àndovelo ando	is:singular+masculine ds:procomplementar
+SFX Pl ando àndovela ando	is:singular+femenine ds:procomplementar
+SFX Pl ando àndoveli ando	is:plural+masculine ds:procomplementar
+SFX Pl ando àndovele ando	is:plural+femenine ds:procomplementar
+SFX Pl endo éndovelo endo	is:singular+masculine ds:procomplementar
+SFX Pl endo éndovela endo	is:singular+femenine ds:procomplementar
+SFX Pl endo éndoveli endo	is:plural+masculine ds:procomplementar
+SFX Pl endo éndovele endo	is:plural+femenine ds:procomplementar
+SFX Pl indo índovelo indo	is:singular+masculine ds:procomplementar
+SFX Pl indo índovela indo	is:singular+femenine ds:procomplementar
+SFX Pl indo índoveli indo	is:plural+masculine ds:procomplementar
+SFX Pl indo índovele indo	is:plural+femenine ds:procomplementar
 
 # vèrbi prokonplementari (takài ko èle vanesente)
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
-SFX Pƚ Y 64
-SFX Pƚ 0 ƚo [aei]r	ds:procomplementar
-SFX Pƚ 0 ƚa [aei]r	ds:procomplementar
-SFX Pƚ 0 ƚi [aei]r	ds:procomplementar
-SFX Pƚ 0 ƚe [aei]r	ds:procomplementar
-SFX Pƚ ar àrgeƚo ar	ds:procomplementar
-SFX Pƚ ar àrgeƚa ar	ds:procomplementar
-SFX Pƚ ar àrgeƚi ar	ds:procomplementar
-SFX Pƚ ar àrgeƚe ar	ds:procomplementar
-SFX Pƚ ar àrmeƚo ar	ds:procomplementar
-SFX Pƚ ar àrmeƚa ar	ds:procomplementar
-SFX Pƚ ar àrmeƚi ar	ds:procomplementar
-SFX Pƚ ar àrmeƚe ar	ds:procomplementar
-SFX Pƚ ar àrseƚo ar	ds:procomplementar
-SFX Pƚ ar àrseƚa ar	ds:procomplementar
-SFX Pƚ ar àrseƚi ar	ds:procomplementar
-SFX Pƚ ar àrseƚe ar	ds:procomplementar
-SFX Pƚ ar àrteƚo ar	ds:procomplementar
-SFX Pƚ ar àrteƚa ar	ds:procomplementar
-SFX Pƚ ar àrteƚi ar	ds:procomplementar
-SFX Pƚ ar àrteƚe ar	ds:procomplementar
-SFX Pƚ ar àrveƚo ar	ds:procomplementar
-SFX Pƚ ar àrveƚa ar	ds:procomplementar
-SFX Pƚ ar àrveƚi ar	ds:procomplementar
-SFX Pƚ ar àrveƚe ar	ds:procomplementar
-SFX Pƚ er érgeƚo er	ds:procomplementar
-SFX Pƚ er érgeƚa er	ds:procomplementar
-SFX Pƚ er érgeƚi er	ds:procomplementar
-SFX Pƚ er érgeƚe er	ds:procomplementar
-SFX Pƚ er érmeƚo er	ds:procomplementar
-SFX Pƚ er érmeƚa er	ds:procomplementar
-SFX Pƚ er érmeƚi er	ds:procomplementar
-SFX Pƚ er érmeƚe er	ds:procomplementar
-SFX Pƚ er érseƚo er	ds:procomplementar
-SFX Pƚ er érseƚa er	ds:procomplementar
-SFX Pƚ er érseƚi er	ds:procomplementar
-SFX Pƚ er érseƚe er	ds:procomplementar
-SFX Pƚ er érteƚo er	ds:procomplementar
-SFX Pƚ er érteƚa er	ds:procomplementar
-SFX Pƚ er érteƚi er	ds:procomplementar
-SFX Pƚ er érteƚe er	ds:procomplementar
-SFX Pƚ er érveƚo er	ds:procomplementar
-SFX Pƚ er érveƚa er	ds:procomplementar
-SFX Pƚ er érveƚi er	ds:procomplementar
-SFX Pƚ er érveƚe er	ds:procomplementar
-SFX Pƚ ir írgeƚo ir	ds:procomplementar
-SFX Pƚ ir írgeƚa ir	ds:procomplementar
-SFX Pƚ ir írgeƚi ir	ds:procomplementar
-SFX Pƚ ir írgeƚe ir	ds:procomplementar
-SFX Pƚ ir írmeƚo ir	ds:procomplementar
-SFX Pƚ ir írmeƚa ir	ds:procomplementar
-SFX Pƚ ir írmeƚi ir	ds:procomplementar
-SFX Pƚ ir írmeƚe ir	ds:procomplementar
-SFX Pƚ ir írseƚo ir	ds:procomplementar
-SFX Pƚ ir írseƚa ir	ds:procomplementar
-SFX Pƚ ir írseƚi ir	ds:procomplementar
-SFX Pƚ ir írseƚe ir	ds:procomplementar
-SFX Pƚ ir írteƚo ir	ds:procomplementar
-SFX Pƚ ir írteƚa ir	ds:procomplementar
-SFX Pƚ ir írteƚi ir	ds:procomplementar
-SFX Pƚ ir írteƚe ir	ds:procomplementar
-SFX Pƚ ir írveƚo ir	ds:procomplementar
-SFX Pƚ ir írveƚa ir	ds:procomplementar
-SFX Pƚ ir írveƚi ir	ds:procomplementar
-SFX Pƚ ir írveƚe ir	ds:procomplementar
+SFX Pƚ Y 132
+SFX Pƚ ando àndoƚo ando	is:singular+masculine ds:procomplementar
+SFX Pƚ ando àndoƚa ando	is:singular+femenine ds:procomplementar
+SFX Pƚ ando àndoƚi ando	is:plural+masculine ds:procomplementar
+SFX Pƚ ando àndoƚe ando	is:plural+femenine ds:procomplementar
+SFX Pƚ endo éndoƚo endo	is:singular+masculine ds:procomplementar
+SFX Pƚ endo éndoƚa endo	is:singular+femenine ds:procomplementar
+SFX Pƚ endo éndoƚi endo	is:plural+masculine ds:procomplementar
+SFX Pƚ endo éndoƚe endo	is:plural+femenine ds:procomplementar
+SFX Pƚ indo índoƚo indo	is:singular+masculine ds:procomplementar
+SFX Pƚ indo índoƚa indo	is:singular+femenine ds:procomplementar
+SFX Pƚ indo índoƚi indo	is:plural+masculine ds:procomplementar
+SFX Pƚ indo índoƚe indo	is:plural+femenine ds:procomplementar
+SFX Pƚ ar àrgeƚo ar	is:singular+masculine ds:procomplementar
+SFX Pƚ ar àrgeƚa ar	is:plural+femenine ds:procomplementar
+SFX Pƚ ar àrgeƚi ar	is:singular+masculine ds:procomplementar
+SFX Pƚ ar àrgeƚe ar	is:plural+femenine ds:procomplementar
+SFX Pƚ er érgeƚo er	is:singular+masculine ds:procomplementar
+SFX Pƚ er érgeƚa er	is:plural+femenine ds:procomplementar
+SFX Pƚ er érgeƚi er	is:singular+masculine ds:procomplementar
+SFX Pƚ er érgeƚe er	is:plural+femenine ds:procomplementar
+SFX Pƚ ir írgeƚo ir	is:singular+masculine ds:procomplementar
+SFX Pƚ ir írgeƚa ir	is:plural+femenine ds:procomplementar
+SFX Pƚ ir írgeƚi ir	is:singular+masculine ds:procomplementar
+SFX Pƚ ir írgeƚe ir	is:plural+femenine ds:procomplementar
+SFX Pƚ ando àndogeƚo ando	is:singular+masculine ds:procomplementar
+SFX Pƚ ando àndogeƚa ando	is:singular+femenine ds:procomplementar
+SFX Pƚ ando àndogeƚi ando	is:plural+masculine ds:procomplementar
+SFX Pƚ ando àndogeƚe ando	is:plural+femenine ds:procomplementar
+SFX Pƚ endo éndogeƚo endo	is:singular+masculine ds:procomplementar
+SFX Pƚ endo éndogeƚa endo	is:singular+femenine ds:procomplementar
+SFX Pƚ endo éndogeƚi endo	is:plural+masculine ds:procomplementar
+SFX Pƚ endo éndogeƚe endo	is:plural+femenine ds:procomplementar
+SFX Pƚ indo índogeƚo indo	is:singular+masculine ds:procomplementar
+SFX Pƚ indo índogeƚa indo	is:singular+femenine ds:procomplementar
+SFX Pƚ indo índogeƚi indo	is:plural+masculine ds:procomplementar
+SFX Pƚ indo índogeƚe indo	is:plural+femenine ds:procomplementar
+SFX Pƚ ar àrmeƚo ar	is:singular+masculine ds:procomplementar
+SFX Pƚ ar àrmeƚa ar	is:plural+femenine ds:procomplementar
+SFX Pƚ ar àrmeƚi ar	is:singular+masculine ds:procomplementar
+SFX Pƚ ar àrmeƚe ar	is:plural+femenine ds:procomplementar
+SFX Pƚ er érmeƚo er	is:singular+masculine ds:procomplementar
+SFX Pƚ er érmeƚa er	is:plural+femenine ds:procomplementar
+SFX Pƚ er érmeƚi er	is:singular+masculine ds:procomplementar
+SFX Pƚ er érmeƚe er	is:plural+femenine ds:procomplementar
+SFX Pƚ ir írmeƚo ir	is:singular+masculine ds:procomplementar
+SFX Pƚ ir írmeƚa ir	is:plural+femenine ds:procomplementar
+SFX Pƚ ir írmeƚi ir	is:singular+masculine ds:procomplementar
+SFX Pƚ ir írmeƚe ir	is:plural+femenine ds:procomplementar
+SFX Pƚ ando àndomeƚo ando	is:singular+masculine ds:procomplementar
+SFX Pƚ ando àndomeƚa ando	is:singular+femenine ds:procomplementar
+SFX Pƚ ando àndomeƚi ando	is:plural+masculine ds:procomplementar
+SFX Pƚ ando àndomeƚe ando	is:plural+femenine ds:procomplementar
+SFX Pƚ endo éndomeƚo endo	is:singular+masculine ds:procomplementar
+SFX Pƚ endo éndomeƚa endo	is:singular+femenine ds:procomplementar
+SFX Pƚ endo éndomeƚi endo	is:plural+masculine ds:procomplementar
+SFX Pƚ endo éndomeƚe endo	is:plural+femenine ds:procomplementar
+SFX Pƚ indo índomeƚo indo	is:singular+masculine ds:procomplementar
+SFX Pƚ indo índomeƚa indo	is:singular+femenine ds:procomplementar
+SFX Pƚ indo índomeƚi indo	is:plural+masculine ds:procomplementar
+SFX Pƚ indo índomeƚe indo	is:plural+femenine ds:procomplementar
+SFX Pƚ ar àrseƚo ar	is:singular+masculine ds:procomplementar
+SFX Pƚ ar àrseƚa ar	is:plural+femenine ds:procomplementar
+SFX Pƚ ar àrseƚi ar	is:singular+masculine ds:procomplementar
+SFX Pƚ ar àrseƚe ar	is:plural+femenine ds:procomplementar
+SFX Pƚ er érseƚo er	is:singular+masculine ds:procomplementar
+SFX Pƚ er érseƚa er	is:plural+femenine ds:procomplementar
+SFX Pƚ er érseƚi er	is:singular+masculine ds:procomplementar
+SFX Pƚ er érseƚe er	is:plural+femenine ds:procomplementar
+SFX Pƚ ir írseƚo ir	is:singular+masculine ds:procomplementar
+SFX Pƚ ir írseƚa ir	is:plural+femenine ds:procomplementar
+SFX Pƚ ir írseƚi ir	is:singular+masculine ds:procomplementar
+SFX Pƚ ir írseƚe ir	is:plural+femenine ds:procomplementar
+SFX Pƚ ando àndoseƚo ando	is:singular+masculine ds:procomplementar
+SFX Pƚ ando àndoseƚa ando	is:singular+femenine ds:procomplementar
+SFX Pƚ ando àndoseƚi ando	is:plural+masculine ds:procomplementar
+SFX Pƚ ando àndoseƚe ando	is:plural+femenine ds:procomplementar
+SFX Pƚ endo éndoseƚo endo	is:singular+masculine ds:procomplementar
+SFX Pƚ endo éndoseƚa endo	is:singular+femenine ds:procomplementar
+SFX Pƚ endo éndoseƚi endo	is:plural+masculine ds:procomplementar
+SFX Pƚ endo éndoseƚe endo	is:plural+femenine ds:procomplementar
+SFX Pƚ indo índoseƚo indo	is:singular+masculine ds:procomplementar
+SFX Pƚ indo índoseƚa indo	is:singular+femenine ds:procomplementar
+SFX Pƚ indo índoseƚi indo	is:plural+masculine ds:procomplementar
+SFX Pƚ indo índoseƚe indo	is:plural+femenine ds:procomplementar
+SFX Pƚ ar àrteƚo ar	is:singular+masculine ds:procomplementar
+SFX Pƚ ar àrteƚa ar	is:plural+femenine ds:procomplementar
+SFX Pƚ ar àrteƚi ar	is:singular+masculine ds:procomplementar
+SFX Pƚ ar àrteƚe ar	is:plural+femenine ds:procomplementar
+SFX Pƚ er érteƚo er	is:singular+masculine ds:procomplementar
+SFX Pƚ er érteƚa er	is:plural+femenine ds:procomplementar
+SFX Pƚ er érteƚi er	is:singular+masculine ds:procomplementar
+SFX Pƚ er érteƚe er	is:plural+femenine ds:procomplementar
+SFX Pƚ ir írteƚo ir	is:singular+masculine ds:procomplementar
+SFX Pƚ ir írteƚa ir	is:plural+femenine ds:procomplementar
+SFX Pƚ ir írteƚi ir	is:singular+masculine ds:procomplementar
+SFX Pƚ ir írteƚe ir	is:plural+femenine ds:procomplementar
+SFX Pƚ ando àndoteƚo ando	is:singular+masculine ds:procomplementar
+SFX Pƚ ando àndoteƚa ando	is:singular+femenine ds:procomplementar
+SFX Pƚ ando àndoteƚi ando	is:plural+masculine ds:procomplementar
+SFX Pƚ ando àndoteƚe ando	is:plural+femenine ds:procomplementar
+SFX Pƚ endo éndoteƚo endo	is:singular+masculine ds:procomplementar
+SFX Pƚ endo éndoteƚa endo	is:singular+femenine ds:procomplementar
+SFX Pƚ endo éndoteƚi endo	is:plural+masculine ds:procomplementar
+SFX Pƚ endo éndoteƚe endo	is:plural+femenine ds:procomplementar
+SFX Pƚ indo índoteƚo indo	is:singular+masculine ds:procomplementar
+SFX Pƚ indo índoteƚa indo	is:singular+femenine ds:procomplementar
+SFX Pƚ indo índoteƚi indo	is:plural+masculine ds:procomplementar
+SFX Pƚ indo índoteƚe indo	is:plural+femenine ds:procomplementar
+SFX Pƚ ar àrveƚo ar	is:singular+masculine ds:procomplementar
+SFX Pƚ ar àrveƚa ar	is:plural+femenine ds:procomplementar
+SFX Pƚ ar àrveƚi ar	is:singular+masculine ds:procomplementar
+SFX Pƚ ar àrveƚe ar	is:plural+femenine ds:procomplementar
+SFX Pƚ er érveƚo er	is:singular+masculine ds:procomplementar
+SFX Pƚ er érveƚa er	is:plural+femenine ds:procomplementar
+SFX Pƚ er érveƚi er	is:singular+masculine ds:procomplementar
+SFX Pƚ er érveƚe er	is:plural+femenine ds:procomplementar
+SFX Pƚ ir írveƚo ir	is:singular+masculine ds:procomplementar
+SFX Pƚ ir írveƚa ir	is:plural+femenine ds:procomplementar
+SFX Pƚ ir írveƚi ir	is:singular+masculine ds:procomplementar
+SFX Pƚ ir írveƚe ir	is:plural+femenine ds:procomplementar
+SFX Pƚ ando àndoveƚo ando	is:singular+masculine ds:procomplementar
+SFX Pƚ ando àndoveƚa ando	is:singular+femenine ds:procomplementar
+SFX Pƚ ando àndoveƚi ando	is:plural+masculine ds:procomplementar
+SFX Pƚ ando àndoveƚe ando	is:plural+femenine ds:procomplementar
+SFX Pƚ endo éndoveƚo endo	is:singular+masculine ds:procomplementar
+SFX Pƚ endo éndoveƚa endo	is:singular+femenine ds:procomplementar
+SFX Pƚ endo éndoveƚi endo	is:plural+masculine ds:procomplementar
+SFX Pƚ endo éndoveƚe endo	is:plural+femenine ds:procomplementar
+SFX Pƚ indo índoveƚo indo	is:singular+masculine ds:procomplementar
+SFX Pƚ indo índoveƚa indo	is:singular+femenine ds:procomplementar
+SFX Pƚ indo índoveƚi indo	is:plural+masculine ds:procomplementar
+SFX Pƚ indo índoveƚe indo	is:plural+femenine ds:procomplementar
 
 # vèrbi prokonplementari (takài)
 # '-er: skomenŧiando da 'l infenío
@@ -6581,239 +6801,180 @@ SFX FS je j je
 
 # interogativi prima parsona singolar (stakài)
 SFX Ī1 Y 10	# ok
-SFX Ī1 0 -i [aeo]	is:first+singular+interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
-SFX Ī1 0 -mi [aeo]	is:first+singular+interrogative	# cipileño
-SFX Ī1 0 -nte [^n]	is:first+singular+interrogative
-SFX Ī1 0 -nti [^n]	is:first+singular+interrogative	# veronexe
-SFX Ī1 0 -ne [^n]	is:first+singular+interrogative
-SFX Ī1 0 -ni [^n]	is:first+singular+interrogative	# veronexe
-SFX Ī1 0 -te n	is:first+singular+interrogative
-SFX Ī1 0 -ti n	is:first+singular+interrogative	# veronexe
-SFX Ī1 0 -e .	is:first+singular+interrogative
-SFX Ī1 0 -i n	is:first+singular+interrogative	# padoan, vithentin, polexan, veronexe
+SFX Ī1 0 -i [aeo]	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
+SFX Ī1 0 -mi [aeo]	ds:interrogative	# cipileño
+SFX Ī1 0 -nte [^n]	ds:interrogative
+SFX Ī1 0 -nti [^n]	ds:interrogative	# veronexe
+SFX Ī1 0 -ne [^n]	ds:interrogative
+SFX Ī1 0 -ni [^n]	ds:interrogative	# veronexe
+SFX Ī1 0 -te n	ds:interrogative
+SFX Ī1 0 -ti n	ds:interrogative	# veronexe
+SFX Ī1 0 -e .	ds:interrogative
+SFX Ī1 0 -i n	ds:interrogative	# padoan, vithentin, polexan, veronexe
 
 # interogativi prima parsona singolar (takài)
-SFX I1 Y 52
-SFX I1 a àe a	is:first+singular+interrogative
-SFX I1 0 e [èò]	is:first+singular+interrogative
-SFX I1 0 e [^m]o	is:first+singular+interrogative
-SFX I1 0 e [^éí]mo	is:first+singular+interrogative
-SFX I1 0 e à	is:first+singular+interrogative
-SFX I1 0 e [^o]e	is:first+singular+interrogative
-SFX I1 e e [^m]oe	is:first+singular+interrogative
-SFX I1 a ài a	is:first+singular+interrogative
-SFX I1 0 i [èò]	is:first+singular+interrogative
-SFX I1 0 i [^m]o	is:first+singular+interrogative
-SFX I1 0 i [^éí]mo	is:first+singular+interrogative
-SFX I1 émo emio émo	is:first+plural+interrogative	# lagunar
-SFX I1 ímo imio ímo	is:first+plural+interrogative	# lagunar
-SFX I1 0 i à	is:first+singular+interrogative
-SFX I1 0 i [^o]e	is:first+singular+interrogative
-SFX I1 e i [^m]oe	is:first+singular+interrogative
-SFX I1 0 io [èò]	is:first+singular+interrogative
-SFX I1 0 io [^m]o	is:first+singular+interrogative
-SFX I1 0 io [^éí]mo	is:first+singular+interrogative
-SFX I1 0 io à	is:first+singular+interrogative
-SFX I1 0 io [^o]e	is:first+singular+interrogative
-SFX I1 e io [^m]oe	is:first+singular+interrogative
-SFX I1 0 me [aèò]	is:first+singular+interrogative
-SFX I1 0 me [^m]o	is:first+singular+interrogative
-SFX I1 0 me [^éí]mo	is:first+singular+interrogative
-SFX I1 à ame à	is:first+singular+interrogative
-SFX I1 0 me [^o]e	is:first+singular+interrogative
-SFX I1 e me [^m]oe	is:first+singular+interrogative
-SFX I1 0 mi [aèò]	is:first+singular+interrogative
-SFX I1 0 mi [^m]o	is:first+singular+interrogative
-SFX I1 0 mi [^éí]mo	is:first+singular+interrogative
-SFX I1 à ami à	is:first+singular+interrogative
-SFX I1 0 mi [^o]e	is:first+singular+interrogative
-SFX I1 e mi [^m]oe	is:first+singular+interrogative
-SFX I1 0 te n	is:first+singular+interrogative
-SFX I1 0 ti n	is:first+singular+interrogative
-SFX I1 à ane à	is:first+singular+interrogative
-SFX I1 0 ne [èò]	is:first+singular+interrogative
-SFX I1 à ani à	is:first+singular+interrogative
-SFX I1 0 ni [èò]	is:first+singular+interrogative
-SFX I1 à ante à	is:first+singular+interrogative
-SFX I1 0 nte [èò]	is:first+singular+interrogative
-SFX I1 à anti à	is:first+singular+interrogative
-SFX I1 0 nti [èò]	is:first+singular+interrogative
-SFX I1 ón one ón	is:first+singular+interrogative
-SFX I1 én ene én	is:first+singular+interrogative
-SFX I1 ón oni ón	is:first+singular+interrogative
-SFX I1 én eni én	is:first+singular+interrogative
-SFX I1 ón onme ón	is:first+singular+interrogative
-SFX I1 én enme én	is:first+singular+interrogative
-SFX I1 ón onmi ón	is:first+singular+interrogative
-SFX I1 én enmi én	is:first+singular+interrogative
-#SFX I1 me mi me	is:first+singular+interrogative
-#SFX I1 e mi [^no]e	is:first+singular+interrogative
-#SFX I1 e mi [^m]oe	is:first+singular+interrogative
-#SFX I1 e mi [^éí]moe	is:first+singular+interrogative
-#SFX I1 émoe emio émoe	is:first+singular+interrogative
-#SFX I1 ímoe imio ímoe	is:first+singular+interrogative
-#SFX I1 ne mi ne	is:first+singular+interrogative
-#SFX I1 e io [^n]e	is:first+singular+interrogative
-#SFX I1 e te ne	is:first+singular+interrogative
-#SFX I1 e ti ne	is:first+singular+interrogative
-#SFX I1 e ne [^n]e	is:first+singular+interrogative
-#SFX I1 e ni [^n]e	is:first+singular+interrogative
-#SFX I1 e nte [^n]e	is:first+singular+interrogative
-#SFX I1 e nti [^n]e	is:first+singular+interrogative
+SFX I1 Y 7
+SFX I1 0 i [aeo]	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
+SFX I1 0 mi [aeo]	ds:interrogative	# cipileño
+SFX I1 0 nte [aeo]	ds:interrogative
+SFX I1 0 nti [aeo]	ds:interrogative	# veronexe
+SFX I1 0 ne [aeo]	ds:interrogative
+SFX I1 0 ni [aeo]	ds:interrogative	# veronexe
+SFX I1 0 e [aeo]	ds:interrogative
 
 # interogativi prima parsona plural (stakài)
 SFX Ī2 Y 9	# ok
-SFX Ī2 0 -i [aeo]	is:first+plural+interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
-SFX Ī2 0 -nte [^n]	is:first+plural+interrogative
-SFX Ī2 0 -nti [^n]	is:first+plural+interrogative	# veronexe
-SFX Ī2 0 -ne [^n]	is:first+plural+interrogative
-SFX Ī2 0 -ni [^n]	is:first+plural+interrogative	# veronexe
-SFX Ī2 0 -te n	is:first+plural+interrogative
-SFX Ī2 0 -ti n	is:first+plural+interrogative	# veronexe
-SFX Ī2 0 -e .	is:first+plural+interrogative
-SFX Ī2 0 -i n	is:first+plural+interrogative	# padoan, vithentin, polexan, veronexe
+SFX Ī2 0 -i [aeo]	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
+SFX Ī2 0 -nte [^n]	ds:interrogative
+SFX Ī2 0 -nti [^n]	ds:interrogative	# veronexe
+SFX Ī2 0 -ne [^n]	ds:interrogative
+SFX Ī2 0 -ni [^n]	ds:interrogative	# veronexe
+SFX Ī2 0 -te n	ds:interrogative
+SFX Ī2 0 -ti n	ds:interrogative	# veronexe
+SFX Ī2 0 -e .	ds:interrogative
+SFX Ī2 0 -i n	ds:interrogative	# padoan, vithentin, polexan, veronexe
 
 # interogativi prima parsona plural (takài)
 SFX I2 Y 11	# ok
-SFX I2 0 i [aeo]	is:first+plural+interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
-SFX I2 0 nte [^n]	is:first+plural+interrogative
-SFX I2 0 nti [^n]	is:first+plural+interrogative	# veronexe
-SFX I2 0 ne [^n]	is:first+plural+interrogative
-SFX I2 0 ni [^n]	is:first+plural+interrogative	# veronexe
-SFX I2 0 te n	is:first+plural+interrogative
-SFX I2 0 ti n	is:first+plural+interrogative	# veronexe
-SFX I2 0 e .	is:first+plural+interrogative
-SFX I2 0 i n	is:first+plural+interrogative	# padoan, vithentin, polexan, veronexe
-SFX I2 émo emio émo	is:first+plural+interrogative	# lagunar
-SFX I2 ímo imio ímo	is:first+plural+interrogative	# lagunar
+SFX I2 0 i [aeo]	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
+SFX I2 0 nte [^n]	ds:interrogative
+SFX I2 0 nti [^n]	ds:interrogative	# veronexe
+SFX I2 0 ne [^n]	ds:interrogative
+SFX I2 0 ni [^n]	ds:interrogative	# veronexe
+SFX I2 0 te n	ds:interrogative
+SFX I2 0 ti n	ds:interrogative	# veronexe
+SFX I2 0 e .	ds:interrogative
+SFX I2 0 i n	ds:interrogative	# padoan, vithentin, polexan, veronexe
+SFX I2 émo emio émo	ds:interrogative	# lagunar
+SFX I2 ímo imio ímo	ds:interrogative	# lagunar
 
 # interogativi sekonda parsona singolar (stakài)
 SFX Ī3 Y 3	# ok
-SFX Ī3 0 -tu .	is:second+singular+interrogative
-SFX Ī3 0 -stu .	is:second+singular+interrogative	# coxòto
-SFX Ī3 0 -to .	is:second+singular+interrogative	# padoan de thità, vithentin de thità, polexan de thità, veronexe de thità
+SFX Ī3 0 -tu .	ds:interrogative
+SFX Ī3 0 -stu .	ds:interrogative	# coxòto
+SFX Ī3 0 -to .	ds:interrogative	# padoan de thità, vithentin de thità, polexan de thità, veronexe de thità
 
 # interogativi sekonda parsona singolar (takài)
 SFX I3 Y 6
-SFX I3 0 to [aie]	is:second+singular+interrogative
-SFX I3 à ato à	is:second+singular+interrogative
-SFX I3 0 tu [aie]	is:second+singular+interrogative
-SFX I3 à atu à	is:second+singular+interrogative
-SFX I3 0 stu [aie]	is:second+singular+interrogative
-SFX I3 à astu à	is:second+singular+interrogative
+SFX I3 0 to [aie]	ds:interrogative
+SFX I3 à ato à	ds:interrogative
+SFX I3 0 tu [aie]	ds:interrogative
+SFX I3 à atu à	ds:interrogative
+SFX I3 0 stu [aie]	ds:interrogative
+SFX I3 à astu à	ds:interrogative
 
 # interogativi sekonda parsona plural (stakài)
 SFX Ī4 Y 2	# ok
-SFX Ī4 0 -u .	is:second+plural+interrogative
-SFX Ī4 0 -o .	is:second+plural+interrogative	# padoan de thità, vithentin de thità, polexan de thità, veronexe de thità
+SFX Ī4 0 -u .	ds:interrogative
+SFX Ī4 0 -o .	ds:interrogative	# padoan de thità, vithentin de thità, polexan de thità, veronexe de thità
 
 # interogativi sekonda parsona plural (takài)
 SFX I4 Y 5
-SFX I4 u o u	is:second+plural+interrogative
-SFX I4 0 u [^i]	is:second+plural+interrogative
-SFX I4 i ïu i	is:second+plural+interrogative
-SFX I4 0 o [^i]	is:second+plural+interrogative
-SFX I4 i ïo i	is:second+plural+interrogative
+SFX I4 u o u	ds:interrogative
+SFX I4 0 u [^i]	ds:interrogative
+SFX I4 i ïu i	ds:interrogative
+SFX I4 0 o [^i]	ds:interrogative
+SFX I4 i ïo i	ds:interrogative
 
 # interogativi tèrŧa parsona (stakài)
 SFX Ī5 Y 12	# ok
-SFX Ī5 a e-lo a	is:singular+masculine+interrogative
-SFX Ī5 a e-la a	is:singular+femenine+interrogative
-SFX Ī5 a e-li a	is:plural+masculine+interrogative
-SFX Ī5 a e-le a	is:plural+femenine+interrogative
-SFX Ī5 i e-lo i	is:singular+masculine+interrogative
-SFX Ī5 i e-la i	is:singular+femenine+interrogative
-SFX Ī5 i e-li i	is:plural+masculine+interrogative
-SFX Ī5 i e-le i	is:plural+femenine+interrogative
-SFX Ī5 0 -lo [^ai]	is:singular+masculine+interrogative
-SFX Ī5 0 -la [^ai]	is:singular+femenine+interrogative
-SFX Ī5 0 -li [^ai]	is:plural+masculine+interrogative
-SFX Ī5 0 -le [^ai]	is:plural+femenine+interrogative
+SFX Ī5 a e-lo a	is:singular+masculine ds:interrogative
+SFX Ī5 a e-la a	is:singular+femenine ds:interrogative
+SFX Ī5 a e-li a	is:plural+masculine ds:interrogative
+SFX Ī5 a e-le a	is:plural+femenine ds:interrogative
+SFX Ī5 i e-lo i	is:singular+masculine ds:interrogative
+SFX Ī5 i e-la i	is:singular+femenine ds:interrogative
+SFX Ī5 i e-li i	is:plural+masculine ds:interrogative
+SFX Ī5 i e-le i	is:plural+femenine ds:interrogative
+SFX Ī5 0 -lo [^ai]	is:singular+masculine ds:interrogative
+SFX Ī5 0 -la [^ai]	is:singular+femenine ds:interrogative
+SFX Ī5 0 -li [^ai]	is:plural+masculine ds:interrogative
+SFX Ī5 0 -le [^ai]	is:plural+femenine ds:interrogative
 
 # interogativi tèrŧa parsona (takài)
 SFX I5 Y 16
-SFX I5 a elo a	is:singular+masculine+interrogative
-SFX I5 a ela a	is:singular+femenine+interrogative
-SFX I5 a eli a	is:plural+masculine+interrogative
-SFX I5 a ele a	is:plural+femenine+interrogative
-SFX I5 i elo i	is:singular+masculine+interrogative
-SFX I5 i ela i	is:singular+femenine+interrogative
-SFX I5 i eli i	is:plural+masculine+interrogative
-SFX I5 i ele i	is:plural+femenine+interrogative
-SFX I5 0 lo [^aià]	is:singular+masculine+interrogative
-SFX I5 à alo à	is:singular+masculine+interrogative
-SFX I5 0 la [^aià]	is:singular+femenine+interrogative
-SFX I5 à ala à	is:singular+femenine+interrogative
-SFX I5 0 li [^aià]	is:plural+masculine+interrogative
-SFX I5 à ali à	is:plural+masculine+interrogative
-SFX I5 0 le [^aià]	is:plural+femenine+interrogative
-SFX I5 à ale à	is:plural+femenine+interrogative
+SFX I5 a elo a	is:singular+masculine ds:interrogative
+SFX I5 a ela a	is:singular+femenine ds:interrogative
+SFX I5 a eli a	is:plural+masculine ds:interrogative
+SFX I5 a ele a	is:plural+femenine ds:interrogative
+SFX I5 i elo i	is:singular+masculine ds:interrogative
+SFX I5 i ela i	is:singular+femenine ds:interrogative
+SFX I5 i eli i	is:plural+masculine ds:interrogative
+SFX I5 i ele i	is:plural+femenine ds:interrogative
+SFX I5 0 lo [^aià]	is:singular+masculine ds:interrogative
+SFX I5 à alo à	is:singular+masculine ds:interrogative
+SFX I5 0 la [^aià]	is:singular+femenine ds:interrogative
+SFX I5 à ala à	is:singular+femenine ds:interrogative
+SFX I5 0 li [^aià]	is:plural+masculine ds:interrogative
+SFX I5 à ali à	is:plural+masculine ds:interrogative
+SFX I5 0 le [^aià]	is:plural+femenine ds:interrogative
+SFX I5 à ale à	is:plural+femenine ds:interrogative
 
 # interogativi tèrŧa parsona ko èle vanesente (stakài)
 SFX ī5 Y 12	# ok
-SFX ī5 a e-ƚo a	is:singular+masculine+interrogative
-SFX ī5 a e-ƚa a	is:singular+femenine+interrogative
-SFX ī5 a e-ƚi a	is:plural+masculine+interrogative
-SFX ī5 a e-ƚe a	is:plural+femenine+interrogative
-SFX ī5 i e-ƚo i	is:singular+masculine+interrogative
-SFX ī5 i e-ƚa i	is:singular+femenine+interrogative
-SFX ī5 i e-ƚi i	is:plural+masculine+interrogative
-SFX ī5 i e-ƚe i	is:plural+femenine+interrogative
-SFX ī5 0 -ƚo [eo]	is:singular+masculine+interrogative
-SFX ī5 0 -ƚa [eo]	is:singular+femenine+interrogative
-SFX ī5 0 -ƚi [eo]	is:plural+masculine+interrogative
-SFX ī5 0 -ƚe [eo]	is:plural+femenine+interrogative
+SFX ī5 a e-ƚo a	is:singular+masculine ds:interrogative
+SFX ī5 a e-ƚa a	is:singular+femenine ds:interrogative
+SFX ī5 a e-ƚi a	is:plural+masculine ds:interrogative
+SFX ī5 a e-ƚe a	is:plural+femenine ds:interrogative
+SFX ī5 i e-ƚo i	is:singular+masculine ds:interrogative
+SFX ī5 i e-ƚa i	is:singular+femenine ds:interrogative
+SFX ī5 i e-ƚi i	is:plural+masculine ds:interrogative
+SFX ī5 i e-ƚe i	is:plural+femenine ds:interrogative
+SFX ī5 0 -ƚo [eo]	is:singular+masculine ds:interrogative
+SFX ī5 0 -ƚa [eo]	is:singular+femenine ds:interrogative
+SFX ī5 0 -ƚi [eo]	is:plural+masculine ds:interrogative
+SFX ī5 0 -ƚe [eo]	is:plural+femenine ds:interrogative
 
 # interogativi tèrŧa parsona ko èle vanesente (stakài)
 SFX i5 Y 12
-SFX i5 a eƚo a	is:singular+masculine+interrogative
-SFX i5 a eƚa a	is:singular+femenine+interrogative
-SFX i5 a eƚi a	is:plural+masculine+interrogative
-SFX i5 a eƚe a	is:plural+femenine+interrogative
-SFX i5 i eƚo i	is:singular+masculine+interrogative
-SFX i5 i eƚa i	is:singular+femenine+interrogative
-SFX i5 i eƚi i	is:plural+masculine+interrogative
-SFX i5 i eƚe i	is:plural+femenine+interrogative
-SFX i5 0 -ƚo [eo]	is:singular+masculine+interrogative
-SFX i5 0 -ƚa [eo]	is:singular+femenine+interrogative
-SFX i5 0 -ƚi [eo]	is:plural+masculine+interrogative
-SFX i5 0 -ƚe [eo]	is:plural+femenine+interrogative
+SFX i5 a eƚo a	is:singular+masculine ds:interrogative
+SFX i5 a eƚa a	is:singular+femenine ds:interrogative
+SFX i5 a eƚi a	is:plural+masculine ds:interrogative
+SFX i5 a eƚe a	is:plural+femenine ds:interrogative
+SFX i5 i eƚo i	is:singular+masculine ds:interrogative
+SFX i5 i eƚa i	is:singular+femenine ds:interrogative
+SFX i5 i eƚi i	is:plural+masculine ds:interrogative
+SFX i5 i eƚe i	is:plural+femenine ds:interrogative
+SFX i5 0 -ƚo [eo]	is:singular+masculine ds:interrogative
+SFX i5 0 -ƚa [eo]	is:singular+femenine ds:interrogative
+SFX i5 0 -ƚi [eo]	is:plural+masculine ds:interrogative
+SFX i5 0 -ƚe [eo]	is:plural+femenine ds:interrogative
 
 # interogativi kondiŧional prexente tèrŧa parsona (stakài e takài)
 SFX Ī6 Y 15
-SFX Ī6 ave ise-lo rave	is:singular+masculine+interrogative
-SFX Ī6 ave ise-la rave	is:singular+femenine+interrogative
-SFX Ī6 ave ise-li rave	is:plural+masculine+interrogative
-SFX Ī6 ave ise-le rave	is:plural+femenine+interrogative
-SFX Ī6 ave íselo rave	is:singular+masculine+interrogative
-SFX Ī6 ave ísela rave	is:singular+femenine+interrogative
-SFX Ī6 ave íseli rave	is:plural+masculine+interrogative
-SFX Ī6 ave ísele rave	is:plural+femenine+interrogative
-SFX Ī6 íselo ise-lo ríselo	is:singular+masculine+interrogative
-SFX Ī6 íselo ise-la ríselo	is:singular+femenine+interrogative
-SFX Ī6 íselo ise-li ríselo	is:plural+masculine+interrogative
-SFX Ī6 íselo ise-le ríselo	is:plural+femenine+interrogative
-SFX Ī6 o a ríselo	is:singular+masculine+interrogative
-SFX Ī6 o i ríselo	is:singular+masculine+interrogative
-SFX Ī6 o e ríselo	is:singular+masculine+interrogative
+SFX Ī6 ave ise-lo rave	is:singular+masculine ds:interrogative
+SFX Ī6 ave ise-la rave	is:singular+femenine ds:interrogative
+SFX Ī6 ave ise-li rave	is:plural+masculine ds:interrogative
+SFX Ī6 ave ise-le rave	is:plural+femenine ds:interrogative
+SFX Ī6 ave íselo rave	is:singular+masculine ds:interrogative
+SFX Ī6 ave ísela rave	is:singular+femenine ds:interrogative
+SFX Ī6 ave íseli rave	is:plural+masculine ds:interrogative
+SFX Ī6 ave ísele rave	is:plural+femenine ds:interrogative
+SFX Ī6 íselo ise-lo ríselo	is:singular+masculine ds:interrogative
+SFX Ī6 íselo ise-la ríselo	is:singular+femenine ds:interrogative
+SFX Ī6 íselo ise-li ríselo	is:plural+masculine ds:interrogative
+SFX Ī6 íselo ise-le ríselo	is:plural+femenine ds:interrogative
+SFX Ī6 o a ríselo	is:singular+masculine ds:interrogative
+SFX Ī6 o i ríselo	is:singular+masculine ds:interrogative
+SFX Ī6 o e ríselo	is:singular+masculine ds:interrogative
 
 # interogativi kondiŧional prexente tèrŧa parsona ko èle vanesente (stakài e takài)
 SFX ī6 Y 15
-SFX ī6 ave ise-ƚo rave	is:third+interrogative
-SFX ī6 ave ise-ƚa rave	is:third+interrogative
-SFX ī6 ave ise-ƚi rave	is:third+interrogative
-SFX ī6 ave ise-ƚe rave	is:third+interrogative
-SFX ī6 ave íseƚo rave	is:third+interrogative
-SFX ī6 ave íseƚa rave	is:third+interrogative
-SFX ī6 ave íseƚi rave	is:third+interrogative
-SFX ī6 ave íseƚe rave	is:third+interrogative
-SFX ī6 íseƚo ise-ƚo ríseƚo	is:third+interrogative
-SFX ī6 íseƚo ise-ƚa ríseƚo	is:third+interrogative
-SFX ī6 íseƚo ise-ƚi ríseƚo	is:third+interrogative
-SFX ī6 íseƚo ise-ƚe ríseƚo	is:third+interrogative
-SFX ī6 o a ríseƚo	is:third+interrogative
-SFX ī6 o i ríseƚo	is:third+interrogative
-SFX ī6 o e ríseƚo	is:third+interrogative
+SFX ī6 ave ise-ƚo rave	ds:interrogative
+SFX ī6 ave ise-ƚa rave	ds:interrogative
+SFX ī6 ave ise-ƚi rave	ds:interrogative
+SFX ī6 ave ise-ƚe rave	ds:interrogative
+SFX ī6 ave íseƚo rave	ds:interrogative
+SFX ī6 ave íseƚa rave	ds:interrogative
+SFX ī6 ave íseƚi rave	ds:interrogative
+SFX ī6 ave íseƚe rave	ds:interrogative
+SFX ī6 íseƚo ise-ƚo ríseƚo	ds:interrogative
+SFX ī6 íseƚo ise-ƚa ríseƚo	ds:interrogative
+SFX ī6 íseƚo ise-ƚi ríseƚo	ds:interrogative
+SFX ī6 íseƚo ise-ƚe ríseƚo	ds:interrogative
+SFX ī6 o a ríseƚo	ds:interrogative
+SFX ī6 o i ríseƚo	ds:interrogative
+SFX ī6 o e ríseƚo	ds:interrogative
 
 
 
