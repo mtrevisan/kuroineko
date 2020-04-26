@@ -286,11 +286,11 @@ NEEDAFFIX N0
 #kanto/a0a1a2Ᵽ0ⱣlⱣƚĪ1Ī2FS
 #kàntoe/a0a1a2I1
 
-#-àr:			kantar/t1l1ƚ1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7nɨnʉlʉƚʉ, kanto/t8n8a9ȧ9ā9aøȧøāøFS, kàntoe/a9ȧ9ā9aøȧøāø
-#-ér:			valer/t1l1ƚ1t2n2l2ƚ2t4n4ṗ4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7nɨnʉlʉƚʉ, valo/t8n8t9l9ƚ9tøløƚø FS, vàloe/t9l9ƚ9tøløƚø
-#'-er:		kréder/t1l1ƚ1n1ṗ1P0PlPƚ, kredo/t8n8t9l9ƚ9tøløƚøFS, krédoe/t9l9ƚ9tøløƚø, krederò/t2n2l2ƚ2t4n4ṗ4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7nɨnʉlʉƚʉ
-#-ír:			dormir/t1l1ƚ1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7nɨ, dòrmo/t8n8t9l9ƚ9tøløƚønʉFS, dòrmoe/t9l9ƚ9tøløƚø
-#-ír/is::	fenir/t1l1ƚ1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7nɨ, feniso/t8n8t9l9ƚ9tøløƚønʉlʉƚʉFS, fenísoe/t9l9ƚ9tøløƚø
+#-àr:			kantar/t1l1ƚ1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7nɨnʉlʉƚʉ, (kanto/t8n8a9ȧ9ā9aøȧøāøFS, kàntoe/a9ȧ9ā9aøȧøāø | exàmino/t8n8b9ḅ9ƀ9bøḅøƀøFS)
+#-ér:			valer/t1l1ƚ1t2n2l2ƚ2t4n4ṗ4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7nɨnʉlʉƚʉ, (valo/t8n8t9l9ƚ9tøløƚø FS, vàloe/t8n8t9l9ƚ9tøløƚø | reflèto/d8ñ8d9ḷ9ḹ9døḷøḹøFS)
+#'-er:		kréder/t1l1ƚ1n1ṗ1P0PlPƚ, (kredo/t8n8t9l9ƚ9tøløƚøFS, krédoe/t8n8t9l9ƚ9tøløƚø | ?/d8ñ8d9ḷ9ḹ9døḷøḹøFS), krederò/t2n2l2ƚ2t4n4ṗ4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7nɨnʉlʉƚʉ
+#-ír:			dormir/t1l1ƚ1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7nɨ, (dòrmo/t8n8t9l9ƚ9tøløƚønʉFS, dòrmoe/t8n8t9l9ƚ9tøløƚø | dòrmo/d8ñ8d9ḷ9ḹ9døḷøḹøFS)
+#-ír/is::	fenir/t1l1ƚ1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7nɨ, feniso/t8n8t9l9ƚ9tøløƚønʉlʉƚʉFS, fenísoe/t8n8t9l9ƚ9tøløƚø
 
 
 # tèma 1
@@ -923,6 +923,8 @@ SFX ƚ7 ir este/ⱣƚN0 ir	ts:participle+passive is:singular+masculine	# T7 + st
 
 # tèma 8 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: VT > Ø)
 # -àr, -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
+#TODO add pronomenal verbs
+#TODO add derivations from oe
 SFX t8 Y 7
 SFX t8 0 0/Ī1I1N0 o	ts:indicative+present is:first+singular	# T8 + o
 SFX t8 o i/Ī3 [^i]o	ts:indicative+present is:second+singular	# T8 + i
@@ -940,12 +942,20 @@ SFX n8 o e o	ts:subjunctive+present is:first+singular	# T8 + e
 SFX n8 o e o	ts:subjunctive+present is:second+singular	# T8 + e, 2s=3
 SFX n8 o e o	ts:subjunctive+present is:third	# T8 + e
 
+#d8ñ8d9ḷ9ḹ9døḷøḹø
+
 
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
 # -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
 SFX t9 Y 2
 SFX t9 o i/Đ0 o	ts:imperative+present is:second+singular	# T9
 SFX t9 oe i/D0N0 oe	ts:imperative+present is:second+singular	# T9
+
+# tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
+# -àr: skomenŧiando da 'l indikativo prexente de prima parsona singolar
+SFX a9 Y 2
+SFX a9 o a/Đ0 o	ts:imperative+present is:second+singular	# T9
+SFX a9 oe a/D0N0 oe	ts:imperative+present is:second+singular	# T9
 
 # senŧa èle vanesente
 SFX l9 Y 2
@@ -957,12 +967,6 @@ SFX ƚ9 Y 2
 SFX ƚ9 o i/ĐƚN0 o	ts:imperative+present is:second+singular	# T9
 SFX ƚ9 oe i/DƚN0 oe	ts:imperative+present is:second+singular	# T9
 
-# tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
-# -àr: skomenŧiando da 'l indikativo prexente de prima parsona singolar
-SFX a9 Y 2
-SFX a9 o a/Đ0 o	ts:imperative+present is:second+singular	# T9
-SFX a9 oe a/D0N0 oe	ts:imperative+present is:second+singular	# T9
-
 # senŧa èle vanesente
 SFX ȧ9 Y 2
 SFX ȧ9 o a/ĐlN0 o	ts:imperative+present is:second+singular	# T9
@@ -973,6 +977,18 @@ SFX ā9 Y 2
 SFX ā9 o a/ĐƚN0 o	ts:imperative+present is:second+singular	# T9
 SFX ā9 oe a/DƚN0 oe	ts:imperative+present is:second+singular	# T9
 
+# tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i) + interrogative
+# -àr: skomenŧiando da 'l indikativo prexente de prima parsona singolar
+#SFX b9 Y 1
+#SFX b9 o a/Đ0D0 o	ts:imperative+present is:second+singular	# T9
+
+# senŧa èle vanesente
+#SFX ḅ9 Y 1
+#SFX ḅ9 o a/ĐlDlN0 o	ts:imperative+present is:second+singular	# T9
+
+# ko èle vanesente
+#SFX ƀ9 Y 1
+#SFX ƀ9 o a/ĐƚDƚN0 o	ts:imperative+present is:second+singular	# T9
 
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
 # -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
@@ -1005,6 +1021,19 @@ SFX ȧø oe a/DlN0 oe	ts:indicative+present is:third	# T10
 SFX āø Y 2
 SFX āø o a/ĐƚN0 o	ts:indicative+present is:third	# T10
 SFX āø oe a/DƚN0 oe	ts:indicative+present is:third	# T10
+
+# tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i) + interrogative
+# -àr: skomenŧiando da 'l indikativo prexente de prima parsona singolar
+SFX bø Y 1
+SFX bø o a/Đ0D0 o	ts:indicative+present is:third	# T10
+
+# senŧa èle vanesente
+SFX ḅø Y 1
+SFX ḅø o a/ĐlD1N0 o	ts:indicative+present is:third	# T10
+
+# ko èle vanesente
+SFX ƀø Y 1
+SFX ƀø o a/ĐƚDƚN0 o	ts:indicative+present is:third	# T10
 
 
 # tèma 11 (from T1: senŧa aŧento, then T4: VT > Ø)
@@ -5847,7 +5876,7 @@ SFX f2 r ƚo/Dƚ ir
 
 
 
-# vèrbi prokonplementari (stakài)
+# vèrbi pronomenali (stakài)
 SFX Ᵽ0 Y 14
 SFX Ᵽ0 0 -ge [ro]	ds:pronomenal+locative
 SFX Ᵽ0 0 -gen [ro]	ds:pronomenal+genitive+locative
@@ -5864,7 +5893,7 @@ SFX Ᵽ0 0 -tene [ro]	ds:pronomenal+reflexive
 SFX Ᵽ0 0 -ve [ro]	ds:pronomenal+reflexive
 SFX Ᵽ0 0 -vene [ro]	ds:pronomenal+reflexive
 
-# vèrbi prokonplementari (stakài ko èle no vanesente)
+# vèrbi pronomenali (stakài ko èle no vanesente)
 SFX Ᵽl Y 24
 SFX Ᵽl 0 -gelo [ro]	is:singular+masculine ds:pronomenal+locative
 SFX Ᵽl 0 -gela [ro]	is:singular+femenine ds:pronomenal+locative
@@ -5891,7 +5920,7 @@ SFX Ᵽl 0 -vela [ro]	is:singular+femenine ds:pronomenal+reflexive
 SFX Ᵽl 0 -veli [ro]	is:plural+masculine ds:pronomenal+reflexive
 SFX Ᵽl 0 -vele [ro]	is:plural+femenine ds:pronomenal+reflexive
 
-# vèrbi prokonplementari (stakài ko èle vanesente)
+# vèrbi pronomenali (stakài ko èle vanesente)
 SFX Ᵽƚ Y 24
 SFX Ᵽƚ 0 -geƚo [ro]	is:singular+masculine ds:pronomenal+locative
 SFX Ᵽƚ 0 -geƚa [ro]	is:singular+femenine ds:pronomenal+locative
@@ -5919,7 +5948,7 @@ SFX Ᵽƚ 0 -veƚi [ro]	is:plural+masculine ds:pronomenal+reflexive
 SFX Ᵽƚ 0 -veƚe [ro]	is:plural+femenine ds:pronomenal+reflexive
 
 
-# vèrbi prokonplementari (takài)
+# vèrbi pronomenali (takài)
 SFX P0 Y 40
 SFX P0 0 ge [ro]	ds:pronomenal+locative
 SFX P0 à arge à	ds:pronomenal+locative
@@ -5962,7 +5991,7 @@ SFX P0 í irve í	ds:pronomenal+reflexive
 SFX P0 0 vene [ro]	ds:pronomenal+reflexive
 SFX P0 0 rvene [àéí]	ds:pronomenal+reflexive
 
-# vèrbi prokonplementari (takài ko èle no vanesente)
+# vèrbi pronomenali (takài ko èle no vanesente)
 SFX Pl Y 80
 SFX Pl 0 gelo [ro]	is:singular+masculine ds:pronomenal+locative
 SFX Pl 0 gela [ro]	is:singular+femenine ds:pronomenal+locative
@@ -6045,7 +6074,7 @@ SFX Pl ò vela erò	is:singular+femenine ds:pronomenal+reflexive
 SFX Pl ò veli erò	is:plural+masculine ds:pronomenal+reflexive
 SFX Pl ò vele erò	is:plural+femenine ds:pronomenal+reflexive
 
-# vèrbi prokonplementari (takài ko èle vanesente)
+# vèrbi pronomenali (takài ko èle vanesente)
 SFX Pƚ Y 64
 SFX Pƚ 0 geƚo [ro]	is:singular+masculine ds:pronomenal+locative
 SFX Pƚ 0 geƚa [ro]	is:singular+femenine ds:pronomenal+locative
@@ -6113,7 +6142,7 @@ SFX Pƚ ò veƚi erò	is:plural+masculine ds:pronomenal+reflexive
 SFX Pƚ ò veƚe erò	is:plural+femenine ds:pronomenal+reflexive
 
 
-# vèrbi prokonplementari pal komandativo (stakài)
+# vèrbi pronomenali pal komandativo (stakài)
 SFX Đ0 Y 42
 SFX Đ0 a e-ge a	ds:pronomenal+locative
 SFX Đ0 a e-gen a	ds:pronomenal+genitive+locative
@@ -6158,7 +6187,7 @@ SFX Đ0 0 -tene [^a]	ds:pronomenal+reflexive
 SFX Đ0 0 -ve [^a]	ds:pronomenal+reflexive
 SFX Đ0 0 -vene [^a]	ds:pronomenal+reflexive
 
-# vèrbi prokonplementari pal komandativo (stakài senŧa èle vanesente)
+# vèrbi pronomenali pal komandativo (stakài senŧa èle vanesente)
 SFX Đl Y 72
 SFX Đl a e-lo a	ds:pronomenal+accusative
 SFX Đl a e-la a	ds:pronomenal+accusative
@@ -6233,7 +6262,7 @@ SFX Đl 0 -vela [^a]	ds:pronomenal+reflexive
 SFX Đl 0 -veli [^a]	ds:pronomenal+reflexive
 SFX Đl 0 -vele [^a]	ds:pronomenal+reflexive
 
-# vèrbi prokonplementari pal komandativo (stakài ko èle vanesente)
+# vèrbi pronomenali pal komandativo (stakài ko èle vanesente)
 SFX Đƚ Y 72
 SFX Đƚ a e-ƚo a	ds:pronomenal+accusative
 SFX Đƚ a e-ƚa a	ds:pronomenal+accusative
@@ -6308,7 +6337,7 @@ SFX Đƚ 0 -veƚa [^a]	ds:pronomenal+reflexive
 SFX Đƚ 0 -veƚi [^a]	ds:pronomenal+reflexive
 SFX Đƚ 0 -veƚe [^a]	ds:pronomenal+reflexive
 
-# vèrbi prokonplementari (takài)
+# vèrbi pronomenali (takài)
 SFX D0 Y 28
 SFX D0 a ege a	ds:pronomenal+locative
 SFX D0 a egen a	ds:pronomenal+genitive+locative
@@ -6339,7 +6368,7 @@ SFX D0 0 tene i	ds:pronomenal+reflexive
 SFX D0 0 ve i	ds:pronomenal+reflexive
 SFX D0 0 vene i	ds:pronomenal+reflexive
 
-# vèrbi prokonplementari (takài senŧa èle vanesente)
+# vèrbi pronomenali (takài senŧa èle vanesente)
 SFX Dl Y 24
 SFX Dl 0 lo [ai]	ds:pronomenal+accusative
 SFX Dl 0 la [ai]	ds:pronomenal+accusative
@@ -6366,7 +6395,7 @@ SFX Dl 0 vela [ai]	ds:pronomenal+reflexive
 SFX Dl 0 veli [ai]	ds:pronomenal+reflexive
 SFX Dl 0 vele [ai]	ds:pronomenal+reflexive
 
-# vèrbi prokonplementari (takài ko èle vanesente)
+# vèrbi pronomenali (takài ko èle vanesente)
 SFX Dƚ Y 24
 SFX Dƚ 0 ƚo [ai]	ds:pronomenal+accusative
 SFX Dƚ 0 ƚa [ai]	ds:pronomenal+accusative
