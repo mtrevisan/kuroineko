@@ -44,18 +44,20 @@ BREAK --
 FULLSTRIP
 
 # suggest the right forms for words which incorrectly choose the wrong letter from a related set more than once in a word
-MAP 22
+MAP 24
 MAP aà
 MAP eè
 MAP eé
 MAP ií
 MAP iï
 MAP ïí
+MAP íï
 MAP oò
 MAP oó
 MAP uú
 MAP uü
 MAP üú
+MAP úü
 MAP AÀ
 MAP EÈ
 MAP EÉ
@@ -280,7 +282,7 @@ NEEDAFFIX N0
 # mòdi ko 'l asterisko i vòl dir ke i gà anka la deklinaŧion interogativa
 # metaplaxmo 1a > 2a:	par tuti i mòdi e i tenpi fora ke inté ʼl infenío, partiŧipio pasivo in -d-, e xerundio
 # metaplaxmo 3a > 2a:	partiŧipio pasivo e xerundio
-# '-er- > '-ar-: ge pòl èser un xbasamento de e nò tònega in a vanti r
+# '-er- > '-ar-: ge pòl èser un xbasamento de `e` nò tònega in `a` vanti `r`
 
 #kantar/a0a1a2Ᵽ0ⱣlⱣƚ
 #kanto/a0a1a2Ᵽ0ⱣlⱣƚĪ1Ī2FS
@@ -6578,7 +6580,7 @@ SFX Ī1 0 -e .	ds:interrogative
 SFX Ī1 0 -i n	ds:interrogative
 
 # interogativi prima parsona singolar (takài)
-SFX I1 Y 12
+SFX I1 Y 15
 SFX I1 0 i [aeoàèò]	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
 SFX I1 0 mi [aeoèò]	ds:interrogative	# cipileño
 SFX I1 à ami à	ds:interrogative	# cipileño
@@ -6591,6 +6593,9 @@ SFX I1 à ane à	ds:interrogative
 SFX I1 0 ni [aeoèò]	ds:interrogative	# veronexe
 SFX I1 à ani à	ds:interrogative
 SFX I1 0 e [aeoàèò]	ds:interrogative
+SFX I1 àvo avio àvo	ds:interrogative	# lagunar
+SFX I1 évo evio évo	ds:interrogative	# lagunar
+SFX I1 ívo ivio ívo	ds:interrogative	# lagunar
 
 # interogativi prima parsona plural (stakài)
 SFX Ī2 Y 9
@@ -6605,7 +6610,7 @@ SFX Ī2 0 -e .	ds:interrogative
 SFX Ī2 0 -i n	ds:interrogative
 
 # interogativi prima parsona plural (takài)
-SFX I2 Y 13
+SFX I2 Y 15
 SFX I2 0 i [aeo]	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
 SFX I2 0 nte [^n]	ds:interrogative
 SFX I2 0 nti [^n]	ds:interrogative	# veronexe
@@ -6617,6 +6622,8 @@ SFX I2 ón one ón	ds:interrogative
 SFX I2 én ene én	ds:interrogative
 SFX I2 ón oni ón	ds:interrogative
 SFX I2 én eni én	ds:interrogative
+SFX I2 o io [àéí]vimo	ds:interrogative	# lagunar
+SFX I2 o io [àéí]imo	ds:interrogative	# lagunar
 SFX I2 émo emio émo	ds:interrogative	# lagunar
 SFX I2 ímo imio ímo	ds:interrogative	# lagunar
 
