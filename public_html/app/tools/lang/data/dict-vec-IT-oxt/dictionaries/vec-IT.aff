@@ -235,19 +235,19 @@ NEEDAFFIX N0
 
 # ---
 
-#															-àr	-ér		'-er			-ír			-ír/is
-#T1														kantà	valé		kréde			dormí			fení
-#T2	=	T1: aŧento PVT > VT						kantà	valé		kredé			dormí			fení
-#T3	=	T1: aŧento VT > (A)PVT | í > <ís>i	kànta	vàle		kréde			dòrmi			fenísi
-#T4	=	T1: senŧa aŧento							kanta	vale		krede			dormi			feni
-#T5	=	T2: à > é | (é > í) | (í > é)			kanté	valé/(í)	kredé/(í)	dormí/(é)	fení/(é)
-#T6	=	T2: é > ú									kantà	valú		kredú			dormí			fení
-#T7	=	T2: í > é									kantà	valé		kredé			dormé			fené
-#T8	=	T3: VT > Ø									kànt	vàl		kréd			dòrm			fenís
-#T9	=	T3: e > i									kànta	vàli		krédi			dòrmi			fenísi
-#T10	=	T3: i > e									kànta	vàle		kréde			dòrme			feníse
-#T11	=	T4: VT > Ø									kant	val		kred			dorm			fen
-#T12	=	T8: senŧa aŧento							kant	val		kred			dorm			fenis
+#															-àr		-ér		'-er			-ír			-ír/is
+#T1														kantà		valé		kréde			dormí			fení
+#T2	=	T1: aŧento PVT > VT						kantà		valé		kredé			dormí			fení
+#T3	=	T1: aŧento VT > (A)PVT | í > <ís>i	kànta		vàle		kréde			dòrmi			fenísi
+#T4	=	T1: senŧa aŧento							kanta		vale		krede			dormi			feni
+#T5	=	T2: à > é/è | (é > í) | (í > é)		kanté/è	valé/(í)	kredé/(í)	dormí/(é)	fení/(é)
+#T6	=	T2: é > ú									kantà		valú		kredú			dormí			fení
+#T7	=	T2: í > é									kantà		valé		kredé			dormé			fené
+#T8	=	T3: VT > Ø									kànt		vàl		kréd			dòrm			fenís
+#T9	=	T3: e > i									kànta		vàli		krédi			dòrmi			fenísi
+#T10	=	T3: i > e									kànta		vàle		kréde			dòrme			feníse
+#T11	=	T4: VT > Ø									kant		val		kred			dorm			fen
+#T12	=	T8: senŧa aŧento							kant		val		kred			dorm			fenis
 
 #						1a												2a														3a
 #						sing.			pl.							sing.						pl.
@@ -258,16 +258,16 @@ NEEDAFFIX N0
 #										T12 + (i)ón(e)											T12 + é([dg]e)
 #										T12 + én(e)
 #IND. INPARF.*		T2 + v[aeo]	T2 + vimo					T2 + vi					T2 + vi					T2 + va
-#										T11 + (iv)(i)ón(s[ei])								T11 + (iv)ié
-#										T11 + (iv)én(s[ei])
+#										T11 + (iv)(i)ón(se)									T11 + (iv)ié
+#										T11 + (iv)[éí]n(s[ei])
 #DHONTAT. INPARF.	T2 + se		T2 + simo					T2 + si					T2 + si					T2 + se
-#										T11 + (is)(i)ón(e/s[ei])							T11 + (is)ié([dg]e)
+#										T11 + (is)(i)ón(e/se)								T11 + (is)ié([dg]e)
 #										T11 + (is)én(e/s[ei])
 #IND. FUT.*			T4 + r[òàè]	T4 + r[éí]mo				T4 + rà					T4 + r[éí]				T4 + rà
 #										T4 + rón
 #										T4 + rén
 #KOND. PREX.		T4 + rí[ae]	T4 + résimo					T4 + ría					T4 + rési				T4 + rí[ae]
-#										T4 + r(is)(i)ón(s[ei])								T4 + r(is)ié
+#						T4 + rée		T4 + r(is)(i)ón(se)		T4 + rée					T4 + r(is)ié			T4 + rée
 #										T4 + r(is)én(s[ei])
 #						(ant. T4 + rà(v)e*)
 #KOM. PREX.			--				--								T9							T5							--
@@ -537,7 +537,7 @@ SFX ƚ2 erò éndo/PƚN0 erò	ts:gerund+simple	# T2 + ndo = T7 + ndo
 SFX ƚ2 r nto/ⱣƚN0 [aei]r	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX ƚ2 ar ànto/PƚN0 ar	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX ƚ2 er énto/PƚN0 er	ts:gerund+simple	# T2 + nto = T7 + nto
-SFX ƚ2 er ènto/ⱣƚN0 er	ts:gerund+simple	# T2 + nto = T7 + nto
+SFX ƚ2 er ènto/ⱣƚPƚN0 er	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX ƚ2 ir ínto/PƚN0 ir	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX ƚ2 rò nto/ⱣƚN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX ƚ2 erò énto/PƚN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
@@ -547,21 +547,21 @@ SFX ƚ2 erò ènto/ⱣƚPƚN0 erò	ts:gerund+simple	# T2 + nto = T7 + nto
 # tèma 4 (from T1: senŧa aŧento)
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
-SFX t4 Y 62
+SFX t4 Y 68
 SFX t4 0 ò/Ī1I1 [aei]r	ts:indicative+future is:first+singular	# T4 + rò
 SFX t4 0 0/Ī1I1N0 erò	ts:indicative+future is:first+singular	# T4 + rò
 SFX t4 0 à/Ī1I1 [aei]r	ts:indicative+future is:first+singular	# T4 + rà
 SFX t4 ò à/Ī1I1 erò	ts:indicative+future is:first+singular	# T4 + rà
 SFX t4 0 è/Ī1I1 [aei]r	ts:indicative+future is:first+singular	# T4 + rè
 SFX t4 ò è/Ī1I1 erò	ts:indicative+future is:first+singular	# T4 + rè
-SFX t4 0 emo/Ī2 [aei]r	ts:indicative+future is:first+plural	# T4 + remo
-SFX t4 0 émo/I2N0 [aei]r	ts:indicative+future is:first+plural	# T4 + remo
-SFX t4 ò emo/Ī2 erò	ts:indicative+future is:first+plural	# T4 + remo
-SFX t4 ò émo/I2N0 erò	ts:indicative+future is:first+plural	# T4 + remo
-SFX t4 0 imo/Ī2 [aei]r	ts:indicative+future is:first+plural	# T4 + rimo
-SFX t4 0 ímo/I2N0 [aei]r	ts:indicative+future is:first+plural	# T4 + rimo
-SFX t4 ò imo/Ī2 erò	ts:indicative+future is:first+plural	# T4 + rimo
-SFX t4 ò ímo/I2N0 erò	ts:indicative+future is:first+plural	# T4 + rimo
+SFX t4 0 emo/Ī2 [aei]r	ts:indicative+future is:first+plural	# T4 + r[éí]mo
+SFX t4 0 émo/I2N0 [aei]r	ts:indicative+future is:first+plural	# T4 + r[éí]mo
+SFX t4 ò emo/Ī2 erò	ts:indicative+future is:first+plural	# T4 + r[éí]mo
+SFX t4 ò émo/I2N0 erò	ts:indicative+future is:first+plural	# T4 + r[éí]mo
+SFX t4 0 imo/Ī2 [aei]r	ts:indicative+future is:first+plural	# T4 + r[éí]mo
+SFX t4 0 ímo/I2N0 [aei]r	ts:indicative+future is:first+plural	# T4 + r[éí]mo
+SFX t4 ò imo/Ī2 erò	ts:indicative+future is:first+plural	# T4 + r[éí]mo
+SFX t4 ò ímo/I2N0 erò	ts:indicative+future is:first+plural	# T4 + r[éí]mo
 SFX t4 0 à/Ī3I3 [aei]r	ts:indicative+future is:second+singular	# T4 + rà
 SFX t4 ò à/Ī3I3 erò	ts:indicative+future is:second+singular	# T4 + rà
 SFX t4 0 é/Ī4I4 [aei]r	ts:indicative+future is:second+plural	# T4 + ré
@@ -572,16 +572,22 @@ SFX t4 0 à [aei]r	ts:indicative+future is:third	# T4 + rà
 SFX t4 ò à erò	ts:indicative+future is:third	# T4 + rà
 SFX t4 0 ía [aei]r	ts:conditional+present is:first+singular	# T4 + ría
 SFX t4 ò ía erò	ts:conditional+present is:first+singular	# T4 + ría
+SFX t4 0 ée [aei]r	ts:conditional+present is:first+singular	# T4 + rée
+SFX t4 ò ée erò	ts:conditional+present is:first+singular	# T4 + rée
 SFX t4 0 íe [aei]r	ts:conditional+present is:first+singular	# T4 + ríe
 SFX t4 ò íe erò	ts:conditional+present is:first+singular	# T4 + ríe
 SFX t4 0 ésimo [aei]r	ts:conditional+present is:first+plural	# T4 + résimo
 SFX t4 ò ésimo erò	ts:conditional+present is:first+plural	# T4 + résimo
 SFX t4 0 ía [aei]r	ts:conditional+present is:second+singular	# T4 + ría
 SFX t4 ò ía erò	ts:conditional+present is:second+singular	# T4 + ría
-SFX t4 0 esi [aei]r	ts:conditional+present is:second+plural	# T4 + resi
-SFX t4 ò esi erò	ts:conditional+present is:second+plural	# T4 + resi
+SFX t4 0 ée [aei]r	ts:conditional+present is:second+singular	# T4 + rée
+SFX t4 ò ée erò	ts:conditional+present is:second+singular	# T4 + rée
+SFX t4 0 esi [aei]r	ts:conditional+present is:second+plural	# T4 + rési
+SFX t4 ò esi erò	ts:conditional+present is:second+plural	# T4 + rési
 SFX t4 0 ía [aei]r	ts:conditional+present is:third	# T4 + ría
 SFX t4 ò ía erò	ts:conditional+present is:third	# T4 + ría
+SFX t4 0 ée [aei]r	ts:conditional+present is:third	# T4 + rée
+SFX t4 ò ée erò	ts:conditional+present is:third	# T4 + rée
 SFX t4 0 ave/Ī1 [aei]r	ts:conditional+present is:first+singular	# T4 + rà(v)e
 SFX t4 0 àve/I1N0 [aei]r	ts:conditional+present is:first+singular	# T4 + rà(v)e
 SFX t4 ò ave/Ī1 erò	ts:conditional+present is:first+singular	# T4 + rà(v)e
@@ -616,10 +622,10 @@ SFX n4 0 on/Ī2 [aei]r	ts:indicative+future is:first+plural	# T4 + ron
 SFX n4 0 ón/I2N0 [aei]r	ts:indicative+future is:first+plural	# T4 + ron
 SFX n4 ò on/Ī2 erò	ts:indicative+future is:first+plural	# T4 + ron
 SFX n4 ò ón/I2N0 erò	ts:indicative+future is:first+plural	# T4 + ron
-SFX n4 0 en/Ī2 [aei]r	ts:indicative+future is:first+plural	# T4 + ren
-SFX n4 0 én/I2N0 [aei]r	ts:indicative+future is:first+plural	# T4 + ren
-SFX n4 ò en/Ī2 erò	ts:indicative+future is:first+plural	# T4 + ren
-SFX n4 ò én/I2N0 erò	ts:indicative+future is:first+plural	# T4 + ren
+SFX n4 0 en/Ī2 [aei]r	ts:indicative+future is:first+plural	# T4 + rén
+SFX n4 0 én/I2N0 [aei]r	ts:indicative+future is:first+plural	# T4 + rén
+SFX n4 ò en/Ī2 erò	ts:indicative+future is:first+plural	# T4 + rén
+SFX n4 ò én/I2N0 erò	ts:indicative+future is:first+plural	# T4 + rén
 SFX n4 0 íe [aei]r	ts:conditional+present is:first+singular	# T4 + ríe, 2s=3
 SFX n4 ò íe erò	ts:conditional+present is:first+singular	# T4 + ríe, 2s=3
 SFX n4 0 on [aei]r	ts:conditional+present is:first+plural	# T4 + r(is)(i)ón(se)
@@ -659,10 +665,10 @@ SFX n4 ò íe erò	ts:conditional+present is:third	# T4 + ríe
 SFX n4 ar erò/Ī1I1 ar	ts:indicative+future is:first+singular	# T4 + rò, T4 = T1: senŧa aŧento | à > é
 SFX n4 ar erà/Ī1I1 ar	ts:indicative+future is:first+singular	# T4 + rà, T4 = T1: senŧa aŧento | à > é
 SFX n4 ar erè/Ī1I1 ar	ts:indicative+future is:first+singular	# T4 + rè, T4 = T1: senŧa aŧento | à > é
-SFX n4 ar eremo/Ī2 ar	ts:indicative+future is:first+plural	# T4 + remo, T4 = T1: senŧa aŧento | à > é
-SFX n4 ar erémo/I2N0 ar	ts:indicative+future is:first+plural	# T4 + remo, T4 = T1: senŧa aŧento | à > é
-SFX n4 ar erimo/Ī2 ar	ts:indicative+future is:first+plural	# T4 + rimo, T4 = T1: senŧa aŧento | à > é
-SFX n4 ar erímo/I2N0 ar	ts:indicative+future is:first+plural	# T4 + rimo, T4 = T1: senŧa aŧento | à > é
+SFX n4 ar eremo/Ī2 ar	ts:indicative+future is:first+plural	# T4 + rémo, T4 = T1: senŧa aŧento | à > é
+SFX n4 ar erémo/I2N0 ar	ts:indicative+future is:first+plural	# T4 + rémo, T4 = T1: senŧa aŧento | à > é
+SFX n4 ar erimo/Ī2 ar	ts:indicative+future is:first+plural	# T4 + rímo, T4 = T1: senŧa aŧento | à > é
+SFX n4 ar erímo/I2N0 ar	ts:indicative+future is:first+plural	# T4 + rímo, T4 = T1: senŧa aŧento | à > é
 SFX n4 ar erà/Ī3I3 ar	ts:indicative+future is:second+singular	# T4 + rà, T4 = T1: senŧa aŧento | à > é
 SFX n4 ar eré/Ī4I4 ar	ts:indicative+future is:second+plural	# T4 + ré, T4 = T1: senŧa aŧento | à > é
 SFX n4 ar erí/Ī4I4 ar	ts:indicative+future is:second+plural	# T4 + rí, T4 = T1: senŧa aŧento | à > é
@@ -671,7 +677,7 @@ SFX n4 ar ería ar	ts:conditional+present is:first+singular	# T4 + ría, T4 = T1
 SFX n4 ar eríe ar	ts:conditional+present is:first+singular	# T4 + ríe, T4 = T1: senŧa aŧento | à > é
 SFX n4 ar erésimo ar	ts:conditional+present is:first+plural	# T4 + résimo, T4 = T1: senŧa aŧento | à > é
 SFX n4 ar ería ar	ts:conditional+present is:second+singular	# T4 + ría, T4 = T1: senŧa aŧento | à > é
-SFX n4 ar eresi ar	ts:conditional+present is:second+plural	# T4 + resi, T4 = T1: senŧa aŧento | à > é
+SFX n4 ar eresi ar	ts:conditional+present is:second+plural	# T4 + rési, T4 = T1: senŧa aŧento | à > é
 SFX n4 ar ería ar	ts:conditional+present is:third	# T4 + ría, T4 = T1: senŧa aŧento | à > é
 SFX n4 ar eríe ar	ts:conditional+present is:third	# T4 + ríe, T4 = T1: senŧa aŧento | à > é
 SFX n4 ar erave/Ī1 ar	ts:conditional+present is:first+singular	# T4 + rà(v)e, T4 = T1: senŧa aŧento | à > é
@@ -690,8 +696,8 @@ SFX n4 ar eràe/Ī4I4N0 ar	ts:conditional+present is:second+plural	# T4 + rà(v)
 SFX n4 ar eràe ar	ts:conditional+present is:third	# T4 + rà(v)e, T4 = T1: senŧa aŧento | à > é
 SFX n4 ar eron/Ī2 ar	ts:indicative+future is:first+plural	# T4 + ron, T4 = T1: senŧa aŧento | à > é
 SFX n4 ar erón/I2N0 ar	ts:indicative+future is:first+plural	# T4 + ron, T4 = T1: senŧa aŧento | à > é
-SFX n4 ar eren/Ī2 ar	ts:indicative+future is:first+plural	# T4 + ren, T4 = T1: senŧa aŧento | à > é
-SFX n4 ar erén/I2N0 ar	ts:indicative+future is:first+plural	# T4 + ren, T4 = T1: senŧa aŧento | à > é
+SFX n4 ar eren/Ī2 ar	ts:indicative+future is:first+plural	# T4 + rén, T4 = T1: senŧa aŧento | à > é
+SFX n4 ar erén/I2N0 ar	ts:indicative+future is:first+plural	# T4 + rén, T4 = T1: senŧa aŧento | à > é
 SFX n4 ar eron ar	ts:conditional+present is:first+plural	# T4 + r(is)(i)ón(se), T4 = T1: senŧa aŧento | à > é
 SFX n4 ar eronse ar	ts:conditional+present is:first+plural	# T4 + r(is)(i)ón(se), T4 = T1: senŧa aŧento | à > é
 SFX n4 ar erion ar	ts:conditional+present is:first+plural	# T4 + r(is)(i)ón(se), T4 = T1: senŧa aŧento | à > é
@@ -713,10 +719,10 @@ SFX p4 Y 31
 SFX p4 erò arò/Ī1I1 erò	ts:indicative+future is:first+singular	# T4 + rò
 SFX p4 erò arà/Ī1I1 erò	ts:indicative+future is:first+singular	# T4 + rà
 SFX p4 erò arè/Ī1I1 erò	ts:indicative+future is:first+singular	# T4 + rè
-SFX p4 erò aremo/Ī2 erò	ts:indicative+future is:first+plural	# T4 + remo
-SFX p4 erò arémo/I2N0 erò	ts:indicative+future is:first+plural	# T4 + remo
-SFX p4 erò arimo/Ī2 erò	ts:indicative+future is:first+plural	# T4 + rimo
-SFX p4 erò arímo/I2N0 erò	ts:indicative+future is:first+plural	# T4 + rimo
+SFX p4 erò aremo/Ī2 erò	ts:indicative+future is:first+plural	# T4 + rémo
+SFX p4 erò arémo/I2N0 erò	ts:indicative+future is:first+plural	# T4 + rémo
+SFX p4 erò arimo/Ī2 erò	ts:indicative+future is:first+plural	# T4 + rímo
+SFX p4 erò arímo/I2N0 erò	ts:indicative+future is:first+plural	# T4 + rímo
 SFX p4 erò arà/Ī3I3 erò	ts:indicative+future is:second+singular	# T4 + rà
 SFX p4 erò aré/Ī4I4 erò	ts:indicative+future is:second+plural	# T4 + ré
 SFX p4 erò arí/Ī4I4 erò	ts:indicative+future is:second+plural	# T4 + rí
@@ -725,7 +731,7 @@ SFX p4 erò aría erò	ts:conditional+present is:first+singular	# T4 + ría
 SFX p4 erò aríe erò	ts:conditional+present is:first+singular	# T4 + ríe
 SFX p4 erò arésimo erò	ts:conditional+present is:first+plural	# T4 + résimo
 SFX p4 erò aría erò	ts:conditional+present is:second+singular	# T4 + ría
-SFX p4 erò aresi erò	ts:conditional+present is:second+plural	# T4 + resi
+SFX p4 erò aresi erò	ts:conditional+present is:second+plural	# T4 + rési
 SFX p4 erò aría erò	ts:conditional+present is:third	# T4 + ría
 SFX p4 erò arave/Ī1 erò	ts:conditional+present is:first+singular	# T4 + rà(v)e
 SFX p4 erò aràve/I1N0 erò	ts:conditional+present is:first+singular	# T4 + rà(v)e
@@ -764,7 +770,7 @@ SFX ƚ4 ò àve/i6N0 erò	ts:conditional+present is:third	# T4 + rà(v)e
 # tèma 5 (from T1: aŧento PVT > VT, then T2: à > é | (é > í) | (í > é))
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
-SFX t5 Y 42
+SFX t5 Y 45
 SFX t5 ar emo/Ī2 ar	ts:indicative+present is:first+plural	# T5 + mo
 SFX t5 ar émo/I2N0 ar	ts:indicative+present is:first+plural	# T5 + mo
 SFX t5 r mo/Ī2 er	ts:indicative+present is:first+plural	# T5 + mo
@@ -786,6 +792,7 @@ SFX t5 er í/Ī4I4 er	ts:indicative+present is:second+plural	# T5
 SFX t5 erò í/Ī4I4 erò	ts:indicative+present is:second+plural	# T5
 SFX t5 ir í/Ī4I4 ir	ts:indicative+present is:second+plural	# T5
 SFX t5 ir é/Ī4I4 ir	ts:indicative+present is:second+plural	# T5
+SFX t5 ar è/Ī4I4 ar	ts:indicative+present is:second+plural	# T5
 SFX t5 ar emo ar	ts:subjunctive+present is:first+plural	# T5 + mo
 SFX t5 r mo er	ts:subjunctive+present is:first+plural	# T5 + mo
 SFX t5 rò mo erò	ts:subjunctive+present is:first+plural	# T5 + mo
@@ -800,6 +807,7 @@ SFX t5 er í er	ts:subjunctive+present is:second+plural	# T5
 SFX t5 erò í erò	ts:subjunctive+present is:second+plural	# T5
 SFX t5 ir í ir	ts:subjunctive+present is:second+plural	# T5
 SFX t5 ir é ir	ts:subjunctive+present is:second+plural	# T5
+SFX t5 ar è ar	ts:subjunctive+present is:second+plural	# T5
 SFX t5 ar é/Ī4I4Đ0 ar	ts:imperative+present is:second+plural	# T5
 SFX t5 er é/Ī4I4Đ0 er	ts:imperative+present is:second+plural	# T5
 SFX t5 erò é/Ī4I4Đ0 erò	ts:imperative+present is:second+plural	# T5
@@ -807,6 +815,7 @@ SFX t5 er í/Ī4I4Đ0 er	ts:imperative+present is:second+plural	# T5
 SFX t5 erò í/Ī4I4Đ0 erò	ts:imperative+present is:second+plural	# T5
 SFX t5 ir í/Ī4I4Đ0 ir	ts:imperative+present is:second+plural	# T5
 SFX t5 ir é/Ī4I4Đ0 ir	ts:imperative+present is:second+plural	# T5
+SFX t5 ar è/Ī4I4Đ0 ar	ts:imperative+present is:second+plural	# T5
 
 # senŧa èle vanesente
 SFX l5 Y 7
@@ -1129,103 +1138,95 @@ SFX ēø o a/ĐƚDƚN0 o	ts:indicative+present is:third	# T10
 # variante fel.-bel. e liv.
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
-SFX nɨ Y 224
+SFX nɨ Y 200
 SFX nɨ ar on/Ī2 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ ar ón/I2N0 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ ar onse/Ī2 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX nɨ ar onsi/Ī2 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ ar ion/Ī2 [^cijɉñ]ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ ar ión/I2N0 [^cijɉñ]ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ ar ionse/Ī2 [^cijɉñ]ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX nɨ ar ionsi/Ī2 [^cijɉñ]ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ ar ivon/Ī2 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ ar ivón/I2N0 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ ar ivonse/Ī2 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX nɨ ar ivonsi/Ī2 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ ar ivion/Ī2 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ ar ivión/I2N0 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ ar ivionse/Ī2 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX nɨ ar ivionsi/Ī2 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX nɨ ar en/Ī2 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ ar én/I2N0 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ ar ense/Ī2 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ ar ensi/Ī2 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ ar iven/Ī2 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ ar ivén/I2N0 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ ar ivense/Ī2 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ ar ivensi/Ī2 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
+SFX nɨ ar en/Ī2 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ ar én/I2N0 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ ar ense/Ī2 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ ar ensi/Ī2 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ ar iven/Ī2 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ ar ivén/I2N0 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ ar ivense/Ī2 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ ar ivensi/Ī2 ar	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
 SFX nɨ er on/Ī2 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ er ón/I2N0 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ er onse/Ī2 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX nɨ er onsi/Ī2 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ er ion/Ī2 [^cijɉñ]er	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ er ión/I2N0 [^cijɉñ]er	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ er ionse/Ī2 [^cijɉñ]er	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX nɨ er ionsi/Ī2 [^cijɉñ]er	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ er ivon/Ī2 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ er ivón/I2N0 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ er ivonse/Ī2 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX nɨ er ivonsi/Ī2 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ er ivion/Ī2 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ er ivión/I2N0 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ er ivionse/Ī2 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX nɨ er ivionsi/Ī2 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ r n/Ī2 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ er én/I2N0 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ r nse/Ī2 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ r nsi/Ī2 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ er iven/Ī2 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ er ivén/I2N0 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ er ivense/Ī2 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ er ivensi/Ī2 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ erò on/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
+SFX nɨ er én/I2N0 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ r nse/Ī2 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ r nsi/Ī2 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ er iven/Ī2 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ er ivén/I2N0 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ er ivense/Ī2 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ er ivensi/Ī2 er	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ erò on/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(s[ei])
 SFX nɨ erò ón/I2N0 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ erò onse/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX nɨ erò onsi/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ erò ion/Ī2 [^cijɉñ]erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ erò ión/I2N0 [^cijɉñ]erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ erò ionse/Ī2 [^cijɉñ]erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX nɨ erò ionsi/Ī2 [^cijɉñ]erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ erò ivon/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ erò ivón/I2N0 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ erò ivonse/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX nɨ erò ivonsi/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ erò ivion/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ erò ivión/I2N0 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ erò ivionse/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX nɨ erò ivionsi/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX nɨ rò n/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ erò én/I2N0 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ rò nse/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ rò nsi/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ erò iven/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ erò ivén/I2N0 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ erò ivense/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ erò ivensi/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
+SFX nɨ rò n/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ erò én/I2N0 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ rò nse/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ rò nsi/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ erò iven/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ erò ivén/I2N0 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ erò ivense/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ erò ivensi/Ī2 erò	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
 SFX nɨ ir on/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ ir ón/I2N0 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ ir onse/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX nɨ ir onsi/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ r on/Ī2 [^cijɉñ]ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ r ón/I2N0 [^cijɉñ]ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ r onse/Ī2 [^cijɉñ]ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX nɨ r onsi/Ī2 [^cijɉñ]ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ r von/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ r vón/I2N0 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ r vonse/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX nɨ r vonsi/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ r vion/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ r vión/I2N0 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
 SFX nɨ r vionse/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX nɨ r vionsi/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX nɨ ir en/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ ir én/I2N0 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ ir ense/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ ir ensi/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ r ven/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ r vén/I2N0 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ r vense/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
-SFX nɨ r vensi/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(se)
+SFX nɨ ir en/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ ir én/I2N0 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ ir ense/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ ir ensi/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ r ven/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ r vén/I2N0 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ r vense/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ r vensi/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX nɨ r n/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)ín(s[ei])
+SFX nɨ ir ín/I2N0 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)ín(s[ei])
+SFX nɨ r nse/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)ín(s[ei])
+SFX nɨ r nsi/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)ín(s[ei])
+SFX nɨ r vin/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)ín(s[ei])
+SFX nɨ r vín/I2N0 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)ín(s[ei])
+SFX nɨ r vinse/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)ín(s[ei])
+SFX nɨ r vinsi/Ī2 ir	ts:indicative+imperfect is:first+plural	# T11 + (iv)ín(s[ei])
 SFX nɨ ar ié/Ī4I4 [^cijɉñ]ar	ts:indicative+imperfect is:second+plural	# T11 + (iv)ié
 SFX nɨ ar ivié/Ī4I4 ar	ts:indicative+imperfect is:second+plural	# T11 + (iv)ié
 SFX nɨ er ié/Ī4I4 [^cijɉñ]er	ts:indicative+imperfect is:second+plural	# T11 + (iv)ié
@@ -1237,19 +1238,15 @@ SFX nɨ r vié/Ī4I4 ir	ts:indicative+imperfect is:second+plural	# T11 + (iv)ié
 SFX nɨ ar on ar	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ ar one ar	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ ar onse ar	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX nɨ ar onsi ar	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ ar ion [^cijɉñ]ar	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ ar ione [^cijɉñ]ar	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ ar ionse [^cijɉñ]ar	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX nɨ ar ionsi [^cijɉñ]ar	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ ar ison ar	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ ar isone ar	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ ar isonse ar	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX nɨ ar isonsi ar	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ ar ision ar	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ ar isione ar	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ ar isionse ar	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX nɨ ar isionsi ar	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ ar en ar	ts:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
 SFX nɨ ar ene ar	ts:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
 SFX nɨ ar ense ar	ts:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
@@ -1261,19 +1258,15 @@ SFX nɨ ar isensi ar	ts:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/
 SFX nɨ er on er	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ er one er	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ er onse er	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX nɨ er onsi er	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ er ion [^cijɉñ]er	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ er ione [^cijɉñ]er	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ er ionse [^cijɉñ]er	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX nɨ er ionsi [^cijɉñ]er	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ er ison er	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ er isone er	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ er isonse er	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX nɨ er isonsi er	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ er ision er	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ er isione er	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ er isionse er	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX nɨ er isionsi er	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ r n er	ts:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
 SFX nɨ r ne er	ts:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
 SFX nɨ r nse er	ts:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
@@ -1285,19 +1278,15 @@ SFX nɨ er isensi er	ts:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/
 SFX nɨ erò on erò	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ erò one erò	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ erò onse erò	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX nɨ erò onsi erò	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ erò ion [^cijɉñ]erò	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ erò ione [^cijɉñ]erò	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ erò ionse [^cijɉñ]erò	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX nɨ erò ionsi [^cijɉñ]erò	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ erò ison erò	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ erò isone erò	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ erò isonse erò	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX nɨ erò isonsi erò	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ erò ision erò	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ erò isione erò	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ erò isionse erò	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX nɨ erò isionsi erò	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ rò n erò	ts:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
 SFX nɨ rò ne erò	ts:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
 SFX nɨ rò nse erò	ts:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
@@ -1309,19 +1298,15 @@ SFX nɨ erò isensi erò	ts:subjunctive+imperfect is:first+plural	# T11 + (is)é
 SFX nɨ ir on ir	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ ir one ir	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ ir onse ir	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX nɨ ir onsi ir	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ r on [^cijɉñ]ir	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ r one [^cijɉñ]ir	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ r onse [^cijɉñ]ir	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX nɨ r onsi [^cijɉñ]ir	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ r son ir	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ r sone ir	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ r sonse ir	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX nɨ r sonsi ir	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ r sion ir	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ r sione ir	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ r sionse ir	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX nɨ r sionsi ir	ts:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
 SFX nɨ ir en ir	ts:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
 SFX nɨ ir ene ir	ts:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
 SFX nɨ ir ense ir	ts:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
