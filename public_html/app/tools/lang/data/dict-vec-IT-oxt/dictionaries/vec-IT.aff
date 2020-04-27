@@ -289,7 +289,7 @@ NEEDAFFIX N0
 #kàntoe/a0a1a2I1
 
 #-àr:			kantar/t1l1ƚ1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7nɨnʉlʉƚʉ, (kanto/t8n8a9ȧ9ā9aøȧøāøFS, kàntoe/a9ȧ9ā9aøȧøāø | exàmino/d8ṅ8e9ė9ē9eøėøēøFS)
-#-ér:			valer/t1n1l1ƚ1t2n2l2ƚ2t4n4p4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7nɨnʉlʉƚʉ, (valo/t8n8t9l9ƚ9tøløƚøFS, vàloe/t8n8t9l9ƚ9tøløƚø | reflèto/d8ṅ8b9ḃ9ḇ9bøḃøḇøFS)
+#-ér:			valer/t1l1ƚ1t2n2l2ƚ2t4n4p4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7nɨnʉlʉƚʉ, (valo/t8n8t9l9ƚ9tøløƚøFS, vàloe/t8n8t9l9ƚ9tøløƚø | reflèto/d8ṅ8b9ḃ9ḇ9bøḃøḇøFS)
 #'-er:		kréder/t1n1l1ƚ1p1, (kredo/t8n8t9l9ƚ9tøløƚøFS, krédoe/t8n8t9l9ƚ9tøløƚø | ?/d8ṅ8b9ḃ9ḇ9bøḃøḇøFS), krederò/t2n2l2ƚ2t4n4p4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7nɨnʉlʉƚʉ
 #-ír:			dormir/t1n1l1ƚ1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7nɨ, (dòrmo/t8n8t9l9ƚ9tøløƚønʉFS, dòrmoe/t8n8t9l9ƚ9tøløƚø | dòrmo/d8ṅ8b9ḃ9ḇ9bøḃøḇøFS)
 #-ír/is::	fenir/t1n1l1ƚ1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7nɨ, (feniso/t8n8t9l9ƚ9tøløƚønʉlʉƚʉFS, fenísoe/t8n8t9l9ƚ9tøløƚønʉlʉƚʉ | feniso/d8ṅ8b9ḃ9ḇ9bøḃøḇønʉlʉƚʉFS)
@@ -422,16 +422,16 @@ SFX t2 er éndo/P0N0 er	ts:gerund+simple	# T2 + ndo = T7 + ndo
 SFX t2 ir índo/P0N0 ir	ts:gerund+simple	# T2 + ndo = T7 + ndo
 SFX t2 rò ndo/Ᵽ0 erò	ts:gerund+simple	# T2 + ndo
 SFX t2 erò éndo/P0N0 erò	ts:gerund+simple	# T2 + ndo
-SFX t2 r nto/Ᵽ0FS [aei]r	ts:gerund+simple	# T2 + nto = T7 + nto
+SFX t2 r nto/Ᵽ0 [aei]r	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX t2 ar ànto/P0N0 ar	ts:gerund+simple	# T2 + ndo = T7 + ndo
 SFX t2 er énto/P0N0 er	ts:gerund+simple	# T2 + ndo = T7 + ndo
-SFX t2 er ènto/Ᵽ0P0FS er	ts:gerund+simple	# T2 + nto
+SFX t2 er ènto/Ᵽ0P0 er	ts:gerund+simple	# T2 + nto
 SFX t2 ir ínto/P0N0 ir	ts:gerund+simple	# T2 + ndo = T7 + ndo
-SFX t2 rò nto/Ᵽ0FS erò	ts:gerund+simple	# T2 + nto
+SFX t2 rò nto/Ᵽ0 erò	ts:gerund+simple	# T2 + nto
 SFX t2 erò énto/P0N0 erò	ts:gerund+simple	# T2 + nto
-SFX t2 erò ènto/Ᵽ0P0FS erò	ts:gerund+simple	# T2 + nto
+SFX t2 erò ènto/Ᵽ0P0 erò	ts:gerund+simple	# T2 + nto
 
-SFX n2 Y 50
+SFX n2 Y 49
 SFX n2 ar eva/Ī1 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 ar éva/I1N0 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 ar éa/Ī1I1 ar	ts:indicative+imperfect is:first+singular	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
@@ -478,10 +478,9 @@ SFX n2 ar éndo/P0N0 ar	ts:gerund+simple	# T2 + ndo = T7 + ndo, T2 = T1: aŧento
 SFX n2 er ènt er	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX n2 rò nt erò	ts:gerund+simple	# T2 + nto = T7 + nto
 SFX n2 ir endo/Ᵽ0Ᵽl ir	ts:gerund+simple	# T2 + ndo = T7 + ndo, T2 = T1: aŧento PVT > VT | í > é
-SFX n2 ir éndo/P0N0 ir	ts:gerund+simple	# T2 + ndo = T7 + ndo, T2 = T1: aŧento PVT > VT | í > é
 SFX n2 ar ento/Ᵽ0ⱣlFS ar	ts:gerund+simple	# T2 + nto = T7 + nto, T2 = T1: aŧento PVT > VT | à > é
-SFX n2 ar énto/P0N0 ar	ts:gerund+simple	# T2 + ndo = T7 + ndo, T2 = T1: aŧento PVT > VT | à > é
-SFX n2 ar ènto/Ᵽ0P0FS ar	ts:gerund+simple	# T2 + nto, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar ent ar	ts:gerund+simple	# T2 + ndo = T7 + ndo, T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ar ènt ar	ts:gerund+simple	# T2 + nto, T2 = T1: aŧento PVT > VT | à > é
 
 
 # senŧa èle vanesente
@@ -951,7 +950,7 @@ SFX n8 o e o	ts:subjunctive+present is:third	# T8 + e
 
 # tèma 8 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: VT > Ø)
 # -àr, -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
-SFX d8 Y 8
+SFX d8 Y 11
 SFX d8 0 0/Ī1I1N0 o	ts:indicative+present is:first+singular	# T8 + o
 SFX d8 0 e o	ts:indicative+present is:first+singular	# T8 + o
 SFX d8 o i/Ī3I3N0 [^i]o	ts:indicative+present is:second+singular	# T8 + i
@@ -960,15 +959,28 @@ SFX d8 o a o	ts:subjunctive+present is:first+singular	# T8 + a
 SFX d8 o i [^i]o	ts:subjunctive+present is:second+singular	# T8 + i
 SFX d8 io i io	ts:subjunctive+present is:second+singular	# T8 + i
 SFX d8 o a o	ts:subjunctive+present is:third	# T8 + a
+SFX d8 0 0/I1 iso	ts:indicative+present is:first+singular	# T8 + o
+SFX d8 o i/I3 iso	ts:indicative+present is:second+singular	# T8 + i
+SFX d8 iso ísi/Ī3I3N0 iso	ts:indicative+present is:second+singular	# T8 + i
 
-SFX ṅ8 Y 7
-SFX ṅ8 o e/Ī1I1 o	ts:indicative+present is:first+singular	# T8 + e
-SFX ṅ8 0 e/N0 o	ts:indicative+present is:first+singular	# T8 + e, kavà ko NEEDAFFIX parké al tèma 8 el kuèrxe xà sto kaxo
-SFX ṅ8 o e/Ī3I3 o	ts:indicative+present is:second+singular	# T8 + e, 2s=3
-SFX ṅ8 o e/Ī5I5 o	ts:indicative+present is:third	# T8 + e
-SFX ṅ8 o e o	ts:subjunctive+present is:first+singular	# T8 + e
-SFX ṅ8 o e o	ts:subjunctive+present is:second+singular	# T8 + e, 2s=3
-SFX ṅ8 o e o	ts:subjunctive+present is:third	# T8 + e
+SFX ṅ8 Y 17
+SFX ṅ8 o e/Ī1I1 [^s]o	ts:indicative+present is:first+singular	# T8 + e
+SFX ṅ8 o e/Ī1I1 [^i]so	ts:indicative+present is:first+singular	# T8 + e
+SFX ṅ8 0 e/N0 [^s]o	ts:indicative+present is:first+singular	# T8 + e, kavà ko NEEDAFFIX parké al tèma 8 el kuèrxe xà sto kaxo
+SFX ṅ8 0 e/N0 [^i]so	ts:indicative+present is:first+singular	# T8 + e, kavà ko NEEDAFFIX parké al tèma 8 el kuèrxe xà sto kaxo
+SFX ṅ8 o e/Ī3I3 [^s]o	ts:indicative+present is:second+singular	# T8 + e, 2s=3
+SFX ṅ8 o e/Ī3I3 [^i]so	ts:indicative+present is:second+singular	# T8 + e, 2s=3
+SFX ṅ8 o e/Ī5I5 [^s]o	ts:indicative+present is:third	# T8 + e
+SFX ṅ8 o e/Ī5I5 [^i]so	ts:indicative+present is:third	# T8 + e
+SFX ṅ8 o e [^s]o	ts:subjunctive+present is:first+singular	# T8 + e
+SFX ṅ8 o e [^i]so	ts:subjunctive+present is:first+singular	# T8 + e
+SFX ṅ8 o e [^s]o	ts:subjunctive+present is:second+singular	# T8 + e, 2s=3
+SFX ṅ8 o e [^i]so	ts:subjunctive+present is:second+singular	# T8 + e, 2s=3
+SFX ṅ8 o e [^s]o	ts:subjunctive+present is:third	# T8 + e
+SFX ṅ8 o e [^i]so	ts:subjunctive+present is:third	# T8 + e
+SFX ṅ8 o e/I1 iso	ts:indicative+present is:first+singular	# T8 + e
+SFX ṅ8 o e/I3 iso	ts:indicative+present is:second+singular	# T8 + e, 2s=3
+SFX ṅ8 o e/I5 iso	ts:indicative+present is:third	# T8 + e
 
 
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
@@ -1005,19 +1017,28 @@ SFX ā9 oe a/DƚN0 oe	ts:imperative+present is:second+singular	# T9
 
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
 # -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
-SFX b9 Y 2
-SFX b9 o i/Đ0D0 o	ts:imperative+present is:second+singular	# T9
-SFX b9 0 e o	ts:imperative+present is:second+singular	# T9
+SFX b9 Y 5
+SFX b9 o i/Đ0D0 [^s]o	ts:imperative+present is:second+singular	# T9
+SFX b9 o i/Đ0D0 [^i]so	ts:imperative+present is:second+singular	# T9
+SFX b9 0 e [^s]o	ts:imperative+present is:second+singular	# T9
+SFX b9 0 e [^i]so	ts:imperative+present is:second+singular	# T9
+SFX b9 o i/D0 iso	ts:imperative+present is:second+singular	# T9
 
 # senŧa èle vanesente
-SFX ḃ9 Y 2
-SFX ḃ9 o i/ĐlDlN0 o	ts:imperative+present is:second+singular	# T9
-SFX ḃ9 0 e/N0 o	ts:imperative+present is:second+singular	# T9
+SFX ḃ9 Y 5
+SFX ḃ9 o i/ĐlDlN0 [^s]o	ts:imperative+present is:second+singular	# T9
+SFX ḃ9 o i/ĐlDlN0 [^i]so	ts:imperative+present is:second+singular	# T9
+SFX ḃ9 0 e/N0 [^s]o	ts:imperative+present is:second+singular	# T9
+SFX ḃ9 0 e/N0 [^i]so	ts:imperative+present is:second+singular	# T9
+SFX ḃ9 o i/DlN0 iso	ts:imperative+present is:second+singular	# T9
 
 # ko èle vanesente
-SFX ḇ9 Y 2
-SFX ḇ9 o i/ĐƚDƚN0 o	ts:imperative+present is:second+singular	# T9
-SFX ḇ9 0 e/N0 o	ts:imperative+present is:second+singular	# T9
+SFX ḇ9 Y 5
+SFX ḇ9 o i/ĐƚDƚN0 [^s]o	ts:imperative+present is:second+singular	# T9
+SFX ḇ9 o i/ĐƚDƚN0 [^i]so	ts:imperative+present is:second+singular	# T9
+SFX ḇ9 0 e/N0 [^s]o	ts:imperative+present is:second+singular	# T9
+SFX ḇ9 0 e/N0 [^i]so	ts:imperative+present is:second+singular	# T9
+SFX ḇ9 o i/DƚN0 iso	ts:imperative+present is:second+singular	# T9
 
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
 # -àr: skomenŧiando da 'l indikativo prexente de prima parsona singolar
@@ -1070,17 +1091,24 @@ SFX āø oe a/DƚN0 oe	ts:indicative+present is:third	# T10
 
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
 # -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
-SFX bø Y 2
-SFX bø o e/Đ0D0N0 o	ts:indicative+present is:third	# T10, kavà ko NEEDAFFIX parké al tèma 8 el kuèrxe xà sto kaxo
-SFX bø 0 e o	ts:indicative+present is:third	# T10
+SFX bø Y 5
+SFX bø o e/Đ0D0N0 [^s]o	ts:indicative+present is:third	# T10, kavà ko NEEDAFFIX parké al tèma 8 el kuèrxe xà sto kaxo
+SFX bø o e/Đ0D0N0 [^i]so	ts:indicative+present is:third	# T10, kavà ko NEEDAFFIX parké al tèma 8 el kuèrxe xà sto kaxo
+SFX bø 0 e [^s]o	ts:indicative+present is:third	# T10
+SFX bø 0 e [^i]so	ts:indicative+present is:third	# T10
+SFX bø o e/D0 iso	ts:indicative+present is:third	# T10
 
 # senŧa èle vanesente
-SFX ḃø Y 1
-SFX ḃø o e/ĐlDlN0 o	ts:indicative+present is:third	# T10
+SFX ḃø Y 3
+SFX ḃø o e/ĐlDlN0 [^s]o	ts:indicative+present is:third	# T10
+SFX ḃø o e/ĐlDlN0 [^i]so	ts:indicative+present is:third	# T10
+SFX ḃø o e/DlN0 iso	ts:indicative+present is:third	# T10
 
 # ko èle vanesente
-SFX ḇø Y 1
-SFX ḇø o e/ĐƚDƚN0 o	ts:indicative+present is:third	# T10
+SFX ḇø Y 3
+SFX ḇø o e/ĐƚDƚN0 [^s]o	ts:indicative+present is:third	# T10
+SFX ḇø o e/ĐƚDƚN0 [^i]so	ts:indicative+present is:third	# T10
+SFX ḇø o e/DƚN0 iso	ts:indicative+present is:third	# T10
 
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i) + interrogative
 # -àr: skomenŧiando da 'l indikativo prexente de prima parsona singolar
