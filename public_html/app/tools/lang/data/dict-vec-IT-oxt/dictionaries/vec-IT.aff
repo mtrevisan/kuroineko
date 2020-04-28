@@ -290,7 +290,7 @@ NEEDAFFIX N0
 
 #-àr:			kantar/t1l1ƚ1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7nɨnʉlʉƚʉ, (kanto/t8n8a9ȧ9ā9aøȧøāøFS, kàntoe/t8n8a9ȧ9ā9ȧøāøN0 | exàmino/d8ṅ8e9ė9ē9eøėøēøFS)
 #-ér:			valer/t1l1ƚ1t2n2l2ƚ2t4n4p4l4ƚ4t5l5ƚ5t6t7n7nɨnʉlʉƚʉ, (valo/t8n8t9l9ƚ9tøløƚøFS, vàloe/t8n8t9l9ƚ9løƚøN0 | reflèto/d8ṅ8b9ḃ9ḇ9bøḃøḇøFS)
-#'-er:		kréder/e1ė1ē1n1l1ƚ1p1, (kredo/t8n8t9l9ƚ9tøløƚøFS, krédoe/t8n8t9l9ƚ9tøløƚøN0 | ?/d8ṅ8b9ḃ9ḇ9bøḃøḇøFS), krederò/t2n2l2ƚ2t4n4p4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7nɨnʉlʉƚʉ
+#'-er:		kréder/e1ė1ē1n1p1, (kredo/t8n8t9l9ƚ9tøløƚøFS, krédoe/t8n8t9l9ƚ9løƚøN0 | ?/d8ṅ8b9ḃ9ḇ9bøḃøḇøFS), krederò/t2n2l2ƚ2t4n4p4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7nɨnʉlʉƚʉ
 #-ír:			dormir/t1n1l1ƚ1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7nɨ, (dòrmo/t8n8t9l9ƚ9tøløƚønʉFS, dòrmoe/t8n8t9l9ƚ9tøløƚøN0 | dòrmo/d8ṅ8b9ḃ9ḇ9bøḃøḇøFS)
 #-ír/is::	fenir/t1n1l1ƚ1t2n2l2ƚ2t4n4l4ƚ4t5l5ƚ5t6t7n7l7ƚ7nɨ, (feniso/t8n8t9l9ƚ9tøløƚønʉlʉƚʉFS, fenísoe/t8n8t9l9ƚ9tøløƚønʉlʉƚʉN0 | feniso/d8ṅ8b9ḃ9ḇ9bøḃøḇønʉlʉƚʉFS)
 
@@ -306,20 +306,17 @@ SFX t1 ir í/P0N0 ir	ts:infinitive+simple
 
 # tèma 1
 # '-er: skomenŧiando da 'l infenío
-SFX e1 Y 3
+SFX e1 Y 2
 SFX e1 0 e r	ts:infinitive+simple	# T1 + r(e)
-SFX e1 0 0/Ɍ0N0 r	ts:infinitive+simple	# T1 + r
-SFX e1 er é/R0N0 er	ts:infinitive+simple
+SFX e1 0 0/Ᵽ0R0N0 r	ts:infinitive+simple	# T1 + r
 
 # senŧa èle vanesente
-SFX ė1 Y 2
-SFX ė1 0 0/ɌlN0 r	ts:infinitive+simple	# T1 + r
-SFX ė1 er é/RlN0 er	ts:infinitive+simple
+SFX ė1 Y 1
+SFX ė1 0 0/ⱣlRlN0 r	ts:infinitive+simple	# T1 + r
 
 # ko èle vanesente
-SFX ē1 Y 2
-SFX ē1 0 0/ɌƚN0 r	ts:infinitive+simple	# T1 + r
-SFX ē1 er é/RƚN0 er	ts:infinitive+simple
+SFX ē1 Y 1
+SFX ē1 0 0/ⱣƚRƚN0 r	ts:infinitive+simple	# T1 + r
 
 SFX n1 Y 12
 SFX n1 ànder andre ànder	ts:infinitive+simple
@@ -899,13 +896,14 @@ SFX t7 r endo/Ᵽ0 [^cijɉñ]ir	ts:gerund+simple	# T7 + ndo
 SFX t7 r ento/Ᵽ0FS [^cijɉñ]ir	ts:gerund+simple	# T7 + nto
 SFX t7 r ènto/Ᵽ0FS [^cijɉñ]ir	ts:gerund+simple	# T7 + nto
 
-SFX n7 Y 11
+SFX n7 Y 12
 SFX n7 r nt er	ts:participle+active	# T7 + nte
 SFX n7 ir ent ir	ts:participle+active	# T7 + nte
 SFX n7 ir ènt ir	ts:participle+active	# T7 + nte
 SFX n7 r ent [^cijɉñ]ir	ts:participle+active	# T7 + nte
 SFX n7 r ènt [^cijɉñ]ir	ts:participle+active	# T7 + nte
 SFX n7 ir est ir	ts:participle+passive is:singular+masculine	# T7 + st[oiae]
+SFX n7 rò nt erò	ts:gerund+simple	# T7 + nto
 SFX n7 erò ènt erò	ts:gerund+simple	# T7 + nto
 SFX n7 ir ent ir	ts:gerund+simple	# T7 + nto
 SFX n7 ir ènt ir	ts:gerund+simple	# T7 + nto
@@ -913,7 +911,10 @@ SFX n7 r ent [^cijɉñ]ir	ts:gerund+simple	# T7 + nto
 SFX n7 r ènt [^cijɉñ]ir	ts:gerund+simple	# T7 + nto
 
 # senŧa èle vanesente
-SFX l7 Y 10
+SFX l7 Y 13
+SFX l7 rò ndo/ⱣlN0 erò	ts:gerund+simple	# T7 + ndo
+SFX l7 rò nto/ⱣlN0 erò	ts:gerund+simple	# T7 + nto
+SFX l7 erò ènto/ⱣlN0 erò	ts:gerund+simple	# T7 + nto
 SFX l7 ir endo/ⱣlN0 ir	ts:gerund+simple	# T7 + ndo
 SFX l7 ir ento/ⱣlN0 ir	ts:gerund+simple	# T7 + nto
 SFX l7 ir ènto/ⱣlN0 ir	ts:gerund+simple	# T7 + nto
@@ -926,7 +927,10 @@ SFX l7 ir esta/ⱣlN0 ir	ts:participle+passive is:singular+masculine	# T7 + st[o
 SFX l7 ir este/ⱣlN0 ir	ts:participle+passive is:singular+masculine	# T7 + st[oiae]
 
 # ko èle vanesente
-SFX ƚ7 Y 10
+SFX ƚ7 Y 13
+SFX ƚ7 rò ndo/ⱣƚN0 erò	ts:gerund+simple	# T7 + ndo
+SFX ƚ7 rò nto/ⱣƚN0 erò	ts:gerund+simple	# T7 + nto
+SFX ƚ7 erò ènto/ⱣƚN0 erò	ts:gerund+simple	# T7 + nto
 SFX ƚ7 ir endo/ⱣƚN0 ir	ts:gerund+simple	# T7 + ndo
 SFX ƚ7 ir ento/ⱣƚN0 ir	ts:gerund+simple	# T7 + nto
 SFX ƚ7 ir ènto/ⱣƚN0 ir	ts:gerund+simple	# T7 + nto
@@ -6210,6 +6214,77 @@ SFX Pƚ ò veƚo erò	is:singular+masculine ds:pronomenal+reflexive
 SFX Pƚ ò veƚa erò	is:singular+femenine ds:pronomenal+reflexive
 SFX Pƚ ò veƚi erò	is:plural+masculine ds:pronomenal+reflexive
 SFX Pƚ ò veƚe erò	is:plural+femenine ds:pronomenal+reflexive
+
+# vèrbi pronomenali (takài)
+SFX R0 Y 14
+SFX R0 0 ge [ro]	ds:pronomenal+locative
+SFX R0 0 gen [ro]	ds:pronomenal+genitive+locative
+SFX R0 0 gin [ro]	ds:pronomenal+genitive+locative
+SFX R0 0 gene [ro]	ds:pronomenal+genitive+locative
+SFX R0 0 gine [ro]	ds:pronomenal+genitive+locative
+SFX R0 0 me [ro]	ds:pronomenal+reflexive
+SFX R0 0 mene [ro]	ds:pronomenal+reflexive
+SFX R0 0 ne [ro]	ds:pronomenal+genitive
+SFX R0 0 se [ro]	ds:pronomenal+reflexive
+SFX R0 0 sene [ro]	ds:pronomenal+reflexive
+SFX R0 0 te [ro]	ds:pronomenal+reflexive
+SFX R0 0 tene [ro]	ds:pronomenal+reflexive
+SFX R0 0 ve [ro]	ds:pronomenal+reflexive
+SFX R0 0 vene [ro]	ds:pronomenal+reflexive
+
+# vèrbi pronomenali (takài ko èle no vanesente)
+SFX Rl Y 24
+SFX Rl 0 gelo [ro]	is:singular+masculine ds:pronomenal+locative
+SFX Rl 0 gela [ro]	is:singular+femenine ds:pronomenal+locative
+SFX Rl 0 geli [ro]	is:plural+masculine ds:pronomenal+locative
+SFX Rl 0 gele [ro]	is:plural+femenine ds:pronomenal+locative
+SFX Rl 0 lo [ro]	is:singular+masculine ds:pronomenal+accusative
+SFX Rl 0 la [ro]	is:singular+femenine ds:pronomenal+accusative
+SFX Rl 0 li [ro]	is:plural+masculine ds:pronomenal+accusative
+SFX Rl 0 le [ro]	is:plural+femenine ds:pronomenal+accusative
+SFX Rl 0 melo [ro]	is:singular+masculine ds:pronomenal+reflexive
+SFX Rl 0 mela [ro]	is:singular+femenine ds:pronomenal+reflexive
+SFX Rl 0 meli [ro]	is:plural+masculine ds:pronomenal+reflexive
+SFX Rl 0 mele [ro]	is:plural+femenine ds:pronomenal+reflexive
+SFX Rl 0 selo [ro]	is:singular+masculine ds:pronomenal+reflexive
+SFX Rl 0 sela [ro]	is:singular+femenine ds:pronomenal+reflexive
+SFX Rl 0 seli [ro]	is:plural+masculine ds:pronomenal+reflexive
+SFX Rl 0 sele [ro]	is:plural+femenine ds:pronomenal+reflexive
+SFX Rl 0 telo [ro]	is:singular+masculine ds:pronomenal+reflexive
+SFX Rl 0 tela [ro]	is:singular+femenine ds:pronomenal+reflexive
+SFX Rl 0 teli [ro]	is:plural+masculine ds:pronomenal+reflexive
+SFX Rl 0 tele [ro]	is:plural+femenine ds:pronomenal+reflexive
+SFX Rl 0 velo [ro]	is:singular+masculine ds:pronomenal+reflexive
+SFX Rl 0 vela [ro]	is:singular+femenine ds:pronomenal+reflexive
+SFX Rl 0 veli [ro]	is:plural+masculine ds:pronomenal+reflexive
+SFX Rl 0 vele [ro]	is:plural+femenine ds:pronomenal+reflexive
+
+# vèrbi pronomenali (takài ko èle vanesente)
+SFX Rƚ Y 24
+SFX Rƚ 0 geƚo [ro]	is:singular+masculine ds:pronomenal+locative
+SFX Rƚ 0 geƚa [ro]	is:singular+femenine ds:pronomenal+locative
+SFX Rƚ 0 geƚi [ro]	is:plural+masculine ds:pronomenal+locative
+SFX Rƚ 0 geƚe [ro]	is:plural+femenine ds:pronomenal+locative
+SFX Rƚ 0 ƚo o	is:singular+masculine ds:pronomenal+accusative
+SFX Rƚ 0 ƚa o	is:singular+femenine ds:pronomenal+accusative
+SFX Rƚ 0 ƚi o	is:plural+masculine ds:pronomenal+accusative
+SFX Rƚ 0 ƚe o	is:plural+femenine ds:pronomenal+accusative
+SFX Rƚ 0 meƚo [ro]	is:singular+masculine ds:pronomenal+reflexive
+SFX Rƚ 0 meƚa [ro]	is:singular+femenine ds:pronomenal+reflexive
+SFX Rƚ 0 meƚi [ro]	is:plural+masculine ds:pronomenal+reflexive
+SFX Rƚ 0 meƚe [ro]	is:plural+femenine ds:pronomenal+reflexive
+SFX Rƚ 0 seƚo [ro]	is:singular+masculine ds:pronomenal+reflexive
+SFX Rƚ 0 seƚa [ro]	is:singular+femenine ds:pronomenal+reflexive
+SFX Rƚ 0 seƚi [ro]	is:plural+masculine ds:pronomenal+reflexive
+SFX Rƚ 0 seƚe [ro]	is:plural+femenine ds:pronomenal+reflexive
+SFX Rƚ 0 teƚo [ro]	is:singular+masculine ds:pronomenal+reflexive
+SFX Rƚ 0 teƚa [ro]	is:singular+femenine ds:pronomenal+reflexive
+SFX Rƚ 0 teƚi [ro]	is:plural+masculine ds:pronomenal+reflexive
+SFX Rƚ 0 teƚe [ro]	is:plural+femenine ds:pronomenal+reflexive
+SFX Rƚ 0 veƚo [ro]	is:singular+masculine ds:pronomenal+reflexive
+SFX Rƚ 0 veƚa [ro]	is:singular+femenine ds:pronomenal+reflexive
+SFX Rƚ 0 veƚi [ro]	is:plural+masculine ds:pronomenal+reflexive
+SFX Rƚ 0 veƚe [ro]	is:plural+femenine ds:pronomenal+reflexive
 
 
 # vèrbi pronomenali pal komandativo (stakài)
