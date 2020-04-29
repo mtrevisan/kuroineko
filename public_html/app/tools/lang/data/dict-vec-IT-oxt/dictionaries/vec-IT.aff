@@ -418,8 +418,8 @@ SFX t2 r si [aei]r	ds:subjunctive+imperfect is:second+plural	# T2 + si
 SFX t2 rò si erò	ds:subjunctive+imperfect is:second+plural	# T2 + si
 SFX t2 r se [aei]r	ds:subjunctive+imperfect is:third	# T2 + se
 SFX t2 rò se erò	ds:subjunctive+imperfect is:third	# T2 + se
-SFX t2 r sto/A1 [aei]r	ds:participle+passive is:singular+masculine	# T2 + st[oiae]
-SFX t2 rò sto/A1 erò	ds:participle+passive is:singular+masculine	# T2 + st[oiae]
+SFX t2 r sto/A1 [aei]r	ds:participle+passive+weak is:singular+masculine	# T2 + st[oiae]
+SFX t2 rò sto/A1 erò	ds:participle+passive+weak is:singular+masculine	# T2 + st[oiae]
 SFX t2 r ndo/Ᵽ0 [aei]r	ds:gerund+simple	# T2 + ndo = T7 + ndo
 SFX t2 ar àndo/P0N0 ar	ds:gerund+simple	# T2 + ndo = T7 + ndo
 SFX t2 er éndo/P0N0 er	ds:gerund+simple	# T2 + ndo = T7 + ndo
@@ -542,10 +542,10 @@ SFX n2 ar esi ar	ds:subjunctive+imperfect is:second+singular	# T2 + si, T2 = T1:
 SFX n2 ar esi ar	ds:subjunctive+imperfect is:second+plural	# T2 + si, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 ar ese ar	ds:subjunctive+imperfect is:third	# T2 + se, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 ar ésimo ar	ds:subjunctive+imperfect is:second+plural	# T2 + simo, T2 = T1: aŧento PVT > VT | à > é
-SFX n2 ar esto/A1FS ar	ds:participle+passive is:singular+masculine	# T2 + st[oiae], T2 = T1: aŧento PVT > VT | à > é
-SFX n2 ir esto/A1FS ir	ds:participle+passive is:singular+masculine	# T2 + st[oiae], T2 = T1: aŧento PVT > VT | í > é
-SFX n2 r st [aei]r	ds:participle+passive is:singular+masculine	# T2 + st[oiae]
-SFX n2 rò st erò	ds:participle+passive is:singular+masculine	# T2 + st[oiae]
+SFX n2 ar esto/A1FS ar	ds:participle+passive+weak is:singular+masculine	# T2 + st[oiae], T2 = T1: aŧento PVT > VT | à > é
+SFX n2 ir esto/A1FS ir	ds:participle+passive+weak is:singular+masculine	# T2 + st[oiae], T2 = T1: aŧento PVT > VT | í > é
+SFX n2 r st [aei]r	ds:participle+passive+weak is:singular+masculine	# T2 + st[oiae]
+SFX n2 rò st erò	ds:participle+passive+weak is:singular+masculine	# T2 + st[oiae]
 SFX n2 r nt [aei]r	ds:gerund+simple	# T2 + nto = T7 + nto
 SFX n2 ar endo/Ᵽ0Ᵽl ar	ds:gerund+simple	# T2 + ndo = T7 + ndo, T2 = T1: aŧento PVT > VT | à > é
 SFX n2 ar éndo/P0N0 ar	ds:gerund+simple	# T2 + ndo = T7 + ndo, T2 = T1: aŧento PVT > VT | à > é
@@ -881,19 +881,19 @@ SFX ƚ5 ir é/ĐƚDƚN0 ir	ds:imperative+present is:second+plural	# T5
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
 SFX t6 Y 13
-SFX t6 r do/A1 [ai]r	ds:participle+passive is:singular+masculine	# T6 + d[oiae]
-SFX t6 ar à/A1 ar	ds:participle+passive is:singular+masculine	# T6 + ([oiae])
-SFX t6 ar ò ar	ds:participle+passive is:singular+masculine	# T6 + ([oiae])
-SFX t6 ar è/A1 ar	ds:participle+passive is:singular+masculine	# T6 + ([oiae])
-SFX t6 ir í/A1 ir	ds:participle+passive is:singular+masculine	# T6 + ([oiae])
-SFX t6 er udo/A1 [^u]er	ds:participle+passive is:singular+masculine	# T6 + d[oiae]
-SFX t6 er ú/A1 [^u]er	ds:participle+passive is:singular+masculine	# T6 + ([oiae])
-SFX t6 uer do/A1 uer	ds:participle+passive is:singular+masculine	# T6 + d[oiae]
-SFX t6 uer ú/A1 uer	ds:participle+passive is:singular+masculine	# T6 + ([oiae])
-SFX t6 erò udo/A1 [^u]erò	ds:participle+passive is:singular+masculine	# T6 + d[oiae]
-SFX t6 erò ú/A1 [^u]erò	ds:participle+passive is:singular+masculine	# T6 + ([oiae])
-SFX t6 uerò do/A1 uerò	ds:participle+passive is:singular+masculine	# T6 + d[oiae]
-SFX t6 uerò ú/A1 uerò	ds:participle+passive is:singular+masculine	# T6 + ([oiae])
+SFX t6 r do/A1 [ai]r	ds:participle+passive+weak is:singular+masculine	# T6 + d[oiae]
+SFX t6 ar à/A1 ar	ds:participle+passive+weak is:singular+masculine	# T6 + ([oiae])
+SFX t6 ar ò ar	ds:participle+passive+weak is:singular+masculine	# T6 + ([oiae])
+SFX t6 ar è/A1 ar	ds:participle+passive+weak is:singular+masculine	# T6 + ([oiae])
+SFX t6 ir í/A1 ir	ds:participle+passive+weak is:singular+masculine	# T6 + ([oiae])
+SFX t6 er udo/A1 [^u]er	ds:participle+passive+weak is:singular+masculine	# T6 + d[oiae]
+SFX t6 er ú/A1 [^u]er	ds:participle+passive+weak is:singular+masculine	# T6 + ([oiae])
+SFX t6 uer do/A1 uer	ds:participle+passive+weak is:singular+masculine	# T6 + d[oiae]
+SFX t6 uer ú/A1 uer	ds:participle+passive+weak is:singular+masculine	# T6 + ([oiae])
+SFX t6 erò udo/A1 [^u]erò	ds:participle+passive+weak is:singular+masculine	# T6 + d[oiae]
+SFX t6 erò ú/A1 [^u]erò	ds:participle+passive+weak is:singular+masculine	# T6 + ([oiae])
+SFX t6 uerò do/A1 uerò	ds:participle+passive+weak is:singular+masculine	# T6 + d[oiae]
+SFX t6 uerò ú/A1 uerò	ds:participle+passive+weak is:singular+masculine	# T6 + ([oiae])
 
 
 # tèma 7 (from T1: aŧento PVT > VT, then T2: í > é)
@@ -910,7 +910,7 @@ SFX t7 ir ente/FS ir	ds:participle+active	# T7 + nte
 SFX t7 ir ènte/FS ir	ds:participle+active	# T7 + nte
 SFX t7 r ente/FS [^cijɉñ]ir	ds:participle+active	# T7 + nte
 SFX t7 r ènte/FS [^cijɉñ]ir	ds:participle+active	# T7 + nte
-SFX t7 ir esto/A1Ᵽ0 ir	ds:participle+passive is:singular+masculine	# T7 + st[oiae]
+SFX t7 ir esto/A1Ᵽ0 ir	ds:participle+passive+weak is:singular+masculine	# T7 + st[oiae]
 SFX t7 rò ndo/Ᵽ0 erò	ds:gerund+simple	# T7 + ndo
 SFX t7 rò nto/Ᵽ0FS erò	ds:gerund+simple	# T7 + nto
 SFX t7 erò ènto/Ᵽ0FS erò	ds:gerund+simple	# T7 + nto
@@ -951,7 +951,7 @@ SFX n7 ir ent ir	ds:participle+active	# T7 + nte
 SFX n7 ir ènt ir	ds:participle+active	# T7 + nte
 SFX n7 r ent [^cijɉñ]ir	ds:participle+active	# T7 + nte
 SFX n7 r ènt [^cijɉñ]ir	ds:participle+active	# T7 + nte
-SFX n7 ir est ir	ds:participle+passive is:singular+masculine	# T7 + st[oiae]
+SFX n7 ir est ir	ds:participle+passive+weak is:singular+masculine	# T7 + st[oiae]
 SFX n7 rò nt erò	ds:gerund+simple	# T7 + nto
 SFX n7 erò ènt erò	ds:gerund+simple	# T7 + nto
 SFX n7 ir ent ir	ds:gerund+simple	# T7 + nto

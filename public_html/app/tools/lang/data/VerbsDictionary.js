@@ -59,6 +59,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "alve",			"dex",		1,	0,	"g",	"1867",			"Esir da ʼl alveo, deviar.",
 "alveg",			"",			1,	0,	"g",	"1560",			"Loxar.",
 "am",				"",			1,	0,	"g",	"1867",			"",
+"am",				"stra",		1,	0,	"g",	"",				"",
 "amaređ",		"",			1,	4,	"a",	"1867",			"Rénder amaro.",
 "amid",			"in",			1,	0,	"g",	"",				"",
 "amin",			"ex",			1,	0,	"g",	"1454",			"",
