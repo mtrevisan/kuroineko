@@ -6644,12 +6644,16 @@ SFX ǐs o isia/F0 o	is:singular+femenine
 
 
 # nominali deverbali (-mento)
-SFX r0 Y 5
+SFX r0 Y 9
 SFX r0 0 mento/M0FSṖd a	is:singular+masculine
-SFX r0 0 amènto/M0FS n
 SFX r0 0 amento/M0FSṖd n
-SFX r0 o amènto/M0FS o
-SFX r0 o amento/M0FSṖd o
+SFX r0 0 amènto/M0FS n
+SFX r0 o amento/M0FSṖd [^c]o
+SFX r0 o amento/M0FSṖd [^ò]co
+SFX r0 òco ocamento/M0FSṖd òco
+SFX r0 o amènto/M0FS [^c]o
+SFX r0 o amènto/M0FS [^ò]co
+SFX r0 òco ocamènto/M0FS òco
 
 # nominali deverbali ko èle vanesente (-mento)
 SFX ɍ0 Y 2
@@ -6732,7 +6736,7 @@ SFX s1 ía ixmo/M0 ía
 
 
 # negòŧi, atività komerŧali o industriali, aŧion, scapi de ròbe o de parsone (-ría/F0ět)
-SFX v0 Y 53
+SFX v0 Y 57
 SFX v0 0 ría/F0 e	is:singular+femenine
 SFX v0 0 rïeta/F0 e	is:singular+femenine
 SFX v0 e aría/F0 e	is:singular+femenine
@@ -6755,10 +6759,10 @@ SFX v0 0 ría/F0 [^ílƚ]a	is:singular+femenine
 SFX v0 0 rïeta/F0 [^ílƚ]a	is:singular+femenine
 SFX v0 a ería/F0 [^ílƚ]a	is:singular+femenine
 SFX v0 a erïeta/F0 [^ílƚ]a	is:singular+femenine
-SFX v0 o aría/F0 [^cdk]o	is:singular+femenine
-SFX v0 o ería/F0 [^cdk]o	is:singular+femenine
-SFX v0 o arïeta/F0 [^cdk]o	is:singular+femenine
-SFX v0 o erïeta/F0 [^cdk]o	is:singular+femenine
+SFX v0 o aría/F0 [^cdkí]o	is:singular+femenine
+SFX v0 o ería/F0 [^cdkí]o	is:singular+femenine
+SFX v0 o arïeta/F0 [^cdkí]o	is:singular+femenine
+SFX v0 o erïeta/F0 [^cdkí]o	is:singular+femenine
 SFX v0 èla elaría/F0 èla	is:singular+femenine
 SFX v0 èla elería/F0 èla	is:singular+femenine
 SFX v0 èla elarïeta/F0 èla	is:singular+femenine
@@ -6783,6 +6787,10 @@ SFX v0 o aría/F0 [^ò][dk]o	is:singular+femenine
 SFX v0 o ería/F0 [^ò][dk]o	is:singular+femenine
 SFX v0 o arïeta/F0 [^ò][dk]o	is:singular+femenine
 SFX v0 o erïeta/F0 [^ò][dk]o	is:singular+femenine
+SFX v0 ío iaría/F0 ío	is:singular+femenine
+SFX v0 ío iería/F0 ío	is:singular+femenine
+SFX v0 ío iarïeta/F0 ío	is:singular+femenine
+SFX v0 ío ierïeta/F0 ío	is:singular+femenine
 SFX v0 ía ieta/F0 ería	is:singular+femenine
 SFX v0 ería aría/F0 ería	is:singular+femenine
 SFX v0 ería arïeta/F0 ería	is:singular+femenine
@@ -7109,8 +7117,9 @@ SFX ǒt o òto/M0FS [^ò]ko
 SFX ǒt a òta/F0 [^è][clsŧ]a
 
 # sostantivi/ajetivi alterài – kresitivi ko èle vanesente (-òto/a)
-SFX ǒŧ Y 10
-SFX ǒŧ a òta/F0 ra
+SFX ǒŧ Y 11
+SFX ǒŧ a òta/F0 [^è]ra
+SFX ǒŧ èra eròta/F0 èra
 SFX ǒŧ èa eòta/F0 èa
 SFX ǒŧ ía ïòta/F0 ía
 SFX ǒŧ èr eròto/M0 èr
