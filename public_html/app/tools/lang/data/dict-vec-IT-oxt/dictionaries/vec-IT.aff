@@ -1157,9 +1157,9 @@ SFX ᵽ4 erò arave/ī6N0 erò	ds:conditional+present is:third	# T4 + rà(v)e
 SFX ᵽ4 erò aràve/i6N0 erò	ds:conditional+present is:third	# T4 + rà(v)e
 
 
+# baxe:
 # tèma 8 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: VT > Ø)
 # -àr, -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
-#TODO add pronomenal verbs
 SFX t8 Y 10
 SFX t8 0 0/Ī1N0 o	ds:indicative+present is:first+singular	# T8 + o
 SFX t8 e 0/I1N0 oe	ds:indicative+present is:first+singular	# T8 + o
@@ -1172,6 +1172,9 @@ SFX t8 o i [^i]o	ds:subjunctive+present is:second+singular	# T8 + i
 SFX t8 io i io	ds:subjunctive+present is:second+singular	# T8 + i
 SFX t8 o e o	ds:subjunctive+present is:third	# T8 + e
 
+# variante fel.-bel. e liv.:
+# tèma 8 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: VT > Ø)
+# -àr, -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
 SFX n8 Y 8
 SFX n8 o e/Ī1 o	ds:indicative+present is:first+singular	# T8 + e
 SFX n8 oe e/I1N0 oe	ds:indicative+present is:first+singular	# T8 + e
@@ -1222,65 +1225,68 @@ SFX ṅ8 o e o	ds:subjunctive+present is:third	# T8 + e
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
 # -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
 SFX tē Y 3
+SFX tē o e o	ds:indicative+present is:third	# T10
 SFX tē o i/Đ0 o	ds:imperative+present is:second+singular	# T9
 SFX tē oe i/D0N0 oe	ds:imperative+present is:second+singular	# T9
-SFX tē o e o	ds:indicative+present is:third	# T10
 
 # baxe:
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
 # -àr: skomenŧiando da 'l indikativo prexente de prima parsona singolar
 SFX tā Y 3
+SFX tā o a o	ds:indicative+present is:third	# T10
 SFX tā o a/Đ0 o	ds:imperative+present is:second+singular	# T9
 SFX tā oe a/D0N0 oe	ds:imperative+present is:second+singular	# T9
-SFX tā o a o	ds:indicative+present is:third	# T10
 
 # senŧa èle vanesente:
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
 # -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
 SFX lē Y 4
-SFX lē o i/ĐlN0 o	ds:imperative+present is:second+singular	# T9
-SFX lē oe i/DlN0 oe	ds:imperative+present is:second+singular	# T9
 SFX lē o e/Ī5N0 o	ds:indicative+present is:third	# T10
 SFX lē oe e/I5N0 oe	ds:indicative+present is:third	# T10
+SFX lē o i/ĐlN0 o	ds:imperative+present is:second+singular	# T9
+SFX lē oe i/DlN0 oe	ds:imperative+present is:second+singular	# T9
 
 # senŧa èle vanesente:
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
 # -àr: skomenŧiando da 'l indikativo prexente de prima parsona singolar
 SFX lā Y 4
-SFX lā o a/ĐlN0 o	ds:imperative+present is:second+singular	# T9
-SFX lā oe a/DlN0 oe	ds:imperative+present is:second+singular	# T9
 SFX lā o a/Ī5N0 o	ds:indicative+present is:third	# T10
 SFX lā oe a/I5N0 oe	ds:indicative+present is:third	# T10
+SFX lā o a/ĐlN0 o	ds:imperative+present is:second+singular	# T9
+SFX lā oe a/DlN0 oe	ds:imperative+present is:second+singular	# T9
 
 # ko èle vanesente:
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
 # -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
 SFX ƚē Y 4
-SFX ƚē o i/ĐƚN0 o	ds:imperative+present is:second+singular	# T9
-SFX ƚē oe i/DƚN0 oe	ds:imperative+present is:second+singular	# T9
 SFX ƚē o e/ī5N0 o	ds:indicative+present is:third	# T10
 SFX ƚē oe e/i5N0 oe	ds:indicative+present is:third	# T10
+SFX ƚē o i/ĐƚN0 o	ds:imperative+present is:second+singular	# T9
+SFX ƚē oe i/DƚN0 oe	ds:imperative+present is:second+singular	# T9
 
 # ko èle vanesente:
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
 # -àr: skomenŧiando da 'l indikativo prexente de prima parsona singolar
 SFX ƚā Y 4
-SFX ƚā o a/ĐƚN0 o	ds:imperative+present is:second+singular	# T9
-SFX ƚā oe a/DƚN0 oe	ds:imperative+present is:second+singular	# T9
 SFX ƚā o a/ī5N0 o	ds:indicative+present is:third	# T10
 SFX ƚā oe a/i5N0 oe	ds:indicative+present is:third	# T10
+SFX ƚā o a/ĐƚN0 o	ds:imperative+present is:second+singular	# T9
+SFX ƚā oe a/DƚN0 oe	ds:imperative+present is:second+singular	# T9
 
 
 # baxe, ko asento:
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
 # -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
-SFX tè Y 4
+SFX tè Y 7
+SFX tè o e [^s]o	ds:indicative+present is:third	# T10
+SFX tè o e [^i]so	ds:indicative+present is:third	# T10
+SFX tè o e iso	ds:indicative+present is:third	# T10
 SFX tè o i/Đ0D0 [^s]o	ds:imperative+present is:second+singular	# T9
 SFX tè o i/Đ0D0 [^i]so	ds:imperative+present is:second+singular	# T9
 SFX tè o i/Đ0 iso	ds:imperative+present is:second+singular	# T9
@@ -1290,14 +1296,19 @@ SFX tè iso ísi/D0N0 iso	ds:imperative+present is:second+singular	# T9
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
 # -àr: skomenŧiando da 'l indikativo prexente de prima parsona singolar
-SFX tà Y 1
+SFX tà Y 2
+SFX tà o a o	ds:indicative+present is:third	# T10
 SFX tà o a/Đ0D0 o	ds:imperative+present is:second+singular	# T9
 
 # senŧa èle vanesente, ko asento:
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
 # -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
-SFX lè Y 4
+SFX lè Y 8
+SFX lè o e/Ī5I5N0 [^s]o	ds:indicative+present is:third	# T10
+SFX lè o e/Ī5I5N0 [^i]so	ds:indicative+present is:third	# T10
+SFX lè o e/Ī5N0 iso	ds:indicative+present is:third	# T10
+SFX lè iso íse/I5N0 iso	ds:indicative+present is:third	# T10
 SFX lè o i/ĐlDlN0 [^s]o	ds:imperative+present is:second+singular	# T9
 SFX lè o i/ĐlDlN0 [^i]so	ds:imperative+present is:second+singular	# T9
 SFX lè o i/ĐlN0 iso	ds:imperative+present is:second+singular	# T9
@@ -1307,14 +1318,19 @@ SFX lè iso ísi/DlN0 iso	ds:imperative+present is:second+singular	# T9
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
 # -àr: skomenŧiando da 'l indikativo prexente de prima parsona singolar
-SFX là Y 1
+SFX là Y 2
+SFX là o a/Ī5I5N0 o	ds:indicative+present is:third	# T10
 SFX là o a/ĐlDlN0 o	ds:imperative+present is:second+singular	# T9
 
 # ko èle vanesente, ko asento:
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
 # -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
-SFX ƚè Y 4
+SFX ƚè Y 8
+SFX ƚè o e/ī5i5N0 [^s]o	ds:indicative+present is:third	# T10
+SFX ƚè o e/ī5i5N0 [^i]so	ds:indicative+present is:third	# T10
+SFX ƚè o e/ī5N0 iso	ds:indicative+present is:third	# T10
+SFX ƚè iso íse/i5N0 iso	ds:indicative+present is:third	# T10
 SFX ƚè o i/ĐƚDƚN0 [^s]o	ds:imperative+present is:second+singular	# T9
 SFX ƚè o i/ĐƚDƚN0 [^i]so	ds:imperative+present is:second+singular	# T9
 SFX ƚè o i/ĐƚN0 iso	ds:imperative+present is:second+singular	# T9
@@ -1324,43 +1340,9 @@ SFX ƚè iso ísi/DƚN0 iso	ds:imperative+present is:second+singular	# T9
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
 # -àr: skomenŧiando da 'l indikativo prexente de prima parsona singolar
-SFX ƚà Y 1
+SFX ƚà Y 2
+SFX ƚà o a/ī5i5N0 o	ds:indicative+present is:third	# T10
 SFX ƚà o a/ĐƚDƚN0 o	ds:imperative+present is:second+singular	# T9
-
-
-# tèma 10, paròla ko asento (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
-# -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
-SFX bø Y 3
-SFX bø o e [^s]o	ds:indicative+present is:third	# T10, kavà ko NEEDAFFIX parké al tèma 8 el kuèrxe xà sto kaxo
-SFX bø o e [^i]so	ds:indicative+present is:third	# T10, kavà ko NEEDAFFIX parké al tèma 8 el kuèrxe xà sto kaxo
-SFX bø o e iso	ds:indicative+present is:third	# T10, kavà ko NEEDAFFIX parké al tèma 8 el kuèrxe xà sto kaxo
-
-# senŧa èle vanesente
-SFX ḃø Y 4
-SFX ḃø o e/Ī5I5N0 [^s]o	ds:indicative+present is:third	# T10
-SFX ḃø o e/Ī5I5N0 [^i]so	ds:indicative+present is:third	# T10
-SFX ḃø o e/Ī5N0 iso	ds:indicative+present is:third	# T10
-SFX ḃø iso íse/I5N0 iso	ds:indicative+present is:third	# T10
-
-# ko èle vanesente
-SFX ḇø Y 4
-SFX ḇø o e/ī5i5N0 [^s]o	ds:indicative+present is:third	# T10
-SFX ḇø o e/ī5i5N0 [^i]so	ds:indicative+present is:third	# T10
-SFX ḇø o e/ī5N0 iso	ds:indicative+present is:third	# T10
-SFX ḇø iso íse/i5N0 iso	ds:indicative+present is:third	# T10
-
-# tèma 10, paròla ko asento (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i) + interrogative
-# -àr: skomenŧiando da 'l indikativo prexente de prima parsona singolar
-SFX eø Y 1
-SFX eø o a o	ds:indicative+present is:third	# T10
-
-# senŧa èle vanesente
-SFX ėø Y 1
-SFX ėø o a/Ī5I5N0 o	ds:indicative+present is:third	# T10
-
-# ko èle vanesente
-SFX ēø Y 1
-SFX ēø o a/ī5i5N0 o	ds:indicative+present is:third	# T10
 
 
 # tèma 12 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: VT > Ø, then T8: senŧa aŧento)
