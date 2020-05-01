@@ -229,8 +229,6 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "baj",			"x",			1,	1,	"g",	"fine XIII",	"Voxe de fà el kan.",
 "bajaf",			"x",			1,	3,	"g",	"1980",			"(bixiak) Carlar.",
 "bajonet",		"",			1,	5,	"a",	"1829",			"",
-"baɉ",			"",			1,	1,	"g",	"1867",			"",
-"baɉ",			"x",			1,	1,	"g",	"1854",			"",
 "bajok",			"in",			1,	3,	"g",	"1854",			"Far bale de neve.",
 "bak",			"",			1,	1,	"g",	"1775",			"Bokexar ke fà un ke ʼl é drio morir.",
 "bakaj",			"",			1,	3,	"g",	"1523",			"Parlar a voxe alta, parlar a vanvera.",
