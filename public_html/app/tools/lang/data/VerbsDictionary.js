@@ -302,6 +302,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bandeđ",		"",			1,	4,	"a",	"1415",			"Bandir.",
 "bandeđ",		"in",			1,	4,	"a",	"1560",			"",
 "bandiđ",		"",			1,	4,	"a",	"1851",			"Bandir.",
+"bandiđ",		"in",			1,	4,	"a",	"",				"",
 "bandier",		"in",			1,	5,	"g",	"1877",			"",
 "bandon",		"",			1,	4,	"a",	"1867",			"",
 "bandon",		"a",			1,	4,	"a",	"1385",			"",
