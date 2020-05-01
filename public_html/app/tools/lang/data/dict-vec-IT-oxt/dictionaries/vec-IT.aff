@@ -7393,82 +7393,82 @@ SFX ǔᶊ o uso/M0 o
 
 # sostantivi/vèrbi alterài (anti-)
 PFX ^0 Y 1
-PFX ^0 0 anti .
+PFX ^0 0 anti .	ds:anti
 
 # sostantivi/vèrbi alterài (tra-)
 PFX ^1 Y 1
-PFX ^1 0 tra .
+PFX ^1 0 tra .	ds:tra
 
 # sostantivi/vèrbi alterài (pre-)
 PFX ^2 Y 1
-PFX ^2 0 pre .
+PFX ^2 0 pre .	ds:pre
 
 # sostantivi/vèrbi alterài (kapo-)
 PFX ^3 Y 2
-PFX ^3 0 kapo .
-PFX ^3 0 kapo- .
+PFX ^3 0 kapo .	ds:kapo
+PFX ^3 0 kapo- .	ds:kapo
 
 # sostantivi/vèrbi alterài (kontra-)
 PFX ^4 Y 2
-PFX ^4 0 kontra .
-PFX ^4 0 kontra- .
+PFX ^4 0 kontra .	ds:kontro
+PFX ^4 0 kontra- .	ds:kontro
 
 # sostantivi/vèrbi alterài (kontro-)
 PFX ^5 Y 2
-PFX ^5 0 kontro .
-PFX ^5 0 kontro- .
+PFX ^5 0 kontro .	ds:kontro
+PFX ^5 0 kontro- .	ds:kontro
 
 # sostantivi/vèrbi alterài (stra-)
 PFX ^6 Y 2
-PFX ^6 0 stra .
-PFX ^6 0 stra- .
+PFX ^6 0 stra .	ds:stra
+PFX ^6 0 stra- .	ds:stra
 
 # sostantivi/vèrbi alterài (mal-)
 PFX ^7 Y 2
-PFX ^7 0 mal [^aàeèéiíoòóuúƚ]
-PFX ^7 0 mal- [^aàeèéiíoòóuúƚ]
+PFX ^7 0 mal [^aàeèéiíoòóuúƚ]	ds:mal
+PFX ^7 0 mal- [^aàeèéiíoòóuúƚ]	ds:mal
 
 # sostantivi/vèrbi alterài (ben-)
 PFX ^8 Y 2
-PFX ^8 0 ben [^ƚ]
-PFX ^8 0 ben- [^ƚ]
+PFX ^8 0 ben [^ƚ]	ds:ben
+PFX ^8 0 ben- [^ƚ]	ds:ben
 
 # prefiso par lontanamento o sbasamento (de-)
 PFX -0 Y 1
-PFX -0 0 de .
+PFX -0 0 de .	ds:de
 
 # prefiso par lontanamento o sbasamento, eufònego a de- (de(s/x)-)
 PFX -1 Y 3
-PFX -1 0 des [cfkpt]
-PFX -1 0 dex [aàeèéiíoòóuúmnñbdđgjɉsŧvrl]
-PFX -1 0 de x
+PFX -1 0 des [cfkpt]	ds:des
+PFX -1 0 dex [aàeèéiíoòóuúmnñbdđgjɉsŧvrl]	ds:des
+PFX -1 0 de x	ds:des
 
 # sostantivi/vèrbi deajetivali (i(n)-)
 PFX +0 Y 3
-PFX +0 0 in- n
-PFX +0 0 in [^ƚn]
-PFX +0 0 i [lƚmnñrs]
+PFX +0 0 in- n	ds:in
+PFX +0 0 in [^ƚn]	ds:in
+PFX +0 0 i [lƚmnñrs]	ds:in
 
 # prefiso par aŧion kontraria o privativa–peđorativa, xlontanamento, esía, separaŧion (s/x-)
 PFX *0 Y 2
-PFX *0 0 s [cfkptŧ]
-PFX *0 0 x [aàeèéiíoòóuúmnñbdđgjɉsvrl]
+PFX *0 0 s [cfkptŧ]	ds:s
+PFX *0 0 x [aàeèéiíoòóuúmnñbdđgjɉsvrl]	ds:s
 
 # prefiso par aŧion repetúa (r[ea]-/ar-)
 PFX .0 Y 4
-PFX .0 0 re .
-PFX .0 0 re- .
-PFX .0 0 ra [^a]
-PFX .0 0 ar [^ƚ]
+PFX .0 0 re .	ds:re
+PFX .0 0 re- .	ds:re
+PFX .0 0 ra [^a]	ds:re
+PFX .0 0 ar [^ƚ]	ds:re
 
 # prefiso par direŧion, veŧinamento, đontamento, valor intensivo (a-)
 PFX @0 Y 1
-PFX @0 0 a .
+PFX @0 0 a .	ds:a
 
 # prefiso par union, parteŧipaŧion, kolegamento (kon-)
 PFX :0 Y 2
-PFX :0 0 kon [^n]
-PFX :0 0 ko n
+PFX :0 0 kon [^n]	ds:kon
+PFX :0 0 ko n	ds:kon
 
 
 # leniŧion iniŧial (gua- > va-)
