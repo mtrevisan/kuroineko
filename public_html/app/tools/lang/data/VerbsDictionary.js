@@ -382,7 +382,6 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bas",			"ar",			1,	1,	"g",	"",				"",
 "bas",			"re",			1,	1,	"g",	"1854",			"",
 "bas",			"x",			1,	1,	"g",	"1560",			"",
-"basil",			"",			1,	3,	"a",	"1867",			"Vacilar.",
 "bast",			"",			1,	1,	"g",	"1590",			"",
 "bast",			"stra",		1,	1,	"g",	"1867",			"",
 "bast",			"",			4,	4,	"a",	"1876",			"",
