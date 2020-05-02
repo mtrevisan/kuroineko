@@ -39,7 +39,7 @@ po:adjective( [^i]|$) # add is:...
 o[nl]/[^\r\nU]+U\d > add exception to hyphenation rules
 ^l[^\r\n]+FS[^\r\n]*Ṿè	> split and remove FS from ƚ
 (ƚ[^/\t\r\n]*ar)/	> -ar verbs with vanishing el
-([aeiou]l[aeiou]?[^ƚ/\t\r\n]*ar/)	> -ar verbs with non-vanishing el
+((^|[aeiou])l[aeiou]?[^/\t\r\n]*ar/)[^\t]*7[01][^\t]*\t	> -ar verbs with non-vanishing el
 ^([^/][àèéòóúí][^/\t\r\n]*ar/)	> -er verbs into -ar
 
 konoja = polso
