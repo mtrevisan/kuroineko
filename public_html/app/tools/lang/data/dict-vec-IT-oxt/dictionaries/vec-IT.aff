@@ -641,9 +641,9 @@ SFX 70 rò nto/P7N0 erò	ds:gerund+simple	# T2 + nto = T7 + nto
 SFX 70 erò éntogeƚo/Q7 erò	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
 SFX 70 erò èntogeƚo/P7Q7 erò	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
 SFX 70 0 à/j5N0 [aei]r	ds:indicative+future is:third	# T4 + rà
-SFX 70 0 àƚo/i5 [aei]r	ds:indicative+future is:third ds:interrogative	# T4 + rà
+SFX 70 0 aƚo/i5 [aei]r	ds:indicative+future is:third ds:interrogative	# T4 + rà
 SFX 70 ò à/j5N0 erò	ds:indicative+future is:third	# T4 + rà
-SFX 70 ò àƚo/i5 erò	ds:indicative+future is:third ds:interrogative	# T4 + rà
+SFX 70 ò aƚo/i5 erò	ds:indicative+future is:third ds:interrogative	# T4 + rà
 SFX 70 0 ave/j6N0 [aei]r	ds:conditional+present is:third	# T4 + rà(v)e
 SFX 70 0 íseƚo/i6 [aei]r	ds:conditional+present is:third	# T4 + rà(v)e
 SFX 70 ò ave/j6N0 erò	ds:conditional+present is:third	# T4 + rà(v)e
@@ -1369,7 +1369,7 @@ SFX 7E omi eƚo/i5 omi	ds:indicative+present is:third ds:interrogative	# T10
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
 # -àr: skomenŧiando da 'l indikativo prexente de prima parsona singolar
 SFX tB Y 3
-SFX tB o a/S0Sl o	ds:imperative+present is:second+singular	# T9
+SFX tB o a/S0 o	ds:imperative+present is:second+singular	# T9
 SFX tB o egen/D0 o	ds:imperative+present is:second+singular	# T9
 SFX tB o a o	ds:indicative+present is:third	# T10
 
@@ -1392,7 +1392,8 @@ SFX tC o e iso	ds:indicative+present is:third	# T10
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
 # -àr: skomenŧiando da 'l indikativo prexente de prima parsona singolar
-SFX lB Y 3
+SFX lB Y 4
+SFX lB o a/SlN0 o	ds:imperative+present is:second+singular	# T9
 SFX lB o agelo/Dl o	ds:imperative+present is:second+singular	# T9
 SFX lB o a/J5N0 o	ds:indicative+present is:third	# T10
 SFX lB o elo/I5 o	ds:indicative+present is:third ds:interrogative	# T10
@@ -5408,74 +5409,74 @@ PFX gA re- re-g re-a[pb]i[aeé]
 
 # vèrbi pronomenali (stakài)
 SFX P0 Y 14
-SFX P0 0 -ge [ro]	ds:pronomenal+locative
-SFX P0 0 -gen [ro]	ds:pronomenal+genitive+locative
-SFX P0 0 -gin [ro]	ds:pronomenal+genitive+locative
-SFX P0 0 -gene [ro]	ds:pronomenal+genitive+locative
-SFX P0 0 -gine [ro]	ds:pronomenal+genitive+locative
-SFX P0 0 -me [ro]	ds:pronomenal+reflexive
-SFX P0 0 -mene [ro]	ds:pronomenal+reflexive
-SFX P0 0 -ne [ro]	ds:pronomenal+genitive
-SFX P0 0 -se [ro]	ds:pronomenal+reflexive
-SFX P0 0 -sene [ro]	ds:pronomenal+reflexive
-SFX P0 0 -te [ro]	ds:pronomenal+reflexive
-SFX P0 0 -tene [ro]	ds:pronomenal+reflexive
-SFX P0 0 -ve [ro]	ds:pronomenal+reflexive
-SFX P0 0 -vene [ro]	ds:pronomenal+reflexive
+SFX P0 0 -ge [raeo]	ds:pronomenal+locative
+SFX P0 0 -gen [raeo]	ds:pronomenal+genitive+locative
+SFX P0 0 -gin [raeo]	ds:pronomenal+genitive+locative
+SFX P0 0 -gene [raeo]	ds:pronomenal+genitive+locative
+SFX P0 0 -gine [raeo]	ds:pronomenal+genitive+locative
+SFX P0 0 -me [raeo]	ds:pronomenal+reflexive
+SFX P0 0 -mene [raeo]	ds:pronomenal+reflexive
+SFX P0 0 -ne [raeo]	ds:pronomenal+genitive
+SFX P0 0 -se [raeo]	ds:pronomenal+reflexive
+SFX P0 0 -sene [raeo]	ds:pronomenal+reflexive
+SFX P0 0 -te [raeo]	ds:pronomenal+reflexive
+SFX P0 0 -tene [raeo]	ds:pronomenal+reflexive
+SFX P0 0 -ve [raeo]	ds:pronomenal+reflexive
+SFX P0 0 -vene [raeo]	ds:pronomenal+reflexive
 
 # vèrbi pronomenali (stakài ko èle no vanesente)
 SFX Pl Y 24
-SFX Pl 0 -gelo [ro]	is:singular+masculine ds:pronomenal+locative
-SFX Pl 0 -gela [ro]	is:singular+femenine ds:pronomenal+locative
-SFX Pl 0 -geli [ro]	is:plural+masculine ds:pronomenal+locative
-SFX Pl 0 -gele [ro]	is:plural+femenine ds:pronomenal+locative
-SFX Pl 0 -lo [ro]	is:singular+masculine ds:pronomenal+accusative
-SFX Pl 0 -la [ro]	is:singular+femenine ds:pronomenal+accusative
-SFX Pl 0 -li [ro]	is:plural+masculine ds:pronomenal+accusative
-SFX Pl 0 -le [ro]	is:plural+femenine ds:pronomenal+accusative
-SFX Pl 0 -melo [ro]	is:singular+masculine ds:pronomenal+reflexive
-SFX Pl 0 -mela [ro]	is:singular+femenine ds:pronomenal+reflexive
-SFX Pl 0 -meli [ro]	is:plural+masculine ds:pronomenal+reflexive
-SFX Pl 0 -mele [ro]	is:plural+femenine ds:pronomenal+reflexive
-SFX Pl 0 -selo [ro]	is:singular+masculine ds:pronomenal+reflexive
-SFX Pl 0 -sela [ro]	is:singular+femenine ds:pronomenal+reflexive
-SFX Pl 0 -seli [ro]	is:plural+masculine ds:pronomenal+reflexive
-SFX Pl 0 -sele [ro]	is:plural+femenine ds:pronomenal+reflexive
-SFX Pl 0 -telo [ro]	is:singular+masculine ds:pronomenal+reflexive
-SFX Pl 0 -tela [ro]	is:singular+femenine ds:pronomenal+reflexive
-SFX Pl 0 -teli [ro]	is:plural+masculine ds:pronomenal+reflexive
-SFX Pl 0 -tele [ro]	is:plural+femenine ds:pronomenal+reflexive
-SFX Pl 0 -velo [ro]	is:singular+masculine ds:pronomenal+reflexive
-SFX Pl 0 -vela [ro]	is:singular+femenine ds:pronomenal+reflexive
-SFX Pl 0 -veli [ro]	is:plural+masculine ds:pronomenal+reflexive
-SFX Pl 0 -vele [ro]	is:plural+femenine ds:pronomenal+reflexive
+SFX Pl 0 -gelo [raeo]	is:singular+masculine ds:pronomenal+locative
+SFX Pl 0 -gela [raeo]	is:singular+femenine ds:pronomenal+locative
+SFX Pl 0 -geli [raeo]	is:plural+masculine ds:pronomenal+locative
+SFX Pl 0 -gele [raeo]	is:plural+femenine ds:pronomenal+locative
+SFX Pl 0 -lo [raeo]	is:singular+masculine ds:pronomenal+accusative
+SFX Pl 0 -la [raeo]	is:singular+femenine ds:pronomenal+accusative
+SFX Pl 0 -li [raeo]	is:plural+masculine ds:pronomenal+accusative
+SFX Pl 0 -le [raeo]	is:plural+femenine ds:pronomenal+accusative
+SFX Pl 0 -melo [raeo]	is:singular+masculine ds:pronomenal+reflexive
+SFX Pl 0 -mela [raeo]	is:singular+femenine ds:pronomenal+reflexive
+SFX Pl 0 -meli [raeo]	is:plural+masculine ds:pronomenal+reflexive
+SFX Pl 0 -mele [raeo]	is:plural+femenine ds:pronomenal+reflexive
+SFX Pl 0 -selo [raeo]	is:singular+masculine ds:pronomenal+reflexive
+SFX Pl 0 -sela [raeo]	is:singular+femenine ds:pronomenal+reflexive
+SFX Pl 0 -seli [raeo]	is:plural+masculine ds:pronomenal+reflexive
+SFX Pl 0 -sele [raeo]	is:plural+femenine ds:pronomenal+reflexive
+SFX Pl 0 -telo [raeo]	is:singular+masculine ds:pronomenal+reflexive
+SFX Pl 0 -tela [raeo]	is:singular+femenine ds:pronomenal+reflexive
+SFX Pl 0 -teli [raeo]	is:plural+masculine ds:pronomenal+reflexive
+SFX Pl 0 -tele [raeo]	is:plural+femenine ds:pronomenal+reflexive
+SFX Pl 0 -velo [raeo]	is:singular+masculine ds:pronomenal+reflexive
+SFX Pl 0 -vela [raeo]	is:singular+femenine ds:pronomenal+reflexive
+SFX Pl 0 -veli [raeo]	is:plural+masculine ds:pronomenal+reflexive
+SFX Pl 0 -vele [raeo]	is:plural+femenine ds:pronomenal+reflexive
 
 # vèrbi pronomenali (stakài ko èle vanesente)
 SFX P7 Y 24
-SFX P7 0 -geƚo [ro]	is:singular+masculine ds:pronomenal+locative
-SFX P7 0 -geƚa [ro]	is:singular+femenine ds:pronomenal+locative
-SFX P7 0 -geƚi [ro]	is:plural+masculine ds:pronomenal+locative
-SFX P7 0 -geƚe [ro]	is:plural+femenine ds:pronomenal+locative
+SFX P7 0 -geƚo [raeo]	is:singular+masculine ds:pronomenal+locative
+SFX P7 0 -geƚa [raeo]	is:singular+femenine ds:pronomenal+locative
+SFX P7 0 -geƚi [raeo]	is:plural+masculine ds:pronomenal+locative
+SFX P7 0 -geƚe [raeo]	is:plural+femenine ds:pronomenal+locative
 SFX P7 0 -ƚo [aàeèéiíoòóuú]	is:singular+masculine ds:pronomenal+accusative
 SFX P7 0 -ƚa [aàeèéiíoòóuú]	is:singular+femenine ds:pronomenal+accusative
 SFX P7 0 -ƚi [aàeèéiíoòóuú]	is:plural+masculine ds:pronomenal+accusative
 SFX P7 0 -ƚe [aàeèéiíoòóuú]	is:plural+femenine ds:pronomenal+accusative
-SFX P7 0 -meƚo [ro]	is:singular+masculine ds:pronomenal+reflexive
-SFX P7 0 -meƚa [ro]	is:singular+femenine ds:pronomenal+reflexive
-SFX P7 0 -meƚi [ro]	is:plural+masculine ds:pronomenal+reflexive
-SFX P7 0 -meƚe [ro]	is:plural+femenine ds:pronomenal+reflexive
-SFX P7 0 -seƚo [ro]	is:singular+masculine ds:pronomenal+reflexive
-SFX P7 0 -seƚa [ro]	is:singular+femenine ds:pronomenal+reflexive
-SFX P7 0 -seƚi [ro]	is:plural+masculine ds:pronomenal+reflexive
-SFX P7 0 -seƚe [ro]	is:plural+femenine ds:pronomenal+reflexive
-SFX P7 0 -teƚo [ro]	is:singular+masculine ds:pronomenal+reflexive
-SFX P7 0 -teƚa [ro]	is:singular+femenine ds:pronomenal+reflexive
-SFX P7 0 -teƚi [ro]	is:plural+masculine ds:pronomenal+reflexive
-SFX P7 0 -teƚe [ro]	is:plural+femenine ds:pronomenal+reflexive
-SFX P7 0 -veƚo [ro]	is:singular+masculine ds:pronomenal+reflexive
-SFX P7 0 -veƚa [ro]	is:singular+femenine ds:pronomenal+reflexive
-SFX P7 0 -veƚi [ro]	is:plural+masculine ds:pronomenal+reflexive
-SFX P7 0 -veƚe [ro]	is:plural+femenine ds:pronomenal+reflexive
+SFX P7 0 -meƚo [raeo]	is:singular+masculine ds:pronomenal+reflexive
+SFX P7 0 -meƚa [raeo]	is:singular+femenine ds:pronomenal+reflexive
+SFX P7 0 -meƚi [raeo]	is:plural+masculine ds:pronomenal+reflexive
+SFX P7 0 -meƚe [raeo]	is:plural+femenine ds:pronomenal+reflexive
+SFX P7 0 -seƚo [raeo]	is:singular+masculine ds:pronomenal+reflexive
+SFX P7 0 -seƚa [raeo]	is:singular+femenine ds:pronomenal+reflexive
+SFX P7 0 -seƚi [raeo]	is:plural+masculine ds:pronomenal+reflexive
+SFX P7 0 -seƚe [raeo]	is:plural+femenine ds:pronomenal+reflexive
+SFX P7 0 -teƚo [raeo]	is:singular+masculine ds:pronomenal+reflexive
+SFX P7 0 -teƚa [raeo]	is:singular+femenine ds:pronomenal+reflexive
+SFX P7 0 -teƚi [raeo]	is:plural+masculine ds:pronomenal+reflexive
+SFX P7 0 -teƚe [raeo]	is:plural+femenine ds:pronomenal+reflexive
+SFX P7 0 -veƚo [raeo]	is:singular+masculine ds:pronomenal+reflexive
+SFX P7 0 -veƚa [raeo]	is:singular+femenine ds:pronomenal+reflexive
+SFX P7 0 -veƚi [raeo]	is:plural+masculine ds:pronomenal+reflexive
+SFX P7 0 -veƚe [raeo]	is:plural+femenine ds:pronomenal+reflexive
 
 
 # vèrbi pronomenali (takài)
@@ -6008,11 +6009,23 @@ SFX D0 gen ve gen	ds:pronomenal+reflexive
 SFX D0 gen vene gen	ds:pronomenal+reflexive
 
 # vèrbi pronomenali (takài senŧa èle vanesente)
-SFX Dl Y 20
-SFX Dl gelo lo gelo	ds:pronomenal+accusative
-SFX Dl gelo la gelo	ds:pronomenal+accusative
-SFX Dl gelo li gelo	ds:pronomenal+accusative
-SFX Dl gelo le gelo	ds:pronomenal+accusative
+SFX Dl Y 32
+SFX Dl gelo lo [^àéí]gelo	ds:pronomenal+accusative
+SFX Dl gelo la [^àéí]gelo	ds:pronomenal+accusative
+SFX Dl gelo li [^àéí]gelo	ds:pronomenal+accusative
+SFX Dl gelo le [^àéí]gelo	ds:pronomenal+accusative
+SFX Dl àgelo alo àgelo	ds:pronomenal+accusative
+SFX Dl àgelo ala àgelo	ds:pronomenal+accusative
+SFX Dl àgelo ali àgelo	ds:pronomenal+accusative
+SFX Dl àgelo ale àgelo	ds:pronomenal+accusative
+SFX Dl égelo elo égelo	ds:pronomenal+accusative
+SFX Dl égelo ela égelo	ds:pronomenal+accusative
+SFX Dl égelo eli égelo	ds:pronomenal+accusative
+SFX Dl égelo ele égelo	ds:pronomenal+accusative
+SFX Dl ígelo ilo ígelo	ds:pronomenal+accusative
+SFX Dl ígelo ila ígelo	ds:pronomenal+accusative
+SFX Dl ígelo ili ígelo	ds:pronomenal+accusative
+SFX Dl ígelo ile ígelo	ds:pronomenal+accusative
 SFX Dl gelo melo gelo	ds:pronomenal+reflexive
 SFX Dl gelo mela gelo	ds:pronomenal+reflexive
 SFX Dl gelo meli gelo	ds:pronomenal+reflexive
@@ -6031,27 +6044,39 @@ SFX Dl gelo veli gelo	ds:pronomenal+reflexive
 SFX Dl gelo vele gelo	ds:pronomenal+reflexive
 
 # vèrbi pronomenali (takài ko èle vanesente)
-SFX D7 Y 20
-SFX D7 geƚo ƚo geƚo	ds:pronomenal+accusative
-SFX D7 geƚo ƚa geƚo	ds:pronomenal+accusative
-SFX D7 geƚo ƚi geƚo	ds:pronomenal+accusative
-SFX D7 geƚo ƚe geƚo	ds:pronomenal+accusative
-SFX D7 geƚo melo geƚo	ds:pronomenal+reflexive
-SFX D7 geƚo mela geƚo	ds:pronomenal+reflexive
-SFX D7 geƚo meli geƚo	ds:pronomenal+reflexive
-SFX D7 geƚo mele geƚo	ds:pronomenal+reflexive
-SFX D7 geƚo selo geƚo	ds:pronomenal+reflexive
-SFX D7 geƚo sela geƚo	ds:pronomenal+reflexive
-SFX D7 geƚo seli geƚo	ds:pronomenal+reflexive
-SFX D7 geƚo sele geƚo	ds:pronomenal+reflexive
-SFX D7 geƚo telo geƚo	ds:pronomenal+reflexive
-SFX D7 geƚo tela geƚo	ds:pronomenal+reflexive
-SFX D7 geƚo teli geƚo	ds:pronomenal+reflexive
-SFX D7 geƚo tele geƚo	ds:pronomenal+reflexive
-SFX D7 geƚo velo geƚo	ds:pronomenal+reflexive
-SFX D7 geƚo vela geƚo	ds:pronomenal+reflexive
-SFX D7 geƚo veli geƚo	ds:pronomenal+reflexive
-SFX D7 geƚo vele geƚo	ds:pronomenal+reflexive
+SFX D7 Y 32
+SFX D7 geƚo ƚo [^àéí]geƚo	ds:pronomenal+accusative
+SFX D7 geƚo ƚa [^àéí]geƚo	ds:pronomenal+accusative
+SFX D7 geƚo ƚi [^àéí]geƚo	ds:pronomenal+accusative
+SFX D7 geƚo ƚe [^àéí]geƚo	ds:pronomenal+accusative
+SFX D7 àgeƚo aƚo àgeƚo	ds:pronomenal+accusative
+SFX D7 àgeƚo aƚa àgeƚo	ds:pronomenal+accusative
+SFX D7 àgeƚo aƚi àgeƚo	ds:pronomenal+accusative
+SFX D7 àgeƚo aƚe àgeƚo	ds:pronomenal+accusative
+SFX D7 égeƚo eƚo égeƚo	ds:pronomenal+accusative
+SFX D7 égeƚo eƚa égeƚo	ds:pronomenal+accusative
+SFX D7 égeƚo eƚi égeƚo	ds:pronomenal+accusative
+SFX D7 égeƚo eƚe égeƚo	ds:pronomenal+accusative
+SFX D7 ígeƚo iƚo ígeƚo	ds:pronomenal+accusative
+SFX D7 ígeƚo iƚa ígeƚo	ds:pronomenal+accusative
+SFX D7 ígeƚo iƚi ígeƚo	ds:pronomenal+accusative
+SFX D7 ígeƚo iƚe ígeƚo	ds:pronomenal+accusative
+SFX D7 geƚo meƚo geƚo	ds:pronomenal+reflexive
+SFX D7 geƚo meƚa geƚo	ds:pronomenal+reflexive
+SFX D7 geƚo meƚi geƚo	ds:pronomenal+reflexive
+SFX D7 geƚo meƚe geƚo	ds:pronomenal+reflexive
+SFX D7 geƚo seƚo geƚo	ds:pronomenal+reflexive
+SFX D7 geƚo seƚa geƚo	ds:pronomenal+reflexive
+SFX D7 geƚo seƚi geƚo	ds:pronomenal+reflexive
+SFX D7 geƚo seƚe geƚo	ds:pronomenal+reflexive
+SFX D7 geƚo teƚo geƚo	ds:pronomenal+reflexive
+SFX D7 geƚo teƚa geƚo	ds:pronomenal+reflexive
+SFX D7 geƚo teƚi geƚo	ds:pronomenal+reflexive
+SFX D7 geƚo teƚe geƚo	ds:pronomenal+reflexive
+SFX D7 geƚo veƚo geƚo	ds:pronomenal+reflexive
+SFX D7 geƚo veƚa geƚo	ds:pronomenal+reflexive
+SFX D7 geƚo veƚi geƚo	ds:pronomenal+reflexive
+SFX D7 geƚo veƚe geƚo	ds:pronomenal+reflexive
 
 
 # sonoriđaŧion finali
@@ -7375,8 +7400,9 @@ PFX ^1 Y 1
 PFX ^1 0 tra .	ds:tra
 
 # sostantivi/vèrbi alterài (pre-)
-PFX ^2 Y 1
+PFX ^2 Y 2
 PFX ^2 0 pre .	ds:pre
+PFX ^2 0 pre- .	ds:pre
 
 # sostantivi/vèrbi alterài (kapo-)
 PFX ^3 Y 2
@@ -7430,11 +7456,11 @@ PFX *0 0 s [cfkptŧ]	ds:s
 PFX *0 0 x [aàeèéiíoòóuúmnñbdđgjɉsvrl]	ds:s
 
 # prefiso par aŧion repetúa (r[ea]-/ar-)
-PFX .0 Y 4
+PFX .0 Y 2
 PFX .0 0 re .	ds:re
 PFX .0 0 re- .	ds:re
-PFX .0 0 ra [^a]	ds:re
-PFX .0 0 ar [^ƚ]	ds:re
+#PFX .0 0 ra [^a]	ds:re
+#PFX .0 0 ar [^ƚ]	ds:re
 
 # prefiso par direŧion, veŧinamento, đontamento, valor intensivo (a-)
 PFX @0 Y 1
