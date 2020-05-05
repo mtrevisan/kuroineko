@@ -974,7 +974,6 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "buxol",			"dex",		1,	1,	"a",	"1854",			"Skonsertar, guastar.",
 "buxol",			"x",			1,	1,	"a",	"1854",			"Xbuxar, forar.",
 
-"car",			"",			1,	1,	"g",	"1829",			"",
 "cacar",			"",			1,	1,	"g",	"1527",			"Cakolar.",
 "cacer",			"",			1,	1,	"g",	"1980",			"Cakolar.",
 "caker",			"",			1,	1,	"g",	"1855",			"(belumat) Cakolar.",
@@ -989,8 +988,9 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "cap",			"s",			1,	1,	"g",	"1775",			"Fénder, skiantar un leño.",
 "capet",			"in",			1,	3,	"a",	"",				"Inbrojar.",
 "capin",			"s",			1,	3,	"a",	"1854",			"Carpar.",
-"car",			"",			4,	3,	"a",	"1867",			"",
+"car",			"",			1,	1,	"g",	"1829",			"",
 "car",			"s",			1,	1,	"g",	"1590",			"",
+"car",			"",			4,	3,	"a",	"1867",			"",
 "car",			"s",			4,	3,	"a",	"1775",			"",
 "caranŧ",		"s",			1,	3,	"a",	"1855",			"(belumat) Bravar.",
 "caređ",			"s",			1,	3,	"a",	"",				"Diradar.",
