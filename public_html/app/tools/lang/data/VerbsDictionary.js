@@ -1087,6 +1087,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 
 "d",				"",			1,	1,	"g",	"fine XII",		"",
 "d",				"dex",		1,	1,	"g",	"1775",			"Vèrđer, descavar.",
+"d",				"re",			1,	1,	"g",	"1269",			"",
 "d",				"",			5,	1,	"a",	"1211",			"",
 "d",				"bene",		5,	1,	"a",	"1560",			"",
 "d",				"dex",		5,	1,	"a",	"1847",			"",
@@ -1099,7 +1100,6 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "d",				"kontra",	5,	1,	"a",	"1282",			"",
 "d",				"male",		5,	1,	"a",	"1306",			"",
 "d",				"pre",		5,	1,	"a",	"1305",			"",
-"d",				"re",			1,	1,	"g",	"1269",			"",
 "d",				"re",			5,	1,	"a",	"1295",			"",
 "dafar",			"in",			1,	1,	"g",	"1854",			"",
 "daldor",		"x",			1,	4,	"g",	"1560",			"Degrosar.",
