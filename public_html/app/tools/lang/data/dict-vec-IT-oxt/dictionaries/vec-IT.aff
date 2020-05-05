@@ -1841,7 +1841,6 @@ SFX xD ñer n/J5j5N0 èñer	ds:indicative+present is:third	# T10 = T8 + e
 SFX xD èñer iènlo/I5 [^c]èñer	ds:indicative+present is:third ds:interrogative	# T10
 SFX xD ñer nlo/I5 èñer	ds:indicative+present is:third ds:interrogative	# T10
 
-
 # vèrbi -ér inregolari: (des|re)(c|ti?)oler, (ben|mal|re)voler
 SFX xE Y 79
 SFX xE ler r/P0PlP7R0RlR7 oler	ds:infinitive+simple	# T1
@@ -1923,6 +1922,29 @@ SFX xE ler risié oler	ds:conditional+present is:second+singular	# T4 + r(is)ié
 SFX xE ler ríe oler	ds:conditional+present is:third	# T4 + ríe
 SFX xE er to/A1 oler	ds:participle+passive+strong is:singular+masculine
 SFX xE oler òlto/A1 oler	ds:participle+passive+strong is:singular+masculine
+
+# vèrbi -àr inregolari: (dex)dar, ((dex)?asue|des|kon(tra)?|[lƚ]iku[ei]|putre|(ra)?re|sastu|sat[iu]s|sodis|sora-?|stra|stupe|tore|tume)far, (kon(tra)?|mal|move|o|re|so(ra|to))star
+SFX xF Y 19
+SFX xF ar ào/J1I1 ar	ds:indicative+present is:first+singular	# T8 + o
+SFX xF ar àgo/J1I1 ar	ds:indicative+present is:first+singular	# T8 + o
+SFX xF ar àe/J1I1 ar	ds:indicative+present is:first+singular	# T8 + e
+SFX xF ar à/J3I3 ar	ds:indicative+present is:second+singular	# T8 + e
+SFX xF ar à/J5j5 ar	ds:indicative+present is:third	# T8 + e
+SFX xF ar àlo/I5 ar	ds:indicative+present is:third ds:interrogative	# T8 + e
+SFX xF ar àƚo/i5 ar	ds:indicative+present is:third ds:interrogative	# T8 + e
+SFX xF ar àa ar	ds:subjunctive+present is:first+singular	# T8 + a
+SFX xF ar àga ar	ds:subjunctive+present is:first+singular	# T8 + a
+SFX xF ar àe ar	ds:subjunctive+present is:first+singular	# T8 + e
+SFX xF ar ài ar	ds:subjunctive+present is:second+singular	# T8 + e
+SFX xF ar àgi ar	ds:subjunctive+present is:second+singular	# T8 + e
+SFX xF ar àa ar	ds:subjunctive+present is:second+singular	# T8 + e, 2s=3
+SFX xF ar àga ar	ds:subjunctive+present is:second+singular	# T8 + e, 2s=3
+SFX xF ar àe ar	ds:subjunctive+present is:second+singular	# T8 + e, 2s=3
+SFX xF ar àa ar	ds:subjunctive+present is:third	# T8 + a
+SFX xF ar àga ar	ds:subjunctive+present is:third	# T8 + a
+SFX xF ar àe ar	ds:subjunctive+present is:third	# T8 + e
+SFX xF r to/A1 ar	ds:participle+passive+strong is:singular+masculine
+
 
 
 
@@ -5664,7 +5686,7 @@ SFX D0 0 e gen	ds:pronomenal+genitive+locative
 SFX D0 en ine gen	ds:pronomenal+genitive+locative
 SFX D0 gen me gen	ds:pronomenal+reflexive
 SFX D0 gen mene gen	ds:pronomenal+reflexive
-SFX D0 gen ne gen	ds:pronomenal+genitive
+SFX D0 gen ne [^n]gen	ds:pronomenal+genitive
 SFX D0 gen se gen	ds:pronomenal+reflexive
 SFX D0 gen sene gen	ds:pronomenal+reflexive
 SFX D0 gen te gen	ds:pronomenal+reflexive
