@@ -560,11 +560,11 @@ SFX l0 erò éndogelo/Ql erò	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo
 SFX l0 r nto/PlN0 [aei]r	ds:gerund+simple	# T2 + nto = T7 + nto
 SFX l0 ar àntogelo/Ql ar	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
 SFX l0 er éntogelo/Ql er	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
-SFX l0 er èntogelo/PlQl er	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
+SFX l0 er èntogelo/Ql er	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
 SFX l0 ir íntogelo/Ql ir	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
 SFX l0 rò nto/PlN0 erò	ds:gerund+simple	# T2 + nto = T7 + nto
 SFX l0 erò éntogelo/Ql erò	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
-SFX l0 erò èntogelo/PlQl erò	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
+SFX l0 erò èntogelo/Ql erò	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
 SFX l0 0 à/J5N0 [aei]r	ds:indicative+future is:third	# T4 + rà
 SFX l0 0 alo/I5 [aei]r	ds:indicative+future is:third ds:interrogative	# T4 + rà
 SFX l0 ò à/J5N0 erò	ds:indicative+future is:third	# T4 + rà
@@ -591,10 +591,10 @@ SFX l0 ir é/SlN0 ir	ds:imperative+present is:second+plural	# T5
 SFX l0 ir égelo/Dl ir	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5
 SFX l0 ir endo/PlN0 ir	ds:gerund+simple	# T7 + ndo
 SFX l0 ir ento/PlN0 ir	ds:gerund+simple	# T7 + nto
-SFX l0 ir èntogelo/PlQl ir	ds:gerund+simple ds:pronomenal+locative	# T7 + nto
+SFX l0 ir èntogelo/Ql ir	ds:gerund+simple ds:pronomenal+locative	# T7 + nto
 SFX l0 r endo/PlN0 [^cijɉñ]ir	ds:gerund+simple	# T7 + ndo
 SFX l0 r ento/PlN0 [^cijɉñ]ir	ds:gerund+simple	# T7 + nto
-SFX l0 r èntogelo/PlQl [^cijɉñ]ir	ds:gerund+simple ds:pronomenal+locative	# T7 + nto
+SFX l0 r èntogelo/Ql [^cijɉñ]ir	ds:gerund+simple ds:pronomenal+locative	# T7 + nto
 
 # ko èle vanesente:
 # tèma 2 (from T1: aŧento PVT > VT)
@@ -2047,11 +2047,10 @@ SFX xJ éver ebiege déver	ds:subjunctive+present is:second+plural	# T12 + é([d
 
 # vèrbi '-er inregolari: èser
 #èser/P0PlP7R0RlR7xK
-SFX xK Y 286
+SFX xK Y 216
 SFX xK èser sí/J3I3S7 èser	ds:indicative+present is:second+singular	# T8 + i
 SFX xK èser sipia èser	ds:subjunctive+present is:first+singular	# T8 + a
 SFX xK èser sipi èser	ds:subjunctive+present is:second+singular	# T8 + i
-SFX xK èser sipie èser	ds:subjunctive+present is:third	# T8 + e
 SFX xK èser son/J1 èser	ds:indicative+present is:first+singular	# T8 + e
 SFX xK èser sion/J1 èser	ds:indicative+present is:first+singular	# T8 + e
 SFX xK èser sonmi/I1 èser	ds:indicative+present is:first+singular ds:interrogative	# T8 + e
@@ -2078,25 +2077,23 @@ SFX xK èser sé/j5N0 èser	ds:indicative+present is:third	# T10
 SFX xK èser é/j5N0 èser	ds:indicative+present is:third	# T10
 SFX xK èser séƚo/i5 èser	ds:indicative+present is:third ds:interrogative	# T10
 SFX xK èser éƚo/i5 èser	ds:indicative+present is:third ds:interrogative	# T10
-SFX xK èser ère/J1 èser	ds:indicative+imperfect is:first+singular	# T2 + (v)e
-SFX xK èser èremi/I1 èser	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)e
-SFX xK èser èri/J3 èser	ds:indicative+imperfect is:second+singular	# T2 + (v)a, 2s=3
-SFX xK èser èritu/I3 èser	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)a, 2s=3
+SFX xK ser re/J1 èser	ds:indicative+imperfect is:first+singular	# T2 + (v)e
+SFX xK ser remi/I1 èser	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)e
+SFX xK ser ri/J3 èser	ds:indicative+imperfect is:second+singular	# T2 + (v)a, 2s=3
+SFX xK ser ritu/I3 èser	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)a, 2s=3
 SFX xK èser sipie èser	ds:subjunctive+imperfect is:second+singular	# T2 + se, 2s=3
 SFX xK èser sipia èser	ds:subjunctive+imperfect is:second+singular	# T2 + se, 2s=3
-SFX xK èser esudoxxx èser	ds:participle+passive+weak is:singular+masculine	# T2 + st[oiae]
-SFX xK èser esestoxxx èser	ds:participle+passive+weak is:singular+masculine	# T2 + st[oiae]
-SFX xK èser stadoxxx èser	ds:participle+passive+weak is:singular+masculine	# T2 + st[oiae]
-SFX xK èser stastoxxx èser	ds:participle+passive+weak is:singular+masculine	# T2 + st[oiae]
+SFX xK èser esudo/A1 èser	ds:participle+passive+weak is:singular+masculine	# T6 + d[oiae]
+SFX xK èser esú/A1 èser	ds:participle+passive+weak is:singular+masculine	# T6 + ([oiae])
+SFX xK èser stàdo/A1 èser	ds:participle+passive+weak is:singular+masculine	# T6 + d[oiae]
+SFX xK èser stà/A1 èser	ds:participle+passive+weak is:singular+masculine	# T6 + ([oiae])
+SFX xK èser esesto/A1 èser	ds:participle+passive+weak is:singular+masculine	# T2 + st[oiae]
+SFX xK èser stasto/A1 èser	ds:participle+passive+weak is:singular+masculine	# T2 + st[oiae]
 SFX xK èser esent èser	ds:gerund+simple	# T2 + nto = T7 + nto
 SFX xK èser siant èser	ds:gerund+simple	# T2 + nto = T7 + nto
 SFX xK èser serè/J1I1 èser	ds:indicative+future is:first+singular	# T4 + rè
 SFX xK èser seron/J2 èser	ds:indicative+future is:first+plural	# T4 + ron
 SFX xK èser seroni/I2 èser	ds:indicative+future is:first+plural ds:interrogative	# T4 + ron
-SFX xK èser seron/J2 èser	ds:indicative+future is:first+plural	# T4 + ron
-SFX xK èser seroni/I2 èser	ds:indicative+future is:first+plural ds:interrogative	# T4 + ron
-SFX xK èser seren/J2 èser	ds:indicative+future is:first+plural	# T4 + rén
-SFX xK èser sereni/I2 èser	ds:indicative+future is:first+plural ds:interrogative	# T4 + rén
 SFX xK èser seren/J2 èser	ds:indicative+future is:first+plural	# T4 + rén
 SFX xK èser sereni/I2 èser	ds:indicative+future is:first+plural ds:interrogative	# T4 + rén
 SFX xK èser seríe èser	ds:conditional+present is:first+singular	# T4 + ríe
@@ -2142,26 +2139,6 @@ SFX xK èser eriven/J2 èser	ds:indicative+imperfect is:first+plural	# T11 + (iv
 SFX xK èser eriveni/I2 èser	ds:indicative+imperfect is:first+plural ds:interrogative	# T11 + (iv)én(s[ei])
 SFX xK èser erivense/J2 èser	ds:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
 SFX xK èser erivensi/J2 èser	ds:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
-SFX xK èser eron/J2 èser	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX xK èser eroni/I2 èser	ds:indicative+imperfect is:first+plural ds:interrogative	# T11 + (iv)(i)ón(se)
-SFX xK èser eronse/J2 èser	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX xK èser erion/J2 èser	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX xK èser erioni/I2 èser	ds:indicative+imperfect is:first+plural ds:interrogative	# T11 + (iv)(i)ón(se)
-SFX xK èser erionse/J2 èser	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX xK èser erivon/J2 èser	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX xK èser erivoni/I2 èser	ds:indicative+imperfect is:first+plural ds:interrogative	# T11 + (iv)(i)ón(se)
-SFX xK èser erivonse/J2 èser	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX xK èser erivion/J2 èser	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX xK èser erivioni/I2 èser	ds:indicative+imperfect is:first+plural ds:interrogative	# T11 + (iv)(i)ón(se)
-SFX xK èser erivionse/J2 èser	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX xK èser eren/J2 èser	ds:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
-SFX xK èser ereni/I2 èser	ds:indicative+imperfect is:first+plural ds:interrogative	# T11 + (iv)én(s[ei])
-SFX xK èser erense/J2 èser	ds:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
-SFX xK èser erensi/J2 èser	ds:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
-SFX xK èser eriven/J2 èser	ds:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
-SFX xK èser eriveni/I2 èser	ds:indicative+imperfect is:first+plural ds:interrogative	# T11 + (iv)én(s[ei])
-SFX xK èser erivense/J2 èser	ds:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
-SFX xK èser erivensi/J2 èser	ds:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
 SFX xK èser erié/J4I4 èser	ds:indicative+imperfect is:second+plural	# T11 + (iv)ié
 SFX xK èser erivié/J4I4 èser	ds:indicative+imperfect is:second+plural	# T11 + (iv)ié
 SFX xK èser fuson èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
@@ -2184,32 +2161,6 @@ SFX xK èser fusisen èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)
 SFX xK èser fusisene èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
 SFX xK èser fusisense èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
 SFX xK èser fusisensi èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
-SFX xK èser fuson èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xK èser fusone èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xK èser fusonse èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xK èser fusion èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xK èser fusione èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xK èser fusionse èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xK èser fusison èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xK èser fusisone èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xK èser fusisonse èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xK èser fusision èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xK èser fusisione èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xK èser fusisionse èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xK èser fusen èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
-SFX xK èser fusene èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
-SFX xK èser fusense èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
-SFX xK èser fusensi èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
-SFX xK èser fusisen èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
-SFX xK èser fusisene èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
-SFX xK èser fusisense èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
-SFX xK èser fusisensi èser	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
-SFX xK èser fusié èser	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
-SFX xK èser fusiede èser	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
-SFX xK èser fusiege èser	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
-SFX xK èser fusisié èser	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
-SFX xK èser fusisiede èser	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
-SFX xK èser fusisiege èser	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
 SFX xK èser fusié èser	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
 SFX xK èser fusiede èser	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
 SFX xK èser fusiege èser	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
@@ -2218,26 +2169,12 @@ SFX xK èser fusisiede èser	ds:subjunctive+imperfect is:second+plural	# T11 + (
 SFX xK èser fusisiege èser	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
 SFX xK èser son/J2 èser	ds:indicative+present is:first+plural	# T12 + ón
 SFX xK èser soni/I2 èser	ds:indicative+present is:first+plural ds:interrogative	# T12 + ón
-SFX xK èser son/J2 èser	ds:indicative+present is:first+plural	# T12 + ón
-SFX xK èser soni/I2 èser	ds:indicative+present is:first+plural ds:interrogative	# T12 + ón
-SFX xK èser son/J2 èser	ds:indicative+present is:first+plural	# T12 + én
-SFX xK èser soni/I2 èser	ds:indicative+present is:first+plural ds:interrogative	# T12 + én
 SFX xK èser sen/J2 èser	ds:indicative+present is:first+plural	# T12 + én
 SFX xK èser seni/I2 èser	ds:indicative+present is:first+plural ds:interrogative	# T12 + én
 SFX xK èser son èser	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
 SFX xK èser sone èser	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
 SFX xK èser sion èser	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
 SFX xK èser sione èser	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX xK èser son èser	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX xK èser sone èser	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX xK èser sion èser	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX xK èser sione èser	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX xK èser son èser	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX xK èser sone èser	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX xK èser sion èser	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX xK èser sione èser	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX xK èser sen èser	ds:subjunctive+present is:first+plural	# T12 + én(e)
-SFX xK èser sene èser	ds:subjunctive+present is:first+plural	# T12 + én(e)
 SFX xK èser sen èser	ds:subjunctive+present is:first+plural	# T12 + én(e)
 SFX xK èser sene èser	ds:subjunctive+present is:first+plural	# T12 + én(e)
 SFX xK èser sé/J4I4 èser	ds:indicative+present is:second+plural	# T12 + é
@@ -2246,8 +2183,8 @@ SFX xK èser sipiede èser	ds:subjunctive+present is:second+plural	# T12 + é([d
 SFX xK èser sipiege èser	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
 SFX xK èser sé/S0SlD0 èser	ds:imperative+present is:second+plural	# T12 + é
 SFX xK èser ségelo/Dl èser	ds:imperative+present is:second+plural ds:pronomenal+locative	# T12 + é
-SFX xK èser èra/J5N0 èser	ds:indicative+imperfect is:third	# T2 + (v)a
-SFX xK èser èralo/I5 èser	ds:indicative+imperfect is:third ds:interrogative	# T2 + (v)a
+SFX xK ser ra/J5N0 èser	ds:indicative+imperfect is:third	# T2 + (v)a
+SFX xK ser ralo/I5 èser	ds:indicative+imperfect is:third ds:interrogative	# T2 + (v)a
 SFX xK èser esendo/PlN0 èser	ds:gerund+simple	# T2 + ndo = T7 + ndo
 SFX xK èser siando/PlN0 èser	ds:gerund+simple	# T2 + ndo = T7 + ndo
 SFX xK èser eséndogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
@@ -2255,13 +2192,7 @@ SFX xK èser siàndogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 +
 SFX xK èser esento/PlN0 èser	ds:gerund+simple	# T2 + nto = T7 + nto
 SFX xK èser sianto/PlN0 èser	ds:gerund+simple	# T2 + nto = T7 + nto
 SFX xK èser eséntogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
-SFX xK èser esèntogelo/PlQl èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
-SFX xK èser siàntogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
-SFX xK èser siàntogelo/PlQl èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
-SFX xK èser esento/PlN0 èser	ds:gerund+simple	# T2 + nto = T7 + nto
-SFX xK èser sianto/PlN0 èser	ds:gerund+simple	# T2 + nto = T7 + nto
-SFX xK èser eséntogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
-SFX xK èser esèntogelo/PlQl èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
+SFX xK èser esèntogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
 SFX xK èser siàntogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
 SFX xK èser serà/J5N0 èser	ds:indicative+future is:third	# T4 + rà
 SFX xK èser seralo/I5 èser	ds:indicative+future is:third ds:interrogative	# T4 + rà
@@ -2269,10 +2200,9 @@ SFX xK èser serave/J6N0 èser	ds:conditional+present is:third	# T4 + rà(v)e
 SFX xK èser seríselo/I6 èser	ds:conditional+present is:third ds:interrogative	# T4 + rà(v)e
 SFX xK èser sí/SlN0 èser	ds:imperative+present is:second+plural	# T5
 SFX xK èser sígelo/Dl èser	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5
-SFX xK èser èra/j5N0 èser	ds:indicative+imperfect is:third	# T2 + (v)a
-SFX xK èser èraƚo/i5 èser	ds:indicative+imperfect is:third ds:interrogative	# T2 + (v)a
-SFX xK èser èra/j5N0 èser	ds:indicative+imperfect is:third	# T2 + (v)a
-SFX xK èser èreƚo/i5 èser	ds:indicative+imperfect is:third ds:interrogative	# T2 + (v)a
+SFX xK ser ra/j5N0 èser	ds:indicative+imperfect is:third	# T2 + (v)a
+SFX xK ser raƚo/i5 èser	ds:indicative+imperfect is:third ds:interrogative	# T2 + (v)a
+SFX xK ser reƚo/i5 èser	ds:indicative+imperfect is:third ds:interrogative	# T2 + (v)a
 SFX xK èser esendo/P7N0 èser	ds:gerund+simple	# T2 + ndo = T7 + ndo
 SFX xK èser siando/P7N0 èser	ds:gerund+simple	# T2 + ndo = T7 + ndo
 SFX xK èser eséndogeƚo/Q7 èser	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
@@ -4258,12 +4188,16 @@ SFX J1 0 -e .	ds:interrogative
 SFX J1 0 -i n	ds:interrogative
 
 # interogativi prima parsona singolar (takài)
-SFX I1 Y 42
-SFX I1 mi i [aeo]mi	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
+SFX I1 Y 46
+SFX I1 mi i [aeon]mi	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
 SFX I1 mi nte [aeo]mi	ds:interrogative
 SFX I1 mi nti [aeo]mi	ds:interrogative	# veronexe
+SFX I1 mi te nmi	ds:interrogative
+SFX I1 mi ti nmi	ds:interrogative	# veronexe
 SFX I1 mi ne [aeo]mi	ds:interrogative
 SFX I1 mi ni [aeo]mi	ds:interrogative	# veronexe
+SFX I1 mi e nmi	ds:interrogative
+SFX I1 mi i nmi	ds:interrogative	# veronexe
 SFX I1 mi e [aeo]mi	ds:interrogative
 SFX I1 0 i [aeàèò]	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
 SFX I1 0 i [^s]o	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
@@ -4342,11 +4276,11 @@ SFX J3 0 -to .	ds:interrogative	# padoan de thità, vithentin de thità, polexan
 SFX I3 Y 8
 SFX I3 u o tu	ds:interrogative
 SFX I3 tu stu tu	ds:interrogative
-SFX I3 0 to [aieè]	ds:interrogative
+SFX I3 0 to [aiíeèé]	ds:interrogative
 SFX I3 à ato à	ds:interrogative
-SFX I3 0 tu [aieè]	ds:interrogative
+SFX I3 0 tu [aiíeèé]	ds:interrogative
 SFX I3 à atu à	ds:interrogative
-SFX I3 0 stu [aieè]	ds:interrogative
+SFX I3 0 stu [aiíeèé]	ds:interrogative
 SFX I3 à astu à	ds:interrogative
 
 # interogativi sekonda parsona plural (stakài)
