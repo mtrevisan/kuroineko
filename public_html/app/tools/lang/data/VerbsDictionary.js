@@ -1386,6 +1386,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "đur",			"spre",		1,	1,	"a",	"1829",			"",
 "đur",			"stra",		1,	1,	"a",	"1867",			"",
 "đust",			"",			1,	1,	"a",	"1829",			"",
+"đust",			"dex",		1,	1,	"a",	"",				"",
 
 "ebraiđ",		"",			1,	4,	"a",	"1810",			"",
 "ebet",			"in",			4,	4,	"a",	"1896",			"",
