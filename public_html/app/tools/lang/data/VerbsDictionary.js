@@ -1482,7 +1482,6 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fàŧ",			"",			3,	1,	"g",	"1980",			"",
 "fàŧ",			"ante",		3,	1,	"g",	"1980",			"",
 "fàŧ",			"kontra",	3,	1,	"g",	"1829",			"",
-"fàx",			"",			3,	1,	"g",	"1980",			"",
 "fabreg",		"",			1,	1,	"g",	"1548",			"",
 "fabreg",		"des",		1,	1,	"g",	"1775",			"",
 "fabrik",		"",			1,	1,	"g",	"1548",			"",
