@@ -1397,7 +1397,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "edit",			"sup",		1,	0,	"a",	"1852",			"",
 "eduk",			"",			1,	0,	"g",	"1854",			"",
 "eduk",			"in",			1,	0,	"g",	"1854",			"",
-"efetu",			"",			1,	2,	"g",	"",				"",
+"efetü",			"",			1,	2,	"g",	"",				"",
 "egu",			"ad",			1,	0,	"g",	"1829",			"",
 "eklis",			"",			1,	3,	"a",	"1479",			"",
 "ekris",			"",			1,	3,	"a",	"1829",			"",
