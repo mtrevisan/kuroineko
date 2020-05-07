@@ -287,7 +287,7 @@ NEEDAFFIX N0
 #
 # -àr:		kantar/t0l070n0t1P0PlP7Q0QlQ7, (kanto/t8n8tAlA7AJ1, kàntomi/t8n8tAlA7AI1 | exàmino/T8N8tBlB7BJ1I1)
 # -ér:		valer/t0l070n0t1p4l474P0PlP7Q0QlQ7, (valo/t8n8tElE7EJ1, vàlomi/t8n8tElE7EI1 | reflèto/T8N8tClC7CJ1I1)
-# '-er:	kréder/t1p1n1P0PlP7R0RlR7, (kredo/t8n8tElE7EJ1, krédomi/t8n8tElE7EI1 | gòdo/T8N8tClC7CJ1I1), krederò/t0n0l070p4l474J1I1
+# '-er:	kréder/t1p1l171n1P0PlP7R0RlR7, (kredo/t8n8tElE7EJ1, krédomi/t8n8tElE7EI1 | gòdo/T8N8tClC7CJ1I1), krederò/t0n0l070p4l474J1I1
 # -ír:		dormir/t0l070n0t1P0PlP7Q0QlQ7, (dòrmo/t8n8tElE7EJ1, dòrmomi/t8n8tElE7EI1 | (dòrmo|feniso)/T8N8tClC7CJ1I1)
 
 
@@ -1144,7 +1144,19 @@ SFX t1 0 e r	ds:infinitive+simple	# T1 + r(e)
 # tèma 1
 # '-er: skomenŧiando da 'l infenío
 SFX p1 Y 1
-SFX p1 er ar/P0PlP7R0RlR7 er	ds:infinitive+simple
+SFX p1 er ar/P0R0 er	ds:infinitive+simple
+
+# variante pad.:
+# tèma 1
+# '-er: skomenŧiando da 'l infenío, senŧa èle vanesente
+SFX l1 Y 1
+SFX l1 er ar/PlRlN0 er	ds:infinitive+simple
+
+# variante pad.:
+# tèma 1
+# '-er: skomenŧiando da 'l infenío, ko èle vanesente
+SFX 71 Y 1
+SFX 71 er ar/P7R7N0 er	ds:infinitive+simple
 
 # variante fel.-bel. e liv.:
 # tèma 1
@@ -2045,7 +2057,7 @@ SFX xJ éver ebiede déver	ds:subjunctive+present is:second+plural	# T12 + é([d
 SFX xJ éver ebiege déver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
 
 # vèrbi '-er inregolari: (r[eï])èser
-#èser/t1p1n1P0PlP7R0RlR7xK
+#èser/t1p1l171n1P0PlP7R0RlR7xK
 SFX xK Y 256
 SFX xK ser ra/J1 èser	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xK ser rami/I1 èser	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)a
@@ -2136,7 +2148,7 @@ SFX xK èser seràlo/I5 èser	ds:indicative+future is:third ds:interrogative	# T
 SFX xK èser seríselo/I6 èser	ds:conditional+present is:third ds:interrogative	# T4 + rà(v)e
 SFX xK èser sé/S0SlS7D0 èser	ds:imperative+present is:second+plural	# T5 = 12 + é
 SFX xK èser ségelo/Dl èser	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5
-SFX xK èser sí/S0SlS7D0 èser	ds:imperative+present is:second+plural	# T5
+SFX xK èser sí/S0SlS7 èser	ds:imperative+present is:second+plural	# T5
 SFX xK èser sígelo/Dl èser	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5
 SFX xK ser reƚo/i5 èser	ds:indicative+imperfect is:third ds:interrogative	# T2 + (v)a
 SFX xK èser eséndogeƚo/Q7'0 èser	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
