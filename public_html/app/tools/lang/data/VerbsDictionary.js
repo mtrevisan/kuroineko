@@ -2387,7 +2387,6 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "granol",		"x",			1,	2,	"g",	"1928",			"Xgranocar.",
 "granp",			"",			1,	2,	"g",	"1980",			"(bixiak) Brinkar.",
 "granŧ",			"",			4,	5,	"a",	"1829",			"Deventar rànsido.",
-"granx",			"",			4,	5,	"a",	"1854",			"Invietar, invietir.",
 "graot",			"x",			1,	3,	"a",	"1590",			"",
 "grap",			"",			1,	2,	"g",	"1980",			"(bixiak) Erpegar.",
 "grapej",		"in",			1,	4,	"a",	"1775",			"Inlapolar.",
