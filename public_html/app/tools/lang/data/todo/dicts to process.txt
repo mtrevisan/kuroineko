@@ -41,6 +41,7 @@ o[nl]/[^\r\nU]+U\d > add exception to hyphenation rules
 (ƚ[^/\t\r\n]*ar)/	> -ar verbs with vanishing el
 ((^|[aeiou])l[aeiou][^/\t\r\n]*ar/)[^\t]*7[^\t]*\t	> -ar verbs with non-vanishing el
 ^([^/][àèéòóúí][^/\t\r\n]*ar/)	> -er verbs into -ar
+[ei]r/([^\r\n]+[\r\n]+){1,2}[^/]+/t8n8tAlA7A[JI]1	> /t8n8tElE7E[JI]1
 
 konoja = polso
 nodèl = caviglia
