@@ -4213,6 +4213,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "merd",			"ix",			1,	1,	"g",	"1867",			"",
 "merd",			"x",			1,	1,	"g",	"1775",			"",
 "meret",			"",			1,	1,	"g",	"1980",			"(bixiak)",
+"meret",			"ar",			1,	1,	"g",	"",				"",
+"meret",			"re",			1,	1,	"g",	"",				"",
 "merit",			"",			1,	1,	"g",	"1775",			"",
 "merit",			"ar",			1,	1,	"g",	"1560",			"Remeritar.",
 "merit",			"re",			1,	1,	"g",	"1560",			"",
