@@ -4941,7 +4941,6 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "parec",			"",			1,	3,	"a",	"1560",			"",
 "parec",			"des",		1,	3,	"a",	"1590",			"",
 "parec",			"s",			1,	3,	"a",	"1867",			"",
-"pared",			"",			1,	3,	"a",	"",				"",
 "paređ",			"",			1,	3,	"a",	"1775",			"",
 "paređ",			"des",		1,	3,	"a",	"1775",			"",
 "parej",			"",			1,	3,	"a",	"1855",			"(belumat) Paređar.",
