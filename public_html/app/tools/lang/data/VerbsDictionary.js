@@ -5564,7 +5564,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "popol",			"",			1,	1,	"g",	"",				"",
 "popol",			"re",			1,	1,	"g",	"1775",			"",
 "popol",			"s",			1,	1,	"g",	"1867",			"",
-"por",			"so",			1,	1,	"a",	"1867",			"Supurar.",
+"por",			"so",			1,	-1,"a",	"1867",			"Supurar.",
 "pork",			"",			1,	1,	"a",	"1821",			"",
 "porkeđ",		"",			1,	4,	"a",	"",				"Porkonar.",
 "porkon",		"",			1,	4,	"a",	"",				"Bestemar.",
