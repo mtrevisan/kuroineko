@@ -15379,9 +15379,12 @@ inpólpomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:inter
 spolpar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple ds:s
 spolpo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:spolpar ds:s
 spólpomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:spolpar ds:s
-polsar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
-polso/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:polsar
-pólsomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:polsar
+polsar/t0l0n0t1P0PlQ0Ql.0*0	po:verb ds:infinitive+simple
+polso/t8n8tAlA7AJ1.0*0	po:verb ds:indicative+present is:first+singular st:polsar
+pólsomi/t8n8tAlA7AI1.0*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:polsar
+arpolsar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple ds:re ds:ad
+arpolso/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:arpolsar ds:re ds:ad
+arpólsomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:arpolsar ds:re ds:ad
 poltronar/t0l0n0t1P0PlQ0Ql-1+0	po:verb ds:infinitive+simple
 poltrono/t8n8tAlA7AJ1-1+0	po:verb ds:indicative+present is:first+singular st:poltronar
 poltrónomi/t8n8tAlA7AI1-1+0	po:verb ds:indicative+present is:first+singular ds:interrogative st:poltronar
@@ -15496,114 +15499,102 @@ sotopónomi/t8n8tElE7EI1	po:verb ds:indicative+present is:first+singular ds:inte
 sotoponerò/t0n0l070p4l474J1I1	po:verb ds:indicative+future is:first+singular st:sotopóner ds:soto
 sotopòner/t1p1l171P0PlP7R0RlR7	po:verb ds:infinitive+simple ds:soto
 sotopòno/T8N8tClC7CJ1I1	po:verb ds:indicative+present is:first+singular st:sotopóner ds:soto
-xustapóner/t1p1l171P0PlP7R0RlR7	po:verb ds:infinitive+simple ds:xusta
-xustapono/t8n8tElE7EJ1	po:verb ds:indicative+present is:first+singular st:xustapóner ds:xusta
-xustapónomi/t8n8tElE7EI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:xustapóner ds:xusta
-xustaponerò/t0n0l070p4l474J1I1	po:verb ds:indicative+future is:first+singular st:xustapóner ds:xusta
-xustapòner/t1p1l171P0PlP7R0RlR7	po:verb ds:infinitive+simple ds:xusta
-xustapòno/T8N8tClC7CJ1I1	po:verb ds:indicative+present is:first+singular st:xustapóner ds:xusta
-
-/ pòner/t1p1l171n1P0PlP7R0RlR7-1+0.0@0^2^4	po:verb ds:infinitive+simple
-/ ponerò/t0n0l070p4l474J1I1-1+0.0@0^2^4	po:verb ds:indicative+future is:first+singular st:póner
-/ pono/t8n8tAlA7AJ1-1+0.0@0^2^4	po:verb ds:indicative+present is:first+singular st:póner
-/ pónomi/t8n8tAlA7AI1-1+0.0@0^2^4	po:verb ds:indicative+present is:first+singular ds:interrogative st:póner
-/ pòno/T8N8tBlB7BJ1I1-1+0.0@0^2^4	po:verb ds:indicative+present is:first+singular st:póner
-/ posto/A1-1+0.0@0^2^4	po:verb ds:participle+passive+strong is:singular+masculine st:póner
-/ pòsto/A1-1+0.0@0^2^4	po:verb ds:participle+passive+strong is:singular+masculine st:póner
-/ pónar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ pònar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ ponarò/n0l070p4l474-1+0.0@0^2^4	po:verb ds:indicative+future is:first+singular st:pónar
-/ xustapóner/t1p1l171n1P0PlP7R0RlR7	po:verb ds:infinitive+simple
-/ xustapòner/t1p1l171n1P0PlP7R0RlR7	po:verb ds:infinitive+simple
-/ xustaponerò/t0n0l070p4l474J1I1	po:verb ds:indicative+future is:first+singular st:xustapóner
-/ xustapono/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:xustapóner
-/ xustapónomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:xustapóner
-/ xustapòno/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:xustapóner
-/ xustaposto/A1	po:verb ds:participle+passive+strong is:singular+masculine st:xustapóner
-/ xustapòsto/A1	po:verb ds:participle+passive+strong is:singular+masculine st:xustapóner
-/ xustapónar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ xustapònar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ xustaponarò/n0l070p4l474	po:verb ds:indicative+future is:first+singular st:xustapónar
-ponarar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ ponaro/t8n8tAlA7AJ1-1+0	po:verb ds:indicative+present is:first+singular st:ponarar
-/ ponàromi/t8n8tAlA7AI1-1+0	po:verb ds:indicative+present is:first+singular ds:interrogative st:ponarar
-poncar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ ponco/t8n8tAlA7AJ1+0*0	po:verb ds:indicative+present is:first+singular st:poncar
-/ póncomi/t8n8tAlA7AI1+0*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:poncar
-sponconar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ sponcono/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:sponconar
-/ sponcónomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:sponconar
-sponđejar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
-/ sponđejo/t8n8tAlAJ1	po:verb ds:indicative+present is:first+singular st:sponđejar
-/ sponđéjomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:sponđejar
-sponđeɉar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
-/ sponđeɉo/t8n8tAlAJ1	po:verb ds:indicative+present is:first+singular st:sponđeɉar
-/ sponđéɉomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:sponđeɉar
-sponxejar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ sponxejo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:sponxejar
-/ sponxéjomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:sponxejar
-sponxeɉar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ sponxeɉo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:sponxeɉar
-/ sponxéɉomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:sponxeɉar
-sponđolir/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
-sponđoliso/T8N8tClCJ1I1	po:verb ds:indicative+present is:first+singular st:sponđolir
-sponxolir/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
-sponxoliso/T8N8tClCJ1I1	po:verb ds:indicative+present is:first+singular st:sponxolir
-sponxoƚir/t070t1P0P7Q0Q7	po:verb ds:infinitive+simple
-sponxoƚiso/T8N8tC7CJ1I1	po:verb ds:indicative+present is:first+singular st:sponxoƚir
-skonponejar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ skonponejo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:skonponejar
-/ skonponéjomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:skonponejar
-skonponeɉar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ skonponeɉo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:skonponeɉar
-/ skonponéɉomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:skonponeɉar
+đustapóner/t1p1l1P0PlR0Rl	po:verb ds:infinitive+simple ds:đusta
+đustapono/t8n8tElEJ1	po:verb ds:indicative+present is:first+singular st:đustapóner ds:đusta
+đustapónomi/t8n8tElEI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:đustapóner ds:đusta
+đustaponerò/t0n0l0p4l4J1I1	po:verb ds:indicative+future is:first+singular st:đustapóner ds:đusta
+đustapòner/t1p1l1P0PlR0Rl	po:verb ds:infinitive+simple ds:đusta
+đustapòno/T8N8tClCJ1I1	po:verb ds:indicative+present is:first+singular st:đustapóner ds:đusta
+xustapóner/t1p1l171P0PlP7R0RlR7	po:verb ds:infinitive+simple ds:đusta
+xustapono/t8n8tElE7EJ1	po:verb ds:indicative+present is:first+singular st:xustapóner ds:đusta
+xustapónomi/t8n8tElE7EI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:xustapóner ds:đusta
+xustaponerò/t0n0l070p4l474J1I1	po:verb ds:indicative+future is:first+singular st:xustapóner ds:đusta
+xustapòner/t1p1l171P0PlP7R0RlR7	po:verb ds:infinitive+simple ds:đusta
+xustapòno/T8N8tClC7CJ1I1	po:verb ds:indicative+present is:first+singular st:xustapóner ds:đusta
+ponarar/t0l070n0t1P0PlP7Q0QlQ7-1+0	po:verb ds:infinitive+simple
+ponaro/t8n8tAlA7AJ1-1+0	po:verb ds:indicative+present is:first+singular st:ponarar
+ponàromi/t8n8tAlA7AI1-1+0	po:verb ds:indicative+present is:first+singular ds:interrogative st:ponarar
+poncar/t0l070n0t1P0PlP7Q0QlQ7+0*0	po:verb ds:infinitive+simple
+ponco/t8n8tAlA7AJ1+0*0	po:verb ds:indicative+present is:first+singular st:poncar
+póncomi/t8n8tAlA7AI1+0*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:poncar
+sponconar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple ds:s
+sponcono/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:sponconar ds:s
+sponcónomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:sponconar ds:s
+sponđejar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple ds:s
+sponđejo/t8n8tAlAJ1	po:verb ds:indicative+present is:first+singular st:sponđejar ds:s
+sponđéjomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:sponđejar ds:s
+sponđeɉar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple ds:s
+sponđeɉo/t8n8tAlAJ1	po:verb ds:indicative+present is:first+singular st:sponđeɉar ds:s
+sponđéɉomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:sponđeɉar ds:s
+sponxejar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple ds:s
+sponxejo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:sponxejar ds:s
+sponxéjomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:sponxejar ds:s
+sponxeɉar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple ds:s
+sponxeɉo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:sponxeɉar ds:s
+sponxéɉomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:sponxeɉar ds:s
+sponđolir/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple ds:s
+sponđoliso/T8N8tClCJ1I1	po:verb ds:indicative+present is:first+singular st:sponđolir ds:s
+sponxolir/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple ds:s
+sponxoliso/T8N8tClCJ1I1	po:verb ds:indicative+present is:first+singular st:sponxolir ds:s
+sponxoƚir/t070t1P0P7Q0Q7	po:verb ds:infinitive+simple ds:s
+sponxoƚiso/T8N8tC7CJ1I1	po:verb ds:indicative+present is:first+singular st:sponxoƚir ds:s
+skonponejar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple ds:kon ds:s
+skonponejo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:skonponejar ds:kon ds:s
+skonponéjomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:skonponejar ds:kon ds:s
+skonponeɉar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple ds:kon ds:s
+skonponeɉo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:skonponeɉar ds:kon ds:s
+skonponéɉomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:skonponeɉar ds:kon ds:s
 ponentar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ ponento/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:ponentar
-/ ponéntomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:ponentar
-/ ponènto/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:ponentar
-inpongar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ inpongo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:inpongar
-/ inpóngomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:inpongar
-/ inpòngo/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:inpongar
-spongar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ spongo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:spongar
-/ spóngomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:spongar
-/ spòngo/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:spongar
+ponènto/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:ponentar
+ponento/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:ponentar
+ponéntomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:ponentar
+inpongar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple ds:in
+inpòngo/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:inpongar ds:in
+inpongo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:inpongar ds:in
+inpóngomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:inpongar ds:in
+spongar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple ds:s
+spòngo/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:spongar ds:s
+spongo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:spongar ds:s
+spóngomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:spongar ds:s
 ponpar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ ponpo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:ponpar
-/ pónpomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:ponpar
+ponpo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:ponpar
+pónpomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:ponpar
 ponpiđar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
-/ ponpiđo/t8n8tAlAJ1	po:verb ds:indicative+present is:first+singular st:ponpiđar
-/ ponpíđomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:ponpiđar
+ponpiđo/t8n8tAlAJ1	po:verb ds:indicative+present is:first+singular st:ponpiđar
+ponpíđomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:ponpiđar
 ponpixar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ ponpixo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:ponpixar
-/ ponpíxomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:ponpixar
-ponsar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ ponso/t8n8tAlA7AJ1.0*0	po:verb ds:indicative+present is:first+singular st:ponsar
-/ pónsomi/t8n8tAlA7AI1.0*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:ponsar
-pontar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ ponto/t8n8tAlA7AJ1A1Pd@0-1+0*0^1^6	po:verb ds:indicative+present is:first+singular st:pontar ds:participle+passive+strong is:singular+masculine st:pónđer st:pónxer
-/ póntomi/t8n8tAlA7AI1@0-1+0*0^6	po:verb ds:indicative+present is:first+singular ds:interrogative st:pontar
+ponpixo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:ponpixar
+ponpíxomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:ponpixar
+ponsar/t0l070n0t1P0PlP7Q0QlQ7.0*0	po:verb ds:infinitive+simple
+ponso/t8n8tAlA7AJ1.0*0	po:verb ds:indicative+present is:first+singular st:ponsar
+pónsomi/t8n8tAlA7AI1.0*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:ponsar
+arponsar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple ds:re ds:ad
+arponso/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:arponsar ds:re ds:ad
+arpónsomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:arponsar ds:re ds:ad
+pontar/t0l070n0t1P0PlP7Q0QlQ7@0-1+0*0^6	po:verb ds:infinitive+simple
+ponto/t8n8tAlA7AJ1A1Pd@0-1+0*0^6	po:verb ds:indicative+present is:first+singular st:pontar
+póntomi/t8n8tAlA7AI1@0-1+0*0^6	po:verb ds:indicative+present is:first+singular ds:interrogative st:pontar
 pontir/t0l070n0t1P0PlP7Q0QlQ7+0	po:verb ds:infinitive+simple
-pontiso/T8N8tClC7CJ1I1	po:verb ds:indicative+present is:first+singular st:pontir
-ponteđar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
-/ ponteđo/t8n8tAlAJ1*0	po:verb ds:indicative+present is:first+singular st:ponteđar
-/ pontéđomi/t8n8tAlAI1*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:ponteđar
-pontexar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ pontexo/t8n8tAlA7AJ1*0	po:verb ds:indicative+present is:first+singular st:pontexar
-/ pontéxomi/t8n8tAlA7AI1*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:pontexar
-spontegar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ spóntego/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:spontegar
+pontiso/T8N8tClC7CJ1I1+0	po:verb ds:indicative+present is:first+singular st:pontir
+ponteđar/t0l0n0t1P0PlQ0Ql*0	po:verb ds:infinitive+simple
+ponteđo/t8n8tAlAJ1*0	po:verb ds:indicative+present is:first+singular st:ponteđar
+pontéđomi/t8n8tAlAI1*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:ponteđar
+pontexar/t0l070n0t1P0PlP7Q0QlQ7*0	po:verb ds:infinitive+simple
+pontexo/t8n8tAlA7AJ1*0	po:verb ds:indicative+present is:first+singular st:pontexar
+pontéxomi/t8n8tAlA7AI1*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:pontexar
+spontegar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple ds:s
+spóntego/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:spontegar ds:s
 pontejar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ pontejo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:pontejar
-/ pontéjomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:pontejar
+pontejo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:pontejar
+pontéjomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:pontejar
 ponteɉar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-/ ponteɉo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:ponteɉar
-/ pontéɉomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:ponteɉar
-pontelar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
-/ pontèlo/T8N8tBlB7BJ1I1@0-1+0	po:verb ds:indicative+present is:first+singular st:pontelar
-ponteƚar/t070t1P0P7Q0Q7	po:verb ds:infinitive+simple
-/ pontèƚo/T8N8tBlB7BJ1I1@0-1+0	po:verb ds:indicative+present is:first+singular st:ponteƚar
+ponteɉo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:ponteɉar
+pontéɉomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:ponteɉar
+pontelar/t0l0n0t1P0PlQ0Ql@0-1+0	po:verb ds:infinitive+simple
+pontèlo/T8N8tBlBJ1I1@0-1+0	po:verb ds:indicative+present is:first+singular st:pontelar
+ponteƚar/t070t1P0P7Q0Q7@0-1+0	po:verb ds:infinitive+simple
+pontèƚo/T8N8tB7BJ1I1@0-1+0	po:verb ds:indicative+present is:first+singular st:ponteƚar
+
 spontigar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 / spontigo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:spontigar
 / spontígomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:spontigar
@@ -15666,6 +15657,7 @@ sponxar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 / ponđarò/b0b1J1*0^1^6	po:verb ds:indicative+future is:first+singular st:pónđar
 / pónxar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 / ponxarò/n0l070p4l474*0^1^6	po:verb ds:indicative+future is:first+singular st:pónxar
+ponto/t8n8tAlA7AJ1A1Pd@0-1+0	po:verb ds:participle+passive+strong is:singular+masculine st:pónđer st:pónxer
 ponđetar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
 / ponđeto/t8n8tAlAJ1	po:verb ds:indicative+present is:first+singular st:ponđetar
 / ponđétomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:ponđetar
@@ -28106,7 +28098,6 @@ dupiadora/F0v0-1+0.0^6	po:noun is:singular+femenine
 dupiadura/F0d0eT-1+0.0^6	po:noun is:singular+femenine
 duplikamento/M0FSPdVr	po:noun is:singular+masculine
 duprikamento/M0FSPdVr	po:noun is:singular+masculine
-duramento/M0FSPdVr	po:noun is:singular+masculine
 durativamente/FSw0	po:adverb
 durativo/A1	po:adjective_qualificative is:singular+masculine
 duŧion/F0B1PdV3@0+0.0:0^1^2	po:noun is:singular+femenine
@@ -33889,11 +33880,12 @@ xornal/F0i0B1eT	po:noun is:singular+masculine
 xornaƚe/F0i0e0	po:noun is:singular+masculine
 xòna/F0	po:noun is:singular+femenine
 xrenaŧion/F0B1PdV3-0	po:noun is:singular+femenine
+đudisio/M0^2aSeT	po:noun is:singular+masculine
 xudisio/M0^2aSeT	po:noun is:singular+masculine
 xuramento/M0FSPdVr^6	po:noun is:singular+masculine
-xustamente/FSw0	po:adverb
-xustapoxiŧion/F0B1PdV3	po:noun is:singular+femenine
-xustisia/F0	po:noun is:singular+femenine
+đustamente/FSw0Vp	po:adverb
+đustapoxiŧion/F0B1PdV3Vp	po:noun is:singular+femenine
+đustisia/F0Vp	po:noun is:singular+femenine
 xvansaròto/M0FS	po:noun is:singular+masculine
 xvanseròto/M0FS	po:noun is:singular+masculine
 xvanŧaròto/M0FS	po:noun is:singular+masculine
