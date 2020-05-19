@@ -6039,6 +6039,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "rux",			"",			4,	3,	"a",	"1829",			"Ruɉir.",
 
 "sa",				"",			2,	1,	"g",	"1560",			"Saver.",
+"sa",				"pre",		2,	1,	"g",	"",				"",
+"sa",				"re",			2,	1,	"g",	"",				"",
 "sa",				"stra",		2,	1,	"g",	"",				"",
 "sabad",			"",			1,	1,	"g",	"1852",			"Konsar, parecar.",
 "sabal",			"",			1,	1,	"g",	"1821",			"Dar de sàbala.",
