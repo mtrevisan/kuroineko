@@ -3,24 +3,9 @@ This file is a summary of the options used in the vec affix file.
 
 The vec.aff affix file was created from scratch by Mauro Trevisan.
 
-2019/09/12
+2020/05/22
 
 ---------------------------------------------------------------------
-
-#a0/a1/a2: (public) common verbs (first conjugation verbs, second conjugation arrhizotonic verbs)
-#a3/a4/a5: irregular first conjugation (dar, far, star)
-#a6: irregular first conjugation (andar)
-#b0/b1/b2: (public) second conjugation rhizotonic verbs
-#b3: irregular second conjugation rhizotonic (cèñer, tèñer, vèñer)
-#b4: irregular second conjugation rhizotonic (déver)
-#b5/b6/b7: irregular second conjugation rhizotonic (díxer)
-#b8: irregular second conjugation rhizotonic (tràer)
-#b9: irregular second conjugation rhizotonic (èser)
-#c1: irregular second conjugation arrhizotonic (sa(v)er)
-#c2/c3/c4: irregular second conjugation arrhizotonic (toler, voler)
-#d0/d1/d2: (public) third conjugation verbs with the inclusion of the <is> affix
-#e0/t2/e2: (public) third conjugation verbs without the inclusion of the <is> affix
-#f0/f1/f2: (public) third conjugation verbs both with and without the inclusion of the <is> affix
 
 t0/l0/70: theme 2, 4, 5, 6, 7 (-àr, -ér, '-er, -ír, -ír/is: base/no vanishing el variant/vanishing el variant/northern variant)
 n0: theme 2, 4, 7, 11, 12 (-àr, -ér, '-er, -ír, -ír/is: base/no vanishing el variant/vanishing el variant/northern variant)
@@ -37,12 +22,27 @@ tC/lC/7C: theme 9, 10 for stressed words (-ér, '-er, -ír, -ír/is: base/no van
 xA: irregular verb (re-?)andar
 xB: irregular verb (re-?)av?er
 xC: irregular verb (re-?)av?er, (re-?)g(av)er, ʼ(v)er
+g'/gA: truncations for aver
+xD : irregular verb (a(s)|apar|de|(in)kon|intra|man|(re)o|re|sos|tra)[ct][èé]ñer, (a(r)|ben|de(x)|(des|re)kon|in|inter|intr[ae]|kontra|mal|per|pre|(re)so|pro|rin|sko(n)|sora|x)v[èéí]ñer/ʼñer
+xE : irregular verb (des|re)(c|ti?)oler, (ben|mal|re)vu?oler
+xF : irregular verb (dex)dar, ((dex)asue|des|kon(tra)|[lƚ]iku[ei]|putre|(ra)?re|sastu|sat[iu]s|sodis|sora|stra|stupe|tore|tume)far, (kon(tra)|mal|move|o|re|so(ra|to))star
+xG : irregular verb liku[ei]far senŧa èle vanesente
+xH : irregular verb ƚiku[ei]far ko èle vanesente
+xI : irregular verb (bene|d[ei]x|in|inter|intr[ae]|kontra|ma[lƚ]e|pre|re)díxer
+xJ : irregular verb (bene|d[ei]x|in|inter|intr[ae]|kontra|male|pre|re)díxer senŧa èle vanesente
+xK : irregular verb (bene|d[ei]x|in|inter|intr[ae]|kontra|maƚe|pre|re)díxer ko èle vanesente
+xL : irregular verb déver
+xM : irregular verb (r[eï])èser
+xN : irregular verb poder
+xO : irregular verb (pre|re|stra)sav?er
+xP : irregular verb (a|as|de|des|es|kon|pro|re|so)tràer
+xQ : irregular verb vardar
 
-P0/Pl/P7: procomplementar verbs, detached (-[gmnstv]e(ne) / -([gmstv]e)l[oaie] / -([gmstv]e)ƚ[oaie])
-Q0/Ql/Q7: procomplementar verbs, attached ([gmnstv]e(ne) / ([gmstv]e)l[oaie] / ([gmstv]e)ƚ[oaie])
-R0/Rl/R7: procomplementar verbs for '-er, attached ([gmnstv]e(ne) / ([gmstv]e)l[oaie] / ([gmstv]e)ƚ[oaie])
-S0/Sl/S7: procomplementar verbs for the imperative, detached (-[gmnstv]e(ne) / -([gmstv]e)l[oaie] / -([gmstv]e)ƚ[oaie])
-D0/Dl/D7: procomplementar verbs for the imperative, attached ([gmnstv]e(ne) / ([gmstv]e)l[oaie] / ([gmstv]e)ƚ[oaie])
+P0/Pl/P7: pronomenal verbs, detached (-[gmnstv]e(ne) / -([gmstv]e)l[oaie] / -([gmstv]e)ƚ[oaie])
+Q0/Ql/Q7: pronomenal verbs, attached ([gmnstv]e(ne) / ([gmstv]e)l[oaie] / ([gmstv]e)ƚ[oaie])
+R0/Rl/R7: pronomenal verbs for '-er, attached ([gmnstv]e(ne) / ([gmstv]e)l[oaie] / ([gmstv]e)ƚ[oaie])
+S0/Sl/S7: pronomenal verbs for the imperative, detached (-[gmnstv]e(ne) / -([gmstv]e)l[oaie] / -([gmstv]e)ƚ[oaie])
+D0/Dl/D7: pronomenal verbs for the imperative, attached ([gmnstv]e(ne) / ([gmstv]e)l[oaie] / ([gmstv]e)ƚ[oaie])
 FS: (public) sonorization of final consonants (ñ.>nc|ñ[oei], ñ.>in|ñ[oei], ñ.>n|ñ[oei], ñ.>ñ|ñ[oei], b.>p|b[oei], p.>p|p[oei], ...)
 J1: interrogatives for first person singular, detached (-(m)i, -n(t)[ei], -[ei])
 I1: interrogatives for first person singular, attached ((m)i, n(t)[ei], [ei])
@@ -157,7 +157,7 @@ Dictionaries used
 
 ---------------------------------------------------------------------
 
-Northern abbreviations
+Northern abbreviations (^[^ƚ\s\r\n]*usto(/[^\s\r\n\tF]*)?\t)
 
 -a[mstŧx]e
 -al[sŧ]e
