@@ -3381,8 +3381,8 @@ SFX A2 Y 7
 SFX A2 0 a [^aieo]
 SFX A2 0 i [^aieo]	is:plural
 SFX A2 0 e [lnr]	is:plural
-SFX A2 0 e/FS [^aieolnr]	is:plural
-SFX A2 a e/FS [^iƚ]a	is:plural
+SFX A2 0 e [^aieolnr]	is:plural
+SFX A2 a e [^iƚ]a	is:plural
 SFX A2 a e [iƚ]a	is:plural
 SFX A2 a i a	is:plural+masculine
 
@@ -3649,10 +3649,28 @@ SFX Vr onga ònga/F0 onga
 SFX Vr ontro òntro/M0 ontro
 
 # kanbio veronexe ko èle vanesente (-ente > -ènte/M0, -ento > -ènto/M0Pd)
-SFX VR Y 3
+SFX VR Y 21
 SFX VR ente ènte/M0 ente
+SFX VR enbre ènbre/M0 enbre
 SFX VR ento ènto/M0 ento
+SFX VR enso ènso/M0 enso
+SFX VR enŧo ènŧo/M0 enŧo
+SFX VR enpo ènpo/M0 enpo
+SFX VR enbro ènbro/M0 enbro
+SFX VR enda ènda/F0 enda
 SFX VR enta ènta/F0 enta
+SFX VR enŧa ènŧa/F0 enŧa
+SFX VR ensa ènsa/F0 ensa
+SFX VR enŧia ènŧia/F0 enŧia
+SFX VR ensia ènsia/F0 ensia
+SFX VR orko òrko/M0 orko
+SFX VR orka òrka/F0 orka
+SFX VR osto òsto/M0 osto
+SFX VR onto ònto/M0 onto
+SFX VR osta òsta/F0 osta
+SFX VR ongo òngo/M0 ongo
+SFX VR onga ònga/F0 onga
+SFX VR ontro òntro/M0 ontro
 
 
 # piante e mistièri (-(i)èr/-(i)er, -aro, -dor/-tor, -(i)ol/-(i)òl)
