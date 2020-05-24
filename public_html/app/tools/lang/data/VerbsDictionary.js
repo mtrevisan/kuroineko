@@ -6891,6 +6891,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "strios",		"",			1,	4,	"g",	"1900",			"(veronexe)",
 "stris",			"",			1,	3,	"a",	"1775",			"",
 "strison",		"",			1,	5,	"a",	"1896",			"Sfrixonar.",
+"striŧ",			"",			1,	3,	"a",	"1855",			"Xmakar, speŧar, infrànxer, skalfir.",
 "stroleg",		"",			1,	3,	"g",	"1560",			"Pensar, prevéder.",
 "strolig",		"",			1,	3,	"g",	"1877",			"Strolegar.",
 "strolog",		"",			1,	3,	"g",	"",				"Strolegar.",
