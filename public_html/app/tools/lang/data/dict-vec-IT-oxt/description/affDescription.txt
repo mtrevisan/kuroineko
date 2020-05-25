@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------
-This file is a summary of the options used in the vec affix file.
+This file is a summary of the options used in the affix file.
 
 The vec.aff affix file was created from scratch by Mauro Trevisan.
 
@@ -41,14 +41,10 @@ R0/Rl/R7: pronomenal verbs for '-er, attached ([gmnstv]e(ne) / ([gmstv]e)l[oaie]
 S0/Sl/S7: pronomenal verbs for the imperative, detached (-[gmnstv]e(ne) / -([gmstv]e)l[oaie] / -([gmstv]e)ƚ[oaie])
 D0/Dl/D7: pronomenal verbs for the imperative, attached ([gmnstv]e(ne) / ([gmstv]e)l[oaie] / ([gmstv]e)ƚ[oaie])
 FS: (public) sonorization of final consonants (ñ.>nc|ñ[oei], ñ.>in|ñ[oei], ñ.>n|ñ[oei], ñ.>ñ|ñ[oei], b.>p|b[oei], p.>p|p[oei], ...)
-J1: interrogatives for first person singular, detached (-(m)i, -n(t)[ei], -[ei])
-I1: interrogatives for first person singular, attached ((m)i, n(t)[ei], [ei])
-J2: interrogatives for first person plural, detached (-i, -n(t)[ei], -[ei])
-I2: interrogatives for first person plural, attached (i, n(t)[ei], [ei])
-J3: interrogatives for second person singular, detached (-(s)tu, -to)
-I3: interrogatives for second person singular, attached ((s)tu, to)
-J4: interrogatives for second person plural, detached (-[uo])
-I4: interrogatives for second person plural, attached ([uo])
+J1/I1: interrogatives for first person singular, detached (-(m)i, -n(t)[ei], -[ei]) / attached ((m)i, n(t)[ei], [ei])
+J2/I2: interrogatives for first person plural, detached (-i, -n(t)[ei], -[ei]) / attached (i, n(t)[ei], [ei])
+J3/I3: interrogatives for second person singular, detached (-(s)tu, -to) / attached ((s)tu, to)
+J4/I4: interrogatives for second person plural, detached (-[uo]) / attached ([uo])
 J5/j5: interrogatives for third person, detached (-l[oaie] / -ƚ[oaie])
 I5/i5: interrogatives for third person, attached (l[oaie] / ƚ[oaie])
 J6/j6: interrogatives for conditional present third person, detached (-ave > -ise-l[oaie] / -ave > -ise-ƚ[oaie])
@@ -176,8 +172,7 @@ Northern abbreviations (^[^ƚ\s\r\n]*usto(/[^\s\r\n\tF]*)?\t)
 -[eè][kfgpstŧx]o
 -es[k]o
 -en[s]o
--èn[p]o
--[eè]nto
+-[eè]n[pt]o
 -[eè]sto
 -èr[nst]o
 
