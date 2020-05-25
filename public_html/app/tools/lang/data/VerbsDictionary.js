@@ -6956,6 +6956,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "suc",			"",			1,	1,	"a",	"1854",			"",
 "sud",			"",			1,	1,	"a",	"1867",			"",
 "sud",			"stra",		1,	1,	"a",	"1829",			"",
+"sudaŧ",			"",			1,	3,	"g",	"1855",			"",
 "suef",			"",			1,	2,	"g",	"1867",			"",
 "suef",			"dex",		1,	2,	"g",	"",				"",
 "sufi",			"",			1,	1,	"a",	"1877",			"Supiar.",
