@@ -8033,6 +8033,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "veñ",			"sub",		5,	1,	"a",	"1499",			"Jutar, sokórer, vèñer inamente.",
 "veñ",			"sora",		5,	1,	"a",	"",				"",
 "ver",			"re",			4,	3,	"a",	"1415",			"Rispetar.",
+"verdel",		"x",			1,	3,	"g",	"1855",			"Indespoxithion da masa manhar.",
 "verdeđ",		"",			1,	4,	"a",	"",				"",
 "vèrđ",			"",			3,	1,	"g",	"1810",			"",
 "verđel",		"",			1,	4,	"g",	"",				"",
