@@ -22610,12 +22610,9 @@ vasínomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interr
 invaxar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple ds:in
 invaxo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:invaxar ds:in
 invàxomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:invaxar ds:in
-stravaxar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple ds:stra
-stravaxo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:stravaxar ds:stra
-stravàxomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:stravaxar ds:stra
-travaxar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple ds:tra
-travaxo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:travaxar ds:tra
-travàxomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:travaxar ds:tra
+travaxar/t0l070n0t1P0PlP7Q0QlQ7*0	po:verb ds:infinitive+simple ds:tra
+travaxo/t8n8tAlA7AJ1FS*0	po:verb ds:indicative+present is:first+singular st:travaxar ds:tra
+travàxomi/t8n8tAlA7AI1*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:travaxar ds:tra
 vear/t0l070n0t1P0PlP7Q0QlQ7-0	po:verb ds:infinitive+simple
 veo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:vear
 véomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:vear
@@ -23134,6 +23131,12 @@ vexo/t8n8tElE7EJ1FS	po:verb ds:indicative+present is:first+singular st:véxer
 véxomi/t8n8tElE7EI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:véxer
 vexerò/t0n0l070p4l474J1I1	po:verb ds:indicative+future is:first+singular st:véxer
 veto/A1FSPd	po:verb ds:participle+passive+strong is:singular+masculine st:véxer
+invexar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple ds:in
+invexo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:invexar ds:in
+invéxomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:invexar ds:in
+travexar/t0l070n0t1P0PlP7Q0QlQ7*0	po:verb ds:infinitive+simple ds:tra
+travexo/t8n8tAlA7AJ1FS*0	po:verb ds:indicative+present is:first+singular st:travexar ds:tra
+travéxomi/t8n8tAlA7AI1*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:travexar ds:tra
 vexetar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 vèxeto/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:vexetar
 véxeto/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:vexetar
@@ -25436,6 +25439,7 @@ doi	po:numeral_cardenal is:singular+masculine
 du	po:numeral_cardenal is:singular+masculine
 dui	po:numeral_cardenal is:singular+masculine
 trè	po:numeral_cardenal is:singular+masculine
+tre	po:numeral_cardenal is:singular+masculine
 trèa/M0	po:numeral_cardenal is:singular+masculine
 tri	po:numeral_cardenal is:singular+masculine
 trii	po:numeral_cardenal is:singular+masculine
@@ -25523,6 +25527,8 @@ Do-sènto/FSZ0	po:noun is:singular+masculine+non_enumerable
 Do-xènto/FSZ0	po:noun is:singular+masculine+non_enumerable
 Trè-xento/FSZ0	po:noun is:singular+masculine+non_enumerable
 Trè-xènto/FSZ0	po:noun is:singular+masculine+non_enumerable
+Tre-xento/FSZ0	po:noun is:singular+masculine+non_enumerable
+Tre-xènto/FSZ0	po:noun is:singular+masculine+non_enumerable
 Kuatro-ŧento/FSZ0	po:noun is:singular+masculine+non_enumerable
 Kuatro-sento/FSZ0	po:noun is:singular+masculine+non_enumerable
 Kuatro-xento/FSZ0	po:noun is:singular+masculine+non_enumerable
@@ -25561,6 +25567,12 @@ Doi-mili/Z0	po:noun is:singular+masculine+non_enumerable
 Doi-miƚi/Z0	po:noun is:singular+masculine+non_enumerable
 Trè-mile/Z0	po:noun is:singular+masculine+non_enumerable
 Trè-miƚe/Z0	po:noun is:singular+masculine+non_enumerable
+Trè-mili/Z0	po:noun is:singular+masculine+non_enumerable
+Trè-miƚi/Z0	po:noun is:singular+masculine+non_enumerable
+Tre-mile/Z0	po:noun is:singular+masculine+non_enumerable
+Tre-miƚe/Z0	po:noun is:singular+masculine+non_enumerable
+Tre-mili/Z0	po:noun is:singular+masculine+non_enumerable
+Tre-miƚi/Z0	po:noun is:singular+masculine+non_enumerable
 / numerali — ordenali
 primo/A1FS	po:numeral_ordenal is:singular+masculine
 primamente/FSw0	po:adverb
@@ -51695,7 +51707,7 @@ travaxo/M0FS*0	po:noun is:singular+masculine
 traversaño/M0FS	po:adjective is:singular+masculine
 traversié	po:noun is:masculine
 travèrsa/F0eT	po:noun is:singular+femenine
-travèrso/A1FS	po:adjective_qualificative is:singular+masculine
+travèrso/A1FS*0	po:adjective_qualificative is:singular+masculine
 travo/M0eToT	po:noun is:singular+masculine
 traxador/F0	po:noun is:singular+masculine
 traxadur/M0d0eT	po:noun is:singular+masculine
@@ -59021,7 +59033,6 @@ straŧapolenta	po:adjective_qualificative
 straŧapolènta	po:adjective_qualificative
 straŧun/A2B1	po:noun is:singular+masculine
 stravagante/M0	po:adjective is:singular
-stravaxo/M0FS	po:noun is:singular+masculine
 stria/F0	po:noun is:singular+femenine
 strido/M0	po:noun is:singular+masculine
 strusio/A1	po:adjective_qualificative is:singular+femenine
@@ -59124,12 +59135,40 @@ traduŧion/F0B1PdV3	po:noun is:singular+femenine
 trafor/M0Pd	po:noun is:singular+masculine
 trajikomèdia/F0	po:noun is:singular+femenine
 traɉikomèdia/F0	po:noun is:singular+femenine
+trao/M0	po:noun is:singular+masculine
+trapaso/M0	po:noun is:singular+masculine
+trapolon/A2B1Pd	po:adjective_qualificative is:singular+masculine
+trapoƚon/A2Pd	po:adjective_qualificative is:singular+masculine
+traspòrto/M0FS	po:noun is:singular+masculine
+travarda/F0	po:noun is:singular+femenine
+travaxamento/M0FSPdVr	po:noun is:singular+masculine
+travài	po:noun is:masculine
+traveta/F0	po:noun is:singular+femenine
+travexamento/M0FSPdVr	po:noun is:singular+masculine
+travexo/M0FS*0	po:noun is:singular+masculine
+travo–bordenal	po:noun is:singular+masculine
+travo–bordenaƚe	po:noun is:singular+masculine
+travo–cave	po:noun is:singular+masculine
+travo–logarente/FS	po:noun is:singular+masculine
+travo–logarènte/FS	po:noun is:singular+masculine
+travo–ƚogarente	po:noun is:singular+masculine
+travo–ƚogarènte	po:noun is:singular+masculine
+travo–piana	po:noun is:singular+masculine
+travo–rulo/FS	po:noun is:singular+masculine
+travo–ruƚo	po:noun is:singular+masculine
+travo–skalon	po:noun is:singular+masculine
+travo–skaƚon	po:noun is:singular+masculine
+travo–skuarado	po:noun is:singular+masculine
+travo–skuarà	po:noun is:singular+masculine
+travo–skuarào	po:noun is:singular+masculine
+traxlòko/M0FS	po:noun is:singular+masculine
 traxmesièr/M0v0	po:noun is:singular+masculine
 traxmesièra/F0v0	po:noun is:singular+femenine
 tràer/M0	po:noun is:singular+masculine
 tràger/M0	po:noun is:singular+masculine
 tràibe/M0	po:noun is:singular+masculine
 tràiber/M0	po:noun is:singular+masculine
+tremante/M0	po:noun is:singular
 tuk–tuk	po:interjection
 tunf	po:interjection
 ŧarexa/F0Vp	po:noun is:singular+femenine
@@ -59271,15 +59310,8 @@ xvodabuxe	po:noun
 xvojadamente/FSw0	po:adverb
 xvoɉadamente/FSw0	po:adverb
 xvòda–buxe	po:noun
-trapaso/M0	po:noun is:singular+masculine
-trapolon/A2B1Pd	po:adjective_qualificative is:singular+masculine
-trapoƚon/A2Pd	po:adjective_qualificative is:singular+masculine
-traxlòko/M0FS	po:noun is:singular+masculine
 
 
-/ 590
+/ 600
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ
-v.:tranxar,tranxíjer,tranxíɉer
-v.:tirar,tràer,trar
-v.:traspiantar,trapiantar
