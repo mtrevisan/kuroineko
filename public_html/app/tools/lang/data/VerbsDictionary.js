@@ -7829,6 +7829,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "uxm",			"",			1,	0,	"a",	"1810",			"",
 "uxufrü",		"",			4,	6,	"a",	"1896",			"",
 "uxur",			"",			1,	2,	"a",	"1854",			"",
+"uxurp",			"",			1,	2,	"a",	"1855",			"(belumat)",
 
 "v",				"",			3,	1,	"a",	"1560",			"Véder.",
 "vàd",			"e",			3,	1,	"g",	"1867",			"",
