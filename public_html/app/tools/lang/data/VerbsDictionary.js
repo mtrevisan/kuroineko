@@ -7409,6 +7409,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tox",			"",			1,	1,	"a",	"1775",			"",
 "tox",			"s",			1,	1,	"a",	"1896",			"",
 "toxat",			"",			1,	3,	"g",	"1855",			"(belumat)",
+"tr",				"",			1,	3,	"g",	"1855",			"(belumat)",
 "trà",			"",			3,	2,	"g",	"1562",			"",
 "trà",			"a",			3,	2,	"g",	"",				"",
 "trà",			"as",			3,	2,	"g",	"",				"",
