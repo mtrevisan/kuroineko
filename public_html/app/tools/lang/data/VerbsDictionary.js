@@ -7759,6 +7759,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧot",			"in",			1,	1,	"g",	"1775",			"Far deventar ŧòto.",
 "ŧoteg",			"",			1,	1,	"a",	"1867",			"Andar ŧòto.",
 "ŧotiñ",			"",			1,	3,	"a",	"1852",			"Andar ŧòto.",
+"ŧü",				"",			1,	2,	"a",	"1855",			"(belumat) Istigar.",
 "ŧüet",			"",			1,	2,	"a",	"1829",			"Ŧoetar.",
 "ŧuđ",			"",			1,	1,	"a",	"1852",			"Èser, deventar xmunto.",
 "ŧuk",			"",			1,	1,	"a",	"1852",			"Bàter la tèsta.",
