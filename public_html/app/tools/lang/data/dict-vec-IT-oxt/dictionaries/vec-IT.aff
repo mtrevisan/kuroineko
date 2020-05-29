@@ -299,7 +299,7 @@ NEEDAFFIX N0
 # tèma 7 (from T1: aŧento PVT > VT, then T2: í > é)
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
-SFX t0 Y 239
+SFX t0 Y 246
 SFX t0 r va/J1 [aei]r	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX t0 ar àvami/I1 ar	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)a
 SFX t0 er évami/I1 er	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)a
@@ -415,16 +415,23 @@ SFX t0 ò í/J4I4 erò	ds:indicative+future is:second+plural	# T4 + rí
 SFX t0 0 à [aei]r	ds:indicative+future is:third	# T4 + rà
 SFX t0 ò à erò	ds:indicative+future is:third	# T4 + rà
 SFX t0 0 ía [aei]r	ds:conditional+present is:first+singular	# T4 + ría
+SFX t0 ir aría ir	ds:conditional+present is:first+singular	# T4 + ría, vithentin
 SFX t0 ò ía erò	ds:conditional+present is:first+singular	# T4 + ría
 SFX t0 0 ésimo [aei]r	ds:conditional+present is:first+plural	# T4 + résimo
+SFX t0 ir arísimo ir	ds:conditional+present is:first+plural	# T4 + résimo, vithentin
 SFX t0 ò ésimo erò	ds:conditional+present is:first+plural	# T4 + résimo
 SFX t0 0 ía [aei]r	ds:conditional+present is:second+singular	# T4 + ría
+SFX t0 ir aría ir	ds:conditional+present is:second+singular	# T4 + ría, vithentin
 SFX t0 ò ía erò	ds:conditional+present is:second+singular	# T4 + ría
 SFX t0 0 esi [aei]r	ds:conditional+present is:second+plural	# T4 + rési
+SFX t0 ir arisi ir	ds:conditional+present is:second+plural	# T4 + rési, vithentin
 SFX t0 ò esi erò	ds:conditional+present is:second+plural	# T4 + rési
 SFX t0 0 esi/J3 [aei]r	ds:conditional+present is:second+singular	# T4 + rési
 SFX t0 0 ésitu/I3 [aei]r	ds:conditional+present is:second+singular ds:interrogative	# T4 + rési
+SFX t0 ir arisi/J3 ir	ds:conditional+present is:second+singular	# T4 + rési, vithentin
+SFX t0 ir arísitu/I3 ir	ds:conditional+present is:second+singular ds:interrogative	# T4 + rési, vithentin
 SFX t0 0 ía [aei]r	ds:conditional+present is:third	# T4 + ría
+SFX t0 ir aría ir	ds:conditional+present is:third	# T4 + ría, vithentin
 SFX t0 ò ía erò	ds:conditional+present is:third	# T4 + ría
 SFX t0 0 ave/J1J6 [aei]r	ds:conditional+present is:first+singular	# T4 + rà(v)e
 SFX t0 0 àvemi/I1I6 [aei]r	ds:conditional+present is:first+singular ds:interrogative	# T4 + rà(v)e
@@ -1570,7 +1577,7 @@ SFX xA andar vede andar	ds:subjunctive+present is:second+plural	# T12 + é([dg]e
 SFX xA andar vege andar	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
 
 # vèrbi -ér inregolari: (re)av?er, (re)g(av)er, ʼ(v)er
-SFX xB Y 339
+SFX xB Y 340
 SFX xB r va/J1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xB er éa/J1I1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xB er ía/J1I1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
@@ -1658,6 +1665,7 @@ SFX xB er udo/A1 [aʼ]ver	ds:participle+passive+weak is:singular+masculine	# T6 
 SFX xB er ú/A1 [aʼ]ver	ds:participle+passive+weak is:singular+masculine	# T6 + ([oiae])
 SFX xB ver budo/A1 [aʼ]ver	ds:participle+passive+weak is:singular+masculine	# T6 + d[oiae]
 SFX xB ver bú/A1 [aʼ]ver	ds:participle+passive+weak is:singular+masculine	# T6 + ([oiae])
+SFX xB ver bïo/A1 ʼver	ds:participle+passive+weak is:singular+masculine	# T6 + ([oiae])
 SFX xB r nte/FS [aʼ]ver	ds:participle+active	# T7 + nte
 SFX xB er ènte/FS [aʼ]ver	ds:participle+active	# T7 + nte
 SFX xB r ve/J1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)e
