@@ -204,6 +204,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bad",			"x",			1,	1,	"g",	"1896",			"",
 "badaj",			"",			1,	3,	"g",	"1867",			"",
 "badaj",			"x",			1,	3,	"g",	"1847",			"",
+"badaluk",		"",			1,	5,	"a",	"1980",			"(vitoriexe)",
 "badan",			"",			1,	3,	"g",	"1851",			"Afanar, inketar, alterar.",
 "badej",			"x",			1,	3,	"a",	"",				"Xbadajar.",
 "badil",			"",			1,	2,	"a",	"1855",			"",
