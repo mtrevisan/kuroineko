@@ -507,6 +507,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bestial",		"in",			4,	7,	"a",	"1847",			"",
 "beteg",			"",			1,	1,	"a",	"1775",			"Tartajar.",
 "beteg",			"x",			1,	1,	"a",	"",				"Stronbaŧar.",
+"beton",			"",			1,	3,	"a",	"1980",			"(vitoriexe)",
 "betoneg",		"",			1,	3,	"g",	"1900",			"(veronexe) Đirandolar.",
 "beŧol",			"x",			1,	1,	"a",	"1775",			"Far beŧi, guadañar pikole some.",
 "bév",			"",			3,	1,	"a",	"1282",			"",
