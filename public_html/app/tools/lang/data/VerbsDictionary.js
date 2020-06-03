@@ -354,6 +354,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bardevel",		"x",			1,	6,	"g",	"1900",			"(veronexe) Blaterar.",
 "barekin",		"",			1,	5,	"a",	"",				"",
 "bareg",			"x",			1,	1,	"g",	"1894",			"Xberegar.",
+"barel",			"",			1,	3,	"g",	"1980",			"(vitoriexe)",
 "baret",			"",			1,	3,	"a",	"1896",			"",
 "baret",			"in",			1,	3,	"a",	"",				"",
 "baret",			"x",			1,	3,	"a",	"1829",			"",
