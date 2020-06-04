@@ -8190,6 +8190,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "visc",			"in",			1,	1,	"a",	"1775",			"",
 "visig",			"",			1,	3,	"a",	"1829",			"Vesigar",
 "visig",			"in",			1,	3,	"a",	"1829",			"Vesigar",
+"viskol",		"",			1,	1,	"a",	"1980",			"(vitoriexe) Biskolar.",
 "vist",			"",			5,	1,	"g",	"1877",			"",
 "vist",			"dex",		5,	1,	"g",	"",				"",
 "vist",			"en",			5,	1,	"g",	"",				"",
