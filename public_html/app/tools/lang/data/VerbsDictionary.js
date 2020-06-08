@@ -954,6 +954,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "burf",			"x",			1,	1,	"a",	"1829",			"Xbrufar.",
 "bur",			"",			4,	3,	"a",	"1855",			"(belumat) Borir",
 "bur",			"a",			4,	3,	"a",	"",				"Aborir.",
+"bur",			"x",			4,	3,	"a",	"",				"Xborir.",
 "burask",		"",			1,	3,	"g",	"1980",			"(vitoriexe)",
 "burl",			"",			1,	1,	"a",	"1775",			"",
 "burt",			"x",			1,	1,	"a",	"1877",			"Spénđer.",
