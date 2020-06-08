@@ -3245,6 +3245,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "komuneg",		"s",			1,	3,	"a",	"1854",			"",
 "kon",			"s",			4,	3,	"a",	"1590",			"Konsumar.",
 "kon",			"des",		4,	3,	"a",	"1560",			"Xmagrir, konsumar, stremar.",
+"konaj",			"",			1,	3,	"a",	"1980",			"(vitoriexe) Kajar.",
 "kónb",			"in",			3,	1,	"a",	"1775",			"",
 "kónb",			"so",			3,	1,	"a",	"1775",			"",
 "konbàt",		"",			3,	4,	"g",	"1867",			"(far k.) dar dele preokupaŧion.",
