@@ -5825,6 +5825,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ranɉ",			"",			1,	1,	"g",	"",				"(bixiak)",
 "rank",			"",			1,	1,	"g",	"1775",			"Strusiar, laorar ko molta voja de far.",
 "rank",			"a",			1,	1,	"g",	"1867",			"",
+"rankañ",		"",			1,	4,	"g",	"1980",			"(vitoriexe)",
 "rankur",		"",			1,	4,	"a",	"1382",			"Tor sú.",
 "ranp",			"",			1,	1,	"g",	"1852",			"",
 "ranpeg",		"",			1,	1,	"g",	"1560",			"",
