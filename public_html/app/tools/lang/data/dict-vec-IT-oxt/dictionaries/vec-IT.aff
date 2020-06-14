@@ -97,7 +97,7 @@ ICONV TH Ŧ
 ICONV ' ʼ
 
 # frequently switched character groups
-REP 128
+REP 132
 REP a à
 REP e è
 REP e é
@@ -156,6 +156,10 @@ REP ike$ ege
 REP itor$ idor
 REP ator$ ador
 REP etor$ edor
+REP kio ki_ʼƚo
+REP kii ki_ʼƚi
+REP kia ki_ʼƚa
+REP kie ki_ʼƚe
 REP ae aƚe
 REP àe àƚe
 REP ee eƚe
@@ -5565,6 +5569,6 @@ SFX '9 te ʼ te
 SFX '9 do ʼ do
 SFX '9 ko ʼ ko
 SFX '9 a ʼ [^rx]a
-SFX '9 e ʼ [^mtv]e
+SFX '9 e ʼ [^mt]e
 SFX '9 o ʼ [^dk]o
 SFX '9 ove óʼ ove
