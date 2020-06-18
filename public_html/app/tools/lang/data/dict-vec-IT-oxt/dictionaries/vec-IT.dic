@@ -8250,9 +8250,9 @@ karègo/T8N8tBlB7BJ1I1FS+0*0	po:verb ds:indicative+present is:first+singular st:
 karenar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 kareno/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:karenar
 karénomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:karenar
-karetar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-kareto/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:karetar
-karétomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:karetar
+karetar/t0l070n0t1P0PlP7Q0QlQ7*0	po:verb ds:infinitive+simple
+kareto/t8n8tAlA7AJ1FS*0	po:verb ds:indicative+present is:first+singular st:karetar
+karétomi/t8n8tAlA7AI1*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:karetar
 kareŧar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
 kareŧo/t8n8tAlAJ1FS	po:verb ds:indicative+present is:first+singular st:kareŧar
 karéŧomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:kareŧar
@@ -8270,6 +8270,9 @@ kargo/t8n8tAlA7AJ1FS-1+0*0	po:verb ds:indicative+present is:first+singular st:ka
 kàrgomi/t8n8tAlA7AI1-1+0*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:kargar
 inkarir/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple ds:in
 inkariso/n0T8N8tClC7CJ1I1FS	po:verb ds:indicative+present is:first+singular st:inkarir ds:in
+kariar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+kario/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:kariar
+kàriomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:kariar
 kariđar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
 kariđo/t8n8tAlAJ1	po:verb ds:indicative+present is:first+singular st:kariđar
 karíđomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:kariđar
@@ -29131,8 +29134,8 @@ kapotòla	po:noun is:singular+masculine al:kapitòla
 kapotòƚa	po:noun is:singular+masculine al:kapitòƚa
 kapovèrso/M0FS	po:noun is:singular+masculine
 kapoxir/M0	po:noun is:singular+masculine
-kar/M0^6eToT	po:adjective_qualificative is:singular+masculine
-kara/F0^6aTeToT	po:adjective_qualificative is:singular+femenine
+kar/M0oT^6	po:adjective_qualificative is:singular+masculine
+kara/F0aToT^6	po:adjective_qualificative is:singular+femenine
 karanpana/F0	po:noun is:singular+femenine is:veneŧian
 karatarístego/A1FS	po:adjective_qualificative is:singular+masculine
 karaterístego/A1FS	po:adjective_qualificative is:singular+masculine
@@ -35227,7 +35230,8 @@ kareŧativo/A1	po:adjective_qualificative is:singular+masculine
 karèr/M0v0	po:noun is:singular+masculine
 karèra/F0v0	po:noun is:singular+femenine
 kariađo/M0V3	po:noun is:singular+masculine
-kariòla/F0V3	po:noun is:singular+femenine
+kariòla/F0eT	po:noun is:singular+femenine
+kariòƚa/F0eT	po:noun is:singular+femenine
 karígol/M0B2PdV3	po:adjective is:singular+masculine
 karígola/F0V3	po:adjective is:singular+femenine
 karlona	po:adverb
@@ -47029,7 +47033,8 @@ karbonoxo/A1FSPd	po:adjective_qualificative is:singular+masculine
 kaređo/M0eT	po:noun is:singular+masculine
 karena/F0	po:noun is:singular+femenine
 karesévol/F0B2PdVf	po:adjective_qualificative is:singular
-kareto/M0FSPdeLe7o0o4	po:noun is:singular+masculine
+kareto/M0FSPdeLe7iNo0o4	po:noun is:singular+masculine
+kareta/F0iNo1o3	po:noun is:singular+femenine
 kareŧévol/F0B2Pd	po:adjective_qualificative is:singular
 kareŧo/M0FSPdV3	po:noun is:singular+masculine
 karexo/M0FSeT	po:noun is:singular+masculine
@@ -59073,7 +59078,7 @@ lupin/A2Vp	po:adjective_qualificative is:singular+masculine
 alan/A2B1	po:noun is:singular+masculine
 aƚan/A2	po:noun is:singular+masculine
 kabiòto/M0FS	po:noun is:singular+masculine
-kargana/F0	po:noun is:singular+femenine
+kargana/F0	po:adjective_qualificative is:singular+femenine
 maneđèl/M0B1	po:noun is:singular+masculine
 manexèl/M0B1V3	po:noun is:singular+masculine
 xmarñinfo/A1FSVp	po:adjective_qualificative is:singular+masculine
@@ -59123,9 +59128,18 @@ kapusado/M0FSy0	po:adjective_qualificative is:singular+masculine
 kapuŧada/F0y0	po:adjective_qualificative is:singular+femenine
 kapuŧado/M0FSy0	po:adjective_qualificative is:singular+masculine
 karabinier/A1	po:noun is:singular+masculine
+karegoneto/M0FSPd	po:noun is:singular+masculine
+bigol/M0B1V3	po:noun is:singular+masculine
+karièra/F0	po:noun is:singular+femenine
+kariera/F0	po:noun is:singular+femenine
+kariolante/M0	po:noun is:singular
+karioƚante/M0	po:noun is:singular
+kariolèr/M0v0	po:noun is:singular+masculine
+karioƚèr/M0v7	po:noun is:singular+masculine
+karnal/F0B1Vf	po:adjective_qualificative is:singular
 
 
-/ 74
+/ 75
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ
 sost.:kalèfa,kaƚèfa,vèrso
@@ -59135,3 +59149,6 @@ sost.:kalvèla,kalvèƚa,kalvèa
 sost.:forèsto (kontr.),nostran (kontr.)
 sost.:kànola,kànoƚa,kàndola,kàndoƚa
 sost.:gabiòto,kapiòto
+v.:kaređar,karexar,kariđar,karixar,kariar
+sost.:karièra,kariera
+sost.:deo,dedo
