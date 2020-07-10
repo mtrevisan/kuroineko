@@ -9863,10 +9863,10 @@ kufo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:kufar
 kúfomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:kufar
 skufiotar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple ds:s
 skufiòto/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:skufiotar ds:s
-kufolar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
-kúfolo/T8N8tBlBJ1I1FS	po:verb ds:indicative+present is:first+singular st:kufolar
-kufoƚar/t070t1P0P7Q0Q7	po:verb ds:infinitive+simple
-kúfoƚo/T8tB7BJ1I1	po:verb ds:indicative+present is:first+singular st:kufoƚar
+kufolar/t0l0n0t1P0PlQ0Ql*0	po:verb ds:infinitive+simple
+kúfolo/T8N8tBlBJ1I1FS*0	po:verb ds:indicative+present is:first+singular st:kufolar
+kufoƚar/t070t1P0P7Q0Q7*0	po:verb ds:infinitive+simple
+kúfoƚo/T8tB7BJ1I1*0	po:verb ds:indicative+present is:first+singular st:kufoƚar
 skufonar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple ds:s
 skufono/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:skufonar ds:s
 skufónomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:skufonar ds:s
@@ -29577,7 +29577,7 @@ koron/M0B1Pdo1o3	po:noun is:singular+masculine
 korona/F0eT	po:noun is:singular+femenine
 koronal/F0B1Vf	po:adjective_qualificative is:singular
 koronèla/F0V3	po:noun is:singular+femenine
-korta/F0eLe7	po:adjective_qualificative is:singular+femenine
+korta/F0eToT	po:adjective_qualificative is:singular+femenine
 kortegador/M0v0Pd*0	po:noun is:singular+masculine
 kortegadora/F0v0*0	po:noun is:singular+femenine
 kortegadura/F0d0eT*0	po:noun is:singular+femenine
@@ -29591,7 +29591,8 @@ kortivo/M0	po:noun is:singular+masculine
 kortígol/M0B2PdV3	po:noun is:singular+masculine
 kortío/M0	po:noun is:singular+masculine
 kortívol/M0B2PdV3	po:noun is:singular+masculine
-korto/M0FS	po:adjective_qualificative is:singular+masculine
+korto/M0FSeToT	po:adjective_qualificative is:singular+masculine
+kortexin/A2	po:adjective_qualificative is:singular+masculine st:korto ds:in
 korveto/M0FS	po:noun is:singular+masculine st:kòrvo ds:eto
 kosadura/F0d0eT-1+0*0	po:noun is:singular+femenine
 kosamento/M0FSPdVr-1+0*0	po:noun is:singular+masculine
@@ -29735,7 +29736,9 @@ kuistion/F0B1Pd	po:noun is:singular+femenine
 kuisto/A1FS	po:adjective is:singular+masculine
 kuisto/A1FS	po:pronoun_demonstrative_near is:singular+masculine
 kukú	po:noun is:masculine
-kul/M0aZaSeTo0o1o2o4oT	po:noun is:singular+masculine
+kul/M0aZaSeToT	po:noun is:singular+masculine
+kulon/A2B1Pd	po:adjective_qualificative is:singular+masculine
+kuƚon/A2Pd	po:adjective_qualificative is:singular+masculine
 kulata/F0iNo0o1o3o4	po:noun is:singular+femenine
 kultura/F0*0	po:noun is:singular+femenine
 kultural/F0B1Vf	po:adjective is:singular
@@ -29748,7 +29751,8 @@ kuna/F0eT	po:noun is:singular+femenine
 kuniador/M0v0Pd	po:noun is:singular+masculine
 kuniadora/F0v0	po:noun is:singular+femenine
 kunicèra/F0	po:noun is:singular+femenine
-kunico/M0	po:noun is:singular+masculine
+kunico/M0eTo0o1o3o4	po:noun is:singular+masculine
+kunica/F0eT	po:noun is:singular+femenine
 kuninador/M0v0Pd*0	po:noun is:singular+masculine
 kuninadora/F0v0*0	po:noun is:singular+femenine
 kuñador/M0v0Pd+0.0	po:noun is:singular+masculine
@@ -29761,8 +29765,8 @@ kuradura/F0d0eT+0^2*0^7	po:noun is:singular+femenine
 kuramento/M0FSPdVr+0^2*0^7	po:noun is:singular+masculine
 kuran/F0B1	po:noun is:singular+masculine
 kurarece	po:noun
-kurta/F0eT	po:adjective is:singular+femenine
-kurto/M0FSeT	po:adjective is:singular+masculine
+kurta/F0eToT	po:adjective_qualificative is:singular+femenine
+kurto/M0FSeToT	po:adjective_qualificative is:singular+masculine
 kustionamento/M0FSPdVr	po:noun is:singular+masculine
 kustòde/M0	po:noun is:singular
 kuxidura/F0d0eT-1.0*0	po:noun is:singular+femenine
@@ -35631,17 +35635,17 @@ kuramèla/F0V3	po:noun is:singular+femenine
 kuramèr/M0v0	po:noun is:singular+masculine
 kuramèra/F0v0	po:noun is:singular+femenine
 kuriòtol/M0B2PdV3	po:noun is:singular+masculine
-kusa–sénar/F0	po:noun is:singular
-kusa–séner/F0Pd	po:noun is:singular
-kusasénar/F0	po:noun is:singular
-kusaséner/F0Pd	po:noun is:singular
-kusin/M0eLe7eT	po:noun is:singular+masculine
+kusa–sénare/FS	po:noun
+kusa–sénere/FS	po:noun
+kusasénare/FS	po:noun
+kusasénere/FS	po:noun
+kusin/M0eLe7eTo0o4	po:noun is:singular+masculine
 kustion/F0B1Pd	po:noun is:singular+femenine
 kustòdia/F0	po:noun is:singular+femenine
-kuŧa–ŧénar/F0	po:noun is:singular
-kuŧa–ŧéner/F0Pd	po:noun is:singular
-kuŧaŧénar/F0	po:noun is:singular
-kuŧaŧéner/F0Pd	po:noun is:singular+masculine
+kuŧa–ŧénare/FS	po:noun
+kuŧa–ŧénere/FS	po:noun
+kuŧaŧénare/FS	po:noun
+kuŧaŧénere/FS	po:noun
 kuxarin/A2	po:adjective is:singular+masculine
 kuxinèr/M0v0	po:noun is:singular+masculine
 kuxinèra/F0v0	po:noun is:singular+femenine
@@ -47625,8 +47629,8 @@ kulumía/F0	po:noun is:singular+femenine
 kuƚiera/F0	po:noun is:singular+femenine
 kuƚumía/F0	po:noun is:singular+femenine
 kuño/M0FSeT	po:noun is:singular+masculine
-kupa/F0iN	po:adjective is:singular+femenine
-kupo/M0FSiN	po:adjective is:singular+masculine
+kupa/F0iN	po:adjective_qualificative is:singular+femenine
+kupo/M0FSiN	po:adjective_qualificative is:singular+masculine
 kuranŧa/F0V3+0	po:noun is:singular+femenine
 kuratèla/F0V3	po:noun is:singular+femenine
 kurba/F0	po:noun is:singular+femenine
@@ -47637,7 +47641,7 @@ kurin/A2	po:noun is:singular+masculine
 kurioxa/F0	po:adjective_qualificative is:singular+femenine
 kurioxamente/FSw0	po:adverb
 kurioxo/M0FSPdo0o1o2o4	po:adjective_qualificative is:singular+masculine
-kurtexin/A2	po:adjective is:singular+masculine
+kurtexin/A2	po:adjective_qualificative is:singular+masculine st:kurto ds:in
 kurvo/A1	po:adjective is:singular+masculine
 kuso/M0FSeTo0o1o2o4	po:noun is:singular+masculine
 kutèr/M0v0	po:noun is:singular+masculine
@@ -54792,7 +54796,8 @@ korliko/M0FSeTo0o4	po:noun is:singular+masculine
 korvin/M0	po:noun is:singular+masculine
 kòdol/M0B2PdV3	po:noun is:singular+masculine
 kronco/M0*0	po:noun is:singular+masculine
-kroxnòbel/F0B2Vf	po:noun is:singular+masculine
+kroxnòbel	po:noun is:masculine
+kroxnòbeƚo	po:noun is:masculine
 kúkola/F0V3	po:noun is:singular+femenine
 kúrtol/M0B2PdV3	po:noun is:singular+masculine
 laña/F0Vp	po:noun is:singular+femenine
@@ -55874,7 +55879,7 @@ kukubèla/F0V3	po:noun is:singular+femenine
 kukumareto/M0FSPd	po:noun is:singular+masculine
 kukumereto/M0FSPd	po:noun is:singular+masculine
 kukuñèl/M0B1V3	po:noun is:singular+masculine
-kursor/F0Pd*0	po:noun is:singular+masculine
+kursor/A2Pd*0	po:noun is:singular+masculine
 küercolin/M0V3	po:noun is:singular+masculine
 lagremoxamente/FSw0	po:adverb
 lagremoxo/A1FSPd	po:adjective_qualificative is:singular+masculine
@@ -57637,8 +57642,9 @@ krinal/F0B1Vf	po:noun is:singular+masculine
 krixantemo/M0FS	po:noun is:singular+masculine
 krudel/F0B1o0o1o3o4	po:adjective_qualificative is:singular
 krudeƚe/F0o7o1o3o4	po:adjective_qualificative is:singular
-kruxnòbel/F0B2Vf	po:noun is:singular+masculine
-kruxnòber/M0Pd	po:noun is:singular+masculine
+kruxnòbel	po:noun is:masculine
+kruxnòbeƚo	po:noun is:masculine
+kruxnòber	po:noun is:masculine
 krúkol/M0B2PdV3	po:noun is:singular+masculine
 ku–kuko/FS	po:interjection
 kuartan/M0B1iN	po:adjective_qualificative is:singular+masculine
@@ -59353,8 +59359,24 @@ krostolina/F0V3	po:adjective_qualificative is:singular+femenine
 kroŧiato/A1	po:noun is:singular+masculine
 krosiato/A1	po:noun is:singular+masculine
 krudon/A2B1Pd	po:adjective_qualificative is:singular+masculine
+kujera/F0	po:noun is:singular+femenine
+kuɉera/F0	po:noun is:singular+femenine
+kulòna/F0eT	po:noun is:singular+femenine
+kuƚòna/F0e8	po:noun is:singular+femenine
+kurioxità	po:noun is:femenine
+kuxnòber	po:noun is:masculine is:todesko
+bexòño/M0FS	po:noun is:singular+masculine
+bixòño/M0FS	po:noun is:singular+masculine
+kusolon	po:adverb
+kusoƚon	po:adverb
+kuŧolon	po:adverb
+kusolin	po:adverb
+kusoƚin	po:adverb
+kuŧolin	po:adverb
 
 
-/ 104
+/ 106
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ
+sost.:kolòna,koƚòna,kulòna,kuƚòna
+sost.:kruxnòbel,kruxnòbeƚo,kruxnòber,kuxnòber,kroxnòbel,kroxnòbeƚo,bèko in kroxe

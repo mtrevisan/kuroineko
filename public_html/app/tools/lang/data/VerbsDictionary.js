@@ -3587,6 +3587,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kuf",			"",			1,	1,	"a",	"1854",			"Kufolar.",
 "kufiot",		"s",			1,	4,	"g",	"1900",			"(veronexe) Skapelotar.",
 "kufol",			"",			1,	1,	"a",	"1854",			"Kucar.",
+"kufol",			"s",			1,	1,	"a",	"1980",			"(vitoriexe)",
 "kufon",			"s",			1,	3,	"a",	"1854",			"Befar, motejar.",
 "kuiet",			"",			1,	3,	"a",	"1829",			"Kietar.",
 "kuiet",			"in",			1,	3,	"a",	"1829",			"",
