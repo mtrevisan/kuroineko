@@ -284,6 +284,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "balŧ",			"stra",		1,	1,	"g",	"1854",			"",
 "balŧ",			"trax",		1,	1,	"g",	"1829",			"",
 "balŧ",			"x",			1,	1,	"g",	"1775",			"",
+"balŧol",		"dex",		1,	1,	"g",	"1980",			"(vitoriexe)",
 "baluk",			"",			1,	3,	"a",	"1867",			"Star kome un mona.",
 "baluk",			"in",			1,	3,	"a",	"1852",			"Inbaukar.",
 "baluk",			"x",			1,	3,	"a",	"1896",			"",
