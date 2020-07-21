@@ -7752,6 +7752,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧip",			"mal",		1,	-2,"g",	"1908",			"(coxòto) Malmenar, bistratar.",
 "ŧip",			"man",		1,	-2,"g",	"1810",			"Guastar vestíi, aredi, evd.",
 "ŧip",			"posti",		1,	-1,"a",	"",				"",
+"ŧipid",			"des",		4,	5,	"a",	"1890",			"(vitoriexe) Libarar da 'l intorpidimento.",
 "ŧipid",			"in",			4,	5,	"a",	"1775",			"Grankir, intormentir.",
 "ŧipit",			"pre",		1,	1,	"a",	"1829",			"Kaskar ko la tèsta in vanti.",
 "ŧipri",			"in",			1,	1,	"a",	"1867",			"",
