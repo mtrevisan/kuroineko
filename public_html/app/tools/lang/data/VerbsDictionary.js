@@ -7671,6 +7671,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧep",			"in",			1,	1,	"a",	"1829",			"Invilupar.",
 "ŧep",			"e",			4,	3,	"a",	"1829",			"",
 "ŧep",			"per",		4,	3,	"a",	"",				"",
+"ŧepid",			"des",		4,	5,	"a",	"1890",			"(vitoriexe) Libarar da 'l intorpidimento.",
+"ŧepid",			"in",			4,	5,	"a",	"",				"",
 "ŧer",			"in",			1,	1,	"g",	"1775",			"Dar la ŧera.",
 "ŧerc",			"",			1,	1,	"a",	"1867",			"",
 "ŧerc",			"in",			1,	1,	"a",	"1854",			"Kontornar de ŧerci.",
