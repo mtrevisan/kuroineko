@@ -2114,7 +2114,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fü",				"ra",			1,	1,	"a",	"",				"",
 "fü",				"re",			1,	1,	"a",	"1415",			"",
 "fuf",			"in",			1,	1,	"a",	"1900",			"(veronexe) Stiŧir.",
-"fufiñ",			"",			1,	3,	"a",	"1775",			"Rovistar, skonvòlđer, manométer, trufar.",
+"fufiñ",			"",			1,	1,	"a",	"1775",			"Rovistar, skonvòlđer, manométer, trufar.",
 "fud",			"ra",			1,	1,	"a",	"1896",			"Refudar.",
 "fud",			"re",			1,	1,	"a",	"1415",			"",
 "fuđ",			"",			4,	3,	"a",	"1829",			"Skanpar.",
