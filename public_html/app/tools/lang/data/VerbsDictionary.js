@@ -2007,6 +2007,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "franŧex",		"in",			1,	5,	"a",	"1829",			"Infetar de ʼl mal franŧexe.",
 "frap",			"",			1,	2,	"g",	"1847",			"",
 "frap",			"in",			4,	4,	"a",	"1775",			"",
+"frapiñ",		"",			1,	4,	"a",	"1890",			"(vitoriexe)",
 "frapol",		"",			1,	2,	"g",	"1854",			"Xgualŧir.",
 "frapol",		"in",			1,	2,	"g",	"1854",			"Rénder xgualŧio.",
 "frapol",		"s",			1,	2,	"g",	"1928",			"(veneŧian)",
