@@ -1906,6 +1906,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fónd",			"in",			3,	1,	"a",	"",				"",
 "fónd",			"re",			3,	1,	"a",	"1867",			"",
 "fónd",			"stra",		3,	1,	"a",	"1855",			"(belumat)",
+"fond",			"",			4,	4,	"a",	"1980",			"(vitoriexe)",
 "fond",			"spro",		4,	4,	"a",	"1877",			"",
 "fondament",	"",			1,	6,	"a",	"1854",			"Fondar, far fondamento, piantar.",
 "fondament",	"re",			1,	6,	"a",	"1796",			"",
