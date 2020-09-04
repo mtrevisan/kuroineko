@@ -2733,6 +2733,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ɉoŧ",			"x",			1,	1,	"a",	"1775",			"",
 "ɉoŧol",			"",			1,	1,	"a",	"1350",			"Piovixenar.",
 "ɉoŧol",			"x",			1,	1,	"a",	"1565",			"Piovixenar.",
+"ɉoŧolin",		"",			1,	1,	"a",	"1890",			"(vitoriexe) Piovixenar.",
 "joŧiđ",			"x",			1,	3,	"a",	"1852",			"Xjoŧar.",
 "jol",			"",			2,	3,	"g",	"1855",			"(belumat) Doler.",
 "ɉubil",			"",			1,	1,	"a",	"1775",			"",
