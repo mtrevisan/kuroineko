@@ -1359,6 +1359,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "đir",			"re",			1,	1,	"a",	"1896",			"",
 "đirandol",		"",			1,	3,	"g",	"1852",			"",
 "đirland",		"",			1,	4,	"g",	"1829",			"",
+"đirol",			"",			1,	1,	"a",	"1890",			"(vitoriexe)",
 "đirn",			"",			1,	1,	"a",	"1852",			"Dixnar.",
 "điron",			"",			1,	3,	"a",	"1829",			"",
 "đo",				"",			1,	1,	"g",	"1560",			"",
