@@ -1278,6 +1278,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "dotor",			"x",			1,	3,	"a",	"1590",			"",
 "dotoređ",		"x",			1,	5,	"a",	"1775",			"Far el sacente, salamistrar.",
 "dox",			"",			1,	1,	"g",	"1867",			"",
+"drag",			"in",			1,	2,	"g",	"1980",			"(vitoriexe) Inbestialir.",
 "drap",			"",			1,	2,	"g",	"1450",			"Méter sú un drapo.",
 "drel",			"x",			1,	2,	"g",	"1998",			"Bàter la fruta ko na pertega par farla kaskar da ʼl albaro.",
 "dreŧ",			"",			1,	2,	"a",	"1509",			"",
