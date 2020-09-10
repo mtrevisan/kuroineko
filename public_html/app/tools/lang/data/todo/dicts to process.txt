@@ -24,6 +24,8 @@ dièrexi:
 ü: u + vocale tonica (eccetto dittongo uò, eccetto [kg]u)
 ï: i + i, kui, [pbtdkjɉfvr]i, vli, Ci(u)[òo]l, ma non iè, ma non se fa parte di un radicale o una desinenza o un suffisso in cui normalmente costituisce dittongo con la vocale che segue (es. Grieco ‹ġri̯èko›, besti(u)ola ‹bestiu̯òla, besti̯òla›, industriale ‹industri̯àle›, destriero ‹destri̯èro›, annacquiamo ‹annakkui̯àmo›)
 
+vitoriexi > konejanexi: inprestaòs
+belumat > agordini: nhas
 
 /([^\t\n\s]*)ğ([^\t\n\s]*[\t\s\n]+) > /($1)GV$2 # substitute flags
 # [^\n]+\n > # remove # comments
@@ -58,6 +60,12 @@ correctness time = 168 s
 total words = 41054870
 unique words = 38227613
 speed = 244374 w/s = 4.09 µs/w
+
+20200910
+correctness time = 53 s
+total words = 24610322
+unique words = 20714003
+speed = 464347 w/s = 2.15 µs/w
 
 https://graphemica.com/%E2%B1%A5
 https://www.filarveneto.eu/forum/viewtopic.php?f=44&t=1874
