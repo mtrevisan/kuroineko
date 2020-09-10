@@ -4123,6 +4123,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "mariol",		"",			1,	4,	"g",	"1829",			"",
 "marɉ",			"",			1,	1,	"g",	"1867",			"Konsolidar.",
 "marɉaŧ",		"x",			1,	4,	"g",	"1775",			"",
+"marm",			"in",			1,	1,	"a",	"1980",			"(vitoriexe) Inbanbolar.",
 "marmel",		"",			1,	4,	"g",	"1847",			"Far marmelata.",
 "marmit",		"in",			4,	6,	"a",	"1847",			"Instupidir.",
 "marmor",		"in",			5,	6,	"a",	"1851",			"",
