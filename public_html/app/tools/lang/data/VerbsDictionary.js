@@ -3770,6 +3770,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "lavin",			"x",			1,	3,	"a",	"1775",			"Franar, xmotar.",
 "lavor",			"",			1,	3,	"a",	"1409",			"",
 "lavorat",		"",			1,	5,	"g",	"1854",			"Lavorar un fià.",
+"lavoruŧ",		"",			1,	5,	"a",	"1980",			"(vitoriexe)",
 "lavr",			"x",			1,	1,	"g",	"",				"",
 "laxañ",			"",			1,	3,	"g",	"1852",			"Bravar, far na invenŧion da mona.",
 "laxañ",			"x",			1,	3,	"g",	"1900",			"(veronexe) Sformar.",
