@@ -1204,6 +1204,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "díx",			"intra",		3,	1,	"a",	"1415",			"",
 "díx",			"intre",		3,	1,	"a",	"",				"",
 "díx",			"kontra",	3,	1,	"a",	"1454",			"",
+"díx",			"mala",		3,	1,	"a",	"1980",			"(vitoriexe)",
 "díx",			"male",		3,	1,	"a",	"",				"",
 "díx",			"pre",		3,	1,	"a",	"",				"",
 "díx",			"re",			3,	1,	"a",	"1797",			"(data exata)",
