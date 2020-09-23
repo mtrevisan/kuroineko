@@ -12367,10 +12367,10 @@ mexónomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interr
 mexurar/t0l070n0t1P0PlP7Q0QlQ7-1	po:verb ds:infinitive+simple
 mexuro/t8n8tAlA7AJ1FS-1	po:verb ds:indicative+present is:first+singular st:mexurar
 mexúromi/t8n8tAlA7AI1-1	po:verb ds:indicative+present is:first+singular ds:interrogative st:mexurar
-xmiaolar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple dp:s
-xmiàolo/T8N8tBlBJ1I1FS	po:verb ds:indicative+present is:first+singular st:xmiaolar dp:s
-xmiaoƚar/t070t1P0P7Q0Q7	po:verb ds:infinitive+simple dp:s
-xmiàoƚo/T8tB7BJ1I1	po:verb ds:indicative+present is:first+singular st:xmiaoƚar dp:s
+miaolar/t0l0n0t1P0PlQ0Ql*0	po:verb ds:infinitive+simple
+miàolo/T8N8tBlBJ1I1FS*0	po:verb ds:indicative+present is:first+singular st:miaolar
+miaoƚar/t070t1P0P7Q0Q7*0	po:verb ds:infinitive+simple
+miàoƚo/T8tB7BJ1I1*0	po:verb ds:indicative+present is:first+singular st:miaoƚar
 mièder/t1p1l171n1P0PlP7R0RlR7	po:verb ds:infinitive+simple
 mièdo/T8N8tClC7CJ1I1	po:verb ds:indicative+present is:first+singular st:mièder
 miederò/t0n0l070p4l474J1I1	po:verb ds:indicative+future is:first+singular st:mièder
@@ -12460,6 +12460,14 @@ minúsomi/t8n8tAlA7AI1*0	po:verb ds:indicative+present is:first+singular ds:inte
 mirar/t0l070n0t1P0PlP7Q0QlQ7@0.0*0	po:verb ds:infinitive+simple
 miro/t8n8tAlA7AJ1FS@0.0*0	po:verb ds:indicative+present is:first+singular st:mirar
 míromi/t8n8tAlA7AI1@0.0*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:mirar
+miñañolar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
+miñàñolo/T8N8tBlBJ1I1FS	po:verb ds:indicative+present is:first+singular st:miñañolar
+miñañoƚar/t070t1P0P7Q0Q7	po:verb ds:infinitive+simple
+miñàñoƚo/T8tB7BJ1I1	po:verb ds:indicative+present is:first+singular st:miñañoƚar
+miñoñolar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
+miñòñolo/T8N8tBlBJ1I1FS	po:verb ds:indicative+present is:first+singular st:miñoñolar
+miñoñoƚar/t070t1P0P7Q0Q7	po:verb ds:infinitive+simple
+miñòñoƚo/T8tB7BJ1I1	po:verb ds:indicative+present is:first+singular st:miñoñoƚar
 misiar/t0l070n0t1P0PlP7Q0QlQ7-1.0*0	po:verb ds:infinitive+simple
 misio/t8n8tAlA7AJ1-1.0*0	po:verb ds:indicative+present is:first+singular st:misiar
 mísiomi/t8n8tAlA7AI1-1.0*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:misiar
@@ -24773,6 +24781,7 @@ Maŧarol/Z0	po:noun_proper is:singular+masculine
 Màsima/Z0	po:noun_proper is:singular+femenine
 Màsimo/FSZ0	po:noun_proper is:singular+masculine
 Màuro/FSZ0	po:noun_proper is:singular+masculine
+Meto/FSZ0	po:noun_proper is:singular+masculine
 Mena/Z0	po:noun_proper is:singular+femenine
 Menegeta/Z0	po:noun_proper is:singular+femenine
 Menegeto/FSZ0	po:noun_proper is:singular+masculine
@@ -25871,7 +25880,7 @@ novanta/%0%1%a	po:numeral_cardenal is:singular+masculine
 ŧento/FS%1%aVp	po:numeral_cardenal is:singular+masculine
 ŧènto/FSVp	po:numeral_cardenal is:singular+masculine
 mile/M0%0%a	po:numeral_cardenal is:singular+masculine
-miƚe/%0%7	po:numeral_cardenal is:singular+masculine
+miƚe/M0%0%7	po:numeral_cardenal is:singular+masculine
 melion/F0B1%0%aPd	po:numeral_cardenal is:singular+masculine
 meƚion/F0%0%7Pd	po:numeral_cardenal is:singular+masculine
 milion/F0B1%0%aPd	po:numeral_cardenal is:singular+masculine
@@ -27228,6 +27237,8 @@ venesianaso/A1FS	po:adjective_qualificative is:singular+masculine
 veneŧian/A2B1	po:adjective_qualificative is:singular+masculine
 veneŧianaŧo/A1FS	po:adjective_qualificative is:singular+masculine
 veronexe/M0FSPd	po:adjective_qualificative is:singular+masculine
+milanexe/M0FSPd	po:adjective_qualificative is:singular+masculine
+miƚanexe/M0FSPd	po:adjective_qualificative is:singular+masculine
 vesentin/A2	po:adjective_qualificative is:singular+masculine
 veŧentin/A2	po:adjective_qualificative is:singular+masculine
 vèneto/A1FSPd	po:adjective_qualificative is:singular+masculine
@@ -36493,8 +36504,8 @@ merkorèla/F0V3	po:noun is:singular+femenine
 meròide/M0	po:noun is:singular+femenine
 mesora/F0	po:noun is:singular+femenine
 metania/F0	po:noun is:singular+femenine
-metimal	po:noun
-metimaƚe	po:noun
+metimal	po:adjective_qualificative
+metimaƚe	po:adjective_qualificative
 mexaluna/F0	po:noun is:singular+femenine
 mexaƚuna/F0	po:noun is:singular+femenine
 mexapenta/F0Vr	po:noun is:singular+femenine
@@ -53540,7 +53551,8 @@ merñifo/A1FS	po:adjective is:singular+masculine
 mersé	po:noun is:femenine
 merŧé	po:noun is:femenine
 mesa/F0	po:noun is:singular+femenine
-mesal/F0B1Vf	po:noun is:singular+masculine
+mesal/F0B1iN	po:noun is:singular+masculine
+mesaƚe/F0iN	po:noun is:singular+masculine
 mestelèr/M0v0	po:noun is:singular+masculine
 mestelèra/F0v0	po:noun is:singular+femenine
 mesteƚèr/M0v7	po:noun is:singular+masculine
@@ -56385,7 +56397,8 @@ merlo/M0eToT	po:adjective_qualificative is:singular+masculine
 merluŧo/M0FSV3	po:noun is:singular+masculine
 meser/A2	po:noun is:singular+masculine
 mesorin/M0	po:noun is:singular+masculine
-miel/F0B1Vf	po:noun is:singular+masculine
+miel/F0B1aZaS	po:noun is:singular+masculine
+mieƚe/F0aS	po:noun is:singular+masculine
 minarol/M0B1PdV3	po:noun is:singular+masculine
 minconi	po:interjection
 miòl/M0B1V3	po:noun is:singular+masculine
@@ -58169,6 +58182,8 @@ metikoloxo/A1FSPd	po:adjective_qualificative is:singular+masculine
 metikoƚoxo/A1Pd	po:adjective_qualificative is:singular+masculine
 mèđa–lana/F0	po:noun is:singular+femenine pa:mèđa pa:lana
 mèxa–lana/F0V3	po:noun is:singular+femenine pa:mèxa pa:lana
+mađalana/F0	po:noun is:singular+femenine
+maxalana/F0V3	po:noun is:singular+femenine
 min	po:interjection
 minèra/F0	po:noun is:singular+femenine
 miñóñola/F0V3	po:noun is:singular+femenine
@@ -60285,8 +60300,44 @@ xiroƚin/M0	po:noun is:singular+masculine
 xlòlŧa/F0V3	po:adjective_qualificative is:singular+femenine
 xlòlŧo/M0FSV3	po:adjective_qualificative is:singular+masculine
 xmarñinfo/A1FS	po:adjective_qualificative is:singular+masculine
+metà	po:noun is:singular+femenine
+metàliko/A1FS	po:adjective_qualificative is:singular+masculine
+metàƚiko/A1	po:adjective_qualificative is:singular+masculine
+metipaxe	po:adjective_qualificative
+metisèrve	po:adjective_qualificative
+metradura/F0d0eT	po:noun is:singular+femenine
+mèđa–gabana/F0	po:noun is:singular+femenine
+mèxa–gabana/F0	po:noun is:singular+femenine
+mađagabana/F0	po:noun is:singular+femenine
+maxagabana/F0	po:noun is:singular+femenine
+mèđa–velada/F0y0y1	po:noun is:singular+femenine
+mèxa–velada/F0y0y1	po:noun is:singular+femenine
+mèxa–veƚada/F0y0y1	po:noun is:singular+femenine
+mađavelada/F0y0y1	po:noun is:singular+femenine
+maxavelada/F0y0y1	po:noun is:singular+femenine
+maxaveƚada/F0y0y1	po:noun is:singular+femenine
+mèđo–ponto/M0FSPdVr	po:noun is:singular+masculine
+mèxo–ponto/M0FSPdVr	po:noun is:singular+masculine
+međoponto/M0FSPdVr	po:noun is:singular+masculine
+mexoponto/M0FSPdVr	po:noun is:singular+masculine
+međòto/M0FS	po:noun is:singular+masculine
+mexòto/M0FS	po:noun is:singular+masculine
+miao	po:interjection
+miñàñol/M0B2PdV3	po:noun is:singular+masculine
+miñàñola/F0V3	po:noun is:singular+femenine
+migo	po:adverb
+miliara/F0	po:noun is:singular+femenine
+miƚiara/F0	po:noun is:singular+femenine
+milòr	po:noun is:masculine is:inglexe
+miƚòr	po:noun is:masculine is:inglexe
 
 
-/ 200
+/ 203
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ
+v.:misiar,mesedar
+sost.:mitade,mità,mitàe,mitè,metà
+int.:mao,miao
+v.:miñoñolar,miñoñoƚar,miñañolar,miñañoƚar
+sost.:miñòñola,miñòñoƚa,miñàñola,miñàñoƚa
+av.:miga,mia,migo
