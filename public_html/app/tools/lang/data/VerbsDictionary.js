@@ -5160,6 +5160,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pe",				"in",			1,	1,	"a",	"1894",			"Inpiŧar.",
 "pear",			"",			1,	1,	"a",	"",				"",
 "pear",			"in",			1,	1,	"a",	"1900",			"(veronexe)",
+"peaŧ",			"",			1,	1,	"a",	"1980",			"(vitoriexe) Dar na peada.",
+"peaŧ",			"s",			1,	1,	"a",	"1980",			"(vitoriexe) Dar na peada.",
 "pedal",			"",			1,	3,	"g",	"",				"",
 "pediment",		"",			1,	5,	"a",	"1855",			"(belumat)",
 "pediment",		"in",			1,	5,	"a",	"1855",			"(belumat)",
