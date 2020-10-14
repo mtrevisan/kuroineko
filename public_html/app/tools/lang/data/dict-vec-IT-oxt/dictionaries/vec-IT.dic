@@ -3457,12 +3457,6 @@ domisíƚiomi/t8tA7AI1	po:verb ds:indicative+present is:first+singular ds:interr
 donar/t0l070n0t1P0PlP7Q0QlQ7:0.0	po:verb ds:infinitive+simple
 dono/t8n8tAlA7AJ1FS:0.0	po:verb ds:indicative+present is:first+singular st:donar
 dónomi/t8n8tAlA7AI1:0.0	po:verb ds:indicative+present is:first+singular ds:interrogative st:donar
-perdonar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:per
-perdono/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:perdonar dp:per
-perdónomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:perdonar dp:per
-pardonar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:per
-pardono/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:pardonar dp:per
-pardónomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:pardonar dp:per
 adontar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:a
 adonto/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:adontar dp:a
 adóntomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:adontar dp:a
@@ -15121,6 +15115,12 @@ pévaro/T8N8tBlB7BJ1I1FS+0	po:verb ds:indicative+present is:first+singular st:pe
 pexar/t0l070n0t1P0PlP7Q0QlQ7^4	po:verb ds:infinitive+simple
 pexo/t8n8tAlA7AJ1FS^4	po:verb ds:indicative+present is:first+singular st:pexar
 péxomi/t8n8tAlA7AI1^4	po:verb ds:indicative+present is:first+singular ds:interrogative st:pexar
+pexuŧar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
+pexuŧo/t8n8tAlAJ1FS	po:verb ds:indicative+present is:first+singular st:pexuŧar
+pexúŧomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:pexuŧar
+pexusar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+pexuso/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:pexusar
+pexúsomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:pexusar
 inpïar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
 inpío/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:inpiar dp:in
 pijar/t0l070n0t1P0PlP7Q0QlQ7.0	po:verb ds:infinitive+simple
@@ -31413,7 +31413,7 @@ pensièr/M0	po:noun is:singular+masculine
 pentimento/M0FSPdVr+0	po:noun is:singular+masculine
 peñoraŧion/F0B1PdV3	po:noun is:singular+femenine
 peòco/M0FSr0aZaSeT	po:noun is:singular+masculine
-per/M0eTiNPd	po:noun is:singular+masculine
+per/M0PdaTeTiNo0o4	po:noun is:singular+masculine
 pera/F0eTuZuS	po:noun is:singular+femenine
 perbojidura/F0d0eT.0	po:noun is:singular+femenine
 perbojimento/M0FSPdVr	po:noun is:singular+masculine
@@ -31439,7 +31439,6 @@ permutaŧion/F0B1PdV3Vs	po:noun is:singular+femenine
 pernixa/F0Vs	po:noun is:singular+femenine
 pernixe/F0Vs	po:noun is:singular+femenine
 pernotaŧion/F0B1PdV3Vs	po:noun is:singular+femenine
-peron/F0B1Pd	po:noun is:singular+masculine
 persegèr/M0v0r0	po:noun is:singular+masculine
 persegèra/F0v0	po:noun is:singular+femenine
 persesion/F0B1Pd	po:noun is:singular+femenine
@@ -31540,6 +31539,7 @@ pikandolon/A2B1Pd	po:noun is:singular+masculine
 pikandoƚon	po:adverb
 pikandoƚon/A2Pd	po:noun is:singular+masculine
 pikapan/M0B1	po:noun is:singular+masculine
+pikeperfèto/A1FS	po:noun is:singular+masculine
 pikeparfèto/A1FS	po:noun is:singular+masculine
 pikolon/F0B1PdV3	po:adjective is:singular+masculine
 pila/F0eL	po:noun is:singular+femenine
@@ -37052,7 +37052,7 @@ pergoƚeto/A1Pd	po:noun is:singular+masculine
 periŧia/F0V3	po:noun is:singular+femenine
 permèđo/M0FSV3	po:noun is:singular+masculine
 persa/F0	po:noun is:singular+femenine
-persegeto/M0FSPd	po:noun is:singular+masculine
+persegeto/M0FSPd	po:noun is:singular+masculine st:pèrsego ds:eto
 persénbol/M0B2PdV3Vs	po:noun is:singular+masculine
 personèr/M0v0	po:noun is:singular+masculine
 personèra/F0v0	po:noun is:singular+femenine
@@ -44223,7 +44223,7 @@ peteneto/M0FSPd	po:noun is:singular+masculine
 petenico/M0	po:noun is:singular+masculine
 peteŧo/M0FSPdV3	po:noun is:singular+masculine
 petexin/M0	po:noun is:singular+masculine
-peto/M0FSPdaZaSeLe7iNo0o1o2o4uZuS	po:noun is:singular+masculine
+peto/M0FSPdaZaSiNo0o1o2o4uZuS	po:noun is:singular+masculine
 pevarin/A2	po:noun is:singular+masculine
 peverin/A2	po:noun is:singular+masculine
 pèker/M0Pd	po:noun is:singular+masculine
@@ -49196,7 +49196,7 @@ partito/A1FS	po:noun is:singular+masculine
 partïon/A2B1Pd	po:noun is:singular+masculine
 partïòr/M0	po:noun is:singular+masculine
 parto/M0FS:0	po:noun is:singular+masculine
-parusolin/M0V3	po:noun is:singular+masculine
+perusolin/M0V3Vs	po:noun is:singular+masculine
 pasaliŧio/M0V3	po:noun is:singular+masculine
 pasaƚisio/M0	po:noun is:singular+masculine
 pasandodiman	po:adverb
@@ -49347,7 +49347,7 @@ perukèr/M0v0Vs	po:noun is:singular+masculine
 perukèra/F0v0Vs	po:noun is:singular+femenine
 perukin/M0Vs	po:noun is:singular+masculine
 perukon/A2B1PdVs	po:adjective is:singular
-pesetin/M0	po:noun is:singular+masculine
+pesetin/M0	po:noun is:singular+masculine st:pese ds:in
 pesièra/F0	po:noun is:singular+femenine
 peska/F0o0o4	po:noun is:singular+femenine
 peskareŧa/F0V3	po:noun is:singular+femenine
@@ -52715,8 +52715,8 @@ pecèr/M0o0o4	po:noun is:singular+masculine
 pelaton/F0B1Pd	po:noun is:singular+masculine
 peleta/F0V3	po:noun is:singular+femenine
 pesaxanto/M0FS	po:noun is:singular+masculine
-petegolon/A2B1Pd	po:adjective_qualificative is:singular+masculine
-petegoƚon/A2Pd	po:adjective_qualificative is:singular+masculine
+petegolon/A2B1Pd	po:adjective_qualificative is:singular+masculine st:petégol ds:on
+petegoƚon/A2Pd	po:adjective_qualificative is:singular+masculine st:petégoƚo ds:on
 pexa/F0	po:noun is:singular+femenine
 piada/F0y0*0	po:noun is:singular+femenine
 pivila/F0V3	po:noun is:singular+femenine
@@ -53754,7 +53754,7 @@ peterèl/M0B1V3	po:noun is:singular+masculine
 petoleta/F0V3	po:noun is:singular+femenine
 petonèla/F0V3	po:noun is:singular+femenine
 petròlio/M0V3	po:noun is:singular+masculine
-pexante/M0	po:adjective is:singular
+pexante/M0iN	po:adjective is:singular
 péndol/M0B2	po:noun is:singular+masculine
 péndoƚo/M0	po:noun is:singular+masculine
 pèđo/M0FSV3	po:adjective is:singular+masculine
@@ -60602,8 +60602,30 @@ xiroƚin/M0	po:noun is:singular+masculine
 xlòlŧa/F0V3	po:adjective_qualificative is:singular+femenine
 xlòlŧo/M0FSV3	po:adjective_qualificative is:singular+masculine
 xmarñinfo/A1FS	po:adjective_qualificative is:singular+masculine
+perétola/F0V3	po:noun is:singular+femenine st:per ds:eto ds:el
+pèrfido/A1	po:adjective_qualificative is:singular+masculine
+pèrmuta/F0	po:noun is:singular+femenine
+pèrno/M0FS	po:noun is:singular+masculine
+persegon/F0B1Pd	po:noun is:singular+masculine st:pèrsego ds:on
+persegato/M0FS	po:noun is:singular+masculine st:pèrsego ds:ato
+peseto/M0FSPd	po:noun is:singular+masculine st:pese ds:eto
+pesto/FS	po:adverb
+pestarèl/M0B1V3	po:noun is:singular+masculine
+pestarnaja/F0V3	po:noun is:singular+femenine
+pestiŧe/M0V3	po:noun is:singular+femenine
+pestison/A2B1Pd	po:adjective_qualificative is:singular+masculine
+pestiŧon/A2B1Pd	po:adjective_qualificative is:singular+masculine
+pestisoxo/A1FSPd	po:adjective_qualificative is:singular+masculine
+pestiŧoxo/A1FSPd	po:adjective_qualificative is:singular+masculine
+petegoloneto/A1FSPd	po:adjective_qualificative is:singular+masculine st:petégol ds:on ds:eto
+petegoƚoneto/A1Pd	po:adjective_qualificative is:singular+masculine st:petégoƚo ds:on ds:eto
+petèl/M0B1o0o10304	po:noun is:singular+masculine
+petèƚo/M0B1o7o10304	po:noun is:singular+masculine
+petèla/F0V3	po:noun is:singular+femenine
 
 
-/ 245
+/ 248
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ
+sost.:peroxin,peruxin
+aj. kual.:pastiŧon,pastison,pestiŧon,pestison
