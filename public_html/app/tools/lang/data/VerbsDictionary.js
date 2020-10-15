@@ -5728,6 +5728,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pranŧ",			"",			1,	2,	"g",	"1877",			"",
 "prateg",		"",			1,	2,	"g",	"",				"",
 "prateg",		"mal",		1,	2,	"g",	"1829",			"",
+"pratik",		"",			1,	2,	"g",	"1980",			"(vitoriexe)",
+"pratik",		"mal",		1,	2,	"g",	"",				"",
 "preŧix",		"",			1,	4,	"a",	"1560",			"",
 "predeg",		"",			1,	2,	"g",	"",				"",
 "preg",			"",			1,	2,	"g",	"1463",			"",
