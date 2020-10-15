@@ -5411,6 +5411,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pieg",			"in",			1,	2,	"g",	"1867",			"",
 "pieg",			"re",			1,	2,	"g",	"1867",			"",
 "pieg",			"s",			1,	2,	"g",	"",				"",
+"pieget",		"",			1,	4,	"a",	"1980",			"(vitoriexe)",
 "pien",			"in",			1,	2,	"a",	"1896",			"Inpenir.",
 "pien",			"tera",		1,	2,	"a",	"1867",			"Far terapieni.",
 "pien",			"in",			4,	4,	"a",	"1900",			"(veronexe) Inpinir.",
