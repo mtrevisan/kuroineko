@@ -5330,6 +5330,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "petol",			"des",		1,	1,	"a",	"1560",			"Destakar, kavar fora da un problema, svilupar.",
 "petol",			"in",			1,	1,	"a",	"1590",			"Inxakerar.",
 "petol",			"s",			1,	1,	"a",	"1560",			"Destakar.",
+"petolon",		"",			1,	5,	"a",	"1980",			"(vitoriexe) Mangiucchiare.",
 "peton",			"",			1,	3,	"a",	"1900",			"(veronexe)",
 "petor",			"des",		1,	1,	"a",	"1867",			"Skamixar.",
 "petor",			"es",			1,	1,	"a",	"1775",			"",

@@ -15052,6 +15052,12 @@ petolar/t0l0n0t1P0PlQ0Ql-1+0*0	po:verb ds:infinitive+simple
 pétolo/T8N8tBlBJ1I1FS-1+0*0	po:verb ds:indicative+present is:first+singular st:petolar
 petoƚar/t070t1P0P7Q0Q7-1+0*0	po:verb ds:infinitive+simple
 pétoƚo/T8tB7BJ1I1-1+0*0	po:verb ds:indicative+present is:first+singular st:petoƚar
+petolonar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
+petolono/t8n8tAlAJ1FS	po:verb ds:indicative+present is:first+singular st:petolonar
+petolónomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:petolonar
+petoƚonar/t070t1P0P7Q0Q7	po:verb ds:infinitive+simple
+petoƚono/t8tA7AJ1	po:verb ds:indicative+present is:first+singular st:petoƚonar
+petoƚónomi/t8tA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:petoƚonar
 petonar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 petono/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:petonar
 petónomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:petonar
@@ -31479,6 +31485,7 @@ pékol/M0B2PdV3	po:noun is:singular+masculine
 pétol/M0B2PdV3	po:adjective_qualificative is:singular+masculine
 pétola/F0V3	po:adjective_qualificative is:singular+femenine
 pévare	po:noun is:masculine
+pévar	po:noun is:masculine
 péver	po:noun is:masculine
 pévere	po:noun is:masculine
 pèco/M0	po:noun is:singular+masculine
@@ -31505,8 +31512,8 @@ pianadura/F0d0eT*0	po:noun is:singular+femenine
 pianamente/FSw0	po:adverb
 pianđotamento/M0FSPdVr	po:noun is:singular+masculine
 pianeto/M0FSPdiNo0o4	po:noun is:singular+masculine
-pianin	po:adverb
-pianta/F0	po:noun is:singular+femenine
+pianin	po:adverb st:pian ds:in
+pianta/F0iN	po:noun is:singular+femenine
 piantador/M0Pdv0-1+0.0^6*0^1	po:noun is:singular+masculine
 piantadora/F0v0-1+0.0^6*0^1	po:noun is:singular+femenine
 piantal/F0B1Vf	po:noun is:singular+masculine
@@ -37107,7 +37114,7 @@ pèpa/F0	po:noun is:singular+femenine st:polenta is:infantil
 pèra/F0	po:noun is:singular+femenine
 pèrla/F0	po:noun is:singular+femenine
 pèto–roso/M0FSPd	po:noun is:singular+masculine pa:pèto pa:roso
-piaga/F0	po:noun is:singular+femenine
+piaga/F0eT	po:noun is:singular+femenine
 piajo/M0B1eTo0o1o2o4	po:adjective_qualificative is:singular+masculine
 piaɉo/M0eTo0o1o2o4	po:adjective_qualificative is:singular+masculine
 piala/F0V3	po:noun is:singular+femenine
@@ -44219,13 +44226,13 @@ persegada/F0y0y1	po:noun is:singular+femenine
 peskarin/M0	po:noun is:singular+masculine
 pestafèr/M0	po:noun is:singular+masculine
 peteca/F0	po:noun is:singular+femenine
-peteneto/M0FSPd	po:noun is:singular+masculine
+peteneto/M0FSPd	po:noun is:singular+masculine st:pèten ds:eto
 petenico/M0	po:noun is:singular+masculine
 peteŧo/M0FSPdV3	po:noun is:singular+masculine
 petexin/M0	po:noun is:singular+masculine
 peto/M0FSPdaZaSiNo0o1o2o4uZuS	po:noun is:singular+masculine
-pevarin/A2	po:noun is:singular+masculine
-peverin/A2	po:noun is:singular+masculine
+pevarin/A2	po:adjective_qualificative is:singular+masculine
+peverin/A2	po:adjective_qualificative is:singular+masculine
 pèker/M0Pd	po:noun is:singular+masculine
 piatoleŧo/M0FSPdV3	po:noun is:singular+masculine
 piatoƚeso/M0Pd	po:noun is:singular+masculine
@@ -54463,7 +54470,7 @@ patideto/A1FS	po:adjective is:singular+masculine
 patidin/A2	po:adjective is:singular+masculine
 peltre/M0	po:noun is:singular+masculine
 penoni	po:adverb
-petenèla/F0V3	po:noun is:singular+femenine
+petenèla/F0V3	po:noun is:singular+femenine st:pèten ds:èl
 pièla/F0V3	po:noun is:singular+femenine
 prevalso/A1FS	po:noun is:singular+masculine
 prevòsto/M0FS	po:noun is:singular+masculine
@@ -60622,10 +60629,26 @@ petegoƚoneto/A1Pd	po:adjective_qualificative is:singular+masculine st:petégoƚ
 petèl/M0B1o0o10304	po:noun is:singular+masculine
 petèƚo/M0B1o7o10304	po:noun is:singular+masculine
 petèla/F0V3	po:noun is:singular+femenine
+petenato/M0FS	po:noun is:singular+masculine st:pèten ds:ato
+peteso/FS	po:adverb
+petòŧo/M0FSV3	po:noun is:singular+masculine
+petunia/F0	po:noun is:singular+femenine
+pevarèl/M0B1V3	po:noun is:singular+masculine
+peverèl/M0B1V3	po:noun is:singular+masculine
+peŧedèla/F0	po:noun st:pèŧa ds:èl
+pesedèla/F0V3	po:noun st:pèsa ds:èl
+peŧòto/M0FSr0	po:noun is:singular+masculine st:pèŧa ds:òto
+pesòto/M0FSr0	po:noun is:singular+masculine st:pèsa ds:òto
+peŧòla/F0	po:noun is:singular+femenine
+pesòla/F0V3	po:noun is:singular+femenine
+piajo/M0B1V3	po:adjective_qualificative is:singular+masculine
+piaja/F0V3	po:adjective_qualificative is:singular+masculine
+pianeta/F0	po:noun is:singular+femenine
 
 
-/ 248
+/ 250
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ
 sost.:peroxin,peruxin
 aj. kual.:pastiŧon,pastison,pestiŧon,pestison
+sost.:spondarola,spondaroƚa,spondariola,spondarioƚa,spondaròla,spondaròƚa,spondariòla,spondariòƚa,piala,piaƚa
