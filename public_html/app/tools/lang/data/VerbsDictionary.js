@@ -5810,6 +5810,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "proviđ",		"in",			1,	4,	"a",	"1854",			"",
 "prum",			"in",			1,	2,	"a",	"",				"Doparar par la prima volta.",
 "prunŧinel",	"",			1,	7,	"g",	"1900",			"(veronexe) Puriŧinelar.",
+"pruŧion",		"spro",		1,	5,	"a",	"1980",			"(vitoriexe) Sproporŧionar.",
 "publeg",		"",			1,	1,	"a",	"1371",			"",
 "puđ",			"",			1,	1,	"a",	"1821",			"",
 "puđ",			"re",			1,	1,	"a",	"",				"",
