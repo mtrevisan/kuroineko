@@ -4058,12 +4058,17 @@ SFX M0 io i io	is:plural+masculine
 SFX M0 a i a	is:plural+masculine
 SFX M0 e i e	is:plural+masculine
 
-# đontamento de -io/a a le paròle in -o/a (-[lnr] > -[lnr]io, -o/e > -io, -a > -ia)
+# sostantivi singolari: đontamento de -io/a a le paròle in -o/a (-[lnr] > -[lnr]io, -o/e > -io, -a > -ia)
 SFX M1 Y 4
-SFX M1 a ia/F0 a
-SFX M1 e io e
-SFX M1 o io o
-SFX M1 0 io [lnr]
+SFX M1 a ia/F0 a	is:singular+femenine
+SFX M1 e io e	is:singular+masculine
+SFX M1 o io o	is:singular+masculine
+SFX M1 0 io [lnr]	is:singular+masculine
+
+# sostantivi plurali senŧa đèner (-. > -i)
+SFX X0 Y 2
+SFX X0 e i e	is:plural
+SFX X0 0 i [nr]	is:plural
 
 
 ### Fèltre–Belun ###
@@ -4196,7 +4201,7 @@ PFX Vp Đ X Đ
 ### Pàdoa ###
 
 # metafonèxi padoana
-SFX Pd Y 55
+SFX Pd Y 56
 SFX Pd el ili el	is:plural+masculine
 SFX Pd ol uli ol	is:plural+masculine
 SFX Pd en ini en	is:plural+masculine
@@ -4225,7 +4230,8 @@ SFX Pd ovo uvi ovo	is:plural+masculine
 SFX Pd exo ixi exo	is:plural+masculine
 SFX Pd oxo uxi oxo	is:plural+masculine
 SFX Pd orse ursi orse	is:plural+masculine
-SFX Pd ente inti ente	is:plural+masculine
+SFX Pd ente inti [^i]ente	is:plural
+SFX Pd e i iente	is:plural
 SFX Pd onte unti onte	is:plural+masculine
 SFX Pd oldo uldi oldo	is:plural+masculine
 SFX Pd ordo urdi ordo	is:plural+masculine
@@ -4288,7 +4294,7 @@ PFX Vs ve va ver
 
 # kanbio veronexe (-ente > -ènte/M0FS, -en[pstŧ]o > -èn[pstŧ]o/M0FSPd, -en[dstŧ]a > -èn[dstŧ]a/F0, -osto > -òsto/M0FS, -ongo > -òngo/M0FS)
 SFX Vr Y 23
-SFX Vr ente ènte/M0FS ente
+SFX Vr ente ènte/X0FS ente
 SFX Vr enbre ènbre/M0FS enbre
 SFX Vr endo èndo/M0FS endo
 SFX Vr ento ènto/M0FS ento
@@ -4314,7 +4320,7 @@ SFX Vr ontro òntro/M0 ontro
 
 # kanbio veronexe ko èle vanesente (-ente > -ènte/M0, -ento > -ènto/M0Pd)
 SFX VR Y 19
-SFX VR ente ènte/M0 ente
+SFX VR ente ènte/X0 ente
 SFX VR enbre ènbre/M0 enbre
 SFX VR endo èndo/M0 endo
 SFX VR ento ènto/M0 ento
