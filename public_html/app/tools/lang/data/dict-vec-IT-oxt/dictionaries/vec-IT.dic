@@ -9995,13 +9995,16 @@ kuietar/t0l070n0t1P0PlP7Q0QlQ7+0	po:verb ds:infinitive+simple
 kuièto/T8N8tBlB7BJ1I1FS+0	po:verb ds:indicative+present is:first+singular st:kuietar
 kuieto/t8n8tAlA7AJ1FS+0	po:verb ds:indicative+present is:first+singular st:kuietar
 kuiétomi/t8n8tAlA7AI1+0	po:verb ds:indicative+present is:first+singular ds:interrogative st:kuietar
-skuinkuinar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:s
-skuinkuino/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:skuinkuinar dp:s
-skuinkuínomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:skuinkuinar dp:s
+kuinkuinar/t0l070n0t1P0PlP7Q0QlQ7*0	po:verb ds:infinitive+simple
+kuinkuino/t8n8tAlA7AJ1FS*0	po:verb ds:indicative+present is:first+singular st:kuinkuinar
+kuinkuínomi/t8n8tAlA7AI1*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:kuinkuinar
 deskuinternar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:des
 deskuintèrno/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:deskuinternar dp:des
 skuinternar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:s
 skuintèrno/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:skuinternar dp:s
+kuintinar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+kuintino/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:kuintinar
+kuintínomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:kuintinar
 deskuintarnar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:des
 deskuintarno/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:deskuintarnar dp:des
 deskuintàrnomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:deskuintarnar dp:des
@@ -25625,10 +25628,10 @@ kòs	po:pronoun_interrogative_exclamatory
 kòsa/'0	po:pronoun_interrogative_exclamatory
 kual/M0B1V3	po:pronoun_interrogative_exclamatory is:singular+masculine
 kuala/F0V3	po:pronoun_interrogative_exclamatory is:singular+femenine
+kuanʼ	po:pronoun_interrogative_exclamatory is:singular+masculine st:kuanto
 kuande/FS	po:pronoun_interrogative_exclamatory
 kuando/FS'9	po:pronoun_interrogative_exclamatory
 kuanto/A1FS	po:pronoun_interrogative_exclamatory is:singular+masculine
-kuanʼ	po:pronoun_interrogative_exclamatory is:singular+masculine st:kuanto
 onde	po:pronoun_interrogative_exclamatory
 onve	po:pronoun_interrogative_exclamatory
 parkòsa	po:pronoun_interrogative_exclamatory
@@ -25684,10 +25687,10 @@ kòs	po:adjective_interrogative_exclamatory
 kòsa/'0	po:adjective_interrogative_exclamatory
 kual/M0B1V3	po:adjective_interrogative_exclamatory is:singular+masculine
 kuala/F0V3	po:adjective_interrogative_exclamatory is:singular+femenine
+kuanʼ	po:adjective_interrogative_exclamatory is:singular+masculine st:kuanto
 kuande/FS	po:adjective_interrogative_exclamatory
 kuando/FS'9	po:adjective_interrogative_exclamatory
 kuanto/A1FS	po:adjective_interrogative_exclamatory is:singular+masculine
-kuanʼ	po:adjective_interrogative_exclamatory is:singular+masculine st:kuanto
 onde	po:adjective_interrogative_exclamatory
 onve	po:adjective_interrogative_exclamatory
 parkòsa	po:adjective_interrogative_exclamatory
@@ -25707,8 +25710,8 @@ añi	po:quantifier_universal_effective
 año/FS	po:quantifier_existential
 año/FS	po:quantifier_universal_effective
 arkoanto/A1FS	po:quantifier_existential is:singular+masculine
-arkuanto/A1FS	po:quantifier_existential is:singular+masculine
 arkuanʼ	po:quantifier_existential is:singular+masculine st:arkuanto
+arkuanto/A1FS	po:quantifier_existential is:singular+masculine
 artanto/A1FS	po:quantifier_existential is:singular+masculine
 asàe	po:quantifier_existential
 asài/FS	po:quantifier_existential
@@ -25766,8 +25769,8 @@ oñun/A2B1	po:quantifier_distributive is:singular+masculine
 poko/A1FSPd	po:quantifier_existential is:singular+masculine
 pòko/A1FS	po:quantifier_existential is:singular+masculine
 rakoanto/A1FS	po:quantifier_existential is:singular+masculine
-rakuanto/A1FS	po:quantifier_existential is:singular+masculine
 rakuanʼ	po:quantifier_existential is:singular+masculine st:rakuanto
+rakuanto/A1FS	po:quantifier_existential is:singular+masculine
 sèrto/A1FS	po:quantifier_existential is:singular+masculine
 tuto/A1FS	po:quantifier_universal_effective is:singular+masculine
 ŧèrto/A1FS	po:quantifier_existential is:singular+masculine
@@ -26046,12 +26049,13 @@ terŧiario/A1	po:adjective is:singular+masculine
 tersiario/A1	po:adjective is:singular+masculine
 terŧiariamente/FSw0	po:adverb
 tersiariamente/FSw0	po:adverb
-kuarto/M0FS'9eT	po:numeral_ordenal is:singular+masculine
-kuarta/F0eLe7eT	po:numeral_ordenal is:singular+femenine
-koarto/M0FS'9eT	po:numeral_ordenal is:singular+masculine
-koarta/F0eLe7eT	po:numeral_ordenal is:singular+femenine
-kuinta/F0eLe7eT	po:numeral_ordenal is:singular+femenine
-kuinto/M0FS'9eLe7eT	po:numeral_ordenal is:singular+masculine
+kuarto/M0FS'9	po:numeral_ordenal is:singular+masculine
+kuarʼ	po:numeral_ordenal is:singular+masculine st:kuarto
+kuarta/F0eLe7	po:numeral_ordenal is:singular+femenine
+koarto/M0FS'9	po:numeral_ordenal is:singular+masculine
+koarta/F0eLe7	po:numeral_ordenal is:singular+femenine
+kuinta/F0eLe7	po:numeral_ordenal is:singular+femenine
+kuinto/M0FS'9	po:numeral_ordenal is:singular+masculine
 sèsta/F0	po:numeral_ordenal is:singular+femenine
 sesteta/F0	po:numeral_ordenal is:singular+femenine
 sèsto/M0FS'9	po:numeral_ordenal is:singular+masculine
@@ -58157,7 +58161,7 @@ kufolon	po:adverb
 kufolon/F0B1PdV3	po:noun is:singular+masculine
 kufoƚon	po:adverb
 kuia	po:noun is:masculine
-kuietanŧa/F0	po:noun is:singular+femenine
+kuietanŧa/F0V3	po:noun is:singular+femenine
 kuiete	po:noun is:femenine
 kuieto/A1FS	po:adjective_qualificative is:singular+masculine
 kuiète/FS	po:noun is:femenine
@@ -59669,6 +59673,7 @@ diòsexi/FS	po:noun is:femenine
 diòŧexi/FS	po:noun is:femenine
 divòrŧio/M0V3	po:noun is:singular+masculine
 dígol/M0B2PdV3	po:noun is:singular+masculine
+doeto/A1FSPd	po:noun is:singular+masculine st:do ds:eto
 dolensioxo/A1FSPd	po:adjective_qualificative is:singular+masculine
 dolenŧioxo/A1FSPd	po:adjective_qualificative is:singular+masculine
 dolsegarbo/FS	po:adjective_qualificative
@@ -60076,6 +60081,7 @@ kiŧa/F0V3	po:adjective_qualificative is:singular+femenine
 kiŧo/M0FSV3	po:adjective_qualificative is:singular+masculine
 klauxura/F0	po:noun is:singular+femenine
 klòro/FS	po:noun is:masculine
+koarteto/A1FSPd	po:noun is:singular+masculine st:koarto ds:eto
 kodabusina/F0	po:noun is:singular+femenine
 kodalongo/M0FS	po:noun is:singular+masculine
 kodaƚongo/M0	po:noun is:singular+masculine
@@ -60153,8 +60159,15 @@ krò–krò	po:interjection pa:krò pa:krò
 kròa/F0aZaS	po:noun is:singular+femenine
 kròido/M0	po:noun is:singular+masculine
 krudon/A2B1Pd	po:adjective_qualificative is:singular+masculine
+kuarexemeta/F0	po:noun is:singular+femenine st:kuaréxema ds:eto
+kuarexemona/F0	po:noun is:singular+femenine st:kuaréxema ds:on
+kuarteto/A1FSPd	po:noun is:singular+masculine st:kuarto ds:eto
+kuà–kuarà	po:interjection pa:kuà pa:kuarà
 kuercato/M0FS	po:noun is:singular+masculine st:kovèrco ds:ato
 kuercon/M0B1Pd	po:noun is:singular+masculine st:kovèrco ds:on
+kuin–kuin	po:interjection pa:kuin pa:kuin
+kuinteto/A1FSPd	po:noun is:singular+masculine st:kuinto ds:eto
+kuitanŧa/F0V3	po:noun is:singular+femenine
 kujera/F0	po:noun is:singular+femenine
 kuɉera/F0	po:noun is:singular+femenine
 kulòna/F0eT	po:noun is:singular+femenine
@@ -60475,6 +60488,7 @@ nèsa/F0	po:noun is:singular+femenine
 nèver/M0Pd	po:noun is:singular+masculine
 nođolin/M0	po:noun is:singular+masculine
 nođolina/M0	po:noun is:singular+masculine
+noeto/A1FSPd	po:noun is:singular+masculine st:nòe ds:eto
 noleđin/A2	po:noun is:singular+masculine
 nolexin/A2	po:noun is:singular+masculine
 noƚexin/A2	po:noun is:singular+masculine
@@ -60483,6 +60497,7 @@ nospersegèra/F0v0	po:noun is:singular+femenine
 nospèrsego/M0FS	po:noun is:singular+masculine
 novamente/FSw0	po:adverb
 novena/F0	po:noun is:singular+femenine
+noveto/A1FSPd	po:noun is:singular+masculine st:nòve ds:eto
 noxolin/M0V3	po:noun is:singular+masculine
 noxolina/M0V3	po:noun is:singular+masculine
 ñèga/F0	po:noun is:singular+femenine
@@ -60491,6 +60506,7 @@ noxolina/M0V3	po:noun is:singular+masculine
 ñokoƚèr/M0v7	po:noun is:singular+masculine
 ñokoƚèra/F0v7	po:noun is:singular+femenine
 ñorantemente/FSw0	po:adverb
+ñoveto/A1FSPd	po:noun is:singular+masculine st:ñòve ds:eto
 okorente/X0FSPdVr	po:adjective_qualificative is:singular
 onjaŧo/M0FSV3	po:noun is:singular+masculine
 onɉaŧo/M0FSV3	po:noun is:singular+masculine
@@ -60525,6 +60541,7 @@ ostaría	po:interjection
 ostería	po:interjection
 ostraría	po:interjection
 otarda/F0	po:noun is:singular+femenine
+oteto/A1FSPd	po:noun is:singular+masculine st:òto ds:eto
 otomàtego/A1FS	po:adjective_qualificative is:singular+masculine
 otomòbil/F0Vf	po:noun is:singular+femenine
 otuxo/A1FS	po:adjective_qualificative is:singular+masculine
@@ -60828,8 +60845,10 @@ scòxola/F0V3	po:noun is:singular+femenine
 seƚofan/M0	po:noun is:singular+masculine
 seƚuƚoxa/F0	po:noun is:singular+femenine
 sentralin/M0V3	po:noun is:singular+femenine
+seteto/A1FSPd	po:noun is:singular+masculine st:sète ds:eto
 sibè–sibè	po:interjection pa:sibè pa:sibè
 sielde	po:noun is:femenine
+sieto/A1FSPd	po:noun is:singular+masculine st:sie ds:eto
 sisibè	po:interjection
 sídoƚa	po:interjection
 skondibala/F0V3	po:noun is:singular+masculine
@@ -60851,6 +60870,7 @@ torsio	po:adverb
 torŧio	po:adverb
 torŧio/M0V3	po:noun is:singular+masculine
 tòmika/F0@0	po:noun is:singular+femenine
+treeto/A1FSPd	po:noun is:singular+masculine st:trè ds:eto
 ŧarantada/F0y0Vp	po:adjective_qualificative is:singular+femenine
 ŧarantado/M0FSy0Vp	po:adjective_qualificative is:singular+masculine
 ŧelofan/M0Vp	po:noun is:singular+masculine
@@ -60901,9 +60921,8 @@ xlavieŧo/M0FSPdV3	po:noun is:singular+masculine
 xlòlŧa/F0V3	po:adjective_qualificative is:singular+femenine
 xlòlŧo/M0FSV3	po:adjective_qualificative is:singular+masculine
 xmarñinfo/A1FS	po:adjective_qualificative is:singular+masculine
-kuà–kuarà	po:interjection pa:kuà pa:kuarà
 
 
-/ 270
+/ 272
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ
