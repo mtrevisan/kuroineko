@@ -7357,8 +7357,6 @@ reinproverar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:re
 reinpròvero/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:reinproverar dp:re
 reinprovarar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:re
 reinpròvaro/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:reinprovarar dp:re
-inraukir/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
-inraukiso/n0T8N8tClC7CJ1I1FS	po:verb ds:indicative+present is:first+singular st:inraukir dp:in
 inritar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
 ínrito/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:inritar dp:in
 ínritomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:inritar dp:in
@@ -16632,6 +16630,8 @@ raŧiónomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interr
 rasionar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 rasiono/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:rasionar
 rasiónomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:rasionar
+raukir/t0l070n0t1P0PlP7Q0QlQ7+0	po:verb ds:infinitive+simple
+raukiso/n0T8N8tClC7CJ1I1FS+0	po:verb ds:indicative+present is:first+singular st:raukir
 rauŧir/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
 rauŧiso/n0T8N8tClCJ1I1FS	po:verb ds:indicative+present is:first+singular st:rauŧir
 rausir/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
@@ -31981,7 +31981,7 @@ raxegin/M0	po:noun is:singular+masculine
 raxidura/F0d0eT	po:noun is:singular+femenine
 ràkol/M0B2PdV3	po:noun is:singular+masculine
 ràkola/F0V3	po:noun is:singular+femenine
-rànxego/M0FS	po:adjective is:singular+masculine
+rànxego/A1FS	po:noun is:singular+masculine
 ràpido/A1	po:adjective_qualificative is:singular+masculine
 ràuko/A1FS	po:adjective_qualificative is:singular+masculine
 reador/M0Pdv0Vs	po:noun is:singular+masculine
@@ -55107,8 +55107,7 @@ pòrta–tabari/FS	po:noun is:masculine pa:pòrta pa:tabar
 puntivamente/FSw0	po:adverb
 puntivo/A1FS	po:adjective_qualificative is:singular+masculine
 raka/F0	po:noun is:singular+femenine
-ranđegèla/F0	po:noun is:singular+femenine
-ranxegèla/F0V3	po:noun is:singular+femenine
+ranxegèla/F0V3	po:noun is:singular+femenine st:rànxego ds:èl
 refo/M0FS	po:noun is:singular+masculine
 remendèl/M0B1V3Vs	po:noun is:singular+masculine
 remesor/A2Pd	po:noun is:singular+masculine
@@ -60937,11 +60936,24 @@ ràjon	po:noun is:masculine
 skonpisèr/M0v0	po:noun is:singular+masculine
 skonpisèra/F0v0	po:noun is:singular+femenine
 rangotan	po:noun is:masculine
+ranŧedume/M0FS	po:noun is:singular+masculine
+ransedume/M0FS	po:noun is:singular+masculine
+ransedeto/A1FSPd	po:adjective_qualificative is:singular+masculine st:rànsedo ds:eto
+ranŧedeto/A1FSPd	po:adjective_qualificative is:singular+masculine st:rànŧedo ds:eto
+ransedòto/A1FS	po:adjective_qualificative is:singular+masculine st:rànsedo ds:òto
+ranŧedòto/A1FS	po:adjective_qualificative is:singular+masculine st:rànŧedo ds:òto
+rapo/M0FSeTo0o4	po:noun is:singular+masculine
+rascin/M0	po:noun is:singular+masculine
+raseñaŧion/F0B1PdV3	po:noun is:singular+femenine
+raviŧon/F0B1PdV3	po:noun is:singular+masculine
+raŧòto/M0FS	po:noun is:singular+masculine st:raŧa ds:òto
+rasòto/M0FS	po:noun is:singular+masculine st:rasa ds:òto
 
 
-/ 274
+/ 275
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ
 aj. kual.:ràbiko,aràbiko
 sost.:rakanèl,rakanèƚo,recèl,recèƚo
 v.:robar,ranjar,ranɉar
+v.:rascar,rasar
