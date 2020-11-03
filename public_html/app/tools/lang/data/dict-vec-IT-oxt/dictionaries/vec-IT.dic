@@ -6463,6 +6463,7 @@ gendoƚixar/t070t1P0P7Q0Q7	po:verb ds:infinitive+simple
 gendoƚixo/t8tA7AJ1	po:verb ds:indicative+present is:first+singular st:gendoƚixar
 gendoƚíxomi/t8tA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:gendoƚixar
 getar/t0l070n0t1P0PlP7Q0QlQ7+0.0^1	po:verb ds:infinitive+simple
+gèto/T8N8tBlB7BJ1I1FS+0.0^1	po:verb ds:indicative+present is:first+singular st:getar
 geto/t8n8tAlA7AJ1FS+0.0^1	po:verb ds:indicative+present is:first+singular st:getar
 gétomi/t8n8tAlA7AI1+0.0^1	po:verb ds:indicative+present is:first+singular ds:interrogative st:getar
 xgilŧar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
@@ -16738,7 +16739,7 @@ reɉòto/T8N8tBlB7BJ1I1FSVs	po:verb ds:indicative+present is:first+singular st:r
 remar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 remo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:remar
 rémomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:remar
-remengar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+remengar/t0l070n0t1P0PlP7Q0QlQ7Vs	po:verb ds:infinitive+simple
 remengo/t8n8tAlA7AJ1Vs	po:verb ds:indicative+present is:first+singular st:remengar
 reméngomi/t8n8tAlA7AI1Vs	po:verb ds:indicative+present is:first+singular ds:interrogative st:remengar
 renar/t0l070n0t1P0PlP7Q0QlQ7@0-1*0	po:verb ds:infinitive+simple
@@ -25841,8 +25842,10 @@ paƚòto/M0	po:noun is:singular+masculine st:paƚo ds:òto
 posta/F0Vr:0	po:noun is:singular+femenine
 posto/M0FSVr:0	po:noun is:singular+masculine
 rente/FS	po:preposition
+rento/FS@0	po:adverb
 rento/FS@0	po:preposition
 rènte/FS	po:preposition
+rènto/FS@0	po:adverb
 rènto/FS@0	po:preposition
 sirka/+0	po:adverb
 sirka/+0	po:preposition
@@ -32071,7 +32074,7 @@ reoxo/A1FSPd	po:adjective_qualificative is:singular+masculine
 repetitivamente/FSw0	po:adverb
 repetitivo/A1FS	po:adjective_qualificative is:singular+masculine
 repetiŧion/F0B1PdV3	po:noun is:singular+femenine
-repeton/Vs	po:adverb
+repeton/Vs	po:adverb ds:on
 repien/M0oTB1Pd	po:adjective_qualificative is:singular+masculine
 repiena/F0oT	po:adjective_qualificative is:singular+femenine
 repienamente/FSw0	po:adverb
@@ -42501,7 +42504,6 @@ raspegin/A2	po:noun is:singular+masculine
 ravanin/M0	po:noun is:singular+masculine
 ravaŧon/F0B1PdV3	po:noun is:singular+masculine
 ràpola/F0V3	po:noun is:singular+femenine
-redenŧio/M0V3	po:noun is:singular+masculine
 regalia/F0V3	po:noun is:singular+femenine
 reklamo/M0FS	po:noun is:singular+masculine
 remandèl/M0B1V3Vs	po:noun is:singular+masculine
@@ -48814,7 +48816,7 @@ mirakolaŧo/M0FSV3	po:noun is:singular+masculine
 mirakoƚaso/M0	po:noun is:singular+masculine
 mirèmur/M0	po:noun is:singular+masculine
 mirto/M0	po:noun is:singular+masculine
-mision/F0B1Pd	po:noun is:singular+femenine
+mision/F0B1Pd.0	po:noun is:singular+femenine
 mite/X0eZeS	po:noun is:singular
 mitraja/F0V3	po:noun is:singular+femenine
 mitria/F0	po:noun is:singular+femenine
@@ -55400,7 +55402,8 @@ púpol/M0B2PdV3	po:noun is:singular+masculine
 rafegon/A2B1Pd	po:adjective_qualificative is:singular+masculine
 rataparaŧion/F0B1PdV3	po:noun is:singular+femenine
 reja/F0V3	po:noun is:singular+femenine
-reolton	po:adverb
+reolton/F0B1PdVs	po:adjective_qualificative is:singular
+reolton/Vs	po:adverb
 repéndol/M0B2PdV3	po:noun is:singular+masculine
 retegin/A2	po:noun is:singular+masculine
 reúsol/M0B2PdV3	po:noun is:singular+masculine
@@ -60952,12 +60955,33 @@ rebalton/F0B1PdVs	po:noun is:singular+masculine
 rebatin	po:adverb
 recon/A2B1Pd	po:adjective_qualificative is:singular+masculine
 reklan	po:noun is:franŧexe
+redexèl/F0V3Vs	po:noun is:singular+femenine
+redèsto/M0FS	po:noun is:singular+femenine
+refolada/F0y0y1	po:noun is:singular+femenine
+refoƚada/F0y0y1	po:noun is:singular+femenine
+regèto/M0FS	po:noun is:singular+masculine
+rexipèto/M0FS	po:noun is:singular+masculine
+remènga/F0Vs	po:noun is:singular+femenine
+remengo	po:adverb
+remenga	po:adverb
+ren	po:noun is:masculine
+réndita/F0	po:noun is:singular+femenine
+rèndita/F0	po:noun is:singular+femenine
+reoplan/M0B1	po:noun is:singular+masculine
+repetin/A2	po:adjective_qualificative is:singular+masculine ds:in
+rèplika/F0	po:noun is:singular+femenine
+reprexa/F0	po:noun is:singular+femenine ds:re
+republegan/A2B1	po:adjective_qualificative is:singular+masculine
 
 
-/ 276
+/ 278
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ
 aj. kual.:ràbiko,aràbiko
 sost.:rakanèl,rakanèƚo,recèl,recèƚo
 v.:robar,ranjar,ranɉar
 v.:rascar,rasar
+sost.:redèstola,redèstoƚa,redèsto
+sost.:gonbina,konkòl,konkòƚo
+av., prep.:drento,drènto,rento,rènto,arento,arènto
+sost.:rèpika,rèplika
