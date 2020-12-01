@@ -6102,6 +6102,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "roveɉ",			"dex",		1,	3,	"a",	"1775",			"",
 "roveɉ",			"in",			1,	3,	"a",	"1896",			"",
 "rovers",		"",			1,	3,	"g",	"1412",			"",
+"rovent",		"",			1,	3,	"a",	"1980",			"(vitoriexe)",
 "roviɉ",			"",			1,	3,	"a",	"1847",			"Invòlxer, fasar.",
 "rovijol",		"",			1,	3,	"a",	"1775",			"Invòlxer, fasar.",
 "rovin",			"",			1,	3,	"a",	"1775",			"Aterar.",
