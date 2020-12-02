@@ -6176,6 +6176,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sakr",			"kon",		1,	1,	"g",	"",				"",
 "sakr",			"skon",		1,	1,	"g",	"1829",			"",
 "sakrament",	"",			1,	6,	"a",	"1867",			"Aministrar i sakramenti.",
+"sakranon",		"",			1,	6,	"a",	"1980",			"(vitoriexe)",
 "sal",			"",			1,	1,	"g",	"",				"",
 "sal",			"ar",			1,	1,	"g",	"1998",			"Arotar la skure.",
 "sal",			"in",			1,	1,	"g",	"1775",			"",
@@ -7669,6 +7670,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "túnd",			"o",			3,	1,	"a",	"1509",			"",
 
 "ŧabal",			"",			1,	1,	"g",	"1821",			"Dar de sàbala, tartajar.",
+"ŧabat",			"",			1,	3,	"g",	"",				"",
 "ŧabat",			"mal",		1,	3,	"g",	"1775",			"Indispóner, malarse.",
 "ŧabot",			"",			1,	3,	"g",	"1884",			"Balbetar.",
 "ŧak",			"",			1,	1,	"g",	"1998",			"Mastegar.",
@@ -8403,6 +8405,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ʼud",			"",			1,	1,	"a",	"1810",			"Vodar.",
 "vulner",		"",			1,	1,	"a",	"",				"",
 
+"xaɉer",			"",			1,	2,	"g",	"1980",			"(vitoriexe) Exajerar.",
 "xal",			"tra",		5,	3,	"a",	"",				"",
 "xanbel",		"",			1,	4,	"g",	"1560",			"Xinbelar.",
 "xaol",			"",			1,	1,	"g",	"",				"Bigelonar.",
