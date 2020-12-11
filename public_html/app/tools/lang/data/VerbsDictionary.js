@@ -6226,6 +6226,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sanguen",		"in",			1,	1,	"g",	"1775",			"",
 "sanɉot",		"",			1,	4,	"a",	"1560",			"Singioŧar.",
 "sanɉut",		"",			1,	4,	"a",	"",				"Singioŧar.",
+"santifeg",		"",			1,	4,	"a",	"1980",			"(vitoriexe)",
 "saon",			"",			1,	2,	"a",	"1854",			"",
 "saon",			"in",			1,	2,	"a",	"1775",			"",
 "saor",			"",			4,	4,	"a",	"1775",			"",
