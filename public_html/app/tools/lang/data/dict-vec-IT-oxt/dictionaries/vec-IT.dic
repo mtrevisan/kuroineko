@@ -1453,6 +1453,9 @@ xberegar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:s
 xbèrego/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:xberegar dp:s
 xbaregar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:s
 xbàrego/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:xbaregar dp:s
+xbaregonar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:s
+xbaregono/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:xbaregonar dp:s
+xbaregónomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:xbaregonar dp:s
 barelar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
 barèlo/T8N8tBlBJ1I1FS	po:verb ds:indicative+present is:first+singular st:barelar
 bareƚar/t070t1P0P7Q0Q7	po:verb ds:infinitive+simple
@@ -1597,6 +1600,9 @@ strabéo/t8n8tElE7EJ1	po:verb ds:indicative+present is:first+singular st:strabé
 beerò/t0n0l070p4l474J1I1+0^6	po:verb ds:indicative+future is:first+singular st:béer
 bearar/t0l070n0t1P0PlP7Q0QlQ7+0	po:verb ds:infinitive+simple
 béaro/T8N8tBlB7BJ1I1FS+0	po:verb ds:indicative+present is:first+singular st:bearar
+xbevaconar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:s
+xbevacono/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:xbevaconar dp:s
+xbevacónomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:xbevaconar dp:s
 beverar/t0l070n0t1P0PlP7Q0QlQ7+0	po:verb ds:infinitive+simple
 bévero/T8N8tBlB7BJ1I1FS+0	po:verb ds:indicative+present is:first+singular st:beverar
 bevarar/t0l070n0t1P0PlP7Q0QlQ7+0	po:verb ds:infinitive+simple
@@ -24881,13 +24887,11 @@ Matía/Z0	po:noun_proper is:singular+femenine
 Matío/Z0	po:noun_proper is:singular+masculine
 Maŧarol/Z0	po:noun_proper is:singular+masculine
 Màsima/Z0	po:noun_proper is:singular+femenine
-Santa/Z0	po:noun_proper is:singular+femenine
-Santina/Z0	po:noun_proper is:singular+femenine st:Santa ds:in
 Màsimo/FSZ0	po:noun_proper is:singular+masculine
 Màuro/FSZ0	po:noun_proper is:singular+masculine
 Mena/Z0	po:noun_proper is:singular+femenine
-Menegeta/Z0	po:noun_proper is:singular+femenine st:Ménega dp:eto
-Menegeto/FSZ0	po:noun_proper is:singular+masculine st:Ménego dp:eto
+Menegeta/Z0	po:noun_proper is:singular+femenine st:Ménega ds:eto
+Menegeto/FSZ0	po:noun_proper is:singular+masculine st:Ménego ds:eto
 Menegin/Z0	po:noun_proper is:singular+masculine st:Ménego dp:in
 Menegina/Z0	po:noun_proper is:singular+femenine st:Ménega dp:in
 Menga/Z0	po:noun_proper is:singular+femenine
@@ -25133,6 +25137,8 @@ Sandra/Z0	po:noun_proper is:singular+femenine
 Sandrin/Z0	po:noun_proper is:singular+masculine st:Sandro dp:in
 Sandrina/Z0	po:noun_proper is:singular+femenine st:Sandra dp:in
 Sandro/Z0	po:noun_proper is:singular+masculine
+Santa/Z0	po:noun_proper is:singular+femenine
+Santina/Z0	po:noun_proper is:singular+femenine st:Santa ds:in
 Sara/Z0	po:noun_proper is:singular+femenine
 Sasarone/FSZ0	po:noun_proper is:singular+masculine
 Sesilia/Z0	po:noun_proper is:singular+femenine
@@ -26828,6 +26834,7 @@ Koneɉan/Z0	po:noun_proper
 Kordéol/Z0	po:noun_proper
 Koróntola/Z0	po:noun_proper
 Koróntoƚa/Z0	po:noun_proper
+Krudiñan/Z0	po:noun_proper
 Kuèro/FSZ0	po:noun_proper
 Ladrio/VpZ0	po:noun_proper
 Lamon/VpZ0	po:noun_proper
@@ -26954,9 +26961,11 @@ Romatin/Z0	po:noun_proper
 Sakañana/Z0	po:noun_proper
 Sanbugè/Z0	po:noun_proper
 Santakroxe/FSZ0	po:noun_proper
+Sarone/FSZ0	po:noun_proper
 Sasil/Z0	po:noun_proper
 Sasiƚe/Z0	po:noun_proper
 Saŧil/Z0	po:noun_proper
+Sàrmede/Z0	po:noun_proper
 Scara/Z0	po:noun_proper
 Seguxin/Z0	po:noun_proper
 Seraval/VsZ0	po:noun_proper
@@ -26986,10 +26995,7 @@ Térgoƚa/Z0	po:noun_proper
 Tiène/Z0	po:noun_proper
 Toskana/Z0	po:noun_proper
 Trentin/Z0	po:noun_proper
-Krudiñan/Z0	po:noun_proper
 Trevixo/FSZ0	po:noun_proper
-Sarone/FSZ0	po:noun_proper
-Sàrmede/Z0	po:noun_proper
 Trièste/Z0	po:noun_proper
 Ŧinto/FSZ0	po:noun_proper
 Ŧividale/VpFSZ0	po:noun_proper
@@ -27286,8 +27292,6 @@ kanarola/F0v0	po:adjective_qualificative is:singular+femenine
 kanaroƚa/F0v7	po:adjective_qualificative is:singular+femenine
 kanaroƚo/M0Pdv7	po:adjective_qualificative is:singular+masculine
 kaorlòto/A1FS	po:adjective_qualificative is:singular+masculine
-seravalòto/A1FS	po:adjective_qualificative is:singular+masculine
-seravaƚòto/A1	po:adjective_qualificative is:singular+masculine
 kararexe/M0FSPd	po:adjective_qualificative is:singular+masculine
 kastelan/M0B1V3	po:adjective_qualificative is:singular+masculine
 kastelana/F0V3	po:adjective_qualificative is:singular+femenine
@@ -27352,6 +27356,8 @@ saraŧena/F0V3	po:adjective_qualificative is:singular+femenine
 saraŧin/M0V3	po:adjective_qualificative is:singular+masculine
 saraŧina/F0V3	po:adjective_qualificative is:singular+femenine
 seguxinexe/M0FSPd	po:adjective_qualificative is:singular+masculine
+seravalòto/A1FS	po:adjective_qualificative is:singular+masculine
+seravaƚòto/A1	po:adjective_qualificative is:singular+masculine
 spañòl/M0B1eT	po:adjective_qualificative is:singular+masculine
 spañòla/F0eT	po:adjective_qualificative is:singular+femenine
 spañòƚa/F0e1	po:adjective_qualificative is:singular+femenine
@@ -44938,8 +44944,8 @@ xbaraja/F0V3	po:noun is:singular+femenine
 xbaraɉa	po:adverb
 xbarlèfo/M0FS	po:noun is:singular+masculine
 xbaxucon/A2B1Pd	po:noun is:singular+masculine
-xbesolin/M0V3	po:noun is:singular+masculine
-xbesolina/F0V3	po:noun is:singular+femenine
+xbesolin/M0V3	po:noun is:singular+masculine st:xbèsola ds:in
+xbesolina/F0V3	po:noun is:singular+femenine st:xbèsola ds:in
 xbeŧolin/A2	po:noun is:singular+masculine
 xbevacon/A2B1Pd	po:adjective_qualificative is:singular+masculine
 xbégol/M0B2PdV3	po:noun is:singular+masculine
@@ -52398,7 +52404,7 @@ xbaxío/M0eT	po:adjective_qualificative is:singular+masculine
 xbefon/A2B1Pd	po:adjective_qualificative is:singular+masculine
 xberlaŧo/M0FSV3	po:noun is:singular+masculine
 xberlon/F0B1Pd	po:noun is:singular+masculine
-xberlòto/M0FSo0o4	po:noun is:singular+masculine
+xberlòto/M0FSo0o4	po:noun is:singular+masculine st:xbèrla ds:òto
 xbevaco/M0FS	po:noun is:singular+masculine
 xbianŧo/M0FSV3	po:noun is:singular+masculine
 xbiego/A1FS	po:adjective_qualificative is:singular+masculine
@@ -54456,7 +54462,8 @@ vulkan/M0B1	po:noun is:singular+masculine
 xbacarola/F0v0	po:noun is:singular+femenine
 xbacaroƚa/F0v7	po:noun is:singular+femenine
 xbertexo/M0FSPd	po:noun is:singular+masculine
-xbesolon/F0B1PdV3	po:noun is:singular+masculine
+xbesolon/A2B1Pd	po:noun is:singular+masculine st:xbèsola ds:on
+xbesoƚon/A2Pd	po:noun is:singular+masculine st:xbèsoƚa ds:on
 xbiumoxamente/FSw0	po:adverb
 xbiumoxo/A1FSPd	po:adjective_qualificative is:singular+masculine
 xbòco/M0FSeTo0o4	po:noun is:singular+masculine
@@ -54534,7 +54541,7 @@ avanto/M0FS	po:noun is:singular+masculine
 badinè	po:noun is:masculine
 bagan/A2B1	po:adjective_qualificative is:singular+masculine
 barufante/X0	po:noun is:singular
-batudin/A2	po:noun is:singular+masculine
+batudin/A2*0	po:noun is:singular+masculine
 bejòra/F0	po:noun is:singular+femenine
 beɉòra/F0	po:noun is:singular+femenine
 bilexo/A1PdFS	po:adjective_qualificative is:singular+masculine
@@ -61035,15 +61042,40 @@ saldan/M0B1	po:noun is:singular+masculine
 saliva/F0	po:noun is:singular+femenine
 salivèra/F0v0	po:noun is:singular+femenine
 salmon/F0B1Pd	po:noun is:singular+masculine
+salveŧa/F0V3	po:noun is:singular+femenine
+salvo	po:adverb
 saƚiva/F0	po:noun is:singular+femenine
 saƚivèra/F0v7	po:noun is:singular+femenine
+sanbugo/M0FS	po:noun is:singular+masculine
+sanbukèr/M0v0	po:noun is:singular+masculine
+sanbukèra/F0v0	po:noun is:singular+femenine
+sanfason	po:noun is:masculine is:franŧexe
+sangueta/F0	po:noun is:singular+femenine
+sanguin/A2	po:adjective_qualificative is:singular+masculine
 sanguinèl/M0B1V3	po:noun is:singular+masculine
+sansería/F0r0	po:noun is:singular+femenine
+santan	po:adjective_qualificative is:franŧexe
+santin/M0	po:noun is:singular+masculine
+santonina/F0	po:noun is:singular+femenine
 saora/F0	po:adjective_qualificative is:singular+femenine
+sapiensa/F0Vr	po:noun is:singular+femenine
+sapienŧa/F0Vr	po:noun is:singular+femenine
+saraban/M0B1	po:noun is:singular+masculine
+sareto/M0FS	po:noun is:singular+masculine is:franŧexe
+satèn	po:noun is:singular+masculine is:franŧexe
+sàndal/M0B2V3	po:noun is:singular+masculine
 scòpola/F0V3	po:noun is:singular+femenine
 scòxola/F0V3	po:noun is:singular+femenine
+selvadegeto/A1FSPdVs	po:noun is:singular+masculine st:selvàdego ds:eto
+selvadegon/A2B1PdVs	po:noun is:singular+masculine st:selvàdego ds:on
+selvadegòto/A1FSVs	po:noun is:singular+masculine st:selvàdego ds:òto
+selvaregeto/A1FSPdVs	po:noun is:singular+masculine st:selvàrego ds:eto
+selvaregon/A2B1PdVs	po:noun is:singular+masculine st:selvàrego ds:on
+selvaregòto/A1FSVs	po:noun is:singular+masculine st:selvàrego ds:òto
 seƚofan/M0	po:noun is:singular+masculine
 seƚuƚoxa/F0	po:noun is:singular+femenine
 sentralin/M0V3	po:noun is:singular+femenine
+serador/M0PdVsv0	po:noun is:singular+masculine
 seteto/A1FSPd	po:noun is:singular+masculine st:sète ds:eto
 sibè–sibè	po:interjection pa:sibè pa:sibè
 sielde	po:noun is:femenine
@@ -61072,6 +61104,7 @@ torŧio	po:adverb
 torŧio/M0V3	po:noun is:singular+masculine
 tòmika/F0@0	po:noun is:singular+femenine
 treeto/A1FSPd	po:noun is:singular+masculine st:trè ds:eto
+ŧapa-sorgo/Vp	po:noun
 ŧarantada/F0y0Vp	po:adjective_qualificative is:singular+femenine
 ŧarantado/M0FSy0Vp	po:adjective_qualificative is:singular+masculine
 ŧelofan/M0Vp	po:noun is:singular+masculine
@@ -61113,58 +61146,34 @@ vínŧita/F0	po:noun is:singular+femenine
 volàrega/F0'0	po:noun is:singular+femenine
 voltareca/F0	po:noun is:singular+femenine
 voƚàrega/F0'0	po:noun is:singular+femenine
+xbalotamento/M0FSPdVr	po:noun is:singular+masculine dp:s
+xbaƚotamento/M0PdVR	po:noun is:singular+masculine dp:s
+xbandieramento/M0FSPdVr	po:noun is:singular+masculine dp:s
+xbaosin/A2	po:adjective_qualificative is:singular+masculine
+xbaoŧin/A2	po:adjective_qualificative is:singular+masculine
+xbara/F0	po:noun is:singular+femenine
+xbaregamento/M0FSPdVr	po:noun is:singular+masculine dp:s
+xbaxucamento/M0FSPdVr	po:noun is:singular+masculine dp:s
 xberđefo/FS	po:adverb
 xberxefo/FS	po:adverb
+xbèsia/F0	po:noun is:singular+femenine
+xbèŧia/F0	po:noun is:singular+femenine
+xbiata/F0	po:noun is:singular+femenine
 xeroƚin/M0	po:noun is:singular+masculine
 xgañoxo/A1FSPd	po:adjective_qualificative is:singular+masculine
 xgarlasa/F0	po:adjective_qualificative is:singular+femenine
 xgrafapulenta/F0Vr	po:noun is:singular+femenine
 xgrafapuƚenta/F0VR	po:noun is:singular+femenine
 xiroƚin/M0	po:noun is:singular+masculine
+xjàtara/F0Vp	po:noun is:singular+femenine
 xlavieŧo/M0FSPdV3	po:noun is:singular+masculine
 xlodro/M0	po:noun is:singular+masculine
 xlòlŧa/F0V3	po:adjective_qualificative is:singular+femenine
 xlòlŧo/M0FSV3	po:adjective_qualificative is:singular+masculine
 xmarñinfo/A1FS	po:adjective_qualificative is:singular+masculine
-selvaregeto/A1FSPdVs	po:noun is:singular+masculine st:selvàrego ds:eto
-selvadegeto/A1FSPdVs	po:noun is:singular+masculine st:selvàdego ds:eto
-selvaregòto/A1FSVs	po:noun is:singular+masculine st:selvàrego ds:òto
-selvadegòto/A1FSVs	po:noun is:singular+masculine st:selvàdego ds:òto
-selvaregon/A2B1PdVs	po:noun is:singular+masculine st:selvàrego ds:on
-selvadegon/A2B1PdVs	po:noun is:singular+masculine st:selvàdego ds:on
-salveŧa/F0V3	po:noun is:singular+femenine
-salvo	po:adverb
-sanbukèr/M0v0	po:noun is:singular+masculine
-sanbukèra/F0v0	po:noun is:singular+femenine
-sanbugo/M0FS	po:noun is:singular+masculine
-sàndal/M0B2V3	po:noun is:singular+masculine
-sanfason	po:noun is:masculine is:franŧexe
-sangueta/F0	po:noun is:singular+femenine
-sanguin/A2	po:adjective_qualificative is:singular+masculine
-sansería/F0r0	po:noun is:singular+femenine
-santan	po:adjective_qualificative is:franŧexe
-santin/M0	po:noun is:singular+masculine
-santonina/F0	po:noun is:singular+femenine
-ŧapa-sorgo/Vp	po:noun
-sapiensa/F0Vr	po:noun is:singular+femenine
-sapienŧa/F0Vr	po:noun is:singular+femenine
-saraban/M0B1	po:noun is:singular+masculine
-serador/M0PdVsv0	po:noun is:singular+masculine
-sareto/M0FS	po:noun is:singular+masculine is:franŧexe
-satèn	po:noun is:singular+masculine is:franŧexe
-xbalotamento/M0FSPdVr	po:noun is:singular+masculine dp:s
-xbaƚotamento/M0PdVR	po:noun is:singular+masculine dp:s
-xbandieramento/M0FSPdVr	po:noun is:singular+masculine dp:s
-xbaoŧin/A2	po:adjective_qualificative is:singular+masculine
-xbaosin/A2	po:adjective_qualificative is:singular+masculine
-xbara/F0	po:noun is:singular+femenine
 
 
-/ 297
+/ 298
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ
-sost.:sanbugèr,sanbukèr
-sost.:sanbugo,sanbuko
-sost.:sanguinèl,sanguinèƚo,konostrèl,konostrèƚo,krepasal,krepasaƚe
-sost.:ŧenisco,senisco,musco
-v.:sartar,ŧainar,sainar,menestrar,manestrar,minestrar
+/sost.?:xbàtola,xbàtoƚa,xbítola,xbítoƚa
