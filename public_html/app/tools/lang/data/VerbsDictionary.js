@@ -732,6 +732,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bordeđ",		"",			1,	4,	"a",	"1775",			"",
 "bordel",		"",			1,	4,	"g",	"1867",			"",
 "bordel",		"x",			1,	4,	"g",	"1867",			"",
+"bordelon",		"x",			1,	6,	"a",	"1980",			"(vitoriexe)",
 "bordiđ",		"",			1,	4,	"a",	"1867",			"",
 "boreŧ",			"in",			1,	3,	"a",	"1775",			"Ríder senŧa frén.",
 "borf",			"x",			1,	1,	"a",	"",				"(bixiak) Anafiar.",
