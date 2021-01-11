@@ -6276,6 +6276,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "scanđ",			"",			1,	2,	"g",	"1851",			"Sprusar, bañar.",
 "scànđ",			"",			3,	2,	"g",	"1867",			"Aspèrxer.",
 "scaravent",	"",			1,	6,	"a",	"1896",			"Skaraventar.",
+"scav",			"",			1,	2,	"g",	"1980",			"(vitoriexe) Deventar scavo.",
 "scenđ",			"",			1,	2,	"a",	"1877",			"Skejar",
 "scexon",		"",			1,	4,	"a",	"1852",			"Deventar kofà la fegura de ʼl scexon: bruta.",
 "scol",			"",			1,	2,	"a",	"1810",			"Fiscar.",
