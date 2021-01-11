@@ -3005,6 +3005,8 @@ cetar/t0l070n0t1P0PlP7Q0QlQ7+0^2	po:verb ds:infinitive+simple
 cèto/T8N8tBlB7BJ1I1FS+0^2	po:verb ds:indicative+present is:first+singular st:cetar
 cetarar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 cètaro/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:cetarar
+scevedir/t0l070n0t1P0PlP7Q0QlQ7-0	po:verb ds:infinitive+simple dp:s
+scevediso/n0T8N8tClC7CJ1I1FS-0	po:verb ds:indicative+present is:first+singular st:scevedir dp:s
 cexar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 cexo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:cexar
 céxomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:cexar
@@ -8814,6 +8816,12 @@ kekiño/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:kekiñar
 kekíñomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:kekiñar
 kegar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 kègo/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:kegar
+skegaŧar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
+skegaŧo/t8n8tAlAJ1FS	po:verb ds:indicative+present is:first+singular st:skegaŧar
+skegàŧomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:skegaŧar
+skegasar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+skegaso/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:skegasar
+skegàsomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:skegasar
 skermir/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:s
 skermiso/n0T8N8tClC7CJ1I1FS	po:verb ds:indicative+present is:first+singular st:skermir dp:s
 ketar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
@@ -22166,10 +22174,6 @@ reséver/t1p1l171P0PlP7R0RlR7	po:verb ds:infinitive+simple dp:re
 resevo/t8n8tElE7EJ1	po:verb ds:indicative+present is:first+singular st:reséver dp:re
 resévomi/t8n8tElE7EI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:reséver dp:re
 reseverò/t0n0l070p4l474J1I1	po:verb ds:indicative+future is:first+singular st:reséver dp:re
-dexŧevedir/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple dp:des
-dexŧevediso/n0T8N8tClCJ1I1FS	po:verb ds:indicative+present is:first+singular st:dexŧevedir dp:des
-dexsevedir/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:des
-dexsevediso/n0T8N8tClC7CJ1I1FS	po:verb ds:indicative+present is:first+singular st:dexŧevedir dp:des
 ŧexar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
 ŧexo/t8n8tAlAJ1FS	po:verb ds:indicative+present is:first+singular st:ŧexar
 ŧéxomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:ŧexar
@@ -26564,7 +26568,7 @@ brào/A1	po:interjection is:singular+masculine
 brào/A1^6	po:adjective_qualificative is:singular+masculine
 brr	po:interjection
 cake	po:interjection
-cao/M0	po:interjection is:singular+masculine
+cao/*0	po:interjection is:singular+masculine
 cicericí	po:interjection
 cik	po:interjection
 cò	po:interjection
@@ -29711,8 +29715,8 @@ kavaŧo/M0FSo0o4	po:noun is:singular+masculine
 kavedal/F0B1Vf	po:noun is:singular+masculine
 kavedon/F0B1Pd	po:noun is:singular+masculine
 kavel/M0B1aTeTo0o4	po:noun is:singular+masculine
-kavelada/F0y0y1	po:adjective is:singular+femenine
-kaveƚada/F0y0y1	po:adjective is:singular+femenine
+kavelada/F0y0y1*0	po:noun is:singular+femenine
+kaveƚada/F0y0y1*0	po:noun is:singular+femenine
 kaveƚato/M0	po:noun is:singular+masculine st:kaveƚo ds:ato
 kaveƚo/M0e1o7o4	po:noun is:singular+masculine
 kavesador/M0Pdv0+0*0	po:noun is:singular+masculine
@@ -32387,7 +32391,7 @@ scantixamento/M0FSPdVr	po:noun is:singular+masculine
 scanto/A1FS	po:adjective_qualificative is:singular+masculine
 scanto/FS	po:adverb
 scao/A1	po:adjective_qualificative is:singular+masculine
-scapa/F0	po:adjective is:singular+femenine
+scapa/F0	po:adjective_qualificative is:singular+femenine
 scenxa/F0eT	po:noun is:singular+femenine
 scòna/F0eLe7eT	po:noun is:singular+femenine
 scòpo/M0FSeT	po:noun is:singular+masculine
@@ -32692,7 +32696,7 @@ skàndola/F0V3	po:noun is:singular+femenine
 skena/F0aZaSeLe7	po:noun is:singular+femenine
 skermadura/F0d0eT	po:noun is:singular+femenine
 skèma/M0	po:noun is:singular+femenine
-skèo/M0eT	po:noun is:singular+masculine
+skèo/M0	po:noun is:singular+masculine is:todesko
 skivanèla/F0V3	po:noun is:singular+femenine
 sklamaŧion/F0B1PdV3	po:noun is:singular+femenine
 skoadura/F0d0eT-0	po:noun is:singular+femenine
@@ -33587,7 +33591,7 @@ turuƚú	po:adjective
 ŧarlatan/M0B1eLeTr0Vp	po:adjective_qualificative is:singular+masculine
 ŧarlatana/F0eLeTVp	po:adjective_qualificative is:singular+femenine
 ŧarpa/F0Vp	po:noun is:singular+femenine
-ŧata/F0iNVp	po:noun is:singular+femenine
+ŧata/F0VpiN	po:noun is:singular+femenine
 ŧavariamento/M0FSPdVrVp	po:noun is:singular+masculine
 ŧavata/F0Vp	po:noun is:singular+femenine
 ŧavatamento/M0FSPdVrVp	po:noun is:singular+masculine
@@ -35248,7 +35252,7 @@ fuxaròla/F0V3	po:noun is:singular+femenine
 fuxèr/M0v0	po:noun is:singular+masculine
 fuxèra/F0v0	po:noun is:singular+femenine
 fuxina/F0	po:noun is:singular+femenine
-fúlmine/M0	po:noun is:singular+masculine
+fúlmin/F0	po:noun is:singular+masculine
 füin/A2	po:adjective_qualificative is:singular+masculine
 gabèla/F0V3	po:noun is:singular+femenine
 gabièr/M0v0	po:noun is:singular+masculine
@@ -39478,7 +39482,7 @@ janduŧon/F0B1PdV3Vp	po:noun is:singular+masculine
 jenüin/A2Vp	po:adjective_qualificative is:singular+masculine
 jimè/Vp	po:noun is:masculine
 jintiron/F0B1PdVp	po:noun is:singular+masculine
-jonda/F0iNVp	po:noun is:singular+femenine
+jonda/F0VpiN	po:noun is:singular+femenine
 jòpo/A1FSVp	po:adjective_qualificative is:singular+masculine
 justatuto/FSVp	po:noun
 kacú	po:noun is:masculine
@@ -44807,7 +44811,7 @@ tubèrkol/M0B2PdV3	po:noun is:singular+masculine
 ŧelegeta/F0Vp	po:noun is:singular+femenine
 ŧendado/M0FSy0Vp	po:noun is:singular+masculine
 ŧepo/A1FSVp	po:adjective_qualificative is:singular+masculine
-ŧervèla/F0iNVp	po:noun is:singular+femenine
+ŧervèla/F0VpiN	po:noun is:singular+femenine
 ŧétola/F0Vp	po:noun is:singular+femenine
 ŧèndena/F0Vp	po:noun is:singular+femenine
 ŧiato/M0FSVp	po:noun is:singular+masculine
@@ -46366,7 +46370,7 @@ düeto/A1FSPd	po:noun is:singular+masculine
 điónđol/M0B2Pd	po:noun is:singular+masculine
 đip/M0Vp	po:noun is:singular+masculine
 đir/M0eTo0o4	po:noun is:singular+masculine
-điradina/F0iNVp	po:noun is:singular+femenine st:đirada ds:in
+điradina/F0VpiN	po:noun is:singular+femenine st:đirada ds:in
 điradonào/A1Vp	po:adjective is:singular+masculine
 đirafa/F0Vp	po:noun is:singular+femenine
 điraina/F0Vp	po:noun is:singular+femenine st:điràa ds:in
@@ -48273,7 +48277,7 @@ lexenda/F0Vr	po:noun is:singular+femenine
 lexeño/M0FSPd	po:noun is:singular+masculine
 lexítimo/A1FS+0	po:adjective_qualificative is:singular+masculine
 lèmo/M0	po:noun is:singular+masculine
-lèva/F0iNVp	po:noun is:singular+femenine
+lèva/F0VpiN	po:noun is:singular+femenine
 lèvo/M0Vp	po:noun is:singular+masculine
 lèxe/M0Vp	po:noun is:singular+femenine
 liàtego/M0FS	po:noun is:singular+masculine
@@ -48341,7 +48345,7 @@ lonbría/F0Vp	po:noun is:singular+femenine
 lonđa/F0V3	po:noun is:singular+femenine
 longàxin/F0Vp	po:noun is:singular+masculine
 lorí/Vp	po:noun is:masculine
-lova/F0iNVp	po:noun is:singular+femenine
+lova/F0VpiN	po:noun is:singular+femenine
 lógora/F0Vp	po:adjective_qualificative is:singular+femenine
 lógoro/M0FS	po:adjective_qualificative is:singular+masculine
 lòjo/M0B1V3@0	po:noun is:singular+masculine
@@ -50803,7 +50807,7 @@ skarto/M0FS	po:adjective_qualificative is:singular+masculine
 skartoŧina/F0V3	po:noun is:singular+femenine
 skasafasi	po:adverb
 skasapensièr/M0	po:noun is:singular+masculine
-skatoleta/F0V3	po:noun is:singular+femenine
+skatoleta/F0V3	po:noun is:singular+femenine st:skàtola ds:eto
 skatolèr/M0v0	po:noun is:singular+masculine
 skatolèra/F0v0	po:noun is:singular+femenine
 skatoƚèr/M0v7	po:noun is:singular+masculine
@@ -52074,7 +52078,7 @@ tüito/M0FS	po:noun is:singular+masculine
 ŧotiñoni/Vp	po:adverb
 ŧotiñói/Vp	po:adverb
 ŧotiñuni/Vp	po:adverb
-ŧòta/F0iNVp	po:adjective_qualificative is:singular+femenine
+ŧòta/F0VpiN	po:adjective_qualificative is:singular+femenine
 ŧòto/M0FSaTiNo0o1o2o4Vp	po:adjective_qualificative is:singular+masculine
 ŧufa/F0eTVp	po:noun is:singular+femenine
 ŧuketèr/M0v0Vp	po:noun is:singular+masculine
@@ -57487,7 +57491,7 @@ remengoxo/A1FSPdVs	po:adjective_qualificative is:singular+masculine
 remònika/F0	po:noun is:singular+femenine
 roxmada/F0	po:noun is:singular+femenine
 salton	po:adverb
-scake	po:interjection
+scake/FS	po:interjection
 scike–scake	po:interjection pa:scike pa:scake
 scike	po:interjection
 sekaña/F0	po:noun is:singular+femenine
@@ -61182,8 +61186,27 @@ xlodro/M0	po:noun is:singular+masculine
 xlòlŧa/F0V3	po:adjective_qualificative is:singular+femenine
 xlòlŧo/M0FSV3	po:adjective_qualificative is:singular+masculine
 xmarñinfo/A1FS	po:adjective_qualificative is:singular+masculine
+skatolon/F0B1PdV3	po:noun is:singular+masculine st:skàtola ds:on
+scèfo/A1	po:noun is:singular+masculine
+skèda/F0	po:noun is:singular+femenine
+skènetro/M0	po:noun is:singular+masculine
+skeo/M0eT	po:noun is:singular+masculine is:todesko
+skio/M0	po:noun is:singular+masculine
+skiba/F0	po:noun is:singular+femenine
+skiba	po:interjection
+èba	po:interjection
+skibanèla/F0V3	po:noun is:singular+femenine
+skinko/A1	po:adjective_qualificative is:singular+masculine
+skitaròla/F0V3	po:noun is:singular+femenine
+skitolèr/M0v0	po:noun is:singular+masculine
+skitoƚèr/M0v7	po:noun is:singular+masculine
+skiŧòta/F0	po:adjective_qualificative is:singular+femenine st:skiŧa ds:òto
+scàkete	po:interjection
+scantixo/M0FS	po:noun is:singular+masculine
+scaparòla/F0V3	po:noun is:singular+femenine
+scara/F0eLe7	po:noun is:singular+femenine
 
 
-/ 303
+/ 305
 / íïóúüđɉƚñŧ
-/ ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ
+/ ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ–
