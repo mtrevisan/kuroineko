@@ -3299,6 +3299,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "konglomer",	"",			1,	5,	"g",	"1867",			"",
 "konk",			"in",			1,	1,	"a",	"1775",			"Avalar, far na konka.",
 "konkas",		"s",			1,	4,	"g",	"1896",			"Skonbusolar.",
+"konkuas",		"s",			1,	4,	"g",	"1980",			"(vitoriexe) Skonbusolar.",
 "konkol",		"in",			1,	1,	"a",	"1775",			"Inkonkar.",
 "koni",			"",			1,	1,	"g",	"1775",			"Kuñar.",
 "koniug",		"",			1,	1,	"g",	"",				"",
