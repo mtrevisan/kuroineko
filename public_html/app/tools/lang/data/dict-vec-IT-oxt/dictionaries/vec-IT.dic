@@ -4500,6 +4500,9 @@ fadégomi/t8n8tAlA7AI1@0*0	po:verb ds:indicative+present is:first+singular ds:in
 fadigar/t0l070n0t1P0PlP7Q0QlQ7@0*0	po:verb ds:infinitive+simple
 fadigo/t8n8tAlA7AJ1@0*0	po:verb ds:indicative+present is:first+singular st:fadigar
 fadígomi/t8n8tAlA7AI1@0*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:fadigar
+sfadegonar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:s
+sfadegono/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:sfadegonar dp:s
+sfadegónomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:sfadegonar dp:s
 faelar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
 faèlo/T8N8tBlBJ1I1FS	po:verb ds:indicative+present is:first+singular st:faelar
 faeƚar/t070t1P0P7Q0Q7	po:verb ds:infinitive+simple
@@ -4686,9 +4689,9 @@ fatúcomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interr
 faturar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 faturo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:faturar
 fatúromi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:faturar
-faŧar/t0l0n0t1P0PlQ0Ql-0	po:verb ds:infinitive+simple
-faŧo/t8n8tAlAJ1FS-0	po:verb ds:indicative+present is:first+singular st:faŧar
-fàŧomi/t8n8tAlAI1-0	po:verb ds:indicative+present is:first+singular ds:interrogative st:faŧar
+faŧar/t0l0n0t1P0PlQ0Ql-0*0	po:verb ds:infinitive+simple
+faŧo/t8n8tAlAJ1FS-0*0	po:verb ds:indicative+present is:first+singular st:faŧar
+fàŧomi/t8n8tAlAI1-0*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:faŧar
 renfaŧar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple dp:in dp:re
 renfaŧo/t8n8tAlAJ1FS	po:verb ds:indicative+present is:first+singular st:renfaŧar dp:in dp:re
 renfàŧomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:renfaŧar dp:in dp:re
@@ -25293,6 +25296,7 @@ Xeròlima/Z0	po:noun_proper is:singular+femenine
 Xeròlimo/FSZ0	po:noun_proper is:singular+masculine
 Xeròƚima/Z0	po:noun_proper is:singular+femenine
 Xeròƚimo/Z0	po:noun_proper is:singular+masculine
+Xèxe/Z0	po:noun_proper is:singular+femenine
 Xgualda/Z0	po:noun_proper is:singular+femenine
 Xgualdin/Z0	po:noun_proper is:singular+masculine
 Xgualdina/Z0	po:noun_proper is:singular+femenine
@@ -32476,7 +32480,7 @@ senò	po:adverb
 senpiería/F0r0	po:noun is:singular+femenine
 senplifegaŧion/F0B1PdV3	po:noun is:singular+femenine
 senpre	po:adverb
-senpreverdo/A1Pd	po:adjective_qualificative is:singular+masculine
+senpreverdo/A1	po:adjective_qualificative is:singular+masculine
 senpro	po:adverb
 sensaŧion/F0B1PdV3	po:noun is:singular+femenine
 sense	po:adjective
@@ -37879,7 +37883,7 @@ serpente/M0FSVr	po:noun is:singular+masculine al:serpinti
 serpinti	po:noun is:plural+masculine st:serpente
 serseña/F0	po:noun is:singular+femenine
 servente/X0FSPdVr	po:adjective_qualificative is:singular
-serveto/A1FSPd	po:noun is:singular+masculine
+serveto/A1FSPd	po:noun is:singular+masculine st:sèrvo ds:eto
 servidor/M0Pdv0	po:noun is:singular+masculine
 servidora/F0v0	po:noun is:singular+femenine
 servidoraŧa/F0V3	po:noun is:singular+femenine st:servidora ds:aŧo
@@ -44565,8 +44569,8 @@ selmo/M0	po:noun is:singular+masculine
 selvadegin/A2Vs	po:adjective_qualificative is:singular+masculine
 seƚegeta/F0	po:noun is:singular+femenine
 semolin/M0V3	po:noun is:singular+masculine
-senpioldo/M0PdaT	po:adjective_qualificative is:singular+masculine
 senpiolda/F0aT	po:adjective_qualificative is:singular+femenine
+senpioldo/M0PdaT	po:adjective_qualificative is:singular+masculine
 serolon/F0B1PdV3	po:noun is:singular+masculine
 servèƚa/F0iN	po:noun is:singular+femenine
 sestin/M0	po:noun is:singular+masculine
@@ -50583,8 +50587,8 @@ semo/M0FSeT	po:adjective_qualificative is:singular+masculine
 semoleta/F0V3	po:noun is:singular+femenine
 semolon/F0B1PdV3	po:noun is:singular+masculine
 semovente/X0FSPdVr	po:adjective_qualificative is:singular
-senal/F0B1Vf	po:noun is:singular+masculine
 senadorato/M0FS	po:noun is:singular+masculine
+senal/F0B1Vf	po:noun is:singular+masculine
 senaorato/M0FS	po:noun is:singular+masculine
 senblèa/F0	po:noun is:singular+femenine
 senbre	po:adverb
@@ -59391,6 +59395,8 @@ xvòda–buxe	po:noun pa:xvòda pa:buxa
 ʼoƚo/A1Pd	po:noun is:singular+masculine st:fioƚo
 ʼorponon	po:interjection st:korponon
 ʼòrpo/FS	po:interjection st:kòrpo
+ʼxeo/M0	po:noun is:singular+masculine st:axedo
+ʼxéo/M0	po:noun is:singular+masculine st:axedo
 a	po:conjunction
 abesedario/M0	po:noun is:singular+masculine
 abeŧedario/M0	po:noun is:singular+masculine
@@ -61055,6 +61061,9 @@ scòpa/F0	po:adjective_qualificative is:singular+femenine
 scòpola/F0V3	po:noun is:singular+femenine
 scòxola/F0V3	po:noun is:singular+femenine
 scuk	po:interjection
+segreteŧa/F0V3	po:noun is:singular+femenine
+segrèto/A1FSVs	po:adjective_qualificative is:singular+masculine
+sekureŧa/F0V3	po:noun is:singular+femenine
 selvadegeto/A1FSPdVs	po:noun is:singular+masculine st:selvàdego ds:eto
 selvadegon/A2B1PdVs	po:noun is:singular+masculine st:selvàdego ds:on
 selvadegòto/A1FSVs	po:noun is:singular+masculine st:selvàdego ds:òto
@@ -61063,12 +61072,36 @@ selvaregon/A2B1PdVs	po:noun is:singular+masculine st:selvàrego ds:on
 selvaregòto/A1FSVs	po:noun is:singular+masculine st:selvàrego ds:òto
 seƚofan/M0	po:noun is:singular+masculine
 seƚuƚoxa/F0	po:noun is:singular+femenine
+semada/F0y0y1	po:noun is:singular+femenine
+semente/X0FSPdVr	po:noun is:singular+femenine
+semistufi	po:noun
+senador/M0Pdv0	po:noun is:singular+masculine
+senadora/F0v0	po:noun is:singular+femenine
+senpiòlda/F0aT	po:adjective_qualificative is:singular+femenine
+senpiòldo/M0aT	po:adjective_qualificative is:singular+masculine
+senta/F0Vr	po:noun is:singular+femenine
+sento/M0FSPdVr	po:noun is:singular+masculine
 sentralin/M0V3	po:noun is:singular+femenine
+seo/M0	po:noun is:singular+masculine
 serador/M0PdVsv0	po:noun is:singular+masculine
+seriòto/A1FS	po:adjective_qualificative is:singular+masculine st:sèrio ds:òto
+seron/F0B1Pd	po:noun is:singular+masculine
+servaŧa/F0V3	po:noun is:singular+femenine st:sèrva ds:aŧo
+servaŧo/M0FSV3	po:noun is:singular+masculine st:sèrvo ds:aŧo
 seteto/A1FSPd	po:noun is:singular+masculine st:sète ds:eto
+sexarèla/F0V3	po:noun is:singular+femenine
+sésela/F0V3	po:noun is:singular+femenine
+sèen/M0B2Pd	po:noun is:singular+masculine
+sèi	po:adverb
+sèla/F0V3	po:noun is:singular+femenine
+sènapa	po:noun is:femenine
+sènpio/A1	po:adjective_qualificative is:singular+masculine
+sèra–sèra	po:noun is:masculine pa:sèra pa:sèra
+sèrvo/A1	po:noun is:singular+masculine
 sibè–sibè	po:interjection pa:sibè pa:sibè
 sielde	po:noun is:femenine
 sieto/A1FSPd	po:noun is:singular+masculine st:sie ds:eto
+sikureŧa/F0V3	po:noun is:singular+femenine
 sisibè	po:interjection
 sídoƚa	po:interjection
 skakènego/A1FS	po:adjective_qualificative is:singular+masculine
@@ -61140,6 +61173,9 @@ skubio/A1	po:adjective_qualificative is:singular+masculine
 skufòto/M0FS	po:noun is:singular+masculine
 skulada/F0y0y1	po:noun is:singular+femenine
 skuƚada/F0y0y1	po:noun is:singular+femenine
+skuranson/A2B1Pd	po:adjective_qualificative is:singular+masculine
+skuranŧon/A2B1Pd	po:adjective_qualificative is:singular+masculine
+skuso/M0FSo0o4	po:noun is:singular+masculine
 solsito/M0FS	po:noun is:singular+masculine
 solŧito/M0FS	po:noun is:singular+masculine
 sparonson/A2B1Pd	po:adjective_qualificative is:singular+masculine ds:on dp:s
@@ -61168,6 +61204,8 @@ treeto/A1FSPd	po:noun is:singular+masculine st:trè ds:eto
 ŧerendònia/F0Vp	po:noun is:singular+femenine
 ŧevexin/M0Vp	po:noun is:singular+masculine
 ŧevita/F0Vp	po:noun is:singular+femenine
+ŧexarèla/F0	po:noun is:singular+femenine
+ŧéxera/F0Vp	po:noun is:singular+femenine
 ŧibè–ŧibè	po:interjection pa:ŧibè pa:ŧibè
 ŧinisco/M0Vp	po:noun is:singular+masculine
 ŧiŧibè	po:interjection
@@ -61254,42 +61292,19 @@ xlodro/M0	po:noun is:singular+masculine
 xlòlŧa/F0V3	po:adjective_qualificative is:singular+femenine
 xlòlŧo/M0FSV3	po:adjective_qualificative is:singular+masculine
 xmarñinfo/A1FS	po:adjective_qualificative is:singular+masculine
-skuranson/A2B1Pd	po:adjective_qualificative is:singular+masculine
-skuranŧon/A2B1Pd	po:adjective_qualificative is:singular+masculine
-skuso/M0FSo0o4	po:noun is:singular+masculine
-sekureŧa/F0V3	po:noun is:singular+femenine
-sikureŧa/F0V3	po:noun is:singular+femenine
-sèen/M0B2Pd	po:noun is:singular+masculine
-segrèto/A1FSVs	po:adjective_qualificative is:singular+masculine
-segreteŧa/F0V3	po:noun is:singular+femenine
-sèi	po:adverb
-sèla/F0V3	po:noun is:singular+femenine
-semada/F0y0y1	po:noun is:singular+femenine
-semente/X0FSPdVr	po:noun is:singular+femenine
-semistufi	po:noun
-sènapa	po:noun is:femenine
-senador/M0Pdv0	po:noun is:singular+masculine
-senadora/F0v0	po:noun is:singular+femenine
-sènpio/A1	po:adjective_qualificative is:singular+masculine
-senpiòldo/M0PdaT	po:adjective_qualificative is:singular+masculine
-senpiòlda/F0aT	po:adjective_qualificative is:singular+femenine
-sento/M0FSPdVr	po:noun is:singular+masculine
-senta/F0Vr	po:noun is:singular+femenine
-seo/M0	po:noun is:singular+masculine
-ʼxéo/M0	po:noun is:singular+masculine st:axedo
-ʼxeo/M0	po:noun is:singular+masculine st:axedo
-sèra–sèra	po:noun is:masculine pa:sèra pa:sèra
-seriòto/A1FS	po:adjective_qualificative is:singular+masculine st:sèrio ds:òto
-seron/F0B1Pd	po:noun is:singular+masculine
-sèrvo/M0aZaSeT	po:noun is:singular+masculine
-sèrva/F0aZaSeT	po:noun is:singular+femenine
+sèsto	po:noun is:masculine
+sestin	po:noun is:masculine st:sèsto ds:in
+sestineto/FS	po:noun is:masculine st:sèsto ds:in ds:eto
+sestato/FS	po:noun is:masculine st:sèsto ds:ato
+sèsta/F0	po:noun is:singular+femenine
+seđamin/M0	po:noun is:singular+masculine
+sexamin/M0	po:noun is:singular+masculine
+sfèrŧa
 
-
-/ 315
+/ 316
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ–
-sost.:sènapa,sènape
-aj. kual.:senpio,sènpio
-aj. kual.:senpioldo,senpiòldo
-av.:senpre,senpro,sènpre,sènpro
-sost.:sepultura,sepoltura
+sost.:sestarol,sestaroƚo,tratiđo,tratixo
+sost.:setemana,setimana
+sost.:seđamin,sexamin,đesamin,xesamin
+v.:sfaŧar,sfasar,desfaŧar,desfasar
