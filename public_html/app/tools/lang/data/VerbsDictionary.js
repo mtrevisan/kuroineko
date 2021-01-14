@@ -1913,6 +1913,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fol",			"a",			1,	1,	"g",	"1867",			"",
 "fol",			"ra",			1,	-1,"a",	"1896",			"",
 "fol",			"re",			1,	-1,"a",	"1775",			"Folada ke fà el vento.",
+"fol",			"s",			1,	1,	"g",	"1980",			"(vitoriexe)",
 "foleđ",			"",			1,	3,	"a",	"1854",			"Folar.",
 "foleđ",			"s",			1,	3,	"a",	"1900",			"(veronexe)",
 "foliskar",		"",			1,	3,	"a",	"",				"",
