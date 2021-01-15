@@ -6668,7 +6668,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "solk",			"",			1,	1,	"a",	"",				"",
 "solid",			"in",			1,	1,	"g",	"1810",			"",
 "soliŧit",		"",			1,	3,	"a",	"1493",			"",
-"solđ",			"",			1,	1,	"a",	"1894",			"Renkalŧar.",
+"solŧ",			"",			1,	1,	"a",	"1894",			"Renkalŧar.",
 "sòlv",			"",			3,	1,	"g",	"",				"",
 "sòlv",			"a",			3,	1,	"g",	"1450",			"",
 "sòlv",			"de",			3,	1,	"g",	"",				"",
