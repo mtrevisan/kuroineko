@@ -11080,6 +11080,8 @@ lísomi/t8n8tAlA7AI1*0	po:verb ds:indicative+present is:first+singular ds:interr
 ƚisar/t070t1P0P7Q0Q7	po:verb ds:infinitive+simple
 ƚiso/t8tA7AJ1	po:verb ds:indicative+present is:first+singular st:ƚisar
 ƚísomi/t8tA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:ƚisar
+xlisolar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:s
+xlísolo/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:xlisolar dp:s
 listrigar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 lístrigo/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:listrigar
 ƚistrigar/t070t1P0P7Q0Q7	po:verb ds:infinitive+simple
@@ -11943,9 +11945,9 @@ marturíxomi/t8n8tAlA7AI1*0	po:verb ds:indicative+present is:first+singular ds:i
 marŧar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
 marŧo/t8n8tAlAJ1	po:verb ds:indicative+present is:first+singular st:marŧar
 màrŧomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:marŧar
-marsar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
-marso/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:marsar
-màrsomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:marsar
+marsar/t0l070n0t1P0PlP7Q0QlQ7*0	po:verb ds:infinitive+simple
+marso/t8n8tAlA7AJ1FS*0	po:verb ds:indicative+present is:first+singular st:marsar
+màrsomi/t8n8tAlA7AI1*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:marsar
 marŧir/t0l0n0t1P0PlQ0Ql+0*0	po:verb ds:infinitive+simple
 marŧiso/n0T8N8tClCJ1I1FS+0*0	po:verb ds:indicative+present is:first+singular st:marŧir
 marsir/t0l070n0t1P0PlP7Q0QlQ7+0*0	po:verb ds:infinitive+simple
@@ -12171,6 +12173,8 @@ mejóromi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interr
 meɉorar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 meɉoro/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:meɉorar
 meɉóromi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:meɉorar
+xmekar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:s
+xmèko/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:xmekar dp:s
 melar/t0l0n0t1P0PlQ0Ql+0	po:verb ds:infinitive+simple
 mèlo/T8N8tBlBJ1I1FS+0	po:verb ds:indicative+present is:first+singular st:melar
 meƚar/t070t1P0P7Q0Q7+0	po:verb ds:infinitive+simple
@@ -39215,7 +39219,7 @@ xlanŧo/M0FSV3	po:noun is:singular+masculine
 xlàpar/A1	po:adjective_qualificative is:singular+masculine
 xlita/F0	po:noun is:singular+femenine
 xlòfa/F0	po:noun is:singular+femenine
-xlòfer/M0Pd	po:noun is:singular+masculine
+xlòfer	po:adverb is:todesko
 xluxaroƚa/F0v7	po:noun is:singular+femenine
 xmania/F0	po:noun is:singular+femenine
 xmàfar/A1	po:noun is:singular+masculine
@@ -44989,7 +44993,7 @@ xlape	po:interjection
 xlipe	po:interjection
 xlímego/A1FS	po:adjective_qualificative is:singular+masculine
 xlofa/F0	po:noun is:singular+femenine
-xlofon/A2B1Pd	po:adjective_qualificative is:singular+masculine
+xlofon/A2B1Pd	po:adjective_qualificative is:singular+masculine st:xlofo ds:on
 xmafaron/A2B1Pd	po:noun is:singular+masculine
 xmaniòto/A1FS	po:adjective_qualificative is:singular+masculine
 xmañason/A2B1Pd	po:adjective_qualificative is:singular+masculine
@@ -55397,7 +55401,7 @@ lèxena/F0Vp	po:adjective_qualificative is:singular+femenine
 lingonto/M0FSPdVr	po:noun is:singular+masculine
 litra/F0Vp	po:noun is:singular+femenine
 lobion/F0B1Pd	po:noun is:singular+masculine
-lofo/M0FS	po:noun is:singular+masculine
+lofo/M0FS*0	po:noun is:singular+masculine
 lor/A1Pd	po:adjective is:singular+masculine
 lovastrèl/M0B1	po:noun is:singular+masculine
 lovastrèƚo/M0Vp	po:noun is:singular+masculine
@@ -61407,8 +61411,18 @@ xmarñinfo/A1FS	po:adjective_qualificative is:singular+masculine
 xñapin/M0	po:noun is:singular+masculine st:xñapa ds:in
 xñàol/M0B2PdV3	po:noun is:singular+masculine
 xñèvedo/A1FSPd	po:adjective_qualificative is:singular+masculine
-/xlisar
+xlísola/F0V3	po:noun is:singular+femenine
+xludro/M0	po:noun is:singular+masculine
+xluvio/A1	po:adjective_qualificative is:singular+masculine
+xmato/FS	po:adverb
+xmèk	po:interjection
+xmèk–xmèk	po:interjection pa:xmèk pa:xmèk
+xmèrgol/M0B2PdV3	po:nount is:singular+masculine
+xmiardo/M0FS	po:noun is:singular+masculine
+
 
 / 322
 / íïóúüđɉƚñŧ
-/ ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ–
+/ ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ–ʼ
+sost.:xlodro,xludro
+sost.:verda,xmiardo
