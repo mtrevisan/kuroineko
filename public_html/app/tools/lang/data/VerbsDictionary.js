@@ -7018,6 +7018,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "stril",			"",			1,	3,	"a",	"1829",			"",
 "string",		"",			1,	3,	"a",	"1854",			"",
 "strinpel",		"",			1,	6,	"g",	"1877",			"",
+"strinŧ",		"",			1,	3,	"a",	"1980",			"(vitoriexe) Striŧar.",
 "strios",		"",			1,	4,	"g",	"1900",			"(veronexe)",
 "stris",			"",			1,	3,	"a",	"1775",			"",
 "strison",		"",			1,	5,	"a",	"1896",			"Sfrixonar.",
