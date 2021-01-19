@@ -7141,9 +7141,12 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "suŧ",			"",			1,	1,	"a",	"1867",			"Sucar.",
 
 "tabak",			"",			1,	3,	"g",	"1775",			"Fiutar el tabako, inalar fumi in đenere.",
+"taban",			"",			1,	3,	"g",	"1980",			"(vitoriexe) Sfacendar.",
 "tabar",			"des",		1,	3,	"g",	"1775",			"",
 "tabar",			"s",			1,	3,	"g",	"1867",			"Stabarar.",
 "tabar",			"in",			1,	3,	"g",	"1775",			"Méter sú el tabaro.",
+"tabask",		"",			1,	4,	"g",	"1980",			"(vitoriexe) Borbotar.",
+"tabaskon",		"",			1,	6,	"a",	"1980",			"(vitoriexe) Frekuentativo de borbotar.",
 "tabul",			"",			1,	1,	"g",	"",				"",
 "tafi",			"",			1,	1,	"g",	"1775",			"(Coxa) Skufiar, mañar tanto e rapidamente.",
 "taj",			"",			1,	1,	"g",	"1412",			"",
