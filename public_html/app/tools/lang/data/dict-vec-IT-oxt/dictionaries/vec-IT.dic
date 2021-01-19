@@ -5582,10 +5582,10 @@ rafòso/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:rafo
 fosinar/t0l070n0t1P0PlP7Q0QlQ7+0	po:verb ds:infinitive+simple
 fosino/t8n8tAlA7AJ1FS+0	po:verb ds:indicative+present is:first+singular st:fosinar
 fosínomi/t8n8tAlA7AI1+0	po:verb ds:indicative+present is:first+singular ds:interrogative st:fosinar
-fóter/t1p1l171P0PlP7R0RlR7+0	po:verb ds:infinitive+simple
-foto/t8n8tElE7EJ1FS+0	po:verb ds:indicative+present is:first+singular st:fóter
-fótomi/t8n8tElE7EI1+0	po:verb ds:indicative+present is:first+singular ds:interrogative st:fóter
-foterò/t0n0l070p4l474J1I1+0	po:verb ds:indicative+future is:first+singular st:fóter
+fóter/t1p1l171P0PlP7R0RlR7+0^6	po:verb ds:infinitive+simple
+foto/t8n8tElE7EJ1FS+0^6	po:verb ds:indicative+present is:first+singular st:fóter
+fótomi/t8n8tElE7EI1+0^6	po:verb ds:indicative+present is:first+singular ds:interrogative st:fóter
+foterò/t0n0l070p4l474J1I1+0^6	po:verb ds:indicative+future is:first+singular st:fóter
 frabikar/t0l070n0t1P0PlP7Q0QlQ7-1	po:verb ds:infinitive+simple
 fràbiko/T8N8tBlB7BJ1I1FS-1	po:verb ds:indicative+present is:first+singular st:frabikar
 fradelar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
@@ -14558,6 +14558,12 @@ paŧifegar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
 paŧífego/T8N8tBlBJ1I1FS	po:verb ds:indicative+present is:first+singular st:paŧifegar
 pasifegar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 pasífego/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:pasifegar
+strapaŧonar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple dp:stra
+strapaŧono/t8n8tAlAJ1FS	po:verb ds:indicative+present is:first+singular st:strapaŧonar dp:stra
+strapaŧónomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:strapaŧonar dp:stra
+strapasonar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:stra
+strapasono/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:strapasonar dp:stra
+strapasónomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:strapasonar dp:stra
 inpaurir/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
 inpauriso/n0T8N8tClC7CJ1I1FS	po:verb ds:indicative+present is:first+singular st:inpaurir dp:in
 spaurir/t0l070n0t1P0PlP7Q0QlQ7+0	po:verb ds:infinitive+simple dp:s
@@ -26602,7 +26608,7 @@ kuaxio/-1*0	po:adverb
 kuaxio/-1*0	po:conjunction
 kuaxo/FS-1*0	po:adverb
 kuaxo/FS-1*0	po:conjunction
-man/M0iNo1o3^6	po:noun is:singular+masculine
+man/M0iNo1o3	po:noun is:singular+masculine
 mana/F0aZaSaTeLe7eTiN	po:noun is:singular+femenine
 mentre	po:conjunction
 pata/F0eLe7	po:noun is:singular+femenine
@@ -33160,8 +33166,8 @@ stra-pienamente/FSw0.0	po:adverb
 stra	po:adjective
 stra	po:adverb
 stra	po:preposition
-straa/F0eTo0o1o3o4	po:noun is:singular+femenine
-strada/F0eTo0o1o3o4uZuS	po:noun is:singular+femenine
+straa/F0aTeTo0o1o3o4uZuS	po:noun is:singular+femenine
+strada/F0aTeTo0o1o3o4uZuS	po:noun is:singular+femenine
 stradal/F0B1Vf	po:adjective_qualificative is:singular
 strafantería/F0r0	po:noun is:singular+femenine
 straka–ganasa/F0	po:noun is:singular+femenine pa:straka pa:ganasa
@@ -33193,7 +33199,7 @@ strapiena/F0oT.0	po:adjective_qualificative is:singular+femenine
 strapienamente/FSw0.0	po:adverb
 strasa/F0eTiN	po:adjective_qualificative is:singular+femenine
 strasamento/M0FSPdVr	po:noun is:singular+masculine
-straseña/F0	po:noun is:singular+femenine
+straxeña/F0	po:noun is:singular+femenine
 strasería/F0r0	po:noun is:singular+femenine
 straŧa/F0eTiN	po:adjective_qualificative is:singular+femenine
 straŧamento/M0FSPdVr	po:noun is:singular+masculine
@@ -38462,8 +38468,8 @@ storno/A1	po:adjective_qualificative is:singular+masculine
 stòiko/A1FS	po:adjective_qualificative is:singular+masculine
 stòpa/F0eT	po:noun is:singular+femenine
 strabúxen/F0B2Pd	po:noun is:singular+femenine
-stradèla/F0eTiN	po:noun is:singular+femenine
-stradèƚa/F0e1iN	po:noun is:singular+femenine
+stradèla/F0eTiN	po:noun is:singular+femenine st:strada:èl
+stradèƚa/F0e1iN	po:noun is:singular+femenine st:strada:èƚo
 stradopio/M0	po:noun is:singular+masculine
 strakin/M0	po:noun is:singular+masculine
 stralèka/F0	po:noun is:singular+femenine
@@ -44766,7 +44772,7 @@ strafareŧo/M0FSPdV3	po:noun is:singular+masculine
 strakavata/F0	po:noun is:singular+femenine
 stralŧo/M0FSV3	po:noun is:singular+masculine
 stralxo/M0	po:noun is:singular+masculine
-stranbeŧo/M0FSPdV3	po:noun is:singular+masculine
+stranbeŧo/M0FSPdV3	po:noun is:singular+masculine st:stranbo ds:eŧo
 strangolina/F0V3	po:noun is:singular+femenine
 strasakor/F0Pd	po:noun is:singular+masculine
 strasakòr/F0	po:noun is:singular+masculine
@@ -51487,7 +51493,6 @@ straŧoloxo/A1FSPd	po:adjective_qualificative is:singular+masculine
 straŧoxamente/FSw0	po:adverb
 straŧoxo/A1FSPd	po:adjective_qualificative is:singular+masculine
 stravagantin/A2	po:adjective_qualificative is:singular+masculine
-stravento/M0FSPdVr	po:noun is:singular+masculine
 straxe/M0FS	po:noun is:singular+femenine
 stràsin/M0	po:noun is:singular+masculine
 stremamente/FSw0	po:adverb
@@ -52242,7 +52247,7 @@ venso/M0FSVr	po:adjective_qualificative is:singular+masculine
 ventame/M0FS	po:noun is:singular+masculine
 ventara/F0	po:noun is:singular+femenine
 ventèra/F0	po:noun is:singular+femenine
-vento/M0FSPdVr	po:noun is:singular+masculine
+vento/M0FSPdVr^6	po:noun is:singular+masculine
 ventolon/A2B1Pd	po:adjective_qualificative is:singular+masculine
 ventoƚon/A2Pd	po:adjective_qualificative is:singular+masculine
 ventoxità	po:noun is:femenine
@@ -57043,7 +57048,7 @@ strangoñon/F0B1Pd	po:noun is:singular+masculine
 strapegon/F0B1Pd	po:noun is:singular+masculine
 stravèrgo/M0	po:noun is:singular+masculine
 stravèrgol/M0B2PdV3	po:noun is:singular+masculine
-straxora	po:adverb
+straxore	po:adverb
 stràpego/M0FS	po:noun is:singular+masculine
 strifa/F0	po:noun is:singular+femenine
 strife	po:adverb
@@ -61542,9 +61547,27 @@ stonadura/F0d0eT	po:noun is:singular+femenine
 stonfo/A1FS	po:adjective_qualificative is:singular+masculine
 stopin/A1	po:adjective_qualificative is:singular+masculine
 storièla/F0V3	po:noun is:singular+femenine st:stòria ds:èl
+strafotente/X0FSPdVr	po:adjective_qualificative is:singular
+strafotenŧa/F0Vr	po:noun is:singular+femenine
+stralòjo/M0B1V3	po:adjective_qualificative is:singular+masculine
+straƚòjo/M0V3	po:adjective_qualificative is:singular+masculine
+stralòɉo/M0B1V3	po:adjective_qualificative is:singular+masculine
+straƚòɉo/M0V3	po:adjective_qualificative is:singular+masculine
+straman	po:adverb
+stramedèla/F0V3	po:noun is:singular+femenine st:strame ds:èl
+strangolin/M0V3	po:noun is:singular+masculine
+stranio	po:adverb
+stranudaròla/F0V3	po:noun is:singular+femenine
+stranudariòla/F0V3	po:noun is:singular+femenine
+strapaŧa–siori	po:noun is:masculine
+strapasa–siori	po:noun is:masculine
+straton/A2B1Pd	po:adjective_qualificative is:singular+masculine
+stravento/FS	po:adverb
+stravènto/FS	po:adverb
 
 
-/ 340
+/ 342
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ–ʼ
 sost.:stómego,stòmego
+aj. kual.:stralòco,straƚòco,starlòco,stralòjo,straƚòɉo,stralòjo,straƚòɉo
