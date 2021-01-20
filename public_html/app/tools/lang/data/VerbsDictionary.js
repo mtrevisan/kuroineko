@@ -7247,6 +7247,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tatar",			"in",			1,	1,	"g",	"1829",			"",
 "tater",			"",			1,	3,	"g",	"1855",			"(belumat) Far ròbe da nhente.",
 "tater",			"in",			1,	3,	"g",	"",				"",
+"taŧ",			"",			1,	1,	"g",	"1980",			"(vitoriexe) Far vènher ʼe piage",
 "tavan",			"",			1,	3,	"g",	"1775",			"Asilar, tiviar.",
 "tavan",			"in",			1,	3,	"g",	"1854",			"Rénder asilà, infuriar.",
 "tavaneđ",		"",			1,	5,	"a",	"1560",			"Fuxir.",
