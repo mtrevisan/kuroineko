@@ -97,7 +97,7 @@ ICONV TH Ŧ
 ICONV ' ʼ
 
 # frequently switched character groups
-REP 132
+REP 139
 REP a à
 REP e è
 REP e é
@@ -147,6 +147,9 @@ REP intel inté_ʼl
 REP in_tel inté_ʼl
 REP in_te inté
 REP in_té inté
+REP ten ʼté_ʼn
+REP inten inté_ʼn
+REP in_ten inté_ʼn
 REP ^di de
 REP ^ri re
 REP iko$ ego
@@ -160,6 +163,10 @@ REP kio ki_ʼƚo
 REP kii ki_ʼƚi
 REP kia ki_ʼƚa
 REP kie ki_ʼƚe
+REP kïo ki_ʼƚo
+REP kïi ki_ʼƚi
+REP kïa ki_ʼƚa
+REP kïe ki_ʼƚe
 REP ae aƚe
 REP àe àƚe
 REP ee eƚe
@@ -2296,7 +2303,7 @@ SFX xL éver ebiede déver	ds:subjunctive+present is:second+plural	# T12 + é([d
 SFX xL éver ebiege déver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
 
 # vèrbi '-er inregolari: (r[eï])èser
-SFX xM Y 376
+SFX xM Y 377
 SFX xM ser ra/J1 èser	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xM èser éra/J1 èser	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xM ser rami/I1 èser	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)a
@@ -2492,6 +2499,7 @@ SFX xM èser xélo/I5 èser	ds:indicative+present is:third ds:interrogative	# T1
 SFX xM èser sígeƚo/D7 èser	ds:imperative+present is:second+singular ds:pronomenal+locative	# T9
 SFX xM èser séƚo/i5 èser	ds:indicative+present is:third ds:interrogative	# T10
 SFX xM èser éƚo/i5 èser	ds:indicative+present is:third ds:interrogative	# T10
+SFX xM èser ʼƚo/i5 èser	ds:indicative+present is:third ds:interrogative	# T10
 SFX xM ser ƚo/i5 èser	ds:indicative+present is:third ds:interrogative	# T10
 SFX xM èser xéƚo/i5 èser	ds:indicative+present is:third ds:interrogative	# T10
 SFX xM ser re/J1 èser	ds:indicative+imperfect is:first+singular	# T2 + (v)e
@@ -5749,7 +5757,8 @@ SFX '9 me ʼ me
 SFX '9 te ʼ te
 SFX '9 do ʼ do
 SFX '9 ko ʼ ko
-SFX '9 to ʼ nto	# sol ke vanti na konsonante (ex. 'tan bèl')
+SFX '9 to ʼ nto	# sol ke vanti na konsonante (ex. 'tanʼ bèl')
+SFX '9 to ʼ tuto	# sol ke vanti na èse+konsonante e `t` (ex. 'tuʼ stà', 'tuʼ ʼté ʼn momènt')
 SFX '9 o ʼ [^n]to
 SFX '9 a ʼ [^rx]a
 SFX '9 e ʼ [^mt]e
