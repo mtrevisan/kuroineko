@@ -2034,6 +2034,17 @@ SFX xB er arave/J7j7 [aʼ]ver	ds:conditional+present is:third	# T4 + rà(v)e
 SFX xB er aríselo/I7 [aʼ]ver	ds:conditional+present is:third ds:interrogative	# T4 + rà(v)e
 SFX xB er aríseƚo/i7 [aʼ]ver	ds:conditional+present is:third ds:interrogative	# T4 + rà(v)e
 
+# vèrbi -ér inregolari: (re)aver
+SFX xC Y 8
+SFX xC aver vepion aver	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX xC aver vepione aver	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX xC aver vepien aver	ds:subjunctive+present is:first+plural	# T12 + én(e)
+SFX xC aver vepiene aver	ds:subjunctive+present is:first+plural	# T12 + én(e)
+SFX xC aver vepié aver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e) = T5
+SFX xC aver vepie aver	ds:subjunctive+present is:first+singular	# T8 + e
+SFX xC aver vepie aver	ds:subjunctive+present is:second+singular	# T8 + e, 2s=3
+SFX xC aver vepie aver	ds:subjunctive+present is:third	# T8 + a
+
 # vèrbi -ér inregolari: (a(s)|apar|de|(in)kon|intra|man|(re)o|re|sos|tra)[ct][èé]ñer, (a(r)|ben|de(x)|(des|re)kon|in|inter|intr[ae]|kontra|mal|per|pre|(re)so|pro|rin|sko(n)|sora|x)v[èéí]ñer/ʼñer
 SFX xD Y 12
 SFX xD èñer ièn/S0SlS7 [^c]èñer	ds:imperative+present is:second+singular	# T9
@@ -3756,7 +3767,7 @@ SFX D7 geƚo veƚe [^ai]geƚo	ds:pronomenal+reflexive
 
 
 # sonoriđaŧion finali
-SFX FS Y 65
+SFX FS Y 67
 SFX FS bo p bo
 SFX FS be p be
 SFX FS bo b bo
@@ -3799,6 +3810,8 @@ SFX FS xo s xo
 SFX FS xe s xe
 SFX FS xo x xo
 SFX FS xe x xe
+SFX FS o 0 [^i]ño
+SFX FS e 0 [^i]ñe
 SFX FS ño in [^i]ño
 SFX FS ñe in [^i]ñe
 SFX FS ño n iño
@@ -4725,14 +4738,21 @@ SFX r0 ería aría/F0 ería	is:singular+femenine
 SFX r0 ería arïeta/F0 ería	is:singular+femenine
 
 # nominali denominali (-ista)
-SFX i0 Y 12
+SFX i0 Y 19
 SFX i0 e ista/A2 e	is:singular
-SFX i0 0 ista/A2 [ln]	is:singular
-SFX i0 o sta/A2 io	is:singular
+SFX i0 0 ista/A2 [^è]l	is:singular
+SFX i0 èl elista/A2 èl	is:singular
+SFX i0 0 ista/A2 [^è]ƚo	is:singular
+SFX i0 èƚo eƚista/A2 èƚo	is:singular
+SFX i0 0 ista/A2 n	is:singular
+SFX i0 o sta/A2 [^lƚ]io	is:singular
+SFX i0 o sta/A2 [^è][lƚ]io	is:singular
+SFX i0 èlio elista/A2 èlio	is:singular
+SFX i0 èƚio eƚista/A2 èƚio	is:singular
 SFX i0 ía ista/A2 ía	is:singular
 SFX i0 èr erista/A2 èr	is:singular
 SFX i0 a ista/A2 [^diír]a	is:singular
-SFX i0 o ista/A2 [^i]o	is:singular
+SFX i0 o ista/A2 [^iƚ]o	is:singular
 SFX i0 0 ista/A2 [^è]r	is:singular
 SFX i0 a ista/A2 [^ò]ra	is:singular
 SFX i0 òda odista/A2 òda	is:singular

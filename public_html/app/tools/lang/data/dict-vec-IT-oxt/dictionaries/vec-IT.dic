@@ -609,7 +609,7 @@ autoríđomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:inter
 autorixar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 autorixo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:autorixar
 autoríxomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:autorixar
-aver/P0PlP7Q0QlQ7xB.0	po:verb ds:infinitive+simple
+aver/P0PlP7Q0QlQ7xBxC.0	po:verb ds:infinitive+simple
 aer/P0PlP7Q0QlQ7.0	po:verb ds:infinitive+simple st:aver
 ʼver/P0PlP7Q0QlQ7xB	po:verb ds:infinitive+simple st:aver
 ʼer/P0PlP7Q0QlQ7	po:verb ds:infinitive+simple st:aver
@@ -17206,6 +17206,7 @@ rovarsar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 rovarso/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:rovarsar
 rovàrsomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:rovarsar
 roventar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+rovènto/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:roventar
 rovento/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:roventar
 rovéntomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:roventar
 rovijar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
@@ -27147,6 +27148,7 @@ Tiròƚo/Z0	po:noun_proper
 Toskana/Z0	po:noun_proper
 Trentin/Z0	po:noun_proper
 Trevixo/FSZ0	po:noun_proper
+Vendeman/Z0	po:noun_proper
 Valada/Z0	po:noun_proper
 Vaƚada/Z0	po:noun_proper
 Valkalda/Z0	po:noun_proper
@@ -27547,9 +27549,9 @@ ustríago/A1	po:adjective_qualificative is:singular+masculine
 valako/A1FS	po:adjective_qualificative is:singular+masculine
 vaƚako/A1	po:adjective_qualificative is:singular+masculine
 venesian/A2B1	po:adjective_qualificative is:singular+masculine
-venesianaso/A1FS	po:adjective_qualificative is:singular+masculine
+venesianaso/A1FS	po:adjective_qualificative is:singular+masculine st:venesian ds:aŧo
 veneŧian/A2B1	po:adjective_qualificative is:singular+masculine
-veneŧianaŧo/A1FS	po:adjective_qualificative is:singular+masculine
+veneŧianaŧo/A1FS	po:adjective_qualificative is:singular+masculine st:veneŧian ds:aŧo
 veronexe/M0FSPd	po:adjective_qualificative is:singular+masculine
 vesentin/A2	po:adjective_qualificative is:singular+masculine
 veŧentin/A2	po:adjective_qualificative is:singular+masculine
@@ -33955,8 +33957,8 @@ vaxelame/M0FS	po:noun is:singular+masculine
 vaxeƚame/M0	po:noun is:singular+masculine
 vaxo/M0FSeTo0o4oT	po:noun is:singular+masculine
 vàfer/M0Pd	po:noun is:singular+masculine
-vàlser	po:noun is:masculine
-vàlŧer	po:noun is:masculine
+vàlser	po:noun is:masculine is:todesko
+vàlŧer	po:noun is:masculine is:todesko
 vedeƚata/F0	po:noun is:singular+femenine st:vedèƚa ds:ato
 vedeƚato/M0	po:noun is:singular+masculine st:vedèƚo ds:ato
 vedèl/M0B1aTeT	po:noun is:singular+masculine
@@ -52294,7 +52296,7 @@ vargo/M0FS	po:noun is:singular+masculine
 vasko/A1FS	po:noun is:singular+masculine
 vaskon/A2B1Pd	po:adjective_qualificative is:singular+masculine
 vastimento/M0FSPdVr	po:noun is:singular+masculine
-vaŧina/F0V3	po:noun is:singular+femenine
+guaŧina/F0V3gv	po:noun is:singular+femenine
 vaxolin/M0V3	po:noun is:singular+masculine
 vànđega/F0*0	po:noun is:singular+femenine
 vànxega/F0*0	po:noun is:singular+femenine
@@ -59371,9 +59373,12 @@ upiƚamento/M0PdVR	po:noun is:singular+masculine
 úmola/F0V3	po:noun is:singular+femenine
 vagabondo/A1o0o1o2o4	po:noun is:singular+masculine
 vanđèl/M0B1	po:noun is:singular+masculine
-vanjèlio/M0V3	po:noun is:singular+masculine
-vanɉèlio/M0V3	po:noun is:singular+masculine
-vanxèl/M0B1V3	po:noun is:singular+masculine
+vanjèlio/M0i0	po:noun is:singular+masculine
+vanɉèlio/M0i0	po:noun is:singular+masculine
+vanxèl/M0B1i0	po:noun is:singular+masculine
+vanjèƚio/M0i0	po:noun is:singular+masculine
+vanɉèƚio/M0i0	po:noun is:singular+masculine
+vanxèƚo/M0i0	po:noun is:singular+masculine
 veca/F0	po:noun is:singular+femenine
 veđilia/F0^0	po:noun is:singular+femenine
 vejò	po:noun is:masculine+non_enumerable
@@ -60069,7 +60074,7 @@ gronko/M0FS	po:adjective_qualificative is:singular+masculine
 grò	po:noun is:masculine is:franŧexe
 gruto/M0FS	po:noun is:singular+masculine
 guaja	po:interjection
-guantièra/F0eTo1o3gv	po:noun is:singular+femenine
+guantièra/F0gv	po:noun is:singular+femenine
 guardiaboski/FS	po:noun
 guardiafili	po:noun
 guardiafren	po:noun
@@ -61794,8 +61799,18 @@ xvelandrina/F0	po:noun is:singular+femenine st:velada dp:s ds:in
 xveƚandrina/F0	po:noun is:singular+femenine st:veƚada dp:s ds:in
 guài/gv	po:interjection
 valdora/F0	po:noun is:singular+femenine
+vangaño/M0FS	po:noun is:singular+masculine
+valgaño/M0FS	po:noun is:singular+masculine
+guantiera/F0eTo1o3gv	po:noun is:singular+femenine
+varixe/M0FS	po:noun is:singular+masculine
+vaska/F0	po:noun is:singular+femenine
+vaxelina/F0V3	po:adjective_qualificative is:singular+femenine
+vè	po:interjection
+vengèr/M0v0	po:noun is:singular+masculine
+vengèra/F0v0	po:noun is:singular+femenine
+venial/F0B1Vf	po:adjective_qualificative is:singular
 
 
-/ 374
+/ 379
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ–ʼ
