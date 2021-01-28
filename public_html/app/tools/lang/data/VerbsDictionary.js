@@ -8378,6 +8378,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vivol",			"ar",			1,	1,	"a",	"1560",			"",
 "vivol",			"ra",			1,	1,	"a",	"1590",			"",
 "vivot",			"",			1,	3,	"g",	"1900",			"(veronexe)",
+"vivuŧ",			"",			1,	3,	"g",	"1980",			"(vitoriexe) Vivatar.",
 "vix",			"",			1,	1,	"a",	"1980",			"",
 "vix",			"a",			1,	1,	"a",	"1447",			"",
 "vix",			"prea",		1,	1,	"a",	"1829",			"",
