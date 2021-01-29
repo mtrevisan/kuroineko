@@ -1374,6 +1374,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "đir",			"ra",			1,	1,	"a",	"1854",			"",
 "đir",			"re",			1,	1,	"a",	"1896",			"",
 "đirandol",		"",			1,	3,	"g",	"1852",			"",
+"đirl",			"",			1,	1,	"a",	"1980",			"(vitoriexe) Zirlare di certi uccelli.",
 "đirland",		"",			1,	4,	"g",	"1829",			"",
 "đirol",			"",			1,	1,	"a",	"1890",			"(vitoriexe)",
 "đirn",			"",			1,	1,	"a",	"1852",			"Dixnar.",
