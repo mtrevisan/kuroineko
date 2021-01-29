@@ -7849,6 +7849,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧikol",			"",			1,	1,	"a",	"",				"Tajar fin.",
 "ŧig",			"",			1,	1,	"a",	"1560",			"",
 "ŧigal",			"",			1,	3,	"g",	"1867",			"Son ke fà la ŧigala.",
+"ŧigalon",		"",			1,	5,	"a",	"1980",			"(vitoriexe) Xbraitar vilanamente e insistentemente.",
 "ŧigan",			"",			1,	3,	"g",	"1867",			"",
 "ŧigan",			"in",			1,	3,	"g",	"1775",			"Gabar, infenocar.",
 "ŧigol",			"",			1,	1,	"a",	"1560",			"Fiscar.",
