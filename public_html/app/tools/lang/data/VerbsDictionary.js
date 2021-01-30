@@ -5386,6 +5386,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pex",			"",			1,	1,	"a",	"1385",			"",
 "pex",			"kontra",	1,	1,	"a",	"1847",			"Bilanŧar.",
 "pexuŧ",			"",			1,	3,	"a",	"1980",			"(vitoriexe) Pexar (ròbe cèe e de banbini).",
+"pï",				"",			1,	1,	"a",	"1671",			"Prénder.",
 "pï",				"in",			1,	1,	"a",	"1775",			"Èser indispòsto.",
 "pij",			"",			1,	1,	"a",	"1775",			"",
 "pij",			"re",			1,	1,	"a",	"1829",			"",
