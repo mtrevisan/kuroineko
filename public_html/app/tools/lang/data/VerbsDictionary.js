@@ -2652,6 +2652,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ilkam",			"",			1,	3,	"g",	"1775",			"Inleamar.",
 "ilun",			"",			1,	2,	"a",	"1852",			"Asiliar.",
 "incostr",		"",			1,	3,	"g",	"1775",			"",
+"indivin",		"",			1,	5,	"a",	"1980",			"XVI",
 "indovin",		"",			1,	5,	"a",	"1560",			"Intivar.",
 "industri",		"",			1,	3,	"a",	"1867",			"Inxeñar.",
 "induvin",		"",			1,	5,	"a",	"",				"Intivar.",
