@@ -1373,14 +1373,14 @@ SFX 74 erò aríseƚo/i7 erò	ds:conditional+present is:third ds:interrogative	#
 # tèma 8 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: VT > Ø)
 # -àr, -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
 SFX t8 Y 9
-SFX t8 o i/J3 [^i]o	ds:indicative+present is:second+singular	# T8 + i
-SFX t8 o 0/J3 io	ds:indicative+present is:second+singular	# T8 + i
+SFX t8 o i/P0J3 [^i]o	ds:indicative+present is:second+singular	# T8 + i
+SFX t8 o 0/P0J3 io	ds:indicative+present is:second+singular	# T8 + i
 SFX t8 omi ïo [^i]omi	ds:indicative+present is:first+singular ds:interrogative	# T8 + i, venethian
-SFX t8 omi itu/I3 [^i]omi	ds:indicative+present is:second+singular ds:interrogative	# T8 + i
-SFX t8 omi tu/I3 iomi	ds:indicative+present is:second+singular ds:interrogative	# T8 + i
+SFX t8 omi itu/Q0I3 [^i]omi	ds:indicative+present is:second+singular ds:interrogative	# T8 + i
+SFX t8 omi tu/Q0I3 iomi	ds:indicative+present is:second+singular ds:interrogative	# T8 + i
 SFX t8 o a o	ds:subjunctive+present is:first+singular	# T8 + a
-SFX t8 o i [^i]o	ds:subjunctive+present is:second+singular	# T8 + i
-SFX t8 io i io	ds:subjunctive+present is:second+singular	# T8 + i
+SFX t8 o i/P0 [^i]o	ds:subjunctive+present is:second+singular	# T8 + i
+SFX t8 io i/P0 io	ds:subjunctive+present is:second+singular	# T8 + i
 SFX t8 o e o	ds:subjunctive+present is:third	# T8 + e
 
 # variante fel.-bel. e liv.:
@@ -1398,21 +1398,22 @@ SFX n8 o a o	ds:subjunctive+present is:third	# T8 + a
 
 # tèma 8, paròla ko asento (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: VT > Ø)
 # -àr, -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
-SFX T8 Y 15
+SFX T8 Y 16
 SFX T8 iso ísomi/I1 iso	ds:indicative+present is:first+singular ds:interrogative	# T8 + i
 SFX T8 o ïo [^is]o	ds:indicative+present is:first+singular ds:interrogative	# venethian
 SFX T8 o ïo [^i]so	ds:indicative+present is:first+singular ds:interrogative	# venethian
 SFX T8 o ïo iso	ds:indicative+present is:first+singular ds:interrogative	# venethian
-SFX T8 o i/J3I3 [^is]o	ds:indicative+present is:second+singular	# T8 + i
-SFX T8 o 0/J3I3 io	ds:indicative+present is:second+singular	# T8 + i
-SFX T8 o i/J3I3 [^i]so	ds:indicative+present is:second+singular	# T8 + i
+SFX T8 o itu/Q0I3 o	ds:indicative+present is:second+singular ds:interrogative	# T8 + i
+SFX T8 o i/P0J3I3 [^is]o	ds:indicative+present is:second+singular	# T8 + i
+SFX T8 o 0/P0J3I3 io	ds:indicative+present is:second+singular	# T8 + i
+SFX T8 o i/P0J3I3 [^i]so	ds:indicative+present is:second+singular	# T8 + i
 SFX T8 o i/J3 iso	ds:indicative+present is:second+singular	# T8 + i
-SFX T8 iso ísitu/I3 iso	ds:indicative+present is:second+singular ds:interrogative	# T8 + i
+SFX T8 iso ísitu/Q0I3 iso	ds:indicative+present is:second+singular ds:interrogative	# T8 + i
 SFX T8 o a o	ds:subjunctive+present is:first+singular	# T8 + a
-SFX T8 o i [^is]o	ds:subjunctive+present is:second+singular	# T8 + i
-SFX T8 io i io	ds:subjunctive+present is:second+singular	# T8 + i
-SFX T8 o i [^i]so	ds:subjunctive+present is:second+singular	# T8 + i
-SFX T8 o i iso	ds:subjunctive+present is:second+singular	# T8 + i
+SFX T8 o i/P0 [^is]o	ds:subjunctive+present is:second+singular	# T8 + i
+SFX T8 io i/P0 io	ds:subjunctive+present is:second+singular	# T8 + i
+SFX T8 o i/P0 [^i]so	ds:subjunctive+present is:second+singular	# T8 + i
+SFX T8 o i/P0 iso	ds:subjunctive+present is:second+singular	# T8 + i
 SFX T8 o e o	ds:subjunctive+present is:third	# T8 + e
 
 SFX N8 Y 15
@@ -2330,7 +2331,7 @@ SFX xL éver ebiede déver	ds:subjunctive+present is:second+plural	# T12 + é([d
 SFX xL éver ebiege déver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
 
 # vèrbi '-er inregolari: (r[eï])èser
-SFX xM Y 388
+SFX xM Y 386
 SFX xM ser ra/J1 èser	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xM èser éra/J1 èser	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xM ser rami/I1 èser	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)a
@@ -2655,8 +2656,6 @@ SFX xM èser fosisié/J4I4 èser	ds:subjunctive+imperfect is:second+plural	# T11
 SFX xM èser fosisiede èser	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
 SFX xM èser fosisiege èser	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
 SFX xM èser sede èser	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
-SFX xM èser sede èser	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
-SFX xM èser siede èser	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
 SFX xM èser siede èser	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
 SFX xM èser son/J2 èser	ds:indicative+present is:first+plural	# T12 + ón
 SFX xM èser soni/I2 èser	ds:indicative+present is:first+plural ds:interrogative	# T12 + ón
@@ -2951,25 +2950,25 @@ SFX xQ vàrdomi úrdageƚo/D7 vàrdomi	ds:imperative+present is:second+singular 
 
 # vèrbi pronomenali (stakài)
 SFX P0 Y 19
-SFX P0 0 -ge [raeo]	ds:pronomenal+locative
-SFX P0 0 -gen [raeo]	ds:pronomenal+genitive+locative
-SFX P0 0 -gin [raeo]	ds:pronomenal+genitive+locative
-SFX P0 0 -gene [raeo]	ds:pronomenal+genitive+locative
-SFX P0 0 -gine [raeo]	ds:pronomenal+genitive+locative
-SFX P0 0 -me [raeo]	ds:pronomenal+reflexive
-SFX P0 0 -men [raeo]	ds:pronomenal+reflexive
-SFX P0 0 -mene [raeo]	ds:pronomenal+reflexive
-SFX P0 0 -n [raeo]	ds:pronomenal+genitive
-SFX P0 0 -ne [raeo]	ds:pronomenal+genitive
-SFX P0 0 -se [raeo]	ds:pronomenal+reflexive
-SFX P0 0 -sen [raeo]	ds:pronomenal+reflexive
-SFX P0 0 -sene [raeo]	ds:pronomenal+reflexive
-SFX P0 0 -te [raeo]	ds:pronomenal+reflexive
-SFX P0 0 -ten [raeo]	ds:pronomenal+reflexive
-SFX P0 0 -tene [raeo]	ds:pronomenal+reflexive
-SFX P0 0 -ve [raeo]	ds:pronomenal+reflexive
-SFX P0 0 -ven [raeo]	ds:pronomenal+reflexive
-SFX P0 0 -vene [raeo]	ds:pronomenal+reflexive
+SFX P0 0 -ge [raeoi]	ds:pronomenal+locative
+SFX P0 0 -gen [raeoi]	ds:pronomenal+genitive+locative
+SFX P0 0 -gin [raeoi]	ds:pronomenal+genitive+locative
+SFX P0 0 -gene [raeoi]	ds:pronomenal+genitive+locative
+SFX P0 0 -gine [raeoi]	ds:pronomenal+genitive+locative
+SFX P0 0 -me [raeoi]	ds:pronomenal+reflexive
+SFX P0 0 -men [raeoi]	ds:pronomenal+reflexive
+SFX P0 0 -mene [raeoi]	ds:pronomenal+reflexive
+SFX P0 0 -n [raeoi]	ds:pronomenal+genitive
+SFX P0 0 -ne [raeoi]	ds:pronomenal+genitive
+SFX P0 0 -se [raeoi]	ds:pronomenal+reflexive
+SFX P0 0 -sen [raeoi]	ds:pronomenal+reflexive
+SFX P0 0 -sene [raeoi]	ds:pronomenal+reflexive
+SFX P0 0 -te [raeoi]	ds:pronomenal+reflexive
+SFX P0 0 -ten [raeoi]	ds:pronomenal+reflexive
+SFX P0 0 -tene [raeoi]	ds:pronomenal+reflexive
+SFX P0 0 -ve [raeoi]	ds:pronomenal+reflexive
+SFX P0 0 -ven [raeoi]	ds:pronomenal+reflexive
+SFX P0 0 -vene [raeoi]	ds:pronomenal+reflexive
 
 # vèrbi pronomenali (stakài ko èle no vanesente)
 SFX Pl Y 24
@@ -3027,7 +3026,7 @@ SFX P7 0 -veƚe [raeo]	is:plural+femenine ds:pronomenal+reflexive
 
 
 # vèrbi pronomenali (takài)
-SFX Q0 Y 61
+SFX Q0 Y 80
 SFX Q0 0 ge r	ds:pronomenal+genitive+locative
 SFX Q0 0 n ge	ds:pronomenal+genitive+locative
 SFX Q0 ar àrgen ar	ds:pronomenal+genitive+locative
@@ -3089,6 +3088,25 @@ SFX Q0 ir írven ir	ds:pronomenal+reflexive
 SFX Q0 ar àrvene ar	ds:pronomenal+reflexive
 SFX Q0 er érvene er	ds:pronomenal+reflexive
 SFX Q0 ir írvene ir	ds:pronomenal+reflexive
+SFX Q0 tu ge itu	ds:pronomenal+locative
+SFX Q0 tu gen itu	ds:pronomenal+genitive+locative
+SFX Q0 tu gin itu	ds:pronomenal+genitive+locative
+SFX Q0 tu gene itu	ds:pronomenal+genitive+locative
+SFX Q0 tu gine itu	ds:pronomenal+genitive+locative
+SFX Q0 tu me itu	ds:pronomenal+reflexive
+SFX Q0 tu men itu	ds:pronomenal+reflexive
+SFX Q0 tu mene itu	ds:pronomenal+reflexive
+SFX Q0 tu n itu	ds:pronomenal+genitive
+SFX Q0 tu ne itu	ds:pronomenal+genitive
+SFX Q0 tu se itu	ds:pronomenal+reflexive
+SFX Q0 tu sen itu	ds:pronomenal+reflexive
+SFX Q0 tu sene itu	ds:pronomenal+reflexive
+SFX Q0 u e itu	ds:pronomenal+reflexive
+SFX Q0 u en itu	ds:pronomenal+reflexive
+SFX Q0 u ene itu	ds:pronomenal+reflexive
+SFX Q0 tu ve itu	ds:pronomenal+reflexive
+SFX Q0 tu ven itu	ds:pronomenal+reflexive
+SFX Q0 tu vene itu	ds:pronomenal+reflexive
 
 # vèrbi pronomenali (takài ko èle no vanesente)
 SFX Ql Y 87
