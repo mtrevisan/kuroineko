@@ -4176,6 +4176,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "martel",		"",			1,	4,	"g",	"1867",			"",
 "martel",		"x",			1,	4,	"g",	"1560",			"",
 "marteriđ",		"",			1,	6,	"a",	"1479",			"Martoriđar, martuređar.",
+"martori",		"",			1,	4,	"g",	"2012",			"(arsedexe) Marteriđar, martuređar.",
 "martoriđ",		"",			1,	6,	"a",	"1854",			"Marteriđar, martuređar.",
 "martuređ",		"",			1,	6,	"a",	"",				"",
 "martuređ",		"x",			1,	6,	"a",	"1560",			"Marteriđar, martoriđar.",
