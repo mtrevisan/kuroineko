@@ -6531,6 +6531,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "skal",			"",			1,	2,	"g",	"1775",			"",
 "skalfur",		"",			1,	5,	"a",	"1854",			"Inpaurir.",
 "skalin",		"",			1,	4,	"a",	"1775",			"",
+"skalon",		"",			1,	4,	"g",	"2012",			"(arsedexe) Operazione annuale per sostituire i scalogn deteriorati.",
 "skaloñ",		"",			1,	4,	"g",	"1980",			"(vitoriexe)",
 "skalpol",		"",			1,	2,	"g",	"1560",			"Skanpar.",
 "skalv",			"",			1,	2,	"g",	"1775",			"Potar.",
