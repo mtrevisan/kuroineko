@@ -2130,6 +2130,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "frotol",		"s",			1,	2,	"g",	"1900",			"(veronexe) Gorgojar.",
 "frox",			"s",			1,	2,	"g",	"1852",			"Frodar.",
 "frü",			"",			1,	2,	"a",	"1560",			"Konsumar.",
+"frub",			"",			1,	2,	"a",	"2016",			"(arsedexe) Furbir.",
 "frul",			"",			1,	2,	"a",	"1775",			"",
 "fruñ",			"",			1,	2,	"a",	"1854",			"Rovistar, frugar.",
 "fruñ",			"s",			1,	2,	"a",	"1775",			"Frugar, ŧerkar.",
