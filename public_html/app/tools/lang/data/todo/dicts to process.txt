@@ -8,12 +8,24 @@ http://www.dmi.units.it/~borelli/utilita/dizionariotriestino.pdf [1999]
 https://books.google.it/books?id=Jz2V1LL2u1YC&pg=PA3#v=onepage&q&f=false [2007]
 
 
-íóúđɉƚñŧ
-ÀÈÉÍÒÓÚĐɈȽÑŦ
+íïóúüđɉƚñŧ
+ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ
 z aspra/forte/z - cruda/dolce/ᶎ = ŧ/đ
-s rude/forte - aspra/dolce = s/x
+s rude/forte/gagliardo/premuto/rozzo - aspra/dolce/rimesso/sottile = s/x
 c forte - dolce = k/c
 chi naturale = ki
+
+fiel, late, lume, sangue, solŧe, miel, sal: i xe femenili!
+
+dièrexi:
+ - pïolar, rïéser/rï[eu]sir, kïuo, batïale, mïul, Jïeltrude, jïaspro, jïo(g)rafía/jïo(g)ràfego, (o|de(x)|in)vïar, ingrïar, sïon, spïar, s[pt]ïa, spïon, [ie]nfïar, arfïar, sfïar, inpïar, sïar, krïar, rïolar, rïondar, spïonar, strïar, daïa, đelaïa, kaïa, ïu
+ - argü[ai]r, (in)güar, kuestüar, süar, refüar, früar, brüo, rüar, spüar, spüa[cŧ]ar, püàtol, püàvola, müar, fatüar, rüinar, kostrüir, i(n)strüir, ostrüir, (u)xufrüir, brüico, süave, süaxion, indrüin, rüinaŧo, rüina, büelar, flüir, inflüenŧar, güernar, lüamar, müarar, rüelar, rüimar, ŧüetar, Manüèl, düèximo, Đüèka, Palüèl, büelamento, büèl, m[ei]nüèl, sküèla, stranüèla, stüèr, xgüèa, krüèl, manüèl, amüèr, cüí, perpetüèl, perpètüo, küía, marüèla, palüèl, atribüir, bitüar, destribüir, efetüar, estenüar, frutüar, gradüar, grüar, xm[ei]nüir, dem[ei]nüir, nüar, anüir, renüir, patüir, perpetüar, retribüir, rexidüar, salüar, insinüar, sitüar, statüir, (e)stenüir, stüar, destribüir, tü[ai]r, eŧetüar, ŧirküir, xbüandar, Đüane, Lüixa, abitüal, abitüalmente, argüamento, aspetüal, früamento, individüal, inflüenŧa, istüadora, kostitüente, pontüal, pontüalmente, püin(a), rüelamento, salüaŧion, stüa, stüador, taküin, berlüato, distretüal, (suba)fitüal, füin, letüario, lüame, lüamèr, menüaja, püinèr, refüaja, rüara, sküelòto, sküena, spüarola, spüaŧa, stüamòkol, stüarola, süor, ŧüeta, [jđ]enüin, küertin, müanŧa, perpetüin, manüal, müanda, perpetüal, perpetüalmente, rüandèla, sküelin, vitüario, favalüina, süiŧidio, tüin, estüario, patüal, babüin, lüina, lüixa, maküiŧo, sküaena, süista, brüetin, brüolongo, destretüal, düeto, đüekin, jexüato, kontestüal, kontestüalmente, manüense, minüaja, prontüario, spüaco, spüadolŧe, spüapèrla, spüar, spüaŧo, süixmo, tüito, ŧüetin, uxüal, uxüalmente, xbrüaco, lüija, ocobüin, püatèla, füada, spüaca, stranüadina, bedüin, ŧüita, baldüina, baldüinada, füeto, küercolin, lüamarol, püinarol, tüeŧo, tüon, vanŧüaja, sküelèr, destitüir, rüimar, rüinar, stüir, tïèr
+ - statüa (statüeta)
+ü: u + vocale tonica (eccetto dittongo uò, eccetto [kg]u)
+ï: i + i, kui, [pbtdkjɉfvr]i, vli, Ci(u)[òo]l, ma non iè, ma non se fa parte di un radicale o una desinenza o un suffisso in cui normalmente costituisce dittongo con la vocale che segue (es. Grieco ‹ġri̯èko›, besti(u)ola ‹bestiu̯òla, besti̯òla›, industriale ‹industri̯àle›, destriero ‹destri̯èro›, annacquiamo ‹annakkui̯àmo›)
+
+vitoriexi > konejanexi: inprestaòs
+belumat > agordini: nhas
 
 /([^\t\n\s]*)ğ([^\t\n\s]*[\t\s\n]+) > /($1)GV$2 # substitute flags
 # [^\n]+\n > # remove # comments
@@ -22,16 +34,40 @@ chi naturale = ki
 ^(.*?)$\s+?^(?=.*^\1$) > # remove duplicates
 (ƚ[^/\n]+)et[ao]/[DT]0\t > add &1 to $1
 po:[^\n]+po: > split line
-^[^ƚ\r\n]*eto/[BTD]0[^I] > FS # add FS
+^[^ƚ\s\r\n]*usto(/[^\s\r\n\tF]*)?\t > FS # add FS
 [bcdđfghjɉklƚmnñprstŧvx]i[aeiou] > $1ï$2 # dièrexi
 (\b(\w*?)([ae])(\w*)\b)(?=[\s\S]*(\b\2(?!\3)[ae]\4\b)) # find couples of words that differs only for [ae]
 po:adjective( [^i]|$) # add is:...
 o[nl]/[^\r\nU]+U\d > add exception to hyphenation rules
+^l[^\r\n]+FS[^\r\n]*Ṿè	> split and remove FS from ƚ
+(ƚ[^/\t\r\n]*ar)/	> -ar verbs with vanishing el
+((^|[aeiou])l[aeiou][^/\t\r\n]*ar/)[^\t]*7[^\t]*\t	> -ar verbs with non-vanishing el
+^([^/][àèéòóúí][^/\t\r\n]*ar/)	> -er verbs into -ar
+[ei]r/([^\r\n]+[\r\n]+){1,2}[^/]+/t8n8tAlA7A[JI]1	> /t8n8tElE7E[JI]1
 
+konoja = polso
+nodèl = caviglia
+xlaŧadora = mattarello
+
+20190325
 correctness time = 463 s
 total words = 38378178
 unique words = 35904033
-difference = 2474145 = 30 s
 speed = 82890 w/s = 12.06 µs/w
 
+20191120
+correctness time = 168 s
+total words = 41054870
+unique words = 38227613
+speed = 244374 w/s = 4.09 µs/w
+
+20200910
+correctness time = 53 s
+total words = 24610322
+unique words = 20714003
+speed = 464347 w/s = 2.15 µs/w
+
 https://graphemica.com/%E2%B1%A5
+https://www.filarveneto.eu/forum/viewtopic.php?f=44&t=1874
+http://vev.ovi.cnr.it/vocabolario
+https://www.gutenberg.org/files/56200/56200-h/56200-h.htm
