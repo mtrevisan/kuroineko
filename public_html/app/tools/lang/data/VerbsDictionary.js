@@ -3486,6 +3486,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "koŧon",			"des",		1,	3,	"a",	"1884",			"Skòder.",
 "koŧon",			"s",			1,	3,	"a",	"1775",			"Skaltrir.",
 "kov",			"",			1,	1,	"a",	"1852",			"",
+"kov",			"in",			1,	1,	"a",	"1997",			"(kanevexe) Tòr posèso de na kaxa, 'ndar 'bitarge.",
 "kov",			"s",			1,	1,	"a",	"",				"",
 "kover",			"re",			1,	1,	"g",	"1980",			"(vitoriexe)",
 "kovèrđ",		"",			3,	3,	"g",	"1519",			"Koprir, koverkiar.",
