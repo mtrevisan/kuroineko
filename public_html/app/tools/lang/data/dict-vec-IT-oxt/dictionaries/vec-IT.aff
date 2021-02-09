@@ -4169,6 +4169,12 @@ SFX M0 io i io	is:plural+masculine
 SFX M0 a i a	is:plural+masculine
 SFX M0 e i e	is:plural+masculine
 
+# sostantivi plurali maskili (-e/i)
+SFX MF Y 3
+SFX MF 0 e [èélnr]	is:singular+masculine
+SFX MF e i e	is:plural+masculine
+SFX MF 0 i [aèélnr]	is:plural+masculine
+
 # sostantivi singolari: đontamento de -io/a a le paròle in -o/a (-[lnr] > -[lnr]io, -o/e > -io, -a > -ia)
 SFX M1 Y 4
 SFX M1 a ia/F0 a	is:singular+femenine
@@ -4176,7 +4182,7 @@ SFX M1 e io e	is:singular+masculine
 SFX M1 o io o	is:singular+masculine
 SFX M1 0 io [lnr]	is:singular+masculine
 
-# sostantivi plurali senŧa đèner (-e > -i, -[nr] > -[nr]i)
+# sostantivi plurali senŧa đèner (-e > -i, -[lnr] > -[lnr]i)
 SFX X0 Y 4
 SFX X0 a i a	is:plural
 SFX X0 e i e	is:plural
@@ -4225,69 +4231,66 @@ SFX B2 ínkul inküi ínkul	is:plural+masculine
 ### Venèŧia ###
 
 # trasformaŧion intra varianti (l > ƚ, j > ɉ, ŧ > s)
-SFX V3 Y 57
-SFX V3 ló ƚó [aeiou]ló
-SFX V3 lò ƚò [aeiou]lò
-SFX V3 là ƚà [aeiou]là
-SFX V3 lè ƚè [aeiou]lè
-SFX V3 lé ƚé [aeiou]lé
-SFX V3 liè ƚiè [aeiou]liè
-SFX V3 leto ƚeto/M0Pd [aeiouàèéíòóú]leto
-SFX V3 lèto ƚèto/M0 [aeiou]lèto
-SFX V3 loto ƚoto/M0Pd [aeiouàèéíòóú]loto
-SFX V3 lòto ƚòto/M0 [aeiou]lòto
-SFX V3 leta ƚeta/F0 [aeiouàèéíòóú]leta
-SFX V3 lèta ƚèta/F0 [aeiou]lèta
-SFX V3 lòta ƚòta/F0 [aeiou]lòta
-SFX V3 lon ƚon/F0Pd [aeiouàèéíòóú]lon
-SFX V3 lona ƚona/F0 [aeiouàèéíòóú]lona
+SFX V3 Y 47
+SFX V3 đa xa/F0 đa
+SFX V3 ja ɉa/F0 ja
+SFX V3 la ƚa/F0 [aeiouàèéíòóú]la
+SFX V3 ŧa sa/F0 ŧa
+SFX V3 là ƚà [aeiouàèéíòóú]là
+SFX V3 ŧe se/M0 ŧe
+SFX V3 lé ƚé [aeiouàèéíòóú]lé
+SFX V3 lè ƚè [aeiouàèéíòóú]lè
+SFX V3 jo ɉo/M0 jo
+SFX V3 ló ƚó [aeiouàèéíòóú]ló
+SFX V3 lò ƚò [aeiouàèéíòóú]lò
 SFX V3 l ƚo/M0Pd [eo]l
 SFX V3 l ƚo/M0 [aiuàèéíòóú]l
-SFX V3 la ƚa/F0 [aeiouàèéíòóú]la
-SFX V3 lio ƚio/M0 [aeiouàèéíòóú]lio
-SFX V3 lion ƚion/M0Pd [aeiouàèéíòóú]lion
+SFX V3 đo xo/M0Pd eđo
 SFX V3 lia ƚia/F0 [aeiouàèéíòóú]lia
+SFX V3 ŧia sia/F0 ŧia
 SFX V3 lía ƚía/F0 [aeiouàèéíòóú]lía
+SFX V3 ŧía sía/F0 ŧía
+SFX V3 liè ƚiè [aeiouàèéíòóú]liè
 SFX V3 lan ƚan/M0 [aeiouàèéíòóú]lan
-SFX V3 lana ƚana/F0 [aeiouàèéíòóú]lana
-SFX V3 lana ƚana/F0 [aeiouàèéíòóú][–-]lana
-SFX V3 lin ƚin/M0 [aeiouàèéíòóú]lin
-SFX V3 lina ƚina/F0 [aeiouàèéíòóú]lina
 SFX V3 len ƚen/M0Pd [aeiouàèéíòóú]len
-SFX V3 lena ƚena/F0 [aeiouàèéíòóú]lena
-SFX V3 lèn ƚèn/M0Pd [aeiouàèéíòóú]lèn
-SFX V3 lèna ƚèna/F0 [aeiouàèéíòóú]lèna
-SFX V3 jo ɉo/M0 jo
-SFX V3 ja ɉa/F0 ja
+SFX V3 lin ƚin/M0 [aeiouàèéíòóú]lin
+SFX V3 ŧin sin/M0 ŧin
 SFX V3 jon ɉon/F0B1Pd jon
-SFX V3 jona ɉona/F0 jona
+SFX V3 lon ƚon/F0Pd [aeiouàèéíòóú]lon
+SFX V3 ŧon son/F0B1Pd ŧon
+SFX V3 lio ƚio/M0 [aeiouàèéíòóú]lio
+SFX V3 ŧio sio/M0 ŧio
+SFX V3 đo xo/M0 [^e]đo
 SFX V3 ŧo so/M0FSPd [eo]ŧo
 SFX V3 ŧo so/M0FS [^eo]ŧo
-SFX V3 ŧa sa/F0 ŧa
-SFX V3 ŧe se/M0 ŧe
-SFX V3 ŧio sio/M0 ŧio
-SFX V3 ŧia sia/F0 ŧia
-SFX V3 ŧía sía/F0 ŧía
-SFX V3 ŧon son/F0B1Pd ŧon
-SFX V3 ŧona sona/F0 ŧona
-SFX V3 ŧion sion/F0B1Pd ŧion
-SFX V3 ŧal sal/F0B1 ŧal
-SFX V3 ŧèl sèl/M0B1 ŧèl
-SFX V3 ŧial sial/F0B1 ŧial
-SFX V3 ŧin sin/M0 ŧin
-SFX V3 ŧina sina/F0 ŧina
-SFX V3 ŧen sen/M0 ŧen
-SFX V3 ŧena sena/F0 ŧena
-SFX V3 đo xo/M0Pd [eo]đo
-SFX V3 đo xo/M0 [^eo]đo
-SFX V3 đa xa/F0 đa
-SFX V3 đan xan/M0 đan
 SFX V3 đana xana/F0 đana
+SFX V3 lana ƚana/F0 [aeiouàèéíòóú]lana
+SFX V3 lana ƚana/F0 [aeiouàèéíòóú][–-]lana
+SFX V3 lena ƚena/F0 [aeiouàèéíòóú]lena
+SFX V3 ŧena sena/F0 ŧena
+SFX V3 lina ƚina/F0 [aeiouàèéíòóú]lina
+SFX V3 ŧina sina/F0 ŧina
+SFX V3 lona ƚona/F0 [aeiouàèéíòóú]lona
+SFX V3 leta ƚeta/F0 [aeiouàèéíòóú]leta
+SFX V3 lèta ƚèta/F0 [aeiouàèéíòóú]lèta
+SFX V3 lòta ƚòta/F0 [aeiouàèéíòóú]lòta
+SFX V3 lion ƚion/M0Pd [aeiouàèéíòóú]lion
+SFX V3 ŧion sion/F0B1Pd ŧion
+SFX V3 leto ƚeto/M0Pd [aeiouàèéíòóú]leto
+SFX V3 lèto ƚèto/M0 [aeiouàèéíòóú]lèto
+SFX V3 lòto ƚòto/M0 [aeiouàèéíòóú]lòto
+
+# trasformaŧion intra varianti (l > ƚ, j > ɉ, ŧ > s)
+SFX V4 Y 5
+SFX V4 jon ɉon/MFB1Pd jon
+SFX V4 lon ƚon/MFPd lon
+SFX V4 ŧon son/MFB1Pd ŧon
+SFX V4 lion ƚion/MFPd lion
+SFX V4 ŧion sion/MFB1Pd ŧion
 
 # trasformaŧion intra varianti ko èle vanesente (j > ɉ)
-SFX V7 Y 2
+SFX V7 Y 1
 SFX V7 jo ɉo/M0 jo
-SFX V7 jon ɉon/F0Pd jon
 
 # trasformaŧion intra varianti (femenil l > ƚe)
 SFX Vf Y 1
