@@ -4177,9 +4177,11 @@ SFX M1 o io o	is:singular+masculine
 SFX M1 0 io [lnr]	is:singular+masculine
 
 # sostantivi plurali senŧa đèner (-e > -i, -[nr] > -[nr]i)
-SFX X0 Y 2
+SFX X0 Y 4
+SFX X0 a i a	is:plural
 SFX X0 e i e	is:plural
-SFX X0 0 i [nr]	is:plural
+SFX X0 0 e [lnr]	is:singular
+SFX X0 0 i [lnr]	is:plural
 
 
 ### Fèltre–Belun ###
@@ -4289,7 +4291,7 @@ SFX V7 jon ɉon/F0Pd jon
 
 # trasformaŧion intra varianti (femenil l > ƚe)
 SFX Vf Y 1
-SFX Vf l ƚe/F0 [aeiouàèéíòóú]l
+SFX Vf l ƚe/F0 [aeiouàèéíòóú]l	is:singular+femenine
 
 # trasformaŧion iniŧial de paròla intra varianti (l > ƚ, ƚ > l, j > ɉ, ŧ > s, đ > x)
 PFX Vp Y 14
