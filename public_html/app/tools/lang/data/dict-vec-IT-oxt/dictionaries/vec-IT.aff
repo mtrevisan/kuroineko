@@ -4154,10 +4154,11 @@ SFX A2 a e [iƚ]a	is:plural
 SFX A2 a i a	is:plural
 
 # sostantivi plurali femenili, ajetivi de tèrŧa klase (-a/e)
-SFX F0 Y 4
+SFX F0 Y 5
 SFX F0 0 e [^oaie]	is:plural+femenine
 SFX F0 0 i [^oaie]	is:plural+femenine
-SFX F0 e i e	is:plural+femenine
+SFX F0 e i [^i]e	is:plural+femenine
+SFX F0 e 0 ie	is:plural+femenine
 SFX F0 a e a	is:plural+femenine
 
 # sostantivi plurali maskili (-o/i)
@@ -4819,13 +4820,14 @@ SFX w0 ente ènte ente
 
 
 # sostantivi koletivi, ...
-SFX y0 Y 12
+SFX y0 Y 13
 SFX y0 ada àa/F0 ada
 SFX y0 eda éa/F0 eda
 SFX y0 ida ía/F0 ida
 SFX y0 uda úa/F0 uda
-SFX y0 ade à/F0 ade
-SFX y0 ude ú/F0 ude
+SFX y0 ade à ade	is:femenine
+SFX y0 ede é ede	is:femenine
+SFX y0 ude ú ude	is:femenine
 SFX y0 ado ò ado
 SFX y0 ado à/M0 ado
 SFX y0 ado è/M0 ado
