@@ -42,7 +42,7 @@ automatic install process.
 
   File -> Autopilot -> Install new dictionaries...
 
-If this is unavailable then download 'DicOOo.sxw' from:
+If this is unavailable then download `DicOOo.sxw' from:
 http://ftp.services.openoffice.org/pub/OpenOffice.org/contrib/dictionaries/dicooo/DicOOo.sxw
 
 Run the macro and follow the steps outlined.  If you would like the dictionary
@@ -80,8 +80,8 @@ perform some checks.
 
   Tools -> Options -> Language Settings -> Writing Aids
 
-In the section marked 'Available language modules' select 'Edit...'.  Under
-the languages drop-down select Venetan and ensure that the 'OpenOffice.org
+In the section marked `Available language modules' select `Edit...'.  Under
+the languages drop-down select Venetan and ensure that the `OpenOffice.org
 MySpell SpellChecker' is enabled.
 
 2) Set your default document language to Venetan
@@ -93,8 +93,8 @@ step.
 
   Tools -> Options -> Language Settings -> Languages
 
-In the section marked 'Default languages for documents' is a drop-down labelled
-'Western'.  Venetan has a tick next to it to indicate that a spellchecker is 
+In the section marked `Default languages for documents' is a drop-down labelled
+`Western'.  Venetan has a tick next to it to indicate that a spellchecker is 
 installed.  Set your default language to Venetan.
 
 3) Changing existing documents or paragraphs to Venetan
@@ -105,7 +105,7 @@ is a Venetan text by:
 
     a) Select the relevant text (Ctrl-A selects the whole document)
     b) Format -> Character...
-       Change the 'Language' drop-down to Venetan.
+       Change the `Language' drop-down to Venetan.
 
 
 4. Contributing
