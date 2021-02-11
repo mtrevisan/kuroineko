@@ -2881,7 +2881,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kalŧin",		"s",			1,	4,	"a",	"1509",			"",
 "kalŧitr",		"re",			1,	1,	"g",	"1867",			"Rexistente.",
 "kalum",			"",			1,	3,	"a",	"1775",			"Alumar, guatar, remirar, fisar, alentar pian pianeto.",
-"kalum",			"s",			1,	3,	"a",	"",				"Mexurar a oco, oservar.",
+"kalum",			"s",			1,	3,	"a",	"",				"Mexurar a oco, oservar, valutar.",
 "kaluñ",			"",			1,	3,	"a",	"",				"(bixiak) it. 'Calunniare'.",
 "kam",			"pro",		1,	2,	"g",	"1855",			"(belumat) Proklamar.",
 "kam",			"plo",		1,	2,	"g",	"1855",			"(belumat) Proklamar.",
