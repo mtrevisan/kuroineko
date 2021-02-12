@@ -6,6 +6,17 @@ http://www.tuttotrieste.net/dizts.htm
 http://www.dmi.units.it/~borelli/utilita/dizionariotriestino.pdf [1999]
 https://books.google.it/books?id=Jz2V1LL2u1YC&pg=PA3#v=onepage&q&f=false [2007]
 
+https://www.filarveneto.eu/forum/viewtopic.php?f=44&t=1874
+https://ilveses.com/cat/cultura/dialetto/
+https://ilveses.com/parole-de-na-olta-la-sguindia/
+https://ilveses.com/strach-de-polsar/
+https://www.locandagloriosopiave.it/la-poesia-eglogistica-cinquecentesca-veneto-settentrionale/
+http://www.soraimar.it/
+
+
+!!! http://alpadin.altervista.org/lingue-e-o-dialetti.html !!!
+!!! http://alpadin.altervista.org/alterpages/files/Alpadin-Rassegnabibliograficaalpadinica-n.12del190911.pdf !!!
+
 
 íïóúüđɉƚñŧ
 ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ
@@ -14,7 +25,9 @@ s rude/forte/gagliardo/premuto/rozzo - aspra/dolce/rimesso/sottile = s/x
 c forte - dolce = k/c
 chi naturale = ki
 
+
 fiel, late, lume, sangue, solŧe (solco che lascia l'aratro), miel, sal: i xe femenili!
+
 
 dièrexi:
  - pïolar, rïéser/rï[eu]sir, kïuo, batïale, mïul, Jïeltrude, jïaspro, jïo(g)rafía/jïo(g)ràfego, (o|de(x)|in)vïar, ingrïar, sïon, spïar, s[pt]ïa, spïon, [ie]nfïar, arfïar, sfïar, inpïar, sïar, krïar, rïolar, rïondar, spïonar, strïar, daïa, đelaïa, kaïa, ïu, bïòrka, rïo
@@ -23,8 +36,10 @@ dièrexi:
 ü: u + vocale tonica (eccetto dittongo uò, eccetto [kg]u)
 ï: i + i, kui, [pbtdkjɉfvr]i, vli, Ci(u)[òo]l, ma non iè, ma non se fa parte di un radicale o una desinenza o un suffisso in cui normalmente costituisce dittongo con la vocale che segue (es. Grieco ‹ġri̯èko›, besti(u)ola ‹bestiu̯òla, besti̯òla›, industriale ‹industri̯àle›, destriero ‹destri̯èro›, annacquiamo ‹annakkui̯àmo›)
 
+
 vitoriexi > konejanexi: inprestaòs
 belumat > agordini: nhas
+
 
 /([^\t\n\s]*)ğ([^\t\n\s]*[\t\s\n]+) > /($1)GV$2 # substitute flags
 # [^\n]+\n > # remove # comments
@@ -44,36 +59,27 @@ o[nl]/[^\r\nU]+U\d > add exception to hyphenation rules
 ^([^/][àèéòóúí][^/\t\r\n]*ar/)	> -er verbs into -ar
 [ei]r/([^\r\n]+[\r\n]+){1,2}[^/]+/t8n8tAlA7A[JI]1	> /t8n8tElE7E[JI]1
 
-konoja = polso
-nodèl = caviglia
-xlaŧadora = mattarello
 
 20190325
-correctness time = 463 s
-total words = 38378178
-unique words = 35904033
+linter time = 463 s
+total inflections = 38378178
+unique inflections = 35904033 (93.5%)
 speed = 82890 w/s = 12.06 µs/w
 
 20191120
-correctness time = 168 s
-total words = 41054870
-unique words = 38227613
+linter time = 168 s
+total inflections = 41054870
+unique inflections = 38227613 (93.1%)
 speed = 244374 w/s = 4.09 µs/w
 
 20200910
-correctness time = 53 s
-total words = 24610322
-unique words = 20714003
+linter time = 53 s
+total inflections = 24610322
+unique inflections = 20714003 (84.2%)
 speed = 464347 w/s = 2.15 µs/w
 
-https://www.filarveneto.eu/forum/viewtopic.php?f=44&t=1874
-https://ilveses.com/cat/cultura/dialetto/
-https://ilveses.com/parole-de-na-olta-la-sguindia/
-https://ilveses.com/strach-de-polsar/
-https://www.locandagloriosopiave.it/la-poesia-eglogistica-cinquecentesca-veneto-settentrionale/
-https://www.vieceli.it/curiosita/dialetto-de-belun
-http://www.soraimar.it/
-
-
-!!! http://alpadin.altervista.org/lingue-e-o-dialetti.html !!!
-!!! http://alpadin.altervista.org/alterpages/files/Alpadin-Rassegnabibliograficaalpadinica-n.12del190911.pdf !!!
+20210212
+linter time = 62 s
+total inflections = 28467801
+unique inflections = 23939490 (84.1%)
+speed = 459158 w/s = 2.18 µs/w
