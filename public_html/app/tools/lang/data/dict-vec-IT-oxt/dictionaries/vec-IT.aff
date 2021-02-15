@@ -33,7 +33,7 @@ TRY eaoinrtlƚsdkpvmuèxgfàòbíhéŧójɉñcúSđLȽIPETKVAMDNFBRJGCOUĐXÀÈ�
 
 KEY esdr|redft|trfg|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà-|àòèù-|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìèòà
 
-WORDCHARS -–‘
+WORDCHARS -–‘ʼ
 
 # figure and en dashes
 BREAK 2
@@ -44,7 +44,7 @@ BREAK --
 FULLSTRIP
 
 # suggest the right forms for words which incorrectly choose the wrong letter from a related set more than once in a word
-MAP 28
+MAP 26
 MAP aà
 MAP eè
 MAP eé
@@ -52,14 +52,12 @@ MAP èé
 MAP ií
 MAP iï
 MAP ïí
-MAP íï
 MAP oò
 MAP oó
 MAP òó
 MAP uú
 MAP uü
 MAP üú
-MAP úü
 MAP AÀ
 MAP EÈ
 MAP EÉ
@@ -75,7 +73,7 @@ MAP UÜ
 MAP ÜÚ
 
 # replace input characters
-ICONV 19
+ICONV 20
 ICONV dh đ
 ICONV Dh Đ
 ICONV DH Đ
@@ -95,9 +93,10 @@ ICONV th ŧ
 ICONV Th Ŧ
 ICONV TH Ŧ
 ICONV ' ‘
+ICONV ʼ ‘
 
 # frequently switched character groups
-REP 136
+REP 153
 REP a à
 REP e è
 REP e é
@@ -139,17 +138,20 @@ REP xt st
 REP xŧ sŧ
 REP sv xv
 REP sx xx
-REP antel anté_‘l
-REP an_tel anté_‘l
-REP an_te anté
-REP an_té anté
-REP intel inté_‘l
-REP in_tel inté_‘l
-REP in_te inté
-REP in_té inté
-REP ten ‘té_‘n
-REP inten inté_‘n
-REP in_ten inté_‘n
+REP ^tel ‘te_‘l
+REP ^ten ‘te_‘n
+REP ^‘tel ‘te_‘l
+REP ^‘ten ‘te_‘n
+REP ^an_te ante
+REP ^an_tel ante_‘l
+REP ^an_ten ante_‘n
+REP ^antel ante_‘l
+REP ^anten ante_‘n
+REP ^in_te inte
+REP ^in_tel inte_‘l
+REP ^in_ten inte_‘n
+REP ^intel inte_‘l
+REP ^inten inte_‘n
 REP ^di de
 REP ^ri re
 REP iko$ ego
@@ -160,10 +162,14 @@ REP itor$ idor
 REP ator$ ador
 REP etor$ edor
 REP utor$ udor
-REP kio ki_‘ƚo
-REP kii ki_‘ƚi
-REP kia ki_‘ƚa
-REP kie ki_‘ƚe
+REP ^kio$ ki_‘ƚo
+REP ^kii$ ki_‘ƚi
+REP ^kia$ ki_‘ƚa
+REP ^kie$ ki_‘ƚe
+REP ^kïo$ ki_‘ƚo
+REP ^kïi$ ki_‘ƚi
+REP ^kïa$ ki_‘ƚa
+REP ^kïe$ ki_‘ƚe
 REP ae aƚe
 REP àe àƚe
 REP ee eƚe
@@ -205,10 +211,20 @@ REP oí oƚí
 REP uí uƚí
 REP ^ea ƚa
 REP ^ee ƚe
+REP ^eé ƚé
+REP ^eè ƚè
 REP ^ji ƚi
+REP ^jï ƚï
+REP ^jí ƚí
 REP ^eo ƚo
+REP ^eó ƚó
+REP ^eò ƚò
 REP ^iu ƚu
+REP ^iü ƚü
+REP ^iú ƚú
 REP ^ju ƚu
+REP ^jü ƚü
+REP ^jú ƚú
 REP aeo aƚo
 REP àeo àƚo
 REP ueo uƚo
