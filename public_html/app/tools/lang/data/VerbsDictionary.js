@@ -591,6 +591,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bindol",		"",			1,	1,	"a",	"1854",			"Condolar, penxolar.",
 "bingol",		"dex",		1,	1,	"a",	"1867",			"",
 "bingol",		"x",			1,	1,	"a",	"",				"Dondolar.",
+"biñ",			"",			1,	1,	"a",	"XVI",			"Binar.",
 "biñ",			"x",			1,	1,	"a",	"1775",			"Xviñar.",
 "biogol",		"x",			1,	2,	"g",	"1900",			"(veronexe) Kavar la noxe da un fruto.",
 "bion",			"x",			1,	2,	"a",	"1821",			"Laserar.",
