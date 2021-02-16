@@ -4737,14 +4737,14 @@ SFX d7 dura ureta/F0 dura ds:eto
 
 # nominali deaverbiali (-ixmo)
 SFX x0 Y 3
-SFX x0 o ixmo/M0 o
-SFX x0 0 ixmo/M0 [nr]
-SFX x0 ía ixmo/M0 ía
+SFX x0 o ixmo/M0 o	ds:ixmo
+SFX x0 0 ixmo/M0 [nr]	ds:ixmo
+SFX x0 ía ixmo/M0 ía	ds:ixmo
 
 # nominali deaverbiali ko èle vanesente (-ixmo)
 SFX x7 Y 2
-SFX x7 0 ixmo/M0 n
-SFX x7 ía ixmo/M0 ía
+SFX x7 0 ixmo/M0 n	ds:ixmo
+SFX x7 ía ixmo/M0 ía	ds:ixmo
 
 
 # negòŧi, atività komerŧali o industriali, aŧion, scapi de ròbe o de parsone (-ría/F0eT)
@@ -4821,24 +4821,24 @@ SFX r0 ería arïeta/F0 ería	is:singular+femenine
 
 # nominali denominali (-ista)
 SFX i0 Y 18
-SFX i0 e ista/A2 e	is:singular
-SFX i0 0 ista/A2 n	is:singular
-SFX i0 ía ïista/A2 ía	is:singular
-SFX i0 úa üista/A2 úa	is:singular
-SFX i0 èl elista/A2 èl	is:singular
-SFX i0 èr erista/A2 èr	is:singular
-SFX i0 a ista/A2 [^diírú]a	is:singular
-SFX i0 o ista/A2 [^iƚ]o	is:singular
-SFX i0 0 ista/A2 [^è][lr]	is:singular
-SFX i0 òda odista/A2 òda	is:singular
-SFX i0 òra orista/A2 òra	is:singular
-SFX i0 èƚo eƚista/A2 èƚo	is:singular
-SFX i0 a ista/A2 [^ò]ra	is:singular
-SFX i0 o sta/A2 [^lƚ]io	is:singular
-SFX i0 o ista/A2 [^è]ƚo	is:singular
-SFX i0 ònia onista/A2 ònia	is:singular
-SFX i0 èlio elista/A2 èlio	is:singular
-SFX i0 èƚio eƚista/A2 èƚio	is:singular
+SFX i0 e ista/A2 e	is:singular ds:ista
+SFX i0 0 ista/A2 n	is:singular ds:ista
+SFX i0 ía ïista/A2 ía	is:singular ds:ista
+SFX i0 úa üista/A2 úa	is:singular ds:ista
+SFX i0 èl elista/A2 èl	is:singular ds:ista
+SFX i0 èr erista/A2 èr	is:singular ds:ista
+SFX i0 a ista/A2 [^diírú]a	is:singular ds:ista
+SFX i0 o ista/A2 [^iƚ]o	is:singular ds:ista
+SFX i0 0 ista/A2 [^è][lr]	is:singular ds:ista
+SFX i0 òda odista/A2 òda	is:singular ds:ista
+SFX i0 òra orista/A2 òra	is:singular ds:ista
+SFX i0 èƚo eƚista/A2 èƚo	is:singular ds:ista
+SFX i0 a ista/A2 [^ò]ra	is:singular ds:ista
+SFX i0 o sta/A2 [^lƚ]io	is:singular ds:ista
+SFX i0 o ista/A2 [^è]ƚo	is:singular ds:ista
+SFX i0 ònia onista/A2 ònia	is:singular ds:ista
+SFX i0 èlio elista/A2 èlio	is:singular ds:ista
+SFX i0 èƚio eƚista/A2 èƚio	is:singular ds:ista
 
 # avèrbi (-mente)
 SFX w0 Y 3
