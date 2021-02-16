@@ -4643,10 +4643,10 @@ SFX eZ òde odeŧa/F0 òde	is:singular+femenine
 
 # nominali deajetivali (-esa)
 SFX eS Y 4
-SFX eS a esa/F0 a
-SFX eS o esa/F0 o
-SFX eS 0 sa/F0 [^d]e
-SFX eS òde odesa/F0 òde
+SFX eS a esa/F0 a	is:singular+femenine
+SFX eS o esa/F0 o	is:singular+femenine
+SFX eS 0 sa/F0 [^d]e	is:singular+femenine
+SFX eS òde odesa/F0 òde	is:singular+femenine
 
 # nominali deajetivali (-iŧia)
 SFX iZ Y 2
@@ -4723,19 +4723,19 @@ SFX m7 r mènto/M0 r
 SFX d0 Y 8
 SFX d0 dur ur/M0 [^i]dur
 SFX d0 idur ïur/M0 idur
-SFX d0 dur ureto/M0FSPd [^i]dur ds:eto
-SFX d0 idur ïureto/M0FSPd idur ds:eto
+SFX d0 dur ureto/M0FSPd [^i]dur	ds:eto
+SFX d0 idur ïureto/M0FSPd idur	ds:eto
 SFX d0 dura ura/F0 [^i]dura
 SFX d0 idura ïura/F0 idura
-SFX d0 dura ureta/F0 [^i]dura ds:eto
-SFX d0 idura ïureta/F0 idura ds:eto
+SFX d0 dura ureta/F0 [^i]dura	ds:eto
+SFX d0 idura ïureta/F0 idura	ds:eto
 
 # nominali deverbali ko èle vanesente (-dur(eto)/M0, -dur(et)a/F0)
 SFX d7 Y 4
 SFX d7 dur ur/M0 dur
-SFX d7 dur ureto/M0Pd dur ds:eto
+SFX d7 dur ureto/M0Pd dur	ds:eto
 SFX d7 dura ura/F0 dura
-SFX d7 dura ureta/F0 dura ds:eto
+SFX d7 dura ureta/F0 dura	ds:eto
 
 
 # nominali deaverbiali (-ixmo)
@@ -4753,74 +4753,74 @@ SFX x7 ía ixmo/M0 ía	ds:ixmo
 # negòŧi, atività komerŧali o industriali, aŧion, scapi de ròbe o de parsone (-ría/F0eT)
 SFX r0 Y 69
 SFX r0 0 ría/F0 e	is:singular+femenine
-SFX r0 0 rïeta/F0 e	is:singular+femenine
+SFX r0 0 rïeta/F0 e	is:singular+femenine ds:eto
 SFX r0 e aría/F0 e	is:singular+femenine
-SFX r0 e arïeta/F0 e	is:singular+femenine
+SFX r0 e arïeta/F0 e	is:singular+femenine ds:eto
 SFX r0 0 aría/F0 [ln]	is:singular+femenine
 SFX r0 0 ería/F0 [ln]	is:singular+femenine
-SFX r0 0 arïeta/F0 [ln]	is:singular+femenine
-SFX r0 0 erïeta/F0 [ln]	is:singular+femenine
+SFX r0 0 arïeta/F0 [ln]	is:singular+femenine ds:eto
+SFX r0 0 erïeta/F0 [ln]	is:singular+femenine ds:eto
 SFX r0 0 aría/F0 [^èo]r	is:singular+femenine
 SFX r0 0 ería/F0 [^èo]r	is:singular+femenine
-SFX r0 0 arïeta/F0 [^èo]r	is:singular+femenine
-SFX r0 0 erïeta/F0 [^èo]r	is:singular+femenine
+SFX r0 0 arïeta/F0 [^èo]r	is:singular+femenine ds:eto
+SFX r0 0 erïeta/F0 [^èo]r	is:singular+femenine ds:eto
 SFX r0 èr eraría/F0 èr	is:singular+femenine
 SFX r0 èr erería/F0 èr	is:singular+femenine
-SFX r0 èr erarïeta/F0 èr	is:singular+femenine
-SFX r0 èr ererïeta/F0 èr	is:singular+femenine
+SFX r0 èr erarïeta/F0 èr	is:singular+femenine ds:eto
+SFX r0 èr ererïeta/F0 èr	is:singular+femenine ds:eto
 SFX r0 0 ía/F0 ar	is:singular+femenine
-SFX r0 0 ïeta/F0 ar	is:singular+femenine
+SFX r0 0 ïeta/F0 ar	is:singular+femenine ds:eto
 SFX r0 0 ía/F0 or	is:singular+femenine
-SFX r0 0 ïeta/F0 or	is:singular+femenine
+SFX r0 0 ïeta/F0 or	is:singular+femenine ds:eto
 SFX r0 ar ería/F0 ar	is:singular+femenine
-SFX r0 ar erïeta/F0 ar	is:singular+femenine
+SFX r0 ar erïeta/F0 ar	is:singular+femenine ds:eto
 SFX r0 èr aría/F0 èr	is:singular+femenine
 SFX r0 èr ería/F0 èr	is:singular+femenine
-SFX r0 èr arïeta/F0 èr	is:singular+femenine
-SFX r0 èr erïeta/F0 èr	is:singular+femenine
+SFX r0 èr arïeta/F0 èr	is:singular+femenine ds:eto
+SFX r0 èr erïeta/F0 èr	is:singular+femenine ds:eto
 SFX r0 0 ría/F0 [^ílƚ]a	is:singular+femenine
-SFX r0 0 rïeta/F0 [^ílƚ]a	is:singular+femenine
+SFX r0 0 rïeta/F0 [^ílƚ]a	is:singular+femenine ds:eto
 SFX r0 a ería/F0 [^ílƚ]a	is:singular+femenine
-SFX r0 a erïeta/F0 [^ílƚ]a	is:singular+femenine
+SFX r0 a erïeta/F0 [^ílƚ]a	is:singular+femenine ds:eto
 SFX r0 o aría/F0 [^cdkít]o	is:singular+femenine
 SFX r0 o ería/F0 [^cdkít]o	is:singular+femenine
-SFX r0 o arïeta/F0 [^cdkít]o	is:singular+femenine
-SFX r0 o erïeta/F0 [^cdkít]o	is:singular+femenine
+SFX r0 o arïeta/F0 [^cdkít]o	is:singular+femenine ds:eto
+SFX r0 o erïeta/F0 [^cdkít]o	is:singular+femenine ds:eto
 SFX r0 èla elaría/F0 èla	is:singular+femenine
 SFX r0 èla elería/F0 èla	is:singular+femenine
-SFX r0 èla elarïeta/F0 èla	is:singular+femenine
-SFX r0 èla elerïeta/F0 èla	is:singular+femenine
+SFX r0 èla elarïeta/F0 èla	is:singular+femenine ds:eto
+SFX r0 èla elerïeta/F0 èla	is:singular+femenine ds:eto
 SFX r0 èƚa eƚaría/F0 èƚa	is:singular+femenine
 SFX r0 èƚa eƚería/F0 èƚa	is:singular+femenine
-SFX r0 èƚa eƚarïeta/F0 èƚa	is:singular+femenine
-SFX r0 èƚa eƚerïeta/F0 èƚa	is:singular+femenine
+SFX r0 èƚa eƚarïeta/F0 èƚa	is:singular+femenine ds:eto
+SFX r0 èƚa eƚerïeta/F0 èƚa	is:singular+femenine ds:eto
 SFX r0 òco ocaría/F0 òco	is:singular+femenine
 SFX r0 òco ocería/F0 òco	is:singular+femenine
-SFX r0 òco ocarïeta/F0 òco	is:singular+femenine
-SFX r0 òco ocerïeta/F0 òco	is:singular+femenine
+SFX r0 òco ocarïeta/F0 òco	is:singular+femenine ds:eto
+SFX r0 òco ocerïeta/F0 òco	is:singular+femenine ds:eto
 SFX r0 òdo odaría/F0 òdo	is:singular+femenine
 SFX r0 òdo odería/F0 òdo	is:singular+femenine
-SFX r0 òdo odarïeta/F0 òdo	is:singular+femenine
-SFX r0 òdo oderïeta/F0 òdo	is:singular+femenine
+SFX r0 òdo odarïeta/F0 òdo	is:singular+femenine ds:eto
+SFX r0 òdo oderïeta/F0 òdo	is:singular+femenine ds:eto
 SFX r0 òko okaría/F0 òko	is:singular+femenine
 SFX r0 òko okería/F0 òko	is:singular+femenine
-SFX r0 òko okarïeta/F0 òko	is:singular+femenine
-SFX r0 òko okerïeta/F0 òko	is:singular+femenine
+SFX r0 òko okarïeta/F0 òko	is:singular+femenine ds:eto
+SFX r0 òko okerïeta/F0 òko	is:singular+femenine ds:eto
 SFX r0 òto otaría/F0 òto	is:singular+femenine
 SFX r0 òto otería/F0 òto	is:singular+femenine
-SFX r0 òto otarïeta/F0 òto	is:singular+femenine
-SFX r0 òto oterïeta/F0 òto	is:singular+femenine
+SFX r0 òto otarïeta/F0 òto	is:singular+femenine ds:eto
+SFX r0 òto oterïeta/F0 òto	is:singular+femenine ds:eto
 SFX r0 o aría/F0 [^ò][dkt]o	is:singular+femenine
 SFX r0 o ería/F0 [^ò][dkt]o	is:singular+femenine
-SFX r0 o arïeta/F0 [^ò][dkt]o	is:singular+femenine
-SFX r0 o erïeta/F0 [^ò][dkt]o	is:singular+femenine
+SFX r0 o arïeta/F0 [^ò][dkt]o	is:singular+femenine ds:eto
+SFX r0 o erïeta/F0 [^ò][dkt]o	is:singular+femenine ds:eto
 SFX r0 ío iaría/F0 ío	is:singular+femenine
 SFX r0 ío iería/F0 ío	is:singular+femenine
-SFX r0 ío iarïeta/F0 ío	is:singular+femenine
-SFX r0 ío ierïeta/F0 ío	is:singular+femenine
-SFX r0 ía ieta/F0 ería	is:singular+femenine
+SFX r0 ío iarïeta/F0 ío	is:singular+femenine ds:eto
+SFX r0 ío ierïeta/F0 ío	is:singular+femenine ds:eto
+SFX r0 ía ieta/F0 ería	is:singular+femenine ds:eto
 SFX r0 ería aría/F0 ería	is:singular+femenine
-SFX r0 ería arïeta/F0 ería	is:singular+femenine
+SFX r0 ería arïeta/F0 ería	is:singular+femenine ds:eto
 
 # nominali denominali (-ista)
 SFX i0 Y 18
