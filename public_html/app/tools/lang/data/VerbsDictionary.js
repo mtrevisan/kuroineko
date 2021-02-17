@@ -4329,6 +4329,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "menü",			"x",			4,	4,	"a",	"1855",			"(belumat)",
 "menuŧ",			"",			1,	3,	"a",	"",				"",
 "menuŧ",			"x",			1,	3,	"a",	"1775",			"",
+"menuŧol",		"",			1,	3,	"a",	"XVII",			"(pavan) Demenuir, kolorir.",
 "menxon",		"",			1,	4,	"a",	"1560",			"Nomenar.",
 "meol",			"x",			1,	1,	"a",	"1854",			"Xmegolar.",
 "meravej",		"",			1,	5,	"a",	"",				"",

@@ -12373,6 +12373,12 @@ menúŧomi/t8n8tAlAI1*0	po:verb ds:indicative+present is:first+singular ds:inter
 menusar/t0l070n0t1P0PlP7Q0QlQ7*0	po:verb ds:infinitive+simple
 menuso/t8n8tAlA7AJ1FS*0	po:verb ds:indicative+present is:first+singular st:menusar
 menúsomi/t8n8tAlA7AI1*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:menusar
+menuŧolar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
+menúŧolo/T8N8tBlBJ1I1FS	po:verb ds:indicative+present is:first+singular st:menuŧolar
+menusolar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+menúsolo/T8N8tBlBJ1I1FS	po:verb ds:indicative+present is:first+singular st:menusolar
+menusoƚar/t070t1P0P7Q0Q7	po:verb ds:infinitive+simple
+menúsoƚo/T8tB7BJ1I1	po:verb ds:indicative+present is:first+singular st:menusoƚar
 menxonar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 menxono/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:menxonar
 menxónomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:menxonar
@@ -29375,9 +29381,9 @@ grafèma/M0	po:noun is:singular+masculine
 grafo/M0	po:noun is:singular+masculine
 grama/F0eT	po:adjective_qualificative is:singular+femenine
 gramadegal/X0B1Vf	po:adjective_qualificative is:singular
-gramaso/M0FSoT	po:adjective_qualificative is:singular+masculine
-gramaŧa/F0V3	po:adjective_qualificative is:singular+femenine
-gramaŧo/M0FSoT	po:adjective_qualificative is:singular+masculine
+gramaso/M0FSoT	po:adjective_qualificative is:singular+masculine st:gramo ds:aŧo
+gramaŧa/F0V3	po:adjective_qualificative is:singular+femenine st:grama ds:aŧo
+gramaŧo/M0FSoT	po:adjective_qualificative is:singular+masculine st:gramo ds:aŧo
 gramàdega/F0	po:noun is:singular+femenine
 grameña/F0eTo0o4	po:noun is:singular+femenine
 gramo/M0FSeT	po:adjective_qualificative is:singular+masculine
@@ -42275,8 +42281,8 @@ tornèr/M0v0	po:noun is:singular+masculine
 tornèra/F0v0	po:noun is:singular+femenine
 toron/MFB1Pd	po:noun is:singular+masculine
 torsatòrio/M0	po:noun is:singular+masculine
-tortolato/M0FS	po:noun is:singular+masculine
-tortoƚato/M0	po:noun is:singular+masculine
+tortolato/M0FS	po:noun is:singular+masculine st:tórtora ds:ato
+tortoƚato/M0	po:noun is:singular+masculine st:tórtora ds:ato
 torŧatòrio/M0	po:noun is:singular+masculine
 trabante/X0	po:noun is:singular
 trabuto/M0FS	po:noun is:singular+masculine
@@ -42389,7 +42395,7 @@ veraxiamente/FSw0	po:adverb
 veraxio/A1	po:adjective is:singular+masculine
 verenoxamente/FSw0	po:adverb
 verenoxo/A1FSPd	po:adjective_qualificative is:singular+masculine
-vereton/MFB1Pd	po:noun is:singular+masculine
+vereton/MFB1Pd	po:noun is:singular+masculine st:vereta ds:on
 verèr/M0v0	po:noun is:singular+masculine
 verèra/F0v0	po:noun is:singular+femenine
 verga/F0o0o4	po:noun is:singular+femenine
@@ -52799,7 +52805,7 @@ verđarava/F0	po:noun is:singular+femenine al:verđerave
 verđe–rave/FS	po:noun is:plural+femenine st:verđa–rava pa:verđa pa:rava
 verđelata/F0iN	po:noun is:singular+femenine
 verđerava/F0	po:noun is:plural+femenine st:verđarava
-veretina/F0	po:noun is:singular+femenine
+vereta/F0iN	po:noun is:singular+femenine
 verigoleta/F0V3	po:noun is:singular+femenine
 veríngola/F0V3	po:noun is:singular+femenine
 verlika/F0	po:noun is:singular+femenine
@@ -62612,8 +62618,19 @@ mèego/A1FS	po:adjective_qualificative is:singular+masculine st:mèdego
 repar/M0	po:noun is:singular+masculine
 roèso/A1FS	po:adjective_qualificative is:singular+masculine
 spiandor/MFPd	po:noun is:singular+masculine
+añora	po:adverb
+kontuñamente/FSw0	po:adverb
+krudeƚaso/A1	po:adjective_qualificative is:singular+masculine st:krudèl ds:aŧo
+krudelaso/A1FS	po:adjective_qualificative is:singular+masculine st:krudèl ds:aŧo
+krudelaŧo/A1FS	po:adjective_qualificative is:singular+masculine st:krudèl ds:aŧo
+krüeƚaso/A1	po:adjective_qualificative is:singular+masculine st:krüèl ds:aŧo
+krüelaso/A1FS	po:adjective_qualificative is:singular+masculine st:krüèl ds:aŧo
+krüelaŧo/A1FS	po:adjective_qualificative is:singular+masculine st:krüèl ds:aŧo
 
 
-/ 146
+/ 171
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ–‘
+av.:senpre,añora
+av.:kontinuamente,kontuñamente
+v.:xgañolir,xgañoƚir,xgangolir,xgangoƚir
