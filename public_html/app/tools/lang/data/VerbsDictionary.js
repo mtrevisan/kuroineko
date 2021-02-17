@@ -2685,7 +2685,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "inprover",		"r",			1,	4,	"g",	"1854",			"",
 "inprover",		"re",			1,	4,	"g",	"",				"",
 "inrit",			"",			1,	0,	"a",	"",				"(bixiak)",
-"ins",			"",			5,	0,	"a",	"1851",			"(pavan) Ensir (mi inso, noaltri insimo, ...).",
+"ins",			"",			5,	0,	"a",	"XVII",			"(pavan) Ensir (mi inso, noaltri insimo, ...).",
 "insul",			"",			1,	0,	"a",	"",				"let. Alacar. Pi uxà kome inbonir, raxirar, konvínŧer.",
 "integr",		"",			1,	0,	"a",	"",				"",
 "integr",		"re",			1,	0,	"a",	"",				"",
