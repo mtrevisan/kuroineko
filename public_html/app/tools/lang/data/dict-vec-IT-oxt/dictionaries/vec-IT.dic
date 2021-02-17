@@ -3334,9 +3334,15 @@ dioƚer/t070t1p474P0P7Q0Q7:0	po:verb ds:infinitive+simple
 diòƚo/T8tC7CJ1I1-1:0	po:verb ds:indicative+present is:first+singular st:dioƚer
 diponar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 dipòno/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:diponar
+dexdisiar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:des
+dexdisio/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:dexdisiar dp:des
+dexdísiomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:dexdisiar dp:des
 dixdisiar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:des
 dixdisio/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:dixdisiar dp:des
 dixdísiomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:dixdisiar dp:des
+xdisiar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:s
+xdisio/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:xdisiar dp:s
+xdísiomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:xdisiar dp:s
 dexditar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:des
 dexdito/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:dexditar
 dexdítomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:dexditar dp:des
@@ -40895,7 +40901,7 @@ bèrego/A1FS	po:adjective_qualificative is:singular+masculine
 biankor/MFPd	po:noun is:singular+masculine
 biastema/F0eT	po:noun is:singular+femenine
 bibia/F0o0o1o3o4	po:adjective is:singular+femenine
-bigolon/MFB1PdV4	po:noun is:singular+masculine
+bigolon/MFB1PdV4	po:noun is:singular+masculine st:bigòl ds:on
 biòto/A1FS	po:adjective_qualificative is:singular+masculine
 bistiame/M0FS	po:noun is:singular+masculine
 bistion/MFB1Pd	po:noun is:singular+masculine
@@ -43343,7 +43349,7 @@ sónkol/M0B2PdV3	po:noun is:singular+masculine
 sòsol/M0B2PdV3	po:noun is:singular+masculine
 spakamonti/FS	po:adjective_qualificative
 spakamunti	po:adjective_qualificative
-sparavièr/MF	po:noun is:singular+masculine
+sparavièr/M0	po:noun is:singular+masculine
 sparaxèr/M0v0	po:noun is:singular+masculine
 sparaxèra/F0v0	po:noun is:singular+femenine
 spasa–piere	po:noun pa:spasa pa:piera
@@ -47624,7 +47630,7 @@ gòmito/M0FS	po:noun is:singular+masculine
 gòtego/A1FS	po:adjective_qualificative is:singular+masculine
 gra/F0	po:noun is:singular+femenine
 gradada/F0y0y1	po:noun is:singular+femenine
-gradaso/A1FS	po:adjective_qualificative is:singular+masculine
+gradaso/A1FS*0	po:adjective_qualificative is:singular+masculine
 graisèr/M0	po:noun is:singular+masculine
 graiŧèr/M0	po:noun is:singular+masculine
 gramadegeto/A1FSPd	po:adjective_qualificative is:singular+masculine
@@ -57493,7 +57499,7 @@ spañola/F0eT	po:noun is:singular+femenine
 spañoƚa/F0e7	po:noun is:singular+femenine
 spañoƚo/M0Pde7	po:noun is:singular+masculine
 spaoleta/F0V3	po:noun is:singular+femenine
-sparaver/MF	po:noun is:singular+masculine
+sparaver/M0	po:noun is:singular+masculine
 sparaxèla/F0V3	po:noun is:singular+femenine
 spàola/F0V3	po:noun is:singular+femenine
 spianŧin/M0	po:noun is:singular+masculine
@@ -59493,7 +59499,7 @@ sókol/M0B2PdV3	po:noun is:singular+masculine
 sókola/F0V3	po:noun is:singular+femenine
 spakamontañe	po:adjective_qualificative
 spanda/F0	po:noun is:singular+femenine
-sparavier/MF	po:noun is:singular+masculine
+sparavier/M0	po:noun is:singular+masculine
 sparaxina/F0	po:noun is:singular+femenine
 sparixina/F0	po:noun is:singular+femenine
 spediŧion/F0B1PdV3	po:noun is:singular+femenine
@@ -60872,7 +60878,7 @@ mandolon/A2B1Pd	po:adjective_qualificative is:singular+masculine
 mandolona/F0V3 po:noun is:singular+femenine st:màndola ds:on
 mandoƚon/A2Pd	po:adjective_qualificative is:singular+masculine
 maneđèl/M0B1	po:noun is:singular+masculine
-maneta/F0	po:noun is:singular+femenine
+maneta/F0	po:noun is:singular+femenine st:man ds:eto
 manexèl/M0B1V3	po:noun is:singular+masculine
 manin/M0	po:noun is:singular+masculine
 manòbra/F0	po:noun is:singular+femenine
@@ -62596,6 +62602,7 @@ jotonsèla/F0V3Vp	po:adjective_qualificative is:singular+femenine st:joton ds:è
 jotonŧèl/A2B1Vp	po:adjective_qualificative is:singular+masculine st:joton ds:èl
 korsaleto/M0FSPdV3	po:noun is:singular+masculine
 lomè/Vp	po:adverb
+lonđi	po:adverb
 manđol/M0B1Pdv0	po:noun is:singular+masculine
 manxol/M0B1Pdv0	po:noun is:singular+masculine
 manxoƚo/M0Pdv7	po:noun is:singular+masculine
@@ -62607,5 +62614,6 @@ roèso/A1FS	po:adjective_qualificative is:singular+masculine
 spiandor/MFPd	po:noun is:singular+masculine
 
 
+/ 146
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ–‘
