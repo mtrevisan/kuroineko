@@ -4945,6 +4945,11 @@ feriso/n0T8N8tClC7CJ1I1FS@0-0:0+0.0	po:verb ds:indicative+present is:first+singu
 farir/t0l070n0t1P0PlP7Q0QlQ7@0-0:0+0.0	po:verb ds:infinitive+simple
 fariso/n0T8N8tClC7CJ1I1FS@0-0:0+0.0	po:verb ds:indicative+present is:first+singular st:farir
 fèrto/A1FS@0-0:0+0.0	po:verb ds:participle+passive+strong is:singular+masculine st:ferir
+onferir/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
+onferiso/n0T8N8tClC7CJ1I1FS	po:verb ds:indicative+present is:first+singular st:onferir dp:in
+onfarir/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
+onfariso/n0T8N8tClC7CJ1I1FS	po:verb ds:indicative+present is:first+singular st:onfarir dp:in
+onfèrto/A1FS	po:verb ds:participle+passive+strong is:singular+masculine st:onferir dp:in
 proferir/t0l070n0t1P0PlP7Q0QlQ7+0	po:verb ds:infinitive+simple dp:pro
 proferiso/n0T8N8tClC7CJ1I1FS+0	po:verb ds:indicative+present is:first+singular st:proferir dp:pro
 profarir/t0l070n0t1P0PlP7Q0QlQ7+0	po:verb ds:infinitive+simple dp:pro
@@ -16221,12 +16226,15 @@ spòrxo/T8N8tClC7CJ1I1+0	po:verb ds:indicative+present is:first+singular st:spò
 sporxerò/t0n0l070p4l474J1I1+0	po:verb ds:indicative+future is:first+singular st:spòrxer dp:s
 spòrto/A1FS+0	po:verb ds:participle+passive+strong is:singular+masculine st:spòrđer dp:s
 arposar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:re dp:ad
+arpòso/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:arposar dp:re dp:ad
 arposo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:arposar dp:re dp:ad
 arpósomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:arposar dp:re dp:ad
 reposar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:re
+repòso/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:reposar dp:re
 reposo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:reposar dp:re
 repósomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:reposar dp:re
 sposar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:s
+spòso/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:sposar dp:s
 sposo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:sposar dp:s
 spósomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:sposar dp:s
 poser/t0l070n0t1p4l474P0PlP7Q0QlQ7-1	po:verb ds:infinitive+simple
@@ -24993,8 +25001,10 @@ Karlòta/Z0	po:noun_proper is:singular+femenine st:Karla ds:òto
 Karpenéo/Z0	po:noun_proper is:singular+masculine
 Kasan/Z0	po:noun_proper is:singular+masculine
 Kasana/Z0	po:noun_proper is:singular+femenine
+Katarin/Z0	po:noun_proper is:singular+masculine
 Katarina/Z0	po:noun_proper is:singular+femenine
 Kate/FSZ0	po:noun_proper is:singular+femenine
+Katerin/Z0	po:noun_proper is:singular+femenine
 Katerina/Z0	po:noun_proper is:singular+femenine
 Katina/Z0	po:noun_proper is:singular+femenine
 Katineta/Z0	po:noun_proper is:singular+femenine
@@ -25342,6 +25352,8 @@ Nuŧiata/Z0	po:noun_proper is:singular+femenine
 Ñexe/FSZ0	po:noun_proper is:singular+femenine
 Ñexeta/Z0	po:noun_proper is:singular+femenine st:Ñexe ds:eto
 Ñèka/Z0	po:noun_proper is:singular+femenine
+Ñikolò/Z0	po:noun_proper is:singular+masculine
+Ñikoƚò/Z0	po:noun_proper is:singular+masculine
 Ñòña/Z0	po:noun_proper is:singular+femenine
 Ñòño/FSZ0	po:noun_proper is:singular+masculine
 Orseta/Z0	po:noun_proper is:singular+femenine
@@ -30689,9 +30701,9 @@ livalòndena/'0	po:adverb
 livaƚò/Vp	po:adverb
 livaƚòndena/Vp	po:adverb
 live/Vp	po:adverb
-livelò/'0	po:adverb
+livelò/'0	po:adverb pa:live pa:lado
 livelòga/'0	po:adverb
-liveƚò/Vp	po:adverb
+liveƚò/Vp	po:adverb pa:live pa:ƚado
 liveƚòga/Vp	po:adverb
 livèl/A1B1-1	po:noun is:singular+masculine
 livèƚo/A1-1	po:noun is:singular+masculine
@@ -34855,7 +34867,7 @@ sajo/M0B1eT	po:noun is:singular+masculine
 saɉo/M0eT	po:noun is:singular+masculine
 sako/M0FSaZaSo0o4	po:noun is:singular+masculine
 salsa/F0eT	po:adjective_qualificative is:singular+femenine
-sansa/F0	po:noun is:singular+femenine
+sansa/F0eT	po:noun is:singular+femenine
 saor/MFPdeT	po:noun is:singular+masculine
 saòn/MFB1	po:noun is:singular+masculine
 saraka/F0	po:noun is:singular+femenine
@@ -34957,7 +34969,7 @@ turluƚú	po:adjective_qualificative is:masculine
 ŧanbèla/F0oTVp	po:adjective_qualificative is:singular+femenine
 ŧanka/F0eTiNVp	po:adjective_qualificative is:singular+femenine
 ŧanko/M0FSeTiNo0o1o2o4Vp	po:adjective_qualificative is:singular+masculine
-ŧanŧa/F0	po:noun is:singular+femenine
+ŧanŧa/F0eT	po:noun is:singular+femenine
 ŧapada/F0y0y1Vp	po:adjective_qualificative is:singular+femenine
 ŧata/F0VpiN	po:noun is:singular+femenine
 ŧeja/F0eTo0o1o3o4	po:noun is:singular+femenine
@@ -41208,8 +41220,8 @@ kàƚido/A1	po:adjective_qualificative is:singular+masculine
 kànava/F0	po:noun is:singular+femenine
 kànbara/F0	po:noun is:singular+femenine
 kàvera/F0	po:noun is:singular+femenine
-kivalò/V3	po:adverb
-kivelò/V3	po:adverb
+kivalò/V3	po:adverb pa:kive pa:lado
+kivelò/V3	po:adverb pa:kive pa:lado
 koladur/M0d0eT	po:noun is:singular+masculine
 kològo/M0	po:noun is:singular+masculine
 koƚadur/M0d7e1	po:noun is:singular+masculine
@@ -60259,7 +60271,6 @@ dukanda/F0	po:noun is:singular+femenine
 đapoko/FSVp	po:adverb
 đaŧara/F0	po:noun is:singular+femenine
 đavòra/F0Vp	po:noun is:singular+femenine
-đekin/M0Vp	po:noun is:singular+masculine
 đelante/X0Vp	po:noun is:singular
 đeneroxitade/F0y0Vp	po:noun is:singular+femenine
 đenèver/M0PdVp	po:noun is:singular+masculine
@@ -62596,6 +62607,7 @@ saƚéxoƚa/F0	po:noun is:singular+femenine
 xguindia/F0	po:noun is:singular+femenine
 / Forzatè, Claudio (poeta e nobile padovano, noto con lo pseudonimo di Scareggio Tandarello). ca. 1550-1610.
 añora	po:adverb
+ardimento/M0FSPdVr	po:noun is:singular+masculine
 argòla/F0V3	po:noun is:singular+femenine
 batadur/M0d0eT	po:noun is:singular+masculine
 beto/M0FSPd	po:noun is:singular+masculine
@@ -62606,6 +62618,7 @@ gràmego/A1FS	po:adjective_qualificative is:singular+masculine
 jotonsèl/M0B1V3Vp	po:adjective_qualificative is:singular+masculine st:joton ds:èl
 jotonsèla/F0V3Vp	po:adjective_qualificative is:singular+femenine st:joton ds:èl
 jotonŧèl/A2B1Vp	po:adjective_qualificative is:singular+masculine st:joton ds:èl
+kapetaño/A1FS	po:noun is:singular+masculine
 kontuñamente/FSw0	po:adverb
 koraja/F0V3	po:noun is:singular+femenine
 korsaleto/M0FSPdV3	po:noun is:singular+masculine
@@ -62629,6 +62642,8 @@ meegeto/A1FSPd	po:adjective_qualificative is:singular+masculine st:mèego ds:eto
 meegòto/A1FS	po:noun is:singular+masculine st:mèego ds:òto
 mèego/A1FS	po:adjective_qualificative is:singular+masculine st:mèdego
 mondadur/M0d0eT	po:noun is:singular+masculine
+onorada/F0y0	po:noun is:singular+femenine
+onorado/M0FSy0	po:noun is:singular+masculine
 pertegèr/M0v0	po:noun is:singular+masculine
 pertegèra/F0v0	po:noun is:singular+femenine
 rapegara/F0	po:noun is:singular+femenine
@@ -62642,10 +62657,12 @@ trelería/F0r0	po:noun is:singular+femenine
 treƚería/F0r0	po:noun is:singular+femenine
 tresòla/F0V3	po:noun is:singular+femenine
 treŧòla/F0	po:noun is:singular+femenine
+viscaso/M0FSo0o4	po:noun is:singular+masculine st:visco ds:aŧo
+viscaŧo/M0FSo0o4	po:noun is:singular+masculine st:visco ds:aŧo
 xbraja/F0V3	po:noun is:singular+femenine
 xbrajo/M0B1V3	po:noun is:singular+masculine
 
 
-/ 238
+/ 246
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ–‘
