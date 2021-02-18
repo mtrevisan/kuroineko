@@ -1161,6 +1161,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "dedeg",			"",			1,	1,	"g",	"1433",			"",
 "dedik",			"",			1,	1,	"g",	"1433",			"",
 "defam",			"",			1,	3,	"g",	"1447",			"",
+"deg",			"",			1,	1,	"a",	"XVII",			"(pavan) Dover. (mi dego)",
 "deg",			"pro",		1,	-1,"g",	"",				"",
 "degor",			"",			1,	3, "g",	"1560",			"",
 "dekor",			"",			1,	3,	"g",	"",				"",
