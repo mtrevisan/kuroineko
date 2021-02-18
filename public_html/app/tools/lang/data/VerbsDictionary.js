@@ -3726,6 +3726,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kuŧ",			"in",			1,	1,	"a",	"1896",			"",
 "kus",			"s",			1,	1,	"a",	"",				"Provokar na eskoriaŧion.",
 "kuŧol",			"",			1,	1,	"a",	"1867",			"Kufolar.",
+"kuŧol",			"ar",			1,	1,	"a",	"XVII",			"(pavan) Akovaŧar.",
 "kuŧol",			"in",			1,	1,	"a",	"1775",			"Akovaŧar.",
 "kux",			"a",			1,	1,	"a",	"1415",			"",
 "kux",			"re",			1,	1,	"a",	"1414",			"",
