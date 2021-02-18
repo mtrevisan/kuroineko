@@ -3440,6 +3440,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kórđ",			"s",			3,	1,	"g",	"",				"",
 "kordel",		"in",			1,	4,	"g",	"1854",			"",
 "kordon",		"",			1,	4,	"a",	"1847",			"Kojonbarar.",
+"koreŧ",			"in",			1,	3,	"g",	"XVII",			"(pavan) Inrabiar.",
 "korèx",			"",			3,	3,	"g",	"1433",			"",
 "korkol",		"s",			1,	1,	"a",	"1896",			"Gorgojar.",
 "korg",			"",			1,	1,	"g",	"1810",			"Koregar.",
