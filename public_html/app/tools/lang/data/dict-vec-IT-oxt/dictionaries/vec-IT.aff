@@ -4767,7 +4767,7 @@ PFX Vp Đ X Đ
 ### Pàdoa ###
 
 # metafonèxi padoana
-SFX Pd Y 65
+SFX Pd Y 66
 SFX Pd el ili el	is:plural+masculine
 SFX Pd ol uli ol	is:plural+masculine
 SFX Pd en ini en	is:plural+masculine
@@ -4799,6 +4799,7 @@ SFX Pd ovo uvi ovo	is:plural+masculine
 SFX Pd exo ixi exo	is:plural+masculine
 SFX Pd oxo uxi oxo	is:plural+masculine
 SFX Pd orse ursi orse	is:plural+masculine
+SFX Pd ente nti iente	is:plural
 SFX Pd ente inti [^i]ente	is:plural
 SFX Pd ento inti ento	is:plural+masculine
 SFX Pd onte unti onte	is:plural+masculine
@@ -5288,27 +5289,27 @@ SFX y0 ida ía ida	is:singular+femenine
 SFX y0 ida íe ida	is:plural+femenine
 SFX y0 uda úa uda	is:singular+femenine
 SFX y0 uda úe uda	is:plural+femenine
-SFX y0 ade à ade	is:femenine
-SFX y0 ade è ade	is:femenine	# pavan
-SFX y0 ede é ede	is:femenine
-SFX y0 ude ú ude	is:femenine
-SFX y0 ado ò ado	is:masculine	# pavan
-SFX y0 ado à ado	is:masculine
+SFX y0 ade à ade	is:femenine+non_enumerable
+SFX y0 ade è ade	is:femenine+non_enumerable	# pavan
+SFX y0 ede é ede	is:femenine+non_enumerable
+SFX y0 ude ú ude	is:femenine+non_enumerable
+SFX y0 ado ò ado	is:masculine+non_enumerable	# pavan
+SFX y0 ado à ado	is:masculine+non_enumerable
 SFX y0 ado ào ado	is:singular+masculine
 SFX y0 ado ài ado	is:plural+masculine
-SFX y0 ado è ado	is:masculine
+SFX y0 ado è ado	is:masculine+non_enumerable
 SFX y0 ado èo ado	is:singular+masculine
 SFX y0 ado èi ado	is:plural+masculine
-SFX y0 edo é edo	is:masculine
+SFX y0 edo é edo	is:masculine+non_enumerable
 SFX y0 edo éo edo	is:singular+masculine
 SFX y0 edo éi edo	is:plural+masculine
-SFX y0 ido í ido	is:masculine
+SFX y0 ido í ido	is:masculine+non_enumerable
 SFX y0 ido ío ido	is:singular+masculine
 SFX y0 ido íi ido	is:plural+masculine
-SFX y0 do 0 òdo	is:masculine
+SFX y0 do 0 òdo	is:masculine+non_enumerable
 SFX y0 do o òdo	is:singular+masculine
 SFX y0 do i òdo	is:plural+masculine
-SFX y0 udo ú udo	is:masculine
+SFX y0 udo ú udo	is:masculine+non_enumerable
 SFX y0 udo úo udo	is:singular+masculine
 SFX y0 udo úi udo	is:plural+masculine
 
