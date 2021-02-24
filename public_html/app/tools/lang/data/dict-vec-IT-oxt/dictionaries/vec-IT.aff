@@ -278,11 +278,11 @@ COMPOUNDMIN 1
 # N6 = mile
 # |1 = [un..sinkue..nòve]
 # |2 = [do..sinkue..nòve]
-# |3 = [un..sinkue..nòve] + [dièxe..dixnòve] + [vinti..sinkuanta..novanta]
+# |3 = [dièxe..dixnòve] + [vinti..sinkuanta..novanta]
 # |4 = [vinti..sinkuanta..novanta]
 # |5 = sento
 # |6 = mi[lƚ]e
-COMPOUNDRULE 78
+COMPOUNDRULE 80
 COMPOUNDRULE (N4)(--)(N1)	# [vinti..ŧinkuanta..novanta]–[un..ŧinkue..nòve]
 COMPOUNDRULE (N5)(--)(N1)	# ŧento–[un..ŧinkue..nòve]
 COMPOUNDRULE (N5)(--)(N3)	# ŧento–[dièxe..dixnòve+vinti..ŧinkuanta..novanta]
@@ -322,6 +322,7 @@ COMPOUNDRULE (N4)(--)(N1)(--)(N6)(--)(N4)(--)(N1)	# [vinti..ŧinkuanta..novanta]
 COMPOUNDRULE (N4)(--)(N1)(--)(N6)(--)(N2)(--)(N5)(--)(N1)	# [vinti..ŧinkuanta..novanta]–[un..ŧinkue..nòve]–mile–[do..ŧinkue..nòve]–ŧento–[un..ŧinkue..nòve]
 COMPOUNDRULE (N4)(--)(N1)(--)(N6)(--)(N2)(--)(N5)(--)(N3)	# [vinti..ŧinkuanta..novanta]–[un..ŧinkue..nòve]–mile–[do..ŧinkue..nòve]–ŧento–[dièxe..dixnòve+vinti..ŧinkuanta..novanta]
 COMPOUNDRULE (N4)(--)(N1)(--)(N6)(--)(N2)(--)(N5)(--)(N4)(--)(N1)	# [vinti..ŧinkuanta..novanta]–[un..ŧinkue..nòve]–mile–[do..ŧinkue..nòve]–ŧento–[vinti..ŧinkuanta..novanta]–[un..ŧinkue..nòve]
+COMPOUNDRULE (N5)(--)(N6)	# ŧento-mile
 COMPOUNDRULE (|4)(--)(|1)	# [vinti..sinkuanta..novanta]–[un..sinkue..nòve]
 COMPOUNDRULE (|5)(--)(|1)	# sento–[un..sinkue..nòve]
 COMPOUNDRULE (|5)(--)(|3)	# sento–[dièxe..dixnòve+vinti..sinkuanta..novanta]
@@ -361,6 +362,7 @@ COMPOUNDRULE (|4)(--)(|1)(--)(|6)(--)(|4)(--)(|1)	# [vinti..sinkuanta..novanta]�
 COMPOUNDRULE (|4)(--)(|1)(--)(|6)(--)(|2)(--)(|5)(--)(|1)	# [vinti..sinkuanta..novanta]–[un..sinkue..nòve]–mi[lƚ]e–[do..sinkue..nòve]–sento–[un..sinkue..nòve]
 COMPOUNDRULE (|4)(--)(|1)(--)(|6)(--)(|2)(--)(|5)(--)(|3)	# [vinti..sinkuanta..novanta]–[un..sinkue..nòve]–mi[lƚ]e–[do..sinkue..nòve]–sento–[dièxe..dixnòve+vinti..sinkuanta..novanta]
 COMPOUNDRULE (|4)(--)(|1)(--)(|6)(--)(|2)(--)(|5)(--)(|4)(--)(|1)	# [vinti..sinkuanta..novanta]–[un..sinkue..nòve]–mi[lƚ]e–[do..sinkue..nòve]–sento–[vinti..sinkuanta..novanta]–[un..sinkue..nòve]
+COMPOUNDRULE (|5)(--)(|6)	# sento-mi[lƚ]e
 
 # ---
 
