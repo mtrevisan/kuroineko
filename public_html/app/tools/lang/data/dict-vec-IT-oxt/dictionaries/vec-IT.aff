@@ -31,6 +31,9 @@ LANG vec-IT
 
 TRY eaoinrtlƚsdkpvmuèxgfàòbíhéŧójɉñcúSđLȽIPETKVAMDNFBRJGCOUĐXÀÈŦHɈÒÑÍÉÓÚ‘ïÏüÜ-‒–
 
+# the complete alphabet is: aàbcdđeéèfgiïíjɉklƚmnñoóòprstŧuüúvx
+
+
 KEY esdr|redft|trfg|uhji|iujko|oiklp|polòè|èpòà|as|saedx|dserfcx|fdrtgvc|gfthbv|hgujnb|jhuikmn|kjiolm|lkopò|òlpèà-|àòèù-|ùà|xsdc|cxdfv|vcfgb|bvghn|nbhjm|mnjk|ìèòà
 
 WORDCHARS -‘ʼ'
@@ -1382,8 +1385,9 @@ SFX 71 er ar/P7R7N0 er	ds:infinitive+simple	# T1
 # tèma 1
 # '-er: skomenŧiando da 'l infenío
 # [drstx][ei]r > [drstx]r[ei]
-SFX n1 Y 16
+SFX n1 Y 17
 SFX n1 ànder andre ànder	ds:infinitive+simple
+SFX n1 éter etre éter	ds:infinitive+simple
 SFX n1 énder endre énder	ds:infinitive+simple
 SFX n1 ónder ondre ónder	ds:infinitive+simple
 SFX n1 ónxer onxre ónxer	ds:infinitive+simple
@@ -4350,72 +4354,27 @@ SFX D7 geƚo veƚe geƚo	ds:pronomenal+reflexive
 
 
 # sonoriđaŧion finali
-SFX FS Y 66
-SFX FS bo p bo
-SFX FS be p be
-SFX FS bo b bo
-SFX FS be b be
-SFX FS co c co
-SFX FS ce c ce
-SFX FS do t do
+SFX FS Y 21
+SFX FS e 0 [^aàeéèiïíoóòuüú]e
 SFX FS de t de
-SFX FS do d do
-SFX FS de d de
-SFX FS fo f fo
-SFX FS fo ŧ fo
-SFX FS fe f fe
-SFX FS go k go
-SFX FS ge k ge
-SFX FS go g go
-SFX FS ge g ge
-SFX FS ko k ko
-SFX FS ke k ke
-SFX FS lo l lo
-SFX FS le l le
-SFX FS mo n mo
-SFX FS me n me
-SFX FS mo m mo
-SFX FS me m me
-SFX FS no n no
-SFX FS ne n ne
-SFX FS po p po
-SFX FS pe p pe
-SFX FS ro r [^bdft]ro
-SFX FS re r [^bdt]re
-SFX FS so s so
-SFX FS se s se
-SFX FS to t to
-SFX FS te t te
-SFX FS vo f vo
-SFX FS ve f ve
-SFX FS vo v vo
-SFX FS ve v ve
-SFX FS xo s xo
-SFX FS xe s xe
-SFX FS xo x xo
-SFX FS xe x xe
-SFX FS o 0 [^i]ño
-SFX FS e 0 [^i]ñe
-SFX FS ño in [^i]ño
-SFX FS ñe in [^i]ñe
-SFX FS ño n iño
-SFX FS ñe n iñe
-SFX FS ño nk ño
-SFX FS ñe nk ñe
-SFX FS đo ŧ đo
 SFX FS đe ŧ đe
-SFX FS đo đ đo
-SFX FS đe đ đe
-SFX FS đo d đo
-SFX FS đe d đe
-SFX FS ŧo ŧ ŧo
-SFX FS ŧe ŧ ŧe
-SFX FS ɉo c ɉo
-SFX FS ɉe c ɉe
-SFX FS ɉo ɉ ɉo
-SFX FS ɉe ɉ ɉe
-SFX FS jo j jo
-SFX FS je j je
+SFX FS me n me
+SFX FS ve f ve
+SFX FS xe s xe
+SFX FS o 0 [^aàeéèiïíoóòuüú]o	is:masculine
+SFX FS bo p bo	is:masculine
+SFX FS đo ŧ đo	is:masculine
+SFX FS fo ŧ fo	is:masculine
+SFX FS ɉo c ɉo	is:masculine
+SFX FS do t do	is:masculine
+SFX FS go k go	is:masculine
+SFX FS mo n mo	is:masculine
+SFX FS vo f vo	is:masculine
+SFX FS xo s xo	is:masculine
+SFX FS o 0 [^i]ño	is:masculine
+SFX FS ño in [^i]ño	is:masculine
+SFX FS ño n iño	is:masculine
+SFX FS ño nk ño	is:masculine
 SFX FS i 0 i
 
 
@@ -4788,7 +4747,7 @@ SFX V3 là ƚà [aeiouàèéíòóú]là
 SFX V3 ŧe se/M0 ŧe
 SFX V3 lé ƚé [aeiouàèéíòóú]lé
 SFX V3 lè ƚè [aeiouàèéíòóú]lè
-SFX V3 jo ɉo/M0 jo
+SFX V3 jo ɉo/M0FS jo
 SFX V3 ló ƚó [aeiouàèéíòóú]ló
 SFX V3 lò ƚò [aeiouàèéíòóú]lò
 SFX V3 l ƚo/M0Pd [eo]l

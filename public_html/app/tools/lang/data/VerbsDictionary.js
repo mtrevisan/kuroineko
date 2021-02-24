@@ -2475,6 +2475,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "grapej",		"in",			1,	4,	"a",	"1775",			"Inlapolar.",
 "grapeɉ",		"in",			1,	4,	"a",	"1854",			"Inlapolar.",
 "grapi",			"dex",		1,	2,	"g",	"1829",			"Deskarpiar.",
+"grapin",		"",			1,	4,	"a",	"",				"(feltrin) Kavar un fià de tèra da vithin de le piantine cumulandola in mèdho a la gonbina.",
 "gras",			"dex",		1,	2,	"g",	"1775",			"",
 "gras",			"in",			1,	2,	"g",	"1775",			"",
 "grat",			"",			1,	2,	"g",	"1311",			"",
