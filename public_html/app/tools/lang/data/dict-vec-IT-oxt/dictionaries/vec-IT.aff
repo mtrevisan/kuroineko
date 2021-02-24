@@ -270,18 +270,12 @@ CHECKCOMPOUNDCASE
 COMPOUNDMIN 1
 
 # numerali konpòsti:
-# N1 = [un..ŧinkue..nòve]
-# N2 = [do..ŧinkue..nòve]
-# N3 = [dièxe..dixnòve] + [vinti..ŧinkuanta..novanta]
-# N4 = [vinti..ŧinkuanta..novanta]
-# N5 = ŧento
-# N6 = mile
-# |1 = [un..sinkue..nòve]
-# |2 = [do..sinkue..nòve]
-# |3 = [dièxe..dixnòve] + [vinti..sinkuanta..novanta]
-# |4 = [vinti..sinkuanta..novanta]
-# |5 = sento
-# |6 = mi[lƚ]e
+# N1/|1 = [un..ŧinkue..nòve] / [un..sinkue..nòve]
+# N2/|2 = [do..ŧinkue..nòve] / [do..sinkue..nòve]
+# N3/|3 = [dièxe..dixnòve] + [vinti..ŧinkuanta..novanta] / [dièxe..dixnòve] + [vinti..sinkuanta..novanta]
+# N4/|4 = [vinti..ŧinkuanta..novanta] / [vinti..sinkuanta..novanta]
+# N5/|5 = ŧento / sento
+# N6/|6 = mile / mi[lƚ]e
 COMPOUNDRULE 80
 COMPOUNDRULE (N4)(--)(N1)	# [vinti..ŧinkuanta..novanta]–[un..ŧinkue..nòve]
 COMPOUNDRULE (N5)(--)(N1)	# ŧento–[un..ŧinkue..nòve]
