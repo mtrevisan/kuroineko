@@ -29,7 +29,7 @@ HOME http://parnodexmentegar.orgfree.com/
 LANG vec-IT
 
 
-TRY eaoinrtlƚsdkpvmuèxgfàòbíhéŧójɉñcúSđLȽIPETKVAMDNFBRJGCOUĐXÀÈŦHɈÒÑÍÉÓÚ’ïÏüÜ-‒–
+TRY eaoinrtlƚsdkpvmuèxgfàòbíhéŧójɉñcúSđLȽIPETKVAMDNFBRJGCOUĐXÀÈŦHɈÒÑÍÉÓÚʼïÏüÜ-‒–
 
 # the complete alphabet is: aàbcdđeéèfgiïíjɉklƚmnñoóòprstŧuüúvx
 
@@ -61,7 +61,7 @@ MAP OÒÓ
 MAP UÜÚ
 
 # replace input characters
-ICONV 20
+ICONV 21
 ICONV dh đ
 ICONV Dh Đ
 ICONV DH Đ
@@ -80,8 +80,9 @@ ICONV NH Ñ
 ICONV th ŧ
 ICONV Th Ŧ
 ICONV TH Ŧ
-ICONV ' ’
-ICONV ‘ ’
+ICONV ' ʼ
+ICONV ’ ʼ
+ICONV ‘ ʼ
 
 # frequently switched character groups
 REP 167
@@ -111,7 +112,7 @@ REP ú ü
 REP d đ
 REP s x
 REP x s
-REP ’ ’_
+REP ʼ ʼ_
 REP - ‒
 REP - –
 REP – ‒
@@ -140,20 +141,20 @@ REP xt st
 REP xŧ sŧ
 REP sv xv
 REP sx xx
-REP ^tel ’te_’l
-REP ^ten ’te_’n
-REP ^’tel ’te_’l
-REP ^’ten ’te_’n
+REP ^tel ʼte_ʼl
+REP ^ten ʼte_ʼn
+REP ^ʼtel ʼte_ʼl
+REP ^ʼten ʼte_ʼn
 REP ^an_te ante
-REP ^an_tel ante_’l
-REP ^an_ten ante_’n
-REP ^antel ante_’l
-REP ^anten ante_’n
+REP ^an_tel ante_ʼl
+REP ^an_ten ante_ʼn
+REP ^antel ante_ʼl
+REP ^anten ante_ʼn
 REP ^in_te inte
-REP ^in_tel inte_’l
-REP ^in_ten inte_’n
-REP ^intel inte_’l
-REP ^inten inte_’n
+REP ^in_tel inte_ʼl
+REP ^in_ten inte_ʼn
+REP ^intel inte_ʼl
+REP ^inten inte_ʼn
 REP ^di de
 REP ^ri re
 REP iko$ ego
@@ -164,14 +165,14 @@ REP itor$ idor
 REP ator$ ador
 REP etor$ edor
 REP utor$ udor
-REP ^kio$ ki_’ƚo
-REP ^kii$ ki_’ƚi
-REP ^kia$ ki_’ƚa
-REP ^kie$ ki_’ƚe
-REP ^kïo$ ki_’ƚo
-REP ^kïi$ ki_’ƚi
-REP ^kïa$ ki_’ƚa
-REP ^kïe$ ki_’ƚe
+REP ^kio$ ki_ʼƚo
+REP ^kii$ ki_ʼƚi
+REP ^kia$ ki_ʼƚa
+REP ^kie$ ki_ʼƚe
+REP ^kïo$ ki_ʼƚo
+REP ^kïi$ ki_ʼƚi
+REP ^kïa$ ki_ʼƚa
+REP ^kïe$ ki_ʼƚe
 REP ae aƚe
 REP àe àƚe
 REP ee eƚe
@@ -1787,306 +1788,306 @@ SFX xA andar vege andar	ds:subjunctive+present is:second+plural	# T12 + é([dg]e
 
 # vèrbi -ér inregolari: (re)av?er, (re)g(av)er, ‘(v)er
 SFX xB Y 418
-SFX xB r va/J1 [a’]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
-SFX xB er éa/J1I1 [a’]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
-SFX xB ver éa/J1I1 [a’]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
-SFX xB er ía/J1I1 [a’]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
-SFX xB r vo/J1 [a’]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)o
-SFX xB er éo/J1I1 [a’]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)o
-SFX xB er évimo/J2I2 [a’]ver	ds:indicative+imperfect is:first+plural	# T2 + (v)imo
-SFX xB er éimo/J2I2 [a’]ver	ds:indicative+imperfect is:first+plural	# T2 + (v)imo
-SFX xB r vi/J3 [a’]ver	ds:indicative+imperfect is:second+singular	# T2 + (v)i
-SFX xB er éi/J3I3 [a’]ver	ds:indicative+imperfect is:second+singular	# T2 + (v)i
-SFX xB r vi/J4 [a’]ver	ds:indicative+imperfect is:second+plural	# T2 + (v)i
-SFX xB er éi/J4I4 [a’]ver	ds:indicative+imperfect is:second+plural	# T2 + (v)i
-SFX xB r va [a’]ver	ds:indicative+imperfect is:third	# T2 + (v)a
-SFX xB er éa [a’]ver	ds:indicative+imperfect is:third	# T2 + (v)a
-SFX xB er ía [a’]ver	ds:indicative+imperfect is:third	# T2 + (v)a
-SFX xB r se/FS [a’]ver	ds:subjunctive+imperfect is:first+singular	# T2 + se
-SFX xB er ésimo [a’]ver	ds:subjunctive+imperfect is:first+plural	# T2 + simo
-SFX xB r si [a’]ver	ds:subjunctive+imperfect is:first+singular	# T2 + si
-SFX xB r si [a’]ver	ds:subjunctive+imperfect is:second+singular	# T2 + si
-SFX xB r si [a’]ver	ds:subjunctive+imperfect is:second+plural	# T2 + si
-SFX xB r si [a’]ver	ds:subjunctive+imperfect is:third	# T2 + si
-SFX xB r se/FS [a’]ver	ds:subjunctive+imperfect is:third	# T2 + se
-SFX xB ver ese/FS [a’]ver	ds:subjunctive+imperfect is:first+singular	# T2 + se
-SFX xB ver ésimo [a’]ver	ds:subjunctive+imperfect is:first+plural	# T2 + simo
-SFX xB ver esi [a’]ver	ds:subjunctive+imperfect is:first+singular	# T2 + si
-SFX xB ver esi [a’]ver	ds:subjunctive+imperfect is:second+singular	# T2 + si
-SFX xB ver esi [a’]ver	ds:subjunctive+imperfect is:second+plural	# T2 + si
-SFX xB ver esi [a’]ver	ds:subjunctive+imperfect is:third	# T2 + si
-SFX xB ver ese/FS [a’]ver	ds:subjunctive+imperfect is:third	# T2 + se
-SFX xB r sto/A1FS [a’]ver	ds:participle+passive+weak is:singular+masculine	# T2 + st[oiae]
+SFX xB r va/J1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
+SFX xB er éa/J1I1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
+SFX xB ver éa/J1I1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
+SFX xB er ía/J1I1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
+SFX xB r vo/J1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)o
+SFX xB er éo/J1I1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)o
+SFX xB er évimo/J2I2 [aʼ]ver	ds:indicative+imperfect is:first+plural	# T2 + (v)imo
+SFX xB er éimo/J2I2 [aʼ]ver	ds:indicative+imperfect is:first+plural	# T2 + (v)imo
+SFX xB r vi/J3 [aʼ]ver	ds:indicative+imperfect is:second+singular	# T2 + (v)i
+SFX xB er éi/J3I3 [aʼ]ver	ds:indicative+imperfect is:second+singular	# T2 + (v)i
+SFX xB r vi/J4 [aʼ]ver	ds:indicative+imperfect is:second+plural	# T2 + (v)i
+SFX xB er éi/J4I4 [aʼ]ver	ds:indicative+imperfect is:second+plural	# T2 + (v)i
+SFX xB r va [aʼ]ver	ds:indicative+imperfect is:third	# T2 + (v)a
+SFX xB er éa [aʼ]ver	ds:indicative+imperfect is:third	# T2 + (v)a
+SFX xB er ía [aʼ]ver	ds:indicative+imperfect is:third	# T2 + (v)a
+SFX xB r se/FS [aʼ]ver	ds:subjunctive+imperfect is:first+singular	# T2 + se
+SFX xB er ésimo [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T2 + simo
+SFX xB r si [aʼ]ver	ds:subjunctive+imperfect is:first+singular	# T2 + si
+SFX xB r si [aʼ]ver	ds:subjunctive+imperfect is:second+singular	# T2 + si
+SFX xB r si [aʼ]ver	ds:subjunctive+imperfect is:second+plural	# T2 + si
+SFX xB r si [aʼ]ver	ds:subjunctive+imperfect is:third	# T2 + si
+SFX xB r se/FS [aʼ]ver	ds:subjunctive+imperfect is:third	# T2 + se
+SFX xB ver ese/FS [aʼ]ver	ds:subjunctive+imperfect is:first+singular	# T2 + se
+SFX xB ver ésimo [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T2 + simo
+SFX xB ver esi [aʼ]ver	ds:subjunctive+imperfect is:first+singular	# T2 + si
+SFX xB ver esi [aʼ]ver	ds:subjunctive+imperfect is:second+singular	# T2 + si
+SFX xB ver esi [aʼ]ver	ds:subjunctive+imperfect is:second+plural	# T2 + si
+SFX xB ver esi [aʼ]ver	ds:subjunctive+imperfect is:third	# T2 + si
+SFX xB ver ese/FS [aʼ]ver	ds:subjunctive+imperfect is:third	# T2 + se
+SFX xB r sto/A1FS [aʼ]ver	ds:participle+passive+weak is:singular+masculine	# T2 + st[oiae]
 SFX xB ver esto/A1FS aver	ds:participle+passive+weak is:singular+masculine	# T2 + st[oiae]
-SFX xB r ndo/P0 [a’]ver	ds:gerund+simple	# T2 + ndo = T7 + ndo
+SFX xB r ndo/P0 [aʼ]ver	ds:gerund+simple	# T2 + ndo = T7 + ndo
 SFX xB ver endo/P0 aver	ds:gerund+simple	# T2 + ndo = T7 + ndo
-SFX xB ver endo/P0 ’ver	ds:gerund+simple	# T2 + ndo = T7 + ndo
-SFX xB r nto/P0FS [a’]ver	ds:gerund+simple	# T2 + nto = T7 + nto
-SFX xB er ènto/P0FS [a’]ver	ds:gerund+simple	# T2 + nto
-SFX xB er èntoge/Q0 [a’]ver	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto
-SFX xB ver biando/P0FS [a’]ver	ds:gerund+simple	# T2 + ndo = T7 + ndo
-SFX xB ver biàndoge/Q0 [a’]ver	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo
-SFX xB ver bianto/P0FS [a’]ver	ds:gerund+simple	# T2 + nto = T7 + nto
-SFX xB ver biàntoge/Q0 [a’]ver	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto = T7 + nto
-SFX xB ver biendo/P0 [a’]ver	ds:gerund+simple	# T2 + ndo = T7 + ndo
-SFX xB ver biéndoge/Q0 [a’]ver	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo
-SFX xB ver biento/P0FS [a’]ver	ds:gerund+simple	# T2 + nto = T7 + nto
-SFX xB ver biéntoge/Q0 [a’]ver	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto = T7 + nto
-SFX xB 0 ò/J1I1 [a’]ver	ds:indicative+future is:first+singular	# T4 + rò
-SFX xB 0 à/J1I1 [a’]ver	ds:indicative+future is:first+singular	# T4 + rà
-SFX xB 0 emo/J2 [a’]ver	ds:indicative+future is:first+plural	# T4 + r[éí]mo
-SFX xB 0 imo/J2 [a’]ver	ds:indicative+future is:first+plural	# T4 + r[éí]mo
-SFX xB 0 à/J3 [a’]ver	ds:indicative+future is:second+singular	# T4 + rà
-SFX xB 0 atu/I3 [a’]ver	ds:indicative+future is:second+singular	# T4 + rà
-SFX xB 0 é/J3 [a’]ver	ds:indicative+future is:second+singular	# T4 + ré
-SFX xB 0 etu/I3 [a’]ver	ds:indicative+future is:second+singular ds:interrogative	# T4 + ré
-SFX xB 0 è/J4I4 [a’]ver	ds:indicative+future is:second+plural	# T4 + ré
-SFX xB 0 é/J4I4 [a’]ver	ds:indicative+future is:second+plural	# T4 + ré
-SFX xB 0 í/J4I4 [a’]ver	ds:indicative+future is:second+plural	# T4 + rí
-SFX xB 0 à [a’]ver	ds:indicative+future is:third	# T4 + rà
-SFX xB 0 ía [a’]ver	ds:conditional+present is:first+singular	# T4 + ría
-SFX xB 0 ésimo [a’]ver	ds:conditional+present is:first+plural	# T4 + résimo
-SFX xB 0 ísimo [a’]ver	ds:conditional+present is:first+plural	# T4 + rísimo
-SFX xB 0 ía [a’]ver	ds:conditional+present is:second+singular	# T4 + ría
-SFX xB 0 esi/J4 [a’]ver	ds:conditional+present is:second+plural	# T4 + rési
-SFX xB 0 ésïu/I4 [a’]ver	ds:conditional+present is:second+plural ds:interrogative	# T4 + rési
-SFX xB 0 esi/J3 [a’]ver	ds:conditional+present is:second+singular	# T4 + rési
-SFX xB 0 ésitu/I3 [a’]ver	ds:conditional+present is:second+singular ds:interrogative	# T4 + rési
-SFX xB 0 ía [a’]ver	ds:conditional+present is:third	# T4 + ría
-SFX xB 0 ave/J1J6 [a’]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
-SFX xB 0 aràvemi/I6 [a’]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
-SFX xB 0 ave/J2 [a’]ver	ds:conditional+present is:first+plural	# T4 + rà(v)e
-SFX xB 0 ave/J3 [a’]ver	ds:conditional+present is:second+singular	# T4 + rà(v)e
-SFX xB 0 ave/J4 [a’]ver	ds:conditional+present is:second+plural	# T4 + rà(v)e
-SFX xB 0 ave [a’]ver	ds:conditional+present is:third	# T4 + rà(v)e
-SFX xB 0 àe/J1I1 [a’]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
-SFX xB 0 àe/J2I2 [a’]ver	ds:conditional+present is:first+plural	# T4 + rà(v)e
-SFX xB 0 àe/J3I3 [a’]ver	ds:conditional+present is:second+singular	# T4 + rà(v)e
-SFX xB 0 àe/J4I4 [a’]ver	ds:conditional+present is:second+plural	# T4 + rà(v)e
-SFX xB 0 àe [a’]ver	ds:conditional+present is:third	# T4 + rà(v)e
-SFX xB ver ría [a’]ver	ds:conditional+present is:first+singular	# T4 + ría
-SFX xB ver résimo [a’]ver	ds:conditional+present is:first+plural	# T4 + résimo
-SFX xB ver rísimo [a’]ver	ds:conditional+present is:first+plural	# T4 + rísimo
-SFX xB ver ría [a’]ver	ds:conditional+present is:second+singular	# T4 + ría
-SFX xB ver resi/J4 [a’]ver	ds:conditional+present is:second+plural	# T4 + rési
-SFX xB ver résïu/I4 [a’]ver	ds:conditional+present is:second+plural ds:interrogative	# T4 + rési
-SFX xB ver resi/J3 [a’]ver	ds:conditional+present is:second+singular	# T4 + rési
-SFX xB ver résitu/I3 [a’]ver	ds:conditional+present is:second+singular ds:interrogative	# T4 + rési
-SFX xB ver ría [a’]ver	ds:conditional+present is:third	# T4 + ría
-SFX xB ver rave/J1J6 [a’]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
-SFX xB ver raràvemi/I6 [a’]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
-SFX xB ver rave/J2 [a’]ver	ds:conditional+present is:first+plural	# T4 + rà(v)e
-SFX xB ver rave/J3 [a’]ver	ds:conditional+present is:second+singular	# T4 + rà(v)e
-SFX xB ver rave/J4 [a’]ver	ds:conditional+present is:second+plural	# T4 + rà(v)e
-SFX xB ver rave [a’]ver	ds:conditional+present is:third	# T4 + rà(v)e
-SFX xB ver ràe/J1I1 [a’]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
-SFX xB ver ràe/J2I2 [a’]ver	ds:conditional+present is:first+plural	# T4 + rà(v)e
-SFX xB ver ràe/J3I3 [a’]ver	ds:conditional+present is:second+singular	# T4 + rà(v)e
-SFX xB ver ràe/J4I4 [a’]ver	ds:conditional+present is:second+plural	# T4 + rà(v)e
-SFX xB ver ràe [a’]ver	ds:conditional+present is:third	# T4 + rà(v)e
+SFX xB ver endo/P0 ʼver	ds:gerund+simple	# T2 + ndo = T7 + ndo
+SFX xB r nto/P0FS [aʼ]ver	ds:gerund+simple	# T2 + nto = T7 + nto
+SFX xB er ènto/P0FS [aʼ]ver	ds:gerund+simple	# T2 + nto
+SFX xB er èntoge/Q0 [aʼ]ver	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto
+SFX xB ver biando/P0FS [aʼ]ver	ds:gerund+simple	# T2 + ndo = T7 + ndo
+SFX xB ver biàndoge/Q0 [aʼ]ver	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo
+SFX xB ver bianto/P0FS [aʼ]ver	ds:gerund+simple	# T2 + nto = T7 + nto
+SFX xB ver biàntoge/Q0 [aʼ]ver	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto = T7 + nto
+SFX xB ver biendo/P0 [aʼ]ver	ds:gerund+simple	# T2 + ndo = T7 + ndo
+SFX xB ver biéndoge/Q0 [aʼ]ver	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo
+SFX xB ver biento/P0FS [aʼ]ver	ds:gerund+simple	# T2 + nto = T7 + nto
+SFX xB ver biéntoge/Q0 [aʼ]ver	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto = T7 + nto
+SFX xB 0 ò/J1I1 [aʼ]ver	ds:indicative+future is:first+singular	# T4 + rò
+SFX xB 0 à/J1I1 [aʼ]ver	ds:indicative+future is:first+singular	# T4 + rà
+SFX xB 0 emo/J2 [aʼ]ver	ds:indicative+future is:first+plural	# T4 + r[éí]mo
+SFX xB 0 imo/J2 [aʼ]ver	ds:indicative+future is:first+plural	# T4 + r[éí]mo
+SFX xB 0 à/J3 [aʼ]ver	ds:indicative+future is:second+singular	# T4 + rà
+SFX xB 0 atu/I3 [aʼ]ver	ds:indicative+future is:second+singular	# T4 + rà
+SFX xB 0 é/J3 [aʼ]ver	ds:indicative+future is:second+singular	# T4 + ré
+SFX xB 0 etu/I3 [aʼ]ver	ds:indicative+future is:second+singular ds:interrogative	# T4 + ré
+SFX xB 0 è/J4I4 [aʼ]ver	ds:indicative+future is:second+plural	# T4 + ré
+SFX xB 0 é/J4I4 [aʼ]ver	ds:indicative+future is:second+plural	# T4 + ré
+SFX xB 0 í/J4I4 [aʼ]ver	ds:indicative+future is:second+plural	# T4 + rí
+SFX xB 0 à [aʼ]ver	ds:indicative+future is:third	# T4 + rà
+SFX xB 0 ía [aʼ]ver	ds:conditional+present is:first+singular	# T4 + ría
+SFX xB 0 ésimo [aʼ]ver	ds:conditional+present is:first+plural	# T4 + résimo
+SFX xB 0 ísimo [aʼ]ver	ds:conditional+present is:first+plural	# T4 + rísimo
+SFX xB 0 ía [aʼ]ver	ds:conditional+present is:second+singular	# T4 + ría
+SFX xB 0 esi/J4 [aʼ]ver	ds:conditional+present is:second+plural	# T4 + rési
+SFX xB 0 ésïu/I4 [aʼ]ver	ds:conditional+present is:second+plural ds:interrogative	# T4 + rési
+SFX xB 0 esi/J3 [aʼ]ver	ds:conditional+present is:second+singular	# T4 + rési
+SFX xB 0 ésitu/I3 [aʼ]ver	ds:conditional+present is:second+singular ds:interrogative	# T4 + rési
+SFX xB 0 ía [aʼ]ver	ds:conditional+present is:third	# T4 + ría
+SFX xB 0 ave/J1J6 [aʼ]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
+SFX xB 0 aràvemi/I6 [aʼ]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
+SFX xB 0 ave/J2 [aʼ]ver	ds:conditional+present is:first+plural	# T4 + rà(v)e
+SFX xB 0 ave/J3 [aʼ]ver	ds:conditional+present is:second+singular	# T4 + rà(v)e
+SFX xB 0 ave/J4 [aʼ]ver	ds:conditional+present is:second+plural	# T4 + rà(v)e
+SFX xB 0 ave [aʼ]ver	ds:conditional+present is:third	# T4 + rà(v)e
+SFX xB 0 àe/J1I1 [aʼ]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
+SFX xB 0 àe/J2I2 [aʼ]ver	ds:conditional+present is:first+plural	# T4 + rà(v)e
+SFX xB 0 àe/J3I3 [aʼ]ver	ds:conditional+present is:second+singular	# T4 + rà(v)e
+SFX xB 0 àe/J4I4 [aʼ]ver	ds:conditional+present is:second+plural	# T4 + rà(v)e
+SFX xB 0 àe [aʼ]ver	ds:conditional+present is:third	# T4 + rà(v)e
+SFX xB ver ría [aʼ]ver	ds:conditional+present is:first+singular	# T4 + ría
+SFX xB ver résimo [aʼ]ver	ds:conditional+present is:first+plural	# T4 + résimo
+SFX xB ver rísimo [aʼ]ver	ds:conditional+present is:first+plural	# T4 + rísimo
+SFX xB ver ría [aʼ]ver	ds:conditional+present is:second+singular	# T4 + ría
+SFX xB ver resi/J4 [aʼ]ver	ds:conditional+present is:second+plural	# T4 + rési
+SFX xB ver résïu/I4 [aʼ]ver	ds:conditional+present is:second+plural ds:interrogative	# T4 + rési
+SFX xB ver resi/J3 [aʼ]ver	ds:conditional+present is:second+singular	# T4 + rési
+SFX xB ver résitu/I3 [aʼ]ver	ds:conditional+present is:second+singular ds:interrogative	# T4 + rési
+SFX xB ver ría [aʼ]ver	ds:conditional+present is:third	# T4 + ría
+SFX xB ver rave/J1J6 [aʼ]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
+SFX xB ver raràvemi/I6 [aʼ]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
+SFX xB ver rave/J2 [aʼ]ver	ds:conditional+present is:first+plural	# T4 + rà(v)e
+SFX xB ver rave/J3 [aʼ]ver	ds:conditional+present is:second+singular	# T4 + rà(v)e
+SFX xB ver rave/J4 [aʼ]ver	ds:conditional+present is:second+plural	# T4 + rà(v)e
+SFX xB ver rave [aʼ]ver	ds:conditional+present is:third	# T4 + rà(v)e
+SFX xB ver ràe/J1I1 [aʼ]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
+SFX xB ver ràe/J2I2 [aʼ]ver	ds:conditional+present is:first+plural	# T4 + rà(v)e
+SFX xB ver ràe/J3I3 [aʼ]ver	ds:conditional+present is:second+singular	# T4 + rà(v)e
+SFX xB ver ràe/J4I4 [aʼ]ver	ds:conditional+present is:second+plural	# T4 + rà(v)e
+SFX xB ver ràe [aʼ]ver	ds:conditional+present is:third	# T4 + rà(v)e
 SFX xB aver émo/J2 gaver	ds:indicative+present is:first+plural	# T5 + (g)(av)emo
-SFX xB r mo/J2 [a’]ver	ds:indicative+present is:first+plural	# T5 + (g)(av)emo
-SFX xB er imo/J2 [a’]ver	ds:indicative+present is:first+plural	# T5 + avimo
-SFX xB er è/J4I4 [a’]ver	ds:indicative+present is:second+plural	# T5
-SFX xB ver é/J4I4 [a’]ver	ds:indicative+present is:second+plural	# T5
+SFX xB r mo/J2 [aʼ]ver	ds:indicative+present is:first+plural	# T5 + (g)(av)emo
+SFX xB er imo/J2 [aʼ]ver	ds:indicative+present is:first+plural	# T5 + avimo
+SFX xB er è/J4I4 [aʼ]ver	ds:indicative+present is:second+plural	# T5
+SFX xB ver é/J4I4 [aʼ]ver	ds:indicative+present is:second+plural	# T5
 SFX xB aver é/J4I4 aver	ds:indicative+present is:second+plural	# T5
-SFX xB er é/J4I4 [a’]ver	ds:indicative+present is:second+plural	# T5
-SFX xB er í/J4I4 [a’]ver	ds:indicative+present is:second+plural	# T5
-SFX xB r mo [a’]ver	ds:subjunctive+present is:first+plural	# T5 + mo
-SFX xB er imo [a’]ver	ds:subjunctive+present is:first+plural	# T5 + mo
-SFX xB ver piemo [a’]ver	ds:subjunctive+present is:first+plural	# T5 + mo
-SFX xB ver biemo [a’]ver	ds:subjunctive+present is:first+plural	# T5 + mo
+SFX xB er é/J4I4 [aʼ]ver	ds:indicative+present is:second+plural	# T5
+SFX xB er í/J4I4 [aʼ]ver	ds:indicative+present is:second+plural	# T5
+SFX xB r mo [aʼ]ver	ds:subjunctive+present is:first+plural	# T5 + mo
+SFX xB er imo [aʼ]ver	ds:subjunctive+present is:first+plural	# T5 + mo
+SFX xB ver piemo [aʼ]ver	ds:subjunctive+present is:first+plural	# T5 + mo
+SFX xB ver biemo [aʼ]ver	ds:subjunctive+present is:first+plural	# T5 + mo
 SFX xB aver epiemo aver	ds:subjunctive+present is:first+plural	# T5 + mo
-SFX xB er í [a’]ver	ds:subjunctive+present is:second+plural	# T5
-SFX xB er è/J4I4S0SlD0 [a’]ver	ds:imperative+present is:second+plural	# T5 = T12 + è
-SFX xB er é/J4I4S0SlD0 [a’]ver	ds:imperative+present is:second+plural	# T5 = T12 + é
-SFX xB er í/J4I4S0 [a’]ver	ds:imperative+present is:second+plural	# T5
-SFX xB ver biè/J4I4S0 [a’]ver	ds:imperative+present is:second+plural	# T5
-SFX xB ver bié/J4I4S0 [a’]ver	ds:imperative+present is:second+plural	# T5
-SFX xB er udo/M0y0 [a’]ver	ds:participle+passive+weak is:singular+masculine	# T6 + d[oi]
-SFX xB er uda/F0y0 [a’]ver	ds:participle+passive+weak is:singular+femenine	# T6 + d[ae]
-SFX xB ver budo/M0y0 [a’]ver	ds:participle+passive+weak is:singular+masculine	# T6 + d[oi]
-SFX xB ver buda/F0y0 [a’]ver	ds:participle+passive+weak is:singular+femenine	# T6 + d[ae]
-SFX xB ver bïo/A1 ’ver	ds:participle+passive+weak is:singular+masculine	# T6 + ([oiae])
-SFX xB r nte/FS [a’]ver	ds:participle+active	# T7 + nte
-SFX xB er ènte/FS [a’]ver	ds:participle+active	# T7 + nte
-SFX xB r ve/J1 [a’]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)e
-SFX xB er ée/J1I1 [a’]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)e
-SFX xB ver ée/J1I1 [a’]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)e
-SFX xB r va/J3 [a’]ver	ds:indicative+imperfect is:second+singular	# T2 + (v)a, 2s=3
-SFX xB er éa/J3I3 [a’]ver	ds:indicative+imperfect is:second+singular	# T2 + (v)a, 2s=3
-SFX xB ver éa/J3I3 [a’]ver	ds:indicative+imperfect is:second+singular	# T2 + (v)a, 2s=3
-SFX xB r se/FS [a’]ver	ds:subjunctive+imperfect is:second+singular	# T2 + se, 2s=3
-SFX xB ver ese/FS [a’]ver	ds:subjunctive+imperfect is:second+singular	# T2 + se, 2s=3
-SFX xB r st [a’]ver	ds:participle+passive+weak is:singular+masculine	# T2 + st[oiae]
-SFX xB r nt [a’]ver	ds:gerund+simple	# T2 + nto = T7 + nto
-SFX xB er ènt [a’]ver	ds:gerund+simple	# T2 + nto = T7 + nto
-SFX xB 0 é/J1I1 [a’]ver	ds:indicative+future is:first+singular	# T4 + ré
-SFX xB 0 on/J2 [a’]ver	ds:indicative+future is:first+plural	# T4 + ron
-SFX xB 0 en/J2 [a’]ver	ds:indicative+future is:first+plural	# T4 + rén
-SFX xB er aron/J2 [a’]ver	ds:indicative+future is:first+plural	# T4 + ron
-SFX xB er aren/J2 [a’]ver	ds:indicative+future is:first+plural	# T4 + rén
-SFX xB 0 íe [a’]ver	ds:conditional+present is:first+singular	# T4 + ríe
-SFX xB 0 ée [a’]ver	ds:conditional+present is:first+singular	# T4 + rée
-SFX xB 0 ée [a’]ver	ds:conditional+present is:second+singular	# T4 + rée
-SFX xB 0 ée [a’]ver	ds:conditional+present is:third	# T4 + rée
-SFX xB 0 on [a’]ver	ds:conditional+present is:first+plural	# T4 + r(is)(i)ón(se)
-SFX xB 0 onse [a’]ver	ds:conditional+present is:first+plural	# T4 + r(is)(i)ón(se)
-SFX xB 0 ion [a’]ver	ds:conditional+present is:first+plural	# T4 + r(is)(i)ón(se)
-SFX xB 0 ionse [a’]ver	ds:conditional+present is:first+plural	# T4 + r(is)(i)ón(se)
-SFX xB 0 ison [a’]ver	ds:conditional+present is:first+plural	# T4 + r(is)(i)ón(se)
-SFX xB 0 isonse [a’]ver	ds:conditional+present is:first+plural	# T4 + r(is)(i)ón(se)
-SFX xB 0 ision [a’]ver	ds:conditional+present is:first+plural	# T4 + r(is)(i)ón(se)
-SFX xB 0 isionse [a’]ver	ds:conditional+present is:first+plural	# T4 + r(is)(i)ón(se)
-SFX xB 0 en [a’]ver	ds:conditional+present is:first+plural	# T4 + r(is)én(s[ei])
-SFX xB 0 ense [a’]ver	ds:conditional+present is:first+plural	# T4 + r(is)én(s[ei])
-SFX xB 0 ensi [a’]ver	ds:conditional+present is:first+plural	# T4 + r(is)én(s[ei])
-SFX xB 0 isen [a’]ver	ds:conditional+present is:first+plural	# T4 + r(is)én(s[ei])
-SFX xB 0 isense [a’]ver	ds:conditional+present is:first+plural	# T4 + r(is)én(s[ei])
-SFX xB 0 isensi [a’]ver	ds:conditional+present is:first+plural	# T4 + r(is)én(s[ei])
-SFX xB 0 ié [a’]ver	ds:conditional+present is:second+singular	# T4 + r(is)ié
-SFX xB 0 iè [a’]ver	ds:conditional+present is:second+singular	# T4 + r(is)iè
-SFX xB 0 isié [a’]ver	ds:conditional+present is:second+singular	# T4 + r(is)ié
-SFX xB 0 isiè [a’]ver	ds:conditional+present is:second+singular	# T4 + r(is)iè
-SFX xB 0 íe [a’]ver	ds:conditional+present is:third	# T4 + ríe
-SFX xB r nt [a’]ver	ds:participle+active	# T7 + nte
-SFX xB er on/J2 [a’]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX xB er oni/I2 [a’]ver	ds:indicative+imperfect is:first+plural ds:interrogative	# T11 + (iv)(i)ón(se)
-SFX xB er onse/J2 [a’]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX xB er ion/J2 [a’]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX xB er ioni/I2 [a’]ver	ds:indicative+imperfect is:first+plural ds:interrogative	# T11 + (iv)(i)ón(se)
-SFX xB er ionse/J2 [a’]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX xB er ivon/J2 [a’]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX xB er ivoni/I2 [a’]ver	ds:indicative+imperfect is:first+plural ds:interrogative	# T11 + (iv)(i)ón(se)
-SFX xB er ivonse/J2 [a’]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX xB er ivion/J2 [a’]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX xB er ivioni/I2 [a’]ver	ds:indicative+imperfect is:first+plural ds:interrogative	# T11 + (iv)(i)ón(se)
-SFX xB er ivionse/J2 [a’]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
-SFX xB r n/J2 [a’]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
-SFX xB r ni/I2 [a’]ver	ds:indicative+imperfect is:first+plural ds:interrogative	# T11 + (iv)én(s[ei])
-SFX xB r nse/J2 [a’]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
-SFX xB r nsi/J2 [a’]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
-SFX xB er iven/J2 [a’]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
-SFX xB er iveni/I2 [a’]ver	ds:indicative+imperfect is:first+plural ds:interrogative	# T11 + (iv)én(s[ei])
-SFX xB er ivense/J2 [a’]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
-SFX xB er ivensi/J2 [a’]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
-SFX xB er ié/J4I4 [a’]ver	ds:indicative+imperfect is:second+plural	# T11 + (iv)ié
-SFX xB er isé/J4I4 [a’]ver	ds:indicative+imperfect is:second+plural	# T11 + (iv)isé
-SFX xB er ivié/J4I4 [a’]ver	ds:indicative+imperfect is:second+plural	# T11 + (iv)ié
-SFX xB er on [a’]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xB er one [a’]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xB er onse [a’]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xB er ion [a’]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xB er ione [a’]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xB er ionse [a’]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xB er ison [a’]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xB er isone [a’]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xB er isonse [a’]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xB er ision [a’]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xB er isione [a’]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xB er isionse [a’]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
-SFX xB r n [a’]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
-SFX xB r ne [a’]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
-SFX xB r nse [a’]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
-SFX xB r nsi [a’]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
-SFX xB er isen [a’]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
-SFX xB er isene [a’]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
-SFX xB er isense [a’]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
-SFX xB er isensi [a’]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
-SFX xB er ié [a’]ver	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
-SFX xB er iede [a’]ver	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
-SFX xB er iege [a’]ver	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
-SFX xB er isié/J4I4 [a’]ver	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
-SFX xB er isiede [a’]ver	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
-SFX xB er isiege [a’]ver	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
-SFX xB er isiè/J4I4 [a’]ver	ds:subjunctive+imperfect is:second+plural	# T11 + (is)iè([dg]e)
-SFX xB er isiède [a’]ver	ds:subjunctive+imperfect is:second+plural	# T11 + (is)iè([dg]e)
-SFX xB er isiège [a’]ver	ds:subjunctive+imperfect is:second+plural	# T11 + (is)iè([dg]e)
-SFX xB er on/J2 [a’]ver	ds:indicative+present is:first+plural	# T12 + avón
-SFX xB er oni/I2 [a’]ver	ds:indicative+present is:first+plural ds:interrogative	# T12 + avón
-SFX xB ver on/J2 [a’]ver	ds:indicative+present is:first+plural	# T12 + avón
-SFX xB ver oni/I2 [a’]ver	ds:indicative+present is:first+plural ds:interrogative	# T12 + avón
-SFX xB r n/J2 [a’]ver	ds:indicative+present is:first+plural	# T12 + avén
-SFX xB r ni/I2 [a’]ver	ds:indicative+present is:first+plural ds:interrogative	# T12 + avén
-SFX xB er on [a’]ver	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX xB ver pion [a’]ver	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX xB ver bion [a’]ver	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX xB er í [aʼ]ver	ds:subjunctive+present is:second+plural	# T5
+SFX xB er è/J4I4S0SlD0 [aʼ]ver	ds:imperative+present is:second+plural	# T5 = T12 + è
+SFX xB er é/J4I4S0SlD0 [aʼ]ver	ds:imperative+present is:second+plural	# T5 = T12 + é
+SFX xB er í/J4I4S0 [aʼ]ver	ds:imperative+present is:second+plural	# T5
+SFX xB ver biè/J4I4S0 [aʼ]ver	ds:imperative+present is:second+plural	# T5
+SFX xB ver bié/J4I4S0 [aʼ]ver	ds:imperative+present is:second+plural	# T5
+SFX xB er udo/M0y0 [aʼ]ver	ds:participle+passive+weak is:singular+masculine	# T6 + d[oi]
+SFX xB er uda/F0y0 [aʼ]ver	ds:participle+passive+weak is:singular+femenine	# T6 + d[ae]
+SFX xB ver budo/M0y0 [aʼ]ver	ds:participle+passive+weak is:singular+masculine	# T6 + d[oi]
+SFX xB ver buda/F0y0 [aʼ]ver	ds:participle+passive+weak is:singular+femenine	# T6 + d[ae]
+SFX xB ver bïo/A1 ʼver	ds:participle+passive+weak is:singular+masculine	# T6 + ([oiae])
+SFX xB r nte/FS [aʼ]ver	ds:participle+active	# T7 + nte
+SFX xB er ènte/FS [aʼ]ver	ds:participle+active	# T7 + nte
+SFX xB r ve/J1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)e
+SFX xB er ée/J1I1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)e
+SFX xB ver ée/J1I1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)e
+SFX xB r va/J3 [aʼ]ver	ds:indicative+imperfect is:second+singular	# T2 + (v)a, 2s=3
+SFX xB er éa/J3I3 [aʼ]ver	ds:indicative+imperfect is:second+singular	# T2 + (v)a, 2s=3
+SFX xB ver éa/J3I3 [aʼ]ver	ds:indicative+imperfect is:second+singular	# T2 + (v)a, 2s=3
+SFX xB r se/FS [aʼ]ver	ds:subjunctive+imperfect is:second+singular	# T2 + se, 2s=3
+SFX xB ver ese/FS [aʼ]ver	ds:subjunctive+imperfect is:second+singular	# T2 + se, 2s=3
+SFX xB r st [aʼ]ver	ds:participle+passive+weak is:singular+masculine	# T2 + st[oiae]
+SFX xB r nt [aʼ]ver	ds:gerund+simple	# T2 + nto = T7 + nto
+SFX xB er ènt [aʼ]ver	ds:gerund+simple	# T2 + nto = T7 + nto
+SFX xB 0 é/J1I1 [aʼ]ver	ds:indicative+future is:first+singular	# T4 + ré
+SFX xB 0 on/J2 [aʼ]ver	ds:indicative+future is:first+plural	# T4 + ron
+SFX xB 0 en/J2 [aʼ]ver	ds:indicative+future is:first+plural	# T4 + rén
+SFX xB er aron/J2 [aʼ]ver	ds:indicative+future is:first+plural	# T4 + ron
+SFX xB er aren/J2 [aʼ]ver	ds:indicative+future is:first+plural	# T4 + rén
+SFX xB 0 íe [aʼ]ver	ds:conditional+present is:first+singular	# T4 + ríe
+SFX xB 0 ée [aʼ]ver	ds:conditional+present is:first+singular	# T4 + rée
+SFX xB 0 ée [aʼ]ver	ds:conditional+present is:second+singular	# T4 + rée
+SFX xB 0 ée [aʼ]ver	ds:conditional+present is:third	# T4 + rée
+SFX xB 0 on [aʼ]ver	ds:conditional+present is:first+plural	# T4 + r(is)(i)ón(se)
+SFX xB 0 onse [aʼ]ver	ds:conditional+present is:first+plural	# T4 + r(is)(i)ón(se)
+SFX xB 0 ion [aʼ]ver	ds:conditional+present is:first+plural	# T4 + r(is)(i)ón(se)
+SFX xB 0 ionse [aʼ]ver	ds:conditional+present is:first+plural	# T4 + r(is)(i)ón(se)
+SFX xB 0 ison [aʼ]ver	ds:conditional+present is:first+plural	# T4 + r(is)(i)ón(se)
+SFX xB 0 isonse [aʼ]ver	ds:conditional+present is:first+plural	# T4 + r(is)(i)ón(se)
+SFX xB 0 ision [aʼ]ver	ds:conditional+present is:first+plural	# T4 + r(is)(i)ón(se)
+SFX xB 0 isionse [aʼ]ver	ds:conditional+present is:first+plural	# T4 + r(is)(i)ón(se)
+SFX xB 0 en [aʼ]ver	ds:conditional+present is:first+plural	# T4 + r(is)én(s[ei])
+SFX xB 0 ense [aʼ]ver	ds:conditional+present is:first+plural	# T4 + r(is)én(s[ei])
+SFX xB 0 ensi [aʼ]ver	ds:conditional+present is:first+plural	# T4 + r(is)én(s[ei])
+SFX xB 0 isen [aʼ]ver	ds:conditional+present is:first+plural	# T4 + r(is)én(s[ei])
+SFX xB 0 isense [aʼ]ver	ds:conditional+present is:first+plural	# T4 + r(is)én(s[ei])
+SFX xB 0 isensi [aʼ]ver	ds:conditional+present is:first+plural	# T4 + r(is)én(s[ei])
+SFX xB 0 ié [aʼ]ver	ds:conditional+present is:second+singular	# T4 + r(is)ié
+SFX xB 0 iè [aʼ]ver	ds:conditional+present is:second+singular	# T4 + r(is)iè
+SFX xB 0 isié [aʼ]ver	ds:conditional+present is:second+singular	# T4 + r(is)ié
+SFX xB 0 isiè [aʼ]ver	ds:conditional+present is:second+singular	# T4 + r(is)iè
+SFX xB 0 íe [aʼ]ver	ds:conditional+present is:third	# T4 + ríe
+SFX xB r nt [aʼ]ver	ds:participle+active	# T7 + nte
+SFX xB er on/J2 [aʼ]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
+SFX xB er oni/I2 [aʼ]ver	ds:indicative+imperfect is:first+plural ds:interrogative	# T11 + (iv)(i)ón(se)
+SFX xB er onse/J2 [aʼ]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
+SFX xB er ion/J2 [aʼ]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
+SFX xB er ioni/I2 [aʼ]ver	ds:indicative+imperfect is:first+plural ds:interrogative	# T11 + (iv)(i)ón(se)
+SFX xB er ionse/J2 [aʼ]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
+SFX xB er ivon/J2 [aʼ]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
+SFX xB er ivoni/I2 [aʼ]ver	ds:indicative+imperfect is:first+plural ds:interrogative	# T11 + (iv)(i)ón(se)
+SFX xB er ivonse/J2 [aʼ]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
+SFX xB er ivion/J2 [aʼ]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
+SFX xB er ivioni/I2 [aʼ]ver	ds:indicative+imperfect is:first+plural ds:interrogative	# T11 + (iv)(i)ón(se)
+SFX xB er ivionse/J2 [aʼ]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)(i)ón(se)
+SFX xB r n/J2 [aʼ]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX xB r ni/I2 [aʼ]ver	ds:indicative+imperfect is:first+plural ds:interrogative	# T11 + (iv)én(s[ei])
+SFX xB r nse/J2 [aʼ]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX xB r nsi/J2 [aʼ]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX xB er iven/J2 [aʼ]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX xB er iveni/I2 [aʼ]ver	ds:indicative+imperfect is:first+plural ds:interrogative	# T11 + (iv)én(s[ei])
+SFX xB er ivense/J2 [aʼ]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX xB er ivensi/J2 [aʼ]ver	ds:indicative+imperfect is:first+plural	# T11 + (iv)én(s[ei])
+SFX xB er ié/J4I4 [aʼ]ver	ds:indicative+imperfect is:second+plural	# T11 + (iv)ié
+SFX xB er isé/J4I4 [aʼ]ver	ds:indicative+imperfect is:second+plural	# T11 + (iv)isé
+SFX xB er ivié/J4I4 [aʼ]ver	ds:indicative+imperfect is:second+plural	# T11 + (iv)ié
+SFX xB er on [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
+SFX xB er one [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
+SFX xB er onse [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
+SFX xB er ion [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
+SFX xB er ione [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
+SFX xB er ionse [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
+SFX xB er ison [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
+SFX xB er isone [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
+SFX xB er isonse [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
+SFX xB er ision [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
+SFX xB er isione [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
+SFX xB er isionse [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)(i)ón(e/se)
+SFX xB r n [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
+SFX xB r ne [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
+SFX xB r nse [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
+SFX xB r nsi [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
+SFX xB er isen [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
+SFX xB er isene [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
+SFX xB er isense [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
+SFX xB er isensi [aʼ]ver	ds:subjunctive+imperfect is:first+plural	# T11 + (is)én(e/se)
+SFX xB er ié [aʼ]ver	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
+SFX xB er iede [aʼ]ver	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
+SFX xB er iege [aʼ]ver	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
+SFX xB er isié/J4I4 [aʼ]ver	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
+SFX xB er isiede [aʼ]ver	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
+SFX xB er isiege [aʼ]ver	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
+SFX xB er isiè/J4I4 [aʼ]ver	ds:subjunctive+imperfect is:second+plural	# T11 + (is)iè([dg]e)
+SFX xB er isiède [aʼ]ver	ds:subjunctive+imperfect is:second+plural	# T11 + (is)iè([dg]e)
+SFX xB er isiège [aʼ]ver	ds:subjunctive+imperfect is:second+plural	# T11 + (is)iè([dg]e)
+SFX xB er on/J2 [aʼ]ver	ds:indicative+present is:first+plural	# T12 + avón
+SFX xB er oni/I2 [aʼ]ver	ds:indicative+present is:first+plural ds:interrogative	# T12 + avón
+SFX xB ver on/J2 [aʼ]ver	ds:indicative+present is:first+plural	# T12 + avón
+SFX xB ver oni/I2 [aʼ]ver	ds:indicative+present is:first+plural ds:interrogative	# T12 + avón
+SFX xB r n/J2 [aʼ]ver	ds:indicative+present is:first+plural	# T12 + avén
+SFX xB r ni/I2 [aʼ]ver	ds:indicative+present is:first+plural ds:interrogative	# T12 + avén
+SFX xB er on [aʼ]ver	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX xB ver pion [aʼ]ver	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX xB ver bion [aʼ]ver	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
 SFX xB aver epion aver	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX xB er one [a’]ver	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX xB ver pione [a’]ver	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX xB ver bione [a’]ver	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX xB er one [aʼ]ver	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX xB ver pione [aʼ]ver	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX xB ver bione [aʼ]ver	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
 SFX xB aver epione aver	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX xB er ion [a’]ver	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX xB er ione [a’]ver	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
-SFX xB r n [a’]ver	ds:subjunctive+present is:first+plural	# T12 + én(e)
-SFX xB ver pien [a’]ver	ds:subjunctive+present is:first+plural	# T12 + én(e)
-SFX xB ver bien [a’]ver	ds:subjunctive+present is:first+plural	# T12 + én(e)
+SFX xB er ion [aʼ]ver	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX xB er ione [aʼ]ver	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
+SFX xB r n [aʼ]ver	ds:subjunctive+present is:first+plural	# T12 + én(e)
+SFX xB ver pien [aʼ]ver	ds:subjunctive+present is:first+plural	# T12 + én(e)
+SFX xB ver bien [aʼ]ver	ds:subjunctive+present is:first+plural	# T12 + én(e)
 SFX xB aver epien aver	ds:subjunctive+present is:first+plural	# T12 + én(e)
-SFX xB r ne [a’]ver	ds:subjunctive+present is:first+plural	# T12 + én(e)
-SFX xB ver piene [a’]ver	ds:subjunctive+present is:first+plural	# T12 + én(e)
-SFX xB ver biene [a’]ver	ds:subjunctive+present is:first+plural	# T12 + én(e)
+SFX xB r ne [aʼ]ver	ds:subjunctive+present is:first+plural	# T12 + én(e)
+SFX xB ver piene [aʼ]ver	ds:subjunctive+present is:first+plural	# T12 + én(e)
+SFX xB ver biene [aʼ]ver	ds:subjunctive+present is:first+plural	# T12 + én(e)
 SFX xB aver epiene aver	ds:subjunctive+present is:first+plural	# T12 + én(e)
-SFX xB er é [a’]ver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e) = T5
-SFX xB ver pié [a’]ver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e) = T5
-SFX xB ver bié [a’]ver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e) = T5
+SFX xB er é [aʼ]ver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e) = T5
+SFX xB ver pié [aʼ]ver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e) = T5
+SFX xB ver bié [aʼ]ver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e) = T5
 SFX xB aver epié aver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e) = T5
-SFX xB r de [a’]ver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
-SFX xB ver piede [a’]ver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
-SFX xB ver biede [a’]ver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
+SFX xB r de [aʼ]ver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
+SFX xB ver piede [aʼ]ver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
+SFX xB ver biede [aʼ]ver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
 SFX xB aver epiede aver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
-SFX xB r ge [a’]ver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
-SFX xB ver piege [a’]ver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
+SFX xB r ge [aʼ]ver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
+SFX xB ver piege [aʼ]ver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
 SFX xB aver éde aver	ds:subjunctive+imperfect is:second+plural	# T11 + (is)ié([dg]e)
-SFX xB ver biege [a’]ver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
+SFX xB ver biege [aʼ]ver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
 SFX xB aver epiege aver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
-SFX xB 0 e [a’]ver	ds:infinitive+simple	# T1 + r(e)
-SFX xB er arò/J1I1 [a’]ver	ds:indicative+future is:first+singular	# T4 + rò
-SFX xB er arà/J1I1 [a’]ver	ds:indicative+future is:first+singular	# T4 + rà
-SFX xB er aremo/J2 [a’]ver	ds:indicative+future is:first+plural	# T4 + r[éí]mo
-SFX xB er arimo/J2 [a’]ver	ds:indicative+future is:first+plural	# T4 + r[éí]mo
-SFX xB er arà/J3 [a’]ver	ds:indicative+future is:second+singular	# T4 + rà
-SFX xB er aratu/I3 [a’]ver	ds:indicative+future is:second+singular	# T4 + rà
-SFX xB er aré/J3 [a’]ver	ds:indicative+future is:second+singular	# T4 + ré
-SFX xB er aretu/I3 [a’]ver	ds:indicative+future is:second+singular	# T4 + ré
-SFX xB er arè/J4I4 [a’]ver	ds:indicative+future is:second+plural	# T4 + rè
-SFX xB er aré/J4I4 [a’]ver	ds:indicative+future is:second+plural	# T4 + ré
-SFX xB er arí/J4I4 [a’]ver	ds:indicative+future is:second+plural	# T4 + rí
-SFX xB er arà [a’]ver	ds:indicative+future is:third	# T4 + rà
-SFX xB er aré/J1I1 [a’]ver	ds:indicative+future is:first+singular	# T4 + ré
-SFX xB ver arò/J1I1 [a’]ver	ds:indicative+future is:first+singular	# T4 + rò
-SFX xB ver arà/J1I1 [a’]ver	ds:indicative+future is:first+singular	# T4 + rà
-SFX xB ver aremo/J2 [a’]ver	ds:indicative+future is:first+plural	# T4 + r[éí]mo
-SFX xB ver arimo/J2 [a’]ver	ds:indicative+future is:first+plural	# T4 + r[éí]mo
-SFX xB ver arà/J3 [a’]ver	ds:indicative+future is:second+singular	# T4 + rà
-SFX xB ver aratu/I3 [a’]ver	ds:indicative+future is:second+singular	# T4 + rà
-SFX xB ver aré/J3 [a’]ver	ds:indicative+future is:second+singular	# T4 + ré
-SFX xB ver aretu/I3 [a’]ver	ds:indicative+future is:second+singular	# T4 + ré
-SFX xB ver arè/J4I4 [a’]ver	ds:indicative+future is:second+plural	# T4 + rè
-SFX xB ver aré/J4I4 [a’]ver	ds:indicative+future is:second+plural	# T4 + ré
-SFX xB ver arí/J4I4 [a’]ver	ds:indicative+future is:second+plural	# T4 + rí
-SFX xB ver arà [a’]ver	ds:indicative+future is:third	# T4 + rà
-SFX xB ver aré/J1I1 [a’]ver	ds:indicative+future is:first+singular	# T4 + ré
-SFX xB er aría [a’]ver	ds:conditional+present is:first+singular	# T4 + ría
-SFX xB er aríe [a’]ver	ds:conditional+present is:first+singular	# T4 + ríe
-SFX xB er aréa [a’]ver	ds:conditional+present is:first+singular	# T4 + réa
-SFX xB er arésimo [a’]ver	ds:conditional+present is:first+plural	# T4 + résimo
-SFX xB er arísimo [a’]ver	ds:conditional+present is:first+plural	# T4 + rísimo
-SFX xB er aríimo [a’]ver	ds:conditional+present is:first+plural	# T4 + ríimo
-SFX xB er aría [a’]ver	ds:conditional+present is:second+singular	# T4 + ría
-SFX xB er aréa [a’]ver	ds:conditional+present is:second+singular	# T4 + réa
-SFX xB er aresi [a’]ver	ds:conditional+present is:second+plural	# T4 + rési
-SFX xB er arésïu/I4 [a’]ver	ds:conditional+present is:second+plural ds:interrogative	# T4 + rési
-SFX xB er aresi/J3 [a’]ver	ds:conditional+present is:second+singular	# T4 + rési
-SFX xB er arésitu/I3 [a’]ver	ds:conditional+present is:second+singular ds:interrogative	# T4 + rési
-SFX xB er aría [a’]ver	ds:conditional+present is:third	# T4 + ría
-SFX xB er aréa [a’]ver	ds:conditional+present is:third	# T4 + réa
-SFX xB er arave/J1J6 [a’]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
-SFX xB er aràvemi/I6 [a’]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
-SFX xB er arave/J2 [a’]ver	ds:conditional+present is:first+plural	# T4 + rà(v)e
-SFX xB er arave/J3 [a’]ver	ds:conditional+present is:second+singular	# T4 + rà(v)e
-SFX xB er arave/J4 [a’]ver	ds:conditional+present is:second+plural	# T4 + rà(v)e
-SFX xB er arave [a’]ver	ds:conditional+present is:third	# T4 + rà(v)e
-SFX xB er aràe [a’]ver	ds:conditional+present is:third	# T4 + rà(v)e
+SFX xB 0 e [aʼ]ver	ds:infinitive+simple	# T1 + r(e)
+SFX xB er arò/J1I1 [aʼ]ver	ds:indicative+future is:first+singular	# T4 + rò
+SFX xB er arà/J1I1 [aʼ]ver	ds:indicative+future is:first+singular	# T4 + rà
+SFX xB er aremo/J2 [aʼ]ver	ds:indicative+future is:first+plural	# T4 + r[éí]mo
+SFX xB er arimo/J2 [aʼ]ver	ds:indicative+future is:first+plural	# T4 + r[éí]mo
+SFX xB er arà/J3 [aʼ]ver	ds:indicative+future is:second+singular	# T4 + rà
+SFX xB er aratu/I3 [aʼ]ver	ds:indicative+future is:second+singular	# T4 + rà
+SFX xB er aré/J3 [aʼ]ver	ds:indicative+future is:second+singular	# T4 + ré
+SFX xB er aretu/I3 [aʼ]ver	ds:indicative+future is:second+singular	# T4 + ré
+SFX xB er arè/J4I4 [aʼ]ver	ds:indicative+future is:second+plural	# T4 + rè
+SFX xB er aré/J4I4 [aʼ]ver	ds:indicative+future is:second+plural	# T4 + ré
+SFX xB er arí/J4I4 [aʼ]ver	ds:indicative+future is:second+plural	# T4 + rí
+SFX xB er arà [aʼ]ver	ds:indicative+future is:third	# T4 + rà
+SFX xB er aré/J1I1 [aʼ]ver	ds:indicative+future is:first+singular	# T4 + ré
+SFX xB ver arò/J1I1 [aʼ]ver	ds:indicative+future is:first+singular	# T4 + rò
+SFX xB ver arà/J1I1 [aʼ]ver	ds:indicative+future is:first+singular	# T4 + rà
+SFX xB ver aremo/J2 [aʼ]ver	ds:indicative+future is:first+plural	# T4 + r[éí]mo
+SFX xB ver arimo/J2 [aʼ]ver	ds:indicative+future is:first+plural	# T4 + r[éí]mo
+SFX xB ver arà/J3 [aʼ]ver	ds:indicative+future is:second+singular	# T4 + rà
+SFX xB ver aratu/I3 [aʼ]ver	ds:indicative+future is:second+singular	# T4 + rà
+SFX xB ver aré/J3 [aʼ]ver	ds:indicative+future is:second+singular	# T4 + ré
+SFX xB ver aretu/I3 [aʼ]ver	ds:indicative+future is:second+singular	# T4 + ré
+SFX xB ver arè/J4I4 [aʼ]ver	ds:indicative+future is:second+plural	# T4 + rè
+SFX xB ver aré/J4I4 [aʼ]ver	ds:indicative+future is:second+plural	# T4 + ré
+SFX xB ver arí/J4I4 [aʼ]ver	ds:indicative+future is:second+plural	# T4 + rí
+SFX xB ver arà [aʼ]ver	ds:indicative+future is:third	# T4 + rà
+SFX xB ver aré/J1I1 [aʼ]ver	ds:indicative+future is:first+singular	# T4 + ré
+SFX xB er aría [aʼ]ver	ds:conditional+present is:first+singular	# T4 + ría
+SFX xB er aríe [aʼ]ver	ds:conditional+present is:first+singular	# T4 + ríe
+SFX xB er aréa [aʼ]ver	ds:conditional+present is:first+singular	# T4 + réa
+SFX xB er arésimo [aʼ]ver	ds:conditional+present is:first+plural	# T4 + résimo
+SFX xB er arísimo [aʼ]ver	ds:conditional+present is:first+plural	# T4 + rísimo
+SFX xB er aríimo [aʼ]ver	ds:conditional+present is:first+plural	# T4 + ríimo
+SFX xB er aría [aʼ]ver	ds:conditional+present is:second+singular	# T4 + ría
+SFX xB er aréa [aʼ]ver	ds:conditional+present is:second+singular	# T4 + réa
+SFX xB er aresi [aʼ]ver	ds:conditional+present is:second+plural	# T4 + rési
+SFX xB er arésïu/I4 [aʼ]ver	ds:conditional+present is:second+plural ds:interrogative	# T4 + rési
+SFX xB er aresi/J3 [aʼ]ver	ds:conditional+present is:second+singular	# T4 + rési
+SFX xB er arésitu/I3 [aʼ]ver	ds:conditional+present is:second+singular ds:interrogative	# T4 + rési
+SFX xB er aría [aʼ]ver	ds:conditional+present is:third	# T4 + ría
+SFX xB er aréa [aʼ]ver	ds:conditional+present is:third	# T4 + réa
+SFX xB er arave/J1J6 [aʼ]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
+SFX xB er aràvemi/I6 [aʼ]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
+SFX xB er arave/J2 [aʼ]ver	ds:conditional+present is:first+plural	# T4 + rà(v)e
+SFX xB er arave/J3 [aʼ]ver	ds:conditional+present is:second+singular	# T4 + rà(v)e
+SFX xB er arave/J4 [aʼ]ver	ds:conditional+present is:second+plural	# T4 + rà(v)e
+SFX xB er arave [aʼ]ver	ds:conditional+present is:third	# T4 + rà(v)e
+SFX xB er aràe [aʼ]ver	ds:conditional+present is:third	# T4 + rà(v)e
 SFX xB aver ò/J1I1 aver	ds:indicative+present is:first+singular	# T8 + (g)ò
 SFX xB aver à/J1I1 aver	ds:indicative+present is:first+singular	# T8 + (g)à
 SFX xB aver è/J3 aver	ds:indicative+present is:second+singular	# T8 + è
@@ -2105,7 +2106,7 @@ SFX xB aver èpe aver	ds:subjunctive+present is:first+singular	# T8 + e
 SFX xB aver ébe aver	ds:subjunctive+present is:first+singular	# T8 + e
 SFX xB aver àbe aver	ds:subjunctive+present is:first+singular	# T8 + e
 SFX xB aver àpi aver	ds:subjunctive+present is:second+singular	# T8 + i
-SFX xB r 0 [a’]ver	ds:subjunctive+present is:second+singular	# T8 + e, 2s=3
+SFX xB r 0 [aʼ]ver	ds:subjunctive+present is:second+singular	# T8 + e, 2s=3
 SFX xB aver àpie aver	ds:subjunctive+present is:second+singular	# T8 + e, 2s=3
 SFX xB aver àbie aver	ds:subjunctive+present is:second+singular	# T8 + e, 2s=3
 SFX xB aver èpie aver	ds:subjunctive+present is:second+singular	# T8 + e, 2s=3
@@ -2130,81 +2131,81 @@ SFX xB aver àbilo/I5 aver	ds:imperative+present is:second+singular ds:interroga
 SFX xB aver àbiƚo/i5 aver	ds:imperative+present is:second+singular ds:interrogative	# T9
 SFX xB aver àbigelo/Dl aver	ds:imperative+present is:second+singular ds:pronomenal+locative	# T9
 SFX xB aver àbigeƚo/D7 aver	ds:imperative+present is:second+singular ds:pronomenal+locative	# T9
-SFX xB er évami/I1 [a’]ver	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)a
-SFX xB er évomi/I1 [a’]ver	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)o
-SFX xB er évitu/I3 [a’]ver	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)i
-SFX xB ver éitu/I3 [a’]ver	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)i
-SFX xB er évïu/I4 [a’]ver	ds:indicative+imperfect is:second+plural ds:interrogative	# T2 + (v)i
-SFX xB er éndoge/Q0 [a’]ver	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo
-SFX xB er éntoge/Q0 [a’]ver	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto = T7 + nto
-SFX xB 0 émoi/I2 [a’]ver	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo
-SFX xB 0 ímoi/I2 [a’]ver	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo
-SFX xB 0 àvemi/I1 [a’]ver	ds:conditional+present is:first+singular ds:interrogative	# T4 + rà(v)e
-SFX xB 0 àvei/I2 [a’]ver	ds:conditional+present is:first+plural ds:interrogative	# T4 + rà(v)e
-SFX xB 0 àvetu/I3 [a’]ver	ds:conditional+present is:second+singular ds:interrogative	# T4 + rà(v)e
-SFX xB 0 àveu/I4 [a’]ver	ds:conditional+present is:second+plural ds:interrogative	# T4 + rà(v)e
-SFX xB er émoi/I2 [a’]ver	ds:indicative+present is:first+plural ds:interrogative	# T5 + (g)avémo
-SFX xB er ímoi/I2 [a’]ver	ds:indicative+present is:first+plural ds:interrogative	# T5 + avímo
-SFX xB r va/J5j5 [a’]ver	ds:indicative+imperfect is:third	# T2 + (v)a
-SFX xB er évelo/I5 [a’]ver	ds:indicative+imperfect is:third ds:interrogative	# T2 + (v)a
-SFX xB ver éelo/I5 [a’]ver	ds:indicative+imperfect is:third ds:interrogative	# T2 + (v)a
-SFX xB er éa/J5j5 [a’]ver	ds:indicative+imperfect is:third	# T2 + (v)a
-SFX xB ver éa/J5j5 [a’]ver	ds:indicative+imperfect is:third	# T2 + (v)a
-SFX xB er éelo/I5 [a’]ver	ds:indicative+imperfect is:third ds:interrogative	# T2 + (v)a
-SFX xB r ndo/PlP7 [a’]ver	ds:gerund+simple	# T2 + ndo = T7 + ndo
-SFX xB er éndogelo/Ql [a’]ver	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
-SFX xB er éndogeƚo/Q7 [a’]ver	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
-SFX xB r nto/PlP7 [a’]ver	ds:gerund+simple	# T2 + nto = T7 + nto
-SFX xB er éntogelo/Ql [a’]ver	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
-SFX xB er èntogelo/Ql [a’]ver	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
-SFX xB 0 à/J5j5 [a’]ver	ds:indicative+future is:third	# T4 + rà
-SFX xB 0 aƚo/i5 [a’]ver	ds:indicative+future is:third ds:interrogative	# T4 + rà
-SFX xB 0 alo/I5 [a’]ver	ds:indicative+future is:third ds:interrogative	# T4 + rà
-SFX xB 0 ave/J7j7 [a’]ver	ds:conditional+present is:third	# T4 + rà(v)e
-SFX xB 0 íselo/I7 [a’]ver	ds:conditional+present is:third ds:interrogative	# T4 + rà(v)e
-SFX xB er è/SlS7 [a’]ver	ds:imperative+present is:second+plural	# T5
-SFX xB er é/SlS7 [a’]ver	ds:imperative+present is:second+plural	# T5
-SFX xB er ègelo/Dl [a’]ver	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5 = T12 + è
-SFX xB er égelo/Dl [a’]ver	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5 = T12 + é
-SFX xB er í/SlS7 [a’]ver	ds:imperative+present is:second+plural	# T5
-SFX xB er ígelo/Dl [a’]ver	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5
-SFX xB er éntogeƚo/Q7 [a’]ver	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
-SFX xB er èntogeƚo/Q7 [a’]ver	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
-SFX xB 0 íseƚo/i7 [a’]ver	ds:conditional+present is:third ds:interrogative	# T4 + rà(v)e
-SFX xB er ègeƚo/D7 [a’]ver	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5 = T12 + è
-SFX xB er égeƚo/D7 [a’]ver	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5 = T12 + é
-SFX xB er ígeƚo/D7 [a’]ver	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5
-SFX xB er évemi/I1 [a’]ver	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)e
-SFX xB er évatu/I3 [a’]ver	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)a, 2s=3
-SFX xB 0 oni/I2 [a’]ver	ds:indicative+future is:first+plural ds:interrogative	# T4 + ron
-SFX xB 0 eni/I2 [a’]ver	ds:indicative+future is:first+plural ds:interrogative	# T4 + rén
-SFX xB er arémoi/I2 [a’]ver	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo
-SFX xB er arímoi/I2 [a’]ver	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo
-SFX xB er arà/J5j5 [a’]ver	ds:indicative+future is:third	# T4 + rà
-SFX xB er araƚo/i5 [a’]ver	ds:indicative+future is:third ds:interrogative	# T4 + rà
-SFX xB er aralo/I5 [a’]ver	ds:indicative+future is:third ds:interrogative	# T4 + rà
-SFX xB ver eroni/I2 [a’]ver	ds:indicative+future is:first+plural ds:interrogative	# T4 + ron
-SFX xB ver ereni/I2 [a’]ver	ds:indicative+future is:first+plural ds:interrogative	# T4 + rén
-SFX xB ver arémoi/I2 [a’]ver	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo
-SFX xB ver arímoi/I2 [a’]ver	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo
-SFX xB ver arà/J5j5 [a’]ver	ds:indicative+future is:third	# T4 + rà
-SFX xB ver araƚo/i5 [a’]ver	ds:indicative+future is:third ds:interrogative	# T4 + rà
-SFX xB ver aralo/I5 [a’]ver	ds:indicative+future is:third ds:interrogative	# T4 + rà
-SFX xB er aràvemi/I1 [a’]ver	ds:conditional+present is:first+singular ds:interrogative	# T4 + rà(v)e
-SFX xB er aràvei/I2 [a’]ver	ds:conditional+present is:first+plural ds:interrogative	# T4 + rà(v)e
-SFX xB er aràvetu/I3 [a’]ver	ds:conditional+present is:second+singular ds:interrogative	# T4 + rà(v)e
-SFX xB er aràveu/I4 [a’]ver	ds:conditional+present is:second+plural ds:interrogative	# T4 + rà(v)e
-SFX xB er aràe/J1 [a’]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
-SFX xB er aràemi/I1 [a’]ver	ds:conditional+present is:first+singular ds:interrogative	# T4 + rà(v)e
-SFX xB er aràe/J2 [a’]ver	ds:conditional+present is:first+plural	# T4 + rà(v)e
-SFX xB er aràei/I2 [a’]ver	ds:conditional+present is:first+plural ds:interrogative	# T4 + rà(v)e
-SFX xB er aràe/J3 [a’]ver	ds:conditional+present is:second+singular	# T4 + rà(v)e
-SFX xB er aràetu/I3 [a’]ver	ds:conditional+present is:second+singular ds:interrogative	# T4 + rà(v)e
-SFX xB er aràe/J4 [a’]ver	ds:conditional+present is:second+plural	# T4 + rà(v)e
-SFX xB er aràeu/I4 [a’]ver	ds:conditional+present is:second+plural ds:interrogative	# T4 + rà(v)e
-SFX xB er arave/J7j7 [a’]ver	ds:conditional+present is:third	# T4 + rà(v)e
-SFX xB er aríselo/I7 [a’]ver	ds:conditional+present is:third ds:interrogative	# T4 + rà(v)e
-SFX xB er aríseƚo/i7 [a’]ver	ds:conditional+present is:third ds:interrogative	# T4 + rà(v)e
+SFX xB er évami/I1 [aʼ]ver	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)a
+SFX xB er évomi/I1 [aʼ]ver	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)o
+SFX xB er évitu/I3 [aʼ]ver	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)i
+SFX xB ver éitu/I3 [aʼ]ver	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)i
+SFX xB er évïu/I4 [aʼ]ver	ds:indicative+imperfect is:second+plural ds:interrogative	# T2 + (v)i
+SFX xB er éndoge/Q0 [aʼ]ver	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo
+SFX xB er éntoge/Q0 [aʼ]ver	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto = T7 + nto
+SFX xB 0 émoi/I2 [aʼ]ver	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo
+SFX xB 0 ímoi/I2 [aʼ]ver	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo
+SFX xB 0 àvemi/I1 [aʼ]ver	ds:conditional+present is:first+singular ds:interrogative	# T4 + rà(v)e
+SFX xB 0 àvei/I2 [aʼ]ver	ds:conditional+present is:first+plural ds:interrogative	# T4 + rà(v)e
+SFX xB 0 àvetu/I3 [aʼ]ver	ds:conditional+present is:second+singular ds:interrogative	# T4 + rà(v)e
+SFX xB 0 àveu/I4 [aʼ]ver	ds:conditional+present is:second+plural ds:interrogative	# T4 + rà(v)e
+SFX xB er émoi/I2 [aʼ]ver	ds:indicative+present is:first+plural ds:interrogative	# T5 + (g)avémo
+SFX xB er ímoi/I2 [aʼ]ver	ds:indicative+present is:first+plural ds:interrogative	# T5 + avímo
+SFX xB r va/J5j5 [aʼ]ver	ds:indicative+imperfect is:third	# T2 + (v)a
+SFX xB er évelo/I5 [aʼ]ver	ds:indicative+imperfect is:third ds:interrogative	# T2 + (v)a
+SFX xB ver éelo/I5 [aʼ]ver	ds:indicative+imperfect is:third ds:interrogative	# T2 + (v)a
+SFX xB er éa/J5j5 [aʼ]ver	ds:indicative+imperfect is:third	# T2 + (v)a
+SFX xB ver éa/J5j5 [aʼ]ver	ds:indicative+imperfect is:third	# T2 + (v)a
+SFX xB er éelo/I5 [aʼ]ver	ds:indicative+imperfect is:third ds:interrogative	# T2 + (v)a
+SFX xB r ndo/PlP7 [aʼ]ver	ds:gerund+simple	# T2 + ndo = T7 + ndo
+SFX xB er éndogelo/Ql [aʼ]ver	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
+SFX xB er éndogeƚo/Q7 [aʼ]ver	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
+SFX xB r nto/PlP7 [aʼ]ver	ds:gerund+simple	# T2 + nto = T7 + nto
+SFX xB er éntogelo/Ql [aʼ]ver	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
+SFX xB er èntogelo/Ql [aʼ]ver	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
+SFX xB 0 à/J5j5 [aʼ]ver	ds:indicative+future is:third	# T4 + rà
+SFX xB 0 aƚo/i5 [aʼ]ver	ds:indicative+future is:third ds:interrogative	# T4 + rà
+SFX xB 0 alo/I5 [aʼ]ver	ds:indicative+future is:third ds:interrogative	# T4 + rà
+SFX xB 0 ave/J7j7 [aʼ]ver	ds:conditional+present is:third	# T4 + rà(v)e
+SFX xB 0 íselo/I7 [aʼ]ver	ds:conditional+present is:third ds:interrogative	# T4 + rà(v)e
+SFX xB er è/SlS7 [aʼ]ver	ds:imperative+present is:second+plural	# T5
+SFX xB er é/SlS7 [aʼ]ver	ds:imperative+present is:second+plural	# T5
+SFX xB er ègelo/Dl [aʼ]ver	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5 = T12 + è
+SFX xB er égelo/Dl [aʼ]ver	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5 = T12 + é
+SFX xB er í/SlS7 [aʼ]ver	ds:imperative+present is:second+plural	# T5
+SFX xB er ígelo/Dl [aʼ]ver	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5
+SFX xB er éntogeƚo/Q7 [aʼ]ver	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
+SFX xB er èntogeƚo/Q7 [aʼ]ver	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
+SFX xB 0 íseƚo/i7 [aʼ]ver	ds:conditional+present is:third ds:interrogative	# T4 + rà(v)e
+SFX xB er ègeƚo/D7 [aʼ]ver	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5 = T12 + è
+SFX xB er égeƚo/D7 [aʼ]ver	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5 = T12 + é
+SFX xB er ígeƚo/D7 [aʼ]ver	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5
+SFX xB er évemi/I1 [aʼ]ver	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)e
+SFX xB er évatu/I3 [aʼ]ver	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)a, 2s=3
+SFX xB 0 oni/I2 [aʼ]ver	ds:indicative+future is:first+plural ds:interrogative	# T4 + ron
+SFX xB 0 eni/I2 [aʼ]ver	ds:indicative+future is:first+plural ds:interrogative	# T4 + rén
+SFX xB er arémoi/I2 [aʼ]ver	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo
+SFX xB er arímoi/I2 [aʼ]ver	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo
+SFX xB er arà/J5j5 [aʼ]ver	ds:indicative+future is:third	# T4 + rà
+SFX xB er araƚo/i5 [aʼ]ver	ds:indicative+future is:third ds:interrogative	# T4 + rà
+SFX xB er aralo/I5 [aʼ]ver	ds:indicative+future is:third ds:interrogative	# T4 + rà
+SFX xB ver eroni/I2 [aʼ]ver	ds:indicative+future is:first+plural ds:interrogative	# T4 + ron
+SFX xB ver ereni/I2 [aʼ]ver	ds:indicative+future is:first+plural ds:interrogative	# T4 + rén
+SFX xB ver arémoi/I2 [aʼ]ver	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo
+SFX xB ver arímoi/I2 [aʼ]ver	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo
+SFX xB ver arà/J5j5 [aʼ]ver	ds:indicative+future is:third	# T4 + rà
+SFX xB ver araƚo/i5 [aʼ]ver	ds:indicative+future is:third ds:interrogative	# T4 + rà
+SFX xB ver aralo/I5 [aʼ]ver	ds:indicative+future is:third ds:interrogative	# T4 + rà
+SFX xB er aràvemi/I1 [aʼ]ver	ds:conditional+present is:first+singular ds:interrogative	# T4 + rà(v)e
+SFX xB er aràvei/I2 [aʼ]ver	ds:conditional+present is:first+plural ds:interrogative	# T4 + rà(v)e
+SFX xB er aràvetu/I3 [aʼ]ver	ds:conditional+present is:second+singular ds:interrogative	# T4 + rà(v)e
+SFX xB er aràveu/I4 [aʼ]ver	ds:conditional+present is:second+plural ds:interrogative	# T4 + rà(v)e
+SFX xB er aràe/J1 [aʼ]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
+SFX xB er aràemi/I1 [aʼ]ver	ds:conditional+present is:first+singular ds:interrogative	# T4 + rà(v)e
+SFX xB er aràe/J2 [aʼ]ver	ds:conditional+present is:first+plural	# T4 + rà(v)e
+SFX xB er aràei/I2 [aʼ]ver	ds:conditional+present is:first+plural ds:interrogative	# T4 + rà(v)e
+SFX xB er aràe/J3 [aʼ]ver	ds:conditional+present is:second+singular	# T4 + rà(v)e
+SFX xB er aràetu/I3 [aʼ]ver	ds:conditional+present is:second+singular ds:interrogative	# T4 + rà(v)e
+SFX xB er aràe/J4 [aʼ]ver	ds:conditional+present is:second+plural	# T4 + rà(v)e
+SFX xB er aràeu/I4 [aʼ]ver	ds:conditional+present is:second+plural ds:interrogative	# T4 + rà(v)e
+SFX xB er arave/J7j7 [aʼ]ver	ds:conditional+present is:third	# T4 + rà(v)e
+SFX xB er aríselo/I7 [aʼ]ver	ds:conditional+present is:third ds:interrogative	# T4 + rà(v)e
+SFX xB er aríseƚo/i7 [aʼ]ver	ds:conditional+present is:third ds:interrogative	# T4 + rà(v)e
 
 # vèrbi -ér inregolari: (re)aver
 SFX xC Y 8
@@ -2580,29 +2581,29 @@ SFX xM èser stasto/A1FS èser	ds:participle+passive+weak is:singular+masculine	
 SFX xM èser esendo/P0PlP7 èser	ds:gerund+simple	# T2 + ndo = T7 + ndo
 SFX xM èser esèndo/P0PlP7 èser	ds:gerund+simple	# T2 + ndo = T7 + ndo
 SFX xM èser sendo/P0PlP7 èser	ds:gerund+simple	# T2 + ndo = T7 + ndo
-SFX xM èser ’sendo/P0PlP7 èser	ds:gerund+simple	# T2 + ndo = T7 + ndo
+SFX xM èser ʼsendo/P0PlP7 èser	ds:gerund+simple	# T2 + ndo = T7 + ndo
 SFX xM èser sèndo/P0PlP7 èser	ds:gerund+simple	# T2 + ndo = T7 + ndo
-SFX xM èser ’sèndo/P0PlP7 èser	ds:gerund+simple	# T2 + ndo = T7 + ndo
+SFX xM èser ʼsèndo/P0PlP7 èser	ds:gerund+simple	# T2 + ndo = T7 + ndo
 SFX xM èser siando/P0PlP7FS èser	ds:gerund+simple	# T2 + ndo = T7 + ndo
 SFX xM èser eséndoge/Q0 èser	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo
-SFX xM èser ’séndoge/Q0 èser	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo
+SFX xM èser ʼséndoge/Q0 èser	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo
 SFX xM èser esèndoge/Q0 èser	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo
-SFX xM èser ’sèndoge/Q0 èser	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo
+SFX xM èser ʼsèndoge/Q0 èser	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo
 SFX xM èser esàndoge/Q0 èser	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo
-SFX xM èser ’sàndoge/Q0 èser	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo
+SFX xM èser ʼsàndoge/Q0 èser	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo
 SFX xM èser siàndoge/Q0 èser	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo
 SFX xM èser esento/P0PlP7FS èser	ds:gerund+simple	# T2 + nto = T7 + nto
-SFX xM èser ’sento/P0PlP7FS èser	ds:gerund+simple	# T2 + nto = T7 + nto
+SFX xM èser ʼsento/P0PlP7FS èser	ds:gerund+simple	# T2 + nto = T7 + nto
 SFX xM èser sianto/P0PlP7FS èser	ds:gerund+simple	# T2 + nto = T7 + nto
 SFX xM èser eséntoge/Q0 èser	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto
-SFX xM èser ’séntoge/Q0 èser	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto
+SFX xM èser ʼséntoge/Q0 èser	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto
 SFX xM èser esèntoge/Q0 èser	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto
-SFX xM èser ’sèntoge/Q0 èser	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto
+SFX xM èser ʼsèntoge/Q0 èser	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto
 SFX xM èser esàntoge/Q0 èser	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto
-SFX xM èser ’sàntoge/Q0 èser	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto
+SFX xM èser ʼsàntoge/Q0 èser	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto
 SFX xM èser siàntoge/Q0 èser	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto
 SFX xM èser esènto/P0FS èser	ds:gerund+simple	# T2 + nto
-SFX xM èser ’sènto/P0FS èser	ds:gerund+simple	# T2 + nto
+SFX xM èser ʼsènto/P0FS èser	ds:gerund+simple	# T2 + nto
 SFX xM èser serò/J1I1 èser	ds:indicative+future is:first+singular	# T4 + rò
 SFX xM èser serà/J1I1 èser	ds:indicative+future is:first+singular	# T4 + rà
 SFX xM èser seremo/J2 èser	ds:indicative+future is:first+plural	# T4 + r[éí]mo
@@ -2671,17 +2672,17 @@ SFX xM èser jèrelo/I5 èser	ds:indicative+imperfect is:third ds:interrogative	
 SFX xM èser ɉèrelo/I5 èser	ds:indicative+imperfect is:third ds:interrogative	# T2 + (v)a
 SFX xM èser xèrelo/I5 èser	ds:indicative+imperfect is:third ds:interrogative	# T2 + (v)a
 SFX xM èser eséndogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
-SFX xM èser ’séndogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
+SFX xM èser ʼséndogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
 SFX xM èser esàndogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
-SFX xM èser ’sàndogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
+SFX xM èser ʼsàndogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
 SFX xM èser siàndogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
 SFX xM èser eséntogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
-SFX xM èser ’séntogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
+SFX xM èser ʼséntogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
 SFX xM èser esàntogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
-SFX xM èser ’sàntogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
+SFX xM èser ʼsàntogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
 SFX xM èser siàntogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
 SFX xM èser esèntogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
-SFX xM èser ’sèntogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
+SFX xM èser ʼsèntogelo/Ql èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
 SFX xM èser seríselo/I7 èser	ds:conditional+present is:third ds:interrogative	# T4 + rà(v)e
 SFX xM èser sè/S0SlS7D0 èser	ds:imperative+present is:second+plural	# T5 = 12 + é
 SFX xM èser sé/S0SlS7D0 èser	ds:imperative+present is:second+plural	# T5 = 12 + é
@@ -2694,17 +2695,17 @@ SFX xM èser jèreƚo/i5 èser	ds:indicative+imperfect is:third ds:interrogative
 SFX xM èser ɉèreƚo/i5 èser	ds:indicative+imperfect is:third ds:interrogative	# T2 + (v)a
 SFX xM èser xèreƚo/i5 èser	ds:indicative+imperfect is:third ds:interrogative	# T2 + (v)a
 SFX xM èser eséndogeƚo/Q7 èser	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
-SFX xM èser ’séndogeƚo/Q7 èser	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
+SFX xM èser ʼséndogeƚo/Q7 èser	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
 SFX xM èser esàndogeƚo/Q7 èser	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
-SFX xM èser ’sàndogeƚo/Q7 èser	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
+SFX xM èser ʼsàndogeƚo/Q7 èser	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
 SFX xM èser siàndogeƚo/Q7 èser	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
 SFX xM èser eséntogeƚo/Q7 èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
-SFX xM èser ’séntogeƚo/Q7 èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
+SFX xM èser ʼséntogeƚo/Q7 èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
 SFX xM èser esàntogeƚo/Q7 èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
-SFX xM èser ’sàntogeƚo/Q7 èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
+SFX xM èser ʼsàntogeƚo/Q7 èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
 SFX xM èser siàntogeƚo/Q7 èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
 SFX xM èser esèntogeƚo/Q7 èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
-SFX xM èser ’sèntogeƚo/Q7 èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
+SFX xM èser ʼsèntogeƚo/Q7 èser	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
 SFX xM èser seràƚo/i5 èser	ds:indicative+future is:third ds:interrogative	# T4 + rà
 SFX xM èser seríseƚo/i7 èser	ds:conditional+present is:third ds:interrogative	# T4 + rà(v)e
 SFX xM èser sègeƚo/D7 èser	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5
@@ -2756,7 +2757,7 @@ SFX xM èser xélo/I5 èser	ds:indicative+present is:third ds:interrogative	# T1
 SFX xM èser sígeƚo/D7 èser	ds:imperative+present is:second+singular ds:pronomenal+locative	# T9
 SFX xM èser séƚo/i5 èser	ds:indicative+present is:third ds:interrogative	# T10
 SFX xM èser éƚo/i5 èser	ds:indicative+present is:third ds:interrogative	# T10
-SFX xM èser ’ƚo/i5 èser	ds:indicative+present is:third ds:interrogative	# T10
+SFX xM èser ʼƚo/i5 èser	ds:indicative+present is:third ds:interrogative	# T10
 SFX xM ser ƚo/i5 èser	ds:indicative+present is:third ds:interrogative	# T10
 SFX xM èser xéƚo/i5 èser	ds:indicative+present is:third ds:interrogative	# T10
 SFX xM ser re/J1 èser	ds:indicative+imperfect is:first+singular	# T2 + (v)e
@@ -3612,7 +3613,7 @@ SFX xR dar atu/I3 ardar	ds:indicative+present is:second+singular ds:interrogativ
 SFX xR dar à/J3I3 ardar	ds:indicative+future is:second+singular	# T4 + rà
 SFX xR dar é/J4I4 ardar	ds:indicative+future is:second+plural	# T4 + ré
 SFX xR dar í/J4I4 ardar	ds:indicative+future is:second+plural	# T4 + rí
-SFX xR rdo ’ vardo	ds:imperative+present is:second+singular	# T9
+SFX xR rdo ʼ vardo	ds:imperative+present is:second+singular	# T9
 SFX xR do a/S0 ardo	ds:imperative+present is:second+singular	# T9
 SFX xR domi agen/D0 àrdomi	ds:imperative+present is:second+singular ds:pronomenal+genitive+locative	# T9
 SFX xR do a/SlS7N0 ardo	ds:imperative+present is:second+singular	# T9
@@ -4677,21 +4678,21 @@ SFX j5 0 -ƚe [^ai]	is:plural+femenine ds:interrogative
 
 # interogativi tèrŧa parsona (takài senŧa èle vanesente)
 SFX I5 Y 7
-SFX I5 o a [’aàeèéin]lo	is:singular+femenine ds:interrogative
-SFX I5 o i [’aàeèéin]lo	is:plural+masculine ds:interrogative
+SFX I5 o a [ʼaàeèéin]lo	is:singular+femenine ds:interrogative
+SFX I5 o i [ʼaàeèéin]lo	is:plural+masculine ds:interrogative
 SFX I5 alo ili alo	is:plural+masculine ds:interrogative	# Arkade, Sprexian, Povejan
 SFX I5 elo ili elo	is:plural+masculine ds:interrogative	# Arkade, Sprexian, Povejan
-SFX I5 o e [’aàeèéin]lo	is:plural+femenine ds:interrogative
+SFX I5 o e [ʼaàeèéin]lo	is:plural+femenine ds:interrogative
 SFX I5 alo ile alo	is:plural+femenine ds:interrogative	# Arkade, Sprexian, Povejan
 SFX I5 elo ile elo	is:plural+femenine ds:interrogative	# Arkade, Sprexian, Povejan
 
 # interogativi tèrŧa parsona (takài ko èle vanesente)
 SFX i5 Y 7
-SFX i5 o a [’aàeèéi]ƚo	is:singular+femenine ds:interrogative
-SFX i5 o i [’aàeèéi]ƚo	is:plural+masculine ds:interrogative
+SFX i5 o a [ʼaàeèéi]ƚo	is:singular+femenine ds:interrogative
+SFX i5 o i [ʼaàeèéi]ƚo	is:plural+masculine ds:interrogative
 SFX i5 aƚo iƚi aƚo	is:plural+masculine ds:interrogative	# Arkade, Sprexian, Povejan
 SFX i5 eƚo iƚi eƚo	is:plural+masculine ds:interrogative	# Arkade, Sprexian, Povejan
-SFX i5 o e [’aàeèéi]ƚo	is:plural+femenine ds:interrogative
+SFX i5 o e [ʼaàeèéi]ƚo	is:plural+femenine ds:interrogative
 SFX i5 aƚo iƚe aƚo	is:plural+femenine ds:interrogative	# Arkade, Sprexian, Povejan
 SFX i5 eƚo iƚe eƚo	is:plural+femenine ds:interrogative	# Arkade, Sprexian, Povejan
 
@@ -6517,38 +6518,38 @@ PFX $3 0 ki/Z0 .
 
 # paròle ŧonkàe a ‘l iniŧio
 PFX '0 Y 15
-PFX '0 u ’ u
-PFX '0 a ’ a
-PFX '0 e ’ e
-PFX '0 è ’ è
-PFX '0 d ’ d
-PFX '0 ga ’ ga
-PFX '0 g ’ go
-PFX '0 g ’ gó
-PFX '0 i ’ i
-PFX '0 kon ’ kon
-PFX '0 in ’ int
-PFX '0 kò ’ kò
-PFX '0 l ’ l
-PFX '0 p ’ p
-PFX '0 v ’ v
+PFX '0 u ʼ u
+PFX '0 a ʼ a
+PFX '0 e ʼ e
+PFX '0 è ʼ è
+PFX '0 d ʼ d
+PFX '0 ga ʼ ga
+PFX '0 g ʼ go
+PFX '0 g ʼ gó
+PFX '0 i ʼ i
+PFX '0 kon ʼ kon
+PFX '0 in ʼ int
+PFX '0 kò ʼ kò
+PFX '0 l ʼ l
+PFX '0 p ʼ p
+PFX '0 v ʼ v
 
 # paròle ŧonkàe a la fine
 SFX '9 Y 17
-SFX '9 n ’ n
-SFX '9 r ’ r
-SFX '9 u ’ u
-SFX '9 ra ’ ra
-SFX '9 xa ’ xa
-SFX '9 me ’ me
-SFX '9 te ’ te
-SFX '9 do ’ do	# (kuan‘ + C)
-SFX '9 ko ’ ko
-SFX '9 to ’ nto	# sol ke vanti na konsonante (ex. 'tan‘ bèl')
-SFX '9 to ’ tuto	# sol ke vanti na èse+konsonante e `t` (ex. 'tu‘ stà', 'tu‘ ‘té ‘n momènt')
-SFX '9 to ’ sto
-SFX '9 o ’ [^n]to
-SFX '9 a ’ [^rx]a
-SFX '9 e ’ [^mt]e
-SFX '9 o ’ [^dkt]o
-SFX '9 ove ó’ ove
+SFX '9 n ʼ n
+SFX '9 r ʼ r
+SFX '9 u ʼ u
+SFX '9 ra ʼ ra
+SFX '9 xa ʼ xa
+SFX '9 me ʼ me
+SFX '9 te ʼ te
+SFX '9 do ʼ do	# (kuan‘ + C)
+SFX '9 ko ʼ ko
+SFX '9 to ʼ nto	# sol ke vanti na konsonante (ex. 'tan‘ bèl')
+SFX '9 to ʼ tuto	# sol ke vanti na èse+konsonante e `t` (ex. 'tu‘ stà', 'tu‘ ‘té ‘n momènt')
+SFX '9 to ʼ sto
+SFX '9 o ʼ [^n]to
+SFX '9 a ʼ [^rx]a
+SFX '9 e ʼ [^mt]e
+SFX '9 o ʼ [^dkt]o
+SFX '9 ove óʼ ove
