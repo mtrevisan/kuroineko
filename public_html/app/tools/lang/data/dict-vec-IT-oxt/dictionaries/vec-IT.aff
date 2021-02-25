@@ -4522,11 +4522,13 @@ SFX I4 0 u [èéí]	ds:interrogative
 SFX I4 0 o [èéí]	ds:interrogative
 
 # interogativi tèrŧa parsona (stakài senŧa èle vanesente)
-SFX J5 Y 12
+SFX J5 Y 14
 SFX J5 a e-lo a	is:singular+masculine ds:interrogative
 SFX J5 a e-la a	is:singular+femenine ds:interrogative
 SFX J5 a e-li a	is:plural+masculine ds:interrogative
 SFX J5 a e-le a	is:plural+femenine ds:interrogative
+SFX J5 a i-li a	is:plural+masculine ds:interrogative	# Arkade, Sprexian, Povejan
+SFX J5 a i-le a	is:plural+femenine ds:interrogative	# Arkade, Sprexian, Povejan
 SFX J5 i e-lo i	is:singular+masculine ds:interrogative
 SFX J5 i e-la i	is:singular+femenine ds:interrogative
 SFX J5 i e-li i	is:plural+masculine ds:interrogative
@@ -4537,11 +4539,13 @@ SFX J5 0 -li [^ai]	is:plural+masculine ds:interrogative
 SFX J5 0 -le [^ai]	is:plural+femenine ds:interrogative
 
 # interogativi tèrŧa parsona (stakài ko èle vanesente)
-SFX j5 Y 12
+SFX j5 Y 14
 SFX j5 a e-ƚo a	is:singular+masculine ds:interrogative
 SFX j5 a e-ƚa a	is:singular+femenine ds:interrogative
 SFX j5 a e-ƚi a	is:plural+masculine ds:interrogative
 SFX j5 a e-ƚe a	is:plural+femenine ds:interrogative
+SFX j5 a i-ƚi a	is:plural+masculine ds:interrogative	# Arkade, Sprexian, Povejan
+SFX j5 a i-ƚe a	is:plural+femenine ds:interrogative	# Arkade, Sprexian, Povejan
 SFX j5 i e-ƚo i	is:singular+masculine ds:interrogative
 SFX j5 i e-ƚa i	is:singular+femenine ds:interrogative
 SFX j5 i e-ƚi i	is:plural+masculine ds:interrogative
@@ -4552,16 +4556,22 @@ SFX j5 0 -ƚi [^ai]	is:plural+masculine ds:interrogative
 SFX j5 0 -ƚe [^ai]	is:plural+femenine ds:interrogative
 
 # interogativi tèrŧa parsona (takài senŧa èle vanesente)
-SFX I5 Y 3
-SFX I5 o a lo	is:singular+femenine ds:interrogative
-SFX I5 o i lo	is:plural+masculine ds:interrogative
-SFX I5 o e lo	is:plural+femenine ds:interrogative
+SFX I5 Y 6
+SFX I5 o a [‘aàeèéin]lo	is:singular+femenine ds:interrogative
+SFX I5 alo ila alo	is:singular+femenine ds:interrogative	# Arkade, Sprexian, Povejan
+SFX I5 o i [‘aàeèéin]lo	is:plural+masculine ds:interrogative
+SFX I5 alo ili alo	is:plural+masculine ds:interrogative	# Arkade, Sprexian, Povejan
+SFX I5 o e [‘aàeèéin]lo	is:plural+femenine ds:interrogative
+SFX I5 alo ile alo	is:plural+femenine ds:interrogative	# Arkade, Sprexian, Povejan
 
 # interogativi tèrŧa parsona (takài ko èle vanesente)
-SFX i5 Y 3
-SFX i5 o a ƚo	is:singular+femenine ds:interrogative
-SFX i5 o i ƚo	is:plural+masculine ds:interrogative
-SFX i5 o e ƚo	is:plural+femenine ds:interrogative
+SFX i5 Y 6
+SFX i5 o a [‘aàeèéi]ƚo	is:singular+femenine ds:interrogative
+SFX i5 aƚo iƚa aƚo	is:singular+femenine ds:interrogative	# Arkade, Sprexian, Povejan
+SFX i5 o i [‘aàeèéi]ƚo	is:plural+masculine ds:interrogative
+SFX i5 aƚo iƚi aƚo	is:plural+masculine ds:interrogative	# Arkade, Sprexian, Povejan
+SFX i5 o e [‘aàeèéi]ƚo	is:plural+femenine ds:interrogative
+SFX i5 aƚo iƚe aƚo	is:plural+femenine ds:interrogative	# Arkade, Sprexian, Povejan
 
 # interogativi kondiŧional prexente prima parsona plural (stakài)
 SFX J6 Y 1
