@@ -5471,7 +5471,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pic",			"s",			1,	1,	"a",	"1854",			"Xbrigar.",
 "picin",			"in",			1,	3,	"a",	"1867",			"Far deventar pikolo.",
 "picol",			"in",			1,	1,	"a",	"1854",			"",
-"pieđ",			"",			1,	2,	"g",	"1775",			"Afidar, asekurar.",
+"pieđ",			"",			1,	2,	"g",	"1310",			"Afidar, asekurar.",
 "pieg",			"",			1,	2,	"g",	"1560",			"",
 "pieg",			"des",		1,	2,	"g",	"1854",			"Spiegar.",
 "pieg",			"in",			1,	2,	"g",	"1867",			"",
