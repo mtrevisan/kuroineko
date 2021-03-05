@@ -4300,6 +4300,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "méd",			"",			3,	2,	"g",	"1900",			"(veronexe) Mièder.",
 "međ",			"",			1,	1,	"a",	"",				"",
 "međ",			"destra",	1,	1,	"a",	"1775",			"",
+"međ",			"entre",		1,	1,	"a",	"1312",			"(veneŧian)",
 "međ",			"fra",		1,	1,	"a",	"",				"",
 "međ",			"infra",		1,	1,	"a",	"1598",			"",
 "međ",			"inter",		1,	1,	"a",	"",				"",
