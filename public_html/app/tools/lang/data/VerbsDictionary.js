@@ -2959,6 +2959,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kans",			"s",			1,	1,	"g",	"1854",			"",
 "kant",			"",			1,	1,	"g",	"1775",			"",
 "kant",			"des",		1,	1,	"g",	"1852",			"Xvejar, skòter.",
+"kant",			"en",			1,	1,	"g",	"1376",			"(veneŧian)",
 "kant",			"in",			1,	1,	"g",	"1847",			"Stupir.",
 "kant",			"s",			1,	1,	"g",	"1896",			"",
 "kantar",		"",			1,	4,	"g",	"1852",			"Kantikiar frekuentemente e mal.",
