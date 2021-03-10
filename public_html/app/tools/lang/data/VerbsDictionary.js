@@ -417,6 +417,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bateđ",			"dex",		1,	3,	"a",	"1775",			"",
 "bateđ",			"re",			1,	3,	"a",	"",				"",
 "batel",			"",			1,	3,	"g",	"1775",			"",
+"batidur",		"",			1,	5,	"a",	"",				"(veneŧian)",
 "batiđ",			"",			1,	3,	"a",	"1474",			"",
 "batiđ",			"dex",		1,	3,	"a",	"1854",			"",
 "batiđ",			"re",			1,	3,	"a",	"1854",			"",
