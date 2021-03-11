@@ -5510,6 +5510,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pikot",			"",			1,	3,	"g",	"1852",			"Pikietar.",
 "pil",			"",			1,	1,	"a",	"1775",			"Brilar el rixo/méjo/orđo.",
 "pil",			"es",			1,	1,	"a",	"1796",			"",
+"pil",			"in",			1,	1,	"a",	"1497",			"(veneŧian)",
 "pilastr",		"",			1,	3,	"g",	"1512",			"",
 "pilon",			"in",			1,	3,	"g",	"1900",			"(veronexe) Inpalar.",
 "pilorŧ",		"s",			1,	3,	"g",	"1896",			"",
