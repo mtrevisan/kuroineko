@@ -6048,6 +6048,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "renŧin",		"",			1,	4,	"a",	"",				"Skurtar.",
 "renŧiñ",		"",			1,	4,	"a",	"1884",			"Ranŧiñar.",
 "reñ",			"",			1,	1,	"a",	"1775",			"",
+"resíst",		"",			3,	3,	"a",	"1660",			"(veneŧian) Rexíster.",
 "respexol",		"",			1,	4,	"a",	"",				"Apénder, sostenerse a kalkosa.",
 "rest",			"a",			1,	1,	"g",	"",				"",
 "restel",		"",			1,	4,	"g",	"1590",			"",
