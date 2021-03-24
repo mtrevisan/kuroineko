@@ -5867,6 +5867,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pro",			"in",			1,	2,	"a",	"",				"",
 "prob",			"",			1,	2,	"g",	"1433",			"",
 "prob",			"in",			1,	2,	"g",	"1509",			"",
+"prob",			"kon",		1,	2,	"g",	"1660",			"(veneŧian)",
 "prob",			"re",			1,	2,	"g",	"1474",			"",
 "prok",			"s",			1,	2,	"g",	"1851",			"Supurar na ferida.",
 "pront",			"",			1,	2,	"a",	"",				"(bixiak)",
