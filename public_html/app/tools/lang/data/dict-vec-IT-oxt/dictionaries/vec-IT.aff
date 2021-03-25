@@ -85,7 +85,7 @@ ICONV ’ ʼ
 ICONV ‘ ʼ
 
 # frequently switched character groups
-REP 168
+REP 169
 REP a à
 REP e è
 REP e é
@@ -174,6 +174,7 @@ REP ^kïo$ ki_ʼƚo
 REP ^kïi$ ki_ʼƚi
 REP ^kïa$ ki_ʼƚa
 REP ^kïe$ ki_ʼƚe
+REP ^kofà$ koʼ_fà
 REP ae aƚe
 REP àe àƚe
 REP ee eƚe
@@ -4853,7 +4854,7 @@ SFX A1 0 o [^aieo]
 SFX A1 0 a [^aieo]
 SFX A1 0 i [^aieo]	is:plural+masculine
 SFX A1 0 e [^aieo]	is:plural+femenine
-SFX A1 o a o
+SFX A1 o a o	is:singular+femenine
 SFX A1 o e o	is:plural
 SFX A1 o i [^i]o	is:plural+masculine
 SFX A1 io i io	is:plural+masculine
@@ -4863,9 +4864,9 @@ SFX A2 Y 6
 SFX A2 0 a [^aieo]
 SFX A2 0 i [^aieo]	is:plural
 SFX A2 0 e [^aieo]	is:plural
-SFX A2 a e [^iƚ]a	is:plural
-SFX A2 a e [iƚ]a	is:plural
-SFX A2 a i a	is:plural
+SFX A2 a e [^iƚ]a	is:plural+femenine
+SFX A2 a e [iƚ]a	is:plural+femenine
+SFX A2 a i a	is:plural+femenine
 
 # sostantivi plurali femenili, ajetivi de tèrŧa klase (-a/e)
 SFX F0 Y 5
