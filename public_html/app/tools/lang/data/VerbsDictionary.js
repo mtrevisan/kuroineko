@@ -2961,6 +2961,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kanpanot",		"",			1,	6,	"g",	"1855",			"(belumat)",
 "kanpanot",		"s",			1,	6,	"g",	"",				"(bixiak)",
 "kanpañ",		"",			1,	4,	"g",	"1896",			"",
+"kanpiđ",		"",			1,	4,	"a",	"1660",			"(veneŧian)",
 "kanpion",		"",			1,	5,	"a",	"1854",			"",
 "kans",			"s",			1,	1,	"g",	"1854",			"",
 "kant",			"",			1,	1,	"g",	"1775",			"",
