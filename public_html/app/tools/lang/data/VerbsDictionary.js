@@ -6038,6 +6038,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "regol",			"",			1,	1,	"g",	"1450",			"",
 "regol",			"x",			1,	1,	"g",	"",				"",
 "regon",			"",			1,	3,	"g",	"1450",			"Regolar, (Coxa) rasetar.",
+"regul",			"",			1,	1,	"g",	"1660",			"(veneŧian)",
+"regul",			"x",			1,	1,	"g",	"",				"",
 "rejon",			"",			1,	3,	"a",	"1509",			"",
 "rejot",			"",			1,	3,	"g",	"1560",			"",
 "rem",			"",			1,	1,	"a",	"2004",			"",
