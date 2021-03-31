@@ -3779,6 +3779,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "langor",		"x",			4,	6,	"a",	"1560",			"Venir manko.",
 "langu",			"",			5,	1,	"g",	"1854",			"",
 "langu",			"x",			5,	1,	"g",	"",				"Indebolir, infiakir, afamar.",
+"làngu",			"",			3,	2,	"g",	"1660",			"(veneŧian)",
 "langur",		"x",			4,	6,	"a",	"1796",			"Infiakir.",
 "languid",		"",			4,	7,	"a",	"1867",			"",
 "languid",		"i",			4,	7,	"a",	"1876",			"",
