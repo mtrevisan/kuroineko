@@ -4058,7 +4058,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "madređ",		"",			1,	4,	"a",	"1829",			"Matriđar.",
 "madur",			"",			1,	3,	"a",	"1560",			"",
 "madur",			"stra",		1,	3,	"a",	"1775",			"",
-"mađeg",			"",			1,	1,	"g",	"1829",			"Ingrasar un kanpo.",
+"mađeg",			"",			1,	3,	"g",	"1829",			"Ingrasar un kanpo.",
 "mađor",			"",			1,	3,	"a",	"1852",			"",
 "maestr",		"",			1,	2,	"g",	"",				"(bixiak)",
 "maestr",		"a",			1,	2,	"g",	"",				"",
