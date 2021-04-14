@@ -3293,9 +3293,6 @@ indevénomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:inte
 devinar/t0l070n0t1P0PlP7Q0QlQ7+0	po:verb ds:infinitive+simple
 devino/t8n8tAlA7AJ1FS+0	po:verb ds:indicative+present is:first+singular st:indevinar
 devínomi/t8n8tAlA7AI1+0	po:verb ds:indicative+present is:first+singular ds:interrogative st:indevinar
-indevixar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
-indevixo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:indevixar dp:in
-indevíxomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:indevixar dp:in
 devorŧiar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple dp:de
 devòrŧio/T8N8tBlBJ1I1	po:verb ds:indicative+present is:first+singular st:devorŧiar dp:de
 devorsiar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:de
@@ -3460,9 +3457,6 @@ dixàrtomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:inter
 dixnar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:de
 dixno/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:dixnar dp:de
 díxnomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:dixnar dp:de
-indivixar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
-indivixo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:indivixar dp:in
-indivíxomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:indivixar dp:in
 indoar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
 indòo/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:indoar dp:in
 dobar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
@@ -24261,6 +24255,12 @@ víxomi/t8n8tAlA7AI1.0	po:verb ds:indicative+present is:first+singular ds:interr
 avixar/t0l070n0t1P0PlP7Q0QlQ7^2	po:verb ds:infinitive+simple dp:ad
 avixo/t8n8tAlA7AJ1FS^2	po:verb ds:indicative+present is:first+singular st:avixar dp:ad
 avíxomi/t8n8tAlA7AI1^2	po:verb ds:indicative+present is:first+singular ds:interrogative st:avixar dp:ad
+devixar/t0l070n0t1P0PlP7Q0QlQ7+0	po:verb ds:infinitive+simple dp:de
+devixo/t8n8tAlA7AJ1FS+0	po:verb ds:indicative+present is:first+singular st:indevixar dp:de
+devíxomi/t8n8tAlA7AI1+0	po:verb ds:indicative+present is:first+singular ds:interrogative st:indevixar dp:de
+divixar/t0l070n0t1P0PlP7Q0QlQ7+0	po:verb ds:infinitive+simple dp:de
+divixo/t8n8tAlA7AJ1FS+0	po:verb ds:indicative+present is:first+singular st:indivixar dp:de
+divíxomi/t8n8tAlA7AI1+0	po:verb ds:indicative+present is:first+singular ds:interrogative st:indivixar dp:de
 ravixar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:ad dp:re
 ravixo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:ravixar dp:ad dp:re
 ravíxomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:ravixar dp:ad dp:re
@@ -25833,7 +25833,6 @@ moltonon/A2B1Pd	po:adjective_qualificative is:singular+masculine
 no/'9	po:adverb
 nò	po:adverb
 otimamente/FSw0	po:adverb
-òtimo/A1FS	po:adjective_qualificative is:singular+masculine
 peđor/X0Pd	po:adjective_qualificative is:singular
 penultimamente/FSw0	po:adverb
 penúltimo/A1FS	po:adjective_qualificative is:singular+masculine
@@ -27948,6 +27947,7 @@ Presin/M0	po:noun is:singular+masculine+non_enumerable
 Sirokal/Z0	po:noun is:singular+masculine+non_enumerable
 Sirokaƚe/Z0	po:noun is:singular+masculine+non_enumerable
 Siròko/FSZ0	po:noun is:singular+masculine+non_enumerable
+Tramontana/Z0	po:noun is:singular+masculine+non_enumerable
 Tramontanexe/FSZ0	po:noun is:singular+masculine+non_enumerable
 / fèste
 Batimarso/FSZ0	po:noun is:singular+masculine+non_enumerable
@@ -28134,7 +28134,6 @@ armeƚinèr/M0v7	po:noun is:singular+masculine
 armeƚinèra/F0v7	po:noun is:singular+femenine
 arminèr/M0v0	po:noun is:singular+masculine
 arminèra/F0v0	po:noun is:singular+femenine
-armonía/F0	po:noun is:singular+femenine
 armònego/A1FS	po:adjective_qualificative is:singular+masculine
 arna/F0	po:noun is:singular+femenine
 arnèr/M0v0	po:noun is:singular+masculine
@@ -29413,7 +29412,6 @@ gladiator/A2Pd	po:noun is:singular+masculine
 gliserina/F0	po:noun is:singular+femenine
 gliŧerina/F0	po:noun is:singular+femenine
 glukòxio/M0	po:noun is:singular+masculine
-godimento/M0FSPdVr	po:noun is:singular+masculine ds:mento
 goernador/M0Pdv0	po:noun is:singular+masculine
 goernadora/F0v0	po:noun is:singular+femenine
 goldon/MFB1Pd	po:noun is:singular+masculine+meregan
@@ -31490,7 +31488,7 @@ ortografía/F0	po:noun is:singular+femenine
 ortogràfego/A1FS	po:adjective_qualificative is:singular+masculine
 osadura/F0d0eT-1+0	po:noun is:singular+femenine
 osakòl/M0B1V3	po:noun is:singular+masculine
-osexin/M0	po:noun is:singular+masculine
+osexin/M0	po:noun is:singular+masculine st:òso ds:in
 osidril/MFVm	po:noun is:singular+masculine
 osokòl/M0B1V3	po:noun is:singular+masculine
 ostàkol/M0B2PdV3	po:noun is:singular+masculine
@@ -31783,7 +31781,6 @@ pianamente/FSw0	po:adverb
 pianđotamento/M0FSPdVr	po:noun is:singular+masculine ds:mento
 pianeto/M0FSPdiNo0o4	po:noun is:singular+masculine
 pianin	po:adverb st:pian ds:in
-pianta/F0iN	po:noun is:singular+femenine
 piantador/M0Pdv0-1+0.0^6*0^1	po:noun is:singular+masculine
 piantadora/F0v0-1+0.0^6*0^1	po:noun is:singular+femenine
 piantal/MFB1Vm	po:noun is:singular+masculine
@@ -32085,7 +32082,6 @@ prosimaŧion/F0B1PdV3	po:noun is:singular+femenine
 prosimia/F0	po:noun is:singular+femenine
 prosperitade/F0y0	po:noun is:singular+femenine
 prospetivamente/FSw0	po:adverb
-prospetivo/A1FSA5	po:adjective_qualificative is:singular+masculine
 protònego/A1FS	po:adjective_qualificative is:singular+masculine
 protòtepo/M0FS	po:noun is:singular+masculine
 protrativamente/FSw0	po:adverb
@@ -32326,7 +32322,6 @@ rif	po:interjection
 riga/F0eT	po:noun is:singular+femenine
 rii	po:noun is:plural+masculine st:rio
 rikeŧa/F0V3^6	po:noun is:singular+femenine
-rima/F0	po:noun is:singular+femenine
 rinfreskador/M0Pdv0	po:noun is:singular+masculine
 rinfreskadora/F0v0	po:noun is:singular+femenine
 rinkresimento/M0FSPdVr	po:noun is:singular+masculine ds:mento
@@ -32596,8 +32591,6 @@ sensiente/X0FSVr:0	po:adjective_qualificative is:singular
 senso/M0FSVr:0+0	po:noun is:singular+masculine
 sentategamente/FSw0	po:adverb
 sentàtego/A1FS	po:adjective_qualificative is:singular+masculine
-sentimento/M0FSPdVr:0.0^6^7	po:noun is:singular+masculine ds:mento
-sentina/F0eLe7Vs	po:noun is:singular+femenine
 sentraƚe/X0	po:adjective_qualificative is:singular
 senŧiente/X0FSVr:0	po:adjective_qualificative is:singular
 señador/M0Pdv0-0+0:0	po:noun is:singular+masculine
@@ -33258,7 +33251,7 @@ strukamento/M0FSPdVr	po:noun is:singular+masculine ds:mento
 strukaŧion/F0B1PdV3	po:noun is:singular+femenine
 strukolamento/M0FSPdVr	po:noun is:singular+masculine ds:mento
 strukoƚamento/M0PdVR	po:noun is:singular+masculine ds:mento
-strumento/M0FSPdVr	po:noun is:singular+masculine ds:mento
+strumento/M0FSPdVr+0	po:noun is:singular+masculine ds:mento
 strupiador/M0Pdv0	po:noun is:singular+masculine
 strupiadora/F0v0	po:noun is:singular+femenine
 strupiadura/F0d0eT	po:noun is:singular+femenine
@@ -33774,7 +33767,6 @@ vaka/F0r0aZaSeT	po:noun is:singular+femenine
 val/F0o0o1o2o3o4	po:noun is:singular+femenine
 valegòta/F0	po:noun is:singular+femenine st:val ds:òto
 valensa/F0Vr	po:noun is:singular+femenine
-valente/X0FSPdVr@0	po:adjective_qualificative is:singular
 valenŧa/F0Vr	po:noun is:singular+femenine
 valia/F0V3	po:noun is:singular+femenine
 validura/F0d0eT	po:noun is:singular+femenine
@@ -34152,7 +34144,7 @@ donđèla/F0o0o1o2o3o4	po:noun is:singular+femenine
 donxèl/F0V3	po:noun is:singular+masculine
 donxèla/F0o0o1o2o3o4	po:noun is:singular+femenine
 donxèƚa/F0o7o1o2o3o4	po:noun is:singular+femenine
-Dòxe/MF	po:noun is:singular+masculine
+Dòxe/M0	po:noun is:singular+masculine
 drapo/M0FSeLe7eTm0	po:noun is:singular+masculine
 đardin/M0eTVp	po:noun is:singular+masculine
 đentilòmeni/Vp	po:noun is:plural+masculine st:đentilòmo
@@ -36661,7 +36653,7 @@ gorga/F0	po:noun is:singular+femenine
 gosa/F0eT	po:noun is:singular+femenine
 gostaròl/M0B1V3	po:adjective_qualificative is:singular+masculine
 gostaròla/F0V3	po:adjective_qualificative is:singular+femenine
-gotexin/M0	po:noun is:singular+masculine
+gotexin/M0	po:noun is:singular+masculine st:gòto ds:in
 gotèr/M0v0	po:noun is:singular+masculine
 gotèra/F0v0	po:noun is:singular+femenine
 goŧa/F0eT	po:noun is:singular+femenine
@@ -37436,7 +37428,7 @@ leproxo/A1FSPd	po:adjective_qualificative is:singular+masculine
 leska/F0Vp	po:noun is:singular+femenine
 lesteŧa/F0V3	po:noun is:singular+femenine
 letà/Vp	po:adjective is:masculine
-letexin/M0Vp	po:noun is:singular+masculine
+letexin/M0Vp	po:noun is:singular+masculine st:lèto ds:in
 letoril/MF	po:noun is:singular+masculine
 letoriƚe/MFVp	po:noun is:singular+masculine
 letüario/A1Vp	po:noun is:singular+masculine
@@ -46977,7 +46969,6 @@ diversivo/M0FSA5	po:adjective_qualificative is:singular+masculine
 dixania/F0	po:noun is:singular+femenine
 dímito/M0FS	po:noun is:singular+masculine
 dobòto/FS	po:adverb
-dokumento/M0FSPdVr	po:noun is:singular+masculine ds:mento
 domenikan/A2B1	po:noun is:singular+masculine
 domestegeŧa/F0V3	po:noun is:singular+femenine
 dominio/M0^2	po:noun is:singular+masculine
@@ -51415,9 +51406,7 @@ skonbraroƚa/F0v7	po:noun is:singular+femenine
 skonbraroƚo/M0Pdv7	po:noun is:singular+masculine
 skondon	po:adverb
 skonkuaso/M0FS	po:noun is:singular+masculine
-skonsèto/M0FS	po:noun is:singular+masculine
 skontro/M0VriN	po:noun is:singular+masculine
-skonŧèto/M0FS	po:noun is:singular+masculine
 skonvolto/A1FS	po:adjective_qualificative is:singular+masculine
 skonvòlto/A1FS	po:adjective_qualificative is:singular+masculine
 skorería/F0r0	po:noun is:singular+femenine
@@ -59850,7 +59839,6 @@ bat–bat	po:interjection pa:bat pa:bat
 batéximo/M0FS	po:noun is:singular+masculine
 batipani/FS	po:noun is:masculine
 baxarikò	po:noun is:masculine+non_enumerable
-baxe/F0FS	po:noun is:singular+femenine
 bà	po:interjection
 beatitúden/F0B2Pd	po:noun is:singular+femenine
 befèl/M0B1V3	po:noun is:singular+masculine+todesko
@@ -62420,7 +62408,6 @@ straseta/M0	po:noun is:singular+masculine st:strasa ds:eto
 straŧeta/M0	po:noun is:singular+masculine st:straŧa ds:eto
 supialume	po:noun
 supiaƚume	po:noun
-tartana/F0	po:noun is:singular+femenine
 trabàkol/M0B2PdV3	po:noun is:singular+masculine
 ŧatarante/X0Vp	po:noun is:singular
 vergexin/A2	po:noun is:singular+masculine
@@ -62449,6 +62436,7 @@ arbitrio/M0	po:noun is:singular+masculine
 arkiteto/M0FSPd	po:noun is:singular+masculine
 arlièvo/A1	po:noun is:singular+masculine
 armada/F0y0y1iN	po:noun is:singular+femenine
+armonía/F0	po:noun is:singular+femenine
 arte/F0FSeTi0	po:noun is:singular+femenine
 artifisioxo/A1FSPd	po:adjective_qualificative is:singular+masculine
 artifiŧio/M0V3	po:noun is:singular+masculine
@@ -62474,6 +62462,8 @@ baƚorda/F0e1	po:adjective_qualificative is:singular+femenine
 baƚordo/M0e1Pd	po:adjective_qualificative is:singular+masculine
 banbin/A2	po:noun is:singular+masculine
 banko/M0FSr0eTo0o4	po:noun is:singular+masculine
+barbađan/MFB1	po:noun is:singular+masculine
+barbaxan/MFB1	po:noun is:singular+masculine
 bareta/F0	po:noun is:singular+femenine
 basa/F0eToT	po:adjective_qualificative is:singular+femenine
 baseŧa/F0V3	po:noun is:singular+masculine
@@ -62481,6 +62471,7 @@ baso/M0FSeToT	po:adjective_qualificative is:singular+masculine
 baston/MFB1Pd	po:noun is:singular+masculine
 batería/F0r0	po:noun is:singular+femenine
 batifògo/M0	po:noun is:singular+masculine
+baxe/F0FS	po:noun is:singular+femenine
 benedeto/A1FSPd	po:adjective_qualificative is:singular+masculine
 bèl/M0eTo0o4oT	po:adjective_qualificative is:singular+masculine
 bèla/F0eT^6	po:adjective_qualificative is:singular+femenine
@@ -62488,6 +62479,9 @@ bèƚa/F0e1oT^6	po:adjective_qualificative is:singular+femenine
 bèƚo/M0e1o7o4oT^6	po:adjective_qualificative is:singular+masculine
 biankiđin/A2*0	po:noun is:singular+masculine
 biankixin/A2*0	po:noun is:singular+masculine
+biđaría/F0	po:noun is:singular+femenine
+bixaría/F0	po:noun is:singular+femenine
+bixòña	po:noun is:singular+femenine+non_enumerable al:biò
 bokal/MFB1eT	po:adjective_qualificative is:singular+masculine
 bokaƚe/MFe1	po:adjective_qualificative is:singular+masculine
 boletin/M0r0	po:noun is:singular+masculine
@@ -62514,6 +62508,7 @@ cèto/A1FS+0*0	po:adjective_qualificative is:singular+masculine
 còdo/M0FSy0r0eLe7eTiNo0o4	po:noun is:singular+masculine
 danar/M0	po:noun is:singular+masculine
 daseno/FS	po:adverb
+daspò	po:preposition
 defexa/F0	po:noun is:singular+femenine
 defèto/M0FS	po:noun is:singular+masculine
 dekòr/M0	po:noun is:singular+masculine
@@ -62537,10 +62532,12 @@ diƚijensa/F0M1	po:noun is:singular+femenine
 diƚiɉensa/F0M1	po:noun is:singular+femenine
 diminuŧion/F0B1PdV3+0	po:noun is:singular+femenine
 diskorso/M0FSeT	po:noun is:singular+masculine
+distanŧa/F0V3	po:noun is:singular+femenine
 dito/M0FS	po:noun is:singular+masculine
 divin/A2	po:adjective_qualificative is:singular+masculine
 divinitade/F0y0	po:noun is:singular+femenine
 divixion/F0B1Pd	po:noun is:singular+femenine
+dokumento/M0FSPdVr	po:noun is:singular+masculine ds:mento
 domanda/F0iNo0o1o2o3o4	po:noun is:singular+femenine
 don/M0Pd	po:noun is:singular+masculine
 donka/@0	po:adverb
@@ -62627,8 +62624,11 @@ galantería/F0r0	po:noun is:singular+femenine
 gaƚante/X0r0	po:adjective_qualificative is:singular
 gaƚantería/F0r0	po:noun is:singular+femenine
 ganba/F0aTaZaSeTo1o3oT	po:noun is:singular+femenine
+garba/F0eLe7eTiN	po:adjective_qualificative is:singular+femenine
+garbo/M0FSeLe7eTiNo0o1o2o3o4	po:adjective_qualificative is:singular+masculine
 gardenal/MFB1Vm*0	po:noun is:singular+masculine
 glòria/F0	po:noun is:singular+femenine
+godimento/M0FSPdVr	po:noun is:singular+masculine ds:mento
 golfo/M0	po:noun is:singular+masculine
 gomena/F0eT	po:noun is:singular+femenine
 grasioxa/F0eT-1	po:adjective_qualificative is:singular+femenine
@@ -62642,6 +62642,8 @@ gravitade/F0y0	po:noun is:singular+femenine
 gređa/F0V3*0	po:adjective_qualificative is:singular+femenine
 gređo/M0Pdo0o1o2o3o4*0	po:adjective_qualificative is:singular+masculine
 grexo/M0FSPdo0o1o2o3o4*0	po:adjective_qualificative is:singular+masculine
+gril/M0r0eT	po:noun is:singular+masculine
+griƚo/M0r0e1	po:noun is:singular+masculine
 gropo/M0FSPdeLe7eTo0o4	po:noun is:singular+masculine
 guaso/M0FSeT@0	po:noun is:singular+masculine
 guaŧo/M0FSeT@0	po:noun is:singular+masculine
@@ -62697,7 +62699,9 @@ kavalèr/M0v0r0	po:noun is:singular+masculine
 kavalèra/F0v0	po:noun is:singular+femenine
 kavaƚèr/M0v7r0	po:noun is:singular+masculine
 kavaƚèra/F0v7	po:noun is:singular+femenine
+kaxamento/M0FSPdVr@0+0	po:noun is:singular+masculine ds:mento
 kàuxa/F0	po:noun is:singular+femenine
+kièto/A1FS+0	po:adjective_qualificative is:singular+masculine
 kolor/MFi0aZaSiNPd	po:noun is:singular+masculine
 kolorito/A1FS	po:adjective_qualificative is:singular+masculine
 kolòkio/M0	po:noun is:singular+masculine
@@ -62711,18 +62715,19 @@ kondimento/M0FSPdVr	po:noun is:singular+masculine ds:mento
 konfidensa/F0Vr	po:noun is:singular+femenine
 konfidenŧa/F0Vr	po:noun is:singular+femenine
 konfin/MF	po:noun is:singular+masculine
+konflito/M0FS	po:noun is:singular+masculine
 kongrèso/M0FS	po:noun is:singular+masculine
 konkluxion/F0B1Pd	po:noun is:singular+femenine
 konpar/MFx0	po:noun is:singular+masculine
 konplimento/M0FSPdVr	po:noun is:singular+masculine ds:mento
 konsèrva/F0	po:noun is:singular+femenine
-konsèto/M0FS	po:noun is:singular+masculine
+konsèto/M0FS*0	po:noun is:singular+masculine
 konsolaŧion/F0B1PdV3-1*0	po:noun is:singular+femenine
 konsoƚasion/F0Pd-1*0	po:noun is:singular+femenine
 konto/M0FSPdVri0aT	po:noun is:singular+masculine
 kontra	po:adverb
 kontrario/A1+0	po:adjective_qualificative is:singular+masculine
-konŧèto/M0FS	po:noun is:singular+masculine
+konŧèto/M0FS*0	po:noun is:singular+masculine
 konvèrso/A1FS	po:noun is:singular+masculine
 korbame/M0FS*0	po:noun is:singular+masculine
 koretor/A2Pd	po:noun is:singular+masculine
@@ -62740,6 +62745,7 @@ kòñito/M0FS	po:noun is:singular+masculine
 kòpan/M0B2	po:noun is:singular+masculine
 kòpia/F0	po:noun is:singular+femenine
 kòrdo/M0@0.0*0	po:noun is:singular+masculine
+krea/F0	po:noun is:singular+femenine
 kreanŧa/F0V3^7	po:noun is:singular+femenine
 kredensa/F0Vro0o4	po:noun is:singular+femenine
 kredenŧa/F0Vro0o4	po:noun is:singular+femenine
@@ -62788,6 +62794,7 @@ lustro/A1Vp	po:adjective_qualificative is:singular+masculine
 ƚòto/M0	po:adjective_qualificative is:singular+masculine
 ƚume/M0	po:noun is:singular+masculine
 mađor/X0Pd	po:adjective_qualificative is:singular
+maestade/F0y0	po:noun is:singular+femenine
 maestranŧa/F0V3	po:noun is:singular+femenine
 magari	po:interjection
 magra/F0eT	po:adjective_qualificative is:singular+femenine
@@ -62802,6 +62809,7 @@ manèra/F0	po:noun is:singular+femenine
 mañànimo/A1FS	po:adjective_qualificative is:singular+masculine
 maravejoxo/A1FSPd*0	po:adjective_qualificative is:singular+masculine
 maraveɉoxo/A1FSPd*0	po:adjective_qualificative is:singular+masculine
+marexin/M0	po:noun is:singular+masculine st:mar ds:in
 marinareŧa/F0V3	po:noun is:singular+femenine
 mariòl/M0B1V3	po:adjective_qualificative is:singular+masculine
 mariòla/F0V3	po:adjective_qualificative is:singular+femenine
@@ -62822,6 +62830,7 @@ mèsto/A1FS	po:adjective_qualificative is:singular+masculine
 mèta/F0	po:noun is:singular+femenine
 mica/F0	po:noun is:singular+femenine
 minèra/F0	po:noun is:singular+femenine
+miràkol/M0B2PdV3	po:noun is:singular+masculine
 misièr/MF	po:noun is:singular+masculine
 mistro/A1	po:noun is:singular+masculine
 mínimo/A1FS	po:adjective_qualificative is:singular+masculine
@@ -62841,6 +62850,7 @@ muto/A1FS	po:adjective_qualificative is:singular+masculine
 nativo/A1FSA5	po:adjective_qualificative is:singular+masculine
 natural/X0B1Vf*0	po:adjective_qualificative is:singular
 nave/F0eT	po:noun is:singular+femenine
+navegaŧion/F0B1PdV3	po:noun is:singular+femenine
 negromante/X0	po:noun is:singular
 neteŧa/F0V3	po:noun is:singular+masculine
 neto/A1FS	po:adjective_qualificative is:singular+masculine
@@ -62868,6 +62878,7 @@ over	po:conjunction
 òdio/M0	po:noun is:singular+masculine
 òpera/F0	po:noun is:singular+femenine
 òr/M0	po:noun is:singular+masculine
+òtimo/A1FS	po:adjective_qualificative is:singular+masculine
 paexe/M0FSPdi0o0o4	po:noun is:singular+masculine
 palaso/M0FSi0eTiNo0o4	po:noun is:singular+masculine
 palaŧo/M0FSi0eTiNo0o4	po:noun is:singular+masculine
@@ -62892,6 +62903,7 @@ perfèto/A1FS+0*0	po:adjective_qualificative is:singular+masculine
 petulante/X0	po:adjective_qualificative is:singular
 petuƚante/X0	po:adjective_qualificative is:singular
 pèl/MFVf	po:noun is:singular+femenine
+pianta/F0iN	po:noun is:singular+femenine
 piato/M0FSiNeLe7o0o1o2o3o4	po:noun is:singular+masculine
 pietade/F0y0	po:noun is:singular+femenine
 piñata/F0aZaSeLe7iNuZuS	po:noun is:singular+femenine
@@ -62901,13 +62913,15 @@ pitura/F0aZaSeT	po:noun is:singular+femenine
 poèta/A2	po:noun is:singular+masculine
 ponpa/F0eT	po:noun is:singular+femenine
 ponto/A1FSPd	po:adjective_qualificative is:singular+masculine
-ponto/M0FSPd	po:noun is:singular+masculine
+ponto/M0FSPdVr	po:noun is:singular+masculine
+pontura/F0	po:noun is:singular+femenine
 potente/X0FSPdVr^2+0	po:adjective_qualificative is:singular
 pòpul/M0B2V3	po:noun is:singular+masculine
 pràtiko/A1FS^7	po:adjective_qualificative is:singular+masculine
 preminensa/F0Vr	po:noun is:singular+femenine
 preminenŧa/F0Vr	po:noun is:singular+femenine
 premura/F0eT	po:noun is:singular+femenine
+presta	po:adverb
 prèmio/M0	po:noun is:singular+masculine
 privilèjo/M0V3	po:noun is:singular+masculine
 priviƚèjo/M0V7	po:noun is:singular+masculine
@@ -62925,6 +62939,7 @@ prononŧia/F0V3	po:noun is:singular+femenine
 pronto/A1FSPd	po:adjective_qualificative is:singular+masculine
 propòxito/M0FS	po:noun is:singular+masculine
 prosèso/M0FS	po:noun is:singular+masculine
+prospetivo/A1FSA5	po:adjective_qualificative is:singular+masculine
 proteŧion/F0B1PdV3	po:noun is:singular+femenine
 protèsto/A1FS	po:noun is:singular+masculine
 proŧèso/M0FS	po:noun is:singular+masculine
@@ -62939,6 +62954,8 @@ puƚido/A1	po:adjective_qualificative is:singular+masculine
 puƚisía/F0+0	po:noun is:singular+femenine
 puño/M0FSeToT	po:noun is:singular+masculine
 pupa/F0oT	po:noun is:singular+femenine
+pur/M0+0	po:adjective_qualificative is:singular+masculine
+pura/F0+0	po:adjective_qualificative is:singular+femenine
 puritade/F0y0	po:noun is:singular+femenine
 púdiko/A1FS	po:adjective_qualificative is:singular+masculine
 raro/A1FS	po:adjective_qualificative is:singular+masculine
@@ -62946,6 +62963,7 @@ raseña/F0	po:noun is:singular+femenine
 raxa/F0eT	po:adjective_qualificative is:singular+femenine
 raxo/M0FSeT	po:adjective_qualificative is:singular+masculine
 ređina/F0	po:noun is:singular+femenine
+refèrta/F0	po:noun is:singular+femenine
 regal/X0B1Vs	po:adjective_qualificative is:singular
 regaƚe/X0Vs	po:adjective_qualificative is:singular
 relòjo/M0B1aZaSeTVs	po:noun is:singular+masculine
@@ -62962,6 +62980,7 @@ rexina/F0	po:noun is:singular+femenine
 rèsto/A1FS	po:noun is:singular+masculine
 rigoroxa/F0eT	po:adjective_qualificative is:singular+femenine
 rigoroxo/M0FSPdeT	po:adjective_qualificative is:singular+masculine
+rima/F0	po:noun is:singular+femenine
 ríxego/M0FS	po:noun is:singular+masculine
 robusteŧa/F0V3	po:noun is:singular+femenine
 robusto/A1FS	po:adjective_qualificative is:singular+masculine
@@ -62997,6 +63016,8 @@ seko/M0FSPdiN^6	po:adjective_qualificative is:singular+masculine
 selestial/X0B1	po:adjective_qualificative is:singular
 seƚestiaƚe/X0	po:adjective_qualificative is:singular
 sensa/'9	po:preposition
+sentimento/M0FSPdVr:0.0^6^7	po:noun is:singular+masculine ds:mento
+sentina/F0eLe7Vs	po:noun is:singular+femenine
 senŧa/'9	po:preposition
 serco/M0PdeLe7o0o4	po:noun is:singular+masculine
 seren/A1B1PdVs	po:adjective_qualificative is:singular+masculine
@@ -63015,6 +63036,8 @@ singuƚar/X0	po:adjective_qualificative is:singular
 sinpatía/F0	po:noun is:singular+femenine
 sinplisitade/F0y0	po:noun is:singular+femenine
 sinpliŧitade/F0y0	po:noun is:singular+femenine
+sinsièr/A2	po:adjective_qualificative is:singular+masculine
+sinŧièr/A2	po:adjective_qualificative is:singular+masculine
 skarsèla/F0eTo0o4	po:noun is:singular+femenine
 skarsèƚa/F0e1o7o4	po:noun is:singular+femenine
 skàtola/F0V3	po:noun is:singular+femenine
@@ -63050,18 +63073,22 @@ stàtüa/F0	po:noun is:singular+femenine
 stela/F0eTo0o4	po:noun is:singular+femenine
 steƚa/F0e1o7o4	po:noun is:singular+femenine
 stèril/X0Vf	po:adjective_qualificative is:singular
-stile/M0	po:noun is:singular+masculine
-stiƚe/M0	po:noun is:singular+masculine
+stil/MF	po:noun is:singular+masculine
+stiƚe/MF	po:noun is:singular+masculine
 stima/F0.0	po:noun is:singular+femenine
 stival/MFB1eTiNo0o4	po:noun is:singular+masculine
 stivaƚe/MFe1iNo7o4	po:noun is:singular+masculine
 straka/F0eTiN	po:adjective_qualificative is:singular+femenine
 strako/M0FSeTiN	po:adjective_qualificative is:singular+masculine
+stravaganŧa/F0V3	po:noun is:singular+femenine
 stròlogo/A1FS@0	po:noun is:singular+masculine
 stròƚogo/A1@0	po:noun is:singular+masculine
 stròpa/F0eT	po:noun is:singular+femenine
 suđo	po:adverb
 suđo	po:preposition
+sujèto/A1FSo0o1o2o3o4	po:noun is:singular+masculine
+suɉèto/A1FSo0o1o2o3o4	po:noun is:singular+masculine
+suprèmo/A1	po:adjective_qualificative is:singular+masculine
 susèso/M0FS	po:noun is:singular+masculine
 sutil/M0eTiNo0o1o2o3o4^6	po:adjective_qualificative is:singular+masculine
 sutila/F0eTiN^6	po:adjective_qualificative is:singular+femenine
@@ -63088,6 +63115,7 @@ tantina	po:adverb is:femenine st:tanto ds:in
 tanto/M0FSiNo0o1o2o3o4'9	po:adjective_qualificative is:singular+masculine
 tanton	po:adverb st:tanto ds:on
 tarifa/F0	po:noun is:singular+femenine+àrabo
+tartana/F0	po:noun is:singular+femenine
 tàvola/F0V3	po:noun is:singular+femenine
 teatro/M0iNo0o4	po:noun is:singular+masculine
 tenpio/M0	po:noun is:singular+masculine
@@ -63135,6 +63163,7 @@ ustinaŧion/F0B1PdV3	po:noun is:singular+femenine
 vaga/F0eT	po:adjective_qualificative is:singular+femenine
 vagante/X0	po:noun is:singular
 vago/M0FSeT	po:adjective_qualificative is:singular+masculine
+valente/X0FSPdVr@0	po:adjective_qualificative is:singular
 valor/MFPd	po:noun is:singular+masculine
 valoroxo/A1FSPd	po:adjective_qualificative is:singular+masculine
 vaƚor/MFPd	po:noun is:singular+masculine
@@ -63185,31 +63214,8 @@ xanxa/F0	po:noun is:singular+femenine
 xguaso/M0FSeTo0o4	po:noun is:singular+masculine
 xguaŧo/M0FSeTo0o4	po:noun is:singular+masculine
 xornada/F0y0y1aZaSeTiN	po:noun is:singular+femenine
-gril/M0r0eT	po:noun is:singular+masculine
-griƚo/M0r0e1	po:noun is:singular+masculine
-sinsièr/A2	po:adjective_qualificative is:singular+masculine
-sinŧièr/A2	po:adjective_qualificative is:singular+masculine
-garbo/M0FSeLe7eTiNo0o1o2o3o4	po:adjective_qualificative is:singular+masculine
-garba/F0eLe7eTiN	po:adjective_qualificative is:singular+femenine
-presta	po:adverb
-sujèto/A1FSo0o1o2o3o4	po:noun is:singular+masculine
-suɉèto/A1FSo0o1o2o3o4	po:noun is:singular+masculine
-kièto/A1FS+0	po:adjective_qualificative is:singular+masculine
-daspò	po:preposition
-suprèmo/A1	po:adjective_qualificative is:singular+masculine
-krea/F0	po:noun is:singular+femenine
-bixòña	po:noun is:singular+femenine+non_enumerable al:biò
-miràkol/M0B2PdV3	po:noun is:singular+masculine
-maestade/F0y0	po:noun is:singular+femenine
-barbaxan/MFB1	po:noun is:singular+masculine
-barbađan/MFB1	po:noun is:singular+masculine
-pur/M0+0	po:adjective_qualificative is:singular+masculine
-pura/F0+0	po:adjective_qualificative is:singular+femenine
-refèrta/F0	po:noun is:singular+femenine
-konflito/M0FS	po:noun is:singular+masculine
-pontura/F0	po:noun is:singular+femenine
 
 
-/ 57/726
+/ 59/726
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ–‘
