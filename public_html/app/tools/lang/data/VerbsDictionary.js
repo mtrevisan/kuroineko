@@ -4308,6 +4308,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "medexin",		"",			1,	5,	"a",	"1829",			"",
 "medi",			"",			1,	1,	"g",	"",				"",
 "medi",			"re",			1,	1,	"g",	"1867",			"",
+"medit",			"",			1,	1,	"g",	"1660",			"(veneŧian)",
 "méd",			"",			3,	2,	"g",	"1900",			"(veronexe) Mièder.",
 "međ",			"",			1,	1,	"a",	"",				"",
 "međ",			"destra",	1,	1,	"a",	"1775",			"",
