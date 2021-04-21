@@ -3292,6 +3292,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kolp",			"des",		1,	1,	"a",	"1829",			"",
 "kolp",			"in",			1,	1,	"a",	"1475",			"",
 "kolp",			"s",			1,	1,	"a",	"1829",			"",
+"kolpiđ",		"",			1,	4,	"a",	"1660",			"(veneŧian)",
 "kolt",			"",			1,	1,	"a",	"1852",			"",
 "kolt",			"re",			1,	1,	"a",	"1854",			"Rekòker la tera ke la ga resevúo el sol e lʼ aria.",
 "koltiv",		"",			1,	4,	"a",	"1867",			"",
