@@ -1756,6 +1756,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "feŧi",			"re",			1,	1,	"a",	"1560",			"",
 "feŧion",		"",			1,	4,	"a",	"",				"",
 "feŧion",		"a",			1,	4,	"a",	"1855",			"(belumat)",
+"feŧion",		"per",		1,	4,	"a",	"1660",			"(veneŧian)",
 "fever",			"",			1,	1,	"a",	"1560",			"",
 "fex",			"s",			1,	1,	"a",	"",				"Krear na krèpa.",
 "feton",			"",			1,	3,	"a",	"",				"Kórer xvelto.",
