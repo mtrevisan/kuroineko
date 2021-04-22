@@ -4573,6 +4573,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "mormor",		"",			1,	1,	"g",	"1463",			"",
 "mort",			"tra",		4,	4,	"a",	"",				"",
 "mort",			"stra",		4,	4,	"a",	"1590",			"",
+"mortal",		"i",			1,	4,	"g",	"1660",			"(veneŧian)",
 "mortal",		"in",			1,	4,	"g",	"1867",			"",
 "mortiđ",		"a",			1,	4,	"a",	"1980",			"(vitoriexe)",
 "morŧ",			"",			1,	1,	"g",	"",				"(bixiak) Adentelar.",
