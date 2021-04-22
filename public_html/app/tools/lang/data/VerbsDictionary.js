@@ -5870,6 +5870,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "prim",			"in",			1,	2,	"a",	"1512",			"Doparar par la prima volta.",
 "prím",			"dexin",		3,	2,	"a",	"1775",			"Xganar, desuàder, carir.",
 "prím",			"in",			3,	2,	"a",	"1829",			"",
+"prím",			"o",			3,	2,	"a",	"1660",			"(veneŧian)",
 "prím",			"re",			3,	2,	"a",	"1854",			"",
 "prinŧipi",		"",			1,	5,	"a",	"1775",			"",
 "priv",			"",			1,	2,	"a",	"",				"",
