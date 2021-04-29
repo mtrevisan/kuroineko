@@ -422,6 +422,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "batiđ",			"",			1,	3,	"a",	"1474",			"",
 "batiđ",			"dex",		1,	3,	"a",	"1854",			"",
 "batiđ",			"re",			1,	3,	"a",	"1854",			"",
+"batiment",		"",			1,	5,	"a",	"1660",			"(veneŧian) (voxe de pitura)",
 "batiment",		"x",			1,	5,	"a",	"1775",			"(voxe de pitura)",
 "batoc",			"",			1,	3,	"g",	"",				"",
 "batoc",			"x",			1,	3,	"g",	"1775",			"Skanpanar.",
