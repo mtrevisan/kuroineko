@@ -6317,6 +6317,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sam",			"",			1,	1,	"g",	"1847",			"Siamar.",
 "san",			"",			1,	1,	"g",	"",				"",
 "san",			"ar",			1,	1,	"g",	"1560",			"Resanar.",
+"san",			"re",			1,	1,	"g",	"1660",			"(veneŧian)",
 "sanbi",			"",			1,	1,	"g",	"1894",			"Tocar in do su ʼl steso piato.",
 "sand",			"",			4,	4,	"a",	"1560",			"Exaudir.",
 "sangon",		"",			1,	1,	"g",	"1590",			"Kovrir de sangoe.",
