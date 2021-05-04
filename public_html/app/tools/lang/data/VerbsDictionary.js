@@ -6008,6 +6008,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ranx",			"",			1,	1,	"g",	"",				"",
 "rap",			"",			1,	1,	"g",	"1775",			"Agrinŧar, korugar.",
 "rap",			"in",			1,	1,	"g",	"1829",			"",
+"rap",			"",			4,	3,	"g",	"1660",			"(veneŧian)",
 "rapol",			"",			1,	1,	"g",	"1900",			"(veronexe) Spegaŧar.",
 "ras",			"",			1,	1,	"g",	"1561",			"Raskiar, spelar, xgrafar.",
 "rasc",			"",			1,	1,	"g",	"1852",			"Far forŧa ko la boka par tirar fora el kataro dal peto, spurgar.",
