@@ -6402,6 +6402,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sekond",		"",			1,	3,	"a",	"1867",			"",
 "sekuestr",		"",			1,	4,	"g",	"1867",			"",
 "seku",			"",			5,	1,	"g",	"1412",			"",
+"sekul",			"stra",		1,	1,	"g",	"",				"Trasekular.",
+"sekul",			"tra",		1,	1,	"g",	"1660",			"(veneŧian)",
 "sekur",			"",			1,	3,	"a",	"1867",			"",
 "sekur",			"ra",			1,	3,	"a",	"1775",			"",
 "seg",			"",			1,	1,	"a",	"1560",			"",
