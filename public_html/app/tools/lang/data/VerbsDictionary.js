@@ -6215,6 +6215,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "roxol",			"",			1,	1,	"g",	"1900",			"(veronexe)",
 "rü",				"",			1,	1,	"a",	"",				"Rivar.",
 "rubrik",		"",			1,	1,	"a",	"1829",			"",
+"rud",			"e",			4,	3,	"a",	"1660",			"(veneŧian)",
 "ruđ",			"",			1,	1,	"a",	"1775",			"Ringiar de i kani, frular de i oxei, far rumore, rinproverar.",
 "ruđen",			"",			4,	5,	"a",	"1854",			"",
 "ruđen",			"dex",		4,	5,	"a",	"1867",			"",
