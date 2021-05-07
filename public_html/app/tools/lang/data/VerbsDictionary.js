@@ -3103,6 +3103,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kartel",		"in",			1,	4,	"g",	"1775",			"Dar la prima man de kalŧina.",
 "karteŧ",		"",			1,	4,	"a",	"1847",			"Sòn ke fà la seda ʼte i àbiti.",
 "kartiđ",		"",			1,	4,	"a",	"1775",			"",
+"kartiđ",		"s",			1,	4,	"a",	"1660",			"(veneŧian)",
 "karton",		"in",			1,	4,	"a",	"1867",			"",
 "kartoŧ",		"des",		1,	4,	"g",	"",				"Kavar ʼl involukro, Kavar ʼl involukro de na panoca.",
 "kartoŧ",		"in",			1,	4,	"g",	"1854",			"",
