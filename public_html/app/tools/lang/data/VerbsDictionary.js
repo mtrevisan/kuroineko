@@ -4827,7 +4827,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ñanfeđ",		"x",			1,	4,	"a",	"1896",			"",
 "ñanfiđ",		"x",			1,	4,	"a",	"1867",			"",
 "ñaol",			"",			1,	1,	"g",	"1775",			"Miagolar, lamentar.",
-"ñaol",			"x",			1,	1,	"g",	"1775",			"Miagolar.",
+"ñaol",			"x",			1,	1,	"g",	"1660",			"(veneŧian) Miagolar.",
 "ñar",			"",			1,	1,	"g",	"1775",			"Xnidar.",
 "ñar",			"dex",		1,	1,	"g",	"1775",			"Xnidar.",
 "ñar",			"i",			1,	1,	"g",	"1775",			"Anidar.",
