@@ -3474,7 +3474,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "korn",			"in",			1,	1,	"g",	"",				"",
 "korn",			"s",			1,	1,	"g",	"1854",			"",
 "kornaŧ",		"s",			1,	4,	"g",	"1821",			"Koŧar.",
-"korniđ",		"",			1,	4,	"a",	"1854",			"Méter na kornixe.",
+"korniđ",		"",			1,	4,	"a",	"1660",			"(veneŧian) Méter na kornixe.",
 "korniđ",		"in",			1,	4,	"a",	"1854",			"Méter na kornixe.",
 "korniđ",		"s",			1,	4,	"a",	"",				"Kavar na kornixe.",
 "koron",			"",			1,	3,	"a",	"1851",			"Méter na korona.",
