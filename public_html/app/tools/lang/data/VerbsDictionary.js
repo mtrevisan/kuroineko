@@ -5788,6 +5788,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "port",			"tras",		1,	1,	"g",	"",				"",
 "portel",		"s",			1,	4,	"g",	"",				"",
 "porŧiđ",		"",			1,	4,	"a",	"1796",			"",
+"porŧion",		"pro",		1,	5,	"a",	"1660",			"(veneŧian)",
 "porŧion",		"spro",		1,	5,	"a",	"1775",			"",
 "pòrđ",			"",			3,	1,	"g",	"1590",			"",
 "pòrđ",			"ins",		3,	1,	"g",	"1560",			"",

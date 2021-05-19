@@ -85,7 +85,7 @@ ICONV ’ ʼ
 ICONV ‘ ʼ
 
 # frequently switched character groups
-REP 169
+REP 171
 REP a à
 REP e è
 REP e é
@@ -255,6 +255,8 @@ REP úeu úƚu
 REP aeú aƚú
 REP oeú oƚú
 REP ueú uƚú
+REP ^dañora$ d_añora
+REP ^doparo$ dòparo
 
 
 FLAG long
