@@ -8041,6 +8041,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧup",			"in",			1,	1,	"a",	"1867",			"",
 "ŧupeg",			"",			1,	1,	"a",	"1590",			"Sorbir, cucar.",
 "ŧurl",			"",			1,	1,	"a",	"1852",			"Delirar, molestar, inkietar.",
+"ŧurm",			"",			1,	1,	"a",	"1660",			"(veneŧian)",
 "ŧuŧ",			"",			1,	1,	"a",	"1775",			"Sucar.",
 "ŧux",			"in",			1,	1,	"a",	"1855",			"(belumat) Inŧukir.",
 "ŧux",			"in",			4,	3,	"a",	"1855",			"(belumat) Inŧukir.",
