@@ -1182,6 +1182,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "deñ",			"dex",		1,	1,	"a",	"1867",			"",
 "deñ",			"in",			1,	1,	"a",	"1463",			"Rexòlverse a mansion, konportamenti, xeneralmente reteñúi úmili.",
 "deñ",			"index",		1,	1,	"a",	"1590",			"",
+"deñ",			"x",			1,	1,	"a",	"1660",			"(veneŧian)",
 "deren",			"",			1,	3,	"a",	"1847",			"(polexan) Sfiankar, strakar.",
 "deren",			"x",			1,	3,	"a",	"",				"Sfiankar, strakar.",
 "desten",		"",			1,	1,	"g",	"",				"",
