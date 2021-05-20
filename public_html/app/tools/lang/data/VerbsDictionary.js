@@ -4042,6 +4042,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "luk",			"stra",		1,	1,	"a",	"",				"Far straneŧe.",
 "lum",			"",			1,	1,	"a",	"1775",			"Peskar de note ko na lanterna, oservar, spiar.",
 "lument",		"",			1,	3,	"a",	"1590",			"Lamentar.",
+"lumiđ",			"",			1,	3,	"a",	"1660",			"(veneŧian)",
 "lumin",			"",			1,	1,	"a",	"1851",			"",
 "lumin",			"ar",			1,	1,	"a",	"1560",			"",
 "lumin",			"i",			1,	1,	"a",	"1855",			"",
