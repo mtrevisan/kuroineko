@@ -7749,6 +7749,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tribü",			"des",		4,	5,	"a",	"1412",			"",
 "tribü",			"re",			4,	5,	"a",	"1463",			"",
 "tribul",		"",			1,	2,	"a",	"1900",			"(veronexe) Tribolar.",
+"tribut",		"",			1,	4,	"a",	"1660",			"(veneŧian)",
 "trid",			"",			1,	2,	"a",	"1775",			"Tritar.",
 "trid",			"s",			1,	2,	"a",	"1867",			"Publegar el nome de ki ke ʼl vien nomenà a na maɉistraura.",
 "tridol",		"",			1,	2,	"a",	"1775",			"",
