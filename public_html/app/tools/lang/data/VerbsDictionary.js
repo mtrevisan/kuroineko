@@ -1505,6 +1505,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "estenü",		"",			1,	3,	"g",	"",				"",
 "etik",			"in",			4,	4,	"a",	"1829",			"Intixikir.",
 "estim",			"",			1,	0,	"a",	"1564",			"",
+"etern",			"",			1,	3,	"g",	"1660",			"(veneŧian)",
 "eterniđ",		"",			1,	5,	"a",	"1867",			"",
 "evidenŧi",		"",			1,	4,	"a",	"",				"",
 "evínŧ",			"",			3,	2,	"a",	"1867",			"",
