@@ -6268,7 +6268,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ruviɉ",			"",			1,	3,	"a",	"1775",			"Inbatufolar.",
 "ruviɉ",			"dex",		1,	3,	"a",	"1847",			"Xvòlxer.",
 "ruvin",			"",			1,	3,	"a",	"1896",			"Rovinar.",
-"rux",			"",			4,	3,	"a",	"1829",			"Ruɉir.",
+"rúđ",			"",			3,	1,	"a",	"1660",			"(veneŧian)",
+"ruđ",			"",			4,	3,	"a",	"1829",			"Ruɉir.",
 
 "sa",				"",			2,	1,	"g",	"1560",			"Saver.",
 "sa",				"pre",		2,	1,	"g",	"",				"",
