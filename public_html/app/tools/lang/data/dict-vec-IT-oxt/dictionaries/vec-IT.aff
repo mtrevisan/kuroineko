@@ -85,7 +85,7 @@ ICONV ’ ʼ
 ICONV ‘ ʼ
 
 # frequently switched character groups
-REP 171
+REP 173
 REP a à
 REP e è
 REP e é
@@ -257,6 +257,8 @@ REP oeú oƚú
 REP ueú uƚú
 REP ^dañora$ d_añora
 REP ^doparo$ dòparo
+REP ^debòto$ de_bòto
+REP ^deboto$ de_boto
 
 
 FLAG long
@@ -4897,7 +4899,7 @@ SFX MF 0 i [aèélnr]	is:plural+masculine
 SFX M1 Y 4
 SFX M1 a ia/F0 a	is:singular+femenine
 SFX M1 e io e	is:singular+masculine
-SFX M1 o io o	is:singular+masculine
+SFX M1 o io [^i]o	is:singular+masculine
 SFX M1 0 io [lnr]	is:singular+masculine
 
 # sostantivi plurali senŧa đèner (-e > -i, -[lnr] > -[lnr]i)
