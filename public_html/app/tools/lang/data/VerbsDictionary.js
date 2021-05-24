@@ -3229,6 +3229,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kiet",			"in",			1,	2,	"a",	"1980",			"(vitoriexe)",
 "kiɉ",			"",			1,	1,	"a",	"1847",			"Petenar el lino.",
 "kil",			"",			1,	1,	"a",	"1867",			"Far un repoxion despò ʼver mañà.",
+"kimeriđ",		"",			1,	5,	"a",	"1660",			"(veneŧian)",
 "kin",			"in",			1,	1,	"a",	"1560",			"",
 "kink",			"",			1,	2,	"a",	"1876",			"",
 "kink",			"s",			1,	2,	"a",	"1999",			"(longobardo) Evitar, skivar, spontar.",
