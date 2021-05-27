@@ -2297,9 +2297,9 @@ SFX xD ñer nlo/I5 èñer	ds:indicative+present is:third ds:interrogative	# T10
 # vèrbi -ér inregolari: (des|re)(c|ti?)oler, (ben|mal|re)(vu?|‘)oler
 # FIXME vòjo/voi
 SFX xE Y 108
-SFX xE ler r/P0PlP7R0RlR7 oler	ds:infinitive+simple	# T1
+SFX xE ler r/P0PlP7 oler	ds:infinitive+simple	# T1
 SFX xE ler re oler	ds:infinitive+simple	# T1 + r(e)
-SFX xE oler òr/P0PlP7R0RlR7 oler	ds:infinitive+simple	# T1
+SFX xE oler òr/P0PlP7 oler	ds:infinitive+simple	# T1
 SFX xE oler òre oler	ds:infinitive+simple	# T1 + r(e)
 SFX xE ler go/J1 [ci]oler	ds:indicative+present is:first+singular	# T8 + o
 SFX xE ler gomi/I1 [ci]oler	ds:indicative+present is:first+singular ds:interrogative	# T8 + o
@@ -3742,27 +3742,33 @@ SFX P0 0 -ven [raeoi]	ds:pronomenal+reflexive
 SFX P0 0 -vene [raeoi]	ds:pronomenal+reflexive
 
 # vèrbi pronomenali (stakài ko èle no vanesente)
-SFX Pl Y 24
+SFX Pl Y 30
+SFX Pl 0 -gel [raeo]	is:singular+masculine ds:pronomenal+locative
 SFX Pl 0 -gelo [raeo]	is:singular+masculine ds:pronomenal+locative
 SFX Pl 0 -gela [raeo]	is:singular+femenine ds:pronomenal+locative
 SFX Pl 0 -geli [raeo]	is:plural+masculine ds:pronomenal+locative
 SFX Pl 0 -gele [raeo]	is:plural+femenine ds:pronomenal+locative
+SFX Pl 0 -l [raeo]	is:singular+masculine ds:pronomenal+accusative
 SFX Pl 0 -lo [raeo]	is:singular+masculine ds:pronomenal+accusative
 SFX Pl 0 -la [raeo]	is:singular+femenine ds:pronomenal+accusative
 SFX Pl 0 -li [raeo]	is:plural+masculine ds:pronomenal+accusative
 SFX Pl 0 -le [raeo]	is:plural+femenine ds:pronomenal+accusative
+SFX Pl 0 -mel [raeo]	is:singular+masculine ds:pronomenal+reflexive
 SFX Pl 0 -melo [raeo]	is:singular+masculine ds:pronomenal+reflexive
 SFX Pl 0 -mela [raeo]	is:singular+femenine ds:pronomenal+reflexive
 SFX Pl 0 -meli [raeo]	is:plural+masculine ds:pronomenal+reflexive
 SFX Pl 0 -mele [raeo]	is:plural+femenine ds:pronomenal+reflexive
+SFX Pl 0 -sel [raeo]	is:singular+masculine ds:pronomenal+reflexive
 SFX Pl 0 -selo [raeo]	is:singular+masculine ds:pronomenal+reflexive
 SFX Pl 0 -sela [raeo]	is:singular+femenine ds:pronomenal+reflexive
 SFX Pl 0 -seli [raeo]	is:plural+masculine ds:pronomenal+reflexive
 SFX Pl 0 -sele [raeo]	is:plural+femenine ds:pronomenal+reflexive
+SFX Pl 0 -tel [raeo]	is:singular+masculine ds:pronomenal+reflexive
 SFX Pl 0 -telo [raeo]	is:singular+masculine ds:pronomenal+reflexive
 SFX Pl 0 -tela [raeo]	is:singular+femenine ds:pronomenal+reflexive
 SFX Pl 0 -teli [raeo]	is:plural+masculine ds:pronomenal+reflexive
 SFX Pl 0 -tele [raeo]	is:plural+femenine ds:pronomenal+reflexive
+SFX Pl 0 -vel [raeo]	is:singular+masculine ds:pronomenal+reflexive
 SFX Pl 0 -velo [raeo]	is:singular+masculine ds:pronomenal+reflexive
 SFX Pl 0 -vela [raeo]	is:singular+femenine ds:pronomenal+reflexive
 SFX Pl 0 -veli [raeo]	is:plural+masculine ds:pronomenal+reflexive
@@ -3880,15 +3886,18 @@ SFX Q0 tu ven itu	ds:pronomenal+reflexive
 SFX Q0 tu vene itu	ds:pronomenal+reflexive
 
 # vèrbi pronomenali (takài ko èle no vanesente)
-SFX Ql Y 87
+SFX Ql Y 107
+SFX Ql ar àrgel ar	is:singular+masculine ds:pronomenal+locative
 SFX Ql ar àrgelo ar	is:singular+masculine ds:pronomenal+locative
 SFX Ql ar àrgeli ar	is:plural+masculine ds:pronomenal+locative
 SFX Ql ar àrgela ar	is:singular+femenine ds:pronomenal+locative
 SFX Ql ar àrgele ar	is:plural+femenine ds:pronomenal+locative
+SFX Ql er érgel er	is:singular+masculine ds:pronomenal+locative
 SFX Ql er érgelo er	is:singular+masculine ds:pronomenal+locative
 SFX Ql er érgeli er	is:plural+masculine ds:pronomenal+locative
 SFX Ql er érgela er	is:singular+femenine ds:pronomenal+locative
 SFX Ql er érgele er	is:plural+femenine ds:pronomenal+locative
+SFX Ql ir írgel ir	is:singular+masculine ds:pronomenal+locative
 SFX Ql ir írgelo ir	is:singular+masculine ds:pronomenal+locative
 SFX Ql ir írgeli ir	is:plural+masculine ds:pronomenal+locative
 SFX Ql ir írgela ir	is:singular+femenine ds:pronomenal+locative
@@ -3900,70 +3909,87 @@ SFX Ql 0 lo r	is:singular+masculine ds:pronomenal+accusative
 SFX Ql 0 la r	is:singular+femenine ds:pronomenal+accusative
 SFX Ql 0 li r	is:plural+masculine ds:pronomenal+accusative
 SFX Ql 0 le r	is:plural+femenine ds:pronomenal+accusative
+SFX Ql gelo l gelo	is:singular+masculine ds:pronomenal+accusative
 SFX Ql gelo lo gelo	is:singular+masculine ds:pronomenal+accusative
 SFX Ql gelo la gelo	is:singular+femenine ds:pronomenal+accusative
 SFX Ql gelo li gelo	is:plural+masculine ds:pronomenal+accusative
 SFX Ql gelo le gelo	is:plural+femenine ds:pronomenal+accusative
+SFX Ql ar àrmel ar	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql ar àrmelo ar	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql ar àrmeli ar	is:plural+masculine ds:pronomenal+reflexive
 SFX Ql ar àrmela ar	is:singular+femenine ds:pronomenal+reflexive
 SFX Ql ar àrmele ar	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql er érmel er	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql er érmelo er	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql er érmeli er	is:plural+masculine ds:pronomenal+reflexive
 SFX Ql er érmela er	is:singular+femenine ds:pronomenal+reflexive
 SFX Ql er érmele er	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql ir írmel ir	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql ir írmelo ir	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql ir írmeli ir	is:plural+masculine ds:pronomenal+reflexive
 SFX Ql ir írmela ir	is:singular+femenine ds:pronomenal+reflexive
 SFX Ql ir írmele ir	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql gelo mel gelo	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql gelo melo gelo	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql gelo mela gelo	is:singular+femenine ds:pronomenal+reflexive
 SFX Ql gelo meli gelo	is:plural+masculine ds:pronomenal+reflexive
 SFX Ql gelo mele gelo	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql ar àrsel ar	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql ar àrselo ar	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql ar àrseli ar	is:plural+masculine ds:pronomenal+reflexive
 SFX Ql ar àrsela ar	is:singular+femenine ds:pronomenal+reflexive
 SFX Ql ar àrsele ar	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql er érsel er	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql er érselo er	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql er érseli er	is:plural+masculine ds:pronomenal+reflexive
 SFX Ql er érsela er	is:singular+femenine ds:pronomenal+reflexive
 SFX Ql er érsele er	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql ir írsel ir	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql ir írselo ir	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql ir írseli ir	is:plural+masculine ds:pronomenal+reflexive
 SFX Ql ir írsela ir	is:singular+femenine ds:pronomenal+reflexive
 SFX Ql ir írsele ir	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql gelo sel gelo	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql gelo selo gelo	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql gelo sela gelo	is:singular+femenine ds:pronomenal+reflexive
 SFX Ql gelo seli gelo	is:plural+masculine ds:pronomenal+reflexive
 SFX Ql gelo sele gelo	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql ar àrtel ar	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql ar àrtelo ar	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql ar àrteli ar	is:plural+masculine ds:pronomenal+reflexive
 SFX Ql ar àrtela ar	is:singular+femenine ds:pronomenal+reflexive
 SFX Ql ar àrtele ar	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql er értel er	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql er értelo er	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql er érteli er	is:plural+masculine ds:pronomenal+reflexive
 SFX Ql er értela er	is:singular+femenine ds:pronomenal+reflexive
 SFX Ql er értele er	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql ir írtel ir	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql ir írtelo ir	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql ir írteli ir	is:plural+masculine ds:pronomenal+reflexive
 SFX Ql ir írtela ir	is:singular+femenine ds:pronomenal+reflexive
 SFX Ql ir írtele ir	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql gelo tel gelo	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql gelo telo gelo	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql gelo tela gelo	is:singular+femenine ds:pronomenal+reflexive
 SFX Ql gelo teli gelo	is:plural+masculine ds:pronomenal+reflexive
 SFX Ql gelo tele gelo	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql ar àrvel ar	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql ar àrvelo ar	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql ar àrveli ar	is:plural+masculine ds:pronomenal+reflexive
 SFX Ql ar àrvela ar	is:singular+femenine ds:pronomenal+reflexive
 SFX Ql ar àrvele ar	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql er érvel er	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql er érvelo er	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql er érveli er	is:plural+masculine ds:pronomenal+reflexive
 SFX Ql er érvela er	is:singular+femenine ds:pronomenal+reflexive
 SFX Ql er érvele er	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql ir írvel ir	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql ir írvelo ir	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql ir írveli ir	is:plural+masculine ds:pronomenal+reflexive
 SFX Ql ir írvela ir	is:singular+femenine ds:pronomenal+reflexive
 SFX Ql ir írvele ir	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql gelo vel gelo	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql gelo velo gelo	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql gelo vela gelo	is:singular+femenine ds:pronomenal+reflexive
 SFX Ql gelo veli gelo	is:plural+masculine ds:pronomenal+reflexive
@@ -4078,7 +4104,8 @@ SFX R0 0 ven [aeoò]r	ds:pronomenal+reflexive
 SFX R0 0 vene [aeoò]r	ds:pronomenal+reflexive
 
 # vèrbi pronomenali (takài ko èle no vanesente)
-SFX Rl Y 24
+SFX Rl Y 29
+SFX Rl 0 gel [aeoò]r	is:singular+masculine ds:pronomenal+locative
 SFX Rl 0 gelo [aeoò]r	is:singular+masculine ds:pronomenal+locative
 SFX Rl 0 gela [aeoò]r	is:singular+femenine ds:pronomenal+locative
 SFX Rl 0 geli [aeoò]r	is:plural+masculine ds:pronomenal+locative
@@ -4087,18 +4114,22 @@ SFX Rl 0 lo [aeoò]r	is:singular+masculine ds:pronomenal+accusative
 SFX Rl 0 la [aeoò]r	is:singular+femenine ds:pronomenal+accusative
 SFX Rl 0 li [aeoò]r	is:plural+masculine ds:pronomenal+accusative
 SFX Rl 0 le [aeoò]r	is:plural+femenine ds:pronomenal+accusative
+SFX Rl 0 mel [aeoò]r	is:singular+masculine ds:pronomenal+reflexive
 SFX Rl 0 melo [aeoò]r	is:singular+masculine ds:pronomenal+reflexive
 SFX Rl 0 mela [aeoò]r	is:singular+femenine ds:pronomenal+reflexive
 SFX Rl 0 meli [aeoò]r	is:plural+masculine ds:pronomenal+reflexive
 SFX Rl 0 mele [aeoò]r	is:plural+femenine ds:pronomenal+reflexive
+SFX Rl 0 sel [aeoò]r	is:singular+masculine ds:pronomenal+reflexive
 SFX Rl 0 selo [aeoò]r	is:singular+masculine ds:pronomenal+reflexive
 SFX Rl 0 sela [aeoò]r	is:singular+femenine ds:pronomenal+reflexive
 SFX Rl 0 seli [aeoò]r	is:plural+masculine ds:pronomenal+reflexive
 SFX Rl 0 sele [aeoò]r	is:plural+femenine ds:pronomenal+reflexive
+SFX Rl 0 tel [aeoò]r	is:singular+masculine ds:pronomenal+reflexive
 SFX Rl 0 telo [aeoò]r	is:singular+masculine ds:pronomenal+reflexive
 SFX Rl 0 tela [aeoò]r	is:singular+femenine ds:pronomenal+reflexive
 SFX Rl 0 teli [aeoò]r	is:plural+masculine ds:pronomenal+reflexive
 SFX Rl 0 tele [aeoò]r	is:plural+femenine ds:pronomenal+reflexive
+SFX Rl 0 vel [aeoò]r	is:singular+masculine ds:pronomenal+reflexive
 SFX Rl 0 velo [aeoò]r	is:singular+masculine ds:pronomenal+reflexive
 SFX Rl 0 vela [aeoò]r	is:singular+femenine ds:pronomenal+reflexive
 SFX Rl 0 veli [aeoò]r	is:plural+masculine ds:pronomenal+reflexive
@@ -4188,75 +4219,93 @@ SFX S0 0 -ven [aàèéiín]	ds:pronomenal+reflexive
 SFX S0 0 -vene [aàèéiín]	ds:pronomenal+reflexive
 
 # vèrbi pronomenali pal komandativo (stakài senŧa èle vanesente)
-SFX Sl Y 72
+SFX Sl Y 90
+SFX Sl a e-l a	ds:pronomenal+accusative
 SFX Sl a e-lo a	ds:pronomenal+accusative
 SFX Sl a e-la a	ds:pronomenal+accusative
 SFX Sl a e-li a	ds:pronomenal+accusative
 SFX Sl a e-le a	ds:pronomenal+accusative
+SFX Sl a e-gel a	ds:pronomenal+locative
 SFX Sl a e-gelo a	ds:pronomenal+locative
 SFX Sl a e-gela a	ds:pronomenal+locative
 SFX Sl a e-geli a	ds:pronomenal+locative
 SFX Sl a e-gele a	ds:pronomenal+locative
+SFX Sl a e-mel a	ds:pronomenal+reflexive
 SFX Sl a e-melo a	ds:pronomenal+reflexive
 SFX Sl a e-mela a	ds:pronomenal+reflexive
 SFX Sl a e-meli a	ds:pronomenal+reflexive
 SFX Sl a e-mele a	ds:pronomenal+reflexive
+SFX Sl a e-sel a	ds:pronomenal+reflexive
 SFX Sl a e-selo a	ds:pronomenal+reflexive
 SFX Sl a e-sela a	ds:pronomenal+reflexive
 SFX Sl a e-seli a	ds:pronomenal+reflexive
 SFX Sl a e-sele a	ds:pronomenal+reflexive
+SFX Sl a e-tel a	ds:pronomenal+reflexive
 SFX Sl a e-telo a	ds:pronomenal+reflexive
 SFX Sl a e-tela a	ds:pronomenal+reflexive
 SFX Sl a e-teli a	ds:pronomenal+reflexive
 SFX Sl a e-tele a	ds:pronomenal+reflexive
+SFX Sl a e-vel a	ds:pronomenal+reflexive
 SFX Sl a e-velo a	ds:pronomenal+reflexive
 SFX Sl a e-vela a	ds:pronomenal+reflexive
 SFX Sl a e-veli a	ds:pronomenal+reflexive
 SFX Sl a e-vele a	ds:pronomenal+reflexive
+SFX Sl i e-l i	ds:pronomenal+accusative
 SFX Sl i e-lo i	ds:pronomenal+accusative
 SFX Sl i e-la i	ds:pronomenal+accusative
 SFX Sl i e-li i	ds:pronomenal+accusative
 SFX Sl i e-le i	ds:pronomenal+accusative
+SFX Sl i e-gel i	ds:pronomenal+locative
 SFX Sl i e-gelo i	ds:pronomenal+locative
 SFX Sl i e-gela i	ds:pronomenal+locative
 SFX Sl i e-geli i	ds:pronomenal+locative
 SFX Sl i e-gele i	ds:pronomenal+locative
+SFX Sl i e-mel i	ds:pronomenal+reflexive
 SFX Sl i e-melo i	ds:pronomenal+reflexive
 SFX Sl i e-mela i	ds:pronomenal+reflexive
 SFX Sl i e-meli i	ds:pronomenal+reflexive
 SFX Sl i e-mele i	ds:pronomenal+reflexive
+SFX Sl i e-sel i	ds:pronomenal+reflexive
 SFX Sl i e-selo i	ds:pronomenal+reflexive
 SFX Sl i e-sela i	ds:pronomenal+reflexive
 SFX Sl i e-seli i	ds:pronomenal+reflexive
 SFX Sl i e-sele i	ds:pronomenal+reflexive
+SFX Sl i e-tel i	ds:pronomenal+reflexive
 SFX Sl i e-telo i	ds:pronomenal+reflexive
 SFX Sl i e-tela i	ds:pronomenal+reflexive
 SFX Sl i e-teli i	ds:pronomenal+reflexive
 SFX Sl i e-tele i	ds:pronomenal+reflexive
+SFX Sl i e-vel i	ds:pronomenal+reflexive
 SFX Sl i e-velo i	ds:pronomenal+reflexive
 SFX Sl i e-vela i	ds:pronomenal+reflexive
 SFX Sl i e-veli i	ds:pronomenal+reflexive
 SFX Sl i e-vele i	ds:pronomenal+reflexive
+SFX Sl 0 -l [aàèéiín]	ds:pronomenal+accusative
 SFX Sl 0 -lo [aàèéiín]	ds:pronomenal+accusative
 SFX Sl 0 -la [aàèéiín]	ds:pronomenal+accusative
 SFX Sl 0 -li [aàèéiín]	ds:pronomenal+accusative
 SFX Sl 0 -le [aàèéiín]	ds:pronomenal+accusative
+SFX Sl 0 -gel [aàèéiín]	ds:pronomenal+locative
 SFX Sl 0 -gelo [aàèéiín]	ds:pronomenal+locative
 SFX Sl 0 -gela [aàèéiín]	ds:pronomenal+locative
 SFX Sl 0 -geli [aàèéiín]	ds:pronomenal+locative
 SFX Sl 0 -gele [aàèéiín]	ds:pronomenal+locative
+SFX Sl 0 -mel [aàèéiín]	ds:pronomenal+reflexive
 SFX Sl 0 -melo [aàèéiín]	ds:pronomenal+reflexive
 SFX Sl 0 -mela [aàèéiín]	ds:pronomenal+reflexive
 SFX Sl 0 -meli [aàèéiín]	ds:pronomenal+reflexive
 SFX Sl 0 -mele [aàèéiín]	ds:pronomenal+reflexive
+SFX Sl 0 -sel [aàèéiín]	ds:pronomenal+reflexive
 SFX Sl 0 -selo [aàèéiín]	ds:pronomenal+reflexive
 SFX Sl 0 -sela [aàèéiín]	ds:pronomenal+reflexive
 SFX Sl 0 -seli [aàèéiín]	ds:pronomenal+reflexive
 SFX Sl 0 -sele [aàèéiín]	ds:pronomenal+reflexive
+SFX Sl 0 -tel [aàèéiín]	ds:pronomenal+reflexive
 SFX Sl 0 -telo [aàèéiín]	ds:pronomenal+reflexive
 SFX Sl 0 -tela [aàèéiín]	ds:pronomenal+reflexive
 SFX Sl 0 -teli [aàèéiín]	ds:pronomenal+reflexive
 SFX Sl 0 -tele [aàèéiín]	ds:pronomenal+reflexive
+SFX Sl 0 -vel [aàèéiín]	ds:pronomenal+reflexive
 SFX Sl 0 -velo [aàèéiín]	ds:pronomenal+reflexive
 SFX Sl 0 -vela [aàèéiín]	ds:pronomenal+reflexive
 SFX Sl 0 -veli [aàèéiín]	ds:pronomenal+reflexive
@@ -4428,67 +4477,83 @@ SFX D0 gen ven [^i]gen	ds:pronomenal+reflexive
 SFX D0 gen vene [^i]gen	ds:pronomenal+reflexive
 
 # vèrbi pronomenali (takài senŧa èle vanesente)
-SFX Dl Y 64
+SFX Dl Y 80
+SFX Dl gelo l [^àéí]gelo	ds:pronomenal+accusative
 SFX Dl gelo lo [^àéí]gelo	ds:pronomenal+accusative
 SFX Dl gelo la [^àéí]gelo	ds:pronomenal+accusative
 SFX Dl gelo li [^àéí]gelo	ds:pronomenal+accusative
 SFX Dl gelo le [^àéí]gelo	ds:pronomenal+accusative
+SFX Dl àgelo al àgelo	ds:pronomenal+accusative
 SFX Dl àgelo alo àgelo	ds:pronomenal+accusative
 SFX Dl àgelo ala àgelo	ds:pronomenal+accusative
 SFX Dl àgelo ali àgelo	ds:pronomenal+accusative
 SFX Dl àgelo ale àgelo	ds:pronomenal+accusative
+SFX Dl égelo el égelo	ds:pronomenal+accusative
 SFX Dl égelo elo égelo	ds:pronomenal+accusative
 SFX Dl égelo ela égelo	ds:pronomenal+accusative
 SFX Dl égelo eli égelo	ds:pronomenal+accusative
 SFX Dl égelo ele égelo	ds:pronomenal+accusative
+SFX Dl ígelo il ígelo	ds:pronomenal+accusative
 SFX Dl ígelo ilo ígelo	ds:pronomenal+accusative
 SFX Dl ígelo ila ígelo	ds:pronomenal+accusative
 SFX Dl ígelo ili ígelo	ds:pronomenal+accusative
 SFX Dl ígelo ile ígelo	ds:pronomenal+accusative
+SFX Dl agelo emel agelo	ds:pronomenal+reflexive
 SFX Dl agelo emelo agelo	ds:pronomenal+reflexive
 SFX Dl agelo emela agelo	ds:pronomenal+reflexive
 SFX Dl agelo emeli agelo	ds:pronomenal+reflexive
 SFX Dl agelo emele agelo	ds:pronomenal+reflexive
+SFX Dl agelo esel agelo	ds:pronomenal+reflexive
 SFX Dl agelo eselo agelo	ds:pronomenal+reflexive
 SFX Dl agelo esela agelo	ds:pronomenal+reflexive
 SFX Dl agelo eseli agelo	ds:pronomenal+reflexive
 SFX Dl agelo esele agelo	ds:pronomenal+reflexive
+SFX Dl agelo etel agelo	ds:pronomenal+reflexive
 SFX Dl agelo etelo agelo	ds:pronomenal+reflexive
 SFX Dl agelo etela agelo	ds:pronomenal+reflexive
 SFX Dl agelo eteli agelo	ds:pronomenal+reflexive
 SFX Dl agelo etele agelo	ds:pronomenal+reflexive
+SFX Dl agelo evel agelo	ds:pronomenal+reflexive
 SFX Dl agelo evelo agelo	ds:pronomenal+reflexive
 SFX Dl agelo evela agelo	ds:pronomenal+reflexive
 SFX Dl agelo eveli agelo	ds:pronomenal+reflexive
 SFX Dl agelo evele agelo	ds:pronomenal+reflexive
+SFX Dl igelo emel igelo	ds:pronomenal+reflexive
 SFX Dl igelo emelo igelo	ds:pronomenal+reflexive
 SFX Dl igelo emela igelo	ds:pronomenal+reflexive
 SFX Dl igelo emeli igelo	ds:pronomenal+reflexive
 SFX Dl igelo emele igelo	ds:pronomenal+reflexive
+SFX Dl igelo esel igelo	ds:pronomenal+reflexive
 SFX Dl igelo eselo igelo	ds:pronomenal+reflexive
 SFX Dl igelo esela igelo	ds:pronomenal+reflexive
 SFX Dl igelo eseli igelo	ds:pronomenal+reflexive
 SFX Dl igelo esele igelo	ds:pronomenal+reflexive
+SFX Dl igelo etel igelo	ds:pronomenal+reflexive
 SFX Dl igelo etelo igelo	ds:pronomenal+reflexive
 SFX Dl igelo etela igelo	ds:pronomenal+reflexive
 SFX Dl igelo eteli igelo	ds:pronomenal+reflexive
 SFX Dl igelo etele igelo	ds:pronomenal+reflexive
+SFX Dl igelo evel igelo	ds:pronomenal+reflexive
 SFX Dl igelo evelo igelo	ds:pronomenal+reflexive
 SFX Dl igelo evela igelo	ds:pronomenal+reflexive
 SFX Dl igelo eveli igelo	ds:pronomenal+reflexive
 SFX Dl igelo evele igelo	ds:pronomenal+reflexive
+SFX Dl gelo mel gelo	ds:pronomenal+reflexive
 SFX Dl gelo melo gelo	ds:pronomenal+reflexive
 SFX Dl gelo mela gelo	ds:pronomenal+reflexive
 SFX Dl gelo meli gelo	ds:pronomenal+reflexive
 SFX Dl gelo mele gelo	ds:pronomenal+reflexive
+SFX Dl gelo sel gelo	ds:pronomenal+reflexive
 SFX Dl gelo selo gelo	ds:pronomenal+reflexive
 SFX Dl gelo sela gelo	ds:pronomenal+reflexive
 SFX Dl gelo seli gelo	ds:pronomenal+reflexive
 SFX Dl gelo sele gelo	ds:pronomenal+reflexive
+SFX Dl gelo tel gelo	ds:pronomenal+reflexive
 SFX Dl gelo telo gelo	ds:pronomenal+reflexive
 SFX Dl gelo tela gelo	ds:pronomenal+reflexive
 SFX Dl gelo teli gelo	ds:pronomenal+reflexive
 SFX Dl gelo tele gelo	ds:pronomenal+reflexive
+SFX Dl gelo vel gelo	ds:pronomenal+reflexive
 SFX Dl gelo velo gelo	ds:pronomenal+reflexive
 SFX Dl gelo vela gelo	ds:pronomenal+reflexive
 SFX Dl gelo veli gelo	ds:pronomenal+reflexive
