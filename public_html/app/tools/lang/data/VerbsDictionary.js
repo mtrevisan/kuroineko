@@ -6851,6 +6851,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "spadol",		"",			1,	2,	"g",	"1855",			"Dar de spàdola el lin o la kàneva.",
 "spalank",		"",			1,	4,	"g",	"1867",			"",
 "spaleđ",		"",			1,	4,	"a",	"1847",			"",
+"spaliđ",		"",			1,	4,	"a",	"1660",			"(veneŧian) Spaleđar.",
 "span",			"",			1,	2,	"g",	"",				"Rovinar la filetadura de na vide.",
 "span",			"",			5,	4,	"a",	"1775",			"Xbocar, kréser.",
 "spar",			"",			1,	2,	"g",	"1852",			"",
