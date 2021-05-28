@@ -73,6 +73,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ʼn",				"",			1,	2,	"g",	"",				"",
 "ʼnd",			"",			1,	3,	"g",	"",				"",
 "an",				"",			1,	0,	"g",	"XVII",			"(pavan)",
+"anb",			"",			4,	3,	"a",	"1660",			"(veneŧian)",
 "and",			"",			1,	0,	"g",	"1867",			"",
 "and",			"mal",		1,	0,	"g",	"",				"",
 "and",			"re",			1,	0,	"g",	"",				"",
