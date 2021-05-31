@@ -1221,6 +1221,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "dit",			"dex",		1,	1,	"a",	"1775",			"",
 "divin",			"",			1,	3,	"a",	"1829",			"",
 "divin",			"in",			1,	3,	"a",	"1560",			"",
+"diviniđ",		"",			1,	5,	"a",	"1660",			"(veneŧian)",
 "divorŧi",		"",			1,	3,	"g",	"1829",			"",
 "díx",			"",			3,	1,	"a",	"",				"",
 "díx",			"bene",		3,	1,	"a",	"",				"",
