@@ -7850,7 +7850,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧangol",		"in",			1,	1,	"g",	"1854",			"Inbratar, infangar, lordar.",
 "ŧank",			"in",			1,	1,	"g",	"1775",			"Inkurvar.",
 "ŧanp",			"",			1,	1,	"g",	"1851",			"",
-"ŧanp",			"in",			1,	1,	"g",	"1810",			"",
+"ŧanp",			"in",			1,	1,	"g",	"1660",			"(veneŧian)",
 "ŧanpol",		"in",			1,	1,	"g",	"1980",			"(vitoriexe) Inpijar, inpedir, inpacar.",
 "ŧanŧ",			"",			1,	1,	"g",	"1560",			"",
 "ŧap",			"",			1,	1,	"g",	"1560",			"",
