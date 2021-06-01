@@ -5892,7 +5892,6 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "prexenŧi",		"",			1,	4,	"a",	"",				"",
 "prexi",			"",			1,	2,	"g",	"1829",			"Apreŧar.",
 "prexon",		"in",			1,	4,	"a",	"1463",			"Méter in prexon.",
-"prexúm",		"",			3,	4,	"a",	"1433",			"",
 "pri",			"",			1,	2,	"a",	"",				"(bixiak) Aviar.",
 "pri",			"in",			1,	2,	"a",	"",				"(bixiak)",
 "prik",			"a",			1,	-1,"g",	"",				"",
@@ -7216,6 +7215,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sum",			"",			1,	1,	"a",	"1867",			"",
 "súm",			"a",			3,	1,	"a",	"",				"",
 "súm",			"kon",		3,	1,	"a",	"",				"",
+"súm",			"pre",		3,	1,	"a",	"1660",			"(veneŧian)",
 "sumari",		"",			1,	3,	"g",	"1867",			"Konpendiar.",
 "sumen",			"",			1,	1,	"a",	"1463",			"",
 "sun",			"",			1,	1,	"a",	"1560",			"Amasar, adunar, rakòjer foje, fiori, fruti, e erbete.",
@@ -8682,5 +8682,6 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "xugul",			"",			1,	1,	"a",	"1829",			"Méter a le strete.",
 "xult",			"e",			1,	1,	"a",	"",				"",
 "xult",			"re",			1,	1,	"a",	"1867",			"Resultar.",
+"xúm",			"pre",		3,	1,	"a",	"1433",			"Presúmer.",
 "xustiŧi",		"",			1,	4,	"a",	"1509",			""
 ]});
