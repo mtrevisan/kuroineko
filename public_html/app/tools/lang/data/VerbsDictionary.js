@@ -8367,6 +8367,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vers",			"re",			1,	1,	"g",	"1884",			"Roversar.",
 "vers",			"tra",		1,	1,	"g",	"1560",			"",
 "versi",			"in",			1,	1,	"g",	"1867",			"Inaŧidir.",
+"versiđ",		"",			1,	4,	"a",	"1660",			"(veneŧian)",
 "versur",		"",			1,	4,	"a",	"1560",			"Far versi.",
 "vert",			"",			4,	4,	"a",	"1867",			"",
 "vert",			"a",			4,	4,	"a",	"1562",			"",
