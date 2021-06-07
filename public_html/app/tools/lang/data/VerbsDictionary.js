@@ -4785,6 +4785,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "nomen",			"de",			1,	1,	"g",	"",				"",
 "nomin",			"",			1,	1,	"g",	"1980",			"(vitoriexe)",
 "nomin",			"de",			1,	1,	"g",	"",				"",
+"nomin",			"stra",		1,	1,	"g",	"1660",			"(veneŧian)",
 "nonbol",		"dex",		1,	1,	"a",	"1775",			"",
 "nonbol",		"x",			1,	1,	"a",	"1775",			"Afadegar.",
 "nonŧi",			"",			1,	1,	"a",	"1475",			"",
