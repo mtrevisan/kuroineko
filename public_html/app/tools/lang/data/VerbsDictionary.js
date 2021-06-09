@@ -4488,6 +4488,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "mitri",			"",			1,	1,	"a",	"1852",			"Koronar uno par el bòja.",
 "mixer",			"",			4,	5,	"a",	"1829",			"Inpigrir, infingardir.",
 "mixer",			"in",			4,	5,	"a",	"1775",			"Inpigrir, infingardir.",
+"mixer",			"",			1,	1,	"a",	"1660",			"(veneŧian)",
 "mixer",			"kon",		1,	1,	"a",	"",				"",
 "mixur",			"",			1,	3,	"a",	"1775",			"Mexurar.",
 "mixur",			"dex",		1,	3,	"a",	"1829",			"",
