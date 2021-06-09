@@ -8525,6 +8525,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "viŧi",			"in",			1,	1,	"a",	"1867",			"Far viŧioxo.",
 "viŧi",			"x",			1,	1,	"a",	"1896",			"",
 "viŧin",			"",			1,	3,	"a",	"1867",			"",
+"viv",			"ra",			1,	1,	"a",	"1660",			"(veneŧian)",
 "vív",			"",			3,	1,	"a",	"1412",			"",
 "vív",			"kon",		3,	1,	"a",	"1867",			"",
 "vív",			"re",			3,	1,	"a",	"1867",			"",
