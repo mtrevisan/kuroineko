@@ -4452,6 +4452,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "miet",			"",			1,	2,	"g",	"1854",			"",
 "migr",			"",			1,	1,	"a",	"",				"",
 "migr",			"e",			1,	1,	"a",	"",				"",
+"migr",			"trax",		1,	1,	"a",	"1660",			"(veneŧian)",
 "mijor",			"",			1,	3,	"a",	"1829",			"",
 "milant",		"",			1,	3,	"g",	"1829",			"",
 "mili",			"ar",			1,	1,	"a",	"1560",			"Umiliar.",
