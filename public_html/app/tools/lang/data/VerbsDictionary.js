@@ -3957,6 +3957,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "lif",			"x",			1,	1,	"a",	"1894",			"Piànđer.",
 "lig",			"",			1,	1,	"a",	"XIII",			"",
 "lig",			"dex",		1,	1,	"a",	"1336",			"",
+"lig",			"re",			1,	1,	"a",	"1660",			"(veneŧian)",
 "lig",			"x",			1,	1,	"a",	"2004",			"",
 "lik",			"",			1,	1,	"a",	"XIII",			"",
 "lik",			"x",			1,	1,	"a",	"1867",			"",
