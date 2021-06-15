@@ -6808,6 +6808,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "someɉ",			"re",			1,	3,	"a",	"1867",			"",
 "son",			"",			1,	1,	"a",	"1463",			"",
 "son",			"in",			1,	1,	"a",	"1775",			"Indormensar.",
+"son",			"re",			1,	1,	"a",	"1660",			"(veneŧian)",
 "son",			"in",			4,	3,	"a",	"1855",			"(belumat) Indormensar.",
 "sonac",			"",			1,	3,	"g",	"1854",			"Strinpelar.",
 "sonac",			"in",			1,	3,	"g",	"1896",			"Insonar.",
