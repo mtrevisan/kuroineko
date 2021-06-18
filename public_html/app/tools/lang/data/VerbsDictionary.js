@@ -6528,6 +6528,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "señ",			"rea",		1,	1,	"a",	"1415",			"",
 "señ",			"stra",		1,	1,	"a",	"1855",			"",
 "señal",			"",			1,	3,	"g",	"1829",			"",
+"señaliđ",		"",			1,	5,	"a",	"1660",			"(veneŧian)",
 "señor",			"",			1,	3,	"a",	"1509",			"",
 "señor",			"in",			1,	3,	"a",	"",				"",
 "señoređ",		"",			1,	5,	"a",	"1509",			"",
