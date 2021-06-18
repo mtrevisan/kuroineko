@@ -2592,6 +2592,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "grongol",		"",			1,	2,	"a",	"1854",			"Xgrongolar.",
 "grongol",		"x",			1,	2,	"a",	"1852",			"Bójer a skròsio.",
 "gronŧol",		"x",			1,	2,	"a",	"1590",			"Brontolar.",
+"grop",			"a",			1,	2,	"a",	"1660",			"(veneŧian)",
 "grop",			"dex",		1,	2,	"a",	"1314",			"Siòlier un nodo, liberarse de un pensier, rutar.",
 "grop",			"in",			1,	2,	"a",	"1560",			"Ragrupar, komòver tanto da no poder parlar.",
 "grop",			"x",			1,	2,	"a",	"",				"Dexgropar.",
