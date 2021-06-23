@@ -3251,6 +3251,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "klúd",			"es",			3,	2,	"a",	"1509",			"",
 "klúd",			"kon",		3,	2,	"a",	"",				"",
 "klúd",			"in",			3,	2,	"a",	"",				"",
+"klúd",			"inkon",		3,	2,	"a",	"1660",			"(veneŧian)",
 "klúd",			"o",			3,	2,	"a",	"1829",			"",
 "ko",				"",			1,	1,	"a",	"1810",			"Kovar.",
 "koat",			"",			1,	2,	"g",	"1775",			"Akovaŧar.",
