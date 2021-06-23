@@ -1908,6 +1908,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fiub",			"des",		1,	2,	"a",	"1854",			"Kavar la fibia, xlacar.",
 "fiub",			"in",			1,	2,	"a",	"1854",			"Méter la fibia, inlacar.",
 "fiub",			"s",			1,	2,	"a",	"1896",			"",
+"fles",			"re",			1,	2,	"g",	"1660",			"(veneŧian)",
 "flèt",			"",			3,	2,	"g",	"",				"",
 "flèt",			"re",			3,	2,	"g",	"1829",			"Pensar, mandar riflesi.",
 "flig",			"pro",		1,	2,	"a",	"1829",			"Abàter, roinar.",
