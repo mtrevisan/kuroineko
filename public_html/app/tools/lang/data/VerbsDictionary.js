@@ -84,6 +84,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "anel",			"in",			1,	2,	"g",	"1867",			"",
 "anem",			"",			1,	0,	"g",	"1363",			"Dar korajo.",
 "anem",			"dex",		1,	0,	"g",	"1867",			"",
+"anem",			"ex",			1,	0,	"g",	"1660",			"(veneŧian)",
 "anem",			"re",			1,	0,	"g",	"1537",			"",
 "angaređ",		"",			1,	5,	"a",	"1590",			"Angariar.",
 "angariđ",		"",			1,	5,	"a",	"1852",			"Angariar.",
