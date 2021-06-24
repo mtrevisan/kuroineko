@@ -11,7 +11,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ađard",			"",			1,	2,	"g",	"1775",			"",
 "aer",			"",			1,	0,	"g",	"",				"",
 "afan",			"",			1,	2,	"g",	"1775",			"Darse da far ko inpeño.",
-"aflíx",			"",			3,	3,	"a",	"",				"",
+"aflíđ",			"",			3,	3,	"a",	"1660",			"(veneŧian)",
 "agor",			"",			1,	0,	"g",	"1560",			"Augurar.",
 "agr",			"in",			4,	3,	"a",	"1867",			"Deventar agro.",
 "aid",			"",			1,	1,	"a",	"",				"",
