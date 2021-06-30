@@ -13234,6 +13234,9 @@ múdomi/t8n8tAlA7AI1^1^6	po:verb ds:indicative+present is:first+singular ds:inte
 permudar/t0l070n0t1P0PlP7Q0QlQ7Vs	po:verb ds:infinitive+simple dp:per
 permudo/t8n8tAlA7AJ1FSVs	po:verb ds:indicative+present is:first+singular st:permudar dp:per
 permúdomi/t8n8tAlA7AI1Vs	po:verb ds:indicative+present is:first+singular ds:interrogative st:permudar dp:per
+traxmudar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:tras
+traxmudo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:traxmudar dp:tras
+traxmúdomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:traxmudar dp:tras
 mudarar/t0l070n0t1P0PlP7Q0QlQ7^1	po:verb ds:infinitive+simple
 mudaro/t8n8tAlA7AJ1FS^1	po:verb ds:indicative+present is:first+singular st:mudarar
 mudàromi/t8n8tAlA7AI1^1	po:verb ds:indicative+present is:first+singular ds:interrogative st:mudarar
@@ -18452,6 +18455,9 @@ sèrbo/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:serbar
 serenar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 sereno/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:serenar
 serénomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:serenar
+raserenar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:ad dp:re
+rasereno/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:raserenar dp:ad dp:re
+raserénomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:raserenar dp:ad dp:re
 servar/t0l070n0t1P0PlP7Q0QlQ7:0.0	po:verb ds:infinitive+simple
 sèrvo/T8N8tBlB7BJ1I1:0.0	po:verb ds:indicative+present is:first+singular st:servar
 oservar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:ob
@@ -26812,6 +26818,10 @@ novanta/N3N4|3|4%0%1%a	po:numeral_cardenal is:masculine+non_enumerable
 ŧènto/FSN5	po:numeral_cardenal is:masculine+non_enumerable
 sento/FS|5%1%a	po:numeral_cardenal is:masculine+non_enumerable
 sènto/FS|5	po:numeral_cardenal is:masculine+non_enumerable
+ŧentʼ	po:numeral_cardenal is:masculine+non_enumerable
+ŧèntʼ	po:numeral_cardenal is:masculine+non_enumerable
+sentʼ	po:numeral_cardenal is:masculine+non_enumerable
+sèntʼ	po:numeral_cardenal is:masculine+non_enumerable
 xento/N5|5|6||	po:numeral_cardenal is:masculine+non_enumerable
 xent/N5|5|6||	po:numeral_cardenal is:masculine+non_enumerable
 xènto/N5|5|6||	po:numeral_cardenal is:masculine+non_enumerable
@@ -26920,7 +26930,8 @@ kuarto/M0FS'9	po:numeral_ordenal is:singular+masculine
 kuarʼ	po:numeral_ordenal is:singular+masculine st:kuarto
 kuarta/F0eLe7	po:numeral_ordenal is:singular+femenine
 kuinta/F0eLe7	po:numeral_ordenal is:singular+femenine
-kuinto/M0FS'9	po:numeral_ordenal is:singular+masculine
+kuinto/M0FS	po:numeral_ordenal is:singular+masculine
+kuintʼ	po:numeral_ordenal is:singular+masculine
 sèsta/F0	po:numeral_ordenal is:singular+femenine
 sesteta/F0	po:numeral_ordenal is:singular+femenine
 sèsto/M0FS'9	po:numeral_ordenal is:singular+masculine
@@ -32295,7 +32306,6 @@ réntegelo/QlFS@0	po:adjective_qualificative
 réntegelo/QlFS@0	po:adverb
 réntegeƚo/Q7@0	po:adjective_qualificative
 réntegeƚo/Q7@0	po:adverb
-rèo/A1	po:adjective_qualificative is:singular+masculine
 rèsita/F0	po:noun is:singular+femenine
 rèŧita/F0	po:noun is:singular+femenine
 rèxe/M0	po:noun is:singular+masculine
@@ -35735,7 +35745,6 @@ brenta/F0eLe7Vr	po:noun is:singular+femenine
 brespon/MFB1Pd	po:noun is:singular+masculine st:brèspa ds:on
 brevemente/FSw0	po:adverb ds:mente
 breviario/M0	po:noun is:singular+masculine
-brève/X0	po:adjective_qualificative is:singular
 bria/F0eT	po:noun is:singular+femenine
 brikola/F0V3	po:noun is:singular+femenine
 brikòla/F0V3	po:noun is:singular+femenine
@@ -39115,7 +39124,6 @@ topaŧo/M0FSV3*0	po:noun is:singular+masculine
 topè	po:noun is:masculine+non_enumerable+franŧexe
 topinara/F0	po:noun is:singular+femenine
 topinèra/F0	po:noun is:singular+femenine
-tor/F0Pd-1	po:noun is:singular+femenine
 torbia/F0eT	po:adjective_qualificative is:singular+femenine
 torbio/M0eT	po:adjective_qualificative is:singular+masculine
 tordara/F0	po:noun is:singular+femenine
@@ -63305,7 +63313,7 @@ sèguito/M0FS	po:noun is:singular+masculine
 sèla/F0V3	po:noun is:singular+femenine
 sèƚebre/M0	po:noun is:singular+masculine
 sèrio/A1	po:adjective_qualificative is:singular+masculine
-sèrpe/F0FS	po:noun is:singular+femenine
+sèrpe/MFFS	po:noun is:masculine+femenine
 sèrto/FS+0	po:adverb
 sèrvo/A1	po:noun is:singular+masculine
 sfèra/F0	po:noun is:singular+femenine
@@ -64018,8 +64026,15 @@ xoɉèl/M0B1V3	po:noun is:singular+masculine
 xoventude/y0N0	po:noun is:singular+femenine
 xvelteŧa/F0V3	po:noun is:singular+femenine
 xvèlto/A1	po:adjective_qualificative is:singular+masculine
+intelijente/X0FSPdVr'9	po:adjective_qualificative is:singular
+inteliɉente/X0FSPdVr'9	po:adjective_qualificative is:singular
+kontravèrsia/F0	po:noun is:singular+femenine
+brève/X0	po:adjective_qualificative is:singular
+rèo/A1	po:adjective_qualificative is:singular+masculine
+tor/F0Pd-1	po:noun is:singular+femenine
+morbideto/A1FSPd	po:adjective_qualificative is:singular+masculine st:mòrbido ds:eto
 
 
-/ 510/725
+/ 514/725
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ–ʼ
