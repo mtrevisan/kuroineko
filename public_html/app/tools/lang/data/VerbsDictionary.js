@@ -6936,6 +6936,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "spï",			"",			1,	2,	"a",	"1775",			"",
 "spianŧ",		"",			1,	3,	"g",	"1775",			"Sprusar.",
 "spianŧiđ",		"",			1,	6,	"a",	"1900",			"(veronexe) Luxegar, barlúxer.",
+"spier",			"",			1,	2,	"g",	"1660",			"(veneŧian)",
+"spier",			"de",			1,	2,	"g",	"",				"",
 "spifar",		"",			1,	2,	"a",	"1854",			"",
 "spifer",		"",			1,	2,	"a",	"1775",			"",
 "spig",			"",			1,	2,	"a",	"1775",			"",
