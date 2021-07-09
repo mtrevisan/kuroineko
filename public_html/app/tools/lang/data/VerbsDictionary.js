@@ -5031,6 +5031,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pael",			"s",			1,	2,	"g",	"1896",			"",
 "paent",			"s",			1,	3,	"a",	"1900",			"(veronexe) Spaventar.",
 "paes",			"in",			4,	2,	"a",	"1855",			"(belumat) Deventar paso.",
+"paex",			"",			1,	2,	"g",	"1660",			"(veneŧian)",
 "pag",			"",			1,	1,	"g",	"1381",			"",
 "pag",			"a",			1,	1,	"g",	"1852",			"",
 "pag",			"re",			1,	1,	"g",	"1867",			"",
