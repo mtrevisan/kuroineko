@@ -2182,6 +2182,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fud",			"re",			1,	1,	"a",	"1415",			"",
 "fuđ",			"",			4,	3,	"a",	"1829",			"Skanpar.",
 "fuđ",			"re",			4,	3,	"a",	"",				"",
+"fuđ",			"s",			4,	3,	"a",	"1660",			"(veneŧian)",
 "fug",			"",			1,	1,	"a",	"1998",			"Kolmar de ŧemento likuido (boiàka) la fuga.",
 "fug",			"in",			1,	1,	"a",	"1775",			"Méter freta.",
 "fug",			"tra",		1,	1,	"a",	"1464",			"",
