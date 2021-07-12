@@ -3181,6 +3181,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kaŧ",			"in",			1,	1,	"g",	"1980",			"(vitoriexe) Inrabiar.",
 "kaŧ",			"pre",		1,	1,	"g",	"1867",			"",
 "kaŧ",			"pro",		1,	1,	"g",	"1867",			"",
+"kaŧ",			"re",			1,	1,	"g",	"1660",			"(veneŧian)",
 "kaŧ",			"s",			1,	1,	"g",	"1560",			"",
 "kaŧ",			"in",			4,	3,	"a",	"1867",			"Inŧukar.",
 "kaŧarol",		"",			1,	5,	"g",	"1855",			"(belumat)",
