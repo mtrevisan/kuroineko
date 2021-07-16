@@ -405,8 +405,9 @@ COMPOUNDRULE (|5)(--)(|6)	# sento-mi[lƚ]e
 #							T4 + rée		T4 + r(is)(i)ón(se)		T4 + rée					T4 + r(is)ié			T4 + rée
 #											T4 + r(is)én(s[ei])
 #							(ant. T4 + rà(v)e*)
-# KOM. PREX.			--				--								T9							T5							--
-#																										T12 + [èé]
+# KOM. PREX.			--				T5 + mo						T9							T5							--
+#											T12 + ón													T12 + [èé]
+#											T12 + én
 # INF. SÉNPLISE	T1 + r(e)
 # PART. ATIVO		T7 + nte
 # PART. PASIVO		T6 + d[oiae], T6 + ([oiae])
@@ -434,7 +435,7 @@ COMPOUNDRULE (|5)(--)(|6)	# sento-mi[lƚ]e
 # tèma 7 (from T1: aŧento PVT > VT, then T2: í > é)
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
-SFX t0 Y 252
+SFX t0 Y 265
 SFX t0 r va/J1 [aei]r	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX t0 ar àvami/I1 ar	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)a
 SFX t0 er évami/I1 er	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)a
@@ -658,6 +659,19 @@ SFX t0 erò í/J4I4S0 erò	ds:imperative+present is:second+plural	# T5
 SFX t0 ir í/J4I4S0 ir	ds:imperative+present is:second+plural	# T5
 SFX t0 ir è/J4I4S0 ir	ds:imperative+present is:second+plural	# T5
 SFX t0 ir é/J4I4S0 ir	ds:imperative+present is:second+plural	# T5
+SFX t0 ar emo/S0 ar	ds:imperative+present is:first+plural	# T5 + mo
+SFX t0 r mo/S0 er	ds:imperative+present is:first+plural	# T5 + mo
+SFX t0 rò mo/S0 erò	ds:imperative+present is:first+plural	# T5 + mo
+SFX t0 er imo/S0 er	ds:imperative+present is:first+plural	# T5 + mo
+SFX t0 erò imo/S0 erò	ds:imperative+present is:first+plural	# T5 + mo
+SFX t0 ir emo/S0 ir	ds:imperative+present is:first+plural	# T5 + mo
+SFX t0 r mo/S0 ir	ds:imperative+present is:first+plural	# T5 + mo
+SFX t0 ar émogen/D0 ar	ds:imperative+present is:first+plural	# T5 + mo
+SFX t0 er émogen/D0 er	ds:imperative+present is:first+plural	# T5 + mo
+SFX t0 erò émogen/D0 erò	ds:imperative+present is:first+plural	# T5 + mo
+SFX t0 er ímogen/D0 er	ds:imperative+present is:first+plural	# T5 + mo
+SFX t0 erò ímogen/D0 erò	ds:imperative+present is:first+plural	# T5 + mo
+SFX t0 ir ímogen/D0 ir	ds:imperative+present is:first+plural	# T5 + mo
 SFX t0 r do/M0y0 [ai]r	ds:participle+passive+weak is:singular+masculine	# T6 + d[oi]
 SFX t0 r da/F0y0 [ai]r	ds:participle+passive+weak is:singular+femenine	# T6 + d[ae]
 SFX t0 er udo/M0y0 [^u]er	ds:participle+passive+weak is:singular+masculine	# T6 + d[oi]
@@ -697,7 +711,7 @@ SFX t0 ar è/S0D0 ar	ds:imperative+present is:second+plural	# T12 + è
 # tèma 7 (from T1: aŧento PVT > VT, then T2: í > é)
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
-SFX l0 Y 80
+SFX l0 Y 93
 SFX l0 r d [ai]r	ds:participle+passive+weak is:singular+masculine	# T6 + d[oiae]
 SFX l0 r t [ai]r	ds:participle+passive+weak is:singular+masculine	# T6 + d[oiae]
 SFX l0 ar eva/J5N0 ar	ds:indicative+imperfect is:second+singular	# T2 + (v)a, T2 = T1: aŧento PVT > VT | à > é
@@ -771,6 +785,19 @@ SFX l0 ir è/SlN0 ir	ds:imperative+present is:second+plural	# T5
 SFX l0 ir é/SlN0 ir	ds:imperative+present is:second+plural	# T5
 SFX l0 ir ègelo/Dl ir	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5
 SFX l0 ir égelo/Dl ir	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5
+SFX l0 ar emo/Sl ar	ds:imperative+present is:first+plural	# T5 + mo
+SFX l0 r mo/Sl er	ds:imperative+present is:first+plural	# T5 + mo
+SFX l0 rò mo/Sl erò	ds:imperative+present is:first+plural	# T5 + mo
+SFX l0 er imo/Sl er	ds:imperative+present is:first+plural	# T5 + mo
+SFX l0 erò imo/Sl erò	ds:imperative+present is:first+plural	# T5 + mo
+SFX l0 ir emo/Sl ir	ds:imperative+present is:first+plural	# T5 + mo
+SFX l0 r mo/Sl ir	ds:imperative+present is:first+plural	# T5 + mo
+SFX l0 ar émogelo/Dl ar	ds:imperative+present is:first+plural	# T5 + mo
+SFX l0 er émogelo/Dl er	ds:imperative+present is:first+plural	# T5 + mo
+SFX l0 erò émogelo/Dl erò	ds:imperative+present is:first+plural	# T5 + mo
+SFX l0 er ímogelo/Dl er	ds:imperative+present is:first+plural	# T5 + mo
+SFX l0 erò ímogelo/Dl erò	ds:imperative+present is:first+plural	# T5 + mo
+SFX l0 ir ímogelo/Dl ir	ds:imperative+present is:first+plural	# T5 + mo
 SFX l0 ir endo/PlN0 ir	ds:gerund+simple	# T7 + ndo
 SFX l0 ir ando/PlN0 ir	ds:gerund+simple	# T7 + ndo
 SFX l0 ir ento/PlN0 ir	ds:gerund+simple	# T7 + nto
@@ -787,7 +814,7 @@ SFX l0 r èntogelo/Ql [^cijɉñ]ir	ds:gerund+simple ds:pronomenal+locative	# T7 
 # tèma 7 (from T1: aŧento PVT > VT, then T2: í > é)
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
-SFX 70 Y 74
+SFX 70 Y 87
 SFX 70 r va/j5N0 [aei]r	ds:indicative+imperfect is:third	# T2 + (v)a
 SFX 70 ar àvaƚo/i5 ar	ds:indicative+imperfect is:third ds:interrogative	# T2 + (v)a
 SFX 70 er évaƚo/i5 er	ds:indicative+imperfect is:third ds:interrogative	# T2 + (v)a
@@ -855,6 +882,19 @@ SFX 70 ir è/S7N0 ir	ds:imperative+present is:second+plural	# T5
 SFX 70 ir é/S7N0 ir	ds:imperative+present is:second+plural	# T5
 SFX 70 ir ègeƚo/D7 ir	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5
 SFX 70 ir égeƚo/D7 ir	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5
+SFX 70 ar emo/S7 ar	ds:imperative+present is:first+plural	# T5 + mo
+SFX 70 r mo/S7 er	ds:imperative+present is:first+plural	# T5 + mo
+SFX 70 rò mo/S7 erò	ds:imperative+present is:first+plural	# T5 + mo
+SFX 70 er imo/S7 er	ds:imperative+present is:first+plural	# T5 + mo
+SFX 70 erò imo/S7 erò	ds:imperative+present is:first+plural	# T5 + mo
+SFX 70 ir emo/S7 ir	ds:imperative+present is:first+plural	# T5 + mo
+SFX 70 r mo/S7 ir	ds:imperative+present is:first+plural	# T5 + mo
+SFX 70 ar émogeƚo/D7 ar	ds:imperative+present is:first+plural	# T5 + mo
+SFX 70 er émogeƚo/D7 er	ds:imperative+present is:first+plural	# T5 + mo
+SFX 70 erò émogeƚo/D7 erò	ds:imperative+present is:first+plural	# T5 + mo
+SFX 70 er ímogeƚo/D7 er	ds:imperative+present is:first+plural	# T5 + mo
+SFX 70 erò ímogeƚo/D7 erò	ds:imperative+present is:first+plural	# T5 + mo
+SFX 70 ir ímogeƚo/D7 ir	ds:imperative+present is:first+plural	# T5 + mo
 SFX 70 ir endo/P7N0 ir	ds:gerund+simple	# T7 + ndo
 SFX 70 ir ando/P7N0 ir	ds:gerund+simple	# T7 + ndo
 SFX 70 ir ento/P7N0 ir	ds:gerund+simple	# T7 + nto
@@ -873,7 +913,7 @@ SFX 70 r èntogeƚo/Q7 [^cijɉñ]ir	ds:gerund+simple ds:pronomenal+locative	# T7
 # -àr, -ér, -ír: skomenŧiando da 'l infenío (tèma 12 solke)
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
 # -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar (tèma 12 solke)
-SFX n0 Y 553
+SFX n0 Y 577
 SFX n0 r ve/J1 [aei]r	ds:indicative+imperfect is:first+singular	# T2 + (v)e
 SFX n0 ar àvemi/I1 ar	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)e
 SFX n0 er évemi/I1 er	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)e
@@ -1417,6 +1457,30 @@ SFX n0 ir é/S0SlD0 ir	ds:imperative+present is:second+plural	# T12 + é
 SFX n0 ir égelo/Dl ir	ds:imperative+present is:second+plural ds:pronomenal+locative	# T12 + é
 SFX n0 o é/S0SlD0 iso	ds:imperative+present is:second+plural	# T12 + é
 SFX n0 o égelo/Dl iso	ds:imperative+present is:second+plural ds:pronomenal+locative	# T12 + é
+SFX n0 ar on/S0Sl ar	ds:imperative+present is:first+plural	# T12 + ón
+SFX n0 ar óngen/D0 ar	ds:imperative+present is:first+plural	# T12 + ón
+SFX n0 ar óngelo/Dl ar	ds:imperative+present is:first+plural	# T12 + ón
+SFX n0 er on/S0Sl er	ds:imperative+present is:first+plural	# T12 + ón
+SFX n0 er óngen/D0 er	ds:imperative+present is:first+plural	# T12 + ón
+SFX n0 er óngelo/Dl er	ds:imperative+present is:first+plural	# T12 + ón
+SFX n0 erò on/S0Sl erò	ds:imperative+present is:first+plural	# T12 + ón
+SFX n0 erò óngen/D0 erò	ds:imperative+present is:first+plural	# T12 + ón
+SFX n0 erò óngelo/Dl erò	ds:imperative+present is:first+plural	# T12 + ón
+SFX n0 ir on/S0Sl ir	ds:imperative+present is:first+plural	# T12 + ón
+SFX n0 ir óngen/D0 ir	ds:imperative+present is:first+plural	# T12 + ón
+SFX n0 ir óngelo/Dl ir	ds:imperative+present is:first+plural	# T12 + ón
+SFX n0 ar en/S0Sl ar	ds:imperative+present is:first+plural	# T12 + én
+SFX n0 ar éngen/D0 ar	ds:imperative+present is:first+plural	# T12 + én
+SFX n0 ar éngelo/Dl ar	ds:imperative+present is:first+plural	# T12 + én
+SFX n0 r n/S0Sl er	ds:imperative+present is:first+plural	# T12 + én
+SFX n0 er éngen/D0 er	ds:imperative+present is:first+plural	# T12 + én
+SFX n0 er éngelo/Dl er	ds:imperative+present is:first+plural	# T12 + én
+SFX n0 rò n/S0Sl erò	ds:imperative+present is:first+plural	# T12 + én
+SFX n0 erò éngen/D0 erò	ds:imperative+present is:first+plural	# T12 + én
+SFX n0 erò éngelo/Dl erò	ds:imperative+present is:first+plural	# T12 + én
+SFX n0 ir en/S0Sl ir	ds:imperative+present is:first+plural	# T12 + én
+SFX n0 ir éngen/D0 ir	ds:imperative+present is:first+plural	# T12 + én
+SFX n0 ir éngelo/Dl ir	ds:imperative+present is:first+plural	# T12 + én
 SFX n0 erò arée/J1 erò	ds:conditional+present is:first+singular	# T4 + rà(v)e
 SFX n0 erò aréemi/I1 erò	ds:conditional+present is:first+singular ds:interrogative	# T4 + rà(v)e
 SFX n0 erò arée/J2 erò	ds:conditional+present is:first+plural	# T4 + rà(v)e
@@ -1840,7 +1904,7 @@ SFX xA andar vede andar	ds:subjunctive+present is:second+plural	# T12 + é([dg]e
 SFX xA andar vege andar	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
 
 # vèrbi -ér inregolari: (re)av?er, (re)g(av)er, ʼ(v)er
-SFX xB Y 426
+SFX xB Y 440
 SFX xB r va/J1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xB er éa/J1I1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xB ver éa/J1I1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
@@ -1957,6 +2021,10 @@ SFX xB er é/J4I4S0SlD0 [aʼ]ver	ds:imperative+present is:second+plural	# T5 = T
 SFX xB er í/J4I4S0 [aʼ]ver	ds:imperative+present is:second+plural	# T5
 SFX xB ver biè/J4I4S0 [aʼ]ver	ds:imperative+present is:second+plural	# T5
 SFX xB ver bié/J4I4S0 [aʼ]ver	ds:imperative+present is:second+plural	# T5
+SFX xB r mo/S0 [aʼ]veer	ds:imperative+present is:first+plural	# T5 + mo
+SFX xB er imo/S0 [aʼ]veer	ds:imperative+present is:first+plural	# T5 + mo
+SFX xB er émogen/D0 [aʼ]veer	ds:imperative+present is:first+plural	# T5 + mo
+SFX xB er ímogen/D0 [aʼ]veer	ds:imperative+present is:first+plural	# T5 + mo
 SFX xB er udo/M0y0 [aʼ]ver	ds:participle+passive+weak is:singular+masculine	# T6 + d[oi]
 SFX xB er uda/F0y0 [aʼ]ver	ds:participle+passive+weak is:singular+femenine	# T6 + d[ae]
 SFX xB ver budo/M0y0 [aʼ]ver	ds:participle+passive+weak is:singular+masculine	# T6 + d[oi]
@@ -2192,6 +2260,16 @@ SFX xB aver àbilo/I5 aver	ds:imperative+present is:second+singular ds:interroga
 SFX xB aver àbiƚo/i5 aver	ds:imperative+present is:second+singular ds:interrogative	# T9
 SFX xB aver àbigelo/Dl aver	ds:imperative+present is:second+singular ds:pronomenal+locative	# T9
 SFX xB aver àbigeƚo/D7 aver	ds:imperative+present is:second+singular ds:pronomenal+locative	# T9
+SFX xB er émogelo/Dl aver	ds:imperative+present is:first+plural	# T5 + mo
+SFX xB er ímogelo/Dl aver	ds:imperative+present is:first+plural	# T5 + mo
+SFX xB er émogeƚo/D7 aver	ds:imperative+present is:first+plural	# T5 + mo
+SFX xB er ímogeƚo/D7 aver	ds:imperative+present is:first+plural	# T5 + mo
+SFX xB er on/S0Sl aver	ds:imperative+present is:first+plural	# T12 + ón
+SFX xB er óngen/D0 aver	ds:imperative+present is:first+plural	# T12 + ón
+SFX xB er óngelo/Dl aver	ds:imperative+present is:first+plural	# T12 + ón
+SFX xB r n/S0Sl aver	ds:imperative+present is:first+plural	# T12 + én
+SFX xB er éngen/D0 aver	ds:imperative+present is:first+plural	# T12 + én
+SFX xB er éngelo/Dl aver	ds:imperative+present is:first+plural	# T12 + én
 SFX xB er évami/I1 [aʼ]ver	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)a
 SFX xB er évomi/I1 [aʼ]ver	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)o
 SFX xB er évitu/I3 [aʼ]ver	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)i
@@ -2280,7 +2358,7 @@ SFX xC aver vepie aver	ds:subjunctive+present is:second+singular	# T8 + e, 2s=3
 SFX xC aver vepie aver	ds:subjunctive+present is:third	# T8 + a
 
 # vèrbi -ér inregolari: (a(s)|apar|de|(in)kon|intra|man|(re)o|re|sos|tra)[ct][èé]ñer, (a(r)|ben|de(x)|(des|re)kon|in|inter|intr[ae]|kontra|mal|per|pre|(re)so|pro|rin|sko(n)|sora|x)v[èéí]ñer/ʼñer
-SFX xD Y 12
+SFX xD Y 26
 SFX xD èñer ièn/S0SlS7 [^c]èñer	ds:imperative+present is:second+singular	# T9
 SFX xD ñer n/S0SlS7 èñer	ds:imperative+present is:second+singular	# T9
 SFX xD èñer ièngen/D0 [^c]èñer	ds:imperative+present is:second+singular ds:pronomenal+genitive+locative	# T9
@@ -2289,6 +2367,20 @@ SFX xD èñer ièngelo/Dl [^c]èñer	ds:imperative+present is:second+singular ds
 SFX xD ñer ngelo/Dl èñer	ds:imperative+present is:second+singular ds:pronomenal+locative	# T9
 SFX xD èñer ièngeƚo/D7 [^c]èñer	ds:imperative+present is:second+singular ds:pronomenal+locative	# T9
 SFX xD ñer ngeƚo/D7 èñer	ds:imperative+present is:second+singular ds:pronomenal+locative	# T9
+SFX xD rò mo/S0 eñerò	ds:imperative+present is:first+plural	# T5 + mo
+SFX xD erò imo/S0 eñerò	ds:imperative+present is:first+plural	# T5 + mo
+SFX xD erò émogen/D0 eñerò	ds:imperative+present is:first+plural	# T5 + mo
+SFX xD erò ímogen/D0 eñerò	ds:imperative+present is:first+plural	# T5 + mo
+SFX xD erò émogelo/Dl eñerò	ds:imperative+present is:first+plural	# T5 + mo
+SFX xD erò ímogelo/Dl eñerò	ds:imperative+present is:first+plural	# T5 + mo
+SFX xD erò émogeƚo/D7 eñerò	ds:imperative+present is:first+plural	# T5 + mo
+SFX xD erò ímogeƚo/D7 eñerò	ds:imperative+present is:first+plural	# T5 + mo
+SFX xD erò on/S0Sl eñerò	ds:imperative+present is:first+plural	# T12 + ón
+SFX xD erò óngen/D0 eñerò	ds:imperative+present is:first+plural	# T12 + ón
+SFX xD erò óngelo/Dl eñerò	ds:imperative+present is:first+plural	# T12 + ón
+SFX xD rò n/S0Sl eñerò	ds:imperative+present is:first+plural	# T12 + én
+SFX xD erò éngen/D0 eñerò	ds:imperative+present is:first+plural	# T12 + én
+SFX xD erò éngelo/Dl eñerò	ds:imperative+present is:first+plural	# T12 + én
 SFX xD èñer ièn/J5j5 [^c]èñer	ds:indicative+present is:third	# T10 = T8 + e
 SFX xD ñer n/J5j5 èñer	ds:indicative+present is:third	# T10 = T8 + e
 SFX xD èñer iènlo/I5 [^c]èñer	ds:indicative+present is:third ds:interrogative	# T10
@@ -2592,7 +2684,7 @@ SFX xL éver ebiede déver	ds:subjunctive+present is:second+plural	# T12 + é([d
 SFX xL éver ebiege déver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
 
 # vèrbi '-er inregolari: (re)èser
-SFX xM Y 459
+SFX xM Y 473
 SFX xM ser ra/J1 èser	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xM èser éra/J1 èser	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xM ser rami/I1 èser	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)a
@@ -2738,6 +2830,20 @@ SFX xM èser sipiè èser	ds:subjunctive+present is:second+plural	# T5
 SFX xM èser sipí èser	ds:subjunctive+present is:second+plural	# T5
 SFX xM èser seré/J4I4S0 èser	ds:imperative+present is:second+plural	# T5
 SFX xM èser serí/J4I4S0 èser	ds:imperative+present is:second+plural	# T5
+SFX xM èser semo/S0 èser	ds:imperative+present is:first+plural	# T5 + mo
+SFX xM èser simo/S0 èser	ds:imperative+present is:first+plural	# T5 + mo
+SFX xM èser sémogen/D0 èser	ds:imperative+present is:first+plural	# T5 + mo
+SFX xM èser símogen/D0 èser	ds:imperative+present is:first+plural	# T5 + mo
+SFX xM èser sémogelo/Dl èser	ds:imperative+present is:first+plural	# T5 + mo
+SFX xM èser símogelo/Dl èser	ds:imperative+present is:first+plural	# T5 + mo
+SFX xM èser sémogeƚo/D7 èser	ds:imperative+present is:first+plural	# T5 + mo
+SFX xM èser símogeƚo/D7 èser	ds:imperative+present is:first+plural	# T5 + mo
+SFX xM èser son/S0Sl èser	ds:imperative+present is:first+plural	# T12 + ón
+SFX xM èser sóngen/D0 èser	ds:imperative+present is:first+plural	# T12 + ón
+SFX xM èser sóngelo/Dl èser	ds:imperative+present is:first+plural	# T12 + ón
+SFX xM èser sen/S0Sl èser	ds:imperative+present is:first+plural	# T12 + én
+SFX xM èser séngen/D0 èser	ds:imperative+present is:first+plural	# T12 + én
+SFX xM èser séngelo/Dl èser	ds:imperative+present is:first+plural	# T12 + én
 SFX xM èser esudo/M0y0 èser	ds:participle+passive+weak is:singular+masculine	# T6 + d[oi]
 SFX xM èser esuda/F0y0 èser	ds:participle+passive+weak is:singular+femenine	# T6 + d[ae]
 SFX xM èser stado/M0y0 èser	ds:participle+passive+weak is:singular+masculine	# T6 + d[oi]
@@ -3054,7 +3160,7 @@ SFX xM èser sarise/J5j5N0 èser	ds:conditional+present is:third ds:interrogativ
 SFX xM èser saraƚo/i5 èser	ds:indicative+future is:third ds:interrogative	# T4 + rà
 
 # vèrbi '-er inregolari: rïèser
-SFX xN Y 427
+SFX xN Y 441
 SFX xN ser ra/J1 èser	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xN èser éra/J1 èser	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xN ser rami/I1 èser	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)a
@@ -3189,6 +3295,20 @@ SFX xN ïèser isipiè ïèser	ds:subjunctive+present is:second+plural	# T5
 SFX xN ïèser isipí ïèser	ds:subjunctive+present is:second+plural	# T5
 SFX xN ïèser iseré/J4I4S0 ïèser	ds:imperative+present is:second+plural	# T5
 SFX xN ïèser iserí/J4I4S0 ïèser	ds:imperative+present is:second+plural	# T5
+SFX xN ïèser isemo/S0 ïèser	ds:imperative+present is:first+plural	# T5 + mo
+SFX xN ïèser isimo/S0 ïèser	ds:imperative+present is:first+plural	# T5 + mo
+SFX xN ïèser isémogen/D0 ïèser	ds:imperative+present is:first+plural	# T5 + mo
+SFX xN ïèser isímogen/D0 ïèser	ds:imperative+present is:first+plural	# T5 + mo
+SFX xN ïèser isémogelo/Dl ïèser	ds:imperative+present is:first+plural	# T5 + mo
+SFX xN ïèser isímogelo/Dl ïèser	ds:imperative+present is:first+plural	# T5 + mo
+SFX xN ïèser isémogeƚo/D7 ïèser	ds:imperative+present is:first+plural	# T5 + mo
+SFX xN ïèser isímogeƚo/D7 ïèser	ds:imperative+present is:first+plural	# T5 + mo
+SFX xN ïèser ison/S0Sl ïèser	ds:imperative+present is:first+plural	# T12 + ón
+SFX xN ïèser isóngen/D0 ïèser	ds:imperative+present is:first+plural	# T12 + ón
+SFX xN ïèser isóngelo/Dl ïèser	ds:imperative+present is:first+plural	# T12 + ón
+SFX xN ïèser isen/S0Sl ïèser	ds:imperative+present is:first+plural	# T12 + én
+SFX xN ïèser iséngen/D0 ïèser	ds:imperative+present is:first+plural	# T12 + én
+SFX xN ïèser iséngelo/Dl ïèser	ds:imperative+present is:first+plural	# T12 + én
 SFX xN ïèser iesudo/M0y0 ïèser	ds:participle+passive+weak is:singular+masculine	# T6 + d[oi]
 SFX xN ïèser iesuda/F0y0 ïèser	ds:participle+passive+weak is:singular+femenine	# T6 + d[ae]
 SFX xN ïèser istado/M0y0 ïèser	ds:participle+passive+weak is:singular+masculine	# T6 + d[oi]
@@ -3620,7 +3740,7 @@ SFX xP aer àgeƚo/D7 aer	ds:imperative+present is:second+singular ds:pronomenal
 SFX xP aer àƚo/i5 aer	ds:indicative+present is:third ds:interrogative	# T10
 
 # vèrbi '-er inregolari: (a|as|de|des|es|kon|pro|re|so)tràer
-SFX xQ Y 87
+SFX xQ Y 91
 SFX xQ àer ar tràer	ds:infinitive+simple	# T1 + r(e)
 SFX xQ àer are tràer	ds:infinitive+simple	# T1 + r(e)
 SFX xQ àer ago/J1 tràer	ds:indicative+present is:first+singular	# T8 + o
@@ -3708,6 +3828,10 @@ SFX xQ àer égeƚo/D7 tràer	ds:imperative+present is:second+plural ds:pronomen
 SFX xQ er 0/S0SlS7D0N0 tràer	ds:imperative+present is:second+singular	# T9
 SFX xQ er gelo/Dl tràer	ds:imperative+present is:second+singular ds:pronomenal+locative	# T9
 SFX xQ er geƚo/D7 tràer	ds:imperative+present is:second+singular ds:pronomenal+locative	# T9
+SFX xQ rò mo/S0 erò	ds:imperative+present is:first+plural	# T5 + mo
+SFX xQ erò imo/S0 erò	ds:imperative+present is:first+plural	# T5 + mo
+SFX xQ erò émogen/D0 erò	ds:imperative+present is:first+plural	# T5 + mo
+SFX xQ erò ímogen/D0 erò	ds:imperative+present is:first+plural	# T5 + mo
 
 # vèrbi -ar inregolari: [vʼ]ardar
 SFX xR Y 16
@@ -4209,24 +4333,24 @@ SFX S0 i e-tene i	ds:pronomenal+reflexive
 SFX S0 i e-ve i	ds:pronomenal+reflexive
 SFX S0 i e-ven i	ds:pronomenal+reflexive
 SFX S0 i e-vene i	ds:pronomenal+reflexive
-SFX S0 0 -ge [aàèéiín]	ds:pronomenal+locative
-SFX S0 0 -gen [aàèéiín]	ds:pronomenal+genitive+locative
-SFX S0 0 -gin [aàèéiín]	ds:pronomenal+genitive+locative
-SFX S0 0 -gene [aàèéiín]	ds:pronomenal+genitive+locative
-SFX S0 0 -gine [aàèéiín]	ds:pronomenal+genitive+locative
-SFX S0 0 -me [aàèéiín]	ds:pronomenal+reflexive
-SFX S0 0 -men [aàèéiín]	ds:pronomenal+reflexive
-SFX S0 0 -mene [aàèéiín]	ds:pronomenal+reflexive
-SFX S0 0 -n [aàèéií]	ds:pronomenal+genitive
-SFX S0 0 -ne [aàèéiín]	ds:pronomenal+genitive
-SFX S0 0 -se [aàèéiín]	ds:pronomenal+reflexive
-SFX S0 0 -sen [aàèéiín]	ds:pronomenal+reflexive
-SFX S0 0 -sene [aàèéiín]	ds:pronomenal+reflexive
-SFX S0 0 -te [aàèéiín]	ds:pronomenal+reflexive
-SFX S0 0 -tene [aàèéiín]	ds:pronomenal+reflexive
-SFX S0 0 -ve [aàèéiín]	ds:pronomenal+reflexive
-SFX S0 0 -ven [aàèéiín]	ds:pronomenal+reflexive
-SFX S0 0 -vene [aàèéiín]	ds:pronomenal+reflexive
+SFX S0 0 -ge [aàèéiíno]	ds:pronomenal+locative
+SFX S0 0 -gen [aàèéiíno]	ds:pronomenal+genitive+locative
+SFX S0 0 -gin [aàèéiíno]	ds:pronomenal+genitive+locative
+SFX S0 0 -gene [aàèéiíno]	ds:pronomenal+genitive+locative
+SFX S0 0 -gine [aàèéiíno]	ds:pronomenal+genitive+locative
+SFX S0 0 -me [aàèéiíno]	ds:pronomenal+reflexive
+SFX S0 0 -men [aàèéiíno]	ds:pronomenal+reflexive
+SFX S0 0 -mene [aàèéiíno]	ds:pronomenal+reflexive
+SFX S0 0 -n [aàèéiío]	ds:pronomenal+genitive
+SFX S0 0 -ne [aàèéiíno]	ds:pronomenal+genitive
+SFX S0 0 -se [aàèéiíno]	ds:pronomenal+reflexive
+SFX S0 0 -sen [aàèéiíno]	ds:pronomenal+reflexive
+SFX S0 0 -sene [aàèéiíno]	ds:pronomenal+reflexive
+SFX S0 0 -te [aàèéiíno]	ds:pronomenal+reflexive
+SFX S0 0 -tene [aàèéiíno]	ds:pronomenal+reflexive
+SFX S0 0 -ve [aàèéiíno]	ds:pronomenal+reflexive
+SFX S0 0 -ven [aàèéiíno]	ds:pronomenal+reflexive
+SFX S0 0 -vene [aàèéiíno]	ds:pronomenal+reflexive
 
 # vèrbi pronomenali pal komandativo (stakài senŧa èle vanesente)
 SFX Sl Y 90
@@ -4290,36 +4414,36 @@ SFX Sl i e-velo i	ds:pronomenal+reflexive
 SFX Sl i e-vela i	ds:pronomenal+reflexive
 SFX Sl i e-veli i	ds:pronomenal+reflexive
 SFX Sl i e-vele i	ds:pronomenal+reflexive
-SFX Sl 0 -l [aàèéiín]	ds:pronomenal+accusative
-SFX Sl 0 -lo [aàèéiín]	ds:pronomenal+accusative
-SFX Sl 0 -la [aàèéiín]	ds:pronomenal+accusative
-SFX Sl 0 -li [aàèéiín]	ds:pronomenal+accusative
-SFX Sl 0 -le [aàèéiín]	ds:pronomenal+accusative
-SFX Sl 0 -gel [aàèéiín]	ds:pronomenal+locative
-SFX Sl 0 -gelo [aàèéiín]	ds:pronomenal+locative
-SFX Sl 0 -gela [aàèéiín]	ds:pronomenal+locative
-SFX Sl 0 -geli [aàèéiín]	ds:pronomenal+locative
-SFX Sl 0 -gele [aàèéiín]	ds:pronomenal+locative
-SFX Sl 0 -mel [aàèéiín]	ds:pronomenal+reflexive
-SFX Sl 0 -melo [aàèéiín]	ds:pronomenal+reflexive
-SFX Sl 0 -mela [aàèéiín]	ds:pronomenal+reflexive
-SFX Sl 0 -meli [aàèéiín]	ds:pronomenal+reflexive
-SFX Sl 0 -mele [aàèéiín]	ds:pronomenal+reflexive
-SFX Sl 0 -sel [aàèéiín]	ds:pronomenal+reflexive
-SFX Sl 0 -selo [aàèéiín]	ds:pronomenal+reflexive
-SFX Sl 0 -sela [aàèéiín]	ds:pronomenal+reflexive
-SFX Sl 0 -seli [aàèéiín]	ds:pronomenal+reflexive
-SFX Sl 0 -sele [aàèéiín]	ds:pronomenal+reflexive
-SFX Sl 0 -tel [aàèéiín]	ds:pronomenal+reflexive
-SFX Sl 0 -telo [aàèéiín]	ds:pronomenal+reflexive
-SFX Sl 0 -tela [aàèéiín]	ds:pronomenal+reflexive
-SFX Sl 0 -teli [aàèéiín]	ds:pronomenal+reflexive
-SFX Sl 0 -tele [aàèéiín]	ds:pronomenal+reflexive
-SFX Sl 0 -vel [aàèéiín]	ds:pronomenal+reflexive
-SFX Sl 0 -velo [aàèéiín]	ds:pronomenal+reflexive
-SFX Sl 0 -vela [aàèéiín]	ds:pronomenal+reflexive
-SFX Sl 0 -veli [aàèéiín]	ds:pronomenal+reflexive
-SFX Sl 0 -vele [aàèéiín]	ds:pronomenal+reflexive
+SFX Sl 0 -l [aàèéiíno]	ds:pronomenal+accusative
+SFX Sl 0 -lo [aàèéiíno]	ds:pronomenal+accusative
+SFX Sl 0 -la [aàèéiíno]	ds:pronomenal+accusative
+SFX Sl 0 -li [aàèéiíno]	ds:pronomenal+accusative
+SFX Sl 0 -le [aàèéiíno]	ds:pronomenal+accusative
+SFX Sl 0 -gel [aàèéiíno]	ds:pronomenal+locative
+SFX Sl 0 -gelo [aàèéiíno]	ds:pronomenal+locative
+SFX Sl 0 -gela [aàèéiíno]	ds:pronomenal+locative
+SFX Sl 0 -geli [aàèéiíno]	ds:pronomenal+locative
+SFX Sl 0 -gele [aàèéiíno]	ds:pronomenal+locative
+SFX Sl 0 -mel [aàèéiíno]	ds:pronomenal+reflexive
+SFX Sl 0 -melo [aàèéiíno]	ds:pronomenal+reflexive
+SFX Sl 0 -mela [aàèéiíno]	ds:pronomenal+reflexive
+SFX Sl 0 -meli [aàèéiíno]	ds:pronomenal+reflexive
+SFX Sl 0 -mele [aàèéiíno]	ds:pronomenal+reflexive
+SFX Sl 0 -sel [aàèéiíno]	ds:pronomenal+reflexive
+SFX Sl 0 -selo [aàèéiíno]	ds:pronomenal+reflexive
+SFX Sl 0 -sela [aàèéiíno]	ds:pronomenal+reflexive
+SFX Sl 0 -seli [aàèéiíno]	ds:pronomenal+reflexive
+SFX Sl 0 -sele [aàèéiíno]	ds:pronomenal+reflexive
+SFX Sl 0 -tel [aàèéiíno]	ds:pronomenal+reflexive
+SFX Sl 0 -telo [aàèéiíno]	ds:pronomenal+reflexive
+SFX Sl 0 -tela [aàèéiíno]	ds:pronomenal+reflexive
+SFX Sl 0 -teli [aàèéiíno]	ds:pronomenal+reflexive
+SFX Sl 0 -tele [aàèéiíno]	ds:pronomenal+reflexive
+SFX Sl 0 -vel [aàèéiíno]	ds:pronomenal+reflexive
+SFX Sl 0 -velo [aàèéiíno]	ds:pronomenal+reflexive
+SFX Sl 0 -vela [aàèéiíno]	ds:pronomenal+reflexive
+SFX Sl 0 -veli [aàèéiíno]	ds:pronomenal+reflexive
+SFX Sl 0 -vele [aàèéiíno]	ds:pronomenal+reflexive
 
 # vèrbi pronomenali pal komandativo (stakài ko èle vanesente)
 SFX S7 Y 72
@@ -4371,33 +4495,33 @@ SFX S7 i e-veƚo i	ds:pronomenal+reflexive
 SFX S7 i e-veƚa i	ds:pronomenal+reflexive
 SFX S7 i e-veƚi i	ds:pronomenal+reflexive
 SFX S7 i e-veƚe i	ds:pronomenal+reflexive
-SFX S7 0 -ƚo [àèéí]	ds:pronomenal+accusative
-SFX S7 0 -ƚa [àèéí]	ds:pronomenal+accusative
-SFX S7 0 -ƚi [àèéí]	ds:pronomenal+accusative
-SFX S7 0 -ƚe [àèéí]	ds:pronomenal+accusative
-SFX S7 0 -geƚo [aàèéiín]	ds:pronomenal+locative
-SFX S7 0 -geƚa [aàèéiín]	ds:pronomenal+locative
-SFX S7 0 -geƚi [aàèéiín]	ds:pronomenal+locative
-SFX S7 0 -geƚe [aàèéiín]	ds:pronomenal+locative
-SFX S7 0 -meƚo [aàèéiín]	ds:pronomenal+reflexive
-SFX S7 0 -meƚa [aàèéiín]	ds:pronomenal+reflexive
-SFX S7 0 -meƚi [aàèéiín]	ds:pronomenal+reflexive
-SFX S7 0 -meƚe [aàèéiín]	ds:pronomenal+reflexive
-SFX S7 0 -seƚo [aàèéiín]	ds:pronomenal+reflexive
-SFX S7 0 -seƚa [aàèéiín]	ds:pronomenal+reflexive
-SFX S7 0 -seƚi [aàèéiín]	ds:pronomenal+reflexive
-SFX S7 0 -seƚe [aàèéiín]	ds:pronomenal+reflexive
-SFX S7 0 -teƚo [aàèéiín]	ds:pronomenal+reflexive
-SFX S7 0 -teƚa [aàèéiín]	ds:pronomenal+reflexive
-SFX S7 0 -teƚi [aàèéiín]	ds:pronomenal+reflexive
-SFX S7 0 -teƚe [aàèéiín]	ds:pronomenal+reflexive
-SFX S7 0 -veƚo [aàèéiín]	ds:pronomenal+reflexive
-SFX S7 0 -veƚa [aàèéiín]	ds:pronomenal+reflexive
-SFX S7 0 -veƚi [aàèéiín]	ds:pronomenal+reflexive
-SFX S7 0 -veƚe [aàèéiín]	ds:pronomenal+reflexive
+SFX S7 0 -ƚo [àèéío]	ds:pronomenal+accusative
+SFX S7 0 -ƚa [àèéío]	ds:pronomenal+accusative
+SFX S7 0 -ƚi [àèéío]	ds:pronomenal+accusative
+SFX S7 0 -ƚe [àèéío]	ds:pronomenal+accusative
+SFX S7 0 -geƚo [aàèéiíno]	ds:pronomenal+locative
+SFX S7 0 -geƚa [aàèéiíno]	ds:pronomenal+locative
+SFX S7 0 -geƚi [aàèéiíno]	ds:pronomenal+locative
+SFX S7 0 -geƚe [aàèéiíno]	ds:pronomenal+locative
+SFX S7 0 -meƚo [aàèéiíno]	ds:pronomenal+reflexive
+SFX S7 0 -meƚa [aàèéiíno]	ds:pronomenal+reflexive
+SFX S7 0 -meƚi [aàèéiíno]	ds:pronomenal+reflexive
+SFX S7 0 -meƚe [aàèéiíno]	ds:pronomenal+reflexive
+SFX S7 0 -seƚo [aàèéiíno]	ds:pronomenal+reflexive
+SFX S7 0 -seƚa [aàèéiíno]	ds:pronomenal+reflexive
+SFX S7 0 -seƚi [aàèéiíno]	ds:pronomenal+reflexive
+SFX S7 0 -seƚe [aàèéiíno]	ds:pronomenal+reflexive
+SFX S7 0 -teƚo [aàèéiíno]	ds:pronomenal+reflexive
+SFX S7 0 -teƚa [aàèéiíno]	ds:pronomenal+reflexive
+SFX S7 0 -teƚi [aàèéiíno]	ds:pronomenal+reflexive
+SFX S7 0 -teƚe [aàèéiíno]	ds:pronomenal+reflexive
+SFX S7 0 -veƚo [aàèéiíno]	ds:pronomenal+reflexive
+SFX S7 0 -veƚa [aàèéiíno]	ds:pronomenal+reflexive
+SFX S7 0 -veƚi [aàèéiíno]	ds:pronomenal+reflexive
+SFX S7 0 -veƚe [aàèéiíno]	ds:pronomenal+reflexive
 
 # vèrbi pronomenali (takài)
-SFX D0 Y 87
+SFX D0 Y 105
 SFX D0 0 ge [àèi]	ds:pronomenal+locative
 SFX D0 é ege é	ds:pronomenal+locative
 SFX D0 0 gen [àéèi]	ds:pronomenal+genitive+locative
@@ -4460,39 +4584,69 @@ SFX D0 igen etene igen	ds:pronomenal+reflexive
 SFX D0 igen eve igen	ds:pronomenal+reflexive
 SFX D0 igen even igen	ds:pronomenal+reflexive
 SFX D0 igen evene igen	ds:pronomenal+reflexive
-SFX D0 n 0 [^ií]gen	ds:pronomenal+locative
+SFX D0 n 0 [^iín]gen	ds:pronomenal+locative
+SFX D0 n 0 [^éó]ngen	ds:pronomenal+locative
+SFX D0 éngen enge éngen	ds:pronomenal+locative
+SFX D0 óngen onge óngen	ds:pronomenal+locative
 SFX D0 ígen ige ígen	ds:pronomenal+locative
 SFX D0 en in [^i]gen	ds:pronomenal+genitive+locative
 SFX D0 0 e [^i]gen	ds:pronomenal+genitive+locative
 SFX D0 en ine [^i]gen	ds:pronomenal+genitive+locative
-SFX D0 gen me [^ií]gen	ds:pronomenal+reflexive
+SFX D0 gen me [^iín]gen	ds:pronomenal+reflexive
+SFX D0 gen me [^éó]ngen	ds:pronomenal+reflexive
+SFX D0 éngen enme éngen	ds:pronomenal+reflexive
+SFX D0 óngen onme óngen	ds:pronomenal+reflexive
 SFX D0 ígen ime ígen	ds:pronomenal+reflexive
 SFX D0 gen men [^i]gen	ds:pronomenal+reflexive
 SFX D0 gen mene [^i]gen	ds:pronomenal+reflexive
 SFX D0 gen n [^iín]gen	ds:pronomenal+genitive
 SFX D0 ígen in ígen	ds:pronomenal+genitive
 SFX D0 gen ne [^iín]gen	ds:pronomenal+genitive
+SFX D0 gen ne [^éó]ngen	ds:pronomenal+genitive
+SFX D0 éngen enne éngen	ds:pronomenal+genitive
+SFX D0 óngen onne óngen	ds:pronomenal+genitive
 SFX D0 ígen ine ígen	ds:pronomenal+genitive
-SFX D0 gen se [^ií]gen	ds:pronomenal+reflexive
+SFX D0 gen se [^iín]gen	ds:pronomenal+reflexive
+SFX D0 gen se [^éó]ngen	ds:pronomenal+reflexive
+SFX D0 éngen ense éngen	ds:pronomenal+reflexive
+SFX D0 óngen onse óngen	ds:pronomenal+reflexive
 SFX D0 ígen ise ígen	ds:pronomenal+reflexive
 SFX D0 gen sen [^i]gen	ds:pronomenal+reflexive
 SFX D0 gen sene [^i]gen	ds:pronomenal+reflexive
-SFX D0 gen te [^ií]gen	ds:pronomenal+reflexive
+SFX D0 gen te [^iín]gen	ds:pronomenal+reflexive
+SFX D0 gen te [^éó]ngen	ds:pronomenal+reflexive
+SFX D0 éngen ente éngen	ds:pronomenal+reflexive
+SFX D0 óngen onte óngen	ds:pronomenal+reflexive
 SFX D0 ígen ite ígen	ds:pronomenal+reflexive
 SFX D0 gen ten [^i]gen	ds:pronomenal+reflexive
 SFX D0 gen tene [^i]gen	ds:pronomenal+reflexive
-SFX D0 gen ve [^ií]gen	ds:pronomenal+reflexive
+SFX D0 gen ve [^iín]gen	ds:pronomenal+reflexive
+SFX D0 gen ve [^éó]ngen	ds:pronomenal+reflexive
+SFX D0 éngen enve éngen	ds:pronomenal+reflexive
+SFX D0 óngen onve óngen	ds:pronomenal+reflexive
 SFX D0 ígen ive ígen	ds:pronomenal+reflexive
 SFX D0 gen ven [^i]gen	ds:pronomenal+reflexive
 SFX D0 gen vene [^i]gen	ds:pronomenal+reflexive
 
 # vèrbi pronomenali (takài senŧa èle vanesente)
-SFX Dl Y 80
-SFX Dl gelo l [^àéí]gelo	ds:pronomenal+accusative
-SFX Dl gelo lo [^àéí]gelo	ds:pronomenal+accusative
-SFX Dl gelo la [^àéí]gelo	ds:pronomenal+accusative
-SFX Dl gelo li [^àéí]gelo	ds:pronomenal+accusative
-SFX Dl gelo le [^àéí]gelo	ds:pronomenal+accusative
+SFX Dl Y 92
+SFX Dl gelo l [^àéín]gelo	ds:pronomenal+accusative
+SFX Dl gelo lo [^àéín]gelo	ds:pronomenal+accusative
+SFX Dl gelo lo [^éó]ngelo	ds:pronomenal+accusative
+SFX Dl éngelo enlo éngelo	ds:pronomenal+accusative
+SFX Dl óngelo enlo óngelo	ds:pronomenal+accusative
+SFX Dl gelo la [^àéín]gelo	ds:pronomenal+accusative
+SFX Dl gelo la [^éó]ngelo	ds:pronomenal+accusative
+SFX Dl éngelo enla éngelo	ds:pronomenal+accusative
+SFX Dl óngelo enla óngelo	ds:pronomenal+accusative
+SFX Dl gelo li [^àéín]gelo	ds:pronomenal+accusative
+SFX Dl gelo li [^éó]ngelo	ds:pronomenal+accusative
+SFX Dl éngelo enli éngelo	ds:pronomenal+accusative
+SFX Dl óngelo enli óngelo	ds:pronomenal+accusative
+SFX Dl gelo le [^àéín]gelo	ds:pronomenal+accusative
+SFX Dl gelo le [^éó]ngelo	ds:pronomenal+accusative
+SFX Dl éngelo enle éngelo	ds:pronomenal+accusative
+SFX Dl óngelo enle óngelo	ds:pronomenal+accusative
 SFX Dl àgelo al àgelo	ds:pronomenal+accusative
 SFX Dl àgelo alo àgelo	ds:pronomenal+accusative
 SFX Dl àgelo ala àgelo	ds:pronomenal+accusative
