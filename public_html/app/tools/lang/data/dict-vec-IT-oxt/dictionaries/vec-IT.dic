@@ -6650,9 +6650,9 @@ xgínŧomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interro
 xginsar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:s
 xginso/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:xginsar dp:s
 xgínsomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:xginsar dp:s
-xgiñar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:s
-xgiño/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:xgiñar dp:s
-xgíñomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:xgiñar dp:s
+giñar/t0l070n0t1P0PlP7Q0QlQ7*0	po:verb ds:infinitive+simple
+giño/t8n8tAlA7AJ1*0	po:verb ds:indicative+present is:first+singular st:giñar
+gíñomi/t8n8tAlA7AI1*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:giñar
 giñaŧar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
 giñaŧo/t8n8tAlAJ1FS*0	po:verb ds:indicative+present is:first+singular st:giñaŧar
 giñàŧomi/t8n8tAlAI1*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:giñaŧar
@@ -9891,13 +9891,13 @@ skovolar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple dp:s
 skóvolo/T8N8tBlBJ1I1FS	po:verb ds:indicative+present is:first+singular st:skovolar dp:s
 skovoƚar/t070t1P0P7Q0Q7	po:verb ds:infinitive+simple dp:s
 skóvoƚo/T8tB7BJ1I1	po:verb ds:indicative+present is:first+singular st:skovoƚar dp:s
-kòxer/t1c0c1c7l171P0PlP7R0RlR7-0-1^7.0^6	po:verb ds:infinitive+simple
-kòxo/T8N8tBlB7BJ1I1-0-1^7.0^6	po:verb ds:indicative+present is:first+singular st:kòxer
-koxerò/t0n0l070p4l474J1I1-0-1^7.0^6	po:verb ds:indicative+future is:first+singular st:kòxer
-kóxer/t1c0c1c7l171P0PlP7R0RlR7-0-1^7.0^6	po:verb ds:infinitive+simple
-koxo/t8n8tElE7EJ1FS-0-1^7.0^6	po:verb ds:indicative+present is:first+singular st:kóxer
-kóxomi/t8n8tElE7EI1-0-1^7.0^6	po:verb ds:indicative+present is:first+singular ds:interrogative st:kóxer
-kòto/A1FS-0-1^7.0^6	po:verb ds:participle+passive+strong is:singular+masculine st:kòxer
+kòxer/t1c0c1c7l171P0PlP7R0RlR7-0-1:0^7.0^6	po:verb ds:infinitive+simple
+kòxo/T8N8tBlB7BJ1I1-0-1:0^7.0^6	po:verb ds:indicative+present is:first+singular st:kòxer
+koxerò/t0n0l070p4l474J1I1-0-1:0^7.0^6	po:verb ds:indicative+future is:first+singular st:kòxer
+kóxer/t1c0c1c7l171P0PlP7R0RlR7-0-1:0^7.0^6	po:verb ds:infinitive+simple
+koxo/t8n8tElE7EJ1FS-0-1:0^7.0^6	po:verb ds:indicative+present is:first+singular st:kóxer
+kóxomi/t8n8tElE7EI1-0-1:0^7.0^6	po:verb ds:indicative+present is:first+singular ds:interrogative st:kóxer
+kòto/A1FS-0-1:0^7.0^6	po:verb ds:participle+passive+strong is:singular+masculine st:kòxer
 koxir/t0l070n0t1P0PlP7Q0QlQ7-1.0*0	po:verb ds:infinitive+simple
 koxiso/n0T8N8tClC7CJ1I1FS-1.0*0	po:verb ds:indicative+present is:first+singular st:koxir
 koxenar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
@@ -35445,7 +35445,6 @@ bataiŧa/F0V3*0	po:noun is:singular+femenine
 batajòla/F0V3	po:noun is:singular+femenine
 bataɉòla/F0V3	po:noun is:singular+femenine
 batarèl/M0B1V3	po:noun is:singular+masculine
-batarèla/F0V3	po:noun is:singular+femenine
 bati–pal/M0V3	po:noun is:singular+masculine pa:bati pa:pal
 batidor/M0Pdv0	po:noun is:singular+masculine
 batidora/F0v0	po:noun is:singular+femenine
@@ -44262,7 +44261,6 @@ plus	po:noun is:masculine+non_enumerable
 pokalise/F0FS@0	po:noun is:singular+femenine
 pokaƚise/F0@0	po:noun is:singular+femenine
 polikan/M0B1	po:noun is:singular+masculine
-polmon/MFB1PdeT	po:noun is:singular+masculine
 polmonía/F0	po:noun is:singular+femenine
 polvareta/F0	po:noun is:singular+femenine st:pólvara ds:eto
 polvereta/F0	po:noun is:singular+femenine st:pólvera ds:eto
@@ -59077,8 +59075,6 @@ maladetamente/FSw0^6	po:adverb ds:mente
 maladeto/A1FSPd^6	po:adjective_qualificative is:singular+masculine
 maladetonaŧo/M0FSV3	po:adjective_qualificative is:singular+masculine
 maladitamente/FSw0	po:adverb ds:mente
-maldisente/X0FSPdVr	po:adjective_qualificative is:singular
-maldiŧente/X0FSPdVr	po:adjective_qualificative is:singular
 malegrasia/F0eT	po:adjective_qualificative is:singular+femenine
 malegrasion/A2B1Pd	po:adjective_qualificative is:singular+masculine
 malegraŧia/F0eT	po:adjective_qualificative is:singular+femenine
@@ -59470,7 +59466,6 @@ pevarèl/M0B1V3	po:noun is:singular+masculine
 peverèl/M0B1V3	po:noun is:singular+masculine
 pèra	po:adverb
 pèra	po:preposition
-pèrfido/A1FS	po:adjective_qualificative is:singular+masculine
 pèrmuta/F0	po:noun is:singular+femenine
 pèrno/M0FS	po:noun is:singular+masculine
 pi–pi–pi	po:interjection pa:pi pa:pi pa:pi
@@ -62450,13 +62445,11 @@ maliaŧa/F0V3	po:adjective_qualificative is:singular+femenine
 maliaŧo/M0FSV3	po:adjective_qualificative is:singular+masculine
 malinkonía/F0x0eT	po:noun is:singular+femenine
 maliñitade/y0N0	po:noun is:singular+femenine
-maliño/M0aZaS	po:noun is:singular+masculine
 maliŧia/F0V3	po:noun is:singular+femenine
 malía/F0V3	po:noun is:singular+femenine
 maƚiaso/A1	po:adjective_qualificative is:singular+masculine
 maƚinkonía/F0x7e1	po:noun is:singular+femenine
 maƚiñitade/y0N0	po:noun is:singular+femenine
-maƚiño/M0aL	po:noun is:singular+masculine
 maƚisia/F0	po:noun is:singular+femenine
 mana/F0aZaSaTeLe7eTiN	po:noun is:singular+femenine
 mandràgola/F0V3	po:noun is:singular+femenine
@@ -64162,8 +64155,18 @@ xoɉèl/M0B1V3	po:noun is:singular+masculine
 xoventude/y0N0	po:noun is:singular+femenine
 xvelteŧa/F0V3	po:noun is:singular+femenine
 xvèlto/A1	po:adjective_qualificative is:singular+masculine
+sentinèla/F0V3	po:noun is:singular+femenine
+polmon/MFB1PdeT	po:noun is:singular+masculine
+maldisente/X0FSPdVr	po:adjective_qualificative is:singular dp:mal
+maldiŧente/X0FSPdVr	po:adjective_qualificative is:singular dp:mal
+batarèla/F0V3	po:noun is:singular+femenine
+pèrfido/A1FS	po:adjective_qualificative is:singular+masculine
+maliño/M0aZaS	po:adjective_qualificative is:singular+masculine
+maƚiño/M0aL	po:adjective_qualificative is:singular+masculine
+maliña/F0aZaS	po:adjective_qualificative is:singular+femenine
+maƚiña/F0aL	po:adjective_qualificative is:singular+femenine
 
 
-/ 670/725
+/ 674/725
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ–ʼ
