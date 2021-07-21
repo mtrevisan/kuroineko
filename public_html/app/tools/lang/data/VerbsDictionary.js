@@ -2700,6 +2700,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ikuit",			"in",			1,	0,	"a",	"1796",			"",
 "ilkam",			"",			1,	3,	"g",	"1775",			"Inleamar.",
 "imit",			"",			1,	0,	"a",	"1660",			"(veneŧian)",
+"inmit",			"",			1,	0,	"a",	"1660",			"(veneŧian)",
 "incostr",		"",			1,	3,	"g",	"1775",			"",
 "indivin",		"",			1,	5,	"a",	"1980",			"XVI",
 "indovin",		"",			1,	5,	"a",	"1560",			"Intivar.",
