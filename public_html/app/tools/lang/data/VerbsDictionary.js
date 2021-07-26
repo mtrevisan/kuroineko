@@ -1606,6 +1606,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fameliariđ",	"",			1,	8,	"a",	"1854",			"",
 "fanatik",		"in",			4,	7,	"a",	"",				"",
 "fanfan",		"",			1,	1,	"g",	"1829",			"Spagar.",
+"fanfar",		"",			1,	1,	"a",	"",				"",
 "fanfaron",		"",			1,	6,	"a",	"1851",			"",
 "fanfruñ",		"fan",		1,	5,	"a",	"1851",			"Remuxinar, rovistar.",
 "fanfuñ",		"",			1,	4,	"a",	"1775",			"Strasinar, rovistar.",
