@@ -7146,6 +7146,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "stranü",		"",			1,	5,	"a",	"1775",			"Far far un starnudo.",
 "stranud",		"",			1,	5,	"a",	"1810",			"Far far un starnudo.",
 "stranx",		"",			4,	6,	"a",	"1852",			"Strakolar.",
+"strapon",		"",			1,	5,	"a",	"",				"",
 "straŧ",			"",			1,	3,	"g",	"1775",			"",
 "straŧon",		"",			1,	5,	"a",	"1896",			"",
 "strax",			"",			4,	5,	"a",	"1775",			"",
