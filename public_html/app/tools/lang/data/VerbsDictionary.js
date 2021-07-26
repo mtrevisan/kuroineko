@@ -4530,6 +4530,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "mog",			"x",			1,	1,	"g",	"",				"Lusar, xlogar, stòrŧer.",
 "moɉ",			"",			1,	1,	"g",	"1775",			"",
 "moɉ",			"in",			1,	1,	"g",	"1854",			"",
+"moj",			"in",			1,	1,	"g",	"",				"",
 "moj",			"x",			1,	1,	"g",	"",				"(bixiak) Maŧerar.",
 "mòj",			"",			3,	1,	"g",	"1810",			"",
 "mok",			"",			1,	1,	"g",	"1810",			"Tajar, xméter, andar via.",
