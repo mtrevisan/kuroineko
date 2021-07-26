@@ -8662,6 +8662,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "voltol",		"",			1,	1,	"g",	"",				"",
 "voltol",		"ar",			1,	1,	"g",	"1560",			"",
 "voltol",		"in",			1,	1,	"g",	"",				"Avòlđer.",
+"voltol",		"ra",			1,	1,	"g",	"",				"",
 "voltol",		"re",			1,	1,	"g",	"1775",			"",
 "voltol",		"x",			1,	1,	"g",	"1854",			"",
 "voltur",		"",			1,	4,	"a",	"1867",			"",
