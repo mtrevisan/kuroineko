@@ -1,4 +1,5 @@
 define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "stressType", "born", "meaning",
+"abdeg",			"",			1,	0,	"g",	"",				"",
 "abdik",			"",			1,	0,	"g",	"1867",			"",
 "abilit",		"",			1,	2,	"a",	"1867",			"",
 "abilit",		"dex",		1,	2,	"a",	"",				"",
