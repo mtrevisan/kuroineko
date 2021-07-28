@@ -8242,7 +8242,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vanp",			"x",			4,	4,	"a",	"",				"",
 "vanpol",		"x",			1,	1,	"g",	"1560",			"Divertir.",
 "vant",			"",			1,	1,	"g",	"1614",			"",
-"vantax",		"",			1,	4,	"g",	"",				"",
+"vantađ",		"",			1,	4,	"g",	"1747",			"(veneŧian)",
 "vanŧ",			"",			1,	1,	"g",	"1775",			"",
 "vanŧ",			"si",			1,	1,	"g",	"1896",			"Vanŧar.",
 "vanŧ",			"sora",		1,	1,	"g",	"1867",			"",
