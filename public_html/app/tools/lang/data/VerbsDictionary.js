@@ -1348,6 +1348,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "dupi",			"stra",		1,	1,	"a",	"",				"",
 "dupion",		"in",			1,	4,	"a",	"1896",			"Far el koleto a le kamixe.",
 "dur",			"",			1,	1,	"a",	"1415",			"",
+"dur",			"in",			1,	1,	"a",	"1747",			"(veneŧian)",
 "dur",			"stra",		1,	1,	"a",	"",				"",
 "dur",			"kon",		4,	3,	"a",	"",				"(bixiak)",
 "dur",			"in",			4,	3,	"a",	"1775",			"",
