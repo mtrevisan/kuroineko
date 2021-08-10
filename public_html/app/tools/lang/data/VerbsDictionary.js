@@ -2017,6 +2017,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "formol",		"",			1,	1,	"a",	"",				"",
 "forn",			"",			1,	1,	"a",	"1847",			"",
 "forn",			"des",		1,	1,	"a",	"1775",			"Sfornar.",
+"forn",			"in",			1,	1,	"a",	"1745",			"(veneŧian)",
 "forn",			"s",			1,	1,	"a",	"1829",			"",
 "forn",			"",			4,	4,	"a",	"1775",			"",
 "forn",			"des",		4,	4,	"a",	"1867",			"",
