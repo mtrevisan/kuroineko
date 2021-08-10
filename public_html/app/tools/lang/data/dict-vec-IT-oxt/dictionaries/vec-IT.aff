@@ -85,7 +85,7 @@ ICONV ’ ʼ
 ICONV ‘ ʼ
 
 # frequently switched character groups
-REP 187
+REP 191
 REP a à
 REP e è
 REP e é
@@ -166,6 +166,10 @@ REP ^tun ʼtʼ_un
 REP ^sun ʼsʼ_un
 REP ^ʼtun ʼtʼ_un
 REP ^ʼsun ʼsʼ_un
+REP ^an_tun antʼ_un
+REP ^an_sun ansʼ_un
+REP ^antun antʼ_un
+REP ^ansun ansʼ_un
 REP ^in_tun intʼ_un
 REP ^in_sun insʼ_un
 REP ^intun intʼ_un

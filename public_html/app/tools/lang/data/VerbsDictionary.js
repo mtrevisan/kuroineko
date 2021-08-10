@@ -5108,8 +5108,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "palex",			"",			1,	3,	"a",	"",				"Lasar trapelar.",
 "palid",			"",			4,	5,	"a",	"1980",			"(vitoriexe)",
 "palid",			"in",			4,	5,	"a",	"",				"",
-"paliđ",			"",			1,	3,	"a",	"1775",			"Palafitar.",
-"paliđ",			"s",			1,	3,	"a",	"1829",			"",
+"paliŧ",			"",			1,	3,	"a",	"1775",			"Palafitar.",
+"paliŧ",			"s",			1,	3,	"a",	"1829",			"",
 /*"palix",			"",			1,	3,	"a",	"1775",			"Avòlxer, disténder na matasa.",*/
 "palm",			"",			1,	1,	"g",	"",				"",
 "palm",			"in",			1,	1,	"g",	"1660",			"(veneŧian)",
