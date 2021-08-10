@@ -461,6 +461,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "baviđ",			"x",			1,	3,	"a",	"1867",			"(termine de stanpadori) Inprímer dopie parole e linee.",
 "bax",			"",			1,	1,	"g",	"fine XII",		"",
 "bax",			"kon",		1,	1,	"g",	"1829",			"",
+"bax",			"x",			1,	1,	"g",	"1747",			"(veneŧian)",
 "bax",			"x",			4,	3,	"a",	"1560",			"Venir manko, languir, morir.",
 "baxn",			"",			1,	1,	"g",	"",				"Maxenar.",
 "baxuc",			"",			1,	3,	"a",	"1867",			"",
