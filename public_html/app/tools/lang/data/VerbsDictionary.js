@@ -8304,6 +8304,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "véd",			"tra",		3,	1,	"a",	"1867",			"",
 "vedri",			"",			1,	1,	"a",	"1495",			"",
 "vedri",			"in",			1,	1,	"a",	"",				"",
+"vedo",			"",			1,	1,	"a",	"1747",			"(veneŧian)",
 "vedov",			"",			1,	1,	"a",	"",				"",
 "vegr",			"dex",		1,	1,	"a",	"1590",			"Bonifegar.",
 "vegr",			"in",			1,	1,	"a",	"1900",			"(veronexe)",
