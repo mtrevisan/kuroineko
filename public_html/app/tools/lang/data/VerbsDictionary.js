@@ -4493,6 +4493,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "miaol",			"",			1,	2,	"g",	"1980",			"(vitoriexe)",
 "miaol",			"x",			1,	2,	"g",	"",				"",
 "mièd",			"",			3,	2,	"g",	"1867",			"",
+"miedeg",		"",			1,	2,	"g",	"1747",			"Medegar.",
 "miel",			"in",			1,	2,	"g",	"1560",			"Adolŧir.",
 "miet",			"",			1,	2,	"g",	"1854",			"",
 "migr",			"",			1,	1,	"a",	"",				"",
