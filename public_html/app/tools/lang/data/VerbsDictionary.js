@@ -2696,6 +2696,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "guiŧ",			"",			1,	2,	"a",	"1829",			"",
 "guiŧ",			"x",			1,	2,	"a",	"1829",			"",
 "guñ",			"x",			1,	1,	"a",	"",				"Burlar, skernir.",
+"guol",			"x",			1,	1,	"a",	"1747",			"Xvolar.",
 "gur",			"a",			1,	1,	"a",	"1867",			"Augurar.",
 "gur",			"in",			1,	1,	"a",	"1867",			"Augurar.",
 "gurxit",		"in",			1,	1,	"a",	"1775",			"",
