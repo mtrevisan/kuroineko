@@ -1410,6 +1410,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "đir",			"",			1,	1,	"a",	"1560",			"",
 "đir",			"ra",			1,	1,	"a",	"1854",			"",
 "đir",			"re",			1,	1,	"a",	"1896",			"",
+"điradon",		"",			1,	5,	"a",	"1747",			"",
 "đirandol",		"",			1,	3,	"g",	"1852",			"",
 "đirl",			"",			1,	1,	"a",	"1980",			"(vitoriexe) Zirlare di certi uccelli.",
 "đirland",		"",			1,	4,	"g",	"1829",			"",
