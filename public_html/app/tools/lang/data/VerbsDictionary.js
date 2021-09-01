@@ -3456,6 +3456,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "koñós",			"",			3,	3,	"a",	"1867",			"",
 "koñós",			"re",			3,	3,	"a",	"1829",			"",
 "kop",			"",			1,	1,	"a",	"1775",			"",
+"kop",			"des",		1,	1,	"a",	"1745",			"(veneŧian)",
 "kopat",			"",			1,	3,	"g",	"1821",			"Tirar na kopa in tèra.",
 "kopel",			"s",			1,	3,	"g",	"1896",			"",
 "kopelot",		"s",			1,	5,	"g",	"1854",			"Skopelar.",
