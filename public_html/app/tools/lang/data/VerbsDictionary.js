@@ -6800,6 +6800,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "skrív",			"ko",			3,	3,	"a",	"1810",			"",
 "skrív",			"i",			3,	3,	"a",	"1867",			"",
 "skrív",			"in",			3,	3,	"a",	"",				"",
+"skrív",			"pre",		3,	3,	"a",	"1745",			"(veneŧian)",
 "skrív",			"re",			3,	3,	"a",	"1450",			"",
 "skrív",			"sora",		3,	3,	"a",	"1447",			"",
 "skrív",			"soto",		3,	3,	"a",	"1412",			"",
