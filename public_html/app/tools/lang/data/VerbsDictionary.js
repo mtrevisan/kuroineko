@@ -348,6 +348,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "baraŧ",			"in",			1,	3,	"g",	"",				"",
 "baraŧ",			"dex",		1,	3,	"g",	"1867",			"",
 "baraŧ",			"x",			1,	3,	"g",	"1775",			"",
+"barb",			"",			1,	1,	"g",	"1745",			"(veneŧian)",
 "barb",			"dex",		1,	1,	"g",	"1829",			"",
 "barb",			"x",			1,	1,	"g",	"1775",			"",
 "barbaj",		"",			1,	4,	"g",	"1775",			"Tartajar.",
