@@ -5273,6 +5273,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pasion",		"",			1,	4,	"a",	"1829",			"",
 "pasion",		"a",			1,	4,	"a",	"1867",			"",
 "pasion",		"des",		1,	4,	"a",	"1900",			"(veronexe)",
+"pasion",		"kon",		1,	4,	"a",	"1747",			"(veneŧian)",
 "past",			"des",		1,	1,	"g",	"1867",			"",
 "past",			"in",			1,	1,	"g",	"1560",			"",
 "pasteđ",		"",			1,	4,	"a",	"1775",			"",
