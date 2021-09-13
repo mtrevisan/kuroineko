@@ -6653,6 +6653,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sider",			"kon",		1,	1,	"a",	"1867",			"",
 "sider",			"rekon",		1,	1,	"a",	"",				"",
 "sidi",			"",			1,	1,	"a",	"1775",			"Sfiankar, strakar, inportunar.",
+"sidi",			"in",			1,	1,	"a",	"1745",			"(veneŧian)",
 "sidi",			"pre",		1,	1,	"a",	"1867",			"",
 "sieg",			"",			1,	1,	"a",	"1851",			"",
 "siéd",			"re",			3,	2,	"a",	"1829",			"",
