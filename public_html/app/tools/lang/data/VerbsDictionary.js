@@ -23,6 +23,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "aku",			"ad",			1,	0,	"g",	"1825",			"Dar da béar al kanpo vanti ʼverlo semenà.",
 "aku",			"d",			1,	0,	"g",	"1900",			"(veronexe) Adakuar.",
 "aku",			"in",			1,	0,	"g",	"1660",			"(veneŧian)",
+"akuist",		"",			1,	3,	"a",	"1747",			"(veneŧian)",
 "akuix",			"",			4,	5,	"a",	"",				"",
 "al",				"",			1,	0,	"g",	"1829",			"",
 "alarm",			"",			1,	2,	"g",	"1829",			"",
