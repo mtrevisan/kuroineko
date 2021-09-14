@@ -1809,6 +1809,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "fiank",			"in",			1,	2,	"g",	"1854",			"Fortifegar a le bande.",
 "fiank",			"s",			1,	2,	"g",	"1775",			"",
 "fiank",			"in",			4,	5,	"a",	"1854",			"",
+"fiankiđ",		"",			1,	5,	"a",	"1747",			"(veneŧian)",
 "fiankon",		"",			1,	5,	"a",	"1852",			"Dar fiankàe, perkòter el fianko.",
 "fiankon",		"s",			1,	5,	"a",	"",				"(bixiak) Sfiankar.",
 "fiap",			"",			1,	2,	"g",	"1852",			"Peskar nudi a braŧo i gò.",
