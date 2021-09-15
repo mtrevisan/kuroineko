@@ -5402,21 +5402,19 @@ SFX Vx Y 1
 SFX Vx l ƚe/F0 [aeiouàèéíòóú]l	is:singular+veneŧian
 
 # trasformaŧion iniŧial de paròla intra varianti (l > ƚ, ƚ > l, j > ɉ, ŧ > s, đ > x)
-PFX Vp Y 14
+PFX Vp Y 12
+PFX Vp đ x đ
 PFX Vp j ɉ j
+PFX Vp l ƚ l
+PFX Vp ŧ s ŧ
+PFX Vp xj xɉ xj
+PFX Vp inđ inx inđ
 PFX Vp inj inɉ inj
 PFX Vp dexj dexɉ dexj
-PFX Vp xj xɉ xj
-PFX Vp l ƚ l
-PFX Vp ƚ l ƚ
-PFX Vp ŧ s ŧ
-PFX Vp đ x đ
-PFX Vp inđ inx inđ
+PFX Vp Đ X Đ
 PFX Vp J Ɉ J
 PFX Vp L Ƚ L
-PFX Vp Ƚ L Ƚ
 PFX Vp Ŧ S Ŧ
-PFX Vp Đ X Đ
 
 
 ### Pàdoa ###
@@ -5557,32 +5555,22 @@ SFX Pd obrioxi ubriuxi obrioxi	is:padoan
 ### Viŧenŧa ###
 
 # trasformaŧion viŧentina (re- > ra-, se- > sa-, per- > par-)
-PFX Vs Y 25
+PFX Vs Y 15
 PFX Vs be ba ber
-PFX Vs bè bà bèr
-PFX Vs bé bà bér
 PFX Vs fe fa fe[rs]
-PFX Vs fè fà fèr
-PFX Vs fé fà fér
 PFX Vs me ma mer
-PFX Vs mè mà mèr
-PFX Vs mé mà mér
 PFX Vs pe pa per
-PFX Vs pè pà pèr
-PFX Vs pé pà pér
-PFX Vs re ra re
-PFX Vs rè rà rè
-PFX Vs ré rà ré
-PFX Vs se sa se
-PFX Vs sè sà sè
-PFX Vs sé sà sé
-PFX Vs Se Sa Se
-PFX Vs te ta te
-PFX Vs Te Ta Te
-PFX Vs tè tà tè
-PFX Vs té tà té
-PFX Vs ŧe ŧa ŧe
+PFX Vs re ra rer
+PFX Vs se sa ser
+PFX Vs te ta ter
+PFX Vs ŧe ŧa ŧer
 PFX Vs ve va ver
+PFX Vs pé pà pér
+PFX Vs ré rà rér
+PFX Vs té tà tér
+PFX Vs pè pà pèr
+PFX Vs Se Sa Ser
+PFX Vs Te Ta Ter
 
 
 ### Verona ###
@@ -6856,9 +6844,9 @@ PFX -0 0 de .	dp:de
 
 # prefiso par lontanamento o sbasamento, eufònego a de- (de(s/x)-)
 PFX -1 Y 3
-PFX -1 0 des [cfkpt]	dp:des
-PFX -1 0 dex [aàeèéiíoòóuúmnñbdđgjɉsŧvrl]	dp:des
 PFX -1 0 de x	dp:des
+PFX -1 0 des [cfkpt]	dp:des
+PFX -1 0 dex [^cfkptx]	dp:des
 
 # sostantivi/vèrbi deajetivali (i(n)-)
 PFX +0 Y 3
@@ -6868,8 +6856,8 @@ PFX +0 0 i [ƚmnñrs]	dp:in
 
 # prefiso par aŧion kontraria o privativa–peđorativa, xlontanamento, esía, separaŧion (s/x-)
 PFX *0 Y 2
-PFX *0 0 s [cfkptŧ]	dp:s
-PFX *0 0 x [aàeèéiíoòóuúmnñbdđgjɉsvrl]	dp:s
+PFX *0 0 s [cfkpt]	dp:s
+PFX *0 0 x [^cfkpt]	dp:s
 
 # prefiso par aŧion repetúa (r[ea]-/ar-)
 PFX .0 Y 2
@@ -6884,8 +6872,8 @@ PFX @0 0 a .	dp:a
 
 # prefiso par union, parteŧipaŧion, kolegamento (kon-)
 PFX :0 Y 2
-PFX :0 0 kon [^n]	dp:kon
 PFX :0 0 ko n	dp:kon
+PFX :0 0 kon [^n]	dp:kon
 
 
 # prefiso par "do ʼòlte" (bi-)
@@ -7204,22 +7192,22 @@ PFX $3 0 ki/Z0 .
 
 
 # paròle ŧonkàe a ʼl iniŧio
-PFX '0 Y 15
-PFX '0 u ʼ u
+PFX '0 Y 14
 PFX '0 a ʼ a
 PFX '0 à ʼ à
 PFX '0 e ʼ e
 PFX '0 è ʼ è
-PFX '0 d ʼ d
-PFX '0 ga ʼ ga
-PFX '0 g ʼ g[oó]
 PFX '0 i ʼ i
-PFX '0 kon ʼ kon
-PFX '0 in ʼ int
-PFX '0 kò ʼ kò
 PFX '0 l ʼ l
 PFX '0 p ʼ p
+PFX '0 u ʼ u
 PFX '0 v ʼ v
+PFX '0 ga ʼ ga
+PFX '0 kò ʼ kò
+PFX '0 g ʼ g[oó]
+PFX '0 in ʼ int
+PFX '0 kon ʼ kon
+
 
 # paròle ŧonkàe a la fine
 SFX '9 Y 18
