@@ -2128,6 +2128,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "frekuent",		"",			1,	5,	"a",	"",				"",
 "freg",			"",			1,	2,	"a",	"1313",			"Strofinar, kareŧar, inbrojar.",
 "freg",			"s",			1,	2,	"a",	"1775",			"",
+"fregaŧ",		"s",			1,	2,	"a",	"1747",			"(veneŧian)",
 "fregol",		"",			1,	2,	"a",	"1560",			"Far fregole, sfraselar.",
 "fregol",		"des",		1,	2,	"a",	"1775",			"Sfregolar.",
 "fregol",		"s",			1,	2,	"a",	"1560",			"Ridúxer in fregole.",
