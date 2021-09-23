@@ -3421,6 +3421,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "konpil",		"",			1,	4,	"a",	"1775",			"",
 "konpit",		"",			1,	1,	"a",	"1894",			"Numarar.",
 "konplet",		"",			1,	5,	"g",	"1867",			"",
+"konpliment",	"",			1,	7,	"a",	"1747",			"(veneŧian)",
 "konpónd",		"",			3,	4,	"a",	"1775",			"Stajonar, kòxer ben, kroxolar, poltrir.",
 "konpr",			"",			1,	1,	"a",	"1829",			"",
 "konput",		"",			1,	4,	"a",	"1464",			"",
