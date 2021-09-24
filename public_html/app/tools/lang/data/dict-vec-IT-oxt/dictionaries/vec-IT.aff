@@ -1005,9 +1005,9 @@ SFX n0 ar esto/A1FS ar	ds:participle+passive+weak is:singular+masculine	# T2 + s
 SFX n0 ir esto/A1FS ir	ds:participle+passive+weak is:singular+masculine	# T2 + st[oiae], T2 = T1: aŧento PVT > VT | í > é
 SFX n0 r st [aei]r	ds:participle+passive+weak is:singular+masculine	# T2 + st[oiae]
 SFX n0 rò st erò	ds:participle+passive+weak is:singular+masculine	# T2 + st[oiae]
-SFX n0 r nt [aei]r	ds:gerund+simple	# T2 + nto = T7 + nto
 SFX n0 ar endo/P0Pl ar	ds:gerund+simple	# T2 + ndo = T7 + ndo, T2 = T1: aŧento PVT > VT | à > é
 SFX n0 ar éndoge/Q0 ar	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo, T2 = T1: aŧento PVT > VT | à > é
+SFX n0 r nt [aei]r	ds:gerund+simple	# T2 + nto = T7 + nto
 SFX n0 er ènt er	ds:gerund+simple	# T2 + nto = T7 + nto
 SFX n0 rò nt erò	ds:gerund+simple	# T2 + nto = T7 + nto
 SFX n0 erò ant erò	ds:gerund+simple	# T2 + nto, T2 = T1: aŧento PVT > VT | é > à
@@ -2593,7 +2593,7 @@ SFX xH ar àƚo/i5 ar	ds:indicative+present is:third ds:interrogative	# T8 + e
 SFX xH r to/A1 ar	ds:participle+passive+strong is:singular+masculine
 
 # vèrbi '-er inregolari: (bene|d[ei]x|in|inter|intr[ae]|kontra|ma[lƚ]e|pre|re)díxer
-SFX xI Y 94
+SFX xI Y 96
 SFX xI íxer ir/P0 díxer	ds:infinitive+simple	# T1 + r(e)
 SFX xI íxer ire díxer	ds:infinitive+simple	# T1 + r(e)
 SFX xI íxer ixo/J1 díxer	ds:indicative+present is:first+singular	# T8 + o
@@ -2621,6 +2621,8 @@ SFX xI íxer ige díxer	ds:subjunctive+present is:third	# T8 + e
 SFX xI íxer ito/A1 díxer	ds:participle+passive+strong is:singular+masculine
 SFX xI íxer igando/P0 díxer	ds:gerund+simple	# T2 + ndo = T7 + ndo
 SFX xI íxer igàndoge/Q0 díxer	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo
+SFX xI íxer indo/P0 díxer	ds:gerund+simple	# T2 + ndo = T7 + ndo
+SFX xI xer ndoge/Q0 díxer	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo
 SFX xI íxer iganto/P0 díxer	ds:gerund+simple	# T2 + ndo = T7 + ndo
 SFX xI íxer igàntoge/Q0 díxer	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo
 SFX xI íxer irò/J1I1 díxer	ds:indicative+future is:first+singular	# T4 + rò
@@ -2690,9 +2692,10 @@ SFX xI íxer irisiè díxer	ds:conditional+present is:second+singular	# T4 + r(i
 SFX xI íxer iríe díxer	ds:conditional+present is:third	# T4 + ríe
 
 # vèrbi '-er inregolari: (bene|d[ei]x|in|inter|intr[ae]|kontra|male|pre|re)díxer senŧa èle vanesente
-SFX xJ Y 16
+SFX xJ Y 17
 SFX xJ íxer ir/PlN0 díxer	ds:infinitive+simple	# T1 + r(e)
 SFX xJ íxer igàndogelo/Ql díxer	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
+SFX xJ xer ndogelo/Ql díxer	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
 SFX xJ íxer igàntogelo/Ql díxer	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
 SFX xJ íxer irà/J5 díxer	ds:indicative+future is:third	# T4 + rà
 SFX xJ íxer iralo/I5 díxer	ds:indicative+future is:third ds:interrogative	# T4 + rà
@@ -2709,9 +2712,10 @@ SFX xJ íxer ig díxer	ds:indicative+present is:first+singular	# T8 + o
 SFX xJ íxer ik díxer	ds:indicative+present is:first+singular	# T8 + o
 
 # vèrbi '-er inregolari: (bene|d[ei]x|in|inter|intr[ae]|kontra|maƚe|pre|re)díxer ko èle vanesente
-SFX xK Y 7
+SFX xK Y 8
 SFX xK íxer ir/P7N0 díxer	ds:infinitive+simple	# T1 + r(e)
 SFX xK íxer igàndogeƚo/Q7 díxer	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
+SFX xK xer ndogeƚo/Q7 díxer	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
 SFX xK íxer igàntogeƚo/Q7 díxer	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
 SFX xK íxer irà/j5 díxer	ds:indicative+future is:third	# T4 + rà
 SFX xK íxer iraƚo/i5 díxer	ds:indicative+future is:third ds:interrogative	# T4 + rà
