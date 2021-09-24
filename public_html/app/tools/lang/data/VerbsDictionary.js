@@ -5290,6 +5290,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pastroc",		"in",			1,	5,	"g",	"1775",			"",
 "pastroŧ",		"",			1,	5,	"g",	"",				"(bixiak)",
 "pastroŧ",		"in",			1,	5,	"g",	"",				"",
+"pastruc",		"",			1,	5,	"g",	"",				"",
+"pastruc",		"in",			1,	5,	"g",	"1747",			"(veneŧian)",
 "pastur",		"",			1,	4,	"a",	"1867",			"",
 "pat",			"",			1,	1,	"g",	"1851",			"Far pata, patejar.",
 "pat",			"des",		1,	1,	"g",	"1775",			"",
