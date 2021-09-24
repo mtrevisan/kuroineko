@@ -6524,6 +6524,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sekur",			"ra",			1,	3,	"a",	"1775",			"",
 "seg",			"",			1,	1,	"a",	"1560",			"",
 "segat",			"",			1,	3,	"g",	"1775",			"Skanar, xgoŧar.",
+"segond",		"",			1,	3,	"a",	"1747",			"(veneŧian)",
 "segreg",		"",			1,	1,	"a",	"",				"",
 "segu",			"",			5,	1,	"g",	"1867",			"",
 "segu",			"in",			5,	1,	"g",	"",				"",
