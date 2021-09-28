@@ -18747,9 +18747,12 @@ konsiderar/t0l070n0t1P0PlP7Q0QlQ7.0	po:verb ds:infinitive+simple dp:kon
 konsídero/T8N8tBlB7BJ1I1FS.0	po:verb ds:indicative+present is:first+singular st:konsiderar dp:kon
 konsidarar/t0l070n0t1P0PlP7Q0QlQ7.0	po:verb ds:infinitive+simple dp:kon
 konsídaro/T8N8tBlB7BJ1I1FS.0	po:verb ds:indicative+present is:first+singular st:konsidarar dp:kon
-sidiar/t0l070n0t1P0PlP7Q0QlQ7+0^2	po:verb ds:infinitive+simple
-sidio/t8n8tAlA7AJ1+0^2	po:verb ds:indicative+present is:first+singular st:sidiar
-sídiomi/t8n8tAlA7AI1+0^2	po:verb ds:indicative+present is:first+singular ds:interrogative st:sidiar
+sidiar/t0l070n0t1P0PlP7Q0QlQ7^2	po:verb ds:infinitive+simple
+sidio/t8n8tAlA7AJ1^2	po:verb ds:indicative+present is:first+singular st:sidiar
+sídiomi/t8n8tAlA7AI1^2	po:verb ds:indicative+present is:first+singular ds:interrogative st:sidiar
+insidiar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
+insidio/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:insidiar dp:in
+insídiomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:insidiar dp:in
 siegar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 siego/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:siegar
 siégomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:siegar
@@ -31615,7 +31618,6 @@ ninin	po:adverb
 ninsiol/M0B1PdeT	po:noun is:singular+masculine
 ninsioƚo/M0Pde1	po:noun is:singular+masculine
 ninŧiol/M0B1PdeT	po:noun is:singular+masculine
-niòra/F0	po:noun is:singular+femenine
 nisiol/M0B1PdeT	po:noun is:singular+masculine
 nisioƚo/M0Pde1	po:noun is:singular+masculine
 nisiòl/M0B1V3	po:noun is:singular+masculine
@@ -42198,7 +42200,6 @@ storna/F0	po:adjective_qualificative is:singular+femenine
 stornería/F0r0	po:noun is:singular+femenine
 stornèl/M0B1o0o1o2o3o4	po:adjective_qualificative is:singular+masculine
 stornèƚo/M0o7o1o2o4	po:adjective_qualificative is:singular+masculine
-storno/A1Pd	po:adjective_qualificative is:singular+masculine
 stòiko/A1FS	po:adjective_qualificative is:singular+masculine
 stòpa/F0eT	po:noun is:singular+femenine
 strabúxen/F0B2Pd	po:noun is:singular+femenine
@@ -52233,7 +52234,6 @@ demonieŧo/M0FSPdV3	po:noun is:singular+masculine
 desentería/F0r0	po:noun is:singular+femenine
 detregan/M0B1	po:noun is:singular+masculine
 diaolon/MFB1PdV4	po:noun is:singular+masculine
-dimisòria/F0	po:noun is:singular+femenine
 disipon/A2B1Pd	po:noun is:singular+masculine
 dolfinèra/F0	po:noun is:singular+femenine
 dragonsèl/M0B1V3	po:noun is:singular+masculine
@@ -54050,8 +54050,6 @@ kruxnòbeƚe	po:noun is:masculine+non_enumerable
 kruxnòber	po:noun is:masculine+non_enumerable
 krúkol/M0B2PdV3	po:noun is:singular+masculine
 ku–kuko/FS	po:interjection pa:ku pa:kuko
-kuartan/M0B1iN	po:adjective_qualificative is:singular+masculine
-kuartana/F0iN	po:adjective_qualificative is:singular+femenine
 kuartier/MFPd	po:noun is:singular+masculine
 kufol/M0B1PdV3	po:noun is:singular+masculine
 kufolon/MFB1PdV4	po:noun is:singular+masculine
@@ -54893,7 +54891,6 @@ toxatada/F0y0y1	po:noun is:singular+femenine
 toxatame/M0FS	po:noun is:singular+masculine
 tórbido/A1FS	po:adjective_qualificative is:singular+masculine
 tósego/A1FS	po:adjective_qualificative is:singular+masculine
-trabokante/X0	po:noun is:singular
 trabokèl/M0B1V3	po:noun is:singular+masculine
 trafor/M0Pd	po:noun is:singular+masculine
 trajikomèdia/F0	po:noun is:singular+femenine
@@ -65121,7 +65118,7 @@ treso/A1FSPd	po:adjective_qualificative is:singular+masculine
 trèso/A1FS	po:adjective_qualificative is:singular+masculine
 tròja/F0V3*0	po:noun is:singular+femenine
 tròto/M0FSiNo0o1o2o3o4	po:noun is:singular+masculine
-trufaldin/M0	po:noun is:singular+masculine
+trufaldin/A1	po:adjective_qualificative is:singular+masculine
 truta/F0eLe7	po:noun is:singular+femenine
 ŧavatin/A2Vp	po:noun is:singular+masculine
 ŧelenŧa/F0Vr	po:noun is:singular+femenine
@@ -65236,8 +65233,15 @@ albasía/F0	po:noun is:singular+femenine
 makaronŧin/M0V3	po:noun is:singular+masculine st:makaron ds:in
 kanŧonŧina/F0	po:noun is:singular+femenine st:kanŧon ds:in
 kansonsina/F0	po:noun is:singular+femenine st:kanson ds:in
+dimisòria/F0	po:noun is:singular+femenine
+trabokante/X0	po:noun is:singular
+storno/A1Pd	po:adjective_qualificative is:singular+masculine
+diabete/F0	po:noun is:singular+femenine
+niòra/F0	po:noun is:singular+femenine
+kuartan/M0B1iN	po:adjective_qualificative is:singular+masculine
+kuartana/F0iN	po:adjective_qualificative is:singular+femenine
 
 
-/ (539)/746
+/ (543)/746
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ–ʼ
