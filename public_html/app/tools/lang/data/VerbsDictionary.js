@@ -6051,7 +6051,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "purg",			"",			1,	1,	"a",	"1415",			"",
 "purg",			"es",			1,	1,	"a",	"1854",			"",
 "purg",			"s",			1,	1,	"a",	"1854",			"",
-"puriŧinel",	"",			1,	7,	"g",	"",				"",
+"purikinel",	"",			1,	7,	"g",	"",				"",
 "put",			"de",			1,	-1,"g",	"1362",			"",
 "put",			"des",		1,	-2,"g",	"1560",			"",
 "put",			"in",			1,	-2,"a",	"1450",			"",
