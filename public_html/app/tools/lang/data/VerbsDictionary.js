@@ -1559,6 +1559,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "f",				"likue",		1,	1,	"g",	"1597",			"",
 "f",				"likui",		1,	1,	"g",	"1563",			"",
 "f",				"mal",		1,	1,	"g",	"1896",			"",
+"f",				"mansue",	1,	-1,"g",	"1747",			"(veneŧian)",
 "f",				"putre",		1,	1,	"g",	"1481",			"",
 "f",				"rare",		1,	1,	"g",	"XIV",			"",
 "f",				"re",			1,	1,	"g",	"1415",			"Rexarcir na perdita.",
