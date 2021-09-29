@@ -12339,6 +12339,12 @@ marteríđomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:inte
 marterixar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 marterixo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:marterixar
 marteríxomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:marterixar
+martiriđar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
+martiriđo/t8n8tAlAJ1	po:verb ds:indicative+present is:first+singular st:martiriđar
+martiríđomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:martiriđar
+martirixar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+martirixo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:martirixar
+martiríxomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:martirixar
 martoriar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
 martòrio/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:martoriar
 martoriđar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
@@ -26771,7 +26777,7 @@ andove/'9'0	po:pronoun_interrogative_exclamatory
 ci	po:pronoun_interrogative_exclamatory
 dondeké	po:pronoun_interrogative_exclamatory
 dove/'9	po:pronoun_interrogative_exclamatory
-indove/'9	po:pronoun_interrogative_exclamatory
+indove/'9	po:pronoun_interrogative_exclamatory pa:in pa:dove
 koando/FS	po:pronoun_interrogative_exclamatory
 kome/'9	po:pronoun_interrogative_exclamatory
 komo/FS	po:pronoun_interrogative_exclamatory
@@ -26834,7 +26840,7 @@ andove/'9	po:adjective_interrogative_exclamatory
 ci	po:adjective_interrogative_exclamatory
 dondeké	po:adjective_interrogative_exclamatory
 dove	po:adjective_interrogative_exclamatory
-indove/'9'0	po:adjective_interrogative_exclamatory
+indove/'9'0	po:adjective_interrogative_exclamatory pa:in pa:dove
 koando/FS	po:adjective_interrogative_exclamatory
 kome/'9	po:adjective_interrogative_exclamatory
 komo/FS	po:adjective_interrogative_exclamatory
@@ -29045,7 +29051,7 @@ biskolamento/M0FSPdVr	po:noun is:singular+masculine ds:mento
 biskoƚamento/M0PdVR	po:noun is:singular+masculine ds:mento
 bitador/M0Pdv0*0	po:noun is:singular+masculine
 bitadora/F0v0*0	po:noun is:singular+femenine
-bitaŧion/F0B1PdV3*0	po:noun is:singular+femenine
+bitaŧion/F0B1PdV3@0*0	po:noun is:singular+femenine
 biŧikleta/F0	po:noun is:singular+femenine
 bivalente/X0FSPdVr	po:adjective_qualificative is:singular dp:bi
 bivaƚente/X0PdVR	po:adjective_qualificative is:singular dp:bi
@@ -31031,8 +31037,6 @@ leteradura/F0d0eT	po:noun is:singular+femenine
 leterariamente/FSw0	po:adverb ds:mente
 leterario/A1	po:adjective_qualificative is:singular+masculine
 letura/F0eT	po:noun is:singular+femenine
-levador/M0Pdv0@0.0*0	po:noun is:singular+masculine
-levadora/F0v0@0.0*0	po:noun is:singular+femenine
 levaŧion/F0B1PdV3@0.0*0	po:noun is:singular+femenine
 lexe/F0FSPdi0	po:noun is:singular+femenine
 lexenadura/F0d0eT	po:noun is:singular+femenine
@@ -31204,8 +31208,6 @@ luxamento/M0FSPdVr.0^6*0^1	po:noun is:singular+masculine ds:mento
 ƚeterariamente/w0	po:adverb ds:mente
 ƚeterario/A1	po:adjective_qualificative is:singular+masculine
 ƚetura/F0e1	po:noun is:singular+femenine
-ƚevador/M0Pdv7@0.0	po:noun is:singular+masculine
-ƚevadora/F0v7@0.0	po:noun is:singular+femenine
 ƚevasion/F0Pd@0.0	po:noun is:singular+femenine
 ƚexe/F0Pdi0	po:noun is:singular+femenine
 ƚexenadura/F0d7e1	po:noun is:singular+femenine
@@ -33558,7 +33560,6 @@ teoría/F0	po:noun is:singular+femenine
 teòrego/A1FS	po:adjective_qualificative is:singular+masculine
 teraina/F0	po:noun is:singular+femenine
 teramento/M0FSPdVr@0+0	po:noun is:singular+masculine ds:mento
-teremòto/M0FS	po:noun is:singular+masculine
 termenativamente/FSw0	po:adverb ds:mente
 termenativo/A1FSA5	po:adjective_qualificative is:singular+masculine
 termenaŧion/F0B1PdV3-1*0	po:noun is:singular+femenine
@@ -39135,7 +39136,6 @@ bàvar/A1	po:noun is:singular+masculine
 bean/A2B1	po:adjective_qualificative is:singular+masculine
 beatin/A2	po:noun is:singular+masculine
 bekadina/F0+0	po:noun is:singular+femenine st:bekada ds:in
-bekafigo/M0FS	po:noun is:singular+masculine
 bekanèla/F0V3	po:noun is:singular+femenine
 bekonaŧo/M0FSV3	po:noun is:singular+masculine st:bekon ds:aŧo
 belin/M0eT	po:adjective_qualificative is:singular+masculine
@@ -39581,8 +39581,7 @@ exoxo/A1FSPd	po:adjective_qualificative is:singular+masculine
 èƚera/F0	po:noun is:singular+femenine
 èƚexe/M0Pd	po:noun is:singular+masculine
 èrta/F0	po:noun is:singular+femenine
-faa/F0eT	po:noun is:singular+femenine
-fada/F0y2	po:noun is:singular+femenine
+faa/F0eT	po:noun is:singular+femenine st:fada
 fadigon/A2B1Pd*0	po:adjective_qualificative is:singular+masculine
 faja/F0V3	po:noun is:singular+femenine
 fal/M0eToT	po:noun is:singular+masculine
@@ -40359,7 +40358,6 @@ korpađudo/M0FSy0	po:adjective_qualificative is:singular+masculine
 korpaxuda/F0y0	po:adjective_qualificative is:singular+femenine
 korpaxudo/M0FSy0	po:adjective_qualificative is:singular+masculine
 korporalmente/FSw0	po:adverb ds:mente
-korsar/A1	po:adjective_qualificative is:singular+masculine
 korsieto/M0FSPd	po:noun is:singular+masculine
 kortelaso/M0FSeT	po:noun is:singular+masculine
 kortelaŧo/M0FSeT	po:noun is:singular+masculine
@@ -43494,7 +43492,6 @@ stufàɉin/F0	po:noun is:singular+femenine
 stufàxin/F0	po:noun is:singular+femenine
 subitoxamente/FSw0	po:adverb ds:mente
 subitoxo/A1FSPd	po:adjective_qualificative is:singular+masculine
-susidio/M0	po:noun is:singular+masculine
 tabarada/F0y0	po:noun is:singular+femenine
 tabarado/M0FSy0	po:noun is:singular+masculine
 takomako/M0FS	po:noun is:singular+masculine
@@ -45371,8 +45368,6 @@ deñévol/X0B2PdVx	po:adjective_qualificative is:singular
 deposta	po:adverb
 depòrto/M0FS	po:noun is:singular+masculine
 depòsta	po:adverb
-derelito/M0FS	po:adjective_qualificative is:singular+masculine
-dereƚito/M0	po:adjective_qualificative is:singular+masculine
 deretan/M0B1	po:noun is:singular+masculine+toskan
 deseño/M0FSPd	po:noun is:singular+masculine
 desexa/F0	po:noun is:singular+femenine
@@ -46993,7 +46988,6 @@ konŧerton/MFB1Pd	po:noun is:singular+masculine
 konŧo/M0FSV3-1^7*0	po:adjective_qualificative is:singular+masculine
 konveño/M0FSPd	po:noun is:singular+masculine
 konvèño/M0	po:noun is:singular+masculine
-konvòjo/M0B1V3	po:noun is:singular+masculine
 konvulsion/F0B1Pd	po:noun is:singular+femenine
 konvulso/A1FS	po:adjective_qualificative is:singular+masculine
 konxeño/M0FSPd	po:noun is:singular+masculine
@@ -59996,7 +59990,6 @@ kavelèra/F0v0	po:noun is:singular+femenine
 kaveƚèra/F0v7	po:noun is:singular+femenine
 kavrada/F0y0y1	po:adjective_qualificative is:singular+femenine
 kavrïol/M0B1PdV3	po:noun is:singular+masculine
-kavrïola/F0V3	po:noun is:singular+femenine
 kàmola/F0V3	po:noun is:singular+femenine
 kàpola/F0V3	po:noun is:singular+femenine
 klai	po:adverb
@@ -65278,8 +65271,25 @@ birbante/X0r0	po:adjective_qualificative is:singular
 valixin/M0	po:noun is:singular+masculine st:valixa ds:in
 vaƚixin/M0	po:noun is:singular+masculine st:vaƚixa ds:in
 kanbrada/F0y0y1	po:noun is:singular+femenine
+susidio/M0	po:noun is:singular+masculine
+rivièra/F0	po:noun is:singular+femenine
+fada/F0y2	po:noun is:singular+femenine al:faa
+konvòjo/M0B1V3	po:noun is:singular+masculine
+korsar/A1	po:adjective_qualificative is:singular+masculine
+derelito/A1FS	po:adjective_qualificative is:singular+masculine
+dereƚito/A1	po:adjective_qualificative is:singular+masculine
+kavrïola/F0V3	po:noun is:singular+femenine
+levador/M0Pdv0@0.0*0	po:noun is:singular+masculine
+levadora/F0v0@0.0*0	po:noun is:singular+femenine
+ƚevador/M0Pdv7@0.0	po:noun is:singular+masculine
+ƚevadora/F0v7@0.0	po:noun is:singular+femenine
+teremòto/M0FS	po:noun is:singular+masculine
+mejarin/A1	po:adjective_qualificative is:singular+masculine
+meɉarin/A1	po:adjective_qualificative is:singular+masculine
+bekafigo/M0FS	po:noun is:singular+masculine
 
 
-/ (583)/746
+/ (589)/746
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ–ʼ
+v.:marteriđar,marterixar,martiriđar,martirixar,martoriđar,martorixar
