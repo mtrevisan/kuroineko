@@ -6119,7 +6119,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ranŧ",			"",			4,	4,	"a",	"1775",			"Invietar, invietir.",
 "ranŧ",			"in",			4,	4,	"a",	"1896",			"",
 "ranŧin",		"",			1,	4,	"a",	"1560",			"Skurtar.",
-"ranŧiñ",		"",			1,	4,	"a",	"1775",			"Arsiñar el vixo, piegar malamente.",
+"ranŧiñ",		"",			1,	4,	"a",	"1747",			"(veneŧian) Arsiñar el vixo, piegar malamente.",
 "ranx",			"",			1,	1,	"g",	"",				"",
 "rap",			"",			1,	1,	"g",	"1775",			"Agrinŧar, korugar.",
 "rap",			"in",			1,	1,	"g",	"1829",			"",
