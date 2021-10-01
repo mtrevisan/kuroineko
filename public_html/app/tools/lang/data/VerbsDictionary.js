@@ -1306,6 +1306,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "dor",			"in",			1,	1,	"g",	"1464",			"",
 "dorm",			"",			5,	1,	"g",	"iniŧio XIII",	"",
 "dorm",			"in",			5,	1,	"g",	"1775",			"Stimar manko, no kurar.",
+"dormac",		"",			1,	4,	"a",	"1747",			"(veneŧian)",
 "dormenŧ",		"",			1,	4,	"a",	"1867",			"",
 "dormenŧ",		"in",			1,	4,	"a",	"1310",			"Capar sòno.",
 "dormenŧ",		"in",			4,	7,	"a",	"1896",			"",
