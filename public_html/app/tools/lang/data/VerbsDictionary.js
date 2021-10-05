@@ -6869,6 +6869,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sol",			"skon",		1,	1,	"a",	"1829",			"",
 "sol",			"",			2,	1,	"a",	"1867",			"",
 "solaj",			"",			1,	3,	"g",	"",				"Axitar i pani, far capar aria.",
+"solaŧ",			"",			1,	3,	"g",	"1747",			"(veneŧian)",
 "sold",			"",			1,	1,	"g",	"",				"",
 "soleɉ",			"",			1,	3,	"a",	"1775",			"",
 "solent",		"in",			1,	3,	"a",	"1775",			"Far insolenŧe, dar fastidio.",
