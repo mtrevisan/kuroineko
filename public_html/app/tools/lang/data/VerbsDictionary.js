@@ -6212,6 +6212,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ríd",			"",			3,	1,	"a",	"1590",			"",
 "ríd",			"de",			3,	1,	"a",	"",				"",
 "ríd",			"so",			3,	1,	"a",	"1867",			"",
+"ríd",			"stra",		3,	1,	"a",	"1747",			"(veneŧian)",
 "ridac",			"",			1,	3,	"g",	"1867",			"",
 "ridac",			"x",			1,	3,	"g",	"1867",			"(ark.) Ridakiar.",
 "ridaŧ",			"",			1,	3,	"a",	"1980",			"(vitoriexe)",
