@@ -3469,6 +3469,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kòñ",			"",			3,	1,	"g",	"1775",			"(pad., vic., valsuganòto, bel.) Konvèñer, bexoñar, èser oblegài a far.",
 "koñós",			"",			3,	3,	"a",	"1867",			"",
 "koñós",			"re",			3,	3,	"a",	"1829",			"",
+"koñós",			"s",			3,	3,	"a",	"1747",			"(veneŧian)",
 "kop",			"",			1,	1,	"a",	"1775",			"",
 "kop",			"des",		1,	1,	"a",	"1745",			"(veneŧian)",
 "kopat",			"",			1,	3,	"g",	"1821",			"Tirar na kopa in tèra.",
