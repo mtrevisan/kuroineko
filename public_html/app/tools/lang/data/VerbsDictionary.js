@@ -7300,7 +7300,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "sü",				"",			1,	1,	"a",	"1847",			"",
 "sü",				"stra",		1,	1,	"a",	"1867",			"",
 "süàd",			"",			3,	2,	"g",	"",				"",
-"süàd",			"per",		3,	2,	"g",	"1867",			"",
+"süàd",			"per",		3,	2,	"g",	"1747",			"(veneŧian)",
 "sub",			"",			4,	3,	"a",	"1775",			"",
 "subi",			"",			1,	1,	"a",	"1810",			"Supiar.",
 "subiol",		"",			1,	4,	"g",	"1980",			"(vitoriexe) Fiscar, supiar.",
