@@ -7955,6 +7955,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧabat",			"mal",		1,	3,	"g",	"1775",			"Indispóner, malarse.",
 "ŧabot",			"",			1,	3,	"g",	"1884",			"Balbetar.",
 "ŧak",			"",			1,	1,	"g",	"1998",			"Mastegar.",
+"ŧak",			"in",			4,	3,	"a",	"1747",			"(veneŧian) Èser mèđi insonài.",
 "ŧakol",			"",			1,	1,	"g",	"1851",			"",
 "ŧakol",			"de",			1,	1,	"g",	"1867",			"Kavar le ŧakole.",
 "ŧakol",			"in",			1,	1,	"g",	"1775",			"Inxakerar, infangar.",
