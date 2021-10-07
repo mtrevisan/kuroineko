@@ -61,7 +61,7 @@ MAP OÒÓ
 MAP UÜÚ
 
 # replace input characters
-ICONV 21
+ICONV 31
 ICONV dh đ
 ICONV Dh Đ
 ICONV DH Đ
@@ -83,6 +83,16 @@ ICONV TH Ŧ
 ICONV ' ʼ
 ICONV ’ ʼ
 ICONV ‘ ʼ
+ICONV â ar
+ICONV Â AR
+ICONV ê er
+ICONV Ê ER
+ICONV î ir
+ICONV Î IR
+ICONV ô or
+ICONV Ô OR
+ICONV û ur
+ICONV Û UR
 
 # frequently switched character groups
 REP 188
@@ -1559,9 +1569,10 @@ SFX n0 er ut [^u]er	ds:participle+passive+weak is:singular+masculine	# T6 + d[oi
 # baxe:
 # tèma 1
 # -àr, -ér, '-er, -ír, -ír/is: skomenŧiando da 'l infenío
-SFX t1 Y 8
+SFX t1 Y 9
 SFX t1 0 e r	ds:infinitive+simple	# T1 + r(e), padoan
 SFX t1 ar à ar	ds:infinitive+simple	# T1, buranèl
+SFX t1 ir í ir	ds:infinitive+simple	# T1, buranèl
 SFX t1 íxer ir/P0PlP7R0RlR7 díxer	ds:infinitive+simple	# T1 + r(e)
 SFX t1 íxer ire díxer	ds:infinitive+simple	# T1 + r(e)
 SFX t1 óner or/P0PlP7R0RlR7 póner	ds:infinitive+simple	# T1 + r(e)
@@ -5559,16 +5570,17 @@ PFX Vp Ŧ S Ŧ
 ### Buran ###
 
 # trasformaŧion intra varianti (a[lnr] > à, on > ó)
-#-éder > vé?
-SFX Bu Y 9
+SFX Bu Y 11
 SFX Bu al àʼ al
 SFX Bu an àʼ an
 SFX Bu ar àʼ ar
+SFX Bu r ʼ èr
 SFX Bu il íʼ il
 SFX Bu in íʼ in
 SFX Bu on óʼ on
 SFX Bu or óʼ or
 SFX Bu ora óʼ ora
+SFX Bu adèl àʼ adèl
 SFX Bu ando àʼ ando
 
 
