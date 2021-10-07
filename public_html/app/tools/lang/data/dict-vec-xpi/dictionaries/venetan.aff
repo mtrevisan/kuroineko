@@ -385,6 +385,7 @@ COMPOUNDRULE (|5)(--)(|6)	# sento-mi[lƚ]e
 
 # ---
 
+# koniugaŧion verbal:
 #															-àr		-ér		'-er			-ír			-ír/is
 # T1														kantà		valé		kréde			dormí			fení
 # T2	=	T1: aŧento PVT > VT						kantà		valé		kredé			dormí			fení
@@ -5849,50 +5850,6 @@ SFX m7 Y 2
 SFX m7 r mento/M0Pd r	ds:mento
 SFX m7 r mènto/M0 r	ds:mento
 
-# nominali deverbali (-ŧion)
-#SFX z0 Y 16
-#SFX z0 r ŧion/F0B1Pd ar
-#SFX z0 erò ŧion/F0B1Pd aerò
-#SFX z0 r ŧion/F0B1Pd [^uü]ir
-#SFX z0 ir ŧion/F0B1Pd [uü]ir
-#SFX z0 erò iŧion/F0B1Pd terò
-#SFX z0 merò nŧion/F0B1Pd merò
-#SFX z0 nerò xiŧion/F0B1Pd nerò
-#SFX z0 ñerò nŧion/F0B1Pd ñerò
-#SFX z0 erò ion/F0B1Pd [đsŧ]erò
-#SFX z0 derò uŧion/F0B1Pd lderò
-#SFX z0 derò ŧion/F0B1Pd nderò
-#SFX z0 verò ŧion/F0B1Pd iverò
-#SFX z0 verò uŧion/F0B1Pd lverò
-#SFX z0 guerò ŧion/F0B1Pd guerò
-#SFX z0 xerò ŧion/F0B1Pd [^r]xerò
-#SFX z0 orxerò ureŧion/F0B1Pd orxerò
-
-# nominali deverbali (-sion)
-#SFX s0 Y 15
-#SFX s0 r sion/F0B1Pd [^i]r
-#SFX s0 erò sion/F0B1Pd aerò
-#SFX s0 r sion/F0B1Pd [^uü]ir
-#SFX s0 ir sion/F0B1Pd [uü]ir
-#SFX s0 erò ision/F0B1Pd terò
-#SFX s0 merò nsion/F0B1Pd merò
-#SFX s0 nerò xision/F0B1Pd nerò
-#SFX s0 ñerò nsion/F0B1Pd ñerò
-#SFX s0 derò usion/F0B1Pd lderò
-#SFX s0 derò sion/F0B1Pd nderò
-#SFX s0 verò sion/F0B1Pd iverò
-#SFX s0 verò usion/F0B1Pd lverò
-#SFX s0 guerò sion/F0B1Pd guerò
-#SFX s0 xerò sion/F0B1Pd [^r]xerò
-#SFX s0 orxerò uresion/F0B1Pd orxerò
-
-# nominali deverbali ko èle vanesente (-sion)
-#SFX s7 Y 4
-#SFX s7 r sion/F0Pd r
-#SFX s7 xerò sion/F0Pd xerò
-#SFX s7 lderò ƚusion/F0Pd lderò
-#SFX s7 lverò ƚusion/F0Pd lverò
-
 # nominali deverbali (-dur/M0eT, -dura/F0eT)
 SFX d0 Y 12
 SFX d0 dur ur/M0 [^i]dur
@@ -6329,12 +6286,6 @@ SFX iN a ina/F0 [^ò][bcdknstŧ]a	ds:in
 SFX iN a ina/F0 [^è][rx]a	ds:in
 SFX iN o in/M0 [^ò][cdkpsŧ]o	ds:in
 SFX iN o in/M0 [^è][đƚx]o	ds:in
-
-# sostantivi alterài – demenutivi (-?)
-#SFX 00 . (e)đin/A1 [?]
-#SFX 00 . (e)ŧin/A1 [?]
-#SFX 00 . (o)lin/A1 [?]
-#SFX 00 . (e)rin/A1 [?]
 
 
 # sostantivi/ajetivi alterài - kresitivi (-on/B1Pd)
@@ -6892,8 +6843,6 @@ PFX *0 0 x [^cfkpt]	dp:s
 PFX .0 Y 2
 PFX .0 0 re .	dp:re
 PFX .0 0 re- .	dp:re
-#PFX .0 0 ra [^a]	dp:re
-#PFX .0 0 ar [^ƚ]	dp:re
 
 # prefiso par direŧion, veŧinamento, đontamento, valor intensivo (a-)
 PFX @0 Y 1
