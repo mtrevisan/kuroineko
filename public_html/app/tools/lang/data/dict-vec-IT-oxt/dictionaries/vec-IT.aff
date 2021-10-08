@@ -5504,8 +5504,8 @@ SFX V3 lin ƚin/M0 [aeiouàèéíòóú]lin
 SFX V3 đin xin/M0 đin
 SFX V3 ŧin sin/M0 ŧin
 SFX V3 jon ɉon/F0B1BuPd jon
-SFX V3 lon ƚon/F0Pd [aeiouàèéíòóú]lon
-SFX V3 ŧon son/F0B1Pd ŧon
+SFX V3 lon ƚon/F0BuPd [aeiouàèéíòóú]lon
+SFX V3 ŧon son/F0B1BuPd ŧon
 SFX V3 lio ƚio/M0 [aeiouàèéíòóú]lio
 SFX V3 ŧio sio/M0 ŧio
 SFX V3 đo xo/M0 [^e]đo
@@ -5523,19 +5523,19 @@ SFX V3 lona ƚona/F0 [aeiouàèéíòóú]lona
 SFX V3 leta ƚeta/F0 [aeiouàèéíòóú]leta
 SFX V3 lèta ƚèta/F0 [aeiouàèéíòóú]lèta
 SFX V3 lòta ƚòta/F0 [aeiouàèéíòóú]lòta
-SFX V3 lion ƚion/M0Pd [aeiouàèéíòóú]lion
-SFX V3 ŧion sion/F0B1PdBu ŧion
+SFX V3 lion ƚion/M0BuPd [aeiouàèéíòóú]lion
+SFX V3 ŧion sion/F0B1BuPd ŧion
 SFX V3 leto ƚeto/M0Pd [aeiouàèéíòóú]leto
 SFX V3 lèto ƚèto/M0 [aeiouàèéíòóú]lèto
 SFX V3 lòto ƚòto/M0 [aeiouàèéíòóú]lòto
 
 # trasformaŧion intra varianti (l(i)on > ƚ(i)on, jon > ɉon, ŧ(i)on > s(i)on)
 SFX V4 Y 5
-SFX V4 jon ɉon/MFB1Pd jon
-SFX V4 lon ƚon/MFPd lon
-SFX V4 ŧon son/MFB1Pd ŧon
-SFX V4 lion ƚion/MFPd lion
-SFX V4 ŧion sion/MFB1Pd ŧion
+SFX V4 jon ɉon/MFB1BuPd jon
+SFX V4 lon ƚon/MFBuPd lon
+SFX V4 ŧon son/MFB1BuPd ŧon
+SFX V4 lion ƚion/MFBuPd lion
+SFX V4 ŧion sion/MFB1BuPd ŧion
 
 # trasformaŧion intra varianti ko èle vanesente (j > ɉ)
 SFX V7 Y 1
@@ -5998,47 +5998,47 @@ SFX m7 r mènto/M0 r	ds:mento
 
 # nominali deverbali (-ŧion)
 #SFX z0 Y 16
-#SFX z0 r ŧion/F0B1Pd ar
-#SFX z0 erò ŧion/F0B1Pd aerò
-#SFX z0 r ŧion/F0B1Pd [^uü]ir
-#SFX z0 ir ŧion/F0B1Pd [uü]ir
-#SFX z0 erò iŧion/F0B1Pd terò
-#SFX z0 merò nŧion/F0B1Pd merò
-#SFX z0 nerò xiŧion/F0B1Pd nerò
-#SFX z0 ñerò nŧion/F0B1Pd ñerò
-#SFX z0 erò ion/F0B1Pd [đsŧ]erò
-#SFX z0 derò uŧion/F0B1Pd lderò
-#SFX z0 derò ŧion/F0B1Pd nderò
-#SFX z0 verò ŧion/F0B1Pd iverò
-#SFX z0 verò uŧion/F0B1Pd lverò
-#SFX z0 guerò ŧion/F0B1Pd guerò
-#SFX z0 xerò ŧion/F0B1Pd [^r]xerò
-#SFX z0 orxerò ureŧion/F0B1Pd orxerò
+#SFX z0 r ŧion/F0BBu1Pd ar
+#SFX z0 erò ŧion/F0B1BuPd aerò
+#SFX z0 r ŧion/F0B1BuPd [^uü]ir
+#SFX z0 ir ŧion/F0B1BuPd [uü]ir
+#SFX z0 erò iŧion/F0B1BuPd terò
+#SFX z0 merò nŧion/F0B1BuPd merò
+#SFX z0 nerò xiŧion/F0B1BuPd nerò
+#SFX z0 ñerò nŧion/F0B1BuPd ñerò
+#SFX z0 erò ion/F0B1BuPd [đsŧ]erò
+#SFX z0 derò uŧion/F0B1BuPd lderò
+#SFX z0 derò ŧion/F0B1BuPd nderò
+#SFX z0 verò ŧion/F0B1BuPd iverò
+#SFX z0 verò uŧion/F0B1BuPd lverò
+#SFX z0 guerò ŧion/F0B1BuPd guerò
+#SFX z0 xerò ŧion/F0B1BuPd [^r]xerò
+#SFX z0 orxerò ureŧion/F0B1BuPd orxerò
 
 # nominali deverbali (-sion)
 #SFX s0 Y 15
-#SFX s0 r sion/F0B1Pd [^i]r
-#SFX s0 erò sion/F0B1Pd aerò
-#SFX s0 r sion/F0B1Pd [^uü]ir
-#SFX s0 ir sion/F0B1Pd [uü]ir
-#SFX s0 erò ision/F0B1Pd terò
-#SFX s0 merò nsion/F0B1Pd merò
-#SFX s0 nerò xision/F0B1Pd nerò
-#SFX s0 ñerò nsion/F0B1Pd ñerò
-#SFX s0 derò usion/F0B1Pd lderò
-#SFX s0 derò sion/F0B1Pd nderò
-#SFX s0 verò sion/F0B1Pd iverò
-#SFX s0 verò usion/F0B1Pd lverò
-#SFX s0 guerò sion/F0B1Pd guerò
-#SFX s0 xerò sion/F0B1Pd [^r]xerò
-#SFX s0 orxerò uresion/F0B1Pd orxerò
+#SFX s0 r sion/F0B1BuPd [^i]r
+#SFX s0 erò sion/F0B1BuPd aerò
+#SFX s0 r sion/F0B1BuPd [^uü]ir
+#SFX s0 ir sion/F0B1BuPd [uü]ir
+#SFX s0 erò ision/F0B1BuPd terò
+#SFX s0 merò nsion/F0B1BuPd merò
+#SFX s0 nerò xision/F0B1BuPd nerò
+#SFX s0 ñerò nsion/F0B1BuPd ñerò
+#SFX s0 derò usion/F0B1BuPd lderò
+#SFX s0 derò sion/F0B1BuPd nderò
+#SFX s0 verò sion/F0B1BuPd iverò
+#SFX s0 verò usion/F0B1BuPd lverò
+#SFX s0 guerò sion/F0B1BuPd guerò
+#SFX s0 xerò sion/F0B1BuPd [^r]xerò
+#SFX s0 orxerò uresion/F0B1BuPd orxerò
 
 # nominali deverbali ko èle vanesente (-sion)
 #SFX s7 Y 4
-#SFX s7 r sion/F0Pd r
-#SFX s7 xerò sion/F0Pd xerò
-#SFX s7 lderò ƚusion/F0Pd lderò
-#SFX s7 lverò ƚusion/F0Pd lverò
+#SFX s7 r sion/F0BuPd r
+#SFX s7 xerò sion/F0BuPd xerò
+#SFX s7 lderò ƚusion/F0BuPd lderò
+#SFX s7 lverò ƚusion/F0BuPd lverò
 
 # nominali deverbali (-dur/M0eT, -dura/F0eT)
 SFX d0 Y 12
@@ -6484,76 +6484,76 @@ SFX iN o in/M0 [^è][đƚx]o	ds:in
 #SFX 00 . (e)rin/A1 [?]
 
 
-# sostantivi/ajetivi alterài - kresitivi (-on/B1Pd)
+# sostantivi/ajetivi alterài - kresitivi (-on/B1BuPd)
 SFX o0 Y 49
-SFX o0 0 on/B1Pd n	is:singular+masculine ds:on
-SFX o0 èa eon/B1Pd èa	is:singular+masculine ds:on
-SFX o0 ía ion/B1Pd [aeiou]ía	is:singular+masculine ds:on
-SFX o0 ía ïon/B1Pd [^aeiou]ía	is:singular+masculine ds:on
-SFX o0 èl elon/B1Pd èl	is:singular+masculine ds:on
-SFX o0 òl olon/B1Pd òl	is:singular+masculine ds:on
-SFX o0 èr eron/B1Pd èr	is:singular+masculine ds:on
-SFX o0 a on/B1Pd [^bcđègílmnprstŧx]a	is:singular+masculine ds:on
-SFX o0 e on/B1Pd [^t]e	is:singular+masculine ds:on
-SFX o0 0 on/B1Pd [^èò]l	is:singular+masculine ds:on
-SFX o0 0 n/B1Pd [^bcdjɉkmpstŧ]o	is:singular+masculine ds:on
-SFX o0 0 on/B1Pd [^è]r	is:singular+masculine ds:on
-SFX o0 èba ebon/B1Pd èba	is:singular+masculine ds:on
-SFX o0 òca ocon/B1Pd òca	is:singular+masculine ds:on
-SFX o0 òđa ođon/B1Pd òđa	is:singular+masculine ds:on
-SFX o0 èga egon/B1Pd èga	is:singular+masculine ds:on
-SFX o0 èla elon/B1Pd èla	is:singular+masculine ds:on
-SFX o0 òla olon/B1Pd òla	is:singular+masculine ds:on
-SFX o0 èma emon/B1Pd èma	is:singular+masculine ds:on
-SFX o0 òna onon/B1Pd òna	is:singular+masculine ds:on
-SFX o0 èpa epon/B1Pd èpa	is:singular+masculine ds:on
-SFX o0 òpa opon/B1Pd òpa	is:singular+masculine ds:on
-SFX o0 èra eron/B1Pd èra	is:singular+masculine ds:on
-SFX o0 òsa oson/B1Pd òsa	is:singular+masculine ds:on
-SFX o0 òta oton/B1Pd òta	is:singular+masculine ds:on
-SFX o0 òŧa oŧon/B1Pd òŧa	is:singular+masculine ds:on
-SFX o0 òxa oxon/B1Pd òxa	is:singular+masculine ds:on
-SFX o0 ète eton/B1Pd ète	is:singular+masculine ds:on
-SFX o0 òbo obon/B1Pd òbo	is:singular+masculine ds:on
-SFX o0 èco econ/B1Pd èco	is:singular+masculine ds:on
-SFX o0 òco ocon/B1Pd òco	is:singular+masculine ds:on
-SFX o0 òdo odon/B1Pd òdo	is:singular+masculine ds:on
-SFX o0 òjo ojon/B1Pd òjo	is:singular+masculine ds:on
-SFX o0 òɉo oɉon/B1Pd òɉo	is:singular+masculine ds:on
-SFX o0 òko okon/B1Pd òko	is:singular+masculine ds:on
-SFX o0 òmo omon/B1Pd òmo	is:singular+masculine ds:on
-SFX o0 òpo opon/B1Pd òpo	is:singular+masculine ds:on
-SFX o0 èso eson/B1Pd èso	is:singular+masculine ds:on
-SFX o0 òso oson/B1Pd òso	is:singular+masculine ds:on
-SFX o0 èto eton/B1Pd èto	is:singular+masculine ds:on
-SFX o0 òto oton/B1Pd òto	is:singular+masculine ds:on
-SFX o0 èŧo eŧon/B1Pd èŧo	is:singular+masculine ds:on
-SFX o0 òŧo oŧon/B1Pd òŧo	is:singular+masculine ds:on
-SFX o0 e on/B1Pd [^è]te	is:singular+masculine ds:on
-SFX o0 a on/B1Pd [^èò][lp]a	is:singular+masculine ds:on
-SFX o0 a on/B1Pd [^è][bgmr]a	is:singular+masculine ds:on
-SFX o0 a on/B1Pd [^ò][cđnstŧx]a	is:singular+masculine ds:on
-SFX o0 0 n/B1Pd [^ò][bdjɉkmp]o	is:singular+masculine ds:on
-SFX o0 0 n/B1Pd [^èò][cstŧ]o	is:singular+masculine ds:on
+SFX o0 0 on/B1BuPd n	is:singular+masculine ds:on
+SFX o0 èa eon/B1BuPd èa	is:singular+masculine ds:on
+SFX o0 ía ion/B1BuPd [aeiou]ía	is:singular+masculine ds:on
+SFX o0 ía ïon/B1BuPd [^aeiou]ía	is:singular+masculine ds:on
+SFX o0 èl elon/B1BuPd èl	is:singular+masculine ds:on
+SFX o0 òl olon/B1BuPd òl	is:singular+masculine ds:on
+SFX o0 èr eron/B1BuPd èr	is:singular+masculine ds:on
+SFX o0 a on/B1BuPd [^bcđègílmnprstŧx]a	is:singular+masculine ds:on
+SFX o0 e on/B1BuPd [^t]e	is:singular+masculine ds:on
+SFX o0 0 on/B1BuPd [^èò]l	is:singular+masculine ds:on
+SFX o0 0 n/B1BuPd [^bcdjɉkmpstŧ]o	is:singular+masculine ds:on
+SFX o0 0 on/B1BuPd [^è]r	is:singular+masculine ds:on
+SFX o0 èba ebon/B1BuPd èba	is:singular+masculine ds:on
+SFX o0 òca ocon/B1BuPd òca	is:singular+masculine ds:on
+SFX o0 òđa ođon/B1BuPd òđa	is:singular+masculine ds:on
+SFX o0 èga egon/B1BuPd èga	is:singular+masculine ds:on
+SFX o0 èla elon/B1BuPd èla	is:singular+masculine ds:on
+SFX o0 òla olon/B1BuPd òla	is:singular+masculine ds:on
+SFX o0 èma emon/B1BuPd èma	is:singular+masculine ds:on
+SFX o0 òna onon/B1BuPd òna	is:singular+masculine ds:on
+SFX o0 èpa epon/B1BuPd èpa	is:singular+masculine ds:on
+SFX o0 òpa opon/B1BuPd òpa	is:singular+masculine ds:on
+SFX o0 èra eron/B1BuPd èra	is:singular+masculine ds:on
+SFX o0 òsa oson/B1BuPd òsa	is:singular+masculine ds:on
+SFX o0 òta oton/B1BuPd òta	is:singular+masculine ds:on
+SFX o0 òŧa oŧon/B1BuPd òŧa	is:singular+masculine ds:on
+SFX o0 òxa oxon/B1BuPd òxa	is:singular+masculine ds:on
+SFX o0 ète eton/B1BuPd ète	is:singular+masculine ds:on
+SFX o0 òbo obon/B1BuPd òbo	is:singular+masculine ds:on
+SFX o0 èco econ/B1BuPd èco	is:singular+masculine ds:on
+SFX o0 òco ocon/B1BuPd òco	is:singular+masculine ds:on
+SFX o0 òdo odon/B1BuPd òdo	is:singular+masculine ds:on
+SFX o0 òjo ojon/B1BuPd òjo	is:singular+masculine ds:on
+SFX o0 òɉo oɉon/B1BuPd òɉo	is:singular+masculine ds:on
+SFX o0 òko okon/B1BuPd òko	is:singular+masculine ds:on
+SFX o0 òmo omon/B1BuPd òmo	is:singular+masculine ds:on
+SFX o0 òpo opon/B1BuPd òpo	is:singular+masculine ds:on
+SFX o0 èso eson/B1BuPd èso	is:singular+masculine ds:on
+SFX o0 òso oson/B1BuPd òso	is:singular+masculine ds:on
+SFX o0 èto eton/B1BuPd èto	is:singular+masculine ds:on
+SFX o0 òto oton/B1BuPd òto	is:singular+masculine ds:on
+SFX o0 èŧo eŧon/B1BuPd èŧo	is:singular+masculine ds:on
+SFX o0 òŧo oŧon/B1BuPd òŧo	is:singular+masculine ds:on
+SFX o0 e on/B1BuPd [^è]te	is:singular+masculine ds:on
+SFX o0 a on/B1BuPd [^èò][lp]a	is:singular+masculine ds:on
+SFX o0 a on/B1BuPd [^è][bgmr]a	is:singular+masculine ds:on
+SFX o0 a on/B1BuPd [^ò][cđnstŧx]a	is:singular+masculine ds:on
+SFX o0 0 n/B1BuPd [^ò][bdjɉkmp]o	is:singular+masculine ds:on
+SFX o0 0 n/B1BuPd [^èò][cstŧ]o	is:singular+masculine ds:on
 
-# sostantivi/ajetivi alterài - kresitivi (-on/Pd)
+# sostantivi/ajetivi alterài - kresitivi (-on/BuPd)
 SFX o7 Y 16
-SFX o7 e on/Pd e	is:singular+masculine ds:on
-SFX o7 0 on/Pd n	is:singular+masculine ds:on
-SFX o7 èr eron/Pd èr	is:singular+masculine ds:on
-SFX o7 0 on/Pd ar	is:singular+masculine ds:on
-SFX o7 a on/Pd [^gƚp]a	is:singular+masculine ds:on
-SFX o7 0 n/Pd [^ƚt]o	is:singular+masculine ds:on
+SFX o7 e on/PdBu e	is:singular+masculine ds:on
+SFX o7 0 on/PdBu n	is:singular+masculine ds:on
+SFX o7 èr eron/BuPd èr	is:singular+masculine ds:on
+SFX o7 0 on/BuPd ar	is:singular+masculine ds:on
+SFX o7 a on/BuPd [^gƚp]a	is:singular+masculine ds:on
+SFX o7 0 n/BuPd [^ƚt]o	is:singular+masculine ds:on
 SFX o7 èga egon èga	is:singular+masculine ds:on
 SFX o7 èƚa eƚon èƚa	is:singular+masculine ds:on
 SFX o7 òƚa oƚon òƚa	is:singular+masculine ds:on
 SFX o7 òpa opon òpa	is:singular+masculine ds:on
-SFX o7 èƚo eƚon/Pd èƚo	is:singular+masculine ds:on
-SFX o7 òƚo oƚon/Pd òƚo	is:singular+masculine ds:on
-SFX o7 òto oton/Pd òto	is:singular+masculine ds:on
-SFX o7 a on/Pd [^èò]ƚa	is:singular+masculine ds:on
-SFX o7 0 n/Pd [^èò]ƚo	is:singular+masculine ds:on
-SFX o7 0 n/Pd [^ò]to	is:singular+masculine ds:on
+SFX o7 èƚo eƚon/BuPd èƚo	is:singular+masculine ds:on
+SFX o7 òƚo oƚon/BuPd òƚo	is:singular+masculine ds:on
+SFX o7 òto oton/BuPd òto	is:singular+masculine ds:on
+SFX o7 a on/BuPd [^èò]ƚa	is:singular+masculine ds:on
+SFX o7 0 n/BuPd [^èò]ƚo	is:singular+masculine ds:on
+SFX o7 0 n/BuPd [^ò]to	is:singular+masculine ds:on
 
 # sostantivi/ajetivi alterài - kresitivi (-ona)
 SFX o1 Y 32
