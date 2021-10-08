@@ -2834,6 +2834,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "jistr",			"re",			1,	1,	"a",	"1433",			"",
 "jo",				"dex",		1,	1,	"a",	"1900",			"(veronexe) Spurgar.",
 "jo",				"in",			1,	1,	"a",	"1900",			"(veronexe) Intaxar.",
+"jobel",			"",			1,	1,	"a",	"1898",			"(buranèl)",
 "jond",			"",			1,	1,	"a",	"1829",			"",
 "ɉonf",			"dex",		1,	1,	"a",	"1775",			"",
 "ɉonf",			"x",			1,	1,	"a",	"1775",			"",
