@@ -7209,6 +7209,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "stran",			"",			4,	5,	"a",	"",				"",
 "stran",			"de",			4,	5,	"a",	"1998",			"",
 "stranb",		"",			1,	3,	"g",	"",				"(bixiak) Barkolar.",
+"stranbiđ",		"",			1,	6,	"a",	"1898",			"(buranèl) Strapaŧar.",
 "strangol",		"",			1,	3,	"g",	"1775",			"",
 "stranŧ",		"",			4,	6,	"a",	"1867",			"(Coxa) Tolerar.",
 "stranü",		"",			1,	5,	"a",	"1775",			"Far far un starnudo.",
