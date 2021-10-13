@@ -1188,6 +1188,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "deg",			"pro",		1,	-1,"g",	"",				"",
 "degor",			"",			1,	3, "g",	"1560",			"",
 "dekor",			"",			1,	3,	"g",	"",				"",
+"demand",		"",			1,	3,	"g",	"1898",			"(buranèl)",
+"demand",		"re",			1,	3,	"g",	"",				"",
 "demoni",		"in",			1,	3,	"g",	"1561",			"",
 "dent",			"",			1,	1,	"a",	"1854",			"Adentar.",
 "dent",			"dex",		1,	1,	"a",	"1900",			"(veronexe)",
