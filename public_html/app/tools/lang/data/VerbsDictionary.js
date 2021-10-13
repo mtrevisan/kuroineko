@@ -4863,6 +4863,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "nol",			"",			1,	1,	"g",	"1775",			"Dar a nolo.",
 "noleđ",			"",			1,	3,	"a",	"1775",			"Dar a nolo.",
 "noliđ",			"",			1,	3,	"a",	"1854",			"Dar a nolo.",
+"nom",			"",			1,	1,	"g",	"1898",			"(buranèl)",
 "nomen",			"",			1,	1,	"g",	"1353",			"",
 "nomen",			"de",			1,	1,	"g",	"",				"",
 "nomin",			"",			1,	1,	"g",	"1980",			"(vitoriexe)",
