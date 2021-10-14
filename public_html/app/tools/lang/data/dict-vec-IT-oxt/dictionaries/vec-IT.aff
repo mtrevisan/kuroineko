@@ -4081,7 +4081,7 @@ SFX xR vàrdomi úrdagelo/Dl vàrdomi	ds:imperative+present is:second+singular d
 SFX xR vàrdomi úrdageƚo/D7 vàrdomi	ds:imperative+present is:second+singular ds:pronomenal+locative	# T9
 
 
-# vèrbi pronomenali (stakài)
+# vèrbi pronomenali (destakài)
 SFX P0 Y 19
 SFX P0 0 -ge [raeoi]	ds:pronomenal+locative
 SFX P0 0 -gen [raeoi]	ds:pronomenal+genitive+locative
@@ -4103,7 +4103,7 @@ SFX P0 0 -ve [raeoi]	ds:pronomenal+reflexive
 SFX P0 0 -ven [raeoi]	ds:pronomenal+reflexive
 SFX P0 0 -vene [raeoi]	ds:pronomenal+reflexive
 
-# vèrbi pronomenali (stakài ko èle no vanesente)
+# vèrbi pronomenali (destakài ko èle no vanesente)
 SFX Pl Y 30
 SFX Pl 0 -gel [raeo]	is:singular+masculine ds:pronomenal+locative
 SFX Pl 0 -gelo [raeo]	is:singular+masculine ds:pronomenal+locative
@@ -4136,7 +4136,7 @@ SFX Pl 0 -vela [raeo]	is:singular+femenine ds:pronomenal+reflexive
 SFX Pl 0 -veli [raeo]	is:plural+masculine ds:pronomenal+reflexive
 SFX Pl 0 -vele [raeo]	is:plural+femenine ds:pronomenal+reflexive
 
-# vèrbi pronomenali (stakài ko èle vanesente)
+# vèrbi pronomenali (destakài ko èle vanesente)
 SFX P7 Y 24
 SFX P7 0 -geƚo [raeo]	is:singular+masculine ds:pronomenal+locative
 SFX P7 0 -geƚa [raeo]	is:singular+femenine ds:pronomenal+locative
@@ -4584,7 +4584,7 @@ SFX R7 0 veƚi [aàeiíoòóu]r	is:plural+masculine ds:pronomenal+reflexive
 SFX R7 0 veƚe [aàeiíoòóu]r	is:plural+femenine ds:pronomenal+reflexive
 
 
-# vèrbi pronomenali pal komandativo (stakài)
+# vèrbi pronomenali pal komandativo (destakài)
 SFX S0 Y 56
 SFX S0 a e-ge a	ds:pronomenal+locative
 SFX S0 a e-gen a	ds:pronomenal+genitive+locative
@@ -4643,7 +4643,7 @@ SFX S0 0 -ve [aàèéiíno]	ds:pronomenal+reflexive
 SFX S0 0 -ven [aàèéiíno]	ds:pronomenal+reflexive
 SFX S0 0 -vene [aàèéiíno]	ds:pronomenal+reflexive
 
-# vèrbi pronomenali pal komandativo (stakài senŧa èle vanesente)
+# vèrbi pronomenali pal komandativo (destakài senŧa èle vanesente)
 SFX Sl Y 90
 SFX Sl a e-l a	ds:pronomenal+accusative
 SFX Sl a e-lo a	ds:pronomenal+accusative
@@ -4736,7 +4736,7 @@ SFX Sl 0 -vela [aàèéiíno]	ds:pronomenal+reflexive
 SFX Sl 0 -veli [aàèéiíno]	ds:pronomenal+reflexive
 SFX Sl 0 -vele [aàèéiíno]	ds:pronomenal+reflexive
 
-# vèrbi pronomenali pal komandativo (stakài ko èle vanesente)
+# vèrbi pronomenali pal komandativo (destakài ko èle vanesente)
 SFX S7 Y 72
 SFX S7 a e-ƚo a	ds:pronomenal+accusative
 SFX S7 a e-ƚa a	ds:pronomenal+accusative
@@ -5127,7 +5127,7 @@ SFX FS i 0 i
 
 # forme ko ʼl interogativo: indikativo prexente/inperfèto/futuro, kondiŧional
 
-# interogativi prima parsona singolar (stakài)
+# interogativi prima parsona singolar (destakài)
 SFX J1 Y 12
 SFX J1 0 -i [aeoàèòn]	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
 SFX J1 o -io [^eü]o	ds:interrogative	# venethian	-- FIXME dexàlveo/alèo/axéo/alturio/arfío/descòo/akuo/refúo/früo > ?
@@ -5204,7 +5204,7 @@ SFX I1 0 e [^i]so	ds:interrogative
 SFX I1 iso ísoe iso	ds:interrogative
 
 
-# interogativi prima parsona plural (stakài)
+# interogativi prima parsona plural (destakài)
 SFX J2 Y 9
 SFX J2 0 -i [aeo]	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
 SFX J2 0 -nte [^n]	ds:interrogative
@@ -5233,24 +5233,21 @@ SFX I2 o io [àéí]imo	ds:interrogative	# venethian
 SFX I2 émoi emio émoi	ds:interrogative	# venethian
 SFX I2 ímoi imio ímoi	ds:interrogative	# venethian
 
-# interogativi sekonda parsona singolar (stakài)
+# interogativi sekonda parsona singolar (destakài)
 SFX J3 Y 3
 SFX J3 0 -tu .	ds:interrogative
 SFX J3 0 -stu .	ds:interrogative	# coxòto
 SFX J3 0 -to .	ds:interrogative	# padoan de thità, vithentin de thità, polexan de thità, veronexe de thità
 
 # interogativi sekonda parsona singolar (takài)
-SFX I3 Y 8
+SFX I3 Y 5
 SFX I3 u o tu	ds:interrogative
 SFX I3 tu stu tu	ds:interrogative	# coxòto
-SFX I3 0 to [aiíeèé]	ds:interrogative
-SFX I3 à ato à	ds:interrogative
-SFX I3 0 tu [aiíeèé]	ds:interrogative
-SFX I3 à atu à	ds:interrogative
-SFX I3 0 stu [aiíeèé]	ds:interrogative
-SFX I3 à astu à	ds:interrogative
+SFX I3 0 to [aàiíeèé]	ds:interrogative
+SFX I3 0 tu [aàiíeèé]	ds:interrogative
+SFX I3 0 stu [aàiíeèé]	ds:interrogative
 
-# interogativi sekonda parsona plural (stakài)
+# interogativi sekonda parsona plural (destakài)
 SFX J4 Y 2
 SFX J4 0 -u .	ds:interrogative
 SFX J4 0 -o .	ds:interrogative	# padoan de thità, vithentin de thità, polexan de thità, veronexe de thità
@@ -5271,7 +5268,7 @@ SFX I4 0 o [èéí]	ds:interrogative
 SFX I4 isi ísïu isi	ds:interrogative
 SFX I4 isi ísïo isi	ds:interrogative
 
-# interogativi tèrŧa parsona (stakài senŧa èle vanesente)
+# interogativi tèrŧa parsona (destakài senŧa èle vanesente)
 SFX J5 Y 17
 SFX J5 a e-l a	is:singular+masculine ds:interrogative
 SFX J5 a e-lo a	is:singular+masculine ds:interrogative
@@ -5291,7 +5288,7 @@ SFX J5 0 -la [^ai]	is:singular+femenine ds:interrogative
 SFX J5 0 -li [^ai]	is:plural+masculine ds:interrogative
 SFX J5 0 -le [^ai]	is:plural+femenine ds:interrogative
 
-# interogativi tèrŧa parsona (stakài ko èle vanesente)
+# interogativi tèrŧa parsona (destakài ko èle vanesente)
 SFX j5 Y 14
 SFX j5 a e-ƚo a	is:singular+masculine ds:interrogative
 SFX j5 a e-ƚa a	is:singular+femenine ds:interrogative
@@ -5329,7 +5326,7 @@ SFX i5 o e [ʼaàeèéi]ƚo	is:plural+femenine ds:interrogative
 SFX i5 aƚo iƚe aƚo	is:plural+femenine ds:interrogative	# Arkade, Sprexian, Povejan
 SFX i5 eƚo iƚe eƚo	is:plural+femenine ds:interrogative	# Arkade, Sprexian, Povejan
 
-# interogativi kondiŧional prexente prima parsona plural (stakài)
+# interogativi kondiŧional prexente prima parsona plural (destakài)
 SFX J6 Y 1
 SFX J6 e -io rave	ds:interrogative	# venethian
 
@@ -5337,7 +5334,7 @@ SFX J6 e -io rave	ds:interrogative	# venethian
 SFX I6 Y 1
 SFX I6 àvemi avio ràvemi	ds:interrogative	# venethian
 
-# interogativi kondiŧional prexente tèrŧa parsona (stakài senŧa èle vanesente)
+# interogativi kondiŧional prexente tèrŧa parsona (destakài senŧa èle vanesente)
 SFX J7 Y 10
 SFX J7 0 -l rave	is:singular+masculine ds:interrogative
 SFX J7 0 -lo rave	is:singular+masculine ds:interrogative
@@ -5350,7 +5347,7 @@ SFX J7 ave ise-la rave	is:singular+femenine ds:interrogative
 SFX J7 ave ise-li rave	is:plural+masculine ds:interrogative
 SFX J7 ave ise-le rave	is:plural+femenine ds:interrogative
 
-# interogativi kondiŧional prexente tèrŧa parsona (stakài ko èle vanesente)
+# interogativi kondiŧional prexente tèrŧa parsona (destakài ko èle vanesente)
 SFX j7 Y 11
 SFX j7 0 -ƚo rave	is:singular+masculine ds:interrogative
 SFX j7 0 -ƚa rave	is:singular+femenine ds:interrogative
@@ -7046,7 +7043,7 @@ PFX -0 0 de .	dp:de
 # prefiso par lontanamento o sbasamento, eufònego a de- (de(s/x)-)
 PFX -1 Y 3
 PFX -1 0 de x	dp:des
-PFX -1 0 des [cfkpt]	dp:des
+PFX -1 0 des [cfkpt]	dp:des	# [xđ]?
 PFX -1 0 dex [^cfkptx]	dp:des
 
 # sostantivi/vèrbi deajetivali (i(n)-)
