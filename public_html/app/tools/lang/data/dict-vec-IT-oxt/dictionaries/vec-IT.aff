@@ -495,7 +495,8 @@ SFX t0 ar àvïu/I4 ar	ds:indicative+imperfect is:second+plural ds:interrogative
 SFX t0 er évïu/I4 er	ds:indicative+imperfect is:second+plural ds:interrogative	# T2 + (v)i
 SFX t0 ir ívïu/I4 ir	ds:indicative+imperfect is:second+plural ds:interrogative	# T2 + (v)i
 SFX t0 r i/J4I4 [ae]r	ds:indicative+imperfect is:second+plural	# T2 + (v)i
-SFX t0 ir íi/J4I4 ir	ds:indicative+imperfect is:second+plural	# T2 + (v)i
+SFX t0 ir íi/J4I4 [^aeiou]ir	ds:indicative+imperfect is:second+plural	# T2 + (v)i
+SFX t0 r i/J4I4 [aeiou]ir	ds:indicative+imperfect is:second+plural	# T2 + (v)i
 SFX t0 rò vi/J4 erò	ds:indicative+imperfect is:second+plural	# T2 + (v)i
 SFX t0 erò évïu/I4 erò	ds:indicative+imperfect is:second+plural ds:interrogative	# T2 + (v)i
 SFX t0 rò i/J4I4 erò	ds:indicative+imperfect is:second+plural	# T2 + (v)i
@@ -4793,33 +4794,40 @@ SFX S7 0 -veƚi [aàèéiíno]	ds:pronomenal+reflexive
 SFX S7 0 -veƚe [aàèéiíno]	ds:pronomenal+reflexive
 
 # vèrbi pronomenali (takai)
-SFX D0 Y 121
-SFX D0 0 ge [àèi]	ds:pronomenal+locative
+SFX D0 Y 128
+SFX D0 0 ge [èi]	ds:pronomenal+locative
+SFX D0 à age à	ds:pronomenal+locative
 SFX D0 é ege é	ds:pronomenal+locative
 SFX D0 0 gen [àéèi]	ds:pronomenal+genitive+locative
 SFX D0 0 gin [àéèi]	ds:pronomenal+genitive+locative
 SFX D0 0 gene [àéèi]	ds:pronomenal+genitive+locative
 SFX D0 0 gine [àéèi]	ds:pronomenal+genitive+locative
-SFX D0 0 me [àèi]	ds:pronomenal+reflexive
+SFX D0 0 me [èi]	ds:pronomenal+reflexive
+SFX D0 à ame à	ds:pronomenal+reflexive
 SFX D0 é eme é	ds:pronomenal+reflexive
 SFX D0 0 men [àéèi]	ds:pronomenal+reflexive
 SFX D0 0 mene [àéèi]	ds:pronomenal+reflexive
 SFX D0 0 mege [àéèi]	ds:pronomenal+reflexive
-SFX D0 0 n [àèi]	ds:pronomenal+genitive
-SFX D0 0 ne [àèi]	ds:pronomenal+genitive
+SFX D0 0 n [èi]	ds:pronomenal+genitive
+SFX D0 à an à	ds:pronomenal+genitive
+SFX D0 0 ne [èi]	ds:pronomenal+genitive
+SFX D0 à ane à	ds:pronomenal+genitive
 SFX D0 é en é	ds:pronomenal+genitive
 SFX D0 é ene é	ds:pronomenal+genitive
-SFX D0 0 se [àèi]	ds:pronomenal+reflexive
+SFX D0 0 se [èi]	ds:pronomenal+reflexive
+SFX D0 à ase à	ds:pronomenal+reflexive
 SFX D0 é ese é	ds:pronomenal+reflexive
 SFX D0 0 sen [àéèi]	ds:pronomenal+reflexive
 SFX D0 0 sene [àéèi]	ds:pronomenal+reflexive
 SFX D0 0 sege [àéèi]	ds:pronomenal+reflexive
-SFX D0 0 te [àèi]	ds:pronomenal+reflexive
+SFX D0 0 te [èi]	ds:pronomenal+reflexive
+SFX D0 à ate à	ds:pronomenal+reflexive
 SFX D0 é ete é	ds:pronomenal+reflexive
 SFX D0 0 ten [àéèi]	ds:pronomenal+reflexive
 SFX D0 0 tene [àéèi]	ds:pronomenal+reflexive
 SFX D0 0 tege [àéèi]	ds:pronomenal+reflexive
-SFX D0 0 ve [àèi]	ds:pronomenal+reflexive
+SFX D0 0 ve [èi]	ds:pronomenal+reflexive
+SFX D0 à ave à	ds:pronomenal+reflexive
 SFX D0 é eve é	ds:pronomenal+reflexive
 SFX D0 0 ven [àéèi]	ds:pronomenal+reflexive
 SFX D0 0 vene [àéèi]	ds:pronomenal+reflexive
@@ -5125,7 +5133,7 @@ SFX J1 0 -e .	ds:interrogative
 
 # interogativi prima parsona singolar (takai)
 # varda anka `varar`
-SFX I1 Y 57
+SFX I1 Y 61
 SFX I1 mi i [aeoòn]mi	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
 SFX I1 mi jo [aeòn]mi	ds:interrogative	# venethian
 SFX I1 omi io [dftv]àgomi	ds:interrogative	# venethian
@@ -5137,7 +5145,9 @@ SFX I1 mi ti nmi	ds:interrogative	# veronexe
 SFX I1 mi ne [aeoò]mi	ds:interrogative
 SFX I1 mi ni [aeoò]mi	ds:interrogative	# veronexe
 SFX I1 mi e [aeoòn]mi	ds:interrogative
-SFX I1 0 i [aeàèéò]	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
+SFX I1 0 i [aeèò]	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
+SFX I1 à ai à	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
+SFX I1 é ei é	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
 SFX I1 0 i [^s]o	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
 SFX I1 0 i [^i]so	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
 SFX I1 iso ísoi iso	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
@@ -5179,7 +5189,9 @@ SFX I1 0 ni [^s]o	ds:interrogative	# veronexe
 SFX I1 0 ni [^i]so	ds:interrogative	# veronexe
 SFX I1 iso ísoni iso	ds:interrogative	# veronexe
 SFX I1 à ani à	ds:interrogative	# veronexe
-SFX I1 0 e [aàèéò]	ds:interrogative
+SFX I1 0 e [aèò]	ds:interrogative
+SFX I1 à ae à	ds:interrogative
+SFX I1 é ee é	ds:interrogative
 SFX I1 0 e [^s]o	ds:interrogative
 SFX I1 0 e [^i]so	ds:interrogative
 SFX I1 iso ísoe iso	ds:interrogative
@@ -5198,16 +5210,20 @@ SFX J2 0 -e .	ds:interrogative
 SFX J2 0 -i n	ds:interrogative
 
 # interogativi prima parsona plural (takai)
-SFX I2 Y 14
+SFX I2 Y 18
 SFX I2 0 i [aeo]	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
 SFX I2 i nte [^n]i	ds:interrogative
 SFX I2 i nti [^n]i	ds:interrogative	# veronexe
 SFX I2 i ne [^n]i	ds:interrogative
 SFX I2 i ni [^n]i	ds:interrogative	# veronexe
-SFX I2 i te [oó]ni	ds:interrogative
-SFX I2 i ti [oó]ni	ds:interrogative	# veronexe
-SFX I2 i e [oó]ni	ds:interrogative
-SFX I2 i e [eé]ni	ds:interrogative
+SFX I2 i te oni	ds:interrogative
+SFX I2 óni onte óni	ds:interrogative
+SFX I2 i ti oni	ds:interrogative	# veronexe
+SFX I2 óni onti óni	ds:interrogative	# veronexe
+SFX I2 i e oni	ds:interrogative
+SFX I2 óni one óni	ds:interrogative
+SFX I2 i e eni	ds:interrogative
+SFX I2 éni ene éni	ds:interrogative
 SFX I2 i e ini	ds:interrogative
 SFX I2 o io [àéí]vimo	ds:interrogative	# venethian
 SFX I2 o io [àéí]imo	ds:interrogative	# venethian
@@ -5221,14 +5237,20 @@ SFX J3 0 -stu .	ds:interrogative	# coxòto
 SFX J3 0 -to .	ds:interrogative	# padoan de thità, vithentin de thità, polexan de thità, veronexe de thità
 
 # interogativi sekonda parsona singolar (takai)
-SFX I3 Y 8
+SFX I3 Y 14
 SFX I3 u o tu	ds:interrogative
 SFX I3 tu stu tu	ds:interrogative	# coxòto
-SFX I3 0 to [aiíeèé]	ds:interrogative
+SFX I3 0 to [aieè]	ds:interrogative
+SFX I3 í ito í	ds:interrogative
+SFX I3 é eto é	ds:interrogative
 SFX I3 à ato à	ds:interrogative
-SFX I3 0 tu [aiíeèé]	ds:interrogative
+SFX I3 0 tu [aieè]	ds:interrogative
+SFX I3 í itu í	ds:interrogative
+SFX I3 é etu é	ds:interrogative
 SFX I3 à atu à	ds:interrogative
-SFX I3 0 stu [aiíeèé]	ds:interrogative
+SFX I3 0 stu [aieè]	ds:interrogative
+SFX I3 í istu í	ds:interrogative
+SFX I3 é estu é	ds:interrogative
 SFX I3 à astu à	ds:interrogative
 
 # interogativi sekonda parsona plural (destakai)
@@ -5237,7 +5259,7 @@ SFX J4 0 -u .	ds:interrogative
 SFX J4 0 -o .	ds:interrogative	# padoan de thità, vithentin de thità, polexan de thità, veronexe de thità
 
 # interogativi sekonda parsona plural (takai)
-SFX I4 Y 13
+SFX I4 Y 16
 SFX I4 u o [àé]eu	ds:interrogative
 SFX I4 u o à[sv][eï]u	ds:interrogative
 SFX I4 u o é[sv]ïu	ds:interrogative
@@ -5248,7 +5270,10 @@ SFX I4 e iu [aà]e	ds:interrogative
 SFX I4 0 o [aeéí]i	ds:interrogative
 SFX I4 e io [aà]e	ds:interrogative
 SFX I4 0 u [èéí]	ds:interrogative
-SFX I4 0 o [èéí]	ds:interrogative
+SFX I4 0 o è	ds:interrogative
+SFX I4 é eo é	ds:interrogative
+SFX I4 í io [^aeiou]í	ds:interrogative
+SFX I4 0 o [aeiou]í	ds:interrogative
 SFX I4 isi ísïu isi	ds:interrogative
 SFX I4 isi ísïo isi	ds:interrogative
 
