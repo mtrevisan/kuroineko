@@ -5476,10 +5476,14 @@ SFX B1 ijo íi [^aeiouàèéíòóú]ijo	is:plural+masculine+northern
 SFX B1 ujo úi [^aeiouàèéíòóú]ujo	is:plural+masculine+northern
 
 # trasformaŧion feltrin–belunexe ('[aeou][^-]+[aeou][ln] > 'V[^-]+Vi)
-SFX B2 Y 3
-SFX B2 n i n    is:plural+masculine+northern
+SFX B2 Y 7
+SFX B2 n i [^u]n    is:plural+masculine+northern
+SFX B2 n i [aeiouàèéíòóú]un    is:plural+masculine+northern
+SFX B2 un üi [^aeiouàèéíòóú]un    is:plural+masculine+northern
 SFX B2 jo i [aeou]jo    is:plural+masculine+northern
-SFX B2 l i l    is:plural+masculine+northern
+SFX B2 l i [^u]l    is:plural+masculine+northern
+SFX B2 l i [aeiouàèéíòóú]ul    is:plural+masculine+northern
+SFX B2 ul üi [^aeiouàèéíòóú]ul    is:plural+masculine+northern
 
 
 ### Arsiè ###
