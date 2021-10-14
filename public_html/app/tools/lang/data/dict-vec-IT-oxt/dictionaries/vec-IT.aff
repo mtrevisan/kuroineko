@@ -5422,19 +5422,26 @@ SFX F0 e 0 ie	is:plural+femenine
 SFX F0 a e a	is:plural+femenine
 
 # sostantivi plurali maskili (-o/i)
-SFX M0 Y 6
-SFX M0 0 i [^oaie]	is:plural+masculine
-SFX M0 0 o [^oaie]	is:singular+masculine
+SFX M0 Y 10
+SFX M0 0 i [^oaieàó]	is:plural+masculine
+SFX M0 0 o [^oaieàó]	is:singular+masculine
+SFX M0 à ai à	is:plural+masculine
+SFX M0 à ao à	is:singular+masculine
+SFX M0 ó oi ó	is:plural+masculine
+SFX M0 ó oo ó	is:singular+masculine
 SFX M0 o i [^i]o	is:plural+masculine
 SFX M0 io i io	is:plural+masculine
 SFX M0 a i a	is:plural+masculine
 SFX M0 e i e	is:plural+masculine
 
 # sostantivi plurali maskili (-e/i)
-SFX MF Y 3
-SFX MF 0 e [èélnr]	is:singular+masculine
+SFX MF Y 6
+SFX MF 0 e [èlnr]	is:singular+masculine
+SFX MF a e a	is:singular+masculine
+SFX MF é ee é	is:singular+masculine
 SFX MF e i e	is:plural+masculine
-SFX MF 0 i [aèélnr]	is:plural+masculine
+SFX MF 0 i [èlnr]	is:plural+masculine
+SFX MF é ei é	is:plural+masculine
 
 # sostantivi singolari: đontamento de -io/a a le paròle in -o/a (-[lnr] > -[lnr]io, -o/e > -io, -a > -ia)
 SFX M1 Y 4
@@ -5454,28 +5461,25 @@ SFX X0 0 i [lnr]	is:plural
 ### Fèltre–Belun ###
 
 # trasformaŧion feltrin–belunexe ('[aeou][ln] > 'Vi - despò na sekuenŧa: -ni > -ñi (palatiđaŧion) > -in (depalatiđaŧion) > -i (kaskàa de la `n`))
-SFX B1 Y 15
-SFX B1 al ài al	is:plural+masculine+northern
-SFX B1 el éi el	is:plural+masculine+northern
-SFX B1 ol ói ol	is:plural+masculine+northern
-SFX B1 ul úi ul	is:plural+masculine+northern
-SFX B1 l i [èò]l	is:plural+masculine+northern
-SFX B1 an ài an	is:plural+masculine+northern
-SFX B1 en éi en	is:plural+masculine+northern
-SFX B1 on ói on	is:plural+masculine+northern
-SFX B1 un úi un	is:plural+masculine+northern
-SFX B1 n i [èò]n	is:plural+masculine+northern
-SFX B1 ajo ài ajo	is:plural+masculine+northern
-SFX B1 ejo éi ejo	is:plural+masculine+northern
-SFX B1 ojo ói ojo	is:plural+masculine+northern
-SFX B1 ujo úi ujo	is:plural+masculine+northern
-SFX B1 jo i òjo	is:plural+masculine+northern
+SFX B1 Y 12
+SFX B1 l i [aeoèò]l	is:plural+masculine+northern
+SFX B1 l i [aeiouàèéíòóú][iu]l	is:plural+masculine+northern
+SFX B1 il íi [^aeiouàèéíòóú]il	is:plural+masculine+northern
+SFX B1 ul úi [^aeiouàèéíòóú]ul	is:plural+masculine+northern
+SFX B1 n i [aeoèò]n	is:plural+masculine+northern
+SFX B1 n i [aeiouàèéíòóú][iu]n	is:plural+masculine+northern
+SFX B1 in íi [^aeiouàèéíòóú]in	is:plural+masculine+northern
+SFX B1 un úi [^aeiouàèéíòóú]un	is:plural+masculine+northern
+SFX B1 jo i [aeoò]jo	is:plural+masculine+northern
+SFX B1 jo i [aeiouàèéíòóú][iu]jo	is:plural+masculine+northern
+SFX B1 ijo íi [^aeiouàèéíòóú]ijo	is:plural+masculine+northern
+SFX B1 ujo úi [^aeiouàèéíòóú]ujo	is:plural+masculine+northern
 
 # trasformaŧion feltrin–belunexe ('[aeou][^-]+[aeou][ln] > 'V[^-]+Vi)
 SFX B2 Y 3
-SFX B2 n i n	is:plural+masculine+northern
-SFX B2 jo i [aeou]jo	is:plural+masculine+northern
-SFX B2 l i l	is:plural+masculine+northern
+SFX B2 n i n    is:plural+masculine+northern
+SFX B2 jo i [aeou]jo    is:plural+masculine+northern
+SFX B2 l i l    is:plural+masculine+northern
 
 
 ### Arsiè ###
@@ -6208,48 +6212,52 @@ SFX w0 ente ènte ente
 
 
 # sostantivi koletivi, ...
-SFX y0 Y 34
-SFX y0 ada àa ada	is:singular+femenine
-SFX y0 ada àe ada	is:plural+femenine
-SFX y0 eda éa eda	is:singular+femenine
-SFX y0 eda ée eda	is:plural+femenine
-SFX y0 ida ía ida	is:singular+femenine
-SFX y0 ida íe ida	is:plural+femenine
-SFX y0 oda óa oda	is:singular+femenine
-SFX y0 oda óe oda	is:plural+femenine
-SFX y0 uda úa uda	is:singular+femenine
-SFX y0 uda úe uda	is:plural+femenine
+SFX y0 Y 38
+SFX y0 da a [aeo]da	is:singular+femenine
+SFX y0 da e [aeo]da	is:plural+femenine
+SFX y0 da a [aeiouàèéíòóú]ida	is:singular+femenine
+SFX y0 da e [aeiouàèéíòóú]ida	is:singular+femenine
+SFX y0 ida ía [^aeiouàèéíòóú]ida	is:singular+femenine
+SFX y0 ida íe [^aeiouàèéíòóú]ida	is:singular+femenine
+SFX y0 da a [aeiouàèéíòóú]uda	is:singular+femenine
+SFX y0 da e [aeiouàèéíòóú]uda	is:singular+femenine
+SFX y0 uda úa [^aeiouàèéíòóú]uda	is:singular+femenine
+SFX y0 uda úe [^aeiouàèéíòóú]uda	is:singular+femenine
 SFX y0 ade à ade	is:femenine+non_enumerable
-SFX y0 ade àe ade	is:femenine+non_enumerable
+SFX y0 de e ade	is:femenine+non_enumerable
 SFX y0 ade è ade	is:femenine+non_enumerable	# pavan
 SFX y0 ede é ede	is:femenine+non_enumerable
 SFX y0 ude ú ude	is:femenine+non_enumerable
 SFX y0 ado ò ado	is:masculine+non_enumerable	# pavan
 SFX y0 ado à ado	is:masculine+non_enumerable
-SFX y0 ado ào ado	is:singular+masculine
-SFX y0 ado ài ado	is:plural+masculine
+SFX y0 do o ado	is:singular+masculine
+SFX y0 do i ado	is:plural+masculine
 SFX y0 ado è ado	is:masculine+non_enumerable
 SFX y0 ado èo ado	is:singular+masculine
 SFX y0 ado èi ado	is:plural+masculine
 SFX y0 edo é edo	is:masculine+non_enumerable
-SFX y0 edo éo edo	is:singular+masculine
-SFX y0 edo éi edo	is:plural+masculine
+SFX y0 do o edo	is:singular+masculine
+SFX y0 do i edo	is:plural+masculine
 SFX y0 ido í ido	is:masculine+non_enumerable
-SFX y0 ido ío ido	is:singular+masculine
-SFX y0 ido íi ido	is:plural+masculine
+SFX y0 do o [aeiouàèéíòóú]ido	is:singular+masculine
+SFX y0 do i [aeiouàèéíòóú]ido	is:singular+masculine
+SFX y0 ido ío [^aeiouàèéíòóú]ido	is:singular+masculine
+SFX y0 ido íi [^aeiouàèéíòóú]ido	is:singular+masculine
 SFX y0 do 0 òdo	is:masculine+non_enumerable
 SFX y0 do o òdo	is:singular+masculine
 SFX y0 do i òdo	is:plural+masculine
 SFX y0 udo ú udo	is:masculine+non_enumerable
-SFX y0 udo úo udo	is:singular+masculine
-SFX y0 udo úi udo	is:plural+masculine
+SFX y0 do o [aeiouàèéíòóú]udo	is:singular+masculine
+SFX y0 do i [aeiouàèéíòóú]udo	is:singular+masculine
+SFX y0 udo úo [^aeiouàèéíòóú]udo	is:singular+masculine
+SFX y0 udo úi [^aeiouàèéíòóú]udo	is:singular+masculine
 
 # sostantivi koletivi, ... (-ada > -à)
 SFX y1 Y 1
 SFX y1 ada à ada	is:femenine+non_enumerable
 
 # sostantivi koletivi, ...
-SFX y2 Y 10
+SFX y2 Y 12
 SFX y2 da e ada	is:plural+femenine
 SFX y2 da a ada	is:singular+femenine
 SFX y2 ede é ede	is:femenine+non_enumerable
@@ -6260,6 +6268,8 @@ SFX y2 ado èo ado	is:singular+masculine
 SFX y2 ado à ado	is:masculine+non_enumerable
 SFX y2 ado è ado	is:masculine+non_enumerable
 SFX y2 ado ò ado	is:masculine+non_enumerable
+SFX y2 da a ida	is:singular+femenine
+SFX y2 da e ida	is:plural+femenine
 
 
 # sostantivi/ajetivi alterài – demenutivi (-eto/a)
