@@ -4642,6 +4642,12 @@ tumefào/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:tumef
 tumefato/A1FS	po:verb ds:participle+passive+strong is:singular+masculine st:tumefar dp:tume
 fir/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 fiso/n0T8N8tClC7CJ1I1FS	po:verb ds:indicative+present is:first+singular ds:interrogative st:fir
+# FIXME derivaŧion korèta (no korèta: fíe)
+fie/J1I1	po:verb ds:indicative+imperfect is:first+singular st:fir
+# FIXME derivaŧion korèta (no korèta: fía)
+fia/J3I3	po:verb ds:indicative+imperfect is:second+singular st:fir
+# FIXME derivaŧion korèta (no korèta: fié)
+fïé/J4I4	po:verb ds:indicative+imperfect is:second+plural st:fir
 fàŧer/t1c0c1l1P0PlR0Rl^4	po:verb ds:infinitive+simple
 faŧo/t8n8tElEJ1FS^4	po:verb ds:indicative+present is:first+singular st:fàŧer
 fàŧomi/t8n8tElEI1^4	po:verb ds:indicative+present is:first+singular ds:interrogative st:fàŧer
@@ -5234,7 +5240,7 @@ enfïar/t0l070n0t1P0PlP7Q0QlQ7-1	po:verb ds:infinitive+simple
 enfío/T8N8tBlB7BJ1I1-0-1	po:verb ds:indicative+present is:first+singular st:enfïar
 infïar/t0l070n0t1P0PlP7Q0QlQ7-1	po:verb ds:infinitive+simple
 infío/T8N8tBlB7BJ1I1-0-1	po:verb ds:indicative+present is:first+singular st:infïar
-fïar/t0l070n0t1P0PlP7Q0QlQ7*0	po:verb ds:infinitive+simple
+fïar/t0l070n0t2P0PlP7Q0QlQ7*0	po:verb ds:infinitive+simple
 fio/t8n8tAlA7AJ1*0	po:verb ds:indicative+present is:first+singular st:fïar
 fíomi/t8n8tAlA7AI1*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:fïar
 fiabar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
@@ -5561,8 +5567,10 @@ profligo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:profl
 proflígomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:profligar dp:pro
 flosar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 flòso/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:flosar
-flüir/t0l070n0t1P0PlP7Q0QlQ7+0:0	po:verb ds:infinitive+simple
+flüir/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 flüiso/n0T8N8tClC7CJ1I1FS+0:0	po:verb ds:indicative+present is:first+singular st:flüir
+inflüir/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
+konflüir/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:kon
 inflüenŧar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
 inflüenŧo/t8n8tAlAJ1	po:verb ds:indicative+present is:first+singular st:inflüenŧar
 inflüénŧomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:inflüenŧar
@@ -6121,7 +6129,7 @@ frotoƚar/t070t1P0P7Q0Q7*0	po:verb ds:infinitive+simple
 fròtoƚo/T8tB7BJ1I1*0	po:verb ds:indicative+present is:first+singular st:frotoƚar
 sfroxar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:s
 sfròxo/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:sfroxar dp:s
-früar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+früar/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 fruo/u8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:früar
 frúomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:früar
 frubar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
@@ -7381,7 +7389,7 @@ ingrotolir/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple dp:in
 ingrotoliso/n0T8N8tClCJ1I1FS	po:verb ds:indicative+present is:first+singular st:ingrotolir dp:in
 ingrotoƚir/t070t1P0P7Q0Q7	po:verb ds:infinitive+simple dp:in
 ingrotoƚiso/T8tC7CJ1I1	po:verb ds:indicative+present is:first+singular st:ingrotoƚir dp:in
-grüar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+grüar/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 gruo/u8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:grüar
 grúomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:grüar
 ingrumar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
@@ -7405,9 +7413,10 @@ ingrutoƚir/t070t1P0P7Q0Q7	po:verb ds:infinitive+simple dp:in
 ingrutoƚiso/T8tC7CJ1I1	po:verb ds:indicative+present is:first+singular st:ingrutoƚir dp:in
 xgruxir/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:s
 xgruxiso/n0T8N8tClC7CJ1I1FS	po:verb ds:indicative+present is:first+singular st:xgruxir dp:s
-güar/t0l070n0t1P0PlP7Q0QlQ7+0	po:verb ds:infinitive+simple
+güar/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 guo/u8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:güar
 gúomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:güar
+ingüar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
 ingúo/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:güar dp:in
 argüar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:ad
 àrgüo/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:argüar dp:ad
@@ -10099,7 +10108,7 @@ krevento/t8n8tAlA7AJ1FS*0	po:verb ds:indicative+present is:first+singular st:kre
 krevéntomi/t8n8tAlA7AI1*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:kreventar
 krexemar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 kréxemo/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:krexemar
-krïar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+krïar/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 krio/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:krïar
 kríomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:krïar
 kridar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
@@ -13435,7 +13444,7 @@ promóver/t1c0c1c7l171P0PlP7R0RlR7	po:verb ds:infinitive+simple dp:pro
 promovo/t8n8tElE7EJ1FS	po:verb ds:indicative+present is:first+singular st:promóver dp:pro
 promóvomi/t8n8tElE7EI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:promóver dp:pro
 promoso/A1FS	po:verb ds:participle+passive+strong is:singular+masculine st:promóver dp:pro
-müar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+müar/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 muo/u8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:müar
 múomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:müar
 tramüar/t0l070n0t1P0PlP7Q0QlQ7*0	po:verb ds:infinitive+simple
@@ -13708,12 +13717,17 @@ névero/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:neve
 nevarar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 nevaro/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:nevarar
 nevàromi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:nevarar
-nïar/t0l070n0t1P0PlP7Q0QlQ7-1+0	po:verb ds:infinitive+simple
+nïar/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 nio/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:nïar
-denío/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:denïar dp:de
-in-nio/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:in-nïar dp:in
-inio/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:inïar dp:in
 níomi/t8n8tAlA7AI1-1+0	po:verb ds:indicative+present is:first+singular ds:interrogative st:nïar
+dexnïar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:des
+dexnío/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:denïar dp:de
+innïar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
+innío/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:innïar dp:in
+in-nïar/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
+in-nio/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:in-nïar dp:in
+inïar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
+inío/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:inïar dp:in
 arnïar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:re dp:ad
 arnío/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:arnïar dp:re dp:ad
 stranïar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:stra
@@ -13887,7 +13901,7 @@ dexnoxelar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple dp:des
 dexnoxèlo/T8N8tBlBJ1I1FS	po:verb ds:indicative+present is:first+singular st:dexnoxelar dp:des
 dexnoxeƚar/t070t1P0P7Q0Q7	po:verb ds:infinitive+simple dp:des
 dexnoxèƚo/T8tB7BJ1I1	po:verb ds:indicative+present is:first+singular st:dexnoxeƚar dp:des
-nüar/t0l070n0t1P0PlP7Q0QlQ7*0	po:verb ds:infinitive+simple
+nüar/t0l070n0t2P0PlP7Q0QlQ7*0	po:verb ds:infinitive+simple
 nuo/u8n8tAlA7AJ1*0	po:verb ds:indicative+present is:first+singular st:nüar
 núomi/t8n8tAlA7AI1*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:nüar
 dexnüar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:des
@@ -15784,10 +15798,11 @@ pexúŧomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interro
 pexusar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 pexuso/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:pexusar
 pexúsomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:pexusar
-pïar/t0l070n0t1P0PlP7Q0QlQ7+0	po:verb ds:infinitive+simple
+pïar/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 pio/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:pïar
-inpío/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:inpïar dp:in
 píomi/t8n8tAlA7AI1+0	po:verb ds:indicative+present is:first+singular ds:interrogative st:pïar
+inpïar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
+inpío/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:inpïar dp:in
 pijar/t0l070n0t1P0PlP7Q0QlQ7.0	po:verb ds:infinitive+simple
 pijo/t8n8tAlA7AJ1.0	po:verb ds:indicative+present is:first+singular st:pijar
 píjomi/t8n8tAlA7AI1.0	po:verb ds:indicative+present is:first+singular ds:interrogative st:pijar
@@ -16952,10 +16967,11 @@ prexumo/t8n8tElE7EJ1FS	po:verb ds:indicative+present is:first+singular st:prexú
 prexúmomi/t8n8tElE7EI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:prexúmer dp:pre
 prexumerò/t0n0l070p4l474J1I1	po:verb ds:indicative+future is:first+singular st:prexúmer dp:pre
 prexunto/A1	po:verb ds:participle+passive+strong is:singular+masculine st:prexúmer dp:pre
-prïar/t0l070n0t1P0PlP7Q0QlQ7+0	po:verb ds:infinitive+simple
+prïar/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 prio/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:prïar
-inprío/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:inprïar dp:in
 príomi/t8n8tAlA7AI1+0	po:verb ds:indicative+present is:first+singular ds:interrogative st:prïar
+inprïar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
+inprío/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:inprïar dp:in
 konprikar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:kon
 kónpriko/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:konprikar dp:kon
 inprikar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
@@ -17577,7 +17593,7 @@ raxónomi/t8n8tAlA7AI1*0	po:verb ds:indicative+present is:first+singular ds:inte
 rexonar/t0l070n0t1P0PlP7Q0QlQ7*0	po:verb ds:infinitive+simple
 rexono/t8n8tAlA7AJ1FS*0	po:verb ds:indicative+present is:first+singular st:rexonar
 rexónomi/t8n8tAlA7AI1*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:rexonar
-rïar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+rïar/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 rio/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:rïar
 ríomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:rïar
 ribelar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
@@ -17934,7 +17950,7 @@ roxolar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
 ròxolo/T8N8tBlBJ1I1FS	po:verb ds:indicative+present is:first+singular st:roxolar
 roxoƚar/t070t1P0P7Q0Q7	po:verb ds:infinitive+simple
 ròxoƚo/T8tB7BJ1I1	po:verb ds:indicative+present is:first+singular st:roxoƚar
-rüar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+rüar/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 ruo/u8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:rüar
 rúomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:rüar
 rubrikar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
@@ -18822,7 +18838,7 @@ sfràxeno/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:sf
 sfrisar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 sfriso/n0t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:sfrisar
 sfrísomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:sfrisar
-sïar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+sïar/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 sio/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:sïar
 síomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:sïar
 siakuar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
@@ -19982,7 +19998,7 @@ inspeŧiónomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:int
 inspesionar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
 inspesiono/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:inspesionar dp:in
 inspesiónomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:inspesionar dp:in
-spïar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+spïar/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 spio/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:spïar
 spíomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:spïar
 spianŧar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
@@ -20149,7 +20165,7 @@ sprúŧomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interro
 sprusar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 spruso/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:sprusar
 sprúsomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:sprusar
-spüar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+spüar/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 spuo/u8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:spüar
 spúomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:spüar
 spüacar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
@@ -20586,7 +20602,7 @@ strentoro/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:stre
 strentóromi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:strentorar
 strepitar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 strèpito/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:strepitar
-strïar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+strïar/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 strio/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:strïar
 stríomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:strïar
 instrïar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
@@ -20729,12 +20745,15 @@ strútomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interr
 struxar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 struxo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:struxar
 strúxomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:struxar
-stüar/t0l070n0t1P0PlP7Q0QlQ7-0+0	po:verb ds:infinitive+simple
+stüar/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 stuo/u8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:stüar
 stúomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:stüar
+destüar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:de
 destúo/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:stüar dp:de
+instüar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple ds:in
+istüar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple ds:in
 instúo/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:stüar dp:in
-stüir/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+stüir/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 stüiso/n0T8N8tClC7CJ1I1FS	po:verb ds:indicative+present is:first+singular st:stüir
 stubiar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 stubio/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:stubiar
@@ -20801,11 +20820,13 @@ stuxo/t8n8tElE7EJ1FS	po:verb ds:indicative+present is:first+singular st:stúxer
 stúxomi/t8n8tElE7EI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:stúxer
 stuxerò/t0n0l070p4l474J1I1	po:verb ds:indicative+future is:first+singular st:stúxer
 stuto/A1FS	po:verb ds:participle+passive+strong is:singular+masculine st:stúxer
-süar/t0l070n0t1P0PlP7Q0QlQ7^6	po:verb ds:infinitive+simple
+süar/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 suo/u8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:süar
 súomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:süar
+strasüar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:stra
 strasúo/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:süar dp:stra
-stra-súo/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:süar dp:stra
+stra-süar/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:stra
+stra-suo/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:süar dp:stra
 süàder/t1c0c1c7l171n1P0PlP7R0RlR7	po:verb ds:infinitive+simple
 süado/t8n8tElE7EJ1FS	po:verb ds:indicative+present is:first+singular st:suàder
 süàdomi/t8n8tElE7EI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:suàder
@@ -22507,11 +22528,12 @@ truŧidar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
 trúŧido/T8N8tBlBJ1I1FS	po:verb ds:indicative+present is:first+singular st:truŧidar
 trusidar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 trúsido/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:trusidar
-tüar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+tüar/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 tuo/u8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:tüar
 túomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:tüar
-tüir/t0l070n0t1P0PlP7Q0QlQ7+0	po:verb ds:infinitive+simple
+tüir/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 tüiso/n0T8N8tClC7CJ1I1FS+0	po:verb ds:indicative+present is:first+singular st:tüir
+intüir/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
 tubar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 tubo/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:tubar
 túbomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:tubar
@@ -23598,7 +23620,7 @@ sótego/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:sote
 sotiñar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 sotiño/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:sotiñar
 sotíñomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:sotiñar
-ŧüar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
+ŧüar/t0l0n0t2P0PlQ0Ql	po:verb ds:infinitive+simple
 ŧuo/u8n8tAlAJ1	po:verb ds:indicative+present is:first+singular st:ŧüar
 ŧúomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:ŧüar
 ŧúomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:ŧüar
@@ -24680,10 +24702,11 @@ dexvïar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:des
 dexvío/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:dexvïar dp:des
 invïar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 invío/T8N8tBlB7BJ1I1	po:verb ds:indicative+present is:first+singular st:invïar
-xvïar/t0l070n0t1P0PlP7Q0QlQ7-0	po:verb ds:infinitive+simple dp:s
+xvïar/t0l070n0t2P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:s
 xvio/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:xvïar dp:s
-dexvío/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:dexvïar dp:des
 xvíomi/t8n8tAlA7AI1-0	po:verb ds:indicative+present is:first+singular ds:interrogative st:xvïar dp:s
+dexvïar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:des
+dexvío/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:dexvïar dp:des
 viađar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
 viađo/t8n8tAlAJ1FS	po:verb ds:indicative+present is:first+singular st:viađar
 viàđomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:viađar
