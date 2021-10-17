@@ -2512,7 +2512,7 @@ SFX xD èñer iènlo/I5 [^c]èñer	ds:indicative+present is:third ds:interrogati
 SFX xD ñer nlo/I5 èñer	ds:indicative+present is:third ds:interrogative	# T10
 
 # vèrbi -ér inregolari: (des|re)(c|ti?)oler, (ben|mal|re)(vu?|ʼ)oler
-SFX xE Y 130
+SFX xE Y 122
 SFX xE ler r/P0PlP7Bu oler	ds:infinitive+simple	# T1
 SFX xE ler re [ct]oler	ds:infinitive+simple	# T1 + r(e)
 SFX xE ler re tioler	ds:infinitive+simple	# T1 + r(e)
@@ -2616,14 +2616,6 @@ SFX xE er to/A1 oler	ds:participle+passive+strong is:singular+masculine
 SFX xE oler òlto/A1FS oler	ds:participle+passive+strong is:singular+masculine
 SFX xE ler i voler	ds:indicative+present is:first+singular	# T8 + o
 SFX xE oler òi voler	ds:indicative+present is:first+singular	# T8 + o
-SFX xE ler jo/J1 voler	ds:indicative+present is:first+singular	# T8 + o
-SFX xE ler jomi/I1 voler	ds:indicative+present is:first+singular ds:interrogative	# T8 + o
-SFX xE ler ɉo/J1 voler	ds:indicative+present is:first+singular	# T8 + o
-SFX xE ler ɉomi/I1 voler	ds:indicative+present is:first+singular ds:interrogative	# T8 + o
-SFX xE oler òjo/J1 voler	ds:indicative+present is:first+singular	# T8 + o
-SFX xE oler òjomi/I1 voler	ds:indicative+present is:first+singular ds:interrogative	# T8 + o
-SFX xE oler òɉo/J1 voler	ds:indicative+present is:first+singular	# T8 + o
-SFX xE oler òɉomi/I1 voler	ds:indicative+present is:first+singular ds:interrogative	# T8 + o
 SFX xE voler upiemo voler	ds:subjunctive+present is:first+plural	# T5 + mo
 SFX xE voler upimo voler	ds:subjunctive+present is:first+plural	# T5 + mo
 SFX xE voler upié voler	ds:subjunctive+present is:second+plural	# T5
@@ -6561,7 +6553,7 @@ SFX w0 ente ènte ente
 
 
 # sostantivi koletivi, ...
-SFX y0 Y 38
+SFX y0 Y 37
 SFX y0 da a [aeo]da	is:singular+femenine
 SFX y0 da e [aeo]da	is:plural+femenine
 SFX y0 da a [aeiouàèéíòóúïü]ida	is:singular+femenine
@@ -6577,6 +6569,7 @@ SFX y0 de e ade	is:femenine+non_enumerable
 SFX y0 ade è ade	is:femenine+non_enumerable	# pavan
 SFX y0 ede é ede	is:femenine+non_enumerable
 SFX y0 ude ú ude	is:femenine+non_enumerable
+SFX y0 ude úe ude	is:femenine+non_enumerable
 SFX y0 ado ò ado	is:masculine+non_enumerable	# pavan
 SFX y0 ado à ado	is:masculine+non_enumerable
 SFX y0 do o ado	is:singular+masculine
@@ -6598,8 +6591,6 @@ SFX y0 do i òdo	is:plural+masculine
 SFX y0 udo ú udo	is:masculine+non_enumerable
 SFX y0 do o [aeiouàèéíòóúïü]udo	is:singular+masculine
 SFX y0 do i [aeiouàèéíòóúïü]udo	is:singular+masculine
-SFX y0 udo úo [^aeiouàèéíòóúïü]udo	is:singular+masculine
-SFX y0 udo úi [^aeiouàèéíòóúïü]udo	is:singular+masculine
 
 # sostantivi koletivi, ... (-ada > -à)
 SFX y1 Y 1
