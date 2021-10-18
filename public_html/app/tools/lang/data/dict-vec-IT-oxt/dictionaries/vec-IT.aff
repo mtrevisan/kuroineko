@@ -95,7 +95,7 @@ ICONV û ur
 ICONV Û UR
 
 # frequently switched character groups
-REP 178
+REP 180
 REP a à
 REP e è
 REP e é
@@ -274,6 +274,8 @@ REP ^dañora$ dʼ_añora
 REP ^doparo$ dòparo
 REP ^debòto$ de_bòto
 REP ^deboto$ de_boto
+REP ^inonde$ in_onde
+REP ^ʼnonde$ ʼn_onde
 
 
 FLAG long
@@ -2016,7 +2018,7 @@ SFX xA andar vede andar	ds:subjunctive+present is:second+plural	# T12 + é([dg]e
 SFX xA andar vege andar	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
 
 # vèrbi -ér inregolari: (re)av?er, (re)g(av)er, ʼ(v)er
-SFX xB Y 456
+SFX xB Y 457
 SFX xB r va/J1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xB er éa/J1I1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xB ver éa/J1I1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
@@ -2366,6 +2368,7 @@ SFX xB aver èpie aver	ds:subjunctive+present is:second+singular	# T8 + e, 2s=3
 SFX xB aver èpe aver	ds:subjunctive+present is:second+singular	# T8 + e, 2s=3
 SFX xB aver ébe aver	ds:subjunctive+present is:second+singular	# T8 + e, 2s=3
 SFX xB aver àbi aver	ds:subjunctive+present is:second+singular	# T8 + i, 2s=3
+SFX xB aver èbi aver	ds:subjunctive+present is:second+singular	# T8 + i, 2s=3, coxòto
 SFX xB aver àbia aver	ds:subjunctive+present is:second+singular	# T8 + a, 2s=3
 SFX xB aver àpia aver	ds:subjunctive+present is:third	# T8 + a
 SFX xB aver àbia aver	ds:subjunctive+present is:third	# T8 + a
@@ -2515,7 +2518,7 @@ SFX xD èñer iènlo/I5 [^c]èñer	ds:indicative+present is:third ds:interrogati
 SFX xD ñer nlo/I5 èñer	ds:indicative+present is:third ds:interrogative	# T10
 
 # vèrbi -ér inregolari: (des|re)(c|ti?)oler, (ben|mal|re)(vu?|ʼ)oler
-SFX xE Y 113
+SFX xE Y 116
 SFX xE ler r/P0PlP7Bu oler	ds:infinitive+simple	# T1
 SFX xE ler re [cti]oler	ds:infinitive+simple	# T1 + r(e)
 SFX xE oler òr/P0PlP7R0RlR7 [cti]oler	ds:infinitive+simple	# T1
@@ -2532,6 +2535,9 @@ SFX xE ler ge [cti]oler	ds:indicative+present is:third	# T8 + e
 SFX xE ler ge oler	ds:subjunctive+present is:first+singular	# T8 + e
 SFX xE ler ge oler	ds:subjunctive+present is:second+singular	# T8 + e, 2s=3
 SFX xE ler ga oler	ds:subjunctive+present is:third	# T8 + a
+SFX xE ler ge oler	ds:subjunctive+present is:third	# T8 + e
+SFX xE oler òga oler	ds:subjunctive+present is:third	# T8 + a
+SFX xE oler òge oler	ds:subjunctive+present is:third	# T8 + e
 SFX xE ler rò/J1I1 oler	ds:indicative+future is:first+singular	# T4 + rò
 SFX xE ler rà/J1I1 oler	ds:indicative+future is:first+singular	# T4 + rà
 SFX xE ler remo/J2 oler	ds:indicative+future is:first+plural	# T4 + r[éí]mo
