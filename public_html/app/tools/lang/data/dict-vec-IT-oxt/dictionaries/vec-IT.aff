@@ -1591,8 +1591,8 @@ SFX t1 úxer ure dúxer	ds:infinitive+simple	# T1 + r(e)
 # tèma 1
 # -àr, -ér, '-er, -ír, -ír/is: skomenŧiando da 'l infenío
 SFX t2 Y 6
-SFX t2 0 e r	ds:infinitive+simple	# T1 + r(e), padoan/coxòto
 SFX t2 ar àʼ [ïü]ar	ds:infinitive+simple	# T1, buranèl
+SFX t2 er éʼ er	ds:infinitive+simple	# T1, buranèl
 SFX t2 ir íʼ ir	ds:infinitive+simple	# T1, buranèl
 SFX t2 ïar ii ïar	ds:infinitive+simple	# T1, coxòto
 SFX t2 üar ui üar	ds:infinitive+simple	# T1, coxòto
@@ -6562,7 +6562,7 @@ SFX w0 ente ènte ente
 
 
 # sostantivi koletivi, ...
-SFX y0 Y 37
+SFX y0 Y 39
 SFX y0 da a [aeo]da	is:singular+femenine
 SFX y0 da e [aeo]da	is:plural+femenine
 SFX y0 da a [aeiouàèéíòóúïü]ida	is:singular+femenine
@@ -6600,6 +6600,8 @@ SFX y0 do i òdo	is:plural+masculine
 SFX y0 udo ú udo	is:masculine+non_enumerable
 SFX y0 do o [aeiouàèéíòóúïü]udo	is:singular+masculine
 SFX y0 do i [aeiouàèéíòóúïü]udo	is:singular+masculine
+SFX y0 udo úo [^aeiouàèéíòóúïü]udo	is:singular+masculine
+SFX y0 udo úi [^aeiouàèéíòóúïü]udo	is:singular+masculine
 
 # sostantivi koletivi, ... (-ada > -à)
 SFX y1 Y 1
