@@ -10537,6 +10537,10 @@ kúniomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interro
 kuninar/t0l070n0t1P0PlP7Q0QlQ7*0	po:verb ds:infinitive+simple
 kunino/t8n8tAlA7AJ1FS*0	po:verb ds:indicative+present is:first+singular st:kuninar
 kunínomi/t8n8tAlA7AI1*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:kuninar
+kuntentar/t0l070n0t1P0PlP7Q0QlQ7-1+0^7*0	po:verb ds:infinitive+simple
+kuntènto/T8N8tBlB7BJ1I1FS-1+0^7*0	po:verb ds:indicative+present is:first+singular st:kuntentar
+kuntento/t8n8tAlA7AJ1FS-1+0^7*0	po:verb ds:indicative+present is:first+singular st:kuntentar
+kunténtomi/t8n8tAlA7AI1-1+0^7*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:kuntentar
 kuñar/t0l070n0t1P0PlP7Q0QlQ7+0.0*0	po:verb ds:infinitive+simple
 kuño/t8n8tAlA7AJ1FS+0.0*0	po:verb ds:indicative+present is:first+singular st:kuñar
 kúñomi/t8n8tAlA7AI1+0.0*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:kuñar
@@ -17186,6 +17190,8 @@ spuñato/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:spuñ
 spuñàtomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:spuñatar
 puoder/t0l070n0t1p4l474P0PlP7Q0QlQ7xO	po:verb ds:infinitive+simple
 puòdo/T8N8tClC7CJ1I1FS	po:verb ds:indicative+present is:first+singular st:puoder
+puoser/t0l070n0t1p4l474P0PlP7Q0QlQ7-1	po:verb ds:infinitive+simple
+puòso/T8N8tClC7CJ1I1FS-1	po:verb ds:indicative+present is:first+singular st:puoser
 inpupar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
 inpupo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:inpupar dp:in
 inpúpomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:inpupar dp:in
@@ -27035,12 +27041,14 @@ medèximo/A1FS	po:pronoun_identificative is:singular+masculine
 medèxmo/A1	po:pronoun_identificative is:singular+masculine
 tal/X0Vx	po:pronoun_identificative is:singular
 / pronòme interogativo e esklamativo
+2indonde	po:pronoun_interrogative_exclamatory dp:in
 adove/'9	po:pronoun_interrogative_exclamatory
 andove/'9'0	po:pronoun_interrogative_exclamatory
 ci	po:pronoun_interrogative_exclamatory
 dondeké	po:pronoun_interrogative_exclamatory
 dove/'9	po:pronoun_interrogative_exclamatory
 indove/'9	po:pronoun_interrogative_exclamatory pa:in pa:dove al:ʼndoʼ
+inonde/'0	po:pronoun_interrogative_exclamatory dp:in
 koando/FS	po:pronoun_interrogative_exclamatory
 kome/'9	po:pronoun_interrogative_exclamatory
 komo/FS	po:pronoun_interrogative_exclamatory
@@ -27055,8 +27063,6 @@ kuando/FS'9	po:pronoun_interrogative_exclamatory
 kuanto/A1FS	po:pronoun_interrogative_exclamatory is:singular+masculine al:kuanʼ
 ʼndoʼ	po:pronoun_interrogative_exclamatory st:indove
 onde	po:pronoun_interrogative_exclamatory
-inonde/'0	po:pronoun_interrogative_exclamatory dp:in
-2indonde	po:pronoun_interrogative_exclamatory dp:in
 onve	po:pronoun_interrogative_exclamatory
 parkòsa	po:pronoun_interrogative_exclamatory
 perké/Vs	po:pronoun_interrogative_exclamatory
@@ -35503,7 +35509,7 @@ artifiŧioxo/A1FSPd	po:adjective_qualificative is:singular+masculine
 arŧiduka/M0	po:noun is:singular+masculine
 arŧïanimal/MFB1	po:noun is:singular+masculine
 arxento/M0FSVrr0	po:noun is:singular+masculine
-asae	po:adverb
+asae/'0	po:adverb
 asal/M0B1BuV3	po:noun is:singular+masculine
 asal/MFB1Vm	po:noun is:singular+masculine
 asalin/M0BuV3	po:noun is:singular+masculine
@@ -65652,7 +65658,6 @@ bosoƚèra/F0v7	po:noun is:singular+femenine
 bosonèl/M0B1V3	po:noun is:singular+masculine
 boŧonèl/M0B1	po:noun is:singular+masculine
 bragaña/F0	po:noun is:singular+femenine
-bragòŧo/M0FSV3	po:noun is:singular+masculine
 burco/M0eLe7eTo0o2o4	po:noun is:singular+masculine
 depentor/A2Pd	po:noun is:singular+masculine
 galantariòto/A1FS	po:noun is:singular+masculine st:galantaría ds:òto
@@ -65752,6 +65757,8 @@ aƚiegron/A2BuPd	po:adjective_qualificative is:singular+masculine st:aƚiègro d
 aƚiegròto/A1	po:adjective_qualificative is:singular+masculine st:aƚiègro ds:òto
 aƚiegruso/A1	po:adjective_qualificative is:singular+masculine st:aƚiègro ds:uŧo
 aƚiègro/A1	po:adjective_qualificative is:singular+masculine dp:a
+andrento/FS+0	po:adverb st:drento
+andrento/FS+0	po:preposition st:drento
 antimama/F0	po:noun is:singular+femenine
 argumentador/M0Pdv0	po:noun is:singular+masculine
 argumentadora/F0v0	po:noun is:singular+femenine
@@ -65761,6 +65768,7 @@ asinao	po:adverb
 asinà	po:adverb
 asinò	po:adverb
 biòto/A1FS	po:adjective_qualificative is:singular+masculine
+bragòŧo/M0FSV3	po:noun is:singular+masculine
 buò	po:noun is:masculine st:bò
 burxor/MFBuPdeT*0	po:noun is:singular+masculine
 defati	po:conjunction
@@ -65816,6 +65824,10 @@ krïatura/F0	po:noun is:singular+femenine
 kunsiensia/F0Vr	po:noun is:singular+femenine
 kunsolaŧion/F0B1BuPdV3-1*0	po:noun is:singular+femenine
 kunsoƚasion/F0BuPd-1*0	po:noun is:singular+femenine
+kuntenta/F0Vr-1^5	po:adjective_qualificative is:singular+femenine
+kuntenteŧa/F0V3	po:noun is:singular+femenine
+kuntentin/M0Bu	po:noun is:singular+masculine
+kuntento/M0FSPdo0o1o2o3o4Vr-1^5^7	po:adjective_qualificative is:singular+masculine
 kunŧienŧia/F0Vr	po:noun is:singular+femenine
 liegresa/F0Vp	po:noun is:singular+femenine
 liegreŧa/F0	po:noun is:singular+femenine
@@ -65890,6 +65902,6 @@ xiƚuxía/F0	po:noun is:singular+femenine
 xiƚuxo/A1Pd	po:adjective_qualificative is:singular+masculine
 
 
-/ 223/482
+/ 235/482
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ–ʼ
