@@ -4403,6 +4403,8 @@ adenpiso/n0T8N8tClC7CJ1I1FS	po:verb ds:indicative+present is:first+singular st:a
 exenpiar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 exenpio/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:exenpiar
 exénpiomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:exenpiar
+enpenir/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
+enpeniso/n0T8N8tClC7CJ1I1FS	po:verb ds:indicative+present is:first+singular st:enpenir dp:in
 ensir/t0l070n0t1P0PlP7Q0QlQ7.0	po:verb ds:infinitive+simple
 enso/t8n8tElE7EJ1FS.0	po:verb ds:indicative+present is:first+singular st:ensir
 énsomi/t8n8tElE7EI1.0	po:verb ds:indicative+present is:first+singular ds:interrogative st:ensir
@@ -27055,19 +27057,19 @@ vòstro/A1'0	po:pronoun_possessive is:singular+masculine al:vòʼ
 vòʼ	po:pronoun_possessive is:singular st:vòstro
 soo/A1	po:pronoun_possessive is:singular+masculine
 / pronòme demostrativo
-altro/A1	po:pronoun_demonstrative_before_noun is:singular+masculine
 kuel	po:pronoun_demonstrative_far_weak is:singular+masculine
-kuel/M0	po:pronoun_demonstrative_far_strong is:singular+masculine
-kuela/F0V3	po:pronoun_demonstrative_far_strong is:singular+femenine
-kuelo	po:pronoun_demonstrative_neutral is:singular+masculine
 kueƚo	po:pronoun_demonstrative_far_weak is:singular+masculine
-kueƚo	po:pronoun_demonstrative_neutral is:singular+masculine
+kuel/M0	po:pronoun_demonstrative_far_strong is:singular+masculine
 kueƚo/M0	po:pronoun_demonstrative_far_strong is:singular+masculine
-sèrto/A1FS	po:pronoun_demonstrative_before_noun is:singular+masculine
-sta/F0'9	po:pronoun_demonstrative_near is:singular+femenine
-steso/A1FSPd	po:pronoun_demonstrative_before_noun is:singular+masculine
+kuela/F0V3	po:pronoun_demonstrative_far_strong is:singular+femenine
+kuel	po:pronoun_demonstrative_neutral is:singular+masculine
+kueƚo	po:pronoun_demonstrative_neutral is:singular+masculine
 sto/M0'9	po:pronoun_demonstrative_near is:singular+masculine
+sta/F0'9	po:pronoun_demonstrative_near is:singular+femenine
+altro/A1	po:pronoun_demonstrative_before_noun is:singular+masculine
 ŧèrto/A1FS	po:pronoun_demonstrative_before_noun is:singular+masculine
+sèrto/A1FS	po:pronoun_demonstrative_before_noun is:singular+masculine
+steso/A1FSPd	po:pronoun_demonstrative_before_noun is:singular+masculine
 / pronòme identifegativo
 instesi	po:pronoun_identificative is:plural
 insteso/FS	po:pronoun_identificative is:singular
@@ -27294,8 +27296,6 @@ intú	po:preposition
 inver	po:preposition pa:in pa:ver
 invero	po:preposition pa:in pa:ver
 ko	po:preposition
-pai	po:preposition
-pal	po:preposition
 posta/F0Vr:0	po:noun is:singular+femenine
 posto/M0FSVr:0	po:noun is:singular+masculine
 rente/FS@0	po:preposition
@@ -65948,13 +65948,12 @@ miedexina/F0	po:noun is:singular+femenine
 terièr/A1	po:noun is:singular+masculine
 súbeto/FS	po:adverb al:súito
 kadena/F0eLe7eTiNo0o2o4	po:noun is:singular+femenine
+fromento/M0FSPdVr	po:noun is:singular+masculine ds:mento
+kuntadin/M0BuaTaZaSeLe7eToT	po:adjective_qualificative is:singular+masculine
+kuntadina/F0aTaZaSeLe7eToT	po:adjective_qualificative is:singular+femenine
+kuntadinanŧa/F0V3	po:noun is:singular+femenine
 
 
-/ 306/482
+/ 308/482
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ–ʼ
-sost.:onbría,lonbría,ƚonbría,
-sost.:medexina,miedexina
-av.:súbito,súito,súbeto
-v.:portar,puortar
-v.:depénđer,depénxer,depentar
