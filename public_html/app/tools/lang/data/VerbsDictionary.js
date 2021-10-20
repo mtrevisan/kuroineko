@@ -8448,6 +8448,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vegr",			"x",			1,	1,	"a",	"1775",			"Bonifegar, desodar, dexboskar.",
 "vej",			"",			1,	1,	"a",	"1810",			"",
 "veɉ",			"",			1,	1,	"a",	"1775",			"",
+"vej",			"dex",		1,	1,	"a",	"1883",			"(veneŧian)",
 "vej",			"sor",		1,	1,	"a",	"1854",			"",
 "vej",			"x",			1,	1,	"a",	"1509",			"",
 "veɉ",			"x",			1,	1,	"a",	"1775",			"",
