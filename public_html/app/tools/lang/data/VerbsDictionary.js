@@ -7430,6 +7430,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "suni",			"in",			1,	1,	"a",	"",				"Soñar.",
 "sunt",			"",			1,	1,	"a",	"",				"Far el sunto.",
 "sunt",			"tra",		1,	1,	"a",	"1829",			"Suntar.",
+"suñ",			"",			1,	1,	"g",	"1883",			"(coxòto)) Soñar.",
+"suñ",			"in",			1,	1,	"g",	"",				"Insoñar.",
 "sup",			"",			1,	1,	"a",	"",				"Sugar, asòrber.",
 "supar",			"",			1,	1,	"a",	"",				"",
 "super",			"",			1,	1,	"a",	"",				"",
