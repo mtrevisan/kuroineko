@@ -24,7 +24,7 @@
 SET UTF-8
 
 NAME Diŧionario de lengua vèneta
-VERSION 3.4.0 (2021/10/06)
+VERSION 4.0.0 (2021/10/06)
 HOME http://parnodexmentegar.orgfree.com/
 LANG vec-IT
 
@@ -1939,7 +1939,7 @@ SFX lB o elo/I5 o	ds:indicative+present is:third ds:interrogative	# T10
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
 # -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
-SFX lC Y 14
+SFX lC Y 13
 SFX lC o i/SlN0 [^s]o	ds:imperative+present is:second+singular	# T9
 SFX lC o igelo/Dl [^s]o	ds:imperative+present is:second+singular ds:pronomenal+locative	# T9
 SFX lC o i/SlN0 [^i]so	ds:imperative+present is:second+singular	# T9
@@ -1953,7 +1953,6 @@ SFX lC o elo/I5 [^i]so	ds:indicative+present is:third ds:interrogative	# T10
 SFX lC o e/J5 iso	ds:indicative+present is:third	# T10
 SFX lC o 0 iso	ds:indicative+present is:third	# T10
 SFX lC iso íselo/I5 iso	ds:indicative+present is:third ds:interrogative	# T10
-SFX lC o 0 iso	ds:indicative+present is:third	# T10
 
 # ko èle vanesente, ko asento:
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
@@ -2036,7 +2035,7 @@ SFX xA andar vede andar	ds:subjunctive+present is:second+plural	# T12 + é([dg]e
 SFX xA andar vege andar	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
 
 # vèrbi -ér inregolari: (re)av?er, (re)g(av)er, ʼ(v)er
-SFX xB Y 459
+SFX xB Y 457
 SFX xB r va/J1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xB er éa/J1I1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xB ver éa/J1I1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
@@ -2117,7 +2116,7 @@ SFX xB 0 esi/J3 [aʼ]ver	ds:conditional+present is:second+singular	# T4 + rési
 SFX xB 0 ésitu/I3 [aʼ]ver	ds:conditional+present is:second+singular ds:interrogative	# T4 + rési
 SFX xB 0 ía [aʼ]ver	ds:conditional+present is:third	# T4 + ría
 SFX xB 0 ave/J1J6 [aʼ]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
-SFX xB 0 aràvemi/I6 [aʼ]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
+SFX xB er aràvemi/I6 [aʼ]ver	ds:conditional+present is:first+singular ds:interrogative	# T4 + rà(v)e
 SFX xB 0 ave/J2 [aʼ]ver	ds:conditional+present is:first+plural	# T4 + rà(v)e
 SFX xB 0 ave/J3 [aʼ]ver	ds:conditional+present is:second+singular	# T4 + rà(v)e
 SFX xB 0 ave/J4 [aʼ]ver	ds:conditional+present is:second+plural	# T4 + rà(v)e
@@ -2137,7 +2136,6 @@ SFX xB ver resi/J3 [aʼ]ver	ds:conditional+present is:second+singular	# T4 + ré
 SFX xB ver résitu/I3 [aʼ]ver	ds:conditional+present is:second+singular ds:interrogative	# T4 + rési
 SFX xB ver ría [aʼ]ver	ds:conditional+present is:third	# T4 + ría
 SFX xB ver rave/J1J6 [aʼ]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
-SFX xB ver raràvemi/I6 [aʼ]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
 SFX xB ver rave/J2 [aʼ]ver	ds:conditional+present is:first+plural	# T4 + rà(v)e
 SFX xB ver rave/J3 [aʼ]ver	ds:conditional+present is:second+singular	# T4 + rà(v)e
 SFX xB ver rave/J4 [aʼ]ver	ds:conditional+present is:second+plural	# T4 + rà(v)e
@@ -2357,7 +2355,6 @@ SFX xB er arésitu/I3 [aʼ]ver	ds:conditional+present is:second+singular ds:inte
 SFX xB er aría [aʼ]ver	ds:conditional+present is:third	# T4 + ría
 SFX xB er aréa [aʼ]ver	ds:conditional+present is:third	# T4 + réa
 SFX xB er arave/J1J6 [aʼ]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
-SFX xB er aràvemi/I6 [aʼ]ver	ds:conditional+present is:first+singular	# T4 + rà(v)e
 SFX xB er arave/J2 [aʼ]ver	ds:conditional+present is:first+plural	# T4 + rà(v)e
 SFX xB er arave/J3 [aʼ]ver	ds:conditional+present is:second+singular	# T4 + rà(v)e
 SFX xB er arave/J4 [aʼ]ver	ds:conditional+present is:second+plural	# T4 + rà(v)e
@@ -3585,7 +3582,7 @@ SFX xN ïèser isí/J3I3S7 ïèser	ds:indicative+present is:second+singular	# T8
 SFX xN ïèser isipia ïèser	ds:subjunctive+present is:first+singular	# T8 + a
 SFX xN ïèser isipi ïèser	ds:subjunctive+present is:second+singular	# T8 + i
 SFX xN ïèser ison/J1 ïèser	ds:indicative+present is:first+singular	# T8 + e
-SFX xN ïèser isúʼ ïèser	ds:indicative+present is:first+singular	# T8 + e, coxòto	FIXME interogativa?
+SFX xN ïèser isúʼ ïèser	ds:indicative+present is:first+singular	# T8 + e, coxòto
 SFX xN ïèser ision/J1 ïèser	ds:indicative+present is:first+singular	# T8 + e
 SFX xN ïèser isonmi/I1 ïèser	ds:indicative+present is:first+singular ds:interrogative	# T8 + e
 SFX xN ïèser isójo ïèser	ds:indicative+present is:first+singular ds:interrogative	# T8 + e
@@ -5586,7 +5583,7 @@ SFX I1 iso ísoe iso	ds:interrogative
 
 
 # interogativi prima parsona plural (destakai)
-SFX J2 Y 9
+SFX J2 Y 10
 SFX J2 0 -i [aeo]	ds:interrogative	# trevixan, venethian, padoan, vithentin, polexan, veronexe
 SFX J2 0 -nte [^n]	ds:interrogative
 SFX J2 0 -nti [^n]	ds:interrogative	# veronexe
@@ -5596,6 +5593,7 @@ SFX J2 0 -te n	ds:interrogative
 SFX J2 0 -ti n	ds:interrogative	# veronexe
 SFX J2 0 -e .	ds:interrogative
 SFX J2 0 -i n	ds:interrogative
+SFX J2 o i-o [ei]mo	ds:interrogative	# venethian
 
 # interogativi prima parsona plural (takai)
 SFX I2 Y 14
@@ -7440,10 +7438,12 @@ PFX -1 0 dex [^cfkptx]	dp:des
 
 # sostantivi/vèrbi deajetivali (i(n)-)
 # NÒTA: `insidiar` must be added because `*isidiar` does not exists
-PFX +0 Y 3
+PFX +0 Y 5
 PFX +0 0 in- n	dp:in
 PFX +0 0 in [^ƚ]	dp:in
 PFX +0 0 i [ƚmnñrs]	dp:in
+PFX +0 0 en- n	dp:in
+PFX +0 0 en [^ƚ]	dp:in
 
 # prefiso par aŧion kontraria o privativa–peđorativa, xlontanamento, esía, separaŧion (s/x-)
 PFX *0 Y 2
@@ -7451,7 +7451,8 @@ PFX *0 0 s [cfkpt]	dp:s
 PFX *0 0 x [^cfkpt]	dp:s
 
 # prefiso par aŧion repetúa (r[ea]-/ar-)
-PFX .0 Y 2
+PFX .0 Y 3
+PFX .0 0 r e	dp:re
 PFX .0 0 re .	dp:re
 PFX .0 0 re- .	dp:re
 #PFX .0 0 ra [^a]	dp:re
