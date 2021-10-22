@@ -9573,6 +9573,10 @@ konpòndo/T8N8tClC7CJ1I1	po:verb ds:indicative+present is:first+singular st:konp
 konprar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 konpro/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:konprar
 kónpromi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:konprar
+konprimentar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+konprimènto/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:konprimentar
+konprimento/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:konprimentar
+konpriméntomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:konprimentar
 konputar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 kònputo/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:konputar
 konputo/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:konputar
@@ -15129,6 +15133,8 @@ pato/t8n8tAlA7AJ1FS-1+0	po:verb ds:indicative+present is:first+singular st:patar
 pàtomi/t8n8tAlA7AI1-1+0	po:verb ds:indicative+present is:first+singular ds:interrogative st:patar
 patir/t0l070n0t1P0PlP7Q0QlQ7:0	po:verb ds:infinitive+simple
 patiso/n0T8N8tClC7CJ1I1FS:0	po:verb ds:indicative+present is:first+singular st:patir
+kunpatir/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:kon
+kunpatiso/n0T8N8tClC7CJ1I1FS	po:verb ds:indicative+present is:first+singular st:kunpatir dp:kon
 inpatakar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
 inpatako/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:inpatakar dp:in
 inpatàkomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:inpatakar dp:in
@@ -17080,6 +17086,11 @@ reprimo/t8n8tElE7EJ1FS	po:verb ds:indicative+present is:first+singular st:reprí
 reprímomi/t8n8tElE7EI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:reprímer dp:re
 reprimerò/t0n0l070p4l474J1I1	po:verb ds:indicative+future is:first+singular st:reprímer dp:re
 reprèso/A1FS	po:verb ds:participle+passive+strong is:singular+masculine st:reprímer dp:re
+sprímer/t1c0c1c7l171P0PlP7R0RlR7	po:verb ds:infinitive+simple dp:ex
+sprimo/t8n8tElE7EJ1FS	po:verb ds:indicative+present is:first+singular st:sprímer dp:ex
+sprímomi/t8n8tElE7EI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:sprímer dp:ex
+sprimerò/t0n0l070p4l474J1I1	po:verb ds:indicative+future is:first+singular st:sprímer dp:ex
+sprèso/A1FS	po:verb ds:participle+passive+strong is:singular+masculine st:sprímer dp:ex
 prinŧipiar/t0l0n0t1P0PlQ0Ql+0	po:verb ds:infinitive+simple
 prinŧipio/t8n8tAlAJ1+0	po:verb ds:indicative+present is:first+singular st:prinŧipiar
 prinŧípiomi/t8n8tAlAI1+0	po:verb ds:indicative+present is:first+singular ds:interrogative st:prinŧipiar
@@ -18800,6 +18811,10 @@ senténŧiomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:inte
 sentensiar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 sentensio/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:sentensiar
 senténsiomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:sentensiar
+senŧerar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
+senŧèro/T8N8tBlBJ1I1FS	po:verb ds:indicative+present is:first+singular st:senŧerar
+senserar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+sensèro/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:senserar
 señar/t0l070n0t1P0PlP7Q0QlQ7-0+0:0^6	po:verb ds:infinitive+simple
 seño/t8n8tAlA7AJ1FS-0+0:0^6	po:verb ds:indicative+present is:first+singular st:señar
 séñomi/t8n8tAlA7AI1-0+0:0^6	po:verb ds:indicative+present is:first+singular ds:interrogative st:señar
@@ -40001,7 +40016,7 @@ levaresa/F0Vp	po:noun is:singular+femenine
 liđiereŧa/F0	po:noun is:singular+femenine
 liđiermente/FSw0	po:adverb ds:mente
 liđièr/A2	po:adjective_qualificative is:singular+masculine
-liegramente/FSw0	po:adverb ds:mente
+liegramente/FSw0@0	po:adverb ds:mente
 lièvro/A1Vp	po:noun is:singular+masculine
 limonada/F0y0y1Vp	po:noun is:singular+femenine
 lionfante/M0Vp	po:noun is:singular+masculine
@@ -59435,7 +59450,6 @@ sekura/F0eT	po:adjective_qualificative is:singular+femenine
 sekuro/FS	po:adverb
 selensa/F0Vr	po:noun is:singular+femenine
 selenŧa/F0Vr	po:noun is:singular+femenine
-seƚente/X0PdVR	po:adjective_qualificative is:singular
 semejevolmente/FSw0	po:adverb ds:mente
 semeɉevolmente/FSw0	po:adverb ds:mente
 senestro/A1	po:adjective_qualificative is:singular+masculine
@@ -59713,7 +59727,6 @@ tuvo/M0	po:noun is:singular+masculine
 ŧàŧara/F0	po:noun is:singular+femenine
 ŧàŧera/F0	po:noun is:singular+femenine
 ŧegúa/F0Vp	po:noun is:singular+femenine
-ŧelente/X0FSPdVrVp	po:adjective_qualificative is:singular
 ŧenturèr/M0BuVpv0	po:noun is:singular+masculine
 ŧenturèra/F0Vpv0	po:noun is:singular+femenine
 ŧenŧaña/F0	po:noun is:singular+femenine
@@ -65793,7 +65806,6 @@ xguindia/F0	po:noun is:singular+femenine
 / Garlato, Agostino. Canti del popolo di Chioggia. Venezia, 1883.
 abundanŧia/F0V3	po:noun is:singular+femenine dp:a
 alafè	po:interjection
-aliegramente/FSw0	po:adverb ds:mente dp:a
 aliegreto/A1FSPd	po:adjective_qualificative is:singular+masculine st:aliègro ds:eto
 aliegron/A2B1BuPd	po:adjective_qualificative is:singular+masculine st:aliègro ds:on
 aliegròto/A1FS	po:adjective_qualificative is:singular+masculine st:aliègro ds:òto
@@ -65825,6 +65837,7 @@ bargòŧo/M0FSV3	po:noun is:singular+masculine
 bekin/A2.0	po:noun is:singular+masculine
 biòto/A1FS	po:adjective_qualificative is:singular+masculine
 bonasera/F0	po:noun is:singular+femenine
+bonaŧa/F0V3	po:noun is:singular+femenine
 bragòŧo/M0FSV3	po:noun is:singular+masculine
 buò	po:noun is:masculine st:bò
 buòvo/M0A5	po:noun is:singular+masculine
@@ -65891,10 +65904,13 @@ koladur/M0d0eT	po:noun is:singular+masculine
 kològo/M0	po:noun is:singular+masculine
 koƚadur/M0d7e1	po:noun is:singular+masculine
 koƚògo/M0	po:noun is:singular+masculine
+konprimento/M0FSPdVr	po:noun is:singular+masculine ds:mento st:konplimento
 kreensa/F0Vr	po:noun is:singular+femenine st:kredensa
 kreenŧa/F0Vr	po:noun is:singular+femenine st:kredenŧa
 krïatura/F0	po:noun is:singular+femenine
 kuʼ	po:preposition
+kumuòdo/FS'9	po:adjective_interrogative_exclamatory
+kumuòdo/FS'9	po:pronoun_interrogative_exclamatory
 kunsolaŧion/F0B1BuPdV3-1*0	po:noun is:singular+femenine
 kunsoƚasion/F0BuPd-1*0	po:noun is:singular+femenine
 kuntenta/F0Vr-1^5	po:adjective_qualificative is:singular+femenine
@@ -65966,10 +65982,13 @@ sangajardo/M0FS	po:noun is:singular+masculine
 sangaɉardo/M0FS	po:noun is:singular+masculine
 sangarin/M0Bu	po:noun is:singular+masculine
 sà	po:adverb
+seƚente/X0PdVR	po:adjective_qualificative is:singular
 señor/M0r0PdeT	po:noun is:singular+masculine
 señora/F0eT	po:noun is:singular+femenine
 sestoxo/A1FSPd	po:adjective_qualificative is:singular+masculine
 sevente/X0FSPdVr	po:adjective_qualificative is:singular
+sinsèr/A2	po:adjective_qualificative is:singular+masculine
+sinŧèr/A2	po:adjective_qualificative is:singular+masculine
 sirokal/MFB1Vm	po:adjective_qualificative is:singular+masculine
 siŧa/F0V3	po:noun is:singular+femenine
 sível/M0B1PdV3	po:noun is:singular+masculine
@@ -65981,10 +66000,14 @@ sturŧion/F0B1BuPdV3-0+0	po:noun is:singular+femenine
 súbeto/FS	po:adverb al:súito
 tabar/M0aTaZaSeLe7eTiNo0o2o4	po:noun is:singular+masculine
 tantu	po:adverb
+tardimento/M0FSPdVr	po:noun is:singular+masculine ds:mento st:tradimento
+tarditor/M0BuaZaSPd	po:noun is:singular+masculine st:traditor
+tarditora/F0aZaS	po:noun is:singular+femenine st:traditora
 ʼtà	po:noun st:potestà
 terièr/A1	po:noun is:singular+masculine
 tènar/A1	po:adjective_qualificative is:singular+masculine
 trumento/M0FSPdVr	po:adjective_qualificative is:singular+masculine st:tormento ds:mento
+ŧelente/X0FSPdVrVp	po:adjective_qualificative is:singular
 ŧevil/X0+0	po:adjective_qualificative is:singular
 ŧeviliđaŧion/F0B1BuPd	po:noun is:singular+femenine
 ŧevilixaŧion/F0B1BuPd	po:noun is:singular+femenine
@@ -65996,6 +66019,6 @@ xiƚuxía/F0	po:noun is:singular+femenine
 xiƚuxo/A1Pd	po:adjective_qualificative is:singular+masculine
 
 
-/ 430/482
+/ 432/482
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ–ʼ
