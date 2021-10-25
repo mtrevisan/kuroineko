@@ -5987,6 +5987,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "pòrđ",			"",			3,	1,	"g",	"1590",			"",
 "pòrđ",			"ins",		3,	1,	"g",	"1560",			"",
 "pòrđ",			"s",			3,	1,	"g",	"1560",			"",
+"pos",			"",			1,	1,	"g",	"XV",				"Ponsar.",
 "pos",			"ar",			1,	1,	"g",	"1560",			"(pavan) (mi arpòso.)",
 "pos",			"re",			1,	1,	"g",	"1560",			"Repoxar.",
 "pos",			"s",			1,	1,	"g",	"1829",			"",
