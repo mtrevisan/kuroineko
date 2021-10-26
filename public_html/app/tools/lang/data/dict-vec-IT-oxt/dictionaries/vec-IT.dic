@@ -13347,8 +13347,8 @@ mómoƚo/T8tB7BJ1I1	po:verb ds:indicative+present is:first+singular st:momoƚar
 monar/t0l070n0t1P0PlP7Q0QlQ7+0*0	po:verb ds:infinitive+simple
 mono/t8n8tAlA7AJ1FS+0*0	po:verb ds:indicative+present is:first+singular st:monar
 mónomi/t8n8tAlA7AI1+0*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:monar
-monir/t0l070n0t1P0PlP7Q0QlQ7^2	po:verb ds:infinitive+simple
-moniso/n0T8N8tClC7CJ1I1FS^2	po:verb ds:indicative+present is:first+singular st:monir
+monir/t0l070n0t1P0PlP7Q0QlQ7@0^2	po:verb ds:infinitive+simple
+moniso/n0T8N8tClC7CJ1I1FS@0^2	po:verb ds:indicative+present is:first+singular st:monir
 mondar/t0l070n0t1P0PlP7Q0QlQ7.0	po:verb ds:infinitive+simple
 mondo/t8n8tAlA7AJ1.0	po:verb ds:indicative+present is:first+singular st:mondar
 móndomi/t8n8tAlA7AI1.0	po:verb ds:indicative+present is:first+singular ds:interrogative st:mondar
@@ -15479,6 +15479,12 @@ spelegar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple dp:s
 spélego/T8N8tBlBJ1I1FS	po:verb ds:indicative+present is:first+singular st:spelegar dp:s
 speƚegar/t070t1P0P7Q0Q7	po:verb ds:infinitive+simple dp:s
 spéƚego/T8tB7BJ1I1	po:verb ds:indicative+present is:first+singular st:speƚegar dp:s
+pelegrinar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
+pelegrino/t8n8tAlAJ1FS	po:verb ds:indicative+present is:first+singular st:pelegrinar
+pelegrínomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:pelegrinar
+peƚegrinar/t070t1P0P7Q0Q7	po:verb ds:infinitive+simple
+peƚegrino/t8tA7AJ1	po:verb ds:indicative+present is:first+singular st:peƚegrinar
+peƚegrínomi/t8tA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:peƚegrinar
 inpeliŧar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple dp:in
 inpeliŧo/t8n8tAlAJ1FS	po:verb ds:indicative+present is:first+singular st:inpeliŧar dp:in
 inpelíŧomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:inpeliŧar dp:in
@@ -27346,8 +27352,6 @@ kuanto/A1FS	po:adjective_interrogative_exclamatory is:singular+masculine
 onve	po:adjective_interrogative_exclamatory
 parkòsa	po:adjective_interrogative_exclamatory
 perké/Vs	po:adjective_interrogative_exclamatory
-persò/Vs	po:adjective_interrogative_exclamatory
-perŧò/Vs	po:adjective_interrogative_exclamatory
 ʼsʼ	po:adjective_interrogative_exclamatory st:kòsa
 unde	po:adjective_interrogative_exclamatory
 / kuantifegador
@@ -30450,8 +30454,6 @@ goŧinamento/M0FSPdVr-1+0*0	po:noun is:singular+masculine ds:mento
 govarnador/M0Pdv0	po:noun is:singular+masculine
 govarnadora/F0v0	po:noun is:singular+femenine
 govarnadura/F0d0eT	po:noun is:singular+femenine
-governador/M0Pdv0	po:noun is:singular+masculine
-governadora/F0v0	po:noun is:singular+femenine
 governadura/F0d0eT	po:noun is:singular+femenine
 gòja/F0V3	po:noun is:singular+femenine
 gòlf	po:noun is:masculine+non_enumerable
@@ -31862,7 +31864,6 @@ međanòte/FS	po:noun is:singular+femenine al:međenòti pa:mèđa pa:nòte
 međenòti	po:noun is:plural+femenine st:međanòte pa:mèđa pa:nòte
 međería/F0r0	po:noun is:singular+femenine
 međèn/A2B1	po:adjective_qualificative is:singular+masculine
-međodí	po:noun is:masculine+non_enumerable pa:mèđo pa:dí
 međođorno/M0Pd	po:noun is:singular+masculine pa:mèđo pa:đorno
 međotèrmin/X0	po:adjective_qualificative is:singular
 meja	po:adverb
@@ -31907,7 +31908,6 @@ mexanòte/FS	po:noun is:singular+femenine al:mexenòti pa:mèxa pa:nòte
 mexenòti	po:noun is:plural+femenine st:mexanòte pa:mèxa pa:nòte
 mexería/F0r0	po:noun is:singular+femenine
 mexèn/A2B1	po:adjective_qualificative is:singular+masculine
-mexodí	po:noun is:masculine+non_enumerable pa:mèxo pa:dí
 mexotèrmin/X0	po:adjective_qualificative is:singular
 mexoxorno/M0Pd	po:noun is:singular+masculine pa:mèxo pa:xorno
 mexurador/M0Pdv0-1	po:noun is:singular+masculine
@@ -35731,7 +35731,6 @@ angonixante/X0	po:noun is:singular
 angonía/F0	po:noun is:singular+femenine
 angòsa/F0	po:noun is:singular+femenine
 anguèla/F0V3	po:noun is:singular+femenine
-angustia/F0	po:noun is:singular+femenine
 animal/MFB1Vm	po:noun is:singular+masculine
 ankúo	po:adverb
 ansi	po:adverb
@@ -37848,7 +37847,6 @@ poxitura/F0	po:noun is:singular+femenine
 pólver/F0Pd	po:noun is:singular+femenine
 pò	po:adverb
 pòpul/M0B2V3	po:noun is:singular+masculine
-pòrto/M0FSCu	po:noun is:singular+masculine
 pòsta	po:adverb
 pràtiko/A1FS^7	po:adjective_qualificative is:singular+masculine
 predominante/X0	po:noun is:singular+masculine
@@ -38592,7 +38590,6 @@ tela/F0aZaSeT	po:noun is:singular+femenine
 teƚa/F0aLe1	po:noun is:singular+femenine
 temerario/A1	po:adjective_qualificative is:singular+masculine
 temeritade/y0N0	po:noun is:singular+femenine
-tenebroxo/A1FSPd	po:adjective_qualificative is:singular+masculine
 tenereto/A1FSPd	po:adjective_qualificative is:singular+masculine st:tèner ds:eto
 tenereŧa/F0V3	po:noun is:singular+femenine
 tenperamento/M0FSPdVr-1+0*0	po:noun is:singular+masculine ds:mento
@@ -43697,7 +43694,6 @@ ridòtola/F0V3	po:noun is:singular+femenine
 rigarola/F0v0	po:noun is:singular+femenine
 rigaroƚa/F0v7	po:noun is:singular+femenine
 ringièra/F0	po:noun is:singular+femenine
-rio/M0	po:noun is:singular+masculine
 risajo/M0B1V3	po:noun is:singular+masculine
 risolèr/M0Buv0	po:noun is:singular+masculine
 risolèra/F0v0	po:noun is:singular+femenine
@@ -51986,9 +51982,7 @@ stamenal/MFB1Vm	po:noun is:singular+masculine
 staminara/F0	po:noun is:singular+femenine
 standufo/M0FS	po:noun is:singular+masculine
 stangèra/F0	po:noun is:singular+femenine
-stanka/F0eT	po:adjective_qualificative is:singular+femenine
 stankejo/M0B1V3	po:noun is:singular+masculine
-stanko/M0FSeT	po:adjective_qualificative is:singular+masculine
 stanòte/FS	po:adverb
 stanpatèl/M0B1V3	po:noun is:singular+masculine
 stanpo/M0FSiN	po:noun is:singular+masculine
@@ -66255,8 +66249,21 @@ volentade/y0N0	po:noun is:singular+femenine
 volontade/y0N0	po:noun is:singular+femenine
 voƚentade/y0N0	po:noun is:singular+femenine
 voƚontade/y0N0	po:noun is:singular+femenine
+pòrto/M0FSCu	po:noun is:singular+masculine
+angustia/F0	po:noun is:singular+femenine
+tenebroxo/A1FSPd	po:adjective_qualificative is:singular+masculine
+međodí	po:noun is:masculine+non_enumerable pa:mèđo pa:dí
+mexodí	po:noun is:masculine+non_enumerable pa:mèxo pa:dí
+stanka/F0eT	po:adjective_qualificative is:singular+femenine
+stanko/M0FSeT	po:adjective_qualificative is:singular+masculine
+governador/M0Pdv0	po:noun is:singular+masculine
+governadora/F0v0	po:noun is:singular+femenine
+persò/Vs	po:adjective_interrogative_exclamatory
+perŧò/Vs	po:adjective_interrogative_exclamatory
+vèsporo/M0FS	po:noun is:singular+masculine
 
 
-/ 10/77
+/ 11/77
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ–ʼ
+sost.:bèsporo,vèsporo
