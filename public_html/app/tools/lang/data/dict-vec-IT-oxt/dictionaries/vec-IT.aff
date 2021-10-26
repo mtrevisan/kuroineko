@@ -2528,21 +2528,33 @@ SFX xD ñer n/J5 èñer	ds:indicative+present is:third	# T10 = T8 + e
 SFX xD èñer iènlo/I5 [^c]èñer	ds:indicative+present is:third ds:interrogative	# T10
 SFX xD ñer nlo/I5 èñer	ds:indicative+present is:third ds:interrogative	# T10
 
-# vèrbi -ér inregolari: (des|re)(c|ti?)oler, (ben|mal|re)(vu?|ʼ)oler
-SFX xE Y 114
+# vèrbi -ér inregolari: (des|re)(c|t[iu]?)oler, (ben|mal|re)(vu?|ʼ)oler
+SFX xE Y 130
 SFX xE ler r/P0PlP7Bu oler	ds:infinitive+simple	# T1
-SFX xE ler re [cti]oler	ds:infinitive+simple	# T1 + r(e)
-SFX xE oler òr/P0PlP7R0RlR7 [cti]oler	ds:infinitive+simple	# T1
-SFX xE oler òre [cti]oler	ds:infinitive+simple	# T1 + r(e)
-SFX xE ler go/J1 [cti]oler	ds:indicative+present is:first+singular	# T8 + o
-SFX xE ler gomi/I1 [cti]oler	ds:indicative+present is:first+singular ds:interrogative	# T8 + o
-SFX xE oler ògo/J1 [cti]oler	ds:indicative+present is:first+singular	# T8 + o
-SFX xE oler ògomi/I1 [cti]oler	ds:indicative+present is:first+singular ds:interrogative	# T8 + o
-SFX xE ler ge/J1 [cti]oler	ds:indicative+present is:first+singular	# T8 + e
-SFX xE ler gemi/I1 [cti]oler	ds:indicative+present is:first+singular ds:interrogative	# T8 + e
-SFX xE ler ge/J3 [cti]oler	ds:indicative+present is:second+singular	# T8 + e, 2s=3
-SFX xE ler getu/I3 [cti]oler	ds:indicative+present is:second+singular ds:interrogative	# T8 + e, 2s=3
-SFX xE ler ge [cti]oler	ds:indicative+present is:third	# T8 + e
+SFX xE ler re [ct]oler	ds:infinitive+simple	# T1 + r(e)
+SFX xE ler re t[iu]oler	ds:infinitive+simple	# T1 + r(e)
+SFX xE oler òr/P0PlP7R0RlR7 [ct]oler	ds:infinitive+simple	# T1
+SFX xE oler òr/P0PlP7R0RlR7 t[iu]oler	ds:infinitive+simple	# T1
+SFX xE oler òre [ct]oler	ds:infinitive+simple	# T1 + r(e)
+SFX xE oler òre t[iu]oler	ds:infinitive+simple	# T1 + r(e)
+SFX xE ler go/J1 [ct]oler	ds:indicative+present is:first+singular	# T8 + o
+SFX xE ler go/J1 t[iu]oler	ds:indicative+present is:first+singular	# T8 + o
+SFX xE ler gomi/I1 [ct]oler	ds:indicative+present is:first+singular ds:interrogative	# T8 + o
+SFX xE ler gomi/I1 t[iu]oler	ds:indicative+present is:first+singular ds:interrogative	# T8 + o
+SFX xE oler ògo/J1 [ct]oler	ds:indicative+present is:first+singular	# T8 + o
+SFX xE oler ògo/J1 t[iu]oler	ds:indicative+present is:first+singular	# T8 + o
+SFX xE oler ògomi/I1 [ct]oler	ds:indicative+present is:first+singular ds:interrogative	# T8 + o
+SFX xE oler ògomi/I1 t[iu]oler	ds:indicative+present is:first+singular ds:interrogative	# T8 + o
+SFX xE ler ge/J1 [ct]oler	ds:indicative+present is:first+singular	# T8 + e
+SFX xE ler ge/J1 t[iu]oler	ds:indicative+present is:first+singular	# T8 + e
+SFX xE ler gemi/I1 [ct]oler	ds:indicative+present is:first+singular ds:interrogative	# T8 + e
+SFX xE ler gemi/I1 t[iu]oler	ds:indicative+present is:first+singular ds:interrogative	# T8 + e
+SFX xE ler ge/J3 [ct]oler	ds:indicative+present is:second+singular	# T8 + e, 2s=3
+SFX xE ler ge/J3 t[iu]oler	ds:indicative+present is:second+singular	# T8 + e, 2s=3
+SFX xE ler getu/I3 [ct]oler	ds:indicative+present is:second+singular ds:interrogative	# T8 + e, 2s=3
+SFX xE ler getu/I3 t[iu]oler	ds:indicative+present is:second+singular ds:interrogative	# T8 + e, 2s=3
+SFX xE ler ge [ct]oler	ds:indicative+present is:third	# T8 + e
+SFX xE ler ge t[iu]oler	ds:indicative+present is:third	# T8 + e
 SFX xE ler ge oler	ds:subjunctive+present is:first+singular	# T8 + e
 SFX xE ler ge oler	ds:subjunctive+present is:second+singular	# T8 + e, 2s=3
 SFX xE ler ga oler	ds:subjunctive+present is:third	# T8 + a
@@ -2620,10 +2632,14 @@ SFX xE ler risiè oler	ds:conditional+present is:second+singular	# T4 + r(is)iè
 SFX xE ler ríe oler	ds:conditional+present is:third	# T4 + ríe
 SFX xE er to/A1 oler	ds:participle+passive+strong is:singular+masculine
 SFX xE oler òlto/A1FS oler	ds:participle+passive+strong is:singular+masculine
-SFX xE ler i [vuʼ]oler	ds:indicative+present is:first+singular	# T8 + o
-SFX xE oler òi [vuʼ]oler	ds:indicative+present is:first+singular	# T8 + o
-SFX xE oler òʼ/J3 [vuʼ]oler	ds:indicative+present is:second+singular	# T8 + e, 2s=3, coxòto
-SFX xE oler òtu/I3 [vuʼ]oler	ds:indicative+present is:second+singular ds:interrogative	# T8 + e, 2s=3, coxòto
+SFX xE ler i [vʼ]oler	ds:indicative+present is:first+singular	# T8 + o
+SFX xE ler i vuoler	ds:indicative+present is:first+singular	# T8 + o
+SFX xE oler òi [vʼ]oler	ds:indicative+present is:first+singular	# T8 + o
+SFX xE oler òi vuoler	ds:indicative+present is:first+singular	# T8 + o
+SFX xE oler òʼ/J3 [vʼ]oler	ds:indicative+present is:second+singular	# T8 + e, 2s=3, coxòto
+SFX xE oler òʼ/J3 vuoler	ds:indicative+present is:second+singular	# T8 + e, 2s=3, coxòto
+SFX xE oler òtu/I3 [vʼ]oler	ds:indicative+present is:second+singular ds:interrogative	# T8 + e, 2s=3, coxòto
+SFX xE oler òtu/I3 vuoler	ds:indicative+present is:second+singular ds:interrogative	# T8 + e, 2s=3, coxòto
 SFX xE oler utu/I3 voler	ds:indicative+present is:second+singular ds:interrogative	# T8 + e, 2s=3
 SFX xE oler upiemo [vʼ]oler	ds:subjunctive+present is:first+plural	# T5 + mo
 SFX xE oler upimo [vʼ]oler	ds:subjunctive+present is:first+plural	# T5 + mo
