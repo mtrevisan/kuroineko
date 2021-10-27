@@ -3316,6 +3316,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "kink",			"s",			1,	2,	"a",	"1999",			"(longobardo) Evitar, skivar, spontar.",
 "kip",			"",			1,	1,	"a",	"",				"Roersar, abàter, butar par tèra.",
 "kit",			"",			1,	1,	"a",	"1829",			"Renunŧiar a ʼl servixo, otèñer el konɉèdo.",
+"klam",			"",			1,	2,	"g",	"XV",				"",
 "klam",			"es",			1,	2,	"g",	"",				"",
 "klam",			"pro",		1,	2,	"g",	"1775",			"",
 "klam",			"s",			1,	2,	"g",	"1894",			"Esklamar.",
