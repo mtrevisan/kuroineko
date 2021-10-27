@@ -1906,6 +1906,26 @@ SFX tB o a/S0 o	ds:imperative+present is:second+singular	# T9
 SFX tB o agen/D0 o	ds:imperative+present is:second+singular ds:pronomenal+genitive+locative	# T9
 SFX tB o a o	ds:indicative+present is:third	# T10
 
+# senŧa èle vanesente, ko asento:
+# tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
+# tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
+# -àr: skomenŧiando da 'l indikativo prexente de prima parsona singolar
+SFX lB Y 4
+SFX lB o a/SlN0 o	ds:imperative+present is:second+singular	# T9
+SFX lB o agelo/Dl o	ds:imperative+present is:second+singular ds:pronomenal+locative	# T9
+SFX lB o a/J5N0 o	ds:indicative+present is:third	# T10
+SFX lB o elo/I5 o	ds:indicative+present is:third ds:interrogative	# T10
+
+# ko èle vanesente, ko asento:
+# tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
+# tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
+# -àr: skomenŧiando da 'l indikativo prexente de prima parsona singolar
+SFX 7B Y 4
+SFX 7B o a/S7N0 o	ds:imperative+present is:second+singular	# T9
+SFX 7B o ageƚo/D7 o	ds:imperative+present is:second+singular ds:pronomenal+locative	# T9
+SFX 7B o a/j5N0 o	ds:indicative+present is:third	# T10
+SFX 7B o eƚo/i5 o	ds:indicative+present is:third ds:interrogative	# T10
+
 # baxe, ko asento:
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
@@ -1920,16 +1940,6 @@ SFX tC o ígen/D0 iso	ds:imperative+present is:second+singular ds:pronomenal+gen
 SFX tC o e [^i]so	ds:indicative+present is:third	# T10
 SFX tC o e iso	ds:indicative+present is:third	# T10
 #SFX tC o e [^s]o	ds:indicative+present is:third	# T10 = T8 + e
-
-# senŧa èle vanesente, ko asento:
-# tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
-# tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
-# -àr: skomenŧiando da 'l indikativo prexente de prima parsona singolar
-SFX lB Y 4
-SFX lB o a/SlN0 o	ds:imperative+present is:second+singular	# T9
-SFX lB o agelo/Dl o	ds:imperative+present is:second+singular ds:pronomenal+locative	# T9
-SFX lB o a/J5N0 o	ds:indicative+present is:third	# T10
-SFX lB o elo/I5 o	ds:indicative+present is:third ds:interrogative	# T10
 
 # senŧa èle vanesente, ko asento:
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
@@ -1953,16 +1963,6 @@ SFX lC iso íselo/I5 iso	ds:indicative+present is:third ds:interrogative	# T10
 # ko èle vanesente, ko asento:
 # tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
 # tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
-# -àr: skomenŧiando da 'l indikativo prexente de prima parsona singolar
-SFX 7B Y 4
-SFX 7B o a/S7N0 o	ds:imperative+present is:second+singular	# T9
-SFX 7B o ageƚo/D7 o	ds:imperative+present is:second+singular ds:pronomenal+locative	# T9
-SFX 7B o a/j5N0 o	ds:indicative+present is:third	# T10
-SFX 7B o eƚo/i5 o	ds:indicative+present is:third ds:interrogative	# T10
-
-# ko èle vanesente, ko asento:
-# tèma 9 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: e > i)
-# tèma 10 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: i > e)
 # -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
 SFX 7C Y 12
 SFX 7C o i/S7N0 [^s]o	ds:imperative+present is:second+singular	# T9
@@ -1977,6 +1977,70 @@ SFX 7C o e/j5N0 [^i]so	ds:indicative+present is:third	# T10
 SFX 7C o eƚo/i5 [^i]so	ds:indicative+present is:third ds:interrogative	# T10
 SFX 7C o e/j5N0 iso	ds:indicative+present is:third	# T10
 SFX 7C iso íseƚo/i5 iso	ds:indicative+present is:third ds:interrogative	# T10
+
+
+# xerundio:
+# -àr: skomenŧiando da 'l infenío
+# '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
+SFX tG Y 16
+SFX tG r gando/P0 andar	ds:gerund+simple	# T2 + ndo = T7 + ndo
+SFX tG r gàndoge/Q0 ar	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo
+SFX tG xerò gando/P0 xerò	ds:gerund+simple	# T2 + ndo
+SFX tG xerò gàndoge/Q0 xerò	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo
+SFX tG derò gando/P0 derò	ds:gerund+simple	# T2 + ndo
+SFX tG derò gàndoge/Q0 derò	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo
+SFX tG aerò gando/P0 aerò	ds:gerund+simple	# T2 + ndo
+SFX tG aerò gàndoge/Q0 aerò	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo
+SFX tG r gande/P0 ar	ds:gerund+simple	# T2 + ndo = T7 + ndo, buranèl
+SFX tG r gàndege/Q0 ar	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo, buranèl
+SFX tG xerò gande/P0 xerò	ds:gerund+simple	# T2 + ndo, buranèl
+SFX tG xerò gàndege/Q0 xerò	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo, buranèl
+SFX tG derò gande/P0 derò	ds:gerund+simple	# T2 + ndo, buranèl
+SFX tG derò gàndege/Q0 derò	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo, buranèl
+SFX tG aerò gande/P0 aerò	ds:gerund+simple	# T2 + ndo, buranèl
+SFX tG aerò gàndege/Q0 aerò	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo, buranèl
+
+# xerundio, senŧa èle vanesente:
+# -àr: skomenŧiando da 'l infenío
+# '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
+SFX lG Y 16
+SFX lG r gando/PlN0 ar	ds:gerund+simple	# T2 + ndo = T7 + ndo
+SFX lG r gàndogelo/Ql ar	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
+SFX lG xerò gando/PlN0 xerò	ds:gerund+simple	# T2 + ndo = T7 + ndo
+SFX lG xerò gàndogelo/Ql xerò	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
+SFX lG derò gando/PlN0 derò	ds:gerund+simple	# T2 + ndo = T7 + ndo
+SFX lG derò gàndogelo/Ql derò	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
+SFX lG aerò gando/PlN0 aerò	ds:gerund+simple	# T2 + ndo = T7 + ndo
+SFX lG aerò gàndogelo/Ql aerò	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
+SFX lG r gande/PlN0 ar	ds:gerund+simple	# T2 + ndo = T7 + ndo, buranèl
+SFX lG r gàndegelo/Ql ar	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo, buranèl
+SFX lG xerò gande/PlN0 xerò	ds:gerund+simple	# T2 + ndo = T7 + ndo, buranèl
+SFX lG xerò gàndegelo/Ql xerò	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo, buranèl
+SFX lG derò gande/PlN0 derò	ds:gerund+simple	# T2 + ndo = T7 + ndo, buranèl
+SFX lG derò gàndegelo/Ql derò	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo, buranèl
+SFX lG aerò gande/PlN0 aerò	ds:gerund+simple	# T2 + ndo = T7 + ndo, buranèl
+SFX lG aerò gàndegelo/Ql aerò	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo, buranèl
+
+# xerundio, ko èle vanesente:
+# -àr: skomenŧiando da 'l infenío
+# '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
+SFX 7G Y 16
+SFX 7G r gando/P7N0 ar	ds:gerund+simple	# T2 + ndo = T7 + ndo
+SFX 7G r gàndogeƚo/Q7 ar	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
+SFX 7G xerò gando/P7N0 xerò	ds:gerund+simple	# T2 + ndo = T7 + ndo
+SFX 7G xerò gàndogeƚo/Q7 xerò	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
+SFX 7G derò gando/P7N0 derò	ds:gerund+simple	# T2 + ndo = T7 + ndo
+SFX 7G derò gàndogeƚo/Q7 derò	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
+SFX 7G aerò gando/P7N0 aerò	ds:gerund+simple	# T2 + ndo = T7 + ndo
+SFX 7G aerò gàndogeƚo/Q7 aerò	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
+SFX 7G r gande/P7N0 ar	ds:gerund+simple	# T2 + ndo = T7 + ndo, buranèl
+SFX 7G r gàndegeƚo/Q7 ar	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo, buranèl
+SFX 7G xerò gande/P7N0 xerò	ds:gerund+simple	# T2 + ndo = T7 + ndo, buranèl
+SFX 7G xerò gàndegeƚo/Q7 xerò	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo, buranèl
+SFX 7G derò gande/P7N0 derò	ds:gerund+simple	# T2 + ndo = T7 + ndo, buranèl
+SFX 7G derò gàndegeƚo/Q7 derò	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo, buranèl
+SFX 7G aerò gande/P7N0 aerò	ds:gerund+simple	# T2 + ndo = T7 + ndo, buranèl
+SFX 7G aerò gàndegeƚo/Q7 aerò	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo, buranèl
 
 
 # ---
@@ -2662,7 +2726,7 @@ SFX xE oler upiege [vʼ]oler	ds:subjunctive+present is:second+plural	# T12 + é(
 SFX xE oler upiège [vʼ]oler	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
 
 # vèrbi -àr inregolari: (dex)dar, ((dex)asue|des|kon(tra)|[lƚ]iku[ei]|putre|(ra)?re|sastu|sat[iu]s|sodis|sora|stra|stupe|tore|tume)far, (kon(tra)|mal|move|o|re|so(ra|to))star
-SFX xF Y 25
+SFX xF Y 19
 SFX xF ar àgo/J1I1 ar	ds:indicative+present is:first+singular	# T8 + o
 SFX xF ar àe/J1I1 ar	ds:indicative+present is:first+singular	# T8 + e
 SFX xF ar àge/J1I1 ar	ds:indicative+present is:first+singular	# T8 + e
@@ -2682,20 +2746,12 @@ SFX xF ar àa ar	ds:subjunctive+present is:third	# T8 + a
 SFX xF ar àga ar	ds:subjunctive+present is:third	# T8 + a
 SFX xF ar àe ar	ds:subjunctive+present is:third	# T8 + e
 SFX xF ar àge ar	ds:subjunctive+present is:third	# T8 + e
-SFX xF r gando/P0 ar	ds:gerund+simple	# T2 + ndo = T7 + ndo
-SFX xF r gàndoge/Q0 ar	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo
-SFX xF r gande/P0 ar	ds:gerund+simple	# T2 + ndo = T7 + ndo, buranèl
-SFX xF r gàndege/Q0 ar	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo, buranèl
-SFX xF r ganto/P0 ar	ds:gerund+simple	# T2 + nto = T7 + nto
-SFX xF r gàntoge/Q0 ar	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto = T7 + nto
 
 # vèrbi -àr inregolari: liku[ei]far
-SFX xG Y 5
+SFX xG Y 3
 SFX xG ar à/J5 ar	ds:indicative+present is:third	# T8 + e
 SFX xG ar àlo/I5 ar	ds:indicative+present is:third ds:interrogative	# T8 + e
 SFX xG r to/A1FS ar	ds:participle+passive+strong is:singular+masculine
-SFX xG r gand ar	ds:gerund+simple	# T2 + ndo = T7 + ndo
-SFX xG r gant ar	ds:gerund+simple	# T2 + ndo = T7 + ndo
 
 # vèrbi -àr inregolari: ƚiku[ei]far
 SFX xH Y 3
@@ -2704,7 +2760,7 @@ SFX xH ar àƚo/i5 ar	ds:indicative+present is:third ds:interrogative	# T8 + e
 SFX xH r to/A1 ar	ds:participle+passive+strong is:singular+masculine
 
 # vèrbi '-er inregolari: (bene|d[ei]x|in|inter|intr[ae]|kontra|ma[lƚ]e|pre|re)díxer
-SFX xI Y 100
+SFX xI Y 90
 SFX xI íxer ir/P0 díxer	ds:infinitive+simple	# T1 + r(e)
 SFX xI íxer ire díxer	ds:infinitive+simple	# T1 + r(e)
 SFX xI íxer ixo/J1 díxer	ds:indicative+present is:first+singular	# T8 + o
@@ -2730,16 +2786,6 @@ SFX xI íxer ige díxer	ds:subjunctive+present is:second+singular	# T8 + e, 2s=3
 SFX xI íxer iga díxer	ds:subjunctive+present is:third	# T8 + a
 SFX xI íxer ige díxer	ds:subjunctive+present is:third	# T8 + e
 SFX xI íxer ito/A1 díxer	ds:participle+passive+strong is:singular+masculine
-SFX xI íxer igando/P0 díxer	ds:gerund+simple	# T2 + ndo = T7 + ndo
-SFX xI íxer igàndoge/Q0 díxer	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo
-SFX xI íxer indo/P0 díxer	ds:gerund+simple	# T2 + ndo = T7 + ndo
-SFX xI xer ndoge/Q0 díxer	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo
-SFX xI íxer igande/P0 díxer	ds:gerund+simple	# T2 + ndo = T7 + ndo, buranèl
-SFX xI íxer igàndege/Q0 díxer	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo, buranèl
-SFX xI íxer inde/P0 díxer	ds:gerund+simple	# T2 + ndo = T7 + ndo, buranèl
-SFX xI xer ndege/Q0 díxer	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo, buranèl
-SFX xI íxer iganto/P0 díxer	ds:gerund+simple	# T2 + nto = T7 + nto
-SFX xI íxer igàntoge/Q0 díxer	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto = T7 + nto
 SFX xI íxer irò/J1I1 díxer	ds:indicative+future is:first+singular	# T4 + rò
 SFX xI íxer irà/J1I1 díxer	ds:indicative+future is:first+singular	# T4 + rà
 SFX xI íxer iremo/J2 díxer	ds:indicative+future is:first+plural	# T4 + r[éí]mo
@@ -2807,19 +2853,12 @@ SFX xI íxer irisiè díxer	ds:conditional+present is:second+singular	# T4 + r(i
 SFX xI íxer iríe díxer	ds:conditional+present is:third	# T4 + ríe
 
 # vèrbi '-er inregolari: (bene|d[ei]x|in|inter|intr[ae]|kontra|male|pre|re)díxer senŧa èle vanesente
-SFX xJ Y 18
+SFX xJ Y 11
 SFX xJ íxer ir/PlN0 díxer	ds:infinitive+simple	# T1 + r(e)
-SFX xJ íxer igàndogelo/Ql díxer	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
-SFX xJ xer ndogelo/Ql díxer	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
-SFX xJ íxer igàndegelo/Ql díxer	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo, buranèl
-SFX xJ xer ndegelo/Ql díxer	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo, buranèl
-SFX xJ íxer igàntogelo/Ql díxer	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
 SFX xJ íxer irà/J5 díxer	ds:indicative+future is:third	# T4 + rà
 SFX xJ íxer iralo/I5 díxer	ds:indicative+future is:third ds:interrogative	# T4 + rà
 SFX xJ íxer irave/I7J7 díxer	ds:conditional+present is:third	# T4 + rà(v)e
 SFX xJ íxer it díxer	ds:participle+passive+strong is:singular+masculine
-SFX xJ íxer igand díxer	ds:gerund+simple	# T2 + ndo = T7 + ndo
-SFX xJ íxer igant díxer	ds:gerund+simple	# T2 + nto = T7 + nto
 SFX xJ íxer is díxer	ds:indicative+present is:first+singular	# T8 + o/e
 SFX xJ íxer is díxer	ds:subjunctive+present is:first+singular	# T8 + e
 SFX xJ íxer is díxer	ds:subjunctive+present is:second+singular	# T8 + e, 2s=3
@@ -2828,13 +2867,8 @@ SFX xJ íxer ig díxer	ds:indicative+present is:first+singular	# T8 + o
 SFX xJ íxer ik díxer	ds:indicative+present is:first+singular	# T8 + o
 
 # vèrbi '-er inregolari: (bene|d[ei]x|in|inter|intr[ae]|kontra|maƚe|pre|re)díxer ko èle vanesente
-SFX xK Y 9
+SFX xK Y 4
 SFX xK íxer ir/P7N0 díxer	ds:infinitive+simple	# T1 + r(e)
-SFX xK íxer igàndogeƚo/Q7 díxer	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
-SFX xK xer ndogeƚo/Q7 díxer	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
-SFX xK íxer igàndegeƚo/Q7 díxer	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo, buranèl
-SFX xK xer ndegeƚo/Q7 díxer	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo, buranèl
-SFX xK íxer igàntogeƚo/Q7 díxer	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
 SFX xK íxer irà/j5 díxer	ds:indicative+future is:third	# T4 + rà
 SFX xK íxer iraƚo/i5 díxer	ds:indicative+future is:third ds:interrogative	# T4 + rà
 SFX xK íxer irave/i7j7 díxer	ds:conditional+present is:third	# T4 + rà(v)e
@@ -3975,7 +4009,7 @@ SFX xP aer àgeƚo/D7 aer	ds:imperative+present is:second+singular ds:pronomenal
 SFX xP aer àƚo/i5 aer	ds:indicative+present is:third ds:interrogative	# T10
 
 # vèrbi '-er inregolari: (a|as|de|des|es|kon|pro|re|so)tràer
-SFX xQ Y 107
+SFX xQ Y 87
 SFX xQ àer ar/P0PlP7 tràer	ds:infinitive+simple	# T1 + r(e)
 SFX xQ àer are tràer	ds:infinitive+simple	# T1 + r(e)
 SFX xQ àer ago/J1 tràer	ds:indicative+present is:first+singular	# T8 + o
@@ -3985,12 +4019,6 @@ SFX xQ àer agi tràer	ds:subjunctive+present is:second+singular	# T8 + e
 SFX xQ àer aga tràer	ds:subjunctive+present is:second+singular	# T8 + e, 2s=3
 SFX xQ àer aga tràer	ds:subjunctive+present is:third	# T8 + a
 SFX xQ àer ato/A1FS tràer	ds:participle+passive+strong is:singular+masculine
-SFX xQ àer agando/P0FS tràer	ds:gerund+simple	# T2 + ndo = T7 + ndo
-SFX xQ àer agàndoge/Q0 tràer	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo
-SFX xQ àer agande/P0FS tràer	ds:gerund+simple	# T2 + ndo = T7 + ndo, buranèl
-SFX xQ àer agàndege/Q0 tràer	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo, buranèl
-SFX xQ àer aganto/P0FS tràer	ds:gerund+simple	# T2 + nto = T7 + nto
-SFX xQ àer agàntoge/Q0 tràer	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto = T7 + nto
 SFX xQ àer arò/J1I1 tràer	ds:indicative+future is:first+singular	# T4 + rò
 SFX xQ àer arà/J1I1 tràer	ds:indicative+future is:first+singular	# T4 + rà
 SFX xQ àer aremo/J2 tràer	ds:indicative+future is:first+plural	# T4 + r[éí]mo
@@ -4069,20 +4097,6 @@ SFX xQ rò mo/S0 erò	ds:imperative+present is:first+plural	# T5 + mo
 SFX xQ erò imo/S0 erò	ds:imperative+present is:first+plural	# T5 + mo
 SFX xQ erò émogen/D0 erò	ds:imperative+present is:first+plural	# T5 + mo
 SFX xQ erò ímogen/D0 erò	ds:imperative+present is:first+plural	# T5 + mo
-SFX xQ àer ando/P0PlP7FS tràer	ds:gerund+simple	# T2 + ndo = T7 + ndo
-SFX xQ er ndoge/Q0 tràer	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo
-SFX xQ àer ande/P0PlP7FS tràer	ds:gerund+simple	# T2 + ndo = T7 + ndo, buranèl
-SFX xQ er ndege/Q0 tràer	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo, buranèl
-SFX xQ àer anto/P0 tràer	ds:gerund+simple	# T2 + nto = T7 + nto
-SFX xQ er ntoge/Q0 tràer	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto = T7 + nto
-SFX xQ er ndogelo/Ql tràer	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
-SFX xQ er ndegelo/Ql tràer	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo, buranèl
-SFX xQ er ntogelo/Ql tràer	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
-SFX xQ àer and tràer	ds:gerund+simple	# T2 + ndo = T7 + ndo
-SFX xQ àer ant tràer	ds:gerund+simple	# T2 + nto = T7 + nto
-SFX xQ er ndogeƚo/Q7 tràer	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo
-SFX xQ er ndegeƚo/Q7 tràer	ds:gerund+simple ds:pronomenal+locative	# T2 + ndo = T7 + ndo, buranèl
-SFX xQ er ntogeƚo/Q7 tràer	ds:gerund+simple ds:pronomenal+locative	# T2 + nto = T7 + nto
 
 # vèrbi -ar inregolari: [vʼ]ardar
 SFX xR Y 16
@@ -7774,7 +7788,7 @@ PFX '0 kon ʼ kon
 
 
 # paròle ŧonkae a la fine
-SFX '9 Y 19
+SFX '9 Y 20
 SFX '9 r ʼ r
 SFX '9 u ʼ u
 SFX '9 ra ʼ ra
@@ -7782,6 +7796,7 @@ SFX '9 axa àʼ axa
 SFX '9 èđa àʼ èđa
 SFX '9 èxa àʼ èxa
 SFX '9 de ʼ ede
+SFX '9 é ʼ é
 SFX '9 me ʼ me
 SFX '9 te ʼ te
 SFX '9 do ʼ do	# (kuanʼ + C)
