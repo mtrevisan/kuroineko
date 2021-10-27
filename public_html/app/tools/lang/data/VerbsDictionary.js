@@ -6153,6 +6153,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "propi",			"des",		1,	2,	"g",	"1775",			"",
 "propi",			"s",			1,	2,	"g",	"1867",			"",
 "prosim",		"",			1,	2,	"g",	"",				"",
+"prosim",		"a",			1,	2,	"g",	"XV",				"",
 "protokol",		"",			1,	6,	"a",	"1867",			"",
 "prov",			"",			1,	2,	"a",	"1376",			"",
 "prov",			"a",			1,	2,	"a",	"1867",			"",
