@@ -7057,6 +7057,8 @@ govèrno/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:gov
 govarnar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 govarno/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:govarnar
 govàrnomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:govarnar
+regovrar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+regòvro/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:regovrar
 degradar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:de
 degrado/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:degradar dp:de
 degràdomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:degradar dp:de
@@ -22219,9 +22221,6 @@ stóđomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrog
 stoxar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple dp:s
 stoxo/t8n8tAlAJ1FSPd	po:verb ds:indicative+present is:first+singular st:stoxar dp:s
 stóxomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:stoxar dp:s
-toxatar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
-toxato/t8n8tAlAJ1FS	po:verb ds:indicative+present is:first+singular st:toxatar
-toxàtomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:toxatar
 tokar/t0l070n0t1P0PlP7Q0QlQ7+0.0	po:verb ds:infinitive+simple
 toko/t8n8tAlA7AJ1FS+0.0	po:verb ds:indicative+present is:first+singular st:tokar
 tókomi/t8n8tAlA7AI1+0.0	po:verb ds:indicative+present is:first+singular ds:interrogative st:tokar
@@ -22470,6 +22469,11 @@ tovàɉomi/t8n8tAlA7AI1+0	po:verb ds:indicative+present is:first+singular ds:int
 toxar/t0l070n0t1P0PlP7Q0QlQ7*0	po:verb ds:infinitive+simple
 toxo/t8n8tAlA7AJ1FSPd*0	po:verb ds:indicative+present is:first+singular st:toxar
 tóxomi/t8n8tAlA7AI1*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:toxar
+toxatar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
+toxato/t8n8tAlAJ1FS	po:verb ds:indicative+present is:first+singular st:toxatar
+toxàtomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:toxatar
+toxorar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+toxòro/T8N8tBlB7BJ1I1FS	po:verb ds:indicative+present is:first+singular st:toxorar
 tràer/t1c0c1c7l171P0PlP7R0RlR7xQ@0-0-1:0.0	po:verb ds:infinitive+simple
 tràr/R0RlR7N0@0-0-1:0.0	po:verb ds:infinitive+simple st:tràer
 trào/T8N8tClC7CJ1I1@0-0-1:0.0	po:verb ds:indicative+present is:first+singular st:tràer
@@ -24798,9 +24802,9 @@ xventrar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:s
 xventro/t8n8tAlA7AJ1	po:verb ds:indicative+present is:first+singular st:xventrar dp:s
 xvéntromi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:xventrar dp:s
 xventrato/A1FS	po:verb ds:participle+passive+strong is:singular+masculine st:xventrar dp:s
-venturar/t0l070n0t1P0PlP7Q0QlQ7*0	po:verb ds:infinitive+simple
-venturo/t8n8tAlA7AJ1FS*0	po:verb ds:indicative+present is:first+singular st:venturar
-ventúromi/t8n8tAlA7AI1*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:venturar
+venturar/t0l070n0t1P0PlP7Q0QlQ7-1*0	po:verb ds:infinitive+simple
+venturo/t8n8tAlA7AJ1FS-1*0	po:verb ds:indicative+present is:first+singular st:venturar
+ventúromi/t8n8tAlA7AI1-1*0	po:verb ds:indicative+present is:first+singular ds:interrogative st:venturar
 vénŧer/t1c0c1l1P0PlR0Rl@0	po:verb ds:infinitive+simple
 vènŧo/T8N8tClCJ1I1FS@0	po:verb ds:indicative+present is:first+singular st:vénŧer
 venŧo/t8n8tElEJ1@0	po:verb ds:indicative+present is:first+singular st:vénŧer
@@ -36937,10 +36941,7 @@ komendaŧion/F0B1BuPdV3	po:noun is:singular+femenine
 komèdia/F0	po:noun is:singular+femenine
 komoŧion/F0B1BuPdV3	po:noun is:singular+femenine
 komun/X0B1	po:noun is:singular
-konbatimento/M0FSPdVr*0	po:noun is:singular+masculine ds:mento
 kondimento/M0FSPdVr	po:noun is:singular+masculine ds:mento
-konfalon/A2B1BuPd	po:noun is:singular+masculine
-konfaƚon/A2BuPd	po:noun is:singular+masculine
 konfetura/F0	po:noun is:singular+femenine
 konfèto/M0FSiN	po:noun is:singular+masculine
 konfidensa/F0Vr	po:noun is:singular+femenine
@@ -37399,7 +37400,6 @@ meskin/M0BuaZaSeLe7	po:adjective_qualificative is:singular+masculine
 meskina/F0aZaSeLe7	po:adjective_qualificative is:singular+femenine
 mestiŧia/F0V3	po:noun is:singular+femenine
 mexan/M0B1Bu	po:adjective_qualificative is:singular+masculine
-mexura/F0eTiN	po:noun is:singular+femenine
 méola/F0V3	po:noun is:singular+femenine
 mèrlo/A1	po:adjective_qualificative is:singular+masculine
 mèrŧe/F0V3	po:noun is:singular+femenine
@@ -37575,7 +37575,6 @@ onbría/F0	po:noun is:singular+femenine
 ondoxo/A1FSPd	po:adjective_qualificative is:singular+masculine
 onestade/y0	po:noun is:singular+femenine
 onestamente/FSw0+0	po:adverb ds:mente
-onguento/M0FSPdVr	po:noun is:singular+masculine
 onipotensa/F0Vr	po:noun is:singular+femenine
 onipotenŧa/F0Vr	po:noun is:singular+femenine
 onja/F0eLe7eTiNo0o2o4	po:noun is:singular+femenine
@@ -66560,11 +66559,33 @@ fumo/M0FSeT	po:noun is:singular+masculine
 gànbel/A1	po:noun is:singular+masculine
 viva/F0^6	po:adjective_qualificative is:singular+femenine
 vivo/M0FS^6	po:adjective_qualificative is:singular+masculine al:viu
+mexura/F0eTiN	po:noun is:singular+femenine
+konbatimento/M0FSPdVr*0	po:noun is:singular+masculine ds:mento
+raxon/F0B1BuPd	po:noun is:singular+femenine
+konfalon/A2B1BuPd	po:noun is:singular+masculine
+konfaƚon/A2BuPd	po:noun is:singular+masculine
+markadante/X0	po:noun is:singular
+markadansía/F0eTVs	po:noun is:singular+femenine
+markadanŧía/F0eTVs	po:noun is:singular+femenine
+dinar/M0	po:noun is:singular+masculine
+spendedor/M0v0Pd	po:noun is:singular+masculine
+spendedora/F0v0	po:noun is:singular+femenine
+dèsima/F0	po:noun is:singular+femenine
+dèŧima/F0	po:noun is:singular+femenine
+onguento/M0FSPdVr	po:noun is:singular+masculine
+levroxo/A1FSCoPd	po:adjective_qualificative is:singular+masculine
+ƚevroxo/A1CoPd	po:adjective_qualificative is:singular+masculine
 
 
-/ 48/77
+/ 49/77
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ–ʼ
 sost.:petròleo,petral,petraƚo
 sost.:gànbel,gànbeƚo,gànbar
 v.:inglotir,injotir,inɉotir
+sost.:raxion,rexon,raxon
+sost.:markadante,merkante,markante
+sost.:markadanŧía,markadansía,merkanŧía,merkansía,markanŧía,markansía
+v.:toxorar,texorar
+sost.:dinar,denèr,denaro
+v.:regovrar,rekuperar,rekuparar
