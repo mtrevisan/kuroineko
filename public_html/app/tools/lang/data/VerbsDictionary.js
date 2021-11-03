@@ -8637,6 +8637,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ventox",		"x",			1,	4,	"a",	"1560",			"Méter le ventoxe.",
 "ventr",			"x",			1,	1,	"a",	"1852",			"",
 "ventur",		"",			1,	4,	"a",	"1867",			"Riscar.",
+"ventur",		"x",			1,	4,	"a",	"XV",				"",
 "vénŧ",			"",			3,	1,	"a",	"1852",			"Vínŧer.",
 "vénŧ",			"a",			3,	1,	"a",	"XV",				"Vínŧer.",
 "venxem",		"",			1,	4,	"a",	"1896",			"",
