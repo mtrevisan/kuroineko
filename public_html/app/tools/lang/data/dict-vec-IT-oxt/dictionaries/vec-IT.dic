@@ -14657,6 +14657,8 @@ oxèƚo/T8tB7BJ1I1	po:verb ds:indicative+present is:first+singular st:oxeƚar
 / vèrbi: P
 inpir/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
 inpiso/n0T8N8tClC7CJ1I1FS	po:verb ds:indicative+present is:first+singular st:inpir dp:in
+enplir/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple dp:in
+enpliso/n0T8N8tClC7CJ1I1FS	po:verb ds:indicative+present is:first+singular st:enplir dp:in
 pacar/t0l070n0t1P0PlP7Q0QlQ7+0	po:verb ds:infinitive+simple
 paco/t8n8tAlA7AJ1FS+0	po:verb ds:indicative+present is:first+singular st:pacar
 pàcomi/t8n8tAlA7AI1+0	po:verb ds:indicative+present is:first+singular ds:interrogative st:pacar
@@ -20099,6 +20101,9 @@ sòrto/A1FS.0	po:verb ds:participle+passive+strong is:singular+masculine st:sòr
 sostantivar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
 sostantivo/t8n8tAlA7AJ1FSA5	po:verb ds:indicative+present is:first+singular st:sostantivar
 sostantívomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:sostantivar
+sostiñar/t0l070n0t1P0PlP7Q0QlQ7	po:verb ds:infinitive+simple
+sostiño/t8n8tAlA7AJ1FS	po:verb ds:indicative+present is:first+singular st:sostiñar
+sostíñomi/t8n8tAlA7AI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:sostiñar
 sotilar/t0l0n0t1P0PlQ0Ql	po:verb ds:infinitive+simple
 sotilo/t8n8tAlAJ1FS	po:verb ds:indicative+present is:first+singular st:sotilar
 sotílomi/t8n8tAlAI1	po:verb ds:indicative+present is:first+singular ds:interrogative st:sotilar
@@ -27405,6 +27410,7 @@ se	po:pronoun_impersonal
 se	po:pronoun_passivating
 / pronòme klítegi partitivo
 en/'0	po:pronoun_partitive
+ʼnde	po:pronoun_partitive
 ne	po:pronoun_partitive
 ni	po:pronoun_partitive
 / pronòme klítego logativo
@@ -32647,7 +32653,7 @@ piaser/MFPd:0	po:noun is:singular+masculine
 piaŧer/MFPd:0	po:noun is:singular+masculine
 piegadura/F0d0eT-1+0.0*0	po:noun is:singular+femenine
 piegaŧion/F0B1BuPdV3-1+0.0*0	po:noun is:singular+femenine
-pienamente/FSw0	po:adverb ds:mente
+pienamente/FSw0.0	po:adverb ds:mente
 pié/MFp3	po:noun is:masculine+non_enumerable
 pièn/A2	po:adjective_qualificative is:singular+masculine
 pikador/M0Pdv0@0+0-1*0.0	po:noun is:singular+masculine
@@ -33065,7 +33071,6 @@ repetitivo/A1FSA5	po:adjective_qualificative is:singular+masculine
 repetiŧion/F0B1BuPdV3	po:noun is:singular+femenine
 repien/M0oTB1Pd	po:adjective_qualificative is:singular+masculine
 repiena/F0oT	po:adjective_qualificative is:singular+femenine
-repienamente/FSw0	po:adverb ds:mente
 repieneŧa/F0V3	po:noun is:singular+femenine
 repúblega/F0	po:noun is:singular+femenine
 rerorar/M0	po:noun is:singular+masculine
@@ -33215,7 +33220,6 @@ salutaŧion/F0B1BuPdV3	po:noun is:singular+femenine
 salüaŧion/F0B1BuPdV3	po:noun is:singular+femenine
 salvador/M0Pdv0.0	po:noun is:singular+masculine
 salvadora/F0v0.0	po:noun is:singular+femenine
-salvaŧion/F0B1BuPdV3.0	po:noun is:singular+femenine
 saƚador/M0Pdv7+0^6	po:noun is:singular+masculine
 saƚadora/F0v7+0^6	po:noun is:singular+femenine
 saƚadura/F0d7e1+0^6	po:noun is:singular+femenine
@@ -34258,9 +34262,7 @@ tresadura/F0d0eT-1+0	po:noun is:singular+femenine
 trèn/M0	po:noun is:singular+masculine
 tria/F0	po:noun is:singular+femenine
 tribolamento/M0FSPdVr	po:noun is:singular+masculine ds:mento
-tribolaŧion/F0B1BuPdV3	po:noun is:singular+femenine
 triboƚamento/M0PdVR	po:noun is:singular+masculine ds:mento
-triboƚasion/F0BuPd	po:noun is:singular+femenine
 tribulamento/M0FSPdVr	po:noun is:singular+masculine ds:mento
 tribuƚamento/M0PdVR	po:noun is:singular+masculine ds:mento
 trikò	po:noun is:masculine+non_enumerable
@@ -35921,8 +35923,6 @@ arŧïanimal/MFB1	po:noun is:singular+masculine
 asae/'0	po:adverb
 asal/M0B1BuV3	po:noun is:singular+masculine
 asal/MFB1Vm	po:noun is:singular+masculine
-asalin/M0BuV3	po:noun is:singular+masculine
-asalina/F0V3	po:noun is:singular+femenine
 asistensia/F0Vr	po:noun is:singular+femenine
 asistente/X0FSPdVr	po:adjective_qualificative is:singular
 asistenŧia/F0Vr	po:noun is:singular+femenine
@@ -35942,7 +35942,6 @@ ativo/A1FSA5+0	po:adjective_qualificative is:singular+masculine
 ato/M0FS	po:noun is:singular+masculine
 aŧal/M0B1Bu	po:noun is:singular+masculine
 aŧal/MFB1	po:noun is:singular+masculine
-aŧalin/A2	po:noun is:singular+masculine
 aŧion/F0B1BuPdV3+0.0	po:noun is:singular+femenine
 aŧò	po:adverb
 aŧò	po:conjunction
@@ -36360,7 +36359,6 @@ eseƚensa/F0VR	po:noun is:singular+femenine
 eseƚente/X0Pd	po:adjective_qualificative is:singular
 esèso/M0FS	po:noun is:singular+masculine
 esidio/M0	po:noun is:singular+masculine
-eska/F0	po:noun is:singular+femenine
 eskuixiteŧa/F0V3	po:noun is:singular+femenine dp:ex
 eskuixito/M0FS	po:noun is:singular+masculine dp:ex
 esperiensa/F0VreT	po:noun is:singular+femenine
@@ -39522,7 +39520,6 @@ deboleŧa/F0V3	po:noun is:singular+femenine
 deboƚesa/F0	po:noun is:singular+femenine
 defensivo/A1FSA5	po:adjective_qualificative is:singular+masculine
 definitivo/A1FSA5	po:adjective_qualificative is:singular+masculine
-degan/A2B1Bu	po:noun is:singular+masculine
 deklivio/M0	po:noun is:singular+masculine
 dekòto/M0FS	po:noun is:singular+masculine
 dekreto/M0FSPd	po:noun is:singular+masculine
@@ -40407,8 +40404,6 @@ penin/M0Bu	po:noun is:singular+masculine
 peòco/M0FSr0aZaSeT	po:noun is:singular+masculine
 pepa/F0	po:adjective_qualificative is:singular
 perdon/M0B1BuPdVs	po:noun is:singular+masculine
-perikoloxo/A1FSPdVs	po:adjective_qualificative is:singular+masculine
-perikoƚoxo/A1PdVs	po:adjective_qualificative is:singular+masculine
 però/Vs	po:conjunction
 persuto/M0FSVs	po:noun is:singular+masculine
 pertanto/FSVs	po:conjunction
@@ -58097,7 +58092,6 @@ gindaŧo/M0FSV3	po:noun is:singular+masculine
 glèxia/F0	po:noun is:singular+femenine
 gradèla/F0eT	po:noun is:singular+femenine
 gradèƚa/F0e1	po:noun is:singular+femenine
-grameña/F0eTo0o2o4	po:noun is:singular+femenine
 grenbial/MFB1iNo0o2o4	po:noun is:singular+masculine
 grenbiaƚe/MFiNo7o2o4	po:noun is:singular+masculine
 indano/FS	po:adverb
@@ -59935,7 +59929,6 @@ usixion/F0B1BuPd	po:noun is:singular+femenine
 uŧixion/F0B1BuPd	po:noun is:singular+femenine
 uxévol/X0B1PdVx	po:adjective_qualificative is:singular
 úsol/M0B1PdV3	po:noun is:singular+masculine
-útel/X0B1Vx-1+0	po:adjective_qualificative is:singular
 valexèla/F0	po:noun is:singular+femenine st:val ds:èl
 vaƚexèƚa/F0	po:noun is:singular+femenine st:vaƚe ds:èl
 vania/F0	po:noun is:singular+femenine
@@ -63752,7 +63745,6 @@ fabrisiería/F0r0	po:noun is:singular+femenine
 fabriŧería/F0r0	po:noun is:singular+femenine
 fabriŧiería/F0r0	po:noun is:singular+femenine
 farinaŧo/M0FSV3	po:noun is:singular+masculine
-fasio/M0	po:noun is:singular+masculine
 fasista/A2	po:adjective_qualificative is:singular st:fasio ds:ista
 fasiston/A2B1BuPd	po:adjective_qualificative is:singular+masculine st:fasista ds:on
 fasixmo/M0	po:noun is:singular+masculine st:fasio ds:ixmo
@@ -65991,8 +65983,11 @@ arđento/M0FSVrr0	po:noun is:singular+masculine
 arkuanta/F0	po:quantifier_existential is:singular+femenine
 arkuanto/M0FS'9	po:quantifier_existential is:singular+masculine
 arxento/M0FSVrr0	po:noun is:singular+masculine
+asalin/M0BuV3	po:noun is:singular+masculine
+asalina/F0V3	po:noun is:singular+femenine
 asè	po:adverb
 asèrbo/A1	po:adjective_qualificative is:singular+masculine
+aŧalin/A2	po:noun is:singular+masculine
 aŧèrbo/A1	po:adjective_qualificative is:singular+masculine
 ava/F0	po:noun is:singular+femenine
 avenimento/M0FSPdVr	po:noun is:singular+masculine ds:mento
@@ -66042,6 +66037,7 @@ defin/Bu	po:adverb pa:de pa:fin
 defin/Bu	po:preposition pa:de pa:fin
 defina	po:adverb pa:de pa:fina
 defina	po:preposition pa:de pa:fina
+degan/A2B1Bu	po:noun is:singular+masculine
 deleto/M0FS	po:noun is:singular+masculine
 delisioxo/A1FSPd	po:adjective_qualificative is:singular+masculine
 deliŧioxo/A1FSPd	po:adjective_qualificative is:singular+masculine
@@ -66078,6 +66074,7 @@ entro	po:adverb st:drento
 entro	po:preposition st:drento
 erbeta/F0	po:noun is:singular+femenine st:èrba ds:eto
 ereditade/y0	po:noun is:singular+femenine
+eska/F0	po:noun is:singular+femenine
 et	po:conjunction
 èrto/A1FS	po:adjective_qualificative is:singular+masculine
 falŧa/F0V3	po:noun is:singular+femenine
@@ -66086,6 +66083,7 @@ fameja/F0aZaSaTeTuZuSo1o3	po:noun is:singular+femenine
 fameɉa/F0aZaSaTeTuZuSo1o3	po:noun is:singular+femenine
 fantolin/M0BuV3	po:noun is:singular+masculine
 faraon/A2B1BuPd	po:noun is:singular+masculine
+fasio/M0FSeTo0o2o4oT	po:noun is:singular+masculine
 favro/M0eT	po:noun is:singular+masculine
 fede/F0'9	po:noun is:singular+femenine
 fenèstra/F0^4	po:noun is:singular+femenine
@@ -66126,6 +66124,7 @@ gosto/M0FSeTiN-1	po:noun is:singular+masculine
 governador/M0Pdv0	po:noun is:singular+masculine
 governadora/F0v0	po:noun is:singular+femenine
 grama/F0eT	po:adjective_qualificative is:singular+femenine
+grameña/F0eTo0o2o4	po:noun is:singular+femenine
 grameŧa/F0V3	po:noun is:singular+masculine
 gramita/F0	po:noun is:singular+femenine
 gramo/M0FSeT	po:adjective_qualificative is:singular+masculine
@@ -66142,6 +66141,7 @@ infèrno/M0FS	po:noun is:singular+masculine
 ingan/M0B1BueT	po:noun is:singular+masculine
 ingordixia/F0	po:noun is:singular+femenine
 ingual/X0B1BuVx	po:adjective_qualificative is:singular
+inklòsto/M0FS	po:noun is:singular+masculine
 inmun/X0B1	po:noun is:singular
 inparké/'9	po:adjective_interrogative_exclamatory dp:in
 inparké/'9	po:pronoun_interrogative_exclamatory dp:in
@@ -66374,8 +66374,11 @@ penetente/X0FSPdVr	po:noun is:singular
 penetenŧia/F0VreT	po:noun is:singular+femenine
 pensaroxo/A1FSPd	po:adjective_qualificative is:singular+masculine
 pensièr/M0Bu+0	po:noun is:singular+masculine
+pensoroxo/A1FSPd	po:adjective_qualificative is:singular+masculine
 perdonansa/F0M1Vs	po:noun is:singular+femenine
 perdonanŧa/F0M1Vs	po:noun is:singular+femenine
+perikoloxo/A1FSPdVs	po:adjective_qualificative is:singular+masculine
+perikoƚoxo/A1PdVs	po:adjective_qualificative is:singular+masculine
 perkurador/M0Pdv0	po:noun is:singular+masculine
 perkuradora/F0v0	po:noun is:singular+femenine
 persò/Vs	po:adjective_interrogative_exclamatory
@@ -66401,6 +66404,7 @@ planamente/FSw0	po:adverb ds:mente
 plaxer/MFPd-1:0	po:noun is:singular+masculine
 plen/M0PdaZaSoT	po:adjective_qualificative is:singular+masculine
 plena/F0oT	po:adjective_qualificative is:singular+femenine
+plenamente/FSw0.0	po:adverb ds:mente
 plonbo/M0FSiN	po:noun is:singular+masculine
 plui	po:adjective_qualificative is:non_enumerable
 plui	po:adverb
@@ -66462,6 +66466,7 @@ salda/F0eT	po:adjective_qualificative is:singular+femenine
 saldo/M0FSeT	po:adjective_qualificative is:singular+masculine
 salvađo/A1FS	po:adjective_qualificative is:singular+masculine
 salvamento/M0FSPdVr.0	po:noun is:singular+masculine ds:mento
+salvaŧion/F0B1BuPdV3.0	po:noun is:singular+femenine
 santamente/FSw0	po:adverb ds:mente
 sartia/F0	po:noun is:singular+femenine
 saso/M0FSeTo0o2o4	po:noun is:singular+masculine
@@ -66549,6 +66554,7 @@ tenaɉa/F0eTo0o1o2o3o4Vs	po:noun is:singular+femenine
 tenebroxo/A1FSPd	po:adjective_qualificative is:singular+masculine
 tenpèsta/F0	po:noun is:singular+femenine
 tentaŧion/F0B1BuPdV3@0.0*0	po:noun is:singular+femenine
+terèsto/X0	po:adjective_qualificative is:singular
 tènebra/F0	po:noun is:singular+femenine
 timor/MFBuPd	po:noun is:singular+masculine
 ton/M0BuPdaZaSo0o2o4	po:noun is:singular+masculine
@@ -66561,6 +66567,8 @@ tòrto/A1FS.0*0	po:adjective_qualificative is:singular+masculine
 tòsto/FS	po:adverb
 tradimento/M0FSPdVr	po:noun is:singular+masculine ds:mento
 tramontana/F0eLe7eT	po:noun is:singular+femenine
+tribolaŧion/F0B1BuPdV3	po:noun is:singular+femenine
+triboƚasion/F0BuPd	po:noun is:singular+femenine
 tribulaŧion/F0B1BuPdV3	po:noun is:singular+femenine
 tribuƚasion/F0BuPd	po:noun is:singular+femenine
 trista/F0eTiN:0	po:adjective_qualificative is:singular+femenine
@@ -66573,6 +66581,7 @@ tristo/M0FSeTiN:0	po:adjective_qualificative is:singular+masculine
 ŧiaskun/A2B1BuVp	po:pronoun_demonstrative is:singular+masculine
 ŧiaskun/A2B1BuVp	po:quantifier_universal_effective is:singular+masculine
 ŧibo/M0Vp	po:noun is:singular+masculine
+ŧimituòrio/M0Vp	po:noun is:singular+masculine
 ŧiò/Vp	po:conjunction
 ŧiò/Vp	po:noun is:masculine+non_enumerable
 umelemente/FSw0	po:adverb ds:mente
@@ -66580,6 +66589,7 @@ umeƚemente/w0	po:adverb ds:mente
 umiltade/y0	po:noun is:singular+femenine
 urlamento/M0FSPd	po:noun is:singular+masculine ds:mento
 uxanŧa/F0V3	po:noun is:singular+femenine
+útel/X0B1Vx-1+0	po:adjective_qualificative is:singular
 vasièl/M0B1eT	po:noun is:singular+masculine
 vasièƚo/M0e1	po:noun is:singular+masculine
 vela/F0eTiN	po:noun is:singular+femenine
@@ -66620,6 +66630,6 @@ xustiŧia/F0V3+0	po:noun is:singular+femenine
 xusto/A1FS+0	po:adjective_qualificative is:singular+masculine
 
 
-/ 52/77
+/ 56/77
 / íïóúüđɉƚñŧ
 / ÀÈÉÍÏÒÓÚÜĐɈȽÑŦ–ʼ
