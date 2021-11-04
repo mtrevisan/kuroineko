@@ -440,10 +440,10 @@ COMPOUNDRULE (|5)(--)(|6)	# sento-mi[lƚ]e
 # metaplaxmo 3a > 2a:	partiŧipio pasivo e xerundio
 # '-er- > '-ar-: ge pòl èser un xbasamento de `e` nò tònega in `a` vanti `r`
 #
-# -àr:	kantar/t0l070n0t1P0PlP7Q0QlQ7, (kanto/t8n8tAlA7AJ1, kàntomi/t8n8tAlA7AI1 | exàmino/T8N8tBlB7BJ1I1)
-# -ér:	valer/t0l070n0t1p4l474P0PlP7Q0QlQ7, (valo/t8n8tElE7EJ1, vàlomi/t8n8tElE7EI1 | reflèto/T8N8tClC7CJ1I1)
-# '-er:	kréder/t1c1l171n1P0PlP7R0RlR7, (kredo/t8n8tElE7EJ1, krédomi/t8n8tElE7EI1 | gòdo/T8N8tClC7CJ1I1), krederò/t0n0l070p4l474J1I1
-# -ír:	dormir/t0l070n0t1P0PlP7Q0QlQ7, (dòrmo/t8n8tElE7EJ1, dòrmomi/t8n8tElE7EI1 | (dòrmo|feniso)/n0T8N8tClC7CJ1I1)
+# -àr:	kantar/t0l070n0t1P0PlP7Q0QlQ7, (kanto/t8n8tAlA7AJ1P0PlP7, kàntomi/t8n8tAlA7AI1Q0QlQ7 | exàmino/T8N8tBlB7BJ1I1P0PlP7)
+# -ér:	valer/t0l070n0t1p4l474P0PlP7Q0QlQ7, (valo/t8n8tElE7EJ1P0PlP7, vàlomi/t8n8tElE7EI1Q0QlQ7 | reflèto/T8N8tClC7CJ1I1P0PlP7)
+# '-er:	kréder/t1c1l171n1P0PlP7R0RlR7, (kredo/t8n8tElE7EJ1P0PlP7, krédomi/t8n8tElE7EI1Q0QlQ7 | gòdo/T8N8tClC7CJ1I1P0PlP7), krederò/t0n0l070p4l474J1I1
+# -ír:	dormir/t0l070n0t1P0PlP7Q0QlQ7, (dòrmo/t8n8tElE7EJ1P0PlP7, dòrmomi/t8n8tElE7EI1Q0QlQ7 | (dòrmo|feniso)/n0T8N8tClC7CJ1I1P0PlP7Q0QlQ7)
 
 
 # baxe:
@@ -4548,7 +4548,7 @@ SFX P7 0 -veƚe [raeoò]	is:plural+femenine ds:pronomenal+reflexive
 
 
 # vèrbi pronomenali (takai)
-SFX Q0 Y 127
+SFX Q0 Y 165
 SFX Q0 0 ge r	ds:pronomenal+genitive+locative
 SFX Q0 0 n ge	ds:pronomenal+genitive+locative
 SFX Q0 ar àrgen ar	ds:pronomenal+genitive+locative
@@ -4676,9 +4676,47 @@ SFX Q0 0 lo ir	is:singular+masculine ds:pronomenal+reflexive
 SFX Q0 0 li ir	is:singular+masculine ds:pronomenal+reflexive
 SFX Q0 0 la ir	is:singular+masculine ds:pronomenal+reflexive
 SFX Q0 0 le ir	is:singular+masculine ds:pronomenal+reflexive
+SFX Q0 mi ge omi	ds:pronomenal+locative
+SFX Q0 mi gen omi	ds:pronomenal+genitive+locative
+SFX Q0 mi gin omi	ds:pronomenal+genitive+locative
+SFX Q0 mi gene omi	ds:pronomenal+genitive+locative
+SFX Q0 mi gine omi	ds:pronomenal+genitive+locative
+SFX Q0 i e omi	ds:pronomenal+reflexive
+SFX Q0 i en omi	ds:pronomenal+reflexive
+SFX Q0 i ene omi	ds:pronomenal+reflexive
+SFX Q0 mi n omi	ds:pronomenal+genitive
+SFX Q0 mi ne omi	ds:pronomenal+genitive
+SFX Q0 mi se omi	ds:pronomenal+reflexive
+SFX Q0 mi sen omi	ds:pronomenal+reflexive
+SFX Q0 mi sene omi	ds:pronomenal+reflexive
+SFX Q0 mi te omi	ds:pronomenal+reflexive
+SFX Q0 mi ten omi	ds:pronomenal+reflexive
+SFX Q0 mi tene omi	ds:pronomenal+reflexive
+SFX Q0 mi ve omi	ds:pronomenal+reflexive
+SFX Q0 mi ven omi	ds:pronomenal+reflexive
+SFX Q0 mi vene omi	ds:pronomenal+reflexive
+SFX Q0 iso ísoge iso	ds:pronomenal+locative
+SFX Q0 iso ísogen iso	ds:pronomenal+genitive+locative
+SFX Q0 iso ísogin iso	ds:pronomenal+genitive+locative
+SFX Q0 iso ísogene iso	ds:pronomenal+genitive+locative
+SFX Q0 iso ísogine iso	ds:pronomenal+genitive+locative
+SFX Q0 iso ísome iso	ds:pronomenal+reflexive
+SFX Q0 iso ísomen iso	ds:pronomenal+reflexive
+SFX Q0 iso ísomene iso	ds:pronomenal+reflexive
+SFX Q0 iso íson iso	ds:pronomenal+genitive
+SFX Q0 iso ísone iso	ds:pronomenal+genitive
+SFX Q0 iso ísose iso	ds:pronomenal+reflexive
+SFX Q0 iso ísosen iso	ds:pronomenal+reflexive
+SFX Q0 iso ísosene iso	ds:pronomenal+reflexive
+SFX Q0 iso ísote iso	ds:pronomenal+reflexive
+SFX Q0 iso ísoten iso	ds:pronomenal+reflexive
+SFX Q0 iso ísotene iso	ds:pronomenal+reflexive
+SFX Q0 iso ísove iso	ds:pronomenal+reflexive
+SFX Q0 iso ísoven iso	ds:pronomenal+reflexive
+SFX Q0 iso ísovene iso	ds:pronomenal+reflexive
 
 # vèrbi pronomenali (takai ko èle no vanesente)
-SFX Ql Y 108
+SFX Ql Y 158
 SFX Ql ar àrgel ar	is:singular+masculine ds:pronomenal+locative
 SFX Ql ar àrgelo ar	is:singular+masculine ds:pronomenal+locative
 SFX Ql ar àrgeli ar	is:plural+masculine ds:pronomenal+locative
@@ -4787,9 +4825,59 @@ SFX Ql gelo velo gelo	is:singular+masculine ds:pronomenal+reflexive
 SFX Ql gelo vela gelo	is:singular+femenine ds:pronomenal+reflexive
 SFX Ql gelo veli gelo	is:plural+masculine ds:pronomenal+reflexive
 SFX Ql gelo vele gelo	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql mi gel omi	is:singular+masculine ds:pronomenal+locative
+SFX Ql mi gelo omi	is:singular+masculine ds:pronomenal+locative
+SFX Ql mi geli omi	is:plural+masculine ds:pronomenal+locative
+SFX Ql mi gela omi	is:singular+femenine ds:pronomenal+locative
+SFX Ql mi gele omi	is:plural+femenine ds:pronomenal+locative
+SFX Ql i el omi	is:singular+masculine ds:pronomenal+reflexive
+SFX Ql i elo omi	is:singular+masculine ds:pronomenal+reflexive
+SFX Ql i eli omi	is:plural+masculine ds:pronomenal+reflexive
+SFX Ql i ela omi	is:singular+femenine ds:pronomenal+reflexive
+SFX Ql i ele omi	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql mi sel omi	is:singular+masculine ds:pronomenal+reflexive
+SFX Ql mi selo omi	is:singular+masculine ds:pronomenal+reflexive
+SFX Ql mi seli omi	is:plural+masculine ds:pronomenal+reflexive
+SFX Ql mi sela omi	is:singular+femenine ds:pronomenal+reflexive
+SFX Ql mi sele omi	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql mi tel omi	is:singular+masculine ds:pronomenal+reflexive
+SFX Ql mi telo omi	is:singular+masculine ds:pronomenal+reflexive
+SFX Ql mi teli omi	is:plural+masculine ds:pronomenal+reflexive
+SFX Ql mi tela omi	is:singular+femenine ds:pronomenal+reflexive
+SFX Ql mi tele omi	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql mi vel omi	is:singular+masculine ds:pronomenal+reflexive
+SFX Ql mi velo omi	is:singular+masculine ds:pronomenal+reflexive
+SFX Ql mi veli omi	is:plural+masculine ds:pronomenal+reflexive
+SFX Ql mi vela omi	is:singular+femenine ds:pronomenal+reflexive
+SFX Ql mi vele omi	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql iso ísogel iso	is:singular+masculine ds:pronomenal+locative
+SFX Ql iso ísogelo iso	is:singular+masculine ds:pronomenal+locative
+SFX Ql iso ísogeli iso	is:plural+masculine ds:pronomenal+locative
+SFX Ql iso ísogela iso	is:singular+femenine ds:pronomenal+locative
+SFX Ql iso ísogele iso	is:plural+femenine ds:pronomenal+locative
+SFX Ql iso ísomel iso	is:singular+masculine ds:pronomenal+reflexive
+SFX Ql iso ísomelo iso	is:singular+masculine ds:pronomenal+reflexive
+SFX Ql iso ísomeli iso	is:plural+masculine ds:pronomenal+reflexive
+SFX Ql iso ísomela iso	is:singular+femenine ds:pronomenal+reflexive
+SFX Ql iso ísomele iso	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql iso ísosel iso	is:singular+masculine ds:pronomenal+reflexive
+SFX Ql iso ísoselo iso	is:singular+masculine ds:pronomenal+reflexive
+SFX Ql iso ísoseli iso	is:plural+masculine ds:pronomenal+reflexive
+SFX Ql iso ísosela iso	is:singular+femenine ds:pronomenal+reflexive
+SFX Ql iso ísosele iso	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql iso ísotel iso	is:singular+masculine ds:pronomenal+reflexive
+SFX Ql iso ísotelo iso	is:singular+masculine ds:pronomenal+reflexive
+SFX Ql iso ísoteli iso	is:plural+masculine ds:pronomenal+reflexive
+SFX Ql iso ísotela iso	is:singular+femenine ds:pronomenal+reflexive
+SFX Ql iso ísotele iso	is:plural+femenine ds:pronomenal+reflexive
+SFX Ql iso ísovel iso	is:singular+masculine ds:pronomenal+reflexive
+SFX Ql iso ísovelo iso	is:singular+masculine ds:pronomenal+reflexive
+SFX Ql iso ísoveli iso	is:plural+masculine ds:pronomenal+reflexive
+SFX Ql iso ísovela iso	is:singular+femenine ds:pronomenal+reflexive
+SFX Ql iso ísovele iso	is:plural+femenine ds:pronomenal+reflexive
 
 # vèrbi pronomenali (takai ko èle vanesente)
-SFX Q7 Y 83
+SFX Q7 Y 123
 SFX Q7 ar àrgeƚo ar	is:singular+masculine ds:pronomenal+locative
 SFX Q7 ar àrgeƚi ar	is:plural+masculine ds:pronomenal+locative
 SFX Q7 ar àrgeƚa ar	is:singular+femenine ds:pronomenal+locative
@@ -4873,6 +4961,46 @@ SFX Q7 geƚo veƚo geƚo	is:singular+masculine ds:pronomenal+reflexive
 SFX Q7 geƚo veƚa geƚo	is:singular+femenine ds:pronomenal+reflexive
 SFX Q7 geƚo veƚi geƚo	is:plural+masculine ds:pronomenal+reflexive
 SFX Q7 geƚo veƚe geƚo	is:plural+femenine ds:pronomenal+reflexive
+SFX Q7 mi geƚo omi	is:singular+masculine ds:pronomenal+locative
+SFX Q7 mi geƚi omi	is:plural+masculine ds:pronomenal+locative
+SFX Q7 mi geƚa omi	is:singular+femenine ds:pronomenal+locative
+SFX Q7 mi geƚe omi	is:plural+femenine ds:pronomenal+locative
+SFX Q7 i eƚo omi	is:singular+masculine ds:pronomenal+reflexive
+SFX Q7 i eƚi omi	is:plural+masculine ds:pronomenal+reflexive
+SFX Q7 i eƚa omi	is:singular+femenine ds:pronomenal+reflexive
+SFX Q7 i eƚe omi	is:plural+femenine ds:pronomenal+reflexive
+SFX Q7 mi seƚo omi	is:singular+masculine ds:pronomenal+reflexive
+SFX Q7 mi seƚi omi	is:plural+masculine ds:pronomenal+reflexive
+SFX Q7 mi seƚa omi	is:singular+femenine ds:pronomenal+reflexive
+SFX Q7 mi seƚe omi	is:plural+femenine ds:pronomenal+reflexive
+SFX Q7 mi teƚo omi	is:singular+masculine ds:pronomenal+reflexive
+SFX Q7 mi teƚi omi	is:plural+masculine ds:pronomenal+reflexive
+SFX Q7 mi teƚa omi	is:singular+femenine ds:pronomenal+reflexive
+SFX Q7 mi teƚe omi	is:plural+femenine ds:pronomenal+reflexive
+SFX Q7 mi veƚo omi	is:singular+masculine ds:pronomenal+reflexive
+SFX Q7 mi veƚi omi	is:plural+masculine ds:pronomenal+reflexive
+SFX Q7 mi veƚa omi	is:singular+femenine ds:pronomenal+reflexive
+SFX Q7 mi veƚe omi	is:plural+femenine ds:pronomenal+reflexive
+SFX Q7 iso ísogeƚo iso	is:singular+masculine ds:pronomenal+locative
+SFX Q7 iso ísogeƚi iso	is:plural+masculine ds:pronomenal+locative
+SFX Q7 iso ísogeƚa iso	is:singular+femenine ds:pronomenal+locative
+SFX Q7 iso ísogeƚe iso	is:plural+femenine ds:pronomenal+locative
+SFX Q7 iso ísomeƚo iso	is:singular+masculine ds:pronomenal+reflexive
+SFX Q7 iso ísomeƚi iso	is:plural+masculine ds:pronomenal+reflexive
+SFX Q7 iso ísomeƚa iso	is:singular+femenine ds:pronomenal+reflexive
+SFX Q7 iso ísomeƚe iso	is:plural+femenine ds:pronomenal+reflexive
+SFX Q7 iso ísoseƚo iso	is:singular+masculine ds:pronomenal+reflexive
+SFX Q7 iso ísoseƚi iso	is:plural+masculine ds:pronomenal+reflexive
+SFX Q7 iso ísoseƚa iso	is:singular+femenine ds:pronomenal+reflexive
+SFX Q7 iso ísoseƚe iso	is:plural+femenine ds:pronomenal+reflexive
+SFX Q7 iso ísoteƚo iso	is:singular+masculine ds:pronomenal+reflexive
+SFX Q7 iso ísoteƚi iso	is:plural+masculine ds:pronomenal+reflexive
+SFX Q7 iso ísoteƚa iso	is:singular+femenine ds:pronomenal+reflexive
+SFX Q7 iso ísoteƚe iso	is:plural+femenine ds:pronomenal+reflexive
+SFX Q7 iso ísoveƚo iso	is:singular+masculine ds:pronomenal+reflexive
+SFX Q7 iso ísoveƚi iso	is:plural+masculine ds:pronomenal+reflexive
+SFX Q7 iso ísoveƚa iso	is:singular+femenine ds:pronomenal+reflexive
+SFX Q7 iso ísoveƚe iso	is:plural+femenine ds:pronomenal+reflexive
 
 # vèrbi pronomenali (takai)
 SFX R0 Y 35
