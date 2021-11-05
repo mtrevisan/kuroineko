@@ -2091,6 +2091,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "forŧ",			"rin",		1,	1,	"g",	"",				"",
 "forŧ",			"s",			1,	1,	"g",	"1493",			"",
 "forŧ",			"stra",		1,	1,	"g",	"1775",			"",
+"forŧel",		"",			1,	4,	"g",	"XV",				"",
 "forŧier",		"des",		1,	5,	"g",	"1829",			"",
 "fos",			"ar",			1,	1,	"g",	"1775",			"",
 "fos",			"in",			1,	1,	"g",	"1775",			"",
