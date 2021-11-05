@@ -4465,26 +4465,32 @@ SFX xS ir éngelo/Dl [fd]ir	ds:imperative+present is:first+plural	# T12 + én
 
 
 # vèrbi pronomenali (destakai)
-SFX P0 Y 19
+SFX P0 Y 25
 SFX P0 0 -ge [raeoòi]	ds:pronomenal+locative
 SFX P0 0 -gen [raeoòi]	ds:pronomenal+genitive+locative
 SFX P0 0 -gin [raeoòi]	ds:pronomenal+genitive+locative
 SFX P0 0 -gene [raeoòi]	ds:pronomenal+genitive+locative
+SFX P0 0 -gende [raeoòi]	ds:pronomenal+genitive+locative
 SFX P0 0 -gine [raeoòi]	ds:pronomenal+genitive+locative
 SFX P0 0 -me [raeoòi]	ds:pronomenal+reflexive
 SFX P0 0 -men [raeoòi]	ds:pronomenal+reflexive
 SFX P0 0 -mene [raeoòi]	ds:pronomenal+reflexive
+SFX P0 0 -mende [raeoòi]	ds:pronomenal+reflexive
 SFX P0 0 -n [raeoòi]	ds:pronomenal+genitive
 SFX P0 0 -ne [raeoòi]	ds:pronomenal+genitive
+SFX P0 0 -nde [raeoòi]	ds:pronomenal+genitive
 SFX P0 0 -se [raeoòi]	ds:pronomenal+reflexive
 SFX P0 0 -sen [raeoòi]	ds:pronomenal+reflexive
 SFX P0 0 -sene [raeoòi]	ds:pronomenal+reflexive
+SFX P0 0 -sende [raeoòi]	ds:pronomenal+reflexive
 SFX P0 0 -te [raeoòi]	ds:pronomenal+reflexive
 SFX P0 0 -ten [raeoòi]	ds:pronomenal+reflexive
 SFX P0 0 -tene [raeoòi]	ds:pronomenal+reflexive
+SFX P0 0 -tende [raeoòi]	ds:pronomenal+reflexive
 SFX P0 0 -ve [raeoòi]	ds:pronomenal+reflexive
 SFX P0 0 -ven [raeoòi]	ds:pronomenal+reflexive
 SFX P0 0 -vene [raeoòi]	ds:pronomenal+reflexive
+SFX P0 0 -vende [raeoòi]	ds:pronomenal+reflexive
 
 # vèrbi pronomenali (destakai ko èle no vanesente)
 SFX Pl Y 30
@@ -4548,7 +4554,7 @@ SFX P7 0 -veƚe [raeoò]	is:plural+femenine ds:pronomenal+reflexive
 
 
 # vèrbi pronomenali (takai)
-SFX Q0 Y 165
+SFX Q0 Y 219
 SFX Q0 0 ge r	ds:pronomenal+genitive+locative
 SFX Q0 0 n ge	ds:pronomenal+genitive+locative
 SFX Q0 ar àrgen ar	ds:pronomenal+genitive+locative
@@ -4559,41 +4565,59 @@ SFX Q0 ar àrgin ar	ds:pronomenal+genitive+locative
 SFX Q0 er érgin er	ds:pronomenal+genitive+locative
 SFX Q0 ir írgin ir	ds:pronomenal+genitive+locative
 SFX Q0 0 ne ge	ds:pronomenal+genitive+locative
+SFX Q0 0 nde ge	ds:pronomenal+genitive+locative
 SFX Q0 ar àrgene ar	ds:pronomenal+genitive+locative
+SFX Q0 ar àrgende ar	ds:pronomenal+genitive+locative
 SFX Q0 er érgene er	ds:pronomenal+genitive+locative
+SFX Q0 er érgende er	ds:pronomenal+genitive+locative
 SFX Q0 ir írgene ir	ds:pronomenal+genitive+locative
+SFX Q0 ir írgende ir	ds:pronomenal+genitive+locative
 SFX Q0 e ine ge	ds:pronomenal+genitive+locative
+SFX Q0 e inde ge	ds:pronomenal+genitive+locative
 SFX Q0 ar àrgine ar	ds:pronomenal+genitive+locative
+SFX Q0 ar àrginde ar	ds:pronomenal+genitive+locative
 SFX Q0 er érgine er	ds:pronomenal+genitive+locative
+SFX Q0 er érginde er	ds:pronomenal+genitive+locative
 SFX Q0 ir írgine ir	ds:pronomenal+genitive+locative
+SFX Q0 ir írginde ir	ds:pronomenal+genitive+locative
 SFX Q0 ge me ge	ds:pronomenal+reflexive
 SFX Q0 0 me r	ds:pronomenal+reflexive
 SFX Q0 ge men ge	ds:pronomenal+reflexive
 SFX Q0 ge mene ge	ds:pronomenal+reflexive
+SFX Q0 ge mende ge	ds:pronomenal+reflexive
 SFX Q0 ar àrmen ar	ds:pronomenal+reflexive
 SFX Q0 er érmen er	ds:pronomenal+reflexive
 SFX Q0 ir írmen ir	ds:pronomenal+reflexive
 SFX Q0 ar àrmene ar	ds:pronomenal+reflexive
+SFX Q0 ar àrmende ar	ds:pronomenal+reflexive
 SFX Q0 er érmene er	ds:pronomenal+reflexive
+SFX Q0 er érmende er	ds:pronomenal+reflexive
 SFX Q0 ir írmene ir	ds:pronomenal+reflexive
+SFX Q0 ir írmende ir	ds:pronomenal+reflexive
 SFX Q0 ge mege ge	ds:pronomenal+reflexive
 SFX Q0 ar àrmege ar	ds:pronomenal+reflexive
 SFX Q0 er érmege er	ds:pronomenal+reflexive
 SFX Q0 ir írmege ir	ds:pronomenal+reflexive
 SFX Q0 ge n ge	ds:pronomenal+genitive
 SFX Q0 ge ne ge	ds:pronomenal+genitive
+SFX Q0 ge nde ge	ds:pronomenal+genitive
 SFX Q0 0 n r	ds:pronomenal+genitive
 SFX Q0 0 ne r	ds:pronomenal+genitive
+SFX Q0 0 nde r	ds:pronomenal+genitive
 SFX Q0 ge se ge	ds:pronomenal+reflexive
 SFX Q0 0 se r	ds:pronomenal+reflexive
 SFX Q0 ge sen ge	ds:pronomenal+reflexive
 SFX Q0 ge sene ge	ds:pronomenal+reflexive
+SFX Q0 ge sende ge	ds:pronomenal+reflexive
 SFX Q0 ar àrsen ar	ds:pronomenal+reflexive
 SFX Q0 er érsen er	ds:pronomenal+reflexive
 SFX Q0 ir írsen ir	ds:pronomenal+reflexive
 SFX Q0 ar àrsene ar	ds:pronomenal+reflexive
+SFX Q0 ar àrsende ar	ds:pronomenal+reflexive
 SFX Q0 er érsene er	ds:pronomenal+reflexive
+SFX Q0 er érsende er	ds:pronomenal+reflexive
 SFX Q0 ir írsene ir	ds:pronomenal+reflexive
+SFX Q0 ir írsende ir	ds:pronomenal+reflexive
 SFX Q0 ge sege ge	ds:pronomenal+reflexive
 SFX Q0 ar àrsege ar	ds:pronomenal+reflexive
 SFX Q0 er érsege er	ds:pronomenal+reflexive
@@ -4602,12 +4626,16 @@ SFX Q0 ge te ge	ds:pronomenal+reflexive
 SFX Q0 0 te r	ds:pronomenal+reflexive
 SFX Q0 ge ten ge	ds:pronomenal+reflexive
 SFX Q0 ge tene ge	ds:pronomenal+reflexive
+SFX Q0 ge tende ge	ds:pronomenal+reflexive
 SFX Q0 ar àrten ar	ds:pronomenal+reflexive
 SFX Q0 er érten er	ds:pronomenal+reflexive
 SFX Q0 ir írten ir	ds:pronomenal+reflexive
 SFX Q0 ar àrtene ar	ds:pronomenal+reflexive
+SFX Q0 ar àrtende ar	ds:pronomenal+reflexive
 SFX Q0 er értene er	ds:pronomenal+reflexive
+SFX Q0 er értende er	ds:pronomenal+reflexive
 SFX Q0 ir írtene ir	ds:pronomenal+reflexive
+SFX Q0 ir írtende ir	ds:pronomenal+reflexive
 SFX Q0 ge tege ge	ds:pronomenal+reflexive
 SFX Q0 ar àrtege ar	ds:pronomenal+reflexive
 SFX Q0 er értege er	ds:pronomenal+reflexive
@@ -4616,12 +4644,16 @@ SFX Q0 ge ve ge	ds:pronomenal+reflexive
 SFX Q0 0 ve r	ds:pronomenal+reflexive
 SFX Q0 ge ven ge	ds:pronomenal+reflexive
 SFX Q0 ge vene ge	ds:pronomenal+reflexive
+SFX Q0 ge vende ge	ds:pronomenal+reflexive
 SFX Q0 ar àrven ar	ds:pronomenal+reflexive
 SFX Q0 er érven er	ds:pronomenal+reflexive
 SFX Q0 ir írven ir	ds:pronomenal+reflexive
 SFX Q0 ar àrvene ar	ds:pronomenal+reflexive
+SFX Q0 ar àrvende ar	ds:pronomenal+reflexive
 SFX Q0 er érvene er	ds:pronomenal+reflexive
+SFX Q0 er érvende er	ds:pronomenal+reflexive
 SFX Q0 ir írvene ir	ds:pronomenal+reflexive
+SFX Q0 ir írvende ir	ds:pronomenal+reflexive
 SFX Q0 ge vege ge	ds:pronomenal+reflexive
 SFX Q0 ar àrvege ar	ds:pronomenal+reflexive
 SFX Q0 er érvege er	ds:pronomenal+reflexive
@@ -4630,40 +4662,54 @@ SFX Q0 tu ge itu	ds:pronomenal+locative
 SFX Q0 tu gen itu	ds:pronomenal+genitive+locative
 SFX Q0 tu gin itu	ds:pronomenal+genitive+locative
 SFX Q0 tu gene itu	ds:pronomenal+genitive+locative
+SFX Q0 tu gende itu	ds:pronomenal+genitive+locative
 SFX Q0 tu gine itu	ds:pronomenal+genitive+locative
+SFX Q0 tu ginde itu	ds:pronomenal+genitive+locative
 SFX Q0 tu me itu	ds:pronomenal+reflexive
 SFX Q0 tu men itu	ds:pronomenal+reflexive
 SFX Q0 tu mene itu	ds:pronomenal+reflexive
+SFX Q0 tu mende itu	ds:pronomenal+reflexive
 SFX Q0 tu n itu	ds:pronomenal+genitive
 SFX Q0 tu ne itu	ds:pronomenal+genitive
+SFX Q0 tu nde itu	ds:pronomenal+genitive
 SFX Q0 tu se itu	ds:pronomenal+reflexive
 SFX Q0 tu sen itu	ds:pronomenal+reflexive
 SFX Q0 tu sene itu	ds:pronomenal+reflexive
+SFX Q0 tu sende itu	ds:pronomenal+reflexive
 SFX Q0 u e itu	ds:pronomenal+reflexive
 SFX Q0 u en itu	ds:pronomenal+reflexive
 SFX Q0 u ene itu	ds:pronomenal+reflexive
+SFX Q0 u ende itu	ds:pronomenal+reflexive
 SFX Q0 tu ve itu	ds:pronomenal+reflexive
 SFX Q0 tu ven itu	ds:pronomenal+reflexive
 SFX Q0 tu vene itu	ds:pronomenal+reflexive
+SFX Q0 tu vende itu	ds:pronomenal+reflexive
 SFX Q0 tu ge istu	ds:pronomenal+locative
 SFX Q0 tu gen istu	ds:pronomenal+genitive+locative
 SFX Q0 tu gin istu	ds:pronomenal+genitive+locative
 SFX Q0 tu gene istu	ds:pronomenal+genitive+locative
+SFX Q0 tu gende istu	ds:pronomenal+genitive+locative
 SFX Q0 tu gine istu	ds:pronomenal+genitive+locative
+SFX Q0 tu ginde istu	ds:pronomenal+genitive+locative
 SFX Q0 tu me istu	ds:pronomenal+reflexive
 SFX Q0 tu men istu	ds:pronomenal+reflexive
 SFX Q0 tu mene istu	ds:pronomenal+reflexive
+SFX Q0 tu mende istu	ds:pronomenal+reflexive
 SFX Q0 tu n istu	ds:pronomenal+genitive
 SFX Q0 tu ne istu	ds:pronomenal+genitive
+SFX Q0 tu nde istu	ds:pronomenal+genitive
 SFX Q0 tu se istu	ds:pronomenal+reflexive
 SFX Q0 tu sen istu	ds:pronomenal+reflexive
 SFX Q0 tu sene istu	ds:pronomenal+reflexive
+SFX Q0 tu sende istu	ds:pronomenal+reflexive
 SFX Q0 u e istu	ds:pronomenal+reflexive
 SFX Q0 u en istu	ds:pronomenal+reflexive
 SFX Q0 u ene istu	ds:pronomenal+reflexive
+SFX Q0 u ende istu	ds:pronomenal+reflexive
 SFX Q0 tu ve istu	ds:pronomenal+reflexive
 SFX Q0 tu ven istu	ds:pronomenal+reflexive
 SFX Q0 tu vene istu	ds:pronomenal+reflexive
+SFX Q0 tu vende istu	ds:pronomenal+reflexive
 SFX Q0 0 lo ar	is:singular+masculine ds:pronomenal+reflexive
 SFX Q0 0 li ar	is:singular+masculine ds:pronomenal+reflexive
 SFX Q0 0 la ar	is:singular+masculine ds:pronomenal+reflexive
@@ -4680,40 +4726,54 @@ SFX Q0 mi ge omi	ds:pronomenal+locative
 SFX Q0 mi gen omi	ds:pronomenal+genitive+locative
 SFX Q0 mi gin omi	ds:pronomenal+genitive+locative
 SFX Q0 mi gene omi	ds:pronomenal+genitive+locative
+SFX Q0 mi gende omi	ds:pronomenal+genitive+locative
 SFX Q0 mi gine omi	ds:pronomenal+genitive+locative
+SFX Q0 mi ginde omi	ds:pronomenal+genitive+locative
 SFX Q0 i e omi	ds:pronomenal+reflexive
 SFX Q0 i en omi	ds:pronomenal+reflexive
 SFX Q0 i ene omi	ds:pronomenal+reflexive
+SFX Q0 i ende omi	ds:pronomenal+reflexive
 SFX Q0 mi n omi	ds:pronomenal+genitive
 SFX Q0 mi ne omi	ds:pronomenal+genitive
+SFX Q0 mi nde omi	ds:pronomenal+genitive
 SFX Q0 mi se omi	ds:pronomenal+reflexive
 SFX Q0 mi sen omi	ds:pronomenal+reflexive
 SFX Q0 mi sene omi	ds:pronomenal+reflexive
+SFX Q0 mi sende omi	ds:pronomenal+reflexive
 SFX Q0 mi te omi	ds:pronomenal+reflexive
 SFX Q0 mi ten omi	ds:pronomenal+reflexive
 SFX Q0 mi tene omi	ds:pronomenal+reflexive
+SFX Q0 mi tende omi	ds:pronomenal+reflexive
 SFX Q0 mi ve omi	ds:pronomenal+reflexive
 SFX Q0 mi ven omi	ds:pronomenal+reflexive
 SFX Q0 mi vene omi	ds:pronomenal+reflexive
+SFX Q0 mi vende omi	ds:pronomenal+reflexive
 SFX Q0 iso ísoge iso	ds:pronomenal+locative
 SFX Q0 iso ísogen iso	ds:pronomenal+genitive+locative
 SFX Q0 iso ísogin iso	ds:pronomenal+genitive+locative
 SFX Q0 iso ísogene iso	ds:pronomenal+genitive+locative
+SFX Q0 iso ísogende iso	ds:pronomenal+genitive+locative
 SFX Q0 iso ísogine iso	ds:pronomenal+genitive+locative
+SFX Q0 iso ísoginde iso	ds:pronomenal+genitive+locative
 SFX Q0 iso ísome iso	ds:pronomenal+reflexive
 SFX Q0 iso ísomen iso	ds:pronomenal+reflexive
 SFX Q0 iso ísomene iso	ds:pronomenal+reflexive
+SFX Q0 iso ísomende iso	ds:pronomenal+reflexive
 SFX Q0 iso íson iso	ds:pronomenal+genitive
 SFX Q0 iso ísone iso	ds:pronomenal+genitive
+SFX Q0 iso ísonde iso	ds:pronomenal+genitive
 SFX Q0 iso ísose iso	ds:pronomenal+reflexive
 SFX Q0 iso ísosen iso	ds:pronomenal+reflexive
 SFX Q0 iso ísosene iso	ds:pronomenal+reflexive
+SFX Q0 iso ísosende iso	ds:pronomenal+reflexive
 SFX Q0 iso ísote iso	ds:pronomenal+reflexive
 SFX Q0 iso ísoten iso	ds:pronomenal+reflexive
 SFX Q0 iso ísotene iso	ds:pronomenal+reflexive
+SFX Q0 iso ísotende iso	ds:pronomenal+reflexive
 SFX Q0 iso ísove iso	ds:pronomenal+reflexive
 SFX Q0 iso ísoven iso	ds:pronomenal+reflexive
 SFX Q0 iso ísovene iso	ds:pronomenal+reflexive
+SFX Q0 iso ísovende iso	ds:pronomenal+reflexive
 
 # vèrbi pronomenali (takai ko èle no vanesente)
 SFX Ql Y 158
@@ -5003,19 +5063,21 @@ SFX Q7 iso ísoveƚa iso	is:singular+femenine ds:pronomenal+reflexive
 SFX Q7 iso ísoveƚe iso	is:plural+femenine ds:pronomenal+reflexive
 
 # vèrbi pronomenali (takai)
-SFX R0 Y 35
+SFX R0 Y 40
 SFX R0 0 ge [aeioòu]r	ds:pronomenal+locative
 SFX R0 àr arge àr	ds:pronomenal+locative
 SFX R0 ór orge ór	ds:pronomenal+locative
 SFX R0 0 gen [aàeiíoòóu]r	ds:pronomenal+genitive+locative
 SFX R0 0 gin [aàeiíoòóu]r	ds:pronomenal+genitive+locative
 SFX R0 0 gene [aàeiíoòóu]r	ds:pronomenal+genitive+locative
+SFX R0 0 gende [aàeiíoòóu]r	ds:pronomenal+genitive+locative
 SFX R0 0 gine [aàeiíoòóu]r	ds:pronomenal+genitive+locative
 SFX R0 0 me [aeioòu]r	ds:pronomenal+reflexive
 SFX R0 àr arme àr	ds:pronomenal+reflexive
 SFX R0 ór orme ór	ds:pronomenal+reflexive
 SFX R0 0 men [aàeiíoòóu]r	ds:pronomenal+reflexive
 SFX R0 0 mene [aàeiíoòóu]r	ds:pronomenal+reflexive
+SFX R0 0 mende [aàeiíoòóu]r	ds:pronomenal+reflexive
 SFX R0 0 mege [aàeiíoòóu]r	ds:pronomenal+reflexive
 SFX R0 0 n [aeioòu]r	ds:pronomenal+genitive
 SFX R0 0 ne [aeioòu]r	ds:pronomenal+genitive
@@ -5026,18 +5088,21 @@ SFX R0 àr arse àr	ds:pronomenal+reflexive
 SFX R0 ór orse ór	ds:pronomenal+reflexive
 SFX R0 0 sen [aàeiíoòóu]r	ds:pronomenal+reflexive
 SFX R0 0 sene [aàeiíoòóu]r	ds:pronomenal+reflexive
+SFX R0 0 sende [aàeiíoòóu]r	ds:pronomenal+reflexive
 SFX R0 0 sege [aàeiíoòóu]r	ds:pronomenal+reflexive
 SFX R0 0 te [aeioòu]r	ds:pronomenal+reflexive
 SFX R0 àr arte àr	ds:pronomenal+reflexive
 SFX R0 ór orte ór	ds:pronomenal+reflexive
 SFX R0 0 ten [aàeiíoòóu]r	ds:pronomenal+reflexive
 SFX R0 0 tene [aàeiíoòóu]r	ds:pronomenal+reflexive
+SFX R0 0 tende [aàeiíoòóu]r	ds:pronomenal+reflexive
 SFX R0 0 tege [aàeiíoòóu]r	ds:pronomenal+reflexive
 SFX R0 0 ve [aeioòu]r	ds:pronomenal+reflexive
 SFX R0 àr arve àr	ds:pronomenal+reflexive
 SFX R0 ór orve ór	ds:pronomenal+reflexive
 SFX R0 0 ven [aàeiíoòóu]r	ds:pronomenal+reflexive
 SFX R0 0 vene [aàeiíoòóu]r	ds:pronomenal+reflexive
+SFX R0 0 vende [aàeiíoòóu]r	ds:pronomenal+reflexive
 SFX R0 0 vege [aàeiíoòóu]r	ds:pronomenal+reflexive
 
 # vèrbi pronomenali (takai ko èle no vanesente)
@@ -5105,63 +5170,78 @@ SFX R7 0 veƚe [aàeiíoòóu]r	is:plural+femenine ds:pronomenal+reflexive
 
 
 # vèrbi pronomenali pal komandativo (destakai)
-SFX S0 Y 56
+SFX S0 Y 71
 SFX S0 a e-ge a	ds:pronomenal+locative
 SFX S0 a e-gen a	ds:pronomenal+genitive+locative
 SFX S0 a e-gin a	ds:pronomenal+genitive+locative
 SFX S0 a e-gene a	ds:pronomenal+genitive+locative
+SFX S0 a e-gende a	ds:pronomenal+genitive+locative
 SFX S0 a e-gine a	ds:pronomenal+genitive+locative
 SFX S0 a e-me a	ds:pronomenal+reflexive
 SFX S0 a e-men a	ds:pronomenal+reflexive
 SFX S0 a e-mene a	ds:pronomenal+reflexive
+SFX S0 a e-mende a	ds:pronomenal+reflexive
 SFX S0 a e-n a	ds:pronomenal+genitive
 SFX S0 a e-ne a	ds:pronomenal+genitive
 SFX S0 a e-se a	ds:pronomenal+reflexive
 SFX S0 a e-sen a	ds:pronomenal+reflexive
 SFX S0 a e-sene a	ds:pronomenal+reflexive
+SFX S0 a e-sende a	ds:pronomenal+reflexive
 SFX S0 a e-te a	ds:pronomenal+reflexive
 SFX S0 a e-ten a	ds:pronomenal+reflexive
 SFX S0 a e-tene a	ds:pronomenal+reflexive
+SFX S0 a e-tende a	ds:pronomenal+reflexive
 SFX S0 a e-ve a	ds:pronomenal+reflexive
 SFX S0 a e-ven a	ds:pronomenal+reflexive
 SFX S0 a e-vene a	ds:pronomenal+reflexive
+SFX S0 a e-vende a	ds:pronomenal+reflexive
 SFX S0 i e-ge i	ds:pronomenal+locative
 SFX S0 i e-gen i	ds:pronomenal+genitive+locative
 SFX S0 i e-gin i	ds:pronomenal+genitive+locative
 SFX S0 i e-gene i	ds:pronomenal+genitive+locative
+SFX S0 i e-gende i	ds:pronomenal+genitive+locative
 SFX S0 i e-gine i	ds:pronomenal+genitive+locative
 SFX S0 i e-me i	ds:pronomenal+reflexive
 SFX S0 i e-men i	ds:pronomenal+reflexive
 SFX S0 i e-mene i	ds:pronomenal+reflexive
+SFX S0 i e-mende i	ds:pronomenal+reflexive
 SFX S0 i e-n i	ds:pronomenal+genitive
 SFX S0 i e-ne i	ds:pronomenal+genitive
 SFX S0 i e-se i	ds:pronomenal+reflexive
 SFX S0 i e-sen i	ds:pronomenal+reflexive
 SFX S0 i e-sene i	ds:pronomenal+reflexive
+SFX S0 i e-sende i	ds:pronomenal+reflexive
 SFX S0 i e-te i	ds:pronomenal+reflexive
 SFX S0 i e-ten i	ds:pronomenal+reflexive
 SFX S0 i e-tene i	ds:pronomenal+reflexive
+SFX S0 i e-tende i	ds:pronomenal+reflexive
 SFX S0 i e-ve i	ds:pronomenal+reflexive
 SFX S0 i e-ven i	ds:pronomenal+reflexive
 SFX S0 i e-vene i	ds:pronomenal+reflexive
+SFX S0 i e-vende i	ds:pronomenal+reflexive
 SFX S0 0 -ge [aàèéiíno]	ds:pronomenal+locative
 SFX S0 0 -gen [aàèéiíno]	ds:pronomenal+genitive+locative
 SFX S0 0 -gin [aàèéiíno]	ds:pronomenal+genitive+locative
 SFX S0 0 -gene [aàèéiíno]	ds:pronomenal+genitive+locative
+SFX S0 0 -gende [aàèéiíno]	ds:pronomenal+genitive+locative
 SFX S0 0 -gine [aàèéiíno]	ds:pronomenal+genitive+locative
 SFX S0 0 -me [aàèéiíno]	ds:pronomenal+reflexive
 SFX S0 0 -men [aàèéiíno]	ds:pronomenal+reflexive
 SFX S0 0 -mene [aàèéiíno]	ds:pronomenal+reflexive
+SFX S0 0 -mende [aàèéiíno]	ds:pronomenal+reflexive
 SFX S0 0 -n [aàèéiío]	ds:pronomenal+genitive
 SFX S0 0 -ne [aàèéiíno]	ds:pronomenal+genitive
 SFX S0 0 -se [aàèéiíno]	ds:pronomenal+reflexive
 SFX S0 0 -sen [aàèéiíno]	ds:pronomenal+reflexive
 SFX S0 0 -sene [aàèéiíno]	ds:pronomenal+reflexive
+SFX S0 0 -sende [aàèéiíno]	ds:pronomenal+reflexive
 SFX S0 0 -te [aàèéiíno]	ds:pronomenal+reflexive
 SFX S0 0 -tene [aàèéiíno]	ds:pronomenal+reflexive
+SFX S0 0 -tende [aàèéiíno]	ds:pronomenal+reflexive
 SFX S0 0 -ve [aàèéiíno]	ds:pronomenal+reflexive
 SFX S0 0 -ven [aàèéiíno]	ds:pronomenal+reflexive
 SFX S0 0 -vene [aàèéiíno]	ds:pronomenal+reflexive
+SFX S0 0 -vende [aàèéiíno]	ds:pronomenal+reflexive
 
 # vèrbi pronomenali pal komandativo (destakai senŧa èle vanesente)
 SFX Sl Y 90
@@ -5332,80 +5412,96 @@ SFX S7 0 -veƚi [aàèéiíno]	ds:pronomenal+reflexive
 SFX S7 0 -veƚe [aàèéiíno]	ds:pronomenal+reflexive
 
 # vèrbi pronomenali (takai)
-SFX D0 Y 121
+SFX D0 Y 146
 SFX D0 0 ge [àèi]	ds:pronomenal+locative
 SFX D0 é ege é	ds:pronomenal+locative
 SFX D0 0 gen [àéèi]	ds:pronomenal+genitive+locative
 SFX D0 0 gin [àéèi]	ds:pronomenal+genitive+locative
 SFX D0 0 gene [àéèi]	ds:pronomenal+genitive+locative
+SFX D0 0 gende [àéèi]	ds:pronomenal+genitive+locative
 SFX D0 0 gine [àéèi]	ds:pronomenal+genitive+locative
 SFX D0 0 me [àèi]	ds:pronomenal+reflexive
 SFX D0 é eme é	ds:pronomenal+reflexive
 SFX D0 0 men [àéèi]	ds:pronomenal+reflexive
 SFX D0 0 mene [àéèi]	ds:pronomenal+reflexive
+SFX D0 0 mende [àéèi]	ds:pronomenal+reflexive
 SFX D0 0 mege [àéèi]	ds:pronomenal+reflexive
 SFX D0 0 n [àèi]	ds:pronomenal+genitive
 SFX D0 0 ne [àèi]	ds:pronomenal+genitive
 SFX D0 é en é	ds:pronomenal+genitive
 SFX D0 é ene é	ds:pronomenal+genitive
+SFX D0 é ende é	ds:pronomenal+genitive
 SFX D0 0 se [àèi]	ds:pronomenal+reflexive
 SFX D0 é ese é	ds:pronomenal+reflexive
 SFX D0 0 sen [àéèi]	ds:pronomenal+reflexive
 SFX D0 0 sene [àéèi]	ds:pronomenal+reflexive
+SFX D0 0 sende [àéèi]	ds:pronomenal+reflexive
 SFX D0 0 sege [àéèi]	ds:pronomenal+reflexive
 SFX D0 0 te [àèi]	ds:pronomenal+reflexive
 SFX D0 é ete é	ds:pronomenal+reflexive
 SFX D0 0 ten [àéèi]	ds:pronomenal+reflexive
 SFX D0 0 tene [àéèi]	ds:pronomenal+reflexive
+SFX D0 0 tende [àéèi]	ds:pronomenal+reflexive
 SFX D0 0 tege [àéèi]	ds:pronomenal+reflexive
 SFX D0 0 ve [àèi]	ds:pronomenal+reflexive
 SFX D0 é eve é	ds:pronomenal+reflexive
 SFX D0 0 ven [àéèi]	ds:pronomenal+reflexive
 SFX D0 0 vene [àéèi]	ds:pronomenal+reflexive
+SFX D0 0 vende [àéèi]	ds:pronomenal+reflexive
 SFX D0 0 vege [àéèi]	ds:pronomenal+reflexive
 SFX D0 agen ege agen	ds:pronomenal+locative
 SFX D0 agen egen agen	ds:pronomenal+genitive+locative
 SFX D0 agen egin agen	ds:pronomenal+genitive+locative
 SFX D0 agen egene agen	ds:pronomenal+genitive+locative
+SFX D0 agen egende agen	ds:pronomenal+genitive+locative
 SFX D0 agen egine agen	ds:pronomenal+genitive+locative
 SFX D0 agen eme agen	ds:pronomenal+reflexive
 SFX D0 agen emen agen	ds:pronomenal+reflexive
 SFX D0 agen emene agen	ds:pronomenal+reflexive
+SFX D0 agen emende agen	ds:pronomenal+reflexive
 SFX D0 agen emege agen	ds:pronomenal+reflexive
 SFX D0 agen ene agen	ds:pronomenal+genitive
 SFX D0 agen ese agen	ds:pronomenal+reflexive
 SFX D0 agen esen agen	ds:pronomenal+reflexive
 SFX D0 agen esene agen	ds:pronomenal+reflexive
+SFX D0 agen esende agen	ds:pronomenal+reflexive
 SFX D0 agen esege agen	ds:pronomenal+reflexive
 SFX D0 agen ete agen	ds:pronomenal+reflexive
 SFX D0 agen eten agen	ds:pronomenal+reflexive
 SFX D0 agen etene agen	ds:pronomenal+reflexive
+SFX D0 agen etende agen	ds:pronomenal+reflexive
 SFX D0 agen etege agen	ds:pronomenal+reflexive
 SFX D0 agen eve agen	ds:pronomenal+reflexive
 SFX D0 agen even agen	ds:pronomenal+reflexive
 SFX D0 agen evene agen	ds:pronomenal+reflexive
+SFX D0 agen evende agen	ds:pronomenal+reflexive
 SFX D0 agen evege agen	ds:pronomenal+reflexive
 SFX D0 igen ege igen	ds:pronomenal+locative
 SFX D0 igen egen igen	ds:pronomenal+genitive+locative
 SFX D0 igen egin igen	ds:pronomenal+genitive+locative
 SFX D0 igen egene igen	ds:pronomenal+genitive+locative
+SFX D0 igen egende igen	ds:pronomenal+genitive+locative
 SFX D0 igen egine igen	ds:pronomenal+genitive+locative
 SFX D0 igen eme igen	ds:pronomenal+reflexive
 SFX D0 igen emen igen	ds:pronomenal+reflexive
 SFX D0 igen emene igen	ds:pronomenal+reflexive
+SFX D0 igen emende igen	ds:pronomenal+reflexive
 SFX D0 igen emege igen	ds:pronomenal+reflexive
 SFX D0 igen ene igen	ds:pronomenal+genitive
 SFX D0 igen ese igen	ds:pronomenal+reflexive
 SFX D0 igen esen igen	ds:pronomenal+reflexive
 SFX D0 igen esene igen	ds:pronomenal+reflexive
+SFX D0 igen esende igen	ds:pronomenal+reflexive
 SFX D0 igen esege igen	ds:pronomenal+reflexive
 SFX D0 igen ete igen	ds:pronomenal+reflexive
 SFX D0 igen eten igen	ds:pronomenal+reflexive
 SFX D0 igen etene igen	ds:pronomenal+reflexive
+SFX D0 igen etende igen	ds:pronomenal+reflexive
 SFX D0 igen etege igen	ds:pronomenal+reflexive
 SFX D0 igen eve igen	ds:pronomenal+reflexive
 SFX D0 igen even igen	ds:pronomenal+reflexive
 SFX D0 igen evene igen	ds:pronomenal+reflexive
+SFX D0 igen evende igen	ds:pronomenal+reflexive
 SFX D0 igen evege igen	ds:pronomenal+reflexive
 SFX D0 n 0 [^iín]gen	ds:pronomenal+locative
 SFX D0 n 0 [^éó]ngen	ds:pronomenal+locative
@@ -5422,14 +5518,20 @@ SFX D0 óngen onme óngen	ds:pronomenal+reflexive
 SFX D0 ígen ime ígen	ds:pronomenal+reflexive
 SFX D0 gen men [^i]gen	ds:pronomenal+reflexive
 SFX D0 gen mene [^i]gen	ds:pronomenal+reflexive
+SFX D0 gen mende [^i]gen	ds:pronomenal+reflexive
 SFX D0 gen mege [^i]gen	ds:pronomenal+reflexive
 SFX D0 gen n [^iín]gen	ds:pronomenal+genitive
 SFX D0 ígen in ígen	ds:pronomenal+genitive
 SFX D0 gen ne [^iín]gen	ds:pronomenal+genitive
+SFX D0 gen nde [^iín]gen	ds:pronomenal+genitive
 SFX D0 gen ne [^èéó]ngen	ds:pronomenal+genitive
+SFX D0 gen nde [^èéó]ngen	ds:pronomenal+genitive
 SFX D0 éngen enne éngen	ds:pronomenal+genitive
+SFX D0 éngen ennde éngen	ds:pronomenal+genitive
 SFX D0 óngen onne óngen	ds:pronomenal+genitive
+SFX D0 óngen onnde óngen	ds:pronomenal+genitive
 SFX D0 ígen ine ígen	ds:pronomenal+genitive
+SFX D0 ígen inde ígen	ds:pronomenal+genitive
 SFX D0 gen se [^iín]gen	ds:pronomenal+reflexive
 SFX D0 gen se [^éó]ngen	ds:pronomenal+reflexive
 SFX D0 éngen ense éngen	ds:pronomenal+reflexive
@@ -5437,6 +5539,7 @@ SFX D0 óngen onse óngen	ds:pronomenal+reflexive
 SFX D0 ígen ise ígen	ds:pronomenal+reflexive
 SFX D0 gen sen [^i]gen	ds:pronomenal+reflexive
 SFX D0 gen sene [^i]gen	ds:pronomenal+reflexive
+SFX D0 gen sende [^i]gen	ds:pronomenal+reflexive
 SFX D0 gen sege [^i]gen	ds:pronomenal+reflexive
 SFX D0 gen te [^iín]gen	ds:pronomenal+reflexive
 SFX D0 gen te [^éó]ngen	ds:pronomenal+reflexive
@@ -5445,6 +5548,7 @@ SFX D0 óngen onte óngen	ds:pronomenal+reflexive
 SFX D0 ígen ite ígen	ds:pronomenal+reflexive
 SFX D0 gen ten [^i]gen	ds:pronomenal+reflexive
 SFX D0 gen tene [^i]gen	ds:pronomenal+reflexive
+SFX D0 gen tende [^i]gen	ds:pronomenal+reflexive
 SFX D0 gen tege [^i]gen	ds:pronomenal+reflexive
 SFX D0 gen ve [^iín]gen	ds:pronomenal+reflexive
 SFX D0 gen ve [^éó]ngen	ds:pronomenal+reflexive
@@ -5453,6 +5557,7 @@ SFX D0 óngen onve óngen	ds:pronomenal+reflexive
 SFX D0 ígen ive ígen	ds:pronomenal+reflexive
 SFX D0 gen ven [^i]gen	ds:pronomenal+reflexive
 SFX D0 gen vene [^i]gen	ds:pronomenal+reflexive
+SFX D0 gen vende [^i]gen	ds:pronomenal+reflexive
 SFX D0 gen vege [^i]gen	ds:pronomenal+reflexive
 
 # vèrbi pronomenali (takai senŧa èle vanesente)
