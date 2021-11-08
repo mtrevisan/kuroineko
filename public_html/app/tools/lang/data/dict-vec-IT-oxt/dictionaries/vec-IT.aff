@@ -4465,7 +4465,7 @@ SFX xS ir éngelo/Dl [fd]ir	ds:imperative+present is:first+plural	# T12 + én
 
 
 # vèrbi pronomenali (destakai)
-SFX P0 Y 25
+SFX P0 Y 26
 SFX P0 0 -ge [raeoòi]	ds:pronomenal+locative
 SFX P0 0 -gen [raeoòi]	ds:pronomenal+genitive+locative
 SFX P0 0 -gin [raeoòi]	ds:pronomenal+genitive+locative
@@ -4478,7 +4478,8 @@ SFX P0 0 -mene [raeoòi]	ds:pronomenal+reflexive
 SFX P0 0 -mende [raeoòi]	ds:pronomenal+reflexive
 SFX P0 0 -n [raeoòi]	ds:pronomenal+genitive
 SFX P0 0 -ne [raeoòi]	ds:pronomenal+genitive
-SFX P0 0 -nde [raeoòi]	ds:pronomenal+genitive
+SFX P0 0 -de r	ds:pronomenal+genitive
+SFX P0 0 -nde [aeoòi]	ds:pronomenal+genitive
 SFX P0 0 -se [raeoòi]	ds:pronomenal+reflexive
 SFX P0 0 -sen [raeoòi]	ds:pronomenal+reflexive
 SFX P0 0 -sene [raeoòi]	ds:pronomenal+reflexive
@@ -4554,8 +4555,9 @@ SFX P7 0 -veƚe [raeoò]	is:plural+femenine ds:pronomenal+reflexive
 
 
 # vèrbi pronomenali (takai)
-SFX Q0 Y 219
+SFX Q0 Y 220
 SFX Q0 0 ge r	ds:pronomenal+genitive+locative
+SFX Q0 0 de r	ds:pronomenal+genitive+locative
 SFX Q0 0 n ge	ds:pronomenal+genitive+locative
 SFX Q0 ar àrgen ar	ds:pronomenal+genitive+locative
 SFX Q0 er érgen er	ds:pronomenal+genitive+locative
@@ -4603,7 +4605,7 @@ SFX Q0 ge ne ge	ds:pronomenal+genitive
 SFX Q0 ge nde ge	ds:pronomenal+genitive
 SFX Q0 0 n r	ds:pronomenal+genitive
 SFX Q0 0 ne r	ds:pronomenal+genitive
-SFX Q0 0 nde r	ds:pronomenal+genitive
+SFX Q0 0 de r	ds:pronomenal+genitive
 SFX Q0 ge se ge	ds:pronomenal+reflexive
 SFX Q0 0 se r	ds:pronomenal+reflexive
 SFX Q0 ge sen ge	ds:pronomenal+reflexive
@@ -5063,7 +5065,7 @@ SFX Q7 iso ísoveƚa iso	is:singular+femenine ds:pronomenal+reflexive
 SFX Q7 iso ísoveƚe iso	is:plural+femenine ds:pronomenal+reflexive
 
 # vèrbi pronomenali (takai)
-SFX R0 Y 40
+SFX R0 Y 41
 SFX R0 0 ge [aeioòu]r	ds:pronomenal+locative
 SFX R0 àr arge àr	ds:pronomenal+locative
 SFX R0 ór orge ór	ds:pronomenal+locative
@@ -5081,6 +5083,7 @@ SFX R0 0 mende [aàeiíoòóu]r	ds:pronomenal+reflexive
 SFX R0 0 mege [aàeiíoòóu]r	ds:pronomenal+reflexive
 SFX R0 0 n [aeioòu]r	ds:pronomenal+genitive
 SFX R0 0 ne [aeioòu]r	ds:pronomenal+genitive
+SFX R0 0 de [aeioòu]r	ds:pronomenal+genitive
 SFX R0 àr arne àr	ds:pronomenal+genitive
 SFX R0 ór orne ór	ds:pronomenal+genitive
 SFX R0 0 se [aeioòu]r	ds:pronomenal+reflexive
@@ -7065,20 +7068,22 @@ SFX e7 a èƚa/F0 [^ò][dƚns]a	ds:èl
 SFX e7 o èƚo/M0 [^ò][cdstv]o	ds:èl
 
 # sostantivi/ajetivi alterai – demenutivi (-in/-ina)
-SFX iN Y 50
+SFX iN Y 54
 SFX iN 0 in/M0Bu n	ds:in
 SFX iN ò oin/M0Bu ò	ds:in
 SFX iN èl elin/M0Bu èl	ds:in
 SFX iN òl olin/M0Bu òl	ds:in
 SFX iN èr erin/M0Bu èr	ds:in
 SFX iN òr orin/M0Bu òr	ds:in
-SFX iN a ina/F0 [^bcdklƚnrstŧx]a	ds:in
+SFX iN a ina/F0 [^bcdkjɉlƚnrstŧx]a	ds:in
 SFX iN e in/M0Bu [^t]e	ds:in
 SFX iN o in/M0Bu [^cdđjɉkƚpstŧúx]o	ds:in
 SFX iN 0 in/M0Bu [^èò][lr]	ds:in
 SFX iN òba obina/F0 òba	ds:in
 SFX iN òca ocina/F0 òca	ds:in
 SFX iN òda odina/F0 òda	ds:in
+SFX iN èja ejina/F0 èja	ds:in
+SFX iN èɉa eɉina/F0 èɉa	ds:in
 SFX iN òka okina/F0 òka	ds:in
 SFX iN èla elina/F0 èla	ds:in
 SFX iN èƚa eƚina/F0 èƚa	ds:in
@@ -7096,6 +7101,8 @@ SFX iN òco ocin/M0Bu òco	ds:in
 SFX iN èco ecin/M0Bu èco	ds:in
 SFX iN òdo odin/M0Bu òdo	ds:in
 SFX iN èđo eđin/M0Bu èđo	ds:in
+SFX iN èjo ejin/M0Bu èjo	ds:in
+SFX iN èɉo eɉin/M0Bu èɉo	ds:in
 SFX iN òjo ojin/M0Bu òjo	ds:in
 SFX iN òɉo oɉin/M0Bu òɉo	ds:in
 SFX iN òko okin/M0Bu òko	ds:in
@@ -7110,12 +7117,12 @@ SFX iN èŧo eŧin/M0Bu èŧo	ds:in
 SFX iN òŧo oŧin/M0Bu òŧo	ds:in
 SFX iN èxo exin/M0Bu èxo	ds:in
 SFX iN e in/M0Bu [^è]te	ds:in
-SFX iN a ina/F0 [^èò][lƚ]a	ds:in
+SFX iN a ina/F0 [^èò][jɉlƚ]a	ds:in
 SFX iN a ina/F0 [^ò][bcdknstŧ]a	ds:in
 SFX iN a ina/F0 [^è][rx]a	ds:in
-SFX iN o in/M0Bu [^ò][djɉkp]o	ds:in
+SFX iN o in/M0Bu [^ò][dkp]o	ds:in
 SFX iN o in/M0Bu [^è][đx]o	ds:in
-SFX iN o in/M0Bu [^èò][cƚstŧ]o	ds:in
+SFX iN o in/M0Bu [^èò][cjɉƚstŧ]o	ds:in
 
 # sostantivi alterai – demenutivi (-?)
 #SFX 00 . (e)đin/A1 [?]
@@ -7125,7 +7132,7 @@ SFX iN o in/M0Bu [^èò][cƚstŧ]o	ds:in
 
 
 # sostantivi/ajetivi alterai - kresitivi (-on/B1BuPd)
-SFX o0 Y 48
+SFX o0 Y 52
 SFX o0 0 on/B1BuPd n	is:singular+masculine ds:on
 SFX o0 èa eon/B1BuPd èa	is:singular+masculine ds:on
 SFX o0 ía ion/B1BuPd [aeiou]ía	is:singular+masculine ds:on
@@ -7133,7 +7140,7 @@ SFX o0 ía ïon/B1BuPd [^aeiou]ía	is:singular+masculine ds:on
 SFX o0 èl elon/B1BuPd èl	is:singular+masculine ds:on
 SFX o0 òl olon/B1BuPd òl	is:singular+masculine ds:on
 SFX o0 èr eron/B1BuPd èr	is:singular+masculine ds:on
-SFX o0 a on/B1BuPd [^bcđéèílmnprstŧx]a	is:singular+masculine ds:on
+SFX o0 a on/B1BuPd [^bcđéèíjɉlmnprstŧx]a	is:singular+masculine ds:on
 SFX o0 e on/B1BuPd [^t]e	is:singular+masculine ds:on
 SFX o0 0 on/B1BuPd [^èò]l	is:singular+masculine ds:on
 SFX o0 0 n/B1BuPd [^bcdjɉkmpstŧ]o	is:singular+masculine ds:on
@@ -7141,6 +7148,8 @@ SFX o0 0 on/B1BuPd [^è]r	is:singular+masculine ds:on
 SFX o0 èba ebon/B1BuPd èba	is:singular+masculine ds:on
 SFX o0 òca ocon/B1BuPd òca	is:singular+masculine ds:on
 SFX o0 òđa ođon/B1BuPd òđa	is:singular+masculine ds:on
+SFX o0 èja ejon/B1BuPd èja	is:singular+masculine ds:on
+SFX o0 èɉa eɉon/B1BuPd èɉa	is:singular+masculine ds:on
 SFX o0 èla elon/B1BuPd èla	is:singular+masculine ds:on
 SFX o0 òla olon/B1BuPd òla	is:singular+masculine ds:on
 SFX o0 èma emon/B1BuPd èma	is:singular+masculine ds:on
@@ -7157,6 +7166,8 @@ SFX o0 òbo obon/B1BuPd òbo	is:singular+masculine ds:on
 SFX o0 èco econ/B1BuPd èco	is:singular+masculine ds:on
 SFX o0 òco ocon/B1BuPd òco	is:singular+masculine ds:on
 SFX o0 òdo odon/B1BuPd òdo	is:singular+masculine ds:on
+SFX o0 èjo ejon/B1BuPd èjo	is:singular+masculine ds:on
+SFX o0 èɉo eɉon/B1BuPd èɉo	is:singular+masculine ds:on
 SFX o0 òjo ojon/B1BuPd òjo	is:singular+masculine ds:on
 SFX o0 òɉo oɉon/B1BuPd òɉo	is:singular+masculine ds:on
 SFX o0 òko okon/B1BuPd òko	is:singular+masculine ds:on
@@ -7170,10 +7181,10 @@ SFX o0 èŧo eŧon/B1BuPd èŧo	is:singular+masculine ds:on
 SFX o0 òŧo oŧon/B1BuPd òŧo	is:singular+masculine ds:on
 SFX o0 e on/B1BuPd [^è]te	is:singular+masculine ds:on
 SFX o0 a on/B1BuPd [^èò][lp]a	is:singular+masculine ds:on
-SFX o0 a on/B1BuPd [^è][bmr]a	is:singular+masculine ds:on
+SFX o0 a on/B1BuPd [^è][bjɉmr]a	is:singular+masculine ds:on
 SFX o0 a on/B1BuPd [^ò][cđnstŧx]a	is:singular+masculine ds:on
-SFX o0 0 n/B1BuPd [^ò][bdjɉkmp]o	is:singular+masculine ds:on
-SFX o0 0 n/B1BuPd [^èò][cstŧ]o	is:singular+masculine ds:on
+SFX o0 0 n/B1BuPd [^ò][bdkmp]o	is:singular+masculine ds:on
+SFX o0 0 n/B1BuPd [^èò][cjɉstŧ]o	is:singular+masculine ds:on
 
 # sostantivi/ajetivi alterai - kresitivi (-on/BuPd)
 SFX o7 Y 16
@@ -7378,7 +7389,7 @@ SFX o4 0 ni [^èò][cƚstŧ]o	is:plural+masculine ds:on
 
 
 # sostantivi/ajetivi alterai – kresitivi (-òto/a)
-SFX oT Y 30
+SFX oT Y 32
 SFX oT 0 òto/M0FS n	ds:òto
 SFX oT èa eòta/F0 èa	ds:òto
 SFX oT ía iòta/F0 [aeiou]ía	ds:òto
@@ -7388,11 +7399,13 @@ SFX oT ío iòto/M0FS [aeiou]ío	ds:òto
 SFX oT ío ïòto/M0FS [^aeiou]ío	ds:òto
 SFX oT èr eròto/M0FS èr	ds:òto
 SFX oT òr oròto/M0FS òr	ds:òto
-SFX oT a òta/F0 [^cèílrsŧ]a	ds:òto
+SFX oT a òta/F0 [^cèíjɉlrsŧ]a	ds:òto
 SFX oT 0 òto/M0FS [^è]l	ds:òto
 SFX oT o òto/M0FS [^cíjɉk]o	ds:òto
 SFX oT 0 òto/M0FS [^èò]r	ds:òto
 SFX oT èca ecòta/F0 èca	ds:òto
+SFX oT èja ejòta/F0 èja	ds:òto
+SFX oT èɉa eɉòta/F0 èɉa	ds:òto
 SFX oT òca ocòta/F0 òca	ds:òto
 SFX oT èla elòta/F0 èla	ds:òto
 SFX oT èra eròta/F0 èra	ds:òto
@@ -7407,7 +7420,7 @@ SFX oT òko okòto/M0FS òko	ds:òto
 SFX oT o òto/M0FS [^èò]co	ds:òto
 SFX oT o òto/M0FS [^ò]ko	ds:òto
 SFX oT a òta/F0 [^èò][cr]a	ds:òto
-SFX oT a òta/F0 [^è][lsŧ]a	ds:òto
+SFX oT a òta/F0 [^è][jɉlsŧ]a	ds:òto
 SFX oT o òto/M0FS [^è][jɉ]o	ds:òto
 
 # sostantivi/ajetivi alterai – kresitivi ko èle vanesente (-òto/a)
