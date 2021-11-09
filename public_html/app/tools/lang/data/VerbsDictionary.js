@@ -8018,6 +8018,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tòrŧ",			"des",		3,	1,	"g",	"1775",			"",
 "tòrŧ",			"in",			3,	1,	"g",	"1560",			"Far déventar torto.",
 "tòrŧ",			"kon",		3,	1,	"g",	"1854",			"",
+"tòrŧ",			"kun",		3,	1,	"g",	"1896",			"(coxòto)",
 "tòrŧ",			"re",			3,	1,	"g",	"1854",			"",
 "tòrŧ",			"s",			3,	1,	"g",	"1560",			"",
 "torŧi",			"",			1,	1,	"g",	"1775",			"Andar a xonxo.",
