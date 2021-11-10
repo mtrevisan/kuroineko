@@ -204,7 +204,7 @@ Dictionaries, works, and documents used:
 
 ---------------------------------------------------------------------
 
-Northern abbreviations: ^[^ƚȽ\r\n]*e[đsvx]e(((\/[^\s\r\n\t]|(?>FS))*)?\t|–)
+Northern abbreviations: ^[^ƚȽ\r\n]*e[đsvx]e(\/[^\s\r\n\t]*|\t|–)
 NO: -r[ln][oe], -ndr[oe]
 
 -a[mstŧvx]e
@@ -238,7 +238,7 @@ NO: -r[ln][oe], -ndr[oe]
 -i[dkfgmpstŧvx]o (-igo sol ke par `figo`)
 -il[ŧ]o
 -in[kfstŧ]o
--is[pt]o
+-is[kpt]o
 
 -o[sx]e
 -òme
