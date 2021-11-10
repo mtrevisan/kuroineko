@@ -454,7 +454,7 @@ COMPOUNDRULE (|5)(--)(|6)	# sento-mi[lƚ]e
 # tèma 7 (from T1: aŧento PVT > VT, then T2: í > é)
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
-SFX t0 Y 345
+SFX t0 Y 347
 SFX t0 r va/J1 [aei]r	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX t0 ar àvami/I1 ar	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)a
 SFX t0 er évami/I1 er	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)a
@@ -594,7 +594,9 @@ SFX t0 ar erémoi/I2 ar	ds:indicative+future is:first+plural ds:interrogative	# 
 SFX t0 ar erimo/J2 ar	ds:indicative+future is:first+plural	# T4 + r[éí]mo, T4 = T1: senŧa aŧento | à > é
 SFX t0 ar erímoi/I2 ar	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo, T4 = T1: senŧa aŧento | à > é
 SFX t0 0 à/J3I3 [aei]r	ds:indicative+future is:second+singular	# T4 + rà
+SFX t0 0 as/J3I3 [aei]r	ds:indicative+future is:second+singular	# T4 + rà
 SFX t0 ò à/J3I3 erò	ds:indicative+future is:second+singular	# T4 + rà
+SFX t0 ò as/J3I3 erò	ds:indicative+future is:second+singular	# T4 + rà
 SFX t0 0 é/j3J3 [aei]r	ds:indicative+future is:second+singular	# T4 + ré
 SFX t0 ò é/j3J3 erò	ds:indicative+future is:second+singular	# T4 + ré
 SFX t0 0 è/J4I4 [aei]r	ds:indicative+future is:second+plural	# T4 + rè
@@ -1043,7 +1045,7 @@ SFX 70 r èntogeƚo/Q7 [^cijɉñ]ir	ds:gerund+simple ds:pronomenal+locative	# T7
 # -àr, -ér, -ír: skomenŧiando da 'l infenío (tèma 12 solke)
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
 # -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar (tèma 12 solke)
-SFX n0 Y 604
+SFX n0 Y 605
 SFX n0 r ve/J1 [aei]r	ds:indicative+imperfect is:first+singular	# T2 + (v)e
 SFX n0 ar àvemi/I1 ar	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)e
 SFX n0 er évemi/I1 er	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)e
@@ -1202,6 +1204,7 @@ SFX n0 ar erò/J1I1 ar	ds:indicative+future is:first+singular	# T4 + rò, T4 = T
 SFX n0 ar erà/J1I1 ar	ds:indicative+future is:first+singular	# T4 + rà, T4 = T1: senŧa aŧento | à > é
 SFX n0 ar erè/J1I1 ar	ds:indicative+future is:first+singular	# T4 + rè, T4 = T1: senŧa aŧento | à > é
 SFX n0 ar erà/J3I3 ar	ds:indicative+future is:second+singular	# T4 + rà, T4 = T1: senŧa aŧento | à > é
+SFX n0 ar eras/J3I3 ar	ds:indicative+future is:second+singular	# T4 + rà, T4 = T1: senŧa aŧento | à > é
 SFX n0 ar eré/J4I4 ar	ds:indicative+future is:second+plural	# T4 + ré, T4 = T1: senŧa aŧento | à > é
 SFX n0 ar erí/J4I4 ar	ds:indicative+future is:second+plural	# T4 + rí, T4 = T1: senŧa aŧento | à > é
 SFX n0 ar erà/J5 ar	ds:indicative+future is:third	# T4 + rà, T4 = T1: senŧa aŧento | à > é
@@ -2120,7 +2123,7 @@ SFX 7G erò gàndegeƚo/Q7 aerò	ds:gerund+simple ds:pronomenal+locative	# T2 + 
 
 
 # vèrbi -àr inregolari: (re)andar
-SFX xA Y 45
+SFX xA Y 46
 SFX xA andar vemo/J2 andar	ds:indicative+present is:first+plural	# T5 + mo
 SFX xA andar vémoi/I2 andar	ds:indicative+present is:first+plural ds:interrogative	# T5 + mo
 SFX xA andar vè/J4I4 andar	ds:indicative+present is:second+plural	# T5 = T12 + è
@@ -2136,6 +2139,7 @@ SFX xA andar vào/J1I1 andar	ds:indicative+present is:first+singular	# T8 + o
 SFX xA andar vàgo/J1 andar	ds:indicative+present is:first+singular	# T8 + o
 SFX xA andar vàgomi/I1 andar	ds:indicative+present is:first+singular ds:interrogative	# T8 + o
 SFX xA andar và/j3J3 andar	ds:indicative+present is:second+singular	# T8 + i
+SFX xA andar vàs andar	ds:indicative+present is:second+singular	# T8 + i
 SFX xA andar vàtu andar	ds:indicative+present is:second+singular ds:interrogative	# T8 + i
 SFX xA andar vàto andar	ds:indicative+present is:second+singular ds:interrogative	# T8 + i
 SFX xA andar vàstu andar	ds:indicative+present is:second+singular ds:interrogative	# T8 + i
@@ -2168,7 +2172,7 @@ SFX xA andar vede andar	ds:subjunctive+present is:second+plural	# T12 + é([dg]e
 SFX xA andar vege andar	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
 
 # vèrbi -ér inregolari: (re)av?er, (re)g(av)er, ʼ(v)er
-SFX xB Y 530
+SFX xB Y 531
 SFX xB r va/J1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xB er éa/J1I1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xB ver éa/J1I1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
@@ -2581,6 +2585,7 @@ SFX xB aver àbia aver	ds:subjunctive+present is:first+singular	# T8 + a
 SFX xB aver èpia aver	ds:subjunctive+present is:first+singular	# T8 + a
 SFX xB aver è/J1I1 aver	ds:indicative+present is:first+singular	# T8 + è
 SFX xB aver à/J3 aver	ds:indicative+present is:second+singular	# T8 + (g)à, 2s=3
+SFX xB aver às/J3I3 aver	ds:indicative+present is:second+singular	# T8 + (g)à, 2s=3
 SFX xB aver àtu/j3I3 aver	ds:indicative+present is:second+singular ds:interrogative	# T8 + (g)à, 2s=3
 SFX xB aver à aver	ds:indicative+present is:third	# T8 + (g)à
 SFX xB aver àpie aver	ds:subjunctive+present is:first+singular	# T8 + e
@@ -2741,7 +2746,7 @@ SFX xD èñer iènlo/I5 [^c]èñer	ds:indicative+present is:third ds:interrogati
 SFX xD ñer nlo/I5 èñer	ds:indicative+present is:third ds:interrogative	# T10
 
 # vèrbi -ér inregolari: (des|re)(c|t[iu]?)oler, (ben|mal|re)(vu?|ʼ)oler
-SFX xE Y 155
+SFX xE Y 156
 SFX xE ler r/P0PlP7Bu oler	ds:infinitive+simple	# T1
 SFX xE ler re [ct]oler	ds:infinitive+simple	# T1 + r(e)
 SFX xE ler re t[iu]oler	ds:infinitive+simple	# T1 + r(e)
@@ -2780,6 +2785,7 @@ SFX xE ler rémoi/I2 oler	ds:indicative+future is:first+plural ds:interrogative	
 SFX xE ler rimo/J2 oler	ds:indicative+future is:first+plural	# T4 + r[éí]mo
 SFX xE ler rímoi/I2 oler	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo
 SFX xE ler rà/j3J3I3 oler	ds:indicative+future is:second+singular	# T4 + rà
+SFX xE ler ras/J3I3 oler	ds:indicative+future is:second+singular	# T4 + rà
 SFX xE ler ré/j3J3 oler	ds:indicative+future is:second+singular	# T4 + ré
 SFX xE ler retu/I3 oler	ds:indicative+future is:second+singular ds:interrogative	# T4 + ré
 SFX xE ler ré/J4I4 oler	ds:indicative+future is:second+plural	# T4 + ré
@@ -2899,11 +2905,12 @@ SFX xE oler upiege [vʼ]oler	ds:subjunctive+present is:second+plural	# T12 + é(
 SFX xE oler upiège [vʼ]oler	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
 
 # vèrbi -àr inregolari: (dex)dar, ((dex)asue|des|kon(tra)|[lƚ]iku[ei]|putre|(ra)?re|sastu|sat[iu]s|sodis|sora|stra|stupe|tore|tume)far, (kon(tra)|mal|move|o|re|so(ra|to))star
-SFX xF Y 19
+SFX xF Y 20
 SFX xF ar àgo/J1I1 ar	ds:indicative+present is:first+singular	# T8 + o
 SFX xF ar àe/J1I1 ar	ds:indicative+present is:first+singular	# T8 + e
 SFX xF ar àge/J1I1 ar	ds:indicative+present is:first+singular	# T8 + e
 SFX xF ar à/J3 ar	ds:indicative+present is:second+singular	# T8 + e
+SFX xF ar às/J3I3 ar	ds:indicative+present is:second+singular	# T8 + e
 SFX xF ar àtu/j3I3 ar	ds:indicative+present is:second+singular ds:interrogative	# T8 + e
 SFX xF ar àto ar	ds:indicative+present is:second+singular ds:interrogative	# T8 + e
 SFX xF ar àstu ar	ds:indicative+present is:second+singular ds:interrogative	# T8 + e
@@ -2933,7 +2940,7 @@ SFX xH ar àƚo/i5 ar	ds:indicative+present is:third ds:interrogative	# T8 + e
 SFX xH r to/A1 ar	ds:participle+passive+strong is:singular+masculine
 
 # vèrbi '-er inregolari: (bene|d[ei]x|in|inter|intr[ae]|kontra|ma[lƚ]e|pre|re)díxer
-SFX xI Y 115
+SFX xI Y 116
 SFX xI íxer ir/P0 díxer	ds:infinitive+simple	# T1 + r(e)
 SFX xI íxer ire díxer	ds:infinitive+simple	# T1 + r(e)
 SFX xI íxer ixo/J1 díxer	ds:indicative+present is:first+singular	# T8 + o
@@ -2966,6 +2973,7 @@ SFX xI íxer irémoi/I2 díxer	ds:indicative+future is:first+plural ds:interroga
 SFX xI íxer irimo/J2 díxer	ds:indicative+future is:first+plural	# T4 + r[éí]mo
 SFX xI íxer irímoi/I2 díxer	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo
 SFX xI íxer irà/j3J3I3 díxer	ds:indicative+future is:second+singular	# T4 + rà
+SFX xI íxer iras/J3I3 díxer	ds:indicative+future is:second+singular	# T4 + rà
 SFX xI íxer iré/j3J3 díxer	ds:indicative+future is:second+singular	# T4 + ré
 SFX xI íxer iretu/I3 díxer	ds:indicative+future is:second+singular ds:interrogative	# T4 + ré
 SFX xI íxer iré/J4I4 díxer	ds:indicative+future is:second+plural	# T4 + ré
@@ -3097,7 +3105,7 @@ SFX xL éver ebiede éver	ds:subjunctive+present is:second+plural	# T12 + é([dg
 SFX xL éver ebiege éver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
 
 # vèrbi '-er inregolari: (re)èser
-SFX xM Y 558
+SFX xM Y 565
 SFX xM ser ra/J1 èser	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xM èser éra/J1 èser	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xM ser rami/I1 èser	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)a
@@ -3212,7 +3220,9 @@ SFX xM èser serémoi/I2 èser	ds:indicative+future is:first+plural ds:interroga
 SFX xM èser serimo/J2 èser	ds:indicative+future is:first+plural	# T4 + r[éí]mo
 SFX xM èser serímoi/I2 èser	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo
 SFX xM èser serà/j3J3I3 èser	ds:indicative+future is:second+singular	# T4 + rà
+SFX xM èser seras/J3I3 èser	ds:indicative+future is:second+singular	# T4 + rà
 SFX xM èser seré/j3J3I3 èser	ds:indicative+future is:second+singular	# T4 + ré
+SFX xM èser serés/J3I3 èser	ds:indicative+future is:second+singular	# T4 + ré
 SFX xM èser seré/J4I4 èser	ds:indicative+future is:second+plural	# T4 + ré
 SFX xM èser serí/J4I4 èser	ds:indicative+future is:second+plural	# T4 + rí
 SFX xM èser serà/J5j5 èser	ds:indicative+future is:third	# T4 + rà
@@ -3361,6 +3371,7 @@ SFX xM èser sègeƚo/D7 èser	ds:imperative+present is:second+plural ds:pronome
 SFX xM èser ségeƚo/D7 èser	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5
 SFX xM èser sígeƚo/D7 èser	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5
 SFX xM èser sí/j3J3I3S7 èser	ds:indicative+present is:second+singular	# T8 + i
+SFX xM èser sís/J3I3 èser	ds:indicative+present is:second+singular	# T8 + i
 SFX xM èser sipia èser	ds:subjunctive+present is:first+singular	# T8 + a
 SFX xM èser sipi èser	ds:subjunctive+present is:second+singular	# T8 + i
 SFX xM èser son/J1 èser	ds:indicative+present is:first+singular	# T8 + e
@@ -3375,11 +3386,13 @@ SFX xM èser sónjo èser	ds:indicative+present is:first+singular ds:interrogati
 SFX xM èser sónɉo èser	ds:indicative+present is:first+singular ds:interrogative	# T8 + e, venethian
 SFX xM èser siónmi/I1 èser	ds:indicative+present is:first+singular ds:interrogative	# T8 + e
 SFX xM èser sé/J3I3 èser	ds:indicative+present is:second+singular	# T8 + e, 2s=3
+SFX xM èser sés/J3I3 èser	ds:indicative+present is:second+singular	# T8 + e, 2s=3
 SFX xM èser é/J3I3 èser	ds:indicative+present is:second+singular	# T8 + e, 2s=3
-SFX xM èser és èser	ds:indicative+present is:second+singular	# T8 + e, 2s=3, belumat
+SFX xM èser és/J3I3 èser	ds:indicative+present is:second+singular	# T8 + e, 2s=3, belumat
 SFX xM èser xé/J3I3 èser	ds:indicative+present is:second+singular	# T8 + e, 2s=3
 SFX xM èser sítu/j3I3 èser	ds:indicative+present is:second+singular ds:interrogative	# T8 + e, 2s=3
 SFX xM èser è/J3I3 èser	ds:indicative+present is:second+singular	# T8 + e, 2s=3
+SFX xM er 0/J3I3 èser	ds:indicative+present is:second+singular	# T8 + e, 2s=3
 SFX xM er 0 èser	ds:indicative+present is:second+singular	# T8 + e, 2s=3, belumat
 SFX xM èser sé/J5j5 èser	ds:indicative+present is:third	# T8 + e = T10
 SFX xM èser é/J5j5 èser	ds:indicative+present is:third	# T8 + e = T10
@@ -3591,7 +3604,9 @@ SFX xM èser sarémoi/I2 èser	ds:indicative+future is:first+plural ds:interroga
 SFX xM èser sarimo/J2 èser	ds:indicative+future is:first+plural	# T4 + r[éí]mo
 SFX xM èser sarímoi/I2 èser	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo
 SFX xM èser sarà/j3J3I3 èser	ds:indicative+future is:second+singular	# T4 + rà
+SFX xM èser saras/J3I3 èser	ds:indicative+future is:second+singular	# T4 + rà
 SFX xM èser saré/j3J3I3 èser	ds:indicative+future is:second+singular	# T4 + ré
+SFX xM èser sarés/J3I3 èser	ds:indicative+future is:second+singular	# T4 + ré
 SFX xM èser saré/J4I4 èser	ds:indicative+future is:second+plural	# T4 + ré
 SFX xM èser sarí/J4I4 èser	ds:indicative+future is:second+plural	# T4 + rí
 SFX xM èser sarà/J5j5 èser	ds:indicative+future is:third	# T4 + rà
@@ -3658,7 +3673,7 @@ SFX xM èser sarise/J5j5N0 èser	ds:conditional+present is:third ds:interrogativ
 SFX xM èser saraƚo/i5 èser	ds:indicative+future is:third ds:interrogative	# T4 + rà
 
 # vèrbi '-er inregolari: rïèser
-SFX xN Y 512
+SFX xN Y 519
 SFX xN ser ra/J1 èser	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xN èser éra/J1 èser	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xN ser rami/I1 èser	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)a
@@ -3756,7 +3771,9 @@ SFX xN ïèser iserémoi/I2 ïèser	ds:indicative+future is:first+plural ds:inte
 SFX xN ïèser iserimo/J2 ïèser	ds:indicative+future is:first+plural	# T4 + r[éí]mo
 SFX xN ïèser iserímoi/I2 ïèser	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo
 SFX xN ïèser iserà/j3J3I3 ïèser	ds:indicative+future is:second+singular	# T4 + rà
+SFX xN ïèser iseras/J3I3 ïèser	ds:indicative+future is:second+singular	# T4 + rà
 SFX xN ïèser iseré/j3J3I3 ïèser	ds:indicative+future is:second+singular	# T4 + ré
+SFX xN ïèser iseres/J3I3 ïèser	ds:indicative+future is:second+singular	# T4 + ré
 SFX xN ïèser iseré/J4I4 ïèser	ds:indicative+future is:second+plural	# T4 + ré
 SFX xN ïèser iserí/J4I4 ïèser	ds:indicative+future is:second+plural	# T4 + rí
 SFX xN ïèser iserà/J5j5 ïèser	ds:indicative+future is:third	# T4 + rà
@@ -3891,6 +3908,7 @@ SFX xN ïèser isègeƚo/D7 ïèser	ds:imperative+present is:second+plural ds:pr
 SFX xN ïèser iségeƚo/D7 ïèser	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5
 SFX xN ïèser isígeƚo/D7 ïèser	ds:imperative+present is:second+plural ds:pronomenal+locative	# T5
 SFX xN ïèser isí/j3J3I3S7 ïèser	ds:indicative+present is:second+singular	# T8 + i
+SFX xN ïèser isís/J3I3 ïèser	ds:indicative+present is:second+singular	# T8 + i
 SFX xN ïèser isipia ïèser	ds:subjunctive+present is:first+singular	# T8 + a
 SFX xN ïèser isipi ïèser	ds:subjunctive+present is:second+singular	# T8 + i
 SFX xN ïèser ison/J1 ïèser	ds:indicative+present is:first+singular	# T8 + e
@@ -3904,10 +3922,12 @@ SFX xN ïèser isónjo ïèser	ds:indicative+present is:first+singular ds:interr
 SFX xN ïèser isónɉo ïèser	ds:indicative+present is:first+singular ds:interrogative	# T8 + e, venethian
 SFX xN ïèser isionmi/I1 ïèser	ds:indicative+present is:first+singular ds:interrogative	# T8 + e
 SFX xN ïèser isé/J3I3 ïèser	ds:indicative+present is:second+singular	# T8 + e, 2s=3
+SFX xN ïèser ises/J3I3 ïèser	ds:indicative+present is:second+singular	# T8 + e, 2s=3
 SFX xN èser é/J3I3 èser	ds:indicative+present is:second+singular	# T8 + e, 2s=3
-SFX xN èser és èser	ds:indicative+present is:second+singular	# T8 + e, 2s=3, belumat
+SFX xN èser és/J3I3 èser	ds:indicative+present is:second+singular	# T8 + e, 2s=3, belumat
 SFX xN ïèser ixé/J3I3 ïèser	ds:indicative+present is:second+singular	# T8 + e, 2s=3
 SFX xN èser è/J3I3 èser	ds:indicative+present is:second+singular	# T8 + e, 2s=3
+SFX xN er 0/J3I3 èser	ds:indicative+present is:second+singular	# T8 + e, 2s=3
 SFX xN er 0 èser	ds:indicative+present is:second+singular	# T8 + e, 2s=3, belumat
 SFX xN ïèser isé/J5j5 ïèser	ds:indicative+present is:third	# T8 + e = T10
 SFX xN èser é/J5j5 èser	ds:indicative+present is:third	# T8 + e = T10
@@ -4111,7 +4131,9 @@ SFX xN ïèser isarémoi/I2 ïèser	ds:indicative+future is:first+plural ds:inte
 SFX xN ïèser isarimo/J2 ïèser	ds:indicative+future is:first+plural	# T4 + r[éí]mo
 SFX xN ïèser isarímoi/I2 ïèser	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo
 SFX xN ïèser isarà/j3J3I3 ïèser	ds:indicative+future is:second+singular	# T4 + rà
+SFX xN ïèser isaras/J3I3 ïèser	ds:indicative+future is:second+singular	# T4 + rà
 SFX xN ïèser isaré/j3J3I3 ïèser	ds:indicative+future is:second+singular	# T4 + ré
+SFX xN ïèser isares/J3I3 ïèser	ds:indicative+future is:second+singular	# T4 + ré
 SFX xN ïèser isaré/J4I4 ïèser	ds:indicative+future is:second+plural	# T4 + ré
 SFX xN ïèser isarí/J4I4 ïèser	ds:indicative+future is:second+plural	# T4 + rí
 SFX xN ïèser isarà/J5j5 ïèser	ds:indicative+future is:third	# T4 + rà
@@ -4175,7 +4197,7 @@ SFX xN ïèser isaraƚo/i5 ïèser	ds:indicative+future is:third ds:interrogativ
 # vèrbi '-er inregolari: pu?oder
 # TODO pòser? poser?
 # TODO dover => dòxer? doxer?
-SFX xO Y 109
+SFX xO Y 110
 SFX xO oder òso/J1FS oder	ds:indicative+present is:first+singular	# T8 + o
 SFX xO oder òl oder	ds:indicative+present is:first+singular	# T8 + o
 SFX xO oder òlo/J1 oder	ds:indicative+present is:first+singular	# T8 + o
@@ -4201,6 +4223,7 @@ SFX xO der rémoi/I2 oder	ds:indicative+future is:first+plural ds:interrogative	
 SFX xO der rimo/J2 oder	ds:indicative+future is:first+plural	# T4 + r[éí]mo
 SFX xO der rímoi/I2 oder	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo
 SFX xO der rà/j3J3I3 oder	ds:indicative+future is:second+singular	# T4 + rà
+SFX xO der ras/J3I3 oder	ds:indicative+future is:second+singular	# T4 + rà
 SFX xO der ré/j3J3 oder	ds:indicative+future is:second+singular	# T4 + ré
 SFX xO der retu/I3 oder	ds:indicative+future is:second+singular ds:interrogative	# T4 + ré
 SFX xO der ré/J4I4 oder	ds:indicative+future is:second+plural	# T4 + ré
@@ -4287,8 +4310,9 @@ SFX xO der risiè oder	ds:conditional+present is:second+singular	# T4 + r(is)iè
 SFX xO der ríe oder	ds:conditional+present is:third	# T4 + ríe
 
 # vèrbi '-er inregolari: (pre|re|stra)sav?er
-SFX xP Y 52
+SFX xP Y 54
 SFX xP aver à/J3 aver	ds:indicative+present is:second+singular	# T8 + i, 2s=3
+SFX xP aver às/J3I3 aver	ds:indicative+present is:second+singular	# T8 + i, 2s=3
 SFX xP aver ào/J1I1 aver	ds:indicative+present is:first+singular ds:interrogative	# T8 + e
 SFX xP aver àomi/I1 aver	ds:indicative+present is:first+singular ds:interrogative	# T8 + e
 SFX xP aver ò/J1I1 aver	ds:indicative+present is:first+singular	# T8 + o
@@ -4322,6 +4346,7 @@ SFX xP ver pié aver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
 SFX xP ver piede aver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
 SFX xP ver piege aver	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
 SFX xP aer à/J3 aer	ds:indicative+present is:second+singular	# T8 + i, 2s=3
+SFX xP aer às/J3I3 aer	ds:indicative+present is:second+singular	# T8 + i, 2s=3
 SFX xP aer ào/J1I1 aer	ds:indicative+present is:first+singular ds:interrogative	# T8 + e
 SFX xP aer ò/J1I1 aer	ds:indicative+present is:first+singular	# T8 + o
 SFX xP aer àomi/I1 aer	ds:indicative+present is:first+singular ds:interrogative	# T8 + e
@@ -4342,7 +4367,7 @@ SFX xP aer àgeƚo/D7 aer	ds:imperative+present is:second+singular ds:pronomenal
 SFX xP aer àƚo/i5 aer	ds:indicative+present is:third ds:interrogative	# T10
 
 # vèrbi '-er inregolari: (a|as|de|des|es|kon|pro|re|so)tràer
-SFX xQ Y 113
+SFX xQ Y 114
 SFX xQ àer ar/P0PlP7 tràer	ds:infinitive+simple	# T1 + r(e)
 SFX xQ àer are tràer	ds:infinitive+simple	# T1 + r(e)
 SFX xQ àer ago/J1 tràer	ds:indicative+present is:first+singular	# T8 + o
@@ -4359,6 +4384,7 @@ SFX xQ àer arémoi/I2 tràer	ds:indicative+future is:first+plural ds:interrogat
 SFX xQ àer arimo/J2 tràer	ds:indicative+future is:first+plural	# T4 + r[éí]mo
 SFX xQ àer arímoi/I2 tràer	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo
 SFX xQ àer arà/j3J3I3 tràer	ds:indicative+future is:second+singular	# T4 + rà
+SFX xQ àer aras/J3I3 tràer	ds:indicative+future is:second+singular	# T4 + rà
 SFX xQ àer aré/j3J3 tràer	ds:indicative+future is:second+singular	# T4 + ré
 SFX xQ àer aretu/I3 tràer	ds:indicative+future is:second+singular ds:interrogative	# T4 + ré
 SFX xQ àer aré/J4I4 tràer	ds:indicative+future is:second+plural	# T4 + ré
@@ -4458,10 +4484,11 @@ SFX xQ erò émogen/D0 erò	ds:imperative+present is:first+plural	# T5 + mo
 SFX xQ erò ímogen/D0 erò	ds:imperative+present is:first+plural	# T5 + mo
 
 # vèrbi -ar inregolari: [vʼ]ardar
-SFX xR Y 16
+SFX xR Y 17
 SFX xR dar a/J3 ardar	ds:indicative+present is:second+singular	# T8 + a, 2s=3
 SFX xR dar atu/I3 ardar	ds:indicative+present is:second+singular ds:interrogative	# T8 + a, 2s=3
 SFX xR dar à/j3J3I3 ardar	ds:indicative+future is:second+singular	# T4 + rà
+SFX xR dar as/J3I3 ardar	ds:indicative+future is:second+singular	# T4 + rà
 SFX xR dar é/J4I4 ardar	ds:indicative+future is:second+plural	# T4 + ré
 SFX xR dar í/J4I4 ardar	ds:indicative+future is:second+plural	# T4 + rí
 SFX xR rdo ʼ vardo	ds:imperative+present is:second+singular	# T9
@@ -4477,7 +4504,7 @@ SFX xR vàrdomi úrdagelo/Dl vàrdomi	ds:imperative+present is:second+singular d
 SFX xR vàrdomi úrdageƚo/D7 vàrdomi	ds:imperative+present is:second+singular ds:pronomenal+locative	# T9
 
 # vèrbo -ir regolar: [fd]ir
-SFX xS Y 366
+SFX xS Y 367
 SFX xS r va/J1 [fd]ir	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xS ir ívami/I1 [fd]ir	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)a
 SFX xS r a/J1I1 [fd]ir	ds:indicative+imperfect is:first+singular	# T2 + (v)a
@@ -4519,6 +4546,7 @@ SFX xS 0 émoi/I2 [fd]ir	ds:indicative+future is:first+plural ds:interrogative	#
 SFX xS 0 imo/J2 [fd]ir	ds:indicative+future is:first+plural	# T4 + r[éí]mo
 SFX xS 0 ímoi/I2 [fd]ir	ds:indicative+future is:first+plural ds:interrogative	# T4 + r[éí]mo
 SFX xS 0 à/j3J3I3 [fd]ir	ds:indicative+future is:second+singular	# T4 + rà
+SFX xS 0 as/J3I3 [fd]ir	ds:indicative+future is:second+singular	# T4 + rà
 SFX xS 0 é/j3J3 [fd]ir	ds:indicative+future is:second+singular	# T4 + ré
 SFX xS 0 etu/I3 [fd]ir	ds:indicative+future is:second+singular ds:interrogative	# T4 + ré
 SFX xS 0 è/J4I4 [fd]ir	ds:indicative+future is:second+plural	# T4 + rè
@@ -6250,16 +6278,14 @@ SFX I2 émoi emio émoi	ds:interrogative	# venethian
 SFX I2 ímoi imio ímoi	ds:interrogative	# venethian
 
 # interogativi sekonda parsona singolar (destakai)
-SFX J3 Y 4
+SFX J3 Y 3
 SFX J3 0 -tu .	ds:interrogative
 SFX J3 0 -stu .	ds:interrogative	# coxòto
-SFX J3 0 s-tu [àé]	ds:interrogative	# coxòto
 SFX J3 0 -to .	ds:interrogative	# padoan de thità, vithentin de thità, polexan de thità, veronexe de thità
 
 # interogativi sekonda parsona singolar (destakai)
-SFX j3 Y 14
+SFX j3 Y 13
 SFX j3 ea ées-tu ea	ds:interrogative	# coxòto
-SFX j3 0 s-tu àe	ds:interrogative	# coxòto
 SFX j3 ae àes-tu ae	ds:interrogative	# coxòto
 SFX j3 ave àves-tu ave	ds:interrogative	# coxòto
 SFX j3 0 s-tu àe	ds:interrogative	# coxòto
@@ -6274,12 +6300,14 @@ SFX j3 tu s-tu [^ó]tu	ds:interrogative	# coxòto
 SFX j3 tu s-tu ótu	ds:interrogative	# coxòto
 
 # interogativi sekonda parsona singolar (takai)
-SFX I3 Y 5
+SFX I3 Y 7
+SFX I3 s tu s	ds:interrogative
+SFX I3 s to s	ds:interrogative
 SFX I3 u o tu	ds:interrogative
 SFX I3 tu stu tu	ds:interrogative	# coxòto
 SFX I3 0 to [aàiíeèé]	ds:interrogative
 SFX I3 0 tu [aàiíeèé]	ds:interrogative
-SFX I3 0 stu [aàiíeèé]	ds:interrogative
+SFX I3 0 stu [aie]	ds:interrogative
 
 # interogativi sekonda parsona plural (destakai)
 SFX J4 Y 2
@@ -7442,12 +7470,12 @@ SFX eL a èla/F0 [^ò][dlnrsŧ]a	ds:èl
 SFX eL o èl/M0B1 [^ò][cdjɉstŧv]o	ds:èl
 
 # sostantivi/ajetivi alterai – demenutivi ko èle vanesente (-èƚo/a)
-SFX e7 Y 25
+SFX e7 Y 27
 SFX e7 e èƚo/M0 e	ds:èl
 SFX e7 0 èƚo/M0 n	ds:èl
 SFX e7 òr orèƚo/M0 òr	ds:èl
 SFX e7 a èƚa/F0 [^dkƚnrsú]a	ds:èl
-SFX e7 o èƚo/M0 [^cdístv]o	ds:èl
+SFX e7 o èƚo/M0 [^cdíjɉstv]o	ds:èl
 SFX e7 0 èƚo/M0 [^ò]r	ds:èl
 SFX e7 úa uèƚa/F0 [aeiou]úa	ds:èl
 SFX e7 úa üèƚa/F0 [^aeiou]úa	ds:èl
@@ -7462,12 +7490,14 @@ SFX e7 òra orèƚa/F0 òra	ds:èl
 SFX e7 òsa osèƚa/F0 òsa	ds:èl
 SFX e7 òco ocèƚo/M0 òco	ds:èl
 SFX e7 òdo odèƚo/M0 òdo	ds:èl
+SFX e7 òjo ojèƚo/M0 òjo	ds:èl
+SFX e7 òɉo oɉèƚo/M0 òɉo	ds:èl
 SFX e7 òso osèƚo/M0 òso	ds:èl
 SFX e7 òto otèƚo/M0 òto	ds:èl
 SFX e7 òvo ovèƚo/M0 òvo	ds:èl
 SFX e7 a èƚa/F0 [^èò][kr]a	ds:èl
 SFX e7 a èƚa/F0 [^ò][dƚns]a	ds:èl
-SFX e7 o èƚo/M0 [^ò][cdstv]o	ds:èl
+SFX e7 o èƚo/M0 [^ò][cdjɉstv]o	ds:èl
 
 # sostantivi/ajetivi alterai – demenutivi (-in/-ina)
 SFX iN Y 54
