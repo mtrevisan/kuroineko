@@ -4355,6 +4355,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "mand",			"",			1,	1,	"g",	"1374",			"",
 "mand",			"de",			1,	1,	"g",	"1415",			"",
 "mand",			"di",			1,	1,	"g",	"iniŧio XIII",	"",
+"mand",			"kon",		1,	1,	"g",	"1683",			"(veneŧian)",
 "mand",			"kontra",	1,	1,	"g",	"1829",			"",
 "mand",			"kontro",	1,	1,	"g",	"1829",			"Kontramandar.",
 "mand",			"re",			1,	1,	"g",	"1775",			"",
