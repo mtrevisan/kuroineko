@@ -442,8 +442,8 @@ COMPOUNDRULE (|5)(--)(|6)	# sento-mi[lƚ]e
 #
 # -àr:	kantar/t0l070n0t1P0PlP7Q0QlQ7, (kanto/t8n8tAlA7AJ1P0PlP7, kàntomi/t8n8tAlA7AI1Q0QlQ7 | exàmino/T8N8tBlB7BJ1I1P0PlP7)
 # -ér:	valer/t0l070n0t1p4l474P0PlP7Q0QlQ7, (valo/t8n8tElE7EJ1P0PlP7, vàlomi/t8n8tElE7EI1Q0QlQ7 | reflèto/T8N8tClC7CJ1I1P0PlP7)
-# '-er:	kréder/t1c1l171n1P0PlP7R0RlR7, (kredo/t8n8tElE7EJ1P0PlP7, krédomi/t8n8tElE7EI1Q0QlQ7 | gòdo/T8N8tClC7CJ1I1P0PlP7), krederò/t0n0l070p4l474J1I1
-# -ír:	dormir/t0l070n0t1P0PlP7Q0QlQ7, (dòrmo/t8n8tElE7EJ1P0PlP7, dòrmomi/t8n8tElE7EI1Q0QlQ7 | (dòrmo|feniso)/n0T8N8tClC7CJ1I1P0PlP7Q0QlQ7)
+# '-er:	kréder/t1c1l171n1P0PlP7R0RlR7, (kredo/t8n8tElE7EJ1P0PlP7, krédomi/t8n8tElE7EI1Q0QlQ7 | gòdo/T8N8tClC7CJ1I1P0PlP7 | supòno/n0T8N8tClC7CJ1I1P0PlP7FS), krederò/t0n0l070p4l474J1I1
+# -ír:	dormir/t0l070n0t1P0PlP7Q0QlQ7, (dòrmo/t8n8tElE7EJ1P0PlP7, dòrmomi/t8n8tElE7EI1Q0QlQ7 | (dòrmo|feniso)/n0N9T8N8tClC7CJ1I1P0PlP7Q0QlQ7)
 
 
 # baxe:
@@ -1061,7 +1061,7 @@ SFX 70 r èntogeƚo/Q7 [^cijɉñ]ir	ds:gerund+simple ds:pronomenal+locative	# T7
 # -àr, -ér, -ír: skomenŧiando da 'l infenío (tèma 12 solke)
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
 # -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar (tèma 12 solke)
-SFX n0 Y 617
+SFX n0 Y 615
 SFX n0 r ve/J1 [aei]r	ds:indicative+imperfect is:first+singular	# T2 + (v)e
 SFX n0 ar àvemi/I1 ar	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)e
 SFX n0 er évemi/I1 er	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)e
@@ -1573,7 +1573,6 @@ SFX n0 erò óni/I2 erò	ds:indicative+present is:first+plural ds:interrogative	
 SFX n0 ir on/J2 ir	ds:indicative+present is:first+plural	# T12 + ón
 SFX n0 ir óni/I2 ir	ds:indicative+present is:first+plural ds:interrogative	# T12 + ón
 SFX n0 0 n/J2 o	ds:indicative+present is:first+plural	# T12 + ón
-SFX n0 o óni/I2 o	ds:indicative+present is:first+plural ds:interrogative	# T12 + ón
 SFX n0 ar en/J2 ar	ds:indicative+present is:first+plural	# T12 + én
 SFX n0 ar éni/I2 ar	ds:indicative+present is:first+plural ds:interrogative	# T12 + én
 SFX n0 r n/J2 er	ds:indicative+present is:first+plural	# T12 + én
@@ -1583,7 +1582,6 @@ SFX n0 erò éni/I2 erò	ds:indicative+present is:first+plural ds:interrogative	
 SFX n0 ir en/J2 ir	ds:indicative+present is:first+plural	# T12 + én
 SFX n0 ir éni/I2 ir	ds:indicative+present is:first+plural ds:interrogative	# T12 + én
 SFX n0 o en/J2 o	ds:indicative+present is:first+plural	# T12 + én
-SFX n0 o éni/I2 o	ds:indicative+present is:first+plural ds:interrogative	# T12 + én
 SFX n0 ar on ar	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
 SFX n0 ar one ar	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
 SFX n0 ar ion [^cijɉñ]ar	ds:subjunctive+present is:first+plural	# T12 + (i)ón(e)
@@ -1679,6 +1677,10 @@ SFX n0 erò aree/J4 erò	ds:conditional+present is:second+plural	# T4 + rà(v)e
 SFX n0 erò aréeu/I4 erò	ds:conditional+present is:second+plural ds:interrogative	# T4 + rà(v)e
 SFX n0 erò aree erò	ds:conditional+present is:third	# T4 + rà(v)e
 SFX n0 er ut [^u]er	ds:participle+passive+weak is:singular+masculine	# T6 + d[oiae]
+
+SFX N9 Y 2
+SFX N9 o óni/I2 o	ds:indicative+present is:first+plural ds:interrogative	# T12 + ón
+SFX N9 o éni/I2 o	ds:indicative+present is:first+plural ds:interrogative	# T12 + én
 
 
 #----
@@ -1920,7 +1922,7 @@ SFX T8 o i/P0 [^i]so	ds:subjunctive+present is:second+singular	# T8 + i
 SFX T8 o i/P0 iso	ds:subjunctive+present is:second+singular	# T8 + i
 SFX T8 o e o	ds:subjunctive+present is:third	# T8 + e
 
-SFX N8 Y 19
+SFX N8 Y 21
 SFX N8 o e/J1 [^s]o	ds:indicative+present is:first+singular	# T8 + e
 SFX N8 o emi/I1 [^s]o	ds:indicative+present is:first+singular ds:interrogative	# T8 + e
 SFX N8 o e/J1 [^i]so	ds:indicative+present is:first+singular	# T8 + e
@@ -1940,6 +1942,8 @@ SFX N8 o e [^i]so	ds:indicative+present is:third	# T8 + e
 SFX N8 o e o	ds:subjunctive+present is:first+singular	# T8 + e
 SFX N8 o e o	ds:subjunctive+present is:second+singular	# T8 + e, 2s=3
 SFX N8 o a o	ds:subjunctive+present is:third	# T8 + a
+SFX N8 0 ni/I2 o	ds:indicative+present is:first+plural ds:interrogative	# T12 + ón
+SFX N8 o eni/I2 o	ds:indicative+present is:first+plural ds:interrogative	# T12 + én
 
 
 # baxe:
@@ -4162,7 +4166,7 @@ SFX xN ïèser isaré/J4I4 ïèser	ds:indicative+future is:second+plural	# T4 + 
 SFX xN ïèser isarí/J4I4 ïèser	ds:indicative+future is:second+plural	# T4 + rí
 SFX xN ïèser isarà/J5j5 ïèser	ds:indicative+future is:third	# T4 + rà
 SFX xN ïèser isaría ïèser	ds:conditional+present is:first+singular	# T4 + ría
-SFX xN ïèser isaríe ïèser	ds:conditional+prese2nt is:first+singular	# T4 + ríe
+SFX xN ïèser isaríe ïèser	ds:conditional+present is:first+singular	# T4 + ríe
 SFX xN ïèser isarésimo ïèser	ds:conditional+present is:first+plural	# T4 + résimo
 SFX xN ïèser isarísimo ïèser	ds:conditional+present is:first+plural	# T4 + rísimo
 SFX xN ïèser isaría ïèser	ds:conditional+present is:second+singular	# T4 + ría
@@ -6339,8 +6343,8 @@ SFX I3 is ístu is	ds:interrogative
 SFX I3 0 tu [àèéí]s	ds:interrogative
 SFX I3 u o tu	ds:interrogative
 SFX I3 tu stu tu	ds:interrogative	# coxòto
-SFX I3 0 to [aàiíeè]	ds:interrogative
-SFX I3 0 tu [aàiíeè]	ds:interrogative
+SFX I3 0 to [aàeèéií]	ds:interrogative
+SFX I3 0 tu [aàeèéií]	ds:interrogative
 
 # interogativi sekonda parsona plural (destakai)
 SFX J4 Y 2
