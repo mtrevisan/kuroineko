@@ -1,7 +1,19 @@
 version 4.0.0, 2021/??/??:
 - added ?-32103251 new words to the dictionary, reaching a total of ? unique words
 - added ?-22492 new synonyms to the dictionary, reaching a total of ?
-- revised stress
+- revised stress, now the rules are the following.
+  The graphic accent, which is usually acute and falls on the penultimate syllable, or the last if it is closed, marks the tonic accent on:
+  * words with grave stress (`amolèr`, `pòko`).
+  * truncated words ending with a vowel (`unkuò`, `piè`).
+  * on flat words that ends with a consonant, and in particular in rhizotonic verbs (`pàpol`, `kúxer`).
+  * on words where it falls before the penultimate (`làgrema`, `aplàuder`).
+  * for words that have more than one syllable, above the first vowel of a diphthong or hiatus if it's `i` or `u` (`ankúo`, `amía`).
+  * one the interrogative forms of a verb if the pronoun is attached to the verbal form (`gavémio?`).
+  * above the forms of the verbs `aver` (`à`, `è`, `ò`, etc.), `èser` (`sí`, `sé`, `é`, etc.), `dar/far/star`, `díxer`, `sa(v)er`, `tràer`.
+  Certain apocopated words (buranèl: `úʼ` from `un`, `éʼ` from `me`, `péʼ` from `per`, etc.).
+  Usually in closed syllables where after the vowel there is an `l`, `r`, or `s` is grave, if instead there is an `n` it is acute.
+  In open syllables, on the other hand, we usually have that if the following syllable begins with `l` it is grave, with `t` it is acute if it is an `e` or grave if it is an `o`.
+  Lastly, if the vowel comes after the consonant `j` it is usually open.
 - processed "Nardo Cibele, Angela. Studi sul dialetto di Burano. Venezia. 1898."
 - processed "Atti del podestà di Torcello. Torcello. 13120614, 13120619, 13120621, 13120701."
 - processed "Garlato, Agostino. Canti del popolo di Chioggia. Venezia. 1883."
