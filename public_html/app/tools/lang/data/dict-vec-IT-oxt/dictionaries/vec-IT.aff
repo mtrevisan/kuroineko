@@ -417,7 +417,6 @@ COMPOUNDRULE (|5)(--)(|6)	# sento-mi[lƚ]e
 # DHONTAT. INPARF.	T2 + se		T2 + simo					T2 + si*					T2 + si					T2 + se
 #											T11 + (is)(i)ón(e/se)								T11 + (is)ié([dg]e)
 #											T11 + (is)én(e/s[ei])
-#FIXME T4: -er- > -ar-
 # IND. FUT.*			T4 + r[òàè]	T4 + r[éí]mo				T4 + r[àé]				T4 + r[èéí]				T4 + rà
 #											T4 + rón
 #											T4 + rén
@@ -455,7 +454,7 @@ COMPOUNDRULE (|5)(--)(|6)	# sento-mi[lƚ]e
 # tèma 7 (from T1: aŧento PVT > VT, then T2: í > é)
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
-SFX t0 Y 329
+SFX t0 Y 327
 SFX t0 r va/J1 [aei]r	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX t0 ar àvami/I1 ar	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)a
 SFX t0 er évami/I1 er	ds:indicative+imperfect is:first+singular ds:interrogative	# T2 + (v)a
@@ -498,8 +497,6 @@ SFX t0 ar àvitu/j3I3 ar	ds:indicative+imperfect is:second+singular ds:interroga
 SFX t0 er évitu/j3I3 er	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)i
 SFX t0 ir ívitu/j3I3 ir	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)i
 SFX t0 r i/J3 [ae]r	ds:indicative+imperfect is:second+singular	# T2 + (v)i
-SFX t0 ar àitu/I3 ar	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)i
-SFX t0 er éitu/I3 er	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)i
 SFX t0 ar àitu/j3I3 ar	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)i
 SFX t0 er éitu/j3I3 er	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)i
 SFX t0 ir íitu/j3I3 ir	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)i
@@ -1756,7 +1753,7 @@ SFX n1 àrder ardre àrder	ds:infinitive+simple
 # tèma 4 (from T1: senŧa aŧento)
 # -àr, -ér, -ír, -ír/is: skomenŧiando da 'l infenío
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
-SFX p4 Y 96
+SFX p4 Y 111
 SFX p4 er are er	ds:infinitive+simple	# T1 + r(e)
 SFX p4 er ar/P0R0 er	ds:infinitive+simple	# T1
 SFX p4 er i er	ds:infinitive+simple	# T1, coxòto
@@ -1853,6 +1850,21 @@ SFX p4 er aràeu/I4 er	ds:conditional+present is:second+plural ds:interrogative	
 SFX p4 erò aràeu/I4 erò	ds:conditional+present is:second+plural ds:interrogative	# T4 + rà(v)e
 SFX p4 er arae er	ds:conditional+present is:third	# T4 + rà(v)e
 SFX p4 erò arae erò	ds:conditional+present is:third	# T4 + rà(v)e
+SFX p4 er ivi/J3 er	ds:indicative+imperfect is:second+singular	# T2 + (v)i
+SFX p4 er ívitu/j3I3 er	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)i
+SFX p4 er íi/J3 er	ds:indicative+imperfect is:second+singular	# T2 + (v)i
+SFX p4 er íitu/j3I3 er	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)i
+SFX p4 erò ivi/J3 erò	ds:indicative+imperfect is:second+singular	# T2 + (v)i
+SFX p4 erò ívitu/j3I3 erò	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)i
+SFX p4 erò íi/j3J3 erò	ds:indicative+imperfect is:second+singular	# T2 + (v)i
+SFX p4 erò íitu/I3 erò	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)i
+SFX p4 er ivi/J4 er	ds:indicative+imperfect is:second+plural	# T2 + (v)i
+SFX p4 er ívïu/I4 er	ds:indicative+imperfect is:second+plural ds:interrogative	# T2 + (v)i
+SFX p4 er íi/J4 er	ds:indicative+imperfect is:second+plural	# T2 + (v)i
+SFX p4 er íiu/I4 er	ds:indicative+imperfect is:second+plural ds:interrogative	# T2 + (v)i
+SFX p4 erò ivi/J4 erò	ds:indicative+imperfect is:second+plural	# T2 + (v)i
+SFX p4 erò ívïu/I4 erò	ds:indicative+imperfect is:second+plural ds:interrogative	# T2 + (v)i
+SFX p4 erò íi/J4I4 erò	ds:indicative+imperfect is:second+plural	# T2 + (v)i
 
 # variante padoana:
 # senŧa èle vanesente
@@ -1916,6 +1928,22 @@ SFX n8 o e o	ds:indicative+present is:third	# T8 + e
 SFX n8 o e o	ds:subjunctive+present is:first+singular	# T8 + e
 SFX n8 o e o	ds:subjunctive+present is:second+singular	# T8 + e, 2s=3
 SFX n8 o a o	ds:subjunctive+present is:third	# T8 + a
+
+# senŧa èle vanesente
+# tèma 8 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: VT > Ø)
+# -àr, -ér, '-er, -ír: skomenŧiando da 'l indikativo prexente de prima parsona singolar
+SFX l8 Y 3
+SFX l8 omi igelo/Ql [^i]omi	ds:indicative+present is:second+singular ds:interrogative	# T8 + i
+SFX l8 omi gelo/Ql iomi	ds:indicative+present is:second+singular ds:interrogative	# T8 + i
+SFX l8 o igelo/Ql o	ds:indicative+present is:second+singular ds:interrogative	# T8 + i
+
+# ko èle vanesente
+# tèma 8 (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: VT > Ø)
+# -àr, -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
+SFX 78 Y 3
+SFX 78 omi igeƚo/Q7 [^i]omi	ds:indicative+present is:second+singular ds:interrogative	# T8 + i
+SFX 78 omi geƚo/Q7 iomi	ds:indicative+present is:second+singular ds:interrogative	# T8 + i
+SFX 78 o igeƚo/Q7 o	ds:indicative+present is:second+singular ds:interrogative	# T8 + i
 
 # tèma 8, paròla ko asento (from T1: aŧento VT > (A)PVT | í > <ís>i, then T3: VT > Ø)
 # -àr, -ér, '-er, -ír, -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar
@@ -2225,7 +2253,7 @@ SFX xA andar vede andar	ds:subjunctive+present is:second+plural	# T12 + é([dg]e
 SFX xA andar vege andar	ds:subjunctive+present is:second+plural	# T12 + é([dg]e)
 
 # vèrbi -ér inregolari: (re)av?er, (re)g(av)er, ʼ(v)er
-SFX xB Y 575
+SFX xB Y 585
 SFX xB r va/J1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xB r a/J1I1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
 SFX xB ver ea/J1I1 [aʼ]ver	ds:indicative+imperfect is:first+singular	# T2 + (v)a
@@ -2239,6 +2267,13 @@ SFX xB er évitu/I3 aver	ds:indicative+imperfect is:second+singular ds:interroga
 SFX xB r i/j3J3I3 [aʼ]ver	ds:indicative+imperfect is:second+singular	# T2 + (v)i
 SFX xB r vi/J4 [aʼ]ver	ds:indicative+imperfect is:second+plural	# T2 + (v)i
 SFX xB r i/J4I4 [aʼ]ver	ds:indicative+imperfect is:second+plural	# T2 + (v)i
+SFX xB er ívimo/J2I2 [aʼ]ver	ds:indicative+imperfect is:first+plural	# T2 + (v)imo
+SFX xB er íimo/J2I2 [aʼ]ver	ds:indicative+imperfect is:first+plural	# T2 + (v)imo
+SFX xB er ivi/j3J3 [aʼ]ver	ds:indicative+imperfect is:second+singular	# T2 + (v)i
+SFX xB er ívitu/I3 aver	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)i
+SFX xB er íi/j3J3I3 [aʼ]ver	ds:indicative+imperfect is:second+singular	# T2 + (v)i
+SFX xB er ivi/J4 [aʼ]ver	ds:indicative+imperfect is:second+plural	# T2 + (v)i
+SFX xB er íi/J4I4 [aʼ]ver	ds:indicative+imperfect is:second+plural	# T2 + (v)i
 SFX xB r va [aʼ]ver	ds:indicative+imperfect is:third	# T2 + (v)a
 SFX xB r a [aʼ]ver	ds:indicative+imperfect is:third	# T2 + (v)a
 SFX xB er ía [aʼ]ver	ds:indicative+imperfect is:third	# T2 + (v)a
@@ -2733,6 +2768,9 @@ SFX xB er évomi/I1 [aʼ]ver	ds:indicative+imperfect is:first+singular ds:interr
 SFX xB er évitu/j3I3 [aʼ]ver	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)i
 SFX xB ver éitu/j3I3 [aʼ]ver	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)i
 SFX xB er évïu/I4 [aʼ]ver	ds:indicative+imperfect is:second+plural ds:interrogative	# T2 + (v)i
+SFX xB er ívitu/j3I3 [aʼ]ver	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)i
+SFX xB ver íitu/j3I3 [aʼ]ver	ds:indicative+imperfect is:second+singular ds:interrogative	# T2 + (v)i
+SFX xB er ívïu/I4 [aʼ]ver	ds:indicative+imperfect is:second+plural ds:interrogative	# T2 + (v)i
 SFX xB er éndoge/Q0 [aʼ]ver	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo
 SFX xB er éndege/Q0 [aʼ]ver	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + ndo = T7 + ndo, buranèl
 SFX xB er éntoge/Q0 [aʼ]ver	ds:gerund+simple ds:pronomenal+genitive+locative	# T2 + nto = T7 + nto
@@ -6438,13 +6476,14 @@ SFX J3 0 -stu [^s]	ds:interrogative	# coxòto
 SFX J3 0 -to .	ds:interrogative	# padoan de thità, vithentin de thità, polexan de thità, veronexe de thità
 
 # interogativi sekonda parsona singolar (destakai)
-SFX j3 Y 12
+SFX j3 Y 13
 SFX j3 ae àes-tu ae	ds:interrogative	# coxòto
 SFX j3 ave àves-tu ave	ds:interrogative	# coxòto
 SFX j3 0 s-tu àe	ds:interrogative	# coxòto
-SFX j3 0 s-tu éi	ds:interrogative	# coxòto
+SFX j3 0 s-tu [éí]i	ds:interrogative	# coxòto
 SFX j3 ei éis-tu ei	ds:interrogative	# coxòto
 SFX j3 evi évis-tu evi	ds:interrogative	# coxòto
+SFX j3 ivi ívis-tu ivi	ds:interrogative	# coxòto
 SFX j3 0 s-tu [èé]ri	ds:interrogative	# coxòto
 SFX j3 0 s-tu è	ds:interrogative	# coxòto
 SFX j3 à as-tu à	ds:interrogative	# coxòto
@@ -6482,7 +6521,7 @@ SFX J4 0 -o .	ds:interrogative	# padoan de thità, vithentin de thità, polexan 
 
 # interogativi sekonda parsona plural (takai)
 SFX I4 Y 13
-SFX I4 u o [àé][ei]u	ds:interrogative
+SFX I4 u o [àéí][ei]u	ds:interrogative
 SFX I4 u o à[sv][eï]u	ds:interrogative
 SFX I4 u o é[sv]ïu	ds:interrogative
 SFX I4 u o èrïu	ds:interrogative
