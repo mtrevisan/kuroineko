@@ -1694,7 +1694,6 @@ SFX N9 o éni/I2 o	ds:indicative+present is:first+plural ds:interrogative	# T12 
 # -àr, -ér, -ír: skomenŧiando da 'l infenío (tèma 12 solke)
 # '-er: skomenŧiando da 'l indikativo futuro de prima parsona singolar
 # -ír/is: skomenŧiando da 'l indikativo prexente de prima parsona singolar (tèma 12 solke)
-# FIXME interogativi?
 SFX n4 Y 110
 SFX n4 0 ou/J1 [aei]r	ds:conditional+present is:first+singular	# T4 + ro(v)e
 SFX n4 0 oo/J1 [aei]r	ds:conditional+present is:first+singular	# T4 + ro(v)e
@@ -6647,6 +6646,12 @@ SFX X0 e i e	is:plural
 SFX X0 0 e [lnr]	is:singular
 SFX X0 0 i [lnr]	is:plural
 
+# sostantivi astrati senŧa đèner (-ade > -ae/à)
+SFX X1 Y 3
+SFX X1 ade à ade	is:femenine+non_enumerable
+SFX X1 de e ade	is:femenine+non_enumerable
+SFX X1 ade è ade	is:femenine+non_enumerable	# pavan
+
 
 ### Fèltre–Belun ###
 
@@ -7373,7 +7378,7 @@ SFX w0 ente ènte ente
 
 
 # sostantivi koletivi, ...
-SFX y0 Y 39
+SFX y0 Y 36
 SFX y0 da a [aeo]da	is:singular+femenine
 SFX y0 da e [aeo]da	is:plural+femenine
 SFX y0 da a [aeiouàèéíòóúïü]ida	is:singular+femenine
@@ -7384,9 +7389,6 @@ SFX y0 da a [aeiouàèéíòóúïü]uda	is:singular+femenine
 SFX y0 da e [aeiouàèéíòóúïü]uda	is:singular+femenine
 SFX y0 uda úa [^aeiouàèéíòóúïü]uda	is:singular+femenine
 SFX y0 uda úe [^aeiouàèéíòóúïü]uda	is:singular+femenine
-SFX y0 ade à ade	is:femenine+non_enumerable
-SFX y0 de e ade	is:femenine+non_enumerable
-SFX y0 ade è ade	is:femenine+non_enumerable	# pavan
 SFX y0 ede é ede	is:femenine+non_enumerable
 SFX y0 ude ú ude	is:femenine+non_enumerable
 SFX y0 ude úe ude	is:femenine+non_enumerable
