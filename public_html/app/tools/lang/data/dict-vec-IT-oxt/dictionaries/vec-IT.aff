@@ -7120,16 +7120,28 @@ SFX v7 èra iereta/F0 [^aeoucijɉñ]èra	ds:eto
 
 
 # nominali deajetivali (-eŧa)
-SFX eZ Y 4
-SFX eZ a eŧa/F0 a	is:singular+femenine
-SFX eZ o eŧa/F0 o	is:singular+femenine
+SFX eZ Y 10
+SFX eZ a eŧa/F0 [^jɉ]a	is:singular+femenine
+SFX eZ a eŧa/F0 [^ò][jɉ]a	is:singular+femenine
+SFX eZ òja ojeŧa/F0 òja	is:singular+femenine
+SFX eZ òɉa oɉeŧa/F0 òɉa	is:singular+femenine
+SFX eZ o eŧa/F0 [^jɉ]o	is:singular+femenine
+SFX eZ o eŧa/F0 [^ò][jɉ]o	is:singular+femenine
+SFX eZ òjo ojeŧa/F0 òjo	is:singular+femenine
+SFX eZ òɉo oɉeŧa/F0 òɉo	is:singular+femenine
 SFX eZ 0 ŧa/F0 [^d]e	is:singular+femenine
 SFX eZ òde odeŧa/F0 òde	is:singular+femenine
 
 # nominali deajetivali (-esa)
-SFX eS Y 4
-SFX eS a esa/F0 a	is:singular+femenine
-SFX eS o esa/F0 o	is:singular+femenine
+SFX eS Y 10
+SFX eS a esa/F0 [^jɉ]a	is:singular+femenine
+SFX eS a esa/F0 [^ò][jɉ]a	is:singular+femenine
+SFX eS òja ojesa/F0 òja	is:singular+femenine
+SFX eS òɉa oɉesa/F0 òɉa	is:singular+femenine
+SFX eS o esa/F0 [^jɉ]o	is:singular+femenine
+SFX eS o esa/F0 [^ò][jɉ]o	is:singular+femenine
+SFX eS òjo ojesa/F0 òjo	is:singular+femenine
+SFX eS òɉo oɉesa/F0 òɉo	is:singular+femenine
 SFX eS 0 sa/F0 [^d]e	is:singular+femenine
 SFX eS òde odesa/F0 òde	is:singular+femenine
 
@@ -7607,18 +7619,19 @@ SFX e7 a èƚa/F0 [^ò][dƚnsv]a	ds:èl
 SFX e7 o èƚo/M0 [^ò][cdjɉstv]o	ds:èl
 
 # sostantivi/ajetivi alterai – demenutivi (-in/-ina)
-SFX iN Y 54
+SFX iN Y 57
 SFX iN 0 in/M0Bu n	ds:in
 SFX iN ò oin/M0Bu ò	ds:in
 SFX iN èl elin/M0Bu èl	ds:in
 SFX iN òl olin/M0Bu òl	ds:in
 SFX iN èr erin/M0Bu èr	ds:in
 SFX iN òr orin/M0Bu òr	ds:in
-SFX iN a ina/F0 [^bcdkjɉlƚnrstŧx]a	ds:in
+SFX iN a ina/F0 [^bcdkjɉlƚnrstŧxv]a	ds:in
 SFX iN e in/M0Bu [^t]e	ds:in
 SFX iN o in/M0Bu [^cdđjɉkƚpstŧúx]o	ds:in
 SFX iN 0 in/M0Bu [^èò][lr]	ds:in
 SFX iN òba obina/F0 òba	ds:in
+SFX iN èca ecina/F0 èca	ds:in
 SFX iN òca ocina/F0 òca	ds:in
 SFX iN òda odina/F0 òda	ds:in
 SFX iN èja ejina/F0 èja	ds:in
@@ -7630,10 +7643,12 @@ SFX iN òla olina/F0 òla	ds:in
 SFX iN òƚa oƚina/F0 òƚa	ds:in
 SFX iN òna onina/F0 òna	ds:in
 SFX iN èra erina/F0 èra	ds:in
+SFX iN èsa esina/F0 èsa	ds:in
 SFX iN òsa osina/F0 òsa	ds:in
 SFX iN òta otina/F0 òta	ds:in
 SFX iN òŧa oŧina/F0 òŧa	ds:in
 SFX iN èxa exina/F0 èxa	ds:in
+SFX iN èva evina/F0 èva	ds:in
 SFX iN úo üin/M0Bu úo	ds:in
 SFX iN ète etin/M0Bu ète	ds:in
 SFX iN òco ocin/M0Bu òco	ds:in
@@ -7656,9 +7671,9 @@ SFX iN èŧo eŧin/M0Bu èŧo	ds:in
 SFX iN òŧo oŧin/M0Bu òŧo	ds:in
 SFX iN èxo exin/M0Bu èxo	ds:in
 SFX iN e in/M0Bu [^è]te	ds:in
-SFX iN a ina/F0 [^èò][jɉlƚ]a	ds:in
-SFX iN a ina/F0 [^ò][bcdknstŧ]a	ds:in
-SFX iN a ina/F0 [^è][rx]a	ds:in
+SFX iN a ina/F0 [^èò][cjɉlƚs]a	ds:in
+SFX iN a ina/F0 [^ò][bdkntŧ]a	ds:in
+SFX iN a ina/F0 [^è][rxv]a	ds:in
 SFX iN o in/M0Bu [^ò][dkp]o	ds:in
 SFX iN o in/M0Bu [^è][đx]o	ds:in
 SFX iN o in/M0Bu [^èò][cjɉƚstŧ]o	ds:in
@@ -7989,37 +8004,52 @@ SFX oL èƚa eƚòta/F0 èƚa	ds:òto
 
 
 # sostantivi/ajetivi alterai – peđorativi (-ato/a)
-SFX aT Y 22
+SFX aT Y 34
 SFX aT 0 ato/M0FS [nr]	ds:ato
 SFX aT úa uata/F0 [aeiou]úa	ds:ato
 SFX aT úa üata/F0 [^aeiou]úa	ds:ato
 SFX aT èl elato/M0FS èl	ds:ato
 SFX aT úo uato/M0FS [aeiou]úo	ds:ato
 SFX aT úo üato/M0FS [^aeiou]úo	ds:ato
-SFX aT 0 ta/F0 [^bklnsú]a	ds:ato
+SFX aT 0 ta/F0 [^bcjɉklnsú]a	ds:ato
 SFX aT 0 ato/M0FS [^è]l	ds:ato
-SFX aT o ato/M0FS [^bckmúv]o	ds:ato
+SFX aT o ato/M0FS [^bcjɉkmútv]o	ds:ato
 SFX aT òba obata/F0 òba	ds:ato
+SFX aT èca ecata/F0 èca	ds:ato
 SFX aT òka okata/F0 òka	ds:ato
+SFX aT èja ejata/F0 èja	ds:ato
+SFX aT èɉa eɉata/F0 èɉa	ds:ato
 SFX aT èla elata/F0 èla	ds:ato
+SFX aT òla olata/F0 òla	ds:ato
 SFX aT òna onata/F0 òna	ds:ato
 SFX aT òsa osata/F0 òsa	ds:ato
 SFX aT òbo obato/M0FS òbo	ds:ato
+SFX aT èco ecato/M0FS èco	ds:ato
 SFX aT òco ocato/M0FS òco	ds:ato
+SFX aT èjo ejato/M0FS èjo	ds:ato
+SFX aT èɉo eɉato/M0FS èɉo	ds:ato
+SFX aT òjo ojato/M0FS òjo	ds:ato
+SFX aT òɉo oɉato/M0FS òɉo	ds:ato
 SFX aT òko okato/M0FS òko	ds:ato
 SFX aT òmo omato/M0FS òmo	ds:ato
+SFX aT òto otato/M0FS òto	ds:ato
 SFX aT òvo ovato/M0FS òvo	ds:ato
-SFX aT 0 ta/F0 [^è]la	ds:ato
+SFX aT 0 ta/F0 [^èò]la	ds:ato
+SFX aT 0 ta/F0 [^è][cjɉ]a	ds:ato
 SFX aT 0 ta/F0 [^ò][bkns]a	ds:ato
-SFX aT o ato/M0FS [^ò][ckm]o	ds:ato
+SFX aT o ato/M0FS [^èò][cjɉ]o	ds:ato
+SFX aT o ato/M0FS [^ò][kmt]o	ds:ato
 
 # sostantivi/ajetivi alterai – peđorativi ko èle vanesente (-ato/a)
-SFX a1 Y 5
+SFX a1 Y 8
 SFX a1 0 ato/M0 n	ds:ato
 SFX a1 o ato/M0 [^ƚ]o	ds:ato
 SFX a1 o ato/M0 [^è]ƚo	ds:ato
 SFX a1 èƚo eƚato/M0 èƚo	ds:ato
-SFX a1 0 ta/F0 a	ds:ato
+SFX a1 èƚa eƚata/F0 èƚa	ds:ato
+SFX a1 òƚa oƚata/F0 òƚa	ds:ato
+SFX a1 0 ta/F0 [^ƚ]a	ds:ato
+SFX a1 0 ta/F0 [^èò]ƚa	ds:ato
 
 # sostantivi/ajetivi alterai – peđorativi (-aŧo/a)
 SFX aZ Y 56
