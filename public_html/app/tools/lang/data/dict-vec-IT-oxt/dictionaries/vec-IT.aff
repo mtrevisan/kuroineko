@@ -6617,11 +6617,13 @@ SFX X0 e i e	is:plural
 SFX X0 0 e [lnr]	is:singular
 SFX X0 0 i [lnr]	is:plural
 
-# sostantivi astrati senŧa đèner (-ade > -ae/à)
-SFX X1 Y 3
+# sostantivi astrati senŧa đèner (-ade > -ae/à/è, -ude > -ú(e))
+SFX X1 Y 5
 SFX X1 ade à ade	is:femenine+non_enumerable
 SFX X1 de e ade	is:femenine+non_enumerable
 SFX X1 ade è ade	is:femenine+non_enumerable	# pavan
+SFX X1 ude ú ude	is:femenine+non_enumerable
+SFX X1 ude úe ude	is:femenine+non_enumerable
 
 
 ### Fèltre–Belun ###
@@ -7364,7 +7366,7 @@ SFX w0 ente ènte ente
 
 
 # sostantivi koletivi, ...
-SFX y0 Y 36
+SFX y0 Y 34
 SFX y0 da a [aeo]da	is:singular+femenine
 SFX y0 da e [aeo]da	is:plural+femenine
 SFX y0 da a [aeiouàèéíòóúïü]ida	is:singular+femenine
@@ -7376,8 +7378,6 @@ SFX y0 da e [aeiouàèéíòóúïü]uda	is:singular+femenine
 SFX y0 uda úa [^aeiouàèéíòóúïü]uda	is:singular+femenine
 SFX y0 uda úe [^aeiouàèéíòóúïü]uda	is:singular+femenine
 SFX y0 ede é ede	is:femenine+non_enumerable
-SFX y0 ude ú ude	is:femenine+non_enumerable
-SFX y0 ude úe ude	is:femenine+non_enumerable
 SFX y0 ado ò ado	is:masculine+non_enumerable	# pavan
 SFX y0 ado à ado	is:masculine+non_enumerable
 SFX y0 do o ado	is:singular+masculine
