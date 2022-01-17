@@ -6410,6 +6410,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "re",				"",			1,	1,	"g",	"1896",			"Renkalŧar.",
 "realiđ",		"",			1,	4,	"a",	"1854",			"Efetuar.",
 "rec",			"",			1,	1,	"a",	"1854",			"Raspolar, ragrasimolar.",
+"redím",			"",			3,	3,	"a",	"1683",			"(veneŧian)",
 "reŧeđ",			"",			1,	3,	"a",	"1847",			"Skoltar de skondon.",
 "reŧeđ",			"",			1,	3,	"a",	"1775",			"Skoltar de skondon.",
 "reŧiđ",			"",			1,	3,	"a",	"1852",			"Skoltar de skondon.",
