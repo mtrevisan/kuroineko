@@ -4505,6 +4505,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "mastel",		"dex",		1,	4,	"g",	"1855",			"(belumat)",
 "mastel",		"i",			1,	4,	"g",	"1890",			"(vitoriexe)",
 "mastel",		"in",			1,	4,	"g",	"1890",			"(vitoriexe)",
+"mastruk",		"",			1,	5,	"a",	"1683",			"(veneŧian)",
 "mastruŧ",		"",			1,	5,	"a",	"1775",			"Frakasar, malmenar, stritolar.",
 "mat",			"",			1,	1,	"g",	"1852",			"Alberar na nave.",
 "mat",			"de",			1,	1,	"g",	"1854",			"Dixalberar na nave.",
