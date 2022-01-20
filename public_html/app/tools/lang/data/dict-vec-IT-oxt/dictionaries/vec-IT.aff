@@ -8300,6 +8300,21 @@ PFX :0 Y 2
 PFX :0 0 ko [mn]	dp:kon
 PFX :0 0 kon .	dp:kon
 
+# prefiso par raforŧar (ar[sŧ][iï]-)
+PFX @1 Y 8
+PFX @1 0 arsi [^aeiouàèéíòóúïü]	dp:arŧi
+PFX @1 0 arŧi [^aeiouàèéíòóúïü]	dp:arŧi
+PFX @1 0 arsï [aeiouàèéíòóúïü]	dp:arŧi
+PFX @1 0 arŧï [aeiouàèéíòóúïü]	dp:arŧi
+PFX @1 0 arsi- [^aeiouàèéíòóúïü]	dp:arŧi
+PFX @1 0 arŧi- [^aeiouàèéíòóúïü]	dp:arŧi
+PFX @1 0 arsï- [aeiouàèéíòóúïü]	dp:arŧi
+PFX @1 0 arŧï- [aeiouàèéíòóúïü]	dp:arŧi
+#PFX @1 0 arse .	dp:arŧi
+#PFX @1 0 arŧe .	dp:arŧi
+#PFX @1 0 àrse- .	dp:arŧi
+#PFX @1 0 àrŧe- .	dp:arŧi
+
 
 # prefiso par "do ʼòlte" (bi-)
 PFX p2 Y 2
