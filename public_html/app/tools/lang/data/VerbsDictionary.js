@@ -8356,6 +8356,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "ŧerkl",			"",			1,	1,	"a",	"",				"Thercar.",
 "ŧerkl",			"in",			1,	1,	"a",	"XV",				"Inthercar.",
 "ŧerkol",		"in",			1,	1,	"a",	"1900",			"(veronexe) Inŧercar.",
+"ŧerkond",		"",			1,	4,	"a",	"1683",			"(veneŧian)",
 "ŧerlatan",		"",			1,	6,	"g",	"1896",			"",
 "ŧèrn",			"",			3,	1,	"g",	"1517",			"Ŧernir.",
 "ŧèrn",			"de",			3,	1,	"g",	"1829",			"",
