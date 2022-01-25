@@ -5415,6 +5415,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "par",			"rekon",		4,	3,	"a",	"",				"",
 "par",			"s",			4,	3,	"a",	"1775",			"",
 "par",			"skon",		4,	3,	"a",	"1867",			"",
+"par",			"tras",		4,	3,	"a",	"1683",			"(veneŧian)",
 "parabolan",	"",			1,	7,	"g",	"1810",			"",
 "paraden",		"",			1,	5,	"a",	"1829",			"",
 "paraf",			"",			1,	3,	"g",	"1829",			"Firmar ko un númaro.",
