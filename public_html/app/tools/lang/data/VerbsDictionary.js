@@ -8194,6 +8194,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "trig",			"des",		1,	2,	"a",	"1775",			"Xbrigarsela, kavarsela in kualke mòdo.",
 "trig",			"in",			1,	2,	"a",	"1560",			"Inpedir.",
 "trigol",		"des",		1,	2,	"a",	"1854",			"Xgranar.",
+"tril",			"",			1,	2,	"a",	"1683",			"(veneŧian)",
 "trin",			"s",			1,	2,	"a",	"1900",			"(veronexe) Bruxar (de ʼl fredo), abronđar (la biankería ko la se stira).",
 "trink",			"",			1,	2,	"a",	"1775",			"",
 "trinkeñ",		"",			1,	5,	"a",	"1894",			"Trinpelar.",
