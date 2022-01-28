@@ -7445,6 +7445,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "stim",			"re",			1,	2,	"a",	"1867",			"",
 "stíngu",		"de",			3,	2,	"a",	"1775",			"",
 "stíngu",		"e",			3,	2,	"a",	"1775",			"",
+"stipendi",		"",			1,	4,	"a",	"16823",			"(veneŧian)",
 "stipul",		"",			1,	2,	"a",	"",				"",
 "stirp",			"",			1,	2,	"a",	"1867",			"",
 "stirp",			"e",			1,	2,	"a",	"1867",			"",
