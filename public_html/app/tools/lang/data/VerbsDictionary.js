@@ -7861,6 +7861,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tèñ",			"inkon",		3,	1,	"g",	"",				"",
 "tèñ",			"intra",		3,	1,	"g",	"1590",			"",
 "tèñ",			"kon",		3,	1,	"g",	"1867",			"",
+"tèñ",			"mal",		3,	1,	"g",	"1683",			"(veneŧian)",
 "tèñ",			"man",		3,	1,	"g",	"1381",			"",
 "tèñ",			"o",			3,	1,	"g",	"1433",			"",
 "tèñ",			"par",		3,	1,	"g",	"1896",			"",
