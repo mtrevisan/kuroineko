@@ -5672,6 +5672,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "per",			"mal",		4,	3,	"a",	"1908",			"(coxòto)",
 "pèrd",			"",			3,	1,	"g",	"1412",			"",
 "pèrd",			"des",		3,	1,	"g",	"1561",			"Sperperar, abortir.",
+"pèrd",			"stra",		3,	1,	"g",	"1683",			"(veneŧian)",
 "perdon",		"",			1,	4,	"a",	"1463",			"",
 "perdon",		"stra",		1,	4,	"a",	"1775",			"",
 "perikol",		"",			1,	3,	"a",	"1829",			"Naufragar.",
