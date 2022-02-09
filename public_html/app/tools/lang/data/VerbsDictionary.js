@@ -384,6 +384,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "bark",			"in",			1,	1,	"g",	"1502",			"",
 "bark",			"dex",		1,	1,	"g",	"1775",			"",
 "bark",			"x",			1,	1,	"g",	"1775",			"",
+"barkamen",		"",			1,	7,	"a",	"1683",			"(veneŧian)",
 "barkej",		"",			1,	4,	"a",	"1896",			"Menar na barka.",
 "barkiđ",		"",			1,	4,	"a",	"1867",			"Destređar, maneđar ko destreŧa.",
 "barkol",		"",			1,	4,	"a",	"1896",			"",
