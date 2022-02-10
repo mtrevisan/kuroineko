@@ -7728,6 +7728,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "tanger",		"",			1,	1,	"g",	"1855",			"Trabeskar.",
 "tanpan",		"",			1,	1,	"g",	"1829",			"Tinpanar.",
 "tanpon",		"",			1,	1,	"g",	"2012",			"(arsedexe)",
+"tant",			"",			1,	1,	"g",	"1675",			"(veneŧian)",
 "tant",			"des",		1,	1,	"g",	"1829",			"Intantar, opòsto a inkocar, vínŧer lʼ ostinaŧion.",
 "tant",			"in",			1,	1,	"g",	"1775",			"Korucar, invelenir.",
 "tantar",		"s",			1,	1,	"g",	"1829",			"",
