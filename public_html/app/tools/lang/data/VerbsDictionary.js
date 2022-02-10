@@ -5975,6 +5975,8 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "plik",			"kon",		1,	-2,"a",	"",				"",
 "plik",			"in",			1,	-2,"a",	"",				"",
 "plik",			"re",			1,	-1,"g",	"1867",			"",
+"pliŧit",		"es",			1,	2,	"a",	"1675",			"(veneŧian)",
+"pliŧit",		"in",			1,	2,	"a",	"1675",			"(veneŧian)",
 "plonb",			"",			1,	2,	"a",	"",				"Pionbar.",
 "plonb",			"a",			1,	2,	"a",	"XV",				"Apionbar.",
 "plonb",			"des",		1,	2,	"a",	"",				"Despionbar.",
