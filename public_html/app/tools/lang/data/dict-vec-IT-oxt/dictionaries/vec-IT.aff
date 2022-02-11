@@ -8142,8 +8142,10 @@ SFX aZ o aŧo/M0FS [^ò][gkmv]o	ds:aŧo
 SFX aZ o aŧo/M0FS [^è][sŧ]o	ds:aŧo
 
 # sostantivi/ajetivi alterai – peđorativi (-aso/a)
-SFX aS Y 55
-SFX aS e aso/M0FS e	ds:aŧo
+SFX aS Y 57
+SFX aS e aso/M0FS [^t]e	ds:aŧo
+SFX aS e aso/M0FS [^è]te	ds:aŧo
+SFX aS ète etaso/M0FS ète	ds:aŧo
 SFX aS í iaso/M0FS [aeiou]í	ds:aŧo
 SFX aS í ïaso/M0FS [^aeiou]í	ds:aŧo
 SFX aS 0 aso/M0FS n	ds:aŧo
@@ -8333,20 +8335,21 @@ PFX :0 Y 2
 PFX :0 0 ko [mn]	dp:kon
 PFX :0 0 kon .	dp:kon
 
-# prefiso par raforŧar (ar[sŧ][iï]-)
-PFX @1 Y 8
-PFX @1 0 arsi [^aeiouàèéíòóúïü]	dp:arŧi
+# prefiso par raforŧar (arŧ[iï]-)
+PFX @1 Y 3
 PFX @1 0 arŧi [^aeiouàèéíòóúïü]	dp:arŧi
-PFX @1 0 arsï [aeiouàèéíòóúïü]	dp:arŧi
 PFX @1 0 arŧï [aeiouàèéíòóúïü]	dp:arŧi
-PFX @1 0 arsi- [^aeiouàèéíòóúïü]	dp:arŧi
-PFX @1 0 arŧi- [^aeiouàèéíòóúïü]	dp:arŧi
-PFX @1 0 arsï- [aeiouàèéíòóúïü]	dp:arŧi
-PFX @1 0 arŧï- [aeiouàèéíòóúïü]	dp:arŧi
-#PFX @1 0 arse .	dp:arŧi
+PFX @1 0 arŧi- .	dp:arŧi
 #PFX @1 0 arŧe .	dp:arŧi
-#PFX @1 0 àrse- .	dp:arŧi
 #PFX @1 0 àrŧe- .	dp:arŧi
+
+# prefiso par raforŧar (ars[iï]-)
+PFX @2 Y 3
+PFX @2 0 arsi [^aeiouàèéíòóúïü]	dp:arŧi
+PFX @2 0 arsï [aeiouàèéíòóúïü]	dp:arŧi
+PFX @2 0 arsi- .	dp:arŧi
+#PFX @2 0 arse .	dp:arŧi
+#PFX @2 0 àrse- .	dp:arŧi
 
 
 # prefiso par "do ʼòlte" (bi-)

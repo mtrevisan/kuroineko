@@ -8218,6 +8218,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "trïonf",		"",			1,	3,	"a",	"1509",			"",
 "trip",			"",			1,	2,	"a",	"1828",			"",
 "tripudi",		"",			1,	4,	"a",	"1775",			"",
+"trist",			"",			1,	2,	"a",	"1675",			"(veneŧian) Deventar tristo.",
 "trist",			"in",			1,	2,	"a",	"",				"Far deventar tristo.",
 "trist",			"kon",		4,	5,	"a",	"",				"",
 "trist",			"kun",		4,	5,	"a",	"1883",			"(coxòto)",
