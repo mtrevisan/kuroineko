@@ -8931,6 +8931,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "vil",			"in",			4,	3,	"a",	"1775",			"",
 "vilan",			"",			1,	3,	"g",	"1881",			"",
 "vilan",			"in",			4,	5,	"a",	"1775",			"",
+"vilani",		"x",			1,	3,	"a",	"1675",			"(veneŧian)",
 "vilup",			"in",			1,	3,	"a",	"1683",			"(veneŧian)",
 "vilup",			"x",			1,	3,	"a",	"1980",			"(vitoriexe)",
 "vimen",			"x",			1,	1,	"a",	"1590",			"Bàter kol vimini.",
