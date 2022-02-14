@@ -2806,7 +2806,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "guod",			"x",			1,	1,	"g",	"1683",			"Xvodar.",
 "guol",			"x",			1,	1,	"g",	"1747",			"Xvolar.",
 "gur",			"a",			1,	1,	"a",	"1867",			"Augurar.",
-"gur",			"in",			1,	1,	"a",	"1867",			"Augurar.",
+"gur",			"in",			1,	1,	"a",	"1675",			"(veneŧian) Augurar.",
 "gurxit",		"in",			1,	1,	"a",	"1775",			"",
 "gurxit",		"re",			1,	1,	"a",	"1775",			"",
 "gus",			"dex",		1,	1,	"a",	"1854",			"Kavar el guso.",
