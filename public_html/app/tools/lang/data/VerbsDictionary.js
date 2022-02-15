@@ -1254,6 +1254,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "diladi",		"",			1,	3,	"g",	"1867",			"Konténder, alterkar, kontrastar.",
 "dilat",			"",			1,	3,	"g",	"",				"",
 "dilat",			"in",			1,	3,	"g",	"1829",			"",
+"dimor",			"",			1,	3,	"g",	"1675",			"(veneŧian)",
 "dindol",		"",			1,	1,	"a",	"1775",			"Demenar, barkolar, trabalar, condolar.",
 "dindol",		"x",			1,	1,	"a",	"1775",			"",
 "dindon",		"",			1,	4,	"a",	"1900",			"(veronexe) Tentenar.",
