@@ -4916,6 +4916,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "mult",			"",			1,	1,	"a",	"1867",			"",
 "mun",			"",			4,	3,	"a",	"1851",			"",
 "mun",			"pre",		4,	3,	"a",	"1867",			"",
+"muneg",			"",			1,	1,	"a",	"1675",			"(veneŧian))",
 "muneg",			"dex",		1,	1,	"a",	"1867",			"Kavar ʼl abito da munega.",
 "muner",			"re",			1,	1,	"a",	"",				"",
 "muñeg",			"",			1,	1,	"a",	"1829",			"Mastegar, rosegar.",
