@@ -4244,6 +4244,7 @@ define(function(){return [7, "radix", "prefix", "conjugation", "stressIdx", "str
 "lonbon",		"x",			1,	1,	"a",	"1855",			"(belumat) Xlonbar.",
 "lonbr",			"",			1,	1,	"a",	"1415",			"Numerar.",
 "lonbrï",		"dex",		1,	5,	"a",	"1775",			"Kavar ʼl onbra.",
+"long",			"dex",		1,	1,	"a",	"1675",			"(veneŧian)",
 "long",			"pro",		1,	1,	"a",	"1867",			"",
 "long",			"sper",		1,	1,	"a",	"1854",			"Tirar i remi in galera.",
 "long",			"spro",		1,	1,	"a",	"1867",			"Xlongar, sténder.",
